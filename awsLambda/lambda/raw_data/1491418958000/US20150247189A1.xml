@@ -1,0 +1,1933 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247189A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021514" date-changed="20151214" time-changed="185853">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140312">
+        <country>US</country>
+        <doc-number>20150247189</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14712137</doc-number>
+        <date>20150514</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>C12Q   1/68        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>1</main-group>
+        <subgroup>68</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>C12Q   1/689       20130101 FI20131024BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>1</main-group>
+        <subgroup>689</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20131024</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C12Q2600/112       20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>2600</main-group>
+        <subgroup>112</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C12Q2600/158       20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>2600</main-group>
+        <subgroup>158</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C12Q2600/16        20130101 LA20150207BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>2600</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150207</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">Diagnostic Methods and Markers for Bacterial Vaginosis</invention-title>
+    <related-documents date-changed="20150903">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13771550</doc-number>
+              <date>20130220</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>9057111</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007121</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61600845</doc-number>
+          <date>20120220</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Laboratory Corporation of America Holdings</orgname>
+            <role>02</role>
+            <address>
+              <city>Burlington</city>
+              <state>NC</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Cartwright</last-name>
+            <first-name>Charles Paul</first-name>
+            <address>
+              <city>Plymouth</city>
+              <state>MN</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Lembke</last-name>
+            <first-name>Brydon Denae</first-name>
+            <address>
+              <city>Eden Prairie</city>
+              <state>MN</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Ramachandran</last-name>
+            <first-name>Kalpana</first-name>
+            <address>
+              <city>Shakopee</city>
+              <state>MN</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173463426">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247189</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150514</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173463425">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247189</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150514</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A method of diagnosing bacterial vaginosis in a woman, which involves determining an amount of each of more than one BV-associated bacterium in a vaginal sample obtained from the female and assessing a BV status of the female based on the amount of each of the more than one BV-associated bacterium in the sample.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150601</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247189A1</docdb-publication-number>
+      <docdb-application-id>444210276</docdb-application-id>
+      <new-owner>LABORATORY CORPORATION OF AMERICA HOLDINGS, NORTH</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:CARTWRIGHT, CHARLES PAUL;LEMBKE, BRYNDON DENAE;RAMACHANDRAN, KALPANA;REEL/FRAME:035757/0101</free-text-description>
+      <effective-date>
+        <date>20130507</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application claims is a continuation of U.S. patent application Ser. No. 13/771,550, filed Feb. 20, 2013, and claims the benefit of priority of U.S. Provisional Application Ser. No. 61/600,845, filed Feb. 20, 2012, both incorporated herein by reference in their entirety.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">FIELD</heading>
+      <p id="p-00002-en" num="0002">The methods described herein are in the general field of clinical testing, including the field of diagnosing and monitoring of diseases and conditions.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND</heading>
+      <p id="p-00003-en" num="0003">One of the common conditions experienced by women throughout their lives is vaginitis, which is typically characterized in the medical field as an inflammation of the vagina that can result in discharge, itching and pain. There are several potential etiologies of vaginitis, including candidal vaginitis, typically caused by overgrowth with the commensal fungal organism <i>Candida albicans</i>, trichomonal vaginitis, which is a sexually transmitted infection (STI) caused by a protozoan parasite <i>Trichomonas vaginalis</i>, vaginal atrophy, or atrophic vaginitis, which results from reduced estrogen levels during menopause, and bacterial vaginosis or vaginitis, which is associated with a perturbation in the in the composition of the bacterial microflora of the vagina. Vaginitis symptoms may include change in color, odor or amount of discharge from a woman's vagina, vaginal itching or irritation, pain during intercourse, painful urination, and light vaginal bleeding or spotting. Vaginitis symptoms can lead to various degrees of physical and emotional discomfort, and lower the overall quality of life. Vaginitis symptoms can also be a sign of an underlying infection, which should be promptly identified and treated in order to avoid medical complications, and, in case of an STI, to avoid further transmission.</p>
+      <heading id="h-00004-en" level="1">SUMMARY</heading>
+      <p id="p-00004-en" num="0004">The terms “invention,” “the invention,” “this invention” and “the present invention” used in this patent are intended to refer broadly to all of the subject matter of this patent and the patent claims below. Statements containing these terms should be understood not to limit the subject matter described herein or to limit the meaning or scope of the patent claims below. Covered by the patent embodiments of the invention are defined by the claims, not this summary. This summary is a high-level overview of various aspects of the invention and introduces some of the concepts that are further described in the Detailed Description section below. This summary is not intended to identify key or essential features of the claimed subject matter, nor is it intended to be used in isolation to determine the scope of the claimed subject matter. The subject matter should be understood by reference to appropriate portions of the entire specification, any or all drawings and each claim.</p>
+      <p id="p-00005-en" num="0005">Provided herein are improved methods useful for diagnosing bacterial vaginosis which can be also referred to in this patents as BV diagnostic methods, tests or assays, or other similar terms. BV diagnostic methods of the present invention are probative for vaginal microflora alterations underlying BV, and use objective quantitative measures of bacterial occurrence in vaginal samples. The improved BV diagnostic methods are accurate, cost-effective, clinically predictive and readily interpretable. Generally, the improved BV diagnostic methods described herein use appropriate analytical procedures to detect and quantify molecular markers from several categories of bacteria in a vaginal sample. For example, the improved BV diagnostic methods of the present invention can use quantitative or semi-quantitative assays for detection of bacterial DNA sequences, such as quantitative PCR, semi-quantitative PCR or direct nucleic acid detection assays, in order to quantitatively or semi-quantitatively detect DNA sequences characteristic of several bacterial categories in a vaginal sample. The categories of bacteria quantitatively detected by the improved methods can be bacterial species or genera.</p>
+      <p id="p-00006-en" num="0006">Categories of bacteria, also referred to as bacterial markers, are selected for detection by the BV diagnostic methods of the present invention in such a way as to provide a clinically meaningful assessment, based on the results of detection, of the likelihood of BV in a woman from whom the vaginal sample was obtained. The improved BV diagnostic methods interrogate vaginal samples for the presence of more than one bacterial marker, and derive a combined result from those markers that directly correlates with the presence or absence of BV. The bacterial markers are selected for the improved BV diagnostic methods of the present invention based on their probative value, when the markers are used collectively, for this assessment of BV status of a vaginal sample. Some embodiments of the BV diagnostic methods described herein advantageously employ at least one marker that has high specificity with respect to BV detection in a patient population, and at least one marker that has high sensitivity with respect to BV detection in a patient population. The selection of the bacterial markers used in the improved BV diagnostic methods can vary and can be based on a number of factors, such as the health risks associated with particular markers or certain patient characteristics, such as pregnancy or HIV status, as well as BV prevalence in a patient population. The methods and procedures for selecting the bacterial markers to be used in the BV diagnostic methods are included within the scope of the present invention, as well as the combinations of bacterial markers described herein used for diagnosing, predicting or assessing BV in a patient.</p>
+      <p id="p-00007-en" num="0007">The improved BV diagnostic methods of the present in invention characterize the bacterial markers detected in a sample using a scoring method, which is then translated into a clinical interpretation of a BV status of the sample. The scoring method used in the improved BV diagnostic methods assigns scores to individual bacterial markers and generates a composite score when more than one bacterial marker is used. The scoring method uses the data on distribution of the levels of BV marker organisms in a patient population in order to divide the population into the categories characterized by scores reflecting the levels of the marker in each category. The scoring method used in the improved BV diagnostic methods is included within the scope of the present invention.</p>
+      <p id="p-00008-en" num="0008">Among other things, described herein is a method of diagnosing bacterial vaginosis in a female, comprising: determining an amount of more than one BV-associated bacterium in a sample obtained from the female; and, assessing a BV status of the female based on the amount of each of the more than one BV-associated bacterium in the sample. In one embodiment of the method, the more than one BV-associated bacterium is three bacteria. In one more embodiment of the method, more than one BV-associated bacterium includes <i>Atopobium vaginae</i>, BVAB-2, and <i>Megasphaera</i>-1. In another embodiment of the method, the more than one BV-associated bacterium also includes <i>Gardnerella vaginalis</i>. In an alternative embodiment, more than one BV-associated bacterium does not include <i>Gardnerella vaginalis</i>. In yet another embodiment, the more than one BV-associated bacterium does not include a <i>Lactobacillus </i>bacterium. In an alternative embodiment, the more than one BV-associated bacterium includes a <i>Lactobacillus bacterium</i>. In a variation of the above embodiments, the <i>Lactobacillus </i>bacterium is <i>Lactobacillus crispatus. </i></p>
+      <p id="p-00009-en" num="0009">One embodiment of the diagnostic methods described herein is a method of diagnosing bacterial vaginosis in a female, comprising: determining an amount of at least <i>Atopobium vaginae</i>, BVAB-2 or <i>Megasphaera</i>-1 in a sample obtained from the female; and, assessing a BV status of the female based on the amount of each of the more than one BV-associated bacterium in the sample, wherein an increased amount of one or more of <i>Atopobium vaginae</i>, BVAB-2 or <i>Megasphaera</i>-1 indicates an increased probability of the female having BV. An amount of the <i>Lactobacillus </i>bacterium in the sample can also be determined, wherein an increased amount of the <i>Lactobacillus </i>bacterium indicates a decreased probability of the female having bacterial vaginosis.</p>
+      <p id="p-00010-en" num="0010">In some of the diagnostic methods according to the present invention, the step of determining comprises detection of DNA sequences from the each of the more than one BV-associated bacterium. The detection of DNA sequences can be performed by quantitative PCR, semi-quantitative PCR or direct DNA probe detection. Methods of detecting bacterial vaginosis in pregnant females are included within the scope of the present invention.</p>
+      <p id="p-00011-en" num="0011">The methods of the present invention provide reproducible and objective ways of evaluating vaginal microflora in women with signs and symptoms of vaginitis, and are at least comparable in diagnostic accuracy to the conventional gold standard for diagnosis of BV. The methods of the present invention employ simple and robust scoring systems and methods that allow for accurate differentiation of BV positive and negative samples to be performed in a standardized and cost-effective manner. An exemplary embodiment of a method of diagnosing bacterial vaginosis in a female, comprises: determining an amount of each of more than one BV-associated bacterium in a sample obtained from the female; assigning a score to the sample based on the amount of each of the more than one BV-associated bacterium detected in the sample, and, assessing the BV status of the female based on the score assigned to the sample. The step of assigning the score can comprise generating an individual score for each of the more than one BV-associated bacterium detected in the sample based on the amount of the each of the more than one BV-associated bacterium; and, calculating the combined score from the individual scores.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE FIGURES</heading>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 1</figref> is a bar graph illustrating frequency distribution of <i>Atopobium vaginae </i>(panel A), BVAB-2 (panel B) and <i>Megasphaera</i>-1 (panel C) in the each of the three Nugent categories of the samples of the first sample group (as discussed in the working examples). Vertical axis shows organism concentration as determined by qPCR. Positions of cut-off calibrators or values, denoted as Cal-1 (a) and Cal-2(b), with respect to the organism concentrations are shown by horizontal lines.</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 2</figref> is a scheme illustrating interpretation of the results of the quantitative testing using composite score based on the individual scores for <i>A. vaginae</i>, BVAB-2 and <i>Megasphaera</i>-1.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00014-en" num="0014">Treatment for vaginitis is determined based on its causes and origins in a particular patient. For example, fungal vaginitis should be treated by an anti-fungal medication, applied topically or taken in an oral form, while trichomoniasis is treated by a different type of antibiotic medication (typically oral metronidazole or tinidazole). Estrogen, in the form of vaginal creams, tablets or rings, is often prescribed to treat atrophic vaginitis, while BV may be treated by anti-bacterial medications, including the antibiotics metronidazole and clindamycin. Some forms of vaginitis are a result of irritation of vaginal lining by common consumer products, such as soaps or lubricants, or particular types of undergarment, and the treatment may be as simple as stopping the use of an irritating product.</p>
+      <p id="p-00015-en" num="0015">Since vaginitis has a variety of underlying causes, it is important to identify the cause in order to determine correct treatment. An inappropriate choice of treatment may not only delay the relief of the vaginitis symptoms in a woman, but also lead to medical complications and spread of an infection to the woman's sexual partners. Choosing an inappropriate drug for vaginitis (for example, an anti-fungal medication for BV, metronidazole for fungal infection, or an antibiotic for a fungal infection) may lead to unnecessary side effects and cause drug resistance. Delayed diagnosis and inappropriate choice of treatment can also result in emotional and financial losses for the woman, elevated treatment costs, and generally contribute to increases in healthcare spending and inefficiencies in healthcare delivery.</p>
+      <p id="p-00016-en" num="0016">Whilst the presence of specific symptoms can sometimes be instructive in determining an etiology, misdiagnosis is common. Diagnostic procedures by a qualified practitioner are typically required to detect whether an infection is present, and to determine the nature of the infection. Diagnostic procedures often include microscopy, usually of a vaginal wet mount sample, and culture of the vaginal discharge. The color, consistency, acidity, and other characteristics of the discharge may be predictive of the causative agent. However, definitive identification of infectious organisms is very important for the successful treatment, because women may have more than one infection, or have symptoms that overlap with those of another infection.</p>
+      <p id="p-00017-en" num="0017">Bacterial vaginosis (BV), one of the possible causes of vaginitis, is a condition marked by an imbalance in vaginal flora. Although the precise etiology and pathophysiology of BV is not fully understood, this syndrome accounts, by some estimates, for about 22 to 50% of vaginitis symptoms. BV has been linked to a variety of serious health risks for the woman herself and others. For example, BV has been linked to increased chances of preterm labor and delivery, which increases the chances of the woman's baby dying or having serious medical problems. BV was also linked to pelvic inflammatory diseases (PID), a condition in which bacteria infect the uterus and/or fallopian tubes. PID can cause infertility or damage the fallopian tubes, thus increasing the chances of ectopic pregnancy, a life-threatening condition. Some studies showed that pregnant women with BV are more likely to contract infections following genital surgery, such as hysterectomy or an abortion. BV has also been linked to increased susceptibility to HIV infection after exposure to HIV virus, increased risk of transmission of HIV, as well as an increased susceptibility to other STIs, such as herpes simplex virus (HSV), <i>Chlamydia trachomatis</i>, and <i>Neisseria gonorrhoeae. </i></p>
+      <p id="p-00018-en" num="0018">While many questions remain about the role of different bacterial species in BV causation, current BV theories explain the condition as replacement of the normal, homogeneous, vaginal microflora (dominated typically by hydrogen-peroxide producing lactobacilli) with a heterogeneous mix of anaerobic and microaerophilic organisms. Diagnosis of BV has thus been defined by techniques that attempt to either identify this shift in bacterial composition, or assess the concomitant impact of this shift on non-microbiological indicators of vaginal health, or a combination of both of these approaches.</p>
+      <p id="p-00019-en" num="0019">The standards against which diagnostic tests for BV are compared include the so-called Amsel criteria and the Nugent Gram-stain scoring system. BV diagnosis under the Amsel criteria requires that at least three of four of the following criteria are met for a given patient: characteristic vaginal discharge; vaginal pH &gt;4.5; positive amine test, meaning release of a primary amine (fishy) odor from a vaginal sample on the addition of the KOH, and &gt;20% of the epithelial cells present on the wet mount slide of the vaginal discharge being identified as ‘clue cells’ (meaning they are coated with small Gram-variable coccobacilli consistent with the organism <i>Gardnerella vaginalis</i>). While still widely touted as a useful diagnostic approach, the Amsel criteria are not commonly used in routine practice, and since this method requires innately subjective evaluations of samples, wide fluctuations in accuracy have been reported. Under optimal circumstances, Amsel-based diagnosis of BV is generally regarded in the medical field as a relatively specific but somewhat insensitive method for identifying patients with BV.</p>
+      <p id="p-00020-en" num="0020">The Nugent Gram-stain scoring system, which was more recently developed than the Amsel criteria, involves assessment of a normally prepared Gram stain for relative abundance of three morphotypes of bacteria, and then calculating the so-called Nugent score based on the amounts of large Gram-positive rods (Lactobacilli morphotype; decrease in Lactobacilli is scored as 0 to 4), small Gram-negative and variable rods (<i>Bacteroides </i>and <i>Gardnerella </i>morphotype; scored as 0 to 4), and curved gram-variable rods (<i>Mobiluncus </i>spp. morphotype; scored as 0 to 2). The Nugent score can range from 0 to 10, with scores of 0-3 deemed normal (non-BV), 4-6 intermediate, and 7-10 positive for BV. The Nugent scoring system is somewhat more objective than the Amsel criteria, and is regarded as a more reproducible and predictive means of diagnosing BV. However, Nugent scoring still requires preparation and evaluation of slides, and is dependent on the skill of the slide reader. In addition to being generally subjective, since many of the key morphotypes are difficult to differentiate from non-contributory organisms of similar appearance, quantitative Gram-stain examination is laborious and impractical for routine clinical use, and intermediate scores of uncertain clinical significance are reported in 10-25% of samples tested.</p>
+      <p id="p-00021-en" num="0021">Cultures of vaginal samples have not proven useful for diagnosing BV. Since a hallmark of the condition is a complex perturbation of the normal vaginal microflora, culture-based identification of single ‘marker’ organisms lacks both sensitivity and specificity. Many putative BV-associated organisms, such as <i>Gardnerella vaginalis, Mobiluncus </i>spp., <i>Mycoplasma hominis</i>, or <i>Bacteroides </i>spp., can comprise variable fractions of the vaginal microflora in women without BV, compromising the specificity of culture-based testing. In addition, many of the key organisms associated with BV are obligate anaerobes and either difficult to recover or unrecoverable using conventional culture methods, which makes a true evaluation of vaginal microflora by culture impossible.</p>
+      <p id="p-00022-en" num="0022">A more current diagnostic approach is the use of tests designed to detect BV-related organisms, directly or indirectly. One so-called “indirect” approach is the BV Blue® test (Gryphus diagnostics, LLC). The BV Blue test detects sialidase activity, an enzyme produced by BV-associated bacteria such as <i>Gardnerella vaginalis, Bacteroides </i>spp., <i>Prevotella </i>spp., and <i>Mobiluncus </i>spp. In the test procedure, a vaginal fluid sample is placed in the test vessel which contains a chromogenic substrate for sialidase. After incubation, a developer solution is added, and If the sample contained a high level of sialidase, a blue or green color is seen. Samples containing no sialidase, or low levels of this enzyme, will generate a yellow color in the reaction. The BV test is claimed to have high specificity and sensitivity, but has a number of limitations. For example, specimens from the BV Blue test have to be collected from the lower one-third of the vaginal wall, because cervical sialidase activity may give a false positive test result. Various vaginal products, such as creams, ointments, spermicides or vaginal lubricants, used by patients, may interfere with the enzymatic reaction. In addition, samples have to either tested immediately upon collection, or stored and transported under specific conditions to prevent loss of enzymatic activity.</p>
+      <p id="p-00023-en" num="0023">The Affirm® Microbial Identification Test (Beckton Dickinson) (“Affirm test”) is an example of a direct specimen DNA probe-based diagnostic test for the differential detection and identification of the three types of vaginitis causative organisms: <i>Candida </i>spp., <i>G. vaginalis </i>and <i>T. vaginalis</i>. The Affirm test is convenient for a clinician, since it offers the results for three different organisms from a single sample. For BV diagnosis, the test relies on the detection of elevated concentrations of <i>G. vaginalis</i>. While the Affirm test offers the ability to improve the accuracy and objectivity of vaginitis diagnosis, and is not as prone to external interferences as the BV Blue test, it is also known to be less specific than the Nugent Gram-stain scoring approach.</p>
+      <p id="p-00024-en" num="0024">One unresolved issue with the Affirm assay is that it relies on the notion that <i>G. vaginalis </i>functions as a uniquely predictive marker for BV, a concept known not to be accurate in the medical field. A more nuanced (and commonly accepted) view of BV in the field is that the hallmark of this condition is an increase in the diversity of the vaginal microbiome, with the composition of the BV-associated flora being highly complex, and lacking a single ‘signature’ organism Whilst elevated levels of <i>G. vaginalis </i>such as those detected by the Affirm assay are frequently found in women with BV syndrome, they also occur in a subset of women without this condition, and without the ability to simultaneously assess the presence of other potential BV marker organisms, the specificity of the Affirm assay is compromised.</p>
+      <p id="p-00025-en" num="0025">The use of a variety of DNA-based analysis tools, such as broad-range and quantitative PCR, has identified novel bacteria associated with BV while also providing more objective, quantitative measures of bacterial presence. Use of DNA-based tools also has resulted in a greater awareness of the complexity of microflora alterations underlying BV. A number of studies have been published describing the use of quantitative or semi-quantitative PCR methodologies for diagnosing BV. The marker organisms used in these studies differed, as did the cut-off values described as optimal for differentiating abnormal samples from normal samples. There is, as yet, no unified approach to using PCR technology for BV diagnosis.</p>
+      <p id="p-00026-en" num="0026">In summary, currently available BV diagnostic methods suffer from various disadvantages. The currently accepted diagnostic standards, namely the Amsel criteria and the Nugent Gram-stain score, rely heavily on the proficiency of the individual clinician and/or laboratory, and are effectively impossible to standardize. Simple indirect laboratory tests such as the BV Blue test, are prone to problems in sensitivity (loss of enzyme activity) and specificity (inappropriate sample collection) and are thus of limited value. The Affirm test relies on direct detection of bacterial DNA and improved accessibility and is easier to employ than the known approaches discussed above, but allows for only qualitative detection of a single organism (<i>G. vaginalis</i>), and thus lacks diagnostic accuracy.</p>
+      <p id="p-00027-en" num="0027">What is needed is an improved diagnostic method for detecting BV in patients. Such an improved method would be accurate, cost-effective to perform, clinically predictive and readily interpretable, while simultaneously being compatible with tests for alternate etiologies of vaginitis (eg <i>Candida </i>spp. and <i>T. vaginalis</i>) and other STIs (such as <i>chlamydia </i>and gonorrhea). The improved BV diagnostic method would take into account more than one BV-associated organism, and at the same time would be readily interpretable by a clinician, who would be able either to use the data from the improved test to diagnose BV in a patient, or combine, according to an established and easy to perform procedure, the results from the improved tests with other available diagnostic methods in order to achieve diagnosis of BV in a patient with high level of accuracy.</p>
+      <p id="p-00028-en" num="0028">Provided herein are improved methods useful for diagnosing bacterial vaginosis (BV). Generally, the methods for diagnosing BV described herein involve determining an amount or concentration of more than one BV-associated bacteria, or marker, in a vaginal sample, and determining the BV status of the patient from the amount of the BV-associated bacteria present in the sample. Unlike some of the conventional methods that rely on the observation of a vaginal sample (in the form or a microscope slide) by a trained person, such as a clinician, the methods of the present invention use objective, quantifiable measures of bacterial occurrence in samples, namely, the presence of specific bacterial molecules, which are referred to as molecular markers. Such markers are detected according to established and reliable techniques and procedures. Accordingly, the methods of the present invention are less dependent on the subjective acumen of the person performing the method than methods involving microscopic examination.</p>
+      <p id="p-00029-en" num="0029">The term “bacterial vaginosis,” abbreviated as “BV,” and similar terms used herein are to be understood in the broad sense as the alterations of vaginal bacterial flora composition in a woman, as compared to a baseline, reference or “normal” vaginal bacterial flora composition. In other words, the term “bacterial vaginosis” and related terms are not limited to a specific vaginal bacterial flora composition or any particular symptoms observed in a particular woman or population of women. While BV can manifest itself through a variety of symptoms, some of which are discussed elsewhere in this document, BV can also be asymptomatic. In certain situations, BV may be considered a medical condition or disease that requires treatment, while in other situations BV may be viewed as a benign variation of the vaginal bacterial flora. Regardless of the specific definition of BV, or the baseline or reference bacterial flora used, BV diagnostic methods described herein are generally probative for vaginal microflora alterations, and can be used to determine such alterations in both symptomatic and asymptomatic females.</p>
+      <p id="p-00030-en" num="0030">Improved methods useful for diagnosing BV can be also referred to as BV diagnostic methods, tests or assays. All these terms can be used interchangeably and fall within the scope of the present invention. “Diagnosis,” “diagnosing,” and related terms refer generally to a process or result of BV detection, identification or determination. The terms diagnosis, detection, identification, determination, assaying, testing and related terms, when used in reference to BV or in the context of the methods of the present invention can denote showing, indicating, discovering or determining one or more of presence of BV, absence of BV, prevalence, progression, level or severity of BV, as well as a probability of BV, present or future occurrence or exacerbation of symptoms of BV, consequences or complications of BV, or to efficacy of a treatments. The foregoing list is not intended to be exhaustive, and these terms “diagnose,” “detect,” “indicate,” “identify,” “indicative,” “determine,” “assay,” “test” and similar terms can also refer to other things.</p>
+      <p id="p-00031-en" num="0031">The molecular markers detected in the methods of the present invention are exemplified by bacterial nucleic acids, such as DNA or RNA. The nucleic acid markers are nucleic acid sequences specific to a particular category of BV-associated bacteria, such as a bacterial species or a genus. For example, the molecular markers used in some embodiments of the present invention are nucleic acid sequences specific to one or more the following bacteria: <i>Atopobium vaginae</i>, Bacterial Vaginosis Associated Bacterium (such as BVAB-1, BVAB-2 or BVAB-3), <i>Megasphaera</i>-1<i>, G. vaginalis</i>, or <i>Lactobacillus crispatus</i>. However, the molecular markers of the present invention are not limited to the nucleic acid sequences of the above-listed bacterial species. It is understood that other currently known bacteria can be used as BV markers in the embodiments of the present invention, and that newly recognized bacteria can be cultured from the samples or detected in libraries of clones from subjects with BV and used as markers in the embodiments of the present invention. It is envisioned that the methods of the present invention can be modified to detect a variety of BV-associated bacteria, and the molecular markers used in a particular embodiment of the methods of the present invention would be modified accordingly.</p>
+      <p id="p-00032-en" num="0032">The detection of nucleic acids employed in some embodiments of the methods described in this patent is less prone to environmental interferences and user errors, as compared to the so-called “indirect” assays of metabolic or enzymatic activity. Also, the nucleic acid markers employed in some of the embodiments of the methods of the present invention allow for specific detection of various bacterial species, unlike the non-specific enzymatic or metabolite markers that can be produced by several different bacteria. The nucleic acid markers used in the embodiments of the methods described herein, as well as the probes for detection of the markers, can be selected or modified to allow for more or less specific detection of various bacterial groups. For example, some of the markers or the probes can be selected to detect whole genera of bacteria, such as <i>Lactobacillus</i>, while the other embodiments may employ markers or probes that detect specific bacterial species. Various markers and probes can be selected and modified in order to choose a combination of markers and probes with an optimal predictive value desired for a particular situation. Thus, the methods of the present invention allow for increased assay flexibility in the test design, and can be easily adapted for a particular patient subgroup, purpose, or to account for new information on bacterial populations.</p>
+      <p id="p-00033-en" num="0033">BV diagnostic methods according to the present invention and its various embodiments use quantitative measures of bacterial occurrence in vaginal samples. The term “occurrence,” when used in reference to the bacteria detected according to the embodiments of the present invention is used to denote incidence of the bacteria, as well as frequency of their appearance, quantity, or distribution throughout different categories and subcategories. Combination of such information on the occurrence of bacteria can be referred to as a “pattern.” The information on occurrence of bacteria, or bacterial patterns, obtained from the samples investigated in the course of performing the BV diagnostic methods according to the present invention, can be compared or correlated with the information on bacterial occurrence in other samples, or to the information obtained by other methods from the same samples. Such information can be obtained prior to, concurrently with, or subsequently to the performance methods of the present invention. It is to be understood that any information used for comparison can be processed and stored, including processing and storage in computer form. Occurrence of bacteria is used in some embodiments of the present invention as a characteristic measured and evaluated as an indicator of BV. Some other embodiments of the present invention use the information on the occurrence of bacteria to identify the categories or combinations of bacteria that can be used as markers of BV in a patient.</p>
+      <p id="p-00034-en" num="0034">Detection of BV according to various embodiments of the methods disclosed herein can employ appropriate analytical methods, techniques or procedures. In some embodiments of the detection methods, quantitative or semi-quantitative PCR is employed to detect bacterial markers. However, it is envisioned that other suitable analytical techniques can be employed in other embodiments, such as immunochemical techniques or mass-spectroscopy. In one embodiment, a multiplexed quantitative PCR assay is used to detect several molecular markers in a sample simultaneously. The categories of bacteria quantitatively detected by the improved methods can be bacterial species or genera.</p>
+      <p id="p-00035-en" num="0035">The term “sample,” as used in this patent, refers to any sample suitable for testing or assaying according to the methods of the present invention. One example of a sample can be referred to as a gynecological sample, such as a vaginal swab obtained according to the procedures accepted in the medical field. However, the term “sample” is not limited to vaginal swabs, but can also be used to describe discharge or mucus samples, tissue sample or cell samples, obtained, processed, transported and stored using various suitable procedures. For examples, the samples can be stored in suitable storage or transportation devices, refrigerated, frozen, desiccated, diluted, mixed with various additives, or mounted on slides.</p>
+      <p id="p-00036-en" num="0036">The BV-associated bacteria detected using the molecular markers described herein are also referred to as “bacterial markers” and belong to a variety of bacterial genera and species. Some of the genera are <i>Lactobacillus, Atopobium, Gardnerella, Mobiluncus, Bacteroides, Leptotrichia, Sneathia, Porphyromonas</i>, and <i>Mycoplasma</i>. Some of the bacterial species are <i>Atopobium vaginae</i>, BVAB-2<i>, Megasphaera</i>-1<i>, Lactobacillus crispatus</i>, and <i>Gardnerella vaginalis</i>. The terms “bacterial marker” or “bacterial markers” are used herein to refer to one or more bacteria, or certain combinations of bacteria, whose occurrence can be used for assessment of BV status of a vaginal sample. Bacterial markers are selected for detection by the BV diagnostic methods of the present invention so as to provide a clinically meaningful assessment, based on the results of detection, of the occurrence of BV in a woman from whom the vaginal sample was obtained. The amount or presence of a bacterial marker in a sample can be positively or negatively correlated with the presence of BV in a patient from whom the sample was obtained. Accordingly, the marker can be referred to as a negative or a positive marker.</p>
+      <p id="p-00037-en" num="0037">Some of the bacterial markers utilized by the present invention are normal inhabitants of a human body, and are often referred to as “commensal” bacteria, particularly when they are not associated with any pathological states or conditions. Some other bacteria can be described as “pathological,” particularly if they are typically not found in human body, or found in low numbers, and their presence or increased numbers is associated with a pathological state. It is noted that the same bacterial species can be classified as both “commensal” or “pathological,” depending on the accepted classification system, pathology paradigm, bacterial numbers, and other factors. The present invention is therefore not limited to the using commensal, pathological, or any other category of bacterial markers.</p>
+      <p id="p-00038-en" num="0038">The bacterial markers are selected for the embodiments of the present invention in order to provide improved diagnostic characteristics with respect to determination of the BV status of a female patient. The selection of the bacterial markers can be modified or adjusted to improve or optimize diagnostic characteristics of the BV diagnostic methods of the present invention in a patient population. Such diagnostic characteristics can be also referred to as “probative value.” Some criteria for assessment of probative value are predictive value, sensitivity, and specificity. The term “predictive value” is used herein to denote a parameter that is used to characterize a correlation between the presence of BV in a patient or a group of patient and the occurrence of a particular bacterium or groups of bacteria. “Predictive value” can reflect positive correlation and be referred to as “positive predictive value,” or can reflect negative correlation and be referred to as “negative predictive value.” The terms “sensitivity” and “specificity” are used herein to refer to statistical measures of the performance of diagnostics tests. Sensitivity refers to a proportion of positive results which are correctly identified by a test. Specificity measures a proportion of the negative results that are correctly identified by a test. Examples of the calculations used to determine predictive value (positive and negative), specificity and specificity are described elsewhere in this patent.</p>
+      <p id="p-00039-en" num="0039">Diagnostic methods or tests according to some embodiments of the present invention advantageously use at least one bacterial marker that has high specificity, and at least one bacterial marker that has high sensitivity. It was discovered that employing a combination of at least two markers with these characteristics achieves improved probative value for a BV diagnostic test. The term “high specificity” refers to specificity that is equal or over 80%, 81%, 82%, 83%, 84%, 85%, 86%, 87%, 88%, 89%, 90%, 91%, 92%, 93%, 94%, 95%, 96%, 97%, 98%, or 99%. In one example, high specificity refers to specificity of approximately over 90%. In another example, high specificity refers to specificity of approximately over 95%. The term “high sensitivity” refers to sensitivity that is equal or over 80%, 81%, 82%, 83%, 84%, 85%, 86%, 87%, 88%, 89%, 90%, 91%, 92%, 93%, 94%, 95%, 96%, 97%, 98%, or 99%. In one example, high sensitivity refers to sensitivity of approximately over 90%. In another example, high sensitivity refers to sensitivity of approximately over 95%. The selection of the bacterial markers used in the improved BV diagnostic methods of the present invention can depend on a number of factors, such as the patient characteristics or the health risks associated with particular markers or patient characteristics. The diagnostic tests according to some embodiments of the present invention can advantageously use at least one bacterial marker that has high specificity but low sensitivity, and at least one bacterial marker that has high sensitivity but low specificity. The term “low sensitivity” refers to sensitivity that is equal or less than 75%, 76%, 77%, 78%, 79%, 80%, 81%, 82%, 83%, 84%, 85%, 86%, 87%, 88%, 89%, 90%, 91%, 92%, 93%, 94% or 95%. In one example, low sensitivity refers to specificity of approximately less than 78%. In another example, low sensitivity refers to sensitivity of approximately less than 89%. The term “low specificity” refers to specificity that is equal or less than 75%, 76%, 77%, 78%, 79%, 80%, 81%, 82%, 83%, 84%, 85%, 86%, 87%, 88%, 89%, 90%, 91%, 92%, 93%, 94% or 95%. In one example, low specificity refers to specificity of approximately less than 78%. In another example, low specificity refers to specificity of approximately less than 89%. The positive predictive value for the BV diagnostic methods according to the embodiments of the present invention can range from approximately 50% to approximately 99%. For example, positive predictive value can be approximately 55%, 58%, 76%, 85% or 90%. Negative predictive value for the BV diagnostic methods according to the embodiments of the present invention can range from approximately 95% to approximately 99.5%. For example, negative predictive value can be approximately 98%, 98.5%, 99% or 99.5%. The methods according to embodiments of the present invention can have increased positive predictive value, as compared to previously known tests. For example, positive predictive value can be approximately 20-40%, 22-33% higher, or 25-30% higher than the positive predictive value for a conventional test in a given population.</p>
+      <p id="p-00040-en" num="0040">Markers selected for BV diagnosis may be different for different patient populations. For example, different bacterial markers may be selected for populations with different prevalence of BV. In other examples, different bacterial markers may be selected for different ethnic or age groups, or have different baseline or reference vaginal bacterial populations. The selection of bacterial markers may be changed based on the distribution of various markers in a particular patient population in both a baseline (non-BV) state and BV states of various severities. In another example, different bacterial markers may be selected for detecting BV in pregnant women than for non-pregnant women. In one more example, different bacterial markers may be used to detect BV in HIV-positive and HIV negative patients, depending on the health risks associated with different bacteria for each of the groups.</p>
+      <p id="p-00041-en" num="0041">In one embodiment of the BV diagnostic method described in this patent, a combination of <i>A. vaginae</i>, BVAB-2<i>, G. vaginalis, Megasphaera</i>-1 and <i>L. crispatus </i>is used to delineate BV. In another embodiment, a combination of <i>A. vaginae</i>, BVAB-2<i>, G. vaginalis, Megasphaera</i>-1 is used as a marker for BV. In another embodiment, <i>L. crispatus </i>is included in a group of bacterial markers as a negative predictor for BV. The number of bacterial markers used in various embodiments of the present invention can be two, three, four, five, six, seven, eight or higher. The methods and procedures for selecting the bacterial markers to be used in the BV diagnostic methods are included within the scope of the present invention, as well as the combinations of bacterial markers described herein, which are used for diagnosing, predicting or assessing BV in a patient.</p>
+      <p id="p-00042-en" num="0042">The improved BV diagnostic methods characterize the bacterial markers detected in a sample using a scoring method, which is then translated into a clinical interpretation of a BV status of the sample. The scoring method used in the improved BV diagnostic methods assigns scores to individual bacterial markers based on their levels, determined as amount or concentration of a bacterial marker detected in a sample, and generates a composite score from the individual bacterial marker scores. The scoring method is included within the scope of the present invention. In order to develop a scoring method for various bacterial markers, cut-off values for bacterial marker levels are determined. When a diagnostic method is performed, the cut-off values are used to classify the samples into different categories with respect to the levels of a bacterial marker in each category (for example, low, medium or high). In order to determine the cut-off values, levels of a bacterial marker are determined by appropriate analytical procedures in the samples obtained from a patient population. The statistical distribution of the levels of the marker in a given sample set is calculated or otherwise evaluated, quantitatively or qualitatively. For example, a fraction of the samples associated with a particular range of the levels of the marker is calculated. Based on the evaluation, cut-off values are determined. The scores to be assigned to each of the ranges are also determined. Samples are then assigned, categorized or classified into a category based the amount or levels of the marker detected in the samples. Based on the categorization, concentrations for each of the markers utilized in a particular embodiment of the test are converted into a score characteristic of the concentration or levels of the marker. The individual scores are combined into a composite score, which is used in clinical interpretation of the test results. <figref>FIG. 1</figref> provides a schematic illustration on the distribution of several markers in a particular patient population as well as determination of the cut-off values for each marker. The scoring method according to the present invention can be flexibly adjusted to reflect distribution of various bacterial markers in various patient populations so as to achieve improved probative value and clinically meaningful diagnostic data for different sample sets, patient populations and bacterial markers.</p>
+      <p id="p-00043-en" num="0043">BV diagnostic methods described herein are accurate, cost-effective, clinically predictive and readily interpretable. They are compatible with other tests for urogenital conditions and/or sexually transmitted diseases (STIs), such as candidiasis, trichomoniasis, <i>chlamydia</i>, gonorrhea and others. The BV diagnostic methods of the present invention are at least as sensitive and specific as the conventional tests currently employed for BV diagnosis, such as Nugent Gram stain scoring approach and Amsel interpretation, when the conventional tests are performed by skilled practitioners. They are least as sensitive but significantly more specific than tests using single molecular markers, such as BD Affirm Assay.</p>
+      <p id="p-00044-en" num="0044">The BV diagnostic methods described herein utilize a relatively simple and robust design and scoring method that enables accurate differentiation of BV positive and negative samples to be performed in a standardized and cost-effective manner. BV diagnostic methods and sample scoring methods described herein provide improved clinical testing and management options for the common and problematic syndrome of bacterial vaginosis.</p>
+      <heading id="h-00007-en" level="1">EXAMPLES</heading>
+      <p id="p-00045-en" num="0045">Embodiments of the present invention are illustrated by the following examples, which are not to be construed in any way as imposing limitations upon the scope thereof. On the contrary, it is to be clearly understood that resort may be had to various other embodiments, modifications, and equivalents thereof, which, after reading the description herein, may suggest themselves to those skilled in the art without departing from the spirit of the invention. During the studies described in the following examples, conventional procedures were followed, unless otherwise stated. Some of the procedures are described below for illustrative purpose.</p>
+      <heading id="h-00008-en" level="1">Example 1</heading>
+      <heading id="h-00009-en" level="1">Clinical Evaluation</heading>
+      <p id="p-00046-en" num="0046">Evaluation of 396 patients was conducted with the goal of developing a clinically validated test for BV based on nucleic acid amplification, such as qPCR, and quantification of key indicator organisms. The evaluated patient population consisted of adult females at least 18 years of age. Multiple vaginal swabs were collected from each evaluated patient and tested according to standard BV diagnosis procedures (termed “gold standard”), namely, Nugent Gram-stain scoring system and Amsel criteria. Additional, vaginal swabs were tested by the Affirm test and qPCR assays for several bacterial markers. The information from different qPCR assays was used to determine BV status of each sample, and the results were statistically analyzed and compared with the results of Nugent Gram-stain scoring system, Amsel criteria and Affirm test.</p>
+      <heading id="h-00010-en" level="1">Example 2</heading>
+      <heading id="h-00011-en" level="1">Patient Population</heading>
+      <p id="p-00047-en" num="0047">A total of 402 women presenting for clinical evaluation at either the Sexually Transmitted Diseases Clinic, Jefferson County Department of Public Health (JCDH), Birmingham, Ala. (299 patients), or the Personal Health Clinic (PHC), University of Alabama-Birmingham, Birmingham, Ala. (103 patients) between April and October, 2011 were enrolled in the study. All enrolled patients were over 18 years of age, and did not receive antibiotics or use vaginal medications, including antifungal medications, for at least 14 days prior to enrollment. Evaluations could not be completed on 6 enrollees, thus, the results from 396 patients were available for the clinical evaluation described in the earlier example.</p>
+      <heading id="h-00012-en" level="1">Example 3</heading>
+      <heading id="h-00013-en" level="1">Sample Collection</heading>
+      <p id="p-00048-en" num="0048">Informed consent was obtained from all the patients. A series of vaginal samples was collected from each patient in order to conduct comprehensive evaluation for markers of vaginitis, including bacterial markers, <i>Candida </i>spp. and <i>Trichomonas vaginalis</i>, and testing for <i>Chlamydia trachomatis </i>and <i>Neisseria gonorrhoeae</i>. The sample series contained the samples described below. A standard vaginal swab was collected and used to prepare a smear for Gram staining procedure on a microscopy slide. The microscope slide was stained according to Gram staining procedure and assessed in the field by a qualified clinician according to the Nugent scoring system. The same vaginal swab that was used for Gram staining, was then placed in Affirm™ VPIII transport system (Becton-Dickinson, Sparks, Md.) with dropper vial additive. The second vaginal swab was collected and placed into ESwab™ (Copan Diagnostics Inc., Murrieta, Calif.) transport system for culture and confirmatory Gram stain evaluation. Two additional swabs were collected using the APTIMA™ vaginal swab collection device (GenProbe™ Inc., San Diego, Calif.) for nucleic-acid amplification testing.</p>
+      <heading id="h-00014-en" level="1">Example 4</heading>
+      <heading id="h-00015-en" level="1">Sample Assessment According to Conventional Gold Standard Methods</heading>
+      <p id="p-00049-en" num="0049">For each evaluated patient, BV status was ascertained by clinical assessment using the gold standard: the Amsel criteria assessment of a vaginal secretion sample and Nugent scoring performed on a Gram-stained a vaginal swab sample.</p>
+      <p id="p-00050-en" num="0050">For Amsel criteria assessment, vaginal secretions were collected from each patient and evaluated at the point of collection according to the Amsel criteria. The following standard Amsel criteria were assessed and recorded for each patient: presence of thin, whitish, homogenous vaginal discharge; amine (fishy) odor on the addition of KOH to the wet mounted vaginal discharge material, the presence of clue cells upon microscopic examination of vaginal discharge samples; and a pH value of greater than 4.5 for the vagina discharge.</p>
+      <p id="p-00051-en" num="0051">Vaginal samples were also evaluated according to Nugent Gram-stain scoring system. Quantitative Gram-staining for each sample was performed according to standard procedures. In brief, a standard vaginal swab was rolled across a glass microscope slide, air dried, and then fixed in methanol prior to Gram staining. Gram-staining was performed. Gram-stained slides were then examined for specific bacterial morphologies, and Nugent scores (NS: range 0-10) generated. An NS of 0-3 was interpreted as normal or negative for BV, a score of 7-10 was interpreted as abnormal or positive for BV, and a score of 4-6 was interpreted as intermediate for BV.</p>
+      <p id="p-00052-en" num="0052">In order to definitively classify samples as positive or negative for BV, the samples with intermediate NS that met the Amsel criteria for BV were classified as BV positive, and the samples with intermediate NS that failed to meet the Amsel criteria for BV were classified as BV negative.</p>
+      <heading id="h-00016-en" level="1">Example 5</heading>
+      <heading id="h-00017-en" level="1">Sample Characterization Results Based on the Gold Standard BV Diagnostic Methods</heading>
+      <p id="p-00053-en" num="0053">In the first phase of the study, 169 samples (“first sample group”) were characterized according to the conventional gold standard methods, namely, Amsel criteria assessment and Nugent Gram-stain scoring. Of the 169 samples comprising the first sample group, 108 (63.9%) were determined to be BV positive and 61 (36.1%) were determined to be negative for BV according to the gold standard. Of the BV positive samples, 96 (88.1%) had NS of 7-10, with 12 samples having NS of 4-6 and positive Amsel results. Of the BV negative samples, 47 (77.0%) had NS of 0-3, with the remaining 14 samples being Amsel negative and NS intermediate. 168/169 (99.4%) of samples in this phase of the study were collected from patients attending the JCDH clinic. An additional 227 samples were subsequently collected (“second sample group”). One hundred and thirty one (57.7%) of these samples were obtained from patients attending JCDH, and 96 (42.3%) from patients attending PHC. Among the second sample group, 110 (48.5%) were positive and 107 (51.5%) negative for BV. Unambiguous NS were obtained for 200/227 (88.1%) of the second group samples, and of the 27 samples with intermediate NS, 8 were resolved as positive and 19 as negative using Amsel criteria. The overall prevalence of BV in the study population was, therefore, 55.1% (218/396) with an NS intermediate rate of 13.6% (54/396). Of the 54 NS intermediate samples, 21 (38.9%) resolved as positive for BV using the Amsel criteria.</p>
+      <heading id="h-00018-en" level="1">Example 6</heading>
+      <heading id="h-00019-en" level="1">Nucleic Acid Isolation</heading>
+      <p id="p-00054-en" num="0054">Nucleic-acid was extracted from vaginal swab suspensions prepared and stored in APTIMA™ collection system using the MagNAPure LC™ Total Nucleic Acid Isolation Kit on MagNAPure™ LC Instruments (Roche Applied Science, Indianapolis, Ind.) according to the manufacturer's instructions. Prior to extraction, DNA Sample Processing Reagent (DNA-SPR; EraGen Biosciences, Madison, Wis.; 5 μl) was added to each specimen. DNA-SPR contains a proprietary, extractable, DNA target that is used as an internal control in PCR assays to monitor recovery of nucleic-acid and elimination of PCR inhibitors through sample preparation. Nucleic acid was eluted in a final volume of 50 μl and either analyzed immediately or stored at a temperature of less than −20° C.</p>
+      <heading id="h-00020-en" level="1">Example 7</heading>
+      <heading id="h-00021-en" level="1">Quantitative PCR Assays</heading>
+      <p id="p-00055-en" num="0055">For quantitative PCR (qPCR) testing of the samples for the presence of <i>A. vaginae</i>, BVAB-2<i>, Megasphaera</i>-1<i>, G. vaginalis </i>and <i>L. crispatus</i>, primer designs were developed for each of the organisms based on in silico analysis of published 16S rRNA gene sequences and are shown in Table 1. The primers were screened for multiplex qPCR compatibility and lack of cross-reactivity. Assays were designed for use the primer-based MultiCode®-RTx system (EraGen Biosciences, Madison, Wis.) for real-time product detection. Generally, the MultiCode®-RTx system exploits the physico-chemical properties of two unique synthetic nucleotide bases and allows for specific amplification of PCR products to be monitored as concentration-dependent decreases in fluorescence, with confirmation of amplification of the desired product accomplished post-amplification via determination of peak melting temperatures (T<sub>m</sub>) of amplified products.</p>
+      <p id="p-00056-en" num="0056">One member of each primer pair used in the qPCR assay for multiple markers contained a 2′-deoxy-5-methyl-isocytidine (iC) base coupled to a fluorescein moiety immediately proximal to the 5′-terminus of the molecule. For quantitative measurement of the respective analytes, synthetic oligonucleotide Ultramers™ (Integrated DNA Technologies Inc., Coralville, Iowa) were used to construct calibrating material. Each Ultramer contained the target sequence of one of the intended analytes, and quantitative analytical data provided by the manufacturer was used as the basis for value assignment (in DNA copies) of these materials. All qPCR assay runs included a set of 3 ultrameric calibrators, and interpolation of crossing threshold (C<sub>t</sub>) values generated during PCR amplification of vaginal samples into calibration curves enabled the derivation of DNA concentrations per mL of sample for each analyte. A total of 5 μL of extracted nucleic-acid (corresponding to 20 μL of original vaginal sample), was utilized for qPCR amplification reactions, and the dynamic range of all qPCR assays was established at 1×10<sup>3</sup>-1×10<sup>8 </sup>copies/mL. Amplification reactions were performed on RotorGene™ Q instruments (QiaGen Inc., Chatsworth, Calif.) using the following conditions: initial denaturation for 2 min at 95° C., 50 cycles of amplification (95° C.×5 sec, 58° C.×10 sec, 72° C.×20 sec (fluorescence collected during this step); with post-amplification melt analysis (60° C. to 95° C. ramp, 1.0° C. per second).</p>
+      <heading id="h-00022-en" level="1">Example 8</heading>
+      <heading id="h-00023-en" level="1">Multiplexed qPCR Assay</heading>
+      <p id="p-00057-en" num="0057">The BV PCR design consisted of a pair of multiplexed PCR reactions. BV-1 contained the <i>A. vaginae </i>primer pair (5-carboxyfluorescein (FAM) labeled) and an internal control primer pair (6-hexachlorofluorescein (HEX labeled). BV-2 contained the BVAB-2 primer pair (FAM labeled) and the <i>Megasphaera</i>-1 primer-pair (HEX labeled). Each BV PCR run contained 2 ultrameric calibrators for the Av reaction (set at 7.0 log<sub>10 </sub>copies/mL for Cal-1 and 5.5 log<sub>10 </sub>copies/mL for Cal-2), 2 ultrameric calibrators for the BVAB-2 reaction (set at 6.0 log<sub>10 </sub>copies/mL for Cal-1 and 4.5 log<sub>10 </sub>copies/mL for Cal-2), and a single ultrameric calibrator for <i>Megasphaera</i>-1 set at 6.0 log<sub>10 </sub>copies/mL. Each run also contained appropriate negative and positive extraction controls to monitor assay performance.</p>
+      <heading id="h-00024-en" level="1">Example 9</heading>
+      <heading id="h-00025-en" level="1">qPCR Testing Results Using Single Known BV Bacterial Markers</heading>
+      <p id="p-00058-en" num="0058">Five organisms were separately detected by qPCR in the 169 samples of the first sample group: <i>A. vaginae</i>, BVAB-2<i>, G. vaginalis. Megasphaera</i>-1 and <i>L. crispatus</i>. Comparison of qPCR testing results obtained for each separate marker and gold standard results is illustrated in Table 2. All four of the qPCR-detected organisms that are known to be positive BV markers were frequently present in samples designated as BV positive. Using an assay cut-off value of 1×10<sup>3 </sup>copies/mL, 98.1% (106/108) BV positive samples were positive for <i>G. vaginalis, </i>98.2% (106/108) of the BV positive samples were positive for <i>A. vaginae</i>, 89.8% (97/108) of the BV positive samples were positive for BVAB-2, and 87.0% (94/108) of the BV positive samples were positive for <i>Megasphaera</i>-1.</p>
+      <p id="p-00059-en" num="0059">The frequency with which these organisms were found in BV negative samples were appreciably different among the organisms. 60.7% (37/61) of BV negative samples were positive for <i>G. vaginalis, </i>52.5% (32/61) positive for <i>A. vaginae</i>, 18.0% (11/61) for BVAB-2, and 16.4% (10/61) for <i>Megasphaera</i>-1.</p>
+      <p id="p-00060-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1" tabstyle="monospace">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="364pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Primer sequences used to detect indicated 16s rRNA regions of </entry>
+                </row>
+                <row>
+                  <entry>target organisms</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="left" />
+              <colspec colname="3" colwidth="189pt" align="left" />
+              <colspec colname="4" colwidth="42pt" align="left" />
+              <colspec colname="5" colwidth="42pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>GenBank</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Primer</entry>
+                  <entry />
+                  <entry>5′-</entry>
+                  <entry>Accession</entry>
+                </row>
+                <row>
+                  <entry>Target</entry>
+                  <entry>ID</entry>
+                  <entry>Sequence (5′ → 3′)</entry>
+                  <entry>Location</entry>
+                  <entry>Number</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>
+                    <i>A</i>. <i>vaginae</i></entry>
+                  <entry>AvRP-</entry>
+                  <entry>FAM-isodC-CCC TGG TAG TCC TAG CT<sup>a</sup></entry>
+                  <entry> 746</entry>
+                  <entry>AJ585206</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>BV1</entry>
+                  <entry>(SEQ ID NO: 1)</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>AvFP-</entry>
+                  <entry>CGG CAC GGA AAG TAT AAT CT</entry>
+                  <entry> 808</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>BV1</entry>
+                  <entry>(SEQ ID NO: 2)</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>BVAB-2</entry>
+                  <entry>BvabFP-</entry>
+                  <entry>FAM-isodC-CGT GTA GGC GGC TAG ATA</entry>
+                  <entry> 199</entry>
+                  <entry>GQ900639</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>BV2</entry>
+                  <entry>AGT G (SEQ ID NO: 3)</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>BvabFP-</entry>
+                  <entry>TCC AGC ACT CAA GCT AAA CAG TTT GT</entry>
+                  <entry> 283</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>BV2</entry>
+                  <entry>(SEQ ID NO: 4)</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <i>G</i>. </entry>
+                  <entry>Gv-16s-</entry>
+                  <entry>FAM-isodC-GTG ACA TGG TGC TAA TCC CT</entry>
+                  <entry>1226</entry>
+                  <entry>HQ114564</entry>
+                </row>
+                <row>
+                  <entry>
+                    <i>vaginalis</i>
+                  </entry>
+                  <entry>F1</entry>
+                  <entry>(SEQ ID NO: 5)</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Gv-16s-</entry>
+                  <entry>GCT GCC CAC TTT CAT GAC TT</entry>
+                  <entry>1388</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>F2</entry>
+                  <entry>(SEQ ID NO: 6)</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <i>Megasphaera</i>-</entry>
+                  <entry>MegaFP-</entry>
+                  <entry>GCT CTG TTA TAC GGG ACG AAA AAG</entry>
+                  <entry> 419</entry>
+                  <entry>AB279971</entry>
+                </row>
+                <row>
+                  <entry>1</entry>
+                  <entry>BV2</entry>
+                  <entry>(SEQ ID NO: 7)</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>MegaRP-</entry>
+                  <entry>FAM-isodC-CGG ACG GAT ACT GTT GGC</entry>
+                  <entry> 462</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>BV2</entry>
+                  <entry>ATC (SEQ ID NO: 8)</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <i>L</i>. </entry>
+                  <entry>Lc-16s-</entry>
+                  <entry>CAG GTC TTG ACA TCT AGT GCC ATT T</entry>
+                  <entry> 969</entry>
+                  <entry>HQ716720</entry>
+                </row>
+                <row>
+                  <entry>
+                    <i>crispatus</i>
+                  </entry>
+                  <entry>F1</entry>
+                  <entry>(SEQ ID NO: 9)</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Lc-16s-</entry>
+                  <entry>FAM-isodC-CAT GCA CCA CCT GTC TTA G</entry>
+                  <entry>1041</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>F2</entry>
+                  <entry>(SEQ ID NO: 10)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="left" id="entry-00001-en">
+                    <sup>a</sup>FAM: 5-carboxyfluorescein is used as the reporter dye and is coupled to the initial 5′-nucleotide in the primer. isodC: 2′-deoxy-5-methyl-isocytidine is the initial nucleotide at the 5′-end of the fluorescently labeled primer.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00061-en" num="0060">Analysis of the distribution of quantitative values also demonstrated appreciable differences in organism concentrations in BV positive and negative sample populations, as illustrated in Table 2. The median concentration observed in BV positive and negative populations differed by 3.5 log<sup>10 </sup>copies/mL for <i>G. vaginalis</i>, 3.8 log<sup>10 </sup>copies/mL for <i>A. vaginae</i>, &gt;3.1 log<sup>10 </sup>copies/mL for BVAB-2, and &gt;3.9 log<sup>10 </sup>copies/mL for <i>Megasphaera</i>-1.</p>
+      <p id="p-00062-en" num="0061">
+        <i>L. crispatus </i>was evaluated as a negative BV marker and was found at an unexpectedly low rate in the study population with only 37/169 (21.9%) samples having &gt;1×103 copies/mL of this organism. The frequency of detection of <i>L. crispatus </i>in BV positive samples was significantly lower than that observed in BV negative samples (10.2% v 42.6%; p&lt;0.01), however, a majority (57.4%) of BV negative samples in this population lacked detectable levels of this organism.</p>
+      <p id="p-00063-en" num="0062">Analysis of data generated from the single marker qPCR tests demonstrated that the utility of <i>A. vaginae </i>and <i>G. vaginalis</i>, highly sensitive markers for BV, was limited by their low specificity, or high frequency with which they were identified in samples from patients not classified as BV positive. BVAB-2 and <i>Megasphaera</i>-1 were somewhat more specific indicators of BV positivity than either <i>G. vaginalis </i>or <i>A. vaginae</i>, but at least one of these organisms was present in a significant subset of BV negative study subjects.</p>
+      <p id="p-00064-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="266pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Results of quantitative PCR measurements of marker organisms in vaginal samples </entry>
+                </row>
+                <row>
+                  <entry>identified as positive or negative for BV according to gold standard.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="70pt" align="center" />
+              <colspec colname="4" colwidth="105pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>BV</entry>
+                  <entry>PCR Results<sup>b </sup></entry>
+                  <entry>qPCR Values (log<sub>10 </sub>copies/mL)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <colspec colname="5" colwidth="35pt" align="center" />
+              <colspec colname="6" colwidth="35pt" align="center" />
+              <colspec colname="7" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Organism</entry>
+                  <entry>Status<sup>a</sup></entry>
+                  <entry>Negative</entry>
+                  <entry>Positive</entry>
+                  <entry>25<sup>th </sup>Pct</entry>
+                  <entry>50<sup>th </sup>Pct</entry>
+                  <entry>75<sup>th </sup>Pct</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="char" char="." />
+              <colspec colname="4" colwidth="35pt" align="char" char="." />
+              <colspec colname="5" colwidth="35pt" align="char" char="." />
+              <colspec colname="6" colwidth="35pt" align="char" char="." />
+              <colspec colname="7" colwidth="35pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>
+                    <i>A</i>. <i>vaginae</i></entry>
+                  <entry>Negative</entry>
+                  <entry>29</entry>
+                  <entry>32</entry>
+                  <entry>&lt;3.00</entry>
+                  <entry>3.11</entry>
+                  <entry>4.98</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Positive</entry>
+                  <entry>2</entry>
+                  <entry>106</entry>
+                  <entry>6.52</entry>
+                  <entry>6.90</entry>
+                  <entry>7.32</entry>
+                </row>
+                <row>
+                  <entry>BVAB-2</entry>
+                  <entry>Negative</entry>
+                  <entry>50</entry>
+                  <entry>11</entry>
+                  <entry>&lt;3.00</entry>
+                  <entry>&lt;3.00</entry>
+                  <entry>&lt;3.00</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Positive</entry>
+                  <entry>11</entry>
+                  <entry>97</entry>
+                  <entry>5.38</entry>
+                  <entry>6.04</entry>
+                  <entry>6.64</entry>
+                </row>
+                <row>
+                  <entry>
+                    <i>G</i>. <i>vaginalis</i></entry>
+                  <entry>Negative</entry>
+                  <entry>24</entry>
+                  <entry>37</entry>
+                  <entry>&lt;3.00</entry>
+                  <entry>3.48</entry>
+                  <entry>5.31</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Positive</entry>
+                  <entry>2</entry>
+                  <entry>106</entry>
+                  <entry>6.61</entry>
+                  <entry>6.99</entry>
+                  <entry>7.53</entry>
+                </row>
+                <row>
+                  <entry>
+                    <i>Megasphaera</i>-1 </entry>
+                  <entry>Negative</entry>
+                  <entry>51</entry>
+                  <entry>10</entry>
+                  <entry>&lt;3.00</entry>
+                  <entry>&lt;3.00</entry>
+                  <entry>&lt;3.00</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Positive</entry>
+                  <entry>14</entry>
+                  <entry>94</entry>
+                  <entry>6.18</entry>
+                  <entry>6.89</entry>
+                  <entry>7.18</entry>
+                </row>
+                <row>
+                  <entry>
+                    <i>L</i>. <i>crispatus</i></entry>
+                  <entry>Negative</entry>
+                  <entry>35</entry>
+                  <entry>26</entry>
+                  <entry>&lt;3.00</entry>
+                  <entry>&lt;3.00</entry>
+                  <entry>7.55</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Positive</entry>
+                  <entry>97</entry>
+                  <entry>11</entry>
+                  <entry>&lt;3.00</entry>
+                  <entry>&lt;3.00</entry>
+                  <entry>&lt;3.00</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="left" id="entry-00002-en">
+                    <sup>a</sup>BV status was defined based on a combination of Nugent Gram-stain score (NS) and Amsel's criteria. BV positive samples were those with NS value of 7-10 and samples with NS values of 4-6 that met Amsel's criteria.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="left" id="entry-00003-en">
+                    <sup>b</sup>Samples that generating qPCR values below the lower limit of quantitation of the respective assays (1000 copies/mL) were considered negative. Pct is an abbreviation for “percentile.”</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00026-en" level="1">Example 10</heading>
+      <heading id="h-00027-en" level="1">Statistical Analysis of qPCR Data for Known Marker Organisms</heading>
+      <p id="p-00065-en" num="0063">Statistical analysis of qPCR data obtained for known marker organisms indicated that no single marker organism reliably differentiated between BV positive and BV negative samples. <i>G. vaginalis </i>and <i>A. vaginae </i>each demonstrated high sensitivity, but limited concentration discrimination observed for each of these organisms between the 4<sup>th </sup>quartile of the negative population and the 1<sup>st </sup>quartile of the positive sample population compromised specificity. BVAB-2 and <i>Megasphaera</i>-1, by contrast, demonstrated lower overall sensitivity, but greater concentration discrimination between positive and negative populations.</p>
+      <p id="p-00066-en" num="0064">Logistic regression analysis (MedCalc Software Suite) was performed on all marker combinations using the results obtained for the 169 samples of the first sample group (illustrated in Table 3). BV status of the patients, based on NS plus Amsel criteria was used as the dependent variable (negative=0, positive=1), and the qPCR results of the combinations of marker organisms were used as the independent variable. The results of this analysis demonstrated that certain combinations of three marker organisms, namely, <i>A. vaginae</i>/BVAB-2<i>/Megasphaera</i>-1 or <i>G. vaginalis</i>/BVAB-2<i>/Megasphaera</i>-1, offered advantageous combination of sensitivity and specificity, with both parameters exceeding 90% for these combinations (illustrated in Table 3).</p>
+      <p id="p-00067-en" num="0065">None of the tested combination of two markers reported in this example generated both sensitivity and specificity parameters of &gt;90% in the development phase sample cohort. This finding unexpectedly contradicts the earlier reports by others on a reasonable specificity for BV using a qualitative combination of <i>A. vaginae </i>and <i>G. vaginalis</i>, or that qualitative detection of either BVAB-2 or <i>Megasphaera</i>-1 was highly sensitive and specific when compared against either NS or Amsel criteria.</p>
+      <p id="p-00068-en" num="0066">The experimental data summarized in this example indicated that a combination of BVAB-2 and <i>Megasphaera</i>-1 also lacked a high level of specificity, even if only samples with NS values of are considered as positive and intermediate NS samples excluded from analysis. Of the 47 samples in the first sample group with NS of 3, 9 (19.1%) had positive results for either BVAB-2 (2 samples), <i>Megasphaera</i>-1 (4 samples), or both organisms (3 samples), using a threshold for positivity of 1×10<sup>3 </sup>copies/mL. Performance of this combination using only the Amsel criteria for BV designation was even less probative, with either <i>Megasphaera</i>-1 or BVAB-2 DNA detected in 26/72 (36.1%) Amsel negative samples in the first sample group. These results were unexpected in view of the earlier studies by others using comparable value assessment (the median quantitative values for each of the markers in BV positive patients in the earlier studies were only 0.5 log<sub>10 </sub>DNA copies per sample higher than those described here).</p>
+      <p id="p-00069-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="287pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 3</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Results of logistic regression analysis of qPCR results for various</entry>
+                </row>
+                <row>
+                  <entry>marker organism combinations</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="28pt" align="left" />
+              <colspec colname="2" colwidth="77pt" align="left" />
+              <colspec colname="3" colwidth="35pt" align="left" />
+              <colspec colname="4" colwidth="77pt" align="center" />
+              <colspec colname="5" colwidth="70pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Number</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>of</entry>
+                  <entry />
+                  <entry>BV</entry>
+                  <entry>PCR Category<sup>c</sup></entry>
+                  <entry>Statistical Metrics</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="28pt" align="left" />
+              <colspec colname="2" colwidth="77pt" align="left" />
+              <colspec colname="3" colwidth="35pt" align="left" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="35pt" align="center" />
+              <colspec colname="6" colwidth="35pt" align="center" />
+              <colspec colname="7" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Markers</entry>
+                  <entry>Organisms<sup>a</sup></entry>
+                  <entry>Status<sup>b</sup></entry>
+                  <entry>Negative</entry>
+                  <entry>Positive </entry>
+                  <entry>Sensitivity </entry>
+                  <entry>Specificity</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="28pt" align="left" />
+              <colspec colname="2" colwidth="77pt" align="left" />
+              <colspec colname="3" colwidth="35pt" align="left" />
+              <colspec colname="4" colwidth="42pt" align="left" />
+              <colspec colname="5" colwidth="35pt" align="left" />
+              <colspec colname="6" colwidth="35pt" align="left" />
+              <colspec colname="7" colwidth="35pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>2</entry>
+                  <entry>Av/BVAB-2</entry>
+                  <entry>Negative</entry>
+                  <entry>50</entry>
+                  <entry> 11</entry>
+                  <entry>95.4%</entry>
+                  <entry>82.0%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Positive</entry>
+                  <entry> 5</entry>
+                  <entry>103</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Av/Gv</entry>
+                  <entry>Negative</entry>
+                  <entry>47</entry>
+                  <entry> 14</entry>
+                  <entry>95.4%</entry>
+                  <entry>77.0%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Positive</entry>
+                  <entry> 5</entry>
+                  <entry>103</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Av/Mega-1</entry>
+                  <entry>Negative</entry>
+                  <entry>53</entry>
+                  <entry>  8</entry>
+                  <entry>94.4%</entry>
+                  <entry>86.9%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Positive</entry>
+                  <entry> 6</entry>
+                  <entry>102</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>BVAB-2/Gv</entry>
+                  <entry>Negative</entry>
+                  <entry>50</entry>
+                  <entry> 11</entry>
+                  <entry>96.3%</entry>
+                  <entry>82.0%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Positive</entry>
+                  <entry> 4</entry>
+                  <entry>104</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>BVAB-2/Mega-1</entry>
+                  <entry>Negative</entry>
+                  <entry>54</entry>
+                  <entry>  7</entry>
+                  <entry>92.7%</entry>
+                  <entry>88.5%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Positive</entry>
+                  <entry> 7</entry>
+                  <entry>101</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Gv/Mega-1</entry>
+                  <entry>Positive</entry>
+                  <entry>53</entry>
+                  <entry>  8</entry>
+                  <entry>93.5%</entry>
+                  <entry>86.9%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Negative</entry>
+                  <entry> 7</entry>
+                  <entry>101</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>3</entry>
+                  <entry>Av/BVAB-2/Gv</entry>
+                  <entry>Negative</entry>
+                  <entry>51</entry>
+                  <entry> 10</entry>
+                  <entry>95.4%</entry>
+                  <entry>83.6%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Positive</entry>
+                  <entry> 5</entry>
+                  <entry>103</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Av/BVAB-2/Mega-1</entry>
+                  <entry>Negative</entry>
+                  <entry>55</entry>
+                  <entry>  6</entry>
+                  <entry>95.4%</entry>
+                  <entry>90.2%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Positive</entry>
+                  <entry> 5</entry>
+                  <entry>103</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Av/Gv/Mega-1</entry>
+                  <entry>Negative</entry>
+                  <entry>53</entry>
+                  <entry>  8</entry>
+                  <entry>94.4%</entry>
+                  <entry>86.9%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Positive</entry>
+                  <entry> 6</entry>
+                  <entry>102</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>BVAB-2/Gv/Mega-1</entry>
+                  <entry>Negative</entry>
+                  <entry>55</entry>
+                  <entry>  6</entry>
+                  <entry>93.5%</entry>
+                  <entry>90.0%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Positive</entry>
+                  <entry> 7</entry>
+                  <entry>101</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>4</entry>
+                  <entry>Av/BVAB-2/Gv/Mega-1</entry>
+                  <entry>Negative</entry>
+                  <entry>52</entry>
+                  <entry>  9</entry>
+                  <entry>95.4%</entry>
+                  <entry>85.2%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Positive</entry>
+                  <entry> 5</entry>
+                  <entry>103</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="left" id="entry-00004-en">
+                    <sup>a</sup>Av = <i>Atopobium</i><i>vaginae</i>, Gv = <i>Gardnerella</i><i>vaginalis</i>, Mega-1 = <i>Megasphaera</i>-1.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="left" id="entry-00005-en">
+                    <sup>b</sup>BV status was defined based on a combination of Nugent Gram-stain score (NS) and Amsel criteria. BV positive samples were those with NS value of 7-10 and samples with NS values of 4-6 that met Amsel criteria.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="left" id="entry-00006-en">
+                    <sup>c</sup>Categorized using logistic regression analysis, with BV status as the dependent variable (negative = 0; positive = 1), and qPCR results on the 169 samples of the first sample group for the different marker combinations as the independent variable.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00070-en" num="0067">Yet another earlier report by others stated that a combination of <i>A. vaginae </i>and <i>G. vaginalis </i>analyzed quantitatively may be used to accurately differentiate BV positive from negative samples, using threshold concentrations of 10<sup>8 </sup>copies/mL and 10<sup>9 </sup>copies/mL, respectively. Logistic regression analysis of the first sample group described in this example unexpectedly demonstrated that quantitative analysis of these 2 markers, in combination, was not able to reliably differentiate BV positive from BV negative samples.</p>
+      <heading id="h-00028-en" level="1">Example 11</heading>
+      <heading id="h-00029-en" level="1">Three-Marker Test Performance Using Individual qPCR Detection for Each Marker Organism</heading>
+      <p id="p-00071-en" num="0068">A test employing qPCR testing of three bacterial marker organisms (“three-marker qPCR test”) was developed. In this example, individual qPCR analysis of vaginal samples for each organism was employed to detect the concentrations of each of <i>A. vaginae</i>, BVAB-2 and <i>Megasphaera</i>-1 bacteria.</p>
+      <p id="p-00072-en" num="0069">Analytical cut-off values were selected to categorize the samples, as illustrated by <figref>FIG. 1</figref>. Frequency distributions of the values generated by qPCR for the three selected marker organisms (<i>A. vaginae</i>, BVAB-2, and <i>Megasphaera</i>-1) were compared against designation of samples by NS. Breakpoint values were selected that best differentiated sample populations into ‘high’ ‘medium’ and ‘low’ categories, correlating with ‘high’, ‘intermediate’ and low′ NS. For <i>Megasphaera</i>-1 (see <figref>FIG. 1</figref>, panel C), an intermediate category was not created because of the sharp breakpoint associated with the transition from low to high qPCR values.</p>
+      <p id="p-00073-en" num="0070">The individual marker organisms were scored according to the criteria set forth in Table 4. The total (or composite) test score was calculated as the sum of the individual scores, as illustrated in <figref>FIG. 2</figref>. The sum of each organism's score equals the total score. As discussed earlier, samples with a total score of 0-1 were considered negative for BV, samples with a score of 3-6 were considered positive for BV, and samples with a score of 2 were considered indeterminate for BV. The total score interpretation is schematically illustrated in Table 5. The composite scores were compared to the previously determined BV designations of the samples, as illustrated in Table 6. The interpretive assignment of results and their comparison with the gold-standard results obtained for the same sample group is shown in Table 7. The composite score demonstrated good correlation with the BV designation by NS and Amsel for a majority of the samples. Composite cores of 3-6 were highly correlated with positive samples, with 96.1% (98/102) of samples yielding these scores being BV positive. Similarly, a score of 0 was highly correlated with negative samples, with 93.9% (46/49) of samples yielding this score being BV negative.</p>
+      <p id="p-00074-en" num="0071">The remaining 18 samples (10.7%; 11 BV negative, 7 BV positive) yielded composite scores of 1-2. Of the 10 samples with a composite score of 1; 2 had NS of ≦3, 6 had NS scores of 4-6, and 2 had NS of ≧7. Of the 8 samples with a composite score of 2; 2 had NS of ≦3, 3 had NS scores of 4-6, and 2 had NS of ≧7. The samples with composite scores of 2 were designated as ‘indeterminate’ for the purpose of BV diagnosis. It was determined that since the composite score of 2 required the presence of any of the 3 marker organisms at high concentration, or at least 2 of them (<i>A. vaginae </i>and BVAB-1) at moderate concentrations, this score is indicative of deviation from normal vaginal flora, however, only a subset of the samples could be classified as BV using conventional test methods. Samples generating a composite score of 1 were designated as BV-negative. Upon excluding samples generating a score of 2 from the final analysis, the predicted sensitivity and specificity of the BV PCR construct on the remaining 161 samples were 93.3% (98/105) and 92.9% (52/56), respectively, with an indeterminate rate of 4.7% (8/169).</p>
+      <p id="p-00075-en" num="0072">The experimental results reported in this example demonstrated that inclusion of markers with high degree of specificity, for example BVAB-2 and <i>Megasphaera</i>-1, as well as markers with a high degree of sensitivity, is advantageous in order to produce a qPCR test for BV having improved positive predictive value or values. Three-marker tests using qPCR assay for <i>A. vaginae</i>, BVAB-2, and <i>Megasphaera</i>-1 provided an advantageous combination of sensitivity and specificity, achieving 93.5% correlation (158/169) with the combined NS and Amsel gold standard.</p>
+      <heading id="h-00030-en" level="1">Example 12</heading>
+      <heading id="h-00031-en" level="1">qPCR Sample Characterization and Scoring</heading>
+      <p id="p-00076-en" num="0073">Upon completion of a qPCR assay, results were exported into an MS Excel worksheet for scoring according to the scheme shown in Table 4. Composite scores (sum of 3 individual analyte scores) were then compiled, and the final interpretation generated as follows: BV Negative (scores of 0-1), BV Indeterminate (score of 2), BV Positive (scores of 3-6), as illustrated in Table 5.</p>
+      <p id="p-00077-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 4</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Scoring system used to categorize the samples analyzed by qPCR</entry>
+                </row>
+                <row>
+                  <entry>assay</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="left" />
+              <colspec colname="2" colwidth="154pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Organism</entry>
+                </row>
+                <row>
+                  <entry>Organism</entry>
+                  <entry>Concentration (log<sub>10 </sub>DNA copies/mL)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="49pt" align="center" />
+              <colspec colname="4" colwidth="63pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>
+                    <i>Atopobium vaginae</i>
+                  </entry>
+                  <entry>≦5.5</entry>
+                  <entry>5.5-7.0</entry>
+                  <entry>&gt;7.0</entry>
+                </row>
+                <row>
+                  <entry>BVAB-2</entry>
+                  <entry>≦4.5</entry>
+                  <entry>4.5-6.0</entry>
+                  <entry>&gt;6.0</entry>
+                </row>
+                <row>
+                  <entry>Megasphaera-1</entry>
+                  <entry>≦6.0</entry>
+                  <entry>n/a</entry>
+                  <entry>&gt;6.0</entry>
+                </row>
+                <row>
+                  <entry>Score</entry>
+                  <entry>Low =</entry>
+                  <entry>Moderate =</entry>
+                  <entry>High = Score of 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Score of 0</entry>
+                  <entry>Score of 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00078-en" num="0000">
+        <tables id="tables-00005-en" num="00005">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 5</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Total score interpretation</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="21pt" align="center" />
+              <colspec colname="2" colwidth="196pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>Total</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Score</entry>
+                  <entry>Interpretation</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>3-6</entry>
+                  <entry>Positive - indicative of bacterial vaginosis</entry>
+                </row>
+                <row>
+                  <entry>0-1</entry>
+                  <entry>Negative - not indicative of bacterial vaginosis</entry>
+                </row>
+                <row>
+                  <entry>2</entry>
+                  <entry>Indeterminate - unable to determine BV status. Additional clinical</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>laboratory data should be evaluated to establish a diagnosis.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00079-en" num="0074">Certain characteristics of qPCR testing (qPCR assay in combination with scoring and score interpretation) were determined as follows:</p>
+      <p id="p-00080-en" num="0000">[in-line-formulae]positive predictive value (PPV)=sensitivity/(sensitivity+(1−prevalence)(1−specificity))[/in-line-formulae]</p>
+      <p id="p-00081-en" num="0000">[in-line-formulae]negative predictive value (NPV)=((1−prevalence)specificity)/((1−prevalence)+prevalence((1−sensitivity))[/in-line-formulae]</p>
+      <p id="p-00082-en" num="0000">[in-line-formulae]sensitivity=samples determined as positive by qPCR testing/samples determined as positive by the gold standard[/in-line-formulae]</p>
+      <p id="p-00083-en" num="0000">[in-line-formulae]specificity=samples negative by qPCR testing/samples negative by the gold standard[/in-line-formulae]</p>
+      <heading id="h-00032-en" level="1">Example 13</heading>
+      <heading id="h-00033-en" level="1">Three-Marker Test Performance Using Multiplexed qPCR Assay Detection</heading>
+      <p id="p-00084-en" num="0075">Performance of the three marker qPCR test was tested using a multiplexed qPCR assay to analyze samples for the presence of the three bacterial markers: <i>A. vaginae</i>, BVAB-2 and <i>Megasphaera</i>-1 bacteria. Incorporation of nucleic-acid calibrators in each qPCR run, at the concentrations determined by qPCR analysis to be most probative in differentiating populations of samples, allowed for categorization of samples without the need for fully quantitative PCR analysis. The samples of the first sample-group were analyzed with the three-marker test using multiplexed PCR, and the results of this BV diagnostic determination are shown in Table 6. The interpretive assignment of results and their comparison with the gold-standard results obtained for the same sample group is shown in Table 7. These results were highly congruent with those obtained by using individual qPCR assays for each marker with only 5 of 169 samples (2.9%) generating categorically different results. These changes resulted in one additional BV positive sample being classified as positive by BV PCR, one additional BV negative sample being classified as negative by BV PCR, two BV negative samples moving from an indeterminate to a negative PCR score, and one BV positive sample moving from a positive to an indeterminate PCR score. Overall, therefore, 162/169 (95.9%) of the samples generated interpretable composite PCR scores in the multiplexed qPCR three-marker test, with the sensitivity of the assay being 94.2% (98/104) and the specificity 94.8% (55/58).</p>
+      <p id="p-00085-en" num="0076">The additional 227 samples belonging to the second sample group were also evaluated by the multiplexed qPCR three-marker test. A substantial minority of the samples of the second sample group were collected at the lower BV prevalence PHC location, thus the overall prevalence of BV in the second sample group was 48.5% as compared to the 64.5% BV prevalence in the first sample group. The score assignments for the combined first and second sample groups generated by multiplexed qPCR three-marker test (396 samples) are shown in Table 6, and the interpretive results and comparison to the gold-standard results for the second sample group and the combined sample group is shown in Table 7.</p>
+      <p id="p-00086-en" num="0077">Results obtained for the second sample group were generally comparable to those obtained on the first sample group, thus supporting the validity of the scoring system created based on the individual qPCR testing. Of the 227 samples in the second sample group, 14 (6.2%) yielded a composite score of 2 and were thus deemed indeterminate for BV, of which 9 were BV negative samples and 5 BV positive samples. In the total population tested, 21 samples generated a BV PCR score of 2, 9 (42.9%) of these were BV positive samples and 12 (57.1%) were BV negative samples, supporting the use of ‘indeterminate’ as a categorical designation for specimens generating this composite PCR score. Of the 213 samples that generated an evaluable PCR score in the second sample group, 104 of 105 (99.0%) BV positive samples generated a positive PCR score, and 98 of 108 (90.7%) BV negative samples generated a negative score. Of the 17 samples in the second sample group that generated a composite PCR score of 1, only 1 was a BV positive sample, confirming the appropriateness of categorizing samples with this score as BV negative.</p>
+      <p id="p-00087-en" num="0078">Analysis of the combined sample group (396 samples) demonstrated that the three-marker qPCR test using multiplexed qPCR had a sensitivity of 96.7% (202/209), a specificity of 92.2% (153/166), a positive predictive value of 94.0% and a negative predictive value of 95.6%, with an indeterminate rate of 5.3% (21/396).</p>
+      <p id="p-00088-en" num="0079">Using a combination of three marker organisms, <i>A. vaginae</i>, BVAB-2, and <i>Megasphaera</i>-1, in an assay format that segregated samples into marker-specific populations (high, medium, low) based on their relationship to breakpoint DNA concentrations, enabled 94.7% (375/396) of the samples of the combined sample group to be categorized with respect to the presence or absence of BV with an overall accuracy of 94.7% (355/396). Analysis of the 20 samples generating discordant results between BV status determined by qPCR test and BV status by NS and Amsel criteria revealed the challenge of attempting to correlate molecular data for this condition with conventional techniques.</p>
+      <p id="p-00089-en" num="0080">Analysis of the samples generating discordant results between the three-marker qPCR test and BV status by NS and Amsel criteria revealed that the three-marker qPCR test detected patient-specific changes in microflora that may not be detected by conventional clinical methods. Of the 13 BV negative samples that were positive by BV PCR, only 3 had NS of 3, and of the 7 BV positive samples that were negative by BV PCR only 1 had an NS of 7, and this patient was negative by Amsel criteria. Thus only 4/20 (20%) of the results discordant between the three marker qPCR test determination and gold-standard test determination could be unambiguously categorized by NS, the remainder were NS intermediate samples, a cohort likely to have significant, patient-specific, variation in the extent of correlation of symptoms with specific changes in microflora.</p>
+      <p id="p-00090-en" num="0000">
+        <tables id="tables-00006-en" num="00006">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 6</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Distribution of composite PCR scores by BV status</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="98pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Composite PCR Score</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="10" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="14pt" align="center" />
+              <colspec colname="5" colwidth="14pt" align="center" />
+              <colspec colname="6" colwidth="14pt" align="center" />
+              <colspec colname="7" colwidth="14pt" align="center" />
+              <colspec colname="8" colwidth="14pt" align="center" />
+              <colspec colname="9" colwidth="14pt" align="center" />
+              <colspec colname="10" colwidth="14pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Sample Set</entry>
+                  <entry>Assay<sup>a</sup></entry>
+                  <entry>BV Status</entry>
+                  <entry>0</entry>
+                  <entry>1</entry>
+                  <entry>2</entry>
+                  <entry>3</entry>
+                  <entry>4</entry>
+                  <entry>5</entry>
+                  <entry>6</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="10" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="10" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="14pt" align="char" char="." />
+              <colspec colname="5" colwidth="14pt" align="char" char="." />
+              <colspec colname="6" colwidth="14pt" align="char" char="." />
+              <colspec colname="7" colwidth="14pt" align="char" char="." />
+              <colspec colname="8" colwidth="14pt" align="char" char="." />
+              <colspec colname="9" colwidth="14pt" align="char" char="." />
+              <colspec colname="10" colwidth="14pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>First Sample</entry>
+                  <entry>qPCR</entry>
+                  <entry>Negative</entry>
+                  <entry>46</entry>
+                  <entry>6</entry>
+                  <entry>5</entry>
+                  <entry>1</entry>
+                  <entry>3</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry>Group</entry>
+                  <entry />
+                  <entry>(61) </entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>(n = 169)</entry>
+                  <entry />
+                  <entry>Positive</entry>
+                  <entry>3</entry>
+                  <entry>4</entry>
+                  <entry>3</entry>
+                  <entry>11</entry>
+                  <entry>29</entry>
+                  <entry>32</entry>
+                  <entry>26</entry>
+                </row>
+                <row>
+                  <entry>individual</entry>
+                  <entry />
+                  <entry>(108)</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>qPCR assay</entry>
+                  <entry>BV-PCR</entry>
+                  <entry>Negative</entry>
+                  <entry>46</entry>
+                  <entry>9</entry>
+                  <entry>3</entry>
+                  <entry>2</entry>
+                  <entry>1</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>(61) </entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Positive</entry>
+                  <entry>3</entry>
+                  <entry>3</entry>
+                  <entry>4</entry>
+                  <entry>17</entry>
+                  <entry>25</entry>
+                  <entry>29</entry>
+                  <entry>27</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>(108)</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>First Sample</entry>
+                  <entry>BV-PCR</entry>
+                  <entry>Negative</entry>
+                  <entry>82</entry>
+                  <entry>16</entry>
+                  <entry>9</entry>
+                  <entry>3</entry>
+                  <entry>6</entry>
+                  <entry>1</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry>Group</entry>
+                  <entry />
+                  <entry>(117)</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>(n = 169)</entry>
+                  <entry />
+                  <entry>Positive</entry>
+                  <entry>0</entry>
+                  <entry>1</entry>
+                  <entry>5</entry>
+                  <entry>8</entry>
+                  <entry>29</entry>
+                  <entry>25</entry>
+                  <entry>42</entry>
+                </row>
+                <row>
+                  <entry>multiplexed</entry>
+                  <entry />
+                  <entry>(110)</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>qPCR assay)</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Combined</entry>
+                  <entry>BV-PCR</entry>
+                  <entry>Negative</entry>
+                  <entry>128</entry>
+                  <entry>25</entry>
+                  <entry>12</entry>
+                  <entry>5</entry>
+                  <entry>7</entry>
+                  <entry>1</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry>Sample</entry>
+                  <entry />
+                  <entry>(178)</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Group</entry>
+                  <entry />
+                  <entry>Positive</entry>
+                  <entry>3</entry>
+                  <entry>4</entry>
+                  <entry>9</entry>
+                  <entry>25</entry>
+                  <entry>54</entry>
+                  <entry>54</entry>
+                  <entry>69</entry>
+                </row>
+                <row>
+                  <entry>(n = 396)</entry>
+                  <entry />
+                  <entry>(218)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="10" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="10" align="left" id="entry-00007-en">
+                    <sup>a</sup>qPCR: Individual quantitative determinations of analyte concentrations. Scores determined by comparison of qPCR values with breakpoint concentrations established from frequency distributions of development phase sample cohort; BV-PCR: Semi-quantitative assay using internal calibrators to assign individual analyte scores.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00091-en" num="0000">
+        <tables id="tables-00007-en" num="00007">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 7</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Correlation of interpretive results generated from BV PCR assay analysis</entry>
+                </row>
+                <row>
+                  <entry>of samples with gold-standard results.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="105pt" align="left" />
+              <colspec colname="2" colwidth="112pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>BV PCR Result</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <colspec colname="5" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Sample Set</entry>
+                  <entry>BV Status</entry>
+                  <entry>Positive</entry>
+                  <entry>Negative</entry>
+                  <entry>Indeterminate</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="char" char="." />
+              <colspec colname="4" colwidth="35pt" align="char" char="." />
+              <colspec colname="5" colwidth="49pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>First Sample Group</entry>
+                  <entry>BV Positive</entry>
+                  <entry>98</entry>
+                  <entry>6</entry>
+                  <entry>4</entry>
+                </row>
+                <row>
+                  <entry>(n = 169)</entry>
+                  <entry>BV Negative</entry>
+                  <entry>3</entry>
+                  <entry>55</entry>
+                  <entry>3</entry>
+                </row>
+                <row>
+                  <entry>Second Sample</entry>
+                  <entry>BV Positive</entry>
+                  <entry>104</entry>
+                  <entry>1</entry>
+                  <entry>5</entry>
+                </row>
+                <row>
+                  <entry>Group (n = 227)</entry>
+                  <entry>BV Negative</entry>
+                  <entry>10</entry>
+                  <entry>98</entry>
+                  <entry>9</entry>
+                </row>
+                <row>
+                  <entry>Combined Sample</entry>
+                  <entry>BV Positive</entry>
+                  <entry>202</entry>
+                  <entry>7</entry>
+                  <entry>9</entry>
+                </row>
+                <row>
+                  <entry>Group</entry>
+                  <entry>BV Negative</entry>
+                  <entry>13</entry>
+                  <entry>153</entry>
+                  <entry>12</entry>
+                </row>
+                <row>
+                  <entry>(n = 396)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00034-en" level="1">Example 14</heading>
+      <heading id="h-00035-en" level="1">Bacterial Marker Selection for the BV Diagnostic Test</heading>
+      <p id="p-00092-en" num="0081">A combination of three BV-positive marker organisms (<i>Atopobium vaginae</i>, BVAB-2, and <i>Megasphaera</i>-1) resulted in a three-marker qPCR test producing BV diagnostic results in agreement with the conventional gold standard techniques for diagnosing BV. It was determined that inclusion of at least one positive marker organisms with high sensitivity but lower specificity and one positive marker organism with lower sensitivity but higher specificity resulted in unexpectedly advantageous performance characteristics of a multi-marker test, such as predictive value.</p>
+      <p id="p-00093-en" num="0082">Relative quantitation of large Gram-positive rods, a morphotype consistent with a number of peroxide-producing <i>Lactobacillus </i>spp. (such as, <i>L. crispatus, L. iners, L. jensenii</i>), organisms was previously reported as important for maintaining a healthy vaginal environment and therefore constitutes a significant component (40%) of the total NS. Utility of <i>G. vaginalis </i>and <i>L. crispatus </i>for improving the positive predictive value of a multi-marker qPCR test was therefore assessed. PCR assays for <i>G. vaginalis </i>and <i>L. crispatus </i>was performed, as discussed in the earlier examples. The quantity of <i>G. vaginalis</i>, as measured by the qPCR assay, was found to be less predictive of BV than the three markers included in the three-marker qPCR test.</p>
+      <p id="p-00094-en" num="0083">
+        <i>L. crispatus </i>was evaluated, as discussed in an earlier example, since this organism was previously described as commonly present in low NS samples across diverse patient populations. In the first sample group, <i>L. crispatus </i>DNA was detected in 42.6% of BV negative samples and only in 10.2% of BV positive samples, and median quantitative values of <i>L. crispatus </i>in samples containing this organism were significantly higher in the BV negative population (8.9×10<sup>7 </sup>copies/mL versus 4.1×10<sup>4 </sup>copies/mL; p&lt;0.01), consistent with earlier reports that the presence of this organism is inversely associated with the presence of BV. Examination of the results for other marker organisms in <i>L. crispatus</i>-positive samples, however, unexpectedly revealed that in only a single instance was <i>L. crispatus </i>detected in a BV negative sample that was scored as positive based on the combination of <i>A. vaginae</i>, BVAB-2, and <i>Megasphaera</i>-1 qPCR results.</p>
+      <p id="p-00095-en" num="0084">In addition, high <i>L. crispatus </i>DNA levels were strongly correlated with the absence of significant concentrations of positive predictive marker organisms. No samples in the first sample set containing an <i>L. crispatus </i>concentration of &gt;5.1×10<sup>5 </sup>copies/mL (n=23) generated a composite BV PCR score in the BV-positive range. Unexpectedly, it was found the inclusion of <i>Lactobacillus </i>organism in the final assay design would not, therefore, have improved the accuracy of positive results. The data reported herein showed that molecular determination of BV can be achieved using positive predictive markers, thus resulting in a simpler multi-marker test. It was previously documented that the significance of hydrogen peroxide-producing <i>Lactobacillus </i>species to the overall vaginal microflora of healthy women differs considerably based on ethnic background. Depending on the ethnic background of the patient and/or other factors, variations of multi-marker tests may include or exclude negative predictive markers, such as <i>L. crispatus. </i></p>
+      <heading id="h-00036-en" level="1">Example 15</heading>
+      <heading id="h-00037-en" level="1">Flexible Adjustments of the Multi-Marker qPCR Test and Assessment of the Performance Characteristics</heading>
+      <p id="p-00096-en" num="0085">A three-marker multiplexed qPCR test described herein allowed a semi-quantitative assessment of the DNA concentrations of key positive predictive markers, maintaining the probative advantage of classifying samples by concentration afforded by qPCR, but doing so in a simplified and highly reproducible assay format. The classification boundaries described herein were based on the frequency distribution data for BV markers in a sample set, as illustrated in shown in <figref>FIG. 1</figref>. Classification of vaginal populations based on assignment of a numerical score directly related to critical concentrations of marker organisms unexpectedly resulted in a multi-marker test having improved performance characteristics, such as predictive value. However, these classification boundaries can be changed or adjusted for a particular sample set based on the statistical data in order to achieve improvements in performance characteristics in a particular population.</p>
+      <p id="p-00097-en" num="0086">One advantage of the multi-marker tests described herein is that, since they generates results on a discrete numerical scale, the performance characteristics of the test in any given population can be estimated by comparing the frequency distribution of composite scores in that population with the accuracy of each score derived from the data presented here. Based on the analysis of the experimental data summarized in the examples presented herein, in which a score of 0 had a negative predictive value of 97.6% (125/128), whilst a score of 5 or 6 had a positive predictive value of 99.2% (123/124), it can be understood that the proportion of samples in a population generating these three values strongly influences the overall predictive value of the a multi-marker qPCR test described herein.</p>
+      <p id="p-00098-en" num="0087">The frequency distribution of composite scores generated by samples submitted for the assay during the first two months after its introduction into routine testing were examined, and this examination demonstrated that in this unselected clinical population with a prevalence of BV (as determined by BV PCR) of 26.3%, and an indeterminate rate of 6.2%, 81.2% of samples tested generated scores of 0, 5, or 6, resulting in estimated positive and negative predictive values of 95.1% and 96.8%, respectively. An ability to assess performance characteristics of the multi-marker qPCR test in a given population allows for advantageously improved clinically meaningful interpretation of the test results, as compared to previously known BV tests. Also, the performance characteristics of the multi-marker qPCR test can be compared to other tests, this allowing the clinicians to select the most advantageous test for a particular situation.</p>
+      <p id="p-00099-en" num="0088">Data generated based on the combined sample set and summarized in Table 8 indicated a sensitivity and specificity for Affirm™ test of 89.9% and 71.1%, and for the three-marker qPCR test of 96.7% and 92.2%, respectively. Based on these data, predictive values were calculated for Affirm™ and three-marker qPCR test for hypothetical populations with different BV prevalence. The results are shown in Table 9.</p>
+      <p id="p-00100-en" num="0000">
+        <tables id="tables-00008-en" num="00008">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 8</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Affirm ™ test performance evaluated with respect to the gold-standard</entry>
+                </row>
+                <row>
+                  <entry>BV determination</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="center" />
+              <colspec colname="2" colwidth="70pt" align="center" />
+              <colspec colname="3" colwidth="77pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Affirm ™</entry>
+                  <entry>Gold standard results</entry>
+                  <entry>Affirm ™ test</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="77pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>test results</entry>
+                  <entry>Negative</entry>
+                  <entry>Positive</entry>
+                  <entry>performance</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <colspec colname="5" colwidth="35pt" align="center" />
+              <colspec colname="6" colwidth="42pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>Negative</entry>
+                  <entry>173</entry>
+                  <entry>123</entry>
+                  <entry> 50</entry>
+                  <entry>71.10%</entry>
+                  <entry>specificity</entry>
+                </row>
+                <row>
+                  <entry>Positive</entry>
+                  <entry>218</entry>
+                  <entry> 22</entry>
+                  <entry>196</entry>
+                  <entry>89.91%</entry>
+                  <entry>sensitivity</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00101-en" num="0000">
+        <tables id="tables-00009-en" num="00009">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 9</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Calculated predictive value of Affirm and three-marker qPCR tests based</entry>
+                </row>
+                <row>
+                  <entry>on BV prevalence in a hypothetical patient population.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="left" />
+              <colspec colname="2" colwidth="63pt" align="center" />
+              <colspec colname="3" colwidth="91pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>BV prevalence in a</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>hypothetical patient</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Test</entry>
+                  <entry>population</entry>
+                  <entry>Calculated predictive value</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="left" />
+              <colspec colname="2" colwidth="63pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Affirm</entry>
+                  <entry>40%</entry>
+                  <entry>67.4% PPV</entry>
+                  <entry>91.4% NPV</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>30%</entry>
+                  <entry>57.1% PPV</entry>
+                  <entry>94.3% NPV</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>20%</entry>
+                  <entry>43.4% PPV</entry>
+                  <entry>96.3% NPV</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>10%</entry>
+                  <entry>25.4% PPV</entry>
+                  <entry>98.3% NPV</entry>
+                </row>
+                <row>
+                  <entry>Three-marker qPCR</entry>
+                  <entry>40%</entry>
+                  <entry>89.2% PPV</entry>
+                  <entry>97.7% NPV</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>30%</entry>
+                  <entry>84.1% PPV</entry>
+                  <entry>98.4% NPV</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>20%</entry>
+                  <entry>75.7% PPV</entry>
+                  <entry>99.1% NPV</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>10%</entry>
+                  <entry>58.1% PPV</entry>
+                  <entry>99.6% NPV</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00102-en" num="0089">Depending on the BV prevalence in a hypothetical patient population within the range shown in Table 9 (10%-40%), the advantageous increase in PPV for the three-marker q-PCR test as compared to the Affirm™ test, ranges between approximately 22-33%.</p>
+      <p id="p-00103-en" num="0090">Different arrangements and combinations of the elements and the features described herein are possible. Similarly, some features and subcombinations are useful and may be employed without reference to other features and subcombinations. Embodiments of the invention and examples have been described for illustrative and not restrictive purposes, and alternative embodiments will become apparent to readers of this patent. Accordingly, the present invention is not limited to the embodiments described above or depicted in the drawings, and various embodiments and modifications can be made without departing from the scope of the invention.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method of assessing bacterial vaginosis (BV) status in a female, comprising:
+<claim-text>detecting in a sample obtained from the female an amount of more than one nucleic acid sequences characteristic of two or more BV-associated bacteria;</claim-text><claim-text>assigning a score to the sample based on the amount of the two or more nucleic acid sequences detected in the sample; and,</claim-text><claim-text>assessing the BV status of the female based on the score assigned to the sample.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the two or more BV-associated bacteria include at least one of BVAB-2 and Megasphaera-1, and at least one of Atopobium vaginae or Gardnerella vaginalis. </claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the two or more BV-associated bacteria do not include a Lactobacillus bacterium.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the two or more BV-associated bacteria include a Lactobacillus bacterium.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the two or more BV-associated bacteria are BVAB-2, Megasphaera-1, and at least one of Atopobium vaginae or Gardnerella vaginalis. </claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the detecting comprises performing a quantitative PCR or a semi-quantitative PCR assay on the sample.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the quantitative or the semi-quantitative PCR assay is a multiplexed assay.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein assigning the score comprises:
+<claim-text>generating an individual score for each of the two or more BV-associated bacteria based on the amount of the nucleic acid sequences detected in the sample; and,</claim-text><claim-text>calculating the score by combining the individual scores.</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein generating each individual score comprises classifying the detected amount into a category based on one or more cut-off values determined based on a statistical distribution of each of the two or more BV-associated bacteria in a female population.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the method further comprises administering a BV treatment to the female patient based on the assessed BV status.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en" independent="true">
+      <claim-text>
+        <b>11</b>. A kit for assessing bacterial vaginosis (BV) status in a female, comprising reagents for detecting in a sample obtained from the female an amount of two or more nucleic acid sequences, each characteristic of a BV-associated bacterium, wherein at least one of the two or more BV-associated bacteria is not <i>Gardnerella vaginalis. </i></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The kit of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the two or more BV-associated bacteria include at least one of BVAB-2 or Megasphaera-1.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The kit of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the two or more BV-associated bacteria further include at least one of Atopobium vaginae or Gardnerella vaginalis. </claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The kit of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the two or more BV-associated bacteria further include BVAB-2, Megasphaera-1 and at least one of Atopobium vaginae or Gardnerella vaginalis. </claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The kit of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the reagents comprise pairs of primers for conducting a quantitative PCR assay or a semi-quantitative PCR assay for detecting at least one of BVAB-2 and Megasphaera-1 and at least one of Atopobium vaginae or Gardnerella vaginalis. </claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The kit of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the two or more BV-associated bacteria include BVAB-2 and Megasphaera-1 and at least one of Gardenerella vaginalis or Atopobium vaginae. </claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The kit of <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the reagents comprise at least three pairs of primers for conducting a quantitatve PCR assay or a semi-quantitative PCR assay for detecting BVAB-2 and Megasphaera-1 and at least one of Gardnerella vaginalis or Atopobium vaginae. </claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en" independent="true">
+      <claim-text>
+        <b>18</b>. A kit for assessing bacterial vaginosis (BV) status in a female, comprising pairs of primers for detecting in a sample obtained from the female by a quantitative or a semi-quantitative PCR assay nucleic acid sequences characteristic of BVAB-2<i>, Megasphaera</i>-1 and at least one of <i>Gardnerella vaginalis </i>or <i>Atopobium vaginae. </i></claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The kit of <claim-ref idref="clm-00018-en">claim 18</claim-ref>, comprising pairs of primers characteristic of BVAB-2, Megasphaera-1 and Gardnerella vaginalis. </claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The kit of <claim-ref idref="clm-00018-en">claim 18</claim-ref>, comprising pairs of primers characteristic of BVAB-2, Megasphaera-1 and Atopobium vaginae. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150247189A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247189A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150247189A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247189A1-20150903-D00002.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150247189A1.PDF" type="pdf" size="1120142" pages="20" />
+</lexisnexis-patent-document>

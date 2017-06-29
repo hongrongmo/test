@@ -1,0 +1,2930 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247086A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021455" date-changed="20160104" time-changed="154705">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140154">
+        <country>US</country>
+        <doc-number>20150247086</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14436224</doc-number>
+        <date>20131017</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012229372</doc-number>
+        <date>20121017</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20160104">
+      <classification-ipcr sequence="1">
+        <text>C09K  11/77        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>11</main-group>
+        <subgroup>77</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>F21K  99/00        20100101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20100101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>21</class>
+        <subclass>K</subclass>
+        <main-group>99</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>F21V   9/16        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>21</class>
+        <subclass>V</subclass>
+        <main-group>9</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20160104">
+      <classification-cpc sequence="1">
+        <text>C09K  11/7734      20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>11</main-group>
+        <subgroup>7734</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>F21K   9/56        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>21</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>56</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>F21V   9/16        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>21</class>
+        <subclass>V</subclass>
+        <main-group>9</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>H01L  33/502       20130101 LA20140603BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>33</main-group>
+        <subgroup>502</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140603</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>H05B  33/02        20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>05</class>
+        <subclass>B</subclass>
+        <main-group>33</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">16</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">WAVELENGTH CONVERSION MEMBER AND LIGHT-EMITTING DEVICE EMPLOYING SAME</invention-title>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>UBE INDUSTRIES, LTD.</orgname>
+            <address>
+              <city>Ube-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>JP</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Iwashita</last-name>
+            <first-name>Kazuki</first-name>
+            <address>
+              <city>Ube-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Sakai</last-name>
+            <first-name>Takuma</first-name>
+            <address>
+              <city>Ube-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Ueda</last-name>
+            <first-name>Takayuki</first-name>
+            <address>
+              <city>Ube-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Fujinaga</last-name>
+            <first-name>Masataka</first-name>
+            <address>
+              <city>Ube-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Jida</last-name>
+            <first-name>Shinsuke</first-name>
+            <address>
+              <city>Ube-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Yamanaga</last-name>
+            <first-name>Masataka</first-name>
+            <address>
+              <city>Ube-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="7" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Nagao</last-name>
+            <first-name>Yuki</first-name>
+            <address>
+              <city>Ube-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="8" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kawano</last-name>
+            <first-name>Takafumi</first-name>
+            <address>
+              <city>Ube-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP13078219</doc-number>
+        <date>20131017</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014061748</doc-number>
+        <date>20140424</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150903">
+      <main-family family-id="165373947">
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104736664</doc-number>
+            <kind>A</kind>
+            <date>20150624</date>
+          </document-id>
+          <application-date>
+            <date>20131017</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2910620</doc-number>
+            <kind>A1</kind>
+            <date>20150826</date>
+          </document-id>
+          <application-date>
+            <date>20131017</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150070158</doc-number>
+            <kind>A</kind>
+            <date>20150624</date>
+          </document-id>
+          <application-date>
+            <date>20131017</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201424050</doc-number>
+            <kind>A</kind>
+            <date>20140616</date>
+          </document-id>
+          <application-date>
+            <date>20131017</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247086</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20131017</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014061748</doc-number>
+            <kind>A1</kind>
+            <date>20140424</date>
+          </document-id>
+          <application-date>
+            <date>20131017</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="165373946">
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104736664</doc-number>
+            <kind>A</kind>
+            <date>20150624</date>
+          </document-id>
+          <application-date>
+            <date>20131017</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2910620</doc-number>
+            <kind>A1</kind>
+            <date>20150826</date>
+          </document-id>
+          <application-date>
+            <date>20131017</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150070158</doc-number>
+            <kind>A</kind>
+            <date>20150624</date>
+          </document-id>
+          <application-date>
+            <date>20131017</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201424050</doc-number>
+            <kind>A</kind>
+            <date>20140616</date>
+          </document-id>
+          <application-date>
+            <date>20131017</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247086</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20131017</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014061748</doc-number>
+            <kind>A1</kind>
+            <date>20140424</date>
+          </document-id>
+          <application-date>
+            <date>20131017</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A method of manufacturing a wavelength conversion member including a polycrystalline ceramics includes mixing a substance serving as a silicon source, a substance serving as an aluminum source, a substance serving as a calcium source, and a substance serving as a europium source; firing the obtained mixture to obtain an oxynitride phosphor powder; then sintering the oxynitride phosphor powder in an inert atmosphere to obtain the polycrystalline ceramics, characterized in that the sintered oxynitride phosphor powder has a composition (excluding oxygen) represented by the Formula: Ca<sub>x1</sub>Eu<sub>x2</sub>Si<sub>12-(y+z)</sub>Al<sub>(y+z)</sub>O<sub>z</sub>N<sub>16-z </sub>(in the Formula, x1, x2, y, and z are values such that 0&lt;x1≦3.40, 0.05≦x2≦0.20, 3.5≦y≦7.0, 0≦z≦1).</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150416</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247086A1</docdb-publication-number>
+      <docdb-application-id>444210073</docdb-application-id>
+      <new-owner>UBE INDUSTRIES, LTD., JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:IWASHITA, KAZUKI;SAKAI, TAKUMA;UEDA, TAKAYUKI;AND OTHERS;REEL/FRAME:035426/0504</free-text-description>
+      <effective-date>
+        <date>20150205</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to a wavelength conversion member, a production method thereof, and a light-emitting device fabricated by combining a wavelength conversion member and a semiconductor light-emitting element. More specifically, the present invention relates to a wavelength conversion member composed of polycrystalline ceramics having an orange emission color, a production method thereof, and a light-emitting device fabricated by combining the wavelength conversion member having an orange emission color with a semiconductor light-emitting element having a violet-to-blue emission color.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND ART</heading>
+      <p id="p-00002-en" num="0002">In recent years, a white LED fabricated by combining a blue light-emitting diode, such as GaN, with a wavelength conversion member has come into widespread use. The wavelength conversion member is generally a phosphor particle, and a member obtained by dispersing phosphor particles in a resin is used. However, the wavelength conversion member obtained by dispersing phosphor particles in a resin has drawbacks, such as insufficient durability, due to heat resistance, etc., of the resin.</p>
+      <p id="p-00003-en" num="0003">On the other hand, as in Patent Document 1, a wavelength conversion member obtained by dispersing a phosphor powder in glass has also been developed as the wavelength conversion member. Furthermore, as described in Patent Document 2, an attempt to use polycrystalline ceramics as the wavelength conversion member is also being made.</p>
+      <p id="p-00004-en" num="0004">The wavelength conversion member obtained by dispersing a phosphor powder in glass or the polycrystalline ceramics phosphor material is an aluminum.garnet-based phosphor using Ce as an activator (YAG:Ce phosphor), and these techniques are related to developing a pseudo-white light-emitting device in which a blue emission color of a blue light-emitting diode and a yellow emission color of a YAG:Ce phosphor are combined.</p>
+      <p id="p-00005-en" num="0005">In addition, with regard to a light-emitting device other than pseudo-white LED, as described in Patent Document 3, it is being attempted as well to use a semiconductor light-emitting element as the light source for a vehicular marker lamp, and a wavelength conversion member having an orange-to-red emission color is also required as the wavelength conversion member.</p>
+      <p id="p-00006-en" num="0006">As disclosed in Patent Documents 4 and 5, using a phosphor material composed of polycrystalline ceramics as the wavelength conversion member having an orange-to-red emission color is also being attempted. However, whether the wavelength conversion members described in Patent Documents 4 and 5 have a luminescence intensity of a practical level and can achieve a wavelength control to obtain target chromaticity is unknown, and moreover, it is difficult to say that the production conditions are sufficiently studied.</p>
+      <heading id="h-00003-en" level="1">PRIOR ART</heading>
+      <heading id="h-00004-en" level="1">Patent Document</heading>
+      <p id="p-00007-en" num="0007">[Patent Document 1] Japanese Unexamined Patent Publication (Kokai) No. 2003-258308</p>
+      <p id="p-00008-en" num="0008">[Patent Document 2] Japanese Unexamined Patent Publication (Kokai) No. 2010-27704</p>
+      <p id="p-00009-en" num="0009">[Patent Document 3] Japanese Unexamined Patent Publication (Kokai) No. 2009-96883</p>
+      <p id="p-00010-en" num="0010">[Patent Document 4] National Publication of Translated Version (Kohyo) No. 2009-510757</p>
+      <p id="p-00011-en" num="0011">[Patent Document 5] Japanese Unexamined Patent Publication (Kokai) No. 2010-538102</p>
+      <heading id="h-00005-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <heading id="h-00006-en" level="1">Problems to be Solved by the Invention</heading>
+      <p id="p-00012-en" num="0012">A wavelength conversion member having high luminance worthy of practical use and excellent durability is demanded so as to obtain orange-to-red luminescence at a desired wavelength. However, as described above, a wavelength conversion member having high efficiency worthy of practical use and excellent durability is not known.</p>
+      <p id="p-00013-en" num="0013">An object of the present invention is to provide a wavelength conversion member having a fluorescence peak wavelength of 590 to 610 nm wherein the wavelength conversion member has more excellent durability and higher efficiency than ever before, and a light-emitting device fabricated by combining the wavelength conversion member and a semiconductor light-emitting element.</p>
+      <heading id="h-00007-en" level="1">Means to Solve the Problems</heading>
+      <p id="p-00014-en" num="0014">As a result of intensive studies to solve the above-described problems, the present inventors have found that a wavelength conversion member composed of polycrystalline ceramics obtained by sintering a specific oxynitride phosphor powder that is produced by mixing a substance serving as a silicone source, a substance serving as an aluminum source, a substance serving as a calcium source, and a substance serving as a europium source so as to contain excess oxygen relative to a composition represented by composition formula (1):</p>
+      <p id="p-00015-en" num="0000">[in-line-formulae]Ca<sub>x1</sub>Eu<sub>x2</sub>Si<sub>12-(y+z)</sub>Al<sub>(y+z)</sub>O<sub>z</sub>N<sub>16-z</sub>  (1)[/in-line-formulae]</p>
+      <p id="p-00016-en" num="0000">(wherein x1, x2, y and z are 0&lt;x1≦3.40, 0.05≦x2≦0.20, 3.5&lt;y≦7.0 and 0≦z≦1) and firing the mixture, emits fluorescence having a peak wavelength in a broad wavelength region of 590 to 610 nm when excited by light at a wavelength of 300 to 500 nm and the conversion efficiency thereof is high. The present invention has been achieved based on this finding.</p>
+      <p id="p-00017-en" num="0015">That is, the present invention relates to a method for producing a wavelength conversion member composed of polycrystalline ceramics, comprising:</p>
+      <p id="p-00018-en" num="0016">A) mixing a substance serving as a silicon source, a substance serving as an aluminum source, a substance serving as a calcium source, and a substance serving as a europium source,</p>
+      <p id="p-00019-en" num="0017">B) firing the obtained mixture to obtain an oxynitride phosphor powder, and</p>
+      <p id="p-00020-en" num="0018">C) sintering the oxynitride phosphor powder to obtain polycrystalline ceramics,</p>
+      <p id="p-00021-en" num="0019">wherein the oxynitride phosphor powder sintered has a composition, exclusive of oxygen, represented by composition formula (1):</p>
+      <p id="p-00022-en" num="0000">[in-line-formulae]Ca<sub>x1</sub>Eu<sub>x2</sub>Si<sub>12-(y+z)</sub>Al<sub>(y+z)</sub>O<sub>z</sub>N<sub>16-z</sub>  (1)[/in-line-formulae]</p>
+      <p id="p-00023-en" num="0020">wherein x1, x2, y and z are</p>
+      <p id="p-00024-en" num="0021">0&lt;x1≦3.40,</p>
+      <p id="p-00025-en" num="0022">0.05≦x2≦0.20,</p>
+      <p id="p-00026-en" num="0023">3.5&lt;y≦7.0, and</p>
+      <p id="p-00027-en" num="0024">0≦z≦1, and</p>
+      <p id="p-00028-en" num="0025">wherein the oxygen content of the oxynitride phosphor powder is in excess of the theoretical oxygen content of the oxynitride phosphor represented by composition formula (1), and the excess oxygen amount is from 1.1 to 11.5 mass % with respect to 100 mass % of the theoretical mass of the oxynitride phosphor represented by composition formula (1).</p>
+      <p id="p-00029-en" num="0026">The method for producing a wavelength conversion member according to the present invention preferably has either one or both of</p>
+      <p id="p-00030-en" num="0027">D) a step of preliminarily adjusting the oxygen content in at least one the substance serving as a silicon source, the substance serving as an aluminum source, the substance serving as a calcium source, and the substance serving as a europium source used in the step A), which constitute the mixture, wherein the composition of the mixture is such that the oxynitride phosphor powder obtained by firing the mixture in an inert atmosphere has a composition, exclusive of oxygen, represented by composition formula (1) and the oxygen content thereof is in excess of the theoretical oxygen amount of the oxynitride phosphor represented by composition formula (1), and</p>
+      <p id="p-00031-en" num="0028">E) an oxidation step of, after the firing step B), heat-treating the oxynitride phosphor powder obtained in the firing step B) at 800 to 1,200° C. in an oxygen-containing atmosphere to increase the oxygen amount in the oxynitride phosphor powder.</p>
+      <p id="p-00032-en" num="0029">In one preferred embodiment of the method for producing a wavelength conversion member according to the present invention, the method has a step of preliminarily adjusting the oxygen content in at least one of the substance serving as a silicon source, the substance serving as an aluminum source, the substance serving as a calcium source, and the substance serving as a europium source used in the step A), which constitute the mixture, wherein the composition of the mixture is such that the oxynitride phosphor powder obtained by firing the mixture in an inert atmosphere has a composition, exclusive of oxygen, represented by composition formula (1) and the oxygen content thereof is in excess of the theoretical oxygen amount of the oxynitride phosphor represented by composition formula (1) by from 1.1 to 11.5 mass %, based on the theoretical mass of the oxynitride phosphor.</p>
+      <p id="p-00033-en" num="0030">In another preferred embodiment of the method for producing a wavelength conversion member according to the present invention, the method has an oxidation step of, after the firing step, heat-treating the oxynitride phosphor powder obtained in the firing step at 800 to 1,200° C. in an oxygen-containing atmosphere, wherein the oxidation step makes it possible to obtain the oxynitride phosphor powder in which the oxygen content in excess of the theoretical oxygen amount of the oxynitride phosphor represented by composition formula (1) is from 1.1 to 11.5 mass % based on the theoretical mass of the oxynitride phosphor.</p>
+      <p id="p-00034-en" num="0031">In particular, in composition formula (1), x1, x2, y and z are preferably</p>
+      <p id="p-00035-en" num="0032">0&lt;x1≦3.40,</p>
+      <p id="p-00036-en" num="0033">0.05≦x2≦0.20,</p>
+      <p id="p-00037-en" num="0034">4.0≦y≦6.5, and</p>
+      <p id="p-00038-en" num="0035">0≦z≦1.</p>
+      <p id="p-00039-en" num="0036">In the present invention, the oxygen content of the oxynitride phosphor powder in excess of the theoretical oxygen amount of composition formula (1) is preferably 4 mass % or less.</p>
+      <p id="p-00040-en" num="0037">In the present invention, the oxygen content of the oxynitride phosphor powder is preferably more than 1.4 mass % and less than 5.0 mass %</p>
+      <p id="p-00041-en" num="0038">In the present invention, the substance serving as a silicon source is preferably an amorphous silicon nitride.</p>
+      <p id="p-00042-en" num="0039">In the present invention, the substance serving as a silicon source is preferably a crystalline silicon nitride having a specific surface area of 9 m<sup>2</sup>/g or more.</p>
+      <p id="p-00043-en" num="0040">The present invention also relates to an oxynitride phosphor powder having a composition, exclusive of oxygen, represented by composition formula (1):</p>
+      <p id="p-00044-en" num="0000">[in-line-formulae]Ca<sub>x1</sub>Eu<sub>x2</sub>Si<sub>12-(y+z)</sub>Al<sub>(y+z)</sub>O<sub>z</sub>N<sub>16-z</sub>  (1)[/in-line-formulae]</p>
+      <p id="p-00045-en" num="0041">wherein x1, x2, y and z are</p>
+      <p id="p-00046-en" num="0042">0&lt;x1≦3.40,</p>
+      <p id="p-00047-en" num="0043">0.05≦x2≦0.20,</p>
+      <p id="p-00048-en" num="0044">3.5&lt;y≦7.0, and</p>
+      <p id="p-00049-en" num="0045">0≦z≦1, and</p>
+      <p id="p-00050-en" num="0046">wherein the oxygen content is in excess of the theoretical oxygen content of the oxynitride phosphor represented by composition formula (1) and the excess oxygen amount is from 1.1 to 11.5 mass % with respect to 100 mass % of the theoretical mass of the oxynitride phosphor represented by composition formula (1).</p>
+      <p id="p-00051-en" num="0047">The present invention also relates to a wavelength conversion member composed of polycrystalline ceramics obtained by sintering the oxynitride phosphor powder above.</p>
+      <p id="p-00052-en" num="0048">In particular, in composition formula (1), x1, x2, y and z are preferably</p>
+      <p id="p-00053-en" num="0049">0&lt;x1≦3.40,</p>
+      <p id="p-00054-en" num="0050">0.05≦x2≦0.20,</p>
+      <p id="p-00055-en" num="0051">4.0≦y≦6.5, and</p>
+      <p id="p-00056-en" num="0052">0≦z≦1.</p>
+      <p id="p-00057-en" num="0053">In the present invention, the polycrystalline ceramics preferably contains α-SiAlON and aluminum nitride.</p>
+      <p id="p-00058-en" num="0054">In the present invention, the polycrystalline ceramics preferably has relative density of 95% or more.</p>
+      <p id="p-00059-en" num="0055">The present invention also relates to a light-emitting device comprising a semiconductor light-emitting element capable of emitting light at a wavelength of 300 to 500 nm and the wavelength conversion member composed of the polycrystalline ceramics above.</p>
+      <heading id="h-00008-en" level="1">Effect of the Invention</heading>
+      <p id="p-00060-en" num="0056">According to the present invention, a wavelength conversion member can be provided, wherein the wavelength conversion member is polycrystalline ceramics having a composition represented by composition formula (1):</p>
+      <p id="p-00061-en" num="0000">[in-line-formulae]Ca<sub>x1</sub>Eu<sub>x2</sub>Si<sub>12-(y+z)</sub>Al<sub>(y+z)</sub>O<sub>z</sub>N<sub>16-z</sub>  (1)[/in-line-formulae]</p>
+      <p id="p-00062-en" num="0057">(wherein x1, x2, y and z are 0&lt;x1≦3.40, 0.05≦x2≦0.20, 3.5&lt;y≦7.0 and 0≦z≦1), wherein the oxygen content is in excess of the theoretical oxygen content of the oxynitride represented by composition formula (1) and the excess oxygen amount is from 1.1 to 11.5 mass % with respect to 100 mass % of the theoretical mass of the oxynitride phosphor represented by composition formula (1), and wherein the wavelength conversion member is capable of emitting fluorescence having a peak wavelength in a broad wavelength region of 590 to 610 nm upon excitation by light at a wavelength of 300 to 500 nm, and the conversion efficiency thereof is high.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00009-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00063-en" num="0058">
+        <figref>FIG. 1</figref> is a view illustrating the transmission/emission spectrum of Example 2.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00010-en" level="1">DESCRIPTION OF EMBODIMENTS</heading>
+      <p id="p-00064-en" num="0059">The present invention is described in detail below.</p>
+      <p id="p-00065-en" num="0060">The present invention comprises:</p>
+      <p id="p-00066-en" num="0061">a method for producing a wavelength conversion member composed of polycrystalline ceramics, comprising:</p>
+      <p id="p-00067-en" num="0062">A) mixing a substance serving as a silicon source, a substance serving as an aluminum source, a substance serving as a calcium source, and a substance serving as a europium source,</p>
+      <p id="p-00068-en" num="0063">B) firing the obtained mixture to obtain an oxynitride phosphor powder, and</p>
+      <p id="p-00069-en" num="0064">C) sintering the oxynitride phosphor powder to obtain polycrystalline ceramics,</p>
+      <p id="p-00070-en" num="0065">wherein the oxynitride phosphor powder sintered has a composition, exclusive of oxygen, represented by composition formula (1):</p>
+      <p id="p-00071-en" num="0000">[in-line-formulae]Ca<sub>x1</sub>Eu<sub>x2</sub>Si<sub>12-(y+z)</sub>Al<sub>(y+z)</sub>O<sub>z</sub>N<sub>16-z</sub>  (1)[/in-line-formulae]</p>
+      <p id="p-00072-en" num="0066">wherein x1, x2, y and z are</p>
+      <p id="p-00073-en" num="0067">0&lt;x1≦3.40,</p>
+      <p id="p-00074-en" num="0068">0.05≦x2≦0.20,</p>
+      <p id="p-00075-en" num="0069">3.5&lt;y≦7.0, and</p>
+      <p id="p-00076-en" num="0070">0≦z≦1), and</p>
+      <p id="p-00077-en" num="0071">wherein the oxygen content of the oxynitride phosphor powder is in excess of the theoretical oxygen content of the oxynitride phosphor represented by composition formula (1), and the excess oxygen amount is from 1.1 to 11.5 mass % with respect to 100 mass % of the theoretical mass of the oxynitride phosphor represented by composition formula (1).</p>
+      <p id="p-00078-en" num="0072">The present invention also comprises a light conversion member composed of polycrystalline ceramics obtained by the production method above. The light conversion member is capable of converting light at 300 to 500 nm to light having a peak wavelength of 590 to 610 nm.</p>
+      <p id="p-00079-en" num="0073">The production method of a wavelength conversion member of the present invention resides in the above-described production method. In the method for obtaining the oxynitride phosphor powder wherein the oxygen content in excess of the theoretical oxygen amount of composition formula (1) is from 1.1 to 11.5 mass %, for example, either one or both of the following steps D) and E) may be used:</p>
+      <p id="p-00080-en" num="0074">D) a step of preliminarily adjusting the oxygen content in at least one of the substance serving as a silicon source, the substance serving as an aluminum source, the substance serving as a calcium source, and the substance serving as a europium source used in the step A), which constitute the mixture, wherein the composition of the mixture is such that the oxynitride phosphor powder obtained by firing the mixture in an inert atmosphere has a composition, exclusive of oxygen, represented by composition formula (1) and the oxygen content thereof is in excess of the theoretical oxygen amount of the oxynitride phosphor represented by composition formula (1); and</p>
+      <p id="p-00081-en" num="0075">E) an oxidation step of, after the firing step B), heat-treating the oxynitride phosphor powder obtained in the firing step B) at 800 to 1,200° C. in an oxygen-containing atmosphere to increase the oxygen amount in the oxynitride phosphor powder.</p>
+      <p id="p-00082-en" num="0076">In one preferred embodiment of the present invention, the method has a step of preliminarily adjusting the oxygen content in at least one of the substance serving as a silicon source, the substance serving as an aluminum source, the substance serving as a calcium source, and the substance serving as a europium source used in the step A), which constitute the mixture, whereby the composition of the mixture can be such that the oxynitride phosphor powder obtained by firing the mixture in an inert atmosphere has a composition, exclusive of oxygen, represented by composition formula (1) and the oxygen content thereof is in excess of the theoretical oxygen amount of the oxynitride phosphor represented by composition formula (1) by from 1.1 to 11.5 mass %, based on the theoretical mass of the oxynitride phosphor.</p>
+      <p id="p-00083-en" num="0077">In another preferred embodiment of the wavelength conversion member of the present invention, the method has an oxidation step of, after the firing step, heat-treating the oxynitride phosphor powder obtained in the firing step at 800 to 1,200° C. in an oxygen-containing atmosphere, wherein the oxidation step makes it possible to obtain the oxynitride phosphor powder in which the oxygen content in excess of the theoretical oxygen amount of the oxynitride phosphor represented by composition formula (1) is from 1.1 to 11.5 mass % based on the theoretical mass of the oxynitride phosphor.</p>
+      <p id="p-00084-en" num="0078">The wavelength conversion member of the present invention contains an α-SiAlON phosphor, particularly, a Ca-containing α-SiAlON phosphor. The α-SiAlON phosphor, particularly, the Ca-containing α-SiAlON phosphor, is a solid solution wherein the Si—N bond of an α-type silicon nitride is partially substituted with an Al—N bond and an Al—O bond, and Ca ion penetrates into the lattice to keep the electrical neutrality.</p>
+      <p id="p-00085-en" num="0079">The α-SiAlON phosphor contained in the wavelength conversion member of the present invention is a phosphor represented by the formula above, which emits yellow-to-orange fluorescence upon excitation by light of 300 to 500 nm, wherein Eu ion is solid-dissolved into the lattice, in addition to Ca ion, to activate the Ca-containing α-SiAlON.</p>
+      <p id="p-00086-en" num="0080">An α-SiAlON phosphor in which a general rare earth element is activated, is represented by composition formula (2):</p>
+      <p id="p-00087-en" num="0000">[in-line-formulae]MeSi<sub>12-(m+n)</sub>Al<sub>(m+n)</sub>O<sub>n</sub>N<sub>16-n</sub>  (2)[/in-line-formulae]</p>
+      <p id="p-00088-en" num="0000">(wherein Me is one, or two or more of Ca, Mg, Y, and a lanthanide metal except for La and Ce, and is generally expressed without a coefficient because the coefficient of Me varies depending on the m value, but the coefficient is not limited to 1). The metal Me is solid-dissolved in the range from, at the minimum, one per three large unit cells of α-SiAlON containing four formula weights of (Si,Al)<sub>3</sub>(N,O)<sub>4 </sub>to, at the maximum, one per one unit cell thereof. The solid solubility limit is generally, when the metal element Me is divalent, 0.6&lt;m&lt;3.0 and 0≦n&lt;1.5 in the formula above and, when the metal Me is trivalent, 0.9&lt;m&lt;4.5 and 0≦n&lt;1.5. In a range except for these ranges, single-phase α-SiAlON is not obtained. Accordingly, studies of the α-SiAlON phosphor have been limited to the composition ranges above. Furthermore, in the α-SiAlON phosphor, it is known that as the m value in composition formula (2) is larger and as the n value is smaller, the emission wavelength is shifted to a longer wavelength and the emission color becomes orange.</p>
+      <p id="p-00089-en" num="0081">On the other hand, when composition formula (1) is applied to composition formula (2), the polycrystalline ceramics that is the wavelength conversion member of the present invention is represented by</p>
+      <p id="p-00090-en" num="0000">[in-line-formulae]Ca<sub>x1</sub>Eu<sub>x2</sub>Si<sub>12-(m+n)</sub>Al<sub>(m+n)</sub>O<sub>z</sub>N<sub>16-n</sub>  (1′)[/in-line-formulae]</p>
+      <p id="p-00091-en" num="0082">(wherein x1, x2, y and z are</p>
+      <p id="p-00092-en" num="0083">0&lt;x1≦3.40,</p>
+      <p id="p-00093-en" num="0084">0.05≦x2≦0.20,</p>
+      <p id="p-00094-en" num="0085">3.5&lt;m≦7.0, and</p>
+      <p id="p-00095-en" num="0086">0≦n≦1), and</p>
+      <p id="p-00096-en" num="0087">from comparison with the above-described composition ranges of α-SiAlON, most of composition formula (1′) is a range of not a single-phase α-SiAlON (a range where an AlN phase, etc. is formed, in addition to an α-SiAlON phase) and a range with a relatively small oxygen content.</p>
+      <p id="p-00097-en" num="0088">An attempt to use α-SiAlON as a ceramics member, such as bearing member, is also being made, and it is known that, above all, when the n value becomes smaller, namely, when the oxygen concentration is decreased, an α-SiAlON can be hardly sintered and a sintered body having no void in the interior can be hardly obtained. Therefore, in the case where the n value is small, an approach to obtain a dense sintered body by mixing a sintering aid, etc. is generally taken.</p>
+      <p id="p-00098-en" num="0089">The present inventors have studied also on a range outside the composition range where single-phase α-SiAlON is obtained in general. As a result, they have found that in comparison with a phosphor in the above-described composition range where single-phase α-SiAlON is obtained, the luminous efficiency is remarkably enhanced, as in the present invention, in a composition range where single-phase α-SiAlON is not heretofore obtained (most of the composition range of the present invention is a range that is not single-phase α-SiAlON). In addition, they have found a production method wherein a dense sintered body is obtained even in a low-oxygen composition range like the composition of the present invention (the composition range of the present invention where the oxygen content is relatively small) and a high-efficiency wavelength conversion member is obtained.</p>
+      <p id="p-00099-en" num="0090">The wavelength conversion member of the present invention and the production method thereof, and a light-emitting device fabricated by combining the wavelength conversion member and a semiconductor light-emitting element, are specifically described below.</p>
+      <p id="p-00100-en" num="0091">The oxynitride phosphor powder used for the production of the wavelength conversion member of the present invention is an oxynitride phosphor powder having a composition, exclusive of oxygen, represented by composition formula (1):</p>
+      <p id="p-00101-en" num="0000">[in-line-formulae]Ca<sub>x1</sub>Eu<sub>x2</sub>Si<sub>12-(y+z)</sub>Al<sub>(y+z)</sub>O<sub>z</sub>N<sub>16-z</sub>  (1)[/in-line-formulae]</p>
+      <p id="p-00102-en" num="0092">wherein 0&lt;x1≦3.40, 0.05≦x2≦0.20, 3.5&lt;y≦7.0 and 0≦z≦1.0, and satisfying the condition that the oxygen content is in excess of the theoretical oxygen content of the oxynitride phosphor represented by composition formula (1) and the excess oxygen amount is from 1.1 to 11.5 mass % with respect to 100 mass % of the theoretical mass of the oxynitride phosphor represented by composition formula (1).</p>
+      <p id="p-00103-en" num="0093">The wavelength conversion member of the present invention is composed of polycrystalline ceramics obtained by sintering the oxynitride phosphor powder above.</p>
+      <p id="p-00104-en" num="0094">The “polycrystalline ceramics” as used in the present invention means a polycrystalline material having a controlled small amount of pores or having no pore. The “polycrystalline material” means that a plurality of single crystal regions are connected directly or through an amorphous region wherein the single crystal regions are different in the crystal orientation from each other.</p>
+      <p id="p-00105-en" num="0095">The x1 and x2 are values indicating the amounts of Ca ion and Eu ion interstitially solid-dissolved into SiAlON, and if x2 is less than 0.05 or more than 0.20, or x1 exceeds 3.40, the conversion efficiency will decrease. More preferably, 0&lt;x1≦3.1 and 1.8≦x2≦2.2.</p>
+      <p id="p-00106-en" num="0096">The y is a value determined so as to keep electrical neutrality when a metal element is solid-dissolved into SiAlON and is represented by y=2(x1)+3(x2) in the oxynitride phosphor powder above. In the formula, the coefficient of x1, i.e., 2 is a numerical value based on the valence of Ca ion solid-dissolved into the Ca-containing α-SiAlON phosphor and the coefficient of x2, i.e., 3 is a numerical value based on the valence of Eu ion solid-dissolved into the Ca-containing α-SiAlON phosphor. In addition, the wavelength conversion member of the present invention contains α-SiAlON and aluminum nitride, and therefore the y is a value related to the amount of aluminum nitride produced. That is, when the y value exceeds the composition range where single-phase α-SiAlON is obtained (in the formula above, for example, in case of 3.0≦m when the metal element Me is divalent or in case of 4.5≦m when the metal Me is trivalent), aluminum nitride and other aluminum-containing oxynitrides are produced.</p>
+      <p id="p-00107-en" num="0097">In the present invention, the ranges of the y and z are 3.5&lt;y≦7.0 and 0≦z≦1. In the case of a composition where the y and z are in these ranges, a wavelength conversion member having a high conversion efficiency is provided.</p>
+      <p id="p-00108-en" num="0098">When the y exceeds 7.0, the amount of an aluminum nitride crystal phase produced becomes too large and the conversion efficiency decreases. When the y is less than 3.5, the conversion efficiency decreases and the emission peak wavelength becomes smaller than 590 nm. Furthermore, z is a value related to the amount of oxygen substitutionally solid-dissolved into α-SiAlON. When the z exceeds 1, the emission peak wavelength becomes smaller than 590 nm. In addition, when 1≦y&lt;2.3 and 0≦z&lt;1.5 or when 2.3≦y≦3.5 and 0≦z&lt;1, the conversion efficiency decreases. When 0≦y&lt;1.0 and 0≦z&lt;1.5, β-SiAlON is produced and the conversion efficiency decreases.</p>
+      <p id="p-00109-en" num="0099">In the present invention, the ranges of the y and z are preferably 4.0≦y≦6.5 and 0≦z≦1, more preferably 4.0≦y≦5.5 and 0≦z≦1.0. In the case of a composition where y and z are in these ranges, a wavelength conversion member having a higher conversion efficiency is provided.</p>
+      <p id="p-00110-en" num="0100">When crystal phases are identified by an X-ray diffractometer (XRD) using CuKα radiation, the polycrystalline ceramics of the present invention is composed of an α-SiAlON crystal phase alone classified into a trigonal system or composed of α-SiAlON crystal phase and an aluminum nitride crystal phase classified into a hexagonal system, and sometimes contains an aluminum oxynitride crystal phase (e.g., Al<sub>2.81</sub>O<sub>3.56</sub>N<sub>0.44</sub>), in addition to those crystal phases. If the contents of an aluminum nitride crystal phase and an aluminum oxynitride crystal phase are too much increased, the conversion efficiency will decrease. The content of the aluminum nitride crystal phase contained in the polycrystalline ceramics is preferably more than 0 mass % and less than 15 mass %, more preferably more than 0 mass % and less than 10 mass %. In the case of containing the aluminum nitride crystal phase in this range, higher conversion efficiency is obtained.</p>
+      <p id="p-00111-en" num="0101">Identification of the crystal phase by XRD measurement can be performed using an X-ray pattern analysis software. The analysis software includes, for example, PDXL produced by Rigaku Corporation. XRD measurement of polycrystalline ceramics, refinement of lattice constant, and quantification of crystal phase by the Rietveld method were performed by using X-ray diffractometer (Ultima IV Protectus) and analysis software (PDXL) produced by Rigaku Corporation.</p>
+      <p id="p-00112-en" num="0102">The wavelength conversion member of the present invention can be used as a light-emitting device for various display devices by combining the member with a known light-emitting source, such as light-emitting diode.</p>
+      <p id="p-00113-en" num="0103">In particular, a light-emitting source capable of emitting excitation light having a peak wavelength of 300 to 500 nm is suitable for the wavelength conversion member of the present invention. The wavelength conversion member exhibits a high luminous efficiency in the ultraviolet region and can constitute a light-emitting element having good performance. The luminous efficiency is also high with a blue light source, and the wavelength conversion member of the present invention can be used, by virtue of its orange fluorescence, for various display devices, such as vehicular marker lamp.</p>
+      <p id="p-00114-en" num="0104">The transmission/emission characteristics of the wavelength conversion member (polycrystalline ceramics) of the present invention can be evaluated by means of an optical measurement system using an integrating sphere. Specifically, the wavelength conversion member was joined onto a semiconductor light-emitting element having an emission color with a peak wavelength of 455 nm by using a silicone resin and measured by the total luminous flux measurement system manufactured by Spectra Co-op. The normalized luminous flux calculated according to the following formula was defined as the conversion efficiency.</p>
+      <p id="p-00115-en" num="0000">
+        <maths id="maths-00001-en" num="00001">
+          <math overflow="scroll">
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <mrow>
+                      <mi>Conversion</mi>
+                      <mo></mo>
+                      <mstyle>
+                        <mspace width="0.8em" height="0.8ex" />
+                      </mstyle>
+                      <mo></mo>
+                      <mi>efficiency</mi>
+                      <mo></mo>
+                      <mstyle>
+                        <mspace width="0.8em" height="0.8ex" />
+                      </mstyle>
+                      <mo></mo>
+                      <mrow>
+                        <mo>(</mo>
+                        <mrow>
+                          <mi>normalized</mi>
+                          <mo></mo>
+                          <mstyle>
+                            <mspace width="0.8em" height="0.8ex" />
+                          </mstyle>
+                          <mo></mo>
+                          <mi>luminous</mi>
+                          <mo></mo>
+                          <mstyle>
+                            <mspace width="0.8em" height="0.8ex" />
+                          </mstyle>
+                          <mo></mo>
+                          <mi>flux</mi>
+                        </mrow>
+                        <mo>)</mo>
+                      </mrow>
+                    </mrow>
+                    <mo>=</mo>
+                    <mfrac>
+                      <mtable>
+                        <mtr>
+                          <mtd>
+                            <mrow>
+                              <mi>Total</mi>
+                              <mo></mo>
+                              <mstyle>
+                                <mspace width="0.8em" height="0.8ex" />
+                              </mstyle>
+                              <mo></mo>
+                              <mi>luminous</mi>
+                              <mo></mo>
+                              <mstyle>
+                                <mspace width="0.8em" height="0.8ex" />
+                              </mstyle>
+                              <mo></mo>
+                              <mi>flux</mi>
+                              <mo></mo>
+                              <mstyle>
+                                <mspace width="0.8em" height="0.8ex" />
+                              </mstyle>
+                              <mo></mo>
+                              <mrow>
+                                <mo>(</mo>
+                                <mi>lm</mi>
+                                <mo>)</mo>
+                              </mrow>
+                              <mo></mo>
+                              <mstyle>
+                                <mspace width="0.8em" height="0.8ex" />
+                              </mstyle>
+                              <mo></mo>
+                              <mi>when</mi>
+                              <mo></mo>
+                              <mstyle>
+                                <mspace width="0.8em" height="0.8ex" />
+                              </mstyle>
+                              <mo></mo>
+                              <mi>wavelength</mi>
+                            </mrow>
+                          </mtd>
+                        </mtr>
+                        <mtr>
+                          <mtd>
+                            <mrow>
+                              <mi>conversion</mi>
+                              <mo></mo>
+                              <mstyle>
+                                <mspace width="0.8em" height="0.8ex" />
+                              </mstyle>
+                              <mo></mo>
+                              <mi>member</mi>
+                              <mo></mo>
+                              <mstyle>
+                                <mspace width="0.8em" height="0.8ex" />
+                              </mstyle>
+                              <mo></mo>
+                              <mi>is</mi>
+                              <mo></mo>
+                              <mstyle>
+                                <mspace width="0.8em" height="0.8ex" />
+                              </mstyle>
+                              <mo></mo>
+                              <mi>mounted</mi>
+                            </mrow>
+                          </mtd>
+                        </mtr>
+                      </mtable>
+                      <mtable>
+                        <mtr>
+                          <mtd>
+                            <mrow>
+                              <mi>Total</mi>
+                              <mo></mo>
+                              <mstyle>
+                                <mspace width="0.8em" height="0.8ex" />
+                              </mstyle>
+                              <mo></mo>
+                              <mi>radiant</mi>
+                              <mo></mo>
+                              <mstyle>
+                                <mspace width="0.8em" height="0.8ex" />
+                              </mstyle>
+                              <mo></mo>
+                              <mi>flux</mi>
+                              <mo></mo>
+                              <mstyle>
+                                <mspace width="0.8em" height="0.8ex" />
+                              </mstyle>
+                              <mo></mo>
+                              <mrow>
+                                <mo>(</mo>
+                                <mi>mW</mi>
+                                <mo>)</mo>
+                              </mrow>
+                              <mo></mo>
+                              <mrow>
+                                <mstyle>
+                                  <mspace width="0.6em" height="0.6ex" />
+                                </mstyle>
+                                <mo></mo>
+                                <mstyle>
+                                  <mspace width="0.3em" height="0.3ex" />
+                                </mstyle>
+                              </mrow>
+                              <mo></mo>
+                              <mi>when</mi>
+                              <mo></mo>
+                              <mstyle>
+                                <mspace width="0.8em" height="0.8ex" />
+                              </mstyle>
+                              <mo></mo>
+                              <mi>wavelength</mi>
+                            </mrow>
+                          </mtd>
+                        </mtr>
+                        <mtr>
+                          <mtd>
+                            <mrow>
+                              <mi>conversion</mi>
+                              <mo></mo>
+                              <mstyle>
+                                <mspace width="0.8em" height="0.8ex" />
+                              </mstyle>
+                              <mo></mo>
+                              <mi>member</mi>
+                              <mo></mo>
+                              <mstyle>
+                                <mspace width="0.8em" height="0.8ex" />
+                              </mstyle>
+                              <mo></mo>
+                              <mi>is</mi>
+                              <mo></mo>
+                              <mstyle>
+                                <mspace width="0.8em" height="0.8ex" />
+                              </mstyle>
+                              <mo></mo>
+                              <mi>not</mi>
+                              <mo></mo>
+                              <mstyle>
+                                <mspace width="0.8em" height="0.8ex" />
+                              </mstyle>
+                              <mo></mo>
+                              <mi>mounted</mi>
+                            </mrow>
+                          </mtd>
+                        </mtr>
+                      </mtable>
+                    </mfrac>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mo>[</mo>
+                    <mrow>
+                      <mi>Math</mi>
+                      <mo>.</mo>
+                      <mstyle>
+                        <mspace width="0.8em" height="0.8ex" />
+                      </mstyle>
+                      <mo></mo>
+                      <mn>1</mn>
+                    </mrow>
+                    <mo>]</mo>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          <img id="img-00001-en" wi="N/A" he="N/A" file="US20150247086A1_00002.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150247086A1-20150903-M00001.TIF" />
+        </maths>
+      </p>
+      <p id="p-00116-en" num="0105">Next, the production method of the wavelength conversion member of the present invention is specifically described. A substance serving as a silicon source, a substance serving as a europium source, a substance serving as a calcium source, and a substance serving as an aluminum source are mixed, and an oxynitride phosphor powder obtained by firing the mixture at a temperature of 1,500 to 2,000° C. in an inert gas atmosphere is molded and fired at a temperature of 1,500 to 2,000° C. in an inert gas atmosphere, whereby the wavelength conversion member of the present invention can be obtained.</p>
+      <p id="p-00117-en" num="0106">Conventionally, in the case of producing α-SiAlON, raw material powders, i.e., a substance serving as a silicon source, a substance serving as a europium source, a substance serving as a calcium source, and a substance serving as an aluminum source, are mixed so as to obtain a composition represented by composition formula (2), and the mixture is fired at a temperature of 1,500 to 2,000° C. in an inert gas atmosphere to obtain α-SiAlON. As the raw material powder, an oxide or a substance capable of producing an oxide by a heat treatment is also used, in addition to a nitride, but the content of the oxide in the raw material powders is adjusted to essentially conform to the theoretical oxygen amount in the composition of α-SiAlON to be produced. Although a oxide thin film is sometimes present on the surface of the raw material powders, the content of oxygen as the impurity is only 1.0 mass % or less with respect to 100 mass % of the α-SiAlON, and therefore the effects taught in the present invention are not exerted. Even when oxygen is contained in the atmosphere of firing the raw material powder mixture, the composition (oxygen content) of the α-SiAlON produced from the raw material powders is substantially unchanged.</p>
+      <p id="p-00118-en" num="0107">On the other hand, in the present invention, the composition of the raw material powder mixture obtained by mixing a substance serving as a silicon source, a substance serving as a europium source, a substance serving as a calcium source, and a substance serving as an aluminum source is selected such that an obtained oxynitride phosphor powder, through or not through an oxidation step after firing, has a composition, exclusive of oxygen, represented by composition formula (1):</p>
+      <p id="p-00119-en" num="0000">[in-line-formulae]Ca<sub>x1</sub>Eu<sub>x2</sub>Si<sub>12-(y+z)</sub>Al<sub>(y+z)</sub>O<sub>z</sub>N<sub>16-z</sub>  (1)[/in-line-formulae]</p>
+      <p id="p-00120-en" num="0108">(wherein 0&lt;x1≦3.40, 0.05≦x2≦0.20, 3.5&lt;y≦7.0 and 0≦z≦1) and contains oxygen in excess of the theoretical oxygen content of the oxynitride phosphor represented by composition formula (1) and the oxygen amount in excess of the theoretical oxygen amount of composition formula (1) is from 1.1 to 11.5 mass %.</p>
+      <p id="p-00121-en" num="0109">In the present invention, when the raw materials are mixed to satisfy composition formula (1), the mixing ratio of the raw material powders, i.e., the substance serving as a silicon source, the substance serving as a europium source, the substance serving as a calcium source, and the substance serving as an aluminum source, is determined, based on the amounts of silicon, europium, calcium and aluminum, respectively, and the masses of compounds theoretically calculated as a nitride, an oxide or other compounds of those elements. Impurities (for example, oxygen present in nitride) are not taken into account in the calculation. For example, in the case of using silicon nitride as a raw material, the mixing ratio of silicon nitride is determined by assuming it as a material not containing oxygen. With regard to the raw material used for the production of an oxynitride phosphor powder, a material in which the content of metal impurity is of negligible level (for example, 100 ppm or less) is used. For example, calculation may be performed by assuming the silicon nitride raw material as pure silicon nitride, but if needed, performed by taking into account the silicon nitride content of the raw material.</p>
+      <p id="p-00122-en" num="0110">In the present invention, the thus-calculated oxygen content as a theoretical content in the oxynitride phosphor powder represented by composition formula (1) produced from the raw materials and the oxygen content as a measured value are compared, and the difference therebetween is defined as the excess oxygen content.</p>
+      <p id="p-00123-en" num="0111">The substance serving as a silicon source of the raw material is selected from nitride, oxynitride and oxide of silicon and a precursor substance capable of becoming an oxide of silicon by pyrolysis. A silicon nitride, more specifically, a crystalline silicon nitride or an amorphous silicon nitride, is preferably used, as the substance serving as a silicon source. A crystalline silicon nitride or an amorphous silicon nitride is preferably used since a sintered body of the polycrystalline ceramics is likely to have a larger density and an increased conversion efficiency. In particular, in the case of using a crystalline silicon nitride, a crystalline silicon nitride having a specific surface area of 9 to 30 m<sup>2</sup>/g is more preferred. In the case of using an amorphous silicon nitride, the specific surface area thereof is more preferably from 600 to 800 m<sup>2</sup>/g. When the specific surface area of a crystalline silicon nitride is from 9 to 30 m<sup>2</sup>/g or the specific surface area of an amorphous silicon nitride is from 600 to 800 m<sup>2</sup>/g, the density of a sintered body becomes larger and the conversion efficiency more increases.</p>
+      <p id="p-00124-en" num="0112">The specific surface area of a crystalline silicon nitride or an amorphous silicon nitride was measured by using a specific surface area measuring apparatus, FlowSorb Model 2300, manufactured by Shimadzu Corporation (BET method by nitrogen gas adsorption).</p>
+      <p id="p-00125-en" num="0113">The substance serving as a europium source of the raw material is selected from nitride, oxynitride and oxide of europium and a precursor substance capable of becoming an oxide of europium by pyrolysis. In the case of preparing the raw material to satisfy z=0 in composition formula (1), europium nitride is preferably used. In the case of preparing the raw material to satisfy z&gt;0, it is preferable to use europium oxide alone or use europium oxide and europium nitride in combination.</p>
+      <p id="p-00126-en" num="0114">The substance serving as a calcium source of the raw material is selected from nitride, oxynitride and oxide of calcium and a precursor substance capable of becoming an oxide of calcium by pyrolysis. In the case of preparing the raw material to satisfy z=0 in composition formula (1), calcium nitride is preferably used. In the case of preparing the raw material to satisfy z&gt;0, it is preferable to use calcium carbonate alone or use calcium carbonate and calcium nitride in combination.</p>
+      <p id="p-00127-en" num="0115">The substance serving as an aluminum source of the raw material includes aluminum oxide, metal aluminum and aluminum nitride, and the powders thereof may be used individually or in combination.</p>
+      <p id="p-00128-en" num="0116">In the firing of oxynitride phosphor, an Li-containing compound serving as a sintering aid is preferably added for the purpose of accelerating the sintering and producing an α-SiAlON crystal phase at a lower temperature. The Li-containing compound used includes lithium oxide, lithium carbonate, metal lithium, and lithium nitride, and the powders thereof may be used individually or in combination. The amount of the Li-containing compound added is, in terms of Li element, preferably from 0.01 to 0.5 mol, more preferably from 0.01 to 0.1 mol, per mol of the fired oxynitride.</p>
+      <p id="p-00129-en" num="0117">The method for mixing the substance serving as a silicon source, the substance serving as a europium source, the substance serving as a calcium source, the substance serving as an aluminum source, and an optional sintering aid, is not particularly limited. A method known per se, for example, a method of dry mixing the substances, and a method of wet mixing the substances in an inert solvent substantially incapable of reacting with each raw material component and then removing the solvent, may be employed. As the mixing apparatus, a V-shaped mixer, a rocking mixer, a ball mill, a vibration mill, a medium stirring mill, etc. are suitably used.</p>
+      <p id="p-00130-en" num="0118">A mixture of the substance serving as a silicon source, the substance serving as a europium source, the substance serving as a calcium source, the substance serving as an aluminum source, and an optional sintering aid, is fired at a temperature of 1,500 to 2,000° C. in an inert gas atmosphere, whereby a fired oxynitride can be obtained. The inert gas atmosphere means an inert gas atmosphere, such as nitrogen, and the oxygen concentration in the atmosphere is preferably 100 ppm or less, more preferably 10 ppm or less. The inert atmosphere where the inert gas is nitrogen may be a reducing atmosphere containing a hydrogen gas. The firing temperature less than 1,500° C. is not practical since the production of α-SiAlON requires heating for a long time. The firing temperature exceeding 2,000° C. is undesirable since silicon nitride and α-SiAlON are sublimated and decomposed to produce free silicon. A temperature range from 1,600 to 2,000° C. is preferred. The heating furnace used for firing is not particularly limited as long as firing at 1,500 to 2,000° C. in an inert gas atmosphere can be performed. For example, a batch electric furnace of high frequency induction heating system or resistance heating system, a rotary kiln, a fluidized firing furnace, and a pusher-type electric furnace can be used. As for the crucible filled with the mixture, a BN-made crucible, a silicon nitride-made crucible, a graphite-made crucible, and a silicon carbide-made crucible can be used.</p>
+      <p id="p-00131-en" num="0119">An oxynitride phosphor powder having a sharp particle size distribution can be obtained by subjecting the fired oxynitride to disintegration and classification. The disintegration as used herein means an operation of disintegrating an aggregate (secondary particle) of primary particles constituting the fired oxynitride into primary particles and is differentiated from pulverization. The method for disintegrating is not particularly limited, but a disintegrating method, such as roll crusher, ball mill, bead mill and stamp mill, can be used. The method for classification is not particularly limited, but a classification device, such as sieve classifier, cyclone classifier and dry air flow classifier, can be used. By performing classification after disintegration, an oxynitride phosphor powder having a particle diameter (D<sub>50</sub>) of 50 μm or less, preferably 20 μm or less, can be obtained. When the particle diameter is 50 μm or less, a sintered body is likely to have a larger density, and the conversion efficiency more increases. Furthermore, the particle diameter 20 μm or less is preferable since not only a sintered body is likely to have a larger density and the conversion efficiency more increases but also at the time of sintering of the polycrystalline ceramics, a lower sintering temperature or a shorter firing time can be employed. In the production method of the present invention, it is only necessary to disintegrate the fired oxynitride, but pulverizing the fired oxynitride to obtain particles having a desired particle diameter is not precluded.</p>
+      <p id="p-00132-en" num="0120">D<sub>50 </sub>of the oxynitride phosphor powder is a 50% diameter (weight-based median value) in the particle size distribution curve measured by a laser diffraction/scattering particle size distribution measuring apparatus.</p>
+      <p id="p-00133-en" num="0121">In the present invention, the oxygen amount larger than the theoretical oxygen amount of composition formula (1) of the oxynitride phosphor powder is from 1.1 to 11.5 mass %. In the present invention, the oxygen amount in excess of the theoretical oxygen amount is calculated assuming the theoretical mass of the oxynitride phosphor represented by formula (1) to be 100 mass %. When the oxygen amount larger than the theoretical oxygen amount of composition formula (1) of the oxynitride phosphor powder is less than 1.1 mass %, the relative density of a sintered body becomes small. When the relative density of a sintered body becomes small, light excited by light at 300 to 500 nm and wavelength-converted, that is, light at 590 to 610 nm, is scattered due to voids present in the polycrystalline ceramics, leading to very poor light extraction. Therefore, the conversion efficiency significantly decreases. When the oxygen amount above exceeds 11.5 mass %, the oxygen content becomes large, and the contents of oxygen and nitrogen greatly deviate from composition formula (1) to significantly disrupt the charge compensation in the phosphor crystal, as a result, the conversion efficiency decreases. The oxygen amount in excess of the theoretical oxygen amount is preferably from 1.1 to 7.8 mass %, more preferably from 1.1 to 3.5 mass %. The oxygen amount in excess of the theoretical oxygen amount may also be 1.2 mass % or more, 1.4 mass % or more, or 1.5 mass % or more.</p>
+      <p id="p-00134-en" num="0122">In the production method of the present invention, a substance serving as a silicon source, a substance serving as an aluminum source, a substance serving as a calcium source, a substance serving as a europium source, and an optional sintering aid, are mixed, and the mixture is fired or is fired and then subjected to oxidation treatment, whereby the oxygen content in excess of the theoretical oxygen amount of composition formula (1) can be from 1.1 to 11.5 mass % in the oxynitride phosphor powder. The oxygen in excess of the theoretical oxygen amount is supplied from oxygen in the raw material or oxygen in the atmosphere. For example, even when a commercially available silicon nitride powder is assumed as an oxygen-free raw material and weighed and mixed to satisfy z=0, the obtained oxynitride phosphor powder contains oxygen in an amount of approximately from 0.5 to 1.0 mass % since the commercially available silicon nitride powder actually contains a certain amount of oxygen. This is attributable to trace impurity oxygen contained in the raw material or to an amorphous phase containing oxygen present on the surface of the oxynitride phosphor powder. The oxygen amount of the present invention is an oxygen concentration including the impurity oxygen derived from the raw material and the oxygen contained in the amorphous phase.</p>
+      <p id="p-00135-en" num="0123">The specific method for adjusting the oxygen amount in excess of the theoretical oxygen amount of composition formula (1) to the range from 1.1 to 11.5 mass % in the oxynitride phosphor powder includes a method of adjusting the concentration of impurity oxygen contained in the raw material. For example, an oxygen amount in the range above can be achieved by adjusting the oxygen concentration of a crystalline silicon nitride or amorphous silicon nitride serving as a main raw material. The crystalline silicon nitride or amorphous silicon nitride usually contains 1.0 mass % or less of impurity oxygen. The impurity oxygen includes oxygen present in a silicon nitride particle, and oxygen present on the particle surface. The method for reducing the impurity oxygen concentration can be performed by subjecting the silicon nitride powder to a cleaning treatment with use of an acid, such as nitric acid and hydrofluoric acid. The method for increasing the impurity oxygen concentration can be performed by heat-treating the silicon nitride powder in the air or in an oxygen-containing atmosphere. The concentration of oxygen contained in a crystalline silicon nitride or amorphous silicon nitride as a raw material powder is preferably 5.0 mass % or less. The oxygen concentration of 5.0 mass % or more is not preferred since the compositional deviation from composition formula (1) is too large.</p>
+      <p id="p-00136-en" num="0124">As the specific surface area of a crystalline silicon nitride or amorphous silicon nitride serving as a raw material is larger, the concentration of impurity oxygen contained is likely to be increased. Furthermore, when the specific surface area of a crystalline silicon nitride or amorphous silicon nitride serving as a raw material is large, oxygen more than the concentration of oxygen contained in the crystalline silicon nitride or amorphous silicon nitride as a raw material is contained in the oxynitride phosphor powder. This is because due to the large specific surface area of the crystalline silicon nitride or amorphous silicon nitride as a raw material, oxygen adsorbed to the surface thereof is readily mixed into the oxynitride phosphor powder in the production process of the powder. Accordingly, in the case of adjusting the oxygen concentration of the oxynitride phosphor powder, the specific surface area of a crystalline silicon nitride or amorphous silicon nitride serving as a raw material must be appropriately controlled. In the present invention, a crystalline silicon nitride having a specific surface area of 9 to 30 m<sup>2</sup>/g is preferably used, and an amorphous silicon nitride having a specific surface area of 600 to 800 m<sup>2</sup>/g is more preferably used.</p>
+      <p id="p-00137-en" num="0125">As another method for adjusting the oxygen amount of the oxynitride phosphor powder, an oxidation step of heat-treating the oxynitride phosphor powder in the air or in an oxygen-containing atmosphere may be provided. The oxygen concentration in the oxygen-containing atmosphere is preferably from 0.1 to 21.0 vol %. In that case, the thickness of an amorphous phase present on the surface of the oxynitride phosphor powder is increased, and the oxygen amount of the oxynitride phosphor powder increases. With regard to the conditions of heat treatment, a temperature range from 800 to 1,200° C. is preferred although not limited to this range. A temperature of less than 800° C. is undesirable since there is no or very slight increase in the oxygen concentration. On the other hand, a temperature of 1,200° C. or more is not preferred, since oxidation of the oxynitride phosphor powder rapidly proceeds and the oxygen concentration becomes difficult to control. A temperature range from 800 to 950° C. is more preferred. In the case of performing a heat treatment, the time for which the powder is held at the maximum temperature is preferably from 0.5 to 10 hours so as to obtain, among others, high conversion efficiency.</p>
+      <p id="p-00138-en" num="0126">The method for adjusting the oxygen content of the oxynitride phosphor powder according to the present invention includes, as described above, a method of adjusting the oxygen amount of the raw material powder, and a method of providing a heat-treatment step to oxidize the oxynitride phosphor powder, and these methods may be employed in combination. Accordingly, in the case where a sufficient oxygen amount is ensured in the raw material, it is not necessary to provide a heat treatment step. In the case where the oxygen amount in the raw material is small, an oxynitride phosphor powder containing the required excess oxygen can be obtained by adjusting the conditions of the heat-treatment step.</p>
+      <p id="p-00139-en" num="0127">The oxygen amount larger than the theoretical oxygen amount of composition formula (1) of the oxynitride phosphor powder is preferably from 1.1 to 4.0 mass %. As described above, when the oxygen amount larger than the theoretical oxygen amount is less than 1.1 mass %, the density of a sintered body becomes small. When the oxygen content exceeds 4 mass %, the contents of oxygen and nitrogen greatly deviate from composition formula (1) to disrupt the charge compensation in the phosphor crystal, as a result, the effect of improving the conversion efficiency is reduced.</p>
+      <p id="p-00140-en" num="0128">The thickness of an oxygen-containing amorphous phase present on the phosphor powder surface of the oxynitride phosphor powder is preferably from more than 1 nm to less than 10 nm. When the thickness of the oxygen-containing amorphous phase is 1 nm or less, the density of a sintered body of the polycrystalline ceramics may become small to decrease the conversion efficiency. When the thickness of the oxygen-containing amorphous phase (there is a composition (O, N) gradient in the thickness direction wherein the outermost surface is substantially an oxide phase, and the oxygen concentration is reduced toward the inner side) is 10 nm or more, the conversion efficiency may decrease.</p>
+      <p id="p-00141-en" num="0129">The thickness of the above-described amorphous phase present on the surface of the oxynitride phosphor powder can be adjusted, as described above, by a method of heat-treating the oxynitride phosphor powder in the air or in an oxygen-containing atmosphere or a method of adjusting the oxygen content of the raw material serving as a silicon source. Specifically, the thickness of the oxygen-containing amorphous phase of the obtained oxynitride phosphor powder can be increased by using an amorphous silicon nitride. In the case of using a crystalline silicon nitride, the thickness of the oxygen-containing amorphous phase of the obtained oxynitride phosphor powder can be increased by using a crystalline silicon nitride having a large oxygen content or using a crystalline silicon nitride having a large specific surface area.</p>
+      <p id="p-00142-en" num="0130">The oxygen amount of the oxynitride phosphor powder is preferably from 1.4 to 5.0 mass %. An oxygen content of 1.4 to 5.0 mass % is preferred, since the density of a sintered body of the polycrystalline ceramics is likely to become large and the conversion efficiency increases. When the oxygen amount is less than 1.4 mass %, the density of a sintered body of the polycrystalline ceramics may be little increased, and due to voids present in the polycrystalline ceramics, the improvement of extraction efficiency of the wavelength-converted light may decrease, leading to a small improvement of the conversion efficiency. When the oxygen amount exceeds 5 mass %, the emission peak wavelength is likely to become 590 nm or less, and the improvement of conversion efficiency may be reduced. The oxygen amount of the oxynitride phosphor can be adjusted by controlling z in composition formula (1). Specifically, the oxygen amount can be adjusted by using an oxygen-containing raw material to obtain a predetermined oxygen concentration. When the oxygen amount of the oxynitride phosphor powder is adjusted to 5 mass % or more by controlling z in composition formula (1), the emission peak wavelength is likely to become 590 nm or less and the improvement of the conversion efficiency may be reduced. In addition, as described above, there is a method of increasing oxygen to exceed the theoretical oxygen amount of composition formula (1), specifically, a method of adjusting the concentration of impurity oxygen contained in the raw material, or a method of providing an oxidation step of heat-treating the powder in the air or in an oxygen-containing atmosphere.</p>
+      <p id="p-00143-en" num="0131">The oxygen contents of the oxynitride phosphor powder, crystalline silicon nitride and amorphous silicon nitride can be measured by an oxygen/nitrogen analyzer or an oxygen-nitrogen simultaneous analyzer manufactured by LECO. The thickness of the surface amorphous phase of the oxynitride phosphor powder can be measured by a scanning transmission electron microscope, Cs-corrected STEM Model JEM-2100F (hereinafter, referred to as STEM), manufactured by JEOL Ltd.</p>
+      <p id="p-00144-en" num="0132">As the method for molding and firing the polycrystalline ceramics, although not limited to these methods, a normal pressure sintering method, a pressure sintering method, a hot plasma sintering method, a discharge plasma sintering method, etc. can be utilized. In order to obtain polycrystalline ceramics having a large sintering density without using a sintering aid, a pressure sintering method, a hot plasma sintering method or a discharge plasma sintering method is preferably employed. In the pressure sintering method, the oxynitride phosphor powder filled in a graphite-made die can be fired at a temperature of 1,500 to 2,000° C. in an inert gas atmosphere while applying a uniaxial pressure. In order to suppress sublimation and decomposition of the oxynitride phosphor powder, a gas pressure of 0.2 to 1 MPa is preferably applied.</p>
+      <p id="p-00145-en" num="0133">Sintering (firing) of the polycrystalline ceramics is preferably performed under the conditions affording a large sintering density and at a lower temperature. Firing at a high temperature is not preferred, since calcium, europium and silicon contained in the oxynitride phosphor are sublimated to change the composition of the obtained polycrystalline ceramics. For this reason, the firing temperature is preferably from 1,500 to 2,000° C., more preferably from 1,500 to 1,850° C.</p>
+      <p id="p-00146-en" num="0134">In order to obtain polycrystalline ceramics having a large density at a lower firing temperature, the primary particle constituting the oxynitride phosphor powder is preferably small. The primary particle as used herein indicates a minimum unit of a crystal grain constituting the powder, that is, a region where the crystal orientation is aligned and a grain boundary is not formed in the interior. The phosphor powder is composed of a secondary particle resulting from fusion or aggregation of primary particles. The primary particles can be made small by increasing the specific surface area of a crystalline silicon nitride or amorphous silicon nitride serving as a raw material of the oxynitride phosphor powder. In the present invention, a crystalline silicon nitride having a specific surface layer of 9 to 30 m<sup>2</sup>/g is preferably used, and an amorphous silicon nitride having a specific surface area of 600 to 800 m<sup>2</sup>/g is more preferably used.</p>
+      <p id="p-00147-en" num="0135">The polycrystalline ceramics can be processed into a predetermined dimension by the existing ceramics processing technique, and the thickness of the polycrystalline ceramics can be adjusted by polishing. The thickness of the polycrystalline ceramics is preferably from 100 to 300 μm. The thickness of the polycrystalline ceramics less than 100 μm is not preferred, since cracking, chipping, etc. may be generated in the course of processing the polycrystalline ceramics. The thickness more than 300 μm is not preferred, since the conversion efficiency decreases.</p>
+      <p id="p-00148-en" num="0136">The oxynitride phosphor powder and polycrystalline ceramics of the present invention may contain fluorine but need not contain fluorine. The oxynitride phosphor powder and polycrystalline ceramics preferably contain less than 20 ppm of fluorine, 10 ppm or less of fluorine, or substantially no fluorine.</p>
+      <heading id="h-00011-en" level="1">EXAMPLES</heading>
+      <p id="p-00149-en" num="0137">The present invention is described in more detail below by referring to specific examples.</p>
+      <heading id="h-00012-en" level="1">Example 1</heading>
+      <p id="p-00150-en" num="0138">An amorphous silicon nitride having a specific surface area of 782 m<sup>2</sup>/g and an oxygen concentration of 1.28 mass %, europium nitride, aluminum nitride and calcium nitride were weighed in a nitrogen-purged glove box to provide the designed oxynitride composition shown in Table 1, and mixed by use of a dry vibration mill to obtain a mixed powder. Assuming the oxygen content of the silicon nitride raw material to be 0 mass % (the mass of the amorphous silicon nitride was calculated as the amount of pure silicon nitride) and assuming the purity of each raw material to be 100%, the amount of the raw material was calculated.</p>
+      <p id="p-00151-en" num="0139">The mixed powder obtained was put in a silicon nitride-made crucible, and the crucible was charged into a graphite resistance heating-type electric furnace. The temperature was raised to 1,725° C. in the state of keeping the atmospheric pressure while flowing nitrogen into the electric furnace, and then held at 1,725° C. for 12 hours to obtain a fired oxynitride. The fired oxynitride obtained was disintegrated and classified into a powder having a particle diameter of 20 μm or less to obtain the oxynitride phosphor powder for use in the present invention.</p>
+      <p id="p-00152-en" num="0140">D<sub>50 </sub>of the obtained oxynitride phosphor powder was 13.3 μm. D<sub>50 </sub>of the oxynitride phosphor powder of the present invention is a 50% diameter in the particle size distribution curve measured by a laser diffraction/scattering particle size distribution measuring apparatus.</p>
+      <p id="p-00153-en" num="0141">The oxygen content of the obtained oxynitride phosphor powder was 2.47 mass %, and the increase of the oxygen content relative to the oxygen content calculated from composition formula (1), i.e., 0 mass %, was 2.47 mass %. The oxygen content was measured by an oxygen-nitrogen simultaneous analyzer manufactured by LECO. Furthermore, the true density of the obtained oxynitride phosphor powder was measured by a pycnometer method and found to be 3.34 g/cm<sup>3</sup>.</p>
+      <p id="p-00154-en" num="0142">A hot press firing of the obtained oxynitride phosphor powder was performed by using a graphite-made die. The firing was performed under the conditions of a press load of 25 MPa and a nitrogen pressurized atmosphere of 0.8 MPa by raising the temperature to 1,850° C. and holding the temperature at 1,850° C. for 8 hours. The obtained polycrystalline ceramics was polished to a thickness of 150 μm to obtain the wavelength conversion member of the present invention.</p>
+      <p id="p-00155-en" num="0143">The density of the wavelength conversion member composed of the obtained polycrystalline ceramics was measured by the Archimedes method and found to be 3.28 g/cm<sup>3</sup>. Thus, the wavelength conversion member had a relative density of 98.3% to the true density of the oxynitride phosphor powder used as the raw material.</p>
+      <p id="p-00156-en" num="0144">XRD measurement of the wavelength conversion member composed of the obtained polycrystalline ceramics was performed. The wavelength conversion member consisted of an α-SiAlON crystal phase and an aluminum nitride crystal phase. In Example 1, the content of aluminum nitride was 5 mass %</p>
+      <p id="p-00157-en" num="0145">For evaluating the transmission/emission characteristics of the obtained wavelength conversion member, the wavelength conversion member was joined onto a semiconductor light-emitting element having an emission color with a peak wavelength of 455 nm by using a silicone resin. The measurement was performed by means of the total luminous flux measurement system manufactured by Spectra Co-op. The peak wavelength and total luminous flux were determined from the obtained emission spectrum, and the conversion efficiency was calculated. The emission characteristics of the wavelength conversion member according to Example 1 are shown in Table 2.</p>
+      <heading id="h-00013-en" level="1">Examples 2 to 12</heading>
+      <p id="p-00158-en" num="0146">Oxynitride phosphor powders were obtained by the same method as in Example 1 except that the raw material powders according to Examples 2 to 12 were weighed and mixed so that the oxynitride phosphor powder has the designed composition of Table 1. Assuming the oxygen content of the silicon nitride raw material to be 0 mass % and assuming the purity of each raw material to be 100%, the amount of the raw material was calculated. D<sub>50 </sub>and the oxygen content of the obtained oxynitride phosphor powders were measured. The results are shown in Table 1. Furthermore, wavelength conversion members composed of polycrystalline ceramics were produced by using the obtained oxynitride phosphor powders and subjected to identification of the constituent crystal phase and evaluation of transmission/emission characteristics, by the same method as in Example 1. The results are shown in Table 2.</p>
+      <p id="p-00159-en" num="0147">In Table 1, the kind, specific surface area and oxygen concentration of the silicon raw material as a raw material, the values of x1, x2, y and z in composition formula (1), and the average particle diameter, oxygen content (measured value) and excess oxygen amount (difference between measured value and theoretical value) of the oxynitride phosphor powder are shown. In Table 2, the crystal phase, relative density, peak wavelength and conversion efficiency of the polycrystalline ceramics obtained by sintering are shown.</p>
+      <p id="p-00160-en" num="0148">It is seen from Tables 1 and 2 that the wavelength conversion members produced using an oxynitride phosphor powder satisfying, as in Examples 1 to 6 and 8 to 11, the ranges of 0&lt;x1≦3.40, 0.05≦x2≦0.20, 4.0≦y≦6.5 and 0≦z≦1 in composition formula (1) have, among others, an increased conversion efficiency.</p>
+      <heading id="h-00014-en" level="1">Examples 13 to 18</heading>
+      <p id="p-00161-en" num="0149">Oxynitride phosphor powders were obtained by the same method as in Example 2 except that the silicon nitride powder as a raw material was changed to a crystalline silicon nitride powder having a specific surface area of 0.3 to 28.5 m<sup>2</sup>/g and an oxygen concentration of 0.29 to 0.96 mass %. Assuming the oxygen content of the silicon nitride raw material to be 0 mass % and assuming the purity of each raw material to be 100%, the amount of the raw material was calculated. D<sub>50 </sub>and the oxygen content of the obtained oxynitride phosphor powders were measured by the same methods as in Example 2. The results are shown in Table 1. Furthermore, wavelength conversion members composed of a polycrystalline ceramics were produced by using the obtained oxynitride phosphor powders and subjected to identification of the constituent crystal phase and evaluation of transmission/emission characteristics, by the same method as in Example 2. The results are shown in Table 2.</p>
+      <p id="p-00162-en" num="0150">It is seen from Tables 1 and 2 that when an amorphous silicon nitride powder having a specific surface area of 600 to 800 m<sup>2</sup>/g or a crystalline silicon nitride powder having a specific surface area of 9 m<sup>2</sup>/g or more was used, the wavelength conversion member has, among others, an increased conversion efficiency.</p>
+      <heading id="h-00015-en" level="1">Examples 19 to 25</heading>
+      <p id="p-00163-en" num="0151">Oxynitride phosphor powders produced by the same method as in Examples 2 and 13 to 18 were obtained. Assuming the oxygen content of the silicon nitride raw material to be 0 mass % and assuming the purity of each raw material to be 100%, the amount of the raw material was calculated. The obtained oxynitride phosphor powders were subjected to an oxidation treatment under the conditions of 900° C. and 5 hours to obtain raw material phosphor powders. D<sub>50 </sub>and the oxygen content of the obtained raw material phosphor powders were measured by the same methods as in Example 2. The results are shown in Table 1. Furthermore, wavelength conversion members composed of a polycrystalline ceramics were produced by using the obtained raw material phosphor powders and subjected to identification of the constituent crystal phase and evaluation of transmission/emission characteristics, by the same method as in Example 2. The results are shown in Table 2. <figref>FIG. 1</figref> shows the transmission/emission spectrum of Example 18.</p>
+      <p id="p-00164-en" num="0152">It is seen from Tables 1 and 2 that when the oxynitride phosphor powder is subjected to an oxidation treatment under the conditions of 900° C. and 5 hours to obtain a raw material phosphor powder, the wavelength conversion member has, among others, increased conversion efficiency, compared with the case of not performing an oxidation treatment.</p>
+      <heading id="h-00016-en" level="1">Examples 26 to 32</heading>
+      <p id="p-00165-en" num="0153">Oxynitride phosphor powders produced by the same method as in Examples 2 and 13 to 18 were obtained. Assuming the oxygen content of the silicon nitride raw material to be 0 mass % and assuming the purity of each raw material to be 100%, the amount of the raw material was calculated. The obtained oxynitride phosphor powders were subjected to an oxidation treatment under the conditions of 1,000° C. and 5 hours to obtain raw material phosphor powders. D<sub>50 </sub>and the oxygen content of the obtained raw material phosphor powders were measured by the same methods as in Example 2. The results are shown in Table 1. Furthermore, wavelength conversion members composed of a polycrystalline ceramics were produced by using the obtained raw material phosphor powders and subjected to identification of the constituent crystal phase and evaluation of transmission/emission characteristics, by the same method as in Example 2. The results are shown in Table 2.</p>
+      <p id="p-00166-en" num="0154">It is seen from Tables 1 and 2 that when an oxidation treatment of the oxynitride phosphor powder is performed under the conditions of 1,000° C. and 5 hours, the oxygen content and the incremental oxygen amount are 5 mass % or more. As for the conversion efficiency of the polycrystalline ceramics, it is understood that although the effect is small, the conversion efficiency is improved, compared with the case of performing an oxidation treatment of the oxynitride phosphor powder under the conditions of 900° C. and 5 hours.</p>
+      <heading id="h-00017-en" level="1">Examples 33 to 39</heading>
+      <p id="p-00167-en" num="0155">Oxynitride phosphor powders produced by the same method as in Examples 2 and 13 to 18 were obtained. Assuming the oxygen content of the silicon nitride raw material to be 0 mass % and assuming the purity of each raw material to be 100%, the amount of the raw material was calculated. The obtained oxynitride phosphor powders were subjected to an oxidation treatment under the conditions of 1,100° C. and 5 hours to obtain raw material phosphor powders. D<sub>50 </sub>and the oxygen content of the obtained raw material phosphor powders were measured by the same methods as in Example 2. The results are shown in Table 1. Furthermore, wavelength conversion members composed of a polycrystalline ceramics were produced by using the obtained raw material phosphor powders and subjected to identification of the constituent crystal phase and evaluation of transmission/emission characteristics, by the same method as in Example 2. The results are shown in Table 2.</p>
+      <p id="p-00168-en" num="0156">As seen from Tables 1 and 2, when an oxidation treatment of the oxynitride phosphor powder is performed under the conditions of 1,100° C. and 5 hours, the oxygen content and the incremental oxygen amount are 9 mass % or more. As for the conversion efficiency of the polycrystalline ceramics, compared with the case of performing an oxidation treatment of the oxynitride phosphor powder under the conditions of 900° C. and 5 hours, the conversion efficiency is improved, though the effect is small. Among others, when the specific surface area of the crystalline silicon nitride as the raw material is 0.29 m<sup>2</sup>/g, enhancement of the conversion efficiency is recognized.</p>
+      <heading id="h-00018-en" level="1">Comparative Examples 1 to 13</heading>
+      <p id="p-00169-en" num="0157">Oxynitride phosphor powders were obtained by the same method as in Example 1 except that the raw material powders according to Comparative Examples 1 to 13 were weighed and mixed so that the oxynitride phosphor powder has the designed composition of Table 1. Assuming the oxygen content of the silicon nitride raw material to be 0 mass % and assuming the purity of each raw material to be 100%, the amount of the raw material was calculated. D<sub>50 </sub>and the oxygen content of the obtained oxynitride phosphor powders were measured by the same methods as in Example 1. The results are shown in Table 1. Furthermore, wavelength conversion members composed of a polycrystalline ceramics were produced by using the obtained oxynitride phosphor powders and subjected to identification of the constituent crystal phase and evaluation of transmission/emission characteristics, by the same method as in Example 1. The results are shown in Table 2.</p>
+      <p id="p-00170-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="11" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="21pt" align="center" />
+              <colspec colname="8" colwidth="21pt" align="center" />
+              <colspec colname="9" colwidth="35pt" align="center" />
+              <colspec colname="10" colwidth="35pt" align="center" />
+              <colspec colname="11" colwidth="42pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="11" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="11" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Oxygen </entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Concentration </entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Average </entry>
+                  <entry />
+                  <entry>Incremental </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>of Silicon </entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Particle </entry>
+                  <entry>Oxygen </entry>
+                  <entry>Oxygen </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Silicon Raw </entry>
+                  <entry>SSA </entry>
+                  <entry>Raw Material </entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Diameter </entry>
+                  <entry>Content </entry>
+                  <entry>Amount* </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Material</entry>
+                  <entry>[m<sup>2</sup>/g]</entry>
+                  <entry>[mass %]</entry>
+                  <entry>x1</entry>
+                  <entry>x2</entry>
+                  <entry>y</entry>
+                  <entry>z</entry>
+                  <entry>D<sub>50 </sub>[nm]</entry>
+                  <entry>[mass %]</entry>
+                  <entry>[mass %]</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="11" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="11" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="char" char="." />
+              <colspec colname="4" colwidth="49pt" align="char" char="." />
+              <colspec colname="5" colwidth="28pt" align="char" char="." />
+              <colspec colname="6" colwidth="28pt" align="char" char="." />
+              <colspec colname="7" colwidth="21pt" align="char" char="." />
+              <colspec colname="8" colwidth="21pt" align="char" char="." />
+              <colspec colname="9" colwidth="35pt" align="char" char="." />
+              <colspec colname="10" colwidth="35pt" align="char" char="." />
+              <colspec colname="11" colwidth="42pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Example 1 </entry>
+                  <entry>amorphous</entry>
+                  <entry>782</entry>
+                  <entry>1.28</entry>
+                  <entry>2.15</entry>
+                  <entry>0.100</entry>
+                  <entry>4.6</entry>
+                  <entry>0.0</entry>
+                  <entry>13.3</entry>
+                  <entry>2.47</entry>
+                  <entry>2.47</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 2 </entry>
+                  <entry>amorphous</entry>
+                  <entry>782</entry>
+                  <entry>1.28</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>0.0</entry>
+                  <entry>13.8</entry>
+                  <entry>2.56</entry>
+                  <entry>2.56</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 3 </entry>
+                  <entry>amorphous</entry>
+                  <entry>782</entry>
+                  <entry>1.28</entry>
+                  <entry>2.15</entry>
+                  <entry>0.100</entry>
+                  <entry>4.6</entry>
+                  <entry>0.5</entry>
+                  <entry>14.1</entry>
+                  <entry>2.83</entry>
+                  <entry>1.61</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 4 </entry>
+                  <entry>amorphous</entry>
+                  <entry>782</entry>
+                  <entry>1.28</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>0.5</entry>
+                  <entry>13.5</entry>
+                  <entry>2.64</entry>
+                  <entry>1.44</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 5 </entry>
+                  <entry>amorphous</entry>
+                  <entry>782</entry>
+                  <entry>1.28</entry>
+                  <entry>2.15</entry>
+                  <entry>0.100</entry>
+                  <entry>4.6</entry>
+                  <entry>1.0</entry>
+                  <entry>14.3</entry>
+                  <entry>3.55</entry>
+                  <entry>1.12</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 6 </entry>
+                  <entry>amorphous</entry>
+                  <entry>782</entry>
+                  <entry>1.28</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>1.0</entry>
+                  <entry>12.8</entry>
+                  <entry>3.53</entry>
+                  <entry>1.13</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 7 </entry>
+                  <entry>amorphous</entry>
+                  <entry>782</entry>
+                  <entry>1.28</entry>
+                  <entry>1.85</entry>
+                  <entry>0.100</entry>
+                  <entry>3.6</entry>
+                  <entry>0.5</entry>
+                  <entry>13.9</entry>
+                  <entry>3.02</entry>
+                  <entry>1.78</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 8 </entry>
+                  <entry>amorphous</entry>
+                  <entry>782</entry>
+                  <entry>1.28</entry>
+                  <entry>1.85</entry>
+                  <entry>0.100</entry>
+                  <entry>4.0</entry>
+                  <entry>0.5</entry>
+                  <entry>12.9</entry>
+                  <entry>2.85</entry>
+                  <entry>1.61</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 9 </entry>
+                  <entry>amorphous</entry>
+                  <entry>782</entry>
+                  <entry>1.28</entry>
+                  <entry>2.60</entry>
+                  <entry>0.100</entry>
+                  <entry>5.5</entry>
+                  <entry>0.5</entry>
+                  <entry>14.3</entry>
+                  <entry>3.01</entry>
+                  <entry>1.82</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 10</entry>
+                  <entry>amorphous</entry>
+                  <entry>782</entry>
+                  <entry>1.28</entry>
+                  <entry>2.85</entry>
+                  <entry>0.100</entry>
+                  <entry>6.0</entry>
+                  <entry>0.5</entry>
+                  <entry>13.7</entry>
+                  <entry>2.87</entry>
+                  <entry>1.70</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 11</entry>
+                  <entry>amorphous</entry>
+                  <entry>782</entry>
+                  <entry>1.28</entry>
+                  <entry>3.10</entry>
+                  <entry>0.100</entry>
+                  <entry>6.5</entry>
+                  <entry>0.5</entry>
+                  <entry>13.6</entry>
+                  <entry>2.83</entry>
+                  <entry>1.68</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 12</entry>
+                  <entry>amorphous</entry>
+                  <entry>782</entry>
+                  <entry>1.28</entry>
+                  <entry>3.35</entry>
+                  <entry>0.100</entry>
+                  <entry>7.0</entry>
+                  <entry>0.5</entry>
+                  <entry>14.2</entry>
+                  <entry>3.00</entry>
+                  <entry>1.86</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 13</entry>
+                  <entry>crystalline </entry>
+                  <entry>28.5</entry>
+                  <entry>0.96</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>0.0</entry>
+                  <entry>13.5</entry>
+                  <entry>2.43</entry>
+                  <entry>2.43</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 14</entry>
+                  <entry>crystalline </entry>
+                  <entry>14.0</entry>
+                  <entry>0.90</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>0.0</entry>
+                  <entry>12.7</entry>
+                  <entry>2.18</entry>
+                  <entry>2.18</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 15</entry>
+                  <entry>crystalline </entry>
+                  <entry>10.0</entry>
+                  <entry>0.89</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>0.0</entry>
+                  <entry>12.7</entry>
+                  <entry>2.01</entry>
+                  <entry>2.01</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 16</entry>
+                  <entry>crystalline </entry>
+                  <entry>5.1</entry>
+                  <entry>0.63</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>0.0</entry>
+                  <entry>13.0</entry>
+                  <entry>2.22</entry>
+                  <entry>2.22</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 17</entry>
+                  <entry>crystalline </entry>
+                  <entry>0.86</entry>
+                  <entry>0.34</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>0.0</entry>
+                  <entry>14.3</entry>
+                  <entry>1.53</entry>
+                  <entry>1.53</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 18 </entry>
+                  <entry>crystalline </entry>
+                  <entry>0.29</entry>
+                  <entry>0.29</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>0.0</entry>
+                  <entry>15.2</entry>
+                  <entry>1.42</entry>
+                  <entry>1.42</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 19</entry>
+                  <entry>amorphous</entry>
+                  <entry>782</entry>
+                  <entry>1.28</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>0.0</entry>
+                  <entry>14.1</entry>
+                  <entry>3.47</entry>
+                  <entry>3.47</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 20</entry>
+                  <entry>crystalline </entry>
+                  <entry>28.5</entry>
+                  <entry>0.96</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>0.0</entry>
+                  <entry>13.5</entry>
+                  <entry>3.28</entry>
+                  <entry>3.28</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 21</entry>
+                  <entry>crystalline </entry>
+                  <entry>14.0</entry>
+                  <entry>0.90</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>0.0</entry>
+                  <entry>12.7</entry>
+                  <entry>2.98</entry>
+                  <entry>2.98</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 22</entry>
+                  <entry>crystalline </entry>
+                  <entry>10.0</entry>
+                  <entry>0.89</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>0.0</entry>
+                  <entry>12.7</entry>
+                  <entry>2.77</entry>
+                  <entry>2.77</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 23</entry>
+                  <entry>crystalline </entry>
+                  <entry>5.1</entry>
+                  <entry>0.63</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>0.0</entry>
+                  <entry>13.3</entry>
+                  <entry>2.45</entry>
+                  <entry>2.45</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 24</entry>
+                  <entry>crystalline </entry>
+                  <entry>0.86</entry>
+                  <entry>0.34</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>0.0</entry>
+                  <entry>14.3</entry>
+                  <entry>2.26</entry>
+                  <entry>2.26</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 25</entry>
+                  <entry>crystalline </entry>
+                  <entry>0.29</entry>
+                  <entry>0.29</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>0.0</entry>
+                  <entry>15.1</entry>
+                  <entry>2.12</entry>
+                  <entry>2.12</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 26 </entry>
+                  <entry>amorphous </entry>
+                  <entry>782</entry>
+                  <entry>1.28</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>0.0</entry>
+                  <entry>14.8</entry>
+                  <entry>7.83</entry>
+                  <entry>7.83</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 27 </entry>
+                  <entry>crystalline </entry>
+                  <entry>28.5</entry>
+                  <entry>0.96</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>0.0</entry>
+                  <entry>15.3</entry>
+                  <entry>7.63</entry>
+                  <entry>7.63</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 28</entry>
+                  <entry>crystalline </entry>
+                  <entry>14.0</entry>
+                  <entry>0.90</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>0.0</entry>
+                  <entry>14.7</entry>
+                  <entry>7.18</entry>
+                  <entry>7.18</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 29</entry>
+                  <entry>crystalline </entry>
+                  <entry>10.0</entry>
+                  <entry>0.89</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>0.0</entry>
+                  <entry>14.7</entry>
+                  <entry>6.71</entry>
+                  <entry>6.71</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 30</entry>
+                  <entry>crystalline </entry>
+                  <entry>5.1</entry>
+                  <entry>0.63</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>0.0</entry>
+                  <entry>15.7</entry>
+                  <entry>6.63</entry>
+                  <entry>6.63</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 31</entry>
+                  <entry>crystalline </entry>
+                  <entry>0.86</entry>
+                  <entry>0.34</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>0.0</entry>
+                  <entry>14.6</entry>
+                  <entry>6.43</entry>
+                  <entry>6.43</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 32</entry>
+                  <entry>crystalline </entry>
+                  <entry>0.29</entry>
+                  <entry>0.29</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>0.0</entry>
+                  <entry>14.9</entry>
+                  <entry>5.72</entry>
+                  <entry>5.72</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 33</entry>
+                  <entry>amorphous </entry>
+                  <entry>782</entry>
+                  <entry>1.28</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>0.0</entry>
+                  <entry>14.2</entry>
+                  <entry>11.32</entry>
+                  <entry>11.32</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 34</entry>
+                  <entry>crystalline </entry>
+                  <entry>28.5</entry>
+                  <entry>0.96</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>0.0</entry>
+                  <entry>13.5</entry>
+                  <entry>11.23</entry>
+                  <entry>11.23</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 35</entry>
+                  <entry>crystalline </entry>
+                  <entry>14.0</entry>
+                  <entry>0.90</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>0.0</entry>
+                  <entry>12.7</entry>
+                  <entry>10.78</entry>
+                  <entry>10.78</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 36</entry>
+                  <entry>crystalline </entry>
+                  <entry>10.0</entry>
+                  <entry>0.89</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>0.0</entry>
+                  <entry>12.7</entry>
+                  <entry>10.31</entry>
+                  <entry>10.31</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 37</entry>
+                  <entry>crystalline </entry>
+                  <entry>5.1</entry>
+                  <entry>0.63</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>0.0</entry>
+                  <entry>12.7</entry>
+                  <entry>9.95</entry>
+                  <entry>9.95</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 38</entry>
+                  <entry>crystalline </entry>
+                  <entry>0.86</entry>
+                  <entry>0.34</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>0.0</entry>
+                  <entry>14.3</entry>
+                  <entry>10.23</entry>
+                  <entry>10.23</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Example 39</entry>
+                  <entry>crystalline </entry>
+                  <entry>0.29</entry>
+                  <entry>0.29</entry>
+                  <entry>2.00</entry>
+                  <entry>0.200</entry>
+                  <entry>4.6</entry>
+                  <entry>0.0</entry>
+                  <entry>15.5</entry>
+                  <entry>9.42</entry>
+                  <entry>9.42</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>amorphous </entry>
+                  <entry>782</entry>
+                  <entry>1.28</entry>
+                  <entry>0.48</entry>
+                  <entry>0.015</entry>
+                  <entry>1.0</entry>
+                  <entry>0.3</entry>
+                  <entry>12.8</entry>
+                  <entry>2.78</entry>
+                  <entry>1.95</entry>
+                </row>
+                <row>
+                  <entry>Example 1 </entry>
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>amorphous </entry>
+                  <entry>782</entry>
+                  <entry>1.28</entry>
+                  <entry>0.98</entry>
+                  <entry>0.015</entry>
+                  <entry>2.0</entry>
+                  <entry>0.3</entry>
+                  <entry>15.6</entry>
+                  <entry>2.68</entry>
+                  <entry>1.88</entry>
+                </row>
+                <row>
+                  <entry>Example 2 </entry>
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>amorphous </entry>
+                  <entry>782</entry>
+                  <entry>1.28</entry>
+                  <entry>1.38</entry>
+                  <entry>0.015</entry>
+                  <entry>2.8</entry>
+                  <entry>0.3</entry>
+                  <entry>13.8</entry>
+                  <entry>2.73</entry>
+                  <entry>1.95</entry>
+                </row>
+                <row>
+                  <entry>Example 3 </entry>
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>amorphous </entry>
+                  <entry>782</entry>
+                  <entry>1.28</entry>
+                  <entry>0.23</entry>
+                  <entry>0.015</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                  <entry>14.2</entry>
+                  <entry>2.90</entry>
+                  <entry>1.50</entry>
+                </row>
+                <row>
+                  <entry>Example 4 </entry>
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>amorphous </entry>
+                  <entry>782</entry>
+                  <entry>1.28</entry>
+                  <entry>0.41</entry>
+                  <entry>0.060</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                  <entry>12.9</entry>
+                  <entry>3.42</entry>
+                  <entry>0.69</entry>
+                </row>
+                <row>
+                  <entry>Example 5 </entry>
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>amorphous </entry>
+                  <entry>782</entry>
+                  <entry>1.28</entry>
+                  <entry>0.70</entry>
+                  <entry>0.015</entry>
+                  <entry>1.5</entry>
+                  <entry>1.0</entry>
+                  <entry>13.1</entry>
+                  <entry>3.46</entry>
+                  <entry>0.75</entry>
+                </row>
+                <row>
+                  <entry>Example 6 </entry>
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>amorphous </entry>
+                  <entry>782</entry>
+                  <entry>1.28</entry>
+                  <entry>0.98</entry>
+                  <entry>0.015</entry>
+                  <entry>2.0</entry>
+                  <entry>1.0</entry>
+                  <entry>14.7</entry>
+                  <entry>3.33</entry>
+                  <entry>0.67</entry>
+                </row>
+                <row>
+                  <entry>Example 7 </entry>
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>amorphous </entry>
+                  <entry>782</entry>
+                  <entry>1.28</entry>
+                  <entry>1.23</entry>
+                  <entry>0.015</entry>
+                  <entry>2.5</entry>
+                  <entry>1.0</entry>
+                  <entry>13.5</entry>
+                  <entry>3.41</entry>
+                  <entry>0.79</entry>
+                </row>
+                <row>
+                  <entry>Example 8 </entry>
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>amorphous </entry>
+                  <entry>782</entry>
+                  <entry>1.28</entry>
+                  <entry>0.48</entry>
+                  <entry>0.015</entry>
+                  <entry>1.0</entry>
+                  <entry>4.0</entry>
+                  <entry>14.2</entry>
+                  <entry>10.97</entry>
+                  <entry>0.03</entry>
+                </row>
+                <row>
+                  <entry>Example 9 </entry>
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>amorphous </entry>
+                  <entry>782</entry>
+                  <entry>1.28</entry>
+                  <entry>1.23</entry>
+                  <entry>0.015</entry>
+                  <entry>2.5</entry>
+                  <entry>3.0</entry>
+                  <entry>12.9</entry>
+                  <entry>7.91</entry>
+                  <entry>0.07</entry>
+                </row>
+                <row>
+                  <entry>Example 10</entry>
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>amorphous </entry>
+                  <entry>782</entry>
+                  <entry>1.28</entry>
+                  <entry>1.98</entry>
+                  <entry>0.015</entry>
+                  <entry>4.0</entry>
+                  <entry>3.0</entry>
+                  <entry>13.5</entry>
+                  <entry>7.50</entry>
+                  <entry>0.01</entry>
+                </row>
+                <row>
+                  <entry>Example 11</entry>
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Comparative </entry>
+                  <entry>amorphous </entry>
+                  <entry>782</entry>
+                  <entry>1.28</entry>
+                  <entry>2.98</entry>
+                  <entry>0.015</entry>
+                  <entry>6.0</entry>
+                  <entry>1.5</entry>
+                  <entry>13.3</entry>
+                  <entry>3.81</entry>
+                  <entry>0.27</entry>
+                </row>
+                <row>
+                  <entry>Example 12</entry>
+                  <entry>silicon nitride</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Comparative </entry>
+                  <entry>amorphous </entry>
+                  <entry>782</entry>
+                  <entry>1.28</entry>
+                  <entry>3.73</entry>
+                  <entry>0.015</entry>
+                  <entry>7.5</entry>
+                  <entry>0.0</entry>
+                  <entry>13.8</entry>
+                  <entry>2.11</entry>
+                  <entry>2.11</entry>
+                </row>
+                <row>
+                  <entry>Example 13</entry>
+                  <entry>silicon nitride</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="11" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="11" align="left" id="entry-00001-en">*Incremental oxygen amount of measured oxygen relative to the theoretical oxygen amount calculated from composition formula.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00171-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="91pt" align="left" />
+              <colspec colname="2" colwidth="21pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" rowsep="1">TABLE 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Rela-</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>tive</entry>
+                  <entry>Peak</entry>
+                  <entry>Conver-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Den-</entry>
+                  <entry>Wave-</entry>
+                  <entry>sion Ef-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>sity</entry>
+                  <entry>length</entry>
+                  <entry>ficiency</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Crystal Phase</entry>
+                  <entry>[%]</entry>
+                  <entry>[nm]</entry>
+                  <entry>[lm/mW]</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="91pt" align="left" />
+              <colspec colname="3" colwidth="21pt" align="char" char="." />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Example 1</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>98.3</entry>
+                  <entry>602</entry>
+                  <entry>0.132</entry>
+                </row>
+                <row>
+                  <entry>Example 2</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>98.1</entry>
+                  <entry>603</entry>
+                  <entry>0.140</entry>
+                </row>
+                <row>
+                  <entry>Example 3</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>99.2</entry>
+                  <entry>600</entry>
+                  <entry>0.136</entry>
+                </row>
+                <row>
+                  <entry>Example 4</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>99.1</entry>
+                  <entry>601</entry>
+                  <entry>0.139</entry>
+                </row>
+                <row>
+                  <entry>Example 5</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>99.2</entry>
+                  <entry>598</entry>
+                  <entry>0.136</entry>
+                </row>
+                <row>
+                  <entry>Example 6</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>99.0</entry>
+                  <entry>599</entry>
+                  <entry>0.139</entry>
+                </row>
+                <row>
+                  <entry>Example 7</entry>
+                  <entry>α-SiAlON</entry>
+                  <entry>100.0</entry>
+                  <entry>594</entry>
+                  <entry>0.121</entry>
+                </row>
+                <row>
+                  <entry>Example 8</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>99.5</entry>
+                  <entry>598</entry>
+                  <entry>0.135</entry>
+                </row>
+                <row>
+                  <entry>Example 9</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>98.6</entry>
+                  <entry>603</entry>
+                  <entry>0.140</entry>
+                </row>
+                <row>
+                  <entry>Example 10</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>98.5</entry>
+                  <entry>605</entry>
+                  <entry>0.128</entry>
+                </row>
+                <row>
+                  <entry>Example 11</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>98.7</entry>
+                  <entry>605</entry>
+                  <entry>0.133</entry>
+                </row>
+                <row>
+                  <entry>Example 12</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>98.0</entry>
+                  <entry>607</entry>
+                  <entry>0.123</entry>
+                </row>
+                <row>
+                  <entry>Example 13</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>99.3</entry>
+                  <entry>603</entry>
+                  <entry>0.134</entry>
+                </row>
+                <row>
+                  <entry>Example 14</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>98.1</entry>
+                  <entry>603</entry>
+                  <entry>0.129</entry>
+                </row>
+                <row>
+                  <entry>Example 15</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>97.9</entry>
+                  <entry>603</entry>
+                  <entry>0.127</entry>
+                </row>
+                <row>
+                  <entry>Example 16</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>97.8</entry>
+                  <entry>603</entry>
+                  <entry>0.122</entry>
+                </row>
+                <row>
+                  <entry>Example 17</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>97.3</entry>
+                  <entry>603</entry>
+                  <entry>0.121</entry>
+                </row>
+                <row>
+                  <entry>Example 18</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>95.2</entry>
+                  <entry>603</entry>
+                  <entry>0.114</entry>
+                </row>
+                <row>
+                  <entry>Example 19</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>99.7</entry>
+                  <entry>603</entry>
+                  <entry>0.153</entry>
+                </row>
+                <row>
+                  <entry>Example 20</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>100.0</entry>
+                  <entry>603</entry>
+                  <entry>0.149</entry>
+                </row>
+                <row>
+                  <entry>Example 21</entry>
+                  <entry>α-SiAlON + AIN</entry>
+                  <entry>98.8</entry>
+                  <entry>603</entry>
+                  <entry>0.144</entry>
+                </row>
+                <row>
+                  <entry>Example 22</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>98.6</entry>
+                  <entry>603</entry>
+                  <entry>0.142</entry>
+                </row>
+                <row>
+                  <entry>Example 23</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>98.3</entry>
+                  <entry>603</entry>
+                  <entry>0.138</entry>
+                </row>
+                <row>
+                  <entry>Example 24</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>97.9</entry>
+                  <entry>603</entry>
+                  <entry>0.136</entry>
+                </row>
+                <row>
+                  <entry>Example 25</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>95.8</entry>
+                  <entry>603</entry>
+                  <entry>0.127</entry>
+                </row>
+                <row>
+                  <entry>Example 26</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>100.0</entry>
+                  <entry>600</entry>
+                  <entry>0.130</entry>
+                </row>
+                <row>
+                  <entry>Example 27</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>100.0</entry>
+                  <entry>601</entry>
+                  <entry>0.129</entry>
+                </row>
+                <row>
+                  <entry>Example 28</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>99.3</entry>
+                  <entry>601</entry>
+                  <entry>0.130</entry>
+                </row>
+                <row>
+                  <entry>Example 29</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>99.1</entry>
+                  <entry>602</entry>
+                  <entry>0.128</entry>
+                </row>
+                <row>
+                  <entry>Example 30</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>98.9</entry>
+                  <entry>602</entry>
+                  <entry>0.126</entry>
+                </row>
+                <row>
+                  <entry>Example 31</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>98.6</entry>
+                  <entry>602</entry>
+                  <entry>0.126</entry>
+                </row>
+                <row>
+                  <entry>Example 32</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>96.6</entry>
+                  <entry>602</entry>
+                  <entry>0.126</entry>
+                </row>
+                <row>
+                  <entry>Example 33</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>100.0</entry>
+                  <entry>597</entry>
+                  <entry>0.122</entry>
+                </row>
+                <row>
+                  <entry>Example 34</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>100.0</entry>
+                  <entry>599</entry>
+                  <entry>0.124</entry>
+                </row>
+                <row>
+                  <entry>Example 35</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>99.6</entry>
+                  <entry>600</entry>
+                  <entry>0.124</entry>
+                </row>
+                <row>
+                  <entry>Example 36</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>99.9</entry>
+                  <entry>600</entry>
+                  <entry>0.123</entry>
+                </row>
+                <row>
+                  <entry>Example 37</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>99.8</entry>
+                  <entry>601</entry>
+                  <entry>0.121</entry>
+                </row>
+                <row>
+                  <entry>Example 38</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>99.5</entry>
+                  <entry>601</entry>
+                  <entry>0.121</entry>
+                </row>
+                <row>
+                  <entry>Example 39</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>97.5</entry>
+                  <entry>601</entry>
+                  <entry>0.120</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>α-SiAlON</entry>
+                  <entry>99.2</entry>
+                  <entry>586</entry>
+                  <entry>0.105</entry>
+                </row>
+                <row>
+                  <entry>Example 1</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>α-SiAlON</entry>
+                  <entry>99.5</entry>
+                  <entry>597</entry>
+                  <entry>0.106</entry>
+                </row>
+                <row>
+                  <entry>Example 2</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>α-SiAlON</entry>
+                  <entry>99.3</entry>
+                  <entry>600</entry>
+                  <entry>0.099</entry>
+                </row>
+                <row>
+                  <entry>Example 3</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>α-SiAlON + β-SiAlON**</entry>
+                  <entry>98.8</entry>
+                  <entry>579</entry>
+                  <entry>0.072</entry>
+                </row>
+                <row>
+                  <entry>Example 4</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>α-SiAlON</entry>
+                  <entry>99.6</entry>
+                  <entry>598</entry>
+                  <entry>0.110</entry>
+                </row>
+                <row>
+                  <entry>Example 5</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>α-SiAlON</entry>
+                  <entry>99.8</entry>
+                  <entry>581</entry>
+                  <entry>0.106</entry>
+                </row>
+                <row>
+                  <entry>Example 6</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>α-SiAlON</entry>
+                  <entry>99.8</entry>
+                  <entry>588</entry>
+                  <entry>0.112</entry>
+                </row>
+                <row>
+                  <entry>Example 7</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>α-SiAlON</entry>
+                  <entry>100.0</entry>
+                  <entry>592</entry>
+                  <entry>0.114</entry>
+                </row>
+                <row>
+                  <entry>Example 8</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>α-SiAlON + AlN + AlON***</entry>
+                  <entry>100.0</entry>
+                  <entry>585</entry>
+                  <entry>0.059</entry>
+                </row>
+                <row>
+                  <entry>Example 9</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>100.0</entry>
+                  <entry>588</entry>
+                  <entry>0.060</entry>
+                </row>
+                <row>
+                  <entry>Example 10</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>100.0</entry>
+                  <entry>592</entry>
+                  <entry>0.069</entry>
+                </row>
+                <row>
+                  <entry>Example 11</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>98.2</entry>
+                  <entry>599</entry>
+                  <entry>0.077</entry>
+                </row>
+                <row>
+                  <entry>Example 12</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>α-SiAlON + AlN</entry>
+                  <entry>98.0</entry>
+                  <entry>603</entry>
+                  <entry>0.075</entry>
+                </row>
+                <row>
+                  <entry>Example 13</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="left" id="entry-00002-en">**28 mass % of β-SiAlON crystal phase is contained</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="left" id="entry-00003-en">***Aluminum oxynitride crystal phase (Al<sub>2.81</sub>O<sub>3.56</sub>N<sub>0.44</sub>)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>-<b>16</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>17</b>. A method of producing a wavelength conversion member composed of polycrystalline ceramics, comprising:
+<claim-text>A) mixing a substance serving as a silicon source, a substance serving as an aluminum source, a substance serving as a calcium source, and a substance serving as a europium source,</claim-text><claim-text>B) firing the obtained mixture to obtain an oxynitride phosphor powder,</claim-text><claim-text>E) oxidizing the oxynitride phosphor powder obtained in firing step B), by a heat treatment at 800 to 1,200° C. in an oxygen-containing atmosphere, and</claim-text><claim-text>C) sintering the oxynitride phosphor powder to obtain polycrystalline ceramics, wherein the oxynitride phosphor powder sintered has a composition, exclusive of oxygen, represented by Formula (1):
+<claim-text>Ca<sub>x1</sub>Eu<sub>x2</sub>Si<sub>12-(y+z)</sub>Al<sub>(y+z)</sub>O<sub>z</sub>N<sub>16-z</sub>  (1)</claim-text></claim-text></claim-text>
+      <claim-text>wherein x1, x2, y and z are
+<claim-text>0&lt;x1≦3.40,</claim-text><claim-text>0.05≦x2≦0.20,</claim-text><claim-text>3.5&lt;y≦7.0, and</claim-text><claim-text>0≦z≦1, and</claim-text></claim-text>
+      <claim-text>wherein the oxygen content of the oxynitride phosphor powder is in excess of the theoretical oxygen content of the oxynitride phosphor represented by Formula (1), and the excess oxygen amount is 1.1 to 11.5 mass % with respect to 100 mass % of the theoretical mass of the oxynitride phosphor represented by Formula (1).</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>18</b>. The method according to <claim-ref idref="clm-00002-en">claim 17</claim-ref>, wherein in mixing step A), the composition of the mixture is such that the oxynitride phosphor powder obtained by firing the mixture in an inert atmosphere has a composition, exclusive of oxygen, represented by Formula (1) and the oxygen content thereof is in excess of the theoretical oxygen amount of the oxynitride phosphor represented by Formula (1).</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>19</b>. The method according to <claim-ref idref="clm-00002-en">claim 17</claim-ref>, wherein x1, x2, y and z are
+<claim-text>0&lt;x1≦3.40,</claim-text><claim-text>0.05≦x2≦0.20,</claim-text><claim-text>4.0≦y≦6.5, and</claim-text><claim-text>0≦z≦1.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>20</b>. The method according to <claim-ref idref="clm-00002-en">claim 17</claim-ref>, wherein the oxygen content in excess of the theoretical oxygen amount of Formula (1) is 4 mass % or less based on the theoretical mass of the oxynitride phosphor.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>21</b>. The method according to <claim-ref idref="clm-00002-en">claim 17</claim-ref>, wherein the oxygen content of the oxynitride phosphor powder is more than 1.4 mass % and less than 5.0 mass % based on the theoretical mass of the oxynitride phosphor represented by Formula (1).</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>22</b>. The method according to <claim-ref idref="clm-00002-en">claim 17</claim-ref>, wherein the substance serving as a silicon source is an amorphous silicon nitride.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>23</b>. The method according to <claim-ref idref="clm-00002-en">claim 17</claim-ref>, wherein the substance serving as a silicon source is a crystalline silicon nitride having a specific surface area of 9 m<sup>2</sup>/g or more.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>24</b>. An oxynitride phosphor powder for production of a wavelength conversion member composed of a sintered polycrystalline ceramic body, wherein oxynitride phosphor powder has a composition, exclusive of oxygen, represented by Formula (1):
+<claim-text>Ca<sub>x1</sub>Eu<sub>x2</sub>Si<sub>12-(y+z)</sub>Al<sub>(y+z)</sub>O<sub>z</sub>N<sub>16-z</sub>  (1)</claim-text></claim-text>
+      <claim-text>wherein x1, x2, y and z are
+<claim-text>0&lt;x1≦3.40,</claim-text><claim-text>0.05≦x2≦0.20,</claim-text><claim-text>3.5&lt;y≦7.0, and</claim-text><claim-text>0≦z≦1), and</claim-text></claim-text>
+      <claim-text>wherein the oxygen content is in excess of the theoretical oxygen content of the oxynitride phosphor represented by Formula (1) and the excess oxygen amount is from 2.77 to 11.5 mass % with respect to 100 mass % of the theoretical mass of the oxynitride phosphor represented by Formula (1).</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>25</b>. The oxynitride phosphor powder according to <claim-ref idref="clm-00009-en">claim 24</claim-ref>, wherein the excess oxygen amount is 2.77 to 4.0 mass % with respect to 100 mass % of the theoretical mass of the oxynitride phosphor represented by Formula (1) to be 100 mass %.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>26</b>. A wavelength conversion member composed of polycrystalline ceramics obtained by sintering the oxynitride phosphor powder according to <claim-ref idref="clm-00009-en">claim 24</claim-ref>.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>27</b>. The wavelength conversion member according to <claim-ref idref="clm-00011-en">claim 26</claim-ref>, wherein x1, x2, y and z are
+<claim-text>0&lt;x1≦3.40,</claim-text><claim-text>0.05≦x2≦0.20,</claim-text><claim-text>4.0≦y≦6.5, and</claim-text><claim-text>0≦z≦1.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>28</b>. The wavelength conversion member according to <claim-ref idref="clm-00011-en">claim 26</claim-ref>, wherein the polycrystalline ceramics contains α-SiAlON and aluminum nitride.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>29</b>. The wavelength conversion member according to <claim-ref idref="clm-00011-en">claim 26</claim-ref>, wherein the polycrystalline ceramics has relative density of 95% or more.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>30</b>. The wavelength conversion member according to <claim-ref idref="clm-00011-en">claim 26</claim-ref>, wherein the wavelength conversion member converts light of 300 to 500 nm to light having a peak wavelength of 590 to 610 nm.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>31</b>. A light-emitting device comprising a semiconductor light-emitting element that emits light at a wavelength of 300 to 500 nm and the polycrystalline ceramics according to <claim-ref idref="clm-00011-en">claim 26</claim-ref>.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150247086A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247086A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150247086A1_00002.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150247086A1-20150903-M00001.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150247086A1.PDF" type="pdf" size="947134" pages="15" />
+</lexisnexis-patent-document>

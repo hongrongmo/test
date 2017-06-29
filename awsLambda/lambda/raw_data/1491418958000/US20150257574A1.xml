@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257574A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030158" date-changed="20151002" time-changed="033526">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121315411">
+        <country>US</country>
+        <doc-number>20150257574</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14418439</doc-number>
+        <date>20130731</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>AU</country>
+        <doc-number>2012903267</doc-number>
+        <date>20120731</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>A47J  27/10        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>27</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>A47J  27/10        20130101 FI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>27</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A23L   1/0128      20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>0128</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A23L   1/0135      20130101 LI20140409BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>0135</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140409</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">23</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">Sous Vide Device</invention-title>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Breville Pty Limited</orgname>
+            <address>
+              <city>Botany, NSW</city>
+              <country>AU</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>AU</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Hoare</last-name>
+            <first-name>Richard</first-name>
+            <address>
+              <city>Lane Cove</city>
+              <country>AU</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Foxlee</last-name>
+            <first-name>Brendan John</first-name>
+            <address>
+              <city>Earlwood</city>
+              <country>AU</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Rose</last-name>
+            <first-name>Vyvyan</first-name>
+            <address>
+              <city>Vaucluse</city>
+              <country>AU</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Ryan</last-name>
+            <first-name>Garth</first-name>
+            <address>
+              <city>Helensburgh</city>
+              <country>AU</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Barnard</last-name>
+            <first-name>Pierce James</first-name>
+            <address>
+              <city>Cherrybrook</city>
+              <country>AU</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>AU13000841</doc-number>
+        <date>20130731</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014019018</doc-number>
+        <date>20140206</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150917">
+      <main-family family-id="164197163">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014019018</doc-number>
+            <kind>A1</kind>
+            <date>20140206</date>
+          </document-id>
+          <application-date>
+            <date>20130731</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2879555</doc-number>
+            <kind>A1</kind>
+            <date>20150610</date>
+          </document-id>
+          <application-date>
+            <date>20130731</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2013299326</doc-number>
+            <kind>A1</kind>
+            <date>20150312</date>
+          </document-id>
+          <application-date>
+            <date>20130731</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104640484</doc-number>
+            <kind>A</kind>
+            <date>20150520</date>
+          </document-id>
+          <application-date>
+            <date>20130731</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257574</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20130731</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="164197162">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014019018</doc-number>
+            <kind>A1</kind>
+            <date>20140206</date>
+          </document-id>
+          <application-date>
+            <date>20130731</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2879555</doc-number>
+            <kind>A1</kind>
+            <date>20150610</date>
+          </document-id>
+          <application-date>
+            <date>20130731</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2013299326</doc-number>
+            <kind>A1</kind>
+            <date>20150312</date>
+          </document-id>
+          <application-date>
+            <date>20130731</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104640484</doc-number>
+            <kind>A</kind>
+            <date>20150520</date>
+          </document-id>
+          <application-date>
+            <date>20130731</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257574</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20130731</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A sous vide device and method for cooking food. The device including: a reservoir for retaining water; a user interface having one or more user input elements and a display element; a heating element for heating water in the reservoir; a temperature sensor element for providing a temperature signal indicative of water temperature in the reservoir; and a processor module, the processor module being coupled to the user interface for receiving user inputs; the processor module being coupled to the temperature sensor element for receiving the temperature signal; the processor module enables control of the heating element for regulating the temperature of water in the reservoir.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150201</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257574A1</docdb-publication-number>
+      <docdb-application-id>444510830</docdb-application-id>
+      <new-owner>BREVILLE PTY LIMITED, AUSTRALIA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:HOARE, RICHARD;FOXLEE, BRENDAN JOHN;ROSE, VYVYAN;AND OTHERS;SIGNING DATES FROM 20141202 TO 20141205;REEL/FRAME:034861/0363</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00001-en" num="0001">The invention, relates to domestic cooking appliances, and more particularly to a domestic sous vide device.</p>
+      <p id="p-00002-en" num="0002">The invention has been developed primarily for use as a domestic sous vide device and will be described hereinafter with reference to this application. However, it will be appreciated that the invention is not limited to this particular field of use.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00003-en" num="0003">Any discussion of the prior art throughout the specification should in no way be considered as an admission that such prior art is widely known or forms part of the common general knowledge in the field.</p>
+      <p id="p-00004-en" num="0004">A sous vide device (French for “under vacuum”) is a method of cooking food in sealed plastic bags in a water bath. The purpose of sous vide cooking is too cook an item, evenly, but over cook it and to retain, moisture and flavour. Sous Vide uses temperature considerably lower then covenantal cooking. Sous Vide cooking of meet is capable of hydrolysing tough connective tissue into gelatine without heating the protein in the meat to the point that they denature and become tough. Sous vide cooking of vegetables allows the vegetables to be cooked below the boiling point of water while maintain a firm texture. Food places in a sous vide water bath, cannot become hotter than the bath, it is in. Accordingly, sous vide prevents overcooking and promotes even cooking with irregularly shaped or thick items.</p>
+      <p id="p-00005-en" num="0005">Because of the long cooking times, it would be an advantage is sous vide cooking to cook multiple and different food items simultaneously. Because sous vide cooking requires submersion of the food in a bag from which, the air the air has been excluded, it would be advantageous to provide a sous vide cooker with a built in or integral vacuum pump. Further, because the exclusion of the air in the bag is sometimes incomplete, it is an advantage to provide a sous vide cooker that can submerge bags that tend to float.</p>
+      <heading id="h-00003-en" level="1">OBJECT OF THE INVENTION</heading>
+      <p id="p-00006-en" num="0006">It is an object of the present invention to overcome or ameliorate at least one of the disadvantages of the prior art, or to provide a useful alternative.</p>
+      <p id="p-00007-en" num="0007">It is an object of the invention in its preferred form to provide a sous vide cooker.</p>
+      <p id="p-00008-en" num="0008">It is an object of the invention in its preferred form to provide a sous vide cooker for cooking eggs.</p>
+      <heading id="h-00004-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00009-en" num="0009">According to an aspect of the invention, there Is provided a sous vide device for cooking food, the device including: <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>a reservoir for retaining water;</li><li>a user interface having one or more user input elements and a display element;</li><li>a heating element for heating water in the reservoir:</li><li>a temperature sensor element for providing a temperature signal indicative of water temperature in the reservoir; and</li><li>a processor module, the processor module being coupled, to the user interface for receiving user inputs; the processor module being coupled to the temperature sensor element for receiving the temperature signal; the processor module enables control of the heating element for regulating the temperature of water in the reservoir.</li></ul></li></ul></p>
+      <p id="p-00010-en" num="0015">According to an aspect of the invention there is provided, a sous vide device for cooking food, the device including: <ul id="ul-00003-en" list-style="none"><li><ul id="ul-00004-en" list-style="none"><li>a reservoir for retaining water;</li><li>a user interface having one or more user input elements and a display element;</li><li>a heating element for heating water in the reservoir;</li><li>a temperature sensor element for providing a temperature signal indicative of water temperature in the reservoir; and</li><li>a processor module, the processor module being coupled to the user interface for receiving user inputs; the processor module being coupled to the temperature sensor element for receiving the temperature signal; the processor module enables control of the heating element for regulating the temperature of water in the reservoir,</li><li>wherein the processor module controls changes in water temperature while food is cooking; and</li><li>wherein, based on user input, the processor determines a cooking profile comprising a plurality of cooking temperatures each having a respective cooking lime in the cooking period.</li></ul></li></ul></p>
+      <p id="p-00011-en" num="0023">Preferably, the device includes a movable food rack that can be lowered into the reservoir to define a cooking configuration. More preferably, the processor module controls lowering and raising of the food rack. The processor module preferably, raises the food rack at the conclusion of a cooking period. Most preferably, when the processor module determines water in the reservoir has reached a predefined temperature, the mod rack is lowered to commence a cooking period.</p>
+      <p id="p-00012-en" num="0024">Preferably, the user interface enables user input of a food, type; and the processor modulo controls the water temperature and cooking period according to the user selected food type. More preferably, the food type is selected from a predetermined set of available food types. Most preferably, the food type is selected from, any one or more of the set comprising: vegetable; meat; eggs; and custard.</p>
+      <p id="p-00013-en" num="0025">Preferably, the user interface enables user input of a food style; and the processor module controls the water temperature and cooking period according to the user selected food style. More preferably, the food style for a selected food type of eggs is selected from any one or more of the set comprising: soft, medium, hard, and poached. More preferably, the food style for a selected food type includes a level of food doneness.</p>
+      <p id="p-00014-en" num="0026">Preferably, the food style for a selected food type of eggs includes an egg white texture. More preferably, egg white texture Is selected from any one or more of the set comprising: firm; medium; soft; and just set.</p>
+      <p id="p-00015-en" num="0027">Preferably, the food style for a selected food type of eggs includes an egg yoke texture. More preferably, egg yoke texture is selected from any one or more of the set comprising: hard; medium; soft; and runny.</p>
+      <p id="p-00016-en" num="0028">Preferably, the food style for a selected food type of eggs includes user selection of an egg white texture and an egg yoke texture; wherein the processor module determines a corresponding cooking temperature and a corresponding cooking time. More preferably, the corresponding cooking temperature and the corresponding cooking time are predetermined for the selected combination of egg white texture and egg yoke texture.</p>
+      <p id="p-00017-en" num="0029">Preferably, the processor module controls changes in water temperature while food is cooking. More preferably, the processor module controls changes in water temperature during a cooking period. Most preferably, the processor module controls changes in water temperature during a cooking period based on a predetermined cooking configuration.</p>
+      <p id="p-00018-en" num="0030">Preferably, based on user input, the processor determines a cooking profile comprising a plurality of cooking temperatures each having a respective cooking time within the cooking period.</p>
+      <p id="p-00019-en" num="0031">Preferably, based on user input, the processor determines a cooking profile comprising a predetermined sequence of cooking tempera lures each having a respective cooking time within a single cooking period. More preferably, in a first cycle, a food article is cooked at a first cooking temperature for a first cooking time; and then in a sequenced, second cycle the food, article is cooked at a second, cooking temperature for a second cooking time. Most preferably, the food item is allowed to cool to a third temperature at the conclusion of any cooking cycle.</p>
+      <p id="p-00020-en" num="0032">Preferably, a cooking temperature and a cooking time are predetermined.</p>
+      <p id="p-00021-en" num="0033">Preferably, a cooking temperature and a cooking time are user modified.</p>
+      <p id="p-00022-en" num="0034">Preferably, the processor module is wirelessly coupled to the temperature sensor element.</p>
+      <p id="p-00023-en" num="0035">Preferably, the processor module is wirelessiy coupled to the user interface.</p>
+      <p id="p-00024-en" num="0036">Preferably, the device further includes a temperature probe for providing a signal indicative of food temperature; wherein the processor module is coupled to the a temperature probe for receiving the signal indicative of food temperature; such that the processor module, upon determining a food temperature, adjusts the cooking temperature and/or cooking time. More preferably, the processor module is wirelessiy coupled to tire temperature probe.</p>
+      <p id="p-00025-en" num="0037">According to an aspect of the invention there is provided a sous vide device for cooking eggs, the device including: <ul id="ul-00005-en" list-style="none"><li><ul id="ul-00006-en" list-style="none"><li>a reservoir for retaining water;</li><li>a user interface having one or more user input elements and a display element;</li><li>a temperature sensor element, for providing a temperature signal indicative of water temperature in the reservoir;</li><li>a heating element for heating water in the reservoir;</li><li>a processor module, the processor module being coupled to the user interface for receiving user inputs of a food type and a food style; the processor module being coupled to the temperature sensor element for receiving the temperature signal; the processor module controlling operation of the heating element to regulate the temperature of water in the reservoir;</li><li>wherein, upon user selection of an egg food type, user selection of a food style includes selection of an egg white texture and an egg yoke temperature; and</li><li>wherein the processor module determines a corresponding cooking temperature and corresponding cooking time.</li></ul></li></ul></p>
+      <p id="p-00026-en" num="0045">According to an aspect of the invention there is provided a user interface for a sous vide device having a reservoir of treated water, tire interlace being coupled to a processor module, the interface including: <ul id="ul-00007-en" list-style="none"><li><ul id="ul-00008-en" list-style="none"><li>one or more user input elements; and</li><li>a display element;</li><li>wherein the user input elements enable user selection of a cooking profile; and the processor module used, the cooking profile to control cooking temperature and cooking time.</li></ul></li></ul></p>
+      <p id="p-00027-en" num="0049">Preferably, the interface enables user input of any one or more of the following: a cooking time; a cooking temperature; a food, type; a food style; a food, weight; and a food shape.</p>
+      <p id="p-00028-en" num="0050">Preferably, the interface is remote from the sous vide device. More preferably, the interface is wirelessly coupled to the sous vide device. Most preferably, the interface comprises an application on a remote device.</p>
+      <p id="p-00029-en" num="0051">Preferably, the interface upon user selection of an egg food type; enables user selection of a food style that includes selection of an egg white texture and an egg yoke texture.</p>
+      <p id="p-00030-en" num="0052">Preferably, the user interface displays a cooking temperature and a cooking time.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWING FIGURES</heading>
+      <p id="p-00031-en" num="0053">In order that the invention be better understood, reference is now made to the following drawing figures in which:</p>
+      <p id="p-00032-en" num="0054">
+        <figref>FIG. 1</figref> illustrates in perspective and schematic views, a sous vide cooker and the displays from a user interface of that appliance;</p>
+      <p id="p-00033-en" num="0055">
+        <figref>FIG. 2</figref> illustrates in schematic and perspective views a sous vide cooker associated with a scale that it communicates wirelessly;</p>
+      <p id="p-00034-en" num="0056">
+        <figref>FIG. 3A</figref> illustrates both base and circumferential heating elements in this sous vide appliance;</p>
+      <p id="p-00035-en" num="0057">
+        <figref>FIG. 3B</figref> illustrates grasps of variable temperature cooking in a sous vide appliance:</p>
+      <p id="p-00036-en" num="0058">
+        <figref>FIG. 4</figref> illustrates, in perspective view, a rack for a sous vide appliance;</p>
+      <p id="p-00037-en" num="0059">
+        <figref>FIG. 5</figref> illustrates, in perspective view, a second rack for a sous vide appliance;</p>
+      <p id="p-00038-en" num="0060">
+        <figref>FIG. 6</figref> illustrates in stele and perspective views, different lid arrangement for a sous vide appliance;</p>
+      <p id="p-00039-en" num="0061">
+        <figref>FIG. 7</figref> illustrates in top and cross section views, a sous vide appliance that is built-in to a cabinet below a bench top;</p>
+      <p id="p-00040-en" num="0062">
+        <figref>FIG. 8</figref> is a schematic cross section illustrating a sink that is used as a containment or bath in a sous vide appliance;</p>
+      <p id="p-00041-en" num="0063">
+        <figref>FIG. 9</figref> is a second embodiment of a sink that may be used, as a bath in a sous vide appliance;</p>
+      <p id="p-00042-en" num="0064">
+        <figref>FIG. 10</figref> is a schematic cross section of a sous vide appliance having separate internal compartments;</p>
+      <p id="p-00043-en" num="0065">
+        <figref>FIG. 11</figref> is a schematic cross section illustrating a sous vide appliance having both heating and cooling capabilities;</p>
+      <p id="p-00044-en" num="0066">
+        <figref>FIG. 12</figref> is a schematic cross section illustrating a sous vide appliance having both, a hot and a cold bath;</p>
+      <p id="p-00045-en" num="0067">
+        <figref>FIG. 13</figref> illustrates in schematic and perspective views a sous vide appliance with two separate baths and a food lifting mechanism;</p>
+      <p id="p-00046-en" num="0068">
+        <figref>FIG. 14</figref> illustrates in schematic cross sections a sous vide appliance with a removable or separate holding tank;</p>
+      <p id="p-00047-en" num="0069">
+        <figref>FIG. 15</figref> illustrates in perspective and cross sectional views a sous vide appliance having a removable chiller;</p>
+      <p id="p-00048-en" num="0070">
+        <figref>FIG. 16</figref> illustrates in perspective and schematic cross section, a sous vide appliance having a removable and submerged impeller;</p>
+      <p id="p-00049-en" num="0071">
+        <figref>FIG. 17</figref> is a cross section of the Impeller suggested, by <figref>FIG. 16</figref>;</p>
+      <p id="p-00050-en" num="0072">
+        <figref>FIG. 18</figref> illustrates in schematic cross section and perspective views a sous vide appliance with solenoid controlled inlet and drain valves;</p>
+      <p id="p-00051-en" num="0073">
+        <figref>FIG. 19</figref> illustrates in perspective and cross sectional views a bag for a sous vide appliance;</p>
+      <p id="p-00052-en" num="0074">
+        <figref>FIG. 20</figref> illustrates in perspective and cross sectional views another bag for a sous vide appliance;</p>
+      <p id="p-00053-en" num="0075">
+        <figref>FIG. 21</figref> is a perspective view of a bag for a sous vide cooker having a magnet and a float;</p>
+      <p id="p-00054-en" num="0076">
+        <figref>FIG. 22</figref> illustrates the use RFID and barcode technology (or the like) in a sous vide appliance;</p>
+      <p id="p-00055-en" num="0077">
+        <figref>FIG. 23</figref> illustrates the use of wireless technology to indicate an extent of cooking in a sous vide appliance;</p>
+      <p id="p-00056-en" num="0078">
+        <figref>FIG. 24</figref> is a perspective view of a bag for a sous vide cooker having a cooking progress indicator;</p>
+      <p id="p-00057-en" num="0079">
+        <figref>FIG. 25</figref> is a flow chart illustrating the display of a sous vide appliance during user programming that is prompted by the units controller;</p>
+      <p id="p-00058-en" num="0080">
+        <figref>FIG. 26</figref> illustrates two different cooking programs executed by the controller of a sous vide appliance, one illustrating decreasing cooking temperature over time and the other illustrating increasing cooking temperature over time;</p>
+      <p id="p-00059-en" num="0081">
+        <figref>FIG. 27</figref> is a schematic view of an embodiment sous vide device for cooking eggs;</p>
+      <p id="p-00060-en" num="0082">
+        <figref>FIG. 28</figref> is a schematic view of the sous vide device of <figref>FIG. 27</figref>, shown with eggs submerged in water;</p>
+      <p id="p-00061-en" num="0083">
+        <figref>FIG. 29</figref> is a schematic view of an embodiment user interface for a sous vide device;</p>
+      <p id="p-00062-en" num="0084">
+        <figref>FIG. 30</figref> shows an embodiment graph used to calculate cooking time and cooking temperature;</p>
+      <p id="p-00063-en" num="0085">
+        <figref>FIG. 31A</figref> through <figref>FIG. 31D</figref> show example embodiment temperature profile graphs associate with cooking an egg;</p>
+      <p id="p-00064-en" num="0086">
+        <figref>FIG. 32A</figref> through <figref>FIG. 32D</figref> show example embodiment temperature profile graphs associate with cooking an egg; and</p>
+      <p id="p-00065-en" num="0087">
+        <figref>FIG. 33A</figref> through <figref>FIG. 33D</figref> show example embodiment temperature profile graphs associate with cooking an egg.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">BEST MODE AND OTHER EMBODIMENTS</heading>
+      <p id="p-00066-en" num="0088">A shown in <figref>FIG. 1</figref>, a sous vide appliance for domestic use <b>10</b> comprises a housing <b>11</b> in which is contained a thermally controlled water bath <b>12</b>. The device <b>10</b> includes a user interface <b>13</b> having buttons, switches or dials {user inputs} for adjusting the various parameters of the machine. The interface <b>13</b> also includes output devices, displays, alarms and warnings, as required. The interface <b>13</b> communicates with an electronic controller, microprocessor, MCU or other controlled device <b>14</b> that is adapted to determine the temperature that is read by a thermistor <b>15</b> that is in proximity to or in contact with water bath <b>12</b>. The controller uses the determined bath temperature to regulate the delivery of electrical power to a heating element <b>16</b>. Some or all aspects of the interface can be ported via a WIFI connection <b>17</b> to a separate device <b>18</b> having user inputs and graphic or audible outputs, as required. In some embodiments, the sous vide device can have a USB output <b>19</b> adapted to interface with the USB port <b>20</b> of a separate device <b>21</b> that can act as the user interface to the device <b>10</b>. Some embodiments of the invention may have within the housing n, a rather integrated vacuum pump <b>22</b>. The operation of the vacuum pump <b>22</b> can be controlled using the in-dash built controller <b>14</b> and user interface <b>13</b>. The same controller <b>14</b> can be used to control a separate heat sealing device <b>23</b>. That maybe plugged into an outlet or port <b>24</b> on an exterior service of the device <b>10</b>. The user interface <b>13</b> may have an alpha numeric display <b>25</b>. In one displaced state, the display <b>25</b> can display the various cooking functions as such, as cook, vacuum and seal <b>26</b> that the device can either perform or control using the in-built controller <b>14</b>. Once an operation commence, the display <b>25</b> can determine can display the options available to the user <b>27</b> and when complete, the outcome <b>28</b>. When device functions <b>26</b> are displayed, an the user selects “cook”, the display can indicate food types <b>29</b> and a curser <b>30</b> for indicating the appropriate user selection. When a selection such as “eggs” is input to the controller buy a user command, the controller causes the display <b>13</b> to display a first level menu of options <b>31</b> such as soft, medium, hard or poached. The displayed options <b>31</b> can then be associated with a cursor <b>32</b> so that the user can input a particular preference. Once the selection is made, the display <b>25</b> can provide a graphical indication of time <b>33</b>, temperature <b>34</b> or other variables, in real time if required.</p>
+      <p id="p-00067-en" num="0089">As shown in <figref>FIG. 2</figref>, a sous vide device tech may have a wireless communication <b>35</b> with a scale <b>36</b>. The device <b>10</b> and scale <b>36</b> are both equipped with hardware to perform in a active wireless communication, for example the appropriate WIFI transmitting and receiving antennas, WIFI controller and other hardware may be required. In the alternative, the scale <b>36</b> may be connected to the device <b>10</b> by hard wiring <b>37</b>. The scale <b>36</b> determines the weight of a sous vide cooking item <b>38</b> and transmit the required information to the sous vide device <b>10</b>. The weight data is transmitted to the controller and the controller may display the determined weight <b>39</b> on the display <b>25</b>. The result of the weighing process, as communicated to the device <b>10</b>, may be then be integrated to the work flow of the process, for example by alleviating the need for the user to make or input, a further weight information. Accordingly, the display <b>25</b> thereafter need only display a food, type <b>40</b>. User selection of the food type <b>40</b> will then generate a display of a recommended cooking time <b>41</b> and recommended, cooking temperature <b>42</b>. In the alternative, the scale <b>43</b> may be Integrated into the device <b>10</b> so as to weigh the water bath and its content both before and after the insertion of a food item <b>38</b>. The sous vide device can use the weight data to calculate or suggest a cooking time.</p>
+      <p id="p-00068-en" num="0090">As shown in <figref>FIG. 3A</figref>, the interior cavity <b>44</b> of a sous vide device <b>10</b> may be associated with a base heating element <b>45</b> (located below the interior <b>44</b>) or a circumferential slow cooker style heating element banned <b>46</b>, or both of these. This provides the sous vide cooker with the ability to potentially to act as a traditional slow cooker, deep fryer or rice maker.</p>
+      <p id="p-00069-en" num="0091">As shown in <figref>FIG. 3B</figref>, the controller may alter the bath temperature during a single cooking cycle. In graph (a), a food article is cooked at a maximum or second temperature <b>490</b> for an interval, after it has cooked, earlier in the cycle at a lower or first temperature <b>491</b>. Graph (b) shows a cooking cycle that includes a warming portion <b>492</b>, then with reference to an optimum continuous sous vide cooking temperature <b>493</b>, a first higher than the optimal temperature interval <b>494</b> followed, by a cooling to a second temperature interval. <b>495</b> that is lower than the optimal continuous temperature, then a warming to a third and final temperature interval <b>496</b> that is the same as the nominal optimal temperature <b>493</b>.</p>
+      <p id="p-00070-en" num="0092">As shown in <figref>FIG. 4</figref>, a sous vide cooking appliance <b>10</b> may be provided with an optional internal rack <b>47</b>. In this example, the rack comprises of 4 parallel corner elements <b>48</b> within which individual layers <b>49</b> are permanently attached. In this example, the individual layers are “capital H” shaped, each layer having a pair of opposing symmetrical edge indentations <b>50</b>. The rack is used to contain and separate individual vacuumed bagged food items.</p>
+      <p id="p-00071-en" num="0093">In the example of <figref>FIG. 5</figref>, the rack <b>51</b> comprises of a frame <b>52</b> with a removable, parallel shelves <b>53</b>. Tire racks <b>47</b>, <b>51</b> can be used in a vertical or horizontal orientation. The rectangular shelves made from wire or mesh <b>54</b> may be used to support both large and small food items.</p>
+      <p id="p-00072-en" num="0094">As shown in <figref>FIG. 6S</figref> a sous Vide appliance <b>10</b> may be provided with an insulated lid <b>55</b> from which is suspended a thin perforated shelf <b>56</b>. The shelf <b>56</b> is spaced apart from the underside of the lid <b>55</b> by a pair of opposing sidewalls <b>57</b> far enough that the shelf <b>56</b> is below the intended water level of the sous vide cooker. In this way, a food item <b>58</b> that tends to float will be submerged by the shelf <b>56</b> when the lid is in place.</p>
+      <p id="p-00073-en" num="0095">The lid <b>59</b> may also incorporate an Integral chopping board. <b>60</b> as well as an insulating core <b>61</b>. In the alternative, a chopping board <b>62</b> may be provided that is the same size and shape of the lid <b>53</b>. The chopping board <b>62</b> may then be provided with non-slip feet <b>64</b>, preferably in the 4 corners, so that the chopping board does not slip with respect to the lid <b>63</b>.</p>
+      <p id="p-00074-en" num="0096">As shown in <figref>FIG. 7</figref>, a domestic sous vide appliance <b>10</b> can be integrated into a kitchen counter top by locating it below the level of the bench top <b>70</b>. In preferred embodiments, the sous vide cooker <b>10</b> can be located next to the and below an existing sink <b>71</b>. The appliance <b>10</b> may be located, on a sliding shelf with a decorative outer panel or be provided, with an integral decorative panel <b>72</b> that resembles or otherwise conforms to the design of the cabinet doors adjacent to it. Thus, an under bench, domestic, sous vide cooker <b>73</b> will be associated with a drain hose <b>74</b> that is isolated from the interior <b>75</b> of the appliance by a solenoid controlled valve <b>76</b>. In this embodiment the hot <b>77</b> and cold <b>78</b> water inputs are combined in a mixer <b>79</b> before entering the interior of the appliance <b>75</b> via a solenoid controlled, port <b>80</b>. The solenoid controlled input and drain ports <b>76</b>, <b>80</b> as well as the mixer <b>79</b> may be controlled from the appliances controller <b>14</b>.</p>
+      <p id="p-00075-en" num="0097">As shown in <figref>FIG. 8</figref>, the containment basin <b>80</b> of a domestic sous vide appliance <b>81</b> may be provided in the form of an insulted sink basin. In this embodiment the basin <b>82</b> is insulated and Is provided with an insulated lid <b>83</b> and is preferable flushed with the surrounding bench comp <b>84</b> and that can serve as a chopping board. The basin urn be provided with a liquid level sensor <b>85</b> and a temperature sensor such as a thermistor. The device may have an externally mounted user interface <b>87</b> that can be accessed directly by the user or serve as a wireless interface to a portable or handheld device operated by the user. In some embodiments the controller <b>14</b> may be contained together with a circulation or recirculation pump <b>88</b> in a compartment <b>89</b> attached and located under the basin.</p>
+      <p id="p-00076-en" num="0098">As shown in <figref>FIG. 9</figref>, a sink or insulated sink <b>90</b> may be provided with an insulated lid <b>91</b> that incorporates a housing for an electric recirculation pump <b>92</b>, its motor, the controller <b>14</b> and other components that may be required in a sous vide cooker are part from the containment compartment for holding the water.</p>
+      <p id="p-00077-en" num="0099">As shown in <figref>FIG. 10</figref>, a sous vide cooker <b>100</b> may be provided with an internal divider <b>101</b>, preferably an insulated divider <b>101</b> that seals adjacent compartments <b>102</b>, <b>103</b> from one another. Each compartment <b>102</b>, <b>103</b> may have its own water level sensor <b>104</b>, temperature sensor <b>105</b>, pump or recirculation pump <b>106</b>, controllable heating element <b>107</b> and controller {if required} <b>108</b>. A single controller can operate the two compartments <b>102</b>, <b>103</b> separately. This allows two different foods to be prepared at two different temperatures. In preferred embodiments, the divider <b>101</b> can be removed, to make a single, larger cavity. In some embodiments, the location of the divider may be adjustable.</p>
+      <p id="p-00078-en" num="0100">As shown in <figref>FIG. 11</figref>, a sous vide cooker <b>110</b> may have a heater or heating elements in and a refrigeration compressor <b>112</b>. This arrangement would provide a temperature sensor <b>115</b> and controller <b>14</b> that were able to both heat and cool the contents <b>116</b> of the appliance <b>110</b>.</p>
+      <p id="p-00079-en" num="0101">As shown in <figref>FIG. 12</figref>, a Peltier cell <b>120</b> may be used to subdivide the internal compartment <b>121</b> in to a hot side <b>122</b> and a cold side <b>123</b>.</p>
+      <p id="p-00080-en" num="0102">As shown in <figref>FIG. 13</figref>, a sous vide appliance <b>130</b> may be provided with adjacent compartments <b>131</b>, <b>132</b> having between them a motorized, nematic or hydraulic jack or lifter <b>133</b>. The lifter <b>133</b> is able to support one or two holders <b>134</b> adapted to hold vacuumed bagged food, for example, racks as suggested by <figref>FIG. 4</figref> and FIG. <b>5</b>. Under the control of the controller <b>14</b> the lifter <b>133</b> can rise high enough that the holder <b>134</b> is removed from the water bath and can descend, slowly enough to then submerge the holder <b>34</b> in the water bath. In some embodiments one compartment <b>131</b> of the appliances provided with a heating elements <b>135</b> and the other side <b>132</b> is provided with refrigeration coils, Peltier cell or other form of refrigeration <b>136</b>. This allows one compartment <b>132</b> to be refrigerated or chilled while the other compartment <b>131</b> is heated to cook foods. This arrangement allows a number of different operations to be performed. A unit such as the one depicted in <figref>FIG. 13</figref> can lower the liner <b>133</b> at a user specified time and remove it from the water bath as a second user specified time. It can rotate the lifter <b>133</b> so that the position of the first and second, holders is reversed. It can also cook a food item on one side, then lift it then submerge it on the refrigerated side.</p>
+      <p id="p-00081-en" num="0103">As shown in <figref>FIG. 14</figref>, a sous vide appliance <b>140</b> may have an internal bath <b>141</b> that is associated with both a refrigeration device such as a compressor <b>142</b> and heating elements <b>143</b>. The floor of the bath <b>141</b> features a solenoid activated valve <b>144</b> that can drain the contents of the bath <b>141</b> into a removable internal compartment <b>145</b>. This allows the contents of the bath <b>141</b> to be selectively drained into the internal compartment that lies below it. By removing the hot water around the food in the bath. <b>141</b>, the temperature is reduced allowing foods to be mote rapidly brought to room temperature if the user is not available to remove the food form the bath <b>141</b>. As an alternative to a removable internal compartment <b>145</b>, the appliance <b>140</b> can have an internal compartment <b>146</b> that can be filled, then, having its own drain <b>147</b>, be emptied using a drain hose <b>148</b>, access to which may be controlled by a solenoid or other operated valve <b>149</b>.</p>
+      <p id="p-00082-en" num="0104">As shown in <figref>FIG. 15</figref> a sous vide appliance <b>150</b> may be provided with an internal chiller <b>151</b>. The chiller <b>151</b> is shaped and sized to conform to the Internal sidewalk of the containment basin <b>152</b>. Hie chiller <b>151</b> may be used in conjunction with fresh or cold, water after a cooking operation has finished, and before foods are stored in a refrigerator or freezer. In this example, the height of the chiller <b>151</b> corresponds to the height of the internal cavity <b>152</b>. In this example, the chiller has apposing and hinged, side walls <b>153</b> that may be folded towards each other to allow the chiller to be stored flat and layers expanded to fit under the lid. <b>155</b> and within the internal compartment <b>152</b>.</p>
+      <p id="p-00083-en" num="0105">As shown in <figref>FIG. 16</figref> and <figref>FIG. 17</figref>, the sous vide appliance's internal cavity <b>160</b> may be provided with one or more submersible impellers <b>161</b>, <b>162</b>. In order to not occupy usable cooking space in the cavity <b>160</b>, the impellers may be recessed or hushed with the Interior of the compartment <b>160</b> and impellers <b>161</b> may be located on a sidewalk Impeller <b>162</b> may also be located on tire floor of the compartment <b>160</b>. An impeller may be covered with a protective grating <b>163</b>. As shown in <figref>FIG. 17</figref>, the impeller <b>170</b> has one or more fins <b>171</b> for moving the water in the compartment <b>160</b> and therefore achieving a more even temperature distribution in the body of cooking water. The impeller <b>170</b> has an internal bore <b>173</b> for receiving a stub shah <b>174</b> affixed to the floor <b>175</b> of a recessed <b>176</b> in the compartment <b>160</b>. The impeller <b>170</b> rotates about the stub shaft <b>174</b> under the influence of a motor <b>176</b> located below the floor <b>175</b>. The motor carries magnets <b>177</b>. The magnets drive secondary magnets <b>178</b> carried by the impeller.</p>
+      <p id="p-00084-en" num="0106">It will be appreciated that, in an example embodiment, a removable submersed impeller-sits below floor and/or wall level, and by be mounted on the floor and/or the wall of the cavity to facilitate water movement and therefore a more even, temperature in the body of water.</p>
+      <p id="p-00085-en" num="0107">As shown in <figref>FIG. 18</figref>, the ease of filling and draining a sous vide appliance <b>180</b> is facilitated, by providing a drain <b>181</b> at the lowest extent <b>182</b> of the cooking compartment <b>183</b>, that opens and closes using a electronically controllable solenoid valve <b>184</b>. A water inlet <b>185</b> located towards the top of the compartment <b>183</b> also features an electronically controllable solenoid valve <b>186</b>. The inlet and outlet solenoid valves <b>184</b>, <b>186</b>, are opened and closed by the controller <b>14</b>. In another example, excess water in the compartment <b>183</b> flows over the top of the internal wall or weir <b>187</b>. The weir <b>187</b> is located within the housing <b>188</b>. Water discharged over the top lip of the weir <b>187</b> is collected in a drain area <b>189</b> discharged from, the drain area through an outlet hose <b>190</b> is controlled by a solenoid valve <b>191</b> that is operated by the controller <b>14</b>. In some embodiments, the water fills and drain hoses <b>192</b>, <b>193</b> are located in close proximity to one another and both are controlled independently, from the controller <b>14</b> using solenoid valves <b>194</b>, <b>195</b>.</p>
+      <p id="p-00086-en" num="0108">As shown in <figref>FIG. 19</figref>, a plastic bag <b>200</b> has a mouth opening <b>201</b> defined by the upper edges <b>202</b> of the bag. Heat scalable bags are well known in sous vide cooking. Particularly where the interior of the bag is exposed to the vacuum, there is a tendency for liquids associated, with food in the bag to be expelled Into the heat seal zone <b>203</b>, these liquids in the zone <b>203</b> having the propensity to interfere with the heating sealing process. In order to prevent such liquids form, interfering with the heat sealing process, a bag is provided with an internal moisture barrier <b>204</b>. The barrier <b>204</b> comprises an internal circumferential band of absorbent material such as synthetic textile or absorbent paper <b>205</b>. In preferred embodiments, the absorbent barrier <b>205</b> is located between the heat sealing zone <b>203</b> and perforations or tearable zone <b>206</b> that allow the bag to be easily opened after the cooking process is completed. As show in <figref>FIG. 19</figref> a bag <b>200</b> is loaded with a food for cooking <b>207</b> that may have a liquid content. In order that the absorbent barrier <b>204</b> to be initially protected from, the incoming or outgoing liquid (overflow) <b>207</b>B, the absorbent barrier <b>204</b> is initially and entirely protected by a plastic film <b>208</b>. After the bag is filled but before the edges are sealed, a user <b>209</b> can peal away the plastic film <b>208</b> by disrupting the edges <b>210</b> of the film <b>208</b> that are adhered to the interior of the bag <b>200</b>. With the plastic film <b>208</b> removed, the interior surfaces of the bag adjacent to the mouth opening <b>201</b> are brought together <b>212</b>. This action also brings together <b>213</b> the exposed faces of the absorbent barrier <b>204</b>. Liquids attempting to exit the bag <b>214</b> encounter and are absorbed by the absorbent barrier <b>204</b> before they reach the heat seal area <b>203</b>. After the bag Is heat sealed and the contents are cooked, the top of the bag can removed, by tearing or cutting through the frangible portion, scoring or perforations <b>206</b> to expose the internal contents <b>215</b> of the bag <b>200</b>.</p>
+      <p id="p-00087-en" num="0109">In an embodiment, by way of example only, a bag can include a liquid absorbent material designed to stop the liquid from interfering with the sealing area. A plastic film protects this absorbent material while the bag is being loaded with the food and liquid. This film is removed just prior to sealing the bag. A perforated area is also provided to make the opening of the bag more easily.</p>
+      <p id="p-00088-en" num="0110">As shown in <figref>FIG. 20</figref>, a plastic bag for sous vide cooking <b>220</b> may have a reusable closure <b>221</b> comprising interlocking components <b>222</b> that seal the mouth opening <b>223</b> when they are joined together. The elements <b>222</b> may be released from one another after cooking so that the bag can be reused. In this example, the bag structure comprises identically shaped from and back sheets <b>224</b>, <b>225</b>, along the exterior edges <b>226</b>, <b>227</b> and above the closure <b>221</b>, a pair of lateral ears <b>228</b>, <b>229</b> that are joined to form a pair of opposing handles <b>230</b>, <b>231</b> a user <b>232</b> may grasp the ears <b>230</b>, <b>231</b> for the purpose of lowering the bag <b>220</b> into the sous vide appliance to remove air <b>10</b> and later removing the bag from the internal compartment <b>233</b> for sealing.</p>
+      <p id="p-00089-en" num="0111">As shown, in <figref>FIG. 21</figref>, a bag <b>244</b> sous vide cooking may have a removable or built-in magnet <b>243</b> preferably located along a lower edge <b>242</b> of the bag <b>240</b>. The magnet is attracted to steel or another magnet located on, in or under the internal floor <b>243</b> of the internal cooking compartment. This removable and stably locates the lower edge of the bag and promotes consistent spacing between different bags <b>244</b> located in the internal compartment. In order to keep the bags more upright, bags may be provided with a sealed air pocket <b>245</b>, preferably located on or adjacent to an upper edge <b>246</b> of a bag. In this example, this sealed, air pocket <b>245</b> extends above the upper margin <b>246</b> of the bag <b>240</b>. The sealed air pocket <b>245</b> urges the upper edge <b>246</b> toward, or above the upper most water level in the compartment.</p>
+      <p id="p-00090-en" num="0112">As shown in <figref>FIG. 22</figref>, an individual bag and its content may be indentifiecl to a sous vide appliance <b>250</b> by providing the bag with an RFID tag <b>251</b>, bar code or other means of remote identification. The sous vide appliance <b>250</b> is equipped with means for reading the tag <b>231</b> such as an RFID receiver or bar code scanner. The devices interface <b>252</b> displays, for a particular identified bag and its tag <b>251</b>, information such as a recommended cooking time <b>253</b> and they suggested cooking temperature <b>254</b>. Electronic scales associated with the appliance <b>250</b> may have an integral label printer for creating a barcode such as a <b>2</b>D barcode <b>255</b>. The barcode may be encoded with, information regarding the weight determined by the scales and the size, shape and content of the bag as input into the scales through a user interface <b>260</b> located on or associated with the scales <b>262</b>. Barcodes may also be used by third party food providers to encode Internet links, data, cooking instructions or etc.</p>
+      <p id="p-00091-en" num="0113">As shown in <figref>FIG. 23</figref>, a bag <b>270</b> for sous vide cooking may incorporate a built-in, disposable or reusable temperature probe <b>271</b> such as a Thermistor. The probe <b>271</b> is, this example, is associated with a wireless transponder, for example an RFID tag <b>272</b>. A sous vide appliance <b>273</b> may incorporate a receiver <b>274</b> for receiving a temperature signal indicative from the transponder <b>272</b> and communicating with the appliances controller <b>14</b>. When the temperature signal and elapsed time are determined by the controller to be sufficient, a notice or alarm <b>275</b> may be displayed on the graphic interface <b>276</b> accompanied by a second alarm such as a flashing light <b>277</b> or audible alarm. Where the temperature probe <b>271</b> is reusable, it is preferably permanently fixed to the transponder <b>272</b> where upon the electrical connection that connects the probe <b>271</b> to the transponder <b>272</b> is inserted past or through the bag's seal area <b>281</b>. The transponder <b>272</b> may be providing with an integral air pocket or float <b>282</b>. The transponder <b>272</b> may be inserted at the time of third party food packaging and then disposed of by the user.</p>
+      <p id="p-00092-en" num="0114">As shown in <figref>FIG. 24</figref>, a bag may also be provided with a temperature probe such as a Thermistor <b>291</b> that electronically communicates <b>292</b> with, a visual temperature indicator <b>293</b>. The probe <b>291</b> [similar to the probe <b>271</b> in <figref>FIG. 23</figref>] may be incorporated Into the bag structure or extend inwardly from the interior of the bag so that the probe may be inserted into a food article. The thermal indicator may be in the form a display <b>294</b> that indicates, either electronically or by the activation of liquid crystals, a degree of food doneness <b>295</b>, for example using a thermal metric liquid crystal strip <b>296</b> associated with corresponding descriptors <b>297</b> such as “rare, med-rare, medium, men-well and well done”. The temperature probe <b>291</b> may be connected to the Indicator <b>293</b>, <b>294</b> by a thermally conductive wire or strip <b>299</b>.</p>
+      <p id="p-00093-en" num="0115">As shown, in <figref>FIG. 25</figref>, a graphic user interface to a sous vide appliance <b>300</b>, in conjunction with the appliance's controller <b>14</b> may be used to assist a user by suggesting the most appropriate time and temperature based on one or more inputs received from the user interface <b>13</b>. For example, a display <b>300</b> provides a list of food types <b>301</b>. A user scrolls through the food types until the cursor <b>302</b> is adjacent to the user's selection. The user then makes the selection <b>303</b>. The display <b>300</b> then depicts a list or array of meat types <b>304</b> based on the prior selection of meat. The user scrolls through the meat type list <b>304</b> using the cursor <b>302</b> and makes a selection, in this example, “beef”. The controller <b>14</b> utilizes the data from a matrix or lock up table based on the user's selection and displays another list of beef types <b>305</b>. A user selection <b>306</b> from this list generates a display suggesting approximate or overall shapes <b>307</b> such as cube, cylinder or “sphere”. The user is then prompted to input one or more parameters relating to the shape. In this example, the user has positioned the cursor <b>302</b> adjacent to “sphere” where upon the user is prompted to input a diameter. The user inputs a diameter and the display <b>300</b> depicts the diameter Input <b>308</b> from the user. The display may also provide a visual clue <b>309</b> to the parameter or measurement that is required from the user. The display <b>300</b> then provides a list of degree of cooking or doneness from, winch the user may select a value using the cursor <b>302</b> and a selection input <b>13</b>. The user is then prompted enter a degree of texture from a list of suggested textures <b>311</b>. Finally, the controller <b>14</b> utilizes the various data inputs from the aforementioned selection process [food type, meat type, cut style, general shape, shape parameter, doneness, and texture] to determine from an algorithm, matrix or look up table a selected, cooking time and temperature. These values <b>312</b> are displayed on the interface's display <b>300</b>. The user may modify the suggested value <b>312</b> prior to imitating a cooking operation in the appliance u&gt;. It will be understood that the aforementioned, process of acquiring may be performed in a different order or in accordance with different parameters, the aforementioned being merely an example of the utilization of the controller <b>14</b> and the display <b>300</b> in the acquisition of data and user preferences regarding the food to be cooked.</p>
+      <p id="p-00094-en" num="0116">As suggested by <figref>FIG. 26A</figref>, a sous vide appliance <b>10</b> can cook multiple food Items to different levels of doneness by using the controller <b>14</b> to vary the temperature of the water bath in accordance with user preference or data input by the user into the device's user interface. In the examples of <figref>FIG. 26</figref>, three pieces of meat in three separate bags are cooked to different levels of doneness and are allowed to finish simultaneously. As Illustrated in graph A the water bath begins at an ambient temperature <b>400</b>. Using the user interface <b>13</b>, the user indicates that three pieces of meat will be cooked, at each of the following levels of doneness: well done, medium and rare. The controller <b>14</b> causes the temperature of the water bath to rise to a maximum cooking temperature for the particular well done meat. The display <b>402</b> provides Instruction to the user <b>403</b> to Insert the bag containing the meat for well done cooking and also displays the current temperature <b>404</b>. The microprocessor determines when in time <b>405</b> the temperature of the bath will be reduced to a second cooking temperature <b>406</b>. At the end of the first cooking interval <b>407</b> the display <b>408</b> indicates that the water bath is cooling and asks the user to wait until the next cooking phase. The display also indicates <b>409</b> the current temperature and the second temperature target. When the second target temperature has been reached <b>406</b> the display <b>409</b> indicates that the second target temperature has been reached and displays the current temperature. An audible alarm <b>410</b> may sound, alerting the user to insert the second bag into the bath. The controller then initiates a second cooking interval at a lower temperature than the first. The second interval <b>411</b> then terminates <b>412</b> and the display <b>413</b> indicates a second cooling interval and displays an instruction to the user to wait for the inception of the next phase. The display also indicates the current cooking temperature and the third target temperature <b>413</b>. At the end of the second cooling interval <b>415</b> the display <b>416</b> indicates the current temperature and an instruction for the user to insert the third bag for meat done rare. At the end of the third cooking interval <b>417</b> the display <b>418</b> indicates that all three portions of food are done. The current temperature may also be displayed <b>419</b>. In the aforementioned example, the three bags are placed into the water bath successfully and without removing any of the bags until the end <b>420</b> of the cooking cycle. At the end of the cooking cycle <b>420</b> all three bags are removed from the water bath, or the bath bay be chilled in place.</p>
+      <p id="p-00095-en" num="0117">
+        <figref>FIG. 26B</figref> illustrates a second and faster example of a cooking cycle in which all bags are inserted at the start and temperature is gradually increased rather than decreased. Bags are removed from, the bath as they finish cooking. As shown in graph B, the controller causes the bath temperature to rise a first cooking temperature <b>430</b>. The display <b>431</b> indicates the current temperature <b>432</b> and an instruction <b>433</b> for the user to insert all three bags of this example. At the end of the first cooking interval <b>434</b> the display <b>433</b> provides the user with an instruction <b>436</b> to remove the first bag. The display also indicates the current temperature. Thereafter, the display <b>437</b> indicates that the water bath is warming <b>438</b> and indicates both the current temperature and the second, target temperature <b>439</b>. At the end of the second, warming interval <b>440</b>, the display <b>441</b> provides the user with an indication <b>432</b> that the second bag is cooking the meat to a doneness of e.g. medium. At the end of the second cooking interval <b>450</b> the display <b>451</b> provides the user with an instruction <b>452</b> to remove the meat and press a “continue” button on the user interface <b>453</b>. Pressing the “continue” button prompts the display <b>455</b> to indicate <b>456</b> that the bath is warming. The display also shows the current and third target temperature. At the beginning of the third cooking interval <b>460</b>, the display <b>461</b> provides the user with an indication <b>462</b> that the third bag is cooking meat to a doneness of well done. The current temperature may also be displayed. At the end of mini interval, the display <b>470</b> indicates that the cooking process is completed and that the user should remove the last bag from the water. All of the aforementioned steps may be accompanied by audible or visual alarms <b>480</b>.</p>
+      <p id="p-00096-en" num="0118">
+        <figref>FIG. 27</figref> and <figref>FIG. 28</figref> show schematic views of an embodiment sous vide device <b>500</b> for cooking eggs. <figref>FIG. 27</figref> shows the device in a pre-cooking or post-cooking configuration. <figref>FIG. 28</figref> shows the device in a cooking configuration.</p>
+      <p id="p-00097-en" num="0119">The sous vide device <b>500</b> can be used to control both time and temperature for cooking one or more eggs. By independently controlling both water cooking temperature and cooking time, the device can cook eggs to a selected white texture and yolk texture.</p>
+      <p id="p-00098-en" num="0120">In an embodiment, the device <b>500</b> includes a vessel <b>510</b> for cooking the eggs. The vessel retains water <b>512</b> which can be temperature regulated or controlled to a selected or predetermined temperature. A rack (or basket or platform) <b>514</b> is movable within the vessel <b>510</b>, such that it can be automatically lowered into the heated water <b>512</b>, and automatically raised from the water at the completion of cooking period. A processor element (or module) <b>520</b> typically maintains/controls the water temperature by enabling and disabling power supplied to a heating element <b>530</b>. The processor element <b>520</b> can also monitor/control the cooking period for automatically lowering and raising the rack.</p>
+      <p id="p-00099-en" num="0121">In an embodiment, the device <b>500</b> includes a removable cordless vessel <b>510</b> which is located and connected, with a corresponding base <b>511</b>. The vessel includes a heating apparatus <b>530</b>, and a temperature sensing element <b>532</b>, which are typically coupled, to a processor element <b>520</b> for accurately heating the water in the vessel, and maintaining a desired cooking temperature (or temperature profile) over the cooking period.</p>
+      <p id="p-00100-en" num="0122">In an embodiment, the device <b>500</b> includes a rack <b>540</b> that is vertically movable within the vessel <b>510</b> for lowering eggs into the water at the commencement of a cooking period (best shown in <figref>FIG. 28</figref>), and raising the eggs from, the water at the conclusion of the cooking period (e.g. as shown in <figref>FIG. 27</figref>). By way of example, the rack is coupled to a vertical drive element <b>542</b> that is driven through a coupling <b>544</b> by a motor <b>546</b>. Tire vertical drive element can include, by way of example only, a driveshaft with a worm, drive for vertically moving the rack. In this example, the coupling <b>544</b> is driven, by a motor <b>546</b> in the base, which, is controlled by the processor element <b>520</b>. However, it will be appreciated that the motor can be housed by the removable vessel <b>510</b>, and controlled by the processor element <b>520</b> in the base <b>511</b>.</p>
+      <p id="p-00101-en" num="0123">In an embodiment, the base <b>511</b> can further include a user interface <b>550</b> for enabling user input, of cooking parameter's relevant to cooking eggs. The user interface can further include a display element for presenting data to the user. The user interface is coupled to the processor element (or module) <b>520</b>.</p>
+      <p id="p-00102-en" num="0124">In an embodiment, the vessel can include transparent side walls <b>514</b> (for example comprising glass or Pyrex) and/or a lid <b>516</b>.</p>
+      <p id="p-00103-en" num="0125">It would be appreciated, that in other embodiments, only power and communication (or data) signals may be required to be passed from the base to the vessel (for example rack motor control, data, heating element control data). Communication (or data) signals may also be passed from the vessel to the base (for example, temperature data and/or rack positional data or water level data).</p>
+      <p id="p-00104-en" num="0126">
+        <figref>FIG. 29</figref> shows an embodiment user interface <b>600</b> for cooking eggs on a sous vide cooker. In an embodiment, by way of example only, the user interface <b>600</b> comprises one or more user input elements <b>610</b> coupled to a processor element <b>620</b>. The processor element <b>620</b> being coupled to a display <b>630</b> for enabling user selection or configuration of cooking parameters.</p>
+      <p id="p-00105-en" num="0127">In this embodiment, the display (at <b>630</b>) presents user options for food types. By way of example, food types can including one of vegetables, meat, eggs, or custard. In the example, the user has selected ‘eggs’ proceeding to user display <b>631</b>. The user display <b>631</b> enables the user to select any one or more of egg type using input element <b>621</b>, egg temperature using input element <b>622</b> and egg quantity using input element <b>623</b>. Based on these user inputs, processor element determines or calculates available egg yolk texture and egg white texture using stored data <b>640</b>. The display then presents (at <b>632</b>) options of egg yolk texture for user selection <b>624</b>. The display then presents (at <b>633</b>) options of egg white texture for user selection <b>625</b>. With user selection of the yolk texture and white texture, a cooking time and temperature can be determined and/or calculated, which is presented in the display (at <b>634</b>). The cooking time and cooking temperature can be further modified by the user, using user inputs <b>626</b> and <b>627</b> respectively. For or at commencement of cooking, the user can then select auto-start <b>628</b> or start/cancel <b>629</b>.</p>
+      <p id="p-00106-en" num="0128">In this embodiment, by way of example only, an LCD type display and user input for controlling a sous vide cooker. The LCD display provides a list of food types. The user scrolls through the food types until the arrow or cursor Is adjacent to the user's selection. The user then makes the selection. The display then depicts three input selections which include a list or array of egg types, egg temperature and egg quantity based on the prior selection of eggs. The user scrolls through the egg type list using the arrow or cursor and makes a selection, in this example, “brown”. Based on the egg type selection the user then cycles through the egg temperature list and makes a selection, in this example “room temp” followed by making a selection of egg quantity in this example “6 eggs”. The controller utilises the data from a matrix or look up table based on the users selection and displays another selection variable being yolk texture. The display then provides a selection of yolk textures or “level of doneness”. The user scrolls through the yolk textures until the arrow or cursor is adjacent to the user's selection. The user then makes the selection, in this example “runny”. The display then provides a selection of white textures or “level of doneness”. The user scrolls through the white textures until the arrow or cursor is adjacent to the user's selection. The user then, makes the selection, in this example “medium”. Once all variables have been selected, the controller utilises the various data inputs from the selection process (food type, egg type, egg temp, egg qty, yolk texture and white texture) to determine (for example, from an algorithm, matrix or look up table) a selected cooking time and temperature. These values are displayed on the interface's display. The user can modify the suggested values of both time and temperature prior to initiating the cooking operation based upon the above mentioned input selections. However, once either Lime or temperature has been adjusted the display typically reverts to a “custom” selection for both yolk and white input texture doneness variables. It will be appreciated that the above input sequence can be performed in a different order.</p>
+      <p id="p-00107-en" num="0129">In an embodiment, by way of example only, a start/cancel functionality allows the above mentioned, sequence to begin. The user interface may also offer a delayed start or auto start functionality. For example, the device can be configured with an input of time in hours &amp; minutes both (AM or PM) selection. This functionality allows for the controller to communicate with the device to wake up from standby mode and perform the inputted cooking selection by the user.</p>
+      <p id="p-00108-en" num="0130">It will be appreciated, that the device of <figref>FIG. 27</figref> and <figref>FIG. 28</figref> can automatically lower the basket, or rack apparatus, which lowers the eggs into the body of water. Alternatively a rack can be used which would be manually lowered Into the body of water by the user prior to pressing start. It will be appreciated that, on completion of a cooking operation, the eggs would typically be removed and placed in cold water to achieve the most accurate results, which would gestured or displayed on the display (for example “remove eggs and place in cold water”). An audible alarm or beeps can be sounded on starting and/or completion and/or lowering the automatic basket or rack and/or raising of the automatic basket or rack.</p>
+      <p id="p-00109-en" num="0131">
+        <figref>FIG. 30</figref> shows an example graph <b>700</b>, which can be stored and used to calculate cooking time <b>710</b> and cooking temperature <b>711</b> from user selection, of egg yolk texture <b>720</b> and egg white texture <b>721</b>. It will be appreciated that this table may differ for various user selected egg types and/or egg temperatures and/or egg quantities. It will be appreciated that this table can be stored as a function or lookup table or other forms for referencing a cooking timer and cooking temperature based on user inputs.</p>
+      <p id="p-00110-en" num="0132">This example table <b>700</b>, three example control points <b>731</b>, <b>732</b> and <b>733</b> are displayed. The control point <b>731</b>, specifies a yolk texture of ‘hard’ and a white texture of “firm”. The control point <b>732</b> specifies a yolk texture of ‘runny’ and a white texture of ‘medium’. The control point <b>733</b> specifies a yolk texture of ‘soft’ end a white texture of ‘just set’. The user selected egg yolk textures and egg white textures are then translated to a cooking temperature and cooking time.</p>
+      <p id="p-00111-en" num="0133">
+        <figref>FIG. 31A</figref> through <figref>FIG. 31D</figref> shows an example cooking profile for cooking an egg <b>800</b>, being cooked to the specifications of set point <b>731</b>. <figref>FIG. 31A</figref> shows a schematic diagram of an egg <b>800</b> cooking in a sous vide cooker. <figref>FIG. 31B</figref> shows the temperature profile <b>802</b> across an egg at the commencement of cooking, when first lowered into the water. In this example, at the commencement of cooking, the water temperature is boiling (100°) and the egg had a temperature of 10 degC. <figref>FIG. 31C</figref> shows the temperature profile <b>803</b> at a cooking time of 3:30 minutes, in which the temperature of the white and yolk have risen. In this example, at the 3:30 minutes, the water temperature is boiling (100°) and the egg white has reached a temperature of about 14-36 degC, and the egg yoke has reached a temperature of about 10-14 degC. <figref>FIG. 31D</figref> shows the temperature profile <b>804</b> at a cooking time of 7:00 minutes. In this example, at the 7:00 minutes, the egg white has reached a temperature of about 80 degC and the egg yolk has reached a temperature of about 75 degC. The difference in temperature <b>805</b> between egg white and egg yoke can provide different textures. The water is maintained at about 100 deg C throughout the cooking period. At the conclusion of the cooking period, the eggs can be raised from, the water.</p>
+      <p id="p-00112-en" num="0134">
+        <figref>FIG. 32A</figref> through <figref>FIG. 32D</figref> shows an example cooking profile for cooking an egg <b>810</b>, being cooked to the specifications of set point <b>732</b>. <figref>FIG. 32A</figref> shows a schematic diagram, of an egg <b>810</b> cooking in a sous vide cooker. <figref>FIG. 32B</figref> shows the temperature profile <b>812</b> across an egg at the commencement of cooking, when first lowered into the water, in this example, at the commencement of cooking, the water temperature is about 75 degC and the egg had a temperature of 10 degC. <figref>FIG. 32C</figref> shows the temperature profile <b>813</b> at a cooking time of 5:00 minutes, in which the temperature of the white and yolk have risen. In this example, at the 5:00 minutes, the water temperature is 75 degC and the egg white has reached a temperature of about 12-28 degC, and the egg yoke has reached a temperature of about 10-12 degC. <figref>FIG. 32D</figref> shows the temperature profile <b>814</b> at a cooking time of 10:00 minutes. In this example, at the 10:00 minutes, the egg white has reached a temperature of about 70 degC and the egg yolk has reached a temperature of about 60 degC lire difference in temperature <b>815</b> (being greater then the difference (<b>805</b>) between egg white and egg yoke can provide different textures. The water is maintained at about 75 degC throughout the cooking period. At the conclusion of the cooking period, the eggs can be raised from the water.</p>
+      <p id="p-00113-en" num="0135">
+        <figref>FIG. 33A</figref> through <figref>FIG. 33D</figref> shows an example cooking profile for cooking an egg <b>820</b>, being cooked to the specifications of set point <b>732</b>. <figref>FIG. 33A</figref> shows a schematic diagram, of an egg <b>820</b> cooking in a sous vide cooker. <figref>FIG. 33B</figref> shows the temperature profile <b>822</b> across an egg at the commencement of cooking, when, first lowered in A the water. In this example, at the commencement of cooking, the water temperature is about 62 degC and the egg had a temperature of 10 degC. <figref>FIG. 33C</figref> shows the temperature profile <b>823</b> at a cooking time of 30:00 minutes, in which the temperature of the white and yolk have risen. In this example, at the 30:00 minutes, the water temperature is 62 degC and the egg white has reached a temperature of about 40-62 degC, and the egg yoke has reached, a temperature of about 30-40 degC. <figref>FIG. 33I</figref>) shows the temperature profile <b>824</b> at a cooking time of 60:00 minutes. In this example, at the 60:00 minutes, the egg white has reached a temperature of about 62 degC and the egg yolk, has reached a temperature of about 62 degC. In this example, due to the extended, cooking time, the difference in temperature <b>825</b> between egg white and egg yoke is negligible. The water is maintained at about 62 degC throughout the cooking period. At the conclusion of the cooking period, the eggs can be raised from the water.</p>
+      <p id="p-00114-en" num="0136">It will be appreciated, that a higher water temperature when cooking eggs at a shorter cooking period, a greater temperature gradient can be achieved across the yolk and white. A more even, temperature across the yolk and white can be achieved by using a lower temperature and cooking for a longer period. The greater the temperature gradient across the egg white and egg yolk, results in a greater variation between the white texture and yolk texture.</p>
+      <p id="p-00115-en" num="0137">It will be appreciated, that the illustrated device provides an improved or alternative sous vide appliance.</p>
+      <p id="p-00116-en" num="0138">It would be appreciated that, some of the embodiments are described herein as a method or combination of elements of a method that can be implemented by a processor of a computer system, or by other means of carrying out the function. Thus, a processor with the necessary instructions for carrying out such a method, or element of a method forms a means for carrying out the method or element of a method. Furthermore, an element described herein of an apparatus embodiment is an example of a means for carrying out the function performed by the element for the purpose of carrying out the invention.</p>
+      <p id="p-00117-en" num="0139">In alternative embodiments, the one or more processors operate as a standalone device or may be connected, e.g., networked to other processor(s), in a networked deployment, the one or more processors may operate in the capacity of a server or a client machine in server-client network environment, or as a peer machine in a peer-to-peer or distributed network environment.</p>
+      <p id="p-00118-en" num="0140">Thus, one embodiment of each of the methods described herein is in the form of a computer-readable carrier medium carrying a set of instructions, e.g., a computer program that are for execution on one or more processors.</p>
+      <p id="p-00119-en" num="0141">Unless specifically stated otherwise, as apparent from the following discussions, it is appreciated that throughout the specification discussions utilizing terms such, as “processing”, “computing”, “calculating”, “determining” or the like, can refer to the action and/or processes of a computer or computing system, or similar electronic computing device, that manipulate and/or transform, data represented as physical, such as electronic, quantities into other data similarly represented as physical quantities.</p>
+      <p id="p-00120-en" num="0142">In a similar manner, the term “processor” may refer to any device or portion of a device that processes electronic data, e.g., from registers and/or memory to transform that electronic data into other electronic data that, e.g., may be stored in registers and/or memory. A “computer” or a “computing machine” or a “computing platform” may Include one or more processors.</p>
+      <p id="p-00121-en" num="0143">The methodologies described herein are, in one embodiment, per form a hie by one or more processors that accept computer-readable (also called machine-readable) code containing a set of instructions that when executed by one or more of the processors carry out at least one of the methods described herein. Airy processor capable of executing a set of instructions (sequential or otherwise) that specify actions to be taken is included.</p>
+      <p id="p-00122-en" num="0144">Unless the context clearly requires other-wise, throughout the description and the claims, the words “comprise”, “comprising”, and the like are to be construed in an inclusive sense as opposed, to an exclusive or exhaustive sense; that is to say, in the sense of “including, but not limited to”.</p>
+      <p id="p-00123-en" num="0145">Similarly, it is to be noticed that the term “coupled”, when used in the claims, should not be interpreted, as being limitative to direct connections only. The terms “coupled” and “connected”, along with their derivatives, may be used. It should be understood that these terms are not Intended as synonyms for each other. Thus, the scope of the expression a device A coupled to a device B should not be limited to devices or systems wherein an output, of device A is directly connected to an input of device B. It means that there exists a path between an output of A and an input of B which may be a path including other devices or means, “Coupled” may mean that two or more elements are either in direct physical or electrical contact, or that two or mom elements are not in direct contact with each other but yet still co-operate or Interact with each other.</p>
+      <p id="p-00124-en" num="0146">As used herein, unless otherwise specified the use of the ordinal adjectives “first”, “second”, “third”, etc., to describe a common object, merely indicate that different instances of like objects are being referred to, and are not intended to imply that the objects so described must be in a given, sequence, either temporally, spatially, in ranking, or in any other manner.</p>
+      <p id="p-00125-en" num="0147">Reference throughout this specification to “one embodiment” or “an embodiment” means that a particular feature, structure or characteristic described in connection with the embodiment is included in at least one embodiment. Thus, appearances of the phrases “in one embodiment” or “in an embodiment” in various places throughout this specification are not necessarily all referring to the same embodiment, but may refer to the same embodiment. Furthermore, the particular features, structures or characteristics may be combined in any suitable manner, as would, be apparent to one of ordinary skill in the art from this disclosure, in one or more embodiments.</p>
+      <p id="p-00126-en" num="0148">Similarly it should be appreciated that in the above description of exemplary embodiments of the invention, various features of the invention are sometimes grouped together in a single embodiment, figure, or description thereof for the purpose of streamlining the disclosure and aiding in the understanding of one or more of the various inventive aspects. This method of disclosure, however, is not to be interpreted as reflecting an intention that the claimed invention requires more features than are expressly recited in each claim. Rather, as the following claims reflect, inventive aspects lie in less than all features of a single foregoing disclosed embodiment. Thus, the claims following the Detailed Description are hereby expressly incorporated into this Detailed Description, with each, claim standing on its own as a separate embodiment of this invention.</p>
+      <p id="p-00127-en" num="0149">Furthermore, while some embodiments described herein include some but not other features included in other embodiments, combinations of features of different embodiments are meant to be within the scope of the invention, and form different embodiments, as would be understood, by those in the art. For example, in the following claims, any of the claimed embodiments can be used in any combination.</p>
+      <p id="p-00128-en" num="0150">In the description, provided herein, numerous specific details are set forth. However, it is understood that embodiments of the invention may be practiced without these specific details. In other instances, well-known methods, structures and techniques have not been shown in detail in order not to obscure an understanding of this description. Although the invention has been described with reference to specific examples, it will be appreciated by those skilled in the art that the Invention may be embodied in many other forms.</p>
+      <p id="p-00129-en" num="0151">It will be appreciated that an embodiment of the Invention can consist essentially of features disclosed herein. Alternatively, an embodiment of the invention can consist of features disclosed herein. The invention illustratively disclosed, herein suitably may be practiced in the absence of any element winch, is not specifically disclosed herein.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>. A device for cooking food, the device including:
+<claim-text>a reservoir for retaining water;</claim-text><claim-text>a user interface having one or more user input elements and a display element;</claim-text><claim-text>a user interface receives user input of a food style, wherein the food style for a selected food type of eggs includes a user selected egg white texture and a user selected egg yolk texture;</claim-text><claim-text>a heating element for heating water in the reservoir;</claim-text><claim-text>a temperature sensor element for providing a temperature signal indicative of water temperature in the reservoir; and</claim-text><claim-text>a processor module, the processor module being coupled to the user interface for receiving the user inputs; the processor module being coupled to the temperature sensor element for receiving the temperature signal;</claim-text><claim-text>wherein the processor module control operation of the heating element for regulating the temperature of water in the reservoir based on the temperature signal, the cooking temperature and the cooking time;</claim-text><claim-text>wherein the processor module, from both the user selected egg white texture and the user selected egg yolk texture, determines both a corresponding cooking temperature and a corresponding cooking time.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>.-<b>9</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>10</b>. The device according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein egg white texture is selected from any one or more of the set comprising: firm; medium; soft; and just set.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>11</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>12</b>. The device according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein egg yolk texture is selected from any one or more of the set comprising: hard; medium; soft; and runny.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>13</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>14</b>. The device according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the processor module determines the corresponding cooking temperature and the corresponding cooking time using a mapping of the user selected egg white texture and the user selected egg yolk texture.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>15</b>. The device according to <claim-ref idref="clm-00007-en">claim 14</claim-ref>, wherein the corresponding cooking temperature and the corresponding cooking time are predetermined for the selected combination of egg white texture and egg yolk texture: wherein processor module uses the user selected egg white texture to determine the corresponding cooking time, and uses the user selected egg yolk texture to determine the corresponding cooking temperature.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>16</b>. The device according to <claim-ref idref="clm-00003-en">claim 10</claim-ref>, wherein the food style for a selected food type of eggs is selected from any one or more of the set comprising: soft, medium, hard, and poached.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>17</b>.-<b>18</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>19</b>. The device according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein: based on user input, the processor determines a cooking profile comprising a predetermined sequence of cooking temperatures each having a respective cooking time within a single cooking period.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>20</b>. The device according to <claim-ref idref="clm-00011-en">claim 19</claim-ref>, wherein: in a first cycle, a food article is cooked at a first cooking temperature for a first cooking time; and then in a sequenced second cycle the food article is cooked at a second cooking temperature for a second cooking time.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>21</b>. The device according to <claim-ref idref="clm-00012-en">claim 20</claim-ref>, wherein the food item is allowed to cool to a third temperature at the conclusion of any cooking cycle.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>22</b>. The device according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein a cooking temperature and a cooking time are predetermined;
+<claim-text>the device further including a movable food rack that can be lowered into the reservoir to define a cooking configuration; and wherein, when the processor module determines water in the reservoir has reached a predefined temperature, the food rack is lowered to commence a cooking period.</claim-text></claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>23</b>.-<b>25</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>26</b>. The device according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, the device further including:
+<claim-text>a temperature probe for providing a signal indicative of food temperature; wherein the processor module is coupled to the a temperature probe for receiving the signal indicative of food temperature; such that the processor module, upon determining a food temperature, can adjust the cooking temperature and/or cooking time.</claim-text></claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>27</b>. The device according to <claim-ref idref="clm-00016-en">claim 26</claim-ref>, wherein the processor module is in wireless communication with the temperature probe.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>28</b>. A device for cooking eggs, the device including:
+<claim-text>a reservoir for retaining water;</claim-text><claim-text>a user interface having one or more user input elements and a display element;</claim-text><claim-text>a temperature sensor element for providing a temperature signal indicative of water temperature in the reservoir;</claim-text><claim-text>a heating element for heating water in the reservoir;</claim-text><claim-text>a processor module, the processor module being coupled to the user interface for receiving user inputs of a food type and a food style; the processor module being coupled to the temperature sensor element for receiving the temperature signal; the processor module controlling operation of the heating element to regulate the temperature of water in the reservoir;</claim-text><claim-text>wherein, upon user selection of an egg food type, user selection of a food style includes selection of an egg white texture and an egg yolk temperature; and wherein the processor module determines a corresponding cooking temperature and corresponding cooking time, and controls operation of the device based on the temperature signal, the cooking temperature and the cooking time.</claim-text></claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>29</b>. A device including a user interface; the sous vide device having a reservoir of heated water, the interface being coupled to a processor module, the interface including:
+<claim-text>one or more user input elements; and</claim-text><claim-text>a display element;</claim-text><claim-text>wherein the user input elements enable user selection of a cooking profile; and</claim-text><claim-text>the processor module uses the cooking profile to control cooking temperature and cooking time.</claim-text></claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>30</b>. The device according to <claim-ref idref="clm-00019-en">claim 29</claim-ref>, the interface enabling user input of any one or more of the following:
+<claim-text>a cooking time; a cooking temperature; a food type; a food style; a food weight; and a food shape.</claim-text></claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>31</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>32</b>. The device according to <claim-ref idref="clm-00019-en">claim 29</claim-ref>, the interface being in wireless communication with the device.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>33</b>-<b>35</b>. (canceled)</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00012.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00013.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00014.TIF" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00016.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00015.TIF" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00017.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00016.TIF" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00018.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00017.TIF" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00019.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00018.TIF" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00020.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00019.TIF" />
+    </figure>
+    <figure num="21">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00021.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00020.TIF" />
+    </figure>
+    <figure num="22">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00022.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00021.TIF" />
+    </figure>
+    <figure num="23">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00023.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00022.TIF" />
+    </figure>
+    <figure num="24">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00024.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00023.TIF" />
+    </figure>
+    <figure num="25">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00025.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00024.TIF" />
+    </figure>
+    <figure num="26">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00026.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00025.TIF" />
+    </figure>
+    <figure num="27">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00027.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00026.TIF" />
+    </figure>
+    <figure num="28">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00028.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00027.TIF" />
+    </figure>
+    <figure num="29">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00029.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00028.TIF" />
+    </figure>
+    <figure num="30">
+      <img he="N/A" wi="N/A" file="US20150257574A1_00030.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257574A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257574A1.PDF" type="pdf" size="2974767" pages="39" />
+</lexisnexis-patent-document>

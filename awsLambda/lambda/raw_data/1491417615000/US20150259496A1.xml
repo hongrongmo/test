@@ -1,0 +1,1464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150259496A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030157" date-changed="20151002" time-changed="033524">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121315386">
+        <country>US</country>
+        <doc-number>20150259496</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14418229</doc-number>
+        <date>20130726</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="international">
+        <country>WO</country>
+        <doc-number>CN12001020</doc-number>
+        <date>20120731</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>C08J   9/14        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>9</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C08G  18/08        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>18</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C08G  18/18        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>18</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C08G  18/48        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>18</main-group>
+        <subgroup>48</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>C08G  18/76        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>18</main-group>
+        <subgroup>76</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>C08J   9/141       20130101 FI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>9</main-group>
+        <subgroup>141</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B29C  44/3403      20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>29</class>
+        <subclass>C</subclass>
+        <main-group>44</main-group>
+        <subgroup>3403</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C08G  18/14        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>18</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C08G  18/18        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>18</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C08G  18/4018      20130101 LI20140523BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>18</main-group>
+        <subgroup>4018</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140523</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C08G  18/4816      20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>18</main-group>
+        <subgroup>4816</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C08G  18/482       20130101 LI20140523BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>18</main-group>
+        <subgroup>482</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140523</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C08G  18/7664      20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>18</main-group>
+        <subgroup>7664</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C08G2101/0025      20130101 LA20131015BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>2101</main-group>
+        <subgroup>0025</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20131015</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>C08G2101/005       20130101 LA20131015BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>2101</main-group>
+        <subgroup>005</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20131015</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>C08G2130/00        20130101 LA20140523BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>2130</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140523</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>C08J2201/022       20130101 LA20140825BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>2201</main-group>
+        <subgroup>022</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140825</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>C08J2203/14        20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>2203</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>C08J2375/04        20130101 LA20140825BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>2375</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140825</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="15">
+        <text>C08J2375/08        20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>2375</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="16">
+        <text>C08J2483/06        20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>2483</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">21</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">METHOD FOR THE PRODUCTION OF POLYURETHANE FOAM USING EMULSIFIED BLOWING AGENT</invention-title>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Bayer MaterialScience AG</orgname>
+            <address>
+              <city>Monheim Am Rhein</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>DE</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Albers</last-name>
+            <first-name>Reinhard</first-name>
+            <address>
+              <city>Leverkusen</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Heinemann</last-name>
+            <first-name>Torsten</first-name>
+            <address>
+              <city>Leichlingen</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Vogel</last-name>
+            <first-name>Stephanie</first-name>
+            <address>
+              <city>Langenfeld</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Loof</last-name>
+            <first-name>Michael</first-name>
+            <address>
+              <city>Leverkusen</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Gu</last-name>
+            <first-name>Zhihong</first-name>
+            <address>
+              <city>Koln</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Urano</last-name>
+            <first-name>Atsushi</first-name>
+            <address>
+              <city>Shanghai</city>
+              <country>CN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="7" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Sangjo</last-name>
+            <first-name>Suk</first-name>
+            <address>
+              <city>Hefei City</city>
+              <country>CN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="8" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Shihu</last-name>
+            <first-name>Zhao</first-name>
+            <address>
+              <city>Hefei City</city>
+              <country>CN</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>EP13065840</doc-number>
+        <date>20130726</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014019962</doc-number>
+        <date>20140206</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150917">
+      <main-family family-id="164196508">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2879853</doc-number>
+            <kind>A1</kind>
+            <date>20150610</date>
+          </document-id>
+          <application-date>
+            <date>20130726</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259496</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20130726</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104619736</doc-number>
+            <kind>A</kind>
+            <date>20150513</date>
+          </document-id>
+          <application-date>
+            <date>20120731</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014019103</doc-number>
+            <kind>A1</kind>
+            <date>20140206</date>
+          </document-id>
+          <application-date>
+            <date>20120731</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014019962</doc-number>
+            <kind>A1</kind>
+            <date>20140206</date>
+          </document-id>
+          <application-date>
+            <date>20130726</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="164196506">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2879853</doc-number>
+            <kind>A1</kind>
+            <date>20150610</date>
+          </document-id>
+          <application-date>
+            <date>20130726</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259496</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20130726</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104619736</doc-number>
+            <kind>A</kind>
+            <date>20150513</date>
+          </document-id>
+          <application-date>
+            <date>20120731</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014019103</doc-number>
+            <kind>A1</kind>
+            <date>20140206</date>
+          </document-id>
+          <application-date>
+            <date>20120731</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014019962</doc-number>
+            <kind>A1</kind>
+            <date>20140206</date>
+          </document-id>
+          <application-date>
+            <date>20130726</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention is related to a method for the production of polyurethane foam, comprising the steps of: <ul id="ula-00001-en" list-style="none"><li><ul id="ula-00002-en" list-style="none"><li>providing an isocyanate-reactive component A comprising a polyol component A1 which comprises a physical blowing agent T;</li><li>combining at least the isocyanate-reactive component A and an isocyanate component B, thereby obtaining a polyurethane reaction mixture;</li><li>providing the polyurethane reaction mixture in a cavity (<b>11</b>); and</li><li>reducing the pressure within the cavity (<b>11</b>) to a pressure lower than ambient pressure;</li></ul></li><li>characterized in that the physical blowing agent T is present in the isocyanate-reactive component A in the form of an emulsion with the polyol component A1 constituting the continuous phase and droplets of the physical blowing agent T the dispersed phase of the emulsion,</li><li>wherein the average size of the droplets of the physical blowing agent T is ≧0.1 μm to ≦20 μm, the droplet size being determined by using an optical microscope operating in bright field transmission mode.</li></ul></p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150408</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015259496A1</docdb-publication-number>
+      <docdb-application-id>444514587</docdb-application-id>
+      <new-owner>BAYER MATERIALSCIENCE AG, GERMANY</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:ALBERS, REINHARD;HEINEMANN, TORSTEN;VOGEL, STEPHANIE;ANDOTHERS;SIGNING DATES FROM 20141225 TO 20150309;REEL/FRAME:035357/0549</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <p id="p-00001-en" num="0001">The present invention relates to a method for the production of polyurethane foam, comprising the steps of providing an isocyanate-reactive component A comprising a polyol component A1 which further comprises a physical blowing agent T; combining at least the isocyanate-reactive component A and an isocyanate component B, thereby obtaining a polyurethane reaction mixture; providing the polyurethane reaction mixture in a cavity; and reducing the pressure within the cavity to a pressure lower than ambient pressure. The invention also relates to a polyurethane foam obtained by such a method.</p>
+      <p id="p-00002-en" num="0002">It has been reported that in the manufacturing of polyurethane foams from an isocyanate component and a polyol component in the presence of a physical blowing agent an improved thermal isolation is achieved if the blowing agent is dispersed as fine droplets in the polyol component. The reasoning is that these droplets form nucleation sites in the foaming process. The more droplets are present, the more and, most importantly, the smaller cells in the foam are obtained. This leads to a lower thermal conductivity of the foam.</p>
+      <p id="p-00003-en" num="0003">EP 0 905 160 A1 is concerned with emulsions containing polyether alcohols which are used in the production of hard foams based on isocyanates to improve the temperature stability of the foams. Storage-stable halogen-free emulsions used in the production of hard foams based on isocyanates contain: (a) compounds containing hydrogen atoms reactive towards isocyanate groups; (b) water; (c) halogen-free propellants; and optionally (d) usual auxiliary aids and/or additives. (a) is used in an amount of 0.2-80 wt. % and has a functionality of more than 1.5, and an OH number of 10-100 mg KOH/g. (c) consists of 3-10 C hydrocarbons. Independent claims are also included for: (1) the production of the hard foams described; (2) the foams, and (3) the use of the polyether alcohols described.</p>
+      <p id="p-00004-en" num="0004">US 2002/0169228 A1 discloses a phase stable polyol blend composition containing a sucrose and dipropylene glycol co-initiated propylene oxide polyether polyol, a polyester polyol, a compatibilizing agent and a hydrocarbon blowing agent. The polyester polyol is preferably a phthalic anhydride-initiated polyester polyol. The compatibilizing agent is a butanol-initiated propylene oxide polyether surfactant.</p>
+      <p id="p-00005-en" num="0005">WO 2000/24813 A1 relates to a method of preparing a polyurethane foam having excellent heat insulating properties. A method of preparing a rigid polyurethane foam from (1) an organic polyisocyanate comprising an aromatic polyisocyanate, (2) a polyol comprising a polyether polyol and/or polyester polyol, (3) a blowing agent, and (4) a surfactant, a catalyst and other auxiliaries is provided, characterized in that the blowing agent (3) is cyclopentane and water, the polyol (2) is a polyether polyol and/or polyester polyol having poor compatibility with cyclopentane, and cyclopentane is mixed and dispersed in a polyol premix comprising the components (2) to (4).</p>
+      <p id="p-00006-en" num="0006">WO 2006/013004 A1 discloses a method for vacuum foaming refrigerator cabinets in a foaming jig by feeding a chemically reactive mixture into hollow walls of a cabinet to form a polyurethane foam, characterized by the steps of: providing a vacuum chamber; enclosing a foaming jig and a cabinet into said vacuum chamber; connecting the vacuum chamber to a vacuum source; and maintaining vacuum controlled conditions into the vacuum chamber and into the cabinet for a time enabling the foaming polyurethane to rise and fill the hollow walls of the cabinet during the foaming step.</p>
+      <p id="p-00007-en" num="0007">U.S. Pat. No. 5,667,742 discloses a method of manufacturing a rigid polyurethane foam molding for energy absorption, including the steps of introducing a rigid polyurethane foam raw material composed primarily of a polyhydroxy compound and a polyisocyanate compound into a cavity in a mold, and blowing and reacting the rigid polyurethane foam raw material in the cavity, wherein a pack ratio of a core portion of the molding ranges from 0.5 to less than 1.2. Accordingly, the rigid polyurethane foam molding can obtain a plateau value comparable to that of a rigid polyurethane foam slab stock foam suitable for an energy absorbent pad. It is possible that said rigid polyurethane foam raw material is introduced into said cavity and said cavity is then evacuated.</p>
+      <p id="p-00008-en" num="0008">WO 2004/043665 A1 discloses a method for foam molding including foaming a foaming material, characterized in that it comprises a step of providing a mold having an internal space, a step of pressurizing the internal space of the mold, a step of foaming the foaming material under pressure in the internal space of the mold, to thereby control appropriately the foaming of the foaming material, and a step of releasing the internal space of the mold from a pressurized state. The method can be used, in a foam molding of a foaming material, for preventing a closed cell in a foamed product from becoming deformed or shapeless.</p>
+      <p id="p-00009-en" num="0009">WO 2010/094715 A1 discloses a method and an apparatus for foaming a refrigeration container for foodstuffs, with a reactive polyurethane mixture injected under vacuum condition into hollow peripheral walls of the refrigeration container enclosed in a foaming cell. The foaming cell comprises a bottom table for supporting the refrigeration container, side shore panels and an internal shore plug fastened to a closure lid, conformed to rest against outer and inner surfaces of the peripheral walls of the refrigeration container, and sealing gaskets between contact surfaces of the side shore panels, the bottom table and the closure lid, to provide an air-tight closeable foaming cell connectable to a vacuum source.</p>
+      <p id="p-00010-en" num="0010">Further exemplary patent publications dealing with vacuum-assisted foaming are CN 101 474 842 A and CN 101 979 233 A.</p>
+      <p id="p-00011-en" num="0011">WO 95/02620 A1 discloses a process for the preparation of rigid polyurethane foams comprising the step of reacting an organic polyisocyanate with an isocyanate-reactive material in the presence of a blowing promoter which is an isocyanate-reactive cyclic carbonate or cyclic urea, and in the presence of an inert, insoluble organic liquid which is present as the dispersed phase of an emulsion or a microemulsion and a metal salt catalyst and a polyether polyol of average nominal functionality 2 to 6 and number average equivalent molecular weight between 1000 and 2000.</p>
+      <p id="p-00012-en" num="0012">WO 2007/058793 A1 discloses a molded rigid polyurethane foam for application in appliance, having a reduced thermal conductivity at densities between 33 and 38 kg/m<sup>3 </sup>and a process for the production of such foams. The molded rigid polyurethane foam have a ratio of applied foam density (kg/m<sup>3</sup>) to lambda (mW/mK), measured at 10° C., 24 hours after foam production from 1.65 and to 2.15 and are obtained by the process of injecting into a closed mold cavity under reduced pressure a reaction mixture at a packing factor of 1.1 to 1.9 and the reaction mixture comprises: A) an organic polyisocyanate; B) a physical blowing agent, C) a polyol composition containing at least one polyol with a functionality of 3 or greater and a hydroxyl number between 200 and 800 and a water content of 0 to 2.5 weight percent of the total polyol composition; D) catalyst and E) auxiliary substances and/or additives.</p>
+      <p id="p-00013-en" num="0013">WO 2010/111021 A1 discloses a process for preparing a rigid polyurethane foam, comprising: A) forming a reactive mixture containing at least: 1) a polyol mixture containing a) from 7 to less than 20 weight percent of a polyester having a nominal functionality of at least 2.5 to 4 and an OH number of 200 to 500 mg KOH/g. b) from 10 to 50weight percent of a polyol having a nominal hydroxyl functionality of 3 to 6 and an OH-number of 250 to 600 mg KOH/g. of the type i) an aromatic amine initiated polyol; ii) a cycloaliphatic amine initiated polyol; iii) a combination of i) and ii c) from 25 to 60 weight percent of a polyether polyol having a nominal hydroxyl functionality of 6 to 8 and an OH-number of 300 to 700 mg KOH/g; 2) at least one hydrocarbon, hydrofluorocarbon, hydrochlorofluorocarbon, fluorocarbon, dialkyl ether or fluorine-substituted dialkyl ether physical blowing agent; and 3) at least one polyisocyanate; and B) subjecting the reactive mixture to conditions such that the reactive mixture expands and cures to form a rigid polyurethane foam.</p>
+      <p id="p-00014-en" num="0014">WO 2010/046361 A1 discloses a process for preparing a cavity fast-gelling closed cell rigid polyurethane foam comprises preparing a formulation including at least a polyisocyanate, a relatively high viscosity polyol system including at least about 10 percent by weight of an amine-initiated polyol, a physical blowing agent, a blowing catalyst and a curing catalyst, and, optionally, less than about 1.6 weight percent of water based on the polyol system. Other conventional components, such as a chain extender and/or crosslinker, surfactant, and the like may also be included. The formulation is injected under a reduced atmospheric pressure to achieve a closed cell, rigid polyurethane foam having a density of less than about 40 kg/mm<sup>3</sup>, an average cell diameter of less than about 250 microns, and a thermal conductivity of less than about 19 mW/mK at 10° C. average plate temperature.</p>
+      <p id="p-00015-en" num="0015">DE 101 45 458 A1 discloses a rigid polyurethane foam produced from mixtures of (b1) polyfunctional polyether-ols with OH numbers of 40-800 (including at least one with OH no. above 150) and more than 30 wt % ethylene oxide based on total alkylene oxide and (b2) polyether-ols with OH nos. above 40 based mainly on propylene- and/or butylene oxide, using PIR catalysts and an index of 80-500. A method for the production of rigid polyurethane foam with urethane and mainly isocyanurate groups by reacting (a) optionally modified polyisocyanates with (b) a polyol mixture and optionally (c) other compounds with isocyanate-reactive hydrogen atoms, in presence of (d) water, (e) catalysts, (1) fire retardants, (g) blowing agents and optionally (f) other additives etc. The polyol mixture (b) comprises (b1) di- to octa-functional polyether-ol(s) based on ethylene oxide (EO) and optionally propylene oxide (PO) and/or butylene oxide (BO), with an EO content of more than 30 wt % based on total alkylene oxide and an OH number of 40-800 mg KOH/g (including at least one polyether-ol (b1.1) with an OH number of more than 150), and (b2) polyether-ol(s) with an OH number of more than 40, based on PO and/or BO and optionally EO, and the foam is produced with a characteristic index of 80-500 in presence of PIR catalysts.</p>
+      <p id="p-00016-en" num="0016">An ongoing challenge in the handling of blowing agent emulsions in polyols is their stability. This stability is seen as their resistance to phase separation during storage or even under temperature change or under the influence of shear forces which are encountered in mixing heads. According to conventional wisdom an increased stability corresponds with an increased viscosity. This would make the filling of small cavities with foam more difficult.</p>
+      <p id="p-00017-en" num="0017">It would therefore be desirable to have a method of producing polyurethane foam and preferably composite elements with a polyurethane foam having improved thermal insulation properties, wherein the foam is also provided in difficult to reach parts of cavities. Vacuum assisted foaming technology is well known fur several decades. It facilitates the extremely quick filling of cavities and leads to a more even foam distribution.</p>
+      <p id="p-00018-en" num="0018">U.S. Pat. No. 3,970,732 discloses a vacuum assisted molding process method and apparatus, particularly for foamed plastic materials, the reduced pressure in the mold cavity causes the material to foam extremely quickly so as completely to fill the cavity.</p>
+      <p id="p-00019-en" num="0019">U.S. Pat. No. 5,972,260 discloses a process and an apparatus for producing polyurethane insulting panels: At first, air in the foaming cavity is removed by blowing in an inert gas through the interior channel of the foam retaining frame, afterwards the foaming cavity is connected to a vacuum source and a defined quantity of a polyurethane mixture with a pentane blowing agent is injected, allowing the mixture to flow and foam in the panel under the vacuum effect.</p>
+      <p id="p-00020-en" num="0020">In 2000, Cannon published an article: “Sandwich Panels: Innovative Solutions using Vacuum-assisted Foam Injection” at the UTEECH 2000 conference, and therefore introduced a successful industrial practice to produce polyurethane sandwich panels with vacuum assisted technology.</p>
+      <p id="p-00021-en" num="0021">However, it is difficult to apply vacuum to cavities with complex shape, like refrigerator cabinets due to foam leakage.</p>
+      <p id="p-00022-en" num="0022">U.S. Pat. No. 7,943,679 discloses a vacuum assisted foaming process for mold filling of cavities in the appliance industry. The big drawback of this technology is leakage. Applying this vacuum technology leads to extensive foam leakage and therefore to foam spots on visible surfaces of appliances.</p>
+      <p id="p-00023-en" num="0023">Obviously, vacuum technology is well known for several decades (see patents &amp; article mentioned above). But all of them still face the very same problem which is leakage. This technological drawback results in foam spots on visible surfaces. Depending on the size of those spots the effort to remove them becomes tremendously high and produces extra costs for the appliance manufacturer. It is therefore clear that there is a big need for further improved vacuum technologies to overcome the actual leakage and sealing difficulties.</p>
+      <p id="p-00024-en" num="0024">It is therefore an object of the present invention to provide an improved process which overcomes the problems of the prior art, in particular the problem of leakage.</p>
+      <p id="p-00025-en" num="0025">This object has been achieved by a method for the production of polyurethane foam, comprising the steps of:</p>
+      <p id="p-00026-en" num="0026">providing an isocyanate-reactive component A comprising a polyol component A1 which further comprises a physical blowing agent T;</p>
+      <p id="p-00027-en" num="0027">combining at least the isocyanate-reactive component A and an isocyanate component B, thereby obtaining a polyurethane reaction mixture;</p>
+      <p id="p-00028-en" num="0028">providing the polyurethane reaction mixture in a cavity (<b>11</b>); and</p>
+      <p id="p-00029-en" num="0029">reducing the pressure within the cavity (<b>11</b>) to a pressure lower than ambient pressure;</p>
+      <p id="p-00030-en" num="0030">characterized in that the physical blowing agent T is present in the isocyanate-reactive component A in the form of an emulsion with the polyol component A1 constituting the continuous phase and droplets of the physical blowing agent T the dispersed phase of the emulsion,</p>
+      <p id="p-00031-en" num="0031">wherein the average size of the droplets of the physical blowing agent T is ≧0.1 μm to ≦20 μm, the droplet size being determined by using an optical microscope operating in bright field transmission mode. As an example, the pressure is reduced by ≧1 mbar up to ≦900 mbar.</p>
+      <p id="p-00032-en" num="0032">It has surprisingly been found that emulsions with the aforementioned droplet sizes are particularly suitable for vacuum-assisted foaming processes. Their viscosity is low when compared to emulsions with other blowing agent droplet sizes so that complicated interior geometries of cavities may be filled without the need of resorting to excessively high vacuums. Furthermore, the emulsions are stable for the purposes of the preparation of polyurethane foams, “Stable” is meant to signify that the emulsions show no visible phase separation between isocyanate-reactive component A and the blowing agent T, when stored at room temperature (20° C.) and ambient pressure (1013 mbar), for at least 2 hours, preferably at least I day, more preferred 3 days and particularly preferred at least 4 days. The (lack of) phase separation may be observed by examining the sample with the aid of a microscope. The emulsions can display a structural viscosity or shear thinning.</p>
+      <p id="p-00033-en" num="0033">Furthermore, it has been surprisingly found that the vacuum assisted foaming process leads to molded polyurethane foams possessing a more even density distribution and that the application of this technology for the production of appliances results in immaculate foam surfaces with significantly less voids.</p>
+      <p id="p-00034-en" num="0034">Finally, it has been found that the invented vacuum-assisted foaming technology does not struggle with leakage.</p>
+      <p id="p-00035-en" num="0035">Due to their stability, the emulsions may be prepared in advance. This has the advantage that they may be processed on foaming machines which are constructed to accommodate solutions of the blowing agent in the polyol formulation. The emulsions may be prepared by mixing the components for A in arbitrary order, in general at room temperature and ambient pressure and then adding the blowing agent T. The emulsifying may take place using a high shear mixer such as a jet dispergator or a rotor dispergator. If desired, the emulsions may however also be prepared within a mixing head just prior to injection into the cavity.</p>
+      <p id="p-00036-en" num="0036">The inventive method comprises the possibilities that the polyurethane reaction mixture is provided in the cavity before, after or simultaneously with reducing the pressure within the cavity to a pressure lower than ambient pressure.</p>
+      <p id="p-00037-en" num="0037">One preferred embodiment is that the pressure within the cavity is reduced before the polyurethane reaction mixture is provided in the cavity. This is advantageous because evacuation of the cavity may take some time and if a reactive polyurethane reaction mixture is used, foaming already starts when the pressure is still being reduced. This might lead in some cases to undesired foam properties.</p>
+      <p id="p-00038-en" num="0038">Another preferred embodiment is that the pressure within the cavity is reduced after the polyurethane reaction mixture is provided in the cavity. This is advantageous because it minimizes any potential loss of blowing agent.</p>
+      <p id="p-00039-en" num="0039">Owing to the comparatively low viscosity of the emulsion it is possible to strike a favorable balance between filling time, filling precision in difficult spaces and cell disruption in the case of too high vacuum levels applied. For example, the pressure within the cavity may be reduced by ≧1 mbar to ≦900 mbar, preferably ≧20 mbar to ≦600 mbar and more preferred ≧50 mbar to ≦300 mbar. The pressure may be held constant throughout the expansion of the foam within the cavity with the use of a vacuum monitoring system or it may vary, such as being allowed to rise during the expansion or even being lowered to account for an increase in viscosity of the reaction mixture.</p>
+      <p id="p-00040-en" num="0040">According to a particularly preferred embodiment of the inventive method, the cavity is ventilated to ambient pressure before the gel time of the polyurethane reaction mixture is reached, in particular when 60 to 99% of the gel time is reached, preferably 70 to 95% and more preferred 75 to 90%. This embodiment is highly preferred as ventilating the cavity or the system respectively prevents the foam from passing through leaks in the cavity, which often occur in refrigerator housings, in particular near the door sealing area. Protruding foam parts would have to be removed chemically or mechanically afterwards, which increases the production time and costs. Also, ventilation in the before-mentioned manner reduces the risk of foam travelling into the vacuum system.</p>
+      <p id="p-00041-en" num="0041">In the present invention, the cream time is defined as the time from the preparation of the reaction mixture until the recognizable beginning of the foaming mixture. It is determined optically.</p>
+      <p id="p-00042-en" num="0042">The gel time (or string time) is defined as the time from the preparation of the reaction mixture until the transition from the fluid to the solid state is reached. It is determined by repeatingly dipping and pulling out a wooden stick into the reaction mixture. The gel time is reached as soon as strings are formed while pulling the wooden stick out of the reaction mixture.</p>
+      <p id="p-00043-en" num="0043">The tack-free time is defined as the time from the preparation of the foam reaction mixture until the surface of the foam is tack free. It is determined by depositing a wooden stick on the foam surface. The tack-free time is reached if lifting the wooden stick does not lead to delamination or rupture of the foam surface, in other words, when the foam surface is not tacky anymore.</p>
+      <p id="p-00044-en" num="0044">In another embodiment of the method according to the invention the polyurethane reaction mixture has a gel time of ≦50 seconds, preferably ≦40 seconds and more preferred ≦35 seconds. Given reactivities refer to manually prepared foams. A gel time of ≦50 seconds or less may be achieved by the selection of appropriate catalysts and their amounts and of other fast reacting components in the isocyanate-reactive component A.</p>
+      <p id="p-00045-en" num="0045">In another embodiment of the inventive method, before ventilating to ambient pressure the step of reducing the pressure within the cavity to a pressure lower than ambient pressure is conducted in such a way that after the initial reduction of the pressure to a desired level, the pressure is allowed to rise as a consequence of an expansion of the polyurethane reaction mixture, in particular until ambient pressure is reached. In other words, the pressure is at first reduced to a desired level for each cavity area individually, if desired. Then, the vacuum lines are closed and the pressure level in the cavity is left for itself. The pressure level increases within the cavity area during the course of the foaming reaction. This allows to further control the cell growth during foaming and the final cell size of the foam. In its simplest form, vacuum is applied to a closed cavity before and/or after injection of the reaction mixture and then the vacuum application is ceased before the gel time of the reaction mixture.</p>
+      <p id="p-00046-en" num="0046">It is however also in the scope of the present invention that the underpressure in the cavity is maintained during the foaming, in other words, the vacuum lines remain open, in such an embodiment, it is especially preferred that the cavity or system respectively is ventilated to ambient pressure before the gel time of the polyurethane reaction mixture is reached.</p>
+      <p id="p-00047-en" num="0047">A further preferred embodiment of the inventive method is characterized in that before ventilating to ambient pressure, the reduced pressure is mostly kept constant under consideration of technically unavoidable leaking, in particular leaking of the cavity.</p>
+      <p id="p-00048-en" num="0048">According to a preferred embodiment of the inventive method, the pressure within the cavity is adjusted to different levels at different cavity areas, in particular by using two individually operatable vacuum systems. The pressure difference between the at least two different cavity areas can be adjusted to at least 50 mbar, more preferred at least 100 mbar.</p>
+      <p id="p-00049-en" num="0049">It is further preferred that the pressure level within each of the different cavity areas is adjusted with respect to the shape of that cavity area, whereas in particular the pressure level reduction in larger and/or higher cavity areas is higher than in smaller and/or lower cavity areas. In other words, the pressure in each of the areas can be individually adjusted to an optimum regarding the desired foam properties. The optimum pressure level for each cavity area can be identified for a certain polyurethane reaction mixture by some foaming experiments and analysis of the foam structure and foam quality in that particular area. By this measure, the foam growth can be manipulated due to the pressure difference and the air flux within the cavity. It is however also possible that the different cavity areas are separated from each other by a separating member, like a sheet material.</p>
+      <p id="p-00050-en" num="0050">In a further preferred embodiment of the inventive method, the duration of the pressure level reduction is shorter than the gel time of the reaction mixture, wherein the polyurethane reaction mixture has preferably a gel time of ≦50 seconds, whereas in particular the duration of the pressure level reduction is adjusted with respect to the shape of each cavity area and that the duration of reduced pressure in larger and/or higher cavity areas is preferably longer than in smaller and/or lower cavity areas.</p>
+      <p id="p-00051-en" num="0051">The droplet size of the blowing agent T is preferably ≧0.1 μm to ≦15 μm and more preferred ≧1 μm to ≦15 μm. The size is determined via an optical microscope using bright field transmission microscopy. Suitable layer thicknesses for the optical inspection of the specimen are 20 μm to 40 μm.</p>
+      <p id="p-00052-en" num="0052">The cavity into which the reaction mixture is provided, preferably injected, may be a cavity which is sealable on its own. Examples include a mold and closed frames or shells for insulation linings. It is also possible that a space is provided between two or more surfaces and these surfaces are positioned within an evacuatable mold. This may be the case in the production of sheet panels.</p>
+      <p id="p-00053-en" num="0053">The polyurethane foams obtained by the method according to the invention have an average cell size of preferably ≧80 μm to ≦250 μm, more preferably ≧80 μm to ≦250 μm determined by bright field transmission microscopy. Thermal conductivities (DIN 12664) may be in a range of ≧15 mW/m K to ≦25 mW/m K, preferably ≧16 mW/m K to ≦20 mW/m K or ≧16 mW/m K to ≦19 mW/m K.</p>
+      <p id="p-00054-en" num="0054">In describing the present invention the term “polyurethane” or “polyurethane polymer” is meant to encompass polyurethane (PUR) polymers, polyisocyanurate (PIR) polymers, polyurea polymers and mixed polyurethane-polyisocyanurate/polyurea polymers.</p>
+      <p id="p-00055-en" num="0055">The use of the term “a” in connection with components according to the invention such as certain polyols is not to be understood as a numerating term. Expressions like “a polyol” only mean “exactly one polyol” if this expressly stated. For example, it is possible that more than one polyol A1a is present in certain embodiments further outlined below.</p>
+      <p id="p-00056-en" num="0056">An “emulsion” is to be understood as a finely distributed mixture of two liquids, wherein one liquid (the physical blowing agent T) is dispersed in the other liquid (the isocyanate-reactive component A) in the form of small droplets. Such an emulsion is distinct from a solution as well as from a microemulsion. In microemulsions the dispersed phase is so finely distributed that no light scattering occurs. They appear clear and transparent to visible light. In addition, microemulsions can only be prepared with the aid of emulsifiers. In the preparation of the emulsions according to the invention emulsifiers are not excluded per se, but are not strictly necessary.</p>
+      <p id="p-00057-en" num="0057">A “physical blowing agent” is a compound or compound mixture which is volatile and does not react with the isocyanate component.</p>
+      <p id="p-00058-en" num="0058">The “functionality” is the theoretical functionality which may be calculated from known materials used and their mass proportions.</p>
+      <p id="p-00059-en" num="0059">Throughout the present invention the number average molecular weight is to be understood as being determined by gel permeation chromatography according to DIN 555672-1 (August 2007) unless stated otherwise. Likewise, the hydroxyl number (OH number) is to be understood as being determined according to DIN 53240. Viscosities are to be understood as being determined at 25° C. according to EN ISO 3219 (October 1994). Foam densities are to be understood as being determined according to DIN EN 1602 or determined on the samples for thermal conductivity according to DIN 52616 using the corresponding mass.</p>
+      <p id="p-00060-en" num="0060">Polyols used in the isocyanate-reactive component A may be obtained by methods generally known in the art. Polyester polyols are produced by the polycondensation of dicarboxylic acid equivalents and low molecular weight polyols. Polyether polyols are produced by the polyaddition (anionically or cationically) of epoxides to starters. The addition of epoxides to polyester polyols leads to polyester polyether polyols. If needed, catalysts known in the art may be used.</p>
+      <p id="p-00061-en" num="0061">The present invention will now be described with reference to further aspects and embodiments. They may be combined freely unless the context clearly indicates otherwise.</p>
+      <p id="p-00062-en" num="0062">In one embodiment of the method according to the invention the polyol component A1 comprises:</p>
+      <p id="p-00063-en" num="0063">A1a: a polyether polyol with a hydroxyl number of ≧15 mg KOH/g to ≦550 mg KOH/g and a functionality of ≧1.5 to ≦6.0 obtained by the addition of an epoxide to one or more starter compounds selected from the group of carbohydrates and/or at least difunctional alcohols; and</p>
+      <p id="p-00064-en" num="0064">A1b: a polyether polyol with a hydroxyl number of ≧100 mg KOH/g to ≦550 mg KOH/g and a functionality of ≧1.5 to ≦5.0 obtained by the addition of an epoxide to an aromatic amine.</p>
+      <p id="p-00065-en" num="0065">With respect to A1a, the hydroxyl number is preferably ≧50 mg KOH/g to ≦500 mg KOH/g and more preferred ≧100 mg KOH/g to ≦450 mg KOH/g. The OH functionality is preferably ≧2.0 to ≦5.5 and more preferred ≧2.5 to ≦5.0. Preferred starter compounds are saccharose, mixtures of saccharose and propylene glycol, mixtures of saccharose and ethylene glycol, mixtures of saccharose, propylene glycol and ethylene glycol, furthermore sorbitol, or mixtures of sorbitol and glycerine.</p>
+      <p id="p-00066-en" num="0066">Preferred epoxides are 1,2-butylene oxide, 2,3-butylene oxide, ethylene oxide and propylene oxide alone or as mixtures. Particularly preferred are ethylene oxide and propylene oxide which may be employed alone or as mixtures. In the latter case a statistical distribution of the ox alkylene units from the ethylene oxide and propylene oxide as well as the deliberate formation of block copolymer structures is possible. Preferred starter substances are mixtures comprising saccharose, propylene glycol and ethylene glycol and it is preferred to employ only propylene oxide as epoxide.</p>
+      <p id="p-00067-en" num="0067">With respect to A1b, this polyether polyol is preferably started on ortho, meta or para-toluylene diamine or mixtures of these isomers. The hydroxyl number is preferably ≧200 mg KOH/g to ≦500 mg KOH/g and more preferred ≧350 mg KOH/g to ≦470 mg KOH/g. The OH functionality is preferably ≧2.0 to ≦4.5 and more preferred ≧2.5 to ≦4.0. Particularly preferred is ortho-toluylene diamine. This may be present in the form of the 2,3- and the 3,4-isomers. It is also contemplated to employ other aromatic amines such as benzene diamine (all isomers), or methylenediphenyldiamine (all isomers).</p>
+      <p id="p-00068-en" num="0068">Preferred epoxides are 1,2-butylene oxide, 2,3-butylene oxide, ethylene oxide and propylene oxide alone or as mixtures. Particularly preferred are ethylene oxide and propylene oxide which may be employed alone or as mixtures. In the latter case a statistical distribution of the oxyalkylene units from the ethylene oxide and propylene oxide as well as the deliberate formation of block copolymer structures is possible. Preferred starter substances are mixtures comprising saccharose, propylene glycol and ethylene glycol and it is preferred to employ only propylene oxide as epoxide.</p>
+      <p id="p-00069-en" num="0069">It is preferred that the polyol component A1 further comprises:</p>
+      <p id="p-00070-en" num="0070">A1c: a polyester polyether polyol with a hydroxyl number of ≧100 mg KOH/g to ≦450 mg KOH/g and a functionality of ≧1.5 to ≦3.5 obtained by the addition of an epoxide to the esterification product of an aromatic dicarboxylic acid derivative and an at least difunctional alcohol.</p>
+      <p id="p-00071-en" num="0071">With respect to A1c, preferably the aromatic dicarboxylic acid derivative is a phthalic acid derivative, in particular phthalic acid anhydride. The hydroxyl number is preferably ≧150 mg KOH/g to ≦400 mg KOH/g and more preferred ≧200 mg KOH/g to ≦400 mg KOH/g. The OH functionality is preferably ≧1.5 to ≦3.0 and more preferred ≧1.8 to ≦2.8.</p>
+      <p id="p-00072-en" num="0072">Suitable at least difunctional alcohols include ethylene glycol, diethylene glycol and their higher homologues, 1,2-propanediol, dipropylene glycol and higher homologues, 1,3-propanediol, 1,4-butanediol, 1,5-pentanediol, 1,6-hexanediol, 1,7-heptanediol, 1,8-octanediol, 1,9-nonanediol, 1,10-decanediol, 1,11-undecanediol, 1,12-dodecanediol and higher homologues, 2-methylpropanediol-1,3, neopentylglycol, 3-methylpentanediol-1,3, glycerine, pentaerythritol, 1,1,1-trimethylolpropane, and carbohydrates with 5 to 12 carbon atoms such as isosorbid. Preferred are ethylene glycol and diethylene glycol.</p>
+      <p id="p-00073-en" num="0073">Suitable epoxides include ethylene oxide and propylene oxide. They may be used in such an amount that the content of oxyethylene groups is 5 mass-% to 50 mass-%, preferably 10 mass-% to 40 mass-% and particularly preferred 15 mass-% to 30 mass-%, with respect to be total mass of polyol A1c.</p>
+      <p id="p-00074-en" num="0074">Especially suitable is a polyester polyether polyol obtained by the addition of ethylene oxide and/or propylene oxide to the esterification product of phthalic acid anhydride and ethylene and/or propylene glycol.</p>
+      <p id="p-00075-en" num="0075">It is also preferred that the polyol component A1 further comprises:</p>
+      <p id="p-00076-en" num="0076">A1c′: a polyester polyol with a hydroxyl number of ≧100 mg KOH/g to ≦450 mg KOH/g and a functionality of ≧1.5 to ≦3.5 obtained by the esterification of a polycarboxylic acid component and a polyalcohol component, wherein the total content of the dicarboxylic acid derivatives employed in the esterification, based on free aromatic dicarboxylic acids, is ≦48.5 mass-%, based on the total mass of polyalcohol component ant polycarboxylic acid component.</p>
+      <p id="p-00077-en" num="0077">With respect to A1c′, the hydroxyl number is preferably ≧150 mg KOH/g to ≦400 mg KOH/g and more preferred ≧200 mg KOH/g to ≦400 mg KOH/g. The OH functionality is preferably ≧1.5 to ≦3.0 and more preferred ≧1.8 to ≦2.8.</p>
+      <p id="p-00078-en" num="0078">Suitable polycarboxylic acid components include polycarboxylic acids with 2 to 36, preferably 2 to 12 carbon atoms. Preferred are succinic acid, fumaric acid, maleic acid, maleic acid anhydride, glutaric acid, adipic acid, sebacic acid, suberic acid, azelaic acid, 1,10-decanedicarboxylic acid, 1,12-dodecanedicarboxylic acid, phthalic acid, phthalic acid anhydride, isophthalic acid, terephthalic acid, pyromellitic acid and/or trimellitic acid. Particularly preferred are phthalic acid and phthalic acid anhydride or phthalic acid and adipic acid.</p>
+      <p id="p-00079-en" num="0079">Suitable at least difunctional alcohols include ethylene glycol, diethylene glycol and their higher homologues, 1,2-propanediol, dipropylene glycol and higher homologues, 1,3-propanediol, 1,4-butanediol, 1,5-pentanediol, 1,6-hexanediol, 1,7-heptanediol, 1,8-octanediol, 1,9-nonanediol, 1,10-decanediol, 1,11-undecanediol, 1,12-dodecanediol and higher homologues, 2-methylpropanediol-1,3, neopentylglycol, 3-methylpentanediol-1,3, glycerine, pentaerythritol, 1,1,1-trimethylolpropane, and carbohydrates with 5 to 12 carbon atoms such as isosorbid. Preferred are ethylene glycol and diethylene glycol.</p>
+      <p id="p-00080-en" num="0080">Especially suitable is a polyester polyol obtained from phthalic acid and phthalic acid anhydride or phthalic acid and adipic acid as the acid component and ethylene glycol and/or diethylene glycol as the alcohol component.</p>
+      <p id="p-00081-en" num="0081">It is also preferred that the polyol component A1 further comprises:</p>
+      <p id="p-00082-en" num="0082">A1d: a polyether polyol with a hydroxyl number of ≧500 mg KOH/g to ≦1000 mg KOH/g and a functionality of ≧1.5 to ≦5.0 obtained by the addition of an epoxide to an aliphatic amine and/or a polyfunctional alcohol. Preferably the hydroxyl number is ≧600 mg KOH/g to ≦950 mg KOH/g and more preferably ≧700 mg KOH/g to ≦900 mg KOH/g and the functionality is preferably ≧2.0 to ≦4.5, more preferred ≧2.5 to ≦4.0. It is particularly preferred that polyol A1d is obtained by the addition of epoxides to ethylene diamine or trimethylolpropane. Preferred epoxides are ethylene oxide and propylene oxide, the latter being particularly preferred.</p>
+      <p id="p-00083-en" num="0083">In another embodiment of the method according to the invention the polyol component A1 further comprises:</p>
+      <p id="p-00084-en" num="0084">A1e: a di-, tri- or tetrafunctional aminic or alcoholic chain extender or cross-linker. A1e is preferably chosen from the group of glycerine, butanediol, ethylene glycol, diethylene glycol, propylene glycol, ethylene diamine, ethanolamine, triethanolamine, trimethylolpropane and/or pentaerythritol.</p>
+      <p id="p-00085-en" num="0085">The polyol component A1 may further comprise polyethercarbonate polyols A1f such as those obtained by the catalyzed reaction of epoxides and carbon dioxide in the presence of H-functional starter substances (e.g., EP 2 046 861 A1). These polyethercarbonate polyols usually have a functionality of ≧1, preferably ≧2.0 to ≦8.0 and particularly preferred ≧2.0 to ≦6.0. Their number average molecular weight is preferably ≧400 g/mol to ≦10000 g/mol, preferably ≧500 g/mol to ≦6000 g/mol.</p>
+      <p id="p-00086-en" num="0086">In another embodiment of the method according to the invention the physical blowing agent T is selected from the group of hydrocarbons, halogenated ethers and/or perfluorinated hydrocarbons with 1 to 6 carbon atoms. Particularly preferred are butane, isobutane, n-pentane, isopentane, cyclopentane, n-hexane, isohexane, cyclohexane, methylal and perfluorohexane. Cyclopentane is most preferred. These blowing agents form an emulsion with the isocyanate reactive component A under the prevalent conditions (pressure temperature).</p>
+      <p id="p-00087-en" num="0087">In general it is advantageous that the isocyanate-reactive component A comprises adjuvants, additives and the like such as water, foam stabilizers, catalysts, flame retardants, etc. Therefore, in another embodiment of the method according to the invention the isocyanate-reactive component A further comprises:</p>
+      <p id="p-00088-en" num="0088">A2: water;</p>
+      <p id="p-00089-en" num="0089">A3: at least one stabilizer selected from the group of polyether polydimethylsiloxane copolymers; (preferably those copolymers which have been functionalized with propylene oxide- or ethylene oxide-containing polyether side chains) and</p>
+      <p id="p-00090-en" num="0090">A4: at least one catalyst selected from the group of triethylenediamine, N,N-dimethylcyclohexylamine, tetramethylenediamine, 1-methyl-4-dimethylaminoethylpiperazine, triethylamine, tributylamine, dimethylbenzylamine, N,N′N″-tris-(dimethylaminopropyl)hexahydrotriazine, dimethylaminopropylformamide, N,N,N′,N′-tetramethylethylenediamine, N,N,N′,N′-tetramethylbutanediamine, tetramethylhexanediamine, pentamethyldiethylenetriamine, tetramethyldiaminoethyl ether, dimethylpiperazine, 1,2-dimethylimidazole, 1-azabicyclo[3.3.0]octane, bis(dimethylaminopropyl)urea, N-methylmorpholine, N-ethylmorpholine, N-cyclohexylmorpholine, 2,3-dimethyl-3,4,5,6-tetrahydropyrimidine, triethanolamine, diethanolamine, triisopropanolamine, N-methyldiethanolamine, N-ethyldiethanolamine and/or dimethylethanolamine.</p>
+      <p id="p-00091-en" num="0091">In case a high polyisocyanurate content is desired a catalyst selected from the group of tin(II) acetate, tin(II) octoate, tin(II) ethylhexoate, laurate, dibutyltindiacetate, dibutyltindilaurate, dioctyltindiacetate, tris-(N,N-di-methylaminopropyl)-s-hexahydrotriazine, tetramethylammonium hydroxide, sodium acetate, sodium octoate, potassium acetate, potassium octoate and/or sodium hydroxide.</p>
+      <p id="p-00092-en" num="0092">The added water acts as a chemical co-blowing agent. By reacting with NCO groups carbon dioxide is liberated which acts as a blowing agent in addition to T. An optional chemical co-blowing agent that may be selected is formic acid or another carboxylic acid. While formic acid is the carboxylic acid of preference, it is also contemplated that minor amounts of other aliphatic mono- and polycarboxylic acids may be employed, such as those disclosed in U.S. Pat. No. 5,143,945, which is incorporated herein by reference in its entirety, and including isobutyric acid, ethylbutyric acid, ethylhexanoic acid, and combinations thereof.</p>
+      <p id="p-00093-en" num="0093">In another embodiment of the method according to the invention the mass ratio of A1:T is ≧5:1 to ≦12:1. This mass ratio is contemplated in the interest of obtaining emulsions which are as stable as possible. Preferably the mass ratio is ≧5.5:1 to ≦10:1 and more preferred ≧6:1 to ≦9:1.</p>
+      <p id="p-00094-en" num="0094">In another embodiment of the method according to the invention the polyol component A1 has a viscosity according to EN ISO 3219 at 20° C. of ≧1000 mPas to ≦18000 mPas. Preferably the viscosity is ≧1500 mPas to ≦15000 mPas and more preferred ≧2000 mPas to ≦12000 mPas.</p>
+      <p id="p-00095-en" num="0095">In particularly preferred cases no further components are present in the emulsion. The emulsion then consists of, at the most, A1a, A1b, A1c/A1c′, A1d, A1e, A1f, A2, A3, A4 and T. Particularly preferred are emulsions consisting of A1a, A1b, A1c/A1c′, A2, A3, A4 and T.</p>
+      <p id="p-00096-en" num="0096">The emulsions may be prepared by mixing the components for A in arbitrary order, in general at room temperature and ambient pressure and then adding the blowing agent T. The emulsifying may take place using a high shear mixer such as a jet dispergator or a rotor dispergator. Representative examples include those published in Schubert, H. (editor); Emulgiertechnik; R. Behr's Verlag, Hamburg, 2005.</p>
+      <p id="p-00097-en" num="0097">Such emulsions obtained are particularly stable without having an excessively high viscosity. “Stable” is meant to signify that the emulsions show no visible phase separation between isocyanate-reactive component A and the blowing agent T, when stored at room temperature (20° C.) and ambient pressure (1013 mbar), for at least 2 hours, preferably at least 1 day, more preferred 3 days and particularly preferred 4 days. The (lack of) phase separation may be observed by examining the sample with the aid of a microscope.</p>
+      <p id="p-00098-en" num="0098">In another embodiment of the method according to the invention the isocyanate component B comprises:</p>
+      <p id="p-00099-en" num="0099">B1: at least one isocyanate selected from the group of toluylene diisocyanate, diphenylmethane diisocyanate, polyphenylpolymethylene polyisocyanate, xylylene diisocyanate, naphthylene diisocyanate, hexamethylene diisocyanate, diisocyanatodicylclohexylmethane and/or isophorone diisocyanate;</p>
+      <p id="p-00100-en" num="0100">and/or</p>
+      <p id="p-00101-en" num="0101">B2: an isocyanate-terminated prepolymer obtained from a least one polyisocyanate B1 and at least one isocyanate reactive compound selected from the group of: <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>A1a: a polyether polyol with a hydroxyl number of ≧15 mg KOH/g to ≦550 mg KOH/g and a functionality of ≧1.5 to ≦6.0 obtained by the addition of an epoxide to one or more starter compounds selected from the group of carbohydrates and/or at least difunctional alcohols;</li><li>A1b: a polyether polyol with a hydroxyl number of ≧100 mg KOH/g to ≦550 mg KOH/g and a functionality of ≧1.5 to ≦5.0 obtained by the addition of an epoxide to an aromatic amine;</li><li>A1c: a polyester polyether polyol with a hydroxyl number of ≧100 mg KOH/g to ≦450 mg KOH/g and a functionality of ≧1.5 to ≦3.5 obtained by the addition of an epoxide to the esterification product of an aromatic dicarboxylic acid derivative and an at least difunctional alcohol;</li><li>A1c′: a polyester polyol with a hydroxyl number of ≧100 mg KOH/g to ≦450 mg KOH/g and a functionality of ≧1.5 to ≦3.5 obtained by the esterification of a polycarboxylic acid component and a polyalcohol component, wherein the total content of the dicarboxylic acid derivatives employed in the esterification, based on free aromatic dicarboxylic acids, is ≦48.5 mass-%, based ≧5 on the total mass of polyalcohol component ant polycarboxylic acid component;</li><li>A1d: a polyether polyol with a hydroxyl number of ≧500 mg KOH/g to ≦1000 mg KOH/g and a functionality of ≧1.5 to ≦5.0 obtained by the addition of an epoxide to an aliphatic amine and/or a polyfunctional alcohol; and/or</li><li>A1f: a polyether carbonate polyol with a functionality of ≧1 to ≦8.0 and a number average molecular weight of ≧400 g/mol to ≦10000 g/mol.</li></ul></li></ul></p>
+      <p id="p-00102-en" num="0108">Preferred polyols A1a-f have already been described in connection with the isocyanate-reactive component A and can, of course, also be employed for the prepolymers.</p>
+      <p id="p-00103-en" num="0109">It is preferred that the reaction of the isocyanate component B with the isocyanate-reactive component A is performed at an index of ≧95 to ≦180, ≧95 to ≦150 or ≧100 to ≦130. The “index” is to be understood as the quotient of NCO groups employed [mol] divided by the stoichiometrically needed NCO-reactive groups [mol] multiplied by 100. As one NCO-reactive group reacts with one NCO group, the index is:</p>
+      <p id="p-00104-en" num="0000">[in-line-formulae]index=(mol NCO groups/mol NCO-reactive groups)×100[/in-line-formulae]</p>
+      <p id="p-00105-en" num="0110">As the method according to the present invention is especially suited for filling cavities with complicated interior geometries, in another embodiment of the method according to the invention the cavity into which the polyurethane reaction mixture is provided is a refrigerator insulation frame. Of course, insulation frames for refrigerator-deep freezer combinations are also encompassed.</p>
+      <p id="p-00106-en" num="0111">Another aspect of the present invention is a polyurethane foam obtained by a method according to the invention. Preferably this foam has a core density of ≧27 kg/m<sup>3 </sup>to ≦45 kg/m<sup>3 </sup>determined according to DIN 12664. An even more preferred core density is ≧29 kg/m<sup>3 </sup>to ≦40 kg/17(3<sup>3 </sup>determined according to DIN 12664.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00001-en" level="1">EXAMPLES</heading>
+      <p id="p-00107-en" num="0112">The invention will be further described with reference to the following examples and figures without wishing to be limited by them.</p>
+      <p id="p-00108-en" num="0113">
+        <figref>FIG. 1</figref> shows a bright field transmission microscopy image of the soluble polyol formulation according to comparative example 1.</p>
+      <p id="p-00109-en" num="0114">
+        <figref>FIG. 2</figref> shows an image of the emulsion system according to example 2.</p>
+      <p id="p-00110-en" num="0115">
+        <figref>FIG. 3</figref> shows a scheme of the apparatus for the reduced pressure assisted foaming technology (RAF).</p>
+      <p id="p-00111-en" num="0116">
+        <figref>FIG. 4</figref> shows a photograph of a molded polyurethane foam in the freezer department of an appliance cabinet being prepared according the reduced pressure technology of the present invention.</p>
+      <p id="p-00112-en" num="0117">
+        <figref>FIG. 5</figref> shows a photograph of a molded polyurethane foam prepared of the identical polyurethane reaction mixture in the freezer department of another appliance cabinet being prepared under standard conditions.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <p id="p-00113-en" num="0118">In <figref>FIG. 3</figref>, an apparatus <b>1</b> for the reduced pressure assisted foaming (RAF) is presented. The apparatus <b>1</b> comprises two vacuum pumps <b>2</b>, <b>3</b> for reducing the pressure in the system, two vacuum buffer tanks <b>4</b>, <b>5</b> for maintaining the pressure level, which are connected to the vacuum pumps <b>2</b>, <b>3</b>, valves <b>6</b>, pressure gauges <b>7</b> for measuring the pressure, an automatic control system <b>8</b> for adjusting the pressure, sound silencers <b>9</b> for noise reduction and pressure release devices <b>10</b> for instant ventilation.</p>
+      <p id="p-00114-en" num="0119">The apparatus <b>1</b> further comprises a foaming jig <b>11</b> for the fabrication of foamed parts, to which a connect panel <b>12</b> can be attached as can be seen in the sectional view at the intersection A-A included in <figref>FIG. 3</figref>. The foaming jig <b>11</b> comprises two cavity areas <b>11</b><i>a, </i><b>11</b><i>b, </i>whereas the pressure in each of the cavity areas <b>11</b><i>a, </i><b>11</b><i>b </i>can be separately regulated by the automatic control systems <b>8</b> which dynamically regulate the pressure between the vacuum buffer tanks <b>4</b>, <b>5</b> and the respective cavity areas <b>11</b><i>a, </i><b>11</b><i>b </i>during the foaming cycle. The polyurethane reaction mixture is injected into the cavity <b>11</b> by an injection pipe <b>13</b>.</p>
+      <p id="p-00115-en" num="0120">In the present invention, the reduced pressure foaming jig is connected to at least two separated vacuum systems. However, the inventive method can also be carried out with a single vacuum system. Since no absolute vacuum is necessary to successfully apply this technology minor sealing faults of the jig are acceptable in production which greatly reduces manufacturing costs. The pressure is no longer reduced than the gel time of the polyurethane reaction mixture. The period for the reduced pressure treatment and the level of the pressure reduction are adjusted and optimized individually with respect to the shape and the volume of a cavity and the reaction profile of the polyurethane reaction mixture. Foam leakage can be prevented by immediate venting of the cabinet once it has been fully filled.</p>
+      <p id="p-00116-en" num="0121">The PUR rigid foams can be prepared according to the one-step procedure known in the art where the reaction components are reacted with each other in a continuous or discontinuous fashion and then are applied onto or into suitable forms or substrates. Examples include those published in G. Oertel (editor) “Kunststoff-Handbuch”, volume VII, Carl Hanser Verlag, 3<sup>rd </sup>edition, Munich 1993, pages 267 et seq., and in K. Uhlig (editor) “Polyurethan Taschenbuch”, Carl Hanser Verlag, 2<sup>nd </sup>edition, Vienna 2001, pages 83-102.</p>
+      <p id="p-00117-en" num="0122">In the present case the two-component system with an emulsion (A side) of physical blowing agent in the polyol formulation and an isocyanate (B side) was processed by conventional mixing of these components in a laboratory scale stirring apparatus.</p>
+      <heading id="h-00002-en" level="2">Glossary</heading>
+      <p id="p-00118-en" num="0000">
+        <ul id="ul-00003-en" list-style="none">
+          <li>
+            <ul id="ul-00004-en" list-style="none">
+              <li>Polyol Polyether polyol with a hydroxyl number of 450 mg KOH/g, a theoretical functionality of 4.7 and a viscosity of 15000 mPas at 25° C. (Bayer MaterialScience);</li>
+              <li>Polyol 2: Polyether polyol with a hydroxyl number of 470 mg KOH/g, a theoretical functionality of 4.0 and a viscosity of 8000 mPas at 25° C. (Bayer MaterialScience);</li>
+              <li>Polyol 3: aromatic polyetherester polyol with a hydroxyl number of 300 mg KOH/g, a theoretical functionality of 2.0 and a viscosity of 6500 mPas at 25° C., prepared from the reaction of phthalic acid anhydride with diethylene glycol, followed by ethoxylation (Bayer MaterialScience);</li>
+              <li>Polyol 4. Polyetherpolyol with a hydroxyl number of 380 mg KOH/g, a theoretical functionality of 4.6 and a viscosity of 5350 mPas at 25° C. (Bayer MaterialScience)</li>
+              <li>Polyol 5: Polyether polyol with a hydroxyl number of 400 mg KOH/g, a theoretical functionality of 4.0 and a viscosity of 26500 mPas at 25° C. (Bayer MaterialScience);</li>
+              <li>Tegostab® surfactant: Foam stabilizer (Evonik)</li>
+              <li>amine catalyst tertiary amines which are standard catalysts in rigid foam applications and well known to the skilled person in this art</li>
+              <li>Isocyanate: Polymeric MDI (Desmodur® 44 V20L, Bayer MaterialScience)</li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+      <p id="p-00119-en" num="0131">Preparation of the Emulsions</p>
+      <p id="p-00120-en" num="0132">A reaction vessel was charged with the polyols according to the recipes as given in table 1. The required amounts of additives such as water, catalysts and stabilizers were metered in individually. Cyclopentane as the physical blowing agent was then added and all components were homogenized for 60 seconds at 4200 rpm. The emulsions thus prepared were stored at 20° C. to assess their stability and visually inspected for phase separations daily.</p>
+      <p id="p-00121-en" num="0133">Determination of Droplet Sizes</p>
+      <p id="p-00122-en" num="0134">The quality of an emulsion was evaluated directly after preparation by measuring the droplet size. To this effect, the emulsion was inspected visually in an optical microscope using bright field transmission microscopy in a layer thickness of the specimen of 20 μm to 40 μm. The microscope used was an Axioplan 2 microscope from Zeiss. Average droplet sizes of a non-aged emulsion thus determined were below 10 μm.</p>
+      <p id="p-00123-en" num="0135">PUR Foam Preparation</p>
+      <p id="p-00124-en" num="0136">In general, only freshly prepared emulsions were used in PUR foam preparation. Between the preparation of an emulsion and its processing into PUR foam a time period of at most one hour had lapsed. Emulsions and the isocyanate were mixed in a laboratory using a stirrer at 4200 rpm, brought to reaction with each other and poured into a mould. The starting materials had a temperature of 20° C. and the mould had a temperature of 40° C. The foams thus prepared were analyzed with respect to their core density, cell size and thermal conductivity.</p>
+      <p id="p-00125-en" num="0137">Reactivity and Free-Rise Density Measurement</p>
+      <p id="p-00126-en" num="0138">To determine the reactivity and the free rise density, a total of 250 g material was mixed and poured into a card box. The cream time, gel time and tack free time were measured during foam rise using a wooden stick. The free rise density was determined 24 hours after foaming using foam pieces out of the foam core and following the principle of Archimedes.</p>
+      <p id="p-00127-en" num="0139">Cell Size Determination</p>
+      <p id="p-00128-en" num="0140">PUR rigid foam samples were cut into slices of 90 μm to 300 μm thickness using a vibrating microtome (Microm HM 650 V, Microm). Bright field transmission microscopy pictures (Axioplan, Zeiss) were taken. For statistical reasons, per analysis for at least 500 cell windows the area of two orthogonal spatial directions was determined. Using the area of each analyzed cell window, a dodecahedron was calculated whose diameter was equated to the diameter of a PUR rigid foam cell. These diameters were averaged and correspond to the cell diameters as stated below.</p>
+      <p id="p-00129-en" num="0141">PUR Foam Preparation Under Reduced Pressure</p>
+      <p id="p-00130-en" num="0142">For comparative reasons machine trials under reduced pressure and under standard conditions were prepared with the identical equipment (HP machine of Hennecke, Mont. 18 mixing head) in identical cabinet models (BCD-570WFPM). Unless otherwise stated, the raw material temperature was 20° C. (tank), the pressure was 130 bars (mixing head) and the mold temperature was 40° C.</p>
+      <p id="p-00131-en" num="0143">Thermal conductivities were determined according to DIN 12664 and, unless stated otherwise, were measured at 10° C. central temperature.</p>
+      <p id="p-00132-en" num="0144">Core densities given were determined on the samples for thermal conductivity according to DIN 12664 using the corresponding mass.</p>
+      <p id="p-00133-en" num="0145">Table 1 compares the recipe of an emulsion system (2) with a soluble polyol formulation (1) including the properties of the manually prepared PUR rigid foams obtained in the lab.</p>
+      <p id="p-00134-en" num="0146">Table 2 summarizes representative machine data acquired with an emulsion system (2) and a soluble polyol formulation (1).</p>
+      <p id="p-00135-en" num="0147">Table 3 compares representative machine data acquired with the emulsion system (2) under standard conditions and under reduced pressure conditions.</p>
+      <p id="p-00136-en" num="0148">The comparative example 1 involves a modern PUR recipe for current demands on insulation applications for example in appliances. It is already optimized for low thermal conductivities and is a so-called soluble formulation where the physical blowing agent used is completely dissolved in the polyol mixture. Therefore, the nucleating action of droplets can be excluded. It is still appropriate to compare examples 1 and 2 because their reaction profiles are similar. The gel times of 36 seconds for the soluble system (1) and 27 seconds for the emulsion system (2) are similarly short and the free-rise densities of the PUR foams are nearly identical.</p>
+      <p id="p-00137-en" num="0149">In a representative machine trial pieces of PUR rigid foam were prepared with identical dimensions, thereby ensuring that the properties determined therefrom can be compared with each other. It is noted that the minimum fill density in example 1 is significantly lower than in example 2. This is the density that is created when a mould is filled by the PUR rigid foam without overpacking. The higher minimum fill density can be explained by less favorable flowing characteristics of the emulsion system (which can be, of course, addressed by applying a vacuum during processing). Therefore, more reaction mixture must be injected at normal pressure to fill the foam as in the case of the soluble system.</p>
+      <p id="p-00138-en" num="0150">Still the thermal conductivity value is better by 0.5 mW m<sup>−1</sup>K<sup>−1 </sup>although the PUR rigid foam displayed a higher core density. Without wishing to be bound by theory, it is believed that this difference can be attributed to the nucleation effect of the droplets in the emulsion. This creates more nucleation sites and therefore lowers the average cell size. A reduction by 40% in cell size is observed from comparative example 1 to example 2.</p>
+      <p id="p-00139-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Lab data</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="133pt" align="left" />
+              <colspec colname="1" colwidth="84pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Example</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="84pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="left" />
+              <colspec colname="3" colwidth="49pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>1 (comparative)</entry>
+                  <entry>2</entry>
+                </row>
+                <row>
+                  <entry>Polyol system</entry>
+                  <entry />
+                  <entry>1</entry>
+                  <entry>2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="84pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="left" />
+              <colspec colname="3" colwidth="49pt" align="char" char="." />
+              <colspec colname="4" colwidth="35pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Polyol 1</entry>
+                  <entry>Weight-parts</entry>
+                  <entry>35.0</entry>
+                  <entry>40.0</entry>
+                </row>
+                <row>
+                  <entry>Polyol 2</entry>
+                  <entry>Weight-parts</entry>
+                  <entry />
+                  <entry>12.0</entry>
+                </row>
+                <row>
+                  <entry>Polyol 3</entry>
+                  <entry>Weight-parts</entry>
+                  <entry />
+                  <entry>40.0</entry>
+                </row>
+                <row>
+                  <entry>Polyol 4</entry>
+                  <entry>Weight-parts</entry>
+                  <entry>40.0</entry>
+                </row>
+                <row>
+                  <entry>Polyol 5</entry>
+                  <entry>Weight-parts</entry>
+                  <entry>25.0</entry>
+                  <entry>8.0</entry>
+                </row>
+                <row>
+                  <entry>Water</entry>
+                  <entry>Weight-parts</entry>
+                  <entry>2.4</entry>
+                  <entry>1.3</entry>
+                </row>
+                <row>
+                  <entry>Tegostab ® surfactant</entry>
+                  <entry>Weight-parts</entry>
+                  <entry>2.0</entry>
+                  <entry>2.0</entry>
+                </row>
+                <row>
+                  <entry>amine catalyst</entry>
+                  <entry>Weight-parts</entry>
+                  <entry>4.18</entry>
+                  <entry>2.22</entry>
+                </row>
+                <row>
+                  <entry>Cyclopentane<sup>a</sup></entry>
+                  <entry>Weight-parts</entry>
+                  <entry>16</entry>
+                  <entry>14</entry>
+                </row>
+                <row>
+                  <entry>Isocyanate<sup>a</sup></entry>
+                  <entry>Weight-parts</entry>
+                  <entry>151</entry>
+                  <entry>120</entry>
+                </row>
+                <row>
+                  <entry>Index</entry>
+                  <entry>NCO/OH</entry>
+                  <entry>318</entry>
+                  <entry>110</entry>
+                </row>
+                <row>
+                  <entry>Appearance</entry>
+                  <entry>qualitative</entry>
+                  <entry>clear</entry>
+                  <entry>cloudy</entry>
+                </row>
+                <row>
+                  <entry>Droplet size<sup>b</sup></entry>
+                  <entry>μm</entry>
+                  <entry>—</entry>
+                  <entry>8</entry>
+                </row>
+                <row>
+                  <entry>Emulsion storage stability</entry>
+                  <entry>d</entry>
+                  <entry>—</entry>
+                  <entry>&gt;4</entry>
+                </row>
+                <row>
+                  <entry>Cream time</entry>
+                  <entry>s</entry>
+                  <entry>8</entry>
+                  <entry>6</entry>
+                </row>
+                <row>
+                  <entry>Gel time</entry>
+                  <entry>s</entry>
+                  <entry>36</entry>
+                  <entry>27</entry>
+                </row>
+                <row>
+                  <entry>Tack-free time</entry>
+                  <entry>s</entry>
+                  <entry>70</entry>
+                  <entry>42</entry>
+                </row>
+                <row>
+                  <entry>Free-rise density</entry>
+                  <entry>kg/m<sup>3</sup></entry>
+                  <entry>23.7</entry>
+                  <entry>25.1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="left" id="entry-00001-en">
+                    <sup>a</sup>for 100 weight-parts of polyol formulation;</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="left" id="entry-00002-en">
+                    <sup>b</sup>determined on a non-aged emulsion.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00140-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Representative machine data</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="133pt" align="left" />
+              <colspec colname="1" colwidth="77pt" align="center" />
+              <colspec colname="2" colwidth="7pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Example</entry>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="left" />
+              <colspec colname="3" colwidth="49pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>1 (comparative)</entry>
+                  <entry>2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Polyol system</entry>
+                  <entry />
+                  <entry>1</entry>
+                  <entry>2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="left" />
+              <colspec colname="3" colwidth="49pt" align="char" char="." />
+              <colspec colname="4" colwidth="35pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Cream time</entry>
+                  <entry>s</entry>
+                  <entry>2</entry>
+                  <entry>2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Gel time</entry>
+                  <entry>s</entry>
+                  <entry>23</entry>
+                  <entry>17</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Free-rise density</entry>
+                  <entry>kg/m<sup>3</sup></entry>
+                  <entry>23.7</entry>
+                  <entry>24.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Minimum fill density</entry>
+                  <entry>kg/m<sup>3</sup></entry>
+                  <entry>30.7</entry>
+                  <entry>34.7</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Core density</entry>
+                  <entry>kg/m<sup>3</sup></entry>
+                  <entry>30</entry>
+                  <entry>33</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Thermal conductivity</entry>
+                  <entry>mW m<sup>−1</sup>K<sup>−1</sup></entry>
+                  <entry>18.9</entry>
+                  <entry>18.4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Cell size<sup>a</sup></entry>
+                  <entry>μm</entry>
+                  <entry>150</entry>
+                  <entry>90</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="left" id="entry-00003-en">
+                    <sup>a</sup>according to an in-house procedure described previously.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00141-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 3</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Cabinet filling trial results with emulsion system (2) under standard</entry>
+                </row>
+                <row>
+                  <entry>conditions and reduced pressure conditions.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="140pt" align="left" />
+              <colspec colname="1" colwidth="77pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Example</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="left" />
+              <colspec colname="3" colwidth="49pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>3 (comparative)</entry>
+                  <entry>4</entry>
+                </row>
+                <row>
+                  <entry>Polyol system</entry>
+                  <entry />
+                  <entry>2</entry>
+                  <entry>2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="left" />
+              <colspec colname="3" colwidth="49pt" align="char" char="." />
+              <colspec colname="4" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Foam filling weight</entry>
+                  <entry>kg</entry>
+                  <entry>11.35</entry>
+                  <entry>11.35</entry>
+                </row>
+                <row>
+                  <entry>Δ Foam jig pressure</entry>
+                  <entry>mbar</entry>
+                  <entry>0</entry>
+                  <entry>−200</entry>
+                </row>
+                <row>
+                  <entry>Reduced pressure time</entry>
+                  <entry>s</entry>
+                  <entry>0</entry>
+                  <entry>15</entry>
+                </row>
+                <row>
+                  <entry>Cream time</entry>
+                  <entry>s</entry>
+                  <entry>4</entry>
+                  <entry>4</entry>
+                </row>
+                <row>
+                  <entry>Gel time</entry>
+                  <entry>s</entry>
+                  <entry>21</entry>
+                  <entry>21</entry>
+                </row>
+                <row>
+                  <entry>Free-rise density</entry>
+                  <entry>kg/m<sup>3</sup></entry>
+                  <entry>23.3</entry>
+                  <entry>23.3</entry>
+                </row>
+                <row>
+                  <entry>Demold time</entry>
+                  <entry>Minutes</entry>
+                  <entry>10</entry>
+                  <entry>10</entry>
+                </row>
+                <row>
+                  <entry>Foam core density<sup>a</sup></entry>
+                  <entry>kg/m<sup>3</sup></entry>
+                  <entry>34.5</entry>
+                  <entry>36.0</entry>
+                </row>
+                <row>
+                  <entry>Thermal conductivity<sup>a </sup>(10° C.)</entry>
+                  <entry>mW m<sup>−1</sup>K<sup>−1</sup></entry>
+                  <entry>18.3</entry>
+                  <entry>18.4</entry>
+                </row>
+                <row>
+                  <entry>Average compression strength<sup>a</sup></entry>
+                  <entry>kPa</entry>
+                  <entry>233</entry>
+                  <entry>243</entry>
+                </row>
+                <row>
+                  <entry>Cell size<sup>b</sup></entry>
+                  <entry>μm</entry>
+                  <entry>90-100</entry>
+                  <entry>90-100</entry>
+                </row>
+                <row>
+                  <entry>Void formation</entry>
+                  <entry />
+                  <entry>serious</entry>
+                  <entry>no</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="left" id="entry-00004-en">
+                    <sup>a</sup>foam samples taken from the divider part of the cabinet,</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="left" id="entry-00005-en">
+                    <sup>b</sup>according to an in-house procedure described previously.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00142-en" num="0151">As shown in Table 3, the reduced pressure foaming technology does not interfere with the properties of so obtained polyurethane foams. The thermal conductivity values and cell sizes of foams obtained under standard conditions (3) are very well comparable to those obtained under reduced pressure conditions (4). Furthermore, the core density is even higher in case of example (4) although identical filling weights had been used in case of both examples. Finally cabinets having been filled with polyurethane foam under reduced pressure as in case of example (4) do not show any voids on the foam surface which directly illustrates a very even distribution of the polyurethane foam within the cabinet. This even foam distribution is known to induce a significant reduction of the overall energy consumption of appliances which therefore exceeds the performance of foams having been molded under standard conditions.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>.-<b>20</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>21</b>. A method for the production of a polyurethane foam, comprising the steps of:
+<claim-text>providing an isocyanate-reactive component A comprising a polyol component A1 which further comprises a physical blowing agent T;</claim-text><claim-text>combining at least the isocyanate-reactive component A and an isocyanate component B, forming a polyurethane reaction mixture;</claim-text><claim-text>providing the polyurethane reaction mixture in a cavity; and</claim-text><claim-text>reducing the pressure within the cavity to a pressure lower than ambient pressure;</claim-text><claim-text>wherein the physical blowing agent T is present in the isocyanate-reactive component A in the form of an emulsion with the polyol component A1 constituting the continuous phase and droplets of the physical blowing agent T the dispersed phase of the emulsion,</claim-text><claim-text>wherein the average size of the droplets of the physical blowing agent T is ≧0.1 μm to ≦20 μm, the droplet size being determined by using an optical microscope operating in bright field transmission mode.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>22</b>. The method according to <claim-ref idref="clm-00002-en">claim 21</claim-ref>, wherein the pressure within the cavity is reduced before the polyurethane reaction mixture is provided in the cavity.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>23</b>. The method according to <claim-ref idref="clm-00002-en">claim 21</claim-ref>, wherein the pressure within the cavity is reduced after the polyurethane reaction mixture is provided in the cavity.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>24</b>. The method according to <claim-ref idref="clm-00002-en">claim 21</claim-ref>, wherein the pressure is reduced by ≧1 mbar up to ≦900 mbar.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>25</b>. The method according to <claim-ref idref="clm-00002-en">claim 21</claim-ref>, wherein the cavity is ventilated to ambient pressure before the gel time of the polyurethane reaction mixture is reached.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>26</b>. The method according to <claim-ref idref="clm-00004-en">claim 23</claim-ref>, wherein the polyurethane reaction mixture has a gel time of ≦50 seconds.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>27</b>. The method according to <claim-ref idref="clm-00004-en">claim 23</claim-ref>, wherein before ventilating to ambient pressure, the step of reducing the pressure within the cavity to a pressure lower than ambient pressure is conducted in such a way that after the initial reduction of the pressure to a desired level, the pressure is allowed to rise as a consequence of an expansion of the polyurethane reaction mixture, in particular until ambient pressure is reached.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>28</b>. The method according to <claim-ref idref="clm-00004-en">claim 23</claim-ref>, wherein before ventilating to ambient pressure, the reduced pressure is mostly kept constant under consideration of technically unavoidable leaking.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>29</b>. The method according to <claim-ref idref="clm-00002-en">claim 21</claim-ref>, wherein the pressure within the cavity is adjusted to different levels at different cavity areas <b>11</b><i>a, </i><b>11</b><i>b, </i>in particular by using two individually operatable vacuum systems, wherein the pressure difference between the at least two different cavity areas <b>11</b><i>a, </i><b>11</b><i>b </i>is preferably at least 50 mbar.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>30</b>. The method according to <claim-ref idref="clm-00008-en">claim 27</claim-ref>, wherein the pressure level within each of the different cavity areas <b>11</b><i>a, </i><b>11</b><i>b </i>is adjusted with respect to the shape of that cavity area, wherein in particular the pressure level reduction in larger and/or higher cavity areas <b>11</b><i>a </i>is higher than in smaller and/or lower cavity areas <b>11</b><i>b. </i></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>31</b>. The method according to <claim-ref idref="clm-00002-en">claim 21</claim-ref>, wherein the average size of the droplets of the physical blowing agent T is ≧0.1 μm to ≦15 μm, the droplet size being determined by using an optical microscope operating in bright field transmission mode.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>32</b>. The method according to <claim-ref idref="clm-00002-en">claim 21</claim-ref>, wherein the polyol component A1 comprises:
+<claim-text>A1a: a polyether polyol with a hydroxyl number of ≧15 mg KOH/g to ≦550 mg KOH/g and a functionality of ≧1.5 to ≦6.0 obtained by the addition of an epoxide to one or more starter compounds selected from the group of carbohydrates and/or at least difunctional alcohols; and</claim-text><claim-text>A1b: a polyether polyol with a hydroxyl number of ≧100 mg KOH/g to ≦550 mg KOH/g and a functionality of ≧1.5 to ≦5.0 obtained by the addition of an epoxide to an aromatic amine,</claim-text><claim-text>and/or</claim-text><claim-text>A1c: a polyester polyether polyol with a hydroxyl number of ≧100 mg KOH/g to ≦450 mg KOH/g and a functionality of ≧1.5 to ≦3.5 obtained by the addition of an epoxide to the esterification product of an aromatic dicarboxylic acid derivative and an at least difunctional alcohol.</claim-text></claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>33</b>. The method according to <claim-ref idref="clm-00002-en">claim 21</claim-ref>, wherein the polyol component A1 further comprises:
+<claim-text>A1c′: a polyester polyol with a hydroxyl number of ≧100 mg KOH/g to ≦450 mg KOH/g and a functionality of ≧1.5 to ≦3.5 obtained by the esterification of a polycarboxylic acid component and a polyalcohol component, wherein the total content of the dicarboxylic acid derivatives employed in the esterification, based on free aromatic dicarboxylic acids, is ≦48.5 mass-%, based on the total mass of polyalcohol component ant polycarboxylic acid component,</claim-text><claim-text>and/or</claim-text><claim-text>A1d: a polyether polyol with a hydroxyl number of ≧500 mg KOH/g to ≦1000 mg KOH/g and a functionality of ≧1.5 to ≦5.0 obtained by the addition of an epoxide to an aliphatic amine and/or a polyfunctional alcohol,</claim-text><claim-text>and/or</claim-text><claim-text>A1e: a di-, tri- or tetrafunctional aminic or alcoholic chain extender or cross-linker.</claim-text></claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>34</b>. The method according to <claim-ref idref="clm-00002-en">claim 21</claim-ref>, wherein the physical blowing agent T is selected from the group of hydrocarbons, halogenated ethers and/or perfluorinated hydrocarbons with 1 to 6 carbon atoms.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>35</b>. The method according to <claim-ref idref="clm-00002-en">claim 21</claim-ref>, wherein the mass ratio of A1: T is ≧5:1 to ≦12:1.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>36</b>. The method according to <claim-ref idref="clm-00002-en">claim 21</claim-ref>, wherein the polyol component A1 has a viscosity according to EN ISO 3219 at 20° C. of ≧1000 mPas to ≦18000 mPas.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>37</b>. The method according to <claim-ref idref="clm-00002-en">claim 21</claim-ref>, wherein the isocyanate-reactive component A further comprises:
+<claim-text>A2: water;</claim-text><claim-text>A3: at least one stabilizer selected from the group of polyether polydimethylsiloxane copolymers; and</claim-text><claim-text>A4: at least one catalyst selected from the group consisting of triethylenediamine, N,N-dimethylcyclohexylamine, tetramethylenediamine, 1-methyl-4-dimethylaminoethylpiperazine, triethylamine, tributylamine, dimethylbenzylamine, N,N′N″-tris-(dimethylaminopropyl)hexahydrotriazine, dimethylaminopropylformamide, N,N,N′,N′-tetramethylethylenediamine, N,N,N′,N′-tetramethylbutanediamine, tetramethylhexanediamine, pentamethyldiethylenetriamine, tetramethyldiaminoethyl ether, dimethylpiperazine, 1,2-dimethylimidazole, 1-azabicyclo[3.3.0]octane, bis(dimethylaminopropyl) urea, N-methylmorpholine, N-ethylmorpholine, N-cyclohexylmorpholine, 2,3-dimethyl-3,4,5,6-tetrahydropyrimidine, triethanolamine, diethanolamine, triisopropanolamine, N-methyldiethanolamine, N-ethyldiethanolamine and dimethylethanolamine.</claim-text></claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>38</b>. The method according to <claim-ref idref="clm-00002-en">claim 21</claim-ref>, wherein the isocyanate component B comprises:
+<claim-text>B1: at least one isocyanate selected from the group consisting of toluylene diisocyanate, diphenylmethane diisocyanate, polyphenylpolymethylene polyisocyanate, xylylene diisocyanate, naphthylene diisocyanate, hexamethylene diisocyanate, diisocyanatodicylclohexylmethane and isophorone diisocyanate;</claim-text><claim-text>and/or</claim-text><claim-text>B2: an isocyanate-terminated prepolymer obtained from at least one polyisocyanate B1 and at least one isocyanate reactive compound selected from the group consisting of:
+<claim-text>A1a: a polyether polyol with a hydroxyl number of ≧15 mg KOH/g to ≦550 mg KOH/g and a functionality of ≧1.5 to ≦6.0 obtained by the addition of an epoxide to one or more starter compounds selected from the group of carbohydrates and/or at least difunctional alcohols;</claim-text><claim-text>A1b: a polyether polyol with a hydroxyl number of ≧100 mg KOH/g to ≦550 mg KOH/g and a functionality of ≧1.5 to ≦5.0 obtained by the addition of an epoxide to an aromatic amine;</claim-text><claim-text>A1c: a polyester polyether polyol with a hydroxyl number of ≧100 mg KOH/g to ≦450 mg KOH/g and a functionality of ≧1.5 to ≦3.5 obtained by the addition of an epoxide to the esterification product of an aromatic dicarboxylic acid derivative and an at least difunctional alcohol;</claim-text><claim-text>A1c′: a polyester polyol with a hydroxyl number of ≧100 mg KOH/g to ≦450 mg KOH/g and a functionality of ≧1.5 to ≦3.5 obtained by the esterification of a polycarboxylic acid component and a polyalcohol component, wherein the total content of the dicarboxylic acid derivatives employed in the esterification, based on free aromatic dicarboxylic acids, is ≦48.5 mass-%, based on the total mass of polyalcohol component ant polycarboxylic acid component;</claim-text><claim-text>A1d: a polyether polyol with a hydroxyl number of ≧500 mg KOH/g to ≦1000 mg KOH/g and a functionality of ≧1.5 to ≦5.0 obtained by the addition of an epoxide to an aliphatic amine and/or a polyfunctional alcohol; and</claim-text><claim-text>A1f: a polyether carbonate polyol with a functionality of ≧1.5 to ≦8.0 and a number average molecular weight of ≧400 g/mol to ≦10000 g/mol.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>39</b>. The method according to <claim-ref idref="clm-00002-en">claim 21</claim-ref>, wherein the cavity into which the polyurethane reaction mixture is provided is a refrigerator insulation frame.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>40</b>. A polyurethane foam obtained by a method according to <claim-ref idref="clm-00002-en">claim 21</claim-ref>, wherein the polyurethane foam has a raw density of ≧28 kg/m<sup>3 </sup>and ≦45 kg/m<sup>3</sup>.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150259496A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259496A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150259496A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259496A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150259496A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259496A1-20150917-D00003.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150259496A1.PDF" type="pdf" size="780422" pages="15" />
+</lexisnexis-patent-document>

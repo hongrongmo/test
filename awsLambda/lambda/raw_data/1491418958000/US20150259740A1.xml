@@ -1,0 +1,2161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150259740A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030111" date-changed="20160125" time-changed="093949">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121314127">
+        <country>US</country>
+        <doc-number>20150259740</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>13618589</doc-number>
+        <date>20120914</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>13</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>C12Q   1/68        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>1</main-group>
+        <subgroup>68</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>G01N  33/68        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>33</main-group>
+        <subgroup>68</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>C12Q   1/6883      20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>1</main-group>
+        <subgroup>6883</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C12Q2600/118       20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>2600</main-group>
+        <subgroup>118</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C12Q2600/158       20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>2600</main-group>
+        <subgroup>158</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C12Q2600/16        20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>2600</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>G01N  33/6893      20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>33</main-group>
+        <subgroup>6893</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>G01N2333/4703      20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>2333</main-group>
+        <subgroup>4703</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>G01N2333/4706      20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>2333</main-group>
+        <subgroup>4706</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>G01N2333/4727      20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>2333</main-group>
+        <subgroup>4727</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>G01N2333/52        20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>2333</main-group>
+        <subgroup>52</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>G01N2333/9015      20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>2333</main-group>
+        <subgroup>9015</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>G01N2800/28        20130101 LA20130715BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>2800</main-group>
+        <subgroup>28</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130715</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>G01N2800/30        20130101 LA20130715BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>2800</main-group>
+        <subgroup>30</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130715</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>G01N2800/301       20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>2800</main-group>
+        <subgroup>301</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>G01N2800/60        20130101 LA20130715BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>2800</main-group>
+        <subgroup>60</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130715</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">18</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">PROCESSES AND KITS TO DETECT AND MONITOR FOR DIAGNOSTIC BIOMARKERS FOR POST TRAUMATIC STRESS DISORDER (PTSD) AND TO DIFFERENTIATE BETWEEN SUICIDAL AND NON-SUICIDAL FORM OF THE DISORDER</invention-title>
+    <related-documents date-changed="20150917">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61534560</doc-number>
+          <date>20110914</date>
+        </document-id>
+      </provisional-application>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61569047</doc-number>
+          <date>20111209</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Pollard</last-name>
+            <first-name>Harvey</first-name>
+            <address>
+              <city>Potomac</city>
+              <state>MD</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+        <applicant sequence="2" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Zhang</last-name>
+            <first-name>Lei</first-name>
+            <address>
+              <city>Germantown</city>
+              <state>MD</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+        <applicant sequence="3" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Eidelman</last-name>
+            <first-name>Ofer</first-name>
+            <address>
+              <city>Bethesda</city>
+              <state>MD</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+        <applicant sequence="4" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Ursano</last-name>
+            <first-name>Robert J.</first-name>
+            <address>
+              <city>Kensington</city>
+              <state>MD</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+        <applicant sequence="5" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Li</last-name>
+            <first-name>He</first-name>
+            <address>
+              <city>Rockville</city>
+              <state>MD</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+        <applicant sequence="6" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Su</last-name>
+            <first-name>Tung-Pi</first-name>
+            <address>
+              <city>Taipei</city>
+              <country>TW</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>TW</country>
+          </residence>
+        </applicant>
+        <applicant sequence="7" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Wang</last-name>
+            <first-name>Kevin Ka-wang</first-name>
+            <address>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+        <applicant sequence="8" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Hayes</last-name>
+            <first-name>Ronald L.</first-name>
+            <address>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Pollard</last-name>
+            <first-name>Harvey</first-name>
+            <address>
+              <city>Potomac</city>
+              <state>MD</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Zhang</last-name>
+            <first-name>Lei</first-name>
+            <address>
+              <city>Germantown</city>
+              <state>MD</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Eidelman</last-name>
+            <first-name>Ofer</first-name>
+            <address>
+              <city>Bethesda</city>
+              <state>MD</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Ursano</last-name>
+            <first-name>Robert J.</first-name>
+            <address>
+              <city>Kensington</city>
+              <state>MD</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Li</last-name>
+            <first-name>He</first-name>
+            <address>
+              <city>Rockville</city>
+              <state>MD</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Su</last-name>
+            <first-name>Tung-Pi</first-name>
+            <address>
+              <city>Taipei</city>
+              <country>TW</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="7" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Wang</last-name>
+            <first-name>Kevin Ka-wang</first-name>
+            <address>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="8" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Hayes</last-name>
+            <first-name>Ronald L.</first-name>
+            <address>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173666838">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259740</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20120914</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173666837">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259740</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20120914</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Life-threatening traumas such as terrorist attacks, war, disasters, mental or physical assault, severe accidents and violence frequently provoke emotional and behavioral disturbances known as post-traumatic stress disorder (PTSD) and suicide related thereto. Accurate diagnosis and treatment planning for PTSD and suicide remain difficult. The discovery of specific markers creates new opportunities for more accurate clinical assessments identifying groups that may experience better outcomes when exposed to an intervention. The present invention provides a process of detection of P-11, UBE3A, STY1, EMAP-II, SIP1, ORC5L, DCX, SCYE protein in a biological sample of a subject suspected of suffering from PTSD and/or having suicidal tendencies, and provides additional PTSD markers which are specific to gender.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">The present application claims priority of U.S. Provisional patent application No. 61/534,560 filed on Sep. 14, 2011 and U.S. Provisional patent application No. 61/569,047 filed on Dec. 11, 2011. Each related application is herein incorporated by reference.</p>
+    </related-apps>
+    <govt-interest>
+      <heading id="h-00002-en" level="1">GOVERNMENT SUPPORT</heading>
+      <p id="p-00002-en" num="0002">This invention was made with government support under grant # DAMD17-00-1-0110 awarded by the U.S. Army and under grant #02-M-0317 awarded by the National Institute of Mental Health. The government has certain rights in the invention.</p>
+    </govt-interest>
+    <summary>
+      <heading id="h-00003-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00003-en" num="0003">The present invention relates in general to the reliable detection and identification of markers produced in subjects suffering from post-traumatic stress disorder (PTSD) and provides a reliable metric for differentiating suicidal versus non-suicidal forms of the neural pathology in subjects suffering from the disorder. In particular the invention relates to processes and kits for the detection of PTSD and suicide in addition with processes of treatment and administration of therapeutics for patients suffering from the disorder. In addition, the invention provides for an in vitro diagnostic device which enables the reliable detection and identification of markers, important for the diagnosis and prognosis of PTSD and suicide.</p>
+      <heading id="h-00004-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00004-en" num="0004">Post-Traumatic Stress Disorder (PTSD) affects 7-8% of the general population of the United States and approximately 15% of veterans returning from combat. The symptoms can persist for months or decades. Unfortunately, PTSD is often misdiagnosed and left untreated in affected civilian and military individuals, disrupting the quality of their lives, their families and children, as well as our healthcare system. Even when diagnosed, the severity of PTSD progression remains difficult to treat. The cellular and molecular mechanism of this condition is still poorly understood despite extensive study of the neurobiological correlates of this disorder, along with efforts to understand the underlying pathologies.</p>
+      <p id="p-00005-en" num="0005">PTSD is a severely disabling anxiety disorder which can occur after a subject has seen or experienced a traumatic event that involved the threat of injury or death and which can be found clinically in acute or chronic forms. Relevant traumatic experiences include experiencing or witnessing childhood abuse, vehicle accidents, medical complications, physical assaults, natural disasters, jail, or war. The symptoms of PTSD include intrusion of recurrent nightmares or daytime flashbacks, characterized by high anxiety; hyperarousal, meaning a constant jumpy preparation for fight or flight; and avoidance of contact with anything or anyone which might remind the patient of the trauma. Acute PTSD may resolve within 3-6 months, however, chronic PTSD is a waxing and waning disorder that can persist for months, years, or decades. PTSD is often co-morbid with other psychiatric disorders, in particular depression, substance abuse, and suicidal thoughts. PTSD can therefore cause substantial disability.</p>
+      <p id="p-00006-en" num="0006">Current diagnosis of PTSD is established on the basis of clinical history and subjective mental status examination, using a clinically structured interview, symptom checklists, or patient self-reports. However, with these subjective tests it remains difficult to distinguish PTSD from other psychiatric disorders, resulting in difficult treatment decisions as to both treatment interventions and a more definitive understanding of the etiology. The existing limitations of current clinical assessment would benefit substantially from a more objective means to enhance the ability to identify the PTSD patient, and therefore be able to differentiate PTSD from other psychiatric disorders.</p>
+      <p id="p-00007-en" num="0007">Suicide is among the 10 leading causes of death for all ages and it is also among the top three causes of death for people aged 15-34. Suicidal tendencies are extremely difficult to diagnose, as well as the progression of those tendencies. Usually suicidal tendencies can only be preventatively diagnosed through a mental status examination, but more commonly after an attempt at suicide was made. Suicide is a challenging mental health concern since all major mental disorders carry an increased risk of suicide. Psychiatric disorders, such as BP, MDD, SCZ or PTSD, are present in about 90% of people who commit suicide and contribute to most of the population at risk for suicide. The incidence of these mental disorders in suicide victims at the time of their death ranges from 87.3% to 98%.</p>
+      <p id="p-00008-en" num="0008">A number of risk factors increase the chance of a PTSD sufferer attempting suicide, these factors include: 1) multiple hospitalizations, 2) depression, 3) presence of stressful life events before PTSD onset, 4) younger age at PTSD onset, 5) no free intervals between episodes ofr PTSD symptoms, 6) female, 7) sexual activity, 8) higher number of previous episodes of PTSD symptoms, and 9) cyclothymic temperament. These characteristics have been conventionally used in an attempt to identify those at higher risk for suicide throughout the course.</p>
+      <p id="p-00009-en" num="0009">Suicide prevention has become another major issue for military organizations. In the U.S. Army alone, the incidence of suicide has been increasing steadily during the present economic crisis and the Iraq and Afghanistan wars. Although much effort has been expended in an effort to understand the biological factors that can increase the risk of suicide and to identify the biological changes that occur in those with a propensity towards self-harm, at present, there are no objective biological markers to prevent suicide. A recent study of PTSD found a substantially increased risk of suicide and suicide attempts in PTSD patients. Sixty-two percent of individuals diagnosed with PTSD have suicidal ideation with traumatic events generally increasing a person's suicide risk. The likelihood for suicide attempts of individuals with PTSD is approximately 15 times higher than in individuals without it. Thus there exists a need for determining suicide in risk of patients who suffer from PTSD.</p>
+      <p id="p-00010-en" num="0010">Treatments for PTSD include psychotherapy, in particular Cognitive Behavioral Therapy and adjunct pharmacotherapy, primarily with the serotonin-specific reuptake inhibitor (SSRI's). Many different pharmacological approaches have been investigated. One approach is based on the clinical hypothesis that Major Depressive Disorder (MDD) and PTSD may have much in common. For example, these entities share common risk factors, have overlapping symptoms, and frequently occur together. Consequently, antidepressants, such as the SSRI drugs fluoxitine (Prozac) and paroxatine (Paxil), are widely considered effective at treating some symptoms of PTSD. Other commonly administered SSRI antidepressants have included venlafaxine (Effexor), and sertraline (Zoloft).</p>
+      <p id="p-00011-en" num="0011">However, patients with PTSD may also have other coexisting or co-morbid clinical problems. These co-morbid conditions have led to other types of drugs being added to the armamentarium. Commonly administered antipsychotics have included mirtazapine (Remeron), olanzapine (Zyprexa) and quetiapione (Seroquel). The beta blocker propranolol has also been used to try to block memory formation in PTSD patients. Prazosin, an α<sub>1</sub>-selective adrenoceptor antagonist, has been reported to reduce trauma-related nightmares and sleep disturbances associated with PTSD. Thus co-morbidity, either causal or compensatory, can complicate the possible approaches to PTSD pharmacotherapy. These problems to suggest that more objective, biologically based criteria for PTSD may be needed.</p>
+      <p id="p-00012-en" num="0012">Although there has been an effort to develop a clinical strategy to identify patients with PTSD, there is currently no biological assay for detecting such risk in patients. Therefore, diagnosis of patients with PTSD is only established on the basis of clinical history and mental status examination, often using a clinically structured interview, symptom checklist and patient self-report. The current clinical assessment would benefit from a more objective test.</p>
+      <p id="p-00013-en" num="0013">Biomarkers are increasingly used to diagnose diseases promptly and accurately, and to identify individuals at high risk for certain conditions and tendencies even before clinical manifestations arise. There are presently no objective markers to validate the diagnosis or to serve as objective surrogate endpoints for therapy for PTSD. In the absence of clinically used markers for patients with PTSD, diagnosis has been dependent on subjective clinical assessments, or from asymptomatic diagnosis by a psychologist. Because PTSD can only be diagnosed through a personal interview of a patient, where the patient may be cognizant to give answers they know to be correct, the current methods leave it difficult to diagnose subjects suffering from these disorders. As a result, a majority of PTSD cases are often missed, misdiagnosed or left untreated in thousands of affected individuals. In some cases of these disorders being missed, the safety of the general public is also compromised.</p>
+      <p id="p-00014-en" num="0014">Despite today's technology with marker analysis, there remains an unmet need for prognostic indicators that can aid in the objective detection of psychiatric disorders such as PTSD, MDD, SCZ and BP. Furthermore, there exists a need to provide a metric that will aid in identifying those patients suffering from a psychiatric disorder at diagnosing those patients who are at risk for suicide. In addition, there exists a need for a process that objectively diagnoses PTSD, a need to objectively monitor PTSD progression and suicide prevention a need for a process to detect PTSD prior to clinical manifestation, and a need for clinical intervention through the use of an in vitro diagnostic device to identify neurochemical markers to direct the proper course of treatment.</p>
+      <heading id="h-00005-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00015-en" num="0015">A diagnostic tool is provided for the clinical evaluation of Post-traumatic stress disorder (PTSD) and/or suicide alone, or in combination with interview based assessments or other biological marker levels for other disorders such as MDD, SCZ and BP. Furthermore, through the use of markers, an objective metric to enhance PTSD and suicidal risk assessments is provided. Through repeated testing, feedback is provided as to the effectiveness of a lifestyle or therapeutic treatment regime.</p>
+      <p id="p-00016-en" num="0016">The present invention further provides an in vitro diagnostic device specifically designed and calibrated to detect neuronal protein markers that are differentially present in the samples of patients suffering from psychiatric disorders such as PTSD, MDD, SCZ, BP and suicide. These devices present a sensitive, quick, and non-invasive method to aid in diagnosis of psychiatric disorders by detecting and determining the amount of markers that are indicative of psychiatric disorders. The measurement of these markers in patient samples, alone or in combination with patient interviews, provides information that a diagnostician can correlate with a probable diagnosis of the extent of a certain psychiatric disorder.</p>
+      <p id="p-00017-en" num="0017">The present invention further provides a process to detect proteins, which are both gender specific and non-gender specific, for the detection of PTSD. Representative PTSD markers are, at least one, more than one, or all gender neutral proteins, peptides, variants or fragments thereof, specific to PTSD that is selected from: synaptotagmin 1, ubiquitin protein ligase E3A, polymerase (DNA directed), delta 1, catalytic subunit 125 kDa, small inducible cytokine subfamily E, member 1 (endothial monocyte-activating), non-metastatic cells 1 protein (Nm23A), protein linase C-like 1, nuclear protein, ataxia-telangiectasia locus, antigen identified by monoclonal antibody KI-87, phospholipase C, beta 1 (phosphoinositide-specific), potassium voltage-gated channel, and subfamily H (eag-related), member 6, P-11 and P2RX7. The markers of P-1 and P2RX&amp; are also used to determine suicidal patients as well.</p>
+      <p id="p-00018-en" num="0018">Representative male specific PTSD markers are at least one, more than one, or all male specific proteins, peptides, variants or fragments thereof, specific to PTSD that is selected from: Ubiquitin-conjugating enzyme E2L3, Fas (TNFRSF6)-associated via death domain, protein kinase, AMP activated, beta 1 non-catalytic subunit, kallikrein 10, mitogen-activated protein kinase 4, TAF6 RNA polymerase II, TATA box binding protein (TBP)-associated factor, 80 kDa, protein kinase C, alpha, DNA fragmentation factor, 45 kDa, alpha polypeptide, interferon-induced protein with tetratricopeptide repeats 4, striatin, calmodulin binding protein, phosphoinositide-3-kinase, catalytic alpha polypeptide, tumor necrosis factor receptor, superfamily, member 6, nuclear autoantigenic sperm protein (histone binding), ras homolog gene family, member A, NIMA (never in mitosis gene a)-related kinase 2, SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 2, aryl hydrocarbon receptor nuclear translocator, synaptosomal-associated protein, 91 kDa homolog (mouse), G1 to S phase transition 2, and integrin, alpha 2 (CD49B, alpha 2 subunit of VLA-2 receptor).</p>
+      <p id="p-00019-en" num="0019">Representative female specific PTSD markers are at least one, more than one, or all female specific proteins, peptides, variants or fragments thereof, specific to PTSD that is selected from: survival of motor neuron protein interacting protein 1, plakophilin 2, secretory protein SEC8, epidermal growth factor receptor pathway substrate 8, diacylglycerol kinase, theta 110 kDa, centrosomal protein 2, general transcription factor IIF, polypeptide 2, 30 kDa, neurogenin 3, and ADP-ribosyltransferase (NAD+; poly(ADP-ribose)polymerase).</p>
+      <p id="p-00020-en" num="0020">A process is also provided to detect the levels of the P-11 (annexin II light chain) protein or mRNA, Ubiquitin protein ligase E3A (UBE3A), Synaptotagmin (STY1), endothelial monocyte-activating polypeptide (EMAP-II), survival of motor neuron protein interacting protein (SIP1), Origin recognition complex, subunit 5-like (ORC5L) and Doublecortex; lissencephaly, X-linked (doublecortin) (DCX) in whole blood, CNS tissue, serum, plasma, CSF, saliva, sweat, tears, urine, buccal sample or a combination thereof; and compare the measured levels of the protein to that of healthy normal subject not suffering from any psychiatric or neuronal disorder for which these markers are indicative of status; or alternatively, the historic levels from the individual provide a comparative. A diagnosis of PTSD, suicide or other of the above-cited disorders is when a level of the selected markers in a sample collected from a subject is outside a pre-selected normal range. The normal range for a given subject is selected based on patient specific variables that illustratively include age, sex, medication loadings, and interview based diagnosis. Further markers are described which are gender specific.</p>
+      <p id="p-00021-en" num="0021">A process of detection of these proteins is performed through the conventional immunoassay technologies such as western blot or Enzyme-linked immunosorbent assay (ELISA), but preferably through the use of a sandwiched ELISA. Furthermore reagents such as antibodies to detect protein antigens or breakdown products of the protein are used.</p>
+      <p id="p-00022-en" num="0022">It is appreciated that antigens to an aforementioned markers are used to detect the autoantibody response of the body. Use of either agent enables the detection of the amounts of the measured marker in a subject providing the metric used to detect the presence of PTSD and determine a patient's propensity for PTSD induced suicide.</p>
+      <p id="p-00023-en" num="0023">P-11 mRNA in peripheral blood mononuclear cells (PBMCs) is also used to detect PTSD and other psychiatric disorders, such as MDD, to fully map the progress of the psychiatric disorder. Here the preferred process of detection is performed through a quantitative real-time polymerase chain reaction (Q-PCR) which measures the mRNA level of the marker in PBMCs from PTSD, MDD and suicide subjects. This process involves measuring P-11 mRNA levels in PBMCs of subjects, and comparing to the expression level of P-11 mRNA in samples from health individuals or non-psychiatric patients, as well as non-suicidal patients with PTSD or MDD.</p>
+      <p id="p-00024-en" num="0024">The P-11 protein level in a patient sample is readily detected on a handheld or point of care platform in a clinical or field setting and largely in real time. It is appreciated that P-11 mRNA is measured independently, or in combination marker along with the P-11 protein. Through the use of either of these techniques, detected P-11 levels (mRNA or protein) significantly lower than normal for patients are indicative of those who suffer from a suicidal form of the PTSD. If detected levels of P-11 are higher than normal, the levels are indicative of a non-suicidal form of PTSD, BP, MDD or SCZ. An assessment as to a treatment regimen suitable for a subject is chosen based on the measured level of P-11 in a biological sample obtained from the subject. Financial remuneration can be requested in exchange for the measurement of the P-11 protein level or other inventive markers. At least one of the described markers is measured independently, or in combination with other PTSD markers described herein.</p>
+      <p id="p-00025-en" num="0025">It is further appreciated that, the type of psychiatric disorder diagnosis is further refined subjectively through a complementary psychiatric evaluation, or objectively through the use of other markers, to the specific disorder in question. By way of example, the P2RX7 protein, P2RX7 mRNA levels or UBE3A may be used as for refinement of the diagnosis providing an additional indicator predictive factor in PTSD and suicide in patients further aiding in the differentiation of PTSD from other psychiatric disorders. It should be appreciated that the use of two or more of the markers identified provides a synergistic diagnostic test to accurately assist in the detection of suicide and/or PTSD in a subject.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00006-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 1</figref> illustrates the receiver operating characteristic (ROC), Curve for ubiquitin protein ligase E3A (UBE3A), for which the AUC is 100%, for both male and female patients.</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 2</figref> illustrates the ROC Curve for synaptotagmin 1 (STY1), for which the AUC is 95% for males and 88.8% for females.</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 3</figref> illustrates the ROC Curve for small inducible cytokine subfamily E (SCYE1), for which the AUC for males is 98.1% and that for females, is 97.9%.</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 4</figref> illustrates the ROC Curve for the inventive markers defined between control and PTSD patients, for which the AUC is 88% for the sample demographics.</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 5</figref> shows that basal levels of blood plasma cortisol do not significantly differ between PTSD (n=13) and control subjects (n=11) (p&gt;0.05).</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 6</figref> shows that glucocorticoid receptor (GR) mRNA levels are significantly lower in the PBMCs of PTSD than control subjects.</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 7</figref> illustrates that significantly lower P-11 mRNA levels in the patients with PTSD (n=13) compared to control (n=14). (p&lt;0.05). PBMC P-11 mRNA levels of bipolar, BP (n=24), major depressive disorder, MDD (n=12), schizophrenia, SCZ (n=12) are significant higher than in control subjects (n=14) (p&lt;0.001).</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 8A</figref> illustrates the results from a quantitative real-time PCR analysis showing that P-11 mRNA levels significantly decreased in suicide attempters with PTSD (p&lt;0.05) compared to control subjects. There are no significant differences in PBMC P-11 mRNA expression levels between non-suicidal patents and control subjects.</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIG. 8B</figref> illustrates P-11 mRNA levels are significantly increased in both suicide attempters and non-suicidal patients with BP (p&lt;0.05) compared to control subjects. There are no significant differences in PBMCs P-11 mRNA expression levels between suicide attempters and non-suicidal patients with BP. ***p&lt;0.001.</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIGS. 9A-9D</figref> shows the lack of relationships between PBMC P-11 mRNA expression levels and symptoms of suicide attempters and non-suicidal medicated patients with PTSD. <figref>FIGS. 9A</figref> and B compare PBMC P-11 mRNA expression levels and Hamilton Depression Rating Scale (HAMD) or Hamilton Anxiety Rating Scale (HARS) scores in suicide attempters with PTSD. <figref>FIGS. 9C and 9D</figref> compare PBMC P-11 mRNA expression and HAMD or HARS scores in non-suicidal patients with PTSD. There are no significant correlations between HAMD or HARS scores and P-11 mRNA levels in all tested groups.</p>
+      <p id="p-00036-en" num="0036">
+        <figref>FIGS. 10A-10D</figref> shows the lack of relationships between PBMC P-11 mRNA expression levels and symptoms of suicide attempters and non-suicidal patients with BP.</p>
+      <p id="p-00037-en" num="0037">
+        <figref>FIGS. 10A and 10B</figref> compare PBMC P-11 mRNA expression levels and HAMD or HARS scores in suicide attempters with BP.</p>
+      <p id="p-00038-en" num="0038">
+        <figref>FIGS. 10C and 10D</figref> compare PBMC P-11 mRNA expression and HAMD or HARS scores in non-suicidal patients with BP. There are no significant correlations between HAMD or HARS scores and P-11 mRNA levels in all tested groups.</p>
+      <p id="p-00039-en" num="0039">
+        <figref>FIGS. 11A and 11B</figref> illustrate P2RX7 mRNA levels in PBMCs differ among of control subjects, suicide attempters and non-suicidal patients with PTSD or BP. <figref>FIG. 11A</figref> illustrates the results from a quantitative real-time PCR analysis which shows that P2RX7 mRNA levels are significantly decreased in both suicide attempters and non-suicide patients with PTSD (p&lt;0.05) compared to control subjects. <figref>FIG. 11B</figref> illustrates P2RX7 mRNA levels are significantly decreased in non-suicidal patients with BP (p&lt;0.05) compared to control subjects or suicide attempters with BP. There are no significant differences in PBMC P2RX7 mRNA expression levels found in suicide attempters with BP compared to control subjects. **p&lt;0.01; ***p&lt;0.001.</p>
+      <p id="p-00040-en" num="0040">
+        <figref>FIGS. 12A-12D</figref> show the relationships between PBMC P2RX7 mRNA expression levels are highly correlated with HAMD or HARS scores in non-suicidal patients with PTSD. HAMD or HARS scores are plotted against PBMC P2RX7 mRNA expression levels in suicide attempters and non-suicidal patients with PTSD. The scores are not correlated with P2RX7 mRNA levels in suicide attempters, but do correlate with P2RX7 mRNA levels in non-suicidal patients (p&lt;0.05).</p>
+      <p id="p-00041-en" num="0041">
+        <figref>FIGS. 13A-13D</figref> show the relationships between PBMC P2RX7 mRNA expression levels are not correlated with HAMD or HARS scores in suicide attempters and non-suicidal patients with BP. HAMD or HARS scores are plotted against PBMC P2RX7 mRNA expression levels in suicide attempters and non-suicidal patients. There are no significant correlations between P2RX7 mRNA levels and HAMD or HARS scores in all tested groups.</p>
+      <p id="p-00042-en" num="0042">
+        <figref>FIG. 14</figref> depicts the results from a quantitative real-time PCR analysis which shows that P-11 mRNA levels are significantly decreased in suicide attempters (S) and increased in suicide non-attempters (NS) compared to normal control subjects (C).</p>
+      <p id="p-00043-en" num="0043">
+        <figref>FIG. 15</figref> illustrates the differences of P2RX7 mRNA levels in PBMCs of control subjects, suicide attempters and suicide non-attempters where quantitative real-time PCR analysis shows that P2RX7 mRNA levels are significantly decreased in both suicide attempters (S) and suicide non-attempters (NS) compared to normal controls (C).</p>
+      <p id="p-00044-en" num="0044">
+        <figref>FIG. 16</figref> is a schematic view of the in vitro diagnostic device.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00007-en" level="1">DETAILED DESCRIPTION OF THE PREFERRED EMBODIMENTS</heading>
+      <p id="p-00045-en" num="0045">The present invention has utility as a device and a marker test for psychiatric disorders such as PTSD and suicide thereby allowing for clinical intervention. The invention may further be used to detect neural injuries or neuronal disorders which the provided neural protein markers may be comorbid.</p>
+      <p id="p-00046-en" num="0046">The following detailed description is merely exemplary in nature and is in no way intended to limit the scope of the invention, its application, or uses, which may vary. The invention is described with relation to the non-limiting definitions and terminology included herein. These definitions and terminology are not designed to function as a limitation on the scope or practice of the invention, but are presented for illustrative and descriptive purposes only. Various terms used throughout the specification and claims are defined as set forth below as it may be helpful to an understanding of the invention.</p>
+      <p id="p-00047-en" num="0047">“Marker” in the context of the present invention refers to mRNA, protein or breakdown product (BDP) or an antibody to one of the aforementioned that thereof is differentially present in a sample taken from patients having neural injury and/or psychiatric disorders as compared to a comparable sample taken from control subjects (e.g., a person with a negative diagnosis, normal or healthy subject) or from a historical value of the marker for the patient.</p>
+      <p id="p-00048-en" num="0048">A “breakdown product” is defined as a fragrant of an mRNA or protein that is detectable and of sufficient size to correlate to the base mRNA or protein.</p>
+      <p id="p-00049-en" num="0049">The phrase “psychiatric disorder” is used herein in the broadest sense, and indicates a mental disorder that interferes with the way a person behaves, interacts with others, and functions in daily life. The Diagnostic and Statistical Manual (DSM) of Mental Disorders, published by the American Psychiatric Association, classifies psychiatric disorders such as PTSD, MDD, BP and SCZ.</p>
+      <p id="p-00050-en" num="0050">The terms “patient”, “individual” or “subject” are used interchangeably herein, and is meant a mammalian subject to be treated, with human patients being preferred. In some cases, the processes of the invention find use in experimental animals, in veterinary application, and in the development of vertebrate models for disease, including, but not limited to, rodents including mice, rats, and hamsters; birds, fish reptiles, and primates.</p>
+      <p id="p-00051-en" num="0051">The term “normal subject” refers to a mammalian subject, with human patients being preferred, that is not or has not suffered from neural injury manifest in psychiatric terms and does not have a history of past neural injuries or any psychiatric disorders.</p>
+      <p id="p-00052-en" num="0052">The terms “polypeptide,” “peptide” and “protein” are used interchangeably herein to refer to a polymer of amino acid residues. The terms apply to amino acid polymers in which one or more amino acid residue is an analog or mimetic of a corresponding naturally occurring amino acid, as well as to naturally occurring amino acid polymers and has sufficient size to correlate with the marker. Polypeptides can be modified, e.g., by the addition of carbohydrate residues to form glycoproteins. The terms “polypeptide,” “peptide” and “protein” include glycoproteins, as well as non-glycoproteins.</p>
+      <p id="p-00053-en" num="0053">“Antibody” refers to a polypeptide ligand substantially encoded by an immunoglobulin gene or immunoglobulin genes, or fragments thereof, which specifically binds and recognizes an epitope (e.g., an antigen). The recognized immunoglobulin genes include the kappa and lambda light chain constant region genes, the alpha, gamma, delta, epsilon and mu heavy chain constant region genes, and the myriad immunoglobulin variable region genes. Antibodies exist, e.g., as intact immunoglobulins or as a number of well characterized fragments produced by digestion with various peptidases. This includes, e.g., Fab′ and F(ab)′2 fragments. The term “antibody,” as used herein, also includes antibody fragments either produced by the modification of whole antibodies or those synthesized de novo using recombinant DNA methodologies. It also includes polyclonal antibodies, monoclonal antibodies, chimeric antibodies, humanized antibodies, or single chain antibodies. “Fc” portion of an antibody refers to that portion of an immunoglobulin heavy chain that comprises one or more heavy chain constant region domains, CH1, CH2 and CH3, but does not include the heavy chain variable region.</p>
+      <p id="p-00054-en" num="0054">“Biological Sample” is used herein includes polynucleotides, polypeptides, peptides, antibodies fragments and correlateable breakdown products and is a bodily fluid; a soluble fraction of a cell preparation, or media in which cells are grown; a chromosome, an organelle, or membrane isolated or extracted from a cell; genomic DNA, RNA, or cDNA, polypeptides, or peptides in solution or bound to a substrate; a cell; a tissue; a tissue print; a fingerprint; skin; or hair; and fragments of the aforementioned.</p>
+      <p id="p-00055-en" num="0055">“Substrate” refers to any rigid or semi-rigid support to which nucleic acid molecules or proteins are bound and includes membranes, filters, chips, slides, wafers, fibers, magnetic or nonmagnetic beads, gels, capillaries or other tubing, plates, polymers, and microparticles with a variety of surface forms including wells, trenches, pins, channels and pores.</p>
+      <p id="p-00056-en" num="0056">“Immunoassay” is an assay that uses an antibody to specifically bind an antigen or an antigen to bind an antibody (e.g., a marker). The immunoassay is characterized by the use of specific binding properties of a particular antibody to isolate, target, and/or quantify the antigen. It should be appreciated that many immunoassays exist and could be used interchangeably with this invention.</p>
+      <p id="p-00057-en" num="0057">As used herein, the term “Traumatic Brain Injury” or “TBI” is art recognized and is intended to include the condition in which, a traumatic blow to the head causes damage to the brain, often without penetrating the skull. Usually, the initial trauma can result in expanding hematoma, subarachnoid hemorrhage, cerebral edema, raised intracranial pressure (ICP), and cerebral hypoxia, which can, in turn, lead to severe secondary events due to low cerebral blood flow (CBF). Depending upon severity, TBI may also be classified as severe, mild or moderate.</p>
+      <p id="p-00058-en" num="0058">The phrase “specifically (or selectively) binds” to an antibody or “specifically (or selectively) immunoreactive with,” when referring to a protein or peptide, refers to a binding reaction that is determinative of the presence of the protein in a heterogeneous population of proteins and other biologics. Thus, under designated immunoassay conditions, the specified antibodies bind to a particular protein at least two times the background and do not substantially bind in a significant amount to other proteins present in the sample. Specific binding to an antibody under such conditions may require an antibody that is selected for its specificity for a particular protein. For example, polyclonal antibodies raised against marker NF-200 from specific species such as rat, mouse, or human can be selected to obtain only those polyclonal antibodies that are specifically immunoreactive with marker NF-200 and not with other proteins, except for polymorphic variants and alleles of marker NF-200. This selection may be achieved by subtracting out antibodies that cross-react with marker NF-200 molecules from other species. A variety of immunoassay formats may be used to select antibodies specifically immunoreactive with a particular protein. For example, solid-phase ELISA immunoassays are routinely used to select antibodies specifically immunoreactive with a protein (see, e.g., Harlow &amp; Lane, Antibodies, A Laboratory Manual (1988), for a description of immunoassay formats and conditions that can be used to determine specific immunoreactivity). Typically a specific or selective reaction will be at least twice background signal or noise and more typically more than 10 to 100 times background.</p>
+      <p id="p-00059-en" num="0059">As used herein, the term “in vitro diagnostic” means any form of diagnostic test product or test service, including but not limited to a FDA approved, or cleared, In Vitro Diagnostic (IVD), Laboratory Developed Test (LDT), or Direct-to-Consumer (DTC), that may be used to assay a sample and detect or indicate the presence of, the predisposition to, or the risk of, diseases, disorders, conditions, infections and/or therapeutic responses. In one embodiment, an in vitro diagnostic may be used in a laboratory or other health professional setting. In another embodiment, an in vitro diagnostic may be used by a consumer at home. In vitro diagnostic test comprise those reagents, instruments, and systems intended for use in the in vitro diagnosis of disease or other conditions, including a determination of the state of health, in order to cure, mitigate, treat, or prevent disease or its sequelae. In one embodiment in vitro diagnostic products may be intended for use in the collection, preparation, and examination of specimens taken from the human body. In certain embodiments, in vitro diagnostic tests and products may comprise one or more laboratory tests such as one or more in vitro diagnostic tests. As used herein, the term “laboratory test” means one or more medical or laboratory procedures that involve testing samples of blood, serum, plasma, CSF, sweat, saliva or urine, buccal sample or other human tissues or substances.</p>
+      <p id="p-00060-en" num="0060">A nucleic acid probe or primer able to hybridize to a target marker mRNA or is used for detecting and/or quantifying mRNA encoding a marker protein for PTSD. A nucleic acid probe can be an oligonucleotide of at least 10, 15, 30, 50 or 100 nucleotides in length and sufficient to specifically hybridize under stringent conditions to the marker protein mRNA or complementary sequence thereof. A nucleic acid primer can be an oligonucleotide of at least 10, 15 or 20 nucleotides in length and sufficient to specifically hybridize under stringent conditions to the mRNA, or complementary sequence thereof.</p>
+      <p id="p-00061-en" num="0061">“Complement” and “complementary” refers to Watson-Crick base pairing between nucleotides and specifically refers to nucleotides hydrogen bonded to one another with thymine or uracil residues linked to adenine residues by two hydrogen bonds and cytosine and guanine residues linked by three hydrogen bonds. In general, a nucleic acid includes a nucleotide sequence described as having a “percent complementarity” to a specified second nucleotide sequence. For example, a nucleotide sequence may have 80%, 90%, or 100% complementarity to a specified second nucleotide sequence, indicating that 8 of 10, 9 of 10 or 10 of 10 nucleotides of a sequence are complementary to the specified second nucleotide sequence. For instance, the nucleotide sequence 3′-TCGA-5′ is 100% complementary to the nucleotide sequence 5′-AGCT-3′. Further, the nucleotide sequence 3′-TCGA- is 100% complementary to a region of the nucleotide sequence 5′-TTAGCTGG-3′.</p>
+      <p id="p-00062-en" num="0062">“Hybridization” and “hybridizes” refer to pairing and binding of complementary nucleic acids. Hybridization occurs to varying extents between two nucleic acids depending on factors such as the degree of complementarity of the nucleic acids, the melting temperature, Tm, of the nucleic acids and the stringency of hybridization conditions, as is well known in the art.</p>
+      <p id="p-00063-en" num="0063">“Stringency of hybridization conditions” refers to conditions of temperature, ionic strength, and composition of a hybridization medium with respect to particular common additives such as formamide and Denhardt's solution. Determination of particular hybridization conditions relating to a specified nucleic acid is routine and is well known in the art, for instance, as described in J. Sambrook and D. W. Russell, Molecular Cloning: A Laboratory Manual, Cold Spring Harbor Laboratory Press; 3rd Ed., 2001; and P. M. Ausubel, Ed., Short Protocols in Molecular Biology, Current Protocols; 5th Ed., 2002. High stringency hybridization conditions are those which only allow hybridization of substantially complementary nucleic acids. Typically, nucleic acids having about 85-100% complementarity are considered highly complementary and hybridize under high stringency conditions. Intermediate stringency conditions are exemplified by conditions under which nucleic acids having intermediate complementarity, about 50-84% complementarity, as well as those having a high degree of complementarity, hybridize. In contrast, low stringency hybridization conditions are those in which nucleic acids having a low degree of complementarity hybridize.</p>
+      <p id="p-00064-en" num="0064">“Specific hybridization” and “specifically hybridizes” refer to hybridization of a particular nucleic acid to a target nucleic acid without substantial hybridization to nucleic acids other than the target nucleic acid in a sample.</p>
+      <p id="p-00065-en" num="0065">Stringency of hybridization and washing conditions depends on several factors, including the Tm of the probe and target and ionic strength of the hybridization and wash conditions, as is well-known to the skilled artisan. Hybridization and conditions to achieve a desired hybridization stringency are described, for example, in Sambrook et al., Molecular Cloning: A Laboratory Manual, Cold Spring Harbor Laboratory Press, 2001; and Ausubel, F. et al., (Eds.), Short Protocols in Molecular Biology, Wiley, 2002.</p>
+      <p id="p-00066-en" num="0066">An example of high stringency hybridization conditions is hybridization of nucleic acids over about 100 nucleotides in length in a solution containing Denhardt's solution and related chemistry such as 30% formamide incubated at 37° C. overnight followed by conventional washing.</p>
+      <heading id="h-00008-en" level="2">In Vitro Diagnostic Device</heading>
+      <p id="p-00067-en" num="0067">
+        <figref>FIG. 16</figref> schematically illustrates the inventive in vitro diagnostic device. An inventive in vitro diagnostic device comprised of at least a sample collection chamber <b>1603</b> and an assay module <b>1602</b> used to detect markers of psychiatric disorders. The in vitro diagnostic device may comprise of a handheld device, a bench top device, or a point of care device.</p>
+      <p id="p-00068-en" num="0068">The sample chamber <b>1603</b> can be of any sample collection apparatus known in the art for holding a biological fluid. In one embodiment, the sample collection chamber can accommodate any one of the biological fluids herein contemplated, such as whole blood, plasma, serum, urine, sweat, saliva or buccal sample.</p>
+      <p id="p-00069-en" num="0069">The assay module <b>1602</b> is preferably comprised of an assay which may be used for detecting a protein antigen in a biological sample, for instance, through the use of antibodies in an immunoassay. The assay module <b>1602</b> may be comprised of any assay currently known in the art; however the assay should be optimized for the detection of neural markers used for detecting neural injuries, neuronal disorders or psychiatric disorders in a subject. The assay module <b>1602</b> is in fluid communication with the sample collection chamber <b>1603</b>. In one embodiment, the assay module <b>1602</b> is comprised of an immunoassay where the immunoassay may be any one of a radioimmunoassay, ELISA (enzyme linked immunosorbent assay), “sandwich” immunoassay, immunoprecipitation assay, precipitin reactions, gel diffusion precipitin reactions, immunodiffusion assay, fluorescent immunoassay, chemiluminescent immunoassay, phosphorescent immunoassay, or an anodic stripping voltammetry immunoassay. In one embodiment a colorimetric assay may be used which may comprise only of a sample collection chamber <b>1603</b> and an assay module <b>1602</b> of the assay. Although not specifically shown these components are preferably housed in one assembly <b>1607</b>. In one embodiment the assay module <b>1602</b> contains an agent specific for detecting ubiquitin protein ligase E3A (UBE3A), synaptotagmin (STY1), endothelial monocyte-activating polypeptide (EMAP-II), survival of motor neuron protein interacting protein (SIP1), origin recognition complex, subunit 5-like (ORC5L), and boublecortex; lissencephaly, X-linked (doublecortin) (DCX), P-11, P2RX7 or any combination fragment or breakdown product thereof. The assay module <b>1602</b> may contain additional agents to detect additional markers, as is described herein. Due to the co-morbidity of the psychiatric disorders with traumatic brain injury (TBI), the inventive IVD may also measure the same markers to correlate the presence or amount of the markers with the presence and severity of TBI.</p>
+      <p id="p-00070-en" num="0070">In another preferred embodiment, the inventive in vitro diagnostic device contains a power supply <b>1601</b>, an assay module <b>1602</b>, a sample chamber <b>1603</b>, and a data processing module <b>1605</b>. The power supply <b>1601</b> is electrically connected to the assay module and the data processing module. The assay module <b>1602</b> and the data processing module <b>1605</b> are in electrical communication with each other. As described above, the assay module <b>1602</b> may be comprised of any assay currently known in the art; however the assay should be optimized for the detection of neural markers used for detecting neural injury, neuronal disorder or psychiatric disorders in a subject. The assay module <b>1602</b> is in fluid communication with the sample collection chamber <b>1603</b>. The assay module <b>1602</b> is comprised of an immunoassay where the immunoassay may be any one of a radioimmunoassay, ELISA (enzyme linked immunosorbent assay), “sandwich” immunoassay, immunoprecipitation assay, precipitin reactions, gel diffusion precipitin reactions, immunodiffusion assay, fluorescent immunoassay, chemiluminescent immunoassay, phosphorescent immunoassay, or an anodic stripping voltammetry immunoassay. A biological sample is placed in the sample chamber <b>1603</b> and assayed by the assay module <b>1602</b> detecting for a marker of psychiatric disorder. The measured amount of the marker by the assay module <b>1602</b> is then electrically communicated to the data processing module <b>1604</b>. The data processing <b>1604</b> module may comprise of any known data processing element known in the art, and may comprise of a chip, a central processing unit (CPU), or a software package which processes the information supplied from the assay module <b>1602</b>.</p>
+      <p id="p-00071-en" num="0071">In one embodiment, the data processing module <b>1604</b> is in electrical communication with a display <b>1605</b>, a memory device <b>1606</b>, or an external device <b>1608</b> or software package (such as laboratory and information management software (LIMS)). In one embodiment, the data processing module <b>1604</b> is used to process the data into a user defined usable format. This format comprises of the measured amount of neural markers detected in the sample, indication that a neural injury, neuronal disorder, or psychiatric disorder is present, or indication of the severity of the neural injury, neuronal disorder or psychiatric disorder. The information from the data processing module <b>1604</b> may be illustrated on the display <b>1605</b>, saved in machine readable format to a memory device, or electrically communicated to an external device <b>1608</b> for additional processing or display. Although not specifically shown these components are preferably housed in one assembly <b>1607</b>. In one embodiment, the data processing module <b>1604</b> may be programmed to compare the detected amount of the marker transmitted from the assay module <b>1602</b>, to a comparator algorithm. The comparator algorithm may compare the measure amount to the user defined threshold which may be any limit useful by the user. In one embodiment, the user defined threshold is set to the amount of the marker measured in control subject, or a statistically significant average of a control population.</p>
+      <p id="p-00072-en" num="0072">The methods and in vitro diagnostic tests described herein may indicate diagnostic information to be included in the current diagnostic evaluation in patients suspected of having neural injury, neuronal disorder or psychiatric disorder. In another embodiment, the methods and in vitro diagnostic tests described herein may be used for screening for risk of progressing from at-risk, non-specific symptoms possibly associated with psychiatric disorders, and/or fully-diagnosed psychiatric disorders. In certain embodiments, the methods and in vitro diagnostic tests described herein can be used to rule out screening of diseases and disorders that share symptoms with psychiatric disorder.</p>
+      <p id="p-00073-en" num="0073">In one embodiment, an in vitro diagnostic test may comprise one or more devices, tools, and equipment configured to hold or collect a biological sample from an individual. In one embodiment of an in vitro diagnostic test, tools to collect a biological sample may include one or more of a swab, a scalpel, a syringe, a scraper, a container, and other devices and reagents designed to facilitate the collection, storage, and transport of a biological sample. In one embodiment, an in vitro diagnostic test may include reagents or solutions for collecting, stabilizing, storing, and processing a biological sample. Such reagents and solutions for nucleotide collecting, stabilizing, storing, and processing are well known by those of skill in the art and may be indicated by specific methods used by an in vitro diagnostic test as described herein. In another embodiment, an in vitro diagnostic test as disclosed herein, may comprise a micro array apparatus and reagents, a flow cell apparatus and reagents, a multiplex nucleotide sequencer and reagents, and additional hardware and software necessary to assay a genetic sample for certain genetic markers and to detect and visualize certain biological markers.</p>
+      <heading id="h-00009-en" level="2">Protein Biomarkers</heading>
+      <p id="p-00074-en" num="0074">The present invention provides a process to detect proteins, both gender specific and non-gender specific, for the detection of psychiatric disorders, for example PTSD and suicide. These same neural proteins may also be used to detect neural injuries and neuronal disorders, such as TBI, which is often comorbid with many psychiatric disorders. In a preferred embodiment, at least one, more than one, or all gender neutral proteins, peptides, variants or fragments thereof, specific to PTSD are detected and is selected from: synaptotagmin 1, ubiquitin protein ligase E3A, polymerase (DNA directed), delta 1, catalytic subunit 125 kDa, small inducible cytokine subfamily E, member 1 (endothial monocyte-activating), non-metastatic cells 1 protein (Nm23A), protein linase C-like 1, nuclear protein, ataxia-telangiectasia locus, antigen identified by monoclonal antibody KI-87, phospholipase C, beta 1 (phosphoinositide-specific), potassium voltage-gated channel, and subfamily H (eag-related), member 6, ubiquitin carboxyl terminal esterase L-1(UCH-L1), glial fibrilliary acidic protein (GFAP), α2-spectin breakdown products, synaptophysin, α-synuclein, neurogranin, S-100β, neurofilament proteins-F, H and N, microtubulin proteins, myelin basic proteins, and collapsin response mediated proteins(CRMPs), P-11 and P2RX7.</p>
+      <p id="p-00075-en" num="0075">Male specific PTSD markers are also provided in an inventive process, where the marker is at least one, more than one, or all male specific proteins, peptides, variants or fragments thereof, specific to PTSD is selected from: Ubiquitin-conjugating enzyme E2L3, Fas (TNFRSF6)-associated via death domain, protein kinase, AMP activated, beta 1 non-catalytic subunit, kallikrein 10, mitogen-activated protein kinase 4, TAF6 RNA polymerase II, TATA box binding protein (TBP)-associated factor, 80 kDa, protein kinase C, alpha, DNA fragmentation factor, 45 kDa, alpha polypeptide, interferon-induced protein with tetratricopeptide repeats 4, striatin, calmodulin binding protein, phosphoinositide-3-kinase, catalytic alpha polypeptide, tumor necrosis factor receptor, superfamily, member 6, nuclear autoantigenic sperm protein (histone binding), ras homolog gene family, member A, NIMA (never in mitosis gene a)-related kinase 2, SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 2, aryl hydrocarbon receptor nuclear translocator, synaptosomal-associated protein, 91 kDa homolog (mouse), G1 to S phase transition 2, and integrin, alpha 2 (CD49B, alpha 2 subunit of VLA-2 receptor).</p>
+      <p id="p-00076-en" num="0076">Female specific PTSD markers are also provided in an inventive process, where the marker is at least one, more than one, or all female specific proteins, peptides, variants or fragments thereof, specific to PTSD is selected from: survival of motor neuron protein interacting protein 1, plakophilin 2, secretory protein SEC8, epidermal growth factor receptor pathway substrate 8, diacylglycerol kinase, theta 110 kDa, centrosomal protein 2, general transcription factor IIF, polypeptide 2, 30 kDa, neurogenin 3, and ADP-ribosyltransferase (NAD+; poly(ADP-ribose)polymerase).</p>
+      <p id="p-00077-en" num="0077">Still further markers for PTSD include Ubiquitin protein ligase E3A (UBE3A), Synaptotagmin (STY1), endothelial monocyte-activating polypeptide (EMAP-II), survival of motor neuron protein interacting protein (SIP1), Origin recognition complex, subunit 5-like (ORC5L), and Doublecortex; lissencephaly, X-linked (doublecortin) (DCX).</p>
+      <p id="p-00078-en" num="0078">Ubiquitin protein ligase E3A (UBE3A) is a highly relevant gene for the human brain, because mutations in the brain-imprinted maternal allele lead to mental retardation and other symptoms associated with the Angelman syndrome. By contrast, duplication of the wildtype UBE3A gene is associated with autism in humans, and transgenic overexpression of human UBE3A in the mouse brain is associated with a reduction in the number and lengths of dendritic spines. Consistently, over-expression of the highly conserved <i>Drosophila homologue </i>for UBE3A (dUBE3A) in the mouse brain causes decreased dendritic branching. In addition, expression of the imprinted UBE3A gene is detected mainly in hippocampus, and also in cerebellar Purkinje cells and the olfactory bulb. Thus, there seems to be an optimal set-point for UBE3A expression in the brain, above or below which suboptimal function becomes apparent. The high levels of UBE3A in the PTSD CSF, blood, urine, saliva or tissue is therefore a manifestation of an aberrant central process. The dysfunction is focused on the hippocampus where UBE3A expression is customarily highest in the brain. The present invention identifies elevated levels of UBE3A in whole blood, plasma, serum, CSF, urine, saliva, and brain tissue such as hippocampal or ipsilateral cortex) in patients suffering from PTSD, as compared to normal controls or historic levels for the individual.</p>
+      <p id="p-00079-en" num="0079">Synaptotagmin is a 57 kDa a glycoprotein containing two C2 domains related to protein kinase C and sites for palmitoylation and binding of acidic phospholipids, calcium, and calmodulin. Synaptotagmin-1 participates in the process of vesicular trafficking and exocytosis by inducing local Ca2+-dependent buckling of the plasma membrane. Synaptotagmin-1 is a transmembrane component of synaptic vesicles, which has been implicated in regulating the process of calcium dependent membrane fusion occurring during exocytotic neurotransmission. The intact 65 kDa synaptotagmin-1 protein has been identified in human cerebrospinal fluid (Davidsson et al, 1996), where it is found to be reduced in CSF from patients with early onset Alzheimer disease (EAD). Concomitantly, it has been reported reduced levels of synaptotagmin1 in post-mortem hippocampus and frontal cortex of EAD patients. The present invention identifies decreased levels of SYT1 protein in whole blood, plasma, serum, CSF, urine, saliva, and brain tissues such as hippocampus and ipsilateral cortex in patients suffering from PTSD as compared to normal controls or historical levels for the individual, and represents a partially protective function occurring in the hippocampus of the PTSD brain.</p>
+      <p id="p-00080-en" num="0080">Endothelial monocyte activating proteins (EMAP-II) is an inflammatory cytokine. Its pro EMAP-II precursor is identical to the auxiliary p43 component of the aminoacyl-tRNA synthetase complex. EMAP-II domain of p43 is released readily from the complex after in vitro digestion with caspase <b>7</b> and is able to induce migration of human mononuclear phagocytes. P43 compares well with a molecular fuse that triggers the irreversible cell growth/cell death transition induced under apoptotic conditions. EMAP cytokine is released from the mammalian multisynthetase complex after cleavage of its p43/pro EMAP-II component.</p>
+      <p id="p-00081-en" num="0081">EMAP-II may also be known as Small Inducible cytokine subfamily E, member 1 (SCYE1) has multiple names and functions, based on its initial discovery as part of a aminoacyl-tRNA synthase complex, and then later as a protein which is induced by apoptosis, and controls angiogenesis, inflammation and wound healing. With respect to function in the central nervous system, SCYE1 is a toll-like receptor 4 (TLR4)-dependent chemoattractant for human microglia, and in this way mediates neuronal injury. Spinal cord injury in rats is associated with accumulation of SCYE1 at the injury site, where prolonged accumulation leads to the pathophysiology of secondary injury. Our sense therefore is that, to the extent that SCYE1 protein in the CSF represents proportional expression in the substance of the brain, a reduction in SCYE1 expression would appear to fall into the category of compensatory and protective. The present invention identifies decreased levels of SCYE1 or EMAP-II protein in whole blood, plasma, serum, CSF, urine, saliva, and brain tissue (hippocampus and ipsilateral cortex) in patients suffering from PTSD as compared to normal controls.</p>
+      <p id="p-00082-en" num="0082">Survival of motor neuron protein interacting protein (SIP1; Gemin 2) causes spinal muscular atrophy and is also associated with motor neuron degeneration. The biochemical function of both Survival of Motor Neuron protein (SMA) and SIP1 is to aid in pre-mRNA splicing. The present invention identifies decreased levels of SIP1 protein in whole blood, plasma, serum, CSF, urine, saliva, and brain tissue (hippocampus and ipsilateral cortex) in patients suffering from PTSD as compared to normal controls.</p>
+      <p id="p-00083-en" num="0083">Origin recognition complex, subunit 5-like (ORC5L) protein function is to form a complex with 5 other proteins which initiates DNA replication. This protein has many other functions, including a role in gene silencing and heterochromatin formation. The reason why this protein has a specific function in the brain is related to its position of its gene, immediately juxtaposed to reelin (RELN) on chromosome 7q22. Mutations in RELN have genetic risk factors for autism. However, these investigators show that single nucleotide polymorphisms (SNPs) for RELN, flanked by ORC5L on one side and a third gene on the other, are inherited as a haplotype in linkage disequilibrium with autism risk. In addition, SNPs in the ORC5L gene itself are also in linkage disequilibrium with autism risk. The relationship between reelin SNPs and autism risk has been verified. Taken together with the autism connection to UBE3A, the parallel deficiency of both ORC5L and UBE3A are excellent individual and combination indicators of PTSD. The present invention identifies decreased levels of ORC5L protein in whole blood, plasma, serum, CSF, urine, saliva, and brain tissue (hippocampus and ipsilateral cortex) in patients suffering from PTSD as compared to normal controls.</p>
+      <p id="p-00084-en" num="0084">Doublecortex; lissencephaly, X-linked (doublecortin) (DCX) DCX is responsible for guiding neurons in the developing cortex as they migrate over long distances to reach the site of their final differentiation. Mutations in this gene are responsible for X-linked lissencephaly. Lissencephaly, caused by mutations in DCX, is a severe human neuronal migration defect characterized by a smooth cerebral surface, mental retardation and intractable epilepsy. Possibly of relevance to sleep-related symptoms of PTSD is the finding of high levels of DCX in the adult rat suprachiamatic nucleus, where circadian clock function is localized. Following traumatic brain injury, upregulation of DCX has also been shown to correlate well with better outcome in rats and children. Thus DCX is another one of those proteins, like SIP1/Gemin 2, for which low levels of expression, is not good for CNS function. The present invention identifies decreased levels of DCX protein in whole blood, plasma, serum, CSF, urine, saliva, and brain tissue such as hippocampus and ipsilateral cortex in a patient suffering from PTSD as compared to normal controlsor historic levels in the patient.</p>
+      <p id="p-00085-en" num="0085">P-11 (annexin II light chain) is a member of the S-100 calcium binding protein family. P2RX7 is a human purinergic receptor, which functions as a ligand-gated ion channel triggering ATP-dependent lysis of macrophages through formation of plasma membrane pores permeable to large molecules. ATP-induced activation of this receptor can be coupled to changes in gene expression. To date, neither P-11 nor P2RX7 proteins have been identified as novel markers for PTSD, BP or suicide. Prior to present invention, no suicide biological marker had been used at the clinical sites. The role of P-11 in PTSD and there was limited to the laboratory result that stress or the expression of the stress hormone, glucocorticoid, is up-regulated in the stressed animal brain, through a glucorticocoid binding sites in the promoter region of P-11 gene. Meanwhile, stress-induced P-11 mRNA expression is attenuated by the glucocorticoid receptor antagonist RU486, evidencing that stress-induced P-11 over expression is mediated by the glucorticoid receptor. These discoveries of the molecular mechanism of P-11 in stress have led to an understanding of the role of the P-11 protein in PTSD and to the development a diagnostic tool. The present invention identifies the levels of P-11 protein or mRNA in a biological sample as a marker for posttraumatic stress disorder (PTSD) and the diagnosis of suicide in subjects with PTSD and MDD. The P2RX7 protein or mRNA is optionally used to determine bipolar disorder (BP) and otherwise objective refine the psychiatric state of a patient. An inventive process measures P-11 and optionally P2RX7 levels using agents which specifically and independently bind to the protein, mRNA or a complementary sequence thereto.</p>
+      <p id="p-00086-en" num="0086">The process of detection is optionally performed using a Western Blot analysis or an Enzyme-linked immunosorbent assay (ELISA). Preferably, when ELIA is used, a sandwich ELISA is used. The P-11 protein levels are compared to levels of protein or mRNA in normal or non-psychiatric patients as well as suicide non-attempters with PTSD and BP or historic levels for the same patient. The present invention may also be used to detect psychiatric or anxiety disorders other than PTSD or BP, such as MDD and SCZ. Levels of the P-11 marker along with other markers, such as P2RX7, are used to differentiate among these different psychiatric disorders.</p>
+      <p id="p-00087-en" num="0087">mRNA is optionally used as a combination marker with the proteins. In this embodiment real-time polymerase chain reaction (PCR) measures the mRNA level of the marker in peripheral blood mononuclear cells (PBMCs) from suicide attempters with mental disorder for both P-11 and P2RX7 and compared with levels of the mRNA in samples from normal or non-psychiatric patients as well as suicide non-attempters.</p>
+      <heading id="h-00010-en" level="2">Kits</heading>
+      <p id="p-00088-en" num="0088">The process of diagnosing psychiatric disorders may also be included as part of a kit for use in an ELISA or Western Blot, a bench top platform, a point of care device, or handheld device for diagnosing PTSD, suicide or other psychiatric disorders. The PTSD markers can also be used to screen for therapeutic targets for treating PTSD and to monitor a patient's progression or recovery from PTSD.</p>
+      <p id="p-00089-en" num="0089">In certain embodiments, the diagnostic process and kits includes one or more antibodies that bind to a protein identified as specific to a PTSD or suicide cluster. The diagnostic process and kits also comprise two or more, three or more, four or more, five or more, six or more, seven or more, eight or more, nine or more, or ten or more agents or antibodies that bind to a protein identified as specific to a PTSD cluster to diagnose PTSD in a patient.</p>
+      <p id="p-00090-en" num="0090">It should be appreciated that although blood and CSF are illustrated in the following Examples the inventive markers for PTSD may be detected identically using the same procedures identified, the only difference being how the biological sample is drawn, as the varying biological samples have different methods for collection as one having skill in the art should readily know.</p>
+      <p id="p-00091-en" num="0091">An inventive kit is also provided for aiding a diagnosis of a psychiatric disorder wherein the kits can be used to detect any number of the diagnostic proteins of the present invention. For example, the kits can be used to detect whether the diagnostic protein markers are present in samples of a patient and normal subjects. An inventive kit is used to identify compounds that modulate expression of one or more of the markers using in vitro or in vivo animal models to determine the effects of treatment. An inventive kit includes (a) a composition or panel of markers; (b) a protein substrate; and (c) a detection reagent. Such kits are prepared from the materials described above, and the previous discussion regarding the materials (e.g., antibodies, detection reagents, immobilized supports, etc.) is fully applicable to this section and will not be repeated. Optionally, the kit includes pre-fractionation spin columns. In some embodiments, the kit optionally further includes instructions for reacting the agent with the biological sample, or other operation parameter to afford a diagnosis of the condition. The instructions, in the form of a label or a separate insert.</p>
+      <p id="p-00092-en" num="0092">An inventive diagnostic kit for use in screening serum containing antigens of the polypeptide of the invention. The diagnostic kit includes an isolated antibody specifically immunoreactive with polypeptide or polynucleotide antigens, and a defection chemistry to identify the binding of the polynucleotide or polypeptide antigen to the antibody. It is appreciated that “isolated” includes quantities of impurities or spectator species that do not preclude target binding. It is appreciated that the antibody is attached to a solid support. It is appreciated that the antibody is optionally a monoclonal antibody. The detection chemistry of the kit is optionally a second, labeled monoclonal antibody. Alternatively, or in addition, the detection chemistry optionally includes a labeled, competing antigen.</p>
+      <p id="p-00093-en" num="0093">In one diagnostic configuration, test serum is reacted with a solid phase reagent having a surface-bound antigen obtained by the processes of the present invention. After binding with specific antigen antibody to the reagent and removing unbound serum components by washing, the reagent is reacted with reporter-labeled anti-human antibody to bind reporter to the reagent in proportion to the amount of bound anti-antigen antibody on the solid support. The reagent is again washed to remove unbound labeled antibody, and the amount of reporter associated with the reagent is determined. Typically, the reporter is an enzyme which is detected by incubating the solid phase in the presence of a suitable fluorometric, luminescent or colorimetric substrate (Sigma, St. Louis, Mo.).</p>
+      <p id="p-00094-en" num="0094">The solid surface reagent in the above assay is prepared by known techniques for attaching protein material to solid support material, such as polymeric beads, dip sticks, 96-well plate or filter material. These attachment processes generally include non-specific adsorption of the protein to the support or covalent attachment of the protein, typically through a free amine group, to a chemically reactive group on the solid support, such as an activated carboxyl, hydroxyl, or aldehyde group. Alternatively, streptavidin coated plates is optionally used in conjunction with biotinylated antigen(s).</p>
+      <p id="p-00095-en" num="0095">A kit is also provided that includes (a) a substrate with an adsorbent thereon, wherein the adsorbent is suitable for binding a marker, (b) any marker of the present invention to be tested, and (c) instructions to detect the marker or markers by contacting a sample with the adsorbent and detecting the marker or markers retained by the adsorbent. In some embodiments, the kit includes an eluent (as an alternative or in combination with instructions) or instructions for making an eluent, wherein the combination of the adsorbent and the eluant allows detection of the markers using gas phase ion spectrometry. Such kits are prepared from the materials described above, and the previous discussion of these materials (e.g., probe substrates, adsorbents, washing solutions, etc.) is fully applicable to this section and is not repeated.</p>
+      <p id="p-00096-en" num="0096">A kit is also provided that includes a first substrate with an adsorbent thereon such as a particle functionalized with an adsorbent and a second substrate onto which the first substrate is positioned to form a probe which is removable and insertable into a gas phase ion spectrometer. The kit optionally includes single substrate which is in the form of a removable and insertable probe with adsorbents on the substrate. The kit also optionally includes a prefractionation spin column (e.g., Cibacron blue agarose column, anti-HSA agarose column, size exclusion column, Q-anion exchange spin column, single stranded DNA column, lectin column, etc.).</p>
+      <p id="p-00097-en" num="0097">Optionally, the kit also optionally includes instructions for suitable operational parameters in the form of a label or a separate insert. For example, the kit may have standard instructions informing a consumer how to wash the probe after a sample is contacted on the probe. In another example, the kit may have instructions for pre-fractionating a sample to reduce complexity of proteins in the sample. In another example, the kit may have instructions for automating the fractionation or other processes.</p>
+      <heading id="h-00011-en" level="1">EXAMPLES</heading>
+      <p id="p-00098-en" num="0098">Reference will now be made in detail to the exemplary embodiments of the invention. These embodiments are described in sufficient detail to enable those skilled in the art to practice the invention and it is to be understood that other embodiments may be utilized and that changes may be made without departing from the scope of the invention. The following description is, therefore, merely exemplary.</p>
+      <heading id="h-00012-en" level="1">Example 1</heading>
+      <p id="p-00099-en" num="0099">Subjects with PTSD (n=13), BP (n=23), MDD (n=12), SCZ (n=12) and control (n=14) are diagnosed by two psychiatrists using criteria from The Diagnostic and Statistical Manual of Mental Disorders fourth edition DSM-IV. A biological sample of CSF, whole blood, plasma, serum, saliva and urine are obtained from each patient.</p>
+      <heading id="h-00013-en" level="2">Patients</heading>
+      <p id="p-00100-en" num="0100">Fourteen medication-free outpatients with chronic civilian PTSD (34.9±10.4 years old, 10 women) and ten non-traumatized, healthy subjects (35.3±13.1 years old, 7 women) are selected. The healthy subjects are chosen to match PTSD patients as closely as possible with respect to age, sex and BMI. Prodromal PTSD Traumas are prepubertal in 5 subjects and adults in nine. Time elapsed from trauma exposure was 26±4 years in pre-pubertal trauma, and 10.1±8.8 years in adult exposure. Patients are otherwise physically healthy, with no psychotropic medication for at least three weeks prior to lumbar puncture and do not meet criteria for alcohol or substance abuse, or dependence, for at least six months prior. However, the required medication-free period for PTSD patients is extended to six weeks for patients on paroxitine. In addition, four patients (three female and one male) are included who have a history of trauma, but without a follow-on history of PTSD. The complete demographic information on PTSD patients and healthy controls are summarized in Table 1.</p>
+      <p id="p-00101-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="441pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>STUDY SUBJECT DEMOGRAPHICS</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>
+                    <chemistry id="chem-00001-en" num="00001">
+                      <img id="img-00001-en" he="85.09mm" wi="153.59mm" alt="embedded image" img-content="table" file="US20150259740A1_00016.PNG" img-format="png" original="US20150259740A1-20150917-C00001.TIF" />
+                    </chemistry>
+                  </entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00014-en" level="2">Psychiatric Diagnoses</heading>
+      <p id="p-00102-en" num="0101">Psychiatric diagnoses are established using the Structured Clinical Interview for DSM-IV (SCID), and the severity of PTSD is determined using the Clinician-Administered PTSD Scale (CAPS). Severity of depressive, anxiety and overall symptoms is assessed using the Inventory of Depressive Symptomatology (IDS), Hamilton Anxiety Rating Scale (HAMA) and Clinical Global Impression—Severity scale (CGI-S), respectively. Individuals with PTSD and controls do not differ with regard to age, gender distribution, race, or body mass index (BMI). Severity of PTSD was moderate, with a CAPS score of 73.1±10.3. Depression (IDS 16.4±8.2), Anxiety (HAMA 13.1±6.8) and overall symptom severity levels (CGI-S 4±1.2) were moderate as well.</p>
+      <heading id="h-00015-en" level="2">Biological Sample Collection</heading>
+      <p id="p-00103-en" num="0102">Biological samples of CSF, blood, urine and saliva are collected using normal collection techniques. For CSF Lumbar Puncture (LP) was performed between 8:00 and 9:00 AM by an experienced physician. A 20-gauge introducer needle is inserted and approximately 15 cc of CSF was withdrawn and frozen in aliquots at −80° C. for later assay. For blood, the samples are drawn (10 mL each) collected by venipuncture in Vacutainer tubes, and some spun down and separated into serum and plasma. All whole blood, plasma, serum and stored in aliquots at −80° C. for later assay. For Urine and saliva, samples are collected avoiding the introduction of contaminants into the specimen is preferred. Urinalysis tubes of 8 to 15 mL are used to store samples for later use in a −80° C. freezer.</p>
+      <heading id="h-00016-en" level="2">Proteins in Biological Samples</heading>
+      <p id="p-00104-en" num="0103">Proteins in Biological Samples are labeled with the Cy3 fluorescent dye, and a sample of a standard samples are labeled with Cy5 to provide a common standard across all experiments. The mixture is incubated with a 507-duplicate feature antibody microarray, and imaged on a Perkin-Elmer ScanArray2 fluorescence slide reader. Biological samples are also analyzed on a Reverse Capture Protein Microarray platform. Significance is based on t-tests (p&lt;0.05) and a local False Discovery Rate of &lt;10%.</p>
+      <heading id="h-00017-en" level="2">Results</heading>
+      <p id="p-00105-en" num="0104">Based on the analysis of all PTSD patients, independent of gender, it is possible to identify those proteins which are up- or down-regulated compared to control. Table 2 lists the top 10 candidate marker proteins which fall into the statistical category of a t-test &gt;10 −4, and a false discovery rate of &lt;10%. Importantly, these proteins thereby satisfy both the Bonferroni correction to the P value for array data (0.05/507=10 −4) and the SAM algorithm, mentioned above. It should be noted that UBE3A, STY1, EMAP-II, SIP1, ORC5L, DCX, SCYE markers are also found to be non-gender specific markers for PTSD.</p>
+      <p id="p-00106-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="308pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>PROTEINS SPECIFIC TO ALL PTSD PATIENTS</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="182pt" align="left" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <colspec colname="5" colwidth="21pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>SwissProt</entry>
+                  <entry>ID</entry>
+                  <entry>ttest</entry>
+                  <entry>log Ratio</entry>
+                  <entry>FDR</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="182pt" align="left" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="char" char="." />
+              <colspec colname="5" colwidth="21pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>P21579</entry>
+                  <entry>synaptotagmin I</entry>
+                  <entry>5.9E−09</entry>
+                  <entry>−0.17</entry>
+                  <entry>0.0%</entry>
+                </row>
+                <row>
+                  <entry>Q05086</entry>
+                  <entry>ubiquitin protein ligase E3A(human papilloma virus E6-</entry>
+                  <entry>1.7E−07</entry>
+                  <entry>0.48</entry>
+                  <entry>0.0%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>associated protein. Angelman syndrome)</entry>
+                </row>
+                <row>
+                  <entry>P28340</entry>
+                  <entry>polymerase (DNA directed), delta 1, catalytic subunit 125 kDa</entry>
+                  <entry>2.1E−06</entry>
+                  <entry>−0.13</entry>
+                  <entry>0.3%</entry>
+                </row>
+                <row>
+                  <entry>Q12904</entry>
+                  <entry>small inducible cytokine subfamily E, member 1 (endothelial</entry>
+                  <entry>2.2E−06</entry>
+                  <entry>−0.15</entry>
+                  <entry>0.0%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>monocyte-activating)</entry>
+                </row>
+                <row>
+                  <entry>P15531</entry>
+                  <entry>non-metastatic cells 1, protein (NM23A) expressedin</entry>
+                  <entry>2.4E−05</entry>
+                  <entry>0.26</entry>
+                  <entry>2.8%</entry>
+                </row>
+                <row>
+                  <entry>Q16512</entry>
+                  <entry>protein kinase C-like 1</entry>
+                  <entry>2.8E−05</entry>
+                  <entry>0.13</entry>
+                  <entry>1.1%</entry>
+                </row>
+                <row>
+                  <entry>Q13632</entry>
+                  <entry>nuclear protein, ataxia-telangiectasia locus</entry>
+                  <entry>4.0E−05</entry>
+                  <entry>0.19</entry>
+                  <entry>1.5%</entry>
+                </row>
+                <row>
+                  <entry>P46013</entry>
+                  <entry>antigen identified by monoclonal antibody Ki-67</entry>
+                  <entry>6.2E−05</entry>
+                  <entry>−0.20</entry>
+                  <entry>0.2%</entry>
+                </row>
+                <row>
+                  <entry>Q9NQ66</entry>
+                  <entry>phospholipase C, beta 1 (phosphoinositide-specific)</entry>
+                  <entry>6.5E−05</entry>
+                  <entry>0.35</entry>
+                  <entry>1.2%</entry>
+                </row>
+                <row>
+                  <entry>Q9H252</entry>
+                  <entry>potassium voltage-gated channel, subfamily H (eag-related),</entry>
+                  <entry>1.3E−04</entry>
+                  <entry>−0.17</entry>
+                  <entry>0.0%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>member 6</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00107-en" num="0105">Using the hierarchical cluster algorithm, e proteins are separated which characterize just the male PTSD patients. The top 20 of the set of male-specific proteins that are candidate markers for PTSD are listed in Table 3. This list includes all of the proteins listed in Table 2, plus others that are uniquely elevated in CSF from just the male PTSD patients. Some of the top 10 from Table 2 are not present because they are lower in the list than these 20. However, of interest is the fact that several proteins have been pushed to a lower position by other proteins, including four that are characteristic of inflammation. These include FADD (#2); MAPKK4 (#5); PKC alpha (#7); and TNF6 (#12). With the exception of FADD, the other three are all elevated, as marked by the + value in the log ratio column. By contrast, female PTSD patients lack these proteins, but have others with non-inflammatory character. The top 9 female PTSD specific proteins are shown in Table 4. These markers include Neurogenin 1, SMADs, SIP, MYV, TGFβ1.</p>
+      <p id="p-00108-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="308pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 3</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>PROTEINS SPECIFIC TO PTSD MALE CLUSTER</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="182pt" align="left" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <colspec colname="5" colwidth="21pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>SwissProt</entry>
+                  <entry>ID</entry>
+                  <entry>ttest</entry>
+                  <entry>log Ratio</entry>
+                  <entry>FDR</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="182pt" align="left" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="char" char="." />
+              <colspec colname="5" colwidth="21pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>P51966</entry>
+                  <entry>ubiquitin-conjugating enzyme E2L 3</entry>
+                  <entry>1.1E−11</entry>
+                  <entry>0.19</entry>
+                  <entry>0.1%</entry>
+                </row>
+                <row>
+                  <entry>Q13158</entry>
+                  <entry>Fas (TNFRSF6)-associated via death domain</entry>
+                  <entry>7.4E−09</entry>
+                  <entry>−0.19</entry>
+                  <entry>0.0%</entry>
+                </row>
+                <row>
+                  <entry>Q9Y478</entry>
+                  <entry>protein kinase, AMP-activated, beta 1 non-catalytic subunit</entry>
+                  <entry>2.6E−08</entry>
+                  <entry>0.18</entry>
+                  <entry>0.0%</entry>
+                </row>
+                <row>
+                  <entry>O43240</entry>
+                  <entry>kallikrein 10</entry>
+                  <entry>5.0E−08</entry>
+                  <entry>0.22</entry>
+                  <entry>0.1%</entry>
+                </row>
+                <row>
+                  <entry>P45985</entry>
+                  <entry>mitogen-activated protein kinase kinase 4</entry>
+                  <entry>2.5E−06</entry>
+                  <entry>0.24</entry>
+                  <entry>0.0%</entry>
+                </row>
+                <row>
+                  <entry>P49848</entry>
+                  <entry>TAF6 RNA polymerase II, TATA box binding protein (TBP)-</entry>
+                  <entry>2.8E−06</entry>
+                  <entry>0.19</entry>
+                  <entry>0.0%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>associated factor, 80 kDa</entry>
+                </row>
+                <row>
+                  <entry>P17252</entry>
+                  <entry>protein kinase C, alpha</entry>
+                  <entry>2.9E−06</entry>
+                  <entry>0.20</entry>
+                  <entry>0.0%</entry>
+                </row>
+                <row>
+                  <entry>O00273</entry>
+                  <entry>DNA fragmentation factor, 45 kDa, alpha polypeptide</entry>
+                  <entry>1.0E−05</entry>
+                  <entry>0.23</entry>
+                  <entry>0.0%</entry>
+                </row>
+                <row>
+                  <entry>O14879</entry>
+                  <entry>interferon-induced protein with tetratricopeptide repeats 4</entry>
+                  <entry>1.2E−05</entry>
+                  <entry>0.21</entry>
+                  <entry>0.0%</entry>
+                </row>
+                <row>
+                  <entry>O43815</entry>
+                  <entry>striatin, calmodulin binding protein</entry>
+                  <entry>1.8E−05</entry>
+                  <entry>0.18</entry>
+                  <entry>0.0%</entry>
+                </row>
+                <row>
+                  <entry>P42336</entry>
+                  <entry>phosphoinositide-3-kinase, catalytic, alpha polypeptide</entry>
+                  <entry>4.2E−05</entry>
+                  <entry>0.26</entry>
+                  <entry>0.0%</entry>
+                </row>
+                <row>
+                  <entry>P25445</entry>
+                  <entry>tumor necrosis factor receptor superfamily, member 6</entry>
+                  <entry>1.1E−04</entry>
+                  <entry>0.23</entry>
+                  <entry>0.0%</entry>
+                </row>
+                <row>
+                  <entry>P49321</entry>
+                  <entry>nuclear autoantigenic sperm protein (histone-binding)</entry>
+                  <entry>1.8E−04</entry>
+                  <entry>0.20</entry>
+                  <entry>0.0%</entry>
+                </row>
+                <row>
+                  <entry>P06749</entry>
+                  <entry>ras homolog gene family, member A</entry>
+                  <entry>2.0E−04</entry>
+                  <entry>−0.22</entry>
+                  <entry>0.0%</entry>
+                </row>
+                <row>
+                  <entry>P51955</entry>
+                  <entry>NIMA (never in mitosis gene a)-related kinase 2</entry>
+                  <entry>2.5E−04</entry>
+                  <entry>0.25</entry>
+                  <entry>0.0%</entry>
+                </row>
+                <row>
+                  <entry>P51531</entry>
+                  <entry>SWI/SNF related, matrix associated, actin dependent</entry>
+                  <entry>2.7E−04</entry>
+                  <entry>0.53</entry>
+                  <entry>0.0%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>regulator of chromatin, subfamily a, member 2</entry>
+                </row>
+                <row>
+                  <entry>P27540</entry>
+                  <entry>aryl hydrocarbon receptor nuclear translocator</entry>
+                  <entry>3.0E−04</entry>
+                  <entry>−0.22</entry>
+                  <entry>0.0%</entry>
+                </row>
+                <row>
+                  <entry>Q61548</entry>
+                  <entry>synaptosomal-associated protein, 91 kDa homolog (mouse)</entry>
+                  <entry>9.0E−04</entry>
+                  <entry>0.56</entry>
+                  <entry>0.0%</entry>
+                </row>
+                <row>
+                  <entry>Q9NY44</entry>
+                  <entry>G1 to S phase transition 2</entry>
+                  <entry>2.2E−03</entry>
+                  <entry>−0.19</entry>
+                  <entry>0.0%</entry>
+                </row>
+                <row>
+                  <entry>P17301</entry>
+                  <entry>integrin, alpha 2 (CD49B, alpha 2 subunit of VLA-2 receptor)</entry>
+                  <entry>2.2E−03</entry>
+                  <entry>−0.28</entry>
+                  <entry>0.0%</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00109-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="315pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 4</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>PROTEINS SPECIFIC TO PTSD - FEMALE CLUSTER</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="189pt" align="left" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <colspec colname="5" colwidth="21pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>SwissProt</entry>
+                  <entry>ID</entry>
+                  <entry>ttest</entry>
+                  <entry>log Ratio</entry>
+                  <entry>FDR</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="189pt" align="left" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="char" char="." />
+              <colspec colname="5" colwidth="21pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>O14893</entry>
+                  <entry>survival of motor neuron protein interacting protein 1</entry>
+                  <entry>8.2E−06</entry>
+                  <entry>−0.36</entry>
+                  <entry>0.0%</entry>
+                </row>
+                <row>
+                  <entry>Q99960</entry>
+                  <entry>plakophilin 2</entry>
+                  <entry>8.9E−06</entry>
+                  <entry>−0.40</entry>
+                  <entry>0.0%</entry>
+                </row>
+                <row>
+                  <entry>Q96A65</entry>
+                  <entry>secretory protein SEC8</entry>
+                  <entry>4.5E−05</entry>
+                  <entry>−0.15</entry>
+                  <entry>0.7%</entry>
+                </row>
+                <row>
+                  <entry>Q12929</entry>
+                  <entry>epidermal growth factor receptor pathway substrate 8</entry>
+                  <entry>9.0E−05</entry>
+                  <entry>0.15</entry>
+                  <entry>0.0%</entry>
+                </row>
+                <row>
+                  <entry>P52824</entry>
+                  <entry>diacylglycerol kinase, theta 110 kDa</entry>
+                  <entry>6.1E−04</entry>
+                  <entry>0.20</entry>
+                  <entry>0.6%</entry>
+                </row>
+                <row>
+                  <entry>O60588</entry>
+                  <entry>centrosomal protein 2</entry>
+                  <entry>6.9E−04</entry>
+                  <entry>−0.29</entry>
+                  <entry>0.4%</entry>
+                </row>
+                <row>
+                  <entry>P13984</entry>
+                  <entry>general transcription factor IIF, polypeptide 2, 30 kDa</entry>
+                  <entry>1.5E−03</entry>
+                  <entry>−0.51</entry>
+                  <entry>0.0%</entry>
+                </row>
+                <row>
+                  <entry>Q92886</entry>
+                  <entry>neurogenin 3</entry>
+                  <entry>1.9E−02</entry>
+                  <entry>−0.08</entry>
+                  <entry>0.0%</entry>
+                </row>
+                <row>
+                  <entry>P09874</entry>
+                  <entry>ADP-ribosyltransferase (NAD+; poly (ADP-ribose) polymerase)</entry>
+                  <entry>2.1E−02</entry>
+                  <entry>−0.19</entry>
+                  <entry>4.0%</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00110-en" num="0106">Receiver-Operating Condition (ROC) analysis is a conventional “gold standard” method of validating biological assays based on discriminating between False Positive and False Negative analytic values. The quality of an assay is based on the area under the curve (AUC), in which a value of 100% is outstanding, and a value of 50% indicates a random distribution. The top 3 candidate protein markers for gender-independent PTSD are (i) <figref>FIG. 1</figref>: ubiquitin protein ligase E3A, for which the AUC is 100%, for both male and female patients; (ii) <figref>FIG. 2</figref>: synaptotagmin 1, for which the AUC is 95% for males and 88.8% for females; and (iii) <figref>FIG. 3</figref>: small inducible cytokine subfamily E, for which the AUC for males is 98.1% and that for females is 97.9%. <figref>FIG. 4</figref> represents the composite ROC curves for the inventive markers defined between control and PTSD patients, for which the AUC is 88% for the sample demographics.</p>
+      <p id="p-00111-en" num="0107">Several proteins are discovered which significantly distinguish between PTSD patients and Healthy Controls, independently of gender. Among the top proteins found are (i) synaptotagmin (SwissProt P21579) [p=6 EXP (−9)], a protein associated with calcium dependent neurotransmitter exocytosis. STY1 is reduced ca. 33% (p=6×10 −9) in biological samples of the PTSD patients in comparison to the healthy controls; (ii) Ubiquitin E3 Ligase (SwissProt Q05086) [p=2EXP (−7)], a protein in which mutations are associated with forms of mental retardation. UBE3A is elevated ca. 3-fold in biological samples of the PTSD patients in comparison to the healthy controls (p=2×10 −7); (iii) the Small Inducible Cytokine Subfamily E, member 1 (SCYE1/EMAPII; SwissProt Q12904) [p=2EXP (−6)]), a protein chemoattractant for microglia, and found to be elevated in spinal cord injury. SCYE1 is ca. 55% reduced in biological samples of the PTSD patients in comparison to the healthy controls (p=ca. 5×10 −13); (iv) ORC5L is ca. 30% reduced in biological samples of the PTSD patients in comparison to the healthy controls, and also has the highest significance for a difference from the healthy controls (p=5×10 −14); (v) SIP1 is reduced by ca. 52% (p=ca. 2×10 −11) in biological samples of the PTSD patients in comparison to the healthy controls; and (vi) Doublecortex (DCX) is reduced by ca. 50% (p=ca. 9×10 −6) in biological samples of the PTSD patients in comparison to the healthy controls.</p>
+      <p id="p-00112-en" num="0108">In addition, we have identified different sets of proteins which significantly discriminate between Male and Female PTSD patients. Biological samples from Male PTSD patients are significantly characterized by many proteins associated with proinflammatory signaling pathways. Importantly, these proteins do not distinguish between Male and Female Healthy Controls.</p>
+      <p id="p-00113-en" num="0109">These results are confirmed with quantitation of mRNA by Real-time RT-PCR About 1.5 μg total mRNA is isolated from subject blood samples and reverse transcribed in a reaction volume of 20 μl using Omniscript RT kit and random primers. The product is diluted to a volume of 150 μl and 6 μl aliquots are used as templates for amplification using conventional PCR reagent kit components and gene-specific primers. mRNA detection correlates with that of the corresponding protein for determining PTSD.</p>
+      <heading id="h-00018-en" level="1">Example 2</heading>
+      <p id="p-00114-en" num="0110">Blood samples are obtained from twenty six (26) psychiatric patients with post-traumatic stress disorder (PTSD) and major depressive disorder (MDD), consisting of eleven (11) patients who attempted suicide, fifteen (15) patients whom do not exhibit suicidal behaviors and fourteen (14) normal controls who do not have PTSD. The subjects are not taking anti-psychotic medication. The samples are subsequently analyzed for mRNA of P-11 and mRNA of P2RX7 in peripheral blood mononuclear cells (PBMCs) using quantitative real-time PCR. A meta-analysis of microarray data of P-11, P2RX7 and S100β from post-mortem prefrontal cortex (PFC) of patients who committed suicide (n=56) and non-suicide controls (n=61) are also tested.</p>
+      <p id="p-00115-en" num="0111">PBMC P-11 mRNA levels are significantly lower in suicide attempters and higher in suicide non-attempters, when compared to normal controls. The PFC P-11 mRNA levels in suicide completers are, also lower than non-suicide controls. Unlike P-11, P2RX7 mRNA levels are significantly lower than normal controls in all patients, including suicide attempters, suicide non-attempters, and suicide completers as measured, in both PBMCs and PFC. In addition, S100β expression levels in PFC did not differ between suicide completers and non-suicide controls as measured in PFC. These trends in mRNA levels detailed herein are found to correlate with other samples collected from the subjects; the other, samples including cerebral spinal fluid (CSF), plasma, serum, urine, and saliva. P-11 protein and P2RX7 protein levels are also confirmed to trend as detailed above for mRNA by measurement of protein levels by ELISA on aliquots of the samples used to test mRNA levels.</p>
+      <p id="p-00116-en" num="0000">
+        <tables id="tables-00005-en" num="00005">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 5</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>DEMOGRAPHIC DATA AND CONTROL LEVEL</entry>
+                </row>
+                <row>
+                  <entry>BETWEEN PTSD AND HEALTH CONTROLS</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="56pt" align="left" />
+              <colspec colname="1" colwidth="63pt" align="center" />
+              <colspec colname="2" colwidth="63pt" align="center" />
+              <colspec colname="3" colwidth="21pt" align="center" />
+              <colspec colname="4" colwidth="14pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>PTSD</entry>
+                  <entry>Health Control</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>(N = 13)</entry>
+                  <entry>(N = 14)</entry>
+                  <entry>F</entry>
+                  <entry>P</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="left" />
+              <colspec colname="2" colwidth="21pt" align="right" />
+              <colspec colname="3" colwidth="42pt" align="left" />
+              <colspec colname="4" colwidth="21pt" align="right" />
+              <colspec colname="5" colwidth="63pt" align="left" />
+              <colspec colname="6" colwidth="14pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Age</entry>
+                  <entry>43.15</entry>
+                  <entry>(SD = 12.9)</entry>
+                  <entry>42.2</entry>
+                  <entry>(SD = 12.6)</entry>
+                  <entry>NS</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="left" />
+              <colspec colname="2" colwidth="63pt" align="center" />
+              <colspec colname="3" colwidth="63pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="14pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Sex (M:F)</entry>
+                  <entry>1:12</entry>
+                  <entry>1:10</entry>
+                  <entry />
+                  <entry>NS</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="left" />
+              <colspec colname="2" colwidth="21pt" align="right" />
+              <colspec colname="3" colwidth="42pt" align="left" />
+              <colspec colname="4" colwidth="21pt" align="right" />
+              <colspec colname="5" colwidth="42pt" align="left" />
+              <colspec colname="6" colwidth="21pt" align="center" />
+              <colspec colname="7" colwidth="14pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Education</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>NS</entry>
+                </row>
+                <row>
+                  <entry>&lt;12 yrs</entry>
+                  <entry>9</entry>
+                  <entry>(69%)</entry>
+                  <entry>7</entry>
+                  <entry>(64%)</entry>
+                </row>
+                <row>
+                  <entry>&gt;12 yrs</entry>
+                  <entry>4</entry>
+                  <entry>(31%)</entry>
+                  <entry>4</entry>
+                  <entry>(36%)</entry>
+                </row>
+                <row>
+                  <entry>Marital status</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>NS</entry>
+                </row>
+                <row>
+                  <entry>single</entry>
+                  <entry>4</entry>
+                  <entry>(31%)</entry>
+                  <entry>4</entry>
+                  <entry>(36%)</entry>
+                </row>
+                <row>
+                  <entry>married</entry>
+                  <entry>6</entry>
+                  <entry>(46%)</entry>
+                  <entry>7</entry>
+                  <entry>(64%)</entry>
+                </row>
+                <row>
+                  <entry>divorced</entry>
+                  <entry>3</entry>
+                  <entry>(23%)</entry>
+                </row>
+                <row>
+                  <entry>Saliva cortisol</entry>
+                </row>
+                <row>
+                  <entry>Auc</entry>
+                  <entry>15.6</entry>
+                  <entry>(SD = 7.5)</entry>
+                  <entry>18.7</entry>
+                  <entry>(SD = 8.3)</entry>
+                  <entry>0.94</entry>
+                  <entry>NS</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00117-en" num="0112">AD=Standard deviation; AUC=Area under curve, average by day 1 and day 2 AUC. Average concentration of plasma cortisol levels of control and PTSD are 3.86+2.33 ng/ml, and 2.96+1.88 ng/ml, respectively; Each AUC calculated 4 times (8 AM, 10 AM, 4 PM, 10 PM) salivary cortisol levels.</p>
+      <p id="p-00118-en" num="0113">For the mRNA markers a quantitative real time PCR analysis is used using whole blood samples. The purification of PBMC mRNA, cDNA synthesis and quantitative real time PCR are carried out according to manufacturer's protocol. Differences in the levels of P-11 mRNA, GR mRNA and cortisol are assessed by two way ANOVA (analysis of variance). Significant differences are defined as P-value of 0.05 or less. Whole blood (2.5 mL) are transferred to PAXgene tubes containing 6.9 mL of stabilization reagent and stored either at frozen at −70° C. after 2 h respite to allow hemolysis of red blood cells. The amount of total RNA is quantified using a Nano Drop spectrophotometer. The quality is electrophoretically controlled on an Agilent BioAnalyzer using the RNA 6000 Pico assay. RNA ratio values (28S/18S) are estimated and obtained from all samples. Total RNA (2.5 μg) are then reverse transcribed with random hexamers (Eurogentec) and SuperScript RT RNase H-reverse transcriptase (Life Technologies) in a final reaction volume of 45 μL. Data are shown as means+/−SEM, *p&lt;0.05 (control vs. PTSD) and are analyzed.</p>
+      <p id="p-00119-en" num="0114">Basal levels of blood plasma and saliva cortisol in PTSD patients and controls, as well as levels of P-11 and GR mRNA in PBMC of the patients with PTSD and controls are measured in the samples.</p>
+      <p id="p-00120-en" num="0115">
+        <figref>FIG. 5</figref> shows that basal levels of blood plasma cortisol do not significantly differ between PTSD (n=13) and control subjects (n=11) (p&gt;0.05).</p>
+      <p id="p-00121-en" num="0116">
+        <figref>FIG. 6</figref> shows that GR mRNA levels are significantly lower in the PBMCs of PTSD than control subjects.</p>
+      <p id="p-00122-en" num="0117">
+        <figref>FIG. 7</figref> shows significantly lower P-11 mRNA levels in the patients with PTSD (n=13) compared to control (n=14). (p&lt;0.05). PBMC P-11 mRNA levels of bipolar, BP (n=24), major depressive disorder, MDD (n=12), schizophrenia, SCZ (n=12) are significant higher than in control subjects (n=14) (p&lt;0.001).</p>
+      <p id="p-00123-en" num="0118">These trends in mRNA levels detailed herein are found to correlate with other samples collected from the subjects; the other samples including cerebral spinal fluid (CSF), plasma, serum, urine, and saliva. P-11 protein and P2RX7 protein levels are also confirmed to trend as detailed above for mRNA by measurement of protein levels by ELISA on aliquots of the samples used to test mRNA levels.</p>
+      <heading id="h-00019-en" level="1">Example 3</heading>
+      <p id="p-00124-en" num="0119">The ability of the present invention to provide feedback as to the effectiveness of chemical and therapeutic agent interventions is provided in this example in which biological samples are obtained from a total of 49 subjects. Fourteen (14) of the subjects are determined to be suffering from PTSD, nine (9) of which are suicidal, the remaining five (5) are non-suicidal. Twenty one (21) of the subjects are determined to be suffering from BP, seven (7) of which are suicidal, the remaining fourteen (14) are non-suicidal. The remaining fourteen subjects are healthy control subjects. There are no significant group differences for gender (See Table 6). There are no statistically significant differences between BP or PTSD patients and control subjects in terms of age, gender ratio, education level or marital status. Table 6 shows that BP and PTSD patients, with and without suicide attempts, have similar average ages at onset, respectively.</p>
+      <p id="p-00125-en" num="0120">All PTSD subjects are medicated with sixty six percent of suicide attempters with PTSD are taking rivotril (Clonazepam, a benzodiazepine), while 55% are taking depakine. Twenty two percent are taking either cymbalta, lendormin, modipanol, semi-nax or seroxat. Eleven percent are taking either seroxat, abilify, akineton, ativan,effexor, lodopin, nil, olanzapine, remeron, sinequan, stilnox, tryptanol, wellbutrin or Xanax.</p>
+      <p id="p-00126-en" num="0121">Sixty percent of non-suicidal patients with PTSD are taking erispan, while 40% are taking either effexor or stilnox. Twenty percent are taking either abilify, depakine, inderal, lendorm, mesyrel, nil, rivotril or seroxat. None of the BP patients are medicated.</p>
+      <p id="p-00127-en" num="0000">
+        <tables id="tables-00006-en" num="00006">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 6</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Demographic data of suicide attempters and non-suicidal</entry>
+                </row>
+                <row>
+                  <entry>patients with BP or PTSD and control subjects.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="56pt" align="left" />
+              <colspec colname="1" colwidth="105pt" align="center" />
+              <colspec colname="2" colwidth="56pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Groups</entry>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="56pt" align="center" />
+              <colspec colname="3" colwidth="49pt" align="center" />
+              <colspec colname="4" colwidth="56pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Non-</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Patient</entry>
+                  <entry>Suicide</entry>
+                  <entry>suicidal</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Groups</entry>
+                  <entry>attempters</entry>
+                  <entry>patients</entry>
+                  <entry>Difference</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>PTSD (age)</entry>
+                  <entry>38.57 ± 4.8</entry>
+                  <entry>47.56 ± 3.0</entry>
+                  <entry>P = 0.452,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>(20-56)</entry>
+                  <entry>(42-69)</entry>
+                  <entry>df = 3.31,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>NS</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>BP (age)</entry>
+                  <entry>42.71 ± 4.3</entry>
+                  <entry>50.15 ± 3.9</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>(29-57)</entry>
+                  <entry>(23-80)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Sex of PTSD</entry>
+                  <entry>1:8</entry>
+                  <entry>1:4 </entry>
+                  <entry>P = 0.604,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(m/f)</entry>
+                  <entry />
+                  <entry />
+                  <entry>(df = 8.4)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>NS</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Sex of BP</entry>
+                  <entry>0:7</entry>
+                  <entry>1:13</entry>
+                  <entry>P = 0.667,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(m/f)</entry>
+                  <entry />
+                  <entry />
+                  <entry>(df = 6.13),</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>NS</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="left" id="entry-00001-en">NS, non-significant</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00128-en" num="0122">Diagnoses of test subjects are established by two psychiatrists using the Mini International Neuropsychiatric Interview (MINI) and DSM-IV for all study subjects. All patients meet DSM-IV diagnostic criteria for BP or PTSD. Exclusion criteria are current medical problems, significant physical illness, neurological diseases, history of head trauma with loss of consciousness, and history of substance abuse and current alcohol abuse (within 6 months). Non-psychiatric control subjects are matched as a group, with PTSD and BP patients for age, gender, education, and race. Lifetime history of suicide attempts is assessed by using a semistructured interview and combining a review of medical records.</p>
+      <p id="p-00129-en" num="0123">To quantify the clinical outcome of mood and anxiety symptoms, The Hamilton Rating Scale for Depression (HAMD), and Hamilton Anxiety Scale (HARS) are used, respectively.</p>
+      <p id="p-00130-en" num="0124">Heparinized and unheparinized blood samples (10 mL each) are collected by venipuncture in Vacutainer tubes. Peripheral blood mononuclear cells (PBMCs) are separated by centrifugation on Ficoll-Hypaque (Invitrogen) density gradient. The blood samples are stored at −80° C.</p>
+      <p id="p-00131-en" num="0125">The whole blood samples are centrifuged at 1300×g for 10 minutes at 4 degrees. And then the plasma is transferred to a labeled fresh Eppendorf tube and stored at −80° C. Plasma levels of P-11 are determined by highly sensitive ELISA. A monoclonal anti-human-P-11 antibody is used. P-11 concentration is determined from the regression line for the P-11 standard curve conducted under similar conditions in each assay.</p>
+      <p id="p-00132-en" num="0126">RNA is extracted from human blood lysates using PAXgen blood RNA validation Kit (PreAnalytiX a Qiagen/BD company, Valencia, Calif.). cDNA is generated from 3 mg of total RNA using Superscript III RT (reverse transcriptase) and oligo (dT) primers (Invitrogen). Real-time PCR is performed on the generated cDNA product in the IQ5 sequence detection system using SYBR Green (Bio-Rad). The following sequences are used for human P-11 mRNA analyses: forward 5′AAATTCGCTGGGGATAAAGG-3′(SEQ. ID. NO. 1) and reverse 5′AGCCCACTTTGCCATCTCTA-3′ (SEQ. ID. NO. 2) primers. The sequences for P2RX7 mRNA analyses are forward 5′AGATCGTGGAGAATGGAGTG-3′ (SEQ. ID. NO. 3), and reverse 5′-TTCTCGTGGTGTAGTTGTGG-3′ (SEQ. ID. NO. 4) primers. Beta-actin mRNA level is used as an internal control for normalizing P-11 or P2RX7 mRNA levels in control and experimental samples. The sequences for beta-actin primers are 5′-ACCTGTACGCCAACACAGTG-3′ (SEQ. ID. NO. 5) and 5′-ACACGGAGTACTTGCGCTCA-3′ (SEQ. ID. NO. 6) (Applied Biosystems). Dilution curves are used to confirm the linear dependence of the threshold cycle number on the concentration of template RNAs.</p>
+      <p id="p-00133-en" num="0127">Relative quantitation of P-11 or P2RX7 mRNA in control and experimental samples are obtained using the standard curve method.</p>
+      <p id="p-00134-en" num="0128">All data are presented as mean±S.D. The differences in PBMC P-11 or P2RX7 expression among suicide attempters and non-suicide patients with PTSD, BP and control subjects are analyzed by one-way ANOVA. The analysis of the correlation coefficient and P-values are also carried out. Statistics are performed using GraphPad Prism (GraphPad Software, Inc. San Diego, Calif.). SPSS (SPSS Inc. Chicago, Ill.) and Microsoft Excel.</p>
+      <p id="p-00135-en" num="0129">PBMC P-11 mRNA and P2RX7 mRNA expression levels are measured for each sample and the results are compared.</p>
+      <p id="p-00136-en" num="0130">
+        <figref>FIG. 8A</figref> demonstrates the differences in PBMC P-11 mRNA expression levels among controls, suicide attempters and non-suicidal patients with PTSD. Real-time PCR data revealed a significant difference among the groups for P-11 mRNA levels in PBMC having BP. Suicide attempters with PTSD have significantly lower levels of P-11 mRNA in PBMCs than control subjects and non-suicidal patients.</p>
+      <p id="p-00137-en" num="0131">
+        <figref>FIG. 8B</figref> demonstrates the differences in PBMC P-11 expression levels among control subjects, suicide attempters and non-suicidal patients with BP. Real-time PCR data reveal a significant difference among the groups for P-11 mRNA levels in PBMC. Both suicide attempters and non-suicidal patients exhibit significantly higher levels of P-11 mRNA in PBMCs than the control subjects, while there is no significant difference in P-11 mRNA levels between suicide attempters and non-suicidal patients.</p>
+      <p id="p-00138-en" num="0132">PBMC P-11 mRNA expression levels no longer correlate with symptoms of PTSD in patients with or without suicide attempts in the medicated cohort suggesting effectiveness of treatment. A correlational analysis on P-11 levels is performed in PTSD patients with their depression and anxiety as measured by the Hamilton Rating Scale for Depression (HAMD), and Hamilton Anxiety Scale (HARS). PBMC P-11 mRNA expression is not correlated with either HAMD or HARS scores in suicide attempters (<figref>FIG. 9A-B</figref>) or non-suicidal patients with PTSD (<figref>FIG. 9C-D</figref>).</p>
+      <p id="p-00139-en" num="0133">PBMC P-11 mRNA expression levels no longer correlate with symptoms of BP in patients with or without suicide attempts in the medicated cohort. A correlation analysis on P-11 levels is made in BP patients with their depression and anxiety as measured by HAMD, and HARS. PBMC P-11 mRNA expressions no longer correlated with either HAMD or HARS scores in suicide attempters (<figref>FIG. 10A-B</figref>) or non-suicidal patients with BP (<figref>FIG. 10C-D</figref>).</p>
+      <p id="p-00140-en" num="0134">PBMC P2RX7 mRNA expression levels of PTSD patients, with or without suicide attempts, and BP patients without attempts are significantly less than those of control subjects. <figref>FIG. 11A</figref> demonstrates the differences in PBMC P2RX7 expression levels among control subjects and PTSD patients with or without suicide attempts. Real-time PCR data reveal a significant difference among the groups for P2RX7 mRNA levels in PBMC. Both suicide attempters and non-suicidal patients with PTSD had significantly lower levels of P2RX7 mRNA in PBMCs than the controls.</p>
+      <p id="p-00141-en" num="0135">
+        <figref>FIG. 11B</figref> demonstrates the differences in PBMC P2RX7 expression levels among control subjects, suicide attempters and non-suicidal patients with BP. Real-time PCR data reveal that BP patients without suicide attempts had significantly lower levels of P2RX7 mRNA in PBMCs compared with control subjects and BP patients with suicide attempts.</p>
+      <p id="p-00142-en" num="0136">PBMC P2RX7 mRNA expression levels and symptoms of non-suicidal patients (<figref>FIG. 12C-D</figref>), but not suicide attempters (<figref>FIG. 12A-B</figref>), with PTSD are highly correlated.</p>
+      <p id="p-00143-en" num="0137">PBMC P2RX7 mRNA expression levels do not correlate with symptoms of BP patients, with or without suicide attempts. P2RX7 mRNA levels in PBMCs of BP patients with and without suicide attempts are not significantly correlated with either HAMD or HARS scores (<figref>FIG. 13</figref>).</p>
+      <p id="p-00144-en" num="0138">These trends in mRNA levels detailed herein are found to correlate with other samples collected from the subjects; the other samples including cerebral spinal fluid (CSF), plasma, serum, urine, and saliva. P-11 protein and P2RX7 protein levels are also confirmed to trend as detailed above for mRNA by measurement of protein levels by ELISA on aliquots of the samples used to test mRNA levels.</p>
+      <heading id="h-00020-en" level="1">Example 4</heading>
+      <p id="p-00145-en" num="0139">Biological samples are obtained from 40 subjects who are diagnosed with PTSD (n=14) or MDD (n=12), and 14 normal controls. Eleven (11) of the psychiatric patients had attempted to commit suicide. The available clinical records, including inpatient and outpatient, are reviewed, and all subjects are carefully interviewed regarding psychiatric history, family history of mental disorders, and history of substance abuse. Diagnoses are established by two psychiatrists using the Mini International Neuropsychiatric Interview (MINI) and DSM-IV for all study subjects. All patients met DSM-IV diagnostic criteria for PTSD or MDD. Exclusion criteria are current medical problems, significant physical illness, neurological diseases, history of head trauma with loss of consciousness, and history of substance abuse and current alcohol abuse (within 6 months). Normal controls are matched as a group with PTSD and MDD patients for age, gender, education, and race.</p>
+      <p id="p-00146-en" num="0140">After the study design had been fully explained, and prior to undergoing psychiatric evaluation and blood collection, all, subjects provided a written informed consent. Lifetime history of suicide attempts is assessed by using a semi-structured interview combined with a review of medical records. The clinical diagnosis for each group is shown in Table 7. It is shown that there, are no statistically significant differences between the age of patients who had attempted suicide (n=11) and those who had not (n=15). Medications used by all the groups are shown in Table 3.</p>
+      <p id="p-00147-en" num="0000">
+        <tables id="tables-00007-en" num="00007">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 7</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Demographic data of suicide attempters,</entry>
+                </row>
+                <row>
+                  <entry>suicide non-attempters and controls.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="56pt" align="left" />
+              <colspec colname="1" colwidth="49pt" align="center" />
+              <colspec colname="2" colwidth="49pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Suicide</entry>
+                  <entry>Suicide</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>attempters</entry>
+                  <entry>non-attempters</entry>
+                  <entry>Control</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(N - 11)</entry>
+                  <entry>(N - 15)</entry>
+                  <entry>(N = 14)</entry>
+                  <entry>P</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="center" />
+              <colspec colname="3" colwidth="49pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="21pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Age</entry>
+                  <entry>41.27 ± 3.39</entry>
+                  <entry>46.53 ± 3.81</entry>
+                  <entry>42.2 ± 12.9</entry>
+                  <entry>NS</entry>
+                </row>
+                <row>
+                  <entry>Sex ratio</entry>
+                  <entry>10:1</entry>
+                  <entry>11:4</entry>
+                  <entry>13:1</entry>
+                  <entry>NS</entry>
+                </row>
+                <row>
+                  <entry>(Female:Male)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="left" />
+              <colspec colname="2" colwidth="14pt" align="right" />
+              <colspec colname="3" colwidth="35pt" align="left" />
+              <colspec colname="4" colwidth="21pt" align="right" />
+              <colspec colname="5" colwidth="28pt" align="left" />
+              <colspec colname="6" colwidth="14pt" align="right" />
+              <colspec colname="7" colwidth="28pt" align="left" />
+              <colspec colname="8" colwidth="21pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Marital</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Single</entry>
+                  <entry>1</entry>
+                  <entry>(10%)</entry>
+                  <entry>1</entry>
+                  <entry>(7%)</entry>
+                  <entry>4</entry>
+                  <entry>(29%)</entry>
+                  <entry>&lt;0.05</entry>
+                </row>
+                <row>
+                  <entry>Married</entry>
+                  <entry>5</entry>
+                  <entry>(45%)</entry>
+                  <entry>9</entry>
+                  <entry>(60%)</entry>
+                  <entry>10</entry>
+                  <entry>(71%)</entry>
+                  <entry>NS</entry>
+                </row>
+                <row>
+                  <entry>Widow/divorce</entry>
+                  <entry>5</entry>
+                  <entry>(45%)</entry>
+                  <entry>5</entry>
+                  <entry>(33%)</entry>
+                  <entry>0</entry>
+                  <entry>(0%)</entry>
+                  <entry>NS</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="center" />
+              <colspec colname="3" colwidth="49pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="21pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Age onset</entry>
+                  <entry>34.64 ± 3.46</entry>
+                  <entry>11.27 ± 3.87</entry>
+                  <entry>NA</entry>
+                  <entry>NS</entry>
+                </row>
+                <row>
+                  <entry>Duration</entry>
+                  <entry> 6.7 ± 1.91</entry>
+                  <entry> 10.3 ± 2.65</entry>
+                  <entry>N/A</entry>
+                  <entry>NS</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="left" />
+              <colspec colname="2" colwidth="14pt" align="right" />
+              <colspec colname="3" colwidth="35pt" align="left" />
+              <colspec colname="4" colwidth="21pt" align="right" />
+              <colspec colname="5" colwidth="28pt" align="left" />
+              <colspec colname="6" colwidth="14pt" align="right" />
+              <colspec colname="7" colwidth="28pt" align="left" />
+              <colspec colname="8" colwidth="21pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Diagnosis</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>PTSD</entry>
+                  <entry>9</entry>
+                  <entry>(82%)</entry>
+                  <entry>5</entry>
+                  <entry>(33%)</entry>
+                </row>
+                <row>
+                  <entry>MDD</entry>
+                  <entry>2</entry>
+                  <entry>(18%)</entry>
+                  <entry>10</entry>
+                  <entry>(67%)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00148-en" num="0000">
+        <tables id="tables-00008-en" num="00008">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 8</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Medication in suicide attempters and suicide non-attempters.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="56pt" align="left" />
+              <colspec colname="1" colwidth="35pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Antide-</entry>
+                  <entry>Mood</entry>
+                  <entry>Anti-</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>pressants</entry>
+                  <entry>stabilizers</entry>
+                  <entry>psychotics</entry>
+                  <entry>Anxiolytics</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>N (%)</entry>
+                  <entry>N (%)</entry>
+                  <entry>N (%)</entry>
+                  <entry>N (%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <colspec colname="5" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Suicide</entry>
+                  <entry> 9 (45)</entry>
+                  <entry>7 (70)</entry>
+                  <entry>8 (50)</entry>
+                  <entry> 9 (39)</entry>
+                </row>
+                <row>
+                  <entry>attempters</entry>
+                </row>
+                <row>
+                  <entry>(N = 11)</entry>
+                </row>
+                <row>
+                  <entry>Suicide</entry>
+                  <entry>11 (55)</entry>
+                  <entry>3 (30)</entry>
+                  <entry>8 (50)</entry>
+                  <entry>14 (61)</entry>
+                </row>
+                <row>
+                  <entry>non-attempters</entry>
+                </row>
+                <row>
+                  <entry>(N = 15)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00149-en" num="0141">Three post-mortem brain collections from the Stanley Medical Research Institute (SMRI), including the Neuropathology Consortium, the Array Collection, and the Depression Cohort, are used. The subjects are matched for age, gender, race, brain pH (Table 9), post-mortem interval (PMI), side of the brain and mRNA quality. The dorsolateral prefrontal cortex (PFC) is used for all microarray studies. The RNA processing protocol is that recommended by the microarray manufacturer Affymetrix. For the suicide analysis, subjects are divided into two groups including those with psychiatric disorders who committed suicide (n=56) and normal controls without psychiatric disorders (n=61). Psychiatric disorder and medication effects are adjusted in the individual study analyses using multiple regression models.</p>
+      <p id="p-00150-en" num="0000">
+        <tables id="tables-00009-en" num="00009">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 9</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Demographic data of non-suicide controls and suicide subjects.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="98pt" align="left" />
+              <colspec colname="1" colwidth="42pt" align="center" />
+              <colspec colname="2" colwidth="77pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Non-suicide</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>controls</entry>
+                  <entry>Suicide</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="char" char="." />
+              <colspec colname="3" colwidth="77pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Subjects</entry>
+                  <entry>61</entry>
+                  <entry>56</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Bipolar disorder</entry>
+                  <entry>0</entry>
+                  <entry>23</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>MDD</entry>
+                  <entry>0</entry>
+                  <entry>22</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Schizophrenia</entry>
+                  <entry>0</entry>
+                  <entry>11</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Average age</entry>
+                  <entry>45</entry>
+                  <entry>41</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Sex (male)</entry>
+                  <entry>42 (70%)</entry>
+                  <entry>31 (55%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Average brain pH</entry>
+                  <entry>6.5</entry>
+                  <entry>6.4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00151-en" num="0142">All microarray raw data are transformed using the MAS5.0 normalization algorithm. A series of quality control (QC) analyses are performed to identify microarray sample outliers before conducting the statistical analysis. Briefly, each microarray chip is subjected to Affymetrix QC metrics for chip-level parameters such as scale factor, probe perfect match/mismatch difference counts, percent present calls, control gene (GAPDH and b-actin) 50/30 ratios, and average correlation with respect to the reference distribution for those parameters across the arrays.</p>
+      <p id="p-00152-en" num="0143">For the individual study analysis, each demographic and clinical variable is assessed to identify potential confounding factors using a linear model within each study. Following these demographic analyses, the suicide group is analyzed to identify a list of discriminating genes adjusted for confounding variables. The multiple regression analysis provided an adjusted fold change, standard error (SE), and p-value for each gene in each study. For the cross-study analysis, Affymetrix microarray studies (study ids: 1, 2, 3, 4, 5, 7, 14, 15 and 21) are included. The cross-study comparisons are based on scaled representations of individual study-level analyses across studies to extract the biological patterns and relationships. Consensus fold change is calculated for each gene based on a weighted combination of the individual fold changes and the SEs for the Affymetrix probesets that map to each gene across the studies. Weights are determined in a probeset-specific manner to account for the different levels of precision associated with each probeset that map to a given gene across the platforms. The weights are equal to 1 SEi, where SEi is the standard error of the ith probeset for the gene across all the studies.</p>
+      <p id="p-00153-en" num="0144">To quantify the clinical expression of mood and anxiety symptoms, the Hamilton Rating Scale for Depression (HAMD), and Hamilton Anxiety Rating Scale (HARS) are used, respectively.</p>
+      <p id="p-00154-en" num="0145">Heparinized and unheparinized blood samples (10 mL each) are collected by venipuncture in Vacutainer tubes. Peripheral blood mononuclear cells are separated by centrifugation on Ficoll-Hypaque (Invitrogen) density gradient. The blood samples are stored at −80° C.</p>
+      <p id="p-00155-en" num="0146">Real-time PCR analysis of P-11 or P2RX7 gene expression RNA is extracted from human blood lysates using the PAXgen blood RNA validation Kit (PreAnalytiX, Qiagen/BDCompany, Valencia, Calif.). cDNA is generated from 3 mg of total RNA using Superscript III RT (reverse transcriptase) and oligo (dT) primers (Invitrogen). Real time PCR is performed on the generated cDNA product in the IQ5 sequence detection system using SYBR Green (Bio-Rad). The sequences SEQ ID NOs 1-6 are used for analysis per Example 3Dilution curves confirmed the linear dependence of the threshold cycle number on the concentration of template RNAs. The relative quantitation of P-11 or P2RX7 mRNA in control and experimental samples is obtained using the standard curve method.</p>
+      <p id="p-00156-en" num="0147">All data are presented as mean S.D or S.E. The differences in PBMC P-11 or P2RX7 expression levels among patients who attempted suicide, patients who had not attempted suicide, and control subjects are analyzed by one-way ANOVA. Analyses of the correlation coefficient and P-values are also carried out using Microsoft Excel. Statistics are performed using GraphPad Prism (GraphPad Software, Inc. San Diego, Calif.).</p>
+      <p id="p-00157-en" num="0148">Differences in the P-11 mRNA expression levels in the PBMCs of suicide attempters and in the PFC of suicide completers P-11 mRNA levels in PBMCs of control subjects, suicide attempters and suicide non-attempters are shown in <figref>FIG. 10</figref>. P-11 mRNA levels significantly decreased in suicide attempters compared to control subjects, while in suicide non-attempters P-11 mRNA levels are significantly greater than in either control subjects or suicide attempters.</p>
+      <p id="p-00158-en" num="0149">The correlations of the HAMD and HARS scores and P-11 mRNA levels of suicide attempters and non-suicide attempters are examined. There are no significant correlations between HAMD or HARS and P-11 mRNA level in medicated suicide attempters. However, there is a significant difference in HARS scores among medicated suicide attempters and suicide non-attempters. Finally, there is a significant difference in item 3 scores of HAMD between medicated suicide attempters and medicated suicide non-attempters. These results offer feedback as to efficacy of treatment as whole in modifying the marker levels relative to unmedicated PTSD subjects.</p>
+      <p id="p-00159-en" num="0150">PBMC P2RX7 mRNA levels are significantly decreased in both suicide attempters and suicide non-attempters compared to control subjects <figref>FIG. 11</figref>. Combined analysis of 9 Affymetrix gene expression microarray studies showed that P2RX7 mRNA levels are consistently decreased in the PFC of suicide cases as compared to non-suicide controls (adjusted p=0.03).</p>
+      <p id="p-00160-en" num="0151">There is no significant correlation between HAMD or HARS scores and P2RX7 mRNA levels in suicide attempters and suicide non-attempters of PTSD and MDD.</p>
+      <heading id="h-00021-en" level="1">Example 5</heading>
+      <p id="p-00161-en" num="0152">Adult male Sprague-Dawley rats each weighing 150-200 g is selected. A number of rats remain undisturbed in their home cages as controls while an equal number of rats are exposed to inescapable tail shock (stress).</p>
+      <p id="p-00162-en" num="0153">The stress protocol involves placing the test group of rats in a Plexiglas restraining tube (23.4 cm long and 7 cm in diameter) and exposing them to 100 inescapable electrical shocks (2.0 mA) for 5 s each, with an average intertribal interval of 60 s. The shocks are applied through electrodes taped to the tail. The number and strength of the shocks are optimized to yield a model of inescapable stress as measured by changes in behavior and by elevated plasma corticosterone levels. The number of animals used and their suffering are minimized. The total stress session lasts approximately 100 minutes. After stress or termination, all animals are returned to their home cages.</p>
+      <p id="p-00163-en" num="0154">All rats are anesthetized with a brief exposure to Isoflurane immediately or 48 h after inescapable tail shock. Their brains are quickly removed after decapitation. All dissections are performed on a frosted glass plate placed on top of crushed ice. Brain samples, such as prefrontal cortex, hippocampus, amygdala and cerebellum are quickly frozen on dry ice and stored at −70° C. until time of use. Blood is collected and frozen.</p>
+      <p id="p-00164-en" num="0155">Plasma corticosterone of non-stressed control or stressed groups is measured using appropriate Enzyme Immunoassay Kits, such as the DSL-10-81100 ACTIVE Rat Corticosterone (Diagnostic Systems Laboratories, Inc., Webster, Tex., USA).</p>
+      <p id="p-00165-en" num="0156">Plasma P-11 protein is measured using Goat anti-mouse IgG Microplate (R&amp;D Systems). In order to prepare the plate, first, 100 ul of 1:1000 diluted mouse anti-human S100A10 (P-11) monoclonal antibody (Abcam, Ab52272) is transferred into each well of the ELISA plate. The plate is sealed with film and incubated overnight at room temperature. Secondly, 100 ul of the dilutions of unknowns and standards are added in the plate and incubated 2 hours at room temperature. Thirdly, 100 ul of rabbit anti-human P-11 antibody (diluted with 1:1000) (Proteintech Group, Cat. #: 11250-1-AP) is added in the plate and incubated overnight at 4° C. Fourthly, 100 ul Streptavidin-HRP (anti-rabbit IgG, R&amp;D Systems, Cat. #: DY998) is incubated for 20 minutes at room temperature. Between the above steps, the plate is washed three times. Fifthly, 100 ul Substrate Solution (R&amp;D Systems, Cat. #: DY999) is added in each well and incubated for 20 minutes at room temperature. Sixthly, 50 ul of Stop Solution is added and the optical density (OD) of each well is determined within 30 minutes by the microplate reader.</p>
+      <p id="p-00166-en" num="0157">RNA is extracted from tissue or blood cell lysates using TRIzol. cDNA is generated from 5 ug of total RNA for each sample using Superscript III RT (reverse transcriptase) and oligo (dT) primers to exclude the possibility that differences in RNA-content could also result from differences in sample weights. Real-time PCR is performed on the generated cDNA product. The following sequences are used for human P-11 mRNA analyses: SEQ ID NOs. 1 and 2 primers. The sequences used for rat P-11 mRNA analyses are: forward 5′-TGCTCATGGAAAG GGAGTTC-3′ (SEQ ID NO. 7) and reverse 5′-CCCCGCCACTAGTGATAGAA-3′ (SEQ ID NO. 8) primers. Beta-actin mRNA level is used as an internal control for normalizing P-11 mRNA levels in control and experimental samples with SEQ ID NOs. 5 and 6 per Example 3. Dilution curves confirm the linear dependence of the threshold cycle number on the concentration of template RNAs. Measurements of P-11 mRNA in control and experimental samples are obtained using the standard curve method.</p>
+      <p id="p-00167-en" num="0158">These trends in mRNA levels detailed herein are found to correlate with other samples collected from the subjects; the other samples including whole blood, cerebral spinal fluid (CSF), plasma, serum, urine, and saliva. P-11 protein and P2RX7 protein levels are also confirmed to trend as detailed above for mRNA by measurement of protein levels by ELISA on aliquots of the samples used to test mRNA levels.</p>
+      <p id="p-00168-en" num="0159">Rat data for PTSD and control groups correlates with that for humans in Example 1 confirming the protocol as an animal model for human non-suicidal PTSD.</p>
+      <p id="p-00169-en" num="0160">It is to be understood that while the invention has been described in conjunction with the detailed description thereof, the foregoing description is intended to illustrate and not limit the scope of the invention, which is defined by the scope of the appended claims. Other aspects, advantages, and modifications are within the scope of the following claims.</p>
+      <p id="p-00170-en" num="0161">While at least one exemplary embodiment has been presented in the foregoing detailed description, it should be appreciated that a vast number of variations exist. It should also be appreciated that the exemplary embodiment or exemplary embodiments are only examples, and are not intended to limit the scope, applicability, or configuration of the described embodiments in any way. Rather, the foregoing detailed description will provide those skilled in the art with a convenient road map for implementing the exemplary embodiment or exemplary embodiments. It should be understood that various changes can be made in the function and arrangement of elements without departing from the scope as set forth in the appended claims and the legal equivalents thereof.</p>
+      <p id="p-00171-en" num="0162">Patent documents and publications mentioned in the specification are indicative of the levels of those skilled in the art to which the invention pertains. These documents and publications are incorporated herein by reference to the same extent as if each individual document or publication is specifically and individually incorporated herein by reference.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A process of determining the presence of a psychiatric disorder, comprising:
+<claim-text>collecting a biological sample from an affected subject suspected of having a psychiatric disorder;</claim-text><claim-text>measuring said sample for an amount of at least one marker that is associated with a psychiatric disorder wherein the at least one marker protein is (i) synaptotagmin 1(STY1); (ii) ubiquitin protein ligase E3A; polymerase (UBE3A), (iii) delta 1, catalytic subunit 125 kDa; (iv) small inducible cytokine subfamily E, member 1 (SCYE1); (v) non-metastatic cells 1, protein (NM23A); (vi) protein kinase C-like 1; nuclear protein, ataxia-telangiectasia locus; (vii) antigen identified by monoclonal antibody Ki-67; (viii) phospholipase C, beta 1 (phosphoinositide-specific); (ix) potassium voltage-gated channel, subfamily H (eag-related), member 6; (x) endothelial monocyte-activating polypeptide (EMAP-II); (xi) survival of motor neuron protein interacting protein (SIP1); (xii) Origin recognition complex, subunit 5-like (ORC5L); (xiii) Doublecortex; lissencephaly, X-linked (doublecortin) (DCX); (xiv) ubiquitin carboxyl terminal esterase L-1(UCH-L1), (xv) glial fibrillary acidic protein (GFAP), (xvi) α2-spectrin, (xvii) synaptophysin, (xviii) α-synuclein, (xix) neurogranin, (xx) S-100β, (xxi) neurofilament proteins-F, H and N, (xxii) microtubulin proteins, (xxiii) myelin basic proteins, (xxiv) collapsin response mediated proteins (CRMPs), and (xxv) P-11, and (xxvi) P2RX7, or combinations thereof, and</claim-text><claim-text>comparing said amount of the at least one marker with a normal subject amount of the at least one marker measured in a normal subject not having a psychiatric disorder or a historical affected subject amount of the at least one marker;</claim-text><claim-text>where differential between said amount and said normal amount or said historical amount is indicative of a psychiatric disorder in said affected subject.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The process of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the at least one marker is a protein of UBE3A, STY1, EMAP-II, SIP1, ORC5L, DCX, SCYE, UCH-L1, P-11 or combinations thereof.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The process of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising:
+<claim-text>selecting a male patient suspected of having post-traumatic stress disorder (PTSD),</claim-text><claim-text>measuring said sample for an amount of at least one PTSD marker associated with PTSD, in a biological sample from a subject suspected of having a PTSD wherein the at least one PTSD protein is ubiquitin-conjugating enzyme E2L 3; Fas (TNFRSF6)-associated via death domain; protein kinase, AMP-activated, beta 1 non-catalytic subunit; kallikrein 10; mitogen-activated protein kinase kinase 4; TAF6 RNA polymerase II, TATA box-binding protein (TBP)-associated factor, 80 kDa; protein kinase C, alpha; DNA fragmentation factor, 45 kDa, alpha polypeptide; interferon-induced protein with tetratricopeptide repeats 4; striatin, calmodulin binding protein; phosphoinositide-3-kinase, catalytic, alpha polypeptide; tumor necrosis factor receptor superfamily, member 6; nuclear autoantigenic sperm protein (histone-binding); ras homolog gene family, member A; NIMA (never in mitosis gene a)-related kinase 2; SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 2; aryl hydrocarbon receptor nuclear translocator; synaptosomal-associated protein, 91 kDa homolog (mouse); G1 to S phase transition 2; or integrin, alpha 2 (CD49B, alpha 2 subunit of VLA-2 receptor), and</claim-text><claim-text>comparing said amount of the at least one PTSD protein with a normal subject amount of the at least one PTSD marker measured in a normal subject not having PTSD or other psychiatric disorder or a historical affected subject amount of the at least one PTSD marker;</claim-text><claim-text>where differential between said amount and said normal amount or said historical amount is indicative of PTSD in said affected subject.</claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The process of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising:
+<claim-text>selecting a female patient suspected of having post-traumatic stress disorder (PTSD),</claim-text><claim-text>measuring said sample for an amount of at least one PTSD marker associated with PTSD in a biological sample from a subject suspected of having a PTSD wherein the at least one PTSD marker is survival of motor neuron protein interacting protein 1 (SIP1); plakophilin 2; secretory protein SEC8; epidermal growth factor receptor pathway substrate 8; diacylglycerol kinase, theta 110 kDa; centrosomal protein 2; general transcription factor IIF, polypeptide 2, 30 kDa; neurogenin 3; or ADP-ribosyltransferase, and</claim-text><claim-text>comparing said amount of the at least one PTSD marker with a normal subject amount of the at least one PTSD marker measured in a normal subject not having PTSD or other psychiatric disorder or a historical affected subject amount of the at least one PTSD marker;</claim-text><claim-text>where differential between said amount and said normal amount or said historical amount is indicative of PTSD in said affected subject.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The process of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising:
+<claim-text>selecting a patient suspected of being suicidal,</claim-text><claim-text>measuring said sample for an amount of at least one suicide marker associated with being suicidal in a biological sample from a subject suspected of being suicidal wherein said protein marker is P-11 or P2RX7; and</claim-text><claim-text>comparing said amount of the at least one suicide marker with a normal subject amount of the at least one suicide marker measured in a normal subject not being suicidal or suffering from some other psychiatric disorder or a historical affected subject amount of the at least one suicide marker;</claim-text><claim-text>where differential between said amount and said normal amount or said historical amount is indicative of suicide in said affected subject.</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The process of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the biological sample is whole blood, plasma, serum, CSF, urine, saliva, sweat, prefrontal cortex tissue, hippocampus tissue, or ipsilateral cortex tissue.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The process of <claim-ref idref="clm-00001-en">claim 1</claim-ref> further comprising: collecting successive biological samples as a function of time and monitoring for a temporal change in said amount of the at least one marker, PTSD marker or suicide marker in the biological sample of said affected subject until said amount substantially equals said normal subject amount or said historical amount of said marker as being indicative of recovery.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The process of <claim-ref idref="clm-00001-en">claim 1</claim-ref> further comprising: administering a therapeutic to treat a psychiatric disorder; and collecting successive biological samples as a function of time and monitoring for a temporal change in said amount of the at least one marker, PTSD marker or suicide marker in the biological sample of said affected subject until said amount substantially equals said normal subject amount or said historical amount of the at least one marker, PTSD marker or suicide marker as being indicative of recovery and the effectiveness of the therapeutic.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. A kit using the process of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, the kit comprising:
+<claim-text>a substrate for holding a biological sample isolated from a human subject;</claim-text><claim-text>an agent that specifically interacts with the at least one marker, PTSD marker or suicide marker associated with a psychiatric disorder;</claim-text><claim-text>printed instructions for reacting the agent with the sample or a portion of the sample to detect the presence or amount of the marker for diagnosing a psychiatric disorder in a subject.</claim-text></claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The kit of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the agent is an antigen which specifically and independently binds to its respective autoantibody to the at least one marker, PTSD marker or suicide marker.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The kit of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the agent is an antibody which specifically and independently binds to its respective protein of the at least one marker, PTSD marker or suicide marker.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The kit of <claim-ref idref="clm-00009-en">claim 9</claim-ref> wherein an enzyme-linked immunosorbent assay (ELISA) is used to determine whether the one or more agents bind to the at least one marker, PTSD marker or suicide marker in the biological sample.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. An in vitro diagnostic device for detecting a psychiatric disorder in a subject, the device comprising:
+<claim-text>a sample chamber for holding a first biological sample collected from the subject;</claim-text><claim-text>an assay module in fluid communication with said sample chamber, said assay module using the process of <claim-ref idref="clm-00001-en">claim 1</claim-ref>;</claim-text><claim-text>a power supply; and</claim-text><claim-text>a data processing module in operable communication with said power supply and said assay module; said assay module analyzes the first biological sample to detect at least one of said protein markers associated with a psychiatric disorder present in the biological sample and electronically communicates a presence of the marker detected in the first biological sample to said data processing module;</claim-text><claim-text>wherein said data processing module has an output the relates to detecting the neural injury or neuronal disorder in the subject, the output being the amount of the marker measured, the presence or absence of a psychiatric disorder, or the severity of the psychiatric disorder.</claim-text></claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The device of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, further comprising analyzing a second biological sample obtained from the subject, at some time after the first sample is collected, wherein if the device detects a differential amount of the measured marker in the second sample relative to the first sample an output noting the temporal change is provided by the data processing module.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The device of <claim-ref idref="clm-00013-en">claim 13</claim-ref> further comprising a display in electrical communication with data processing module and displaying the output as at least one of an amount of the psychiatric marker, a comparison between the amount of the psychiatric marker and a control, presence of a psychiatric disorder, or severity of the psychiatric disorder.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The device of <claim-ref idref="clm-00013-en">claim 13</claim-ref> further comprising a transmitter for communicating the output to a remote location.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The device of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the output is digital.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. An in vitro diagnostic device for detecting a neural injury or neuronal disorder in a subject, the device comprising:
+<claim-text>a handheld sample chamber for holding a first biological sample from the subject;</claim-text><claim-text>an assay module in fluid communication with said sample chamber, said assay module using the process of <claim-ref idref="clm-00001-en">claim 1</claim-ref>; and</claim-text><claim-text>a dye providing a colorimetric change in response to at least one measured psychiatric marker present in the first biological sample. </claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150259740A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259740A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150259740A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259740A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150259740A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259740A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150259740A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259740A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150259740A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259740A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150259740A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259740A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150259740A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259740A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150259740A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259740A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150259740A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259740A1-20150917-D00009.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150259740A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259740A1-20150917-D00010.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150259740A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259740A1-20150917-D00011.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150259740A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259740A1-20150917-D00012.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150259740A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259740A1-20150917-D00013.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150259740A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259740A1-20150917-D00014.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150259740A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259740A1-20150917-D00015.TIF" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150259740A1_00016.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259740A1-20150917-C00001.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150259740A1.PDF" type="pdf" size="1769500" pages="36" />
+</lexisnexis-patent-document>

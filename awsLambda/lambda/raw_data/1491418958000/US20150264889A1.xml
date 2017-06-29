@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150264889A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150924" time-inserted="020953" date-changed="20151006" time-changed="063130">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121423129">
+        <country>US</country>
+        <doc-number>20150264889</doc-number>
+        <kind>A1</kind>
+        <date>20150924</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14561348</doc-number>
+        <date>20141205</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20151001">
+      <unexamined-printed-without-grant>
+        <date>20150924</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151006">
+      <classification-ipcr sequence="1">
+        <text>A01K   1/06        20060101AFI20150924BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>K</subclass>
+        <main-group>1</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151006">
+      <classification-cpc sequence="1">
+        <text>A01K   1/0613      20130101 FI20150925BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>K</subclass>
+        <main-group>1</main-group>
+        <subgroup>0613</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150925</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A01L  13/00        20130101 LI20151002BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>13</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151002</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61D   3/00        20130101 LI20150925BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>D</subclass>
+        <main-group>3</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150925</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61D2003/003       20130101 LA20150925BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>D</subclass>
+        <main-group>2003</main-group>
+        <subgroup>003</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150925</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61D2003/006       20130101 LA20150925BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>D</subclass>
+        <main-group>2003</main-group>
+        <subgroup>006</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150925</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">31</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150924" lang="eng" format="original">Cattle Hoof Trimming Chute</invention-title>
+    <related-documents date-changed="20150924">
+      <continuation-in-part>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>61968803</doc-number>
+              <date>20140321</date>
+            </document-id>
+            <parent-status>PENDING</parent-status>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14005613</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation-in-part>
+    </related-documents>
+    <parties date-changed="20150924">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Beavers</last-name>
+            <first-name>Brandon</first-name>
+            <address>
+              <city>Lebanon</city>
+              <state>KY</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Beavers</last-name>
+            <first-name>Brandon</first-name>
+            <address>
+              <city>Lebanon</city>
+              <state>KY</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150924">
+      <main-family family-id="173799244">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150264889</doc-number>
+            <kind>A1</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20141205</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173799243">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2921133</doc-number>
+            <kind>A1</kind>
+            <date>20150923</date>
+          </document-id>
+          <application-date>
+            <date>20150316</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150264889</doc-number>
+            <kind>A1</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20141205</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150924" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">An animal restraining chute having a four sided cage with a closeable front and rear opening and two sides constructed from a series of ribs made from a single bent component to provide structural support. A partially closable front gate closes the front opening and restrains the head of the animal, and a curved rear pusher gate secures the hindquarters of an animal. A rotatable belly restraint pins the animal to one of the sides. The chute is rotatably mounted on a vehicle or platform to lay the animal on its side. The chute includes four hydraulic activated leg latches for securing the legs of the animal. There is a movably attached staging area located at the rear of the chute to allow for the positioning of animals waiting to enter the chute. Each of the movable components of the chute are hydraulically and remotely controlled.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150924">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application claims priority to U.S. Provisional Patent Application No. 61/968,803 filed on Mar. 21, 2014, and U.S. Provisional Patent Application No. 61/969,514 filed Mar. 24, 2014. The teachings of both provisional applications are fully incorporated herein.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">STATEMENT REGARDING FEDERALLY SPONSORED RESEARCH OR DEVELOPMENT</heading>
+      <p id="p-00002-en" num="0002">Not Applicable.</p>
+      <heading id="h-00003-en" level="1">THE NAMES OF THE PARTIES TO A JOINT RESEARCH AGREEMENT</heading>
+      <p id="p-00003-en" num="0003">Not Applicable.</p>
+      <heading id="h-00004-en" level="1">INCORPORATION-BY-REFERENCE OF MATERIAL SUBMITTED ON A COMPACT DISC</heading>
+      <p id="p-00004-en" num="0004">Not Applicable.</p>
+      <heading id="h-00005-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00005-en" num="0005">1. Field of the Invention</p>
+      <p id="p-00006-en" num="0006">The present invention relates to a restraining chute for holding animals for the purpose of veterinary and other inspection, and for trimming the hooves of animals such as cattle. The present invention is a fully automated chute that restrains the animal, lays it on its side, and secures its legs for inspection and trimming of the hooves.</p>
+      <p id="p-00007-en" num="0007">2. Description of the Related Art</p>
+      <p id="p-00008-en" num="0008">The hooves of ungulated animals grow continually. In some situations the animal walks enough so that the hooves are naturally worn down. But domesticated livestock typically do not walk or roam sufficiently, and in many cases their hooves need to be trimmed on occasion for the health and well being of the animal. The hooves of cattle are typically trimmed while the animal is immobilizing in a chute. In some cases the chute is raised and the hooves are trimmed when hanging below the animal. In other cases the animal is placed in a “layover” chute that flips the animal onto it side, with the hooves extending from the bottom or the chute. It is often easiest to trim the hooves when the legs are restrained or stabilized. Hoof trimming chutes are well known. Some examples can be seen in U.S. Pat. No. 4,228,766 to Wedman, U.S. Pat. No. 5,669,332 to Riley, and U.S. Pat. No. 8,561,576 to Pingsterhaus. All three disclose variations of a chute for holding and immobilizing cattle and laying over the animal on to its side in order trim the hooves.</p>
+      <p id="p-00009-en" num="0009">Modern layover hoof trimming chutes make trimming cattle hooves relatively easy, and while all of the prior art chutes have advantages, they also have disadvantages. U.S. Pat. No. 5,669,332 to Riley (the Riley patent) for example, uses a series of hydraulic controls to open and close the front and rear gates of the chute and tilt the chute into and from the layover position. But the Riley patent places the hydraulic controls at the rear of the chute, which means the person operating the controls cannot see the head of the animal is it nears and extends from the front gate. This typically means that trimming cattle hooves becomes a two person operation, with one person controlling the animal as it is herded into the chute, and the other person operating the hydraulic controls. There is a need, therefore, for a means for controlling the moving features of the chute where the operator can see the animal in the chute while operating the controls.</p>
+      <p id="p-00010-en" num="0010">When cattle are in the horizontal position in a layover chute their legs are extended from the bottom of the chute. Some cattle flail while others seemed stunned and lay stock still. It is necessary to immobilize the hooves for trimming or other procedures. This is commonly done with a rope or chain that is attached to the chute and that is wrapped around the leg near the ankle and tied down or secured in other ways. It often requires both hands to tie down a cattle leg. One hand holds the leg and the other loops the rope around the leg. The problem occurs when the leg is released in order to tie the rope or secure the chain. In some cases the animal will kick or jerk the leg away. There is a need, therefore, for a device to secure the leg that can be operated and secured easily. The other problem encountered with restraining the leg with a rope or chain is that the rope or chain must be secured relatively tightly around the animal's lower leg. In some cases this can cause injury to the animal, particularly if the animal is skittish and attempts to pull away. There is a need, therefore, for a restrain that secures the leg without wrapping tightly around the leg and that does not directly contacts the skin of the animal.</p>
+      <p id="p-00011-en" num="0011">The cage of the standard layover chute is constructed by bolting or welding together the front gate, the two side walls, and the rear gate. This is often done with cross beams and other connecting structure. A typical example can be seen in U.S. Pat. No. 5,669,332. The cage of a hoof trimming chute is subjected to extreme and dynamic forces. The cage must restrain a very large animal. While cattle are often docile, when frightened or agitated they often thrash about, and simply due to their size can cause considerable force on the cage. Additionally, in a layover chute the cage is rotated from the vertical to the horizontal position every time a animal's hooves are trimmed. This places additional forces on the chute. Because of these forces it is not uncommon for the attachment to loosen, weaken or break. There is a need, therefore, for a cage structure with integrated and strengthened components to ensure the stability and long life of the chute.</p>
+      <p id="p-00012-en" num="0012">Animals are brought to the rear of the chute by means of gating or fencing that is positioned to create narrow walkways that are just wide enough for one animal to walk through, which forces the animals to approach the chute in single file. (Note, these narrow walkways are commonly referred to as “chutes” but because that word is also used to describe the device herein, these walkways will be referred to as narrow walkways.) One of the problems encountered in bringing the animals to the rear of the chute is that they will push up against the back of the chute or get in the way of the trimmer or the operator or the moving components of the chute. There is a need, therefore, for a way to keep the animals away from the back side of the chute, and that is integrated within the chute.</p>
+      <p id="p-00013-en" num="0013">Standard chutes typically have a rear or tail gate to prevent the animal from backing out of the chute. In some cases the tail gate is little more than a single bar across the rear of the chute. In all cases the tail gate is flat, which means that if the animal does attempt to back up, and if the tail gate is not fully closed, the animal's hindquarters can slide to side and out of the gate. There is a need, therefore, for a concave tail gate that cups the animal's hindquarters and prevents the animal from squeezing out of the rear of the chute.</p>
+      <p id="p-00014-en" num="0014">The fencing or gating that is used for assembling the narrow walkways is frequently brought to the location by the hoof trimmer. The gating, which is typically about eight to ten feet long and five to six feet high, is often carried by the trimmer on the truck or other vehicle with the trimming chute. Sometimes the fencing is stored within the chute, other times it is strapped to the chute during transit. The vehicles generally operate on road and highways, as the chute is moved from one location to another. There is a need, therefore, for a way to securely stow the fencing, and conveniently attach it so that it is readily available to use, but also out of the way of the wheels of the vehicle during transit.</p>
+      <p id="p-00015-en" num="0015">During the hoof trimming and inspection process the hoof trimmer or operator requires different equipment, such as the grinder that is used to trim the hooves. Medication is often used if sore or lesions are found on the lower legs or on the hooves. This medicine and equipment is often stored in storage boxes located on the vehicle to provide easy access during the hoof trimming process. In some cases a hoof will be cracked, or will be damaged during the trimming operation. In these situations a hoof glue is used that can temporarily secure the hoof. In some cases a small cap or cover can be placed on the bottom of the hoof to serve as a temporary pad while the hoof heals, and these are glued to the hoof. There are many types of hoof glues, which are well known in the industry. One hoof glue is heated and liquefied and applied hot, and it solidifies and binds as it cools. This hoof glue is typically warmed by wrapping with a heating pad. It would be desirable for a heated storage box to be located in an easily accessible location when the chute is in the layover position so that the trimmer will have easy access to heated glues.</p>
+      <heading id="h-00006-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00016-en" num="0016">This invention relates to a chute for holding and immobilizing cattle so that their hooves can be trimmed. The invention consists of a metal cage with a front gate, a rear gate and two side walls for holding an animal. The cage is slightly larger than the animals to be restrained, which are typically cattle. The animal is herded into the cage through the rear gate and the rear gate is closed. The rear gate is curved to scoop the haunch of the animal and push it into the chute. The animal's head is extended out through a portion of the front gate, and the front gate closes loosely around the animal's neck to hold the animal in place. When the gate is in the closed position it is slightly wider than the animal's neck so that it does not choke the animal, but narrower than the head or shoulders so that the animal is retrained. There is a belly restraining bar rotatably mounted on the outside wall that presses against the cows belly to hold the cow firmly against the inside wall and securely within the chute. The chute is then lifted and rotated 90 degrees so that the cow's legs and hooves are extending outwardly from the bottom of the chute.</p>
+      <p id="p-00017-en" num="0017">The two side walls of the invention are constructed from a series of parallel tubes bent into an inverted u-shape to create a strengthened structural ribbed framework for the inside and outside walls. The inside wall includes a piece of metal attached to the ribs to create a flat surface for the animal to lie upon when the chute is in the layover position. There is a gap in the surface of the inside wall that corresponds to the front shoulder of the animal, and there is a shoulder pad placed in the gap to protect the shoulder of the animal when the chute is in the layover position. There is also a gap in the surface of the inside wall that corresponds to the anus of the animal, which allows urine or feces to flow out of the cage.</p>
+      <p id="p-00018-en" num="0018">There are four cattle leg latches located on the bottom of the chute, one for each cow leg. The legs are secured by means of the leg latches, and the cow is now in position so that its hooves can be easily trimmed by a single hoof trimmer. The leg latches are hydraulically controlled, and manipulated by a hand held remote control device so that the trimmer can hold a leg in one hand and easily operate the remote control to close the latch with the other hand.</p>
+      <p id="p-00019-en" num="0019">There is a staging at the rear of the chute. The staging area consists of a three-sided pen that prevents waiting animals from getting in the way of the operator and the moving components of the chute, particularly the tail gate, which swings down behind the rear of the chute. The staging area allows the hoof trimmer or operator to manage the movement of the animals into the chute, which allows the trimmer to control the flow of cows through the hoof trimming process. There is also an accessory frame mounted on the vehicle for holding various accessories needed for trimming cattle hooves. There is a movable gate rack that is used to hold gate fencing that is used to create the narrow walkways to channel the animals to the rear of the chute. The gate rack is hydraulically controlled and can be lowered to easily access and remove the gating and then raised to move the gating out of the way of the tires of the vehicle when in transit. There is also a series of boxes mounted on the vehicle for holding trimming tools and accessories. One of the boxes includes an incorporated heating element to create a “hot box” that is used for heating melting glues that are used for repairing damaged hooves.</p>
+      <p id="p-00020-en" num="0020">Each of the moving components of the layover chute is controlled by a hydraulic piston, and each piston is controlled remotely by a hand held remote control. This allows the operator to control the components of the chute, but also position himself to view the animal and the chute so that he can observe the animal and know when to operate the various functions of the chute. In one variation of the invention the remote control can be operated by a smart phone through a downloadable smart phone program, known as an “app” or smart phone application.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00007-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 1</figref> is a front perspective view of the layover cattle restraining chute in the upright or standing position.</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 2</figref> is a rear perspective view of the layover chute in the standing position.</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 3</figref> is a perspective cut away view showing the inside wall of the cage.</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 4</figref> is a perspective cut away view showing the outside wall of the cage.</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 5</figref> is a perspective cut away view showing the outside wall covered by protective padding.</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 6</figref> is a front elevation detail view of the front or head gate in the open position.</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 7</figref> is a front elevation detail view of the front or head gate in the closed position.</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 8</figref> is a front perspective view of a second embodiment of the head gate in the open position.</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 9</figref> is a front perspective view of a second embodiment of the head gate in the closed position.</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 10</figref> is a perspective of the back of the inside wall showing the head rest and its control piston.</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 11</figref> is a detailed perspective view of the rear or cow pusher gate in the open position.</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 12</figref> is a detail perspective view of the rear or cow pusher gate in the closed position.</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 13</figref> is a rear elevation view of the chute in the standing or vertical position, and with the rear staging area door in the open position.</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIG. 14</figref> is a rear elevation view of the chute in the vertical position, and with the rear staging area door in the closed position.</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIG. 15</figref> is rear elevation view of the vehicle with the chute in the horizontal, or layover position on the vehicle.</p>
+      <p id="p-00036-en" num="0036">
+        <figref>FIG. 16</figref> is a detail of the leg latch in the open position.</p>
+      <p id="p-00037-en" num="0037">
+        <figref>FIG. 17</figref> is a detail of the leg latch in the closed position.</p>
+      <p id="p-00038-en" num="0038">
+        <figref>FIG. 18</figref> is a cut away detail showing the components of the leg latch controlling mechanisms.</p>
+      <p id="p-00039-en" num="0039">
+        <figref>FIG. 19</figref> is a rear perspective view of the vehicle showing the hydraulic controlling components.</p>
+      <p id="p-00040-en" num="0040">
+        <figref>FIG. 20</figref> is a perspective view of the hand held remote control device.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00008-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00041-en" num="0041">Detailed embodiments of the present invention are disclosed herein. It is to be understood that the disclosed embodiments are merely exemplary of the invention, and that there may be a variety of other alternate embodiments. The figures are not necessarily to scale, and some features may be exaggerated or minimized to show details of particular components. Therefore, specified structural and functional details disclosed herein are not to be interpreted as limiting, but merely as a basis for teaching one skilled in the art to employ the varying embodiments of the present invention.</p>
+      <p id="p-00042-en" num="0042">The present invention is a layover chute for restraining an animal for the purposes of trimming its hooves. The teachings of this invention can be applied for restraining chutes used for other types of animals, and for other purposes, such as medical inspection or treatment, but in the preferred embodiment the invention is a chute for trimming the hooves of cattle. The chute of the present invention can be mounted on a stationary platform, the flatbed of a large pick-up truck, or on a hitched trailer which is towed behind a truck or other vehicle. Mounting on a vehicle allows the chute to be transportable and taken to farms for trimming of cattle hooves. All of the main operative features, and unique features of the invention, are present in any configuration. The drawings of this application show the chute mounted on a trailer, but the inventive features will work regardless of the type of vehicle, or where the chute is mounted.</p>
+      <p id="p-00043-en" num="0043">An overview of the main components of the invention will be set out first, and then each of the various components will be described in detail. <figref>FIG. 1</figref> &amp; <figref>FIG. 2</figref> are front and rear perspective views of the chute <b>10</b> respectively, and show the main components of the chute <b>10</b>, but without the hydraulic system that controls the moving parts of the chute <b>10</b>. Those hydraulic and controlling components will be discussed in detail below. The main components of the layover chute <b>10</b> consist of the cage <b>100</b> of the layover chute <b>10</b>, the vehicle <b>30</b> upon which the cage <b>100</b> is pivotally mounted, and the staging area <b>700</b> located just behind the rear of the cage <b>100</b>. The cage <b>100</b> is four sided, having: an inside wall <b>110</b>, which is adjacent to the vehicle <b>30</b> when the cage <b>100</b> is in the upright position and which lays on the bed <b>33</b> of the vehicle <b>30</b> when the cage <b>100</b> is in the layover position; an outside wall <b>120</b>, which is opposite the inside wall <b>110</b> and away from the vehicle <b>30</b>; a closeable front opening <b>130</b>, which is partially closed by means of the front or head gate <b>300</b>; and a closeable rear opening <b>140</b>, which is partially closed by means of the entrance or pusher tail gate <b>400</b>. The inside wall <b>110</b> includes a shoulder pad <b>370</b> at the front <b>113</b> of the inside wall <b>110</b> near the head gate <b>300</b>. The shoulder pad <b>370</b> is configured to provide padding for the front shoulder of the animal <b>20</b> as it is in the cage <b>100</b> in the layover position. There is a feces grate <b>116</b> which is located near the back <b>114</b> of the inside wall <b>110</b> and is configured to roughly align with the tail and rectum of the animal <b>20</b> so that feces and urine can go out of the cage <b>100</b> should the animal defecate during the layover process. (This is not uncommon as the animals are often scared during the procedure.) There is a feces funnel <b>160</b>, which is a four sided bevel walled funnel that allows the feces to exit the cage <b>100</b> and be deposited on the ground under the vehicle <b>30</b>. There is a corresponding funnel opening <b>36</b> in the bed <b>33</b> of the vehicle that aligns with the feces funnel <b>160</b> so that the feces are deposited directly on the ground. The outside wall <b>120</b> includes a belly flipper or belly restraint <b>200</b> that is pivotally attached to the outside wall <b>120</b>, and that rotates upward and inward to press against the animal's belly and pushes the animal <b>20</b> against the inside wall <b>110</b>, essentially pinning the animal to the inside wall <b>110</b> to restrain it within the cage <b>100</b>. The head gate <b>300</b> is mounted on the front <b>123</b> of the outside wall <b>120</b> and runs between the outside wall <b>120</b> to partially close the front opening <b>130</b>. The rear gate <b>400</b> is pivotably mounted at the top <b>111</b> rear <b>114</b> of the inside wall <b>110</b> and the top <b>121</b> rear <b>124</b> of the outside wall <b>120</b> so that it swings down into the rear opening <b>140</b>. There is a head rest <b>350</b> pivotably attached at the front <b>113</b> of the inside wall <b>110</b> that supports the animal's head when the cage <b>100</b> is in the layover position. There are four leg latches <b>500</b> mounted in a bottom rail system at the bottom of the cage <b>100</b> to secure the four legs of the animal <b>20</b> for trimming or inspection.</p>
+      <p id="p-00044-en" num="0044">The inside wall <b>110</b> and the outside wall <b>120</b> are constructed from a series of parallel U-bars <b>170</b> that form a series of parallel ribs that provide the structure of the inside and outside walls. In the preferred embodiment the U-bars <b>170</b> are made from 2″ nominal diameter schedule <b>40</b> steel pipe or tubing. The size and strength of the U-bars <b>170</b> can vary slightly, though for obvious reasons it is much preferable to use a heavier and stronger material than a weaker or narrower tubing. The U-bars <b>170</b> are tubes or bars that are bent in a flat bottom “U” shape with the two arms parallel to form the ribs of the walls. In the cage <b>100</b> the “U” is inverted, with the closed part at the top. The inside wall <b>110</b> is shown in detail in <figref>FIG. 3</figref> and the outside wall <b>120</b> is shown in detail in <figref>FIG. 4</figref>. The various components of the inside wall <b>110</b> and the outside wall <b>120</b> are attached to U-bars <b>170</b>. In the preferred embodiment there are seven U-bars <b>170</b>, labeled <b>170</b><i>a</i>-<b>170</b><i>g </i>in <figref>FIG. 3</figref> &amp; <figref>FIG. 4</figref>, with the first U-bar <b>170</b><i>a </i>at the front <b>130</b> of the cage <b>100</b> and the last <b>170</b><i>g </i>at the rear <b>140</b> of the cage <b>100</b>. Each U-bar <b>170</b> is approximately 18 inches apart. In at least one embodiment of the invention there is a center beam <b>171</b> that runs along the top of the U-bars <b>170</b> and the length of the cage <b>100</b>. In one configuration the center beam <b>171</b> is placed and welded across the top center of the U-bars <b>170</b>, and in another configuration it is segmented and welded between the U-bars <b>170</b> at the center top. In at least one embodiment there is also an outside top beam <b>172</b> that runs along the top <b>121</b> of the outside wall <b>120</b> to provide additional structural support to the outside wall <b>120</b>. The top beam <b>172</b> is segmented and welded between the U-bars <b>170</b> along the top <b>121</b> of the outside wall <b>120</b>. Both the center beam <b>171</b> and the top beam <b>172</b> are made from the same tubing material as the U-bars <b>170</b>. The use of the U-bars <b>170</b> means that the two sides of the cage <b>100</b> are made from a single piece of material, so there are no connection points between the inside wall <b>110</b> and the outside wall <b>120</b> to weaken and deteriorate. Assembling the inside wall <b>110</b> and the outside wall <b>120</b> with a series of parallel U-bars <b>170</b><i>a</i>-<b>170</b><i>g </i>provides structural support to strengthen the cage <b>100</b>.</p>
+      <p id="p-00045-en" num="0045">The inside wall <b>110</b>, as shown in <figref>FIG. 3</figref>, has a front <b>113</b>, a back <b>114</b>, a top <b>111</b> and a bottom <b>112</b>. There is an inside bottom rail <b>115</b> mounted at the bottom <b>112</b> of the inside wall <b>110</b>. The inside bottom rail <b>115</b> is attached to the bottom of each of the U-bars <b>170</b><i>a</i>-<b>170</b><i>g </i>by butt welding, or other suitable means, including bolting. The inside wall <b>110</b> is constructed from a series of ribs which are the bottom portion of the U-bars <b>170</b>. In the preferred embodiment there are 7 U-bars <b>170</b><i>a</i>-<b>170</b><i>g </i>that form the main structural component of the inside wall <b>110</b>. There is a sheet of ⅛″ steel plating that is welded over the U-bars <b>170</b> to form the actual wall structure of the inside wall <b>110</b>, and that provides a flat surface for the animal <b>20</b> to lay upon when the cage <b>100</b> is in the layover position. There are two spaces cut out of the steel plating on the inside wall <b>110</b>. At the front <b>113</b> of the inside wall <b>110</b> there is a cut out of the steel sheet, and a space between the first <b>170</b><i>a </i>and third <b>170</b><i>c </i>rib, where the shoulder pad <b>370</b> is mounted. The shoulder pad <b>370</b> is approximately three feet wide by four feet tall, though these dimensions can vary, and is made of a standard air bladder. The air bladder is mounted on the two sides between the steel plate and the first <b>170</b><i>a </i>and third <b>170</b><i>g </i>U-bar <b>170</b> rib. The air bladder is fillable through a standard air valve and when filled creates a cushion for the shoulder of the animal. The position of the shoulder pad <b>370</b> corresponds to the approximate position of the shoulder of the animal <b>20</b> while inside the cage <b>100</b>. Cattle do not normally lay on their sides and so their skeletal and muscle structure is not designed to support their weight when on their side. Therefore, when the cage <b>100</b> is placed in the layover position, the animal's shoulder will lay upon the shoulder pad <b>370</b>, which will prevent or minimize injury to the animal <b>20</b>.</p>
+      <p id="p-00046-en" num="0046">There is a second cut out of the metal plate at the top <b>111</b> rear <b>114</b> of the inside wall <b>110</b>, positioned between the fifth <b>170</b><i>e </i>and seventh U-bar <b>170</b><i>g </i>rib. This opening is approximately 3 foot by 3 foot, though the dimensions can vary, and the opening is covered by a series of narrow parallel bars to produce the feces grate <b>116</b>. The feces grate <b>116</b> is aligned with the anus of the animal <b>20</b> such that when the cage <b>100</b> is in the layover position, any feces or urine will go out of the cage <b>100</b> to prevent fouling the cage <b>100</b> or the work area. There is a feces funnel <b>160</b> mounted to the backside of the inside wall <b>110</b>. In the preferred embodiment the feces funnel <b>160</b> is a simple beveled four sided funnel with an open end, which is configured to allow any feces or urine to flow out of the cage <b>100</b> and onto the ground. The feces funnel <b>160</b> is welded to the backside of the inside wall <b>110</b>.</p>
+      <p id="p-00047-en" num="0047">There is an inside hollow bottom rail <b>115</b> mounted on the bottom <b>112</b> of the inside wall <b>110</b>. The hollow bottom rail <b>115</b> is constructed of ⅛ inch steel plating, and in the preferred embodiment is 3″×5″ rectangular tube, with the interior hollow, which allows the placement of the leg latches <b>500</b> within the hollow bottom rail <b>115</b>. The bending and production of such hollow rectangular steel tubing is well known. The hollow bottom rail <b>115</b> is welded to the bottom <b>112</b> of the inside wall <b>110</b>, with the 5″ wide side against the bottom of the U-bars <b>170</b>. In some cases there is an intermediate bottom bar welded to the bottoms of the U-bars <b>170</b> to provide structural support, which is then attached to the inside hollow bottom rail <b>115</b>, but in other cases the U-bars <b>170</b> are attached directly to the inside hollow bottom rail <b>115</b>. In one embodiment the inside bottom rail <b>115</b> runs only the length of the inside wall <b>110</b> from the front to the back. In an alternate embodiment the inside bottom rail <b>115</b> is made from the same piece of material as the front bottom rail <b>315</b> and the rear bottom rail <b>415</b>, which gives the cage <b>100</b> additional structural support.</p>
+      <p id="p-00048-en" num="0048">The outside wall <b>120</b>, as shown in detail in <figref>FIG. 4</figref>, has a front <b>123</b>, a back <b>124</b>, a top <b>121</b>, and a bottom <b>122</b>. The outside wall <b>120</b> is configured from the same series of parallel U-bars <b>170</b> that create ribs that form the inside wall <b>110</b>. In the preferred embodiment the outside wall <b>120</b> is configured from seven U-bars <b>170</b><i>a </i>to <b>170</b><i>g</i>. There is a top rail <b>172</b> that runs along the top <b>121</b> of the outside wall <b>120</b> and is welded between the U-bars <b>170</b> to provide structural support and to form the wall. The top rail <b>172</b> is made from the same tubing as the U-bars <b>170</b>. There is an outside bottom rail <b>125</b> that runs along the bottom <b>122</b> of the outside wall <b>120</b> to structurally form the wall, and that is welded to the bottoms of the U-bars <b>170</b>. In one embodiment the outside bottom rail <b>125</b> is made from the same 3″×5″ rectangular tubing as the inside bottom rail <b>115</b>. There are no leg latches <b>500</b> in the bottom <b>122</b> of the outside wall <b>120</b> as this wall will be above the animal <b>20</b> when the cage <b>100</b> is in the layover position, so the bottom rail <b>125</b> does not need to be hollow.</p>
+      <p id="p-00049-en" num="0049">There is a belly restrain <b>200</b> mounted on the outside wall <b>120</b>. The belly restrain <b>200</b> consists of a belly bar <b>220</b> which is a flat bar about six inches wide, two feet long, and roughly four inches thick. The belly bar <b>220</b> is rotatably attached to the bottoms of two stabilizers <b>214</b> which are attached by means of two hinges <b>216</b> located near the ends of the belly bar <b>220</b>. The tops of the two stabilizers <b>214</b> are attached to a rotator bar <b>212</b> that is mounted within two hinge tubes <b>211</b> that allow the rotator bar <b>212</b> to rotate within the hinge tubes <b>211</b>. In the preferred embodiment the hinge tubes <b>211</b> are located on the back side of the fifth <b>170</b><i>e </i>and sixth <b>170</b><i>f </i>U-bars. The hinge tubes <b>211</b> are located approximately three quarters of the way up the U-bars <b>170</b><i>e </i>and <b>170</b><i>f</i>. The rotator bar <b>212</b> is cylindrical and rotates within the hinge tubes <b>211</b> to allow the stabilizers <b>214</b> to rotate. There is a belly restraint piston <b>260</b> that is pivotally attached at one end to the center of the belly bar <b>220</b> by means of a hinge and pin, and attached at the other end to the belly restrain piston mount <b>262</b>. The belly restrain piston mount <b>262</b> is a bar or tube that is welded between U-bars <b>170</b><i>e </i>and <b>170</b><i>f</i>, and located at about the halfway point of the U-bars <b>170</b><i>e </i>and <b>170</b><i>f</i>. When the belly restraint piston <b>260</b> is activated and the piston extends it forces the belly bar <b>220</b> to rotate inward and upward into the inside space of the cage <b>100</b> to press upwardly (when the animal is standing) and toward the inside wall <b>110</b>. This allows the belly bar <b>220</b> to press the animal <b>20</b> against the inside wall <b>110</b> to secure the animal <b>20</b> in place within the cage <b>100</b>, which prevents the animal from moving or sliding when the cage <b>100</b> is rotated into the layover position. The belly restrain piston <b>260</b> is a standard piston with a 2″ bore with an 8″ stroke. The piston <b>260</b> is connected to a central hydraulic reservoir by means of standard hydraulic tubing. The central hydraulic reservoir provides pressure to the pistons, and uses remotely controlled servo motors to control the pressure. The servo motors are controlled remotely by the appropriate button on the hand held controller <b>600</b> as described below. Use of such remotely controlled hydraulic systems is well know. When the button in pressed and the servo motor activates the piston, pressure is applied and the piston extends, allowing movement of the belly bar <b>220</b>.</p>
+      <p id="p-00050-en" num="0050">In the preferred embodiment there is are two sheets of flexible rubberized matting that are attached to the outside wall <b>120</b> as shown in <figref>FIG. 5</figref>. The rubberized sheets <b>281</b> and <b>282</b> are preferably made from standard ½″ (one-half inch) conveyor belt matting, and are designed to prevent the animal <b>20</b> from attempting to stick its head between the U-bar <b>170</b> ribs of the outside wall <b>120</b>, and to protect the animal <b>20</b> from any of the components mounted on the outside wall <b>120</b>, and that may have sharp edges. Other suitably flexible and sturdy matting material may be used. The first sheet <b>281</b> is attached to the top of the third U-bar <b>170</b><i>c </i>and the sixth U-bar <b>170</b><i>f </i>by means of standard screws or bolts, or any suitable manner, and it hangs over the belly restraint <b>220</b>. The first sheet <b>281</b> is designed to be pressed inwardly when the bell bar <b>220</b> is activated and rotates into the inside of the cage <b>100</b>. In the preferred embodiment it is the rubber matting that actually touches the animal <b>20</b> when the belly bar <b>220</b> is activated. There is a second sheet of matting <b>282</b> that is attached to the top and bottom of the second U-bar <b>170</b><i>b </i>on one edge, and attached to the inside of the gate post <b>310</b> on the other edge. The matting <b>282</b> is attached by means of screws or bolts, but can be attached in any suitable manner. This protects the animal <b>20</b> from sticking its head between the U-bars <b>170</b> that are past the first sheet <b>281</b>, or pressing its nose or head into the movable components of the front gate <b>300</b>.</p>
+      <p id="p-00051-en" num="0051">
+        <figref>FIG. 6</figref> is a detail of the front or head gate <b>300</b> in the open position, and <figref>FIG. 7</figref> is a detail of the head gate <b>300</b> in the closed position. Components of the head gate <b>300</b> can also be seen in <figref>FIG. 1</figref>. The head gate <b>300</b> is located at the front of the cage <b>100</b> and partially closes the front opening <b>130</b>. It is referred to herein as the head gate <b>300</b> because that is standard in the industry because the animal's head <b>24</b> extends through the gate. The head gate <b>300</b> opens to allow the animal <b>20</b> to leave the chute <b>100</b>, and closes to restrain the animal <b>20</b> within the chute <b>100</b>. The head gate <b>300</b> is movable between and open and a closed position. In any configuration of the head gate <b>300</b>, when the head gate <b>300</b> is in the closed position there is a slight gap between the edge of the gate post <b>310</b> and the front <b>113</b> of this inside wall <b>110</b>, which is slightly wider than the animal's neck, but not wider than the animal's head or shoulders. This gap, as best seen in the closed front gate <b>300</b> view of <figref>FIG. 7</figref>, can be between about 8 inches and about 16 inches depending upon the size of the animals typically trimmed. This allows the animal's head to extend from the head gate <b>300</b> without choking the animal, but prevents the animal <b>20</b> from moving out of the cage <b>100</b> or pulling its head into the cage.</p>
+      <p id="p-00052-en" num="0052">The head gate <b>300</b> is primarily mounted on a mounting plate <b>320</b>, which is a ⅛″ steel plate that runs the entire height of the chute <b>100</b> and is securely attached to the front <b>123</b> of the outside wall <b>120</b>. The mounting plate <b>320</b> is attached to the first U-bar <b>170</b><i>a </i>by means of welding, but it could also be bolted or attached in other conventional and secure means. The mounting plate <b>320</b> is flat on the edge attached to the first U-bar <b>170</b><i>a</i>, and undulating on the other edge, with three raised portions where the gate <b>300</b> controlling mechanisms are attached.</p>
+      <p id="p-00053-en" num="0053">The head gate <b>300</b> consists of the movable gate post <b>310</b> that moves from the open to the closed position. It is the gate post <b>310</b> that engages the neck of the animal <b>20</b> to restrain the animal within the cage <b>100</b>. At the top <b>311</b> of the gate post <b>310</b> there are two spaced rollers, a top roller <b>321</b> and a bottom roller <b>322</b>. The rollers <b>321</b> and <b>322</b> roll on a gate rail <b>330</b>. The gate rail <b>330</b> is a bar or tube that is mounted between the top <b>111</b> front <b>113</b> of the inside wall <b>130</b> and top <b>121</b> front <b>123</b> of the outside wall <b>120</b>. In the preferred embodiment the gate rail <b>330</b> is mounted to the inside wall <b>110</b> and outside wall <b>120</b> by means of a standard bracket, but it is possible to mount the gate rail by means of welding or other suitable means. The top roller <b>321</b> and bottom roller <b>322</b> are standard rollers with a concave cross section so that the gate rail <b>330</b> is disposed within the concave portion of both the top roller <b>321</b> and the bottom roller <b>322</b>. There are two rollers to ensure the smooth rolling of the rollers and therefore the smooth movement of the gate post <b>310</b> as it moves between the open and closed positions.</p>
+      <p id="p-00054-en" num="0054">At the bottom of the front gate <b>300</b> there is a front bottom bar <b>315</b> that is attached between the bottom <b>112</b> front <b>113</b> of the inside wall <b>110</b> and the bottom <b>122</b> front <b>123</b> of the outside wall <b>120</b>. The front bottom bar <b>315</b> is made from the same 3″×5″ rectangular tubing as the inside hollow bottom rail <b>115</b>. The front bottom bar <b>315</b> includes a slider channel <b>341</b> that runs lengthwise through the bar and has a slider opening <b>342</b> on the top of the front bottom bar <b>315</b>. At the bottom <b>312</b> of the gate post <b>310</b> there is a t-prong <b>313</b> that sits within the slider channel <b>341</b>, and slides from the opened to the closed positions.</p>
+      <p id="p-00055-en" num="0055">The gate post <b>310</b> is attached to the mounting plate <b>320</b> by means of two parallel control arms <b>331</b>, <b>332</b> and <b>333</b>, <b>334</b>. The middle mount control arm <b>331</b> is rotatably mounted at one end to the mounting plate <b>320</b> by means of a hinge, and is rotatably attached to the middle post control arm <b>332</b> by means of a hinge. The middle post control arm <b>332</b> is attached to the gate post <b>310</b> at the other end. There is an attachment tab with a hinge on the gate post <b>310</b> where the middle post control arm <b>332</b> is attached. The bottom mount control arm <b>333</b> is rotatably mounted at one end to the mounting plate <b>320</b> by means of a hinge, and is rotatably attached to the bottom post control arm <b>332</b> by means of a hinge. The bottom post control arm <b>332</b> is attached to the gate post <b>310</b> at the other end. There is an attachment tab with a hinge on the gate post <b>310</b> where the bottom post control arm <b>332</b> is attached. There is a spacer arm <b>336</b> rotatably attached between the hinge where the middle mount control arm <b>331</b> is attached to the middle post control arm <b>332</b>, and the hinge where the bottom mount control arm <b>333</b> is attached to the bottom post control arm <b>334</b>. This ensure that the control arms move in synch. There is a hydraulic head gate control piston <b>360</b> rotatably mounted at the top of the mounting plate <b>320</b>, and rotatably attached at the middle of the middle mount control arm <b>331</b>. The head gate controller piston <b>360</b> is a standard 2″ bore by 6″ stroke piston that is attached to a central reservoir by means of hydraulic tubing, and manipulated by means of remotely controlled servo motors that are controlled by the appropriate buttons on the hand held remote controller <b>600</b>, as described below. When the piston <b>360</b> extends the middle mount control arm <b>331</b> is rotated downwardly, which pulls the middle post control arm <b>332</b> and which opens the head gate <b>300</b>. The spacer arm <b>336</b> ensures that the bottom controller arms <b>333</b> and <b>334</b> act in parallel with the middle controller arms <b>331</b> and <b>332</b> to ensure the even and smooth movement of the gate post <b>310</b>. As the arms activate and the gate post <b>310</b> moves, the rollers <b>321</b> and <b>322</b> roll on the gate rail and the t-prong <b>313</b> slide in the slider channel <b>341</b>.</p>
+      <p id="p-00056-en" num="0056">There is an alternate version of the head gate <b>300</b> which is shown in <figref>FIG. 8</figref> and <figref>FIG. 9</figref>. In this embodiment the head gate <b>300</b> is a swinging door <b>317</b> that rotates about a top hinge <b>325</b> mounted at the top <b>121</b> of the front opening <b>130</b>, and a bottom hinge <b>326</b> mounted at the bottom <b>122</b> of the front <b>123</b> of the outside wall <b>120</b>. The swinging door <b>317</b> has a metal frame that is as tall as the front opening <b>130</b>, and not as wide as the front opening so that there is a gap between the edge of the swinging door <b>317</b> and the inside edge of the front opening <b>130</b>. This gap is the same as the gap for the preferred embodiment of the front gate <b>300</b>, of between 8 and 16 inches, which is sized to be narrower than an animal's head or shoulders, but not as narrow as the animal's neck, so that the animals head can extend trough the head gate <b>300</b> without being chocked, but while restraining the animal's head in the head gate <b>300</b>. In this configuration the front gate controller piston <b>360</b> is mounted to swing this version of the head gate <b>300</b> opened and closed. The cylinder <b>361</b> of the front gate control piston <b>360</b> is mounted about half way up on the backside of the third U-bar <b>170</b><i>c</i>, and the rod <b>362</b> is mounted to a hinge <b>363</b> attached to a bracket <b>347</b> that is mounted to the middle of the head gate <b>300</b>. When the front gate control piston <b>360</b> extends it pushed the bracket <b>347</b>, which closes the head gate <b>300</b>, and when the piston retracts it pulls the bracket <b>347</b>, which opens the head gate <b>300</b>.</p>
+      <p id="p-00057-en" num="0057">There is a head rest <b>350</b>, which is pivotally attached by hinges to the front <b>113</b> of the inside wall <b>110</b>. The head rest <b>350</b> is best seen in <figref>FIG. 1</figref> and <figref>FIG. 3</figref>, with the rear of the head rest <b>350</b> with control piston <b>356</b> shown in <figref>FIG. 10</figref>. The head rest <b>350</b> is pivotably mounted to the inside of the first U-bar <b>170</b><i>a </i>by two hinges, a top hinge <b>351</b> attached at the top <b>111</b> of the front <b>113</b> of the inside wall <b>110</b> and a bottom hinge <b>352</b> attached to the bottom <b>112</b> of the front <b>113</b> of the inside wall <b>110</b>. When the head rest <b>350</b> is in the open position it is planar with the inside wall <b>110</b> so that it provides support for the animal's head <b>24</b> when the cage <b>100</b> is in the layover position. The head rest <b>350</b> folds into a closed position for transporting the chute <b>10</b>. [Not shown.] In the closed position the head rest <b>350</b> is at an approximately 90 degree angle from the inside wall <b>110</b> and is closed over the head gate <b>300</b>. The head rest <b>350</b> is hydraulically controlled by a head rest hydraulic control piston <b>356</b> which is a standard 2″ bore <b>4</b>″ stroke piston. The head rest control piston <b>356</b> is rotatably mounted on one end to the outside bottom of the third U-bar <b>170</b><i>c</i>, and rotatably mounted to a tab attached to the bottom of the head rest <b>350</b> near the bottom hinge <b>352</b>. The head rest control piston <b>356</b> is attached to a central reservoir with standard hydraulic tubing and is controlled by means of remote controlled servo motors remotely controlled by means of the hand held remote control unit <b>600</b>.</p>
+      <p id="p-00058-en" num="0058">The “tail pusher” rear gate <b>400</b> is shown in <figref>FIG. 11</figref>, which is a detail view of the cage back <b>140</b> with the rear gate <b>400</b> in the open position, and <figref>FIG. 12</figref> is a detail view of the cage back <b>140</b> with the rear gate <b>400</b> in the closed position. It can also be seen in perspective in the closed position in <figref>FIG. 1</figref> and <figref>FIG. 2</figref>. The rear gate <b>400</b> is rotatably mounted on two hinges <b>401</b> and <b>402</b>, with the first hinge <b>401</b> mounted on the top <b>111</b> of the back <b>114</b> of the inside wall <b>110</b>, and the second hinge <b>402</b> mounted on the top <b>121</b> of the back <b>124</b> of the outside wall <b>120</b>. The hinges are standard ⅝″ sealed brass hinges. The rear gate <b>400</b> swings down into position to close the otherwise open cage back <b>140</b> to prevent the animal from backing out of the cage <b>100</b>, or in some cases to push the tail of the animal to urge it forward into the cage <b>100</b>. The rear gate <b>400</b> encloses the top half of the open cage back <b>140</b> which is sufficient to prevent an animal <b>20</b> from backing out of the cage <b>100</b>. In addition, the rear gate <b>400</b> can swing down to push the animal <b>20</b> forward into the cage <b>100</b>. The rear gate <b>400</b> consists of two parallel gate arms <b>411</b> and <b>412</b> that are slightly concave, and three cross bars <b>421</b>, <b>422</b> and <b>423</b> that run parallel and between the two gate arms <b>411</b> and <b>412</b>. The top cross bar <b>421</b> is straight and runs directly between the first hinge <b>401</b> and the second hinge <b>402</b>. The middle cross bar <b>422</b> and bottom cross bar <b>423</b> are concave, protruding outwardly slightly such that it will cup the animal's hindquarters when entering the cage <b>100</b>. This prevents the animal <b>20</b> from sliding to one side or the other across the rear gate <b>400</b> and eliminates the potential that the rear gate <b>400</b> will not fully engage the animal <b>20</b>. The rear gate <b>400</b> is controlled by the rear gate hydraulic control piston <b>460</b>. The rear gate hydraulic control piston <b>460</b> is rotatably mounted on the backside of the rear cross bar <b>242</b> and rotatably mounted on a rear gate bracket <b>464</b> such that when the rod of the rear gate hydraulic control piston is withdrawn the rear gate <b>400</b> opens, and when it extends the rear gate <b>400</b> closes.</p>
+      <p id="p-00059-en" num="0059">There is a rear bottom channel bar <b>415</b> that runs across the bottom of the open cage back <b>140</b>. The rear bottom channel bar <b>415</b> is a 3″ by 5″ hollow bar made to the same specifications as the inside bottom rail <b>115</b>, and is hollow to incorporate one of the leg latches <b>500</b>. In one configuration the rear bottom channel bar <b>415</b> is permanently affixed between the rear <b>113</b> bottom <b>112</b> of the inside wall <b>110</b> and the rear <b>123</b> bottom <b>122</b> of the outside wall <b>120</b>. In a second embodiment the rear bottom channel bar <b>415</b> is pivotably mounted to the rear <b>113</b> bottom <b>112</b> of the inside wall <b>110</b> and rotates outward to open the bottom of the rear opening <b>140</b>. In this configuration the rear bottom channel bar <b>415</b> is controlled by a piston. In this configuration the rear bottom channel bar <b>415</b> rotates in synch with the rear gate <b>400</b>, such that when the rear gate <b>400</b> is in the open position the rear bottom channel bar <b>415</b> is also in the open position, and when the rear gate <b>400</b> is in the closed position the rear bottom channel bar <b>415</b> is also in the closed position. This second configuration is required because cattle that spend their lives in barns and stalls are not used to walking and stepping over an obstruction, and so will not raise their feet to cross a barrier. Therefore, the rear bottom channel bar <b>415</b> swings out of the way to allow the animal to walk into the cage <b>100</b> without the obstruction to its feet.</p>
+      <p id="p-00060-en" num="0060">There is a staging area <b>700</b> located at the rear of the cage <b>100</b>. The staging area <b>700</b> allows the operator to position incoming animals away from the operational components of the chute <b>10</b>, and then manage the movement of the animals <b>20</b> into the cage <b>100</b>. The staging area <b>700</b> allows the operator to easily and effectively manage the flow of the cows, one at a time, through the chute <b>10</b> to have their hooves trimmed. The staging area <b>700</b> can be seen in perspective in <figref>FIG. 2</figref> and <figref>FIG. 19</figref>, with <figref>FIG. 13</figref> a detail front view of the rear of the staging area <b>700</b> showing the staging area doors <b>703</b> and <b>705</b> in the open position, and <figref>FIG. 14</figref> a detail view of the rear of the staging area <b>700</b> showing the staging area doors <b>703</b> and <b>705</b> in the closed position. The staging area <b>700</b> is a three sided enclosure, with one side openably closed by means of the two swinging staging area doors <b>703</b> and <b>705</b>. The two sides of the staging area <b>700</b> are closed by an inside fence <b>710</b> and an outside fence <b>720</b>. The inside fence <b>710</b> is planar with the inside wall <b>110</b> and the outside fence <b>720</b> is planar with the outside wall <b>120</b> so that, when the rear gate <b>400</b> is opened, a cow can be easily herded into the cage <b>100</b>. The inside fence <b>710</b> and outside fence <b>720</b> have a series of parallel cross beams to ensure that the animals <b>20</b> do not get out of the staging area <b>700</b>. There is a rear frame <b>740</b> attached between the inside fence and the outside fence <b>720</b>, and the two staging area doors <b>703</b> and <b>705</b> are rotatably attached to the rear frame <b>740</b> by means of standard hinges. In the preferred embodiment the rear frame <b>740</b> is the same as the U-bars <b>170</b>. It is made from the same material and in the same configuration as the U-bars <b>170</b>. When the staging area doors <b>703</b> and <b>705</b> are opened the staging area <b>700</b> creates a narrow walkway to funnel animals <b>20</b> into the cage <b>100</b>.</p>
+      <p id="p-00061-en" num="0061">There are two staging area door hydraulic controlling pistons <b>763</b> and <b>765</b> that move the doors between the open to the closed positions. The controlling pistons for the staging area doors <b>703</b> and <b>705</b> are both 1½″ bore, 4″ stroke pistons. The staging area door hydraulic control pistons <b>763</b> and <b>765</b> are controlled by the same remotely controlled hydraulic control system as all of the other hydraulic controlling pistons. The staging area doors <b>703</b> and <b>705</b> are rotatably mounted on the rear frame <b>740</b> by hinges mounted at the top and bottom of the doors <b>703</b> and <b>705</b>. The hinges are located on the backside of the rear frame <b>740</b> such that doors <b>703</b> and <b>705</b> will be unable to swing inwardly towards the rear gate <b>400</b>. The staging area doors <b>703</b> and <b>705</b> swing outward from the chute <b>10</b> and into the narrow walkway, which prevents the doors <b>703</b> and <b>705</b> from being forced open by an animal. The doors are constructed of 2″ tubing that comprises the frame of the door. In one configuration the doors <b>703</b> and <b>705</b> are covered with sheet metal, and in another configuration the doors <b>703</b> and <b>705</b> are covered with the standard ½″ matting used elsewhere in the chute <b>10</b>.</p>
+      <p id="p-00062-en" num="0062">In typical operation cattle are funneled into the chute <b>10</b> by means of narrow fencing which allows one animal at a time to walk into position. Animals are lined up in between these narrow fences. These narrow fences are commonly referred to as chutes, but because the word chute as used herein has a specialized meaning, these funneling gates will simply be referred to as narrow walkways. The staging area <b>700</b> separates the waiting animals in the narrow walkways from the moving components of the chute <b>10</b>, which allows the hoof trimmer to more easily manage the animals. There are standard fencing attachments mounted on either side of the rear frame <b>740</b>, and the fencing for the narrow walkway is attached to the staging area <b>700</b> by means of these standard attachments. The staging area doors <b>703</b> and <b>705</b> are a few feet behind the rear opening <b>140</b> to keep the animals away from the rear gate <b>400</b> when it swings down into the closed position. The staging area <b>700</b> allows the rear gate <b>400</b> to rotate upward and downward without hitting the next animal waiting for its turn in the chute <b>10</b>. The staging area <b>700</b> allows the operator or hoof trimmer to easily manage the animals and control the flow of the cows through the chute <b>10</b> and the hoof trimming process.</p>
+      <p id="p-00063-en" num="0063">The staging area <b>700</b> is rotatably mounted to the vehicle <b>30</b> such that it can be rotated up and onto the flat bed <b>33</b> for transportation. In one embodiment there is a hydraulic piston that will automatically rotate the staging area <b>700</b>, while in another embodiment the staging area <b>700</b> is rotated by hand. The staging area <b>700</b> is attached to the bed <b>33</b> by means of a hinge that is attached to the inside fence <b>710</b>, and which allows the staging area <b>700</b> to be rotated onto the bed <b>33</b>. In the stationary platform mounted embodiment of the invention the staging area <b>700</b> can be mounted in a stationary position at the rear of the layover chute <b>10</b>, or can be rotatably mounted to save space in the hoof trimming area.</p>
+      <p id="p-00064-en" num="0064">
+        <figref>FIG. 15</figref> is a perspective view of the rear of the chute <b>10</b>, showing the cage <b>100</b> in the vertical or layover position and resting on the bed <b>33</b> of the vehicle <b>30</b>. In this view it is seen that the feces funnel <b>160</b> extends through the funnel opening <b>36</b> in the bed <b>33</b> of the vehicle <b>30</b> to allow feces to be deposited directly onto the ground. There are two main layover pistons <b>60</b>, one located at the front of the cage <b>100</b> and the other located at the rear of the cage <b>100</b>. The pistons <b>60</b> move the cage <b>100</b> from the upright to the layover position. The pistons are 2″ bore, 30″ stroke pistons and are controlled by remote controlled servo motors which are controlled by the hand held remote control <b>600</b>. When there is an animal <b>20</b> in the cage <b>100</b>, the animal's legs will be extending outward from the bottom of the cage <b>100</b>. This is the position for trimming the hooves of the animals, and there are four integrated leg latches <b>500</b> to secure the legs for trimming. In this position the animals head will be extending through the head gate <b>300</b> and laying on the head rest <b>350</b>.</p>
+      <p id="p-00065-en" num="0065">
+        <figref>FIGS. 16</figref>, <b>17</b> &amp; <b>18</b> show the details of the leg latches <b>500</b>. There are four leg latches <b>500</b> to correspond to the four legs <b>21</b> of the animal <b>20</b> to be restrained in the chute <b>10</b>. There is a right rear leg latch <b>501</b>, a left rear leg latch <b>503</b>, a right front leg latch <b>505</b>, and a left front leg latch <b>507</b>. Two of the leg latches <b>500</b> are mounted in the bottom rail <b>115</b>, one is mounted in the front bottom bar <b>315</b> and one is mounted in the rear bottom bar <b>415</b>. When the cage <b>100</b> is in the layover position the animal will be laying on its side on the inside wall <b>110</b>. The two legs on that side will be laying on the inside wall <b>110</b>, one near the front and one near the rear. The two leg latches <b>500</b> on the inside wall <b>110</b> are located in the openings <b>520</b> near the front and back, as best seen in <figref>FIG. 3</figref>. There is a second front leg latch <b>500</b> positioned within the front bottom bar <b>315</b> which is position to restrain the other front leg, and a second rear leg latch <b>500</b> positioned within the rear bottom bar <b>415</b> and positioned to restrain the other rear leg. The bottom rail <b>115</b> and bottom bars <b>315</b> and <b>415</b> are hollow, and have openings <b>520</b> for the hook <b>502</b> to withdraw and extend. The operative components of the leg latches <b>500</b> are mounted within the bottom rail <b>115</b> and bottom bars <b>315</b> and <b>415</b> as shown in <figref>FIG. 18</figref>. All four leg latches <b>501</b>, <b>503</b>. <b>505</b>, and <b>507</b>, are either identical or mirror images of each other, and all therefore have the same components. There is a hook <b>502</b>, which is a curved, semi-circular bent metal bar. The hook <b>502</b> hooks around the leg <b>21</b> of the animal <b>20</b> restrained within the cage <b>100</b>, as shown in <figref>FIG. 17</figref>. Cattle have very narrow lower legs and a large ankle bone just above the hoof <b>23</b>. When the cage <b>100</b> is in the layover position the animal <b>20</b> will be laying on it side with its side laying flat on the inside wall <b>110</b> and with two legs <b>21</b> also laying directly on the inside wall <b>110</b>. The animal's hooves <b>23</b> will be extending from the cage <b>100</b> with the hoof <b>23</b> and ankle bone past the bottom edge of the bottom rail <b>115</b> as shown in <figref>FIG. 16</figref>. This allows the hook <b>502</b> to loosely hook around the leg <b>21</b> of the animal as seen in <figref>FIG. 17</figref>. The curve of the hook is larger than the thin lower leg <b>21</b>, but smaller than the ankle bone of the animal <b>20</b>. The end of the hook <b>502</b> will touch or nearly touch the bottom rail <b>115</b> to fully enclose the leg <b>21</b>. Because of the size of the ankle bone, the leg <b>21</b> will be completely restrained and secured to allow the hoof <b>23</b> to be trimmed or inspected.</p>
+      <p id="p-00066-en" num="0066">The hook <b>502</b> is mounted on a rotatable axle <b>510</b> that is rotatably mounted inside the bottom rail component <b>115</b>, <b>315</b> or <b>415</b>. There is an opening <b>520</b> in the bottom rails <b>115</b>, <b>315</b>, and <b>415</b>, which allow the hook <b>502</b> to be withdrawn completely so that it does not extend into the cage <b>100</b> at all when it is withdrawn, so that it cannot snag on equipment or interfere with the animal's legs as it walks into the cage <b>100</b>. The hook <b>502</b> is a metal rod approximately eight inches long, and bent into a c-shaped curve. There is an elbow <b>514</b> mounted on the axle <b>510</b> approximately 60 degrees away from the point where the hook <b>502</b> is mounted. The exact degree spacing doesn't matter so long as the geometry allows the movement of the piston <b>560</b> to control the hook <b>502</b>. The elbow is a flat rectangular metal bar about a half inch wide and roughly two inches long. There is a hole in the end of the elbow <b>514</b> opposite the end attached to the axle <b>510</b>. The elbow <b>514</b> is rotatably attached to the wrist <b>512</b> by means of a standard nut and bolt through the hole. The wrist <b>512</b> is approximately the same size as the elbow, with two holes, one on each end.</p>
+      <p id="p-00067-en" num="0067">There is a leg latch hydraulic control piston <b>560</b> also mounted within the hollow bottom rail component <b>115</b>, <b>315</b> or <b>415</b>. There are four identical leg latch control pistons <b>560</b> to move the leg latches <b>500</b> (<b>501</b>, <b>503</b>, <b>505</b> and <b>507</b>) from opened to the closed positions. The leg latch control pistons <b>560</b> are 1½″ bore with a 4″ stroke. Each leg latch control piston <b>560</b> has a cylinder <b>561</b> with an internal and movable rod <b>562</b>. The bottom end of the cylinder <b>561</b> is rotatably attached inside the bottom rail component <b>115</b>, <b>315</b>, and <b>415</b>, and the extended end of the rod <b>562</b> is rotatably attached to the wrist <b>512</b>. When the control piston <b>560</b> is activated the rod <b>562</b> extends, which moves the wrist <b>512</b>, which moves the elbow <b>514</b>, which rotates the axle <b>510</b> and opens or closes the hook <b>502</b>. Each of the leg latches <b>501</b>, <b>503</b>, <b>505</b> and <b>507</b> are operated independently by means of the leg latch control buttons <b>651</b>-<b>658</b> on the hand held controller <b>600</b>.</p>
+      <p id="p-00068-en" num="0068">
+        <figref>FIG. 19</figref> shows a top side rear perspective of the chute <b>10</b> showing the major features of the cage <b>100</b> and the staging area <b>700</b> but also showing the positioning of the hydraulic controlling components for this embodiment of the invention. Each of the control pistons described above have pressure and release hoses and those hoses run to the manifold on the pump. There are a series of remotely controlled servo motors mounted on the manifold that open and closed based on input from the hand held controller <b>600</b>. Use and operation of hydraulic pistons in this manner is well known. The main components of each control cylinder are a piston and a rod that moves in and out of the cylinder. In the preferred embodiment all of the pistons are double acting, with two hoses connecting to the cylinder, one at the bottom and one at the top to allow quick movement of the rod. Each of the pistons are attached to the respective components at both the cylinder and rod ends, and they are rotatably mounted at both ends with a standard hinge mount to allow the components to rotate as appropriate. Each piston is controlled from a central pump with a manifold with multiple tubes connected to each piston. These types of hydraulic controllers are well known. Each of the pistons is controlled by a remotely controlled servo motor, and each servo motor is controlled by the associated button on the hand held remote controller <b>600</b>. All of the servo motors and hydraulic components are housed in steel boxes, which are mounted on the vehicle <b>30</b>, or in the stationary embodiment, are mounted on the stationary platform. The specific location of the boxes vary depending on the specific configuration of the chute <b>10</b>.</p>
+      <p id="p-00069-en" num="0069">
+        <figref>FIG. 20</figref> shows the hand-held controller <b>600</b>, which has the control buttons for each of the remotely controlled operations. The control buttons are aligned roughly in order of operation of the hoof trimming process. The control buttons are also labeled in accordance to the operation being controlled, so that a trimmer can read the buttons as he or she is operating the various components of the chute <b>10</b>. The control bottoms are also paired, so one button moves a component down and the button directly to the side moves that same component up. At the top of the controller <b>600</b> are the “off” bottom <b>601</b> and the “on” button <b>602</b>, which turns off and on the remote controlled components. The next paired buttons are the buttons to control the staging doors <b>703</b> and <b>705</b>, the “staging door open” button <b>621</b> and the “staging door closed” button <b>622</b>. These open and close the both of the staging doors <b>703</b> and <b>705</b> at the same time to allow an animal <b>20</b> to enter the cage <b>100</b>. Next are the “push bar forward” button <b>641</b> and “push bar back” button <b>642</b>, which control the tail gate <b>400</b> by activating the tail gate control piston <b>460</b> to swing the tail gate <b>400</b> down, which pushes the animal <b>20</b> into the cage <b>100</b>. The “push bar back” button <b>642</b> opens the tail gate <b>400</b>. The “head catch open” button <b>631</b> and “head catch close” button <b>632</b> control the head gate <b>300</b>, with the “head catch close” button <b>632</b> closing the head gate <b>300</b>, and the “head catch open” button <b>631</b> opening the head gate <b>300</b>. The “belly arm up” button <b>643</b> activates the belly bar piston <b>260</b> and swings the belly bar <b>220</b> upward and into the belly of the animal <b>20</b>. The “belly arm down” button <b>644</b> swings the belly bar <b>220</b> down and away from the animal to release it. The “cage up” button <b>611</b> activates the two paired layover pistons <b>60</b><i>a </i>and <b>60</b><i>b</i>, which rotates the cage <b>100</b> upward into the layover position. The “cage down” button <b>612</b> rotates the cage <b>100</b> back into the horizontal or upright position so that the animal <b>20</b> is standing position. The next four buttons control the four leg latches <b>500</b>, opening and closing each. The “right rear open” button <b>651</b> opens and the “right rear close” button <b>652</b> closes the right rear leg latch <b>501</b>. The “left rear open” button <b>653</b> opens and the “left rear close” button <b>654</b> closes the left rear leg latch <b>503</b>. The “right front open” button <b>655</b> opens and the “right front close” button <b>656</b> closes the right front leg latch <b>505</b>. The “left front open” button <b>657</b> opens and the “left front close” button <b>658</b> closes the left front leg latch <b>501</b>. Finally, the “head rest up” button <b>633</b> moves the head rest <b>350</b> into the “up” or closed position adjacent to the head gate <b>300</b>, and the “head rest down” button <b>634</b> moves the head rest into the down position, which places it in a plane with the inside wall <b>110</b> as shown in <figref>FIG. 10</figref> to provide a head rest for the animal <b>20</b> when restrained in the cage <b>100</b> while in the layover position.</p>
+      <p id="p-00070-en" num="0070">In the preferred embodiment the hand-held controller <b>600</b> includes a standard lanyard that allows the user to attach the controller <b>600</b> to a belt or other clothing for ease of use and retrieval. In an alternate embodiment a smart phone or tablet computer can download a software application, or app, that includes all of the control features of the hand held controller <b>600</b>.</p>
+      <p id="p-00071-en" num="0071">When the chute <b>10</b> is mounted on a vehicle <b>30</b>, such as a truck or trailer, there needs to be additional stabilization when the chute <b>10</b> is in use. The chute <b>10</b> is heavy and when an animal <b>20</b> is in the chute <b>10</b> it adds to the weight, and without additional stabilization all of this weight would be borne by the vehicle's <b>30</b> suspension. This could potentially damage the vehicle's suspension, and would also be unstable because the vehicle <b>30</b> would likely move as the cage <b>100</b> is lifted and rotated. To stabilize the vehicle there are front and rear downriggers. The two downriggers are essentially the same, except for the location on the vehicle <b>30</b>. The downriggers consist of a brace frame and two pistons mounted on the vehicle, and a footer that is extended onto the ground. When the pistons are extended the footers of the downriggers are pushed onto the ground and the vehicle <b>30</b> is lifted off the ground. This places all of the weight of the vehicle <b>30</b> onto the downriggers <b>40</b> and off the vehicle suspension, and prevents movement of the vehicle during the operation of the chute <b>10</b>.</p>
+      <p id="p-00072-en" num="0072">As seen in <figref>FIG. 19</figref>, there is an accessory frame <b>34</b> on the vehicle. The accessory frame <b>34</b> is constructed of 1″×1″ aluminum posts welded together to form a box around the vehicle <b>30</b>. In one configuration there is a roll up awning located on the top of the frame that can be pulled across the frame and provide shade over the chute <b>10</b> and more importantly the operator. There is also an adjustable gate rack <b>35</b> located on the frame <b>34</b> on the opposite side of the vehicle <b>30</b> from the cage <b>100</b>. Hoof trimmers often carry their own fencing to the job site to construct the temporary narrow walkways used to channel the animals and bring them to the rear of the chute <b>10</b>. This temporary fencing is often strapped to the chute <b>10</b> by means of rope or bungee-cord. The adjustable gate rack <b>35</b> provides a secure place to mount the temporary fencing. It is adjustable by means of a hydraulic piston that moves the gate rack <b>35</b> from a lowered to a raised position. In the lowered position the gate rack <b>35</b> is approximately ten feet off the ground which allows the operator to easily place the fencing onto the rack <b>35</b> and easily remove it from the rack <b>35</b>. When the gate rack <b>35</b> is raised into the raised position the fencing is moved up and away from the rear wheels of the vehicle <b>30</b>.</p>
+      <p id="p-00073-en" num="0073">Because of the configuration of the chute mounted on the vehicle, there are numerous spaces for mounting of storage and tool boxes. The boxes are standard steel plated boxes. The hydraulic pump for the hydraulic pistons are contained within these boxes, as well as the remote controls for the pistons. A number of boxes are left empty and can be used by the operator to store tools, supplies and other equipment for hoof trimming. One of the supplies commonly used by hoof trimmers is hoof glue, which is used for chipped or damaged hoofs. It is also not uncommon to glue a temporary pad onto the bottom of a hoof <b>23</b> to protect a damaged or injured hoof. There are a variety of different glues and most are biodegradable. One common glue is applied hot and solidifies as it cools. Many hoof trimmers will wrap a container of the glue in a standard heating pad to warm the glue while trimming. The chute <b>10</b> disclosed herein includes a hot box <b>70</b> with an integrated heating element to heat the contents of the box. The hot box <b>70</b> is a standard six sided box, with one side that contains a door. These storage and tool boxes are for the convenience of the end user, and the specific location and configuration can vary depending on the vehicle.</p>
+      <p id="p-00074-en" num="0074">In operation the vehicle <b>30</b> is positioned and the two downriggers <b>40</b> deployed to stabilize the chute <b>10</b>. The gate rack <b>35</b> is lowered and the temporary fencing is removed and placed to created a narrow walkway to move animals <b>20</b> in single file toward the rear of the chute <b>10</b>. The last section of fencing will be attached to the staging area <b>700</b> so that the narrow walkway terminates at the staging area doors <b>703</b> and <b>705</b>. (This will not be necessary in the stationary embodiment.) Animals <b>20</b> are herded in single file through the walkway to just before the staging area doors <b>703</b> and <b>705</b>. The cage <b>100</b> will be rotated downward into the upright or standing position, as shown in <figref>FIG. 1</figref> and <figref>FIG. 2</figref>. The cow pusher rear gate <b>400</b> and in one embodiment the rear bottom channel <b>415</b> will be in the open position. The head gate <b>300</b> will be partially opened. It is open enough so that a cow's head <b>24</b> will easily fit through, but spaced so that the cow's shoulders will not fit through the opening. The staging area doors <b>703</b> and <b>705</b> are open by pressing the staging door open button <b>601</b> on the hand-held remote control <b>600</b> and the first animal <b>20</b> is herded into the cage <b>100</b>. As soon as the animal <b>20</b> is through the staging area doors <b>703</b> and <b>705</b> they are closed by pressing the staging door closed button <b>602</b> to prevent another animal <b>20</b> from moving into the cage <b>100</b> or getting in the way of the tail gate <b>400</b>.</p>
+      <p id="p-00075-en" num="0075">In most cases the animal <b>20</b> will move forward into the cage <b>100</b> on its own, but in other cases the operator or an assistant will encourage the animal <b>20</b> to move forward. In most cases the animal will see the opening in the front gate <b>300</b> and will try to go through it, which means that it's head <b>24</b> will go to and through the narrow opening. In that situation, once the head <b>24</b> is through the partially open head gate <b>300</b> the operator will close the head gate <b>30</b> by pressing the head catch close button <b>631</b> on the hand held controller <b>600</b>. In some situations the animal <b>20</b> will move most of the way into the cage <b>100</b> but not extend its head <b>24</b> fully through the head gate <b>300</b>. In that situation the animal <b>20</b> can be urged forward by closing the cow pusher tail gate <b>400</b>, and in one embodiment when the cow pusher <b>400</b> is closed the rear bottom channel <b>440</b> will also close. This is accomplished by pressing the push bar forward button <b>641</b> on the controller <b>600</b>. Typically, when the animal <b>20</b> feels force being applied from the rear, which in this case is applied by the cow pusher tail gate <b>400</b> and the rear bottom channel <b>415</b>, the animal <b>20</b> will continue to move forward and push its head and neck through the partially opened head gate <b>300</b>, and the operator will close the head gate <b>300</b>. Once the body of the animal <b>20</b> is fully within the cage <b>100</b> the tail gate <b>400</b> and rear bottom channel <b>440</b> are closed.</p>
+      <p id="p-00076-en" num="0076">Next the belly restraint <b>200</b> is activated by pressing the belly arm up button <b>643</b> on the controller <b>600</b>, which activates the piston <b>260</b> and the belly bar <b>220</b> is pushed against the animal's belly. This forces the animal <b>20</b> against the inside wall <b>110</b> and holds it in place. Once the animal <b>20</b> is fully immobilized in the cage <b>100</b>, the cage <b>100</b> is rotated by pressing the cage up button <b>611</b>, which activates the cage control piston <b>60</b> and rotates the cage <b>100</b>. If the cage <b>100</b> is fully rotated 90 degrees it will be in the layover position. But typically the cage <b>100</b> is stopped at about 60 or 70 degrees and the animal's legs <b>21</b> are restrained with the leg latches <b>500</b>. Leg restraint is done in this position because the animal <b>20</b> is typically more docile when slightly inclined, and because its legs <b>21</b> will naturally be extended when not in the fully supine position. The operator can grab the leg <b>21</b> with one hand and press the appropriate button on the hand held remote control <b>600</b> to secure the leg latch <b>500</b> around the leg <b>21</b>. This is accomplished by pressing the appropriate closing button <b>652</b>, <b>654</b>, <b>656</b> and <b>658</b> on the controller <b>600</b>. Once all four legs <b>24</b> are restrained, the cage <b>100</b> will be rotated to the full layover position. With the cage <b>100</b> in the layover position, and the legs <b>21</b> secured with the leg latches <b>500</b>, the hooves <b>23</b> will be secured and extending outwardly from the bottom of the cage <b>100</b> where it will be easy to inspect the legs <b>21</b> and hooves <b>23</b> for injury or disease, and to trim the hooves <b>23</b>. Trimming is done with a standard grinder. In some cases a hoof <b>23</b> may be injured or there is a visible sore, and the trimmer will have access to treatment supplies in one of the storage boxes located on the vehicle <b>30</b>, some of which are located below the cage <b>100</b> in the layover position.</p>
+      <p id="p-00077-en" num="0077">Once the hooves <b>23</b> have been trimmed and the animal's legs <b>21</b> inspected the operator can record the animal's information on a computer or tablet, which can be conveniently stored in the computer slot located on the staging area <b>700</b>. The operator will then release the four leg latches <b>500</b> by means of the leg latch opening buttons <b>651</b>, <b>653</b>, <b>655</b>, and <b>657</b>. The cage <b>100</b> can then be rotated from the layover position back to the upright position by pressing the cage down button <b>612</b>. The animal <b>20</b> will naturally place its hooves <b>23</b> onto the ground. The operator will then release the belly restraint <b>200</b> by pressing the belly arm down button <b>644</b>, and then open the front gate <b>300</b> by pressing the head catch open button <b>631</b>. The animal <b>20</b> will leave the cage <b>100</b>. Most animals <b>20</b> will leave on their own, but in some cases the operator can encourage the animal to leave either by slapping or pushing on the hindquarters.</p>
+      <p id="p-00078-en" num="0078">The hand-held controller <b>600</b> allows the operator to move fully about the chute <b>10</b> during the entire trimming process. He can easily position himself to watch the animal <b>20</b> as it enters the staging area <b>700</b> and then the cage <b>100</b>, which allows him to know precisely when the open and close the staging area doors <b>703</b> and <b>705</b>, the rear gate <b>400</b>, the head gate <b>300</b>, the belly restrain <b>200</b>, the main cage <b>100</b> controller, and each of the individual leg latches <b>500</b>. The lanyard allows the operator to release the controller <b>600</b> so that his hands will be available for the trimming process.</p>
+      <p id="p-00079-en" num="0079">The present invention is well adapted to carry out the objectives and attain both the ends and the advantages mentioned, as well as other benefits inherent therein. While the present invention has been depicted, described, and is defined by reference to particular embodiments of the invention, such reference does not imply a limitation to the invention, and no such limitation is to be inferred. The depicted and described embodiments of the invention are exemplary only, and are not exhaustive of the scope of the invention. Consequently, the present invention is intended to be limited only be the spirit and scope of the claims, giving full cognizance to equivalents in all respects.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>I claim:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150924">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. An animal restraining device comprising:
+<claim-text>a four sided restraining cage consisting of an inside wall, an outside wall, a closable front opening, and a closable rear opening; wherein an animal enters the restraining cage through the rear opening and exits the cage through the front opening;</claim-text><claim-text>a tail gate for closing the closable rear opening;</claim-text><claim-text>a staging area for controlling the entry of multiple animals into the restraining cage;</claim-text><claim-text>a head gate for closing the closable front opening, wherein head gate moves from an open position to allow the animal to leave the restraining cage to a closed position that secures the head of the animal to restrain the animal within the restraining cage;</claim-text><claim-text>a belly restraint for temporarily securing the body of the animal within the restraining cage;</claim-text><claim-text>means for rotating the restraining cage from a standing position when the animal enters the restraining cage to a layover position that lays the animal on its side;</claim-text><claim-text>a shoulder pad positioned within the inside wall to provide padding for the shoulder of the animal when the restraining cage is in the layover position;</claim-text><claim-text>a head rest for supporting the head of the animal when the restraining cage is in the layover position: and</claim-text><claim-text>four leg latches for securing the lower legs of the animal so that the legs are stationary.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The animal restraining device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the inside wall and outside wall are constructed from a series of parallel ribs made from a series of U-shaped bars, wherein each U-shaped bar is a single component and wherein the ribs of the inside wall are one side of the U-shaped bar and the ribs of the outside wall are the other side of the U-shaped bar whereby the parallel ribs of the inside wall and outside wall are made from the same bars to provide structural support for the restraining cage.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The animal restraining device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the tail gate is pivotably attached to a top of the closeable rear opening such that the tail gate swings down from the top, and wherein the tail gate is curved to cup the hindquarters of the animal to push the animal into the restraining cage and to prevent the animal from backing out of the restraining cage.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The four sided animal restraining device of <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein further the tail gate is moved between an opened and a closed position by means of a hydraulic piston remotely controlled by a hand held device.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The animal restraining device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the head gate is movable between an open position to a closed position, wherein when in the closed position there is a gap slightly wider than the neck of the animal but narrower than the head or shoulders of the animal so that the animal's head is restrained, thereby restraining the animal within the restraining cage.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The animal restraining device of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the head gate is moved between the open and the closed position by means of a hydraulic piston remotely controlled by a hand held device.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The animal restraining device of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the head gate consists of a hydraulically moved sliding bar that is mounted in a bottom sliding channel and secured by top rollers to a rail and slides between the open and the closed position.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The animal restraining device of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the head gate consists of a swinging gate that is mounted by hinges on one a side of the front opening and swings from the open to the closed position.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The animal restraining device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the staging area is movably attached adjacent to the rear opening of the restraining cage.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The animal restraining device of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the rear staging area consists of two parallel fencing sides that are planar with the inside wall and the outside wall when the staging area is in position at the rear of the restraining cage, and two staging area doors that swing outward and away from the restraining cage.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The animal restraining device of <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the staging area doors are opened and closed by means of hydraulic pistons remotely controlled by a hand held device.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The animal restraining device of <claim-ref idref="clm-00009-en">claim 9</claim-ref> wherein the rear staging area is rotatably attached at the rear of the restraining cage and moved into position by means of a hydraulic piston remotely controlled by a hand held device.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The animal restraining device of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the belly restraint consists of a rotatable belly bar pivotably mounted on the outside wall such that the belly bar rotates into the restraining cage and presses against the belly of the animal to pin the animal against the inside wall.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The animal restraining device of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the rotatable belly bar is moved by means of a hydraulic piston remotely controlled by a hand held device.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The animal restraining device of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the head rest is attached to the closable front opening by means of hinges, and wherein when the restraining cage is in the layover position the head rest is planar with the inside wall to support the head of an animal in the restraining device.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The animal restraining device of <claim-ref idref="clm-00015-en">claim 15</claim-ref> wherein the head rest is movable by means of a hydraulic piston remotely controlled by a hand held device.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The animal restraining device of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the restraining cage is pivotably mounted on a platform and rotated by means of hydraulic pistons remotely controlled by a hand held device.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The animal restraining device of <claim-ref idref="clm-00017-en">claim 17</claim-ref> wherein the platform is attached to a vehicle.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The animal restraining device of <claim-ref idref="clm-00018-en">claim 18</claim-ref> wherein the vehicle is a truck.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The animal restraining device of <claim-ref idref="clm-00019-en">claim 19</claim-ref> wherein the vehicle is towable hitched trailer.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. The animal restraining device of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the means for securing the leg latches are hook-end leg latches mounted along a bottom edge of the restraining cage.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. The animal restraining device of <claim-ref idref="clm-00021-en">claim 21</claim-ref>, wherein the hook-end leg latches are rotated by means of hydraulic pistons that are remotely controlled by a hand held device.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>23</b>. The animal restraining device of <claim-ref idref="clm-00021-en">claim 21</claim-ref> wherein one of the hook end leg latches is mounted on a bottom edge of the closable front opening, one of the hook end leg latches is mounted on a bottom edge of the closable rear opening, one of the hook end leg latches is mounted on a front of a bottom edge of the inside wall, and one of the hook end leg latches is mounted on a rear of the bottom edge of the inside wall.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>24</b>. The animal restraining device of <claim-ref idref="clm-00021-en">claim 21</claim-ref>, wherein the hook-end leg latches are mounted within a hollow bottom rail to protect the animal from the controlling mechanisms.</claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en" independent="true">
+      <claim-text>
+        <b>25</b>. A cattle hoof trimming chute comprising:
+<claim-text>a four sided cage sized to hold an animal and rotatably attached to a platform and rotatable from an upright standing position to a horizontal layover position,</claim-text><claim-text>said cage having an inside wall, an outside wall, a closable front opening, and a closeable rear opening;</claim-text><claim-text>said inside wall and said outside wall constructed from a multiplicity of U-shaped bars wherein one side of the multiplicity of U-shaped bars forms ribs for the inside wall and the other side of the U-shaped bars forms parallel ribs for the outside wall;</claim-text><claim-text>said inside wall having a shoulder pad positioned to correspond to the shoulder of the animal to protect the animal when the cage is in the layover position;</claim-text><claim-text>said inside wall further having a grated opening and a feces funnel positioned to correspond to the anus of the animal when the cage is in the layover position; and</claim-text><claim-text>said outside wall having a belly restraint rotatably attached thereto, wherein said belly restrain rotates into the cage to press against the belly of the animal and force the animal against the inside wall thereby pinning said animal within the cage, said belly restraint moved by a hydraulic piston and controlled by a hand held remote control device.</claim-text></claim-text>
+    </claim>
+    <claim num="26" id="clm-00026-en">
+      <claim-text>
+        <b>26</b>. The cattle hoof trimming chute of <claim-ref idref="clm-00025-en">claim 25</claim-ref> further comprising:
+<claim-text>a head gate movable between an opened and a closed position to partially close said front opening, wherein when said head gate is in the closed position there is an opening wide enough for the animal's neck but not wide enough for the animal's head or shoulders to prevent the animal from withdrawing its head or moving its body through, said front gate moved by a hydraulic piston and controlled by a hand held remote control device.</claim-text></claim-text>
+    </claim>
+    <claim num="27" id="clm-00027-en">
+      <claim-text>
+        <b>27</b>. The cattle hoof trimming chute of <claim-ref idref="clm-00025-en">claim 25</claim-ref> further comprising:
+<claim-text>a head rest pivotably attached to said inside wall such that said head rest is planar with said inside wall when said cage is in the layover position;</claim-text><claim-text>wherein said head rest is positioned by a hydraulic piston that is controlled by a hand held remote control device; and</claim-text><claim-text>whereby said head rest provides support for the animal's head when the cage is in the layover position.</claim-text></claim-text>
+    </claim>
+    <claim num="28" id="clm-00028-en">
+      <claim-text>
+        <b>28</b>. The cattle hoof trimming chute of <claim-ref idref="clm-00025-en">claim 25</claim-ref> further comprising:
+<claim-text>a tail gate to partially close said rear opening, wherein said tail gate is pivotably mounted to a top portion of said rear opening such that it swings down to partially close said rear opening, and wherein further said tail gates is curved to conform to the haunch of the animal to aid in moving the animal into the cage and restraining the animal in the cage; wherein said tail gate is moved by means of a hydraulic piston controlled by a hand held remote control device.</claim-text></claim-text>
+    </claim>
+    <claim num="29" id="clm-00029-en">
+      <claim-text>
+        <b>29</b>. The cattle hoof trimming chute of <claim-ref idref="clm-00025-en">claim 25</claim-ref> wherein said platform is attached to a vehicle.</claim-text>
+    </claim>
+    <claim num="30" id="clm-00030-en">
+      <claim-text>
+        <b>30</b>. The cattle hoof trimming chute of <claim-ref idref="clm-00025-en">claim 25</claim-ref> further comprising:
+<claim-text>four leg latches with hook ends mounted within a hollow bottom rail positioned along a bottom edge of said cage wherein said hook ends encircle the lower legs of the animal to secure the legs when the cage is in the layover position; wherein two leg latches are mounted along a bottom edge of the inside wall, one leg latch is mounted along a bottom edge of said front opening, and one leg latch is mounted along a bottom edge of said rear opening; wherein further said leg latches are individually moved by a hydraulic piston and wherein each of said hydraulic pistons in controlled by a hand held remote control device.</claim-text></claim-text>
+    </claim>
+    <claim num="31" id="clm-00031-en">
+      <claim-text>
+        <b>31</b>. The cattle hoof trimming chute of <claim-ref idref="clm-00025-en">claim 25</claim-ref> further comprising:
+<claim-text>a rear staging area attached to said platform and position adjacent to said closeable rear opening to allow animals to be temporarily positioned behind said cage and kept out of the way of said rear tail gate; wherein said rear staging area consists of an inside parallel side fence which is planar with the inside wall of the cage when the staging area is in position, and an outside parallel side fence which is planar with the outside wall of the cage when the staging area is in position, and hydraulically controlled staging area door moved by a hydraulic piston which is controlled by a hand held remote control device. </claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150264889A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150264889A1-20150924-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150264889A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264889A1-20150924-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150264889A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264889A1-20150924-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150264889A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264889A1-20150924-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150264889A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264889A1-20150924-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150264889A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264889A1-20150924-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150264889A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264889A1-20150924-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150264889A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264889A1-20150924-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150264889A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264889A1-20150924-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150264889A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264889A1-20150924-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150264889A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264889A1-20150924-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150264889A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264889A1-20150924-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150264889A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264889A1-20150924-D00012.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150264889A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264889A1-20150924-D00013.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150264889A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264889A1-20150924-D00014.TIF" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150264889A1_00016.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264889A1-20150924-D00015.TIF" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150264889A1_00017.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264889A1-20150924-D00016.TIF" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150264889A1_00018.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150264889A1-20150924-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150264889A1.PDF" type="pdf" size="1089320" pages="28" />
+</lexisnexis-patent-document>

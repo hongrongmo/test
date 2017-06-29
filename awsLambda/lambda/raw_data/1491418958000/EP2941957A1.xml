@@ -1,0 +1,1789 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2941957A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151111" time-inserted="082452" date-changed="20151223" time-changed="194522">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="122017254">
+        <country>EP</country>
+        <doc-number>2941957</doc-number>
+        <kind>A1</kind>
+        <date>20151111</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>15169762</doc-number>
+        <date>20041223</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151111">
+      <priority-claim sequence="1" kind="national">
+        <country>US</country>
+        <doc-number>60532258</doc-number>
+        <date>20031223</date>
+      </priority-claim>
+      <priority-claim sequence="2" kind="national">
+        <country>US</country>
+        <doc-number>60585609</doc-number>
+        <date>20040706</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>US</country>
+        <doc-number>53225803</doc-number>
+        <kind>P</kind>
+        <date>20031223</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>US</country>
+        <doc-number>58560904</doc-number>
+        <kind>P</kind>
+        <date>20040706</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="3" data-format="docdb">
+        <country>EP</country>
+        <doc-number>04815263</doc-number>
+        <kind>A</kind>
+        <date>20041223</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>532258 P</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>585609 P</doc-number>
+      </priority-claim>
+      <priority-claim sequence="3" data-format="original">
+        <doc-number>04815263.1</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>US20030532258P</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>US20040585609P</doc-number>
+      </priority-claim>
+      <priority-claim sequence="3" data-format="epodoc">
+        <doc-number>EP20040815263</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151112">
+      <gazette-reference>
+        <date>20151111</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151111</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151111</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151112">
+      <classification-ipcr sequence="1">
+        <text>A01N  63/02        20060101AFI20150814BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>63</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150814</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A01N  25/26        20060101A I20051110RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>25</main-group>
+        <subgroup>26</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051110</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A01N  25/32        20060101A I20051110RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>25</main-group>
+        <subgroup>32</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051110</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>A01N  37/46        20060101ALI20150814BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>37</main-group>
+        <subgroup>46</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150814</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>A01N  43/36        20060101ALI20150814BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>43</main-group>
+        <subgroup>36</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150814</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>A01N  43/78        20060101ALI20150814BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>43</main-group>
+        <subgroup>78</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150814</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="7">
+        <text>A01N  47/04        20060101ALI20150814BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>47</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150814</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151112">
+      <classification-cpc sequence="1">
+        <text>A01N  43/54        20130101 FI20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>43</main-group>
+        <subgroup>54</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A01N  37/36        20130101 LI20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>37</main-group>
+        <subgroup>36</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A01N  43/16        20130101 LI20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>43</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A01N  47/04        20130101 LI20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>47</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A01N  63/02        20130101 LI20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>63</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <combination-set>
+        <group-number>1</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>A01N  63/02        20130101 LI20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>63</main-group>
+            <subgroup>02</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>A01N  51/00        20130101 LI20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>51</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>3</rank-number>
+          <classification-cpc>
+            <text>A01N  47/04        20130101 LI20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>47</main-group>
+            <subgroup>04</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>4</rank-number>
+          <classification-cpc>
+            <text>A01N  43/54        20130101 LI20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>43</main-group>
+            <subgroup>54</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>5</rank-number>
+          <classification-cpc>
+            <text>A01N  43/36        20130101 LI20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>43</main-group>
+            <subgroup>36</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>6</rank-number>
+          <classification-cpc>
+            <text>A01N  37/46        20130101 LI20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>37</main-group>
+            <subgroup>46</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>7</rank-number>
+          <classification-cpc>
+            <text>A01N  37/36        20130101 LI20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>37</main-group>
+            <subgroup>36</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>2</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>A01N  43/16        20130101 LI20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>43</main-group>
+            <subgroup>16</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>A01N  51/00        20130101 LI20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>51</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>3</rank-number>
+          <classification-cpc>
+            <text>A01N  47/04        20130101 LI20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>47</main-group>
+            <subgroup>04</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>4</rank-number>
+          <classification-cpc>
+            <text>A01N  43/54        20130101 LI20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>43</main-group>
+            <subgroup>54</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>5</rank-number>
+          <classification-cpc>
+            <text>A01N  43/36        20130101 LI20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>43</main-group>
+            <subgroup>36</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>6</rank-number>
+          <classification-cpc>
+            <text>A01N  37/46        20130101 LI20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>37</main-group>
+            <subgroup>46</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>7</rank-number>
+          <classification-cpc>
+            <text>A01N  37/36        20130101 LI20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>37</main-group>
+            <subgroup>36</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>3</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>A01N  47/04        20130101 LI20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>47</main-group>
+            <subgroup>04</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>A01N  37/46        20130101 LI20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>37</main-group>
+            <subgroup>46</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>4</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>A01N  43/54        20130101 LI20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>43</main-group>
+            <subgroup>54</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>A01N  51/00        20130101 LI20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>51</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>3</rank-number>
+          <classification-cpc>
+            <text>A01N  37/36        20130101 LI20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>37</main-group>
+            <subgroup>36</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>5</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>A01N  37/36        20130101 LI20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>37</main-group>
+            <subgroup>36</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>A01N  51/00        20130101 LI20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>51</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>3</rank-number>
+          <classification-cpc>
+            <text>A01N  43/36        20130101 LI20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>43</main-group>
+            <subgroup>36</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>6</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>A01N  37/36        20130101 LI20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>37</main-group>
+            <subgroup>36</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>A01N2300/00        20130101 LA20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>2300</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>7</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>A01N  43/16        20130101 LI20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>43</main-group>
+            <subgroup>16</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>A01N2300/00        20130101 LA20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>2300</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>8</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>A01N  43/54        20130101 LI20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>43</main-group>
+            <subgroup>54</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>A01N2300/00        20130101 LA20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>2300</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>9</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>A01N  47/04        20130101 LI20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>47</main-group>
+            <subgroup>04</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>A01N2300/00        20130101 LA20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>2300</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>10</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>A01N  63/02        20130101 LI20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>63</main-group>
+            <subgroup>02</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>A01N2300/00        20130101 LA20130101BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>01</class>
+            <subclass>N</subclass>
+            <main-group>2300</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20130101</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">16</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151111" lang="ger" format="original">METHODES ET COMPOSITIONS PRODUISANT SUR LES LEGUMINEUSES ET LES NON-LEGUMINEUSES DES EFFETS BENEFIQUES SUR LE PLAN AGRONOMIQUE</invention-title>
+    <invention-title id="title_eng" date-changed="20151111" lang="eng" format="original">METHODS AND COMPOSITIONS PROVIDING AGRONOMICALLY BENEFICAL EFFECTS IN LEGUMES AND NON-LEGUMES</invention-title>
+    <invention-title id="title_fre" date-changed="20151111" lang="fre" format="original">VERFAHREN UND ZUSAMMENSETZUNGEN MIT AGRONOMISCH NÜTZLICHEN WIRKUNGEN BEI HÜLSENFRÜCHTEN UND NICHTHÜLSENFRÜCHTEN</invention-title>
+    <references-cited date-changed="20151117">
+      <patent-citations name="patcit" date-changed="20151117" />
+      <non-patent-citations name="nplcit" date-changed="20151117" />
+      <citation>
+        <patcit num="1" dnum="DE19633502A1" dnum-type="publication number">
+          <document-id>
+            <country>DE</country>
+            <doc-number>19633502</doc-number>
+            <kind>A1</kind>
+            <name>BAYER AG [DE]</name>
+            <date>19980226</date>
+          </document-id>
+          <application-date>
+            <date>19960820</date>
+          </application-date>
+        </patcit>
+        <category>I</category>
+        <category>Y</category>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="WO0126465A1" dnum-type="publication number">
+          <document-id>
+            <country>WO</country>
+            <doc-number>0126465</doc-number>
+            <kind>A1</kind>
+            <name>UNIV MCGILL [CA], et al</name>
+            <date>20010419</date>
+          </document-id>
+          <application-date>
+            <date>20001006</date>
+          </application-date>
+        </patcit>
+        <category>Y</category>
+        <category>A</category>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US5549718A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5549718</doc-number>
+            <kind>A</kind>
+            <name>LEROUGE PATRICE [FR], et al</name>
+            <date>19960827</date>
+          </document-id>
+          <application-date>
+            <date>19940930</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="US5646018A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5646018</doc-number>
+            <kind>A</kind>
+            <name>BROUGHTON WILLIAM JOHN [CH], et al</name>
+            <date>19970708</date>
+          </document-id>
+          <application-date>
+            <date>19950201</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="5" dnum="US5321011A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5321011</doc-number>
+            <kind>A</kind>
+            <name>STACEY GARY [US], et al</name>
+            <date>19940614</date>
+          </document-id>
+          <application-date>
+            <date>19920121</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="6" dnum="US5175149A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5175149</doc-number>
+            <kind>A</kind>
+            <name>STACEY GARY [US], et al</name>
+            <date>19921229</date>
+          </document-id>
+          <application-date>
+            <date>19911004</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <nplcit num="1">
+          <text>PRITHIVIRAJ B ET AL: "A host-specific bacteria-to-plant signal molecule (Nod factor) enhances germination and early growth of diverse crop plants", PLANTA, SPRINGER VERLAG, DE, vol. 216, 1 January 2003 (2003-01-01), pages 437 - 445, XP002288409, ISSN: 0032-0935</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-0037499958&amp;origin=inward</scopus-url>
+        </nplcit>
+        <category>Y</category>
+        <category>A</category>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20151111">
+      <division>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>EP</country>
+              <doc-number>04815263.1</doc-number>
+              <date>20041223</date>
+            </document-id>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>EP</country>
+              <doc-number>15169762</doc-number>
+              <date>20041223</date>
+            </document-id>
+          </child-doc>
+        </relation>
+      </division>
+    </related-documents>
+    <parties date-changed="20151111">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Novozymes Bioag A/S</orgname>
+            <registered-number>101428767</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Krogshoejvej 36</address-1>
+              <city>2880 Bagsvaerd</city>
+              <country>DK</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>SMITH, R., Stewart</name>
+            <address>
+              <address-1>N33 W23363 Greenbriar Court</address-1>
+              <city>Pewaukee, WI Wisconsin 53072</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>OSBURN, Robert, M.</name>
+            <address>
+              <address-1>12623 North Meadow Circle E</address-1>
+              <city>Mequon, WI Wisconsin 53092</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>KOSANKE, John, W</name>
+            <address>
+              <address-1>W234 S3160 Sunset View</address-1>
+              <city>Waukesha, WI Wisconsin 53186</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Rasmussen, Preben</name>
+            <registered-number>100832306</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Novozymes A/S Patents Krogshoejvej 36</address-1>
+              <city>2880 Bagsvaerd</city>
+              <country>DK</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151111">
+      <designation-epc>
+        <contracting-states>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>MC</country>
+          <country>NL</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>TR</country>
+        </contracting-states>
+      </designation-epc>
+    </designation-of-states>
+    <patent-family date-changed="20151111">
+      <main-family family-id="3852136">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1696725</doc-number>
+            <kind>B8</kind>
+            <date>20150708</date>
+          </document-id>
+          <application-date>
+            <date>20041223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>BR</country>
+            <doc-number>PI0417876</doc-number>
+            <kind>A</kind>
+            <date>20070427</date>
+          </document-id>
+          <application-date>
+            <date>20041223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1696725</doc-number>
+            <kind>B1</kind>
+            <date>20150603</date>
+          </document-id>
+          <application-date>
+            <date>20041223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2941957</doc-number>
+            <kind>A1</kind>
+            <date>20151111</date>
+          </document-id>
+          <application-date>
+            <date>20041223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2005062899</doc-number>
+            <kind>A2</kind>
+            <date>20050714</date>
+          </document-id>
+          <application-date>
+            <date>20041223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2005062899</doc-number>
+            <kind>A3</kind>
+            <date>20051103</date>
+          </document-id>
+          <application-date>
+            <date>20041223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2548488</doc-number>
+            <kind>A1</kind>
+            <date>20050714</date>
+          </document-id>
+          <application-date>
+            <date>20041223</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="3529552">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1696725</doc-number>
+            <kind>B8</kind>
+            <date>20150708</date>
+          </document-id>
+          <application-date>
+            <date>20041223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>BR</country>
+            <doc-number>PI0417876</doc-number>
+            <kind>A</kind>
+            <date>20070427</date>
+          </document-id>
+          <application-date>
+            <date>20041223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1696725</doc-number>
+            <kind>A2</kind>
+            <date>20060906</date>
+          </document-id>
+          <application-date>
+            <date>20041223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1696725</doc-number>
+            <kind>A4</kind>
+            <date>20090422</date>
+          </document-id>
+          <application-date>
+            <date>20041223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1696725</doc-number>
+            <kind>B1</kind>
+            <date>20150603</date>
+          </document-id>
+          <application-date>
+            <date>20041223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2005062899</doc-number>
+            <kind>A3</kind>
+            <date>20051103</date>
+          </document-id>
+          <application-date>
+            <date>20041223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2548488</doc-number>
+            <kind>A1</kind>
+            <date>20050714</date>
+          </document-id>
+          <application-date>
+            <date>20041223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2941957</doc-number>
+            <kind>A1</kind>
+            <date>20151111</date>
+          </document-id>
+          <application-date>
+            <date>20041223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2005062899</doc-number>
+            <kind>A2</kind>
+            <date>20050714</date>
+          </document-id>
+          <application-date>
+            <date>20041223</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151111" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Methods and compositions for enhancing plant characteristics of leguminous and nonleguminous crops include combination treatments with at least one fungicide, and one or more nod factors. Optionally, an inoculant composition may be used with the invention to enhance nodulations and nitrogen fixation with legumes.</p>
+  </abstract>
+  <legal-data date-changed="20151223">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20151111</date>
+      </publication-date>
+      <event-code-1>AC</event-code-1>
+      <legal-description>DIVISIONAL APPLICATION (ART. 76) OF:</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941957A1</docdb-publication-number>
+      <docdb-application-id>440702412</docdb-application-id>
+      <corresponding-publication-number>1696725</corresponding-publication-number>
+      <corresponding-authority>
+        <country>EP</country>
+      </corresponding-authority>
+      <corresponding-kind>P</corresponding-kind>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20151111</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941957A1</docdb-publication-number>
+      <docdb-application-id>440702412</docdb-application-id>
+      <corresponding-kind>A1</corresponding-kind>
+      <legal-designated-states>
+        <country>AT</country>
+        <country>BE</country>
+        <country>BG</country>
+        <country>CH</country>
+        <country>CY</country>
+        <country>CZ</country>
+        <country>DE</country>
+        <country>DK</country>
+        <country>EE</country>
+        <country>ES</country>
+        <country>FI</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>GR</country>
+        <country>HU</country>
+        <country>IE</country>
+        <country>IS</country>
+        <country>IT</country>
+        <country>LI</country>
+        <country>LT</country>
+        <country>LU</country>
+        <country>MC</country>
+        <country>NL</country>
+        <country>PL</country>
+        <country>PT</country>
+        <country>RO</country>
+        <country>SE</country>
+        <country>SI</country>
+        <country>SK</country>
+        <country>TR</country>
+      </legal-designated-states>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151111">
+    <p id="p-00001-en" num="0001">This application claims benefit of priority under 35 U.S.C. § 119 from <patcit id="pcit-00001" dnum="US53225803P"><text>U.S. Provisional Application Serial No. 60/532,258, filed December 23, 2003</text></patcit>, and <patcit id="pcit-00002" dnum="US58560904P"><text>U.S. Provisional Application Serial No. 60/585,609, filed July 6, 2004</text></patcit>. Each application is incorporated herein by reference in its entirety.</p>
+    <p id="p-00002-en" num="0002">The invention relates to enhancing plant stand, growth, vigor and yield properties of leguminous and non-leguminous crops, and soybean and corn crops in particular.</p>
+    <p id="p-00003-en" num="0003">Leguminous plants include a large group of agriculturally useful and economically important crops such as soybean, alfalfa, peanut, pea, lentil, bean, and clover, among others. Non-leguminous plants also comprise a group of agriculturally useful and economically important crops which include field crops such as corn, cereals, cotton, and canola, and vegetable crops such as potatoes, cucumbers, beets, lettuce, and cantaloupe.</p>
+    <p id="p-00004-en" num="0004">Pathogens responsible for diseases of legumes and non-legumes have become well-established in most, if not all, production areas, and have been responsible for significant economic losses. Examples of disease-causing microorganisms include <i>Phytophthora, Rhizoctonia, Fusarium, Pythium</i>, <i>Phomopsis, Sclerotinia,</i> and <i>Phakopsora</i> species.</p>
+    <p id="p-00005-en" num="0005">Chemical fungicide and insecticide treatments have become widely used to protect crops from seedborne, soilborne, and foliar diseases and insect damage. However, although fungicide treatments generally improve the health of root systems and increase the plant stand, such treatments do not always ensure higher yields or improved vigor.</p>
+    <p id="p-00006-en" num="0006">Legume plants produce characteristic nitrogen-fixing nodules in symbiosis with soil bacteria of the genera <i>Rhizobium, Bradyrhizobium, Azorhizobium, Mesorhizobium</i>, <i>Allorhizobium</i> and <i>Sinorhizobium</i> (collectively known as "rhizobia"). Rhizobial interaction with legume plants is controlled by strict species specificity, i.e., symbiotic nitrogen fixation occurs when plant and bacteria are properly matched. Non-legume plants typically do not produce nodules. <i>Bradyrhizobium parasponia</i> is a unique example of nodulation with non-legumes.</p>
+    <p id="p-00007-en" num="0007">Signal exchange between plant and bacteria is initiated by secretion of signal molecules, such as flavonoids or isoflavonoids, in root exudates. These plant signal molecules then activate nodulation (nod) genes in the rhizobia, resulting in rhizobial biosynthesis and secretion of lipochitooligosaccharides (LCOs), which are plant-inducing molecules. These LCOs, also termed "nod factors," trigger the infection process and induce nodule formation on the host plant roots. Thus, nodule formation results from coordinated expression of plant and bacterial genes.</p>
+    <p id="p-00008-en" num="0008">Bacterial nodA, nodB, nodC and nodD genes are simultaneously involved in the production of extracellular nod factors. The ABC genes are conserved among all rhizobia, while the interaction of the nodD regulator gene product with plant flavonoids determines, at least in part, host specificity. All rhizobia produce complex mixtures of nod factors.</p>
+    <p id="p-00009-en" num="0009">Nod factors purified from rhizobial cultures or chemically synthesized nod factors induce nodulation via root hair deformation and curling, preinfection thread formation and cortical cell division in host plants at picomolar or higher concentrations.</p>
+    <p id="p-00010-en" num="0010">Nod factors are constructed of a backbone of 3-6 residues of ß-1,4-linked-N-acetyl-D-glucosamine, with the N acetyl group of the terminal non-reducing end replaced by an acyl chain. The number of carbons in the fatty acid typically varies from 16 to 20 and the number of double bonds varies from 0 to 4.</p>
+    <p id="p-00011-en" num="0011">Described herein is the inventors' surprising discovery that superior results with respect to plant stand, growth, vigor or yield of leguminous and non-leguminous plants or crops are achieved using a treatment of fungicide, insecticide, or a combination thereof, with nod factors, either with or without a rhizobial inoculant. In many instances, study results demonstrated significant improvement in the combination over the individual treatments alone.</p>
+    <p id="p-00012-en" num="0012">As a first aspect, the invention provides a method of enhancing a plant characteristic, comprising treating a seed, seedling, root or plant, or combinations thereof, with a plant inducer and a fungicide, an insecticide or combinations thereof, thereby enhancing a plant characteristic. The plant characteristic may be plant stand, growth, vigor or yield, or combinations thereof.</p>
+    <p id="p-00013-en" num="0013">The methods may further comprise treating a seed, seedling root or plant, or combinations thereof, with an inoculant composition.</p>
+    <p id="p-00014-en" num="0014">In another aspect, the invention provides compositions comprising a plant inducer and a fungicide, insecticide, or combination thereof. Compositions of the invention may also comprise an inoculant composition.</p>
+    <p id="p-00015-en" num="0015">As used herein and in the art, the term "agronomically beneficial" describes compositions that, when applied to soil, seeds, seedlings, roots or plants, result in enhancement (which may be statistically significant) of plant characteristics such as plant stand, growth, vigor or yield in comparison to non-treated soil, seeds, seedlings, roots or plants. Similarly, "enhancing" or "enhancement," when used herein, refers to improvement (which may be statistically significant) in any of the above plant characteristics in comparison to non-treated soil, seeds, seedlings, roots or plants.</p>
+    <p id="p-00016-en" num="0016">A "fungicide," as used herein and in the art, is an agent that kills or inhibits fungal growth. As used herein, a fungicide "exhibits activity against" a particular species of fungi if treatment with the fungicide results in killing or growth inhibition of a fungal population (e.g., in the soil) relative to an untreated population.</p>
+    <p id="p-00017-en" num="0017">Effective fungicides in accordance with the invention will suitably exhibit activity against a broad range of pathogens, including but not limited to <i>Phytophthora, Rhizoctonia</i>, <i>Fusarium, Pythium</i>, <i>Phomopsis</i> or <i>Sclerotinia</i> and <i>Phakopsora</i> and combinations thereof.</p>
+    <p id="p-00018-en" num="0018">Commercial fungicides may be suitable for use in the present invention. Suitable commercially available fungicides include, but are not limited to, PROTÉGÉ, RIVAL or ALLEGIANCE FL or LS (Gustafson, Plano, TX), WARDEN RTA (Agrilance, St. Paul, MN), APRON XL, APRON MAXX RTA or RFC, MAXIM 4FS or XL (Syngenta, Wilmington, DE), CAPTAN (Arvesta, Guelph, Ontario) and PROTREAT (Nitragin Argentina, Buenos Ares, Argentina). Active ingredients in these and other commercial fungicides include, but are not limited to, fludioxonil, mefenoxam, azoxystrobin and metalaxyl. Commercial fungicides are most suitably used in accordance with the manufacturer's instructions at the recommended concentrations.</p>
+    <p id="p-00019-en" num="0019">As used herein, an insecticide "exhibits activity against" a particular species of insect if treatment with the insecticide results in killing or inhibition of an insect population relative to an untreated population.</p>
+    <p id="p-00020-en" num="0020">Effective insecticides in accordance with the invention will suitably exhibit activity against a broad range of insects including, but not limited to, wireworms, cutworms, grubs, corn rootworm, seed corn maggots, flea beetles, chinch bugs, aphids, leaf beetles, and stink bugs.</p>
+    <p id="p-00021-en" num="0021">Commercial insecticides may be suitable for use in the present invention. Suitable commercially-available insecticides include, but are not limited to, CRUISER (Syngenta, Wilmington, DE), GAUCHO and PONCHO (Gustafson, Plano, TX). Active ingredients in these and other commercial insecticides include thiamethoxam, clothianidin, and imidacloprid. Commercial insecticides are most suitably used in accordance with the manufacturer's instructions at the recommended concentrations.</p>
+    <p id="p-00022-en" num="0022">An "agriculturally suitable carrier," as used herein and in the art, is a generally inert vehicle for the active components of the composition. Carriers may include liquids, wettable or dry-use powders, flowables, peats or dusts. Carriers, together with the active components, can be applied in slurry, ready-mix, or mist-type treaters, or can be mixed directly as a dust in the planter or drill box.</p>
+    <p id="p-00023-en" num="0023">A "plant inducer," as used herein and in the art, refers generally to nod factors that participate in plant-microorganism signaling to induce nodule formation in legumes, or plant growth promotion in legumes and/or non-legumes. A "nod factor" is a signal molecule produced under the direct control of Nod genes of rhizobia in response to flavonoid or isoflavonoid secretion by a host plant, or is a synthetic or bioengineered version of naturally occurring nod gene products. The term "nod factor" is used interchangeably with "lipochitooligosaccharide" or "LCO."</p>
+    <p id="p-00024-en" num="0024">Nod factors may be purified from bacterial sources, may be used in unpurified form, or may be synthetic. As will be appreciated, useful nod factors may be naturally occurring, e.g., derived from rhizobia by inducement followed by purification or otherwise, or may be engineered by methods known in the art of biotechnology to produce or alter characteristics of the LCO molecule to provide further useful features.</p>
+    <p id="p-00025-en" num="0025">As will be appreciated, rhizobia produce complex mixtures of LCO molecules and such mixtures, as well as isolated or purified LCO molecules, are contemplated herein. Moreover, rhizobia of different species produce nod factors of differing host ranges. For example, nod factors which may be suitably used for soybeans are derived from, e.g., <i>Bradyrhizobium japonicum</i> or <i>Sinorhizobium fredii.</i> Nod factors which may be suitably used for peanuts are derived from <i>Bradyrhizobium</i> specie for peanut. For alfalfa, <i>Sinorhizobium meliloti</i>-derived factors may be used. Nod factors derived from <i>Rhizobium leguminosarum</i> biovar <i>viceae</i> and biovar <i>trifolii</i> may be used for peas and clover, respectively. <i>Sinorhizobium fredii</i> strain NGR234 is an example of rhizobia that produces a broad range of nod factors.</p>
+    <p id="p-00026-en" num="0026">Suitable nod factors for use with the present invention may include those described in <patcit id="pcit-00003" dnum="US5549718A"><text>U.S. Patent No. 5,549,718 to Lerouge et al.</text></patcit>, <patcit id="pcit-00004" dnum="US5646018A"><text>U.S. Patent No. 5,646,018 to Broughton et al.</text></patcit>, <patcit id="pcit-00005" dnum="US5321011A"><text>U.S. Patent No. 5,321,011 to Stacey et al.</text></patcit> and <patcit id="pcit-00006" dnum="US5175149A"><text>U.S. Patent No. 5,175,149 to Stacey et al.</text></patcit>, each of which is incorporated herein by reference in its entirety.</p>
+    <p id="p-00027-en" num="0027">In particular, suitable nod factors include, but are not limited to, Bj Nod-V (C18:1), Bj Nod-V (Ac, C18:1), Bj Nod-V (C16:0), Bj Nod-V (Ac, C16:0), Bj Nod-V (C16:1), NodRm and Ac-NodRm and NodNGR type factors. The nomenclature used to describe nod factors is standard in the art and, in most cases, is to be understood to refer to the species (e.g., <i>Bradyrhizobium japonicum</i>), the number of N-acetylglucosamine residues (e.g., 5 or "V"), substitutions on the reducing terminal sugar residue (e.g., "Ac" representing acetyl), and the number of carbons in the acyl chain and degree of unsaturation (e.g., C16:0). However, it is to be understood that the nod factor nomenclature is in a state of flux, and any given nod factor is not to be excluded from consideration for use in the invention due to changes in terminology.</p>
+    <p id="p-00028-en" num="0028">Suitably, nod factors may be provided in any compatible solvent, such as DMSO, and added to the compositions at any time prior to application. Nod factors may be suitably purified prior to incorporation in the present compositions. One example of a commercially suitable nod factor product is OPTIMIZE (Nitragin, Milwaukee, WI).</p>
+    <p id="p-00029-en" num="0029">A method for producing nod factor products may include treating cells, such as <i>Bradyrhizobium japonicum</i> or other rhizobia, with a plant signal molecule such as genistein or other nod factor inducer, in an agriculturally suitable carrier to produce an induced culture nod factor product. The induced culture nod factor product may be further modified by tangentially filtering out the cells from the culture to produce a cell-free induced culture nod factor product, which may then be passed through a resin column to produce a purified nod factor product. Nod factors may be further purified by removing any solvent present, purifying the nod factor with HPLC, and freeze-drying the nod factor to produce a further purified nod factor product.</p>
+    <p id="p-00030-en" num="0030">Compositions comprising nod factors having concentrations less than about 10<sup>-5</sup> Molar, and more particularly, less than about 10<sup>-7</sup> Molar may be used. Typically, the nod factors have a concentration of greater than about to 10<sup>-12</sup> Molar, and more particularly, greater than about 10<sup>-9</sup> Molar.</p>
+    <p id="p-00031-en" num="0031">In some embodiments, an inoculant composition may be used in the methods and compositions of the invention to further enhance nodulation and nitrogen fixation. As used herein and in the art, the term "inoculant composition" refers generally to compositions or materials that introduce compatible microorganisms either onto an external surface of seeds or in the seed furrow. In some embodiments, the methods and compositions in accordance with the present invention may further include use of inoculant compositions to induce nodule formation and nitrogen fixation, when applied to or with leguminous seeds, or to enhance germination, early vigor and/or rate of plant growth for either legumes or non-legumes. Although no particular degree of nodulation or enhanced growth is required, seed inoculants of the present invention provide a sufficient number of bacteria to ensure adequate nodulation and/or enhanced symbiotic nitrogen fixation. Additional rhizobial species, such as those set forth herein, may be added to the compositions of the present invention.</p>
+    <p id="p-00032-en" num="0032">Suitable nitrogen-fixing microorganisms useful in inoculant compositions, where included, include rhizobial species. Suitable rhizobial species include <i>Bradyrhizobium japonicum, Bradyrhizobium parasponia, Sinorhizobium meliloti, Rhizobium leguminosarum</i> biovars <i>phaseoli, viceae, and trifolii, Rhizobium lupini,</i> and <i>Bradyrhizobium sp. (Arachis).</i> Selection of a suitable strain of a given species depends on a number of factors, including, but not limited to, ecological factors such as competitive capacity with soil microorganisms, ability to form nodules on the roots of a particular leguminous plant species, efficient nitrogen fixation, and additional factors such as growth and formulation characteristics. Suitably, the microorganisms are present in the seed inoculant composition such that application provides at least 1 x 10<sup>5</sup> viable colony forming units ("cfu") per large seed, such as soybean seeds. For smaller seeds, the inoculant composition suitably provides about 1 x 10<sup>3</sup> to about 5 x 10<sup>3</sup> cfu/seed.</p>
+    <p id="p-00033-en" num="0033">Additional components may be included in the inoculant composition to improve, e.g., adherence and flowability characteristics and microorganism compatibility. Examples of additional components include surfactants, osmoprotectants and emulsifying agents.</p>
+    <p id="p-00034-en" num="0034">An agriculturally suitable carrier may also used in the methods and compositions of the invention. Carriers may be liquids, dusts, flowables or powders as used in the art. Typically, if an inoculant composition is included, a liquid carrier is used which includes growth media to culture the microorganisms. Non-limiting examples of suitable growth media for rhizobia include mannitol yeast extract and glycerol yeast extract. Other species of agronomically beneficial microorganisms may be grown in any media known to those in the art to be compatible with, and/or provide growth nutrients to, the desired species.</p>
+    <p id="p-00035-en" num="0035">Surprisingly, the inventors have found that when a suitable fungicide, insecticide, or combination thereof, is used in conjunction with a plant inducer (e.g., nod factors) to treat legume or non-legume seeds, seedlings, roots or plants, a superior, and in some cases, synergistic effect on plant stand, growth, vigor, grain yield or seed yield is observed. The reason for this synergistic enhancement with respect to these properties is not precisely known. The effect is independent of whether an inoculant composition is included.</p>
+    <p id="p-00036-en" num="0036">Methods of the invention include a treatment step for applying at least one of a fungicide, insecticide, or combination thereof, with a plant inducer, and in some embodiments, an inoculant composition, to legume and non-legume seeds, seedlings, roots or plants. "Treating" or "treatment," as the terms are used herein and in the art, refers to any application which results in contact of seeds, seedlings, roots or plants with an effective amount of a treatment composition or components. Treatment may be accomplished directly, i.e., by application directly on seeds, seedlings, roots or plants (including foliage), or may be accomplished indirectly, i.e., by application to the soil (including in furrow).</p>
+    <p id="p-00037-en" num="0037">As will be understood, treatment with each component may be accomplished sequentially or simultaneously. For example, if a liquid carrier is used, the components may be co-slurried in a commercial treater mix tank and subsequently applied to e.g., seeds by any suitable coating process, e.g., film coating. In the film coating process, a slurry is sprayed onto the seeds in a continuous coating process. Alternatively, for example, if a dust or powder carrier is used, the components can be sequentially applied. With the exception of compositions containing an inoculant, it will also be understood that the compositions may be applied to seeds at any time prior to planting or at the time of sowing by the planting apparatus. Accordingly, treatment may also encompass foliar application and/or application of the compositions in furrow.</p>
+    <p id="p-00038-en" num="0038">Leguminous crops such as soybean, alfalfa, peanut, pea, lentil, bean, and clover, among others, are suitably treated using the presently described methods. Non-leguminous crops including, but not limited to, field crops such as corn, cereals, cotton, and canola, and vegetable crops such as potatoes, cucumbers, beets, lettuce, and cantaloupe, are also suitably treated. As will be appreciated, the term "crop" encompasses any plant material that may be harvested.</p>
+    <p id="p-00039-en" num="0039">The following examples are provided to assist in a further understanding of the invention. The particular materials and conditions employed are intended to be further illustrative of the invention and are not limiting upon the reasonable scope thereof.</p>
+    <p id="p-00040-en" num="0040">Examples 1-3 describe particular commercial products that are used in examples 4-13. Examples 4-13, in turn, describe field trial testing and results achieved with nod factor and fungicide and/or insecticide treatments.</p>
+    <heading id="h-00001-en">
+      <b>Example 1: Fungicides</b>
+    </heading>
+    <p id="p-00041-en" num="0041">Table 1, below, contains examples of suitable commercial fungicide products that may be used in accordance with the invention. Active ingredients are taken from product labels. As will be appreciated, other commercial or non-commercial fungicides may be suitably used, and the following examples are not intended to be limiting. <tables id="tables-00001-en" num="0001"><table frame="all"><title><b>Table 1.</b></title><tgroup cols="2"><colspec colnum="1" colname="col1" colwidth="59mm" /><colspec colnum="2" colname="col2" colwidth="107mm" /><thead><row><entry align="center" valign="top"><b>Commercial Product</b></entry><entry align="center" valign="top"><b>Active Ingredients</b></entry></row></thead><tbody><row><entry>WARDEN RTA (Agrilance, St. Paul, MN)</entry><entry>Mefenoxam (2.15%), Related compounds (0.06%), Fludioxonil (0.72%), Other ingredients (97.07%)</entry></row><row><entry>PROTÉGÉ FL (Gustafson, Plano, TX)</entry><entry>Azoxystrobin (21.51%), Inert ingredients (78.49%)</entry></row><row><entry>RIVAL (Gustafson, Plano, TX)</entry><entry>Captan (19.80%), Related Derivatives (0.45%), Pentachloronitrobenzimidazole (8.40%), Thiabendazole (1.00%), Inert ingredients (70.35%)</entry></row><row><entry>ALLEGIANCE FL (Gustafson, Plano, TX)</entry><entry>Metalaxyl (28.35%), Inert ingredients (71.65%)</entry></row><row><entry>APRON MAXX RTA (Syngenta, Wilmington, DE)</entry><entry>Mefenoxam (1.07%), Related Compounds (0.03%), Fludioxonil (0.73%), Other ingredients (98.17%)</entry></row><row><entry>APRON MAXX RFC (Syngenta, Wilmington, DE)</entry><entry>Fludioxonil (2.31%), Mefenoxam (3.46%), Other ingredients (94.23%)</entry></row><row><entry>SOYGARD L MULTIPAK (PROTÉGÉ FL + ALLEGIANCE FL + color) (Gustafson, Plano, TX)</entry><entry>(Components listed above)</entry></row><row><entry>BEAN PAK (APRON XL + MAXIM 4FS+ color) (Syngenta, Wilmington, DE)</entry><entry>APRON XL: Mefenoxam (33.3%), Other ingredients (66.7%) MAXIM 4FS: Fludioxonil (40.3%), Other ingredients (59.7%)</entry></row></tbody></tgroup></table></tables></p>
+    <heading id="h-00002-en">
+      <b>Example 2: Insecticides</b>
+    </heading>
+    <p id="p-00042-en" num="0042">Table 2, below, contains examples of suitable commercial insecticide products that may be used in the invention. Active ingredients are taken from product labels. As will be appreciated, other commercial or non-commercial insecticides may be suitably used, and the following examples are not intended to be limiting. <tables id="tables-00002-en" num="0002"><table frame="all"><title><b>Table 2.</b></title><tgroup cols="2"><colspec colnum="1" colname="col1" colwidth="59mm" /><colspec colnum="2" colname="col2" colwidth="74mm" /><thead><row><entry align="center" valign="top"><b>Commercial Product</b></entry><entry align="center" valign="top"><b>Active Ingredients</b></entry></row></thead><tbody><row><entry>GAUCHO (Gustafson, Plano, TX)</entry><entry>Imidacloprid (40.7%), Other ingredients (59.3%)</entry></row><row><entry>CRUISER (Syngenta, Wilmington, DE)</entry><entry>Thiamethoxam (47.6%), Other ingredients (52.4%)</entry></row></tbody></tgroup></table></tables></p>
+    <heading id="h-00003-en">
+      <b>Example 3: Nod factor compositions</b>
+    </heading>
+    <p id="p-00043-en" num="0043">One suitable commercially available nod factor product is OPTIMIZE (Nitragin, Milwaukee, WI). This product contains at <i>Bradyrhizobium japonicum</i> (2 x 10<sup>9</sup> rhizobia/gram) and at least 1 x 10<sup>-9</sup> M lipo-oligosaccharide derived from <i>B. japonicum</i> in an aqueous carrier. As will be appreciated, other commercial or non-commercial nod factor products may be suitably used.</p>
+    <heading id="h-00004-en">
+      <b>Example 4: Soybean field trials: Nod factor + Fungicide</b>
+    </heading>
+    <p id="p-00044-en" num="0044">A soybean field trial was conducted to evaluate the effects of treatment with nod factors derived from <i>S. fredii</i> combined with commercial fungicides APRONMAXX RTA and BEAN PAK (Syngenta, Wilmington, DE) with respect to grain yield, plant stand, plant vigor and days to canopy. Ten treatments were compared as listed in Table 3. The inoculant, when used, comprised <i>Bradyrhizobium japonicum</i> (2 x 10<sup>9</sup> rhizobia/gram). APRONMAXX RTA was applied as directed by the product label rate of 5.0 fl. oz./cwt. BEAN PAK was also applied as directed (MAXIM 4FS at 0.08 fl. oz./cwt and APRON XL at 0.16 fl. oz./cwt). <i>S. fredii</i> was induced and nod factors were purified and applied to seed at a concentration of 10<sup>-7</sup> Molar.</p>
+    <p id="p-00045-en" num="0045">The plot measured 0.011 acres and the rows were spaced 15 inches apart. The soil type was Kidder sandy loam. Soybean Cultivar Dairyland DSR228RR was planted with a JD 750 NT Grain Drill at a depth of 1.0-1.5 inches.</p>
+    <p id="p-00046-en" num="0046">Results are reported in Table 3 below. Parameters evaluated include plant stand (number of plants per acre), plant vigor (relative assessment of plant growth on a scale of 1-9, with 1 = poor vigor and 9 = best vigor), days to canopy and grain yield (bushels/acre). With respect to plant stand and grain yield, the combination of nod factor and fungicide consistently outperformed treatments not combining both components. <tables id="tables-00003-en" num="0003"><table frame="all"><title><b>Table 3.</b></title><tgroup cols="5"><colspec colnum="1" colname="col1" colwidth="61mm" /><colspec colnum="2" colname="col2" colwidth="30mm" /><colspec colnum="3" colname="col3" colwidth="28mm" /><colspec colnum="4" colname="col4" colwidth="23mm" /><colspec colnum="5" colname="col5" colwidth="26mm" /><thead><row><entry valign="top"><b>Treatment</b></entry><entry align="center" valign="top"><b>Grain yield bu/acre</b></entry><entry align="center" valign="top"><b>V2 plant stand x 1000</b></entry><entry align="center" valign="top"><b>V2 plant vigor</b></entry><entry align="center" valign="top"><b>Days to canopy</b></entry></row></thead><tbody><row><entry>Untreated control</entry><entry align="center">50.3</entry><entry align="center">159.0</entry><entry align="center">6.0</entry><entry align="center">74.5</entry></row><row><entry>Nod factor</entry><entry align="center">52.3</entry><entry align="center">157.8</entry><entry align="center">6.0</entry><entry align="center">75.3</entry></row><row><entry>Inoculant + Nod factor</entry><entry align="center">53.8</entry><entry align="center">159.0</entry><entry align="center">7.3</entry><entry align="center">70.3</entry></row><row><entry>Inoculant + additive + Nod factor</entry><entry align="center">54.6</entry><entry align="center">159.8</entry><entry align="center">7.0</entry><entry align="center">69.8</entry></row><row><entry>Nod factor + ApronMaxx RTA</entry><entry align="center">59.3</entry><entry align="center">177.5</entry><entry align="center">7.3</entry><entry align="center">72.3</entry></row><row><entry>Nod factor + Bean Pak</entry><entry align="center">57.7</entry><entry align="center">183.0</entry><entry align="center">7.3</entry><entry align="center">70.3</entry></row><row><entry>Inoculant + Nod factor + ApronMaxx RTA</entry><entry align="center">60.8</entry><entry align="center">183.0</entry><entry align="center">7.3</entry><entry align="center">70.0</entry></row><row><entry>Inoculant + Nod factor + Bean Pak</entry><entry align="center">57.7</entry><entry align="center">181.3</entry><entry align="center">7.8</entry><entry align="center">71.3</entry></row><row><entry>Inoculant + additive + Nod factor + ApronMaxx RTA</entry><entry align="center">58.6</entry><entry align="center">182.3</entry><entry align="center">7.3</entry><entry align="center">69.0</entry></row><row><entry>Inoculant + additive + Nod factor + Bean Pak</entry><entry align="center">59.5</entry><entry align="center">184.8</entry><entry align="center">7.8</entry><entry align="center">71.3</entry></row><row><entry><b>Probability %</b></entry><entry align="center">&lt;0.1</entry><entry align="center">&lt;0.1</entry><entry align="center">&lt;0.1</entry><entry align="center">&lt;0.1</entry></row><row><entry><b>LSD 10%</b></entry><entry align="center">4.4</entry><entry align="center">7.2</entry><entry align="center">0.5</entry><entry align="center">1.7</entry></row><row><entry><b>CV%</b></entry><entry align="center">6.6</entry><entry align="center">3.7</entry><entry align="center">6.0</entry><entry align="center">2.0</entry></row></tbody></tgroup></table></tables></p>
+    <heading id="h-00005-en">
+      <b>Example 5: Soybean field trial: Nod factor +Fungicide + Insecticide</b>
+    </heading>
+    <p id="p-00047-en" num="0047">A soybean field trial was conducted to evaluate the effect of nod factor and the seed treatment fungicide and insecticide products APRON MAXX RFC and CRUISER 5FS (Syngenta, Wilmington, DE) on crop yield. These products were evaluated for effect on grain yield when applied on soybean seed alone and in all combinations.</p>
+    <p id="p-00048-en" num="0048">The nod factor product OPTIMIZE (Nitragin, Milwaukee, WI) was applied on soybean seed (Jung variety 8258RR) at the label rate of 4.25 fl oz/cwt. APRON MAXX RFC and CRUISER 5FS were applied at the label rate of 1.5 and 1.28 fl oz/cwt, respectively.</p>
+    <p id="p-00049-en" num="0049">The soil type was Milford clay loam soil. The seeding rate was 225,000 seeds/acre at a 7.5" row width. Plot size was 10' x 50' with each treatment replicated four times.</p>
+    <p id="p-00050-en" num="0050">Yield results are presented in Table 4 below. Each of the individual treatments and the combination of APRON MAXX RFC and CRUISER 5FS statistically increased grain yield relative to the non-treated control. The addition of OPTIMIZE to the fungicide, insecticide, or fungicide/insecticide combination consistently increased grain yields relative to OPTIMIZE or the fungicide/insecticide treatments alone. The combination of OPTIMIZE + APRON MAXX RFC and CRUISER 5FS further statistically increased yield compared to OPTIMIZE, APRON MAXX RFC, CRUISER 5FS or the combination of APRON MAXX RFC and CRUISER 5FS alone. <tables id="tables-00004-en" num="0004"><table frame="all"><title><b>Table 4.</b></title><tgroup cols="2"><colspec colnum="1" colname="col1" colwidth="63mm" /><colspec colnum="2" colname="col2" colwidth="28mm" /><thead><row><entry valign="top"><b>Treatment</b></entry><entry valign="top"><b>Grain yield bu/a</b></entry></row></thead><tbody><row><entry>Untreated control</entry><entry align="center">60.9</entry></row><row><entry>Optimize</entry><entry align="center">65.7</entry></row><row><entry>Apron Maxx RFC</entry><entry align="center">67.3</entry></row><row><entry>Cruiser</entry><entry align="center">66.4</entry></row><row><entry>Apron Maxx RFC + Cruiser 5FS</entry><entry align="center">68.3</entry></row><row><entry>Optimize + Apron Maxx RFC</entry><entry align="center">70.4</entry></row><row><entry>Optimize + Cruiser 5FS</entry><entry align="center">68.0</entry></row><row><entry>Optimize + Apron Maxx RFC + Cruiser 5FS</entry><entry align="center">75.0</entry></row><row><entry><b>Probability %</b></entry><entry align="center">1.6</entry></row><row><entry><b>LSD 10%</b></entry><entry align="center">4.4</entry></row><row><entry><b>CV%</b></entry><entry align="center">5.5</entry></row></tbody></tgroup></table></tables></p>
+    <heading id="h-00006-en">
+      <b>Example 6: Soybean field trial: Nod factor +Fungicide + Insecticide</b>
+    </heading>
+    <p id="p-00051-en" num="0051">A soybean field trial was conducted to evaluate the effect of nod factor and the seed treatment fungicide and insecticide products SOYGARD L MULTIPAK and GAUCHO (Gustafson, Plano, TX) on crop yield. The treatments were evaluated for effect on grain yield when applied on soybean seed alone and in all combinations.</p>
+    <p id="p-00052-en" num="0052">OPTIMIZE was applied on soybean seed (Jung variety 8258RR) at the label rate of 4.25 fl oz/cwt. The components of SOYGARD L MULTIPAK (PROTÉGÉ FL, ALLEGIANCE FL, and Colorant) were applied at the label rates of 0.2, 0.2, and 0.2 fl oz/cwt. GAUCHO was applied at the label rate of 2.0 fl oz/cwt.</p>
+    <p id="p-00053-en" num="0053">The soil type was Milford clay loam soil. The seeding rate was 225,000 seeds/acre at a 7.5" row width. Plot size was 10' x 50' with each treatment replicated four times.</p>
+    <p id="p-00054-en" num="0054">Yield results are presented in Table 5 below. Each of the individual treatments and the combination of SOYGARD L MULTI PAK and GAUCHO increased grain yield relative to the non-treated control. For all products with the exception of SOYGARD L MULTI PAK, the increases in yield were statistically significant. The addition of OPTIMIZE to the fungicide, insecticide, or fungicide/insecticide combinations consistently increased grain yields relative to OPTIMIZE or the fungicide/insecticide treatments alone. <tables id="tables-00005-en" num="0005"><table frame="all"><title><b>Table 5.</b></title><tgroup cols="2"><colspec colnum="1" colname="col1" colwidth="68mm" /><colspec colnum="2" colname="col2" colwidth="28mm" /><thead><row><entry valign="top"><b>Treatment</b></entry><entry valign="top"><b>Grain yield bu/a</b></entry></row></thead><tbody><row><entry>Untreated control</entry><entry align="center">60.9</entry></row><row><entry>Optimize</entry><entry align="center">65.7</entry></row><row><entry>SoyGard L. MultiPak</entry><entry align="center">64.5</entry></row><row><entry>Gaucho 480</entry><entry align="center">65.4</entry></row><row><entry>SoyGard L. Multipack + Gaucho 480</entry><entry align="center">67.7</entry></row><row><entry>Optimize + SoyGard L. MultiPak</entry><entry align="center">68.8</entry></row><row><entry>Optimize + Gaucho 480</entry><entry align="center">67.1</entry></row><row><entry>Optimize + SoyGard L. MultiPak + Gaucho 480</entry><entry align="center">68.7</entry></row><row><entry><b>Probability %</b></entry><entry align="center">1.6</entry></row><row><entry><b>LSD 10%</b></entry><entry align="center">4.4</entry></row><row><entry><b>CV%</b></entry><entry align="center">5.5</entry></row></tbody></tgroup></table></tables></p>
+    <heading id="h-00007-en">
+      <b>Example 7: Soybean field trial: Nod factor +Fungicide</b>
+    </heading>
+    <p id="p-00055-en" num="0055">A soybean field trial was conducted evaluating the effect of nod factor and the seed treatment fungicide product ARPON MAXX RTA (Syngenta, Wilmington, DE) on crop yield. The treatments were evaluated for effect on grain yield when applied on soybean seed alone and in combination.</p>
+    <p id="p-00056-en" num="0056">OPTIMIZE was applied on soybean seed (Jung variety 8258RR) at the label rate of 4.25 fl oz/cwt. APRON MAXX RTA was applied at the label rate of 5 fl oz/cwt.</p>
+    <p id="p-00057-en" num="0057">The soil type was Milford clay loam soil. The seeding rate was 225,000 seeds/acre at a 7.5" row width. Plot size was 10' x 50' with each treatment replicated four times.</p>
+    <p id="p-00058-en" num="0058">Yield results are presented in Table 6 below. Both OPTIMIZE and APRON MAXX RTA significantly increased grain yield relative to the untreated control. The combination of OPTIMIZE and APRON MAXX RTA further increased grain yield relative to the individual treatments alone. <tables id="tables-00006-en" num="0006"><table frame="all"><title><b>Table 6.</b></title><tgroup cols="2"><colspec colnum="1" colname="col1" colwidth="43mm" /><colspec colnum="2" colname="col2" colwidth="28mm" /><thead><row><entry valign="top"><b>Treatment</b></entry><entry valign="top"><b>Grain yield bu/a</b></entry></row></thead><tbody><row><entry>Untreated control</entry><entry align="center">60.9</entry></row><row><entry>Optimize</entry><entry align="center">65.7</entry></row><row><entry>Apron Maxx RTA</entry><entry align="center">67.4</entry></row><row><entry>Optimize + Apron Maxx RTA</entry><entry align="center">68.3</entry></row><row><entry><b>Probability %</b></entry><entry align="center">1.6</entry></row><row><entry><b>LSD 10%</b></entry><entry align="center">4.4</entry></row><row><entry><b>CV%</b></entry><entry align="center">5.5</entry></row></tbody></tgroup></table></tables></p>
+    <heading id="h-00008-en">
+      <b>Example 8: Soybean field trial: Nod factor +Fungicide</b>
+    </heading>
+    <p id="p-00059-en" num="0059">A soybean field trial was conducted to evaluate the effect of nod factor and the seed treatment fungicide product WARDEN RTA (Agrilance, St. Paul, MN) on crop yield. The treatments were evaluated for effect on grain yield when applied on soybean seed alone and in combination.</p>
+    <p id="p-00060-en" num="0060">OPTIMIZE was applied on soybean seed (Jung variety 8258RR) at the label rate of 4.25 fl oz/cwt. WARDEN RTA was applied at the label rate of 5 fl oz/cwt.</p>
+    <p id="p-00061-en" num="0061">The soil type was Milford clay loam soil. The seeding rate was 225,000 seeds/acre at a 7.5" row width. Plot size was 10' x 50' with each treatment replicated four times.</p>
+    <p id="p-00062-en" num="0062">Yield results are presented in Table 7 below. Both OPTIMIZE and WARDEN RTA significantly increased grain yield relative to the untreated control. The combination of OPTIMIZE and WARDEN RTA further increased grain yield relative to the individual treatments alone. <tables id="tables-00007-en" num="0007"><table frame="all"><title><b>Table 7.</b></title><tgroup cols="2"><colspec colnum="1" colname="col1" colwidth="38mm" /><colspec colnum="2" colname="col2" colwidth="28mm" /><thead><row><entry valign="top"><b>Treatment</b></entry><entry valign="top"><b>Grain yield bu/a</b></entry></row></thead><tbody><row><entry>Untreated control</entry><entry align="center">60.9</entry></row><row><entry>Optimize</entry><entry align="center">65.7</entry></row><row><entry>Warden RTA</entry><entry align="center">65.7</entry></row><row><entry>Optimize + Warden RTA</entry><entry align="center">67.1</entry></row><row><entry><b>Probability %</b></entry><entry align="center">1.6</entry></row><row><entry><b>LSD 10%</b></entry><entry align="center">4.4</entry></row><row><entry><b>CV%</b></entry><entry align="center">5.5</entry></row></tbody></tgroup></table></tables></p>
+    <heading id="h-00009-en">
+      <b>Example 9: Soybean field trial: Nod factor +Fungicide combination</b>
+    </heading>
+    <p id="p-00063-en" num="0063">A soybean field trial was conducted to evaluate the effect of nod factor and the seed treatment fungicide products RIVAL and ALLEGIANCE FL on crop yield (Gustafson, Plano, TX). The treatments were evaluated for effect on grain yield when applied on soybean seed alone and in combination.</p>
+    <p id="p-00064-en" num="0064">OPTIMIZE was applied on soybean seed (Jung variety 8258RR) at the label rate of 4.25 fl oz/cwt. RIVAL and ALLEGIANCE FL were applied at their label rates of 4.0 and 0.75 fl oz/cwt, respectively.</p>
+    <p id="p-00065-en" num="0065">The soil type was Milford clay loam soil. The seeding rate was 225,000 seeds/acre at a 7.5" row width. Plot size was 10' x 50' with each treatment replicated four times.</p>
+    <p id="p-00066-en" num="0066">Yield results are presented in Table 8 below. Both OPTIMIZE and RIVAL + ALLEGIANCE significantly increased grain yield relative to the untreated control. The combination of OPTIMIZE and RIVAL + ALLEGIANCE further increased grain yield relative to the individual treatments alone. <tables id="tables-00008-en" num="0008"><table frame="all"><title><b>Table 8.</b></title><tgroup cols="2"><colspec colnum="1" colname="col1" colwidth="48mm" /><colspec colnum="2" colname="col2" colwidth="28mm" /><thead><row><entry valign="top"><b>Treatment</b></entry><entry valign="top"><b>Grain yield bu/a</b></entry></row></thead><tbody><row><entry>Control - non-inoculated</entry><entry align="center">60.9</entry></row><row><entry>Optimize</entry><entry align="center">65.7</entry></row><row><entry>Rival + Allegiance FL</entry><entry align="center">66.2</entry></row><row><entry>Optimize + Rival/Allegiance FL</entry><entry align="center">67.4</entry></row><row><entry><b>Probability %</b></entry><entry align="center">1.6</entry></row><row><entry><b>LSD 10%</b></entry><entry align="center">4.4</entry></row><row><entry><b>CV%</b></entry><entry align="center">5.5</entry></row></tbody></tgroup></table></tables></p>
+    <heading id="h-00010-en">
+      <b>Example 10: Corn field trial: Nod factor +Fungicide + Insecticide</b>
+    </heading>
+    <p id="p-00067-en" num="0067">A corn field trial was conducted to evaluate the effect of nod factors derived from <i>S. fredii</i> strain NGR-234 and the seed treatment fungicide and insecticide products MAXIM XL and CRUISER 5FS (Syngenta, Wilmington, DE) and insecticide product PONCHO 600 (Gustafson, Plano, TX) on plant stand, plant vigor and grain yield. The treatments were evaluated for effect on plant growth and yield when applied on corn seed alone and in combination.</p>
+    <p id="p-00068-en" num="0068">A 10<sup>-7</sup> M aqueous suspension of purified nod factor was applied on corn seed (Jung variety 2445) at a rate of 4.54 ml/lb. MAXIM XL, CRUISER 5FS, and PONCHO 600 were each applied at their label rate.</p>
+    <p id="p-00069-en" num="0069">The soil type was Milford silty clay loam. The seeding rate was 32,000 seeds/acre at a 30" row width. Plot size was 15' x 50' with each treatment replicated four times.</p>
+    <p id="p-00070-en" num="0070">The results are presented in Table 9 below. Parameters evaluated include plant stand (number of plants per acre), plant vigor (relative assessment of plant growth on a scale of 1-9, with 1 = poor vigor and 9 = best vigor), and grain yield (bushels/acre). The nod factor treatment significantly improved stand and vigor and numerically improved yield relative to the control treatment, while the MAXIM treatment showed significant increases across all three parameters. The combination of nod factor and MAXIM significantly increased yield, stand, and vigor relative to the nod factor treatment alone and numerically increased these parameters relative to the fungicide treatment alone. Addition of the insecticide products PONCHO and CRUISER produced consistent increases in yield, stand, and vigor relative to the MAXIM + nod factor treatment. <tables id="tables-00009-en" num="0009"><table frame="all"><title><b>Table 9.</b></title><tgroup cols="4"><colspec colnum="1" colname="col1" colwidth="56mm" /><colspec colnum="2" colname="col2" colwidth="28mm" /><colspec colnum="3" colname="col3" colwidth="36mm" /><colspec colnum="4" colname="col4" colwidth="31mm" /><thead><row><entry align="center" valign="top"><b>Treatment</b></entry><entry align="center" valign="top"><b>Grain yield bu/a</b></entry><entry align="center" valign="top"><b>V4 plant stand x1000</b></entry><entry align="center" valign="top"><b>V4 plant vigor 1-9</b></entry></row></thead><tbody><row><entry>Untreated control</entry><entry align="right">163.6</entry><entry align="right">29.2</entry><entry align="right">5.9</entry></row><row><entry>Nod factor</entry><entry align="right">167.9</entry><entry align="right">30.0</entry><entry align="right">6.9</entry></row><row><entry>Maxim XL</entry><entry align="right">178.2</entry><entry align="right">30.6</entry><entry align="right">7.1</entry></row><row><entry>Maxim XL + Nod Factor</entry><entry align="right">181.8</entry><entry align="right">30.8</entry><entry align="right">7.3</entry></row><row><entry>Maxim XL + Poncho 600 + Nod Factor</entry><entry align="right">185.4</entry><entry align="right">31.4</entry><entry align="right">8.0</entry></row><row><entry>Maxim XL + Cruiser 5FS + Nod Factor</entry><entry align="right">185.8</entry><entry align="right">31.4</entry><entry align="right">7.6</entry></row><row><entry><b>Probability %</b></entry><entry align="right">&lt;0.1</entry><entry align="right">&lt;0.1</entry><entry align="right">&lt;0.1</entry></row><row><entry><b>LSD 10%</b></entry><entry align="right">5.6</entry><entry align="right">0.5</entry><entry align="right">0.5</entry></row><row><entry><b>CV%</b></entry><entry align="right">2.6</entry><entry align="right">1.3</entry><entry align="right">6.2</entry></row></tbody></tgroup></table></tables></p>
+    <heading id="h-00011-en">
+      <b>Example 11: Corn field trial: Nod factor +Fungicide</b>
+    </heading>
+    <p id="p-00071-en" num="0071">A corn field trial was conducted to evaluate the effect of nod factors derived from <i>S. fredii</i> strain NGR-234 and the seed treatment fungicide products CAPTAN 400 + ALLEGIANCE FL (Gustafson, Plano, TX) on plant growth and yield. The treatments were evaluated for effect on plant growth and yield when applied on corn seed alone and in combination.</p>
+    <p id="p-00072-en" num="0072">A 10<sup>-7</sup> M aqueous suspension of purified nod factor was applied on corn seed (Jung variety 2445) at a rate of 4.54 ml/lb. CAPTAN 400 and ALLEGIANCE FL were each applied at their label rate.</p>
+    <p id="p-00073-en" num="0073">The soil type was Milford silty clay loam soil. The seeding rate was 32,000 seeds/acre at a 30" row width. Plot size was 15' x 50' with each treatment replicated four times.</p>
+    <p id="p-00074-en" num="0074">The results are presented in Table 10 below. Parameters evaluated include plant stand (number of plants per acre), plant vigor (relative assessment of plant growth on a scale of 1-9, with 1 = poor vigor and 9 = best vigor), and grain yield (bushels/acre). The nod factor treatment significantly improved stand and vigor and numerically improved yield relative to the control treatment, while the CAPTAN + ALLEGIANCE treatment showed significant increases across all three parameters. The combination of nod factor and CAPTAN + ALLEGIANCE significantly increased yield relative to both the nod factor and fungicide treatments. Stand, and vigor were improved numerically relative to the nod factor treatment alone and improved significantly relative to the fungicide treatment alone. <tables id="tables-00010-en" num="0010"><table frame="all"><title><b>Table 10.</b></title><tgroup cols="4"><colspec colnum="1" colname="col1" colwidth="49mm" /><colspec colnum="2" colname="col2" colwidth="28mm" /><colspec colnum="3" colname="col3" colwidth="36mm" /><colspec colnum="4" colname="col4" colwidth="31mm" /><thead><row><entry align="center" valign="top"><b>Treatment</b></entry><entry align="center" valign="top"><b>Grain yield bu/a</b></entry><entry align="center" valign="top"><b>V4 plant stand x1000</b></entry><entry align="center" valign="top"><b>V4 plant vigor 1-9</b></entry></row></thead><tbody><row><entry>Untreated control</entry><entry align="center">163.6</entry><entry align="center">29.2</entry><entry align="center">5.9</entry></row><row><entry>Nod factor</entry><entry align="center">167.9</entry><entry align="center">30.0</entry><entry align="center">6.9</entry></row><row><entry>Captan/Allegiance</entry><entry align="center">170.6</entry><entry align="center">30.5</entry><entry align="center">7.1</entry></row><row><entry>Captan/Allegiance + Nod Factor</entry><entry align="center">179.2</entry><entry align="center">30.8</entry><entry align="center">7.5</entry></row><row><entry><b>Probability %</b></entry><entry align="center">&lt;0.1</entry><entry align="center">&lt;0.1</entry><entry align="center">&lt;0.1</entry></row><row><entry><b>LSD 10%</b></entry><entry align="center">5.6</entry><entry align="center">0.5</entry><entry align="center">0.5</entry></row><row><entry><b>CV%</b></entry><entry align="center">2.6</entry><entry align="center">1.3</entry><entry align="center">6.2</entry></row></tbody></tgroup></table></tables></p>
+    <heading id="h-00012-en">
+      <b>Example 12: Corn field trial: Nod factor +Fungicide + Insecticide</b>
+    </heading>
+    <p id="p-00075-en" num="0075">A corn field trial was conducted to evaluate the effect of nod factors derived from <i>S. fredii</i> strain NGR-234 and the seed treatment fungicide and insecticide products MAXIM XL and CRUISER 5FS (Syngenta, Wilmington, DE) and insecticide product PONCHO 600 (Gustafson, Plano, TX) on plant growth and yield. The treatments were evaluated for effect on plant growth and yield when applied on corn seed alone and in combination.</p>
+    <p id="p-00076-en" num="0076">A 10<sup>-7</sup> M aqueous suspension of purified nod factor was applied on corn seed (Jung variety 2445) at a rate of 4.54 ml/lb. MAXIM XL, CRUISER 5FS, and PONCHO 600 were each applied at their label rate.</p>
+    <p id="p-00077-en" num="0077">The soil type was Milford silty clay loam soil. The seeding rate was 32,000 seeds/acre at a 30" row width. Plot size was 15' x 50' with each treatment replicated four times.</p>
+    <p id="p-00078-en" num="0078">The results are presented in Table 11 below. Parameters evaluated include plant stand (number of plants per acre), plant vigor (relative assessment of plant growth on a scale of 1-9, with 1 = poor vigor and 9 = best vigor), and grain yield (bushels/acre). The nod factor treatment significantly improved both stand and vigor and numerically improved yield relative to the control treatment, while the MAXIM treatment significantly increased all three parameters. The combined nod factor + fungicide treatment significantly increased yield compared to both the nod factor and fungicide treatments alone. Addition of the insecticides PONCHO and CRUISER produced significant increases in yield, stand, and vigor relative to the nod factor + fungicide treatment. <tables id="tables-00011-en" num="0011"><table frame="all"><title><b>Table 11.</b></title><tgroup cols="4"><colspec colnum="1" colname="col1" colwidth="56mm" /><colspec colnum="2" colname="col2" colwidth="28mm" /><colspec colnum="3" colname="col3" colwidth="36mm" /><colspec colnum="4" colname="col4" colwidth="26mm" /><thead><row><entry align="center" valign="top"><b>Treatment</b></entry><entry align="center" valign="top"><b>Grain yield bu/a</b></entry><entry align="center" valign="top"><b>V4 plant stand x1000</b></entry><entry align="center" valign="top"><b>V4 plant vigor</b></entry></row></thead><tbody><row><entry>Untreated control</entry><entry>213.9</entry><entry>30.8</entry><entry>6.6</entry></row><row><entry>Nod factor</entry><entry>217.4</entry><entry>31.3</entry><entry>7.4</entry></row><row><entry>Maxim XL</entry><entry>222.4</entry><entry>31.4</entry><entry>7.6</entry></row><row><entry>Maxim XL + Nod Factor</entry><entry>226.7</entry><entry>31.5</entry><entry>7.6</entry></row><row><entry>Maxim XL + Poncho 600 + Nod Factor</entry><entry>231.6</entry><entry>31.8</entry><entry>8.5</entry></row><row><entry>Maxim XL + Cruiser 5FS + Nod Factor</entry><entry>237.4</entry><entry>31.8</entry><entry>8.4</entry></row><row><entry><b>Probability %</b></entry><entry>&lt;0.1</entry><entry>&lt;0.1</entry><entry>&lt;0.1</entry></row><row><entry><b>LSD 10%</b></entry><entry>3.9</entry><entry>0.3</entry><entry>0.5</entry></row><row><entry><b>CV%</b></entry><entry>1.4</entry><entry>1.9</entry><entry>5.2</entry></row></tbody></tgroup></table></tables></p>
+    <heading id="h-00013-en">
+      <b>Example 13: Corn field trial: Nod factor +Fungicide</b>
+    </heading>
+    <p id="p-00079-en" num="0079">A corn field trial was conducted to evaluate the effect of nod factors derived from <i>S. fredii</i> strain NGR-234 and the seed treatment fungicide products CAPTAN 400 + ALLEGIANCE FL (Gustafson, Plano, TX) on plant growth and yield. The products were evaluated for effect on plant growth and yield when applied on corn seed alone and in combination.</p>
+    <p id="p-00080-en" num="0080">A 10<sup>-7</sup> M aqueous suspension of purified nod factor was applied on corn seed (Jung variety 2445) at a rate of 4.54 ml/lb. CAPTAN 400 and ALLEGIANCE FL were each applied at their label rate.</p>
+    <p id="p-00081-en" num="0081">The soil type was Milford silty clay loam soil. The seeding rate was 32,000 seeds/acre at a 30" row width. Plot size was 15' x 50' with each treatment replicated four times.</p>
+    <p id="p-00082-en" num="0082">The results are presented in Table 12 below. Parameters evaluated include plant stand (number of plants per acre), plant vigor (relative assessment of plant growth on a scale of 1-9, with 1 = poor vigor and 9 = best vigor), and grain yield (bushels/acre). The nod factor treatment significantly improved stand and vigor compared to the control treatment, while yield was improved numerically. The CAPTAN + ALLEGIANCE treatment produced significant increases across all three parameters. The combination of nod factor and CAPTAN + ALLEGIANCE significantly increased yield relative to both the nod factor and fungicide treatments. Stand and vigor were improved numerically relative to both the nod factor and fungicide treatments. <tables id="tables-00012-en" num="0012"><table frame="all"><title><b>Table 12.</b></title><tgroup cols="4"><colspec colnum="1" colname="col1" colwidth="49mm" /><colspec colnum="2" colname="col2" colwidth="28mm" /><colspec colnum="3" colname="col3" colwidth="36mm" /><colspec colnum="4" colname="col4" colwidth="31mm" /><thead><row><entry align="center" valign="top"><b>Treatment</b></entry><entry align="center" valign="top"><b>Grain yield bu/a</b></entry><entry align="center" valign="top"><b>V4 plant stand x1000</b></entry><entry align="center" valign="top"><b>V4 plant vigor 1-9</b></entry></row></thead><tbody><row><entry>Untreated control</entry><entry align="center">213.9</entry><entry align="center">30.8</entry><entry align="center">6.6</entry></row><row><entry>Nod factor</entry><entry align="center">217.4</entry><entry align="center">31.3</entry><entry align="center">7.4</entry></row><row><entry>Captan/Allegiance</entry><entry align="center">219.0</entry><entry align="center">31.3</entry><entry align="center">7.6</entry></row><row rowsep="0"><entry>Captan/Allegiance + Nod Factor</entry><entry align="center">225.5</entry><entry align="center">31.5</entry><entry align="center">7.9</entry></row><row><entry /><entry align="center">224.2</entry><entry align="center">31.4</entry><entry align="center">7.7</entry></row><row><entry><b>Probability %</b></entry><entry align="center">&lt;0.1</entry><entry align="center">&lt;0.1</entry><entry align="center">&lt;0.1</entry></row><row><entry><b>LSD 10%</b></entry><entry align="center">3.9</entry><entry align="center">0.3</entry><entry align="center">0.5</entry></row><row><entry><b>CV%</b></entry><entry align="center">1.4</entry><entry align="center">0.9</entry><entry align="center">5.2</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00083-en" num="0083">While the present invention has now been described and exemplified with some specificity, those skilled in the art will appreciate the various modifications, including variations, additions and omissions, that may be made in what has been described.</p>
+    <p id="p-00084-en" num="0084">All patents, publications and references cited herein are hereby fully incorporated by reference. In case of conflict between the present disclosure and incorporated patents, publications and references, the present disclosure should control.</p>
+    <p id="p-00085-en" num="0085">The invention is further described in the following paragraphs. <ol><li>1) A method of enhancing a plant characteristic, comprising treating a seed, seedling, root or plant, or combinations thereof, with: <ol><li>a) a plant inducer; and</li><li>b) a fungicide, an insecticide, or combinations thereof,</li></ol> thereby enhancing the plant characteristic.</li><li>2) The method of paragraph 1, wherein the plant characteristic comprises plant stand, growth, vigor or yield, or combinations thereof.</li><li>3) The method of paragraph 1, wherein a seed, seedling, root or plant is treated with a plant inducer, a fungicide and an insecticide.</li><li>4) The method of paragraph 1 wherein the plant inducer comprises a nod factor.</li><li>5) The method of paragraph 4, wherein the nod factor is derived from <i>Bradyrhizobium japonicum, Sinorhizobium fredii, Sinorhizobium meliloti, Bradyrhizobium sp.</i> (Arachis), and <i>Rhizobium leguminosarum</i> biovar <i>phaseoli, viceae,</i> or <i>trifolii.</i></li><li>6) The method of paragraph 1 wherein the fungicide exhibits activity against <i>Phytophthora, Rhizoctonia, Fusarium, Pythium, Phomopsis, Sclerotinia,</i> or Phakopsora, or combinations thereof.</li><li>7) The method of paragraph 1, wherein the fungicide comprises mefenoxam, fludioxonil, azoxystrobin, pentachloronitrobenzimidazole, captan or metalaxyl, or combinations thereof.</li><li>8) The method of paragraph 1, wherein the insecticide exhibits activity against wireworms, cutworms, grubs, corn rootworms, seed corn maggots, flea beetles, chinch bugs, aphids, leaf beetles, stink bugs, or combinations thereof.</li><li>9) The method of paragraph 1, wherein the insecticide comprises imidacloprid, thiamethoxam, or combinations thereof.</li><li>10) The method of paragraph 1, further comprising treating the seeds, seedlings, roots or plants, or combinations thereof, with an inoculant composition.</li><li>11) The method of paragraph 10, wherein the inoculant composition comprises a rhizobial species.</li><li>12) The method of paragraph 11, wherein the inoculant composition comprises Bradyrhizobium japonicum, Bradyrhizobium parasponia, Sinorhizobium meliloti, Rhizobium leguminosarum biovars phaseoli, viceae, and trifolii, Rhizobium lupini, or Bradyrhizobium sp. (Arachis), or combinations thereof.</li><li>13) The method of paragraph 1, wherein the plant is a legume.</li><li>14) The method of paragraph 13, wherein the legume comprises soybean, alfalfa, peanut, pea, lentil, bean, or clover.</li><li>15) The method of paragraph 1, wherein the plant is a non-legume.</li><li>16) The method of paragraph 15, wherein the non-legume comprises corn, cereals, cotton, canola, potatoes, cucumbers, beets, lettuce or cantaloupe.</li><li>17) A composition comprising: <ol><li>a) a plant inducer; and</li><li>b) a fungicide, an insecticide, or mixtures thereof.</li></ol></li><li>18) A composition comprising a plant inducer, a fungicide and an insecticide in an agriculturally suitable carrier.</li><li>19) The composition of paragraph 17, wherein the fungicide exhibits activity against <i>Phytophthora, Rhizoctonia, Fusarium, Pythium, Phomopsis, Sclerotinia,</i> or <i>Phakopsora,</i> or combinations thereof.</li><li>20) The composition of paragraph 17, wherein the fungicide comprises mefenoxam, fludioxonil, azoxystrobin, pentachloronitrobenzimidazole, captan or metalaxyl, or combinations thereof.</li><li>21) The composition of paragraph 17, wherein the insecticide exhibits activity against wireworms, cutworms, grubs, corn rootworms, seed corn maggots, flea beches, chinch bugs, aphids, leaf beetles, stink bugs, or combinations thereof.</li><li>22) The composition of paragraph 17, wherein the insecticide comprises imidacloprid, thiamethoxam, or combinations thereof.</li><li>23) The composition of paragraph 17 wherein the plant inducer comprises a nod factor.</li><li>24) The composition of paragraph 23, wherein the nod factor is derived from <i>Bradyrhizobium japonicum, Sinorhizobium fredii, Sinorhizobium meliloti, Bradyrhizobium sp.</i> (Arachis), and <i>Rhizobium leguminosarum biovar phaseoli, viceae,</i> or <i>trifolii.</i></li><li>25) The composition of paragraph 17, further comprising an inoculant composition.</li><li>26) The composition of paragraph 25, wherein the inoculant composition comprises at least one rhizobial species.</li><li>27) The composition of paragraph 26, wherein the rhizobial species comprises <i>Bradyrhizobium japonicum, Bradyrhizobium parasponia, Sinorhizobium meliloti, Rhizobium leguminosarum</i> biovars <i>phaseoli, viceae,</i> and <i>trifolii, Rhizobium lupini,</i> or <i>Bradyrhizobium sp. (Arachis),</i> or combinations thereof.</li><li>28) A method of enhancing grain yield comprising: <ol><li>a) treating legume or non-legume seeds, seedlings, roots or plants with at least one nod factor in an agriculturally suitable carrier; and</li><li>b) treating the seeds, seedlings roots or plants with an insecticide, a fungicide or combinations thereof, thereby enhancing grain yield.</li></ol></li></ol></p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151111">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>A method of enhancing plant stand, growth, vigor or yield, comprising treating a seed, seedling, root or plant, or combinations thereof, with a nod factor and a fungicide that comprises mefenoxam, fludioxonil, captan, pentachloronitrobenzimidazole, thiabendazole and/or metalaxyl.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The method of claim 1, wherein the fungicide comprises mefenoxam, fludioxonil and/or metalaxyl.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The method of any one of claims 1 to 2, wherein the method further comprises treating the seed, seedling, root or plant, or combination thereof, with an insecticide.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>The method of claim 3, wherein the insecticide comprises imidacloprid, thiamethoxam and/or clothianidin.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>The method of any one of claims 1 to 4, wherein the method further comprises treating the seed, seedling, root or plant, or combination thereof, with one or more microorganisms.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>The method of claim 5, wherein the seed, seedling, root or plant, or combination thereof, is treated with one or more strains of Bradyrhizobium japonicum, one or more strains of Bradyrhizobium parasomnia, one or more strains of Sinorhizobium meliloti, one or more strains of Rhizobium leguminosarum biovars phaseoli, viceae, trifolii, one or more strains of Rhizobium lupine, and/or one or more strains of Bradyrhizobium sp. (Arachis).</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>The method of any one of claims 1 to 6, wherein the plant is a legume.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>The method of any one of claims 1 to 6, wherein the plant is an alfalfa, bean, clover, lentil, pea, peanut or soybean plant.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>The method of any one of claims 1 to 6, wherein the plant is a non-legume.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>The method of any one of claims 1 to 6, wherein the plant is a beet, canola, cantaloupe, cereal, corn, cotton, cucumber, lettuce or potato plant.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en" independent="true">
+      <claim-text>A composition for enhancing plant stand, growth, vigor or yield comprising a nod factor and a fungicide, wherein the fungicide comprises mefenoxam, fludioxonil, captan, pentachloronitrobenzimidazole, thiabendazole and/or metalaxyl.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>The composition of claim 11, wherein the fungicide comprises mefenoxam, fludioxonil and/or metalaxyl.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>The composition of any one of claims 11 to 12, wherein the composition further comprises an insecticide.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>The composition of claim 13, wherein the insecticide comprises imidacloprid, thiamethoxam and/or clothianidin.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>The composition of any one of claims 11 to 14, wherein the composition further comprises one or more microorganisms.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>The composition of any one of claims 11 to 15, wherein the composition further comprises one or more strains of Bradyrhizobium japonicum, one or more strains of Bradyrhizobium parasomnia, one or more strains of Sinorhizobium meliloti, one or more strains of Rhizobium leguminosarum biovars phaseoli, viceae, trifolii, one or more strains of Rhizobium lupine, and/or one or more strains of Bradyrhizobium sp. (Arachis).</claim-text>
+    </claim>
+  </claims>
+  <image file="EP2941957A1.PDF" type="pdf" size="227342" pages="17" />
+</lexisnexis-patent-document>

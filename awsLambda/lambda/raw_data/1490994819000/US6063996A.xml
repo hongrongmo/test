@@ -1,0 +1,3256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2017 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20170321" file="US6063996A.xml" produced-by="LexisNexis-Univentio" lang="eng" date-changed="20170321" time-changed="134135">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Grant" publ-desc="Patent">
+      <document-id id="39296542">
+        <country>US</country>
+        <doc-number>6063996</doc-number>
+        <kind>A</kind>
+        <date>20000516</date>
+      </document-id>
+      <document-id data-format="original">
+        <doc-number>6063996</doc-number>
+        <kind>A</kind>
+      </document-id>
+      <document-id data-format="docdb" id="296139494">
+        <doc-number>6063996</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>US6063996</doc-number>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id id="35637072">
+        <country>US</country>
+        <doc-number>08890334</doc-number>
+        <date>19970709</date>
+      </document-id>
+      <document-id data-format="original">
+        <country>US</country>
+        <doc-number>08890334</doc-number>
+        <date>19970709</date>
+      </document-id>
+      <document-id data-format="docdb" id="54007064">
+        <doc-number>89033497</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>US19970890334</doc-number>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20090330">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>08187199</doc-number>
+        <date>19960717</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>JP</country>
+        <doc-number>18719996</doc-number>
+        <date>19960717</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>8-187199</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>JP19960187199</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20090330">
+      <unexamined-printed-without-grant>
+        <date>20000516</date>
+      </unexamined-printed-without-grant>
+      <printed-with-grant>
+        <date>20000516</date>
+      </printed-with-grant>
+    </dates-of-public-availability>
+    <classification-ipc date-changed="20170321">
+      <main-classification>
+        <text> 7H 01L  31/048  A</text>
+        <edition>7</edition>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>31</main-group>
+        <subgroup>048</subgroup>
+        <qualifying-character>A</qualifying-character>
+      </main-classification>
+      <further-classification sequence="1">
+        <text> 7H 01L  31/052  B</text>
+        <edition>7</edition>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>31</main-group>
+        <subgroup>052</subgroup>
+        <qualifying-character>B</qualifying-character>
+      </further-classification>
+      <further-classification sequence="2">
+        <text> 7H 01L  31/058  B</text>
+        <edition>7</edition>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>31</main-group>
+        <subgroup>058</subgroup>
+        <qualifying-character>B</qualifying-character>
+      </further-classification>
+    </classification-ipc>
+    <classifications-ipcr date-changed="20170321">
+      <classification-ipcr sequence="1">
+        <text>F24J   2/00        20060101AFI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>24</class>
+        <subclass>J</subclass>
+        <main-group>2</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>F24J   2/04        20060101A I20060722RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>24</class>
+        <subclass>J</subclass>
+        <main-group>2</main-group>
+        <subgroup>04</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20060722</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>F24J   2/52        20060101A N20080531RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>F</section>
+        <class>24</class>
+        <subclass>J</subclass>
+        <main-group>2</main-group>
+        <subgroup>52</subgroup>
+        <classification-value>N</classification-value>
+        <action-date>
+          <date>20080531</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>H01L  31/042       20060101ALI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>31</main-group>
+        <subgroup>042</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>H01L  31/048       20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>31</main-group>
+        <subgroup>048</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>H01L  31/052       20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>31</main-group>
+        <subgroup>052</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20170321">
+      <classification-cpc sequence="1">
+        <text>F24J   2/5235      20130101 FI20130822BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>24</class>
+        <subclass>J</subclass>
+        <main-group>2</main-group>
+        <subgroup>5235</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130822</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>F24J   2/045       20130101 LA20130822BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>24</class>
+        <subclass>J</subclass>
+        <main-group>2</main-group>
+        <subgroup>045</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130822</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>H01L  31/048       20130101 LI20170313BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>31</main-group>
+        <subgroup>048</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20170313</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>H01L  31/0504      20130101 LI20150922BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>31</main-group>
+        <subgroup>0504</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150922</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>H02S  20/23        20141201 LI20141202BHEP        </text>
+        <cpc-version-indicator>
+          <date>20141201</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>02</class>
+        <subclass>S</subclass>
+        <main-group>20</main-group>
+        <subgroup>23</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141202</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>H02S  40/36        20141201 LI20150922BHEP        </text>
+        <cpc-version-indicator>
+          <date>20141201</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>02</class>
+        <subclass>S</subclass>
+        <main-group>40</main-group>
+        <subgroup>36</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150922</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>H02S  40/44        20141201 LI20150922BHEP        </text>
+        <cpc-version-indicator>
+          <date>20141201</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>02</class>
+        <subclass>S</subclass>
+        <main-group>40</main-group>
+        <subgroup>44</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150922</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>Y02B  10/12        20130101 LA20130822BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>10</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130822</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>Y02B  10/20        20130101 LA20130822BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>10</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130822</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>Y02B  10/70        20130101 LA20160530BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>10</main-group>
+        <subgroup>70</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20160530</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>Y02E  10/47        20130101 LA20130822BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>E</subclass>
+        <main-group>10</main-group>
+        <subgroup>47</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130822</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>Y02E  10/52        20130101 LA20130822BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>E</subclass>
+        <main-group>10</main-group>
+        <subgroup>52</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130822</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>Y02E  10/60        20130101 LA20160120BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>E</subclass>
+        <main-group>10</main-group>
+        <subgroup>60</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20160120</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>Y10S 136/291       20130101 LA20130518BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>S</subclass>
+        <main-group>136</main-group>
+        <subgroup>291</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130518</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <classification-national date-changed="20170321">
+      <country>US</country>
+      <main-classification>
+        <text>136/246</text>
+        <class>136</class>
+        <subclass>246</subclass>
+      </main-classification>
+      <further-classification sequence="1">
+        <text>52/173.3</text>
+        <class>52</class>
+        <subclass>173.3</subclass>
+      </further-classification>
+      <further-classification sequence="2">
+        <text>126/621</text>
+        <class>126</class>
+        <subclass>621</subclass>
+      </further-classification>
+      <further-classification sequence="3">
+        <text>126/622</text>
+        <class>126</class>
+        <subclass>622</subclass>
+      </further-classification>
+      <further-classification sequence="4">
+        <text>126/623</text>
+        <class>126</class>
+        <subclass>623</subclass>
+      </further-classification>
+      <further-classification sequence="5">
+        <text>126/628</text>
+        <class>126</class>
+        <subclass>628</subclass>
+      </further-classification>
+      <further-classification sequence="6">
+        <text>126/629</text>
+        <class>126</class>
+        <subclass>629</subclass>
+      </further-classification>
+      <further-classification sequence="7">
+        <text>126/634</text>
+        <class>126</class>
+        <subclass>634</subclass>
+      </further-classification>
+      <further-classification sequence="8">
+        <text>126/652</text>
+        <class>126</class>
+        <subclass>652</subclass>
+      </further-classification>
+      <further-classification sequence="9">
+        <text>136/244</text>
+        <class>136</class>
+        <subclass>244</subclass>
+      </further-classification>
+      <further-classification sequence="10">
+        <text>136/248</text>
+        <class>136</class>
+        <subclass>248</subclass>
+      </further-classification>
+      <further-classification sequence="11">
+        <text>136/251</text>
+        <class>136</class>
+        <subclass>251</subclass>
+      </further-classification>
+      <further-classification sequence="12">
+        <text>136/256</text>
+        <class>136</class>
+        <subclass>256</subclass>
+      </further-classification>
+      <further-classification sequence="13">
+        <text>136/258</text>
+        <class>136</class>
+        <subclass>258</subclass>
+      </further-classification>
+      <further-classification sequence="14">
+        <text>136/259</text>
+        <class>136</class>
+        <subclass>259</subclass>
+      </further-classification>
+      <further-classification sequence="15">
+        <text>136/291</text>
+        <class>136</class>
+        <subclass>291</subclass>
+      </further-classification>
+      <further-classification sequence="16">
+        <text>257/51</text>
+        <class>257</class>
+        <subclass>51</subclass>
+      </further-classification>
+      <further-classification sequence="17">
+        <text>257/52</text>
+        <class>257</class>
+        <subclass>52</subclass>
+      </further-classification>
+      <further-classification sequence="18">
+        <text>257/434</text>
+        <class>257</class>
+        <subclass>434</subclass>
+      </further-classification>
+      <further-classification sequence="19">
+        <text>257/483</text>
+        <class>257</class>
+        <subclass>483</subclass>
+      </further-classification>
+    </classification-national>
+    <classifications-ecla date-changed="20170321">
+      <classification-ecla sequence="1" classification-scheme="EC" country="EP">
+        <text>H01L 31/052</text>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>31</main-group>
+        <subgroup>052</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="2" classification-scheme="EC" country="EP">
+        <text>F24J  2/52A8D</text>
+        <section>F</section>
+        <class>24</class>
+        <subclass>J</subclass>
+        <main-group>2</main-group>
+        <subgroup>52</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">A  </additional-subgroup>
+          <additional-subgroup sequence="2">8  </additional-subgroup>
+          <additional-subgroup sequence="3">D  </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+      <classification-ecla sequence="3" classification-scheme="EC" country="EP">
+        <text>H01L 31/048</text>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>31</main-group>
+        <subgroup>048</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="4" classification-scheme="EC" country="EP">
+        <text>H01L 31/048B</text>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>31</main-group>
+        <subgroup>048</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">B  </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+      <classification-ecla sequence="1" classification-scheme="ICO" country="EP">
+        <text>R24J  2:04B12</text>
+        <section>R</section>
+        <class>24</class>
+        <subclass>J</subclass>
+        <main-group>2</main-group>
+        <subgroup>04</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">B  </additional-subgroup>
+          <additional-subgroup sequence="2">12 </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+      <classification-ecla sequence="2" classification-scheme="ICO" country="EP">
+        <text>Y02B 10:12</text>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>10</main-group>
+        <subgroup>12</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="3" classification-scheme="ICO" country="EP">
+        <text>Y02B 10:20</text>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>B</subclass>
+        <main-group>10</main-group>
+        <subgroup>20</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="4" classification-scheme="ICO" country="EP">
+        <text>Y02E 10:47</text>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>E</subclass>
+        <main-group>10</main-group>
+        <subgroup>47</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="5" classification-scheme="ICO" country="EP">
+        <text>Y02E 10:50</text>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>E</subclass>
+        <main-group>10</main-group>
+        <subgroup>50</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="6" classification-scheme="ICO" country="EP">
+        <text>Y02E 10:52</text>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>E</subclass>
+        <main-group>10</main-group>
+        <subgroup>52</subgroup>
+      </classification-ecla>
+    </classifications-ecla>
+    <field-of-search date-changed="20070520">
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>136/251</text>
+          <class>136</class>
+          <subclass>251</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>136/246</text>
+          <class>136</class>
+          <subclass>246</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>136/244</text>
+          <class>136</class>
+          <subclass>244</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>136/256</text>
+          <class>136</class>
+          <subclass>256</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>136/259</text>
+          <class>136</class>
+          <subclass>259</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>136/291</text>
+          <class>136</class>
+          <subclass>291</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>136/248</text>
+          <class>136</class>
+          <subclass>248</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>136/258</text>
+          <class>136</class>
+          <subclass>258</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>126/621</text>
+          <class>126</class>
+          <subclass>621</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>126/622</text>
+          <class>126</class>
+          <subclass>622</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>126/623</text>
+          <class>126</class>
+          <subclass>623</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>126/628</text>
+          <class>126</class>
+          <subclass>628</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>126/629</text>
+          <class>126</class>
+          <subclass>629</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>126/634</text>
+          <class>126</class>
+          <subclass>634</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>126/652</text>
+          <class>126</class>
+          <subclass>652</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>257/433</text>
+          <class>257</class>
+          <subclass>433</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>257/434</text>
+          <class>257</class>
+          <subclass>434</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>257/51</text>
+          <class>257</class>
+          <subclass>51</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>257/52</text>
+          <class>257</class>
+          <subclass>52</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>52/173.3</text>
+          <class>52</class>
+          <subclass>173.3</subclass>
+        </main-classification>
+      </classification-national>
+    </field-of-search>
+    <number-of-claims calculated="yes">13</number-of-claims>
+    <invention-title id="title_eng" date-changed="20070520" lang="eng" format="original">Solar cell module and hybrid roof panel using the same</invention-title>
+    <references-cited date-changed="20170321">
+      <patent-citations name="patcit" date-changed="20160607" />
+      <non-patent-citations name="nplcit" date-changed="20160607" />
+      <forward-citations name="fwdcit" date-changed="20170321" />
+      <citation>
+        <patcit num="1" dnum="US4095997A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4095997</doc-number>
+            <kind>A</kind>
+            <name>GRIFFITHS KENNETH F</name>
+            <date>19780620</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>4095997</doc-number>
+            <kind>A</kind>
+            <date>19780620</date>
+          </document-id>
+          <application-date>
+            <date>19761007</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US4860509A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4860509</doc-number>
+            <kind>A</kind>
+            <name>LAALY HESHMAT O [US], et al</name>
+            <date>19890829</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>4860509</doc-number>
+            <kind>A</kind>
+            <date>19890829</date>
+          </document-id>
+          <application-date>
+            <date>19870518</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US5397401A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5397401</doc-number>
+            <kind>A</kind>
+            <name>TOMA HITOSHI [JP], et al</name>
+            <date>19950314</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>5397401</doc-number>
+            <kind>A</kind>
+            <date>19950314</date>
+          </document-id>
+          <application-date>
+            <date>19930628</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="US5589006A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5589006</doc-number>
+            <kind>A</kind>
+            <name>ITOYAMA SHIGENORI [JP], et al</name>
+            <date>19961231</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>5589006</doc-number>
+            <kind>A</kind>
+            <date>19961231</date>
+          </document-id>
+          <application-date>
+            <date>19941125</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="5" dnum="US5651837A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5651837</doc-number>
+            <kind>A</kind>
+            <name>OHTSUKA TAKASHI [JP], et al</name>
+            <date>19970729</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>5651837</doc-number>
+            <kind>A</kind>
+            <date>19970729</date>
+          </document-id>
+          <application-date>
+            <date>19951017</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="6" dnum="EP0625802A2" dnum-type="publication number">
+          <document-id>
+            <country>EP</country>
+            <doc-number>625802</doc-number>
+            <kind>A2</kind>
+            <name>CANON KK [JP]</name>
+            <date>19941123</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>EP</country>
+            <doc-number>0625802</doc-number>
+            <kind>A2</kind>
+            <date>19941123</date>
+          </document-id>
+          <application-date>
+            <date>19940516</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="8" dnum="JPS61287278A" dnum-type="publication number">
+          <document-id>
+            <country>JP</country>
+            <doc-number>S61287278</doc-number>
+            <kind>A</kind>
+            <name>TAKENAKA KOMUTEN CO, et al</name>
+            <date>19861217</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>JP</country>
+            <doc-number>S61287278</doc-number>
+            <kind>A</kind>
+            <date>19861217</date>
+          </document-id>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="9" dnum="JPH04192475A" dnum-type="publication number">
+          <document-id>
+            <country>JP</country>
+            <doc-number>H04192475</doc-number>
+            <kind>A</kind>
+            <name>CANON KK</name>
+            <date>19920710</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>JP</country>
+            <doc-number>H04192475</doc-number>
+            <kind>A</kind>
+            <date>19920710</date>
+          </document-id>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="10" dnum="JPH06140656A" dnum-type="publication number">
+          <document-id>
+            <country>JP</country>
+            <doc-number>H06140656</doc-number>
+            <kind>A</kind>
+            <name>CANON KK</name>
+            <date>19940520</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>JP</country>
+            <doc-number>H06140656</doc-number>
+            <kind>A</kind>
+            <date>19940520</date>
+          </document-id>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="11" dnum="JPH07176776A" dnum-type="publication number">
+          <document-id>
+            <country>JP</country>
+            <doc-number>H07176776</doc-number>
+            <kind>A</kind>
+            <name>CANON KK</name>
+            <date>19950714</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>JP</country>
+            <doc-number>H07176776</doc-number>
+            <kind>A</kind>
+            <date>19950714</date>
+          </document-id>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="12" dnum="JPH07280358A" dnum-type="publication number">
+          <document-id>
+            <country>JP</country>
+            <doc-number>H07280358</doc-number>
+            <kind>A</kind>
+            <name>O M KENKYUSHO KK, et al</name>
+            <date>19951027</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>JP</country>
+            <doc-number>H07280358</doc-number>
+            <kind>A</kind>
+            <date>19951027</date>
+          </document-id>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="13" dnum="JP2881496B2" dnum-type="publication number">
+          <document-id>
+            <country>JP</country>
+            <doc-number>2881496</doc-number>
+            <kind>B2</kind>
+            <date>19990412</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>JP</country>
+            <doc-number>2881496</doc-number>
+            <kind>B2</kind>
+            <date>19990412</date>
+          </document-id>
+          <application-date>
+            <date>19901127</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <nplcit num="1">
+          <text>Patent Abstracts of Japan, vol. 018, No. 442 (E 1593), Aug. 17, 1994 (JP 06 140656).</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="2">
+          <text>Patent Abstracts of Japan, vol. 011, No. 148 (E 506), May 14, 1987 (JP 61 287278).</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="3">
+          <text>Patent Abstracts of Japan, vol. 095, No. 010, Nov. 30, 1995 (JP 07 176776).</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <fwdcit num="1">
+          <document-id>
+            <country>US</country>
+            <doc-number>7557290</doc-number>
+            <kind>B2</kind>
+            <date>20090707</date>
+          </document-id>
+          <application-date>
+            <date>20041112</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="2">
+          <document-id>
+            <country>US</country>
+            <doc-number>7661422</doc-number>
+            <kind>B2</kind>
+            <date>20100216</date>
+          </document-id>
+          <application-date>
+            <date>20071226</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="3">
+          <document-id>
+            <country>US</country>
+            <doc-number>7681363</doc-number>
+            <kind>B2</kind>
+            <date>20100323</date>
+          </document-id>
+          <application-date>
+            <date>20060803</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="4">
+          <document-id>
+            <country>US</country>
+            <doc-number>7238879</doc-number>
+            <kind>B2</kind>
+            <date>20070703</date>
+          </document-id>
+          <application-date>
+            <date>20041122</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="5">
+          <document-id>
+            <country>US</country>
+            <doc-number>7246468</doc-number>
+            <kind>B2</kind>
+            <date>20070724</date>
+          </document-id>
+          <application-date>
+            <date>20030321</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="6">
+          <document-id>
+            <country>US</country>
+            <doc-number>7102074</doc-number>
+            <kind>B2</kind>
+            <date>20060905</date>
+          </document-id>
+          <application-date>
+            <date>20030910</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="7">
+          <document-id>
+            <country>US</country>
+            <doc-number>6928775</doc-number>
+            <kind>B2</kind>
+            <date>20050816</date>
+          </document-id>
+          <application-date>
+            <date>20020816</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="8">
+          <document-id>
+            <country>US</country>
+            <doc-number>6951079</doc-number>
+            <kind>B2</kind>
+            <date>20051004</date>
+          </document-id>
+          <application-date>
+            <date>20020409</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="9">
+          <document-id>
+            <country>US</country>
+            <doc-number>6966184</doc-number>
+            <kind>B2</kind>
+            <date>20051122</date>
+          </document-id>
+          <application-date>
+            <date>20031121</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="10">
+          <document-id>
+            <country>US</country>
+            <doc-number>6854218</doc-number>
+            <kind>B2</kind>
+            <date>20050215</date>
+          </document-id>
+          <application-date>
+            <date>20020409</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="11">
+          <document-id>
+            <country>US</country>
+            <doc-number>6870087</doc-number>
+            <kind>B1</kind>
+            <date>20050322</date>
+          </document-id>
+          <application-date>
+            <date>20020916</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="12">
+          <document-id>
+            <country>US</country>
+            <doc-number>6800801</doc-number>
+            <kind>B2</kind>
+            <date>20041005</date>
+          </document-id>
+          <application-date>
+            <date>19990520</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="13">
+          <document-id>
+            <country>US</country>
+            <doc-number>6730841</doc-number>
+            <kind>B2</kind>
+            <date>20040504</date>
+          </document-id>
+          <application-date>
+            <date>20020312</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="14">
+          <document-id>
+            <country>US</country>
+            <doc-number>6606830</doc-number>
+            <kind>B2</kind>
+            <date>20030819</date>
+          </document-id>
+          <application-date>
+            <date>19981127</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="15">
+          <document-id>
+            <country>US</country>
+            <doc-number>6291761</doc-number>
+            <kind>B1</kind>
+            <date>20010918</date>
+          </document-id>
+          <application-date>
+            <date>19991223</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="16">
+          <document-id>
+            <country>US</country>
+            <doc-number>7854095</doc-number>
+            <kind>B2</kind>
+            <date>20101221</date>
+          </document-id>
+          <application-date>
+            <date>20090710</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="17">
+          <document-id>
+            <country>US</country>
+            <doc-number>7915518</doc-number>
+            <kind>B2</kind>
+            <date>20110329</date>
+          </document-id>
+          <application-date>
+            <date>20050413</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="18">
+          <document-id>
+            <country>US</country>
+            <doc-number>7946182</doc-number>
+            <kind>B2</kind>
+            <date>20110524</date>
+          </document-id>
+          <application-date>
+            <date>20080507</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="19">
+          <document-id>
+            <country>US</country>
+            <doc-number>7951641</doc-number>
+            <kind>B2</kind>
+            <date>20110531</date>
+          </document-id>
+          <application-date>
+            <date>20100820</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="20">
+          <document-id>
+            <country>US</country>
+            <doc-number>7997754</doc-number>
+            <kind>B2</kind>
+            <date>20110816</date>
+          </document-id>
+          <application-date>
+            <date>20090526</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="21">
+          <document-id>
+            <country>US</country>
+            <doc-number>8156697</doc-number>
+            <kind>B2</kind>
+            <date>20120417</date>
+          </document-id>
+          <application-date>
+            <date>20091015</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="22">
+          <document-id>
+            <country>US</country>
+            <doc-number>8191320</doc-number>
+            <kind>B2</kind>
+            <date>20120605</date>
+          </document-id>
+          <application-date>
+            <date>20091015</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="23">
+          <document-id>
+            <country>US</country>
+            <doc-number>8236603</doc-number>
+            <kind>B1</kind>
+            <date>20120807</date>
+          </document-id>
+          <application-date>
+            <date>20090904</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="24">
+          <document-id>
+            <country>US</country>
+            <doc-number>8266848</doc-number>
+            <kind>B2</kind>
+            <date>20120918</date>
+          </document-id>
+          <application-date>
+            <date>20120223</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="25">
+          <document-id>
+            <country>US</country>
+            <doc-number>8397448</doc-number>
+            <kind>B2</kind>
+            <date>20130319</date>
+          </document-id>
+          <application-date>
+            <date>20120229</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="26">
+          <document-id>
+            <country>US</country>
+            <doc-number>8415187</doc-number>
+            <kind>B2</kind>
+            <date>20130409</date>
+          </document-id>
+          <application-date>
+            <date>20100128</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="27">
+          <document-id>
+            <country>US</country>
+            <doc-number>8418415</doc-number>
+            <kind>B2</kind>
+            <date>20130416</date>
+          </document-id>
+          <application-date>
+            <date>20081110</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="28">
+          <document-id>
+            <country>US</country>
+            <doc-number>8418418</doc-number>
+            <kind>B2</kind>
+            <date>20130416</date>
+          </document-id>
+          <application-date>
+            <date>20100409</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="29">
+          <document-id>
+            <country>US</country>
+            <doc-number>8519257</doc-number>
+            <kind>B2</kind>
+            <date>20130827</date>
+          </document-id>
+          <application-date>
+            <date>20100204</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="30">
+          <document-id>
+            <country>US</country>
+            <doc-number>8551803</doc-number>
+            <kind>B2</kind>
+            <date>20131008</date>
+          </document-id>
+          <application-date>
+            <date>20110214</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="31">
+          <document-id>
+            <country>US</country>
+            <doc-number>8603838</doc-number>
+            <kind>B2</kind>
+            <date>20131210</date>
+          </document-id>
+          <application-date>
+            <date>20090421</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="32">
+          <document-id>
+            <country>US</country>
+            <doc-number>8613133</doc-number>
+            <kind>B2</kind>
+            <date>20131224</date>
+          </document-id>
+          <application-date>
+            <date>20110426</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="33">
+          <document-id>
+            <country>US</country>
+            <doc-number>8615939</doc-number>
+            <kind>B2</kind>
+            <date>20131231</date>
+          </document-id>
+          <application-date>
+            <date>20111011</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="34">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2011025716</doc-number>
+            <kind>A1</kind>
+            <date>20110303</date>
+          </document-id>
+          <application-date>
+            <date>20100820</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="35">
+          <document-id>
+            <country>US</country>
+            <doc-number>8739478</doc-number>
+            <kind>B1</kind>
+            <date>20140603</date>
+          </document-id>
+          <application-date>
+            <date>20110930</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="36">
+          <document-id>
+            <country>US</country>
+            <doc-number>8875450</doc-number>
+            <kind>B2</kind>
+            <date>20141104</date>
+          </document-id>
+          <application-date>
+            <date>20130321</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="37">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2012021872</doc-number>
+            <kind>A2</kind>
+            <date>20120216</date>
+          </document-id>
+          <application-date>
+            <date>20110812</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="38">
+          <document-id>
+            <country>US</country>
+            <doc-number>8925260</doc-number>
+            <kind>B2</kind>
+            <date>20150106</date>
+          </document-id>
+          <application-date>
+            <date>20131127</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="39">
+          <document-id>
+            <country>US</country>
+            <doc-number>8927392</doc-number>
+            <kind>B2</kind>
+            <date>20150106</date>
+          </document-id>
+          <application-date>
+            <date>20081031</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="40">
+          <document-id>
+            <country>US</country>
+            <doc-number>8940997</doc-number>
+            <kind>B2</kind>
+            <date>20150127</date>
+          </document-id>
+          <application-date>
+            <date>20130329</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="41">
+          <document-id>
+            <country>US</country>
+            <doc-number>8981202</doc-number>
+            <kind>B2</kind>
+            <date>20150317</date>
+          </document-id>
+          <application-date>
+            <date>20120507</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="42">
+          <document-id>
+            <country>US</country>
+            <doc-number>8978322</doc-number>
+            <kind>B2</kind>
+            <date>20150317</date>
+          </document-id>
+          <application-date>
+            <date>20100920</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="43">
+          <document-id>
+            <country>US</country>
+            <doc-number>8991116</doc-number>
+            <kind>B2</kind>
+            <date>20150331</date>
+          </document-id>
+          <application-date>
+            <date>20120510</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="44">
+          <document-id>
+            <country>US</country>
+            <doc-number>9027288</doc-number>
+            <kind>B2</kind>
+            <date>20150512</date>
+          </document-id>
+          <application-date>
+            <date>20141022</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="45">
+          <document-id>
+            <country>US</country>
+            <doc-number>9027289</doc-number>
+            <kind>B1</kind>
+            <date>20150512</date>
+          </document-id>
+          <application-date>
+            <date>20120730</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="46">
+          <document-id>
+            <country>US</country>
+            <doc-number>9038329</doc-number>
+            <kind>B2</kind>
+            <date>20150526</date>
+          </document-id>
+          <application-date>
+            <date>20121011</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="47">
+          <document-id>
+            <country>US</country>
+            <doc-number>20020108320</doc-number>
+            <kind>A1</kind>
+            <date>20020815</date>
+          </document-id>
+          <application-date>
+            <date>20020409</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="48">
+          <document-id>
+            <country>US</country>
+            <doc-number>20020129577</doc-number>
+            <kind>A1</kind>
+            <date>20020919</date>
+          </document-id>
+          <application-date>
+            <date>20020409</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="49">
+          <document-id>
+            <country>CN</country>
+            <doc-number>102484143</doc-number>
+            <kind>B</kind>
+            <date>20150603</date>
+          </document-id>
+          <application-date>
+            <date>20100820</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="50">
+          <document-id>
+            <country>US</country>
+            <doc-number>20030177703</doc-number>
+            <kind>A1</kind>
+            <date>20030925</date>
+          </document-id>
+          <application-date>
+            <date>20030321</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="51">
+          <document-id>
+            <country>US</country>
+            <doc-number>20030177704</doc-number>
+            <kind>A1</kind>
+            <date>20030925</date>
+          </document-id>
+          <application-date>
+            <date>20030321</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="52">
+          <document-id>
+            <country>US</country>
+            <doc-number>20030177705</doc-number>
+            <kind>A1</kind>
+            <date>20030925</date>
+          </document-id>
+          <application-date>
+            <date>20030321</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="53">
+          <document-id>
+            <country>US</country>
+            <doc-number>20040031219</doc-number>
+            <kind>A1</kind>
+            <date>20040219</date>
+          </document-id>
+          <application-date>
+            <date>20020816</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="54">
+          <document-id>
+            <country>US</country>
+            <doc-number>20040159102</doc-number>
+            <kind>A1</kind>
+            <date>20040819</date>
+          </document-id>
+          <application-date>
+            <date>20031121</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="55">
+          <document-id>
+            <country>US</country>
+            <doc-number>9077280</doc-number>
+            <kind>B2</kind>
+            <date>20150707</date>
+          </document-id>
+          <application-date>
+            <date>20141024</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="56">
+          <document-id>
+            <country>US</country>
+            <doc-number>9076731</doc-number>
+            <kind>B2</kind>
+            <date>20150707</date>
+          </document-id>
+          <application-date>
+            <date>20120913</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="57">
+          <document-id>
+            <country>US</country>
+            <doc-number>20050050811</doc-number>
+            <kind>A1</kind>
+            <date>20050310</date>
+          </document-id>
+          <application-date>
+            <date>20030910</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="58">
+          <document-id>
+            <country>US</country>
+            <doc-number>20050133083</doc-number>
+            <kind>A1</kind>
+            <date>20050623</date>
+          </document-id>
+          <application-date>
+            <date>20041122</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="59">
+          <document-id>
+            <country>US</country>
+            <doc-number>9103563</doc-number>
+            <kind>B1</kind>
+            <date>20150811</date>
+          </document-id>
+          <application-date>
+            <date>20100805</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="60">
+          <document-id>
+            <country>US</country>
+            <doc-number>20050178428</doc-number>
+            <kind>A1</kind>
+            <date>20050818</date>
+          </document-id>
+          <application-date>
+            <date>20041015</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="61">
+          <document-id>
+            <country>US</country>
+            <doc-number>20050274410</doc-number>
+            <kind>A1</kind>
+            <date>20051215</date>
+          </document-id>
+          <application-date>
+            <date>20050413</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="62">
+          <document-id>
+            <country>US</country>
+            <doc-number>20050279400</doc-number>
+            <kind>A1</kind>
+            <date>20051222</date>
+          </document-id>
+          <application-date>
+            <date>20050803</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="63">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060137733</doc-number>
+            <kind>A1</kind>
+            <date>20060629</date>
+          </document-id>
+          <application-date>
+            <date>20041112</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="64">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060266406</doc-number>
+            <kind>A1</kind>
+            <date>20061130</date>
+          </document-id>
+          <application-date>
+            <date>20050608</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="65">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060249143</doc-number>
+            <kind>A1</kind>
+            <date>20061109</date>
+          </document-id>
+          <application-date>
+            <date>20050506</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="66">
+          <document-id>
+            <country>US</country>
+            <doc-number>20070044832</doc-number>
+            <kind>A1</kind>
+            <date>20070301</date>
+          </document-id>
+          <application-date>
+            <date>20060824</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="67">
+          <document-id>
+            <country>US</country>
+            <doc-number>20070056579</doc-number>
+            <kind>A1</kind>
+            <date>20070315</date>
+          </document-id>
+          <application-date>
+            <date>20060908</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="68">
+          <document-id>
+            <country>US</country>
+            <doc-number>20070240758</doc-number>
+            <kind>A1</kind>
+            <date>20071018</date>
+          </document-id>
+          <application-date>
+            <date>20060414</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="69">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080029149</doc-number>
+            <kind>A1</kind>
+            <date>20080207</date>
+          </document-id>
+          <application-date>
+            <date>20060802</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="70">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2008022342</doc-number>
+            <kind>A2</kind>
+            <date>20080221</date>
+          </document-id>
+          <application-date>
+            <date>20070818</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="71">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080302355</doc-number>
+            <kind>A1</kind>
+            <date>20081211</date>
+          </document-id>
+          <application-date>
+            <date>20071226</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="72">
+          <document-id>
+            <country>US</country>
+            <doc-number>9184694</doc-number>
+            <kind>B2</kind>
+            <date>20151110</date>
+          </document-id>
+          <application-date>
+            <date>20150612</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="73">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080313977</doc-number>
+            <kind>A1</kind>
+            <date>20081225</date>
+          </document-id>
+          <application-date>
+            <date>20060803</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="74">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090117679</doc-number>
+            <kind>A1</kind>
+            <date>20090507</date>
+          </document-id>
+          <application-date>
+            <date>20081031</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="75">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090266405</doc-number>
+            <kind>A1</kind>
+            <date>20091029</date>
+          </document-id>
+          <application-date>
+            <date>20090710</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="76">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090293941</doc-number>
+            <kind>A1</kind>
+            <date>20091203</date>
+          </document-id>
+          <application-date>
+            <date>20080602</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="77">
+          <document-id>
+            <country>US</country>
+            <doc-number>20100008078</doc-number>
+            <kind>A1</kind>
+            <date>20100114</date>
+          </document-id>
+          <application-date>
+            <date>20090526</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="78">
+          <document-id>
+            <country>US</country>
+            <doc-number>20100101561</doc-number>
+            <kind>A1</kind>
+            <date>20100429</date>
+          </document-id>
+          <application-date>
+            <date>20081024</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="79">
+          <document-id>
+            <country>US</country>
+            <doc-number>20100294341</doc-number>
+            <kind>A1</kind>
+            <date>20101125</date>
+          </document-id>
+          <application-date>
+            <date>20100202</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="80">
+          <document-id>
+            <country>US</country>
+            <doc-number>20110005330</doc-number>
+            <kind>A1</kind>
+            <date>20110113</date>
+          </document-id>
+          <application-date>
+            <date>20080507</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="81">
+          <document-id>
+            <country>US</country>
+            <doc-number>20110041428</doc-number>
+            <kind>A1</kind>
+            <date>20110224</date>
+          </document-id>
+          <application-date>
+            <date>20070625</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="82">
+          <document-id>
+            <country>US</country>
+            <doc-number>20110053306</doc-number>
+            <kind>A1</kind>
+            <date>20110303</date>
+          </document-id>
+          <application-date>
+            <date>20100820</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="83">
+          <document-id>
+            <country>US</country>
+            <doc-number>20110088740</doc-number>
+            <kind>A1</kind>
+            <date>20110421</date>
+          </document-id>
+          <application-date>
+            <date>20091015</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="84">
+          <document-id>
+            <country>US</country>
+            <doc-number>20110111534</doc-number>
+            <kind>A1</kind>
+            <date>20110512</date>
+          </document-id>
+          <application-date>
+            <date>20090421</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="85">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090114262</doc-number>
+            <kind>A1</kind>
+            <date>20090507</date>
+          </document-id>
+          <application-date>
+            <date>20080829</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="86">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090114274</doc-number>
+            <kind>A1</kind>
+            <date>20090507</date>
+          </document-id>
+          <application-date>
+            <date>20081031</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="87">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090133740</doc-number>
+            <kind>A1</kind>
+            <date>20090528</date>
+          </document-id>
+          <application-date>
+            <date>20081110</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="88">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080041434</doc-number>
+            <kind>A1</kind>
+            <date>20080221</date>
+          </document-id>
+          <application-date>
+            <date>20060818</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="89">
+          <document-id>
+            <country>US</country>
+            <doc-number>20100193795</doc-number>
+            <kind>A1</kind>
+            <date>20100805</date>
+          </document-id>
+          <application-date>
+            <date>20100128</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="90">
+          <document-id>
+            <country>US</country>
+            <doc-number>20100219304</doc-number>
+            <kind>A1</kind>
+            <date>20100902</date>
+          </document-id>
+          <application-date>
+            <date>20091015</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="91">
+          <document-id>
+            <country>US</country>
+            <doc-number>20110189807</doc-number>
+            <kind>A1</kind>
+            <date>20110804</date>
+          </document-id>
+          <application-date>
+            <date>20110214</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="92">
+          <document-id>
+            <country>US</country>
+            <doc-number>20110197412</doc-number>
+            <kind>A1</kind>
+            <date>20110818</date>
+          </document-id>
+          <application-date>
+            <date>20110426</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="93">
+          <document-id>
+            <country>US</country>
+            <doc-number>20110209742</doc-number>
+            <kind>A1</kind>
+            <date>20110901</date>
+          </document-id>
+          <application-date>
+            <date>20101001</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="94">
+          <document-id>
+            <country>AU</country>
+            <doc-number>2013231094</doc-number>
+            <kind>B2</kind>
+            <date>20160121</date>
+          </document-id>
+          <application-date>
+            <date>20130919</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="95">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2012021872</doc-number>
+            <kind>A3</kind>
+            <date>20120510</date>
+          </document-id>
+          <application-date>
+            <date>20110812</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="96">
+          <document-id>
+            <country>US</country>
+            <doc-number>9279415</doc-number>
+            <kind>B1</kind>
+            <date>20160308</date>
+          </document-id>
+          <application-date>
+            <date>20050707</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="97">
+          <document-id>
+            <country>US</country>
+            <doc-number>9294032</doc-number>
+            <kind>B2</kind>
+            <date>20160322</date>
+          </document-id>
+          <application-date>
+            <date>20131108</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="98">
+          <document-id>
+            <country>TW</country>
+            <doc-number>I527248</doc-number>
+            <kind>B</kind>
+            <date>20160321</date>
+          </document-id>
+          <application-date>
+            <date>20100824</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="99">
+          <document-id>
+            <country>GB</country>
+            <doc-number>2446219</doc-number>
+            <kind>A</kind>
+            <date>20080806</date>
+          </document-id>
+          <application-date>
+            <date>20070202</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="100">
+          <document-id>
+            <country>CN</country>
+            <doc-number>102339910</doc-number>
+            <kind>A</kind>
+            <date>20120201</date>
+          </document-id>
+          <application-date>
+            <date>20110927</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="101">
+          <document-id>
+            <country>CN</country>
+            <doc-number>102484143</doc-number>
+            <kind>A</kind>
+            <date>20120530</date>
+          </document-id>
+          <application-date>
+            <date>20100820</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="102">
+          <document-id>
+            <country>US</country>
+            <doc-number>20130032192</doc-number>
+            <kind>A1</kind>
+            <date>20130207</date>
+          </document-id>
+          <application-date>
+            <date>20121011</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="103">
+          <document-id>
+            <country>US</country>
+            <doc-number>20120247538</doc-number>
+            <kind>A1</kind>
+            <date>20121004</date>
+          </document-id>
+          <application-date>
+            <date>20101221</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="104">
+          <document-id>
+            <country>US</country>
+            <doc-number>20160197219</doc-number>
+            <kind>A1</kind>
+            <date>20160707</date>
+          </document-id>
+          <application-date>
+            <date>20160315</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="105">
+          <document-id>
+            <country>US</country>
+            <doc-number>20100314509</doc-number>
+            <kind>A1</kind>
+            <date>20101216</date>
+          </document-id>
+          <application-date>
+            <date>20100616</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="106">
+          <document-id>
+            <country>US</country>
+            <doc-number>20110203639</doc-number>
+            <kind>A1</kind>
+            <date>20110825</date>
+          </document-id>
+          <application-date>
+            <date>20100920</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="107">
+          <document-id>
+            <country>US</country>
+            <doc-number>20150280636</doc-number>
+            <kind>A1</kind>
+            <date>20151001</date>
+          </document-id>
+          <application-date>
+            <date>20150612</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="108">
+          <document-id>
+            <country>US</country>
+            <doc-number>20150096616</doc-number>
+            <kind>A1</kind>
+            <date>20150409</date>
+          </document-id>
+          <application-date>
+            <date>20120629</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="109">
+          <document-id>
+            <country>CN</country>
+            <doc-number>105514194</doc-number>
+            <kind>A</kind>
+            <date>20160420</date>
+          </document-id>
+          <application-date>
+            <date>20151008</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="110">
+          <document-id>
+            <country>US</country>
+            <doc-number>9564851</doc-number>
+            <kind>B2</kind>
+            <date>20170207</date>
+          </document-id>
+          <application-date>
+            <date>20151110</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="111">
+          <document-id>
+            <country>US</country>
+            <doc-number>20110061711</doc-number>
+            <kind>A1</kind>
+            <date>20110317</date>
+          </document-id>
+          <application-date>
+            <date>20100908</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="112">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2008022342</doc-number>
+            <kind>A3</kind>
+            <date>20081211</date>
+          </document-id>
+          <application-date>
+            <date>20070818</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20130601">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>CANON KK</orgname>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant sequence="1" app-type="applicant" data-format="docdb">
+          <addressbook lang="eng">
+            <orgname>CANON KK</orgname>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant sequence="1" app-type="applicant" data-format="docdba">
+          <addressbook lang="eng">
+            <orgname>CANON KABUSHIKI KAISHA</orgname>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>TAKADA TAKESHI</name>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>FUKAE KIMITOSHI</name>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>MIMURA TOSHIHIKO</name>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4">
+          <addressbook lang="eng">
+            <name>MORI MASAHIRO</name>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5">
+          <addressbook lang="eng">
+            <name>SHIOMI SATORU</name>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="1" data-format="docdb">
+          <addressbook lang="eng">
+            <name>TAKADA TAKESHI</name>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="1" data-format="docdba">
+          <addressbook lang="eng">
+            <name>TAKADA; TAKESHI</name>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" data-format="docdba">
+          <addressbook lang="eng">
+            <name>FUKAE; KIMITOSHI</name>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" data-format="docdb">
+          <addressbook lang="eng">
+            <name>FUKAE KIMITOSHI</name>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" data-format="docdb">
+          <addressbook lang="eng">
+            <name>MIMURA TOSHIHIKO</name>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" data-format="docdba">
+          <addressbook lang="eng">
+            <name>MIMURA; TOSHIHIKO</name>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" data-format="docdba">
+          <addressbook lang="eng">
+            <name>MORI; MASAHIRO</name>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" data-format="docdb">
+          <addressbook lang="eng">
+            <name>MORI MASAHIRO</name>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" data-format="docdb">
+          <addressbook lang="eng">
+            <name>SHIOMI SATORU</name>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" data-format="docdba">
+          <addressbook lang="eng">
+            <name>SHIOMI; SATORU</name>
+            <address>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Fitzpatrick, Cella, Harper &amp; Scinto</name>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <examiners>
+      <primary-examiner>
+        <name>Diamond; Alan</name>
+      </primary-examiner>
+    </examiners>
+    <patent-family date-changed="20090613">
+      <main-family family-id="127425540">
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>1175797</doc-number>
+            <kind>A</kind>
+            <date>19980311</date>
+          </document-id>
+          <application-date>
+            <date>19970716</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>820105</doc-number>
+            <kind>A2</kind>
+            <date>19980121</date>
+          </document-id>
+          <application-date>
+            <date>19970716</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>730186</doc-number>
+            <kind>B2</kind>
+            <date>20010301</date>
+          </document-id>
+          <application-date>
+            <date>19970716</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>1097856</doc-number>
+            <kind>C</kind>
+            <date>20030101</date>
+          </document-id>
+          <application-date>
+            <date>19970716</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>820105</doc-number>
+            <kind>A3</kind>
+            <date>19980812</date>
+          </document-id>
+          <application-date>
+            <date>19970716</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>6063996</doc-number>
+            <kind>A</kind>
+            <date>20000516</date>
+          </document-id>
+          <application-date>
+            <date>19970709</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2869797</doc-number>
+            <kind>A</kind>
+            <date>19980129</date>
+          </document-id>
+          <application-date>
+            <date>19970716</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>10032345</doc-number>
+            <kind>A</kind>
+            <date>19980203</date>
+          </document-id>
+          <application-date>
+            <date>19960717</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>3220934</doc-number>
+            <kind>B2</kind>
+            <date>20011022</date>
+          </document-id>
+          <application-date>
+            <date>19960717</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="127425539">
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>1175797</doc-number>
+            <kind>A</kind>
+            <date>19980311</date>
+          </document-id>
+          <application-date>
+            <date>19970716</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>820105</doc-number>
+            <kind>A2</kind>
+            <date>19980121</date>
+          </document-id>
+          <application-date>
+            <date>19970716</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>730186</doc-number>
+            <kind>B2</kind>
+            <date>20010301</date>
+          </document-id>
+          <application-date>
+            <date>19970716</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>1097856</doc-number>
+            <kind>C</kind>
+            <date>20030101</date>
+          </document-id>
+          <application-date>
+            <date>19970716</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>820105</doc-number>
+            <kind>A3</kind>
+            <date>19980812</date>
+          </document-id>
+          <application-date>
+            <date>19970716</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>6063996</doc-number>
+            <kind>A</kind>
+            <date>20000516</date>
+          </document-id>
+          <application-date>
+            <date>19970709</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2869797</doc-number>
+            <kind>A</kind>
+            <date>19980129</date>
+          </document-id>
+          <application-date>
+            <date>19970716</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>10032345</doc-number>
+            <kind>A</kind>
+            <date>19980203</date>
+          </document-id>
+          <application-date>
+            <date>19960717</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>3220934</doc-number>
+            <kind>B2</kind>
+            <date>20011022</date>
+          </document-id>
+          <application-date>
+            <date>19960717</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20120425" lang="eng" format="original">
+    <p>A solar cell module according to the present invention includes at least a base material, a first insulating material formed on the base material, a photovoltaic element set including a plurality of photovoltaic elements formed on the first insulating material, and a second insulating material formed on the photovoltaic element set. The base material has an L or W shape. In one embodiment, the base material has an L section shape, and a bent portion is formed in a portion where no photovoltaic element is arrange. In another embodiment, the photovoltaic element set includes a wiring material for electrically connecting the photovoltaic elements, and a bent portion is formed in a portion where the wiring material is arranged. Power generation and heat collection efficiency are increased, and optical deterioration of a non-single-crystal semiconductor are decreased in the present solar cell modules. By incorporating the present solar cell modules into a heat collecting panel, a hybrid roof panel with effective power generation and heat use is obtained.</p>
+  </abstract>
+  <legal-data date-changed="20170304">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>19970709</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     6063996A </docdb-publication-number>
+      <docdb-application-id>54007064</docdb-application-id>
+      <new-owner>CANON KABUSHIKI KAISHA, JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:TAKADA, TAKESHI;FUKAE, KIMITOSHI;MIMURA, TOSHIHIKO;AND OTHERS;REEL/FRAME:008645/0643;SIGNING DATES FROM 19970627 TO 19970630</free-text-description>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20020730</date>
+      </publication-date>
+      <event-code-1>CC</event-code-1>
+      <legal-description>CERTIFICATE OF CORRECTION</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     6063996A </docdb-publication-number>
+      <docdb-application-id>54007064</docdb-application-id>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20031022</date>
+      </publication-date>
+      <event-code-1>FPAY</event-code-1>
+      <effect>+</effect>
+      <legal-description>FEE PAYMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     6063996A </docdb-publication-number>
+      <docdb-application-id>54007064</docdb-application-id>
+      <fee-payment-year>4</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="4">
+      <publication-date>
+        <date>20071019</date>
+      </publication-date>
+      <event-code-1>FPAY</event-code-1>
+      <effect>+</effect>
+      <legal-description>FEE PAYMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     6063996A </docdb-publication-number>
+      <docdb-application-id>54007064</docdb-application-id>
+      <fee-payment-year>8</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="5">
+      <publication-date>
+        <date>20110920</date>
+      </publication-date>
+      <event-code-1>FPAY</event-code-1>
+      <effect>+</effect>
+      <legal-description>FEE PAYMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     6063996A </docdb-publication-number>
+      <docdb-application-id>54007064</docdb-application-id>
+      <fee-payment-year>12</fee-payment-year>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20070520">
+    <summary>
+      <p>1. Field of the Invention</p>
+      <p>The present invention relates to a solar cell module using photovoltaic elements and a hybrid roof panel formed by integrating the solar cell module and a heat collecting panel.</p>
+      <p>2. Related Background Art</p>
+      <p>Conventionally, a solar heat generating system which receives solar light into an insulated box and makes warm water or warm air by using the heat of the received solar light is known as a method of using solar energy. As this solar heat generating system, a heat collecting panel using a black iron plate which readily absorbs light is put into practical use (Japanese Patent Publication No. 7-280358).</p>
+      <p>FIGS. 13A and 13B are a perspective view and a sectional view, respectively, of the heat collecting panel. This heat collecting panel has a structure in which the heat of solar radiation received by a heat collecting member 1301 (a black iron plate) is confined in a glass box 1302 so as not to be radiated to the outside air. Air supplied from an air inlet 1303 receives the heat from the heat collecting member 1301 and is gradually heated, and the resultant warm air is extracted from an air outlet 1304.</p>
+      <p>The non-light-receiving side of the heat collecting member 1301 is used as an air passage 1305 in the heat collecting panel because glass 1306 is arranged on the light-receiving side and a heat insulating material 1307 as a panel bottom plate is arranged on the non-light-receiving side; the non-light-receiving side including this heat insulating material 1307 has a smaller heat loss to the outside air.</p>
+      <p>Especially in cold districts, people are deeply interested in heat, so solar heat generating systems using heat collecting panels are in widespread use. Since cold districts are positioned in relatively high latitudes, the incident angles of solar light are small in these districts. Therefore, to efficiently collect heat from solar light, the heat collecting member 1301 must have a certain angle. Ideally, solar light (indicated by the alternate long and two dashed line arrows in FIG. 13B) is incident at right angles.</p>
+      <p>Normally, it is considered best to arrange the heat collecting surface at an angle of latitude +10.degree. to the horizontal.</p>
+      <p>FIG. 14 is a sectional view showing a W heat collecting panel thus improved. A plurality of W heat collecting panels 1401 are attached to the heat collecting panel. The heat collecting surface of each heat collecting panel 1401 is inclined at an angle .theta. in the heat collecting panel, so a high heat collecting effect can be obtained even when the altitude of the sun is low. Accordingly, this heat collecting panel is being widely used in cold districts and the like.</p>
+      <p>The raised angle .theta. of the W heat collecting panel 1401 can be freely set at an optimum angle in accordance with the incident angle of solar light (indicated by the alternate long and dashed line arrows in FIG. 14) by taking account of the latitude of the place and the roof pitch. Also, since the heat collecting plates 1401 form a continuous W shape, it is possible to give a resistance to the air stream on the non-light-receiving side of the heat collecting plates 1401. This partly improves the heat collection efficiency.</p>
+      <p>As described above, cold districts in which heat collecting panels are actually used are in many instances high-latitude areas. Therefore, the W heat collecting panel, FIG. 14, which has a high heat collection efficiency is used more often than the heat collecting panel using the flat heat collecting plate as shown in FIGS. 13A and 13B. Additionally, the raised angle .theta. of the W heat collecting panel can be optimally set in accordance with any existing roof pitch, and the panel can also be attached to, e.g., a wall, rather than a roof. Accordingly, the W heat collecting panel has a high utility value.</p>
+      <p>In a solar heat generating system, it is necessary to operate a fan to supply warm air obtained by the heat collecting panel as described above into a house, and electricity is required for the purpose. A hybrid roof panel is being developed in which a solar cell element as a power supply of the fan is arranged in the heat collecting panel and which thereby can simultaneously perform heat collection and power generation.</p>
+      <p>This hybrid roof panel, however, is impractical because an inert gas or the like must be sealed to ensure the weather resistance of the solar cell element with respect to a heat transfer medium, and this increases the number of problems such as the airtightness of the panel. Also, the insulating properties of the solar cell as a power supply must be secured. Therefore, if the solar cell element is directly used, the insulating properties of the heat collecting panel must also be secured.</p>
+      <p>Furthermore, low workability and high cost are problems in assembling the heat collecting panel. That is, the number of assembly steps is increased to arrange the solar cell element in the heat collecting panel, and attachment parts and their accessory parts are also necessary. Since this increases the assembly cost, the hybrid roof panel is impractical.</p>
+      <p>The present invention has been made in consideration of the above situation and has as its object improvement of both the heat collection efficiency and the power generation efficiency of a heat collecting panel (hybrid roof panel) with a solar cell. It is another object of the present invention to provide a hybrid roof panel which can be easily assembled and has a high mass productivity.</p>
+      <p>To achieve the above objects, a first solar cell module comprises at least a base material, a first insulating material formed on the base material, a photovoltaic element set formed on the first insulating material and including a plurality of photovoltaic elements, and a second insulating material formed on the photovoltaic element set, wherein the base material has an L sectional shape, and a bent portion is formed in a portion where no photovoltaic element is arranged.</p>
+      <p>A second solar cell module comprises at least a base material, a first insulating material formed on the base material, a photovoltaic element set formed on the first insulating material and including a plurality of photovoltaic elements and a wiring material for electrically connecting the photovoltaic elements, and a second insulating material formed on the photovoltaic element set, wherein the solar cell module has a bent portion in a portion where the wiring material is arranged.</p>
+      <p>The base material has an L or W shape, and so an optimum raised angle can be freely designed by taking account of the place and the gradient of installation. This increases the amount of power generation. At the same time, this increases the heat collection efficiency and particularly helps recover the optical deterioration of a non-single-crystal semiconductor. By incorporating the solar cell module with this shape into a heat collecting panel, a hybrid roof panel which generates power and simultaneously effectively uses heat is realized.</p>
+      <p>Especially in the second solar cell module of the present invention in which the base material has a W shape, the solar cell modules need not be connected to each other when the hybrid roof panel is assembled. This further increases the mass productivity of the hybrid roof panel.</p>
+      <p>In the second solar cell module of the present invention in which a portion where only the wiring material of the photovoltaic element set is formed is bent, this wiring material is a soft metal or a knitted conductor. This improves the yield in the manufacture of the module.</p>
+      <p>The bending radius of the bent portion is set within a particular range. Consequently, a solar cell module and a hybrid roof panel with an extremely high long-term reliability are provided.</p>
+    </summary>
+    <description-of-drawings>
+      <heading>BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p>FIG. 1 is a perspective view showing an embodiment of a first W solar cell module of the present invention;</p>
+      <p>FIG. 2 is a perspective view showing an embodiment of a second W solar cell module of the present invention;</p>
+      <p>FIG. 3 is a sectional view showing an embodiment of a bent portion of the second W solar cell module of the present invention;</p>
+      <p>FIG. 4 is a sectional view showing an embodiment of a photovoltaic element according to the present invention;</p>
+      <p>FIG. 5 is a sectional view showing an embodiment of a hybrid roof panel using the first solar cell module of the present invention;</p>
+      <p>FIG. 6 is a sectional view showing an embodiment of a hybrid roof panel using the second solar cell module of the present invention;</p>
+      <p>FIG. 7 is a perspective view of a photovoltaic element according to Examples 1 to 4;</p>
+      <p>FIG. 8 is a top view of a photovoltaic element set according to Examples 1 and 4;</p>
+      <p>FIG. 9 is a sectional view of a solar cell module before being bent according to Examples 1 and 4;</p>
+      <p>FIG. 10 is a perspective view of a W solar cell module according to Examples 1 and 4;</p>
+      <p>FIG. 11 is a sectional view of a bend portion of the W solar cell module according to Examples 1 and 4;</p>
+      <p>FIG. 12 is a sectional view of a hybrid roof panel according to Example 4;</p>
+      <p>FIG. 13A is a perspective view showing a conventional heat collecting panel;</p>
+      <p>FIG. 13B is a sectional view taken along a line 13B--13B in FIG. 13A; and</p>
+      <p>FIG. 14 is a sectional view of a conventional W heat collecting panel.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading>DETAILED DESCRIPTION OF THE PREFERRED EMBODIMENTS</heading>
+      <p>Embodiments of a solar cell module and a hybrid roof panel of the present invention will be described below with reference to the accompanying drawings. However, the present invention is not limited to these embodiments.</p>
+      <p>FIGS. 1 and 2 are perspective views of first and second solar cell modules of the present invention. A photovoltaic element set 102 is formed on a base material 101 via a first insulating material (not shown), and a second insulating material (not shown) is formed on the photovoltaic element set 102. Cable connectors 105 are used as terminals. The photovoltaic element set 102 includes a plurality of photovoltaic elements 103 and a wiring material 104 for interconnecting these photovoltaic elements 103.</p>
+      <p>The first solar cell module of the present invention shown in FIG. 1 is bent in a portion where the photovoltaic element set 102 is not formed. The second solar cell module of the present invention shown in FIG. 2 is bent in portions where the wiring material 104 is formed.</p>
+      <p>FIG. 3 is a sectional view of the bent portion of the second solar cell module of the present invention. The wiring material 104 is adhered to the base material 101 while being insulated and sealed by a first insulating material 301 and a second insulating material 302. An adhesive 303 is filled in the interfaces between these constituent materials to ensure their adhesion. The individual constituent materials will be described below.</p>
+      <p>(Base Material 101 )</p>
+      <p>The base material 101 is a plate material used to increase the strength of the solar cell module and is required to have high weather resistance and high load resistance. The base material 101 must also have high processability so that the material is freely bent into an arbitrary shape. Examples of the material are metal plates such as a copper plate, an aluminum alloy plate, a lead plate, a zinc plate, a titanium plate, and a stainless steel plate, and insulated metal plates such as a coated zinc steel plate.</p>
+      <p>(First Insulating Material 301 )</p>
+      <p>The first insulating material 301 must ensure the insulation between the photovoltaic element set 102 and the base material 101 and is required to have excellent insulating properties. The material is preferably superior in elongation, elongation strength, softness, and processability. Examples are nylon and polyethyleneterephthalate.</p>
+      <p>(Photovoltaic Element Set 102 )</p>
+      <p>The photovoltaic element set 102 is formed by connecting the photovoltaic elements 103 in series or in parallel by using the wiring material 104.</p>
+      <p>FIG. 4 is a sectional view of the photovoltaic element 103. The photovoltaic element 103 includes a conductive substrate 401, a backside reflecting layer 402, a semiconductor layer 403, a transparent electrode layer 404, and collector electrodes 405. The conductive substrate 401 is the substrate of a photovoltaic element and serves as an electrode on the non-light-receiving side. The backside reflecting layer 402 reflects light to the semiconductor layer 403 to obtain a higher photovoltaic power. The semiconductor layer 403 absorbs and changes light into electrical energy. The transparent electrode layer 404 is an electrode on the light-receiving side. The collector electrodes 405 are used to efficiently collect currents generated on the transparent electrode.</p>
+      <p>Examples of the material used as the conductive substrate 401 are stainless steel, aluminum, copper, titanium, a carbon sheet, a galvanized sheet, and a resin film of, e.g., polyimide, polyester, polyethylenenaphthalide, or epoxy, and ceramic such as glass, on which a conductive layer is formed.</p>
+      <p>As the backside reflecting layer 402, it is possible to use, e.g., a metal layer, a metal oxide layer, and a composite layer of a metal layer and a metal oxide. Examples of the metal are titanium, chromium, molybdenum, tungsten, aluminum, silver, and nickel. Examples of the metal oxide are zinc oxide, titanium oxide, and tin oxide.</p>
+      <p>Examples of the material forming the semiconductor layer 403 are a non-single-crystal semiconductor, crystalline silicon, and compound semiconductors such as copper, indium, selenide and CdS/CdTe. Examples of a non-single-crystal semiconductor are amorphous silicon, amorphous silicon germanium, amorphous silicon carbide, amorphous silicon nitride, microcrystals or crystallites of these semiconductors, and polycrystalline silicon. The conversion efficiency of a non-single-crystal semiconductor is lowered by irradiation of light, i.e., a so-called Stebler-Wronski effect is known. However, this optical deterioration is recovered by annealing. Therefore, a non-single-crystal semiconductor is particularly preferably used in the solar cell module of the present invention.</p>
+      <p>When a non-single-crystal semiconductor is used, the semiconductor layer 403 can be formed by plasma CVD using, e.g., silane gas, germane gas, or a hydrocarbon. When crystalline silicon is used, the semiconductor layer 403 can be formed by sheeting molten silicon and heat-treating a non-single-crystal semiconductor. When a compound semiconductor is used, the semiconductor layer 403 can be formed by electron beam vapor deposition, sputtering, electrodeposition, or printing.</p>
+      <p>As the construction of the semiconductor layer 403, a pin junction, a pn junction, or a Schottky junction is used.</p>
+      <p>Examples of the material forming the transparent electrode layer 404 are indium oxide, tin oxide, ITO, zinc oxide, titanium oxide, and cadmium sulfide. As the formation method, it is possible to use, e.g., resistance heating vapor deposition, electron beam vapor deposition, or sputtering.</p>
+      <p>Examples of the material forming the collector electrodes 405 are metals such as titanium, chromium, molybdenum, tungsten, aluminum, silver, nickel, copper, and tin. As the formation method, it is possible to print a conductive paste in which a powder of any of these metals is dispersed or to bring the conductive paste into contact with a wire of any of these metals. As the binder of this conductive paste, polymers such as polyester, epoxy, phenol, acryl, alkyd, polyvinyl acetate, rubber, and urethane can be used.</p>
+      <p>The wiring material 104 electrically connects the photovoltaic elements. The material is preferably superior in elongation, elongation strength, softness, and processability, in addition to conductivity. Metals such as aluminum, silver, copper, and tin are examples. It is also possible to use, e.g., a knitted conductor.</p>
+      <p>The method of connecting the photovoltaic elements 103 and the wiring material 104 is not particularly limited. Examples are soldering, spot welding, and ultrasonic welding.</p>
+      <p>(Second Insulating Material 302 )</p>
+      <p>The second insulating material 302 protects the surface of the solar cell module and secures its insulation. The second insulating material 302 is required to have excellent insulating properties, high transparency, high weather resistance and to high resistance to contamination. Also, the material is preferably superior in elongation, elongation strength, softness, and processability. Examples are fluorine resin films of polyethylenetetrafluoroethylene, polyethylene trifluoride, and polyvinyl fluoride. Since fluorine resin films do not usually have a high adhesion, it is desirable to perform a corona treatment or a primer treatment on the adhesion surface.</p>
+      <p>(Adhesive 303)</p>
+      <p>The adhesive 303 adheres the individual materials described above and is required to have high adhesion, high transparency, and high weather resistance. Additionally, the adhesive 303 must have a flexibility by which the adhesive 303 can follow the expansion and contraction of each material during processing. Examples of the material are resins such as EVA (vinyl acetate-ethylene copolymer), a butyral resin, a silicone resin, and an epoxy resin. Also, to increase the scratch resistance of the solar cell module, it can be impregnated with glass fibers or can contain an ultraviolet absorbent for absorbing ultraviolet radiation which deteriorates the semiconductor layer. If the first and second insulating materials 301 and 302 have adhesion layers, these layers can be used as an adhesive.</p>
+      <p>(Bending)</p>
+      <p>The method of bending the solar cell module of the present invention is not particularly limited, and general steel plate processing methods can be used. Examples are bender processing, roll former processing, and pressing. The module is bent by controlling the bending angle and the bending radius by any of these methods. Note that the bending angle is set to an optimum angle in accordance with the installation place and the installation angle.</p>
+      <p>The bending radius of the bent portion is preferably 3.0 mm or more in the first solar cell module of the present invention and 4.5 mm or more in the second solar cell module of the present invention. If the bending radius of the bent portion is too small, the base material and the insulating materials may peel or the wiring material may crack in the bent portion.</p>
+      <p>(First Embodiment of Hybrid Roof Panel)</p>
+      <p>FIG. 5 shows an embodiment of a hybrid roof panel of the present invention which can simultaneously perform heat collection and power generation. In this hybrid roof panel, three first solar cell modules 501 of the present invention as shown in FIG. 1 and four W black iron plates 502 are arranged in a panel casing 503. One surface of the panel casing 503 is a window 504 through which solar light 505 can be received. This hybrid roof panel also has a function as a roofing material and therefore can be arranged on a roof furring or roof structural material such as beams.</p>
+      <p>The hybrid roof panel of the present invention can take an arbitrary size. For example, the hybrid roof panel can be an integrated panel from the eaves to the ridge, or a plurality of panels can be connected. Alternatively, the hybrid roof panel can be mixed in common roof panels. If this is the case, a ventilation layer is formed between the common roof panels or roofing materials and the roof furring so that the ventilation layer communicates with the casing of the hybrid roof panel of the present invention.</p>
+      <p>The solar cell module 501 is formed by integrally encapsulating a plurality of photovoltaic elements 102 with first and second insulating materials such as a resin on a base material 101. Also, the solar cell module 501 is bent in a portion where no photovoltaic elements 102 are formed, i.e., a portion including the base material 101 and the insulating materials, and thereby has an L sectional shape.</p>
+      <p>The panel casing 503 has an air inlet 506 and an air outlet 507 through which air can flow. The solar cell modules 501 and the W black iron plates 502 are so attached as to be exposed to the solar light 505 and divide the air into two portions in the panel casing 503. The solar cell modules 501 and the W black iron plates 502 absorb the solar light, generate heat, and transfer the heat to air 511 on the non-light-receiving side. Air flowing from the air inlet 506 is warmed by the solar cell modules 501 and the W black iron plates 502, and the resultant warm air flows out from the air outlet 507. Air on the light-receiving side is not used as a heat transfer medium because the temperature cannot be sufficiently raised on this side due to the radiation of heat from the window 504.</p>
+      <p>The outside air is supplied from the air inlet 506, and the hot air extracted from the air outlet is introduced to the inside of a house and can be used in heating the house in the cold weather. A heat storage means and/or an air circulating means can also be installed in the house. In the hot weather, the heat insulating effect of the roof can be enhanced by exhausting the air from the air outlet to the outside of the house. In this manner an air flowing apparatus which keeps the indoor environment comfortable can be constructed.</p>
+      <p>Also, the solar cell modules 501 naturally generate power, which is extracted from the non-light-receiving side of the modules to the outside by cable connectors 508. The extracted power can be converted into AC power by a power converter or charged into a charging battery.</p>
+      <p>The number of solar cell modules 501 with the L sectional shape can be appropriately set in accordance with the necessary amount of power. Likewise, the heat collecting effect of the W black iron plates 502 can be enhanced by using selective absorption plates where necessary.</p>
+      <p>Like the W black iron plate 502, the first solar cell module 501 of the present invention can be readily arranged such that the solar light 505 irradiates the solar cell module 501 at an optimum angle. Therefore, when the hybrid roof panel of the present invention is used, both the heat collection efficiency and the power generation efficiency can be improved.</p>
+      <p>As the semiconductor layer 403 described previously, a non-single-crystal semiconductor which has excellent characteristics at high temperatures and can be expected to recover optical deterioration at high temperatures is preferably used. However, in cases where the photovoltaic elements are exposed to high temperatures at which the performance of the elements is adversely affected, it is preferable to arrange the solar cell modules 501 in a portion at a relatively low temperature in the panel casing 503. Generally, the temperature in the panel casing 503 is lowest near the air inlet 506 and gradually rises toward the air outlet 507. Therefore, the solar cell modules 501 are arranged near the air inlet 506, and the lead wires 508 for extracting electricity are extended to the outside from the air inlet 506.</p>
+      <p>When the solar cell modules are used in the casing of the hybrid roof panel of the present invention, caution should be exercised with respect to the temperature of the modules. This is because it is experimentally confirmed that when the hybrid roof panel is used on a roof, for example, the internal temperature rises to about 120.degree. C. To warrant the safety of the solar cell modules in this high-temperature environment, the solar cell modules and the cable connectors of the modules arranged in the panel casing are required to have a heat resistance of 120.degree. C. or more.</p>
+      <p>The upper-limit value of the continuous use temperature of ETFE (ethylene-tetrafluoroethylene copolymer) or PET (polyethyleneterephthalate) used as the insulating material of the solar cell module is 120.degree. C. or more. Therefore, the safety of, e.g., insulation can be ensured.</p>
+      <p>The weather resistance of the cable connectors 508, however, is not so taken into consideration as the solar cell modules because the cable connectors 508 are arranged on the backside of a roof. For example, vinyl chloride is generally used as the sheath and/or the housing of the cable. Additionally, the insulating properties of the cable are secured by its housing. When vinyl chloride is used as an insulating material, the upper-limit value of the continuous use temperature of the material is anticipated to be 75.degree. C. That is, the upper-limit temperature of a common heat-resistant cable connector is 75.degree. C.</p>
+      <p>For this reason, when a plurality of stages of the first solar cell modules 501 of the present invention are to be arranged in the panel casing 503 as shown in FIG. 5, no conventional cable connectors such as vinyl chloride can be used in electrical connections between these solar cell modules 501. Therefore, a connecting portion 512 is formed by the steps of</p>
+      <p>(1) stripping the coverings of heat-resistant wires 509 to be connected to expose their cores,</p>
+      <p>(2) caulking the exposed cores by a solderless sleeve, and</p>
+      <p>(3) moving a heat-shrinkable tubing, in which the wire is previously passed, onto the sleeve and thermally shrinking the tubing by a heat gun to obtain an insulating coating.</p>
+      <p>On the other hand, the hybrid roof panels are electrically connected outside the panels, so conventional cable connectors can be used for this purpose.</p>
+      <p>Heat-resistant wires 509 inside the panel and the cable connectors 508 outside the panel are connected on a terminal table in a terminal box 510 arranged near the air inlet 506 of the panel.</p>
+      <p>(Panel casing 503)</p>
+      <p>The material of the panel casing 503 preferably has good heat insulating properties, and examples are wood, polystyrene, calcium silicate, and foamed styrol.</p>
+      <p>(Window 504)</p>
+      <p>The material of the window 504 preferably has a high light transmittance and good heat insulating properties. Examples are glass, polycarbonate, polyethyleneterephthalate, acryl, and nylon. Also, the window can be attached to the panel casing 503 by using an adhesive such as rubber, silicone, or acryl, and an etch cover can be formed.</p>
+      <p>(Air inlet 506 and air outlet 507 )</p>
+      <p>Each of the air inlet 506 and the air outlet 507 is formed in at least one portion of the panel casing 503 and allows a heat transfer medium such as air or water to flow in or out. It is also possible to attach a filter for preventing the mixing of dust and the like or a chemical filter against air containing acidic substances. A throttle mechanism can also be provided so as to control the flow rate of air.</p>
+      <p>(Second Embodiment of Hybrid Roof Panel)</p>
+      <p>In the first embodiment in which a plurality of module stages are arranged as shown in FIG. 5, it is necessary to electrically connect these modules in assembling the hybrid roof panel, and this complicates the assembly work.</p>
+      <p>Accordingly, when a plurality of stages of the first solar cell modules of the present invention are necessary, it is more preferable to use the second solar cell module of the present invention as described below instead of the first solar cell modules.</p>
+      <p>In FIG. 6, the same reference numerals as in FIG. 5 denote the same parts. A solar cell module 601 is the second solar cell module of the present invention as shown in FIGS. 2 and 3. This solar cell module is manufactured by bending a base material 101 in portions of connecting members 104 connecting photovoltaic elements 103.</p>
+      <p>This embodiment obviates the need for connecting the modules in the hybrid roof panel and thereby simplifies greatly the assembly of the panel and improves the reliability of electrical connection. For these purposes, the bending radius is preferably larger than a certain radius as described earlier.</p>
+      <heading>EXAMPLES</heading>
+      <p>Examples of the present invention will be described below, but the present invention is not limited to these examples.</p>
+      <p>Example 1</p>
+      <p>A solar cell module according to this Example is the second solar cell module of the present invention as shown in FIGS. 2 and 3, which is obtained by bending a solar cell module in which non-crystalline photovoltaic elements are insulated and coated with plastic on a galvanized sheet. This solar cell module is formed by integrating five W modules so that the raised angle of the light-receiving surface to the horizontal is about 10.degree.. The solar cell module of this example will be described in detail below with reference to the accompanying drawings.</p>
+      <p>(Manufacture of Photovoltaic Element)</p>
+      <p>First, a photovoltaic element as shown in FIG. 7 was manufactured. An Al layer and a ZnO layer were sequentially formed as a backside reflecting layer 702 on a cleaned stainless steel substrate 701 by sputtering. Subsequently, plasma CVD was performed to form an n-type a-Si layer from a gaseous mixture of SiH.sub.4, PH.sub.3, and H.sub.2, an i-type a-Si layer from a gaseous mixture of SiH.sub.4 and H.sub.2, and a p-type microcrystal .mu.c-Si layer from a gaseous mixture of SiH.sub.4, BF.sub.3, and H.sub.2, thereby forming a triple a-Si semiconductor layer 703 including n-layer/i-layer/p-layer/n-layer/i-layer/p-layer/n-layer/i-layer/p-layer. Additionally, a thin In.sub.2 0.sub.3 film was vapor-deposited as a transparent electrode layer 704 by using a resistance heating method.</p>
+      <p>In the end portions of the stainless steel plate 701, the stainless steel plate 701 and the transparent electrode layer 704 were short-circuited. To repair this short circuit, therefore, the transparent electrode layer 704 was partially removed by electrolytic etching. Thereafter, an insulating double-coated tape 705 was adhered to portions near the two opposing sides of the substrate 701. Carbon paste-coated copper wires 100 .mu.m in diameter serving as collector electrodes 706 were arranged on the upper surface and held by the tape adhesive material. Copper foils as lead electrodes 707 were adhered to sandwich the wires between the foils and the tapes. The whole substrate was then thermally pressed to adhere the carbon paste-coated wires as the collector electrodes 706 to the transparent electrode layer 704.</p>
+      <p>(Series Connection)</p>
+      <p>Subsequently, a photovoltaic element set as shown in FIG. 8 was manufactured. In this photovoltaic element set, twenty photovoltaic elements described above were connected in series. That is, ten photovoltaic elements 801 were arranged by alternately repeating gaps of 1 mm and 90 mm, and another ten photovoltaic elements 801 were similarly arranged to return in the opposite direction with a 2-mm gap between the first and second ten photovoltaic elements. The photovoltaic elements 801 with the 1-mm gap between them were electrically connected by the lead electrodes 707 (FIG. 7). The photovoltaic elements 801 with the 90-mm gap between them were electrically connected by connecting a wiring material 802 to the lead electrodes 707 of these photovoltaic elements 801, because the lead electrodes 707 alone were short. Since the wiring material 802 was to be bent, 200 .mu.m thick soft copper was used. The photovoltaic elements 801 with the 2-mm gap between them were electrically connected by connecting soft copper as the wiring material 802 since the lead electrodes 707 of the photovoltaic elements 801 were not in the direction for that purpose. Positive and negative terminal extracting portions 803 were formed on the lower surfaces of the photovoltaic elements in the end portion. Also, a black PET tape 804 was adhered to the lead electrodes and the wiring material not contributing to power generation to obtain good appearance.</p>
+      <p>(Manufacture of Module)</p>
+      <p>A solar cell module was manufactured by using the above photovoltaic element set. FIG. 9 is a sectional view of a solar cell module before being bent. A 50-.mu.m thick PET film as a first insulating material 902 was stacked on a 0.4-mm thick galvanized sheet as a base material 901, and a photovoltaic element set 903 including the photovoltaic elements 801, the wiring material 802, and the like was stacked on the first insulating material 902. Additionally, 50-.mu.m thick ETFE (ethylene-tetrafluoroethylene copolymer) as a second insulating material 904 was stacked on the photovoltaic element set 903. The second insulating material 904 and the photovoltaic element set 903 were adhered by 460-.mu.m thick EVA (ethylene-vinyl acetate copolymer) as an adhesive 905. The photovoltaic element set 903 and the first insulating material 902 were adhered by 230-.mu.m thick EVA (ethylene-vinyl acetate copolymer) as an adhesive 906. The first insulating material 902 and the base material 901 were also adhered by another adhesive 906. These materials were adhered by using vacuum lamination. Terminal extraction holes 907 were previously formed in the lower surface of the module.</p>
+      <p>(Bending) FIG. 10 is a perspective view of a solar cell module after being bent. As shown in FIG. 10, a W shape with a raised angle of 10.degree. was formed by repeatedly bending the module upward and downward 90.degree. at 40 mm intervals in portions where the wiring material 802 was formed. This bending was done using a bender, and the bending radius in the bent portion was set to 4.5 mm. Also, terminals were extracted from the terminal extraction holes 907 by using cable connectors 1001.</p>
+      <p>FIG. 11 is a sectional view of the bent portion. 200-.mu.m thick soft copper as the wiring material 802 was insulated and sealed by 50-.mu.m thick ETFE (ethylene-tetrafluoroethylene copolymer) as the second insulating material 904 and 50-.mu.m thick PET (polyethyleneterephthalate) as the first insulating material 902, and the resultant structure was adhered to a galvanized sheet as the base material 901. A 50-.mu.m thick black PET (polyethyleneterephthalate) tape was adhered as the mask seal 804 (FIG. 8) to the surface of the wiring material 802.</p>
+      <p>230-.mu.m thick EVA (ethylene-vinyl acetate copolymer) was used as the adhesive 906 in the interface between the wiring material 802 and the first insulating material 902 and the interface between the first insulating material 902 and the base material 901. The force of adhesive to the wiring material (copper) was about 400 g/10 mm.</p>
+      <p>460-.mu.m thick EVA (ethylene-vinyl acetate copolymer) was used as the adhesive 905 in the interface between the wiring material 802 and the mask seal 804 and the interface between the mask seal 804 and the second insulating material 904.</p>
+      <p>The neutral plane of bending is the center of the base material 901. When bending is performed, an expanding force acts on the outside, and a contracting force acts on the inside.</p>
+      <p>Soft copper was used as the wiring material 802 in the bent portion. This is so because if hard copper is used, a tensile force acts on the wiring material to break the wiring material when it is bent. That is, the use of soft copper as the wiring material 802 accomplishes the bending. More specifically, in this example the bending radius of the bent portion was 4.5 mm, and the distance from the neutral plane was about 0.6 mm. Accordingly, the calculated deformation caused by downward bending is an expansion of about 13%. Therefore, soft copper having an elongation of 35% or more is used as the wiring material.</p>
+      <p>Table 1 shows the results of observation of the states of the wiring material and the module protective materials (the insulating material and the adhesive) when bending was performed by changing the bending radius of the bent portion. As shown in Table 1, when the bending radius was decreased to 1.5 mm, the soft copper wiring material partially cracked. Also, when environmental tests were conducted, the adhesive and other module protective materials peeled especially in upward bent portions. When the bending radius was 3.0 mm, the wiring material did not crack, but the adhesive and the like as the module protective materials peeled in upward bent portions.</p>
+      <p>These results demonstrate that in the second solar cell module of the present invention in this Example in which bending is performed both upward and downward, bending can be performed in extremely good conditions free of peeling of the adhesive and the like when the bending radius is 4.5 mm or more. On the other hand, in the case of the first solar cell module of the present invention which is bent only downward as shown in FIG. 1, bending can be performed in similarly good conditions when the bending radius is 3.0 mm or more.</p>
+      <p>The solar cell module of this Example in which the bending radius of the bent portion is 4.5 mm can secure its reliability for long time periods even when exposed to a severe environment, i.e., the outside of a house.</p>
+      <p>
+        <tables>
+          <table>
+            <tgroup cols="1">
+              <tbody>
+                <row>
+                  <entry> TABLE 1 ______________________________________ Bending radius 1.5 mm 3.0 mm 4.5 mm ______________________________________ Upward Wiring .smallcircle. .smallcircle. .smallcircle. material Protective x x .smallcircle. materials Partially Partially peeled in peeled in environmen- environmen- tal tests tal tests Downward Wiring .smallcircle. .smallcircle. material Partially cracked Protective x .smallcircle. .smallcircle. materials Partially peeled in environmen- tal tests ______________________________________</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p>Note that the environmental tests conducted in this Example included 10 cycles of a humidity cycle test (-40.degree. C..revreaction.+85.degree. C., 85% RH), 1000 hours of a high-temperature, high-humidity test (85.degree. C., 85% RH), 1000 hours of a 120.degree. C. heat test, and 200 cycles of a temperature cycle test (-40.degree. C..revreaction.+90.degree. C.).</p>
+      <p>Example 2</p>
+      <p>A solar cell module according to this Example has a structure as shown in FIG. 1, i.e., is an L solar cell module obtained by bending a solar cell module manufactured by insulating and coating non-crystalline photovoltaic elements with plastic on a galvanized sheet as in Example 1. The raised angle to the horizontal of the right-receiving surface of this W solar cell module was about 10.degree..</p>
+      <p>The W solar cell module of this example was bent in a portion including a base material and a resin, not on a wiring material as in Example 1. The bending radius of the bent portion was 3.0 mm. Like the solar cell module of Example 1, the solar cell module of this Example can also ensure its reliability for long time periods.</p>
+      <p>Example 3</p>
+      <p>A solar cell module according to this Example is a W solar cell module obtained by bending a solar cell module manufactured by insulating and coating non-crystalline photovoltaic elements with a resin on a galvanized sheet as in Example 1. This W solar cell module included seven continuous W portions, and the raised angle to the horizontal of the right-receiving surface of this W solar cell module was about 10.degree..</p>
+      <p>The differences from the W solar cell module of Example 1 are that the number of bent portions is 7 and a knitted conductor is used as a wiring material in the bent portion. In this example, a tin-plated copper wire was used as a core of the knitted conductor. This improved the shrink properties and the ability to follow deformation during processing. This solar cell module also has an effect of preventing the fatigue breaking of the wiring material in the bent portion when the module is vibrated after bending.</p>
+      <p>Example 4</p>
+      <p>A hybrid roof panel according to this Example uses the W solar cell module of Example 1.</p>
+      <p>The structure will be described with reference to the sectional view in FIG. 12. This hybrid roof panel comprises a panel casing 1202 in which an air inlet 1203 and an air outlet 1204 are formed, a window 1201 which transmits light, a W solar cell module 1205 described above, and W black iron plates 1206.</p>
+      <p>The frames and surfaces of the panel casing 1202 were formed by iron plates to increase the strength of the panel casing 1202. Additionally, the interior of the panel casing 1202 was coated with a heat insulating material (not shown) so as not to release heat. Polystyrene was used as this heat insulating material. 4-mm thick reinforced glass was used as the window 1201 to increase the load resistance and the heat insulating properties, thereby minimizing the heat loss to the outside air. To obtain solar light as much as possible, the window 1201 was formed on almost the entire upper surface of the panel casing.</p>
+      <p>The air inlet 1203 was formed in one side surface in the widthwise direction of the panel casing 1202. The air inlet 1203 was so formed as to be able to communicate with the space on the non-light-receiving side of the W solar cell module 1205 and the W black iron plates 1206.</p>
+      <p>The air outlet 1204 was formed, apart from the air inlet 1203, in the lower surface of the panel casing 1202. The air outlet 1204 was a circular hole 150 mm in diameter. This dimension need only be one with which the air outlet 1204 communicates with a duct for supplying warm air into the inside of a house, so the dimension can be selected in accordance with the size of the duct. A dust filter was also provided to prevent the entrance of dust into the house.</p>
+      <p>In the panel casing 1202, the W solar cell module 1205 and the W black iron plates 1206 were arranged parallel to the window 1201. These W solar cell module 1205 and W black iron plates 1206 were fixed by machine screws to L angles 1207, with some spacers interposed between them, which were attached to the side walls of the panel casing 1202.</p>
+      <p>The electricity generated by the W solar cell module 1205 was extracted from the air inlet 1203 to the outside by cable connectors 1208. The cable connectors 1208 were positioned near the air inlet 1203. Since, therefore, it was considered that the temperature was the same as that of the rear surface of a common roof, ordinary cable connectors were used.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20070520">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>1. A roof panel comprising at least: a casing having an air inlet and an air outlet; a solar cell module so arranged as to divide the interior of said casing into two portions; and a window formed on the upper surface of said casing; wherein said solar cell module comprises at least a base material, a first insulating material formed on said base material, a photovoltaic element set including a plurality of photovoltaic elements and a wiring material for electrically connecting said photovoltaic elements formed on said first insulating material, and a second insulating material formed on said photovoltaic element set; wherein said solar cell module has a bent portion in a portion where said wiring material is arranged; and wherein light-receiving surfaces of said photovoltaic elements are at an angle to the bottom of said casing and are parallel to each other. </claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>2. A panel according to claim 1, wherein said wiring material is a soft metal. </claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>3. A panel according to claim 1, wherein said wiring material is a knitted conductor. </claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>4. A panel according to claim 1, wherein the bending radius of the bent portion is not less than 4.5 mm. </claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>5. A panel according to claim 1, wherein each of said photovoltaic elements has a non-single-crystal semiconductor. </claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>6. A roof panel according to claim 1, wherein the angle of the light-receiving surfaces of said photovoltaic elements to the bottom of said casing is about +10 degrees. </claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>7. A roof panel according to claim 1, wherein said solar cell module has conventional cable connectors to extract power. </claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>8. A roof panel according to claim 1, wherein said solar cell module is positioned near the air inlet. </claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>9. A panel according to claim 1, wherein a portion of a section of said base material has a W shape. </claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>10. A method of installing a roof panel which comprises at least a casing having an air inlet and an air outlet, a solar cell module so arranged as to divide the interior of said casing into two portions, and a window formed on the upper surface of said casing, wherein said solar cell module comprises a base material, a first insulating material formed on said base material, a photovoltaic element set including a plurality of photovoltaic elements and a wiring material for electrically connecting said photovoltaic elements formed on said first insulating material, and a second insulating material formed on said photovoltaic element set, wherein said solar cell module has a bent portion in a portion where said wiring material is arranged; and wherein light-receiving surfaces of said photovoltaic elements are at an angle to the bottom of said casing and are parallel to each other, comprising the step of: arranging said roof panel on a roof furring or a roof structural material to introduce the outside air from said air inlet and to introduce air extracted from said air outlet to the inside of a house or exhaust the air to the outside. </claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>11. A method of installing a roof panel according to claim 10, wherein the angle of the light-receiving surfaces of said photovoltaic elements to the bottom of said casing is about +10 degrees. </claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>12. An air flowing apparatus comprising: a roof panel comprising at least a casing having an air inlet and an air outlet, a solar cell module so arranged as to divide the interior of said casing into two portions, and a window formed on the upper surface of said casing; means for introducing the outside air to said air inlet; and means for introducing air extracted from said air outlet to the inside of a house or exhausting the air to the outside, wherein said solar cell module comprises at least a base material, a first insulating material formed on said base material, a photovoltaic element set formed on said first insulating material and including a plurality of photovoltaic elements and a wiring material for electrically connecting said photovoltaic elements, and a second insulating material formed on said photovoltaic element set, wherein said solar cell module has a bent portion in a portion where said wiring material is arranged, and wherein light-receiving surfaces of said photovoltaic elements are at an angle to the bottom of said casing and are parallel to each other. </claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>13. A solar power generator comprising: a casing having an air inlet and an air outlet; a solar cell module so arranged as to divide the interior of said casing into two portions; and a window formed on the upper surface of said casing; wherein the solar cell module comprises at least a base material, a first insulating material formed on said base material, a photovoltaic element set including a plurality of photovoltaic elements and a wiring material for electrically connecting said photovoltaic elements formed on said first insulating material, and a second insulating material formed on said photovoltaic element set, wherein said solar cell module has a bent portion where said wiring material is arranged, and wherein light-receiving surfaces of sai photovoltaic elements are at an angle to the bottom of said casing and are parallel to each other; and a power converter electrically connected to said solar cell module. </claim-text>
+    </claim>
+  </claims>
+  <drawings format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US6063996A_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="6063996A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US6063996A_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="6063996A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US6063996A_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="6063996A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US6063996A_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="6063996A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US6063996A_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="6063996A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US6063996A_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="6063996A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US6063996A_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="6063996A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US6063996A_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="6063996A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US6063996A_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="6063996A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US6063996A_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="6063996A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US6063996A_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="6063996A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US6063996A_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="6063996A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US6063996A_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="6063996A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US6063996A_00014.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="6063996A.TC.SD.P0001.D0001.png" />
+    </figure>
+  </drawings>
+  <image file="US6063996A.PDF" type="pdf" size="332490" pages="18" />
+</lexisnexis-patent-document>

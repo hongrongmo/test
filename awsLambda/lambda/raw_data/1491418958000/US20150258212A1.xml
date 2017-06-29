@@ -1,0 +1,1249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150258212A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030332" date-changed="20151002" time-changed="033527">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121317803">
+        <country>US</country>
+        <doc-number>20150258212</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14433599</doc-number>
+        <date>20131001</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>GB</country>
+        <doc-number>1217911</doc-number>
+        <date>20121005</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>A61K  47/48        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>47</main-group>
+        <subgroup>48</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61K  31/192       20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>192</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>A61K  47/48961     20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>47</main-group>
+        <subgroup>48961</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61K   9/143       20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>143</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61K   9/1611      20130101 LI20140903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>1611</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61K  31/192       20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>192</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">17</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">LAYERED DOUBLE HYDROXIDES</invention-title>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>OXFORD PHARMASCIENCE LIMITED</orgname>
+            <address>
+              <city>Oxford, Oxfordshire</city>
+              <country>GB</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>GB</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Thompson</last-name>
+            <first-name>Claire</first-name>
+            <address>
+              <city>Hertfordshire</city>
+              <country>GB</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Bravo Cordero</last-name>
+            <first-name>Marcelo Leonardo</first-name>
+            <address>
+              <city>Oxfordshire</city>
+              <country>GB</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>O'Hare</last-name>
+            <first-name>Dermot Michael</first-name>
+            <address>
+              <city>Oxford</city>
+              <country>GB</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>GB13052554</doc-number>
+        <date>20131001</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014053822</doc-number>
+        <date>20140410</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20160114">
+      <main-family family-id="154911177">
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2887059</doc-number>
+            <kind>A1</kind>
+            <date>20140410</date>
+          </document-id>
+          <application-date>
+            <date>20131001</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014053822</doc-number>
+            <kind>A4</kind>
+            <date>20140530</date>
+          </document-id>
+          <application-date>
+            <date>20131001</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EA</country>
+            <doc-number>201590673</doc-number>
+            <kind>A1</kind>
+            <date>20150831</date>
+          </document-id>
+          <application-date>
+            <date>20131001</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2903598</doc-number>
+            <kind>A1</kind>
+            <date>20150812</date>
+          </document-id>
+          <application-date>
+            <date>20131001</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>GB</country>
+            <doc-number>201217911</doc-number>
+            <kind>D0</kind>
+            <date>20121121</date>
+          </document-id>
+          <application-date>
+            <date>20121005</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>2576DELNP2015</doc-number>
+            <kind>A</kind>
+            <date>20150911</date>
+          </document-id>
+          <application-date>
+            <date>20150330</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2013326298</doc-number>
+            <kind>A1</kind>
+            <date>20150423</date>
+          </document-id>
+          <application-date>
+            <date>20131001</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2929876</doc-number>
+            <kind>A1</kind>
+            <date>20151014</date>
+          </document-id>
+          <application-date>
+            <date>20131001</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2016500667</doc-number>
+            <kind>A</kind>
+            <date>20160114</date>
+          </document-id>
+          <application-date>
+            <date>20131001</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150063559</doc-number>
+            <kind>A</kind>
+            <date>20150609</date>
+          </document-id>
+          <application-date>
+            <date>20131001</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>MX</country>
+            <doc-number>2015004188</doc-number>
+            <kind>A</kind>
+            <date>20150717</date>
+          </document-id>
+          <application-date>
+            <date>20131001</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150258212</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20131001</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014053822</doc-number>
+            <kind>A1</kind>
+            <date>20140410</date>
+          </document-id>
+          <application-date>
+            <date>20131001</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="154911176">
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2887059</doc-number>
+            <kind>A1</kind>
+            <date>20140410</date>
+          </document-id>
+          <application-date>
+            <date>20131001</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014053822</doc-number>
+            <kind>A4</kind>
+            <date>20140530</date>
+          </document-id>
+          <application-date>
+            <date>20131001</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EA</country>
+            <doc-number>201590673</doc-number>
+            <kind>A1</kind>
+            <date>20150831</date>
+          </document-id>
+          <application-date>
+            <date>20131001</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2903598</doc-number>
+            <kind>A1</kind>
+            <date>20150812</date>
+          </document-id>
+          <application-date>
+            <date>20131001</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>GB</country>
+            <doc-number>201217911</doc-number>
+            <kind>D0</kind>
+            <date>20121121</date>
+          </document-id>
+          <application-date>
+            <date>20121005</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>2576DELNP2015</doc-number>
+            <kind>A</kind>
+            <date>20150911</date>
+          </document-id>
+          <application-date>
+            <date>20150330</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2013326298</doc-number>
+            <kind>A1</kind>
+            <date>20150423</date>
+          </document-id>
+          <application-date>
+            <date>20131001</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2929876</doc-number>
+            <kind>A1</kind>
+            <date>20151014</date>
+          </document-id>
+          <application-date>
+            <date>20131001</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2016500667</doc-number>
+            <kind>A</kind>
+            <date>20160114</date>
+          </document-id>
+          <application-date>
+            <date>20131001</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150063559</doc-number>
+            <kind>A</kind>
+            <date>20150609</date>
+          </document-id>
+          <application-date>
+            <date>20131001</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>MX</country>
+            <doc-number>2015004188</doc-number>
+            <kind>A</kind>
+            <date>20150717</date>
+          </document-id>
+          <application-date>
+            <date>20131001</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150258212</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20131001</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014053822</doc-number>
+            <kind>A1</kind>
+            <date>20140410</date>
+          </document-id>
+          <application-date>
+            <date>20131001</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The invention relates to layered double hydroxide (LDH) materials and in particular to new methods of preparing improved LDH materials which have intercalated active anionic compounds (improved LDH-active anion materials). The improved LDH-active anion materials are characterised by their high degree of robustness, demonstrated by their high Particle Robustness Factor values, and by their ability to retain substantially all of the intercalated active anionic compound, in the absence of ion exchange conditions and/or at pH&gt;4.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150430</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015258212A1</docdb-publication-number>
+      <docdb-application-id>444512078</docdb-application-id>
+      <new-owner>OXFORD PHARMASCIENCE LIMITED, UNITED KINGDOM</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:THOMPSON, CLAIRE;BRAVO CORDERO, MARCELO LEONARDO;O'HARE,DERMOT MICHAEL;SIGNING DATES FROM 20150413 TO 20150422;REEL/FRAME:035541/0450</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to layered double hydroxide (LDH) materials and in particular to a new method of preparing LDH materials in which active anionic compounds are intercalated (LDH-active anionic compounds). Further the present invention relates to novel LDH-active anionic compounds which are characterised by their high degree of robustness, and by their ability to retain the intercalated active anionic compound. The invention also relates to the use of such novel LDH-active anionic compounds in, for example, active anionic compound-storage and/or active anionic compound-carrier and/or active anionic compound-delivery systems; to formulations comprising LDH-active anionic compounds and especially to formulations comprising LDH-active anionic compounds which require the taste, irritation or other unwanted/adverse properties of the active anion to be masked and/or reduced.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">A review of layered double hydroxides (LDHs) is given in Chemistry in Britain, September 1997, pages 59 to 62. Briefly, these materials are either mixed hydroxides of monovalent and trivalent metals or mixed hydroxides of divalent and trivalent metals, having an excess of positive charge that is balanced by interlayer anions. Such materials can be represented either by:</p>
+      <p id="p-00003-en" num="0000">[in-line-formulae][M<sup>I</sup><sub>(1-x)</sub>M<sup>III</sup><sub>x</sub>(OH)<sub>2</sub>]<sup>n+</sup>A<sup>z−</sup><sub>n/z</sub><i>.y</i>H<sub>2</sub>O or[/in-line-formulae]</p>
+      <p id="p-00004-en" num="0000">[in-line-formulae][M<sup>II</sup><sub>(1-x)</sub>M<sup>III</sup><sub>x</sub>(OH)<sub>2</sub>]<sup>x+</sup>A<sup>z−</sup><sub>x/z</sub><i>.y</i>H<sub>2</sub>O[/in-line-formulae]</p>
+      <p id="p-00005-en" num="0000">where M<sup>I</sup>, M<sup>II </sup>and M<sup>III </sup>are mono-, di- and trivalent cations respectively, that occupy octahedral positions in hydroxide layers; A<sup>z− </sup>is an interlayer charge-compensating anion; z is an integer; n=2x−1; x is less than 1; and y is ≧0.</p>
+      <p id="p-00006-en" num="0003">The methods of manufacturing LDH materials are well documented and include ion exchange, co-precipitation, rehydration, secondary intercalation, re-coprecipitation, and templated synthesis—see for example He et al., <i>Struct. Bond, </i>2006, 119, p. 89-119. More recently, US2010/0233286 A1 (Lu and Xu) describes that co-precipitation is known to involve the steps of forming a mixed metal ion solution containing the appropriate metal ions and adding this into an alkaline material, e.g. an alkaline solution, to form LDH particles. Generally, the alkaline solution is a sodium hydroxide solution, optionally with either sodium bicarbonate or sodium carbonate, however others are also known, for example ammonia solutions, KOH, NaHCO<sub>3</sub>, KHCO<sub>3</sub>, Na<sub>2</sub>CO<sub>3</sub>, K<sub>2</sub>CO<sub>3 </sub>and organic amines such as methylamine and ethylamine. Using this method, it is possible to produce LDH materials intercalated with one or more simple anions such as, Cl<sup>− </sup>(derived from the counter chloride salt of the metal chloride starting material) NO<sub>3</sub><sup>− </sup>(derived from the counter nitrate salt of the metal nitrate starting material) and CO<sub>3</sub><sup>− </sup>(derived from NaCO<sub>3 </sub>used as part of the alkaline solution). More often, the LDH product contains a mixture of intercalated anions, for example when a solution of MgCl<sub>2 </sub>and AlCl<sub>3 </sub>is co-precipitated with an alkaline solution containing NaOH and Na<sub>2</sub>CO<sub>3</sub>, then Mg<sub>3</sub>Al(OH)<sub>8</sub>(CO<sub>3</sub>)<sub>0.5</sub>.H<sub>2</sub>O is produced, i.e. an LDH material intercalated with CO<sub>3</sub><sup>− </sup>ions. Another feature of U2010/0233286 A1 is the treatment of the LDH particles with a “hydrothermal” step. This is described as a way to reduce the size of the LDH particles and to ensure that they conform to a narrow particle size distribution of ±20% around the average size. The resulting product forms a stable and well dispersed suspension of LDH particles in water. The hydrothermal treatment involves dispersing the LDH material formed by a co-precipitation process in water and heating this dispersion to a temperature of from greater than 80° to 150° C. in an autoclave for a period of 1 hour to 144 hours. During this prior art process, boiling is preferably suppressed. The modified LDH particles may be recovered from the hydrothermally treated suspension by removing the water, for example by drying, filtration or centrifugation, and then drying the separated LDH particles.</p>
+      <p id="p-00007-en" num="0004">Co-precipitation followed by an additional ion exchange process is reported to be one way to introduce larger, more complex interlayer anionics into the LDH materials. For example, EP0987328(B1) (Choy and Kwak) describes an LDH/bio-inorganic hybrid composite that is capable of storing and carrying genes such as nucleoside-5′-monophosphate, nucleoside-5′triphosphate, DNA and RNA and is prepared using three steps: a first step involving co-precipitation in which an alkaline material is added to an aqueous mixed metal solution comprising a bivalent metal (M<sup>II</sup>) (e.g. Mg(NO<sub>3</sub>)<sub>2</sub>) and a trivalent metal (M<sup>III</sup>) (e.g. Al(NO<sub>3</sub>)<sub>3</sub>). A second step which isolates the reaction product from the first step; that is, a stable layered double hydroxide (LDH) intercalated with charge compensating anions (derived from the original bi- and trivalent metal starting materials (e.g. OH<sup>−</sup>, NO<sub>3</sub><sup>−</sup>)). And a third step in which these intercalated compensating anions are subjected to an ion exchange reaction with the anionic species of the desired gene, DNA or RNA. Compounds of the general formula [M<sup>II</sup><sub>(1-x) </sub>M<sup>III</sup><sub>x</sub>(OH<sub>2</sub>)][A<sub>BIO</sub><sup>0−</sup>]<sub>x/n</sub>.yH<sub>2</sub>O are produced. A very similar co-precipitation/ion exchange process is described for example in WO2010/089691A1 which apparently produces “highly crystalline” stearate and oleate intercalated layered double hydroxides, in CN101597474B which describes glyphosine-LDHs with “good crystal phase structure” and in EP0550415 A2 which describes a uniform layered double hydroxide intercalated by polyoxometalate. However as described below, the present applicant has found that in practice, even though LDH-active anion materials made by this method do appear to be crystalline, the degree of robustness exhibited by these products is significantly less than is observed in the improved LDH-active anion materials of the present invention, and in any case does not provide materials that are capable of solving the problems addressed by the present invention.</p>
+      <p id="p-00008-en" num="0005">Other prior art, for example EP 1341556(B1) teaches the preparation of a drug delivery system comprising LDH materials intercalated with pharmaceutically-active anionic compounds which again uses a similar co-precipitation/ion exchange method described above and starts with a host LDH compound such as [LiAl<sub>2</sub>(OH)<sub>6</sub>]Cl.H<sub>2</sub>O or Ca<sub>2</sub>Al(OH)<sub>6</sub>NO<sub>3</sub>.xH<sub>2</sub>O, (presumably made via a co-precipitation reaction), and then uses an ion exchange reaction in which the host LDH is reacted with a sodium salt of the desired pharmaceutically active anionic compound. The intercalated LDH-pharmaceutically-active anion material is separated from the reaction mixture by filtration, then washed with an excess of deionised water and acetone and allowed to dry in air. The advantage of such LDH-active anion materials is described to be their ability to release their active anionic compounds slowly to produce sustained/controlled release drug delivery systems. As the results in this prior art show, at pH 4 and 7 such LDH-pharmaceutically-active anion materials release 60-80% of the pharmaceutical within the first 5 minutes, and then release the remaining 20-40% over the period of 40 to 60 minutes.</p>
+      <p id="p-00009-en" num="0006">The study reported by Silion et al in Journal of Materials Science, Vol. 21 (11), 2010 concerns the in vitro and in vivo behavior of ketoprofen intercalated into LDH materials. The intercalated materials are made using the same ion exchange method described above, and as the broad XRD peaks and release profiles in this publication demonstrate, the materials tested are of a poor ordered structure. Moreover, the intercalated materials release about 10% of the ketoprofen in around 30 minutes at pH7.4, and the remaining ketoprofen is released over time.</p>
+      <p id="p-00010-en" num="0007">Chinese patent CN1299616C describes making LDH materials intercalated with food preservative compounds via a co-precipitation process, involving the steps: reacting di- and tri-metal salts and a food preservative substance (FP) with sodium hydroxide at pH 7-12, under nitrogen and heating between 15 and 150° C. for 2 to 72 hours to yield the desired FP-LDH material. The purpose of these FP-LDH materials is to provide for the slow release (1 to 60 days) of the food preservative into food. The Figures show that at a pH of 4.5 and above, 10% or more of the food preservative substance is released almost immediately, and the remainder leaches over a period of several hours. The XRD patterns record low intensity (CPS) values which is an indication that the FP-LDH materials made by this prior art are not robust.</p>
+      <p id="p-00011-en" num="0008">Chinese patent CN 1297276C discloses the preparation of slow releasing intercalated 5-aminosalicilic acid (5-ASA)-LDH materials via a co-precipitation process: two soluble metallic salts and 5-aminosalicilic acid are reacted with sodium hydroxide at pH 6-10 and heated at 15 to 70° C. for 12 to 72 hours. The slow release results presented in <figref>FIG. 3</figref> demonstrate that at pH 6.9, as much as 40% of the 5-ASA is released almost immediately and the rest is released over time. The broad peaks of the XRD in <figref>FIG. 1</figref> indicate that the 5-ASA-LDH material produced according to this prior art has an extremely low robustness.</p>
+      <p id="p-00012-en" num="0009">Chinese patent CN 101785860B teaches two preparative methods for making Tegafur/LDH nanometer hybrid materials that exhibit slow release of the medicament Tegafur. A first method involves the co-precipitation of di- and tri-metallic salts with Tegafur under alkaline conditions and then recovering the desired Tegafur/LDH material. The second method makes an LDH material from two metallic salts in a first step, and this is followed by a second step in which Tegafur is intercalated into the LDH material by an ion-exchange reaction. The slow release characteristics of the materials presented in <figref>FIG. 4</figref> show that almost 60% Tegafur is released after about 30 minutes at pH 7.2 and this is up to about 90% at pH 4.8 after about 30 minutes. The low intensity values and broad peaks in the XRDs reveal that the Tegafur-LDH materials made as described in this prior art are of poor robustness.</p>
+      <p id="p-00013-en" num="0010">Chinese Patent document CN 100462071C describes preparing magnetic Brufen-LDH materials which again provide the sustained release of ibuprofen. The method involves co-precipitating metal salts in an alkaline environment (e.g. NaOH) to give the LDH and then introducing into this the ibuprofen and an iron containing material, and recovering product materials with a high specific magnetisation by filtration followed by washing and drying.</p>
+      <p id="p-00014-en" num="0011">Chinese patent CN 102218043B describes sustained release tablets comprising dextran-LDH-aspirin materials that are made by heating di- and tri-metal salts with aspirin at 70 to 80° C. in sodium hydroxide (pH 10 to 12) under nitrogen for 40 minutes. The resulting slurry is then heated with a dextran solution at a temperature of 70 to 85° C. under nitrogen and with stirring. The process to isolate and purify the desired final product is described as pouring the dextran-LDH-ASP mixture into cold ethanol at a temperature of from −20 to −10° C., allowing this to stand for 1 hour in a freezer and then at room temperature for 30 minutes before adding doubly distilled water and centrifuging to separate the solid phase. The latter is then separated, washed with ethanol and dried at 65 to 80° C. 0.085 Mpa in a vacuum oven. As <figref>FIGS. 1</figref>, <b>2</b> and <b>3</b> in this patent illustrate, at least 10% of the aspirin is released after about 30 minutes no matter whether the pH is 1.0, 6.8 or 7.0; and 80% or more of the aspirin is released after about 16 hours.</p>
+      <p id="p-00015-en" num="0012">CN101507819B describes what it calls a hydrothermal synthesis method for making hydrotalcite (LDH) materials intercalated with ibuprofen. Metal salts are co-precipitated with ibuprofen under alkaline conditions, pH 9 to 11 and with heating to 100 to 180° C. for 18 to 72 hours. The resulting product is then isolated and dried at 60-80° C. for 24 to 72 hours. This method favours the production of particles sized 300-600 nm and the document reports that increasing the particle size, decreases the rate that ibuprofen is released.</p>
+      <p id="p-00016-en" num="0013">WO2004/099104 describes the use of clay materials such as LDH materials to sequester waste material containing manure from animal feedlots. The resulting material can then be dried and granulated, and as this document states: because the anion and cations are unlikely to be permanently affixed to the LDH, they are slowly released into the environment.</p>
+      <p id="p-00017-en" num="0014">To summarise: it is evident from the wealth of literature and patent publications discussed above, that it is well known to use intercalated LDH-active anion materials as a means to slow down the release of an active anionic compound and thereby to provide controlled release preparations. However, the present invention is not concerned with providing such preparations. Instead the present invention is concerned with developing improved LDH-active anion materials that are extremely robust, as defined below, and that are non-leaching. By “non-leaching” we mean that the improved LDH-active anion materials of the present invention are on the one hand capable of delivering the active anion at pH 4 or below, but are on the other hand capable of retaining substantially all of the active anionic compound within the LDH structure when present in an environment where ion exchange conditions are absent and/or at above pH 4. The present invention is particularly concerned with improved LDH-active anion materials that, in the absence of ion-exchange conditions and/or at a pH&gt;4, do not release any significant amount of the active anionic compound over time; it is substantially retained within the LDH matrix. The preparations covered by the present invention can include, but are not limited to, active anions with pharmaceutical and/or non-pharmaceutical activity, and includes any active anion which is required for reasons of health, safety, toxicity, ease of use and/or ease of handling to be substantially retained within the LDH matrix when ion exchange conditions are absent and/or the pH is &gt;4. Poor taste, bitterness, burn and irritation within the mouth, buccal cavity, larynx or gastrointestinal tract are issues for a number of orally delivered formulations of drug classes including, but not limited to, non-steroidal anti-inflammatory drugs NSAIDs) gaba-analogues and antibiotics. These issues lead to non-compliance in patients, in particular within pediatrics patient groups. Furthermore, as well as pharmaceuticals, there are numerous food and beverage products and bulking agents that have unpleasant and bitter tasting components which hinder the acceptability of these ingredients to the consumer.</p>
+      <p id="p-00018-en" num="0015">Hereafter “poor tasting or irritating substance” is used to define any ingredient which may or may not be pharmaceutically active, which results in any unacceptable taste, bitterness, burn, irritation or any other unacceptable sensation being experienced by the consumer or patient within the mouth, buccal cavity, larynx or gastrointestinal tract, either on its own or in any medicament, health supplement, pharmaceutical, non-pharmaceutical, food, or beverage formulation, preparation or recipe.</p>
+      <p id="p-00019-en" num="0016">Prior art methods to improve the palatability of poor tasting or irritating substances in orally delivered pharmaceutical and/or other edible formulations use a number of different taste masking strategies to effectively over ride, conceal or reduce the availability of the poor tasting or irritating substance to the taste buds and/or other receptors in the mouth, buccal cavity, larynx or gastrointestinal tract of the consumer. For example, in tablet and non-tablet products (e.g. syrups, suspensions, liquids and orally disintegrating granules) taste masking may involve the addition of extra ingredients such as flavours, sweeteners and amino acids to the formulation. Alternately, either the particles of the poor tasting or irritating substance or the entire formulation, for example the powder or the tablet, may be encapsulated with a coating selected from a wide variety of polymers, for example polymeric hydrophilic or lipophilic materials such as starch, gelatine, lecithin, methylcellulose or ethylcellulose. Other taste masking techniques use conventional granulation; spray congealing with lipids; the formation of complexes with cyclodextrins, liposomes, ion-exchange resins; freeze drying processes; multiple emulsions; salts and polymeric membranes. A review of taste masking methods is given in Sohi et al., Drug Development and Industrial Pharmacy, 2004, 30, 5 pp 429-448.</p>
+      <p id="p-00020-en" num="0017">When taste masking poor tasting or irritating substances in oral formulations using coating methods, the goal is to cover the poor tasting or irritating substance, or the entire formulation, with a coating that will remain in place for as long as the formulation is in the mouth of the patient or consumer, but not so long that it interferes with the dissolution profile of the active anionic compound as this could, where the active anionic compound is an active pharmaceutical, compromise drug efficacy. As well as this potential pitfall, coating also adds significant cost both as a result of using added ingredients but also as a result of the extra processing time needed for manufacture. Coated materials in the form of microcapsules can also be unstable and may rupture in liquid systems.</p>
+      <p id="p-00021-en" num="0018">Taste, burn and/or irritation masking via complexation involves the poor tasting or irritating substance forming a complex at a molecular level with a complexing agent. Essentially, the complexing agents weakly bind the poor tasting or irritating substance using Van der Waals forces and thereby reduce the degree to which the poor tasting or irritating substance is exposed to the taste buds, mouth, buccal cavity, larynx or gastrointestinal tract. Prior art disclosing this technique includes: JP03,236316 (Kurasumi et al.); U.S. Pat. No. 5,024,997 (Motola et al.); JP02291244 (Ikezuki); Manek and Kamat, <i>Indian J. Pharm. Sci., </i>1981, 43, 11-12, 209-212; EP0501763 (Honeysett et al.); U.S. Pat. No. 6,514,492 (Gao et al.); Agarwal et al., <i>Drug Dev. Ind. Pharm., </i>2000, 26, 7, 773-776.</p>
+      <p id="p-00022-en" num="0019">However, complexation technologies again add to the cost and time of manufacturing and they are only suitable for formulations that contain relatively small amounts of the poor tasting or irritating substance, such as in low dosage drugs. In addition, complexation does not usually encapsulate the entire structure of the poor tasting or irritating substance and leaves parts of the structure free to interact with cell receptors in the mouth, buccal cavity, larynx or gastrointestinal tract. Hence, taste, bitterness, burn, or irritation may not be completely negated by this method.</p>
+      <p id="p-00023-en" num="0020">As with coatings, complexing agents can affect the release profile of the poor tasting or irritating substance and this, as mentioned above, can have an effect on drug efficacy where the poor tasting or irritating substance is a pharmaceutically active material. For example, ion exchange resin complexes can be designed to release the complexed pharmaceutically active material by exchanging with appropriately charged ions within the gastrointestinal tract (GIT), in this way they allow diffusion of the free pharmaceutically active material from the resin. This exchange may not provide immediate release of the drug from the formulation and this will hamper the drug dissolution profile.</p>
+      <p id="p-00024-en" num="0021">The prior art also describes several methods to determine the extent to which a substance is poor tasting, for example an assay for bitter taste function is reported by J. D. Boughter Jr et al, in Chemical Senses 2001, Vol 27, issue 2 pp 133-142; and the company Opertech Bio, Inc provides details of a high throughput system for measuring taste quality and palatability on its website, opertechbio.com.</p>
+      <p id="p-00025-en" num="0022">The present invention is directed to new improved intercalated LDH-active anion materials, in particular those which are extremely robust and highly resistant to the leaching of the active anionic compound from the LDH, in the absence of ion-exchange conditions and/or in an environment above pH 4. Such improved materials are useful in a wide range of storage, carrier and delivery system applications, including pharmaceutical and non-pharmaceutical applications.</p>
+      <p id="p-00026-en" num="0023">The present invention is also directed to a simple, cost effective and reliable process for the manufacture of improved intercalated LDH-active anion materials which are extremely robust and highly resistant to leaching, especially in the absence of ion exchange conditions and/or under conditions of above pH4.</p>
+      <p id="p-00027-en" num="0024">The present invention is particularly directed to providing highly effective taste, burn and/or irritation masked compositions, for both pharmaceutical and non-pharmaceutical applications.</p>
+      <p id="p-00028-en" num="0025">The terms “active anionic compound” and “active anion” are used interchangeably herein and shall be interpreted to include any molecule or compound that is anionic (i.e. a molecule with a negative charge) or that has an anion generating moiety, for example a salt of an anionic molecule. An anionic compound or anion is interpreted herein to be “active” in the sense that it produces a chemical, physical, physiological or pharmaceutical effect. This effect may or may not be recognised in an animal or human body. Suitable active anionic compounds may be simple anions whereas others may be larger and/or have structures which are more complex than simple anions and may include, but are not limited to, dye compounds, agrochemicals, additives used in medicaments, food supplements and vitamin supplements, food or beverages and pharmaceuticals, all for human or animal use. Preferred active anionic compounds that produce a pharmaceutical effect and may include, but are not limited to, the classes of NSAIDS, gaba-analogues, antibiotics, statins, angiotensin-converting enzyme (ACE) inhibitors, antihistamines, dopamine precursors, anti-microbials, psychostimulants, prostaglandins, anti-depressants, anti-convulsants, coagulants, anti-cancer agents, immunosuppressants and laxatives.</p>
+      <p id="p-00029-en" num="0026">The Applicant has found that the robustness and performance characteristics of LDH-active anion materials, such as those made by any known method for example a co-precipitation process to make the LDH followed by an ion exchange reaction to intercalate the active anion, or a single step co-precipitation process involving the active anion and the metal salts, are be transformed and significantly improved using a specific mixing, heating, washing and drying procedure which is the present invention, into highly robust and essentially non-leaching LDH-active anion materials, specifically in the absence of ion exchange conditions or at a pH above 4.</p>
+      <p id="p-00030-en" num="0027">Thus the present invention provides a process for the manufacture of improved LDH-active anion material, comprising the steps of: <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>a) dispersing an LDH-active anion starting material in a liquid dispersant, then heating and agitating the resulting suspension;</li><li>b) cooling the heated suspension and separating the heat treated LDH-active anionic material from the suspension;</li><li>c) washing the heat-treated LDH-active anionic compound and drying to constant weight to yield improved LDH-active anion material.</li></ul></li></ul></p>
+      <p id="p-00031-en" num="0031">Suitable liquid dispersants include deionised water, and any other liquid which does not dissolve either the starting or improved LHD-active anion material. Any suitable reaction vessel may be employed. The preferred reaction vessel is an autoclave, a pressure vessel, or a standard reaction vessel, and this may be under an inert atmosphere, e.g. nitrogen, at any suitable pressure. Specifically, high pressure conditions are not essential. The ideal temperature used in step a) is either a specific temperature, or a range of temperatures, and is between 50° C. and 200° C., preferably between 80° C. and 180° C. and most advantageously at 150° C.</p>
+      <p id="p-00032-en" num="0032">Agitation in step a) is a critical step in the process. The hydrothermal process described in the prior art does not implicitly or explicitly hint, disclose or suggest the need for agitation, and the Applicant has demonstrated in the specific Examples below that when agitation is absent then the robustness of the resulting product is too low to provide the non-leaching benefits of the present invention. “Agitation” includes any means any suitable means which serves to mix, turn or generally move the reactants in step a) about during the process to produce the improved LDH-active anion material. Preferred means of agitation include one or more of vibration, shaking and vigorous stirring. A desirable stirring rate is in the range 800 rpm to 1200 rpm. “Agitation” is important to facilitate good transfer of heat within the suspension to generate annealed, robust particles. Thus “agitation” also includes any means which facilitates good transfer of heat within the suspension formed in step a) to generate robust particles.</p>
+      <p id="p-00033-en" num="0033">The period of heating can be between 1 and 72 hours, preferably less than 8 hours and ideally around 2 hours.</p>
+      <p id="p-00034-en" num="0034">After cooling to room temperature, the heat treated LDH-active anion material may conveniently be separated from the suspension using vacuum filtration, and the resulting improved LDH-active anion material is obtained after washing the separated heat-treated material one or more times with a liquid to remove any residual free active anionic compound from the surface; suitable liquids to achieve this include deionised water. Further improved results are obtained when a further washing liquid is used, for example methanol or acetone to remove residual water from the surface of the improved LDH-active anion material.</p>
+      <p id="p-00035-en" num="0035">Preferably drying in step c) is performed on material that has been sieved, de-lumped and/or crushed to break down any lumps; this ensures an efficient the drying process which again gives further improved results. Drying may be carried out under vacuum and ideally at an elevated temperature of at least 50° C., and yet further enhancements are obtained when the product is agitated during the drying procedure.</p>
+      <p id="p-00036-en" num="0036">Although as described above, the LDH-active anion starting material may be made using any known method, the applicant has found particular advantage in using a single step co-precipitation reaction involving the steps: <ul id="ul-00003-en" list-style="none"><li><ul id="ul-00004-en" list-style="none"><li>i) forming a first mixed metal ion solution containing a) one or more trivalent metal cations, and b) one or more divalent metal cations;</li><li>ii) forming a second solution containing one or more active anionic compounds;</li><li>iii) heating the resulting second solution to a temperature above 25° C.;</li><li>iv) combining the first mixed metal ion solution with the warmed second solution with vigorous stirring; and collecting the resultant precipitated LDH-active anion material.</li></ul></li></ul></p>
+      <p id="p-00037-en" num="0041">The trivalent metal cations comprise metal ions of valence 3+; preferred examples include Al<sup>3+</sup>, Co<sup>3+</sup>, Fe<sup>3+</sup>, Mn<sup>3+</sup>, Ga<sup>3+</sup>, RH<sup>3+</sup>, RU<sup>3+</sup>, Cr<sup>3+</sup>, V<sup>3+</sup>, La<sup>3+</sup>, Y<sup>3+</sup>, Gd<sup>3+</sup> and La<sup>3+</sup>. The divalent metal cations comprise metals ions of valence 2+; preferred examples include Fe<sup>2+</sup>, Co<sup>2+</sup>, Ni<sup>2+</sup>, Cu<sup>2+</sup>, Zn<sup>2+</sup>, Mn<sup>2+</sup>, Pd<sup>2+</sup>, Ti<sup>2+</sup>, Ca<sup>2+</sup>, Cd<sup>2+</sup> and Mg<sup>2+</sup>.</p>
+      <p id="p-00038-en" num="0042">The preferred one or more trivalent metal cations comprise Al<sup>3+</sup> and/or Fe<sup>3+</sup> and/or Co<sup>3+</sup>, and the one or more divalent metal cations comprise Mg<sup>2+</sup> and/or Ca<sup>2+</sup> and/or Zn<sup>2+</sup>. Preferred di-/tri-valent cation pairs are Mg<sup>2+</sup>—Al<sup>3+</sup>, Ca<sup>2+</sup>—Al<sup>3+</sup> and Zn<sup>2+</sup>—Al<sup>3+</sup>.</p>
+      <p id="p-00039-en" num="0043">The first mixed metal ion solution may be prepared using any known technique, for example by dissolving salts of the relevant metals in a suitable solvent; such salts may include chlorides, nitrates, sulfates, carbonates and any other convenient and soluble metal salt. The preferred metal salts are metal nitrate, sulfates and chlorides; it is not necessary to use the same type of salt for each metal ion. The preferred solvent is water although any other solvent, or mixture of solvents, which dissolves the metal salts may be used. Alternatively, appropriate metals may be dissolved in one or more acids such as, but not limited to, HCl, HNO<sub>3</sub>, H<sub>2</sub>SO<sub>4</sub>, or organic carboxylic acids for example methanoic acid and acetic acid.</p>
+      <p id="p-00040-en" num="0044">It is advantageous if one or both of the first mixed metal ion solution and the second solution containing the one or more active anionic compounds are prepared and maintained under an inert atmosphere. It is desirable that the solvents used in each of the first and second solutions are at least miscible with one another, and it is especially convenient if both solvents are the same; water is preferred.</p>
+      <p id="p-00041-en" num="0045">The second solution may be heated to a specific temperature, or within a range of temperatures, between 25° C. and 100° C., preferably between 30° C. and 80° C., ideally between 55° C. and 65° C., and most advantageously at 60° C.</p>
+      <p id="p-00042-en" num="0046">When preparing the second solutions and also throughout the combination of the first and second solutions, it is important to keep the active anionic compound dissolved in the reaction solution; this may be achieved, for example, by adjusting the pH of the reaction mixture. The exact pH needed will depend on the solubility profile of the particular active anionic compound, for example when Ibuprofen is the active anionic compound then the pH of 9.5 or above is preferred and similar conditions are beneficial for Naproxen and Diclofenac.</p>
+      <p id="p-00043-en" num="0047">In a preferred process, the first mixed metal ion solution is added to the warmed second solution in Step iv) using relatively slow, for example drop-wise, addition. However the addition of the mixed metal ion solution should be completed within 4 hours and ideally within 1 to 2 hours. For best results, the resulting reaction mixture obtained at the end of the addition step iv) should be stirred, preferably under an inert atmosphere, for at least 10 minutes.</p>
+      <p id="p-00044-en" num="0048">The resultant precipitate containing LDH-active anion material is conveniently recovered from the reaction mixture by vacuum filtration and is washed, preferably at least twice, with water and vacuum filtered to dry.</p>
+      <p id="p-00045-en" num="0049">This method advantageously produces an LDH-active anion material in what is effectively a single co-precipitation step using readily available and inexpensive starting materials. Unlike other prior art methods discussed above, this method does not involve a first co-precipitation process to form an initial LDH material which comprises a simple intercalated anion such as NO<sub>3</sub><sup>−</sup>, Cl<sup>−</sup>, CO<sub>3</sub><sup>− </sup>which must be isolated and purified before employing a second ion-exchange process to intercalate the larger and/or more complex active anionic compound within it.</p>
+      <p id="p-00046-en" num="0050">Moreover, the Applicant has advantageously found that the LDH-active anion materials made using a one-step co-precipitation method produce even more robust improved LDH-active anion materials as compared against improved LDH active anion materials made using other co-preciptation/ion exchange methods.</p>
+      <p id="p-00047-en" num="0051">As previously mentioned, the process of the present invention produces significantly improved LDH-active anion materials with very highly robust structures and extremely low total leaching characteristics that are completely different from analogous LDH-active anionic compounds made using any of the methods in the prior art discussed above, (including the co-precipitation process followed by the hydrothermal steps disclosed in US2009/0108233 and US2010/0233286).</p>
+      <p id="p-00048-en" num="0052">The difference between the improved process of the present invention and the hydrothermal steps disclosed in US2009/0108233 and US2010/0233286 is in some respects a subtle one, however as demonstrated below in the specific Examples the specific heating, agitation, drying and washing steps identified by the Applicant have a profound effect on the robustness and leaching characteristics of the product and provides LDH-active anion materials that are suitable for use in applications where the prior art materials have been shown to fail.</p>
+      <p id="p-00049-en" num="0053">It is well known that all particulate substances exhibit a unique x-ray powder diffraction pattern which can be used to characterise the material and provide a finger print for identification purposes. In these diffractograms, the sharpness and intensity of the peaks is an indication of crystal structure and molecular order. Indeed partially ordered materials have very broad peaks and in amorphous materials the diffractogram has few or no distinguishable peaks.</p>
+      <p id="p-00050-en" num="0054">The Scherrer equation is used in x-ray diffraction and crystallography to correlate the size of sub-micrometre particles or crystallites in a solid to the broadening of a peak in a diffraction pattern. In the Scherrer equation,</p>
+      <p id="p-00051-en" num="0000">
+        <maths id="maths-00001-en" num="00001">
+          <math overflow="scroll">
+            <mrow>
+              <mi>τ</mi>
+              <mo>=</mo>
+              <mfrac>
+                <mrow>
+                  <mi>K</mi>
+                  <mo></mo>
+                  <mstyle>
+                    <mspace width="0.3em" height="0.3ex" />
+                  </mstyle>
+                  <mo></mo>
+                  <mi>λ</mi>
+                </mrow>
+                <mi>βcosθ</mi>
+              </mfrac>
+            </mrow>
+          </math>
+          <img id="img-00001-en" wi="N/A" he="N/A" file="US20150258212A1_00003.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150258212A1-20150917-M00001.TIF" />
+        </maths>
+      </p>
+      <p id="p-00052-en" num="0000">where tau (τ) is the mean size of the ordered domains, K is the shape factor, λ is the x-ray wave length, β is the line broadening at half the maximum intensity (FWHM) in radians and θ is the Bragg angle in radians. Larger values of tau (τ) indicate a more highly ordered structure of the particulates, and this in turn indicates a more robust material. Here the applicant has used the tau values to calculate a Particle Robustness Factor. The larger the value of tau, the higher the Particle Robustness Factor.</p>
+      <p id="p-00053-en" num="0055">As discussed below, the Applicant has used x-ray powder diffraction to demonstrate that differences exist between the robustness of the structure of the improved LDH-active anion materials produced following the optimised heating, washing and drying procedure of the present invention on the one hand, and the robustness of the structure of analogous LDH-active anion materials made according to the prior art, without the optimised heating, washing and drying procedure on the other. Specifically, the Applicant has used the Scherrer equation to determine the value of tau for each of the four most dominant peaks obtained by x-ray powder diffraction, and from this has calculated an average value of tau across these four most dominant peaks. As noted above, the higher the average tau value, the higher the degree of robustness demonstrated by the Particle Robustness Factor. As explained in the specific examples below, all tau values have been normalised using a zero background intensity silicon wafer standard.</p>
+      <p id="p-00054-en" num="0056">Thus, the present invention provides improved LDH-active anion materials which exhibit a Particle Robustness Factor, i.e. an average value for tau for the four most dominant peaks obtained by x-ray powder diffraction, of at least 4.0 when normalised using a zero background intensity silicon wafer standard.</p>
+      <p id="p-00055-en" num="0057">Preferred Particle Robustness Factor values of a least 5.5 and values of at least 7.0 are especially preferred.</p>
+      <p id="p-00056-en" num="0058">During the course of their investigations the Applicant has recognised that LDH-active anion materials with a Particle Robustness Factor of at least 4.0 (determined as described above) are extremely efficient at retaining the intercalated active anionic compound within their structure, i.e. they exhibit exceedingly low levels of leaching of the active anionic compound.</p>
+      <p id="p-00057-en" num="0059">Leaching is the percentage by weight of the active anionic compound that is released from the LDH-active anion material, in the absence to ion exchange conditions and/or at a pH&gt;4, preferably at least pH 4.5, further preferably at least pH 5.0 and particularly preferably at least pH 5.5.</p>
+      <p id="p-00058-en" num="0060">Materials which have low leaching characteristics are highly beneficial for end-use applications where any leached active compound would produce a deleterious effect, for example, but not limited, to taste masking applications e.g. in oral pharmaceutical and/or food and/or beverage applications, where burn, foul taste or irritation in the mouth, buccal cavity, larynx or gastrointestinal tract may be caused, and in other applications where the active anionic compounds must be retained within the LDH, for reasons such as safety, toxicity, environmental sensitivity, ease of handling etc.</p>
+      <p id="p-00059-en" num="0061">Therefore, the present invention provides an improved LDH material intercalated with one or more active anionic compounds (LDH-active anion material), which leaches a total of less than 5% by weight of the amount of one or more active anionic compounds into a solvent when the improved LDH-active anion material is washed with a solvent suitable for dissolving the one or more active anionic compounds, in the absence of ion exchange conditions and/or at a pH&gt;4.</p>
+      <p id="p-00060-en" num="0062">Preferably, a total of less than 2%, highly preferably a total of less than 1% and ideally a total of less than 0.5% by weight, of the one or more active anionic compounds leaches into a solvent suitable for dissolving the one or more active anionic compounds, when the improved LDH-active anion materials is washed with the solvent, in the absence of ion exchange conditions and/or at a pH&gt;4.</p>
+      <p id="p-00061-en" num="0063">It will be noted that a “total” of at less than 5% of the active anionic compound leaches from the improved LDH-active anion materials of the present invention. This means that the improved materials of the present invention do not release any more than less than 5%; in particular there is not the continuous slow release of active anionic compound which is reported for the slow release materials in the prior art. Specifically, the active anionic compound in the improved LDH-active anion materials of the present invention is substantially retained whilst ion exchange conditions are absent and/or the pH is &gt;4.</p>
+      <p id="p-00062-en" num="0064">The Applicant has observed that total leaching levels of less than 5% by weight are typically exhibited by improved LDH-active anion materials with Particle Robustness Factor values of at least 4.0. Thus improved LDH-active anion materials with PRF of at least 4 make ideal materials where taste, burn and/or irritation needs to be masked or where the active anionic compound needs to be retained to prevent some other unwanted effect, such as toxicity, environmental sensitivity, ease of handling etc. Preferred total levels of leaching of less than 2% by weight are observed for LDH-active anionic compounds with Particle Robustness Factor values of at least 5.5 and highly preferred total levels of leaching of less than 0.5% by weight are observed for LDH-active anionic compounds with Particle Robustness Factor values of at least 7.0.</p>
+      <p id="p-00063-en" num="0065">The present invention further provides an improved LDH-active anion material for use as a storage system, a carrier or a delivery system for active anionic compounds which need to be substantially retained within the LDH matrix whilst in the absence of ion exchange conditions and/or at a pH&gt;4.</p>
+      <p id="p-00064-en" num="0066">One particularly useful example is the provision of a taste, burn and/or irritation masked composition comprising an improved LDH-active anion material which exhibits an average particle robustness value, i.e. an average value for tau based on the four most dominant peaks obtained by x-ray powder diffraction, of at least 4.0 when normalised using a zero background intensity silicon wafer standard.</p>
+      <p id="p-00065-en" num="0067">Such taste, burn and/or irritation masked compositions are found to improve the palatability of poor tasting or irritating substances in orally delivered pharmaceutical and/or food and/or beverage applications. The pH level of a person's mouth varies depending on what has recently been consumed and on their general oral health. A pH of 5.5 or above is generally considered to be normal, as is a pH in the range 5.6 to 7.9.</p>
+      <p id="p-00066-en" num="0068">In a further aspect, the present invention provides a taste masked composition comprising an improved LDH-active anion material which leaches a total of less than 5% by weight, preferably a total of less than 2% and highly preferably a total of less than 0.5% of the one or more active anionic compounds into a solvent suitable for dissolving the one or more active anionic compounds, when the improved LDH-active anion material is washed with the solvent.</p>
+      <p id="p-00067-en" num="0069">The taste, burn and/or irritation masked compositions described above may be formulated in any oral or non-oral form such as, but not limited to, dry granules, tablets, an aqueous solution or suspension, a non-aqueous solution or suspension, a syrup or a gel.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00003-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00068-en" num="0070">
+        <figref>FIG. 1</figref> shows a typical X-Ray Powder Diffractogram of an LDH-Ibuprofen material made using the ion exchange process of the prior art;</p>
+      <p id="p-00069-en" num="0071">
+        <figref>FIG. 2</figref> shows a typical X-Ray Powder Diffractogram of LDH-Ibuprofen material produced by a Co-precipitation process;</p>
+      <p id="p-00070-en" num="0072">
+        <figref>FIG. 3</figref> shows a typical X-Ray Powder Diffractogram of LDH-Ibuprofen material produced by Co-precipitation method followed by a hydrothermal treatment as described in US2010/0233286 A1; and</p>
+      <p id="p-00071-en" num="0073">
+        <figref>FIG. 4</figref> shows a typical X-Ray Powder Diffractogram of LDH-Ibuprofen material produced by a Co-precipitation method followed by the process according to the present invention for preparing an improved LDH-Ibuprofen material.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">EXAMPLE 1</heading>
+      <heading id="h-00005-en" level="1">The Preparation of Mg<sub>2</sub>Al(OH)<sub>6</sub>(C<sub>13</sub>H<sub>17</sub>O<sub>2</sub>).nH<sub>2</sub>O Ibuprofen Aluminium Magnesium Hydroxide by the Ion Exchange process described in EP1341556</heading>
+      <p id="p-00072-en" num="0074">Starting Materials:</p>
+      <p id="p-00073-en" num="0075">Mg<sub>2</sub>Al(OH)<sub>6</sub>(NO<sub>3</sub>), MgAl—NO<sub>3</sub>: 0.885 g; 3.69 mmol C<sub>13</sub>H<sub>18</sub>O<sub>2</sub>, Ibuprofen: 1.521 g; 7.38 mmol</p>
+      <p id="p-00074-en" num="0076">NaOH, Sodium Hydroxide: 0.295 g; 7.38 mmol</p>
+      <p id="p-00075-en" num="0077">Method:</p>
+      <p id="p-00076-en" num="0078">The MgAl—NO<sub>3 </sub>was added to 25 ml of distilled H<sub>2</sub>O in a round bottomed flask which was then sealed under N<sub>2 </sub>gas and sonicated for 15-30 minutes to form a suspension of MgAl—NO<sub>3</sub>. A separate solution of ibuprofen was made by adding the ibuprofen with stirring to a solution of the NaOH dissolved in 25 ml of distilled H<sub>2</sub>O, whilst bubbling through with N<sub>2 </sub>gas on complete addition the N<sub>2 </sub>gas was bubbled through for a further 5-10 minutes. The alkaline sodium Ibuprofen solution was then added to the MgAl—NO<sub>3 </sub>suspension and the stirred mixture was heated to 60° C. under a flow of N<sub>2 </sub>gas. Once at 60° C., the reaction vessel was sealed under N<sub>2 </sub>and stirred for a further 48 hours. Effort was made to maintain stirring of the mixture throughout. The resulting reaction mixture was then vacuum-filtered and the recovered Ibuprofen Aluminium Magnesium Hydroxide product washed with distilled H<sub>2</sub>O, and then acetone and finally allowed to air-dry. A typical XRP Diffractogram for this material is shown in <figref>FIG. 1</figref>.</p>
+      <heading id="h-00006-en" level="1">EXAMPLE 2</heading>
+      <heading id="h-00007-en" level="1">The Preparation of Mg<sub>2</sub>Al(OH)<sub>6</sub>(C<sub>13</sub>H<sub>17</sub>O<sub>2</sub>).nH<sub>2</sub>O(MgAl-Ibuprofen) Using a One-Step Co-precipitation Method</heading>
+      <p id="p-00077-en" num="0079">Magnesium nitrate 257 g and aluminium nitrate 189 g were stirred in 1000 ml deionised water in a round bottomed flask, under N<sub>2 </sub>until they had dissolved. In a separate container, the active anionic compound Ibuprofen 258 g was dissolved with stirring in 1500 ml of deionised water under N<sub>2</sub>, and the pH was adjusted to 10.0 using 2M sodium hydroxide solution. The Ibuprofen solution was then heated to 80° C. and once up to temperature, the aqueous metal nitrate solution was added drop-wise using an addition funnel and the mixture was stirred vigorously. The pH was maintained at between 9.5 and 13 throughout the period of addition, using 2M sodium hydroxide solution via a second addition funnel. Addition of the Ibuprofen solution was complete within 30 minutes to 2 hours. Following complete addition, the reaction mixture was stirred for a further 10 minutes under N<sub>2 </sub>and then allowed to cool to room temperature. The resultant LDH-Ibuprofen compound was isolated from the reaction mixture using vacuum filtration, ensuring that the recovered solid product was washed at least twice with 1000 ml of deionised water. Solid Ibuprofen Aluminium Magnesium Hydroxide (200 g) was obtained. <figref>FIG. 2</figref> shows a typical XRP Diffractogram for this product material.</p>
+      <heading id="h-00008-en" level="1">EXAMPLE 3</heading>
+      <heading id="h-00009-en" level="1">Attempt to Optimise the Robustness of the Structure of the Ibuprofen Aluminium Magnesium Hydroxide Material from Example 2 Using a Hydrothermal Treatment Step Method as Described in US2010/0233286 A1</heading>
+      <p id="p-00078-en" num="0080">Starting Materials:</p>
+      <p id="p-00079-en" num="0081">Ibuprofen aluminium magnesium hydroxide compound (200 g) obtained from the method of Example 2.</p>
+      <p id="p-00080-en" num="0082">Method:</p>
+      <p id="p-00081-en" num="0083">The solid product obtained from Example 2 was dispersed in 3750 ml deionised water as evenly as possible, and the dispersion was heated at 150° C. for 1-4 hours in an autoclave. The suspension was then cooled to room temperature, and the recovered solid product filtered, washed with 1000 ml deionised water and then air dried. A typical XRP Diffractogram for this product is shown in <figref>FIG. 3</figref>.</p>
+      <heading id="h-00010-en" level="1">EXAMPLE 4</heading>
+      <heading id="h-00011-en" level="1">Optimising the Robustness of the Structure of the Ibuprofen Aluminium Magnesium Hydroxide Material from Example 2 Using the Method of the Present Invention to Produce Improved LDH-Ibuprofen Material</heading>
+      <p id="p-00082-en" num="0084">Starting Materials:</p>
+      <p id="p-00083-en" num="0085">Ibuprofen Aluminium Magnesium Hydroxide compound (200 g) obtained from the method of Example 2.</p>
+      <p id="p-00084-en" num="0086">Method:</p>
+      <p id="p-00085-en" num="0087">The solid product obtained in Example 2 was dispersed as evenly as possible in 3750 ml of deionised water in an autoclave and heated to 150° C. for 2 hours under N<sub>2 </sub>with stirring. The reaction mixture was then cooled to room temperature, and the solid removed by vacuum filtration. The solid was then washed with 1000 ml deionised water and 1000 ml methanol. The lumps were broken up and the solid was dried with stirring under vacuum at 60° C., until a constant weight was achieved. A typical XRP Diffractogram for this material is shown in <figref>FIG. 4</figref>.</p>
+      <p id="p-00086-en" num="0088">Results: Determination of the Particle Robustness Factor for the Ibuprofen Aluminium Magnesium Hydroxide Compound Produced in Examples 1, 2, 3 and 4.</p>
+      <p id="p-00087-en" num="0089">Samples of Ibuprofen Aluminium Magnesium Hydroxide compound were prepared using one of the four methods described in Examples 1, 2, 3 and 4 above, and each was analysed using X-ray diffraction techniques. The XRP Diffractograms for these materials are given in <figref>FIGS. 1</figref>, <b>2</b>, <b>3</b>, and <b>4</b> respectively. The Scherrer equation was then used to determine the value of tau for each of the four most dominant peaks in the X-ray diffraction pattern, and from this an average value of tau (the Particle Robustness Factor, PRF) across these four most dominant peaks was calculated for each sample of LDH-Ibuprofen compound. All tau values were normalised using a zero background intensity silicon wafer standard. The Results are presented below in Tables 1, 2, 3 and 4.</p>
+      <p id="p-00088-en" num="0090">Typical operating conditions used to obtain the X-ray diffraction patterns are as follows:</p>
+      <p id="p-00089-en" num="0091">Slit sizes: Divergence slit fixed: 2, Receiving slit: 1.52</p>
+      <p id="p-00090-en" num="0092">Range: 2-75° 2θ</p>
+      <p id="p-00091-en" num="0093">x-ray wavelength=K-Alphal wavelength: 1.540598, K-Alpha2 wavelength: 1.544426</p>
+      <p id="p-00092-en" num="0094">Scan type: Continuous</p>
+      <p id="p-00093-en" num="0095">Scan step size (°2θ):0.0334225 Time per step (secs): 280.035.</p>
+      <p id="p-00094-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Ion-Exchange (EXAMPLE 1)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="49pt" align="left" />
+              <colspec colname="1" colwidth="35pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="56pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>θ, degrees</entry>
+                  <entry>θ, radians</entry>
+                  <entry>β, radians</entry>
+                  <entry>T, Tau</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="char" char="." />
+              <colspec colname="3" colwidth="42pt" align="char" char="." />
+              <colspec colname="4" colwidth="35pt" align="char" char="." />
+              <colspec colname="5" colwidth="56pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Peak 1 (003)</entry>
+                  <entry>2.0409</entry>
+                  <entry>0.035620425</entry>
+                  <entry>0.184</entry>
+                  <entry>5.438232</entry>
+                </row>
+                <row>
+                  <entry>Peak 2 (006)</entry>
+                  <entry>4.0679</entry>
+                  <entry>0.070998249</entry>
+                  <entry>0.4015</entry>
+                  <entry>2.496951</entry>
+                </row>
+                <row>
+                  <entry>Peak 3 (009)</entry>
+                  <entry>6.00755</entry>
+                  <entry>0.104851527</entry>
+                  <entry>0.4015</entry>
+                  <entry>2.504414</entry>
+                </row>
+                <row>
+                  <entry>Peak 4 (00<u>12</u>)</entry>
+                  <entry>8.0593</entry>
+                  <entry>0.14066132</entry>
+                  <entry>0.5353</entry>
+                  <entry>1.886746</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Average</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>(PRF) 3.081586</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00095-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>One-Step Co-precipitation (EXAMPLE 2)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="56pt" align="left" />
+              <colspec colname="1" colwidth="35pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>θ, degrees</entry>
+                  <entry>θ, radians</entry>
+                  <entry>β, radians</entry>
+                  <entry>T, Tau</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="char" char="." />
+              <colspec colname="3" colwidth="42pt" align="char" char="." />
+              <colspec colname="4" colwidth="35pt" align="char" char="." />
+              <colspec colname="5" colwidth="49pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Peak 1 (003)</entry>
+                  <entry>1.9963</entry>
+                  <entry>0.034842008</entry>
+                  <entry>0.1338</entry>
+                  <entry>7.47838</entry>
+                </row>
+                <row>
+                  <entry>Peak 2 (006)</entry>
+                  <entry>4.03385</entry>
+                  <entry>0.070403964</entry>
+                  <entry>0.4723</entry>
+                  <entry>2.122557</entry>
+                </row>
+                <row>
+                  <entry>Peak 3 (009)</entry>
+                  <entry>5.9926</entry>
+                  <entry>0.104590601</entry>
+                  <entry>0.5038</entry>
+                  <entry>1.995821</entry>
+                </row>
+                <row>
+                  <entry>Peak 4 (0012)</entry>
+                  <entry>7.98685</entry>
+                  <entry>0.139396829</entry>
+                  <entry>0.3779</entry>
+                  <entry>2.672122</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Average</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>(PRF) 3.56722</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00096-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 3</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>One-Step Co-precipitation Followed by</entry>
+                </row>
+                <row>
+                  <entry>Hydrothermal Treatment (EXAMPLE 3)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="49pt" align="left" />
+              <colspec colname="1" colwidth="35pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="56pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>θ, degrees</entry>
+                  <entry>θ, radians</entry>
+                  <entry>β, radians</entry>
+                  <entry>T, Tau</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="char" char="." />
+              <colspec colname="3" colwidth="42pt" align="char" char="." />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <colspec colname="5" colwidth="56pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Peak 1 (003)</entry>
+                  <entry>2.0089</entry>
+                  <entry>0.035061919</entry>
+                  <entry>0.2249</entry>
+                  <entry>4.449155</entry>
+                </row>
+                <row>
+                  <entry>Peak 2 (006)</entry>
+                  <entry>4.0565</entry>
+                  <entry>0.070799281</entry>
+                  <entry>0.1875</entry>
+                  <entry>5.346728</entry>
+                </row>
+                <row>
+                  <entry>Peak 3 (009)</entry>
+                  <entry>6.07215</entry>
+                  <entry>0.10597901</entry>
+                  <entry>0.3374</entry>
+                  <entry>2.980564</entry>
+                </row>
+                <row>
+                  <entry>Peak 4 (0012)</entry>
+                  <entry>8.1694</entry>
+                  <entry>0.142582928</entry>
+                  <entry>0.5248</entry>
+                  <entry>1.925022</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Average</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>(PRF) 3.675367</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00097-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 4</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>One-step co-precipitation followed by the Optimisation</entry>
+                </row>
+                <row>
+                  <entry>Method of the Present Invention (EXAMPLE 4)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="49pt" align="left" />
+              <colspec colname="1" colwidth="35pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="56pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>θ, degrees</entry>
+                  <entry>θ, radians</entry>
+                  <entry>β, radians</entry>
+                  <entry>T, Tau</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="char" char="." />
+              <colspec colname="3" colwidth="42pt" align="char" char="." />
+              <colspec colname="4" colwidth="35pt" align="char" char="." />
+              <colspec colname="5" colwidth="56pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Peak 1 (003)</entry>
+                  <entry>2.0014</entry>
+                  <entry>0.03493102</entry>
+                  <entry>0.1288</entry>
+                  <entry>7.768714</entry>
+                </row>
+                <row>
+                  <entry>Peak 2 (006)</entry>
+                  <entry>4.0332</entry>
+                  <entry>0.070392619</entry>
+                  <entry>0.1473</entry>
+                  <entry>6.805721</entry>
+                </row>
+                <row>
+                  <entry>Peak 3 (009)</entry>
+                  <entry>6.0405</entry>
+                  <entry>0.105426613</entry>
+                  <entry>0.1473</entry>
+                  <entry>6.82677</entry>
+                </row>
+                <row>
+                  <entry>Peak 4 (0012)</entry>
+                  <entry>8.0891</entry>
+                  <entry>0.141181428</entry>
+                  <entry>0.1288</entry>
+                  <entry>7.842</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Average</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>(PRF) 7.310801</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00098-en" num="0096">As is clearly observed from a comparison of the average tau values presented in the Tables 1 to 4 above, the particle optimisation method of the present invention (Example 4) is extremely surprisingly significantly more efficient at producing highly robust LDH-Ibuprofen compounds than either the hydrothermal process employed in Example 3 (taken from the method described in US 2010/0233286) or the ion-exchange process used in Example 1 (as described in EP1 341 556). Therefore these results demonstrate that the optimisation process of the present invention is highly effective at producing remarkably robust particles.</p>
+      <p id="p-00099-en" num="0097">Also as discussed above, the Applicant has found that such materials are particularly useful at reducing and or eliminating leaching of the intercalated anionic material from the LDH-Ibuprofen compound. The % w/w amount of active anionic compound that leaches from the LDH-active anion material may be determined using any convenient leaching method known in the art, for example as described in EP1341556B1.</p>
+      <p id="p-00100-en" num="0098">Results:</p>
+      <p id="p-00101-en" num="0099">The % w/w amount of Ibuprofen which leaches from samples of LDH-Ibuprofen materials prepared in Examples 1-4 was determined using standard analytical tools and presented in Table 5 below, together with taste data to show how effective each sample is at providing a formulation with low or no taste.</p>
+      <p id="p-00102-en" num="0000">
+        <tables id="tables-00005-en" num="00005">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="112pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="center" />
+              <colspec colname="3" colwidth="56pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" rowsep="1">TABLE 5</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>METHOD USED TO PREPARE</entry>
+                  <entry />
+                  <entry>BURN,</entry>
+                </row>
+                <row>
+                  <entry>IBUPROFEN ALUMINIUM</entry>
+                  <entry />
+                  <entry>IRRITATION OR</entry>
+                </row>
+                <row>
+                  <entry>MAGNESIUM HYDROXIDE (LDH-</entry>
+                  <entry>LEACHATE,</entry>
+                  <entry>POOR TASTE</entry>
+                </row>
+                <row>
+                  <entry>ACTIVE ANION COMPOUND)</entry>
+                  <entry>% w/w</entry>
+                  <entry>PRESENT?</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Ion Exchange (Example 1)</entry>
+                  <entry>Not tested</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>One-step Co-precipitation</entry>
+                  <entry>6.2</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>(Example 2)</entry>
+                </row>
+                <row>
+                  <entry>One-step Co-precipitation</entry>
+                  <entry>10.7</entry>
+                  <entry>YES</entry>
+                </row>
+                <row>
+                  <entry>followed by hydrothermal</entry>
+                </row>
+                <row>
+                  <entry>treatment from</entry>
+                </row>
+                <row>
+                  <entry>US2010/0233286 (Example 3)</entry>
+                </row>
+                <row>
+                  <entry>One-step Co-precipitation</entry>
+                  <entry>0.7</entry>
+                  <entry>NO</entry>
+                </row>
+                <row>
+                  <entry>followed by the optimisation</entry>
+                </row>
+                <row>
+                  <entry>method of the present</entry>
+                </row>
+                <row>
+                  <entry>invention (Example 4)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00103-en" num="0100">The above results show that particle optimisation process of the present invention (Example 4) produces improved LDH-Ibuprofen materials which are capable of retaining almost 100% of the intercalated active anionic compound with only 0.7% w/w of ibuprofen leaching out.</p>
+      <p id="p-00104-en" num="0101">This result compares extremely favourably against the 10.7% w/w ibuprofen which was observed to leach from materials treated with the hydrothermal process of Example 3. Indeed the above results indicate that the hydrothermal treatment method described in US2010/0233286 actually increases the amount of ibuprofen that leaches from the material made in Example 2.</p>
+      <p id="p-00105-en" num="0102">In addition to this, the above leaching tests were conducted on samples where the deionised water had been in contact with the LDH-ibuprofen for 5 minutes. A parallel experiment in which the deionised water was in contact for 30 minutes produced identical low leaching level results (0.7% w/w) for the improved LDH-active anion material of the present invention. This is a clear demonstration that the ibuprofen is not continuously released from the improved LDH-active anion materials of the present invention and that the 0.7% w/w recorded is the total amount of material leached in the absence of ion exchange conditions and at a pH&gt;4.</p>
+      <p id="p-00106-en" num="0103">As the results in Table 5 also demonstrate, the burn/poor taste associated with ibuprofen is detectable in the mouth when the leaching level is 6.2% w/w, but not detected when the ibuprofen leaching level is 0.7% w/w. Thus 0.7% w/w ibuprofen as determined by the above leaching test is advantageously below the threshold for bitter taste/irritation detection by humans, and consequently the improved LDH-active anion materials of the present invention are highly suitable for use in the preparation of taste, burn and/or irritation masked formulations.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>-<b>10</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>11</b>. A process for the manufacture of an improved LDH-active anion materials intercalated with one or more active anion compounds, comprising the steps:
+<claim-text>a) dispersing a pre-isolated LDH-active anion starting material in a liquid dispersant, then heating and agitating the resulting suspension;</claim-text><claim-text>b) cooling the heated suspension and separating the heat treated LDH-active anionic material from the suspension;</claim-text><claim-text>c) washing the heat treated LDH-active anionic material and drying to constant weight, to yield the improved LDH-active anionic material;</claim-text><claim-text>wherein the improved LDH-active anion material is not represented by the formula:
+<claim-text>(Fe<sup>2+</sup>,Mg<sup>2+</sup>)<sub>x</sub>(Al<sup>3+</sup>,Fe<sup>3+</sup>)<sub>2</sub>(OH)<sub>3x+6-nz</sub>(A<sup>n−</sup>)<sub>z</sub><i>.m</i>H<sub>2</sub>O,</claim-text></claim-text><claim-text>wherein A<sup>n− </sup>represents an anion having a valence of n,</claim-text><claim-text>Mg<sup>2+ </sup>is within the range of 0≦Mg<sup>2+</sup>&lt;x,</claim-text><claim-text>Fe<sup>3+ </sup>is within the range of 0≦Fe<sup>3+</sup>&lt;2,</claim-text><claim-text>x is a number represented by 1≦x&lt;20,</claim-text><claim-text>z is a number represented by 0&lt;z&lt;3, and</claim-text><claim-text>m is a number represented by 0≦m&lt;20.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>12</b>. A process according to <claim-ref idref="clm-00002-en">claim 11</claim-ref> wherein the temperature used in step a) is either a specific temperature or a range of temperatures, and is between 50° C. and 200° C.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>13</b>. A process according to <claim-ref idref="clm-00002-en">claim 11</claim-ref> wherein the temperature used in step a) is either a specific temperature or a range of temperatures, and is between 80° C. and 180° C.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>14</b>. A process according to <claim-ref idref="clm-00002-en">claim 11</claim-ref> wherein, prior to being used in step a), the pre-isolated LDH-active anion starting material is washed with water and vacuum filtered to dry.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>15</b>. A process according to <claim-ref idref="clm-00002-en">claim 11</claim-ref> wherein washing in step c) comprises washing the separated heat-treated LDH-active anion material one or more times with a first washing liquid and optionally washing with a further washing liquid to remove any residual first washing liquid from the surface of the heat-treated LDH-active anion material.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>16</b>. A process according to <claim-ref idref="clm-00002-en">claim 11</claim-ref> wherein drying in step c) comprises drying under vacuum, optionally at an elevated temperature and further optionally with agitation.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>17</b>. An improved LDH-active anion material made by the process of <claim-ref idref="clm-00002-en">claim 11</claim-ref>.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>18</b>. An improved LDH-active anion material according to <claim-ref idref="clm-00008-en">claim 17</claim-ref> combined with one or more pharmaceutically acceptable excipients.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>19</b>. An improved LDH-active anion material according to <claim-ref idref="clm-00008-en">claim 17</claim-ref>, wherein the one or more intercalated active anion compounds are selected from NSAIDS, gaba-analogues, antibiotics, statins, angiotensin-converting enzyme (ACE) inhibitors, antihistamines and dopamine precursors, anti-microbials, psychostimulants, prostaglandins, anti-depressants, anti-convulsants, coagulants, anti-cancer agents, immuno-suppressants, laxatives, dye compounds, agrochemicals, medicaments and food supplements and molecules or compounds used in food, beverages and pharmaceuticals.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>20</b>. An improved LDH-active anion material according to <claim-ref idref="clm-00008-en">claim 17</claim-ref>, wherein the one or more intercalated active anionic compounds are selected from Ibuprofen, Naproxen and Diclofenac.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>21</b>. An improved LDH-active anion material according to <claim-ref idref="clm-00008-en">claim 17</claim-ref> wherein the one or more intercalated active anionic compounds are poor tasting or irritating substances.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>22</b>. Use of an improved LDH-active anion material made according to the process of <claim-ref idref="clm-00002-en">claim 11</claim-ref> as a carrier, storage system or delivery system in applications, wherein the one or more intercalated active anionic compounds are substantially retained within the LDH, when in an environment where conditions for ion exchange are absent and/or where the pH is &gt;4.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>23</b>. Use of an improved LDH-active anion material made according to the process of <claim-ref idref="clm-00002-en">claim 11</claim-ref> in taste, burn and/or irritation masking applications, and/or in oral pharmaceutical and/or food and/or beverage applications, and/or in non-oral applications; wherein the one or more intercalated active anionic compounds are substantially retained within the LDH, when in an environment where conditions for ion exchange are absent and/or where the pH is &gt;4.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>24</b>. A formulation comprising an improved LDH-active anion material made according to the process of <claim-ref idref="clm-00002-en">claim 11</claim-ref> selected from dry granules, tablets, caplets, aqueous or non-aqueous liquids or suspensions, orally disintegrating tablets, orally disintegrating granules, lozenges, films, capsules, powders, effervescent formulations, buccal and sub-lingual formats, gels, syrups and gums.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>25</b>. A method of producing a formulation comprising formulating one or more improved LDH-active anion materials made according to the process of <claim-ref idref="clm-00002-en">claim 11</claim-ref>, in a form selected from dry granules, tablets, caplets, aqueous or non-aqueous liquids or suspensions, orally disintegrating tablets, orally disintegrating granules, lozenges, films, capsules, powders, effervescent formulations, buccal and sub-lingual formats, gels, syrups and gums.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>26</b>. A method of producing a formulation according to <claim-ref idref="clm-00016-en">claim 25</claim-ref>, which exhibits a substantially zero taste sensation, burn or irritation, within the mouth, buccal cavity, larynx or gastrointestinal tract of the consumer or patient, comprising formulating one or more improved LDH-active anion materials made according to the process of <claim-ref idref="clm-00002-en">claim 11</claim-ref> in a form selected from dry granules, tablets, caplets, aqueous or non-aqueous liquids or suspensions, orally disintegrating tablets, orally disintegrating granules, lozenges, films, capsules, powders, effervescent formulations, buccal and sub-lingual formats, gels, syrups and gums.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150258212A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258212A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150258212A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258212A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150258212A1_00003.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150258212A1-20150917-M00001.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150258212A1.PDF" type="pdf" size="588624" pages="12" />
+</lexisnexis-patent-document>

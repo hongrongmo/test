@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150259212A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030027" date-changed="20151228" time-changed="083357">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121313587">
+        <country>US</country>
+        <doc-number>20150259212</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14423279</doc-number>
+        <date>20130823</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>AU</country>
+        <doc-number>2012903643</doc-number>
+        <date>20120823</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151006">
+      <classification-ipcr sequence="1">
+        <text>C01B  31/04        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>31</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151006">
+      <classification-cpc sequence="1">
+        <text>C01B  31/0484      20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>31</main-group>
+        <subgroup>0484</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B82Y  30/00        20130101 LA20141120BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>82</class>
+        <subclass>Y</subclass>
+        <main-group>30</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20141120</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>B82Y  40/00        20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>82</class>
+        <subclass>Y</subclass>
+        <main-group>40</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C01B  31/00        20130101 LI20141218BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>31</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141218</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C01B  31/0446      20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>31</main-group>
+        <subgroup>0446</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C01B2204/04        20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>2204</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>Y10T 428/249921    20150401 LA20151001BCEP        </text>
+        <cpc-version-indicator>
+          <date>20150401</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>428</main-group>
+        <subgroup>249921</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151001</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">17</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">GRAPHENE-BASED MATERIALS</invention-title>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>MONASH UNIVERSITY</orgname>
+            <role>03</role>
+            <address>
+              <city>Clayton, VI</city>
+              <country>AU</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Li</last-name>
+            <first-name>Dan</first-name>
+            <address>
+              <city>Glen Waverly</city>
+              <country>AU</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Qiu</last-name>
+            <first-name>Ling</first-name>
+            <address>
+              <city>Clayton</city>
+              <country>AU</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>AU13000939</doc-number>
+        <date>20130823</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014028978</doc-number>
+        <date>20140227</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150917">
+      <main-family family-id="164490505">
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104661959</doc-number>
+            <kind>A</kind>
+            <date>20150527</date>
+          </document-id>
+          <application-date>
+            <date>20130823</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2013305486</doc-number>
+            <kind>A1</kind>
+            <date>20150312</date>
+          </document-id>
+          <application-date>
+            <date>20130823</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2888202</doc-number>
+            <kind>A1</kind>
+            <date>20150701</date>
+          </document-id>
+          <application-date>
+            <date>20130823</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259212</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20130823</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014028978</doc-number>
+            <kind>A1</kind>
+            <date>20140227</date>
+          </document-id>
+          <application-date>
+            <date>20130823</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="164490504">
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104661959</doc-number>
+            <kind>A</kind>
+            <date>20150527</date>
+          </document-id>
+          <application-date>
+            <date>20130823</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2013305486</doc-number>
+            <kind>A1</kind>
+            <date>20150312</date>
+          </document-id>
+          <application-date>
+            <date>20130823</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2888202</doc-number>
+            <kind>A1</kind>
+            <date>20150701</date>
+          </document-id>
+          <application-date>
+            <date>20130823</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259212</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20130823</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014028978</doc-number>
+            <kind>A1</kind>
+            <date>20140227</date>
+          </document-id>
+          <application-date>
+            <date>20130823</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention relates to graphene-based foam, the graphene-based foam having a structure defined by a three-dimensional network of interconnected and ordered open cells, the open cells being defined by cell walls, the cell walls (i) being formed of graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof, and (ii) having a thickness defined by the thickness of a plurality of graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150223</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015259212A1</docdb-publication-number>
+      <docdb-application-id>444514035</docdb-application-id>
+      <new-owner>MONASH UNIVERSITY, AUSTRALIA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:LI, DAN;QIU, LING;REEL/FRAME:035006/0502</free-text-description>
+      <effective-date>
+        <date>20130429</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00001-en" num="0001">The present invention relates in general to graphene-based materials, and more particularly it relates to graphene-based foam material, to a process for producing the same and to articles comprising the same.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">Graphene is a two-dimensional (2D) sheet structure of sp<sup>2</sup>-bonded carbon atoms with unique electronic, chemical and mechanical properties. The significance of these unique properties is now just being realised, with graphene or graphene-based sheets being applied in various applications such as energy storage, catalysis, sensing and composites. In many of these applications to date it has been the 2D form of the graphene-based sheets that has been exploited.</p>
+      <p id="p-00003-en" num="0003">To further realise the potential of graphene-based materials, a considerable amount of research has been directed toward forming three-dimensional (3D) graphene-based structures. One particular field of research showing great promise is the development of graphene-based foam structures.</p>
+      <p id="p-00004-en" num="0004">A number of techniques have been developed for producing graphene-based foams. For example, 3D graphene-based porous materials have been prepared by self-gelation during the reduction of graphene oxide or through chemical vapour deposition (CVD) on porous metal templates. Despite providing for 3D graphene-based materials, such foams have generally been reported as having relatively poor mechanical properties such as being brittle and having low mechanical flexibility. Furthermore, the foams typically shrink during manufacture making the resulting dimensions of the foam difficult to control.</p>
+      <p id="p-00005-en" num="0005">To address at least some of these problems, polymer/graphene composite foam structures have been developed. While incorporating polymer into the foam structure can impart improved mechanical properties such as compressibility, the advantageous properties of the graphene-based material per se can be inherently diminished.</p>
+      <p id="p-00006-en" num="0006">Accordingly, there remains an opportunity to develop graphene-based foams that exhibit improved mechanical properties while at the same time minimising the loss of unique properties attributed to the graphene-based material per se.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00007-en" num="0007">The present invention provides for graphene-based foam, the graphene-based foam having a structure defined by a three-dimensional network of interconnected and ordered open cells, the open cells being defined by cell walls, the cell walls (i) being formed of graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof, and (ii) having a thickness defined by the thickness of a plurality of graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof.</p>
+      <p id="p-00008-en" num="0008">The graphene-based foam itself may form part of a composition of matter.</p>
+      <p id="p-00009-en" num="0009">The present invention therefore also provides for a composition comprising graphene-based foam, the graphene-based foam having a structure defined by a three-dimensional network of interconnected and ordered open cells, the open cells being defined by cell walls, the cell walls (i) being formed of graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof, and (ii) having a thickness defined by the thickness of a plurality of graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof.</p>
+      <p id="p-00010-en" num="0010">Graphene-based foam according to the present invention has a unique hierarchical structure that mimics the structure of natural cellular foam materials such as cork. At one structural level the foam is defined by a three-dimensional network of interconnected and ordered open cells. For example, the cells may present in a honeycomb-like network. At a second structural level, the cells themselves are defined by cell walls that are formed of a plurality of graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof.</p>
+      <p id="p-00011-en" num="0011">This hierarchical structure of the graphene-based sheets is believed to impart unique properties to the resulting foam. For example, a graphene-based foam according to the present invention can be prepared such that it exhibits not only high porosity and a controllable density, but also excellent elasticity. In particular, graphene-based foam in accordance with the invention surprisingly can exhibit a low compression set value (for example less than 15%) when compressed 80% or more of its original volume.</p>
+      <p id="p-00012-en" num="0012">Importantly, graphene-based foam per se in accordance with the invention can exhibit such advantageous properties in the absence of other materials such as polymer.</p>
+      <p id="p-00013-en" num="0013">In one embodiment, the graphene-based foam comprises within its structure less than 50 wt %, less than 40 wt %, less than 30 wt %, less than 20 wt %, less than 10 wt %, less than 5 wt %, less than 2 wt %, or less than 1 wt % of polymer.</p>
+      <p id="p-00014-en" num="0014">In a further embodiment, the graphene-based foam comprises within its structure substantially no polymer.</p>
+      <p id="p-00015-en" num="0015">Without wishing to be limited by theory, it is believed that the unique hierarchical structure of the graphene-based foams in accordance with the invention gives rise to the enhanced properties of the foams. Furthermore, it is also believed that use of graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof plays an important role in the formation of the hierarchical foam structure.</p>
+      <p id="p-00016-en" num="0016">In one embodiment, the graphene-based foam in accordance with the invention has a compression set at 15% compression of 20% or less.</p>
+      <p id="p-00017-en" num="0017">The unique properties of the polymer foams can also advantageously impart unique properties to polymers. For example, in one embodiment the graphene-based foam forms a scaffold structure within a polymer composition to provide for a composite structure.</p>
+      <p id="p-00018-en" num="0018">Accordingly, the invention also provides a polymer composition comprising the graphene-based foam according to the invention.</p>
+      <p id="p-00019-en" num="0019">In one embodiment, the polymer composition is a hydrogel.</p>
+      <p id="p-00020-en" num="0020">As used herein the term “hydrogel” of the expression “polymer hydrogel” is intended to mean a polymer having a polymeric matrix that can absorb and be swollen by an aqueous liquid such as water. Those skilled in the art will appreciate that a hydrogel will typically exhibit a degree of crosslinking so that the polymeric matrix is not solvated by the aqueous liquid.</p>
+      <p id="p-00021-en" num="0021">Where the graphene-based foam forms part of a polymer composition, rather than the polymer being used to improve the properties of the graphene-based foam (as is typically the case), the graphene-based foam can surprisingly and advantageously improve the properties of the polymer. For example, the foam can improve a polymer's mechanical properties and conductivity.</p>
+      <p id="p-00022-en" num="0022">The present invention also provides a process of preparing graphene-based foam according to the invention, the process comprising providing a dispersion of graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof in a freeze castable medium, and subjecting the dispersion to freeze casting.</p>
+      <p id="p-00023-en" num="0023">The invention further provides a process of preparing graphene-based foam having a structure defined by a three-dimensional network of interconnected and ordered open cells, the open cells being defined by cell walls, the cell walls (i) being formed of graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof, and (ii) having a thickness defined by the thickness of a plurality of graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof, the process comprising providing a dispersion of graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof in a freeze castable medium, and subjecting the dispersion to freeze casting.</p>
+      <p id="p-00024-en" num="0024">The invention also provides a process of preparing graphene-based foam having a structure defined by a three-dimensional network of interconnected and ordered open cells, the open cells being defined by cell walls, the cell walls (i) being formed of graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof, and (ii) having a thickness defined by the thickness of a plurality of graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof, the process comprising providing a dispersion consisting essentially of graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof within a freeze castable medium, and subjecting the dispersion to freeze casting.</p>
+      <p id="p-00025-en" num="0025">It has now been found that the technique of freeze casting can be employed to prepare graphene-based foam structures having a unique hierarchical structure. Without wishing to be limited by theory, it is believed by employing freeze casting using a dispersion of graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof enables the graphene-based sheets to not only be orientated in a fashion to form the cell walls, but also to have these sheets form into a three-dimensional network of interconnected and ordered open cells.</p>
+      <p id="p-00026-en" num="0026">According to the process of the invention, the graphene-based foams can advantageously be prepared with a tailored pore size and density, and also with little if no, shrinkage. The resulting foam structure also has sound mechanical properties, and in particular structural elasticity.</p>
+      <p id="p-00027-en" num="0027">Further aspects and/or embodiments of the invention are discussed in more detail below.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00028-en" num="0028">The invention will herein be described with reference to the following non-limiting drawings in which:</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 1</figref> illustrates UV-vis spectra of graphene oxide and partially reduced graphene oxide;</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 2</figref> is a schematic drawing of the process of preparing graphene-based foam according to the invention;</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 3</figref> shows an image of a graphene-based foam according to the invention;</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 4</figref> illustrates SEM images of graphene-based foams (5.1 mg/cm<sup>3</sup>) according to the invention; (a) the general view of the graphene-based foam; (b) the enlarged SEM image of section of (a); (c) a front-view of the cellular structure of graphene-based foam; and (d) a side-view of the cellular structure of graphene-based foam;</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 5</figref> illustrates the morphology and structure of graphene-based foams according to the invention with different densities. a-d, SEM (left) and TEM (right) images of monoliths with a density of 5.10 (a); 2.65 (b); 1.10 (c) and 0.56 mg/cm<sup>3 </sup>(d);</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIG. 6</figref> illustrates (a) compressive stress-strain curves of 10 cycles of loading and unloading; (b) the maximum stress at 50% strain of a graphene-based foam according to the invention being repeatedly compressed for 1000 cycles, and (c) a set of real-time images of a compressed sample showing the recovering process;</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIG. 7</figref> Illustrates typical multi-cycles compressive stress-strain curves of graphene-based foams according to the invention with a range of densities, indicating elastic nature of graphene-based foam. a, 0.56; b, 1.55; c, 2.83 and d, 6.0 mg/cm<sup>3</sup>;</p>
+      <p id="p-00036-en" num="0036">
+        <figref>FIG. 8</figref> illustrates electrical resistance change when repeatedly compressed up to 50% of strain for over 10 cycles of graphene-based foam according to the invention. The insert shows the result for one cycle;</p>
+      <p id="p-00037-en" num="0037">
+        <figref>FIG. 9</figref> illustrates absorption capacity of graphene-based foam according to the invention for a range of oils and solvents;</p>
+      <p id="p-00038-en" num="0038">
+        <figref>FIG. 10</figref> illustrates charge/discharge curve of the compressed graphene-based foams according to the invention for the application as a supercapacitor;</p>
+      <p id="p-00039-en" num="0039">
+        <figref>FIG. 11</figref> illustrates images of (a) PNIPAM, (b) reinforced (P5-G0.25) hydrogel and (c) synthesis scheme for preparation of hydrogels incorporating graphene-based foam according to the invention (referred to herein as a “reinforced hydrogel”);</p>
+      <p id="p-00040-en" num="0040">
+        <figref>FIG. 12</figref> illustrates (a) compressive strength and (b) toughness of PNIPAM hydrogel and reinforced hydrogels. (c) Storage (G′) and (d) loss modulus (G″) of PNIPAM hydrogel and graphene-based foam reinforced hydrogels with different graphene contents, indicating the improvement of mechanical performance of reinforced hydrogels;</p>
+      <p id="p-00041-en" num="0041">
+        <figref>FIG. 13</figref> illustrates (a) electrical conductivity of reinforced hydrogels and other reduced graphene oxide-based materials. (b) The resistance change of reinforced hydrogels when the temperature was modulated between 25° C. and 50° C.; and</p>
+      <p id="p-00042-en" num="0042">
+        <figref>FIG. 14</figref> illustrates monitor of heartbeats under normal and exercise conditions using a pressure sensor prepared with graphene-based foam according to the invention.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <p id="p-00043-en" num="0043">All Figures have been filed in colour and are available on request.</p>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00044-en" num="0044">Graphene is an allotrope of carbon having a one atom thick planar sheet structure of typically sp<sup>2</sup>-bonded carbon atoms that are densely packed in a honeycomb 2D crystal lattice. The covalently bonded carbon atoms typically form repeating units that comprise 6-membered rings, but can also form 5-membered rings and/or 7-membered rings. A layer of such covalently bonded carbon atoms is commonly referred to as a graphene “sheet”. Graphene may be prepared by exfoliation of graphite.</p>
+      <p id="p-00045-en" num="0045">Graphene oxide is an oxygenated graphene that is typically prepared by exfoliation of graphite oxide. Graphene oxide is considered to have a graphene-like structure that is substituted with oxygenated groups such as hydroxyl and epoxide. Graphene oxide may be prepared using a number of techniques such as the so called Brodie, Staudenmaier, or Hummers methods.</p>
+      <p id="p-00046-en" num="0046">While the atomic composition of graphene oxide can vary slightly depending upon the method by which it has been prepared, it will typically exhibit (when prepared in the form a dispersion in water) an absorption peak maxima, as measured by UV-VIS spectroscopy, within the range of about 223 to about 233 nm.</p>
+      <p id="p-00047-en" num="0047">Despite having a different atomic composition to graphene, graphene oxide nevertheless has a sheet structure similar to graphene.</p>
+      <p id="p-00048-en" num="0048">Unlike graphene, graphene oxide can be readily dispersed in an aqueous liquid such as water. In fact US 2010/0144904 discloses freeze casting of an aqueous dispersion of graphene oxide to prepare a graphene oxide aerogel. However, in contrast with the graphene-based foams of the present invention, the graphene oxide aerogel disclosed in US 2010/0144904 exhibits relatively poor mechanical properties. Notably, to provide the graphene oxide aerogel disclosed in US 2010/0144904 with acceptable mechanical properties the document discloses the need to reinforce the aerogel with polymer.</p>
+      <p id="p-00049-en" num="0049">An important feature of graphene-based foam of the present invention is believed to be its unique hierarchical structure. Without wishing to be limited by theory, and as will be discussed in more detail below, the formation of this unique hierarchical structure is believed to stem at least in part from the use of graphene, partially reduced graphene oxide, reduced graphene oxide, or a combination thereof.</p>
+      <p id="p-00050-en" num="0050">Those skilled in the art will appreciate that partially reduced or reduced graphene oxide is a material prepared by reducing graphene oxide. Partially reduced or reduced graphene oxide is chemically and physically different to graphene oxide. Techniques for reducing graphene oxide are well known in the art. For example, graphene oxide can be partially reduced or reduced by chemical reduction.</p>
+      <p id="p-00051-en" num="0051">Partially reduced and reduced graphene oxide will typically exhibit (when prepared in the form a dispersion in water) an absorption peak maxima, as measured by UV-VIS spectroscopy, of at least about 235 nm.</p>
+      <p id="p-00052-en" num="0052">In one embodiment, the partially reduced and reduced graphene oxide used in accordance with the invention exhibits (when prepared in the form a dispersion in water) an absorption peak maxima, as measured by UV-VIS spectroscopy, of at least about 240 nm, or at least about 250 nm, or at least about 260 nm, or at least about 270 nm, or at least about 275 nm.</p>
+      <p id="p-00053-en" num="0053">In another embodiment, the partially reduced and reduced graphene oxide used in accordance with the invention exhibits (when prepared in the form a dispersion in water) an absorption peak maxima, as measured by UV-VIS spectroscopy, ranging from about 235 nm to about 275 nm, or from about 240 nm to about 275 nm.</p>
+      <p id="p-00054-en" num="0054">Despite having a different composition to graphene, partially reduced and reduced graphene oxide nevertheless have a sheet structure similar to graphene.</p>
+      <p id="p-00055-en" num="0055">In the context of the present invention the expression “graphene-based” foam is intended to mean that the foam has a structure that is made of graphene, partially reduced graphene oxide, reduced graphene oxide, or a combination thereof. The expression “graphene-based” may therefore be used herein as a convenient reference to graphene (sheets), partially reduced graphene oxide (sheets), reduced graphene oxide (sheets), or a combination thereof. As used in the context of the present invention, the expression “graphene-based” is not intended to embrace graphene oxide (sheets).</p>
+      <p id="p-00056-en" num="0056">Compositions in accordance with the invention comprise graphene-based foam. The composition itself may in fact be the graphene-based foam, or the graphene-based foam may form only part of a more extensive composition. For example, the composition may be graphene foam that comprises a region or section of graphene-based foam according to the invention, or it may be a polymer composition comprising graphene-based foam according to the invention.</p>
+      <p id="p-00057-en" num="0057">The graphene-based foam according to the invention has a structure defined by a three-dimensional network of interconnected and ordered open cells.</p>
+      <p id="p-00058-en" num="0058">In the context of foam structures, those skilled in the art will appreciate that a cell within a foam defines a pore or opening within the foam structure. The cells of the foam according to the present invention are open cells in that the pore or opening which the cells define is not fully encased by a cell wall. In other words, the cell has an opening in it through which matter such as gas or liquid may pass. Typically the cells will have two separate openings through which matter such as gas or liquid may pass.</p>
+      <p id="p-00059-en" num="0059">By being an “open cell” foam, the foam will comprise greater than 50% of open cells, for example at least 60% open cells, or at least 70% open cells, or at least 80% open cells, or at least 90% open cells. In one embodiment, substantially all cells in the graphene-based foam are open cells.</p>
+      <p id="p-00060-en" num="0060">The open cells of the graphene-based foam according to the invention are interconnected and ordered. By the cells being “interconnected” is meant that a cell wall(s) which defines a given cell also defines at least part of an adjacent cell. In other words, the open cells in the foam share common cell walls. A cell at the edge of a foam structure may of course have a cell wall that is not common with an adjacent cell.</p>
+      <p id="p-00061-en" num="0061">An important feature of the open cells within the graphene-based foam according to the invention is that they are defined by cell walls. By a “cell wall(s)” is meant a structural feature that defines the cell which has height and thickness dimensions where the height is greater than the thickness. In other words, the cell wall is not intended to represent a structural feature such as a mere strut where its width is similar to its height. The cell is therefore to have capsular character.</p>
+      <p id="p-00062-en" num="0062">In one embodiment, the average cell wall height is at least 10 times, for example at least 100 times, or at least 1000 times, or at least 5000 times greater than the average cell wall thickness. In a further embodiment, the average cell wall height is from 10 to 5000, or 100 to 5000, or 1000 to 5000 times greater the average cell wall thickness.</p>
+      <p id="p-00063-en" num="0063">In addition to being interconnected, the open cells of the graphene-based foam are also ordered. By “ordered” is meant that the cells are not all randomly orientated (e.g along their height axis) relative to each other. In other words, upon viewing a collection of adjoining cells it is apparent that the cells are interconnected in a relatively ordered fashion. Despite the cells being ordered, the general orientation of them can progressively vary throughout the foam. Nevertheless, regardless of a progressive change in orientation of cells relative to each other it will still be apparent that they present in an ordered fashion.</p>
+      <p id="p-00064-en" num="0064">By way of further explanation of the type of cell structure present in graphene-based foams according to the present invention it will be convenient to make a comparison with a honeycomb-like cellular structure. A honeycomb cellular structure presents a three-dimensional network of interconnected and ordered open cells, with the open cells being defined by cell walls having a wall height that is greater than the wall thickness.</p>
+      <p id="p-00065-en" num="0065">Accordingly, in one embodiment the graphene-based foam has a honeycomb-like structure defined by a three-dimensional network of interconnected and ordered open cells.</p>
+      <p id="p-00066-en" num="0066">By the graphene-based foam having a “honeycomb-like” structure is meant that the foam structure resembles that of honeycomb, but may nevertheless present degrees of structural irregularities that deviate from a more “perfect” honeycomb structure. In other words, by being “honeycomb-like” is intended to mean that a person skilled in the art would consider the foam structure to have honeycomb shape characteristics.</p>
+      <p id="p-00067-en" num="0067">Reference to honeycomb-like characteristics of the graphene-based foam may also assist with further qualifying what is meant by the term “ordered” open cells. In particular, those skilled in the art will appreciate that a honeycomb structure is made up of relatively ordered open cells. Accordingly, reference to the open cells being “ordered” is intended to mean an overall general impression that a collection of adjacent cells are orientated in a similar direction.</p>
+      <p id="p-00068-en" num="0068">To further assist with what is meant by the graphene-based foam having a “three-dimensional network of interconnected and ordered open cells” it will be convenient to refer to the edge connectivity of the open cells. In one embodiment, the open cells have an edge connectivity of 3. By “edge connectivity” is meant the number of cell wall edges that intersect together within the interconnected and ordered cell network. For example, a typical hexagonal honeycomb cell structure has an edge connectivity of 3, whereas a honeycombs with a square cell structure have an edge connectivity of 4 and honeycombs with a triangular cell structure have an edge connectivity of 6.</p>
+      <p id="p-00069-en" num="0069">Graphene-based foams in accordance with the invention having a honeycomb-like structure will typically exhibit a hexagonal-like cell structure.</p>
+      <p id="p-00070-en" num="0070">In one embodiment, the cross sectional shape of the open cells is anisotropic. In that case, the graphene-based foam has a structure defined by a three-dimensional network of interconnected and ordered open cells having an anisotropic cross section.</p>
+      <p id="p-00071-en" num="0071">In one embodiment, the cross sectional shape of the open cells is substantially hexagonal.</p>
+      <p id="p-00072-en" num="0072">In another embodiment, the alignment of the open cells is substantially unidirectional. In other words, the height direction of the cell walls all point in substantially the same direction.</p>
+      <p id="p-00073-en" num="0073">The ordered nature of the cells represents one structural level of the overall hierarchical structure of the foam.</p>
+      <p id="p-00074-en" num="0074">The open cells of the graphene-based foam are defined by cell walls formed of graphene (sheets), partially reduced graphene oxide (sheets), reduced graphene oxide (sheets), or a combination thereof. In other words, the cell walls are formed entirely from this graphene-based material. As previously noted, the cell walls have height and thickness dimensions, with the height dimension being greater than the thickness dimension.</p>
+      <p id="p-00075-en" num="0075">A second structural level of the hierarchical structure of the foam is found in the construction of the cell walls. In particular, the cell walls have a thickness defined by the thickness of a plurality of graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof. The graphene-based sheets that form the cell walls typically present in a layered formation. For example, at least a section of a cell wall may be formed of three to five layered graphene-based sheets, with these sheets being orientated to form the cell wall such that the thickness of the three to five layered sheets define the thickness of the cell wall.</p>
+      <p id="p-00076-en" num="0076">In one embodiment, the cell walls have a thickness defined by the thickness of a plurality of layered graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof.</p>
+      <p id="p-00077-en" num="0077">For avoidance of any doubt, reference to the “thickness” of a plurality of layered graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof is intended to mean the cumulative sheet thickness of the plurality of layered graphene-based sheets.</p>
+      <p id="p-00078-en" num="0078">By the cell walls being formed in the manner outlined herein it will be appreciated that the graphene-based sheets not only present as a plurality of layers to define the thickness of the cell wall, but some of the layered sheets may also only partially overlap. Accordingly, the cell walls may be seen to be constructed of a plurality of layered graphene-based sheets, some of which may only partially overlap. Despite some of the graphene-based sheets only partially overlapping within the layered structure, the thickness of the cell wall will nevertheless be defined by at least two layered graphene-based sheets.</p>
+      <p id="p-00079-en" num="0079">As there may be slight variation in cell wall thickness across each cell in a given foam, it is often more convenient to refer to the average cell wall thickness.</p>
+      <p id="p-00080-en" num="0080">The average cell wall thickness will generally range from about 2 nm to 1000 nm, or from 2 nm to 700 nm, or from 2 nm to 500 nm, or from 2 nm to 250 nm, 2 nm to 100 nm, or from about 2 nm to about 50 nm, or from about 2 nm to about 30 nm.</p>
+      <p id="p-00081-en" num="0081">Each open cell of the graphene-based foam in accordance with the invention defines a pore size. Reference to “pore size” herein is intended to mean the distance presented by the diameter of a cross section of a given cell. As the cross sectional shape of a given cell may not be circular, reference to the cross sectional “diameter” is intended to mean the largest cross sectional distance between the cell walls. As there may be slight variation in pore size of a given graphene-based foam according to the invention, it is often more convenient to refer to the average pore size.</p>
+      <p id="p-00082-en" num="0082">Accordingly, in one embodiment the open cells define an average pore size ranging from about 1 to about 100 μm, or from about 10 to about 80 μm, or from about 20 to about 60 μm.</p>
+      <p id="p-00083-en" num="0083">Without wishing to be limited by theory, it is believed that the ratio of the average wall thickness to the average pore size present in the graphene-based foams according to the invention can be important in determining the improved properties of the foam. Generally, the ratio of the average wall thickness to the average pore size will range from about 1:50 to about 1:25,000. In one embodiment, the ratio of the average wall thickness to the average pore size ranges from about 1:100 to about 1:10,000, or from about 1:500 to about 1:8,000, or from about 1:1,000 to about 1:8,000.</p>
+      <p id="p-00084-en" num="0084">It will be appreciated that structural features of the foam such as the pore size and cell wall thickness will influence the overall density of the graphene-based foam according to the invention. The foams according to the invention can advantageously be prepared to exhibit a variety of densities including a very low density. For example, the foams can be prepared having a density of only about 0.5 mg/cm<sup>3</sup>. Surprisingly, even at such low densities the foams according to the invention can still exhibit improved properties such as excellent elasticity.</p>
+      <p id="p-00085-en" num="0085">In one embodiment, the density of the graphene-based foam ranges from about 0.5 mg/cm<sup>3 </sup>to about 10 mg/cm<sup>3</sup>, or from about 0.5 mg/cm<sup>3 </sup>to about 7 mg/cm<sup>3</sup>, or from about 0.5 mg/cm<sup>3 </sup>to about 5 mg/cm<sup>3</sup>.</p>
+      <p id="p-00086-en" num="0086">In a further embodiment, the graphene-based foam in accordance with the invention has a density ranging from about 0.5 mg/cm<sup>3 </sup>to about 2 mg/cm<sup>3</sup>.</p>
+      <p id="p-00087-en" num="0087">Where the density of the graphene-based foam falls below about 1 mg/cm<sup>3 </sup>some of the graphene-based sheets that form the cell wall may be present in the form of a tubular structure rather than stacked or layered sheets. Without wishing to be limited by theory it is believed that the tubular graphene-based structures form because the low density structures have extremely thin cell walls and when present in such a state the graphene-based sheets are prone to scrolling up to form a tubular structure. Accordingly, where a cells wall become very thin it may simply scroll up to create a tubular strut. Such tubular struts may form part of the overall foam structure and present as a reticulated foam structure.</p>
+      <p id="p-00088-en" num="0088">In one embodiment, the foam further comprises graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof in the form of a tubular structure. The tubular structure will have a thickness (or diameter) defined by scrolled graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof.</p>
+      <p id="p-00089-en" num="0089">Accordingly, in one embodiment the foam includes a reticulated structure defined by a three-dimensional network of interconnected struts, the struts being formed of graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof in scrolled formation.</p>
+      <p id="p-00090-en" num="0090">Those skilled in the art will appreciate that foams having a “reticulated structure” refers to a 3D net like foam structure. In the context of the present invention, the “net” is represented by the interconnected struts, where the struts are formed from the scrolled graphene-based sheets.</p>
+      <p id="p-00091-en" num="0091">Reference herein to morphological features and dimensions of the graphene-based foams according to the invention can be readily measured or determined using techniques well known in the art such as scanning electron microscopy (SEM) and transmission electron microscopy (TEM).</p>
+      <p id="p-00092-en" num="0092">Graphene-based foams in accordance with the invention advantageously exhibit improved mechanical properties. For example, the foams or compositions comprising the foams exhibit excellent structural elasticity. The structural elasticity of the foams can be observed when measuring their compression set. Reference to “compression set” herein is intended to mean a measurement of the permanent deformation remaining after release of a compressive stress that is applied to the foam or composition.</p>
+      <p id="p-00093-en" num="0093">Compression set is expressed as the percentage of the original deflection (i.e. a constant deflection test). Accordingly, a test specimen of the graphene-based foam or composition comprising the graphene-based foam is compressed at a nominated % for one minute at 25° C. Compression set is taken as the % of the original deflection after the specimen is allowed to recover at standard conditions for 30 minutes. The compression set value C can be calculated using the formula [(t<sub>0</sub>-t<sub>i</sub>)/(t<sub>0</sub>-t<sub>n</sub>)]×100, where t<sub>0 </sub>is the original specimen thickness, t<sub>i </sub>is the specimen thickness after testing, and t<sub>n </sub>is the spacer thickness which sets the % compression that the foam is to be subjected. For comparative results, the specimens to be tested should have the same dimensions where the diameter is about 12 mm, and the height is about 8 mm. The compression set measurement is based on that outlined in ASTM D395.</p>
+      <p id="p-00094-en" num="0094">In one embodiment, the graphene-based foam in accordance with the invention has a compression set at 15% compression of 20% or less, or 15% or less, or 10% or less. In other words, the foam specimen can be compressed 15% of its volume or height and upon release of the compressive stress the 15% deflection in the foam recovers by at least about 97%, or at least about 97.8%, or at least about 98.5%.</p>
+      <p id="p-00095-en" num="0095">In a further embodiment, the graphene-based foam in accordance with the invention has a compression set at 30% compression of 20% or less, or 15% or less, or 10% or less.</p>
+      <p id="p-00096-en" num="0096">In a further embodiment, the graphene-based foam in accordance with the invention has a compression set at 50% compression of 15% or less, or 10% or less, or 7% or less.</p>
+      <p id="p-00097-en" num="0097">In a further embodiment, the graphene-based foam in accordance with the invention has a compression set at 70% compression of 15% or less, or 10% or less, or 7% or less.</p>
+      <p id="p-00098-en" num="0098">In a further embodiment, the graphene-based foam in accordance with the invention has a compression set at 80% compression of 15% or less, or 10% or less, or 5% or less.</p>
+      <p id="p-00099-en" num="0099">In a further embodiment, the graphene-based foam in accordance with the invention has a compression set at 90% compression of 15% or less, or 10% or less, or 5% or less.</p>
+      <p id="p-00100-en" num="0100">In a further embodiment, the graphene-based foam in accordance with the invention has a compression set at 95% compression of 15% or less, or 10% or less, or 5% or less.</p>
+      <p id="p-00101-en" num="0101">In practical terms, the elastic properties of the graphene-based foams in accordance with the invention enable the foam to be highly compressed and yet have the ability to bounce back into its original shape.</p>
+      <p id="p-00102-en" num="0102">When measuring the compression set of the graphene-based foam per se, those skilled in art will appreciate that as the density of the foam decreases the foam can be compressed with a corresponding reduction in volume. In that case, a compression set measured at 20% compression may result in a 20% reduction in both height and volume of the sample. In contrast, a polymer/graphene-based foam composite may have no free internal volume. Accordingly, when its compression set is measured the volume of the composite may stay the same and a 20% compression may result in a 20% reduction in only the height of the sample. In either case, the measured compression set will be taken as the % of the original deflection after the specimen is allowed to recover at standard conditions for 30 minutes.</p>
+      <p id="p-00103-en" num="0103">In one embodiment, a composition comprising the graphene-based foam in accordance with the invention has a compression set at 15% compression of 20% or less, or 15% or less, or 10% or less. In other words, the composition specimen can be compressed 15% of its volume or height and upon release of the compressive stress the 15% deflection in the foam recovers by at least about 97%, or at least about 97.8%, or at least about 98.5%.</p>
+      <p id="p-00104-en" num="0104">In a further embodiment, a composition comprising the graphene-based foam in accordance with the invention has a compression set at 30% compression of 20% or less, or 15% or less, or 10% or less.</p>
+      <p id="p-00105-en" num="0105">In a further embodiment, a composition comprising the graphene-based foam in accordance with the invention has a compression set at 50% compression of 15% or less, or 10% or less, or 7% or less.</p>
+      <p id="p-00106-en" num="0106">In a further embodiment, a composition comprising the graphene-based foam in accordance with the invention has a compression set at 70% compression of 15% or less, or 10% or less, or 7% or less.</p>
+      <p id="p-00107-en" num="0107">In a further embodiment, a composition comprising the graphene-based foam in accordance with the invention has a compression set at 80% compression of 15% or less, or 10% or less, or 5% or less.</p>
+      <p id="p-00108-en" num="0108">In a further embodiment, a composition comprising the graphene-based foam in accordance with the invention has a compression set at 90% compression of 15% or less, or 10% or less, or 5% or less.</p>
+      <p id="p-00109-en" num="0109">In a further embodiment, a composition comprising the graphene-based foam in accordance with the invention has a compression set at 95% compression of 15% or less, or 10% or less, or 5% or less.</p>
+      <p id="p-00110-en" num="0110">The porous nature of the foams also makes them particularly effective absorbent materials. For example, the foams are effective at absorbing organic liquids such as oil of fat.</p>
+      <p id="p-00111-en" num="0111">The graphene-based foam in accordance with the invention may also comprise polymer. In that case, it will be appreciated that the underlying structure of the graphene-based foam will be formed only of graphene, partially reduced graphene oxide, reduced graphene oxide, or a combination thereof, and the polymer may therefore be present as a coating on, or filling material for, this underlying structure.</p>
+      <p id="p-00112-en" num="0112">Accordingly, in one embodiment the open cells of the graphene-based foam are provided with a polymer coating. In that case, the cell walls will be formed of graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof having a surface coating of polymer. Taking into account the presence of the coating the cell wall thickness may therefore be defined by the thickness of a plurality of layered graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof and, the thickness of the polymer coating(s).</p>
+      <p id="p-00113-en" num="0113">Suitable polymers that may be used to form a coating on the surface of the open cells include, but are not limited, polyvinyl alcohol (PVA), poly(methyl methacrylate) (PMMA), polydimethylsiloxane (PDMS), polyethylene glycol (PEG), and polyacylonitrile (PAN).</p>
+      <p id="p-00114-en" num="0114">The present invention also provides for a composition comprising the graphene-based foam. The composition may be a polymer composition, for example a polymer hydrogel. Unique properties of the graphene-based foam can advantageously be imparted to such polymer compositions.</p>
+      <p id="p-00115-en" num="0115">Polymer hydrogels are renowned for having a polymeric matrix that can absorb and be swollen by aqueous liquids such as water. Despite numerous advantageous properties, hydrogels typically exhibit relatively poor mechanical properties and electrical conductivity. Numerous attempts have been made to improve the mechanical properties and electrical conductivity of hydrogels. For example, filler materials (e.g. carbon nanotubes) have been combined with hydrogels. However, to impart any property change the filler material typically must have a strong interaction with the polymeric matrix of the hydrogel. This strong interaction in turn can adversely effect desirable properties of the hydrogel. For example, incorporation of filler materials into stimulus responsive polymer hydrogels can impair the stimulus responsive behaviour and gel-like properties of the hydrogels.</p>
+      <p id="p-00116-en" num="0116">The graphene-based foam in accordance with the invention presents inherent electrical conductivity and excellent mechanical properties. Furthermore, these properties can be attained at a very low foam density. Incorporating the graphene-based foam into polymer hydrogels has surprisingly been found to (i) not only retain such inherent properties of the graphene-based foam, but also (ii) have limited if no adverse impact on the properties of the hydrogel per se. In other words, hydrogels incorporating the graphene-based foam can exhibit many in not all of their inherent desirable properties together with electrical conductivity and improved mechanical properties imparted by the graphene-based foam.</p>
+      <p id="p-00117-en" num="0117">In one embodiment, the composition according to the invention is a polymer composition. In a further embodiment, the polymer composition is a polymer hydrogel. In yet a further embodiment, the polymer hydrogel is a stimulus responsive polymer hydrogel.</p>
+      <p id="p-00118-en" num="0118">Stimulus responsive polymers (also referred to as “smart” polymers) are known in the art as polymers which undergo a physical change in response to stimuli such as a change in temperature, pH, ionic strength and/or wavelength of light.</p>
+      <p id="p-00119-en" num="0119">In the form of a hydrogel, a stimulus responsive polymer must of course present a polymeric matrix that can absorb and be swollen by an aqueous liquid.</p>
+      <p id="p-00120-en" num="0120">The physical change exhibited by a stimulus responsive polymer in response to a given stimulus can vary depending upon the type of polymer employed. One form of physical change important in the context of the present invention is where in response to a stimulus the polymer undergoes a reversible transition from being hydrophobic in character to being hydrophilic in character.</p>
+      <p id="p-00121-en" num="0121">In one embodiment, a stimulus responsive polymer used in accordance with the invention is of a type that in response to a stimulus undergoes a transition, preferably a reversible transition, from being hydrophobic in character to being hydrophilic in character or vice versa.</p>
+      <p id="p-00122-en" num="0122">In one embodiment, a stimulus responsive polymer used in accordance with the invention comprises a temperature responsive polymer that in response to a change in temperature undergoes a transition, preferably a reversible transition, from being hydrophobic in character to being hydrophilic in character or vice versa.</p>
+      <p id="p-00123-en" num="0123">Those skilled in the art will appreciate that expressions such as “hydrophobic in character” and “hydrophilic in character” are generally used in the art to convey favourable or unfavourable interactions between one substance relative to another (e.g. attractive or repulsive interactions) and not to define absolute qualities of a particular substance. For example, hydrophilic materials are more likely to be wetted, swollen or dissolved by an aqueous medium (attractive interaction), whereas hydrophobic materials are less likely to be wetted, swollen or dissolved by an aqueous medium (repulsive interaction). Unless otherwise stated, in the context of the present invention these expressions are intended to be a reference to the polarity of a material relative to the polarity of an aqueous liquid. Thus, by being hydrophilic in character a stimulus responsive polymer is more likely to be wetted, swollen or dissolved by an aqueous liquid. By being hydrophobic in character a stimulus responsive polymer is less likely to be wetted, swollen or dissolved by an aqueous liquid.</p>
+      <p id="p-00124-en" num="0124">Representative stimulus responsive polymers include temperature responsive polymers, pH responsive polymers, light responsive polymers, and specific ion responsive polymers.</p>
+      <p id="p-00125-en" num="0125">The stimulus responsive polymer may be in the form of a homopolymer or a copolymer.</p>
+      <p id="p-00126-en" num="0126">The stimulus responsive polymer may be a natural polymer or a synthetic polymer.</p>
+      <p id="p-00127-en" num="0127">Poly(N-isopropyl acrylamide) (P(NIPAAm)) is a well known temperature responsive polymer and exhibits a lower critical solution temperature (LCST) of about 36° C. in an aqueous liquid medium. It can reversibly assume (i) an expanded random coil structure below the LCST that is hydrophilic in character and readily wet or solvated by an aqueous liquid medium, and (ii) a collapsed globular structure above the LCST that is hydrophobic in character and not readily wet or solvated by an aqueous liquid medium.</p>
+      <p id="p-00128-en" num="0128">Examples of suitable stimulus (temperature) responsive polymers include P(NIPAAm) homopolymer and copolymers of N-isopropyl acrylamide (NIPAAm) with one or more other ethylenically unsaturated monomers.</p>
+      <p id="p-00129-en" num="0129">When NIPAAm is copolymerised with one or more hydrophilic comonomers such as acrylamide, the LCST of the copolymer can be raised relative to that of P(NIPAAm). The opposite may occur when it is copolymerised with one or more hydrophobic comonomers, such as N-t-butyl acrylamide. Copolymers of NIPAAm with hydrophilic monomers such as acrylamide have a higher LCST and generally a broader temperature range of precipitation (relative to P(NIPAAm)), while copolymers of NIPAAm with hydrophobic monomers such as N-t-butyl acrylamide have a lower LCST (relative to P(NIPPAAm) and are generally more likely to retain the sharp transition characteristic of P(NIPAAm).</p>
+      <p id="p-00130-en" num="0130">Graphene-based foam according to the invention can function as a susceptor (i.e. it can absorb electromagnetic radiation and convert it to heat). Exposing temperature responsive polymers incorporating the graphene-based foam to electromagnetic radiation can therefore promote an increase in the polymers temperature to above its LCST. Such polymer systems can therefore advantageously be stimulated indirectly by exposure to electromagnetic radiation.</p>
+      <p id="p-00131-en" num="0131">Examples of pH responsive polymers are generally derived from pH responsive vinyl monomers such as acrylic acid, methacrylic acid, and other alkyl-substituted acrylic acids, maleic anhydride, maleic acid, 2-acryamido-2-methyl-1-propanesulfonic acid, N-vinyl formamide, N-vinyl acetamide, aminoethyl methacrylate, phosphoryl ethyl acrylate or methacrylate. pH responsive polymers may also be prepared as polypeptides from amino acids (e.g. polylysine or polyglutiamic acid) all derived from naturally occurring polymers such as proteins (e.g. lysozyme, albumin, casein), or polysaccharides (e.g. alginic acid, hyaluronic acid, carrageenan, chitosan, carboxymethyl, cellulose) or nucleic acids such as DNA. pH responsive polymers usually comprise pendant pH sensitive functional groups such as —OPO(OH)<sub>2</sub>, —COOH or —NH<sub>2</sub>.</p>
+      <p id="p-00132-en" num="0132">By copolymerising a monomer that gives rise to a temperature responsive polymer such as NIPAAm with a small amount (less than about 10 mole %) of a comonomer that gives rise to a pH responsive polymer such as acrylic acid, the resulting copolymer can display both temperature and pH responsiveness. The LCST of such a copolymer can remain unaffected, sometimes even lowered a few degrees, at a pH where the copolymer is not ionised, but the LCST can be dramatically raised if the pH sensitive groups become ionised. When pH sensitive groups are present at a high concentration, the LCST response of the temperature responsive effect may be for all practical purposes eliminated.</p>
+      <p id="p-00133-en" num="0133">Block copolymers derived from pH and temperature responsive monomers can be prepared such that they retain both pH and temperature transitions independently. For example, a block copolymer having a pH responsive block (polyacrylic acid) and a temperature responsive block (P(NIPAAm)) can retain independent pH and temperature responsiveness.</p>
+      <p id="p-00134-en" num="0134">Examples of light responsive polymers include those that contain chromophoric groups pendant to or along the main chain of the polymer and, when exposed to an appropriate wavelength of light, can be isomerised from a trans to a cis form, which can be dipolar and more hydrophilic and promote reversible polymer conformational changes. Other light sensitive groups can also be converted by light stimulation from a relatively non-polar hydrophobic, non-ionised state to a hydrophilic ionic state.</p>
+      <p id="p-00135-en" num="0135">In the case of pendant light-sensitive groups such as a light-sensitive dye (e.g. aromatic azo compounds or stilbene derivatives), they may be conjugated to a reactive monomer (an exception is a dye such as chlorophyllin, which already comprises a vinyl group) and then homopolymerised or copolymerised with one or more other monomers, including temperature responsive or pH responsive monomers. The light sensitive group may also be conjugated to an end of a polymer chain, including a stimulus responsive polymer chain. Techniques for conjugating such light sensitive groups to monomers or polymer chains are known.</p>
+      <p id="p-00136-en" num="0136">Generally, light responsive polymers will be prepared from vinyl monomers that contain light-sensitive pendant groups. Such monomers may be homopolymerised or copolymerised with one or more other ethylenically unsaturated monomers.</p>
+      <p id="p-00137-en" num="0137">The light-sensitive groups may be dye molecules that isomerise or become ionised when they absorb certain wavelength of light, converting them from hydrophobic to hydrophilic confirmations or vice versa, or they may be dye molecules which give off heat when they absorb certain wavelength of light. In the former case, the isomerisation alone can cause chain expansion or collapse, while in the later case the polymer can precipitate if it is also temperature responsive.</p>
+      <p id="p-00138-en" num="0138">Examples of chromophoric groups that may give rise to the light responsive properties include aromatic diazo dyes. When a dye of this type is exposed to 350-410 nm UV light, the trans form of the dye, which is hydrophobic in character, can be isomerised to its cis form, which is dipolar and more hydrophilic in character, this in turn can cause polymer conformational changes. Exposure of the dye to visible light at about 750 nm can reverse this phenomenon.</p>
+      <p id="p-00139-en" num="0139">Examples of specific ion responsive polymers include polysaccharides such as carrageenan that change their confirmation, for example, from a random to an ordered confirmation, as a function of exposure to ions such as K<sup>+</sup> or Ca<sup>2+</sup>. Other examples of specific ion responsive polymers include polymers with pendant ion chelating groups such histidine or EDTA.</p>
+      <p id="p-00140-en" num="0140">Stimulus responsive polymer hydrogels may be prepared using techniques well known in the art.</p>
+      <p id="p-00141-en" num="0141">The graphene-based foams in accordance with the invention can be prepared by a process comprising providing a dispersion of graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof in a freeze castable medium, and subjecting the dispersion to freeze casting.</p>
+      <p id="p-00142-en" num="0142">Freeze casting is a known wet shaping technique that involves preparing a dispersion of a material in a freeze castable medium, pouring the dispersion into a mold, freezing the dispersion while it is in the mold, and typically sublimating the now frozen freeze castable medium. A review of freeze casting of porous materials is provided in International Materials Reviews 2012, vol 57, No. 1 page 37-60.</p>
+      <p id="p-00143-en" num="0143">Reference herein to a “freeze castable medium” is intended to mean a medium that can be used to form a dispersion of graphene, partially reduced graphene oxide, reduced graphene oxide, or a combination thereof, and can form a solid and undergo freeze casting. Those skilled in the art will appreciate the various liquids that can be used in the process according to the invention. For example, graphene exhibits more hydrophobic character than partially reduced graphene oxide or reduced graphene. A suitable freeze castable medium will be selected by taking this into account.</p>
+      <p id="p-00144-en" num="0144">Examples of freeze castable mediums include an aqueous medium, an ethanol medium, a dimethylformamide (DMF) medium, a N-methyl-2-pyrrolidone (NMP) medium, an acetone medium, a dimethylsulfoxide (DMSO) medium, or combinations thereof.</p>
+      <p id="p-00145-en" num="0145">In one embodiment, the cell walls of the graphene-based foam are (i) formed of partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof, and (ii) have a thickness defined by the thickness of a plurality of partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof.</p>
+      <p id="p-00146-en" num="0146">In another embodiment, the process of preparing the graphene-based foam according to the invention comprises producing a dispersion of partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof in a freeze castable medium, and subjecting the dispersion to freeze casting.</p>
+      <p id="p-00147-en" num="0147">Freeze casting of graphene oxide or graphene oxide/polymer dispersions has been reported. For example, see US 2010/0144904 and J. Am. Chem. Soc 2011, 133, 6122-6125. However, porous graphene-based structures formed according to these prior art techniques do not present the unique hierarchical structure of the graphene-based foams according to the present invention, and consequently they also do not present the improved properties of the graphene-based foams according to the present invention.</p>
+      <p id="p-00148-en" num="0148">Without wishing to be limited by theory, it is believed that the unique structure of graphene-based foams according to the present invention is derived at least in part by the dispersion that is subject to freeze casting comprising graphene, partially reduced and/or reduced graphene oxide. In particular, those skilled in the art will appreciate that graphene oxide is highly hydrophilic. This hydrophilic character of graphene oxide is believed to render the sheets more prone to forming random arrangements. In contrast, graphene, partially reduced and reduced graphene oxide have no or a reduced atomic oxygen content relative to graphene oxide and are consequently less hydrophilic than graphene oxide. The reduced hydrophilicity of these graphene-based materials is believed to enable the sheets thereof to more readily form stable layered arrangements.</p>
+      <p id="p-00149-en" num="0149">According to the process of the invention, it is believed that upon freezing the dispersion the graphene sheets, partially reduced graphene sheets and/or reduced graphene sheets are rejected from the forming frozen particles and entrapped in channels that develop between the growing frozen particles to form a continuous network whose ultimate structure is determined by the so formed frozen particles. Accordingly, the graphene-based sheets are forced to align along the advancing freezing particle walls while at the same time they are concentrated and squeezed at the forming solid crystal boundaries. This concentration and compaction effect is believed to provide for the highly ordered and layered cell wall construction. Furthermore, the graphene, partially reduced graphene oxide and reduced graphene oxide sheets provide for enhanced π-π sheet attraction. The enhanced π-π sheet attraction is in turn believed to provide for cell structures that are particularly stable and can maintain integrity upon removal of the freeze castable medium.</p>
+      <p id="p-00150-en" num="0150">The ability for the graphene-based sheets to align along advancing freezing particles and be suitably compressed at the forming crystal boundaries is believed to be enhanced if the so formed freezing particles are anisotropic in shape. Accordingly, in one embodiment the freeze castable medium provides for anisotropic frozen particles during freeze casting.</p>
+      <p id="p-00151-en" num="0151">It will be appreciated from the discussion above that freeze casting according to the process of the invention is conducted using a dispersion of graphene, partially reduced graphene oxide and/or reduced graphene oxide. Where the dispersion is to contain partially reduced graphene oxide and/or reduced graphene oxide, the dispersion may initially be prepared using graphene oxide and this graphene oxide partially reduced or reduced in situ so as to afford the dispersion of partially reduced and/or reduced graphene oxide. For example, a dispersion of graphene oxide in water may be prepared and a suitable reducing agent (e.g. ascorbic acid) introduced so as to promote reduction of the dispersed graphene oxide. If required, the temperature of the graphene oxide dispersion may be increased to promote the reduction.</p>
+      <p id="p-00152-en" num="0152">Accordingly, in one embodiment, the process comprises providing a dispersion of graphene oxide in a freeze castable medium and promoting reduction of the graphene oxide so as to produce the dispersion of partially reduced and/or reduced graphene oxide in the freeze castable medium.</p>
+      <p id="p-00153-en" num="0153">In one embodiment, the reduction is promoted by introducing a reducing agent into the dispersion.</p>
+      <p id="p-00154-en" num="0154">Suitable reducing agents to promote reduction of graphene oxide include, but are not limited to, ascorbic acid, hydrazine, hydroquinone and sodium sulfite.</p>
+      <p id="p-00155-en" num="0155">In another embodiment, the reduction is promoted by increasing the temperature of the dispersion. In that case, the temperature of the dispersion will typically be increased to about 150-250° C., for example about 250° C.</p>
+      <p id="p-00156-en" num="0156">Where graphene oxide is used to prepare the dispersion of partially reduced and/or reduced graphene oxide, it will be important that the so formed partially reduced and/or reduced graphene oxide remains in a dispersed state so at so perform the process of the invention.</p>
+      <p id="p-00157-en" num="0157">Those skilled in the art of freeze casting will appreciate the general parameters for controlling the morphological features of porous materials. For example, the density of the graphene-based foam may be varied by adjusting the concentration of the dispersion that is to be subjected to freeze casting. For example, a graphene-based foam having a density of 7 mg/cm<sup>3 </sup>may be prepared using a dispersion comprising 7 mg/ml of graphene, partially reduced graphene oxide, reduced graphene oxide, or a combination thereof, or a graphene-based foam having a density of 5 mg/cm<sup>3 </sup>may be prepared using a dispersion comprising 5 mg/ml of graphene, partially reduced graphene oxide, reduced graphene oxide, or a combination thereof, or a graphene-based foam having a density of 2.5 mg/cm<sup>3 </sup>may be prepared using a dispersion comprising 2.5 mg/ml of graphene, partially reduced graphene oxide, reduced graphene oxide, or a combination thereof, or a graphene-based foam having a density of 1 mg/cm<sup>3 </sup>may be prepared using a dispersion comprising 1 mg/ml of graphene, partially reduced graphene oxide, reduced graphene oxide, or a combination thereof, or a graphene-based foam having a density of 0.5 mg/cm<sup>3 </sup>may be prepared using a dispersion comprising 0.5 mg/ml of graphene, partially reduced graphene oxide, reduced graphene oxide, or a combination thereof, and so on.</p>
+      <p id="p-00158-en" num="0158">Where graphene oxide is to reduced in situ, the mass of partially reduced and/or reduced graphene oxide can simply be replaced with graphene oxide. For example, a graphene-based foam having a density of 7 mg/cm<sup>3 </sup>may be prepared using a dispersion comprising 7 mg/ml of graphene oxide that is to be subsequently reduced, and so on.</p>
+      <p id="p-00159-en" num="0159">A dispersion of graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof in a freeze castable medium is used to prepare the graphene-based foam.</p>
+      <p id="p-00160-en" num="0160">The dispersion that is freeze cast to form the graphene-based foam will generally be substantially free of graphene oxide.</p>
+      <p id="p-00161-en" num="0161">The dispersion that is freeze cast to form the graphene-based foam will generally be substantially free of polymer.</p>
+      <p id="p-00162-en" num="0162">In one embodiment, the dispersion that is freeze cast to form the graphene-based foam is substantially free of graphene.</p>
+      <p id="p-00163-en" num="0163">The only graphene material in the dispersion that is freeze cast to form the graphene-based foam will typically be selected from graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, and a combination thereof.</p>
+      <p id="p-00164-en" num="0164">In one embodiment, the only graphene material in the dispersion that is freeze cast to form the graphene-based foam is selected from partially reduced graphene oxide sheets, reduced graphene oxide sheets, and a combination thereof.</p>
+      <p id="p-00165-en" num="0165">As used herein the expression “graphene material” is intended to embrace graphene and any derivative thereof such as partially reduced graphene oxide, reduced graphene oxide and graphene oxide.</p>
+      <p id="p-00166-en" num="0166">The pore size of the foam may be varied by controlling parameters such as the freezing temperature, the concentration of the graphene, partially reduced and/or reduced graphene oxide in the dispersion, and where appropriate also the degree of reduction of the graphene oxide. For example, a graphene-based foam with 20 μm pore size can be obtained by freeze casting of 5 mg/ml partially reduced graphene dispersion in dry ice, or a graphene-based foam with 10 μm pore size can be obtained by freeze casting of 5 mg/ml partially reduced graphene dispersion in liquid nitrogen, or a graphene-based foam with 50 μm pore size can be obtained by freeze casting of 1 mg/ml reduced graphene dispersion in dry ice</p>
+      <p id="p-00167-en" num="0167">The cell wall thickness may be varied by controlling the density of graphene-based foam. For example, a graphene-based foam with density of 0.5 mg/cm<sup>3 </sup>may have an average wall thickness of about 2 nm, or a graphene-based foam with density of 1.0 mg/cm<sup>3 </sup>may have an average wall thickness of about 4 nm, or a graphene-based foam with density of 5 mg/cm<sup>3 </sup>may have an average wall thickness of about 8 nm.</p>
+      <p id="p-00168-en" num="0168">The freeze castable medium can be removed after freeze casting by techniques known in the art such as freeze-drying, supercritical drying or oven drying and air drying.</p>
+      <p id="p-00169-en" num="0169">The graphene, partially reduced graphene oxide, and reduced graphene oxide used in accordance with the invention may be obtained commercially, or it may be derived from graphite and graphene oxide as described herein.</p>
+      <p id="p-00170-en" num="0170">Unlike convention techniques for forming graphene-based foams, the process according to the invention advantageously results in little if no shrinkage of the foam. Accordingly, the process offers excellent control over the morphological features of the foam.</p>
+      <p id="p-00171-en" num="0171">If desired, the so formed graphene-based foam may be subjected to annealing (heat treatment). By subjecting the foam to annealing, the C/O atomic ratio (for foams containing partially reduced graphene oxide and/or reduced graphene oxide) can be further increased and the attractive interaction between graphene-based sheets in the cell walls can be further enhanced. This in turn is believed to impart improved mechanical and electrical properties to the graphene-based foams.</p>
+      <p id="p-00172-en" num="0172">In one embodiment, a graphene-based foam produced in accordance with the invention is heat treated in air at 200° C., or is heat treated at 500° C. in an inert atmosphere, or is heat treated at 1100° C. in an inert atmosphere. Suitable inert atmospheres include nitrogen or argon.</p>
+      <p id="p-00173-en" num="0173">In one embodiment the open cells of the graphene-based foam are provided with a polymer coating. The resulting polymer coated graphene-based foam may then by pyrolysed so at to convert the polymer coating into graphene. In that case, the cell walls will be formed of graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof having a surface coating of graphene derived form the polymer coating. The cell wall thickness will therefore then be defined by the thickness of a plurality of layered graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof and the thickness of the graphene coating(s).</p>
+      <p id="p-00174-en" num="0174">Where the graphene-based foam forms part of a composition, the foam may be incorporated into that composition by any suitable means. For example, where the composition is a polymer composition, a liquid or solvated form of the polymer may be introduced into the cell structure the foam. Alternatively, monomer may be introduced into cell structure the foam and subsequently polymerised to form polymer.</p>
+      <p id="p-00175-en" num="0175">The present invention therefore further provides a process for preparing a polymer composition comprising graphene foam according to the invention, the process comprising introducing a liquid or solvated form of the polymer into the cell structure the foam.</p>
+      <p id="p-00176-en" num="0176">The present invention also provides a process for preparing a polymer composition comprising graphene foam according to the invention, the process comprising introducing monomer into cell structure the foam and polymerising the monomer to form the polymer.</p>
+      <p id="p-00177-en" num="0177">The improved properties of the graphene-based foams of the invention expand their utility compared conventional porous graphene-based materials that typically are quite brittle. For example, the graphene-based foams in accordance with the invention may find application in electrodes for energy storage, and in conversion devices such as supercapacitors, fuel cells and batteries, in capacitive desalination devices, in thermal and acoustic insulators, in chemical or mechanical sensors, in biomedical applications, in actuators, in adsorbents, as catalyst supports, in field emission, as a precursor for graphene-based film processing, in mechanical dampening, as filters, and in three dimensional flexible electronic components.</p>
+      <heading id="h-00006-en" level="2">1. Electrodes for Energy Storage and Conversion Devices Such as Supercapacitors, Full Cells and Batteries as Well as Capacitive Desalination Devices.</heading>
+      <p id="p-00178-en" num="0178">The hierarchical cellular structure of the graphene-based foams provides a conductive network for electron transportation, a porous structure for ions/molecules diffusion and high specific surface area, thus it is attractive for energy storage and water desalination applications.</p>
+      <heading id="h-00007-en" level="2">2. Thermal and Acoustic Insulators</heading>
+      <p id="p-00179-en" num="0179">High porosity, controllable density and high elasticity of the graphene-based foams are ideal materials for thermal and acoustic insulator. The high porosity and low density properties make the graphene-based foams a perfect material for these applications, and the highly elastic nature allows the graphene-based foams to withstand large deformation, thereby it has excellent durability.</p>
+      <heading id="h-00008-en" level="2">3. Chemical or Mechanical Sensors</heading>
+      <p id="p-00180-en" num="0180">The hierarchical cellular structure of the graphene-based foams provides large channels for fast diffusion of ions/molecules. Thus, it can be used as sensor to detect chemicals in liquid or gas phases. In addition, the elastic and electrical conductive nature of the graphene-based foams makes it an excellent material for mechanical strain sensors. The ultralight and controllable density, and flexibility of graphene-based foam is extremely sensitive to a wide range of pressure, allowing the use in wearable sensors for in vitro diagnostics and gesture control systems for electronic devices.</p>
+      <heading id="h-00009-en" level="2">4. Biomedical Applications</heading>
+      <p id="p-00181-en" num="0181">The graphene-based foams can be used in biomedical applications, as the graphene-based material is bio-compatible. The highly porous graphene-based foam provides a soft scaffold with tuneable mechanical properties for tissue engineering. Moreover, the porous structure is able to load drug molecules. The high electrical conductivity allows the use of electrical stimulation for drug release control or control the growth of cells.</p>
+      <heading id="h-00010-en" level="2">5. Actuators</heading>
+      <p id="p-00182-en" num="0182">The ultra-light structure of the graphene-based foams can be stimulated by electrical field, which can be used as actuators. In addition, the graphene-based foams can also be composited with other stimulatable materials to enhance the actuation performance, and also to be used with different stimulation signals, such as ion concentration, pH values and temperature.</p>
+      <heading id="h-00011-en" level="2">6. 3D Skeleton for Composites (Ceramics, Polymers and Nanoparticles)</heading>
+      <p id="p-00183-en" num="0183">The graphene-based foams provides large space for composition of various functional materials. In terms of the function of the graphene-based foams, it can serve as a conductive filling/network and stable skeleton and reinforcement.</p>
+      <heading id="h-00012-en" level="2">7. Adsorbents</heading>
+      <p id="p-00184-en" num="0184">The large specific area and porous structure of the graphene-based foams make it an excellent material for pollutant adsorbents. Furthermore, the graphene-based foams is an ideal material for solvents/oil adsorption. As it is highly elastic, it can be reused by squeezing out the adsorbed solvents/oils. And the ultralight property of the elastomer allows it floats on the surface of water to clean up oil spills.</p>
+      <heading id="h-00013-en" level="2">8. Catalyst Supports</heading>
+      <p id="p-00185-en" num="0185">The graphene-based foams can also be used as catalyst supports, as it provides porous structure and large specific surface area. The structural/thermal stability and chemical inertness of the graphene-based foams allows it to be operated in various environments, including high temperature and strong acid/base solvent.</p>
+      <heading id="h-00014-en" level="2">9. Field Emission</heading>
+      <p id="p-00186-en" num="0186">The orientation of graphene-based sheets in the graphene-based foams can be controlled by freezing conduction. Therefore, the graphene-based foams with highly oriented structure can be prepared for the use of field emission.</p>
+      <heading id="h-00015-en" level="2">10. Precursor for Graphene-Based Film Processing</heading>
+      <p id="p-00187-en" num="0187">The hierarchical structure of the graphene-based foams can be further compressed or filtrated to prepare graphene-based film. In addition, a graphene composite film can also be synthesized by using graphene-based foam composite materials. This synthesis strategy provides a simple graphene-based film production route. The resulting graphene-based film can be used for various applications, including electrode for energy storage and water desalination.</p>
+      <p id="p-00188-en" num="0188">In one embodiment, there is provided a graphene-based film produced by compressing a graphene-based foam according to the invention.</p>
+      <heading id="h-00016-en" level="2">11. Mechanical Dampening</heading>
+      <p id="p-00189-en" num="0189">The graphene-based foams can be used for mechanical damping. The robust, high efficiency and elastic structure of the graphene-based foams is able to be used for energy adsorption during impact.</p>
+      <heading id="h-00017-en" level="2">12. Filters</heading>
+      <p id="p-00190-en" num="0190">The controllable porous structure of the graphene-based foams can be used as filter. In addition, its porous structure with hydrophilic nature of the graphene-based foams can be used for oil-water filtration.</p>
+      <heading id="h-00018-en" level="2">13. 3D Flexible Electronics</heading>
+      <p id="p-00191-en" num="0191">The unique elastic, electrical conductive and chemically inert nature of the graphene-based foams make them promising for design novel 3D flexible electronic devices.</p>
+      <p id="p-00192-en" num="0192">The present invention therefore also provides an electrode, capacitor, fuel cell, battery, capacitive desalination device, thermal or acoustic insulator, chemical or mechanical sensor, actuator, adsorbent, catalyst support, and filter comprising the graphene based foam according to the invention.</p>
+      <p id="p-00193-en" num="0193">The present invention also provides an electronic component comprising the graphene based foam according to the invention.</p>
+      <p id="p-00194-en" num="0194">The present invention also provides a graphene-based film comprising or in the form of a permanently compressed graphene-based foam according to the invention.</p>
+      <heading id="h-00019-en" level="1">Examples</heading>
+      <heading id="h-00020-en" level="1">Materials, Methods and Results</heading>
+      <heading id="h-00021-en" level="1">(a) Preparation of Graphene Oxide</heading>
+      <p id="p-00195-en" num="0195">Graphene oxide (GO) was synthesized from graphite (SP-1, Bay Carbon) using the modified Hummers method as originally presented by Kovtyukhova and colleagues. The graphite powder (5 g) was place in an 80° C. solution of concentrated H<sub>2</sub>SO<sub>4 </sub>(7.5 ml), K<sub>2</sub>S<sub>2</sub>O<sub>8 </sub>(2.5 g) and P<sub>2</sub>O<sub>5 </sub>(2.5 g). The resultant dark blue mixture was cooled to room temperature over a period time of 6 h, then carefully diluted with distilled water, filtered, and washed until the pH of the filtrate was close to 7 (Milli-Q® water was used in all experiments). The peroxidized product was dried in 50° C. oven overnight, and placed into cold (0° C.) concentrated H<sub>2</sub>SO<sub>4 </sub>(115 ml). KMnO<sub>4 </sub>(15 g) was added gradually under stirring and the temperature of the mixture was kept below 20° C. The mixture was then stirred at 35° C. for 2 h. 230 ml of water was added into the mixture, after 15 min more water (700 ml) and 30% H<sub>2</sub>O<sub>2 </sub>(12.5 ml) were added to terminate the reaction. The mixture was then washed with 1:10 HCl solution (1.1 L). Afterwards the sample was subjected to 5 min of centrifugation at 3000 r.p.m. The sediment was collected, dispersed in water and centrifuged. This process was repeated 2˜3 times, until no sediment was found. The graphite oxide dispersion was then subjected to dialysis to completely remove metal ions and acids. Graphene oxide was obtained by further sonication of graphite oxide in water.</p>
+      <heading id="h-00022-en" level="1">(b) Preparation of Graphene-Based Foam</heading>
+      <p id="p-00196-en" num="0196">In a typical procedure for synthesis of a graphene monolith of 5.10 mg/cm<sup>3</sup>, GO solution (1.5 ml, 5 mg/ml) was mixed with ascorbic acid of 15 mg in a 4 ml cylindrical glass vial, which was then placed in boiling water bath for 30 min to obtain a partially reduced GO dispersion. UV-vis spectroscopy was used to determine the reduction extent of graphene oxide. The spectra were taken from the dialyzed and diluted GO and partially reduced GO dispersion. As shown in <figref>FIG. 1</figref>, the UV-vis absorption peak of graphene oxide was (red) shifted from 231 nm to 256 nm, indicating partial reduction of graphene oxide. The vial was then immersed in a dry ice bath to freeze for 0.5 h. After being thawed at room temperature, the vial was placed in boiling water bath to further reduce GO for 8 h. The obtained gel was then sequentially subjected to dialysis in water (to remove soluble species), freezing drying and thermal annealing at 200° C. in air for 2 h. When the concentration of GO was adjusted to prepare monoliths with different densities, the ratio of GO to ascorbic acid by weight was kept consistent at 1:2. The preparation scheme is shown in the <figref>FIG. 2</figref>. With reference to <figref>FIG. 2</figref>, a well dispersed partially reduced graphene oxide (pr-GO) dispersion (the 1<sup>st </sup>scheme) is frozen, pr-GO sheets are concentrated at the boundary of ice crystals and then aligned along the growth direction of ice due to the squeezing effect (the 2<sup>nd </sup>scheme, side-view). The network retains its connectivity when the ice is thawed (the 3<sup>rd </sup>scheme, top-view). The pr-GO sheets are illustrated as slightly corrugated lines in the scheme with the brown lines representing pr-GO sheets whilst the black lines represent reduced graphene oxide sheets (rGO). Photos of the corresponding samples are presented in the insets.</p>
+      <p id="p-00197-en" num="0197">As shown in <figref>FIG. 3</figref>, the graphene-based foam (5.1 mg/cm<sup>3</sup>) shows black texture. SEM image (<figref>FIG. 4</figref>) shows that the graphene-based foam is comprised of cellular clusters with different orientations, and each cluster is consist of numbers of honeycomb-like graphene cells with the cell dimension around 25 μm. High resolution transmission electron microscopy (HRTEM) analysis (<figref>FIG. 5</figref><i>a</i>) revealed that the graphene-based sheets in the cell wall are well oriented in a nearly parallel manner.</p>
+      <p id="p-00198-en" num="0198">Graphene-based foams with varied densities can be prepared by adjusting the concentration of the starting GO dispersion. As revealed by the SEM and TEM (<figref>FIG. 6</figref>) analysis, all graphene-based walls are consist of well packed graphene-based sheets and the number of stacked graphene-based sheets in the cell wall decreases with lowering the density. Fibrous structures started to appear when the density was reduced to lower than 1.1 mg/cm<sup>3 </sup>(<figref>FIG. 5</figref><i>c </i>and <i>d</i>).</p>
+      <heading id="h-00023-en" level="1">(c) Application of Prepared Graphene-Based Foam</heading>
+      <p id="p-00199-en" num="0199">The graphene-based foam was demonstrated for the application of mechanical damper. The samples were prepared in cylindrical shape (approximately 12 mm in diameter and 8 mm in height) for compressive tests. The compressive tests were performed in an Instron (Micro Tester, 5848, Instron) using a 10 N load cell and strain control mode with a strain rate of 100%/min. Filming of the recovery of a compressed graphene monolith was recorded using a high-speed camera operated at 700 frames per second. The graphene-based foam was compressed to 80% stain and was completely recover to its original shape rapidly when the loading was removed (<figref>FIG. 6</figref><i>a</i>). The graphene-based foam is able to adsorb large portion of energy during loading and unloading. As shown in <figref>FIG. 6</figref> (<i>a</i>), the energy loss coefficient was calculated to be 82.5% at the first compressive cycle. The graphene-based foam shows excellent fatigue resistance. It was tested for over 1000 compressive loading and unloading, and it can retain 78% of its maximum stress at 50% strain (<figref>FIG. 6</figref><i>b</i>). In addition, the graphene-based foam can spring back in a fast rate, and it only took 61 ms to recover from 60% strain deformation (<figref>FIG. 6</figref><i>c</i>). The graphene-based foams with a range of densities show excellent compressibility. As shown in <figref>FIG. 7</figref>, the graphene-based foams with different densities can spring after removal of the compressive force.</p>
+      <p id="p-00200-en" num="0200">The prepared graphene-based foam was demonstrated for the application of mechanical sensor. The electrical conductivity was determined by a two-probe method. To optimize the electrical contact between copper wires and elastomer, both ends of elastomer were carefully coated with a thin layer of silver paste. The monitoring of electrical resistance in relation to the number of mechanical compression was performed under a laser displacement sensor (LK-GD500, Keyence) and the change of electrical resistance was measured by a potentiostat (Model 363, Princeton Applied Research) controlled by an electronic digital interface (e-corder 401, eDAQ) with E-chart data acquisition program (E-chart, eDAQ). As shown in <figref>FIG. 8</figref>, the response of bulk electrical resistance of the graphene-based foam is highly constant over multiple cycles of compression.</p>
+      <p id="p-00201-en" num="0201">Graphene-based foam was directly used as excellent organic solvent adsorbent, revealing high absorption capacities (Q=weight after absorption/weight before absorption) and fast solvent up take rate on various solvents. As shown in <figref>FIG. 9</figref>, the graphene-based foam with the density of 1.0 mg/cm<sup>3 </sup>was able to absorb chloroform with the Q value of 636, and diesel with the Q value of 529. The Q value of graphene-based foam is proportional to the solvent density and inverse proportional to elastomer density (<figref>FIG. 9</figref>). In addition, A 1 cm<sup>3 </sup>sponge only took few seconds to saturate with solvent.</p>
+      <p id="p-00202-en" num="0202">Graphene-based foam was used as the electrode for the supercapacitor application. The graphene-based foam (wet, without removal of the solvent) was highly compressed to a membrane like electrode. Two compressed graphene-based foam electrodes were assembled in a symmetrical two-electrode configuration, where the electrodes were attached onto the Pt foil and were assembled to a sandwich like configuration with a filter paper separation. The performance of supercapacitor was examined by a Versastat-4 electrochemical workstation (Princeton Applied Research). The supercapacitance of the graphene-based foam was 146 F/g at charge/discharge rate of 1 A/g (<figref>FIG. 10</figref>).</p>
+      <p id="p-00203-en" num="0203">Graphene-based foam according to the invention was demonstrated for the application of reinforcing functional polymer hydrogels. The graphene-based foam reinforced hydrogels were prepared by in situ polymerization of PNIAM within graphene-based foam cell network. In the typical synthesis processes, a mixture containing N-Isopropylacrylamide monomer (0.5 g), N′, N′-methylene-bisacrylamide crosslinker (0.05 g), N′, N′-tetramethylenediamine (20 μl) and H<sub>2</sub>O (10 ml) was subjected to deoxygenation by bubbling with N<sub>2 </sub>gas. The mixture was then filled into the graphene-based foam (1, 2.5 and 5 mg/cm<sup>3</sup>) via vacuum assisted backfilling (<figref>FIG. 11</figref><i>c</i>). The polymerization was carried out at ambient conditions for 12 h. The resulting reinforced hydrogels were noted as P5-G0.1, P5-G0.25 and P5-G0.5, corresponding to weight ratio of Poly(N-isopropylacrylamide) (PNIPAM) and graphene of 5% wt-0.1% wt, 5% wt-0.25% wt and 5% wt-0.5% wt, respectively.</p>
+      <p id="p-00204-en" num="0204">To compare with the hydrogel without reinforcement, PINPAM hydrogel was prepared by using above process without backfilling into graphene-based foam, and noted as P5.</p>
+      <p id="p-00205-en" num="0205">Characterization of the reinforced hydrogels: SEM images were obtained using a JOEL 7001F SEM, and the sample was freeze dried before SEM imaging. The weight of the reinforced hydrogels was confirmed with a balance (AND GH-252) with an accuracy of 0.01 mg. Compressive tests were performed in a Mini Instron (Micro Tester, 5845, Instron) using a 100 N load cell with the strain control mode at a strain rate of 100%/min. Electrical conductivity was measured by a two-probe method. To optimize the electrical contact between electrodes and the hydrogel, both ends of graphene-based foam were coated with silver paste before backfilling of the polymerisable mixture.</p>
+      <p id="p-00206-en" num="0206">The graphene-based foam reinforced hydrogels show a combination of good mechanical, electrical and stimuli-responsive properties. As shown in <figref>FIG. 11</figref><i>a </i>and <i>b</i>, the freestanding reinforced hydrogel (b) is able to maintain its original shape under gravity while the PNIPAM hydrogel (a) is deformed, indicating the improvement of rigidness of the reinforced hydrogel.</p>
+      <p id="p-00207-en" num="0207">Further detailed mechanical tests were performed to analyse the composite hydrogels. With incorporation of only 0.1-0.5% wt of graphene-based foam, both of the compressive strength and toughness of the resulting reinforced hydrogels are 6-8 times higher than those of pure PNIPAM hydrogel, and 40-300 times higher than those of the graphene foam per se (<figref>FIG. 12</figref><i>a </i>and <i>b</i>).</p>
+      <p id="p-00208-en" num="0208">The rheological tests also show that the storage and loss modulus of the reinforced hydrogel increase with graphene content (<figref>FIGS. 12</figref><i>c </i>and <i>d</i>). The store modulus of reinforced hydrogel with only 0.5% wt graphene is one order of magnitude higher than pure PNIPAM hydrogel.</p>
+      <p id="p-00209-en" num="0209">The reinforced hydrogels have excellent electrical conductivity at extreme low graphene content. An effective conductive network With the conductivity of 0.7 S/m can be constructed with only ˜0.045 vol. % (0.1 wt %) of graphene-based sheets. A very high conductivity of ˜10 S/m is also found with ˜0.23 vol. % (0.5% wt) of graphene-based sheets (<figref>FIG. 13</figref><i>a</i>).</p>
+      <p id="p-00210-en" num="0210">The electrical resistance of the reinforced hydrogels can be changed with modulation of temperature. As shown in <figref>FIG. 13</figref><i>b</i>, the electrical resistance of reinforced hydrogel was decreased to 64% of its virgin value when temperature was raised from 25° C. to 50° C., and was able to recover when temperature was cooled.</p>
+      <p id="p-00211-en" num="0211">Graphene-based foam was demonstrated for the application as pressure sensor. In a typical synthesis process of a graphene-based foam sensor, graphene-based foam (1 mg/cm<sup>3</sup>) was cut to a 1 mm thick film and sealed by two gold-coated polydimethylsiloxane layers. The resistance changes were recorded by a potentiostat (Model 363, Princeton Applied Research) controlled by an electronic digital interface (e-corder 401, eDAQ) with E-chart data acquisition program (E-chart, eDAQ). As shown in <figref>FIG. 14</figref>, heartbeats under two different conditions—normal (lower signal) and post-exercise (higher signal) were monitored with time. The sensor was able to monitor the magnitudes and frequencies of the corresponding biofeedback.</p>
+      <p id="p-00212-en" num="0212">Throughout this specification and the claims which follow, unless the context requires otherwise, the word “comprise”, and variations such as “comprises” and “comprising”, will be understood to imply the inclusion of a stated integer or step or group of integers or steps but not the exclusion of any other integer or step or group of integers or steps.</p>
+      <p id="p-00213-en" num="0213">The reference in this specification to any prior publication (or information derived from it), or to any matter which is known, is not, and should not be taken as an acknowledgment or admission or any form of suggestion that that prior publication (or information derived from it) or known matter forms part of the common general knowledge in the field of endeavour to which this specification relates.</p>
+      <p id="p-00214-en" num="0214">Throughout this specification and the claims which follow, unless the context requires otherwise, the phrase “consisting essentially of”, and variations such as “consists essentially of” will be understood to indicate that the recited element(s) is/are essential i.e. necessary elements of the invention. The phrase allows for the presence of other non-recited elements which do not materially affect the characteristics of the invention but excludes additional unspecified elements which would affect the basic and novel characteristics of the method defined. For example, according to an embodiment of a method of the invention, the dispersion consists essentially of graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or combinations thereof within a freeze castable medium. The dispersion may comprise elements such as reducing agent that do not materially affect the characteristics of the invention. However, the dispersion will not contain polymer which would materially affect the characteristics of the invention.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. Graphene-based foam, the graphene-based foam having a structure defined by a three-dimensional network of interconnected and ordered open cells, the open cells being defined by cell walls, the cell walls (i) being formed of graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof, and (ii) having a thickness defined by the thickness of a plurality of graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The graphene based foam according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the cell walls are formed of partially reduced graphene oxide sheets, reduced graphene oxide sheets, or a combination thereof.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The graphene based foam according to <claim-ref idref="clm-00001-en">claim 1 </claim-ref> or <claim-ref idref="clm-00002-en">2</claim-ref>, wherein the cell wall has an average height that is 100 to 5000 times greater than the average cell wall thickness.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The graphene based foam according to any one of <claim-ref idref="clm-00001-en">claims 1 </claim-ref> to <claim-ref idref="clm-00003-en">3</claim-ref>, wherein the interconnected and ordered open cells comprise cells with an edge connectivity of 3.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The graphene based foam according to any one of <claim-ref idref="clm-00001-en">claims 1 </claim-ref> to <claim-ref idref="clm-00004-en">4</claim-ref> having a density ranging from about 0.5 mg/cm<sup>3 </sup>to about 7 mg/cm<sup>3</sup>.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The graphene based foam according to any one of <claim-ref idref="clm-00001-en">claims 1 </claim-ref> to <claim-ref idref="clm-00004-en">4</claim-ref> having a compression set at 50% compression of 15% or less.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. A composition comprising a graphene-based foam according to any one of <claim-ref idref="clm-00001-en">claims 1 </claim-ref> to 6.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The composition according to <claim-ref idref="clm-00007-en">claim 7</claim-ref> in the form of a polymer composition comprising the graphene-based foam.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The composition according to <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the polymer composition is a polymer hydrogel.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. A process of preparing a graphene-based foam according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, the process comprising providing a dispersion of graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or combinations thereof in a freeze castable medium, and subjecting the dispersion to freeze casting.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The process according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the only graphene material in the dispersion that is freeze cast to form the graphene-based foam is selected from partially reduced graphene oxide sheets, reduced graphene oxide sheets, and a combination thereof.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The process according to <claim-ref idref="clm-00010-en">claim 10 </claim-ref> or <claim-ref idref="clm-00011-en">11</claim-ref>, wherein the freeze castable medium provides for anisotropic frozen particles during freeze casting.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The process according to any one of <claim-ref idref="clm-00010-en">claims 10 </claim-ref> to <claim-ref idref="clm-00012-en">12</claim-ref>, wherein the dispersion comprises graphene sheets, partially reduced graphene oxide sheets, reduced graphene oxide sheets, or combinations thereof at a concentration ranging from about 0.5 mg/ml to about 7 mg/ml.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The process according to any one of <claim-ref idref="clm-00010-en">claims 10 </claim-ref> to <claim-ref idref="clm-00013-en">13</claim-ref>, wherein the resulting graphene foam is annealed.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. An electrode, capacitor, fuel cell, battery, capacitive desalination device, thermal or acoustic insulator, chemical or mechanical sensor, actuator, adsorbent, catalyst support, and filter comprising the graphene based foam according to any one of <claim-ref idref="clm-00001-en">claims 1 </claim-ref> to <claim-ref idref="clm-00006-en">6</claim-ref>.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. An electronic component comprising the graphene based foam according to any one of <claim-ref idref="clm-00001-en">claims 1 </claim-ref> to <claim-ref idref="clm-00006-en">6</claim-ref>.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. A graphene-based film comprising or in the form of a permanently compressed graphene-based foam according to any one of <claim-ref idref="clm-00001-en">claims 1 </claim-ref> to <claim-ref idref="clm-00006-en">6</claim-ref>. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150259212A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150259212A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150259212A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259212A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150259212A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259212A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150259212A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259212A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150259212A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259212A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150259212A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259212A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150259212A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259212A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150259212A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259212A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150259212A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259212A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150259212A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259212A1-20150917-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150259212A1_00011.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150259212A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150259212A1.PDF" type="pdf" size="1174950" pages="23" />
+</lexisnexis-patent-document>

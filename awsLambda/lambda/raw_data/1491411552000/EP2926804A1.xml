@@ -1,0 +1,967 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2926804A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151007" time-inserted="093654" date-changed="20151027" time-changed="082729">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121594628">
+        <country>EP</country>
+        <doc-number>2926804</doc-number>
+        <kind>A1</kind>
+        <date>20151007</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>13859162</doc-number>
+        <date>20131128</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>jpn</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151007">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012261990</doc-number>
+        <date>20121130</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2012261990</doc-number>
+        <kind>A</kind>
+        <date>20121130</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2013082073</doc-number>
+        <kind>W</kind>
+        <date>20131128</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>2012261990</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>2013082073</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>JP20120261990</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>WO2013JP82073</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151008">
+      <gazette-reference>
+        <date>20151007</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151007</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151007</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151008">
+      <request-for-examination>
+        <date>20150629</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20151027">
+      <classification-ipcr sequence="1">
+        <text>A61K   8/892       20060101AFI20140619BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>892</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140619</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61K   8/06        20060101ALI20140619BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140619</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61Q   5/02        20060101ALI20140619BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>Q</subclass>
+        <main-group>5</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140619</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>A61Q   5/06        20060101ALI20140619BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>Q</subclass>
+        <main-group>5</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140619</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>A61Q   5/12        20060101ALI20140619BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>Q</subclass>
+        <main-group>5</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140619</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>A61Q  19/00        20060101ALI20140619BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>Q</subclass>
+        <main-group>19</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140619</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151027">
+      <classification-cpc sequence="1">
+        <text>A61K   8/068       20130101 FI20151015BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>068</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151015</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61K   8/06        20130101 LI20151017BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151017</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61K   8/892       20130101 LI20151017BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>892</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151017</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61K2800/21        20130101 LA20151015BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>2800</main-group>
+        <subgroup>21</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151015</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61K2800/594       20130101 LA20151015BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>2800</main-group>
+        <subgroup>594</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151015</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61K2800/805       20130101 LA20151015BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>2800</main-group>
+        <subgroup>805</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151015</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61Q   5/00        20130101 LI20151015BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>Q</subclass>
+        <main-group>5</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151015</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61Q   5/02        20130101 LI20140627BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>Q</subclass>
+        <main-group>5</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140627</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>A61Q   5/06        20130101 LI20151007BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>Q</subclass>
+        <main-group>5</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151007</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>A61Q   5/12        20130101 LI20140627BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>Q</subclass>
+        <main-group>5</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140627</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>A61Q  19/00        20130101 LI20151007BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>Q</subclass>
+        <main-group>19</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151007</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">9</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151007" lang="ger" format="original">KOSMETISCHES PRÄPARAT</invention-title>
+    <invention-title id="title_eng" date-changed="20151007" lang="eng" format="original">COSMETIC PREPARATION</invention-title>
+    <invention-title id="title_fre" date-changed="20151007" lang="fre" format="original">PRODUIT COSMÉTIQUE</invention-title>
+    <parties date-changed="20151007">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Shin-Etsu Chemical Co., Ltd.</orgname>
+            <registered-number>101006323</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>6-1, Ohtemachi 2-chome Chiyoda-ku</address-1>
+              <city>Tokyo 100-0004</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>Ando Yuji</name>
+            <address>
+              <address-1>c/o Silicone Denshi Zairyo Gijutsu Kenkyusho Shin-Etsu Chemical Co. Ltd. 1-10 Hitomi Matsuida-machi</address-1>
+              <city>Annaka-shi Gunma 379-0224</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>Irifune Shinji</name>
+            <address>
+              <address-1>c/o Silicone Denshi Zairyo Gijutsu Kenkyusho Shin-Etsu Chemical Co. Ltd. 1-10 Hitomi Matsuida-machi</address-1>
+              <city>Annaka-shi Gunma 379-0224</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Zacco GmbH</name>
+            <registered-number>101292592</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Bayerstrasse 83</address-1>
+              <city>80335 München</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151007">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP13082073</doc-number>
+        <date>20131128</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014084319</doc-number>
+        <date>20140605</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151015">
+      <main-family family-id="165995336">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014084319</doc-number>
+            <kind>A1</kind>
+            <date>20140605</date>
+          </document-id>
+          <application-date>
+            <date>20131128</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104797238</doc-number>
+            <kind>A</kind>
+            <date>20150722</date>
+          </document-id>
+          <application-date>
+            <date>20131128</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2926804</doc-number>
+            <kind>A1</kind>
+            <date>20151007</date>
+          </document-id>
+          <application-date>
+            <date>20131128</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150290091</doc-number>
+            <kind>A1</kind>
+            <date>20151015</date>
+          </document-id>
+          <application-date>
+            <date>20131128</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="165995335">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014084319</doc-number>
+            <kind>A1</kind>
+            <date>20140605</date>
+          </document-id>
+          <application-date>
+            <date>20131128</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104797238</doc-number>
+            <kind>A</kind>
+            <date>20150722</date>
+          </document-id>
+          <application-date>
+            <date>20131128</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2926804</doc-number>
+            <kind>A1</kind>
+            <date>20151007</date>
+          </document-id>
+          <application-date>
+            <date>20131128</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150290091</doc-number>
+            <kind>A1</kind>
+            <date>20151015</date>
+          </document-id>
+          <application-date>
+            <date>20131128</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151007" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Provided is a cosmetic preparation superior in stability and feel. The cosmetic preparation contains an (a) organopolysiloxane emulsion in an amount of not smaller than 0.1% by mass. This organopolysiloxane emulsion is obtained through emulsion polymerization and contains octamethylcyclotetrasiloxane in an amount of not larger than 1,000 ppm by mass.</p>
+  </abstract>
+  <legal-data date-changed="20151016">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20151007</date>
+      </publication-date>
+      <event-code-1>17P</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXAMINATION FILED</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2926804A1</docdb-publication-number>
+      <docdb-application-id>418670067</docdb-application-id>
+      <effective-date>
+        <date>20150629</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20151007</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2926804A1</docdb-publication-number>
+      <docdb-application-id>418670067</docdb-application-id>
+      <corresponding-kind>A1</corresponding-kind>
+      <legal-designated-states>
+        <country>AL</country>
+        <country>AT</country>
+        <country>BE</country>
+        <country>BG</country>
+        <country>CH</country>
+        <country>CY</country>
+        <country>CZ</country>
+        <country>DE</country>
+        <country>DK</country>
+        <country>EE</country>
+        <country>ES</country>
+        <country>FI</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>GR</country>
+        <country>HR</country>
+        <country>HU</country>
+        <country>IE</country>
+        <country>IS</country>
+        <country>IT</country>
+        <country>LI</country>
+        <country>LT</country>
+        <country>LU</country>
+        <country>LV</country>
+        <country>MC</country>
+        <country>MK</country>
+        <country>MT</country>
+        <country>NL</country>
+        <country>NO</country>
+        <country>PL</country>
+        <country>PT</country>
+        <country>RO</country>
+        <country>RS</country>
+        <country>SE</country>
+        <country>SI</country>
+        <country>SK</country>
+        <country>SM</country>
+        <country>TR</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20151007</date>
+      </publication-date>
+      <event-code-1>AX</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXTENSION OF THE EUROPEAN PATENT TO</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2926804A1</docdb-publication-number>
+      <docdb-application-id>418670067</docdb-application-id>
+      <countries-concerned>
+        <country>BA</country>
+        <country>ME</country>
+      </countries-concerned>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151007">
+    <heading id="h-00001-en">TECHNICAL FIELD</heading>
+    <p id="p-00001-en" num="0001">The present invention relates to a cosmetic preparation capable of preventing a feel and stability thereof from being impaired due to low molecular cyclosiloxanes. The present invention also relates to a hair cosmetic preparation capable of preventing a stability, feel and foaming property thereof from being impaired.</p>
+    <heading id="h-00002-en">BACKGROUND ART</heading>
+    <p id="p-00002-en" num="0002">Silicone oils are widely used in cosmetic preparations, since they are colorless, odorless and chemically and physiologically inactive. Particularly, high-viscosity organopolysiloxanes are often used in hair cosmetic preparations, since they are capable of adhering to the hair in a favorable manner.</p>
+    <p id="p-00003-en" num="0003">However, when directly emulsifying a high-viscosity organopolysiloxane, the average particle diameter of the emulsion particles can only be as small as about several micrometers, and a finer average particle diameter cannot be easily obtained, thus resulting in a low emulsion stability.</p>
+    <p id="p-00004-en" num="0004">For this reason, various studies have been made on a method for producing an emulsion through emulsion polymerization, for the purpose of obtaining fine emulsion particles and thus improving the stability of the emulsion. For example, there has been known a method for performing emulsion polymerization on an emulsified cyclic siloxane oligomer, using a strong acid or a strong base (Patent documents 1, 2 and 3). However, in each method, octamethylcyclotetrasiloxane will be produced in an emulsion in an amount of not smaller than 1,000 ppm by mass. Thus, when adding such emulsion to a cosmetic preparation, there occurs a problem that the stability and feel will be impaired.</p>
+    <p id="p-00005-en" num="0005">Further, octamethylcyclotetrasiloxane has been considered as a substance of concern in recent years, and cosmetic preparations containing a restricted amount of octamethylcyclotetrasiloxane have been demanded.</p>
+    <heading id="h-00003-en">PRIOR ART DOCUMENTS</heading>
+    <heading id="h-00004-en">Patent document</heading>
+    <p id="p-00006-en" num="0006">
+      <ul id="ul-00001-en" list-style="none" compact="compact">
+        <li>Patent document 1: Japanese published examined application No. <patcit id="pcit-00001" dnum="JPSHO342041B"><text>Sho 34-2041</text></patcit></li>
+        <li>Patent document 2: Japanese published examined application No.<patcit id="pcit-00002" dnum="JPSHO4113995B"><text>Sho 41-13995</text></patcit></li>
+        <li>Patent document 3: Japanese Patent No. <patcit id="pcit-00003" dnum="JP3145394B"><text>3145394</text></patcit></li>
+      </ul>
+    </p>
+    <heading id="h-00005-en">DISCLOSURE OF THE INVENTION</heading>
+    <heading id="h-00006-en">Problem to be solved by the invention</heading>
+    <p id="p-00007-en" num="0007">Therefore, it is an object of the present invention to provide a cosmetic preparation whose stability and feel are not impaired due to low molecular cyclosiloxanes; and a hair cosmetic preparation whose stability, feel and foaming property are not impaired.</p>
+    <heading id="h-00007-en">Means to solve the problem</heading>
+    <p id="p-00008-en" num="0008">In view of the aforementioned facts, the inventors of the present invention have dedicated themselves to carrying out further studies. As a result, they found a method for producing an organopolysiloxane emulsion that is obtained through emulsion polymerization and contains octamethylcyclotetrasiloxane in an amount of not larger than 1,000 ppm by mass. That is, the inventors found that the abovementioned problems could be solved by a cosmetic preparation using the organopolysiloxane emulsion obtained through such method, which led to the completion of the invention.</p>
+    <p id="p-00009-en" num="0009">Particularly, the present invention provides the following cosmetic preparations. <br /> (i) A cosmetic preparation 1 containing an (a) organopolysiloxane emulsion in an amount of not smaller than 0.1% by mass, such (a) organopolysiloxane emulsion being obtained through emulsion polymerization and containing octamethylcyclotetrasiloxane in an amount of not larger than 1,000 ppm by mass.<br /> (ii) The cosmetic preparation of (i), in which the (a) organopolysiloxane emulsion is obtained by emulsion-polymerizing an organopolysiloxane expressed by the following general formula (1).         HO (R<sup>1</sup><sub>2</sub>SiO)<sub>n</sub>H     (1) (In the formula, R<sup>1</sup> independently represents a hydrogen atom or a substituted or unsubstituted hydrocarbon group having 1 to 20 carbon atoms; n represents a number allowing the kinetic viscosity of the organopolysiloxane to become 3,000 to 100,000 mm<sup>2</sup>/s at 25°C.)<br /> (iii) The cosmetic preparation of (i) or (ii), in which the (a) organopolysiloxane emulsion is prepared by: <br /> (I) obtaining a first emulsion composition by emulsifying a mixture containing <tables id="tables-00001-en" num="0001"><table frame="none"><tgroup cols="2" colsep="0" rowsep="0"><colspec colnum="1" colname="col1" colwidth="126mm" /><colspec colnum="2" colname="col2" colwidth="40mm" /><tbody><row><entry> (A) an organopolysiloxane expressed by the following general formula (1) and containing octamethylcyclotetrasiloxane in an amount of not larger than 1,000 ppm by mass</entry><entry>100 parts by mass</entry></row><row><entry> HO (R<sup>1</sup><sub>2</sub> SiO)<sub>n</sub>H (1)</entry><entry /></row><row><entry namest="col1" nameend="col2" align="left">(In the formula, R<sup>1</sup> independently represents a hydrogen atom or a substituted or unsubstituted hydrocarbon group having 1 to 20 carbon atoms; n represents a number allowing a kinetic viscosity of the organopolysiloxane to become 3,000 to 100,000 mm<sup>2</sup>/s at 25°C.)</entry></row><row><entry> (B) a non-ionic surfactant</entry><entry>1 to 100 parts by mass</entry></row><row><entry> (C) an anion surfactant</entry><entry>1 to 100 parts by mass</entry></row><row><entry namest="col1" nameend="col2" align="left">(provided that a range of mass ratio of component (B) : component (C) = 1:99 to 65:35) and</entry></row><row><entry> (D-1) water</entry><entry>1 to 10 parts by mass; and then</entry></row></tbody></tgroup></table></tables> (II) adding no water or adding (D-2) not larger than 100,000 parts by mass of water; to the first emulsion composition, followed by performing emulsion polymerization in the presence of an (E) acid catalyst at a temperature lower than 40°C (the acid catalyst is not required, provided that the (C) anion surfactant is capable of acting as a catalyst).<br /> (iv) The cosmetic preparation of (ii) or (iii), in which the temperature for performing emulsion polymerization (iii) is -15 to 5°C.<br /> (v) The cosmetic preparation of any one of (i) to (iv), in which D4 occupies not smaller than 60% by mass of a total amount of D3 to D10 in the (a) organopolysiloxane emulsion obtained through emulsion polymerization.<br /> (vi) The cosmetic preparation of any one of (i) to (v), in which the total amount of D3 to D10 in the (a) organopolysiloxane emulsion obtained through emulsion polymerization is not larger than 1,000 ppm by mass.<br /> (vii) The cosmetic preparation of any one of (i) to (vi), in which the average particle diameter of the (a) organopolysiloxane emulsion is not larger than 300 nm. Here, the average particle diameter is a value of median diameter on volume bases.<br /> (viii) The cosmetic preparation of any one of (i) to (vii) further comprises (b) a surfactant; and (c) a cationic polymer, in addition to (a).<br />  (ix) The cosmetic preparation of any one of (i) to (viii) as a hair cosmetic preparation.</p>
+    <heading id="h-00008-en">Effects of the invention</heading>
+    <p id="p-00010-en" num="0010">According to the present invention, there can be obtained a cosmetic preparation whose stability and feel are not impaired due to low molecular cyclosiloxanes. Further, for hair treatment purpose, there can be obtained a hair cosmetic preparation whose stability, feel and foaming property are not impaired.</p>
+    <heading id="h-00009-en">MODE FOR CARRYING OUT THE INVENTION</heading>
+    <heading id="h-00010-en">-Material-</heading>
+    <p id="p-00011-en" num="0011">At first, the materials and raw materials used in the present invention are described.</p>
+    <heading id="h-00011-en">&lt;(a) Organopolysiloxane emulsion obtained through emulsion polymerization and containing octamethylcyclotetrasiloxane in an amount of not larger than 1,000 ppm by mass&gt;</heading>
+    <p id="p-00012-en" num="0012">This emulsion can, for example, be prepared using the following method.</p>
+    <p id="p-00013-en" num="0013">That is, the emulsion can be prepared by first obtaining an O/W emulsion and then performing emulsion polymerization by adding an acid or base catalyst. Particularly, such O/W emulsion is obtained using an emulsifying agent and water and then an (A) organopolysiloxane that is expressed by the following general formula (1) and contains octamethylcyclotetrasiloxane in an amount of not larger than 1,000 ppm by mass.         HO (R<sup>1</sup><sub>2</sub> SiO)<sub>n</sub>H     (1) (In the formula, R<sup>1</sup> independently represents a hydrogen atom or a substituted or unsubstituted hydrocarbon group having 1 to 20 carbon atoms; n represents a number allowing the kinetic viscosity of the organopolysiloxane to become 3,000 to 100,000 mm<sup>2</sup>/s at 25°C.)</p>
+    <p id="p-00014-en" num="0014">Specifically, the following method is preferred.</p>
+    <p id="p-00015-en" num="0015">
+      <ol>
+        <li>(I) A first emulsion composition is prepared by emulsifying a mixture containing: <ul id="ul-00002-en" list-style="none" compact="compact"><li>(A) organopolysiloxane expressed by the following general formula (1) and containing octamethylcyclotetrasiloxane in an amount of not larger than 1,000 ppm by mass         HO (R<sup>1</sup><sub>2</sub> SiO)<sub>n</sub>H     (1) (In the formula, R<sup>1</sup> and n are defined as above);</li><li>(B) non-ionic surfactant</li><li>(C) anion surfactant<br /> (provided that the range of mass ratio of component (B) : component (C) = 1:99 to 65:35); and</li><li>(D-1) water.</li></ul></li>
+        <li>(II) Water (D-2) is then either added or not added to the first emulsion composition, followed by performing emulsion polymerization in the presence of an (E) acid catalyst at the temperature of lower than 40°C (such acid catalyst is not required, provided that (C) anion surfactant is capable of acting as a catalyst).</li>
+      </ol>
+    </p>
+    <p id="p-00016-en" num="0016">The emulsion thus obtained contains octamethylcyclotetrasiloxane in an amount of not larger than 1,000 ppm by mass.</p>
+    <p id="p-00017-en" num="0017">Although the amount of this emulsion (a) added to a cosmetic preparation is not smaller than 0.1% by mass, it is preferred that such emulsion be added in an amount of 0.1 to 10% by mass; and it is more preferred that such emulsion be added in an amount of 0.2 to 3% by mass.</p>
+    <p id="p-00018-en" num="0018">Further described in detail hereunder are the raw materials used in the abovementioned production method.</p>
+    <heading id="h-00012-en">&lt; (A) Organopolysiloxane &gt;</heading>
+    <p id="p-00019-en" num="0019">(A) is an organopolysiloxane expressed by the aforementioned general formula (1) and containing octamethylcyclotetrasiloxane in an amount of not larger than 1,000 ppm by mass.</p>
+    <p id="p-00020-en" num="0020">In the general formula (1), R<sup>1</sup> represents a hydrogen atom or a substituted or unsubstituted hydrocarbon group having 1 to 20 carbon atoms. Unsubstituted hydrocarbon groups having 1 to 20 carbon atoms include, for example, an alkyl group having 1 to 20 carbon atoms; a cycloalkyl group having 3 to 20 carbon atoms; an alkenyl group having 2 to 20 carbon atoms; an aryl group having 6 to 20 carbon atoms; and an aralkyl group having 7 to 20 carbon atoms. Specifically, such unsubstituted hydrocarbon groups include an alkyl group such as a methyl group, an ethyl group, a propyl group, a butyl group, a pentyl group, a hexyl group, a heptyl group, an octyl group, a nonyl group, a decyl group, a dodecyl group, a tetradecyl group, a hexadecyl group or an octadecyl group; a cycloalkyl group such as a cyclopentyl group or a cyclohexyl group; an alkenyl group such as vinyl or allyl; and an aryl group such as a phenyl group, a tolyl group or a naphthyl group. Substituted hydrocarbon groups having 1 to 20 carbon atoms include those obtained by partially substituting the hydrogen atoms in the abovementioned monovalent hydrocarbon groups having 1 to 20 carbon atoms with, for example, halogen atoms, amino groups, acryloxy groups, methacryloxy groups, epoxy groups, mercapto groups, carboxyl groups and hydroxyl groups. Preferably, hydrocarbon groups having 1 to 6 carbon atoms such as methyl groups, ethyl groups, propyl groups, butyl groups and phenyl groups are used. It is more preferred that not less than 80% by mass of all the R<sup>1</sup> be methyl groups.</p>
+    <p id="p-00021-en" num="0021">In the general formula (1), n represents a value allowing the kinetic viscosity of the organopolysiloxane to become 3,000 to 100,000 mm<sup>2</sup>/s at 25°C. When such viscosity is lower than 3,000 mm<sup>2</sup>/s, emulsion polymerization needs to be performed for a longer period of time to endow the organopolysiloxane contained in the target emulsion with a desired viscosity, thereby causing more octamethylcyclotetrasiloxane to be produced as a byproduct during emulsion polymerization, thus negatively affecting the stability, feel and foaming property when added to a cosmetic preparation. Meanwhile, when such viscosity is exceedingly high, the target emulsion obtained shall exhibit an unfavorable stability, thus also resulting in an unfavorable stability when added to a cosmetic preparation. It is preferred that such viscosity be 3,000 to 50,000 mm<sup>2</sup>/s. It is particularly preferred that such viscosity be 4,000 to 20,000 mm<sup>2</sup>/s.</p>
+    <heading id="h-00013-en">&lt; Non-ionic surfactant as component (B) &gt;</heading>
+    <p id="p-00022-en" num="0022">Non-ionic surfactants as the component (B) include, for example, polyoxyalkylene alkyl ether; polyoxyalkylene alkyl phenol ether; polyoxyalkylene alkyl ester; polyoxyalkylene sorbitan alkyl ester; polyethylene glycol; polypropylene glycol; and diethylene glycol. Above all, an non-ionic surfactant expressed by the following general formula is preferred.         R<sup>2</sup>O(EO)<sub>p</sub>(AO)<sub>q</sub>H</p>
+    <p id="p-00023-en" num="0023">(In this formula, R<sup>2</sup> represents a linear or branched alkyl group having 8 to 30 carbon atoms, EO represents an ethylene oxide group, and AO represents an alkylene oxide group having 3 to 6 carbon atoms. The sequence of each group may be random or in the form of blocks. Each of p and q independently represents an integer of 0 to 100, provided that p + q &gt; 0.)<br /> Here, alkylene oxide groups represented by AO and having 3 to 6 carbon atoms include, for example, a propylene oxide group; a butylene oxide group; and a hexylene oxide group. It is particularly preferred that R<sup>2</sup> be a linear or branched alkyl group having 8 to 12 carbon atoms, and that each of p and q independently represent 0 to 25.</p>
+    <p id="p-00024-en" num="0024">The component (B) can be used in an amount of 1 to 100 parts by mass to 100 parts by mass of the component (A). It is preferred that the component (B) be used in an amount of 2 to 25 parts by mass, and it is particularly preferred that the component (B) be used in an amount of 3 to 10 parts by mass. In fact, not only one kind, but two or more kinds of the component (B) may also be used in combination.</p>
+    <heading id="h-00014-en">&lt; Anion surfactant as component (C) &gt;</heading>
+    <p id="p-00025-en" num="0025">Following are examples of an anion surfactant as the component (C).</p>
+    <p id="p-00026-en" num="0026">An alkyl sulfuric acid or its salt expressed by ·General formula (C-1):         R<sup>3</sup>OSO<sub>3</sub>M     (C-1)</p>
+    <p id="p-00027-en" num="0027">(In the formula, R<sup>3</sup> represents a linear or branched alkyl group having 6 to 30 carbon atoms; M represents a hydrogen atom, an alkali metal atom such as potassium and sodium, an alkali earth metal atom such as magnesium and calcium, an ammonium ion or a quaternary ammonium ion.)</p>
+    <p id="p-00028-en" num="0028">An alkylbenzene sulfonic acid or its salt expressed by ·General formula (C-2):         R<sup>3</sup> -Ph- SO<sub>3</sub>M     (C-2)</p>
+    <p id="p-00029-en" num="0029">(In the formula, R<sup>3</sup> and M are defined as those in formula (C-1).)</p>
+    <p id="p-00030-en" num="0030">In formulas (C-1) and (C-2), it is preferred that R<sup>3</sup> be a linear or branched alkyl group having 6 to 12 carbon atoms; and that M be a hydrogen atom, an alkali metal atom such as potassium and sodium, an alkali earth metal atom such as magnesium and calcium, an ammonium ion or a quaternary ammonium ion.)</p>
+    <p id="p-00031-en" num="0031">Specific examples of the alkyl sulfuric acid or its salt expressed by formula (C-1) include hexyl sulfuric acid, octyl sulfuric acid, decyl sulfuric acid, dodecyl sulfuric acid, tetradecyl sulfuric acid, cetyl sulfuric acid, octadecyl sulfuric acid and aralkyl sulfuric acid; alkali metal salts thereof (e.g. lithium salt, sodium salt and potassium salt); alkali earth metal salts thereof (e.g. magnesium salt and calcium salt); triethanol ammonium salts thereof; and ammonium salts thereof.</p>
+    <p id="p-00032-en" num="0032">Specific examples of the alkylbenzene sulfonic acid or its salt expressed by formula (C-2) include hexylbenzene sulfonic acid, octylbenzene sulfonic acid, decylbenzene sulfonic acid, dodecylbenzene sulfonic acid, cetylbenzene sulfonic acid and myristylbenzene sulfonic acid; and the salts thereof.</p>
+    <p id="p-00033-en" num="0033">An polyoxyalkylene alkyl ether sulfuric acid or polyoxyalkylene alkyl ether sulfuric acid ester salt expressed by ·General formula (C-3):         R<sup>3</sup>O(EO) <sub>n</sub>(AO)<sub>m</sub>SO<sub>3</sub> M     (C-3) (In the formula, R<sup>3</sup> represents a linear or branched alkyl group having 6 to 30 carbon atoms; M represents a hydrogen atom, an alkali metal atom such as potassium and sodium, an alkali earth metal atom such as magnesium and calcium, an ammonium ion or a quaternary ammonium ion; EO represents an ethylene oxide group; AO represents an alkylene oxide group having 3 to 6 carbon atoms. The sequence of each group may be random or in the form of blocks. Further, each of n and m independently represents an integer of 0 to 100, provided that n + m &gt; 0.)</p>
+    <p id="p-00034-en" num="0034">Here, examples of the alkylene oxide group represented by AO and having 3 to 6 carbon atoms include a propylene oxide group, a butylene oxide group and a hexylene oxide group. Specific examples thereof include polyoxyethylene hexyl ether sulfuric acid, polyoxyethylene octyl ether sulfuric acid, polyoxyethylene decyl ether sulfuric acid, polyoxyethylene dodecyl ether sulfuric acid, polyoxyethylene tetradecyl ether sulfuric acid, polyoxyethylene cetyl ether sulfuric acid, polyoxyethylene octadecyl ether sulfuric acid and polyoxyethylene aralkyl ether sulfuric acid; alkali metal salts thereof (e.g. lithium salt, sodium salt and potassium salt); alkali earth metal salts thereof (e.g. magnesium salt and calcium salt); triethanol ammonium salts thereof; and ammonium salts thereof.</p>
+    <p id="p-00035-en" num="0035">A polyoxyalkylene alkylphenyl ether sulfuric acid and polyoxyalkylene alkylphenyl ether sulfuric acid ester salt etc. expressed by ·General formula (C-4):         R<sup>3</sup> -Ph- O (EO) <sub>n</sub>(AO)<sub>m</sub>SO<sub>3</sub>M     (C-4) (In the formula, R<sup>3</sup>, M, EO, AO, n and m are defined as those in formula (C-3).) Specific examples thereof include polyoxyethylene hexylphenyl ether sulfuric acid, polyoxyethylene octylphenyl ether sulfuric acid, polyoxyethylene decylphenyl ether sulfuric acid, polyoxyethylene dodecylphenyl ether sulfuric acid, polyoxyethylene cetylphenyl ether sulfuric acid and polyoxyethylene myristylphenyl ether sulfuric acid; alkali metal salts thereof (e.g. lithium salt, sodium salt and potassium salt); alkali earth metal salts thereof (e.g. magnesium salt and calcium salt); triethanol ammonium salts thereof; and ammonium salts thereof.</p>
+    <p id="p-00036-en" num="0036">Other examples of the component (C) include salts (preferably, alkali metal salts or alkali earth metal salts) of higher fatty acids such as lauric acid, stearic acid, oleic acid and linolenic acid.</p>
+    <p id="p-00037-en" num="0037">It is preferred that the amount of the component (C) used be 1 to 100 parts by mass to 100 parts by mass of the component (A). Further, it is more preferred that the component (C) be used in an amount of 2 to 25 parts by mass. Furthermore, it is particularly preferred that the component (C) be used in an amount of 3 to 10 parts by mass. In fact, not only one kind, but two or more kinds of the component (C) may also be used in combination.</p>
+    <p id="p-00038-en" num="0038">In addition, it is preferred that the mass ratio of the component (B) to component (C) is in the range of (B) : (C) = 1:99 to 65:35. A range of (B)/(C) beyond 1.86 will significantly decrease the reaction rate of emulsion polymerization. In view of improving the stability of the emulsion composition obtained, it is preferred that the mass ratio be (B) : (C) = 20:80 to 55:45; and particularly preferred that the mass ratio be (B) : (C) = 30:70 to 45:55.</p>
+    <heading id="h-00015-en">&lt; (D) Water &gt;</heading>
+    <p id="p-00039-en" num="0039">In step (I), water is added as (D-1) and in an amount of 1 to 10 parts by mass to 100 parts by mass of (A). Here, if water is added in an amount greater than 10 parts by mass, it will be difficult to obtain a fine emulsion composition whose emulsion particles have an average particle diameter of not larger than 300 nm, thus decreasing the stability of the emulsion. Meanwhile, if water is added in an amount of smaller than 1 part by mass, it will be difficult to produce an O/W emulsion. It is preferred that water be added in an amount of 2 to 8 parts by mass to 100 parts by mass of (A). Further, it is particularly preferred that water is added in an amount of 4 to 6 parts by mass to 100 parts by mass of (A).</p>
+    <p id="p-00040-en" num="0040">While water may or may not be added in step (II), it is added in an amount of not larger than 100,000 parts by mass to 100 parts by mass of (A), if added.</p>
+    <heading id="h-00016-en">&lt; (E) Acid catalyst &gt;</heading>
+    <p id="p-00041-en" num="0041">An acid catalyst as the component (E) may be added at any timing as long as it exists in the polymerization system during step (II) of emulsion polymerization. However, the component (E) needs not to be used, if the component (C) is capable of acting as an acid catalyst.</p>
+    <heading id="h-00017-en">-Step (I)-</heading>
+    <p id="p-00042-en" num="0042">The first emulsion composition is obtained by emulsifying the components (A), (B), (C) and (D-1). Particularly, emulsification may be performed using an emulsifier such as a homodisper, a homomixer, a colloid mill, a line mixer, a versatile mixer, an ultra mixer, a planetary mixer and a Combi Mix ®.</p>
+    <p id="p-00043-en" num="0043">In this step, if the component (C) used is capable of acting as an acid catalyst or if the component (E) is added, condensation also takes place at the same time, thus requiring that emulsification be performed at a temperature lower than 40°C. When emulsification is performed at 40°C or higher, a large amount of octamethylcyclotetrasiloxane may be produced. Therefore, it is preferred that emulsification be performed at a temperature lower than 15°C; and it is particularly preferred that emulsification be performed at a temperature lower than 5°C.</p>
+    <p id="p-00044-en" num="0044">In step (I), the components (A), (B), (C) and (D-1) are mixed well until the average particle diameter of the emulsion particles of the first emulsion composition has reached 300 nm or smaller, preferably 200 nm or smaller, particularly preferably 150 nm or smaller. The smaller the particle diameter of the first emulsion particles, the higher the polymerization rate becomes in step (II), thus leading to a shorter polymerization time. Further, since the average particle diameter of the emulsion particles of the first emulsion composition is 300 nm or smaller, the average particle diameter of the final emulsion particles obtained in the following step will also become 300 nm or smaller. It is preferred that the average particle diameter eventually be 200 nm or smaller, and it is particularly preferred that the average particle diameter eventually be 150 nm or smaller.</p>
+    <heading id="h-00018-en">&lt; Step (II) &gt;</heading>
+    <p id="p-00045-en" num="0045">At the beginning of this step, water (D-2) is added in an amount of 0 to 100,000 parts by mass to 100 parts by mass of the component (A), followed by performing emulsion polymerization. That is, water is optionally added before performing emulsion polymerization, and may actually not be added. If added, water is added in an amount of not larger than 100,000 parts by mass. It is preferred that water be added in an amount of 0 to 1,000 parts by mass, and it is particularly preferred that water be added in an amount of 0 to 200 parts by mass.</p>
+    <p id="p-00046-en" num="0046">In this way, in the case where water (D-2) is added to the first emulsion composition, emulsification equipment such as a high-pressure homogenizer can also be used later to further perform emulsification and dispersion.</p>
+    <p id="p-00047-en" num="0047">Next, such emulsion composition is subjected to emulsion polymerization. It is preferred that this polymerization step be carried out at a temperature of lower than 40°C and within 48 hours. If the polymerization step is carried out at 40°C or higher, octamethylcyclotetrasiloxane may be produced in a large amount. Therefore, it is preferred that the polymerization step be performed at a temperature of lower than 15°C, more preferably at a temperature of not higher than 5°C, and particularly preferably at a temperature of -15°C to 5°C. Further, a polymerization time longer than 48 hours may cause octamethylcyclotetrasiloxane to be produced in a large amount. For this reason, it is preferred that the polymerization time be within 1 to 30 hours, particularly 5 to 24 hours.</p>
+    <p id="p-00048-en" num="0048">At that time, the absolute viscosity of the organopolysiloxane produced through emulsion polymerization is 300,000 to 20,000,000 mPa·s; and the amount of octamethylcyclotetrasiloxane contained in the emulsion is not more than 1,000 ppm by mass.</p>
+    <p id="p-00049-en" num="0049">By performing emulsion polymerization in the presence of (E) acid catalyst, polymerization is facilitated such that the polymerization time can be shortened. While it is not required to add (E) acid catalyst to the polymerization system other than (C) anion surfactant if (C) itself is capable of acting as an acid catalyst, (E) acid catalyst may nevertheless be added.</p>
+    <p id="p-00050-en" num="0050">According to the method for producing the emulsion composition of the present invention, the polymerization time is within 15 hours, normally within a range of 5 to 15 hours; and the absolute viscosity (25°C) of the organopolysiloxane produced reaches 300,000 mPa·s or higher. It is preferred that, within 15 hours, such absolute viscosity reach 500,000 mPa·s or higher, more preferably 1,000,000 mPa·s, and particularly preferably 5,000,000 mPa·s or higher.</p>
+    <heading id="h-00019-en">&lt; Other treatment &gt;</heading>
+    <p id="p-00051-en" num="0051">After polymerization is over, the emulsion composition obtained is usually neutralized with a basic substance. Examples of such basic substance include sodium hydroxide; potassium hydroxide; sodium hydrogen carbonate; and an amine compound such as triethanol amine and triethyl amine.</p>
+    <p id="p-00052-en" num="0052">At that time, not only water can be added to adjust the silicone concentration, but a preservative agent and/or an antifungal agent, for example, may also be added to improve the preserving property of the emulsion composition.</p>
+    <p id="p-00053-en" num="0053">By adding an organopolysiloxane such as R<sup>1</sup><sub>3</sub>SiO(R<sup>1</sup><sub>2</sub>SiO)<sub>n</sub>SiR<sup>1</sup><sub>3</sub> to the emulsion composition obtained in step (I) where emulsification is performed; the emulsion composition obtained in step (II) where emulsion polymerization is performed; or the emulsion composition obtained after neutralization, there can be obtained an organopolysiloxane whose terminals are blocked by inactive triorganosiloxy groups. Further, branched units and/or various functional groups can also be introduced into an organopolysiloxane chain obtained by adding an alkoxysilane such as R<sup>1</sup><sub>3</sub>Si(OR<sup>4</sup>)<sub>1</sub>, R<sup>1</sup><sub>2</sub>Si(OR<sup>4</sup>)<sub>2</sub> and R<sup>1</sup><sub>1</sub>Si(OR<sup>4</sup>)<sub>3</sub>. Here, as defined above, R<sup>1</sup> represents a substituted or unsubstituted hydrocarbon group having 1 to 20, preferably 1 to 6 carbon atoms. Examples of such hydrocarbon group include a methyl group, an ethyl group, a propyl group, a butyl group and a phenyl group. R<sup>4</sup> represents an identical or different alkyl group having 1 to 20 carbon atoms; or a hydrogen atom. n represents 0 to 100.</p>
+    <p id="p-00054-en" num="0054">In the present invention, when D4 (octamethylcyclotetrasiloxane) occupies a total amount of D3 (hexamethylcyclotrisiloxane) to D10 (eicosamethylcyclodecasiloxane) by a ratio of not smaller than 60% by mass, the feel and stability are improved in the case of a cosmetic preparation; and the feel, stability as well as foaming property are improved in the case of a hair cosmetic preparation. The reason for that is because, as compared to D4, D5 (decamethylcyclopentasiloxane) to D10 more negatively affect the feel and stability of a cosmetic preparation; and the feel, stability as well as foaming property of a hair cosmetic preparation. It is preferred that D4 occupy the total amount of D3 to D10 by a ratio of not smaller than 70% by mass. For the same reason, each of D5 to D10 occupies the total amount of D3 to D10 by a ratio of not larger than 30% by mass, preferably not larger than 20% by mass.</p>
+    <p id="p-00055-en" num="0055">Moreover, when the amount of D4 contained in (a) is larger than 1,000 ppm by mass, there will be a significant impact on the environment. And, when the amount of low molecular cyclosiloxanes other than D4 contained in (a) are large, the feel and stability of a cosmetic preparation will be significantly impaired. In the case of a hair cosmetic preparation, the feel, stability as well as foaming property will be impaired.</p>
+    <p id="p-00056-en" num="0056">The amount of such low molecular cyclosiloxane is larger than 100 ppm by mass as for D3; larger than 300 ppm by mass as for D5; larger than 200 ppm by mass as for D6; and larger than 100 ppm by mass as for each of D7 to D10. Therefore, it is preferred that the amount of such low molecular cyclosiloxane be not larger than 50 ppm by mass as for D3; not larger than 200 ppm by mass as for D5; not larger than 150 ppm by mass as for D6; and not larger than 50 ppm by mass as for each of D7 to D10. Further, it is particularly preferred that the amount of such low molecular cyclosiloxane be not larger than 30 ppm by mass as for D3; not larger than 150 ppm by mass as for D5; not larger than 100 ppm by mass as for D6; and not larger than 20 ppm by mass as for each of D7 to D10.</p>
+    <p id="p-00057-en" num="0057">In addition, while the amounts of such low molecular cyclosiloxanes of each of D3 to D10 are as those described above, it is preferred that a total amount thereof be not larger than 1,000 ppm. This is because the total amount greater than 1,000 ppm will impair the feel and stability of a cosmetic preparation.</p>
+    <heading id="h-00020-en">Cosmetic preparation component</heading>
+    <heading id="h-00021-en">&lt; (b) Surfactant &gt;</heading>
+    <p id="p-00058-en" num="0058">Examples of surfactant that can be added to the cosmetic preparation of the present invention include non-ionic surfactant, anion surfactant, cationic surfactant and amphoteric surfactant.</p>
+    <p id="p-00059-en" num="0059">Examples of non-ionic surfactant include lecithin derivatives, propylene glycol fatty acid ester, glycerin fatty acid ester, polyglyceryl fatty acid ester, polyoxyalkylene glycerin fatty acid ester, sorbitan fatty acid ester, polyoxyalkylene sorbitan fatty acid ester, polyoxyalkylene sorbitol fatty acid ester, polyoxyalkylene lanolin derivatives, polyoxyalkylene lanolin alcohol derivatives, polyoxyalkylene bees wax derivatives, polyoxyalkylene hydrogenated castor oil, polyoxyalkylene sterol, polyoxyalkylene hydrogenated sterol, polyoxyalkylene alkyl ether, polyoxyalkylene alkyl phenol ether, polyoxyalkylene glycol fatty acid ester, alkyl alkanolamide and alkyl polyglucoside. Here, polyoxyalkylene represents either polyoxyethylene or polyoxypropylene wherein the oxyethylene units and oxypropylene units in the molecule may be random or in the form of blocks. Further, an alkyl group usually has 6 to 30 carbon atoms, and may be either linear or branched, or even unsaturated.</p>
+    <p id="p-00060-en" num="0060">Examples of anion surfactant include N-acylamino acid and its salt, alkylether carboxylic acid and its salt, polyoxyalkylene alkylether acetic acid and its salt, a fatty acid soap, alkyl phosphoric acid and its salt, polyoxyalkylene alkylether phosphoric acid and its salt, N-acyltaurine and its salt, alkyl sulfuric acid and its salt, polyoxyalkylene alkylether sulfuric acid and its salt, alkylbenzene sulfonic acid and its salt, polyoxyalkylene alkylbenzene sulfonic acid and its salt, α-olefin sulfonic acid and its salt, alkyl sulfosuccinic acid and its salt and polyoxyalkylene alkyl sulfosuccinic acid and its salt. Here, examples of salt include alkali metal salts, alkali earth metal salts and amine salts. Further, polyoxyalkylene represents either polyoxyethylene or polyoxypropylene wherein the oxyethylene units and oxypropylene units in the molecule may be random or in the form of blocks. Further, an alkyl group usually has 6 to 30 carbon atoms, and may be either linear or branched, or even unsaturated.</p>
+    <p id="p-00061-en" num="0061">Examples of cationic surfactant include a quaternary ammonium halide such as alkyltrimethylammonium halide and dialkyldimethylammonium halide; alkoxypropyltrimethyl ammonium halide; benzalkonium halide; and alkylphosphorylated benzalkonium. Further, an alkyl group usually has 6 to 30 carbon atoms, and may be either linear or branched, or even unsaturated.</p>
+    <p id="p-00062-en" num="0062">Examples of amphoteric surfactant include an aminoacetic acid betaine such as alkyldimethylaminoacetic acid betaine; an amine oxide such as alkyldimethyl amine oxide; alkylcarboxymethylhydroxyethyl imidazolinium betaine; alkyl fatty acid amide propyl betaine; alkylamidepropyl betaine; alkylglycinate; alkylcarboxyglycinate; alkylamphopropionate; alkylamidepropyl hydroxysultaine; acyltaurate; and acyl glutamate. Further, an alkyl group usually has 6 to 30 carbon atoms, and may be either linear or branched, or even unsaturated.</p>
+    <p id="p-00063-en" num="0063">It is preferred that the amount of (b) added to a cosmetic preparation be not smaller than 0.1% by mass. In fact, not only one kind, but two or more kinds of (b) may also be used in combination.</p>
+    <heading id="h-00022-en">&lt; (c) Cationic polymer &gt;</heading>
+    <p id="p-00064-en" num="0064">A cationic polymer may be formed of a homopolymer or not less than two kinds of monomers. It is usually preferred that the molecular weight thereof be 5,000 to 10,000,000. Further, such cationic polymer has a cationic nitrogen-containing group such as a quaternary ammonium group, a cationized amino group or a mixture thereof.</p>
+    <p id="p-00065-en" num="0065">The cation charge density is at least 0.1 meq/g, preferably not lower than 0.8 meq/g. The cation charge density is below 4 meq/g, preferably less than 3 meq/g, more preferably less than 2 meq/g. Such cation charge density is measured through Kjeldahl method, and should be within the aforementioned ranges under a desired pH employed, such pH usually being about 3 to 9, preferably 4 to 8.</p>
+    <p id="p-00066-en" num="0066">A cationic nitrogen-containing group generally exists as a substituent group on the fraction of all the monomer units of a cationic polymer. Therefore, when a cationic polymer is not a homo polymer, it can contain a non-cationic monomer unit as a spacer. Such polymers are listed in "CTFA Cosmetic Ingredient Dictionary, 3rd edition."</p>
+    <p id="p-00067-en" num="0067">Examples of an appropriate cationic polymer include a copolymer of a vinyl monomer having cationic amine or quaternary ammonium functionality; and a water-soluble spacer monomer such as (metha) acrylamide, alkyl (metha) acrylamide, dialkyl (metha) acrylamide, alkyl (metha) acrylate, vinyl caprolactone and vinyl pyrrolidone. These alkyl and dialkyl substituted monomers contain preferably C1-C7 alkyl groups, more preferably C1-C3 alkyl groups. Other appropriate spacer monomers include vinyl ester, vinyl alcohol, maleic anhydride, propylene glycol and ethylene glycol.</p>
+    <p id="p-00068-en" num="0068">As for cationic amines, there exist primary amines, secondary amines and tertiary amines depending on a specific type and pH of the composition. In general, secondary and tertiary amines, particularly tertiary amines are preferred.</p>
+    <p id="p-00069-en" num="0069">Amine-substituted vinyl monomer and amines can be polymerized in the form of amine, and converted to ammonium through quaternization reaction.</p>
+    <p id="p-00070-en" num="0070">Examples of appropriate cationic amino and quaternary ammonium monomer include vinyl compound substituted by dialkylaminoalkyl acrylate, dialkylaminoalkyl methacrylate, monoalkylaminoalkyl acrylate or monoalkylaminoalkyl methacrylate; trialkylmethacryloxyalkyl ammonium salt; trialkylacryloxyalkyl ammonium salt; diallyl quaternary ammonium salt; and a vinyl quaternary ammonium monomer having a cyclic cationic nitrogen-containing ring such as pyridinium, imidazolium and quaternary pyrrolidine. For example, there may be used alkyl vinyl imidazolinium and quaternized pyrrolidine, such as alkyl vinyl imidazolium, alkyl vinyl pyridinium and alkyl vinyl pyrrolidine salt. It is preferred that the alkyl parts of these monomers be lower alkyls such as C1-C3 alkyl, more preferably C1-C2 alkyl.</p>
+    <p id="p-00071-en" num="0071">Examples of appropriate amine-substituted vinyl monomer used here include dialkylaminoalkyl acrylate, dialkylaminoalkyl methacrylate, dialkylaminoalkyl acrylamide and dialkylaminoalkyl methacrylamide. And, it is preferred that the alkyl group be C1-C7 hydrocarbon, more preferably C1-C3 alkyl.</p>
+    <p id="p-00072-en" num="0072">The cationic polymer used here may include a mixture of monomer units derived from an amine- and/or quaternary ammonium-substituted monomer; and/or from a compatible spacer monomer.</p>
+    <p id="p-00073-en" num="0073">Examples of an appropriate cationic polymer are as follows.</p>
+    <p id="p-00074-en" num="0074">Copolymer of 1-vinyl-2-pyrrolidine and 1-vinyl-3-methyl imidazolium salt (e.g. chloride salt) (referred to as Polyquaternium-16 by Cosmetic, Toiletry and Fragrance Association, "CTFA"). This is, for example, commercially available under the product name of LUVIQUAT (e.g. LUVIQUAT FC 370) by BASF Wyandotte Corp. (Parsippany, NJ, USA).</p>
+    <p id="p-00075-en" num="0075">Copolymer of 1-vinyl-2-pyrrolidine and dimethylaminoethyl methacrylate (referred to as Polyquaternium-11 by CTFA). This is, for example commercially available under the product name of GAFQUAT (e.g. GAFQUAT 755N) by ISP Corporation (Wayne, NJ. USA).</p>
+    <p id="p-00076-en" num="0076">Cationic diallyl quaternary ammonium-containing polymer. This may include dimethyl diallyl ammonium chloride homo polymer; and copolymer of acryl amide and dimethyl diallyl ammonium chloride, which are respectively referred to as Polyquaternium 6 and Polyquaternium 7 by CTFA.</p>
+    <p id="p-00077-en" num="0077">A mineral acid salt of aminoalkyl ester of homo and copolymer of unsaturated carboxylic acid having 3 to 5 carbon atoms, as disclosed in <patcit id="pcit-00004" dnum="US4009256A"><text>US Patent No. 4,009,256</text></patcit>.</p>
+    <p id="p-00078-en" num="0078">Other cationic polymers that can be used include a polysaccharide polymer such as a cationic cellulose derivative and a cationic starch derivate. Examples of the cationic polysaccharide polymer substance suitable for use in this case, include those expressed by the following formula: <chemistry id="chem-00001-en" num="0001"><img id="img-00001-en" wi="51" he="36" img-content="chem" file="EP2926804A1_00001.PNG" img-format="png" original="imgb0001.tif" /></chemistry></p>
+    <p id="p-00079-en" num="0079">(In the formula, A represents an unhydroglucose residue such as an unhydroglucose residue of starch or cellulose; R represents an alkyleneoxyalkylene group, a polyoxyalkylene group or a hydroxyalkylene group or a combination thereof; R<sup>2</sup>, R<sup>3</sup> and R<sup>4</sup> independently represent an alkyl group, an aryl group, an alkylaryl group, an arylalkyl group, an alkoxyalkyl group or an alkoxyaryl group, each group having at most 18 carbon atoms and the total number of the carbon atoms in each cationic part (i.e. the total number of the carbon atoms of R<sup>2</sup>, R<sup>3</sup> and R<sup>4</sup>) being preferably not more than 20; X<sup>-</sup> represents an anionic counter ion of, for example, halide such as Cl<sup>-</sup> and Br<sup>-</sup>, acetate, phosphate, nitrate and alkyl sulfate.)</p>
+    <p id="p-00080-en" num="0080">Cationic cellulose is available from Amerchol Corp. (Edison, NJ, USA) under the series of Polymer JR (TM) and LR (TM), as a salt of hydroxyethyl cellulose obtained through the reaction with trimethyl ammonium-substituted epoxide, which is referred to as Polyquaternium 10 by CTFA. Other types of cationic cellulose include a polymerizable quaternary ammonium salt of hydroxyethyl cellulose obtained through the reaction with lauryldimethyl ammonium-substituted epoxide, which is referred to as Polyquaternium 24 by CTFA. These substances are available from Amerchol Corp. (Edison, NJ, USA) under the product name of Polymer LM-200.</p>
+    <p id="p-00081-en" num="0081">Other cationic polymers that can be used here include a cationic guar gum derivative such as guar hydroxypropyltrimmonium chloride (commercially available from Celanese Corp. as TM Jaguar series). Other substances include quaternary nitrogen-containing cellulose ether (e.g. as that disclosed in <patcit id="pcit-00005" dnum="US3962418A"><text>US Patent No. 3,962,418</text></patcit> quoted and incorporated as a part of this specification) and a copolymer of etherified cellulose and starch (as that disclosed in <patcit id="pcit-00006" dnum="US3958581A"><text>US Patent No. 3,958,581</text></patcit> quoted and incorporated as a part of this specification).</p>
+    <p id="p-00082-en" num="0082">Although a cationic polymer is water soluble, it does not need to be soluble in a shampoo composition. However, it is preferred that such cationic polymer be either soluble in a shampoo composition; or soluble in a complex coacervate phase in a shampoo composition formed of a cationic polymer and an anionic substance. The complex coacervate phase of a cationic polymer is formed by an anion surfactant that can be optionally added to the composition or by an anionic polymer (e.g. sodium polystyrene sulfonate).</p>
+    <p id="p-00083-en" num="0083">The formation of coacervate is dependent on various conditions such as molecular weight, concentration, interactive ionic substances, ion strength (including e.g. change in ion strength due to addition of salt), charge densities of cationic and anionic species, pH and temperature. The impact of such parameters on a coacervate system is discussed in "<nplcit id="ncit-00001" npl-type="s"><text>Anionic and Cationic Compounds in Mixed System" by J. Caelles et al, Cosmetic &amp; Toiletries, Vol.106, April 1991, pages 49 to 54</text></nplcit>; "<nplcit id="ncit-00002" npl-type="s"><text>Coacervation, Complex Coacervation and Flocculation" by C.J. Van Oss, J. Dispersion Science and Technology, Vol 9 (5,6), 1988-89, pages 561 to 573</text></nplcit>; and "<nplcit id="ncit-00003" npl-type="s"><text>Practical analysis of complex coacervate systems" by D. J. Burgess, J. Colloid and Interface Science, Vol, 140, No.1, November 1990, pages 227 to 238</text></nplcit>.</p>
+    <p id="p-00084-en" num="0084">It is particularly favorable when the cationic polymer exists in shampoo as a coacervate phase; or when a coacervate phase is formed on or from hair at the time of using shampoo or rinsing. A complex coacervate can adhere to hair more easily. Therefore, it is usually preferred that the cationic polymer exist in shampoo as a coacervate phase; or that such cationic polymer form a coacervate phase when diluted. When a coacervate is not already present in shampoo, it is preferred that the cationic polymer exist in the form of a complex coacervate in the shampoo when diluted by water preferably at a water: shampoo composition ratio of about 20:1, more preferably about 10:1, even more preferably about 8:1.</p>
+    <p id="p-00085-en" num="0085">Techniques for analyzing the formation of complex coacervate are known in this industry. For example, at any selected dilution stage, microscopy analysis can be performed on a shampoo composition to identify whether a coacervate phase has been formed. Such coacervate phase may be identified as an additionally emulsified phase in the composition. The usage of a dye helps distinguish a coacervate phase from other insoluble phases dispersed in the composition.</p>
+    <p id="p-00086-en" num="0086">It is preferred that the cationic polymer be selected from a group of hydroxyalkyl cellulose ether and a cationic guar gum derivative. Particularly preferable cationic polymers are Jaguar C13S, Jaguar C15, Jaguar C17, Jaguar C16 and Jaguar C162. Other preferable cellulose ethers are Polymer JR400, JR30M and JR125.</p>
+    <p id="p-00087-en" num="0087">It is preferred that the cationic polymer be added to the cosmetic preparation of the present invention in an amount of 0.01 to 5% by mass, more preferably 0.05 to 1% by mass, even more preferably 0.08 to 0.5% by mass.</p>
+    <heading id="h-00023-en">&lt; Other components &gt;</heading>
+    <p id="p-00088-en" num="0088">Examples of other components used to prepare the cosmetic preparation of the present invention (cosmetic material preparation components) are as follows. That is, these components include, but are not limited to (1) hydrocarbons such as liquid paraffin, vaseline, solid paraffin, squalane and olefin oligomer; (2) esters such as isopropyl palmitate, stearyl stearate, octyl dodecyl myristate, octyl dodecyl oleate, acetylated lanolin and 2-ethylhexanoic acid triglyceride; (3) higher alcohols such as lauryl alcohol, cetyl alcohol, stearyl alcohol, lanolin alcohol and bees wax; (4) higher fatty acids such as palmitic acid and stearic acid, and amines such as diethanolamine for neutralizing said higher fatty acids; (5) moisturizers such as ethylene glycol, propylene glycol, 1, 3-butylene glycol, glycerin and sorbitol; (6) inorganic powders such as titanium oxide, carbon black, iron oxide, sericite, talc, kaolin and mica; (7) organic polymer powders such as nylon, polyethylene and poly (metha) acrylic acid ester; (8) solvents such as water and ethanol; (9) the non-ionic surfactant, anion surfactant, cationic surfactant and amphoteric surfactant listed as the examples of (b) surfactant; (10) preservative agents, antifungal agents and pH adjusters; (11) coloring agents; (12) fragrances; (13) water-soluble polymers such as pectin guar gum, guar gum, xanthan gum, tamarind gum, carrageenan, carboxymethyl cellulose, starch, soluble starch, dextrin, α starch, sodium alginate, gum arabic, gelatin, tragacanth gum, locust bean gum, casein, lignosulfonate, carboxymethyl cellulose sodium salt, methyl cellulose, hydroxyethyl cellulose, carboxymethylated starch sodium salt, hydroxyethylated starch, starch phosphate ester sodium salt, polyvinyl alcohol, polyvinyl methyl ether, polyacrylamide, polyacrylate sodium salt, a copolymer of partially saponified vinyl acetate and vinyl ether, acrylic acid, methacrylic acid, a polymer or copolymer of maleic acid and an ester or salt thereof, hydroxypropyl cellulose (HPC), hydroxypropyl methyl cellulose, polyvinyl pyrrolidone and a vinyl pyrrolidone-vinyl acetate copolymer; and (14) ultraviolet absorbing agents.</p>
+    <heading id="h-00024-en">&lt; Intended use &gt;</heading>
+    <p id="p-00089-en" num="0089">Examples of the cosmetic preparation include hair cosmetic preparations such as hair oils, hair dyeing materials, combing oils, set lotions, stick pomades, Japanese traditional hair oils, hair creams, hair tonics, hair liquids, hair spray, pomades, shampoos, hair rinses, hair conditioners, hair lotions and split hair preventing agent; and skin cosmetic preparations such as hand creams, hand lotions, skin creams, foundations, eye shadows, eye liners, mascaras, face wash materials and antiperspirants.</p>
+    <heading id="h-00025-en">WORKING EXAMPLE</heading>
+    <p id="p-00090-en" num="0090">Measurement and evaluation methods are as follows.</p>
+    <heading id="h-00026-en">· Average particle diameter of emulsion:</heading>
+    <p id="p-00091-en" num="0091">Measured were values of median diameters on volume bases, using a laser diffraction scattering type particle size measuring device LA-920 (HORIBA, Ltd.).</p>
+    <heading id="h-00027-en">·Viscosity of organopolysiloxane as raw material having silanol group on molecular chain terminal:</heading>
+    <p id="p-00092-en" num="0092">The viscosities were measured using an Ostwald viscometer at 25°C, i.e. the viscosities measured were kinetic viscosities at 25°C.</p>
+    <heading id="h-00028-en">·Viscosity of organopolysiloxane (extraction viscosity):</heading>
+    <p id="p-00093-en" num="0093">Isopropyl alcohol of 300 g was added to the prepared emulsion composition of 300 g while performing stirring, followed by sorting out only the dimethylsiloxane precipitated and then drying the same at 105°C for 3 hours. Here, the viscosities were measured using a rotatory viscometer at 25°C, i.e. the viscosities measured were absolute viscosities at 25°C.</p>
+    <heading id="h-00029-en">·Amount of octamethylcyclotetrasiloxane contained in emulsion:</heading>
+    <p id="p-00094-en" num="0094">The prepared emulsion composition of 0.1 g was subjected to extraction (three-hour shaking) using 10 ml of acetone containing tetradecane in an amount of 20 ppm by mass as an internal reference, followed by leaving the same overnight, and then collecting the acetone layer to perform gas chromatography analysis thereon, thus allowing the quantity of each Dn (low molecular cyclosiloxane) to be determined.</p>
+    <heading id="h-00030-en">· Stability:</heading>
+    <p id="p-00095-en" num="0095">The sample prepared was placed into a glass bottle of a volume of 100 ml, and was then left at 50°C for a month before externally observing the same. Symbols of "○" represent examples where the stability was so favorable that the emulsion had exhibited no separation, i.e. a uniform and single phase. Symbols of "Δ" represent examples where the emulsion had slightly exhibited oil floating. Symbols of "×" represent examples where the stability was so unfavorable that the emulsion had exhibited a separation into two phases.</p>
+    <heading id="h-00031-en">·Feeling of use:</heading>
+    <p id="p-00096-en" num="0096">The feeling of use was point-rated by 20 panelists and was evaluated based on an average score.<br /> 5: Very Good 4: Good 3: Normal 2: Bad 1: Very Bad</p>
+    <heading id="h-00032-en">·Base emulsion</heading>
+    <heading id="h-00033-en">&lt; Emulsion A &gt;</heading>
+    <p id="p-00097-en" num="0097">With respect to 100 parts by mass of an organopolysiloxane (containing octamethylcyclotetrasiloxane in an amount of not more than 50 parts by mass) having a viscosity of 5,000 mm<sup>2</sup> /s and a silanol group(s) on its molecular chain terminals, a homodisper was used to emulsify 0.75 parts by mass of polyoxyethylene (4 mol) lauryl ether, 2.25 parts by mass of polyoxyethylene (23 mol) lauryl ether, 4.0 parts by mass of dodecylbenzene sodium sulfonate and 4.2 parts by mass of water. Water was then added to the first emulsion thus obtained in an amount of 81.2 parts by mass, followed by using a homomixer to dilute and disperse the same. The emulsion obtained was then turned to 0°C, followed by adding a concentrated hydrochloric acid thereto in an amount of 1.2 parts by mass to perform emulsion polymerization. Later, a sodium carbonate solution of 10% by mass was added to the emulsion obtained in an amount of 6.4 parts by mass to neutralize the same, thus obtaining the target emulsion composition. The properties of such emulsion were such that the extraction viscosity was 2,000,000 mPa·s; the amount of D4 contained in the emulsion was 500 ppm by mass; and the average particle diameter was 170 nm.</p>
+    <heading id="h-00034-en">&lt; Emulsion B &gt;</heading>
+    <p id="p-00098-en" num="0098">Cyclic siloxane of 50 parts by mass, dodecylbenzene sulfonic acid of 2.84 parts by mass and water of 45.66 parts by mass were mixed together to prepare an o/w emulsion, followed by treating the same with a high-pressure homogenizer. Later, emulsion polymerization was performed, and a sodium carbonate solution of 10% by mass was then used in an amount of 5.21 parts by mass to perform neutralization, thus obtaining the target emulsion composition. The properties of this emulsion were such that the extraction viscosity was 2,000,000 mPa·s; the amount of D4 contained in the emulsion was 35,000 ppm by mass; and the average particle diameter was 200 nm.</p>
+    <heading id="h-00035-en">&lt; Emulsion C &gt;</heading>
+    <p id="p-00099-en" num="0099">D6 was added and mixed into the emulsion A in an amount of 150 ppm by mass to prepare an emulsion C.</p>
+    <heading id="h-00036-en">&lt; Emulsion D &gt;</heading>
+    <p id="p-00100-en" num="0100">D5 was added and mixed into the emulsion A in an amount of 200 ppm by mass to prepare an emulsion D.</p>
+    <heading id="h-00037-en">&lt; Emulsion E &gt;</heading>
+    <p id="p-00101-en" num="0101">D5 and D6 were added and mixed into the emulsion A respectively in an amount of 300 ppm by mass and an amount of 150 ppm by mass to prepare an emulsion E.</p>
+    <p id="p-00102-en" num="0102">All of the abovementioned emulsions are described in the following Table 1.</p>
+    <heading id="h-00038-en">Cosmetic preparation</heading>
+    <heading id="h-00039-en">· Shampoo</heading>
+    <p id="p-00103-en" num="0103">A shampoo was prepared by mixing together the base emulsion of 3 parts by mass; polyoxyethylene (2 mol) lauryl ether sodium sulfate of 16 parts by mass; cocoamidopropyl betaine of 2.1 parts by mass; a cationic guar gum derivative (Jaguar C13S) of 0.1 parts by mass; Carbopol ® 980 of 0.4 parts by mass; and an ion-exchanged water of 78.4 parts by mass.</p>
+    <heading id="h-00040-en">· Hand lotion</heading>
+    <p id="p-00104-en" num="0104">A hand lotion was prepared by mixing together the base emulsion of 11.0 parts by mass; cetyl alcohol of 2.0 parts by mass; sorbitan monomyristate of 1.2 parts by mass; polyoxyethylene (25 mol) monostearate of 1.3 parts by mass; acetylated lanolin of 2.0 parts by mass; magnesium aluminum silicate of 1.5 parts by mass; a fragrance of 0.5 parts by mass; and an ion-exchanged water of 80.5 parts by mass.</p>
+    <heading id="h-00041-en">· Rinse</heading>
+    <p id="p-00105-en" num="0105">A rinse was prepared by mixing together the base emulsion of 10 parts by mass; distearate ethylene glycol of 3 parts by mass; cetanol of 2 parts by mass; monostearate propylene glycol of 3 parts by mass; monostearate glycerin of 3.8 parts by mass; polyoxyethylene (3) stearate of 3.8 parts by mass; acetyl chloride trimethylammonium of 5 parts by mass; polyoxyethylene (20) cetyl ether of 2 parts by mass; 1,3- butanediol of 5 parts by mass; methylparaben of 0.2 parts by mass; and an ion-exchanged water of 62.2 parts by mass.</p>
+    <heading id="h-00042-en">· Hair set lotion</heading>
+    <p id="p-00106-en" num="0106">A hair set lotion was prepared by mixing together the base emulsion of 5 parts by mass; hydroxyethyl cellulose of 0.2 parts by mass; ethanol of 10 parts by mass; a fragrance of 0.2 parts by mass; and an ion-exchanged water of 84.6 parts by mass.</p>
+    <heading id="h-00043-en">Working example 1 a</heading>
+    <p id="p-00107-en" num="0107">The emulsion A was used to prepare the shampoo having the aforementioned composition. The shampoo thus obtained exhibited a favorable preservation stability and a favorable feeling of use.</p>
+    <heading id="h-00044-en">Working example 1b</heading>
+    <p id="p-00108-en" num="0108">The emulsion C was used to prepare the shampoo having the aforementioned composition. The shampoo thus obtained exhibited a favorable preservation stability and a favorable feeling of use. However, its feeling of use was slightly inferior to that of the working example 1 a.</p>
+    <heading id="h-00045-en">Working example 1 c</heading>
+    <p id="p-00109-en" num="0109">The emulsion D was used to prepare the shampoo having the aforementioned composition. The shampoo thus obtained exhibited a favorable preservation stability and a favorable feeling of use. However, its feeling of use was slightly inferior to that of the working example 1b.</p>
+    <heading id="h-00046-en">Working example 1 d</heading>
+    <p id="p-00110-en" num="0110">The emulsion E was used to prepare the shampoo having the aforementioned composition. The shampoo thus obtained exhibited a favorable preservation stability and a favorable feeling of use. However, its feeling of use was slightly inferior to that of the working example 1a.</p>
+    <heading id="h-00047-en">Comparative example 1</heading>
+    <p id="p-00111-en" num="0111">The emulsion B was used to prepare the shampoo having the aforementioned composition. Both the preservation stability and feeling of use of the shampoo thus obtained were inferior to those of the working examples 1a, 1b, 1c and 1d.</p>
+    <heading id="h-00048-en">Working example 2</heading>
+    <p id="p-00112-en" num="0112">The emulsion A was used to prepare the hand lotion having the aforementioned composition. The hand lotion thus obtained exhibited a favorable preservation stability and a favorable feeling of use.</p>
+    <heading id="h-00049-en">Comparative example 2</heading>
+    <p id="p-00113-en" num="0113">The emulsion B was used to prepare the hand lotion having the aforementioned composition. Both the preservation stability and feeling of use of the hand lotion thus obtained were inferior to those of the working example 2.</p>
+    <heading id="h-00050-en">Working example 3</heading>
+    <p id="p-00114-en" num="0114">The emulsion A was used to prepare the rinse having the aforementioned composition. The rinse thus obtained exhibited a favorable preservation stability and a favorable feeling of use.</p>
+    <heading id="h-00051-en">Comparative example 3</heading>
+    <p id="p-00115-en" num="0115">The emulsion B was used to prepare the rinse having the aforementioned composition. Both the preservation stability and feeling of use of the rinse thus obtained were inferior to those of the working example 3.</p>
+    <heading id="h-00052-en">Working example 4</heading>
+    <p id="p-00116-en" num="0116">The emulsion A was used to prepare the hair set lotion having the aforementioned composition. The hair set lotion thus obtained exhibited a favorable preservation stability and a favorable feeling of use.</p>
+    <heading id="h-00053-en">Comparative example 4</heading>
+    <p id="p-00117-en" num="0117">The emulsion B was used to prepare the hair set lotion. Both the preservation stability and feeling of use of the hair set lotion thus obtained were inferior to those of the working example 3.</p>
+    <p id="p-00118-en" num="0118">The evaluation results of the abovementioned working examples and comparative examples are shown in Table 2. <tables id="tables-00002-en" num="0002"><img id="img-00002-en" wi="161" he="159" img-content="table" file="EP2926804A1_00002.PNG" img-format="png" original="imgb0002.tif" /></tables><tables id="tables-00003-en" num="0003"><table frame="all"><title>[Table 2]</title><tgroup cols="3"><colspec colnum="1" colname="col1" colwidth="38mm" /><colspec colnum="2" colname="col2" colwidth="34mm" /><colspec colnum="3" colname="col3" colwidth="25mm" /><thead><row><entry valign="top" /><entry align="center" valign="top">Preservation stability</entry><entry align="center" valign="top">Feeling of use</entry></row></thead><tbody><row><entry>Working example 1a</entry><entry align="center">○</entry><entry align="center">4.5</entry></row><row><entry>Working example 1b</entry><entry align="center">○</entry><entry align="center">4.1</entry></row><row><entry>Working example 1c</entry><entry align="center">○</entry><entry align="center">3.9</entry></row><row><entry>Working example 1d</entry><entry align="center">○</entry><entry align="center">4.2</entry></row><row><entry>Comparative example 1</entry><entry align="center">Δ</entry><entry align="center">3.1</entry></row><row><entry>Working example 2</entry><entry align="center">○</entry><entry align="center">4.5</entry></row><row><entry>Comparative example 2</entry><entry align="center">Δ</entry><entry align="center">3.2</entry></row><row><entry>Working example 3</entry><entry align="center">○</entry><entry align="center">4.0</entry></row><row><entry>Comparative example 3</entry><entry align="center">Δ</entry><entry align="center">3.1</entry></row><row><entry>Working example 4</entry><entry align="center">○</entry><entry align="center">4.4</entry></row><row><entry>Comparative example 4</entry><entry align="center">Δ</entry><entry align="center">3.3</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00119-en" num="0119">It is understood from the above tables that the cosmetic preparation of the present invention exhibits a superior preservation stability and feeling of use when it contains an emulsion having D4 in an amount of not larger than 1,000 ppm by mass.</p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151007">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>A cosmetic preparation containing an (a) organopolysiloxane emulsion in an amount of not smaller than 0.1% by mass, said organopolysiloxane emulsion being obtained through emulsion polymerization and containing octamethylcyclotetrasiloxane in an amount of not larger than 1,000 ppm by mass.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The cosmetic preparation according to claim 1, wherein said (a) organopolysiloxane emulsion is obtained by emulsion-polymerizing an organopolysiloxane expressed by the following general formula (1)
+        HO (R<sup>1</sup><sub>2</sub>SiO)<sub>n</sub>H     (1)
+(In the formula, R<sup>1</sup> independently represents a hydrogen atom or a substituted or unsubstituted hydrocarbon group having 1 to 20 carbon atoms; n represents a number allowing a kinetic viscosity of said organopolysiloxane to become 3,000 to 100,000 mm<sup>2</sup>/s at 25°C.)</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The cosmetic preparation according to claim 1 or claim 2, wherein said (a) organopolysiloxane emulsion is prepared by:
+<claim-text>(I) obtaining a first emulsion composition by emulsifying a mixture containing
+<tables id="tablesc-00001-en" num="0004"><table frame="none"><tgroup cols="2" colsep="0" rowsep="0"><colspec colnum="1" colname="col1" colwidth="136mm" /><colspec colnum="2" colname="col2" colwidth="30mm" /><tbody><row><entry> (A) an organopolysiloxane expressed by the following general formula (1) and containing octamethylcyclotetrasiloxane in an amount of not larger than 1,000 ppm by mass</entry><entry>100 parts by mass</entry></row><row><entry namest="col1" nameend="col2" align="left"> HO (R<sup>1</sup><sub>2</sub> SiO)<sub>n</sub>H (1)</entry></row><row><entry>(In the formula, R<sup>1</sup> independently represents a hydrogen atom or a substituted or</entry><entry /></row><row><entry>unsubstituted hydrocarbon group having 1 to 20 carbon atoms; n represents a number</entry><entry /></row><row><entry>allowing a kinetic viscosity of said organopolysiloxane to become 3,000 to 100,000</entry><entry /></row><row><entry>mm<sup>2</sup>/s at 25°C.)</entry><entry /></row><row><entry> (B) a non-ionic surfactant</entry><entry>1 to 100 parts by mass</entry></row><row><entry> (C) an anion surfactant</entry><entry>1 to 100 parts by mass</entry></row><row><entry namest="col1" nameend="col2" align="left"> (provided that a range of mass ratio of component (B) : component (C) = 1:99 to 65:35) and</entry></row><row><entry> (D-1) water</entry><entry>1 to 10 parts by mass; and then</entry></row></tbody></tgroup></table></tables></claim-text><claim-text>(II) adding no water or adding
+<claim-text>(D-2) not larger than 100,000 parts by mass of water;</claim-text>
+to said first emulsion composition, followed by performing emulsion polymerization in the presence of an (E) acid catalyst at a temperature lower than 40°C (said acid catalyst is not required provided that said (C) anion surfactant is capable of acting as a catalyst).</claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>The cosmetic preparation according to claim 2 or claim 3, wherein a temperature at the time of performing emulsion polymerization is -15 to 5°C.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>The cosmetic preparation according to any one of claim 1 to claim 4, wherein D4 occupies not smaller than 60% by mass of a total amount of D3 to D10 in said (a) organopolysiloxane emulsion obtained through emulsion polymerization.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>The cosmetic preparation according to any one of claim 1 to claim 5, wherein the total amount of D3 to D10 in said (a) organopolysiloxane emulsion obtained through emulsion polymerization is not larger than 1,000 ppm by mass.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>The cosmetic preparation according to any one of claim 1 to claim 6, wherein an average particle diameter of said (a) organopolysiloxane emulsion is not larger than 300 nm.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>The cosmetic preparation according to any one of claim 1 to claim 7, further comprising
+<claim-text>(b) a surfactant; and</claim-text><claim-text>(c) a cationic polymer, in addition to (a).</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>The cosmetic preparation according to any one of claim 1 to claim 8 as a hair cosmetic preparation.</claim-text>
+    </claim>
+  </claims>
+  <drawings>
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2926804A1_00001.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0001.tif" inline="yes" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2926804A1_00002.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0002.tif" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="EP2926804A1.PDF" type="pdf" size="457540" pages="19" />
+</lexisnexis-patent-document>

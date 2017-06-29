@@ -1,0 +1,916 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2017 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20170602" file="EP2670359B1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20170531" time-inserted="185129" date-changed="20170601" time-changed="192432">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Grant" publ-desc="Granted patent">
+      <document-id id="131516460">
+        <country>EP</country>
+        <doc-number>2670359</doc-number>
+        <kind>B1</kind>
+        <date>20170531</date>
+      </document-id>
+      <document-id data-format="original">
+        <country>EP</country>
+        <doc-number>2670359</doc-number>
+        <kind>B1</kind>
+        <date>20170531</date>
+      </document-id>
+      <document-id data-format="docdb" id="478156253">
+        <doc-number>2670359</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>EP2670359</doc-number>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id id="2624540">
+        <country>EP</country>
+        <doc-number>12700050</doc-number>
+        <date>20120109</date>
+      </document-id>
+      <document-id data-format="original">
+        <country>EP</country>
+        <doc-number>12700050.3</doc-number>
+        <date>20120109</date>
+      </document-id>
+      <document-id data-format="docdb" id="340850692">
+        <doc-number>12700050</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>EP20120700050</doc-number>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20170531">
+      <priority-claim sequence="1" kind="national">
+        <country>IT</country>
+        <doc-number>2011MI0122</doc-number>
+        <date>20110201</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>IT</country>
+        <doc-number>MI20110122</doc-number>
+        <date>20110201</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>EP</country>
+        <doc-number>2012050261</doc-number>
+        <date>20120109</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>MI20110122</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>EP2012050261</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>IT2011MI00122</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>WO2012EP50261</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20170601">
+      <gazette-reference>
+        <date>20170531</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20131211</date>
+      </unexamined-printed-without-grant>
+      <printed-with-grant>
+        <date>20170531</date>
+      </printed-with-grant>
+      <publication-of-grant-date>
+        <date>20170531</date>
+      </publication-of-grant-date>
+      <intention-to-grant-date>
+        <date>20161220</date>
+      </intention-to-grant-date>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20170601">
+      <request-for-examination>
+        <date>20130726</date>
+      </request-for-examination>
+      <first-examination-report-despatched>
+        <date>20131211</date>
+      </first-examination-report-despatched>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20170601">
+      <classification-ipcr sequence="1">
+        <text>A61F   2/36        20060101AFI20120821BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2</main-group>
+        <subgroup>36</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20120821</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61F   2/00        20060101ALI20120821BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20120821</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61F   2/30        20060101ALI20120821BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2</main-group>
+        <subgroup>30</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20120821</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20170601">
+      <classification-cpc sequence="1">
+        <text>A61F   2/3609      20130101 FI20131122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2</main-group>
+        <subgroup>3609</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20131122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61F   2/3662      20130101 LI20131122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2</main-group>
+        <subgroup>3662</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20131122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61F2002/30332     20130101 LA20131122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2002</main-group>
+        <subgroup>30332</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20131122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61F2002/30485     20130101 LA20131122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2002</main-group>
+        <subgroup>30485</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20131122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61F2002/30822     20130101 LA20131122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2002</main-group>
+        <subgroup>30822</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20131122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61F2002/30828     20130101 LA20131122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2002</main-group>
+        <subgroup>30828</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20131122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61F2002/3652      20130101 LA20131122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2002</main-group>
+        <subgroup>3652</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20131122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61F2002/3678      20130101 LA20131122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2002</main-group>
+        <subgroup>3678</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20131122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>A61F2220/0025      20130101 LA20131122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2220</main-group>
+        <subgroup>0025</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20131122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>A61F2220/0033      20130101 LA20131122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2220</main-group>
+        <subgroup>0033</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20131122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">4</number-of-claims>
+    <invention-title id="title_ger" date-changed="20170531" lang="ger" format="original">FEMURSCHAFT FÜR HÜFTPROTHESE</invention-title>
+    <invention-title id="title_eng" date-changed="20170531" lang="eng" format="original">FEMORAL STEM FOR HIP PROSTHESIS</invention-title>
+    <invention-title id="title_fre" date-changed="20170531" lang="fre" format="original">TIGE FÉMORALE POUR PROTHÈSE DE HANCHE</invention-title>
+    <references-cited date-changed="20170531">
+      <patent-citations name="patcit" date-changed="20170531" />
+      <citation>
+        <patcit num="1" dnum="EP0 011 665A1" dnum-type="publication number">
+          <document-id>
+            <country>EP</country>
+            <doc-number> 011 665</doc-number>
+            <kind>A1</kind>
+          </document-id>
+          <document-id data-format="original">
+            <country>EP</country>
+            <doc-number>0 011 665</doc-number>
+            <kind>A1</kind>
+          </document-id>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="EP0 864 303A2" dnum-type="publication number">
+          <document-id>
+            <country>EP</country>
+            <doc-number>864303</doc-number>
+            <kind>A2</kind>
+            <date>19980916</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>EP</country>
+            <doc-number>0 864 303</doc-number>
+            <kind>A2</kind>
+          </document-id>
+          <application-date>
+            <date>19980309</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="FR2 837 695A1" dnum-type="publication number">
+          <document-id>
+            <country>FR</country>
+            <doc-number>2837695</doc-number>
+            <kind>A1</kind>
+            <date>20031003</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>FR</country>
+            <doc-number>2 837 695</doc-number>
+            <kind>A1</kind>
+          </document-id>
+          <application-date>
+            <date>20020328</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="US2006 167 557A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060167557</doc-number>
+            <kind>A1</kind>
+            <date>20060727</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>2006 167 557</doc-number>
+            <kind>A1</kind>
+          </document-id>
+          <application-date>
+            <date>20050124</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20170531">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Adler Ortho S.R.L.</orgname>
+            <registered-number>101320789</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Via dell'Innovazione, 9</address-1>
+              <city>20032 Cormano</city>
+              <country>IT</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant sequence="2" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Toni, Aldo</orgname>
+            <registered-number>101308654</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Via Leoncavallo 12</address-1>
+              <city>40137 Bologna</city>
+              <country>IT</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>TONI, Aldo</name>
+            <address>
+              <address-1>Via Leoncavallo 12</address-1>
+              <city>I-40137 Bologna</city>
+              <country>IT</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>CREMASCOLI, Patrizio</name>
+            <address>
+              <address-1>Via Milano 9</address-1>
+              <city>I-20091 Bresso</city>
+              <country>IT</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Modiano, Micaela Nadia</name>
+            <registered-number>100048067</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Modiano &amp; Partners Via Meravigli, 16</address-1>
+              <city>20123 Milano</city>
+              <country>IT</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20170531">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>EP12050261</doc-number>
+        <date>20120109</date>
+      </document-id>
+      <document-id data-format="original">
+        <country>WO</country>
+        <doc-number>EP2012050261</doc-number>
+        <date>20120109</date>
+      </document-id>
+      <document-id data-format="original">
+        <country>WO</country>
+        <doc-number>EP2012050261</doc-number>
+        <date>20120109</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2012104115</doc-number>
+        <date>20120809</date>
+      </document-id>
+      <document-id data-format="original">
+        <country>WO</country>
+        <doc-number>2012104115</doc-number>
+        <date>20120809</date>
+      </document-id>
+      <document-id data-format="original">
+        <country>WO</country>
+        <doc-number>2012104115</doc-number>
+        <date>20120809</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20170531">
+      <main-family family-id="152830054">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2670359</doc-number>
+            <kind>A1</kind>
+            <date>20131211</date>
+          </document-id>
+          <application-date>
+            <date>20120109</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IT</country>
+            <doc-number>MI20110122</doc-number>
+            <kind>A1</kind>
+            <date>20120802</date>
+          </document-id>
+          <application-date>
+            <date>20110201</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2670359</doc-number>
+            <kind>B1</kind>
+            <date>20170531</date>
+          </document-id>
+          <application-date>
+            <date>20120109</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IT</country>
+            <doc-number>1403668</doc-number>
+            <kind>B1</kind>
+            <date>20131031</date>
+          </document-id>
+          <application-date>
+            <date>20110201</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20130310947</doc-number>
+            <kind>A1</kind>
+            <date>20131121</date>
+          </document-id>
+          <application-date>
+            <date>20120109</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2012104115</doc-number>
+            <kind>A1</kind>
+            <date>20120809</date>
+          </document-id>
+          <application-date>
+            <date>20120109</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="152830053">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2670359</doc-number>
+            <kind>A1</kind>
+            <date>20131211</date>
+          </document-id>
+          <application-date>
+            <date>20120109</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IT</country>
+            <doc-number>MI20110122</doc-number>
+            <kind>A1</kind>
+            <date>20120802</date>
+          </document-id>
+          <application-date>
+            <date>20110201</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2670359</doc-number>
+            <kind>B1</kind>
+            <date>20170531</date>
+          </document-id>
+          <application-date>
+            <date>20120109</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IT</country>
+            <doc-number>1403668</doc-number>
+            <kind>B1</kind>
+            <date>20131031</date>
+          </document-id>
+          <application-date>
+            <date>20110201</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20130310947</doc-number>
+            <kind>A1</kind>
+            <date>20131121</date>
+          </document-id>
+          <application-date>
+            <date>20120109</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2012104115</doc-number>
+            <kind>A1</kind>
+            <date>20120809</date>
+          </document-id>
+          <application-date>
+            <date>20120109</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20170601" lang="eng" format="equivalent" country="US" doc-number="2013310947" kind="A1">
+    <p>"A femoral stem, particularly for a hip prosthesis, provided with a recess for the mating of a neck, the recess having a rough inner surface, the roughness being constituted by scoring lines adapted to allow optimum mating between the neck and the stem."</p>
+  </abstract>
+  <legal-data date-changed="20170303">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20131211</date>
+      </publication-date>
+      <event-code-1>17P</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXAMINATION FILED</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     2670359A1</docdb-publication-number>
+      <docdb-application-id>340850692</docdb-application-id>
+      <effective-date>
+        <date>20130726</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20131211</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     2670359A1</docdb-publication-number>
+      <docdb-application-id>340850692</docdb-application-id>
+      <corresponding-authority>
+        <country>EP</country>
+      </corresponding-authority>
+      <corresponding-kind>A1</corresponding-kind>
+      <legal-designated-states>
+        <country>AL</country>
+        <country>AT</country>
+        <country>BE</country>
+        <country>BG</country>
+        <country>CH</country>
+        <country>CY</country>
+        <country>CZ</country>
+        <country>DE</country>
+        <country>DK</country>
+        <country>EE</country>
+        <country>ES</country>
+        <country>FI</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>GR</country>
+        <country>HR</country>
+        <country>HU</country>
+        <country>IE</country>
+        <country>IS</country>
+        <country>IT</country>
+        <country>LI</country>
+        <country>LT</country>
+        <country>LU</country>
+        <country>LV</country>
+        <country>MC</country>
+        <country>MK</country>
+        <country>MT</country>
+        <country>NL</country>
+        <country>NO</country>
+        <country>PL</country>
+        <country>PT</country>
+        <country>RO</country>
+        <country>RS</country>
+        <country>SE</country>
+        <country>SI</country>
+        <country>SK</country>
+        <country>SM</country>
+        <country>TR</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20140507</date>
+      </publication-date>
+      <event-code-1>DAX</event-code-1>
+      <effect>-</effect>
+      <legal-description>REQUEST FOR EXTENSION OF THE EUROPEAN PATENT (TO ANY COUNTRY) DELETED</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     2670359A1</docdb-publication-number>
+      <docdb-application-id>340850692</docdb-application-id>
+    </legal-event>
+    <legal-event sequence="4">
+      <publication-date>
+        <date>20170118</date>
+      </publication-date>
+      <event-code-1>INTG</event-code-1>
+      <effect>+</effect>
+      <legal-description>ANNOUNCEMENT OF INTENTION TO GRANT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     2670359A1</docdb-publication-number>
+      <docdb-application-id>340850692</docdb-application-id>
+      <effective-date>
+        <date>20161220</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20170531">
+    <p id="p-00001-en" num="0001">The present invention relates to a femoral stem for a hip prosthesis. More particularly, the invention relates to a femoral stem that is used for hip prostheses in combination with a femoral neck with which a head and a cotyloid cavity are mated.</p>
+    <p id="p-00002-en" num="0002">As is known, a hip prosthesis is constituted by a femoral stem which is inserted in the medullary canal of the femur and in which a neck is inserted which has a head that protrudes from the femoral stem and engages a cotyloid cavity, which in turn is accommodated in the provided seat of the pelvis, so as to reconstruct the hip joint. Document <patcit id="pcit-00001" dnum="FR2837695"><text>FR 2837695</text></patcit> discloses the features of the preamble of claim 1. Document <patcit id="pcit-00002" dnum="US20060167557A"><text>US 2006/0167557</text></patcit> discloses a connection of a femoral neck to a head, wherein the male taper of the neck comprises ridges and grooves. One of the problems encountered most frequently with hip prostheses is due to the mating between the neck and the stem of the femur. This mating in fact can give rise to problems that can lead to breakage of the prosthesis. In particular, the mating between the neck, i.e., the "male" part of the prosthesis, and the stem, i.e., the "female" part of the prosthesis, is provided with the neck and stem made of the same material, for example titanium alloy.</p>
+    <p id="p-00003-en" num="0003">The use of a same material has the purpose of avoiding electrolysis problems. The material currently used, titanium alloy, is the one that has the best performance in terms of strength. However, titanium mated with titanium, in the presence of micro-movements, produces "debris" that can lead to what are called cold welds. Such cold welds constitute the failure point for the mating between the stem and the neck.</p>
+    <p id="p-00004-en" num="0004">In order to achieve a very stable mating it is therefore necessary to provide a very tight tolerance between the two components, the stem and the neck; it is necessary to produce the impact of the two components with a certain force in order to achieve an interlocking between the neck and the stem, and it is further necessary to produce an impact in the direction of the mating axis.</p>
+    <p id="p-00005-en" num="0005">However, it is sufficient for the interlocking to be less than perfectly precise to pass from a perfect mating to a mating with contact between the two components in a relatively small area, with an extremely high load concentration that leads to breakage.</p>
+    <p id="p-00006-en" num="0006">The aim of the present invention is to provide a femoral stem that allows a mating with the corresponding neck that is substantially free from breakage.</p>
+    <p id="p-00007-en" num="0007">Within this aim, an object of the present invention is to provide a femoral stem that can be made of the same material as the neck while offering a high-strength mating.</p>
+    <p id="p-00008-en" num="0008">Another object of the present invention is to provide a femoral stem which, when the corresponding neck is inserted therein, avoids an unwanted interlocking, i.e., an imperfect mating between the neck and the stem of the femur.</p>
+    <p id="p-00009-en" num="0009">Another object of the present invention is to provide a femoral stem that is highly reliable, relatively simple to provide and has competitive costs.</p>
+    <p id="p-00010-en" num="0010">This aim, as well as these and other objects that will become better apparent hereinafter, are achieved by a femoral stem, particularly for a hip prosthesis, provided with a recess for the mating of a neck, characterized in that said recess has a rough inner surface, said roughness being constituted by scoring lines adapted to allow optimum mating between the neck and the stem.</p>
+    <p id="p-00011-en" num="0011">Further characteristics and advantages of the invention will become better apparent from the description of preferred but non-limiting embodiments of the femoral stem according to the present invention, illustrated by way of non-limiting example in the accompanying drawings, wherein: <ul id="ul-00001-en" list-style="none" compact="compact"><li><figref>Figure 1</figref> is a transverse sectional view of a femoral stem with a corresponding neck mated therewith, according to the present invention;</li><li><figref>Figure 2a</figref> is a view of a first embodiment of the inner surface of the femoral stem according to the invention;</li><li><figref>Figure 2b</figref> is a view of a second embodiment of the inner surface of the femoral stem according to the invention; and</li><li><figref>Figure 2c</figref> is a view of a third embodiment of the inner surface of the femoral stem according to the invention.</li></ul></p>
+    <p id="p-00012-en" num="0012">With reference to the figures, the femoral stem according to the invention, generally designated by the reference numeral 1, is adapted to be mated with a femoral neck 2, which has, in its proximal part, what is called a "morse" cone 3, which is adapted to engage a femoral head 4, which in turn is articulated within a cotyloid cavity 6 which must be fixed in the adapted seat of the pelvis, in order to restore the hip joint.</p>
+    <p id="p-00013-en" num="0013">The femoral stem 1 is provided with a channel or recess 5 within which the neck 2 that constitutes the male element of the mating is adapted to fit.</p>
+    <p id="p-00014-en" num="0014">The femoral stem 1 and the neck 2 are preferably made of the same material, for example titanium alloy.</p>
+    <p id="p-00015-en" num="0015">The peculiarity of the invention resides in that the channel or recess 5 defined within the femoral stem 1 has a surface with a greater roughness than what should be provided in order to have optimum contact surfaces.</p>
+    <p id="p-00016-en" num="0016">When a kind of contact is provided, the intention is to obtain the lowest (smallest) possible roughness (measured in microns). This type of roughness (Rz) is the arithmetic mean of the five greatest peak-to-trough distances within the sampling length. The peaks and troughs are respectively the crests and hollows that define a rough surface.</p>
+    <p id="p-00017-en" num="0017">Two components with a very low roughness Rz that mate have a very large contact surface. However, particularly if the two components are made of the same material, the possibility of a "jamming" (imperfect mating) is high. Therefore, the invention provides in the recess 5 such a roughness that the "peaks" that are created intentionally can be "deformed" by the neck 2 (male element of the mating), thus avoiding the above-mentioned unwanted jamming.</p>
+    <p id="p-00018-en" num="0018">The roughness Rz that is provided in the recess 5 (measured in microns) is the distance between two parallel straight lines, one traced at the mean of the five highest peaks and the other one traced at the mean of the five lowest troughs, in the interval of the base length of the measurement.</p>
+    <p id="p-00019-en" num="0019">It has been found that the roughness can be comprised between 6 and 50 microns, with a recommended optimum roughness between 20 and 30 microns.</p>
+    <p id="p-00020-en" num="0020">
+      <figref>Figures 2a, 2b and 2c</figref> are views of three types of roughness, starting from 6 microns up to 50 microns of <figref>Figure 2c</figref>. The scoring lines that define the roughness have a pitch that can vary respectively between 75 microns for a 6-micron roughness and 350 microns for a 50-micron roughness.</p>
+    <p id="p-00021-en" num="0021">The scoring lines described previously allow the male component (neck 2) to enter more easily the female component and, by bending the crests, thanks to their relative weakness, avoid the concentration of stresses and therefore the corresponding early breakages.</p>
+    <p id="p-00022-en" num="0022">Conveniently, the scoring lines are arranged at right angles with respect to the axis of the mating between the stem and the distal part of the neck 2.</p>
+    <p id="p-00023-en" num="0023">In practice it has been found that the femoral stem according to the invention fully achieves the intended aim and objects, since it allows, thanks to the scoring described on the inner surface of the recess, to provide a mating between the neck and the stem that makes it possible to enter the stem more easily, avoiding the possibility of early breakages caused by concentration of the stresses in specific points of the mating.</p>
+    <p id="p-00024-en" num="0024">The stem thus conceived is susceptible of numerous modifications and variations, all of which are within the scope of the accompanying claims; all the details may further be replaced with other technically equipment elements.</p>
+    <p id="p-00025-en" num="0025">In practice, the materials used, as well as the contingent shapes and dimensions, may be any according to requirements and to the state of the art.</p>
+    <p id="p-00026-en" num="0026">Where technical features mentioned in any claim are followed by reference signs, those reference signs have been included for the sole purpose of increasing the intelligibility of the claims and accordingly such reference signs do not have any limiting effect on the interpretation of each element identified by way of example by such reference signs.</p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20170531">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>A femoral stem (1), particularly for a hip prosthesis, provided with a recess (5) for the mating of a neck (2), said recess (5) having a rough inner surface, the roughness being constituted by scoring lines adapted to allow mating between the neck (2) and the stem (1), <b>characterized in that</b> said scoring lines are arranged at right angles to the axis of the mating between the stem and the distal part of the neck.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The femoral stem according to claim 1, characterized in that said roughness is comprised between 6 and 50 microns.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The femoral stem according to claim 1, characterized in that said roughness is comprised between 20 and 30 microns.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>The femoral stem according to one or more of the preceding claims, characterized in that said scoring lines have a spacing comprised between 75 and 350 microns.</claim-text>
+    </claim>
+  </claims>
+  <claims id="claims_fre" lang="fre" format="original" date-changed="20170531">
+    <claim num="1" id="clm-00001-fr">
+      <claim-text>Tige fémorale (1), en particulier pour une prothèse de hanche, munie d'une cavité (5) pour l'accouplement d'un col (2), ladite cavité (5) ayant une surface intérieure rugueuse, la rugosité étant constituée par des lignes d'entaille adaptées à accoupler le col (2) et la tige (1), <b>caractérisée en ce que</b> lesdites lignes d'entaille sont disposées à angle droit par rapport à l'axe de l'accouplement entre à tige et la partie distale du col,</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-fr">
+      <claim-text>Tige fémorale selon la revendication 1, caractérisée en ce que ladite rugosité est comprise entre 6 et 50 micromètres.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-fr">
+      <claim-text>Tige fémorale selon la revendication 1, caractérisée en ce que ladite rugosité est comprise entre 20 et 30 micromètres.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-fr">
+      <claim-text>Tige fémorale selon l'une ou plusieurs des revendications précédentes, caractérisée en ce que lesdites lignes d'entaille ont un espacement compris entre 75 et 350 micromètres.</claim-text>
+    </claim>
+  </claims>
+  <claims id="claims_ger" lang="ger" format="original" date-changed="20170531">
+    <claim num="1" id="clm-00001-de">
+      <claim-text>Ein Femurschaft (1), insbesondere für eine Hüftprothese, ausgestattet mit einer Vertiefung (5) für das Einpassen eines Halses (2), wobei die Vertiefung (5) eine raue Innenfläche hat und die Rauheit aus Kerblinien besteht, ausgebindet, um eine Passung zwischen dem Hals (2) und dem Schaft (1) zu ermöglichten, <b>dadurch gekennzeichnet, dass</b> die Kerblinien in rechten Winkeln zur Achse der Passung zwischen dem Schaft und dem distalen Teil des Halses angeordnet sind.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-de">
+      <claim-text>Der Femurschaft gemäß Anspruch 1, dadurch gekennzeichnet, dass die Rauheit zwischen 6 und 50 Mikron beträgt.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-de">
+      <claim-text>Der Femurschaft gemäß Anspruch 1, dadurch gekennzeichnet, dass die Rauheit zwischen 20 und 30 Mikron beträgt.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-de">
+      <claim-text>Der Femurschaft gemäß einem oder mehreren der obigen Ansprüche, dadurch gekennzeichnet, dass die Kerblinien einen Abstand zwischen 75 und 350 Mikron haben.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2670359B1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0001.tif" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2670359B1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0002.tif" />
+    </figure>
+  </drawings>
+  <image file="EP2670359B1.PDF" type="pdf" size="135069" pages="7" />
+</lexisnexis-patent-document>

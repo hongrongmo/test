@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150246218A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021326" date-changed="20151214" time-changed="115105">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121139324">
+        <country>US</country>
+        <doc-number>20150246218</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14377498</doc-number>
+        <date>20130205</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="regional">
+        <country>EP</country>
+        <doc-number>12154366</doc-number>
+        <date>20120208</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>A61N   1/05        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>N</subclass>
+        <main-group>1</main-group>
+        <subgroup>05</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61N   1/08        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>N</subclass>
+        <main-group>1</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61N   1/36        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>N</subclass>
+        <main-group>1</main-group>
+        <subgroup>36</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>A61N   1/0534      20130101 FI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>N</subclass>
+        <main-group>1</main-group>
+        <subgroup>0534</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61N   1/08        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>N</subclass>
+        <main-group>1</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61N   1/3605      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>N</subclass>
+        <main-group>1</main-group>
+        <subgroup>3605</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">16</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">LEAD FOR BRAIN APPLICATIONS</invention-title>
+    <related-documents date-changed="20150903">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61596249</doc-number>
+          <date>20120208</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Sapiens Steerings Brain Stimulation B.V.</orgname>
+            <address>
+              <city>Eindhoven</city>
+              <country>NL</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>NL</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Young</last-name>
+            <first-name>Edward Willem Albert</first-name>
+            <address>
+              <city>Maastricht</city>
+              <country>NL</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Bakker</last-name>
+            <first-name>Egbertus Johannes Maria</first-name>
+            <address>
+              <city>Wijk En Aalburg</city>
+              <country>NL</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>EP13052245</doc-number>
+        <date>20130205</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2013117547</doc-number>
+        <date>20130815</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150903">
+      <main-family family-id="160923095">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246218</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130205</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2626108</doc-number>
+            <kind>A1</kind>
+            <date>20130814</date>
+          </document-id>
+          <application-date>
+            <date>20120208</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="160951925">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246218</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130205</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2013117547</doc-number>
+            <kind>A1</kind>
+            <date>20130815</date>
+          </document-id>
+          <application-date>
+            <date>20130205</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>112013000890</doc-number>
+            <kind>T5</kind>
+            <date>20141120</date>
+          </document-id>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2626108</doc-number>
+            <kind>A1</kind>
+            <date>20130814</date>
+          </document-id>
+          <application-date>
+            <date>20120208</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention relates to a lead for brain applications, comprising at least one distal section and at least one electrode, whereby the at least one electrode is arranged in the distal section and whereby the at least one electrode is connected directly and/or indirectly with at least one first connecting trace and at least one second connecting trace. Furthermore, the present invention relates to a deep brain stimulation (DBS) system.</p>
+  </abstract>
+  <legal-data date-changed="20151016">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20141023</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246218A1</docdb-publication-number>
+      <docdb-application-id>444208359</docdb-application-id>
+      <new-owner>SAPIENS STEERING BRAIN STIMULATION B.V., NETHERLAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:YOUNG, EDWARD WILLEM ALBERT;BAKKER, EGBERTUS JOHANNES MARIA;SIGNING DATES FROM 20140806 TO 20140825;REEL/FRAME:034038/0121</free-text-description>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20150924</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246218A1</docdb-publication-number>
+      <docdb-application-id>444208359</docdb-application-id>
+      <new-owner>MEDTRONIC BAKKEN RESEARCH CENTER B.V., NETHERLANDS</new-owner>
+      <free-text-description>MERGER;ASSIGNOR:SAPIENS STEERING BRAIN STIMULATION B.V.;REEL/FRAME:036675/0923</free-text-description>
+      <effective-date>
+        <date>20150424</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <p id="p-00001-en" num="0001">The present invention relates to a lead for brain applications and to a deep brain stimulation (DBS) system.</p>
+      <p id="p-00002-en" num="0002">Implantable neurostimulation devices have been used in the past 10 years to treat acute or chronic neurological conditions. Deep brain stimulation (DBS), the mild electrical stimulation of sub-cortical structures, belongs to this category of implantable devices, and has been shown to be therapeutically effective for Parkinson's disease, dystonia, and tremor. New applications of DBS in the domain of psychiatric disorders (e. g. obsessive compulsive disorder, depression) are being researched and show promising results. In existing systems, the leads are connected to an implantable current pulse generator.</p>
+      <p id="p-00003-en" num="0003">Currently, lead systems are under development with more, smaller electrodes in a technology based on thin film manufacturing. These leads will have multiple electrode areas and will enhance the precision to address the appropriate target in the brain and relax the specification of positioning. Meanwhile, undesired side effects due to undesired stimulation of neighbouring areas can be minimized.</p>
+      <p id="p-00004-en" num="0004">Probes that are based on thin film manufacturing are disclosed e.g. by US 2008/0255439 A1 and have been used in research products in animal studies.</p>
+      <p id="p-00005-en" num="0005">These novel systems consist of a lead made from a thin film based on thin technology. The thin films are assembled on a core material with a cylindrical shape to form a lead. Such a probe is disclosed by US 2007/0123765 A1, which is showing a modular multichannel microelectrode array and methods of making the same.</p>
+      <p id="p-00006-en" num="0006">As the thin film wires and traces for the lead are relatively thin and long in these leads, the electrical resistance gives rise to substantial differences between the driving voltage at the current source and the driving voltage at the distal end. The current pulse can be well controlled though and as such, the potential at the distal-end is kept within safe limits. However, there is no active voltage control of the potential at the distal end of the lead. For therapeutic applications that require potential control at the distal end, active voltage monitoring at the distal end is required. For safety reasons voltage monitoring can be beneficial too. Sensing near the electrode can be also beneficial to create an active feedback loop to compensate for pulse to pulse variation between various drivers in the electronic circuit.</p>
+      <p id="p-00007-en" num="0007">It is therefore an object of the present invention to provide a lead for brain applications and a deep brain stimulation system having improved properties, in particular that a voltage monitoring at the distal end of a probe of a brain stimulation system can be conducted.</p>
+      <p id="p-00008-en" num="0008">The above object is solved according to the present invention by a lead for brain applications with the features of claim <b>1</b>. Accordingly, a lead for brain applications comprises at least one distal section and at least one electrode, whereby the at least one electrode is arranged in the distal section and whereby the at least one electrode is connected directly and/or indirectly with at least one first connecting trace and at least one second connecting trace.</p>
+      <p id="p-00009-en" num="0009">The at least one electrode may be connected directly and/or indirectly in close vicinity of the electrode area with at least one first connecting trace and at least one second connecting trace.</p>
+      <p id="p-00010-en" num="0010">The lead may be a component of a Deep Brain Stimulation probe. The electrodes can be connected to electronic means to provide the pulses and measure signals at the proximal end of such a DBS probe, whereby the electronic means are arranged outside of the brain. Alternatively, the electronic means can be integrated into the probe, in close vicinity of the distal end of the probe and thus the electronic means are arranged inside of the brain.</p>
+      <p id="p-00011-en" num="0011">Thereby, the advantage may be achieved that one connecting trace can be used for e.g. power supply and one connecting trace can be used for e.g. voltage monitoring. The lead for brain applications can be a lead having a thin film based probe design. The brain applications can be e.g. deep brain stimulation (DBS). Thus, especially the further advantage may be achieved that e.g. voltage monitoring at the distal end at the location of the stimulation electrode is enabled.</p>
+      <p id="p-00012-en" num="0012">Additionally, it is possible that the first connecting trace is configured such that electrical power can be supplied to the electrode.</p>
+      <p id="p-00013-en" num="0013">Preferably, it is possible that the second connecting trace is configured such that a voltage monitoring of the electrode can be conducted.</p>
+      <p id="p-00014-en" num="0014">In a further preferable embodiment it is possible that the first connecting trace and the second connecting trace are directly connected to the electrode, whereby preferably the first connecting trace and the second connecting trace are directly connected from the proximal end of the lead to the electrode.</p>
+      <p id="p-00015-en" num="0015">Further preferably, it is possible that the first connecting trace is directly connected to the electrode and the second connecting trace is indirectly connected to the electrode.</p>
+      <p id="p-00016-en" num="0016">Especially, the second connecting trace may be connected to the first connecting trace at a connecting point, which is arranged adjacent to the electrode. In particular, the second connecting trace does not necessarily need a connection to the electrode area itself. A design with connection in proximity of the electrode can be used also, which is e.g. preferred when several electrodes are to be arranged with high density.</p>
+      <p id="p-00017-en" num="0017">The lead may comprise a plurality of electrodes. E.g., several electrodes or all electrodes can be configured such that the electrodes are capable of providing electrical stimulation to the tissue and each of the electrodes is capable of detecting electrical signals. Thereby, the advantage is achieved that a tailor-made stimulation can be conducted by the probe which is equipped with a plurality of electrodes and that thereby the brain tissue to be stimulated can be stimulated with high accuracy. Additionally, the advantage is achieved that also electrical signals can be determined and that this determination process can be done with high accuracy. The electrodes may be arranged in a predetermined geometrical manner forming an array on the probe and that the probe may be implanted at a certain position in a target area of the brain. Due to the fact that the electrodes are arranged in a predetermined geometrical manner a correlation of signals received from the target region and the arrangement of the electrodes can be generated and the necessary electrodes for an optimal neurostimulation treatment can be selected. Advantageously, the target area may then be stimulated with high accuracy, since the array electrodes allows a precise and specific stimulation of the target area.</p>
+      <p id="p-00018-en" num="0018">Preferably, it is possible that the lead is a lead with a thin film and/or whereby the first connecting trace and the second connecting trace are a thin film structure and/or are a part of a thin film structure. Common thin film technologies may be used to manufacture the thin film for the lead, e.g. chemical deposition methods like plating, chemical vapour deposition (CVD) or chemical solution deposition (C SD) etc., physical deposition methods like sputtering, pulsed laser deposition, cathodic arc deposition or electrohydrodynamic deposition etc. or other deposition methods like molecular beam epitaxy (MBE) or topotaxy etc. These methods may be used, in combination with thin film structuring methods, such as photolithography and etching.</p>
+      <p id="p-00019-en" num="0019">Further preferably, the thin film structure may comprise and/or may be connectable to at least one controlling means, whereby the controlling means is configured such that a voltage monitoring can be conducted in connection with the second connecting trace.</p>
+      <p id="p-00020-en" num="0020">Additionally, it is possible that the first connecting traces are arranged in a separate first level and that the second connecting traces are arranged in a separate second level of the thin film structure. It is possible that the traces are embedded in a biocompatible polymer, which can e.g. parylene.</p>
+      <p id="p-00021-en" num="0021">In a further preferred embodiment it is possible that the level of the first connecting traces has a first thickness and that the level of the second connecting traces has a second thickness, whereby the thickness of the level of the first connecting traces is thicker than the thickness of level of the second connecting traces. In particular, it is not necessary that the traces have to be manufactured next to each other. The second connecting traces can be manufactured in a separate metal layer or a separate layer level. The metal in the level that is used for the voltage sensing traces can be chosen relatively thin, because the resistivity of the track can be relatively high, especially due to the fact that the second connecting traces may be used for the voltage monitoring only. Voltage monitoring will not be compromised by high resistance in the track as it can be performed with high impedance measuring systems.</p>
+      <p id="p-00022-en" num="0022">Furthermore, the present invention relates to a deep brain stimulation system with the features of claim <b>11</b>. Accordingly, a deep brain stimulation system comprises at least one lead according to any of claims <b>1</b> to <b>10</b>.</p>
+      <p id="p-00023-en" num="0023">Preferably, in a possible embodiment of the deep brain stimulation system the deep brain stimulation system comprises at least one controlling means and/or is connectable to at least one controlling means, whereby the controlling means is configured such that a voltage monitoring can be conducted in connection with the second connecting trace. Advantageously, voltage monitoring can be used to enhance the safety of a DBS system.</p>
+      <p id="p-00024-en" num="0024">It is furthermore possible that the controlling means is configured such that the current, especially the electrical power supplied by the first connecting trace, can be switched off or limited when a safety compliance limit is reached.</p>
+      <p id="p-00025-en" num="0025">Additionally, it is possible that the controlling means is configured such that the voltage applied to the at least one electrode can be determined and controlled and/or that the controlling means is configured such that resistance differences in the first connecting traces and/or resistance differences in the second connecting traces can be electronically corrected. Also, differences in the electronic means respectively the electronic unit can be corrected for example.</p>
+      <p id="p-00026-en" num="0026">Further preferably, it is possible that the controlling means is configured such that changes of the at least one electrode in the brain after implantation can be measured and that the driving of the electrode can be adjusted accordingly.</p>
+    </summary>
+    <description-of-drawings>
+      <p id="p-00027-en" num="0027">Further details and advantages of the present invention shall be described hereinafter with respect to the drawings:</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 1</figref>: a schematical drawing of a neurostimulation system for deep brain stimulation (DBS);</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 2</figref>: a further schematical drawing of a probe neurostimulation system for deep brain stimulation (DBS) and its components;</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 3</figref>: a schematical drawing of a probe system according to the present invention;</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 4</figref>: a schematical drawing of electrodes of a lead of a neurostimulation system for deep brain stimulation (DBS);</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 5</figref>: a further schematical drawing of electrodes of a lead of a neurostimulation system for deep brain stimulation (DBS);</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 6</figref>: a further schematical drawing of electrodes of a lead of a neurostimulation system for deep brain stimulation (DBS) according to the present invention in a first embodiment;</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIG. 7</figref>: a further schematical drawing of electrodes of a lead of a neurostimulation system for deep brain stimulation (DBS) according to the present invention in a second embodiment;</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIG. 8</figref>: a further schematical drawing of electrodes of a lead of a neurostimulation system for deep brain stimulation (DBS) according to the present invention in a third embodiment; and</p>
+      <p id="p-00036-en" num="0036">
+        <figref>FIG. 9</figref>: a schematical drawing of the separate layers of the first and second connecting traces of a thin film for a lead according to the present invention.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <p id="p-00037-en" num="0037">A possible embodiment of a neurostimulation system <b>100</b> for deep brain stimulation (DBS) is shown in <figref>FIG. 1</figref>. The neurostimulation system <b>100</b> comprises at least a controller <b>110</b> that may be surgically implanted in the chest region of a patient <b>1</b>, typically below the clavicle or in the abdominal region of a patient <b>1</b>. The controller <b>110</b> can be adapted to supply the necessary voltage pulses. The typical DBS system <b>100</b> may further include an extension wire <b>120</b> connected to the controller <b>110</b> and running subcutaneously to the skull, preferably along the neck, where it terminates in a connector. A DBS lead arrangement <b>130</b> may be implanted in the brain tissue, e.g. through a burr-hole in the skull.</p>
+      <p id="p-00038-en" num="0038">
+        <figref>FIG. 2</figref> further illustrates a typical architecture for a Deep Brain Stimulation probe <b>130</b> that comprises a DBS lead <b>300</b> and an Advanced Lead Connector element <b>11</b> comprising electronic means to address electrodes <b>132</b> on the distal end <b>304</b> of the DBS lead <b>300</b>. The lead <b>300</b> comprises a carrier <b>302</b> for a thin film <b>301</b>, said carrier <b>302</b> providing the mechanical configuration of the DBS lead <b>300</b> and the thin film <b>301</b>. The thin film <b>301</b> may include at least one electrically conductive layer, preferably made of a biocompatible material. The thin film <b>301</b> is assembled to the carrier <b>302</b> and further processed to constitute the lead element <b>300</b>. The thin film <b>301</b> for a lead is preferably formed by a thin film product having a distal end <b>304</b>, a cable <b>303</b> with metal tracks and a proximal end <b>310</b>. The proximal end <b>310</b> of the thin film <b>301</b> on the lead <b>300</b> is electrically connected to the Advanced Lead Connector element <b>11</b>. The Advanced Lead Connector element <b>11</b> comprises the switch matrix of the DBS steering electronics. The distal end <b>304</b> comprises the electrodes <b>132</b> for the brain stimulation. The proximal end <b>310</b> comprises the interconnect contacts <b>305</b> for each metal line in the cable <b>303</b>. The cable <b>303</b> comprises of metal lines (not shown) to connect each distal electrodes <b>132</b> to a designated proximal contact <b>305</b>.</p>
+      <p id="p-00039-en" num="0039">
+        <figref>FIG. 3</figref> shows schematically and in greater detail an embodiment of a system <b>100</b> for brain applications, here for neurostimulation and/or neurorecording as a deep brain stimulation system <b>100</b> as shown in <figref>FIGS. 1 and 2</figref>. The probe system <b>100</b> comprises at least one probe <b>130</b> for brain applications with stimulation and/or recording electrodes <b>132</b>, whereby e.g. 64 electrodes <b>132</b> can be provided on outer body surface at the distal end of the probe <b>130</b>. By means of the extension wire <b>120</b> pulses P supplied by controller <b>110</b> can be transmitted to the Advanced Lead Connector <b>11</b>. The controller <b>110</b> can be an implantable pulse generator (IPG) <b>110</b>.</p>
+      <p id="p-00040-en" num="0040">
+        <figref>FIG. 4</figref> shows a schematical drawing of electrodes on a thin film for a lead of a neurostimulation system for deep brain stimulation (DBS). In such a conventional thin film for a lead design, the distal end electrodes that will be positioned in the brain are connected to electronics outside of the brain. A representation of the distal end of the probe carrying the electrodes <b>132</b>′ is given in <figref>FIG. 1</figref>. Each electrode has one separate trace connection <b>135</b>′. The traces <b>132</b>′ lead to the connectors <b>133</b>′ in the proximal end, which is shown in <figref>FIGS. 4 and 5</figref>. Due to the fact that the traces <b>132</b>′ are relatively long and the films are thin, the resistance in the track can be quite high and can range up to several kOhm depending on the length, track width and technology.</p>
+      <p id="p-00041-en" num="0041">According to the present invention, the probe <b>130</b> for brain applications as shown in <figref>FIGS. 1 and 2</figref>, comprises at least one distal section and several electrodes <b>132</b>, whereby the electrodes <b>132</b> are arranged in the distal section and whereby the electrodes <b>132</b> may be connected directly with first connecting traces <b>135</b> and second connecting traces <b>137</b>, likewise the embodiment shown in <figref>FIG. 6</figref>.</p>
+      <p id="p-00042-en" num="0042">Each electrode <b>132</b> has a first connecting trace <b>135</b> and a second connecting trace <b>137</b>. Each first connecting trace <b>135</b> is used for providing current respectively electrical power to the respective electrode <b>132</b>. Each second connecting trace <b>137</b> is used for measuring the voltage, i.e. voltage monitoring and status check of the respective electrode <b>132</b>.</p>
+      <p id="p-00043-en" num="0043">Voltage monitoring can be used to enhance the safety of a DBS system. The electronics can be programmed to switch off the current when a safety compliance limit is reached. Voltage monitoring enables active voltage control that can be used to control voltage of the electrodes <b>132</b> rather than current. This enables novel therapeutic use of the electrodes <b>132</b>.</p>
+      <p id="p-00044-en" num="0044">Voltage monitoring can be applied to electronically correct for resistance differences e.g. in the traces <b>135</b>. It can be part of a charge balancing control system. Furthermore, it can be applied as input for a background diagnostic system. The extra monitoring facilitates the development of an enhanced current steering control mechanism.</p>
+      <p id="p-00045-en" num="0045">The traces <b>137</b> to measure the voltage can be very narrow, i.e. high ohmic. By using voltage sensing the line does not carry any current during (high impedance) voltage measurement. As result of this, area use on the thin film can be small.</p>
+      <p id="p-00046-en" num="0046">It is beneficial for the device to avoid routing of electrode connection track and the voltage monitoring track in close vicinity (e.g. neighbouring tracks). This limits the cross-stalk as a result of capacitive coupling.</p>
+      <p id="p-00047-en" num="0047">Next to the traces <b>135</b> for the electrode powering, (voltage) probe lines <b>137</b> are designed in the lay-out. A separate trace <b>137</b> can be designed next to each power line trace <b>135</b>. Alternative routings can be also applied, e.g. such as voltage line traces <b>137</b> next to each other (see <figref>FIG. 8</figref>).</p>
+      <p id="p-00048-en" num="0048">The electrical connection of the electrodes <b>132</b> of the distal ends with two separate traces can be used to monitor the electrode by probing the voltage of the electrode with the second trace, e.g. as in a four point probe measurement. Voltage monitoring can be used to enhance the safety of a DBS system <b>100</b>. The electronics, i.e. the controller <b>200</b> can be programmed to switch off or limit the current when a safety compliance limit is reached.</p>
+      <p id="p-00049-en" num="0049">Voltage monitoring enables active voltage control that can be used to control voltage of the electrodes <b>132</b> rather than current. This enables novel therapeutic use of the electrodes <b>132</b>. Voltage monitoring can be applied to electronically correct for resistance differences in the traces <b>135</b>. Moreover, voltage control can be used to measure the changes of the electrodes <b>132</b> in the brain after implantation and adjust the driving accordingly.</p>
+      <p id="p-00050-en" num="0050">The second connecting trace <b>137</b> does not necessarily have to connect to the electrode area itself. A design with connection in proximity of the electrodes <b>132</b> can be used too, as shown in the embodiment of <figref>FIG. 6</figref>. According to this embodiment, the first connecting traces <b>135</b> are directly connected to the electrodes <b>132</b> and the second connecting traces <b>137</b> are indirectly connected to the electrodes <b>132</b>.</p>
+      <p id="p-00051-en" num="0051">Each second connecting trace <b>137</b> is connected to the respective first connecting trace <b>135</b> at a connecting point <b>139</b>, which is arranged adjacent to the respective electrode <b>132</b>.</p>
+      <p id="p-00052-en" num="0052">The deep brain stimulation system <b>100</b> may be connectable to at least one controlling means <b>200</b> (see e.g. <figref>FIGS. 6</figref>, <b>7</b> and <b>8</b>), which may be arranged outside of the brain, e.g. within the associated controller <b>110</b> (see <figref>FIG. 1</figref>). The controlling means <b>200</b> may be configured such that a voltage monitoring can be conducted in connection with the second connecting trace <b>137</b>.</p>
+      <p id="p-00053-en" num="0053">In particular, the controlling means <b>200</b> is configured such that the current, especially the electrical power supplied by the first connecting trace <b>135</b>, can be switched off or limited when a safety compliance limit is reached.</p>
+      <p id="p-00054-en" num="0054">Furthermore, the controlling means <b>200</b> is configured such that the voltage applied to the at least one electrode <b>132</b> can be determined and controlled and/or that the controlling means <b>200</b> is configured such that resistance differences in the first connecting traces <b>135</b> and/or resistance differences in the second connecting traces <b>137</b> can be electronically corrected.</p>
+      <p id="p-00055-en" num="0055">Additionally, the controlling means <b>200</b> is configured such that changes of the at least one electrode <b>132</b> in the brain after acute implantation can be measured and that the driving of the electrode <b>132</b> can be adjusted accordingly.</p>
+      <p id="p-00056-en" num="0056">Though the embodiments shown in <figref>FIGS. 6 and 7</figref> relating to application of thin film in neuro-probe applications having electronic means, i.e. the controlling means <b>200</b> outside of the brain, an integration of the electronic means, i.e. the controlling means <b>200</b>, on the thin film is also a possible option, as shown in <figref>FIG. 8</figref>.</p>
+      <p id="p-00057-en" num="0057">The controlling means <b>200</b> of the embodiments shown in <figref>FIGS. 6</figref>, <b>7</b> and <b>8</b> comprise at least the same functional features as outlined above. However, functional features can be separated as well between electronic means inside the brain, integrated in the lead near the distal end and electronic means positioned outside of the brain. For instance, voltage measurement can be integrated in the lead and pulse generation is done outside of the brain. Both parts of the electronic means may communicate through (extra) electrical traces on the lead.</p>
+      <p id="p-00058-en" num="0058">Furthermore, the traces do not necessarily have to be manufactured next to each other. The traces <b>135</b>, <b>137</b> can be manufactured in a separate metal plane metal, as shown in <figref>FIG. 9</figref>. The metal in the level that is used for the voltage sensing traces can be chosen relatively thin, because the resistivity of the track can be relatively high. The first connecting traces <b>135</b> are arranged in a separate first level L1 and that the second connecting traces <b>137</b> are arranged in a separate second level L2 of the thin film structure, which is preferably embedded into a biocompatible polymer such a parylene.</p>
+      <p id="p-00059-en" num="0059">The level of the first connecting traces <b>135</b> has a first thickness T<b>1</b> and the level of the second connecting traces <b>137</b> has a second thickness T<b>2</b>, whereby the thickness T<b>1</b> of the level of the first connecting traces <b>135</b> is thicker than the thickness T<b>2</b> of level of the second connecting traces <b>137</b>.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A lead for brain applications, comprising at least one distal section and at least one electrode, whereby the at least one electrode is arranged in the distal section and whereby the at least one electrode is connected directly and/or indirectly with at least one first connecting trace and at least one second connecting trace.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The lead according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the first connecting trace is configured such that electrical power is supplied to the at least one electrode.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The lead according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the second connecting trace is configured such that a voltage monitoring of the at least one electrode is conducted.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The lead according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the first connecting trace and the second connecting trace are directly connected to the at least one electrode.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The lead according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the first connecting trace is directly connected to the at least one electrode and the second connecting trace is indirectly connected to the at least one electrode.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The lead according to <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the second connecting trace is connected to the first connecting trace at a connecting point, which is arranged adjacent to the at least one electrode.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The lead according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the lead comprises a plurality of electrodes.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The lead according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the lead is a lead with a thin film and/or whereby the first connecting trace and the second connecting trace are a thin film structure and/or are a part of a thin film structure, whereby the thin film structure comprises and/or is connectable to at least one controlling means, whereby the controlling means is configured such that a voltage monitoring is conducted in connection with the second connecting trace.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The lead according to <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the first connecting traces are arranged in a separate first level and that the second connecting traces are arranged in a separate second level of the thin film structure.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The lead according to <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the first level of the first connecting traces has a first thickness and the second level of the second connecting traces has a second thickness, whereby the first thickness of the first level of the first connecting traces is thicker than the second thickness of the second level of the second connecting traces.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. A deep brain stimulation system comprising at least one lead according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The deep brain stimulation system according to <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the deep brain stimulation system comprises at least one controlling means and/or is connectable to at least one controlling means, whereby the controlling means is configured such that a voltage monitoring conducted in connection with the second connecting trace.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The deep brain stimulation system according to <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the controlling means is configured such that current is switched off or limited when a safety compliance limit is reached.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The deep brain stimulation system according to <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the controlling means is configured such that voltage applied to the at least one electrode is determined and controlled and/or that the controlling means is configured such that resistance differences in the first connecting traces and/or resistance differences in the second connecting traces are electronically corrected.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The deep brain stimulation system according to <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the controlling means is configured such that changes of the at least one electrode in a brain after acute implantation are measured and that the driving of the at least one electrode is adjusted accordingly.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The deep brain stimulation system according to <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the current comprises electrical power supplied by the first connecting trace. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150246218A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150246218A1-20150903-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150246218A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246218A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150246218A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246218A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150246218A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246218A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150246218A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246218A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150246218A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246218A1-20150903-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150246218A1_00007.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150246218A1-20150903-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150246218A1.PDF" type="pdf" size="559509" pages="10" />
+</lexisnexis-patent-document>

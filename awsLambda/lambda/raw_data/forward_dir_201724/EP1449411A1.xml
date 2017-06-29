@@ -1,0 +1,1309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2017 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20170309" file="EP1449411A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-changed="20170308" time-changed="101741">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="331172">
+        <country>EP</country>
+        <doc-number>1449411</doc-number>
+        <kind>A1</kind>
+        <date>20040825</date>
+      </document-id>
+      <document-id data-format="original">
+        <doc-number>1449411</doc-number>
+        <kind>A1</kind>
+      </document-id>
+      <document-id data-format="docdb">
+        <doc-number>1449411</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>EP1449411</doc-number>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id id="52605379">
+        <country>EP</country>
+        <doc-number>02785754</doc-number>
+        <kind>A</kind>
+        <date>20021129</date>
+      </document-id>
+      <document-id data-format="original">
+        <doc-number>02785754</doc-number>
+      </document-id>
+      <document-id data-format="docdb" id="15981512">
+        <doc-number>02785754</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>EP20020785754</doc-number>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20090317">
+      <priority-claim sequence="1" kind="national">
+        <country>IT</country>
+        <doc-number>2001PI0078</doc-number>
+        <date>20011129</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>IB</country>
+        <doc-number>0205004</doc-number>
+        <date>20021129</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>IT</country>
+        <doc-number>PI20010078</doc-number>
+        <date>20011129</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>IB2002005004</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>PI20010078</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>WO2002IB05004</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>IT2001PI00078</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20090317">
+      <gazette-reference>
+        <date>20040825</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20040825</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20040825</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20090317">
+      <request-for-examination>
+        <date>20040614</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classification-ipc date-changed="20130708">
+      <main-classification>
+        <text> 7H 05B  41/24   A</text>
+        <edition>7</edition>
+        <section>H</section>
+        <class>05</class>
+        <subclass>B</subclass>
+        <main-group>41</main-group>
+        <subgroup>24</subgroup>
+        <qualifying-character>A</qualifying-character>
+      </main-classification>
+      <further-classification sequence="1">
+        <text> 7H 01J  65/04   B</text>
+        <edition>7</edition>
+        <section>H</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>65</main-group>
+        <subgroup>04</subgroup>
+        <qualifying-character>B</qualifying-character>
+      </further-classification>
+    </classification-ipc>
+    <classifications-ipcr date-changed="20130708">
+      <classification-ipcr sequence="1">
+        <text>H01J  65/04        20060101A I20060722RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>65</main-group>
+        <subgroup>04</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20060722</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>H05B  41/24        20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>05</class>
+        <subclass>B</subclass>
+        <main-group>41</main-group>
+        <subgroup>24</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20130708">
+      <classification-cpc sequence="1">
+        <text>H05B  41/24        20130101  I20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>05</class>
+        <subclass>B</subclass>
+        <main-group>41</main-group>
+        <subgroup>24</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>H01J  65/044       20130101  I20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>65</main-group>
+        <subgroup>044</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <classifications-ecla date-changed="20130708">
+      <classification-ecla sequence="1" classification-scheme="EC" country="EP">
+        <text>H01J 65/04A1</text>
+        <section>H</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>65</main-group>
+        <subgroup>04</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">A  </additional-subgroup>
+          <additional-subgroup sequence="2">1  </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+      <classification-ecla sequence="2" classification-scheme="EC" country="EP">
+        <text>H05B 41/24</text>
+        <section>H</section>
+        <class>05</class>
+        <subclass>B</subclass>
+        <main-group>41</main-group>
+        <subgroup>24</subgroup>
+      </classification-ecla>
+    </classifications-ecla>
+    <invention-title id="title_ger" date-changed="20070504" lang="ger" format="original">METHODE UND APPARAT UM SICHTBARES LICHT IM UV UND IR BEREICH MIT EINER ELEKTRODENLOSEN LAMPE ZU ERZEUGEN</invention-title>
+    <invention-title id="title_eng" date-changed="20070504" lang="eng" format="original">METHOD FOR THE PRODUCTION OF A VISIBLE; UV OR IR RADIATION WITH A LAMP WITHOUT ELECTRODES; AND LAMP THAT CARRIES OUT THIS METHOD</invention-title>
+    <invention-title id="title_fre" date-changed="20070504" lang="fre" format="original">PROCEDE DE PRODUCTION D'UN RAYONNEMENT VISIBLE, ULTRAVIOLET OU INFRAROUGE AU MOYEN D'UNE LAMPE SANS ELECTRODES, ET LAMPE ASSOCIEE</invention-title>
+    <references-cited date-changed="20121205">
+      <patent-citations name="patcit" date-changed="20121205" />
+      <non-patent-citations name="nplcit" date-changed="20090317" />
+      <citation srep-phase="2">
+        <patcit num="1" dnum="JP10015040A" dnum-type="publication number">
+          <document-id>
+            <country>JP</country>
+            <doc-number>10015040</doc-number>
+            <kind>A</kind>
+            <date>19980120</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>JP</country>
+            <doc-number>10015040</doc-number>
+            <kind>A</kind>
+            <date>19980120</date>
+          </document-id>
+          <application-date>
+            <date>19960702</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="2">
+        <nplcit num="1">
+          <text>PATENT ABSTRACTS OF JAPAN  A</text>
+        </nplcit>
+      </citation>
+      <citation srep-phase="2">
+        <nplcit num="2">
+          <text>See also references of WO    03047318A1</text>
+        </nplcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20061018">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>CNR Consiglio Nazionale Delle Ricerche </orgname>
+            <address>
+              <address-1>Piazzale Aldo Moro, 7</address-1>
+              <city>00185 Roma</city>
+              <country>IT</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>LONGO, Iginio </name>
+            <address>
+              <address-1>Largo Duca D'Aosta, 11</address-1>
+              <city>I-56123 Pisa</city>
+              <country>IT</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Celestino, Marco </name>
+            <address>
+              <address-1>ABM, Agenzia Brevetti &amp; Marchi, Viale Giovanni Pisano, 31</address-1>
+              <city>56123 Pisa</city>
+              <country>IT</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20061018">
+      <designation-epc>
+        <contracting-states>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>IE</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LU</country>
+          <country>MC</country>
+          <country>NL</country>
+          <country>PT</country>
+          <country>SE</country>
+          <country>SK</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>AL</country>
+          <country>LT</country>
+          <country>LV</country>
+          <country>MK</country>
+          <country>RO</country>
+          <country>SI</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>IB02005004</doc-number>
+        <date>20021129</date>
+      </document-id>
+      <document-id data-format="original">
+        <country>WO</country>
+        <doc-number>IB0205004</doc-number>
+        <date>20021129</date>
+      </document-id>
+      <document-id data-format="original">
+        <country>WO</country>
+        <doc-number>IB0205004</doc-number>
+        <date>20021129</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>03047318</doc-number>
+        <date>20030605</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20090420">
+      <main-family family-id="675418">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>7095163</doc-number>
+            <kind>B2</kind>
+            <date>20060822</date>
+          </document-id>
+          <application-date>
+            <date>20040601</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20050067976</doc-number>
+            <kind>A1</kind>
+            <date>20050331</date>
+          </document-id>
+          <application-date>
+            <date>20021129</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>60220086</doc-number>
+            <kind>T2</kind>
+            <date>20080110</date>
+          </document-id>
+          <application-date>
+            <date>20021129</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1449411</doc-number>
+            <kind>A1</kind>
+            <date>20040825</date>
+          </document-id>
+          <application-date>
+            <date>20021129</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1449411</doc-number>
+            <kind>B1</kind>
+            <date>20070509</date>
+          </document-id>
+          <application-date>
+            <date>20021129</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IT</country>
+            <doc-number>PI20010078</doc-number>
+            <kind>A1</kind>
+            <date>20030529</date>
+          </document-id>
+          <application-date>
+            <date>20011129</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AT</country>
+            <doc-number>362303</doc-number>
+            <kind>T</kind>
+            <date>20070615</date>
+          </document-id>
+          <application-date>
+            <date>20021129</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2002354220</doc-number>
+            <kind>A1</kind>
+            <date>20030610</date>
+          </document-id>
+          <application-date>
+            <date>20021129</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>60220086</doc-number>
+            <kind>D1</kind>
+            <date>20070621</date>
+          </document-id>
+          <application-date>
+            <date>20021129</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>03047318</doc-number>
+            <kind>A1</kind>
+            <date>20030605</date>
+          </document-id>
+          <application-date>
+            <date>20021129</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="309334">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>7095163</doc-number>
+            <kind>B2</kind>
+            <date>20060822</date>
+          </document-id>
+          <application-date>
+            <date>20040601</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20050067976</doc-number>
+            <kind>A1</kind>
+            <date>20050331</date>
+          </document-id>
+          <application-date>
+            <date>20021129</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>60220086</doc-number>
+            <kind>T2</kind>
+            <date>20080110</date>
+          </document-id>
+          <application-date>
+            <date>20021129</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1449411</doc-number>
+            <kind>A1</kind>
+            <date>20040825</date>
+          </document-id>
+          <application-date>
+            <date>20021129</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1449411</doc-number>
+            <kind>B1</kind>
+            <date>20070509</date>
+          </document-id>
+          <application-date>
+            <date>20021129</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IT</country>
+            <doc-number>PI20010078</doc-number>
+            <kind>A1</kind>
+            <date>20030529</date>
+          </document-id>
+          <application-date>
+            <date>20011129</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AT</country>
+            <doc-number>362303</doc-number>
+            <kind>T</kind>
+            <date>20070615</date>
+          </document-id>
+          <application-date>
+            <date>20021129</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2002354220</doc-number>
+            <kind>A1</kind>
+            <date>20030610</date>
+          </document-id>
+          <application-date>
+            <date>20021129</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>60220086</doc-number>
+            <kind>D1</kind>
+            <date>20070621</date>
+          </document-id>
+          <application-date>
+            <date>20021129</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>03047318</doc-number>
+            <kind>A1</kind>
+            <date>20030605</date>
+          </document-id>
+          <application-date>
+            <date>20021129</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20121205" lang="eng" format="equivalent" country="US" doc-number="7095163" kind="B2">
+    <p>A lamp capable of emitting electromagnetic radiation ( 9 ), for example visible, IR or UV radiation, exploiting the activation of substances ( 4 ) triggered with an antenna ( 6 ) irradiating microwaves ( 8 ) located inside and insulated, in focal position. Advantageously, the substances ( 4 ) are put into a chamber ( 3 ) obtained by introduction of a first bulb ( 1 ) in a second bulb, in order to form the chamber ( 3 ) closed between the walls of the first ( 1 ) and of the second bulb ( 2 ), the walls of the first bulb defining the recess ( 5 ) which houses the antenna ( 6 ). A better energy efficiency and a better economy is obtained with respect to the conventional techniques which require introduction of the lamp in a metal vessel crossed by microwaves, or under external microwaves beams. It belongs to the category of lamps without electrodes, because the atoms or the other particles that emit the radiation ( 8 ) are neither in contact with the antenna nor with other metal parts. It characterized by a high duration and by the possibility of emitting radiation of modulated wavelength in continuous or pulsed way.</p>
+  </abstract>
+  <abstract id="abstr_fre" date-changed="20121205" lang="fre" format="original">
+    <p>L'invention concerne une lampe permettant d'émettre un rayonnement électromagnétique (9), par exemple, un rayonnement visible, infrarouge ou ultraviolet, d'exploiter l'activation de substances (4) déclenchée avec une antenne (6) irradiant des micro-ondes (8), lesdites substances se trouvant à l'intérieur de la lampe et étant isolées, en position focale. De manière avantageuse, les substances (4) sont mises dans une chambre obtenue par l'introduction d'une première ampoule (1) dans une seconde ampoule, en vue de constituer la chambre (3) fermée entre les parois des première (1) et seconde (2) ampoules, lesdites parois de la première ampoule formant l'évidement (5) qui loge l'antenne (6). Cette lampe permet d'obtenir une meilleure efficacité et de faire des économies, en comparaison avec les techniques traditionnelles qui requièrent l'introduction de la lampe dans un récipient métallique traversé par des micro-ondes ou placé sous des faisceaux de micro-ondes externes. La lampe susmentionnée fait partie de la catégorie des lampes exemptes d'électrodes, étant donné que les atomes ou les autres particules émettant le rayonnement (8) ne sont pas en contact avec l'antenne, ni avec d'autres parties métalliques. Ladite lampe est caractérisée par une durée de vie élevée et par la possibilité d'émettre des rayonnements de longueur d'onde modulée, de manière continue ou pulsée.</p>
+  </abstract>
+  <legal-data date-changed="20170308">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20040825</date>
+      </publication-date>
+      <event-code-1>17P</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXAMINATION FILED</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <effective-date>
+        <date>20040614</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20040825</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <corresponding-kind>A1</corresponding-kind>
+      <legal-designated-states>
+        <country>AT</country>
+        <country>BE</country>
+        <country>BG</country>
+        <country>CH</country>
+        <country>CY</country>
+        <country>CZ</country>
+        <country>DE</country>
+        <country>DK</country>
+        <country>EE</country>
+        <country>ES</country>
+        <country>FI</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>GR</country>
+        <country>IE</country>
+        <country>IT</country>
+        <country>LI</country>
+        <country>LU</country>
+        <country>MC</country>
+        <country>NL</country>
+        <country>PT</country>
+        <country>SE</country>
+        <country>SK</country>
+        <country>TR</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20040825</date>
+      </publication-date>
+      <event-code-1>AX</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXTENSION OF THE EUROPEAN PATENT TO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <countries-concerned>
+        <country>AL</country>
+        <country>LT</country>
+        <country>LV</country>
+        <country>MK</country>
+        <country>RO</country>
+        <country>SI</country>
+      </countries-concerned>
+    </legal-event>
+    <legal-event sequence="4">
+      <publication-date>
+        <date>20050427</date>
+      </publication-date>
+      <event-code-1>17Q</event-code-1>
+      <effect>+</effect>
+      <legal-description>FIRST EXAMINATION REPORT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <effective-date>
+        <date>20050310</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="5">
+      <publication-date>
+        <date>20070509</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <corresponding-kind>B1</corresponding-kind>
+      <legal-designated-states>
+        <country>AT</country>
+        <country>BE</country>
+        <country>BG</country>
+        <country>CH</country>
+        <country>CY</country>
+        <country>CZ</country>
+        <country>DE</country>
+        <country>DK</country>
+        <country>EE</country>
+        <country>ES</country>
+        <country>FI</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>GR</country>
+        <country>IE</country>
+        <country>IT</country>
+        <country>LI</country>
+        <country>LU</country>
+        <country>MC</country>
+        <country>NL</country>
+        <country>PT</country>
+        <country>SE</country>
+        <country>SK</country>
+        <country>TR</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="6">
+      <publication-date>
+        <date>20070509</date>
+      </publication-date>
+      <event-code-1>AX</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXTENSION OF THE EUROPEAN PATENT TO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <countries-concerned>
+        <country>RO</country>
+        <country>SI</country>
+      </countries-concerned>
+    </legal-event>
+    <legal-event sequence="7">
+      <publication-date>
+        <date>20070509</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>CH</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20070509</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="8">
+      <publication-date>
+        <date>20070509</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>LI</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20070509</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="9">
+      <publication-date>
+        <date>20070509</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>FI</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20070509</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="10">
+      <publication-date>
+        <date>20070509</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>GB</country>
+      </designated-state-authority>
+      <designated-state-event-code>FG4D</designated-state-event-code>
+      <designated-state-description>EUROPEAN PATENT GRANTED</designated-state-description>
+    </legal-event>
+    <legal-event sequence="11">
+      <publication-date>
+        <date>20070531</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>CH</country>
+      </designated-state-authority>
+      <designated-state-event-code>EP</designated-state-event-code>
+      <designated-state-description>ENTRY IN THE NATIONAL PHASE</designated-state-description>
+    </legal-event>
+    <legal-event sequence="12">
+      <publication-date>
+        <date>20070613</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>IE</country>
+      </designated-state-authority>
+      <designated-state-event-code>FG4D</designated-state-event-code>
+      <designated-state-description>EUROPEAN PATENTS GRANTED DESIGNATING IRELAND</designated-state-description>
+    </legal-event>
+    <legal-event sequence="13">
+      <publication-date>
+        <date>20070621</date>
+      </publication-date>
+      <event-code-1>REF</event-code-1>
+      <legal-description>CORRESPONDS TO:</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>EP</country>
+      </designated-state-authority>
+      <corresponding-publication-number>60220086</corresponding-publication-number>
+      <corresponding-authority>
+        <country>DE</country>
+      </corresponding-authority>
+      <corresponding-publication-date>
+        <date>20070621</date>
+      </corresponding-publication-date>
+      <corresponding-kind>P</corresponding-kind>
+    </legal-event>
+    <legal-event sequence="14">
+      <publication-date>
+        <date>20070809</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>SE</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20070809</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="15">
+      <publication-date>
+        <date>20070820</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>ES</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20070820</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="16">
+      <publication-date>
+        <date>20071101</date>
+      </publication-date>
+      <event-code-1>NLV1</event-code-1>
+      <effect>-</effect>
+      <legal-description>NL: LAPSED OR ANNULLED DUE TO FAILURE TO FULFILL THE REQUIREMENTS OF ART. 29P AND 29M OF THE PATENTS ACT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+    </legal-event>
+    <legal-event sequence="17">
+      <publication-date>
+        <date>20071109</date>
+      </publication-date>
+      <event-code-1>ET</event-code-1>
+      <effect>+</effect>
+      <legal-description>FR: TRANSLATION FILED</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+    </legal-event>
+    <legal-event sequence="18">
+      <publication-date>
+        <date>20071115</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>CH</country>
+      </designated-state-authority>
+      <designated-state-event-code>PL</designated-state-event-code>
+      <designated-state-description>PATENT CEASED</designated-state-description>
+    </legal-event>
+    <legal-event sequence="19">
+      <publication-date>
+        <date>20071124</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>AT</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20070509</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="20">
+      <publication-date>
+        <date>20080102</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>BE</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20070509</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="21">
+      <publication-date>
+        <date>20080131</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>DK</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20070509</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="22">
+      <publication-date>
+        <date>20080131</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>BG</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20070809</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="23">
+      <publication-date>
+        <date>20080131</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>NL</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20070509</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="24">
+      <publication-date>
+        <date>20080131</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>CZ</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20070509</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="25">
+      <publication-date>
+        <date>20080131</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>PT</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20071009</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="26">
+      <publication-date>
+        <date>20080229</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>SK</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20070509</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="27">
+      <publication-date>
+        <date>20080416</date>
+      </publication-date>
+      <event-code-1>26N</event-code-1>
+      <effect>+</effect>
+      <legal-description>NO OPPOSITION FILED</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <effective-date>
+        <date>20080212</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="28">
+      <publication-date>
+        <date>20080430</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>GR</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20070810</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="29">
+      <publication-date>
+        <date>20080630</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>MC</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES</free-text-description>
+      <effective-date>
+        <date>20071130</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="30">
+      <publication-date>
+        <date>20081031</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>IE</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES</free-text-description>
+      <effective-date>
+        <date>20071129</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="31">
+      <publication-date>
+        <date>20090130</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>EE</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20070509</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="32">
+      <publication-date>
+        <date>20090731</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>CY</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20070509</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="33">
+      <publication-date>
+        <date>20090831</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>LU</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES</free-text-description>
+      <effective-date>
+        <date>20071129</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="34">
+      <publication-date>
+        <date>20090930</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>TR</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20070509</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="35">
+      <publication-date>
+        <date>20151125</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>FR</country>
+      </designated-state-authority>
+      <designated-state-event-code>PLFP</designated-state-event-code>
+      <designated-state-description>FEE PAYMENT</designated-state-description>
+      <fee-payment-year>14</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="36">
+      <publication-date>
+        <date>20161122</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>FR</country>
+      </designated-state-authority>
+      <designated-state-event-code>PLFP</designated-state-event-code>
+      <designated-state-description>FEE PAYMENT</designated-state-description>
+      <fee-payment-year>15</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="37">
+      <publication-date>
+        <date>20170131</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>DE</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20161129</date>
+      </payment-date>
+      <fee-payment-year>15</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="38">
+      <publication-date>
+        <date>20170131</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>FR</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20161122</date>
+      </payment-date>
+      <fee-payment-year>15</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="39">
+      <publication-date>
+        <date>20170131</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>GB</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20161109</date>
+      </payment-date>
+      <fee-payment-year>15</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="40">
+      <publication-date>
+        <date>20170228</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     1449411A1</docdb-publication-number>
+      <docdb-application-id>15981512</docdb-application-id>
+      <designated-state-authority>
+        <country>IT</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20161128</date>
+      </payment-date>
+      <fee-payment-year>15</fee-payment-year>
+    </legal-event>
+  </legal-data>
+</lexisnexis-patent-document>

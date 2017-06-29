@@ -1,0 +1,1713 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247204A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021515" date-changed="20150918" time-changed="025323">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140318">
+        <country>US</country>
+        <doc-number>20150247204</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14616297</doc-number>
+        <date>20150206</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>C12Q   1/68        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>1</main-group>
+        <subgroup>68</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>C12Q   1/6886      20130101 FI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>1</main-group>
+        <subgroup>6886</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C12Q   1/6809      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>1</main-group>
+        <subgroup>6809</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C12Q2600/112       20130101 LA20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>2600</main-group>
+        <subgroup>112</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C12Q2600/158       20130101 LA20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>2600</main-group>
+        <subgroup>158</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C12Q2600/16        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>2600</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">26</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">DIFFERENTIAL DIAGNOSIS OF HEPATIC NEOPLASMS</invention-title>
+    <related-documents date-changed="20150903">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>62080594</doc-number>
+          <date>20141117</date>
+        </document-id>
+      </provisional-application>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61937336</doc-number>
+          <date>20140207</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>The General Hopital Corporation</orgname>
+            <address>
+              <city>Boston</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+        <applicant sequence="2" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Affymetrix, Inc.</orgname>
+            <address>
+              <city>Santa Clara</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Deshpande</last-name>
+            <first-name>Vikram</first-name>
+            <address>
+              <city>Belmont</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Gandhi</last-name>
+            <first-name>Manoj</first-name>
+            <address>
+              <city>Dublin</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Nguyen</last-name>
+            <first-name>Quan</first-name>
+            <address>
+              <city>San Ramon</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>MA</last-name>
+            <first-name>Yunqing</first-name>
+            <address>
+              <city>San Jose</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Ting</last-name>
+            <first-name>David T.</first-name>
+            <address>
+              <city>Dover</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Rivera</last-name>
+            <first-name>Miguel</first-name>
+            <address>
+              <city>Cambridge</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173463434">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247204</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150206</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173463433">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247204</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150206</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Methods for making a differential diagnosis of hepatic neoplasms, e.g., tumors, and for identifying metastatic tumors of hepatic origin, based on detection of levels of albumin mRNA. The methods can also be used to select treatments or guide treatment decisions.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150828</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247204A1</docdb-publication-number>
+      <docdb-application-id>444210304</docdb-application-id>
+      <new-owner>AFFYMETRIX, INC., CALIFORNIA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:GANDHI, MANOJ;NGUYEN, QUAN;MA, YUNQING;SIGNING DATES FROM 20150727 TO 20150805;REEL/FRAME:036444/0935</free-text-description>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20150828</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247204A1</docdb-publication-number>
+      <docdb-application-id>444210304</docdb-application-id>
+      <new-owner>THE GENERAL HOSPITAL CORPORATION, MASSACHUSETTS</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:DESHPANDE, VIKRAM;TING, DAVID TSAI;RIVERA, MIGUEL;SIGNING DATES FROM 20150602 TO 20150605;REEL/FRAME:036452/0855</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CLAIM OF PRIORITY</heading>
+      <p id="p-00001-en" num="0001">This application claims the benefit of U.S. Provisional Patent Application Ser. Nos. 61/937,336, filed on Feb. 7, 2014, and 62/080,594, filed on Nov. 17, 2014. The entire contents of the foregoing are hereby incorporated by reference.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00002-en" num="0002">Described are methods for making a differential diagnosis of hepatic neoplasms, e.g., tumors, based on levels of albumin mRNA, and for identifying metastatic tumors of hepatic origin.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND</heading>
+      <p id="p-00003-en" num="0003">Hepatocellular carcinoma (HCC) is the third most common cause of cancer related mortality worldwide. The immunohistochemical diagnosis of poorly differentiated and undifferentiated hepatocellular carcinoma has traditionally been difficult because of a lack of a reliable marker of hepatocellular differentiation (Chan and Yeh, Clinics in Liver Disease 14, 687-703 (2010); Kakar et al., Arch Pathol Lab Med. 2007 November; 131(11): 1648-54). Alpha fetoprotein (AFP) and polyclonal carcinoembryonic antigen (CEA) were the first of many markers of hepatocellular differentiation that have emerged in the last four decades. However, sensitivity of these markers is low—AFP ranges from 30% to 50% and polyclonal CEA from 60% to 90% (Kakar et al., American Journal of Clinical Pathology 119, 361-366 (2003)). Background staining can make these markers difficult to interpret, and furthermore, these markers are more likely to be negative in poorly differentiated and undifferentiated carcinomas (Chan and Yeh, Clinics in Liver Disease 14, 687-703 (2010); Kakar et al., Arch Pathol Lab Med. 2007 November; 131(11):1648-54). Hep Par 1, a sensitive marker of hepatocellular differentiation represented a significant advance over the prior assays (Chan and Yeh, Clinics in Liver Disease 14, 687-703 (2010); Kakar et al., American Journal of Clinical Pathology 119, 361-366 (2003); Chu et al., Am J Surg Pathol 26, 978-988 (2002)). Furthermore, the bright granular cytoplasmic reactivity made interpretation relatively easy and thus it quickly emerged as definitive marker of hepatocellular differentiation. With its widespread usage two conspicuous failings emerged (Fan et al., Mod Pathol 16, 137-144 (2003)), as follows: 1. A significant percentage of gastric, esophageal and lung adenocarcinomas showed strong reactivity, a particularly troubling finding since these tumors frequently metastasize to the liver, 2. The sensitivity for poorly differentiated hepatocellular carcinomas was significantly lower than for well-differentiated tumors, thus limiting its diagnostic value.</p>
+      <p id="p-00004-en" num="0004">Cholangiocarcinomas (CCAs) are classified based on their anatomic location as follows: (1) intrahepatic cholangiocarcinoma (IHCC), (2) perihilar cholangiocarcinoma, or (3) distal cholangiocarcinoma (Whithaus et al., Arch Pathol Lab Med 136:155-162, 2012; Blechacz et al., Nat Rev Gastroenterol Hepatol 8:512-522,2011; Razumilava et al., Clin Gastroenterol Hepatol 11:13-21.e1-quiz e3-4, 2013). The latter two entities are often referred to as bile duct carcinoma (Razumilava et al., Clin Gastroenterol Hepatol 11:13-21.e1-quiz e3-4, 2013). Though they share some similarities, IHCC has different clinical behavior than bile duct cancer, and therefore, suggests distinguishing molecular features between these entities. IHCC is the second-most common primary liver cancer; its incidence has increased by 22% between 1979 and 2004 (Whithaus et al., Arch Pathol Lab Med 136:155-162, 2012; Blechacz et al., Nat Rev Gastroenterol Hepatol 8:512-522, 2011; Everhart et al., Gastroenterology 136:1134-1144, 2009). IHCC generally presents as a solitary, and less often multiple intrahepatic lesions (Khan et al., Gut 61:1657-1669, 2012; De Jong et al., Journal of Clinical Oncology 29:3140-3145,2011; Hong et al., Surgery 146:250-257, 2009). Only subtle histopathological differences exist between IHCC and metastatic adenocarcinoma to the liver, such that the majority of IHCCs cannot be distinguished from a metastatic adenocarcinoma to the liver with a high degree of certainty. Immunohistochemistry may assist in this distinction—e.g., reactivity for transcriptional factors such as TTF-1 support a metastatic pulmonary adenocarcinoma. Nevertheless, infidelity among these transcriptional factors is well recognized and the sensitivity of these assays is low (Whithaus et al., Arch Pathol Lab Med 136:155-162, 2012; Hainsworth et al., Journal of Clinical Oncology 31:217-223,2013). Pathologists often resort to evaluating keratin profiles: cholangiocarcinomas are typically positive for keratin 7, and keratin 19, and occasionally for keratin 20. Unfortunately, a majority of metastatic adenocarcinomas share this keratin 7+, keratin 19+ and keratin 20− profile, and in this scenario immunohistochemistry is seldom precisely diagnostic.</p>
+      <p id="p-00005-en" num="0005">With this inability to distinguish primary liver adenocarcinoma from a metastatic neoplasm, the current clinical paradigm demands an exhaustive evaluation to exclude a potential primary adenocarcinoma at other sites (Khan et al., Gut 61:1657-1669, 2012). These investigations often include various imaging studies (e.g., cervical pap smear, mammogram, computed tomography, magnetic resonance imaging, and positron emission tomography) as well as upper and lower endoscopic evaluation. Blood work is also not very helpful given the commonly used markers (i.e. CA19-9, CEA, and CA125) are not specific to IHCC. In patients with concurrent hepatic and non-hepatic disease, it is virtually impossible to exclude an IHCC. These workups could be costly and time-consuming leading to a delayed diagnosis and treatment with implications for eligibility for and stratification of clinical trials.</p>
+      <heading id="h-00004-en" level="1">SUMMARY</heading>
+      <p id="p-00006-en" num="0006">Malignant neoplasms in the liver can be either primary (originating within the liver) or metastatic (spread from other organs). Malignant primary liver neoplasms include tumors derived from hepatocytes, known as Hepatocellular Carcinoma (HCC); malignant tumors derived from the bile ducts within the liver, known as Intrahepatic Cholangiocarcinoma (IHCC); and bile duct adenomas (BDAs, also sometimes called peribiliary gland hamartomas), which is a benign tumor also of the bile duct. The liver is one of the most common sites of involvement in the metastatic spread of cancers. The most common primary sources are those of colon, breast, lung and pancreas, kidney, melanoma, leukemia and lymphoma.</p>
+      <p id="p-00007-en" num="0007">Primary and metastatic malignant neoplasms of the liver demonstrate a wide spectrum of histologic patterns. In many instances, it is difficult to distinguish malignant primary liver tumors from metastatic liver lesions using routine light microscopy. This distinction is important because patients with primary liver tumors are treated differently from patients with metastatic liver disease. Primary liver tumors are treated with surgical resection, liver transplantation or targeted therapy with tyrosine Kinase inhibitors. On the contrary, patients with metastatic liver disease are treated with palliative treatment or systemic chemotherapy.</p>
+      <p id="p-00008-en" num="0008">Albumin, a protein synthesized by hepatocytes, was first proposed as a marker of hepatocellular differentiation in the late 1980s (Kojior et al., Lab Invest 44, 221-226 (1981)). However, immunohistochemical detection of albumin in FFPE tissues has proved difficult primarily because of its ubiquitous presence as a secreted protein and results in staining patterns that are difficult to interpret and lacks the desired sensitivity and specificity. Detecting mRNA instead of protein has been attempted (see, e.g., Kaker et al., American Journal of Clinical Pathology 119, 361-366 (2003); Oliveira et al., Am J Surg Pathol 24, 177-182 (2000); Krishna et al., Am J Surg Pathol 21, 147-152 (1997); Murray et al., J Clin Pathol 45, 21-24 (1992); D'Errico et al., Hum Pathol 27, 599-604 (1996); D'Errico et al., Diagn Mol Pathol 7, 289-294 (1998)). However, in spite of the fact that albumin has the potential to be a highly sensitive and specific marker for hepatocellular carcinoma, it has not found widespread use in the diagnostic laboratory, as consequence of two unresolved problems: 1. The lability of mRNA compared to proteins and 2. The lack of a robust and sensitive platform for the detection of RNA in situ.</p>
+      <p id="p-00009-en" num="0009">As shown herein, albumin is synthesized almost exclusively by cancers of liver origin; thus, it can be used as a key marker to diagnose these malignancies. A survey of gene expression across different cancer types indicated that albumin expression is highly restricted to the liver among normal tissues and is selectively present in hepatocellular carcinoma and IHCC, as well as in BDA, as compared to other tumor types. As shown herein, expression of mRNA coding for secreted proteins such as albumin can be reliably detected in paraffin embedded tissue using branched DNA analysis. The present experiments show that cancers of hepatic origin are positive for albumin, a signature absent in non-hepatic lesions as well as perihilar and bile duct carcinomas, distinguishing BDA, IHCC and HCC from a variety of metastatic adenocarcinomas.</p>
+      <p id="p-00010-en" num="0010">Provided herein are methods for determining the origin of a tumor in a subject. The methods include contacting a sample comprising cells or tissue from the tumor with a plurality of polynucleotide probes that bind specifically to albumin mRNA in situ; detecting binding of the probes to albumin mRNA, and either identifying a sample in which the probes bind to albumin mRNA as a tumor of hepatic origin, or identifying a sample in which the probes do not bind to albumin mRNA as a tumor of nonhepatic origin.</p>
+      <p id="p-00011-en" num="0011">Also provided herein are methods for selecting a treatment for a subject who has a tumor. The methods include contacting a sample comprising cells or tissue from the tumor with a plurality of polynucleotide probes that bind specifically to albumin mRNA in situ; detecting binding of the probes to albumin mRNA, and either: <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>identifying a sample in which the probes bind to albumin mRNA as a tumor of hepatic origin, and selecting for the subject a treatment for a hepatic tumor; or</li><li>identifying a sample in which the probes do not bind to albumin mRNA as a tumor of nonhepatic origin; determining the tissue of origin of the tumor; and selecting for the subject a treatment for a cancer of the tissue of origin.</li></ul></li></ul></p>
+      <p id="p-00012-en" num="0014">In addition, provided herein are methods for treating a subject who has a tumor. The methods include contacting a sample comprising cells or tissue from the tumor with a plurality of polynucleotide probes that bind specifically to albumin mRNA in situ; detecting binding of the probes to albumin mRNA, and either identifying a sample in which the probes bind to albumin mRNA as a tumor of hepatic origin, and administering to the subject a treatment for a hepatic tumor; or identifying a sample in which the probes do not bind to albumin mRNA as a tumor of nonhepatic origin; determining the tissue of origin of the tumor; and administering to the subject a treatment for a cancer of the tissue of origin.</p>
+      <p id="p-00013-en" num="0015">Also provided herein are methods for differential diagnosis between metastatic liver disease and a primary tumor of hepatic origin in a subject who has a tumor. The methods include contacting a sample comprising tissue from the tumor with a plurality of polynucleotide probes that bind specifically to albumin mRNA in situ; detecting binding of the probes to albumin mRNA, and either identifying a sample in which the probes bind to albumin mRNA as a tumor of hepatic origin, or identifying a sample in which the probes do not bind to albumin mRNA as a tumor of nonhepatic origin.</p>
+      <p id="p-00014-en" num="0016">In some embodiments, the methods include determining whether a tumor of hepatic origin is Hepatocellular Carcinoma (HCC) or Intrahepatic Cholangiocarcinoma (IHCC), or whether a tumor is an HCC, IHCC, or bile duct adenoma (BDA).</p>
+      <p id="p-00015-en" num="0017">In some embodiments, whether the tumor is HCC or IHC or BDA is determined based on morphology of the tumor cells in the sample, e.g., determined by histopathological analysis, e.g., staining the sample with hematoxylin and eosin and examining the sample using light microscopy, wherein a trabecular arrangement of tumor cells resembling normal hepatocytes indicates the presence of HCC and a tubulo-glandular arrangement of tumor cells resembling adenocarcinoma indicates the presence of IHCC.</p>
+      <p id="p-00016-en" num="0018">In some embodiments, whether the tumor is HCC or IHC or BDA is determined based on morphology of the tumor cells in the sample, e.g., determined by histopathological analysis, e.g., staining the sample with hematoxylin and eosin and examining the sample using light microscopy, wherein a trabecular arrangement of tumor cells resembling normal hepatocytes indicates the presence of HCC, a tubulo-glandular arrangement of tumor cells resembling adenocarcinoma indicates the presence of IHCC, and tumor architecture resembling adenoma with a well differentiated glandular pattern indicates the presence of BDA.</p>
+      <p id="p-00017-en" num="0019">In some embodiments, the methods include one or more of:</p>
+      <p id="p-00018-en" num="0000">identifying a sample in which the probes bind to albumin mRNA, and wherein there is a gradient of albumin mRNA present in hepatoctyes with low to moderate expression in Zones 1 and 3 and high expression in Zone 2, as comprising normal liver; identifying a sample in which the probes bind to albumin mRNA and wherein there is moderate to high levels of albumin mRNA expression, and tumor architecture that is recognizable as hepatocytic in origin with a trabecular pattern based on histopathological analysis, as comprising Hepatocellular Carcinoma; identifying a sample in which the probes bind to albumin mRNA and wherein there is a range of albumin mRNA expression, and tumor architecture that resembles adenocarcinoma with a tubulo-glandular pattern based on histopathological analysis, as comprising Intrahepatic Cholangiocarcinoma; and identifying a sample in which the probes do not bind to albumin mRNA in the tumor cells, wherein there is adjacent normal tissue shows albumin expression, and/or tumor architecture that resembles a pattern from a primary cancer, as comprising metastatic liver disease.</p>
+      <p id="p-00019-en" num="0020">In some embodiments, the methods include one or more of:</p>
+      <p id="p-00020-en" num="0000">identifying a sample in which the probes bind to albumin mRNA, and wherein there is a gradient of albumin mRNA present in hepatoctyes with low to moderate expression in Zones 1 and 3 and high expression in Zone 2, as comprising normal liver; identifying a sample in which the probes bind to albumin mRNA and wherein there is moderate to high levels of albumin mRNA expression, and tumor architecture that is recognizable as hepatocytic in origin with a trabecular pattern based on histopathological analysis, as comprising Hepatocellular Carcinoma; identifying a sample in which the probes bind to albumin mRNA and wherein there is a range of albumin mRNA expression, and tumor architecture that resembles adenocarcinoma with a tubulo-glandular pattern based on histopathological analysis, as comprising Intrahepatic Cholangiocarcinoma; identifying a sample in which the probes bind to albumin mRNA, there are low levels of albumin mRNA expression, and tumor architecture resembling adenoma with a well differentiated glandular pattern as comprising BDA; and identifying a sample in which the probes do not bind to albumin mRNA in the tumor cells, wherein there is adjacent normal tissue shows albumin expression, and/or tumor architecture that resembles a pattern from a primary cancer, as comprising metastatic liver disease.</p>
+      <p id="p-00021-en" num="0021">In some embodiments, the methods include one or more of: identifying a sample in which the probes bind to albumin mRNA, and wherein there is a gradient of albumin mRNA present in hepatoctyes with low to moderate expression in Zones 1 and 3 and high expression in Zone 2, as comprising normal liver, and not treating the subject; identifying a sample in which the probes bind to albumin mRNA and wherein there is moderate to high levels of albumin mRNA expression, and tumor architecture that is recognizable as hepatocytic in origin with a trabecular pattern based on histopathological analysis, as comprising Hepatocellular Carcinoma (HCC), and selecting a treatment for HCC for the subject; identifying a sample in which the probes bind to albumin mRNA and wherein there is a range of albumin mRNA expression, and tumor architecture that resembles adenocarcinoma with a tubulo-glandular pattern based on histopathological analysis, as comprising Intrahepatic Cholangiocarcinoma (IHCC), and selecting a treatment for IHCC for the subject; and identifying a sample in which the probes do not bind to albumin mRNA in the tumor cells, wherein there is adjacent normal tissue shows albumin expression, and/or tumor architecture that resembles a pattern from a primary cancer, as comprising metastatic liver disease, and selecting a treatment for the primary cancer for the subject.</p>
+      <p id="p-00022-en" num="0022">In some embodiments, the methods include one or more of: identifying a sample in which the probes bind to albumin mRNA, and wherein there is a gradient of albumin mRNA present in hepatoctyes with low to moderate expression in Zones 1 and 3 and high expression in Zone 2, as comprising normal liver, and not treating the subject; identifying a sample in which the probes bind to albumin mRNA and wherein there is moderate to high levels of albumin mRNA expression, and tumor architecture that is recognizable as hepatocytic in origin with a trabecular pattern based on histopathological analysis, as comprising Hepatocellular Carcinoma (HCC), and selecting a treatment for HCC for the subject; identifying a sample in which the probes bind to albumin mRNA and wherein there is a range of albumin mRNA expression, and tumor architecture that resembles adenocarcinoma with a tubulo-glandular pattern based on histopathological analysis, as comprising Intrahepatic Cholangiocarcinoma (IHCC), and selecting a treatment for IHCC for the subject; identifying a sample in which the probes bind to albumin mRNA, there are low levels of albumin mRNA expression, and tumor architecture resembling adenoma with a well differentiated glandular pattern as comprising BDA, and selecting a treatment for BDA for the subject; and identifying a sample in which the probes do not bind to albumin mRNA in the tumor cells, wherein there is adjacent normal tissue shows albumin expression, and/or tumor architecture that resembles a pattern from a primary cancer, as comprising metastatic liver disease, and selecting a treatment for the primary cancer for the subject.</p>
+      <p id="p-00023-en" num="0023">In some embodiments, the methods include one or more of: identifying a sample in which the probes bind to albumin mRNA, and wherein there is a gradient of albumin mRNA present in hepatoctyes with low to moderate expression in Zones 1 and 3 and high expression in Zone 2, as comprising normal liver, and not treating the subject; identifying a sample in which the probes bind to albumin mRNA and wherein there is moderate to high levels of albumin mRNA expression, and tumor architecture that is recognizable as hepatocytic in origin with a trabecular pattern based on histopathological analysis, as comprising Hepatocellular Carcinoma (HCC), and administering a treatment for HCC to the subject; identifying a sample in which the probes bind to albumin mRNA and wherein there is a range of albumin mRNA expression, and tumor architecture that resembles adenocarcinoma with a tubulo-glandular pattern based on histopathological analysis, as comprising Intrahepatic Cholangiocarcinoma (IHCC), and administering a treatment for IHCC to the subject; and identifying a sample in which the probes do not bind to albumin mRNA in the tumor cells, wherein there is adjacent normal tissue shows albumin expression, and/or tumor architecture that resembles a pattern from a primary cancer, as comprising metastatic liver disease, and administering a treatment for the primary cancer to the subject.</p>
+      <p id="p-00024-en" num="0024">In some embodiments, the methods include one or more of: identifying a sample in which the probes bind to albumin mRNA, and wherein there is a gradient of albumin mRNA present in hepatoctyes with low to moderate expression in Zones 1 and 3 and high expression in Zone 2, as comprising normal liver, and not treating the subject; identifying a sample in which the probes bind to albumin mRNA and wherein there is moderate to high levels of albumin mRNA expression, and tumor architecture that is recognizable as hepatocytic in origin with a trabecular pattern based on histopathological analysis, as comprising Hepatocellular Carcinoma (HCC), and administering a treatment for HCC to the subject; identifying a sample in which the probes bind to albumin mRNA and wherein there is a range of albumin mRNA expression, and tumor architecture that resembles adenocarcinoma with a tubulo-glandular pattern based on histopathological analysis, as comprising Intrahepatic Cholangiocarcinoma (IHCC), and administering a treatment for IHCC to the subject; identifying a sample in which the probes bind to albumin mRNA, there are low levels of albumin mRNA expression, and tumor architecture resembling adenoma with a well differentiated glandular pattern as comprising BDA, and treating the subject for BDA; and identifying a sample in which the probes do not bind to albumin mRNA in the tumor cells, wherein there is adjacent normal tissue shows albumin expression, and/or tumor architecture that resembles a pattern from a primary cancer, as comprising metastatic liver disease, and administering a treatment for the primary cancer to the subject.</p>
+      <p id="p-00025-en" num="0025">In some embodiments of the methods described herein, the sample is from a tumor that is in the liver of the subject.</p>
+      <p id="p-00026-en" num="0026">In some embodiments of the methods described herein, the sample is from a tumor that is not in the liver of the subject.</p>
+      <p id="p-00027-en" num="0027">In some embodiments of the methods described herein, the plurality of probes comprises probes that bind to a plurality of target regions in the albumin mRNA.</p>
+      <p id="p-00028-en" num="0028">In some embodiments of the methods described herein, the binding of the probes to albumin mRNA is detected using branched nucleic acid signal amplification.</p>
+      <p id="p-00029-en" num="0029">In some embodiments of the methods described herein, the probes are branched DNA probes.</p>
+      <p id="p-00030-en" num="0030">In some embodiments, the methods described herein include contacting the sample with a plurality of probes that comprises one or more label extender probes that bind to a plurality of target regions in the albumin mRNA; hybridizing one or more pre-amplifier probes to the one or more label extender probes; hybridizing one or more amplifier probes to the pre-amplifier probes; and hybridizing one or more label probes to the one or more amplifier probes.</p>
+      <p id="p-00031-en" num="0031">In some embodiments of the methods described herein, the label probe is conjugated to alkaline phosphatase (AP), and binding of the probe is detected using fast red or fast blue as a substrate for the alkaline phosphatase.</p>
+      <p id="p-00032-en" num="0032">In some embodiments of the methods described herein, the sample is a biopsy sample obtained from the subject.</p>
+      <p id="p-00033-en" num="0033">In some embodiments of the methods described herein, the sample is a formaldehyde-fixed, paraffin-embedded (FFPE) clinical sample.</p>
+      <p id="p-00034-en" num="0034">In some embodiments of the methods described herein, the tissue comprises a plurality of individually identifiable cells.</p>
+      <p id="p-00035-en" num="0035">In some embodiments, the methods described herein include contacting a sample comprising tissue from the tumor with a plurality of polynucleotide probes that bind specifically to mRNA encoding a housekeeping gene (HKG) in situ; detecting binding of the probes to HKG mRNA, and selecting for further analysis a sample in which binding of probes to the HKG mRNA is detected, or rejecting a sample in which binding of probes do to HKG mRNA is not detected.</p>
+      <p id="p-00036-en" num="0036">In some embodiments of the methods described herein, the binding of the probes to albumin mRNA or HKG mRNA is detected using branched nucleic acid signal amplification.</p>
+      <p id="p-00037-en" num="0037">In some embodiments of the methods described herein, the probes are branched DNA probes.</p>
+      <p id="p-00038-en" num="0038">In some embodiments, the methods described herein include contacting the sample with a plurality of probes that comprises one or more label extender probes that bind to a plurality of target regions in the albumin or HKG mRNA; hybridizing one or more pre-amplifier probes to the one or more label extender probes; hybridizing one or more amplifier probes to the pre-amplifier; and hybridizing one or more label probes to the one or more amplifier probes.</p>
+      <p id="p-00039-en" num="0039">In some embodiments of the methods described herein, the label probe is conjugated to alkaline phosphatase (AP), binding of the albumin probes to albumin mRNA is detected using fast red as a substrate for the alkaline phosphatase, and binding of the HKG probes to HKG mRNA is detected using fast blue as a substrate for the alkaline phosphatase.</p>
+      <p id="p-00040-en" num="0040">The invention further provides kits for performing any of the methods described herein.</p>
+      <p id="p-00041-en" num="0041">The following definitions can be understood with reference to <figref>FIG. 1C</figref>. A “label extender” is a polynucleotide that is capable of hybridizing to both a nucleic acid analyte and also to at least a portion of a label probe system. A label extender typically has a first polynucleotide sequence L-1, which is complementary to a polynucleotide sequence of the nucleic acid analyte, and a second polynucleotide sequence L-2, which is complementary to a polynucleotide sequence of the label probe system (e.g., L-2 can be complementary to a polynucleotide sequence of a preamplifier, amplifier, a label probe, or the like). The label extender is preferably a single-stranded polynucleotide. Non-limiting examples of label extenders in various configurations and orientations are disclosed within, e.g., U.S. Published Patent Application No. 2012/0052498 (including but not limited to those depicted within <figref>FIGS. 10A and 10B</figref>).</p>
+      <p id="p-00042-en" num="0042">A “label probe system” comprises one or more polynucleotides that collectively comprise one or more label probes which are capable of hybridizing, directly or indirectly, to one or more label extenders in order to provide a detectable signal from the labels that are associated or become associated with the label probes. Indirect hybridization of the one or more label probes to the one or more label extenders can include the use of amplifiers, or the use of both amplifiers and preamplifiers, within a particular label probe system. Label probe systems can also include two or more layers of amplifiers and/or preamplifiers to increase the size of the overall label probe system and the total number of label probes (and therefore the total number of labels that will be used) within the label probe system. The configuration of the label probe system within a particular embodiment is typically designed in the context of the overall assay, including factors such as the amount of signal required for reliable detection of the target analyte in the assay, the particular label being used and its characteristics, the number of label probes needed to provide the desired level of sensitivity, maintaining the desired balance of specificity and sensitivity of the assay, and other factors known in the art.</p>
+      <p id="p-00043-en" num="0043">An “amplifier” is a polynucleotide comprising one or more polynucleotide sequences A-1 and one more polynucleotide sequences A-2. The one or more polynucleotide sequences A-1 may or may not be identical to each other, and the one or more polynucleotide sequences A-2 may or may not be identical to each other. Within label probe systems utilizing amplifiers and label probes, polynucleotide sequence A-1 is typically complementary to polynucleotide sequence L-2 of the one or more label extenders, and polynucleotide sequence A-2 is typically complementary to polynucleotide sequence LP-1 of the label probes. Within label probe systems utilizing amplifiers, preamplifiers and label probes, polynucleotide sequence A-1 is typically complementary to polynucleotide sequence P-2 of the one or more preamplifiers, and polynucleotide sequence A-2 is typically complementary to polynucleotide sequence LP-1 of the label probes. Amplifiers can be, e.g., linear or branched polynucleotides.</p>
+      <p id="p-00044-en" num="0044">A “preamplifier” is a polynucleotide comprising one or more polynucleotide sequences P-1 and one or more polynucleotide sequences P-2. The one or more polynucleotide sequences P-1 may or may not be identical to each other, and the one or more polynucleotide sequences P-2 may or may not be identical to each other. When one or more preamplifiers are utilized within a label probe system, polynucleotide sequence P-1 is typically complementary to polynucleotide sequence L-2 of the label extenders, and polynucleotide sequence P-2 is typically complementary to polynucleotide sequence A-1 of the one or more amplifiers. Preamplifiers can be, e.g., linear or branched polynucleotides.</p>
+      <p id="p-00045-en" num="0045">A “label probe” is a single-stranded polynucleotide that comprises a label (or optionally that is configured to bind, directly or indirectly, to a label) to directly or indirectly provide a detectable signal. The label probe typically comprises a polynucleotide sequence LP-1 that is complementary to a polynucleotide sequence within the label probe system, or alternatively to the one or more label extenders. For example, in different embodiments, label probes may hybridize to either an amplifier and/or preamplifier of the label probe system, while in other embodiments where neither an amplifier nor preamplifier is utilized, a label probe may hybridize directly to a label extender.</p>
+      <p id="p-00046-en" num="0046">A “label” is a moiety that facilitates detection of a molecule. Common labels in the context of the present invention include fluorescent, luminescent, light-scattering, and/or colorimetric labels. Suitable labels include enzymes and fluorescent moieties, as well as radionuclides, substrates, cofactors, inhibitors, chemiluminescent moieties, magnetic particles, and the like. Patents teaching the use of such labels include U.S. Pat. Nos. 3,817,837; 3,850,752; 3,939,350; 3,996,345; 4,277,437; 4,275,149; and 4,366,241. Labels include the use of enzymes such as alkaline phosphatase that are conjugated to an polynucleotide probe for use with an appropriate enzymatic substrate, such as fast red or fast blue, which is described within U.S. Pat. Nos. 5,780,227 and 7,033,758. Alternative enzymatic labels are also possible, such as conjugation of horseradish peroxidase to polynucleotide probes for use with 3,3′-Diaminobenzidine (DAB). Many labels are commercially available and can be used in the context of the invention.</p>
+      <p id="p-00047-en" num="0047">The term “polynucleotide” encompasses any physical string of monomer units that correspond to a string of nucleotides, including a polymer of nucleotides (e.g., a typical DNA or RNA polymer), peptide nucleic acids (PNAs), modified oligonucleotides (e.g., oligonucleotides comprising nucleotides that are not typical to biological RNA or DNA, such as 2′-O-methylated oligonucleotides), and the like. The nucleotides of the polynucleotide can be deoxyribonucleotides, ribonucleotides or nucleotide analogs, can be natural or non-natural (e.g., locked nucleic acids, isoG or isoC nucleotides), and can be unsubstituted, unmodified, substituted or modified. The nucleotides can be linked by phosphodiester bonds, or by phosphorothioate linkages, methylphosphonate linkages, boranophosphate linkages, or the like. Polynucleotides can additionally comprise non-nucleotide elements such as labels, quenchers, blocking groups, or the like. Polynucleotides can be, e.g., single-stranded, partially double-stranded or completely double-stranded.</p>
+      <p id="p-00048-en" num="0048">The term “probe” refers to a non-analyte polynucleotide.</p>
+      <p id="p-00049-en" num="0049">Two polynucleotides “hybridize” when they associate to form a stable duplex, e.g., under relevant assay conditions. Polynucleotides hybridize due to a variety of well characterized physicochemical forces, such as hydrogen bonding, solvent exclusion, base stacking and the like. An extensive guide to the hybridization of nucleic acids is found in Tijssen (1993) Laboratory Techniques in Biochemistry and Molecular Biology-Hybridization with Nucleic Acid Probes, part I chapter 2, “Overview of principles of hybridization and the strategy of nucleic acid probe assays” (Elsevier, New York).</p>
+      <p id="p-00050-en" num="0050">The term “complementary” refers to a polynucleotide that forms a stable duplex with its complement sequence under relevant assay conditions. Typically, two polynucleotide sequences that are complementary to each other have mismatches at less than about 20% of the bases, at less than about 10% of the bases, preferably at less than about 5% of the bases, and more preferably have no mismatches.</p>
+      <p id="p-00051-en" num="0051">Unless otherwise defined, all technical and scientific terms used herein have the same meaning as commonly understood by one of ordinary skill in the art to which this invention belongs. Methods and materials are described herein for use in the present invention; other, suitable methods and materials known in the art can also be used. The materials, methods, and examples are illustrative only and not intended to be limiting. All publications, patent applications, patents, sequences, database entries, and other references mentioned herein are incorporated by reference in their entirety. In case of conflict, the present specification, including definitions, will control.</p>
+      <p id="p-00052-en" num="0052">Other features and advantages of the invention will be apparent from the following detailed description and figures, and from the claims.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">DESCRIPTION OF DRAWINGS</heading>
+      <p id="p-00053-en" num="0053">
+        <figref>FIG. 1A</figref>: Schematic representation of an exemplary 1-plex tissue assay using a bDNA platform.</p>
+      <p id="p-00054-en" num="0054">
+        <figref>FIG. 1B</figref>: Schematic representation of an exemplary 2-plex tissue assay using a bDNA platform.</p>
+      <p id="p-00055-en" num="0055">
+        <figref>FIG. 1C</figref>: Schematic illustration of an exemplary bDNA amplification scheme.</p>
+      <p id="p-00056-en" num="0056">
+        <figref>FIGS. 2A-B</figref>: Hepatocellular carcinoma diffuse and strongly positive for albumin. A—H&amp;E stain; B—ISH for albumin.</p>
+      <p id="p-00057-en" num="0057">
+        <figref>FIGS. 3A-F</figref>: A&amp;B show a well differentiated cholangiocarcinoma with diffuse reactivity for albumin. C&amp;D show a poorly differentiated cholangiocarcinoma with focal reactivity for albumin. E&amp;F show a perihilar bile duct carcinoma that is negative for albumin. A, C, D—H&amp;E stain; B, D, F—ISH for albumin.</p>
+      <p id="p-00058-en" num="0058">
+        <figref>FIG. 4</figref>: Exemplary diagnostic algorithm for the evaluation of hepatic neoplasms.</p>
+      <p id="p-00059-en" num="0059">
+        <figref>FIGS. 5A-1</figref> and <b>5</b>A-<b>2</b>: Exemplary diagnostic algorithms for the evaluation of hepatic neoplasms using a 1-plex RNA-ISH assay for albumin expression. <b>5</b>A-<b>1</b>, Differential Diagnosis of HCC/IHCC and metastatic liver disease; <b>5</b>A-<b>2</b>, Differential Diagnosis of HCC/IHCC/BDA and metastatic liver disease.</p>
+      <p id="p-00060-en" num="0060">FIGS. <b>5</b>B<b>1</b>-<b>1</b> and <b>5</b>B-<b>2</b>: Exemplary diagnostic algorithms for the evaluation of hepatic neoplasms using a 2-plex RNA-ISH assay for albumin and HKG expression. <b>5</b>B-<b>1</b>, Differential Diagnosis of HCC/IHCC and metastatic liver disease; <b>5</b>B-<b>2</b>, Differential Diagnosis of HCC/IHCC/BDA and metastatic liver disease.</p>
+      <p id="p-00061-en" num="0061">
+        <figref>FIG. 6</figref>: Normal Liver, showing the hepatic lobule (left panel), hepatocytes (middle panel), and portal triad (right panel). Zone 1 Hepatocytes: moderate albumin expression (6-20 dots/cell); Zone 2 Hepatocytes: high albumin expression (21-50 dots/cell); and Zone 3 Hepatocytes: moderate albumin expression (6-20 dots/cell).</p>
+      <p id="p-00062-en" num="0062">
+        <figref>FIG. 7</figref>: Albumin expression in a sample of tissue from a Hepatocellular Carcinoma detected using RNA ISH.</p>
+      <p id="p-00063-en" num="0063">
+        <figref>FIG. 8</figref>: Albumin expression in a sample of tissue from an Intrahepatic Cholangiocarcinoma (IHCC) with high albumin expression, detected using RNA ISH.</p>
+      <p id="p-00064-en" num="0064">
+        <figref>FIG. 9</figref>: Albumin expression in a sample of tissue from an Intrahepatic Cholangiocarcinoma (IHCC) with low albumin expression, detected using RNA ISH.</p>
+      <p id="p-00065-en" num="0065">
+        <figref>FIG. 10</figref>: Albumin expression in a sample of tissue from Metastatic Liver Disease, detected using RNA ISH.</p>
+      <p id="p-00066-en" num="0066">
+        <figref>FIG. 11</figref>: An exemplary algorithm for detection of hepatic origin of metastatic tumors.</p>
+      <p id="p-00067-en" num="0067">
+        <figref>FIGS. 12A-D</figref>: A moderately differentiated hepatocellular carcinoma (A) with diffuse reactivity for Arginase-1 and focal reactivity for Hep Par 1 (B and C). The in situ hybridization stain for albumin is diffusely and strongly positive (D).</p>
+      <p id="p-00068-en" num="0068">
+        <figref>FIGS. 13A-D</figref>. A moderately differentiated hepatocellular carcinoma (A) negative for Arginase-1 and Hep Par 1, respectively (B and C). The in situ hybridization stain for albumin is diffusely and strongly positive (D).</p>
+      <p id="p-00069-en" num="0069">
+        <figref>FIGS. 14A-B</figref>. A clear cell variant of hepatocellular carcinoma (A) is diffusely and strongly positive for albumin (B). Note the dot-like pattern of reactivity.</p>
+      <p id="p-00070-en" num="0070">
+        <figref>FIGS. 15A-B</figref>: A poorly differentiated hepatocellular carcinoma (A) that was negative for Arginase-1 and Hep Par-1 (not shown) is positive for albumin (B). Note the dot-like pattern of reactivity.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00071-en" num="0071">There is a significant unmet need for a sensitive and specific biomarker of primary liver tumors including BDA, IHCC and HCC. Because of the lack of a unique and reliable biomarker, these tumors are frequently classified as cancer of unknown origin or are labeled by pathologists as a tumor with pancreatico-biliary differentiation. Interestingly, expression profiling data supports the hypothesis that metastatic adenocarcinoma from the biliary tract is the single most common site of origin of a cancer of unknown primary (Hainsworth et al., Journal of Clinical Oncology 31:217-223, 2013; Yan et al., Am J Surg Pathol 34:1147-1154, 2010). This clinical conundrum may be resolved by albumin ISH where IHCCs were nearly all positive for albumin. Significantly, tumors that typically metastasize to the liver (gastrointestinal, pulmonary or breast adenocarcinomas) were negative for albumin. These neoplasms represent the closest histopathologic mimics of IHCC. However, a sensitive assay (such as a branched DNA (bDNA) platform used in the present Examples) is preferably used to detect and identify albumin mRNA, since in a substantial number of cases the expression of albumin was significantly less than that seen in hepatocellular carcinomas. The availability of such an assay would limit the need for extensive radiologic and endoscopic evaluations and help to reach treatment decisions in a timely fashion (Khan et al., Gut 61:1657-1669, 2012; Xiao et al., Histopathology 42:141-149, 2003). Furthermore, since this study was performed on tissue microarrays, these results are applicable to surgically resected tissue as well as more limited tissue samples such as fine needle biopsies. It should be noted that immunohistochemical assays for albumin are extremely difficult to interpret because of the ubiquitous presence of albumin in serum as well as the fact that both normal and neoplastic cells absorb albumin.</p>
+      <p id="p-00072-en" num="0072">In addition, as described below, 22% of a cohort of intrahepatic carcinomas of uncertain origin were positive for albumin and hence are considered to represent (and reclassified as) IHCC. This data suggest that IHCC may be underrecognized, because of the inability to distinguish them from metastatic adenocarcinomas.</p>
+      <p id="p-00073-en" num="0073">Albumin represents a highly specific and sensitive marker for the two most common primary tumors of the liver: hepatocellular carcinoma and cholangiocarcinoma. While pathologists typically cannot distinguish an IHCC from metastatic adenocarcinoma, the distinction between hepatocellular carcinoma and IHCC is generally straightforward: conventional histology and immunohistochemical techniques can readily distinguish the two neoplasms. In this series IHCCs were distinguished with certainty from hepatocellular carcinomas based on a H&amp;E stain. In cases with overlapping features, the combination of glypican 3, Hep Par 1 and Arginase-1 has been shown to be a robust means of making this distinction (Yan et al., Am J Surg Pathol 34:1147-1154, 2010; Zhou et al., Oncogene. Nature 16:425-438, 2009).</p>
+      <p id="p-00074-en" num="0074">Hepatic progenitor cells, a source of both hepatocytes and bile duct cells, express markers of both biliary epithelial cells (keratin 7, 19, 14) and hepatocytes (keratin 8, keratin 18, met, albumin; see Xiao et al., Histopathology 42:141-149, 2003; O'Dell et al., Cancer Research 72:1557-1567, 2012). While the transcript is silenced in the mature bile duct epithelium, the neo-ductules that emerge from regenerating liver express albumin. The presence of albumin thus supports the hypothesis that hepatocellular carcinoma and IHCC arise from a common progenitor cell. Genetically engineered models give further credence to this hypothesis where an albumin-Cre system with liver specific inactivation of Nf2, Mst1/Mst2 develop hepatocellular carcinoma and IHCC, although the predominant tumor type is hepatocellular carcinoma (Zhou et al., Oncogene. Nature 16:425-438, 2009; Kipp et al. Hum Pathol 43:1552-1558, 2012; Wang et al., Oncogene 32:3091-3100, 2012; Voss et al., Hum Pathol 44:1216-1222, 2013). A more recent animal model of IHCC that closely resembles its human counterpart used a albumin-Cre mediated somatic activation of Kras<sup>G12D </sup>and deletion of Trp53: on histopathology, although the majority of tumors were IHCC, hepatocellular carcinomas were also identified (O'Dell et al., Cancer Research 72:1557-1567, 2012).</p>
+      <p id="p-00075-en" num="0075">The perihilar as well as mid and distal bile duct carcinomas were uniformly negative for albumin. Although perihilar and distal bile duct carcinomas are also sometimes referred to as cholangiocarcinoma, recent data suggests that these tumors are genetically distinct from IHCC: e.g. mutations in IDH1/2 are much more common in IHCC (Kipp et al. Hum Pathol 43:1552-1558, 2012; Wang et al., Oncogene 32:3091-3100, 2012; Voss et al., Hum Pathol 44:1216-1222, 2013). Consequently, the clinical behavior of IHCC is distinct from distal bile duct carcinoma that has therapeutic implications including the prospect of IDH-targeted therapies that have shown promise in preclinical models of leukemia and glioma (Blechacz et al., Nat Rev Gastroenterol Hepatol 8:512-522, 2011; Razumilava et al., Clin Gastroenterol Hepatol 11:13-21.e1-quiz e3-4, 2013; Wang et al., Science 340:622-626, 2013; Rohle et al., Science 340:626-630, 2013). In addition to IDH1/2 mutations, genomic studies have also revealed actionable recurrent translocation events involving the FGFR2 locus in IHCCs (Borad et al., PLoS Genet. 2014; 10:e1004135).</p>
+      <p id="p-00076-en" num="0076">The data presented herein also supports the hypothesis that IHCCs are biologically and genetically distinct from extrahepatic bile duct carcinomas; IHCC are derived from a progenitor cell capable of hepatic and cholangiocytic differentiation while the progenitor cell of bile duct carcinoma is restricted to cholangiocytic lineage. The current paradigm of making this distinction based on the epicenter of the lesion may prove inadequate thus this paradigm may be replaced by detecting albumin mRNA, e.g., using ISH. The molecular differences inherent to the cell of origin has implications for biological behavior, and therefore, represents a superior method to distinguish these cholangiocarcinomas for understanding response to therapy as well as designing cohorts for clinical trials.</p>
+      <p id="p-00077-en" num="0077">Methods of Identifying Hepatic Neoplasms</p>
+      <p id="p-00078-en" num="0078">The identity of malignant tumors remains equivocal in a significant number of patients and approximately 3% to 5% of all cancers have no identifiable primary site (Everhart and Ruhl, Gastroenterology 136:1134-1144, 2009; Muir, Cancer. 1; 75(1 Suppl):353-6, 1995), and IHCCs frequently fall into this category. The site of a tumor as well as the tumor type influence the success of molecular targeted therapies as the cellular context is as relevant as the mutational profile. For instance, the targeted RAF inhibitor, vemurafenib, is effective against melanomas with activated BRAF (BRAFV600E), but not against colorectal cancers harboring the same mutation (Chapman et al., N Engl J Med 364:2507-2516, 2011). Therefore, precise determination of primary tumor type as well as the site of origin remains a key diagnostic element to optimal treatment selection. The inability of histology and immunohistochemistry to determine tumor type in a minority of cases has spurred the development of gene expression signatures for tumor classification (Varadhachary et al., Journal of Clinical Oncology 26:4442-4448, 2008). However, these previous gene expression assays, such as the quantitative reverse transcription polymerase chain reaction (RT-PCR) assay used by Varadhachary et al., do not preserve morphological details, and hence the gene signature is an aggregate signal of tumor cells, stroma and other mesenchymal elements that accompany the tumor, thus decreasing their sensitivity and specificity. The measurement of albumin expression highlights the limitations of these gene expression assays as they would not be able to distinguish between albumin produced by the adjacent liver and tumor cells. Moreover, many of the informative genes recently used in determining site of origin are transcription factors (Hainsworth et al., Journal of Clinical Oncology 31:217-223, 2013), a class of proteins that is difficult to assess by conventional IHC but that would be amenable to an RNA-ISH assay. The RNA-ISH assay is also amenable to automation, and hence could be adopted by most diagnostic clinical laboratories, while most expression profiling assays require a send out to a centralized laboratory. The methods described herein that detect RNA in situ, e.g., in formalin fixed paraffin embedded material, fresh frozen tissue sections, fine needle aspirate biopsies, tissue microarrays, cells isolated from blood (including whole blood), bone marrow or sputum (such as samples prepared using centrifugation (such as with the CytoSpin Cytocentrifuge instrument (ThermoFisher Scientific, Waltham, Mass.) or smeared on a slide), blood smears on slides (including whole blood smears), and other sample types where the cellular morphology is sufficiently intact to allow the identification of the cells of interest (e.g., the cells that are albumin mRNA positive and negative), enable physicians to refine their diagnostic precision as well as provide novel prognostic and predictive biomarkers.</p>
+      <p id="p-00079-en" num="0079">As described herein, normal hepatocytes and HCC show abundant expression of albumin mRNA. Bile duct epithelial cells and IHCC show a range of albumin expression, with some IHCC expressing abundant albumin whereas others show focal areas with low levels of albumin expression. BDA show low levels of albumin expression. Metastatic tumors in the liver show complete lack of albumin mRNA staining. Thus, Albumin ISH provides a sensitive and specific marker for primary liver tumors, e.g., IHCC. This test, which can be performed on, e.g., a needle biopsy, enables patients to forego numerous invasive and diagnostic tests, all of which cost time and money. Albumin ISH is a sensitive and specific test for the diagnosis of primary liver tumors such as IHCC and can be utilized, e.g., in patients with liver masses for whom a primary malignancy is not identified.</p>
+      <p id="p-00080-en" num="0080">While hepatocytes strongly express albumin, the expression level of albumin in cholangiocytes is significantly lower than that in hepatocytes. Prior ISH studies lacked the desired sensitivity to detect low levels of albumin expression and have, therefore, not been successful in differentiating primary liver tumors, especially IHCC, from metastatic liver disease.</p>
+      <p id="p-00081-en" num="0081">Low levels of albumin expression, especially in cholangiocytes, can be detected using RNA ISH with bDNA signal amplification technology, to detect albumin expression in tumors of both, hepatocyte and cholangiocyte origins. Additionally, using high specificity RNA ISH bDNA detection methods, albumin expression can be detected only in HCC, IHCC, and BDA, and not in metastatic liver disease. It is important to distinguish primary malignant liver neoplasms (HCC &amp; IHCC), as well as benign liver tumors such as BDA, from metastatic liver disease, and to distinguish HCC and IHCC from BDA; the distinction between the two types of primary malignant liver neoplasms (i.e., between HCC and IHCC) can be made by routine light microscopy using H/E staining.</p>
+      <p id="p-00082-en" num="0082">Histologically, the liver is divided into lobules, at the center of which is the central vein. At the periphery of the lobule are the portal triads. Functionally, the liver can be divided into acini with three zones, based upon oxygen supply. Zone 1 surrounds the portal tracts where the oxygenated hepatic arterial and portal venous blood enters. Zone 3 is located around the central veins where oxygenation is poor. Zone 2 is located in between Zones 1 and 3.</p>
+      <p id="p-00083-en" num="0083">Normal hepatocytes can be distinguished from tumor cells by dissimilar staining patterns. For example, in an RNA ISH assay where the signal is generated by the use of fast red with an alkaline phosphatase, normal hepatocytes have yellowish-orange cytoplasm with dark-red ISH dots whereas tumor cells have clear cytoplasm with dark red ISH dots.</p>
+      <p id="p-00084-en" num="0084">FIGS. <b>5</b>A<b>1</b>-<b>2</b> and <b>5</b>B<b>1</b>-<b>2</b> outline exemplary algorithms for the differential diagnosis of HCC/IHCC/BDA from metastatic liver disease. The following factors can be used to make the differential diagnosis: <ul id="ul-00003-en" list-style="none"><li><ul id="ul-00004-en" list-style="none"><li>A. Normal Liver has the following morphological features seen by ISH (see, e.g., <figref>FIG. 6</figref>):         <ul id="ul-00005-en" list-style="none"><li>1. Sheets of hepatocytes showing gradient of albumin ISH staining in the Hepatic Lobule.             <ul id="ul-00006-en" list-style="none"><li>a. Zone 1 (Peri-portal) showing moderate levels (6-20 dots) of albumin mRNA.</li><li>b. Zone 2 (Intermediate) showing high levels of albumin mRNA (21-50 dots).</li><li>c. Zone 3 (Centri-lobular) showing moderate levels of albumin mRNA (6-20 dots).</li></ul></li><li>2. Portal triad showing bile duct with low-levels of albumin mRNA (2-5 dots). Hepatic artery and portal vein show complete lack of albumin mRNA staining</li></ul></li><li>B. Deciduous normal hepatocytes can be distinguished from tumor cells by the distinctive staining pattern observed after ISH. Deciduous hepatocytes show yellowish-orange cytoplasm as compared to tumor cells which exhibit clear cytoplasm. In addition, deciduous normal hepatocytes show moderate levels of albumin expression (6-20 dots) as compared to tumor cells which show variable levels of albumin expression.</li><li>C. HCC has the following morphological features seen by ISH:         <ul id="ul-00007-en" list-style="none"><li>1. Tumor cells showing moderate-high levels (6-50 dots) of albumin mRNA staining.</li><li>2. H/E staining shows trabecular arrangement of tumor cells resembling normal hepatocytes.</li></ul></li><li>D. IHCC has the following morphological features seen by ISH:         <ul id="ul-00008-en" list-style="none"><li>1. Tumor cells showing variable levels of albumin mRNA staining. Some tumors may show high levels of albumin mRNA staining while some tumors may show moderate or low levels of albumin mRNA staining. The tumor may show generalized expression of albumin or may show focal areas of albumin expression.</li><li>2. H/E staining shows tubulo-glandular arrangement of tumor cells resembling adenocarcinoma.</li></ul></li><li>E. Bile Duct Adenoma (BDA) has the following morphological features seen by ISH:         <ul id="ul-00009-en" list-style="none"><li>1. Tumor cells showing low levels of Albumin mRNA staining (2-5 red dots/cell).</li><li>2. H/E staining shows well differentiated glandular arrangement of tumor cells resembling adenoma.</li></ul></li><li>F. Metastatic Liver Disease has the following morphological features seen by ISH:         <ul id="ul-00010-en" list-style="none"><li>1. Tumor cells showing complete lack of albumin mRNA staining. Surrounding hepatocytes show moderate-high levels (6-50 dots) of albumin mRNA staining.</li><li>2. H/E staining shows tumor architecture resembling pattern from the primary site.</li></ul></li><li>G. For all cases the following should be excluded from consideration:         <ul id="ul-00011-en" list-style="none"><li>1. Staining outside of the cytoplasm of cell</li><li>2. Cells showing presence of nuclear staining on ISH</li></ul></li></ul></li></ul></p>
+      <p id="p-00085-en" num="0107">Methods of Identifying Metastases of Hepatic Origin</p>
+      <p id="p-00086-en" num="0108">Since albumin is synthesized exclusively by hepatocytes, the present methods, preferably using an albumin RNA ISH assay, can be used for the detection of metastatic lesions derived from hepatic origin. In tumors originating from the liver, the metastatic tumor cells show positive staining for albumin mRNA surrounded by cells lacking albumin mRNA expression (see <figref>FIG. 11</figref> for an exemplary algorithm for detection of hepatic origin of metastatic tumors). Tumors originating from tissues other than the liver would be negative for albumin mRNA.</p>
+      <p id="p-00087-en" num="0109">Methods for Detection of Albumin mRNA</p>
+      <p id="p-00088-en" num="0110">The methods described herein include the detection and optionally quantitation of albumin mRNA in situ in cell and tissue samples, e.g., in formalin fixed paraffin embedded (FFPE) biopsy or tissue samples, fresh frozen tissue sections, fine needle aspirate biopsies, tissue microarrays, cells isolated from blood (including whole blood), bone marrow or sputum (such as samples prepared using centrifugation (such as with the CytoSpin Cytocentrifuge (ThermoFisher Scientific, Waltham, Mass.) or smeared on a slide), blood smears on slides (including whole blood smears), and other sample types where the cellular morphology is sufficiently intact to allow the identification of the cells of interest (e.g., the cells that are albumin mRNA positive and negative). Preferably the samples are tissue samples with low tumor cellularity (i.e., a low proportion of tumor cells relative to normal cells in a sample).</p>
+      <p id="p-00089-en" num="0111">This detection can be performed using methods known in the art; a preferred method is RNA in situ hybridization (RNA ISH). Other methods known in the art for gene expression analysis, e.g., RT-PCR, RNA-sequencing, and oligo hybridization assays including RNA expression microarrays, hybridization based digital barcode quantification assays such as the nCounter® System (NanoString Technologies, Inc., Seattle, Wash.), and lysate based hybridization assays utilizing branched DNA signal amplification such as the QuantiGene 2.0 Single Plex and Multiplex Assays (Affymetrix, Inc., Santa Clara, Calif.); however, these non-RNA ISH methods cannot visualize RNA in situ, which is important in identifying the cell of origin. Visualizing RNA in situ is often important in distinguishing cells that may have varying levels of expression for a particular RNA, identifying heterogeneity within tumors, distinguishing between tumor and non-tumor cells, and so on. Thus in some embodiments of the methods described herein RNA ISH methods are used wherein the cells are individually identifiable (i.e., although the cells are permeabilized to allow for influx and outflux of detection reagents, the structure of individual cells is maintained such that each cell can be identified); in contrast, methods such as RT-PCR, expression arrays, and so on use bulk samples wherein the RNA is extracted from disrupted cells, and the cells are not identifiable (and thus the cell of origin cannot be identified). RNA ISH methods also provide a distinct advantage when used to analyze RNAs for which the corresponding proteins are secreted as an immunohistochemistry approach for such biomarkers would simply show the presence of protein throughout the tissue at issue, even if certain cells are not expressing or are expressing at a different level than the average expression within the assayed sample.</p>
+      <p id="p-00090-en" num="0112">Certain RNA ISH platforms leverage the ability to amplify the signal within the assay via a branched-chain technique of multiple polynucleotides hybridized to one another (e.g., bDNA) to form a branch structure (e.g., branched nucleic acid signal amplification). In addition to its high sensitivity, the platform also has minimal non-specific background signal compared to immunohistochemistry. While RNA ISH has been used in the research laboratory for many decades, tissue based RNA diagnostics have only recently been introduced in the diagnostic laboratory. However, these have been restricted to highly expressed transcripts such as immunoglobulin light chains as low abundance transcripts otherwise cannot be detected by a conventional RNA ISH platform (Hong et al., Surgery 146:250-257, 2009; Magro et al., J Cutan Pathol 30:504-511, 2003). This robust RNA ISH platform with its ability to detect low transcript numbers has the potential to revolutionize RNA diagnostics in paraffin tissue and other tissue assay sample formats. The ability in this study to detect albumin in virtually all IHCCs with minimal non-specific signal is a significant advance when compared to prior studies that have failed to detect albumin in this neoplasm reliably (Tickoo et al., Am J Surg Pathol 26:989, 2002; Krishna et al., Am J Surg Pathol 21:147-152, 1997; Murray et al., J Clin Pathol 45:21-24, 1992).</p>
+      <p id="p-00091-en" num="0113">In some embodiments, the assay is a bDNA assay. Optionally, the assay is a bDNA assay as described in U.S. Pat. Nos. 7,709,198; 7,803,541; 8,114,681 and 2006/0263769, which describe the general bDNA approach; see especially 14:39 through 15:19 of the '198 patent. In some embodiments, the methods include using a modified RNA in situ hybridization (ISH) technique using a branched-chain DNA assay to directly detect and evaluate the level of biomarker mRNA in the sample (see, e.g., Luo et al., U.S. Pat. No. 7,803,541B2, 2010; Canales et al., Nature Biotechnology 24(9):1115-1122 (2006); Ting et al., Aberrant Overexpression of Satellite Repeats in Pancreatic and Other Epithelial Cancers, Science 331(6017):593-6 (2011)). A kit for performing this assay is commercially-available from Affymetrix, Inc. (e.g., the ViewRNA™ Assays for tissue and cell samples within both manual and automated formats).</p>
+      <p id="p-00092-en" num="0114">RNA ISH can be performed, e.g., using the ViewRNA™ technology (Affymetrix, Santa Clara, Calif.). ViewRNA™ ISH is based on the branched DNA technology wherein signal amplification is achieved via a series of sequential steps (e.g., as shown in <figref>FIG. 1A</figref> in a single plex format and in <figref>FIG. 1B</figref> in a two plex format). Thus in some embodiments, the methods include performing an assay as described in US 2012/0052498 (which describes methods for detecting both a nucleic acid and a protein with bDNA signal amplification, comprising providing a sample comprising or suspected of comprising a target nucleic acid and a target protein; incubating at least two label extender probes each comprising a different L-1 sequence, an antibody specific for the target protein, and at least two label probe systems with the sample comprising or suspected of comprising the target nucleic acid and the target protein, wherein the antibody comprises a pre-amplifier probe, and wherein the at least two label probe systems each comprise a detectably different label; and detecting the detectably different labels in the sample); US 2012/0004132; US 2012/0003648 (which describes methods of amplifying a nucleic acid detection signal comprising hybridizing one or more label extender probes to a target nucleic acid; hybridizing a pre-amplifier to the one or more label extender probes; hybridizing one or more amplifiers to the pre-amplifier; hybridizing one or more label spoke probes to the one or more amplifiers; and hybridizing one or more label probes to the one or more label spoke probes); or US 2012/0172246 (which describes methods of detecting a target nucleic acid sequence, comprising providing a sample comprising or suspected of comprising a target nucleic acid sequence; incubating at least two label extender probes each comprising a different L-1 sequence, and a label probe system with the sample comprising or suspected of comprising the target nucleic acid sequence; and detecting whether the label probe system is associated with the sample). Each hybridized target specific polynucleotide probe acts in turn as a hybridization target for a pre-amplifier polynucleotide that in turn hybridizes with one or more amplifier polynucleotides. In some embodiments two or more target specific probes (label extenders) are hybridized to the target before the appropriate pre-amplifier polynucleotide is bound to the 2 label extenders, but in other embodiments a single label extender can also be used with a pre-amplifier. Thus, in some embodiments the methods include incubating one or more label extender probes with the sample. In some embodiments, the target specific probes (label extenders) are in a ZZ orientation, cruciform orientation, or other (e.g., mixed) orientation; see, e.g., <figref>FIGS. 10A and 10B</figref> of US 2012/0052498. Each amplifier molecule provides binding sites to multiple detectable label probe oligonucleotides, e.g., alkaline phosphatase (AP)-conjugated-polynucleotides, thereby creating a fully assembled signal amplification “tree” that has numerous binding sites for the label probe; the number of binding sites can vary depending on the tree structure and the labeling approach being used, e.g., from 16-64 binding sites up to 3000-4000 range. In some embodiments there are 300-5000 probe binding sites. The number of binding sites can be optimized to be large enough to provide a strong signal but small enough to avoid issues associated with overlarge structures, i.e., small enough to avoid steric effects and to fairly easily enter the fixed/permeabilized cells and be washed out of them if the target is not present, as larger trees will require larger components that may get stuck within pores of the cells (e.g., the pores created during permeabilization, the pores of the nucleus) despite subsequent washing steps and lead to noise generation. A simplified exemplary bDNA amplification scheme is shown in <figref>FIG. 1C</figref>, the components of which can be modified in a variety of means, including as described herein and within the preceding references.</p>
+      <p id="p-00093-en" num="0115">Where an alkaline phosphatase (AP)-conjugated polynucleotide probe is used, following sequential addition of an appropriate substrate such as fast red or fast blue substrate, AP breaks down the substrate to form a precipitate that allows in-situ detection of the specific target RNA molecule. Alkaline phosphatase can be used with a number of substrates, e.g., fast red, fast blue, or 5-Bromo-4-chloro-3-indolyl-phosphate (BCIP). Thus in some embodiments, the methods include the use of alkaline phosphatase conjugated polynucleotide probes within a bDNA signal amplification approach, e.g., as described generally in U.S. Pat. No. 5,780,277 and U.S. Pat. No. 7,033,758.</p>
+      <p id="p-00094-en" num="0116">Other embodiments include the use of fluorophore-conjugates probes, e.g., Alexa Fluor conjugated label probes, or utilize other enzymatic approaches besides alkaline phosphatase for a chromogenic detection route, such as the use of horseradish peroxidase conjugated probes with substrates like 3,3′-Diaminobenzidine (DAB).</p>
+      <p id="p-00095-en" num="0117">In some embodiments, the assay is similar to those described in US 2012/0100540; US 2013/0023433; US 2013/0171621; US 2012/0071343; or US 2012/0214152. All of the foregoing are incorporated herein by reference in their entirety.</p>
+      <p id="p-00096-en" num="0118">The assay can be conducted manually or on an automated instrument, such the Leica BOND family of instruments, or the Ventana DISCOVERY ULTRA or DISCOVERY XT instruments.</p>
+      <p id="p-00097-en" num="0119">In some embodiments, the detection methods use a 1-plex format with an RNA probe set targeting the human albumin mRNA transcripts, e.g., as shown in <figref>FIG. 1A</figref>. The presence of albumin signals in the sample of tumor tissue, or the absence thereof, allows the differential diagnosis of HCC-CCA (when albumin mRNA is present, or present above a threshold level) from metastatic liver disease (when albumin mRNA is absent, or present below a threshold level); an exemplary decision tree is shown in <figref>FIG. 5A-1</figref>. In some embodiments, the detection methods use a 2-plex format in combination with probe sets targeting one or more pan-housekeeping (pan-HKG) genes, e.g. GAPDH, ACTB, or UBC, to assess RNA integrity, e.g., as shown in <figref>FIG. 1B</figref>. Cells that do not have expression of pan-HKG lack essential RNA integrity and hence need to be excluded from the analysis; exemplary decision trees are shown in <figref>FIGS. 5B-1</figref> and <b>5</b>B-<b>2</b>. This eliminates false negative cases.</p>
+      <p id="p-00098-en" num="0120">The sequence of human albumin is known in the art, see, e.g., FIG. 3 of Dugaiczyk et al., Proc Natl Acad Sci USA. 79(1): 71-75 (1982); the mRNA sequence is shown below, and is available in GenBank under Acc. No. NM<sub>—</sub>000477.5, and the protein sequence is available in GenBank under Acc. No. NP<sub>—</sub>000468.1. Other species are known in the art and include: <i>M. musculus</i>, Acc. No. NP<sub>—</sub>033784.2; <i>Canis lupus familiaris</i>, Acc. No. NM<sub>—</sub>001003026.1; <i>Equus caballus</i>, Acc. No. NP<sub>—</sub>001075972.1; <i>Felis domesticus</i>, Acc. No. X84842. One of skill in the art would readily be able to identify sequences for additional species bioinformatically, and would appreciate that the sequence of albumin mRNA used should match the species of the subject from which the sample is obtained. The subject is preferably a mammal and can be, e.g., a human or veterinary subject (e.g., cat, dog, horse, cow, or sheep).</p>
+      <p id="p-00099-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" tabstyle="monospace">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>Human Albumin </entry>
+                </row>
+                <row>
+                  <entry>(SEQ ID NO: 1)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="182pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>   1</entry>
+                  <entry>agtatattag tgctaatttc cctccgtttg tcctagcttt</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>tctcttctgt caaccccaca</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>  61</entry>
+                  <entry>cgcctttggc acaatgaagt gggtaacctt tatttccctt</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ctttttctct ttagctcggc</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 121</entry>
+                  <entry>ttattccagg ggtgtgtttc gtcgagatgc acacaagagt</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>gaggttgctc atcggtttaa</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 181</entry>
+                  <entry>agatttggga gaagaaaatt tcaaagcctt ggtgttgatt</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>gcctttgctc agtatcttca</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 241</entry>
+                  <entry>gcagtgtcca tttgaagatc atgtaaaatt agtgaatgaa</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>gtaactgaat ttgcaaaaac</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 301</entry>
+                  <entry>atgtgttgct gatgagtcag ctgaaaattg tgacaaatca</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>cttcataccc tttttggaga</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 361</entry>
+                  <entry>caaattatgc acagttgcaa ctcttcgtga aacctatggt</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>gaaatggctg actgctgtgc</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 421</entry>
+                  <entry>aaaacaagaa cctgagagaa atgaatgctt cttgcaacac</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>aaagatgaca acccaaacct</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 481</entry>
+                  <entry>cccccgattg gtgagaccag aggttgatgt gatgtgcact</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>gcttttcatg acaatgaaga</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 541</entry>
+                  <entry>gacatttttg aaaaaatact tatatgaaat tgccagaaga</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>catccttact tttatgcccc</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 601</entry>
+                  <entry>ggaactcctt ttctttgcta aaaggtataa agctgctttt</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>acagaatgtt gccaagctgc</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 661</entry>
+                  <entry>tgataaagct gcctgcctgt tgccaaagct cgatgaactt</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>cgggatgaag ggaaggcttc</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 721</entry>
+                  <entry>gtctgccaaa cagagactca agtgtgccag tctccaaaaa</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>tttggagaaa gagctttcaa</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 781</entry>
+                  <entry>agcatgggca gtagctcgcc tgagccagag atttcccaaa</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>gctgagtttg cagaagtttc</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 841</entry>
+                  <entry>caagttagtg acagatctta ccaaagtcca cacggaatgc</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>tgccatggag atctgcttga</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 901</entry>
+                  <entry>atgtgctgat gacagggcgg accttgccaa gtatatctgt</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>gaaaatcaag attcgatctc</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry> 961</entry>
+                  <entry>cagtaaactg aaggaatgct gtgaaaaacc tctgttggaa</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>aaatcccact gcattgccga</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>1021</entry>
+                  <entry>agtggaaaat gatgagatgc ctgctgactt gccttcatta</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>gctgctgatt ttgttgaaag</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>1081</entry>
+                  <entry>taaggatgtt tgcaaaaact atgctgaggc aaaggatgtc</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ttcctgggca tgtttttgta</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>1141</entry>
+                  <entry>tgaatatgca agaaggcatc ctgattactc tgtcgtgctg</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ctgctgagac ttgccaagac</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>1201</entry>
+                  <entry>atatgaaacc actctagaga agtgctgtgc cgctgcagat</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>cctcatgaat gctatgccaa</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>1261</entry>
+                  <entry>agtgttcgat gaatttaaac ctcttgtgga agagcctcag</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>aatttaatca aacaaaattg</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>1321</entry>
+                  <entry>tgagcttttt gagcagcttg gagagtacaa attccagaat</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>gcgctattag ttcgttacac</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>1381</entry>
+                  <entry>caagaaagta ccccaagtgt caactccaac tcttgtagag</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>gtctcaagaa acctaggaaa</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>1441</entry>
+                  <entry>agtgggcagc aaatgttgta aacatcctga agcaaaaaga</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>atgccctgtg cagaagacta</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>1501</entry>
+                  <entry>tctatccgtg gtcctgaacc agttatgtgt gttgcatgag</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>aaaacgccag taagtgacag</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>1561</entry>
+                  <entry>agtcaccaaa tgctgcacag aatccttggt gaacaggcga</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ccatgctttt cagctctgga</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>1621</entry>
+                  <entry>agtcgatgaa acatacgttc ccaaagagtt taatgctgaa</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>acattcacct tccatgcaga</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>1681</entry>
+                  <entry>tatatgcaca ctttctgaga aggagagaca aatcaagaaa</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>caaactgcac ttgttgagct</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>1741</entry>
+                  <entry>cgtgaaacac aagcccaagg caacaaaaga gcaactgaaa</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>gctgttatgg atgatttcgc</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>1801</entry>
+                  <entry>agcttttgta gagaagtgct gcaaggctga cgataaggag</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>acctgctttg ccgaggaggg</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>1861</entry>
+                  <entry>taaaaaactt gttgctgcaa gtcaagctgc cttaggctta</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>taacatcaca tttaaaagca</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>1921</entry>
+                  <entry>tctcagccta ccatgagaat aagagaaaga aaatgaagat</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>caaaagctta ttcatctgtt</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>1981</entry>
+                  <entry>tttctttttc gttggtgtaa agccaacacc ctgtctaaaa</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>aacataaatt tctttaatca</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>2041</entry>
+                  <entry>ttttgcctct tttctctgtg cttcaattaa taaaaaatgg</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>aaagaatcta atagagtggt</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>2101</entry>
+                  <entry>acagcactgt tatttttcaa agatgtgttg ctatcctgaa</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>aattctgtag gttctgtgga</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>2161</entry>
+                  <entry>agttccagtg ttctctctta ttccacttcg gtagaggatt</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>tctagtttct tgtgggctaa</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>2221</entry>
+                  <entry>ttaaataaat cattaatact cttctaaaaa aaaaaaaaaa</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>aaaa</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00100-en" num="0121">Methods of Treatment</p>
+      <p id="p-00101-en" num="0122">The methods described herein can also be used to treat a subject, or to guide selection of a treatment. For example, once a diagnosis has been made, a treatment can be selected and optionally administered to a subject. Treatments for the conditions described herein are known in the art.</p>
+      <p id="p-00102-en" num="0123">Treatments for use in the methods described herein can include a surgical treatment and/or the administration of a therapeutic agent. Therapeutic agents include sorafenib and/or chemotherapeutic agents e.g. 5-FU, capecitabine, gemcitabine, cisplatin and/or oxaliplatin. Treatments for HCC include surgical (e.g., liver resection, liver transplantation), ablative (e.g., transarterial chemoembolization (TACE), radiofrequency ablation (RFA), radioembolisation (e.g., with <sup>90</sup>Y spheres) and/or chemical (e.g., sorafenib). Treatments for IHCC include surgical (e.g., liver resection, liver transplantation), ablative (e.g., transarterial chemoembolization (TACE), radiofrequency ablation (RFA), radioembolisation (e.g., with 90Y spheres), stenting, radiotherapy, and/or chemical (e.g., chemotherapy with 5-FU, capecitabine, gemcitabine, cisplatin, oxaliplatin).</p>
+      <p id="p-00103-en" num="0124">Thus, for example, when a sample comprising tumor cells from a subject is identified as having HCC or IHCC or BDA, or metastatic disease, a treatment is identified, selected, and/or optionally administered to the subject. An exemplary treatment grid is shown in Table 2.</p>
+      <p id="p-00104-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="259pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Treatment Grid</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="left" />
+              <colspec colname="2" colwidth="56pt" align="left" />
+              <colspec colname="3" colwidth="35pt" align="left" />
+              <colspec colname="4" colwidth="112pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>RNA-ISH and</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>H&amp;E</entry>
+                  <entry>H&amp;E</entry>
+                  <entry>Diagnosis</entry>
+                  <entry>Treatment</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Positive -</entry>
+                  <entry>Tumor</entry>
+                  <entry>HCC</entry>
+                  <entry>surgical (e.g., liver resection,</entry>
+                </row>
+                <row>
+                  <entry>moderate-high</entry>
+                  <entry>architecture</entry>
+                  <entry />
+                  <entry>liver transplantation), ablative</entry>
+                </row>
+                <row>
+                  <entry>albumin mRNA</entry>
+                  <entry>recognizable as</entry>
+                  <entry />
+                  <entry>(e.g., transarterial</entry>
+                </row>
+                <row>
+                  <entry>expression</entry>
+                  <entry>hepatocytic origin</entry>
+                  <entry />
+                  <entry>chemoembolization (TACE),</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>with trabecular</entry>
+                  <entry />
+                  <entry>radiofrequency ablation (RFA),</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>pattern</entry>
+                  <entry />
+                  <entry>radioembolisation (e.g., with</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>
+                    <sup>90</sup>Y spheres) and/or chemical</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>(e.g., sorafenib)<sup>A</sup></entry>
+                </row>
+                <row>
+                  <entry>Positive -</entry>
+                  <entry>Tumor</entry>
+                  <entry>IHCC</entry>
+                  <entry>surgical (e.g., liver resection,</entry>
+                </row>
+                <row>
+                  <entry>Range of</entry>
+                  <entry>architecture</entry>
+                  <entry />
+                  <entry>liver transplantation), ablative</entry>
+                </row>
+                <row>
+                  <entry>Albumin mRNA</entry>
+                  <entry>recognizable as</entry>
+                  <entry />
+                  <entry>(e.g., transarterial</entry>
+                </row>
+                <row>
+                  <entry>expression</entry>
+                  <entry>hepatocytic origin</entry>
+                  <entry />
+                  <entry>chemoembolization (TACE),</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>with trabecular</entry>
+                  <entry />
+                  <entry>radiofrequency ablation (RFA),</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>pattern</entry>
+                  <entry />
+                  <entry>radioembolisation (e.g., with</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>90Y spheres), stenting,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>radiotherapy, and/or chemical</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>(e.g., chemotherapy with 5-FU,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>capecitabine, gemcitabine,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>cisplatin, oxaliplatin)<sup>B</sup></entry>
+                </row>
+                <row>
+                  <entry>Positive - low</entry>
+                  <entry>tumor architecture</entry>
+                  <entry>BDA</entry>
+                  <entry>conservative management,</entry>
+                </row>
+                <row>
+                  <entry>levels of Albumin</entry>
+                  <entry>resembling</entry>
+                  <entry />
+                  <entry>including but not limited to</entry>
+                </row>
+                <row>
+                  <entry>mRNA</entry>
+                  <entry>adenoma with a</entry>
+                  <entry />
+                  <entry>periodic monitoring or surgical</entry>
+                </row>
+                <row>
+                  <entry>expression</entry>
+                  <entry>well differentiated</entry>
+                  <entry />
+                  <entry>resection</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>glandular pattern</entry>
+                </row>
+                <row>
+                  <entry>Negative -</entry>
+                  <entry>Tumor</entry>
+                  <entry>Metastatic</entry>
+                  <entry>Depends on identity of primary site<sup>C</sup></entry>
+                </row>
+                <row>
+                  <entry>Complete lack of</entry>
+                  <entry>architecture</entry>
+                  <entry>Liver</entry>
+                </row>
+                <row>
+                  <entry>albumin</entry>
+                  <entry>resemble pattern</entry>
+                  <entry>Disease</entry>
+                </row>
+                <row>
+                  <entry>expression in</entry>
+                  <entry>from primary site</entry>
+                </row>
+                <row>
+                  <entry>tumor cells;</entry>
+                </row>
+                <row>
+                  <entry>Adjacent normal</entry>
+                </row>
+                <row>
+                  <entry>liver tissue shows</entry>
+                </row>
+                <row>
+                  <entry>albumin mRNA</entry>
+                </row>
+                <row>
+                  <entry>expression</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="left" id="entry-00001-en">
+                    <sup>A</sup>Bruix and Sherman, Hepatology 53(3): 1020-1022 (2011); Jelic and Sotiropoulos, Ann Oncol 21(suppl 5): v59-v64 (2010); EASL-EORTC, Journal of Hepatology 56: 908-943 (2012).</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="left" id="entry-00002-en">
+                    <sup>B</sup>Khan et al., Gut. 61(12): 1657-1669 (2012); Eckel et al., Ann Oncol 21(suppl 5): v65-v69 (2010); Khan Gut 51: vil-vi9 (2002); Hezel AF and Zhu AX, The Oncologist. (13): 415-423 (2008).</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="left" id="entry-00003-en">D: See, e.g., the NCCN cancer treatment guidelines; ASCO treatment guidelines; ESMO treatment guidelines; Oxford Textbook of Oncology, Second Edition; Textbook of Medical Oncology, Informa Healthcare; Comprehensive Textbook of Oncology.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00007-en" level="1">EXAMPLES</heading>
+      <p id="p-00105-en" num="0125">The invention is further described in the following examples, which do not limit the scope of the invention described in the claims.</p>
+      <p id="p-00106-en" num="0126">Materials and Methods</p>
+      <p id="p-00107-en" num="0127">The following Materials and Methods were used in the Examples below.</p>
+      <p id="p-00108-en" num="0128">Study Cases</p>
+      <p id="p-00109-en" num="0129">The study cases were selected based on a search of clinical and pathology databases. Formalin fixed pathologic specimens of primary liver adenocarcinomas, hepatocellular carcinoma, and normal liver cases were selected. The distinction of an IHCC from perihilar carcinomas was based on evaluation of the surgical specimen, imaging and the operative report.</p>
+      <p id="p-00110-en" num="0130">Adenocarcinomas evaluated included tumors arising in the lung (n=22), esophagus and gastroesophageal junction (N=40), stomach (N=72), colon (N=40), pancreas (N=210), renal cell carcinoma (n=46), breast (n=34), bladder (N=8), endometrium (N=8), and ovary (N=6), representing the most common carcinomas that metastasize to the liver. In addition to known tumor types, 27 tumors of unknown origin were evaluated. All tumor types were placed on tissue microarrays constructed using 2×2 mm cores of paraffin embedded tissue. Entire sections of 30 IHCC and 30 pancreatic ductal adenocarcinomas were also evaluated. Staining with GAPDH/keratin was performed to validate the preservation of mRNA.</p>
+      <p id="p-00111-en" num="0131">RNA ISH Platform</p>
+      <p id="p-00112-en" num="0132">ViewRNA™ ISH is based on the branched DNA technology wherein signal amplification is achieved via a series of sequential steps. Each pair of bound target probe oligonucleotides acts as a template to hybridize a pre-amplifier molecule that in turn binds multiple amplifier molecules. Each amplifier molecule provides binding sites to multiple alkaline phosphatase (AP)-conjugated-oligonucleotides thereby creating a fully assembled signal amplification “tree” that has approximately 400 binding sites for the AP-labeled probe. Following sequential addition of the fast-red substrate, AP breaks down the substrate to form a precipitate (which forms a red dot that can be visualized by, e.g., a standard brightfield or fluorescent microscope) that allows in-situ detection of the specific target RNA molecule. The theoretical lower limit of detection is a single RNA transcript.</p>
+      <p id="p-00113-en" num="0133">RNA ISH probe sets for the ViewRNA™ Assay (Affymetrix, Santa Clara, Calif.) were designed against albumin transcripts as identified in the NCBI nucleotide database (GenBank Acc. No. NM<sub>—</sub>000477.5).</p>
+      <p id="p-00114-en" num="0134">Briefly, dissected tissues were fixed for &lt;24 hours in 10% Neutral Buffer Formalin at room temperature, followed by the standard formaldehyde-fixed, paraffin-embedded (FFPE) preparation. The FFPE tissues were sectioned at 5+/−1 micron and mounted on Surgipath X-tra® glass slides (Leica BioSystems, Buffalo Grove, Ill.), baked for 1 hour at 60° C. to ensure tissue attachment to the glass slides, and then subjected to xylene deparaffinization and ethanol dehydration. To unmask the RNA targets, dewaxed sections were incubated in 500 ml pretreatment buffer at 90-95° C. for 10 minutes and digested with 1:100 dilution protease at 40° C. for 10-20 minutes, followed by fixation with 10% formaldehyde at room temperature for 5 minutes. Unmasked tissue sections were subsequently hybridized with 1:40 dilution albumin probe sets for 2 hours at 40° C., followed by series of post-hybridization washes. Signal amplification was achieved via a series of sequential hybridizations and washes as described in the user's manual. Slides were post-fixed with 4% formaldehyde, counterstained with Gill's hematoxylin, mounted using Dako Ultramount (Dako, Carpinteria, Calif.), and visualized using a standard bright-field microscope.</p>
+      <p id="p-00115-en" num="0135">Automated ISH assays for mRNA were performed using ViewRNA™ RX reagents (Affymetrix, Santa Clara, Calif.) on the BOND RX advanced staining system controlled with BDZ 5.0 software (Leica Biosystems, Buffalo grove, IL). Tissue sections on slides were processed automatically from deparaffinization, through ISH staining to hematoxylin counterstaining; sections were coverslipped off-instrument. Briefly, 5 micron sections of FFPE tissue were mounted on Surgipath X-tra glass slides, baked for 1 hour at 60° C. and placed on the BOND RX for processing. The BOND RX user-selectable settings were the ViewRNA 1 protocol and ViewRNA Dewax1; ViewRNA HIER 10 min, ER2 (90); ViewRNA Enzyme1 (20); ViewRNA Probe Hybridization. With these settings, the RNA unmasking conditions for the liver tissue consisted of a 10 min incubation at 90° C. in Bond Epitope Retrieval Solution 2 (Leica Biosystems, Buffalo grove, IL) followed by 10 min incubation with Proteinase K from the BOND Enzyme Pretreatment Kit at 1:1000 dilution (Leica Biosystems, Buffalo Grove, Ill.). Albumin and GAPDH mRNA-targeting Probe Sets were diluted 1:20 in ViewRNA Probe Diluent (Affymetrix, Santa Clara, Calif.) for use on the automated platform.</p>
+      <p id="p-00116-en" num="0136">This automated assay was validated on 10 hepatocellular carcinomas, 10 IHCC and 20 pancreatic ductal adenocarcinomas.</p>
+      <p id="p-00117-en" num="0137">Quantitative Analysis</p>
+      <p id="p-00118-en" num="0138">The specificity of the signal permitted semiquantitative analysis and the results were recorded as follows:</p>
+      <p id="p-00119-en" num="0139">Cholangiocarcinoma: the percentage of positive tumor cells was recorded at intervals of 5%.</p>
+      <p id="p-00120-en" num="0140">Hepatocellular carcinoma: the tumors were grouped as negative, rare positive (0-10%), focally positive (11-50%), and diffuse positive (&gt;50%).</p>
+      <heading id="h-00008-en" level="1">Example 1</heading>
+      <heading id="h-00009-en" level="1">Albumin ISH of Normal and Cancer Tissue of the Liver</heading>
+      <p id="p-00121-en" num="0141">Intrahepatic cholangiocarcinoma (IHCC) is often a diagnosis of exclusion. Distinguishing IHCC from other metastatic adenocarcinomas based on histopathologic or immunohistochemical analysis is difficult. Therefore, patients are subjected to a high number of procedures and studies in search of a potential primary non-hepatic tumor. Albumin expression is restricted to the liver. Since all liver parenchymal cells are derived from a common embryonic progenitor, the aim of the present study was to confirm that albumin is useful as a biomarker for IHCC, utilizing a novel and highly sensitive RNA in situ hybridization (ISH) platform.</p>
+      <p id="p-00122-en" num="0142">To assess the prevalence of albumin as a specific marker of liver origin, 32 normal livers were stained and demonstrated diffuse positivity for albumin with periportal hepatocytes tending to stain more intensely (see <figref>FIG. 6</figref>). In all cases, the reactivity was dot-like, each likely representing a single albumin mRNA transcript. No staining was identified in Kupffer cells, endothelial cells, fibroblasts, or stroma. The native bile ducts were negative for albumin, including both large and small caliber ducts. However, reactive bile ductules in the setting of chronic hepatitis and biliary disease were strongly positive for albumin.</p>
+      <p id="p-00123-en" num="0143">Testing of hepatocellular carcinoma demonstrated 100% staining of all 42 tumors with a diffuse expression pattern (<figref>FIGS. 2 and 7</figref>). Eight of the tumors were well differentiated, 22 moderately differentiated, and 12 poorly differentiated, yet all demonstrated a diffuse expression pattern, highlighting that albumin is an intrinsic marker of primary liver cancers that is not lost along the spectrum of differentiation.</p>
+      <heading id="h-00010-en" level="1">Example 2</heading>
+      <heading id="h-00011-en" level="1">Albumin as a Novel Marker for IHCC</heading>
+      <p id="p-00124-en" num="0144">A total of 83 resected cases of IHCC were collected from with the mean age of the cohort being 66 years (range 37-86) and 49 patients (59%) were female.</p>
+      <p id="p-00125-en" num="0145">The overwhelming majority of patients presented with a single hepatic lesion (n=66); two cases showed 2 lesions each, while one patient showed multiple intrahepatic lesions. The tumors ranged in size from 1.2 to 10.5 cm (mean 5.5). Histologically, the majority of tumors showed gland formation; among these 8 tumors were classified as well-differentiated and 43 as moderately-differentiated. In 18 tumors, glandular differentiation was only focally observed, constituting &lt;5% of the tumor; these tumors were categorized as poorly differentiated.</p>
+      <p id="p-00126-en" num="0146">Of the 83 cases, 82 (99%) IHCCs were positive for albumin (<figref>FIGS. 3</figref>, <b>8</b> and <b>9</b>). The majority of patients (79%) demonstrated reactivity in greater than 50% of the tumor cells. The pattern of reactivity was similar to hepatocellular carcinoma, as the IHCCs demonstrated reactivity in &gt;50% of tumor cells, but notably, the signal intensity per tumor cell in intrahepatic cholangiocarcinomas was less than that seen in hepatocellular carcinomas. There was no evidence of non-specific signal and no staining was identified within stromal or endothelial cells. While all well-differentiated IHCCs were positive, two moderately-differentiated and a single poorly differentiated IHCC was negative for albumin.</p>
+      <p id="p-00127-en" num="0147">Within the positively stained tumors there was heterogeneity of staining where 8% had low (&lt;5% of tumor cells), 25% intermediate (5-50% of tumor cells), and 67% high (&gt;50% of tumor cells) staining frequencies. There was no significant difference in the percentage of positive tumor cells between the 3 grades of IHCC (grade1—84%, grade 2—70% and grade 3—71%, p=0.59).</p>
+      <p id="p-00128-en" num="0148">All 3 mixed hepatocellular-cholangiocarcinomas showed diffuse reactivity in both the hepatocellular and cholangiocarcinoma components.</p>
+      <heading id="h-00012-en" level="1">Example 3</heading>
+      <heading id="h-00013-en" level="1">Non-Hepatic Adenocarcinoma and Metastatic Tumors to the Liver</heading>
+      <p id="p-00129-en" num="0149">Conceptually, bile duct carcinomas appear histologically similar to IHCC, but it is well known that the natural histories of these diseases are quite distinct. Consistent with these differences, albumin RNA ISH was completely negative in both perihilar adenocarcinoma (n=24) and mid-distal bile duct adenocarcinomas (n=22).</p>
+      <p id="p-00130-en" num="0150">Clinically, the most difficult diagnostic problem has been the differentiation of intrahepatic cholangiocarcinoma from metastatic adenocarcinoma to the liver. Therefore, we tested various types of metastatic adenocarcinomas with albumin RNA ISH. Primary adenocarcinomas evaluated included lung (n=22), pancreas (n=210), esophagus and gastroesophageal junction (n=40), stomach (n=72), colon (n=40), bladder (transitional cell carcinoma) (n=8), ovary (n=6), endometrial (n=8), renal cell carcinomas (N=46), and breast (N=34). All tumors were negative for albumin. See <figref>FIG. 10</figref>.</p>
+      <p id="p-00131-en" num="0151">Intrahepatic metastasis from colon, breast, and lung (n=22) were also examined, in part to investigate the possibility that metastatic tumors to liver may acquire a profile that could mimic a primary hepatic neoplasm. The profile of these adenocarcinomas did not change when they metastasized to the liver: none of them were positive for albumin. However, some metastatic tumors showed infiltrative borders and a meticulous evaluation was often required to distinguish infiltrating tumor cells and non-neoplastic intratumoral bile ductules and hepatocytes, both of which were strongly positive for albumin.</p>
+      <heading id="h-00014-en" level="1">Example 4</heading>
+      <heading id="h-00015-en" level="1">Evaluation of Tumors of Unknown Origin</heading>
+      <p id="p-00132-en" num="0152">Tumors of unknown origin also present a significant clinical dilemma because it is a diagnosis of exclusion and treatment regimens have not been established. A retrospective series of 27 intrahepatic adenocarcinomas whose origin remain uncertain after detailed clinical, radiological, pathologic and immunohistochemical evaluation was evaluated. A total of 6 (22%) of these tumors were positive for albumin on in situ hybridization (Table 1), and therefore were re-classified as IHCC. The other 21 patients (mean age 65 years, 12 males) were negative for albumin. Amongst these latter cases, a clinical/radiologic diagnosis of IHCC was suspected in 7 cases while in 5 cases the histologic and immunohistochemical features raised the possibility of an IHCC, although a wide differential diagnosis including the possibility of metastases was eventually suggested. In the remaining cases the available clinical/radiologic/histologic/immunohistochemical data failed to identify a primary site.</p>
+      <p id="p-00133-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="259pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Clinicopathological details of tumors that were positive for albumin</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="28pt" align="center" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="63pt" align="left" />
+              <colspec colname="5" colwidth="49pt" align="left" />
+              <colspec colname="6" colwidth="63pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Results of</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Case</entry>
+                  <entry />
+                  <entry />
+                  <entry>immunoperoxidase</entry>
+                  <entry>Extent of</entry>
+                </row>
+                <row>
+                  <entry>number</entry>
+                  <entry>Age</entry>
+                  <entry>Sex</entry>
+                  <entry>stains</entry>
+                  <entry>disease</entry>
+                  <entry>Diagnosis</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>1</entry>
+                  <entry>69</entry>
+                  <entry>F</entry>
+                  <entry>Positive: keratin 7,</entry>
+                  <entry>Multiple liver</entry>
+                  <entry>Wide differential</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>keratin 19, keratin</entry>
+                  <entry>lesions,</entry>
+                  <entry>diagnosis including</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>20, CA 19.9</entry>
+                  <entry>thickening of</entry>
+                  <entry>intrahepatic</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Negative: TTF-1,</entry>
+                  <entry>colon,</entry>
+                  <entry>cholangiocarcinoma</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Hep Par 1</entry>
+                  <entry>peritoneal</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>disease with</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>ascites</entry>
+                </row>
+                <row>
+                  <entry>2</entry>
+                  <entry>55</entry>
+                  <entry>M</entry>
+                  <entry>Positive: Keratin</entry>
+                  <entry>Single 8</entry>
+                  <entry>Gallbladder</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>7, keratin 19,</entry>
+                  <entry>intrahepatic</entry>
+                  <entry>carcinoma versus</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>keratin 20</entry>
+                  <entry>lesion</entry>
+                  <entry>intrahepatic</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Negative: PSA,</entry>
+                  <entry>adjacent to</entry>
+                  <entry>cholangiocarcinoma</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>PSAP, TTF-1</entry>
+                  <entry>gallbladder</entry>
+                </row>
+                <row>
+                  <entry>3</entry>
+                  <entry>52</entry>
+                  <entry>M</entry>
+                  <entry>Positive: keratin 7,</entry>
+                  <entry>Single 9 cm</entry>
+                  <entry>Favor intrahepatic</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>keratin 19, CA 19</entry>
+                  <entry>intrahepatic</entry>
+                  <entry>cholangiocarcinoma</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>9</entry>
+                  <entry>mass</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Negative: keratin,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>20, CDX2</entry>
+                </row>
+                <row>
+                  <entry>4</entry>
+                  <entry>87</entry>
+                  <entry>F</entry>
+                  <entry>Negative: Keratin</entry>
+                  <entry>Multiple</entry>
+                  <entry>? Endometrial</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>7, Keratin 20,</entry>
+                  <entry>intrahepatic</entry>
+                  <entry>carcinoma, question</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>TTF-1</entry>
+                  <entry>lesions</entry>
+                  <entry>hepatocellular</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>carcinoma</entry>
+                </row>
+                <row>
+                  <entry>5</entry>
+                  <entry>72</entry>
+                  <entry>F</entry>
+                  <entry>Positive: keratin</entry>
+                  <entry>Multiple</entry>
+                  <entry>Primary</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>19, CA 19-9</entry>
+                  <entry>lesions both</entry>
+                  <entry>intrahepatic</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Negative: TTF-1</entry>
+                  <entry>lobes of liver</entry>
+                  <entry>cholangiocarcinoma</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>with</entry>
+                  <entry>versus metastasis</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>peritoneal</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>implants</entry>
+                </row>
+                <row>
+                  <entry>6</entry>
+                  <entry>85</entry>
+                  <entry>F</entry>
+                  <entry>Positive: keratin 7,</entry>
+                  <entry>Solitary mass</entry>
+                  <entry>Gallbladder</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>CA 19-9, CA 125,</entry>
+                  <entry>adjacent to</entry>
+                  <entry>carcinoma,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>CDX2</entry>
+                  <entry>gallbladder</entry>
+                  <entry>intrahepatic</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Negative: keratin</entry>
+                  <entry>with bile duct</entry>
+                  <entry>cholangiocarcinoma</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>20</entry>
+                  <entry>stricture</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00016-en" level="1">Example 5</heading>
+      <heading id="h-00017-en" level="1">Evaluation of Tumors of Unknown Origin</heading>
+      <p id="p-00134-en" num="0153">The two common challenges that face the pathologist evaluating a hepatic neoplasm are: 1) distinguishing a benign from a malignant hepatic neoplasm, and 2) at the poorly differentiated/undifferentiated end of the spectrum, hepatocellular carcinomas often cannot be distinguished from a metastatic adenocarcinoma. There are a wide variety of markers that assist in unraveling the latter diagnostic problem including AFP, polyclonal CEA, CD10, Heppar-1, and Arginase-1.</p>
+      <p id="p-00135-en" num="0154">Amongst these Arginase-1 has emerged as the marker of choice—its high sensitivity combined with the virtual absence of reactivity of non-hepatic neoplasms makes it an almost ideal assay (Yan et al., Am J Surg Pathol 34, 1147-1154 (2010)). Importantly, Arginase-1 also offers a high sensitivity for poorly differentiated hepatocellular carcinomas—86% in a recent analysis (Yan et al., Am J Surg Pathol 34, 1147-1154 (2010)). In that study, Arginase-1 outperformed Hep Par 1 with an overall sensitivity of 96% and 84%, respectively (Yan et al., Am J Surg Pathol 34, 1147-1154 (2010)). Among poorly differentiated hepatocellular carcinomas, however, the two stains may prove complimentary, since a significant percentage of hepatocellular carcinomas negative for Arginase were positive for Hep Par 1.</p>
+      <p id="p-00136-en" num="0155">In this example, albumin bISH (bDNA RNA ISH) was compared to these two leading markers of hepatocellular differentiation—Arginase-1 and Hep Par 1 when used for the diagnosis of HCC in formalin fixed biopsy material.</p>
+      <p id="p-00137-en" num="0156">Materials and Methods</p>
+      <p id="p-00138-en" num="0157">The following materials and methods were used in Example 5.</p>
+      <heading id="h-00018-en" level="2">Cases</heading>
+      <p id="p-00139-en" num="0158">The study cases were selected based on a search of a pathology database.</p>
+      <p id="p-00140-en" num="0159">Hepatocellular Carcinomas</p>
+      <p id="p-00141-en" num="0160">32 cases examples of non-neoplastic liver were examined Tissue microarrays from 76 HCCs were constructed. The arrays were composed of 3 mm cores of paraffin embedded tissue. Moderately and poorly differentiated hepatocellular carcinomas were overrepresented in this cohort. Expression of Arginase-1 and Hep Par 1 were examined on an immunohistochemical platform while that for albumin on a bISH platform (see below for details). Conventional tissue sections from 20 HCCs were also examined for the expression of albumin mRNA. The hepatocellular carcinomas were also graded as well, moderate, and poorly differentiated.</p>
+      <p id="p-00142-en" num="0161">Unclassified Tumors</p>
+      <p id="p-00143-en" num="0162">5 hepatic neoplasms were examined that were classified as undifferentiated carcinomas and lacked histological or immunohistochemical evidence of hepatocellular differentiation. These had previously undergone an extensive immunohistochemical workup. Six additional hepatic neoplasms were examined.</p>
+      <p id="p-00144-en" num="0163">Non-Hepatic Tumors</p>
+      <p id="p-00145-en" num="0164">Albumin expression was examined in a variety of non-hepatic tumors including adenocarcinomas from the lung, esophagus, stomach, colon, pancreas, breast, endometrium, ovary, and transitional cell carcinomas of bladder. In this analysis other mimics of hepatocellular carcinoma were also examined including neuroendocrine tumors of the gastrointestinal tract (n=31), neuroendocrine tumors of the pancreas (n=163) melanoma (n=15), and renal cell carcinoma (n=43). Additionally, 7 acinar cell carcinomas of the pancreas were evaluated.</p>
+      <heading id="h-00019-en" level="2">Immunohistochemistry</heading>
+      <p id="p-00146-en" num="0165">Immunohistochemistry for Hep Par 1 (Dako 1:25; Retrieval EDTA pH 9.0 for 20 mins) and Arginase (Cell Marque 1:600 (Retrieval Citrate pH 6.0 for 30 mins) was performed.</p>
+      <heading id="h-00020-en" level="2">In Situ Hybridization</heading>
+      <p id="p-00147-en" num="0166">Staining with GAPDH was performed as a positive control for mRNA preservation.</p>
+      <p id="p-00148-en" num="0167">In situ hybridization for albumin was performed using the ViewRNA™ technology (Affymetrix, Santa Clara, Calif.). ViewRNA™ in situ hybridization is based on the branched DNA technology wherein signal amplification is achieved via a series of sequential steps. For the particular assays performed within Example 5, each pair of bound target probe set polynucleotides acts a template to hybridize a pre-amplifier molecule that in turn binds multiple amplifier molecules. In turn, each amplifier molecule provides binding sites to multiple alkaline phosphatase (AP)-conjugated-polynucleotides thereby creating a fully assembled signal amplification “tree” that has approximately 400 binding sites for the AP-labeled probe. Following sequential addition of the fast-red substrate, the AP breaks down the substrate to form a precipitate (red dots) that allows in-situ detection of the specific target RNA molecule (<figref>FIG. 12</figref>).</p>
+      <p id="p-00149-en" num="0168">In situ hybridization probes (Affymetrix, Santa Clara, Calif.) were designed against albumin transcripts as identified in the NCBI nucleotide database. Briefly, dissected tissues were fixed for &lt;24 hours in 10% Neutral Buffer Formalin at room temperature, followed by the standard formaldehyde-fixed, paraffin-embedded (FFPE) preparation. The FFPE tissues were sectioned at 5+/−1 micron and mounted on Surgipath X-tra glass slide (Leica BioSystems, Buffalo Grove, Ill.), baked for 1 hour at 60° C. to ensure tissue attachment to the glass slides, and then subjected to xylene deparaffinization and ethanol dehydration. To unmask the RNA targets, dewaxed sections were incubated in 500 ml pretreatment buffer (Affymetrix/Santa Clara, Calif.) at 90-95° C. for 10 minutes and digested with 1:100 dilution protease at 40° C. (Affymetrix, Santa Clara, Calif.) for 10 minutes, followed by fixation with 10% formaldehyde at room temperature for 5 minutes. Unmasked tissue sections were subsequently hybridized with 1:50 dilution Albumin probe sets for 2 hours at 40° C., followed by series of post-hybridization washes. Signal amplification was achieved via a series of sequential hybridizations and washes as described in the user's manual. Slides were post-fixed with 4% formaldehyde, counterstained with Gill's hematoxylin, mounted using Dako Ultramount (Dako, Carpinteria, Calif.), and visualized using a standard bright-field microscope. An attempt was made to identify the same three HPFs that were examined on the immunohistochemical platform, and quantification was performed on similar lines.</p>
+      <p id="p-00150-en" num="0169">A semi-quantitative method of scoring was devised. Tumors demonstrating no staining at all were given a score of 0; &lt;5% of cells staining—score 1+, 5% to 50% —score 2+ and more than 50%—score 3. The immunohistochemical stains were graded for intensity: grade 1 and grade 2. The in situ hybridization stain was not graded since the two platforms could not be compared. However, based on prior experience with the technology, any dots in excess of 1 per 100 cells is considered positive.</p>
+      <p id="p-00151-en" num="0170">Results</p>
+      <p id="p-00152-en" num="0171">Demographics</p>
+      <p id="p-00153-en" num="0172">The mean age of the cohort of patients with hepatocellular carcinoma was 69 years (standard deviation 11) with 55 males and 21 females.</p>
+      <heading id="h-00021-en" level="2">Normal Liver and Background Cirrhosis</heading>
+      <p id="p-00154-en" num="0173">In all 32 cases examined normal hepatocytes were diffusely positive for albumin. The periportal hepatocytes stained more intensely than zone 3 hepatocytes.</p>
+      <p id="p-00155-en" num="0174">The cirrhotic nodules were diffuse positive for albumin and no regional variations were noted. The background liver showed cirrhosis in 70 of the 75 cases.</p>
+      <p id="p-00156-en" num="0175">Albumin—74 of 76 HCCs were positive for albumin (<figref>FIGS. 12</figref>, <b>13</b> and <b>14</b>). One of the tumors negative for albumin failed GAPDH and was not included in the final analysis. The suboptimal mRNA preservation was likely related to radiofrequency ablation. Among the positive cases, 72 cases showed reactivity in &gt;50% of the tumor, and all 74 cases showed characteristic dot like reactivity in &gt;5% of the tumor cells. All 3 examples of clear cell variants of hepatocellular carcinoma were positive for albumin with &gt;50% of the tumor positive is all 3 cases.</p>
+      <p id="p-00157-en" num="0176">Hep Par 1—68 of the 75 HCCs were positive for Hep Par1. The sensitivity of the assay was 91%. 5 of the 68 (7%) positive cases showed weak (1+) reactivity.</p>
+      <p id="p-00158-en" num="0177">Arginase-1—65 of the 75 HCCs were positive for Arginase-1. The sensitivity of the assay was 87%. 19 (29.2%) of the tumors that were positive for Arginase-1 were weakly (1+) positive.</p>
+      <p id="p-00159-en" num="0000">Comparison of Albumin with Hep Par 1 and Arginase-1</p>
+      <p id="p-00160-en" num="0178">The only hepatocellular carcinoma (moderately differentiated) that was negative for albumin was positive for both Hep Par 1 and Arginase-1. Among the 7 tumors negative for Hep Par 1, 3 were positive for Arginase-1 and among the 10 tumors negative for Arginase-1, 5 were positive for Hep Par 1.</p>
+      <heading id="h-00022-en" level="2">Automated Platform</heading>
+      <p id="p-00161-en" num="0179">15 hepatocellular carcinomas (whole sections) were examined for albumin. All 15 cases were diffusely positive (greater than 95%). Six additional hepatocellular carcinomas from 2 institutions were also evaluated, all of which were diffusely positive for albumin.</p>
+      <heading id="h-00023-en" level="2">Specificity of Albumin as a Marker of Hepatocellular Differentiation</heading>
+      <p id="p-00162-en" num="0180">Adenocarcinomas from the lung (n=22), pancreas (n=95), esophagus and gastric-cardia (n=40), stomach (n=72), colon (n=40), transitional cell carcinoma (n=8), ovary (n=6), and endometrial adenocarcinoma (n=8) were negative for albumin.</p>
+      <p id="p-00163-en" num="0181">Cases were evaluated that could potentially mimic hepatocellular carcinomas, including melanoma, renal cell carcinomas and pancreatic endocrine neoplasms, all of which were negative for albumin. However, 2 of 7 acinar cell carcinomas were positive for albumin.</p>
+      <heading id="h-00024-en" level="2">Difficult to Characterize Hepatic Neoplasms</heading>
+      <p id="p-00164-en" num="0182">Of the 5 undifferentiated tumors, 3 were positive for albumin (<figref>FIG. 15</figref>). One of the cases negative for bISH was eventually diagnosed as gallbladder carcinoma. The biopsy from case 3 was composed of mostly necrotic tissue and the few viable cells were negative for albumin. Based on the presence of cirrhosis and the markedly elevated levels of AFP a diagnosis of hepatocellular carcinoma was eventually favored.</p>
+      <p id="p-00165-en" num="0183">All five neoplasms were negative for Hep Par 1; however, 1 of the 3 tumors was positive for Arginase-1.</p>
+      <heading id="h-00025-en" level="1">DISCUSSION</heading>
+      <p id="p-00166-en" num="0184">The present results suggest that albumin bISH is superior to Arginase-1. A higher percentage of tumor cells were positive for albumin. Additionally, almost a third of the tumors that were positive for Arginase-1 showed only faint reactivity for this protein. In our experience this low intensity reactivity is often only equivocal evidence of hepatocellular differentiation. The strongly positive red dot-like staining pattern makes the bISH assay easier to interpret than immunohistochemistry. The interpretation was further simplified by the virtual absence of non-specific signal. It should be noted that this analysis was performed on routinely processed paraffin embedded tissue and there were no specific efforts to ensure preservation of RNA.</p>
+      <p id="p-00167-en" num="0185">Based on this and prior data the specificity of bISH for albumin and immunohistochemistry for Arginase-1 is roughly equivalent. Only rare non-hepatic tumors stain positively for Arginase-1—a single prostatic adenocarcinoma (Yan et al., Am J Surg Pathol 34, 1147-1154 (2010)). The increased sensitivity does not lead to a loss of specificity and a diverse group of carcinomas including those arising from the lung, breast, esophagus, stomach, colon, ovary, urinary bladder lacked reactivity for albumin.</p>
+      <p id="p-00168-en" num="0186">Prior efforts at detecting albumin in hepatic neoplasms used digoxin labeled oligonucleotide probes to label albumin mRNA and did not employ amplification (Kakar et al., American Journal of Clinical Pathology 119, 361-366 (2003); Oliveira et al., Am J Surg Pathol 24, 177-182 (2000); Krishna et al., Am J Surg Pathol 21, 147-152 (1997); Murray et al., J Clin Pathol 45, 21-24 (1992); D'Errico et al., Hum Pathol 27, 599-604 (1996); D'Errico et al., Diagn Mol Pathol 7, 289-294 (1998); Yamaguchi et al., Virchows Arch B Cell Pathol Incl Mol Pathol. 64, 361-365; Wood et al., Journal of Cutaneous Pathology 36, 262-266 (2009)). Nevertheless, the sensitivity of the assay ranged from 93-95% (Kakar et al., American Journal of Clinical Pathology 119, 361-366 (2003); Oliveira et al., Am J Surg Pathol 24, 177-182 (2000); Krishna et al., Am J Surg Pathol 21, 147-152 (1997)). Similar to this analysis, there was no loss of sensitivity with poorly differentiated hepatocellular carcinomas and clear cell carcinoma.</p>
+      <p id="p-00169-en" num="0187">The bDNA RNA ISH assay used in the present example significantly increased the sensitivity of the assay and was capable of detecting copy numbers as low as 1-2 per cell. As is evident from the studies using traditional in situ hybridization platforms, amplification is not critical for detecting albumin in some hepatocellular carcinomas, which express high levels of albumin. However, in approximately 5% of hepatocellular carcinomas albumin is expressed in low levels requiring an amplification technique to uncover its presence, thus accounting for the almost perfect sensitivity of the current assay.</p>
+      <p id="p-00170-en" num="0188">The present findings were validated by evaluating a cohort of poorly differentiated/undifferentiated carcinomas of the liver. These five cases, identified over a 5-year period, lacked unequivocal histological or immunohistochemical evidence of hepatocellular differentiation (although in retrospect Arginase-1 was positive in 1 of 3 cases evaluated). Three of the five cases were strongly (100% of cells stained) positive for albumin. In retrospect, one case represented a gallbladder carcinoma, and was negative for albumin.</p>
+      <p id="p-00171-en" num="0189">Other potential mimics of hepatocellular carcinoma, including melanoma, renal cell carcinoma and neuroendocrine tumors, were negative for albumin. The significance of reactivity in two of the seven acinar cell carcinomas evaluated is uncertain.</p>
+      <p id="p-00172-en" num="0190">The bISH platform used in the present example offers pathologists a novel means of detecting mRNA, including products that are expressed at low copy numbers. The availability of this technology is particularly valuable for detecting secreted proteins such as albumin as well as targets against which an immunohistochemical approach has been unsuccessful. The bright red dots (from the use of fast red with the alkaline phosphatase label probes) generated by this technology make the assessment of these preparations straightforward. It should be emphasized that the presence of even rare dots (&gt;3 per cell) is strong evidence of a positive signal since non-specific signal is minimal—in our experience &lt;1 dot per 10 cells.</p>
+      <p id="p-00173-en" num="0191">To conclude, in situ hybridization offers a robust means of detecting hepatocellular differentiation, superior to all currently available platforms. The ability to automate the in situ hybridization process opens up the prospect of its use in the routine diagnostic pathology laboratory.</p>
+      <heading id="h-00026-en" level="1">Other Embodiments</heading>
+      <p id="p-00174-en" num="0192">It is to be understood that while the invention has been described in conjunction with the detailed description thereof, the foregoing description is intended to illustrate and not limit the scope of the invention, which is defined by the scope of the appended claims. Other aspects, advantages, and modifications are within the scope of the following claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method of determining the origin of a tumor in a subject, the method comprising:
+<claim-text>contacting a sample comprising cells or tissue from the tumor with a plurality of polynucleotide probes that bind specifically to albumin mRNA in situ;</claim-text><claim-text>detecting binding of the probes to albumin mRNA, and</claim-text><claim-text>identifying a sample in which the probes bind to albumin mRNA as a tumor of hepatic origin, or identifying a sample in which the probes do not bind to albumin mRNA as a tumor of nonhepatic origin.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en" independent="true">
+      <claim-text>
+        <b>2</b>. A method of selecting a treatment for a subject who has a tumor, the method comprising:
+<claim-text>contacting a sample comprising cells or tissue from the tumor with a plurality of polynucleotide probes that bind specifically to albumin mRNA in situ;</claim-text><claim-text>detecting binding of the probes to albumin mRNA, and</claim-text><claim-text>identifying a sample in which the probes bind to albumin mRNA as a tumor of hepatic origin, and selecting for the subject a treatment for a hepatic tumor; or</claim-text><claim-text>identifying a sample in which the probes do not bind to albumin mRNA as a tumor of nonhepatic origin; determining the tissue of origin of the tumor; and</claim-text><claim-text>selecting for the subject a treatment for a cancer of the tissue of origin.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en" independent="true">
+      <claim-text>
+        <b>3</b>. A method of treating a subject who has a tumor, the method comprising:
+<claim-text>contacting a sample comprising cells or tissue from the tumor with a plurality of polynucleotide probes that bind specifically to albumin mRNA in situ;</claim-text><claim-text>detecting binding of the probes to albumin mRNA, and</claim-text><claim-text>identifying a sample in which the probes bind to albumin mRNA as a tumor of hepatic origin, and administering to the subject a treatment for a hepatic tumor; or</claim-text><claim-text>identifying a sample in which the probes do not bind to albumin mRNA as a tumor of nonhepatic origin; determining the tissue of origin of the tumor; and</claim-text><claim-text>administering to the subject a treatment for a cancer of the tissue of origin.</claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising determining whether a tumor of hepatic origin is Hepatocellular Carcinoma (HCC) or Intrahepatic Cholangiocarcinoma (IHCC), or determining whether a tumor of hepatic origin is HCC, IHCC, or a bile duct adenoma (BDA).</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein whether the tumor is HCC or IHC or BDA is determined based on morphology of the tumor cells in the sample, wherein a trabecular arrangement of tumor cells resembling normal hepatocytes indicates the presence of HCC, wherein a tubulo-glandular arrangement of tumor cells resembling adenocarcinoma indicates the presence of IHCC, and wherein tumor architecture resembling adenoma with a well differentiated glandular pattern indicates the presence of BDA.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising one or more of:
+<claim-text>identifying a sample in which the probes bind to albumin mRNA, and wherein there is a gradient of albumin mRNA present in hepatoctyes with low to moderate expression in Zones 1 and 3 and high expression in Zone 2, as comprising normal liver;</claim-text><claim-text>identifying a sample in which the probes bind to albumin mRNA and wherein there is moderate to high levels of albumin mRNA expression, and tumor architecture that is recognizable as hepatocytic in origin with a trabecular pattern based on histopathological analysis, as comprising Hepatocellular Carcinoma;</claim-text><claim-text>identifying a sample in which the probes bind to albumin mRNA and wherein there is a range of albumin mRNA expression, and tumor architecture that resembles adenocarcinoma with a tubulo-glandular pattern based on histopathological analysis, as comprising Intrahepatic Cholangiocarcinoma;</claim-text><claim-text>identifying a sample in which the probes bind to albumin mRNA, there are low levels of albumin mRNA expression, and tumor architecture resembling adenoma with a well differentiated glandular pattern as comprising BDA; and</claim-text><claim-text>identifying a sample in which the probes do not bind to albumin mRNA in the tumor cells, wherein there is adjacent normal tissue shows albumin expression, and/or tumor architecture that resembles a pattern from a primary cancer, as comprising metastatic liver disease.</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, further comprising one or more of:
+<claim-text>identifying a sample in which the probes bind to albumin mRNA, and wherein there is a gradient of albumin mRNA present in hepatoctyes with low to moderate expression in Zones 1 and 3 and high expression in Zone 2, as comprising normal liver, and not treating the subject;</claim-text><claim-text>identifying a sample in which the probes bind to albumin mRNA and wherein there is moderate to high levels of albumin mRNA expression, and tumor architecture that is recognizable as hepatocytic in origin with a trabecular pattern based on histopathological analysis, as comprising Hepatocellular Carcinoma (HCC), and selecting a treatment for HCC for the subject;</claim-text><claim-text>identifying a sample in which the probes bind to albumin mRNA and wherein there is a range of albumin mRNA expression, and tumor architecture that resembles adenocarcinoma with a tubulo-glandular pattern based on histopathological analysis, as comprising Intrahepatic Cholangiocarcinoma (IHCC), and selecting a treatment for IHCC for the subject;</claim-text><claim-text>identifying a sample in which the probes bind to albumin mRNA, there are low levels of albumin mRNA expression, and tumor architecture resembling adenoma with a well differentiated glandular pattern as comprising BDA, and selecting a treatment for BDA for the subject; and</claim-text><claim-text>identifying a sample in which the probes do not bind to albumin mRNA in the tumor cells, wherein there is adjacent normal tissue shows albumin expression, and/or tumor architecture that resembles a pattern from a primary cancer, as comprising metastatic liver disease, and selecting a treatment for the primary cancer for the subject.</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method of <claim-ref idref="clm-00003-en">claim 3</claim-ref>, further comprising one or more of:
+<claim-text>identifying a sample in which the probes bind to albumin mRNA, and wherein there is a gradient of albumin mRNA present in hepatoctyes with low to moderate expression in Zones 1 and 3 and high expression in Zone 2, as comprising normal liver, and not treating the subject;</claim-text><claim-text>identifying a sample in which the probes bind to albumin mRNA and wherein there is moderate to high levels of albumin mRNA expression, and tumor architecture that is recognizable as hepatocytic in origin with a trabecular pattern based on histopathological analysis, as comprising Hepatocellular Carcinoma (HCC), and administering a treatment for HCC to the subject;</claim-text><claim-text>identifying a sample in which the probes bind to albumin mRNA and wherein there is a range of albumin mRNA expression, and tumor architecture that resembles adenocarcinoma with a tubulo-glandular pattern based on histopathological analysis, as comprising Intrahepatic Cholangiocarcinoma (IHCC), and administering a treatment for IHCC to the subject;</claim-text><claim-text>identifying a sample in which the probes bind to albumin mRNA, there are low levels of albumin mRNA expression, and tumor architecture resembling adenoma with a well differentiated glandular pattern as comprising BDA, and administering a treatment for BDA to the subject; and</claim-text><claim-text>identifying a sample in which the probes do not bind to albumin mRNA in the tumor cells, wherein there is adjacent normal tissue shows albumin expression, and/or tumor architecture that resembles a pattern from a primary cancer, as comprising metastatic liver disease, and administering a treatment for the primary cancer to the subject.</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en" independent="true">
+      <claim-text>
+        <b>9</b>. A method of making a differential diagnosis between metastatic liver disease and a primary tumor of hepatic origin in a subject who has a tumor, the method comprising:
+<claim-text>contacting a sample comprising tissue from the tumor with a plurality of polynucleotide probes that bind specifically to albumin mRNA in situ;</claim-text><claim-text>detecting binding of the probes to albumin mRNA, and</claim-text><claim-text>identifying a sample in which the probes bind to albumin mRNA as a tumor of hepatic origin, or</claim-text><claim-text>identifying a sample in which the probes do not bind to albumin mRNA as a tumor of nonhepatic origin.</claim-text></claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the sample is from a tumor that is in the liver of the subject.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the sample is from a tumor that is not in the liver of the subject.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the plurality of probes comprises probes that bind to a plurality of target regions in the albumin mRNA.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the binding of the probes to albumin mRNA is detected using branched nucleic acid signal amplification.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the probes are branched DNA probes.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, comprising contacting the sample with a plurality of probes that comprises one or more label extender probes that bind to a plurality of target regions in the albumin mRNA; hybridizing one or more pre-amplifier probes to the one or more label extender probes; hybridizing one or more amplifier probes to the pre-amplifier probes; and hybridizing one or more label probes to the one or more amplifier probes.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein the label probe is conjugated to alkaline phosphatase (AP), and binding of the probe is detected using fast red or fast blue as a substrate for the alkaline phosphatase.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the sample is a biopsy sample obtained from the subject.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the sample is a formaldehyde-fixed, paraffin-embedded (FFPE) clinical sample.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the tissue comprises a plurality of individually identifiable cells.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising:
+<claim-text>contacting a sample comprising tissue from the tumor with a plurality of polynucleotide probes that bind specifically to mRNA encoding a housekeeping gene (HKG) in situ;</claim-text><claim-text>detecting binding of the probes to HKG mRNA, and</claim-text><claim-text>selecting for further analysis a sample in which binding of probes to the HKG mRNA is detected, or rejecting a sample in which binding of probes to the HKG mRNA is not detected.</claim-text></claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. The method of <claim-ref idref="clm-00020-en">claim 20</claim-ref>, wherein the binding of the probes to albumin mRNA or HKG mRNA is detected using branched nucleic acid signal amplification.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. The method of <claim-ref idref="clm-00021-en">claim 21</claim-ref>, wherein the probes are branched DNA probes.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>23</b>. The method of <claim-ref idref="clm-00022-en">claim 22</claim-ref>, comprising contacting the sample with a plurality of probes that comprises one or more label extender probes that bind to a plurality of target regions in the albumin or HKG mRNA; hybridizing one or more pre-amplifier probes to the one or more label extender probes; hybridizing one or more amplifier probes to the pre-amplifier; and hybridizing one or more label probes to the one or more amplifier probes.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>24</b>. The method of <claim-ref idref="clm-00023-en">claim 23</claim-ref>, wherein the label probe is conjugated to alkaline phosphatase (AP), binding of the albumin probes to albumin mRNA is detected using fast red as a substrate for the alkaline phosphatase, and binding of the HKG probes to HKG mRNA is detected using fast blue as a substrate for the alkaline phosphatase.</claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en">
+      <claim-text>
+        <b>25</b>. A kit for performing the method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the kit comprises a plurality of polynucleotide probes that bind specifically to albumin mRNA in situ comprising:
+<claim-text>i. one or more label extender probes that bind to a plurality of target regions in the albumin mRNA;</claim-text><claim-text>ii. one or more pre-amplifier probes that are capable of hybridizing to the one or more label extender probes;</claim-text><claim-text>iii. one or more amplifier probes that are capable of hybridizing to the pre-amplifier probes; and</claim-text><claim-text>iv. one or more label probes that are capable of hybridizing to the one or more amplifier probes.</claim-text></claim-text>
+    </claim>
+    <claim num="26" id="clm-00026-en">
+      <claim-text>
+        <b>26</b>. The kit of <claim-ref idref="clm-00025-en">claim 25</claim-ref>, wherein the kit further comprises a plurality of polynucleotide probes that bind specifically to mRNA encoding a housekeeping gene (HKG) in situ. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150247204A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247204A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150247204A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247204A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150247204A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247204A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150247204A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247204A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150247204A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247204A1-20150903-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150247204A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247204A1-20150903-D00006.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150247204A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247204A1-20150903-D00007.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150247204A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247204A1-20150903-D00008.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150247204A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247204A1-20150903-D00009.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150247204A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247204A1-20150903-D00010.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150247204A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247204A1-20150903-D00011.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150247204A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247204A1-20150903-D00012.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150247204A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247204A1-20150903-D00013.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150247204A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247204A1-20150903-D00014.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150247204A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247204A1-20150903-D00015.TIF" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150247204A1_00016.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247204A1-20150903-D00016.TIF" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150247204A1_00017.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247204A1-20150903-D00017.TIF" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150247204A1_00018.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247204A1-20150903-D00018.TIF" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="US20150247204A1_00019.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247204A1-20150903-D00019.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150247204A1.PDF" type="pdf" size="3309190" pages="39" />
+</lexisnexis-patent-document>

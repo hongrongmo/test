@@ -1,0 +1,1093 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2942419A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151111" time-inserted="082409" date-changed="20160126" time-changed="192216">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="122016727">
+        <country>EP</country>
+        <doc-number>2942419</doc-number>
+        <kind>A1</kind>
+        <date>20151111</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>14760750</doc-number>
+        <date>20140228</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>jpn</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151111">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2013042854</doc-number>
+        <date>20130305</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2013042854</doc-number>
+        <kind>A</kind>
+        <date>20130305</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2014001108</doc-number>
+        <kind>W</kind>
+        <date>20140228</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>2013042854</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>2014001108</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>JP20130042854</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>WO2014JP01108</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151112">
+      <gazette-reference>
+        <date>20151111</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151111</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151111</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151112">
+      <request-for-examination>
+        <date>20150728</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20160126">
+      <classification-ipcr sequence="1">
+        <text>C23C   2/02        20060101AFI20140925BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>2</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140925</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C21D   1/76        20060101ALI20140925BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>1</main-group>
+        <subgroup>76</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140925</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C21D   9/46        20060101ALI20140925BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>9</main-group>
+        <subgroup>46</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140925</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C22C  18/04        20060101ALI20140925BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>18</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140925</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>C22C  38/00        20060101ALI20140925BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140925</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>C22C  38/04        20060101ALI20140925BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140925</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="7">
+        <text>C22C  38/58        20060101ALI20140925BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>58</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140925</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="8">
+        <text>C23C   2/06        20060101ALI20140925BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>2</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140925</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="9">
+        <text>C23C   2/28        20060101ALI20140925BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>2</main-group>
+        <subgroup>28</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140925</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20160126">
+      <classification-cpc sequence="1">
+        <text>C23C   2/02        20130101 FI20160122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>2</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B32B  15/013       20130101 LI20160122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>32</class>
+        <subclass>B</subclass>
+        <main-group>15</main-group>
+        <subgroup>013</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C21D   1/76        20130101 LI20160122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>1</main-group>
+        <subgroup>76</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C21D   9/46        20130101 LI20160122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>9</main-group>
+        <subgroup>46</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C22C  18/04        20130101 LI20141014BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>18</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141014</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C22C  38/00        20130101 LI20141014BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141014</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C22C  38/002       20130101 LI20160122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>002</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C22C  38/02        20130101 LI20160122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C22C  38/04        20130101 LI20160122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>C22C  38/58        20130101 LA20141014BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>58</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20141014</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>C23C   2/06        20130101 LI20141014BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>2</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141014</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>C23C   2/28        20130101 LI20141014BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>2</main-group>
+        <subgroup>28</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141014</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>C23C   2/34        20130101 LI20160121BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>2</main-group>
+        <subgroup>34</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160121</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>C23C   8/14        20130101 LI20160121BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>8</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160121</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">5</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151111" lang="ger" format="original">HOCHFESTES FEUERVERZINKTES STAHLBLECH UND VERFAHREN ZUR HERSTELLUNG DAVON</invention-title>
+    <invention-title id="title_eng" date-changed="20151111" lang="eng" format="original">HIGH-STRENGTH HOT-DIP GALVANIZED STEEL SHEET AND PROCESS FOR MANUFACTURING SAME</invention-title>
+    <invention-title id="title_fre" date-changed="20151111" lang="fre" format="original">TÔLE D'ACIER GALVANISÉE PAR IMMERSION À CHAUD À RÉSISTANCE ÉLEVÉE ET PROCÉDÉ PERMETTANT DE FABRIQUER CETTE DERNIÈRE</invention-title>
+    <parties date-changed="20151111">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>JFE Steel Corporation</orgname>
+            <registered-number>100773292</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>2-3, Uchisaiwaicho 2-chome Chiyoda-ku</address-1>
+              <city>Tokyo 100-0011</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>MAKIMIZU, Yoichi</name>
+            <address>
+              <address-1>c/o Intellectual Property Dept. JFE Steel Corporation 2-3 Uchisaiwai-cho 2-chome Chiyoda-ku</address-1>
+              <city>Tokyo 100-0011</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>SUZUKI, Yoshitsugu</name>
+            <address>
+              <address-1>c/o Intellectual Property Dept. JFE Steel Corporation 2-3 Uchisaiwai-cho 2-chome Chiyoda-ku</address-1>
+              <city>Tokyo 100-0011</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>NAGATAKI, Yasunobu</name>
+            <address>
+              <address-1>c/o Intellectual Property Dept. JFE Steel Corporation 2-3 Uchisaiwai-cho 2-chome Chiyoda-ku</address-1>
+              <city>Tokyo 100-0011</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Hoffmann Eitle</name>
+            <registered-number>100061036</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Patent- und Rechtsanwälte PartmbB Arabellastraße 30</address-1>
+              <city>81925 München</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151111">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP14001108</doc-number>
+        <date>20140228</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014136417</doc-number>
+        <date>20140912</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20160121">
+      <main-family family-id="167599998">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20160017471</doc-number>
+            <kind>A1</kind>
+            <date>20160121</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150123919</doc-number>
+            <kind>A</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>105026599</doc-number>
+            <kind>A</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2942419</doc-number>
+            <kind>A1</kind>
+            <date>20151111</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014169489</doc-number>
+            <kind>A</kind>
+            <date>20140918</date>
+          </document-id>
+          <application-date>
+            <date>20130305</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014136417</doc-number>
+            <kind>A1</kind>
+            <date>20140912</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="167599994">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20160017471</doc-number>
+            <kind>A1</kind>
+            <date>20160121</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150123919</doc-number>
+            <kind>A</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>105026599</doc-number>
+            <kind>A</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2942419</doc-number>
+            <kind>A1</kind>
+            <date>20151111</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014169489</doc-number>
+            <kind>A</kind>
+            <date>20140918</date>
+          </document-id>
+          <application-date>
+            <date>20130305</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014136417</doc-number>
+            <kind>A1</kind>
+            <date>20140912</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151111" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0001">A high-strength galvanized steel sheet whose base steel is a high-strength steel sheet containing Si, Mn, and B and which has good coating adhesiveness and a production method therefor are provided.</p>
+    <p id="p-a-00002-en" num="0002">A base steel sheet containing Si, Mn, and B is oxidized at a heating temperature of steel sheet T that satisfies formula below, and then subjected to reduction-annealing and galvanizing. <maths id="mathsa-00001-en" num=""><math display="block"><mrow><mi mathvariant="normal">T</mi><mo>≥</mo><mn mathvariant="normal">58.65</mn><mo>×</mo><mfenced open="[" close="]"><mi mathvariant="normal">Si</mi></mfenced><mo>+</mo><mn mathvariant="normal">294400</mn><mo>×</mo><mfenced open="[" close="]"><mi mathvariant="normal">B</mi></mfenced><mo>-</mo><mn mathvariant="normal">13.59</mn><mo>×</mo><mfenced open="[" close="]"><msub><mi mathvariant="normal">O</mi><mn mathvariant="normal">2</mn></msub></mfenced><mo>+</mo><mn mathvariant="normal">548.1</mn></mrow></math><img id="imga-00001-en" wi="135" he="6" img-content="math" file="imga0001.tif" img-format="tif" /></maths> [Si]: amount of Si in the steel on a mass percent basis<br /> [B]: amount of B in the steel on a mass percent basis<br /> [O<sub>2</sub>]: O<sub>2</sub> concentration on a volume percent basis in an atmosphere at oxidizing treatment<img id="imga-00002-en" wi="165" he="112" img-content="drawing" file="imgaf001.tif" img-format="tif" /></p>
+  </abstract>
+  <legal-data date-changed="20151223">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20151111</date>
+      </publication-date>
+      <event-code-1>17P</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXAMINATION FILED</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2942419A1</docdb-publication-number>
+      <docdb-application-id>421779368</docdb-application-id>
+      <effective-date>
+        <date>20150728</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20151111</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2942419A1</docdb-publication-number>
+      <docdb-application-id>421779368</docdb-application-id>
+      <corresponding-kind>A1</corresponding-kind>
+      <legal-designated-states>
+        <country>AL</country>
+        <country>AT</country>
+        <country>BE</country>
+        <country>BG</country>
+        <country>CH</country>
+        <country>CY</country>
+        <country>CZ</country>
+        <country>DE</country>
+        <country>DK</country>
+        <country>EE</country>
+        <country>ES</country>
+        <country>FI</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>GR</country>
+        <country>HR</country>
+        <country>HU</country>
+        <country>IE</country>
+        <country>IS</country>
+        <country>IT</country>
+        <country>LI</country>
+        <country>LT</country>
+        <country>LU</country>
+        <country>LV</country>
+        <country>MC</country>
+        <country>MK</country>
+        <country>MT</country>
+        <country>NL</country>
+        <country>NO</country>
+        <country>PL</country>
+        <country>PT</country>
+        <country>RO</country>
+        <country>RS</country>
+        <country>SE</country>
+        <country>SI</country>
+        <country>SK</country>
+        <country>SM</country>
+        <country>TR</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20151111</date>
+      </publication-date>
+      <event-code-1>AX</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXTENSION OF THE EUROPEAN PATENT TO</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2942419A1</docdb-publication-number>
+      <docdb-application-id>421779368</docdb-application-id>
+      <countries-concerned>
+        <country>BA</country>
+        <country>ME</country>
+      </countries-concerned>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151111">
+    <heading id="h-00001-en">Technical Field</heading>
+    <p id="p-00001-en" num="0001">The present invention relates to a high-strength galvanized steel sheet whose base steel is a high-strength steel sheet containing Si, Mn, and B and a method for producing the high-strength galvanized steel sheet.</p>
+    <heading id="h-00002-en">Background Art</heading>
+    <p id="p-00002-en" num="0002">In recent years, coated steel sheets produced by imparting corrosion resistance to base steel sheets, in particular, galvanized steel sheets or alloyed galvanized steel sheets having good corrosion resistance, are used in the fields of automobiles, home electric appliances, construction materials, etc. From the viewpoints of improving automobile fuel efficiency and automobile collision safety, the strength of automobile body materials is desirably increased and the thickness decreased, and the weight of automobile bodies is desirably decreased and the strength increased. Thus, use of high-strength steel sheets in automobile body materials has been encouraged.</p>
+    <p id="p-00003-en" num="0003">Typically, a galvanized steel sheet is produced by using, as a base steel sheet, a thin steel sheet prepared by hot-rolling or further cold-rolling a slab, and recrystallization-annealing and galvanizing the base steel sheet in a CGL. The galvanized steel sheet may be further subjected to an alloying treatment after galvanizing.</p>
+    <p id="p-00004-en" num="0004">Addition of Si and Mn is effective for increasing strength of steel sheet. However, during annealing, Si and Mn undergo oxidation even in a reducing N<sub>2</sub> + H<sub>2</sub> atmosphere that does not cause oxidation of Fe (that reduces Fe oxides), and oxides of Si and Mn are formed on the outermost surface of steel sheet. Since the oxides of Si and Mn decrease wettability between molten zinc and base steel sheet during galvanizing treatment, coating defects frequently occur in the steel sheet containing Si and Mn. Even if the coating defects do not occur, a problem of poor coating adhesiveness arises.</p>
+    <p id="p-00005-en" num="0005">Patent Literature 1 discloses a method for producing a galvanized steel sheet whose base steel is a high-strength steel sheet having a high Si content. According to this method, reduction-annealing is performed after formation of oxide films on the base steel sheet surface. However, the effect is instable according to Patent Literature 1. Patent Literatures 2 to 8 disclose methods aimed at stabilizing the effect by specifying oxidation speed or reduction amount, or by actually measuring oxide film thickness in an oxidation zone and controlling the oxidation conditions and reduction conditions based on the measured results.</p>
+    <p id="p-00006-en" num="0006">Regarding a galvanized steel sheet whose base steel sheet is a high strength steel sheet containing Si and Mn, Patent Literature 9 specifies the amounts of Si-containing oxides in the coating layer and the base steel sheet of an alloyed galvanized steel sheet. Patent Literature 10 discloses a galvanized steel sheet and an alloyed galvanized steel sheet in which the amounts of the Si-containing oxides in the coating layer and the base steel sheet are specified as in Patent Literature 9. Patent Literature 11 specifies the contents of Si and Mn that take form of oxides in the coating layer.</p>
+    <heading id="h-00003-en">Citation List</heading>
+    <heading id="h-00004-en">Patent Literature</heading>
+    <p id="p-00007-en" num="0007">
+      <ul id="ul-00001-en" list-style="none" compact="compact">
+        <li>PTL 1: Japanese Unexamined Patent Application Publication No. <patcit id="pcit-00001" dnum="JP55122865A"><text>55-122865</text></patcit></li>
+        <li>PTL 2: Japanese Unexamined Patent Application Publication No. <patcit id="pcit-00002" dnum="JP4202630A"><text>4-202630</text></patcit></li>
+        <li>PTL 3: Japanese Unexamined Patent Application Publication No. <patcit id="pcit-00003" dnum="JP4202631A"><text>4-202631</text></patcit></li>
+        <li>PTL 4: Japanese Unexamined Patent Application Publication No. <patcit id="pcit-00004" dnum="JP4202632A"><text>4-202632</text></patcit></li>
+        <li>PTL 5: Japanese Unexamined Patent Application Publication No. <patcit id="pcit-00005" dnum="JP4202633A"><text>4-202633</text></patcit></li>
+        <li>PTL 6: Japanese Unexamined Patent Application Publication No. <patcit id="pcit-00006" dnum="JP4254531A"><text>4-254531</text></patcit></li>
+        <li>PTL 7: Japanese Unexamined Patent Application Publication No. <patcit id="pcit-00007" dnum="JP4254532A"><text>4-254532</text></patcit></li>
+        <li>PTL 8: Japanese Unexamined Patent Application Publication No. <patcit id="pcit-00008" dnum="JP7034210A"><text>7-34210</text></patcit></li>
+        <li>PTL 9: Japanese Unexamined Patent Application Publication No. <patcit id="pcit-00009" dnum="JP2006233333A"><text>2006-233333</text></patcit></li>
+        <li>PTL 10: Japanese Unexamined Patent Application Publication No. <patcit id="pcit-00010" dnum="JP2007211280A"><text>2007-211280</text></patcit></li>
+        <li>PTL 11: Japanese Unexamined Patent Application Publication No. <patcit id="pcit-00011" dnum="JP2008184642A"><text>2008-184642</text></patcit></li>
+      </ul>
+    </p>
+    <heading id="h-00005-en">Summary of Invention</heading>
+    <heading id="h-00006-en">Technical Problem</heading>
+    <p id="p-00008-en" num="0008">According to the methods for producing a galvanized steel sheet described in Patent Literatures 1 to 8, since Si oxides are formed on the steel sheet surface during continuous annealing, sufficient coating adhesiveness is not always achieved.</p>
+    <p id="p-00009-en" num="0009"> According to the production methods described in Patent Literatures 9 to 11, galvanized steel sheets exhibit good fatigue resistance but alloyed galvanized steel sheets sometimes fail to exhibit sufficient fatigue resistance. Patent Literatures 9 and 10 are directed to improving wettability and phosphatability and do not consider fatigue resistance.</p>
+    <p id="p-00010-en" num="0010">The present invention has been made under the aforementioned circumstances and aims to provide a high-strength galvanized steel sheet whose base steel is a high-strength steel sheet containing Si, Mn, and B and which has good coating adhesiveness, and a method for producing the high-strength galvanized steel sheet. The invention also aims to provide an alloyed high-strength galvanized steel sheet having good fatigue resistance and a method for producing the alloyed high-strength galvanized steel sheet. Solution to Problem</p>
+    <p id="p-00011-en" num="0011">As discussed above, addition of solution-strengthening elements such as Si and Mn is effective for increasing strength of steel sheet. It is also known that addition of B improves hardenability of steel sheet and causes a good strength-ductility balance even in a high-strength steel sheet. In particular, high-strength steel sheets used in automobile applications strongly require improvement of strength-ductility balance since press-forming is performed. However, it has been found that when B is added to steel sheet together with Si, oxidation reaction of Si is accelerated on the steel sheet surface during annealing.</p>
+    <p id="p-00012-en" num="0012">Extensive studies have been conducted and it has been found that in the case where a high-strength steel sheet containing Si, Mn, and B is used as a base steel sheet, controlling the heating temperature of the base steel sheet and the oxygen concentration in an oxidation treatment based on the Si and B contents causes formation of iron oxides enough for suppressing the oxidation reaction of Si on the steel sheet surface and that a high-strength galvanized steel sheet having stable good coating adhesiveness without coating defects can be obtained.</p>
+    <p id="p-00013-en" num="0013">Moreover, in general, oxidizing treatment is conducted to obtain good coating adhesiveness and oxides of Si and Mn are formed in the steel sheet surface layer after reduction-annealing. However, it has been found that when oxides of Si and Mn remain in the steel sheet surface layer under the coating layer after alloying treatment, cracks start to propagate from the oxides and thus fatigue resistance is degraded.</p>
+    <p id="p-00014-en" num="0014">The present invention has been made based on these findings and has following features. <ol><li>[1] A method for producing a high-strength galvanized steel sheet, comprising;<br /> oxidizing a base steel sheet containing Si, Mn, and B at a heating temperature of steel sheet T°C that satisfies formula (1) below,<br /> reduction-annealing the oxidized base steel sheet, and galvanizing the reduction-annealed base steel sheet. <maths id="maths-00001-en" num=""><math display="block"><mrow><mi mathvariant="normal">T</mi><mo>≥</mo><mn mathvariant="normal">58.65</mn><mo>×</mo><mfenced open="[" close="]"><mi mathvariant="normal">Si</mi></mfenced><mo>+</mo><mn mathvariant="normal">294400</mn><mo>×</mo><mfenced open="[" close="]"><mi mathvariant="normal">B</mi></mfenced><mo>-</mo><mn mathvariant="normal">13.59</mn><mo>×</mo><mfenced open="[" close="]"><msub><mi mathvariant="normal">O</mi><mn mathvariant="normal">2</mn></msub></mfenced><mo>+</mo><mn mathvariant="normal">548.1</mn></mrow></math><img id="img-00001-en" wi="154" he="5" img-content="math" file="imgb0001.tif" img-format="tif" /></maths> [Si]: content of Si in the base steel sheet on a mass percent basis<br /> [B]: content of B in the base steel sheet on a mass percent basis<br /> [O<sub>2</sub>]: O<sub>2</sub> concentration on a volume percent basis in an atmosphere at oxidizing treatment</li><li>[2] The method for producing a high-strength galvanized steel sheet according to [1], further comprising; after galvanizing, performing an alloying treatment at a temperature of 460°C to 600°C for 10 to 60 seconds.</li><li>[3] The method for producing a high-strength galvanized steel sheet according to [1] or [2], wherein the base steel sheet has a composition containing, on a mass percent basis, C: 0.01 to 0.20%, Si: 0.1 to 2.0%, Mn: 1.0 to 3.0%, B: 0.0005 to 0.005%, and the balance being Fe and unavoidable impurities.</li><li>[4] A high-strength galvanized steel sheet produced by the method according to [1] or [3], wherein, in the base steel sheet surface layer having a thickness of 5 µm under the coating layer, an amount of Si oxides is 0.05 g/m<sup>2</sup> or more on a Si basis and an amount of Mn oxides is 0.05 g/m<sup>2</sup> or more on a Mn basis.</li><li>[5] A high-strength galvanized steel sheet produced by the method according to [2] or [3], wherein, in the coating layer, an amount of Si oxides is 0.05 g/m<sup>2</sup> or more on a Si basis and an amount of Mn oxides is 0.05 g/m<sup>2</sup> or more on a Mn basis, and in the base steel sheet surface layer having a thickness of 5 µm under the coating layer, an amount of Si oxides is 0.01 g/m<sup>2</sup> or less on a Si basis and an amount of Mn oxides is 0.01 g/m<sup>2</sup> or less on a Mn basis.</li></ol></p>
+    <p id="p-00015-en" num="0015">In the present invention, "high-strength galvanized steel sheet" means galvanized steel sheet having a tensile strength TS of 440 MPa or more. The high-strength galvanized steel sheet of the present invention may be a cold-rolled steel sheet or a hot-rolled steel sheet. For the purposes of the present invention, a zinc-coated steel sheet obtained by galvanizing is referred to as a galvanized steel sheet irrespective of whether the galvanized steel sheet has been subjected to an alloying treatment or not. In other words, in the present invention, a galvanized steel sheet not subjected to an alloying treatment and a galvanized steel sheet subjected to an alloying treatment are both referred to as a galvanized steel sheet. Advantageous Effects of Invention</p>
+    <p id="p-00016-en" num="0016">According to the present invention, a high-strength galvanized steel sheet whose base steel is a high-strength steel sheet containing Si, Mn, and B and which exhibits good coating adhesiveness can be obtained. A high-strength galvanized steel sheet subjected to an alloying treatment also exhibits good fatigue resistance.</p>
+    <heading id="h-00007-en">Brief Description of Drawings</heading>
+    <p id="p-00017-en" num="0017">[<figref>Fig. 1] Fig. 1</figref> is a graph showing the relationship between oxidation furnace delivery temperature and heating temperature of steel sheet obtained by formula (1). Description of Embodiments</p>
+    <p id="p-00018-en" num="0018">The present invention will now be specifically described.</p>
+    <p id="p-00019-en" num="0019">First, an oxidizing treatment that precedes an annealing step is described. As mentioned above, adding Si, Mn, etc., to steel is effective for increasing strength of steel sheet. However, when a steel sheet containing such elements is annealed prior to galvanizing, Si and Mn oxides are formed on the steel sheet surface and it becomes difficult to ensure coatability due to the presence of Si and Mn oxides on the steel sheet surface.</p>
+    <p id="p-00020-en" num="0020">Studies have found that changing the conditions of annealing prior to galvanizing so as to induce oxidation of Si and Mn inside the steel sheet and prevent oxidation of Si and Mn on the steel sheet surface will improve coatability, increase the reactivity between the coating layer and the steel sheet, and improve the coating adhesiveness.</p>
+    <p id="p-00021-en" num="0021">In order to induce oxidation of Si and Mn inside the steel sheet and prevent oxidation of Si and Mn on the steel sheet surface, it is effective to perform an oxidizing treatment prior to the annealing step and then perform reduction-annealing, galvanizing, and, if needed, an alloying treatment. It has also been found that a particular amount or more of iron oxides must be obtained by the oxidizing treatment. However, in a Si-containing steel, oxidation is suppressed during the oxidizing treatment because of the increased Si content, and thus, it is difficult to obtain a required amount of iron oxides. It has also been found that incorporation of B accelerates oxidation of Si on the steel sheet surface during the annealing step and thus the required amount of iron oxides obtained in the oxidizing treatment is further increased.</p>
+    <p id="p-00022-en" num="0022">In view of the above, an idea of specifying the oxidation furnace delivery temperature, that is, the heating temperature of steel sheet, and the oxygen concentration in the atmosphere based on the Si and B contents in order to optimize the oxidizing treatment and obtain the required amount of oxides has been conceived.</p>
+    <p id="p-00023-en" num="0023">Steel sheets with different Si contents and B contents were used to investigate the oxygen concentration in the oxidation furnace atmosphere and the oxidation furnace delivery temperature that can achieve good coating adhesiveness. The results are shown in Table 1. <tables id="tables-00001-en" num="0001"><table frame="all"><title>[Table 1]</title><tgroup cols="7"><colspec colnum="1" colname="col1" colwidth="14mm" /><colspec colnum="2" colname="col2" colwidth="20mm" /><colspec colnum="3" colname="col3" colwidth="19mm" /><colspec colnum="4" colname="col4" colwidth="20mm" /><colspec colnum="5" colname="col5" colwidth="29mm" /><colspec colnum="6" colname="col6" colwidth="40mm" /><colspec colnum="7" colname="col7" colwidth="27mm" /><thead><row><entry align="center" valign="middle">Steel Sheet No.</entry><entry align="center" valign="middle">Si content in steel sheet (mass%)</entry><entry align="center" valign="middle">Mn content in steel sheet (mass%)</entry><entry align="center" valign="middle">B content in steel sheet (mass%)</entry><entry align="center" valign="middle">O<sub>2</sub> concentration in oxidation furnace atmosphere (vol%)</entry><entry align="center" valign="middle">Oxidation furnace delivery temperature at which good coating adhesiveness is obtained (°C)</entry><entry align="center" valign="middle">Average heating rate in oxidation furnace (°C/sec)</entry></row></thead><tbody><row><entry align="center" valign="middle">A</entry><entry align="center" valign="middle">0.3</entry><entry align="center" valign="middle">2.5</entry><entry align="center" valign="middle">0.003</entry><entry align="center" valign="middle">0.1</entry><entry align="center" valign="middle">650</entry><entry align="center" valign="middle">15</entry></row><row><entry align="center" valign="middle">B</entry><entry align="center" valign="middle">0.5</entry><entry align="center" valign="middle">2.5</entry><entry align="center" valign="middle">0.0015</entry><entry align="center" valign="middle">1.0</entry><entry align="center" valign="middle">610</entry><entry align="center" valign="middle">14</entry></row><row><entry align="center" valign="middle">C</entry><entry align="center" valign="middle">0.5</entry><entry align="center" valign="middle">2.5</entry><entry align="center" valign="middle">0.0015</entry><entry align="center" valign="middle">0.1</entry><entry align="center" valign="middle">630</entry><entry align="center" valign="middle">15</entry></row><row><entry align="center" valign="middle">D</entry><entry align="center" valign="middle">1.5</entry><entry align="center" valign="middle">2.6</entry><entry align="center" valign="middle">0.0015</entry><entry align="center" valign="middle">2.0</entry><entry align="center" valign="middle">650</entry><entry align="center" valign="middle">15</entry></row><row><entry align="center" valign="middle">E</entry><entry align="center" valign="middle">0.15</entry><entry align="center" valign="middle">2.3</entry><entry align="center" valign="middle">0.001</entry><entry align="center" valign="middle">0.1</entry><entry align="center" valign="middle">580</entry><entry align="center" valign="middle">15</entry></row><row><entry align="center" valign="middle">F</entry><entry align="center" valign="middle">0.8</entry><entry align="center" valign="middle">1.9</entry><entry align="center" valign="middle">0</entry><entry align="center" valign="middle">2.0</entry><entry align="center" valign="middle">570</entry><entry align="center" valign="middle">15</entry></row><row><entry align="center" valign="middle">G</entry><entry align="center" valign="middle">0.45</entry><entry align="center" valign="middle">1.5</entry><entry align="center" valign="middle">0</entry><entry align="center" valign="middle">0.1</entry><entry align="center" valign="middle">570</entry><entry align="center" valign="middle">15</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00024-en" num="0024">The evaluation method for coating adhesiveness is the same as that described in Examples below. Multi regression analysis was conducted to analyze the influence of Si content, B content, and oxygen concentration in the oxidation furnace atmosphere on the oxidation furnace delivery temperature (heating temperature of steel sheet). As a result, formula (1) below was found. <maths id="maths-00002-en" num="(1)"><math display="block"><mrow><mi mathvariant="normal">T</mi><mo>≥</mo><mn mathvariant="normal">58.65</mn><mo>×</mo><mfenced open="[" close="]"><mi mathvariant="normal">Si</mi></mfenced><mo>+</mo><mn mathvariant="normal">294400</mn><mo>×</mo><mfenced open="[" close="]"><mi mathvariant="normal">B</mi></mfenced><mo>-</mo><mn mathvariant="normal">13.59</mn><mo>×</mo><mfenced open="[" close="]"><msub><mi mathvariant="normal">O</mi><mn mathvariant="normal">2</mn></msub></mfenced><mo>+</mo><mn mathvariant="normal">548.1</mn></mrow></math><img id="img-00002-en" wi="135" he="14" img-content="math" file="imgb0002.tif" img-format="tif" /></maths> T: heating temperature of steel sheet in °C in oxidizing treatment, [Si]: amount of Si in the steel sheet on a mass percent basis, [B]: amount of B in the steel sheet on a mass percent basis, and [O<sub>2</sub>]: O<sub>2</sub> concentration on a volume percent basis in the atmosphere inside the oxidation furnace.</p>
+    <p id="p-00025-en" num="0025">Comparison of the oxidation furnace delivery temperature described in Table 1 and the heating temperature of steel sheet obtained by formula (1) above is shown in <figref>Fig. 1</figref>. The coefficient of correlation R<sup>2</sup> is about 0.98 and this shows a significantly high correlation. The coefficient related to the B content is a particularly large value and this shows that although B is an additional trace element, B has a large influence and is a particularly important factor for determining oxidation conditions.</p>
+    <p id="p-00026-en" num="0026">In view of the above, in the present invention, an oxidizing treatment is to be conducted at a heating temperature of steel sheet T that satisfies formula (1) described above. As discussed above, the foremost feature of the present invention is specifying oxidation conditions by taking the influence of B into account and this is an important requirement. When the temperature is increased to a temperature that satisfies formula (1) in the oxidation furnace before the annealing step, that is, when the heating temperature of steel sheet is T, a high-strength steel sheet containing Si and B exhibits good coating adhesiveness. However, excessive oxidation causes detachment of iron oxides in a reducing atmosphere furnace in the subsequent reduction-annealing step and leads to pick-up. Accordingly, the heating temperature of steel sheet T at oxidizing treatment is preferably 850°C or lower. Since a required amount of iron oxides are formed on the steel sheet surface once the temperature of steel sheet reaches the heating temperature that satisfies formula (1), there is no need to hold that temperature. However, when the temperature of steel sheet is increased at a significantly high rate, the subsequent reduction-annealing process begins before a required amount of iron oxides are formed. Thus, the average heating rate at oxidizing treatment is preferably 50 °C/sec or less. From the production efficiency viewpoint, the average heating rate at oxidizing treatment is preferably 1 °C/sec or more.</p>
+    <p id="p-00027-en" num="0027">The atmosphere in the oxidation furnace at oxidizing treatment has the oxygen concentration controlled as described above. The oxidation concentration at oxidizing treatment satisfying formula (1) is preferably 0.05% or more. At a concentration less than 0.05%, a sufficient amount of iron oxides are not always obtained although formula (1) is satisfied. The oxygen concentration is preferably 0.05% or more to stably obtain a sufficient amount of iron oxides. A satisfactory effect can be obtained as long as the oxygen concentration and the temperature of steel sheet are within the prescribed ranges even when the atmosphere contains N<sub>2</sub>, CO, CO<sub>2</sub>, H<sub>2</sub>O, and unavoidable impurities.</p>
+    <p id="p-00028-en" num="0028">The type of the oxidation furnace used to perform the oxidizing treatment is not particularly limited but a direct heating furnace equipped with direct burners is preferably used. The direct heating heats a steel sheet by directly applying burner flame onto the steel sheet surface, the burner flame being created by burning a mixture of air and fuel such as coke oven gas (COG) which is a by-product gas of steel-making plant. Since the direct heating offers a higher steel sheet heating rate than radiation heating, the direct heating is advantageous in that the heating furnace length can be decreased and the line speed can be increased. In the case where the air ratio of the direct heating is adjusted to 0.95 or higher to increase the ratio of the air to the fuel, unburned oxygen remains in the flame and can accelerate oxidation of steel sheet. Thus, the oxygen concentration of the atmosphere can be controlled by adjusting the air ratio. Examples of the fuel for the direct heating include COG and liquefied natural gas (LNG).</p>
+    <p id="p-00029-en" num="0029">The steel sheet after the above-described oxidizing treatment is subjected to reduction-annealing. The conditions of reduction-annealing are not particularly limited. The atmosphere gas introduced into the annealing furnace preferably contains 1 to 20% by volume of H<sub>2</sub> with the balance being N<sub>2</sub> and unavoidable impurities, which is a typical atmosphere. If the H<sub>2</sub> concentration in the atmosphere gas is less than 1% by volume, there is not enough H<sub>2</sub> to reduce iron oxides on the steel sheet surface. At a concentration exceeding 20% by volume, reduction of iron oxides saturates and the excess H<sub>2</sub> is wasted. Moreover, oxidation caused by H<sub>2</sub>O in the furnace occurs excessively at a dew point exceeding 0°C, and excessive internal oxidation of Si occurs. Thus, the dew point is preferably 0°C or lower. In this manner, an iron-reducing atmosphere is created inside the annealing furnace and iron oxides generated by the oxidizing treatment are reduced. During this process, some oxygen atoms separated from iron oxides by reduction diffuse into the interior of the steel sheet and react with Si and Mn, thereby causing internal oxidation of Si and Mn. Oxidation of Si and Mn inside the steel sheet decreases the amounts of Si oxides and Mn oxides on the steel sheet surface that comes into contact with a molten coating material and thus the coating adhesiveness is improved.</p>
+    <p id="p-00030-en" num="0030">Reduction-annealing is preferably performed at a steel sheet temperature of 700°C to 900°C from the viewpoint of mechanical properties controlling. The soaking time is preferably 10 to 300 seconds.</p>
+    <p id="p-00031-en" num="0031">After reduction-annealing, the steel sheet is cooled to a temperature of 440°C to 550°C and then galvanized. The galvanizing treatment is conducted by using a coating bath having a molten Al content of 0.12 to 0.22% by mass if the coating layer is not to be alloyed, and by using a coating bath having a molten Al content of 0.08 to 0.18% by mass if the coating layer is to be alloyed. The steel sheet having a temperature of 440°C to 550°C is dipped in the coating bath and the coating weight is adjusted by gas wiping or the like. The coating bath temperature is 440°C to 500°C. If the alloying treatment is to be performed, the galvanized steel sheet is preferably heated at 460°C to 600°C for 10 to 60 seconds. At a temperature exceeding 600°C, coating adhesiveness is deteriorated. At a temperature lower than 460°C, alloying does not proceed.</p>
+    <p id="p-00032-en" num="0032">If the alloying treatment is to be conducted, the degree of alloying (Fe content (%) in the coating layer) is adjusted to 7 to 15% by mass. When the degree of alloying is less than 7% by mass, alloying occurs unevenly, appearance is degraded, and slidability is degraded due to generation of ζ phases. When the degree of alloying exceeds 15% by mass, a large amount of hard and brittle Γ phases generate and coating adhesiveness is degraded.</p>
+    <p id="p-00033-en" num="0033">A high-strength galvanized steel sheet of the present invention is produced by the process described above.</p>
+    <p id="p-00034-en" num="0034">A high-strength galvanized steel sheet produced by the above-described method is described next. Note that in the description below, the unit of the content of the respective elements of the steel composition and the respective elements in the coating layer composition is "% by mass" and "%" is used to denote % by mass unless otherwise noted.</p>
+    <p id="p-00035-en" num="0035">First, a preferable steel composition is described.</p>
+    <heading id="h-00008-en">C: 0.01 to 0.20%</heading>
+    <p id="p-00036-en" num="0036">Carbon (C) induces formation of microstructure such as martensite and thus improves formability. The C content is preferably 0.01% or more for this purpose. At a C content exceeding 0.20%, however, weldability is degraded. Thus, the C content is preferably 0.01% or more and 0.20% or less.</p>
+    <heading id="h-00009-en">Si: 0.1 to 2.0%</heading>
+    <p id="p-00037-en" num="0037">Silicon (Si) is an element effective for strengthening steel. At a Si content less than 0.1%, expensive alloying elements will be needed to obtain high strength, which is not preferable economically. At a Si content exceeding 2.0%, the heating temperature of steel sheet that satisfies formula (1) becomes high and thus operational problems may arise. Accordingly, the Si content is preferably 0.1% or more and 2.0% or less.</p>
+    <heading id="h-00010-en">Mn: 1.0 to 3.0%</heading>
+    <p id="p-00038-en" num="0038">Manganese (Mn) is an element effective for increasing strength of steel. Mn content of 1.0% or more is preferable to ensure strength. At a Mn content exceeding 3.0%, it may be difficult to obtain good weldability and good balance between strength and ductility. Accordingly, the Mn content is preferably 1.0% or more and 3.0% or less.</p>
+    <heading id="h-00011-en">B: 0.0005 to 0.005%</heading>
+    <p id="p-00039-en" num="0039">Boron (B) is an element effective for improving hardenability of steel. At a B content less than 0.0005%, it is difficult to obtain a hardening effect. At a B content exceeding 0.005%, the oxidation furnace delivery temperature that satisfies formula (1) becomes high and thus operational problems may arise. Accordingly, the B content is preferably 0.0005% or more and 0.005% or less.</p>
+    <p id="p-00040-en" num="0040">In order to control the balance between strength and ductility, at least one element selected from Al: 0.01 to 0.1%, Mo: 0.05 to 1.0%, Nb: 0.005 to 0.05%, Ti: 0.005 to 0.05%, Cu: 0.05 to 1.0%, Ni: 0.05 to 1.0%, and Cr: 0.01 to 0.8% may be added if needed.</p>
+    <p id="p-00041-en" num="0041">In the case where these elements are to be added, the reasons for limiting the optimum contents are as follows.</p>
+    <p id="p-00042-en" num="0042">Aluminum (Al) is thermodynamically most readily oxidizable and undergoes oxidation before Si and Mn. Thus, Al has an effect of suppressing oxidation of Si and Mn on the steel sheet surface and accelerating oxidation of Si and Mn inside the steel sheet. This effect is obtained at an Al content of 0.01% or more. At an Al content exceeding 0.1%, the cost increases. Accordingly, the Al content is preferably 0.01% or more and 0.1% or less.</p>
+    <p id="p-00043-en" num="0043">At a Mo content less than 0.05%, the effect of adjusting strength and the effect of improving coating adhesiveness exhibited when Mo is added together with Nb, Ni, or Cu are not easily obtained. At a Mo content exceeding 1.0%, the cost increases. Accordingly, the Mo content is preferably 0.05% or more and 1.0% or less.</p>
+    <p id="p-00044-en" num="0044">At a Nb content less than 0.005%, the effect of adjusting strength and the effect of improving coating adhesiveness exhibited when Nb is added together with Mo are not easily obtained. At a Nb content exceeding 0.05%, the cost increases. Accordingly, the Nb content is preferably 0.005% or more and 0.05% or less.</p>
+    <p id="p-00045-en" num="0045">At a Ti content less than 0.005%, the effect of adjusting strength is not easily obtained. At a Ti content exceeding 0.05%, coating adhesiveness may be degraded. Accordingly, the Ti content is preferably 0.005% or more and 0.05% or less.</p>
+    <p id="p-00046-en" num="0046">At a Cu content less than 0.05%, the effect of accelerating formation of retained γ phases and the effect of improving coating adhesiveness exhibited when Cu is added together with Ni or Mo are not easily obtained. At a Cu content exceeding 1.0%, the cost may increase. Accordingly, the Cu content is preferably 0.05% or more and 1.0% or less.</p>
+    <p id="p-00047-en" num="0047">At a Ni content less than 0.05, the effect of accelerating formation of retained γ phases and the effect of improving coating adhesiveness exhibited when Ni is added together with Cu or Mo are not easily obtained. At a Ni content exceeding 1.0%, the cost may increase. Accordingly, the Ni content is preferably 0.05% or more and 1.0% or less.</p>
+    <p id="p-00048-en" num="0048">At a Cr content less than 0.01%, it is difficult to obtain hardenability and the balance between strength and ductility may be degraded. At a Cr content exceeding 0.8%, the cost increases. Accordingly, the Cr content is preferably 0.01% or more and 0.8% or less.</p>
+    <p id="p-00049-en" num="0049">The balance is Fe and unavoidable impurities.</p>
+    <p id="p-00050-en" num="0050">Next, internal oxides of Si and Mn formed after reduction-annealing, galvanizing, and if needed, alloying treatment that follow the oxidizing treatment are described.</p>
+    <p id="p-00051-en" num="0051">Typically, a galvanized steel sheet is produced by annealing a base steel sheet in a reducing atmosphere, dipping the base steel sheet in a zinc coating bath to conduct galvanizing, withdrawing the galvanized steel sheet from the zinc coating bath, and adjusting the coating weight by using gas wiping nozzles. If needed, an alloying treatment is performed in an alloying heating furnace to alloy the coating layer. In order to increase strength of the galvanized steel sheet, addition of Si, Mn, B, etc., to the base steel sheet is effective as mentioned above. However, during the annealing process, Si and Mn added to the steel sheet form oxides on the steel sheet surface and it becomes difficult to obtain good coating adhesiveness. In contrast, according to the present invention, an oxidizing treatment is conducted before reduction-annealing and under oxidation conditions suitable for the Si and B contents so as to oxidize Si and Mn inside the steel sheet and prevent oxidation of Si and Mn on the steel sheet surface. As a result, the coatability is improved, the reactivity between the coating layer and the steel sheet can be increased, and the coating adhesiveness can be improved. In a galvanized steel sheet not subjected to an alloying treatment, internal oxides that include Si and Mn oxides formed during reduction-annealing remain inside the steel sheet under the coating layer. However, in a galvanized steel sheet subjected to an alloying treatment, Fe-Zn alloying reaction proceeds from the interface between the coating layer and the steel sheet and thus the internal oxides diffuse into the coating layer. Thus, it is believed that the amount of internal oxides in the steel sheet surface layer under the coating layer relates to coating adhesiveness for a galvanized steel sheet not subjected to an alloying treatment and the amount of internal oxides contained in the coating layer relates to coating adhesiveness for a galvanized steel sheet subjected to an alloying treatment.</p>
+    <p id="p-00052-en" num="0052">The inventors of the present invention have focused on the oxides present in the steel sheet under the coating layer and the oxides present in the coating layer, and studied the relationship between the coating adhesiveness and the oxides of Si and Mn. It has been found that a galvanized steel sheet not subjected to an alloying treatment exhibits good coating adhesiveness when the amount of Si oxides and the amount of Mn oxides contained in the steel sheet surface layer having a thickness of 5 µm under the coating layer are each 0.05 g/m<sup>2</sup> or more and that a galvanized steel sheet subjected to an alloying treatment exhibits good coating adhesiveness when the amount of Si oxides and the amount of Mn oxides contained in the coating layer are each 0.05 g/m<sup>2</sup> or more. In the case where the amount of the Si oxides and the amount of Mn oxides are each less than 0.05 g/m<sup>2</sup>, the state of the steel sheet surface before galvanizing is presumably such that Si and Mn exist as oxides on the steel sheet surface without undergoing internal oxidation and this state is detrimental to obtaining good coating adhesiveness. In the case where the requirement of the present invention is met for only one of Si and Mn, presumably only that element undergoes internal oxidation and the other element exists as oxides on the steel sheet surface and adversely affects the coatability and coating adhesiveness. Accordingly, both Si and Mn need to undergo internal oxidation. The feature of the present invention is that the amount of Si oxides and the amount of Mn oxides in the aforementioned region are each 0.05 g/m<sup>2</sup> or more, which is an important requirement. The upper limits of the amount of Si oxides and the amount of Mn oxides are not particularly specified. Since advantageous effects saturate above 1.0 g/m<sup>2</sup>, the upper limits are preferably 1.0 g/m<sup>2</sup>. The amount of Si oxides, which is 0.05 g/m<sup>2</sup> or more, is on a Si basis. The amount of Mn oxides, which is 0.05 g/m<sup>2</sup> or more, is on a Mn basis. The amounts of Si oxides and Mn oxides can be measured by the method described in Examples below.</p>
+    <p id="p-00053-en" num="0053">It has also been found that fatigue resistance of an alloyed galvanized steel sheet has a close correlation with the amounts of Si oxides and Mn oxides in the steel sheet surface layer under the coating layer. It has been found that fatigue resistance is improved when the amount of Si oxides and the amount of Mn oxides in the steel sheet surface layer having a thickness of 5 µm under the coating layer are each 0.01 g/m<sup>2</sup> or less. Although the mechanism with which fatigue resistance is improved by controlling the amount of oxides in the steel sheet surface layer under the coating layer of the alloyed galvanized steel sheet is not exactly clear, it is believed that oxides in this region serve as starting points of cracks attributable to fatigue. It is believed that when oxides that serve as starting points of cracks are present, cracks readily occur under tensile stress since the alloyed galvanized steel sheet has a hard and brittle coating layer. The cracks propagate from the coating surface layer to the interface between the coating layer and the steel sheet. When oxides are present in the steel sheet surface layer having a thickness of 5 µm under the coating layer, cracks propagate further due to the oxides serving as starting points. In contrast, when the amount of Si oxides and the amount of Mn oxides in the steel sheet surface layer having a thickness of 5 µm are each 0.01 g/m<sup>2</sup> or less, presumably the cracks in the coating layer do not propagate into the interior of the steel sheet, and thus fatigue resistance is improved.</p>
+    <p id="p-00054-en" num="0054">The production method used to induce oxides in such a state is not particularly limited. The state of oxides can be controlled by controlling the steel sheet temperature and treatment time in the alloying treatment. In the case where the steel sheet temperature is low or the treatment time is short, the Fe-Zn alloying reaction progresses insufficiently from the interface between the coating layer and the steel sheet and thus the amount of oxides remaining on the steel sheet surface layer is increased. Thus, a steel sheet temperature and a treatment time needed to obtain sufficient Fe-Zn alloying reaction must be ensured. Preferably, as discussed above, the alloying treatment is performed at a steel sheet temperature of 460°C to 600°C for a treatment time of 10 to 60 seconds.</p>
+    <p id="p-00055-en" num="0055">A galvanized steel sheet not subjected to an alloying treatment exhibits good fatigue resistance even when the amount of Si and the amount of Mn in the oxides contained in the steel sheet surface layer having a thickness of 5 µm under the coating layer are each 0.01 g/m<sup>2</sup> or more. The coating layer of the galvanized steel sheet is not alloyed and is substantially purely composed of zinc. Thus, compared to the coating layer of the galvanized steel sheet subjected to an alloying treatment, the coating layer of the galvanized steel sheet not subjected to an alloying treatment has high ductility. Accordingly, cracks do not occur under tensile stress and presumably thus the influence of the oxides present in the steel sheet surface layer under the coating layer is not significant.</p>
+    <heading id="h-00012-en">EXAMPLE 1</heading>
+    <p id="p-00056-en" num="0056">Steels having compositions shown in Table 2 were melted and formed into slabs, and the slabs were hot-rolled, pickled, and cold-rolled to prepare cold-rolled steel sheets having a thickness of 1.2 mm. <tables id="tables-00002-en" num="0002"><table frame="all"><title>[Table 2]</title><tgroup cols="7"><colspec colnum="1" colname="col1" colwidth="13mm" /><colspec colnum="2" colname="col2" colwidth="12mm" /><colspec colnum="3" colname="col3" colwidth="12mm" /><colspec colnum="4" colname="col4" colwidth="10mm" /><colspec colnum="5" colname="col5" colwidth="15mm" /><colspec colnum="6" colname="col6" colwidth="12mm" /><colspec colnum="7" colname="col7" colwidth="14mm" /><thead><row><entry namest="col1" nameend="col7" align="right" valign="top">(mass%)</entry></row><row><entry align="center" valign="top">Steel</entry><entry align="center" valign="top">C</entry><entry align="center" valign="top">Si</entry><entry align="center" valign="top">Mn</entry><entry align="center" valign="top">B</entry><entry align="center" valign="top">P</entry><entry align="center" valign="top">S</entry></row></thead><tbody><row><entry align="center">A</entry><entry align="center">0.01</entry><entry align="center">0.2</entry><entry align="center">2.0</entry><entry align="center">0.001</entry><entry align="center">0.06</entry><entry align="center">0.003</entry></row><row><entry align="center">B</entry><entry align="center">0.08</entry><entry align="center">0.25</entry><entry align="center">1.5</entry><entry align="center">0.001</entry><entry align="center">0.03</entry><entry align="center">0.001</entry></row><row><entry align="center">C</entry><entry align="center">0.06</entry><entry align="center">0.15</entry><entry align="center">2.3</entry><entry align="center">0.001</entry><entry align="center">0.02</entry><entry align="center">0.001</entry></row><row><entry align="center">D</entry><entry align="center">0.11</entry><entry align="center">0.8</entry><entry align="center">1.9</entry><entry align="center">0.0015</entry><entry align="center">0.01</entry><entry align="center">0.001</entry></row><row><entry align="center">E</entry><entry align="center">0.10</entry><entry align="center">0.75</entry><entry align="center">2.0</entry><entry align="center">0.006</entry><entry align="center">0.01</entry><entry align="center">0.001</entry></row><row><entry align="center">F</entry><entry align="center">0.09</entry><entry align="center">0.15</entry><entry align="center">2.3</entry><entry align="center">1 0.001</entry><entry align="center">0.01</entry><entry align="center">0.001</entry></row><row><entry align="center">G</entry><entry align="center">0.08</entry><entry align="center">1.5</entry><entry align="center">2.6</entry><entry align="center">0.0015</entry><entry align="center">0.01</entry><entry align="center">0.001</entry></row><row><entry align="center">H</entry><entry align="center">0.09</entry><entry align="center">2.2</entry><entry align="center">1.5</entry><entry align="center">0.0015</entry><entry align="center">0.01</entry><entry align="center">0.001</entry></row><row><entry align="center">I</entry><entry align="center">0.08</entry><entry align="center">0.3</entry><entry align="center">2.5</entry><entry align="center">0.003</entry><entry align="center">0.01</entry><entry align="center">0.001</entry></row><row><entry align="center">J</entry><entry align="center">0.12</entry><entry align="center">0.5</entry><entry align="center">2.5</entry><entry align="center">0.0015</entry><entry align="center">0.01</entry><entry align="center">0.001</entry></row><row><entry align="center">K</entry><entry align="center">0.06</entry><entry align="center">0.3</entry><entry align="center">3.2</entry><entry align="center">0.001</entry><entry align="center">0.01</entry><entry align="center">0.001</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00057-en" num="0057">The cold-rolled steel sheets were oxidized by heating while changing the oxidation furnace delivery temperature of a DFF-type oxidation furnace in a CGL. COG was used as a fuel for the direct burner and the air ratio was adjusted to adjust the oxygen concentration in the atmosphere. The oxidation furnace delivery temperature was measured with a radiation thermometer. Then the steel sheets were reduction-annealed in a reduction zone at 850°C for 20 seconds and galvanized in a 460°C zinc bath having an Al content adjusted to 0.19%. Then the coating weight was adjusted to about 50 g/m<sup>2</sup> by gas wiping.</p>
+    <p id="p-00058-en" num="0058">The galvanized steel sheets obtained as above were analyzed to find the amounts of Si oxides and Mn oxides in the base steel sheet surface layer having a thickness of 5 µm under the coating layer. Appearance and coating adhesiveness were also evaluated. Tensile properties and fatigue resistance were also investigated.</p>
+    <p id="p-00059-en" num="0059">The methods for measurement and evaluation were as follows:</p>
+    <heading id="h-00013-en">Amounts of Si oxides and Mn oxides</heading>
+    <p id="p-00060-en" num="0060">The coating layer of the galvanized steel sheet obtained as above was dissolved in hydrochloric acid containing inhibitors and the base steel sheet surface layer having a thickness of 5 µm was dissolved in a non-aqueous solution by constant-current electrolysis. The residues of the oxides obtained were filtered through a nuclepore filter having 50 nm pores. The oxides captured by the filter were analyzed by ICP after alkali fusion, and the amounts of Si and Mn were determined.</p>
+    <heading id="h-00014-en">Appearance</heading>
+    <p id="p-00061-en" num="0061">Samples with no coating defects in appearance were rated as having good appearance (○ marks) and samples with coating defects in appearance were rated as having poor appearance (X marks).</p>
+    <heading id="h-00015-en">Coating adhesiveness</heading>
+    <p id="p-00062-en" num="0062">A ball impact test was conducted. The formed portion was detached by using an adhesive tape. Whether detachment of the coating layer occurred was observed with naked eye. ○ marks: No detachment of the coating layer was observed. X marks: Detachment of the coating layer was observed.</p>
+    <heading id="h-00016-en">Tensile properties</heading>
+    <p id="p-00063-en" num="0063">A JIS No. 5 test piece was subjected to the tensile test according to JIS Z 2241 in which the rolling direction was the tensile direction.</p>
+    <heading id="h-00017-en">Fatigue resistance</heading>
+    <p id="p-00064-en" num="0064">A fatigue resistance test was conducted at a stress ratio R of 0.05. The fatigue limit (FL) was determined after 10<sup>7</sup> repeating cycles and the endurance ratio (FL/TS) was determined. Samples with an endurance ratio of 0.60 or more were rated as having good fatigue resistance. The stress ratio R is the value defined by (minimum cyclic stress)/(maximum cyclic stress).</p>
+    <p id="p-00065-en" num="0065">The results are shown in Table 3 along with the production conditions. <tables id="tables-00003-en" num="0003"><img id="img-00003-en" wi="165" he="106" img-content="table" file="EP2942419A1_00006.PNG" img-format="png" original="imgb0003.tif" /></tables></p>
+    <p id="p-00066-en" num="0066">Table 3 shows that the galvanized steel sheets (Examples) produced by the present invention method have good coating adhesiveness, good coating appearance, and good fatigue resistance although they are high-strength steel sheets containing Si, Mn, and B. In contrast, the galvanized steel sheets (Comparative Examples) produced outside the scope of the present invention method have poor coating adhesiveness and/or poor coating appearance.</p>
+    <heading id="h-00018-en">EXAMPLE 2</heading>
+    <p id="p-00067-en" num="0067">Steels having compositions shown in Table 2 were melted and formed into slabs, and the slabs were hot-rolled, pickled, and cold-rolled to prepare cold-rolled steel sheets having a thickness of 1.2 mm.</p>
+    <p id="p-00068-en" num="0068">The cold-rolled steel sheets were subjected to an oxidation treatment and reduction-annealing as in Example 1. The steel sheets were galvanized in a 460°C zinc bath having an Al content adjusted to 0.13%. Then the coating weight was adjusted to about 50 g/m<sup>2</sup> by gas wiping. An alloying treatment was conducted at temperatures shown in Table 4 for 20 to 30 seconds.</p>
+    <p id="p-00069-en" num="0069">The Fe content in the coating layer of each of the galvanized steel sheets obtained as above was determined. The amount of Si oxides and the amount of Mn oxides contained in the coating layer and in the base steel sheet surface layer having a thickness of 5 µm under the coating layer were determined, and appearance and coating adhesiveness were evaluated. Tensile properties and fatigue resistance were also investigated.</p>
+    <p id="p-00070-en" num="0070">The methods for measurement and evaluation were as follows:</p>
+    <heading id="h-00019-en">Amount of Fe contained (Fe content)</heading>
+    <p id="p-00071-en" num="0071">The coating layer of the galvanized steel sheet obtained as above was dissolved in hydrochloric acid containing inhibitors and the coating weight was determined from the difference in mass between before and after dissolution. The Fe content in the coating layer was determined from the amount of Fe contained in hydrochloric acid.</p>
+    <heading id="h-00020-en">Amounts of Si oxides and Mn oxides</heading>
+    <p id="p-00072-en" num="0072">The coating layer was dissolved in a non-aqueous solution by constant-potential electrolysis and then the base steel sheet surface layer having a thickness of 5 µm was dissolved in a non-aqueous solution by constant-current electrolysis. The residues of the oxides obtained after each dissolution step were filtered through a nuclepore filter having 50 nm pores. The oxides captured by the filter were analyzed by ICP after alkali fusion, and the amounts of Si and Mn in the oxides contained in the coating layer and in the steel sheet surface layer having a thickness of 5 µm under the coating layer were determined.</p>
+    <heading id="h-00021-en">Appearance</heading>
+    <p id="p-00073-en" num="0073">Appearance after the alloying treatment was observed with naked eye. Samples with no alloying unevenness and/or no coating defects were indicated by ○ marks and samples with alloying unevenness and/or coating defects were indicated by X marks.</p>
+    <heading id="h-00022-en">Coating adhesiveness</heading>
+    <p id="p-00074-en" num="0074">Cellotape (registered trade mark) was attached to the galvanized steel sheet and the surface to which the tape was attached was bent at 90° and unbent. The amount of detachment per unit length was measured by X-ray fluorescence through Zn count, and samples rated rank 1 to 3 according to the standard below were evaluated as good (○ marks) and samples rated rank 4 or higher were evaluated as poor (X marks). <tables id="tables-00004-en" num="0004"><table frame="none"><tgroup cols="2" colsep="0" rowsep="0"><colspec colnum="1" colname="col1" colwidth="50mm" /><colspec colnum="2" colname="col2" colwidth="17mm" /><tbody><row><entry>X-ray fluorescence count</entry><entry>Rank</entry></row><row><entry>0 or more and less than 500:</entry><entry>1 (Good)</entry></row><row><entry>500 or more and less than 1000:</entry><entry>2</entry></row><row><entry>1000 or more and less than 2000:</entry><entry>3</entry></row><row><entry>2000 or more and less than 3000:</entry><entry>4</entry></row><row><entry>3000 or more:</entry><entry>5 (Poor)</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00075-en" num="0075">Tensile properties and fatigue resistance were evaluated as in Example 1.</p>
+    <p id="p-00076-en" num="0076">The results are shown in Table 4 along with the production conditions. <tables id="tables-00005-en" num="0005"><img id="img-00004-en" wi="165" he="82" img-content="table" file="EP2942419A1_00007.PNG" img-format="png" original="imgb0004.tif" /></tables></p>
+    <p id="p-00077-en" num="0077">As apparent from Table 4, the galvanized steel sheets (Examples) produced by the present invention method have good coating adhesiveness, good coating appearance, and good fatigue resistance although they are high-strength steel sheets containing Si, Mn, and B. In contrast, galvanized steel sheets (Comparative Examples) produced outside the scope of the present invention method have poor coating adhesiveness, poor coating appearance, and/or poor fatigue resistance.</p>
+    <heading id="h-00023-en">Industrial Applicability</heading>
+    <p id="p-00078-en" num="0078">A high-strength galvanized steel sheet according to the present invention has good coating adhesiveness and good fatigue resistance and can be used as a coated steel sheet in order to decrease the weight of automobile bodies and increase their strength.</p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151111">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>A method for producing a high-strength galvanized steel sheet, comprising;<br />
+oxidizing a steel sheet containing Si, Mn, and B at a heating the steel sheet temperature of T°C that satisfies formula below,<br />
+reduction-annealing the oxidized base steel sheet, and<br />
+galvanizing the reduction-annealed base steel sheet. <maths id="mathsc-00001-en" num=""><math display="block"><mrow><mi mathvariant="normal">T</mi><mo>≥</mo><mn mathvariant="normal">58.65</mn><mo>×</mo><mfenced open="[" close="]"><mi mathvariant="normal">Si</mi></mfenced><mo>+</mo><mn mathvariant="normal">294400</mn><mo>×</mo><mfenced open="[" close="]"><mi mathvariant="normal">B</mi></mfenced><mo>-</mo><mn mathvariant="normal">13.59</mn><mo>×</mo><mfenced open="[" close="]"><msub><mi mathvariant="normal">O</mi><mn mathvariant="normal">2</mn></msub></mfenced><mo>+</mo><mn mathvariant="normal">548.1</mn></mrow></math><img id="imgc-00001-en" wi="136" he="6" img-content="math" file="imgb0005.tif" img-format="tif" /></maths>
+[Si]: content of Si in the base steel sheet on a mass percent basis<br />
+[B]: content of B in the base steel sheet on a mass percent basis<br />
+[O<sub>2</sub>]: O<sub>2</sub> concentration on a volume percent basis in an atmosphere at oxidizing treatment</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The method for producing a high-strength galvanized steel sheet according to Claim 1, further comprising; after galvanizing, performing an alloying treatment at a temperature of 460°C to 600°C for 10 to 60 seconds.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The method for producing a high-strength galvanized steel sheet according to Claim 1 or 2, wherein the base steel sheet has a composition consisting of, on a mass percent basis, C: 0.01 to 0.20%, Si: 0.1 to 2.0%, Mn: 1.0 to 3.0%, B: 0.0005 to 0.005%, and the balance being Fe and unavoidable impurities.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>A high-strength galvanized steel sheet produced by the method according to Claim 1 or 3,<br />
+wherein, in the base steel sheet surface layer having a thickness of 5 µm under the coating layer, an amount of Si oxides is 0.05 g/m<sup>2</sup> or more on a Si basis and an amount of Mn oxides is 0.05 g/m<sup>2</sup> or more on a Mn basis.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>A high-strength galvanized steel sheet produced by the method according to Claim 2 or 3,<br />
+wherein, in the coating layer, an amount of Si oxides is 0.05 g/m<sup>2</sup> or more on a Si basis and an amount of Mn oxides is 0.05 g/m<sup>2</sup> or more on a Mn basis, and in the base steel sheet surface layer having a thickness of 5 µm under the coating layer, an amount of Si oxides is 0.01 g/m<sup>2</sup> or less on a Si basis and an amount of Mn oxides is 0.01 g/m<sup>2</sup> or less on a Mn basis.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2942419A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="imga0001.tif" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2942419A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP2942419A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0001.tif" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="EP2942419A1_00004.PNG" alt="mathematical image" img-content="math" img-format="png" original="imgb0001.tif" inline="yes" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="EP2942419A1_00005.PNG" alt="mathematical image" img-content="math" img-format="png" original="imgb0002.tif" inline="yes" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="EP2942419A1_00006.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0003.tif" inline="yes" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="EP2942419A1_00007.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0004.tif" inline="yes" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="EP2942419A1_00008.PNG" alt="mathematical image" img-content="math" img-format="png" original="imgb0005.tif" inline="yes" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="EP2942419A1_00009.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="imga0001.tif" />
+    </figure>
+  </drawings>
+  <image file="EP2942419A1.PDF" type="pdf" size="473024" pages="17" />
+</lexisnexis-patent-document>

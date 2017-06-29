@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150259719A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030048" date-changed="20151020" time-changed="081932">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121313817">
+        <country>US</country>
+        <doc-number>20150259719</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14656988</doc-number>
+        <date>20150313</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151020">
+      <classification-ipcr sequence="1">
+        <text>C12P  19/14        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>P</subclass>
+        <main-group>19</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C12M   1/40        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>M</subclass>
+        <main-group>1</main-group>
+        <subgroup>40</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C12P  19/02        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>P</subclass>
+        <main-group>19</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151020">
+      <classification-cpc sequence="1">
+        <text>C12P  19/14        20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>P</subclass>
+        <main-group>19</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C12P  19/02        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>P</subclass>
+        <main-group>19</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">Enzymatic Hydrolysis of Old Corrugated Cardboard (OCC) Fines from Recycled Linerboard Mill Waste Rejects</invention-title>
+    <related-documents date-changed="20150917">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61953152</doc-number>
+          <date>20140314</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>The Research Foundation for The State University of New York</orgname>
+            <address>
+              <city>Binghamton</city>
+              <state>NY</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Min</last-name>
+            <first-name>Byeong Cheol</first-name>
+            <address>
+              <city>Syracuse</city>
+              <state>NY</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Bhayani</last-name>
+            <first-name>Bhavin V.</first-name>
+            <address>
+              <city>Syracuse</city>
+              <state>NY</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Ramarao</last-name>
+            <first-name>Bandaru V.</first-name>
+            <address>
+              <city>Fayetteveille</city>
+              <state>NY</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173666378">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259719</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150313</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173666377">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259719</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150313</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A significant fraction of short fibers (fines) is produced while recycling Old Corrugated Containerboards (OCC), which are usually rejected as solid waste stream, requiring landfilling and posing environmental problems. The major component of these fines rejects are primarily cellulose that can be hydrolyzed into sugars for possible fermentation into biofuels, bioplastics or other sugar based products. Use of fines also offers benefits such as negative costs and production of fermentable sugars without requiring complex pretreatment processes, now required to hydrolyze and eliminate inhibitors from hydrolyzate. Enzymatic hydrolysis of reject fines from a recycled OCC mill, employing different strains of cellulases, were investigated. Fillers (up to 30 mass %) in the fines increases the required dosage of enzymes and costs. Enzyme loading can be lowered by addition of surfactants to reduce their inhibitory activity. The nonionic surfactant Triton X-80 improved hydrolysis yields by up to 10 percent points.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS REFERENCE TO RELATED APPLICATION</heading>
+      <p id="p-00001-en" num="0001">The present application is a non-provisional of, and claims priority from, U.S. Provisional Patent Application No. 61/953,152, filed Mar. 14, 2014, the entirety of which is expressly incorporated herein by reference.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">This invention relates to processing of cellulosic solid waste from paper related industries for extraction of fermentable sugars.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00003-en" num="0003">Rising oil prices, unstable supply and the demand for sustainable environmental friendly energy sources has increase the interest in research and development of bio-energy sources such as bio-ethanol. Carbohydrates are a natural resource commonly available as lignocellulosic biomass that can be hydrolyzed into sugars to be further converted via fermentative or thermochemical processes into useful products [1]. Among the important products that can be derived are ethanol (cellulosic), butanol and similar advanced fuels, platform chemicals such as acetone, furfural, levulinic acid, gamma valerolactone and bioplastics such as polyhydroxy butyrates or valerates [1-3]. These products are a substitute for fossil fuels or starch based carbohydrates, thus providing an alternate sustainable resource. The plastics are biodegradable and thus are beneficial to the environment in comparison to petrochemicals and their derivatives [4]. Cellulosic biomass is a promising material for bio-energy that avoids the usage of corn and other food grains and thus avoids the necessity of competing with edible sugars.</p>
+      <p id="p-00004-en" num="0004">One of the biggest markets using cellulosic biomass is the pulp and paper industry. The global production of paper and paperboard was 403 million tons in 2011. This amount is about 30% of the industrial round-wood. The recycling rate of paper has been gradually increasing from 50% in 2007 to 53% in 2011. North America now has the highest recovery rate (64% in 2011), followed by Europe (58%) and the Asia-Pacific region (48%) [5]. This process of recycling pulp and papers is to reduce cost and to have a sustainable environmental policy. [6-8].</p>
+      <p id="p-00005-en" num="0005">Repeated recycling of pulp decreases the length of fibers which become shorter and stiffer, losing their ability to bond within the paper sheet. At a certain stage, their net contribution to the sheet becomes negative and they need to be rejected. These short fibers known as fines are recovered from the wastewater stream and typically sent to landfills. The solid residue can also be applied for land use or animal bedding [9-12]. However, the fines can be a very useful resource for sugar production because they are predominantly composed of cellulose which could be converted into glucose and other monomeric sugars. Currently, some paper companies pay $25 to $80/(wet) ton for disposal of the fines [9, 13, 14]. Besides their cost advantage, the supply of fines from paper mills is fairly homogeneous and thus there is minimal influence of seasonal or weather related supply challenges compared to other agricultural biomass [6, 8].</p>
+      <p id="p-00006-en" num="0006">A number of different processes including incineration, gasification and pyrolysis may be used for treating this waste fines stream [10]. However, given their energy consumption and complex processes, direct hydrolysis of the cellulose into sugars can be particularly attractive due to the simplicity of the process and ready use of the sugar solution after concentration [15]. These sugars can be used as a feedstock for conversions into biofuels and bioplastics such as polyhydroxy alkanoates or into platform chemicals such as succinic acid, lactic acid, levulinic acid and furfurals [1, 16-18].</p>
+      <p id="p-00007-en" num="0007">Of the varieties of papermill fines rejects, those from recycled pulp mills using old corrugated cartons are particularly important. Some modern OCC mills find that rejecting ‘inactive’ fines into the waste stream can be more profitable than using them in the manufactured product, particularly recycled linerboard. The reject stream thus contains higher cellulosic fines contents and typically lower minerals than deinked pulp rejects in the waste streams of fine papers or tissue mills.</p>
+      <p id="p-00008-en" num="0008">Lignocellulosic materials are excellent sources for energy products, platform chemicals and bioplastics. Sugars produced by the degradation of carbohydrate polymers can be fermented into ethanol and butanol as energy sources. Sugars and cellulose degradation compounds can serve as platform chemicals in the production of bulk chemicals and they can also be used as feedstocks for microbial production of plastics such as polyhydroxy alkanoates (PHA).</p>
+      <p id="p-00009-en" num="0009">The waste stream from recycled paper mills contains cellulosic fines and also particles of mineral origin, typically clay or calcium carbonate from the fillers and coatings used in the waste paper. The cellulosic fines are easily hydrolyzable by either acid or enzymatic processes. In the enzymatic process, a cocktail of cellulose enzymes acts progressively and sequentially to open up the cellulose crystalline structure and depolymerize it, producing monomeric sugars. The sugars are primarily glucose and certain other common hexoses which are fermentable into ethanol, butanol or other products, leading to bioplastics such as polyhydroxy alkanoates (PHA).</p>
+      <p id="p-00010-en" num="0010">See, U.S. Pat. Nos. and Published patent application Nos. 8,395,023; 8,394,617; 8,394,616; 8,389,260; 8,389,259; 8,389,258; 8,389,257; 8,389,256; 8,389,255; 8,389,254; 8,377,659; 8,372,598; 8,367,819; 8,362,322; 8,361,767; 8,361,762; 8,357,523; 8,354,263; 8,343,747; 8,334,430; 8,328,947; 8,323,947; 8,318,461; 8,317,975; 8,309,328; 8,298,802; 8,298,799; 8,298,795; 8,293,508; 8,288,148; 8,288,144; 8,283,150; 8,278,260; 8,278,079; 8,273,559; 8,257,959; 8,247,647; 8,247,203; 8,241,881; 8,241,461; 8,236,551; 8,236,546; 8,236,542; 8,236,535; 8,232,080; 8,227,236; 8,217,227; 8,216,815; 8,212,087; 8,206,964; 8,206,963; 8,202,831; 8,202,709; 8,192,968; 8,178,336; 8,173,410; 8,168,038; 8,158,397; 8,148,579; 8,148,133; 8,143,480; 8,143,050; 8,142,620; 8,133,711; 8,119,385; 8,114,974; 8,114,655; 8,101,398; 8,101,393; 8,101,024; 8,097,445; 8,097,442; 8,093,037; 8,092,647; 8,083,906; 8,080,398; 8,071,351; 8,071,349; 8,067,222; 8,063,201; 8,061,362; 8,043,839; 8,043,837; 8,034,592; 8,030,050; 8,017,820; 8,017,372; 8,008,056; 7,998,711; 7,993,898; 7,993,890; 7,993,463; 7,981,646; 7,981,644; 7,981,643; 7,977,450; 7,972,832; 7,967,904; 7,964,383; 7,960,528; 7,960,160; 7,960,151; 7,960,148; 7,960,146; 7,954,734; 7,951,571; 7,951,570; 7,947,813; 7,946,295; 7,943,363; 7,939,488; 7,932,072; 7,932,065; 7,931,784; 7,927,854; 7,923,236; 7,923,235; 7,923,233; 7,910,347; 7,906,704; 7,901,511; 7,887,862; 7,875,292; 7,867,745; 7,838,666; 7,829,732; 7,816,581; 7,811,799; 7,810,507; 7,807,434; 7,803,601; 7,786,351; 7,786,350; 7,785,854; 7,754,457; 7,741,089; 7,732,173; 7,727,754; 7,727,746; 7,723,568; 7,709,697; 7,682,811; 7,670,813; 7,659,099; 7,651,582; 7,642,079; 7,632,479; 7,611,882; 7,601,529; 7,592,434; 7,592,163; 7,585,652; 7,582,462; 7,547,534; 7,527,959; 7,504,120; 7,503,981; 7,459,299; 7,452,707; 7,449,550; 7,449,319; 7,431,942; 7,407,788; 7,399,855; 7,399,485; 7,381,553; 7,361,736; 7,351,573; 7,351,568; 7,344,871; 7,320,886; 7,273,742; 7,226,773; 7,226,772; 7,198,925; 7,183,093; 7,172,891; 7,144,716; 7,083,673; 7,070,805; 7,067,303; 7,056,721; 7,049,125; 7,048,952; 7,045,332; 7,045,331; 7,033,811; 7,005,289; 6,982,159; 6,911,565; 6,908,995; 6,894,199; 6,878,199; 6,855,531; 6,818,434; 6,815,192; 6,768,001; 6,713,460; 6,630,340; 6,620,605; 6,566,114; 6,555,335; 6,555,228; 6,500,658; 6,451,063; 6,444,653; 6,420,165; 6,399,351; 6,387,690; 6,333,181; 6,328,994; 6,268,197; 6,268,196; 6,228,630; 6,207,436; 6,197,564; 6,174,700; 6,153,413; 6,140,105; 6,132,998; 6,130,076; 6,110,712; 6,080,567; 6,074,856; 6,069,136; 6,048,715; 6,017,740; 6,013,490; 6,010,870; 6,008,176; 6,005,141; 6,001,639; 5,989,887; 5,962,278; 5,962,277; 5,908,649; 5,885,819; 5,874,276; 5,871,550; 5,866,392; 5,863,783; 5,861,271; 5,792,630; 5,786,313; 5,770,010; 5,747,082; 5,705,369; 5,693,518; 5,683,911; 5,554,520; 5,518,902; 5,505,950; 5,503,996; 5,487,989; 5,464,832; 5,458,899; 5,437,992; 5,424,417; 5,424,202; 5,416,210; 5,395,623; 5,395,455; 5,391,561; 5,302,592; 5,300,672; 5,292,762; 5,179,127; 5,171,570; 5,170,620; 5,166,390; 5,151,447; 5,149,524; 5,118,681; 5,112,382; 5,102,898; 5,091,399; 5,081,026; 5,059,654; 5,055,308; 5,037,663; 5,023,275; 4,975,459; 4,950,597; 4,851,394; 4,831,127; 4,713,118; 4,694,906; 4,628,029; 4,594,130; 4,540,587; 4,431,675; 4,321,360; 4,321,328; 4,321,278; 4,292,406; 4,275,163; 4,260,685; 4,235,968; 4,058,411; 4,017,642; 3,990,944; 20130065270; 20130060070; 20130052713; 20130052698; 20130052694; 20130052693; 20130046120; 20130046119; 20130046032; 20130045891; 20130040352; 20130035525; 20130035524; 20130035523; 20130035522; 20130035521; 20130035520; 20130035519; 20130035518; 20130035516; 20130034891; 20130034888; 20130032466; 20130030215; 20130029382; 20130023608; 20130014293; 20130012424; 20130011895; 20130011887; 20130011886; 20120329104; 20120329100; 20120329096; 20120325203; 20120323050; 20120323049; 20120322121; 20120322078; 20120321581; 20120316376; 20120316330; 20120315683; 20120309060; 20120301944; 20120291160; 20120289607; 20120289450; 20120283493; 20120282664; 20120277491; 20120277490; 20120277489; 20120277488; 20120277487; 20120277486; 20120277485; 20120277483; 20120277482; 20120277481; 20120277480; 20120276595; 20120276594; 20120273339; 20120273338; 20120270298; 20120270289; 20120270278; 20120270270; 20120266329; 20120266328; 20120264107; 20120252085; 20120245336; 20120238785; 20120237984; 20120237983; 20120231510; 20120220513; 20120216705; 20120214209; 20120211184; 20120210467; 20120209034; 20120208235; 20120199299; 20120199298; 20120196338; 20120190840; 20120190076; 20120190054; 20120184020; 20120184007; 20120178975; 20120165562; 20120165517; 20120164709; 20120164696; 20120159840; 20120159839; 20120157725; 20120157721; 20120156754; 20120156741; 20120156162; 20120156161; 20120156160; 20120156159; 20120156158; 20120156157; 20120156156; 20120156155; 20120151827; 20120149949; 20120149077; 20120149065; 20120146468; 20120142886; 20120142068; 20120142065; 20120142046; 20120135500; 20120135499; 20120135489; 20120129696; 20120129229; 20120111321; 20120108798; 20120107892; 20120107888; 20120107887; 20120107881; 20120107880; 20120101250; 20120100587; 20120100045; 20120094358; 20120094355; 20120094343; 20120083019; 20120079665; 20120077247; 20120077216; 20120066781; 20120064609; 20120064592; 20120064579; 20120059197; 20120052534; 20120046501; 20120045812; 20120045811; 20120041075; 20120040435; 20120040409; 20120036769; 20120036768; 20120036599; 20120035400; 20120030838; 20120029247; 20120028325; 20120028306; 20120021490; 20120021092; 20120015422; 20120015408; 20120010448; 20120010447; 20120010446; 20120010445; 20120010444; 20120010443; 20120010440; 20120010439; 20120010438; 20120010437; 20120010436; 20120009640; 20120009634; 20120009631; 20120006320; 20120005949; 20120003704; 20120003703; 20120003701; 20110319849; 20110318798; 20110318796; 20110315154; 20110314726; 20110312058; 20110312055; 20110312048; 20110306117; 20110306083; 20110300586; 20110296555; 20110296543; 20110294181; 20110294165; 20110294164; 20110275130; 20110271875; 20110269201; 20110268858; 20110262985; 20110262984; 20110251377; 20110250674; 20110250667; 20110250638; 20110250635; 20110239333; 20110237769; 20110236339; 20110236338; 20110236337; 20110236336; 20110236335; 20110233042; 20110232164; 20110232163; 20110232162; 20110232161; 20110232160; 20110229959; 20110229956; 20110224416; 20110212505; 20110212499; 20110207192; 20110190488; 20110185456; 20110183379; 20110178261; 20110177573; 20110177565; 20110177561; 20110171709; 20110171705; 20110165661; 20110165660; 20110159544; 20110155559; 20110152812; 20110152370; 20110152369; 20110152368; 20110150857; 20110146138; 20110144241; 20110143398; 20110139662; 20110139659; 20110139658; 20110139657; 20110138502; 20110136908; 20110136907; 20110136196; 20110136174; 20110130488; 20110129887; 20110129881; 20110129880; 20110125118; 20110124074; 20110124058; 20110117619; 20110117067; 20110111456; 20110100359; 20110097786; 20110095111; 20110093965; 20110091950; 20110091940; 20110086410; 20110086408; 20110081697; 20110081412; 20110081336; 20110081335; 20110076743; 20110065910; 20110061666; 20110053245; 20110046422; 20110045544; 20110040058; 20110039320; 20110039317; 20110039309; 20110039308; 20110035839; 20110035838; 20110033391; 20110028672; 20110027837; 20110027346; 20110020874; 20110016545; 20110014672; 20110003345; 20110003341; 20110000125; 20100330633; 20100319862; 20100317087; 20100317059; 20100312028; 20100304440; 20100304439; 20100298612; 20100297721; 20100297704; 20100287826; 20100285534; 20100279361; 20100279354; 20100273214; 20100268000; 20100267110; 20100263264; 20100240128; 20100223694; 20100221819; 20100221784; 20100216200; 20100212091; 20100196978; 20100196977; 20100189706; 20100184178; 20100184175; 20100179315; 20100167371; 20100167370; 20100160201; 20100159566; 20100159553; 20100159510; 20100151551; 20100151547; 20100151546; 20100144584; 20100143998; 20100137647; 20100136661; 20100136113; 20100129835; 20100124583; 20100113846; 20100112242; 20100108567; 20100107342; 20100105114; 20100101605; 20100099640; 20100095390; 20100087687; 20100086978; 20100068790; 20100068768; 20100056774; 20100055753; 20100055747; 20100048964; 20100048417; 20100041104; 20100035320; 20100031398; 20100028966; 20100021988; 20100011456; 20100003733; 20100003716; 20100003234; 20090325254; 20090324574; 20090312537; 20090312221; 20090311752; 20090298149; 20090297495; 20090286295; 20090286294; 20090280105; 20090258172; 20090247448; 20090235388; 20090234142; 20090233335; 20090226979; 20090224086; 20090221051; 20090220480; 20090217569; 20090209009; 20090203102; 20090202675; 20090198046; 20090194243; 20090181433; 20090181126; 20090176292; 20090172838; 20090170747; 20090170181; 20090163397; 20090155238; 20090142848; 20090136476; 20090099079; 20090098266; 20090093028; 20090081762; 20090075336; 20090070898; 20090068714; 20090061490; 20090042266; 20090042259; 20090038023; 20090036648; 20090035826; 20090025739; 20090025738; 20090017512; 20090013434; 20090005532; 20090004726; 20080311640; 20080305531; 20080293114; 20080293086; 20080292747; 20080292701; 20080274527; 20080261267; 20080254080; 20080248160; 20080241900; 20080233175; 20080229657; 20080229456; 20080227173; 20080206836; 20080202684; 20080201801; 20080193981; 20080176282; 20080145912; 20080138880; 20080113413; 20080102502; 20080095889; 20080085536; 20080085520; 20080076314; 20080076152; 20080070291; 20080064906; 20080056983; 20080034453; 20080029110; 20080020435; 20080009047; 20070298475; 20070254031; 20070219521; 20070213249; 20070207530; 20070202566; 20070199095; 20070192903; 20070178569; 20070173431; 20070172916; 20070149777; 20070148751; 20070148730; 20070141693; 20070141660; 20070118918; 20070118917; 20070113302; 20070113301; 20070105112; 20070094748; 20070092935; 20070092934; 20070089196; 20070089195; 20070089194; 20070089193; 20070089192; 20070089191; 20070089190; 20070089189; 20070089188; 20070089187; 20070089186; 20070089185; 20070089184; 20070087066; 20070083952; 20070083951; 20070083950; 20070083949; 20070083947; 20070079944; 20070072185; 20070059813; 20070036832; 20070031954; 20070011775; 20060281157; 20060275241; 20060259995; 20060258554; 20060255507; 20060235115; 20060211101; 20060210971; 20060205042; 20060200878; 20060188965; 20060182802; 20060166322; 20060165613; 20060154844; 20060154352; 20060141601; 20060135388; 20060110797; 20060104931; 20060089283; 20060084156; 20060068475; 20060057672; 20060046284; 20060035353; 20060018862; 20060003433; 20050277172; 20050272836; 20050244934; 20050244878; 20050221369; 20050214921; 20050210548; 20050125860; 20050120915; 20050100996; 20050070003; 20050054039; 20050037459; 20050009166; 20040266642; 20040259218; 20040231661; 20040210099; 20040203134; 20040157301; 20040121436; 20040102619; 20040067569; 20040053238; 20030225005; 20030216492; 20030203466; 20030203454; 20030180900; 20030125588; 20030119006; 20030114330; 20030113735; 20030113734; 20030113732; 20030097029; 20030092097; 20030087415; 20030082779; 20030054539; 20030054518; 20030054500; 20030032162; 20030032148; 20030032084; 20030022807; 20020193272; 20020164774; 20020160469; 20020156048; 20020142034; 20020045057; 20020012980; 20010044138; 20010010825, each of which is expressly incorporated herein by reference.</p>
+      <p id="p-00011-en" num="0011">See also, <ul id="ul-00001-en" list-style="none"><li>Van Heiningen, Adriaan. “Converting a kraft pulp mill into an integrated forest products biorefinery.” <i>ANNUAL MEETING</i>-<i>PULP AND PAPER TECHNICAL ASSOCIATION OF CANADA</i>. Vol. 92. No. C. Pulp and Paper Technical Association of Canada; 1999, 2006.</li><li>Zhu, J. Y., and X. J. Pan. “Woody biomass pretreatment for cellulosic ethanol production: technology and energy consumption evaluation.” <i>Bioresource technology </i>101.13 (2010): 4992-5002.</li><li>Pérez, J., et al. “Biodegradation and biological treatments of cellulose, hemicellulose and lignin: an overview.” <i>International Microbiology </i>5.2 (2002): 53-63.</li><li>Kadam, Kiran L., Chim Y. Chin, and Lawrence W. Brown. “Flexible biorefinery for producing fermentation sugars, lignin and pulp from corn stover.” <i>Journal of industrial microbiology </i>&amp; <i>biotechnology </i>35.5 (2008): 331-341.</li><li>Kuhad, Ramesh Chander, and Ajay Singh. “Lignocellulose biotechnology: current and future prospects.” <i>Critical Reviews in Biotechnology </i>13.2 (1993): 151-172.</li><li>Lawford, Hugh G., and Joyce D. Rousseau. “Production of ethanol from pulp mill hardwood and softwood spent sulfite liquors by genetically engineered <i>E. coli.” Applied biochemistry and biotechnology </i>39.1 (1993): 667-685.</li><li>Burchhardt, G., and L. O. Ingram. “Conversion of xylan to ethanol by ethanologenic strains of <i>Escherichia coli </i>and <i>Klebsiella oxytoca.” Applied and environmental microbiology </i>58.4 (1992): 1128-1133.</li><li>Zhu, J. Y., Ronald Sabo, and Xiaolin Luo. “Integrated production of nano-fibrillated cellulose and cellulosic biofuel (ethanol) by enzymatic fractionation of wood fibers.” <i>Green Chemistry </i>13.5 (2011): 1339-1344.</li><li>Hoge, William H. “Process for making ethanol and fuel product.” U.S. Pat. No. 4,321,328. 23 Mar. 1982.</li><li>López-Contreras, Ana M., et al. “Utilisation of saccharides in extruded domestic organic waste by <i>Clostridium acetobutylicum </i>ATCC 824 for production of acetone, butanol and ethanol.” <i>Applied microbiology and biotechnology </i>54.2 (2000): 162-167.</li><li>Zhang, Xiao, et al. “High consistency enzymatic hydrolysis of hardwood substrates.” <i>Bioresource technology </i>100.23 (2009): 5890-5897.</li><li>Kirk, T. Kent, T. W. Jeffries, and George F. Leatham. “Biotechnology: applications and implications for the pulp and paper industry.” <i>Tappi J </i>66.5 (1983): 45-51.</li><li>Yamashita, Yuya, et al. “Ethanol production from paper sludge by immobilized <i>Zymomonas mobilis.” Biochemical Engineering Journal </i>42.3 (2008): 314-319.</li><li>Lee, Sang-Mok, Jianqiang Lin, and Yoon-Mo Koo. “Hydrolysis of Paper Sludge Using Mixed Cellulase System: Enzymtic Hydrolysis of Paper Sludge.” <i>ACS Symposium Series</i>. Vol. 830. Washington, D.C.; American Chemical Society; 1999, 2002.</li><li>Kang, Li, et al. “Enhanced Ethanol Production from De-Ashed Paper Sludge by Simultaneous Saccharification and Fermentation and Simultaneous Saccharification and Co-Fermentation.” <i>BioResources </i>6.4 (2011): 3791-3808.</li><li>Chen, Hui, et al. “Enzymatic Hydrolysis of Recovered Office Printing Paper with Low Enzyme Dosages to Produce Fermentable Sugars.” <i>Applied biochemistry and biotechnology </i>(2012): 1-16.</li><li>McManigal, Brent Alan. “System And Method For Producing Ethanol From Paper Mill Sludge.” U.S. patent application Ser. No. 11/735,633.</li><li>Elliston, Adam, et al. “High concentrations of cellulosic ethanol achieved by fed batch semi simultaneous saccharification and fermentation of waste-paper.” <i>Bioresource Technology </i>(2013).</li><li>Shammas, Nazih K., Lawrence K. Wang, and Mark Landin. “Treatment of Paper Mill Whitewater, Recycling and Recovery of Raw Materials.” <i>Flotation Technology </i>(2010): 221-268.</li><li>Kang, Li. <i>Bioconversion of Pulp and Paper Mills Sludge and Prehydrolysate Stream into Ethanol and Cellulase Enzyme</i>. Diss. Auburn University, 2011.</li><li>Prasetyo, Joni, and Enoch Y. Park. “Waste paper sludge as a potential biomass for bio-ethanol production.” <i>Korean Journal of Chemical Engineering </i>30.2 (2013): 253-261.</li><li>Ichiura, Hideaki, Takuhiro Nakatani, and Yoshito Ohtani. “Separation of pulp and inorganic materials from paper sludge using ionic liquid and centrifugation.” <i>Chemical Engineering Journal </i>173.1 (2011): 129-134.</li><li>Wang, Lei, Richard Templer, and Richard J. Murphy. “A Life Cycle Assessment (LCA) comparison of three management options for waste papers: bioethanol production, recycling and incineration with energy recovery.” <i>Bioresource Technology </i>(2012).</li><li>Kang, Li, Wei Wang, and Yoon Y. Lee. “Bioconversion of kraft paper mill sludges to ethanol by SSF and SSCF.” <i>Applied biochemistry and biotechnology </i>161.1 (2010): 53-66.</li><li>Pan, Xuejun, et al. “Biorefining of softwoods using ethanol organosolv pulping: Preliminary evaluation of process streams for manufacture of fuel-grade ethanol and co-products.” <i>Biotechnology and Bioengineering </i>90.4 (2005): 473-481.</li><li>Lark, Nicole, et al. “Production of ethanol from recycled paper sludge using cellulase and yeast, <i>Kluveromyces marxianus” Biomass and Bioenergy </i>12.2 (1997): 135-143.</li><li>Fan, Zhiliang, et al. “Conversion of paper sludge to ethanol in a semicontinuous solids-fed reactor.” <i>Bioprocess and biosystems engineering </i>26.2 (2003): 93-101.</li><li>Jeffries, Thomas W., and Richard Schartman. “Bioconversion of secondary fiber fines to ethanol using counter-current enzymatic saccharification and co-fermentation.” <i>Applied biochemistry and biotechnology </i>78.1 (1999): 435-444.</li><li>Jin, Yongcan, et al. “Green liquor pretreatment of mixed hardwood for ethanol production in a repurposed kraft pulp mill.” <i>Journal of Wood Chemistry and Technology </i>30.1 (2010): 86-104.</li><li>Fan, Zhiliang, and Lee R. Lynd. “Conversion of paper sludge to ethanol, II: process design and economic analysis.” <i>Bioprocess and biosystems engineering </i>30.1 (2007): 35-45.</li><li>Da Silva, Roberto, Dong K. Yim, and Yong K. Park. “Application of thermostable xylanases from <i>Humicola </i>sp. for pulp improvement.” <i>Journal of fermentation and bioengineering </i>77.1 (1994): 109-111.</li><li>Hu, Gang, John A. Heitmann, and Orlando J. Rojas. “Feedstock pretreatment strategies for producing ethanol from wood, bark, and forest residues.” <i>BioResources </i>3.1 (2008): 270-294.</li><li>Villavicencio, Eduardo J., and Jose B. Dos Santos. “Process to produce a high quality paper product and an ethanol product from bamboo.” U.S. Pat. No. 5,198,074. 30 Mar. 1993.</li><li>Gáspár, Melinda, Gergely Kálmán, and Kati Réczey. “Corn fiber as a raw material for hemicellulose and ethanol production.” <i>Process Biochemistry </i>42.7 (2007): 1135-1139.</li><li>Zhang, Jiayi, and Lee R. Lynd. “Ethanol production from paper sludge by simultaneous saccharification and co-fermentation using recombinant xylose-fermenting microorganisms.” <i>Biotechnology and bioengineering </i>107.2 (2010): 235-244.</li><li>Saha, Badal C. “Hemicellulose bioconversion.” <i>Journal of industrial microbiology </i>&amp; <i>biotechnology </i>30.5 (2003): 279-291.</li></ul></p>
+      <p id="p-00012-en" num="0048">Each of the foregoing references is expressly incorporated herein by reference in its entirety.</p>
+      <heading id="h-00004-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00013-en" num="0049">The present technology study focuses on the enzymatic hydrolysis of OCC fines rejects from a recycled linerboard mill. The saccharification of this waste stream to yield fermentable sugars was identified and optimized using different commercially available enzyme mixtures. The effect of enzyme activity (characterized by their FPUs), impact of hydrolysis temperature, pH, pulp type, filler composition were investigated. Furthermore, methods of enhancing the enzyme activity and sugar yields by binding the minerals using different surfactants (cationic and nonionic) were also investigated.</p>
+      <p id="p-00014-en" num="0050">A significant fraction of short fibers commonly called as fines is produced while recycling OCC (Old Corrugated Containerboards). These fines are usually rejected as solid waste stream that further requires landfilling and poses environmental problems. The major component of these fines rejects are primarily cellulose that can be hydrolyzed into sugars for possible fermentation into biofuels, bioplastics or other sugar based products.</p>
+      <p id="p-00015-en" num="0051">In addition to environmental advantages, use of these fines also offers benefits such as negative costs and production of fermentable sugars without requiring any complex pretreatment processes that are required to hydrolyze and eliminate inhibitors from hydrolyzate.</p>
+      <p id="p-00016-en" num="0052">According to the present technology, enzymatic hydrolysis of reject fines from a recycled OCC mill was performed. Different strains of cellulases were tested for their compatibility and <i>Trichoderma Reesei </i>was found to be the most effective at loading levels of 5-50 FPU (/g of oven dry mass). A maximum hydrolysis yield of 43% sugar (g/g-OD fines) with 50 FPU was observed. See, Byeong Cheol Min, Bhavin V. Bhayani, Bandaru V. Ramarao, “Enzymatic Hydrolysis of Old Corrugated Cardboard (OCC) Fines from Recycled Linerboard Mill Waste Rejects”, Proc. AICHE 2013 (Nov. 3-8), extended abstract P346631, expressly incorporated herein by reference.</p>
+      <p id="p-00017-en" num="0053">The presence of fillers (up to 30% by mass) in the fines increases the required dosage of enzymes that increases the costs of hydrolysis.</p>
+      <p id="p-00018-en" num="0054">It was found that the required enzyme loading can be lowered by addition of nonionic surfactants to reduce their inhibitory activity. The nonionic surfactant Triton X-80 improved hydrolysis yields by up to 10 percent points.</p>
+      <p id="p-00019-en" num="0055">Paper mill rejected fines are a good source of biomass for sugar production given the low lignin content (Table 1), negative price, pre-processed nature which negates requirement of a pretreatment regime and the larger surface area and porous nature of the particles compared to other naturally occurring biomass. The particle size of about 3 μm is much smaller than typically milled biomass particles whose sizes are in the sub-millimeter ranges. The enzymatic hydrolysis yield of fines achieved was up to 70% of reducing sugars from fermentable sugars in the fines. The sugar yield of rejected fines is similar to the hydrolysis yield of woody biomass which was reported as 70% to 90% for lignocellulosic biomass [3, 19].</p>
+      <p id="p-00020-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Characteristics of fines of rejected sludge from OCC paper mill</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="28pt" align="left" />
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="91pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Fines (rejected fines containing</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>fillers and contaminants)</entry>
+                  <entry>Value</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>pH</entry>
+                  <entry>6.4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Solid content</entry>
+                  <entry>0.52%<sup> </sup></entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Particle size</entry>
+                  <entry>2.1-3 μm</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Zeta Potential</entry>
+                  <entry>(−) 9 m V</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Lignin</entry>
+                  <entry> 3%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ash content Analysis</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Total</entry>
+                  <entry>33%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Calcium Carbonate</entry>
+                  <entry>15%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Other fillers and residuals</entry>
+                  <entry>18%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00021-en" num="0056">The commercialization of “waste cellulosic fiber” based sugar requires deactivation of inhibitory potential of contaminants and ash which includes fillers, calcium carbonate being one of the most powerful inhibitors [20]. Several surfactants were studied to improve enzymatic hydrolysis. Even though the precise mechanism and principle were not defined, many surfactant studies have concluded the feasibility of surfactant for advanced enzymatic hydrolysis [21-27]. Addition of non-ionic surfactant Tween-80 improved hydrolysis yield of mixture of UKP and CaCO<sub>3 </sub>in various enzyme dosage (<figref>FIG. 6</figref>). The required enzyme dosage for complete hydrolysis (about 70% sugar conversion) was reduced from 50 FPU to 30 FPU for the fines (<figref>FIG. 7</figref>). Using the surfactant it was possible to minimize enzyme dosage for maximum hydrolysis yield which is important for economic sugar production.</p>
+      <p id="p-00022-en" num="0057">The optimum dosage of surfactant was in range of up to 10%. Excessive dosage (above 10%) caused agglutination of substrates and thus a decreased hydrolysis yield. Other studies suggested similar dosage of surfactant for enzymatic hydrolysis [21, 24, 27]. Our research indicated a dosage of 7% for the synthetic fines mixed UKP and CaCO<sub>3 </sub>(15%) but presented wide range of surfactant dosage (3 to 9%) for the fines. Application of pH 4 buffer instead of pH 5 buffer increased hydrolysis yield and decreased enzyme dosage for maximum hydrolysis yield (<figref>FIG. 8</figref>). The yield improvement of the combination method was more significant at the 10 FPU enzyme dosage. The demand of low pH buffer is regarded due to CaCO<sub>3 </sub>in the fines. Adjusting pH is good for not only optimizing hydrolysis condition for enzyme but also dissolving calcium carbonate from fibers.</p>
+      <p id="p-00023-en" num="0058">The presence of fillers and crystalline fibers are considered as primary inhibitors for the hydrolysis process while presence of other contaminants such as inks have a lesser inhibitory potential and thus can be classified as secondary inhibitors based upon their inhibitory activity. The process of drying fines is to be avoided for effective enzymatic hydrolysis. The enzymatic hydrolysis yield of both the fines and UKP was decreased by about 30% after drying (Table 2) which is due to decreased accessibility of micro-fibrils. To increase accessibility of cellulose, dissolving in alkaline method can be applied [28]. Beating method is also studied for recycled fiber to increase accessibility of cellulose by increasing swelling ability, water retention value, pore size and pore volume [29].</p>
+      <p id="p-00024-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Drying effect of materials on enzymatic</entry>
+                </row>
+                <row>
+                  <entry>hydrolysis yield (replication n = 2).</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="77pt" align="left" />
+              <colspec colname="1" colwidth="91pt" align="center" />
+              <colspec colname="2" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Hydrolysis yield (%, g/g)</entry>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>25 FPU, 3 days</entry>
+                  <entry>Non-dried</entry>
+                  <entry>Dried</entry>
+                  <entry>Dry Effect (%)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Fines</entry>
+                  <entry>30.35 (±1.38)</entry>
+                  <entry>21.41 (±2.1)</entry>
+                  <entry>−29.5</entry>
+                </row>
+                <row>
+                  <entry>Unbleached Kraft Pulp</entry>
+                  <entry>92.11 (±0.8) </entry>
+                  <entry>64.06 (±0.4)</entry>
+                  <entry>−30.5</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00025-en" num="0059">Even though enzyme dosage was reduced from 50 FPU to around 25 FPU for 1 g of fine maximum hydrolysis yield by combination process, 25 FPU is still high demand of enzyme and not profitable. The development of contaminants separation and surfactant injection is expected to make profitable enzyme dosage and high yield of sugar from fines.</p>
+      <p id="p-00026-en" num="0060">The fines have a potential to produce sugars as a resource of biomass. The main inhibitor of enzymatic hydrolysis fines was CaCO<sub>3 </sub>(15% of fines) which is decreasing enzyme activity by adsorption and increase of pH. Nonionic surfactant, 3-9% of Tween-80, improved enzymatic hydrolysis yield of paper industrial waste fines in addition of 50% increase at 10 FPU and reduced enzyme dosage of <i>Trichoderma reesei </i>ATCC 26921 for the maximum yield. The surfactant application was simple and an economical option to increase profitability and productivity of sugars from waste cellulosic fibers by improving enzyme activity. Using proper pH buffer for optima enzymatic hydrolysis condition pH 5 was also a considerable method for economical sugar production from fines. It was found that addition of surfactants and acid mitigated inhibitor effect of CaCO<sub>3 </sub>which has a high inhibitory potential. Also, separation processes to reduce fillers and contaminants from fines is considered to save more enzymes.</p>
+      <p id="p-00027-en" num="0061">The present technology processes a waste stream comprising cellulosic fines, e.g., from recycled packaging paper mills, into a stream of fermentable sugars. These may be fermented to yield bioethanol which is of value as a fuel, and/or manufacturers of other products such as bioplastics such as polyhydroxy alkanoates.</p>
+      <p id="p-00028-en" num="0062">According to a preferred embodiment, a process is provided to:</p>
+      <p id="p-00029-en" num="0063">(a) hydrolyze the cellulosic fines found in recycled paper mill waste streams using a commercially available cellulose enzyme formulation;</p>
+      <p id="p-00030-en" num="0064">(b) increase the enzymatic hydrolysis yield by shielding the inert components of the waste stream using a surfactant; and</p>
+      <p id="p-00031-en" num="0065">(c) optimize the surfactant with respect to its composition (anionic, non-ionic or cationic) and dosage.</p>
+      <p id="p-00032-en" num="0066">The enzymes, however, may have a competitive binding affinity for inorganic particulates, resulting in a non-specific absorption of some or all types of enzymes to the particles. Indeed, similar high surface area particles are used in the purification of similar enzymes. Therefore, in the presence of inorganic particles, such as precipitated calcium chloride (PCC), the activity and bioavailability of the enzymes may be substantially reduced.</p>
+      <p id="p-00033-en" num="0067">It has been found that surfactants are able to coat the inorganic particulates and otherwise reduce binding of the hydrolytic enzymes, leading to a significant increase in activity, thus saving cost and increasing efficiency. It has been found that effective surfactants do not also block binding or biological activity of the enzymes for the cellulosic particles and components of the solution.</p>
+      <p id="p-00034-en" num="0068">Cationic, non-ionic and anionic surfactants were tested at various dosages. A non-ionic surfactant, Tween 80 (polysorbate 80) was better than the cationic and anionic surfactants.</p>
+      <p id="p-00035-en" num="0069">The inorganic particles may be separated from the waste stream.</p>
+      <p id="p-00036-en" num="0070">Some investigators have suggested the use of anaerobic fermentation as a means to degrade the organic components in the waste stream, but due to presence of large amount of calcium carbonate, kaolin and other fillers, they give rise to problems such as scaling of biomass, reactors and pipes, reduced specific methanogenic activity and loss of buffer capacity, and essential nutrients for anaerobic degradation.</p>
+      <p id="p-00037-en" num="0071">Commercially available hydrolysis enzymes include Cellic® HTec3, a concentrated hemicellulase that works alone or in combination with Cellic® CTec3 cellulase enzyme from Novozymes (Denmark).</p>
+      <p id="p-00038-en" num="0072">See: <ul id="ul-00002-en" list-style="none"><li>Zhang, Yi-Heng Percival, and Lee R. Lynd. “Toward an aggregated understanding of enzymatic hydrolysis of cellulose: noncomplexed cellulase systems.” Biotechnology and bioengineering 88.7 (2004): 797-824;</li><li>Fan, L. T., Yong-Hyun Lee, and David H. Beardmore. “Mechanism of the enzymatic hydrolysis of cellulose: effects of major structural features of cellulose on enzymatic hydrolysis.” Biotechnology and Bioengineering 22.1 (1980): 177-199;</li><li>Mandels, Mary, Lloyd Hontz, and John Nystrom. “Enzymatic hydrolysis of waste cellulose.” Biotechnology and Bioengineering 16.11 (2004): 1471-1493;</li><li>Philippidis, George P., Tammy K. Smith, and Charles E. Wyman. “Study of the enzymatic hydrolysis of cellulose for production of fuel ethanol by the simultaneous saccharification and fermentation process.” Biotechnology and bioengineering 41.9 (1993): 846-853;</li><li>Pääkkö, M., et al. “Enzymatic hydrolysis combined with mechanical shearing and high-pressure homogenization for nanoscale cellulose fibrils and strong gels.” Biomacromolecules 8.6 (2007): 1934-1941;</li><li>Yang, Bin, and Charles E. Wyman. “BSA treatment to enhance enzymatic hydrolysis of cellulose in lignin containing substrates.” Biotechnology and Bioengineering 94.4 (2006): 611-617;</li><li>Sun, Ye, and Jiayang Cheng. “Hydrolysis of lignocellulosic materials for ethanol production: a review.” Bioresource technology 83.1 (2002): 1-11;</li><li>Saddler, J. N., et al. “Enzymatic hydrolysis of cellulose and various pretreated wood fractions.” Biotechnology and bioengineering 24.6 (1982): 1389-1402;</li><li>Khodaverdi, Mandi, et al. “Kinetic modeling of rapid enzymatic hydrolysis of crystalline cellulose after pretreatment by NMMO.” Journal of industrial microbiology &amp; biotechnology (2012): 1-10;</li><li>Obama, Patrick, et al. “Combination of enzymatic hydrolysis and ethanol organosolv pretreatments: Effect on lignin structures, delignification yields and cellulose-to-glucose conversion.” Bioresource Technology (2012);</li><li>Wiman, Magnus, et al. “Cellulose accessibility determines the rate of enzymatic hydrolysis of steam-pretreated spruce.” Bioresource Technology (2012);</li><li>Elliston, Adam, et al. “High concentrations of cellulosic ethanol achieved by fed batch semi simultaneous saccharification and fermentation of waste-paper.” Bioresource Technology (2013);</li><li>Kinnarinen, Teemu, et al. “Effect of mixing on enzymatic hydrolysis of cardboard waste: Saccharification yield and subsequent separation of the solid residue using a pressure filter.” Bioresource technology (2012);</li><li>Wang, Lei, Richard Templer, and Richard J. Murphy. “High-solids loading enzymatic hydrolysis of waste papers for biofuel production.” Applied Energy (2012);</li><li>Li, Sujing, Xiaonan Zhang, and John M. Andresen. “Production of fermentable sugars from enzymatic hydrolysis of pretreated municipal solid waste after autoclave process.” Fuel 92.1 (2012): 84-88;</li><li>Dubey, Alok Kumar, et al. “Bioethanol production from waste paper acid pretreated hydrolyzate with xylose fermenting <i>Pichia stipitis</i>.” Carbohydrate Polymers (2012);</li><li>Kinnarinen, Teemu, et al. “Solid-liquid separation of hydrolysates obtained from enzymatic hydrolysis of cardboard waste.” Industrial Crops and Products 38 (2012): 72-80;</li><li>Nørholm, Nanna Dreyer, Jan Larsen, and Frank Krogh Iversen. “Non-pressurised pretreatment, enzymatic hydrolysis and fermentation of waste fractions.” U.S. patent application Ser. No. 13/405,262;</li><li>Das, Arpan, et al. “Production of Cellulolytic Enzymes by <i>Aspergillus fumigatus </i>ABK9 in Wheat Bran-Rice Straw Mixed Substrate and Use of Cocktail Enzymes for Deinking of Waste Office Paper Pulp.” Bioresource technology (2012);</li><li>Chen, Hui, et al. “Enzymatic Hydrolysis of Recovered Office Printing Paper with Low Enzyme Dosages to Produce Fermentable Sugars.” Applied biochemistry and biotechnology (2012): 1-16;</li><li>Yan, Shoubao, et al. “Fed batch enzymatic saccharification of food waste improves the sugar concentration in the hydrolysates and eventually the ethanol fermentation by <i>Saccharomyces cerevisiae </i>H058.” Brazilian Archives of Biology and Technology 55.2 (2012): 183-192;</li><li>Arora, Anju, et al. “Effect of Formic Acid and Furfural on the Enzymatic Hydrolysis of Cellulose Powder and Dilute Acid-Pretreated Poplar Hydrolysates.” ACS Sustainable Chemistry &amp; Engineering 1.1 (2012): 23-28;</li><li>Wang, Lei, et al. “Technology performance and economic feasibility of bioethanol production from various waste papers.” Energy &amp; Environmental Science 5.2 (2012): 5717-5730;</li><li>Vazana, Yael, et al. “Designer Cellulosomes for Enhanced Hydrolysis of Cellulosic Substrates.” Cellulases (2012): 429;</li><li>Van Dyk, J. S., and B. I. Pletschke. “A review of lignocellulose bioconversion using enzymatic hydrolysis and synergistic cooperation between enzymes-Factors affecting enzymes, conversion and synergy.” Biotechnology Advances (2012);</li><li>Menind, A., et al. “Pretreatment and usage of pulp and paper industry residues for fuels production and their energetic potential.” International Scientific Conference Biosystems Engineering, Tartu, Estonia, 10-11 May 2012. Vol. 10. No. Special Issue I. Estonian Research Institute of Agriculture, 2012;</li><li>Han, Lirong, et al. “Alkali pretreated of wheat straw and its enzymatic hydrolysis.” Brazilian Journal of Microbiology 43.1 (2012): 53-61;</li><li>Holm, Jana, et al. “Pretreatment of fibre sludge in ionic liquids followed by enzyme and acid catalysed hydrolysis.” Catalysis Today (2012),</li></ul></p>
+      <p id="p-00039-en" num="0101">each of which is expressly incorporated herein by reference.</p>
+      <p id="p-00040-en" num="0102">See also, US Pub. Pat. Appl. 20120329096; 20120322117; 20120283164; 20120282666; 20120282239; 20120184020; 20120184007; 20120171732; 20120115192; 20120097194; 20120094340; 20110306101; 20110306100; 20110300585; 20110275118; 20110250646; 20110229959; 20110224416; 20110201093; 20110195481; 20110183396; 20110165661; 20110165660; 20110146142; 20110129886; 20110117067; 20110039318; 20100304420; 20100291653; 20100279354; 20100221819; 20100199548; 20100196981; 20100189706; 20100075404; 20100071259; 20100068768; 20100003733; 20090318571; 20090317864; 20090298149; 20090209009; 20090170174; 20090137438; 20090056707; 20090056201; 20090053800; 20090053777; 20090050134; 20090004714; 20080227182; 20080227161; 20080193992; 20080102502; 20080064064; 20070241306; 20070227971; 20070221552; 20070218541; 20070207939; 20070199903; 20070175825; 20070072185; 20070037259; 20070031953; 20070031919; 20070031918; 20060246563; 20060154352; 20050244934; 20050148056; 20050129643; 20050118130; 20050075497; 20030211958; 20030203466; 20030022347; 20030013172; 20020195213; 20020164731; and U.S. Pat. Nos. 8,338,139; 8,318,461; 8,309,331; 8,304,219; 8,287,732; 8,273,181; 8,263,368; 8,247,203; 8,227,236; 8,222,010; 8,202,709; 8,187,860; 8,114,974; 8,105,398; 8,093,037; 8,053,566; 7,998,713; 7,960,153; 7,932,063; 7,910,338; 7,846,705; 7,819,976; 7,807,419; 7,781,191; 7,727,746; 7,670,813; 7,625,728; 7,585,652; 7,566,561; 7,344,876; 7,183,093; 7,109,005; 6,942,754; 6,663,780; 6,623,948; 6,566,114; 6,528,298; 6,399,351; 6,361,989; 6,309,871; 6,074,856; 5,888,806; 5,736,032; 5,733,758; 5,589,164; 5,587,157; and 5,352,444, each of which is expressly incorporated herein by reference in its entirety.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00041-en" num="0103">
+        <figref>FIG. 1</figref> shows enzymatic hydrolysis yield of different substrates. Enzyme was added 50 FPU of <i>T. reesei </i>and the hydrolysis was conducted at 50° C. for 3 days.</p>
+      <p id="p-00042-en" num="0104">
+        <figref>FIG. 2</figref> shows enzymatic hydrolysis yield of a bleached hardwood kraft pulp (<i>Eucalyptus</i>, Baycel). Different enzyme formulations.</p>
+      <p id="p-00043-en" num="0105">
+        <figref>FIG. 3</figref> shows the filler effect on UKP hydrolysis yield. UKP (▪), UKP with 30% of Kaolin (▴), UKP with 30% of CaCO3 (♦) and replication n=2, α=0.05.</p>
+      <p id="p-00044-en" num="0106">
+        <figref>FIG. 4</figref> shows hydrolysis yield of UKP and CaCO3 (15%) mixture depending on different Tween-80 dosage with 20 FPU of <i>T. reesei </i></p>
+      <p id="p-00045-en" num="0107">
+        <figref>FIG. 5</figref> shows hydrolysis yield of fines depending on different Tween-80 dosage with 20 FPU of <i>T. reesei. </i></p>
+      <p id="p-00046-en" num="0108">
+        <figref>FIG. 6</figref> shows hydrolysis yield of fines combined diverse dosage of Tween-80 <figref>FIG. 7</figref> shows Tween-80 (3%) effect on hydrolysis yield of UKP and mixture material of UKP and fillers. UKP (♦), UKP with Tween-80 (▪), UKP+CaCO3 (15%)+Kaolin (15%) (−), UKP+CaCO3 (15%)+Kaolin (15%) with Tween-80 (•) and replication n=2, α=0.05.</p>
+      <p id="p-00047-en" num="0109">
+        <figref>FIG. 8</figref> shows a combination effect of Tween-80 (3%) and low pH buffer for hydrolysis yield. Fines only (▪), Fines with 3% of Tween-80 (▴), Fines with Tween-80 and pH4 buffer (♦) and replication n=2, α=0.05.</p>
+      <p id="p-00048-en" num="0110">
+        <figref>FIG. 9</figref> shows a temperature effect on hydrolysis of pure fines and surfactant mixed fines. Fines with Tween-80 (3%) at 50° C. (▴), Fines at 50° C. (▪), Fines at 55° C. (♦), Fines with Tween-80 (3%) at 55° C. (•) and replication n=2, α=0.05.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION OF THE PREFERRED EMBODIMENTS</heading>
+      <heading id="h-00007-en" level="2">Material and Methods</heading>
+      <heading id="h-00008-en" level="2">Raw Materials</heading>
+      <p id="p-00049-en" num="0111">The fines were procured from a NYS based recycled linerboard-manufacturing mill. Additionally a comparative study was undertaken where commercial OCC boxes were repulped and hydrolyzed using commercial cellulases. Unbleached softwood kraft pulp (USKP), an unbleached hardwood kraft pulp (UHKP) and mixtures of fiber and fillers were used for hydrolysis. Recycled OCC was prepared by simple slushing of OCC boxes and dispersion. Pulps were ground and screened through a 200 mesh screen (such that the accepts were less than 75 μm in size).</p>
+      <p id="p-00050-en" num="0112">Samples of commercially available cellulases were obtained—<i>Aspergillus Nigra</i>, and <i>Trichoderma Reesei. </i></p>
+      <heading id="h-00009-en" level="2">Fines Analysis</heading>
+      <p id="p-00051-en" num="0113">pH meter 2500 series of Cole Parmer® was used for evaluating pH of fines and hydrolysate. Solid content and ash content was computed according to the National Renewable Energy Laboratory (NREL) Laboratory Analytical Procedure (LAP, NREL/TP-510-42627, NREL/TP-510-42622). Enzyme activity was also determined by NREL LAP (NREL/TP-510-42628). Particle size and Zeta potential were defined by a particle size analyzer (90 Plus/BI-MAS, Brookhaven Instruments Co.)</p>
+      <heading id="h-00010-en" level="2">Enzymatic Hydrolysis</heading>
+      <p id="p-00052-en" num="0114">The hydrolysis of fines was carried in a medium with a solid to liquid ratio of 1:20 with a cellulase dosage of 5-100 FPU using 20 mL sodium acetate buffer. A commercial grade enzyme (C2730, derived from the fungus <i>Trichoderma reesei </i>ATCC 26921) was procured from Sigma Aldrich. The hydrolysis flask was placed in a shaking incubator (Reciprocal Shaking Bath 51221080, Precision Co.,) and hydrolyzed at 50° C. for 72 h at 100 rpm. The solid residue was recovered by filtration with filter paper (Whatman No. 1) and the hydrolysis yield calculated with the weight of sugars divided by total weight of biomass load. Sugar content was analyzed by HPLC.</p>
+      <heading id="h-00011-en" level="2">Filler Effect</heading>
+      <p id="p-00053-en" num="0115">To determine effect of filler on hydrolysis yield pulp reject mixtures were generated in the lab composed of unbleached softwood kraft pulp (UKP) mixed with various proportions of Calcium Carbonate and Kaolin. The filler content was varied to understand the influence of each on hydrolysis yield. Imitating the total filler content in original fines, the proportions of calcium carbonate and kaolin were adjusted to a total of 30% (w/w) and the ratio of fillers was varied between 0-30%.</p>
+      <heading id="h-00012-en" level="2">Surfactant Effect</heading>
+      <p id="p-00054-en" num="0116">Since fillers provide adsorption surfaces for the cellulase enzymes which are nonproductive in terms of sugar production, one method of inactivation is to shield their surfaces with a suitable surfactant to prevent enzyme adsorption. A cationic and a nonionic surfactant were chosen for this purpose. Cetyl trimethyl ammonium bromide (CTAB, Catalog No. Alfa Aesar, Ward Hill Mass.) was obtained in powder form and stock solutions of 1% w/w in double distilled water were prepared. Similar solutions of a non-ionic surfactant, Tween-80 were also prepared.</p>
+      <heading id="h-00013-en" level="2">Enzyme Hydrolysis Experiments</heading>
+      <p id="p-00055-en" num="0117">Samples of the raw material (fines or waste rejects) were preweighed to 1 g dry weight and placed in 100 ml conical flasks provided with magnetic stirrers. Surfactants were also dosed followed by the cellulase mixtures in the required dosages. The flasks were shaken in a water bath for varying times upto 48 h and were removed at different time intervals. The hydrolyzed material was then filtered through 0.1 um filters and the filtrates were taken as the hydrolyzates for yield and compositional analysis by HPLC and 1NMR techniques. The solid residues were dried in an oven and the weights were used in the overall hydrolysis yield calculations. The solid residues were dissolved in 1% sulfuric acid and subsequently filtered again to determine the acid soluble (presumably CaCO<sub>3</sub>) contents of the minerals. The remaining insoluble residue was taken to represent Kaolin.</p>
+      <heading id="h-00014-en" level="2">Results</heading>
+      <p id="p-00056-en" num="0118">Table 1 shows the characteristics of fines from the waste rejects of a recycled linerboard mill repulping OCC. The solids were obtained from a screw presses at a consistency (oven dry mass of solids/total mass) of 35%, the remainder being water. The average particle size was 2.1 μm. It is likely that the larger particles correspond to fragments of fibers whereas the smaller ones correspond to fillers and other mineral debris in the suspensions. The zeta potential is slightly negative. The higher levels of calcium carbonate and kaolin in the minerals originate most likely from deinking of white paper containing fillers or coated grades of paper. The total ash content was significant consisting 33% (g/g) of fines and Calcium Carbonate (CaCO<sub>3</sub>) composed around half of this ash. Lignin was also contained in the fines at 3%. The particle size of fines was around 3 μm and the pH was close to neutral (6.4), but the zeta potential was quite low (−9 mV).</p>
+      <p id="p-00057-en" num="0119">The hydrolysis yields of Avicel, UKP-maple (non-dried), UKP-softwood (dried) and paper mill fines rejects were compared (<figref>FIG. 1</figref>). Avicel is a microcrystalline cellulose and when subjected to hydrolysis, nearly all of the cellulose was readily converted into monomeric glucose. Similarly, the conversion of the sample of the unbleached kraft (hardwood) pulp was extremely high. This pulp was laboratory prepared (kappa number of 18) and could also be depolymerized to greater than 90%. The softwood pulp sample was converted to yield only 60%, probably due to a larger hemicellulose content. Unbleached kraft softwood pulp shows lower yields primarily because this pulp was dried and reslushed before enzymatic hydrolysis. The process of drying causes the pulps to hornify i.e. limit the accessibility of cellulose by reducing the cell wall porosity. Upon reslushing therefore, a dried pulp fiber will not rehydrate to the same extent as virgin fibers and the cellulases are blocked from entering the crystalline structure to cause hydrolysis. The lowest hydrolysis yield was found for the mill fines rejects; around 0.4 g of sugars from 1 g of fines (OD) among the four substrates.</p>
+      <p id="p-00058-en" num="0120">Fillers inhibit hydrolysis in different ways. One of their primary actions is to competitively bind the cellulases thus rendering a significant fraction of the hydrolytics nonproductive. The effect of such fillers on enzyme hydrolysis is shown in <figref>FIG. 2</figref>. For this experiment, UKHWP was mixed with 30% of kaolin and CaCO<sub>3 </sub>(PCC) in order to make the composition similar to fines and the hydrolysis yield was measured as a function of enzyme dosage (in FPU). The inhibitory effect is different between Kaolin and CaCO<sub>3 </sub>and CaCO<sub>3 </sub>had a higher inhibitory potential which decreased enzymatic hydrolysis yield.</p>
+      <p id="p-00059-en" num="0121">
+        <figref>FIG. 2</figref> shows the glucose yields for two different enzyme mixtures on a sample of bleached kraft hardwood pulp (<i>Eucalyptus</i>). The <i>Trichoderma reesei </i>enzyme was more effective and the <i>Aspergillus niger </i>did not show much activity. Fillers can reduce the yield of sugar simply by their interference with the enzyme action. Most often, their action can be simple competitive adsorption of the enzymes reducing the net activity. The impact of mineral fillers was demonstrated in the present study by mixing kaolin or calcium carbonate filler with unbleached hardwood kraft pulps and subjecting them to hydrolysis. The hydrolysis yield was measured for several enzyme dosages. The results shown in <figref>FIG. 3</figref>, indicate that calcium carbonate particles have a dramatic impact, reducing hydrolysis yields as compared to kaolin which was minimally active. It appeared that the calcium carbonate fillers could adsorb large amounts of the enzyme.</p>
+      <p id="p-00060-en" num="0122">It may be possible to prevent the interference of hydrolysis by mineral particles by adsorbing a competitive molecule such as a surfactant. Calcium carbonate generally has cationic surfaces whereas charges on kaolin platelets are anionic on the basal surfaces. Kaolin particle edges also show positive charges within a narrow pH range around neutrality. Thus adsorption of ionic or nonionic surfactants could compete and block enzyme adsorption and inactivation by these minerals. We tested the performance of an uncharged (nonionic) surfactant at effecting the hydrolysis. The hydrolysis yield of UKP containing CaCO<sub>3 </sub>(15%) was tested with 20 FPU in the range of 0-13% of the nonionic surfactant (Tween-80) dosage. The hydrolysis yield is shown in <figref>FIG. 4</figref> as a function of surfactant dosage. The yield increased from 8% to 21% at the surfactant dosage of around 7%. It was observed that the surfactant dosage of lower than 4% and higher than 10% did not have impact for hydrolysis yield increase. Surfactant adsorption on CaCO<sub>3 </sub>reaches a maximum at about the 7% level. Further addition results in the surfactant remaining in solution, possibly in micellar form and deactivating the enzymes, resulting in steep reductions in yields as observed beyond an optimal level (9%). <figref>FIG. 5</figref> shows the impact of the nonionic surfactant on fines hydrolysis at different enzyme dosages. The yields difference was not significant and even low dosage, 3% of surfactant, obtained slightly higher hydrolysis yield in the range of low FPU.</p>
+      <p id="p-00061-en" num="0123">The surfactant effect in relation to yield increase was measured with the artificial synthetic fines from UKP (softwood) mixture with CaCO<sub>3 </sub>and Kaolin. These proportions of fillers in synthetic fines were to imitate the composition of OCC mill rejected fines. The hydrolysis yield of pulp containing fillers was increased with addition of 3% of the Tween-80 (<figref>FIG. 6</figref>).</p>
+      <p id="p-00062-en" num="0124">
+        <figref>FIG. 7</figref> shows the impact of increasing enzyme dosage on the yield for enzymolysis of unbleached kraft pulp samples (at 48 h, taken to be the ultimate or equilibrium value). This figure displays the impact of the CaCO<sub>3 </sub>and kaolin fillers, and a possible method of resolving their inhibition using the surfactant. The unbleached kraft pulp hydrolyzes effectively to 60% yields at high enzyme dosages (around 50 FPU). The addition of the surfactant boosts the yields and the enzyme kinetics significantly. When the CaCO<sub>3 </sub>and kaolin fillers were included with the UKP (15% and 15%, by weight respectively), the hydrolysis kinetics fell dramatically although the final yield obtained was similar. The inclusion of the surfactant at the optimal dosage resulted in a significant boost to the kinetics and also increased hydrolysis yield.</p>
+      <p id="p-00063-en" num="0125">Besides providing surfaces for competitive and nonproductive i.e. nonhydrolyzing sites for enzyme adsorption, the CaCO<sub>3 </sub>could performing as an inhibitor in other important ways. For example, the presence of CaCO<sub>3 </sub>alters the pH from the optimal value for hydrolysis and Ca<sup>2+</sup> ions could interfere in different ways. Charge neutralization and consequent coagulation of particles in the suspensions could occlude enzyme adsorption and thus present kinetic barriers to hydrolysis.</p>
+      <p id="p-00064-en" num="0126">Fine and pH 5 sodium acetate buffer compounds were varied with pH and buffer did not maintain the mixture pH 5 which was the optimal condition for cellulose. Using buffer around pH 5 is common for the enzymatic hydrolysis of cellulosic biomass in order to make the pH of solution stable and proper for enzyme. Addition of the pH 5 buffer to fines changed the pH of solution to around 6.5. The pH 6.5 of the solution was considered as improper initial condition for enzymatic hydrolysis. The buffer of pH 4 was tested and found the initial pH was reduced to 5.5 which was more close to optimal pH condition of the enzyme (pH 5). As the results, the lower pH buffer reinforced ability of enzymatic hydrolysis. Application of proper pH buffer and surfactant was an effective method to increase enzymatic hydrolysis and minimize enzyme dosage (<figref>FIG. 8</figref>).</p>
+      <p id="p-00065-en" num="0127">The hydrolysis of the cellulosic substrates depends strongly on the accessibility of the internal structure of cellulose, but drying of cellulosic fibers/fines restricts the access to the hydrolytic enzymes (Hornification). Hornification is the result of drying of pulp fibers and fines that results in a loss of amorphous cellulose and reduction of the internal porosity both resulting in marked reduction of the pulp's hydration capacity, which increases pulp crystallinity. The impact of hornification of the fines by drying is quantified in the present study (Table 2). The drying effect i.e. ‘hornification’ seems to be responsible in reducing the cellulolytic yields by nearly 30% for both these substrates.</p>
+      <p id="p-00066-en" num="0128">The presence of print ink can also be an inhibitory factor of enzymatic hydrolysis resulting in the difference between the yields of recycled pulp and virgin pulp. Printed and unprinted OCC were ground to a fine size to determine the decrease in hydrolysis yield. In the results, the gap of enzymatic hydrolysis yields of inked (44% g sugars/g OCC) and non-inked (46% g sugars/g OCC) was not significant.</p>
+      <p id="p-00067-en" num="0129">The hydrolysis yield peaked at 50° C. while further increase in temperature i.e. 55° C., decreased the hydrolysis yield due to degradation of cellulose. At this temperature, even surfactants failed to improve the hydrolysis yield (<figref>FIG. 9</figref>). At the lower temperature, 40° C., hydrolysis was decreased 15-20% compared to 50° C. (not-shown).</p>
+      <heading id="h-00015-en" level="1">REFERENCES</heading>
+      <p id="p-00068-en" num="0130">Each of the following is expressly incorporated by reference in its entirety: <ul id="ul-00003-en" list-style="none"><li>[1] Zhang Y-H P. Reviving the carbohydrate economy via multi-product lignocellulose biorefineries. Journal of industrial microbiology &amp; biotechnology 2008; 35:367.</li><li>[2] Singh S, Mohanty A K, Sugie T, Takai Y, Hamada H. Renewable resource based biocomposites from natural fiber and polyhydroxybutyrate-co-valerate (PHBV) bioplastic. Composites Part A: Applied Science and Manufacturing 2008; 39:875.</li><li>[3] Galbe M, Zacchi G. A review of the production of ethanol from softwood. Applied Microbiology and Biotechnology 2002; 59:618.</li><li>[4] Kale G, Kijchavengkul T, Auras R, Rubino M, Selke S E, Singh S P. Compostability of bioplastic packaging materials: an overview. Macromolecular bioscience 2007; 7:255.</li><li>[5] FAOSTAT. 2011 Global Forest Products Facts and Figures.</li><li>[6] Villanueva A, Wenzel H. Paper waste-recycling, incineration or landfilling? A review of existing life cycle assessments. Waste Management 2007; 27:S29.</li><li>[7] Morris J. Recycling versus incineration: an energy conservation analysis. Journal of Hazardous Materials 1996; 47:277.</li><li>[8] Laurijssen J, Marsidi M, Westenbroek A, Worrell E, Faaij A. Paper and biomass for energy?: The impact of paper recycling on energy and CO2 emissions. Resources, conservation and recycling 2010; 54:1208.</li><li>[9] Scott G M, Smith A. Sludge characteristics and disposal alternatives for the pulp and paper industry. TAPPI International Environmental Conference: TAPPI Press; 1995, p. 269.</li><li>[10] Monte M, Fuente E, Blanco A, Negro C. Waste management from pulp and paper production in the European Union. Waste Management 2009; 29:293.</li><li>[11] He J, Lange C R, Dougherty M. Laboratory study using paper mill lime mud for agronomic benefit. Process Safety and Environmental Protection 2009; 87:401.</li><li>[12] Likon M, Saarela J. The Conversion of Paper Mill Sludge into Absorbent for Oil Spill Sanitation—The Life Cycle Assessment. Macromolecular Symposia: Wiley Online Library; 2012, p. 50.</li><li>[13] Fan Z, Lynd L R. Conversion of paper sludge to ethanol, II: process design and economic analysis. Bioprocess and biosystems engineering 2007; 30:35.</li><li>[14] Caputo A C, Pelagagge P M. Waste-to-energy plant for paper industry sludges disposal: technical-economic study. Journal of Hazardous Materials 2001; 81:265.</li><li>[15] Wang L, Sharifzadeh M, Templer R, Murphy R J. Bioethanol production from various waste papers: Economic feasibility and sensitivity analysis. Applied Energy 2012.</li><li>[16] Graf A, Koehler T. Oregon cellulose-ethanol study. An evaluation of the potential for eth-anol production in Oregon using cellulose-based feedstocks report prepared by the Oregon Of-fce of Energy Portland, Oreg., USA 2000.</li><li>[17] Lark N, Xia Y, Qin C-G, Gong C, Tsao G. Production of ethanol from recycled paper sludge using cellulase and yeast, <i>Kluveromyces marxianus</i>. Biomass and Bioenergy 1997; 12:135.</li><li>[18] Kádár Z, Szengyel Z, Réczey K. Simultaneous saccharification and fermentation (SSF) of industrial wastes for the production of ethanol. Industrial Crops and Products 2004; 20:103.</li><li>[19] Sun Y, Cheng J. Hydrolysis of lignocellulosic materials for ethanol production: a review. Bioresource Technology 2002; 83:1.</li><li>[20] Chen H, Venditti R A, Jameel H, Park S. Enzymatic Hydrolysis of Recovered Office Printing Paper with Low Enzyme Dosages to Produce Fermentable Sugars. Applied Biochemistry and Biotechnology 2012; 166:1121.</li><li>[21] Qing Q, Yang B, Wyman C E. Impact of surfactants on pretreatment of corn stover. Bioresource Technology 2010; 101:5941.</li><li>[22] Eriksson T, Borjesson J, Tjerneld F. Mechanism of surfactant effect in enzymatic hydrolysis of lignocellulose. Enzyme and Microbial Technology 2002; 31:353.</li><li>[23] Kurakake M, Ooshima H, Kato J, Harano Y. Pretreatment of bagasse by nonionic surfactant for the enzymatic hydrolysis. Bioresource Technology 1994; 49:247.</li><li>[24] Kapu N, Manning M, Hurley T, Voigt J, Cosgrove D, Romaine C. Surfactant-assisted pretreatment and enzymatic hydrolysis of spent mushroom compost for the production of sugars. Bioresource Technology 2012.</li><li>[25] Kim H J, Kim S B, Kim C J. The effects of nonionic surfactants on the pretreatment and enzymatic hydrolysis of recycled newspaper. Biotechnology and Bioprocess Engineering 2007; 12:147.</li><li>[26] Tanaka A, Hoshino E. Thermodynamic and activation parameters for the hydrolysis of amylose with <i>Bacillus </i>α-amylases in a diluted anionic surfactant solution. Journal of bioscience and bioengineering 2002; 93:485.</li><li>[27] Kristensen J B, Borjesson J, Bruun M H, Tjerneld F, Jorgensen H. Use of surface active additives in enzymatic hydrolysis of wheat straw lignocellulose. Enzyme and Microbial Technology 2007; 40:888.</li><li>[28] Pönni R, Kontturi E, Vuorinen T. Accessibility of cellulose: structural changes and their reversibility in aqueous media. Carbohydrate Polymers 2013.</li><li>[29] Chen Y, Wan J, Zhang X, Ma Y, Wang Y. Effect of beating on recycled properties of unbleached <i>eucalyptus </i>cellulose fiber. Carbohydrate Polymers 2012; 87:730.</li></ul></p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method for processing old corrugated containerboards, comprising a stream of fines comprising cellulosic fibers and inorganic particles having an affinity for polysaccharide degradative enzymes, comprising:
+<claim-text>adding at least one cellulose degrading enzyme to the solution sufficient to degrade at least a portion of the cellulosic fibers;</claim-text><claim-text>adding at least one surfactant to the stream in an amount sufficient to reduces an affinity of the inorganic particles for the added at least one cellulose degrading enzyme and increase an activity of the at least one cellulose degrading enzyme; and</claim-text><claim-text>maintaining the solution with the cellulosic fibers, at least one surfactant, and at least one enzyme for a sufficient period of time to degrade at least a portion of the cellulosic fibers into fermentable sugars to achieve at least 10% hydrolysis yield.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the stream of fines is from a paper recycling facility.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the inorganic particles comprise calcium carbonate.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the inorganic particles comprise precipitated calcium carbonate.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the inorganic particles comprise kaolin.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the at least one polysaccharide degradative enzyme comprises at least one of a cellulase and a hemicellulase.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the surfactant comprises polysorbate.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the surfactant comprises polysorbate.80.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein a hydrolysis yield of at least 40% is achieved.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en" independent="true">
+      <claim-text>
+        <b>10</b>. A method for enzymatically hydrolyzing a mixed stream of fines from old corrugated containerboards, comprising cellulosic fibers and inorganic particles having a binding affinity for hydrolytic enzymes, comprising:
+<claim-text>adding at least one surfactant to the stream in an amount sufficient to reduce an affinity of the inorganic particles for hydrolytic enzymes;</claim-text><claim-text>adding at least one cellulose hydrolytic enzyme to the solution; and</claim-text><claim-text>hydrolyzing the cellulosic fines with the hydrolytic enzyme, to achieve at least 10% hydrolytic yield, wherein hydrolytic yield is increased by addition of the at least one surfactant.</claim-text></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the mixed stream is from a paper recycling facility.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the inorganic particles comprise calcium carbonate.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the inorganic particles comprise precipitated calcium carbonate.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method according to <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the inorganic particles further comprise kaolin.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the at least one hydrolytic enzyme comprises at least one of a cellulase and a hemicellulase.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the surfactant comprises polysorbate.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The method according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the surfactant comprises polysorbate.80.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein a hydrolytic yield of at least 40% is achieved.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en" independent="true">
+      <claim-text>
+        <b>19</b>. A system for enzymatically hydrolyzing a mixed stream of cellulosic fines and inorganic particles having a binding affinity for cellulose hydrolytic enzymes, comprising:
+<claim-text>a feed for adding at least one surfactant to the stream in an amount sufficient to reduce an affinity of the hydrolytic enzymes for the inorganic particles, the sufficient amount being an amount of less than about 10% by weight of the cellulosic fines in the mixed stream;</claim-text><claim-text>a feed for adding an acidifier;</claim-text><claim-text>a feed for adding at least one cellulose hydrolytic enzyme to the solution; and</claim-text><claim-text>an incubator hydrolyzing the cellulosic fines with the hydrolytic enzyme at an elevated temperature,</claim-text><claim-text>wherein a hydrolytic yield of at least 10% is achieved.</claim-text></claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The system according to <claim-ref idref="clm-00019-en">claim 19</claim-ref>, wherein the feed is configured to add a non-ionic surfactant, and to mix the surfactant into the mixed stream of cellulosic fines</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150259719A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259719A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150259719A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259719A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150259719A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259719A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150259719A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259719A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150259719A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259719A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150259719A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259719A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150259719A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259719A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150259719A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259719A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150259719A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259719A1-20150917-D00009.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150259719A1.PDF" type="pdf" size="955336" pages="21" />
+</lexisnexis-patent-document>

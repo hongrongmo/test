@@ -1,0 +1,886 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257508A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030226" date-changed="20151103" time-changed="063344">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121316246">
+        <country>US</country>
+        <doc-number>20150257508</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14638820</doc-number>
+        <date>20150304</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>TW</country>
+        <doc-number>103204415</doc-number>
+        <date>20140314</date>
+      </priority-claim>
+      <priority-claim sequence="2" kind="national">
+        <country>TW</country>
+        <doc-number>103129336</doc-number>
+        <date>20140826</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151013">
+      <classification-ipcr sequence="1">
+        <text>A45D  33/00        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>45</class>
+        <subclass>D</subclass>
+        <main-group>33</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>B65B   1/04        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>65</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151013">
+      <classification-cpc sequence="1">
+        <text>A45D  33/003       20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>45</class>
+        <subclass>D</subclass>
+        <main-group>33</main-group>
+        <subgroup>003</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A45D  33/18        20130101 LI20151008BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>45</class>
+        <subclass>D</subclass>
+        <main-group>33</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A45D  40/24        20130101 LI20151008BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>45</class>
+        <subclass>D</subclass>
+        <main-group>40</main-group>
+        <subgroup>24</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A45D2200/053       20130101 LA20151008BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>45</class>
+        <subclass>D</subclass>
+        <main-group>2200</main-group>
+        <subgroup>053</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>B65B   1/04        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>65</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">COSMETIC PALETTE ASSEMBLY AND METHOD OF MAKING THE SAME</invention-title>
+    <references-cited date-changed="20151103">
+      <patent-citations name="patcit" date-changed="20151103" />
+      <citation>
+        <patcit num="1" dnum="US4650672A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4650672</doc-number>
+            <kind>A</kind>
+            <name>YAGITA YOSHIAKI [JP], et al</name>
+            <date>19870317</date>
+          </document-id>
+          <application-date>
+            <date>19830830</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US4966205A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4966205</doc-number>
+            <kind>A</kind>
+            <name>TANAKA YOSHINORI [JP]</name>
+            <date>19901030</date>
+          </document-id>
+          <application-date>
+            <date>19881214</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US4995408A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4995408</doc-number>
+            <kind>A</kind>
+            <name>WALLSCHLAEGER GUNNAR J [US]</name>
+            <date>19910226</date>
+          </document-id>
+          <application-date>
+            <date>19890515</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="US6058942A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6058942</doc-number>
+            <kind>A</kind>
+            <name>ENG SERENA [CA]</name>
+            <date>20000509</date>
+          </document-id>
+          <application-date>
+            <date>19990706</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="5" dnum="US6076533A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6076533</doc-number>
+            <kind>A</kind>
+            <name>COHEN ISAAC DAVID [US], et al</name>
+            <date>20000620</date>
+          </document-id>
+          <application-date>
+            <date>19990714</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="6" dnum="US6245341B1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6245341</doc-number>
+            <kind>B1</kind>
+            <name>PAHLCK HAROLD E [US], et al</name>
+            <date>20010612</date>
+          </document-id>
+          <application-date>
+            <date>19980810</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="7" dnum="US2003111130A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20030111130</doc-number>
+            <kind>A1</kind>
+            <name>DUGDALE STEVEN [US], et al</name>
+            <date>20030619</date>
+          </document-id>
+          <application-date>
+            <date>20030128</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="8" dnum="US6695510B1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6695510</doc-number>
+            <kind>B1</kind>
+            <name>LOOK JEE LOON [US], et al</name>
+            <date>20040224</date>
+          </document-id>
+          <application-date>
+            <date>20000531</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="9" dnum="US2004040570A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20040040570</doc-number>
+            <kind>A1</kind>
+            <name>SHIH YU-CHING [TW]</name>
+            <date>20040304</date>
+          </document-id>
+          <application-date>
+            <date>20020828</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="10" dnum="US2006029910A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060029910</doc-number>
+            <kind>A1</kind>
+            <name>AVALLE NADIA [CH]</name>
+            <date>20060209</date>
+          </document-id>
+          <application-date>
+            <date>20050614</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="11" dnum="US2007071534A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20070071534</doc-number>
+            <kind>A1</kind>
+            <name>ANCOROTTI RENATO [IT], et al</name>
+            <date>20070329</date>
+          </document-id>
+          <application-date>
+            <date>20040519</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="12" dnum="US7316235B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>7316235</doc-number>
+            <kind>B2</kind>
+            <name>MAIO GIUSEPPE [IT], et al</name>
+            <date>20080108</date>
+          </document-id>
+          <application-date>
+            <date>20050907</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="13" dnum="US7353831B1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>7353831</doc-number>
+            <kind>B1</kind>
+            <name>FORSLINE LADD [US], et al</name>
+            <date>20080408</date>
+          </document-id>
+          <application-date>
+            <date>20050826</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="14" dnum="US2009041698A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090041698</doc-number>
+            <kind>A1</kind>
+            <name>CABILING LILY-ANN [FR], et al</name>
+            <date>20090212</date>
+          </document-id>
+          <application-date>
+            <date>20071025</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="15" dnum="US2010003291A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20100003291</doc-number>
+            <kind>A1</kind>
+            <name>ROTHROCK GINGER DENISON [US]</name>
+            <date>20100107</date>
+          </document-id>
+          <application-date>
+            <date>20070515</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="16" dnum="US7987860B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>7987860</doc-number>
+            <kind>B2</kind>
+            <name>ANCOROTTI RENATO [IT]</name>
+            <date>20110802</date>
+          </document-id>
+          <application-date>
+            <date>20061215</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="17" dnum="US2012024420A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20120024420</doc-number>
+            <kind>A1</kind>
+            <name>YAMADA KOSAKU [JP], et al</name>
+            <date>20120202</date>
+          </document-id>
+          <application-date>
+            <date>20110725</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="18" dnum="US2012138078A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20120138078</doc-number>
+            <kind>A1</kind>
+            <name>RICARD AUDREY [FR]</name>
+            <date>20120607</date>
+          </document-id>
+          <application-date>
+            <date>20100504</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="19" dnum="US9119454B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>9119454</doc-number>
+            <kind>B2</kind>
+            <name>LAMBRIDIS GEORGE [US], et al</name>
+            <date>20150901</date>
+          </document-id>
+          <application-date>
+            <date>20131009</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="20" dnum="FR3015866A1" dnum-type="publication number">
+          <document-id>
+            <country>FR</country>
+            <doc-number>3015866</doc-number>
+            <kind>A1</kind>
+            <name>LVMH RECH [FR]</name>
+            <date>20150703</date>
+          </document-id>
+          <application-date>
+            <date>20131231</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Mei Shual Cosmetics Co., Ltd.</orgname>
+            <role>03</role>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Shen</last-name>
+            <first-name>Mu-Chuan</first-name>
+            <address>
+              <city>Tainan City</city>
+              <country>TW</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20160114">
+      <main-family family-id="171169222">
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>102015103390</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150309</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150107686</doc-number>
+            <kind>A</kind>
+            <date>20150923</date>
+          </document-id>
+          <application-date>
+            <date>20150313</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2881576</doc-number>
+            <kind>A1</kind>
+            <date>20150914</date>
+          </document-id>
+          <application-date>
+            <date>20150211</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>GB</country>
+            <doc-number>201502267</doc-number>
+            <kind>D0</kind>
+            <date>20150401</date>
+          </document-id>
+          <application-date>
+            <date>20150211</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>GB</country>
+            <doc-number>2528146</doc-number>
+            <kind>A</kind>
+            <date>20160113</date>
+          </document-id>
+          <application-date>
+            <date>20150211</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015174863</doc-number>
+            <kind>A</kind>
+            <date>20151005</date>
+          </document-id>
+          <application-date>
+            <date>20150225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>FR</country>
+            <doc-number>3018435</doc-number>
+            <kind>A1</kind>
+            <date>20150918</date>
+          </document-id>
+          <application-date>
+            <date>20150311</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257508</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150304</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173780487">
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>102015103390</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150309</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150107686</doc-number>
+            <kind>A</kind>
+            <date>20150923</date>
+          </document-id>
+          <application-date>
+            <date>20150313</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2881576</doc-number>
+            <kind>A1</kind>
+            <date>20150914</date>
+          </document-id>
+          <application-date>
+            <date>20150211</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>GB</country>
+            <doc-number>201502267</doc-number>
+            <kind>D0</kind>
+            <date>20150401</date>
+          </document-id>
+          <application-date>
+            <date>20150211</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>GB</country>
+            <doc-number>2528146</doc-number>
+            <kind>A</kind>
+            <date>20160113</date>
+          </document-id>
+          <application-date>
+            <date>20150211</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015174863</doc-number>
+            <kind>A</kind>
+            <date>20151005</date>
+          </document-id>
+          <application-date>
+            <date>20150225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>FR</country>
+            <doc-number>3018435</doc-number>
+            <kind>A1</kind>
+            <date>20150918</date>
+          </document-id>
+          <application-date>
+            <date>20150311</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201534244</doc-number>
+            <kind>A</kind>
+            <date>20150916</date>
+          </document-id>
+          <application-date>
+            <date>20140826</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257508</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150304</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A method of making a cosmetic palette assembly includes: forcing a pigmented cake unit that includes a first pigmented cake, sad a second pigmented cake which is in a color different from that of the first pigmented cake; disposing the first pigmented cake and the second pigmented cake into a holder; and filling a filler into the holder to form a soft base such that the first pigmented cake and the second pigmented cake are fixed in and surrounded by the soft base. The cosmetic palette assembly is also disclosed.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150305</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257508A1</docdb-publication-number>
+      <docdb-application-id>444510704</docdb-application-id>
+      <new-owner>MEI SHUAL COSMETICS CO., LTD., TAIWAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:SHEN, MU-CHUAN;REEL/FRAME:035098/0016</free-text-description>
+      <effective-date>
+        <date>20150127</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATION</heading>
+      <p id="p-00001-en" num="0001">This application claims priorities of Taiwanese Patent Application No. 103204415, filed on Mar. 14, 2014, and Taiwanese Patent Application No. 103129336, filed on Aug. 26, 2014, the entire disclosures of which are hereby incorporated by reference.</p>
+      <heading id="h-00002-en" level="1">FIELD</heading>
+      <p id="p-00002-en" num="0002">This disclosure relates to a palette assembly, more particularly to a cosmetic palette assembly and a method of making the same.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND</heading>
+      <p id="p-00003-en" num="0003">A conventional cosmetic palette assembly includes a rigid palette that is formed with a plurality of separated accommodating spaces tor respectively receiving a plurality of pigmented cakes which have different colors. In order to generate a color different from the colors of the pigmented cakes, a user might take some cake powders from, for example, two pigmented cakes of different colors with a brush, and then blend the colors on the palette. However, the hairs of the brush might be damaged due to the rigidity of the palette during the fixing of the cake powders.</p>
+      <heading id="h-00004-en" level="1">SUMMARY</heading>
+      <p id="p-00004-en" num="0004">Therefore, an object of the present disclosure is to provide a cosmetic palette assembly and a method of mating the same that can overcome the aforesaid drawback of the prior art.</p>
+      <p id="p-00005-en" num="0005">According to one aspect of the present disclosure, there is provided a method of making a cosmetic palette assembly, including the steps of: forming a pigmented cake unit that includes a first pigmented cake, and a second pigmented cake which is in a color different from that of the first pigmented cake; disposing the first pigmented cake and the second pigmented cake into a holder; and filling a filler into the holder to form a soft base such that the first pigmented cake and the second pigmented cake are fixed In and surrounded by the soft base.</p>
+      <p id="p-00006-en" num="0006">According to another aspect of the present disclosure, there is provided a cosmetic palette assembly that includes: a holder confining an accommodating space; and a cosmetic product that is disposed in the accommodating space and that includes a pigmented cake unit and a soft base. The pigmented cake unit has a first pigmented cake and a second pigmented cake that is in a color different from that of the first pigmented cake. The soft base is made of a filler that includes a transparent gel. The first pigmented cake and the second pigmented cake are fixed in and surrounded by the soft base.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00007-en" num="0007">Other features and advantages of the present disclosure will become apparent in the following detailed description of the embodiments of this disclosure, with reference to the accompanying drawings, of which:</p>
+      <p id="p-00008-en" num="0008">
+        <figref>FIG. 1</figref> is a flowchart of the first embodiment of a method of making a cosmetic palette assembly according to the present disclosure;</p>
+      <p id="p-00009-en" num="0009">
+        <figref>FIG. 2</figref> shows perspective views of a forming step or the first embodiment;</p>
+      <p id="p-00010-en" num="0010">
+        <figref>FIG. 3</figref> shows partly sectional views of a disposing step, a filling step, a removing step and a packaging step of the first embodiment;</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 4</figref> shows partly sectional views of a disposing step and a filling step of the second embodiment of the method of making a cosmetic palette assembly according to the present disclosure;</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 5</figref> is a cross-sectional view illustrating a cosmetic palette assembly made by the method as disclosed in <figref>FIG. 4</figref>; and</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 6</figref> is a perspective view illustrating a variation of the cosmetic palette assembly made by the method as disclosed in <figref>FIG. 4</figref>.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00014-en" num="0014">Before the present disclosure is described in greater detail, it should foe noted that like elements are denoted by the same reference numerals throughout the disclosure.</p>
+      <p id="p-00015-en" num="0015">Referring to <figref>FIGS. 1</figref>, <b>2</b> and <b>3</b>, the first embodiment of a method of making a cosmetic palette assembly according to the present disclosure is shown to include a forming step <b>11</b>, a disposing step <b>12</b>, a filling step <b>13</b>, a removing step <b>14</b> and a packaging step <b>15</b>.</p>
+      <p id="p-00016-en" num="0016">The forming step <b>11</b> includes forming a pigmented cake unit <b>31</b> that includes a plurality of first pigmented cakes <b>311</b>, and a plurality of second pigmented cakes <b>312</b> which are in a color different from that of the first pigmented cakes <b>311</b>. The forming step <b>11</b> is conducted using a mold <b>2</b>. To be more specific, the forming step <b>11</b> is conducted by melting first and second cosmetic materials <b>310</b>, <b>310</b>′ respectively for the first and second pigmented cakes <b>311</b>, <b>312</b>, and filling the first and second cosmetic materials <b>310</b>, <b>310</b>′ in corresponding cavities <b>21</b>, <b>21</b>′ of the mold <b>2</b>, followed by solidification so as to form the first pigmented cakes <b>311</b> and the second pigmented cakes <b>312</b> in the cavities <b>21</b>, <b>21</b>′. To be more specific, a period of cooling time, such as ten minutes, is needed to allow the first arid second cosmetic materials <b>310</b>, <b>310</b>′ to solidify. Since the color of the first cosmetic material <b>310</b> and the color of the second cosmetic material <b>310</b>′ are different, the colors of the first pigmented cakes <b>311</b> and the second pigmented cakes <b>312</b> are also different.</p>
+      <p id="p-00017-en" num="0017">In this embodiment, the cavities <b>21</b>, <b>21</b>′ are star-shaped, but in practice, the cavities <b>21</b>, <b>21</b>′ are not limited thereto, and may be configured as other geometric shapes, such as heart-shape, cloud-shape, etc. Moreover, the pigmented cake unit <b>31</b> is not limited to have two different colors, and may be made to have more than two colors.</p>
+      <p id="p-00018-en" num="0018">In addition, if the first arid second cosmetic materials <b>310</b>, <b>310</b>′ are malleable, the step of melting the first and second cosmetic materials <b>310</b>, <b>310</b>′ in the forming step <b>11</b> can be omitted and the first and second pigmented cades <b>311</b>, <b>312</b> can be formed by other ways, such as kneading or extrusion.</p>
+      <p id="p-00019-en" num="0019">It should he noted that the number of each of the first and second pigmented cakes <b>311</b>, <b>312</b> are not limited to that of this embodiment. For example, the pigmented cake unit <b>31</b> may only include one first pigmented cake <b>311</b> and one second pigmented cake <b>312</b>.</p>
+      <p id="p-00020-en" num="0020">The disposing step <b>12</b> includes disposing the first pigmented cakes <b>311</b> and the second pigmented cakes <b>312</b> into a holder <b>4</b>. In this embodiment, the holder <b>4</b> confines an accommodating space <b>413</b>. To be more specific, in this embodiment, the holder <b>4</b> includes a round bottom wall <b>411</b> and a surrounding wall <b>412</b> extending upward from a periphery of the bottom wall <b>411</b> and cooperating with the bottom wall <b>411</b> to confine the accommodating space <b>413</b> for accommodating the pigmented cake unit <b>31</b>.</p>
+      <p id="p-00021-en" num="0021">In this embodiment, the holder <b>4</b> is made of aluminum, which is lightweight and has good thermal conductivity. However, it should be understood that the holder <b>4</b> can also be made of other materials, such as opaque or transparent plastics.</p>
+      <p id="p-00022-en" num="0022">In this embodiment, the disposing step <b>12</b> is conducted using a tweezers <b>71</b> to clamp and place the first and second pigmented cakes <b>311</b>, <b>312</b> into the holder <b>4</b>. The first and second pigmented cakes <b>311</b>, <b>312</b> are spacedly attached to the bottom wall <b>411</b> of the holder <b>4</b>. In this embodiment, since the thickness of the first and second pigmented cakes <b>311</b>, <b>312</b> are equal, top surfaces of the first pigmented cakes <b>311</b> and top surfaces of the second pigmented cakes <b>312</b> are flush with each other. Moreover, in this embodiment, tap surfaces of the first pigmented cakes <b>311</b> and top surfaces of the second pigmented cakes <b>312</b> are higher than a top edge of the surrounding wall <b>412</b>.</p>
+      <p id="p-00023-en" num="0023">The filling step <b>13</b> includes filling a filler into the holder <b>4</b> to form a soft base <b>30</b> such that the first pigmented cakes <b>311</b> and the second pigmented cakes <b>312</b> are fixed in and surrounded by the soft base <b>30</b>. To be more specific, in the filling step <b>13</b>, the filler is first heated into a fluid state, then filled into the accommodating space <b>413</b> of the bolder <b>4</b>, and finally solidified to form the soft base <b>30</b>. A cosmetic product <b>3</b> that is disposed in the accommodating space <b>413</b> and that includes the pigmented cake unit <b>31</b> and the soft base <b>30</b> is then formed.</p>
+      <p id="p-00024-en" num="0024">The filler can be made of a gel material. The gel material may be, for example but not limited to, a humectant, such as beeswax or Vaseline. In addition, a freshener, such as peppermint may be further added into the filler to provide an extra function.</p>
+      <p id="p-00025-en" num="0025">Moreover, the soft base <b>30</b> is also capable of fixing the pigmented cake unit <b>31</b> therein to prevent shifting or movement of the pigmented cake unit <b>31</b> relative to the holder <b>4</b>.</p>
+      <p id="p-00026-en" num="0026">Since bottom surfaces of the first pigmented cakes <b>311</b> and the second pigmented cakes <b>312</b> are fixedly attached to the bottom wall <b>411</b> in the disposing step <b>12</b>, the first pigmented cakes <b>311</b> and the second pigmented cakes <b>312</b> would not more during the filling step <b>13</b>.</p>
+      <p id="p-00027-en" num="0027">When filling the filler into the holder <b>4</b>, the filler can be poured into the holder <b>4</b> until the first and second pigmented cakes <b>311</b>, <b>313</b> are completely covered by the filler. Therefore, after solidification, the first and second pigmented cakes <b>311</b>, <b>312</b> are completely covered by the soft base <b>30</b>. The surface tension of the filler may prevent overflowing of the filler out of the holder <b>4</b>, and makes a top surface of the soft base <b>30</b> smoothly cambered.</p>
+      <p id="p-00028-en" num="0028">In this embodiment, the soft base <b>30</b> is opaque. Since the soft base <b>30</b> is opaque and completely covers the top surfaces of the first pigmented cakes <b>311</b> arid the second pigmented cakes <b>312</b>, the first and second pigmented cakes <b>311</b>, <b>312</b> are blocked from sight. Therefore, the removing step <b>14</b> is conducted to remove a part of the soft base <b>30</b> such that the top surfaces of the first pigmented cakes <b>311</b> and the second pigmented cakes <b>312</b> are exposed. In this embodiment, the removing step <b>14</b> is conducted by horizontally scraping the soft base <b>30</b> with a knife <b>72</b> until the top surfaces of the first and second pigmented cakes <b>311</b>, <b>312</b> are exposed.</p>
+      <p id="p-00029-en" num="0029">The packaging step <b>15</b> includes packaging the holder <b>4</b> along with the pigmented cake unit <b>31</b> and the soft base <b>30</b> into a shell unit <b>5</b>. The shell unit <b>5</b> has a transparent body <b>51</b> that accommodates the holder <b>4</b>, and a transparent cover <b>52</b> that is pivotally mounted on the body <b>51</b>. As such, the colors of the first and second pigmented cakes <b>311</b>, <b>312</b> are visible through the cover <b>52</b>. Besides, the shell unit <b>5</b> also serves as protection for the cosmetic product <b>3</b>.</p>
+      <p id="p-00030-en" num="0030">The first embodiment of the cosmetic palette assembly according to the present disclosure includes the holder <b>4</b> and the cosmetic product <b>3</b>. Since there is no rigid partitioning walls between the first and second pigmented cakes <b>311</b>, <b>312</b>, the user can freely swipe back and forth with a brush across a surface of the cosmetic product <b>3</b> to acquire the desired amount of the cake powder from each of the first pigmented cakes <b>311</b> and the second pigmented cakes <b>312</b> and even some of the soft base <b>30</b> and mix them without causing harm to the brush.</p>
+      <p id="p-00031-en" num="0031">Referring to <figref>FIGS. 1</figref>, <b>4</b> and <b>5</b>, the second embodiment of the method of making a cosmetic palette assembly according to the present disclosure is similar to that of the first embodiment, except for slight differences in the disposing step <b>12</b> and the filling step <b>13</b>, and the omission of the removing step <b>14</b> and the packaging step <b>15</b>.</p>
+      <p id="p-00032-en" num="0032">In the disposing step <b>12</b> of the second embodiment, the holder <b>4</b> is made of a transparent material such as a transparent plastic material. To be more specific, the holder <b>4</b> includes a holder body <b>41</b> that confines the accommodating space <b>413</b> and has a bottom wall <b>411</b> and a surrounding wall <b>412</b> extending upward from a periphery of the bottom wall <b>411</b>, and a cover <b>42</b> that removably covers the holder body <b>41</b>. In this embodiment, the cover <b>42</b> threadedly engages the holder body <b>41</b>. The bottom surfaces of the first pigmented cakes <b>311</b> and the second pigmented cakes <b>312</b> are partly attached to the bottom wall <b>411</b>. The top surfaces of the first pigmented cakes <b>311</b> and the second pigmented cakes <b>312</b> are lower than a top edge of the surrounding wall <b>412</b>.</p>
+      <p id="p-00033-en" num="0033">In the filling step <b>13</b> of the second embodiment, the filler includes a transparent gel <b>32</b> and a glitter material <b>6</b> distributed in the transparent gel <b>32</b>. To be more specific, the filling step <b>13</b> includes evenly mixing the transparent gel <b>32</b> with the glitter material <b>6</b> to obtain the filler, disposing the filler into the holder <b>4</b> so as to cover the first and second pigmented cakes <b>311</b>, <b>312</b>, and solidifying the filler to form the soft base <b>30</b>. In this embodiment, the transparent gel <b>32</b> is made of a balm material.</p>
+      <p id="p-00034-en" num="0034">Since the bottom surfaces of the first pigmented cakes <b>311</b> and the second pigmented cakes <b>312</b> are only partly attached to the bottom wall <b>411</b> during the disposing step <b>12</b>, when the filling step <b>13</b> is finished, the first and second pigmented cakes <b>311</b>, <b>312</b> are detached from the bottom wall <b>411</b> and float in the filler due to buoyancy of the filler. As such, the bottom surfaces of the first pigmented cakes <b>311</b> and the second pigmented cakes <b>312</b> are higher than a top surface of the bottom wall <b>411</b> after the filling step <b>13</b>.</p>
+      <p id="p-00035-en" num="0035">Since the filler is mainly composed of the transparent gel <b>32</b> and the pigmented cake unit <b>31</b> can be seen through the soft base <b>30</b>, the removing step <b>14</b> can be omitted in the second embodiment. Therefore, the thickness of the first and second pigmented cakes <b>311</b>, <b>312</b> in the second embodiment can be smaller than that in the first embodiment. Moreover, since the holder <b>4</b> in the second embodiment serves the same function as the shell, unit <b>5</b> of the first embodiment to protect the cosmetic product <b>3</b>, the packaging step <b>15</b> is not needed and can be omitted.</p>
+      <p id="p-00036-en" num="0036">Alternatively, the filling step <b>13</b> of the second embodiment can be conducted by first pouring a small amount of the filler into the holder body <b>41</b> to allow the first and second pigmented cakes <b>311</b>, <b>312</b> to float upward, and after the filler in the holder body <b>41</b> is slightly solidified, the rest of the filler is then poured in to completely cover the top surfaces of the first pigmented cakes <b>311</b> and the second pigmented cakes <b>312</b>.</p>
+      <p id="p-00037-en" num="0037">Referring to <figref>FIG. 6</figref>, in a variation of the second embodiment, the cover <b>42</b> is pivotally mounted on the holder body <b>41</b>.</p>
+      <p id="p-00038-en" num="0038">Similar to the first embodiment, in this embodiment, since there is no rigid partitioning walls between the first and second pigmented cakes <b>311</b>, <b>312</b>, harm to the brush could be prevented.</p>
+      <p id="p-00039-en" num="0039">Furthermore, in the second embodiment, since the holder <b>4</b> and the soft base <b>30</b> are transparent, the floated pigmented cake unit <b>31</b> could be seen from the outside, thereby improving an aesthetic appearance. Besides, the glitter material <b>6</b> which is evenly distributed in he transparent gel <b>32</b> can provide the user with a shimmering look when the cosmetic product <b>3</b> is applied.</p>
+      <p id="p-00040-en" num="0040">While the present disclosure has been described in connection with what are considered the most practical embodiments, it is understood that this disclosure is not limited to the disclosed embodiments but is intended to cover various arrangements included within the spirit and scope of the broadest interpretation and equivalent arrangements.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method of making a cosmetic palette assembly, comprising the steps of:
+<claim-text>A) forming a pigmented cake unit that includes a first pigmented cake, and a second pigmented cake which is in a color different from that of the first pigmented cake;</claim-text><claim-text>B) disposing the first pigmented cake and the second pigmented cake into a holder; and</claim-text><claim-text>C) filling a filler into the holder to form a soft base such that the first pigmented cake and the second pigmented cake are fixed in and surrounded by the soft base.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein a top surface of the first pigmented cake and a top surface of the second pigmented cake are completely covered by the soft base.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method as claimed in <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the filler includes a transparent gel.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method as claimed in <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein the filler further includes a glitter material distributed in the transparent gel.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method as claimed in <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the top surface of the first pigmented cake and the top surface of the second pigmented cake are flush with each other.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method as claimed in <claim-ref idref="clm-00002-en">claim 2</claim-ref>, further comprising a step (D) of removing a part of the soft base such that the top surface of the first pigmented cake and the top surface of the second pigmented cake are exposed.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method as claimed in <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the soft base is opaque.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method as claimed in <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein step (C) is conducted by mixing the transparent gel with the glitter material to obtain the filler, disposing the filler into the holder, and solidifying the filler to form the soft base.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein step (A) is conducted using a mold.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method as claimed in <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein step (A) is conducted by melting first and second cosmetic materials respectively for the first and second pigmented cakes, and filling the first and second cosmetic materials in corresponding cavities of the mold, followed by solidification so as to form the first pigmented cake and the second pigmented cake in the cavities.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein in step (B), the first pigmented cake and the second pigmented cake are spaced-apart attached to a bottom wall of the holder.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the holder is transparent.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising, after Step (C), a step (E) of packaging the holder along with the pigmented cake unit and the soft base into a shell, unit having a cover.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en" independent="true">
+      <claim-text>
+        <b>14</b>. A cosmetic palette assembly, comprising;
+<claim-text>a holder confining an accommodating space; and</claim-text><claim-text>a cosmetic product that is disposed in said accommodating space and that includes a pigmented cake unit and a soft base, said pigmented cake unit having a first pigmented cake, and a second pigmented cake that is in a color different from that of said first pigmented cake, said soft base being made of a filler that includes a transparent gel, said first pigmented cake and said second pigmented cake being fixed in and surrounded by said soft base.</claim-text></claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The cosmetic palette assembly as claimed in <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein a top surface of said first pigmented cake and a top surface of said second pigmented cake are completely covered by said soft base.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The cosmetic palette assembly as claimed in <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein said filler further includes a glitter material distributed in said transparent gel.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The cosmetic palette assembly as claimed in <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein said holder is transparent and includes a holder body that confines said accommodating space, and a cover that removably covers said bolder body.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The cosmetic palette assembly as claimed in <claim-ref idref="clm-00017-en">claim 17</claim-ref>, wherein said holder body includes a bottom wall, a bottom surface of said first pigmented cake and a bottom surface of said second pigmented cake being higher than a top surface of said bottom wall.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The cosmetic palette assembly as claimed in <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein a top surface of said first pigmented cake and a top surface of said second pigmented cake are flush with each other.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The cosmetic palette assembly as claimed in <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein said first pigmented cake and said second pigmented cake are spaced-apart, disposed in said soft base.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257508A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257508A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257508A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257508A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257508A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257508A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257508A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257508A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257508A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257508A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257508A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257508A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257508A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257508A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150257508A1_00008.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257508A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257508A1.PDF" type="pdf" size="370406" pages="10" />
+</lexisnexis-patent-document>

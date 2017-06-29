@@ -1,0 +1,1393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150259217A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030029" date-changed="20160127" time-changed="023636">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121313608">
+        <country>US</country>
+        <doc-number>20150259217</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14092800</doc-number>
+        <date>20131127</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20160127">
+      <classification-ipcr sequence="1">
+        <text>C01G  51/04        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>01</class>
+        <subclass>G</subclass>
+        <main-group>51</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C01G   9/02        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>01</class>
+        <subclass>G</subclass>
+        <main-group>9</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C01G  15/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>01</class>
+        <subclass>G</subclass>
+        <main-group>15</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C01G  45/02        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>01</class>
+        <subclass>G</subclass>
+        <main-group>45</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>C01G  49/02        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>01</class>
+        <subclass>G</subclass>
+        <main-group>49</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>C07F   3/06        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>F</subclass>
+        <main-group>3</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="7">
+        <text>C07F   5/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>F</subclass>
+        <main-group>5</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="8">
+        <text>C07F  13/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>F</subclass>
+        <main-group>13</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="9">
+        <text>C07F  15/02        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>F</subclass>
+        <main-group>15</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="10">
+        <text>C07F  15/06        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>F</subclass>
+        <main-group>15</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20160127">
+      <classification-cpc sequence="1">
+        <text>C01G  51/04        20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>G</subclass>
+        <main-group>51</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C01B  13/14        20130101 LI20160107BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>13</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160107</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C01G   1/02        20130101 LI20160107BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>G</subclass>
+        <main-group>1</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160107</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C01G   9/02        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>G</subclass>
+        <main-group>9</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C01G  15/00        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>G</subclass>
+        <main-group>15</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C01G  19/00        20130101 LI20160107BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>G</subclass>
+        <main-group>19</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160107</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C01G  45/02        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>G</subclass>
+        <main-group>45</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C01G  49/06        20130101 LI20160107BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>G</subclass>
+        <main-group>49</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160107</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C01P2002/72        20130101 LA20160107BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>P</subclass>
+        <main-group>2002</main-group>
+        <subgroup>72</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20160107</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>C01P2002/84        20130101 LA20160107BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>P</subclass>
+        <main-group>2002</main-group>
+        <subgroup>84</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20160107</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>C01P2002/85        20130101 LA20160107BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>P</subclass>
+        <main-group>2002</main-group>
+        <subgroup>85</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20160107</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>C01P2004/04        20130101 LA20160107BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>P</subclass>
+        <main-group>2004</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20160107</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>C01P2004/51        20130101 LA20160107BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>P</subclass>
+        <main-group>2004</main-group>
+        <subgroup>51</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20160107</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>C01P2004/52        20130101 LA20160107BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>P</subclass>
+        <main-group>2004</main-group>
+        <subgroup>52</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20160107</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="15">
+        <text>C01P2004/64        20130101 LA20160107BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>P</subclass>
+        <main-group>2004</main-group>
+        <subgroup>64</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20160107</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="16">
+        <text>C01P2004/84        20130101 LA20160107BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>P</subclass>
+        <main-group>2004</main-group>
+        <subgroup>84</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20160107</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="17">
+        <text>Y10T 428/2991      20130101 LA20151001BCEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>428</main-group>
+        <subgroup>2991</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151001</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">LOW-TEMPERATURE ROUTE FOR PRECISION SYNTHESIS OF METAL OXIDE NANOPARTICLES</invention-title>
+    <related-documents date-changed="20150917">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61617309</doc-number>
+          <date>20121128</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>University of Oregon</orgname>
+            <role>03</role>
+            <address>
+              <city>Eugene</city>
+              <state>OR</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Ito</last-name>
+            <first-name>Daisuke</first-name>
+            <address>
+              <city>Kanagawa</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Hutchison</last-name>
+            <first-name>James E.</first-name>
+            <address>
+              <city>Eugene</city>
+              <state>OR</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173666110">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259217</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20131127</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173666109">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259217</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20131127</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Methods for making metal oxide nanoparticles, including mixed metal oxides and core-shell metal oxide nanoparticles, are disclosed. A solution comprising a metal carboxylate and a carboxylic acid is combined with a solvent comprising an alcohol heated to a temperature ≦250° C. for an effective period of time to form metal oxide nanoparticles. The metal may be a group IIIA metal, a group IVA metal, a transition metal, or a combination thereof. A metal oxide shell may be deposited onto metal oxide nanoparticles by dispersing the metal oxide nanoparticles in an alcohol, adding a metal carboxylate, and maintaining the reaction at a temperature ≦200° C. for an effective period of time to form core-shell nanoparticles. The nanoparticles may have a relative size dispersity of ≦20%, and may further comprise a plurality of carboxylic acid, carboxylate, and/or alcohol ligands coordinated to the nanoparticles' outer surfaces.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20140626</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015259217A1</docdb-publication-number>
+      <docdb-application-id>444514045</docdb-application-id>
+      <new-owner>STATE OF OREGON, ACTING BY AND THROUGH THE STATE B</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:ITO, DAISUKE;HUTCHISON, JAMES E.;SIGNING DATES FROM 20140110 TO 20140118;REEL/FRAME:033188/0866</free-text-description>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20141210</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015259217A1</docdb-publication-number>
+      <docdb-application-id>444514045</docdb-application-id>
+      <new-owner>UNIVERSITY OF OREGON, OREGON</new-owner>
+      <free-text-description>ENTITY CONVERSION;ASSIGNOR:STATE OF OREGON ACTING BY AND THROUGH THE STATE BOARD OF HIGHER EDUCATION ON BEHALF OF THE UNIVERSITY OF OREGON;REEL/FRAME:034590/0825</free-text-description>
+      <effective-date>
+        <date>20140701</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS REFERENCE TO RELATED APPLICATION</heading>
+      <p id="p-00001-en" num="0001">This application claims the benefit of U.S. Provisional Application No. 61/730,912, filed Nov. 28, 2012, which is incorporated in its entirety herein by reference.</p>
+    </related-apps>
+    <govt-interest>
+      <heading id="h-00002-en" level="1">ACKNOWLEDGMENT OF GOVERNMENT SUPPORT</heading>
+      <p id="p-00002-en" num="0002">This invention was made with government support under FA8650-05-1-5041 awarded by the Air Force Research Laboratory. The government has certain rights in the invention.</p>
+    </govt-interest>
+    <summary>
+      <heading id="h-00003-en" level="1">FIELD</heading>
+      <p id="p-00003-en" num="0003">The disclosure pertains to low-temperature methods for making metal oxide nanoparticles, including mixed metal oxides and core-shell metal oxide nanoparticles, using metal carboxylates, a carboxylic acid and an alcohol.</p>
+      <heading id="h-00004-en" level="1">PARTIES TO JOINT RESEARCH AGREEMENT</heading>
+      <p id="p-00004-en" num="0004">State of Oregon acting by and through the State Board of Higher Education on behalf of the University of Oregon and Sony Corporation.</p>
+      <heading id="h-00005-en" level="1">BACKGROUND</heading>
+      <p id="p-00005-en" num="0005">Metal oxide nanoparticles are useful in a variety of technologically important applications. Nanoparticle deposition is expected to be a promising alternative to current thin-film deposition technologies for low-temperature fabrication of metal oxide films. Metal oxide nanoparticle-inks can be deposited using existing roll-to-roll or ink-jet systems to realize low-cost, low-waste, highly scalable and high-speed manufacturing. In the case of nanoparticle films, sintering at high temperature may not be required because the crystalline nanoparticles are formed during chemical production.</p>
+      <p id="p-00006-en" num="0006">Although solution deposition of metal oxide nanoparticle-inks is a versatile and simple approach to depositing metal oxide films, the synthesis of metal oxide nanoparticles that are highly crystalline, monodisperse and precisely doped by a simple and reproducible general route remains a significant challenge. Metal oxide nanoparticles typically have been produced at high temperatures and under thermal decomposition conditions, and the synthesis parameters are difficult to control precisely. To achieve monodisperse nanocrystals, the reaction conditions are chosen to separate the nucleation and growth phases of the reaction. High temperatures are typically required to solubilize precursors, decompose the precursors, and/or convert (anneal) amorphous nanoparticles to the crystalline form. For example, monodispersed metal oxide nanoparticles have been synthesized by thermal decomposition or pyrolysis of metal organic precursors at temperatures greater than 300° C. (Park et al., <i>Ang. Chemie, </i>46:4630-60 (2007); Jana et al., <i>Chemistry of Materials, </i>16:3932-3935 (2004)). Extended reaction and aging times are often required to attain crystalline nanoparticles, and uniform doping or production of mixed oxide nanocrystals can be difficult because each metal precursor has a different decomposition temperature. The production of core/shell structures is challenging under these conditions because nucleation of new particles from the shell precursor competes with shell growth onto the core material. Finally, high temperatures preclude the use of thermally-sensitive organic chemical functionality within stabilizers and ligands.</p>
+      <p id="p-00007-en" num="0007">Metal oxide nanoparticles also have been formed by alcoholysis and aminolysis of metal precursors (Park et al., <i>Ang. Chemie, </i>46:4630-4660 (2007); Narayanaswamy et al., <i>JACS, </i>128:10310-9 (2006); Gilstrap et al., <i>Adv. Mat., </i>20:4163-6 (2008)). However, these methods still use reaction temperatures above 290° C.</p>
+      <heading id="h-00006-en" level="1">SUMMARY</heading>
+      <p id="p-00008-en" num="0008">Embodiments of crystalline metal oxide nanoparticles, including mixed metal oxides and core-shell metal oxide nanoparticles, and methods of making the nanoparticles are disclosed.</p>
+      <p id="p-00009-en" num="0009">Disclosed embodiments of a method for making nanoparticles comprising a metal oxide include (a) providing a solution comprising RCOOH and a corresponding metal carboxylate comprising RCOO<sup>−</sup> and a metal cation M, wherein M is a group IIIA metal, a group IVA metal, a transition metal, or a combination thereof, and R is saturated or unsaturated C1-C21 aliphatic; (b) combining the solution with a solvent comprising R′OH to produce a mixture, wherein R′ is saturated or unsaturated C2-C22 aliphatic, and wherein the solvent is preheated to a temperature, T<sub>1</sub>, prior to combining the solution with the solvent, wherein T<sub>1 </sub>is less than a thermal decomposition temperature of the corresponding metal carboxylate; and (c) maintaining the mixture at a temperature, T<sub>2</sub>, for an effective period of time to form crystalline metal oxide nanoparticles wherein T<sub>2 </sub>is less than a thermal decomposition temperature of the corresponding metal carboxylate. In some embodiments, T<sub>1 </sub>and/or T<sub>2 </sub>is ≦240° C. In some embodiments, the method further includes flowing a gas across a surface of the mixture, thereby evaporating and removing water produced as the crystalline metal oxide nanoparticles are formed, and/or isolating the crystalline metal oxide nanoparticles after the effective period of time.</p>
+      <p id="p-00010-en" num="0010">In some embodiments, T<sub>1 </sub>and/or T<sub>2 </sub>is 160° C. to 230° C. The effective period of time may be ≦30 minutes. The solution may be combined with the solvent comprising R′OH by injecting the solution into the solvent, such as by injecting the solution into the solvent at a rate of up to 0.5 mL/minute, such as 0.1-0.5 mL/minute.</p>
+      <p id="p-00011-en" num="0011">Providing a solution comprising the metal carboxylate and RCOOH may include providing a C1-C5 metal carboxylate comprising M, combining the C1-C5 metal carboxylate with a molar excess of RCOOH, and heating to convert at least a portion of the C1-C5 metal carboxylate to the metal carboxylate comprising RCOO<sup>− </sup>and M, thereby forming the solution comprising the metal carboxylate and RCOOH. In some embodiments, M is Mn, Fe, Co, Zn, Sn, In, or a combination thereof.</p>
+      <p id="p-00012-en" num="0012">In some embodiments, [R′OH]&gt;[RCOOH]&gt;[M] when the solution is combined with the solvent. In one embodiment, [R′OH] is at least 10× greater than [M] when the solution is combined with the solvent. R′OH may be a liquid at temperatures less than 200° C. In certain embodiments, the metal carboxylate is soluble in R′OH at temperatures ≦240° C.</p>
+      <p id="p-00013-en" num="0013">In some embodiments, R and R′ are linear aliphatic and differ in length by five or fewer carbon atoms. In certain embodiments, R′ is RCH<sub>2</sub>—. In one embodiment, RCOOH is oleic acid and R′OH is oleyl alcohol.</p>
+      <p id="p-00014-en" num="0014">In some embodiments, a metal oxide shell is deposited onto the crystalline metal oxide nanoparticles by (i) combining crystalline metal oxide nanoparticles comprising M with R′″OH to produce a mixture, where R′″ is saturated or unsaturated C2-C22 aliphatic; (ii) heating the mixture to a temperature, T<sub>3</sub>, of ≦200° C.; (iii) providing a solution comprising and R″COOH and a corresponding metal carboxylate comprising R″COO<sup>− </sup>and a metal cation M′, where M′ is a group IIIA metal, a group IVA metal, a transition metal, or a combination thereof, and R″ is saturated or unsaturated C1-C21 aliphatic; (iv) combining the solution with the mixture; and (v) maintaining the combined solution and mixture at a temperature, T<sub>4</sub>, of ≦200° C. for an effective period of time to form core-shell nanoparticles comprising a crystalline metal oxide core including M and a metal oxide shell including M′ deposited onto the metal oxide core. In some embodiments, the effective period of time is at least 5 minutes. M and M′ may be the same or different metals. In certain embodiments, R″ is R, and R′″ and R′ are RCH<sub>2</sub>—.</p>
+      <p id="p-00015-en" num="0015">T<sub>3 </sub>and/or T<sub>4 </sub>may be 150-200° C. In certain embodiments, T<sub>4 </sub>is less than a nucleation temperature for a metal oxide comprising M′, and oxygen is excluded during deposition of the metal oxide shell.</p>
+      <p id="p-00016-en" num="0016">Embodiments of the disclosed methods can be used to prepare a plurality of crystalline nanoparticles having a relative size dispersity of ≦20%, each nanoparticle including a metal oxide crystal and a plurality of RCOOH molecules and/or RCOO— ligands coordinated to an outer surface of the metal oxide crystal. The nanoparticle may further include R′OH molecules and/or R′O— ligands coordinated to the outer surface of the metal oxide crystal. The nanoparticles may have an average largest dimension of ≦20 nm. In some embodiments, the metal oxide comprises In<sub>2</sub>O<sub>3</sub>, Fe<sub>2</sub>O<sub>3</sub>, Mn<sub>3</sub>O<sub>4</sub>, CoO, ZnO, SnO<sub>2</sub>, Ga<sub>2</sub>O<sub>3</sub>, or a combination thereof. In certain embodiments, R is cis-CH<sub>3</sub>(CH<sub>2</sub>)<sub>7</sub>CH═CH(CH<sub>2</sub>)<sub>7</sub>—.</p>
+      <p id="p-00017-en" num="0017">Some embodiments of the disclosed methods can be used to prepare core-shell nanoparticles with a relative size dispersity of ≦20%, where each nanoparticle includes a crystalline metal oxide core comprising M, a metal oxide shell comprising M′, and plurality of RCOOH molecules and/or RCOO— ligands coordinated to an outer surface of the metal oxide shell. M and M′ may be the same or different metals. In certain embodiments, the metal oxide cores have an average largest dimension of ≦20 nm, and the metal oxide shells have an average thickness of 1-10 nm.</p>
+      <p id="p-00018-en" num="0018">A plurality of nanoparticles as disclosed herein may have a relative size dispersity of ≦20%, and each nanoparticle includes (1) a crystalline metal oxide core having a formula M<sub>x</sub>O<sub>y</sub>, wherein M is a group IIIA metal, a group IVA metal, a transition metal, or a combination thereof, and x and y are positive integers, and (2) a plurality of RCOOH molecules and/or RCOO— ligands coordinated to an outer surface of the nanoparticle, wherein R is saturated or unsaturated C5-C21 aliphatic. In one embodiment, R is cis-CH<sub>3</sub>(CH<sub>2</sub>)<sub>7</sub>CH═CH(CH<sub>2</sub>)<sub>7</sub>—. In certain embodiments, the metal oxide comprises In<sub>2</sub>O<sub>3</sub>, Fe<sub>2</sub>O<sub>3</sub>, Mn<sub>3</sub>O<sub>4</sub>, CoO, ZnO, SnO<sub>2</sub>, Ga<sub>2</sub>O<sub>3</sub>, or a combination thereof. The nanoparticles may further include a metal oxide shell between the crystalline metal oxide core and the plurality of RCOOH molecules and/or RCOO— ligands, the metal oxide shell having a formula M′<sub>x</sub>O<sub>y</sub>, wherein M′ is a group IIIA metal, a group IVA metal, a transition metal, or a combination thereof. M and M′ may be the same or different. In some embodiments, the metal oxide cores have an average largest dimension of ≦20 nm, and the metal oxide shells have an average thickness of 1-10 nm.</p>
+      <p id="p-00019-en" num="0019">The foregoing and other objects, features, and advantages of the invention will become more apparent from the following detailed description, which proceeds with reference to the accompanying figures.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00007-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00020-en" num="0020">The patent or application file contains at least one drawing executed in color. Copies of this patent or patent application publication with color drawing(s) will be provided by the Office upon request and payment of the necessary fee.</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 1</figref> is a scheme illustrating one embodiment of a reaction between a metal carboxylate and an alcohol, resulting in synthesis of a metal oxide.</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 2</figref>
+        <i>a </i>illustrates a second-order reaction between an alcohol and a metal carboxylate in an inert solvent.</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 2</figref>
+        <i>b </i>illustrates a pseudo-first-order reaction between an alcohol and a metal carboxylate where the alcohol also functions as the solvent.</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 2</figref>
+        <i>c </i>is a graph comparing the rates of esterification in a pseudo-first-order reaction and a second-order reaction.</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 2</figref>
+        <i>d </i>is a scheme illustrating one embodiment of a conventional alcoholysis reaction for making metal oxide nanocrystals.</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 3</figref>
+        <i>a </i>is partial NMR spectra of mixed solutions of oleyl alcohol and oleic acid with indium oleate complexes at room temperature (lower spectrum) and after heating at 230° C. for 5 minutes (upper spectrum) wherein the indium oleate complex and oleic acid peaks have disappeared.</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 3</figref>
+        <i>b </i>is FT-IR spectra of mixed solutions of oleyl alcohol and oleic acid after heating at 230° C. for 5 minutes with indium oleate complexes.</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 3</figref>
+        <i>c </i>is a graph showing the conversion of indium oleate complexes to oleyl oleate versus time at 230° C.</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 4</figref> is NMR spectra of mixed solutions of oleyl alcohol and oleic acid after heating at 200° C. for 5 minutes with, and without, indium oleate complexes. The triplet peaks at (3) indicate a carboxylic acid, and the triplet peaks at (4) and (5) indicate an ester.</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 5</figref>
+        <i>a </i>is a low-magnification transmission electron microscopy (TEM) image of indium oxide nanocrystals synthesized by one embodiment of the disclosed methods.</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 5</figref>
+        <i>b </i>is a histogram of indium oxide nanocrystal diameters corresponding to the nanocrystals shown in <figref>FIG. 5</figref><i>a. </i></p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 5</figref>
+        <i>c </i>is an X-ray photoelectron microscopy (XPS) spectrum of indium oxide nanocrystals such as those shown in <figref>FIG. 5</figref><i>a. </i></p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 5</figref>
+        <i>d </i>is a high-resolution TEM image of indium oxide nanocrystals such as those shown in <figref>FIG. 5</figref><i>a. </i></p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIG. 5</figref>
+        <i>e </i>is an image based on a fast Fourier transform (FFT) of the image shown in <figref>FIG. 5</figref><i>d. </i></p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIG. 5</figref>
+        <i>f </i>is, a schematic drawing illustrating the structure of In<sub>2</sub>O<sub>3 </sub>nanocrystals synthesized at 230° C. according to one embodiment of the disclosed methods.</p>
+      <p id="p-00036-en" num="0036">
+        <figref>FIG. 6</figref>
+        <i>a </i>shows X-ray photoelectron (XPS) spectra and binding energy (C 1s, O 1s, and In 3d) of In<sub>2</sub>O<sub>3 </sub>nanocrystals.</p>
+      <p id="p-00037-en" num="0037">
+        <figref>FIG. 6</figref>
+        <i>b </i>is an X-ray diffraction (XRD) pattern of In<sub>2</sub>O<sub>3 </sub>nanocrystals compared with the known pattern for In<sub>2</sub>O<sub>3 </sub>(left); the peak positions and relative peak intensities are shown in the table (right).</p>
+      <p id="p-00038-en" num="0038">
+        <figref>FIGS. 7</figref>
+        <i>a</i>-<b>7</b><i>d </i>are TEM images of Fe<sub>2</sub>O<sub>3</sub>, Mn<sub>3</sub>O<sub>4</sub>, CoO, and ZnO nanocrystals, respectively, synthesized according to one embodiment of the disclosed methods.</p>
+      <p id="p-00039-en" num="0039">
+        <figref>FIG. 7</figref>
+        <i>e </i>is a schematic drawing illustrating the structures of a layered icosahedron (left) and a layered triangular pyramid (right).</p>
+      <p id="p-00040-en" num="0040">
+        <figref>FIGS. 8</figref>
+        <i>a</i>-<b>8</b><i>d </i>are histograms of γ-Fe<sub>2</sub>O<sub>3</sub>, Mn<sub>3</sub>O<sub>4</sub>, CoO, and ZnO nanocrystal diameters corresponding to the nanocrystals shown in <figref>FIGS. 7</figref><i>a</i>-<b>7</b><i>d. </i></p>
+      <p id="p-00041-en" num="0041">
+        <figref>FIG. 9</figref>
+        <i>a </i>shows X-ray photoelectron (XPS) spectra and binding energy (C 1s, O 1s, and Fe 2p) of γ-Fe<sub>2</sub>O<sub>3 </sub>nanocrystals.</p>
+      <p id="p-00042-en" num="0042">
+        <figref>FIG. 9</figref>
+        <i>b </i>is an X-ray diffraction (XRD) pattern of γ-Fe<sub>2</sub>O<sub>3 </sub>nanocrystals compared with the known pattern for γ-Fe<sub>2</sub>O<sub>3 </sub>(left); the peak positions and relative peak intensities are shown in the table (right).</p>
+      <p id="p-00043-en" num="0043">
+        <figref>FIG. 10</figref>
+        <i>a </i>shows X-ray photoelectron (XPS) spectra and binding energy (C 1s, O 1s, and Mn 2p) of Mn<sub>3</sub>O<sub>4 </sub>nanocrystals.</p>
+      <p id="p-00044-en" num="0044">
+        <figref>FIG. 10</figref>
+        <i>b </i>is an X-ray diffraction (XRD) pattern of Mn<sub>3</sub>O<sub>4 </sub>nanocrystals compared with the known pattern for Mn<sub>3</sub>O<sub>4 </sub>(left); the peak positions and relative peak intensities are shown in the table (right).</p>
+      <p id="p-00045-en" num="0045">
+        <figref>FIG. 11</figref>
+        <i>a </i>shows X-ray photoelectron (XPS) spectra and binding energy (C 1s, O 1s, and Co 2p) of CoO nanocrystals.</p>
+      <p id="p-00046-en" num="0046">
+        <figref>FIG. 11</figref>
+        <i>b </i>is an X-ray diffraction (XRD) pattern of CoO nanocrystals compared with the known pattern for CoO (left); the peak positions and relative peak intensities are shown in the table (right).</p>
+      <p id="p-00047-en" num="0047">
+        <figref>FIG. 12</figref>
+        <i>a </i>shows X-ray photoelectron (XPS) spectra and binding energy (C 1s, O 1s, and Zn 2p) of ZnO nanocrystals.</p>
+      <p id="p-00048-en" num="0048">
+        <figref>FIG. 12</figref>
+        <i>b </i>is an X-ray diffraction (XRD) pattern of ZnO nanocrystals compared with the known pattern for ZnO (left); the peak positions and relative peak intensities are shown in the table (right).</p>
+      <p id="p-00049-en" num="0049">
+        <figref>FIG. 13</figref> is a color photograph of In<sub>2</sub>O<sub>3</sub>, indium tin oxide (10% tin), and γ-Fe<sub>2</sub>O<sub>3 </sub>nanocrystal solutions synthesized at 230° C. according to one embodiment of the disclosed methods.</p>
+      <p id="p-00050-en" num="0050">
+        <figref>FIG. 14</figref>
+        <i>a </i>is a low-magnification TEM image of 10% tin-doped indium tin oxide (ITO) nanocrystals synthesized according to one embodiment of the disclosed methods; the inset is a selected area electron diffraction (SAED) pattern.</p>
+      <p id="p-00051-en" num="0051">
+        <figref>FIG. 14</figref>
+        <i>b </i>is a histogram of ITO nanocrystal diameters corresponding to the nanocrystals shown in <figref>FIG. 14</figref><i>a. </i></p>
+      <p id="p-00052-en" num="0052">
+        <figref>FIG. 14</figref>
+        <i>c </i>is a high-resolution TEM image of ITO nanocrystals corresponding to the nanocrystals shown in <figref>FIG. 14</figref><i>a. </i></p>
+      <p id="p-00053-en" num="0053">
+        <figref>FIG. 14</figref>
+        <i>d </i>is an image corresponding to a FFT of the TEM image of the ITO nanocrystals corresponding to <figref>FIG. 14</figref><i>c. </i></p>
+      <p id="p-00054-en" num="0054">
+        <figref>FIG. 14</figref>
+        <i>e </i>shows UV-visible spectra of undoped indium oxide nanocrystals, and ITO nanocrystals comprising 5% and 10% tin.</p>
+      <p id="p-00055-en" num="0055">
+        <figref>FIG. 14</figref>
+        <i>f </i>is a graph of optical absorption as a function of photon energy for undoped indium oxide nanocrystals and ITO nanocrystals comprising 5% and 10% tin.</p>
+      <p id="p-00056-en" num="0056">
+        <figref>FIG. 15</figref>
+        <i>a </i>is a high-resolution TEM image of a γ-Fe<sub>2</sub>O<sub>3</sub>/MnO core/shell nanocrystal.</p>
+      <p id="p-00057-en" num="0057">
+        <figref>FIG. 15</figref>
+        <i>b </i>is a FFT-filtered image of a γ-Fe<sub>2</sub>O<sub>3</sub>/MnO core/shell nanocrystal.</p>
+      <p id="p-00058-en" num="0058">
+        <figref>FIG. 15</figref>
+        <i>c </i>is a high-resolution TEM image of a ZnO/Ga<sub>2</sub>O<sub>3 </sub>core/shell nanocrystal.</p>
+      <p id="p-00059-en" num="0059">
+        <figref>FIG. 15</figref>
+        <i>d </i>is a FFT-filtered image of a ZnO/Ga<sub>2</sub>O<sub>3 </sub>core/shell nanocrystal.</p>
+      <p id="p-00060-en" num="0060">
+        <figref>FIGS. 16</figref>
+        <i>a </i>and <b>16</b><i>b </i>are, respectively photoluminescence spectra of ZnO nanocrystals and ZnO—Ga<sub>2</sub>O<sub>3 </sub>core-shell nanocrystals excited at 320 nm by a filtered Hg UV source.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00008-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00061-en" num="0061">Embodiments of a versatile, low-temperature method for synthesizing metal oxide, core/shell nanoparticles, and doped nanoparticles via an esterification reaction between a metal carboxylate and an alcohol are disclosed. The nanoparticles may be ligand-stabilized. Embodiments of the disclosed esterification process produce crystalline metal oxide nanoparticles with excellent control over the size, size dispersity, and doping level. Some embodiments of the disclosed method also can be used to produce core/shell nanocrystals by epitaxial growth of shells onto nanoparticle cores. Embodiments of the disclosed method can be performed at low temperatures (&lt;230° C.) using alcohols and carboxylic acids derived from non-toxic natural oils. In some embodiments, the reaction by-product, an ester, is also a non-toxic natural oil. Embodiments of the metal oxide and core/shell nanoparticles are useful in a variety of technologically important applications, and the nanoparticle properties can be optimized or otherwise tailored by carefully choosing and incorporating specific matrix metal elements and metal ion dopants.</p>
+      <p id="p-00062-en" num="0062">The lower temperature and enhanced control of the chemical reactivity facilitates synthesis of precisely doped nanocrystals and core/shell nanocrystals that enhance the functionalities of these nanocrystals. In the case of the doped nanocrystals, the esterification reaction addresses a significant challenge in the production of these types of nanocrystals from multiple precursors, that is to balance the reactivity of the two precursors. In the case of the core/shell structures, the ability to generate reactive precursors that can contribute to shell growth without resulting in nucleation of new nanocrystals is an advantage. Such lower temperature approaches may also aid in preserving kinetic structures formed in shape-controlled reactions that might be altered if reactions are conducted at higher temperatures.</p>
+      <heading id="h-00009-en" level="1">I. DEFINITIONS</heading>
+      <p id="p-00063-en" num="0063">The following explanations of terms and abbreviations are provided to better describe the present disclosure and to guide those of ordinary skill in the art in the practice of the present disclosure. As used herein, “comprising” means “including” and the singular forms “a” or “an” or “the” include plural references unless the context clearly dictates otherwise. The term “or” refers to a single element of stated alternative elements or a combination of two or more elements, unless the context clearly indicates otherwise.</p>
+      <p id="p-00064-en" num="0064">Unless explained otherwise, all technical and scientific terms used herein have the same meaning as commonly understood to one of ordinary skill in the art to which this disclosure belongs. Although methods and materials similar or equivalent to those described herein can be used in the practice or testing of the present disclosure, suitable methods and materials are described below. The materials, methods, and examples are illustrative only and not intended to be limiting. Other features of the disclosure are apparent from the following detailed description and the claims.</p>
+      <p id="p-00065-en" num="0065">Unless otherwise indicated, all numbers expressing quantities of components, molecular weights, percentages, temperatures, times, and so forth, as used in the specification or claims are to be understood as being modified by the term “about.” Accordingly, unless otherwise indicated, implicitly or explicitly, the numerical parameters set forth are approximations that may depend on the desired properties sought and/or limits of detection under standard test conditions/methods. When directly and explicitly distinguishing embodiments from discussed prior art, the embodiment numbers are not approximates unless the word “about” is recited.</p>
+      <p id="p-00066-en" num="0066">Definitions of common terms in chemistry may be found in Richard J. Lewis, Sr. (ed.), <i>Hawley's Condensed Chemical Dictionary</i>, published by John Wiley &amp; Sons, Inc., 1997 (ISBN 0-471-29205-2). In order to facilitate review of the various embodiments of the disclosure, the following explanations of specific terms are provided:</p>
+      <p id="p-00067-en" num="0067">Alcohol: A chemical compound having the general formula ROH, where R denotes virtually any group, including aliphatic, substituted aliphatic, aryl, arylalkyl, heteroaryl, etc.</p>
+      <p id="p-00068-en" num="0068">Aliphatic: A substantially hydrocarbon-based compound, or a radical thereof (e.g., C<sub>6</sub>H<sub>13</sub>, for a hexane radical), including alkanes, alkenes, alkynes, including cyclic versions thereof, and further including straight- and branched-chain arrangements, and all stereo and position isomers as well. Unless expressly stated otherwise, an aliphatic group contains from one to twenty-five carbon atoms; for example, from one to fifteen, from one to ten, from one to six, or from one to four carbon atoms. The term “lower aliphatic” refers to an aliphatic group containing from one to ten carbon atoms. An aliphatic chain may be substituted or unsubstituted. Unless expressly referred to as an “unsubstituted aliphatic,” an aliphatic groups can either be unsubstituted or substituted. An aliphatic group can be substituted with one or more substituents (up to two substituents for each methylene carbon in an aliphatic chain, or up to one substituent for each carbon of a —C═C— double bond in an aliphatic chain, or up to one substituent for a carbon of a terminal methine group). Exemplary aliphatic substituents include, for instance, amino, amide, sulfonamide, halo, cyano, carboxy, hydroxyl, mercapto, trifluoromethyl, alkyl, alkoxy, alkylthio, thioalkoxy, arylalkyl, heteroaryl, alkylamino, dialkylamino, or other functionality. As used herein, the term “hydrocarbon” refers to an unsubstituted aliphatic group.</p>
+      <p id="p-00069-en" num="0069">Alkyl refers to a hydrocarbon group having a saturated carbon chain. The chain may be cyclic, branched or unbranched. The terms alkenyl and alkynyl refer to hydrocarbon groups having carbon chains containing one or more double or triple bonds, respectively.</p>
+      <p id="p-00070-en" num="0070">Carboxylic acid: A chemical compound having the general formula RCOOH where R denotes virtually any group, including aliphatic, substituted aliphatic, aryl, arylalkyl, heteroaryl, etc.</p>
+      <p id="p-00071-en" num="0071">Catalyst: As used herein, a catalyst is a substance that enables a reaction to proceed under different conditions (e.g., at a lower temperature and/or at a significantly faster rate) than otherwise possible.</p>
+      <p id="p-00072-en" num="0072">Dispersity: A measure of the heterogeneity of particle sizes in a population of particles. Particles are considered to be monodisperse if the particles have substantially the same size, shape, and/or mass. Particles are considered to be polydisperse if the size, shape, and/or mass distribution is variable. As used herein, the term “monodisperse” means that the relative size variation is ≦20%, such as ≦10%, ≦5%, ≦1%, from 0.0% to 20%, 0.01% to 20%, 0.1% to 20%, 0.1% to 10%, 0.1% to 5%, or 1% to 10%. For example, if the average particle size is 5 mm and the dispersity is ≦20%, then the size deviation is ≦1 mm.</p>
+      <p id="p-00073-en" num="0073">Ester: A chemical compound derived from an organic acid (general formula: RCO<sub>2</sub>H) where the hydrogen of the —OH (hydroxyl) group is replaced by an aliphatic, alkyl or aryl group. A general formula for an ester derived from an organic acid is shown below:</p>
+      <p id="p-00074-en" num="0000">
+        <chemistry id="chem-00001-en" num="00001">
+          <img id="img-00001-en" he="10.24mm" wi="13.89mm" alt="embedded image" img-content="chem" file="US20150259217A1_00022.PNG" img-format="png" original="US20150259217A1-20150917-C00001.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00075-en" num="0000">where R and R′ denote virtually any group, including aliphatic, substituted aliphatic, aryl, arylalkyl, heteroaryl, etc.</p>
+      <p id="p-00076-en" num="0074">Esterification: A chemical reaction, typically between an alcohol and a carboxylic acid, which forms an ester.</p>
+      <p id="p-00077-en" num="0075">Inject: As used herein, the term “inject” means to add a relatively small amount of a reagent or solution into a relatively large amount of another solution or mixture. In some embodiments, injection is performed at a substantially steady rate over a period of time, e.g., up to 0.5 mL/minute, such as at a rate of 0.1 to 0.5 mL/minute or a rate of 0.2 mL/minute.</p>
+      <p id="p-00078-en" num="0076">Ligand: A molecule or ion that binds to a metal cation via an electron pair on the ligand, thereby forming a complex.</p>
+      <p id="p-00079-en" num="0077">Nanoparticle: A nanoscale particle with a size that is measured in nanometers, for example, a nanoscopic particle that has at least one dimension of less than about 100 nm. A nanocrystal is a nanoscale crystal.</p>
+      <p id="p-00080-en" num="0078">Saturated: As used herein, the term “saturated” refers to an aliphatic group without any double or triple bonds.</p>
+      <p id="p-00081-en" num="0079">Soluble: Capable of becoming molecularly or ionically dispersed in a solvent to form a homogeneous solution.</p>
+      <p id="p-00082-en" num="0080">A solution is a homogeneous mixture composed of two or more substances. A solute (minor component) is dissolved in a solvent (major component).</p>
+      <p id="p-00083-en" num="0081">Unsaturated: As used herein, the term “unsaturated” refers to an aliphatic group having at least one double or triple bond. Unsaturated double bonds may have a cis or a trans conformation. In the cis conformation, hydrogen atoms are on the same side of the double bond. In the trans conformation, hydrogen atoms are on opposite sides of the double bond.</p>
+      <p id="p-00084-en" num="0000">
+        <chemistry id="chem-00002-en" num="00002">
+          <img id="img-00002-en" he="16.85mm" wi="29.63mm" alt="embedded image" img-content="chem" file="US20150259217A1_00023.PNG" img-format="png" original="US20150259217A1-20150917-C00002.TIF" />
+        </chemistry>
+      </p>
+      <heading id="h-00010-en" level="1">II. METAL OXIDE AND CORE/SHELL NANOPARTICLE SYNTHESIS</heading>
+      <p id="p-00085-en" num="0082">A. Metal Oxide Nanoparticles</p>
+      <p id="p-00086-en" num="0083">Methods for making monodispersed crystalline metal oxide nanoparticles, or nanocrystals, by an esterification reaction at temperatures significantly lower than those utilized for pyrolysis (i.e., greater than 300° C.) are disclosed. The reaction temperature is lower than the thermal decomposition temperatures of the precursors. Embodiments of the disclosed methods comprise combining a solution including a metal carboxylate and a carboxylic acid with a solvent comprising an alcohol to form metal oxide nanoparticles. In some embodiments, the alcohol is anhydrous or substantially anhydrous. In some embodiments, the solvent is preheated to a temperature, T<sub>1</sub>, before combining the solution with the solvent, and the combined solution and solvent are maintained at a reaction temperature, T<sub>2</sub>, for an effective period of time to form the metal oxide nanoparticles. Advantageously, T<sub>1 </sub>and T<sub>2 </sub>are less than a thermal decomposition temperature of the metal carboxylate. In certain embodiments, T<sub>1 </sub>and/or T<sub>2 </sub>is &lt;290° C., such as ≦250° C., ≦240° C., ≦230° C., ≦200° C., ≦175° C., or ≦150° C., such as 100-290° C., 125-250° C., 150-240° C., 160-230° C., or 200-230° C. In some embodiments, the effective period of time is ≦60 minutes, ≦30 minutes, ≦20 minutes, or ≦15 minutes, such as 1-60 minutes, 5-30 minutes, 5-20 minutes, or 10-20 minutes. Typically, the reaction is performed at atmospheric pressure.</p>
+      <p id="p-00087-en" num="0084">Embodiments of the disclosed methods facilitate more precise introduction of framework, dopant, and/or shell metals, as well as increased yields compared to conventional methods and/or shortened reaction times to produce crystalline nanoparticles compared to conventional methods. For example, certain embodiments of the disclosed methods provide a metal oxide nanoparticle yield of at least 90%, such as 90-95%. In addition to be useful for batch-type reactions, certain embodiments of the disclosed methods are suitable for use in continuous-flow reactors due to the rapid nature of the reaction.</p>
+      <p id="p-00088-en" num="0085">
+        <figref>FIG. 1</figref> illustrates one embodiment of a method for synthesizing metal oxide nanocrystals by esterification using a metal carboxylate precursor and a solvent comprising an alcohol. With respect to <figref>FIG. 1</figref>, M is a metal. L designates the various ligands that are bound to the metal throughout the reaction lifetime, including acid, hydroxy, other metal oxide fragments, and alcohol. R and R′ independently are aliphatic. The variables a, b, x, y, and z are positive integers that vary as needed to satisfy valence requirements. As shown in <figref>FIG. 1</figref>, a metal carboxylate precursor, L<sub>2</sub>M(O<sub>2</sub>CR), reacts with an alcohol R′OH to produce an ester, RCO<sub>2</sub>R′, and a metal hydroxide, L<sub>2</sub>MOH. L<sub>2</sub>MOH reacts to form (M<sub>x</sub>O<sub>y</sub>)<sub>z</sub>(O<sub>2</sub>CR)<sub>a</sub>(OR′)<sub>b </sub>and H<sub>2</sub>O. A person of ordinary skill in the art will understand that <figref>FIG. 1</figref> illustrates an exemplary reaction, and that the actual stoichiometry of L, M, and —O<sub>2</sub>CR or —OH may vary.</p>
+      <p id="p-00089-en" num="0086">Suitable metals, M, include group IIIA metals, group IVA metals, and transition metals. In some embodiments, M is manganese, iron, cobalt, zinc, tin, indium, gallium, or a combination thereof.</p>
+      <p id="p-00090-en" num="0087">In some embodiments, R is saturated or unsaturated C1-C21 aliphatic, and R′ is saturated or unsaturated C2-C22 aliphatic. R and R′ may have aliphatic chains with a similar number of carbon atoms, e.g., the aliphatic chains may differ by five or fewer carbon atoms in length. In certain embodiments, R′ has a linear aliphatic chain that is one carbon atom longer than a linear aliphatic chain of R, i.e., R′ is RCH<sub>2</sub>—. In some embodiments, R and R′ are saturated hydrocarbons. In one embodiment, R is n-pentyl and R′ is n-hexyl. In certain embodiments, R is an unsaturated C13-C21 hydrocarbon, and R′ is an unsaturated C14-C22 hydrocarbon. In one embodiment, R and R′ are cis-unsaturated hydrocarbons. In some embodiments, R is a cis-C17 unsaturated hydrocarbon, and R′ is a cis-C 18 unsaturated hydrocarbon. In one example, RCOOH is oleic acid, CH<sub>3</sub>(CH<sub>2</sub>)<sub>7</sub>CH═CH(CH<sub>2</sub>)<sub>7</sub>COOH, and R′ is oleyl alcohol, CH<sub>3</sub>(CH<sub>2</sub>)<sub>7</sub>CH═CH(CH<sub>2</sub>)<sub>8</sub>OH.</p>
+      <p id="p-00091-en" num="0088">Suitable cis-unsaturated carboxylic acids may include, but are not limited to, myristoleic acid, palmitoleic acid, sapienic acid, oleic acid, linoleic acid, linolenic acid, arachidonic acid, eicosapentaenoic acid, erucic acid, and docosahexaenoic acid. Other suitable carboxylic acids may include, but are not limited to, hexanoic (caproic) acid, heptanoic (enanthic) acid, octanoic (caprylic) acid, nonanoic (pelargonic) acid, decanoic (capric) acid, undecanoic acid, dodecanoic (lauric) acid, tridecanoic acid, tetradecanoic (myristic) acid, pentadecanoic acid, hexadecanoic (palmitic) acid, heptadecanoic (margaric) acid, octadecanoic (stearic) acid, elaidic acid, vaccenic acid, linolaidic acid, and icosanoic (arachidic) acid.</p>
+      <p id="p-00092-en" num="0089">In some embodiments, R′OH is a liquid at temperatures less than 200° C., less than 150° C., less than 100° C., or at ambient temperature. In one embodiment, R′OH is a liquid at temperatures less than 100° C. In another embodiment, R′OH is a liquid at ambient temperature. Suitable alcohols include, but are not limited to, alcohols corresponding to any of the foregoing carboxylic acids, e.g., C2-C22 aliphatic alcohols. In some embodiments, the solvent comprises at least 60% R′OH, at least 70% R′OH, at least 80% R′OH, at least 85% R′OH, least 90% R′OH, or at least 95% R′OH. In certain embodiments, the solvent consists essentially of R′OH, other C2-C22 aliphatic alcohols, and water. The solvent may be anhydrous or essentially anhydrous, consisting essentially of R′OH and other C2-C22 aliphatic alcohols.</p>
+      <p id="p-00093-en" num="0090">In some embodiments, R is selected such that L<sub>2</sub>M(O<sub>2</sub>CR) is soluble in R′OH at temperatures ≦270° C., ≦240° C., ≦200° C., ≦150° C., ≦100° C., or at ambient temperature. For example, R may be selected such that at least 0.1 mg, at least 0.2 mg, at least 0.5 mg, or at least 1 mg L<sub>2</sub>M(O<sub>2</sub>CR) is soluble in 1 mL R′OH at a specified temperature. In one embodiment, R is selected such that L<sub>2</sub>M(O<sub>2</sub>CR) is soluble in R′OH at temperatures less than 100° C. In another embodiment, R is selected such that L<sub>2</sub>M(O<sub>2</sub>CR) is soluble in R′OH at ambient temperature.</p>
+      <p id="p-00094-en" num="0091">The metal carboxylate precursor, L<sub>2</sub>M(O<sub>2</sub>CR), may be prepared by any suitable method. In some embodiments, a short-chain metal carboxylate (e.g., a C1-C5 metal carboxylate, such as a metal formate, metal acetate, metal propionate, metal butyrate, or metal pentanoate) is reacted with RCOOH to form L<sub>2</sub>M(O<sub>2</sub>CR). In certain embodiments, a metal acetate is reacted with RCOOH to form L<sub>2</sub>M(O<sub>2</sub>CR). For example, the metal acetate may be heated with hexanoic acid or oleic acid to form a metal hexanoate or a metal oleate, respectively.</p>
+      <p id="p-00095-en" num="0092">The metal carboxylate/carboxylic acid mixture may be combined, without further purification, with the solvent comprising, or consisting essentially of, R′OH. Rapid reaction between the alcohol and metal carboxylate occurs to form an ester and a metal hydroxy species, as shown below in exemplary equation (1) where the metal is indium. Given the thermal stability of indium oleate at 230° C., but its rapid reaction to produce ester in the presence of oleyl alcohol, the initial step of the synthesis is the reaction of the alcohol with the metal carboxylate to form the ester and a metal hydroxy species (Eqn. 1). Although IR studies suggest that the ester formation continues, the amount of signal due to the complexed oleate does not decrease until all of the free oleic acid is consumed. Given that esterification at this temperature does not occur without the metal, the continued production of ester suggests that the free carboxylic acid is being consumed by a metal-catalyzed esterification reaction (Eqn. 2). Later in the addition, it is also possible that the growing nanocrystals can catalyze this reaction. Once the concentration of the indium hydroxy species increases, it can condense with other hydroxy species in a condensation reaction to nucleate and grow nanocrystals (Eqn. 3). Nanocrystal formation by condensation of the metal hydroxide species is supported by other examples in the literature (e.g., Kwon et al., <i>Acc. Chem. Res. </i>2008, 41, 1696-1709) and studies of the thermal decomposition of hydroxy indium(III) diacetate (Sawada et al., <i>J. Mass Spectrom. Soc. Jpn. </i>1998, 46, 292-295). In the latter case, decomposition begins at 207° C. producing water and acetic acid. This finding is also consistent with the observation that at lower temperatures (180-200° C.) the acid is consumed by esterification, but there is no condensation to produce nanoparticles. The presence of some surface hydroxy groups observed in the XPS is consistent with a growth mechanism involving M-OH species.</p>
+      <p id="p-00096-en" num="0000">
+        <chemistry id="chem-00003-en" num="00003">
+          <img id="img-00003-en" he="34.54mm" wi="72.22mm" alt="embedded image" img-content="chem" file="US20150259217A1_00024.PNG" img-format="png" original="US20150259217A1-20150917-C00003.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00097-en" num="0093">The water generated in Equations (2) and (3) might accelerate the hydrolysis of metal carboxylates to metal hydroxides that are subsequently dehydrated to metal oxides (Eqn. (3)). However, in some embodiments, superior control over nanocrystal formation occurs when water is generated relatively slowly and swept away by the nitrogen flow. Without wishing to be bound by a particular theory of operation, based upon these observations, controls and spectroscopic studies and the similar reactivity observed for the other metal oxides studied, it is believed that Equations (1)-(3) produce the overall nanocrystal formation reaction shown in <figref>FIG. 1</figref>. The initial reaction between the metal oleate and the solvent generates the ester and the metal hydroxy species. The hydroxy species can dehydrate to form M-O-M bonds, but in the early stages of reaction when the concentration of oleic acid is higher, a metal-catalyzed esterification (the lower loop in the scheme) competes with dehydration. The fact that the IR signals due to the metal oleate do not decrease until after the free acid is consumed is consistent with this reaction pathway. As the free acid is consumed, the dehydration reaction, which is facile at about 207° C., competes and leads to nanocrystal formation.</p>
+      <p id="p-00098-en" num="0094">As shown in <figref>FIG. 2</figref><i>a</i>, conventional alcoholysis occurs when an alcohol, used as a reagent (i.e., not in a large molar excess as a solvent), is injected into a hot solution of metal carboxylate in a non-reactive organic solvent (e.g., 1-octadecene). The reaction is second-order, and its rate is dictated by the concentrations of metal carboxylate and alcohol (reaction step 1, <figref>FIG. 2</figref><i>d</i>). As the reaction progresses, the concentrations of both the metal carboxylate and the alcohol decrease. As the concentrations decrease, the collision frequency between the metal carboxylate and the alcohol decreases, and the conversion rate from metal carboxylate to metal hydroxide slows. As a consequence, higher temperatures are required to maintain a rate that will drive the reaction to completion and/or produce reactive species through thermal decomposition. Typically, reaction temperatures near 300° C. for several hours are needed to complete the alcoholysis reaction and produce crystalline products.</p>
+      <p id="p-00099-en" num="0095">In contrast, in embodiments of the disclosed low-temperature esterification process, the non-reactive organic solvent is replaced with alcohol (<figref>FIGS. 1</figref>, <b>2</b><i>b</i>), thereby making the alcohol the solvent. The large excess of alcohol compared to metal carboxylate makes the process a pseudo-first-order reaction because the collision frequency between the metal carboxylate and alcohol molecules remains high (<figref>FIGS. 2</figref><i>b</i>, <b>2</b><i>c</i>). As a result, the esterification is complete, and the precursor is converted to metal hydroxide much faster (i.e., within minutes) than the second-order esterification (<figref>FIGS. 2</figref><i>a</i>, <b>2</b><i>c</i>), even when the process is performed at low temperatures (e.g., ≦230° C.).</p>
+      <p id="p-00100-en" num="0096">The inventors surprisingly discovered that precise control over the metal oxide nanoparticle synthesis is obtainable by using an amount of carboxylic acid that is in stoichiometric excess relative to the metal, but limiting with respect to the alcohol. In other words, [R′OH]&gt;[RCOOH]&gt;[M)]. In some embodiments, control is further enhanced by injecting a hot solution comprising metal carboxylate in carboxylic acid into the alcohol wherein the alcohol is present in sufficient amount to act as a solvent, thereby producing a pseudo-first-order reaction. In certain embodiments, [R′OH]&gt;&gt;[RCOOH]&gt;[M] such that [R′OH] changes by less than 10%, less than 5%, or even less than 3% throughout the reaction. For example, [R′OH] may be at least 10× greater than [M], such as at least 20× greater or at least 30× greater. In certain embodiments, a gas, such as nitrogen or air, is flowed across the mixture and/or bubbled through the mixture during the reaction to evaporate and remove water formed in Equations (2) and (3).</p>
+      <p id="p-00101-en" num="0097">Using “matched” reagents improves solubility of the metal carboxylate and carboxylic acid in the alcohol, and increases control over reagent concentrations and reaction kinetics. Thus, in certain embodiments, R′ has the chemical structure RCH<sub>2</sub>—. For instance, in some examples, metal oxide nanoparticles were synthesized using a metal oleate, oleyl alcohol, and oleic acid. Similarly, a metal hexanoate, 1-hexanol, and 1-hexanoic acid could be used.</p>
+      <p id="p-00102-en" num="0098">
+        <figref>FIG. 3</figref>
+        <i>c </i>is a graph illustrating time dependence of the esterification and decomposition of one embodiment of an indium oxide synthesis at 230° C. using indium oleate/oleic acid and oleyl alcohol. The reaction was monitored using FT-IR peaks at 1740 cm<sup>−1 </sup>(ester carbonyl stretch) and 1520-1630 cm<sup>−1 </sup>(asymmetric COO stretch from metal carboxylate). Nucleation of In<sub>2</sub>O<sub>3 </sub>started at 60 s. Other metal oleates were shown to display similar reactivities.</p>
+      <p id="p-00103-en" num="0099">B. Core/Shell Nanoparticles</p>
+      <p id="p-00104-en" num="0100">Because the surface of each metal oxide nanoparticle core is terminated by polar metal planes, different metal-oxide shell layers can be deposited onto the metal oxide nanoparticles using layer-by-layer epitaxial growth. Suitable metals for the shells, M′, include group IIIA metals, group IVA metals, and transition metals. In some embodiments, M and M′ are different metals. In working examples, M′ was manganese or gallium.</p>
+      <p id="p-00105-en" num="0101">Embodiments of metal oxide nanoparticles, or cores, are synthesized as described above. The metal oxide cores are dispersed in an alcohol, R′″OH where R′″ is as defined previously for R′, and heated to a temperature T<sub>3 </sub>of less than 200° C., such as 150° C. to 200° C. A metal carboxylate comprising R″COO<sup>− </sup>and a metal M′ is added, where R″ is as defined previously for R, and the relationship between R″ and R′″ is as defined previously for R and R′. The reaction is maintained at a reaction temperature, T<sub>4</sub>, for an effective period of time such that the metal carboxylate reacts with R′OH to produce an ester, RCOOR′, and a metal hydroxide comprising M′. The metal hydroxide decomposes via dehydration to form M′<sub>x</sub>O<sub>y </sub>and H<sub>2</sub>O where x and y are as defined previously. In some embodiments, excess carboxylic acid, RCOOH, also is added to the reaction. The metal carboxylate and RCOOH may be combined and heated to a temperature of ≦200° C., such as 150° C. to 200° C. before being added to the metal oxide core/alcohol mixture. In certain embodiments, the metal carboxylate and excess RCOOH are injected into the metal oxide core/alcohol mixture.</p>
+      <p id="p-00106-en" num="0102">In some embodiments, to minimize or prevent nucleation of new nanoparticles from the shell precursor (the metal carboxylate comprising R″COO<sup>−</sup> and M′), the reaction temperature T<sub>4 </sub>is less than the nucleation temperature for M′<sub>x</sub>O<sub>y</sub>, and oxygen is excluded. In certain embodiments, T<sub>4 </sub>is ≦200° C., such as 150-200° C. The effective period of time for the reaction may be at least 5 minutes, at least 10 minutes, at least 30 minutes, 5 to 300 minutes, 10 to 200 minutes, or 30 to 100 minutes. In one example, the effective period of time was 60 minutes.</p>
+      <p id="p-00107-en" num="0103">In working examples, metal core nanoparticles were dissolved in oleyl alcohol and heated to 160° C. under flowing nitrogen. Metal oleates comprising M′ were injected into the mixture along with excess oleic acid, and the reaction was maintained at 160° C. for one hour.</p>
+      <p id="p-00108-en" num="0104">In certain embodiments, one or more additional metal oxide shells may be deposited onto the metal oxide core/shell nanoparticles using the same process. The metal for each successive shell may be the same metal or a different metal than the metal of the previous shell.</p>
+      <heading id="h-00011-en" level="1">III. METAL OXIDE NANOPARTICLES</heading>
+      <p id="p-00109-en" num="0105">Metal oxide nanoparticles made by embodiments of the disclosed method comprise a group IIIA metal, a group IVA metal, a transition metal, or a combination thereof. In some embodiments, the nanoparticles comprise manganese, iron, cobalt, zinc, tin, indium, or a combination thereof. The nanoparticle properties can be widely tuned, ranging from semiconductors to metals, through selection of the framework metal and by introducing impurities (dopants) into the oxides.</p>
+      <p id="p-00110-en" num="0106">In some embodiments, the nanoparticles are single crystalline. In certain embodiments, the particles have a size dispersity of ≦20%, ≦10%, ≦5%, ≦1%, from 0% to 20%, 0.01% to 20, 0.1% to 20%, 0.1% to 10%, 0.1% to 5%, or 1% to 10%. In some embodiments, the nanoparticles have an average largest dimension of ≦50 nm, ≦20 nm, ≦15 nm, ≦10 nm, or ≦5 nm, such as 1 nm to 20 nm, 1 nm to 15 nm, 1 nm to 10 nm, or 5 nm to 15 nm as determined by particle size analyses using transmission electron microscopy images.</p>
+      <p id="p-00111-en" num="0107">Nanoparticle morphology depends at least in part on chemical structure. For example, spherical particles may dominate when surface defects are needed to minimize surface energies of the nanocrystal. On the other hand, faceted particles have different mechanisms to minimize surface energies. For example, in In<sub>2</sub>O<sub>3 </sub>nanocrystals, {111} facets typically dominate as the most stable planes. However, some embodiments of the disclosed methods produced In<sub>2</sub>O<sub>3 </sub>nanocrystals with a cube morphology having a surface comprising {001} facets. This finding was surprising for In<sub>2</sub>O<sub>3 </sub>because the facets typically are unstable due to their strong polarity. The importance of the surface energies in the growth of In<sub>2</sub>O<sub>3 </sub>nanocrystals has been discussed by using the lowest-indexed crystallographic planes. In general, the lowest-energy plane trend is γ(111)&lt;γ(011)&lt;γ(211)&lt;γ(001) (Agoston et al., <i>Physical Review B </i>84, 1-20 (2011)). However, if the In<sub>2</sub>O<sub>3 </sub>nanocrystals were formed via hydroxide species, there are several reports that {001} facets are stable and form cubes (see, e.g., Hu et al., <i>Materials Chemistry and Physics </i>118, 227-280 (2009); Tang et al., <i>Crystal Growth </i>&amp; <i>Design </i>5, 147-150 (2005)). Agoston et al. reported that the {001} planes become more stable than {111} planes (γ(001)&lt;γ(111)) when the surface is terminated by water or hydroxide. Embodiments of the esterification process disclosed herein are consistent with this mechanism since the In<sub>2</sub>O<sub>3 </sub>nanoparticle originated via hydroxides. <figref>FIGS. 5</figref><i>a </i>and <b>5</b><i>d</i>-<b>5</b><i>f </i>demonstrate that the In<sub>2</sub>O<sub>3 </sub>nanocrystals are cubes comprising polar, layered structures of metal-oxygen-metal coordination terminated by carboxylic acid molecules on the surfaces.</p>
+      <p id="p-00112-en" num="0108">Indium tin oxide (ITO) nanocrystals synthesized by some embodiments of the disclosed methods are truncated octahedrons surrounded by {001} and {111} facets. In some embodiments, the ITO nanoparticles are monodisperse, and the matrix phase of the nanoparticles is cubic In<sub>2</sub>O<sub>3 </sub>without any different phases. However, the truncated octahedron is an intermediate between a {001}-faceted cube and a {111}-faceted octahedron (Tao et al., <i>Small </i>4, 310-325 (2008)), and may be the predominant structure due to lattice distortion induced by tin doping. Tin doping induces lattice distortion, which changes the nanoparticle shape from a cube to a truncated octahedron.</p>
+      <p id="p-00113-en" num="0109">Some embodiments of γ-Fe<sub>2</sub>O<sub>3 </sub>and CoO nanocrystals synthesized by the methods disclosed herein have {111} facet planes, which are polar planes analogous to those of In<sub>2</sub>O<sub>3 </sub>nanocrystals. If γ-Fe<sub>2</sub>O<sub>3 </sub>(space group P4<sub>1</sub>32) and CoO (space group: Fm-3m) are surrounded by {111} planes, the shape is predicted to be an icosahedron, a triangular pyramid, or an octahedron (see, e.g., <figref>FIG. 7</figref><i>e</i>). The shapes likely result from interactions between the carboxylic acid stabilizing molecules and the stable polar crystal planes for each shape. Thus, without wishing to be bound by any particular theory of operation, it appears that the carboxylic acid (e.g., oleic acid) has a role in determining crystal shape, as well as acting as a reagent in the esterification.</p>
+      <p id="p-00114-en" num="0110">Thus, in some embodiments, the metal oxide nanoparticles further comprise an outer layer comprising carboxylic acid (RCOOH) and RCOO— ligands. The outer layer may further comprise R′OH, and/or R′O— ligands. The nanoparticles' morphology may be determined in part by the outer carboxylic acid layer. The negative, or partial negative, charge on the oxygen atoms facilitates binding to the positively charged metal atoms on the nanoparticle surfaces. Thus, the metal oxide nanoparticles terminate with an outer layer of metal atoms and associated carboxylic acid molecules, carboxylate ions, and/or alcohol molecules or ions. In some working examples utilizing oleic acid and oleyl alcohol, the nanoparticles terminated with an outer layer composed primarily of oleic acid with 2-11% oleyl alcohol. The morphology is determined by space groups of the crystals (see, e.g., <figref>FIG. 7</figref>). Advantageously, the use of long-chain fatty acids, e.g., oleic acid, as coordinating ligands in the production of nanoparticles facilitates morphology control while avoiding the toxicity of many surfactants.</p>
+      <heading id="h-00012-en" level="1">IV. CORE/SHELL NANOPARTICLES</heading>
+      <p id="p-00115-en" num="0111">Among the most interesting classes of nanoparticles are core/shell structures. Inorganic core/shell nanoparticles have become important functional materials because the crystalline shells can expand the range of physical and chemical properties as a class of hybrid nanomaterials. However, their synthesis requires greater control of the growth chemistry. Compared with amorphous shells (e.g. SiO<sub>2 </sub>or Al<sub>2</sub>O<sub>3</sub>), production of crystalline shells utilizes nanocrystal cores for seed-mediated epitaxial growth in order to prevent undesirable nucleation, dumbbell formation, and aggregation.</p>
+      <p id="p-00116-en" num="0112">Embodiments of the disclosed core/shell nanocrystals include a crystalline metal oxide nanoparticle core as described above and a metal oxide shell. The metal oxide shell comprises a group IIIA metal, a group IVA metal, a transition metal, or a combination thereof. In some embodiments, the shell's metal oxide comprises a different metal than the core metal oxide. The core/shell nanoparticles may include a plurality of metal oxide shells. The core/shell nanoparticles may further comprise an outer layer comprising carboxylic acid molecules and/or carboxylate ligands. The outer layer also may comprise alcohol molecules/ligands.</p>
+      <p id="p-00117-en" num="0113">In some embodiments, the metal oxide shell has a thickness of ≦10 nm, ≦5 nm, or ≦2 nm, such as 1-10 nm, 1-5 nm, or 1-3 nm. In working embodiments, metal oxide shells with a thickness of 2 nm were prepared. The thickness of the deposited metal oxide shell may depend, at least in part, on the concentration of the precursor metal carboxylate, (RCOO)<sub>z</sub>M′, the concentration of metal oxide cores, the reaction temperature, and/or the reaction time.</p>
+      <p id="p-00118-en" num="0114">Embodiments of γ-Fe<sub>2</sub>O<sub>3</sub>/MnO and ZnO/Ga<sub>2</sub>O<sub>3 </sub>core/shell nanocrystals were prepared (see Example 5). γ-Fe<sub>2</sub>O<sub>3</sub>/MnO nanocrystals possess novel magnetic properties as a result of their core/shell structure. Nanocrystalline γ-Fe<sub>2</sub>O<sub>3 </sub>is well known as a superparamagnetic or ferromagnetic material. If the surface is coated by an anti-ferromagnetic MnO shell, anomalous magnetic exchange coupling can be expected.</p>
+      <p id="p-00119-en" num="0115">ZnO/Ga<sub>2</sub>O<sub>3 </sub>nanocrystals are interesting because of their optical properties. The application of a wide band gap (E<sub>g</sub>: 4.6 eV, Ga<sub>2</sub>O<sub>3</sub>) semiconducting shell onto a narrow band gap (E<sub>g</sub>: 3.4 eV, ZnO) core should result in a higher band-edge luminescence than single-component semiconductor nanocrystals (e.g., CdSe—ZnS core/shell quantum dots) because the surface defects of crystal core are passivated by the wide bandgap material. In addition, a Ga<sub>2</sub>O<sub>3 </sub>shell is chemically inert and will prevent dissolution of ZnO under acidic conditions. The dissolution of ZnO not only degrades the nanomaterial, but is also the origin of toxicity for ZnO nanomaterials.</p>
+      <heading id="h-00013-en" level="1">V. NANOPARTICLE USES</heading>
+      <p id="p-00120-en" num="0116">Embodiments of metal oxide nanoparticles synthesized by the disclosed methods have a range of important applications depending upon the metal oxide produced. Uses for metal oxide nanoparticles made by embodiments of the disclosed method, and nanomaterials (e.g., thin films) comprising the nanoparticles include, but are not limited to, catalysts, energy storage materials (e.g., lithium ion batteries), displays, touch panels, solar cells, light-emitting diodes, sensors, transparent electrodes, and/or battery cathodes. For example, tin-doped indium oxide (ITO) nanoparticles can be used as inks to “print” transparent electrodes for use in the microelectronics industry, such as in display and electronics applications. Metal oxide nanoparticle inks can be deposited, for example, using existing roll-to-roll or ink-jet systems. Thin films comprising embodiments of the disclosed metal oxide nanoparticles can be prepared by any suitable method including, but not limited to, drop-casting, dip-coating, spin-coating, painting, or printing. Film thickness can be varied by repeated coatings.</p>
+      <heading id="h-00014-en" level="1">VI. EXAMPLES</heading>
+      <p id="p-00121-en" num="0117">Materials:</p>
+      <p id="p-00122-en" num="0118">All chemicals were purchased from Sigma-Aldrich and used as received. As metal precursors, indium (III) acetate (99.99%), iron (II) acetate (99.99%), cobalt (II) acetate (99.995%), tin (IV) acetate (&gt;99%), zinc (II) acetate (99.99%), manganese (II) acetate (98%), gallium acetylacetonate (99.99%) were used. Oleic acid (90% technical grade or 99% analytical standard) was used for producing metal oleates, oleyl alcohol (85% technical grade) was used as solvent.</p>
+      <p id="p-00123-en" num="0119">Characterization:</p>
+      <p id="p-00124-en" num="0120">Proton NMR spectra were collected on a Varian INOVA 300 MHz spectrometer and on Bruker Avance III HD 600 NMR Spectrometer with Prodigy multinuclear broadband BBO Cryoprobe (5 mm sample diameter) at 25° C. in CDCl<sub>3 </sub>(reference to δ 7.26) solution. Transmission electron microscopy (TEM) observation was carried out with a FEI Titan TEM operated at 300 kV. Measurements of size distribution of nanocrystals are expressed as a function of the standard deviations. X-ray photoelectron microscopy (XPS) was carried out with a Thermo Scientific ESCALAB 250 X-ray Photoelectron Spectrometer using a monochromatic aluminum Kα X-ray source at 20 kV. Nanocrystal samples were drop-cast from a toluene solution onto a clean silicon substrate. The binding energy scale of all measurements was calibrated using the C<sub>1s </sub>peak at 284.8 eV. TEM samples were prepared by drop-casting or aerosol deposition onto holey carbon grids purchased from Ted Pella. Scanning electron microscopy (SEM) was carried out using a ZEISS Ultra-55 SEM. UV-visible (UV-vis) transmittance spectroscopy was performed on an Ocean Optics Jaz Spectrometer Module with DH-2000-BAL UV-NIR deuterium tungsten halogen light source using 1 cm quartz cuvettes. Photoluminescence spectra were collected on a Hitachi F-4500 Fluorescence Spectrophotometer at room temperature. XRD patterns were recorded on a Phillips X'Pert Panalytical diffractometer with Cu Ka (X=0.1541 nm) operating at 50 kV and 30 mA with step size 0.05° with 1 sec time per step. The solid indium oxide sample was fixed to a zero background quartz substrate with hi-vac grease. All other oxides were dissolved in toluene and drop cast onto a zero background quartz substrate and allowed to dry before measurement. The ToF-SIMS (time of flight-secondary ion mass spectrometry) spectra were acquired on a ToF-SIMS IV instrument manufactured by ION-TOF GmbH, Muenster, Germany. The primary ion beam was comprised of Bi<sub>3</sub>+ ions (25 kV 0.3 pA @ 10 kHz). Spectra were acquired over an area of 100 um×100 urn. The primary ion dose during the acquisitions did not exceed the static limit (defined here as 2×10<sup>12 </sup>ions/cm2). Two drops of 5 mg/mL toluene solutions were deposited on freshly cleaved mica and dried before measurements.</p>
+      <p id="p-00125-en" num="0121">General Preparation of Metal Oxide Nanocrystals:</p>
+      <p id="p-00126-en" num="0122">The appropriate metal acetate (1 mmol) was mixed with oleic acid (2 mL) in a 15 mL glass vial and heated to 150° C. for 30 min (or one hour in the case of indium acetate) under a slow flow of nitrogen to generate the metal oleate complexes. The acetic acid boiled off during the reaction. Conversion to the oleate complex was confirmed by proton NMR. The metal oleate complexes can be synthesized and isolated by other methods described in the literature.</p>
+      <p id="p-00127-en" num="0123">Oleyl alcohol (12.5 mL) was heated to 230° C. in a 50 mL two-necked flask that had one neck fitted with a septum. The liquid was stirred magnetically at a rate sufficient to create a vortex down to the stir bar. Dry nitrogen was introduced through the septum via a 20 gauge stainless needle and the gas flow rate held at 1-5 sccm. The temperature of the oleyl alcohol was maintained using a heating mantle supplied by a temperature controller connected to a stainless thermocouple inserted through the septum into the liquid. The second neck of the flask was left open to atmosphere to allow nitrogen and water vapor to escape from the flask without condensation. If water condenses within the flask and drips into the reaction mixture, rapid hydrolysis of the metal precursor leads to immediate precipitation of agglomerated solid. A person of ordinary skill in the art will understand that other equipment configurations may be suitable as long as water vapor is allowed to escape from the flask.</p>
+      <p id="p-00128-en" num="0124">The hot metal oleate/oleic acid solution was injected through the septum from a 10 mL polypropylene syringe with a stainless 20 gauge needle with a syringe pump at 0.2 mL/min. During addition of the metal oleate precursor, the color of the reaction mixture changed from clear to colored. A continuous stream of water bubbles occurred throughout the transformation. The flow of nitrogen through the headspace of the flask swept the water out of the reaction mixture through the open neck. After the addition was complete, the solution was kept for 20 min at 230° C. with vigorous stirring. The reaction mixture was then cooled to room temperature, and a mixture of 25 mL of ethanol and 5 mL of methanol was added to precipitate the nanoparticles. The precipitate was isolated by centrifugation for 30 min at 7500 rpm. The solid product was washed six times with ethanol and then dissolved in toluene. The resulting toluene solution was centrifuged for 5 min at 5500 rpm to remove any insoluble solids. There should be no insoluble material after this centrifugation step.</p>
+      <p id="p-00129-en" num="0125">The percent yield of each nanocrystal core was calculated from the mass of inorganic core material obtained (determined from the mass obtained and the percent inorganic material remaining after heating to 500° C. in the TGA) and the theoretical yield based upon the metal salt. The size, size distribution and shape of the resulting nanocrystals were determined by TEM. The core composition of the nanocrystals was determined through a combination of XRD and XPS. The composition of the ligand shells was determined by ToF-SIMS and XPS.</p>
+      <p id="p-00130-en" num="0126">Synthesis of Oleic Acid-Stabilized Indium Oxide Nanocrystals (1):</p>
+      <p id="p-00131-en" num="0127">Nanocrystals were prepared using the standard preparation outlined above. Briefly, indium (III) acetate (0.292 g, 1 mmol) was mixed with oleic acid (2 mL), then heated at 150° C. for 1 hour under flowing nitrogen to produce a clear, yellowish solution of indium oleate. This solution was added to oleyl alcohol (12.5 mL) at 0.2 mL/min. During addition of the indium oleate precursor, the color of the reaction mixture changed from a clear to light yellow and then a darker yellow solution of indium oxide nanocrystals during the 20 minutes of extended heating. After cooling to room temperature, precipitation and washing, the nanocrystals were collected by dissolving the residue in toluene and then evaporating the solvent by rotoevaporation to yield 159 mg (97% yield calculated for the indium oxide core) of light yellow solid. The resulting nanocrystals were 7.2 nm (±0.7 nm) In<sub>2</sub>O<sub>3</sub>(oleic acid)<sub>98</sub>%(oleyl alcohol)<sub>2</sub>%.</p>
+      <p id="p-00132-en" num="0128">Synthesis of Oleic Acid-Stabilized Iron Oxide Nanocrystals (2):</p>
+      <p id="p-00133-en" num="0129">Nanocrystals were prepared using the standard preparation outlined above. Briefly, iron (II) acetate (0.174 g, 1 mmol) was mixed with oleic acid (2 mL), then heated at 150° C. for 30 min under flowing nitrogen to produce a clear brown solution of iron oleate. This solution was added to oleyl alcohol (12.5 mL) at 0.2 mL/min. During addition of the iron oleate precursor, the color of the reaction mixture changed from a clear to a dark brown solution of iron oxide nanocrystals that persisted through the 20-minute heating period. After cooling to room temperature, precipitation and washing, the nanocrystals were collected by dissolving the residue in toluene and then evaporating the solvent by rotoevaporation to yield 90 mg (80% yield, calculated for iron oxide core) of a dark brown solid. The resulting nanocrystals were 4.0 nm (±0.3 nm) γ-Fe<sub>2</sub>O<sub>3</sub>(oleic acid)<sub>89</sub>%(oleyl alcohol)<sub>11</sub>%.</p>
+      <p id="p-00134-en" num="0130">Synthesis of Oleic Acid-Stabilized Manganese Oxide Nanocrystals (3):</p>
+      <p id="p-00135-en" num="0131">Nanocrystals were prepared using the standard preparation outlined above. Briefly, manganese (II) acetate (0.173 g, 1 mmol) was mixed with oleic acid (2 mL), then heated at 150° C. for 30 min under flow of nitrogen to produce a clear brownish solution of manganese oleate. This solution was added to oleyl alcohol (12.5 mL) at 0.2 mL/min. During addition of the manganese oleate precursor, the color of the reaction mixture changed from a clear to a dark brown solution of manganese oxide nanocrystals during 20 minutes of reaction. After cooling to room temperature, precipitation and washing, the nanocrystals were collected by dissolving the residue in toluene and then evaporating the solvent by rotoevaporation to yield 76 mg (81% yield calculated for Mn<sub>3</sub>O<sub>4</sub>) of a dark brown solid. The resulting nanocrystals were 9.2 nm (±1.1 nm) Mn<sub>3</sub>O<sub>4</sub>(oleic acid)<sub>93</sub>%(oleyl alcohol)<sub>7</sub>%.</p>
+      <p id="p-00136-en" num="0132">Synthesis of Oleic Acid-Stabilized Cobalt Oxide Nanocrystals (4):</p>
+      <p id="p-00137-en" num="0133">Nanocrystals were prepared using the standard preparation outlined above. Briefly, cobalt (II) acetate (0.177 g, 1 mmol) was mixed with oleic acid (2 mL), then heated at 150° C. for 30 min under flow of nitrogen to produce a clear violet solution of cobalt oleate described in (1). This solution was added to oleyl alcohol (12.5 ml) at 0.2 mL/min. During addition of the cobalt oleate precursor, the color of the reaction mixture changed from a clear to a dark brown then a blackish solution of cobalt oxide nanocrystals during 20 minutes of reaction. After cooling to room temperature, precipitation and washing, the nanocrystals were collected by dissolving the residue in toluene and then evaporating the solvent by rotoevaporation to yield 80 mg (72% calculated for cobalt oxide core) of a black solid. If left in solution, these nanocrystals slowly precipitated out of toluene solutions with time. The resulting nanocrystals were 6.6 nm (±1.6 nm) CoO(oleic acid)<sub>93</sub>%(oleyl alcohol)<sub>7</sub>%.</p>
+      <p id="p-00138-en" num="0134">Synthesis of Oleic Acid-Stabilized Zinc Oxide Nanocrystals (5):</p>
+      <p id="p-00139-en" num="0135">Nanocrystals were prepared using the standard preparation outlined above. Briefly, zinc (II) acetate (0.183 g, 1 mmol) was mixed with oleic acid (2 mL), then heated at 150° C. for 30 min under flow of nitrogen to produce a light yellowish solution of zinc oleate described in (1). This solution was added to oleyl alcohol (12.5 mL). Since zinc oleate precipitates below 70° C., the solution was kept at 150° C. during the addition and was performed using a warm Pasteur pipette at about 0.2 mL/min. The color of the reaction mixture changed from a clear to a light yellowish solution of zinc oxide nanocrystals during 20 minutes of reaction. After cooling to room temperature, precipitation and washing, the nanocrystals were collected by dissolving the residue in toluene and then evaporating the solvent by rotoevaporation to yield 45 mg (33% yield based upon the ZnO core) of a yellowish solid. Particles precipitated out of toluene solutions with time. The resulting nanocrystals were 5.6 nm (±1.0 nm) ZnO(oleic acid)<sub>92</sub>%(oleyl alcohol)<sub>8</sub>%.</p>
+      <p id="p-00140-en" num="0136">Synthesis of Oleic Acid-Stabilized 10% Tin-Doped Indium Oxide Nanocrystals (6):</p>
+      <p id="p-00141-en" num="0137">Nanocrystals were prepared using the standard preparation outlined above for indium acetate, substituting tin acetate for a portion of the indium acetate. Briefly, indium (III) acetate (0.9 mmol) and tin(IV) acetate (0.1 mmol) were mixed with oleic acid (2 mL), then heated to 150° C. for 30 min under flowing of nitrogen to produce a yellowish clear solution of indium-tin oleate. This solution was added to oleyl alcohol (12.5 mL) at 0.2 mL/min. During addition of the indium-tin oleate precursor, the color of the reaction mixture changed from a clear solvent to a yellowish then a dark blue solution of tin-doped indium oxide nanocrystals during 20 minutes of reaction. The resulting nanocrystals were 6.3 nm (±0.6 nm) (In<sub>89.5</sub>% Sn<sub>10.5</sub>%)(oleic acid)<sub>98</sub>%(oleyl alcohol)<sub>2</sub>%.</p>
+      <p id="p-00142-en" num="0138">Synthesis of Oleic Acid-Stabilized Iron Oxide/Manganese Oxide Core/Shell Nanocrystals (7):</p>
+      <p id="p-00143-en" num="0139">For core/shell structures, the growth of the shell onto the pre-formed core was carried out using a similar procedure as for the main nanocrystal synthesis. A toluene suspension of iron oxide nanocrystals was mixed with oleyl alcohol (12.5 mL). Because oleyl alcohol is so viscous, to speed the dissolution of the nanocrystal powder, a toluene solution of the nanocrystals was added into oleyl alcohol and the toluene removed by rotary evaporation. The manganese oleate precursor, described in (3), was kept at 60° C. and hot-injected at 0.2 mL/min into oleyl alcohol (12.5 mL) that was already heated to 160° C. in a 50 mL three-necked flask with flowing of nitrogen. During addition of the manganese oleate precursor, the color of the reaction mixture did not change from a black clear solution during 20 minutes of reaction.</p>
+      <p id="p-00144-en" num="0140">Synthesis of Zinc Oxide/Gallium Oxide Core/Shell Nanocrystals (8):</p>
+      <p id="p-00145-en" num="0141">A toluene suspension of zinc oxide nanocrystals was mixed with oleyl alcohol (12.5 mL). A toluene solution of the nanocrystals was added into oleyl alcohol and the toluene removed by rotary evaporation. Gallium (III) acetylacetate (1 mmol) was mixed with oleic acid (2 mL), then heated to 150° C. for 30 min under flowing of nitrogen to produce a light yellowish solution of zinc oleate described in (1). The gallium oleate precursor was kept at 60° C. and hot-injected at 0.2 mL/min into oleyl alcohol that was already heated to 160° C. in a 50 mL three-necked flask with flowing of nitrogen. During addition of the gallium oleate precursor, the color of the reaction mixture changed from a light yellowish to a light blue solution during 20 minutes of reaction.</p>
+      <heading id="h-00015-en" level="1">Example 1</heading>
+      <heading id="h-00016-en" level="1">Reactivity of Metal Oleate with Oleyl Alcohol and Oleic Acid</heading>
+      <p id="p-00146-en" num="0142">Indium acetate and indium oleate thermally decompose at 270° C. and 340° C., respectively. Accordingly, temperatures were kept well below 270° C. to prevent thermal decomposition. As a control, the stability of indium (III) acetate in oleic acid at 250° C. over a two-hour period was confirmed by proton NMR analysis of aliquots of the solution.</p>
+      <p id="p-00147-en" num="0143">Additional observations shed some light on the role of the alcohol, metal complexes, water and excess oleic acid. When indium oleate was heated in oleic acid without added oleyl alcohol at 230° C. for one hour, the solution remained colorless and the proton NMR of the complex remained unchanged. When the complex was added to oleyl alcohol, fine bubbles of water were observed, resulting in the formation of foam across the surface of the reaction mixture. If water was allowed to condense in the reaction vessel and dropped back into the heated solution, the drops boiled violently and precipitate was formed. The same result was obtained if water was deliberately added. Color changes suggest that nanoparticles are forming (confirmed by TEM measurements) within 60 sec. of the beginning of the metal oleate addition. During the timeframe for these reactions, the production of water and formation of the ester did not occur without added metal, suggesting that the metal ion and/or its reaction products act as catalysts for esterification. Finally, the additional oleic acid used during the reaction functioned effectively to control the nucleation of the In<sub>2</sub>O<sub>3 </sub>clusters during the rapid esterification. If no excess oleic acid was used, larger aggregates were formed.</p>
+      <p id="p-00148-en" num="0144">These observations were augmented by IR and <sup>1</sup>H NMR studies of the indium reaction mixtures and several control solutions. <figref>FIG. 3</figref><i>a </i>shows NMR spectra of the methylene protons next to the carboxylic acid and ester functionality for mixed solutions of oleic acid and oleyl alcohol after heating at 200° C. for 5 minutes with, and without, indium oleate. Oleic acid (3.3 mmol) and indium oleate (1 mmol) were dissolved in 12.5 mL (33.5 mmol) oleyl alcohol. The triplet peak 3 indicates carboxylic acid (oleic acid) and the triplet peaks 4 and 5 indicate ester (oleyl oleate). From the increase in the two triplet signals associated with the ester and disappearance of the triplet signal due to the acid, it is clear that esterification between oleic acid and oleyl alcohol proceeds only in the presence of indium oleate. Surprisingly, the oleic acid was completely converted to the ester within 5 minutes. The entire NMR spectra are shown in <figref>FIG. 4</figref>.</p>
+      <p id="p-00149-en" num="0145">
+        <figref>FIG. 3</figref>
+        <i>b </i>shows FT-IR spectra of mixed solutions of oleic acid and oleyl alcohol with indium oleate at room temperature (lower spectrum) and after heating at 230° C. for 5 minutes (upper spectrum). The amounts of oleyl alcohol, oleic acid, and indium oleate complexes used were 40 mmol, 5 mmol, and 1 mmol, respectively. A sharp peak at 1710 cm<sup>−1</sup>, broad bands ranging from 1520 to 1630 cm<sup>−1 </sup>and from 1720 to 1740 cm<sup>−1 </sup>are assigned to the C═O symmetric stretch from oleic acid, asymmetric COO stretch from metal carboxylates, and ester carbonyl stretch, respectively. At 230° C., the peaks for both oleic acid and indium oleate disappeared, suggesting that the esterification was nearly complete within 5 minutes, consistent with the NMR results.</p>
+      <p id="p-00150-en" num="0146">
+        <figref>FIG. 3</figref>
+        <i>c </i>shows time dependence of the esterification and decomposition of indium oleate at 230° C. based upon the FT-IR peaks of the acid, metal carboxylate and ester. The IR intensities are normalized to the common peak at 1465 cm<sup>−1</sup>. At the initial stage of esterification (shorter than 50 sec), oleic acid is consumed very rapidly. During this time, the indium oleate remains constant. Once most of the acid is depleted, the indium oleate is consumed rapidly with continued production of ester and nucleation of In<sub>2</sub>O<sub>3 </sub>clusters begins (determined by TEM). The presence of clusters was confirmed at 60 s. Taken together, these results suggest that indium oleate works as a catalyst for the esterification of oleic acid at 230° C. The other metal oleates display similar reactivities. This temperature is much lower than the thermal decomposition temperatures of indium acetate (270° C.) and indium oleate (340° C.).</p>
+      <p id="p-00151-en" num="0147">Additional studies demonstrated that esterification occurs readily down to 140° C. However, nearly all of the indium oleate remains intact at this temperature without nucleation of clusters. The production of water suggests that the reaction involves esterification of oleic acid and oleyl alcohol. During the timeframe for these reactions, the esterification does not proceed without added metal.</p>
+      <heading id="h-00017-en" level="1">Example 2</heading>
+      <heading id="h-00018-en" level="1">Indium Oxide Nanoparticle Synthesis and Characterization</heading>
+      <p id="p-00152-en" num="0148">A solution of indium oleate and oleic acid was prepared as described above under “General preparation of metal oxide nanocrystals.” Traditional “heat up” and “hot injection” approaches to nanocrystal formation were evaluated. In the heat up approach, the metal oleate solution containing a small excess of oleic acid was heated up with a large excess of oleyl alcohol. In the hot injection trials, the metal oleate solution in oleic acid was injected into oleyl alcohol heated to 230° C. Surprisingly, both approaches failed. Using the heat up method, the size of the product nanocrystals could not be controlled. During rapid (˜2 mL in 5 sec) hot injection, the formation of water and precipitation of metal oxide solids were observed during and after the injection period.</p>
+      <p id="p-00153-en" num="0149">A slower injection was done at rates slow enough that water could be swept away and precipitation did not occur. A solution of indium (III) oleate and oleic acid (1:3.3) was injected at 0.2 mL/min into a large excess (33.5×) of preheated oleyl alcohol at 230° C., coupled with a slow flush of nitrogen to flush water vapor from the headspace. Once the injection was completed, only 20 minutes of reaction time was needed to complete the metal hydroxide dehydration process to form the nanocrystals. This method led to reproducible nanocrystal formation without precipitation. The nitrogen flow prevented condensation of water droplets during the reaction. Upon addition of the indium oleate solution, the color of the solution turns from pale yellow to yellow, suggesting the formation of nanoparticles during the course of the addition. The presence of nanoparticles was confirmed at 60 seconds into the addition by TEM analysis of an aliquot of the reaction mixture that was removed and quenched by cooling. The nanocrystals were precipitated and washed to remove any free acid, alcohol and ester prior to characterization. Indium oxide nanocrystals were produced in greater than 90% yield, and showed no signs of aggregation in toluene solutions.</p>
+      <p id="p-00154-en" num="0150">Because impurities in solvents and capping agents are known to influence nanocrystal information, In<sub>2</sub>O<sub>3 </sub>nanocrystals produced using reagent grade oleic acid, technical oleic acid, and even olive oil, were compared by TEM. In each case, the same-sized nanocrystals were produced.</p>
+      <p id="p-00155-en" num="0151">
+        <figref>FIGS. 5</figref>
+        <i>a </i>and <b>5</b><i>d </i>are low-magnification and high-resolution TEM images, respectively, of the indium oxide nanocrystals. In both cases, the nanoparticles were monodispersed and showed no signs of aggregation. X-ray photoelectron spectroscopy (XPS) (<figref>FIG. 6</figref><i>a</i>) and powder x-ray diffraction (XRD) (<figref>FIG. 6</figref><i>b</i>) confirmed that the structure of the nanocrystal core was In<sub>2</sub>O<sub>3</sub>. The nanocrystals' average diameter was 7.2 nm±0.7 nm as determined from the histogram (<figref>FIG. 5</figref><i>b</i>). <figref>FIG. 5</figref><i>c </i>shows X-ray photoelectron spectra (XPS) of C<sub>1s </sub>core levels for In<sub>2</sub>O<sub>3 </sub>nanocrystals. The peak at 289.0 eV is assigned to the carboxylate carbon, suggesting that the surface was passivated by oleic acid. The interparticle edge-to-edge distance as shown in <figref>FIG. 5</figref><i>a </i>was 2.5-3.0 nm. This value was shorter than expected for two layers of extended oleic acid (4.0 nm), and implies some degree of interdigitation of the alkyl chains of ligands coordinated to different nanocrystals.</p>
+      <p id="p-00156-en" num="0152">The ligand shell composition was further investigated by ToF-SIMS (negative mode) that confirmed that the ligand shell was primarily oleic acid, containing less than 2% oleyl alcohol. All purified nanocrystals showed a peak at 281.26 m/z ([M-H] for oleic acid), confirming the presence of oleic acid within the stabilizing ligand shell. Weak signals occurred at 265.25 m/z ([M-3H] for oleyl alcohol) suggesting a small amount of that ligand in the shell. As synthesized, the normalized intensity of oleyl alcohol at 265.25 m/z was 16, and the normalized intensity of oleic acid at 281.26 m/z was 1310. These results indicated that the ligand shell included 2% oleyl alcohol and 98% oleic acid. In a control experiment, an In<sub>2</sub>O<sub>3 </sub>sample spiked with additional oleyl acid showed a relative increase in that fragment compared to the other samples, with an oleyl alcohol normalized intensity of 278, and an oleic acid normalized intensity of 3665.</p>
+      <p id="p-00157-en" num="0153">
+        <figref>FIGS. 5</figref>
+        <i>d </i>and <b>5</b><i>e </i>show a high-resolution TEM image of a typical In<sub>2</sub>O<sub>3 </sub>nanocrystal and its fast Fourier transform (FFT), respectively. The In<sub>2</sub>O<sub>3 </sub>nanocrystal's shape was a truncated cube, and the surface was surrounded mostly by {001} facets. This finding was surprising for In<sub>2</sub>O<sub>3 </sub>because the {001} facets typically are unstable due to their strong polarity, and therefore {111} facets dominate as the most stable planes. However, as previously discussed, if the In<sub>2</sub>O<sub>3 </sub>nanocrystals were formed via hydroxide species, there are several reports that {001} facets are stable and form cubes (see, e.g., Hu et al., <i>Materials Chemistry and Physics </i>118, 227-280 (2009); Tang et al., <i>Crystal Growth </i>&amp; <i>Design </i>5, 147-150 (2005)). Thus, the production of cubic In<sub>2</sub>O<sub>3 </sub>nanocrystals via esterification likely involves hydroxide intermediates. The presence of surface hydroxy species is suggested by a peak at 531.7 eV in the O1s XPS spectrum (<figref>FIG. 6</figref><i>a</i>). The {001} facets of In<sub>2</sub>O<sub>3 </sub>nanocrystals are polar, layered structures of metal-oxygen-metal coordination terminated by oleic acid (<figref>FIG. 5</figref><i>f</i>).</p>
+      <heading id="h-00019-en" level="1">Example 3</heading>
+      <heading id="h-00020-en" level="1">γ-Fe<sub>2</sub>O<sub>3</sub>, Mn<sub>3</sub>O<sub>4</sub>, CoO, and ZnO Synthesis and Characterization</heading>
+      <p id="p-00158-en" num="0154">Nanocrystals of γ-Fe<sub>2</sub>O<sub>3</sub>, Mn<sub>3</sub>O<sub>4</sub>, CoO, and ZnO were synthesized as described above under “General preparation of metal oxide nanocrystals,” except the syntheses were carried out at 230° C. under flowing dry air. In all cases, this temperature is lower than the precursor decomposition temperature. It was confirmed that the synthesis worked at temperatures as low as 180° C. to synthesize these nanocrystals. Carrying out the reactions in air is advantageous because an inert atmosphere is not needed, and the aerobic environment may enhance oxidation of the nanocrystals, which facilitates crystallization and decreases oxygen vacancies. Antimony, copper, and silver also were evaluated, but did not produce nanocrystals.</p>
+      <p id="p-00159-en" num="0155">
+        <figref>FIGS. 7</figref>
+        <i>a</i>-<b>7</b><i>d </i>are TEM images of γ-Fe<sub>2</sub>O<sub>3</sub>, Mn<sub>3</sub>O<sub>4</sub>, CoO, and ZnO nanocrystals, respectively. All examined γ-Fe<sub>2</sub>O<sub>3</sub>, Mn<sub>3</sub>O<sub>4</sub>, CoO, and ZnO nanocrystals were single-crystalline and nearly monodisperse as shown in TEM size analysis graphs (<figref>FIGS. 8</figref><i>a</i>-<b>8</b><i>d</i>, respectively). The crystal structures of each were determined by HR-TEM and confirmed by powder XRD. The γ-Fe<sub>2</sub>O<sub>3 </sub>nanocrystals averaged 4.0 nm±0.3 nm in diameter, and were icosahedrons or octahedrons surrounded by {111} facets (<figref>FIG. 6</figref><i>a</i>). The Mn<sub>3</sub>O<sub>4 </sub>(Marokite) nanocrystals were 9.2 nm±1.1 nm in diameter and spherical (<figref>FIG. 6</figref><i>b</i>). The CoO nanocrystals were triangular (6.6 nm±1.6 nm on each side) with {111} facets (<figref>FIG. 6</figref><i>c</i>). <figref>FIG. 6</figref><i>d </i>shows that the ZnO nanocrystals exhibited both spherical and triangular shapes. The average diameter of the spherical ZnO nanoparticles was 5.6 nm±1.0 nm.</p>
+      <p id="p-00160-en" num="0156">The surface chemistries of each of these nanocrystals were investigated by XPS, XRD, and ToF-SIMS (<figref>FIGS. 9</figref><i>a</i>-<b>9</b><i>b </i>(Fe<sub>2</sub>O<sub>3</sub>), <figref>FIGS. 10</figref><i>a</i>-<b>10</b><i>b </i>(Mn<sub>3</sub>O<sub>4</sub>), <figref>FIGS. 11</figref><i>a</i>-<b>11</b><i>b </i>(CoO), <figref>FIGS. 12</figref><i>a</i>-<b>12</b><i>b </i>(ZnO)). In the XPS spectra, the spectra for the metal ions were consistent with the oxide forms identified by XRD. The O 1s spectra displayed peaks for the metal oxide and in all cases a smaller component at higher binding energy (531.1-537.7 eV depending upon the metal) consistent with a metal hydroxide species. Combined, the XRD results and the relatively smaller O 1s peak due to hydroxide suggested that there were hydroxy groups on the surface of the nanocrystals. As in the case of the In<sub>2</sub>O<sub>3 </sub>nanocrystals, the main surface ligand detected by ToF-SIMS was oleic acid (Table 1). In each case, small amounts of oleyl alcohol (7-11%) were present in the ligand shells for these nanocrystals.</p>
+      <p id="p-00161-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="70pt" align="left" />
+              <colspec colname="1" colwidth="70pt" align="center" />
+              <colspec colname="2" colwidth="77pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Normalized Intensity</entry>
+                  <entry>Normalized Intensity</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Oleyl Alcohol (M-3)</entry>
+                  <entry>Oleic Acid (M-1)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="70pt" align="char" char="." />
+              <colspec colname="3" colwidth="77pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>m/z</entry>
+                  <entry>265.25</entry>
+                  <entry>281.26</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(found 265.28)</entry>
+                  <entry>(found 281.25)</entry>
+                </row>
+                <row>
+                  <entry>In<sub>2</sub>O<sub>3 </sub>as synthesized</entry>
+                  <entry>16</entry>
+                  <entry>1310</entry>
+                </row>
+                <row>
+                  <entry>In<sub>2</sub>O<sub>3 </sub>with oleyl</entry>
+                  <entry>278</entry>
+                  <entry>3665</entry>
+                </row>
+                <row>
+                  <entry>alcohol added</entry>
+                </row>
+                <row>
+                  <entry>γ-Fe<sub>2</sub>O<sub>3</sub></entry>
+                  <entry>40</entry>
+                  <entry>328</entry>
+                </row>
+                <row>
+                  <entry>CoO</entry>
+                  <entry>8</entry>
+                  <entry>99</entry>
+                </row>
+                <row>
+                  <entry>Mn<sub>3</sub>O<sub>4</sub></entry>
+                  <entry>9</entry>
+                  <entry>121</entry>
+                </row>
+                <row>
+                  <entry>ZnO</entry>
+                  <entry>8</entry>
+                  <entry>88</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00021-en" level="1">Example 4</heading>
+      <heading id="h-00022-en" level="1">Tin-Doped In<sub>2</sub>O<sub>3 </sub>Nanoparticle Synthesis and Characterization</heading>
+      <p id="p-00162-en" num="0157">Tin-doped In<sub>2</sub>O<sub>3 </sub>(ITO) nanocrystals were synthesized as described above under “General preparation of metal oxide nanocrystals.” ITO nanocrystal solutions are deep blue, which is clearly different from the yellowish color of the non-doped nanocrystal In<sub>2</sub>O<sub>3 </sub>nanocrystal solution as shown in <figref>FIG. 13</figref>.</p>
+      <p id="p-00163-en" num="0158">
+        <figref>FIG. 14</figref>
+        <i>a </i>and the inset show a TEM image of 10% tin-doped ITO nanocrystals and a selected area electron diffraction (SAED) pattern, respectively. These data showed that the ITO nanocrystals were monodisperse, and the matrix phase of the nanocrystals was cubic In<sub>2</sub>O<sub>3 </sub>without any other phases. The nanocrystals' average diameter was 6.3 nm±0.6 nm (<figref>FIG. 14</figref><i>b</i>), which was slightly smaller than undoped In<sub>2</sub>O<sub>3 </sub>nanocrystals.</p>
+      <p id="p-00164-en" num="0159">
+        <figref>FIGS. 14</figref>
+        <i>c </i>and <b>14</b><i>d </i>show a high-resolution TEM image of a typical tin-doped In<sub>2</sub>O<sub>3 </sub>nanocrystal and its FFT, respectively. The ITO nanocrystal was a truncated octahedron surrounded by {001} and {111} facets. {111} planes of In<sub>2</sub>O<sub>3 </sub>are also partially polar planes, so that it is possible to be passivated by oleic acid. The truncated octahedron is an intermediate between a {001}-faceted cube and a {111}-faceted octahedron. The lattice expansion of ITO nanocrystals (<figref>FIG. 14</figref><i>c</i>) was 0.5% compared with the lattice constant of In<sub>2</sub>O<sub>3 </sub>nanocrystals (<figref>FIG. 5</figref><i>a</i>). Since the value was higher than that of conventional ITO thin films (0 to 0.2%; Zhang et al., <i>J Phys. Chem. </i>113, 5322-5327 (2008)), the lattice distortion could be high enough to change the shape from a cube to a truncated octahedron.</p>
+      <p id="p-00165-en" num="0160">
+        <figref>FIG. 14</figref>
+        <i>e </i>shows the dependence of the UV-vis transmission spectra upon tin concentration for the ITO nanocrystal solutions. All of the solutions had &gt;98% transmittance in the visible range, and showed reflections in the infrared range that are explained by free-electron vibrations (Gilstrap et al., <i>Thin Solid Films </i>518, 1136-1139 (2009)). The blue shift of the bandgap resulting from increasing tin concentration can be explained by the Burstein-Moss effect (Zhang et al., <i>J. Phys. Chem. </i>113, 5322-5327 (2008)).</p>
+      <p id="p-00166-en" num="0161">In <figref>FIG. 14</figref><i>f</i>, the UV-vis transmittance spectra are re-plotted as absorption versus energy so that the optical band edges could be estimated, and the Burstein-Moss shifts could be determined. Compared to non-doped In<sub>2</sub>O<sub>3 </sub>nanocrystals, Burstein-Moss shifts of 0.13 eV (5% Sn) and 0.19 eV (10% Sn) were observed, corresponding to 2.2×10<sup>19 </sup>cm<sup>−3 </sup>and 3.9×10<sup>19 </sup>cm<sup>−3 </sup>of free-electron concentrations. The free-electron concentration nearly doubled with the doubling of the tin concentration. Although the nanocrystal size (d˜6 nm) was in the range of quantum confinement (Ito et al., <i>Appl. Physics Letters </i>90, 143118 (2007), or full depletion of carrier electrons (Rothschild et al. <i>J. Applied Physics </i>95, 6374 (2004), the ITO nanocrystals showed significantly high values of free-electron concentrations suggesting a transparent metallic nanomaterial.</p>
+      <p id="p-00167-en" num="0162">A comparison of undoped indium oxide nanocrystals, 5% tin-doped ITO nanocrystals, and 10% tin-doped ITO nanocrystals is shown in Table 2. Percent compositions of indium and tin in ITO nanocrystals were determined by XPS peaks of In<sub>3d </sub>and Sn<sub>3d</sub>. The composition gap between initial precursors and nanocrystals was accurate to within ±0.5 at % by several repeated measurements. These results suggest that rapid esterification leads to simultaneous and complete precursor decomposition. The yield of nanocrystals at 230° C. was greater than 90%, as measured by mass in a gram-scale synthesis.</p>
+      <p id="p-00168-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="35pt" align="left" />
+              <colspec colname="1" colwidth="21pt" align="center" />
+              <colspec colname="2" colwidth="21pt" align="center" />
+              <colspec colname="3" colwidth="21pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <colspec colname="5" colwidth="70pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="5" rowsep="1">TABLE 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Estimated free-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>In</entry>
+                  <entry>Sn</entry>
+                  <entry>Yield</entry>
+                  <entry>Burstein-Moss</entry>
+                  <entry>electron concentration<sup>a</sup></entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>[%]</entry>
+                  <entry>[%]</entry>
+                  <entry>[%]</entry>
+                  <entry>Shift<sup>a </sup>[eV]</entry>
+                  <entry>[cm<sup>−3</sup>]</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="5" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="21pt" align="char" char="." />
+              <colspec colname="3" colwidth="21pt" align="char" char="." />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="49pt" align="char" char="." />
+              <colspec colname="6" colwidth="70pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>In<sub>2</sub>O<sub>3</sub></entry>
+                  <entry>100</entry>
+                  <entry>0.0</entry>
+                  <entry>92</entry>
+                  <entry>0.0</entry>
+                  <entry>0.0</entry>
+                </row>
+                <row>
+                  <entry> 5% ITO</entry>
+                  <entry>95.3</entry>
+                  <entry>4.7</entry>
+                  <entry>92</entry>
+                  <entry>0.13</entry>
+                  <entry>2.2 × 10<sup>19</sup></entry>
+                </row>
+                <row>
+                  <entry>10% ITO</entry>
+                  <entry>89.5</entry>
+                  <entry>10.5</entry>
+                  <entry>94</entry>
+                  <entry>0.19</entry>
+                  <entry>3.9 × 10<sup>19</sup></entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="left" id="entry-00001-en">
+                    <sup>a</sup>Normalized to In<sub>2</sub>O<sub>3 </sub>nanocrystals.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00023-en" level="1">Example 5</heading>
+      <heading id="h-00024-en" level="1">Epitaxial Core/Shell Nanocrystals: γ-Fe<sub>2</sub>O<sub>3</sub>-MnO and ZnO—Ga<sub>2</sub>O<sub>3 </sub></heading>
+      <p id="p-00169-en" num="0163">γ-Fe<sub>2</sub>O<sub>3</sub>/MnO and ZnO/Ga<sub>2</sub>O<sub>3 </sub>core/shell nanocrystals were prepared. γ-Fe<sub>2</sub>O<sub>3 </sub>and ZnO cores were prepared as described in Example 3. The purified cores were then dissolved in oleyl alcohol and heated to 160° C. under flowing nitrogen. Next, the metal oleates needed to form the shell were injected into the solution along with excess oleic acid and the reaction was maintained at this temperature for 1 hour. To prevent nucleation of new nanoparticles from the shell precursor, the temperature of solution was kept lower than nucleation temperatures for that metal oxide and oxygen was excluded.</p>
+      <p id="p-00170-en" num="0164">
+        <figref>FIGS. 15</figref>
+        <i>a </i>and <b>15</b><i>b </i>are, respectively a high-resolution TEM image and a FFT-filtered image of a γ-Fe<sub>2</sub>O<sub>3</sub>/MnO core/shell nanocrystal. A 2-nm thick MnO shell was grown epitaxially onto the γ-Fe<sub>2</sub>O<sub>3 </sub>core. The size of the core was approximately 4.5 nm, corresponding to the diameter of the γ-Fe<sub>2</sub>O<sub>3 </sub>nanocrystals used as seeds in this synthesis. The high resolution TEM image shows a d-spacing of 0.30 nm, indicating {110} planes of MnO which have an epitaxial relationship with the {220} planes of γ-Fe<sub>2</sub>O<sub>3 </sub>(the lattice mismatch between the structures is 5.6%).</p>
+      <p id="p-00171-en" num="0165">
+        <figref>FIGS. 15</figref>
+        <i>c </i>and <b>15</b><i>d </i>are, respectively a high-resolution TEM image and a FFT-filtered image of a ZnO/β-Ga<sub>2</sub>O<sub>3 </sub>core/shell nanocrystal. A 2-nm thick crystalline Ga<sub>2</sub>O<sub>3 </sub>shell was grown onto a ZnO core. Adjacent lattice fringes with a d-spacing of 0.28 nm were obtained, which correspond to the (002) lattice planes of β-Ga<sub>2</sub>O<sub>3</sub>. Because the lattice mismatch between the (10-10) planes of ZnO (<figref>FIG. 3(</figref><i>d</i>)) and (002) lattice planes of Ga<sub>2</sub>O<sub>3 </sub>is very small (0.1%), the Ga<sub>2</sub>O<sub>3 </sub>shell layer was grown epitaxially on ZnO nanocrystal.</p>
+      <p id="p-00172-en" num="0166">
+        <figref>FIGS. 16</figref>
+        <i>a </i>and <b>16</b><i>b </i>are photoluminescence spectra of n-hexane solutions of ZnO nanocrystals and ZnO/β-Ga<sub>2</sub>O<sub>3 </sub>core-shell nanocrystals, respectively, excited at 320 nm by a filtered Hg UV source. In <figref>FIG. 16</figref><i>a</i>, the emission peaks at 355 nm (3.49 eV), 371 nm (3.34 eV) and a yellow emission band centered at 560 nm (2.21 eV) are assigned to free exciton recombination, bound exciton recombination with ionized defects, and ionized oxygen vacancies in ZnO, respectively. The ZnO/β-Ga<sub>2</sub>O<sub>3 </sub>core-shell nanocrystals showed a very different emission spectrum. The dominant emission peak was at 355 nm (compared with 371 nm in ZnO), and the yellow emission band disappeared upon addition of the shell. These results suggest that surface oxygen defects present in ZnO were passivated by the addition of the Ga<sub>2</sub>O<sub>3</sub>. The bright blue emission band centered at 370 nm (3.35 eV) in the spectrum of the core-shell structure is the effect of oxygen vacancies in Ga<sub>2</sub>O<sub>3 </sub>shell, according to literature reports (Binet et al., <i>J. Phys. Chem. Solids </i>59, 1241-1249 (1998); Chang, et al. <i>J. Phys. Chem. B </i>109, 13572-13577 (2005)).</p>
+      <p id="p-00173-en" num="0167">In view of the many possible embodiments to which the principles of the disclosed technology may be applied, it should be recognized that the illustrated embodiments are only preferred and should not be taken as limiting in scope. Rather, the scope is defined by the following claims. We therefore claim as our invention all that comes within the scope and spirit of these claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>We claim:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method for making nanoparticles comprising a metal oxide, the method comprising:
+<claim-text>providing a solution comprising RCOOH and a corresponding metal carboxylate comprising RCOO<sup>− </sup>and a metal cation M, wherein M is a group IIIA metal, a group IVA metal, a transition metal, or a combination thereof, and R is saturated or unsaturated C1-C21 aliphatic;</claim-text><claim-text>combining the solution with a solvent comprising R′OH to produce a mixture, wherein R′ is saturated or unsaturated C2-C22 aliphatic, and wherein the solvent is preheated to a temperature T<sub>1 </sub>of ≦240° C. prior to combining the solution with the solvent; and</claim-text><claim-text>maintaining the mixture at a temperature T<sub>2 </sub>of ≦240° C. for an effective period of time to form crystalline metal oxide nanoparticles, wherein T<sub>2 </sub>is less than the thermal decomposition temperature of the corresponding metal carboxylate.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref> where [R′OH]&gt;[RCOOH]&gt;[M] when the solution is combined with the solvent.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref> where [R′OH] is at least 10× greater than [M] when the solution is combined with the solvent.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref> where providing the solution comprising RCOOH and the metal carboxylate further comprises:
+<claim-text>providing a C1-C5 metal carboxylate comprising M;</claim-text><claim-text>combining the C1-C5 metal carboxylate with a molar excess of RCOOH; and</claim-text><claim-text>heating to convert at least a portion of the C1-C5 metal carboxylate to the metal carboxylate, thereby forming the solution comprising RCOOH and the metal carboxylate.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref> where M is Mn, Fe, Co, Zn, Sn, In, or a combination thereof.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref> where R′ is RCH<sub>2</sub>—.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref> where RCOOH is oleic acid and R′OH is oleyl alcohol.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref> where combining the solution with a solvent comprising R′OH to produce a mixture comprises injecting the solution into the solvent at a rate of 0.1-0.5 mL/minute.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref> where T<sub>1 </sub>and/or T<sub>2 </sub>is 200° C. to 230° C. and/or the effective period of time is ≦30 minutes.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising flowing a gas across a surface of the mixture, thereby evaporating and removing water produced as the crystalline metal oxide nanoparticles are formed.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising depositing a metal oxide shell onto the crystalline metal oxide nanoparticles by:
+<claim-text>combining the crystalline metal oxide nanoparticles with R′″OH to produce a mixture, where R′″ is saturated or unsaturated C2-C22 aliphatic;</claim-text><claim-text>heating the mixture to a temperature T<sub>3 </sub>of ≦200° C.;</claim-text><claim-text>providing a solution comprising R″COOH and a corresponding metal carboxylate comprising R″COO<sup>−</sup> and a metal cation M′, where M′ is a group IIIA metal, a group IVA metal, a transition metal, or a combination thereof, and R″ is saturated or unsaturated C1-C21 aliphatic;</claim-text><claim-text>combining the solution with the mixture; and</claim-text><claim-text>maintaining the combined solution and mixture at a temperature T<sub>4 </sub>of ≦200° C. for an effective period of time to form core-shell nanoparticles comprising a crystalline metal oxide core including M and a metal oxide shell including M′ deposited onto the metal oxide core.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref> where R″ is R, and R′″ and R′ are RCH<sub>2</sub>—.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, where T<sub>4 </sub>is less than a nucleation temperature for a metal oxide comprising M′ and oxygen is excluded during deposition of the metal oxide shell.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en" independent="true">
+      <claim-text>
+        <b>14</b>. A method for making nanoparticles, comprising:
+<claim-text>providing a C1-C5 metal carboxylate comprising a metal cation M, wherein M is a group IIIA metal, a group IVA metal, a transition metal, or a combination thereof;</claim-text><claim-text>combining the C1-C5 metal carboxylate with a molar excess of RCOOH, wherein R is saturated or unsaturated C5-C21 aliphatic;</claim-text><claim-text>heating to convert at least a portion of the C1-C5 metal carboxylate to a metal carboxylate comprising RCOO<sup>− </sup>and M, thereby forming a solution comprising RCOOH and the metal carboxylate comprising RCOO<sup>− </sup>and M;</claim-text><claim-text>preheating a solvent comprising R′OH to a temperature ranging from 150° C.-240° C. to form a preheated solvent, wherein R′ is saturated or unsaturated C6-C22 aliphatic;</claim-text><claim-text>combining the solution with the preheated solvent to produce a mixture, wherein [R′OH]&gt;[RCOOH]&gt;[M];</claim-text><claim-text>maintaining the mixture at a temperature ranging from 150° C.-240° C. under flowing nitrogen or air for an effective period of time to form crystalline nanoparticles comprising a metal oxide;</claim-text><claim-text>precipitating the crystalline nanoparticles; and</claim-text><claim-text>isolating the crystalline nanoparticles.</claim-text></claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. A plurality of crystalline nanoparticles prepared by the method of <claim-ref idref="clm-00001-en">claim 1</claim-ref> where the plurality of crystalline nanoparticles has a relative size dispersity of ≦20%, and each nanoparticle comprises a metal oxide crystal and a plurality of RCOOH molecules and/or RCOO— ligands coordinated to an outer surface of the metal oxide crystal.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. A plurality of nanoparticles prepared by the method of <claim-ref idref="clm-00012-en">claim 12</claim-ref> where the plurality of nanoparticles has a relative size dispersity of ≦20%, and each nanoparticle comprises a crystalline metal oxide core comprising M, a metal oxide shell comprising M′, and a plurality of RCOOH molecules and/or RCOO— ligands coordinated to an outer surface of the metal oxide shell.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en" independent="true">
+      <claim-text>
+        <b>17</b>. A plurality of nanoparticles with a relative size dispersity of ≦20%, wherein each nanoparticle comprises (1) a crystalline metal oxide core having a formula M<sub>x</sub>O<sub>y</sub>, wherein M is a group IIIA metal, a group IVA metal, a transition metal, or a combination thereof, and x and y are positive integers, and (2) a plurality of RCOOH molecules and/or RCOO— ligands coordinated to an outer surface of the nanoparticle, wherein R is saturated or unsaturated C5-C21 aliphatic and R′ is RCH<sub>2</sub>—.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The plurality of nanoparticles of <claim-ref idref="clm-00017-en">claim 17</claim-ref>, further comprising a metal oxide shell between the crystalline metal oxide core and the plurality of RCOOH molecules and/or RCOO— ligands, the metal oxide shell having a formula M′<sub>x</sub>O<sub>y</sub>, wherein M′ is a group IIIA metal, a group IVA metal, a transition metal, or a combination thereof.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The plurality of nanoparticles of <claim-ref idref="clm-00018-en">claim 18</claim-ref> where M and M′ are different metals.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The plurality of nanoparticles of <claim-ref idref="clm-00018-en">claim 18</claim-ref> where the metal oxide cores have an average largest dimension of ≦20 nm, and the metal oxide shells have an average thickness of 1-10 nm. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150259217A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259217A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150259217A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259217A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150259217A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259217A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150259217A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259217A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150259217A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259217A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150259217A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259217A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150259217A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259217A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150259217A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259217A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150259217A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259217A1-20150917-D00009.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150259217A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259217A1-20150917-D00010.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150259217A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259217A1-20150917-D00011.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150259217A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259217A1-20150917-D00012.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150259217A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259217A1-20150917-D00013.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150259217A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259217A1-20150917-D00014.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150259217A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259217A1-20150917-D00015.TIF" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150259217A1_00016.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259217A1-20150917-D00016.TIF" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150259217A1_00017.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259217A1-20150917-D00017.TIF" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150259217A1_00018.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259217A1-20150917-D00018.TIF" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="US20150259217A1_00019.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259217A1-20150917-D00019.TIF" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="US20150259217A1_00020.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259217A1-20150917-D00020.TIF" />
+    </figure>
+    <figure num="21">
+      <img he="N/A" wi="N/A" file="US20150259217A1_00021.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259217A1-20150917-D00021.TIF" />
+    </figure>
+    <figure num="22">
+      <img he="N/A" wi="N/A" file="US20150259217A1_00022.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259217A1-20150917-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="23">
+      <img he="N/A" wi="N/A" file="US20150259217A1_00023.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259217A1-20150917-C00002.TIF" inline="yes" />
+    </figure>
+    <figure num="24">
+      <img he="N/A" wi="N/A" file="US20150259217A1_00024.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259217A1-20150917-C00003.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150259217A1.PDF" type="pdf" size="2619745" pages="36" />
+</lexisnexis-patent-document>

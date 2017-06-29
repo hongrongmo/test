@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2939596A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151104" time-inserted="091109" date-changed="20151223" time-changed="095913">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121939483">
+        <country>EP</country>
+        <doc-number>2939596</doc-number>
+        <kind>A1</kind>
+        <date>20151104</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>13867074</doc-number>
+        <date>20131031</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>chi</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151104">
+      <priority-claim sequence="1" kind="national">
+        <country>CN</country>
+        <doc-number>201210586058</doc-number>
+        <date>20121228</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>CN</country>
+        <doc-number>201210586058</doc-number>
+        <kind>A</kind>
+        <date>20121228</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>CN</country>
+        <doc-number>2013086333</doc-number>
+        <kind>W</kind>
+        <date>20131031</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>201210586058</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>2013086333</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>CN20121586058</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>WO2013CN86333</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151105">
+      <gazette-reference>
+        <date>20151104</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151104</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151104</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151105">
+      <request-for-examination>
+        <date>20150728</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20151223">
+      <classification-ipcr sequence="1">
+        <text>A61B   5/151       20060101AFI20140716BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>151</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140716</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151223">
+      <classification-cpc sequence="1">
+        <text>A61B   5/1411      20130101 FI20141015BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>1411</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141015</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61B   5/150022    20130101 LI20141015BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>150022</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141015</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61B   5/150435    20130101 LI20141015BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>150435</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141015</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61B   5/150549    20130101 LI20141015BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>150549</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141015</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61B   5/150618    20130101 LI20141015BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>150618</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141015</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61B   5/150717    20130101 LI20151214BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>150717</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151214</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61B   5/151       20130101 LI20151104BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>151</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151104</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61B   5/15105     20130101 LI20141015BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>15105</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141015</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>A61B   5/15142     20130101 LI20151214BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>15142</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151214</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">4</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151104" lang="ger" format="original">SICHERE UND PRAKTISCHE EINWEG-BLUTABNAHMENADEL MIT DOPPELFLÄCHENKAPPE</invention-title>
+    <invention-title id="title_eng" date-changed="20151104" lang="eng" format="original">SAFE AND CONVENIENT DISPOSABLE BLOOD-TAKING NEEDLE WITH DOUBLE-SURFACE CAP</invention-title>
+    <invention-title id="title_fre" date-changed="20151104" lang="fre" format="original">AIGUILLE DE PRÉLÈVEMENT DE SANG JETABLE, SÛRE ET COMMODE AYANT UN CAPUCHON À DEUX SURFACES</invention-title>
+    <parties date-changed="20151104">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Sterilance Medical (Suzhou) Inc.</orgname>
+            <registered-number>101383447</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>No.68 Litanghe Road Xiangcheng District Suzhou</address-1>
+              <city>Jiangsu 215133</city>
+              <country>CN</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>SHI, Guoping</name>
+            <address>
+              <address-1>No. 68 Litanghe Road Xiangcheng District</address-1>
+              <city>Suzhou Jiangsu 215133</city>
+              <country>CN</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Betten &amp; Resch</name>
+            <registered-number>101517873</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Patent- und Rechtsanwälte PartGmbB Theatinerstraße 8 (Fünf Höfe)</address-1>
+              <city>80333 München</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151104">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>CN13086333</doc-number>
+        <date>20131031</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014101569</doc-number>
+        <date>20140703</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20160125">
+      <main-family family-id="157016096">
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103006240</doc-number>
+            <kind>B</kind>
+            <date>20140716</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014101569</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131031</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103006240</doc-number>
+            <kind>A</kind>
+            <date>20130403</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2939596</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131031</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>1740KOLNP2015</doc-number>
+            <kind>A</kind>
+            <date>20160122</date>
+          </document-id>
+          <application-date>
+            <date>20150608</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150351677</doc-number>
+            <kind>A1</kind>
+            <date>20151210</date>
+          </document-id>
+          <application-date>
+            <date>20131031</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="157016093">
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103006240</doc-number>
+            <kind>B</kind>
+            <date>20140716</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014101569</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131031</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103006240</doc-number>
+            <kind>A</kind>
+            <date>20130403</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2939596</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131031</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>1740KOLNP2015</doc-number>
+            <kind>A</kind>
+            <date>20160122</date>
+          </document-id>
+          <application-date>
+            <date>20150608</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150351677</doc-number>
+            <kind>A1</kind>
+            <date>20151210</date>
+          </document-id>
+          <application-date>
+            <date>20131031</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151104" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A kind of safe and convenient disposable blood-taking needle with double-surface cap, comprising lancet body with needle tip, lancet handle and lancet cap. The lancet body is fixed inside the lancet handle and the needle tip extends out of the first end of lancet handle to be inserted into the lancet cap, wherein: the body of above described lancet cap is a block structure, which includes a first face and second face. Both first face and second face are flat and opposed such that when one face faces upwards, the other face faces downwards and the included angle between them in space is less than 45°; the first face is provided with first blind hole and second face is provided with second blind hole and both first blind hole and second blind hole match the first end of lancet handle in respect of connection relationship. In the above described block structure, except the first face and second face, the other external surfaces are arcuate faces protruding outward and/or angular faces protruding outward. The present invention is especially suitable for domestic care where dedicated sharps disposal is absent, as it could conveniently and effectively prevent the risk of potentially contaminated needle stick during insertion of the used needle tip into a protective lancet cap.<img id="imga-00001-en" wi="78" he="82" img-content="drawing" file="imgaf001.tif" img-format="tif" /></p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151104">
+    <heading id="h-00001-en">
+      <b>TECHNICAL FIELD</b>
+    </heading>
+    <p id="p-00001-en" num="0001">The present invention relates to a kind of medical disposable lancet, particularly to a kind of safe and convenient disposable blood-taking needle with double-surface cap. This lancet improves the design of lancet cap on the basis of previous safe and convenient design; therefore its application becomes safer and more convenient to be especially suitable for domestic care and blood sampling.</p>
+    <heading id="h-00002-en">
+      <b>BACKGROUND OF INVENTION</b>
+    </heading>
+    <p id="p-00002-en" num="0002">As blood glucose testing technology has improved, the volume of blood sampling volume required by the measuring instruments has become less and less. In order to reduce the pain for patients, the diameter of the sampling needle has become thinner. The diameter of current needles vary from 21 G (Φ0.8mm), 23G (Φ0.64mm), 26G (Φ0.46mm), 28G (Φ0.36mm), 30G (Φ0.30mm), 32G (Φ0.25mm) to 33G (Φ0.20mm). Chinese patent <patcit id="pcit-00001" dnum="CN2482968Y"><text>CN2482968Y</text></patcit> discloses a kind of utility model patent named <i>Disposable Injection Lancet</i>. The lancet of the patent consists of a lancet body with needle tip, lancet handle and lancet cap. The lancet body is fixed inside the lancet handle, the needle tip extends out of the end of lancet handle to be inserted into the lancet cap when the lancet handle and lancet cap are connected by the transition structure enveloping the lancet body. The lancet body of the lancet is made from stainless steel, and the lancet handle and lancet cap are made from plastics. During device production, the lancet body is placed inside a die cavity for one-shot injection moulding to permanently fix the lancet body inside the lancet handle and lancet cap made from plastics. During use, the cap is twisted to break the transition connection of lancet handle and lancet cap, and is then removed to expose the needle tip of certain length. The lancet handle is installed in the lancing device for blood sampling. In a clinical setting, this kind of lancet is usually disposed of directly in a sharps bin after use to prevent cross infection or needle stick without inserting the needle tip into the lancet cap or otherwise protecting the exposed needle. However, in a domestic setting where dedicated sharps disposal may be absent, the lancet cap must be retained so that the needle tip can be inserted into the needle cap by piercing to provide discrete protection against contamination and needle stick injury. At a diameter of less than 30G (Φ0.30mm), the lancet body and needle tip may be weak and easily bent and piercing of the needle tip into the lancet cap to affect protection may be difficult, causing the the needle tip to remain exposed.</p>
+    <p id="p-00003-en" num="0003">In order to solve the above-mentioned problem, another kind of lancet is available in prior art, i.e. a capping lancet. Refer to <figref>Figure 1 through 4</figref>. This is another kind of technical solution for protecting the needle tip with the lancet cap after use. This kind of lancet consists of lancet body 1 with needle tip 4, lancet handle 2 and lancet cap 3. The lancet cap 3 has the a concave shape with one blind hole. One end of blind hole is the open end of lancet cap 3 and the other end of blind hole is base end of lancet cap 3. Before use, needle tip 4 is inserted in the base end of lancet cap 3 (see <figref>Fig. 2</figref>) and after use, needle tip 4 is inserted into the blind hole from the insertion end (see <figref>Fig. 4</figref>). When the diameter of lancet body 1 is very thin, the application of this form of cap avoids the impracticable piercing of the needle tip 4 into lancet cap 3 or needle tip bending.<br /> Two methods are available for use of this form of lancet capping: one method is to place the separated lancet cap 3 on a work table, whereby the orientation of the open end of the lancet cap must be manually adjusted so it is presented correctly for capping. This method is relatively safe, but adds the supporting action of correctly orienting the lancet cap 3 manually, reducing simplicity and speed. The other capping method is that the user holds the lancet handle 2 with one hand and picks up the lancet cap 3 with the other hand to manually orient it and insert needle tip 4. This kind of operation is simple and convenient, but lacks needle stick safety, especially for elderly patients or patients with poor eyesight or dexterity. Therefore, the object of present invention is to design one type of safe, convenient and user friendly disposable lancet which addresses these problems.</p>
+    <heading id="h-00003-en">
+      <b>DISCLOSURE OF THE INVENTION</b>
+    </heading>
+    <p id="p-00004-en" num="0004">The present invention provides a type of safe and convenient disposable blood-taking needle with double-surface cap. It has been devised to address the problem of safety and convenience of capping after use of a disposable lancet.</p>
+    <p id="p-00005-en" num="0005">In order to achieve the above object, the present invention provides the technical solution: a kind of safe and convenient disposable blood-taking needle with double-surface cap, comprising a lancet body with needle tip, lancet handle and lancet cap. The lancet body is fixed inside the lancet handle and the needle tip extends out of the first end of lancet handle to be inserted into the lancet cap.</p>
+    <p id="p-00006-en" num="0006">The body of above described lancet cap is a block structure, which is provided with a first face and second face. Both first face and second face are flat and opposed, such that when one face faces upwards, the other face faces downwards and the included angle between them in space is less than 45°; the first face is provided with first blind hole and second face is provided with second blind hole and both first blind hole and second blind hole match the first end of lancet handle in respect of connection relationship;<br /> In the above described block structure, except the first face and second face, the other external surfaces are arcuate faces protruding outward and/or angular faces protruding outward.</p>
+    <p id="p-00007-en" num="0007">The above described technical solution is explained as follows: <ol><li>1. In the above described technical solution, the block structure means the spatial structure with a block-like shape.</li><li>2. In the above described technical solution, "upwards" and "downwards" includes the parallelism of two faces, and also includes the nonparallelism, i.e. the included angle between two faces in space is less than 45°.</li><li>3. In the above described technical solution, the angular face means an angular face protruding outward with respect of the lancet cap.</li><li>4. In the above described technical solution, the block structure is a flat structure and the top surface of flat structure is the first face and bottom surface of the flat structure is the second face.</li><li>5. In the above described technical solution, the first blind hole and second blind hole may be coaxially arranged in the direction of the hole axis; otherwise, the first blind hole and second blind hole could also be arranged off-axis in the direction of hole axis.</li></ol></p>
+    <p id="p-00008-en" num="0008">The design concept and operating principle of the present invention is: Since the two kinds of insertion methods of needle tip into lancet cap after use of existing twist cap disposable lancet previously described are complicated and not relatively safe, the overall design concept of the present invention is that: when the user places the lancet cap on a work table, the lancet cap is always in an insertion-ready state for the needle tip of the used lancet. Therefore, the open end of the lancet cap shall always face upwards when the lancet cap of a double-sided cap disposable lancet is placed in any manner on a work table. The lancet cap incorporates a stable flat surface making it possible for the user to safely insert the needle tip into the lancet cap on a work table with one hand.</p>
+    <p id="p-00009-en" num="0009">The particular design concept and operating principle of present invention is: The body of the above described lancet cap is a block structure, which is provided with a first face and second face. Both first face and second face are flat. When one face faces upwards, the other face faces downwards and the included angle between them in space is less than 45°; the first face is provided with a first blind hole and second face is provided with a second blind hole and both first blind hole and second blind hole match the first end of lancet handle in respect of connection relationship, making both sides suitable for insertion of the first end of the lancet handle into the blind hole; in the above described block structure, except the first face and second face, the other external surfaces are arcuate faces protruding outward or/and angular faces protruding outward, and when the lancet cap is placed in any manner on a work table, the structure makes it impossible for the lancet cap to rest on the external surfaces, such that the lancet cap could only rest on the first face or second face thus keeping the open end of the lancet cap always facing upward.<br /> The open end of the lancet cap means the end with the blind hole on the first face or second face; furthermore, the block structure is a flat structure and the top surface of the flat structure is the first face and the bottom surface of the flat structure is the second face, which makes the height of the lancet cap lower and cross sectional area of the lancet cap larger. This structure makes it impracticable for the lancet cap to rest on the other external surfaces and assists in keeping the open end of lancet cap always facing upward. Additionally, it makes it difficult for the user to pick up the lancet cap by hand and encourages the user to insert the first end of lancet handle into the lancet cap directly on the work table with one hand, which ensures the safety of the user.</p>
+    <p id="p-00010-en" num="0010">Due to application of the above described technical solution, the present invention has the following advantages and effects in comparison with existing technologies: the safe and convenient disposable blood-taking needle with double-surface cap provided by the present invention is especially suitable for domestic care, as it could improve safety by effectively preventing the risk of needle stick by a used lancet during capping and it also has the advantage of speed and convenience.</p>
+    <heading id="h-00004-en">
+      <b>BRIEF DESCRIPTION OF THE DRAWINGS</b>
+    </heading>
+    <p id="p-00011-en" num="0011">
+      <ul id="ul-00001-en" list-style="none" compact="compact">
+        <li>
+          <figref>Fig. 1</figref> is the perspective view of a twist capping lancet of existing technology;</li>
+        <li>
+          <figref>Fig. 2</figref> is the cross sectional view of a twist capping lancet of existing technology;</li>
+        <li>
+          <figref>Fig. 3</figref> is the perspective view illustrating the state of a twist capping lancet of existing technology after removing the lancet cap;</li>
+        <li>
+          <figref>Fig. 4</figref> is the perspective view illustrating the state of a twist capping lancet of existing technology after inserting the used needle tip into the lancet cap;</li>
+        <li>
+          <figref>Fig. 5</figref> is a front perspective view of embodiment 1 of the present invention;</li>
+        <li>
+          <figref>Fig. 6</figref> is a back perspective view of embodiment 1 of the present invention;</li>
+        <li>
+          <figref>Fig. 7</figref> is an exploded perspective view of embodiment 1 of the present invention;</li>
+        <li>
+          <figref>Fig. 8</figref> is a perspective view illustrating the state after removing the lancet cap of embodiment 1;</li>
+        <li>
+          <figref>Fig. 9</figref> is a perspective view illustrating the state of inserting the used needle tip into the lancet cap of embodiment 1;</li>
+        <li>
+          <figref>Fig. 10</figref> is a perspective view illustrating the state of embodiment 1 after inserting the used needle tip into the lancet cap;</li>
+        <li>
+          <figref>Fig. 11</figref> is a front perspective view of embodiment 2 of the present invention;</li>
+        <li>
+          <figref>Fig. 12</figref> is a side view of <figref>Fig. 11</figref>;</li>
+        <li>
+          <figref>Fig. 13</figref> is a back perspective view of embodiment 2 of the present invention;</li>
+        <li>
+          <figref>Fig. 14</figref> is a side view of <figref>Fig. 13</figref>;</li>
+        <li>
+          <figref>Fig. 15</figref> is an exploded perspective view of embodiment 2 of the present invention;</li>
+        <li>
+          <figref>Fig. 16</figref> is a perspective view illustrating the state 1 after removing the lancet cap of embodiment 2;</li>
+        <li>
+          <figref>Fig. 17</figref> is a side view of <figref>Fig. 16</figref>;</li>
+        <li>
+          <figref>Fig. 18</figref> is a perspective view illustrating the state 2 after removing the lancet cap of embodiment 2;</li>
+        <li>
+          <figref>Fig. 19</figref> is a side view of <figref>Fig. 18</figref>;</li>
+        <li>
+          <figref>Fig. 20</figref> is a perspective view illustrating the state of inserting the used needle tip into lancet cap of embodiment 2;</li>
+        <li>
+          <figref>Fig. 21</figref> is a perspective view illustrating the state after inserting the used needle tip into lancet cap of embodiment 2;</li>
+        <li>
+          <figref>Fig. 22</figref> is a perspective view illustrating the structure change of <figref>Fig. 7</figref>.</li>
+      </ul>
+    </p>
+    <p id="p-00012-en" num="0012">In the above described <figref>figures: 1</figref>. lancet body; 2. lancet handle; 3. lancet cap; 4. needle tip; 5. first face; 6. second face; 7. first blind hole; 8. second blind hole; 9. interconnecting hole.</p>
+    <heading id="h-00005-en">
+      <b>SPECIFIC EMBODIMENT</b>
+    </heading>
+    <p id="p-00013-en" num="0013">With reference to the accompanying drawings and embodiment, the present invention will be described in detail.</p>
+    <heading id="h-00006-en">Embodiment 1: A kind of safe and convenient disposable blood-taking needle with double-surface cap</heading>
+    <p id="p-00014-en" num="0014">As shown in Fig. 5 through 10, the lancet of the present invention consists of lancet body 1 with needle tip 4, lancet handle 2 and lancet cap 3. The lancet body 1 is fixed inside the lancet handle 2 and the needle tip 4 extends out of the first end of lancet handle 2 to be inserted into the lancet cap 3. The body of above described lancet cap 3 is a block structure, which is provided with first face 5 and second face 6. Both first face 5 and second face 6 are flat faces. And when one face faces upwards, the other face faces downwards and the included angle between them in space is less than 45°; the first face 5 is provided with first blind hole 7 and second face 6 is provided with second blind hole 8 and both first blind hole 7 and second blind hole 8 match the first end of lancet handle 2 in respect of connection relationship. In the above described block structure, except the first face 5 and second face 6, the other external surfaces are arcuate faces protruding outward and angular faces protruding outward. The above described first blind hole 7 and second blind hole 8 are coaxially arranged in the direction of hole axis.</p>
+    <heading id="h-00007-en">Embodiment 2: A kind of safe and convenient disposable blood-taking needle with double-surface cap</heading>
+    <p id="p-00015-en" num="0015">As shown in Fig. 11 through 21, the lancet of the present invention consists of lancet body 1 with needle tip 4, lancet handle 2 and lancet cap 3. The lancet body 1 is fixed inside the lancet handle 2 and the needle tip 4 extends out of the first end of lancet handle 2 to be inserted into the lancet cap 3. The body of above described lancet cap 3 is a block structure, which is flat structure and the top surface of the flat structure is first face 5 and bottom surface of the flat structure is second face 6. Both first face 5 and second face 6 are flat faces. And when one face faces upwards, the other face faces downwards and the included angle between them in space is less than 45°; the first face 5 is provided with first blind hole 7 and second face 6 is provided with second blind hole 8 and both first blind hole 7 and second blind hole 8 match the first end of lancet handle 2 in respect of connection relationship. In the above described block structure, except the first face 5 and second face 6, the other external surfaces are angular faces protruding outward. The above described first blind hole 7 and second blind hole 8 are arranged off-axis in the direction of hole axis.</p>
+    <p id="p-00016-en" num="0016">The particular operation process of above described two embodiments is as follows: when the blood sampling is required, remove the lancet cap 3 to expose the needle tip 4 for blood sampling, and afterward insert the first end of lancet handle 2 with needle tip 4 into lancet cap 3 to protect the sharp needle tip. As both sides of lancet cap 3 are suitable for insertion of the first end of lancet handle 2 into the blind hole, i.e. first blind hole 7 and second blind hole 8; and since, except the first face 5 and second face 6, the other external surfaces are arcuate faces protruding outward or/and angular faces protruding outward, when the lancet cap 3 is placed in any manner on a work table, the structure makes it impossible for the lancet cap 3 to rest on the other external surfaces, so the lancet cap 3 can only rest on the first face 5 or second face 6, which makes the height of the lancet cap lower and cross sectional area of the lancet cap larger. This structure makes it impracticable for the lancet cap 3 to rest on the other external surfaces and assists in keeping the open end of lancet cap 3 always facing upward. Additionally, it makes it difficult for the user to pick up the lancet cap 3 by hand and encourages the user to insert first end of lancet handle 2 into the lancet cap 3 on the work -table with one hand, which ensures the safety of the user.</p>
+    <p id="p-00017-en" num="0017">It should be noted that the above described embodiments are only for illustration of technical concept and characteristics of present invention with the purpose of making those skilled in the art understand the present invention, and thus these embodiments shall not limit the protection range of present invention. The equivalent changes or modifications according to spiritual essence of present invention shall fall in the protection scope of present invention. Take embodiment 1 for example, refer to <figref>Fig. 22</figref> for equivalent change on the basis of above described embodiment 1. There is an interconnecting hole 9 between first blind hole 7 and second blind hole 8. The interconnecting hole 9 is a small hole, which doesn't affect the essence of first blind hole 7 and second blind hole 8 being blind holes and doesn't affect the technical concept and effect realization of the present invention.</p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151104">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>A kind of safe and convenient disposable blood-taking needle with double-surface cap, comprising lancet body (1) with needle tip (4), lancet handle (2) and lancet cap (3). The lancet body (1) is fixed inside the lancet handle (2) and the needle tip (4) extends out of the first end of lancet handle (2) to be inserted into the lancet cap (3), wherein:
+<claim-text>The body of above described lancet cap (3) is a block structure, which is provided with first face (5) and second face (6). Both first face (5) and second face (6) are flat and when one face faces upwards, the other face faces downwards and the included angle between them in space is less than 45°; the first face (5) is provided with first blind hole (7) and second face (6) is provided with second blind hole (8) and both first blind hole (7) and second blind hole (8) match the first end of lancet handle (2) in respect of connection relationship;</claim-text><claim-text>In the above described block structure, except the first face (5) and second face (6), the other external surfaces are arcuate faces protruding outward and angular faces protruding outward.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The disposable lancet according to claim 1, wherein the block structure is a flat structure and the top surface of the flat structure is first face (5) and bottom surface of the flat structure is second face (6).</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The disposable lancet according to claim 1, wherein the above described first blind hole (7) and second blind hole (8) are coaxially arranged in the direction of hole axis.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>The disposable lancet according to claim 1, wherein the above described first blind hole (7) and second blind hole (8) are arranged off-axis in the direction of hole axis.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2939596A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2939596A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0001.tif" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP2939596A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0002.tif" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="EP2939596A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0003.tif" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="EP2939596A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0004.tif" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="EP2939596A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0005.tif" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="EP2939596A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0006.tif" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="EP2939596A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0007.tif" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="EP2939596A1_00009.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+  </drawings>
+  <image file="EP2939596A1.PDF" type="pdf" size="665009" pages="15" />
+</lexisnexis-patent-document>

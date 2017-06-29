@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150252073A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021755" date-changed="20151208" time-changed="150650">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121229073">
+        <country>US</country>
+        <doc-number>20150252073</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14422643</doc-number>
+        <date>20130820</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150910">
+      <priority-claim sequence="1" kind="national">
+        <country>KR</country>
+        <doc-number>1020120092400</doc-number>
+        <date>20120823</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151208">
+      <classification-ipcr sequence="1">
+        <text>C07K   5/11        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>5</main-group>
+        <subgroup>11</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61K   8/64        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>64</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C07K   5/083       20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>5</main-group>
+        <subgroup>083</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C07K   5/09        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>5</main-group>
+        <subgroup>09</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>C07K   5/103       20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>5</main-group>
+        <subgroup>103</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151208">
+      <classification-cpc sequence="1">
+        <text>C07K   5/1019      20130101 FI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>5</main-group>
+        <subgroup>1019</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61K   8/64        20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>64</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61K  38/06        20130101 LI20140320BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>38</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140320</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61K  38/07        20130101 LI20140320BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>38</main-group>
+        <subgroup>07</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140320</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61Q  19/08        20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>Q</subclass>
+        <main-group>19</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C07K   5/0804      20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>5</main-group>
+        <subgroup>0804</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C07K   5/0817      20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>5</main-group>
+        <subgroup>0817</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C07K   5/0819      20130101 LI20151130BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>5</main-group>
+        <subgroup>0819</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151130</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C07K   5/101       20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>5</main-group>
+        <subgroup>101</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">14</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">PEPTIDES HAVING NF-KB INHIBITORY ACTIVITY, OR COMPOSITION COMPRISING SAME</invention-title>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>KNU-INDUSTRY COOPERATION FOUNDATION</orgname>
+            <role>03</role>
+            <address>
+              <city>Gangwon-do</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Hahn</last-name>
+            <first-name>Jang-Hee</first-name>
+            <address>
+              <city>Gangwon-do</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Park</last-name>
+            <first-name>Chang-Seo</first-name>
+            <address>
+              <city>Gyeonggi-do</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Ko</last-name>
+            <first-name>In-Young</first-name>
+            <address>
+              <city>Gangwon-do</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Chun</last-name>
+            <first-name>Byong-Ik</first-name>
+            <address>
+              <city>Seoul</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kim</last-name>
+            <first-name>Byoung-Chul</first-name>
+            <address>
+              <city>Gangwon-do</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>KR13007440</doc-number>
+        <date>20130820</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014030898</doc-number>
+        <date>20140227</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150910">
+      <main-family family-id="164488218">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014030898</doc-number>
+            <kind>A1</kind>
+            <date>20140227</date>
+          </document-id>
+          <application-date>
+            <date>20130820</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252073</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20130820</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020140026782</doc-number>
+            <kind>A</kind>
+            <date>20140306</date>
+          </document-id>
+          <application-date>
+            <date>20120823</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="164488217">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014030898</doc-number>
+            <kind>A1</kind>
+            <date>20140227</date>
+          </document-id>
+          <application-date>
+            <date>20130820</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252073</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20130820</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020140026782</doc-number>
+            <kind>A</kind>
+            <date>20140306</date>
+          </document-id>
+          <application-date>
+            <date>20120823</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention provides small peptide fragments derived from the NF-κB p65 subunit and a pharmaceutical or cosmetic composition comprising the same. The peptides have a NF-κB inhibitory activity, through controlling the transcription-activation of NF-κB. The peptides inhibit the expressions of pro-inflammatory mediators, which are induced by NF-κB, and also inhibit the transmigration of leukocytes, thereby exhibiting an anti-inflammatory activity. Especially, the peptides have excellent inhibitory activities against dermatitis and skin aging. And also, the peptides inhibit base membrane invasion of cancer cells, thereby exhibiting an inhibitory activity against the growth and/or metastasis of cancer cells.</p>
+  </abstract>
+  <legal-data date-changed="20150925">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150220</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015252073A1</docdb-publication-number>
+      <docdb-application-id>444310211</docdb-application-id>
+      <new-owner>KNU-INDUSTRY COOPERATION FOUNDATION, KOREA, REPUBL</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:HAHN, JANG-HEE;PARK, CHANG-SEO;KO, IN-YOUNG;AND OTHERS;REEL/FRAME:034993/0352</free-text-description>
+      <effective-date>
+        <date>20150211</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to small peptide fragments having a NF-κB inhibitory activity and a composition comprising the same.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND ART</heading>
+      <p id="p-00002-en" num="0002">An inflammatory response is known as a protective response of living organism for rehabilitating the structures and functions of tissues damaged by infection, trauma, etc. Mobilization of leukocytes to a focus of inflammation is critical for the rapid resolution of infections and restoration of tissue damages resulting from a variety of injuries. However, a misdirected or prolonged inflammatory response causes damage to the body's tissues or diseases. For example, inflammatory diseases are caused by bacterial or viral infection, e.g., cerebrospinal meningitis, enteritis, dermatitis, uveitis, encephalitis, or adult respiratory distress syndrome, or non-infectious factors, e.g., trauma, autoimmune diseases, or organ transplantation rejection. Inflammatory diseases are classified into acute and chronic inflammatory diseases according to symptoms or pathological features. Acute inflammation such as allergy or bacterial/viral infection is manifested as local signs such as a change in bloodstream, blood vessel size, and vascular permeability, and the recruitment of leukocytes. In contrast, a main pathological feature of chronic inflammation such as rheumatoid arthritis, artherosclerosis, chronic kidney infection, or hepatocirrhosis is a continuous emigration of macrophages, lymphocytes, or plasma cells into foci of inflammation due to recurrence of inflammatory factors, thereby causing a long-lasting inflammatory response.</p>
+      <p id="p-00003-en" num="0003">Pro-inflammatory mediators expressed at the sites of inflammation, such as cytokines, chemokines, reactive oxygen intermediates, cycloxygenase-2 (COX-2), 5-lipoxygenase (5-LOX), matrix metalloproteinase (MMP), play a critical role in generation and maintenance of inflammatory reaction. It is known that the expressions of such pro-inflammatory mediators are controlled by transcription factors, such as NF-κB (nuclear factor κB), STAT3 (signal transducer and activator of transcription 3), AP-1 (activator protein1), HIF-1a (hypoxia-inducible factor 1a).</p>
+      <p id="p-00004-en" num="0004">Cancer cells induced by carcinogens proliferate rapidly relative to normal cells, thereby forming tumor masses, invading surrounding tissues, and interfering with normal body functions. Cancer cells bring nutrients and oxygen by inducing angiogenesis, and metastasis thereof is also caused by angiogenesis. Although cancer cells grow infinitely at specific sites, they can also leave the sites from which they originated, migrate to and grow in new sites, whose process is called “metastasis”. Metastasis involve several key steps: conversion of cancer cells to migratory mesenchymal cells, dissociation of the mesenchymal cells from the original tumor sites, invasion into and spread through surrounding connective tissues and capillary vessels, migration through blood vessels, escape from the blood vessels, migration through connective tissues, and proliferation in secondary sites.</p>
+      <p id="p-00005-en" num="0005">Meanwhile, NF-κB has a homodimer form or a heterodimer form, which is derived from the 5 subunits, i.e., RelA (p65), c-Rel, RelB, p50 (NF-κB1), and p52 (NF-κB2). All the subunits share the DNA binding sites, the dimerization sites, the IκB (inhibitory KB) binding sites. In an inactivated state, NF-κB binds to IκB in the cytoplasm, which inhibits the translocation of NF-κB into the nucleus and the binding to target gene promoters. When NF-κB is activated by pro-inflammatory cytokines (e.g., TNFα, IL-1, etc.); physical stimuli (e.g., UV, radiation, etc.); pathogenic organisms and lipopolysaccharides (LPSs) derived therefrom; double-strand RNAs, etc., NF-κB dissociates from IκB to enter the nucleus and then binds to KB elements, thereby inducing the transcriptions of about 400 genes responsible for inflammation, immune response, tumor cell division, invasion, metastasis, angiogenesis, tolerance to anticancer agents, tolerance to radioactivity, etc. (Sethi G, Shanmugam M K, Ramachandrasn L, Kumar A P, Vinay Tergaonkar V. 2012. Multifaceted link between cancer and inflammation. <i>Biosci. Rep. </i>32:1). Therefore, NF-κB is a transcription factor that plays a pivotal role in not only the control of pro-inflammatory cytokine expression but also the growth and/or metastasis of cancer cells.</p>
+      <heading id="h-00003-en" level="1">DISCLOSURE</heading>
+      <heading id="h-00004-en" level="1">Technical Problem</heading>
+      <p id="p-00006-en" num="0006">The present inventors have performed various researches in order to develop small peptide fragments having a NF-κB inhibitory activity. The present inventors have found that the specific peptide fragments derived from a certain subunit (i.e., p65 subunit) of NF-κB control the transcription-activation of NF-κB, thereby being able to inhibit inflammatory reaction; and exhibit excellent inhibitory activities against dermatitis and skin aging that are closely related to the NF-κB mediated inflammation. And also, the present inventors have found that the specific peptide fragments inhibit angiogenesis and base membrane invasion of cancer cells, thereby inhibiting the growth and/or metastasis of cancer cells.</p>
+      <p id="p-00007-en" num="0007">Therefore, it is an object of the present invention to provide the specific peptide fragments derived from the NF-κB p65 subunit.</p>
+      <p id="p-00008-en" num="0008">It is another object of the present invention to provide a pharmaceutical composition having a NF-κB inhibitory activity, which comprises the specific peptide fragments as an active ingredient.</p>
+      <p id="p-00009-en" num="0009">It is still another object of the present invention to provide a cosmetic composition for improving inflammation or skin aging, which comprises the specific peptide fragments as an active ingredient.</p>
+      <heading id="h-00005-en" level="1">Technical Solution</heading>
+      <p id="p-00010-en" num="0010">In accordance with an aspect of the present invention, there is provided a peptide selected from the group consisting of the peptide of SEQ ID NO: 1, the peptide of SEQ ID NO: 2, the peptide of SEQ ID NO: 3 and the peptide of SEQ ID NO: 4.</p>
+      <p id="p-00011-en" num="0011">In accordance with another aspect of the present invention, there is provided a pharmaceutical composition having a NF-κB inhibitory activity, which comprises a peptide selected from the group consisting of the peptide of SEQ ID NO: 1, the peptide of SEQ ID NO: 2, the peptide of SEQ ID NO: 3 and the peptide of SEQ ID NO: 4 as an active ingredient.</p>
+      <p id="p-00012-en" num="0012">In an embodiment, the pharmaceutical composition having a NF-κB inhibitory activity may be a pharmaceutical composition for preventing or treating inflammation or skin aging. The inflammation may be dermatitis, preferably ultraviolet radiation-induced dermatitis. And also, the skin aging may be cutaneous photoaging, preferably ultraviolet radiation-induced cutaneous photoaging.</p>
+      <p id="p-00013-en" num="0013">In another embodiment, the pharmaceutical composition having a NF-κB inhibitory activity may be a pharmaceutical composition for inhibiting the growth and/or metastasis of cancer cells. The cancer cells may be breast cancer cells, gastric cancer cells, colorectal cancer, colon cancer cells, rectal cancer cells, pancreatic cancer cells, or lymphoma cells.</p>
+      <p id="p-00014-en" num="0014">In accordance with still another aspect of the present invention, there is provided a cosmetic composition for improving inflammation or skin aging, which comprises a peptide selected from the group consisting of the peptide of SEQ ID NO: 1, the peptide of SEQ ID NO: 2, the peptide of SEQ ID NO: 3 and the peptide of SEQ ID NO: 4 as an active ingredient. In the cosmetic composition of the present invention, the inflammation may be dermatitis, preferably ultraviolet radiation-induced dermatitis; and also, the skin aging may be is cutaneous photoaging, preferably ultraviolet radiation-induced cutaneous photoaging.</p>
+      <heading id="h-00006-en" level="1">Advantageous Effects</heading>
+      <p id="p-00015-en" num="0015">It has been found by the present inventors that the specific peptide fragments derived from the NF-κB p65 subunit have a NF-κB inhibitory activity, through controlling the transcription-activation of NF-κB. Especially, it has been found by the present invention that the peptide fragments can inhibit inflammatory reaction; and exhibit excellent inhibitory activities against dermatitis and skin aging. Therefore, the peptides can be usefully applied to a pharmaceutical composition for preventing or treating inflammation or skin aging and a cosmetic composition for improving inflammation or skin aging. And also, the peptides inhibit angiogenesis and base membrane invasion of cancer cells, thereby being able to usefully apply to a pharmaceutical composition for inhibiting the growth and/or metastasis of cancer cells.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00007-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 1</figref> shows the NF-κB activities in the mouse macrophage cell line RAW 264.7 transfected with the NF-κB reporter gene, after treatment with the peptides of the present invention.</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 2</figref> shows the trans-endothelial migrations of WEHI274.1 cells, when the mouse endothelial cell line bEnd.3 activated by TNF-α was treated with the peptides of the present invention.</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 3</figref> shows the photographs obtained by observing tube formations when human umbilical vein endothelial cells (HUVECs) were treated with the peptides of the present invention (<figref>FIG. 3</figref><i>a</i>); and the values obtained by the quantitative analyses for comparing the tube lengths thereof (<figref>FIG. 3</figref><i>b</i>)</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 4</figref> shows the results obtained by evaluating the expressions of procollagen type-1 and MMP-1 in human dermal fibroblasts, after treatment with the peptides of the present invention.</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 5</figref> shows the results obtained by evaluating the expression of TNF-α in human keratinocytes, after treatment with the peptides of the present invention.</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 6</figref> shows the results obtained by evaluating the expression of IL-1α in human keratinocytes, after treatment with the peptides of the present invention.</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 7</figref> shows the results obtained by evaluating the inhibitory effects of the peptides of the present invention on PGE<sub>2 </sub>formation in human keratinocytes.</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 8</figref> shows the results obtained by evaluating the inhibitory effects of the peptides of the present invention on COX-2 formation in human keratinocytes.</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 9</figref> shows the results obtained by measuring the invasion of human breast carcinoma cells (MCF-7) into matrigel, after treatment with the peptides of the present invention.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00008-en" level="1">BEST MODE</heading>
+      <p id="p-00025-en" num="0025">Throughout the specification, the term “inflammation” refers to the inflammatory reaction whose expression is controlled by NF-κB (nuclear factor κB), including not only acute and/or chronic inflammatory diseases but also diseases involving inflammation (e.g., rheumatoid arthritis, osteoarthritis, etc.). The “inflammation” includes a NF-κB-mediated skin inflammation (i.e., dermatitis), preferably ultraviolet radiation-induced dermatitis, which may be derived from various causes.</p>
+      <p id="p-00026-en" num="0026">The term “skin aging” refers to the skin aging caused by the transcription control by NF-κB and includes preferably cutaneous photoaging, more preferably ultraviolet radiation-induced cutaneous photoaging.</p>
+      <p id="p-00027-en" num="0027">The present invention provides a peptide selected from the group consisting of the peptide of SEQ ID NO: 1, the peptide of SEQ ID NO: 2, the peptide of SEQ ID NO: 3 and the peptide of SEQ ID NO: 4.</p>
+      <p id="p-00028-en" num="0028">The peptide selected from the group consisting of the peptide of SEQ ID NO: 1, the peptide of SEQ ID NO: 2, the peptide of SEQ ID NO: 3 and the peptide of SEQ ID NO: 4 have a NF-κB inhibitory activity, through controlling the transcription-activation of NF-κB. The peptides inhibit the expressions of various pro-inflammatory mediators that are induced by NF-κB; and the trans-endothelial migrations of leukocytes, thereby exhibiting an anti-inflammatory activity. Especially, the peptides exhibit excellent inhibitory activities against dermatitis and skin aging. And also, the peptides have an inhibitory activity against the growth and/or metastasis of cancer cells, through inhibiting angiogenesis and base membrane invasion of cancer cells.</p>
+      <p id="p-00029-en" num="0029">Therefore, the present invention provides a pharmaceutical composition having a NF-κB inhibitory activity, which comprises a peptide selected from the group consisting of the peptide of SEQ ID NO: 1, the peptide of SEQ ID NO: 2, the peptide of SEQ ID NO: 3 and the peptide of SEQ ID NO: 4 as an active ingredient.</p>
+      <p id="p-00030-en" num="0030">In an embodiment, the pharmaceutical composition having a NF-κB inhibitory activity may be a pharmaceutical composition for preventing or treating inflammation or skin aging. The inflammation may be dermatitis, preferably ultraviolet radiation-induced dermatitis. And also, the skin aging may be cutaneous photoaging, preferably ultraviolet radiation-induced cutaneous photoaging.</p>
+      <p id="p-00031-en" num="0031">In another embodiment, the pharmaceutical composition having a NF-κB inhibitory activity may be a pharmaceutical composition for inhibiting the growth and/or metastasis of cancer cells. The cancer cells may be breast cancer cells, gastric cancer cells, colorectal cancer, colon cancer cells, rectal cancer cells, pancreatic cancer cells, or lymphoma cells.</p>
+      <p id="p-00032-en" num="0032">The pharmaceutical composition of the present invention may include excipients such as lactose or corn starch, lubricants such as magnesium stearate, currently available emulsifiers, suspending agents, buffers, isotonic agents, etc. The pharmaceutical composition of the present invention can be administered in an oral or a parenteral dosage form, preferably in an external dosage form for applying on the skin. For intramuscular, intraperitoneal, subcutaneous, or intravenous administration, a sterilized solution of an active ingredient is generally prepared. In this case, the sterilized solution may include a buffer to achieve a desired pH value. With respect to formulations for intravenous administration, an isotonic agent may be used to render the formulations isotonic. The pharmaceutical compositions of the present invention can be formulated into aqueous solutions including a pharmaceutically acceptable carrier such as a saline of pH 7.4. The aqueous solutions can be introduced into a patient's intramuscular blood stream by local bolus injection. And also, the pharmaceutical composition of the present invention may be formulated to dosage forms for transdermal delivery, such as a solution for external use, an emulsion, an ointment, a patch, etc., according to conventional pharmaceutical processes. The pharmaceutical composition of the present invention can be administered to patients who suffer from various inflammatory diseases and cancers (such as breast cancer, gastric cancer, colorectal cancer, colon cancer, rectal cancer, pancreatic cancer, or lymphoma) at a daily dosage of about 1 to 2000 mg/kg. An adequate dosage is generally changed according to age, body weight, and conditions of a patient.</p>
+      <p id="p-00033-en" num="0033">The present invention also provides a cosmetic composition for improving inflammation or skin aging, which comprises a peptide selected from the group consisting of the peptide of SEQ ID NO: 1, the peptide of SEQ ID NO: 2, the peptide of SEQ ID NO: 3 and the peptide of SEQ ID NO: 4 as an active ingredient. In the cosmetic composition of the present invention, the inflammation may be dermatitis, preferably ultraviolet radiation-induced dermatitis; and also, the skin aging may be is cutaneous photoaging, preferably ultraviolet radiation-induced cutaneous photoaging.</p>
+      <p id="p-00034-en" num="0034">The cosmetic composition of the present invention may be in a functional cosmetic composition comprising the peptides as an active ingredient. The cosmetic composition may be prepared in various forms according to conventional methods thereof. For example, the cosmetic composition may be prepared in forms of cosmetic products, cosmetic solutions, creams, lotions, etc., which may be diluted with a cleansing water, an astringent solution, or a moisture solution, for the use thereof. And also, the cosmetic composition may include conventional excipients, such as a stabilizer, a solubilizing agent, vitamin, a pigment, a flavoring agent, which are conventionally used in the field of cosmetic composition. In the cosmetic composition, the peptide may be present in an amount enough to provide the effects for improving inflammation or skin aging, for example in an amount ranging from 0.001 to 10 weight %, preferably about 0.01 to 1 weight %, based on the total weight of the composition.</p>
+      <p id="p-00035-en" num="0035">Hereinafter, the present invention will be described more specifically by the following examples and experimental examples. However, the following examples and experimental examples are provided only for illustrations and thus the present invention is not limited to or by them.</p>
+      <heading id="h-00009-en" level="1">Example 1</heading>
+      <heading id="h-00010-en" level="1">Synthesis of Peptides</heading>
+      <p id="p-00036-en" num="0036">The peptides of SEQ ID NOs: 1 to 4 were synthesized with an automatic peptide synthesizer (PeptrEx-R48, Peptron, Daejeon, Korea) using a FMOC solid-phase method. The synthesized peptides were purified and analyzed by reverse-phase high-performance liquid chromatography (reverse-phase HPLC) (Prominence LC-20AB, Shimadzu, Japan) using a C18 analytical RP column (Shiseido capcell pak), and isolated using a mass spectrometer (HP 1100 Series LC/MSD, Hewlett-Packard, Roseville, U.S.A.).</p>
+      <p id="p-00037-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" tabstyle="monospace">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="left" />
+              <colspec colname="2" colwidth="63pt" align="left" />
+              <colspec colname="3" colwidth="91pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Peptide name</entry>
+                  <entry>SEQ ID NO</entry>
+                  <entry>Amino acid sequence</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>SE201A</entry>
+                  <entry>SEQ ID NO: 1</entry>
+                  <entry>Arg-Phe-Arg</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>SE201B</entry>
+                  <entry>SEQ ID NO: 2</entry>
+                  <entry>Leu-Lys-Ile-Cys</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>SE201C</entry>
+                  <entry>SEQ ID NO: 3</entry>
+                  <entry>Lys-Ile-Cys-Arg</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>SE201D</entry>
+                  <entry>SEQ ID NO: 4</entry>
+                  <entry>Asp-Val-His</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00011-en" level="1">Example 2</heading>
+      <heading id="h-00012-en" level="1">Preparation of Peptide-Containing Compositions</heading>
+      <p id="p-00038-en" num="0037">The peptides of SEQ ID NOs: 1 to 4 were respectively dissolved in phosphate buffered saline (PBS) to a concentration of 1 M. The resultant protein solutions were also used in the following experimental examples.</p>
+      <heading id="h-00013-en" level="1">Experimental Example 1</heading>
+      <heading id="h-00014-en" level="1">Tests for Inhibition of NF-κB Activity in Macrophage</heading>
+      <p id="p-00039-en" num="0038">A reporter gene assay system was used for evaluating the activity of NF-κB. The reporter gene is a NF-κB-Luc in which several K enhancer elements (GGGAATTTCCGGGAATTTCCGGGAATTTCCGGGAATTTCCGGGAATTTCCGGGAA TTTCC) are bound to the firefly luciferase (Luc) gene derived from <i>Photinus pynalis </i>that is capable of binding with the NF-κB protein in cells. The NF-κB-Luc was purchased from Promega Corporation, USA) for the evaluation.</p>
+      <p id="p-00040-en" num="0039">The macrophage cell line RAW264.7 (ATCC TIB-71, USA) was added to each well of a 12-well plate in the concentration of 2×10<sup>5 </sup>cells. After 24 hours therefrom, NF-κB-Luc (0.25 mg/well) and the pCMV-LacZ plasmid (Clontech Co., USA) (0.1 mg/well) were co-transfected into the macrophage cell line RAW264.7, using the Fugene-6 transfection kit (Promega Co., USA), according to the vendor's instruction. After 12 hours therefrom, the cells were treated with the peptides of SEQ ID NOs: 1 to 3 in the concentration of 100 μM, respectively. After 30 minutes therefrom, the cells were treated with 10 ng/ml of lipopolysaccharide (LPS) and then cultured for 24 hours. Each reporter activity, i.e., NF-κB-Luc activity, was measured using the Dual™ Luciferase reporter assay system (Promega Corporation), according to the vendor's manual. The transduction efficiencies of the cells in each well were adjusted to the same level through the correction based on the β-galactosidase activity. All test results were verified through independent two separate experiments. The results obtained by measuring the NF-κB-Luc activities are shown in <figref>FIG. 1</figref>.</p>
+      <p id="p-00041-en" num="0040">As shown in <figref>FIG. 1</figref>, the NF-κB-Luc activities in the groups treated with the peptides of SEQ ID NOs: 1 to 3 were significantly reduced (about 30˜40% reduction). These results mean that the peptides of the present invention inhibit the synthesis of NF-κB-mediated pro-inflammatory cytokines.</p>
+      <heading id="h-00015-en" level="1">Experimental Example 2</heading>
+      <heading id="h-00016-en" level="1">Tests for Inhibitory Activity Against Trans-Endothelial Migration of Monocytes</heading>
+      <p id="p-00042-en" num="0041">We evaluated the inhibitory activities of the peptides of the present invention on the trans-endothelial migration of leucocytes involving inflammatory reaction, using the mouse endothelial cell line bEnd.3 (ATCC CRL-2299, USA). The mouse endothelial cell line bEnd.3 (4×10<sup>4 </sup>cells) in Dulbecco's Modified Eagle medium (DMEM) supplemented with 10% serum were added to the upper compartments of Boyden chamber, and then cultured in a 5% CO<sub>2 </sub>incubator at 37° C. for 24 hours. After washing with serum-free DMEM, the serum-free DMEM containing TNF-α (25 ng/ml) was added to each cell line, which was then cultured in a 5% CO<sub>2 </sub>incubator at 37° C. for 4 hours. At this time, the peptides of SEQ ID NOs: 1 and 4 (100 μM) were also added to each test group. After the 4-hour culture, the mouse monocytes WEHI274.1 (ATCC CRL-1679, USA) (1×10<sup>5 </sup>cells) were added to each upper compartment of the chamber containing the bEND.3 cell line, and then the numbers of the monocytes migrated to each lower compartment were measured for 4 hours. At this time, an invasion-inducing medium (the supernatant isolated after culturing NIH 3T3 cells in serum-free DMEM containing 0.005% vitamin C and 0.1% bovine serum albumin for 24 hours) was placed in each lower compartment. The results thereof are shown in <figref>FIG. 2</figref>.</p>
+      <p id="p-00043-en" num="0042">As shown in <figref>FIG. 2</figref>, trans-endothelial migrations of the monocytes in the groups treated with the peptides of SEQ ID NOs: 1 and 4 were significantly reduced (about 25˜40% reduction) as compared with that in the control group. The peptides of SEQ ID NOs: 2 and 3 showed similar inhibitory effects (data not shown). Therefore, it is expected that the peptides according to the present invention inhibit the trans-endothelial migrations of leucocytes, thereby being able to inhibit inflammatory reaction.</p>
+      <heading id="h-00017-en" level="1">Experimental Example 3</heading>
+      <heading id="h-00018-en" level="1">Tests for Inhibitory Activity Against Tube Formation of Human Umbilical Vein Endothelial Cells (HUVECs)</heading>
+      <p id="p-00044-en" num="0043">Effects of the peptides of the present invention on angiogenesis were evaluated as follows.</p>
+      <p id="p-00045-en" num="0044">Generally, interactions of basement membrane components of blood vessels with vascular endothelial cells play an important role in formation and maintenance of new blood vessels. When matrigel, basement membrane components, is treated to 24-well culture plate, plugs are formed through polymerization reaction. HUVECs were seeded at a density of 8×10<sup>4 </sup>cells/well to each well of the 24-well culture plate coated with matrigel. The protein solutions including each peptide of SEQ ID NOs: 1 to 4 (3 μg/Ml) prepared as in Example 2 and bFGF (basic fibroblast growth factor, 150 ng/Ml) were added to the wells. After incubation for 24 hours, formation of new blood vessels was examined using an inverted microscope (at 50× magnification). The photographs obtained by observing tube formations are shown in <figref>FIG. 3</figref><i>a</i>. The values obtained by the quantitative analyses for comparing the tube lengths thereof are shown in <figref>FIG. 3</figref><i>b</i>. In <figref>FIGS. 3</figref><i>a </i>and <b>3</b><i>b</i>, the control is a group treated with only PBS having no peptide.</p>
+      <p id="p-00046-en" num="0045">As shown in <figref>FIGS. 3</figref><i>a </i>and <b>3</b><i>b</i>, it can be seen that, when treated with the peptides of the present invention, tube formations thereof were significantly reduced.</p>
+      <heading id="h-00019-en" level="1">Experimental Example 4</heading>
+      <heading id="h-00020-en" level="1">Evaluation of the Expressions of Procollagen Type-1 and MMP-1 in Human Dermal Fibroblasts</heading>
+      <p id="p-00047-en" num="0046">It is known that MMP-1, the expression of which is induced by ultraviolet stimulation in human dermal fibroblasts, degrades collagen fibers to facilitate cutaneous photoaging as well as wrinkle formation. Since the expression of MMP-1 is induced by NF-κB activation, we evaluate the inhibition thereof by the treatment of the peptides of the present invention, using human dermal fibroblasts (ATCC PCS-201-012, USA).</p>
+      <p id="p-00048-en" num="0047">The human dermal fibroblasts was irradiated with UVB (312 nm, 12.5 mJ/cm<sup>2</sup>) and then treated with the peptide of SEQ ID NO: 1 in the concentrations of 0.1˜2 μM. After 48 hours, the cell extracts were subject to the Western blotting assay so as to measure the expressions of MMP-1 and procollagen type-1. The results thereof are shown in <figref>FIG. 4</figref>. As shown in FIG. <b>4</b>., the expression of MMP-1 increased by ultraviolet stimulation was reduced according to the treatment of the peptide of SEQ ID NO: 1 in dose-dependent manner; and the expression of procollagen type-1 increased by ultraviolet stimulation was increased according to the treatment of the peptide of SEQ ID NO: 1 in dose-dependent manner. Therefore, it can be seen that the peptide of the present invention can inhibit ultraviolet radiation-induced cutaneous photoaging.</p>
+      <heading id="h-00021-en" level="1">Experimental Example 5</heading>
+      <heading id="h-00022-en" level="1">Analysis of Pro-Inflammatory Factors in Human Keratinocytes HaCaT</heading>
+      <p id="p-00049-en" num="0048">We evaluated the inhibitory activities of the peptide of the present invention on expressions of the representative pro-inflammatory factors, i.e., TNF-α and IL-1α, the expressions of which are induced by ultraviolet stimulation. Specifically, the HaCaT cells (Molecular Biology Engineering Lab, Chemical &amp; Biochemical Engineering, Dongguk University) were irradiated with UVB (312 nm, 12.5 mJ/cm<sup>2</sup>) and then treated with the peptide of SEQ ID NO: 1 in the concentrations of 0.1˜2 μM. At this time, the control group was treated with dexamethasone (Dex) having the immunosuppressive function, at the irradiation of UVB. After 48 hours, the cell extracts were subject to the Western blotting assay so as to measure the expressions of TNF-α and IL-1α. The results thereof are shown in <figref>FIGS. 5 and 6</figref>. As shown in <figref>FIGS. 5 and 6</figref>, the expressions of TNF-α and IL-1α were reduced in the control group treated with dexamethasone; and also in the test group treated with the peptide of SEQ ID NO: 1 in dose-dependent manner.</p>
+      <p id="p-00050-en" num="0049">And also, the cell extracts were subject to the enzyme immunoassay so as to evaluate the inhibitory effects on formation of PGE<sub>2 </sub>(one of pro-inflammatory factors). The results thereof are shown in <figref>FIG. 7</figref>. For this assay, we also used the group treated with dexamethasone at the irradiation of UVB as a control group. In addition, the expression of COX-2 (which is a PGE<sub>2 </sub>formation-mediating enzyme) was measured through the Western blotting assay; and the results thereof are shown in <figref>FIG. 8</figref>. As shown in <figref>FIGS. 7 and 8</figref>, the PGE<sub>2 </sub>formation increased by ultraviolet stimulation was reduced according to the treatment of the peptide of SEQ ID NO: 1 in dose-dependent manner; and the expression of COX-2 was also reduced according to the treatment of the peptide of SEQ ID NO: 1 in dose-dependent manner. Therefore, it can be seen that the peptide of the present invention can effectively inhibit ultraviolet radiation-induced inflammation.</p>
+      <heading id="h-00023-en" level="1">Experimental Example 6</heading>
+      <heading id="h-00024-en" level="1">Tests for Inhibitory Activity Against Invasion of Cancer Cells</heading>
+      <p id="p-00051-en" num="0050">After matrigel, basement membrane components, is subject to polymerization reaction in a transwell, human breast cancer cells MCF-7 (2×10<sup>5 </sup>cells) were loaded to the upper compartment of the transwell and then treated with each peptide of SEQ ID NOs: 1 and 4 in the concentration of 100 μM, along with 0.1% BSA. An invasion-inducing medium (the supernatant isolated after culturing NIH 3T3 cells in serum-free DMEM containing 0.005% vitamin C and 0.1% bovine serum albumin for 24 hours) was placed in each lower compartment. The cells were cultured in a 5% CO<sub>2 </sub>incubator at 37° C. for 12 hours. Cells migrated into the lower compartments of the transwell were counted three times at 24-hour intervals, and then the results were statistically analyzed. The control is a group treated with only PBS having no peptide. The results thereof are shown in <figref>FIG. 9</figref>.</p>
+      <p id="p-00052-en" num="0051">As shown in <figref>FIG. 9</figref>, in the groups treated with the peptides of SEQ ID NOs: 1 and 4 of the present invention, the base membrane invasion rates of the human breast cancer cells were reduced by about 60% to 80% relative to that of the control group with no peptide-treatment. Taking into consideration that cancer cells come out from blood vessels and invade basement membranes or surrounding connective tissues and then spread to secondary sites, it can be seen that peptides of the present invention can effectively inhibit the metastasis of cancer cells.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A peptide selected from the group consisting of the peptide of SEQ ID NO: 1, the peptide of SEQ ID NO: 2, the peptide of SEQ ID NO: 3 and the peptide of SEQ ID NO: 4.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en" independent="true">
+      <claim-text>
+        <b>2</b>. A pharmaceutical composition having a NF-κB inhibitory activity, which comprises a peptide selected from the group consisting of the peptide of SEQ ID NO: 1, the peptide of SEQ ID NO: 2, the peptide of SEQ ID NO: 3 and the peptide of SEQ ID NO: 4 as an active ingredient.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The pharmaceutical composition according to <claim-ref idref="clm-00002-en">claim 2</claim-ref> for preventing or treating inflammation or skin aging.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The pharmaceutical composition according to <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein the inflammation is dermatitis.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The pharmaceutical composition according to <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the inflammation is ultraviolet radiation-induced dermatitis.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The pharmaceutical composition according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the skin aging is cutaneous photoaging.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The pharmaceutical composition according to <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the skin aging is ultraviolet radiation-induced cutaneous photoaging.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The pharmaceutical composition according to <claim-ref idref="clm-00002-en">claim 2</claim-ref> for inhibiting the growth and/or metastasis of cancer cells.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The pharmaceutical composition according to <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the cancer cells are breast cancer cells, gastric cancer cells, colorectal cancer, colon cancer cells, rectal cancer cells, pancreatic cancer cells, or lymphoma cells.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en" independent="true">
+      <claim-text>
+        <b>10</b>. A cosmetic composition for improving inflammation or skin aging, which comprises a peptide selected from the group consisting of the peptide of SEQ ID NO: 1, the peptide of SEQ ID NO: 2, the peptide of SEQ ID NO: 3 and the peptide of SEQ ID NO: 4 as an active ingredient.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The cosmetic composition according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the inflammation is dermatitis.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The cosmetic composition according to <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the inflammation is ultraviolet radiation-induced dermatitis.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The cosmetic composition according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the skin aging is cutaneous photoaging.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The cosmetic composition according to <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the skin aging is ultraviolet radiation-induced cutaneous photoaging. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150252073A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252073A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150252073A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252073A1-20150910-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150252073A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252073A1-20150910-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150252073A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252073A1-20150910-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150252073A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252073A1-20150910-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150252073A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252073A1-20150910-D00006.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150252073A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252073A1-20150910-D00007.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150252073A1.PDF" type="pdf" size="643853" pages="14" />
+</lexisnexis-patent-document>

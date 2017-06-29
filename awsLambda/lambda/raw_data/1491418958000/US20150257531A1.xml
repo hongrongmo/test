@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257531A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030126" date-changed="20151223" time-changed="182849">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121314621">
+        <country>US</country>
+        <doc-number>20150257531</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14437382</doc-number>
+        <date>20131022</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>KR</country>
+        <doc-number>1020120117366</doc-number>
+        <date>20121022</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151215">
+      <classification-ipcr sequence="1">
+        <text>A47B  47/00        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>47</class>
+        <subclass>B</subclass>
+        <main-group>47</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A47B  96/02        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>47</class>
+        <subclass>B</subclass>
+        <main-group>96</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A47B  96/14        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>47</class>
+        <subclass>B</subclass>
+        <main-group>96</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151215">
+      <classification-cpc sequence="1">
+        <text>A47B  47/0091      20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>B</subclass>
+        <main-group>47</main-group>
+        <subgroup>0091</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A47B  47/04        20130101 LI20151208BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>B</subclass>
+        <main-group>47</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151208</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A47B  87/0207      20130101 LI20151207BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>B</subclass>
+        <main-group>87</main-group>
+        <subgroup>0207</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151207</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A47B  87/0246      20130101 LI20151208BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>B</subclass>
+        <main-group>87</main-group>
+        <subgroup>0246</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151208</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A47B  96/024       20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>B</subclass>
+        <main-group>96</main-group>
+        <subgroup>024</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A47B  96/145       20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>B</subclass>
+        <main-group>96</main-group>
+        <subgroup>145</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">6</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">VERTICAL FRAME FOR DISPLAY STAND AND MULTIPURPOSE PREFABRICATED DISPLAY STAND USING SAME</invention-title>
+    <references-cited date-changed="20151223">
+      <patent-citations name="patcit" date-changed="20151223" />
+      <citation>
+        <patcit num="1" dnum="US4066370A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4066370</doc-number>
+            <kind>A</kind>
+            <name>VAN DRIESSCHE PAUL</name>
+            <date>19780103</date>
+          </document-id>
+          <application-date>
+            <date>19760517</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US5048702A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5048702</doc-number>
+            <kind>A</kind>
+            <name>MALONEY WILLIAM J [US]</name>
+            <date>19910917</date>
+          </document-id>
+          <application-date>
+            <date>19900301</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US5904420A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5904420</doc-number>
+            <kind>A</kind>
+            <name>DEDOES JOHN T [US]</name>
+            <date>19990518</date>
+          </document-id>
+          <application-date>
+            <date>19980915</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="US6644966B1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6644966</doc-number>
+            <kind>B1</kind>
+            <name>CHIANG CHUAN CHIN [TW]</name>
+            <date>20031111</date>
+          </document-id>
+          <application-date>
+            <date>20020703</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="5" dnum="US2007068882A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20070068882</doc-number>
+            <kind>A1</kind>
+            <name>YOSHIZAWA TAKENORI [JP]</name>
+            <date>20070329</date>
+          </document-id>
+          <application-date>
+            <date>20041029</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="6" dnum="US2014020322A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20140020322</doc-number>
+            <kind>A1</kind>
+            <name>LI XIAN [CN]</name>
+            <date>20140123</date>
+          </document-id>
+          <application-date>
+            <date>20100919</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Han</last-name>
+            <first-name>Jae Wook</first-name>
+            <address>
+              <city>Seoul</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>KR</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Han</last-name>
+            <first-name>Jae Wook</first-name>
+            <address>
+              <city>Seoul</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>KR13009442</doc-number>
+        <date>20131022</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014065574</doc-number>
+        <date>20140501</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151130">
+      <main-family family-id="158183345">
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>204797335</doc-number>
+            <kind>U</kind>
+            <date>20151125</date>
+          </document-id>
+          <application-date>
+            <date>20131022</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257531</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20131022</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>101253462</doc-number>
+            <kind>B1</kind>
+            <date>20130410</date>
+          </document-id>
+          <application-date>
+            <date>20121022</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014065574</doc-number>
+            <kind>A1</kind>
+            <date>20140501</date>
+          </document-id>
+          <application-date>
+            <date>20131022</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="158183343">
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>204797335</doc-number>
+            <kind>U</kind>
+            <date>20151125</date>
+          </document-id>
+          <application-date>
+            <date>20131022</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257531</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20131022</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>101253462</doc-number>
+            <kind>B1</kind>
+            <date>20130410</date>
+          </document-id>
+          <application-date>
+            <date>20121022</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014065574</doc-number>
+            <kind>A1</kind>
+            <date>20140501</date>
+          </document-id>
+          <application-date>
+            <date>20131022</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A vertical frame for a display stand to store and display various articles is manufactured in the shape of a prefabricated block, and then is assembled in multiple stages. The vertical frame includes a body which is formed in a shape of a prefabricated block and is assembled to each other in multiple stages to support a shelf, a vertical length of the body being optionally adjusted by selection of a user; a body engaging member which protrudes upwardly from both sides or one side of a top surface of the body, and has an insertion groove of which one side is opened; a body engaging groove which is formed on a bottom surface of the body at a position corresponding to a formation position of the body engaging member, so as to guide the body engaging member and a body locking boss to an engaging position; and the body locking boss which protrudes from the body engaging groove and is fitted into the insertion groove when the bodies are assembled to each other in multiple stages.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">BACKGROUND</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to a vertical frame for a display stand and a multipurpose prefabricated display stand using the same and, more specifically, to a vertical frame for a display stand to store and display various articles thereon, in which the vertical frame is manufactured in the shape of a prefabricated block, and then is assembled to each other in multiple stages, thereby improving the assembly thereof, and a multipurpose prefabricated display stand using the same.</p>
+      <p id="p-00002-en" num="0002">A prefabricated hyper-angle display stand according to the related art is disclosed in Korean Utility Model Publication No. 20-0334180 (Nov. 13, 2003), wherein assembling and disassembling work thereof are easy, a manufacturing process is simplified, and the configuration is strong. The prefabricated hyper-angle display stand includes posts formed with a plurality of insertion grooves on a side thereof, fixing beams connected between the posts as a horizontal beam and provided on a side thereof with a plurality of hooks corresponding to the insertion grooves, and base plates positioned on the fixing beams.</p>
+      <p id="p-00003-en" num="0003">According to the related art, a vertical interval of the base plates positioned on the fixing beams can be adjusted at random by the plurality of insertion grooves formed on the side of the posts. However, in the case of the posts serving as a vertical frame of the prefabricated display stand, since the overall height of the display stand to be assembled is determined and manufactured in advance to correspond to the overall height of the display stand, there is a problem in that a user cannot optionally adjust the interval of the display stands. Also, since the post is made by a metal material to have a height of about 2 meters, the post is heavy, and its appearance is long and crude, so that it is difficult to transfer the disassembled posts.</p>
+      <p id="p-00004-en" num="0004">In addition, according to the display stand of the related art, since the fixing beams are fixed to the posts by separate coupling pins in the state in which the fixing beams, on which the base plates are positioned, are engaged to the plurality of insertion grooves formed on the sides of the posts by the hooks, the whole structure of the prefabricated display stand is very complicated, and thus it is difficult to assemble the display stand. Also, since the number of parts for the display stand is increased, the manufacture cost of the prefabricated display stand is raised, and its selling price is also increased, which takes a big load on a consumer.</p>
+      <heading id="h-00002-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00005-en" num="0005">Accordingly, the present invention has been made in view of the above-mentioned problems occurring in the related art, and an object of the present invention is to provide a vertical frame for a display stand to store and display various articles thereon, wherein a body of the vertical frame is manufactured in the shape of a prefabricated block, and then is assembled to each other in multiple stages by mutually engaging a body engaging member which is formed on a top surface of the body and a body locking boss which is formed on a bottom surface of the body, thereby optionally adjusting a vertical height of the prefabricated display stand and an interval of the shelves, as well as easily transporting parts of the disassembled display stand, and a multipurpose prefabricated display stand using the same.</p>
+      <p id="p-00006-en" num="0006">Also, another object of the present invention is to simplify the engaging structure of vertical frames and shelves by forming shelf engaging grooves so that a frame of the shelf is inserted and fixed to a top surface of a body of the vertical frame, thereby providing a display stand with advantages in which the display stand can be easily assembled, the number of parts for the display stand can be remarkably reduced, and a manufacture cost thereof can be lowered.</p>
+      <p id="p-00007-en" num="0007">To accomplish the above-mentioned object, according to a first aspect of the present invention, there is provided a vertical frame for a display stand that supports shelves installed to store and display various articles thereon, including: a body which is formed in a shape of a prefabricated block and is assembled to each other in multiple stages to support a shelf, a vertical length of the body being optionally adjusted by selection of a user; a body engaging member which protrudes upwardly from both sides or one side of a top surface of the body, and has an insertion groove of which one side is opened; a body engaging groove which is formed on a bottom surface of the body at a position corresponding to a formation position of the body engaging member, so as to guide the body engaging member and a body locking boss to an engaging position; and the body locking boss which protrudes from the body engaging groove and is fitted into the insertion groove when the bodies are assembled to each other in multiple stages, thereby fixing the respective bodies to be assembled to each other in multiple stages.</p>
+      <p id="p-00008-en" num="0008">With the above-described configuration of the present invention, the body of the vertical frame is manufactured in the shape of the prefabricated block, and then is assembled in multiple stages by mutually engaging the body engaging member which is formed on the top surface of the body and the body locking boss which is formed on the bottom surface of the body, thereby optionally adjusting the vertical height of the prefabricated display stand and the interval of the shelves, as well as easily transporting parts of the disassembled display stand, and a multipurpose prefabricated display stand using the same.</p>
+      <p id="p-00009-en" num="0009">Also, since, the engaging structure of vertical frames and shelves are very simple, the display stand has advantages in which the display stand can be easily assembled, the number of parts for the display stand can be remarkably reduced, and a manufacture cost thereof can be lowered.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00003-en" level="1">BRIEF DESCRIPTION OF DRAWINGS</heading>
+      <p id="p-00010-en" num="0010">
+        <figref>FIG. 1</figref> is a perspective view of a vertical frame for a display stand according to the present invention.</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 2</figref> is a perspective view illustrating a bottom surface of the vertical frame for the display stand according to the present invention.</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIGS. 3</figref>
+        <i>a </i>and <b>3</b><i>b </i>show views illustrating a process of assembling the vertical frame for the display stand according to the present invention.</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 4</figref> is a view illustrating the vertical frame for the display stand according to the present invention.</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 5</figref> is a plan view of a vertical frame according to another embodiment.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00015-en" num="0015">Hereinafter, a vertical frame for a display stand according to embodiments of the present invention and a multipurpose prefabricated display stand using the same will be described in detail with reference to the accompanying drawings.</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIGS. 1 and 2</figref> are views illustrating the vertical frame for the display stand according to the present invention.</p>
+      <p id="p-00017-en" num="0017">A vertical frame <b>100</b> for the display stand that supports shelves <b>200</b> configured to store and display various articles thereon includes a body <b>110</b> formed in a shape of a prefabricated block and assembled in multiple stages to support the shelf <b>200</b>, a vertical length of the body being optionally adjusted by selection of a user; a body engaging member <b>120</b> protruding upwardly from both sides or one side of a top surface of the body <b>110</b>, and having an insertion groove <b>121</b> of which one side is opened; a body engaging groove <b>130</b> formed on a bottom surface of the body at a position corresponding to the position at which the body engaging member <b>120</b> is formed, so as to guide the body engaging member <b>120</b> and a body locking boss <b>140</b> to an engaging position; and the body locking boss <b>140</b> protruding from the body engaging groove <b>130</b> and fitted into the insertion groove <b>121</b> when the bodies <b>110</b> are assembled in the multiple stages, thereby fixing the respective bodies <b>110</b> to be assembled in the multiple stages.</p>
+      <p id="p-00018-en" num="0018">The respective components of the present invention will now be described in detail.</p>
+      <p id="p-00019-en" num="0019">First, the body <b>110</b> is configured to assemble the selves <b>200</b> of the display stand <b>1</b> to be installed to store and display various articles thereon and support the whole load of the display stand <b>1</b>. The body <b>110</b> is made of synthetic resin or light metal material, such as aluminum, and is shaped in a box. The block <b>110</b> has a multistage structure of a prefabricated block type so that a plurality of the bodies <b>110</b> is stacked in a vertical direction by a user. With the above structure, the shelves <b>200</b> can be respectively engaged to the bodies <b>110</b> in multiple layers between the vertical frames <b>100</b> which are assembled in the multistage state.</p>
+      <p id="p-00020-en" num="0020">The body <b>110</b> can be manufactured to have various vertical lengths that can be selected by the user. Since the body <b>110</b> can be manufactured to have various vertical lengths of 5 to 30 cm, the bodies <b>110</b> are engaged to the selves <b>200</b> stacked in the multiple layers, thereby freely adjusting the vertical interval of the shelf <b>200</b>.</p>
+      <p id="p-00021-en" num="0021">The top surface of the body <b>110</b> is provided with a shelf engaging groove <b>160</b> at one side or both sides thereof, and a horizontal frame <b>210</b> of the shelf <b>200</b> is fitted into the engaging groove <b>160</b>, thereby fixing the shelf. The shelf engaging groove <b>160</b> is recessed in the body <b>110</b> to correspond to a shape of the horizontal frame <b>210</b> of the shelf <b>200</b>, and thus the shelf <b>200</b> is engaged and fixed between the vertical frames <b>100</b> to be assembled in multiple stages. If the shelf engaging groove <b>160</b> is formed at both sides on the top surface of the body <b>110</b>, the prefabricated display stands <b>1</b> can be extended in a horizontal direction by respectively engaging the shelves <b>200</b> to both shelf engaging grooves <b>160</b>.</p>
+      <p id="p-00022-en" num="0022">The body engaging member <b>120</b>, the body engaging groove <b>130</b> and the body locking boss <b>140</b> are formed integrally with the body <b>110</b> so as to fix the vertical frames <b>100</b> to be assembled in multiple stages. The body engaging member <b>120</b> is formed in a C-shape, and protrudes upwardly from the top surface of the body <b>110</b> at one side or both sides. The reason why the body engaging member <b>120</b> protrudes at one side or both sides is to provide manufacturing convenience and a functional effect of increasing or reducing the engaging force of the vertical frame <b>100</b> to be assembled in multiple stages. Herein, the body engaging members <b>120</b> protruding from the top surface of the body <b>110</b> at both sides are shown.</p>
+      <p id="p-00023-en" num="0023">Since the body engaging member <b>120</b> protrudes from the top surface of the body <b>110</b> in the C-shape, the body engaging member <b>120</b> has the insertion groove <b>121</b> of which one side is opened. When the vertical frames <b>100</b> are assembled in multiple stages, the insertion groove <b>121</b> receives the body locking boss <b>140</b> formed on the bottom surface of the body <b>110</b>, thereby fixing the vertical frames.</p>
+      <p id="p-00024-en" num="0024">When the vertical frames <b>100</b> are assembled in multiple stages, the body engaging groove <b>130</b> is to guide the engaging position between the body locking boss <b>140</b> and the body engaging member <b>120</b>. The body engaging groove <b>130</b> is recessed on the bottom surface of the body <b>110</b> in such a manner that one side is opened, at a position corresponding to the formation position of the body engaging member <b>120</b>. As the circumferential surface of the body engaging member <b>120</b> is inserted along the inner surface of the body engaging groove <b>130</b> when the vertical frames <b>100</b> are assembled in multiple stages, the body locking boss <b>140</b> formed in the body engaging groove <b>130</b> is guided to fit into the insertion groove <b>121</b> of the body engaging member <b>120</b>.</p>
+      <p id="p-00025-en" num="0025">When the vertical frames <b>100</b> are assembled in multiple stages, the body locking boss <b>140</b> is fitted into the insertion groove <b>121</b> of the body engaging member <b>120</b>, thereby fixing the vertical frames <b>100</b> to be assembled in multiple stages. The body locking boss <b>140</b> protrudes in a C-shape from the inside of the body engaging groove <b>130</b> at a position corresponding to the formation position of the insertion groove <b>121</b>, and has the same diameter as that of the insertion groove <b>121</b> so that it can be locked when being fitted into the insertion groove <b>121</b>. When the vertical frames <b>100</b> are assembled in multiple stages, the body engaging member <b>120</b> and the body locking boss <b>140</b> are engaged to each other, thereby preventing the vertical frames <b>100</b> assembled in multiple stages from being released by the engagement thereof.</p>
+      <p id="p-00026-en" num="0026">A center fixing member <b>150</b> protrudes from the top surface of the body <b>110</b> at a center thereof so as to be engaged to the vertical frame <b>100</b> to be assembled in multiple stages by a rotation manner. The bottom surface of the body <b>110</b> is provided with a center member insertion hole <b>170</b> at a center thereof so that the center fixing member <b>150</b> is rotated and fitted into the center member insertion hole <b>170</b>. The center fixing member <b>150</b> protrudes integrally from the center of the body in a cylindrical shape, and the center member insertion hole <b>170</b> is formed in the body <b>110</b> to correspond to the diameter of the center fixing member <b>150</b>.</p>
+      <p id="p-00027-en" num="0027">In the process of assembling the vertical frames <b>100</b> in multiple stages by use of the center fixing member <b>150</b> and the center member insertion hole <b>170</b>, the center fixing member <b>150</b> of the vertical frame <b>100</b> positioned at the lower layer is fitted into the center member insertion hole <b>170</b> of the vertical frame <b>100</b> positioned at the upper layer, and the vertical frame <b>100</b> positioned at the upper layer is rotated around the center fixing member <b>150</b>. The body engaging member <b>120</b> and the body locking boss <b>140</b> are engaged to each other by the rotation, so that it is not necessary for the user to align the positions of the body engaging member <b>120</b> and the body locking boss <b>140</b>. Therefore, the engaging structure provides the use convenience.</p>
+      <p id="p-00028-en" num="0028">An outer peripheral surface of the center fixing member <b>150</b> is provided with a center engaging groove <b>151</b> which is rounded in a direction opposite to the opened side of the insertion groove <b>121</b> of the body engaging member <b>120</b>. A center engaging boss <b>171</b> protrudes from the inside of the center member insertion hole <b>170</b> at a position corresponding to the center engaging groove <b>151</b>. In the process of assembling the vertical frames <b>100</b> in multiple stages, the center engaging groove <b>151</b> and the center engaging boss <b>171</b> guide the direction of the body locking boss <b>140</b> so that it is rotated in the opened direction of the insertion groove <b>121</b> of the body engaging member <b>120</b> by the engagement between the center engaging groove <b>151</b> and the center engaging boss <b>171</b>.</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIGS. 3</figref>
+        <i>a </i>and <b>3</b><i>b </i>are views illustrating the process of assembling the vertical frames for the display stands according to the present invention.</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 3</figref>
+        <i>a </i>shows the state in which the vertical frames <b>100</b> configured as described above are assembled to each other in multiple stages. First, when the vertical frames <b>100</b> are assembled in multiple stages, the center member insertion hole <b>170</b> of the upper vertical frame <b>100</b>″ is fitted into the center fixing member <b>150</b> of the lower vertical frame <b>100</b>′ in the state in which the horizontal frame <b>210</b> of the shelf <b>200</b> is fitted into the shelf engaging groove <b>160</b> of the lower vertical frame <b>100</b>′, the center engaging boss <b>171</b> protruding from the center member insertion hole <b>170</b> of the upper vertical frame <b>100</b>″ is inserted into the insertion groove <b>121</b> formed on the outer peripheral surface of the center fixing member <b>150</b> of the lower vertical frame <b>100</b>′, so that the lower vertical frame <b>100</b>′ and the upper vertical frame <b>100</b>″ are stacked in the vertical direction.</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 3</figref>
+        <i>b </i>shows the state in which when the upper vertical frame <b>100</b>″ is positioned on the lower vertical frame <b>100</b>′, the lower vertical frame <b>100</b>′ and the upper vertical frame <b>100</b>″ are fixed to each other so that they are not separated. As the upper vertical frame <b>100</b>″ inserted into the center fixing member <b>150</b> of the lower vertical frame <b>100</b>′ is directly rotated around the center fixing member <b>150</b> by the user, the body locking boss <b>140</b> of the upper vertical frame <b>100</b>″ is fitted into insertion groove <b>121</b> of the lower vertical frame <b>100</b>′ by the center engaging groove <b>151</b> of the center fixing member <b>150</b>. Therefore, the vertical frames <b>100</b> to be assembled in multiple stages are firmly fixed by the engagement between the body engaging member <b>120</b> and the body locking boss <b>140</b>.</p>
+      <p id="p-00032-en" num="0032">Herein, the lower vertical frame <b>100</b>′ and the upper vertical frame <b>100</b>″ are adopted to more clearly describe the assembling relation of the vertical frames, and thus are identical to the vertical frame <b>100</b> described above.</p>
+      <p id="p-00033-en" num="0033">Therefore, since the vertical frame <b>100</b> for the prefabricated display stand <b>1</b> to store and display various articles includes the body <b>110</b> manufactured in the shape of the prefabricated block, the vertical frames <b>100</b> can be assembled in multiple stages by the engagement between the body engaging member <b>120</b> and the body locking boss <b>130</b> which are respectively formed on the top and bottom surfaces of the body <b>110</b>. Therefore, the vertical interval of the prefabricated display stand <b>1</b> can be optionally adjusted, and since the volume of the disassembled vertical frames <b>100</b> is small, it is possible to easily transfer the disassembled display stand <b>1</b>.</p>
+      <p id="p-00034-en" num="0034">Also, since the top surface of the body of the vertical frame <b>100</b> is provided with the shelf engaging groove <b>160</b> to which the horizontal frame <b>210</b> of the shelf <b>200</b> is inserted and fixed, the engaging structure of the vertical frame <b>100</b> and the shelf <b>200</b> is very simple, thereby easily assembling the display stand <b>1</b>. With the above structure, the number of parts of the prefabricated display stand <b>1</b> can be remarkably reduced, thereby lowering the manufacture cost of the prefabricated display stand <b>1</b>.</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIG. 4</figref> is a view illustrating the vertical frame for the display stand according to the present invention.</p>
+      <p id="p-00036-en" num="0036">As illustrated in <figref>FIG. 4</figref>, the multipurpose prefabricated display stand <b>1</b> according to the present invention includes the vertical frames <b>100</b> of the block type which are respectively engaged to corner portions of the shelf <b>200</b> and are stacked to each other in multiple stages to support the overall load of the display stand <b>1</b>, and the shelves <b>200</b> which are engaged to the vertical frames <b>100</b> in multiple stages to store and display various articles thereon.</p>
+      <p id="p-00037-en" num="0037">The shelf <b>200</b> is formed in a rectangular frame, and has the horizontal frame <b>210</b> of a lattice type which is made of a metal material or synthetic resin. Since the shelf <b>200</b> is widely used for the display stand <b>1</b> to store and display various articles thereon, the shape and configuration of the shelf <b>200</b> may be modified in various ways, without changing the basic configuration of the rectangular horizontal frame <b>210</b>.</p>
+      <p id="p-00038-en" num="0038">The vertical frame <b>100</b> is engaged to each corner portion of the shelf <b>200</b> in such a way that the shelves are engaged to each other in multiple stages by positioning the horizontal frame <b>210</b> of the shelf <b>200</b> on the top surface of the body <b>110</b> which is assembled to each other in multiple stages. The body <b>110</b> can be manufactured so that the vertical height thereof is optionally selected by the user. Therefore, the vertical interval of the shelves <b>200</b> engaged to each other in multiple stages can be freely adjusted, thereby storing and displaying various articles of different sizes on one display stand <b>1</b>. Since the display stand <b>1</b> is assembled by the vertical frames <b>100</b> which are assembled in multiple stages, it is possible to easily assemble and transfer the prefabricated display stand <b>1</b>.</p>
+      <p id="p-00039-en" num="0039">Since the configuration of the vertical frame <b>100</b> has been described in detail, the description will not be repeated.</p>
+      <p id="p-00040-en" num="0040">
+        <figref>FIG. 5</figref> is a plan view of a vertical frame according to another embodiment.</p>
+      <p id="p-00041-en" num="0041">As illustrated in <figref>FIG. 5</figref>, the cross-sectional shape of the vertical frame <b>100</b> may have any one of a rectangle, a square, a circle, a polygon, and a cross according to selection of the user. As the vertical frame <b>100</b> can be formed to have any cross-sectional shape, the esthetic sense of the prefabricated display stand <b>1</b> can be shown in various ways.</p>
+      <p id="p-00042-en" num="0042">While the present invention has been described with reference to the particular illustrative embodiments, it is not to be restricted by the embodiments but only by the appended claims. It is to be appreciated that those skilled in the art can change or modify the embodiments without departing from the scope and spirit of the present invention.</p>
+      <p id="p-00043-en" num="0043">According to the vertical frame for the display stand and the multipurpose prefabricated display stand using the same, the body of the vertical frame is manufactured in the shape of the prefabricated block, and then is assembled in multiple stages by mutually engaging the body engaging member which is formed on the top surface of the body and the body locking boss which is formed on the bottom surface of the body, thereby optionally adjusting the vertical height of the prefabricated display stand and the interval of the shelves, as well as easily transporting parts of the disassembled display stand, and a multipurpose prefabricated display stand using the same. Also, since, the engaging structure of vertical frames and shelves are very simple, the display stand has advantages in which the display stand can be easily assembled, the number of parts for the display stand can be remarkably reduced, and a manufacture cost thereof can be lowered.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A vertical frame for a display stand that supports a shelf configured to store and display various articles thereon and engaged to another shelf by a plurality of bodies, the vertical frame comprising:
+<claim-text>a body (<b>110</b>) which is formed in a shape of a prefabricated block and is assembled to each other in multiple stages to support a shelf (<b>200</b>), a vertical length of the body being optionally adjusted by selection of a user;</claim-text><claim-text>a body engaging member (<b>120</b>) which protrudes upwardly from both sides or one side of a top surface of the body (<b>110</b>), and has an insertion groove (<b>121</b>) of which one side is opened;</claim-text><claim-text>a body engaging groove (<b>130</b>) which is formed on a bottom surface of the body (<b>110</b>) at a position corresponding to a formation position of the body engaging member (<b>120</b>), so as to guide the body engaging member (<b>120</b>) and a body locking boss (<b>140</b>) to an engaging position; and</claim-text><claim-text>the body locking boss (<b>140</b>) which protrudes from the body engaging groove (<b>130</b>) and is fitted into the insertion groove (<b>121</b>) when the bodies (<b>110</b>) are assembled to each other in multiple stages, thereby fixing the respective bodies (<b>110</b>) to be assembled to each other in multiple stages.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The vertical frame according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein a center fixing member (150) protrudes from the top surface of the body (110) at a center thereof so as to be engaged to the vertical frame (100) to be assembled to each other in multiple stages by a rotation manner, and
+<claim-text>the bottom surface of the body (110) is provided with a center member insertion hole (170) at a center thereof so that the center fixing member (150) is rotated and fitted into the center member insertion hole (170) when the vertical frames are assembled to each other in multiple stages.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The vertical frame according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the top surface of the body (110) is provided with a shelf engaging groove 160 at one side or both sides thereof, so that a horizontal frame of the shelf (200) is fitted into the engaging groove (160) to fix the shelf.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The vertical frame according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein a cross-sectional shape of the vertical frame (100) has any one of a rectangle, a square, a circle, a polygon, and a cross.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en" independent="true">
+      <claim-text>
+        <b>5</b>. A multipurpose prefabricated display stand comprising:
+<claim-text>a shelf (<b>200</b>) which is formed in a rectangular frame to store and display various articles thereon; and</claim-text><claim-text>a vertical frame (<b>100</b>) which is engaged to each corner portion of the shelf (<b>200</b>) in such a way that the shelves (<b>200</b>) are engaged to each other in multiple stages by positioning a horizontal frame (<b>210</b>) of the shelf (<b>200</b>) on a top surface of the body (<b>110</b>) which is assembled to each other in multiple stages,</claim-text><claim-text>wherein the vertical frame includes</claim-text><claim-text>a body (<b>110</b>) which is formed in a shape of a prefabricated block and is assembled to each other in multiple stages to support the shelf (<b>200</b>), a vertical length of the body being optionally adjusted by selection of a user;</claim-text><claim-text>a body engaging member (<b>120</b>) which protrudes upwardly from both sides or one side of a top surface of the body (<b>110</b>), and has an insertion groove (<b>121</b>) of which one side is opened;</claim-text><claim-text>a body engaging groove (<b>130</b>) which is formed on a bottom surface of the body (<b>110</b>) at a position corresponding to a formation position of the body engaging member (<b>120</b>), so as to guide the body engaging member (<b>120</b>) and a body locking boss (<b>140</b>) to an engaging position; and</claim-text><claim-text>the body locking boss (<b>140</b>) which protrudes from the body engaging groove (<b>130</b>) and is fitted into the insertion groove (<b>121</b>) when the bodies (<b>110</b>) are assembled to each other in multiple stages, thereby fixing the respective bodies (<b>110</b>) to be assembled to each other in multiple stages.</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The multipurpose prefabricated display stand according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein a cross-sectional shape of the vertical frame (100) has any one of a rectangle, a square, a circle, a polygon, and a cross. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257531A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257531A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257531A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257531A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257531A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257531A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257531A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257531A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257531A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257531A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257531A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257531A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257531A1_00007.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257531A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257531A1.PDF" type="pdf" size="463969" pages="10" />
+</lexisnexis-patent-document>

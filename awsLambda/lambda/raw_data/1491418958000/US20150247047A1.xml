@@ -1,0 +1,3277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247047A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021449" date-changed="20160118" time-changed="124611">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140124">
+        <country>US</country>
+        <doc-number>20150247047</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14709993</doc-number>
+        <date>20150512</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012154426</doc-number>
+        <date>20120710</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>C09D  11/322       20140101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20140101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>11</main-group>
+        <subgroup>322</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C08K   5/3437      20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>5</main-group>
+        <subgroup>3437</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>C09D  11/322       20130101 FI20140109BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>11</main-group>
+        <subgroup>322</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140109</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C08K   5/3437      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>5</main-group>
+        <subgroup>3437</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C09D  11/326       20130101 LI20150210BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>11</main-group>
+        <subgroup>326</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150210</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>Y10T 428/24901     20130101 LA20150617BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>428</main-group>
+        <subgroup>24901</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150617</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">14</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">INK COMPOSITION, INKJET RECORDING METHOD, AND PRINTED MATTER</invention-title>
+    <references-cited date-changed="20150915">
+      <patent-citations name="patcit" date-changed="20150915" />
+      <citation>
+        <patcit num="1" dnum="US2014017461A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20140017461</doc-number>
+            <kind>A1</kind>
+            <name>MATSUYAMA AKIHIKO [JP]</name>
+            <date>20140116</date>
+          </document-id>
+          <application-date>
+            <date>20130610</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US8945294B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>8945294</doc-number>
+            <kind>B2</kind>
+            <name>MATSUYAMA AKIHIKO [JP], et al</name>
+            <date>20150203</date>
+          </document-id>
+          <application-date>
+            <date>20120912</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US9028600B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>9028600</doc-number>
+            <kind>B2</kind>
+            <name>GOTO HIROSHI [JP], et al</name>
+            <date>20150512</date>
+          </document-id>
+          <application-date>
+            <date>20120309</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20150903">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13913626</doc-number>
+              <date>20130610</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>9056993</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007099</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>MATSUYAMA</last-name>
+            <first-name>Akihiko</first-name>
+            <address>
+              <city>Shizuoka</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>JP</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>MATSUYAMA</last-name>
+            <first-name>Akihiko</first-name>
+            <address>
+              <city>Shizuoka</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="163915948">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20140017461</doc-number>
+            <kind>A1</kind>
+            <date>20140116</date>
+          </document-id>
+          <application-date>
+            <date>20130610</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247047</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150512</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103540193</doc-number>
+            <kind>A</kind>
+            <date>20140129</date>
+          </document-id>
+          <application-date>
+            <date>20130710</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103540193</doc-number>
+            <kind>B</kind>
+            <date>20150603</date>
+          </document-id>
+          <application-date>
+            <date>20130710</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014031504</doc-number>
+            <kind>A</kind>
+            <date>20140220</date>
+          </document-id>
+          <application-date>
+            <date>20130709</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>9056993</doc-number>
+            <kind>B2</kind>
+            <date>20150616</date>
+          </document-id>
+          <application-date>
+            <date>20130610</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="163915946">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20140017461</doc-number>
+            <kind>A1</kind>
+            <date>20140116</date>
+          </document-id>
+          <application-date>
+            <date>20130610</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247047</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150512</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103540193</doc-number>
+            <kind>A</kind>
+            <date>20140129</date>
+          </document-id>
+          <application-date>
+            <date>20130710</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103540193</doc-number>
+            <kind>B</kind>
+            <date>20150603</date>
+          </document-id>
+          <application-date>
+            <date>20130710</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014031504</doc-number>
+            <kind>A</kind>
+            <date>20140220</date>
+          </document-id>
+          <application-date>
+            <date>20130709</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>9056993</doc-number>
+            <kind>B2</kind>
+            <date>20150616</date>
+          </document-id>
+          <application-date>
+            <date>20130610</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention provides an ink composition that contains a pigment, a dispersant, a hydrosoluble solvent; and water, <ul id="ula-00001-en" list-style="none"><li><ul id="ula-00002-en" list-style="none"><li>wherein the pigment is represented by the following chemical formula 1:</li></ul></li></ul></p>
+    <p id="p-a-00002-en" num="0000">
+      <chemistry id="chema-00001-en" num="00001">
+        <img id="imga-00001-en" he="29.97mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150247047A1_00005.PNG" img-format="png" original="US20150247047A1-20150903-C00001.TIF" />
+      </chemistry>
+      <ul id="ula-00003-en" list-style="none">
+        <li>
+          <ul id="ula-00004-en" list-style="none">
+            <li>where R represents hydrogen, an alkyl group having one to three carbon atoms, or chlorine,</li>
+            <li>wherein the ink composition satisfies the following relations 1 and 2:</li>
+          </ul>
+        </li>
+      </ul>
+    </p>
+    <p id="p-a-00003-en" num="0000">[in-line-formulae]0.050≦<i>X/Y</i>≦0.120  Relation 1[/in-line-formulae]</p>
+    <p id="p-a-00004-en" num="0000">[in-line-formulae]0.700≦<i>Z/Y</i>≦1.050  Relation 2[/in-line-formulae]<ul id="ula-00005-en" list-style="none"><li><ul id="ula-00006-en" list-style="none"><li>where X represents a minimum absorbance in a wavelength range of from 400 nm to 450 nm, Y represents an absorbance of a maximum peak in a wavelength range of from 500 nm to 550 nm, and Z represents an absorbance of a maximum peak in a wavelength range of from 550 nm to 600 nm.</li></ul></li></ul></p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This patent application is based on and claims priority pursuant to 35 U.S.C. §119 to Japanese Patent Application No. 2012-154426, filed on Jul. 10, 2012, in the Japan Patent Office, the entire disclosure of which is hereby incorporated by reference herein.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">1. Technical Field</p>
+      <p id="p-00003-en" num="0003">The present invention relates to an ink composition for inkjet recording, an inkjet recording method, and printed matter.</p>
+      <p id="p-00004-en" num="0004">2. Background Art</p>
+      <p id="p-00005-en" num="0005">Inkjet printers are widely used due to their advantages such as low noise and low running costs, and many printers capable of printing color images on plain paper are now widely available on market. However, it is extremely difficult to satisfy all the properties required of images produced using such printers, such as good color reproducibility, abrasion resistance, durability, light resistance, drying property, feathering, color bleed, duplex printing, and ink discharging stability. As a result, the ink used is selected based on the particular application.</p>
+      <p id="p-00006-en" num="0006">In general, the ink used in inkjet recording is mainly composed of water, with a coloring agent and a wetting agent such as glycerin added to prevent clogging. As the coloring agent, dyes are widely used for their coloring and stability. However, the light resistance and water resistance of images produced using such dye-based ink are inferior. The water resistance can be improved in some degree by using specialized recording media having an ink absorbing layer, but is not satisfactory at all when it comes to plain paper.</p>
+      <p id="p-00007-en" num="0007">To compensate for such defects, ink using a pigment has begun to be widely used as a coloring agent. Although pigment ink is successful and superior to dye ink with regard to light resistance, water resistance, etc., coloring is degraded by coherence of light having difference wavelengths and phases produced by multiple reflections of light within the pigment. Therefore, pigment ink is inferior to dye ink in general with regard to the coloring. In particular, the pigment ink used as ink for inkjet recording causes problems of deterioration of coloring (saturation) on plain paper and of gloss on specialized paper.</p>
+      <p id="p-00008-en" num="0008">In an attempt to compensate for such degradation of coloring of the pigment ink, pigment particulates that are coated with resin are used. According to this method, the fixing and the gas resistance properties of the ink are further improved by the resin, and in addition dispersion is greatly stabilized. However, currently, pigment ink is not still on a par with dye ink with regard to gloss.</p>
+      <p id="p-00009-en" num="0009">JP-2007-169359-A discloses using a quinacridone-based pigment liquid dispersion while limiting the ratio Z/Y of the two absorption peaks Y and Z to a range of from 0.94 to 1.21 to obtain good coloring. JP-2007-238808-A discloses regulating the ratio of the two absorption peaks Y and Z of C.I. Pigment Red 122 to a range of from 0.85 to 1.00 to obtain good coloring. Although these are successful in some degree, just adjusting the range of Z/Y does not lead to improvement of gloss so that the problem about the coloring on specialized gloss paper or coated paper remains unsolved.</p>
+      <heading id="h-00003-en" level="1">SUMMARY</heading>
+      <p id="p-00010-en" num="0010">The present invention provides an ink composition that contains a pigment, a dispersant, a hydrosoluble solvent; and water,</p>
+      <p id="p-00011-en" num="0011">wherein the pigment is represented by the following chemical formula 1:</p>
+      <p id="p-00012-en" num="0000">
+        <chemistry id="chem-00001-en" num="00002">
+          <img id="img-00001-en" he="29.97mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150247047A1_00006.PNG" img-format="png" original="US20150247047A1-20150903-C00002.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00013-en" num="0012">where R represents hydrogen, an alkyl group having one to three carbon atoms, or chlorine,</p>
+      <p id="p-00014-en" num="0013">wherein the ink composition satisfies the following relations 1 and 2:</p>
+      <p id="p-00015-en" num="0000">[in-line-formulae]0.050≦<i>X/Y≦</i>0.120  Relation 1[/in-line-formulae]</p>
+      <p id="p-00016-en" num="0000">[in-line-formulae]0.700≦<i>Z/Y≦</i>1.050  Relation 2[/in-line-formulae]</p>
+      <p id="p-00017-en" num="0014">where X represents a minimum absorbance in a wavelength range of from 400 nm to 450 nm, Y represents an absorbance of a maximum peak in a wavelength range of from 500 nm to 550 nm, and Z represents an absorbance of a maximum peak in a wavelength range of from 550 nm to 600 nm.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00018-en" num="0015">Various other objects, features and attendant advantages of the present invention will be more fully appreciated as the same become better understood from the detailed description when considered in connection with the accompanying drawings, in which like reference characters designate like corresponding parts throughout and wherein:</p>
+      <p id="p-00019-en" num="0016">
+        <figref>FIG. 1</figref> is a perspective view illustrating an example of an inkjet recording device in which the cover of the ink cartridge installation unit is open;</p>
+      <p id="p-00020-en" num="0017">
+        <figref>FIG. 2</figref> is a cross-sectional view illustrating the entire configuration of the ink jet recording device;</p>
+      <p id="p-00021-en" num="0018">
+        <figref>FIG. 3</figref> is a schematic diagram illustrating a variation of the ink cartridge illustrated in <figref>FIG. 1</figref>,</p>
+      <p id="p-00022-en" num="0019">
+        <figref>FIG. 4</figref> is a schematic diagram illustrating a variation of the ink cartridge illustrated in <figref>FIG. 3</figref>;</p>
+      <p id="p-00023-en" num="0020">
+        <figref>FIG. 5</figref> is a graph from which the absorbances X, Y, and Z are obtained from absorption spectroscopy of Example 1 described later; and</p>
+      <p id="p-00024-en" num="0021">
+        <figref>FIG. 6</figref> is graphs of absorption spectroscopy of Examples 1 and 2 and Comparative Example 5.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00025-en" num="0022">In the present disclosure, an ink composition, an inkjet recording method, and an inkjet recorded material to impart gloss which is not possibly obtained by using conventional pigment ink and light resistance which is not possibly obtained by using conventional dye ink are described.</p>
+      <p id="p-00026-en" num="0023">The pigment represented by the Chemical Formula 1 is widely used because of its excellent coloring and light resistance but is inferior to a dye in light of the coloring and the gloss.</p>
+      <p id="p-00027-en" num="0000">
+        <chemistry id="chem-00002-en" num="00003">
+          <img id="img-00002-en" he="29.97mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150247047A1_00007.PNG" img-format="png" original="US20150247047A1-20150903-C00003.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00028-en" num="0024">where R represents hydrogen, an alkyl group having one to three carbon atoms, or chlorine.</p>
+      <p id="p-00029-en" num="0025">To improve the coloring, there is a method of reducing the crystallinity of a pigment. As the crystallinity decreases, the absorbance Z of the maximum peak in the wavelength range of from 550 nm to 600 nm lowers. On the other hand, the absorbance Z of the maximum peak in the wavelength range of from 500 nm to 550 nm varies little by a change in the crystallinity. Therefore, the coloring is improved if the value of Z/Y is designed to be 1.050 or less. However, the light resistance deteriorates as the crystallinity decreases, meaning that a pigment loses its superiority over a dye. Therefore, it is suitable to keep the value of Z/Y to be 0.700 or higher. However, just such a control over the crystallinity is not sufficient to improve the coloring of a pigment to the level of a dye and in particular the gloss on specialized gloss paper or coated paper is greatly inferior.</p>
+      <p id="p-00030-en" num="0026">To improve the gloss, it is suitable to lower the minimum absorbance X in the wavelength range of from 400 nm to 450 nm. When the value of X/Y is 0.120 or less, an extremely high gloss is obtained and the coloring is furthermore improved. However, as the value of X/Y decreases, the light resistance deteriorates. Therefore, the value of X/Y is kept 0.050 or more to prevent this deterioration.</p>
+      <p id="p-00031-en" num="0027">Therefore, to provide an ink composition, an inkjet recording method, and printed matter that impart gloss to an image formed on specialized paper or coated paper which is not achieved by a typical pigment ink and light resistance not sufficiently achieved by a typical dye ink, the present inventors thus made an ink composition that contains a pigment represented by the following Chemical Formula 1, a dispersant, a hydrosoluble solvent, and water, wherein the ink composition satisfies the following Relations 1 and 2, X represents a minimum absorbance in a wavelength range of from 400 nm to 450 nm, Y represents an absorbance of a maximum peak in a wavelength range of from 500 nm to 550 nm, and Z represents an absorbance of a maximum peak in a wavelength range of from 550 nm to 600 nm:</p>
+      <p id="p-00032-en" num="0000">[in-line-formulae]0.050≦<i>X/Y≦</i>0.120  Relation 1[/in-line-formulae]</p>
+      <p id="p-00033-en" num="0000">[in-line-formulae]0.700≦<i>Z/Y≦</i>1.050  Relation 2[/in-line-formulae]</p>
+      <p id="p-00034-en" num="0000">
+        <chemistry id="chem-00003-en" num="00004">
+          <img id="img-00003-en" he="29.97mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150247047A1_00008.PNG" img-format="png" original="US20150247047A1-20150903-C00004.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00035-en" num="0028">where R represents hydrogen, an alkyl group having one to three carbon atoms, or chlorine.</p>
+      <p id="p-00036-en" num="0029">Pigment</p>
+      <p id="p-00037-en" num="0030">In the embodiment, the quinacridone pigment represented by the Chemical Formula 1 is used.</p>
+      <p id="p-00038-en" num="0031">C.I. Pigment Violet 19 represented by the Chemical Formula 1-1 is a non-substituted quinacridone and C.I. Pigment Red 122 represented by the Chemical Formula 1-2 is a methyl-substituted quinacridone. C.I. Pigment Red 202 represented by the Chemical Formula 1-3, C.I. Pigment Red 209, etc. are chlorine-substituted quinacridones.</p>
+      <p id="p-00039-en" num="0000">
+        <chemistry id="chem-00004-en" num="00005">
+          <img id="img-00004-en" he="114.22mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150247047A1_00009.PNG" img-format="png" original="US20150247047A1-20150903-C00005.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00040-en" num="0032">These quinacridone pigments can be used in combination as a form of mix crystal. For example, a mix crystal of a combination of C.I. Pigment Violet 19 and C.I. Pigment Red 122 and a mix crystal of a combination of C.I. Pigment Violet 19 and C.I. Pigment Red 202 are used, by which it is confirmed that coloring is adjusted and the saturation is improved.</p>
+      <p id="p-00041-en" num="0033">To obtain an ink composition satisfying the Relation 2, the primary particle diameter of a pigment is reduced in comparison with a conventional pigment. The primary particle diameter of the pigment is preferably 80 nm or less and more preferably 50 nm or less. To reduce the primary particle diameter, for example, dry pulverizing methods such as salt milling methods and liquid phase laser ablation methods of using a microreactor to precipitate dissolved pigments in a minute reaction field, or microparticulating pigments by irradiation with laser beams are known and applied in the present disclosure.</p>
+      <p id="p-00042-en" num="0034">To obtain an ink composition satisfying the Relation 1, the dispersion particle diameter (average particle diameter of a pigment disperse in liquid) of a pigment is reduced to 100 nm or less and preferably 60 nm or less. The dispersion particle diameter can be reduced by using, for example, a mixing and kneading and dispersing machine using balls such as a bead mill or a ball mill, a mixing and kneading and dispersing machine using a shearing force such as a roll mill, or an ultrasonic dispersion machine. Among these, the bead mill dispersion method using beads having a diameter of 0.05 mm or less.</p>
+      <p id="p-00043-en" num="0035">By reducing the primary particle diameter and the dispersion particle diameter of a pigment and stably maintaining the dispersion state, the ink composition of the present disclosure that satisfies the Relations 1 and 2 is obtained.</p>
+      <p id="p-00044-en" num="0036">The density of the pigment in the ink is preferably from 1 percent by weight to 15 percent by weight, more preferably from 2 percent by weight to 12 percent by weight, and furthermore preferably from 3 percent by weight to 9 percent by weight. When the density of the pigment is 1 percent by weight or more, the coloring is sufficient, thereby improving the image density and the saturation. In addition, when the density of the pigment is 15 percent by weight or less, the storage stability of the ink is secured, thereby avoiding dullness of images.</p>
+      <p id="p-00045-en" num="0037">Dispersant</p>
+      <p id="p-00046-en" num="0038">There is no specific limit to the dispersant for use in the present disclosure. Any of the dispersants for use in preparation of the liquid dispersion of pigment can be suitably selected.</p>
+      <p id="p-00047-en" num="0039">For example, nonion surfactants such as polyoxyethylene isodecyl ether, polyoxyethylene lauryl ether, polyoxyethylene β naphtyl ether, polyoxy ethylene styryl phenyl ether, and polyoxy ethylene distyryl phenyl ether and anion surfactant such as polyoxyetheylene lauryl ether sulfuric acid salts, polyoxyetheylene β naphtyl ether sulfuric acid salts, polyoxyetheylene styryl phenyl ether phosphoric acid salts, polyoxyetheylene distyryl phenyl carboxylic acid salts, lauryl ether phosphoric acid salts, octyl ether carboxylic acid salts, distyryl phenyl ether sulfuric acid salts, styryl phenyl ether phosphoric acid salts, and β naphtyl ether carboxylic acid salts can be used as the dispersants.</p>
+      <p id="p-00048-en" num="0040">In the present disclosure, the dispersant represented by the following Chemical Formula 2 is particularly suitable.</p>
+      <p id="p-00049-en" num="0000">[in-line-formulae]A<sup>1</sup>-O-B<sup>1</sup>  Chemical Formula 2[/in-line-formulae]</p>
+      <p id="p-00050-en" num="0041">In the Chemical Formula 2, A<sup>1 </sup>represents a linear or branched alkyl group having 8 to 12 carbon atoms, β-naphtyl group, styrenized phenolic group, or distyrenized phenolic group, B<sup>1 </sup>represents a COOM<sup>1</sup>, an SO<sub>3</sub>M<sup>1</sup>, or a PO<sub>3</sub>M<sup>1</sup><sub>2</sub>, where M<sup>1 </sup>represent Na, K, ammonium, tetramethyl ammonium, or ethanol amine.</p>
+      <p id="p-00051-en" num="0042">Specific examples of the dispersants represented by the Chemical Formula 2 include, but are not limited to compounds represented by the Chemical Formulae 2-1, 2-2, 2-3, 2-4, and 2-5.</p>
+      <p id="p-00052-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="center" />
+              <colspec colname="2" colwidth="56pt" align="left" />
+              <colspec colname="3" colwidth="42pt" align="left" />
+              <colspec colname="4" colwidth="56pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="4" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Chemical</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Formula</entry>
+                  <entry>A<sup>1</sup></entry>
+                  <entry>B<sup>1</sup></entry>
+                  <entry>M<sup>1</sup></entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>2-1</entry>
+                  <entry>B naphtyl</entry>
+                  <entry>COOM<sup>1</sup></entry>
+                  <entry>Tetramethyl</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>ammonium</entry>
+                </row>
+                <row>
+                  <entry>2-2</entry>
+                  <entry>Distyrenized</entry>
+                  <entry>SO<sup>3</sup>M<sup>1</sup></entry>
+                  <entry>Ammonium</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>phenol</entry>
+                </row>
+                <row>
+                  <entry>2-3</entry>
+                  <entry>Linear alkyl</entry>
+                  <entry>PO<sup>3</sup>M<sup>1</sup><sub>2</sub></entry>
+                  <entry>Na</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(C = 12)</entry>
+                </row>
+                <row>
+                  <entry>2-4</entry>
+                  <entry>Linear alkyl</entry>
+                  <entry>CCOM<sup>1</sup></entry>
+                  <entry>K</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(C = 8)</entry>
+                </row>
+                <row>
+                  <entry>2-5</entry>
+                  <entry>Styrenized</entry>
+                  <entry>PO<sup>3</sup>M<sup>1</sup><sub>2</sub></entry>
+                  <entry>Ethanol</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>phenol</entry>
+                  <entry />
+                  <entry>amine</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00053-en" num="0043">It is also possible to use polymer dispersants such as polyacrylic acids, polymethacrylic acids, copolymers of acrylic acid and acrylonitrile, copolymers of vinyl acetate and an acrylic acid ester, copolymers of acrylic acid and an acrylic acid alkyl ester, copolymers of styrene and acrylic acid, copolymers of styrene and methacrylic acid, copolymers of styrene, acrylic acid, and an acrylic acid alkyl ester, copolymers of styrene, methacrylic acid, and an acrylic acid alkyl ester, copolymers of styrene, α-methyl styrene, and an acrylic acid, copolymer of styrene, α-methyl styrene, and acrylic acid-copolymers of an acrylic acid alkyl ester, copolymers of styrene and maleic acid, copolymers of vinyl naphthalene and maleic acid, copolymers of vinyl acetate and ethylene, copolymers of vinyl acetate and aliphatic acid vinyl ethylene, copolymers of vinyl acetate and a maleic acid ester, copolymers of vinyl acetate and crotonic acid, copolymers of vinyl acetate and acrylic acid, copolymers of acrylic and silicone, and modified polyurethane resins. These dispersants can be used alone or in combination.</p>
+      <p id="p-00054-en" num="0044">In the present disclosure, the dispersant represented by the following Chemical Formula 3 is particularly suitable.</p>
+      <p id="p-00055-en" num="0000">
+        <chemistry id="chem-00005-en" num="00006">
+          <img id="img-00005-en" he="20.57mm" wi="74.17mm" alt="embedded image" img-content="chem" file="US20150247047A1_00010.PNG" img-format="png" original="US20150247047A1-20150903-C00006.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00056-en" num="0045">In the Chemical Formula 3, p, q, and r independently represent counting numbers of from 5 to 50, B<sup>1 </sup>represents COOM<sup>1</sup>, an SO<sub>3</sub>M<sup>1</sup>, or a PO<sub>3</sub>M<sup>1</sup><sub>2</sub>, where M<sup>1 </sup>represents Na, K, ammonium, tetramethyl ammonium, or ethanol amine.</p>
+      <p id="p-00057-en" num="0046">In addition, R<sup>1 </sup>represents the following polysiloxane structure.</p>
+      <heading id="h-00006-en" level="2">Chemical Formula 3</heading>
+      <p id="p-00058-en" num="0047">
+        <chemistry id="chem-00006-en" num="00007">
+          <img id="img-00006-en" he="18.29mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150247047A1_00011.PNG" img-format="png" original="US20150247047A1-20150903-C00007.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00059-en" num="0048">In the Chemical Formula R<sup>1</sup>, R<sup>2 </sup>represents a hydroxyl group, a methoxy group, or an ethoxy group, R<sup>3 </sup>represents a methyl group, an ethyl group, a hexyl group, a hydroxymethyl group, or a hydroxyethyl group, and m represents a counting number of from 1 to 10.</p>
+      <p id="p-00060-en" num="0049">Specific examples of the dispersants represented by the Chemical Formula 3 include, but are not limited to compounds represented by the Chemical Formulae 3-1, 3-2, 3-3, 3-4, and 3-5.</p>
+      <p id="p-00061-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="left" />
+              <colspec colname="3" colwidth="49pt" align="left" />
+              <colspec colname="4" colwidth="35pt" align="left" />
+              <colspec colname="5" colwidth="49pt" align="left" />
+              <colspec colname="6" colwidth="14pt" align="center" />
+              <colspec colname="7" colwidth="14pt" align="center" />
+              <colspec colname="8" colwidth="14pt" align="center" />
+              <colspec colname="9" colwidth="14pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="9" rowsep="1">TABLE 2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Chemical</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Formula</entry>
+                  <entry>B1</entry>
+                  <entry>M<sup>1</sup></entry>
+                  <entry>R<sup>2</sup></entry>
+                  <entry>R<sup>3</sup></entry>
+                  <entry>p</entry>
+                  <entry>q</entry>
+                  <entry>r</entry>
+                  <entry>m</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="left" />
+              <colspec colname="3" colwidth="49pt" align="left" />
+              <colspec colname="4" colwidth="35pt" align="left" />
+              <colspec colname="5" colwidth="49pt" align="left" />
+              <colspec colname="6" colwidth="14pt" align="char" char="." />
+              <colspec colname="7" colwidth="14pt" align="char" char="." />
+              <colspec colname="8" colwidth="14pt" align="char" char="." />
+              <colspec colname="9" colwidth="14pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>3-1</entry>
+                  <entry>PO<sub>3</sub>M<sup>1</sup><sub>2</sub></entry>
+                  <entry>Ammonium</entry>
+                  <entry>OH</entry>
+                  <entry>Hydroxymethyl</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>10</entry>
+                </row>
+                <row>
+                  <entry>3-2</entry>
+                  <entry>COOM<sup>1</sup></entry>
+                  <entry>Ethanol amine</entry>
+                  <entry>OH</entry>
+                  <entry>Hexyl</entry>
+                  <entry>50</entry>
+                  <entry>50</entry>
+                  <entry>50</entry>
+                  <entry>6</entry>
+                </row>
+                <row>
+                  <entry>3-3</entry>
+                  <entry>SO<sub>3</sub>M<sup>1</sup></entry>
+                  <entry>Na</entry>
+                  <entry>Ethoxy</entry>
+                  <entry>Hydroxyethyl</entry>
+                  <entry>35</entry>
+                  <entry>25</entry>
+                  <entry>30</entry>
+                  <entry>1</entry>
+                </row>
+                <row>
+                  <entry>3-4</entry>
+                  <entry>COOM<sup>1</sup></entry>
+                  <entry>K</entry>
+                  <entry>Methoxy</entry>
+                  <entry>Ethyl</entry>
+                  <entry>50</entry>
+                  <entry>25</entry>
+                  <entry>5</entry>
+                  <entry>6</entry>
+                </row>
+                <row>
+                  <entry>3-5</entry>
+                  <entry>PO<sub>3</sub>M<sup>1</sup><sub>2</sub></entry>
+                  <entry>Tetraethyl</entry>
+                  <entry>OH</entry>
+                  <entry>Methyl</entry>
+                  <entry>32</entry>
+                  <entry>5</entry>
+                  <entry>30</entry>
+                  <entry>3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>ammonium</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00062-en" num="0050">The dispersant represented by the Chemical Formula 3 illustrated above is obtained by polymerizing an acrylic monomer and a silane compound. Specific examples of the acrylic monomers include, but are not limited to, acrylic acid ester monomers such as methyl acrylate, ethyl acrylate, butyl acrylate, 2-ethylhexyl acrylate, 2-hydroxyethyl acrylate, acryloyl morphorine, and N,N′-dimethyl amino ethyl acrylate; methacrylic acid ester monomers such as methyl methacrylate, ethyl methacrylate, butyl methacrylate, 2-ethylhexyl methacrylate, 2-hydroxyethyl methacrylate, and N,N′-dimethyl amino ethyl acrylate; amide acrylates such as N-methylol acrylic amide and methoxymethyl acrylic amide; and carboxylic acid-containing monomers such as maleic acid, fumaric acid, itaconic acid, acrylic acid, and methacrylic acid.</p>
+      <p id="p-00063-en" num="0051">Monomers generally known as silane coupling agents are suitably used as polysiloxane of the Chemical Formula R<sup>1</sup>. Specific examples thereof include, but are not limited to, vinyl trimethoxy silane, vinyl triethoxy silane, 3-methacryloxy propyl methyl dimethoxy silane, 3-methacryloxy propyl trimethoxy silane, 3-methacyloxy propyl triethoxy silane, 3-acryloxypropyl trimethoxy silane, N-2(aminoethyl)3-aminopropyl methyl dimethoxy silane, N-2(aminoethyl)3-aminopropyl trimethoxy silane, N-2(aminoethyl)3-aminopropyl triethoxy silane, 3-amino propyl trimethoxysilane, 3-amino propyl triethoxysilane, 3-trietoxy silyl-N-(1,3-dimethyl-butylidene)propyl amine, N̂phenyl-3-aminopropyl methoxy silane, chlorides of N-(vinyl benzyl)-2-aminoethyl-3-aminopropyl trimethoxy silane, 3-ureido propyl triethoxy silane, 3-chloropropyl trimethoxy silane, 3-mercapto propyl methyl dimethoxy silane, 3-mercapto propyl trimethoxy silane, bis)triethoxysilyl propyl)tetrasulfide, and 3-isocyanate propyl triethoxy silane.</p>
+      <p id="p-00064-en" num="0052">A pigment dispersion element can be prepared by dissolving the dispersant mentioned above in an aqueous medium, adding the pigment to the solution followed by sufficient moistening, and mixing and kneading and dispersing the resultant by high speed stirring by a homogenizer, a disperser using balls such as a bead mill and a ball mill, a mixing and kneading disperser using a shearing force such as a roll mill, or an ultrasonic disperser. However, after such a dispersion process, coarse particles are contained in most cases, which causes clogging in the inkjet nozzle or the supplying route. Therefore, it is suitable to remove such coarse particles (e.g., particle diameter: 1 μm or greater) by a filter or a centrifugal.</p>
+      <p id="p-00065-en" num="0053">In the present disclosure, it is preferable to use the dispersant in an amount of 10% by weight to 100% by weight and, more preferable, from 20% by weight to 50% by weight to the pigment. When the amount of the dispersant is 10% by weight or more, the pigment can be microparticulated sufficiently. In addition, when the amount of the dispersant is 100% by weight or less, the extra component that is not attached to the pigment can be reduced, thereby avoiding an adverse impact on the ink property so that image blur and deterioration of water resistance and abrasion resistance are prevented.</p>
+      <p id="p-00066-en" num="0054">In addition, the content of the dispersed particulate in the ink is preferably from about 2% by weight to about 20% by weight and more preferably from 3% by weight to 15% by weight as the solid portion of the total of the pigment and the dispersant.</p>
+      <p id="p-00067-en" num="0055">Aqueous Solvent</p>
+      <p id="p-00068-en" num="0056">The ink of the present disclosure is prepared by using water as a liquid medium. As the wetting agent to prevent the ink from drying, improve the dispersion stability, and prevent curling of plain paper, the following aqueous solvents are used. These aqueous solvents can be used in combination.</p>
+      <p id="p-00069-en" num="0057">Specific examples thereof include, but are not limited to the following:</p>
+      <p id="p-00070-en" num="0058">Polyols such as glycerin, ethylene glycol, diethylene glycol, isopropylidne glycerol, 1,3-butane diol, 3-methyl-1,3-butane diol, triethylene glycol, propylene glycol, dipropylene glycol, trimethylol propane, trimethylol ethane, ethylene glycol, diethylene glycol, dipropylene glycol, tripropylene glycol, tetraethylene glycol, hexylene glycol, polyethyle glycol, polypropylene glycol, 1,5-pentane diol, 1,6-hexane diol, glycerol, 1,2,6-hexane triol, 1,2,4-butane triol, 1,2,3-butane triol, and petriol; polyol alkyl ethers such as ethylene glycol monoethyl ether, ethylene glycol monobutyl ether, diethylene glycol monometyl ether, diethylene glycol monoetyl ether, diethylene glycol monobutyl ether, tetraethylene glycol monometyl ether, and propylene glycol monoethyl ether; polyol aryl ethers such as ethylene glycol monophenyl ether, and ethylene glycol monobenzyl ether; nitrogen-containing heterocyclic compounds such as 2-pyrolidone, N-methyl-2-pyrolidone, N-hydroxyethyl-2-pyrolidone, 1,3-dimethyl imidazolidinone, ε-caprolactone, and γ-butylolactone; amides such as formamide, N-methylformamide, N,N-dimethylformamide, N,N-dimethyl-β-methyhoxy propion amide, and N,N-dimethyl-β-buthoxy propion amide; amines such as monoethanol amine, diethanol amine, triethanol amine, monoethyl amine, diethyl amine, and triethyl amine; sulfur-containing compounds such as dimethyl sulfoxide, sulfolane, and thiodiethanol; 3-ethyl-3-hydroxymethyl oxetane, propylene carbonate, and ethylene carbonate.</p>
+      <p id="p-00071-en" num="0059">Among these aqueous solvents, 3-ethyl-3-hydroxy-methyloxetane, isopropylidene glyverol, N,N-dimethyl-β-methoxy propion amide, and N,N-dimethyl-β-buthoxy propion amide are particularly preferable. These are excellent to prevent curling of plain paper.</p>
+      <p id="p-00072-en" num="0060">Sugar groups can be also contained in the wetting agent in the present disclosure.</p>
+      <p id="p-00073-en" num="0061">Specific examples of the sugar groups include, but are not limited to, monosaccharides, disaccharides, oligosaccharides (including trisaccharides and tetrasaccharides), and polysaccharides. Preferred specific examples thereof include, but are not limited to, glucose, mannose, fructose, ribose, xylose, arabinose, galactose, maltose, cellobiose, lactose, saccharose, trehalose, and maltotriose. Polysaccharides represent sugar in a broad sense and are materials that are present widely in nature, for example, α-cyclodextrine and cellulose.</p>
+      <p id="p-00074-en" num="0062">Specific examples of derivatives of these sugar groups include, but are not limited to, reducing sugars, oxidized sugars, amino acid, and thio acid for the sugar groups specified above. Sugar alcohols are particularly preferable and specific examples thereof include, but are not limited to, maltitol and sorbit.</p>
+      <p id="p-00075-en" num="0063">The blend ratio of the pigment and the wetting agent has a large impact on the discharging stability of ink discharged from a head. If the blending amount of the wetting agent is too small while the ratio of the solid pigment portion is high, water evaporation around ink meniscus of nozzles tends to be accelerated, resulting in bad discharging performance. The blending ratio of the wetting agent is preferably from 10% by weight to 70% by weight and more preferably from 20% by weight to 50% by weight based on the ink. The ink having such a content ratio is extremely good about the test for drying, preservation, and reliability.</p>
+      <p id="p-00076-en" num="0064">Penetrating Agent</p>
+      <p id="p-00077-en" num="0065">By adding a penetrating agent to the ink, the surface tension lowers so that the ink filling property of the ink to the nozzles and the discharging stability ameliorate. In addition, since the ink droplets quickly penetrate into a recording medium after the ink droplets have landed thereon, feathering and color bleed are reduced. Surfactants and solvents having a penetrating property are used as the penetrating agent.</p>
+      <p id="p-00078-en" num="0066">The surfactants are classified into anionic surfactants, nonionic surfactants, and ampholytic surfactants by hydrophilic group or fluorine-based surfactants, acetylene-based surfactants, etc. by hydrophobic group.</p>
+      <p id="p-00079-en" num="0067">Specific examples of the anionic surfactants include, but are not limited to, polyoxyethylene alkyl ether acetates, dodecyl benzene sulfonates, laurates, and polyoxyethylene alkyl ether sulfates.</p>
+      <p id="p-00080-en" num="0068">Specific examples of the nonionic surfactants include, but are not limited to, polyols, glycol ethers, polyoxyethylene alkyl ethers, polyoxyethylene alkyl esters, polyoxy ethylene sorbitan aliphatic esters, polyoxyethylene alkyl phenyl ethers, polyoxyethylene alkyl amines, polyoxyethylene alkyl amides, and acetylene glycol.</p>
+      <p id="p-00081-en" num="0069">Specific examples of the fluorine-based surfactants include, but are not limited to, perfluoroalkyl sulfonic acid salts, perfluoroalkyl carboxylic acid salts, perfluoroalkyl phosphoric acid esters, adducts of perfluoroalkyl ethylene oxide, perfluoro alkyl betaine, perfluoro alkyl amine oxide, and perfluoro alkyl ether compounds. Among these, the fluorine-based surfactants represented by Chemical Formula 5 are particularly preferably used.</p>
+      <p id="p-00082-en" num="0000">
+        <chemistry id="chem-00007-en" num="00008">
+          <img id="img-00007-en" he="13.04mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150247047A1_00012.PNG" img-format="png" original="US20150247047A1-20150903-C00008.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00083-en" num="0070">Specific examples of the acetylene glycol-based surfactants include, but are not limited to, acetylene glycols such as 2,4,7,9-tetramethyl-5-desine-4,7-diol, 3,6-dimethyl-4-octine-3,6-diol, and 3,5-dimethyl-1-hexine-3-ol {(for example, SURFYNOL® 104, 82, 465, 485, and TG, manufactured by AIR PRODUCTS and CHEMICALS, INC. (US)}. Among these, SURFYNOL® 104, 465, and TG are particularly good to demonstrate good printing quality.</p>
+      <p id="p-00084-en" num="0071">Specific examples of the solvents having a penetrating property include, but are not limited to, polyols having eight or more carbon atoms such as 2-ethyl-1,3-hexane diol, and 2,2,4-trimethyl-1,3-pentane diol and glycol ethers.</p>
+      <p id="p-00085-en" num="0072">These surfactants may be used alone or in combination. In the present disclosure, it is preferable to use the penetrating agent in an amount of from 0.01% by weight to 100% weight and, more preferable, from 0.03% weight to 2% weight based on the entire ink. When the content of the surfactant is too small, spreading of dots after printing tends to be poor, i.e., resulting in dots having small diameters so that filling-in in a solid image is not good, thereby degrading the image density and color saturation. When the content of the surfactant is too large, the ink tends to foam, which leads to clogging in the flowing path in the nozzle, resulting in prevention of discharging ink.</p>
+      <p id="p-00086-en" num="0073">Known additives such as pH adjusters, anti-septic and anti-fungal agents, anti-corrosion agents, anti-oxidants, ultraviolet absorbers, oxygen absorbers, light stabilizers, and anti-kogation agents can be optionally added to the ink composition of the present disclosure.</p>
+      <p id="p-00087-en" num="0074">pH Adjuster</p>
+      <p id="p-00088-en" num="0075">The pH adjuster is added to stabilize the dispersion state and ink discharging by maintaining the ink in the state of alkali. However, when the pH is too high, the head of inkjet and an ink supplying unit tends to be dissolved easily, which results in modification, leakage, bad discharging performance of the ink, etc. It is more desirable to add a pH adjuster when the pigment is mixed and kneaded and dispersed together with a dispersant in water than when additives such as a wetting agent and a penetrating agent are added after mixing, kneading, and dispersing. This is because the pH adjuster may disrupt the dispersion.</p>
+      <p id="p-00089-en" num="0076">The pH adjuster is preferable to contain at least one of an alcohol amine, an alkali metal hydroxide, an ammonium hydroxide, a phosphonium hydroxide, and an alkali metal carbonate. Specific examples of alcohol amines include, but are not limited to, diethanol amine, triethanol amine, and 2-amino-2-ethyl-1,3-propane diol. Specific examples of the alkali metal hydroxides include, but are not limited to, lithium hydroxide, sodium hydroxide, and potassium hydroxide. Specific examples of the ammonium hydroxides include, but are not limited to, ammonium hydroxide, quaternary ammonium hydroxide, and quaternary phosphonium hydroxide. Specific examples of the alkali metal carbonates include, but are not limited to, lithium carbonate, sodium carbonate, and potassium carbonate.</p>
+      <p id="p-00090-en" num="0077">Anti-Septic and Anti-Fungal Agent</p>
+      <p id="p-00091-en" num="0078">Specific examples of the anti-septic and anti-fungal agents include, but are not limited, dehydrosodium acetate, sodium sorbinate, 2-pyridine thiol-1-oxide sodium, sodium benzoate, and pentachlorophenol sodium.</p>
+      <p id="p-00092-en" num="0079">Anti-Corrosion Agent</p>
+      <p id="p-00093-en" num="0080">Specific examples of the anti-corrosion agents include, but are not limited to, acid sulfite, thiosodium sulfate, ammonium thiodiglycolate, diisopropyl ammonium nitrite, pentaerythritol quaternary nitride, and dicyclohexyl ammonium nitrite.</p>
+      <p id="p-00094-en" num="0081">Anti-Oxidant</p>
+      <p id="p-00095-en" num="0082">Specific examples of the anti-oxidants include, but are not limited to, phenol-based anti-oxidants (including hindered phenol-based anti-oxidants), amino-based anti-oxidants, sulfur-based anti-oxidants, and phosphorous-based anti-oxidants.</p>
+      <p id="p-00096-en" num="0083">Ultraviolet Absorber</p>
+      <p id="p-00097-en" num="0084">Specific examples of the ultraviolet absorbers include, but are not limited to, benzophenone-based ultraviolet absorbers, benzotriazole-based ultraviolet absorbers, salicylate-based ultraviolet absorbers, cyanoacrylate-based ultraviolet absorbers, and nickel complex salt-based ultraviolet absorbers.</p>
+      <p id="p-00098-en" num="0085">Anti-Kogation Agent</p>
+      <p id="p-00099-en" num="0086">An anti-kogation agent may be added to the ink composition of the present disclosure to prevent kogation.</p>
+      <p id="p-00100-en" num="0087">Kogation is a problematic phenomenon occurring to a thermal head that discharges ink (recording liquid) by utilizing a force of foaming of the ink caused by instant heating upon application of an electric current in a heater. That is, the ink compositions modified by heating adhere to the heater. If kogation occurs, the heater cannot conduct heating properly so that the ink discharging weakens and the ink is not discharged at the worst. Therefore, an anti-kogation agent is added to the ink composition of the present disclosure to prevent kogation.</p>
+      <p id="p-00101-en" num="0088">Specific examples of the anti-kogation agents include, but are not limited to, polyphosphoric acid, polyamino carboxylic acid, aldonic acid, hydroxy carboxylic acid, polyol phosphoric acid esters, and salts thereof, acids having an amino group and salts thereof, and ammonium salts of acids having a methyl group, a methylene group, and a carboxylic group.</p>
+      <p id="p-00102-en" num="0089">Recording Device</p>
+      <p id="p-00103-en" num="0090">The ink composition of the present disclosure can be suitably applied to recording systems employing inkjet recording system such as printers, facsimile machines, photocopiers, multi-functional machines (printer/facsimile/photocopier) for inkjet recording.</p>
+      <p id="p-00104-en" num="0091">Inkjet recording devices, which were used in Examples described later, are described below.</p>
+      <p id="p-00105-en" num="0092">The inkjet recording device illustrated in <figref>FIG. 1</figref> has a main part <b>101</b>, a sheet feeder tray <b>102</b> to feed recording media placed in the main part <b>101</b>, a discharging tray <b>103</b> attached to the main part <b>101</b>, which stores the recording media on which images are recorded (formed), and an ink cartridge inserting unit <b>104</b>. On the upper surface of the ink cartridge inserting unit <b>104</b> is arranged an operating unit <b>105</b> such as operation keys and a display. The ink cartridge inserting unit <b>104</b> has a front cover <b>115</b> that is openable and closable to detach and attach an ink cartridge <b>200</b>. <b>111</b> represents an upper cover and <b>112</b> represents the front surface of the front cover.</p>
+      <p id="p-00106-en" num="0093">Inside the main part <b>101</b>, as illustrated in <figref>FIG. 2</figref>, a guide rod <b>131</b> and a stay <b>132</b> serving as guiding members that laterally bridge side plates provided on the right side and left side hold a carriage <b>133</b> slidably movable in the main scanning direction. A main scanning motor moves the carriage <b>133</b> for scanning.</p>
+      <p id="p-00107-en" num="0094">The carriage <b>133</b> has a recording head <b>134</b> having four inkjet recording heads that discharge ink droplets of each color of yellow (Y), cyan (C), magenta (M), and black (Bk) while multiple ink discharging mouths are arranged in the direction crossing the main scanning direction with the ink droplet discharging direction downward.</p>
+      <p id="p-00108-en" num="0095">As the heads for inkjet recording that form the recording head <b>134</b>, it is possible to use a device having an energy-generating device to discharge ink such as a piezoelectric actuator such as a piezoelectric element, a thermal actuator that utilizes the phase change caused by film boiling of liquid using an electric heat conversion element such as a heat element, a shape-memory alloy actuator that uses the metal phase change due to the temperature change, and an electrostatic actuator that uses an electrostatic force.</p>
+      <p id="p-00109-en" num="0096">For example, it is possible to discharge and spray the ink composition as droplets from the recording head by the pressure of the foam generated by thermal energy provided to the ink composition by a thermal head or the like. Moreover, it is possible to conduct inkjet recording by discharging and spraying droplets by imparting mechanical energy to the ink composition by piezoelectric elements or transforming the vibration plate by electrostatic force.</p>
+      <p id="p-00110-en" num="0097">In addition, the carriage <b>133</b> has sub-tanks <b>135</b> to supply each color ink to the recording head <b>134</b>. The ink for inkjet recording of the present disclosure is supplied and replenished to the sub-tank <b>135</b> from the ink cartridge <b>200</b> mounted onto the ink cartridge inserting unit <b>104</b> via a tube for supplying ink.</p>
+      <p id="p-00111-en" num="0098">A sheet feeding unit to feed a sheet <b>142</b> loaded on a sheet loader (pressure plate) <b>141</b> of the sheet feeder tray <b>102</b> includes a roller (sheet feeding roller <b>143</b>) having a half-moon like form to separate and feed the sheet <b>142</b> one by one from the sheet loader <b>141</b> and a separation pad <b>144</b> that is made of a material having a large friction index and arranged facing the sheet feeding roller <b>143</b> while biased to the side of the sheet feeding roller <b>143</b>.</p>
+      <p id="p-00112-en" num="0099">A transfer unit to transfer the sheet <b>142</b> fed from the sheet feeding unit on the lower side of the recording head <b>134</b> includes a transfer belt <b>151</b> to electrostatically adsorb and transfer the sheet <b>142</b>, a counter roller <b>152</b> to transfer the sheet <b>142</b> fed from the sheet feeding unit via a guide <b>145</b> while pinching the sheet <b>142</b> with the transfer belt <b>151</b>, a transfer guide <b>153</b> to make the sheet <b>142</b> move on the transfer belt <b>151</b> by changing the transfer direction of the sheet <b>142</b> being sent substantially vertically upward by substantially 90°, a front end pressure roller <b>155</b> biased towards the transfer belt <b>151</b> by a pressure member <b>154</b>, and a charging roller <b>156</b> to charge the surface of the transfer belt <b>151</b>.</p>
+      <p id="p-00113-en" num="0100">The transfer belt <b>151</b> is an endless form belt, suspended between a transfer roller <b>157</b> and a tension roller <b>158</b> and rotatable in the belt transfer direction. This transfer belt <b>151</b> include, for example, a top layer serving as a sheet adsorption surface made of a resin material such as a copolymer (ETFE) of tetrafluoroethylene and ethylene with no resistance control treatment while having a thickness about 40 μm, and a bottom layer (moderate resistance layer, earth layer) made of the same material as the top layer with resistance control treatment with carbon. On the rear side of the transfer belt <b>151</b>, a guiding member <b>161</b> is arranged corresponding to the printing area by the recording head <b>134</b>. A discharging unit to discharge the sheet <b>142</b> on which images are recorded by the recording head <b>134</b> includes a separation claw <b>171</b> to separate the sheet <b>142</b> from the transfer belt <b>151</b>, a discharging roller <b>172</b>, and a discharging roller <b>173</b>. A discharging tray <b>103</b> is arranged below the discharging roller <b>173</b>.</p>
+      <p id="p-00114-en" num="0101">A duplex printing sheet feeding unit <b>181</b> is detachably attached to the rear side of the main part <b>101</b>. The duplex printing sheet feeding unit <b>181</b> takes in and reverses the sheet <b>142</b> that is returned by the reverse rotation of the transfer belt <b>151</b> and feeds it again between the counter roller <b>152</b> and the transfer belt <b>151</b>. A manual sheet feeding unit <b>182</b> is provided on the upper surface of the duplex printing sheet feeding unit <b>181</b></p>
+      <p id="p-00115-en" num="0102">In this inkjet recording device, the sheet <b>142</b> is separated and fed from the sheet feeding unit one by one substantially vertically upward, guided by the guide <b>145</b>, and transferred while being pinched between the transfer belt <b>151</b> and the counter roller <b>152</b>.</p>
+      <p id="p-00116-en" num="0103">Furthermore, the front end of the sheet <b>142</b> is guided by the transfer guide <b>153</b> and pressed against the transfer belt <b>151</b> by the front end pressure roller <b>155</b> to change the transfer direction by substantially 90 °.</p>
+      <p id="p-00117-en" num="0104">Since the transfer belt <b>151</b> is charged by the charging roller <b>156</b> at this point in time, the sheet <b>142</b> is electrostatically adsorbed to the transfer belt <b>151</b> and transferred. By driving the recording head <b>134</b> according to the image signal while moving the carriage <b>133</b>, the ink droplet is discharged to the sheet <b>142</b> not in motion to record an image for an amount corresponding to one line and thereafter the sheet <b>142</b> is transferred in a predetermined amount to be ready for the recording for the next line. On receiving a signal indicating that the recording has completed or the rear end of the sheet <b>142</b> has reached the image recording area, the recording operation stops and the sheet <b>142</b> is discharged to the discharging tray <b>103</b>.</p>
+      <p id="p-00118-en" num="0105">When the remaining amount of the ink for inkjet recording in the sub-tank <b>135</b> is detected as “approaching to empty”, a predetermined amount of the ink for inkjet is replenished to the sub tank <b>135</b> from the ink cartridge <b>200</b>.</p>
+      <p id="p-00119-en" num="0106">In this inkjet recording device, it is possible to dissemble the chassis of the ink cartridge <b>200</b> and replace the ink bags therein when the ink for inkjet is used up in the ink cartridge <b>200</b>. In addition, the ink cartridge <b>200</b> stably supplies the ink for inkjet recording even when the ink cartridge <b>200</b> is placed upright (on its side) and installed by front loading. Therefore, even when the main part <b>101</b> is blocked upside, for example, it is accommodated in a rack or something is placed on the upper surface of the main part <b>101</b>, the ink cartridge <b>200</b> is easily exchanged.</p>
+      <p id="p-00120-en" num="0107">A serial type (shuttle type) in which the carriage scans is used in this description but this description is true in a line-type inkjet recording device having a line type head.</p>
+      <p id="p-00121-en" num="0108">Ink Cartridge</p>
+      <p id="p-00122-en" num="0109">Each ink constituting the inkset can be used in a ink cartridge and any other suitable member can be used in combination.</p>
+      <p id="p-00123-en" num="0110">There is no specific limit to the container. Any form, any structure, any size, and any material can be suitably selected. For example, a container having an ink bag formed of aluminum laminate film, a resin film, etc. can be suitably used.</p>
+      <p id="p-00124-en" num="0111">Next, the ink cartridge is described in detail with reference to <figref>FIGS. 3 and 4</figref>. <figref>FIG. 3</figref> is a schematic diagram illustrating an example of an ink bag <b>241</b> of the ink cartridge of the present disclosure. <figref>FIG. 4</figref> is a schematic diagram illustrating the ink cartridge <b>200</b> that accommodates the ink bag of <figref>FIG. 3</figref> in a cartridge case <b>244</b>.</p>
+      <p id="p-00125-en" num="0112">As illustrated in <figref>FIG. 3</figref>, the ink bag <b>241</b> is filled with the ink from an ink inlet <b>242</b>. Subsequent to evacuation of air remaining in the ink bag <b>241</b>, the ink inlet <b>242</b> is closed by fusion. When in use, the ink is supplied by piercing the needle attached to the inkjet recording device into an ink outlet <b>243</b> made of rubber. The ink bag <b>241</b> is formed of a packaging material such as aluminum laminate film having no air permeability. The inkbag <b>241</b> is accommodated in a cartridge case <b>244</b> made of plastic as illustrated in <figref>FIG. 4</figref> and detachably attachable to an inkjet recording device as the ink cartridge <b>200</b>.</p>
+      <p id="p-00126-en" num="0113">It is particularly preferable that the ink cartridge of the present disclosure is detachably attachable to the inkjet recording device of the present disclosure.</p>
+      <p id="p-00127-en" num="0114">Having generally described (preferred embodiments of) this invention, further understanding can be obtained by reference to certain specific examples which are provided herein for the purpose of illustration only and are not intended to be limiting. In the descriptions in the following examples, the numbers represent weight ratios in parts, unless otherwise specified.</p>
+      <heading id="h-00007-en" level="1">EXAMPLE</heading>
+      <heading id="h-00008-en" level="1">Example 1</heading>
+      <heading id="h-00009-en" level="1">Dispersion Element 1</heading>
+      <p id="p-00128-en" num="0115">The dispersant represented by the Chemical Formula 3-1 was dissolved in deionized water and the pigment (Hostaperm Pink EB trans., manufactured by Clariant Japan K.K.) represented by the Chemical Formula 1-2 was added to the solution for sufficient moistening followed by pre-dispersion by an ultrasonic homogenizer for 10 minutes. The resultant was placed in an ultra aspec mill (UAMO 15 type, manufactured by KOTOBUKI INDUSTRIES CO., LTD.) to conduct dispersion for two hours. The thus-obtained dispersion element was filtered with a filter having an opening of 1 μm to obtain a Dispersion Element 1 having a pigment concentration of 15% by weight.</p>
+      <p id="p-00129-en" num="0116">Ink Recipe</p>
+      <p id="p-00130-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="168pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Dispersion Element 1</entry>
+                  <entry>40.0 parts</entry>
+                </row>
+                <row>
+                  <entry>Glycerin</entry>
+                  <entry>20.0 parts</entry>
+                </row>
+                <row>
+                  <entry>3-ethyl-3-hydroxymethyl oxetane</entry>
+                  <entry>10.0 parts</entry>
+                </row>
+                <row>
+                  <entry>N,N-dimethyl-β-methoxy propion amide</entry>
+                  <entry>10.0 parts</entry>
+                </row>
+                <row>
+                  <entry>2-ethyl-1,3-hexane diol</entry>
+                  <entry> 2.0 parts</entry>
+                </row>
+                <row>
+                  <entry>Surfactant represented by the Chemical Formula 5</entry>
+                  <entry>0.05 parts</entry>
+                </row>
+                <row>
+                  <entry>2-amino-2-ethyl-1,3-propane diol</entry>
+                  <entry> 0.5 parts</entry>
+                </row>
+                <row>
+                  <entry>Anti-septic and anti-fungal agents (Proxel ™ LV,</entry>
+                  <entry> 0.1 parts</entry>
+                </row>
+                <row>
+                  <entry>manufactured by ARCH CHEMICALS JAPAN, INC.)</entry>
+                </row>
+                <row>
+                  <entry>Deionized water</entry>
+                  <entry>17.35 parts </entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00131-en" num="0117">The materials other than the Dispersion Element 1 was dissolved in deionized water to manufacture a vehicle and thereafter the vehicle was mixed with the Dispersion Element 1 followed by filtration with a filter having an opening of 1 μm to obtain Ink for inkjet recording.</p>
+      <heading id="h-00010-en" level="1">Example 2</heading>
+      <heading id="h-00011-en" level="1">Dispersion Element 2</heading>
+      <p id="p-00132-en" num="0118">Methanol at −20° C. was flown in a flowing amount of 400 ml/min. into a thin-layer reactor sandwiched by rotation disks using a microreactor (ULREA, manufactured by M Technique Co., Ltd.); and a solution at 25° C. in which 30 parts of a pigment (CROMOPHTAL JET MAGENTA DMQ, manufactured by BASF Japan, Ltd.) represented by the Chemical Formula 1-2 were dissolved in 970 parts of strong sulfuric acid in an flowing amount of 10 ml/min. to the rotation disks to precipitate pigment particles; The reaction was conducted for five hours in which concentration of the thus-obtained pigment liquid dispersion by a centrifugal and dilution thereof with deionized water were repeated followed by adjusting the pH of the resultant to be less than 6 to obtain a pigment paste having a pigment concentration of 30% by weight.</p>
+      <p id="p-00133-en" num="0119">6 parts of a dispersant represented by the Chemical Formula 3-2 was dissolved in 44 parts of deionized water followed by mixing with 50 parts of the pigment paste prepared as described above. Thereafter, the resultant was subject to one-hour treatment by an ultrasonic homogenizer followed by filtration of the resultant with a filter having an opening size of 1 μm to obtain a Dispersion Element 2 having a pigment concentration of 15% by weight.</p>
+      <p id="p-00134-en" num="0120">Ink Recipe</p>
+      <p id="p-00135-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="168pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Dispersion Element 2</entry>
+                  <entry>40.0 parts</entry>
+                </row>
+                <row>
+                  <entry>Glycerin</entry>
+                  <entry>20.0 parts</entry>
+                </row>
+                <row>
+                  <entry>1,3-butane diol</entry>
+                  <entry> 5.0 parts</entry>
+                </row>
+                <row>
+                  <entry>Isoprovinylidene glycerol</entry>
+                  <entry>10.0 parts</entry>
+                </row>
+                <row>
+                  <entry>N,N-dimethyl-β-buthoxy propion amide</entry>
+                  <entry> 5.0 parts</entry>
+                </row>
+                <row>
+                  <entry>2-ethyl-1,3-hexane diol</entry>
+                  <entry> 2.0 parts</entry>
+                </row>
+                <row>
+                  <entry>Surfactant represented by the Chemical Formula 5</entry>
+                  <entry>0.05 parts</entry>
+                </row>
+                <row>
+                  <entry>2-amino-2-ethyl-1,3-propane diol</entry>
+                  <entry> 0.5 parts</entry>
+                </row>
+                <row>
+                  <entry>Anti-septic and anti-fungal agents (Proxel ™ LV,</entry>
+                  <entry> 0.1 parts</entry>
+                </row>
+                <row>
+                  <entry>manufactured by ARCH CHEMICALS JAPAN, INC.)</entry>
+                </row>
+                <row>
+                  <entry>Deionized water</entry>
+                  <entry>17.35 parts </entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00136-en" num="0121">The materials other than the Dispersion Element 2 was dissolved in deionized water to manufacture a vehicle and thereafter the vehicle was mixed with the Dispersion Element 2 followed by filtration with a filter having an opening of 1 μm to obtain Ink for inkjet recording.</p>
+      <heading id="h-00012-en" level="1">Example 3</heading>
+      <heading id="h-00013-en" level="1">Dispersion Element 3</heading>
+      <p id="p-00137-en" num="0122">A Dispersion Element 3 having a pigment concentration of 15% by weight was manufactured in the same manner as in Example 1 except that the pigment of Example 1 was replaced with a mix crystal (CROMOPHTAL JET MAGENTA 3BC, manufactured by BASF Japan, Ltd.) of the compound represented by the Chemical Formula 1-1 and the compound represented by the Chemical Formula 1-2, the dispersant of Example 1 was replaced with the dispersant represented by the Chemical Formula 3-3, and the dispersion processing time of the ultra aspec mill (UAMO 15 type, manufactured by KOTOBUKI INDUSTRIES CO., LTD.) was changed to one hour.</p>
+      <p id="p-00138-en" num="0123">Ink Recipe</p>
+      <p id="p-00139-en" num="0000">
+        <tables id="tables-00005-en" num="00005">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="175pt" align="left" />
+              <colspec colname="2" colwidth="21pt" align="right" />
+              <colspec colname="3" colwidth="21pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Dispersion Element 3</entry>
+                  <entry>40.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>Glycerin</entry>
+                  <entry>20.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>Ethylene glycol monobutyl ether</entry>
+                  <entry>15.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>2-pyrolidone</entry>
+                  <entry>5.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>2-ethyl-1,3-hexane diol</entry>
+                  <entry>2.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>EMALGEN LS-106 (polyoxyethylene polyoxypropylene</entry>
+                  <entry>1.0</entry>
+                  <entry>part</entry>
+                </row>
+                <row>
+                  <entry>alkyl ether, manufactured by KAO CORPORATION),</entry>
+                </row>
+                <row>
+                  <entry>2-amino-2-ethyl-1,3-propane diol</entry>
+                  <entry>0.5</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>Anti-septic and anti-fungal agents (Proxel ™ LV,</entry>
+                  <entry>0.1</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>manufactured by ARCH CHEMICALS JAPAN, INC.)</entry>
+                </row>
+                <row>
+                  <entry>Deionized water</entry>
+                  <entry>16.4</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00140-en" num="0124">The materials other than the Dispersion Element 3 was dissolved in deionized water to manufacture a vehicle and thereafter the vehicle was mixed with the Dispersion Element 3 followed by filtration with a filter having an opening of 1 μm to obtain Ink for inkjet recording.</p>
+      <heading id="h-00014-en" level="1">Example 4</heading>
+      <heading id="h-00015-en" level="1">Dispersion Element 4</heading>
+      <p id="p-00141-en" num="0125">A Dispersion Element 4 having a pigment concentration of 15% by weight in the same manner as in Example 2 except that the pigment of Example 2 was changed to CINQUASIA VIOLET R RT-101-D (manufactured by BASF Japan LTD.) represented by the Chemical Formula 1-1 and the dispersant was changed to the dispersant represented by the Chemical Stricture 2-1.</p>
+      <p id="p-00142-en" num="0126">Ink Recipe</p>
+      <p id="p-00143-en" num="0000">
+        <tables id="tables-00006-en" num="00006">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="175pt" align="left" />
+              <colspec colname="2" colwidth="21pt" align="right" />
+              <colspec colname="3" colwidth="21pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Dispersion Element 4</entry>
+                  <entry>40.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>Glycerin</entry>
+                  <entry>20.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>3-methyl-1,3-butane diol</entry>
+                  <entry>10.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>3-ethyl-3-hydroxymethyl oxetane</entry>
+                  <entry>5.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>N,N-dimethyl-β-methoxy propion amide</entry>
+                  <entry>10.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>2-ethyl-1,3-hexane diol</entry>
+                  <entry>2.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>EMALGEN LS-106 (polyoxyethylene polyoxypropylene</entry>
+                  <entry>1.0</entry>
+                  <entry>part</entry>
+                </row>
+                <row>
+                  <entry>alkyl ether, manufactured by KAO CORPORATION)</entry>
+                </row>
+                <row>
+                  <entry>2-amino-2-ethyl-1,3-propane diol</entry>
+                  <entry>0.5</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>Anti-septic and anti-fungal agents (Proxel ™ LV,</entry>
+                  <entry>0.1</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>manufactured by ARCH CHEMICALS JAPAN, INC.)</entry>
+                </row>
+                <row>
+                  <entry>Deionized water</entry>
+                  <entry>11.4</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00144-en" num="0127">The materials other than the Dispersion Element 4 were dissolved in deionized water to manufacture a vehicle and thereafter the vehicle was mixed with the Dispersion Element 4 followed by filtration with a filter having an opening of 1 μm to obtain Ink for inkjet recording.</p>
+      <heading id="h-00016-en" level="1">Example 5</heading>
+      <heading id="h-00017-en" level="1">Dispersion Element 5</heading>
+      <p id="p-00145-en" num="0128">A Dispersion Element 5 having a pigment concentration of 15% by weight in the same manner as in Example 1 except that the pigment of Example 1 was changed to CINQUASIA MAGENTA RT-355-D (manufactured by BASF Japan LTD.) represented by the compound represented by the Chemical Formula 1-1 and the compound represented by the Chemical Formula 1-3, the dispersant of Example 1 was changed to the dispersant represented by the Chemical Stricture 2-2, and the dispersion processing time of the ultra aspec mill (UAMO 15 type, manufactured by KOTOBUKI INDUSTRIES CO., LTD.) was changed to one hour.</p>
+      <p id="p-00146-en" num="0129">Ink Recipe</p>
+      <p id="p-00147-en" num="0000">
+        <tables id="tables-00007-en" num="00007">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="168pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="right" />
+              <colspec colname="3" colwidth="7pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Dispersion Element 5</entry>
+                  <entry>40.0 parts</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Glycerin</entry>
+                  <entry>20.0 parts</entry>
+                </row>
+                <row>
+                  <entry>2-pyrolidone</entry>
+                  <entry>5.0 parts</entry>
+                </row>
+                <row>
+                  <entry>3-methyl-1,3-butane diol</entry>
+                  <entry>15.0 parts</entry>
+                </row>
+                <row>
+                  <entry>2-ethyl-1,3-hexane diol</entry>
+                  <entry>2.0 parts</entry>
+                </row>
+                <row>
+                  <entry>Surfactant represented by the Chemical Formula 5</entry>
+                  <entry>0.05 parts</entry>
+                </row>
+                <row>
+                  <entry>2-amino-2-ethyl-1,3-propane diol</entry>
+                  <entry>0.5 parts</entry>
+                </row>
+                <row>
+                  <entry>Anti-septic and anti-fungal agents (Proxel ™ LV,</entry>
+                  <entry>0.1 parts</entry>
+                </row>
+                <row>
+                  <entry>manufactured by ARCH CHEMICALS JAPAN, INC.)</entry>
+                </row>
+                <row>
+                  <entry>Deionized water</entry>
+                  <entry>17.35 parts</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00148-en" num="0130">The materials other than the Dispersion Element 5 was dissolved in deionized water to manufacture a vehicle and thereafter the vehicle was mixed with the Dispersion Element 5 followed by filtration with a filter having an opening of 1 μm to obtain Ink for inkjet recording.</p>
+      <heading id="h-00018-en" level="1">Example 6</heading>
+      <heading id="h-00019-en" level="1">Dispersion Element 6</heading>
+      <p id="p-00149-en" num="0131">A Dispersion Element 6 having a pigment concentration of 15% by weight in the same manner as in Example 1 except that the pigment of Example 1 was changed to CINQUASIA VIOLET R RT-101-D (manufactured by BASF Japan LTD.) represented by the compound represented by the Chemical Formula 1-1, the dispersant of Example 1 was changed to the dispersant represented by the Chemical Stricture 2-3, and the dispersion processing time of the ultra aspec mill (UAMO 15 type, manufactured by KOTOBUKI INDUSTRIES CO., LTD.) was changed to one hour.</p>
+      <p id="p-00150-en" num="0132">Ink Recipe</p>
+      <p id="p-00151-en" num="0000">
+        <tables id="tables-00008-en" num="00008">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="175pt" align="left" />
+              <colspec colname="2" colwidth="21pt" align="right" />
+              <colspec colname="3" colwidth="21pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Dispersion Element 6</entry>
+                  <entry>40.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>Glycerin</entry>
+                  <entry>20.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>1,3-butane diol</entry>
+                  <entry>10.0</entry>
+                  <entry>part</entry>
+                </row>
+                <row>
+                  <entry>3-methyl-1,3-butane diol</entry>
+                  <entry>10.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>2-ethyl-1,3-hexane diol</entry>
+                  <entry>2.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>EMALGEN LS-106 (polyoxyethylene polyoxypropylene</entry>
+                  <entry>1.0</entry>
+                  <entry>part</entry>
+                </row>
+                <row>
+                  <entry>alkyl ether, manufactured by KAO CORPORATION)</entry>
+                </row>
+                <row>
+                  <entry>2-amino-2-ethyl-1,3-propane diol</entry>
+                  <entry>0.5</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>Anti-septic and anti-fungal agents (Proxel ™ LV,</entry>
+                  <entry>0.1</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>manufactured by ARCH CHEMICALS JAPAN, INC.)</entry>
+                </row>
+                <row>
+                  <entry>Deionized water</entry>
+                  <entry>16.4</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00152-en" num="0133">The materials other than the Dispersion Element 6 were dissolved in deionized water to manufacture a vehicle and thereafter the vehicle was mixed with the Dispersion Element 6 followed by filtration with a filter having an opening of 1 μm to obtain Ink for inkjet recording.</p>
+      <heading id="h-00020-en" level="1">Example 7</heading>
+      <heading id="h-00021-en" level="1">Dispersion Element 7</heading>
+      <p id="p-00153-en" num="0134">A Dispersion Element 7 having a pigment concentration of 15% by weight in the same manner as in Example 1 except that the dispersant of Example 1 was changed to a modified polyurethane resin (EFKA-4520, molecular weight: 16,000, manufactured by EFKA Additives Co., Ltd) and the dispersion processing time of the ultra aspec mill (UAMO 15 type, manufactured by KOTOBUKI INDUSTRIES) was changed to one hour.</p>
+      <p id="p-00154-en" num="0135">Ink Recipe</p>
+      <p id="p-00155-en" num="0000">
+        <tables id="tables-00009-en" num="00009">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="168pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="right" />
+              <colspec colname="3" colwidth="7pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Dispersion Element 7</entry>
+                  <entry>40.0 parts</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Glycerin</entry>
+                  <entry>20.0 parts</entry>
+                </row>
+                <row>
+                  <entry>Ethylene glycol monobutyl ether</entry>
+                  <entry>10.0 parts</entry>
+                </row>
+                <row>
+                  <entry>Isoprovinylidene glycerol</entry>
+                  <entry>5.0 parts</entry>
+                </row>
+                <row>
+                  <entry>N,N-dimethyl-β-buthoxy propion amide</entry>
+                  <entry>5.0 parts</entry>
+                </row>
+                <row>
+                  <entry>2-ethyl-1,3-hexane diol</entry>
+                  <entry>2.0 parts</entry>
+                </row>
+                <row>
+                  <entry>Surfactant represented by the Chemical Formula 5</entry>
+                  <entry>0.05 parts</entry>
+                </row>
+                <row>
+                  <entry>2-amino-2-ethyl-1,3-propane diol</entry>
+                  <entry>0.5 parts</entry>
+                </row>
+                <row>
+                  <entry>Anti-septic and anti-fungal agents (Proxel ™ LV,</entry>
+                  <entry>0.1 parts</entry>
+                </row>
+                <row>
+                  <entry>manufactured by ARCH CHEMICALS JAPAN, INC.)</entry>
+                </row>
+                <row>
+                  <entry>Deionized water</entry>
+                  <entry>17.35 parts</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00156-en" num="0136">The materials other than the Dispersion Element 7 were dissolved in deionized water to manufacture a vehicle and thereafter the vehicle was mixed with the Dispersion Element 7 followed by filtration with a filter having an opening of 1 μm to obtain Ink for inkjet recording.</p>
+      <heading id="h-00022-en" level="1">Example 8</heading>
+      <heading id="h-00023-en" level="1">Dispersion Element 8</heading>
+      <p id="p-00157-en" num="0137">A Dispersion Element 8 having a pigment concentration of 15% by weight in the same manner as in Example 3 except that the dispersant of Example 3 was changed to the dispersant represented by the Chemical Formula 4.</p>
+      <p id="p-00158-en" num="0000">
+        <chemistry id="chem-00008-en" num="00009">
+          <img id="img-00008-en" he="28.36mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150247047A1_00013.PNG" img-format="png" original="US20150247047A1-20150903-C00009.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00159-en" num="0138">Ink Recipe</p>
+      <p id="p-00160-en" num="0000">
+        <tables id="tables-00010-en" num="00010">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="175pt" align="left" />
+              <colspec colname="2" colwidth="21pt" align="right" />
+              <colspec colname="3" colwidth="21pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Dispersion Element 8</entry>
+                  <entry>40.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>Glycerin</entry>
+                  <entry>20.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>1,3-butane diol</entry>
+                  <entry>20.0</entry>
+                  <entry>part</entry>
+                </row>
+                <row>
+                  <entry>2-ethyl-1,3-hexane diol</entry>
+                  <entry>2.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>EMALGEN LS-106 (polyoxyethylene polyoxypropylene</entry>
+                  <entry>1.0</entry>
+                  <entry>part</entry>
+                </row>
+                <row>
+                  <entry>alkyl ether, manufactured by KAO CORPORATION)</entry>
+                </row>
+                <row>
+                  <entry>2-amino-2-ethyl-1,3-propane diol</entry>
+                  <entry>0.5</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>Anti-septic and anti-fungal agents (Proxel ™ LV,</entry>
+                  <entry>0.1</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>manufactured by ARCH CHEMICALS JAPAN, INC.)</entry>
+                </row>
+                <row>
+                  <entry>Deionized water</entry>
+                  <entry>16.4</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00161-en" num="0139">The materials other than the Dispersion Element 8 were dissolved in deionized water to manufacture a vehicle and thereafter the vehicle was mixed with the Dispersion Element 8 followed by filtration with a filter having an opening of 1 μm to obtain Ink for inkjet recording.</p>
+      <heading id="h-00024-en" level="1">Example 9</heading>
+      <heading id="h-00025-en" level="1">Dispersion Element 9</heading>
+      <p id="p-00162-en" num="0140">A Dispersion Element 9 having a pigment concentration of 15% by weight was manufactured in the same manner as in Example 7 except that the dispersant of Example 7 was changed to the dispersant represented by the Chemical Formula 2-4.</p>
+      <heading id="h-00026-en" level="1">Ink Recipe</heading>
+      <p id="p-00163-en" num="0141" />
+      <p id="p-00164-en" num="0000">
+        <tables id="tables-00011-en" num="00011">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="168pt" align="left" />
+              <colspec colname="2" colwidth="21pt" align="right" />
+              <colspec colname="3" colwidth="28pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Dispersion Element 9</entry>
+                  <entry>40.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>Glycerin</entry>
+                  <entry>20.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>Isoprovinylidene glycerol</entry>
+                  <entry>5.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>N,N-dimethyl-β-methoxy propion amide</entry>
+                  <entry>10.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>N,N-dimethyl-β-buthoxy propion amide</entry>
+                  <entry>5.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>2-ethyl-1,3-hexane diol</entry>
+                  <entry>2.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>Surfactant represented by the Chemical Formula 5</entry>
+                  <entry>0.05</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>2-amino-2-ethyl-1,3-propane diol</entry>
+                  <entry>0.5</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>Anti-septic and anti-fungal agents (Proxel ™ LV,</entry>
+                  <entry>0.1</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>manufactured by ARCH CHEMICALS JAPAN, INC.)</entry>
+                </row>
+                <row>
+                  <entry>Deionized water</entry>
+                  <entry>17.35</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00165-en" num="0142">The materials other than the Dispersion Element 9 were dissolved in deionized water to manufacture a vehicle and thereafter the vehicle was mixed with the Dispersion Element 9 followed by filtration with a filter having an opening of 1 μm to obtain Ink for inkjet recording.</p>
+      <heading id="h-00027-en" level="1">Example 10</heading>
+      <heading id="h-00028-en" level="1">Dispersion Element 10</heading>
+      <p id="p-00166-en" num="0143">A Dispersion Element 10 having a pigment concentration of 15% by weight was manufactured in the same manner as in Example 8 except that the dispersant of Example 8 was changed to the dispersant represented by the Chemical Formula 2-5.</p>
+      <heading id="h-00029-en" level="1">Ink Recipe</heading>
+      <p id="p-00167-en" num="0144" />
+      <p id="p-00168-en" num="0000">
+        <tables id="tables-00012-en" num="00012">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="175pt" align="left" />
+              <colspec colname="2" colwidth="21pt" align="right" />
+              <colspec colname="3" colwidth="21pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Dispersion Element 10</entry>
+                  <entry>40.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>Glycerin</entry>
+                  <entry>20.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>1,3-butane diol</entry>
+                  <entry>20.0</entry>
+                  <entry>part</entry>
+                </row>
+                <row>
+                  <entry>2-ethyl-1,3-hexane diol</entry>
+                  <entry>2.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>EMALGEN LS-106 (polyoxyethylene polyoxypropylene</entry>
+                  <entry>1.0</entry>
+                  <entry>part</entry>
+                </row>
+                <row>
+                  <entry>alkyl ether, manufactured by KAO CORPORATION)</entry>
+                </row>
+                <row>
+                  <entry>2-amino-2-ethyl-1,3-propane diol</entry>
+                  <entry>0.5</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>Anti-septic and anti-fungal agents (Proxel ™ LV,</entry>
+                  <entry>0.1</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>manufactured by ARCH CHEMICALS JAPAN, INC.)</entry>
+                </row>
+                <row>
+                  <entry>Deionized water</entry>
+                  <entry>16.4</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00169-en" num="0145">The materials other than the Dispersion Element 10 were dissolved in deionized water to manufacture a vehicle and thereafter the vehicle was mixed with the Dispersion Element 10 followed by filtration with a filter having an opening of 1 μm to obtain Ink for inkjet recording.</p>
+      <heading id="h-00030-en" level="1">Example 11</heading>
+      <heading id="h-00031-en" level="1">Dispersion Element 11</heading>
+      <p id="p-00170-en" num="0146">A Dispersion Element 11 having a pigment concentration of 15% by weight was manufactured in the same manner as in Example 2 except that the dispersant of Example 2 was changed to the dispersant represented by the Chemical Formula 3-4.</p>
+      <p id="p-00171-en" num="0147">Ink Recipe</p>
+      <p id="p-00172-en" num="0000">
+        <tables id="tables-00013-en" num="00013">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="175pt" align="left" />
+              <colspec colname="2" colwidth="21pt" align="right" />
+              <colspec colname="3" colwidth="21pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Dispersion Element 11</entry>
+                  <entry>40.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>Glycerin</entry>
+                  <entry>20.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>3-methyl-1,3-butane diol</entry>
+                  <entry>5.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>3-ethyl-3-hydroxymethyl oxetane</entry>
+                  <entry>10.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>N,N-dimethyl-β-methoxy propion amide</entry>
+                  <entry>5.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>2-ethyl-1,3-hexane diol</entry>
+                  <entry>2.0</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>EMALGEN LS-106 (polyoxyethylene polyoxypropylene</entry>
+                  <entry>1.0</entry>
+                  <entry>part</entry>
+                </row>
+                <row>
+                  <entry>alkyl ether, manufactured by KAO CORPORATION)</entry>
+                </row>
+                <row>
+                  <entry>2-amino-2-ethyl-1,3-propane diol</entry>
+                  <entry>0.5</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>Anti-septic and anti-fungal agents (Proxel ™ LV,</entry>
+                  <entry>0.1</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry>manufactured by ARCH CHEMICALS JAPAN, INC.)</entry>
+                </row>
+                <row>
+                  <entry>Deionized water</entry>
+                  <entry>16.4</entry>
+                  <entry>parts</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00173-en" num="0148">The materials other than the Dispersion Element 11 were dissolved in deionized water to manufacture a vehicle and thereafter the vehicle was mixed with the Dispersion Element 11 followed by filtration with a filter having an opening of 1 μm to obtain Ink for inkjet recording.</p>
+      <heading id="h-00032-en" level="1">Example 12</heading>
+      <heading id="h-00033-en" level="1">Dispersion Element 12</heading>
+      <p id="p-00174-en" num="0149">A Dispersion Element 12 having a pigment concentration of 15% by weight was manufactured in the same manner as in Example 6 except that the dispersant of Example 6 was changed to the dispersant represented by the Chemical Formula 3-5.</p>
+      <p id="p-00175-en" num="0150">Ink Recipe</p>
+      <p id="p-00176-en" num="0000">
+        <tables id="tables-00014-en" num="00014">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="168pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="right" />
+              <colspec colname="3" colwidth="7pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Dispersion Element 12</entry>
+                  <entry>40.0 parts</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Glycerin</entry>
+                  <entry>20.0 parts</entry>
+                </row>
+                <row>
+                  <entry>Ethylene glycol monobutyl ether</entry>
+                  <entry>10.0 parts</entry>
+                </row>
+                <row>
+                  <entry>2-pyrolidone</entry>
+                  <entry>5.0 parts</entry>
+                </row>
+                <row>
+                  <entry>1,3-butane diol</entry>
+                  <entry>5.0 parts</entry>
+                </row>
+                <row>
+                  <entry>2-ethyl-1,3-hexane diol</entry>
+                  <entry>2.0 parts</entry>
+                </row>
+                <row>
+                  <entry>Surfactant represented by the Chemical Formula 5</entry>
+                  <entry>0.05 parts</entry>
+                </row>
+                <row>
+                  <entry>2-amino-2-ethyl-1,3-propane diol</entry>
+                  <entry>0.5 parts</entry>
+                </row>
+                <row>
+                  <entry>Anti-septic and anti-fungal agents (Proxel ™ LV,</entry>
+                  <entry>0.1 parts</entry>
+                </row>
+                <row>
+                  <entry>manufactured by ARCH CHEMICALS JAPAN, INC.)</entry>
+                </row>
+                <row>
+                  <entry>Deionized water</entry>
+                  <entry>17.35 parts</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00177-en" num="0151">The materials other than the Dispersion Element 12 were dissolved in deionized water to manufacture a vehicle and thereafter the vehicle was mixed with the Dispersion Element 12 followed by filtration with a filter having an opening of 1 μm to obtain Ink for inkjet recording.</p>
+      <heading id="h-00034-en" level="1">Comparative Example 1</heading>
+      <heading id="h-00035-en" level="1">Dispersion Element 13</heading>
+      <p id="p-00178-en" num="0152">A Dispersion Element 13 having a pigment concentration of 15% by weight was manufactured in the same manner as in Example 8 except that the dispersion processing time of the ultra aspec mill (UAMO 15 type, manufactured by KOTOBUKI INDUSTRIES) was changed to 20 minutes.</p>
+      <p id="p-00179-en" num="0153">Ink Recipe</p>
+      <p id="p-00180-en" num="0154">Ink for inkjet recording was manufactured in the same manner as in Example 8 except that the Dispersion Element 8 was changed to the Dispersion Element 13.</p>
+      <heading id="h-00036-en" level="1">Comparative Example 2</heading>
+      <heading id="h-00037-en" level="1">Dispersion Element 14</heading>
+      <p id="p-00181-en" num="0155">A Dispersion Element 14 was manufactured in the same manner as in Example 2 except that the processing time of the ultrasonic homogenizer was changed from 1 hour to 2 hours.</p>
+      <p id="p-00182-en" num="0156">Ink Recipe</p>
+      <p id="p-00183-en" num="0157">Ink for inkjet recording was manufactured in the same manner as in Example 2 except that the Dispersion Element 2 was changed to the Dispersion Element 14.</p>
+      <heading id="h-00038-en" level="1">Comparative Example 3</heading>
+      <heading id="h-00039-en" level="1">Dispersion Element 15</heading>
+      <p id="p-00184-en" num="0158">A Dispersion Element 15 was manufactured in the same manner as in Example 6 except that the pigment of Example 6 was changed to Pigment Red No. 81 (manufactured by) represented by Dainichiseika Color &amp; Chemicals Mfg. Co., Ltd.).</p>
+      <p id="p-00185-en" num="0159">Ink Recipe</p>
+      <p id="p-00186-en" num="0160">Ink 15 for inkjet recording was manufactured in the same manner as in Example 6 except that the Dispersion Element 6 was changed to the Dispersion Element 13.</p>
+      <heading id="h-00040-en" level="1">Comparative Example 4</heading>
+      <heading id="h-00041-en" level="1">Dispersion Element 16</heading>
+      <p id="p-00187-en" num="0161">A Dispersion Element 16 was manufactured in the same manner as in Example 4 except that the processing time of the ultrasonic homogenizer was changed from 1 hour to 20 minutes.</p>
+      <p id="p-00188-en" num="0162">Ink Recipe</p>
+      <p id="p-00189-en" num="0163">Ink for inkjet recording was manufactured in the same manner as in Example 4 except that the Dispersion Element 4 was changed to the Dispersion Element 16</p>
+      <heading id="h-00042-en" level="1">Comparative Example 5</heading>
+      <heading id="h-00043-en" level="1">Dispersion Element 17</heading>
+      <p id="p-00190-en" num="0164">A Dispersion Element 17 having a pigment concentration of 15% by weight was manufactured in the same manner as in Example 3 except that the dispersion processing time of the ultra aspec mill (UAMO 15 type, manufactured by KOTOBUKI INDUSTRIES CO., LTD.) was changed from 1 hour to 20 minutes.</p>
+      <p id="p-00191-en" num="0165">Ink Recipe</p>
+      <p id="p-00192-en" num="0166">Ink for inkjet recording was manufactured in the same manner as in Example 3 except that the Dispersion Element 3 was changed to the Dispersion Element 17.</p>
+      <heading id="h-00044-en" level="1">Comparative Example 6</heading>
+      <heading id="h-00045-en" level="1">Pigment Derivative</heading>
+      <p id="p-00193-en" num="0167" />
+      <p id="p-00194-en" num="0000">
+        <tables id="tables-00015-en" num="00015">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="140pt" align="left" />
+              <colspec colname="2" colwidth="63pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Hostaperm Pink EB trans.</entry>
+                  <entry> 60 parts</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(manufactured by Clariant Japan K.K.)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Fuming sulfuric acid (28% by weight SO<sub>3</sub>)</entry>
+                  <entry>156 parts</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Strong sulfuric acid (98% by weight H<sub>2</sub>SO<sub>4</sub>)</entry>
+                  <entry>624 parts</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00195-en" num="0168">Using the method of Example 1 disclosed in JP-2007-169359-A, the fuming sulfuric acid and the strong sulfuric acid were mixed and a pigment (Hostaperm Pink EB trans.) was poured in to the mixture while stirring at room temperature. After four hour stirring, the resultant was poured into 1,500 parts of ice water. After 30 minute aging, the product was filtrated followed by washing with 300 parts of pure water. The resultant was placed into 2,000 parts of pure water and the pH of the system was adjusted to pH 7 or higher. Subsequent to filtration, the obtained wet crystal was dried at 80° C. followed by repeating washing, filtration, and drying 10 times to obtain 65 parts by weight of a pigment derivative RS-A.</p>
+      <p id="p-00196-en" num="0169">Thereafter, RSA was mixed with pure water followed by dialysis using a dialysis module to obtain a pigment derivative RS-Ad.</p>
+      <heading id="h-00046-en" level="1">Dispersion Element 18</heading>
+      <p id="p-00197-en" num="0170" />
+      <p id="p-00198-en" num="0000">
+        <tables id="tables-00016-en" num="00016">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="147pt" align="left" />
+              <colspec colname="2" colwidth="56pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Hostaperm Pink EB trans.</entry>
+                  <entry> 96 parts</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(manufactured by Clariant Japan K.K.)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Rs-Ad (dialysis product of the pigment derivative</entry>
+                  <entry> 24 parts</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>obtained by sulfonizing the pigment)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Triethylene glycol</entry>
+                  <entry>180 parts</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Deionized water</entry>
+                  <entry>700 parts</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00199-en" num="0171">Using the method of Example 18 disclosed in JP-2007-169359-A, a Dispersion Element 18 was prepared.</p>
+      <p id="p-00200-en" num="0172">Ink Recipe</p>
+      <p id="p-00201-en" num="0000">
+        <tables id="tables-00017-en" num="00017">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="35pt" align="left" />
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="105pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Dispersion Element 18</entry>
+                  <entry>41.7 parts</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Glycerin</entry>
+                  <entry>12.0 parts</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ethylene glycol</entry>
+                  <entry> 2.8 parts</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Triethanol amine</entry>
+                  <entry> 0.2 parts</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Deionized water</entry>
+                  <entry>43.3 parts</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00202-en" num="0173">Using the method of Example 18 disclosed in JP-2007-169359-A, ink for inkjet recording was prepared.</p>
+      <p id="p-00203-en" num="0174">The evaluation items and the evaluation methods for the dispersion elements and the ink for inkjet recording manufactured in Examples and Comparative Examples are described below.</p>
+      <p id="p-00204-en" num="0175">1. Measuring of Absorbance</p>
+      <p id="p-00205-en" num="0176">A spectrophotometer (U-3310, manufactured by Hitachi Ltd.) was used to measure the absorbance. Pure water was put in a quartz glass cell of the reference and the cell was set in the spectrophotometer. The pigment ink in the present disclosure had a pigment concentration of 6% and the liquid concentrate thereof was not measurable because it was too thick. For this reason, the pigment was diluted with pure water to 1/1,200 and set in the quartz glass cell having a light path length of 10 mm of the spectrophotometer. The cell was set in the spectrophotometer. By scanning the cell at least with a sampling gap of 5 nm or less in the visible light range, an absorption spectroscopy illustrated in <figref>FIG. 5</figref> was obtained. <figref>FIG. 5</figref> is a graph illustrating the absorption spectrum of the ink of Example 1. By reading the absorbance X in the wavelength from 400 nm to 450 nm, the absorbance Y of the maximum peak in the wavelength from 500 nm to 550 nm, and the absorbance Z of the maximum peak in the wavelength from 550 nm to 600 nm, the values in Example 1 were obtained and the results are shown in Table 4. <figref>FIG. 6</figref> is graphs of absorption spectroscopy of Examples 1 and 2 and Comparative Example 5. The absorbances X, Y, and Z and the ratios of X/Y and Z/Y of each Example and Comparative Example are shown in Table 4.</p>
+      <p id="p-00206-en" num="0177">2. Evaluation of Discharging Stability</p>
+      <p id="p-00207-en" num="0178">The ink for inkjet recording manufactured in Examples and Comparative Examples was supplied to a printer IPSiO GX e5500, manufacture by RICOH CO., LTD.) having a configuration illustrated in <figref>FIGS. 1 and 2</figref> and evaluated about the discharging stability by the following method.</p>
+      <p id="p-00208-en" num="0179">Images were continuously printed for 10 minutes using the printer. After leaving the printer at 50° C. and 60% RH for one month with a moisture retention cap on the head surface while the ink was attached thereto, the head was returned to the same state as before the leaving after cleaning the head.</p>
+      <p id="p-00209-en" num="0180">Thereafter, an intermittent printing test was conducted under the following conditions and the discharging stability was evaluated.</p>
+      <p id="p-00210-en" num="0181">That is, the following printing pattern chart was printed on 20 sheets continuously and printing was halt for 20 minutes. This cycle was repeated 50 times to print the chart on 1,000 sheets in total and thereafter the printing pattern chart was printed on one more sheet, which was observed with eyes to evaluate the image with regard to streaks, white out, disturbance of spraying of 5% chart solid portion according to the following criteria. The printing pattern had a printing area of 5% for each color in the entire imaging area of the sheet and was printed with each ink under 100% duty. The printing condition was that the recording density was 600 dpi×300 dpi with one pass printing. In the evaluation criteria, E and G are allowable. The results are shown in Table 5.</p>
+      <p id="p-00211-en" num="0182">Evaluation Criteria</p>
+      <p id="p-00212-en" num="0183">E (Excellent): No streaks, no white out, no spraying disturbance observed in the solid portion</p>
+      <p id="p-00213-en" num="0184">G (Good): Slight streaks, white out, spraying disturbance observed in the solid portion</p>
+      <p id="p-00214-en" num="0185">F (Fair): Streaks, white out, spraying disturbance observed in the solid portion</p>
+      <p id="p-00215-en" num="0186">B (Bad): Streaks, white out, spraying disturbance observed all over the solid portion</p>
+      <p id="p-00216-en" num="0187">3. Measuring of Curl</p>
+      <p id="p-00217-en" num="0188">The ink for inkjet recording manufactured in Examples and Comparative Examples was installed in a printer IPSiO GX e5500, manufacture by RICOH CO., LTD.) having a configuration illustrated in <figref>FIGS. 1 and 2</figref> and evaluated about the discharging stability by the following method. The attachment amount of ink was adjusted from 300 mg to 340 mg/A4 and the image obtained 10 minutes after printing was placed on a flat desk with the image face down to measure the distance between the surface of the edge and the reference surface by a scale. The average of the measurement values at the right edge and the left edge of the paper was determined as the amount of curl. The evaluation results by the following criteria are shown in Table 5. E and G are allowable.</p>
+      <p id="p-00218-en" num="0189">Evaluation Sheet</p>
+      <p id="p-00219-en" num="0190">Recording Sheet A: BP-PAPER GF-500 (A4, manufactured by Canon Inc.)</p>
+      <p id="p-00220-en" num="0191">Evaluation Criteria</p>
+      <p id="p-00221-en" num="0000">
+        <tables id="tables-00018-en" num="00018">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="168pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>E (Excellent):</entry>
+                  <entry>Less than 5 mm</entry>
+                </row>
+                <row>
+                  <entry>G (Good):</entry>
+                  <entry>5 mm to less than 20 mm</entry>
+                </row>
+                <row>
+                  <entry>F (Fair):</entry>
+                  <entry>20 mm to less than 50 mm</entry>
+                </row>
+                <row>
+                  <entry>B (Bad):</entry>
+                  <entry>Both edges so curled that paper has a cylinder-like form</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00222-en" num="0192">4. Measuring of Saturation</p>
+      <p id="p-00223-en" num="0193">The ink for inkjet recording manufactured in Examples and Comparative Examples were supplied to an inkjet printer (IPSiO GX e5500, manufactured by RICOH CO., LTD.) and a solid image was printed with one pass. The solid image was printed on the following recording media A, B, and C. After the image was dried, the luminance thereof was measured by a reflection type color spectrodensitometer (X-Rite 938, manufactured by X-Rite Incorporate).</p>
+      <p id="p-00224-en" num="0194">From the obtained values a* and b*, the saturation C* (={(a)<sup>2</sup>+(b*)<sup>2</sup>)}<sup>1/2</sup>) was calculated and the ratio k (=C*/C*<sub>0</sub>) of C* to C*<sub>0</sub>=74.55, which is the saturation value of standard color (Japan Color ver. 2) was also calculated followed by evaluation according to the following criteria. The results are shown in Table 5. E and G are allowable in the evaluation criteria.</p>
+      <p id="p-00225-en" num="0195">Evaluation Sheet</p>
+      <p id="p-00226-en" num="0196">Recording Sheet A: BP-PAPER GF-500 (A4, manufactured by Canon Inc.)</p>
+      <p id="p-00227-en" num="0197">Recording Sheet B: MIRROR COAT Platinum (manufactured by OJI PAPER CO., LTD.)</p>
+      <p id="p-00228-en" num="0198">Recording Sheet C: Crispia (manufactured by Seiko Epson Corp.)</p>
+      <p id="p-00229-en" num="0199">Evaluation Criteria</p>
+      <p id="p-00230-en" num="0200">E (Excellent): k≧1.1</p>
+      <p id="p-00231-en" num="0201">G (Good): 1.1&gt;k≧1.0</p>
+      <p id="p-00232-en" num="0202">G (Good): 1.0&gt;k≧0.9</p>
+      <p id="p-00233-en" num="0203">B (Bad): 0.9&gt;k</p>
+      <p id="p-00234-en" num="0204">5. Measuring of Gloss (60°)</p>
+      <p id="p-00235-en" num="0205">The ink for inkjet recording manufactured in Examples and Comparative Examples were supplied to an inkjet printer (IPSiO GX e5500, manufactured by RICOH CO., LTD.) and a solid image was printed with one pass.</p>
+      <p id="p-00236-en" num="0206">The solid image was printed on the following recording media B and C. After the image was dried, the 60° gloss of the image was measured by BYK GARDNER 4501 (manufactured by BYK GARDNER CO., LTD.). The difference ΔG (=|G<sub>0</sub>−G|) of the gloss X between the gloss G0 of 0 gradation (surface of a recording medium on which no image was printed) and each gradation other than 0 gradation was calculated and evaluated according to the following evaluation criteria. The results are shown in Table 5. E and G are allowable in the evaluation criteria.</p>
+      <p id="p-00237-en" num="0207">Evaluation Sheet</p>
+      <p id="p-00238-en" num="0208">Recording Sheet B: MIRROR COAT Platinum (manufactured by OJI PAPER CO., LTD.): G<sub>0</sub>=73.8</p>
+      <p id="p-00239-en" num="0209">Recording Sheet C: Crispia (manufactured by Seiko Epson Corp.): G<sub>0</sub>=64.4</p>
+      <p id="p-00240-en" num="0210">Evaluation Criteria</p>
+      <p id="p-00241-en" num="0211">E (Excellent): |ΔG|≦10</p>
+      <p id="p-00242-en" num="0212">G (Good): 10&lt;|ΔG|≦20</p>
+      <p id="p-00243-en" num="0213">F (Fair): 20&lt;|ΔG|≦40</p>
+      <p id="p-00244-en" num="0214">B (Bad): 40&lt;|ΔG|</p>
+      <p id="p-00245-en" num="0215">6. Light Resistance</p>
+      <p id="p-00246-en" num="0216">The ink for inkjet recording manufactured in Examples and Comparative Examples were supplied to an inkjet printer (IPSiO GX e5500, manufactured by RICOH CO., LTD.) and a solid image was printed with one pass.</p>
+      <p id="p-00247-en" num="0217">The following recording sheet C was used for evaluation. After printing and drying, the image was irradiated at a black panel temperature of 63° C. for 24 hours by a Xenon feed meter. The change in the image density before and after the irradiation was measured by a reflection type color spectrodensitometer (manufactured by X-Rite Incorporated) to obtain a color deterioration ratio t (%) according to the following Relation.</p>
+      <p id="p-00248-en" num="0000">[in-line-formulae]<i>t </i>(%)=[1−(image density after irradiation)/(image density before irradiation)]×100[/in-line-formulae]</p>
+      <p id="p-00249-en" num="0218">The results are shown in Table 5. E and G are allowable in the evaluation criteria.</p>
+      <p id="p-00250-en" num="0219">Evaluation Sheet</p>
+      <p id="p-00251-en" num="0220">Recording Sheet C: Crispia (manufactured by Seiko Epson Corp.)</p>
+      <p id="p-00252-en" num="0221">Evaluation Criteria</p>
+      <p id="p-00253-en" num="0222">E (Excellent): t≦5%</p>
+      <p id="p-00254-en" num="0223">G (Good): 5%&lt;t≦10%</p>
+      <p id="p-00255-en" num="0224">F (Fair): 10%&lt;t≦20%</p>
+      <p id="p-00256-en" num="0225">B (Bad): 20%&lt;t</p>
+      <p id="p-00257-en" num="0000">
+        <tables id="tables-00019-en" num="00019">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="266pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="1" rowsep="1">TABLE 3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="1" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Ink Composition</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="35pt" align="center" />
+              <colspec colname="2" colwidth="231pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Liquid</entry>
+                  <entry>Aqueous Solvent</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="12" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="21pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <colspec colname="5" colwidth="21pt" align="center" />
+              <colspec colname="6" colwidth="14pt" align="center" />
+              <colspec colname="7" colwidth="21pt" align="center" />
+              <colspec colname="8" colwidth="21pt" align="center" />
+              <colspec colname="9" colwidth="21pt" align="center" />
+              <colspec colname="10" colwidth="21pt" align="center" />
+              <colspec colname="11" colwidth="28pt" align="center" />
+              <colspec colname="12" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Ink</entry>
+                  <entry>Dispersion</entry>
+                  <entry>GLY</entry>
+                  <entry>EGMBE</entry>
+                  <entry>EG</entry>
+                  <entry>2P</entry>
+                  <entry>13BD</entry>
+                  <entry>MBD</entry>
+                  <entry>EHO</entry>
+                  <entry>IPG</entry>
+                  <entry>DMPA</entry>
+                  <entry>DBPA</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="12" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Example 1</entry>
+                  <entry>40%</entry>
+                  <entry>20%</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>10%</entry>
+                  <entry />
+                  <entry>10%</entry>
+                </row>
+                <row>
+                  <entry>Example 2</entry>
+                  <entry>40%</entry>
+                  <entry>20%</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry> 5%</entry>
+                  <entry />
+                  <entry />
+                  <entry>10%</entry>
+                  <entry />
+                  <entry>5%</entry>
+                </row>
+                <row>
+                  <entry>Example 3</entry>
+                  <entry>40%</entry>
+                  <entry>20%</entry>
+                  <entry>15%</entry>
+                  <entry />
+                  <entry>5%</entry>
+                </row>
+                <row>
+                  <entry>Example 4</entry>
+                  <entry>40%</entry>
+                  <entry>20%</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>10%</entry>
+                  <entry> 5%</entry>
+                  <entry />
+                  <entry>10%</entry>
+                </row>
+                <row>
+                  <entry>Example 5</entry>
+                  <entry>40%</entry>
+                  <entry>20%</entry>
+                  <entry />
+                  <entry />
+                  <entry>5%</entry>
+                  <entry />
+                  <entry>15%</entry>
+                </row>
+                <row>
+                  <entry>Example 6</entry>
+                  <entry>40%</entry>
+                  <entry>20%</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>10%</entry>
+                  <entry>10%</entry>
+                </row>
+                <row>
+                  <entry>Example 7</entry>
+                  <entry>40%</entry>
+                  <entry>20%</entry>
+                  <entry>10%</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry> 5%</entry>
+                  <entry />
+                  <entry>5%</entry>
+                </row>
+                <row>
+                  <entry>Example 8</entry>
+                  <entry>40%</entry>
+                  <entry>20%</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>20%</entry>
+                </row>
+                <row>
+                  <entry>Example 9</entry>
+                  <entry>40%</entry>
+                  <entry>20%</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry> 5%</entry>
+                  <entry>10%</entry>
+                  <entry>5%</entry>
+                </row>
+                <row>
+                  <entry>Example 10</entry>
+                  <entry>40%</entry>
+                  <entry>20%</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>20%</entry>
+                </row>
+                <row>
+                  <entry>Example 11</entry>
+                  <entry>40%</entry>
+                  <entry>20%</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry> 5%</entry>
+                  <entry />
+                  <entry />
+                  <entry> 5%</entry>
+                </row>
+                <row>
+                  <entry>Example 12</entry>
+                  <entry>40%</entry>
+                  <entry>20%</entry>
+                  <entry>10%</entry>
+                  <entry />
+                  <entry>5%</entry>
+                  <entry> 5%</entry>
+                  <entry />
+                  <entry>10%</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>40%</entry>
+                  <entry>20%</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>20%</entry>
+                </row>
+                <row>
+                  <entry>Example 1</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>40%</entry>
+                  <entry>20%</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry> 5%</entry>
+                  <entry />
+                  <entry />
+                  <entry>10%</entry>
+                  <entry />
+                  <entry>5%</entry>
+                </row>
+                <row>
+                  <entry>Example 2</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>40%</entry>
+                  <entry>20%</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>10%</entry>
+                  <entry>10%</entry>
+                </row>
+                <row>
+                  <entry>Example 3</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>40%</entry>
+                  <entry>20%</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>10%</entry>
+                  <entry> 5%</entry>
+                  <entry />
+                  <entry>10%</entry>
+                </row>
+                <row>
+                  <entry>Example 4</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>40%</entry>
+                  <entry>20%</entry>
+                  <entry>15%</entry>
+                  <entry />
+                  <entry>5%</entry>
+                </row>
+                <row>
+                  <entry>Example 5</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>41.7%<sup> </sup></entry>
+                  <entry>12%</entry>
+                  <entry />
+                  <entry>2.8%</entry>
+                </row>
+                <row>
+                  <entry>Example 6</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="12" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="49pt" align="left" />
+              <colspec colname="1" colwidth="259pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Ink Composition</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="210pt" align="left" />
+              <colspec colname="1" colwidth="63pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Anti-septic</entry>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="49pt" align="left" />
+              <colspec colname="1" colwidth="98pt" align="center" />
+              <colspec colname="2" colwidth="63pt" align="center" />
+              <colspec colname="3" colwidth="63pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Penetrating Agent</entry>
+                  <entry>pH adjuster</entry>
+                  <entry>and anti-</entry>
+                  <entry>Deionized</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="21pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <colspec colname="5" colwidth="35pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="63pt" align="center" />
+              <colspec colname="8" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Ink</entry>
+                  <entry>2E13HD</entry>
+                  <entry>LS</entry>
+                  <entry>DSN</entry>
+                  <entry>AEPD</entry>
+                  <entry>TEA</entry>
+                  <entry>fungal agent LV</entry>
+                  <entry>water</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Example 1</entry>
+                  <entry>2%</entry>
+                  <entry />
+                  <entry>0.05%</entry>
+                  <entry>0.5%</entry>
+                  <entry />
+                  <entry>0.1%</entry>
+                  <entry>17.35%</entry>
+                </row>
+                <row>
+                  <entry>Example 2</entry>
+                  <entry>2%</entry>
+                  <entry />
+                  <entry>0.05%</entry>
+                  <entry>0.5%</entry>
+                  <entry />
+                  <entry>0.1%</entry>
+                  <entry>17.35%</entry>
+                </row>
+                <row>
+                  <entry>Example 3</entry>
+                  <entry>2%</entry>
+                  <entry>1%</entry>
+                  <entry />
+                  <entry>0.5%</entry>
+                  <entry />
+                  <entry>0.1%</entry>
+                  <entry>16.40%</entry>
+                </row>
+                <row>
+                  <entry>Example 4</entry>
+                  <entry>2%</entry>
+                  <entry>1%</entry>
+                  <entry />
+                  <entry>0.5%</entry>
+                  <entry />
+                  <entry>0.1%</entry>
+                  <entry>11.40%</entry>
+                </row>
+                <row>
+                  <entry>Example 5</entry>
+                  <entry>2%</entry>
+                  <entry />
+                  <entry>0.05%</entry>
+                  <entry>0.5%</entry>
+                  <entry />
+                  <entry>0.1%</entry>
+                  <entry>17.35%</entry>
+                </row>
+                <row>
+                  <entry>Example 6</entry>
+                  <entry>2%</entry>
+                  <entry>1%</entry>
+                  <entry />
+                  <entry>0.5%</entry>
+                  <entry />
+                  <entry>0.1%</entry>
+                  <entry>16.40%</entry>
+                </row>
+                <row>
+                  <entry>Example 7</entry>
+                  <entry>2%</entry>
+                  <entry />
+                  <entry>0.05%</entry>
+                  <entry>0.5%</entry>
+                  <entry />
+                  <entry>0.1%</entry>
+                  <entry>17.35%</entry>
+                </row>
+                <row>
+                  <entry>Example 8</entry>
+                  <entry>2%</entry>
+                  <entry>1%</entry>
+                  <entry />
+                  <entry>0.5%</entry>
+                  <entry />
+                  <entry>0.1%</entry>
+                  <entry>16.40%</entry>
+                </row>
+                <row>
+                  <entry>Example 9</entry>
+                  <entry>2%</entry>
+                  <entry />
+                  <entry>0.05%</entry>
+                  <entry>0.5%</entry>
+                  <entry />
+                  <entry>0.1%</entry>
+                  <entry>17.35%</entry>
+                </row>
+                <row>
+                  <entry>Example 10</entry>
+                  <entry>2%</entry>
+                  <entry>1%</entry>
+                  <entry />
+                  <entry>0.5%</entry>
+                  <entry />
+                  <entry>0.1%</entry>
+                  <entry>16.40%</entry>
+                </row>
+                <row>
+                  <entry>Example 11</entry>
+                  <entry>2%</entry>
+                  <entry>1%</entry>
+                  <entry />
+                  <entry>0.5%</entry>
+                  <entry />
+                  <entry>0.1%</entry>
+                  <entry>16.40%</entry>
+                </row>
+                <row>
+                  <entry>Example 12</entry>
+                  <entry>2%</entry>
+                  <entry />
+                  <entry>0.05%</entry>
+                  <entry>0.5%</entry>
+                  <entry />
+                  <entry>0.1%</entry>
+                  <entry>17.35%</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>2%</entry>
+                  <entry>1%</entry>
+                  <entry />
+                  <entry>0.5%</entry>
+                  <entry />
+                  <entry>0.1%</entry>
+                  <entry>16.40%</entry>
+                </row>
+                <row>
+                  <entry>Example 1</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>2%</entry>
+                  <entry />
+                  <entry>0.05%</entry>
+                  <entry>0.5%</entry>
+                  <entry />
+                  <entry>0.1%</entry>
+                  <entry>17.35%</entry>
+                </row>
+                <row>
+                  <entry>Example 2</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>2%</entry>
+                  <entry>1%</entry>
+                  <entry />
+                  <entry>0.5%</entry>
+                  <entry />
+                  <entry>0.1%</entry>
+                  <entry>16.40%</entry>
+                </row>
+                <row>
+                  <entry>Example 3</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>2%</entry>
+                  <entry>1%</entry>
+                  <entry />
+                  <entry>0.5%</entry>
+                  <entry />
+                  <entry>0.1%</entry>
+                  <entry>11.40%</entry>
+                </row>
+                <row>
+                  <entry>Example 4</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>2%</entry>
+                  <entry>1%</entry>
+                  <entry />
+                  <entry>0.5%</entry>
+                  <entry />
+                  <entry>0.1%</entry>
+                  <entry>16.40%</entry>
+                </row>
+                <row>
+                  <entry>Example 5</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>0.2%</entry>
+                  <entry />
+                  <entry>43.30%</entry>
+                </row>
+                <row>
+                  <entry>Example 6</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00001-en">GLY: Glycerin</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00002-en">EGMBE: Ethylene glycol monobutyl ether</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00003-en">EG: Ethylene glycol</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00004-en">2P 2-pyrroridone</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00005-en">13BD 1,3-butane diol</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00006-en">MBD 3-methyl-1,3-butane diol</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00007-en">EHO 3-ethyl-3-hydroxymethyl oxetane</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00008-en">IPG Isopropylidene glycerol</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00009-en">DMPA N,N-dimethyl-β-methoxypropion amide</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00010-en">DBPA N,N-dimethyl-β-buthoxypropion amide</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00011-en">2E13HD 2-ethyl-1,3-hexane diol</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00012-en">LS Emulgen LS-106 (polyoxyethylene polyoxypropylene alkyl ether, manufactured by KAO Corporation)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00013-en">DSN Chemical Formula 5</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00014-en">APED 2-amino-2-ethyl-1,3-propane diol</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00015-en">TEA triethanol amine</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00016-en">LV Proxel ™ LV (anti-septic and anti-fungal agent, manufactured by ARCH CHEMICALS JAPAN, INC.)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00258-en" num="0000">
+        <tables id="tables-00020-en" num="00020">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="56pt" align="left" />
+              <colspec colname="1" colwidth="42pt" align="center" />
+              <colspec colname="2" colwidth="21pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="42pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="5" rowsep="1">TABLE 4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>X/Y</entry>
+                  <entry>Z/Y</entry>
+                  <entry>X</entry>
+                  <entry>Y</entry>
+                  <entry>Z</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="5" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="21pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="char" char="." />
+              <colspec colname="5" colwidth="21pt" align="center" />
+              <colspec colname="6" colwidth="42pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Example 1</entry>
+                  <entry>0.090</entry>
+                  <entry>1.049</entry>
+                  <entry>0.110</entry>
+                  <entry>1.220</entry>
+                  <entry>1.280</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 2</entry>
+                  <entry>03065</entry>
+                  <entry>0.718</entry>
+                  <entry>0.080</entry>
+                  <entry>1.240</entry>
+                  <entry>0.890</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 3</entry>
+                  <entry>0.117</entry>
+                  <entry>1.042</entry>
+                  <entry>0.140</entry>
+                  <entry>1.200</entry>
+                  <entry>1.250</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 4</entry>
+                  <entry>0.050</entry>
+                  <entry>0.765</entry>
+                  <entry>0.060</entry>
+                  <entry>1.190</entry>
+                  <entry>0.910</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 5</entry>
+                  <entry>0.104</entry>
+                  <entry>1.040</entry>
+                  <entry>0.130</entry>
+                  <entry>1.250</entry>
+                  <entry>1.300</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 6</entry>
+                  <entry>0.080</entry>
+                  <entry>0.976</entry>
+                  <entry>0.100</entry>
+                  <entry>1.250</entry>
+                  <entry>1.220</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 7</entry>
+                  <entry>0.106</entry>
+                  <entry>1.000</entry>
+                  <entry>0.130</entry>
+                  <entry>1.230</entry>
+                  <entry>1.230</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 8</entry>
+                  <entry>0.119</entry>
+                  <entry>1.017</entry>
+                  <entry>0.140</entry>
+                  <entry>1.180</entry>
+                  <entry>1.200</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 9</entry>
+                  <entry>0.100</entry>
+                  <entry>1.008</entry>
+                  <entry>0.12</entry>
+                  <entry>1.200</entry>
+                  <entry>1.210</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 10</entry>
+                  <entry>0.112</entry>
+                  <entry>1.034</entry>
+                  <entry>0.13</entry>
+                  <entry>1.160</entry>
+                  <entry>1.200</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 11</entry>
+                  <entry>0.067</entry>
+                  <entry>0.767</entry>
+                  <entry>0.08</entry>
+                  <entry>1.200</entry>
+                  <entry>0.920</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 12</entry>
+                  <entry>0.089</entry>
+                  <entry>0.968</entry>
+                  <entry>0.11</entry>
+                  <entry>1.240</entry>
+                  <entry>1.200</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Comparative</entry>
+                  <entry>0.118</entry>
+                  <entry>1.109</entry>
+                  <entry>0.140</entry>
+                  <entry>1.190</entry>
+                  <entry>1.320</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Comparative</entry>
+                  <entry>0.056</entry>
+                  <entry>0.688</entry>
+                  <entry>0.070</entry>
+                  <entry>1.250</entry>
+                  <entry>0.860</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Comparative</entry>
+                  <entry>0.137</entry>
+                  <entry>1.048</entry>
+                  <entry>0.170</entry>
+                  <entry>1.240</entry>
+                  <entry>1.300</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Comparative</entry>
+                  <entry>0.048</entry>
+                  <entry>—</entry>
+                  <entry>0.060</entry>
+                  <entry>1.260</entry>
+                  <entry>No peak</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Comparative</entry>
+                  <entry>0.150</entry>
+                  <entry>1.233</entry>
+                  <entry>0.180</entry>
+                  <entry>1.200</entry>
+                  <entry>1.480</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Comparative</entry>
+                  <entry>0.169</entry>
+                  <entry>0.965</entry>
+                  <entry>0.175</entry>
+                  <entry>1.036</entry>
+                  <entry>1.000</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00259-en" num="0000">
+        <tables id="tables-00021-en" num="00021">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="42pt" align="center" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="84pt" align="center" />
+              <colspec colname="4" colwidth="56pt" align="center" />
+              <colspec colname="5" colwidth="35pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="5" rowsep="1">TABLE 5</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Light</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Discharging</entry>
+                  <entry>Curling</entry>
+                  <entry>Saturation</entry>
+                  <entry>Gloss</entry>
+                  <entry>Resistance</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="42pt" align="center" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <colspec colname="8" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Stability</entry>
+                  <entry>Sheet A</entry>
+                  <entry>Sheet A</entry>
+                  <entry>Sheet B</entry>
+                  <entry>Sheet C</entry>
+                  <entry>Sheet B</entry>
+                  <entry>Sheet C</entry>
+                  <entry>Sheet C</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="8" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <colspec colname="8" colwidth="28pt" align="center" />
+              <colspec colname="9" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Example 1</entry>
+                  <entry>E</entry>
+                  <entry>E</entry>
+                  <entry>E</entry>
+                  <entry>E</entry>
+                  <entry>E</entry>
+                  <entry>G</entry>
+                  <entry>E</entry>
+                  <entry>E</entry>
+                </row>
+                <row>
+                  <entry>Example 2</entry>
+                  <entry>E</entry>
+                  <entry>E</entry>
+                  <entry>G</entry>
+                  <entry>E</entry>
+                  <entry>E</entry>
+                  <entry>E</entry>
+                  <entry>E</entry>
+                  <entry>G</entry>
+                </row>
+                <row>
+                  <entry>Example 3</entry>
+                  <entry>E</entry>
+                  <entry>G</entry>
+                  <entry>E</entry>
+                  <entry>E</entry>
+                  <entry>E</entry>
+                  <entry>G</entry>
+                  <entry>G</entry>
+                  <entry>E</entry>
+                </row>
+                <row>
+                  <entry>Example 4</entry>
+                  <entry>E</entry>
+                  <entry>E</entry>
+                  <entry>G</entry>
+                  <entry>G</entry>
+                  <entry>E</entry>
+                  <entry>E</entry>
+                  <entry>E</entry>
+                  <entry>G</entry>
+                </row>
+                <row>
+                  <entry>Example 5</entry>
+                  <entry>E</entry>
+                  <entry>G</entry>
+                  <entry>E</entry>
+                  <entry>E</entry>
+                  <entry>G</entry>
+                  <entry>G</entry>
+                  <entry>G</entry>
+                  <entry>E</entry>
+                </row>
+                <row>
+                  <entry>Example 6</entry>
+                  <entry>E</entry>
+                  <entry>G</entry>
+                  <entry>G</entry>
+                  <entry>G</entry>
+                  <entry>G</entry>
+                  <entry>E</entry>
+                  <entry>E</entry>
+                  <entry>G</entry>
+                </row>
+                <row>
+                  <entry>Example 7</entry>
+                  <entry>G</entry>
+                  <entry>E</entry>
+                  <entry>G</entry>
+                  <entry>G</entry>
+                  <entry>E</entry>
+                  <entry>G</entry>
+                  <entry>G</entry>
+                  <entry>E</entry>
+                </row>
+                <row>
+                  <entry>Example 8</entry>
+                  <entry>G</entry>
+                  <entry>G</entry>
+                  <entry>E</entry>
+                  <entry>G</entry>
+                  <entry>G</entry>
+                  <entry>G</entry>
+                  <entry>G</entry>
+                  <entry>E</entry>
+                </row>
+                <row>
+                  <entry>Example 9</entry>
+                  <entry>G</entry>
+                  <entry>E</entry>
+                  <entry>G</entry>
+                  <entry>E</entry>
+                  <entry>G</entry>
+                  <entry>G</entry>
+                  <entry>G</entry>
+                  <entry>E</entry>
+                </row>
+                <row>
+                  <entry>Example 10</entry>
+                  <entry>G</entry>
+                  <entry>G</entry>
+                  <entry>E</entry>
+                  <entry>G</entry>
+                  <entry>G</entry>
+                  <entry>E</entry>
+                  <entry>G</entry>
+                  <entry>E</entry>
+                </row>
+                <row>
+                  <entry>Example 11</entry>
+                  <entry>E</entry>
+                  <entry>E</entry>
+                  <entry>G</entry>
+                  <entry>E</entry>
+                  <entry>E</entry>
+                  <entry>G</entry>
+                  <entry>E</entry>
+                  <entry>G</entry>
+                </row>
+                <row>
+                  <entry>Example 12</entry>
+                  <entry>E</entry>
+                  <entry>G</entry>
+                  <entry>E</entry>
+                  <entry>G</entry>
+                  <entry>G</entry>
+                  <entry>G</entry>
+                  <entry>G</entry>
+                  <entry>E</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>F</entry>
+                  <entry>G</entry>
+                  <entry>G</entry>
+                  <entry>F</entry>
+                  <entry>F</entry>
+                  <entry>B</entry>
+                  <entry>B</entry>
+                  <entry>E</entry>
+                </row>
+                <row>
+                  <entry>Example 1</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>E</entry>
+                  <entry>E</entry>
+                  <entry>F</entry>
+                  <entry>E</entry>
+                  <entry>E</entry>
+                  <entry>G</entry>
+                  <entry>E</entry>
+                  <entry>F</entry>
+                </row>
+                <row>
+                  <entry>Example 2</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>F</entry>
+                  <entry>F</entry>
+                  <entry>G</entry>
+                  <entry>G</entry>
+                  <entry>F</entry>
+                  <entry>F</entry>
+                  <entry>B</entry>
+                  <entry>G</entry>
+                </row>
+                <row>
+                  <entry>Example 3</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>E</entry>
+                  <entry>E</entry>
+                  <entry>G</entry>
+                  <entry>E</entry>
+                  <entry>E</entry>
+                  <entry>E</entry>
+                  <entry>E</entry>
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry>Example 4</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>G</entry>
+                  <entry>G</entry>
+                  <entry>F</entry>
+                  <entry>G</entry>
+                  <entry>F</entry>
+                  <entry>F</entry>
+                  <entry>F</entry>
+                  <entry>E</entry>
+                </row>
+                <row>
+                  <entry>Example 5</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>E</entry>
+                  <entry>B</entry>
+                  <entry>F</entry>
+                  <entry>G</entry>
+                  <entry>E</entry>
+                  <entry>B</entry>
+                  <entry>F</entry>
+                  <entry>E</entry>
+                </row>
+                <row>
+                  <entry>Example 6</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00260-en" num="0226">In the ink composition using the quinacridone pigment represented by the Chemical Formula 1, by making the ratios X/Y and Z/Y in the range of Relations 1 and 2, wherein X represents a minimum absorbance in a wavelength range of from 400 nm to 450 nm, Y represents an absorbance of a maximum peak in a wavelength range of from 500 nm to 550 nm, and Z represents an absorbance of a maximum peak in a wavelength range of from 550 nm to 600 nm, images having a vivid and clear coloring and gloss can be formed not only on plain paper but also on special glossy paper or coated paper and it is possible to provide an ink composition having a sufficient light resistance and an inkjet recording method and printed matter using the ink composition.</p>
+      <p id="p-00261-en" num="0227">Having now fully described embodiments of the present invention, it will be apparent to one of ordinary skill in the art that many changes and modifications can be made thereto without departing from the spirit and scope of embodiments of the invention as set forth herein.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>. An ink composition comprising:
+<claim-text>a pigment;</claim-text><claim-text>a hydrosoluble solvent; and</claim-text><claim-text>water,
+<claim-text>wherein the pigment is represented by the following chemical formula 1:</claim-text></claim-text></claim-text>
+      <claim-text>
+        <chemistry id="chemc-00001-en" num="00010">
+          <img id="imgc-00001-en" he="29.97mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150247047A1_00014.PNG" img-format="png" original="US20150247047A1-20150903-C00010.TIF" />
+        </chemistry><claim-text>where R represents hydrogen, an alkyl group having one to three carbon atoms, or chlorine,</claim-text><claim-text>wherein the ink composition satisfies the following relations 1 and 2:
+<claim-text>0.050 5≦<i>X/Y≦</i>0.120  Relation 1</claim-text><claim-text>0.700 5≦<i>Z/Y≦</i>1.050  Relation 2</claim-text></claim-text><claim-text>where X represents a minimum absorbance in a wavelength range of from 400 nm to 450 nm, Y represents an absorbance of a maximum peak in a wavelength range of from 500 nm to 550 nm, and Z represents an absorbance of a maximum peak in a wavelength range of from 550 nm to 600 nm.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>-<b>4</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>5</b>. An inkjet recording method comprising:
+<claim-text>applying thermal energy to the ink composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>; and</claim-text><claim-text>discharging the ink composition to form an image on a recording medium.</claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>6</b>. An inkjet recording method comprising:
+<claim-text>applying mechanical energy to the ink composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>; and</claim-text><claim-text>discharging the ink composition to form an image on a recording medium.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>7</b>. Printed matter comprising:
+<claim-text>a medium; and</claim-text><claim-text>an image formed on the medium with the ink composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>8</b>. Printed matter comprising:
+<claim-text>a medium; and</claim-text><claim-text>an image formed on the medium using the inkjet recording method of <claim-ref idref="clm-00003-en">claim 5</claim-ref>.</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>9</b>. The ink composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the composition satisfies the following relation 3:
+<claim-text>0.050≦<i>X/Y≦</i>0.117  Relation 3.</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>10</b>. The ink composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the pigment comprises a compound represented by the following Chemical Formula 1-1:</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00002-en" num="00011">
+          <img id="imgc-00002-en" he="29.97mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150247047A1_00015.PNG" img-format="png" original="US20150247047A1-20150903-C00011.TIF" />
+        </chemistry>
+      </claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>11</b>. The ink composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the pigment consists of a compound represented by the following chemical formula 1-1:</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00003-en" num="00012">
+          <img id="imgc-00003-en" he="29.97mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150247047A1_00016.PNG" img-format="png" original="US20150247047A1-20150903-C00012.TIF" />
+        </chemistry>
+      </claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>12</b>. The ink composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the hydrosoluble solvent comprises 2-pyrrolidone.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>13</b>. An ink cartridge comprising:
+<claim-text>a container having the ink composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref> therein.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>14</b>. An inkjet recording device comprising:
+<claim-text>the ink cartridge of <claim-ref idref="clm-00011-en">claim 13</claim-ref>.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>15</b>. An ink composition comprising:
+<claim-text>a pigment;</claim-text><claim-text>a hydrosoluble solvent comprising 2-pyrrolidone; and</claim-text><claim-text>water,</claim-text><claim-text>wherein the pigment comprises a compound represented by the following chemical formula 1-1:</claim-text></claim-text>
+      <claim-text>
+        <chemistry id="chemc-00004-en" num="00013">
+          <img id="imgc-00004-en" he="29.97mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150247047A1_00017.PNG" img-format="png" original="US20150247047A1-20150903-C00013.TIF" />
+        </chemistry><claim-text>wherein the ink composition satisfies the following relations 1 and 2:
+<claim-text>0.050≦<i>X/Y≦</i>0.117  Relation 1</claim-text><claim-text>0.700≦<i>Z/Y≦</i>1.050  Relation 2</claim-text></claim-text><claim-text>where X represents a minimum absorbance in a wavelength range of from 400 nm to 450 nm, Y represents an absorbance of a maximum peak in a wavelength range of from 500 nm to 550 nm, and Z represents an absorbance of a maximum peak in a wavelength range of from 550 nm to 600 nm.</claim-text></claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>16</b>. An ink composition comprising:
+<claim-text>a pigment;</claim-text><claim-text>a hydrosoluble solvent comprising 2-pyrrolidone; and</claim-text><claim-text>water,</claim-text><claim-text>wherein the pigment consists of a compound represented by the following chemical formula 1-1:</claim-text></claim-text>
+      <claim-text>
+        <chemistry id="chemc-00005-en" num="00014">
+          <img id="imgc-00005-en" he="29.97mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150247047A1_00018.PNG" img-format="png" original="US20150247047A1-20150903-C00014.TIF" />
+        </chemistry><claim-text>wherein the ink composition satisfies the following relations 1 and 2:
+<claim-text>0.050≦<i>X/Y≦</i>0.117  Relation 1</claim-text><claim-text>0.700≦<i>Z/Y≦</i>1.050  Relation 2</claim-text></claim-text><claim-text>where X represents a minimum absorbance in a wavelength range of from 400 nm to 450 nm, Y represents an absorbance of a maximum peak in a wavelength range of from 500 nm to 550 nm, and Z represents an absorbance of a maximum peak in a wavelength range of from 550 nm to 600 nm.</claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150247047A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247047A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150247047A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247047A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150247047A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247047A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150247047A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247047A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150247047A1_00005.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247047A1-20150903-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150247047A1_00006.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247047A1-20150903-C00002.TIF" inline="yes" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150247047A1_00007.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247047A1-20150903-C00003.TIF" inline="yes" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150247047A1_00008.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247047A1-20150903-C00004.TIF" inline="yes" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150247047A1_00009.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247047A1-20150903-C00005.TIF" inline="yes" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150247047A1_00010.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247047A1-20150903-C00006.TIF" inline="yes" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150247047A1_00011.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247047A1-20150903-C00007.TIF" inline="yes" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150247047A1_00012.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247047A1-20150903-C00008.TIF" inline="yes" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150247047A1_00013.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247047A1-20150903-C00009.TIF" inline="yes" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150247047A1_00014.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247047A1-20150903-C00010.TIF" inline="yes" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150247047A1_00015.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247047A1-20150903-C00011.TIF" inline="yes" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150247047A1_00016.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247047A1-20150903-C00012.TIF" inline="yes" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150247047A1_00017.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247047A1-20150903-C00013.TIF" inline="yes" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150247047A1_00018.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247047A1-20150903-C00014.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150247047A1.PDF" type="pdf" size="1292222" pages="20" />
+</lexisnexis-patent-document>

@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150245836A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021604" date-changed="20160118" time-changed="124556">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140894">
+        <country>US</country>
+        <doc-number>20150245836</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14712542</doc-number>
+        <date>20150514</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>A61B  17/062       20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>17</main-group>
+        <subgroup>062</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61B  17/04        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>17</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61B  17/29        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>17</main-group>
+        <subgroup>29</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>A61B  17/0625      20130101 FI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>17</main-group>
+        <subgroup>0625</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61B  17/0469      20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>17</main-group>
+        <subgroup>0469</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61B  17/0482      20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>17</main-group>
+        <subgroup>0482</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61B  17/2909      20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>17</main-group>
+        <subgroup>2909</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61B2017/00278     20130101 LA20150122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2017</main-group>
+        <subgroup>00278</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61B2017/00805     20130101 LA20150122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2017</main-group>
+        <subgroup>00805</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61B2017/00867     20130101 LA20150122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2017</main-group>
+        <subgroup>00867</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61B2017/00946     20130101 LA20150122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2017</main-group>
+        <subgroup>00946</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>A61B2017/047       20130101 LA20150122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2017</main-group>
+        <subgroup>047</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>A61B2017/06028     20130101 LA20150122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2017</main-group>
+        <subgroup>06028</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>A61B2017/2905      20130101 LA20150122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2017</main-group>
+        <subgroup>2905</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>A61B2017/2911      20130101 LA20150122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2017</main-group>
+        <subgroup>2911</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>A61B2017/2929      20130101 LA20150122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2017</main-group>
+        <subgroup>2929</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">DELIVERING PELVIC FLOOR REPAIR IMPLANTS</invention-title>
+    <related-documents date-changed="20150903">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13083076</doc-number>
+              <date>20110408</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>9044220</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007125</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61330227</doc-number>
+          <date>20100430</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Boston Scientific Scimed, Inc.</orgname>
+            <address>
+              <city>Maple Grove</city>
+              <state>MN</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Chu</last-name>
+            <first-name>Michael S.H.</first-name>
+            <address>
+              <city>Brookline</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173464210">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150245836</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150514</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173464209">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150245836</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150514</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A medical device for the delivery of pelvic floor repair implants within a pelvic region of a body includes a handle, an elongated shaft member, and a head. A method of delivering a pelvic floor repair implant in a transvaginal implant procedure includes inserting and deploying at least a portion of the medical device into a pelvic region of a body.</p>
+  </abstract>
+  <legal-data date-changed="20151226">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20151116</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015245836A1</docdb-publication-number>
+      <docdb-application-id>444207619</docdb-application-id>
+      <new-owner>BOSTON SCIENTIFIC SCIMED, INC., MINNESOTA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:CHU, MICHAEL S.H.;REEL/FRAME:037053/0178</free-text-description>
+      <effective-date>
+        <date>20150511</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application is a Continuation of, and claims priority to, U.S. patent application Ser. No. 13/083,076, filed on Apr. 8, 2011, entitled “DELIVERING PELVIC FLOOR REPAIR IMPLANTS”, which, in turn, claims priority to U.S. patent application Ser. No. 61/330,227, filed on Apr. 30, 2010, entitled “DELIVERING PELVIC FLOOR REPAIR IMPLANTS”, the disclosures of which are incorporated by reference herein in their entirety.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00002-en" num="0002">The invention relates to devices and methods for delivering pelvic floor repair and/or other implants, and more particularly, to minimally invasive devices and methods for delivering implants or sutures to a pelvic region of a body of a patient.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND</heading>
+      <p id="p-00003-en" num="0003">The delivery of a pelvic floor repair (PFR) implant is typically an invasive surgical procedure. For this surgical procedure, a large dissection can be required within the pelvic region of the human body to deliver a PFR implant.</p>
+      <p id="p-00004-en" num="0004">Some commercially available medical devices are limited by the manner in which they access the pelvic region of the human body. For example, such devices typically cannot be easily manipulated to access difficult areas within the pelvic region. In addition, these devices are generally cumbersome and rigid, and therefore they do not provide the maneuverability necessary to perform a PFR implant surgical procedure in a less invasive manner.</p>
+      <heading id="h-00004-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00005-en" num="0005">The invention relates to improvements in medical devices, including suturing devices and devices for use in the delivery of PFR and/or other implants. A medical device according to the invention is less invasive and more manipulatable relative to existing devices in the placement of PFR and/or other implants within a pelvic region of a human body. This is accomplished, for example, by devices according to the invention having reduced profile components compared to existing devices. A medical device according to the invention allows an operator to make a minimum dissection profile within a pelvic region such that the medical device may be inserted into the pelvic region to deliver a PFR and/or other implant in a less invasive manner while providing the patient with an expedited healing process. In contrast to existing commercial devices which require large dissection profiles of a pelvic region to deliver PFR implants, the dissection profile required by devices according to the invention are significantly smaller, such as equal or about equal to the diameter of an operator's finger, the profile of the medical device, or the profile of the PFR implant. A device according to the invention also can be used to deliver one or more sutures.</p>
+      <p id="p-00006-en" num="0006">In one aspect, the invention relates to a medical device for use in a transvaginal implant procedure. The medical device includes a handle, an elongated shaft member, and a head. The handle has a proximal end and a distal end. The handle also includes an actuator that is configured to be manipulated by an operator of the medical device. The elongated shaft member of the medical device defines a lumen that extends from the distal end of the handle. The elongated shaft member has a diameter that is minimally greater than a diameter of a wire form that extends longitudinally within the elongated shaft member. The elongated shaft member extends along a longitudinal axis when the elongated shaft member is disposed in a straight or a substantially straight configuration. The head of the medical device extends over a distal end of the elongated shaft member. The head has a length that is measured along the longitudinal axis of the elongated shaft member. The head also has a maximum width that is measured in a first direction that is transverse to the longitudinal axis of the elongated shaft member. In addition, the head has a thickness that measured in a second direction that is perpendicular to the first direction. The length of the head is greater than the maximum width of the head. Further, the maximum width of the head is greater than the thickness of the head. The thickness of the head is also greater than the diameter of the elongated shaft member. The head also includes a needle carrier. The needle carrier is configured to receive a needle that can be coupled to a suture or to a portion of a pelvic floor repair implant. The head further includes a needle catch and a needle exit port. At least a portion of the needle carrier exits the needle exit port when the operator manipulates the actuator. The needle catch is configured to receive and retain the needle carried by the needle carrier.</p>
+      <p id="p-00007-en" num="0007">In one embodiment according to this aspect of the invention, the handle of the medical device has a length that extends off at an angle from the length of the handle, such as a 90° angle. The handle can also include a spring that is disposed between the proximal end and the distal end of the handle. The actuator can be configured to cause compression of the spring when the operator of the medical device manipulates the actuator.</p>
+      <p id="p-00008-en" num="0008">The elongated shaft member can be deflectable off the longitudinal axis by manipulation by the operator. The elongated shaft member can have an outer surface that is exposed such that the operator can touch the outer surface while manipulating the actuator during the transvaginal implant procedure.</p>
+      <p id="p-00009-en" num="0009">The wire form of the medical device can move longitudinally within the elongated shaft member to cause the needle carrier to exit the needle exit port when the operator depresses the actuator. The proximal end of the wire form can be coupled to the actuator. The actuator could include a plunger or a trigger. The elongated shaft member can be deflectable into a shape that is retained during use of the medical device. The head of the medical device can be rotatable relative to the longitudinal axis of the elongated shaft member. The head of the medical device can include an opening for receiving tissue of a patient's body, and that opening can include a substantially C-shaped configuration. The head can also include a channel in which a needle carrier is disposed. The needle carrier can be movable within the channel when the operator manipulates the actuator of the medical device. The elongated shaft member of the medical device can be made of one or more shape memory materials.</p>
+      <p id="p-00010-en" num="0010">In a second aspect, the invention relates to a medical device for use in a transvaginal implant procedure. The medical device according to the second aspect of the invention also includes a handle, an elongated shaft member, and a head. The handle includes a spool member and a ring member. The spool member is configured for receiving at least two fingers of an operator of the medical device and the ring member is configured for receiving a thumb of the operator. The elongated shaft member of the medical device defines a lumen that extends from the distal end of the handle. The elongated shaft member has a diameter that is minimally greater than a diameter of a wire form that extends longitudinally within the elongated shaft member. The elongated shaft member extends along a longitudinal axis when the elongated shaft member is disposed in a straight or a substantially straight configuration. The head of the medical device extends over a distal end of the elongated shaft member. The head has a length that is measured along the longitudinal axis of the elongated shaft member. The head also has a maximum width that is measured in a first direction that is transverse to the longitudinal axis of the elongated shaft member. In addition, the head has a thickness that measured in a second direction that is perpendicular to the first direction. The length of the head is greater than the maximum width of the head. Further, the maximum width of the head is greater than the thickness of the head. The thickness of the head is also greater than the diameter of the elongated shaft member. The head includes a needle carrier. The needle carrier is configured to receive a needle that can be coupled to a suture or to a portion of a pelvic floor repair implant. The head further includes a needle catch and a needle exit port. At least a portion of the needle carrier exits the needle exit port when the operator manipulates the handle. The needle catch is configured to receive and retain the needle carried by the needle carrier.</p>
+      <p id="p-00011-en" num="0011">In one embodiment according to this aspect of the invention, the wire form of the medical device can move longitudinally within the elongated shaft member to cause the needle carrier to exit the needle exit port when the operator depresses the handle. The elongated shaft member can be deflectable off the longitudinal axis by manipulation by the operator. The elongated shaft member can have an outer surface that is exposed such that the operator can touch the outer surface while manipulating the handle during the transvaginal implant procedure. The head of the medical device can include a channel in which a needle carrier is disposed. The needle carrier can be movable within the channel when the operator manipulates the handle of the medical device.</p>
+      <p id="p-00012-en" num="0012">In a third aspect, the invention relates to a method of delivering a pelvic floor repair implant. The method includes providing a medical device, such as one of the medical devices described above, inserting a needle coupled to a portion of a pelvic floor repair implant into the medical device, dissecting a patient's body to create an opening to a pelvic region of the patient's body, inserting the elongated shaft member and the head of the medical device through the opening to the pelvic region, manipulating the head and the opening of the head onto a ligament within the pelvic region, and deploying the needle carrier out of the needle exit port of the medical device and pushing the needle and the pelvic floor repair implant through the ligament.</p>
+      <p id="p-00013-en" num="0013">These and other objects, along with advantages and features of the present invention herein disclosed, will become apparent through reference to the following description, the accompanying drawings, and the claims. Furthermore, it is to be understood that the features of the various embodiments described herein are not mutually exclusive and can exist in various combinations and permutations.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00014-en" num="0014">In the drawings, like reference characters generally refer to the same or similar parts throughout the different views. Also, the drawings are not necessarily to scale, emphasis instead generally being placed upon illustrating the principles of the invention.</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 1A</figref> is a perspective view of an embodiment of a medical device for use in delivering a PFR and/or other implant.</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 1B</figref> is a perspective view of the medical device after a needle catch has received a needle carrier.</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 2A</figref> is an exploded perspective view of the needle carrier exiting a needle exit port of the medical device.</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 2B</figref> is a perspective view of the head of the medical device of <figref>FIG. 1B</figref>.</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 2C</figref> is a plan view of a needle for use in the medical device.</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 2D</figref> is a perspective view of a needle catch.</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 2E</figref> is a plan view of the medical device similar to <figref>FIG. 1A</figref> but including an elongated lumen member for delivering a sling.</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 3</figref> is a perspective view of the handle portion being held by an operator of the medical device.</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 4A</figref> is a perspective view of the medical device in use during a transvaginal implant procedure.</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 4B</figref> is an exploded perspective view of the medical device of <figref>FIG. 4A</figref>.</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 4C</figref> is a perspective view of the elongated shaft member of the medical <b>10</b> device of <figref>FIG. 1A</figref> being deflected off the longitudinal axis.</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 5A</figref> is a perspective view of another embodiment of the medical device of <figref>FIG. 1A</figref>.</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 5B</figref> is a plan view of another embodiment of the medical device of <figref>FIG. 1A</figref>.</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 6A</figref> is a broken view of the medical device of <figref>FIG. 1A</figref>.</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 6B</figref> is an exploded broken view of the head of <figref>FIG. 6A</figref>.</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 7A</figref> is a cross sectional view of the actuator, the handle, and the elongated shaft member of the medical device of <figref>FIG. 1A</figref>.</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 7B</figref> is a cross sectional view of the elongated shaft member and the head of the medical device of <figref>FIG. 1A</figref>.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DESCRIPTION</heading>
+      <p id="p-00032-en" num="0032">In general, the invention relates to improvements in medical devices, including suturing devices and devices for use in the delivery of pelvic floor repair (PFR) implants. Various devices are disclosed in U.S. Pat. No. 7,041,111 and U.S. Pat. Pub. Nos. 2004/0181243 and 2008/0109015, each of which is incorporated by reference herein in its entirety. Further, the invention generally relates to improvements to existing devices to make them less invasive and more manipulative for the placement of PFR and/or other implants through transvaginal approaches. Some commercially available devices are Boston Scientific Corporation devices such as the Capio® CL Transvaginal Suture Capturing Device, the Capio® Open Access and Standard Suture Capturing Device, the Pinnacle® Pelvic Floor Repair Kit—Anterior/Apical/Posterior, and the Uphold™ Vaginal Support System.</p>
+      <p id="p-00033-en" num="0033">Referring to <figref>FIG. 1A</figref>, in one embodiment according to the invention, a medical device <b>100</b> includes an actuator <b>102</b>, a handle <b>104</b>, an elongated shaft member <b>106</b>, and a head <b>108</b>. A portion of the actuator <b>102</b> is slidably disposed within a proximal end <b>110</b> of the handle <b>104</b>, and a portion of the actuator <b>102</b> extends out of the proximal end <b>110</b> of the handle <b>104</b>.</p>
+      <p id="p-00034-en" num="0034">A proximal end <b>114</b> of the elongated shaft member <b>106</b> extends into and is partially disposed within a distal end <b>112</b> of the handle <b>104</b>. A distal end <b>116</b> of the elongated shaft member <b>106</b> extends into and is partially disposed within a proximal end <b>118</b> of the head <b>108</b>. The elongated shaft member <b>106</b> is capable of being deflected into a shape and retaining the shape during use. The elongated shaft member <b>106</b> may instead be deflectable from a straight configuration such that it returns back to a straight or substantially straight configuration when the deflecting force is removed or reduced. The proximal end <b>118</b> of the head <b>108</b> includes a substantially flat configuration. A distal end <b>120</b> of the head <b>108</b> includes a substantially curved configuration. Referring to <figref>FIGS. 1B</figref>, <b>2</b>A, and <b>2</b>B, the head <b>108</b> of the medical device <b>100</b> of <figref>FIG. 1A</figref> includes a curved portion <b>122</b>, a needle catch <b>124</b>, a needle exit port <b>126</b>, an opening <b>128</b>, and a needle carrier <b>130</b>. The opening <b>128</b> is configured to receive tissue of a patient's body. In one embodiment, the opening <b>128</b> includes a substantially C-shaped configuration. The needle carrier <b>130</b> defines a distal receiving slot <b>131</b>. An operator (such as a physician or other medical personnel) manipulates the needle carrier <b>130</b> by depressing the actuator <b>102</b>, such that the needle carrier <b>130</b> slidably moves through the needle exit port <b>126</b> as the actuator <b>102</b> is depressed. The operator continues to depress the actuator <b>102</b> until the needle carrier <b>130</b> enters the needle catch <b>124</b>. The needle carrier <b>130</b> may be used to transvaginally deliver a PFR and/or other implant or sling. The needle carrier <b>130</b> may instead be used for suture placement. Various existing devices utilize a similar mechanism in order to deploy the needle carrier <b>130</b>, such as the device disclosed in U.S. Pat. Pub. No. 2004/0181243.</p>
+      <p id="p-00035-en" num="0035">Referring to <figref>FIGS. 2A</figref>, <b>2</b>B, and <b>2</b>C, a needle <b>200</b> can be disposed within the receiving slot <b>131</b> of the needle carrier <b>130</b>. The needle <b>200</b> includes a shaft <b>202</b>, a tip <b>204</b>, a formed shoulder <b>206</b>, and a filament <b>212</b>. The filament <b>212</b> may be, for example, a suture, a wire, or other device to be delivered to the body of a patient. The needle <b>200</b> is held within the needle carrier <b>130</b> by a frictional fit between the shaft <b>202</b> and the receiving slot <b>131</b>. The needle <b>200</b> may be configured for use with various configurations of the needle catch <b>124</b>. The needle <b>200</b> may be dart-shaped, ring-shaped, or cone-shaped. The filament <b>212</b> could be attached to an implant and/or sling, which is to be delivered to the body of the patient.</p>
+      <p id="p-00036-en" num="0036">Referring to <figref>FIGS. 1A</figref>, <b>1</b>B, <b>2</b>A, <b>2</b>B, <b>2</b>C, and <b>2</b>D, an operator of the medical device <b>100</b> can depress the actuator <b>102</b> to slidably move the needle carrier <b>130</b> out of the needle exit port <b>126</b>. If the operator continues to depress the actuator <b>102</b>, the needle <b>200</b> and enters the needle catch <b>124</b>. The needle catch <b>124</b> includes openings <b>208</b>, successive ribs <b>210</b>, and enlarged portions <b>214</b>. In one embodiment, the needle catch <b>124</b> receives the needle <b>200</b> through the opening <b>208</b>, and the ribs <b>210</b> deflect slightly to allow the needle <b>200</b> to pass through. After the formed shoulder <b>206</b> has passed through the ribs <b>210</b> and the needle carrier <b>130</b> has been withdrawn (by releasing the actuator <b>102</b>), thereby pulling the needle <b>200</b> out of the receiving slot <b>131</b> and releasing the needle <b>200</b> from the needle carrier <b>130</b>, the ribs <b>210</b> spring back to their original position defining the openings <b>208</b>. The openings <b>208</b> are chosen to be smaller in dimension than the formed shoulder <b>206</b>. This causes the needle catch <b>124</b> to retain the needle <b>200</b>, because, due to the flat rear surface of the shoulder <b>206</b>, the needle <b>200</b> cannot pass back through the opening <b>208</b> when the needle carrier <b>130</b> retracts. When it is necessary to remove the needle <b>200</b> from the needle catch <b>124</b>, the needle <b>200</b> may be removed via the enlarged portion <b>214</b>. The enlarged portion <b>214</b> is sized to allow the formed shoulder <b>206</b> to pass through without resistance. The needle catch <b>124</b> is preferably constructed of thin stainless steel of high temper, such as ANSI <b>301</b> full hard. The needle catch <b>124</b> may be fabricated by means of stamping, laser machining, or chemical etching.</p>
+      <p id="p-00037-en" num="0037">Referring to <figref>FIG. 2E</figref>, the medical device <b>100</b> of <figref>FIG. 1A</figref> can be used to deliver an elongated lumen member <b>216</b> that is a transport for a sling <b>218</b> encased within a transparent lumen <b>220</b>. The elongated lumen member <b>216</b> defines an opening that is tapered from a proximal end <b>222</b> to a distal end <b>224</b>. The sling <b>218</b> extends through and out of the proximal end <b>222</b> of the elongated lumen member <b>216</b>. An operator could depress the actuator <b>102</b> to cause the sling <b>218</b> to pass through the elongated lumen member <b>216</b>, and the sling <b>218</b> could then be pulled through a tissue within a pelvic region of a patient. It is known to deliver a suture and a sling (or other implant) into the body of a patient as indicated by the following published U.S. patent applications, all of which are incorporated herein by reference in their entirety: 2007/0173864; 2008/0082121; 2008/0139877; 2009/0192540; and 2009/0312772. The sling <b>218</b> can be a pelvic floor repair (PFR) implant as described hereinbefore and hereafter.</p>
+      <p id="p-00038-en" num="0038">Referring to <figref>FIG. 3</figref>, an operator may hold the proximal end <b>110</b> of the handle <b>104</b> of the medical device <b>100</b> of <figref>FIG. 1A</figref> with two fingers, such as a forefinger <b>299</b> and a middle finger <b>301</b>, and may depress the actuator <b>102</b> with a thumb <b>297</b>. The actuator <b>102</b> thus comprises a plunger. However, in other embodiments, the actuator may be configured as a trigger or other configuration. The operator may use either hand or both hands to operate the medical device <b>100</b>. The elongated shaft member <b>106</b> includes an outer surface that is exposed such that the operator can touch the outer surface while manipulating the actuator during the transvaginal implant procedure. The operator's forefinger of one hand could be used to guide the outer surface of the elongated shaft member <b>106</b>, while the other hand of the operator could be used to hold the proximal end <b>110</b> of the handle <b>104</b> and depress the actuator <b>102</b>. The handle <b>104</b> may be configured such that it is longer or shorter in length.</p>
+      <p id="p-00039-en" num="0039">Referring to <figref>FIGS. 4A and 4B</figref>, the medical device <b>100</b> of <figref>FIG. 1A</figref> can be inserted into a patient's pelvic region <b>400</b>. The pelvic region <b>400</b> includes a sacrospinous ligament (SSL) <b>402</b> and an arcus tendineae fascia pelvis (ATFP) <b>404</b>. Once the opening <b>128</b> is placed onto the SSL <b>402</b>, the operator may place his/her finger <b>406</b> directly on top of the curved portion <b>122</b> to position the head <b>108</b> (<figref>FIG. 1B</figref>) prior to depressing the actuator <b>102</b> (<figref>FIG. 1B</figref>).</p>
+      <p id="p-00040-en" num="0040">The medical device <b>100</b> of <figref>FIG. 1A</figref> can be used to pass at least a portion of a PFR and/or other implant through a tissue within the patient's pelvic region <b>400</b> to secure the implant in place. The medical device <b>100</b> may be used as part of palpation by an operator prior to delivering a PFR implant. The ATFP <b>404</b> may be the first landmark that the operator feels for after dissection of the pelvic region <b>400</b>. Dissection of the pelvic region <b>400</b> may be required to access the SSL <b>402</b> for placing the PFR implant. The dissection profile required as part of palpation by an operator may be equal to the diameter of the operator's finger, the profile of the medical device <b>100</b>, or the profile of the PFR implant. The profile of the medical device I <b>00</b> may minimize the dissection profile within the patient's pelvic region <b>400</b>. A smaller dissection profile typically provides the patient with an expedited healing process. Upon locating the ATFP <b>404</b>, the operator may move his/her finger <b>406</b> onto the SSL <b>402</b>. The operator may then insert the head <b>108</b> into the patient's pelvic region <b>400</b> and slide the elongated shaft member <b>106</b> along his/her finger <b>406</b> towards the SSL <b>402</b>, so that the needle exit port <b>126</b> (<figref>FIG. 1B</figref>) may deliver an implant to the SSL <b>402</b>. The operator could then depress the actuator <b>102</b> using his/her finger of the other hand, thereby causing the needle carrier <b>130</b> (<figref>FIG. 1B</figref>) to extend out of the needle exit port <b>126</b> and push the needle <b>200</b> (<figref>FIG. 2C</figref>) through the SSL <b>402</b>. As the needle <b>200</b> is pushed through the SSL <b>402</b>, the needle <b>200</b> pulls the implant through the SSL <b>402</b>. As the operator continues to depress the actuator <b>102</b>, the needle carrier <b>130</b> continues to advance out of the needle exit port <b>126</b> and directs the needle <b>200</b> toward the needle catch <b>124</b>. The operator continues to depress the actuator <b>102</b> until the needle <b>200</b> contacts and becomes captured by the needle catch <b>124</b>.</p>
+      <p id="p-00041-en" num="0041">The operator of the medical device <b>100</b> may instead insert the head <b>108</b> into the patient's pelvic region <b>400</b> before inserting his/her finger <b>406</b> to locate the ATFP <b>404</b>. This procedure may be used to minimize the required dissection into the patient's pelvic region <b>400</b>. The operator may also insert the head <b>108</b> simultaneously with his/her finger <b>406</b> into the patient's pelvic region <b>400</b>. Additionally, the operator may slide the head <b>108</b> underneath his/her finger <b>406</b> towards the SSL <b>402</b>. Further, the operator may utilize a scope having a diameter less than the diameter of the operator's finger <b>406</b> for visual guidance of the head <b>108</b> towards the ATFP <b>404</b> and the SSL <b>402</b>.</p>
+      <p id="p-00042-en" num="0042">Referring to <figref>FIG. 4C</figref>, an operator may deflect the elongated shaft member <b>106</b> of the medical device of <figref>FIG. 1A</figref> in order to facilitate the access of difficult locations within a patient's pelvic region. In one embodiment, the operator may deflect the elongated shaft member <b>106</b> into a bent shape to suit the specific patient's needs or to efficiently orient the elongated shaft member <b>106</b> to reach the desired location of use. The elongated shaft member <b>106</b> maintains its shape during use. The elongated shaft member <b>106</b> is not limited to one shape and can be repeatedly bent into any number of shapes, if necessary. The elongated shaft member <b>106</b> may be re-bent, re-shaped, or bent as a compounded curve, if necessary. The components of the medical device <b>100</b> are sized such that the actuator <b>102</b> will not bind when the elongated shaft member <b>106</b> and the head <b>108</b> are bent. When the elongated shaft member <b>106</b> is deflected, the components inside deflect with it. The elongated shaft member <b>106</b> may instead be semi-flexible and deflectable. The elongated shaft member <b>106</b> may be deflectable in any direction. The head <b>108</b> may also be rotatable about the longitudinal axis of the elongated shaft member <b>106</b>. In one embodiment, the angle of rotation of the head <b>108</b> may be limited to about 270 degrees to prevent overwinding.</p>
+      <p id="p-00043-en" num="0043">Referring to <figref>FIG. 5A</figref>, another embodiment according to the invention is depicted as a medical device <b>500</b> that is pistol-shaped. The medical device <b>500</b> includes an actuator <b>502</b>, a handle <b>504</b>, an elongated shaft member <b>506</b>, a first channel <b>510</b>, a second channel <b>512</b>, and a head <b>516</b>. As with the first embodiment described with respect to <figref>FIGS. 1A-4C</figref>, a portion of the actuator <b>502</b> is slidably disposed within the handle <b>504</b>, and a portion of the actuator <b>502</b> extends out of the handle <b>504</b>, but in this second embodiment, the shaft member <b>506</b> extends off at an angle, such as 90° degrees, from the side of the handle <b>504</b>. A proximal end <b>518</b> of the elongated shaft member <b>506</b> extends into and is partially disposed within the first channel <b>510</b> of the handle <b>504</b>. The elongated shaft member <b>506</b> could instead extend from the second channel <b>512</b> to allow right hand or left hand use of the medical device <b>500</b> by an operator. A distal end <b>520</b> of the elongated shaft member <b>506</b> extends into and is partially disposed with a proximal end <b>522</b> of the head <b>516</b>. The head <b>516</b> includes a curved portion <b>524</b>, a needle catch <b>526</b>, a needle exit port <b>528</b>, a needle carrier <b>530</b>, a distal receiving slot <b>532</b>, and an opening <b>534</b>. Like the opening <b>128</b>, the opening <b>534</b> is adapted for receiving tissue from a patient's body. In operation, the medical device <b>500</b> functions as does the medical device <b>100</b> of <figref>FIGS. 1A-4C</figref>. For example, the needle carrier <b>530</b> is deployed as the actuator <b>502</b> is depressed by an operator. The medical device <b>500</b> may be held upright, but with the operator's forefinger extended along some of the elongated shaft member <b>506</b>. In addition, the elongated shaft member <b>506</b> may be deflectable in different directions in order to facilitate procedures in the pelvic region, as the shaft member <b>106</b> of the medical device <b>100</b> is deflectable.</p>
+      <p id="p-00044-en" num="0044">Referring to <figref>FIG. 5B</figref>, yet embodiment according to the invention is depicted as a medical device <b>528</b>. The medical device <b>528</b> includes a substantially O-shaped thumb-receiving ring member <b>532</b>, a handle <b>534</b>, an elongated shaft member <b>536</b>, a head <b>538</b>, a spool member <b>540</b>, and a wire form <b>542</b>. The head <b>538</b> includes a needle exit port <b>543</b>, a needle carrier <b>544</b>, distal receiving slot <b>545</b>, a curved portion <b>546</b>, a needle catch <b>548</b>, and an opening <b>550</b>. The distal receiving slot <b>545</b> is configured for receiving a needle. The wire form <b>542</b> moves longitudinally within the elongated shaft member <b>536</b>, which causes the needle carrier <b>544</b> to exit the needle exit port <b>543</b> when the operator manipulates the handle <b>534</b>. The ring member <b>532</b> is a stationary part, the spool member <b>540</b> is coupled to the wire form <b>542</b>, and the wire form <b>542</b> is coupled to the needle carrier <b>544</b>. An operator could insert his/her thumb into the ring member <b>532</b> and place his/her other fingers, such as the forefinger and middle finger, around the spool member <b>540</b>. The operator may then extend the needle carrier <b>544</b> out of the head <b>538</b> by pushing the spool member <b>540</b> in an opposite direction from the stationary ring member <b>532</b>. In order to retract the needle carrier <b>544</b> into the head <b>538</b>, the operator may pull the spool member <b>540</b> towards the stationary ring member <b>532</b> such that the distance between the operator's thumb and other fingers are minimal.</p>
+      <p id="p-00045-en" num="0045">In another embodiment according to the invention, the medical device <b>528</b> is configured such that wire form <b>542</b> is coupled to the ring member <b>532</b>, and the spool member <b>540</b> is permanently coupled to the handle <b>534</b>. The operator can depress the ring member <b>532</b> in order to deploy the needle carrier <b>544</b> from the head <b>538</b>. The operator <b>5</b> may retract the needle carrier <b>544</b> by pulling the ring member <b>532</b> in an opposite direction from the stationary spool member <b>540</b> and the handle <b>534</b>.</p>
+      <p id="p-00046-en" num="0046">Referring to <figref>FIG. 6A</figref>, each of the components of the medical device <b>100</b> of <figref>FIG. 1B</figref> is presented. The medical device <b>100</b> includes the actuator <b>102</b>, the handle <b>104</b>, the elongated shaft member <b>106</b>, the head <b>108</b>, the needle catch <b>124</b>, the needle exit port <b>126</b>, <b>10</b> the opening <b>128</b>, the needle carrier <b>130</b>, a wire form <b>600</b>, a center tube <b>602</b>, a spring <b>604</b>, a first washer member <b>606</b>, a second washer member <b>608</b>, a pusher wire <b>610</b>, and a securing member <b>612</b>. The actuator <b>102</b> includes a button <b>614</b>, a shaft <b>616</b>, and a bearing <b>618</b>. The bearing <b>618</b> is configured for receiving the wire form <b>600</b>. The wire form <b>600</b> is inserted into the bearing <b>618</b>, thereby coupling it to the actuator <b>102</b>. The wire form <b>600</b> is housed within the center tube <b>602</b> within the handle <b>104</b>. The wire form <b>600</b> extends through the elongated shaft member <b>106</b> to prevent kinking of the elongated shaft member <b>106</b>. The spring <b>604</b> encircles the wire form <b>600</b>, and the center tube <b>602</b> and the spring <b>604</b> is compressed between the actuator <b>102</b> and the first washer member <b>606</b>. The handle <b>104</b> encases the actuator <b>102</b>, the wire form <b>600</b>, the center tube <b>602</b>, the spring <b>604</b>, the first washer member <b>606</b>, and a portion of the elongated shaft member <b>106</b>. In another embodiment, the medical device <b>100</b> may be constructed without the spring <b>604</b>, thereby requiring the operator to manually manipulate the actuator <b>102</b>. The handle <b>104</b> may be constructed to accommodate various ergonomic designs.</p>
+      <p id="p-00047-en" num="0047">Referring to <figref>FIGS. 6A and 6B</figref>, the elongated shaft member <b>106</b> extends from and through the first washer member <b>606</b>, and through the second washer member <b>608</b>. In one embodiment, each of the first washer member <b>606</b> and the second washer member <b>608</b> is substantially cube-shaped. In other embodiments, each of the first washer member <b>606</b> and the second washer member <b>608</b> is substantially cylindrical-shaped or keyshaped. The key-shape may be used to prevent rotation of the head <b>108</b>. The cylindrical shape of the second washer member <b>608</b> facilitates the rotation of the head <b>108</b>. The pusher wire <b>610</b> extends from the second washer member <b>608</b>. The pusher wire <b>610</b> is attached to the wire form <b>600</b>. The pusher wire <b>610</b> may be attached to the wire form <b>600</b> by, for example, a weld, a crimp, a coupling, an adhesive, or other means. Each of the elongated shaft member <b>106</b> and the pusher wire <b>610</b> may be constructed from a shape memory material, such as Nitinol™. Other metals that may be used include, but are not limited to, nickel, copper, stainless steel, cobalt, vanadium, chromium, iron, and super-elastic metallic alloys. The shape memory material used to construct the elongated shaft member <b>106</b> and the pusher wire <b>610</b> allow for bendability and high column strength when constrained. The elongated shaft member <b>106</b> is deflectable off of the longitudinal axis, such that the elongated shaft member <b>106</b> is able to transmit torque to manipulate the head <b>108</b>. In another embodiment, the elongated shaft member <b>106</b> is a coil to allow greater flexibility. The coil may be covered by, for example, a flexible sleeve.</p>
+      <p id="p-00048-en" num="0048">The pusher wire <b>610</b> extends to the needle carrier <b>130</b>, which is encased by the head <b>108</b>. The head <b>108</b> is comprised of two parallel or substantially parallel flat outer surfaces. The head <b>108</b> includes a channel <b>620</b> to prevent binding of the pusher wire <b>610</b>, and facilitate a smooth transition between the pusher wire <b>610</b> and the needle carrier <b>130</b>. The securing member <b>612</b>, such as a rivet, is used to couple the two substantially parallel heads <b>108</b>.</p>
+      <p id="p-00049-en" num="0049">In various embodiments, other means may be used to construct the medical device <b>100</b>, including, but not limited to, glue, welding, sonic welding, insert molding, or use of fasteners. The elongated shaft member <b>106</b> can be of a shape other than tubular or cylindrical, such as elliptical or rectangular. The shape and material chosen for the medical device <b>100</b> will vary to suit a particular application.</p>
+      <p id="p-00050-en" num="0050">Referring to <figref>FIG. 7A</figref>, in one embodiment according to the invention, the medical device <b>100</b> may have the following dimensions. These dimensions are merely exemplary and other dimensions may be contemplated. For example, a length <b>700</b> of the actuator <b>102</b> is about 3 inches. A width <b>701</b> of the actuator <b>102</b> is about 0.86 inches. A length <b>702</b> of the handle <b>104</b> is about 5.5 inches. A length <b>703</b> of the proximal end <b>110</b> of the handle <b>104</b> is about 2 inches. A diameter <b>704</b> of the handle <b>104</b> is about 0.345 inches. A length <b>708</b> of the elongated shaft member <b>106</b> from the proximal end <b>114</b> to the distal end <b>116</b> (<figref>FIG. 1A</figref>) is about 5.25 inches.</p>
+      <p id="p-00051-en" num="0051">Referring to <figref>FIG. 7B</figref>, an inner diameter <b>710</b> of the elongated shaft member <b>106</b> is about 0.06 inches. An outer diameter <b>712</b> of the elongated shaft member <b>106</b> is about 0.08 inches. A length <b>714</b> of the head <b>108</b> is about 1.5 inches. A width <b>716</b> of the head <b>108</b> is about 0.46 inches, a width <b>718</b> of the opening <b>128</b> is about 0.29 inches, and a length <b>720</b> of the opening <b>128</b> is about 0.4 inches. Referring now to <figref>FIG. 6B</figref>, a thickness <b>722</b> of the head <b>108</b> is about 0.20 inches when the two portions are coupled together.</p>
+      <p id="p-00052-en" num="0052">Referring to <figref>FIG. 6B</figref>, <b>7</b>A, and <b>7</b>B, the length <b>714</b> of the head <b>108</b> is measured along the longitudinal axis of the medical device <b>100</b>. The maximum width <b>716</b> of the head <b>108</b> is measured in a first direction that is transverse to the longitudinal axis of the medical device <b>100</b>, and the thickness <b>722</b> of the head <b>108</b> is measured in a second direction that is perpendicular to the first direction. The length <b>714</b> of the head <b>108</b> is greater than the maximum width <b>716</b> of the head <b>108</b>. The maximum width <b>716</b> of the head <b>108</b> is greater than the thickness <b>722</b> of the head <b>108</b>, and the thickness <b>722</b> of the head <b>108</b> is greater than the outer diameter <b>712</b> of the elongated shaft member <b>106</b>.</p>
+      <p id="p-00053-en" num="0053">It will be understood that various modifications may be made to the embodiments disclosed herein. Therefore, the above description should not be construed as limiting, but merely as illustrative of some embodiments according to the invention.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A medical device for use in a transvaginal implant procedure, comprising:
+<claim-text>a handle having a proximal end and a distal end, the handle including an actuator configured to be manipulated by an operator of the medical device;</claim-text><claim-text>an elongated shaft member having a diameter, the elongated shaft member defining a lumen and extending from the distal end of the handle, the diameter being minimally greater than a diameter of a wire form extending longitudinally within the elongated shaft member, the elongated shaft member extending along a longitudinal axis when the elongated shaft member is disposed in a straight or a substantially straight configuration; and</claim-text><claim-text>a head extending over a distal end of the elongated shaft member, the head having a length measured along the longitudinal axis, a maximum width measured in a first direction transverse to the longitudinal axis, and a thickness measured in a second direction perpendicular to the first direction, the length being greater than the maximum width and the maximum width being greater than the thickness, the thickness being greater than the diameter of the elongated shaft member, the head including a needle carrier configured to receive a needle that can be coupled to a suture or to a portion of a pelvic floor repair implant, the head further including a needle catch and a needle exit port, at least a portion of the needle carrier exiting the needle exit port when the operator manipulates the actuator, the needle catch configured to receive and retain the needle carried by the needle carrier.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The medical device of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the handle includes a spring that is disposed between the proximal end and the distal end of the handle and the actuator is configured to cause compression of the spring when the actuator is manipulated by the operator of the medical device.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The medical device of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the handle has a length and the elongated shaft member extends off at an angle from the length of the handle.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The medical device of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the wire form moves longitudinally within the elongated shaft member which causes the needle carrier to exit the needle exit port when the operator depresses the actuator.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The medical device of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the elongated shaft member has an outer surface that is exposed such that the operator can touch the outer surface while manipulating the actuator during the transvaginal implant procedure and is deflectable off the longitudinal axis by manipulation by the operator.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The medical device of <claim-ref idref="clm-00005-en">claim 5</claim-ref> wherein the elongated shaft member is deflectable into a shape that is retained during use of the medical device.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The medical device of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the head includes a channel in which the needle carrier is disposed and the needle carrier is movable within the channel by the operator manipulating the actuator.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The medical device of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the head defines an opening for receiving tissue of a patient's body and is rotatable relative to the longitudinal axis of the elongated shaft member.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The medical device of <claim-ref idref="clm-00008-en">claim 8</claim-ref> wherein the opening includes a substantially C-shaped configuration.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The medical device of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the needle catch includes at least one opening for receiving the needle.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The medical device of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the elongated shaft member comprises a shape memory material.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The medical device of <claim-ref idref="clm-00001-en">claim 1</claim-ref> further comprising an elongated lumen member for transporting a sling.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The medical device of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein a proximal end of the wire form is coupled to the actuator.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The medical device of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the actuator comprises a plunger.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The medical device of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the actuator comprises a trigger.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en" independent="true">
+      <claim-text>
+        <b>16</b>. A medical device for use in a transvaginal implant procedure, comprising:
+<claim-text>a handle including a spool member and a ring member, the spool member configured for receiving at least two fingers of an operator of the medical device, the ring member configured for receiving a thumb of the operator;</claim-text><claim-text>an elongated shaft member having a diameter, the elongated shaft member defining a lumen and extending from the distal end of the handle, the diameter being minimally greater than a diameter of a wire form extending longitudinally within the elongated shaft member, the elongated shaft member extending along a longitudinal axis when the elongated shaft member is disposed in a straight or a substantially straight configuration; and</claim-text><claim-text>a head extending over a distal end of the elongated shaft member, the head having a length measured along the longitudinal axis, a maximum width measured in a first direction transverse to the longitudinal axis, and a thickness measured in a second direction perpendicular to the first direction, the length being greater than the maximum width and the maximum width being greater than the thickness, the thickness being greater than the diameter of the elongated shaft member, the head including a needle carrier configured to receive a needle that can be coupled to a suture or to a portion of a pelvic floor repair implant, the head further including a needle catch and a needle exit port, at least a portion of the needle carrier exiting the needle exit port when the operator manipulates the handle, the needle catch configured to receive and retain the needle carried by the needle carrier.</claim-text></claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The medical device of <claim-ref idref="clm-00016-en">claim 16</claim-ref> wherein the wire form moves longitudinally within the elongated shaft member which causes the needle carrier to exit the needle exit port when the operator manipulates the handle.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The medical device of <claim-ref idref="clm-00016-en">claim 16</claim-ref> the elongated shaft member has an outer surface that is exposed such that the operator can touch the outer surface while manipulating the handle during the transvaginal implant procedure and is deflectable off the longitudinal axis by manipulation by the operator.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The medical device of <claim-ref idref="clm-00016-en">claim 16</claim-ref> wherein the head includes a channel in which the needle carrier is disposed and the needle carrier is movable within the channel by the operator manipulating the handle.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en" independent="true">
+      <claim-text>
+        <b>20</b>. A method of delivering a pelvic floor repair implant, the method comprising:
+<claim-text>providing a medical device, the medical device includes a handle having a proximal end and a distal end, the handle including an actuator configured be manipulated by an operator of the medical device, an elongated shaft member having a diameter, the elongated shaft member defining a lumen and extending from the distal end of the handle, the diameter being minimally greater than a diameter of a wire form extending longitudinally within the elongated shaft member, the elongated shaft member extending along a longitudinal axis when the elongated shaft member is disposed in a straight or a substantially straight configuration, a head extending over a distal end of the elongated shaft member, the head having a length measured along the longitudinal axis, a maximum width measured in a first direction transverse to the longitudinal axis, and a thickness measured in a second direction perpendicular to the first direction, the length being greater than the maximum width and the maximum width being greater than the thickness, the thickness being greater than the diameter of the elongated shaft member, the head including a needle carrier configured to receive a needle that can be coupled to a portion of a pelvic floor repair implant, the head further including a needle catch and a needle exit port, at least a portion of the needle carrier exiting the needle exit port when the operator manipulates the actuator, the needle catch configured to receive and retain the needle carried by the needle carrier;</claim-text><claim-text>inserting the needle coupled to the portion of the pelvic floor repair implant into the needle carrier;</claim-text><claim-text>dissecting a patient's body to create an opening to a pelvic region of the patient's body;</claim-text><claim-text>inserting the elongated shaft member and the head through the opening of the pelvic region;</claim-text><claim-text>manipulating the head and the opening of the head onto a ligament within the pelvic region; and</claim-text><claim-text>deploying the needle carrier out of the needle exit port and pushing the needle and the pelvic floor repair implant through the ligament.</claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150245836A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150245836A1-20150903-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150245836A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245836A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150245836A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245836A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150245836A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245836A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150245836A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245836A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150245836A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245836A1-20150903-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150245836A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245836A1-20150903-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150245836A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245836A1-20150903-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150245836A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245836A1-20150903-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150245836A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245836A1-20150903-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150245836A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245836A1-20150903-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150245836A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245836A1-20150903-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150245836A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245836A1-20150903-D00012.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150245836A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245836A1-20150903-D00013.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150245836A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245836A1-20150903-D00014.TIF" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150245836A1_00016.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245836A1-20150903-D00015.TIF" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150245836A1_00017.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245836A1-20150903-D00016.TIF" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150245836A1_00018.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150245836A1-20150903-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150245836A1.PDF" type="pdf" size="844041" pages="23" />
+</lexisnexis-patent-document>

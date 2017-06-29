@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150265165A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150924" time-inserted="021015" date-changed="20151020" time-changed="081941">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121423473">
+        <country>US</country>
+        <doc-number>20150265165</doc-number>
+        <kind>A1</kind>
+        <date>20150924</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14664583</doc-number>
+        <date>20150320</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20151001">
+      <unexamined-printed-without-grant>
+        <date>20150924</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151020">
+      <classification-ipcr sequence="1">
+        <text>A61B   5/026       20060101AFI20150924BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>026</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61B   5/00        20060101ALI20150924BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61B   5/08        20060101ALI20150924BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151020">
+      <classification-cpc sequence="1">
+        <text>A61B   5/0263      20130101 FI20150924BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>0263</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61B   5/004       20130101 LI20150924BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>004</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61B   5/055       20130101 LA20151015BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>055</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151015</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61B   5/08        20130101 LA20150924BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61B   5/743       20130101 LA20150924BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>743</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61B2576/02        20130101 LA20150924BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2576</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150924" lang="eng" format="original">System and Method For Non-Contrast Magnetic Resonance Imaging of Pulmonary Blood Flow</invention-title>
+    <related-documents date-changed="20150924">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61968858</doc-number>
+          <date>20140321</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150924">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Muradyan</last-name>
+            <first-name>Iga</first-name>
+            <address>
+              <city>Boston</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+        <applicant sequence="2" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Patz</last-name>
+            <first-name>Samuel</first-name>
+            <address>
+              <city>Chestnut Hill</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+        <applicant sequence="3" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Seethamraju</last-name>
+            <first-name>Ravi Teja</first-name>
+            <address>
+              <city>Malden</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+        <applicant sequence="4" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Gill</last-name>
+            <first-name>Ritu Randhawa</first-name>
+            <address>
+              <city>Lexington</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Muradyan</last-name>
+            <first-name>Iga</first-name>
+            <address>
+              <city>Boston</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Patz</last-name>
+            <first-name>Samuel</first-name>
+            <address>
+              <city>Chestnut Hill</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Seethamraju</last-name>
+            <first-name>Ravi Teja</first-name>
+            <address>
+              <city>Malden</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Gill</last-name>
+            <first-name>Ritu Randhawa</first-name>
+            <address>
+              <city>Lexington</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150924">
+      <main-family family-id="173799746">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150265165</doc-number>
+            <kind>A1</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20150320</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173799745">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150265165</doc-number>
+            <kind>A1</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20150320</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150924" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A system and method for non-contrast imaging of pulmonary blood flow in a subject are described. In some aspects, the method includes acquiring, using a magnetic resonance imaging (“MRI”) system, image data from at least the subject's lungs during which little to no respiratory motion occurs in the subject, such as during a breath-hold. The method also includes assembling the image data into a plurality of time-series datasets representing temporal variations of magnetic resonance signals in a region of interest that contains all or part of the subject's lungs. The method further includes computing a statistical blood flow metric for each voxel in the region of interest, using respective time-series datasets, and generating at least one image representative of pulmonary blood flow in the subject using the computed statistical blood flow metrics.</p>
+  </abstract>
+  <legal-data date-changed="20151009">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150427</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015265165A1</docdb-publication-number>
+      <docdb-application-id>444778031</docdb-application-id>
+      <new-owner>THE BRIGHAM AND WOMEN'S HOSPITAL, MASSACHUSETTS</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:MURADYAN, IGA;PATZ, SAMUEL;SEETHAMRAJU, RAVI TEJA;AND OTHERS;SIGNING DATES FROM 20150406 TO 20150415;REEL/FRAME:035502/0120</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150924">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS REFERENCE</heading>
+      <p id="p-00001-en" num="0001">This application is based on, claims priority to, and incorporates herein by reference in their entirety U.S. Ser. No. 61/968,858 filed Mar. 21, 2014 and entitled “NON-CONTRAST BREATH HELD MR PERFUSION OF THE LUNGS FROM TIME SERIES ANALYSIS.”</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">The present disclosure relates generally to systems and methods for medical imaging and, in particular, to systems and methods for assessing pulmonary blood flow using magnetic resonance imaging (“MRI”).</p>
+      <p id="p-00003-en" num="0003">Imaging of pulmonary blood flow using magnetic resonance has long faced challenges due to low signal-to-noise ratios (“SNR”). This is because MRI detects signals associated with protons in water molecules found in the body. However, even at rest, the majority of lung volume is occupied by air, which has a low proton density and results in low magnetic resonance signals. In addition, lung imaging is also exacerbated by the presence of air-tissue interfaces in the lung, which create magnetic susceptibility effects that deteriorate magnetic resonance signals.</p>
+      <p id="p-00004-en" num="0004">One approach to deal with the inherently low magnetic resonance signals in the lungs has included the use of intravenous contrast agents to improve SNR. However, contrast agents, typically containing gadolinium, are limited in the amount and time over which they can be administered, as well as the time it takes for the contrast bolus to clear the blood, restricting the number of measurements and study repeatability. In addition, although blood volume may be readily obtained from measured tissue concentration curves, determining blood flow and transit time present additional difficulties and may be subject to appreciable errors.</p>
+      <p id="p-00005-en" num="0005">Other approaches for imaging the lungs have included use of hyperpolarized gas, oxygen enhanced MRI techniques, ultrashort echo-time (“UTE”) or zero echo-time (“ZTE”) techniques, and Fourier decomposition. Fourier decomposition imaging of the lungs acquires a continuous set of magnetic resonance images during free breathing, typically using a balanced steady state free precession (“bSSFP”) pulse sequence. Because these images correspond to different time points in the breathing cycle, they are subjected to a spatial registration procedure in which the position and size of each image voxel is registered to a corresponding voxel in a reference image. The result of this operation is a time-series for each voxel in the spatially registered image. The time series from each spatially registered voxel is then Fourier transformed to obtain frequency spectra that depict frequency components modulating voxel intensities. For lung imaging, peaks in the respective spectra are representative of breathing and heart rate frequencies, which may then be used to identify the amplitude of regional proton density changes related to ventilation and blood flow, respectively.</p>
+      <p id="p-00006-en" num="0006">Imaging the lungs using a bSSFP pulse sequence, however, produces known dielectric and off-resonance effect artifacts, particularly at high magnetic fields and large fields of view. Also, depending on the flip angle used and the repetition rate of the excitation pulses, the number of repeated measurements may be limited due to specific absorption rate (“SAR”) limitations. Most importantly, however, no matter what imaging pulse sequence is used, image registration produces appreciable errors since, in general, spatial registration algorithms only work well in regions of high SNR. In the case of the lungs, high SNR areas occur at the lung boundaries, heart tissues, and relatively large blood vessels. Other areas of the lung contain mostly air, which does not provide an appreciable signal. Thus, displacements during free breathing of small blood vessels that are part of the parenchymal tethered network, especially in the periphery of the lungs, are very difficult to register. Furthermore, the above Fourier decomposition approach for generating blood flow maps utilizes the spectral peak at the heart rate frequency only and ignores signal modulations produced at other frequencies by the heart.</p>
+      <p id="p-00007-en" num="0007">Other approaches for imaging pulmonary blood flow have included arterial spin labeling (“ASL”), or blood tagging techniques. Specifically, ASL involves magnetically tagging arterial blood before entering a target tissue, and examining the amount of labeling measured in an image slice compared to a control obtained prior to labeling. However, ASL is rather difficult to implement in the thoracic region. Among other reasons, this is because the SNR of ASL is inherently low, given that signal from labeled inflowing blood is only about 1% of the full tissue signal.</p>
+      <p id="p-00008-en" num="0008">Therefore, given the above, there is a need for systems and methods for improved imaging of pulmonary blood flow using MRI.</p>
+      <heading id="h-00003-en" level="1">SUMMARY</heading>
+      <p id="p-00009-en" num="0009">The present invention overcomes the aforementioned drawbacks by providing a system and method directed to magnetic resonance imaging of the lungs. Specifically, the present disclosure describes an approach for assessing pulmonary blood flow without need for contrast agent enhancement or blood tagging imaging. Also, the present approach overcomes signal contamination due to motion by performing an image acquisition during a period during which little to no respiratory motion occurs in a subject. In some aspects, a statistical metric for assessing blood flow is utilized, which captures information related to signal intensity modulations from all frequencies associated with the cardiac cycle. This approach produces appreciably enhanced blood flow maps when compared to observing the modulation solely at the heart rate.</p>
+      <p id="p-00010-en" num="0010">In accordance with one aspect of the disclosure, a method for non-contrast imaging of pulmonary blood flow in a subject is provided. The method includes acquiring, using the MRI system, image data from at least the subject's lungs during a period when substantially no respiratory motion occurs in the subject, and assembling the image data into a plurality of time-series datasets representing temporal variations of magnetic resonance (“MR”) signals in a region of interest containing at least a part of the subject's lungs. The method also includes computing a statistical blood flow metric for each voxel in the region of interest using respective time-series datasets, and generating a report indicative of pulmonary blood flow in the subject using the computed statistical blood flow metrics.</p>
+      <p id="p-00011-en" num="0011">In accordance with another aspect of the disclosure, a magnetic resonance imaging (“MRI”) system for non-contrast imaging of pulmonary blood flow in a subject is provided. The system includes a magnet system configured to generate a polarizing magnetic field about at least a portion of a subject arranged in the MRI system, a plurality of gradient coils configured to establish at least one magnetic gradient field to the polarizing magnetic field, and a radio frequency (“RF”) system configured to apply an RF field to the subject and to receive magnetic resonance (“MR”) signals therefrom. The system also includes a computer system programmed to direct the RF system and plurality of gradient coils to acquire image data from at least the subject's lungs during a period when substantially no respiratory motion occurs in the subject, and assemble the image data into a plurality of time-series datasets representing temporal variations of magnetic resonance (“MR”) signals in a region of interest containing at least a part of the subject's lungs. The computer system is also programmed to compute a statistical blood flow metric for each voxel in the region of interest using respective time-series datasets, and generate a report indicative of pulmonary blood flow in the subject using the computed statistical blood flow metrics.</p>
+      <p id="p-00012-en" num="0012">The foregoing and other advantages of the invention will appear from the following description.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 1</figref> is a flowchart setting forth the steps of an example of a method for non-contrast imaging of pulmonary blood flow in a subject;</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 2A</figref> shows an example time-series dataset from a region of interest in the anterior segmental pulmonary artery of a subject;</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 2B</figref> shows the Fourier spectrum of the time-series dataset shown in <figref>FIG. 2A</figref>;</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 3A</figref> is an example Fourier component map in accordance with aspects of the present disclosure.</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 3B</figref> is an example mean intensity map obtained in accordance with aspects of the present disclosure.</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 3C</figref> is an example standard deviation map obtained in accordance with aspects of the present disclosure.</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 4</figref> is a block diagram of an example of a magnetic resonance imaging (“MRI”) system.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00020-en" num="0020">The present disclosure provides a system and method for assessing pulmonary blood flow using non-contrast magnetic resonance imaging (“MRI”). In general, blood flow measurements are performed either by utilizing contrast agent enhancement or blood tagging techniques. While side effects, such as nephrogenic systemic fibrosis (“NSF”), have necessitated a reduction in the use of gadolinium-based contrast agents, particularly for patients with kidney failure, blood tagging has often proven difficult to implement when imaging the thoracic region.</p>
+      <p id="p-00021-en" num="0021">Therefore, a novel approach is provided for determining pulmonary blood flow. In some aspects, the disclosed method applies a data acquisition approach that allows for fewer artifacts in comparison with previous data acquisition techniques. In particular, data may be acquired during a period of time during which little to no respiratory motion occurs in a subject, such as during a period of breath holding, so that motion-induced artifacts are appreciably reduced or eliminated. In addition, in applying a Fourier decomposition approach to map pulmonary blood flow, statistical quantities, such as the mean and standard deviation of intensities obtained from assembled time-series datasets corresponding to voxels in an imaging slice, are utilized. As will be appreciated, the disclosed technique may find a variety of applications, including helping to evaluate thoracic diseases non-invasively, and without the need for the administration of a contrast agent. Although reference is made herein specifically with reference to assessing pulmonary blood flow it may be appreciated that the approach of the present disclosure may be applicable to other areas of the body as well.</p>
+      <p id="p-00022-en" num="0022">Turning to <figref>FIG. 1</figref>, steps of a process <b>100</b>, in accordance with aspects of the present disclosure are shown. The process <b>100</b> may begin at process block <b>102</b>, wherein 2-dimensional or 3-dimensional image data may be acquired from at least the subject's lungs using an MRI system. Previous Fourier decomposition techniques have aimed to quantify ventilation and blood flow in the lungs by acquiring free breathing time series data using a balanced steady state free precession (“bSSFP”) pulse sequence. Such free breathing techniques necessitate use of image registration algorithms, which are prone to appreciable error. Therefore, image data may be advantageously acquired at process block <b>102</b> during a period during which little to no respiratory motion occurs, such as during breath-hold, thereby reducing or eliminating artifacts induced by respiratory motion. In addition, bSSFP can only be used with a fair degree of success at magnetic fields of about 1.5 Tesla, due to artifacts associated with dielectric and off-resonance effects at higher fields. To overcome such shortcomings, an ultrafast gradient echo pulse sequence, such as a TurboFLASH pulse sequence, may be utilized at process block <b>102</b>. It will be appreciated by one of ordinary skill that other pulse sequences affording sufficiently high frame rate may also be utilized at process block <b>102</b> to acquire image data.</p>
+      <p id="p-00023-en" num="0023">Advantageously, by acquiring image data during breath holding, respiratory-induced artifacts can be virtually eliminated without need for performing image registration. By way of example, the image data can be acquired at process block <b>102</b> in a single breath hold over a period of, say, about 30 seconds. However, it may be appreciated that image acquisition may depend upon the duration of time that a subject can abstain from breathing. For instance, in cases where a subject may not be capable of holding their breath for a sufficiently long period of time, image data may be acquired using more than one breathing cycle. In such cases, computed statistical blood flow maps generated from separate breath-holds may be combined, for example, using a simple spatial registration. This is in contrast to the complex registration algorithms applied in free-breathing techniques, which utilize image data acquired in the same phase of the breathing cycle, typically the end of inspiration or expiration.</p>
+      <p id="p-00024-en" num="0024">At process block <b>104</b> time-series datasets may be assembled using images reconstructed using the acquired image data. Specifically, each time-series dataset represents temporal variations of magnetic resonance (“MR”) signals for a pixel or voxel in a region of interest within, or about, a subject's lungs. By way of example, <figref>FIG. 2A</figref> shows an example time-series dataset from a region of interest that is roughly 10 millimeters in diameter and located in the anterior segmental pulmonary artery of a subject.</p>
+      <p id="p-00025-en" num="0025">Then, various metrics indicative of blood flow are computed at process block <b>106</b> using the assembled time-series datasets. In some aspects, similar to previous Fourier decomposition approaches, spectral distributions indicating spectral components of the time-series datasets may be obtained by applying a Fourier analysis. By way of example, <figref>FIG. 2B</figref> shows the spectral distribution for the example time-series dataset shown in <figref>FIG. 2A</figref>. The spectral distribution contains several peaks, some of which are related to density changes occurring at or near the frequency of the subject's heart rate, as well as higher frequency harmonics. Using this spectral information from the determined spectral distribution, a metric indicative of blood flow can be computed for each pixel or voxel. In some aspects, a blood flow metric may be computed by integrating the spectral distribution around a frequency interval centered about the heart rate frequency. It may be appreciated, however, that other metrics may be computed using spectral information associated with peaks present in the distribution.</p>
+      <p id="p-00026-en" num="0026">In accordance with other aspects, blood flow metrics can be obtained at process block <b>106</b> by computing statistical quantities, such as the mean and/or the standard deviation of intensities for the assembled time-series datasets. As described, such statistical blood flow metrics need not be limited to obtaining information from a single frequency, such as the heart rate frequency or higher harmonics, but instead may advantageously capture signal intensity modulations from multiple frequencies, thereby producing appreciably enhanced blood flow maps.</p>
+      <p id="p-00027-en" num="0027">Then, at process block <b>108</b>, a report indicative of pulmonary blood flow in the subject may be generated using the computed blood flow metrics, and other information, determined at process block <b>106</b>. In some aspects, the report may be in the form of blood flow maps, such as Fourier component maps, mean intensity maps, standard deviation maps, and so on, or combinations thereof. In other aspects, the report may include information related to an influx of blood into an imaging slice, or an in-plane motion of a blood vessel, or a change in blood volume for an imaging slice, or combinations thereof. In addition, the report may include information related to a medical condition of the subject, such as a thoracic disease.</p>
+      <p id="p-00028-en" num="0028">By way of a non-limiting example, coronal 2D TurboFLASH breath-held scans were performed on 4 healthy subjects at 3 Tesla. Acquisition parameters included TE/TR=1.1/98 ms, FOV=305 mm, data matrix=96×72 (interpolated to 256×256), turbo factor=116, α=20 degrees and 4 mm slices. It may be appreciated, however, that other imaging parameters may be utilized. <figref>FIG. 3</figref> shows an example of blood flow maps obtained from the acquired image data in accordance with the method of the present disclosure. Specifically, <figref>FIG. 3A</figref> shows an example Fourier component map, <figref>FIG. 3B</figref> shows a mean intensity map, and <figref>FIG. 3C</figref> shows a standard deviation map. When comparing these maps, it can be seen that the Fourier component map (<figref>FIG. 3A</figref>) shows lower signal-to-noise ratio, and poorer vasculature conspicuity than the other maps. For example, vasculature visible on the mean intensity (<figref>FIG. 3B</figref>) and standard deviation maps (<figref>FIG. 3C</figref>), indicated by arrows <b>304</b> and <b>306</b>, respectively, is not visible on the Fourier component map (<figref>FIG. 3A</figref>), as indicated by arrow <b>302</b>.</p>
+      <p id="p-00029-en" num="0029">The vascular contrast for the mean intensity map is primarily due to the difference in spin density between vasculature, and surrounding parenchyma. The Fourier component map and standard deviation maps, however, are additionally sensitive to modulations in the signal intensity either at the heart rate or all frequencies, respectively. Sources of signal intensity modulation include the influx of fresh blood into the slice for each heart beat, heart beat related in-plane motion of the blood vessels, and changes in blood volume. Blood vessels with primarily in-plane flow will have a reduced sensitivity to fresh blood inflow. The blood flow visible in <figref>FIG. 3</figref> near arrow <b>306</b>, and not visible near arrow <b>302</b>, implies that there are signal intensity modulations at frequencies other than the heart rate.</p>
+      <p id="p-00030-en" num="0030">Referring now to <figref>FIG. 4</figref>, an example of a magnetic resonance imaging (“MRI”) system is illustrated. The MRI system includes a workstation <b>402</b> having a display <b>404</b> and a keyboard <b>406</b>. The workstation <b>402</b> includes a processor <b>408</b>, such as a commercially available programmable machine running a commercially available operating system. The workstation <b>402</b> provides the operator interface that enables scan prescriptions to be entered into the MRI system. The workstation <b>402</b> is coupled to four servers: a pulse sequence server <b>410</b>; a data acquisition server <b>412</b>; a data processing server <b>414</b>, and a data store server <b>416</b>. The workstation <b>402</b> and each server <b>410</b>, <b>412</b>, <b>414</b> and <b>416</b> are connected to communicate with each other.</p>
+      <p id="p-00031-en" num="0031">The pulse sequence server <b>410</b> functions in response to instructions downloaded from the workstation <b>402</b> to operate a gradient system <b>418</b> and a radio frequency (“RF”) system <b>420</b>. Gradient waveforms necessary to perform the prescribed scan are produced and applied to the gradient system <b>418</b>, which excites gradient coils in a gradient coil assembly <b>422</b> to produce the magnetic field gradients G<sub>x</sub>, G<sub>y</sub>, and G<sub>z </sub>used for position encoding MR signals. The gradient coil assembly <b>422</b> forms a part of a magnet assembly <b>424</b> that includes a polarizing magnet <b>426</b> and a whole-body RF coil <b>428</b>.</p>
+      <p id="p-00032-en" num="0032">RF excitation waveforms are applied to the RF coil <b>428</b>, or a separate local coil (not shown in <figref>FIG. 4</figref>), by the RF system <b>420</b> to perform the prescribed magnetic resonance pulse sequence. Responsive MR signals detected by the RF coil <b>428</b>, or a separate local coil (not shown in <figref>FIG. 4</figref>), are received by the RF system <b>420</b>, amplified, demodulated, filtered, and digitized under direction of commands produced by the pulse sequence server <b>410</b>. The RF system <b>420</b> includes an RF transmitter for producing a wide variety of RF pulses used in MR pulse sequences. The RF transmitter is responsive to the scan prescription and direction from the pulse sequence server <b>410</b> to produce RF pulses of the desired frequency, phase, and pulse amplitude waveform. The generated RF pulses may be applied to the whole body RF coil <b>428</b> or to one or more local coils or coil arrays (not shown in <figref>FIG. 4</figref>).</p>
+      <p id="p-00033-en" num="0033">The RF system <b>420</b> also includes one or more RF receiver channels. Each RF receiver channel includes an RF amplifier that amplifies the MR signal received by the coil <b>428</b> to which it is connected, and a detector that detects and digitizes the I and Q quadrature components of the received MR signal. The magnitude of the received MR signal may thus be determined at any sampled point by the square root of the sum of the squares of the I and Q components:</p>
+      <p id="p-00034-en" num="0000">[in-line-formulae]<i>M</i>=√{square root over (<i>I</i><sub>2</sub><i>+Q</i><sub>2</sub>)}  (4);[/in-line-formulae]</p>
+      <p id="p-00035-en" num="0034">and the phase of the received MR signal may also be determined:</p>
+      <p id="p-00036-en" num="0000">
+        <maths id="maths-00001-en" num="00001">
+          <math overflow="scroll">
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <mi>φ</mi>
+                    <mo>=</mo>
+                    <mrow>
+                      <mrow>
+                        <msup>
+                          <mi>tan</mi>
+                          <mrow>
+                            <mo>-</mo>
+                            <mn>1</mn>
+                          </mrow>
+                        </msup>
+                        <mo></mo>
+                        <mrow>
+                          <mo>(</mo>
+                          <mfrac>
+                            <mi>Q</mi>
+                            <mi>I</mi>
+                          </mfrac>
+                          <mo>)</mo>
+                        </mrow>
+                      </mrow>
+                      <mo>.</mo>
+                    </mrow>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mo>(</mo>
+                    <mn>5</mn>
+                    <mo>)</mo>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          <img id="img-00001-en" wi="N/A" he="N/A" file="US20150265165A1_00006.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150265165A1-20150924-M00001.TIF" />
+        </maths>
+      </p>
+      <p id="p-00037-en" num="0035">The pulse sequence server <b>410</b> also optionally receives patient data from a physiological acquisition controller <b>430</b>. The physiological acquisition controller <b>430</b> receives signals from a number of different sensors connected to the patient, such as electrocardiograph (“ECG”) signals from electrodes, or respiratory signals from a bellows or other respiratory monitoring device. Such signals are typically used by the pulse sequence server <b>410</b> to synchronize, or “gate,” the performance of the scan with the subject's heart beat or respiration.</p>
+      <p id="p-00038-en" num="0036">The pulse sequence server <b>410</b> also connects to a scan room interface circuit <b>432</b> that receives signals from various sensors associated with the condition of the patient and the magnet system. It is also through the scan room interface circuit <b>432</b> that a patient positioning system <b>434</b> receives commands to move the patient to desired positions during the scan.</p>
+      <p id="p-00039-en" num="0037">The digitized MR signal samples produced by the RF system <b>420</b> are received by the data acquisition server <b>412</b>. The data acquisition server <b>412</b> operates in response to instructions downloaded from the workstation <b>402</b> to receive the real-time MR data and provide buffer storage, such that no data is lost by data overrun. In some scans, the data acquisition server <b>412</b> does little more than pass the acquired MR data to the data processor server <b>414</b>. However, in scans that require information derived from acquired MR data to control the further performance of the scan, the data acquisition server <b>412</b> is programmed to produce such information and convey it to the pulse sequence server <b>410</b>. For example, during prescans, MR data is acquired and used to calibrate the pulse sequence performed by the pulse sequence server <b>410</b>. Also, navigator signals may be acquired during a scan and used to adjust the operating parameters of the RF system <b>420</b> or the gradient system <b>418</b>, or to control the view order in which k-space is sampled.</p>
+      <p id="p-00040-en" num="0038">The data processing server <b>414</b> receives MR data from the data acquisition server <b>412</b> and processes it in accordance with instructions downloaded from the workstation <b>402</b>. Such processing may include, for example: Fourier transformation of raw k-space MR data to produce two or three-dimensional images; the application of filters to a reconstructed image; the generation of functional MR images; and the calculation of motion or flow images.</p>
+      <p id="p-00041-en" num="0039">Images reconstructed by the data processing server <b>414</b> are conveyed back to the workstation <b>402</b> where they are stored. Real-time images are stored in a data base memory cache (not shown in <figref>FIG. 4</figref>), from which they may be output to operator display <b>412</b> or a display <b>436</b> that is located near the magnet assembly <b>424</b> for use by attending physicians. Batch mode images or selected real time images are stored in a host database on disc storage <b>438</b>. When such images have been reconstructed and transferred to storage, the data processing server <b>414</b> notifies the data store server <b>416</b> on the workstation <b>402</b>. The workstation <b>402</b> may be used by an operator to archive the images, produce films, or send the images via a network to other facilities.</p>
+      <p id="p-00042-en" num="0040">Features suitable for such combinations and sub-combinations would be readily apparent to persons skilled in the art upon review of the present application as a whole. The subject matter described herein and in the recited claims intends to cover and embrace all suitable changes in technology.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150924">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method for non-contrast imaging of pulmonary blood flow in a subject using a magnetic resonance imaging system (“MRI”) system, the method comprising:
+<claim-text>a) acquiring, using the MRI system, image data from at least the subject's lungs during a period when substantially no respiratory motion occurs in the subject;</claim-text><claim-text>b) assembling the image data into a plurality of time-series datasets representing temporal variations of magnetic resonance (“MR”) signals in a region of interest containing at least a part of the subject's lungs;</claim-text><claim-text>c) computing a statistical blood flow metric for each voxel in the region of interest using respective time-series datasets; and</claim-text><claim-text>d) generating a report indicative of pulmonary blood flow in the subject using the statistical blood flow metrics computed at step c).</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the statistical blood flow metric is a mean intensity of MR signals in a time-series dataset.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, further comprising generating a mean intensity map using the computed statistical blood flow metrics, wherein the mean intensity map indicates at least a contrast between a vasculature and a lung parenchyma.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the statistical blood flow metric is a standard deviation of MR signals in a time-series dataset.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, further comprising generating a standard deviation map using the computed statistical blood flow metric, wherein the standard deviation map indicates signal intensity modulations at multiple frequencies.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the report includes at least one image representative of pulmonary blood flow in the subject.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the report includes information related to at least one of an influx of blood into an imaging slice for each heart beat, an in-plane motion of a blood vessel, or a change in blood volume for the imaging slice.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein step a) includes directing the MRI system to apply an ultrafast gradient echo pulse sequence to acquire the image data.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein step d) includes generating a statistical blood flow map using the computed statistical blood flow metric, the statistical blood flow map indicating a measure of pulmonary blood flow in the subject.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the statistical blood flow metric is a mean intensity of MR signals in a time-series dataset.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the statistical blood flow metric is a standard deviation of MR signals in a time-series dataset.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en" independent="true">
+      <claim-text>
+        <b>12</b>. A magnetic resonance imaging (“MRI”) system for non-contrast imaging of pulmonary blood flow in a subject, the system comprising:
+<claim-text>a magnet system configured to generate a polarizing magnetic field about at least a portion of a subject arranged in the MRI system;</claim-text><claim-text>a plurality of gradient coils configured to establish at least one magnetic gradient field to the polarizing magnetic field;</claim-text><claim-text>a radio frequency (“RF”) system configured to apply an RF field to the subject and to receive magnetic resonance (“MR”) signals therefrom;</claim-text><claim-text>a computer system programmed to:
+<claim-text>i) direct the RF system and plurality of gradient coils to acquire image data from at least the subject's lungs during a period when substantially no respiratory motion occurs in the subject;</claim-text><claim-text>ii) assemble the image data into a plurality of time-series datasets representing temporal variations of magnetic resonance (“MR”) signals in a region of interest containing at least a part of the subject's lungs;</claim-text><claim-text>iii) compute a statistical blood flow metric for each voxel in the region of interest using respective time-series datasets; and</claim-text><claim-text>iv) generate a report indicative of pulmonary blood flow in the subject using the statistical blood flow metrics computed at step iii).</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The system of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the statistical blood flow metric is a mean intensity of MR signals in a time-series dataset.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The system of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the computer is further programmed to use the computed mean intensities to generate a mean intensity map indicating at least a contrast between a vasculature and a lung parenchyma.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The system of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the statistical blood flow metric is a standard deviation of MR signals in a time-series dataset.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The system of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein the computer is further programmed to use the computed standard deviations to generate a standard deviation map indicative of signal intensity modulations at multiple frequencies.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The system of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the report includes at least one image representative of pulmonary blood flow in the subject.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The system of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the report includes information related to at least one of an influx of blood into an imaging slice for each heart beat, or an in-plane motion of a blood vessel, or a change in blood volume for the imaging slice.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The system of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the computer is further programmed to direct the MRI system to apply an ultrafast gradient echo pulse sequence to acquire the image data for use in generating a statistical blood flow map.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The system of <claim-ref idref="clm-00019-en">claim 19</claim-ref>, wherein the statistical blood flow map is at least one of a mean intensity map or a standard deviation map. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150265165A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150265165A1-20150924-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150265165A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150265165A1-20150924-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150265165A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150265165A1-20150924-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150265165A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150265165A1-20150924-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150265165A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150265165A1-20150924-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150265165A1_00006.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150265165A1-20150924-M00001.TIF" inline="yes" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150265165A1_00007.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150265165A1-20150924-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150265165A1.PDF" type="pdf" size="563740" pages="10" />
+</lexisnexis-patent-document>

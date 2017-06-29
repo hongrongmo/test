@@ -1,0 +1,2250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247032A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021447" date-changed="20151215" time-changed="165837">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140109">
+        <country>US</country>
+        <doc-number>20150247032</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14429206</doc-number>
+        <date>20130906</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012206248</doc-number>
+        <date>20120919</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151215">
+      <classification-ipcr sequence="1">
+        <text>C08L  61/14        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>61</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C08L  53/00        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>53</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151215">
+      <classification-cpc sequence="1">
+        <text>C08L  61/14        20130101 FI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>61</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B32B   1/08        20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>32</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>B32B  25/10        20130101 LI20140417BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>32</class>
+        <subclass>B</subclass>
+        <main-group>25</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140417</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>B32B  25/14        20130101 LI20150625BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>32</class>
+        <subclass>B</subclass>
+        <main-group>25</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150625</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>B32B  25/18        20130101 LI20150625BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>32</class>
+        <subclass>B</subclass>
+        <main-group>25</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150625</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>B32B2270/00        20130101 LA20150625BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>32</class>
+        <subclass>B</subclass>
+        <main-group>2270</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150625</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>B32B2597/00        20130101 LA20150625BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>32</class>
+        <subclass>B</subclass>
+        <main-group>2597</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150625</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C08L  23/28        20130101 LI20140417BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>23</main-group>
+        <subgroup>28</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140417</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C08L  23/283       20130101 LI20151209BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>23</main-group>
+        <subgroup>283</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151209</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>C08L  53/00        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>53</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>C08L  61/06        20130101 LA20140417BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>61</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140417</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>C08L  61/28        20130101 LA20140513BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>61</main-group>
+        <subgroup>28</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140513</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>C08L2205/035       20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>2205</main-group>
+        <subgroup>035</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>F16L  11/04        20130101 LI20150729BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>16</class>
+        <subclass>L</subclass>
+        <main-group>11</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150729</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="15">
+        <text>F16L  11/085       20130101 LI20141208BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>16</class>
+        <subclass>L</subclass>
+        <main-group>11</main-group>
+        <subgroup>085</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141208</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="16">
+        <text>Y10T 428/1372      20130101 LA20151001BCEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>428</main-group>
+        <subgroup>1372</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151001</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+      <combination-set>
+        <group-number>1</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C08L  23/28        20130101 LI20140731BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>23</main-group>
+            <subgroup>28</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20140731</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C08L  53/00        20130101 LI20140731BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>53</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20140731</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>3</rank-number>
+          <classification-cpc>
+            <text>C08K   3/34        20130101 LI20140731BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>K</subclass>
+            <main-group>3</main-group>
+            <subgroup>34</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20140731</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>2</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C08L  23/283       20130101 LI20151209BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>23</main-group>
+            <subgroup>283</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151209</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C08L  53/02        20130101 LI20151209BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>53</main-group>
+            <subgroup>02</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151209</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>3</rank-number>
+          <classification-cpc>
+            <text>C08K   3/34        20130101 LI20151209BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>K</subclass>
+            <main-group>3</main-group>
+            <subgroup>34</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151209</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>4</rank-number>
+          <classification-cpc>
+            <text>C08K   3/04        20130101 LI20151209BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>K</subclass>
+            <main-group>3</main-group>
+            <subgroup>04</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151209</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>3</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C08L  23/283       20130101 LI20151209BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>23</main-group>
+            <subgroup>283</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151209</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C08L  53/02        20130101 LI20151209BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>53</main-group>
+            <subgroup>02</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151209</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>3</rank-number>
+          <classification-cpc>
+            <text>C08L  61/06        20130101 LI20151209BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>61</main-group>
+            <subgroup>06</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151209</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>4</rank-number>
+          <classification-cpc>
+            <text>C08L  23/20        20130101 LI20151209BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>23</main-group>
+            <subgroup>20</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151209</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>5</rank-number>
+          <classification-cpc>
+            <text>C08L  61/28        20130101 LI20151209BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>61</main-group>
+            <subgroup>28</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151209</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>6</rank-number>
+          <classification-cpc>
+            <text>C08K   3/34        20130101 LI20151209BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>K</subclass>
+            <main-group>3</main-group>
+            <subgroup>34</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151209</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>7</rank-number>
+          <classification-cpc>
+            <text>C08K   3/04        20130101 LI20151209BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>K</subclass>
+            <main-group>3</main-group>
+            <subgroup>04</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151209</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">8</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">BUTYL RUBBER COMPOSITION AND HOSE USING SAME</invention-title>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>NICHIRIN CO., LTD.</orgname>
+            <role>03</role>
+            <address>
+              <city>Hyogo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Takatani</last-name>
+            <first-name>Ken</first-name>
+            <address>
+              <city>Hyogo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Nakano</last-name>
+            <first-name>Yoshio</first-name>
+            <address>
+              <city>Hyogo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP13074116</doc-number>
+        <date>20130906</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014045907</doc-number>
+        <date>20140327</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150903">
+      <main-family family-id="160306210">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014045907</doc-number>
+            <kind>A1</kind>
+            <date>20140327</date>
+          </document-id>
+          <application-date>
+            <date>20130906</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2899228</doc-number>
+            <kind>A1</kind>
+            <date>20150729</date>
+          </document-id>
+          <application-date>
+            <date>20130906</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104619768</doc-number>
+            <kind>A</kind>
+            <date>20150513</date>
+          </document-id>
+          <application-date>
+            <date>20130906</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014062140</doc-number>
+            <kind>A</kind>
+            <date>20140410</date>
+          </document-id>
+          <application-date>
+            <date>20120919</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>5238901</doc-number>
+            <kind>B1</kind>
+            <date>20130717</date>
+          </document-id>
+          <application-date>
+            <date>20120919</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247032</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130906</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="160306209">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014045907</doc-number>
+            <kind>A1</kind>
+            <date>20140327</date>
+          </document-id>
+          <application-date>
+            <date>20130906</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2899228</doc-number>
+            <kind>A1</kind>
+            <date>20150729</date>
+          </document-id>
+          <application-date>
+            <date>20130906</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104619768</doc-number>
+            <kind>A</kind>
+            <date>20150513</date>
+          </document-id>
+          <application-date>
+            <date>20130906</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014062140</doc-number>
+            <kind>A</kind>
+            <date>20140410</date>
+          </document-id>
+          <application-date>
+            <date>20120919</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>5238901</doc-number>
+            <kind>B1</kind>
+            <date>20130717</date>
+          </document-id>
+          <application-date>
+            <date>20120919</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247032</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130906</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A butyl rubber composition is preferably used for an intermediate rubber layer <b>3</b> of a composite flexible hose formed by laminating, from the inner side, an innermost layer <b>2</b>, intermediate rubber layer <b>3</b>, fiber reinforcement layer <b>4</b>, and an external rubber layer <b>5</b> in this order. The butyl rubber composition includes halogenated butyl rubber, styrene-isobutylene block copolymer, white filler, white reinforcing agent, brominated alkylphenol-formaldehyde resin, phenol resin, and methylol melamine, and 5 to 45 parts by weight of the styrene-isobutylene block copolymer is added to 100 parts by weight of the halogenated butyl rubber.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150319</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247032A1</docdb-publication-number>
+      <docdb-application-id>444209965</docdb-application-id>
+      <new-owner>NICHIRIN CO., LTD., JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:TAKATANI, KEN;NAKANO, YOSHIO;REEL/FRAME:035210/0659</free-text-description>
+      <effective-date>
+        <date>20150218</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to a butyl rubber composition and a hose using the same, and particularly relates to a composite flexible hose suitable for purposes such as transportation of refrigerants, and a butyl rubber composition suitable for the composite flexible hose.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">Composite flexible hoses used for transporting refrigerant gases for vehicle air conditioners and refrigerant gases for freezer or refrigerator vehicles are required not only to have gas barrier properties and flexibility for restraining the permeation of refrigerant gas but also to resist an external pressure and an internal pressure of the transported gas. An example of such composite flexible hoses is recited in Patent Literature 1.</p>
+      <p id="p-00003-en" num="0003">As shown in <figref>FIG. 3</figref>, a composite flexible hose <b>101</b> of Patent Literature 1 is formed by laminating, from the inner side, an innermost layer <b>102</b>, an intermediate rubber layer <b>103</b>, a fiber reinforcement layer <b>104</b>, and an external rubber layer <b>105</b> in this order. Because the innermost layer <b>102</b> is made of polyamide resin, gas barrier properties are obtained. Furthermore, because the intermediate rubber layer <b>103</b> is made of halogenated butyl rubber, not only flexibility but also gas barrier properties and water barrier properties are obtained.</p>
+      <p id="p-00004-en" num="0004">In so-called eco cars such as hybrid vehicles and electric vehicles, an electric compressor is mounted as an air conditioner system. It is necessary in the electric compressor to electrically insulating an internal motor from a housing, and polyol ester (POE) which excels in electric insulation is used as lubricating oil for the electric compressor. To maintain this electric insulation, it is necessary to restrain the entrance (permeation) of water into the air conditioner system as much as possible. For this reason, a hose used for transporting refrigerants for such an air conditioner system is also required to restrain the permeation of water from the outside as much as possible, i.e., required to have better water barrier properties.</p>
+      <p id="p-00005-en" num="0005">In the case of the composite flexible hose of Patent Literature 1, however, into the intermediate rubber layer <b>103</b> (made of butyl rubber) for obtaining water barrier properties, an adhesive component is kneaded for direct vulcanization adhesion with the polyamide resin in the innermost layer <b>102</b>. Because this adhesive component is highly hydrophilic, the water outside the hose easily enters the rubber layer and is easily released inside the hose. As such, the permeation of the water from the outside of the hose is not sufficiently restrained. For this reason, the hose of Patent Literature 1 is not suitable for electric compressors as it is, and the water barrier properties must be further improved.</p>
+      <p id="p-00006-en" num="0006">In the meanwhile, an example of hoses for transporting refrigerants, which have improved gas barrier properties of butyl rubber, is a hose recited in Patent Literature 2. In this hose, the gas barrier properties, flexibility, and processability are improved by adding polybutene and white filler to the butyl rubber of the innermost layer. However, the tensile strength is insufficient. Furthermore, because of the absence of a resin layer, the gas barrier properties of this hose are inferior to the gas barrier properties of hoses such as the hose of Patent Literature 1 having a polyamide resin layer. Moreover, because the butyl rubber significantly swells with POE lubricating oil, the hose of Patent Literature 2 in which the innermost layer is made of butyl rubber cannot be used for electric compressors as it is. The water barrier properties of the butyl rubber are not mentioned in the document.</p>
+      <heading id="h-00003-en" level="1">CITATION LIST</heading>
+      <heading id="h-00004-en" level="1">Patent Literatures</heading>
+      <heading id="h-00005-en" level="2">[Patent Literature 1] Japanese Patent No. 3891718</heading>
+      <heading id="h-00006-en" level="2">[Patent Literature 2] Japanese Patent No. 4732720</heading>
+      <heading id="h-00007-en" level="1">SUMMARY OF INVENTION</heading>
+      <heading id="h-00008-en" level="1">Technical Problem</heading>
+      <p id="p-00007-en" num="0007">With the rubber composition of Patent Literature 2, the gas barrier properties are slightly improved. However, when the arrangement shown in <figref>FIG. 3</figref> is employed to obtain excellent gas barrier properties, it is impossible to perform direct vulcanization adhesion of the polyamide resin in the innermost layer <b>102</b> with the butyl rubber in the intermediate rubber layer <b>103</b>. For this reason, an adhering step using an adhesive is required to join the polyamide resin in the innermost layer <b>102</b> with the butyl rubber in the intermediate rubber layer <b>103</b>. This disadvantageously increases the cost and causes irregularities in the adhesion force.</p>
+      <p id="p-00008-en" num="0008">When Patent Literature 1 is combined with Patent Literature 2, i.e., when the adhesive component of Patent Literature 1 is kneaded in while the hardness of the rubber composition of Patent Literature 2 is maintained, the water barrier properties are insufficient and the tensile strength is deteriorated. Furthermore, when the amount of the white filler is increased and/or the amount of the plasticizer is decreased to improve the water barrier properties, the rubber becomes hard and the flexibility is deteriorated. Moreover, the viscosity before the vulcanization increases, and rubber burning (rough surface) occurs on account of the increase in the head pressure at the time of rubber extrusion molding.</p>
+      <p id="p-00009-en" num="0009">The present invention has been done to solve the problems above, and an object of the present invention is to provide a butyl rubber composition which is directly vulcanization-adhered to resin without using an adhesive and has improved water barrier properties while the extrusion molding characteristics, flexibility, and tensile strength being maintained, and to provide a hose using the butyl rubber composition.</p>
+      <heading id="h-00009-en" level="1">Solution to Problem</heading>
+      <p id="p-00010-en" num="0010">To achieve the object above, as a result of diligent study predominantly on polymers to be added and softeners, the inventors of the subject application have found that, when styrene-isobutylene block copolymer is added to halogenated butyl rubber, the flexibility and the extrusion molding characteristics are maintained without deteriorating the water barrier properties, and the tensile strength is improved. The present invention was completed in this way.</p>
+      <p id="p-00011-en" num="0011">To put it differently, in the present invention, halogenated butyl rubber, styrene-isobutylene block copolymer, white filler, white reinforcing agent, brominated alkylphenol-holmaldehyde resin, phenol resin, and methylol melamine are included, and 5 to 45 parts by weight of the styrene-isobutylene block copolymer are added to 100 parts by weight of the halogenated butyl rubber. Furthermore, preferably, the white filler is at least one selected from a group consisting of talc, mica, sericite, montmorillonite, and clay, and the white reinforcing agent is silicic acid. Furthermore, preferably, polybutene is further included, and 5 to 15 parts by weight of the polybutene are added to 100 parts by weight of the halogenated butyl rubber.</p>
+      <p id="p-00012-en" num="0012">With the butyl rubber composition of the present invention, the water barrier properties are improved and sufficient adhesion to resin is achieved without using an adhesive. Furthermore, the extrusion molding characteristics, the flexibility, and the tensile strength are maintained without increasing the hardness.</p>
+      <p id="p-00013-en" num="0013">A hose of the present invention includes a rubber layer including the above-described butyl rubber composition. Furthermore, the hose of the present invention is preferably arranged such that, from the inner side, an innermost layer, an intermediate rubber layer, a fiber reinforcement layer, and an external rubber layer are laminated in this order, and the intermediate rubber layer includes the butyl rubber composition of the present invention.</p>
+      <p id="p-00014-en" num="0014">With the hose of the present invention, the resin layer is strongly adhered to the rubber layer without the intervention of an adhesive layer, and the water barrier properties are improved while maintaining the extrusion molding characteristics, the flexibility and the tensile strength. This hose is therefore suitable for purposes such as transportation of refrigerant.</p>
+      <heading id="h-00010-en" level="1">Advantageous Effects of Invention</heading>
+      <p id="p-00015-en" num="0015">With the butyl rubber composition of the present invention, the water barrier properties are good, and sufficient adhesion to resin is achieved without using an adhesive. Furthermore, the extrusion molding characteristics, the flexibility, and the tensile strength are maintained without increasing the hardness.</p>
+      <p id="p-00016-en" num="0016">With the hose including the butyl rubber composition of the present invention, the resin layer is strongly adhered to the rubber layer without the intervention of an adhesive layer, and the water barrier properties are improved while maintaining the extrusion molding characteristics, the flexibility and the tensile strength. This hose is therefore suitable for purposes such as transportation of refrigerant.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00011-en" level="1">BRIEF DESCRIPTION OF DRAWINGS</heading>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 1</figref> is a perspective view of a composite flexible hose of Embodiment 1 of the present invention.</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 2</figref> is a schematic cross section showing an adhesion property test of an intermediate rubber layer.</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 3</figref> is a perspective view of a known composite flexible hose.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00012-en" level="1">DESCRIPTION OF EMBODIMENTS</heading>
+      <p id="p-00020-en" num="0020">The following will describe an embodiment of the present invention with reference to figures.</p>
+      <p id="p-00021-en" num="0021">To begin with, Embodiment 1 will be described with reference to <figref>FIG. 1</figref>.</p>
+      <heading id="h-00013-en" level="1">Embodiment 1</heading>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 1</figref> is a perspective view of a composite flexible hose of the embodiment of the present invention. In this composite flexible hose <b>1</b>, no adhesive layer is provided between an innermost layer <b>2</b> and an intermediate rubber layer <b>3</b>, and a fiber reinforcement layer <b>4</b> and an external rubber layer <b>5</b> are provided in this order on the intermediate rubber layer <b>3</b>. The intermediate rubber layer <b>3</b> is made of a butyl rubber composition of the embodiment of the present invention.</p>
+      <p id="p-00023-en" num="0023">This butyl rubber composition is formed in such a way that, halogenated butyl rubber is used as raw rubber, and styrene-isobutylene block copolymer, white filler, a white reinforcing agent, brominated alkylphenol-holmaldehyde resin, phenol resin, and methylol melamine are added to the raw rubber.</p>
+      <p id="p-00024-en" num="0024">The halogenated butyl rubber is, for example, one, two, or more types of rubbers such as chlorinated butyl rubber and brominated butyl rubber. The halogenated butyl rubber is preferably solely constituted by brominated butyl rubber, particularly in consideration of reactivity. Into the halogenated butyl rubber, butyl rubber may be blended.</p>
+      <p id="p-00025-en" num="0025">The styrene-isobutylene block copolymer is not particularly limited as long as polystyrene (PS) is used as a hard segment whereas polyisobutylene (PIB) is used as a soft segment. Examples of the styrene-isobutylene block copolymer include styrene-isobutylene diblock copolymer (SIB) and styrene-isobutylene-styrene triblock copolymer (SIBS). Among these substances, SIBS is preferred on account of its excellent tensile strength. An example of SIBS is SIBSTAR made by KANEKA CORPORATION.</p>
+      <p id="p-00026-en" num="0026">The white reinforcing agent is silicic acid. Examples of the silicic acid include anhydrous silicic acid and hydrous silicic acid. The hydrous silicic acid including many silanol groups is preferred because it is well adhered to the polyamide resin. Adding the white reinforcing agent improves the adhesiveness between the intermediate rubber layer <b>3</b> and the innermost layer <b>2</b> (resin layer).</p>
+      <p id="p-00027-en" num="0027">The white filler is at least one type selected from a group consisting of talc, mica, sericite, montmorillonite, and clay. Adding the white filler improves the water barrier properties.</p>
+      <p id="p-00028-en" num="0028">Examples of the brominated alkylphenol-holmaldehyde resin include TACKIROL 250-1 and TACKIROL 250-3 both made by TAOKA CHEMICAL COMPANY, LIMITED. TACKIROL 250-3 is particularly preferred because no catalyst is required. The brominated alkylphenol-holmaldehyde resin functions not only as the adhesive component but also a vulcanizing agent for halogenated butyl rubber which is raw rubber.</p>
+      <p id="p-00029-en" num="0029">Examples of the phenol resin which is added to the rubber composition of the intermediate rubber layer <b>3</b> in order to improve the adhesion property include 2,6-dimethylol-p-cresol, resol type phenol resin, and novolak type phenol resin. In consideration of the improvement in the adhesion property and good reactivity with methylol melamine, SUMIKANOL 620 (modified resol-type phenol-formaldehyde resin made by Sumitomo Chemical Company, Limited) is preferred.</p>
+      <p id="p-00030-en" num="0030">Examples of the methylol melamine which is the other component to improve the adhesion property include SUMIKANOL 508 and SUMIKANOL 507AP both made by Sumitomo Chemical Company, Limited. In consideration of good reactivity with phenol resin, SUMIKANOL 507AP is preferred.</p>
+      <p id="p-00031-en" num="0031">In the present invention, 5 to 45 parts by weight of the styrene-isobutylene block copolymer are preferably added for 100 parts by weight of the halogenated butyl rubber. The added amount of the styrene-isobutylene block copolymer is more preferably 15 to 45 parts by weight, and further preferably 15 to 35 parts by weight. When the added amount of the styrene-isobutylene block copolymer is less than 5 parts by weight, the hardness increases and the flexibility is not obtained, and the tensile strength is lowered. When the added amount is more than 45 parts by weight, compressive permanent set is deteriorated.</p>
+      <p id="p-00032-en" num="0032">The added amount of the white filler is preferably 50 to 200 parts by weight for 100 parts by weight of the halogenated butyl rubber, and more preferably 70 to 180 parts by weight.</p>
+      <p id="p-00033-en" num="0033">The added amount of the white reinforcing agent is preferably 10 to 50 parts by weight for 100 parts by weight of the halogenated butyl rubber, more preferably 15 to 30 parts by weight, and further preferably 20 to 30 parts by weight. The adhesion property is bad when the added amount of the white reinforcing agent is less than 10 parts by weight, whereas the viscosity is high and the rough surface may occur at the time of extrusion molding, when the added amount is more than 50 parts by weight.</p>
+      <p id="p-00034-en" num="0034">The added amount of the brominated alkylphenol-holmaldehyde resin is preferably 5 to 15 parts by weight for 100 parts by weight of the halogenated butyl rubber, more preferably 6 to 13 parts by weight, and further preferably 7 to 10 parts by weight. When the added amount is less than 5 parts by weight, the speed of vulcanization reaction with the raw rubber becomes slow in the vulcanization and the physical properties are deteriorated. On the other hand, when the added amount is more than 15 parts by weight, adhesion to the roll during the kneading and extrusion molding and the rough surface occur, and the workability is deteriorated.</p>
+      <p id="p-00035-en" num="0035">The added amount of the phenol resin which is a component for improving the adhesion property is preferably 0.5 to 10 parts by weight for 100 parts by weight of the halogenated butyl rubber, more preferably 1 to 5 parts by weight, and further preferably 2 to 5 parts by weight. When the added amount is less than 0.5 part by weight, the improvement in the adhesion property is insufficient. On the other hand, when the added amount is more than 10 parts by weight, the physical properties (such as flexibility and compressive permanent set) of the rubber composition are deteriorated.</p>
+      <p id="p-00036-en" num="0036">The added amount of the methylol melamine is preferably 0.5 to 10 parts by weight for 100 parts by weight of the halogenated butyl rubber, and more preferably 1 to 5 parts by weight. When the added amount is less than 0.5 part by weight, the improvement in the adhesion property is insufficient. On the other hand, when the added amount is more than 10 parts by weight, the physical properties (such as flexibility and compressive permanent set) of the rubber composition are deteriorated.</p>
+      <p id="p-00037-en" num="0037">To this rubber composition, a suitable amount of carbon black, zinc oxide, stearic acid, plasticizer, age resister, processing aid, or the like may be added.</p>
+      <p id="p-00038-en" num="0038">Back to <figref>FIG. 1</figref>, the innermost layer <b>2</b> of the composite flexible hose <b>1</b> is made of modified polyamide formed by blending polyamide with carboxyl group-containing modified polyolefin. Examples of the polyamide include polyamide 6, polyamide 11, polyamide 12, polyamide 4-6, polyamide 6-6, polyamide 6-10, polyamide 6-12, polyamide MXD-6, and copolymer of at least two of them.</p>
+      <p id="p-00039-en" num="0039">A preferred example of the carboxyl group-containing modified polyolefin is modified polyolefin to which 0.1 to 10 mole percent of functional groups is added in such a way that acid anhydride such as maleic anhydride is graft-polymerized with polyolefin with which olefin such as ethylene, propylene, and butadiene and/or diene monomer is homopolymerized or copolymerized.</p>
+      <p id="p-00040-en" num="0040">The blend ratio between the polyamide and the modified polyolefin is 90/10 to 50/50, preferably 65/35 to 55/45. When the rate of the modified polyolefin increases, the flexibility of the hose tends to be improved but the gas barrier properties tend to be deteriorated. When the rate of the modified polyolefin decreases, the gas barrier properties tend to be improved but the adhesiveness with the intermediate rubber layer <b>3</b> and the flexibility tend to be deteriorated.</p>
+      <p id="p-00041-en" num="0041">Examples of the modified polyamide include Zytel ST series made by E. I. du Pont de Nemours and Company such as Zytel ST801 Zytel ST811, and Zytel ST811HS each of which seems to be alloy of polyamide 6 and maleic-anhydride-modified polyolefin.</p>
+      <p id="p-00042-en" num="0042">The innermost layer <b>2</b> is formed by extrusion-molding the above-described modified polyamide to be pipe-shaped. The thickness of the pipe is preferably 0.05 mm or more in consideration of the extrusion molding characteristics and the gas barrier properties, and is preferably 0.5 mm or less in consideration of the flexibility.</p>
+      <p id="p-00043-en" num="0043">The intermediate rubber layer <b>3</b> is formed by extrusion molding to be typically 1.0 to 3.0 mm thick, preferably 1.5 to 2.5=thick. With the butyl rubber composition of this embodiment, the surface of the extruded intermediate rubber layer <b>3</b> does not become rough, and hence the workability after this process and the quality of the end product are improved.</p>
+      <p id="p-00044-en" num="0044">After the extrusion molding of the intermediate rubber layer <b>3</b>, the fiber reinforcement layer <b>4</b> and then the external rubber layer <b>5</b> are laminated by braiding, spiral winding, or the like. As the fiber reinforcement layer <b>4</b> and the external rubber layer <b>5</b>, known materials may be used. Examples of the material of the fiber reinforcement layer <b>4</b> include natural fiber and synthetic fiber such as polyvinyl alcohol fiber, polyamide fiber, polyester fiber, and aramid fiber used independently or after treated by RFL (Resorcinol Formaldehyde Latex adhesive). Examples of the external rubber layer <b>5</b> include synthetic rubber which excels in ozone resistance such as EPDM, CR, CSM, IIR, and XIIR. The external rubber layer <b>5</b> is typically about 1.0 to 2.0 mm thick.</p>
+      <p id="p-00045-en" num="0045">The composite flexible hose <b>1</b> of the present embodiment is obtained in such a way that, after the intermediate rubber layer <b>3</b>, the fiber reinforcement layer <b>4</b>, and the external rubber layer <b>5</b> are laminated on the innermost layer <b>2</b>, the layers are entirely vulcanized. The vulcanization is preferably carried out in a steam pressure at about 150 to 180 degrees centigrade.</p>
+      <p id="p-00046-en" num="0046">The composite flexible hose <b>1</b> is, for example, manufactured in the following manner. The modified polyamide for the innermost layer is extruded at a rate of 12 m/minute to be 0.15 mm thick on a mandrel which is made of resin and is 11.75=in external diameter, so that the innermost layer <b>2</b> is formed. After about 30 seconds, the rubber composition for the intermediate layer is extruded at a rate of 12 m/minute to be 1.9 mm thick on the innermost layer <b>2</b>. Then polyethylene terephthalate yarns having been RFL-treated are braided so that the fiber reinforcement layer <b>4</b> is formed, and lastly EPDM is extruded to be 1.1 mm thick so that the external rubber layer <b>5</b> is formed. This not-vulcanized hose is vulcanized by being heated for 40 minutes at 160 degrees centigrade, with the result that the composite flexible hose <b>1</b> is obtained. On account of the vulcanization, the rubber composition for the intermediate layer is vulcanization-adhered to the innermost layer <b>2</b>.</p>
+      <p id="p-00047-en" num="0047">The obtained composite flexible hose <b>1</b> has sufficient gas barrier properties, water barrier properties, flexibility, and tensile strength, and in which the resin layer is strongly adhered to the rubber layer. In particular, the strong adhesion between the resin layer and the rubber layer is maintained even if the hose <b>1</b> is significantly bended or after aging.</p>
+      <p id="p-00048-en" num="0048">In this composite flexible hose <b>1</b>, the intermediate rubber layer <b>3</b> is formed directly on the innermost layer <b>2</b> and is vulcanization-adhered to the innermost layer <b>2</b>. It is therefore unnecessary to take time for evaporation of a solvent as a step for forming an adhesive layer is omitted, and hence the entire number of steps is reduced. The intermediate rubber layer <b>3</b> is formed in such a way that the rubber composition for the intermediate rubber layer <b>3</b> is extruded and molded directly on the outer surface of the innermost layer <b>2</b>.</p>
+      <heading id="h-00014-en" level="1">EXAMPLES</heading>
+      <p id="p-00049-en" num="0049">Now, examples and comparative examples of Embodiment 1 will be described. The present invention, however, is not limited to these examples.</p>
+      <p id="p-00050-en" num="0050">As shown in Table 1 below, rubber compositions of Examples 1 to 5 and Comparative Examples 1 and 2 which are different from one another in the rate of styrene-isobutylene block copolymer with respect to brominated butyl rubber (Br-IIR) were vulcanization-cured, and tests for the items shown in Table 1 were performed.</p>
+      <p id="p-00051-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="161pt" align="left" />
+              <colspec colname="3" colwidth="56pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <colspec colname="5" colwidth="49pt" align="center" />
+              <colspec colname="6" colwidth="56pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="6" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>EXAMPLE 1</entry>
+                  <entry>EXAMPLE 2</entry>
+                  <entry>EXAMPLE 3</entry>
+                  <entry>EXAMPLE 4</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>RAW</entry>
+                  <entry>Br-IIR</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry>MATERIALS</entry>
+                  <entry>CARBON BLACK</entry>
+                  <entry>57</entry>
+                  <entry>57</entry>
+                  <entry>57</entry>
+                  <entry>57</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>HYDROUS SILICIC ACID</entry>
+                  <entry>23</entry>
+                  <entry>23</entry>
+                  <entry>23</entry>
+                  <entry>23</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>TALC</entry>
+                  <entry>77</entry>
+                  <entry>77</entry>
+                  <entry>77</entry>
+                  <entry>77</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>STEARIC ACID</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>STYRENE-ISOBUTYLENE BLOCK COPOLYMER</entry>
+                  <entry>5</entry>
+                  <entry>15</entry>
+                  <entry>25</entry>
+                  <entry>35</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ZINC OXIDE</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>BROMINATED ALKYLPHENOL-</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>HOLMALDEHYDE RESIN</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PHENOL RESIN</entry>
+                  <entry>3</entry>
+                  <entry>3</entry>
+                  <entry>3</entry>
+                  <entry>3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>METHYLOL MELAMINE</entry>
+                  <entry>2</entry>
+                  <entry>2</entry>
+                  <entry>2</entry>
+                  <entry>2</entry>
+                </row>
+                <row>
+                  <entry>ORDINARY</entry>
+                  <entry>HARDNESS (JIS-A)</entry>
+                  <entry>84</entry>
+                  <entry>82</entry>
+                  <entry>80</entry>
+                  <entry>78</entry>
+                </row>
+                <row>
+                  <entry>STATE</entry>
+                  <entry>JUDGMENTS</entry>
+                  <entry>ACCEPTABLE</entry>
+                  <entry>GOOD</entry>
+                  <entry>GOOD</entry>
+                  <entry>EXCELLENT</entry>
+                </row>
+                <row>
+                  <entry>PHYSICAL</entry>
+                  <entry>EXCELLENT: 79 OR LOWER, GOOD: 80 TO 82,</entry>
+                </row>
+                <row>
+                  <entry>PROPERTIES</entry>
+                  <entry>ACCEPTABLE: 83 TO 85, BAD: 86 OR HIGHER</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>TENSILE STRENGTH (MPa)</entry>
+                  <entry>10.6</entry>
+                  <entry>10.8</entry>
+                  <entry>11.0</entry>
+                  <entry>11.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>JUDGMENTS</entry>
+                  <entry>EXCELLENT</entry>
+                  <entry>EXCELLENT</entry>
+                  <entry>EXCELLENT</entry>
+                  <entry>EXCELLENT</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>EXCELLENT: 10.1 OR HIGHER GOOD: 9.6 TO 10,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ACCEPTABLE: 9.1 TO 9.5, BAD: 9 OR LOWER</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ELONGATION (%)</entry>
+                  <entry>310</entry>
+                  <entry>330</entry>
+                  <entry>350</entry>
+                  <entry>370</entry>
+                </row>
+                <row>
+                  <entry>COMPRESSIVE</entry>
+                  <entry>COMPRESSIVE PERMANENT SET (%)</entry>
+                  <entry>43</entry>
+                  <entry>45</entry>
+                  <entry>47</entry>
+                  <entry>50</entry>
+                </row>
+                <row>
+                  <entry>PERMANENT</entry>
+                  <entry>JUDGMENTS</entry>
+                  <entry>GOOD</entry>
+                  <entry>GOOD</entry>
+                  <entry>GOOD</entry>
+                  <entry>ACCEPTABLE</entry>
+                </row>
+                <row>
+                  <entry>SET</entry>
+                  <entry>EXCELLENT: 40 OR LOWER, GOOD: 40 TO 49,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ACCEPTABLE: 50 TO 59, BAD: 60 OR HIGHER</entry>
+                </row>
+                <row>
+                  <entry>WATER BARRIER</entry>
+                  <entry>WATER VAPOR PERMEABILITY (g/m<sup>2</sup>/24 h)</entry>
+                  <entry>1.1</entry>
+                  <entry>1.1</entry>
+                  <entry>1.1</entry>
+                  <entry>1.1</entry>
+                </row>
+                <row>
+                  <entry>PROPERTIES</entry>
+                  <entry>JUDGMENTS</entry>
+                  <entry>EXCELLENT</entry>
+                  <entry>EXCELLENT</entry>
+                  <entry>EXCELLENT</entry>
+                  <entry>EXCELLENT</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>EXCELLENT: 1.3 OR LOWER, GOOD: 1.4 TO 1.5,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ACCEPTABLE: 1.6 T0 1.7, BAD: 1.8 OR HIGHER</entry>
+                </row>
+                <row>
+                  <entry>ADHESION</entry>
+                  <entry>INSIDE RESIN (PA6)</entry>
+                  <entry>RUBBER</entry>
+                  <entry>RUBBER</entry>
+                  <entry>RUBBER</entry>
+                  <entry>RUBBER</entry>
+                </row>
+                <row>
+                  <entry>PROPERTY</entry>
+                  <entry />
+                  <entry>COHESIVE</entry>
+                  <entry>COHESIVE</entry>
+                  <entry>COHESIVE</entry>
+                  <entry>COHESIVE</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>FAILURE</entry>
+                  <entry>FAILURE</entry>
+                  <entry>FAILURE</entry>
+                  <entry>FAILURE</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>JUDGMENTS</entry>
+                  <entry>GOOD</entry>
+                  <entry>GOOD</entry>
+                  <entry>GOOD</entry>
+                  <entry>GOOD</entry>
+                </row>
+                <row>
+                  <entry>EXTRUSION</entry>
+                  <entry>JUDGMENTS</entry>
+                  <entry>GOOD</entry>
+                  <entry>GOOD</entry>
+                  <entry>GOOD</entry>
+                  <entry>EXCELLENT</entry>
+                </row>
+                <row>
+                  <entry>MOLDING</entry>
+                  <entry>EXCELLENT: NO ROUGH SURFACE</entry>
+                </row>
+                <row>
+                  <entry>CHARACTERISTICS</entry>
+                  <entry>GOOD: NO HARMFUL ROUGH SURFACE</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>INSUFFICIENT: HARMFUL ROUGH SURFACE</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>BAD: EXTRUSION IS IMPOSSIBLE</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="161pt" align="left" />
+              <colspec colname="3" colwidth="56pt" align="center" />
+              <colspec colname="4" colwidth="56pt" align="center" />
+              <colspec colname="5" colwidth="56pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>COMPARATIVE</entry>
+                  <entry>COMPARATIVE</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>EXAMPLE 5</entry>
+                  <entry>EXAMPLE 1</entry>
+                  <entry>EXAMPLE 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>RAW</entry>
+                  <entry>Br-IIR</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>MATERIALS</entry>
+                  <entry>CARBON BLACK</entry>
+                  <entry>57</entry>
+                  <entry>57</entry>
+                  <entry>57</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>HYDROUS SILICIC ACID</entry>
+                  <entry>23</entry>
+                  <entry>23</entry>
+                  <entry>23</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>TALC</entry>
+                  <entry>77</entry>
+                  <entry>77</entry>
+                  <entry>77</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>STEARIC ACID</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>STYRENE-ISOBUTYLENE BLOCK COPOLYMER</entry>
+                  <entry>45</entry>
+                  <entry>—</entry>
+                  <entry>55</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>ZINC OXIDE</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>BROMINATED ALKYLPHENOL-</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>HOLMALDEHYDE RESIN</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>PHENOL RESIN</entry>
+                  <entry>3</entry>
+                  <entry>3</entry>
+                  <entry>3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>METHYLOL MELAMINE</entry>
+                  <entry>2</entry>
+                  <entry>2</entry>
+                  <entry>2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ORDINARY</entry>
+                  <entry>HARDNESS (JIS-A)</entry>
+                  <entry>76</entry>
+                  <entry>87</entry>
+                  <entry>74</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>STATE</entry>
+                  <entry>JUDGMENTS</entry>
+                  <entry>EXCELLENT</entry>
+                  <entry>BAD</entry>
+                  <entry>EXCELLENT</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PHYSICAL</entry>
+                  <entry>EXCELLENT: 79 OR LOWER, GOOD: 80 TO 82,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PROPERTIES</entry>
+                  <entry>ACCEPTABLE: 83 TO 85, BAD: 86 OR HIGHER</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>TENSILE STRENGTH (MPa)</entry>
+                  <entry>11.4</entry>
+                  <entry>9.5</entry>
+                  <entry>11.6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>JUDGMENTS</entry>
+                  <entry>EXCELLENT</entry>
+                  <entry>ACCEPTABLE</entry>
+                  <entry>EXCELLENT</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>EXCELLENT: 10.1 OR HIGHER GOOD: 9.6 TO 10,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>ACCEPTABLE: 9.1 TO 9.5, BAD: 9 OR LOWER</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>ELONGATION (%)</entry>
+                  <entry>390</entry>
+                  <entry>280</entry>
+                  <entry>410</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>COMPRESSIVE</entry>
+                  <entry>COMPRESSIVE PERMANENT SET (%)</entry>
+                  <entry>56</entry>
+                  <entry>42</entry>
+                  <entry>64</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PERMANENT</entry>
+                  <entry>JUDGMENTS</entry>
+                  <entry>ACCEPTABLE</entry>
+                  <entry>GOOD</entry>
+                  <entry>BAD</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>SET</entry>
+                  <entry>EXCELLENT: 40 OR LOWER, GOOD: 40 TO 49,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>ACCEPTABLE: 50 TO 59, BAD: 60 OR HIGHER</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>WATER BARRIER</entry>
+                  <entry>WATER VAPOR PERMEABILITY (g/m<sup>2</sup>/24 h)</entry>
+                  <entry>1.1</entry>
+                  <entry>1.1</entry>
+                  <entry>1.1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PROPERTIES</entry>
+                  <entry>JUDGMENTS</entry>
+                  <entry>EXCELLENT</entry>
+                  <entry>EXCELLENT</entry>
+                  <entry>EXCELLENT</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>EXCELLENT: 1.3 OR LOWER, GOOD: 1.4 TO 1.5,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>ACCEPTABLE: 1.6 T0 1.7, BAD: 1.8 OR HIGHER</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ADHESION</entry>
+                  <entry>INSIDE RESIN (PA6)</entry>
+                  <entry>RUBBER</entry>
+                  <entry>RUBBER</entry>
+                  <entry>RUBBER</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PROPERTY</entry>
+                  <entry />
+                  <entry>COHESIVE</entry>
+                  <entry>COHESIVE</entry>
+                  <entry>COHESIVE</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>FAILURE</entry>
+                  <entry>FAILURE</entry>
+                  <entry>FAILURE</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>JUDGMENTS</entry>
+                  <entry>GOOD</entry>
+                  <entry>GOOD</entry>
+                  <entry>GOOD</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>EXTRUSION</entry>
+                  <entry>JUDGMENTS</entry>
+                  <entry>EXCELLENT</entry>
+                  <entry>BAD</entry>
+                  <entry>EXCELLENT</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>MOLDING</entry>
+                  <entry>EXCELLENT: NO ROUGH SURFACE</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>CHARACTERISTICS</entry>
+                  <entry>GOOD: NO HARMFUL ROUGH SURFACE</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>INSUFFICIENT: HARMFUL ROUGH SURFACE</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>BAD: EXTRUSION IS IMPOSSIBLE</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00052-en" num="0051">As shown in Table 1, for 100 parts by weight of the brominated butyl rubber, 57 parts by weight of carbon black, 23 parts by weight of hydrous silicic acid which was the white reinforcing agent, 77 parts by weight of talc which was the white filler, 1 part by weight of stearic acid, 5 parts by weight of zinc oxide, 8 parts by weight of brominated alkylphenol-holmaldehyde resin, 3 parts by weight of phenol resin, and 2 parts by weight of methylol melamine were commonly added. Based on this common combination, 5 parts by weight, 15 parts by weight, 25 parts by weight, 35 parts by weight, and 45 parts by weight of the styrene-isobutylene block copolymer were added, respectively, in Examples 1 to 5. No styrene-isobutylene block copolymer was added in Comparative Example 1, and 55 parts by weight of the styrene-isobutylene block copolymer was added in Comparative Example 2.</p>
+      <p id="p-00053-en" num="0052">The brominated butyl rubber was BROMOBUTYL2255 (made by JSR Corporation), the carbon black was SHOBLACK N326 (made by Showa Cabot K.K.) and SHOBLACK IP200 (made by Showa Cabot K.K.), the hydrous silicic acid was Hi-Sil 233 (made by PPG Industries, Inc.), the talc was MICRO ACE K-1 (Registered Trademark, made by Nippon Talc Co., Ltd.), the styrene-isobutylene block copolymer was SIBSTAR 102T (made by KANEKA CORPORATION), the brominated alkylphenol-holmaldehyde resin was TACKIROL 250-1 (made by TAOKA CHEMICAL COMPANY), the phenol resin was SUMIKANOL 620 (made by Sumitomo Chemical Company), and the methylol melamine was SUMIKANOL 507AP (made by Sumitomo Chemical Company).</p>
+      <p id="p-00054-en" num="0053">As shown in Table 1, for each of these rubber compositions of Examples 1 to 5 and Comparative Examples 1 and 2, tests for measuring ordinary state physical properties, compressive permanent set, water barrier properties, adhesion property, and extrusion molding characteristics were conducted.</p>
+      <p id="p-00055-en" num="0054">The test for measuring each item was done as below.</p>
+      <heading id="h-00015-en" level="2">(Ordinary State Physical Properties)</heading>
+      <p id="p-00056-en" num="0055">A rubber sheet which was about 2 mm thick was formed by press-vulcanization of each of the rubber compositions of Examples 1 to 5 and Comparative Examples 1 and 2, and tests for hardness, tensile strength, and elongation were conducted using a test piece spliced out from each obtained rubber sheet. The hardness (JIS-A) was measured by a type-A durometer in conformity to JIS K 6253-6, whereas the tensile strength (MPa) and elongation (%) were measured in conformity to JIS K 6251. The hardness was evaluated as “Excellent” when it was 79 or lower, “Good” when 80 to 82, “Acceptable” when 83 to 85, and “Bad” when 86 or higher.</p>
+      <p id="p-00057-en" num="0056">The tensile strength was evaluated as “Excellent” when it was 10.1 or higher, “Good” when 9.6 to 10, “Acceptable” when 9.1 to 9.5, and “Bad” when 9 or lower.</p>
+      <heading id="h-00016-en" level="2">(Compressive Permanent Set)</heading>
+      <p id="p-00058-en" num="0057">A test piece was prepared by press-vulcanization in conformity to JIS K 6262 of each of the rubber compositions of Examples 1 to 5 and Comparative Examples 1 and 2, and the compressive permanent set (%) of the test piece was measured at a testing temperature of 100 degrees centigrade, with a testing time of 70 hours, and at a compression rate of 25%.</p>
+      <p id="p-00059-en" num="0058">The compressive permanent set was evaluated as “Excellent” when it was 40 or lower, “Good” when 40 to 49, “Acceptable” when 50 to 59, and “Bad” when 60 or higher.</p>
+      <heading id="h-00017-en" level="2">(Water-Penetration Resistance (Water Barrier Properties))</heading>
+      <p id="p-00060-en" num="0059">Water Vapor Permeability (g/m<sup>2</sup>/24 h)</p>
+      <p id="p-00061-en" num="0060">A rubber sheet which was about 1 mm thick was prepared by press-vulcanization from each of the rubber compositions of Examples 1 to 5 and Comparative Examples 1 and 2. After an opening of a cup in which a drying agent with a known weight was enclosed was sealed by the rubber sheet with reference to JIS Z 0208, the water barrier properties were measured as below, at a testing temperature of 60 degrees centigrade, a testing moisture of 95% RH, and a testing time of 168 hours. A change in the weight of the drying agent with respect to the permeation area of the rubber sheet was calculated as the water vapor permeability per 24 hours. The water vapor permeability was evaluated as “Excellent” when it was 1.3 or lower, “Good” when 1.4 to 1.5, “Acceptable” when 1.6 to 1.7, and “Bad” when 1.8 or higher.</p>
+      <heading id="h-00018-en" level="2">(Adhesion Property)</heading>
+      <p id="p-00062-en" num="0061">A layered sheet was prepared by conducting press-vulcanization of innermost layer resin (PA6) which was about 0.15 mm thick and of each of pieces of non-vulcanized butyl rubber about 2 mm thick of Examples 1 to 5 and Comparative Examples 1 and 2. A test piece which was sized about 10 mm wide and 100 mm long was spliced out from the obtained layered sheet, a rubber layer <b>3</b> of the test piece was fixed to a tensile testing machine as shown in <figref>FIG. 2</figref>, the resin layer <b>2</b> was pulled at a rate of 50 mm per minute, and the state of peeling off at the adhesive interface was visually observed. The evaluation was “Good” when rubber cohesive failure occurred.</p>
+      <heading id="h-00019-en" level="2">(Extrusion Molding Characteristics)</heading>
+      <p id="p-00063-en" num="0062">A rubber tube about 1.9 mm thick was extrusion-molded from each of the rubber compositions of Examples 1 to 5 and Comparative Examples 1 and 2 by an extruder, and the state of the surface skin was visually observed. The extrusion molding characteristics were evaluated as “Excellent” which no irregularities (rough surface) occurred on the surface of the tube, “Good” when no harmful rough surface occurred, “Insufficient” when harmful rough surface occurred, and “Bad” when extrusion was not possible because of severe rough surface.</p>
+      <p id="p-00064-en" num="0063">As the test results shown in Table 1 indicate, in each of Examples 1 to 5 and Comparative Examples 1 and 2, because an adhesion property improving component such as brominated alkylphenol-holmaldehyde resin, phenol resin, and methylol melamine is added, the adhesion to the innermost layer resin is sufficiently strong without using an adhesive, and the water barrier properties are excellent because of the inclusion of the white filler such as talc.</p>
+      <p id="p-00065-en" num="0064">However, in Comparative Example 1 in which no styrene-isobutylene block copolymer was added, the hardness is high and hence the flexibility and the extrusion molding characteristics are insufficient, and the tensile strength is low. Furthermore, in Comparative Example 2 in which 55 parts by weight of styrene-isobutylene block copolymer was added, the compressive permanent set is low.</p>
+      <p id="p-00066-en" num="0065">In the meanwhile, in Examples 1 to 5 in which 5 parts by weight, 15 parts by weight, 25 parts by weight, 35 parts by weight, and 45 parts by weight of the styrene-isobutylene block copolymer were added, as described above, the adhesion to the innermost layer resin is sufficiently strong without using an adhesive and the water barrier properties are excellent.</p>
+      <p id="p-00067-en" num="0066">Furthermore, the flexibility is obtained without disadvantageous increase in the hardness, no decrease in the tensile strength occurs, and no decrease in the compressive permanent set and the extrusion molding characteristics occurs.</p>
+      <p id="p-00068-en" num="0067">As such, in the rubber composition to which a predetermined amount of styrene-isobutylene block copolymer is added, it is considered that the permeation of water is hindered by the Steric effects of methyl groups in the molecular structure of the isobutylene block [—C(CH<sub>3</sub>)<sub>2</sub>CH<sub>2</sub>—] of the styrene-isobutylene block copolymer, and the water barrier properties are maintained in addition to the tensile strength due to the bonding (crystallization) of the aromatic rings in the styrene block [—CH(C<sub>6</sub>H<sub>5</sub>)CH<sub>2</sub>—] due to the intermolecular forces. Furthermore, because the styrene-isobutylene block copolymer is soft polymer, it is considered that the hardness of the rubber is lowered and the flexibility is obtained.</p>
+      <p id="p-00069-en" num="0068">Now, Embodiment 2 of the present invention will be described.</p>
+      <heading id="h-00020-en" level="1">Embodiment 2</heading>
+      <p id="p-00070-en" num="0069">A rubber composition of another embodiment of the present invention is arranged such that polybutene is further added to the rubber composition of Embodiment 1 above. Because the polybutene is significantly cheaper (about ⅓ in cost) than the styrene-isobutylene block copolymer, adding the polybutene reduces the cost of the rubber composition. Furthermore, because the polybutene is softener with the molecular structure of the isobutylene block, the extrusion molding characteristics are improved as the viscosity before the vulcanization is lowered while the permeation of water is restrained. An object of Embodiment 2 is therefore to balance the cost and the characteristics such as the water barrier properties and the extrusion molding characteristics, as compared to Embodiment 1.</p>
+      <p id="p-00071-en" num="0070">That is to say, the rubber composition of this embodiment is arranged such that, to halogenated butyl rubber, styrene-isobutylene block copolymer, polybutene, white filler, white reinforcing agent, brominated alkylphenol-holmaldehyde resin, phenol resin, and methylol melamine are added, the white filler is at least one type selected from a group consisting of talc, mica, sericite, montmorillonite, and clay, and the white reinforcing agent is silicic acid.</p>
+      <p id="p-00072-en" num="0071">Preferably, 5 to 15 parts by weight of the polybutene are added to 100 parts by weight halogenated butyl rubber. Preferably, the polybutene is mainly made of isobutylene and is sticky liquid polymer in which a small amount of n-butene is polymerized. The number-average molecular weight of this polybutene preferably falls within the range of 300 to 3700, and the kinematic viscosity (at 100 degrees centigrade) of the polybutene preferably falls within the range of 2 to 5700=<sup>2</sup>/s. When the amount of the polybutene is small, i.e., less than 5 parts by weight, the above-described effect of the polybutene is unlikely to be obtained. On the other hand, when the amount exceeds 15 parts by weight, the tensile strength is lowered and the water barrier properties are deteriorated. This is apparently because the bonding (crystallization) of the aromatic rings on account of the intermolecular forces does not occur because no styrene block is included in the molecular structure.</p>
+      <p id="p-00073-en" num="0072">As described above, as with Embodiment 1, the resin layer is strongly adhered to the rubber layer and sufficient water barrier properties, flexibility, and tensile strength are obtained in Embodiment 2. Furthermore, because the polybutene is added in Embodiment 2, the cost and the above-described characteristics are balanced, because the flexibility, the extrusion molding characteristics or the like are excellent while the cost is reduced.</p>
+      <heading id="h-00021-en" level="1">EXAMPLES</heading>
+      <p id="p-00074-en" num="0073">Now, examples and comparative examples of Embodiment 2 will be described. It is noted that the present invention is not limited to these examples.</p>
+      <p id="p-00075-en" num="0074">As shown in Table 2 below, each of the rubber compositions of Example 6 to 8 and Comparative Example 3 to 5 which are different from one another in the rate of the polybutene with respect to the brominated butyl rubber (Br-IIR) was vulcanization-cured, and tests for the respective items in Table 2 were conducted in the same manner as in the examples and comparative examples of Embodiment 1 above.</p>
+      <p id="p-00076-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="168pt" align="left" />
+              <colspec colname="3" colwidth="56pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <colspec colname="5" colwidth="56pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="5" rowsep="1">TABLE 2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>EXAMPLE 6</entry>
+                  <entry>EXAMPLE 7</entry>
+                  <entry>EXAMPLE 8</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>RAW</entry>
+                  <entry>Br-IIR</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry>MATERIALS</entry>
+                  <entry>CARBON BLACK</entry>
+                  <entry>57</entry>
+                  <entry>57</entry>
+                  <entry>57</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>HYDROUS SILICIC ACID</entry>
+                  <entry>23</entry>
+                  <entry>23</entry>
+                  <entry>23</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>TALC</entry>
+                  <entry>77</entry>
+                  <entry>77</entry>
+                  <entry>77</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>STEARIC ACID</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>STYRENE-ISOBUTYLENE BLOCK COPOLYMER</entry>
+                  <entry>25</entry>
+                  <entry>25</entry>
+                  <entry>25</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>POLYBUTENE</entry>
+                  <entry>5</entry>
+                  <entry>10</entry>
+                  <entry>15</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ZINC OXIDE</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>BROMINATED ALKYLPHENOL-</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>HOLMALDEHYDE RESIN</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PHENOL RESIN</entry>
+                  <entry>3</entry>
+                  <entry>3</entry>
+                  <entry>3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>METHYLOL MELAMINE</entry>
+                  <entry>2</entry>
+                  <entry>2</entry>
+                  <entry>2</entry>
+                </row>
+                <row>
+                  <entry>ORDINARY</entry>
+                  <entry>HARDNESS (JIS-A)</entry>
+                  <entry>78</entry>
+                  <entry>76</entry>
+                  <entry>74</entry>
+                </row>
+                <row>
+                  <entry>STATE</entry>
+                  <entry>JUDGMENTS</entry>
+                  <entry>EXCELLENT</entry>
+                  <entry>EXCELLENT</entry>
+                  <entry>EXCELLENT</entry>
+                </row>
+                <row>
+                  <entry>PHYSICAL</entry>
+                  <entry>EXCELLENT: 79 OR LOWER, GOOD: 80 TO 82,</entry>
+                </row>
+                <row>
+                  <entry>PROPERTIES</entry>
+                  <entry>ACCEPTABLE: 83 TO 85, BAD: 86 OR HIGHER</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>TENSILE STRENGTH (MPa)</entry>
+                  <entry>10.8</entry>
+                  <entry>10.5</entry>
+                  <entry>10.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>JUDGMENTS</entry>
+                  <entry>EXCELLENT</entry>
+                  <entry>EXCELLENT</entry>
+                  <entry>GOOD</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>EXCELLENT: 10.1 OR HIGHER, GOOD: 9.6 TO 10,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ACCEPTABLE: 9.1 TO 9.5, BAD: 9 OR LOWER</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ELONGATION (%)</entry>
+                  <entry>360</entry>
+                  <entry>380</entry>
+                  <entry>400</entry>
+                </row>
+                <row>
+                  <entry>COMPRESSIVE</entry>
+                  <entry>COMPRESSIVE PERMANENT SET (%)</entry>
+                  <entry>47</entry>
+                  <entry>46</entry>
+                  <entry>45</entry>
+                </row>
+                <row>
+                  <entry>PERMANENT</entry>
+                  <entry>JUDGMENTS</entry>
+                  <entry>GOOD</entry>
+                  <entry>GOOD</entry>
+                  <entry>GOOD</entry>
+                </row>
+                <row>
+                  <entry>SET</entry>
+                  <entry>EXCELLENT: 40 OR LOWER, GOOD: 40 TO 49,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ACCEPTABLE: 50 TO 59, BAD: 60 OR HIGHER</entry>
+                </row>
+                <row>
+                  <entry>WATER BARRIER</entry>
+                  <entry>WATER VAPOR PERMEABILITY (g/m<sup>2</sup>/24 h)</entry>
+                  <entry>1.2</entry>
+                  <entry>1.3</entry>
+                  <entry>1.5</entry>
+                </row>
+                <row>
+                  <entry>PROPERTIES</entry>
+                  <entry>JUDGMENTS</entry>
+                  <entry>EXCELLENT</entry>
+                  <entry>EXCELLENT</entry>
+                  <entry>GOOD</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>EXCELLENT: 1.3 OR LOWER, GOOD: 1.4 TO 1.5,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ACCEPTABLE: 1.6 TO 1.7, BAD: 1.8 OR HIGHER</entry>
+                </row>
+                <row>
+                  <entry>ADHESION</entry>
+                  <entry>INSIDE RESIN (PA6)</entry>
+                  <entry>RUBBER</entry>
+                  <entry>RUBBER</entry>
+                  <entry>RUBBER</entry>
+                </row>
+                <row>
+                  <entry>PROPERTY</entry>
+                  <entry />
+                  <entry>COHESIVE</entry>
+                  <entry>COHESIVE</entry>
+                  <entry>COHESIVE</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>FAILURE</entry>
+                  <entry>FAILURE</entry>
+                  <entry>FAILURE</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>JUDGMENTS</entry>
+                  <entry>GOOD</entry>
+                  <entry>GOOD</entry>
+                  <entry>GOOD</entry>
+                </row>
+                <row>
+                  <entry>EXTRUSION</entry>
+                  <entry>JUDGMENTS</entry>
+                  <entry>EXCELLENT</entry>
+                  <entry>EXCELLENT</entry>
+                  <entry>EXCELLENT</entry>
+                </row>
+                <row>
+                  <entry>MOLDING</entry>
+                  <entry>EXCELLENT: NO ROUGH SURFACE</entry>
+                </row>
+                <row>
+                  <entry>CHARACTERISTICS</entry>
+                  <entry>GOOD: NO HARMFUL ROUGH SURFACE</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>INSUFFICIENT: HARMFUL ROUGH SURFACE</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>BAD: EXTRUSION IS IMPOSSIBLE</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="161pt" align="left" />
+              <colspec colname="3" colwidth="56pt" align="center" />
+              <colspec colname="4" colwidth="56pt" align="center" />
+              <colspec colname="5" colwidth="56pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>COMPARATIVE</entry>
+                  <entry>COMPARATIVE</entry>
+                  <entry>COMPARATIVE</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>EXAMPLE 3</entry>
+                  <entry>EXAMPLE 4</entry>
+                  <entry>EXAMPLE 5</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>RAW</entry>
+                  <entry>Br-IIR</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry>MATERIALS</entry>
+                  <entry>CARBON BLACK</entry>
+                  <entry>57</entry>
+                  <entry>57</entry>
+                  <entry>57</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>HYDROUS SILICIC ACID</entry>
+                  <entry>23</entry>
+                  <entry>23</entry>
+                  <entry>23</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>TALC</entry>
+                  <entry>77</entry>
+                  <entry>107</entry>
+                  <entry>97</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>STEARIC ACID</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>STYRENE-ISOBUTYLENE BLOCK COPOLYMER</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>POLYBUTENE</entry>
+                  <entry>15</entry>
+                  <entry>15</entry>
+                  <entry>5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ZINC OXIDE</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>BROMINATED ALKYLPHENOL-</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>HOLMALDEHYDE RESIN</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PHENOL RESIN</entry>
+                  <entry>3</entry>
+                  <entry>3</entry>
+                  <entry>3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>METHYLOL MELAMINE</entry>
+                  <entry>2</entry>
+                  <entry>2</entry>
+                  <entry>2</entry>
+                </row>
+                <row>
+                  <entry>ORDINARY</entry>
+                  <entry>HARDNESS (JIS-A)</entry>
+                  <entry>78</entry>
+                  <entry>84</entry>
+                  <entry>85</entry>
+                </row>
+                <row>
+                  <entry>STATE</entry>
+                  <entry>JUDGMENTS</entry>
+                  <entry>EXCELLENT</entry>
+                  <entry>ACCEPTABLE</entry>
+                  <entry>ACCEPTABLE</entry>
+                </row>
+                <row>
+                  <entry>PHYSICAL</entry>
+                  <entry>EXCELLENT: 79 OR LOWER, GOOD: 80 TO 82,</entry>
+                </row>
+                <row>
+                  <entry>PROPERTIES</entry>
+                  <entry>ACCEPTABLE: 83 TO 85, BAD: 86 OR HIGHER</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>TENSILE STRENGTH (MPa)</entry>
+                  <entry>8.7</entry>
+                  <entry>8.1</entry>
+                  <entry>8.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>JUDGMENTS</entry>
+                  <entry>BAD</entry>
+                  <entry>BAD</entry>
+                  <entry>BAD</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>EXCELLENT: 10.1 OR HIGHER, GOOD: 9.6 TO 10,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ACCEPTABLE: 9.1 TO 9.5, BAD: 9 OR LOWER</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ELONGATION (%)</entry>
+                  <entry>310</entry>
+                  <entry>280</entry>
+                  <entry>270</entry>
+                </row>
+                <row>
+                  <entry>COMPRESSIVE</entry>
+                  <entry>COMPRESSIVE PERMANENT SET (%)</entry>
+                  <entry>42</entry>
+                  <entry>50</entry>
+                  <entry>47</entry>
+                </row>
+                <row>
+                  <entry>PERMANENT</entry>
+                  <entry>JUDGMENTS</entry>
+                  <entry>GOOD</entry>
+                  <entry>ACCEPTABLE</entry>
+                  <entry>GOOD</entry>
+                </row>
+                <row>
+                  <entry>SET</entry>
+                  <entry>EXCELLENT: 40 OR LOWER, GOOD: 40 TO 49,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ACCEPTABLE: 50 TO 59, BAD: 60 OR HIGHER</entry>
+                </row>
+                <row>
+                  <entry>WATER BARRIER</entry>
+                  <entry>WATER VAPOR PERMEABILITY (g/m<sup>2</sup>/24 h)</entry>
+                  <entry>1.6</entry>
+                  <entry>1.3</entry>
+                  <entry>1.3</entry>
+                </row>
+                <row>
+                  <entry>PROPERTIES</entry>
+                  <entry>JUDGMENTS</entry>
+                  <entry>ACCEPTABLE</entry>
+                  <entry>EXCELLENT</entry>
+                  <entry>EXCELLENT</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>EXCELLENT: 1.3 OR LOWER, GOOD: 1.4 TO 1.5,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ACCEPTABLE: 1.6 TO 1.7, BAD: 1.8 OR HIGHER</entry>
+                </row>
+                <row>
+                  <entry>ADHESION</entry>
+                  <entry>INSIDE RESIN (PA6)</entry>
+                  <entry>RUBBER</entry>
+                  <entry>RUBBER</entry>
+                  <entry>RUBBER</entry>
+                </row>
+                <row>
+                  <entry>PROPERTY</entry>
+                  <entry />
+                  <entry>COHESIVE</entry>
+                  <entry>COHESIVE</entry>
+                  <entry>COHESIVE</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>FAILURE</entry>
+                  <entry>FAILURE</entry>
+                  <entry>FAILURE</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>JUDGMENTS</entry>
+                  <entry>GOOD</entry>
+                  <entry>GOOD</entry>
+                  <entry>GOOD</entry>
+                </row>
+                <row>
+                  <entry>EXTRUSION</entry>
+                  <entry>JUDGMENTS</entry>
+                  <entry>EXCELLENT</entry>
+                  <entry>INSUFFICIENT</entry>
+                  <entry>INSUFFICIENT</entry>
+                </row>
+                <row>
+                  <entry>MOLDING</entry>
+                  <entry>EXCELLENT: NO ROUGH SURFACE</entry>
+                </row>
+                <row>
+                  <entry>CHARACTERISTICS</entry>
+                  <entry>GOOD: NO HARMFUL ROUGH SURFACE</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>INSUFFICIENT: HARMFUL ROUGH SURFACE</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>BAD: EXTRUSION IS IMPOSSIBLE</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00077-en" num="0075">As shown in Table 2, for 100 parts by weight of the brominated butyl rubber, 57 parts by weight of carbon black, 23 parts by weight of hydrous silicic acid which was a white reinforcing agent, 77 parts by weight of talc which was a white filler, 1 part by weight of stearic acid, 25 parts by weight of styrene-isobutylene block copolymer, 5 parts by weight of zinc oxide, 8 parts by weight of brominated alkylphenol-holmaldehyde resin, 3 parts by weight of phenol resin, and 2 parts by weight methylol melamine were commonly added in Example 6 to 8. The additions in Comparative Example 3 were identical with those of Example 6 to 8 except that no styrene-isobutylene block copolymer was added.</p>
+      <p id="p-00078-en" num="0076">Based on the common combination above, rubber compositions in which 5 parts by weight, 10 parts by weight, and 15 parts by weight of polybutene were added were Example 6 to 8, and a rubber composition in which 15 parts by weight of polybutene were added was Comparative Example 3.</p>
+      <p id="p-00079-en" num="0077">Furthermore, a rubber composition in which the amount of talc was increased to 107 parts by weight as compared to Comparative Example 3 was Comparative Example 4, and a rubber composition in which the amount of talc was increased to 97 parts by weight and the amount of polybutene was decreased to 5 parts by weight was Comparative Example 5.</p>
+      <p id="p-00080-en" num="0078">The brominated butyl rubber, the carbon black, the hydrous silicic acid, the talc, the styrene-isobutylene block copolymer, the brominated alkylphenol-holmaldehyde resin, the phenol resin, and the methylol melamine were identical with the materials shown in Table 1 of Embodiment 1 above. The polybutene was polybutene 300H made by Idemitsu Kosan Co., Ltd.</p>
+      <p id="p-00081-en" num="0079">As the test results shown in Table 2 indicate, as with Embodiment above, the adhesion to the innermost layer resin is sufficiently strong without using an adhesive and the extrusion processability is excellent in Example 6 to 8. Furthermore, the hardness does not become excessively high and the flexibility is obtained, and the decrease in the tensile strength and the decrease in the water barrier properties are restrained, and the compressive permanent set is not deteriorated. As such, while the cost is lower than Embodiment 1, adverse effects on the characteristics such as the tensile strength and the water barrier properties are hardly observed. In this way, the cost and the characteristics are excellently balanced (i.e., excellent cost performance is achieved).</p>
+      <p id="p-00082-en" num="0080">In the meanwhile, in Comparative Example 3 in which the styrene-isobutylene block copolymer was not added, the tensile strength is deteriorated. Furthermore, in Comparative Example 4 in which the amount of the white filler was increased as compared to Comparative Example 3 and Comparative Example 5 in which the amount of the white filler was increased whereas the amount of the plasticizer (polybutene) was decreased as compared to Comparative Example 3, the hardness and the extrusion molding characteristics were additionally deteriorated. These comparative examples 3 to 5 were prepared by combining Patent Literature 1 with Patent Literature 2 above. While in Comparative Example 4 the hardness, the adhesion property, and the extrusion molding characteristics were maintained, the water barrier properties and the tensile strength were deteriorated. In Comparative Example 4 and Comparative Example 5, while the adhesion property and the water barrier properties were maintained, the hardness and the extrusion molding characteristics were additionally deteriorated.</p>
+      <heading id="h-00022-en" level="1">INDUSTRIAL APPLICABILITY</heading>
+      <p id="p-00083-en" num="0081">The butyl rubber composition of the present invention is directly vulcanization-adhered to resin without using an adhesive and has improved water barrier properties while the extrusion molding characteristics, flexibility, and tensile strength being maintained.</p>
+      <heading id="h-00023-en" level="1">REFERENCE SIGNS LIST</heading>
+      <p id="p-00084-en" num="0000">
+        <ul id="ul-00001-en" list-style="none">
+          <li>
+            <b>1</b>, <b>101</b> COMPOSITE FLEXIBLE HOSE</li>
+          <li>
+            <b>2</b>, <b>102</b> INNERMOST LAYER</li>
+          <li>
+            <b>3</b>, <b>103</b> INTERMEDIATE RUBBER LAYER</li>
+          <li>
+            <b>4</b>, <b>104</b> FIBER REINFORCEMENT LAYER</li>
+          <li>
+            <b>5</b>, <b>105</b> EXTERNAL RUBBER LAYER</li>
+        </ul>
+      </p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A butyl rubber composition comprising halogenated butyl rubber, styrene-isobutylene block copolymer, white filler, white reinforcing agent, brominated alkylphenol-formaldehyde resin, phenol resin, and methylol melamine,
+<claim-text>5 to 45 parts by weight of the styrene-isobutylene block copolymer being added to 100 parts by weight of the halogenated butyl rubber.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The butyl rubber composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein, the white filler is at least one selected from a group consisting of talc, mica, sericite, montmorillonite, and clay, and the white reinforcing agent is silicic acid.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The butyl rubber composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising polybutene, 5 to 15 parts by weight of the polybutene being added to 100 parts by weight of the halogenated butyl rubber.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The butyl rubber composition according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>, further comprising polybutene, 5 to 15 parts by weight of the polybutene being added to 100 parts by weight of the halogenated butyl rubber.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. A hose comprising a rubber layer including the butyl rubber composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. A hose comprising a rubber layer including the butyl rubber composition of <claim-ref idref="clm-00002-en">claim 2</claim-ref>.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. A hose comprising a rubber layer including the butyl rubber composition of <claim-ref idref="clm-00003-en">claim 3</claim-ref>.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. A hose comprising a rubber layer including the butyl rubber composition of <claim-ref idref="clm-00004-en">claim 4</claim-ref>. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150247032A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150247032A1-20150903-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150247032A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247032A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150247032A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247032A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150247032A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247032A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150247032A1_00005.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150247032A1-20150903-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150247032A1.PDF" type="pdf" size="696996" pages="12" />
+</lexisnexis-patent-document>

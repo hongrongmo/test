@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150250260A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="022139" date-changed="20160126" time-changed="082850">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121232416">
+        <country>US</country>
+        <doc-number>20150250260</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14438864</doc-number>
+        <date>20121029</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20160104">
+      <classification-ipcr sequence="1">
+        <text>A43B  13/14        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>43</class>
+        <subclass>B</subclass>
+        <main-group>13</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A43B   7/18        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>43</class>
+        <subclass>B</subclass>
+        <main-group>7</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20160104">
+      <classification-cpc sequence="1">
+        <text>A43B  13/141       20130101 FI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>43</class>
+        <subclass>B</subclass>
+        <main-group>13</main-group>
+        <subgroup>141</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A43B   7/18        20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>43</class>
+        <subclass>B</subclass>
+        <main-group>7</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A43B  13/122       20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>43</class>
+        <subclass>B</subclass>
+        <main-group>13</main-group>
+        <subgroup>122</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A43B  13/125       20130101 LI20140723BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>43</class>
+        <subclass>B</subclass>
+        <main-group>13</main-group>
+        <subgroup>125</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140723</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A43B  13/16        20130101 LI20140725BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>43</class>
+        <subclass>B</subclass>
+        <main-group>13</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140725</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">15</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">Shoe Sole Focusing on Windlass Mechanism</invention-title>
+    <references-cited date-changed="20160126">
+      <forward-citations name="fwdcit" date-changed="20160126" />
+      <citation>
+        <fwdcit num="1">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0747859</doc-number>
+            <kind>S</kind>
+            <date>20160126</date>
+          </document-id>
+          <application-date>
+            <date>20150911</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>ASICS CORPORATION</orgname>
+            <role>03</role>
+            <address>
+              <city>Kobe-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Bessho</last-name>
+            <first-name>Ayu</first-name>
+            <address>
+              <city>Kobe-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Moriyasu</last-name>
+            <first-name>Kenta</first-name>
+            <address>
+              <city>Kobe-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Nishiwaki</last-name>
+            <first-name>Tsuyoshi</first-name>
+            <address>
+              <city>Kobe-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Fujita</last-name>
+            <first-name>Hisanori</first-name>
+            <address>
+              <city>Kobe-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP12077867</doc-number>
+        <date>20121029</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014068635</doc-number>
+        <date>20140508</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150910">
+      <main-family family-id="173569468">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150250260</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20121029</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173569467">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150250260</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20121029</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The second transverse groove, provided in an area between the Chopart's joint and the Lisfranc joint, including the navicular bone where the arch of the foot is highest, is deeper than the first transverse groove, and is equal to or deeper than the third transverse groove. Therefore, the rest of the midsole is thin and it becomes easier for the shoe sole to flex, thereby facilitating the upward displacement of the area where the arch is highest. Thus, it is possible to suppress the lowering of the arch even if an exercise is continued over a long time. On the other hand, a flexion area including at least one third transverse groove is provided directly below the talus, and has a larger width than other transverse grooves. This makes it easier for the rear foot portion directly below the talus to flex, thereby facilitating the upward displacement of the area of the arch.</p>
+  </abstract>
+  <legal-data date-changed="20150925">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150427</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015250260A1</docdb-publication-number>
+      <docdb-application-id>444306667</docdb-application-id>
+      <new-owner>ASICS CORPORATION, JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:BESSHO, AYU;MORIYASU, KENTA;NISHIWAKI, TSUYOSHI;AND OTHERS;SIGNING DATES FROM 20150325 TO 20150330;REEL/FRAME:035505/0826</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to a shoe sole focusing on the windlass mechanism.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND ART</heading>
+      <p id="p-00002-en" num="0002">Shoes with multiple or many transverse grooves extending in the transverse direction on the bottom surface of the shoe sole are well known in the art.</p>
+      <heading id="h-00003-en" level="1">CITATION LIST</heading>
+      <heading id="h-00004-en" level="1">Patent Literature</heading>
+      <p id="p-00003-en" num="0003">First Patent Document: U.S. Pat. No. 7,168,190 B1 (front page)</p>
+      <p id="p-00004-en" num="0004">Second Patent Document: US2011-016746 A1 (front page)</p>
+      <p id="p-00005-en" num="0005">Third Patent Document: US2011-232130 A1 (front page)</p>
+      <p id="p-00006-en" num="0006">Fourth Patent Document: PCT/US2004/033111 (abstract)</p>
+      <p id="p-00007-en" num="0007">Fifth Patent Document: JP07-289306 A (abstract)</p>
+      <heading id="h-00005-en" level="1">SUMMARY OF INVENTION</heading>
+      <p id="p-00008-en" num="0008">However, these conventional techniques are probably not focusing on the windlass mechanism and using this mechanism.</p>
+      <p id="p-00009-en" num="0009">Now, it is known that when the MP joint is hyperextended, the plantar aponeurosis is tensioned to thereby pull the calcaneal bone forward, thus increasing the arch height, and this series of actions is called the “windlass mechanism”.</p>
+      <p id="p-00010-en" num="0010">It is known that the arch being raised by the windlass mechanism enables an efficient transmission of the kick force when kicking off the ground while walking or running. On the other hand, lowering of the arch may lead to flatfoot and hallux valgus.</p>
+      <p id="p-00011-en" num="0011">With recent shoes of which the middle foot portion is hardened with resin parts, the middle foot portion of the sole does not easily deform, and the foot movement is restricted. Thus, the deformation of the arch of the foot tends to be small. Therefore, even if the toe portion has an easy-to-flex structure, the arch portion of the sole does not flex so as to protrude upward.</p>
+      <p id="p-00012-en" num="0012">On the other hand, shoes of which the sole easily deforms are also sold in recent years, but with these shoes, the arch portion of the sole is likely to drop, causing the arch of the foot to lower. Therefore, with these shoes, the arch is unlikely to rise. That is, no shoes have been developed, which likely take advantage of the windlass mechanism while running.</p>
+      <p id="p-00013-en" num="0013">It is therefore an object of the present invention to provide a structure of a shoe sole with which it is possible to raise and maintain the arch height by utilizing the windlass mechanism.</p>
+      <p id="p-00014-en" num="0014">A shoe sole of the present invention includes: <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>an outsole having a tread surface and placed at least in a fore foot portion and a rear foot portion; and</li><li>a midsole placed above the outsole and placed in the fore foot portion, a middle foot portion and the rear foot portion, wherein:</li><li>the outsole and/or the midsole define:         <ul id="ul-00003-en" list-style="none"><li>a first transverse groove continuously extending in a transverse direction from a medial edge so as to reach at least a longitudinal axis of a foot at a position of a metatarsal phalangeal joint and/or a base of a proximal phalanx of first to third toes;</li><li>at least one second transverse groove continuously extending in the transverse direction from the medial edge so as to reach at least the longitudinal axis, in an area between a Chop art's joint of the first toe to a posterior end of a Lisfranc joint; and</li><li>at least one third transverse groove continuously extending in the transverse direction from the medial edge so as to reach at least the longitudinal axis, in an area between an anterior end to a posterior end of a talus, wherein:</li></ul></li><li>the second and third transverse grooves are provided so as to be depressed upwardly from a bottom surface of the shoe sole;</li><li>each of the grooves has a front wall surface and a rear wall surface opposing the front wall surface, which the front and rear wall surfaces define each of the grooves;</li><li>an average value of a width of a flexion area is larger than an average groove width of the first transverse groove and is larger than an average groove width of each of the at least one second transverse groove, wherein the flexion area is an area extending from a most anterior one of the front wall surfaces of the at least one third transverse groove to a most posterior one of the rear wall surfaces of the at least one third transverse groove; and</li><li>an average depth of the at least one second transverse groove is larger than an average depth of the first transverse groove and is equal to or larger than an average depth of each of the at least one third transverse groove.</li></ul></li></ul></p>
+      <p id="p-00015-en" num="0025">According to the present invention, the presence of the second transverse groove and the third transverse groove allows for a portion of the shoe sole from the middle foot portion to the rear foot portion to deform (flex) into an upwardly protruding shape. Therefore, when the toe is elevated facing upward and the MP joint is extended over the first transverse groove, the plantar muscles, including at least the plantar aponeurosis, are rolled up upward, thereby tensioning the plantar aponeurosis, which makes it easier for the arch of the foot to rise.</p>
+      <p id="p-00016-en" num="0026">Particularly, the second transverse groove, provided in an area between the Chopart's joint and the Lisfranc joint, including the navicular bone where the arch of the foot is highest, is deeper than the first transverse groove, and is equal to or deeper than the third transverse groove. Therefore, the rest of the midsole is thin and it becomes easier for the shoe sole to flex, thereby facilitating the upward displacement of the area where the arch is highest.</p>
+      <p id="p-00017-en" num="0027">That is, if no reinforcement device is provided in the middle foot portion, the midsole in the middle foot portion tends to be thick along the arch of the foot. Therefore, with the second transverse groove having a large depth, the shoe sole is easily flexed over the second transverse groove even if the midsole overall has a large average thickness.</p>
+      <p id="p-00018-en" num="0028">Therefore, it is possible to suppress the lowering of the arch even if an exercise is continued over a long time.</p>
+      <p id="p-00019-en" num="0029">On the other hand, a flexion area including at least one third transverse groove is provided directly below the talus, and has a larger width than other transverse grooves. This makes it easier for the rear foot portion directly below the talus to flex, thereby facilitating the upward displacement of the area of the arch.</p>
+      <p id="p-00020-en" num="0030">Note that the groove width of the second transverse groove is smaller than the width of the flexion area, thereby making it possible to suppress the lowering of the arch. Moreover, the flexion area has a large width and thus easily undergoes compressive deformation, which makes it possible to absorb the impact on the heel.</p>
+      <p id="p-00021-en" num="0031">The term “flexion area” as used in the present invention means that where there are a plurality of third transverse grooves, the groove ratio is 30% or more and less than 100%, wherein the groove ratio is the total value of the groove widths of the plurality of third transverse grooves with respect to the distance from the most anterior one of the front wall surfaces of the plurality of third transverse grooves, which are directly below the talus, to the most posterior one of the rear wall surfaces of the plurality of third transverse grooves. This is because a sufficient ease of flexing cannot be obtained if it is less than 30%. Note that for a similar reason, the groove ratio is preferably 40% or more, and most preferably 50% or more.</p>
+      <p id="p-00022-en" num="0032">The “longitudinal axis of the foot” as used in the present invention is represented by a straight line that connects between the center of the heel and the midpoint between the center of the ball of the big toe and the center of ball of the little toe.</p>
+      <p id="p-00023-en" num="0033">The term “to extend in the transverse direction” does not only mean to extend in the exact transverse direction that is perpendicular to the longitudinal axis, but also include a diagonally slant direction and a meandering shape.</p>
+      <p id="p-00024-en" num="0034">The phrase “the first transverse groove extends in the transverse direction at the position of the MP joint (metatarsal phalangeal joint) or the base of the proximal phalanx of the first to third toes” means that at least a portion of the first transverse groove is provided so as to overlap with a portion of the MP joint or the base of the proximal phalanx of the first to third toes.</p>
+      <p id="p-00025-en" num="0035">The term “groove width” as used in the present invention means the width of a groove at the lower end thereof where an opening is formed. Therefore, the average groove width means the average value of the width of the groove at the lower end thereof where an opening is formed. Note that the term “average groove width” means that the width of the first or second transverse groove may locally be larger than the width of the flexion area.</p>
+      <p id="p-00026-en" num="0036">The groove width of each groove is preferably about 1 mm to 50 mm.</p>
+      <p id="p-00027-en" num="0037">The reason for the groove width of each groove to be 1 mm or more is for allowing the shoe sole to flex into an upwardly protruding shape in the middle foot portion. Note that the groove width exceeding 50 mm will hinder the stability of the foot support.</p>
+      <p id="p-00028-en" num="0038">Note that the term “average depth” means that the first or third transverse groove may locally be deeper than the second transverse groove. Where the groove has a V-letter shape or a U-letter shape, the average depth means the value obtained by averaging the largest depths along the cross section parallel to the longitudinal axis. That is, it means the average depth for the area where V-shaped or U-shaped depressions are connected together.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00006-en" level="1">BRIEF DESCRIPTION OF DRAWINGS</heading>
+      <p id="p-00029-en" num="0039">
+        <figref>FIG. 1</figref> is a schematic medial side view showing a shoe for the left foot according to Embodiment 1 of the present invention.</p>
+      <p id="p-00030-en" num="0040">
+        <figref>FIG. 2</figref> is a schematic lateral side view showing a shoe for the right foot according to Embodiment 1 of the present invention.</p>
+      <p id="p-00031-en" num="0041">
+        <figref>FIG. 3</figref> is a schematic bottom view showing the same.</p>
+      <p id="p-00032-en" num="0042">
+        <figref>FIG. 4</figref> is a schematic medial side view showing the shoe with its shoe sole being flexed.</p>
+      <p id="p-00033-en" num="0043">
+        <figref>FIG. 5</figref> is a schematic bottom view showing a shoe sole of Embodiment 2.</p>
+      <p id="p-00034-en" num="0044">
+        <figref>FIG. 6</figref> is a schematic medial side view showing a shoe according to Embodiment 3 of the present invention.</p>
+      <p id="p-00035-en" num="0045">
+        <figref>FIG. 7</figref> is a schematic medial side view showing a shoe according to Embodiment 4 of the present invention.</p>
+      <p id="p-00036-en" num="0046">
+        <figref>FIG. 8</figref> is a schematic medial side view showing a shoe according to Embodiment 5 of the present invention.</p>
+      <p id="p-00037-en" num="0047">
+        <figref>FIG. 9</figref> is a schematic medial side view showing a shoe sole according to Embodiment 6 of the present invention.</p>
+      <p id="p-00038-en" num="0048">
+        <figref>FIG. 10</figref> is a schematic bottom view showing a shoe sole of Embodiment 7.</p>
+      <p id="p-00039-en" num="0049">
+        <figref>FIG. 11</figref> is a schematic cross-sectional view showing a shoe according to Embodiment 8 of the present invention.</p>
+      <p id="p-00040-en" num="0050">
+        <figref>FIG. 12</figref> is a schematic cross-sectional view showing the shoe with its shoe sole being flexed.</p>
+      <p id="p-00041-en" num="0051">
+        <figref>FIG. 13</figref> is a plan view showing the foot bone structure. <figref>FIGS. 14A</figref>, <b>14</b>B and <b>14</b>C are graphs showing test results for Test Example 1, Test Example 2 and Reference Example, respectively.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00007-en" level="1">DESCRIPTION OF EMBODIMENTS</heading>
+      <p id="p-00042-en" num="0052">Preferably, an average groove width of at least one of the third transverse groove is larger than the average groove width of the first transverse groove and is larger than the average groove width of each of the at least one second transverse groove.</p>
+      <p id="p-00043-en" num="0053">In this case, the flexing capability of the rear foot portion will further improve.</p>
+      <p id="p-00044-en" num="0054">More preferably, the shoe sole further includes an auxiliary transverse groove continuously extending in the transverse direction from the medial edge so as to reach at least the longitudinal axis at a position directly below a base or a shaft of a first metatarsal bone.</p>
+      <p id="p-00045-en" num="0055">In this case, with the auxiliary transverse groove being placed slightly anterior to the deepest second transverse groove, the shoe sole will likely flex smoothly in conformity with the shape of the arch whose apex is at the navicular bone.</p>
+      <p id="p-00046-en" num="0056">Note that the shaft refers to a portion between the base and the head, and the thickness thereof typically changes smoothly. The base refers to a portion of each bone that is close to the posterior (heel side) joint and that is slightly expanding to a greater thickness, and it is referred to also as the proximal head. On the other hand, the head refers to a portion of each bone that is close to the anterior (toe side) joint and that is slightly expanding to a greater thickness, and it is referred to also as the distal head.</p>
+      <p id="p-00047-en" num="0057">More preferably, an average depth of the auxiliary transverse groove is smaller than the average depth of the second transverse groove, and an average groove width of the auxiliary transverse groove is smaller than the average groove width of at least one of the third transverse groove.</p>
+      <p id="p-00048-en" num="0058">The auxiliary transverse groove having a small depth and a small width will further smoothen the flexion of the shoe sole in conformity with the shape of the arch whose apex is at the navicular bone, and will not assist in lowering the arch of the foot.</p>
+      <p id="p-00049-en" num="0059">Preferably, the first transverse groove is depressed upwardly from the tread surface.</p>
+      <p id="p-00050-en" num="0060">This makes it easier for the MP joint to be extended over the first transverse groove.</p>
+      <p id="p-00051-en" num="0061">In this case, more preferably, each of the grooves is defined by the front wall surface, the rear wall surface and a ceiling above; <ul id="ul-00004-en" list-style="none"><li><ul id="ul-00005-en" list-style="none"><li>a thickness from an upper surface of the midsole to the ceiling of the first transverse groove is set to be 0.5 mm or more and 10 mm or less and less than 12 mm at a thinnest portion;</li><li>a thickness from the upper surface of the midsole to the ceiling of the second transverse groove is set to be 0.5 mm or more and 10 mm or less at a thinnest portion; and</li><li>a thickness from the upper surface of the midsole to the ceiling of the third transverse groove is set to be 0.5 mm or more and 10 mm or less at a thinnest portion.</li></ul></li></ul></p>
+      <p id="p-00052-en" num="0065">In this case, the midsole flexes at the thinnest portion. Therefore, if the thickness of the first transverse groove to the ceiling is over 12 mm at the thinnest portion or if the thickness of the second and third transverse grooves to the ceiling is over 10 mm at the thinnest portion, the midsole will not easily flex.</p>
+      <p id="p-00053-en" num="0066">If the thinnest portion is less than 0.5 mm, it will be difficult to manufacture the midsole.</p>
+      <p id="p-00054-en" num="0067">Preferably, a maximum depth of the second and third transverse grooves is 5 mm or more and 40 mm or less; <ul id="ul-00006-en" list-style="none"><li><ul id="ul-00007-en" list-style="none"><li>the maximum depth of each of the at least one second transverse groove is larger than a thickness of a portion of the midsole that is directly above an area where the second transverse groove having that maximum depth is provided; and</li><li>the maximum depth of each of the at least one third transverse groove is larger than a thickness of a portion of the midsole that is directly above an area where the third transverse groove having that maximum depth is provided.</li></ul></li></ul></p>
+      <p id="p-00055-en" num="0070">In this case, as the second and third transverse grooves are deep, a thin portion is formed in the middle foot portion of the midsole, thereby allowing for the shoe sole to flex in the middle foot portion.</p>
+      <p id="p-00056-en" num="0071">Preferably, the average depths of the second and third transverse grooves are 5 mm or more and 40 mm or less; <ul id="ul-00008-en" list-style="none"><li><ul id="ul-00009-en" list-style="none"><li>the average depth of at least one, preferably two or more, of the second transverse groove is larger than an average thickness of a portion of the midsole that is directly above an area where the at least one second transverse groove is provided; and</li><li>the average depth of at least one of the third transverse groove is larger than an average thickness of a portion of the midsole that is directly above an area where the at least one third transverse groove is provided.</li></ul></li></ul></p>
+      <p id="p-00057-en" num="0074">In this case, as the second and third transverse grooves are deep and the midsole is thin, it is even easier for the shoe sole to flex in the middle foot portion.</p>
+      <p id="p-00058-en" num="0075">Note that if the maximum depth or the average depth is less than 5 mm, the shoe sole will not easily flex. On the other hand, if these values are over 40 mm, the shoe sole will be too thick.</p>
+      <p id="p-00059-en" num="0076">Preferably, the second transverse groove continuously extends across the shoe sole from the medial edge to a lateral edge of the foot; and <ul id="ul-00010-en" list-style="none"><li><ul id="ul-00011-en" list-style="none"><li>the second transverse groove has a larger average depth on a medial side of the foot than an average depth thereof on a lateral side of the foot.</li></ul></li></ul></p>
+      <p id="p-00060-en" num="0078">The arch of the foot is higher on the medial side than on the lateral side. Therefore, as the average depth of the second transverse groove is larger on the medial side than on the lateral side, the shoe sole can easily flex following the rise of the arch of the foot.</p>
+      <p id="p-00061-en" num="0079">Preferably, the third transverse groove continuously extends across the shoe sole from the medial edge to a lateral edge of the foot; and <ul id="ul-00012-en" list-style="none"><li><ul id="ul-00013-en" list-style="none"><li>the third transverse groove has a larger average depth on a medial side of the foot than an average depth thereof on a lateral side of the foot.</li></ul></li></ul></p>
+      <p id="p-00062-en" num="0081">The arch of the foot is higher on the medial side than on the lateral side. Therefore, as the average depth of the third transverse groove is larger on the medial side than on the lateral side, the shoe sole can easily flex following the rise of the arch of the foot.</p>
+      <p id="p-00063-en" num="0082">Preferably, there are a plurality of second transverse grooves, and the average depth of at least two second transverse grooves is larger than the average depth of the first transverse groove and is equal to or larger than the average depth of each of the at least one third transverse, groove.</p>
+      <p id="p-00064-en" num="0083">In this case, the middle foot portion can easily flex smoothly.</p>
+      <p id="p-00065-en" num="0084">Preferably, there are a plurality of third transverse grooves, and an average groove width of at least two of the third transverse grooves is larger than the average groove width of the first transverse groove and is larger than the average groove width of each of the at least one second transverse groove.</p>
+      <p id="p-00066-en" num="0085">In this case, the posterior end of the middle foot portion can easily flex smoothly in conformity with the posterior portion of the arch of the foot.</p>
+      <p id="p-00067-en" num="0086">Preferably, the shoe sole is further provided with a longitudinal groove extending from the first transverse groove to the third transverse groove; and <ul id="ul-00014-en" list-style="none"><li><ul id="ul-00015-en" list-style="none"><li>the shoe sole further comprises a band portion placed in the longitudinal groove, the band portion extending from the fore foot portion, which is anterior to the first transverse groove, to the rear foot portion, which is posterior to the third transverse groove, the band portion being secured to the shoe sole in the fore foot portion and in the rear foot portion, and the band portion being formed by a material that is less stretchable than the midsole and the outsole.</li></ul></li></ul></p>
+      <p id="p-00068-en" num="0088">In this case, when the toes are elevated, a similar load to that on the plantar aponeurosis is applied on the band portion, and then the shoe sole flexes because the band is less stretchable. Thus, the arch is likely to rise when the toes are elevated.</p>
+      <p id="p-00069-en" num="0089">More preferably, an abrasion-resistant material, which is less susceptible to abrasion than the band portion, is attached to a lower surface of the band portion, and the band portion and the abrasion-resistant material together form the band.</p>
+      <p id="p-00070-en" num="0090">In this case, the band can be placed close to the tread surface.</p>
+      <p id="p-00071-en" num="0091">More preferably, a bottom surface of the band is placed above the tread surface.</p>
+      <p id="p-00072-en" num="0092">Where there are projecting objects such as stones on the road surface, as the band lands on such a projecting object, a flexing force may inadvertently be applied to the shoe sole. As the bottom surface of the band is afloat, it is possible to suppress such an inadvertent flexion.</p>
+      <heading id="h-00008-en" level="1">EMBODIMENTS</heading>
+      <p id="p-00073-en" num="0093">The present invention will be understood more clearly from the following description of preferred embodiments taken in conjunction with the accompanying drawings. Note however that the embodiments and the drawings are merely illustrative and should not be taken to define the scope of the present invention. The scope of the present invention shall be defined only by the appended claims. In the accompanying drawings, like reference numerals denote like components throughout the plurality of figures.</p>
+      <p id="p-00074-en" num="0094">Embodiments of the present invention will now be described with reference to the drawings.</p>
+      <p id="p-00075-en" num="0095">
+        <figref>FIGS. 1 to 4</figref> show Embodiment 1. Note that in order to facilitate the description of the invention, <figref>FIG. 1</figref> shows the medial side of a shoe for the left foot whereas <figref>FIG. 2</figref> shows a lateral side view of a shoe for the right foot.</p>
+      <p id="p-00076-en" num="0096">As shown in <figref>FIGS. 1 and 2</figref>, a shoe sole includes an outsole <b>1</b>, and a midsole <b>2</b>. In various figures, minute grooves (so-called a design) formed on a tread surface <b>1</b>S of the outsole <b>1</b> are omitted.</p>
+      <p id="p-00077-en" num="0097">In the present embodiment, the outsole <b>1</b> and the midsole <b>2</b> are placed across the fore foot portion F, the middle foot portion M and the rear foot portion R. The outsole <b>1</b> is formed by a foamed or non-foamed rubber, for example, and has the tread surface <b>1</b><i>s </i>which has a higher abrasion resistance than the midsole <b>2</b> and which is to be in contact with the road surface.</p>
+      <p id="p-00078-en" num="0098">The midsole <b>2</b> is formed by a foamed resin such as EVA, for example, and is placed on the outsole <b>1</b>, as shown in <figref>FIG. 2</figref>, for reducing the impact of landing. Therefore, the midsole <b>2</b> is formed thicker than the outsole <b>1</b>.</p>
+      <p id="p-00079-en" num="0099">The hardness of the midsole <b>2</b> is preferably 45 to 75 degrees and more preferably 50 to 70 degrees in JIS C hardness, for example.</p>
+      <p id="p-00080-en" num="0100">In the present embodiment, a first transverse groove G<b>1</b>, second transverse grooves G<b>2</b>, third transverse grooves G<b>3</b>, and auxiliary transverse grooves G<b>4</b> are formed both in the outsole <b>1</b> and in the midsole <b>2</b>. As shown in <figref>FIG. 3</figref>, each of the transverse grooves G<b>1</b> to G<b>4</b> extends from a medial edge <b>10</b> to a lateral edge <b>11</b> in a direction perpendicular to the longitudinal axis A<b>1</b> or in a slant direction crossing the longitudinal axis A<b>1</b>.</p>
+      <p id="p-00081-en" num="0101">Note that as is clearly shown in <figref>FIG. 13</figref>, the longitudinal axis A<b>1</b> is placed along a straight line that connects between the midpoint O<b>3</b> (between the ball O<b>1</b> of the big toe and the ball O<b>5</b> of the little toe) and the center O<b>4</b> of the heel.</p>
+      <p id="p-00082-en" num="0102">In <figref>FIG. 1</figref>, the first transverse groove G<b>1</b> continuously extends in the transverse direction X from the medial edge <b>10</b> to the lateral edge <b>11</b> (<figref>FIG. 3</figref>) at the position of the metatarsal phalangeal joint MP and/or the base B<b>30</b> of the proximal phalanx B<b>3</b> of the first to third toes. The first transverse groove G<b>1</b> makes it easier for the metatarsal phalangeal joint MP to flex.</p>
+      <p id="p-00083-en" num="0103">The second transverse grooves G<b>2</b> continuously extend in the transverse direction X from the medial edge <b>10</b> to the lateral edge <b>11</b> (<figref>FIG. 3</figref>), in an area between the Chopart's joint JS of the first toe and the posterior end JLb of the Lisfranc joint JL. In the present embodiment, there are two (a plurality of) second transverse grooves G<b>2</b>, and the two second transverse grooves G<b>2</b> work in cooperation with each other, thereby forming the middle foot flexion area MA.</p>
+      <p id="p-00084-en" num="0104">Note that NB denotes the navicular bone, and CB denotes the medial cuneiform bone.</p>
+      <p id="p-00085-en" num="0105">The third transverse grooves G<b>3</b> continuously extend in the transverse direction X from the medial edge <b>10</b> to the lateral edge <b>11</b> (<figref>FIG. 3</figref>), in an area between the anterior end Tf and the posterior end Tb of the talus Ta. In the present embodiment, there are two (a plurality of) third transverse grooves G<b>3</b>, and the two third transverse grooves G<b>3</b> work in cooperation with each other, thereby forming the rear foot flexion area BA.</p>
+      <p id="p-00086-en" num="0106">The auxiliary transverse grooves G<b>4</b> continuously extend in the transverse direction X from the medial edge <b>10</b> to the lateral edge <b>11</b> (<figref>FIG. 3</figref>) at a position directly below the base B<b>40</b> or the shaft B<b>41</b> of the first metatarsal bone B<b>4</b>.</p>
+      <p id="p-00087-en" num="0107">In the present embodiment, there are two (a plurality of) auxiliary transverse grooves G<b>4</b>, and the two auxiliary transverse grooves G<b>4</b> work in cooperation with each other, thereby forming an auxiliary flexion area SA.</p>
+      <p id="p-00088-en" num="0108">The first to fourth transverse grooves G<b>1</b> to G<b>4</b> are provided so as to be depressed upwardly from the bottom surface of the shoe sole, i.e., the tread surface <b>1</b><i>s </i>in the present embodiment. Note that the first transverse groove G<b>1</b> may be formed so as to be depressed downwardly from the upper surface of the midsole <b>2</b>.</p>
+      <p id="p-00089-en" num="0109">Each of the grooves G<b>1</b> to G<b>4</b> includes a front wall surface Fw, a rear wall surface Bw opposing the front wall surface Fw, and a ceiling T<b>0</b>, which define the groove G<b>1</b> to G<b>4</b>.</p>
+      <p id="p-00090-en" num="0110">In the present embodiment, the middle foot flexion area MA is defined as an area extending from the most anterior one of the front wall surfaces Fw of the plurality of second transverse grooves G<b>2</b> to the most posterior one of the rear wall surfaces Bw of the plurality of second transverse grooves G<b>2</b>. The average value of the width D<b>20</b> of the middle foot flexion area MA is larger than the average groove width D<b>1</b> of the first transverse groove <b>1</b>.</p>
+      <p id="p-00091-en" num="0111">Note that the average value of the width D<b>20</b> of the middle foot flexion area MA may be less than or equal to the average distance from the anterior end Tf to the posterior end Tb of the talus Ta.</p>
+      <p id="p-00092-en" num="0112">The rear foot flexion area BA is defined as an area extending from the most anterior one of the front wall surfaces Fw of the plurality of third transverse grooves G<b>3</b> to the most posterior one of the rear wall surfaces Bw of the plurality of third transverse grooves G<b>3</b>. The average value of the width Da of the rear foot flexion area BA is larger than the average groove width D<b>1</b> of the first transverse groove G<b>1</b>, and is larger than the average groove width D<b>20</b> of the middle foot flexion area MA.</p>
+      <p id="p-00093-en" num="0113">In the present embodiment, the average groove width D<b>3</b> of each of the third transverse grooves G<b>3</b> is larger than the average groove width D<b>1</b> of the first transverse groove G<b>1</b>, and is larger than the average groove width D<b>2</b> of each of the second transverse grooves G<b>2</b>.</p>
+      <p id="p-00094-en" num="0114">In order to expect that windlass will raise the foot arch, the soles <b>1</b> and <b>2</b> need to flex and deform so as to protrude upward in the middle foot portion M. Then, the groove widths of the second to fourth transverse grooves G<b>2</b> to G<b>4</b> may possibly decrease. There are also manufacturing-related problems. Therefore, the average groove width of each of the first to fourth transverse grooves G<b>1</b> to G<b>4</b> would need to be at least about 1 mm.</p>
+      <p id="p-00095-en" num="0115">On the other hand, the maximum value of the average groove width of each of the first to fourth transverse grooves G<b>1</b> to G<b>4</b> would be 50 mm. If the value exceeds 50 mm, the sole itself, which supports the sole of the foot, drops down, thereby leading to lowering of the arch.</p>
+      <p id="p-00096-en" num="0116">In view of the above, the range of the average groove width for each of the first to fourth transverse grooves G<b>1</b> to G<b>4</b> is preferably 2 mm to 40 mm and most preferably about 3 mm to 30 mm.</p>
+      <p id="p-00097-en" num="0117">As can be seen from a comparison between <figref>FIG. 1</figref> and <figref>FIG. 2</figref>, the second to fourth transverse grooves G<b>2</b> to G<b>4</b> become shallower from the medial edge <b>10</b> toward the lateral edge <b>11</b>.</p>
+      <p id="p-00098-en" num="0118">Therefore, the second transverse groove G<b>2</b> has a larger average depth on the medial side of the foot than that on the lateral side of the foot. Similarly, the third transverse groove G<b>3</b> has a larger average depth on the medial side of the foot than that on the lateral side of the foot. Similarly, the fourth transverse groove G<b>4</b> has a larger average depth on the medial side of the foot than that on the lateral side of the foot.</p>
+      <p id="p-00099-en" num="0119">In <figref>FIG. 2</figref>, the average depth H<b>2</b> of each of the second transverse grooves G<b>2</b> is larger than the average depth H<b>1</b> of the first transverse groove G<b>1</b>, and is equal to or larger than the average depth H<b>3</b> of each of the third transverse grooves G<b>3</b>.</p>
+      <p id="p-00100-en" num="0120">On the other hand, the average depth H<b>4</b> of the auxiliary transverse groove G<b>4</b> is smaller than the average depth H<b>2</b> of the second transverse groove G<b>2</b>, and the average groove width D<b>4</b> of the auxiliary transverse groove G<b>4</b> is smaller than the average groove width D<b>3</b> of the third transverse groove G<b>3</b>.</p>
+      <p id="p-00101-en" num="0121">The average depths H<b>2</b> and H<b>3</b> of the second and third transverse grooves G<b>2</b> and G<b>3</b> are set to be about 5 mm to 40 mm. If the average depths H<b>2</b> and H<b>3</b> are smaller than 5 mm, the effect of this mechanism cannot be so expected, whereas if they are larger than 40 mm, the sole will be too thick. In view of this, the above value is preferably 7 mm to 35 mm, and most preferably 10 mm to 30 mm.</p>
+      <p id="p-00102-en" num="0122">The average depth <b>112</b> of at least one of the second transverse grooves G<b>2</b> is larger than the average thickness T<b>2</b><i>a </i>of a portion of the midsole <b>2</b> that is directly above an area where the transverse groove is provided. On the other hand, the average depth H<b>3</b> of at least one of the third transverse grooves G<b>3</b> is larger than the average thickness T<b>3</b><i>a </i>of a portion of the midsole <b>2</b> that is directly above an area where the transverse groove is provided.</p>
+      <p id="p-00103-en" num="0123">For similar reasons to those for the average depth, the maximum depth Hm of the second and third transverse grooves G<b>2</b> and G<b>3</b> of <figref>FIG. 1</figref> is preferably about 5 mm to 40 mm, more preferably about 7 mm to 35 mm, and most preferably about 10 mm to 30 mm.</p>
+      <p id="p-00104-en" num="0124">The average depth <b>112</b> of each of the two second transverse grooves G<b>2</b> is larger than the average depth H<b>1</b> of the first transverse groove G<b>1</b>, and is equal to or larger than the average depth H<b>3</b> of each of the third transverse grooves G<b>3</b>.</p>
+      <p id="p-00105-en" num="0125">In <figref>FIG. 1</figref>, the maximum depth Hm of each of the second transverse grooves G<b>2</b> is larger than the thickness of a portion of the midsole <b>2</b> that is directly above an area where the transverse groove having that maximum depth is provided. On the other hand, the maximum depth Hm of each of the third transverse grooves G<b>3</b> is larger than the thickness of a portion of the midsole <b>2</b> that is directly above an area where the transverse groove having that maximum depth is provided.</p>
+      <p id="p-00106-en" num="0126">As shown in <figref>FIG. 1</figref>, the thickness T<b>1</b> from the upper surface of the midsole <b>2</b> to the ceiling T<b>0</b> of the first transverse groove G<b>1</b> is set to be 0.5 mm or more and less than 12 mm at the thinnest portion.</p>
+      <p id="p-00107-en" num="0127">On the other hand, the thickness T<b>2</b> from the upper surface of the midsole <b>2</b> to the ceiling T<b>0</b> of the second transverse groove G<b>2</b> is set to be 0.5 mm or more and 10 mm or less at the thinnest portion.</p>
+      <p id="p-00108-en" num="0128">The thickness T<b>3</b> from the upper surface of the midsole <b>2</b> to the ceiling T<b>0</b> of the third transverse groove G<b>3</b> is set to be 0.5 mm or more and 10 mm or less at the thinnest portion.</p>
+      <p id="p-00109-en" num="0129">The average groove width D<b>3</b> of each of the two third transverse grooves G<b>3</b> is larger than the average groove width D<b>1</b> of the first transverse groove G<b>1</b> and is larger than the average groove width D<b>2</b> of each of the second transverse grooves G<b>2</b>.</p>
+      <p id="p-00110-en" num="0130">Next, the deformation of the shoe in the present embodiment will be described briefly.</p>
+      <p id="p-00111-en" num="0131">When the fore foot portion F of <figref>FIG. 1</figref> faces up as indicated by a solid line with respect to a virtual line of <figref>FIG. 4</figref>, and the MP joint MP is extended over the first transverse groove G<b>1</b>, the plantar aponeurosis is rolled up upward, thereby tensioning the plantar aponeurosis, which urges the arch of the foot to rise. During this movement, the lower portion of the sole shrinks in the longitudinal direction Y over the area of the second to fourth transverse grooves G<b>2</b> to G<b>4</b>, and the outsole <b>1</b> and the midsole <b>2</b> deform into an upwardly protruding shape. Thus, the arch of the foot is likely to be raised during this movement.</p>
+      <p id="p-00112-en" num="0132">Next, other examples of the present invention will be described.</p>
+      <p id="p-00113-en" num="0133">In other examples to be described below, like elements to those of Embodiment 1 will be denoted by like reference numerals, and only those structures that are different from Embodiment 1 will be described.</p>
+      <p id="p-00114-en" num="0134">As shown in Embodiment 2 of <figref>FIG. 5</figref>, some or all of the second to fourth transverse grooves G<b>2</b> to G<b>4</b> may be set to a length such that they extend from the medial edge <b>10</b> toward the lateral edge <b>11</b> past the longitudinal axis A<b>1</b> but do not reach the lateral edge <b>11</b>. The arch of the foot is high on the medial side, and the effect of the windlass mechanism can be therefore expected as long as the medial side portion of the sole can flex sufficiently.</p>
+      <p id="p-00115-en" num="0135">Preferably, the transverse grooves G<b>1</b> to G<b>4</b> can extend over about ⅔ the total width from the medial edge <b>10</b> to the lateral edge <b>11</b> in the area where the transverse grooves G<b>1</b> to G<b>4</b> are provided.</p>
+      <p id="p-00116-en" num="0136">Note that as opposed to the example shown in <figref>FIG. 5</figref>, the second and third transverse grooves G<b>2</b> and G<b>3</b> may be provided across the total width, whereas the first and fourth transverse grooves G<b>1</b> and G<b>4</b> are provided so as to extend from the medial edge <b>10</b> past the longitudinal axis A<b>1</b> and into a part of the lateral side portion.</p>
+      <p id="p-00117-en" num="0137">As with the first transverse groove G<b>1</b> shown in <figref>FIG. 5</figref>, the transverse grooves G<b>1</b> to G<b>4</b> do not need to be extending in a direction perpendicular to the longitudinal axis A<b>1</b>, but may be extending in a slant direction crossing the longitudinal axis A<b>1</b>.</p>
+      <p id="p-00118-en" num="0138">In Embodiment 3 of <figref>FIG. 6</figref>, there may be a single, i.e., only one, second transverse groove G<b>2</b> that is deeper than the third transverse groove G<b>3</b>. In this example, the depth of a second transverse groove G<b>2</b> that is immediately anterior to the posterior second transverse groove G<b>2</b> is smaller than the depth of one of the third transverse grooves G<b>3</b>.</p>
+      <p id="p-00119-en" num="0139">Where there is one second transverse groove G<b>2</b> that is deeper than the third transverse groove G<b>3</b>, as in this example, at least the ceiling TO of the second transverse groove G<b>2</b> is preferably placed directly below the navicular bone NB. This is because the navicular bone NB is located at the apex of the arch of the foot.</p>
+      <p id="p-00120-en" num="0140">In Embodiment 4 of <figref>FIG. 7</figref>, there is only one each of the first transverse groove G<b>1</b>, the second transverse groove G<b>2</b> and the third transverse groove G<b>3</b>. In this case, the width Da of the third transverse groove G<b>3</b> is generally equal to the rear foot flexion area BA.</p>
+      <p id="p-00121-en" num="0141">As shown in Embodiments <b>5</b> and <b>6</b> of <figref>FIGS. 8 and 9</figref>, the width D<b>2</b> of the second transverse groove G<b>2</b> may be larger than the width D<b>3</b> of any of all the third transverse grooves G<b>3</b>. In the various examples, the cross-sectional shape of the transverse grooves G<b>1</b> to G<b>4</b> may be an inverted U-letter shape, an inverted V-letter shape, a trapezoidal shape, or the like.</p>
+      <p id="p-00122-en" num="0142">
+        <figref>FIGS. 10 to 12</figref> show Embodiment 7.</p>
+      <p id="p-00123-en" num="0143">In this example, the shoe sole is further provided with a longitudinal groove GL extending from the first transverse groove G<b>1</b> to the third transverse groove G<b>3</b> of <figref>FIG. 10</figref>. A part of a band <b>3</b> is accommodated and placed in the longitudinal groove GL.</p>
+      <p id="p-00124-en" num="0144">The band <b>3</b> of <figref>FIG. 11</figref> includes a band portion <b>30</b> and an abrasion-resistant material <b>31</b> layered together. The abrasion-resistant material <b>31</b> is formed by a rubber, for example, and is more resistant to abrasion than the band portion <b>30</b>. On the other hand, the band portion <b>30</b> is formed by a non-stretchable tape material. Thus, the band <b>3</b> is a band-shaped member that does not substantially stretch even when pulled, but can flex and slack.</p>
+      <p id="p-00125-en" num="0145">The band <b>3</b> extends from the fore foot portion F, which is anterior to the first transverse groove G<b>1</b>, to the rear foot portion R, which is posterior to the third transverse groove G<b>3</b>, and is secured to the shoe sole in the fore foot portion F and in the rear foot portion R.</p>
+      <p id="p-00126-en" num="0146">As shown in <figref>FIG. 11</figref>, the bottom surface of the band <b>3</b> is placed above the tread surface <b>1</b><i>s</i>. In the fore foot portion F and the rear foot portion R, the band <b>3</b> is sandwiched between the outsole <b>1</b> and the midsole <b>2</b>, with the lower surface of the band <b>3</b> being afloat.</p>
+      <p id="p-00127-en" num="0147">As shown in <figref>FIG. 12</figref>, the band <b>3</b> is tensioned when the toe is elevated or flexed, thereby facilitating the flexion of the middle foot portion M such as to raise the arch of the sole as indicated by the solid line.</p>
+      <p id="p-00128-en" num="0148">Next, Text Examples (Sample 1 and Sample 2) and Reference Example (Ref.) will be illustrated in order to elucidate the effects of the present invention.</p>
+      <p id="p-00129-en" num="0149">First, Sample 1 having a structure specified in <figref>FIGS. 1 to 4</figref>, and Sample 2 having a structure specified in <figref>FIGS. 10 to 12</figref> were produced as samples. On the other hand, an ordinary school shoe with no deep transverse grooves was provided as a reference example.</p>
+      <p id="p-00130-en" num="0150">Using one male as the subject, angles of deformation of the sole and the foot portion while running (3.5 min/km) were measured for a plurality of iterations, and the average values were calculated.</p>
+      <p id="p-00131-en" num="0151">The angle θ along the vertical axis of <figref>FIG. 14A</figref> represents the angle of elevation of the first toe. The angle As along the vertical axis of <figref>FIG. 14B</figref> represents the angle of flexion of the sole about the middle foot portion. The angle Af along the vertical axis of <figref>FIG. 14C</figref> represents the angle of flexion of the vertical arch of the foot.</p>
+      <p id="p-00132-en" num="0152">Note that the horizontal axis in <figref>FIGS. 14A to 14C</figref> represents the percentage of the length of time from landing until kick-off.</p>
+      <p id="p-00133-en" num="0153">As can be seen from <figref>FIG. 14A</figref>, the angle θ, i.e., the angle of elevation of the first toe, over the period of heel contact, heel rise and toe off is larger for Sample 1 and Sample 2 than for Reference Example.</p>
+      <p id="p-00134-en" num="0154">As can be seen from <figref>FIG. 14B</figref>, the angle As, i.e., the angle of flexion of the sole about middle foot portion, over the period of heel contact, heel rise and toe off is larger for Sample 1 and Sample 2 than for Reference Example. Particularly, it can be seen that Sample 2, which is provided with the band, has an even larger value of the angle As than Sample 1.</p>
+      <p id="p-00135-en" num="0155">As can be seen from <figref>FIG. 14C</figref>, the angle Af, i.e., the angle of flexion of the vertical arch of the foot, at heel contact is smaller for Sample 1 and Sample 2 than for Reference Example. However, the angle Af is larger for Sample 1 and Sample 2 than for Reference Example over the period of heel rise and toe off. Particularly, it can be seen that Sample 2, which is provided with the band <b>3</b>, has an even larger value of the angle Af than Sample 1.</p>
+      <p id="p-00136-en" num="0156">Thus, it can be expected that shoes of Samples 1 and 2 will realize the effect of the windlass mechanism, and wearing shoes of Samples 1 and 2 will increase or maintain the arch height of the foot.</p>
+      <p id="p-00137-en" num="0157">While preferred embodiments have been described above with reference to the drawings, various obvious changes and modifications will readily occur to those skilled in the art upon reading the present specification.</p>
+      <p id="p-00138-en" num="0158">For example, the first transverse groove may be provided only in one of the outsole and the midsole.</p>
+      <p id="p-00139-en" num="0159">The band itself may be formed by an abrasion-resistant material such as an aramid fiber. Where the band is provided, the second transverse groove G<b>2</b> and the third transverse groove G<b>3</b> may be of the same depth or width.</p>
+      <p id="p-00140-en" num="0160">Thus, such changes and modifications are deemed to fall within the scope of the present invention, which is defined by the appended claims.</p>
+      <heading id="h-00009-en" level="1">INDUSTRIAL APPLICABILITY</heading>
+      <p id="p-00141-en" num="0161">The present invention is applicable to a shoe sole of a shoe for walking, running, training, etc.</p>
+      <p id="p-00142-en" num="0162">REFERENCE SIGNS LIST</p>
+      <p id="p-00143-en" num="0163">
+        <b>1</b>: Outsole, <b>1</b><i>s</i>: Tread surface</p>
+      <p id="p-00144-en" num="0164">
+        <b>2</b>: Midsole</p>
+      <p id="p-00145-en" num="0165">
+        <b>3</b>: Band, <b>30</b>: Band portion, <b>31</b>: Abrasion-resistant material</p>
+      <p id="p-00146-en" num="0166">
+        <b>10</b>: Medial edge, <b>11</b>: Lateral edge</p>
+      <p id="p-00147-en" num="0167">A<b>1</b>: Longitudinal axis</p>
+      <p id="p-00148-en" num="0168">B<b>3</b>: Proximal phalanx, B<b>30</b>: Base</p>
+      <p id="p-00149-en" num="0169">B<b>4</b>: First metatarsal bone, B<b>40</b>: Base, B<b>41</b>: Shaft</p>
+      <p id="p-00150-en" num="0170">BA: Rear foot flexion area, MA: Middle foot flexion area, SA: Auxiliary flexion area</p>
+      <p id="p-00151-en" num="0171">D<b>1</b>, D<b>2</b>, D<b>3</b>, D<b>4</b>: Average groove width, Da, D<b>20</b>: Width</p>
+      <p id="p-00152-en" num="0172">Bw: Rear wall surface, Fw: Front wall surface, T<b>0</b>: Ceiling</p>
+      <p id="p-00153-en" num="0173">F: Fore foot portion, M: Middle foot portion, R: Rear foot portion</p>
+      <p id="p-00154-en" num="0174">G<b>1</b>: First transverse groove, G<b>2</b>: Second transverse groove, G<b>3</b>: Third transverse groove, G<b>4</b>: Auxiliary transverse groove, GL: Longitudinal groove</p>
+      <p id="p-00155-en" num="0175">H<b>1</b>, H<b>2</b>, H<b>3</b>, H<b>4</b>: Average depth, Hm: Maximum depth</p>
+      <p id="p-00156-en" num="0176">JS: The Chopart's joint, JL: LISFRANC joint, JLb: Posterior end</p>
+      <p id="p-00157-en" num="0177">NB: Navicular bone, CB: Medial cuneiform bone</p>
+      <p id="p-00158-en" num="0178">MP: Metatarsal phalangeal joint</p>
+      <p id="p-00159-en" num="0179">Ta: Talus, Tb: Posterior end, Tf: Anterior end</p>
+      <p id="p-00160-en" num="0180">T<b>1</b>, T<b>2</b>, T<b>3</b>: Thickness</p>
+      <p id="p-00161-en" num="0181">T<b>2</b><i>a</i>, T<b>1</b><i>a</i>: Average thickness</p>
+      <p id="p-00162-en" num="0182">X: Transverse direction, Y: Longitudinal direction</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A shoe sole comprising:
+<claim-text>an outsole having a tread surface and placed at least in a fore foot portion and a rear foot portion; and</claim-text><claim-text>a midsole placed above the outsole and placed in the fore foot portion, a middle foot portion and the rear foot portion, wherein:</claim-text><claim-text>the outsole and/or the midsole define:</claim-text><claim-text>a first transverse groove continuously extending in a transverse direction from a medial edge so as to reach at least a longitudinal axis of a foot at a position of a metatarsal phalangeal joint and/or a base of a proximal phalanx of first to third toes;</claim-text><claim-text>at least one second transverse groove continuously extending in the transverse direction from the medial edge so as to reach at least the longitudinal axis, in an area between a Chopart's joint of the first toe to a posterior end of a Lisfranc joint; and</claim-text><claim-text>at least one third transverse groove continuously extending in the transverse direction from the medial edge so as to reach at least the longitudinal axis, in an area between an anterior end to a posterior end of a talus, wherein:</claim-text><claim-text>the second and third transverse grooves are provided so as to be depressed upwardly from a bottom surface of the shoe sole;</claim-text><claim-text>each of the grooves to has a front wall surface and a rear wall surface opposing the front wall surface, the front and rear wall surfaces defining each of the grooves;</claim-text><claim-text>an average value of a width of a flexion area is larger than an average groove width of the first transverse groove and is larger than an average groove width of each of the at least one second transverse groove, wherein the flexion area is an area extending from a most anterior one of the front wall surfaces of the at least one third transverse groove to a most posterior one of the rear wall surfaces of the at least one third transverse groove; and</claim-text><claim-text>an average depth of the at least one second transverse groove is larger than an average depth of the first transverse groove and is equal to or larger than an average depth of each of the at least one third transverse groove.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The shoe sole according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein an average groove width of at least one of the third transverse groove is larger than the average groove width of the first transverse groove and is larger than the average groove width of each of the at least one second transverse groove.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The shoe sole according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>, further comprising an auxiliary transverse groove continuously extending in the transverse direction from the medial edge so as to reach at least the longitudinal axis at a position directly below a base or a shaft of a first metatarsal bone.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The shoe sole according to <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein an average depth of the auxiliary transverse groove is smaller than the average depth of the second transverse groove, and an average groove width of the auxiliary transverse groove is smaller than the average groove width of at least one of the third transverse groove.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The shoe sole according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the first transverse groove is depressed upwardly from the tread surface.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The shoe sole according to <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein:
+<claim-text>each of the grooves is defined by a front wall surface, a rear wall surface and a ceiling above;</claim-text><claim-text>a thickness from an upper surface of the midsole to the ceiling of the first transverse groove is set to be 0.5 mm or more and less than 12 mm at a thinnest portion;</claim-text><claim-text>a thickness from the upper surface of the midsole to the ceiling of the second transverse groove is set to be 0.5 mm or more and 10 mm or less at a thinnest portion; and</claim-text><claim-text>a thickness from the upper surface of the midsole to the ceiling of the third transverse groove is set to be 0.5 mm or more and 10 mm or less at a thinnest portion.</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The shoe sole according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein:
+<claim-text>a maximum depth of the second and third transverse grooves is 5 mm or more and 40 mm or less;</claim-text><claim-text>the maximum depth of each of the at least one second transverse groove is larger than a thickness of a portion of the midsole that is directly above an area where the second transverse groove having that maximum depth is provided; and</claim-text><claim-text>the maximum depth of each of the at least one third transverse groove is larger than a thickness of a portion of the midsole that is directly above an area where the third transverse groove having that maximum depth is provided.</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The shoe sole according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein:
+<claim-text>the average depths of the second and third transverse grooves are 5 mm or more and 40 mm or less;</claim-text><claim-text>the average depth of at least one of the second transverse groove is larger than an average thickness a of a portion of the midsole that is directly above an area where the at least one second transverse groove is provided; and</claim-text><claim-text>the average depth of at least one of the third transverse groove is larger than an average thickness a of a portion of the midsole that is directly above an area where the at least one third transverse groove is provided.</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The shoe sole according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein:
+<claim-text>the second transverse groove continuously extends across the shoe sole from the medial edge to a lateral edge of the foot; and</claim-text><claim-text>the second transverse groove has a larger average depth on a medial side of the foot than an average depth of the second transverse groove on a lateral side of the foot.</claim-text></claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The shoe sole according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein:
+<claim-text>the third transverse groove continuously extends across the shoe sole from the medial edge to a lateral edge of the foot; and</claim-text><claim-text>the third transverse groove has a larger average depth on a medial side of the foot than an average depth of the third transverse groove on a lateral side of the foot.</claim-text></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The shoe sole according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the at least one second groove comprises a plurality of second transverse grooves, and the average depth of at least two second transverse grooves is larger than the average depth of the first transverse groove and is equal to or larger than the average depth of each of the at least one third transverse groove.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The shoe sole according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the at least one third transverse groove comprises a plurality of third transverse grooves, and an average groove width of at least two of the third transverse grooves is larger than the average groove width of the first transverse groove and is larger than the average groove width of each of the at least one second transverse groove.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The shoe sole according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein:
+<claim-text>the shoe sole is further provided with a longitudinal groove extending from the first transverse groove to the third transverse groove; and</claim-text><claim-text>the shoe sole further comprises a band portion placed in the longitudinal groove, the band portion extending from the fore foot portion, which is anterior to the first transverse groove, to the rear foot portion, which is posterior to the third transverse groove, the band portion being secured to the shoe sole in the fore foot portion and in the rear foot portion, and the band portion being formed by a material that is less stretchable than the midsole and the outsole</claim-text></claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The shoe sole according to <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein an abrasion-resistant material 34, which is less susceptible to abrasion than the band portion, is attached to a lower surface of the band portion, and the band portion and the abrasion-resistant material together form a band.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The shoe sole according to <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein a bottom surface of the band is placed above the tread surface.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150250260A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150250260A1-20150910-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150250260A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250260A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150250260A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250260A1-20150910-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150250260A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250260A1-20150910-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150250260A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250260A1-20150910-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150250260A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250260A1-20150910-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150250260A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250260A1-20150910-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150250260A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250260A1-20150910-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150250260A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250260A1-20150910-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150250260A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250260A1-20150910-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150250260A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250260A1-20150910-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150250260A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250260A1-20150910-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150250260A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250260A1-20150910-D00012.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150250260A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250260A1-20150910-D00013.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150250260A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250260A1-20150910-D00014.TIF" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150250260A1_00016.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150250260A1-20150910-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150250260A1.PDF" type="pdf" size="819946" pages="23" />
+</lexisnexis-patent-document>

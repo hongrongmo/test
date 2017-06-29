@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150246861A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021223" date-changed="20160120" time-changed="090350">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121138853">
+        <country>US</country>
+        <doc-number>20150246861</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14431648</doc-number>
+        <date>20140627</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="national">
+        <country>KR</country>
+        <doc-number>1020130074507</doc-number>
+        <date>20130627</date>
+      </priority-claim>
+      <priority-claim sequence="2" kind="national">
+        <country>KR</country>
+        <doc-number>1020140061369</doc-number>
+        <date>20140522</date>
+      </priority-claim>
+      <priority-claim sequence="3" kind="national">
+        <country>KR</country>
+        <doc-number>1020140079572</doc-number>
+        <date>20140627</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>C07C  29/147       20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>29</main-group>
+        <subgroup>147</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>C07C  29/147       20130101 FI20150901BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>29</main-group>
+        <subgroup>147</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150901</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C07C  29/60        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>29</main-group>
+        <subgroup>60</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <combination-set>
+        <group-number>1</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C07C  29/60        20130101 LI20150219BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>07</class>
+            <subclass>C</subclass>
+            <main-group>29</main-group>
+            <subgroup>60</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20150219</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C07C  33/03        20130101 LI20150219BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>07</class>
+            <subclass>C</subclass>
+            <main-group>33</main-group>
+            <subgroup>03</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20150219</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">8</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">METHOD FOR PREPARING ALLYL ALCOHOL</invention-title>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>LG CHEM, LTD.</orgname>
+            <address>
+              <city>Seoul</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>KR</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kim</last-name>
+            <first-name>Dae Sung</first-name>
+            <address>
+              <city>Daejeon</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Lee</last-name>
+            <first-name>Won Jae</first-name>
+            <address>
+              <city>Daejeon</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kong</last-name>
+            <first-name>Myungjin</first-name>
+            <address>
+              <city>Daejeon</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Choe</last-name>
+            <first-name>Yong-Jin</first-name>
+            <address>
+              <city>Daejeon</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Nam</last-name>
+            <first-name>Hyun</first-name>
+            <address>
+              <city>Daejeon</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>KR14005754</doc-number>
+        <date>20140627</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014209063</doc-number>
+        <date>20141231</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20160120">
+      <main-family family-id="169387808">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014209063</doc-number>
+            <kind>A1</kind>
+            <date>20141231</date>
+          </document-id>
+          <application-date>
+            <date>20140627</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015526425</doc-number>
+            <kind>A</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20140627</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104755451</doc-number>
+            <kind>A</kind>
+            <date>20150701</date>
+          </document-id>
+          <application-date>
+            <date>20140627</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246861</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20140627</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>9120718</doc-number>
+            <kind>B1</kind>
+            <date>20150901</date>
+          </document-id>
+          <application-date>
+            <date>20140627</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="175860208">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014209063</doc-number>
+            <kind>A1</kind>
+            <date>20141231</date>
+          </document-id>
+          <application-date>
+            <date>20140627</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015526425</doc-number>
+            <kind>A</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20140627</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104755451</doc-number>
+            <kind>A</kind>
+            <date>20150701</date>
+          </document-id>
+          <application-date>
+            <date>20140627</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150001667</doc-number>
+            <kind>A</kind>
+            <date>20150106</date>
+          </document-id>
+          <application-date>
+            <date>20140626</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150135095</doc-number>
+            <kind>A</kind>
+            <date>20151202</date>
+          </document-id>
+          <application-date>
+            <date>20150515</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014209065</doc-number>
+            <kind>A1</kind>
+            <date>20141231</date>
+          </document-id>
+          <application-date>
+            <date>20140627</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150006349</doc-number>
+            <kind>A</kind>
+            <date>20150116</date>
+          </document-id>
+          <application-date>
+            <date>20140627</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150135029</doc-number>
+            <kind>A</kind>
+            <date>20151202</date>
+          </document-id>
+          <application-date>
+            <date>20140627</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150135096</doc-number>
+            <kind>A</kind>
+            <date>20151202</date>
+          </document-id>
+          <application-date>
+            <date>20150515</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246861</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20140627</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>9120718</doc-number>
+            <kind>B1</kind>
+            <date>20150901</date>
+          </document-id>
+          <application-date>
+            <date>20140627</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014209068</doc-number>
+            <kind>A1</kind>
+            <date>20141231</date>
+          </document-id>
+          <application-date>
+            <date>20140627</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Disclosed is a method for preparing allyl alcohol, wherein glycerol and formic acid are reacted under specific synthesis conditions, thus remarkably increasing the the concentration of allyl alcohol in the liquid reaction products and minimizing the production of allyl formate byproduct and the production of unreacted formic acid.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150326</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US     9120718B1</docdb-publication-number>
+      <docdb-application-id>444043453</docdb-application-id>
+      <new-owner>LG CHEM, LTD., KOREA, REPUBLIC OF</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:KIM, DAE SUNG;LEE, WON JAE;KONG, MYUNGJIN;AND OTHERS;REEL/FRAME:035267/0130</free-text-description>
+      <effective-date>
+        <date>20150127</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to a method for preparing allyl alcohol and, more particularly, to a novel method for preparing allyl alcohol, wherein glycerol and formic acid are reacted under specific synthesis conditions so as to drastically increase the concentration of allyl alcohol in liquid reaction products and minimize an allyl formate byproduct and the production of unreacted formic acid. This application claims the benefit of Korean Patent Application Nos. KR 10-2013-0074507, filed Jun. 27, 2013, KR 10-2014-0061369, filed May 22, 2014, and KR 10-2014-0079572, filed Jun. 27, 2014, which are hereby incorporated by reference in their entirety into this application.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND ART</heading>
+      <p id="p-00002-en" num="0002">Allyl alcohol is the simplest unsaturated alcohol represented by CH<sub>2</sub>═CHCH<sub>2</sub>OH, and is employed as a pesticide or is importantly utilized as a feed material or an intermediate in the course of producing many compounds. Furthermore, it may be used as an antiseptic, or applied in a variety of fields, including preparation of phthalic acid ester useful as a polymer plasticizer, preparation of butane-1,4-diol as a monomer of polyester (PBT), or production of acrylic acid.</p>
+      <p id="p-00003-en" num="0003">Thorough research is ongoing into preparation of allyl alcohol, including reacting propylene, acetic acid and oxygen to give allyl acetate that is then hydrolyzed into allyl alcohol based on petrochemical processes. Also, as for eco-friendly preparation processes of allyl alcohol using bio materials compared to conventional petrochemical processes, when glycerol is reacted with formic acid, allyl alcohol may be obtained at high yield even in the absence of a catalyst, which is disclosed in U.S. Pat. No. 8,273,926. Useful as the material for allyl alcohol in such a registered patent, glycerol is a byproduct mainly resulting from preparation of biodiesel, and is currently utilized as a material for medical or cosmetic products, a solvent or lubricant. Since the supply of a glycerol byproduct is expected to increase in proportion to an increase in production of biodiesel, new applications, in addition to conventional glycerol uses, are under study. However, in order to maximize the yield of allyl alcohol in the above patent, formic acid has to be excessively added (e.g. 1.45 equivalents) relative to glycerol. In this case, the present inventors expect that the drawbacks such as long reaction time and complicated processing steps may occur, despite high allyl alcohol yield. As illustrated in <figref>FIG. 1</figref>, due to excessive use of formic acid and low product selectivity of allyl alcohol, gas phase products obtained via (a) according to a conventional technique include CO<sub>2</sub>, H<sub>2</sub>O (W, by 100° C.), allyl formate (AF, by 80˜83° C.), and allyl alcohol (AA, by 97° C.), with a large amount of unreacted formic acid (FA, by 100.8° C.). Also, allyl alcohol in the liquid reaction products obtained from (b) through a gas separator has a low concentration, undesirably increasing energy and cost required for the separation process thereof. Since the difference of boiling points of W, AA and FA as the gas phase products is very small, it is impossible to separate such products via typical distillation. Furthermore, due to the azeotropes of formic acid-water (FA-W) and allyl alcohol-formic acid-water (AA-FA-W), it is very difficult to separate formic acid from these products. Hence, in order to prepare allyl alcohol on a commercial scale, the liquid reaction products should contain allyl alcohol in a large amount and also the production of allyl formate byproduct and the production of unreacted formic acid should be minimized, and thereby it is possible to easily perform the subsequent separation process. Accordingly, there is a need for a novel synthesis method able to drastically increase the concentration of allyl alcohol from glycerol under specific synthesis conditions.</p>
+      <heading id="h-00003-en" level="1">DISCLOSURE</heading>
+      <heading id="h-00004-en" level="1">Technical Problem</heading>
+      <p id="p-00004-en" num="0004">The present invention has been made keeping in mind the above problems in the related art, and an object of the present invention is to provide a novel method for preparing allyl alcohol, wherein specific synthesis conditions are applied so that the concentration of allyl alcohol in the liquid reaction products may be drastically increased and the production of allyl formate byproduct and the production of unreacted formic acid may be minimized.</p>
+      <heading id="h-00005-en" level="1">Technical Solution</heading>
+      <p id="p-00005-en" num="0005">In order to accomplish the above object, the present invention provides a method for preparing allyl alcohol, comprising: a) adding glycerol with formic acid in an amount of 0.4˜1.2 equivalents relative to 1 equivalent of glycerol and then increasing a reaction temperature to 220˜240° C. from room temperature at a heating rate of at least 2.0° C./min in an inert gas atmosphere so that glycerol and formic acid are reacted; and b) condensing gas reaction products obtained in a), thus separating liquid reaction products including allyl alcohol therefrom.</p>
+      <heading id="h-00006-en" level="1">Advantageous Effects</heading>
+      <p id="p-00006-en" num="0006">According to the present invention, a method for preparing allyl alcohol employs specific synthesis conditions so that the concentration of allyl alcohol in liquid reaction products can be drastically increased and an allyl formate byproduct and the production of unreacted formic acid can be minimized, making it possible to produce allyl alcohol on a commercial scale.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00007-en" level="1">DESCRIPTION OF DRAWINGS</heading>
+      <p id="p-00007-en" num="0007">
+        <figref>FIG. 1</figref> illustrates a conceptual design for the preparation of allyl alcohol;</p>
+      <p id="p-00008-en" num="0008">
+        <figref>FIG. 2</figref> illustrates a two-step reaction pathway for synthesizing allyl alcohol from glycerol; and</p>
+      <p id="p-00009-en" num="0009">
+        <figref>FIG. 3</figref> illustrates a mechanism for esterification of glyceryl formate and formic acid.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00008-en" level="1">BEST MODE</heading>
+      <p id="p-00010-en" num="0010">Hereinafter, a detailed description will be given of a method for preparing allyl alcohol and allyl alcohol prepared thereby, according to the present invention.</p>
+      <p id="p-00011-en" num="0011">The present invention addresses a method of mainly producing allyl alcohol, wherein specific synthesis conditions are applied so that the concentration of allyl alcohol in liquid reaction products may be remarkably increased and an allyl formate byproduct and the production of unreacted formic acid may be minimized. Therefore, allyl alcohol may be produced in a quite high concentration, compared to conventional methods.</p>
+      <p id="p-00012-en" num="0012">To this end, the method for preparing allyl alcohol according to the present invention comprises: a) adding glycerol with formic acid in an amount of 0.4˜1.2 equivalents relative to 1 equivalent of glycerol and then increasing a reaction temperature to 220˜240° C. from room temperature at a heating rate of at least 2.0° C./min in an inert gas atmosphere so that glycerol and formic acid are reacted; and b) condensing a gas reaction products obtained in a), thus separating a liquid reaction products including allyl alcohol therefrom.</p>
+      <p id="p-00013-en" num="0013">Since glycerol and formic acid are reacted at 1:1, the equivalent ratio is defined as the same concept as a molar ratio in the present invention.</p>
+      <p id="p-00014-en" num="0014">Specifically, a two-step reaction for synthesizing allyl alcohol from glycerol is illustrated in <figref>FIG. 2</figref>. This reaction produces 1 mol allyl alcohol by sequentially eliminating 2 mol water from 1 mol glycerol. The first reaction step occurs by reacting 1 mol formic acid with 1 mol glycerol at low temperature, and the second reaction step takes place at high temperature in the presence of formic acid, converting 1 mol glyceryl formate, the allyl alcohol precursor, which is produced by the first reaction step. More specifically, in the first reaction step, 1 mol formic acid reacts with 1 mol glycerol, to produce 1 mol glyceryl formate, an allyl alcohol precursor, and 1 mol water. In the second reaction step, 1 mol glyceryl formate converts to 1 mol allyl alcohol at high temperature in the presence of formic acid, also producing 1 mol water and 1 mol carbon dioxide. In the second reaction step, the formic acid acts as a catalyst, rather than directly participating in the reaction.</p>
+      <p id="p-00015-en" num="0015">In the first reaction step, when the heating time is increased or an excess of formic acid is added, a side reaction, No. {circle around (2)} in <figref>FIG. 2</figref>, may occur. The side reaction may become dominant, and ultimately the production of an allyl formate byproduct may be increased.</p>
+      <p id="p-00016-en" num="0016">The glyceryl formate, the first reaction step products, produced via reacting glycerol with formic acid, may undergo additional esterification. As illustrated in <figref>FIG. 3</figref>, when glyceryl formate reacts with formic acid, glyceryl diformate may be produced. This reaction is reversible.</p>
+      <p id="p-00017-en" num="0017">In order to minimize the esterification producing glyceryl diformate from glyceryl formate obtained in the first reaction step, it is essential to prevent the reaction of glyceryl formate with an excess of formic acid and to maximally increase the heating rate to the temperature at which the second reaction step occurs. Specifically, when the production of glyceryl diformate, which is a side-reaction product, is reduced in the first reaction step, the selectivity of allyl alcohol may increase, thus ensuring the favorable effects for the subsequent separation process. The method for preparing allyl alcohol according to the present invention has the following features to drastically increase the concentration of allyl alcohol and to minimize the ally formate byproduct and the production of unreacted formic acid.</p>
+      <p id="p-00018-en" num="0018">In the method for preparing allyl alcohol according to the present invention, any commercially available glycerol may be used without particular limitation so long as it is useful in preparation of allyl alcohol. Preferably useful is glycerol with a purity of 60˜99.5%.</p>
+      <p id="p-00019-en" num="0019">In the method for preparing allyl alcohol according to the present invention, any commercially available formic acid may be used without particular limitation so long as it is useful for the reaction with glycerol. In the present invention, formic acid may be added in an amount of 0.4˜1.2 equivalents relative to 1 equivalent of glycerol. If the amount of formic acid is less than 0.4 equivalents, the amount of formic acid that may participate in the reaction is too small, and thus economic benefits may be negated. In contrast, if the amount thereof exceeds 1.2 equivalents, the amount of unreacted formic acid may increase and the production of allyl formate is increased due to side reactions, undesirably lowering the concentration of allyl alcohol in the liquid reaction products.</p>
+      <p id="p-00020-en" num="0020">In the method for preparing allyl alcohol according to the present invention, glycerol and formic acid may be reacted by increasing the reaction temperature to 220˜240° C. from room temperature at a heating rate of at least 2.0° C./min.</p>
+      <p id="p-00021-en" num="0021">If the reaction temperature is lower than 220° C., the reaction of the glyceryl formate does not proceed to the next step. In contrast, if the reaction temperature is higher than 240° C., the production of allyl formate may be increased.</p>
+      <p id="p-00022-en" num="0022">The heating rate from room temperature after addition of formic acid to glycerol in a) is set to at least 2.0° C./min, preferably 2.0˜7.0° C./min, and more preferably 4.0˜7.0° C./min. If the heating rate is less than 2.0° C./min, the production of glyceryl diformate becomes dominant in the first reaction step as shown in <figref>FIG. 2</figref>, undesirably increasing the production of allyl formate in the second reaction step.</p>
+      <p id="p-00023-en" num="0023">In the method for preparing allyl alcohol according to the present invention, the total reaction time including the heating time may be set to 7 h or less. If the total reaction time exceeds 7 h, the concentration of allyl alcohol in the liquid reaction products may be remarkably decreased. Furthermore, the separation of the liquid reaction products in b) may be carried out using a gas separator, as shown in the concept design for preparation of allyl alcohol in <figref>FIG. 1</figref>.</p>
+      <p id="p-00024-en" num="0024">The inert gas may be any one selected from the group consisting of nitrogen, argon and helium, and the gas reaction products may include at least one selected from the group consisting of carbon dioxide, water vapor, allyl formate, allyl alcohol, and unreacted formic acid. The liquid reaction products may include at least one selected from the group consisting of allyl alcohol, allyl formate, unreacted formic acid, and water.</p>
+      <p id="p-00025-en" num="0025">The concentration of allyl alcohol in b) is 40 wt % or more, and preferably 45 wt % or more, based on the total weight of the liquid reaction products, and thus economic benefits may be obtained and the production of allyl formate byproduct and the unreacted formic acid may be minimized, making it possible to prepare allyl alcohol on a commercial scale.</p>
+      <heading id="h-00009-en" level="1">MODE FOR INVENTION</heading>
+      <p id="p-00026-en" num="0026">The following examples of the present invention are disclosed for illustrative purposes, but those skilled in the art will appreciate that various modifications, additions and substitutions are possible, without departing from the scope and spirit of the invention as disclosed in the accompanying claims.</p>
+      <heading id="h-00010-en" level="1">EXAMPLE 1</heading>
+      <p id="p-00027-en" num="0027">A 3-neck round-bottom flask was connected with a separation device having a gas separator and a 1-neck round-bottom flask. To measure the inner temperature of the reactor, one of the necks of the 3-neck round-bottom flask was provided with a thermocouple 1. In the 3-neck round-bottom flask, 202.6 g of glycerol and formic acid in an amount corresponding to 0.6 equivalents based on the molar ratio were placed, and the temperature of the reactants were increased to 230° C. at a heating rate of 4.2° C./min using a sand bath in a nitrogen atmosphere. As the reaction progressed, gas reaction products were generated from the liquid reactants, and then passed through the gas separator connected to the reactor, after which only the liquid reaction products were collected in the 1-neck round-bottom flask provided to the end of the gas separator. The reaction was not terminated until it passed 4.2 h after the reaction temperature was reached, and the reactor was cooled, after which the liquid reaction products collected in the flask was quantitatively analyzed using gas chromatography. Furthermore, quantitative analysis of unreacted glycerol remaining in the reactor was carried out using gas chromatography. The concentration of allyl alcohol in the liquid reaction products was measured to be 50.9 wt %.</p>
+      <heading id="h-00011-en" level="1">EXAMPLE 2</heading>
+      <p id="p-00028-en" num="0028">A 3-neck round-bottom flask was connected with a separation device having a gas separator and a 1-neck round-bottom flask. To measure the inner temperature of the reactor, one of the necks of the 3-neck round-bottom flask was provided with a thermocouple 1. In the 3-neck round-bottom flask, 27.6 g of glycerol and formic acid in an amount corresponding to 1 equivalent based on the molar ratio were placed, and the temperature of the reactants was increased to 230° C. at a heating rate of 5° C./min using a sand bath in a nitrogen atmosphere. As the reaction progressed, gas reaction products were generated formed from the liquid reactants, and then passed through the gas separator connected to the reactor, after which only the liquid reaction products were collected in the 1-neck round-bottom flask provided to the end of the gas separator. The reaction was not terminated until it passed 2.3 h after the reaction temperature was reached, and the reactor was cooled, after which the liquid reaction products collected in the flask was quantitatively analyzed using gas chromatography. Furthermore, quantitative analysis of unreacted glycerol remaining in the reactor was carried out using gas chromatography. The concentration of allyl alcohol in the liquid reaction products was measured to be 48.5 wt %.</p>
+      <heading id="h-00012-en" level="1">Comparative Example 1</heading>
+      <p id="p-00029-en" num="0029">This comparative example was conducted under the same conditions as in Example 1, with the exception that the heating rate was 1.3° C./min. 2.8 h after reached the reaction temperature, the reaction was terminated, and the reactor was cooled, after which the liquid reaction products collected in the flask was quantitatively analyzed using gas chromatography. Furthermore, quantitative analysis of unreacted glycerol remaining in the reactor was performed using gas chromatography. As such, the concentration of allyl alcohol in the liquid reaction products was measured to be 38.0 wt %, which is lower than the concentration of allyl alcohol in the examples.</p>
+      <heading id="h-00013-en" level="1">Comparative Example 2</heading>
+      <p id="p-00030-en" num="0030">This comparative example was conducted under the same conditions as in Example 1, with the exception that the heating rate was 1.3° C./min. To evaluate the effect of the reaction time at high temperature, 8 h after reached the reaction temperature, the reaction was terminated, and the reactor was cooled, after which the liquid reaction products collected in the flask was quantitatively analyzed using gas chromatography. Furthermore, quantitative analysis of unreacted glycerol remaining in the reactor was performed using gas chromatography. As such, the concentration of allyl alcohol in the liquid reaction products was measured to be 37.3 wt %, which is lower than the concentration of allyl alcohol in the examples.</p>
+      <p id="p-00031-en" num="0031">The test results depending on the heating rate among the reaction conditions of Examples 1 and 2 and Comparative Examples 1 and 2 are shown in Table 1 below.</p>
+      <p id="p-00032-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <colspec colname="5" colwidth="56pt" align="center" />
+              <colspec colname="6" colwidth="21pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="6" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Reaction</entry>
+                  <entry>Heating </entry>
+                  <entry>Total reaction </entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>FA</entry>
+                  <entry>Temp.</entry>
+                  <entry>rate</entry>
+                  <entry>time (including </entry>
+                  <entry>AA</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Equivalent</entry>
+                  <entry>(° C.)</entry>
+                  <entry>(° C./min)</entry>
+                  <entry>heating time, h)</entry>
+                  <entry>wt %</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <colspec colname="5" colwidth="56pt" align="char" char="." />
+              <colspec colname="6" colwidth="21pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Ex.1</entry>
+                  <entry>0.6</entry>
+                  <entry>230</entry>
+                  <entry>4.2</entry>
+                  <entry>5</entry>
+                  <entry>50.9</entry>
+                </row>
+                <row>
+                  <entry>Ex.2</entry>
+                  <entry>1.0</entry>
+                  <entry>230</entry>
+                  <entry>5.0</entry>
+                  <entry>3</entry>
+                  <entry>48.5</entry>
+                </row>
+                <row>
+                  <entry>C.Ex.1</entry>
+                  <entry>0.6</entry>
+                  <entry>230</entry>
+                  <entry>1.3</entry>
+                  <entry>5.5</entry>
+                  <entry>38.0</entry>
+                </row>
+                <row>
+                  <entry>C.Ex.2</entry>
+                  <entry>0.6</entry>
+                  <entry>230</entry>
+                  <entry>1.3</entry>
+                  <entry>10.5</entry>
+                  <entry>37.3</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00033-en" num="0032">As is apparent from Table 1, in both Examples 1 and 2 using the method for preparing allyl alcohol according to the present invention, the concentration of allyl alcohol was 40 wt % or more based on the total weight of the liquid reaction products, and was thus relatively high compared to Comparative Examples 1 and 2. Therefore, when allyl alcohol was prepared by the preparation method for Examples 1 and 2 according to the present invention, the concentration of allyl alcohol in the liquid reaction products was high and the allyl formate byproduct and the production of unreacted formic acid could be minimized.</p>
+      <heading id="h-00014-en" level="1">DESCRIPTION OF THE REFERENCE NUMERALS IN THE DRAWINGS</heading>
+      <p id="p-00034-en" num="0033">(a) pipeline for transporting vaporized mixture into gas separator from reactor</p>
+      <p id="p-00035-en" num="0034">(b) pipeline for transporting condensed mixture removed from gas separator</p>
+      <p id="p-00036-en" num="0035">(c) pipeline for transporting non-condensed mixture removed from gas separator</p>
+      <p id="p-00037-en" num="0036">(d) pipeline for transporting unreacted material and products from bottom of reactor</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method for preparing allyl alcohol, comprising:
+<claim-text>a) adding glycerol with formic acid in an amount of 0.4˜1.2 equivalents relative to 1 equivalent of glycerol and then increasing a reaction temperature to 220˜240° C. from room temperature at a heating rate of at least 2.0° C./min in an inert gas atmosphere so that glycerol and formic acid are reacted; and</claim-text><claim-text>b) condensing gas reaction products obtained in a), thus separating liquid reaction products including allyl alcohol therefrom.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the heating rate in a) is 2.0˜7.0° C./min.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the heating rate in a) is 4.0˜7.0° C./min.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the inert gas is any one selected from the group consisting of nitrogen, argon, and helium.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the gas reaction products comprise at least one selected from the group consisting of carbon dioxide, water vapor, allyl formate, allyl alcohol, and unreacted formic acid.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the liquid reaction products comprise at least one selected from the group consisting of allyl alcohol, allyl formate, unreacted formic acid, and water.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the concentration of allyl alcohol in b) is 40 wt % or more based on a total weight of the liquid reaction products.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the concentration of allyl alcohol in b) is 45 wt % or more based on a total weight of the liquid reaction products.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150246861A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150246861A1-20150903-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150246861A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246861A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150246861A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246861A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150246861A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246861A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150246861A1_00005.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150246861A1-20150903-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150246861A1.PDF" type="pdf" size="315899" pages="8" />
+</lexisnexis-patent-document>

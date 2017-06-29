@@ -1,0 +1,2908 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150246985A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021248" date-changed="20150914" time-changed="042009">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121139096">
+        <country>US</country>
+        <doc-number>20150246985</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14711482</doc-number>
+        <date>20150513</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2009239149</doc-number>
+        <date>20091016</date>
+      </priority-claim>
+      <priority-claim sequence="2" kind="national">
+        <country>JP</country>
+        <doc-number>2010102535</doc-number>
+        <date>20100427</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>C08F  20/06        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>F</subclass>
+        <main-group>20</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A63B  37/00        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>63</class>
+        <subclass>B</subclass>
+        <main-group>37</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>C08F  20/06        20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>F</subclass>
+        <main-group>20</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A63B  37/0003      20130101 LI20150312BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>B</subclass>
+        <main-group>37</main-group>
+        <subgroup>0003</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150312</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A63B  37/0037      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>B</subclass>
+        <main-group>37</main-group>
+        <subgroup>0037</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A63B  37/0039      20130101 LI20150312BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>B</subclass>
+        <main-group>37</main-group>
+        <subgroup>0039</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150312</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A63B  37/0043      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>B</subclass>
+        <main-group>37</main-group>
+        <subgroup>0043</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A63B  37/0045      20130101 LI20150312BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>B</subclass>
+        <main-group>37</main-group>
+        <subgroup>0045</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150312</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A63B  37/0048      20130101 LI20150310BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>B</subclass>
+        <main-group>37</main-group>
+        <subgroup>0048</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150310</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A63B  37/0049      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>B</subclass>
+        <main-group>37</main-group>
+        <subgroup>0049</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>A63B  37/0062      20130101 LI20150310BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>B</subclass>
+        <main-group>37</main-group>
+        <subgroup>0062</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150310</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>A63B  37/0065      20130101 LI20150310BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>B</subclass>
+        <main-group>37</main-group>
+        <subgroup>0065</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150310</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>A63B  37/0075      20130101 LI20150310BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>B</subclass>
+        <main-group>37</main-group>
+        <subgroup>0075</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150310</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>C08K   5/098       20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>5</main-group>
+        <subgroup>098</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>C08K   5/14        20130101 LI20150312BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>5</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150312</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>C08K   5/375       20130101 LI20150312BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>5</main-group>
+        <subgroup>375</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150312</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <combination-set>
+        <group-number>1</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C08K   5/098       20130101 LI20150312BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>K</subclass>
+            <main-group>5</main-group>
+            <subgroup>098</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20150312</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C08L   9/00        20130101 LI20150312BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>9</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20150312</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>2</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C08K   5/14        20130101 LI20150312BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>K</subclass>
+            <main-group>5</main-group>
+            <subgroup>14</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20150312</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C08L   9/00        20130101 LI20150312BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>9</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20150312</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>3</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C08K   5/375       20130101 LI20150312BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>K</subclass>
+            <main-group>5</main-group>
+            <subgroup>375</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20150312</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C08L   9/00        20130101 LI20150312BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>9</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20150312</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">GOLF BALL RESIN COMPOSITION AND GOLF BALL USING THE SAME</invention-title>
+    <related-documents date-changed="20150903">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>12881761</doc-number>
+              <date>20100914</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>9080031</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007114</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>DUNLOP SPORTS CO. LTD.</orgname>
+            <role>03</role>
+            <address>
+              <city>Kobe-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>SHIGEMITSU</last-name>
+            <first-name>Takahiro</first-name>
+            <address>
+              <city>Kobe-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="143080231">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20110092312</doc-number>
+            <kind>A1</kind>
+            <date>20110421</date>
+          </document-id>
+          <application-date>
+            <date>20100914</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>9080031</doc-number>
+            <kind>B2</kind>
+            <date>20150714</date>
+          </document-id>
+          <application-date>
+            <date>20100914</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246985</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150513</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="143696006">
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>5165724</doc-number>
+            <kind>B2</kind>
+            <date>20130321</date>
+          </document-id>
+          <application-date>
+            <date>20100427</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2011101788</doc-number>
+            <kind>A</kind>
+            <date>20110526</date>
+          </document-id>
+          <application-date>
+            <date>20100427</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20110092312</doc-number>
+            <kind>A1</kind>
+            <date>20110421</date>
+          </document-id>
+          <application-date>
+            <date>20100914</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246985</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150513</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>9080031</doc-number>
+            <kind>B2</kind>
+            <date>20150714</date>
+          </document-id>
+          <application-date>
+            <date>20100914</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">An object of the present invention is to provide a golf ball resin composition that comprises an ionomer resin with an excellent resilience and fluidity. Another object of the present invention is to provide a golf ball excellent in the resilience without lowering the durability significantly in a golf ball using the ionomer resin for the intermediate layer. The present invention provides a golf ball resin composition comprising, 100 parts by mass of (A) an ionomer resin consisting of a metal ion-neutralized product of a ternary copolymer composed of ethylene, α,β-unsaturated carboxylic acid having 3 to 8 carbon atoms and α,β-unsaturated carboxylic acid ester, and from 25 parts to 100 parts by mass of (B) a metal salt of a fatty acid having 18 to 30 carbon atoms. The golf ball of the present invention is not limited, as long as it comprises a constituent member formed from the golf ball resin composition of the present invention.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS REFERENCE</heading>
+      <p id="p-00001-en" num="0001">The present application is a 37 C.F.R. §1.53(b) continuation of, and claims priority to, U.S. application Ser. No. 12/881,761 filed on Sep. 14, 2010. Priority is also claimed to Japanese Application No. 2009-239149 filed on Oct. 16, 2009 and Japanese Application No. 2010-102535 filed on Apr. 27, 2010. The entire content of each of these applications is hereby incorporated by reference.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">The present invention relates to a golf ball resin composition and a golf ball using the same, in particular, an ionomer resin composition for a golf ball and a golf ball using the same.</p>
+      <heading id="h-00003-en" level="1">DESCRIPTION OF THE RELATED ART</heading>
+      <p id="p-00003-en" num="0003">Ionomer resins and polyurethane are used as materials for constituting golf balls. Use of the ionomer resins as the constituting material of the golf ball provides the golf ball traveling a great distance, because of its high stiffness. Accordingly, ionomer resins are widely used as a material constituting a cover or an intermediate layer of the golf ball. However, there still remains a room for further improvement with respect to the stiffness and fluidity thereof and various improvements have been proposed for improving these properties.</p>
+      <p id="p-00004-en" num="0004">Japanese Patent Publication No. 2000-157646 A discloses a golf ball cover composition having a melt index (MI) of 1 dg/sec. or more and primarily comprising a mixture of a base resin, blended with (d) a metal soap obtained by neutralizing an organic acid having up to 29 carbon atoms with a monovalent to trivalent metal ion, in a mass ratio of the base resin to the metal soap being 95:5 to 80:20, wherein the base resin comprises an ionomer resin component containing (a) a ternary ionomer resin consisting of a metal ion neutralized product of an olefin-unsaturated carboxylic acid-unsaturated carboxylate copolymer having an acid content of 12 wt % or less, and (b) a binary ionomer resin consisting of a metal ion neutralized product of an olefin-unsaturated carboxylic acid copolymer having an acid content of 15 wt % or less in a ratio of 40:60 to 100:0; and (c) an unneutralized random copolymer composed of olefin and unsaturated carboxylic acid monomers, in a mass ratio of the ionomer resin component to (c) the unneutralized random copolymer being 75:25 to 100:0</p>
+      <p id="p-00005-en" num="0005">JP2002-514112 T discloses a golf ball having a core and a cover, or a wound center and a cover, the core or center comprising; (i) an ionomeric polymer containing a) ethylene, b) from 5 to 25 weight percent (meth)acrylic acid, c) from 0 to 40 weight percent of a 1 to 8C-alkyl, alkyl acrylate, the acid groups neutralized to between 10 and 90 percent with zinc, sodium, lithium, calcium, magnesium ions and a mixture of any of these, and (ii) from 5 to 45 weight percent, based on (i) plus (ii), of a metal stearate, the metal selected from the group consisting of calcium, sodium, zinc, lithium, magnesium and barium or a mixture of said metal stearates.</p>
+      <p id="p-00006-en" num="0006">U.S. Pat. No. 5,306,760 discloses a golf ball comprising a core and a cover, wherein the cover consists essentially of 100 parts by weight of at least one ionomer resin and from about 25 to about 100 parts by weight of fatty acid salt, wherein said ionomer resin is the reaction product of an olefin having from 2 to 8 carbon atoms and an unsaturated monocarboxylic acid having from 3 to 8 carbon atoms.</p>
+      <p id="p-00007-en" num="0007">U.S. Pat. No. 5,312,857 discloses a golf ball comprising a core and a cover, wherein the cover consists essentially of 100 parts by weight of at least one ionomer resin and from about 25 to about 100 parts by weight of a metal stearate, wherein said ionomer resin is the reaction product of an olefin having from 2 to 8 carbon atoms and an unsaturated monocarboxylic acid having from 3 to 8 carbon atoms.</p>
+      <heading id="h-00004-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00008-en" num="0008">In order to improve the resilience of the golf ball, from an aspect of the golf ball construction, there is an approach of making the thin-walled cover or intermediate layer. From an aspect of the material, the ionomer resin having a high degree of neutralization is employed. However, since the ionomer resin having a high degree of neutralization has low fluidity, it is difficult to make a thin-walled cover or intermediate layer. As a technology of improving the fluidity of the ionomer resin, it is known that a metal salt of a fatty acid is added to the ionomer resin having a high degree of neutralization. However, if the added amount is less than the certain level, the effect of improving the resilience of the obtained golf ball is low, while if the added amount is more than the certain level, the durability of the obtained golf ball is lowered, because mechanical properties of the material are lowered.</p>
+      <p id="p-00009-en" num="0009">The present invention has been achieved in view of the above circumstances. An object of the present invention is to provide a golf ball resin composition that comprises an ionomer resin with an excellent resilience and fluidity. Another object of the present invention is to provide a golf ball excellent in the resilience without lowering the durability significantly in a golf ball using the ionomer resin for the intermediate layer.</p>
+      <p id="p-00010-en" num="0010">The present invention, which has solved the above problems, provides a golf ball resin composition comprising, 100 parts by mass of (A) an ionomer resin consisting of a metal ion-neutralized product of a ternary copolymer composed of ethylene, α,β-unsaturated carboxylic acid having 3 to 8 carbon atoms and α,β-unsaturated carboxylic acid ester (hereinafter, sometimes may be abbreviated to “(A) ternary ionomer resin”), and from 25 parts to 100 parts by mass of (B) a metal salt of a fatty acid having 18 to 30 carbon atoms (hereinafter, sometimes may be abbreviated to “(B) fatty acid metal salt”). The gist of the present invention resides in that the neutralization degree of (A) the ternary ionomer resin is increased by adding (B) the fatty acid metal salt into the (A) the ternary ionomer resin to neutralize the ionomer resin with a part of the metal salt of the fatty acid, while taking an advantage of the lubricating action of the metal salt of the fatty acid. Since the present invention is configured described above, the golf ball resin composition that comprises the ionomer resin with an excellent resilience and fluidity is obtained.</p>
+      <p id="p-00011-en" num="0011">The present invention includes the golf ball resin composition before (A) the ternary ionomer resin is neutralized with (B) the fatty acid metal salt, and the golf ball resin composition after (A) the ternary ionomer resin is neutralized with (B) the fatty acid metal salt. The golf ball resin composition after neutralization may include the resin composition where (A) the ternary ionomer resin is partially neutralized with (B) the fatty acid metal salt. In the present invention, the golf ball resin composition before neutralization with (B) the fatty acid metal salt may be referred to as “non-neutralized golf ball resin composition,” and the golf ball resin composition after neutralization with (B) the fatty acid metal salt may be referred to as “neutralized golf ball resin composition,” respectively, but simply referred to as “golf ball resin composition” includes both embodiments, unless otherwise described.</p>
+      <p id="p-00012-en" num="0012">According to the present invention, the golf ball resin composition that comprises an ionomer resin with an excellent resilience and fluidity is obtained. If the golf ball resin composition of the present invention is used for an intermediate layer, the golf ball excellent in resilience is obtained without lowering the durability significantly.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 1</figref> is a FT-IR spectrum of one embodiment of the golf ball resin composition of the present invention.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DESCRIPTION OF THE PREFERRED EMBODIMENT</heading>
+      <p id="p-00014-en" num="0014">The present invention provides a golf ball resin composition comprising 100 parts by mass of (A) an ionomer resin consisting of a metal ion-neutralized product of a ternary copolymer composed of ethylene, α,β-unsaturated carboxylic acid having 3 to 8 carbon atoms and α,β-unsaturated carboxylic acid ester, and from 25 parts to 100 parts by mass of (B) a metal salt of a fatty acid having 18 to 30 carbon atoms.</p>
+      <p id="p-00015-en" num="0015">First, (A) the ternary ionomer resin used in the present invention will be explained. The ionomer resin includes, for example, one prepared by neutralizing at least a part of carboxyl groups in a ternary copolymer composed of ethylene, α,β-unsaturated carboxylic acid having 3 to 8 carbon atoms, and α,β-unsaturated carboxylic acid ester with a metal ion. Examples of the α,β-unsaturated carboxylic acid having 3 to 8 carbon atoms are acrylic acid, methacrylic acid, fumaric acid, maleic acid and crotonic acid. Among these, acrylic acid and methacrylic acid are particularly preferred. Examples of the α,β-unsaturated carboxylic acid ester include methyl ester, ethyl ester, propyl ester, n-butyl ester, isobutyl ester of acrylic acid, methacrylic acid, fumaric acid, maleic acid or the like. In particular, acrylic acid ester and methacrylic acid ester are preferable. Among them, as (A) the ternary ionomer resin, preferred is the metal ion-neutralized product of the ternary copolymer composed of ethylene-(meth)acrylic acid-(meth)acrylic acid ester. Herein, “(meth)acrylic acid” means acrylic acid and/or methacrylic acid.</p>
+      <p id="p-00016-en" num="0016">The content of α,β-unsaturated carboxylic acid having 3 to 8 carbon atoms in (A) the ternary ionomer resin is preferably 2 mass % or more, more preferably 3 mass % or more, and is preferably 30 mass % or less, more preferably 25 mass % or less.</p>
+      <p id="p-00017-en" num="0017">If (A) the ternary ionomer resin is analyzed with FT-IR (Fourier transform infrared spectrophotometer), an area A0 under a peak around 1600 cm<sup>−1 </sup>and an area B0 under a peak around 1700 cm<sup>−1 </sup>in the obtained spectrum preferably satisfy the following equation: 0.30≦P0=A0/(A0+B0)≦0.98.</p>
+      <p id="p-00018-en" num="0018">In the equation, A0 corresponds to an area under the peak attributed to the neutralized carboxyl group, and B0 corresponds to an area under the peak attributed to the non-neutralized carboxyl group. P0 is defined as a ratio of the neutralized carboxyl groups to the whole carboxyl groups and indicates a degree of neutralization of (A) the ternary ionomer resin. P0 is preferably 0.50 or more, and is preferably 0.97 or less. If P0 is not less than the lower limit of the above range, the resilience and the durability of the obtained constituting member becomes better, while if P0 is not more than the upper limit of the above range, the fluidity of the golf ball resin composition of the present invention becomes better (better moldability).</p>
+      <p id="p-00019-en" num="0019">Specific examples of the ternary ionomer resin include trade name “Himilan (registered trademark) (e.g. Himilan AM7327 (Zn), Himilan 1855 (Zn), Himilan 1856 (Na), Himilan AM7331 (Na), or the like)” commercially available from Du Pont-Mitsui Polychemicals Co., Ltd. Further, the ternary ionomer resins commercially available from E.I. du Pont de Nemours and Company include trade name “Surlyn (registered trademark) (e.g. Surlyn 6320 (Mg), Surlyn 8120 (Na), Surlyn 8320 (Na), Surlyn 9320 (Zn), Surlyn 9320W (Zn) or the like)”. Further, ionomer resins commercially available from ExxonMobil Chemical Corporation include trade name “Iotek (registered trademark) (e.g. Iotek 7510 (Zn), Iotek 7520 (Zn) or the like)”. It is noted that Na, Zn, Li, and Mg described in the parentheses after the trade names indicate metal types of neutralizing metal ions.</p>
+      <p id="p-00020-en" num="0020">Next, (B) the metal salt of the fatty acid having 18 to 30 carbon atoms will be explained. The fatty acid component of (B) the fatty acid metal salt preferably includes fatty acids having 18 to 30 carbon atoms, more preferably fatty acids having 18 to 28 carbon atoms.</p>
+      <p id="p-00021-en" num="0021">Specific examples of the fatty acid include stearic acid (C18), oleic acid (C18), linoleic acid (C18), linolenic acid (C18), 12-hydroxy stearic acid (C18), arachidic acid (C20: icosanoic acid), arachidonic acid (C20), behenic acid (C22), lignoceric acid (C24), nervonic acid (C24), cerotic acid (C26), montanic acid (C28), and melissic acid (C30). The above fatty acid components may be used solely or as a mixture of at least two of them. Among them, stearic acid, behenic acid or montanic acid is preferable as the fatty acid component.</p>
+      <p id="p-00022-en" num="0022">Examples of metal components of (B) the fatty acid metal salt include: monovalent metal ions such as sodium, potassium, lithium, or the like; divalent metal ions such as magnesium, calcium, zinc, barium, cadmium, or the like; trivalent metal ions such as aluminum or the like; and other metal ions such as tin, zirconium, or the like. These metal components may be used solely or as a mixture of at least two of them. Among these metal components, preferred are the divalent metals such as magnesium, calcium, barium, or the like.</p>
+      <p id="p-00023-en" num="0023">Specific examples of (B) the fatty acid metal salts are magnesium stearate, calcium stearate, barium stearate, magnesium behenate, calcium behenate, barium behenate, magnesium montanate, calcium montanate, or barium montanate. (B) The fatty acid metal salts may be used solely or as a mixture of at least two of them.</p>
+      <p id="p-00024-en" num="0024">The golf ball resin composition of the present invention preferably contains (B) the fatty acid metal salt in an amount of 25 parts or more, more preferably 33 parts or more, even more preferably 50 parts or more, and preferably contains (B) the fatty acid metal salt in an amount of 100 parts or less, more preferably 98 parts or less, even more preferably 95 parts or less, even more preferably 90 parts or less, with respect to 100 parts of (A) the ternary ionomer resin by mass. If the content of (B) the fatty acid metal salt is 25 parts by mass or more, the resilience of the golf ball improves, while if the content is 100 parts by mass or less, it is possible to suppress the lowering of the durability of the golf ball due to the increase in the low molecular weight component.</p>
+      <p id="p-00025-en" num="0025">If the golf ball resin composition of the present invention, which is obtained by neutralizing (A) the ternary ionomer resin with (B) the fatty acid metal salt, is analyzed with FT-IR (Fourier transform infrared spectrophotometer), an area A under a peak around 1600 cm<sup>−1 </sup>and an area B under a peak around 1700 cm<sup>−1 </sup>in the obtained spectrum preferably satisfy the following equation: 0.50≦P=A/(A+B)≦1.00.</p>
+      <p id="p-00026-en" num="0026">In the equation, A corresponds to an area under the peak attributed to the neutralized carboxyl group, and B corresponds to an area under the peak attributed to the non-neutralized carboxyl group. P is defined as a ratio of the neutralized carboxyl groups to the whole carboxyl groups and indicates a degree of neutralization of the resin component. P is preferably 0.75 or more, more preferably 0.90 or more. If P falls within the above range, the resilience of the obtained golf ball becomes better.</p>
+      <p id="p-00027-en" num="0027">The golf ball resin composition of the present invention preferably contains, as a resin component, (A) the ternary ionomer resin and (B) the fatty acid metal salt only, but may further contain another thermoplastic elastomer to the extent that the effect of the present invention is not deteriorated. In the case of containing another thermoplastic elastomer, the total content of (A) the ternary ionomer resin and (B) the fatty acid metal salt in the resin component is preferably 50 mass % or more, more preferably 60 mass % or more, even more preferably 70 mass % or more.</p>
+      <p id="p-00028-en" num="0028">Examples of other thermoplastic elastomers are a thermoplastic polyamide elastomer having a commercial name of “Pebax (registered trademark) (e.g. “Pebax 2533”)” commercially available from Arkema K. K.; a polyurethane elastomer having a commercial name of “Elastollan (registered trademark) (e.g. “Elastollan XNY85A”)” commercially available from BASF Japan Ltd; a thermoplastic polyester elastomer having a commercial name of “Hytrel (registered trademark) (e.g. “Hytrel 3548”, “Hytrel 4047”)” commercially available from Du Pont-Toray Co., Ltd.; a thermoplastic polystyrene elastomer having a commercial name of “Rabalon (registered trademark) (e.g. “Rabalon T3221C”)” commercially available from Mitsubishi Chemical Corporation.</p>
+      <p id="p-00029-en" num="0029">In the present invention, the golf ball resin composition may further contain a pigment component such as a white pigment (for example, titanium oxide), a blue pigment (for example, ultramarine blue), a red pigment, or the like; a specific gravity adjusting agent such as zinc oxide, calcium carbonate, barium sulfate, or the like; a dispersant; an antioxidant; an ultraviolet absorber; a light stabilizer; a fluorescent material; a fluorescent brightener; or the like, as long as they do not impair the effect of the present invention.</p>
+      <p id="p-00030-en" num="0030">The golf ball resin composition of the present invention can be obtained, for example, by dry blending (A) the ternary ionomer resin and (B) the fatty acid metal salt, followed by extruding them in the form of pellet. The dry blending may be carried out using for example, a mixer capable of blending a raw material in the form of pellet, more preferably a tumbler type mixer. In addition to the dry blending, the materials may be supplied respectively by the respective feeding machines. Extruding can be carried out by publicly known extruders such as a single-screw kneading extruder, a twin-screw kneading extruder, and a twin-single kneading extruder. The extruding condition is not particularly limited. For example, in the case of extruding with a twin-screw kneading extruder, the preferable conditions are screw diameter=45 mm; screw revolutions=50 rpm to 400 rpm; screw L/D=35 or less, and die temperature; 140° C. to 250° C.</p>
+      <p id="p-00031-en" num="0031">The golf ball of the present invention is not limited, as long as it comprises a constituent member formed from the golf ball resin composition of the present invention. For example, in a two-piece golf ball comprising a single-layered core and a cover disposed around the core, in a three-piece golf ball comprising a core having a center and a single-layered intermediate layer disposed around the center, and a cover disposed around the core, and in a multi-piece golf ball comprising a core having a center and at least one intermediate layer disposed around the center, and a cover disposed around the core (including the three-piece golf ball mentioned above), anyone of constituent members is formed from the above golf ball resin composition. In one preferable embodiment, the intermediate layer is formed from the above golf ball resin composition.</p>
+      <p id="p-00032-en" num="0032">In the followings, the present invention will be explained based on the preferable golf ball that comprises a core having a center and at least one intermediate layer disposed around the center and a cover disposed around the core, wherein the intermediate layer is formed from the above golf ball resin composition. However, the present invention is not limited to this embodiment.</p>
+      <p id="p-00033-en" num="0033">The core of the golf ball of the present invention preferably includes, for example, a multi-layered core having a center and at least one intermediate layer covering the center. The core preferably has a spherical shape. If the core does not have a spherical shape, the cover does not have a uniform thickness. As a result, there exist some portions where the performance of the cover is lowered.</p>
+      <p id="p-00034-en" num="0034">On the other hand, the center generally has the spherical shape, but the center may be provided with a rib on the surface thereof so that the surface of the spherical center is divided by the ribs. For example, the surface of the spherical center is evenly divided by the ribs. In one embodiment, the ribs are preferably formed on the surface of the spherical center in an integrated manner, and in another embodiment, the ribs are formed as an intermediate layer on the surface of the spherical center. The ribs are preferably formed along an equatorial line and meridians that evenly divide the surface of the spherical center, if the spherical center is assumed as the earth. For example, if the surface of the spherical center is evenly divided into 8, the ribs are formed along the equatorial line, any meridian as a standard, and meridians at the longitude 90 degrees east, longitude 90 degrees west, and the longitude 180 degrees east(west), assuming that the meridian as the standard is at longitude 0 degree. If the ribs are formed, the depressed portion divided by the ribs are preferably filled with a plurality of intermediate layers or with a single-layered intermediate layer that fills each of the depressed portions to make a core in the spherical shape. The shape of the ribs, without limitation, includes an arc or an almost arc (for example, a part of the arc is removed to obtain a flat surface at the cross or orthogonal portions thereof).</p>
+      <p id="p-00035-en" num="0035">A conventionally known rubber composition (hereinafter, sometimes simply referred to as “center rubber composition”) may be employed for the center of the golf ball of the present invention, and it can be molded by, for example, heat-pressing a rubber composition containing a base rubber, a crosslinking initiator, a co-crosslinking agent, and a filler.</p>
+      <p id="p-00036-en" num="0036">As the base rubber, a natural rubber and/or a synthetic rubber may be used. Examples of the base rubber are a polybutadiene rubber, a natural rubber, a polyisoprene rubber, a styrene polybutadiene rubber, and ethylene-propylene-diene terpolymer (EPDM). Among them, typically preferred is the high cis-polybutadiene having cis-1,4-bond in a proportion of 40% or more, more preferably 70% or more, even more preferably 90% or more in view of its superior resilience property.</p>
+      <p id="p-00037-en" num="0037">The crosslinking initiator is blended to crosslink the base rubber component. As the crosslinking initiator, an organic peroxide is preferably used. Examples of the organic peroxide for use in the present invention are dicumyl peroxide, 1,1-bis(t-butylperoxy)-3,5-trimethylcyclohexane, 2,5-dimethyl-2,5-di(t-butylperoxy)hexane, and di-t-butyl peroxide. Among them, dicumyl peroxide is preferable. An amount of the crosslinking initiator to be blended in the rubber composition is preferably 0.3 part by mass or more, more preferably 0.4 part by mass or more, and is preferably 5 parts by mass or less, more preferably 3 parts by mass or less based on 100 parts by mass of the base rubber. If the amount is less than 0.3 part by mass, the center becomes too soft, and the resilience tends to be lowered, and if the amount is more than 5 parts by mass, the amount of the co-crosslinking agent must be increased in order to obtain the appropriate hardness, which tends to cause the insufficient resilience.</p>
+      <p id="p-00038-en" num="0038">The co-crosslinking agent is not particularly limited as long as it serves to crosslink a rubber molecule by graft polymerization to a base rubber molecular chain; for example, α,β-unsaturated carboxylic acid having 3 to 8 carbon atoms or a metal salt thereof, more preferably acrylic acid, methacrylic acid or a metal salt thereof may be used. As the metal constituting the metal salt, for example, zinc, magnesium, calcium, aluminum and sodium may be used, and among them, zinc is preferred because it provides high resilience.</p>
+      <p id="p-00039-en" num="0039">The amount of the co-crosslinking agent to be used is preferably 10 parts or more, more preferably 15 parts or more, even more preferably 20 parts or more, and is preferably 55 parts or less, more preferably 50 parts or less, even more preferably 48 parts or less, based on 100 parts of the base rubber by mass. If the amount of the co-crosslinking agent to be used is less than 10 parts by mass, the amount of the crosslinking initiator must be increased to obtain an appropriate hardness, which tends to lower the resilience. On the other hand, if the amount of the co-crosslinking agent to be used is more than 55 parts by mass, the center becomes too hard, so that the shot feeling may be lowered.</p>
+      <p id="p-00040-en" num="0040">The filler contained in the center rubber composition is mainly blended as a specific gravity adjusting agent in order to adjust the specific gravity of the golf ball obtained as the final product in the range of 1.0 to 1.5, and may be blended as required. Examples of the filler include an inorganic filler such as zinc oxide, barium sulfate, calcium carbonate, magnesium oxide, tungsten powder, and molybdenum powder. The amount of the filler to be blended in the rubber composition is preferably 0.5 part or more, more preferably 1 part or more, and is preferably 30 parts or less, more preferably 20 parts or less based on 100 parts of the base rubber by mass. If the amount of the filler to be blended is less than 0.5 part by mass, it becomes difficult to adjust the weight, while if it is more than 30 parts by mass, the weight ratio of the rubber component becomes small and the resilience tends to be lowered.</p>
+      <p id="p-00041-en" num="0041">As the center rubber composition, an organic sulfur compound, an antioxidant or a peptizing agent may be blended appropriately in addition to the base rubber, the crosslinking initiator, the co-crosslinking agent and the filler.</p>
+      <p id="p-00042-en" num="0042">As the organic sulfur compound, diphenyl disulfide or a derivative thereof may be preferably used. Examples of the diphenyl disulfide or the derivative thereof include diphenyl disulfide; mono-substituted diphenyl disulfide such as bis (4-chlorophenyl) disulfide, bis (3-chlorophenyl) disulfide, bis (4-bromophenyl) disulfide, bis (3-bromophenyl) disulfide, bis (4-fluorophenyl) disulfide, bis (4-iodophenyl) disulfide and bis (4-cyanophenyl) disulfide; di-substituted diphenyl disulfide such as bis (2,5-dichlorophenyl) disulfide, bis (3,5-dichlorophenyl) disulfide, bis (2,6-dichlorophenyl) disulfide, bis (2,5-dibromophenyl) disulfide, bis (3,5-dibromophenyl) disulfide, bis (2-chloro-5-bromophenyl) disulfide, and bis (2-cyano-5-bromophenyl) disulfide; tri-substituted diphenyl disulfide such as bis (2,4,6-trichlorophenyl) disulfide, and bis (2-cyano-4-chloro-6-bromophenyl) disulfide; tetra-substituted diphenyl disulfide such as bis (2,3,5,6-tetra chlorophenyl) disulfide; penta-substituted diphenyl disulfide such as bis (2,3,4,5,6-pentachlorophenyl) disulfide and bis (2,3,4,5,6-pentabromophenyl) disulfide. These diphenyl disulfides or the derivative thereof can enhance resilience by having some influence on the state of vulcanization of vulcanized rubber. Among them, diphenyl disulfide or bis (pentabromophenyl) disulfide is preferably used since the golf ball having particularly high resilience can be obtained. The amount of the diphenyl disulfide or the derivative thereof to be blended is preferably 0.1 part by mass or more, more preferably 0.3 part by mass or more, and is preferably 5.0 parts by mass or less, more preferably 3.0 parts by mass or less relative to 100 parts by mass of the base rubber.</p>
+      <p id="p-00043-en" num="0043">The amount of the antioxidant to be blended is preferably 0.1 part or more and is preferably 1 part or less based on 100 parts of the base rubber by mass. Further, the amount of the peptizing agent is preferably 0.1 part or more and is preferably 5 parts or less based on 100 parts of the base rubber by mass.</p>
+      <p id="p-00044-en" num="0044">The center can be obtained by mixing, kneading the above mentioned rubber composition and molding the rubber composition in the mold. The conditions for press-molding the center rubber composition should be determined depending on the rubber composition. Specifically, the press-molding is preferably carried out for 10 to 60 minutes at the temperature of 130° C. to 200° C. under the pressure from 2.9 MPa to 11.8 MPa. Alternatively, the press-molding is preferably carried out in a two-step heating, for example, for 20 to 40 minutes at the temperature of 130° C. to 150° C., and continuously for 5 to 15 minutes at the temperature of 160° C. to 180° C.</p>
+      <p id="p-00045-en" num="0045">The diameter of the center is preferably 34.8 mm or more, more preferably 35.0 mm or more, and even more preferably 35.2 mm or more, and is preferably 41.2 mm or less, more preferably 41.0 mm or less, and even more preferably 40.8 mm or less. If the diameter of the center is 34.8 mm or more, the intermediate layer or the cover layer does not become excessively thick, and hence the resilience of the golf ball becomes good. On the other hand, if the diameter of the center is 41.2 mm or less, the intermediate layer or the cover does not become excessively thin, and hence the intermediate layer or the cover functions better.</p>
+      <p id="p-00046-en" num="0046">When the center has a diameter from 34.8 mm to 41.2 mm, a compression deformation amount (shrinking deformation amount of the center along the compression direction) of the center when applying a load from 98 N as an initial load to 1275 N as a final load is preferably 1.90 mm or more, more preferably 2.00 mm or more, even more preferably 2.10 mm or more, and is preferably 4.00 mm or less, more preferably 3.90 mm or less, even more preferably 3.80 mm or less. If the compression deformation amount is 1.90 mm or more, the shot feeling becomes good, while if the compression deformation amount is 4.00 mm or less, the resilience becomes better.</p>
+      <p id="p-00047-en" num="0047">The surface hardness of the center is preferably 45 or larger, more preferably 50 or larger, and even more preferably 55 or larger, and is preferably 65 or smaller, more preferably 62 or smaller, and even more preferably 60 or smaller in shore D hardness. If the surface hardness is 45 or more in Shore D hardness, the center does not become excessively soft and the resilience becomes good. If the surface hardness of the center is 65 or less in Shore D hardness, the center does not become so hard and the shot feeling becomes good.</p>
+      <p id="p-00048-en" num="0048">In one preferable embodiment, the intermediate layer is, for example, formed by covering the center with the golf ball resin composition (hereinafter, sometimes merely referred to as “intermediate layer composition”). An embodiment for molding the intermediate layer is not particularly limited, and includes an embodiment which comprises injection molding the intermediate layer composition directly onto the center, or an embodiment which comprises molding the intermediate layer composition into a half hollow-shell, covering the center with the two half hollow-shells, and subjecting the center with the two half hollow-shells to the compression-molding at the temperature of 130° C. to 170° C. for 1 min to 5 mins.</p>
+      <p id="p-00049-en" num="0049">In the case of directly injection molding the intermediate layer composition onto the center, it is preferred to use upper and lower molds for forming the intermediate layer having a spherical cavity and pimples, wherein a part of the pimple also serves as a retractable hold pin. When forming the intermediate layer by injection molding, the hold pin is protruded to hold the center, and the intermediate layer composition which has been heated and melted is charged and then cooled to obtain the intermediate layer. For example, the intermediate layer composition heated and melted at the temperature of 150° C. to 230° C. is charged into a mold held under the pressure of 980 KPa to 1,500 KPa for 0.1 to 1 second. After cooling for 15 to 60 seconds, the mold is opened.</p>
+      <p id="p-00050-en" num="0050">When molding the intermediate layer in a compression molding method, molding of the half shell can be performed by either compression molding method or injection molding method, and the compression molding method is preferred. The compression-molding of the intermediate layer composition into half shell can be carried out, for example, under a pressure of 1 MPa or more and 20 MPa or less at a temperature of −20° C. or more and 70° C. or less relative to the flow beginning temperature of the intermediate layer composition. By performing the molding under the above conditions, a half shell having a uniform thickness can be formed. Examples of a method for molding the intermediate layer using half shells include compression molding by covering the center with two half shells. The compression molding of half shells into the intermediate layer can be carried out, for example, under a pressure of 0.5 MPa or more and 25 MPa or less at a temperature of −20° C. or more and 70° C. or less relative to the flow beginning temperature of the intermediate layer composition. By performing the molding under the above conditions, the intermediate layer having a uniform thickness can be formed.</p>
+      <p id="p-00051-en" num="0051">The molding temperature means the highest temperature where the temperature at the surface of the concave portion of the lower mold reaches from closing through opening the molds. Further, the flow beginning temperature of the golf ball forming resin composition can be measured in a pellet form under the following conditions by using a flow characteristics evaluation apparatus (Flow Tester CFT-500, manufactured by Shimadzu Corporation).</p>
+      <p id="p-00052-en" num="0000">Measuring conditions: Area size of a plunger: 1 cm<sup>2</sup>, Die length: 1 mm, Die diameter: 1 mm, Load: 588.399 N, Start temperature: 30° C., and Temperature increase rate: 3° C./min.</p>
+      <p id="p-00053-en" num="0052">The thickness of the intermediate layer is preferably less than 2.5 mm, more preferably 1.8 mm or less, and even more preferably 1.6 mm or less, even more preferably 1.2 mm or less. If the thickness of the intermediate layer is less than 2.5 mm, the resilience and shot feeling of the golf ball is improved. The thickness of the intermediate layer is preferably 0.1 mm or more, more preferably 0.3 mm or more, even more preferably 0.5 mm or more, even more preferably more than 0.7 mm. If the thickness of the intermediate layer is 0.1 mm or more, it is easier to mold the intermediate layer. Further, the durability of the resultant golf ball is enhanced.</p>
+      <p id="p-00054-en" num="0053">In the case that the golf ball resin composition of the present invention is used as the intermediate layer composition, the melt flow rate (190° C., 2.16 kg) of the intermediate layer composition is preferably 0.1 g/10 min or more, more preferably 1.0 g/10 min or more, and even more preferably 3.0 g/10 min or more, even more preferably 3.5 g/10 min or more, and is preferably 600 g/10 min or less, more preferably 300 g/10 min or less, even more preferably 100 g/10 min or less, and even more preferably 35 g/10 min or less. If the melt flow rate of the intermediate layer composition is 0.1 g/10 min or more, the moldability is enhanced and thus it is easy to mold the thin-walled intermediate layer.</p>
+      <p id="p-00055-en" num="0054">In the case that the golf ball resin composition of the present invention is used as the intermediate layer composition, the intermediate layer composition preferably has a bending stiffness of 100 MPa or more, more preferably 110 MPa or more, even more preferably 120 MPa or more, and preferably has a bending stiffness of 450 MPa or less, more preferably 420 MPa or less, even more preferably 400 MPa or less. If the bending stiffness of the intermediate layer composition is 100 MPa or more, since the obtained golf ball has an outer-hard inner soft structure, the flight distance becomes great. On the other hand, if the bending stiffness is 450 MPa or less, the obtained golf ball becomes appropriately soft and thus the shot feeling becomes good.</p>
+      <p id="p-00056-en" num="0055">In the case that the golf ball resin composition of the present invention is used as the intermediate layer composition, the intermediate layer composition preferably has a rebound resilience of 40% or more, more preferably 41% or more, even more preferably 42% or more. If the intermediate layer composition has a rebound resilience of 40% or more, the flight distance of the obtained golf ball becomes great. The rebound resilience is preferably, but not limited to, 80% or less, more preferably 78% or less. Herein, the bending stiffness and the rebound resilience of the intermediate layer composition are measured by molding the intermediate layer composition into a sheet form. The method for the measurement is described later.</p>
+      <p id="p-00057-en" num="0056">The intermediate layer composition preferably has a slab hardness of 20 or more, more preferably 25 or more, even more preferably 30 or more, even more preferably 40 or more, and preferably has a slab hardness of 70 or less, more preferably 65 or less, even more preferably 60 or less in Shore D hardness. If the intermediate layer composition has a slab hardness of 20 or more, the stiffness of the resultant intermediate layer is enhanced, and thus the golf ball excellent in the resilience (flight distance) is obtained. On the other hand, if the intermediate layer composition has a slab hardness of 70 or less, the durability of the resultant golf ball is further enhanced. Herein, the slab hardness of the intermediate layer composition is a measured hardness of the intermediate layer composition that is molded into a sheet form by a measuring method described later.</p>
+      <p id="p-00058-en" num="0057">The melt flow rate, bending stiffness, rebound resilience and the slab hardness of the intermediate layer composition can be adjusted by appropriately selecting kinds, amount or the like of (A) the ternary ionomer resin and (B) the metal salt of the fatty acid.</p>
+      <p id="p-00059-en" num="0058">In one preferable embodiment that the golf ball of the present invention has at least two intermediate layers, the golf ball may have an intermediate layer which is formed from an intermediate layer composition different from the golf ball resin composition of the present invention, as long as at least one of the intermediate layer is formed from the golf ball resin composition of the present invention. In this case, it is preferred that the outermost layer of the core is an intermediate layer formed from the golf ball resin composition of the present invention, and it is more preferred that all the multi-piece of intermediate layers or multi-layer of intermediate layers are formed from the golf ball resin composition of the present invention.</p>
+      <p id="p-00060-en" num="0059">Examples of the intermediate layer composition which is different from the golf ball resin composition of the present invention include, a thermoplastic polyamide elastomer having a trade name “Pebax (registered trademark) (e.g. “Pebax 2533”)” commercially available from Arkema Inc., a thermoplastic polyester elastomer having a trade name “Hytrel (registered trademark) (e.g. “Hytrel 3548” and “Hytrel 4047”)” commercially available from Du Pont-Toray Co., Ltd., a thermoplastic polyurethane elastomer having a trade name “Elastollan (registered trademark) (e.g. “Elastollan XNY97A”)” commercially available from BASF Japan Ltd., a thermoplastic polystyrene elastomer having a trade name “Rabalon (registered trademark)” commercially available from Mitsubishi Chemical Corporation, and the like, in addition to the center rubber composition described above and the ionomer resin. Further, the intermediate layer composition may contain a specific gravity adjusting agent such as barium sulfate, tungsten, or the like; an antioxidant; a pigment; or the like.</p>
+      <p id="p-00061-en" num="0060">In one preferable embodiment, the diameter of the core of the golf ball is preferably 39.0 mm or more, more preferably 39.5 mm or more, and even more preferably 40.8 mm or more. If the diameter of the core is less than 39.0 mm, the cover becomes excessively thick and hence the resilience of the golf ball may deteriorate. Further, the diameter of the core is preferably 42.2 mm or less, more preferably 42.0 mm or less, and even more preferably 41.8 mm or less. If the diameter of the core is more than 42.2 mm, the thickness of the cover becomes relatively thin, and hence a protection effect of the cover is not obtained sufficiently.</p>
+      <p id="p-00062-en" num="0061">When the core has a diameter from 39.0 mm to 42.2 mm, a compression deformation amount (shrinking deformation amount of the core along the compression direction) of the core when applying a load from 98 N as an initial load to 1275 N as a final load is preferably 1.90 mm or more, more preferably 2.00 mm or more, even more preferably 2.10 mm or more, and is preferably 4.00 mm or less, more preferably 3.90 mm or less, even more preferably 3.80 mm or less. If the compression deformation amount is less than 1.90 mm, the core becomes too hard, resulting in the poor shot feeling, while if the compression deformation amount is more than 4.00 mm, the core becomes too soft, resulting in the heavy shot feeling.</p>
+      <p id="p-00063-en" num="0062">The center hardness of the core is preferably 30 or larger, more preferably 32 or larger, and even more preferably 35 or larger in Shore D hardness. If the center hardness is smaller than 30 in Shore D hardness, the core becomes so soft that the resilience of the golf ball tends to become lower. The center hardness of the core is preferably 50 or smaller, more preferably 48 or smaller, and even more preferably 45 or smaller in Shore D hardness. If the center hardness is more than 50 in Shore D hardness, the core becomes too hard, resulting in the poor shot feeling. In the present invention, the center hardness of the core is the hardness measured with the Shore D type spring hardness tester at the central point of a cut plane of a core which has been cut into two halves.</p>
+      <p id="p-00064-en" num="0063">The surface hardness of the core is preferably 20 or larger, more preferably 25 or larger, and even more preferably 30 or larger in Shore D hardness. If the surface hardness is less than 20 in Shore D hardness, the core becomes so soft and the resilience may be lowered. The surface hardness of the core is preferably 70 or smaller, more preferably 69 or smaller, and even more preferably 68 or smaller in shore D hardness. If the surface hardness is more than 70 in Shore D hardness, the core becomes so hard and the shot feeling may be lowered.</p>
+      <p id="p-00065-en" num="0064">In one preferable embodiment, depending upon the objects, the core having the surface hardness larger than the center hardness, or the core having the center hardness larger than the surface hardness may be used as the core. For example, the surface hardness of the core is easily made larger than or smaller than the center hardness of the core by employing a multi-layered core structure.</p>
+      <p id="p-00066-en" num="0065">In the case of using the relatively hard material for the cover covering the core (for example, the cover composition has a slab hardness of 50 or more in Shore D hardness), the shot feeling is improved by lowering the hardness of the intermediate layer. In the case of using the relatively soft material for the cover covering the core (for example, the cover composition has a slab hardness of less than 50 in Shore D hardness), the high launch angle and low spin rate on the driver shot or the like are achieved by increasing the hardness of the intermediate layer. As a result, the flight distance is improved.</p>
+      <p id="p-00067-en" num="0066">In the case that the core has the surface hardness smaller than the center hardness, the hardness difference (center hardness−surface hardness) between the surface hardness and the center hardness of the core in the golf ball of the present invention is preferably 4 or larger, more preferably 7 or larger in Shore D hardness. If the surface hardness is smaller than the center hardness, the shot feeling of the golf ball is improved. Further, in this case, the hardness difference (center hardness−surface hardness) between the surface hardness and the center hardness of the core in the golf ball of the present invention is preferably 40 or less, more preferably 35 or less. If the hardness difference is too large, the durability of the golf ball may deteriorate.</p>
+      <p id="p-00068-en" num="0067">In the case that the core has the surface hardness larger than the center hardness, the hardness difference (surface hardness−center hardness) between the surface hardness and the center hardness of the core in the golf ball of the present invention is preferably 4 or larger, more preferably 7 or larger in Shore D hardness. If the surface hardness is larger than of the center hardness, the launch angle becomes high and the spin rate becomes low, thereby improving the flight distance. Further, in this case, the hardness difference (surface hardness−center hardness) between the surface hardness and the center hardness of the core in the golf ball of the present invention is preferably 40 or less, more preferably 35 or less. If the hardness difference is too large, the durability of the golf ball may deteriorate.</p>
+      <p id="p-00069-en" num="0068">In one preferable embodiment, the cover of the golf ball of the present invention is formed from a cover composition containing a resin component. The resin component includes, for example, a thermoplastic polyamide elastomer having a commercial name of “Pebax (registered trademark) (e.g. “Pebax 2533”)” commercially available from Arkema K. K.; a thermoplastic polyester elastomer having a commercial name of “Hytrel (registered trademark) (e.g. “Hytrel 3548”, “Hytrel 4047”)” commercially available from Du Pont-Toray Co., Ltd.; a thermoplastic polystyrene elastomer having a commercial name of “Rabalon (registered trademark) (e.g. “Rabalon T3221C”)” commercially available from Mitsubishi Chemical Corporation, in addition to the polyurethane resin and the ionomer resin. These resin components are used solely or as a mixture of at least two of them.</p>
+      <p id="p-00070-en" num="0069">In one preferable embodiment, the cover composition preferably contains the polyurethane resin or the ionomer resin, as the resin component. The content of the polyurethane resin or the ionomer resin in the resin component of the cover composition is preferably 50 mass % or more, more preferably 60 mass % or more, even more preferably 70 mass % or more. In more preferable embodiment, the cover composition contains the ionomer resin as the resin component. Since the ionomer resins are used for both of the cover and the intermediate layer, the adhesion between the intermediate layer and the cover will become much higher.</p>
+      <p id="p-00071-en" num="0070">In the present invention, in addition to the aforementioned resin component, the cover composition may further contain a pigment component such as a white pigment (for example, titanium oxide), a blue pigment (for example, ultramarine blue), a red pigment, or the like; a specific gravity adjusting agent such as zinc oxide, calcium carbonate, barium sulfate, or the like; a dispersant; an antioxidant; an ultraviolet absorber; a light stabilizer; a fluorescent material; a fluorescent brightener; or the like, as long as they do not impair the performance of the cover.</p>
+      <p id="p-00072-en" num="0071">The amount of the white pigment (for example, titanium oxide), with respect to 100 parts by mass of the resin component constituting the cover, is preferably 0.5 part by mass or more, more preferably 1 part by mass or more, and is preferably 10 parts by mass or less, more preferably 8 parts by mass or less. If the amount of the white pigment is 0.5 parts by mass or more, it is possible to impart the opacity to the cover. If the amount of the white pigment is more than 10 parts by mass, the durability of the cover may deteriorate.</p>
+      <p id="p-00073-en" num="0072">The cover composition preferably has a slab hardness of 70 or less, more preferably 68 or less, even more preferably 65 or less in Shore D hardness. If the cover composition has a slab hardness of 70 or less, the spin rate on the approach shots with short irons increases. As a result, the golf ball having a good controllability on the approach shots is obtained. In order to ensure the spin rate sufficiently for the approach shots, the cover composition preferably has a slab hardness of 20 or more, more preferably 25 or more, even more preferably 30 or more in Shore D hardness.</p>
+      <p id="p-00074-en" num="0073">An embodiment for molding a cover is not particularly limited, and includes an embodiment which comprises injection molding the cover composition directly onto the core, or an embodiment which comprises molding the cover composition into a hollow-shell, covering the core with a plurality of the hollow-shells and subjecting the core with a plurality of the hollow shells to the compression-molding (preferably an embodiment which comprises molding the cover composition into a half hollow-shell, covering the core with the two half hollow-shells, and subjecting the core with the two half hollow-shells to the compression-molding).</p>
+      <p id="p-00075-en" num="0074">When molding the cover in a compression molding method, molding of the half shell can be performed by either compression molding method or injection molding method, and the compression molding method is preferred. The compression-molding of the cover composition into half shell can be carried out, for example, under a pressure of 1 MPa or more and 20 MPa or less at a temperature of −20° C. or more and 70° C. or less relative to the flow beginning temperature of the cover composition. By performing the molding under the above conditions, a half shell having a uniform thickness can be formed. Examples of a method for molding the cover using half shells include compression molding by covering the core with two half shells. The compression molding of half shells into the cover can be carried out, for example, under a pressure of 0.5 MPa or more and 25 MPa or less at a temperature of −20° C. or more and 70° C. or less relative to the flow beginning temperature of the cover composition. By performing the molding under the above conditions, a golf ball cover having a uniform thickness can be formed.</p>
+      <p id="p-00076-en" num="0075">In the case of directly injection molding the cover composition onto the core, it is preferred to use upper and lower molds for forming a cover having a spherical cavity and pimples, wherein a part of the pimple also serves as a retractable hold pin. When forming the cover by injection molding, the hold pin is protruded to hold the core, and the cover composition which has been heated and melted is charged and then cooled to obtain a cover. For example, the cover composition heated and melted at the temperature of 200° C. to 250° C. is charged into a mold held under the pressure of 9 MPa to 15 MPa for 0.5 to 5 second. After cooling for 10 to 60 seconds, the mold is opened and the golf ball with the cover molded is taken out from the mold.</p>
+      <p id="p-00077-en" num="0076">When molding a cover, the concave portions called “dimple” are usually formed on the surface. The total number of the dimples is preferably 200 or more and 500 or less. If the total number is less than 200, the dimple effect is hardly obtained. On the other hand, if the total number exceeds 500, the dimple effect is hardly obtained because the size of the respective dimples is small. The shape (shape in a plan view) of dimples includes, for example, without limitation, a circle, polygonal shapes such as roughly triangular shape, roughly quadrangular shape, roughly pentagonal shape, and roughly hexagonal shape, another irregular shape. The shape of the dimples is employed solely or in combination at least two of them.</p>
+      <p id="p-00078-en" num="0077">In the present invention, the thickness of the cover of the golf ball is preferably 2.0 mm or less, more preferably 1.6 mm or less, even more preferably 1.2 mm or less, even more preferably 1.0 mm or less. If the thickness of the cover is 2.0 mm or less, the resilience and shot feeling of the obtained golf ball become better. The thickness of the cover is preferably 0.1 mm or more, more preferably 0.2 mm or more, and even more preferably 0.3 mm or more. If the thickness of the cover is less than 0.1 mm, it may become difficult to mold the cover. In addition, the durability and the abrasion resistance of the cover may deteriorate.</p>
+      <p id="p-00079-en" num="0078">After the cover is molded, the mold is opened and the golf ball body is taken out from the mold, and as necessary, the golf ball body is preferably subjected to surface treatments such as deburring, cleaning, and sandblast. If desired, a paint film or a mark may be formed. The paint film preferably has a thickness of, but not limited to, 5 μm or larger, and more preferably 7 μm or larger, and preferably has a thickness of 25 μm or smaller, and more preferably 18 μm or smaller. If the thickness is smaller than 5 μm, the paint film is easy to wear off due to continued use of the golf ball, and if the thickness is larger than 25 μm, the effect of the dimples is reduced, resulting in deteriorating flying performance of the golf ball.</p>
+      <p id="p-00080-en" num="0079">When the golf ball of the present invention has a diameter in a range from 40 mm to 45 mm, a compression deformation amount of the golf ball (an amount of compression of the golf ball in the compression direction thereof) when applying an initial load of 98 N to a final load of 1275 N to the golf ball is preferably 2.0 mm or more, more preferably 2.2 mm or more, and is preferably 4.0 mm or less, more preferably 3.5 mm or less. If the compression deformation amount is 2.0 mm or more, the golf ball does not become excessively hard, and thus exhibits the good shot feeling. If the compression deformation amount is 4.0 mm or less, the resilience is enhanced.</p>
+      <p id="p-00081-en" num="0080">The present invention is explained based on the embodiment where the golf ball resin composition of the present invention is used for the intermediate layer, but the golf ball resin composition of the present invention may be used for the cover layer.</p>
+      <heading id="h-00007-en" level="1">EXAMPLES</heading>
+      <p id="p-00082-en" num="0081">Hereinafter, the present invention will be described in detail by way of example. The present invention is not limited to examples described below. Various changes and modifications can be made without departing from the spirit and scope of the present invention.</p>
+      <heading id="h-00008-en" level="2">(1) Hardness of Center and Core (Shore D Hardness)</heading>
+      <p id="p-00083-en" num="0082">A type P1 auto loading durometer manufactured by Kobunshi Keiki Co., Ltd., provided with a Shore D type spring hardness tester prescribed in ASTM-D2240 was used to measure the surface hardness and the center hardness of the center and the core. Shore D hardness measured at the surfaces of the center and the core are defined as the surface hardness of the center and the core, respectively. The core was cut into two hemispheres to obtain a cut plane, and a Shore D hardness measured at the center of the cut plane was used as the center hardness of the core.</p>
+      <heading id="h-00009-en" level="2">(2) Slab Hardness (Shore D Hardness)</heading>
+      <p id="p-00084-en" num="0083">Sheets with a thickness of about 2 mm were produced by injection molding the cover composition and the intermediate layer composition, and stored at 23° C. for two weeks. Three or more of these sheets were stacked on one another so as not to be affected by the measuring substrate on which the sheets were placed, and the hardness of the stack was measured with a type P1 auto loading durometer manufactured by Kobunshi Keiki Co., Ltd., provided with a Shore D type spring hardness tester prescribed in ASTM-D2240.</p>
+      <heading id="h-00010-en" level="2">(3) Compression Deformation Amount (mm)</heading>
+      <p id="p-00085-en" num="0084">A compression deformation amount of the center, core and golf ball (a shrinking amount of the center, core, and golf ball in the compression direction thereof), when applying a load from 98 N as an initial load to 1275 N as a final load to the center, core and golf ball, was measured.</p>
+      <p id="p-00086-en" num="0000">(4) Melt Flow Rate (MFR) (g/10 min)</p>
+      <p id="p-00087-en" num="0085">The MFR was measured using a flow tester (Shimadzu flow tester CFT-100C manufactured by Shimadzu Corporation) in accordance with JIS K7210. The measurement was conducted under the conditions of the measurement temperature 190° C. and the load of 2.16 kg.</p>
+      <heading id="h-00011-en" level="2">(5) Bending Stiffness (MPa)</heading>
+      <p id="p-00088-en" num="0086">A sheet with a thickness of about 2 mm was produced by a hot press molding from the intermediate layer composition, and stored at 23° C. for two weeks. The bending stiffness was measured according to JIS K7106. The measurement was conducted under the conditions of the temperature 23° C. and humidity 50RH %.</p>
+      <heading id="h-00012-en" level="2">(6) Rebound Resilience</heading>
+      <p id="p-00089-en" num="0087">A sheet with a thickness of about 2 mm was produced by a hot press molding from the intermediate layer composition. A circle-shaped test piece having a diameter of 28 mm was cut out of this sheet, and 6 pieces of the test piece were stacked to prepare a cylindrical test piece having a thickness of about 12 mm and a diameter of 28 mm. The cylindrical test piece was subjected to the Lupke type rebound resilience test (testing temperature 23° C., humidity 50RH %). Preparation of the test piece and the testing method are based on JIS K6255.</p>
+      <heading id="h-00013-en" level="2">(7) Durability</heading>
+      <p id="p-00090-en" num="0088">A metal-head driver (W#1) was installed on a swing robot manufactured by TRUETEMPER CO, and the head speed was set to 45 m/sec. Each golf ball was stored in a constant temperature reservoir kept at the temperature of 23° C. for 12 hours. Immediately after taking each golf ball out of the reservoir, they were repeatedly hit with the driver. The number of hits required to break the golf ball was counted. This measurement was conducted twelve times for each golf ball. The number of hits for golf ball No. 14 was defined as an index of 100, and the durability of each golf ball was represented by converting the number of hits for each golf ball into this index. A greater index value indicates that the durability of the golf ball is excellent.</p>
+      <heading id="h-00014-en" level="2">(8) Coefficient of Repulsion for Golf Balls</heading>
+      <p id="p-00091-en" num="0089">A 198.4 g of metal cylindrical object was forced to collide with each golf ball at a speed of 40 m/sec, and the speeds of the cylindrical object and the golf ball before and after the collision were measured. Based on these speeds and the mass of each object, coefficient of repulsion for each golf ball was calculated. The measurement was conducted by using twelve of each golf ball, and the average value was regarded as the coefficient of repulsion for the golf ball. The coefficient of repulsion of golf ball No. 14 was defined as an index of 100.0, and the coefficient of repulsion of each golf ball was represented by converting the coefficient of repulsion of each golf ball into this index.</p>
+      <heading id="h-00015-en" level="2">(9) FT-IR Measurement</heading>
+      <p id="p-00092-en" num="0090">A measuring samples were taken from the intermediate layers that were injection-molded and analyzed with Fourier transform infrared spectrophotometer (Auto IMAGE FT-IR) available from PerkinElmer, Inc by a macro ATR method (germanium prism, observation diameter: about 1 mm). The area A under a peak around 1600 cm<sup>−1 </sup>and the area B under a peak around 1700 cm<sup>−1 </sup>were determined from the obtained spectrum. <figref>FIG. 1</figref> shows a FT-IR spectrum of the intermediate layer of the golf ball No. 1 (vertical axis: absorbance). Base lines were drawn for Peak A around 1600 cm<sup>−1 </sup>and Peak B around 1700 cm<sup>−1</sup>, respectively, as shown <figref>FIG. 1</figref> and area A, B were calculated. It is noted that Peak A around 1600 cm<sup>−1 </sup>may shift depending on kinds of metal neutralizing the carboxyl group.</p>
+      <heading id="h-00016-en" level="2">[Production of Golf Balls]</heading>
+      <heading id="h-00017-en" level="2">(1) Production of Center</heading>
+      <p id="p-00093-en" num="0091">The center rubber compositions having the formulations shown in Table 1 were kneaded and heat-pressed in upper and lower molds, each having a hemispherical cavity, at 170° C. for 15 minutes to prepare spherical centers. The amount of barium sulfate was adjusted appropriately to make a golf ball have a weight of 45.4 g.</p>
+      <p id="p-00094-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="105pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="42pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="5" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Center No.</entry>
+                  <entry>A</entry>
+                  <entry>B</entry>
+                  <entry>C</entry>
+                  <entry>D</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="63pt" align="left" />
+              <colspec colname="3" colwidth="42pt" align="char" char="." />
+              <colspec colname="4" colwidth="42pt" align="char" char="." />
+              <colspec colname="5" colwidth="42pt" align="char" char="." />
+              <colspec colname="6" colwidth="42pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Formulation</entry>
+                  <entry>Polybutadiene</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Zinc acrylate</entry>
+                  <entry>25</entry>
+                  <entry>25</entry>
+                  <entry>25</entry>
+                  <entry>25</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Zinc oxide</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Diphenyl disulfide</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Dicumyl peroxide</entry>
+                  <entry>0.9</entry>
+                  <entry>0.9</entry>
+                  <entry>0.9</entry>
+                  <entry>0.9</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Barium sulfate</entry>
+                  <entry>Appropriate</entry>
+                  <entry>Appropriate</entry>
+                  <entry>Appropriate</entry>
+                  <entry>Appropriate</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Amount*)</entry>
+                  <entry>Amount*)</entry>
+                  <entry>Amount*)</entry>
+                  <entry>Amount*)</entry>
+                </row>
+                <row>
+                  <entry>Properties</entry>
+                  <entry>Diameter (mm)</entry>
+                  <entry>38.8</entry>
+                  <entry>39.4</entry>
+                  <entry>37.2</entry>
+                  <entry>35.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Center hardness</entry>
+                  <entry>40</entry>
+                  <entry>40</entry>
+                  <entry>40</entry>
+                  <entry>40</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(Shore D)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Surface hardness</entry>
+                  <entry>49</entry>
+                  <entry>49</entry>
+                  <entry>49</entry>
+                  <entry>49</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(Shore D)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Compression</entry>
+                  <entry>4.0</entry>
+                  <entry>4.0</entry>
+                  <entry>4.0</entry>
+                  <entry>4.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>deformation</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>amount (mm)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="left" id="entry-00001-en">Formulation: parts by mass</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="left" id="entry-00002-en">*)Depending on the cover composition, adjustment was made such that the golf ball had a mass of 45.4 g.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="left" id="entry-00003-en">Polybutadiene rubber: “BR-730 (high-cis polybutadiene)” manufactured by JSR Corporation.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="left" id="entry-00004-en">Zinc acrylate: “ZNDA-90S” manufactured by Ninon Jyoryu Kogyo Co., Ltd.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="left" id="entry-00005-en">Zinc oxide: “Ginrei R” manufactured by Toho Zinc Co., Ltd.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="left" id="entry-00006-en">Barium sulfate: “Barium Sulfate BD” manufactured by Sakai Chemical Industry Co., Ltd.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="left" id="entry-00007-en">Diphenyl disulfide: manufactured by Sumitomo Seika Chemicals Co., Ltd.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="left" id="entry-00008-en">Dicumyl peroxide: “Percumyl (registered trademark) D” manufactured by NOF Corporation.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00018-en" level="2">(2) Preparation of Intermediate Layer Composition and Cover Composition</heading>
+      <p id="p-00095-en" num="0092">Blending materials shown in Tables 2 to 7 were mixed with a twin-screw kneading extruder to prepare the intermediate layer composition and cover compositions in the pellet form. The extruding conditions were a screw diameter of 45 mm, a screw rotational speed of 200 rpm, and screw L/D=35, and the mixtures were heated to 160 to 230° C. at the die position of the extruder.</p>
+      <p id="p-00096-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Cover composition No.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="63pt" align="left" />
+              <colspec colname="2" colwidth="84pt" align="left" />
+              <colspec colname="3" colwidth="56pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Formulation</entry>
+                  <entry>Himilan 1555</entry>
+                  <entry>48</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(Parts)</entry>
+                  <entry>Himilan AM7329</entry>
+                  <entry>47</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Rabalon T3221C</entry>
+                  <entry>5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Titanium oxide</entry>
+                  <entry>4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Properties</entry>
+                  <entry>Melt flow rate (g/10 min)</entry>
+                  <entry>8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Slab hardness (Shore D)</entry>
+                  <entry>59</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Bending stiffness (MPa)</entry>
+                  <entry>224</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Rebound resilience (%)</entry>
+                  <entry>53</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="left" id="entry-00009-en">Note on Table 2:</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="left" id="entry-00010-en">Himilan 1555: Sodium ion neutralized ethylene-methacrylic acid copolymer ionomer resin available from Du Pont-Mitsui Polychemicals Co., Ltd</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="left" id="entry-00011-en">Himilan AM7329: Zinc ion neutralized ethylene-methacrylic acid copolymer ionomer resin available from Du Pont-Mitsui Polychemicals Co., Ltd</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="left" id="entry-00012-en">Rabalon T3221C: Polystyrene elastomer available from Mitsubishi Chemical Corporation.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00019-en" level="2">(3) Production of Golf Ball Body</heading>
+      <p id="p-00097-en" num="0093">The intermediate layer compositions obtained above were injection-molded onto the spherical centers to form the intermediate layers covering the centers and prepare spherical cores. Subsequently, golf balls were produced by injection-molding the cover composition onto the spherical cores to form the cover. Upper and lower molds for the intermediate layer and the cover have a spherical cavity with pimples, a part of which serves as a hold pin which is extendable and retractable.</p>
+      <p id="p-00098-en" num="0094">When molding the intermediate layer, the hold pins were protruded to hold the center after the center was put in, the intermediate layer composition heated to 260° C. was charged into the mold under a pressure of 80 tons within 0.3 seconds, and cooled for 30 seconds. Then, the mold was opened, and the cores were taken out from the mold.</p>
+      <p id="p-00099-en" num="0095">When molding the cover, the hold pins were protruded to hold the core after the core was put in, the cover composition heated to 210° C. was charged into the mold under a pressure of 80 tons within 0.3 seconds, and cooled for 30 seconds. Then, the mold was opened, and the golf ball bodies were taken out from the mold. The surface of the obtained golf ball bodies were treated with sandblast, marked, and painted with a clear paint. The paint was dried in an oven at 40° C. to form a paint film, and golf balls having a diameter of 42.8 mm and a mass of 45.4 g were obtained. The results of evaluations with respect to the compression deformation amount and resilience of the golf balls were also shown in tables 3 to 7.</p>
+      <p id="p-00100-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="182pt" align="center" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="6" rowsep="1">TABLE 3</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Golf ball No.</entry>
+                  <entry>1</entry>
+                  <entry>2</entry>
+                  <entry>3</entry>
+                  <entry>4</entry>
+                  <entry>5</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="140pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Intermediate</entry>
+                  <entry>Center No.</entry>
+                  <entry>A</entry>
+                  <entry>A</entry>
+                  <entry>A</entry>
+                  <entry>A</entry>
+                  <entry>A</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="left" />
+              <colspec colname="3" colwidth="49pt" align="left" />
+              <colspec colname="4" colwidth="49pt" align="left" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <colspec colname="8" colwidth="28pt" align="char" char="." />
+              <colspec colname="9" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>layer</entry>
+                  <entry>Resin</entry>
+                  <entry>(A)Component</entry>
+                  <entry>Surlyn</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>100</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>composition</entry>
+                  <entry>component</entry>
+                  <entry />
+                  <entry>6320 (Mg)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Himilan</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                  <entry>—</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>AM7327(Zn)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Surlyn</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>8320 (Na)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="84pt" align="left" />
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Himilan AM7311</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(Mg, binary copolymer)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="84pt" align="left" />
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="char" char="." />
+              <colspec colname="4" colwidth="28pt" align="char" char="." />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>(B)component</entry>
+                  <entry>Mg stearate</entry>
+                  <entry>60</entry>
+                  <entry>80</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Ca stearate</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Mg Behenate</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>33</entry>
+                  <entry>60</entry>
+                  <entry>70</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Mg Montanate</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="140pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="char" char="." />
+              <colspec colname="3" colwidth="28pt" align="char" char="." />
+              <colspec colname="4" colwidth="28pt" align="char" char="." />
+              <colspec colname="5" colwidth="28pt" align="char" char="." />
+              <colspec colname="6" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Titanium oxide</entry>
+                  <entry>4</entry>
+                  <entry>4</entry>
+                  <entry>4</entry>
+                  <entry>4</entry>
+                  <entry>4</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="98pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="char" char="." />
+              <colspec colname="4" colwidth="28pt" align="char" char="." />
+              <colspec colname="5" colwidth="28pt" align="char" char="." />
+              <colspec colname="6" colwidth="28pt" align="char" char="." />
+              <colspec colname="7" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Properties</entry>
+                  <entry>Melt flow rate (g/10 min)</entry>
+                  <entry>16.5</entry>
+                  <entry>22.1</entry>
+                  <entry>7.1</entry>
+                  <entry>14.7</entry>
+                  <entry>18.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Slab hardness (Shore D)</entry>
+                  <entry>52</entry>
+                  <entry>52</entry>
+                  <entry>51</entry>
+                  <entry>53</entry>
+                  <entry>54</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Bending stiffness (MPa)</entry>
+                  <entry>144</entry>
+                  <entry>163</entry>
+                  <entry>117</entry>
+                  <entry>158</entry>
+                  <entry>171</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Rebound resilience (%)</entry>
+                  <entry>65</entry>
+                  <entry>63</entry>
+                  <entry>65</entry>
+                  <entry>62</entry>
+                  <entry>66</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>P = A/(A + B)</entry>
+                  <entry>0.96</entry>
+                  <entry>0.97</entry>
+                  <entry>0.94</entry>
+                  <entry>0.96</entry>
+                  <entry>0.96</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="140pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="char" char="." />
+              <colspec colname="4" colwidth="28pt" align="char" char="." />
+              <colspec colname="5" colwidth="28pt" align="char" char="." />
+              <colspec colname="6" colwidth="28pt" align="char" char="." />
+              <colspec colname="7" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Core</entry>
+                  <entry>Intermediate layer thickness (mm)</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                </row>
+                <row>
+                  <entry>Properties</entry>
+                  <entry>Core center hardness (Shore D)</entry>
+                  <entry>40</entry>
+                  <entry>40</entry>
+                  <entry>40</entry>
+                  <entry>40</entry>
+                  <entry>40</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Core surface hardness (Shore D)</entry>
+                  <entry>52</entry>
+                  <entry>52</entry>
+                  <entry>51</entry>
+                  <entry>53</entry>
+                  <entry>54</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Compression deformation amount (mm)</entry>
+                  <entry>3.23</entry>
+                  <entry>3.23</entry>
+                  <entry>3.24</entry>
+                  <entry>3.23</entry>
+                  <entry>3.22</entry>
+                </row>
+                <row>
+                  <entry>Golf ball</entry>
+                  <entry>Cover thickness (mm)</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                </row>
+                <row>
+                  <entry>Properties</entry>
+                  <entry>Compression deformation amount (mm)</entry>
+                  <entry>3.02</entry>
+                  <entry>3.02</entry>
+                  <entry>3.03</entry>
+                  <entry>3.03</entry>
+                  <entry>3.02</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Durability</entry>
+                  <entry>97</entry>
+                  <entry>96</entry>
+                  <entry>100</entry>
+                  <entry>98</entry>
+                  <entry>97</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Repulsion Coefficient (Index)</entry>
+                  <entry>100.3</entry>
+                  <entry>100.4</entry>
+                  <entry>100.6</entry>
+                  <entry>100.7</entry>
+                  <entry>100.8</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="left" id="entry-00013-en">Formulation: parts by mass</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00101-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="182pt" align="center" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="6" rowsep="1">TABLE 4</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Golf ball No.</entry>
+                  <entry>6</entry>
+                  <entry>7</entry>
+                  <entry>8</entry>
+                  <entry>9</entry>
+                  <entry>10</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="140pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Intermediate</entry>
+                  <entry>Center No.</entry>
+                  <entry>A</entry>
+                  <entry>A</entry>
+                  <entry>A</entry>
+                  <entry>A</entry>
+                  <entry>A</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="left" />
+              <colspec colname="3" colwidth="49pt" align="left" />
+              <colspec colname="4" colwidth="49pt" align="left" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="char" char="." />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <colspec colname="8" colwidth="28pt" align="center" />
+              <colspec colname="9" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>layer</entry>
+                  <entry>Resin</entry>
+                  <entry>(A)Component</entry>
+                  <entry>Surlyn</entry>
+                  <entry>—</entry>
+                  <entry>100</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry>composition</entry>
+                  <entry>component</entry>
+                  <entry />
+                  <entry>6320 (Mg)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Himilan</entry>
+                  <entry>100</entry>
+                  <entry>—</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>AM7327(Zn)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Surlyn</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>8320 (Na)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="84pt" align="left" />
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Himilan AM7311</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(Mg, binary copolymer)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="84pt" align="left" />
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="char" char="." />
+              <colspec colname="5" colwidth="28pt" align="char" char="." />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>(B)component</entry>
+                  <entry>Mg stearate</entry>
+                  <entry>—</entry>
+                  <entry>60</entry>
+                  <entry>42</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Ca stearate</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>33</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Mg Behenate</entry>
+                  <entry>90</entry>
+                  <entry>20</entry>
+                  <entry>42</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Mg Montanate</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>39</entry>
+                  <entry>—</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="140pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="char" char="." />
+              <colspec colname="3" colwidth="28pt" align="char" char="." />
+              <colspec colname="4" colwidth="28pt" align="char" char="." />
+              <colspec colname="5" colwidth="28pt" align="char" char="." />
+              <colspec colname="6" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Titanium oxide</entry>
+                  <entry>4</entry>
+                  <entry>4</entry>
+                  <entry>4</entry>
+                  <entry>4</entry>
+                  <entry>4</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="98pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="char" char="." />
+              <colspec colname="4" colwidth="28pt" align="char" char="." />
+              <colspec colname="5" colwidth="28pt" align="char" char="." />
+              <colspec colname="6" colwidth="28pt" align="char" char="." />
+              <colspec colname="7" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Properties</entry>
+                  <entry>Melt flow rate (g/10 min)</entry>
+                  <entry>20.0</entry>
+                  <entry>16.2</entry>
+                  <entry>20.6</entry>
+                  <entry>4.5</entry>
+                  <entry>5.1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Slab hardness (Shore D)</entry>
+                  <entry>56</entry>
+                  <entry>53</entry>
+                  <entry>54</entry>
+                  <entry>54</entry>
+                  <entry>49</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Bending stiffness (MPa)</entry>
+                  <entry>200</entry>
+                  <entry>174</entry>
+                  <entry>168</entry>
+                  <entry>172</entry>
+                  <entry>97</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Rebound resilience (%)</entry>
+                  <entry>64</entry>
+                  <entry>61</entry>
+                  <entry>65</entry>
+                  <entry>57</entry>
+                  <entry>59</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>P = A/(A + B)</entry>
+                  <entry>0.97</entry>
+                  <entry>0.96</entry>
+                  <entry>0.97</entry>
+                  <entry>0.93</entry>
+                  <entry>0.94</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="140pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="char" char="." />
+              <colspec colname="4" colwidth="28pt" align="char" char="." />
+              <colspec colname="5" colwidth="28pt" align="char" char="." />
+              <colspec colname="6" colwidth="28pt" align="char" char="." />
+              <colspec colname="7" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Core</entry>
+                  <entry>Intermediate layer thickness (mm)</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                </row>
+                <row>
+                  <entry>Properties</entry>
+                  <entry>Core center hardness (Shore D)</entry>
+                  <entry>40</entry>
+                  <entry>40</entry>
+                  <entry>40</entry>
+                  <entry>40</entry>
+                  <entry>40</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Core surface hardness (Shore D)</entry>
+                  <entry>57</entry>
+                  <entry>53</entry>
+                  <entry>54</entry>
+                  <entry>55</entry>
+                  <entry>50</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Compression deformation amount (mm)</entry>
+                  <entry>3.20</entry>
+                  <entry>3.23</entry>
+                  <entry>3.22</entry>
+                  <entry>3.22</entry>
+                  <entry>3.24</entry>
+                </row>
+                <row>
+                  <entry>Golf ball</entry>
+                  <entry>Cover thickness (mm)</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                </row>
+                <row>
+                  <entry>Properties</entry>
+                  <entry>Compression deformation amount (mm)</entry>
+                  <entry>3.01</entry>
+                  <entry>3.03</entry>
+                  <entry>3.02</entry>
+                  <entry>3.02</entry>
+                  <entry>3.03</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Durability</entry>
+                  <entry>95</entry>
+                  <entry>95</entry>
+                  <entry>94</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Repulsion Coefficient (Index)</entry>
+                  <entry>100.9</entry>
+                  <entry>100.4</entry>
+                  <entry>100.5</entry>
+                  <entry>100.6</entry>
+                  <entry>100.5</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="left" id="entry-00014-en">Formulation: parts by mass</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00102-en" num="0000">
+        <tables id="tables-00005-en" num="00005">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="182pt" align="center" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="6" rowsep="1">TABLE 5</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Golf ball No.</entry>
+                  <entry>11</entry>
+                  <entry>12</entry>
+                  <entry>13</entry>
+                  <entry>14</entry>
+                  <entry>15</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="140pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Intermediate</entry>
+                  <entry>Center No.</entry>
+                  <entry>B</entry>
+                  <entry>C</entry>
+                  <entry>B</entry>
+                  <entry>A</entry>
+                  <entry>A</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="left" />
+              <colspec colname="3" colwidth="49pt" align="left" />
+              <colspec colname="4" colwidth="49pt" align="left" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <colspec colname="8" colwidth="28pt" align="char" char="." />
+              <colspec colname="9" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>layer</entry>
+                  <entry>Resin</entry>
+                  <entry>(A)Component</entry>
+                  <entry>Surlyn</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry>composition</entry>
+                  <entry>component</entry>
+                  <entry />
+                  <entry>6320 (Mg)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Himilan</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>AM7327(Zn)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Surlyn</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>100</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>8320 (Na)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="84pt" align="left" />
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Himilan AM7311</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(Mg, binary copolymer)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="84pt" align="left" />
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="char" char="." />
+              <colspec colname="7" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>(B)component</entry>
+                  <entry>Mg stearate</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>17.7</entry>
+                  <entry>20</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Ca stearate</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Mg Behenate</entry>
+                  <entry>70</entry>
+                  <entry>70</entry>
+                  <entry>26</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Mg Montanate</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="140pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="char" char="." />
+              <colspec colname="3" colwidth="28pt" align="char" char="." />
+              <colspec colname="4" colwidth="28pt" align="char" char="." />
+              <colspec colname="5" colwidth="28pt" align="char" char="." />
+              <colspec colname="6" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Titanium oxide</entry>
+                  <entry>4</entry>
+                  <entry>4</entry>
+                  <entry>4</entry>
+                  <entry>4</entry>
+                  <entry>4</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="98pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="char" char="." />
+              <colspec colname="4" colwidth="28pt" align="char" char="." />
+              <colspec colname="5" colwidth="28pt" align="char" char="." />
+              <colspec colname="6" colwidth="28pt" align="char" char="." />
+              <colspec colname="7" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Properties</entry>
+                  <entry>Melt flow rate (g/10 min)</entry>
+                  <entry>18.0</entry>
+                  <entry>18.0</entry>
+                  <entry>3.9</entry>
+                  <entry>2.7</entry>
+                  <entry>3.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Slab hardness (Shore D)</entry>
+                  <entry>54</entry>
+                  <entry>54</entry>
+                  <entry>42</entry>
+                  <entry>45</entry>
+                  <entry>46</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Bending stiffness (MPa)</entry>
+                  <entry>171</entry>
+                  <entry>171</entry>
+                  <entry>46</entry>
+                  <entry>47</entry>
+                  <entry>71</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Rebound resilience (%)</entry>
+                  <entry>66</entry>
+                  <entry>66</entry>
+                  <entry>62</entry>
+                  <entry>63</entry>
+                  <entry>61</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>P = A/(A + B)</entry>
+                  <entry>0.96</entry>
+                  <entry>0.96</entry>
+                  <entry>0.92</entry>
+                  <entry>0.90</entry>
+                  <entry>0.91</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="140pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="char" char="." />
+              <colspec colname="4" colwidth="28pt" align="char" char="." />
+              <colspec colname="5" colwidth="28pt" align="char" char="." />
+              <colspec colname="6" colwidth="28pt" align="char" char="." />
+              <colspec colname="7" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Core</entry>
+                  <entry>Intermediate layer thickness (mm)</entry>
+                  <entry>0.7</entry>
+                  <entry>1.8</entry>
+                  <entry>0.7</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                </row>
+                <row>
+                  <entry>Properties</entry>
+                  <entry>Core center hardness (Shore D)</entry>
+                  <entry>40</entry>
+                  <entry>40</entry>
+                  <entry>40</entry>
+                  <entry>40</entry>
+                  <entry>40</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Core surface hardness (Shore D)</entry>
+                  <entry>54</entry>
+                  <entry>54</entry>
+                  <entry>43</entry>
+                  <entry>48</entry>
+                  <entry>49</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Compression deformation amount (mm)</entry>
+                  <entry>3.19</entry>
+                  <entry>3.30</entry>
+                  <entry>3.27</entry>
+                  <entry>3.26</entry>
+                  <entry>3.25</entry>
+                </row>
+                <row>
+                  <entry>Golf ball</entry>
+                  <entry>Cover thickness (mm)</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                </row>
+                <row>
+                  <entry>Properties</entry>
+                  <entry>Compression deformation amount (mm)</entry>
+                  <entry>3.00</entry>
+                  <entry>3.10</entry>
+                  <entry>3.05</entry>
+                  <entry>3.04</entry>
+                  <entry>3.04</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Durability</entry>
+                  <entry>96</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Repulsion Coefficient (Index)</entry>
+                  <entry>100.9</entry>
+                  <entry>100.5</entry>
+                  <entry>100.2</entry>
+                  <entry>100.0</entry>
+                  <entry>100.1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="left" id="entry-00015-en">Formulation: parts by mass</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00103-en" num="0000">
+        <tables id="tables-00006-en" num="00006">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="182pt" align="center" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="6" rowsep="1">TABLE 6</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Golf ball No.</entry>
+                  <entry>16</entry>
+                  <entry>17</entry>
+                  <entry>18</entry>
+                  <entry>19</entry>
+                  <entry>20</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="140pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Intermediate</entry>
+                  <entry>Center No.</entry>
+                  <entry>A</entry>
+                  <entry>A</entry>
+                  <entry>A</entry>
+                  <entry>A</entry>
+                  <entry>A</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="left" />
+              <colspec colname="3" colwidth="49pt" align="left" />
+              <colspec colname="4" colwidth="49pt" align="left" />
+              <colspec colname="5" colwidth="28pt" align="char" char="." />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <colspec colname="8" colwidth="28pt" align="center" />
+              <colspec colname="9" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>layer</entry>
+                  <entry>Resin</entry>
+                  <entry>(A)Component</entry>
+                  <entry>Surlyn</entry>
+                  <entry>100</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>composition</entry>
+                  <entry>component</entry>
+                  <entry />
+                  <entry>6320 (Mg)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Himilan</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>100</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>AM7327(Zn)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Surlyn</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>8320 (Na)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="84pt" align="left" />
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="char" char="." />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="char" char="." />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Himilan AM7311</entry>
+                  <entry>—</entry>
+                  <entry>100</entry>
+                  <entry>—</entry>
+                  <entry>100</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(Mg, binary copolymer)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="84pt" align="left" />
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="char" char="." />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>(B)component</entry>
+                  <entry>Mg stearate</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>110</entry>
+                  <entry>—</entry>
+                  <entry>17.7</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Ca stearate</entry>
+                  <entry>17.7</entry>
+                  <entry>17.7</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Mg Behenate</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>33</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Mg Montanate</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry />
+                  <entry>—</entry>
+                  <entry>—</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="140pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="char" char="." />
+              <colspec colname="3" colwidth="28pt" align="char" char="." />
+              <colspec colname="4" colwidth="28pt" align="char" char="." />
+              <colspec colname="5" colwidth="28pt" align="char" char="." />
+              <colspec colname="6" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Titanium oxide</entry>
+                  <entry>4</entry>
+                  <entry>4</entry>
+                  <entry>4</entry>
+                  <entry>4</entry>
+                  <entry>4</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="98pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="char" char="." />
+              <colspec colname="4" colwidth="28pt" align="char" char="." />
+              <colspec colname="5" colwidth="28pt" align="char" char="." />
+              <colspec colname="6" colwidth="28pt" align="char" char="." />
+              <colspec colname="7" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Properties</entry>
+                  <entry>Melt flow rate (g/10min)</entry>
+                  <entry>2.4</entry>
+                  <entry>2.3</entry>
+                  <entry>35.7</entry>
+                  <entry>2.8</entry>
+                  <entry>3.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Slab hardness (Shore D)</entry>
+                  <entry>45</entry>
+                  <entry>62</entry>
+                  <entry>57</entry>
+                  <entry>62</entry>
+                  <entry>39</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Bending stiffness (MPa)</entry>
+                  <entry>64</entry>
+                  <entry>234</entry>
+                  <entry>247</entry>
+                  <entry>243</entry>
+                  <entry>40</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Rebound resilience (%)</entry>
+                  <entry>58</entry>
+                  <entry>54</entry>
+                  <entry>56</entry>
+                  <entry>55</entry>
+                  <entry>60</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>P = A/(A + B)</entry>
+                  <entry>0.89</entry>
+                  <entry>0.88</entry>
+                  <entry>0.98</entry>
+                  <entry>0.92</entry>
+                  <entry>0.89</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="140pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="char" char="." />
+              <colspec colname="4" colwidth="28pt" align="char" char="." />
+              <colspec colname="5" colwidth="28pt" align="char" char="." />
+              <colspec colname="6" colwidth="28pt" align="char" char="." />
+              <colspec colname="7" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Core</entry>
+                  <entry>Intermediate layer thickness (mm)</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                </row>
+                <row>
+                  <entry>Properties</entry>
+                  <entry>Core center hardness (Shore D)</entry>
+                  <entry>40</entry>
+                  <entry>40</entry>
+                  <entry>40</entry>
+                  <entry>40</entry>
+                  <entry>40</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Core surface hardness (Shore D)</entry>
+                  <entry>48</entry>
+                  <entry>62</entry>
+                  <entry>58</entry>
+                  <entry>62</entry>
+                  <entry>40</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Compression deformation amount (mm)</entry>
+                  <entry>3.26</entry>
+                  <entry>3.18</entry>
+                  <entry>3.20</entry>
+                  <entry>3.18</entry>
+                  <entry>3.20</entry>
+                </row>
+                <row>
+                  <entry>Golf ball</entry>
+                  <entry>Cover thickness (mm)</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                </row>
+                <row>
+                  <entry>Properties</entry>
+                  <entry>Compression deformation amount (mm)</entry>
+                  <entry>3.04</entry>
+                  <entry>2.98</entry>
+                  <entry>3.00</entry>
+                  <entry>2.98</entry>
+                  <entry>3.08</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Durability</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                  <entry>65</entry>
+                  <entry>98</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Repulsion Coefficient (Index)</entry>
+                  <entry>100.0</entry>
+                  <entry>99.9</entry>
+                  <entry>99.9</entry>
+                  <entry>100.0</entry>
+                  <entry>99.8</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="left" id="entry-00016-en">Formulation: parts by mass</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00104-en" num="0000">
+        <tables id="tables-00007-en" num="00007">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="189pt" align="center" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="2" rowsep="1">TABLE 7</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Golf ball No.</entry>
+                  <entry>21</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="140pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Intermediate</entry>
+                  <entry>Center No.</entry>
+                  <entry>D</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="left" />
+              <colspec colname="3" colwidth="49pt" align="left" />
+              <colspec colname="4" colwidth="49pt" align="left" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>layer</entry>
+                  <entry>Resin</entry>
+                  <entry>(A)Component</entry>
+                  <entry>Surlyn</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>composition</entry>
+                  <entry>component</entry>
+                  <entry />
+                  <entry>6320 (Mg)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="140pt" align="left" />
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Himilan</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>AM7327(Zn)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Surlyn</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>8320 (Na)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="91pt" align="left" />
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Himilan AM7311</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(Mg, binary copolymer)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="91pt" align="left" />
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>(B)component</entry>
+                  <entry>Mg stearate</entry>
+                  <entry>—</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="140pt" align="left" />
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Ca stearate</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Mg Behenate</entry>
+                  <entry>33</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Mg Montanate</entry>
+                  <entry>—</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="49pt" align="left" />
+              <colspec colname="1" colwidth="140pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Titanium oxide</entry>
+                  <entry>4</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="49pt" align="left" />
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="98pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Properties</entry>
+                  <entry>Melt flow rate (g/10 min)</entry>
+                  <entry>7.1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Slab hardness (Shore D)</entry>
+                  <entry>51</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Bending stiffness (MPa)</entry>
+                  <entry>117</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Rebound resilience (%)</entry>
+                  <entry>65</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>P = A/(A + B)</entry>
+                  <entry>0.94</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="140pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Core</entry>
+                  <entry>Intermediate layer thickness (mm)</entry>
+                  <entry>2.5</entry>
+                </row>
+                <row>
+                  <entry>Properties</entry>
+                  <entry>Core center hardness (Shore D)</entry>
+                  <entry>40</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Core surface hardness (Shore D)</entry>
+                  <entry>51</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Compression deformation amount (mm)</entry>
+                  <entry>3.26</entry>
+                </row>
+                <row>
+                  <entry>Golf ball</entry>
+                  <entry>Cover thickness (mm)</entry>
+                  <entry>1.0</entry>
+                </row>
+                <row>
+                  <entry>Properties</entry>
+                  <entry>Compression deformation amount (mm)</entry>
+                  <entry>3.04</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Durability</entry>
+                  <entry>103</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Repulsion Coefficient (Index)</entry>
+                  <entry>99.7</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="left" id="entry-00017-en">Formulation: parts by mass</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables> Surlyn 6320: Magnesium ion neutralized ethylene-methacrylic acid-butyl acrylate ternary copolymer ionomer resin (Melt flow rate (190° C.*2.16 kg): 1.0 g/10 min, P0=0.77) available from E.I. du Pont de Nemours and Company <br /> Himilan AM7327: Zinc ion neutralized ethylene-methacrylic acid-butyl acrylate copolymer ionomer resin (Melt flow rate (190° C.*2.16 kg): 0.7 g/10 min, P0=0.76) available from Du Pont-Mitsui Polychemicals Co., Ltd <br /> Surlyn 8320: Sodium ion neutralized ethylene-methacrylic acid-butyl acrylate copolymer ionomer resin (Melt flow rate (190° C.*2.16 kg): 1.0 g/10 min, P0=0.78) available from E.I. du Pont de Nemours and Company <br /> Himilan AM7311: Magnesium ion neutralized ethylene-methacrylic acid binary copolymer ionomer resin (Melt flow rate (190° C.*2.16 kg): 2.8 g/10 min, P0=0.81) available from Du Pont-Mitsui Polychemicals Co., Ltd <br /> Magnesium stearate: NITTO KASEI KOGYO K.K. <br /> Calcium stearate: NITTO KASEI KOGYO K.K. </p>
+      <heading id="h-00020-en" level="2">Magnesium Behenate: NITTO KASEI KOGYO K.K.</heading>
+      <heading id="h-00021-en" level="2">Magnesium Montanate: NITTO KASEI KOGYO K.K.</heading>
+      <p id="p-00105-en" num="0096">The golf ball resin compositions No. 1 to No. 13 contain 100 parts by mass of (A) an ionomer resin consisting of a metal ion-neutralized product of a ternary copolymer composed of ethylene, α,β-unsaturated carboxylic acid having 3 to 8 carbon atoms and α,β-unsaturated carboxylic acid ester and 25 parts to 100 parts by mass of (B) a metal salt of a fatty acid having 18 to 30 carbon atoms. The fluidity and resilience thereof were excellent. The golf balls No. 1 to No. 13 had an improved resilience, and the durability was at the practical level without substantially being lowered.</p>
+      <p id="p-00106-en" num="0097">The present invention relates to the golf ball resin composition and golf ball, especially, to the intermediate layer composition and the golf ball having the intermediate layer. This application is based on Japanese Patent applications No. 2009-239149 filed on Oct. 16, 2009, and No. 2010-102535 filed on Apr. 27, 2010, the contents of which are hereby incorporated by reference.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A golf ball resin composition comprising,
+<claim-text>100 parts by mass of (A) an ionomer resin consisting of a metal ion-neutralized product of a ternary copolymer composed of ethylene, α,β-unsaturated carboxylic acid having 3 to 8 carbon atoms and α,β-unsaturated carboxylic acid ester, and</claim-text><claim-text>from 25 parts to 100 parts by mass of (B) a metal salt of a fatty acid having 18 to 30 carbon atoms.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The golf ball resin composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein (A) the ionomer resin is neutralized with magnesium, zinc or sodium.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The golf ball resin composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein a fatty acid component of (B) the metal salt of the fatty acid is stearic acid, behenic acid, or montanic acid.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The golf ball resin composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein a metal component of (B) the metal salt of the fatty acid is magnesium, calcium, or barium.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The golf ball resin composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the golf ball resin composition has a slab hardness ranging from 20 to 70 in a Shore D hardness.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The golf ball resin composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the golf ball resin composition has a bending stiffness in a range from 100 MPa to 450 MPa and a rebound resilience in a range from 40% to 80%.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The golf ball resin composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the golf ball resin composition has a melt flow rate (190° C., 2.16 kg) in a range from 0.1 g/10 min to 600 g/10 min.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The golf ball resin composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein an area A under a peak around 1600 cm<sup>−1 </sup>and an area B under a peak around 1700 cm<sup>−1 </sup>in a spectrum obtained by analyzing the golf ball resin composition by FT-IR satisfy an equation of 0.50≦P=A/(A+B)≦1.00.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The golf ball resin composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein an area A0 under a peak around 1600 cm<sup>−1 </sup>and an area B0 under a peak around 1700 cm<sup>−1 </sup>in a spectrum obtained by analyzing (A) the ionomer resin by FT-IR satisfy an equation of 0.30≦P0=A0/(A0+B0)≦0.98.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en" independent="true">
+      <claim-text>
+        <b>10</b>. A multi-piece golf ball comprising
+<claim-text>a core having a center and at least one intermediate layer disposed around the center, and</claim-text><claim-text>a cover disposed around the core, wherein at least one of the intermediate layer is formed from a golf ball resin composition which comprises</claim-text><claim-text>100 parts by mass of (A) an ionomer resin consisting of a metal ion-neutralized product of a ternary copolymer composed of ethylene, α,β-unsaturated carboxylic acid having 3 to 8 carbon atoms and α,β-unsaturated carboxylic acid ester, and</claim-text><claim-text>from 25 parts to 100 parts by mass of (B) a metal salt of a fatty acid having 18 to 30 carbon atoms.</claim-text></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The multi-piece golf ball according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein (A) the ionomer resin is neutralized with magnesium, zinc or sodium.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The multi-piece golf ball according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein a fatty acid component of (B) the metal salt of the fatty acid is stearic acid, behenic acid, or montanic acid.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The multi-piece golf ball according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein a metal component of (B) the metal salt of the fatty acid is magnesium, calcium, or barium.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The multi-piece golf ball according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the golf ball resin composition has a slab hardness ranging from 20 to 70 in a Shore D hardness.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The multi-piece golf ball according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the golf ball resin composition has a bending stiffness in a range from 100 MPa to 450 MPa and a rebound resilience in a range from 40% to 80%.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The multi-piece golf ball according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the golf ball resin composition has a melt flow rate (190° C., 2.16 kg) in a range from 0.1 g/10 min to 600 g/10 min.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The multi-piece golf ball according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein an area A under a peak around 1600 cm<sup>−1 </sup>and an area B under a peak around 1700 cm<sup>−1 </sup>in a spectrum obtained by analyzing the golf ball resin composition by FT-IR satisfy an equation of 0.50≦P=A/(A+B)≦1.00.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The multi-piece golf ball according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein an area A0 under a peak around 1600 cm<sup>−1 </sup>and an area B0 under a peak around 1700 cm<sup>−1 </sup>in a spectrum obtained by analyzing (A) the ionomer resin by FT-IR satisfy an equation of 0.30≦P0=A0/(A0+B0)≦0.98.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The multi-piece golf ball according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the intermediate layer has a thickness of 0.5 mm or more, and less than 2.5 mm.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The multi-piece golf ball according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the cover comprises an ionomer resin as a resin component. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150246985A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246985A1-20150903-D00001.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150246985A1.PDF" type="pdf" size="956924" pages="15" />
+</lexisnexis-patent-document>

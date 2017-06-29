@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150246989A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021248" date-changed="20151214" time-changed="185315">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121139100">
+        <country>US</country>
+        <doc-number>20150246989</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14427493</doc-number>
+        <date>20130924</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="regional">
+        <country>EP</country>
+        <doc-number>12186520</doc-number>
+        <date>20120928</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>C08F 210/14        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>F</subclass>
+        <main-group>210</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>C08F 210/14        20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>F</subclass>
+        <main-group>210</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C08F 210/16        20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>F</subclass>
+        <main-group>210</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C08F2400/02        20130101 LA20140407BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>F</subclass>
+        <main-group>2400</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140407</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <combination-set>
+        <group-number>1</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C08F 210/16        20130101 LI20140407BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>F</subclass>
+            <main-group>210</main-group>
+            <subgroup>16</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20140407</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C08F   2/00        20130101 LI20140407BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>F</subclass>
+            <main-group>2</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20140407</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>2</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C08F 210/16        20130101 LI20140407BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>F</subclass>
+            <main-group>210</main-group>
+            <subgroup>16</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20140407</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C08F   2/34        20130101 LI20140407BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>F</subclass>
+            <main-group>2</main-group>
+            <subgroup>34</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20140407</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>3</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C08F 210/16        20130101 LA20140407BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>F</subclass>
+            <main-group>210</main-group>
+            <subgroup>16</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20140407</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C08F 210/14        20130101 LA20140407BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>F</subclass>
+            <main-group>210</main-group>
+            <subgroup>14</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20140407</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">22</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">METHOD FOR PRODUCTION OF POLYMER</invention-title>
+    <references-cited date-changed="20151208">
+      <patent-citations name="patcit" date-changed="20151208" />
+      <citation>
+        <patcit num="1" dnum="US2010144981A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20100144981</doc-number>
+            <kind>A1</kind>
+            <name>SAVATSKY BRUCE J [US], et al</name>
+            <date>20100610</date>
+          </document-id>
+          <application-date>
+            <date>20071212</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>INEOS EUROPE AG</orgname>
+            <address>
+              <city>Rolle</city>
+              <country>CH</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>CH</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Bell</last-name>
+            <first-name>Andrew David</first-name>
+            <address>
+              <city>Carry-le-Rouet</city>
+              <country>FR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Chamayou</last-name>
+            <first-name>Jean-Louis</first-name>
+            <address>
+              <city>Carry Le Rouet</city>
+              <country>FR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Ghouila</last-name>
+            <first-name>Imen</first-name>
+            <address>
+              <city>Sausset les Pins</city>
+              <country>FR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>EP13069775</doc-number>
+        <date>20130924</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014048892</doc-number>
+        <date>20140403</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150903">
+      <main-family family-id="165037225">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246989</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130924</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014048892</doc-number>
+            <kind>A1</kind>
+            <date>20140403</date>
+          </document-id>
+          <application-date>
+            <date>20130924</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="165037224">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246989</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130924</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014048892</doc-number>
+            <kind>A1</kind>
+            <date>20140403</date>
+          </document-id>
+          <application-date>
+            <date>20130924</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention relates to methods for controlling a process for the production of a polymer by polymerisation of a monomer which process comprises at least one of: maintaining a substantially constant effective flow ratio (EFR), said effective flow ratio being defined as: EFR=(Q<sub>como</sub>−L<sub>como</sub>)/(Q<sub>mono</sub><sub><sub2>—</sub2></sub>L<sub>mono</sub>) Q<sub>como </sub>and Q<sub>mono </sub>being, respectively, flow rates of comonomer and monomer to the reactor, L<sub>como </sub>and L<sub>mono </sub>being, respectively losses of comonomer and monomer, and: maintaining a substantially constant effective flow ratio (EFR), said effective flow ratio being defined as: EFR−(Q<sub>hyd</sub><sub><sub2>—</sub2></sub>L<sub>hyd</sub>)/(Q<sub>mono</sub><sub><sub2>—</sub2></sub>L<sub>mono</sub>) Q<sub>hyd </sub>and Q<sub>mono </sub>being, respectively, flow rates of hydrogen and monomer reactor, L<sub>hyd </sub>and L<sub>mono </sub>being, respectively, losses of hydrogen and monomer.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150311</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246989A1</docdb-publication-number>
+      <docdb-application-id>444209878</docdb-application-id>
+      <new-owner>INEOS EUROPE AG, SWITZERLAND</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:GHOUILA, IMEN;CHAMAYOU, JEAN-LOUIS;BELL, ANDREW DAVID;REEL/FRAME:035141/0602</free-text-description>
+      <effective-date>
+        <date>20130930</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <p id="p-00001-en" num="0001">The present invention relates to the operation of a process for the production of a polymer by polymerisation of a monomer and a comonomer during steady-state and non-steady-state conditions.</p>
+      <p id="p-00002-en" num="0002">The polymerisation of olefin monomers in gas phase fluidised bed reactors is well-known. Control of such processes is required to ensure stable fluidisation and stable production of polymer with desired characteristics. As well as control during steady-state it is also important to control the process during periods of non-steady-state operation, such as during transitions and during start-ups.</p>
+      <p id="p-00003-en" num="0003">At non-steady-state conditions it can be especially difficult to avoid the presence of off-specification material because it is especially difficult to control the density and melt index of polymer it is desired to produce.</p>
+      <p id="p-00004-en" num="0004">A number of applications have attempted to address such problems during start-ups and at steady state.</p>
+      <p id="p-00005-en" num="0005">WO 99/31143, for example, relates to a process for starting-up a polymerisation process in a gas phase fluidised bed which uses a catalyst based on chromium oxide. In the process described in this document the start-up involves two separate stages, the first in which olefin is introduced so as to maintain a constant partial pressure in the reactor, and the second in which olefin is introduced at a constant flow rate.</p>
+      <p id="p-00006-en" num="0006">WO 99/31142 also relates to a process for starting-up a polymerisation process in a gas phase fluidised bed, but this time using a Ziegler-Natta type catalyst. In the process described in this document the start-up involves increases in the partial pressure of olefin and the rate of introduction of catalyst, whilst maintaining constant the ratios of the partial pressures of the olefin to hydrogen and to any comonomers.</p>
+      <p id="p-00007-en" num="0007">WO 02/51027 relates to a start-up procedure for processes using at least two different catalyst compounds. The procedure involves calculating a trajectory, from elements including catalyst deactivation rate constants (k<sub>d</sub>), for the rate of introduction of a catalyst system, into a reactor, and introducing the olefin monomer, a catalyst system, optional co-monomer, and optional chain transfer or termination agents into a polymerization reactor in a manner such that the catalyst system introduction rate is manipulated to follow the trajectory until a desired production rate is achieved.</p>
+      <p id="p-00008-en" num="0008">U.S. Pat. No. 5,534,607 and U.S. Pat. No. 5,306,792 relate to operation of processes operating at steady state.</p>
+      <p id="p-00009-en" num="0009">In particular, U.S. Pat. No. 5,534,607 relates to a continuous process for polymerisation of an alpha-olefin using a Ziegler-Natta type catalyst in which the reactor is fed with alpha-olefin at a constant rate and U.S. Pat. No. 5,306,792 relates to a continuous process for polymerisation of an alpha-olefin using a catalyst based on chromium oxide in which the reactor is fed with alpha-olefin and catalyst at constant rates.</p>
+      <p id="p-00010-en" num="0010">An improved method has now been found for controlling polymerisation processes where the same control approach can be adopted under both steady-state and non-steady-state conditions.</p>
+      <p id="p-00011-en" num="0011">Thus, in a first aspect, the present invention provides a method for controlling a process for the production of a polymer by polymerisation of a monomer and a comonomer which process comprises: <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>maintaining a substantially constant effective flow ratio (EFR), said effective flow ratio being defined as:</li></ul></li></ul></p>
+      <p id="p-00012-en" num="0000">[in-line-formulae]<i>EFR</i>=(<i>Q</i><sub>como</sub><i>−L</i><sub>como</sub>)/(<i>Q</i><sub>mono</sub><i>−L</i><sub>mono</sub>)[/in-line-formulae]<ul id="ul-00003-en" list-style="none"><li><ul id="ul-00004-en" list-style="none"><li>Q<sub>como </sub>and Q<sub>mono </sub>being, respectively, flow rates of comonomer and monomer to the reactor,</li><li>L<sub>como </sub>and L<sub>mono </sub>being, respectively, losses of comonomer and monomer.</li></ul></li></ul></p>
+      <p id="p-00013-en" num="0015">In a second aspect, the present invention provides a method for controlling a process for the production of a polymer by polymerisation of a monomer which process comprises: <ul id="ul-00005-en" list-style="none"><li><ul id="ul-00006-en" list-style="none"><li>maintaining a substantially constant effective flow ratio (EFR), said effective flow ratio being defined as:</li></ul></li></ul></p>
+      <p id="p-00014-en" num="0000">[in-line-formulae]<i>EFR</i>=(<i>Q</i><sub>hyd</sub><i>−L</i><sub>hyd</sub>)/(<i>Q</i><sub>mono</sub><i>−L</i><sub>mono</sub>)[/in-line-formulae]<ul id="ul-00007-en" list-style="none"><li><ul id="ul-00008-en" list-style="none"><li>Q<sub>hyd </sub>and Q<sub>mono </sub>being, respectively, flow rates of hydrogen and monomer to the reactor,</li><li>L<sub>hyd </sub>and L<sub>mono </sub>being, respectively, losses of hydrogen and monomer.</li></ul></li></ul></p>
+      <p id="p-00015-en" num="0019">As noted above, the present method can be adopted under both steady-state and/or non-steady-state conditions. In preferred embodiments, the present invention is applied during non-steady state conditions. In most preferred embodiments, the methods of the first and second aspects are applied during both steady-state and non-steady-state conditions.</p>
+      <p id="p-00016-en" num="0020">The methods of the first and second aspects can be applied individually but where both comonomer and hydrogen are present in the same polymerisation process then it is preferred that both are applied.</p>
+      <p id="p-00017-en" num="0021">As used in the present invention “maintaining a substantially constant effective flow ratio” requires determining losses of the relevant components, and if the losses of one or more of the relevant components varies over time then flow rates to the reactor are changed to maintain the effective flow rate substantially constant.</p>
+      <p id="p-00018-en" num="0022">A particular advantage of the present invention is that the method for control is a predictive method rather than a reactive method. Reactive methods are methods where a property of the formed polymer is measured, such as density, melt index or comonomer incorporation, and this property is used as feedback control to the process. There is often a significant time lag in such methods due to the time for extraction and analysis of a sample of the polymer. Predictive methods, by contrast, seek to control the polymer properties using parameters which can be measured directly on the process with little or no time lag, and control of which allows control the polymer properties.</p>
+      <p id="p-00019-en" num="0023">With respect to the first aspect, Q<sub>mono </sub>is a flow rate of monomer to the reactor and Q<sub>como </sub>is a flow rate of comonomer to the reactor.</p>
+      <p id="p-00020-en" num="0024">In one embodiment Q<sub>mono </sub>and Q<sub>como </sub>may be determined as total flows of monomer and comonomer to the reactor. The “total” flows include fresh flows and recycle flows of the respective components.</p>
+      <p id="p-00021-en" num="0025">In a preferred embodiment Q<sub>mono </sub>and Q<sub>como </sub>may be determined as flows of fresh monomer and fresh comonomer to the reactor.</p>
+      <p id="p-00022-en" num="0026">L<sub>mono </sub>is a loss of monomer and L<sub>como </sub>is a loss of comonomer.</p>
+      <p id="p-00023-en" num="0027">The losses are losses of the respective components from the process, and in one embodiment may be determined as “total” losses from the process, taking into account both losses in process purges and also losses of entrained hydrocarbons with polymer product. However, generally the latter of these is relatively small (and also relatively constant), and thus in a preferred embodiment, L<sub>mono </sub>and L<sub>como </sub>are determined as the losses of monomer and comonomer to purges.</p>
+      <p id="p-00024-en" num="0028">Thus, in a preferred embodiment of the first aspect, the present invention provides a method for controlling a process for the production of a polymer by polymerisation of a monomer and a comonomer which process comprises: <ul id="ul-00009-en" list-style="none"><li><ul id="ul-00010-en" list-style="none"><li>maintaining a substantially constant effective flow ratio (EFR), said effective flow ratio being defined as:</li></ul></li></ul></p>
+      <p id="p-00025-en" num="0000">[in-line-formulae]<i>EFR</i>=(<i>Q</i><sub>como</sub><i>−L</i><sub>como</sub>)/(<i>Q</i><sub>mono</sub><i>−L</i><sub>mono</sub>)[/in-line-formulae]<ul id="ul-00011-en" list-style="none"><li><ul id="ul-00012-en" list-style="none"><li>Q<sub>como </sub>and Q<sub>mono </sub>being, respectively, the flow rates of fresh comonomer and fresh monomer feeds to the reactor,</li><li>L<sub>como </sub>and L<sub>mono </sub>being, respectively, the losses of comonomer and monomer to purges.</li></ul></li></ul></p>
+      <p id="p-00026-en" num="0032">The losses of monomer to purge can be readily determined from the concentration of monomer in the purge gas and the flow rate of the purge gas stream.</p>
+      <p id="p-00027-en" num="0033">Where both gas and liquid purges are present the loss of comonomer to purges can comprise two components, namely the loss of comonomer in the gas purge (usually low) and the loss of comonomer in the liquid purge. In either case the respective losses can be readily determined from the concentration of comonomer in the purge and the flow rate of the purge stream.</p>
+      <p id="p-00028-en" num="0034">The measurements of flow rates and concentration in the purge streams can be performed by any suitable technique. For example, the concentrations in the purge streams can be estimated or predicted using simple heat and mass balance and thermodynamic models known to the person skilled in the art. The use of gas chromatographs for concentrations measurements is widely used, and is preferred.</p>
+      <p id="p-00029-en" num="0035">During steady-state operation the values of L<sub>como </sub>and L<sub>mono </sub>are substantially constant. In this scenario the values of Q<sub>como </sub>and Q<sub>mono </sub>can also therefore be maintained substantially constant to maintain a substantially constant effective flow ratio. (Nevertheless, it may still be useful to monitor L<sub>como </sub>and L<sub>mono </sub>and to ensure that there is maintained a substantially constant effective flow ratio.)</p>
+      <p id="p-00030-en" num="0036">However, if one (or both) of the L<sub>como </sub>and L<sub>mono </sub>varies, for example due to a process upset or other non-steady state change, then Q<sub>como </sub>and Q<sub>mono </sub>should be changed to maintain the EFR substantially constant. For example, during a process upset (e.g. if a recycle compressor or recycle pump stops) L<sub>como </sub>and L<sub>mono </sub>will include the losses of comonomer and monomer due to that event.</p>
+      <p id="p-00031-en" num="0037">With respect to the second aspect, Q<sub>mono </sub>is again a flow rate of monomer to the reactor, and whilst it may be determined as a total flow of monomer to the reactor, it is preferably determined as the flow of fresh monomer to the reactor.</p>
+      <p id="p-00032-en" num="0038">Q<sub>hyd </sub>is a flow rate of hydrogen to the reactor. Again this may be determined as a “total” flow, taking into account both fresh and recycle flows. However, it is also preferably determined as the flow of fresh hydrogen to the reactor.</p>
+      <p id="p-00033-en" num="0039">L<sub>mono </sub>is again a loss of monomer and in a preferred embodiment is determined as the loss of monomer to purges, which can be determined as previously noted from the concentration of monomer in the purge gas and the flow rate of the purge gas stream.</p>
+      <p id="p-00034-en" num="0040">L<sub>hyd </sub>is a loss of hydrogen. Again, this loss may be determined as a “total” loss, taking into account both losses in process purges and also losses of entrained hydrocarbons with polymer product. However, generally the latter of these is particularly small for hydrogen, and thus in a preferred embodiment, L<sub>hyd </sub>is determined as the loss of hydrogen to purge.</p>
+      <p id="p-00035-en" num="0041">Thus, in a preferred embodiment of the second aspect, the present invention provides a method for controlling a process for the production of a polymer by polymerisation of a monomer which process comprises: <ul id="ul-00013-en" list-style="none"><li><ul id="ul-00014-en" list-style="none"><li>maintaining a substantially constant effective flow ratio (EFR), said effective flow ratio being defined as:</li></ul></li></ul></p>
+      <p id="p-00036-en" num="0000">[in-line-formulae]<i>EFR</i>=(<i>Q</i><sub>como</sub><i>−L</i><sub>como</sub>)/(<i>Q</i><sub>mono</sub><i>−L</i><sub>mono</sub>)[/in-line-formulae]<ul id="ul-00015-en" list-style="none"><li><ul id="ul-00016-en" list-style="none"><li>Q<sub>hyd </sub>and Q<sub>mono </sub>being, respectively, the flow rates of fresh hydrogen and fresh monomer feeds to the reactor,</li><li>L<sub>hyd </sub>and L<sub>mono </sub>being, respectively, the losses of hydrogen and monomer to purge.</li></ul></li></ul></p>
+      <p id="p-00037-en" num="0045">Similar to the monomer loss L<sub>hyd </sub>can be readily determined from the concentration of hydrogen in the purge gas and the flow rate of the purge gas stream.</p>
+      <p id="p-00038-en" num="0046">At steady state the values of L<sub>hyd </sub>and L<sub>mono </sub>are substantially constant. However, if one (or both) of these varies, for example due to a process upset or other non-steady state change, then Q<sub>hyd </sub>and Q<sub>mono </sub>should be changed to maintain the EFR substantially constant.</p>
+      <p id="p-00039-en" num="0047">For avoidance of doubt, the present invention can be applied during steady-state operation and during non-steady-state operation, and also when switching from steady-state to non-steady-state and the reverse i.e. from non-steady-state to steady-state.</p>
+      <p id="p-00040-en" num="0048">According to the present invention, the term “non-steady state” refers to periods/operation during which the production rate of polymer is not substantially constant or periods/operation during which the polymer properties of the polymer being produced are not substantially constant (in particular density, melt index or both). These changes in production rate or polymer properties may be deliberate changes applied by the Operator, for example during start-up or shut-down, or transitions, or may be changes caused by process upsets.</p>
+      <p id="p-00041-en" num="0049">In contrast, at “steady-state” there is obtained a substantially constant hourly production of polymer and a substantially constant property of the polymer being made (in particular density and Melt Index).</p>
+      <p id="p-00042-en" num="0050">It should be noted that the requirement for the hourly production of polymer to change during non-steady-state operation does not preclude relatively short periods during which production may be substantially constant. However, such periods are generally of a maximum of a few hours, whereas at “steady-state” a substantially constant hourly production of polymer will generally be maintained for a number of days, such as for at least 1 day, more usually at least 3 days, and often significantly longer.</p>
+      <p id="p-00043-en" num="0051">In contrast, the total duration of a non-steady-state period is generally from a few hours to less than 3 days.</p>
+      <p id="p-00044-en" num="0052">The term “substantially constant” as used herein means that a parameter varies by less than +/−10% from an average over a period of time. In relation to “non-steady-state” this period of time is the non-steady-state period, whereas in relation to “steady-state” a period of 1 day can be used.</p>
+      <p id="p-00045-en" num="0053">More generally, a control system may act to try to maintain a parameter at a particular value, but variations of the parameter from the set point may occur due to noise in measurements and/or delays in response of the control system, but such control is still “steady-state”.</p>
+      <p id="p-00046-en" num="0054">The control and/or the switching of the present invention may be operated manually by an operator, but is more usually, and advantageously, operated using a computerised process control system.</p>
+      <p id="p-00047-en" num="0055">As used herein, and as used in conventional process control terminology, a parameter (or variable) which it is desired to control or maintain at a defined value (set-point) may be referred to as a “controlled variable”. According to the present invention the EFR can be used as controlled variable. A parameter (or variable) which is manipulated to control the controlled variable is referred to as a “manipulated variable”.</p>
+      <p id="p-00048-en" num="0056">Generally, to maintain the EFR's according to the present invention the flow rates of fresh monomer, fresh comonomer and/or fresh hydrogen to the reactor can be manipulated. Thus, these would be manipulated variables.</p>
+      <p id="p-00049-en" num="0057">Examples of non-steady-state operation include start-up, process upsets and transitions.</p>
+      <p id="p-00050-en" num="0058">As an example of application of the present invention under non-steady-state conditions reference may be made to the present invention as would be applied during start-up. In particular, the present invention then provides a method for the start-up of a process for the production of a polymer by polymerisation of a monomer which process comprises during start-up: <ul id="ul-00017-en" list-style="none"><li>I. maintaining a substantially constant effective flow ratio (EFR), said effective flow ratio being defined as:</li></ul></p>
+      <p id="p-00051-en" num="0000">[in-line-formulae]<i>EFR</i>=(<i>Q</i><sub>como</sub><i>−L</i><sub>como</sub>)/(<i>Q</i><sub>mono</sub><i>−L</i><sub>mono</sub>)[/in-line-formulae]<ul id="ul-00018-en" list-style="none"><li><ul id="ul-00019-en" list-style="none"><li>Q<sub>como </sub>and Q<sub>mono </sub>being, respectively, flow rates of comonomer and monomer to the reactor,</li><li>L<sub>como </sub>and L<sub>mono </sub>being, respectively, losses of comonomer and monomer.</li><li>and/or</li></ul></li><li>II. maintaining a substantially constant effective flow ratio (EFR), said effective flow ratio being defined as:</li></ul></p>
+      <p id="p-00052-en" num="0000">[in-line-formulae]<i>EFR</i>=(<i>Q</i><sub>hyd</sub><i>−L</i><sub>hyd</sub>)/(<i>Q</i><sub>mono</sub><i>−L</i><sub>mono</sub>)[/in-line-formulae]<ul id="ul-00020-en" list-style="none"><li><ul id="ul-00021-en" list-style="none"><li>Q<sub>hyd </sub>and Q<sub>mono </sub>being, respectively, flow rates of hydrogen and monomer to the reactor,</li><li>L<sub>hyd </sub>and L<sub>mono </sub>being, respectively, losses of hydrogen and monomer.</li></ul></li></ul></p>
+      <p id="p-00053-en" num="0066">More preferably the present invention then provides a method for the start-up and subsequent steady-state operation of a process for the production of a polymer by polymerisation of a monomer which comprises the above control during start-up and the steady-state operation.</p>
+      <p id="p-00054-en" num="0067">According to the present invention, and as in the art noted above, the term “start-up” refers to the period which passes between the time at which the introduction of the catalyst into the reactor is begun and the time at which a steady desired hourly production of polymer of substantially constant properties is reached (“steady state”).</p>
+      <p id="p-00055-en" num="0068">In general, prior to catalyst injection i.e. prior to a start-up period, the reactor is heated to an elevated temperature, pressurised to an elevated pressure, and the reaction composition adjusted to have the desired partial pressures of the monomer, any comonomer, any hydrogen and any other species present.</p>
+      <p id="p-00056-en" num="0069">The temperature and pressure are usually at or close to the desired steady-state reaction temperature and pressure. Similarly the partial pressures of the monomer and any comonomer and/or hydrogen during start-up are usually at or close to the desired steady-state values.</p>
+      <p id="p-00057-en" num="0000">The gas mixture is passed through and fluidises a “start-up bed” of polymer, usually a bed of deactivated polymer particles from a previous reaction.</p>
+      <p id="p-00058-en" num="0070">Catalyst in then injected to initiate reaction, which step marks the start of the “start-up” period.</p>
+      <p id="p-00059-en" num="0071">During start-up the hourly production of polymer is increased to the desired steady-state production rate.</p>
+      <p id="p-00060-en" num="0072">As already noted more generally, it should be noted that the increase in the hourly production of polymer during the start-up phase does not preclude relatively short periods during start-up during which production may be substantially constant. Such is described, for example, in WO 99/31142. However, such periods are generally short compared to “steady-state”. In particular, the total duration, T, of the start-up period is generally less than 3 days, with any periods of substantially constant production during start-up being significantly shorter still, and in particular of a few hours, such as of 6 hours or less.</p>
+      <p id="p-00061-en" num="0073">The actual total duration, T, of the start-up period can vary according to the size of the reactor. With industrial-scale reactors, it is usually between 1 hour and 3 days, preferably between 10 and 48 hours.</p>
+      <p id="p-00062-en" num="0074">As already noted, the term “substantially constant” as used herein means that a parameter varies by less than +/−10% from an average over a period of time. In relation to “start-up” this period of time is the start-up period.</p>
+      <p id="p-00063-en" num="0075">The start-up period can advantageously be preceded by one or more purification periods, during which the reactor is freed as far as possible from impurities, such as oxygen or water, which poison the catalyst. The purification of the reactor can be carried out as indicated in European Patent Application EP-A-0180420.</p>
+      <p id="p-00064-en" num="0076">As another example of application of the present invention under non-steady-state conditions reference may be made to the present invention as would be applied during a transition. In particular, the present invention then provides a method for transition of a process for the production of a polymer by polymerisation of a monomer which process comprises during the transition: <ul id="ul-00022-en" list-style="none"><li>I. maintaining a substantially constant effective flow ratio (EFR), said effective flow ratio being defined as:</li></ul></p>
+      <p id="p-00065-en" num="0000">[in-line-formulae]<i>EFR</i>=(<i>Q</i><sub>como</sub><i>−L</i><sub>como</sub>)/(<i>Q</i><sub>mono</sub><i>−L</i><sub>mono</sub>)[/in-line-formulae]<ul id="ul-00023-en" list-style="none"><li><ul id="ul-00024-en" list-style="none"><li>Q<sub>como </sub>and Q<sub>mono </sub>being, respectively, flow rates of comonomer and monomer to the reactor,</li><li>L<sub>como </sub>and L<sub>mono </sub>being, respectively, losses of comonomer and monomer.</li></ul></li><li>and/or</li><li>II. maintaining a substantially constant effective flow ratio (EFR), said effective flow ratio being defined as:</li></ul></p>
+      <p id="p-00066-en" num="0000">[in-line-formulae]<i>EFR</i>=(<i>Q</i><sub>hyd</sub><i>−L</i><sub>hyd</sub>)/(<i>Q</i><sub>mono</sub><i>−L</i><sub>mono</sub>)[/in-line-formulae]<ul id="ul-00025-en" list-style="none"><li><ul id="ul-00026-en" list-style="none"><li>Q<sub>hyd </sub>and Q<sub>mono </sub>being, respectively, flow rates of hydrogen and monomer to the reactor,</li><li>L<sub>hyd </sub>and L<sub>mono </sub>being, respectively, losses of hydrogen and monomer.</li></ul></li></ul></p>
+      <p id="p-00067-en" num="0084">More preferably the present invention then provides a method for transition which involves transitioning from the steady-state operation for the production of a first polymer via non-steady-state operation (during the transition) to the steady-state operation for the production of a second polymer which comprises the above control during the transition and in the preceding and subsequent steady-state operations.</p>
+      <p id="p-00068-en" num="0085">According to the present invention, the term “transition” refers to the period which passes between two sets of steady-state operation during which operation is “transitioned” from the first steady-state operation to the second steady-state operation. Transitions generally involve changes in the properties of the polymer being produced, such as density and melt index. A number of different transitioning strategies are known in the art, but the present invention is generally applicable to what are referred to as “continuous transitions”, which are transitions where polymer continues to be produced during the transition. During such transitions the hourly production can be reduced and then increased again, or may be maintained throughout.</p>
+      <p id="p-00069-en" num="0086">As should be clear from above the changes in production rate which may occur during a period of non-steady-state operation depend on the operation. Usually during a start-up period the production rate is increased, for example by increasing the rate of catalyst introduction, and thus the rates of feed for the fresh feeds needed to replace consumed materials increase during the start-up. In contrast, for a transition the production rate may initially be reduced from a first steady-state operation, and subsequently increased to a subsequent steady-state operation towards the end of the transition.</p>
+      <p id="p-00070-en" num="0087">Similarly, during the period of non-steady-state operation the height of the fluidized bed may be substantially the same as that at steady-state, in which case the height of the bed is substantially constant throughout the process. Alternatively, the height of the bed can be changed during the non-steady-state operation. For example, for a transition the bed height may initially be reduced, and subsequently increased towards the end of the transition. For start-up, the reaction can be started with a lower bed and the height of the bed can be increased during the start-up period, as described in WO 99/31142.</p>
+      <p id="p-00071-en" num="0088">Similarly, the fluidisation velocity of the gas mixture may be substantially constant during the non-steady-state period, or the velocity may be varied. For example, on a start-up the velocity may initially be lower than desired at steady-state, and be increased during the start-up period.</p>
+      <p id="p-00072-en" num="0089">Regardless of any changes in the feed rates of the individual components during the non-steady-state operation, in the method of the present invention the effective flow ratios are also maintained constant.</p>
+      <p id="p-00073-en" num="0090">The polymerization is preferably carried out in a gas phase fluidized-bed reactor. Such reactors/processes are generally known. Examples are described in French Patent No. 2,207,145 or French Patent No. 2,335,526.</p>
+      <p id="p-00074-en" num="0091">The monomer is generally an olefin having from 2 to 10 carbon atoms. The comonomer may also be an olefin (other than the monomer) having from 2 to 10 carbon atoms, or may be a diene having from 2 to 10 carbon atoms.</p>
+      <p id="p-00075-en" num="0092">As used herein, the term “monomer” refers to the monomer present in the reaction at the highest partial pressure, and the term “comonomer” refers to a monomer present at a lower partial pressure. Preferred monomers are ethylene and propylene, most preferably ethylene. Preferred comonomers are olefins having 4 to 8 carbon atoms, although ethylene may be a comonomer where propylene is the monomer, and vice versa.</p>
+      <p id="p-00076-en" num="0093">Catalyst may be introduced into the reactor continuously or discontinuously. Catalyst can be introduced in particular using the equipment described in French Patent No. 2,562,077 or in French Patent No. 2,705,252. During a transition the catalyst may be changed.</p>
+      <p id="p-00077-en" num="0094">The present invention may be applied to any suitable polymerisation catalyst, but is preferably applied to a process using a Ziegler-Natta type catalyst.</p>
+      <p id="p-00078-en" num="0095">A Ziegler-Natta type catalyst is understood to mean a catalyst which comprises at least one transition metal chosen, for example, from titanium, vanadium, chromium, zirconium or hafnium. This catalyst can optionally comprise a magnesium halide, such as magnesium chloride or bromide, and/or a support based on a refractory oxide, such as silica or alumina. In particular a catalyst comprising titanium and/or vanadium, halogen and magnesium atoms can be used.</p>
+      <p id="p-00079-en" num="0096">It is also possible to use a metallocene-based catalyst comprising at least one zirconium, titanium or hafnium atom, such as, for example, those described in EP 129368, U.S. Pat. No. 5,324,800 and EP 206794. It is also possible to use a catalyst containing a heteroatom bonded to a monocyclopentadienyl, such as, for example, the catalysts described in EP 416815 and EP 420436.</p>
+      <p id="p-00080-en" num="0097">The catalyst is in principle used in conjunction with a cocatalyst which is an organometallic compound of a metal from Groups I to III of the Periodic Classification of the Elements, such as aluminium, boron, zinc or magnesium. For example, the cocatalyst can be an organoaluminium compound, such as a trialkylaluminium or an aluminoxane. Throughout the start-up period, the introduction of cocatalyst into the reactor is advantageously carried out so as to keep the cocatalyst to catalyst molar ratio constant. This ratio is preferably between 1 and 100. However, when a metallocene catalyst is used, this ratio can range from 1:10,000 to 10,000:1.</p>
+      <p id="p-00081-en" num="0098">The catalyst can be used as is or optionally in the form of a prepolymer containing, for example, from 0.1 to 200 g, preferably from 10 to 100 g, of polymer per gram of transition metal. The process of the invention is particularly suited to the use of a non-prepolymerised catalyst.</p>
+      <p id="p-00082-en" num="0099">The present invention is particularly applicable to polyethylene copolymer grades of low and medium density, which generally means products with densities in the range 890-940 kg/m<sup>3</sup>. The present invention is in particular applicable to densities in the range 900-940 kg/m<sup>3 </sup>for Ziegler products and in the range 890-930 kg/m<sup>3 </sup>for metallocene products. As used herein, densities are non-annealed densities of the polymer as measured using method ISO 1183 A.</p>
+      <p id="p-00083-en" num="0100">The reaction gas mixture may generally also contain an inert gas, which is generally nitrogen and/or an alkane, for example having from 1 to 8, preferably from 2 to 6, carbon atoms, such as pentane and/or isopentane.</p>
+      <p id="p-00084-en" num="0101">The space time yield, which is the hourly production of polymer per unit volume of the reactor, is relatively low at the beginning of the start-up period, but increases throughout the start-up period to reach a final value at steady state which is generally in the range 50 to 200 kg/h/m<sup>3</sup>.</p>
+      <p id="p-00085-en" num="0102">Generally, the total pressure in the reactor at steady-state is between 0.5 and 5 MPa, preferably between 1.5 and 2.5 MPa.</p>
+      <p id="p-00086-en" num="0103">The partial pressure of monomer at steady-state is generally between 0.3 and 1.5 MPa, preferably between 0.4 and 1.3 MPa.</p>
+      <p id="p-00087-en" num="0104">The partial pressure of comonomer at steady-state is generally between 0 and 0.7 MPa, preferably between 0 and 0.5 MPa for Ziegler catalyst operation, preferably between 0 and 0.02 MPa for chromium operation and preferably between 0.005 and 0.02 MPa for metallocene operation.</p>
+      <p id="p-00088-en" num="0000">The temperature at steady-state can generally range from 30° to 180° C., preferably from 90° to 120° C.</p>
+      <p id="p-00089-en" num="0105">The fluidization velocity at steady-state rate can generally range from 45 to 80 cm/s. If a lower velocity is used at start-up then this may be in the range from 35 to 50 cm/s.</p>
+      <p id="p-00090-en" num="0106">The process of the invention is particularly well suited to industrial-scale reactors of very large size which can have an hourly production of at least 10 tonnes of polymer. The reaction gas mixture containing the monomer and comonomer to be polymerized is generally cooled by means of at least one heat exchanger arranged outside the reactor before being recycled. Following the start-up period, the polymerization reaction is advantageously carried out as indicated in French Patent No. 2,666,337.</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00001-en" level="1">EXAMPLES</heading>
+      <p id="p-00091-en" num="0107">The Examples relate to simulated production of an LLDPE grade being produced on an industrial gas phase reactor of diameter 5 m and bed height 20 m at a target production rate of 34.2 te/hr using a metallocene catalyst and a reactor pressure of 24.2 barg. The reactor operates with a small purge to remove inerts which may otherwise build-up, but ethylene is also lost via the purge. In the present Examples comonomer (hexene) is recovered and hence is not lost to purge. At steady-state the purge flow rate and composition is approximately constant.</p>
+      <p id="p-00092-en" num="0108">Prior to simulating changes to the system, the reactor is running in steady-state with average bed density and instantaneous powder density of 916.9 kg/m3. In both Examples a perturbation is introduced by a reduction in catalyst flow of 5%. Such a change in an actual plant could be caused, for example, by partial blockage of a feed line, poor control of feeder speed, change in catalyst density and fill factor or loss of catalyst activity.</p>
+      <heading id="h-00002-en" level="1">Comparative Example</heading>
+      <p id="p-00093-en" num="0109">In the Comparative Example the ethylene flow to the reactor is controlled by the operator and fixed at the target production rate of 34.2 te/hr. This rate is maintained at steady state and throughout the perturbation.</p>
+      <p id="p-00094-en" num="0110">The powder density is controlled via adjustment of mass flow ratio wherein the hexene flow rate is controlled to maintain fixed mass flow ratio of hexene to ethylene to the reactor. Feedback from powder analysis allows the operator to adjust this ratio if necessary but because of large lags in the system short-term perturbations and changes to instantaneous powder properties cannot be controlled accurately. In the Comparative Example, the hexene to ethylene mass flow rates are maintained at a ratio of 0.105, at steady state and throughout the perturbation.</p>
+      <p id="p-00095-en" num="0111">At steady-state, the purge rate is approximately 200 kg/h, of which approximately 100 kg/h is ethylene monomer (the remainder is mainly nitrogen).</p>
+      <p id="p-00096-en" num="0112">The loss of catalyst flow results in a reduction of ethylene consumption in the reactor, and consequently an increase in ethylene partial pressure as well as total reactor pressure.</p>
+      <p id="p-00097-en" num="0113">The reactor total pressure controller compensates by increasing the purge rate from the reactor. The perturbations cause an oscillation in the reactor pressure and in the purge flow rate. The increase in purge flow rate in leads to an increased loss of ethylene.</p>
+      <p id="p-00098-en" num="0114">The results of this are shown in <figref>FIGS. 1 and 2</figref>. In particular, <figref>FIG. 2</figref> shows the oscillations in reactor pressure. Compensating for this the purge flow rate (note shown) changes correspondingly, from a maximum of about 1500 kg/hr to a minimum of nearly zero.</p>
+      <p id="p-00099-en" num="0115">
+        <figref>FIG. 1</figref> shows the feed comonomer to ethylene mass flow ratio, which is constant, and the effect that the changes in reactor composition has on the instantaneous density of the polymer produced in the reactor. As well as the magnitude of the oscillations in density immediately following the perturbation it is noticeable that even once the reactor returns to a new steady-state there is an off-set in the density of the polymer compared to that prior to the perturbation.</p>
+      <p id="p-00100-en" num="0116">The reactor is not controlled on effective flow ratio, but the process oscillates between a value for the hexene:ethylene effective flow ratio of 0.105 (when the purge valve is closed, wherein the effective flow ratio is the same as the feed ratio) to a value of 0.1073 (with the purge flow at its maximum and hence when most ethylene is lost to purge).</p>
+      <p id="p-00101-en" num="0117">Even small changes in instantaneous density may have a damaging effect on reactor operation; usually reactor conditions (notably operating temperature) are selected to prevent formation of low density and low sintering temperature material, and such perturbations can give rise to agglomerates.</p>
+      <heading id="h-00003-en" level="1">Example According to the Invention</heading>
+      <p id="p-00102-en" num="0118">In the Example according to the present invention the reactor is controlled on the hexene:ethylene effective flow ratio.</p>
+      <p id="p-00103-en" num="0119">The steady-state conditions are as in the Comparative Example. Thus, the ethylene flow to the reactor is controlled by the operator and fixed at the target production rate of 34.2 te/hr. This rate is maintained at steady state and throughout the perturbation.</p>
+      <p id="p-00104-en" num="0120">At steady-state, the purge rate is approximately 200 kg/h, of which approximately 100 kg/h is ethylene monomer (the remainder is mainly nitrogen).</p>
+      <p id="p-00105-en" num="0121">In this example, however, the hexene flow rate is controlled to maintain a fixed effective flow ratio of hexene to ethylene. More particularly, the hexene to ethylene effective flow ratio is maintained at a ratio 0.1053. At steady-state this corresponds to the same mass flow ratio of 0.105 used in the Comparative Example.</p>
+      <p id="p-00106-en" num="0122">(At steady-state, the flow rate of ethylene is 34.2 te/hr, the flow rate of hexene is 3.59 te/hr, and the loss of ethylene to purge is 0.1 te/hr, so the feeds flow ratio is 3.59/34.2=0.105, whilst the effective flow ratio is 3.59/(34.1−0.1), which is 0.1053.)</p>
+      <p id="p-00107-en" num="0123">The simulated loss of catalyst flow results in a reduction of ethylene consumption in the reactor, and consequently an increase in ethylene partial pressure as well as total reactor pressure.</p>
+      <p id="p-00108-en" num="0124">The reactor total pressure controller compensates by increasing the purge rate from the reactor. The perturbations cause an oscillation in the reactor pressure and in the purge flow rate. The increase in purge flow rate in turn leads to an increased loss of ethylene. In this Example, however, the comonomer feed is varied to compensate for the additional loss of monomer, and thereby maintain the effective flow ratio at 0.1053.</p>
+      <p id="p-00109-en" num="0125">The reactor pressure oscillates in the same manner as the Comparative Example. However, the adjustment of comonomer feed to compensate for the increased loss of ethylene reduces the variation of comonomer to monomer in the reactor, which in turn reduces the oscillations in instantaneous density of the polymer. Both of these are shown in <figref>FIG. 3</figref>.</p>
+      <p id="p-00110-en" num="0126">As is clear from comparison of <figref>FIG. 3</figref> with <figref>FIG. 1</figref>, the use of effective flow ratio control significantly reduces the changes in instantaneous density of the polymer being formed in the reactor. Further, the new steady-state is achieved more rapidly than in the Comparative Example, and there is a smaller change in the powder density between the new steady-state and that prior to the perturbation.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>-<b>15</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>16</b>. A method for controlling a process for the production of a polymer by polymerisation of a monomer and a comonomer which process comprises:
+<claim-text>maintaining a substantially constant effective flow ratio (EFR), said effective flow ratio being defined as:
+<claim-text><i>EFR</i>=(<i>Q</i><sub>como</sub><i>−L</i><sub>como</sub>)/(<i>Q</i><sub>mono</sub><i>−L</i><sub>mono</sub>)</claim-text></claim-text><claim-text>Q<sub>como </sub>and Q<sub>mono </sub>being, respectively, flow rates of comonomer and monomer to the reactor,</claim-text><claim-text>L<sub>como </sub>and L<sub>mono </sub>being, respectively, losses of comonomer and monomer.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>17</b>. A method according to <claim-ref idref="clm-00002-en">claim 16</claim-ref> wherein Q<sub>mono </sub>and Q<sub>como </sub>are flow rates of fresh monomer and fresh comonomer to the reactor.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>18</b>. A method according to <claim-ref idref="clm-00002-en">claim 16</claim-ref> wherein L<sub>mono </sub>and L<sub>como </sub>are losses of monomer and comonomer to purges.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>19</b>. A method for controlling a process for the production of a polymer by polymerisation of a monomer which process comprises:
+<claim-text>maintaining a substantially constant effective flow ratio (EFR), said effective flow ratio being defined as:
+<claim-text><i>EFR</i>=(<i>Q</i><sub>hyd</sub><i>−L</i><sub>hyd</sub>)/(<i>Q</i><sub>mono</sub><i>−L</i><sub>mono</sub>)</claim-text></claim-text><claim-text>Q<sub>hyd </sub>and Q<sub>mono </sub>being, respectively, flow rates of hydrogen and monomer to the reactor,</claim-text><claim-text>L<sub>hyd </sub>and L<sub>mono </sub>being, respectively, losses of hydrogen and monomer.</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>20</b>. A method according to <claim-ref idref="clm-00005-en">claim 19</claim-ref> wherein Qmono and Qhyd are flow rates of fresh monomer and fresh hydrogen to the reactor.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>21</b>. A method according to <claim-ref idref="clm-00005-en">claim 19</claim-ref> wherein Lmono and Lhyd are losses of monomer and hydrogen to purges.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>22</b>. A method according to <claim-ref idref="clm-00002-en">claim 16</claim-ref> which is applied under both steady-state and non-steady-state conditions.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>23</b>. A method according to <claim-ref idref="clm-00005-en">claim 19</claim-ref> which is applied under both steady-state and non-steady-state conditions.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>24</b>. A method according to <claim-ref idref="clm-00002-en">claim 16</claim-ref> which is a method for the start-up or transition of a process for the production of a polymer by polymerisation of a monomer and which process comprises during the start-up or transition:
+<claim-text>I. maintaining a substantially constant effective flow ratio (EFR), said effective flow ratio being defined as:
+<claim-text><i>EFR</i>=(<i>Q</i><sub>como</sub><i>−L</i><sub>como</sub>)/(<i>Q</i><sub>mono</sub><i>−L</i><sub>mono</sub>)</claim-text><claim-text>Q<sub>como </sub>and Q<sub>mono </sub>being, respectively, flow rates of comonomer and monomer to the reactor,</claim-text><claim-text>L<sub>como </sub>and L<sub>mono </sub>being, respectively, losses of comonomer and monomer.</claim-text></claim-text><claim-text>and optionally</claim-text><claim-text>II. maintaining a substantially constant effective flow ratio (EFR), said effective flow ratio being defined as:
+<claim-text><i>EFR</i>=(<i>Q</i><sub>hyd</sub><i>−L</i><sub>hyd</sub>)/(<i>Q</i><sub>mono</sub><i>−L</i><sub>mono</sub>)</claim-text><claim-text>Q<sub>hyd </sub>and Q<sub>mono </sub>being, respectively, flow rates of hydrogen and monomer to the reactor,</claim-text><claim-text>L<sub>hyd </sub>and L<sub>mono </sub>being, respectively, losses of hydrogen and monomer.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>25</b>. A method according to <claim-ref idref="clm-00005-en">claim 19</claim-ref> which is a method for the start-up or transition of a process for the production of a polymer by polymerisation of a monomer and which process comprises during the start-up or transition:
+<claim-text>I. maintaining a substantially constant effective flow ratio (EFR), said effective flow ratio being defined as:
+<claim-text><i>EFR</i>=(<i>Q</i><sub>hyd</sub><i>−L</i><sub>hyd</sub>)/(<i>Q</i><sub>mono</sub><i>−L</i><sub>mono</sub>)</claim-text><claim-text>Q<sub>hyd </sub>and Q<sub>mono </sub>being, respectively, flow rates of hydrogen and monomer to the reactor,</claim-text><claim-text>L<sub>hyd </sub>and L<sub>mono </sub>being, respectively, losses of hydrogen and monomer,</claim-text></claim-text><claim-text>and optionally.</claim-text><claim-text>II. maintaining a substantially constant effective flow ratio (EFR), said effective flow ratio being defined as:
+<claim-text><i>EFR</i>=(<i>Q</i><sub>como</sub><i>−L</i><sub>como</sub>)/(<i>Q</i><sub>mono</sub><i>−L</i><sub>mono</sub>)</claim-text><claim-text>Q<sub>como </sub>and Q<sub>mono </sub>being, respectively, flow rates of comonomer and monomer to the reactor,</claim-text><claim-text>L<sub>como </sub>and L<sub>mono </sub>being, respectively, losses of comonomer and monomer.</claim-text></claim-text><claim-text>and optionally</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>26</b>. A method according to <claim-ref idref="clm-00010-en">claim 24</claim-ref> which comprises the above control during a start-up and subsequent steady-state operation.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>27</b>. A method according to <claim-ref idref="clm-00011-en">claim 25</claim-ref> which comprises the above control during a start-up and subsequent steady-state operation.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>28</b>. A method according to <claim-ref idref="clm-00010-en">claim 24</claim-ref> which comprises the above control during a transition and in preceding and subsequent steady-state operations.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>29</b>. A method according to <claim-ref idref="clm-00011-en">claim 25</claim-ref> which comprises the above control during a transition and in preceding and subsequent steady-state operations.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>30</b>. A method according to <claim-ref idref="clm-00002-en">claim 16</claim-ref> which is carried out in a gas phase fluidized-bed reactor.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>31</b>. A method according to <claim-ref idref="clm-00005-en">claim 19</claim-ref> which is carried out in a gas phase fluidized-bed reactor.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>32</b>. A method according to <claim-ref idref="clm-00002-en">claim 16</claim-ref> wherein the monomer is ethylene or propylene.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>33</b>. A method according to <claim-ref idref="clm-00005-en">claim 19</claim-ref> wherein the monomer is ethylene or propylene.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>34</b>. A method according to <claim-ref idref="clm-00018-en">claim 32</claim-ref> wherein the comonomer is an olefin having 4 to 8 carbon atoms, or ethylene where propylene is the monomer, or an olefin having 4 to 8 carbon atoms, or propylene where ethylene is the monomer.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>35</b>. A method according to <claim-ref idref="clm-00002-en">claim 16</claim-ref> where the polymerisation process uses a Ziegler-Natta type catalyst, optionally in conjunction with a cocatalyst which is an organometallic compound of a metal from Groups I to III of the Periodic Classification of the Elements.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>36</b>. A method according to <claim-ref idref="clm-00005-en">claim 19</claim-ref> where the polymerisation process uses a Ziegler-Natta type catalyst, optionally in conjunction with a cocatalyst which is an organometallic compound of a metal from Groups I to III of the Periodic Classification of the Elements.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150246989A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246989A1-20150903-D00001.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150246989A1.PDF" type="pdf" size="450632" pages="9" />
+</lexisnexis-patent-document>

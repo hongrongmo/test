@@ -1,0 +1,888 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2941263A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151111" time-inserted="082309" date-changed="20151226" time-changed="090624">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="122015530">
+        <country>EP</country>
+        <doc-number>2941263</doc-number>
+        <kind>A1</kind>
+        <date>20151111</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>13869176</doc-number>
+        <date>20131223</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151111">
+      <priority-claim sequence="1" kind="national">
+        <country>KR</country>
+        <doc-number>1020120158130</doc-number>
+        <date>20121231</date>
+      </priority-claim>
+      <priority-claim sequence="2" kind="national">
+        <country>KR</country>
+        <doc-number>1020130084167</doc-number>
+        <date>20130717</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>KR</country>
+        <doc-number>20120158130</doc-number>
+        <kind>A</kind>
+        <date>20121231</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>KR</country>
+        <doc-number>20130084167</doc-number>
+        <kind>A</kind>
+        <date>20130717</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="3" data-format="docdb">
+        <country>KR</country>
+        <doc-number>2013011986</doc-number>
+        <kind>W</kind>
+        <date>20131223</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>20120158130</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>20130084167</doc-number>
+      </priority-claim>
+      <priority-claim sequence="3" data-format="original">
+        <doc-number>2013011986</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>KR20120158130</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>KR20130084167</doc-number>
+      </priority-claim>
+      <priority-claim sequence="3" data-format="epodoc">
+        <doc-number>WO2013KR11986</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151112">
+      <gazette-reference>
+        <date>20151111</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151111</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151111</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151112">
+      <request-for-examination>
+        <date>20150528</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20151112">
+      <classification-ipcr sequence="1">
+        <text>A61K  36/80        20060101AFI20140716BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>36</main-group>
+        <subgroup>80</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140716</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61P  11/06        20060101ALI20140716BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>P</subclass>
+        <main-group>11</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140716</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61P  29/00        20060101ALI20140716BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>P</subclass>
+        <main-group>29</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140716</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151112">
+      <classification-cpc sequence="1">
+        <text>A61K  36/80        20130101 FI20140725BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>36</main-group>
+        <subgroup>80</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140725</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <invention-title id="title_ger" date-changed="20151111" lang="ger" format="original">AUS PSEUDOLYSIMACHION ROTUNDUM VAR. ISOLIERTES GEREINIGTES EXTRAKT SUBINTEGRUM MIT HOHEM WIRKSTOFFGEHALT, HERSTELLUNG DAVON UND ZUSAMMENSETZUNG DAMIT ALS WIRKSTOFF ZUR VORBEUGUNG ODER BEHANDLUNG VON ENTZÜNDUNGEN, ALLERGIEN UND ASTHMA</invention-title>
+    <invention-title id="title_eng" date-changed="20151111" lang="eng" format="original">A PURIFIED EXTRACT ISOLATED FROM PSEUDOLYSIMACHION ROTUNDUM VAR. SUBINTEGRUM CONTAINING ABUNDANT AMOUNT OF ACTIVE INGREDIENT, THE PREPARATION THEREOF, AND THE COMPOSITION COMPRISING THE SAME AS AN ACTIVE INGREDIENT FOR PREVENTING OR TREATING INFLAMMATION, ALLERGY AND ASTHMA</invention-title>
+    <invention-title id="title_fre" date-changed="20151111" lang="fre" format="original">EXTRAIT PURIFIÉ ISOLÉ À PARTIR DE PSEUDOLYSIMACHION ROTUNDUM VAR SUBINTEGRUM CONTENANT UNE GRANDE QUANTITÉ DE PRINCIPE ACTIF, SA PRÉPARATION ET COMPOSITION LE COMPRENANT COMME PRINCIPE ACTIF POUR PRÉVENIR UNE INFLAMMATION, UNE ALLERGIE ET L'ASTHME</invention-title>
+    <parties date-changed="20151111">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Yungjin Pharmaceutical Co., Ltd.</orgname>
+            <registered-number>101434231</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>1057, Cheonho-daero</address-1>
+              <city>Gangdong-gu Seoul 134-721</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant sequence="2" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Korea Research Institute of Bioscience and Biotechnology</orgname>
+            <registered-number>101339857</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>125 Gwahak-ro Yuseong-gu</address-1>
+              <city>Daejeon 305-806</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>LEE, Yongnam</name>
+            <address>
+              <address-1>207-401 WoncheonJugong Apt. Woncheon-dong Yeongtong-gu</address-1>
+              <city>Suwon-si Gyeonggi-do 443-756</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>YOO, Ji-seok</name>
+            <address>
+              <address-1>102-805 Dongsung Apt. Geumgok-dong Gwonseon-gu</address-1>
+              <city>Suwon-si Gyeonggi-do 441-460</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>SHIN, Dae-hee</name>
+            <address>
+              <address-1>1007 Hyundae ESA Apt. 1338 Seocho-gu</address-1>
+              <city>Seoul 137-860</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4">
+          <addressbook lang="eng">
+            <name>RYOO, Byung-hwan</name>
+            <address>
+              <address-1>104-303 Whiteville Gumi-dong Bundang-gu</address-1>
+              <city>Seongnam-si Gyeonggi-do 463-845</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5">
+          <addressbook lang="eng">
+            <name>OH, Sei-ryang</name>
+            <address>
+              <address-1>125 Gwahak-ro Yuseong-gu</address-1>
+              <city>Daejeon 305-806</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6">
+          <addressbook lang="eng">
+            <name>AHN, Kyung-seop</name>
+            <address>
+              <address-1>125 Gwahak-ro Yuseong-gu</address-1>
+              <city>Daejeon 305-806</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="7">
+          <addressbook lang="eng">
+            <name>LEE, Hyeongkyu</name>
+            <address>
+              <address-1>125 Gwahak-ro Yuseong-gu</address-1>
+              <city>Daejeon 305-806</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="8">
+          <addressbook lang="eng">
+            <name>KWON, Ok-kyoung</name>
+            <address>
+              <address-1>125 Gwahak-ro Yuseong-gu</address-1>
+              <city>Daejeon 305-806</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="9">
+          <addressbook lang="eng">
+            <name>KIM, Doo-young</name>
+            <address>
+              <address-1>125 Gwahak-ro Yuseong-gu</address-1>
+              <city>Daejeon 305-806</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="10">
+          <addressbook lang="eng">
+            <name>KIM, Jung-hee</name>
+            <address>
+              <address-1>125 Gwahak-ro Yuseong-gu</address-1>
+              <city>Daejeon 305-806</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="11">
+          <addressbook lang="eng">
+            <name>SONG, Hyuk-hwan</name>
+            <address>
+              <address-1>125 Gwahak-ro Yuseong-gu</address-1>
+              <city>Daejeon 305-806</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Bohmann, Armin K.</name>
+            <registered-number>100046635</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Bohmann Anwaltssozietät Nymphenburger Straße 1</address-1>
+              <city>80335 München</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151111">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>KR13011986</doc-number>
+        <date>20131223</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014104672</doc-number>
+        <date>20140703</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151111">
+      <main-family family-id="166465882">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2941263</doc-number>
+            <kind>A1</kind>
+            <date>20151111</date>
+          </document-id>
+          <application-date>
+            <date>20131223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2893410</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2013371216</doc-number>
+            <kind>A1</kind>
+            <date>20150521</date>
+          </document-id>
+          <application-date>
+            <date>20131223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104822386</doc-number>
+            <kind>A</kind>
+            <date>20150805</date>
+          </document-id>
+          <application-date>
+            <date>20131223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014104672</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131223</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="167182312">
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>101504651</doc-number>
+            <kind>B1</kind>
+            <date>20150316</date>
+          </document-id>
+          <application-date>
+            <date>20141010</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020140127195</doc-number>
+            <kind>A</kind>
+            <date>20141103</date>
+          </document-id>
+          <application-date>
+            <date>20141010</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2893410</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104822386</doc-number>
+            <kind>A</kind>
+            <date>20150805</date>
+          </document-id>
+          <application-date>
+            <date>20131223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2941263</doc-number>
+            <kind>A1</kind>
+            <date>20151111</date>
+          </document-id>
+          <application-date>
+            <date>20131223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>101476045</doc-number>
+            <kind>B1</kind>
+            <date>20141217</date>
+          </document-id>
+          <application-date>
+            <date>20130717</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2013371216</doc-number>
+            <kind>A1</kind>
+            <date>20150521</date>
+          </document-id>
+          <application-date>
+            <date>20131223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020140087982</doc-number>
+            <kind>A</kind>
+            <date>20140709</date>
+          </document-id>
+          <application-date>
+            <date>20130717</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014104672</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131223</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151112" lang="eng" format="equivalent" country="CA" doc-number="2893410" kind="A1">
+    <p>The present invention relates to inventive novel industrialized method for preparing purified extract containing more abundant active ingredients such as catalpol derivatives from the extract of Pseudolysimachion rotundum var subintegrum than that prepared by the conventional preparation method disclosed in the prior art and the therapeutics or functional health food comprising the purified extract for treating and preventing inflammatory, allergic or asthmatic disease. The purified extract showed more potent anti-inflammatory, anti-allergy and anti-asthma activity than that prepared by the conventional preparation method disclosed in the prior art through various in vivo tests such as inhibition test on the reproduction of eosinolphil, the release of immunoglobulin and inflammatory chemokines in plasma and bronchoalveolar fluid as well as the suppression of airway hyperresponsiveness and golblet cell hyperplasia in a OVA-sensitized/challenged mouse model.</p>
+  </abstract>
+  <legal-data date-changed="20151226">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20151111</date>
+      </publication-date>
+      <event-code-1>17P</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXAMINATION FILED</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941263A1</docdb-publication-number>
+      <docdb-application-id>419622063</docdb-application-id>
+      <effective-date>
+        <date>20150528</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20151111</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941263A1</docdb-publication-number>
+      <docdb-application-id>419622063</docdb-application-id>
+      <corresponding-kind>A1</corresponding-kind>
+      <legal-designated-states>
+        <country>AL</country>
+        <country>AT</country>
+        <country>BE</country>
+        <country>BG</country>
+        <country>CH</country>
+        <country>CY</country>
+        <country>CZ</country>
+        <country>DE</country>
+        <country>DK</country>
+        <country>EE</country>
+        <country>ES</country>
+        <country>FI</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>GR</country>
+        <country>HR</country>
+        <country>HU</country>
+        <country>IE</country>
+        <country>IS</country>
+        <country>IT</country>
+        <country>LI</country>
+        <country>LT</country>
+        <country>LU</country>
+        <country>LV</country>
+        <country>MC</country>
+        <country>MK</country>
+        <country>MT</country>
+        <country>NL</country>
+        <country>NO</country>
+        <country>PL</country>
+        <country>PT</country>
+        <country>RO</country>
+        <country>RS</country>
+        <country>SE</country>
+        <country>SI</country>
+        <country>SK</country>
+        <country>SM</country>
+        <country>TR</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20151111</date>
+      </publication-date>
+      <event-code-1>AX</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXTENSION OF THE EUROPEAN PATENT TO</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941263A1</docdb-publication-number>
+      <docdb-application-id>419622063</docdb-application-id>
+      <countries-concerned>
+        <country>BA</country>
+        <country>ME</country>
+      </countries-concerned>
+    </legal-event>
+    <legal-event sequence="4">
+      <publication-date>
+        <date>20151118</date>
+      </publication-date>
+      <event-code-1>RIN1</event-code-1>
+      <legal-description>INVENTOR (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941263A1</docdb-publication-number>
+      <docdb-application-id>419622063</docdb-application-id>
+      <inventor-name>KWON, OK-KYOUNG</inventor-name>
+    </legal-event>
+    <legal-event sequence="5">
+      <publication-date>
+        <date>20151118</date>
+      </publication-date>
+      <event-code-1>RIN1</event-code-1>
+      <legal-description>INVENTOR (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941263A1</docdb-publication-number>
+      <docdb-application-id>419622063</docdb-application-id>
+      <inventor-name>SHIN, DAE-HEE</inventor-name>
+    </legal-event>
+    <legal-event sequence="6">
+      <publication-date>
+        <date>20151118</date>
+      </publication-date>
+      <event-code-1>RIN1</event-code-1>
+      <legal-description>INVENTOR (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941263A1</docdb-publication-number>
+      <docdb-application-id>419622063</docdb-application-id>
+      <inventor-name>LEE, YONGNAM</inventor-name>
+    </legal-event>
+    <legal-event sequence="7">
+      <publication-date>
+        <date>20151118</date>
+      </publication-date>
+      <event-code-1>RIN1</event-code-1>
+      <legal-description>INVENTOR (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941263A1</docdb-publication-number>
+      <docdb-application-id>419622063</docdb-application-id>
+      <inventor-name>KIM, JUNG-HEE</inventor-name>
+    </legal-event>
+    <legal-event sequence="8">
+      <publication-date>
+        <date>20151118</date>
+      </publication-date>
+      <event-code-1>RIN1</event-code-1>
+      <legal-description>INVENTOR (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941263A1</docdb-publication-number>
+      <docdb-application-id>419622063</docdb-application-id>
+      <inventor-name>KIM, DOO-YOUNG</inventor-name>
+    </legal-event>
+    <legal-event sequence="9">
+      <publication-date>
+        <date>20151118</date>
+      </publication-date>
+      <event-code-1>RIN1</event-code-1>
+      <legal-description>INVENTOR (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941263A1</docdb-publication-number>
+      <docdb-application-id>419622063</docdb-application-id>
+      <inventor-name>SONG, HYUK-HWAN</inventor-name>
+    </legal-event>
+    <legal-event sequence="10">
+      <publication-date>
+        <date>20151118</date>
+      </publication-date>
+      <event-code-1>RIN1</event-code-1>
+      <legal-description>INVENTOR (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941263A1</docdb-publication-number>
+      <docdb-application-id>419622063</docdb-application-id>
+      <inventor-name>LEE, HYEONGKYU</inventor-name>
+    </legal-event>
+    <legal-event sequence="11">
+      <publication-date>
+        <date>20151118</date>
+      </publication-date>
+      <event-code-1>RIN1</event-code-1>
+      <legal-description>INVENTOR (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941263A1</docdb-publication-number>
+      <docdb-application-id>419622063</docdb-application-id>
+      <inventor-name>RYOO, BYUNG-HWAN</inventor-name>
+    </legal-event>
+    <legal-event sequence="12">
+      <publication-date>
+        <date>20151118</date>
+      </publication-date>
+      <event-code-1>RIN1</event-code-1>
+      <legal-description>INVENTOR (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941263A1</docdb-publication-number>
+      <docdb-application-id>419622063</docdb-application-id>
+      <inventor-name>OH, SEI-RYANG</inventor-name>
+    </legal-event>
+    <legal-event sequence="13">
+      <publication-date>
+        <date>20151118</date>
+      </publication-date>
+      <event-code-1>RIN1</event-code-1>
+      <legal-description>INVENTOR (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941263A1</docdb-publication-number>
+      <docdb-application-id>419622063</docdb-application-id>
+      <inventor-name>AHN, KYUNG-SEOP</inventor-name>
+    </legal-event>
+    <legal-event sequence="14">
+      <publication-date>
+        <date>20151118</date>
+      </publication-date>
+      <event-code-1>RIN1</event-code-1>
+      <legal-description>INVENTOR (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941263A1</docdb-publication-number>
+      <docdb-application-id>419622063</docdb-application-id>
+      <inventor-name>YOO, JI-SEOK</inventor-name>
+    </legal-event>
+    <legal-event sequence="15">
+      <publication-date>
+        <date>20151125</date>
+      </publication-date>
+      <event-code-1>RIN1</event-code-1>
+      <legal-description>INVENTOR (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941263A1</docdb-publication-number>
+      <docdb-application-id>419622063</docdb-application-id>
+      <inventor-name>LEE, HYEONGKYU</inventor-name>
+    </legal-event>
+    <legal-event sequence="16">
+      <publication-date>
+        <date>20151125</date>
+      </publication-date>
+      <event-code-1>RIN1</event-code-1>
+      <legal-description>INVENTOR (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941263A1</docdb-publication-number>
+      <docdb-application-id>419622063</docdb-application-id>
+      <inventor-name>KIM, DOO-YOUNG</inventor-name>
+    </legal-event>
+    <legal-event sequence="17">
+      <publication-date>
+        <date>20151125</date>
+      </publication-date>
+      <event-code-1>RIN1</event-code-1>
+      <legal-description>INVENTOR (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941263A1</docdb-publication-number>
+      <docdb-application-id>419622063</docdb-application-id>
+      <inventor-name>KWON, OK-KYOUNG</inventor-name>
+    </legal-event>
+    <legal-event sequence="18">
+      <publication-date>
+        <date>20151125</date>
+      </publication-date>
+      <event-code-1>RIN1</event-code-1>
+      <legal-description>INVENTOR (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941263A1</docdb-publication-number>
+      <docdb-application-id>419622063</docdb-application-id>
+      <inventor-name>SONG, HYUK-HWAN</inventor-name>
+    </legal-event>
+    <legal-event sequence="19">
+      <publication-date>
+        <date>20151125</date>
+      </publication-date>
+      <event-code-1>RIN1</event-code-1>
+      <legal-description>INVENTOR (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941263A1</docdb-publication-number>
+      <docdb-application-id>419622063</docdb-application-id>
+      <inventor-name>KIM, JUNG-HEE</inventor-name>
+    </legal-event>
+    <legal-event sequence="20">
+      <publication-date>
+        <date>20151125</date>
+      </publication-date>
+      <event-code-1>RIN1</event-code-1>
+      <legal-description>INVENTOR (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941263A1</docdb-publication-number>
+      <docdb-application-id>419622063</docdb-application-id>
+      <inventor-name>LEE, YONGNAM</inventor-name>
+    </legal-event>
+    <legal-event sequence="21">
+      <publication-date>
+        <date>20151125</date>
+      </publication-date>
+      <event-code-1>RIN1</event-code-1>
+      <legal-description>INVENTOR (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941263A1</docdb-publication-number>
+      <docdb-application-id>419622063</docdb-application-id>
+      <inventor-name>RYOO, BYUNG-HWAN</inventor-name>
+    </legal-event>
+    <legal-event sequence="22">
+      <publication-date>
+        <date>20151125</date>
+      </publication-date>
+      <event-code-1>RIN1</event-code-1>
+      <legal-description>INVENTOR (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941263A1</docdb-publication-number>
+      <docdb-application-id>419622063</docdb-application-id>
+      <inventor-name>SHIN, DAE-HEE</inventor-name>
+    </legal-event>
+    <legal-event sequence="23">
+      <publication-date>
+        <date>20151125</date>
+      </publication-date>
+      <event-code-1>RIN1</event-code-1>
+      <legal-description>INVENTOR (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941263A1</docdb-publication-number>
+      <docdb-application-id>419622063</docdb-application-id>
+      <inventor-name>OH, SEI-RYANG</inventor-name>
+    </legal-event>
+    <legal-event sequence="24">
+      <publication-date>
+        <date>20151125</date>
+      </publication-date>
+      <event-code-1>RIN1</event-code-1>
+      <legal-description>INVENTOR (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941263A1</docdb-publication-number>
+      <docdb-application-id>419622063</docdb-application-id>
+      <inventor-name>YOO, JI-SEOK</inventor-name>
+    </legal-event>
+    <legal-event sequence="25">
+      <publication-date>
+        <date>20151125</date>
+      </publication-date>
+      <event-code-1>RIN1</event-code-1>
+      <legal-description>INVENTOR (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2941263A1</docdb-publication-number>
+      <docdb-application-id>419622063</docdb-application-id>
+      <inventor-name>AHN, KYUNG-SEOP</inventor-name>
+    </legal-event>
+  </legal-data>
+</lexisnexis-patent-document>

@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150259761A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030125" date-changed="20151002" time-changed="033548">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121314572">
+        <country>US</country>
+        <doc-number>20150259761</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14659238</doc-number>
+        <date>20150316</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>C21C   5/30        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>21</class>
+        <subclass>C</subclass>
+        <main-group>5</main-group>
+        <subgroup>30</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C21C   5/46        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>21</class>
+        <subclass>C</subclass>
+        <main-group>5</main-group>
+        <subgroup>46</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C21C   7/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>21</class>
+        <subclass>C</subclass>
+        <main-group>7</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>C21C   5/30        20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>21</class>
+        <subclass>C</subclass>
+        <main-group>5</main-group>
+        <subgroup>30</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C21C   5/4606      20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>21</class>
+        <subclass>C</subclass>
+        <main-group>5</main-group>
+        <subgroup>4606</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C21C   7/00        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>21</class>
+        <subclass>C</subclass>
+        <main-group>7</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C21C2005/4626      20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>21</class>
+        <subclass>C</subclass>
+        <main-group>2005</main-group>
+        <subgroup>4626</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>F27D   3/16        20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>27</class>
+        <subclass>D</subclass>
+        <main-group>3</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>F27D  21/0014      20130101 LI20150709BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>27</class>
+        <subclass>D</subclass>
+        <main-group>21</main-group>
+        <subgroup>0014</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150709</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>F27D  21/02        20130101 LI20150709BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>27</class>
+        <subclass>D</subclass>
+        <main-group>21</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150709</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>F27D2003/169       20130101 LA20150709BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>27</class>
+        <subclass>D</subclass>
+        <main-group>2003</main-group>
+        <subgroup>169</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150709</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>F27D2019/0006      20130101 LA20150709BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>27</class>
+        <subclass>D</subclass>
+        <main-group>2019</main-group>
+        <subgroup>0006</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150709</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>F27D2021/026       20130101 LA20150709BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>27</class>
+        <subclass>D</subclass>
+        <main-group>2021</main-group>
+        <subgroup>026</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150709</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">12</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">METAL MAKING LANCE WITH SPRING-LOADED THERMOCOUPLE OR CAMERA IN LANCE TIP</invention-title>
+    <related-documents date-changed="20150917">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61952997</doc-number>
+          <date>20140314</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Berry Metal Company</orgname>
+            <role>02</role>
+            <address>
+              <city>Harmony</city>
+              <state>PA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Dengel</last-name>
+            <first-name>Derek S.</first-name>
+            <address>
+              <city>Harmony</city>
+              <state>PA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173667502">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259761</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150316</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173667499">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259761</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150316</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">An oxygen blowing lance comprising: a lance body including an oxygen conduit and cooling water inlet and outlet conduits surrounding said oxygen conduit; a lance head connected to said lance body and comprising a nozzle body, said nozzle body including a central strut having bore hole, a plurality of nozzles arranged about said central strut, and a plurality of cooling chambers arranged about said central strut, wherein said plurality of nozzles are in fluid communication with said oxygen conduit for discharging oxygen from said oxygen conduit onto a metal bath in a converter vessel, and wherein said plurality of cooling chambers are in fluid communication with said cooling water inlet and outlet conduits; a temperature probe or camera assembly received in said bore hole for monitoring the temperature of said lance head or molten heat in which the lance is inserted; signal lines connected to said temperature probe for conveying signals from said temperature probe whereby operation of said blowing lance is regulated in response to said signals; and a protective pipe pressurized with a gas disposed in the bore and surrounding said temperature probe assembly and the signal lines.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150625</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015259761A1</docdb-publication-number>
+      <docdb-application-id>444515109</docdb-application-id>
+      <new-owner>BERRY METAL COMPANY, PENNSYLVANIA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:DENGEL, DEREK S.;REEL/FRAME:035908/0609</free-text-description>
+      <effective-date>
+        <date>20150528</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application claims priority to, and the benefit of, the U.S. provisional patent application U.S. Patent Applications Ser. No. 61/952,997 filed on Mar. 14, 2014, which is hereby incorporated by reference in its entirety for all purposes.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">The present disclosure represents improvements upon the disclosure of U.S. Pat. No. 6,599,464, incorporated by reference herein in its entirety.</p>
+      <p id="p-00003-en" num="0003">For the metallurgical treatment of molten steel in a converter, oxygen is blown onto the top of the molten steel under the control of a blowing lance. The oxygen lance is subjected to a high thermal load during this top blowing, particularly on its front end. It is therefore typical to cool the lance down intensively. The most effective way to cool an oxygen blowing lance is to thoroughly flush die head of the lance with a large volume of cool water under high pressure. The head of the lance is made of a material with good thermal conductivity, such as copper. High temperature peaks up to 3000 degrees C., particularly at the front end of the lance head which is the focus of heat radiating from the surface of the bath as well as wear and tear lead over time to a reduction in the thickness of the cooling chamber walls found in the head of the lance. If there is not enough distance between the head of the lance and the molten metal, the walls can weaken rapidly and suddenly rupture because they have been weakened. Any release of water vaporizes explosively and damages more than just the metallurgical process. If the lance head ruptures, the treatment of the enamel must also be terminated immediately.</p>
+      <p id="p-00004-en" num="0004">To avoid the danger of a water release while simultaneously cooling the lance even when the lance is plunged into the molten steel melt, there is a process (DE 35 43 836 C2), which employs two blowing lances used in rotation. These two lances are cooled alternately and intensively with cool air and then with cool water. The lance in the blow position which is being plunged into the molten steel is cooled with cool air while the other lance outside of the molten steel is cooled intensively with cool water. By repeatedly switching as needed between cool air cooling and cool water cooling the overheating of either lance can be avoided, the advantage of effectively avoiding a water release is the cost of purchasing a second lance.</p>
+      <p id="p-00005-en" num="0005">Starting at this point in the state of technology the disclosure concerns a process for the refinement of molten steel in a converter with top blown oxygen on the molten steel surface with a water cooled blowing lance made up of a ‘shafted’ lance body and a lance head.</p>
+      <p id="p-00006-en" num="0006">Furthermore, the disclosure concerns a water cooled oxygen blowing lance made up of a shafted lance body and lance head, for implementation of this process more specifically, with an oxygen supply that runs through the lance body and flows to blowing nozzles distributed in the lance head and with outlet and inlet passageways for water running through the lance body to the cooling chambers in the lance head.</p>
+      <p id="p-00007-en" num="0007">The disclosure is based on the task of achieving a process as above with which the metallurgical blowing process is monitored and controlled. The disclosure is also based on the task of creating an oxygen blowing lance that to a great extent is protected from the release of water.</p>
+      <p id="p-00008-en" num="0008">According to the process, the problem is solved in that the temperature in the lance head of the blowing lance, which is transferred from the molten steel to the lance head is monitored using at least one of the temperature probes which are integrated into the lance head and regulated by cooling off with water and/or with an oxygen supply and/or the addition of aggregates and/or the distance of the lance head from the molten metal bath, In the process, the abrasion on the front end of the lance head as a function of the tool life and the temperature curve as a function of the tool life can be primarily considered as correction sizes. With the addition of aggregates it can be assumed that the rate and the time of the addition influence temperature regulation. In particular, scrap for cooling, briquettes, ores, lime and other similar things are considered as aggregates.</p>
+      <p id="p-00009-en" num="0009">In the disclosure the temperature of the melting bath surface radiating directly onto the front end of the lance head is detected through the temperature in the lance head. Using this measurement of the temperature the metallurgical process of the refinement can be controlled. At the same time the head of the blowing lance can be protected from the release of water through the various individual steps or through a combination of measures.</p>
+      <p id="p-00010-en" num="0010">It is true that it is already known how to determine temperature for water cooled blowing lances (JP 62-278217 A) in the treatment of enamels but such a blowing lance is used in another process and with other objectives. In this process the blowing lance is actually submerged in the enamel and the level of the slag of the molten metal relative to the blowing lance is determined by temperature probes which are staggered inside the lance body. In this known process though, protection from overheating by detecting the temperature of the lance and controlling the treatment process are not dealt with.</p>
+      <p id="p-00011-en" num="0011">With the oxygen top blowing lance the above task is solved by integrating at least one temperature probe in the lance head behind its front end and between the cooling chambers, the signal lines of which are ducted through the lance body.</p>
+      <p id="p-00012-en" num="0012">With the disclosure the temperature of the local area in the lance head can be determined, and from experience used as an indicator of the danger of rupturing. Thus there is a requirement for an immediate reaction to imminent collapse whether it be due to the outside wall of the lance head being too thin or becoming too weak.</p>
+      <p id="p-00013-en" num="0013">In order to be able to mount the signal lines of (lie temperature probes simply and to be able to protect them they are in a central, protective pipe. This pipe should not have any connection to the process medium oxygen or to the cooling medium water. This is thus particularly advantageous and contributes to the reliability of operation if the head of the lance is burned down to the temperature probes integrated within it and is therefore open. In this situation it is therefore impossible for there to be a leak of oxygen and/or cooling water. In a preferred set tip the oxygen piping is situated in the middle of the lance head and surrounded with inlet and outlet channels for the cooling water through the formation of coaxial ring channels, where the outermost ring channel is the outlet channel and the center ring channel is the inlet channel.</p>
+      <p id="p-00014-en" num="0014">In order to make the assembly work required when switching out a deteriorated lance head for a new one as easy as possible the temperature probe can be put in a bore hole of a nose saddle of the lance head using a disconnectable adapter which is secured inside the lance head. To ensure an error free measurement of temperature it is advantageous for the temperature probe to be kept in contact with the floor of the bore hole by a spring so that it can conduct heat.</p>
+      <p id="p-00015-en" num="0015">For technical assembly reasons as well as for length compensation with various thermal linear expansions of the protective tube and the oxygen pipe, the protective pipe should overlap and seal the adapter like a telescopic sleeve.</p>
+      <p id="p-00016-en" num="0016">In the blowing process the most extreme thermal damage to the oxygen blowing lance is sustained by the lance head. As a result the head of the oxygen lance is subjected to the most wear and tear and should be interchangeable. In order to make it easier to change out the lance head one of the set ups of the disclosure provides for there being coaxial fittings at the cooling chambers of the lance heads for continuing coaxial inlet and outlet cool water channels. These fittings may then be welded on to the continuing coaxial inlet and outlet channels.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00017-en" num="0017">In a preferred aspect, the present disclosure comprises an oxygen blowing lance comprising: a lance body including an oxygen conduit and cooling water inlet and outlet conduits surrounding said oxygen conduit; a lance head connected to said lance body and comprising a nozzle body, said nozzle body including a central strut having bore hole, a plurality of nozzles arranged about said central strut, and a plurality of cooling chambers arranged about said central strut, wherein said plurality of nozzles are in fluid communication with said oxygen conduit for discharging oxygen from said oxygen conduit onto a metal bath in a converter vessel, and wherein said plurality of cooling chambers are in fluid communication with said cooling water inlet and outlet conduits; a temperature probe assembly received in said bore hole for monitoring the temperature of said lance head; signal lines connected to said temperature probe for conveying signals from said temperature probe whereby operation of said blowing lance is regulated in response to said signals; and a protective pipe pressurized with a gas disposed in the bore and surrounding said temperature probe assembly and the signal lines.</p>
+      <p id="p-00018-en" num="0018">In another preferred aspect of the oxygen blowing lance of the present disclosure, the protective pipe is disposed within said oxygen conduit or one of said cooling water conduits.</p>
+      <p id="p-00019-en" num="0019">In yet another preferred aspect of the oxygen blowing lance of the present disclosure, the bore hole has a floor and wherein said oxygen blowing lance further comprises means for forcing said temperature probe toward said bore hole floor.</p>
+      <p id="p-00020-en" num="0020">In another preferred aspect of the oxygen blowing lance of the present disclosure, the means for forcing comprise resilient means.</p>
+      <p id="p-00021-en" num="0021">In another preferred aspect of the oxygen blowing lance of the present disclosure, the resilient means is a spring.</p>
+      <p id="p-00022-en" num="0022">In yet another preferred aspect of the present disclosure, the oxygen blowing lance of further comprises braided wire leads on the thermocouple.</p>
+      <p id="p-00023-en" num="0023">In another preferred aspect, the present disclosure comprises an oxygen blowing lance comprising: a lance body including an oxygen conduit and cooling water inlet and outlet conduits surrounding said oxygen conduit; a lance head connected to said lance body and comprising a nozzle body, said nozzle body including a central strut having bore hole, a plurality of nozzles arranged about said central strut, and a plurality of cooling chambers arranged about said central strut, wherein said plurality of nozzles are in fluid communication with said oxygen conduit for discharging oxygen from said oxygen conduit onto a metal bath in a converter vessel, and wherein said plurality of cooling chambers are in fluid communication with said cooling water inlet and outlet conduits; a camera assembly received in said bore hole for gathering/taking photos, videos and/or other optical based measurements or information from inside the furnace or molten heat in which the lance is inserted; signal lines connected to said camera assembly for conveying signals from said camera assembly whereby operation of said blowing lance is regulated in response to said signals; and a protective pipe pressurized with a gas disposed in the bore and surrounding said camera assembly and the signal lines.</p>
+      <p id="p-00024-en" num="0024">In another preferred aspect of the oxygen blowing lance of the present disclosure, the protective pipe is disposed within said oxygen conduit or one of said cooling water conduits.</p>
+      <p id="p-00025-en" num="0025">In yet another preferred aspect of the oxygen blowing lance of the present disclosure, the bore hole has a floor and wherein said oxygen blowing lance further comprises means for forcing said camera assembly toward said bore hole floor.</p>
+      <p id="p-00026-en" num="0026">In another preferred aspect of the oxygen blowing lance of the present disclosure, the means for forcing comprise resilient means.</p>
+      <p id="p-00027-en" num="0027">In yet another preferred aspect of the oxygen blowing lance of the present disclosure, the resilient means is a spring.</p>
+      <p id="p-00028-en" num="0028">In yet another preferred aspect of the present disclosure, the oxygen blowing lance of further comprises braided wire leads on the camera assembly.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00029-en" num="0029">The disclosure is explained more clearly in the following with the help of an illustration that shows an example of an implementation. In detail the figures show:</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIGS. 1 and 1A</figref> show the axial section of an oxygen blowing lance,</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 2</figref> an axial section of the lower part of the oxygen blowing lance in accordance with <figref>FIG. 1</figref> as an enlarged drawing,</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 3</figref> an axial section of the lower part of the oxygen blowing lance in accordance with <figref>FIG. 1</figref> without the lance head and as an enlarged drawing,</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 4</figref> an axial section of the upper part of the oxygen blowing lance in accordance with <figref>FIG. 1</figref> and as an enlarged drawing,</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIG. 5</figref> the cross section of die oxygen blowing lance along the line B-B in <figref>FIG. 4</figref>, and</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIG. 6</figref> cross section of the oxygen blowing lance along the line C-C in <figref>FIG. 4</figref>.</p>
+      <p id="p-00036-en" num="0036">
+        <figref>FIG. 7</figref> shows an axial section of the lance with thermocouple disposed in cooling conduit instead of oxygen or delivered fluid conduit,</p>
+      <p id="p-00037-en" num="0037">
+        <figref>FIGS. 8 and 9</figref> show an axial section of the lance with camera assembly disposed in the central oxygen or delivered fluid conduit of the lance.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00038-en" num="0038">The oxygen blowing lance shown in <figref>FIGS. 1</figref>, <b>1</b>A and <b>2</b> is made up of a shafted lance body <b>1</b> and a lance head <b>2</b> which is welded onto the body. For safety reasons, with awareness of the oxygen processing gas that is flowed through the lance, the lowest part of the lance head <b>2</b> is made from copper. Another reason for making the decision to use copper as the material for the lance head <b>2</b> is the good thermal conductivity of copper which makes it possible to effectively cool the lance head <b>2</b> with cooling water during blowing.</p>
+      <p id="p-00039-en" num="0039">The lance head <b>2</b> comprises a nozzle body <b>2</b><i>a, </i>made of copper, with a crown of a total of six evenly spaced nozzles <b>3</b> and <b>4</b> in a circle and simply directed outwards, cooling chambers <b>5</b>, <b>6</b>, <b>7</b>, <b>8</b>, <b>9</b> and <b>10</b> as well as a central, axial strut <b>11</b>. Coaxial, tubular fittings <b>2</b><i>b, </i><b>2</b><i>c, </i>and <b>2</b><i>d, </i>are connected to the outermost cooling chambers which together with the nozzle body <b>2</b><i>a </i>form an interchangeable modular unit.</p>
+      <p id="p-00040-en" num="0040">The lance body <b>1</b> consists of three coaxial tubes <b>12</b>, <b>13</b> and <b>14</b> made from steel. Together with the incoming/feed connection piece <b>12</b><i>a </i>the inside tube <b>12</b> forms a central supply line <b>15</b> for the oxygen to be supplied to the blowing nozzles <b>3</b> and <b>4</b>. A close sliding fit for <b>12</b><i>a </i>is provided in the upper area between the inside pipe <b>12</b> on the inside and the middle and outside tubes <b>13</b> and <b>14</b> which together form a single unit, on the outside. This close sliding fit at <b>12</b><i>a </i>serves for adjustment of the relative linear expansions between the tubes <b>12</b>, <b>13</b> and <b>14</b> and the assembly of the lance body <b>2</b>. Conduits <b>16</b> and <b>17</b> are developed between the inside tube <b>12</b> and the outside tube <b>14</b> as well as tube <b>13</b> that lies in between them. Of these conduits, the inside conduit <b>16</b> is the supply conduit and the outside conduit <b>17</b> forms the outlet conduit for the cooling water that is to be forced through the channels under high pressure. The cooling water is brought in and let out via laterally placed fittings <b>18</b> and <b>19</b>.</p>
+      <p id="p-00041-en" num="0041">In the central strut <b>11</b> of the nozzle body <b>2</b><i>a </i>there is a bore hole <b>20</b> into which an engaging and disengaging, rod-shaped thermoelectric couple is plugged in as the temperature probe <b>21</b>. The temperature probe <b>21</b> is centered by an adapter <b>22</b> and held with its end in contact with the floor of the bore hole <b>20</b>, which is recessed just a few millimeters opposite the front end <b>11</b> a of the nozzle body. The adapter <b>22</b> is fastened with screws to the inside of the nozzle body. The temperature probe <b>21</b> is movable and stored in the adapter <b>22</b> and forced towards the floor of the bore hole <b>20</b> by a spring <b>23</b> that is supported on a regulating screw <b>25</b> screwed into the adapter <b>22</b>. O-rings <b>25</b><i>a </i>seal off the central protective pipe <b>27</b> from oxygen supply tube <b>12</b> and oxygen conduit <b>15</b>. Signal lines <b>26</b>, which are installed in a central protective pipe <b>27</b>, go out from the temperature probe <b>21</b>. The lower end <b>27</b><i>a </i>of the protective pipe and the upper end <b>22</b><i>a </i>of the adapter <b>22</b> form a sealed, telescopic sleeve which makes it easier to switch out the lance head <b>2</b> and allows for various linear expansions of the approximately <b>20</b> meter long pipes <b>27</b> and <b>12</b>.</p>
+      <p id="p-00042-en" num="0042">The protective pipe <b>27</b> is kept centered at several axially distribute places on the inside walling of the inside tube <b>12</b> using springed, radial supporting elements <b>29</b> which allow for relative axial motion of the protective pipe <b>27</b> compared with the tube <b>12</b>. The protective pipe <b>27</b> is attached directly to the tube <b>12</b> only at the top with radial struts <b>30</b> and scaled free from tube <b>12</b> and open to the atmosphere.</p>
+      <p id="p-00043-en" num="0043">Because of the close sliding fit <b>12</b><i>a </i>with potential axial movement of the inside tube <b>12</b> and the middle as well as the outside tubes <b>13</b> and <b>14</b>, to fit the lance body <b>1</b> with a new lance head <b>2</b>, the regulating screw <b>25</b> is first screwed into the adapter <b>22</b> with the rod-shaped temperature probe <b>21</b>. By doing this the adapter <b>22</b> is already preassembled on the inside of the nozzle body <b>2</b><i>a </i>so that the temperature probe <b>21</b> sits securely in the bore hole <b>20</b> after the regulating screw <b>25</b> is screwed in. The nozzle body <b>2</b><i>a </i>is then connected with its fitting <b>2</b><i>d </i>to the inside tube <b>12</b> on the point of separation <b>31</b> and welded on. In this way the middle and the outside tubes <b>13</b> and <b>14</b> are pushed back on to the inside tube <b>12</b> and the middle tube <b>13</b> respectively. Finally, the middle tube <b>13</b> and the outside tube <b>14</b> are brought close to the fittings <b>2</b><i>b </i>and <b>2</b><i>c, </i>where the middle tube <b>13</b> overlaps the fitting <b>2</b><i>c </i>with a close sliding fit and the outside tube <b>14</b> is welded on. The removal of a worn out lance head <b>2</b> is done in reverse sequence.</p>
+      <p id="p-00044-en" num="0044">The special advantages of the disclosure are that the temperature is monitored at the places of an oxygen blowing lance which are critical with regard to a release of water, that is the front end <b>11</b><i>a </i>of the nozzle body that lies opposite the sensor focal point. In this way counteractive steps can be taken with as little delay as possible when there is the threat of a rupture, whether it be due to the mechanical wear and tear of the remaining wall thickness of the cooling chamber, or due to weakening of the chamber walls because of high thermal peaks when there is insufficient cooling during dismantling. Because of the practically immediate determination of the actual temperature it is also possible to consider the temperature over time when choosing what measures to take to avoid a rupture can be counteracted. Finally, it is an advantage that it is not only possible to protect the actual oxygen blowing lance from ruptures but that it is also possible to influence the factors which have an effect on temperature determination and on the regulation of the metallurgical treatment such as the inflow of oxygen, the distance of the lance head from the surface of the molten metal bath etc., to positively influence the refinement process. If for example a temperature is taken that falls far below the critical limit for a lance to rupture, a targeted reduction in the distance between the lance head and the surface of the molten metal bath is possible, through which the refinement process is accelerated and made more efficient.</p>
+      <p id="p-00045-en" num="0045">
+        <figref>FIG. 7</figref> shows that the thermocouple <b>21</b> may preferably be installed in inlet cooling fluid conduit <b>16</b> in the same manner as described above for installation in the oxygen or delivered fluid conduit <b>15</b>.</p>
+      <p id="p-00046-en" num="0046">Advantages of the present disclosure include: spring-loaded thermocouple <b>21</b> inserted into tip to remain in contact with face of lance tip when it expands during service. Spring-loaded thermocouple or standard thermocouple <b>21</b> can be used in both the water passages and/or oxygen passage. Modified center post <b>11</b> to allow mounting of thermocouple <b>21</b> and sealing glands. Free-floating thermocouple pipe <b>27</b> sealed by o-rings <b>25</b><i>a. </i>Thermocouple <b>21</b> can help with measurement of lance height by providing operating data. Thermocouple <b>21</b> can be used to provide temperature of copper tip in help determining wear and service life of tip. Thermocouple <b>21</b> can help with process temperature throughout the steel melting process by providing reading throughout the heat. Use of braided wire leads on Thermocouple <b>21</b> to allow for thermal expansion and ease of installation into lance and repair of lance. Thermocouple <b>21</b> is housed and sealed from oxygen and water in its own pipe <b>27</b> by o-rings <b>25</b><i>a. </i>Thermocouple pipe <b>27</b> can be pressurized for puncture or leak detection. Thermocouple <b>21</b> can be embedded in tip material, exposed to oxygen flow, exposed to water flow, or exposed to furnace atmosphere.</p>
+      <p id="p-00047-en" num="0047">Similarly to having a thermocouple <b>21</b> installed in the lance <b>1</b>, a camera assembly <b>50</b> and lens assembly <b>54</b> with lens <b>56</b> (such as those available from Enertechnix) preferably may be installed in lance <b>1</b> within protective camera pipe <b>52</b>, the lower end of which corresponds to the central strut <b>11</b>. The camera assembly <b>50</b> preferably passes through the oxygen or delivered fluid conduit as shown in the drawings and again is movable and preferably forced towards the floor of the bore hole by a spring <b>55</b> in the camera or laser assembly <b>50</b>. Signal lines <b>57</b> installed in a central protective pipe <b>52</b> go out from the camera assembly <b>50</b>. Preferably, camera assembly <b>50</b> may be installed in either cooling fluid conduit <b>16</b>, <b>17</b> in the same manner as described above for installation in the oxygen or delivered fluid conduit. Also, the camera assembly <b>50</b> including lens <b>56</b> may be purged with nitrogen or argon gas through the camera pipe <b>52</b>. Camera assembly <b>50</b> and/or camera pipe may be reinforced with ribs.</p>
+      <p id="p-00048-en" num="0048">Camera assembly or optical instrument <b>50</b> provides for gathering/taking photos, videos and/or other optical based measurements such as spectroscopy or information from inside the furnace or molten heat in which the lance <b>1</b> is inserted.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. An oxygen blowing lance comprising:
+<claim-text>a lance body including an oxygen conduit and cooling water inlet and outlet conduits surrounding said oxygen conduit;</claim-text><claim-text>a lance head connected to said lance body and comprising a nozzle body, said nozzle body including a central strut having bore hole, a plurality of nozzles arranged about said central strut, and a plurality of cooling chambers arranged about said central strut, wherein said plurality of nozzles are in fluid communication with said oxygen conduit for discharging oxygen from said oxygen conduit onto a metal bath in a converter vessel, and wherein said plurality of cooling chambers are in fluid communication with said cooling water inlet and outlet conduits;</claim-text><claim-text>a temperature probe assembly received in said bore hole for monitoring the temperature of said lance head;</claim-text><claim-text>signal lines connected to said temperature probe for conveying signals from said temperature probe whereby operation of said blowing lance is regulated in response to said signals; and</claim-text><claim-text>a protective pipe pressurized with a gas disposed in the bore and surrounding said temperature probe assembly and the signal lines.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The oxygen blowing lance of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein said protective pipe is disposed within said oxygen conduit or one of said cooling water conduits.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The oxygen blowing lance of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein said bore hole has a floor and wherein said oxygen blowing lance further comprises means for forcing said temperature probe toward said bore hole floor.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The oxygen blowing lance of <claim-ref idref="clm-00003-en">claim 3</claim-ref> wherein said means for forcing comprise resilient means.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The oxygen blowing lance of <claim-ref idref="clm-00004-en">claim 4</claim-ref> wherein said resilient means is a spring.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The oxygen blowing lance of <claim-ref idref="clm-00001-en">claim 1</claim-ref> further comprising braided wire leads on the thermocouple.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en" independent="true">
+      <claim-text>
+        <b>7</b>. An oxygen blowing lance comprising:
+<claim-text>a lance body including an oxygen conduit and cooling water inlet and outlet conduits surrounding said oxygen conduit;</claim-text><claim-text>a lance head connected to said lance body and comprising a nozzle body, said nozzle body including a central strut having bore hole, a plurality of nozzles arranged about said central strut, and a plurality of cooling chambers arranged about said central strut, wherein said plurality of nozzles are in fluid communication with said oxygen conduit for discharging oxygen from said oxygen conduit onto a metal bath in a converter vessel, and wherein said plurality of cooling chambers are in fluid communication with said cooling water inlet and outlet conduits;</claim-text><claim-text>a camera assembly received in said bore hole for gathering/taking photos, videos and/or other optical based measurements or information from inside the furnace or molten heat in which the lance is inserted;</claim-text><claim-text>signal lines connected to said camera assembly for conveying signals from said camera assembly whereby operation of said blowing lance is regulated in response to said signals; and</claim-text><claim-text>a protective pipe pressurized with a gas disposed in the bore and surrounding said camera assembly and the signal lines.</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The oxygen blowing lance of <claim-ref idref="clm-00007-en">claim 7</claim-ref> wherein said protective pipe is disposed within said oxygen conduit or one of said cooling water conduits.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The oxygen blowing lance of <claim-ref idref="clm-00007-en">claim 7</claim-ref> wherein said bore hole has a floor and wherein said oxygen blowing lance further comprises means for forcing said camera assembly toward said bore hole floor.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The oxygen blowing lance of <claim-ref idref="clm-00009-en">claim 9</claim-ref> wherein said means for forcing comprise resilient means.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The oxygen blowing lance of <claim-ref idref="clm-00010-en">claim 10</claim-ref> wherein said resilient means is a spring.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The oxygen blowing lance of <claim-ref idref="clm-00007-en">claim 7</claim-ref> further comprising braided wire leads on the camera assembly.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150259761A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150259761A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150259761A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259761A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150259761A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259761A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150259761A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259761A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150259761A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259761A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150259761A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259761A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150259761A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259761A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150259761A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259761A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150259761A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259761A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150259761A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259761A1-20150917-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150259761A1_00011.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150259761A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150259761A1.PDF" type="pdf" size="543225" pages="14" />
+</lexisnexis-patent-document>

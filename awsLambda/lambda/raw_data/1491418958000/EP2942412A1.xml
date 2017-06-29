@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2942412A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151111" time-inserted="082406" date-changed="20151223" time-changed="194522">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="122016666">
+        <country>EP</country>
+        <doc-number>2942412</doc-number>
+        <kind>A1</kind>
+        <date>20151111</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>15166597</doc-number>
+        <date>20150506</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151111">
+      <priority-claim sequence="1" kind="national">
+        <country>US</country>
+        <doc-number>61989326</doc-number>
+        <date>20140506</date>
+      </priority-claim>
+      <priority-claim sequence="2" kind="national">
+        <country>US</country>
+        <doc-number>14461102</doc-number>
+        <date>20140815</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>US</country>
+        <doc-number>201461989326</doc-number>
+        <kind>P</kind>
+        <date>20140506</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>US</country>
+        <doc-number>201414461102</doc-number>
+        <kind>A</kind>
+        <date>20140815</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>201461989326 P</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>201414461102</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>US201461989326P</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>US201414461102</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151112">
+      <gazette-reference>
+        <date>20151111</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151111</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151111</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151130">
+      <classification-ipcr sequence="1">
+        <text>C22C  21/16        20060101AFI20150901BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>21</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150901</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C22F   1/057       20060101ALI20150901BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>057</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150901</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151130">
+      <classification-cpc sequence="1">
+        <text>C22C  21/16        20130101 FI20151114BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>21</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151114</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C22C  21/14        20130101 LI20151113BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>21</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151113</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C22C  21/18        20130101 LI20151113BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>21</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151113</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C22F   1/04        20130101 LI20151113BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151113</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C22F   1/057       20130101 LI20151114BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>057</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151114</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">15</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151111" lang="ger" format="original">LITHIUMFREIE HOCHTEMPERATUR-ALUMINIUM-MAGNESIUM-KUPFER-SILBERLEGIERUNG FÜR GESCHMIEDETE PRODUKTE FÜR DIE RAUMFAHRTINDUSTRIE</invention-title>
+    <invention-title id="title_eng" date-changed="20151111" lang="eng" format="original">LITHIUM-FREE ELEVATED TEMPERATURE ALUMINIUM COPPER MAGNESIUM SILVER ALLOY FOR FORGED AEROSPACE PRODUCTS</invention-title>
+    <invention-title id="title_fre" date-changed="20151111" lang="fre" format="original">ALLIAGE D'ARGENT, MAGNÉSIUM ET CUIVRE À TEMPÉRATURE ÉLEVÉE SANS LITHIUM POUR PRODUITS AÉROSPATIAUX FORGÉS</invention-title>
+    <references-cited date-changed="20151117">
+      <patent-citations name="patcit" date-changed="20151117" />
+      <non-patent-citations name="nplcit" date-changed="20151117" />
+      <citation>
+        <patcit num="1" dnum="US5652063A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5652063</doc-number>
+            <kind>A</kind>
+            <name>KARABIN LYNETTE M [US]</name>
+            <date>19970729</date>
+          </document-id>
+          <application-date>
+            <date>19951226</date>
+          </application-date>
+        </patcit>
+        <category>X</category>
+      </citation>
+      <citation>
+        <nplcit num="1">
+          <text>SKROTZKI B ET AL: "MICROSTRUCTURAL STABILITY UNDER CREEP CONDITIONS OF TWO AL-CU-MG-AGALLOYS", MATERIALS SCIENCE FORUM, TRANS TECH PUBLICATIONS LTD- SWITZERLAND, CH, vol. 217/222, 1 January 1996 (1996-01-01), pages 1245 - 1250, XP002043330, ISSN: 0255-5476</text>
+        </nplcit>
+        <category>A</category>
+      </citation>
+    </references-cited>
+    <parties date-changed="20151111">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Goodrich Corporation</orgname>
+            <registered-number>100997984</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Four Coliseum Centre 2730 West Tyvola Road</address-1>
+              <city>Charlotte, NC 28217-4578</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>Steele, Leslie</name>
+            <address>
+              <address-1>35 S. Saint Clair St. Apt. 501</address-1>
+              <city>Dayton, OH 45402</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>Pandey, Awadh B.</name>
+            <address>
+              <address-1>149 Pennock Trace Dr.</address-1>
+              <city>Jupiter, FL 33458</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Hall, Matthew Benjamin</name>
+            <registered-number>101154323</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Dehns St Bride's House 10 Salisbury Square</address-1>
+              <city>London EC4Y 8JD</city>
+              <country>GB</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151111">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <patent-family date-changed="20151112">
+      <main-family family-id="174535078">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2942412</doc-number>
+            <kind>A1</kind>
+            <date>20151111</date>
+          </document-id>
+          <application-date>
+            <date>20150506</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="174568011">
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2886124</doc-number>
+            <kind>A1</kind>
+            <date>20151106</date>
+          </document-id>
+          <application-date>
+            <date>20150323</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2942412</doc-number>
+            <kind>A1</kind>
+            <date>20151111</date>
+          </document-id>
+          <application-date>
+            <date>20150506</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150322556</doc-number>
+            <kind>A1</kind>
+            <date>20151112</date>
+          </document-id>
+          <application-date>
+            <date>20140815</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151111" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A substantially lithium-free alloy may comprise copper from 4.8 wt.% to 5.4 wt.%, magnesium from 0.7 wt.% to 1.1 wt.%, silver from 0.55 wt.% to 0.7 wt.%, and lithium at or below 0.005 wt.%. The substantially lithium-free alloy may further comprise silver from 0.56 wt.% to 0.7 wt.%. The substantially lithium-free alloy may also comprise zirconium from 0.08 wt.% to 0.15 wt.%. The substantially lithium-free alloy may include titanium at or below 0.06 wt.%, iron at or below 0.1 wt.%, silicon at or below 0.08 wt.%, beryllium at or below 0.0001 wt.%, chromium at or below 0.05 wt.%, and zinc at or below 0.25 wt.%. <img id="imga-00001-en" wi="85" he="91" img-content="drawing" file="imgaf001.tif" img-format="tif" /></p>
+  </abstract>
+  <legal-data date-changed="20151223">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20151111</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2942412A1</docdb-publication-number>
+      <docdb-application-id>439838770</docdb-application-id>
+      <corresponding-kind>A1</corresponding-kind>
+      <legal-designated-states>
+        <country>AL</country>
+        <country>AT</country>
+        <country>BE</country>
+        <country>BG</country>
+        <country>CH</country>
+        <country>CY</country>
+        <country>CZ</country>
+        <country>DE</country>
+        <country>DK</country>
+        <country>EE</country>
+        <country>ES</country>
+        <country>FI</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>GR</country>
+        <country>HR</country>
+        <country>HU</country>
+        <country>IE</country>
+        <country>IS</country>
+        <country>IT</country>
+        <country>LI</country>
+        <country>LT</country>
+        <country>LU</country>
+        <country>LV</country>
+        <country>MC</country>
+        <country>MK</country>
+        <country>MT</country>
+        <country>NL</country>
+        <country>NO</country>
+        <country>PL</country>
+        <country>PT</country>
+        <country>RO</country>
+        <country>RS</country>
+        <country>SE</country>
+        <country>SI</country>
+        <country>SK</country>
+        <country>SM</country>
+        <country>TR</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20151111</date>
+      </publication-date>
+      <event-code-1>AV</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR VALIDATION OF THE EUROPEAN PATENT IN</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2942412A1</docdb-publication-number>
+      <docdb-application-id>439838770</docdb-application-id>
+      <countries-concerned>
+        <country>MA</country>
+      </countries-concerned>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20151111</date>
+      </publication-date>
+      <event-code-1>AX</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXTENSION OF THE EUROPEAN PATENT TO</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2942412A1</docdb-publication-number>
+      <docdb-application-id>439838770</docdb-application-id>
+      <countries-concerned>
+        <country>BA</country>
+        <country>ME</country>
+      </countries-concerned>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151111">
+    <heading id="h-00001-en">FIELD OF INVENTION</heading>
+    <p id="p-00001-en" num="0001">The present disclosure relates to high-temperature alloys, and, more specifically, to a substantially lithium-free elevated-temperature aluminium based alloy.</p>
+    <heading id="h-00002-en">BACKGROUND OF THE INVENTION</heading>
+    <p id="p-00002-en" num="0002">Aircraft components may be subjected to high airspeeds and elevated temperatures as result of flight. Load bearing structures (e.g., wheels and landing gear) may also be put under immense weight during taxi, takeoff, and landing. Materials used to make components (e.g. main wheels) support aircraft weights and withstand inflight wind conditions. Many of the components (such as piston housings) may also be subject to elevated temperatures. As a result, components may be subject to stress corrosion and ultimately failure over time.</p>
+    <heading id="h-00003-en">SUMMARY OF THE INVENTION</heading>
+    <p id="p-00003-en" num="0003">In various embodiments, a substantially lithium-free alloy may comprise copper from 4.8 wt.% to 5.4 wt.%, magnesium from 0.7 wt.% to 1.1 wt.%, silver from 0.55 wt.% to 0.7 wt.%, and lithium at or below 0.005 wt.%. The substantially lithium-free alloy may further comprise silver from 0.56 wt.% to 0.7 wt.%. The substantially lithium-free alloy may also comprise zirconium from 0.08 wt.% to 0.15 wt.%. The substantially lithium-free alloy may include titanium at or below 0.06 wt.%, iron at or below 0.1 wt.%, silicon at or below 0.08 wt.%, beryllium at or below 0.0001 wt.%, chromium at or below 0.05 wt.%, and zinc at or below 0.25 wt.%. The silver may be from 0.6 wt.% to 0.7 wt.%. Manganese may be from 0.45 wt.% to 0.8 wt.%. The lithium may be at or below 0.003%.</p>
+    <p id="p-00004-en" num="0004">In various embodiments, a worked aircraft component may comprise an alloy including silver from 0.55 wt.% to 0.7 wt.% and lithium at or below 0.005 wt.%. The worked aircraft component may further comprise the silver from 0.56 wt.% to 0.7 wt.%. The worked aircraft component may be a wheel or a piston housing. The alloy may further comprise titanium at or below 0.06 wt.%, iron at or below 0.1 wt.%, silicon at or below 0.08 wt.%, beryllium at or below 0.0001 wt.%, chromium at or below 0.05 wt.%, and zinc at or below 0.25 wt.%. The worked aircraft component may be hardened by a precipitation heat treatment. The alloy may further comprise copper from 4.8 wt.% to 5.4 wt.%, and magnesium from 0.7 wt.% to 1.1 wt.%. The worked aircraft component may further comprise silver from 0.6 wt.% to 0.7 wt.%.</p>
+    <p id="p-00005-en" num="0005">The forgoing features and elements may be combined in various combinations without exclusivity, unless expressly indicated herein otherwise. These features and elements as well as the operation of the disclosed embodiments will become more apparent in light of the following description and accompanying drawings.</p>
+    <heading id="h-00004-en">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+    <p id="p-00006-en" num="0006">The subject matter of the present disclosure is particularly pointed out and distinctly claimed in the concluding portion of the specification. A more complete understanding of the present disclosure, however, may best be obtained by referring to the detailed description and claims when considered in connection with the figures, wherein like numerals denote like elements.</p>
+    <p id="p-00007-en" num="0007">
+      <figref>FIG. 1</figref> illustrates a process of making a worked aluminium aircraft component from a substantially lithium-free aluminium alloy, in accordance with various embodiments.</p>
+    <heading id="h-00005-en">DETAILED DESCRIPTION</heading>
+    <p id="p-00008-en" num="0008">The detailed description of exemplary embodiments herein makes reference to the accompanying drawings, which show exemplary embodiments by way of illustration. While these exemplary embodiments are described in sufficient detail to enable those skilled in the art to practice the inventions, it should be understood that other embodiments may be realized and that logical changes and adaptations in design and construction may be made in accordance with this invention and the teachings herein. Thus, the detailed description herein is presented for purposes of illustration only and not of limitation. The scope of the invention is defined by the appended claims. For example, the steps recited in any of the method or process descriptions may be executed in any order and are not necessarily limited to the order presented. Furthermore, any reference to singular includes plural embodiments, and any reference to more than one component or step may include a singular embodiment or step. Also, any reference to attached, fixed, connected or the like may include permanent, removable, temporary, partial, full and/or any other possible attachment option. Additionally, any reference to without contact (or similar phrases) may also include reduced contact or minimal contact.</p>
+    <p id="p-00009-en" num="0009">Furthermore, any reference to singular includes plural embodiments, and any reference to more than one component or step may include a singular embodiment or step. Surface shading lines may be used throughout the figures to denote different parts but not necessarily to denote the same or different materials.</p>
+    <p id="p-00010-en" num="0010">As used herein, the term "% wt," "wt.%" or "% by weight," used in reference to a substantially lithium-free aluminium alloy, may refer to the percentage weight of the substantially lithium-free aluminium alloy or a constituent of the substantially lithium-free aluminium alloy or a group of constituents of the substantially lithium-free aluminium alloy over the weight of the entire substantially lithium-free aluminium alloy.</p>
+    <p id="p-00011-en" num="0011">In various embodiments, <figref>FIG. 1</figref> depicts a method 100 of making aircraft components using a worked aluminium alloy. A substantially lithium-free aluminium alloy may be formed, for example by casting, such as by heating and melting one or more metals to form a homogenous solution (Step 102). The solution may be cooled to solidify the substantially lithium-free aluminium alloy. The substantially lithium-free aluminium alloy may comprise copper (Cu) ranging from 4.8 wt.% to 5.4 wt.%, magnesium (Mg) ranging from 0.7 to 1.1 wt.%, and silver (Ag) ranging from 0.55 to 0.7 wt.%. Ag may preferably range from 0.56 to 0.7 wt.%, and Ag may further range from 0.6 wt.% to 0.7 wt.%. The substantially lithium-free aluminium alloy may further comprise zirconium (Zr) ranging from 0.08 to 0.15 wt.%, and manganese (Mn) ranging from 0.45 to 0.8 wt.%. Trace elements present in the substantially lithium-free aluminium alloy may include lithium (Li) not to exceed 0.005 wt.%, titanium (Ti) not to exceed 0.06 wt.%, iron (Fe) not to exceed 0.10 wt.%, silicon (Si) not to exceed 0.08 wt.%, beryllium (Be) not to exceed 0.0001 wt.%, chromium (Cr) not to exceed 0.05 wt.%, zinc (Zn) not to exceed 0.25 wt.%, and other individual trace elements each to not to exceed 0.05 wt.%, and other total trace elements not to exceed 0.15 wt.%. The alloy may have a ratio between Cu and Mg that is closely controlled. The ratio of Cu/Mg may range from 6.5 to 7.5. In various embodiments, the Cu/Mg ratio may be approximately 7. As used herein, the term "substantially lithium-free aluminium alloy" refers to the aluminium alloy at least partially comprising the foregoing composition.</p>
+    <p id="p-00012-en" num="0012">In various embodiments, the substantially lithium-free aluminium alloy may be substantially free from lithium to reduce brittleness and improve the toughness of the alloy. Lithium may not be intentionally added to the substantially lithium-free aluminium alloy, though trace amounts (e.g., less than 0.005 wt.%, less than 0.003 wt.%, or less than 0.001 wt.%) may be present and regarded impurities. Stated another way, the term "substantially lithium-free" may refer to an alloy having controlled amounts of lithium less than 0.005 wt.%, less than 0.003 wt.%, or less than 0.001 wt.%. The amount of lithium introduced to the substantially lithium-free aluminium alloy may be tightly controlled by inspecting any aluminium prior to adding the aluminium to the substantially lithium-free aluminium alloy. For example, prior to using scrap aluminium to create the substantially lithium-free aluminium alloy, scrap aluminium should be inspected to determine the lithium content in the scrap aluminium. Scrap aluminium with excessive lithium content may not be used to create the substantially lithium-free aluminium alloy. Bauxite or aluminium oxide may also be used to produce a substantially lithium-free aluminium alloy without associated inspection for lithium.</p>
+    <p id="p-00013-en" num="0013">In various embodiments, the substantially lithium-free aluminium alloy may then be worked into a component (Step 104). For example, extrusion, folding, or heat forging may be used to work the substantially lithium-free aluminium alloy into the desired shape. For example, the substantially lithium-free aluminium alloy may be hot forged into a wheel, brake piston housing or any other component for use on an aircraft. If forging is used to shape the component, the component may then be quenched to precipitate harden the component (Step 106). The copper and magnesium may precipitate out of solution with the metal as it is quenched to harden the substantially lithium-free aluminium alloy as well as improve strength and fatigue characteristics. The substantially lithium-free aluminium alloy may then be aged to complete the precipitation hardening process.</p>
+    <p id="p-00014-en" num="0014">The substantially lithium-free aluminium alloy may display increased strength characteristics compared an aluminium alloy having a composition, in weight percent, of about 4 percent copper, about 0.5 percent magnesium, about 0.8 percent manganese, and about 0.8 percent silicon, and the remainder aluminium, which is commonly known by the industry standard designation of aluminium 2014. The term "about" in this context only refers to +/- 0.15%. The substantially lithium-free aluminium alloy may also have improved toughness compared to aluminium 2014, for example, and be more resistant to deformation or fracturing under load. The substantially lithium-free aluminium alloy may further have improved thermal stability over aluminium 2014 in response to higher silver levels contained in the substantially lithium-free aluminium alloy. For example, aluminium 2014 may be used in environments that repeatedly reach temperatures of approximately 300°F (149°C). The substantially lithium-free aluminium alloy may be used at higher temperatures, up to 350°F (176°C) or higher, while substantially maintaining strength and toughness. The substantially lithium-free aluminium alloy displays improved fracture toughness, for example over aluminium 2014, as the amount of silver in the substantially lithium-free aluminium alloy increases. Similarly, the substantially lithium-free aluminium alloy is more resistant to stress corrosion cracking than aluminium 2014 because of the higher silver content in the substantially lithium-free aluminium alloy. The substantially lithium-free aluminium alloy may also be substantially vanadium free. The substantially lithium-free aluminium alloy may further have reduced weight and improved fatigue characteristics over aluminium 2014.</p>
+    <p id="p-00015-en" num="0015">Benefits, other advantages, and solutions to problems have been described herein with regard to specific embodiments. Furthermore, the connecting lines shown in the various figures contained herein are intended to represent exemplary functional relationships and/or physical couplings between the various elements. It should be noted that many alternative or additional functional relationships or physical connections may be present in a practical system. However, the benefits, advantages, solutions to problems, and any elements that may cause any benefit, advantage, or solution to occur or become more pronounced are not to be construed as critical, required, or essential features or elements of the inventions. The scope of the inventions is accordingly to be limited by nothing other than the appended claims, in which reference to an element in the singular is not intended to mean "one and only one" unless explicitly so stated, but rather "one or more." Moreover, where a phrase similar to "at least one of A, B, or C" is used in the claims, it is intended that the phrase be interpreted to mean that A alone may be present in an embodiment, B alone may be present in an embodiment, C alone may be present in an embodiment, or that any combination of the elements A, B and C may be present in a single embodiment; for example, A and B, A and C, B and C, or A and B and C.</p>
+    <p id="p-00016-en" num="0016">Systems, methods and apparatus are provided herein. In the detailed description herein, references to "various embodiments", "one embodiment", "an embodiment", "an example embodiment", etc., indicate that the embodiment described may include a particular feature, structure, or characteristic, but every embodiment may not necessarily include the particular feature, structure, or characteristic. Moreover, such phrases are not necessarily referring to the same embodiment. Further, when a particular feature, structure, or characteristic is described in connection with an embodiment, it is submitted that it is within the knowledge of one skilled in the art to affect such feature, structure, or characteristic in connection with other embodiments whether or not explicitly described. After reading the description, it will be apparent to one skilled in the relevant art(s) how to implement the disclosure in alternative embodiments.</p>
+    <p id="p-00017-en" num="0017">Furthermore, no element, component, or method step in the present disclosure is intended to be dedicated to the public regardless of whether the element, component, or method step is explicitly recited in the claims. As used herein, the terms "comprises", "comprising", or any other variation thereof, are intended to cover a non-exclusive inclusion, such that a process, method, article, or apparatus that comprises a list of elements does not include only those elements but may include other elements not expressly listed or inherent to such process, method, article, or apparatus.</p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151111">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>An aluminium based substantially lithium-free alloy, comprising:
+<claim-text>copper from 4.8 wt.% to 5.4 wt.%;</claim-text><claim-text>magnesium from 0.7 wt.% to 1.1 wt.%;</claim-text><claim-text>silver from 0.55 wt.% to 0.7 wt.%; and</claim-text><claim-text>lithium at or below 0.005 wt.%.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The aluminium based substantially lithium-free alloy of claim 1 or 2, further comprising the silver from 0.56 wt.% to 0.7 wt.%.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The aluminium based substantially lithium-free alloy of claim 1, 2 or 3, further comprising zirconium from 0.08 wt.% to 0.15 wt.%.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>The aluminium based substantially lithium-free alloy of claim 1, further comprising trace elements, comprising:
+<claim-text>titanium at or below 0.06 wt.%;</claim-text><claim-text>iron at or below 0.1 wt.%;</claim-text><claim-text>silicon at or below 0.08 wt.%;</claim-text><claim-text>beryllium at or below 0.0001 wt.%;</claim-text><claim-text>chromium at or below 0.05 wt.%; and</claim-text><claim-text>zinc at or below 0.25 wt.%.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>The aluminium based substantially lithium-free alloy of any preceding claim, further comprising the silver from 0.6 wt.% to 0.7 wt.%.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>The aluminium based substantially lithium-free alloy of any preceding claim, further including manganese from 0.45 wt.% to 0.8 wt.%.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>The aluminium based substantially lithium-free alloy of any preceding claim, further comprising the lithium at or below 0.003%.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en" independent="true">
+      <claim-text>A worked aircraft component, comprising:
+<claim-text>an aluminium based alloy comprising:
+<claim-text>silver from 0.55 wt.% to 0.7 wt.% ; and</claim-text><claim-text>lithium at or below 0.005 wt.%.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>The worked aircraft component of claim 8, further comprising the silver from 0.56 wt.% to 0.7 wt.%.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>The worked aircraft component of claim 8 or 9, wherein the worked aircraft component comprises a wheel.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>The worked aircraft component of claim 8, 9 or 10, wherein the worked aircraft component comprises a piston housing.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>The worked aircraft component of any of claims 8 to 11, wherein the alloy further comprises:
+<claim-text>titanium at or below 0.06 wt.%;</claim-text><claim-text>iron at or below 0.1 wt.%;</claim-text><claim-text>silicon at or below 0.08 wt.%;</claim-text><claim-text>beryllium at or below 0.0001 wt.%;</claim-text><claim-text>chromium at or below 0.05 wt.%; and</claim-text><claim-text>zinc at or below 0.25 wt.%.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>The worked aircraft component of any of claims 8 to 12, wherein the alloy is hardened by a precipitation heat treatment.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>The worked aircraft component of any of claims 8 to 13, wherein the alloy further comprises:
+<claim-text>copper from 4.8 wt.% to 5.4 wt.%; and</claim-text><claim-text>magnesium from 0.7 wt.% to 1.1 wt.%.</claim-text></claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>The worked aircraft component of any of claims 8 to 14, further comprising the silver from 0.6 wt.% to 0.7 wt.%.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2942412A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2942412A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0001.tif" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP2942412A1_00003.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+  </drawings>
+  <image file="EP2942412A1.PDF" type="pdf" size="166797" pages="8" />
+</lexisnexis-patent-document>

@@ -1,0 +1,1781 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150250411A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="022145" date-changed="20151215" time-changed="165841">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121232595">
+        <country>US</country>
+        <doc-number>20150250411</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14437395</doc-number>
+        <date>20131023</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150910">
+      <priority-claim sequence="1" kind="national">
+        <country>CN</country>
+        <doc-number>201310464640</doc-number>
+        <date>20130930</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150917">
+      <classification-ipcr sequence="1">
+        <text>A61B   5/1455      20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>1455</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61B   5/00        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61B   5/024       20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>024</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150917">
+      <classification-cpc sequence="1">
+        <text>A61B   5/14551     20130101 FI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>14551</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61B   5/024       20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>024</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61B   5/6826      20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>6826</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61B   5/7278      20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>7278</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">6</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">BLOOD OXYGEN SATURATION DETECTION METHOD AND SYSTEM</invention-title>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>SHENZHEN BREO TECHNOLOGY CO., LTD.</orgname>
+            <address>
+              <city>Shenzhen, Guangdong</city>
+              <country>CN</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>CN</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Ma</last-name>
+            <first-name>Xuejun</first-name>
+            <address>
+              <city>Shenzhen</city>
+              <country>CN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Wu</last-name>
+            <first-name>Minghui</first-name>
+            <address>
+              <city>Shenzhen</city>
+              <country>CN</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>CN13085766</doc-number>
+        <date>20131023</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2015043031</doc-number>
+        <date>20150402</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150910">
+      <main-family family-id="163775287">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150250411</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20131023</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103479363</doc-number>
+            <kind>A</kind>
+            <date>20140101</date>
+          </document-id>
+          <application-date>
+            <date>20130930</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103479363</doc-number>
+            <kind>B</kind>
+            <date>20150318</date>
+          </document-id>
+          <application-date>
+            <date>20130930</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201519870</doc-number>
+            <kind>A</kind>
+            <date>20150601</date>
+          </document-id>
+          <application-date>
+            <date>20140313</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015043031</doc-number>
+            <kind>A1</kind>
+            <date>20150402</date>
+          </document-id>
+          <application-date>
+            <date>20131023</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="163775286">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150250411</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20131023</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103479363</doc-number>
+            <kind>A</kind>
+            <date>20140101</date>
+          </document-id>
+          <application-date>
+            <date>20130930</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103479363</doc-number>
+            <kind>B</kind>
+            <date>20150318</date>
+          </document-id>
+          <application-date>
+            <date>20130930</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201519870</doc-number>
+            <kind>A</kind>
+            <date>20150601</date>
+          </document-id>
+          <application-date>
+            <date>20140313</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015043031</doc-number>
+            <kind>A1</kind>
+            <date>20150402</date>
+          </document-id>
+          <application-date>
+            <date>20131023</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present application relates to detection technology, it provides a detection method and detection system of blood oxygen saturation, this method includes: controlling two parallel light emitting diodes to emit a red light and an infrared light periodically to a finger; detecting the red light and infrared light passing through the finger and converting them into a red light electrical signal and an infrared light electrical signal respectively; separating pulsating components from the two electrical signals to obtain a separated variation of red light in one cycle and a separated variation of infrared light in one cycle; calculating the blood oxygen saturation based on the variations of red light and infrared light; amplifying and filtering the blood oxygen saturation prior to converting the blood oxygen saturation into digital signal by analog-to-digital converter.</p>
+  </abstract>
+  <legal-data date-changed="20150925">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150421</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015250411A1</docdb-publication-number>
+      <docdb-application-id>444306956</docdb-application-id>
+      <new-owner>SHENZHEN BREO TECHNOLOGY CO., LTD., CHINA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:MA, XUEJUN;WU, MINGHUI;REEL/FRAME:035475/0551</free-text-description>
+      <effective-date>
+        <date>20150331</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">The present application relates to the field of detection technology, in particular, it is directed to a method for detecting blood oxygen saturation and a system for detecting blood oxygen saturation.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">Oxygen content: the amount of oxygen carried by the hemoglobin in 100 ml of blood. The major portion is the oxygen bound to hemoglobin, and there is very small amount of oxygen dissolved in the blood plasma (only 0.3 ml %). After binding oxygen the hemoglobin becomes oxyhemoglobin (HbO<sub>2</sub>), and after the oxygen is released it becomes reduced hemoglobin. The blood oxygen saturation (SaO<sub>2</sub>) refers to the percentage of the actual oxygen combined (by hemoglobin) in the blood (oxygen content) in the maximum amount of the oxygen can be combined (by the hemoglobin) in the blood (oxygen capacity), therefore the blood oxygen saturation can be defined as follows:</p>
+      <p id="p-00003-en" num="0000">[in-line-formulae]SaO<sub>2</sub>=C<sub>Hb</sub>O<sub>2</sub>/(C<sub>Hb</sub>O<sub>2</sub>+C<sub>Hb</sub>)×100%.[/in-line-formulae]</p>
+      <p id="p-00004-en" num="0003">Blood oxygen saturation: the maximum amount of oxygen can be bound by the hemoglobin in 100 ml blood should be deemed as the oxygen capacity of the blood. The amount of oxygen binding to the hemoglobin is named as oxygen content, and the percentage of the oxygen content in the oxygen capacity is referred as blood oxygen saturation.</p>
+      <p id="p-00005-en" num="0004">In the process of carrying out the exiting techniques, there are following technical problems in the prior art:</p>
+      <p id="p-00006-en" num="0005">The existing method for detecting blood oxygen saturation is carried out in an invasive way, and this method has low efficiency and is harmful to the subject.</p>
+      <heading id="h-00003-en" level="1">SUMMARY</heading>
+      <p id="p-00007-en" num="0006">The aim of the embodiments according the present application is to provide a method for detecting the blood oxygen saturation in the blood, so as to solve such technical problems as low detection efficiency, and causing damage to the user.</p>
+      <p id="p-00008-en" num="0007">The embodiments of the present application are carried out as follows: a method for detecting oxygen saturation in the blood comprising:</p>
+      <p id="p-00009-en" num="0008">controlling two parallel light emitting diode to emit a red light and an infrared light periodically to a finger to be detected;</p>
+      <p id="p-00010-en" num="0009">detecting the red light and infrared light passing through the finger, and converting the red light and infrared light passing through the finger into a red light electrical signal and infrared light electrical signal respectively;</p>
+      <p id="p-00011-en" num="0010">separating the pulsating components from the two electrical signals to obtain a separated variation of red light in one cycle and a separated variation of infrared light in one cycle;</p>
+      <p id="p-00012-en" num="0011">calculating the blood oxygen saturation based on the variations of red light and infrared light;</p>
+      <p id="p-00013-en" num="0012">amplifying and filtering the blood oxygen saturation prior to converting the blood oxygen saturation into a digital signal and showing the result by means of an analog-to-digital converter (AD convertor).</p>
+      <p id="p-00014-en" num="0013">Alternatively, the above step of calculating the blood oxygen saturation based on the variations of red light and infrared light may particularly comprise:</p>
+      <p id="p-00015-en" num="0000">
+        <maths id="maths-00001-en" num="00001">
+          <math overflow="scroll">
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <mrow>
+                      <msub>
+                        <mi>SaO</mi>
+                        <mn>2</mn>
+                      </msub>
+                      <mo>=</mo>
+                      <mrow>
+                        <mfrac>
+                          <mn>1</mn>
+                          <mi>K</mi>
+                        </mfrac>
+                        <mo></mo>
+                        <mi>ln</mi>
+                        <mo></mo>
+                        <mstyle>
+                          <mspace width="0.3em" height="0.3ex" />
+                        </mstyle>
+                        <mo></mo>
+                        <mfrac>
+                          <mrow>
+                            <mrow>
+                              <msub>
+                                <mo> </mo>
+                                <mi>Δ</mi>
+                              </msub>
+                              <mo></mo>
+                              <mi>RED</mi>
+                            </mrow>
+                            <mo>-</mo>
+                            <mrow>
+                              <msub>
+                                <mo> </mo>
+                                <mi>Δ</mi>
+                              </msub>
+                              <mo></mo>
+                              <mi>N</mi>
+                            </mrow>
+                          </mrow>
+                          <mrow>
+                            <mrow>
+                              <mo>(</mo>
+                              <mrow>
+                                <mrow>
+                                  <msub>
+                                    <mo> </mo>
+                                    <mi>Δ</mi>
+                                  </msub>
+                                  <mo></mo>
+                                  <mi>IR</mi>
+                                </mrow>
+                                <mo>-</mo>
+                                <mrow>
+                                  <msub>
+                                    <mo> </mo>
+                                    <mi>Δ</mi>
+                                  </msub>
+                                  <mo></mo>
+                                  <mi>N</mi>
+                                </mrow>
+                              </mrow>
+                              <mo>)</mo>
+                            </mrow>
+                            <mo>+</mo>
+                            <mrow>
+                              <msub>
+                                <mo> </mo>
+                                <mi>Δ</mi>
+                              </msub>
+                              <mo></mo>
+                              <mi>RED</mi>
+                            </mrow>
+                            <mo>-</mo>
+                            <mrow>
+                              <msub>
+                                <mo> </mo>
+                                <mi>Δ</mi>
+                              </msub>
+                              <mo></mo>
+                              <mi>N</mi>
+                            </mrow>
+                          </mrow>
+                        </mfrac>
+                        <mo>×</mo>
+                        <mn>100</mn>
+                        <mo></mo>
+                        <mi>%</mi>
+                      </mrow>
+                    </mrow>
+                    <mo>;</mo>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mi>Formula</mi>
+                    <mo></mo>
+                    <mstyle>
+                      <mspace width="0.8em" height="0.8ex" />
+                    </mstyle>
+                    <mo></mo>
+                    <mn>3</mn>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          <img id="img-00001-en" wi="N/A" he="N/A" file="US20150250411A1_00003.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150250411A1-20150910-M00001.TIF" />
+        </maths>
+      </p>
+      <p id="p-00016-en" num="0014">wherein SaO<sub>2 </sub>is the blood oxygen saturation, K is the light absorption coefficient of the blood, <sub>Δ</sub>RED is the variation of the red light in one cycle, <sub>Δ</sub>IR is the variation of the infrared light in one cycle, <sub>Δ</sub>N is the disturbance value of the ambient light.</p>
+      <p id="p-00017-en" num="0015">Alternatively, after the step of amplifying and filtering the blood oxygen saturation and prior to converting the blood oxygen saturation into a digital signal and showing the result by means of an analog-to-digital converter, the above method may further comprise:</p>
+      <p id="p-00018-en" num="0016">calculating the pulse P according to the electrical signals of red light and infrared light; in particular,</p>
+      <p id="p-00019-en" num="0000">
+        <maths id="maths-00002-en" num="00002">
+          <math overflow="scroll">
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <mrow>
+                      <mi>P</mi>
+                      <mo>=</mo>
+                      <mrow>
+                        <mfrac>
+                          <mrow>
+                            <msubsup>
+                              <mi>k</mi>
+                              <mi>max</mi>
+                              <mi>IR</mi>
+                            </msubsup>
+                            <mo>*</mo>
+                            <msubsup>
+                              <mi>C</mi>
+                              <mi>max</mi>
+                              <mi>IR</mi>
+                            </msubsup>
+                          </mrow>
+                          <mrow>
+                            <msubsup>
+                              <mi>k</mi>
+                              <mi>min</mi>
+                              <mi>IR</mi>
+                            </msubsup>
+                            <mo>*</mo>
+                            <msubsup>
+                              <mi>C</mi>
+                              <mi>min</mi>
+                              <mi>IR</mi>
+                            </msubsup>
+                          </mrow>
+                        </mfrac>
+                        <mo>/</mo>
+                        <mfrac>
+                          <mrow>
+                            <msubsup>
+                              <mi>k</mi>
+                              <mi>max</mi>
+                              <mi>R</mi>
+                            </msubsup>
+                            <mo>*</mo>
+                            <msubsup>
+                              <mi>C</mi>
+                              <mi>max</mi>
+                              <mi>R</mi>
+                            </msubsup>
+                          </mrow>
+                          <mrow>
+                            <msubsup>
+                              <mi>k</mi>
+                              <mi>min</mi>
+                              <mi>R</mi>
+                            </msubsup>
+                            <mo>*</mo>
+                            <msubsup>
+                              <mi>C</mi>
+                              <mi>min</mi>
+                              <mi>R</mi>
+                            </msubsup>
+                          </mrow>
+                        </mfrac>
+                      </mrow>
+                    </mrow>
+                    <mo>;</mo>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mi>Formula</mi>
+                    <mo></mo>
+                    <mstyle>
+                      <mspace width="0.8em" height="0.8ex" />
+                    </mstyle>
+                    <mo></mo>
+                    <mn>4</mn>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          <img id="img-00002-en" wi="N/A" he="N/A" file="US20150250411A1_00004.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150250411A1-20150910-M00002.TIF" />
+        </maths>
+      </p>
+      <p id="p-00020-en" num="0017">wherein k<sub>max</sub><sup>IR </sup>is the maximum value of the absorption coefficient of the infrared light, k<sub>min</sub><sup>IR </sup>is the minimum value of the absorption coefficient of the infrared light;</p>
+      <p id="p-00021-en" num="0018">k<sub>max</sub><sup>R </sup>is the maximum value of the absorption coefficient of the red light, and k<sub>min</sub><sup>R </sup>is minimum value of the absorption coefficient of the red light;</p>
+      <p id="p-00022-en" num="0019">C<sub>max</sub><sup>IR </sup>is the maximum value of the C<sub>Hb</sub>O<sub>2 </sub>concentration for infrared light, C<sub>min</sub><sup>IR </sup>is the minimum value of the C<sub>Hb</sub>O<sub>2 </sub>concentration for infrared light;</p>
+      <p id="p-00023-en" num="0020">C<sub>max</sub><sup>R </sup>is the maximum value of the C<sub>Hb</sub>O<sub>2 </sub>concentration for red light, C<sub>min</sub><sup>R </sup>is the minimum value of the C<sub>Hb</sub>O<sub>2 </sub>concentration for red light.</p>
+      <p id="p-00024-en" num="0021">On the other hand, a measurement system of oxygen saturation in the blood is provided, which comprises:</p>
+      <p id="p-00025-en" num="0022">a control unit for controlling two parallel light emitting diode to emit a red light and infrared light periodically to a finger to be detected;</p>
+      <p id="p-00026-en" num="0023">a detection unit for detecting the red light and infrared light passing through the finger, and converting the red light and infrared light passing through the finger into a red light electrical signal and an infrared light electrical signal;</p>
+      <p id="p-00027-en" num="0024">a separation unit for separating the pulsating components from the two electrical signals respectively to obtain a separated variation of red light in one cycle and a separated variation of infrared light in one cycle;</p>
+      <p id="p-00028-en" num="0025">a calculation unit for calculating the blood oxygen saturation according to the variations of red light and infrared light;</p>
+      <p id="p-00029-en" num="0026">a conversion and transmission unit for converting the blood oxygen saturation into a digital signal and showing the result by means of an analog-to-digital converter after amplifying and filtering of the blood oxygen saturation.</p>
+      <p id="p-00030-en" num="0027">Alternatively, the calculation unit is particularly used for</p>
+      <p id="p-00031-en" num="0000">
+        <maths id="maths-00003-en" num="00003">
+          <math overflow="scroll">
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <mrow>
+                      <msub>
+                        <mi>SaO</mi>
+                        <mn>2</mn>
+                      </msub>
+                      <mo>=</mo>
+                      <mrow>
+                        <mfrac>
+                          <mn>1</mn>
+                          <mi>K</mi>
+                        </mfrac>
+                        <mo></mo>
+                        <mi>ln</mi>
+                        <mo></mo>
+                        <mstyle>
+                          <mspace width="0.3em" height="0.3ex" />
+                        </mstyle>
+                        <mo></mo>
+                        <mfrac>
+                          <mrow>
+                            <mrow>
+                              <msub>
+                                <mo> </mo>
+                                <mi>Δ</mi>
+                              </msub>
+                              <mo></mo>
+                              <mi>RED</mi>
+                            </mrow>
+                            <mo>-</mo>
+                            <mrow>
+                              <msub>
+                                <mo> </mo>
+                                <mi>Δ</mi>
+                              </msub>
+                              <mo></mo>
+                              <mi>N</mi>
+                            </mrow>
+                          </mrow>
+                          <mrow>
+                            <mrow>
+                              <mo>(</mo>
+                              <mrow>
+                                <mrow>
+                                  <msub>
+                                    <mo> </mo>
+                                    <mi>Δ</mi>
+                                  </msub>
+                                  <mo></mo>
+                                  <mi>IR</mi>
+                                </mrow>
+                                <mo>-</mo>
+                                <mrow>
+                                  <msub>
+                                    <mo> </mo>
+                                    <mi>Δ</mi>
+                                  </msub>
+                                  <mo></mo>
+                                  <mi>N</mi>
+                                </mrow>
+                              </mrow>
+                              <mo>)</mo>
+                            </mrow>
+                            <mo>+</mo>
+                            <mrow>
+                              <msub>
+                                <mo> </mo>
+                                <mi>Δ</mi>
+                              </msub>
+                              <mo></mo>
+                              <mi>RED</mi>
+                            </mrow>
+                            <mo>-</mo>
+                            <mrow>
+                              <msub>
+                                <mo> </mo>
+                                <mi>Δ</mi>
+                              </msub>
+                              <mo></mo>
+                              <mi>N</mi>
+                            </mrow>
+                          </mrow>
+                        </mfrac>
+                        <mo>×</mo>
+                        <mn>100</mn>
+                        <mo></mo>
+                        <mi>%</mi>
+                      </mrow>
+                    </mrow>
+                    <mo>;</mo>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mi>Formula</mi>
+                    <mo></mo>
+                    <mstyle>
+                      <mspace width="0.8em" height="0.8ex" />
+                    </mstyle>
+                    <mo></mo>
+                    <mn>3</mn>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          <img id="img-00003-en" wi="N/A" he="N/A" file="US20150250411A1_00005.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150250411A1-20150910-M00003.TIF" />
+        </maths>
+      </p>
+      <p id="p-00032-en" num="0028">wherein SaO<sub>2 </sub>is the blood oxygen saturation, K is the light absorption coefficient of the blood, <sub>Δ</sub>RED is the variation of the red light in one cycle, <sub>Δ</sub>IR is the variation of the infrared light in one cycle, <sub>Δ</sub>N is the disturbance value of the ambient light.</p>
+      <p id="p-00033-en" num="0029">Alternatively, the calculation unit can be further used for calculating the pulse P based on the electrical signals of red light and infrared light; in particular,</p>
+      <p id="p-00034-en" num="0000">
+        <maths id="maths-00004-en" num="00004">
+          <math overflow="scroll">
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <mrow>
+                      <mi>P</mi>
+                      <mo>=</mo>
+                      <mrow>
+                        <mfrac>
+                          <mrow>
+                            <msubsup>
+                              <mi>k</mi>
+                              <mi>max</mi>
+                              <mi>IR</mi>
+                            </msubsup>
+                            <mo>*</mo>
+                            <msubsup>
+                              <mi>C</mi>
+                              <mi>max</mi>
+                              <mi>IR</mi>
+                            </msubsup>
+                          </mrow>
+                          <mrow>
+                            <msubsup>
+                              <mi>k</mi>
+                              <mi>min</mi>
+                              <mi>IR</mi>
+                            </msubsup>
+                            <mo>*</mo>
+                            <msubsup>
+                              <mi>C</mi>
+                              <mi>min</mi>
+                              <mi>IR</mi>
+                            </msubsup>
+                          </mrow>
+                        </mfrac>
+                        <mo>/</mo>
+                        <mfrac>
+                          <mrow>
+                            <msubsup>
+                              <mi>k</mi>
+                              <mi>max</mi>
+                              <mi>R</mi>
+                            </msubsup>
+                            <mo>*</mo>
+                            <msubsup>
+                              <mi>C</mi>
+                              <mi>max</mi>
+                              <mi>R</mi>
+                            </msubsup>
+                          </mrow>
+                          <mrow>
+                            <msubsup>
+                              <mi>k</mi>
+                              <mi>min</mi>
+                              <mi>R</mi>
+                            </msubsup>
+                            <mo>*</mo>
+                            <msubsup>
+                              <mi>C</mi>
+                              <mi>min</mi>
+                              <mi>R</mi>
+                            </msubsup>
+                          </mrow>
+                        </mfrac>
+                      </mrow>
+                    </mrow>
+                    <mo>;</mo>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mi>Formula</mi>
+                    <mo></mo>
+                    <mstyle>
+                      <mspace width="0.8em" height="0.8ex" />
+                    </mstyle>
+                    <mo></mo>
+                    <mn>4</mn>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          <img id="img-00004-en" wi="N/A" he="N/A" file="US20150250411A1_00006.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150250411A1-20150910-M00004.TIF" />
+        </maths>
+      </p>
+      <p id="p-00035-en" num="0030">wherein k<sub>max</sub><sup>IR </sup>is the maximum value of the absorption coefficient of the infrared light, and k<sub>min</sub><sup>IR </sup>is the minimum value of the absorption coefficient of the infrared light;</p>
+      <p id="p-00036-en" num="0031">k<sub>max</sub><sup>R </sup>is the maximum value of the absorption coefficient of the red light, and k<sub>min</sub><sup>R </sup>is the minimum value of the absorption coefficient of the red light;</p>
+      <p id="p-00037-en" num="0032">C<sub>max</sub><sup>IR </sup>is the maximum value of the C<sub>Hb</sub>O<sub>2 </sub>concentration for infrared light, and C<sub>min</sub><sup>IR </sup>is the minimum value of the C<sub>Hb</sub>O<sub>2 </sub>concentration for infrared light;</p>
+      <p id="p-00038-en" num="0033">C<sub>max</sub><sup>R </sup>is the maximum value of the C<sub>Hb</sub>O<sub>2 </sub>concentration for red light, and C<sub>min</sub><sup>R </sup>is the minimum value of the C<sub>Hb</sub>O<sub>2 </sub>concentration for red light;</p>
+      <p id="p-00039-en" num="0034">Compared with the technical solutions in prior art, the embodiments of the present application have the following advantages: the oxygen content in the blood can be detected by means of the present technical solution in a noninvasive and real time way, therefore it has the advantages of noninvasive and real time measurement.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00040-en" num="0035">
+        <figref>FIG. 1</figref> is flow chart of detection method of the blood oxygen saturation according to an embodiment of the present application.</p>
+      <p id="p-00041-en" num="0036">
+        <figref>FIG. 2</figref> is a schematic structural diagram of the measurement system of blood oxygen saturation according to the present application.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00042-en" num="0037">Objects, technical solution and advantages of the present application will be explained below in detail with reference to the accompanying drawings and examples. However, it should be appreciated that the following description of the embodiments is merely exemplary in nature and is in no way intended to limit the application.</p>
+      <p id="p-00043-en" num="0038">The principle of the present application is as follows: the method according to the present disclosure is similar to the measurement method of spectrophotometric technology, the present method is based on the absorption spectrum characteristics of oxyhemoglobin (HbO<sub>2</sub>) and reduced hemoglobin (Hb). When a beam of light shoots into a solution of a substance, the transmitted light intensity (I) and the emitted light intensity (I<sub>0</sub>) satisfy the following relationship:</p>
+      <p id="p-00044-en" num="0000">[in-line-formulae]I=I<sub>0</sub>e<sup>KCd</sup>  Formula 1[/in-line-formulae]</p>
+      <p id="p-00045-en" num="0039">wherein the natural logarithm of the ratio value of I to I<sub>0 </sub>is named as light density D, accordingly formula 1 can also be expressed as:</p>
+      <p id="p-00046-en" num="0000">[in-line-formulae]<i>D=ln </i>(<i>I/I</i><sub>0</sub>)=kCd;  Formula 2[/in-line-formulae]</p>
+      <p id="p-00047-en" num="0040">wherein C is the concentration of a solution (such as blood), d refers to the path of light passing through the blood, k is the light absorption coefficient of the blood. If the path d keeps constant, the concentration of blood will be proportional to the light density D. HbO<sub>2 </sub>and Hb in blood have different absorption coefficients to lights with different wave length, it has been proved by experiments that, in the region of red light (RED) with 600 -700 nm wave length, the absorption coefficient of Hb is much larger than that of HbO<sub>2</sub>; while in the region of infrared light (IR) with 800-1000 nm wave length, the absorption coefficient of Hb is smaller than that of HbO<sub>2</sub>; and the isoabsorptive point is observed at the vicinity of 805 nm.</p>
+      <p id="p-00048-en" num="0041">The blood in a human body flows through the lungs under the systole and diastole of the heart, and a certain amount of reduced hemoglobin (Hb) binds the oxygen taken from the alveoli of lung and turns into oxyhemoglobin (HbO<sub>2</sub>), about 98% of the oxygen combines with the hemoglobin to form oxyhemoglobin then it entries the tissues. This amount of oxygen reaches the blood capillaries along the artery system, then the oxygen is released so as to maintain the metabolism of the organizations. In one cardiac cycle, the ventricular systole and diastole cause the cyclic pressure fluctuation in the artery which makes the artery expand and retract, as a result the artery vessels produce regular pulse.</p>
+      <p id="p-00049-en" num="0042">The probe employed in the pulse blood oxygen device according to the present application is set on the finger in use. There are two parallel light emitting diodes (LED) fixed onto the upper wall, the LEDs emit a red light of 660 nm and an infrared light of 940 nm. There is a photodetector disposed on the lower wall, which converts the red light and the infrared light transmitting through the artery vessels of the finger into electrical signals, the weaker the detected photoelectric signal is, the more light has been absorbed by the tissues, bone and blood when the light signal passes through the probe place. Skin, muscle, fat, venous blood, pigment, bones and the like have constant absorption coefficients to these two types of light, respectively, therefore they only have an impact on the value of DC component in the photoelectric signal, but the concentrations of HbO<sub>2 </sub>and Hb in the blood change periodically with the function of blood pulse, therefore the light absorption thereof varies in a pulse-like way, accordingly the signal strength output by the photodetector changes in a pulse-like way with variation of concentration ratio of HbO<sub>2 </sub>to Hb in the blood. If denoted with light absorption, when the red light and infrared light play function, the variation laws thereof are substantially the same, but the amplitude of the pulsation component may be different from each other. The emitting sequence of the two LEDs can be controlled by a timing circuit, and the sequence can be: (1) red light LED turns on; (2) red light LED turns off, and infrared LED turns on; (3) both two LEDs turn off; this emitting sequence runs repeatedly in a frequency of 400 times per second (50 Hz AC), so the inhibition ability to the ambient light can be enhanced. The red light and infrared light with different wave lengths pass through the part to be detected in turns, and the pulsation components in these two signals are separated respectively, after amplifying and filtering, the pulsation components are converted into digital signal by an A/D convertor. The intensity of the received light varies with the pulse, and the maximum value in the transmitted light intensity received by a detector under red light wave length is recorded as IRmax, and the minimum value is IRmin. IRmax appears in the period of systole, which corresponds to the time of maximum blood capacity of the artery, IRmin appears in the period of diastole, which corresponds to the minimum blood capacity of the artery.</p>
+      <p id="p-00050-en" num="0043">The embodiments of the present application provide a method for detecting the oxygen saturation in blood. The present method is carried out by a pulse blood oxygen device comprising: two light emitting diodes, and one photodetector, wherein one light emitting diode emits a red light of 660 nm wave length and the other emits an infrared light of 940 nm. The present method is shown in <figref>FIG. 1</figref>, which comprises the following steps:</p>
+      <p id="p-00051-en" num="0044">
+        <b>101</b>: controlling two parallel light emitting diodes to emit red light and infrared light periodically to a finger to be detected;</p>
+      <p id="p-00052-en" num="0045">
+        <b>102</b>: detecting the red light and infrared light passing through the finger, and converting the transmitted red light and infrared light into a red light electrical signal and infrared light electrical signal;</p>
+      <p id="p-00053-en" num="0046">
+        <b>103</b>: separating the pulsating components from the two electrical signals to obtain a separated variation of red light in one cycle and a separated variation of infrared light in one cycle;</p>
+      <p id="p-00054-en" num="0047">
+        <b>104</b>: calculating the blood oxygen saturation based on the variations of red light and infrared light;</p>
+      <p id="p-00055-en" num="0048">
+        <b>105</b>: amplifying and filtering the blood oxygen saturation prior to converting the blood oxygen saturation into a digital signal and showing the result by means of an analog-to-digital converter (AD convertor).</p>
+      <p id="p-00056-en" num="0049">Alternatively, the above cycle can be 0.02 second, i.e. the frequency thereof is 50 Hz AC frequency. Of course other frequencies can also be used for calculation.</p>
+      <p id="p-00057-en" num="0050">The method for achieving the above step <b>104</b> can be:</p>
+      <p id="p-00058-en" num="0000">
+        <maths id="maths-00005-en" num="00005">
+          <math overflow="scroll">
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <mrow>
+                      <msub>
+                        <mi>SaO</mi>
+                        <mn>2</mn>
+                      </msub>
+                      <mo>=</mo>
+                      <mrow>
+                        <mfrac>
+                          <mn>1</mn>
+                          <mi>K</mi>
+                        </mfrac>
+                        <mo></mo>
+                        <mi>ln</mi>
+                        <mo></mo>
+                        <mstyle>
+                          <mspace width="0.3em" height="0.3ex" />
+                        </mstyle>
+                        <mo></mo>
+                        <mfrac>
+                          <mrow>
+                            <mrow>
+                              <msub>
+                                <mo> </mo>
+                                <mi>Δ</mi>
+                              </msub>
+                              <mo></mo>
+                              <mi>RED</mi>
+                            </mrow>
+                            <mo>-</mo>
+                            <mrow>
+                              <msub>
+                                <mo> </mo>
+                                <mi>Δ</mi>
+                              </msub>
+                              <mo></mo>
+                              <mi>N</mi>
+                            </mrow>
+                          </mrow>
+                          <mrow>
+                            <mrow>
+                              <mo>(</mo>
+                              <mrow>
+                                <mrow>
+                                  <msub>
+                                    <mo> </mo>
+                                    <mi>Δ</mi>
+                                  </msub>
+                                  <mo></mo>
+                                  <mi>IR</mi>
+                                </mrow>
+                                <mo>-</mo>
+                                <mrow>
+                                  <msub>
+                                    <mo> </mo>
+                                    <mi>Δ</mi>
+                                  </msub>
+                                  <mo></mo>
+                                  <mi>N</mi>
+                                </mrow>
+                              </mrow>
+                              <mo>)</mo>
+                            </mrow>
+                            <mo>+</mo>
+                            <mrow>
+                              <msub>
+                                <mo> </mo>
+                                <mi>Δ</mi>
+                              </msub>
+                              <mo></mo>
+                              <mi>RED</mi>
+                            </mrow>
+                            <mo>-</mo>
+                            <mrow>
+                              <msub>
+                                <mo> </mo>
+                                <mi>Δ</mi>
+                              </msub>
+                              <mo></mo>
+                              <mi>N</mi>
+                            </mrow>
+                          </mrow>
+                        </mfrac>
+                        <mo>×</mo>
+                        <mn>100</mn>
+                        <mo></mo>
+                        <mi>%</mi>
+                      </mrow>
+                    </mrow>
+                    <mo>;</mo>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mi>Formula</mi>
+                    <mo></mo>
+                    <mstyle>
+                      <mspace width="0.8em" height="0.8ex" />
+                    </mstyle>
+                    <mo></mo>
+                    <mn>3</mn>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          <img id="img-00005-en" wi="N/A" he="N/A" file="US20150250411A1_00007.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150250411A1-20150910-M00005.TIF" />
+        </maths>
+      </p>
+      <p id="p-00059-en" num="0051">wherein K is the light absorption coefficient of the blood, <sub>Δ</sub>RED is the variation of the red light in one cycle, <sub>Δ</sub>IR is the variation of the infrared light in one cycle, <sub>Δ</sub>N is the disturbance value of the ambient light.</p>
+      <p id="p-00060-en" num="0052">Alternatively, the above method can include the following step after step <b>105</b>:</p>
+      <p id="p-00061-en" num="0053">calculating the pulse P according to the electrical signals of red light and infrared light; in particular,</p>
+      <p id="p-00062-en" num="0000">
+        <maths id="maths-00006-en" num="00006">
+          <math overflow="scroll">
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <mrow>
+                      <mi>P</mi>
+                      <mo>=</mo>
+                      <mrow>
+                        <mfrac>
+                          <mrow>
+                            <msubsup>
+                              <mi>k</mi>
+                              <mi>max</mi>
+                              <mi>IR</mi>
+                            </msubsup>
+                            <mo>*</mo>
+                            <msubsup>
+                              <mi>C</mi>
+                              <mi>max</mi>
+                              <mi>IR</mi>
+                            </msubsup>
+                          </mrow>
+                          <mrow>
+                            <msubsup>
+                              <mi>k</mi>
+                              <mi>min</mi>
+                              <mi>IR</mi>
+                            </msubsup>
+                            <mo>*</mo>
+                            <msubsup>
+                              <mi>C</mi>
+                              <mi>min</mi>
+                              <mi>IR</mi>
+                            </msubsup>
+                          </mrow>
+                        </mfrac>
+                        <mo>/</mo>
+                        <mfrac>
+                          <mrow>
+                            <msubsup>
+                              <mi>k</mi>
+                              <mi>max</mi>
+                              <mi>R</mi>
+                            </msubsup>
+                            <mo>*</mo>
+                            <msubsup>
+                              <mi>C</mi>
+                              <mi>max</mi>
+                              <mi>R</mi>
+                            </msubsup>
+                          </mrow>
+                          <mrow>
+                            <msubsup>
+                              <mi>k</mi>
+                              <mi>min</mi>
+                              <mi>R</mi>
+                            </msubsup>
+                            <mo>*</mo>
+                            <msubsup>
+                              <mi>C</mi>
+                              <mi>min</mi>
+                              <mi>R</mi>
+                            </msubsup>
+                          </mrow>
+                        </mfrac>
+                      </mrow>
+                    </mrow>
+                    <mo>;</mo>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mi>Formula</mi>
+                    <mo></mo>
+                    <mstyle>
+                      <mspace width="0.8em" height="0.8ex" />
+                    </mstyle>
+                    <mo></mo>
+                    <mn>4</mn>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          <img id="img-00006-en" wi="N/A" he="N/A" file="US20150250411A1_00008.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150250411A1-20150910-M00006.TIF" />
+        </maths>
+      </p>
+      <p id="p-00063-en" num="0054">wherein k<sub>max</sub><sup>IR </sup>is the maximum value of the absorption coefficient of the infrared light, and k<sub>min</sub><sup>IR </sup>is the minimum value of the absorption coefficient of the infrared light;</p>
+      <p id="p-00064-en" num="0055">k<sub>max</sub><sup>R </sup>is the maximum value of the absorption coefficient of the red light, and k<sub>min</sub><sup>R </sup>is the minimum value of the absorption coefficient of the red light;</p>
+      <p id="p-00065-en" num="0056">C<sub>max</sub><sup>IR </sup>is the maximum value of the C<sub>Hb</sub>O<sub>2 </sub>concentration for infrared light, and C<sub>min</sub><sup>IR </sup>is the minimum value of the C<sub>Hb</sub>O<sub>2 </sub>concentration for infrared light;</p>
+      <p id="p-00066-en" num="0057">C<sub>max</sub><sup>R </sup>is the maximum value of the C<sub>Hb</sub>O<sub>2 </sub>concentration for red light, and C<sub>min</sub><sup>R </sup>is the minimum value of the C<sub>Hb</sub>O<sub>2 </sub>concentration for red light.</p>
+      <p id="p-00067-en" num="0058">The embodiments according to the present application have the advantages of non-invasive real-time for detection of the blood oxygen saturation and pulse.</p>
+      <p id="p-00068-en" num="0059">The embodiments of the present application further provide a system for detecting the oxygen saturation in blood as shown in <figref>FIG. 2</figref>, wherein the system comprises:</p>
+      <p id="p-00069-en" num="0060">a control unit <b>21</b> for controlling two parallel light emitting diode to emit a red light and infrared light periodically to a finger to be detected;</p>
+      <p id="p-00070-en" num="0061">a detection unit <b>22</b> for detecting the red light and infrared light passing through the finger and converting the red light and infrared light passing through the finger into a red light electrical signal and an infrared light electrical signal;</p>
+      <p id="p-00071-en" num="0062">a separation unit <b>23</b> for separating the pulsating components from the two electrical signals to obtain a separated variation of red light in one cycle and a separated variation of infrared light in one cycle;</p>
+      <p id="p-00072-en" num="0063">a calculation unit <b>24</b> for calculating the blood oxygen saturation according to the variations of red light and infrared light;</p>
+      <p id="p-00073-en" num="0064">a conversion and transmission unit <b>25</b> for converting the blood oxygen saturation into a digital signal and showing the result by means of an analog-to-digital converter after amplifying and filtering of the blood oxygen saturation.</p>
+      <p id="p-00074-en" num="0065">Alternatively, the calculation unit <b>24</b> is particularly used for</p>
+      <p id="p-00075-en" num="0000">
+        <maths id="maths-00007-en" num="00007">
+          <math overflow="scroll">
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <mrow>
+                      <msub>
+                        <mi>SaO</mi>
+                        <mn>2</mn>
+                      </msub>
+                      <mo>=</mo>
+                      <mrow>
+                        <mfrac>
+                          <mn>1</mn>
+                          <mi>K</mi>
+                        </mfrac>
+                        <mo></mo>
+                        <mi>ln</mi>
+                        <mo></mo>
+                        <mstyle>
+                          <mspace width="0.3em" height="0.3ex" />
+                        </mstyle>
+                        <mo></mo>
+                        <mfrac>
+                          <mrow>
+                            <mrow>
+                              <msub>
+                                <mo> </mo>
+                                <mi>Δ</mi>
+                              </msub>
+                              <mo></mo>
+                              <mi>RED</mi>
+                            </mrow>
+                            <mo>-</mo>
+                            <mrow>
+                              <msub>
+                                <mo> </mo>
+                                <mi>Δ</mi>
+                              </msub>
+                              <mo></mo>
+                              <mi>N</mi>
+                            </mrow>
+                          </mrow>
+                          <mrow>
+                            <mrow>
+                              <mo>(</mo>
+                              <mrow>
+                                <mrow>
+                                  <msub>
+                                    <mo> </mo>
+                                    <mi>Δ</mi>
+                                  </msub>
+                                  <mo></mo>
+                                  <mi>IR</mi>
+                                </mrow>
+                                <mo>-</mo>
+                                <mrow>
+                                  <msub>
+                                    <mo> </mo>
+                                    <mi>Δ</mi>
+                                  </msub>
+                                  <mo></mo>
+                                  <mi>N</mi>
+                                </mrow>
+                              </mrow>
+                              <mo>)</mo>
+                            </mrow>
+                            <mo>+</mo>
+                            <mrow>
+                              <msub>
+                                <mo> </mo>
+                                <mi>Δ</mi>
+                              </msub>
+                              <mo></mo>
+                              <mi>RED</mi>
+                            </mrow>
+                            <mo>-</mo>
+                            <mrow>
+                              <msub>
+                                <mo> </mo>
+                                <mi>Δ</mi>
+                              </msub>
+                              <mo></mo>
+                              <mi>N</mi>
+                            </mrow>
+                          </mrow>
+                        </mfrac>
+                        <mo>×</mo>
+                        <mn>100</mn>
+                        <mo></mo>
+                        <mi>%</mi>
+                      </mrow>
+                    </mrow>
+                    <mo>;</mo>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mi>Formula</mi>
+                    <mo></mo>
+                    <mstyle>
+                      <mspace width="0.8em" height="0.8ex" />
+                    </mstyle>
+                    <mo></mo>
+                    <mn>3</mn>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          <img id="img-00007-en" wi="N/A" he="N/A" file="US20150250411A1_00009.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150250411A1-20150910-M00007.TIF" />
+        </maths>
+      </p>
+      <p id="p-00076-en" num="0066">wherein, SaO<sub>2 </sub>is the blood oxygen saturation, K is the light absorption coefficient of the blood, <sub>Δ</sub>RED is the variation of the red light in one period, <sub>Δ</sub>IR is the variation of the infrared light in one cycle, <sub>Δ</sub>N is the disturbance value of the ambient light.</p>
+      <p id="p-00077-en" num="0067">Alternatively, the above calculation unit <b>24</b> can be further used for calculating the pulse P according to the electrical signals of red light and infrared light; in particular,</p>
+      <p id="p-00078-en" num="0000">
+        <maths id="maths-00008-en" num="00008">
+          <math overflow="scroll">
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <mrow>
+                      <mi>P</mi>
+                      <mo>=</mo>
+                      <mrow>
+                        <mfrac>
+                          <mrow>
+                            <msubsup>
+                              <mi>k</mi>
+                              <mi>max</mi>
+                              <mi>IR</mi>
+                            </msubsup>
+                            <mo>*</mo>
+                            <msubsup>
+                              <mi>C</mi>
+                              <mi>max</mi>
+                              <mi>IR</mi>
+                            </msubsup>
+                          </mrow>
+                          <mrow>
+                            <msubsup>
+                              <mi>k</mi>
+                              <mi>min</mi>
+                              <mi>IR</mi>
+                            </msubsup>
+                            <mo>*</mo>
+                            <msubsup>
+                              <mi>C</mi>
+                              <mi>min</mi>
+                              <mi>IR</mi>
+                            </msubsup>
+                          </mrow>
+                        </mfrac>
+                        <mo>/</mo>
+                        <mfrac>
+                          <mrow>
+                            <msubsup>
+                              <mi>k</mi>
+                              <mi>max</mi>
+                              <mi>R</mi>
+                            </msubsup>
+                            <mo>*</mo>
+                            <msubsup>
+                              <mi>C</mi>
+                              <mi>max</mi>
+                              <mi>R</mi>
+                            </msubsup>
+                          </mrow>
+                          <mrow>
+                            <msubsup>
+                              <mi>k</mi>
+                              <mi>min</mi>
+                              <mi>R</mi>
+                            </msubsup>
+                            <mo>*</mo>
+                            <msubsup>
+                              <mi>C</mi>
+                              <mi>min</mi>
+                              <mi>R</mi>
+                            </msubsup>
+                          </mrow>
+                        </mfrac>
+                      </mrow>
+                    </mrow>
+                    <mo>;</mo>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mi>Formula</mi>
+                    <mo></mo>
+                    <mstyle>
+                      <mspace width="0.8em" height="0.8ex" />
+                    </mstyle>
+                    <mo></mo>
+                    <mn>4</mn>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          <img id="img-00008-en" wi="N/A" he="N/A" file="US20150250411A1_00010.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150250411A1-20150910-M00008.TIF" />
+        </maths>
+      </p>
+      <p id="p-00079-en" num="0068">wherein k<sub>max</sub><sup>IR </sup>is the maximum value of the absorption coefficient of the infrared light, and k<sub>min</sub><sup>IR </sup>is the minimum value of the absorption coefficient of the infrared light;</p>
+      <p id="p-00080-en" num="0069">k<sub>max</sub><sup>R </sup>is the maximum value of the absorption coefficient of the red light, and k<sub>min</sub><sup>R </sup>is the minimum value of the absorption coefficient of the red light;</p>
+      <p id="p-00081-en" num="0070">C<sub>max</sub><sup>IR </sup>is the maximum value of the C<sub>Hb</sub>O<sub>2 </sub>concentration for infrared light, and C<sub>min</sub><sup>IR </sup>is the minimum value of the C<sub>Hb</sub>O<sub>2 </sub>concentration for infrared light;</p>
+      <p id="p-00082-en" num="0071">C<sub>max</sub><sup>R </sup>is the maximum value of the C<sub>Hb</sub>O<sub>2 </sub>concentration for red light, and C<sub>min</sub><sup>R </sup>is the minimum value of the C<sub>Hb</sub>O<sub>2 </sub>concentration for red light.</p>
+      <p id="p-00083-en" num="0072">It should be appreciated that, all the units in the above-mentioned embodiments are just divided by their functions, but it should not limited to the above-mentioned division, if only the corresponding function can be achieved. On the other hand, the specific name of each functional unit is merely used to distinguish each other, but not used to limit the protection scope of the present application.</p>
+      <p id="p-00084-en" num="0073">In addition, one skilled in the art should appreciate all or a certain part of the steps in each of the above embodiments can be completed by programs instructing correlated hardware, wherein the corresponding programs can be stored in a computer-readable storage medium such as ROM/RAM, disk, Compact Disc or the like.</p>
+      <p id="p-00085-en" num="0074">The embodiments above are merely the preferable embodiments of the present application and not intended to limit the present application. And all changes equivalent substitution and improvements which come within the meaning and range of equivalency of the present application are intended to be embraced therein.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>I claim:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method for detecting oxygen saturation in a blood comprising:
+<claim-text>controlling two parallel light emitting diodes to respectively emit a red light and an infrared light periodically to a finger to be detected;</claim-text><claim-text>detecting the red light and infrared light passing through the finger, and converting the transmitted red light and infrared light into a red light electrical signal and an infrared light electrical signal respectively;</claim-text><claim-text>separating pulsating components from the two electrical signals to obtain a separated variation of red light in one cycle and a separated variation of infrared light in one cycle;</claim-text><claim-text>calculating the blood oxygen saturation based on the variations of red light and infrared light;</claim-text><claim-text>amplifying and filtering the blood oxygen saturation prior to converting the blood oxygen saturation into a digital signal by means of an analog-to-digital converter.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the step of calculating the blood oxygen saturation based on the variations of red light and infrared light comprises:</claim-text>
+      <claim-text>
+        <maths id="mathsc-00001-en" num="00009">
+          <math overflow="scroll">
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <mrow>
+                      <msub>
+                        <mi>SaO</mi>
+                        <mn>2</mn>
+                      </msub>
+                      <mo>=</mo>
+                      <mrow>
+                        <mfrac>
+                          <mn>1</mn>
+                          <mi>K</mi>
+                        </mfrac>
+                        <mo></mo>
+                        <mi>ln</mi>
+                        <mo></mo>
+                        <mstyle>
+                          <mspace width="0.3em" height="0.3ex" />
+                        </mstyle>
+                        <mo></mo>
+                        <mfrac>
+                          <mrow>
+                            <mrow>
+                              <msub>
+                                <mo> </mo>
+                                <mi>Δ</mi>
+                              </msub>
+                              <mo></mo>
+                              <mi>RED</mi>
+                            </mrow>
+                            <mo>-</mo>
+                            <mrow>
+                              <msub>
+                                <mo> </mo>
+                                <mi>Δ</mi>
+                              </msub>
+                              <mo></mo>
+                              <mi>N</mi>
+                            </mrow>
+                          </mrow>
+                          <mrow>
+                            <mrow>
+                              <mo>(</mo>
+                              <mrow>
+                                <mrow>
+                                  <msub>
+                                    <mo> </mo>
+                                    <mi>Δ</mi>
+                                  </msub>
+                                  <mo></mo>
+                                  <mi>IR</mi>
+                                </mrow>
+                                <mo>-</mo>
+                                <mrow>
+                                  <msub>
+                                    <mo> </mo>
+                                    <mi>Δ</mi>
+                                  </msub>
+                                  <mo></mo>
+                                  <mi>N</mi>
+                                </mrow>
+                              </mrow>
+                              <mo>)</mo>
+                            </mrow>
+                            <mo>+</mo>
+                            <mrow>
+                              <msub>
+                                <mo> </mo>
+                                <mi>Δ</mi>
+                              </msub>
+                              <mo></mo>
+                              <mi>RED</mi>
+                            </mrow>
+                            <mo>-</mo>
+                            <mrow>
+                              <msub>
+                                <mo> </mo>
+                                <mi>Δ</mi>
+                              </msub>
+                              <mo></mo>
+                              <mi>N</mi>
+                            </mrow>
+                          </mrow>
+                        </mfrac>
+                        <mo>×</mo>
+                        <mn>100</mn>
+                        <mo></mo>
+                        <mi>%</mi>
+                      </mrow>
+                    </mrow>
+                    <mo>;</mo>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mi>Formula</mi>
+                    <mo></mo>
+                    <mstyle>
+                      <mspace width="0.8em" height="0.8ex" />
+                    </mstyle>
+                    <mo></mo>
+                    <mn>3</mn>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          <img id="imgc-00001-en" wi="N/A" he="N/A" file="US20150250411A1_00011.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150250411A1-20150910-M00009.TIF" />
+        </maths><claim-text>wherein SaO<sub>2 </sub>is the blood oxygen saturation, K is a light absorption coefficient of a blood, <sub>Δ</sub>RED is a variation of the red light in one period, <sub>Δ</sub>IR is a variation of the infrared light in one cycle, and <sub>Δ</sub>N is a disturbance value of an ambient light.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the step of amplifying and filtering the blood oxygen saturation prior to converting the blood oxygen saturation into a digital signal by means of an analog-to-digital converter further comprises:
+<claim-text>calculating the pulse P according to the electrical signals of red light and infrared light; in particular,</claim-text></claim-text>
+      <claim-text>
+        <maths id="mathsc-00002-en" num="00010">
+          <math overflow="scroll">
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <mrow>
+                      <mi>P</mi>
+                      <mo>=</mo>
+                      <mrow>
+                        <mfrac>
+                          <mrow>
+                            <msubsup>
+                              <mi>k</mi>
+                              <mi>max</mi>
+                              <mi>IR</mi>
+                            </msubsup>
+                            <mo>*</mo>
+                            <msubsup>
+                              <mi>C</mi>
+                              <mi>max</mi>
+                              <mi>IR</mi>
+                            </msubsup>
+                          </mrow>
+                          <mrow>
+                            <msubsup>
+                              <mi>k</mi>
+                              <mi>min</mi>
+                              <mi>IR</mi>
+                            </msubsup>
+                            <mo>*</mo>
+                            <msubsup>
+                              <mi>C</mi>
+                              <mi>min</mi>
+                              <mi>IR</mi>
+                            </msubsup>
+                          </mrow>
+                        </mfrac>
+                        <mo>/</mo>
+                        <mfrac>
+                          <mrow>
+                            <msubsup>
+                              <mi>k</mi>
+                              <mi>max</mi>
+                              <mi>R</mi>
+                            </msubsup>
+                            <mo>*</mo>
+                            <msubsup>
+                              <mi>C</mi>
+                              <mi>max</mi>
+                              <mi>R</mi>
+                            </msubsup>
+                          </mrow>
+                          <mrow>
+                            <msubsup>
+                              <mi>k</mi>
+                              <mi>min</mi>
+                              <mi>R</mi>
+                            </msubsup>
+                            <mo>*</mo>
+                            <msubsup>
+                              <mi>C</mi>
+                              <mi>min</mi>
+                              <mi>R</mi>
+                            </msubsup>
+                          </mrow>
+                        </mfrac>
+                      </mrow>
+                    </mrow>
+                    <mo>,</mo>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mi>Formula</mi>
+                    <mo></mo>
+                    <mstyle>
+                      <mspace width="0.8em" height="0.8ex" />
+                    </mstyle>
+                    <mo></mo>
+                    <mn>4</mn>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          <img id="imgc-00002-en" wi="N/A" he="N/A" file="US20150250411A1_00012.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150250411A1-20150910-M00010.TIF" />
+        </maths><claim-text>wherein k<sub>max</sub><sup>IR </sup>is the maximum value of an absorption coefficient of the infrared light, and k<sub>min</sub><sup>IR </sup>is the minimum value of an absorption coefficient of the infrared light;</claim-text><claim-text>k<sub>max</sub><sup>R </sup>is the maximum value of an absorption coefficient of the red light, and k<sub>min</sub><sup>R </sup>is the minimum value of an absorption coefficient of the red light;</claim-text><claim-text>C<sub>max</sub><sup>IR </sup>is the maximum value of a C<sub>Hb</sub>O<sub>2 </sub>concentration for infrared light, and C<sub>min</sub><sup>IR </sup>is the minimum value of a C<sub>Hb</sub>O<sub>2 </sub>concentration for infrared light;</claim-text><claim-text>C<sub>max</sub><sup>R </sup>is the maximum value of a C<sub>Hb</sub>O<sub>2 </sub>concentration for red light, and C<sub>min</sub><sup>R </sup>is the minimum value of a C<sub>Hb</sub>O<sub>2 </sub>concentration for red light.</claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en" independent="true">
+      <claim-text>
+        <b>4</b>. A system for detecting oxygen saturation in a blood comprising:
+<claim-text>a control unit for controlling two parallel light emitting diodes to respectively emit a red light and infrared light periodically to a finger to be detected;</claim-text><claim-text>a detection unit for detecting the red light and infrared light passing through the finger, and converting the transmitted red light and infrared light into a red light electrical signal and an infrared light electrical signal respectively;</claim-text><claim-text>a separation unit for separating pulsating components from the two electrical signals to obtain a separated variation of red light in one cycle and a separated variation of infrared light in one cycle;</claim-text><claim-text>a calculation unit for calculating the blood oxygen saturation according to the variations of red light and infrared light;</claim-text><claim-text>a conversion and transmission unit for converting the blood oxygen saturation into a digital signal by means of an analog-to-digital converter after amplifying and filtering of the blood oxygen saturation.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The system of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the calculation unit is used for</claim-text>
+      <claim-text>
+        <maths id="mathsc-00003-en" num="00011">
+          <math overflow="scroll">
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <mrow>
+                      <msub>
+                        <mi>SaO</mi>
+                        <mn>2</mn>
+                      </msub>
+                      <mo>=</mo>
+                      <mrow>
+                        <mfrac>
+                          <mn>1</mn>
+                          <mi>K</mi>
+                        </mfrac>
+                        <mo></mo>
+                        <mi>ln</mi>
+                        <mo></mo>
+                        <mstyle>
+                          <mspace width="0.3em" height="0.3ex" />
+                        </mstyle>
+                        <mo></mo>
+                        <mfrac>
+                          <mrow>
+                            <mrow>
+                              <msub>
+                                <mo> </mo>
+                                <mi>Δ</mi>
+                              </msub>
+                              <mo></mo>
+                              <mi>RED</mi>
+                            </mrow>
+                            <mo>-</mo>
+                            <mrow>
+                              <msub>
+                                <mo> </mo>
+                                <mi>Δ</mi>
+                              </msub>
+                              <mo></mo>
+                              <mi>N</mi>
+                            </mrow>
+                          </mrow>
+                          <mrow>
+                            <mrow>
+                              <mo>(</mo>
+                              <mrow>
+                                <mrow>
+                                  <msub>
+                                    <mo> </mo>
+                                    <mi>Δ</mi>
+                                  </msub>
+                                  <mo></mo>
+                                  <mi>IR</mi>
+                                </mrow>
+                                <mo>-</mo>
+                                <mrow>
+                                  <msub>
+                                    <mo> </mo>
+                                    <mi>Δ</mi>
+                                  </msub>
+                                  <mo></mo>
+                                  <mi>N</mi>
+                                </mrow>
+                              </mrow>
+                              <mo>)</mo>
+                            </mrow>
+                            <mo>+</mo>
+                            <mrow>
+                              <msub>
+                                <mo> </mo>
+                                <mi>Δ</mi>
+                              </msub>
+                              <mo></mo>
+                              <mi>RED</mi>
+                            </mrow>
+                            <mo>-</mo>
+                            <mrow>
+                              <msub>
+                                <mo> </mo>
+                                <mi>Δ</mi>
+                              </msub>
+                              <mo></mo>
+                              <mi>N</mi>
+                            </mrow>
+                          </mrow>
+                        </mfrac>
+                        <mo>×</mo>
+                        <mn>100</mn>
+                        <mo></mo>
+                        <mi>%</mi>
+                      </mrow>
+                    </mrow>
+                    <mo>;</mo>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mi>Formula</mi>
+                    <mo></mo>
+                    <mstyle>
+                      <mspace width="0.8em" height="0.8ex" />
+                    </mstyle>
+                    <mo></mo>
+                    <mn>3</mn>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          <img id="imgc-00003-en" wi="N/A" he="N/A" file="US20150250411A1_00013.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150250411A1-20150910-M00011.TIF" />
+        </maths><claim-text>wherein SaO<sub>2 </sub>is the blood oxygen saturation, K is the light absorption coefficient of the blood, <sub>Δ</sub>RED is a variation of the red light in one period, <sub>Δ</sub>IR is a variation of the infrared light in one cycle, <sub>Δ</sub>N is a disturbance value of an ambient light.</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The system of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the calculation unit can be further used for calculating the pulse P according to the electrical signals of red light and infrared light; in particular,</claim-text>
+      <claim-text>
+        <maths id="mathsc-00004-en" num="00012">
+          <math overflow="scroll">
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <mrow>
+                      <mi>P</mi>
+                      <mo>=</mo>
+                      <mrow>
+                        <mfrac>
+                          <mrow>
+                            <msubsup>
+                              <mi>k</mi>
+                              <mi>max</mi>
+                              <mi>IR</mi>
+                            </msubsup>
+                            <mo>*</mo>
+                            <msubsup>
+                              <mi>C</mi>
+                              <mi>max</mi>
+                              <mi>IR</mi>
+                            </msubsup>
+                          </mrow>
+                          <mrow>
+                            <msubsup>
+                              <mi>k</mi>
+                              <mi>min</mi>
+                              <mi>IR</mi>
+                            </msubsup>
+                            <mo>*</mo>
+                            <msubsup>
+                              <mi>C</mi>
+                              <mi>min</mi>
+                              <mi>IR</mi>
+                            </msubsup>
+                          </mrow>
+                        </mfrac>
+                        <mo>/</mo>
+                        <mfrac>
+                          <mrow>
+                            <msubsup>
+                              <mi>k</mi>
+                              <mi>max</mi>
+                              <mi>R</mi>
+                            </msubsup>
+                            <mo>*</mo>
+                            <msubsup>
+                              <mi>C</mi>
+                              <mi>max</mi>
+                              <mi>R</mi>
+                            </msubsup>
+                          </mrow>
+                          <mrow>
+                            <msubsup>
+                              <mi>k</mi>
+                              <mi>min</mi>
+                              <mi>R</mi>
+                            </msubsup>
+                            <mo>*</mo>
+                            <msubsup>
+                              <mi>C</mi>
+                              <mi>min</mi>
+                              <mi>R</mi>
+                            </msubsup>
+                          </mrow>
+                        </mfrac>
+                      </mrow>
+                    </mrow>
+                    <mo>;</mo>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mi>Formula</mi>
+                    <mo></mo>
+                    <mstyle>
+                      <mspace width="0.8em" height="0.8ex" />
+                    </mstyle>
+                    <mo></mo>
+                    <mn>4</mn>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          <img id="imgc-00004-en" wi="N/A" he="N/A" file="US20150250411A1_00014.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150250411A1-20150910-M00012.TIF" />
+        </maths><claim-text>wherein k<sub>max</sub><sup>IR </sup>is the maximum value of an absorption coefficient of the infrared light, and k<sub>min</sub><sup>IR </sup>is the minimum value of an absorption coefficient of the infrared light;</claim-text><claim-text>k<sub>max</sub><sup>R </sup>is the maximum value of an absorption coefficient of the red light, and k<sub>min</sub><sup>R </sup>is the minimum value of an absorption coefficient of the red light;</claim-text><claim-text>C<sub>max</sub><sup>IR </sup>is the maximum value of a C<sub>Hb</sub>O<sub>2 </sub>concentration for infrared light, and C<sub>min</sub><sup>IR </sup>is the minimum value of a C<sub>Hb</sub>O<sub>2 </sub>concentration for infrared light;</claim-text><claim-text>C<sub>max</sub><sup>R </sup>is the maximum value of a C<sub>Hb</sub>O<sub>2 </sub>concentration for red light, and C<sub>min</sub><sup>R </sup>is the minimum value of a C<sub>Hb</sub>O<sub>2 </sub>concentration for red light.</claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150250411A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150250411A1-20150910-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150250411A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250411A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150250411A1_00003.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150250411A1-20150910-M00001.TIF" inline="yes" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150250411A1_00004.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150250411A1-20150910-M00002.TIF" inline="yes" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150250411A1_00005.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150250411A1-20150910-M00003.TIF" inline="yes" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150250411A1_00006.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150250411A1-20150910-M00004.TIF" inline="yes" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150250411A1_00007.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150250411A1-20150910-M00005.TIF" inline="yes" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150250411A1_00008.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150250411A1-20150910-M00006.TIF" inline="yes" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150250411A1_00009.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150250411A1-20150910-M00007.TIF" inline="yes" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150250411A1_00010.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150250411A1-20150910-M00008.TIF" inline="yes" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150250411A1_00011.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150250411A1-20150910-M00009.TIF" inline="yes" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150250411A1_00012.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150250411A1-20150910-M00010.TIF" inline="yes" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150250411A1_00013.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150250411A1-20150910-M00011.TIF" inline="yes" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150250411A1_00014.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150250411A1-20150910-M00012.TIF" inline="yes" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150250411A1_00015.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150250411A1-20150910-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150250411A1.PDF" type="pdf" size="390385" pages="7" />
+</lexisnexis-patent-document>

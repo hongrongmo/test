@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257677A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030207" date-changed="20151002" time-changed="033543">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121315612">
+        <country>US</country>
+        <doc-number>20150257677</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14633471</doc-number>
+        <date>20150227</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2014049837</doc-number>
+        <date>20140313</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150929">
+      <classification-ipcr sequence="1">
+        <text>A61B   5/103       20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>103</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61B   5/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61H  37/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>H</subclass>
+        <main-group>37</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150929">
+      <classification-cpc sequence="1">
+        <text>A61B   5/1036      20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>1036</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61B   5/6803      20130101 LI20150919BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>6803</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150919</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61B   5/6814      20130101 LI20150703BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>6814</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150703</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61B   5/6821      20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>6821</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61B2560/0425      20130101 LA20150703BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2560</main-group>
+        <subgroup>0425</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150703</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61B2562/0247      20130101 LA20150703BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2562</main-group>
+        <subgroup>0247</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150703</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61B2562/046       20130101 LA20150708BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2562</main-group>
+        <subgroup>046</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150708</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61H  23/00        20130101 LI20150708BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>H</subclass>
+        <main-group>23</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150708</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>A61H  37/00        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>H</subclass>
+        <main-group>37</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">11</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">MASSAGE MEASUREMENT APPARATUS AND MASSAGE MEASUREMENT METHOD</invention-title>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Panasonic Intellectual Property Management Co., Ltd.</orgname>
+            <address>
+              <city>Osaka</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>JP</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>AJIKI</last-name>
+            <first-name>KAORI</first-name>
+            <address>
+              <city>Osaka</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20151005">
+      <main-family family-id="173664399">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2918257</doc-number>
+            <kind>A1</kind>
+            <date>20150916</date>
+          </document-id>
+          <application-date>
+            <date>20150303</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015173686</doc-number>
+            <kind>A</kind>
+            <date>20151005</date>
+          </document-id>
+          <application-date>
+            <date>20140313</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257677</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150227</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173664398">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2918257</doc-number>
+            <kind>A1</kind>
+            <date>20150916</date>
+          </document-id>
+          <application-date>
+            <date>20150303</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015173686</doc-number>
+            <kind>A</kind>
+            <date>20151005</date>
+          </document-id>
+          <application-date>
+            <date>20140313</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257677</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150227</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A massage measurement apparatus includes a sheet member attachable to a skin of a body, and a measurement unit that measures a pressure distribution on the sheet member, wherein the sheet member has an indication that indicates an area of the skin, to which the sheet member is to be attached, and wherein the measurement unit measures the pressure distribution with reference to one or more positions on the body in a state in which the sheet member is attached to the skin.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150317</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257677A1</docdb-publication-number>
+      <docdb-application-id>444511034</docdb-application-id>
+      <new-owner>PANASONIC INTELLECTUAL PROPERTY MANAGEMENT CO., LT</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:AJIKI, KAORI;REEL/FRAME:035186/0329</free-text-description>
+      <effective-date>
+        <date>20150130</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">BACKGROUND</heading>
+      <p id="p-00001-en" num="0001">1. Technical Field</p>
+      <p id="p-00002-en" num="0002">The present disclosure relates to a massage measurement apparatus that measures a characteristic parameter of massage and a massage measurement method for measuring a characteristic parameter of massage.</p>
+      <p id="p-00003-en" num="0003">2. Description of the Related Art</p>
+      <p id="p-00004-en" num="0004">A massage is widely known as a therapy performed such that a skin is kneaded or rubbed with a finger, a palm, or the like. Effects of the massage greatly vary depending on how it is performed. Therefore, there is a need for acquiring details of an effective manner of massage and reproducing the massage. However, it is difficult to objectively determine the strength or the pattern of the massage. Hereinafter, the strength of massage or the pattern thereof or the like will also be referred to generically as characteristic parameters of the massage.</p>
+      <p id="p-00005-en" num="0005">One possible technique to measure the characteristic parameters of the actual massage is disclosed in Japanese Unexamined Patent Application Publication No. 11-118635 (hereinafter, referred to as the conventional technique).</p>
+      <p id="p-00006-en" num="0006">In the conventional technique, a pressure distribution sensor sheet disposed on a display is used to detect what pressure is applied to which position of the sheet. The pressure distribution sensor sheet is brought into direct contact with a part of a skin of interest for which measurement is to be performed to detect a distribution of pressure applied during massage (hereinafter, such a part will be referred as a measurement target part), and massage is performed through the pressure distribution sensor sheet. This makes it possible to detect the pressure applied to the measurement target part during the massage.</p>
+      <heading id="h-00002-en" level="1">SUMMARY</heading>
+      <p id="p-00007-en" num="0007">In general, the massage is performed over a rather large area such as a whole back area, a whole face area, or the like. Therefore, to accurately measure the characteristic parameters of the massage using the conventional technique, it is necessary to measure a large number of points in the measurement target part and collect a large number of measurement results, and thus a troublesome process is necessary.</p>
+      <p id="p-00008-en" num="0008">In view of the above, the size of the pressure distribution sensor sheet according to the conventional technique may be increased such that it becomes possible to obtain measurement results for a plurality of measurement target part at a time. However, there is a difference in arrangement of parts of a body (including a face) among individuals, which causes a reduction in accuracy of the measurement result.</p>
+      <p id="p-00009-en" num="0009">That is, it is difficult to easily measure the characteristic parameters of the massage with high accuracy using the conventional technique.</p>
+      <p id="p-00010-en" num="0010">One non-limiting and exemplary embodiment provides a massage measurement apparatus capable of easily measuring a characteristic parameter of massage with high accuracy.</p>
+      <p id="p-00011-en" num="0011">In one general aspect, the techniques disclosed here feature that a massage measurement apparatus includes a sheet member attachable to a skin of a body, and a measurement unit that measures a pressure distribution on the sheet member, wherein the sheet member has an indication that indicates an area of the skin, to which the sheet member is to be attached, and wherein the measurement unit measures the pressure distribution with reference to one or more positions on the body in a state in which the sheet member is attached to the skin.</p>
+      <p id="p-00012-en" num="0012">According to the present disclosure, it is possible to easily measure a characteristic parameters of the massage with high accuracy.</p>
+      <p id="p-00013-en" num="0013">It should be noted that general or specific embodiments may be implemented as a system, a method, an integrated circuit, a computer program, a storage medium, or any selective combination thereof.</p>
+      <p id="p-00014-en" num="0014">Additional benefits and advantages of the disclosed embodiments will become apparent from the specification and drawings. The benefits and/or advantages may be individually obtained by the various embodiments and features of the specification and drawings, which need not all be provided in order to obtain one or more of such benefits and/or advantages.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00003-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 1</figref> is a diagram illustrating an example of a structure of a massage measurement apparatus according to a first embodiment of the present disclosure;</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 2</figref> is a diagram illustrating an example of an external appearance of a massage measurement apparatus according to a second embodiment of the present disclosure;</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 3</figref> is a diagram illustrating an example of an arrangement of markers according to the second embodiment;</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 4</figref> is a diagram illustrating an example of a structure of a sheet device according to the second embodiment;</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 5</figref> is a diagram schematically illustrating an example of a structure of a pressure sensor according to the second embodiment;</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 6</figref> is a diagram illustrating an example of a functional configuration of a massage measurement apparatus according to the second embodiment;</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 7</figref> is a diagram illustrating an example of a correspondence between pressure sensors and their positions according to the second embodiment;</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 8</figref> is a flow chart illustrating an example of an operation of a massage measurement apparatus according to the second embodiment:</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 9</figref> is a diagram illustrating an example of a set of values representing pressure distribution information according to the second embodiment;</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 10</figref> is a diagram illustrating another example of a set of values representing pressure distribution information according to the second embodiment;</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 11</figref> is a diagram illustrating an example of a time-specific pressure value distribution before a distribution correction process is performed, according to the second embodiment; and</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 12</figref> is a diagram illustrating an example of a time-specific pressure value distribution after the distribution correction process is performed, according to the second embodiment.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00027-en" num="0027">Embodiments of the present disclosure are described below in detail with reference to drawings.</p>
+      <heading id="h-00005-en" level="1">First Embodiment</heading>
+      <p id="p-00028-en" num="0028">A first embodiment of the present disclosure is an example of a basic aspect of the present disclosure.</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 1</figref> is a block diagram illustrating an example of a structure of the massage measurement apparatus according to the present embodiment.</p>
+      <p id="p-00030-en" num="0030">In <figref>FIG. 1</figref>, the massage measurement apparatus <b>100</b> includes a sheet member <b>110</b> and a measurement unit <b>120</b>.</p>
+      <p id="p-00031-en" num="0031">The sheet member <b>110</b> is a member attachable to a skin of a body. The sheet member <b>110</b> has an indication representing a skin area to which the sheet member <b>110</b> is to be attached. For example, the skin area corresponds to positions of parts of a body (one or more positions on the body).</p>
+      <p id="p-00032-en" num="0032">The measurement unit <b>120</b> measures a distribution of pressure applied to the sheet member <b>110</b>. The measurement unit <b>120</b> measures the pressure distribution using positions of parts of the body (one or more positions on the body) as reference positions in a state in which the sheet member <b>110</b> is attached to the area described above.</p>
+      <p id="p-00033-en" num="0033">The massage measurement apparatus <b>100</b> includes, although not illustrated, for example, a central processing unit (CPU), a storage medium such as a read only memory (ROM) in which a control program is stored, a random access memory (RAM) or the like serving as a work memory, a pressure sensor, and the like. In this configuration, the function of the measurement unit <b>120</b> is realized by executing the control program by the CPU.</p>
+      <p id="p-00034-en" num="0034">The massage measurement apparatus <b>100</b> configured in the above-described manner allows a massage massage reception person or a massage therapist or a measurement operator to easily attach the sheet member <b>110</b> to the skin area to which the sheet member <b>110</b> is to be attached. Furthermore, it becomes possible for the massage measurement apparatus <b>100</b> to measure the pressure distribution using positions of parts of the body (one or more positions on the body) as reference positions in a state in which the sheet member <b>110</b> is attached to the area described above. Thus, the massage measurement apparatus <b>100</b> according to the present embodiment is capable of easily measuring the characteristic parameters of the massage with high accuracy.</p>
+      <heading id="h-00006-en" level="1">Second Embodiment</heading>
+      <p id="p-00035-en" num="0035">A second embodiment of the present disclosure presents a specific example of an aspect of the present disclosure in which the sheet member is realized in the form of a face sheet that is to be attached to a face. That is, in this example, a face is the area of the body to which the massage is performed.</p>
+      <heading id="h-00007-en" level="1">Appearance and Configuration of Massage Measurement Apparatus</heading>
+      <p id="p-00036-en" num="0036">First, a description is given as to an external appearance and a structure of the massage measurement apparatus according to the present embodiment.</p>
+      <heading id="h-00008-en" level="1">Appearance of Massage Measurement Apparatus</heading>
+      <p id="p-00037-en" num="0037">
+        <figref>FIG. 2</figref> is a diagram illustrating an example of the external appearance of the massage measurement apparatus according to the present embodiment.</p>
+      <p id="p-00038-en" num="0038">As illustrated in <figref>FIG. 2</figref>, the massage measurement apparatus <b>100</b> includes a sheet device <b>200</b> and a control unit <b>300</b>.</p>
+      <p id="p-00039-en" num="0039">The sheet device <b>200</b> is a device formed in the shape of a sheet capable of three-dimensionally covering the surface of a face and having openings formed at least at locations corresponding to eyes. The sheet device <b>200</b> is formed of an elastic sheet member as a main material. As for the sheet member serving as the main material, for example, an energy ray-curable composition material including a polyurethane polymer terminated with an acryloyl group and an acrylic monomer such as that disclosed in Japanese Unexamined Patent Application Publication No. 2013-168575 may be employed.</p>
+      <p id="p-00040-en" num="0040">A specific area of the skin of the body of a massage massage reception person to which the sheet member of the sheet device <b>200</b> is to be attached (hereinafter, such an area will be referred to as a target area) is, in this case, an area of a skin of a face excluding at least eye areas.</p>
+      <p id="p-00041-en" num="0041">When the sheet device <b>200</b> is attached to the target area of the face, a surface tension allows the sheet device <b>200</b> to remain in a state in the sheet device <b>200</b> is in intimate contact with the surface of the skin of the face. To ensure sufficiently high adhesion, an adhesive and biocompatible material such as spirit gum, a silicone adhesive, a latex adhesive, or the like may be additionally used.</p>
+      <p id="p-00042-en" num="0042">It is desirable to provide a plurality of sheet devices <b>200</b> with different sizes so that it is allowed to select a proper one of the sheet devices <b>200</b> depending on a size of a face. Note that the sheet device <b>200</b> may have a size slightly smaller than the size of the face to which the sheet device <b>200</b> is to be attached. That is, the sheet device <b>200</b> is produced assuming that it is expanded in a horizontal or vertical direction when it is attached to the face.</p>
+      <p id="p-00043-en" num="0043">In a state in which the sheet member is attached to the target area, massage is performed on the skin in the target area via the sheet member (that is, via the sheet device <b>200</b>). It is desirable that the sheet device <b>200</b> is sufficiently thin and flexible so as to minimize inhibition against the effects of the massage on the skin. Hereinafter, the massage performed via the sheet member attached to the target area will be referred to simply as massage.</p>
+      <p id="p-00044-en" num="0044">The sheet device <b>200</b> includes a plurality of pressure sensors (not illustrated) disposed on a surface of the sheet member that is in direct contact with the face (hereinafter, the surface on this side is referred to as an inner surface. The structure of the sheet device <b>200</b> including the pressure sensors and their locations will be described in further detail later.</p>
+      <p id="p-00045-en" num="0045">The control unit <b>300</b> may be an information processing apparatus such as a personal computer. The control unit <b>300</b> measures the characteristic parameters of the massage by using the plurality of pressure sensors disposed on the sheet device <b>200</b>. Note that in the present embodiment, information on the characteristic parameters of the massage is information representing how large or small pressures are applied to which parts of the target area during the massage. Hereinafter, the measurement of the characteristic parameters of the massage will also be referred to simply as massage measurement. The control unit <b>300</b> is connected to the sheet device <b>200</b> via a cable <b>400</b>.</p>
+      <p id="p-00046-en" num="0046">The cable <b>400</b> includes signal lines that connect the control unit <b>300</b> to the respective pressure sensors although they are not illustrated in figures.</p>
+      <heading id="h-00009-en" level="1">Structure of Sheet Device</heading>
+      <p id="p-00047-en" num="0047">The sheet device <b>200</b> includes markers provided on a surface (an outer surface) of the sheet member opposite to the surface that is in direct contact with the face such that the markers represent points whose respective position are to be adjusted with respect to corresponding feature points of the face (hereafter also referred to as face feature points). The points whose respective positions are to be adjusted with respect to the face feature points are located close to the face feature points such as inner eye corners when the sheet device <b>200</b> is correctly attached to the target area.</p>
+      <p id="p-00048-en" num="0048">
+        <figref>FIG. 3</figref> is a diagram illustrating an example of an arrangement of markers on the sheet device <b>200</b>.</p>
+      <p id="p-00049-en" num="0049">As illustrated in <figref>FIG. 3</figref>, the sheet device <b>200</b> includes markers <b>202</b><sub>1</sub>, <b>202</b><sub>2</sub>, <b>202</b><sub>5</sub>, <b>202</b><sub>3</sub>, and <b>202</b><sub>4 </sub>(denoted by solid dots in <figref>FIG. 3</figref>) formed at locations corresponding to face feature points, that is, a left inner eye corner, a right inner eye corner, a point of jaw, an apex of a left cheekbone, an apex of a right cheekbone, and the like. That is, the sheet device <b>200</b> has markers <b>202</b><sub>1 </sub>to <b>202</b><sub>5 </sub>serving as position adjust markers thereby making it possible to attach the sheet device <b>200</b> correctly to the target area. That is, the markers <b>202</b><sub>1 </sub>to <b>202</b><sub>5 </sub>indicate the area of the skin (locations of parts of the face) to which the sheet device <b>200</b> is to be attached.</p>
+      <p id="p-00050-en" num="0050">For example, a massage massage reception person attaches the sheet device <b>200</b> to her/his face while expanding the sheet device <b>200</b> such that the respective markers <b>202</b><sub>1 </sub>to <b>202</b><sub>5 </sub>are located close to the corresponding face feature points. This makes it possible for the massage reception person to attach the sheet device <b>200</b> correctly to the target area.</p>
+      <p id="p-00051-en" num="0051">Note that in a case where the sheet device <b>200</b> has a shape representing the area of the face to which the sheet device <b>200</b> is to be attached to, as in the case of the example illustrated in <figref>FIG. 3</figref>, the markers are not necessarily needed.</p>
+      <p id="p-00052-en" num="0052">A relative coordinate system <b>203</b> for defining the locations of the pressure sensors is set based on a plurality of locations <b>202</b><sub>1 </sub>to <b>202</b><sub>5 </sub>corresponding to the left inner eye corner, the right inner eye corner, the point of jaw, the apex of the left cheekbone, and the apex of the right cheekbone (the locations are the same as those of the markers in the present embodiment, but the locations are not limited to those in the present example). The relative coordinate system <b>203</b> will be described in further detail below.</p>
+      <p id="p-00053-en" num="0053">
+        <figref>FIG. 4</figref> is a diagram illustrating an example of a configuration of a sheet device <b>200</b>. Note that <figref>FIG. 4</figref> illustrates a part of the sheet device <b>200</b>.</p>
+      <p id="p-00054-en" num="0054">In <figref>FIG. 4</figref>, the sheet device <b>200</b> includes an elastic and thin sheet member <b>110</b> and pressure sensors <b>210</b> embedded in the sheet member <b>110</b>.</p>
+      <p id="p-00055-en" num="0055">Each pressure sensor <b>210</b> detects a pressure applied to the sheet member <b>110</b> in a direction (a vertical direction in <figref>FIG. 4</figref>) perpendicular to the sheet member <b>11</b>. That is, when massage is performed in a state in which the sheet device <b>200</b> is attached to the skin, the pressure sensors <b>210</b> detect pressures applied to respective corresponding parts of the skin.</p>
+      <p id="p-00056-en" num="0056">The pressure sensors <b>210</b> are disposed, for example, at intervals of d in a matrix such that one pressure sensor <b>210</b> is located in each one of imaginal subareas produced by conceptually dividing a part or all of the sheet member <b>110</b> (target area). The length d is, for example, equal to one eighth of the distance between the position <b>202</b><sub>1 </sub>corresponding to the and the position <b>202</b><sub>2 </sub>corresponding to the right inner eye corner in a state in which the sheet device <b>200</b> is not expanded, as illustrated in <figref>FIG. 3</figref>.</p>
+      <p id="p-00057-en" num="0057">That is, each subarea has its own pressure sensor <b>210</b> disposed therein thereby making it possible to measure a pressure applied to the subarea. The each pressure sensor <b>210</b> output a measured pressure value.</p>
+      <p id="p-00058-en" num="0058">As for each pressure sensor <b>210</b>, for example, a pressure sensor realized using an organic thin film transistor disclosed, for example, in Japanese Unexamined Patent Application Publication No. 2007-178256 may be employed. Alternatively, as for each pressure sensor <b>210</b>, a pressure sensor realized using an organic thin film transistor formed in the shape of a flexible sheet disclosed, for example, in Japanese Unexamined Patent Application Publication No. 2013-168575 may be employed. The organic thin film transistors described above are disposed such that the transistors are connected to a circuit board via conductors formed of a base material having elasticity.</p>
+      <p id="p-00059-en" num="0059">In the present embodiment, the sheet device <b>200</b> includes L pressure sensors <b>210</b>. Note the the number of and locations of pressure sensors <b>210</b> are not limited to those in the example illustrated in <figref>FIG. 4</figref>. The arrangement density of pressure sensors <b>210</b> in the sheet device <b>200</b> may or may not be uniform.</p>
+      <heading id="h-00010-en" level="1">Structure of Pressure Sensor</heading>
+      <p id="p-00060-en" num="0060">
+        <figref>FIG. 5</figref> is a diagram roughly illustrating an example of a structure of the pressure sensor <b>210</b> realized using an organic thin film transistor.</p>
+      <p id="p-00061-en" num="0061">The pressure sensor <b>210</b> is formed such that a gate electrode layer <b>212</b> is disposed on the surface of an elastic base material <b>211</b>, and a gate insulator layer <b>213</b> and an organic molecular layer <b>214</b> are further disposed on the gate electrode layer <b>212</b> in a multilayer structure. The elastic base material <b>211</b> may be part of the sheet member <b>110</b>. The pressure sensor <b>210</b> further includes a source electrode <b>215</b> and a drain electrode <b>216</b> that are disposed at spaced-apart locations on an organic molecular layer <b>214</b>.</p>
+      <p id="p-00062-en" num="0062">The gate insulator layer <b>213</b> is formed of a flexible material such as natural rubber, polyisoprene rubber, styrene-butadiene copolymer rubber, polybutadiene rubber, butyl rubber, or the like. The static capacitance between the gate and the source and that between the gate and the drain change depending on the degree of compression of the gate insulator layer <b>213</b>. By detecting this static capacitance, it is possible to detect the pressure applied to the pressure sensor <b>210</b>, that is, the pressure applied to the sheet member <b>110</b>.</p>
+      <heading id="h-00011-en" level="1">Functional Configuration of Massage Measurement Apparatus</heading>
+      <p id="p-00063-en" num="0063">
+        <figref>FIG. 6</figref> is a diagram illustrating an example of a functional configuration of the massage measurement apparatus <b>100</b>.</p>
+      <p id="p-00064-en" num="0064">In <figref>FIG. 6</figref>, the massage measurement apparatus <b>100</b> includes first to L-th pressure sensors <b>210</b><sub>1 </sub>to <b>210</b><sub>L </sub>disposed on the sheet device <b>200</b> (see <figref>FIG. 2</figref>). The massage measurement apparatus <b>100</b> further includes a storage unit <b>310</b>, an acquisition unit <b>320</b>, and a correction unit <b>330</b>, all of which are disposed in the control unit <b>300</b> (see <figref>FIG. 2</figref>). Note that the measurement unit <b>120</b> of the present disclosure is formed by a combination of the first to L-th pressure sensors <b>210</b><sub>1 </sub>to <b>210</b><sub>L</sub>, the storage unit <b>310</b>, the acquisition unit <b>320</b>, and the correction unit <b>330</b>.</p>
+      <p id="p-00065-en" num="0065">The storage unit <b>310</b> includes, for example, an information storage medium such as a hard disk or the like. The storage unit <b>310</b> stores a correspondence relationship between the pressure sensor <b>210</b> and its location. The storage unit <b>310</b> includes a table representing this correspondence relationship.</p>
+      <heading id="h-00012-en" level="1">Correspondence Relationship Between Pressure Sensor and its Location</heading>
+      <p id="p-00066-en" num="0066">
+        <figref>FIG. 7</figref> is a diagram illustrating an example of a correspondence relationship between the pressure sensor <b>210</b> and its location.</p>
+      <p id="p-00067-en" num="0067">As illustrated in <figref>FIG. 7</figref>, a correspondence relationship <b>510</b> represents a correspondence between identification information <b>511</b> of each pressure sensor <b>210</b> and the location of the pressure sensor <b>210</b> represented by a x coordinate value <b>512</b> and a y coordinate value <b>513</b> in the relative coordinate system <b>203</b> (see <figref>FIG. 3</figref>). Coordinate values in the relative coordinate system <b>203</b> are represented in units of d equal to the pitch of the arrangement of the pressure sensors <b>210</b>.</p>
+      <p id="p-00068-en" num="0068">The relative coordinate system <b>203</b> is, as described above, a coordinate system defined based on a location of a part (one or more parts, such as inner eye corners of right and left eyes, a point of jaw and the like) of a face in a state in which the sheet device <b>200</b> is attached to the target area.</p>
+      <p id="p-00069-en" num="0069">For example, the relative coordinate system <b>203</b> is set in a plane including positions <b>202</b><sub>3 </sub>to <b>202</b><sub>5 </sub>(see <figref>FIG. 3</figref>) respectively corresponding to the point of jaw, the apex of the left cheekbone, and the apex of the right cheekbone, such that an x axis passes through the positions <b>202</b><sub>3 </sub>and <b>202</b><sub>4 </sub>and a y axis is perpendicular to the x axis and passes through the position <b>202</b><sub>5</sub>. The unit of the coordinate value in the relative coordinate system <b>203</b> is based on the distance between the left inner eye corner and the right inner eye corner in the plane.</p>
+      <p id="p-00070-en" num="0070">The relative coordinate system <b>203</b> defined in the above-described manner is not influenced by a difference in positions of face parts (face feature points) among individuals, and thus use of the relative coordinate system <b>203</b> makes it possible to give a spatially normalized expression of the distribution of the pressure applied to the skin during the massage. Thus by using the relative coordinate system <b>203</b>, it becomes possible to accurately measure the characteristic parameter of massage in such a manner that the measured result is applicable to a face of another person.</p>
+      <p id="p-00071-en" num="0071">Furthermore, by referring to the correspondence relationship <b>510</b>, it becomes possible to map the pressure values measured by the respective pressure sensors <b>210</b> into the relative coordinate system <b>203</b>.</p>
+      <p id="p-00072-en" num="0072">The storage unit <b>310</b> illustrated in <figref>FIG. 6</figref> is also used as required by the acquisition unit <b>320</b> and the correction unit <b>330</b>, which will be described later, and various kinds of information such as information representing the measured characteristic parameters of the massage are stored in the storage unit <b>310</b>. The storage unit <b>310</b> preferably includes a frame memory serving as a memory area for storing the pressure values mapped to the relative coordinate system <b>203</b>.</p>
+      <p id="p-00073-en" num="0073">The acquisition unit <b>320</b> is connected to the respective first to L-th pressure sensors <b>210</b><sub>1 </sub>to <b>210</b><sub>L </sub>via the cable <b>400</b> (see <figref>FIG. 2</figref>) that connects the control unit <b>300</b> to the sheet device <b>200</b> and via high-elasticity signal lines (not illustrated) embedded in the sheet device <b>200</b>. Thus, the acquisition unit <b>320</b> is capable of outputting a control signal to each pressure sensor <b>210</b> to control the operation of the pressure sensor <b>210</b> and is capable of receiving an input of a pressure value output from each pressure sensor <b>210</b>.</p>
+      <p id="p-00074-en" num="0074">The acquisition unit <b>320</b> maps the pressure values output from the respective pressure sensors <b>210</b> onto the relative coordinate system <b>203</b> (see <figref>FIG. 3</figref>) while referring to the correspondence relationship <b>510</b> (see <figref>FIG. 7</figref>). The acquisition unit <b>320</b> stores a set of mapped pressure values at each time (hereinafter, such a set of values will be referred to as a time-specific pressure value distribution) in the storage unit <b>310</b> in relation to information representing the time t at which the pressure values were measured (hereinafter referred to as a measurement time).</p>
+      <p id="p-00075-en" num="0075">The measurement time t represents, for example, a time elapsed since a particular reference time such as a time at which a sequence of massage operations is started. The acquisition unit <b>320</b> performs the measurement of the pressure values using the first to L-th pressure sensors <b>210</b><sub>1 </sub>to <b>210</b><sub>L </sub>and the mapping thereof at every predetermined time interval dt. Thus, the sequence of time-specific pressure value distributions along the time axis is integrated together on the time axis thereby obtaining information representing the pressure distribution in the massage expressed by a combination of the coordinate values in the relative coordinate system <b>203</b> (see <figref>FIG. 3</figref>), the values along the time axis, and the pressure values. Hereinafter, the sequence of time-specific pressure value distributions is referred to as pressure distribution information.</p>
+      <p id="p-00076-en" num="0076">The correction unit <b>330</b> corrects the pressure distribution information representing the result of the measurement by the first to L-th pressure sensors <b>210</b><sub>1 </sub>to <b>210</b><sub>L </sub>so as to more accurately characteristic parameter values of the actual massage, and the correction unit <b>330</b> stores the corrected pressure distribution information as the final characteristic parameters of the massage.</p>
+      <p id="p-00077-en" num="0077">More specifically, the correction unit <b>330</b> corrects each time-specific pressure value distribution stored in the storage unit <b>310</b>, individually for each level of the pressure value, such that an area corresponding to the level of interest form a closed area having a smooth contour. Hereinafter, this process is referred to as a distribution correction process.</p>
+      <p id="p-00078-en" num="0078">The detection value output from each pressure sensor <b>210</b> may include noise caused by a manner of attaching the sheet device <b>200</b> to the skin or caused by a detection error. That is, the time-specific pressure value distribution may locally have a pressure value higher or lower than a correct value corresponding to the characteristic parameter of the actual massage. By performing the distribution correction process, it is possible to correct the measurement result so as to obtain characteristic parameter values more accurately representing the actual massage. The distribution correction process will be described in further detail later.</p>
+      <p id="p-00079-en" num="0079">The control unit <b>300</b> includes, for example, a CPU, a storage medium such as a ROM in which a control program is stored, and a work memory such as a RAM, although they are not illustrated in the figure. In this case, the function of each part of the control unit <b>300</b> is realized by executing the control program by the CPU.</p>
+      <p id="p-00080-en" num="0080">The control unit <b>300</b> further includes, although not illustrated, a power supply unit and an operation unit such as a key switch. The power supply unit supplies electric power for operating the CPU and the sheet device <b>200</b>. The operation unit receives, for example, various operations including an operation for starting the measurement of the massage, performed by a massage therapist or a measurement operator.</p>
+      <p id="p-00081-en" num="0081">By configuring the massage measurement apparatus <b>100</b> in the above-described manner, it becomes possible to easily attach the sheet member <b>110</b> to the target area, and it becomes possible for the massage measurement apparatus <b>100</b> to measure the pressure distribution using the relative coordinate system <b>203</b> defined based on the locations of particular parts of the face (one or more positions on the face).</p>
+      <heading id="h-00013-en" level="1">Operation of Massage Measurement Apparatus</heading>
+      <p id="p-00082-en" num="0082">Next, an operation of the massage measurement apparatus <b>100</b> is described below.</p>
+      <p id="p-00083-en" num="0083">
+        <figref>FIG. 8</figref> is a flow chart illustrating an example of an operation of the massage measurement apparatus <b>100</b>.</p>
+      <p id="p-00084-en" num="0084">When a command is issued by a massage therapist or a measurement operator to start the operation in a state in which the sheet device <b>200</b> is correctly attached (fitted) to, for example, a target area of a face of a massage reception person, the massage measurement apparatus <b>100</b> starts the operation described below.</p>
+      <p id="p-00085-en" num="0085">First, in step S<b>1100</b>, the acquisition unit <b>320</b> sets identification information of massage to be measured (hereinafter referred to massage identification information).</p>
+      <p id="p-00086-en" num="0086">The massage identification information includes, for example, a name of a target area, a name of the massage, a name of a massage operator, date, and the like. The massage identification information may further include information about the massage reception person to whom the massage is applied, such as a type of the massage reception person (a body type, an age, a gender, a skin condition, and the like), a body condition of the massage reception person (the degree of shoulder stiffness, the degree of eyestrain, etc.) and/or the like. The acquisition unit <b>320</b> receives an input of massage identification information, for example, from the massage therapist or the measurement operator.</p>
+      <p id="p-00087-en" num="0087">In the state in which the sheet device <b>200</b> is attached to the target area, there is a possibility that a pressure caused by a tension or the like is detected even when no massage is being performed. In view of the above, the acquisition unit <b>320</b> may acquire an initial value of a pressure value from each pressure sensor <b>210</b> to make it possible to correct a measurement result obtained later based on the initial value. This makes it possible to measure the characteristic parameter of massage with higher accuracy.</p>
+      <p id="p-00088-en" num="0088">The acquisition unit <b>320</b> starts counting, using a timer (not illustrated) or the like, a measurement time t with reference to a time at which the massage is started. The acquisition unit <b>320</b> detects a massage start time, for example, by detecting a time at which the pressure value of one of the pressure sensors <b>210</b>.</p>
+      <p id="p-00089-en" num="0089">In step S<b>1200</b>, the acquisition unit <b>320</b> maps the detection value output from each pressure sensor <b>210</b> onto a relative coordinate system <b>203</b> (see <figref>FIG. 3</figref>) based on a correspondence relationship <b>510</b> (see <figref>FIG. 7</figref>). That is, the acquisition unit <b>320</b> acquires the detection value output each pressure sensor <b>210</b> in relation to corresponding coordinate values in the relative coordinate system <b>203</b>.</p>
+      <p id="p-00090-en" num="0090">In step S<b>1300</b>, the acquisition unit <b>320</b> stores the mapping result (pressure value distributions for respective measurement times) in the storage unit <b>310</b> in relation to the measurement time t and the massage identification information.</p>
+      <p id="p-00091-en" num="0091">Thereafter, in step S<b>1400</b>, the acquisition unit <b>320</b> determines whether a command to end the massage measurement is issued via an operation or the like performed by the massage therapist or the measurement operator. In a case where the acquisition unit <b>320</b> determines that the command to end the massage measurement is not issued (No in S<b>1400</b>), the acquisition unit <b>320</b> returns the processing flow to step S<b>1200</b>. On the other hand, when the command to end the massage measurement is issued, (Yes in S<b>1400</b>), the acquisition unit <b>320</b> advances the processing flow to step S<b>1500</b>.</p>
+      <p id="p-00092-en" num="0092">The acquisition unit <b>320</b> may determine that the massage measurement is commanded to be ended when the acquisition unit <b>320</b> detects, for example, a continuation of a state for a predetermined period such as 10 seconds in which pressure values measured by pressure sensors <b>210</b> are all equal to or lower than a predetermined threshold value.</p>
+      <p id="p-00093-en" num="0093">The acquisition unit <b>320</b> repeats the process from step S<b>1200</b> to step S<b>1400</b> at time intervals of dt of, for example, 0.02 seconds. As a result, a sequence of time-specific pressure value distributions along the time axis (pressure distribution information) is stored in the storage unit <b>310</b>. The time interval dt is set to a proper value depending on the type of massage. For example, the time interval dt may be set to a short time for massage including a quick operation such as tapping or the like.</p>
+      <p id="p-00094-en" num="0094">In step S<b>1500</b>, the correction unit <b>330</b> corrects the stored time-specific pressure value distribution (pressure distribution information) for each measurement time t. The distribution correction process will be described in further detail later.</p>
+      <p id="p-00095-en" num="0095">In step S<b>1600</b>, the correction unit <b>330</b> integrates all time-specific pressure value distributions stored in the storage unit <b>310</b> along the time axis. The correction unit <b>330</b> stores the resultant integrated time-specific pressure value distributions (pressure distribution information) in relation to the assigned massage identification information in the storage unit <b>310</b>. Thereafter, the present process is ended.</p>
+      <p id="p-00096-en" num="0096">Via the operation described above, the massage measurement apparatus <b>100</b> measures the characteristic parameters of the massage and stores the measured result when massage is performed in a state in which the sheet device <b>200</b> is attached to the target area. The pressure distribution information stored in the storage unit <b>310</b> is high-precision information representing characteristic parameters of the massage performed during the repetition of the process from step S<b>1200</b> to step S<b>1400</b>.</p>
+      <heading id="h-00014-en" level="1">Pressure Distribution Information</heading>
+      <p id="p-00097-en" num="0097">An example of pressure distribution information obtained via the process from step S<b>1200</b> to step S<b>1400</b> is described below.</p>
+      <p id="p-00098-en" num="0098">Herein, let it be assumed that the process from step S<b>1200</b> to step S<b>1400</b> has been repeated T times and thus T time-specific pressure value distributions have been obtained as pressure distribution information. Furthermore, let it be assumed that the first to L-th pressure sensors <b>210</b><sub>1 </sub>to <b>210</b><sub>L </sub>are located in a (2N+1)×(2M+1) matrix in the relative coordinate system <b>203</b> (see <figref>FIG. 3</figref>), wherein coordinate values in the relative coordinate system <b>203</b> are represented in units of d equal to the pitch of the arrangement of the pressure sensors <b>210</b>.</p>
+      <p id="p-00099-en" num="0099">
+        <figref>FIG. 9</figref> is a diagram illustrating an example of a characteristic parameter of pressure distribution information stored in the information storage unit <b>310</b>.</p>
+      <p id="p-00100-en" num="0100">As illustrated in <figref>FIG. 9</figref>, the pressure distribution information <b>600</b> includes time-specific pressure value distributions <b>620</b><sub>1</sub>, <b>620</b><sub>2</sub>, . . . , <b>620</b><sub>T </sub>at times t<sub>1</sub>, t<sub>2</sub>, . . . , t<sub>T </sub>along the time axis <b>610</b> of the measurement time t. Each time-specific pressure value distribution <b>620</b> includes pressure values measured at a corresponding measurement time t by the respective pressure sensors <b>210</b> wherein the pressure values are stored in the (2N+1)×(2M+1) matrix.</p>
+      <p id="p-00101-en" num="0101">For example, the time-specific pressure value distribution <b>620</b><sub>1 </sub>has a high pressure value in a certain area <b>621</b>. This implies that massage was performed at time t on an area of the skin corresponding to this area <b>621</b>, for example, by pressing this area of the skin with a finger or the like.</p>
+      <p id="p-00102-en" num="0102">Note that the data format of the pressure distribution information <b>600</b> is not limited to that illustrated in <figref>FIG. 9</figref>.</p>
+      <p id="p-00103-en" num="0103">
+        <figref>FIG. 10</figref> is a diagram illustrating another example of a characteristic parameter of pressure distribution information stored in the information storage unit <b>310</b>.</p>
+      <p id="p-00104-en" num="0104">As illustrated in <figref>FIG. 10</figref>, the pressure distribution information <b>600</b> may be described in tables table <b>630</b><sub>1</sub>, <b>630</b><sub>2</sub>, . . . , <b>630</b><sub>L </sub>such that pressure distribution information obtained at coordinate values (sensor coordinates) of the position of each pressure sensor <b>210</b> in the relative coordinate system <b>203</b> is described in one table and such that each table describes a set of pairs each including a pressure value and time at which the pressure value was measured at the coordinate values.</p>
+      <p id="p-00105-en" num="0105">In the case where the data format illustrated in <figref>FIG. 10</figref> is employed, a pressure value that does not need to be stored, such as a pressure value that can be regarded as zero, may not be stored. Therefore, usage of the data format illustrated in <figref>FIG. 10</figref> allows a reduction in necessary memory capacity compared with the matrix data format illustrated in <figref>FIG. 9</figref>. However, in a case where a distribution correction process is performed, the data format illustrated in <figref>FIG. 9</figref> may be more preferable.</p>
+      <heading id="h-00015-en" level="1">Distribution Correction Process</heading>
+      <p id="p-00106-en" num="0106">Next, an example of a distribution correction process performed in step S<b>1500</b> is described below.</p>
+      <p id="p-00107-en" num="0107">
+        <figref>FIG. 11</figref> is a diagram illustrating an example of a time-specific pressure value distribution, corresponding to <figref>FIG. 9</figref>, before the distribution correction process is performed. In <figref>FIG. 11</figref>, a pressure value in each shaded block is equal to or greater than a predetermined value. Hereinafter, an area in which the pressure value is equal to or greater than the predetermined value is referred to as a high pressure value area, while an area in which the pressure value is lower than the predetermined value is referred to as a low pressure value area.</p>
+      <p id="p-00108-en" num="0108">The massage is performed with a finger or a palm of a massage therapist. Therefore, an actual pressure distribution has a smooth contour, and thus a correct measured pressure distribution must have a smooth contour. On the other hand, detection values output from the respective pressure sensors <b>210</b> include noise as described above.</p>
+      <p id="p-00109-en" num="0109">The presence of noise or the like may cause the high pressure value area <b>622</b> in the time-specific pressure value distribution <b>620</b> to have a rough contour as illustrated in <figref>FIG. 11</figref>.</p>
+      <p id="p-00110-en" num="0110">In view of the above, the correction unit <b>330</b> first extracts, from the high pressure value area <b>622</b>, subareas adjacent to a low pressure value area <b>623</b>. The correction unit <b>330</b> then assigns ascending numbers i to the pressure values in the extracted subareas (hereinafter referred to as subareas on an area boundary) in order in a clockwise direction. Thereafter, the correction unit <b>330</b> replaces the coordinate values (x<sub>i</sub>, y<sub>i</sub>) of the pressure value of each subarea on the area boundary by coordinate values (x′<sub>i</sub>, y′<sub>i</sub>) obtained, for example, according to equations (1) and (2) described below. This replacement is performed for all subareas on the area boundary.</p>
+      <p id="p-00111-en" num="0000">[in-line-formulae]<i>x′</i><sub>i</sub>=(0.1<i>×x</i><sub>i−2</sub>+0.4<i>×x</i><sub>i−1</sub>+0.4×<i>x</i><sub>i+1</sub>+0.1<i>+x</i><sub>+2</sub>)/4   (1)[/in-line-formulae]</p>
+      <p id="p-00112-en" num="0000">[in-line-formulae]<i>y′</i><sub>i</sub>=(0.1<i>×y</i><sub>i−2</sub>+0.4<i>×y</i><sub>i−1</sub>+0.4×<i>y</i><sub>i+1</sub>+0.1<i>+y</i><sub>+2</sub>)/4   (2)[/in-line-formulae]</p>
+      <p id="p-00113-en" num="0111">The original pressure values at respective locations (coordinate values (x<sub>i</sub>, Y<sub>i</sub>)) in the subareas on the area boundary are maintained unless the locations are replaced by other locations.</p>
+      <p id="p-00114-en" num="0112">In a case where as a result of the process described, coordinate values (x<sub>i</sub>, y<sub>i</sub>) are replaced with other coordinate values (x′<sub>i</sub>, y′<sub>i</sub>) in a high pressure value area <b>622</b>, the correction unit <b>330</b> corrects a pressure value at the coordinate values (x<sub>i</sub>, y<sub>i</sub>) by replacing this pressure value with a value (for example, zero) lower than the predetermined level. Conversely, in a case where as a result of the process described above, coordinate values at which the pressure value is less than the predetermined level are surrounded by high pressure value area <b>622</b>, the correction unit <b>330</b> replaces this pressure value at the coordinate values with an average value of pressure values of adjacent subareas in the high pressure value areas <b>622</b>.</p>
+      <p id="p-00115-en" num="0113">The correction unit <b>330</b> performs the above-described distribution correction process for all time-specific pressure value distributions <b>620</b> stored in the storage unit <b>310</b>.</p>
+      <p id="p-00116-en" num="0114">
+        <figref>FIG. 12</figref> is a diagram illustrating an example of a time-specific pressure value distribution after the distribution correction process is performed on the time-specific pressure value distribution illustrated in <figref>FIG. 11</figref>.</p>
+      <p id="p-00117-en" num="0115">As illustrated in <figref>FIG. 12</figref>, in the time-specific pressure value distribution <b>640</b> corrected via the distribution correction process, the high pressure value area <b>641</b> becomes a closed area having a smooth contour. The corrected time-specific pressure value distribution <b>640</b> represents more precisely the characteristic parameter of the actual massage than is represented by the original time-specific pressure value distribution <b>620</b> that is not subjected to the distribution correction process (see <figref>FIG. 11</figref>).</p>
+      <p id="p-00118-en" num="0116">As described above, by performing the distribution correction process, the massage measurement apparatus <b>100</b> is capable of measuring and storing the characteristic parameter of massage with further higher accuracy.</p>
+      <p id="p-00119-en" num="0117">The correction unit <b>330</b> may preferably perform the distribution correction process individually for each level of a plurality of levels of pressure values.</p>
+      <p id="p-00120-en" num="0118">Note that for a particular type of massage such as cupping massage, pressure distribution information may represent more accurately a characteristic parameter of the actual massage when the distribution correction process is not performed than when the the distribution correction process is performed. Therefore, it is desirable to configure the massage measurement apparatus <b>100</b> to be capable of selecting whether to perform the distribution correction process.</p>
+      <heading id="h-00016-en" level="1">Effects of Embodiments</heading>
+      <p id="p-00121-en" num="0119">According to the embodiments, as described above, the massage measurement apparatus <b>100</b> includes the sheet member <b>110</b> having the indication representing the area of a skin to which the sheet member <b>110</b> is to be attached, measures the pressure distribution applied to the sheet member <b>110</b> using the relative coordinate system defined based on the locations of particular parts of the face (one or more positions on the face).</p>
+      <p id="p-00122-en" num="0120">Thus the massage measurement apparatus <b>100</b> is capable of easily measuring what magnitude of the pressure is applied to what part of the face at which timing for a relatively large area without being influenced by a difference in locations of parts (face feature points) of the face among individuals. That is, the massage measurement apparatus <b>100</b> is capable of easily measuring the characteristic parameter of the massage with high accuracy.</p>
+      <heading id="h-00017-en" level="1">Modifications of the Embodiments</heading>
+      <p id="p-00123-en" num="0121">The relative coordinate system used to represent the pressure distribution is not limited to the example described above. For example, the relative coordinate system may be defined based on positions of other face parts (one or more positions of the face) such as ends of eyebrows, eye tails, or the like. The massage measurement apparatus <b>100</b> does not necessarily need to use a relative coordinate system. For example, in a case where a relative position of each pressure sensor <b>210</b> with respect to a face feature point is known, the detection value of each pressure sensor <b>210</b> may is stored or output in relation with only identification information of each pressure sensor <b>210</b>. On the other hand, in a case where the target area of massage is limited to a particular area (for example, the target area of massage is not the whole face area but a limited area close to an eye), the relative coordinate system may be defined with respect to one position (for example, a middle point between a left inner eye corner and a right inner eye corner). In this case, only one marker may be provided on the sheet device (for example, a marker may be formed on the sheet device at the middle point between two eyes).</p>
+      <p id="p-00124-en" num="0122">Furthermore, the area (target area) to which the sheet member <b>110</b> of the sheet device <b>200</b> is attached is not limited to an area of a skin of a face. For example, the target area may be a whole back area, a calf, a feet bottom, or other areas of a skin of a body. Alternatively, the target area may be an area including three ore more feature points, which are common among many general people, of a body.</p>
+      <p id="p-00125-en" num="0123">Furthermore, the massage to be measured is not limited to massage performed by a person with a hand or a finger. That is, the massage measurement apparatus is capable of measuring other types of massage such as massage performed using various kinds of massage tools, massage performed using a massage apparatus such as a massage chair, or the like.</p>
+      <p id="p-00126-en" num="0124">The method of the distribution correction process is not limited to the example described above. For example, the massage measurement apparatus <b>100</b> may smooth a pressure value distribution in a plane of a relative coordinate system or along a time axis.</p>
+      <p id="p-00127-en" num="0125">The measurement may be limited to only part of a sequence of massage operation. For example, the massage measurement apparatus <b>100</b> may measure only a pressure value distribution at a certain time to acquire a pressure distribution applied to a skin at that time.</p>
+      <p id="p-00128-en" num="0126">The massage measurement apparatus <b>100</b> may present information indicating a type of massage to be performed and measured, and/or information that prompts a massage therapist to stop the massage or correct the characteristic parameters of the massage.</p>
+      <p id="p-00129-en" num="0127">For example, it is not very desirable to perform massage excessively. In view of the above, the massage measurement apparatus <b>100</b> may monitor the temperature of the skin, the blood flow rate, or the like. If the massage measurement apparatus <b>100</b> detects an increase in one of the values to a level beyond a predetermined threshold or detects an increase rate thereof greater than a predetermined threshold value, then the massage measurement apparatus <b>100</b> may generate an alarm sound to prompt a massage therapist to stop the massage.</p>
+      <p id="p-00130-en" num="0128">In this case, the sheet device <b>200</b> may include a temperature sensor or a blood flowmeter disposed on an inner surface. As for the temperature sensor disposed on the sheet device <b>200</b>, for example, a temperature sensor disclosed in International Publication No. 2013/151128 may be employed.</p>
+      <p id="p-00131-en" num="0129">As for the blood flowmeter disposed on the sheet device <b>200</b>, for example, a blood flowmeter disclosed in Kiyokura Takanori, Shinnji Mino, and Junichi Shimada, “Ultrasmall-size Wearable Laser Blood Flowmeter”, NTT Technical Review, pp. 25-27, Nov., 2005 may be employed. The blood flowmeter may be realized using a laser diode and a phototransistor. As for the laser diode, for example, an organic laser diode produced by a printing technique using a high-molecule polymer such as that disclosed in Japanese Unexamined Patent Application Publication No. 2009-48837 may be used. As for the phototransistor, for example, an organic phototransistor realized by a high-molecule thin-film transistor such as that disclosed in Japanese Unexamined Patent Application Publication No. 2007-300112 may be used.</p>
+      <p id="p-00132-en" num="0130">There is no particular restriction on usage of the measured characteristic parameters of the massage. For example, the measured characteristic parameters of the massage may be used to reproduce or analyze the characteristic parameters of the massage.</p>
+      <p id="p-00133-en" num="0131">The massage measurement apparatus <b>100</b> may output the obtained pressure distribution information <b>600</b> to another apparatus via communication, for example, by uploading it to a server disposed on the Internet.</p>
+      <p id="p-00134-en" num="0132">Part or all of functions of the control unit <b>300</b> of the massage measurement apparatus <b>100</b> may be provided in an apparatus having other functions such as a portable telephone apparatus or the like.</p>
+      <p id="p-00135-en" num="0133">The functions described above may be provided in a server on a network. That is, one or more functions of the massage measurement apparatus <b>100</b> may be realized by a cloud server. In this case, the massage measurement apparatus <b>100</b> includes a communication unit for transmitting/receiving information to/from the cloud server that provides the above-described functions.</p>
+      <p id="p-00136-en" num="0134">The massage measurement apparatus according to an aspect of the present disclosure includes the sheet member attachable to a skin of a body, and the measurement unit that measures a pressure distribution on the sheet member, wherein the sheet member has an indication that indicates an area of the skin, to which the sheet member is to be attached, and wherein the measurement unit measures the pressure distribution with reference to one or more positions on the body in a state in which the sheet member is attached to the skin.</p>
+      <p id="p-00137-en" num="0135">In the massage measurement apparatus described above, the sheet member may have, as the indication, a shape representing the area.</p>
+      <p id="p-00138-en" num="0136">In the massage measurement apparatus described above, the sheet member may have, as the indication, a marker indicating a position to be adjusted with respect to a feature point of the body.</p>
+      <p id="p-00139-en" num="0137">In the massage measurement apparatus described above, the sheet member may be elastic and may be capable of being attached to the skin of the body in a state in which the sheet member is expanded.</p>
+      <p id="p-00140-en" num="0138">In the massage measurement apparatus described above, the area to which the sheet member is to be attached may be an area of a skin of a face excluding at least eye areas.</p>
+      <p id="p-00141-en" num="0139">In the massage measurement apparatus described above, the measurement unit may measure the pressure distribution using a relative coordinate system defined with reference to positions of parts of the body (one or more positions on the body) in a state in which the sheet member is attached to the area, wherein the relative coordinate system may be defined with reference to at least a plurality of positions on the face, the plurality of positions respectively corresponding to a left inner eye corner, a right inner eye corner, a point of jaw, an apex of the left cheekbone, and an apex of the right cheekbone.</p>
+      <p id="p-00142-en" num="0140">In the massage measurement apparatus described above, the measurement unit may include a plurality of pressure sensors that are disposed respectively in a plurality of subareas into which a part or all of the sheet member is divided, and that measure pressures applied to the respective subareas.</p>
+      <p id="p-00143-en" num="0141">In the massage measurement apparatus described above, the measurement unit may include a correction unit that corrects the measured pressure distribution such that an area corresponding to each level of pressure forms a closed area having a smooth contour.</p>
+      <p id="p-00144-en" num="0142">In the massage measurement apparatus described above, the pressure distribution may be defined by a combination of coordinate values in a relative coordinate system defined with reference to one or more positions on the body, time, and the pressure, in a state in which the sheet member is attached to the area.</p>
+      <p id="p-00145-en" num="0143">According to an aspect of the present disclosure, a massage measurement method, using a sheet member that is capable of being attached to a skin of a body and that includes an indication indicating an area of the skin, to which the sheet member is to be attached, includes attaching the sheet member to the area of the skin according to the indication, and measuring a pressure distribution with reference to one or more positions on the body in a state in which the sheet member is attached to the skin. The massage measurement method described above may further include correcting the measured pressure distribution such that an area corresponding to each level of pressure forms a closed area having a smooth contour; and storing the corrected pressure distribution as a characteristic parameters of the massage performed on the skin via the sheet member.</p>
+      <p id="p-00146-en" num="0144">Thus the present disclosure provides the massage measurement apparatus and the massage measurement method capable of easily measuring the characteristic parameters of the massage with high accuracy.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A massage measurement apparatus, comprising:
+<claim-text>a sheet member attachable to a skin of a body; and</claim-text><claim-text>a measurement unit that measures a pressure distribution on the sheet member,</claim-text><claim-text>wherein the sheet member has an indication that indicates an area of the skin, to which the sheet member is to be attached, and</claim-text><claim-text>wherein the measurement unit measures the pressure distribution with reference to one or more positions on the body in a state in which the sheet member is attached to the skin.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The massage measurement apparatus according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the sheet member has, as the indication, a shape representing the area.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The massage measurement apparatus according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the sheet member has, as the indication, a marker indicating a position to be adjusted with respect to a feature point of the body.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The massage measurement apparatus according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the sheet member is elastic and is capable of being attached to the skin of the body in a state in which the sheet member is expanded.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The massage measurement apparatus according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the area to which the sheet member is to be attached is an area of a skin of a face excluding at least eye areas.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The massage measurement apparatus according to <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the measurement unit measures the pressure distribution using a relative coordinate system defined with reference to one or more positions on the body in a state in which the sheet member is attached to the area,
+<claim-text>and wherein the relative coordinate system is defined with reference to at least a plurality of positions on the face, the plurality of positions respectively corresponding to a left inner eye corner, a right inner eye corner, a point of jaw, an apex of the left cheekbone, and an apex of the right cheekbone.</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The massage measurement apparatus according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the measurement unit includes a plurality of pressure sensors that are disposed respectively in a plurality of subareas, into which a part or all of the sheet member is divided, and that measure pressures applied to the respective subareas.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The massage measurement apparatus according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the measurement unit includes a correction unit that corrects the measured pressure distribution such that an area corresponding to each level of pressure forms a closed area having a smooth contour.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The massage measurement apparatus according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the pressure distribution is defined by a combination of coordinate values in a relative coordinate system defined with reference to one or more positions on the body, time, and the pressure, in a state in which the sheet member is attached to the area.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en" independent="true">
+      <claim-text>
+        <b>10</b>. A massage measurement method using a sheet member that is capable of being attached to a skin of a body and that includes an indication indicating an area of the skin, to which the sheet member is to be attached, the method comprising:
+<claim-text>attaching the sheet member to the area of the skin according to the indication; and</claim-text><claim-text>measuring a pressure distribution with reference to one or more positions on the body in a state in which the sheet member is attached to the skin.</claim-text></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The massage measurement method according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>, further comprising:
+<claim-text>correcting the measured pressure distribution such that an area corresponding to each level of pressure forms a closed area having a smooth contour; and</claim-text><claim-text>storing the corrected pressure distribution as a characteristic parameters of the massage performed on the skin via the sheet member.</claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257677A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257677A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257677A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257677A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257677A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257677A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257677A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257677A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257677A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257677A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257677A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257677A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257677A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257677A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150257677A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257677A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150257677A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257677A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150257677A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257677A1-20150917-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150257677A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257677A1-20150917-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150257677A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257677A1-20150917-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150257677A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257677A1-20150917-D00012.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150257677A1_00014.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257677A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257677A1.PDF" type="pdf" size="723516" pages="21" />
+</lexisnexis-patent-document>

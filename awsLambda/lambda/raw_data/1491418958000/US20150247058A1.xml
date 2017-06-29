@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247058A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021449" date-changed="20151128" time-changed="230907">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140135">
+        <country>US</country>
+        <doc-number>20150247058</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14569663</doc-number>
+        <date>20141213</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="national">
+        <country>KR</country>
+        <doc-number>1020140025115</doc-number>
+        <date>20140303</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151006">
+      <classification-ipcr sequence="1">
+        <text>C09D 175/04        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>175</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151006">
+      <classification-cpc sequence="1">
+        <text>C09D 175/04        20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>175</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>Y10T 428/24372     20130101 LA20151001BCEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>428</main-group>
+        <subgroup>24372</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151001</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">PAINTED MEMBER WITH FIBER-TEXTURED SURFACE AND METHOD FOR PREPARING THE SAME</invention-title>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Hyundai Motor Company</orgname>
+            <address>
+              <city>Seoul</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>KR</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Noh</last-name>
+            <first-name>Eun Ju</first-name>
+            <address>
+              <city>Changwon</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Jung</last-name>
+            <first-name>Woo Chul</first-name>
+            <address>
+              <city>Incheon</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20151009">
+      <main-family family-id="173463216">
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150103541</doc-number>
+            <kind>A</kind>
+            <date>20150911</date>
+          </document-id>
+          <application-date>
+            <date>20140303</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104893397</doc-number>
+            <kind>A</kind>
+            <date>20150909</date>
+          </document-id>
+          <application-date>
+            <date>20141230</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>102014226848</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20141222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247058</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20141213</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173463215">
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150103541</doc-number>
+            <kind>A</kind>
+            <date>20150911</date>
+          </document-id>
+          <application-date>
+            <date>20140303</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104893397</doc-number>
+            <kind>A</kind>
+            <date>20150909</date>
+          </document-id>
+          <application-date>
+            <date>20141230</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>102014226848</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20141222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247058</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20141213</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Disclosed is a painted member having a fiber-textured surface. The painted member has a superior fiber-textured surface and the surface is prepared by forming various embossing using a simplified painting method, rather than forming embossing on an injected surface. In particular, the various embossing is formed by forming a surface painting layer including expansion beads on a molded plastic substrate. Methods for preparing the painted member are also provided.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20141218</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247058A1</docdb-publication-number>
+      <docdb-application-id>444210017</docdb-application-id>
+      <new-owner>HYUNDAI MOTOR COMPANY, KOREA, REPUBLIC OF</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:NOH, EUN JU;JUNG, WOO CHUL;REEL/FRAME:034549/0322</free-text-description>
+      <effective-date>
+        <date>20141016</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATION</heading>
+      <p id="p-00001-en" num="0001">This application claims under 35 U.S.C. §119(a) the benefit of Korean Patent Application No. 10-2014-0025115 filed on Mar. 3, 2014, the entire contents of which are incorporated herein by reference.</p>
+      <heading id="h-00002-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00002-en" num="0002">The present invention relates to a painted member having a fiber-textured surface. The fiber-textured surface may be prepared in a simplified and more economical process by forming various types of embossing using a painting method, without forming embossing on an injected surface. In particular, the embossing may be formed by forming a surface painting layer that includes expansion beads on a molded plastic substrate. Methods for preparing the painted member having the fiber-textured surface are also provided.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND</heading>
+      <p id="p-00003-en" num="0003">Generally, injected plastic articles have been used as interior materials in various interior structures such as vehicles and the like to reduce facility unit costs and more conveniently apply various structures. To provide a particularly more sophisticated or soft-fibered textures in such interior materials, in the related art, methods of forming embossing and painting on the surface of injected plastic articles to provide the soft texture have been commonly used.</p>
+      <p id="p-00004-en" num="0004">However, in these methods of the related art, the injection may be performed after determining the shapes and the sizes of surface embossing when an injected plastic article is prepared. Further, the sizes and the shapes of the embossing formed on the injected article surface may be difficult to be arbitrarily adjusted to express various feeling and textures in various injected plastic article applications. Accordingly, obtaining diversity in shapes and sizes to express various textures of the surface may be limited</p>
+      <p id="p-00005-en" num="0005">Often, various textures may be required for interior materials and the like of vehicles. However, methods of preparing embossing shapes formed on injected plastic articles have not been available in preparing products having sophisticated and various fiber textures.</p>
+      <p id="p-00006-en" num="0006">In the related art, a method for preparing a flame retarding low density polyethylene-foamed resin has been developed. The flame retarding low density polyethylene-foamed resin is prepared by forming expanded or foamed beads in a low density polyethylene foamed mixture. Subsequently, the expanded beads are partially shrunk and the low density polyethylene foaming agent in which beads are expanded is cured by lowering a temperature to about 120 to 150° C.</p>
+      <p id="p-00007-en" num="0007">In another example in the related art, mineral nonflammable, light-weight, insulating, sound absorbing and foaming beads, and molded articles in which these beads are foamed, and a method for preparing the same have been developed. In such methods, provided are molded articles that include porous mineral beads in which porous mineral fine granules are coated using a solvent in which an olefin polymer is dissolved or suspended with or without a foaming agent. Alternatively, the molded articles including porous mineral beads are coated with a foaming agent-containing olefin polymer formed by adding and polymerizing porous mineral fine granules and a foaming agent to a solution or suspension containing an olefin monomer.</p>
+      <p id="p-00008-en" num="0008">In yet another example in the related art, a shock absorption member including an energy-absorbing foaming polymer has been provided. The shock absorption member is formed by extruding single continuous mass of a foaming resin mixture in an extrusion direction, formed by expanding expandable polymer beads, or formed in a reactive foaming process, as a shock absorption member having a dynamic shock application used in automotive interiors. In addition, a process for preparing expanded beads has been developed. The process includes a step of extrusion foaming polyalkylene terephthalate, and a step of melting threads becoming pellets and the process may be used for preparing gas-filled beads used in vehicle industry such as bumper shock absorption agents, seat core, and floor mat horizontal materials. Moreover, a method for producing regular polymer beads with methacrylic acid ester and/or acrylic acid ester as a base has been developed. The polymer beads are formed with an inorganic fine-particled filler and polymerized methacrylic acid ester or acrylic acid ester.</p>
+      <p id="p-00009-en" num="0009">However, the aforementioned methods are typical technologies used for shock absorption and the like by preparing foaming molded articles using foaming beads rather than providing a surface texture. Thus, those technologies may not be suitable for interior materials having various surface textures. In particular, such methods used for shock absorption materials may not be applied to durable interior materials due to deterioration in durability of molded articles produced in the related art. In addition, although the above technologies may provide softness in a surface texture, when those are applied to prepare interior materials of a vehicle, durability or more sophisticated fiber texture thereof may not be obtained, and a surface texture may not be modified variously when the surface texture is obtained for integrated molded plastic articles.</p>
+      <p id="p-00010-en" num="0010">The above information disclosed in this Background section is merely for enhancement of understanding of the background of the invention and therefore it may contain information that does not form the prior art that is already known in this country to a person of ordinary skill in the art.</p>
+      <heading id="h-00004-en" level="1">SUMMARY</heading>
+      <p id="p-00011-en" num="0011">We now provide this invention with interior materials which may provide various surface textures. In particular, a superior fiber-textured surface may be obtained in a simplified and more economical process by forming embossing when a surface painting layer including expansion beads is formed on a molded plastic substrate and is then dried. The embossing may be formed by the expansion of the beads in the surface painting layer based on the drying process.</p>
+      <p id="p-00012-en" num="0012">Accordingly, the present invention provides a painted member with a fiber-textured surface formed with a surface painting layer containing expansion beads. In addition, provided is a method for preparing the painted member capable of giving a fiber-textured surface in various shapes and sizes using a simple and economical way such as drying a painting layer containing expansion beads.</p>
+      <p id="p-00013-en" num="0013">In an exemplary embodiment, the painted member may include: a molded plastic substrate, and a surface painting layer that includes expansion beads coated thereon. Particularly, the expansion beads included in the surface painting layer may be exposed to the surface, and a fiber-textured surface may be obtained by the expansion beads.</p>
+      <p id="p-00014-en" num="0014">In an exemplary embodiment, the method for preparing a painted member with a fiber-textured surface may include: preparing a molded plastic article; forming a surface painting layer by coating a paint composition which contains expansion beads on the surface of the molded plastic article; and drying the surface painting layer.</p>
+      <p id="p-00015-en" num="0015">According to various exemplary embodiments of the present invention, improved natural embossing may be obtained by properly inducing the expansion of beads through adjusting a drying condition in the painting process instead of forming embossing in an injection process as in the related art. Therefore, shapes, sizes and the like of the embossing may be modified without limitation. In addition, the surface texture may be modified according to the drying condition of the surface painting layer on a molded plastic article, and thus, painted members with more luxurious and diverse surface textures may be prepared while simultaneously maintaining durability of molded plastic articles. Further, interior materials having fibrous textures may be prepared in a simplified and more economical manner by simply modifying surface embossing.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00016-en" num="0016">The above and other features of the present invention will now be described in detail with reference to certain exemplary embodiments thereof illustrated by the accompanying drawings which are given hereinbelow by way of illustration only, and thus are not limitative of the present invention, and wherein:</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 1</figref> illustrates an exemplary cross-sectional structure of an exemplary painted member with a fiber-textured surface according to an exemplary embodiment of the present invention; and</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 2</figref> illustrated an exemplary cross-sectional structure of an exemplary painted member with a fiber-textured surface according to an exemplary embodiment of the present invention.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <p id="p-00019-en" num="0019">Reference numerals set forth in the Drawings includes reference to the following elements as further discussed below. <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li><b>10</b>: Molded Plastic Substrate</li><li><b>20</b>: Surface painting layer</li><li><b>21</b>: Expansion Bead</li><li><b>22</b>: Inorganic Filler</li><li><b>30</b>: Primer Coating Layer</li><li><b>100</b>: Painted Member</li></ul></li></ul></p>
+      <p id="p-00020-en" num="0026">It should be understood that the appended drawings are not necessarily to scale, presenting a somewhat simplified representation of various exemplary features illustrative of the basic principles of the invention. The specific design features of the present invention as disclosed herein, including, for example, specific dimensions, orientations, locations, and shapes will be determined in part by the particular intended application and use environment.</p>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00021-en" num="0027">It is understood that the term “vehicle” or “vehicular” or other similar term as used herein is inclusive of motor vehicles in general such as passenger automobiles including sports utility vehicles (SUV), buses, trucks, various commercial vehicles, watercraft including a variety of boats and ships, aircraft, and the like, and includes hybrid vehicles, electric vehicles, plug-in hybrid electric vehicles, hydrogen-powered vehicles and other alternative fuel vehicles (e.g. fuels derived from resources other than petroleum). As referred to herein, a hybrid vehicle is a vehicle that has two or more sources of power, for example both gasoline-powered and electric-powered vehicles.</p>
+      <p id="p-00022-en" num="0028">The terminology used herein is for the purpose of describing particular embodiments only and is not intended to be limiting of the invention. As used herein, the singular forms “a”, “an” and “the” are intended to include the plural forms as well, unless the context clearly indicates otherwise. It will be further understood that the terms “comprises” and/or “comprising,” when used in this specification, specify the presence of stated features, integers, steps, operations, elements, and/or components, but do not preclude the presence or addition of one or more other features, integers, steps, operations, elements, components, and/or groups thereof. As used herein, the term “and/or” includes any and all combinations of one or more of the associated listed items.</p>
+      <p id="p-00023-en" num="0029">Unless specifically stated or obvious from context, as used herein, the term “about” is understood as within a range of normal tolerance in the art, for example within 2 standard deviations of the mean. “About” can be understood as within 10%, 9%, 8%, 7%, 6%, 5%, 4%, 3%, 2%, 1%, 0.5%, 0.1%, 0.05%, or 0.01% of the stated value. Unless otherwise clear from the context, all numerical values provided herein are modified by the term “about”.</p>
+      <p id="p-00024-en" num="0030">Hereinafter reference will now be made in detail to various exemplary embodiments of the present invention, examples of which are illustrated in the accompanying drawings and described below. While the invention will be described in conjunction with exemplary embodiments, it will be understood that present description is not intended to limit the invention to those exemplary embodiments. On the contrary, the invention is intended to cover not only the exemplary embodiments, but also various alternatives, modifications, equivalents and other embodiments, which may be included within the spirit and scope of the invention as defined by the appended claims.</p>
+      <p id="p-00025-en" num="0031">In one aspect, the present invention provides a painted member having a fiber-textured surface. In an exemplary embodiment, the painted member may include a surface painting layer that includes a primer coating layer and expansion beads in a molded plastic substrate. The molded plastic substrate, as used herein, refers to a substrate which may have typical molded plastic structures used for various interior parts in a vehicle and the like. In certain exemplary embodiments, conventional substrates which are prepared by injection with embossing formed on the surface may be used without limitation. Accordingly, any type of substrate may be used whether or not embossing is formed on the molded plastic article surface.</p>
+      <p id="p-00026-en" num="0032">In particular, the molded plastic substrates may be formed with, but are not limited to, a polypropylene resin and the like. Further, the molded plastic substrates prepared to be applicable to various interior materials for vehicles may be used. In addition, a surface painting layer formed on the molded plastic substrate may include expansion beads.</p>
+      <p id="p-00027-en" num="0033">In certain exemplary embodiments, the surface painting layer may have a coating thickness of about 20 to 50 μm, or particularly of about 20 to 30 μm. When the thickness is less than a predetermined thickness, for example, less than about 20 μm, the size of expansion beads may be substantially oversized with respect to the coating thickness, and thus superior surface texture may not be obtained, and chemical resistance, scratch resistance, durability and the like may deteriorate. When the thickness is greater than a predetermined thickness, for example, greater than about 50 μm, the expansion beads may not be exposed to the surface, and thus, the surface texture may not be modified.</p>
+      <p id="p-00028-en" num="0034">In certain exemplary embodiments, the surface painting layer including expansion beads may include, but are not limited to, polyester polyol, polyurethane dispersion and polycarbonate polyol as a resin component. Additionally, the surface painting layer may further include a curing agent in addition to expansion beads. The surface painting layer may further include an inorganic filler and additives. The resin composition used herein may include polyester polyol in an amount of about 5 to 25% by weight, polyurethane dispersion in an amount of about 10 to 35% by weight and polycarbonate polyol in an amount of about 5 to 15% by weight, based on a paint composition coated as the surface painting layer.</p>
+      <p id="p-00029-en" num="0035">The polyester polyol, as used herein, may form a coating film with the polyurethane dispersion resin, and may fix the surface painting layer to the coating film with expansion beads, an inorganic filler, and the like, thereby providing touch sensitivity for the surface.</p>
+      <p id="p-00030-en" num="0036">The molecular weight of the polyester polyol may have a molecular weight of about 5,000 to 20,000 Mw, or particularly of about 5,000 to 10,000 Mw. When the molecular weight is less than about 5,000 Mw, touch sensitivity may not be sufficient, and chemical resistance and abrasion resistance may be reduced. When the molecular weight is greater than about 20,000 Mw, thermal resistance, light resistance and the like may be reduced. In addition, the content of the polyester polyol may be in an amount of about 5 to 25% by weight, based on a paint composition coated as the surface painting layer. When the content is less than about 5% by weight, a surface texture may not be obtained. When the content is greater than about 25% by weight, surface properties such as abrasion resistance may be degraded. It is understood that percentage by weight of the content as disclosed herein are based on total weight of the paint composition, unless otherwise indicated.</p>
+      <p id="p-00031-en" num="0037">The polyurethane dispersion resin, as used herein, may form a coating film with and fix the surface painting layer to the coating film with expansion beads and the inorganic filler, as the polyester polyol. In certain exemplary embodiments, a moisture-dispersed resin may be used for the polyurethane dispersion resin. The moisture-dispersed polyurethane dispersion resin may provide improved elasticity, abrasion resistance, chemical resistance and the like and suitable adhesion to various materials, and may be readily modified in resin hardness. Further, polyester dispersion having a hydroxyl group of hydroxide (OH) in the molecule may be used. The polyurethane dispersion may have a molecular weight of about 3,000 to 20,000 Mw. When the molecular weight is less than about 3,000 Mw, scratch resistance and chemical resistance may be reduced. When the molecular weight is greater than about 20,000 Mw, the surface texture may be inferior.</p>
+      <p id="p-00032-en" num="0038">The polycarbonate polyol resin, as used herein, may improve chemical resistance and coating film hardness. When the content of the polycarbonate polyol resin is less than about 5% by weight, chemical resistance and scratch resistance may be reduced. When the content of the polycarbonate polyol resin is greater than about 15% by weight, the surface texture may deteriorate. Accordingly, the content thereof may be in an amount of about 5 to 15% by weight, based on a paint composition coated as the surface painting layer.</p>
+      <p id="p-00033-en" num="0039">In certain exemplary embodiments, the surface painting layer may contain expansion beads, and the expansion beads may be used in an amount of about 2 to 10% by weight or particularly in an amount of about 3 to 6% by weight, based on the total paint composition used in the surface painting layer. When the used amount is less than about 2% by weight, sufficient surface touch sensitivity or cushion sensitivity may not be obtained. When the used amount is greater than about 10% by weight, surface durability may be reduced or a surface texture may be inferior. Further, since the bead expansion rate at a constant level may not be controlled, a uniform coating film texture may not be obtained.</p>
+      <p id="p-00034-en" num="0040">The expansion beads, as used herein, may be included in paint composition and provide surface touch sensitivity by expansion when the painted surface paining layer is dried. In certain exemplary embodiments, the expansion beads may expand at a temperature in a range of about 80 to 120° C. based on the thermal resisting properties of the substrate. In addition, polypropylene (PP) materials, which may be used for a crash pad, a door trim and the like as interior materials of vehicles and the like, may be used as a base material of the expansion beads and may have heat resistance to external heat of about 110° C. Accordingly, expansion of the polypropylene expansion beads may be at a temperature of about 80 to 110° C.</p>
+      <p id="p-00035-en" num="0041">In particular, the expansion beads may have a particle diameter size of about 50 to 500 μm, or particularly of about 60 to 200 μm as the size of the beads expanded after drying. Part of these expansion beads may be floated, and part of these may protrude over the surface due to the sizes, and consequently, a fabric texture may be obtained on the surface. Thus, when the sizes of the expansion beads included in the surface painting layer are greater than or less than a predetermined size, for example, greater than about 500 μm or less than about 50 μm, the sufficient surface texture may not be obtained.</p>
+      <p id="p-00036-en" num="0042">Further, the paint composition coated as the surface painting layer may contain a curing agent in an amount of about 1 to 10% by weight, an inorganic filler in an amount of about 1 to 10% by weight, and additives in an amount of about 1 to 10% by weight, based on total weight of the paint composition. The curing agent, as used herein, may produce a coating film of paint by reacting with a hydroxyl group (OH) of the resin and form a cross-linking structure. In particular, commercially available curing used for general urethane reactions may be used without limitation. The curing agent may be one or a mixture of two or more selected from the group consisting of trifunctional isoporone diisocyanate-based curing agents, trifunctional hexamethylene diisocyanate-based curing agents, and diphenylmethane diisocyanate-based curing agents which may be used for oil-soluble paints may be used.</p>
+      <p id="p-00037-en" num="0043">The curing agent may be included in an amount of about 1 to 10% by weight, or particularly, in an amount of about 5 to 8% by weight, based on total weight of the paint composition. When the content of the curing agent is less than a predetermined amount, for example, less than about 1% by weight, the curing reaction may not sufficiently occur, thereby resulting in deteriorated appearances and coating film property degradation. When the content is greater than a predetermined amount, for example, greater than about 10% by weight, workability may be reduced due to a reduced pot life in the manufacturing process, and an unreacted curing agent remaining after cross-linking may be produced. Thus, the curing agent in the range described above may be included.</p>
+      <p id="p-00038-en" num="0044">The inorganic filler, as used herein, may be mineral fibers. The inorganic filler may be, but is not limited to, SiO<sub>2</sub>—Al<sub>2</sub>O<sub>3</sub>—CaO-based mineral fibers. When such mineral fibers are used, the length thereof may be of about 5 to 10 μm. This mineral fiber may be present in a cured state floated to the surface of the surface painting layer, and thus a luxurious fiber texture of the surface may be obtained with expansion beads. The inorganic filler may be included in an amount of about 1 to 10% by weight, or particularly, in an amount of about 3 to 5% by weight, based on total weight of the paint composition. When the content of the inorganic filler is less than a predetermined amount, for example, less than about 1% by weight, a luxurious texture may not be obtained, since the effect may not be sufficient and the inorganic filler may not contribute to a fiber texture. When the content of the inorganic filler is greater than a predetermined amount, for example, greater than about 10% by weight, mineral fibers may not be linked to the resin remain in the paint, thereby deteriorating appearances and property of the surface painting layer or a coating film.</p>
+      <p id="p-00039-en" num="0045">In certain exemplary embodiments, a surface painting layer may further contain urethane beads. The urethane beads may be additionally used for a surface texture, and the urethane beads may be, but are not limited to, polycaprolactone-diol (PCD) which may be polymerized, and 1,6-hexamethylene diisocyanate as the curing agent. In particular, the molecular weight of PCD may be in a range of about 500 to 2000 Mw. When the molecular weight is less than about 500 Mw, the polymerization with the curing agent may not occur. When the molecular weight is greater than about 2000 Mw, viscosity may increase, therefore bead form may not be prepared substantially. The content of the urethane beads may be in an amount of about 1 to 5% by weight, or particularly, of about 1.0 to 2.0% by weight, based on total weight of the paint composition. Accordingly, soft touch sensitivity may be obtained by placing the urethane beads on the surface of the coating film. The urethane beads may have a particle diameter size in a range of about 50 to 200 μm. When the size less than about a predetermined size, for example, less than about 50 μm, the effect may not be significant. When the size is greater than a predetermined size, for example, greater than about 200 μm, desired surface texture may not be obtained.</p>
+      <p id="p-00040-en" num="0046">In certain exemplary embodiments, additives may be included in the surface painting layer. The additives may be, but are not limited to, one or more of a light stabilizer, a viscosity agent, a matting agent and the like. Particularly, the light stabilizer, as used herein, may be a hindered amine-based light stabilizer. The light stabilizer may be, but is not limited to, one, or more selected from the group consisting of bis-(2,2,6,6-tetramethyl-4-piperidinyl) sebacate (Tinuvin 770), bis-[N-methyl-2,2,6,6-pentamethyl-4-piperidinyl]sebacate, and tetrakis(2,2,6-tetramethyl-4-piperidinyl-1,2,3,4-butanetetracarboxylate. In addition, the viscosity agent may be, but is not limited to, one or a mixture of two or more selected from the group consisting of urethane-based, and acrylic-based viscosity agents. The matting agent, as used herein, may be used for modifying the luster of the surface after forming the coating film. The matting agent may be, but is not limited to, siloxane-based matting agents and the like.</p>
+      <p id="p-00041-en" num="0047">In other certain exemplary embodiments, each of the other additives such as the light stabilizer, the viscosity agent, and the matting agent may be included in an amount of about 0.1 to 1% by weight in the paint composition used for the surface painting layer. In particular, the light stabilizer may be included in an amount of about 0.2 to 0.8% by weight, the viscosity agent in an amount of about 0.2 to 0.5% by weight, and the matting agent in an amount of about 0.2 to 0.8% by weight, based on total weight of the paint composition.</p>
+      <p id="p-00042-en" num="0048">Moreover, the expansion beads included in the surface painting layer may be exposed to the surface as the expansion beads expand after drying, and a fiber-textured surface may be obtained by the expansion beads. The painted member with a fiber-textured surface may have an exemplary cross-sectional structural as shown in <figref>FIG. 1</figref>.</p>
+      <p id="p-00043-en" num="0049">In <figref>FIG. 1</figref>, a surface painting layer (<b>20</b>) formed on the surface of a plastic substrate (<b>10</b>) that forms a basic shape of a painted member (<b>100</b>) may contain expansion beads (<b>21</b>), and the expansion beads may improve cushion sensitivity and slip sensitivity on the surface as they are exposed to the surface of the painted member (<b>100</b>). Accordingly, a fiber texture of the invention may be obtained. In particular, when the inorganic filler (<b>22</b>) is included in the surface painting layer (<b>20</b>), the surface slip sensitivity may be further improved.</p>
+      <p id="p-00044-en" num="0050">According to certain exemplary embodiments, the painted member may further include a primer coating layer between the molded plastic substrate and the surface painting layer. As such, a painted member having improved physical properties may be prepared when such a primer coating layer is formed. As used herein, the primer coating layer may be an undercoating layer for the molded plastic substrate. The primer coating layer may include a paint composition including chlorinated polyolefine in an amount of about 15 to 35% by weight and polyacrylic urethane in an amount of about 20 to 40% by weight. In another exemplary embodiment, the paint composition of the primer coating layer may be about the same as the paint composition of the surface painting layer, but without expansion beads and urethane beads.</p>
+      <p id="p-00045-en" num="0051">The primer coating layer may have a thickness of coating of about 1 to 20 μm, or particularly, of about 12 to 15 μm. In addition, the primer coating layer may be used to maintain a higher quality surface texture for an extended time without generating problems such as surface detachment when the surface painting layer is directly applied to a plastic molding layer. When the primer coating layer has a thickness greater than a predetermined thickness, for example, greater than about 15 μm, printing spray workability may deteriorate. When the primer coating layer has a thickness less than a predetermined thickness, for example, less than about 12 μm, the effect of application may not be obtained such that the durability of the surface painting layer may be reduced.</p>
+      <p id="p-00046-en" num="0052">
+        <figref>FIG. 2</figref> illustrates an exemplary cross-sectional structure of a painted member with a fiber-textured surface in which an exemplary primer coating layer is formed according to an exemplary embodiment of the present invention. As shown in <figref>FIG. 2</figref>, a primer coating layer (<b>30</b>) may be formed on a plastic substrate (<b>10</b>), and a surface painting layer (<b>20</b>) may be formed thereon.</p>
+      <p id="p-00047-en" num="0053">In other aspect, a method for preparing the painted member with a fiber-textured surface is provided. In an exemplary embodiment, the preparation method may include: preparing the molded plastic substrate; coating a surface painting layer; and drying the painted surface layer. In particular, in the process of preparing a molded plastic substrate, the plastic substrate may be an injection or extrusion molded product which may be suitable for the shaping of interior materials to apply a painted member. Alternatively, the plastic substrate may be in a sheet form.</p>
+      <p id="p-00048-en" num="0054">The formation of an embossing on the surface of the molded plastic substrate may not be necessary, or alternatively, embossing may be formed on the plastic substrate as prepared above. In certain exemplary embodiments, the method may include a process of forming a surface painting layer by coating paint containing expansion beads on the surface of the molded plastic substrate. In particular, the surface painting layer may be coated using a spray method by forming the paint composition with the resin composition which may contain beads and other substances therein as described above.</p>
+      <p id="p-00049-en" num="0055">In certain exemplary embodiment, the method may further include coating a primer coating layer prior to the formation of the surface painting layer. The primer coating layer may be coated using a spray method, without limitation. In addition, a process of drying may be performed after the surface painting layer is formed on the molded plastic substrate. The drying process may include drying the surface painting layer, and when the primer coating layer is formed, the drying may be performed simultaneously under the same condition.</p>
+      <p id="p-00050-en" num="0056">The drying condition may be performed at a temperature of about 80 to 120° C. and, or particularly, of about at 80 to 100° C. The drying time may be for about 0.5 to 2 hours, or particularly for about 0.5 to 1 hour. In particular, according to the drying condition such as a drying temperature, a more luxurious fiber texture may be obtained by forming embossing on the surface as the expansion beads included in the surface painting layer expand. Therefore, the shapes and the sizes of the embossing on the surface may be modified by adjusting a drying condition, and thus, the texture of the surface may be diversely formed.</p>
+      <p id="p-00051-en" num="0057">Accordingly, exemplary painted members with the fiber-textured surface according to the present invention may be prepared in a simplified and more economical manner as the surface painting layer including expansion beads may be formed on the molded plastic substrate using a printing method and the expansion beads included in the surface painting layer may be expanded and exposed on the surface to reveal a fiber texture, which is different from the conventional methods in the related art forming a injected member to form surface embossing or to prepare to have a structure covering the surface of an injected article.</p>
+      <p id="p-00052-en" num="0058">Further according to various exemplary embodiments, the painted member with the fiber-textured surface may be used as interior materials for various structures, and particularly, suitable to be used for vehicle interior materials. In certain exemplary embodiments, automotive pillar trim unit may be prepared with the vehicle interior material of the invention. Accordingly, automotive interior materials formed with the painted member with the fiber-textured surface are provided in the present invention.</p>
+      <heading id="h-00007-en" level="1">EXAMPLES</heading>
+      <p id="p-00053-en" num="0059">Hereinafter, the present invention will be described in detail with reference to examples; however, the present invention is not limited to these examples. The numbers of each component in the following Table 1 is % by weight.</p>
+      <heading id="h-00008-en" level="1">Example 1</heading>
+      <p id="p-00054-en" num="0060">A plastic resin in which no embossing was formed was prepared by injecting a polycarbonate resin in a form of a pillar trim unit shape to apply the product as an interior material of an vehicle pillar trim unit. A primer coating layer having a thickness of about 13 μm was prepared on the surface of the plastic substrate using a paint composition formed with polyolefin and polyacrylic urethane.</p>
+      <p id="p-00055-en" num="0061">On the primer coating layer, the surface was coated using the paint composition prepared as in Table 1, and then a surface painting layer having a thickness of about 24 μm was formed by drying for about 40 minutes at a temperature of about 100° C. The painted member was prepared so that the expansion beads included in the surface painting layer of the painted member have an average particle diameter of about 110 μm after drying. The polyester polyol having a molecular weight of about 8,000 Mw was used for surface coating paint to form the surface painting layer, and polyurethane dispersion having a molecular weight of about 10,000 Mw was used.</p>
+      <p id="p-00056-en" num="0062">As the expansion beads, a polypropylene (PP) materials having a particle diameter size of about 80 to 120 μm was used, and as a curing agent, a mixture of 4,0-diphenylmethane diisocyanate (MDI, TCI), 1,6-hexamethylene diisocyanate (HDI, Acros) and isoporone diisocyanate (IPDI, TCI) was used. As an inorganic filler, a SiO<sub>2</sub>—Al<sub>2</sub>O<sub>3</sub>—CaO-based mineral fiber having an average length of about 7 to 8 μm was used.</p>
+      <p id="p-00057-en" num="0063">In addition, as urethane beads, beads having an average particle diameter of about 100 μm is polymerized using polycaprolactone-diol (PCD) having a molecular weight of about 1200 and 1,6-hexamethylene diisocyanate were used. Bis-(2,2,6,6-tetramethyl-4-piperidinyl) sebacate which is commercially available as Tinuvin 770 was used as a light stabilizer, an urethane-based viscosity agent was used as a viscosity agent, and a siloxane-based matting agent was used as a matting agent.</p>
+      <p id="p-00058-en" num="0064">Ethylene glycol and distilled water were used as solvents in order to form the paint composition for coating the surface painting layer as described above.</p>
+      <heading id="h-00009-en" level="1">Examples 2 to 5</heading>
+      <p id="p-00059-en" num="0065">Examples 2 to 5 were prepared as in Example 1 except that the paint compositions for forming the surface painting layer were as shown in Table 1.</p>
+      <heading id="h-00010-en" level="1">Example 6</heading>
+      <p id="p-00060-en" num="0066">Example 6 was prepared as in Example 1 except that the primer coating layer was not formed and the surface painting layer was directly formed on the plastic substrate. The paint composition for forming the surface painting layer was as shown in Table 1.</p>
+      <heading id="h-00011-en" level="1">Comparative Example 1</heading>
+      <p id="p-00061-en" num="0067">As shown in Table 1, the expansion beads and the inorganic filler were not used, and injection molding was carried out so as to have surface embossing by including additives in the injection molding materials. Separate paint was not used since embossing was formed on the surface of the injection molded product.</p>
+      <heading id="h-00012-en" level="1">Comparative Examples 2 to 4</heading>
+      <p id="p-00062-en" num="0068">Comparative Examples 2 to 4 were prepared as in Example 1 except that the paint compositions for forming the surface painting layer were as shown in Table 1.</p>
+      <p id="p-00063-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="11" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <colspec colname="5" colwidth="35pt" align="center" />
+              <colspec colname="6" colwidth="35pt" align="center" />
+              <colspec colname="7" colwidth="35pt" align="center" />
+              <colspec colname="8" colwidth="42pt" align="center" />
+              <colspec colname="9" colwidth="42pt" align="center" />
+              <colspec colname="10" colwidth="42pt" align="center" />
+              <colspec colname="11" colwidth="42pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="11" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="11" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Exam-</entry>
+                  <entry>Exam-</entry>
+                  <entry>Exam-</entry>
+                  <entry>Exam-</entry>
+                  <entry>Exam-</entry>
+                  <entry>Exam-</entry>
+                  <entry>Comparative</entry>
+                  <entry>Comparative</entry>
+                  <entry>Comparative</entry>
+                  <entry>Comparative</entry>
+                </row>
+                <row>
+                  <entry>Paint Composition</entry>
+                  <entry>ple1</entry>
+                  <entry>ple 2</entry>
+                  <entry>ple 3</entry>
+                  <entry>ple 4</entry>
+                  <entry>ple 5</entry>
+                  <entry>ple 6</entry>
+                  <entry>Example 1</entry>
+                  <entry>Example 2</entry>
+                  <entry>Example 3</entry>
+                  <entry>Example 4</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="11" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="11" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="char" char="." />
+              <colspec colname="3" colwidth="35pt" align="char" char="." />
+              <colspec colname="4" colwidth="35pt" align="char" char="." />
+              <colspec colname="5" colwidth="35pt" align="char" char="." />
+              <colspec colname="6" colwidth="35pt" align="char" char="." />
+              <colspec colname="7" colwidth="35pt" align="char" char="." />
+              <colspec colname="8" colwidth="42pt" align="char" char="." />
+              <colspec colname="9" colwidth="42pt" align="char" char="." />
+              <colspec colname="10" colwidth="42pt" align="char" char="." />
+              <colspec colname="11" colwidth="42pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>PEP</entry>
+                  <entry>10</entry>
+                  <entry>10</entry>
+                  <entry>10</entry>
+                  <entry>10</entry>
+                  <entry>10</entry>
+                  <entry>10</entry>
+                  <entry>10</entry>
+                  <entry>10</entry>
+                  <entry>10</entry>
+                  <entry>10</entry>
+                </row>
+                <row>
+                  <entry>PUD</entry>
+                  <entry>20</entry>
+                  <entry>20</entry>
+                  <entry>20</entry>
+                  <entry>20</entry>
+                  <entry>20</entry>
+                  <entry>20</entry>
+                  <entry>20</entry>
+                  <entry>20</entry>
+                  <entry>20</entry>
+                  <entry>20</entry>
+                </row>
+                <row>
+                  <entry>PCP</entry>
+                  <entry>10</entry>
+                  <entry>10</entry>
+                  <entry>10</entry>
+                  <entry>10</entry>
+                  <entry>10</entry>
+                  <entry>10</entry>
+                  <entry>10</entry>
+                  <entry>10</entry>
+                  <entry>10</entry>
+                  <entry>10</entry>
+                </row>
+                <row>
+                  <entry>Curing Agent</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                </row>
+                <row>
+                  <entry>Expansion Bead</entry>
+                  <entry>5.0</entry>
+                  <entry>2.0</entry>
+                  <entry>5.0</entry>
+                  <entry>7.0</entry>
+                  <entry>2.0</entry>
+                  <entry>9.0</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>11.0</entry>
+                  <entry>1.0</entry>
+                </row>
+                <row>
+                  <entry>Pigment</entry>
+                </row>
+                <row>
+                  <entry>Inorganic Filler</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>5.0</entry>
+                  <entry>2.0</entry>
+                  <entry>7.0</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>5.0</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                </row>
+                <row>
+                  <entry>Urethane Bead</entry>
+                  <entry>1.5</entry>
+                  <entry>1.5</entry>
+                  <entry>1.5</entry>
+                  <entry>1.5</entry>
+                  <entry>1.5</entry>
+                  <entry>1.5</entry>
+                  <entry>1.5</entry>
+                  <entry>1.5</entry>
+                  <entry>1.5</entry>
+                  <entry>1.5</entry>
+                </row>
+                <row>
+                  <entry>Light Stabilizer</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                </row>
+                <row>
+                  <entry>Viscosity Agent</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                </row>
+                <row>
+                  <entry>Matting Agent</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                </row>
+                <row>
+                  <entry>Ethylene Glycol</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                </row>
+                <row>
+                  <entry>Distilled Water</entry>
+                  <entry>Residual</entry>
+                  <entry>Residual</entry>
+                  <entry>Residual</entry>
+                  <entry>Residual</entry>
+                  <entry>Residual</entry>
+                  <entry>Residual</entry>
+                  <entry>Residual</entry>
+                  <entry>Residual</entry>
+                  <entry>Residual</entry>
+                  <entry>Residual</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Quantity</entry>
+                  <entry>Quantity</entry>
+                  <entry>Quantity</entry>
+                  <entry>Quantity</entry>
+                  <entry>Quantity</entry>
+                  <entry>Quantity</entry>
+                  <entry>Quantity</entry>
+                  <entry>Quantity</entry>
+                  <entry>Quantity</entry>
+                  <entry>Quantity</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="11" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00064-en" num="0069">In Table 1, PEP refers to a polyester polyol, PUD refers to a polyurethane dispersion, and PCP refers to a polycarbonate polyol.</p>
+      <p id="p-00065-en" num="0070">The invention has been described in detail with reference to exemplary embodiments thereof. However, it will be appreciated by those skilled in the art that changes may be made in these exemplary embodiments without departing from the principles and spirit of the invention, the scope of which is defined in the appended claims and their equivalents.</p>
+      <heading id="h-00013-en" level="1">TEST EXAMPLES</heading>
+      <heading id="h-00014-en" level="1">Test Example</heading>
+      <p id="p-00066-en" num="0071">For member specimen each prepared in Examples and Comparative examples, physical properties were measured, compared and evaluated under the same conditions by 12 expert panelists.</p>
+      <p id="p-00067-en" num="0072">In each measured criteria, each panelist performed the evaluation by giving grades from 1 that was the lowest to 10 that was the highest, and for each item, 10 evaluation grades excluding the highest grade and the lowest grade were averaged, and the average values of the listed criteria are shown in Table 2.</p>
+      <p id="p-00068-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="11" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="91pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="35pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <colspec colname="8" colwidth="42pt" align="center" />
+              <colspec colname="9" colwidth="42pt" align="center" />
+              <colspec colname="10" colwidth="42pt" align="center" />
+              <colspec colname="11" colwidth="42pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="11" rowsep="1">TABLE 2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="11" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Exam-</entry>
+                  <entry>Exam-</entry>
+                  <entry>Exam-</entry>
+                  <entry>Exam-</entry>
+                  <entry>Exam-</entry>
+                  <entry>Exam-</entry>
+                  <entry>Comparative</entry>
+                  <entry>Comparative</entry>
+                  <entry>Comparative</entry>
+                  <entry>Comparative</entry>
+                </row>
+                <row>
+                  <entry>Items</entry>
+                  <entry>ple 1</entry>
+                  <entry>ple 2</entry>
+                  <entry>ple 3</entry>
+                  <entry>ple 4</entry>
+                  <entry>ple 5</entry>
+                  <entry>ple 6</entry>
+                  <entry>Example 1</entry>
+                  <entry>Example 2</entry>
+                  <entry>Example 3</entry>
+                  <entry>Example 4</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="11" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Surface Slip Sensitivity</entry>
+                  <entry>7</entry>
+                  <entry>7</entry>
+                  <entry>9</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>2</entry>
+                  <entry>7</entry>
+                  <entry>3</entry>
+                  <entry>5</entry>
+                </row>
+                <row>
+                  <entry>Surface Cushion Sensitivity</entry>
+                  <entry>9</entry>
+                  <entry>7</entry>
+                  <entry>9</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>9</entry>
+                  <entry>2</entry>
+                  <entry>2</entry>
+                  <entry>9</entry>
+                  <entry>5</entry>
+                </row>
+                <row>
+                  <entry>Abrasion Resistance</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>7</entry>
+                  <entry>9</entry>
+                  <entry>3</entry>
+                  <entry>2</entry>
+                  <entry>8</entry>
+                </row>
+                <row>
+                  <entry>Scratch Resistance</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>7</entry>
+                  <entry>9</entry>
+                  <entry>3</entry>
+                  <entry>3</entry>
+                  <entry>8</entry>
+                </row>
+                <row>
+                  <entry>Chemical Resistance</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>5</entry>
+                  <entry>4</entry>
+                  <entry>6</entry>
+                </row>
+                <row>
+                  <entry>Light Resistance</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                </row>
+                <row>
+                  <entry>Thermal Resistance</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                </row>
+                <row>
+                  <entry>Moisture Resistance</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="11" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00069-en" num="0073">From the test evaluation results, it was demonstrated that, when the expansion beads were used in the amounts as described above, substantial improvements in properties may be obtained in all aspects. In addition, it was verified that the expansion beads may expand when drying the paint thereby providing cushion sensitivity to the coating film, and the inorganic filler may contribute to slip sensitivity of the coating film. Accordingly, when the expansion bead pigments and the inorganic filler are all included in the paint, improved surface slip sensitivity and cushion sensitivity may be achieved.</p>
+      <p id="p-00070-en" num="0074">As described above, according to the present invention, textures having similarity to natural fibers may be obtained when surface slip sensitivity and cushion texture are achieved at the same time. Furthermore, the expansion beads may be properly used for providing the physical properties of the coating film, and in particularly, substantially improved physical properties may be obtained when the inorganic filler is additionally added thereto.</p>
+      <p id="p-00071-en" num="0075">Accordingly, the painted member with the fiber texture according to various exemplary embodiments of the present invention may be used as interior materials or vehicle interior materials for which various plastic interior structures may be used. In particular, the painted member with the fiber texture may be used for interior materials of an automotive pillar trim unit as vehicle interior materials.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A painted member with a fiber-textured surface comprising:
+<claim-text>a molded plastic substrate; and</claim-text><claim-text>a surface painting layer that includes expansion beads coated thereon,</claim-text><claim-text>wherein the expansion beads included in the surface painting layer are exposed to the surface, and the fiber-textured surface is obtained by the expansion beads.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The painted member of <claim-ref idref="clm-00001-en">claim 1</claim-ref> further comprising:
+<claim-text>a primer coating layer disposed between the molded plastic substrate and the surface painting layer including expansion beads coated thereon.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The painted member of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the surface painting layer is formed in a thickness of about 20 to 50 μm.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The painted member of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the surface painting layer further contains an inorganic filler.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The painted member of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the expansion beads included in the surface painting layer have a particle diameter size of about 50 to 500 μm after being dried.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The painted member of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the inorganic filler is a SiO<sub>2</sub>—Al<sub>2</sub>O<sub>3</sub>—CaO-based mineral fiber.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The painted member of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the inorganic filler is a mineral fiber having a length of about 5 to 10 μm.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The painted member of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the surface painting layer further contains one or more selected from the group consisting of: urethane beads, a light stabilizer, a viscosity agent, and a matting agent as additives.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The painted member of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the primer coating layer includes polyolefin, polyacrylic urethane or combinations thereof.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The painted member of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the primer coating layer has a thickness of about 1 to 20 μm.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en" independent="true">
+      <claim-text>
+        <b>11</b>. A method for preparing a painted member with a fiber-textured surface, comprising:
+<claim-text>preparing a molded plastic substrate;</claim-text><claim-text>forming a surface painting layer by coating a paint composition which contains expansion bead on the surface of the molded plastic substrate; and</claim-text><claim-text>drying the surface painting layer.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method for preparing a painted member of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, further comprising:
+<claim-text>coating a primer coating layer after preparing the molded plastic substrate and before forming the surface painting layer.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method for preparing a painted member of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the paint composition includes polyester polyol, polyurethane dispersion, polycarbonate polyol or combinations thereof</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method for preparing a painted member of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the paint composition further includes a curing agent.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method for preparing a painted member of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the expansion beads of the surface painting layer are included in an amount of about 1 to 10% by weight in the paint composition coated to the surface painting layer.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method for preparing the painted member of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the inorganic filler is further included in an amount of about 1 to 10% by weight in the paint composition coated for forming the surface painting layer.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The method for preparing a painted member of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the drying is performed at a temperature of about 80 to 120° C.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method for preparing a painted member of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the fiber texture of the surface painting layer is modified by adjusting the size of the expansion bead included in the surface painting layer while adjusting a drying temperature in the drying process.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. An automotive interior material formed with the painted member with the fiber-textured surface of <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The automotive interior material of <claim-ref idref="clm-00019-en">claim 19</claim-ref>, wherein the interior material is an automotive pillar trim unit. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150247058A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247058A1-20150903-D00001.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150247058A1.PDF" type="pdf" size="506669" pages="9" />
+</lexisnexis-patent-document>

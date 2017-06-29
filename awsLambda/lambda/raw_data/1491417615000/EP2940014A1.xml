@@ -1,0 +1,952 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2940014A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151104" time-inserted="091041" date-changed="20151211" time-changed="141313">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121939210">
+        <country>EP</country>
+        <doc-number>2940014</doc-number>
+        <kind>A1</kind>
+        <date>20151104</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>13867650</doc-number>
+        <date>20131226</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>kor</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151104">
+      <priority-claim sequence="1" kind="national">
+        <country>US</country>
+        <doc-number>61746980</doc-number>
+        <date>20121228</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>US</country>
+        <doc-number>201261746980</doc-number>
+        <kind>P</kind>
+        <date>20121228</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>KR</country>
+        <doc-number>2013012204</doc-number>
+        <kind>W</kind>
+        <date>20131226</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>201261746980 P</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>2013012204</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>US201261746980P</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>WO2013KR12204</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151105">
+      <gazette-reference>
+        <date>20151104</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151104</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151104</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151105">
+      <request-for-examination>
+        <date>20150723</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20151211">
+      <classification-ipcr sequence="1">
+        <text>C07D 403/04        20060101AFI20140718BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>403</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140718</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61K  31/4178      20060101ALI20140718BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>4178</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140718</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61P  25/00        20060101ALI20140718BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>P</subclass>
+        <main-group>25</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140718</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>A61P  35/00        20060101ALI20140718BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>P</subclass>
+        <main-group>35</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140718</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151211">
+      <classification-cpc sequence="1">
+        <text>C07D 403/10        20130101 FI20151128BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>403</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151128</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61K  31/4178      20130101 LI20151130BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>4178</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151130</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61K  45/06        20130101 LI20151128BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>45</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151128</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C07D 403/04        20130101 LI20151130BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>403</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151130</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">12</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151104" lang="ger" format="original">2,3-DIHYDRO-ISOINDOL-1-ON DERIVAT ALS BTK-KINASE-HEMMER UND PHARMAZEUTISCHE ZUSAMMENSETZUNG DAMIT</invention-title>
+    <invention-title id="title_eng" date-changed="20151104" lang="eng" format="original">2,3-DIHYDRO-ISOINDOLE-1-ON DERIVATIVE AS BTK KINASE SUPPRESSANT, AND PHARMACEUTICAL COMPOSITION INCLUDING SAME</invention-title>
+    <invention-title id="title_fre" date-changed="20151104" lang="fre" format="original">DÉRIVÉ 2,3-DIHYDRO-ISOINDOLE-1-ONE UTILISÉ COMME SUPPRESSEUR DE KINASE BTK, ET COMPOSITION PHARMACEUTIQUE ASSOCIÉE</invention-title>
+    <parties date-changed="20151104">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Crystalgenomics, Inc.</orgname>
+            <registered-number>101544524</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>5thF, Tower A, Korea Bio Park 700 Daewangpangyo-ro, Bundang-gu</address-1>
+              <city>Seongnam-si, Gyeonggi-do 463-400</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>HONG, Yong Rae</name>
+            <address>
+              <address-1>103-1604 7 Dangjeongyeok-ro</address-1>
+              <city>Gunpo-si Gyeonggi-do 435-774</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>NA, Jeong Eun</name>
+            <address>
+              <address-1>104-1504 55 Munjeong-ro Suji-gu</address-1>
+              <city>Yongin-si Gyeonggi-do 448-768</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>MIN, Im Sook</name>
+            <address>
+              <address-1>105-1705 70 Cheongsong-ro</address-1>
+              <city>Gimpo-si Gyeonggi-do 415-748</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4">
+          <addressbook lang="eng">
+            <name>CHA, Hyun Ju</name>
+            <address>
+              <address-1>5-201 164 Hyoryeong-ro Seocho-gu</address-1>
+              <city>Seoul 137-758</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5">
+          <addressbook lang="eng">
+            <name>KWON, Sool Ki</name>
+            <address>
+              <address-1>301-1303 244 Yatap-ro Bundang-gu</address-1>
+              <city>Seongnam-si Gyeonggi-do 463-942</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6">
+          <addressbook lang="eng">
+            <name>RO, Seonggu</name>
+            <address>
+              <address-1>31-901 17 Ogeum-ro 35-gil Songpa-gu</address-1>
+              <city>Seoul 138-740</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="7">
+          <addressbook lang="eng">
+            <name>CHO, Joong Myung</name>
+            <address>
+              <address-1>B-4601 212 Olympic-ro Songpa-gu</address-1>
+              <city>Seoul 138-791</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Schiweck, Weinzierl &amp; Koch</name>
+            <registered-number>101223256</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>European Patent Attorneys Landsberger Straße 98</address-1>
+              <city>80339 München</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151104">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>KR13012204</doc-number>
+        <date>20131226</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014104757</doc-number>
+        <date>20140703</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151104">
+      <main-family family-id="166465432">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940014</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104995184</doc-number>
+            <kind>A</kind>
+            <date>20151021</date>
+          </document-id>
+          <application-date>
+            <date>20131226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2013371146</doc-number>
+            <kind>A1</kind>
+            <date>20150716</date>
+          </document-id>
+          <application-date>
+            <date>20131226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2896711</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014104757</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131226</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="166465430">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940014</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104995184</doc-number>
+            <kind>A</kind>
+            <date>20151021</date>
+          </document-id>
+          <application-date>
+            <date>20131226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2013371146</doc-number>
+            <kind>A1</kind>
+            <date>20150716</date>
+          </document-id>
+          <application-date>
+            <date>20131226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2896711</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014104757</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131226</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151104" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention provides a compound selected from the group consisting of a compound of formula (I), pharmaceutically acceptable salts, esters, prodrugs, hydrates, solvates and isomers thereof; a use of the compound for the treatment, relief or prevention of diseases caused by absormal or uncontrolled activation of protein kinase, and a use of the compound for the manufacture of a medicament for the treatment, relief or prevention of the diseases; a pharmaceutical composition comprising the compound as an active ingredient; and a method for the treatment, relief or prevention of the diseases using the compound. The inventive compound is useful for the treatment, relief or prevention of diseases caused by abnormal or uncontrolled activation of protein kinase.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151104">
+    <heading id="h-00001-en">
+      <b>
+        <u>FIELD OF THE INVENTION</u>
+      </b>
+    </heading>
+    <p id="p-00001-en" num="0001">The present invention relates to a compound selected from the group consisting of a compound of formula (I) and pharmaceutically acceptable salts, esters, prodrugs, hydrates, solvates and isomers thereof, and a pharmaceutical composition comprising same as an active ingredient for the treatment, relief or prevention of diseases caused by abnormal or uncontrolled activation or protein kinase.</p>
+    <heading id="h-00002-en">
+      <b>
+        <u>BACKGROUND OF THE INVENTION</u>
+      </b>
+    </heading>
+    <p id="p-00002-en" num="0002">Bruton's tyrosine kinase (BTK) is a member of the TEC family of nonreceptor tyrosine kinases, which consists of 650 amino acid residues and contains pleckstrin homology (PH) domain, zinc-finger region, SH3 domain, SH2 domain, and kinase domain. Recently, kinase domain, among said domains, is gaining more interests as a drug target.</p>
+    <p id="p-00003-en" num="0003">BTK is found in B-cells and hematopoietic cells, rather than some T-cells, natural killer cells, plasma cells, etc. When BTK is stimulated by the B-cell membrane receptor (BCR) signals that are caused by various inflammatory responses or cancers, BTK plays an important role in production of cytokines such as TNF-α, IL-6, etc., as well as NF-κB by initiating downstream signaling such as phospholipase C gamma 2 (PLCy2).</p>
+    <p id="p-00004-en" num="0004">In the treatment of inflammation, BTK is known for mediating responses of the membrane receptors, <i>e.g.,</i> B-cell antigen receptors which detect inflammation-inducing substances, CD40, TLR-4, Fcg and the like. Also, BTK has a strong influence on the signaling mechanism of inflammation caused by stimulation of mast cell, B-cell and macrophage. Therefore, inhibition of BTK may block IgE signaling which may slow down the progression of diseases caused by abnormal activation of BTK. This signaling mechanism is a complicated signaling pathway of immunosubstance secretion. In this process, protein phosphorylation and dephosphorylation take place in a multi-step procedure, and since BTK is one of the high-level steps in the signaling pathway, along with spleen tyrosine kinase (SYK) and, thus, it is more effective for preventing activation of factors that cause immune responses than other kinase targets.</p>
+    <p id="p-00005-en" num="0005">Further, in the treatment of cancer, it is known that BTK modifies BCR and B-cell surface proteins which generate antisuicide signals. Thus, inhibition of BTK may bring about anticancer effects against cancers that are associated with BCR signaling such as lymphoma. In fact, Ibrutinib (PCI-32765) developed by Pharmacyclics Inc. was recently approved as an anti-cancer agent for the treatment of chronic lymphocytic leukemia (CLL), and a phase III trial of AVL-292 developed by Avila Therapeutics for small lymphocytic leukemia (SLL) and CLL is currently underway. It has been proven that these compounds are quite effective against SLL and CLL that are relatively rare type of cancers. However, they have failed to achieve satisfactory results against diffuse large B-cell lymphoma (DLBCL) which is more prevalent type of lymphoma. Thus, there is a growing demand for a noble drug.</p>
+    <p id="p-00006-en" num="0006">The action mechanism of BTK inhibitor as an anti-inflammatory agent as well as an anti-cancer agent is thoroughly described in the reference [<nplcit id="ncit-00001" npl-type="s"><text>Nature Chemical Biology 7, (2011), 4</text></nplcit>].</p>
+    <heading id="h-00003-en">
+      <b>
+        <u>SUMMARY OF THE INVENTION</u>
+      </b>
+    </heading>
+    <p id="p-00007-en" num="0007">Accordingly, it is an object of the present invention to provide a compound selected from the group consisting of a compound of formula (I), pharmaceutically acceptable salts, esters, prodrugs, hydrates, solvates and isomers thereof.</p>
+    <p id="p-00008-en" num="0008">It is another object of the present invention to provide a pharmaceutical composition comprising same as an active ingredient for the treatment, relief or prevention of diseases caused by abnormal or uncontrolled activation of protein kinase.</p>
+    <p id="p-00009-en" num="0009">In accordance with an aspect of the present invention, there is provided a compound selected from the group consisting of a compound of formula (I) below and pharmaceutically acceptable salts, esters, prodrugs, hydrates, solvates and isomers thereof: <chemistry id="chem-00001-en" num="0001"><img id="img-00001-en" wi="105" he="55" img-content="chem" file="EP2940014A1_00001.PNG" img-format="png" original="imgb0001.tif" /></chemistry> wherein, <ul id="ul-00001-en" list-style="none" compact="compact"><li>A is <chemistry id="chem-00002-en" num="0002"><img id="img-00002-en" wi="56" he="17" img-content="chem" file="EP2940014A1_00002.PNG" img-format="png" original="imgb0002.tif" /></chemistry> and R<sub>8</sub> is hydrogen, halogen, or C<sub>1-3</sub>alkyl,</li><li>R<sub>1</sub> and R<sub>2</sub> are each independently hydrogen or C<sub>1-3</sub>alkyl,</li><li>R<sub>3</sub> to R<sub>7</sub> are each independently hydrogen, halogen, cyano, nitro or C<sub>1-3</sub>haloalkyl.</li></ul></p>
+    <p id="p-00010-en" num="0010">In accordance with another aspect of the present invention, there is provided a pharmaceutical composition comprising same as an active ingredient for the treatment, relief or prevention of diseases caused by abnormal or uncontrolled activation of protein kinase.</p>
+    <heading id="h-00004-en">
+      <b>
+        <u>DETAILED DESCRIPTION OF THE INVENTION</u>
+      </b>
+    </heading>
+    <p id="p-00011-en" num="0011">Embodiments of the present invention are explained in detail hereinafter.</p>
+    <p id="p-00012-en" num="0012">In the present invention, there is provided a compound selected from the group consisting of a compound of formula (I) below and pharmaceutically acceptable salts, esters, prodrugs, hydrates, solvates and isomers thereof: <chemistry id="chem-00003-en" num="0003"><img id="img-00003-en" wi="105" he="55" img-content="chem" file="EP2940014A1_00003.PNG" img-format="png" original="imgb0003.tif" /></chemistry> wherein, <ul id="ul-00002-en" list-style="none" compact="compact"><li>A is <chemistry id="chem-00004-en" num="0004"><img id="img-00004-en" wi="56" he="17" img-content="chem" file="EP2940014A1_00004.PNG" img-format="png" original="imgb0004.tif" /></chemistry> and R<sub>8</sub> is hydrogen, halogen, or C<sub>1-3</sub>alkyl,</li><li>R<sub>1</sub> and R<sub>2</sub> are each independently hydrogen or C<sub>1-3</sub>alkyl,</li><li>R<sub>3</sub> to R<sub>7</sub> are each independently hydrogen or electron withdrawing substituent, wherein the electron withdrawing substituent is, for example, halogen, cyano, nitro or C<sub>1-3</sub>haloalkyl.</li></ul></p>
+    <p id="p-00013-en" num="0013">In one specific embodiment, said R<sub>3</sub> to R<sub>7</sub> are each independently hydrogen, fluoro, chloro, bromo, iodo, cyano, nitro, difluoromethyl or trifluoromethyl.</p>
+    <p id="p-00014-en" num="0014">In another specific embodiment,<br /> said R<sub>1</sub> and R<sub>2</sub> are each independently hydrogen or methyl;<br /> R<sub>3</sub> to R<sub>7</sub> are each independently hydrogen, fluoro, chloro, cyano or trifluoromethyl;<br /> R<sub>8</sub> is hydrogen or fluoro.</p>
+    <p id="p-00015-en" num="0015">The term "halo" or "halogen" as used herein refers to fluorine, chlorine, bromine or iodine, unless otherwise indicated.</p>
+    <p id="p-00016-en" num="0016">The term "alkyl" as used herein refers to linear or branched hydrocarbon residues, unless otherwise indicated.</p>
+    <p id="p-00017-en" num="0017">The compound of formula (I) according to the present invention may form a pharmaceutically acceptable salt derived from inorganic or organic acid, and such salt may be pharmaceutically acceptable nontoxic acid addition salt containing anion. For example, the salt may include acid addition salts formed by inorganic acids such as hydrochloric acid, sulfuric acid, nitric acid, phosphoric acid, hydrobromic acid, hydroiodic acid, and the like; organic carbonic acids such as tartaric acid, formic acid, citric acid, acetic acid, trichloroacetic acid, trifluoroacetic acid, gluconic acid, benzoic acid, lactic acid, fumaric acid, maleic acid, and the like; and sulfonic acids such as methanesulfonic acid, benzenesulfonic acid, <i>p</i>-toluenesulfonic acid, naphthalensulfonic acid, and the like. Among them, acid addition salts formed by sulfuric acid, methanesulfonic acid or hydrohalogenic acid and the like are preferred.</p>
+    <p id="p-00018-en" num="0018">The "pharmaceutically acceptable salt" of the compound of formula (I) may be prepared by conventional methods well-known in the art. Specifically, the "pharmaceutically acceptable salt" in accordance of the present invention may be prepared by, <i>e.g.,</i> dissolving the compound of formula (I) in a water-miscible organic solvent such as acetone, methanol, ethanol or acetonitrile and the like; adding an excessive amount of organic acid or an aqueous solution of inorganic acid thereto; precipitating or crystallizing the mixture thus obtained. Further, it may be prepared by further evaporating the solvent or excessive acid therefrom; and then drying the mixture or filtering the extract by using a suction filter.</p>
+    <p id="p-00019-en" num="0019">The term "ester" as used herein refers to a chemical moiety having chemical structure of-(R)n-COOR', wherein R and R' are each independently selected from the group consisting of alkyl, cycloalkyl, aryl, heteroaryl (connected to oxygen atom by aromatic ring) and heteroalicyclic (connected by aromatic ring), and n is 0 or 1, unless otherwise indicated.</p>
+    <p id="p-00020-en" num="0020">The term "prodrug" as used herein refers to a precursor compound that will undergo metabolic activation <i>in vivo</i> to produce the parent drug. Prodrugs are often useful because they can be easily administered as compared to parent drugs thereof in some cases. For instance, some prodrugs are bioavailable via oral administration unlike parent drugs thereof often show poor bioavailability. Further, the prodrugs may show improved solubility in the pharmaceutical composition as compared to parent drugs thereof. For instance, the compound of formula (I) may be administered in the form of an ester prodrug so as to increase drug delivery efficiency since the solubility of a drug can adversely affect the permeability across the cell membrane. Then, once the compound in the form of the ester prodrug enters a target cell, it may be metabolically hydrolyzed into a carboxylic acid and an active entity.</p>
+    <p id="p-00021-en" num="0021">Hydrates or solvates of the compound of formula (I) are included within the scope of the present invention.</p>
+    <p id="p-00022-en" num="0022">Further, the compound of formula (I) of the present invention can have an asymmetric carbon center, and thus may be present in the form of isomer including enantiomer, diastereomer or racemic mixture, such entire stereoisomers and mixtures being included within the scope of the present invention.</p>
+    <p id="p-00023-en" num="0023">Particular examples of the compound of formula (I) of the present invention are as follow: <ol><li>1) 1-(2,6-dichloro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl} -urea;</li><li>2) 1-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-3-(2-trifluoromethyl-phenyl)-urea;</li><li>3) 1-(2,6-difluoro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-iso indol-4-yl]-phenyl} -urea;</li><li>4) 1-(2-chloro-6-fluoro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindo1-4-yl]-phenyl}-urea;</li><li>5) 1-(2,6-bis-trifluoromethyl-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-urea;</li><li>6) 1-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-3-(2-fluoro-6-trifluoromethyl-phenyl)-urea;</li><li>7) 1-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-3-(2,4,6-trifluoro-phenyl)-urea;</li><li>8) 1-(2,6-difluoro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-1-methyl-urea;</li><li>9) 1-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-3-pentafluorophenyl-urea;</li><li>10) 1-(2,5-difluorophenyl)-3-(3-fluoro-4-(7-(5-methyl-1H-imidazol-2-yl)-1-oxoisoindolin-4-yl)phenyl)urea;</li><li>11) 1-(2,4-difluoro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl} -urea;</li><li>12) 1-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-3-(2,3,6-trifluoro-phenyl)-urea;</li><li>13) 1-(3,5-difluoro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-iso indol-4-yl]-phenyl} -urea;</li><li>14) 1-(3,4-difluoro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-iso indol-4-yl]-phenyl} -urea;</li><li>15) 1-(4-cyano-3-fluorophenyl)-3-(3-fluoro-4-(7-(5-methyl-1H-imidazol-2-yl)-1-oxoisoindolin-4-yl)phenyl)urea;</li><li>16) 1-(4-chloro-3-(trifluoromethyl)phenyl)-3-(3-fluoro-4-(7-(5-methyl-1H-imidazol-2-yl)-1-oxoisoindolin-4-yl)phenyl)urea;</li><li>17) 1-(3-chloro-2,6-difluorophenyl)-3-(3-fluoro-4-(7-(5-methyl-1H-imidazol-2-yl)-1-oxoisoindolin-4-yl)phenyl)urea;</li><li>18) 1-(2-chloro-3,6-difluorophenyl)-3-(3-fluoro-4-(7-(5-methyl-1H-imidazol-2-yl)-1-oxoisoindolin-4-yl)phenyl)urea;</li><li>19) 1-(4-chloro-2,6-difluoro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-urea; and</li><li>20) 1-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-3-(2,3,5,6-tetrafluoro-phenyl)-urea.</li></ol></p>
+    <p id="p-00024-en" num="0024">The compound selected from the group consisting of the compound of formula (I), pharmaceutically acceptable salts, esters, prodrugs, hydrates, solvates and isomers thereof may be used for the treatment, relief or prevention of diseases caused by abnormal or uncontrolled activation of protein kinase such as ABL (Abelson tyrosine kinase), ACK (Activated cdc42-associated kinase), AXL, Aurora, BLK (B lymphoid tyrosine kinase), BMX (Bone marrow X-linked kinase), BTK (Bruton's tyrosine kinase), CDK (Cyclin-dependent kinase), CSK (C-Src kinase), DDR (Discoidin domain receptor), EPHA (Ephrin type A receptor kinase), FER (Fer (fps/fes related) tyrosine kinase), FES (Feline sarcoma oncogene), FGFR (Fibroblast growth factor receptor), FGR, FLT (Fms-like tyrosine kinase), FRK (Fyn-related kinase), FYN, HCK (Hemopoietic cell kinase), IRR (Insulin-receptor-related-receptor), ITK (Interleukin 2-inducible T cell kinase), JAK (Janus kinase), KDR (Kinase insert domain receptor), KIT, LCK (Lymphocyte-specific protein tyrosine kinase), LYN, MAPK (Mitogen activated protein kinase), MER (c-Mer proto-oncogene tyrosine kinase), MET, MINK (Misshapen-like kinase), MNK (MAPK-interacting kinase), MST (Mammalian sterile 20-like kinase), MUSK (Muscle-specific kinase), PDGFR (Platelet-derived growth factor receptor), PLK (Polo-like kinase), RET (Rearranged during transfection), RON, SRC (Steroid receptor coactivator), SRM (Spermidine synthase), TIE (Tyrosine kinase with immunoglobulin and EGF repeats), SYK (Spleen tyrosine kinase), TNK1 (Tyrosine kinase, non-receptor, 1), TRK (Tropomyosin-receptor-kinase), TNIK (TRAF2 and NCK interacting kinase) and the like.</p>
+    <p id="p-00025-en" num="0025">Accordingly, the present invention provides a use of the compound of formula (I), pharmaceutically acceptable salts, esters, prodrugs, hydrates, solvates and isomers thereof for the treatment, relief or prevention of diseases caused by abnormal or uncontrolled activation of protein kinase, and a use of the compound for the manufacture of a medicament for the treatment, relief or prevention of the diseases.</p>
+    <p id="p-00026-en" num="0026">Further, the present invention provides a method for the treatment, relief or prevention of diseases caused by abnormal or uncontrolled activation of protein kinase in a mammal, comprising administering to the mammal a pharmaceutical composition comprising the compound of formula (I), pharmaceutically acceptable salts, esters, prodrugs, hydrates, solvates and isomers thereof.</p>
+    <p id="p-00027-en" num="0027">Furthermore, the present invention provides a pharmaceutical composition for the treatment, relief or prevention of diseases caused by abnormal or uncontrolled activation of protein kinase in a mammal, comprising the compound of formula (I), pharmaceutically acceptable salts, esters, prodrugs, hydrates, solvates and isomers thereof.</p>
+    <p id="p-00028-en" num="0028">The said diseases related with kinase activity may include any disease caused by abnormal or uncontrolled activation of protein kinase. Specific examples thereof may be cancer, inflammation associated with rheumatoid arthritis and osteoarthritis, asthma, allergy, atopic dermatitis, or psoriasis, but not limited hereto.</p>
+    <p id="p-00029-en" num="0029">Examples of said cancer include lymphoma, leukemia, blood cancer, stomach cancer, non-small cell lung cancer, liver cancer, colorectal cancer, small bowel cancer, pancreatic cancer, brain cancer, bone cancer, melanoma, breast cancer, sclerosing adenosis, uterine cancer, cervical cancer, ovarian cancer, head and neck cancer, esophageal cancer, thyroid cancer, parathyroid cancer, kidney cancer, sarcoma, prostate cancer, urethral cancer, bladder cancer, fibroadenoma, or glioblastoma, but not limited hereto.</p>
+    <p id="p-00030-en" num="0030">The pharmaceutical composition may further comprise at least one additive selected from the group consisting of antibiotic, alkylating agent, antimetabolite, hormonal agent, immunological agent, interferon-type agent and anticancer agent.</p>
+    <p id="p-00031-en" num="0031">The pharmaceutical composition of the present invention may be formulated directly, or further contain conventional non-toxic pharmaceutically acceptable additives, <i>e.g.,</i> a carrier and an excipient, to be formulated in accordance with any of the conventional methods well-known in the art.</p>
+    <p id="p-00032-en" num="0032">The method for the treatment, relief or prevention may include, <i>e.g.,</i> administering an effective amount of the pharmaceutical composition comprising the compound of the present invention to a subject suffering from, or at risk of, chronic renal failure, diabetes, cancer, AIDS, radiation therapy, chemotherapy, kidney dialysis or anemia caused by surgery. In one embodiment, the subject is preferably mammal, and more preferably, human.</p>
+    <p id="p-00033-en" num="0033">The effective amount of the pharmaceutical composition of the present invention may be determined by conducting an ordinary test in order to find out the most effective administration route and suitable preparation method. The pharmaceutical composition of the present invention may be prepared into any type of formulation and drug delivery system by using any of the conventional methods well-known in the art. The inventive pharmaceutical composition may be formulated into injectable formulations, which may be administereby by routes including intrathecal, intraventricular, intravenous, intraperitoneal, intranasal, intraocular, intramuscular, subcutaneous or intraosseous. Also, it may also be administered orally, or parenterally through the rectum, the intestines or the mucous membrane in the nasal cavity (<i>see</i><nplcit id="ncit-00002" npl-type="b"><text>Gennaro, A. R., ed. (1995) Remington's Pharmaceutical Sciences</text></nplcit>). Preferably, the composition is administered topically, instead of enterally. For instance, the composition may be injected, or delivered via a targeted drug delivery system such as a reservoir formulation or a sustained release formulation.</p>
+    <p id="p-00034-en" num="0034">The pharmaceutical formulation of the present invention may be prepared by any well-known methods in the art, such as mixing, dissolving, granulating, dragee-making, levigating, emulsifying, encapsulating, entrapping, or lyophilizing processes. As mentioned above, the compositions of the present invention may include one or more physiologically acceptable carriers such as excipients and adjuvants that facilitate processing of active molecules into preparations for pharmaceutical use.</p>
+    <p id="p-00035-en" num="0035">Proper formulation is dependent upon the route of administration chosen. For injection, for example, the composition may be formulated in an aqueous solution, preferably in physiologically compatible buffers such as Hank's solution, Ringer's solution, or physiological saline buffer. For transmucosal or nasal administration, penetrants appropriate to the barrier to be permeated are used in the formulation. Such penetrants are generally known in the art. In a preferred embodiment of the present invention, the inventive compound may be prepared in an oral formulation. For oral administration, the compounds can be formulated readily by combining the active compounds with pharmaceutically acceptable carriers known in the art. Such carriers enable the inventive compounds to be formulated as tablets, pills, dragees, capsules, liquids, gels, syrups, slurries, suspensions and the like, for oral ingestion by a subject. The compounds may also be formulated in rectal compositions such as suppositories or retention enemas, e.g., containing conventional suppository bases such as cocoa butter or other glycerides.</p>
+    <p id="p-00036-en" num="0036">Pharmaceutical preparations for oral use may be obtained as solid excipients, optionally grinding a resulting mixture, and processing the mixture of granules, after adding suitable adjuvants, if desired, to obtain tablets or dragee cores. Suitable excipients may be, in particular, fillers such as sugars, including lactose, sucrose, mannitol, or sorbitol; cellulose formulation such as maize starch, wheat starch, rice starch, potato starch, gelatin, gum tragacanth, methyl cellulose, hydroxypropylmethyl-cellulose, sodium carboxymethylcellulose, and/or polyvinylpyrrolidone (PVP) formulation. Also, disintegrating agents may be employed, such as cross-linked polyvinylpyrrolidone, agar, or alginic acid or a salt thereof such as sodium alginate. Also, wetting agents, such as sodium dodecyl sulfate and the like, may be added.</p>
+    <p id="p-00037-en" num="0037">Dragee cores are provided with suitable coatings. For this purpose, concentrated sugar solutions may be used, which may optionally contain gum arabic, talc, polyvinylpyrrolidone, carbopol gel, polyethylene glycol, and/or titanium dioxide, lacquer solutions, and suitable organic solvents or solvent mixtures. Dyestuffs or pigments may be added to the tablets or dragee coatings for identification or to characterize different combinations of active compounds doses.</p>
+    <p id="p-00038-en" num="0038">Pharmaceutical formulations for oral administration may include push-fit capsules made of gelatin, as well as soft, sealed capsules made of gelatin and a plasticizer, such as glycerol or sorbitol. The push-fit capsules can contain the active ingredients in admixture with filler such as lactose, binders such as starches, and/or lubricants such as talc or magnesium stearate and, optionally, stabilizers. In soft capsules, the active compounds may be dissolved or suspended in suitable liquids, such as fatty oils, liquid paraffin, or liquid polyethylene glycols. In addition, stabilizers may be added. All formulations for oral administration should be in dosages suitable for such administration.</p>
+    <p id="p-00039-en" num="0039">In one embodiment, the compounds of the present invention may be administered transdermally, such as through a skin patch, or topically. In one aspect, the transdermal or topical formulations of the present invention can additionally comprise one or multiple penetration enhancers or other effectors, including agents that enhance migration of the delivered compound. Preferably, transdermal or topical administration may be used, <i>e.g.,</i> in situations in which location specific delivery is desired.</p>
+    <p id="p-00040-en" num="0040">For administration by inhalation, the compounds of the present invention may be conveniently delivered in the form of an aerosol spray presentation from pressurized packs or a nebulizer, with the use of a suitable propellant, <i>e.g.,</i> dichlorodifluoromethane, trichlorofluoromethane, dichlorotetrafluoroethane, carbon dioxide, or any other suitable gas. In the case of a pressurized aerosol, the appropriate dosage unit may be determined by providing a valve to deliver a metered amount. Capsules and cartridges of, <i>e.g.,</i> gelatin, for use in an inhaler or insufflators may be formulated. These typically contain a powder mix of the compound and a suitable powder base such as lactose or starch. Compositions formulated for parenteral administration by injection, e.g., by bolus injection or continuous infusion, can be presented in unit dosage form <i>e.g.,</i> in ampoules or in multi-dose containers, with an added preservative. The compositions may take such forms as suspensions, solutions or emulsions in oily or aqueous vehicles, and may contain formulatory agents such as suspending, stabilizing and/or dispersing agents. Formulations for parenteral administration include aqueous solutions or other compositions in water-soluble form.</p>
+    <p id="p-00041-en" num="0041">Suspensions of the active compounds may also be prepared as appropriate oily injection suspensions. Suitable lipophilic solvents or vehicles may include fatty oils such as sesame oil and synthetic fatty acid esters, such as ethyl oleate or triglycerides, or liposomes. Aqueous injection suspensions may contain substances that increase the viscosity of the suspension, such as sodium carboxymethyl cellulose, sorbitol, or dextran. Optionally, the suspension may also contain suitable stabilizers or agents that increase the solubility of the compounds to allow for the preparation of highly concentrated solutions. Alternatively, the active ingredient may be in powder form for constitution with a suitable vehicle, <i>e.g.,</i> sterile pyrogen-free water, before use.</p>
+    <p id="p-00042-en" num="0042">As mentioned above, the compositions of the present invention may also be formulated as a reservoir formulation. Such long acting formulations may be administered by implantation (<i>e.g.,</i> subcutaneous or intramuscular) or by intramuscular injection. Thus, for example, the inventive compounds may be formulated with suitable polymeric or hydrophobic materials (<i>e.g.,</i> an emulsion in an acceptable oil) or ion exchange resins, or as sparingly soluble derivatives, <i>e.g.,</i> a sparingly soluble salt.</p>
+    <p id="p-00043-en" num="0043">For any composition used in the present methods of treatment, a therapeutically effective dose can be estimated initially using a variety of techniques well-known in the art. For example, based on information obtained from a cell culture assay, a dose can be formulated in animal models to achieve a circulating concentration range that includes the IC<sub>50</sub>. Similarly, dosage ranges appropriate for human subjects can be determined, for example, using data obtained from cell culture assays and other animal studies.</p>
+    <p id="p-00044-en" num="0044">A therapeutically effective dose of an agent refers to the amount of the agent that results in amelioration of symptoms or a prolongation of survival in a subject. Toxicity and therapeutic efficacy of such molecules can be determined by standard pharmaceutical procedures in cell cultures or experimental animals, for example, by determining the LD<sub>50</sub> (the dose lethal to 50% of the population) and the ED<sub>50</sub> (the dose therapeutically effective in 50% of the population). The dose ratio between toxic and therapeutic effects is the therapeutic index, which can be expressed as the ratio LD<sub>50</sub>/ED<sub>50</sub>. Agents that exhibit high therapeutic indices are preferred.</p>
+    <p id="p-00045-en" num="0045">Dosages preferably fall within a range of circulating concentrations that includes the ED<sub>50</sub> with little or no toxicity. Dosages may vary within this range depending upon the dosage form employed and the route of administration utilized. The exact formulation, route of administration, and dosage should be chosen, according to methods well-known in the art, in view of the specifics of a subject's condition.</p>
+    <p id="p-00046-en" num="0046">In addition, the amount of agent or composition administered will be dependent on a variety of factors, including the age, weight, sex, health condition, degree of disease of the subject being treated, the severity of the affliction, the manner of administration, and the judgment of the prescribing physician.</p>
+    <p id="p-00047-en" num="0047">Hereinafter, an exemplary method for preparing the compound of the present invention is explained.</p>
+    <p id="p-00048-en" num="0048">Various starting materials may be prepared in accordance with conventional synthetic methods well-known in the art. Some of the starting materials are commercially available from manufacturers and suppliers of reagents, such as Aldrich, Sigma, TCI, Wako, Kanto, Fluorchem, Acros, Abocado, Alfa, Fluka, etc., but not limited thereto.</p>
+    <p id="p-00049-en" num="0049">The compounds of the present invention can be prepared from readily available starting materials by conventional methods and processes below. Different methods may also be used for manufacturing the inventive compounds, unless otherwise specified as typical or preferred process conditions (<i>i.e</i>., reaction temperature, time, molar ratio of reactants, solvents, pressures, etc.). The optimal reaction conditions may vary depending on the particular reactants or solvents employed. Such conditions, however, can be determined by the skilled in the art by conventional optimization process.</p>
+    <p id="p-00050-en" num="0050">In addition, those of ordinary skill in the art recognize that some functional groups can be protected/deprotected using various protecting groups before a certain reaction takes place. Suitable conditions for protecting and/or deprotecting specific functional group, and the use of protecting groups are well-known in the art.</p>
+    <p id="p-00051-en" num="0051">For example, various kinds of protecting groups are described in <nplcit id="ncit-00003" npl-type="b"><text>T.W. Greene and G.M. Wuts, Protecting Groups in Organic Synthesis, Second edition, Wiley, New York, 1991</text></nplcit>, and other references cited above.</p>
+    <p id="p-00052-en" num="0052">In one embodiment of the present invention, the compound of formula (I) of the present invention may be prepared by synthesizing an intermediate, Compound D, according to the Reaction Scheme 1 as shown below, and then subjecting Compound D through the procedure of Reaction Scheme 2 or 3. However, the method for synthesizing Compound D above is not limited to Reaction Scheme 1. <chemistry id="chem-00005-en" num="0005"><img id="img-00005-en" wi="165" he="43" img-content="chem" file="EP2940014A1_00005.PNG" img-format="png" original="imgb0005.tif" /></chemistry></p>
+    <p id="p-00053-en" num="0053">The method for preparing the starting material of Reaction Scheme 1, <i>i.e</i>., Compound A, is described in International Patent Publication <patcit id="pcit-00001" dnum="WO2012014017A"><text>WO2012/014017</text></patcit>, and Compound D is prepared by the following methods.</p>
+    <heading id="h-00005-en">
+      <u>&lt;1-1&gt; Synthesis of Compound B</u>
+    </heading>
+    <p id="p-00054-en" num="0054">Compound A (40 g, 168 mmol) was dispersed in acetic acid (400 mL), added with water (400 mL) and pyridine (800 mL), and then the temperature of the mixture thus formed was lowered to 10°C. The mixture was added with sodium phosphate monobasic monohydrate (280 g, 2.01 mol), and then further added with Raney Ni (101 g) in water (70 mL) to form a reaction solution. The reaction solution was heated to 50°C, allowed to react for 2 hours. Upon the completion of the reaction, the solution was cooled and filtered. The solution was washed with ethyl acetate (EA, 2.5 L), and the filtrate was added with water (800 mL) for extraction. An organic layer thus formed was separated, and concentrated under reduced pressure. Cooled water (800 mL) was added thereto, and a solid thus obtained was filtered and dried to obtain Compound B (26.7 g, yield: 66%).</p>
+    <p id="p-00055-en" num="0055">
+      <sup>1</sup>H-NMR Spectrum(300 MHz, DMSO-<i>d<sub>6</sub></i>): 11.10(s, 1H), 9.15 (s, 1H), 7.95(d, <i>J</i>=8.1Hz, 1H), 7.78 (d, <i>J</i>=8.1Hz, 1H), 4.41(s, 2H)</p>
+    <p id="p-00056-en" num="0056">LCMS [M+1]: 241.1</p>
+    <heading id="h-00006-en">
+      <u>&lt;1-2&gt; Synthesis</u>
+      <u>of</u>
+      <u>Compound</u>
+      <u>C</u>
+    </heading>
+    <p id="p-00057-en" num="0057">Compound B (26.7 g, 111 mmol) was dispersed in ethanol (800 mL), and aqueous solutions of 48% methyl glyoxal (67 mL) and 28% ammonia (75 mL) were added thereto. The reaction solution thus formed was heated to 90°C, and stirred for 3 hours. Upon the completion of the reaction, the solution was concentrated under reduced pressure to reduce the volume of the reaction solution to about 200 mL, and a solid thus formed was filtered. The solid was washed with ethanol (50 mL) to obtain Compound C (17.2 g, yield: 53%).</p>
+    <p id="p-00058-en" num="0058">
+      <sup>1</sup>H-NMR Spectrum(300 MHz, DMSO-<i>d<sub>6</sub></i>): 14.21-14.12(m, 1H), 9.48(s, 1H), 8.27(d, <i>J</i>=8.4Hz, 1H), 7.83(d, <i>J</i>=8.4Hz, 1H), 7.07-6.82(m, 1H), 4.39(s, 2H), 2.27-2.18(m, 3H)</p>
+    <p id="p-00059-en" num="0059">LCMS [M+1]: 293.1</p>
+    <heading id="h-00007-en">
+      <u>&lt;1-3&gt; Synthesis</u>
+      <u>of</u>
+      <u>Compound D</u>
+    </heading>
+    <p id="p-00060-en" num="0060">Compound C (17.2 g, 58.9 mmol), 3-fluoro-4-(4,4,5,5-tetramethyl-[1,3,2]dioxaborolan-2-yl)-phenylamine (19.5 g, 82 mmol), LiCl (6.9 g, 165 mmol) and Pd(PPh<sub>3</sub>)<sub>4</sub>(6.8 g, 5.9 mmol) were dispersed in a mixed solution of toluene (589 mL) and ethanol (589 mL), added with an aqueous solution of 1 N Na<sub>2</sub>CO<sub>3</sub> (117 mL), and allowed to react at 85°C for 12 hours. Upon completion of the reaction, the reaction solution was completely concentrated under reduced pressure. A mixed solution of acetone (1.2 L) and acetonitrile (1.2 L) was added thereto, and the reaction solution was stirred for 2 hours at 80°C, cooled, filtered and then washed with acetonitrile (0.5 L). The filtered solution was concentrated under reduced pressure to reduce the volume of the reaction solution to about 150 mL, and then filtered. A solid thus obtained was washed under reduced pressure with acetonitrile (60 mL), <i>n</i>-hexane (100 mL), and water (100 mL), respectively, and dried to yield Compound D, 4-(4-amino-2-fluorophenyl)-7-(5-methyl-1H-imidazol-2-yl)isoindolin-1-one (13.31 g, yield: 70%).</p>
+    <p id="p-00061-en" num="0061">
+      <sup>1</sup>H-NMR Spectrum(300 MHz, DMSO-<i>d<sub>6</sub></i>): 14.44-14.34(m, 1H), 9.36(s, 1H), 8.36(d, J=8.4Hz, 1H), 7.51(d, J=7.8Hz, 1H), 7.16(t, J=8.7Hz, 1H), 7.04-6.79(m, 1H), 6.49-6.42(m, 2H), 5.65(s, 2H), 4.36(s, 2H), 2.28-2.18(m, 3H)</p>
+    <p id="p-00062-en" num="0062">LCMS [M+1]: 323.3</p>
+    <p id="p-00063-en" num="0063">In order to prepare various compounds which can be represented by formula (I) of the present invention, a method for synthesizing such compounds by using the intermediate Compound D is specifically described in Reaction Schemes 2 and 3 below. However, this is a representative example of preparing the compound of formula (I) using the intermediate Compound D, and therefore, the preparation method of the compound of formula (I) is not limited hereto. <chemistry id="chem-00006-en" num="0006"><img id="img-00006-en" wi="154" he="59" img-content="chem" file="EP2940014A1_00006.PNG" img-format="png" original="imgb0006.tif" /></chemistry></p>
+    <p id="p-00064-en" num="0064">Compound E disclosed in Reaction Scheme 2 was prepared by the following methods.</p>
+    <heading id="h-00008-en">
+      <u>&lt;2-1&gt; Synthesis of Compound E according to Reaction Scheme 2</u>
+    </heading>
+    <p id="p-00065-en" num="0065">4-(4-amino-2-fluorophenyl)-7-(5-methyl-1H-imidazol-2-yl)isoindolin-1-one (Compound D, 1 equivalent) was dispersed in DMF/THF (1:4) to form a solution (0.08 m), and then pyridine (1.15 equivalent) and 4-nitrophenyl carbonochloridate (1.15 equivalent) were added thereto, followed by stirring for 4 hours. After the reaction had reached completion (TLC), <i>n</i>-hexane (same volume as THF, the reaction solution) was added thereto, followed by stirring for 30 minutes. A solid thus formed was washed with a mixed solvent of <i>n</i>-hexane : THF = 1:1 (four times the volume of THF, reaction solution), filtered, and then dried. The dried compound was dispersed in DMF to form a solution (0.1 m), added with substituted phenylamine (6 to 15 equivalents), and then stirred for 20 minutes under microwave conditions (250W, 250psi, 150°C). The reaction solution was diluted with ethyl acetate containing 5% methanol, and then washed with a saturated aqueous solution of NaHCO<sub>3</sub> and water. The organic layer was dried over anhydrous magnesium sulfate (MgSO<sub>4</sub>), and then purified by silica gel column chromatography (eluent: methylene chloride : methanol = 20:1) to obtain Compound E.</p>
+    <p id="p-00066-en" num="0066">Compound E obtained in Reaction Scheme 2 may also be synthesized by Reaction Scheme 3 below. <chemistry id="chem-00007-en" num="0007"><img id="img-00007-en" wi="165" he="61" img-content="chem" file="EP2940014A1_00007.PNG" img-format="png" original="imgb0007.tif" /></chemistry></p>
+    <heading id="h-00009-en">
+      <u>&lt;3-1&gt; (A) Synthesis of Compound E according to Reaction Scheme 3</u>
+    </heading>
+    <p id="p-00067-en" num="0067">Substituted benzoic acid (2 equivalents) was dispersed in diethyl ether to form a mixture (0.08 m), added with phosphorus pentachloride (PCl<sub>5</sub>, 2.2 equivalents), and then stirred for 2 hours. Upon completion of the reaction, the organic solvent was concentrated under reduced pressure below room temperature, and then the reaction solution was diluted (0.08 m) by adding acetone to the reactant. Subsequently, sodium azide (NaN<sub>3</sub>, 2.4 equivalents) in water (1/12 volume of acetone) was slowly added to the reaction solution dropwise at 0°C. After stirring for 2 hours at room temperature, the reactant was diluted with ethyl acetate, and then with water. The organic layer was dried over anhydrous magnesium sulfate (MgSO<sub>4</sub>), dispersed in THF to form a solution (0.04 m), added with 4-(4-amino-2-fluorophenyl)-7-(5-methyl-1H-imidazol-2-yl)isoindolin-1-one (Compound D, 1 equivalent), and stirred for 4 hour at 90°C. Upon completion of the reaction, the solvent was concentrated under reduced pressure, and then purified by silica gel column chromatography (eluent: methylene chloride : methanol = 20:1) to obtain Compound E.</p>
+    <p id="p-00068-en" num="0068">Compound E synthesized in Reaction Scheme 2 above may also be synthesized by using another method according to Reaction Scheme3.</p>
+    <heading id="h-00010-en">
+      <u>&lt;3-2&gt; (B) Synthesis of Compound E according to Reaction Scheme 3</u>
+    </heading>
+    <p id="p-00069-en" num="0069">Substituted benzoic acid (2 equivalents) was dispersed in THF to form a solution (0.05 m), and then triethylamine (4 equivalents) and diphenylphosphorazidate (DPPA, 2.3 equivalents) were added thereto, followed by stirring for 2 hours at room temperature. The reaction solution was added with 4-(4-amino-2-fluorophenyl)-7-(5-methyl-1H-imidazol-2-yl)isoindolin-1-one (Compound D, 1 equivalent), and then stirred for 4 hours at 90°C. Subsequently, the reaction solution was diluted with ethyl acetate containing 5% methanol, and washed with water and a saturated aqueous solution of NaHCO<sub>3</sub>. The organic layer was dried over anhydrous magnesium sulfate (MgSO<sub>4</sub>), and then concentrated under reduced pressure. The concentrate thus obtained was purified by silica gel column chromatography (eluent: methylene chloride : methanol = 20:1) to obtain Compound E.</p>
+    <p id="p-00070-en" num="0070">Hereinafter, the present invention is described more specifically by the following Examples, but these are provided for illustration purposes only, and the present invention is not limited thereto.</p>
+    <heading id="h-00011-en">
+      <b>Example 1: Preparation of 1-(2,6-dichloro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-urea</b>
+    </heading>
+    <p id="p-00071-en" num="0071">4-(4-amino-2-fluorophenyl)-7-(5-methyl-1H-imidazol-2-yl)isoindolin-1-one(Compound D, 0.1 g, 0.31 mmol) was dispersed in DMF (0.8 mL) and THF (3.4 mL), added with pyridine (0.03 mL) and 4-nitrophenyl carbonochloridate (0.07 g, 0.36 mmol), and then stirred for 4 hours. After confirming the completion of the reaction by TLC, <i>n</i>-hexane (3 mL) was added thereto, and stirred for 30 minutes. A solid thus formed was washed with a mixed solvent of <i>n</i>-hexane : THF = 1:1 (12 mL), filtered and then dried. The dried compound was dispersed in DMF (3 mL), added with 2,6-dichloroaniline (0.34 g, 2.08 mmol), and then stirred for 20 minutes under microwave conditions (250 W, 250 psi, 150°C). The reaction solution was diluted with ethyl acetate containing 5% methanol, and then washed sequentially with a saturated aqueous solution of NaHCO<sub>3</sub> and water. The organic layer was dried over anhydrous magnesium sulfate, concentrated, and then purified by silica gel column chromatography (eluent: methylene chloride : methanol = 20:1) to obtain the title compound (0.03 g, yield: 19%).</p>
+    <p id="p-00072-en" num="0072">
+      <sup>1</sup>H-NMR Spectrum(300 MHz, DMSO-<i>d<sub>6</sub></i>): 9.54(s, 1H), 9.36(s, 1H), 8.58(s, 1H), 8.43(d, <i>J</i>=8.1Hz, 1H), 7.59(m, 3H), 7.47(t, <i>J</i>=8.4Hz, 1H), 7.32(m, 2H), 7.08(s, 1H), 4.41(s, 2H), 2.25 (m, 3H)</p>
+    <p id="p-00073-en" num="0073">LCMS [M+1]: 511</p>
+    <heading id="h-00012-en">
+      <b>Example 2: Preparation of 1-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-3-(2-trifluoromethyl-phenyl)-urea</b>
+    </heading>
+    <p id="p-00074-en" num="0074">4-(4-amino-2-fluorophenyl)-7-(5-methyl-1H-imidazol-2-yl)isoindolin-1-one (Compound D, 0.1 g, 0.31 mmol) was dispersed in DMF (0.8 mL) and THF (3.4 mL), added with pyridine (0.03 mL) and 4-nitrophenyl carbonochloridate (0.07 g, 0.36 mmol), and then stirred for 4 hours. Subsequently, <i>n</i>-hexane (3 mL) was added to the mixture, and stirred for 30 minutes. A solid thus formed was washed with a mixed solution of <i>n</i>-hexane : THF=1:1 (12 mL), filtered and then dried. The dried compound was dispersed in DMF (2 mL), added with 2-trifluoromethyl aniline (0.74 g, 4.65 mmol), and then stirred for 3 hours at room temperature. The reaction solution was added sequentially with methanol (6 mL), and a saturated aqueous solution of NaHCO<sub>3</sub>, and stirred for 30 minutes. A solid thus formed was filtered and washed with water. After drying the washed solid, the solid was purified by silica gel column chromatography (eluent: methylene chloride : methanol = 20:1) to obtain the title compound (0.07 g, yield: 44%).</p>
+    <p id="p-00075-en" num="0075">
+      <sup>1</sup>H-NMR Spectrum(300 MHz, DMSO-<i>d<sub>6</sub></i>): 9.54(s, 1H), 9.36(s, 1H), 8.58(s, 1H), 8.43(d, <i>J</i>=8.1Hz, 1H), 7.59(m, 3H), 7.47(t, <i>J</i>=8.4Hz, 1H), 7.32(m, 2H), 7.08(s, 1H), 4.41(s, 2H), 2.25 (m, 3H)</p>
+    <p id="p-00076-en" num="0076">LCMS [M+1]: 510.0</p>
+    <heading id="h-00013-en">
+      <b>Example 3: Preparation of 1-(2,6-difluoro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-urea</b>
+    </heading>
+    <p id="p-00077-en" num="0077">2,6-difluoro-benzoic acid (0.04 g, 0.248 mmol) was dispersed in diethyl ether (3 mL), slowly added with phosphorus pentachloride (PCl<sub>5</sub>, 0.057 g, 0.273 mmol), and then stirred for 1 hour. Upon completion of the reaction, the organic solvent was concentrated under reduced pressure below room temperature, and then the reaction solution was diluted by adding acetone (2 mL). Subsequently, sodium azide (NaN<sub>3</sub>, 0.019 g, 0.298 mmol) dissolved in water (0.2 mL) was slowly added to the reaction solution dropwise at 0°C. After stirring the reaction solution for 2 hours at room temperature, 2,6-difluoro-benzoyl azide thus formed was diluted with ethyl acetate, and then washed with water. The organic layer was dried over anhydrous magnesium sulfate, dispersed in THF (1 mL), added with THF (4 mL) containing 4-(4-amino-2-fluorophenyl)-7-(5-methyl-1H-imidazol-2-yl)isoindolin-1-one (Compound D, 0.04 g, 0.124 mmol), and then stirred for 4 hours at 90°C. Upon completion of the reaction, the solvent was concentrated under reduced pressure, and then purified by silica gel column chromatography (eluent: methylene chloride : methanol = 20:1) to obtain the title compound (0.025 g, yield: 42%).</p>
+    <p id="p-00078-en" num="0078">
+      <sup>1</sup>H-NMR Spectrum(300 MHz, DMSO-<i>d<sub>6</sub></i>):14.45-14.36(m, 1H), 9.40-9.36(m, 2H), 8.42(d, <i>J</i>=8.1Hz, 1H), 8.33(s, 1H), 7.62-7.57(m, 2H), 7.48(t, <i>J</i>=8.4Hz, 1H), 7.37-7.26(m, 2H), 7.20-6.82(m, 3H), 4.40(s, 2H), 2.29-2.19(m, 3H)</p>
+    <p id="p-00079-en" num="0079">LCMS [M+1]: 478.4</p>
+    <heading id="h-00014-en">
+      <b>Example 4: Preparation of 1-(2-chloro-6-fluoro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-urea</b>
+    </heading>
+    <p id="p-00080-en" num="0080">2-chloro-6-fluorobenzoic acid (0.054 g, 0.31 mmol) was dispersed in diethyl ether (3 mL), slowly added with phosphorus pentachloride (PCl<sub>5</sub>, 0.074 g, 0.357 mmol), and then stirred for 1 hour. Upon completion of the reaction, the organic solvent was concentrated under reduced pressure below room temperature, and then the reaction solution was diluted by adding acetone (2 mL). Subsequently, sodium azide (NaN<sub>3</sub>, 0.024 g, 0.372 mmol) dissolved in water (0.2 mL) was slowly added to the reaction solution dropwise at 0°C. After stirring the reaction solution for 2 hours at room temperature, the reaction solution was diluted with ethyl acetate and washed with water. The organic layer was dried over anhydrous magnesium sulfate, dispersed in THF (1 mL), added with THF (4 mL) containing 4-(4-amino-2-fluorophenyl)-7-(5-methyl-1H-imidazol-2-yl)isoindolin-1-one (Compound D, 0.05 g, 0.155 mmol), and then stirred for 3 hours at 90°C. Upon completion of the reaction, the solvent was concentrated under reduced pressure, and then purified by silica gel column chromatography (eluent: methylene chloride : methanol=20:1) to obtain the title compound(0.029 g, yield 42%).</p>
+    <p id="p-00081-en" num="0081">
+      <sup>1</sup>H-NMR Spectrum(300 MHz, DMSO-<i>d<sub>6</sub></i>): 14.45-14.35(m, 1H), 9.40-9.35(m, 2H), 8.42(d, <i>J</i>=8.1Hz, 1H), 8.33(s, 1H), 7.63-7.58(m, 2H), 7.47(t, <i>J</i>=8.4Hz, 1H), 7.41-7.26(m, 4H), 7.07-6.82(m, 1H), 4.40(s, 2H), 2.30-2.20(m, 3H)</p>
+    <p id="p-00082-en" num="0082">LCMS [M+1]: 494.4</p>
+    <heading id="h-00015-en">
+      <b>Example 5: Preparation of 1-(2,6-bis-trifluoromethyl-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-urea</b>
+    </heading>
+    <p id="p-00083-en" num="0083">2,6-bis-trifluoromethylbenzoic acid (0.088 g, 0.31 mmol) was dispersed in diethyl ether (3 mL), slowly added with phosphorus pentachloride (PCl<sub>5</sub>, 0.068 g, 0.326 mmol), and then stirred for 1 hour. Upon completion of the reaction, the organic solvent was concentrated under reduced pressure below room temperature, and then the reaction solution was diluted by adding acetone (2 mL). Subsequently, sodium azide (NaN<sub>3</sub>, 0.024 g, 0.372 mmol) dissolved in water (0.2 mL) was slowly added to the reaction solution dropwise at 0°C. After stirring the reaction solution for 2 hours at room temperature, 2,6-bis-trifluoromethylbenzoyl azide thus formed was diluted with ethyl acetate, and then washed with water. The organic layer was dried over anhydrous magnesium sulfate, dispersed in THF (1 mL), added with THF (4 mL) containing 4-(4-amino-2-fluorophenyl)-7-(5-methyl-1H-imidazol-2-yl)isoindolin-1-one (Compound D, 0.05 g, 0.155 mmol), and then stirred for 3 hours at 90°C. Upon completion of the reaction, the solvent was concentrated under reduced pressure, and the purified by silica gel column chromatography (eluent: methylene chloride : methanol= 20:1) to obtain the title compound (0.018 g, yield: 20%).</p>
+    <p id="p-00084-en" num="0084">
+      <sup>1</sup>H-NMR Spectrum(300 MHz, DMSO-<i>d<sub>6</sub></i>): 8.40(d, <i>J</i>=8.4Hz, 1H), 8.09-8.06(m, 2H), 7.76(t, <i>J</i>=8.1Hz, 1H), 7.63(d, <i>J</i>=8.1Hz, 1H), 7.54(d, <i>J</i>=12.9Hz, 1H), 7.38(t, <i>J</i>=8.4Hz, 1H), 7.24(d/d, <i>J</i>=8.4Hz, 1H), 6.94(s, 1H), 4.43(s, 2H), 2.33(s, 3H)</p>
+    <p id="p-00085-en" num="0085">LCMS [M+1]: 578.4</p>
+    <heading id="h-00016-en">
+      <b>Example 6: Preparation of 1-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-3-(2-fluoro-6-trifluoromethyl-phenyl)-urea</b>
+    </heading>
+    <p id="p-00086-en" num="0086">2-fluoro-6-trifluoromethylbenzoic acid (0.058 g, 0.279 mmol) was dispersed in diethyl ether (3 mL), slowly added with phosphorus pentachloride (PCl<sub>5</sub>, 0.064 g, 0.307 mmol), and then stirred for 1 hour. Upon completion of the reaction, the organic solvent was concentrated under reduced pressure below room temperature, and then the reaction solution was diluted by adding acetone (2 mL). Subsequently, sodium azide (NaN<sub>3</sub>, 0.024 g, 0.363 mmol) dissolved in water (0.2 mL) was slowly added to the reaction solution dropwise 0°C. After stirring the reaction solution for 2 hours at room temperature, the reaction solution was diluted with ethyl acetate, and then washed with water. The organic layer was dried over anhydrous magnesium sulfate, dispersed in THF (1 mL), and then introduced to a flask which contained 4-(4-amino-2-fluorophenyl)-7-(5-methyl-1H-imidazol-2-yl)isoindolin-1-one (Compound D, 0.045 g, 0.14 mmol) diluted in THF (4 mL), followed by stirring for 4 hours at 90°C. Upon completion of the reaction, the solvent was concentrated under reduced pressure, and then purified by silica gel column chromatography (methylene chloride : methanol=20:1) to obtain the title compound (0.023 g, yield: 32%).</p>
+    <p id="p-00087-en" num="0087">
+      <sup>1</sup>H-NMR Spectrum(300 MHz, DMSO-<i>d<sub>6</sub></i>): 8.41-8.39(m, 1H), 7.64-7.50(m, 5H), 7.39(t, <i>J</i>=8.4Hz, 1H), 7.25(m, <i>J</i>=8.4Hz, 1H), 6.94(s, 1H), 4.43(s, 2H), 2.33(s, 3H)</p>
+    <p id="p-00088-en" num="0088">LCMS [M+1]: 528.4</p>
+    <heading id="h-00017-en">
+      <b>Example 7: Preparation of 1-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-3-(2,4,6-trifluoro-phenyl)-urea</b>
+    </heading>
+    <p id="p-00089-en" num="0089">2,4,6-trifluorobenzoic acid (0.08 g, 0.45 mmol) was dispersed in diethyl ether (5.7 mL), slowly added with phosphorus pentachloride (PCl<sub>5</sub>, 0.11 g, 0.52 mmol), and then stirred for 1 hour. Upon completion of the reaction, the organic solvent was concentrated under reduced pressure below room temperature, and then the reaction solution was diluted by adding acetone (3.8 mL). Subsequently, sodium azide (NaN<sub>3</sub>, 0.035 g, 0.545 mmol) dissolved in water (0.28 mL) was slowly added to the reaction solution dropwise at 0°C. After stirring for 2 hours at room temperature, 2,4,6-trifluorobenzoyl azide thus formed was diluted with ethyl acetate, and then washed with water. The organic layer was dried over anhydrous magnesium sulfate, dispersed in THF (2 mL), added with THF (7.5 mL) containing 4-(4-amino-2-fluorophenyl)-7-(5-methyl-1H-imidazol-2-yl)isoindolin-1-one (Compound D, 0.073 g, 0.23 mmol), and then stirred for 3 hours at 90°C. Upon completion of the reaction, the solvent was concentrated under reduced pressure, and then purified by silica gel column chromatography (eluent: methylene chloride : methanol = 20:1) to obtain the title compound (0.026 g, yield: 23%).</p>
+    <p id="p-00090-en" num="0090">
+      <sup>1</sup>H-NMR Spectrum(300 MHz, DMSO-<i>d<sub>6</sub></i>): 14.46-14.37 (m 1H), 9.47-9.45 (br m, 1H), 9.37 (s, 1H), 8.45 (d, <i>J</i>=1.8Hz, 1H), 8.30-8.27 (br m, 1H), 7.63-7.46(m, 3H), 7.31-7.26 (m, 3H), 7.09-6.84 (m, 1H), 4.42 (s, 2H), 2.31-2.21 (m, 3H)</p>
+    <p id="p-00091-en" num="0091">LCMS [M+1]: 496.3</p>
+    <heading id="h-00018-en">
+      <b>Example 8: Preparation of 1-(2,6-difluoro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-1-methyl-urea</b>
+    </heading>
+    <p id="p-00092-en" num="0092">4-(4-amino-2-fluorophenyl)-7-(5-methyl-1H-imidazol-2-yl)isoindolin-1-one (Compound D, 0.1 g, 0.31 mmol) was dispersed in a mixed solution of DMF (0.8 mL) and THF (4 mL), and then pyridine (0.05 ml) and 4-nitrophenyl carbonochloridate (0.07 g, 0.36 mmol) were added thereto, followed by stirring for 4 hours. Upon completion of the reaction, <i>n</i>-hexane (3 mL) was added to the resulting a mixture, followed by stirring for 30 minutes. A solid thus formed was washed with a mixed solvent of <i>n</i>-hexane : THF = 1:1 (12 mL), filtered, and then dried. The dried compound was dispersed in DMF (4 mL), added with 2,6-difluoro-methylaniline (0.294 g, 2.05 mmol), and then stirred for 12 hours at 100°C. The reaction solution was cooled to room temperature, diluted with ethyl acetate containing 5% methanol, and washed with a saturated aqueous solution of NaHCO<sub>3</sub> and water. The organic layer was dried over anhydrous magnesium sulfate, filtered, and concentrated. Finally the organic layer was purified by silica gel column chromatography (eluent: methylene chloride : methanol=20:1) to obtain the title compound (0.018 g, yield: 18%).</p>
+    <p id="p-00093-en" num="0093">
+      <sup>1</sup>H-NMR Spectrum(300 MHz, DMSO-<i>d<sub>6</sub></i>): 14.45-14.36(m, 1H), 9.36(s, 1H), 8.91(s, 1H), 8.42(d, <i>J</i>=8.1Hz, 1H), 7.61-7.34(m, 5H), 7.26-7.21(m, 2H), 7.07-6.82(m, 1H), 4.40(s, 2H), 3.20(s, 3H), 2.30-2.20(m, 3H)</p>
+    <p id="p-00094-en" num="0094">LCMS [M+1]: 492.4</p>
+    <heading id="h-00019-en">
+      <b>Example 9: Preparation of 1-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-3-pentafluorophenyl-urea</b>
+    </heading>
+    <p id="p-00095-en" num="0095">Pentafluorobenzoic acid (0.066 g, 0.31 mmol) was dispersed in diethyl ether (3 mL), slowly added with phosphorus pentachloride (PCl<sub>5</sub>, 0.071 g, 0.341 mmol), and then stirred for 40 minutes. Upon completion of the reaction, the organic solvent was concentrated under reduced pressure below room temperature, and then the reaction solution was diluted by adding acetone (3 mL). Subsequently, sodium azide (NaN<sub>3</sub>, 0.026 g, 0.403 mmol) dissolved in water (0.2 mL) was slowly added to the reaction solution dropwise at 0°C. After stirring the reaction solution for 1 hour at room temperature, the reaction solution was diluted with ethyl acetate, and then washed with water. The organic layer was dried over anhydrous magnesium sulfate, dispersed in THF (1 mL), and then introduced to a flask which contained 4-(4-amino-2-fluorophenyl)-7-(5-methyl-1H-imidazol-2-yl)isoindolin-1-one (Compound D, 0.050 g, 0.155 mmol) diluted in THF (3 mL), followed by stirring for 3 hours at 90°C. Upon completion of the reaction, the solvent was concentrated under reduced pressure, and then purified by silica gel column chromatography (methylene chloride : methanol=20:1) to obtain the title compound (0.023 g, yield: 28%).</p>
+    <p id="p-00096-en" num="0096">
+      <sup>1</sup>H-NMR Spectrum(300 MHz, DMSO-<i>d<sub>6</sub></i>): 14.45-14.36(m, 1H), 9.60(s, 1H), 9.36(s, 1H), 8.83(br s, 1H), 8.43(d, <i>J</i>=8.1Hz, 1H), 7.62-7.57(m, 2H), 7.50(t, <i>J</i>=8.4Hz, 1H), 7.30(d, <i>J</i>=8.4Hz, 1H), 7.08-6.83(m, 1H), 4.40(s, 2H), 2.30-2.20(m, 3H)</p>
+    <p id="p-00097-en" num="0097">LCMS [M+1]: 532.4</p>
+    <heading id="h-00020-en">
+      <b>Example 10: Preparation of 1-(2,5-difluorophenyl)-3-(3-fluoro-4-(7-(5-methyl-1H-imidazol-2-yl)-1-oxoisoindolin-4-yl)phenyl)urea</b>
+    </heading>
+    <p id="p-00098-en" num="0098">2,5-difluorobenzoic acid (0.05 g, 0.32 mmol) was dispersed in THF(4 mL), and then triethylamine (0.088 mL, 0.63 mmol) and diphenylphosphorazidate (DPPA, 0.08 mL, 0.36 mmol) were added thereto, followed by stirring for 2 hours at room temperature. After checking that 2,5-difluorobenzoyl azide was formed, Compound D (0.051 g, 0.16 mmol) was added thereto, followed by stirring for 4 hours at 90°C. Upon completion of the reaction, the reaction solution was diluted with ethyl acetate containing 5% methanol, and then washed with a saturated aqueous solution of NaHCO<sub>3</sub>. Subsequently, the organic layer was dried over anhydrous magnesium sulfate, and then concentrated under reduced pressure. The concentrate thus obtained was purified by silica gel column chromatography (eluent: methylene chloride : methanol=20:1) to obtain the title compound (0.026 g, yield: 34%).</p>
+    <p id="p-00099-en" num="0099">
+      <sup>1</sup>H-NMR Spectrum(300 MHz, DMSO-<i>d<sub>6</sub></i>): 14.47-14.37 (m, 1H), 9.58 (s, 1H), 9.37 (s, 1H), 8.96 (s, 1H), 8.45 (d, <i>J</i>=8.4Hz, 1H), 8.06-7.99 (m, 1H), 7.67-7.49 (m, 3H), 7.36-7.09 (m, 2H), 6.89-6.84 (m, 1H), 4.43 (s, 2H), 2.31-2.22 (m, 3H)</p>
+    <p id="p-00100-en" num="0100">LCMS [M+1]: 478.4</p>
+    <heading id="h-00021-en">
+      <b>Example 11: Preparation of 1-(2,4-difluoro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-urea</b>
+    </heading>
+    <p id="p-00101-en" num="0101">2,4-difluorobenzoic acid (0.04 g, 0.248 mmol) was dispersed in THF (3 mL), and then triethylamine (0.069 mL, 0.496 mmol) and diphenylphosphorazidate (DPPA, 0.075 g, 0.273 mmol) were added thereto, followed by stirring for 2 hours at room temperature. 4-(4-amino-2-fluorophenyl)-7-(5-methyl-1H-imidazol-2-yl)isoindolin-1-one (Compound D, 0.040 g, 0.124 mmol) was added to the mixture, followed by stirring for 4 hours at 90°C. Upon completion of the reaction, the reaction solution was diluted with ethyl acetate containing 5% methanol, and then washed with water and a saturated aqueous solution of NaHCO<sub>3</sub>. Subsequently, the organic layer was dried over anhydrous magnesium sulfate, and then concentrated under reduced pressure. The concentrate thus obtained was purified by silica gel column chromatography (eluent: methylene chloride : methanol=20:1) to obtain the title compound (0.024 g, yield: 42%).</p>
+    <p id="p-00102-en" num="0102">
+      <sup>1</sup>H-NMR Spectrum(300 MHz, DMSO-<i>d<sub>6</sub></i>): 14.45-14.36(m, 1H), 9.39-9.35(m, 2H), 8.64(s, 1H), 8.43(d, <i>J</i>=8.1Hz, 1H), 8.09-8.00(m, 1H), 7.65-7.59(m, 2H), 7.49(t, <i>J</i>=8.4Hz, 1H), 7.35-7.21(m, 2H), 7.08-6.83(m, 2H), 4.41(s, 2H), 2.30-2.20(m, 3H)</p>
+    <p id="p-00103-en" num="0103">LCMS [M+1]: 478.4</p>
+    <heading id="h-00022-en">
+      <b>Example 12: Preparation of 1-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-3-(2,3,6-trifluoro-phenyl)-urea</b>
+    </heading>
+    <p id="p-00104-en" num="0104">2,3,6-trifluorobenzoic acid (0.044 g, 0.248 mmol) was dispersed in diethyl ether (4 mL), slowly added with phosphorus pentachloride (PCl<sub>5</sub>, 0.057 g, 0.273 mmol), and then stirred for 40 minutes. Upon completion of the reaction, the organic solvent was concentrated under reduced pressure below room temperature, and then the reaction solution was diluted by adding acetone (3 mL). Subsequently, sodium azide (NaN<sub>3</sub>, 0.021 g, 0.322 mmol) in water (0.2 mL) was slowly added to the reaction solution dropwise at 0°C. After stirring the reaction solution for 1 hour at room temperature, the reaction solution was diluted with ethyl acetate, and then washed with water. The organic layer was dried over anhydrous magnesium sulfate, dispersed in THF (1 mL), and then introduced to a flask which contained 4-(4-amino-2-fluorophenyl)-7-(5-methyl-1H-imidazol-2-yl)isoindolin-1-one (Compound D, 0.040 g, 0.124 mmol) diluted in THF (3 mL), followed by stirring for 6 hours at 90°C. Upon completion of the reaction, the solvent was concentrated under reduced pressure, and then purified by silica gel column chromatography (eluent: methylene chloride : methanol=20: 1) to obtain the title compound (0.022 g, yield: 36%).</p>
+    <p id="p-00105-en" num="0105">
+      <sup>1</sup>H-NMR Spectrum(300 MHz, DMSO-<i>d<sub>6</sub></i>): 14.45-14.35(m, 1H), 9.51(br s, 1H), 9.35(s, 1H), 8.62(br s, 1H), 8.43(d, <i>J</i>=8.1Hz, 1H), 7.62-7.57(m, 2H), 7.48(t, <i>J</i>=8.4Hz, 1H), 7.44-7.34(m, 1H), 7.31-7.20(m, 2H), 7.07-6.83(m, 1H), 4.40(s, 2H), 2.30-2.20(m, 3H)</p>
+    <p id="p-00106-en" num="0106">LCMS [M+1]: 496.4</p>
+    <heading id="h-00023-en">
+      <b>Example 13: Preparation of 1-(3,5-difluoro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-urea</b>
+    </heading>
+    <p id="p-00107-en" num="0107">3,5-difluorobenzoic acid (0.04 g, 0.248 mmol) was dispersed in THF (4 mL), and then triethylamine (0.069 mL, 0.496 mmol) and diphenylphosphorazidate (DPPA, 0.075 g, 0.273 mmol) were added thereto, followed by stirring for 1 hour at room temperature. 4-(4-amino-2-fluorophenyl)-7-(5-methyl-1H-imidazol-2-yl)isoindolin-1-one (Compound D, 0.040 g, 0.124 mmol) was added to the reaction solution, followed by stirring for 4 hours at 90°C. The reaction solution was cooled to room temperature, diluted with ethyl acetate, and then washed water and a saturated aqueous solution of NaHCO<sub>3</sub>. The organic layer was dried over anhydrous magnesium sulfate, and then concentrated under reduced pressure. The concentrate thus obtained was purified by silica gel column chromatography (eluent: methylene chloride : methanol=20: 1) to obtain the title compound (0.032 g, yield: 55%).</p>
+    <p id="p-00108-en" num="0108">
+      <sup>1</sup>H-NMR Spectrum(300 MHz, DMSO-<i>d<sub>6</sub></i>): 14.45-14.36(m, 1H), 9.50(s, 2H), 9.36(s, 1H), 8.43(d, <i>J</i>=8.1Hz, 1H), 7.64-7.60(m, 2H), 7.50(t, <i>J</i>=8.4Hz, 1H), 7.30-7.20(m, 3H), 7.08-6.77(m, 2H), 4.41(s, 2H), 2.30-2.20(m, 3H)</p>
+    <p id="p-00109-en" num="0109">LCMS [M+1]: 478.3</p>
+    <heading id="h-00024-en">
+      <b>Example 14: Preparation of 1-(3,4-difluoro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-urea</b>
+    </heading>
+    <p id="p-00110-en" num="0110">3,4-difluorobenzoic acid (0.05 g, 0.32 mmol) was dispersed in THF (4 mL), and then triethylamine (0.088 mL, 0.63 mmol) and diphenylphosphorazidate (DPPA, 0.08 mL, 0.36 mmol) were added thereto, followed by stirring for 2 hours at room temperature. After checking that 3,4-difluorobenzoyl azide was formed, 4-(4-amino-2-fluorophenyl)-7-(5-methyl-1H-imidazol-2-yl)isoindolin-1-one (Compound D, 0.051 g, 0.16 mmol) was added thereto, followed by stirring for 4 hours at 90°C. Upon completion of the reaction, the reaction solution was diluted with ethyl acetate containing 5% methanol, and then washed with a saturated aqueous solution of NaHCO<sub>3</sub>. Subsequently, the organic layer was dried over anhydrous magnesium sulfate, and then concentrated under reduced pressure. The concentrate thus obtained was purified by silica gel column chromatography (eluent: methylene chloride : methanol=20:1) to obtain the title compound (0.035 g, yield: 46%).</p>
+    <p id="p-00111-en" num="0111">
+      <sup>1</sup>H-NMR Spectrum(300 MHz, DMSO-<i>d<sub>6</sub></i>): 14.40 (br s, 1H), 9.37 (s, 1H), 9.13-9.03 (m, 2H), 8.44 (d, <i>J</i>=8.1Hz, 1H), 7.71-7.47 (m, 4H), 7.41-7.27 (m, 3H), 7.18-7.16 (m, 1H), 7.00 (s, 1H), 4.43 (s, 2H), 2.26 (s, 3H)</p>
+    <p id="p-00112-en" num="0112">LCMS [M+1]: 478.4</p>
+    <heading id="h-00025-en">
+      <b>Example 15: Preparation of 1-(4-cyano-3-fluorophenyl)-3-(3-fluoro-4-(7-(5-methyl-1H-imidazol-2-yl)-1-oxoisoindolin-4-yl)phenyl)urea</b>
+    </heading>
+    <p id="p-00113-en" num="0113">4-cyano-3-fluorobenzoic acid (0.08 g, 0.48 mmol) was dispersed in THF (6.1 mL), added with triethylamine (0.14 mL, 0.97 mmol) and diphenylphosphorazidate (DPPA, 0.12 mL, 0.56 mmol), and then stirred for 2 hours at room temperature. After checking that 4-cyano-3-fluorobenzoyl azide was formed, 4-(4-amino-2-fluorophenyl)-7-(5-methyl-1H-imidazol-2-yl)isoindolin-1-one (Compound D, 0.078 g, 0.24 mmol) was added thereto, followed by stirring for 4 hours at 90°C. Upon completion of the reaction, the reaction solution was diluted with ethyl acetate containing 5% methanol, and then washed with a saturated aqueous solution of NaHCO<sub>3</sub>. Subsequently, the organic layer was dried over anhydrous magnesium sulfate, and then concentrated under reduced pressure. The concentrate thus obtained was purified by silica gel column chromatography (eluent: methylene chloride : methanol=20:1) to obtain the title compound (0.012 g, yield: 10%).</p>
+    <p id="p-00114-en" num="0114">
+      <sup>1</sup>H-NMR Spectrum(300 MHz, DMSO-<i>d<sub>6</sub></i>): 14.40 (br s, 1H), 9.89 (s, 1H), 9.64 (s, 1H), 9.37 (s, 1H), 8.44 (d, <i>J</i>=8.7Hz, 1H), 7.94-7.15 (m, 7H), 7.01-6.99 (m, 1H), 4.43 (s, 2H), 2.26 (s, 3H)</p>
+    <p id="p-00115-en" num="0115">LCMS [M+1]: 485.4</p>
+    <heading id="h-00026-en">
+      <b>Example 16: Preparation of 1-(4-chloro-3-(trifluoromethyl)phenyl)-3-(3-fluoro-4-(7-(5-methyl-1H-imidazol-2-yl)-1-oxoisoindolin-4-yl)phenyl)urea</b>
+    </heading>
+    <p id="p-00116-en" num="0116">4-chloro-3-trifluoromethylbenzoic acid (0.08 g, 0.35 mmol) was dispersed in THF (4.5 mL), and then triethylamine (0.1 mL, 0.71 mmol) and diphenylphosphorazidate (DPPA, 0.09 mL, 0.41 mmol) were added thereto, followed by stirring for 2 hours at room temperature. After checking that 4-chloro-3-trifluoromethylbenzoyl azide was formed, 4-(4-amino-2-fluorophenyl)-7-(5-methyl-1H-imidazol-2-yl)isoindolin-1-one (Compound D, 0.057 g, 0.18 mmol) was added thereto, followed by stirring for 4 hours at 90°C. Upon completion of the reaction, the reaction solution was diluted with ethyl acetate containing 5% methanol, and then washed with a saturated aqueous solution of NaHCO<sub>3</sub>. Subsequently, the organic layer was dried over anhydrous magnesium sulfate, and then concentrated under reduced pressure. The concentrate thus obtained was purified by silica gel column chromatography (eluent: methylene chloride : methanol=20:1) to obtain the title compound (0.012 g, yield: 12%).</p>
+    <p id="p-00117-en" num="0117">
+      <sup>1</sup>H-NMR Spectrum(300 MHz, DMSO-<i>d<sub>6</sub></i>): 14.47-14.37 (m, 1H), 9.36-9.32 (m, 2H), 9.25 (s, 1H), 8.45 (d, <i>J</i>=8.1Hz, 1H), 8.12-8.05 (m, 1H), 7.71-7.61 (m, 4H), 7.54-7.48 (m, 1H), 7.33-7.29 (m, 1H), 7.09-6.85 (m, 1H), 4.42 (s, 2H), 2.32-2.22 (m, 3H)</p>
+    <p id="p-00118-en" num="0118">LCMS [M+1]: 544.3</p>
+    <heading id="h-00027-en">
+      <b>Example 17: Preparation of 1-(3-chloro-2,6-difluorophenyl)-3-(3-fluoro-4-(7-(5-methyl-1H-imidazol-2-yl)-1-oxoisoindolin-4-yl)phenyl)urea</b>
+    </heading>
+    <p id="p-00119-en" num="0119">3-chloro-2,6-difluorobenzoic acid (0.08 g, 0.41 mmol) was dispersed in diethyl ether (5.2 mL), slowly added with phosphorus pentachloride (PCl<sub>5</sub>, 0.099 g, 0.48 mmol), and then stirred for 1 hour. Upon completion of the reaction, the organic solvent was concentrated under reduced pressure below room temperature, and then the reaction solution was diluted by adding acetone (3.5 mL). Subsequently, sodium azide (NaN<sub>3</sub>, 0.032 g, 0.50 mmol) dissolved in water (0.25 mL) was slowly added to the reaction solution dropwise at 0°C. After stirring the reaction solution for 2 hours at room temperature, 3-chloro-2,6-difluorobenzoyl azide thus formed was diluted with ethyl acetate, followed by washing with water. The organic layer was dried over anhydrous magnesium sulfate, dispersed in THF (1.6 mL), added with THF (1.6 mL) containing 4-(4-amino-2-fluorophenyl)-7-(5-methyl-1H-imidazol-2-yl)isoindolin-1-one (Compound D, 0.067 g, 0.21 mmol), and then stirred for 3 hours at 90°C. Upon completion of the reaction, the solvent was concentrated, and then purified by silica gel column chromatography (eluent: methylene chloride : methanol = 20:1) to obtain the title compound (0.017 g, yield: 16%).</p>
+    <p id="p-00120-en" num="0120">
+      <sup>1</sup>H-NMR Spectrum(300 MHz, DMSO-<i>d<sub>6</sub></i>): 14.47-14.38 (m, 1H), 9.49-9.39 (m, 2H), 8.53 (s, 1H), 8.44 (d, <i>J</i>=8.1Hz, 1H), 7.63-7.47 (m, 4H), 7.31-7.24 (m, 2H), 7.09-6.84 (m, 1H), 4.42 (s, 2H), 2.31-2.21 (m, 3H)</p>
+    <p id="p-00121-en" num="0121">LCMS [M+1]: 512.3</p>
+    <heading id="h-00028-en">
+      <b>Example 18: Preparation of 1-(2-chloro-3,6-difluorophenyl)-3-(3-fluoro-4-(7-(5-methyl-1H-imidazol-2-yl)-1-oxoisoindolin-4-yl)phenyl)urea</b>
+    </heading>
+    <p id="p-00122-en" num="0122">2-chloro-3,6-difluorobenzoic acid (0.08 g, 0.41 mmol) was dispersed in diethyl ether (5.2 mL), slowly added with phosphorus pentachloride (PCl<sub>5</sub>, 0.099 g, 0.48 mmol), and then stirred for 1 hour. Upon completion of the reaction, the organic solvent was concentrated under reduced pressure below room temperature, and then the reaction solution was diluted by adding acetone (3.5 mL). Subsequently, sodium azide (NaN<sub>3</sub>, 0.032 g, 0.50 mmol) dissolved in water (0.25 mL) was slowly added to the reaction solution dropwise at 0°C. After stirring the reaction solution for 2 hours at room temperature, 2-chloro-3,6-difluorobenzoyl azide thus formed was diluted with ethyl acetate, followed by washing with water. The organic layer was dried over anhydrous magnesium sulfate, dispersed in THF (1.6 mL), added with THF (7 mL) containing 4-(4-amino-2-fluorophenyl)-7-(5-methyl-1H-imidazol-2-yl)isoindolin-1-one (Compound D, 0.067 g, 0.21 mmol), and then stirred for 3 hours at 90°C. Upon completion of the reaction, the solvent was concentrated under reduced pressure, and the purified by silica gel column chromatography (eluent: methylene chloride : methanol=20:1) to obtain the title compound (0.038 g, yield: 36%).</p>
+    <p id="p-00123-en" num="0123">
+      <sup>1</sup>H-NMR Spectrum(300 MHz, DMSO-<i>d<sub>6</sub></i>): 14.46-14.37 (m, 1H), 9.51 (s, 1H), 9.37 (s, 1H), 8.58 (s, 1H), 8.44 (d, <i>J</i>=8.1Hz, 1H), 7.63-7.59 (m, 2H), 7.52-7.29 (m, 4H), 7.09-6.84 (m, 1H), 4.42 (s, 2H), 2.31-2.21 (m, 3H)</p>
+    <p id="p-00124-en" num="0124">LCMS [M+1]: 512.3</p>
+    <heading id="h-00029-en">
+      <b>Example 19: Preparation of 1-(4-chloro-2,6-difluoro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-urea</b>
+    </heading>
+    <p id="p-00125-en" num="0125">4-chloro-2,6-difluorobenzoic acid (0.060 g, 0.31 mmol) was dispersed in diethyl ether (4 mL), slowly added with phosphous pentachloride (PCl<sub>5</sub>, 0.071 g, 0.341 mmol), and then stirred for 40 minutes. Upon completion of the reaction, the organic solvent was concentrated under reduced pressure below room temperature, and then the reaction solution was diluted by adding acetone (3 mL). Subsequently, sodium azide (NaN<sub>3</sub>, 0.026 g, 0.403 mmol) dissolved in water (0.2 mL) was slowly added to the reaction solution dropwise at 0°C. After stirring the reaction solution for 1 hour at room temperature, the reaction solution was diluted with ethyl acetate, and then washed with water. The organic layer was dried over anhydrous magnesium sulfate, dispersed in THF (1 mL), and then introduced to a flask which contained 4-(4-amino-2-fluorophenyl)-7-(5-methyl-1H-imidazol-2-yl)isoindolin-1-one (Compound D, 0.050 g, 0.155 mmol) dissolved in THF (3 mL), followed by stirring for 4 hours at 90°C. Upon completion of the reaction, the solvent was concentrated under reduced pressure, and then purified by silica gel column chromatography (eluent: methylene chloride : methanol=20:1) to obtain the title compound (0.024 g, yield: 30%).</p>
+    <p id="p-00126-en" num="0126">
+      <sup>1</sup>H-NMR Spectrum(300 MHz, DMSO-<i>d<sub>6</sub></i>): 14.46-14.37 (m, 1H), 9.86(s, 1H), 9.38 (s, 1H), 8.82 (s, 1H), 8.41 (d, <i>J</i>=8.1Hz, 1H), 7.63-7.59 (m, 2H), 7.52-7.29 (m, 4H), 6.97(s, 1H), 4.42 (s, 2H), 2.21 (s, 3H)</p>
+    <p id="p-00127-en" num="0127">LCMS [M+1]: 512.3</p>
+    <heading id="h-00030-en">
+      <b>Example 20: Preparation of 1-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-3-(2,3,5,6-tetrafluoro-phenyl)-urea</b>
+    </heading>
+    <p id="p-00128-en" num="0128">2,3,5,6-tetrafluorobenzoic acid (0.08 g, 0.41 mmol) was diluted in diethyl ether (5.2 mL), slowly added with phosphorus pentachloride (PCl<sub>5</sub>, 0.099 g, 0.48 mmol), and then stirred for 1 hour. Upon completion of the reaction, the organic solvent was concentrated under reduced pressure below room temperature, and then the reaction solution was diluted by adding acetone (3.4 mL). Subsequently, sodium azide (NaN<sub>3</sub>, 0.032 g, 0.50 mmol) dissolved in water (0.25 mL) was slowly added to the reaction solution dropwise at 0°C. After stirring the reaction solution for 2 hours at room temperature, 2,3,5,6-tetrafluorobenzoyl azide thus formed was diluted with ethyl acetate, and then washed with water. The organic layer was dried over anhydrous magnesium sulfate, dispersed in THF (1.6 mL), added with THF (7 mL) containing 4-(4-amino-2-fluorophenyl)-7-(5-methyl-1H-imidazol-2-yl)isoindolin-1-one (Compound D, 0.066 g, 0.21 mmol), and then stirred for 3 hours at 90°C. Upon completion of the reaction, the solvent was concentrated under reduced pressure, and then purified by silica gel column chromatography (eluent: methylene chloride : methanol=20:1) to obtain the title compound (0.014 g, yield: 13%)</p>
+    <p id="p-00129-en" num="0129">
+      <sup>1</sup>H-NMR Spectrum(300 MHz, DMSO-<i>d<sub>6</sub></i>): 8.45 (d, <i>J</i>=8.1Hz, 1H), 7.69-7.61 (m, 2H), 7.48-7.33 (m, 3H), 7.00 (s, 1H), 4.48 (s, 2H), 2.38 (s, 3H)</p>
+    <p id="p-00130-en" num="0130">LCMS [M+1]: 514.3</p>
+    <p id="p-00131-en" num="0131">The compounds obtained in Examples 1 to 20 are represented by the following structural formula, as shown in Table 1 below. <tables id="tables-00001-en" num="0001"><table frame="all"><title>[Table 1]</title><tgroup cols="3"><colspec colnum="1" colname="col1" colwidth="23mm" /><colspec colnum="2" colname="col2" colwidth="62mm" /><colspec colnum="3" colname="col3" colwidth="82mm" /><thead><row><entry align="center" valign="middle"><b>Compound</b></entry><entry align="center" valign="middle"><b>Name</b></entry><entry align="center" valign="middle"><b>Formula</b></entry></row></thead><tbody><row><entry align="center" valign="middle"><b>1</b></entry><entry align="center" valign="middle">1-(2,6-dichloro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-urea</entry><entry align="center" valign="middle"><chemistry id="chem-00008-en" num="0008"><img id="img-00008-en" wi="71" he="34" img-content="chem" file="EP2940014A1_00008.PNG" img-format="png" original="imgb0008.tif" /></chemistry></entry></row><row><entry align="center" valign="middle"><b>2</b></entry><entry align="center" valign="middle">1-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-3-(2-trifluoromethyl-phenyl)-urea</entry><entry align="center" valign="middle"><chemistry id="chem-00009-en" num="0009"><img id="img-00009-en" wi="70" he="34" img-content="chem" file="EP2940014A1_00009.PNG" img-format="png" original="imgb0009.tif" /></chemistry></entry></row><row><entry align="center" valign="middle"><b>3</b></entry><entry align="center" valign="middle">1-(2,6-difluoro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-urea</entry><entry align="center" valign="middle"><chemistry id="chem-00010-en" num="0010"><img id="img-00010-en" wi="72" he="34" img-content="chem" file="EP2940014A1_00010.PNG" img-format="png" original="imgb0010.tif" /></chemistry></entry></row><row><entry align="center" valign="middle"><b>4</b></entry><entry align="center" valign="middle">1-(2-chloro-6-fluoro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-urea</entry><entry align="center" valign="middle"><chemistry id="chem-00011-en" num="0011"><img id="img-00011-en" wi="71" he="33" img-content="chem" file="EP2940014A1_00011.PNG" img-format="png" original="imgb0011.tif" /></chemistry></entry></row><row><entry align="center" valign="middle"><b>5</b></entry><entry align="center" valign="middle">1-(2,6-bis-trifluoromethyl-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-urea</entry><entry align="center" valign="middle"><chemistry id="chem-00012-en" num="0012"><img id="img-00012-en" wi="72" he="32" img-content="chem" file="EP2940014A1_00012.PNG" img-format="png" original="imgb0012.tif" /></chemistry></entry></row><row><entry align="center" valign="middle"><b>6</b></entry><entry align="center" valign="middle">1-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-3-(2-fluoro-6-trifluoromethyl-phenyl)-urea</entry><entry align="center" valign="middle"><chemistry id="chem-00013-en" num="0013"><img id="img-00013-en" wi="72" he="32" img-content="chem" file="EP2940014A1_00013.PNG" img-format="png" original="imgb0013.tif" /></chemistry></entry></row><row><entry align="center" valign="middle"><b>7</b></entry><entry align="center" valign="middle">1-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-3-(2,4,6-trifluoro-phenyl)-urea</entry><entry align="center" valign="middle"><chemistry id="chem-00014-en" num="0014"><img id="img-00014-en" wi="72" he="32" img-content="chem" file="EP2940014A1_00014.PNG" img-format="png" original="imgb0014.tif" /></chemistry></entry></row><row><entry align="center" valign="middle"><b>8</b></entry><entry align="center" valign="middle">1-(2,6-difluoro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-1-methyl-urea</entry><entry align="center" valign="middle"><chemistry id="chem-00015-en" num="0015"><img id="img-00015-en" wi="74" he="31" img-content="chem" file="EP2940014A1_00015.PNG" img-format="png" original="imgb0015.tif" /></chemistry></entry></row><row><entry align="center" valign="middle"><b>9</b></entry><entry align="center" valign="middle">1-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-3-pentafluorophenyl-urea</entry><entry align="center" valign="middle"><chemistry id="chem-00016-en" num="0016"><img id="img-00016-en" wi="74" he="31" img-content="chem" file="EP2940014A1_00016.PNG" img-format="png" original="imgb0016.tif" /></chemistry></entry></row><row><entry align="center" valign="middle"><b>10</b></entry><entry align="center" valign="middle">1-(2,5-difluorophenyl)-3-(3-fluoro-4-(7-(5-methyl-1H-imidazol-2-yl)-1-oxoisoindolin-4-yl)phenyl)urea</entry><entry align="center" valign="middle"><chemistry id="chem-00017-en" num="0017"><img id="img-00017-en" wi="73" he="33" img-content="chem" file="EP2940014A1_00017.PNG" img-format="png" original="imgb0017.tif" /></chemistry></entry></row><row><entry align="center" valign="middle"><b>11</b></entry><entry align="center" valign="middle">l-(2,4-difluoro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-urea</entry><entry align="center" valign="middle"><chemistry id="chem-00018-en" num="0018"><img id="img-00018-en" wi="75" he="32" img-content="chem" file="EP2940014A1_00018.PNG" img-format="png" original="imgb0018.tif" /></chemistry></entry></row><row><entry align="center" valign="middle"><b>12</b></entry><entry align="center" valign="middle">1-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-3-(2,3,6-trifluoro-phenyl)-urea</entry><entry align="center" valign="middle"><chemistry id="chem-00019-en" num="0019"><img id="img-00019-en" wi="75" he="32" img-content="chem" file="EP2940014A1_00019.PNG" img-format="png" original="imgb0019.tif" /></chemistry></entry></row><row><entry align="center" valign="middle"><b>13</b></entry><entry align="center" valign="middle">1-(3,5-difluoro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-urea</entry><entry align="center" valign="middle"><chemistry id="chem-00020-en" num="0020"><img id="img-00020-en" wi="75" he="29" img-content="chem" file="EP2940014A1_00020.PNG" img-format="png" original="imgb0020.tif" /></chemistry></entry></row><row><entry align="center" valign="middle"><b>14</b></entry><entry align="center" valign="middle">1-(3,4-difluoro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-urea</entry><entry align="center" valign="middle"><chemistry id="chem-00021-en" num="0021"><img id="img-00021-en" wi="75" he="29" img-content="chem" file="EP2940014A1_00021.PNG" img-format="png" original="imgb0021.tif" /></chemistry></entry></row><row><entry align="center" valign="middle"><b>15</b></entry><entry align="center" valign="middle">1-(4-cyano-3-fluorophenyl)-3-(3-fluoro-4-(7-(5-methyl-1H-imidazol-2-yl)-1-oxoisoindolin-4-yl)phenyl)urea</entry><entry align="center" valign="middle"><chemistry id="chem-00022-en" num="0022"><img id="img-00022-en" wi="75" he="27" img-content="chem" file="EP2940014A1_00022.PNG" img-format="png" original="imgb0022.tif" /></chemistry></entry></row><row><entry align="center" valign="middle"><b>16</b></entry><entry align="center" valign="middle">1-(4-chloro-3-(trifluoromethyl)phenyl)-3-(3-fluoro-4-(7-(5-methyl-1H-imidazol-2-yl)-1-oxoisoindolin-4-yl)phenyl)urea</entry><entry align="center" valign="middle"><chemistry id="chem-00023-en" num="0023"><img id="img-00023-en" wi="75" he="28" img-content="chem" file="EP2940014A1_00023.PNG" img-format="png" original="imgb0023.tif" /></chemistry></entry></row><row><entry align="center" valign="middle"><b>17</b></entry><entry align="center" valign="middle">1-(3-chloro-2,6-difluorophenyl)-3-(3-fluoro-4-(7-(5-methyl-1H-imidazol-2-yl)-1-oxoisoindolin-4-yl)phenyl)urea</entry><entry align="center" valign="middle"><chemistry id="chem-00024-en" num="0024"><img id="img-00024-en" wi="74" he="31" img-content="chem" file="EP2940014A1_00024.PNG" img-format="png" original="imgb0024.tif" /></chemistry></entry></row><row><entry align="center" valign="middle"><b>18</b></entry><entry align="center" valign="middle">1-(2-chloro-3,6-difluorophenyl)-3-(3-fluoro-4-(7-(5-methyl-1H-imidazol-2-yl)-1-oxoisoindolin-4-yl)phenyl)urea</entry><entry align="center" valign="middle"><chemistry id="chem-00025-en" num="0025"><img id="img-00025-en" wi="75" he="32" img-content="chem" file="EP2940014A1_00025.PNG" img-format="png" original="imgb0025.tif" /></chemistry></entry></row><row><entry align="center" valign="middle"><b>19</b></entry><entry align="center" valign="middle">1-(4-chloro-2,6-difluoro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-urea</entry><entry align="center" valign="middle"><chemistry id="chem-00026-en" num="0026"><img id="img-00026-en" wi="74" he="31" img-content="chem" file="EP2940014A1_00026.PNG" img-format="png" original="imgb0026.tif" /></chemistry></entry></row><row><entry align="center" valign="middle"><b>20</b></entry><entry align="center" valign="middle">1-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-3-(2,3,5,6-tetrafluoro-phenyl)-urea</entry><entry align="center" valign="middle"><chemistry id="chem-00027-en" num="0027"><img id="img-00027-en" wi="75" he="31" img-content="chem" file="EP2940014A1_00027.PNG" img-format="png" original="imgb0027.tif" /></chemistry></entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00132-en" num="0132">The compounds prepared from Examples were tested for biological assays as follows.</p>
+    <p id="p-00133-en" num="0133">Evaluation of biological activities of the compounds in accordance with the present invention may be conducted by any conventional methods known in the art. Appropriate test methods are well known in the art. The following tests are examples for assaying effects of the inventive compounds on various kinases, which are not limited hereto. The compounds of the present invention show their activities in at least one of the following assays.</p>
+    <heading id="h-00031-en">
+      <u>Experimental Example 1: Assay for BTK inhibition activity (ELISA method)</u>
+    </heading>
+    <p id="p-00134-en" num="0134">In order to evaluate the activity of the compounds of the present invention as a BTK inhibitor, commercially available BTK (Promega) was used for this experiment. Specifically, an enzymatic reaction was conducted by mixing 0.4 nM of BTK enzyme, 40 µM of biotin-S1 substrate peptide and 50 µM of ATP in a reaction buffer (15 mM Tris-HCl (pH 7.5), 20 mM MgCl<sub>2</sub>, 2 mM MnCl<sub>2</sub>, 2 mM DTT, 0.1mg/ml BSA). The mixture was treated with the test compounds at predetermined concentrations and allowed to react for 20 minutes at 30°C. Upon completion of the reaction, the activities of the test compounds were measured by ELISA method. The absorbance value of an untreated sample was used as a control (100% control). BTK enzyme activities were measured after treatment with various concentrations of the test compounds, and the concentration of test compounds resulting in 50% inhibition of BTK enzyme as compared to the control was determined as IC<sub>50</sub> of BTK inhibitor.</p>
+    <p id="p-00135-en" num="0135">BTK inhibition activities of several compounds among the inventive compounds were randomly tested. The results are shown in Table 2 below. <tables id="tables-00002-en" num="0002"><table frame="all"><title>[Table 2] Results of BTK inhibition activities of representative compounds</title><tgroup cols="2"><colspec colnum="1" colname="col1" colwidth="55mm" /><colspec colnum="2" colname="col2" colwidth="49mm" /><thead><row><entry align="center" valign="top">Compound</entry><entry align="center" valign="top">BTK IC<sub>50</sub> (nM)</entry></row></thead><tbody><row><entry align="center">3</entry><entry align="center">1.00</entry></row><row><entry align="center">4</entry><entry align="center">0.90</entry></row><row><entry align="center">7</entry><entry align="center">0.10</entry></row><row><entry align="center">9</entry><entry align="center">0.40</entry></row><row><entry align="center">12</entry><entry align="center">0.28</entry></row><row><entry align="center">14</entry><entry align="center">5.60</entry></row><row><entry align="center">15</entry><entry align="center">5.00</entry></row><row><entry align="center">17</entry><entry align="center">0.05</entry></row><row><entry align="center">18</entry><entry align="center">0.07</entry></row><row><entry align="center">19</entry><entry align="center">4.00</entry></row><row><entry align="center">20</entry><entry align="center">0.90</entry></row></tbody></tgroup></table></tables></p>
+    <heading id="h-00032-en">
+      <u>Experimental Example 2: Histamine release assay</u>
+    </heading>
+    <p id="p-00136-en" num="0136">According to Kawakami <i>et al</i>., inhibition of BTK activity in mast cells reduces production of a mediator (e.g., histamine), and a lipid mediator, or secretion of cytokine. (Reference [<nplcit id="ncit-00004" npl-type="s"><text>J Immunol. 2000 Aug 1;165(3):1210-9. Redundant and opposing functions of two tyrosine kinases, Btk and Lyn, in mast cell activation. Kawakami Y, Kitaura J, Satterthwaite AB, Kato RM, Asai K, Hartman SE, Maeda-Yamamoto M, Lowell CA, Rawlings DJ, Witte ON, Kawakami T]</text></nplcit>).</p>
+    <p id="p-00137-en" num="0137">Histamine release assays were performed with reference to the method disclosed in the article, <nplcit id="ncit-00005" npl-type="s"><text>FEBS Lett. 2002 Sep 11;527(1-3):274-8. Silencing of Bruton's tyrosine kinase (Btk) using short interfering RNA duplexes (siRNA). Heinonen JE, Smith CI, Nore BF</text></nplcit>, and the amount of histamine was measured by an enzyme immunoassay.</p>
+    <p id="p-00138-en" num="0138">The RBL-2H3 cell line, purchased from KCLB (Korean Cell Line Bank), was grown in a DMEM medium supplemented with 10%(v/v) FBS at 37°C in a 5% CO<sub>2</sub> incubator for 72 hours. The cells were transferred into 96-well plates at a density of 10,000 cells/well, and cultured at 37°C in the 5% CO<sub>2</sub> incubator for 24 hours.</p>
+    <p id="p-00139-en" num="0139">The cells were treated with 500 ng/mL of monoclonal anti-DNP (sigma) and each of 0.001, 0.01, 0.1, 1.0 and 10 µM of the test compound in 100% (v/v) dimethyl sulfoxide (DMSO). The cells were treated only with 100% (v/v) DMSO, which was used as a control. The treated samples were cultured at 37°C in the 5% CO<sub>2</sub> incubator for 24 hours. Then, histamine release was measured according to manufacturer's instructions (EIA histamine kit, immunotech). Each well was treated with 50 µL of a histamine release buffer, and allowed to react for 30 minutes at 37°C. Upon completion of the reaction, 100 µL of a sample from each well was transferred to a new plate, and then was thoroughly mixed with 25 µL of an acetylation buffer and 25 µL of an acetylation reagent. 50 µL of the acetylation sample thus prepared was transferred to a plate coated with an antibody, mixed with 200 µL of histamine alkaline phosphatase conjugate, and then allowed to react for 18 hours at 4°C. Once the reaction is completed, the sample from the plate is removed, and then 200 µL of a wash buffer was added to wash three times. 200 µL of a substrate was added thereto, and the mixture was allowed to react at room temperature for 30 minutes. The reaction was terminated by adding 50 µL of a stop solution, and absorbance of the samples was read at 406 nm using Benchmark Plus (Biorad). The histamine release level was calculated based on absorbance of the test group against that of the control group. The EC<sub>50</sub> (µM) values, in which test compounds reduce the histamine release by 50%, were determined by using Microsoft Excel graphic program.</p>
+    <p id="p-00140-en" num="0140">In order to evaluate efficacies of the inventive compounds as an anti-inflammatory drug, histamine release tests of several compounds among them were randomly conducted. The EC<sub>50</sub> values of the compounds are summarized in Table 3. The results indicate that the compounds obtained in Examples according to the present invention have excellent efficacy. <tables id="tables-00003-en" num="0003"><table frame="all"><title>[Table 3] Results of histamine release test of representative compounds</title><tgroup cols="2"><colspec colnum="1" colname="col1" colwidth="52mm" /><colspec colnum="2" colname="col2" colwidth="51mm" /><thead><row><entry align="center" valign="top">Compound</entry><entry align="center" valign="top">Histamine Release EC<sub>50</sub>(µM)</entry></row></thead><tbody><row><entry align="center">3</entry><entry align="center">0.45</entry></row><row><entry align="center">4</entry><entry align="center">0.25</entry></row><row><entry align="center">7</entry><entry align="center">0.22</entry></row><row><entry align="center">9</entry><entry align="center">0.35</entry></row><row><entry align="center">12</entry><entry align="center">0.30</entry></row><row><entry align="center">14</entry><entry align="center">0.20</entry></row><row><entry align="center">15</entry><entry align="center">0.22</entry></row><row><entry align="center">17</entry><entry align="center">0.04</entry></row><row><entry align="center">18</entry><entry align="center">0.30</entry></row><row><entry align="center">19</entry><entry align="center">0.30</entry></row><row><entry align="center">20</entry><entry align="center">0.30</entry></row></tbody></tgroup></table></tables></p>
+    <heading id="h-00033-en">
+      <u>Experimental Example 3: MTS assay based on anti-proliferation assay</u>
+    </heading>
+    <p id="p-00141-en" num="0141">MTS assay was performed to evaluate the anti-proliferative activities of the inventive compounds via inhibition on extracellular signal-regulated kinase (<nplcit id="ncit-00006" npl-type="s"><text>Barltrop, J.A. et al., (1991) 5-(3-carboxymethoxyphenyl)-2-(4,5-dimethylthiazoly)-3-(4-sulfophenyl) tetrazolium, inner salt (MTS) and related analog of 3-(4,5-dimethylthiazolyl)-2,5,-diphenyltetrazolium bromide (MTT) reducing to purple water soluble formazans as cell-viability indicators. Bioorg. Med. Chem. Lett. 1, 611-4</text></nplcit>; <nplcit id="ncit-00007" npl-type="s"><text>Cory, A.H. et al., (1991) Use of an aqueous soluble tertrazolium/formazan assay for cell growth assays in culture. Cancer Comm. 3, 207-12</text></nplcit>).</p>
+    <p id="p-00142-en" num="0142">Human lymphoma cell lines Jeko-1 (ATCC), Mino (ATCC), H9 (Korean Cell Line Bank) and SR (ATCC), and human leukemia cell lines MV4-11 (ATCC), Molm-13 (DSMZ) and Ku812 (ATCC) were used for the test according to the procedure shown below.</p>
+    <p id="p-00143-en" num="0143">Each of Jeko-1, Mino, H9, SR, MV4-11, Molm-13 and Ku812 cells were transferred into 96-well plates containing RPMI1640 medium (GIBCO, Invitrogen) supplemented with 10% FBS at a density of 10,000cells/well, and then incubated for 24 hours under conditions of 37°C and 5% CO<sub>2</sub>. The wells were treated with each of 0.2, 1, 5, 25 and 100 µM, of the test compounds. The well was treated with DMSO in an amount of 0.08 wt%, which is the same amount as in the test compounds, which was used as a control. The resulting cells were incubated for 48 hours.</p>
+    <p id="p-00144-en" num="0144">MTS assays are commercially available and include the Promega CellTiter 96® Aqueous Non-Radioactive Cell Proliferation Assay. MTS assays were performed in order to evaluate cell viability of the test compounds. 20 µL of a mixed solution of 3-(4,5-dimethylthiazol-2-yl)-5-(3-carboxymethoxyphenyl)-2-(4-sulfophenyl)-2H-tetrazolium, inner salt ("MTS") and phenazine methosulfate (PMS) was added to each well, and then incubated for 2 hours at 37°C. Then absorbance of the samples was read at 490 nm. The anti-proliferation activity level was calculated based on absorbance of the test compounds against that of the untreated control group. The EC<sub>50</sub> (µM) values, in which test compounds reduce the growth of cancer cells by 50% were calculated.</p>
+    <p id="p-00145-en" num="0145">An assay for anti-proliferation activity was conducted by using Jeko-1, Mino, H9 and SR lymphoma cells so as to evaluate the effectiveness of the inventive compounds as an anti-inflammatory agent as well as an anti-cancer agent. The EC<sub>50</sub> values thereof are shown in Table 4 below. <tables id="tables-00004-en" num="0004"><table frame="all"><title>[Table 4] Anti-proliferation assay of the representative compounds against lymphoma cells</title><tgroup cols="5"><colspec colnum="1" colname="col1" colwidth="32mm" /><colspec colnum="2" colname="col2" colwidth="33mm" /><colspec colnum="3" colname="col3" colwidth="31mm" /><colspec colnum="4" colname="col4" colwidth="27mm" /><colspec colnum="5" colname="col5" colwidth="27mm" /><thead><row><entry align="center" valign="middle">Compound</entry><entry align="center" valign="middle">EC<sub>50</sub> in Jeko-1 (µM)</entry><entry align="center" valign="middle">EC<sub>50</sub> in Mino (µM)</entry><entry align="center" valign="middle">EC<sub>50</sub> in H9 (µM)</entry><entry align="center" valign="middle">EC<sub>50</sub> in SR (µM)</entry></row></thead><tbody><row><entry align="center" valign="middle">3</entry><entry align="center" valign="middle">0.10</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">0.03</entry><entry align="center" valign="middle">0.100</entry></row><row><entry align="center" valign="middle">4</entry><entry align="center" valign="middle">0.10</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">0.03</entry><entry align="center" valign="middle">0.030</entry></row><row><entry align="center" valign="middle">7</entry><entry align="center" valign="middle">0.03</entry><entry align="center" valign="middle">0.018</entry><entry align="center" valign="middle">0.007</entry><entry align="center" valign="middle">0.015</entry></row><row><entry align="center" valign="middle">9</entry><entry align="center" valign="middle">0.03</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">0.006</entry><entry align="center" valign="middle">0.018</entry></row><row><entry align="center" valign="middle">12</entry><entry align="center" valign="middle">0.15</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">0.04</entry><entry align="center" valign="middle">0.020</entry></row><row><entry align="center" valign="middle">14</entry><entry align="center" valign="middle">0.03</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">0.02</entry><entry align="center" valign="middle">0.018</entry></row><row><entry align="center" valign="middle">15</entry><entry align="center" valign="middle">0.10</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">0.19</entry><entry align="center" valign="middle">0.150</entry></row><row><entry align="center" valign="middle">17</entry><entry align="center" valign="middle">0.03</entry><entry align="center" valign="middle">0.018</entry><entry align="center" valign="middle">0.02</entry><entry align="center" valign="middle">0.025</entry></row><row><entry align="center" valign="middle">18</entry><entry align="center" valign="middle">0.03</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">0.02</entry><entry align="center" valign="middle">0.020</entry></row><row><entry align="center" valign="middle">19</entry><entry align="center" valign="middle">0.03</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">0.04</entry><entry align="center" valign="middle">0.020</entry></row><row><entry align="center" valign="middle">20</entry><entry align="center" valign="middle">0.03</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">0.01</entry><entry align="center" valign="middle">0.017</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00146-en" num="0146">Moreover, some inventive compounds that have exhibited excellent efficacies against lymphoma cells were further subjected to an anti-proliferation assay against leukemia cells to confirm their excellent efficacies. The EC<sub>50</sub> values thereof are shown in Table 5 below. <tables id="tables-00005-en" num="0005"><table frame="all"><title>[Table 5] Anti-proliferation assay of the representative compounds against leukemia cells</title><tgroup cols="4"><colspec colnum="1" colname="col1" colwidth="35mm" /><colspec colnum="2" colname="col2" colwidth="35mm" /><colspec colnum="3" colname="col3" colwidth="36mm" /><colspec colnum="4" colname="col4" colwidth="33mm" /><thead><row><entry align="center" valign="middle">Compound</entry><entry align="center" valign="middle">EC<sub>50</sub> in MV4-11 (µM)</entry><entry align="center" valign="middle">EC<sub>50</sub> in Molm-13 (µM)</entry><entry align="center" valign="middle">EC<sub>50</sub> in Ku812 (µM)</entry></row></thead><tbody><row><entry align="center" valign="middle">7</entry><entry align="center" valign="middle">0.002</entry><entry align="center" valign="middle">0.003</entry><entry align="center" valign="middle">0.600</entry></row><row><entry align="center" valign="middle">17</entry><entry align="center" valign="middle">0.004</entry><entry align="center" valign="middle">0.012</entry><entry align="center" valign="middle">0.190</entry></row></tbody></tgroup></table></tables></p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151104">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>A compound selected from the group consisting of a compound of formula (I), pharmaceutically acceptable salts, esters, prodrugs, hydrates, solvates and isomers thereof:
+<chemistry id="chemc-00001-en" num="0028"><img id="imgc-00001-en" wi="101" he="56" img-content="chem" file="EP2940014A1_00028.PNG" img-format="png" original="imgb0028.tif" /></chemistry>
+wherein,
+<claim-text>A is
+<chemistry id="chemc-00002-en" num="0029"><img id="imgc-00002-en" wi="57" he="18" img-content="chem" file="EP2940014A1_00029.PNG" img-format="png" original="imgb0029.tif" /></chemistry>
+and R<sub>8</sub> is hydrogen, halogen, or C<sub>1-3</sub>alkyl;</claim-text><claim-text>R<sub>1</sub> and R<sub>2</sub> are each independently hydrogen or C<sub>1-3</sub>alkyl; and</claim-text><claim-text>R<sub>3</sub> to R<sub>7</sub> are each independently hydrogen, halogen, cyano, nitro or C<sub>1-3</sub>haloalkyl.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The compound of claim 1, wherein R<sub>3</sub> to R<sub>7</sub> are each independently hydrogen, fluoro, chloro, bromo, iodo, cyano, nitro, difluoromethyl or trifluoromethyl.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The compound of claim 1, wherein R<sub>1</sub> and R<sub>2</sub> are each independently hydrogen or methyl; R<sub>3</sub> to R<sub>7</sub> are each independently hydrogen, fluoro, chloro, cyano or trifluoromethyl; and R<sub>8</sub> is hydrogen or fluoro.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>The compound of claim 1, wherein the compound of formula (I) is selected from the group consisting of:
+<claim-text>1) 1-(2,6-dichloro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-urea;</claim-text><claim-text>2) 1-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-3-(2-trifluoromethyl-phenyl)-urea;</claim-text><claim-text>3) 1-(2,6-difluoro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl} -urea;</claim-text><claim-text>4) 1-(2-chloro-6-fluoro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-urea;</claim-text><claim-text>5) 1-(2,6-bis-trifluoromethyl-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindo1-4-yl]-phenyl}-urea;</claim-text><claim-text>6) 1-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-3-(2-fluoro-6-trifluoromethyl-phenyl)-urea;</claim-text><claim-text>7) 1-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-3-(2,4,6-trifluoro-phenyl)-urea;</claim-text><claim-text>8) 1-(2,6-difluoro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-1-methyl-urea;</claim-text><claim-text>9) 1-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-3-pentafluorophenyl-urea;</claim-text><claim-text>10) 1-(2,5-difluorophenyl)-3-(3-fluoro-4-(7-(5-methyl-1H-imidazol-2-yl)-1-oxoisoindolin-4-yl)phenyl)urea;</claim-text><claim-text>11) 1-(2,4-difluoro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-urea;</claim-text><claim-text>12) 1-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-3-(2,3,6-trifluoro-phenyl)-urea;</claim-text><claim-text>13) 1-(3,5-difluoro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-urea;</claim-text><claim-text>14) 1-(3,4-difluoro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-urea;</claim-text><claim-text>15) 1-(4-cyano-3-fluorophenyl)-3-(3-fluoro-4-(7-(5-methyl-1H-imidazol-2-yl)-1-oxoisoindolin-4-yl)phenyl)urea;</claim-text><claim-text>16) 1-(4-chloro-3-(trifluoromethyl)phenyl)-3-(3-fluoro-4-(7-(5-methyl-1H-imidazol-2-yl)-1-oxoisoindolin-4-yl)phenyl)urea;</claim-text><claim-text>17) 1-(3-chloro-2,6-difluorophenyl)-3-(3-fluoro-4-(7-(5-methyl-1H-imidazol-2-yl)-1-oxoisoindolin-4-yl)phenyl)urea;</claim-text><claim-text>18) 1-(2-chloro-3,6-difluorophenyl)-3-(3-fluoro-4-(7-(5-methyl-1H-imidazol-2-yl)-1-oxoisoindolin-4-yl)phenyl)urea;</claim-text><claim-text>19) 1-(4-chloro-2,6-difluoro-phenyl)-3-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-urea; and</claim-text><claim-text>20) 1-{3-fluoro-4-[7-(5-methyl-1H-imidazol-2-yl)-1-oxo-2,3-dihydro-1H-isoindol-4-yl]-phenyl}-3-(2,3,5,6-tetrafluoro-phenyl)-urea.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>The compound of claim 1, wherein the isomers are enantiomer, diastereomer or racemic mixture.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>A pharmaceutical composition comprising the compound of any one of claims 1 to 5 as an active ingredient for the treatment, relief or prevention of diseases caused by abnormal or uncontrolled activation of protein kinase.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>The pharmaceutical composition of claim 6, wherein said protein kinase is ABL, ACK, AXL, Aurora, BLK, BMX, BTK, CDK, CSK, DDR, EPHA, FER, FES, FGFR, FGR, FLT, FRK, FYN, HCK, IRR, ITK, JAK, KDR, KIT, LCK, LYN, MAPK, MER, MET, MINK, MNK, MST, MUSK, PDGFR, PLK, RET, RON, SRC, SRM, TIE, SYK, TNK1, TRK or TNIK.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>The pharmaceutical composition of claim 6, wherein the diseases caused by abnormal or uncontrolled activation of protein kinase are cancer, inflammation associated with rheumatoid arthritis and osteoarthritis, asthma, allergy, atopic dermatitis, or psoriasis.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>The pharmaceutical composition of claim 8, wherein the cancer is lymphoma, leukemia, blood cancer, stomach cancer, non-small cell lung cancer, liver cancer, colorectal cancer, small bowel cancer, pancreatic cancer, brain cancer, bone cancer, melanoma, breast cancer, sclerosing adenosis, uterine cancer, cervical cancer, ovarian cancer, head and neck cancer, esophageal cancer, thyroid cancer, parathyroid cancer, kidney cancer, sarcoma, prostate cancer, urethral cancer, bladder cancer, fibroadenoma, or glioblastoma.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>The pharmaceutical composition of claim 6, which further comprises at least one additive selected from the group consisting of antibiotic, alkylating agent, antimetabolite, hormonal agent, immunological agent, interferon-type agent and anticancer agent.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>A method for the treatment, relief or prevention of diseases caused by abnormal or uncontrolled activation of protein kinase in a mammal, comprising administering to the mammal the compound of any one of claims 1 to 5.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>A use of the compound of any one of claims 1 to 5 for the manufacture of a medicament for the treatment, relief or prevention of diseases caused by abnormal or uncontrolled of protein kinase.</claim-text>
+    </claim>
+  </claims>
+  <drawings>
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2940014A1_00001.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0001.tif" inline="yes" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2940014A1_00002.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0002.tif" inline="yes" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP2940014A1_00003.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0003.tif" inline="yes" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="EP2940014A1_00004.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0004.tif" inline="yes" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="EP2940014A1_00005.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0005.tif" inline="yes" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="EP2940014A1_00006.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0006.tif" inline="yes" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="EP2940014A1_00007.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0007.tif" inline="yes" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="EP2940014A1_00008.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0008.tif" inline="yes" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="EP2940014A1_00009.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0009.tif" inline="yes" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="EP2940014A1_00010.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0010.tif" inline="yes" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="EP2940014A1_00011.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0011.tif" inline="yes" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="EP2940014A1_00012.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0012.tif" inline="yes" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="EP2940014A1_00013.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0013.tif" inline="yes" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="EP2940014A1_00014.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0014.tif" inline="yes" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="EP2940014A1_00015.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0015.tif" inline="yes" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="EP2940014A1_00016.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0016.tif" inline="yes" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="EP2940014A1_00017.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0017.tif" inline="yes" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="EP2940014A1_00018.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0018.tif" inline="yes" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="EP2940014A1_00019.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0019.tif" inline="yes" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="EP2940014A1_00020.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0020.tif" inline="yes" />
+    </figure>
+    <figure num="21">
+      <img he="N/A" wi="N/A" file="EP2940014A1_00021.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0021.tif" inline="yes" />
+    </figure>
+    <figure num="22">
+      <img he="N/A" wi="N/A" file="EP2940014A1_00022.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0022.tif" inline="yes" />
+    </figure>
+    <figure num="23">
+      <img he="N/A" wi="N/A" file="EP2940014A1_00023.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0023.tif" inline="yes" />
+    </figure>
+    <figure num="24">
+      <img he="N/A" wi="N/A" file="EP2940014A1_00024.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0024.tif" inline="yes" />
+    </figure>
+    <figure num="25">
+      <img he="N/A" wi="N/A" file="EP2940014A1_00025.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0025.tif" inline="yes" />
+    </figure>
+    <figure num="26">
+      <img he="N/A" wi="N/A" file="EP2940014A1_00026.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0026.tif" inline="yes" />
+    </figure>
+    <figure num="27">
+      <img he="N/A" wi="N/A" file="EP2940014A1_00027.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0027.tif" inline="yes" />
+    </figure>
+    <figure num="28">
+      <img he="N/A" wi="N/A" file="EP2940014A1_00028.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0028.tif" inline="yes" />
+    </figure>
+    <figure num="29">
+      <img he="N/A" wi="N/A" file="EP2940014A1_00029.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0029.tif" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="EP2940014A1.PDF" type="pdf" size="535408" pages="28" />
+</lexisnexis-patent-document>

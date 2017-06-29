@@ -1,0 +1,3213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2017 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20170321" file="US5953635A.xml" produced-by="LexisNexis-Univentio" lang="eng" date-changed="20170321" time-changed="131908">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Grant" publ-desc="Patent">
+      <document-id id="39340026">
+        <country>US</country>
+        <doc-number>5953635</doc-number>
+        <kind>A</kind>
+        <date>19990914</date>
+      </document-id>
+      <document-id data-format="original">
+        <doc-number>5953635</doc-number>
+        <kind>A</kind>
+      </document-id>
+      <document-id data-format="docdb">
+        <doc-number>5953635</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>US5953635</doc-number>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id id="34972216">
+        <country>US</country>
+        <doc-number>08772012</doc-number>
+        <date>19961219</date>
+      </document-id>
+      <document-id data-format="original">
+        <country>US</country>
+        <doc-number>08772012</doc-number>
+        <date>19961219</date>
+      </document-id>
+      <document-id data-format="docdb" id="53359614">
+        <doc-number>77201296</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>US19960772012</doc-number>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>US</country>
+        <doc-number>77201296</doc-number>
+        <date>19961219</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>US19960772012</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20090329">
+      <unexamined-printed-without-grant>
+        <date>19990914</date>
+      </unexamined-printed-without-grant>
+      <printed-with-grant>
+        <date>19990914</date>
+      </printed-with-grant>
+    </dates-of-public-availability>
+    <classification-ipc date-changed="20121205">
+      <main-classification>
+        <text> 6H 01L  21/302  A</text>
+        <edition>6</edition>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>21</main-group>
+        <subgroup>302</subgroup>
+        <qualifying-character>A</qualifying-character>
+      </main-classification>
+      <further-classification sequence="1">
+        <text> 6H 01L  21/463  B</text>
+        <edition>6</edition>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>21</main-group>
+        <subgroup>463</subgroup>
+        <qualifying-character>B</qualifying-character>
+      </further-classification>
+    </classification-ipc>
+    <classifications-ipcr date-changed="20121205">
+      <classification-ipcr sequence="1">
+        <text>H01L  21/3105      20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>21</main-group>
+        <subgroup>3105</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>H01L  21/768       20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>21</main-group>
+        <subgroup>768</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20121205">
+      <classification-cpc sequence="1">
+        <text>H01L  21/31053     20130101  I20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>21</main-group>
+        <subgroup>31053</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>H01L  21/31055     20130101  I20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>21</main-group>
+        <subgroup>31055</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>H01L  21/76819     20130101  I20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>21</main-group>
+        <subgroup>76819</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <classification-national date-changed="20121205">
+      <country>US</country>
+      <main-classification>
+        <text>438/761</text>
+        <class>438</class>
+        <subclass>761</subclass>
+      </main-classification>
+      <further-classification sequence="1">
+        <text>257/E21.244</text>
+        <class>257</class>
+        <subclass>E21.244</subclass>
+      </further-classification>
+      <further-classification sequence="2">
+        <text>257/E21.245</text>
+        <class>257</class>
+        <subclass>E21.245</subclass>
+      </further-classification>
+      <further-classification sequence="3">
+        <text>257/E21.58</text>
+        <class>257</class>
+        <subclass>E21.58</subclass>
+      </further-classification>
+      <further-classification sequence="4">
+        <text>438/624</text>
+        <class>438</class>
+        <subclass>624</subclass>
+      </further-classification>
+      <further-classification sequence="5">
+        <text>438/626</text>
+        <class>438</class>
+        <subclass>626</subclass>
+      </further-classification>
+      <further-classification sequence="6">
+        <text>438/633</text>
+        <class>438</class>
+        <subclass>633</subclass>
+      </further-classification>
+      <further-classification sequence="7">
+        <text>438/637</text>
+        <class>438</class>
+        <subclass>637</subclass>
+      </further-classification>
+      <further-classification sequence="8">
+        <text>438/780</text>
+        <class>438</class>
+        <subclass>780</subclass>
+      </further-classification>
+      <further-classification sequence="9">
+        <text>438/789</text>
+        <class>438</class>
+        <subclass>789</subclass>
+      </further-classification>
+    </classification-national>
+    <classifications-ecla date-changed="20121205">
+      <classification-ecla sequence="1" classification-scheme="EC" country="EP">
+        <text>H01L 21/3105B2</text>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>21</main-group>
+        <subgroup>3105</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">B  </additional-subgroup>
+          <additional-subgroup sequence="2">2  </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+      <classification-ecla sequence="2" classification-scheme="EC" country="EP">
+        <text>H01L 21/3105B2B</text>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>21</main-group>
+        <subgroup>3105</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">B  </additional-subgroup>
+          <additional-subgroup sequence="2">2  </additional-subgroup>
+          <additional-subgroup sequence="3">B  </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+      <classification-ecla sequence="3" classification-scheme="EC" country="EP">
+        <text>H01L 21/768B4</text>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>21</main-group>
+        <subgroup>768</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">B  </additional-subgroup>
+          <additional-subgroup sequence="2">4  </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+    </classifications-ecla>
+    <number-of-claims calculated="yes">9</number-of-claims>
+    <invention-title id="title_eng" date-changed="20070521" lang="eng" format="original">Interlayer dielectric with a composite dielectric stack</invention-title>
+    <references-cited date-changed="20170221">
+      <patent-citations name="patcit" date-changed="20120706" />
+      <non-patent-citations name="nplcit" date-changed="20090329" />
+      <forward-citations name="fwdcit" date-changed="20170221" />
+      <citation srep-phase="0">
+        <patcit num="1" dnum="US4966865A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4966865</doc-number>
+            <kind>A</kind>
+            <date>19901030</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>4966865</doc-number>
+            <kind>A</kind>
+            <date>19901030</date>
+          </document-id>
+          <application-date>
+            <date>19880916</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="0">
+        <patcit num="2" dnum="US5064683A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5064683</doc-number>
+            <kind>A</kind>
+            <date>19911112</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>5064683</doc-number>
+            <kind>A</kind>
+            <date>19911112</date>
+          </document-id>
+          <application-date>
+            <date>19901029</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="0">
+        <patcit num="3" dnum="US5188987A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5188987</doc-number>
+            <kind>A</kind>
+            <date>19930223</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>5188987</doc-number>
+            <kind>A</kind>
+            <date>19930223</date>
+          </document-id>
+          <application-date>
+            <date>19910612</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="0">
+        <patcit num="4" dnum="US5244837A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5244837</doc-number>
+            <kind>A</kind>
+            <date>19930914</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>5244837</doc-number>
+            <kind>A</kind>
+            <date>19930914</date>
+          </document-id>
+          <application-date>
+            <date>19930319</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="0">
+        <patcit num="5" dnum="US5268330A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5268330</doc-number>
+            <kind>A</kind>
+            <date>19931207</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>5268330</doc-number>
+            <kind>A</kind>
+            <date>19931207</date>
+          </document-id>
+          <application-date>
+            <date>19921211</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="0">
+        <patcit num="6" dnum="US5270264A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5270264</doc-number>
+            <kind>A</kind>
+            <date>19931214</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>5270264</doc-number>
+            <kind>A</kind>
+            <date>19931214</date>
+          </document-id>
+          <application-date>
+            <date>19920721</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="0">
+        <patcit num="7" dnum="US5340370A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5340370</doc-number>
+            <kind>A</kind>
+            <date>19940823</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>5340370</doc-number>
+            <kind>A</kind>
+            <date>19940823</date>
+          </document-id>
+          <application-date>
+            <date>19931103</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="0">
+        <patcit num="8" dnum="US5457073A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5457073</doc-number>
+            <kind>A</kind>
+            <date>19951010</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>5457073</doc-number>
+            <kind>A</kind>
+            <date>19951010</date>
+          </document-id>
+          <application-date>
+            <date>19930430</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="0">
+        <patcit num="9" dnum="US5496774A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5496774</doc-number>
+            <kind>A</kind>
+            <date>19960305</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>5496774</doc-number>
+            <kind>A</kind>
+            <date>19960305</date>
+          </document-id>
+          <application-date>
+            <date>19941221</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="0">
+        <patcit num="10" dnum="US5510652A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5510652</doc-number>
+            <kind>A</kind>
+            <date>19960423</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>5510652</doc-number>
+            <kind>A</kind>
+            <date>19960423</date>
+          </document-id>
+          <application-date>
+            <date>19941006</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="0">
+        <patcit num="11" dnum="US5670410A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5670410</doc-number>
+            <kind>A</kind>
+            <date>19970923</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>5670410</doc-number>
+            <kind>A</kind>
+            <date>19970923</date>
+          </document-id>
+          <application-date>
+            <date>19960925</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="0">
+        <patcit num="12" dnum="US5763305A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5763305</doc-number>
+            <kind>A</kind>
+            <date>19980609</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>5763305</doc-number>
+            <kind>A</kind>
+            <date>19980609</date>
+          </document-id>
+          <application-date>
+            <date>19970116</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="0">
+        <patcit num="13" dnum="US5773361A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5773361</doc-number>
+            <kind>A</kind>
+            <date>19980630</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>5773361</doc-number>
+            <kind>A</kind>
+            <date>19980630</date>
+          </document-id>
+          <application-date>
+            <date>19961106</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="0">
+        <patcit num="14" dnum="US5858876A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5858876</doc-number>
+            <kind>A</kind>
+            <date>19990112</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>5858876</doc-number>
+            <kind>A</kind>
+            <date>19990112</date>
+          </document-id>
+          <application-date>
+            <date>19960401</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="0">
+        <nplcit num="1">
+          <text>Stanley Wolf, Silicon Processing for the VLSI ERA, vol. 2, p. 196, 1990.</text>
+        </nplcit>
+      </citation>
+      <citation srep-phase="0">
+        <nplcit num="2">
+          <text>Stanley Wolf, Silicon Processing for the VLSI ERA, vol. 1, pp. 166 191) 1990.</text>
+        </nplcit>
+      </citation>
+      <citation srep-phase="0">
+        <nplcit num="3">
+          <text>Stanley Wolf, Silicon Processing for the VLSI ERA, vol. 2:Process Integration, 1990.</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <fwdcit num="1">
+          <document-id>
+            <country>US</country>
+            <doc-number>7163896</doc-number>
+            <kind>B1</kind>
+            <date>20070116</date>
+          </document-id>
+          <application-date>
+            <date>20031210</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="2">
+          <document-id>
+            <country>US</country>
+            <doc-number>7205240</doc-number>
+            <kind>B2</kind>
+            <date>20070417</date>
+          </document-id>
+          <application-date>
+            <date>20030604</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="3">
+          <document-id>
+            <country>US</country>
+            <doc-number>7196021</doc-number>
+            <kind>B2</kind>
+            <date>20070327</date>
+          </document-id>
+          <application-date>
+            <date>20050330</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="4">
+          <document-id>
+            <country>US</country>
+            <doc-number>7183227</doc-number>
+            <kind>B1</kind>
+            <date>20070227</date>
+          </document-id>
+          <application-date>
+            <date>20040701</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="5">
+          <document-id>
+            <country>US</country>
+            <doc-number>7176039</doc-number>
+            <kind>B1</kind>
+            <date>20070213</date>
+          </document-id>
+          <application-date>
+            <date>20040921</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="6">
+          <document-id>
+            <country>US</country>
+            <doc-number>7595088</doc-number>
+            <kind>B2</kind>
+            <date>20090929</date>
+          </document-id>
+          <application-date>
+            <date>20040810</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="7">
+          <document-id>
+            <country>US</country>
+            <doc-number>7628897</doc-number>
+            <kind>B2</kind>
+            <date>20091208</date>
+          </document-id>
+          <application-date>
+            <date>20030912</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="8">
+          <document-id>
+            <country>US</country>
+            <doc-number>7678715</doc-number>
+            <kind>B2</kind>
+            <date>20100316</date>
+          </document-id>
+          <application-date>
+            <date>20071221</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="9">
+          <document-id>
+            <country>US</country>
+            <doc-number>7524750</doc-number>
+            <kind>B2</kind>
+            <date>20090428</date>
+          </document-id>
+          <application-date>
+            <date>20061027</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="10">
+          <document-id>
+            <country>US</country>
+            <doc-number>7476621</doc-number>
+            <kind>B1</kind>
+            <date>20090113</date>
+          </document-id>
+          <application-date>
+            <date>20060301</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="11">
+          <document-id>
+            <country>US</country>
+            <doc-number>7482245</doc-number>
+            <kind>B1</kind>
+            <date>20090127</date>
+          </document-id>
+          <application-date>
+            <date>20060620</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="12">
+          <document-id>
+            <country>US</country>
+            <doc-number>7455893</doc-number>
+            <kind>B2</kind>
+            <date>20081125</date>
+          </document-id>
+          <application-date>
+            <date>20061011</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="13">
+          <document-id>
+            <country>US</country>
+            <doc-number>7381451</doc-number>
+            <kind>B1</kind>
+            <date>20080603</date>
+          </document-id>
+          <application-date>
+            <date>20041117</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="14">
+          <document-id>
+            <country>US</country>
+            <doc-number>7399707</doc-number>
+            <kind>B2</kind>
+            <date>20080715</date>
+          </document-id>
+          <application-date>
+            <date>20050113</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="15">
+          <document-id>
+            <country>US</country>
+            <doc-number>7329586</doc-number>
+            <kind>B2</kind>
+            <date>20080212</date>
+          </document-id>
+          <application-date>
+            <date>20050624</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="16">
+          <document-id>
+            <country>US</country>
+            <doc-number>7344996</doc-number>
+            <kind>B1</kind>
+            <date>20080318</date>
+          </document-id>
+          <application-date>
+            <date>20050622</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="17">
+          <document-id>
+            <country>US</country>
+            <doc-number>7211525</doc-number>
+            <kind>B1</kind>
+            <date>20070501</date>
+          </document-id>
+          <application-date>
+            <date>20050316</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="18">
+          <document-id>
+            <country>US</country>
+            <doc-number>7217658</doc-number>
+            <kind>B1</kind>
+            <date>20070515</date>
+          </document-id>
+          <application-date>
+            <date>20040907</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="19">
+          <document-id>
+            <country>US</country>
+            <doc-number>7229931</doc-number>
+            <kind>B2</kind>
+            <date>20070612</date>
+          </document-id>
+          <application-date>
+            <date>20040616</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="20">
+          <document-id>
+            <country>US</country>
+            <doc-number>7081414</doc-number>
+            <kind>B2</kind>
+            <date>20060725</date>
+          </document-id>
+          <application-date>
+            <date>20030523</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="21">
+          <document-id>
+            <country>US</country>
+            <doc-number>7078312</doc-number>
+            <kind>B1</kind>
+            <date>20060718</date>
+          </document-id>
+          <application-date>
+            <date>20030902</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="22">
+          <document-id>
+            <country>US</country>
+            <doc-number>7087536</doc-number>
+            <kind>B2</kind>
+            <date>20060808</date>
+          </document-id>
+          <application-date>
+            <date>20040901</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="23">
+          <document-id>
+            <country>US</country>
+            <doc-number>7122485</doc-number>
+            <kind>B1</kind>
+            <date>20061017</date>
+          </document-id>
+          <application-date>
+            <date>20021209</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="24">
+          <document-id>
+            <country>US</country>
+            <doc-number>7132134</doc-number>
+            <kind>B2</kind>
+            <date>20061107</date>
+          </document-id>
+          <application-date>
+            <date>20040910</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="25">
+          <document-id>
+            <country>US</country>
+            <doc-number>7049211</doc-number>
+            <kind>B2</kind>
+            <date>20060523</date>
+          </document-id>
+          <application-date>
+            <date>20050325</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="26">
+          <document-id>
+            <country>US</country>
+            <doc-number>7052552</doc-number>
+            <kind>B2</kind>
+            <date>20060530</date>
+          </document-id>
+          <application-date>
+            <date>20010802</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="27">
+          <document-id>
+            <country>US</country>
+            <doc-number>7067440</doc-number>
+            <kind>B1</kind>
+            <date>20060627</date>
+          </document-id>
+          <application-date>
+            <date>20040713</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="28">
+          <document-id>
+            <country>US</country>
+            <doc-number>6929700</doc-number>
+            <kind>B2</kind>
+            <date>20050816</date>
+          </document-id>
+          <application-date>
+            <date>20030325</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="29">
+          <document-id>
+            <country>US</country>
+            <doc-number>6958112</doc-number>
+            <kind>B2</kind>
+            <date>20051025</date>
+          </document-id>
+          <application-date>
+            <date>20030527</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="30">
+          <document-id>
+            <country>US</country>
+            <doc-number>6890813</doc-number>
+            <kind>B2</kind>
+            <date>20050510</date>
+          </document-id>
+          <application-date>
+            <date>20030106</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="31">
+          <document-id>
+            <country>US</country>
+            <doc-number>6903031</doc-number>
+            <kind>B2</kind>
+            <date>20050607</date>
+          </document-id>
+          <application-date>
+            <date>20030903</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="32">
+          <document-id>
+            <country>US</country>
+            <doc-number>6869880</doc-number>
+            <kind>B2</kind>
+            <date>20050322</date>
+          </document-id>
+          <application-date>
+            <date>20020124</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="33">
+          <document-id>
+            <country>US</country>
+            <doc-number>7691753</doc-number>
+            <kind>B2</kind>
+            <date>20100406</date>
+          </document-id>
+          <application-date>
+            <date>20060605</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="34">
+          <document-id>
+            <country>US</country>
+            <doc-number>6908862</doc-number>
+            <kind>B2</kind>
+            <date>20050621</date>
+          </document-id>
+          <application-date>
+            <date>20020503</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="35">
+          <document-id>
+            <country>US</country>
+            <doc-number>6908361</doc-number>
+            <kind>B2</kind>
+            <date>20050621</date>
+          </document-id>
+          <application-date>
+            <date>20020910</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="36">
+          <document-id>
+            <country>US</country>
+            <doc-number>6794290</doc-number>
+            <kind>B1</kind>
+            <date>20040921</date>
+          </document-id>
+          <application-date>
+            <date>20011203</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="37">
+          <document-id>
+            <country>US</country>
+            <doc-number>6802944</doc-number>
+            <kind>B2</kind>
+            <date>20041012</date>
+          </document-id>
+          <application-date>
+            <date>20021023</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="38">
+          <document-id>
+            <country>US</country>
+            <doc-number>6821577</doc-number>
+            <kind>B2</kind>
+            <date>20041123</date>
+          </document-id>
+          <application-date>
+            <date>20020904</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="39">
+          <document-id>
+            <country>US</country>
+            <doc-number>6479385</doc-number>
+            <kind>B1</kind>
+            <date>20021112</date>
+          </document-id>
+          <application-date>
+            <date>20000531</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="40">
+          <document-id>
+            <country>US</country>
+            <doc-number>6426285</doc-number>
+            <kind>B1</kind>
+            <date>20020730</date>
+          </document-id>
+          <application-date>
+            <date>19991103</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="41">
+          <document-id>
+            <country>US</country>
+            <doc-number>6455891</doc-number>
+            <kind>B2</kind>
+            <date>20020924</date>
+          </document-id>
+          <application-date>
+            <date>20010301</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="42">
+          <document-id>
+            <country>US</country>
+            <doc-number>6335261</doc-number>
+            <kind>B1</kind>
+            <date>20020101</date>
+          </document-id>
+          <application-date>
+            <date>20000531</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="43">
+          <document-id>
+            <country>US</country>
+            <doc-number>6413846</doc-number>
+            <kind>B1</kind>
+            <date>20020702</date>
+          </document-id>
+          <application-date>
+            <date>20001114</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="44">
+          <document-id>
+            <country>US</country>
+            <doc-number>6346486</doc-number>
+            <kind>B2</kind>
+            <date>20020212</date>
+          </document-id>
+          <application-date>
+            <date>19990421</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="45">
+          <document-id>
+            <country>US</country>
+            <doc-number>6174802</doc-number>
+            <kind>B1</kind>
+            <date>20010116</date>
+          </document-id>
+          <application-date>
+            <date>19990628</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="46">
+          <document-id>
+            <country>US</country>
+            <doc-number>7799698</doc-number>
+            <kind>B2</kind>
+            <date>20100921</date>
+          </document-id>
+          <application-date>
+            <date>20060605</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="47">
+          <document-id>
+            <country>US</country>
+            <doc-number>7939422</doc-number>
+            <kind>B2</kind>
+            <date>20110510</date>
+          </document-id>
+          <application-date>
+            <date>20071129</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="48">
+          <document-id>
+            <country>US</country>
+            <doc-number>8133797</doc-number>
+            <kind>B2</kind>
+            <date>20120313</date>
+          </document-id>
+          <application-date>
+            <date>20080516</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="49">
+          <document-id>
+            <country>US</country>
+            <doc-number>6140224</doc-number>
+            <kind>A</kind>
+            <date>20001031</date>
+          </document-id>
+          <application-date>
+            <date>19990419</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="50">
+          <document-id>
+            <country>US</country>
+            <doc-number>8414747</doc-number>
+            <kind>B2</kind>
+            <date>20130409</date>
+          </document-id>
+          <application-date>
+            <date>20071116</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="51">
+          <document-id>
+            <country>US</country>
+            <doc-number>6150260</doc-number>
+            <kind>A</kind>
+            <date>20001121</date>
+          </document-id>
+          <application-date>
+            <date>19980706</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="52">
+          <document-id>
+            <country>US</country>
+            <doc-number>8497211</doc-number>
+            <kind>B2</kind>
+            <date>20130730</date>
+          </document-id>
+          <application-date>
+            <date>20120606</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="53">
+          <document-id>
+            <country>US</country>
+            <doc-number>8679982</doc-number>
+            <kind>B2</kind>
+            <date>20140325</date>
+          </document-id>
+          <application-date>
+            <date>20120418</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="54">
+          <document-id>
+            <country>US</country>
+            <doc-number>8679983</doc-number>
+            <kind>B2</kind>
+            <date>20140325</date>
+          </document-id>
+          <application-date>
+            <date>20120418</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="55">
+          <document-id>
+            <country>US</country>
+            <doc-number>8686536</doc-number>
+            <kind>B2</kind>
+            <date>20140401</date>
+          </document-id>
+          <application-date>
+            <date>20100430</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="56">
+          <document-id>
+            <country>US</country>
+            <doc-number>8741778</doc-number>
+            <kind>B2</kind>
+            <date>20140603</date>
+          </document-id>
+          <application-date>
+            <date>20110803</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="57">
+          <document-id>
+            <country>US</country>
+            <doc-number>8765574</doc-number>
+            <kind>B2</kind>
+            <date>20140701</date>
+          </document-id>
+          <application-date>
+            <date>20130315</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="58">
+          <document-id>
+            <country>US</country>
+            <doc-number>8771536</doc-number>
+            <kind>B2</kind>
+            <date>20140708</date>
+          </document-id>
+          <application-date>
+            <date>20111024</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="59">
+          <document-id>
+            <country>US</country>
+            <doc-number>8771539</doc-number>
+            <kind>B2</kind>
+            <date>20140708</date>
+          </document-id>
+          <application-date>
+            <date>20110914</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="60">
+          <document-id>
+            <country>US</country>
+            <doc-number>8801952</doc-number>
+            <kind>B1</kind>
+            <date>20140812</date>
+          </document-id>
+          <application-date>
+            <date>20130603</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="61">
+          <document-id>
+            <country>US</country>
+            <doc-number>8808563</doc-number>
+            <kind>B2</kind>
+            <date>20140819</date>
+          </document-id>
+          <application-date>
+            <date>20120404</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="62">
+          <document-id>
+            <country>US</country>
+            <doc-number>6093637</doc-number>
+            <kind>A</kind>
+            <date>20000725</date>
+          </document-id>
+          <application-date>
+            <date>19971008</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="63">
+          <document-id>
+            <country>US</country>
+            <doc-number>8895449</doc-number>
+            <kind>B1</kind>
+            <date>20141125</date>
+          </document-id>
+          <application-date>
+            <date>20130814</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="64">
+          <document-id>
+            <country>US</country>
+            <doc-number>8921234</doc-number>
+            <kind>B2</kind>
+            <date>20141230</date>
+          </document-id>
+          <application-date>
+            <date>20130308</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="65">
+          <document-id>
+            <country>US</country>
+            <doc-number>8927390</doc-number>
+            <kind>B2</kind>
+            <date>20150106</date>
+          </document-id>
+          <application-date>
+            <date>20120921</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="66">
+          <document-id>
+            <country>US</country>
+            <doc-number>8951429</doc-number>
+            <kind>B1</kind>
+            <date>20150210</date>
+          </document-id>
+          <application-date>
+            <date>20131220</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="67">
+          <document-id>
+            <country>US</country>
+            <doc-number>8956980</doc-number>
+            <kind>B1</kind>
+            <date>20150217</date>
+          </document-id>
+          <application-date>
+            <date>20131125</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="68">
+          <document-id>
+            <country>US</country>
+            <doc-number>8969212</doc-number>
+            <kind>B2</kind>
+            <date>20150303</date>
+          </document-id>
+          <application-date>
+            <date>20130315</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="69">
+          <document-id>
+            <country>US</country>
+            <doc-number>8975152</doc-number>
+            <kind>B2</kind>
+            <date>20150310</date>
+          </document-id>
+          <application-date>
+            <date>20121105</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="70">
+          <document-id>
+            <country>US</country>
+            <doc-number>8980763</doc-number>
+            <kind>B2</kind>
+            <date>20150317</date>
+          </document-id>
+          <application-date>
+            <date>20130315</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="71">
+          <document-id>
+            <country>US</country>
+            <doc-number>8999856</doc-number>
+            <kind>B2</kind>
+            <date>20150407</date>
+          </document-id>
+          <application-date>
+            <date>20120309</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="72">
+          <document-id>
+            <country>US</country>
+            <doc-number>9012302</doc-number>
+            <kind>B2</kind>
+            <date>20150421</date>
+          </document-id>
+          <application-date>
+            <date>20140911</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="73">
+          <document-id>
+            <country>US</country>
+            <doc-number>9018108</doc-number>
+            <kind>B2</kind>
+            <date>20150428</date>
+          </document-id>
+          <application-date>
+            <date>20130315</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="74">
+          <document-id>
+            <country>US</country>
+            <doc-number>9023732</doc-number>
+            <kind>B2</kind>
+            <date>20150505</date>
+          </document-id>
+          <application-date>
+            <date>20140407</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="75">
+          <document-id>
+            <country>US</country>
+            <doc-number>9023734</doc-number>
+            <kind>B2</kind>
+            <date>20150505</date>
+          </document-id>
+          <application-date>
+            <date>20130315</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="76">
+          <document-id>
+            <country>US</country>
+            <doc-number>9034770</doc-number>
+            <kind>B2</kind>
+            <date>20150519</date>
+          </document-id>
+          <application-date>
+            <date>20130315</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="77">
+          <document-id>
+            <country>US</country>
+            <doc-number>9040422</doc-number>
+            <kind>B2</kind>
+            <date>20150526</date>
+          </document-id>
+          <application-date>
+            <date>20130603</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="78">
+          <document-id>
+            <country>US</country>
+            <doc-number>20030003244</doc-number>
+            <kind>A1</kind>
+            <date>20030102</date>
+          </document-id>
+          <application-date>
+            <date>20020904</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="79">
+          <document-id>
+            <country>US</country>
+            <doc-number>20030136332</doc-number>
+            <kind>A1</kind>
+            <date>20030724</date>
+          </document-id>
+          <application-date>
+            <date>20020124</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="80">
+          <document-id>
+            <country>US</country>
+            <doc-number>20030159656</doc-number>
+            <kind>A1</kind>
+            <date>20030828</date>
+          </document-id>
+          <application-date>
+            <date>20030325</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="81">
+          <document-id>
+            <country>US</country>
+            <doc-number>20030207580</doc-number>
+            <kind>A1</kind>
+            <date>20031106</date>
+          </document-id>
+          <application-date>
+            <date>20020503</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="82">
+          <document-id>
+            <country>US</country>
+            <doc-number>9064815</doc-number>
+            <kind>B2</kind>
+            <date>20150623</date>
+          </document-id>
+          <application-date>
+            <date>20120309</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="83">
+          <document-id>
+            <country>US</country>
+            <doc-number>9064816</doc-number>
+            <kind>B2</kind>
+            <date>20150623</date>
+          </document-id>
+          <application-date>
+            <date>20130315</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="84">
+          <document-id>
+            <country>US</country>
+            <doc-number>20040048480</doc-number>
+            <kind>A1</kind>
+            <date>20040311</date>
+          </document-id>
+          <application-date>
+            <date>20020910</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="85">
+          <document-id>
+            <country>US</country>
+            <doc-number>20040079632</doc-number>
+            <kind>A1</kind>
+            <date>20040429</date>
+          </document-id>
+          <application-date>
+            <date>20021023</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="86">
+          <document-id>
+            <country>US</country>
+            <doc-number>20040079728</doc-number>
+            <kind>A1</kind>
+            <date>20040429</date>
+          </document-id>
+          <application-date>
+            <date>20030912</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="87">
+          <document-id>
+            <country>US</country>
+            <doc-number>20040132285</doc-number>
+            <kind>A1</kind>
+            <date>20040708</date>
+          </document-id>
+          <application-date>
+            <date>20030106</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="88">
+          <document-id>
+            <country>US</country>
+            <doc-number>20040241342</doc-number>
+            <kind>A1</kind>
+            <date>20041202</date>
+          </document-id>
+          <application-date>
+            <date>20030527</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="89">
+          <document-id>
+            <country>US</country>
+            <doc-number>20040251236</doc-number>
+            <kind>A1</kind>
+            <date>20041216</date>
+          </document-id>
+          <application-date>
+            <date>20030523</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="90">
+          <document-id>
+            <country>US</country>
+            <doc-number>20050008790</doc-number>
+            <kind>A1</kind>
+            <date>20050113</date>
+          </document-id>
+          <application-date>
+            <date>20040810</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="91">
+          <document-id>
+            <country>US</country>
+            <doc-number>20050032382</doc-number>
+            <kind>A1</kind>
+            <date>20050210</date>
+          </document-id>
+          <application-date>
+            <date>20040910</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="92">
+          <document-id>
+            <country>US</country>
+            <doc-number>9093371</doc-number>
+            <kind>B2</kind>
+            <date>20150728</date>
+          </document-id>
+          <application-date>
+            <date>20140407</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="93">
+          <document-id>
+            <country>US</country>
+            <doc-number>9093390</doc-number>
+            <kind>B2</kind>
+            <date>20150728</date>
+          </document-id>
+          <application-date>
+            <date>20140625</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="94">
+          <document-id>
+            <country>US</country>
+            <doc-number>20050048801</doc-number>
+            <kind>A1</kind>
+            <date>20050303</date>
+          </document-id>
+          <application-date>
+            <date>20030903</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="95">
+          <document-id>
+            <country>US</country>
+            <doc-number>20050124166</doc-number>
+            <kind>A1</kind>
+            <date>20050609</date>
+          </document-id>
+          <application-date>
+            <date>20050113</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="96">
+          <document-id>
+            <country>US</country>
+            <doc-number>20050183960</doc-number>
+            <kind>A1</kind>
+            <date>20050825</date>
+          </document-id>
+          <application-date>
+            <date>20050421</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="97">
+          <document-id>
+            <country>US</country>
+            <doc-number>9111877</doc-number>
+            <kind>B2</kind>
+            <date>20150818</date>
+          </document-id>
+          <application-date>
+            <date>20130308</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="98">
+          <document-id>
+            <country>US</country>
+            <doc-number>6162686</doc-number>
+            <kind>A</kind>
+            <date>20001219</date>
+          </document-id>
+          <application-date>
+            <date>19980918</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="99">
+          <document-id>
+            <country>US</country>
+            <doc-number>20050260356</doc-number>
+            <kind>A1</kind>
+            <date>20051124</date>
+          </document-id>
+          <application-date>
+            <date>20040518</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="100">
+          <document-id>
+            <country>US</country>
+            <doc-number>9117855</doc-number>
+            <kind>B2</kind>
+            <date>20150825</date>
+          </document-id>
+          <application-date>
+            <date>20140331</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="101">
+          <document-id>
+            <country>US</country>
+            <doc-number>9114438</doc-number>
+            <kind>B2</kind>
+            <date>20150825</date>
+          </document-id>
+          <application-date>
+            <date>20130821</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="102">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060154494</doc-number>
+            <kind>A1</kind>
+            <date>20060713</date>
+          </document-id>
+          <application-date>
+            <date>20050108</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="103">
+          <document-id>
+            <country>US</country>
+            <doc-number>9132436</doc-number>
+            <kind>B2</kind>
+            <date>20150915</date>
+          </document-id>
+          <application-date>
+            <date>20130313</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="104">
+          <document-id>
+            <country>US</country>
+            <doc-number>9136273</doc-number>
+            <kind>B1</kind>
+            <date>20150915</date>
+          </document-id>
+          <application-date>
+            <date>20140321</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="105">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060228886</doc-number>
+            <kind>A1</kind>
+            <date>20061012</date>
+          </document-id>
+          <application-date>
+            <date>20060605</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="106">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060286764</doc-number>
+            <kind>A1</kind>
+            <date>20061221</date>
+          </document-id>
+          <application-date>
+            <date>20060605</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="107">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060292894</doc-number>
+            <kind>A1</kind>
+            <date>20061228</date>
+          </document-id>
+          <application-date>
+            <date>20050624</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="108">
+          <document-id>
+            <country>US</country>
+            <doc-number>20070071908</doc-number>
+            <kind>A1</kind>
+            <date>20070329</date>
+          </document-id>
+          <application-date>
+            <date>20061011</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="109">
+          <document-id>
+            <country>US</country>
+            <doc-number>9153442</doc-number>
+            <kind>B2</kind>
+            <date>20151006</date>
+          </document-id>
+          <application-date>
+            <date>20140408</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="110">
+          <document-id>
+            <country>US</country>
+            <doc-number>9159606</doc-number>
+            <kind>B1</kind>
+            <date>20151013</date>
+          </document-id>
+          <application-date>
+            <date>20140731</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="111">
+          <document-id>
+            <country>US</country>
+            <doc-number>9165786</doc-number>
+            <kind>B1</kind>
+            <date>20151020</date>
+          </document-id>
+          <application-date>
+            <date>20140805</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="112">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080142483</doc-number>
+            <kind>A1</kind>
+            <date>20080619</date>
+          </document-id>
+          <application-date>
+            <date>20071129</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="113">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080182382</doc-number>
+            <kind>A1</kind>
+            <date>20080731</date>
+          </document-id>
+          <application-date>
+            <date>20071129</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="114">
+          <document-id>
+            <country>US</country>
+            <doc-number>9184055</doc-number>
+            <kind>B2</kind>
+            <date>20151110</date>
+          </document-id>
+          <application-date>
+            <date>20140407</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="115">
+          <document-id>
+            <country>US</country>
+            <doc-number>9190293</doc-number>
+            <kind>B2</kind>
+            <date>20151117</date>
+          </document-id>
+          <application-date>
+            <date>20140317</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="116">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090286381</doc-number>
+            <kind>A1</kind>
+            <date>20091119</date>
+          </document-id>
+          <application-date>
+            <date>20080516</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="117">
+          <document-id>
+            <country>US</country>
+            <doc-number>20100090751</doc-number>
+            <kind>A1</kind>
+            <date>20100415</date>
+          </document-id>
+          <application-date>
+            <date>20091214</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="118">
+          <document-id>
+            <country>US</country>
+            <doc-number>20110151676</doc-number>
+            <kind>A1</kind>
+            <date>20110623</date>
+          </document-id>
+          <application-date>
+            <date>20110303</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="119">
+          <document-id>
+            <country>US</country>
+            <doc-number>9209012</doc-number>
+            <kind>B2</kind>
+            <date>20151208</date>
+          </document-id>
+          <application-date>
+            <date>20140908</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="120">
+          <document-id>
+            <country>US</country>
+            <doc-number>20110101493</doc-number>
+            <kind>A1</kind>
+            <date>20110505</date>
+          </document-id>
+          <application-date>
+            <date>20100430</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="121">
+          <document-id>
+            <country>US</country>
+            <doc-number>9236265</doc-number>
+            <kind>B2</kind>
+            <date>20160112</date>
+          </document-id>
+          <application-date>
+            <date>20140505</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="122">
+          <document-id>
+            <country>US</country>
+            <doc-number>9236266</doc-number>
+            <kind>B2</kind>
+            <date>20160112</date>
+          </document-id>
+          <application-date>
+            <date>20140527</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="123">
+          <document-id>
+            <country>US</country>
+            <doc-number>9245762</doc-number>
+            <kind>B2</kind>
+            <date>20160126</date>
+          </document-id>
+          <application-date>
+            <date>20140512</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="124">
+          <document-id>
+            <country>US</country>
+            <doc-number>6159841</doc-number>
+            <kind>A</kind>
+            <date>20001212</date>
+          </document-id>
+          <application-date>
+            <date>19990308</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="125">
+          <document-id>
+            <country>US</country>
+            <doc-number>9263278</doc-number>
+            <kind>B2</kind>
+            <date>20160216</date>
+          </document-id>
+          <application-date>
+            <date>20140331</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="126">
+          <document-id>
+            <country>US</country>
+            <doc-number>9269590</doc-number>
+            <kind>B2</kind>
+            <date>20160223</date>
+          </document-id>
+          <application-date>
+            <date>20140407</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="127">
+          <document-id>
+            <country>US</country>
+            <doc-number>9287095</doc-number>
+            <kind>B2</kind>
+            <date>20160315</date>
+          </document-id>
+          <application-date>
+            <date>20131217</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="128">
+          <document-id>
+            <country>US</country>
+            <doc-number>9287134</doc-number>
+            <kind>B2</kind>
+            <date>20160315</date>
+          </document-id>
+          <application-date>
+            <date>20140117</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="129">
+          <document-id>
+            <country>US</country>
+            <doc-number>9293568</doc-number>
+            <kind>B2</kind>
+            <date>20160322</date>
+          </document-id>
+          <application-date>
+            <date>20140127</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="130">
+          <document-id>
+            <country>US</country>
+            <doc-number>9299575</doc-number>
+            <kind>B2</kind>
+            <date>20160329</date>
+          </document-id>
+          <application-date>
+            <date>20140317</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="131">
+          <document-id>
+            <country>US</country>
+            <doc-number>9299582</doc-number>
+            <kind>B2</kind>
+            <date>20160329</date>
+          </document-id>
+          <application-date>
+            <date>20141013</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="132">
+          <document-id>
+            <country>US</country>
+            <doc-number>9299583</doc-number>
+            <kind>B1</kind>
+            <date>20160329</date>
+          </document-id>
+          <application-date>
+            <date>20141205</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="133">
+          <document-id>
+            <country>US</country>
+            <doc-number>9299537</doc-number>
+            <kind>B2</kind>
+            <date>20160329</date>
+          </document-id>
+          <application-date>
+            <date>20140320</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="134">
+          <document-id>
+            <country>US</country>
+            <doc-number>9299538</doc-number>
+            <kind>B2</kind>
+            <date>20160329</date>
+          </document-id>
+          <application-date>
+            <date>20140320</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="135">
+          <document-id>
+            <country>US</country>
+            <doc-number>9309598</doc-number>
+            <kind>B2</kind>
+            <date>20160412</date>
+          </document-id>
+          <application-date>
+            <date>20140528</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="136">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090108401</doc-number>
+            <kind>A1</kind>
+            <date>20090430</date>
+          </document-id>
+          <application-date>
+            <date>20071026</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="137">
+          <document-id>
+            <country>US</country>
+            <doc-number>9324576</doc-number>
+            <kind>B2</kind>
+            <date>20160426</date>
+          </document-id>
+          <application-date>
+            <date>20110418</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="138">
+          <document-id>
+            <country>US</country>
+            <doc-number>9331057</doc-number>
+            <kind>B2</kind>
+            <date>20160503</date>
+          </document-id>
+          <application-date>
+            <date>20071026</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="139">
+          <document-id>
+            <country>US</country>
+            <doc-number>9343272</doc-number>
+            <kind>B1</kind>
+            <date>20160517</date>
+          </document-id>
+          <application-date>
+            <date>20150108</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="140">
+          <document-id>
+            <country>US</country>
+            <doc-number>9349605</doc-number>
+            <kind>B1</kind>
+            <date>20160524</date>
+          </document-id>
+          <application-date>
+            <date>20150807</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="141">
+          <document-id>
+            <country>US</country>
+            <doc-number>9355856</doc-number>
+            <kind>B2</kind>
+            <date>20160531</date>
+          </document-id>
+          <application-date>
+            <date>20140912</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="142">
+          <document-id>
+            <country>US</country>
+            <doc-number>9355862</doc-number>
+            <kind>B2</kind>
+            <date>20160531</date>
+          </document-id>
+          <application-date>
+            <date>20141117</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="143">
+          <document-id>
+            <country>US</country>
+            <doc-number>9355863</doc-number>
+            <kind>B2</kind>
+            <date>20160531</date>
+          </document-id>
+          <application-date>
+            <date>20150817</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="144">
+          <document-id>
+            <country>US</country>
+            <doc-number>9362130</doc-number>
+            <kind>B2</kind>
+            <date>20160607</date>
+          </document-id>
+          <application-date>
+            <date>20140221</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="145">
+          <document-id>
+            <country>US</country>
+            <doc-number>9368364</doc-number>
+            <kind>B2</kind>
+            <date>20160614</date>
+          </document-id>
+          <application-date>
+            <date>20141210</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="146">
+          <document-id>
+            <country>US</country>
+            <doc-number>9373517</doc-number>
+            <kind>B2</kind>
+            <date>20160621</date>
+          </document-id>
+          <application-date>
+            <date>20130314</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="147">
+          <document-id>
+            <country>US</country>
+            <doc-number>9373522</doc-number>
+            <kind>B1</kind>
+            <date>20160621</date>
+          </document-id>
+          <application-date>
+            <date>20150122</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="148">
+          <document-id>
+            <country>US</country>
+            <doc-number>9378969</doc-number>
+            <kind>B2</kind>
+            <date>20160628</date>
+          </document-id>
+          <application-date>
+            <date>20140619</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="149">
+          <document-id>
+            <country>US</country>
+            <doc-number>9378978</doc-number>
+            <kind>B2</kind>
+            <date>20160628</date>
+          </document-id>
+          <application-date>
+            <date>20140731</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="150">
+          <document-id>
+            <country>US</country>
+            <doc-number>9385028</doc-number>
+            <kind>B2</kind>
+            <date>20160705</date>
+          </document-id>
+          <application-date>
+            <date>20140203</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="151">
+          <document-id>
+            <country>US</country>
+            <doc-number>9384997</doc-number>
+            <kind>B2</kind>
+            <date>20160705</date>
+          </document-id>
+          <application-date>
+            <date>20150122</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="152">
+          <document-id>
+            <country>US</country>
+            <doc-number>9390937</doc-number>
+            <kind>B2</kind>
+            <date>20160712</date>
+          </document-id>
+          <application-date>
+            <date>20130315</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="153">
+          <document-id>
+            <country>US</country>
+            <doc-number>9396989</doc-number>
+            <kind>B2</kind>
+            <date>20160719</date>
+          </document-id>
+          <application-date>
+            <date>20140127</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="154">
+          <document-id>
+            <country>US</country>
+            <doc-number>9401183</doc-number>
+            <kind>B2</kind>
+            <date>20160726</date>
+          </document-id>
+          <application-date>
+            <date>20090317</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="155">
+          <document-id>
+            <country>US</country>
+            <doc-number>9406523</doc-number>
+            <kind>B2</kind>
+            <date>20160802</date>
+          </document-id>
+          <application-date>
+            <date>20140619</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="156">
+          <document-id>
+            <country>US</country>
+            <doc-number>9412608</doc-number>
+            <kind>B2</kind>
+            <date>20160809</date>
+          </document-id>
+          <application-date>
+            <date>20150209</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="157">
+          <document-id>
+            <country>US</country>
+            <doc-number>9418858</doc-number>
+            <kind>B2</kind>
+            <date>20160816</date>
+          </document-id>
+          <application-date>
+            <date>20140625</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="158">
+          <document-id>
+            <country>US</country>
+            <doc-number>9425058</doc-number>
+            <kind>B2</kind>
+            <date>20160823</date>
+          </document-id>
+          <application-date>
+            <date>20140724</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="159">
+          <document-id>
+            <country>US</country>
+            <doc-number>9437451</doc-number>
+            <kind>B2</kind>
+            <date>20160906</date>
+          </document-id>
+          <application-date>
+            <date>20150504</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="160">
+          <document-id>
+            <country>US</country>
+            <doc-number>9449845</doc-number>
+            <kind>B2</kind>
+            <date>20160920</date>
+          </document-id>
+          <application-date>
+            <date>20141229</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="161">
+          <document-id>
+            <country>US</country>
+            <doc-number>9449846</doc-number>
+            <kind>B2</kind>
+            <date>20160920</date>
+          </document-id>
+          <application-date>
+            <date>20150128</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="162">
+          <document-id>
+            <country>US</country>
+            <doc-number>9449850</doc-number>
+            <kind>B2</kind>
+            <date>20160920</date>
+          </document-id>
+          <application-date>
+            <date>20150504</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="163">
+          <document-id>
+            <country>US</country>
+            <doc-number>9472412</doc-number>
+            <kind>B2</kind>
+            <date>20161018</date>
+          </document-id>
+          <application-date>
+            <date>20151203</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="164">
+          <document-id>
+            <country>US</country>
+            <doc-number>9472417</doc-number>
+            <kind>B2</kind>
+            <date>20161018</date>
+          </document-id>
+          <application-date>
+            <date>20141014</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="165">
+          <document-id>
+            <country>US</country>
+            <doc-number>9478432</doc-number>
+            <kind>B2</kind>
+            <date>20161025</date>
+          </document-id>
+          <application-date>
+            <date>20141114</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="166">
+          <document-id>
+            <country>US</country>
+            <doc-number>9478434</doc-number>
+            <kind>B2</kind>
+            <date>20161025</date>
+          </document-id>
+          <application-date>
+            <date>20141117</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="167">
+          <document-id>
+            <country>US</country>
+            <doc-number>9493879</doc-number>
+            <kind>B2</kind>
+            <date>20161115</date>
+          </document-id>
+          <application-date>
+            <date>20131001</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="168">
+          <document-id>
+            <country>US</country>
+            <doc-number>9496167</doc-number>
+            <kind>B2</kind>
+            <date>20161115</date>
+          </document-id>
+          <application-date>
+            <date>20140731</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="169">
+          <document-id>
+            <country>US</country>
+            <doc-number>9499898</doc-number>
+            <kind>B2</kind>
+            <date>20161122</date>
+          </document-id>
+          <application-date>
+            <date>20140303</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="170">
+          <document-id>
+            <country>US</country>
+            <doc-number>9502258</doc-number>
+            <kind>B2</kind>
+            <date>20161122</date>
+          </document-id>
+          <application-date>
+            <date>20141223</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="171">
+          <document-id>
+            <country>US</country>
+            <doc-number>9520303</doc-number>
+            <kind>B2</kind>
+            <date>20161213</date>
+          </document-id>
+          <application-date>
+            <date>20140814</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="172">
+          <document-id>
+            <country>US</country>
+            <doc-number>9553102</doc-number>
+            <kind>B2</kind>
+            <date>20170124</date>
+          </document-id>
+          <application-date>
+            <date>20140819</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="173">
+          <document-id>
+            <country>US</country>
+            <doc-number>9564296</doc-number>
+            <kind>B2</kind>
+            <date>20170207</date>
+          </document-id>
+          <application-date>
+            <date>20160308</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="174">
+          <document-id>
+            <country>US</country>
+            <doc-number>9576809</doc-number>
+            <kind>B2</kind>
+            <date>20170221</date>
+          </document-id>
+          <application-date>
+            <date>20140505</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20120706">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>INTEL CORPORATION</orgname>
+            <address>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant sequence="1" app-type="applicant" data-format="docdb">
+          <addressbook lang="eng">
+            <orgname>INTEL CORP</orgname>
+            <address>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant sequence="1" app-type="applicant" data-format="docdba">
+          <addressbook lang="eng">
+            <orgname>INTEL CORPORATION</orgname>
+            <address>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>ANDIDEH; EBRAHIM</name>
+            <address>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="1" data-format="docdb">
+          <addressbook lang="eng">
+            <name>ANDIDEH EBRAHIM</name>
+            <address>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="1" data-format="docdba">
+          <addressbook lang="eng">
+            <name>ANDIDEH; EBRAHIM</name>
+            <address>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Blakely, Sokoloff, Taylor &amp; Zafman</name>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <examiners>
+      <primary-examiner>
+        <name>Chaudhari; Chandra</name>
+      </primary-examiner>
+      <assistant-examiner>
+        <name>Nguyen; Thanh</name>
+      </assistant-examiner>
+    </examiners>
+    <patent-family date-changed="20080724">
+      <main-family family-id="112529310">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>5953635</doc-number>
+            <kind>A</kind>
+            <date>19990914</date>
+          </document-id>
+          <application-date>
+            <date>19961219</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="112529157">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>5953635</doc-number>
+            <kind>A</kind>
+            <date>19990914</date>
+          </document-id>
+          <application-date>
+            <date>19961219</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>6191050</doc-number>
+            <kind>B1</kind>
+            <date>20010220</date>
+          </document-id>
+          <application-date>
+            <date>19990504</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20010000012</doc-number>
+            <kind>A1</kind>
+            <date>20010315</date>
+          </document-id>
+          <application-date>
+            <date>20001129</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>6437444</doc-number>
+            <kind>B2</kind>
+            <date>20020820</date>
+          </document-id>
+          <application-date>
+            <date>20001129</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20120706" lang="eng" format="original">
+    <p>A method of forming an interlayer dielectric on a semiconductor device is disclosed. First, a phosphorous doped oxide layer is deposited on the semiconductor device to fill gaps and provide phosphorous for gettering. Then, an undoped oxide layer is deposited and planarized using chemical mechanical polishing (CMP). The undoped oxide layer is denser than the phosphorous doped oxide layer, so the undoped oxide layer can be polished more uniformly than the phosphorous doped oxide layer and can serve as a polish stop for a subsequent tungsten plug polish. Also, the denser undoped oxide layer serves as a more effective moisture barrier than the doped oxide layer. Overall fabrication process complexity can be reduced by performing both oxide depositions in a single operation with no intervening densification or CMP steps.</p>
+  </abstract>
+  <legal-data date-changed="20170304">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>19961219</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     5953635A </docdb-publication-number>
+      <docdb-application-id>53359614</docdb-application-id>
+      <new-owner>INTEL CORPORATION, CALIFORNIA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:ANDIDEH, EBRAHIM;REEL/FRAME:008375/0825</free-text-description>
+      <effective-date>
+        <date>19961213</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20030318</date>
+      </publication-date>
+      <event-code-1>CC</event-code-1>
+      <legal-description>CERTIFICATE OF CORRECTION</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     5953635A </docdb-publication-number>
+      <docdb-application-id>53359614</docdb-application-id>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20030327</date>
+      </publication-date>
+      <event-code-1>FPAY</event-code-1>
+      <effect>+</effect>
+      <legal-description>FEE PAYMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     5953635A </docdb-publication-number>
+      <docdb-application-id>53359614</docdb-application-id>
+      <fee-payment-year>4</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="4">
+      <publication-date>
+        <date>20030327</date>
+      </publication-date>
+      <event-code-1>SULP</event-code-1>
+      <effect>+</effect>
+      <legal-description>SURCHARGE FOR LATE PAYMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     5953635A </docdb-publication-number>
+      <docdb-application-id>53359614</docdb-application-id>
+    </legal-event>
+    <legal-event sequence="5">
+      <publication-date>
+        <date>20030402</date>
+      </publication-date>
+      <event-code-1>REMI</event-code-1>
+      <legal-description>MAINTENANCE FEE REMINDER MAILED</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     5953635A </docdb-publication-number>
+      <docdb-application-id>53359614</docdb-application-id>
+    </legal-event>
+    <legal-event sequence="6">
+      <publication-date>
+        <date>20070309</date>
+      </publication-date>
+      <event-code-1>FPAY</event-code-1>
+      <effect>+</effect>
+      <legal-description>FEE PAYMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     5953635A </docdb-publication-number>
+      <docdb-application-id>53359614</docdb-application-id>
+      <fee-payment-year>8</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="7">
+      <publication-date>
+        <date>20110310</date>
+      </publication-date>
+      <event-code-1>FPAY</event-code-1>
+      <effect>+</effect>
+      <legal-description>FEE PAYMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     5953635A </docdb-publication-number>
+      <docdb-application-id>53359614</docdb-application-id>
+      <fee-payment-year>12</fee-payment-year>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20070521">
+    <summary>
+      <p>The present invention relates to the field of semiconductor processing and more particularly to a method of forming an interlayer dielectric in an integrated circuit.</p>
+      <p>One prior method of forming an interlayer dielectric (ILD) in an integrated circuit, described in the pending U.S. patent application entitled "Capped Interlayer Dielectric for Chemical Mechanical Polishing", with Ser. No. 08/536,007 and assigned to the present assignee, is illustrated in FIGS. 1a through 1h. FIG. 1a is an illustration of a cross sectional view of semiconductor devices 100 formed on silicon substrate 101 and isolated from each other by field oxide region 102.</p>
+      <p>FIG. 1b shows the substrate of FIG. 1a covered by phosphosilicate glass (PSG) 103, or alternatively, a borophosphosilicate glass layer. PSG layer 103 is formed with a conventional deposition technique that exhibits superior gap filling ability, such as atmospheric or subatmospheric chemical vapor deposition.</p>
+      <p>As shown in FIG. 1b, the top surface 104 of PSG layer 103 is nonplanar due to the underlying topography created by devices 100 and filed oxide regions 102. Therefore, the top surface 104 of PSG layer 103 is planarized by chemical mechanical polishing (CMP) to create planar top surface 105 of PSG layer 103 as shown in FIG. 1c. Since CMP removes denser layers slower than less dense layers, PSG layer 103 is densified prior to the CMP step to reduce the removal rate, thereby increasing process controllability. Also, the thickness of PSG layer 103 as deposited is much greater than the post CMP thickness to provide a large margin for variation in the CMP process. Typical thicknesses of PSG layer 103 are 18,000 A as deposited and 4,500 A post CMP.</p>
+      <p>FIG. 1d shows the substrate of FIG. 1c after cap layer 106 is deposited over planarized PSG layer 103. Cap layer 106 is an undoped oxide layer formed by plasma enhanced chemical vapor deposition with tetraethyl orthosilicate as the silicon source. Cap layer 106 is denser than PSG layer 103, which allows cap layer 106 to serve as moisture barrier and a polish stop for a subsequent tungsten CMP step involved in forming tungsten plugs. Also, cap layer 106 is thinner than PSG layer 103, approximately 2,000 A compared to 4,500 A.</p>
+      <p>FIG. 1e shows the substrate of FIG. 1d after openings 107 have been formed through cap layer 106 and PSG layer 103 to prepare for making electrical contact to underlying devices 100. FIG. 1f shows the substrate of FIG. 1e after plug layer 108 has been deposited, filling openings 107. Plug layer 108 is tungsten over a composite adhesion layer of titanium nitride over titanium. FIG. 1g shows the substrate of FIG. 1f after plug layer 108 has been polished to form plugs 109. Finally, FIG. 1h shows the substrate of FIG. 1g after metal interconnects 110 are formed on cap layer 106.</p>
+      <p>Although this prior method of forming a PSG ILD is compatible with a CMP plug process, the ILD process is more complex than that of a single layer ILD. Therefore, what is desired is a less complex method for forming a PSG ILD layer that is compatible with a CMP plug process.</p>
+      <p>A method of forming an interlayer dielectric on a semiconductor device is disclosed. First, an insulating layer comprising phosphorous is deposited on the semiconductor device. Then, another insulating layer which is denser than the first insulating layer is deposited. Finally, the planarity of the second insulating layer is increased using chemical mechanical polishing.</p>
+    </summary>
+    <description-of-drawings>
+      <heading>BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p>FIG. 1a is an illustration of a cross sectional view of a semiconductor devices on a silicon substrate.</p>
+      <p>FIG. 1b shows the substrate of FIG. 1a after deposition of a PSG layer.</p>
+      <p>FIG. 1c shows the substrate of FIG. 1b after planarization.</p>
+      <p>FIG. 1d shows the substrate of FIG. 1c after deposition of a cap layer.</p>
+      <p>FIG. 1e shows the substrate of FIG. 1d after openings have been formed in the cap and PSG layers.</p>
+      <p>FIG. 1f shows the substrate of FIG. 1e after deposition of a plug layer.</p>
+      <p>FIG. 1g shows the substrate of FIG. 1f after after plugs have been formed by polishing the plug layer.</p>
+      <p>FIG. 1h shows the substrate of FIG. 1g after interconnects have been formed.</p>
+      <p>FIG. 2 is an illustration of a cross sectional view of of high density integrated circuit containing interconnected semiconductor devices with the interconnect layer isolated from the device layer by an ILD formed with one embodiment of the present invention.</p>
+      <p>FIG. 3 is an illustration of a cross sectional view of semiconductor devices on a silicon substrate.</p>
+      <p>FIG. 4 shows the substrate of FIG. 3 after a bottom insulating layer has been formed according to one embodiment of the present invention.</p>
+      <p>FIG. 5a depicts the undesired effect of a bottom insulating layer that is too thin.</p>
+      <p>FIG. 5b depicts the desired effect of a bottom insulating layer that is sufficiently thick.</p>
+      <p>FIG. 6a depicts the gap filling ability of an SACVD film.</p>
+      <p>FIG. 6b depicts the gap filling ability of a PECVD film.</p>
+      <p>FIG. 6c shows a void formed because of the inferior gap filling ability of a PECVD film.</p>
+      <p>FIG. 6d shows the substrate of FIG. 6b after an argon sputter etch.</p>
+      <p>FIG. 7 shows the substrate of FIG. 4 after a top insulating layer has been formed according to one embodiment of the present invention.</p>
+      <p>FIG. 8 shows the substrate of FIG. 7 after CMP of the top insulating layer according to one embodiment of the present invention.</p>
+      <p>FIG. 9 shows the substrate of FIG. 8 after openings have been formed through the top and bottom insulating layers.</p>
+      <p>FIG. 10 shows the substrate of FIG. 9 after the openings have been filled by a blanket deposition of a plug layer.</p>
+      <p>FIG. 11 shows the substrate of FIG. 10 after CMP of the plug layer.</p>
+      <p>FIG. 12 shows the substrate of FIG. 11 after the formation of interconnects.</p>
+      <p>FIG. 13 shows the substrate of FIG. 12 after an ILD has been formed to isolate two levels of interconnects.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading>DETAILED DESCRIPTION OF A PREFERRED EMBODIMENT</heading>
+      <p>A method of forming an interlayer dielectric (ILD) on a semiconductor device is described. In the following description, numerous specific details are set forth in order to provide a thorough understanding of the present invention. It will be obvious, however, to one skilled in the art that the present invention can be practiced without these specific details. In other instances, some details have been omitted in order to avoid obscuring the present invention.</p>
+      <p>FIG. 2 is an illustration of a cross sectional view of a high density integrated circuit having a semiconductor device layer isolated from an interconnect layer by an ILD formed with one embodiment of the present invention. Semiconductor devices 200 on silicon substrate 201 are isolated from each other by field oxide region 202. ILD 203 lies above devices 200 and below interconnect 204. Plugs 205 penetrate ILD 203 to provide electrical contact between devices 200 and interconnects 204.</p>
+      <p>Two layers of insulating material form ILD 203. Bottom insulating layer 206 is doped with phosphorous to getter moisture and mobile ions from the vicinity of devices 200. Top insulating layer 207 is denser than bottom insulating layer 206 to allow top layer 207 to serve as an etch stop during a chemical mechanical polish (CMP) step in which plugs 205 are formed. No CMP step is needed between the deposition of the bottom insulating layer and the top insulating layer, providing a number of possibilities for decreasing process complexity. First, the step of densifying the bottom insulating layer can be eliminated. Second, the two ILD layers can be deposited in the same equipment without removal from the equipment for an intervening CMP step. Third, instead of planarizing the bottom insulating layer with a unique CMP process, the top insulating layer can be planarized with the same CMP process that is used for other ILDs within the same fabrication flow.</p>
+      <p>One fabrication process embodying the present invention is illustrated in FIGS. 3 through 12. This process description begins after semiconductor devices 300 have been formed on a semiconductor substrate 301 as shown in FIG. 3. In this illustration devices 300 are metal oxide semiconductor transistors isolated from each other by field oxide regions 302. However, substrate 301 may contain other completed or partially completed active or passive devices such as, but not limited to, bipolar transistors, thin film transistors, capacitors, and resistors. Also, the present invention can be used to isolate one interconnect layer from another, in which case semiconductor devices 300 would already be covered with at least one insulating layer and at least one interconnect layer at the point at which this process description begins. If desired, the device layer can be covered with a thin (less than 2,000 A) layer of silicon nitride (Si.sub.3 N.sub.4) to block moisture and dopants from reaching the devices.</p>
+      <p>The first step in this exemplary process is the formation of bottom insulating layer 400 shown in FIG. 4. Bottom insulating layer is doped with phosphorous to getter moisture and mobile ions in the vicinity of the devices. For that purpose the preferred amount of phosphorous is at least one percent by weight. However, excess phosphorous can lead to the formation of phosphoric acid which can cause corrosion. Therefore, the preferred amount of phosphorous is at most eight percent by weight. Bottom insulating layer 400 can also be doped with boron if desired, to exploit the tendency of boron doped films to fill narrow gaps between devices better than films without boron.</p>
+      <p>Bottom insulating layer 400 is thick enough to provide enough phosphorous to effectively getter moisture and mobile ions. Bottom insulating layer 400 is also thick enough to fill narrow gaps between devices to an extent such that the subsequent deposition of a nonconformal top insulating layer will not result in the formation of voids. This criteria is illustrated in FIGS. 5a and 5b. FIG. 5a shows the undesired effect of a bottom insulating layer 500 that is too thin to prevent the nonconformal deposition of top insulating layer 501 from forming void 502. Void 502 is undesirable because it can serve as a pocket for moisture and contaminants, and can provide a seam in which subsequent etch steps can proceed uncontrollably in an undesired direction. FIG. 5b shows the desired effect of a bottom insulating layer 503 that is sufficiently thick to fill the gap to an extent that the nonconformal deposition of top insulating layer 504 does not form a void. The requisite thickness of bottom insulating layer 502 depends on the width 505 of the gap and the depth 506 of the gap. To sufficiently fill gaps with widths and heights of approximately one micron, the preferred thickness of bottom insulating layer 400 is at least 100 A.</p>
+      <p>On the other hand, the preferred thickness of bottom insulating layer 400 is at most 5,000 A, primarily driven by the desire to capitalize on one advantage of the present invention, that is, the elimination of the CMP of bottom layer 400 and the associated need to provide a large margin for variation in that CMP step. The ability to reduce the as deposited thickness of bottom insulating layer 400 reduces processing time, material cost, and potential for processing variation and error.</p>
+      <p>Bottom insulating layer 400 can be formed from any insulating material, such as an oxide. In one embodiment bottom insulating layer 400 is a phosphorous doped silicon dioxide (SiO.sub.2) film formed by any of a variety of well known chemical vapor deposition (CVD) techniques. These techniques include CVD using silane (SiH.sub.4) or tetraethyl orthosilicate (TEOS) as a silicon source, CVD at atmospheric or subatmospheric pressures, and CVD with reactions that are thermally or chemically activated or plasma enhanced. Some of the factors to consider in the selection of the deposition technique are the deposition rate and the gap filling ability, the quality, the adhesive ability, and the stress characteristics of the resulting film. One advantage of the present invention is that because there is no requirement that bottom insulating layer 400 be thick enough to provide margin for a CMP step, the factors of deposition rate and gap filling ability become less important, allowing more weight to be placed on the remaining factors.</p>
+      <p>For example, compare the gap filling ability of a thermally activated subatmospheric CVD (SACVD) film, as illustrated in FIG. 6a, to that of a plasma enhanced CVD (PECVD) film, as illustrated in FIG. 6b. If the inferior gap filling ability of a PECVD film causes void formation when the film thickness is 10,000 A, as shown in FIG. 6c, the advantages of a PECVD film, such as its superior quality, adhesive ability, and compressive stress characteristics cannot be realized. In contrast, the present invention allows for the use of a PECVD film because bottom insulating layer 400 can be thin enough such that the top of the gap is not closed, so that despite the breadloafing effect shown in FIG. 6b, voids are not formed. Advanced PECVD techniques such as dual frequency PECVD or high density plasma CVD techniques can be used to provide a denser, more conformal film with a lower dielectric constant.</p>
+      <p>To prevent the breadloafing effect as shown in FIG. 6b from causing voids to form in the subsequently deposited top insulating layer, a sputtering technique such as that described in U.S. Pat. No. 5,270,264, entitled "Process for Filling Submicron Spaces with Dielectric", can be used to remove some of the insulating material from the breadloaf edges and redeposit that material in the gap. For example, an argon sputter etch of the substrate illustrated in FIG. 6b, at a pressure between approximately 20 and 500 mTorr and a power between approximately 50 and 1000 W, can result in a redistribution of approximately 50 A to 500 A of the insulating layer material as illustrated in FIG. 6d. Although the use of a PECVD deposition for the bottom insulating layer adds this sputter step to the process flow, the overall process complexity can be reduced because the PECVD of the bottom insulating layer, the argon sputter, and the PECVD of a yet to be described top insulating layer can all be performed in a single operation, with each step taking place in a separate chamber of the same piece of equipment, for example an Applied Materials Precision 5000 (AMAT P5000) system.</p>
+      <p>Furthermore, by enabling the use of PECVD for bottom insulating layer 400, the present invention has the further advantage that it provides for the elimination of the densification step described in the background section. In other words, bottom insulating layer 400 can be undensified, meaning that it has not been subjected to a thermal process with the goal of driving out moisture. PECVD provides a drier oxide than atmospheric or subatmospheric CVD, therefore no densification step is needed to drive out moisture. In addition to reducing the process complexity, the elimination of the densification step removes a high temperature (typically 500 degrees C to 900 degrees C) operation from the process flow. Therefore, the present invention can be used to decrease device size and increase device performance by limiting junction depths, and can be used to form a dielectric above a metal such as aluminum or a silicide that cannot be subjected to a high temperature. Nevertheless, if a densification of bottom insulating layer 400 is desired, a densification step using well known techniques can be performed within the scope of the present invention. A preferred technique for densification of bottom insulating layer 400 is rapid thermal processing.</p>
+      <p>Continuing with the process flow of this embodiment, top insulating layer 700, as shown in FIG. 7, is formed directly on top of bottom insulating layer 400. Top insulating layer 700 differs from bottom insulating layer 400 in chemical composition and physical characteristics. First, while bottom insulating layer 400 is doped with phosphorous, there is no need to dope top insulating layer 700 with phosphorous because top insulating layer 700 is separated from devices 300 by bottom insulating layer 400 which comprises sufficient phosphorous for gettering. Second, to allow for the removal of a portion on top insulating layer 700 in a subsequent planarization step, top insulating layer 700 is thicker as deposited than bottom insulating layer 400. Therefore, compared to the prior method of having a thicker bottom insulating layer, with the present invention it is easier to achieve a net compressive stress when using a bottom layer, such as an SACVD oxide, that exerts a tensile stress. An ILD with a net compressive stress is desired because it is less likely to crack. Third, the material of top insulating layer 700 has a lower dielectric constant than that of bottom insulating layer 400 to reduce capacitive coupling within and between conductive layers. Since with the present invention bottom insulating layer 400 can be thin enough to allow a portion of the ILD material in the gaps between devices to be the lower dielectric constant material of top insulating layer 700, the present invention can allow for narrower gaps and reduced total area. Finally, top insulating layer 700 is denser than bottom insulating layer 400 so that top insulating layer 700 can serve as a polish stop for a subsequent plug formation process.</p>
+      <p>Within the chemical and physical constraints listed above, top insulating layer 700 can be any insulating material, such as an oxide. In a preferred embodiment top insulating layer 700 is an undoped silicon dioxide (SiO.sub.2) film formed by any conventional or advanced CVD technique. Advanced PECVD techniques such as dual frequency PECVD or high density plasma CVD can be used to provide a denser, more conformal film with a lower dielectric constant. In one embodiment, top insulating layer 700 is formed by TEOS based PECVD in one chamber of an AMAT P5000 after bottom insulating layer 400 has been deposited and sputter etched in the same system. In another embodiment, top insulating layer 700 is an oxide formed by conventional PECVD or high density plasma CVD, with fluorine incorporated to lower the dielectric constant.</p>
+      <p>The thickness of top insulating layer 700 depends on the height and width of gaps between the underlying devices. Top insulating layer 700 is deposited to be thick enough so that there is sufficient margin for a subsequent planarizing step, and so that it provides sufficient insulating strength after the planarizing step. However, top insulating layer 700 is not so thick as to preclude a manufacturable etch process from penetrating the ILD to form plug holes. Therefore, the preferred deposited thickness of top insulating layer 700 is between approximately 5,000 A and approximately 20,000 A.</p>
+      <p>As shown in FIG. 7, the top surface 701 of top insulating layer 700 is nonplanar due to the underlying topography created by devices 300 and field oxide regions 302. Such nonplanarity leads to processing problems such as poor resolution in subsequent lithography steps and poor step coverage of subsequent interconnect layers. Therefore, the next step in this exemplary process is performed to increase the planarity of the top surface of top insulating layer 700. In a preferred embodiment, a CMP process is used for this step because it results in a more global planarization than a reflow or etchback process. In one such CMP process, top insulating layer 700 is polished using a slurry containing a mixture of ceria and silica in a basic solution.</p>
+      <p>Performing CMP on top insulating layer 700 as in the present invention has two major advantages over performing CMP on a phosphorous doped atmospheric or subatmospheric CVD bottom insulating layer as in the prior method. First, top insulating layer 700 is denser than the phosphorous doped film, even if the phosphorous doped film has been densified. The polish rate of a denser film is slower, so the polish is more controllable and more uniform. Second, a typical multilevel metal process has additional CMP steps of ILD layers that are more similar in composition to top insulating layer 700 than to a phosphorous doped layer. Therefore, the CMP of the phosphorous doped layer of the previous method is likely to be a unique process step, whereas the CMP of top insulating layer 700 is likely to be a process step that can be used elsewhere in the same process.</p>
+      <p>FIG. 8 shows the substrate of FIG. 7 after completion of the CMP step. The top surface 800 of top insulating layer 700 is now substantially planar. Top insulating layer 700 is thick enough after CMP to provide sufficient insulating strength between conductive layers, but not so thick as to preclude a manufacturable etch process from penetrating the ILD to form plug holes. Therefore, the preferred thickness of top insulating layer 700 after CMP is between approximately 500 A and approximately 10,000 A.</p>
+      <p>Next, openings 900, as shown in FIG. 9, are formed through top insulating layer 700 and bottom insulating layer 400. Any well known method can be used to form openings 900, such as reactive ion etching with a freon based chemistry.</p>
+      <p>Then, as shown in FIG. 10, openings 900 are filled by a blanket deposition of plug layer 1000. Although plug layer 1000 can be formed with any conductive material, a preferred composition of plug layer 1000 is tungsten over a composite adhesion layer of titanium nitride over titanium. Tungsten is used because it can be formed very conformally allowing for the filling of high aspect ratio openings. The adhesion layer helps the tungsten adhere to top insulating layer 700. A preferred method of forming plug layer 1000 as described above is to first sputter deposit a thin layer (for example, approximately 200 A) of titanium over top insulating layer 700 and along the sidewalls and bottoms of openings 900, forming titanium layer 1001. Then, a thin layer (for example, approximately 600 A) of titanium nitride is sputter deposited over titanium layer 1001 to form titanium nitride layer 1002. Finally, an appropriate thickness (for example, approximately 4800 A) of tungsten is deposited by CVD to form tungsten layer 1003. Although exemplary thicknesses have been given, the actual desired thickness varies depending on process factors such as the dimensions of openings 900. Other plug layer materials and deposition methods can also be used if desired.</p>
+      <p>Next, plug layer 1000 is chemically mechanically polished to remove plug layer 1000 from the top surface of top insulating layer 700, thereby forming filled conductive openings, or plugs 1100 as shown in FIG. 11. For the composition of plug layer 1000 described above, a preferred CMP, as described in U.S. Pat. No. 5,340,370, entitled "Novel Slurries for Chemical Mechanical Polishing" and assigned to the present assignee, uses a slurry of approximately 1% to 25% silica, by weight, in approximately 0.01 to 0.3 molar potassium fericyanide for tungsten layer 1003, an approximately 9:1 water diluted version of that slurry for titanium nitride layer 1002, and a slurry of approximately 0.5% silica, by weight, in approximately 0.5 molar potassium fluoride.</p>
+      <p>During the CMP process of plug layer 1000 some areas will be cleared of plug layer 1000 before other areas because of local variations in film thicknesses, topography, and removal rate. To ensure complete removal of plug layer 1000, an overpolish is used during which substantial areas of the top surface of top insulating layer 700 are subject to the plug CMP process. Therefore, it is important that top insulating layer 700 polish at a rate significantly slower than the rate at which plug layer 1000 polishes. In this way, top insulating layer 700 serves as a polish stop to minimize thinning, dishing, or breakthrough of top insulating layer 700 during the overpolish. The requirement that top insulating layer 700 be denser than phosphorous doped bottom insulating layer 400 allows top insulating layer 700 to serve as an effective polish stop.</p>
+      <p>Finally, interconnects 1200, as shown in FIG. 12, are formed. Interconnects 1200 is formed by well known means, such as the blanket deposition of an adhesion layer and an aluminum layer over plugs 1100 and top insulating layer 700, followed by the photolithography and etching of the aluminum and adhesion layers. At this point, the interconnection of the semiconductor devices as shown in FIG. 2 is complete.</p>
+      <p>As previously described, one advantage of the present invention is that the CMP of top insulating layer 700 need not require a unique process step in a multilevel metal process. For example, as shown in FIG. 13, ILD 1300 isolates interconnects 1200 from interconnect 1301. ILD 1300 can be formed from any insulating material by using any conventional or advanced techniques. In a preferred embodiment ILD 1300 is formed from the same material as top insulating layer 700. The CMP process used to increase the planarity of top insulating layer 700 is also used to increase the planarity of ILD 1300.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20070521">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>1. A method of forming an interlayer dielectric on a semiconductor device, said method comprising the steps of: depositing a first insulating layer comprising phosphorous on said semiconductor device; sputter etching said first insulating layer to increase the conformality of said first insulating layer by redistributing a substantial amount of the material of said first insulating layer; depositing a second insulating layer directly on said first insulating layer, said second insulating layer being denser than said first insulating layer; and increasing the planarity of said second insulating layer using chemical mechanical polishing. </claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>2. The method of claim 1 wherein said first insulating layer is undensified. </claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>3. The method of claim 1 further comprising a step of depositing a layer of silicon nitride prior to the step of depositing said first insulating layer. </claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>4. A method of forming an interlayer dielectric between a layer of semiconductor devices and a layer of interconnects, said method comprising the steps of: depositing a first oxide layer comprising phosphorous using plasma enhanced chemical vapor deposition; sputter etching said first oxide layer to increase the conformality of said first oxide layer by redistributing a substantial amount of the material of said first oxide layer; depositing a second oxide layer directly on said first oxide layer using plasma enhanced chemical vapor deposition, said second oxide layer being denser than said first oxide layer; and increasing the planarity of said second oxide layer using chemical mechanical polishing. </claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>5. The method of claim 4 wherein said second oxide layer is undoped. </claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>6. The method of claim 4 further comprising a step of densifying said first oxide layer prior to the step of depositing said second oxide layer. </claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>7. The method of claim 4 wherein the thickness of said first oxide layer is less than 5,000 Angstroms and the thickness of said second oxide layer is greater than 5,000 Angstroms prior to the step of increasing the planarity of said second oxide layer. </claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>8. The method of claim 4 further comprising the steps of: forming an opening in said first and second oxide layers; depositing a conductive material into said opening and onto said second oxide layer; and polishing said conductive material from said second oxide layer to form a conductive filled opening. </claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>9. A method of forming an interlayer dielectric between a layer of semiconductor devices and a layer of interconnects, said method comprising the steps of: depositing a phosphorous doped layer with a thickness of less than 5,000 A using plasma enhanced chemical vapor deposition; sputter etching said phosphorous doped oxide layer to increase the conformality of said phosphorous doped oxide layer by redistributing a substantial amount of the material of said phosphorous doped oxide layer; depositing an undoped oxide layer with a thickness of greater than 5,000 A using plasma enhanced chemical vapor deposition, said undoped oxide layer being denser than said phosphorous doped oxide layer; increasing the planarity of said undoped oxide layer using chemical mechanical polishing; forming an opening in said undoped and phosphorous doped oxide layers; depositing a conductive material into said opening and onto said undoped oxide layer; and polishing said conductive material from said undoped oxide layer to form a conductive filled opening. </claim-text>
+    </claim>
+  </claims>
+  <drawings format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US5953635A_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="5953635A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US5953635A_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="5953635A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US5953635A_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="5953635A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US5953635A_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="5953635A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US5953635A_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="5953635A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US5953635A_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="5953635A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US5953635A_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="5953635A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US5953635A_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="5953635A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US5953635A_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="5953635A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US5953635A_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="5953635A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US5953635A_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="5953635A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US5953635A_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="5953635A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US5953635A_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="5953635A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US5953635A_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="5953635A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US5953635A_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="5953635A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US5953635A_00016.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="5953635A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US5953635A_00017.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="5953635A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US5953635A_00018.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="5953635A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="US5953635A_00019.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="5953635A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="US5953635A_00020.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="5953635A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="21">
+      <img he="N/A" wi="N/A" file="US5953635A_00021.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="5953635A.TC.SD.P0001.D0001.png" />
+    </figure>
+    <figure num="22">
+      <img he="N/A" wi="N/A" file="US5953635A_00022.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="5953635A.TC.SD.P0001.D0001.png" />
+    </figure>
+  </drawings>
+  <image file="US5953635A.PDF" type="pdf" size="275640" pages="26" />
+</lexisnexis-patent-document>

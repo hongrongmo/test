@@ -1,0 +1,2024 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2017 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20170321" file="US6476374B1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-changed="20170321" time-changed="114425">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Grant" publ-desc="Patent without a pre-grant publication">
+      <document-id id="39223318">
+        <country>US</country>
+        <doc-number>6476374</doc-number>
+        <kind>B1</kind>
+        <date>20021105</date>
+      </document-id>
+      <document-id data-format="original">
+        <doc-number>6476374</doc-number>
+        <kind>B1</kind>
+      </document-id>
+      <document-id data-format="docdb">
+        <doc-number>6476374</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>US6476374</doc-number>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id id="11392663">
+        <country>US</country>
+        <doc-number>09557133</doc-number>
+        <date>20000425</date>
+      </document-id>
+      <document-id data-format="original">
+        <country>US</country>
+        <doc-number>09557133</doc-number>
+        <date>20000425</date>
+      </document-id>
+      <document-id data-format="docdb" id="51806677">
+        <doc-number>55713300</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>US20000557133</doc-number>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20070524">
+      <priority-claim sequence="1" kind="national">
+        <country>US</country>
+        <doc-number>09557133</doc-number>
+        <date>20000425</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20090404">
+      <unexamined-printed-without-grant>
+        <date>20021105</date>
+      </unexamined-printed-without-grant>
+      <printed-with-grant>
+        <date>20021105</date>
+      </printed-with-grant>
+    </dates-of-public-availability>
+    <classification-ipc date-changed="20121206">
+      <main-classification>
+        <text> 7H 01L  31/0304 A</text>
+        <edition>7</edition>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>31</main-group>
+        <subgroup>0304</subgroup>
+        <qualifying-character>A</qualifying-character>
+      </main-classification>
+    </classification-ipc>
+    <classifications-ipcr date-changed="20121206">
+      <classification-ipcr sequence="1">
+        <text>H01L  27/146       20060101C I20070721RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>C</classification-level>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>27</main-group>
+        <subgroup>146</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20070721</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>H01L  27/146       20060101A I20070721RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>27</main-group>
+        <subgroup>146</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20070721</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>H01L  31/101       20060101C I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>C</classification-level>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>31</main-group>
+        <subgroup>101</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>H01L  31/101       20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>31</main-group>
+        <subgroup>101</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>H01L  31/102       20060101C I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>C</classification-level>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>31</main-group>
+        <subgroup>102</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>H01L  31/103       20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>31</main-group>
+        <subgroup>103</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20121206">
+      <classification-cpc sequence="1">
+        <text>H01L  27/14603     20130101  I20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>27</main-group>
+        <subgroup>14603</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>H01L  27/14634     20130101  I20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>27</main-group>
+        <subgroup>14634</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>H01L  31/101       20130101  I20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>31</main-group>
+        <subgroup>101</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>H01L  31/1035      20130101  I20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>31</main-group>
+        <subgroup>1035</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <classification-national date-changed="20121206">
+      <country>US</country>
+      <main-classification>
+        <text>250/214.1</text>
+        <class>250</class>
+        <subclass>214.1</subclass>
+      </main-classification>
+      <further-classification sequence="1">
+        <text>257/444</text>
+        <class>257</class>
+        <subclass>444</subclass>
+      </further-classification>
+      <further-classification sequence="2">
+        <text>257/E27.131</text>
+        <class>257</class>
+        <subclass>E27.131</subclass>
+      </further-classification>
+      <further-classification sequence="3">
+        <text>257/E31.054</text>
+        <class>257</class>
+        <subclass>E31.054</subclass>
+      </further-classification>
+      <further-classification sequence="4">
+        <text>257/E31.059</text>
+        <class>257</class>
+        <subclass>E31.059</subclass>
+      </further-classification>
+    </classification-national>
+    <classifications-ecla date-changed="20121206">
+      <classification-ecla sequence="1" classification-scheme="EC" country="EP">
+        <text>H01L 27/146A16</text>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>27</main-group>
+        <subgroup>146</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">A  </additional-subgroup>
+          <additional-subgroup sequence="2">16 </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+      <classification-ecla sequence="2" classification-scheme="EC" country="EP">
+        <text>H01L 27/146A2</text>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>27</main-group>
+        <subgroup>146</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">A  </additional-subgroup>
+          <additional-subgroup sequence="2">2  </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+      <classification-ecla sequence="3" classification-scheme="EC" country="EP">
+        <text>H01L 31/101</text>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>31</main-group>
+        <subgroup>101</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="4" classification-scheme="EC" country="EP">
+        <text>H01L 31/103C</text>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>31</main-group>
+        <subgroup>103</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">C  </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+    </classifications-ecla>
+    <field-of-search date-changed="20070517">
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>250/214.1</text>
+          <class>250</class>
+          <subclass>214.1</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>257/82</text>
+          <class>257</class>
+          <subclass>82</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>257/114</text>
+          <class>257</class>
+          <subclass>114</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>257/444</text>
+          <class>257</class>
+          <subclass>444</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>257/446</text>
+          <class>257</class>
+          <subclass>446</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>257/448</text>
+          <class>257</class>
+          <subclass>448</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>257/459</text>
+          <class>257</class>
+          <subclass>459</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>257/461</text>
+          <class>257</class>
+          <subclass>461</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>257/615</text>
+          <class>257</class>
+          <subclass>615</subclass>
+        </main-classification>
+      </classification-national>
+    </field-of-search>
+    <number-of-claims>28</number-of-claims>
+    <exemplary-claim>1</exemplary-claim>
+    <invention-title id="title_eng" date-changed="20100427" lang="eng" format="original">Room temperature, low-light-level visible imager</invention-title>
+    <references-cited date-changed="20170315">
+      <patent-citations name="patcit" date-changed="20100427" />
+      <non-patent-citations name="nplcit" date-changed="20100427" />
+      <forward-citations name="fwdcit" date-changed="20170315" />
+      <citation srep-phase="o">
+        <patcit num="1" dnum="4214264">
+          <document-id>
+            <country>US</country>
+            <doc-number>4214264</doc-number>
+            <kind>A</kind>
+            <name>Hayward et al.</name>
+            <date>19800722</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>4214264</doc-number>
+          </document-id>
+          <application-date>
+            <date>19790228</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="o">
+        <patcit num="2" dnum="4499497">
+          <document-id>
+            <country>US</country>
+            <doc-number>4499497</doc-number>
+            <kind>A</kind>
+            <name>Levine</name>
+            <date>19850212</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>4499497</doc-number>
+          </document-id>
+          <application-date>
+            <date>19821227</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="o">
+        <patcit num="3" dnum="4581625">
+          <document-id>
+            <country>US</country>
+            <doc-number>4581625</doc-number>
+            <kind>A</kind>
+            <name>Gay et al.</name>
+            <date>19860408</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>4581625</doc-number>
+          </document-id>
+          <application-date>
+            <date>19831219</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="o">
+        <patcit num="4" dnum="4651001">
+          <document-id>
+            <country>US</country>
+            <doc-number>4651001</doc-number>
+            <kind>A</kind>
+            <name>Harada et al.</name>
+            <date>19870317</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>4651001</doc-number>
+          </document-id>
+          <application-date>
+            <date>19841213</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="o">
+        <patcit num="5" dnum="5146296">
+          <document-id>
+            <country>US</country>
+            <doc-number>5146296</doc-number>
+            <kind>A</kind>
+            <name>Huth</name>
+            <date>19920908</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>5146296</doc-number>
+          </document-id>
+          <application-date>
+            <date>19900320</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="o">
+        <patcit num="6" dnum="5627112">
+          <document-id>
+            <country>US</country>
+            <doc-number>5627112</doc-number>
+            <kind>A</kind>
+            <name>Tennant et al.</name>
+            <date>19970506</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>5627112</doc-number>
+          </document-id>
+          <application-date>
+            <date>19951113</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="o">
+        <patcit num="7" dnum="5763896">
+          <document-id>
+            <country>US</country>
+            <doc-number>5763896</doc-number>
+            <kind>A</kind>
+            <name>Smith</name>
+            <date>19980609</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>5763896</doc-number>
+          </document-id>
+          <application-date>
+            <date>19970203</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="8" dnum="5818052">
+          <document-id>
+            <country>US</country>
+            <doc-number>5818052</doc-number>
+            <kind>A</kind>
+            <name>Elabd</name>
+            <date>19981006</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>5818052</doc-number>
+          </document-id>
+          <application-date>
+            <date>19960418</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="9" dnum="5929434">
+          <document-id>
+            <country>US</country>
+            <doc-number>5929434</doc-number>
+            <kind>A</kind>
+            <name>Kozlowski et al.</name>
+            <date>19990727</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>5929434</doc-number>
+          </document-id>
+          <application-date>
+            <date>19970813</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="o">
+        <patcit num="10" dnum="5981988">
+          <document-id>
+            <country>US</country>
+            <doc-number>5981988</doc-number>
+            <kind>A</kind>
+            <name>Conder et al.</name>
+            <date>19991109</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>5981988</doc-number>
+          </document-id>
+          <application-date>
+            <date>19960426</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="11" dnum="6127692">
+          <document-id>
+            <country>US</country>
+            <doc-number>6127692</doc-number>
+            <kind>A</kind>
+            <name>Sugawa et al.</name>
+            <date>20001003</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>6127692</doc-number>
+          </document-id>
+          <application-date>
+            <date>19931026</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="12" dnum="6130441">
+          <document-id>
+            <country>US</country>
+            <doc-number>6130441</doc-number>
+            <kind>A</kind>
+            <name>Bowers et al.</name>
+            <date>20001010</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>6130441</doc-number>
+          </document-id>
+          <application-date>
+            <date>19990319</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="o">
+        <nplcit num="1">
+          <text>L.J. Kozlowski et al. “SWIR Straing FPA Performance at Room Temperature”, 1996.</text>
+        </nplcit>
+      </citation>
+      <citation srep-phase="o">
+        <nplcit num="2">
+          <text>SPIE The International Society for Optical Engineering,Infrared Readout Electronics III, 1996.</text>
+        </nplcit>
+      </citation>
+      <citation srep-phase="o">
+        <nplcit num="3">
+          <text>Saks,A Technique for Suppressing Dark Current Generated by Interface States in Buried Channel CCD Imagers, IEEE Electron Device Letters, vol. EDL-1, No. 7, Jul. 1980, pp. 131-133.</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-0019040462&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <fwdcit num="1">
+          <document-id>
+            <country>US</country>
+            <doc-number>7579698</doc-number>
+            <kind>B2</kind>
+            <date>20090825</date>
+          </document-id>
+          <application-date>
+            <date>20060117</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="2">
+          <document-id>
+            <country>US</country>
+            <doc-number>7598583</doc-number>
+            <kind>B2</kind>
+            <date>20091006</date>
+          </document-id>
+          <application-date>
+            <date>20070724</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="3">
+          <document-id>
+            <country>US</country>
+            <doc-number>7608906</doc-number>
+            <kind>B2</kind>
+            <date>20091027</date>
+          </document-id>
+          <application-date>
+            <date>20071113</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="4">
+          <document-id>
+            <country>US</country>
+            <doc-number>7492009</doc-number>
+            <kind>B2</kind>
+            <date>20090217</date>
+          </document-id>
+          <application-date>
+            <date>20041001</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="5">
+          <document-id>
+            <country>US</country>
+            <doc-number>7365750</doc-number>
+            <kind>B2</kind>
+            <date>20080429</date>
+          </document-id>
+          <application-date>
+            <date>20060623</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="6">
+          <document-id>
+            <country>US</country>
+            <doc-number>7336808</doc-number>
+            <kind>B2</kind>
+            <date>20080226</date>
+          </document-id>
+          <application-date>
+            <date>20050421</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="7">
+          <document-id>
+            <country>US</country>
+            <doc-number>7046284</doc-number>
+            <kind>B2</kind>
+            <date>20060516</date>
+          </document-id>
+          <application-date>
+            <date>20040211</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="8">
+          <document-id>
+            <country>US</country>
+            <doc-number>7068254</doc-number>
+            <kind>B2</kind>
+            <date>20060627</date>
+          </document-id>
+          <application-date>
+            <date>20010509</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="9">
+          <document-id>
+            <country>US</country>
+            <doc-number>7700905</doc-number>
+            <kind>B2</kind>
+            <date>20100420</date>
+          </document-id>
+          <application-date>
+            <date>20040824</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="10">
+          <document-id>
+            <country>US</country>
+            <doc-number>7714403</doc-number>
+            <kind>B2</kind>
+            <date>20100511</date>
+          </document-id>
+          <application-date>
+            <date>20070614</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="11">
+          <document-id>
+            <country>US</country>
+            <doc-number>7836491</doc-number>
+            <kind>B2</kind>
+            <date>20101116</date>
+          </document-id>
+          <application-date>
+            <date>20010426</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="12">
+          <document-id>
+            <country>CN</country>
+            <doc-number>100502056</doc-number>
+            <kind>C</kind>
+            <date>20090617</date>
+          </document-id>
+          <application-date>
+            <date>20040824</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="13">
+          <document-id>
+            <country>CN</country>
+            <doc-number>100550378</doc-number>
+            <kind>C</kind>
+            <date>20091014</date>
+          </document-id>
+          <application-date>
+            <date>20070822</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="14">
+          <document-id>
+            <country>US</country>
+            <doc-number>7932942</doc-number>
+            <kind>B2</kind>
+            <date>20110426</date>
+          </document-id>
+          <application-date>
+            <date>20060214</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="15">
+          <document-id>
+            <country>US</country>
+            <doc-number>7989860</doc-number>
+            <kind>B2</kind>
+            <date>20110802</date>
+          </document-id>
+          <application-date>
+            <date>20081226</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="16">
+          <document-id>
+            <country>US</country>
+            <doc-number>8030685</doc-number>
+            <kind>B2</kind>
+            <date>20111004</date>
+          </document-id>
+          <application-date>
+            <date>20060817</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="17">
+          <document-id>
+            <country>US</country>
+            <doc-number>8207590</doc-number>
+            <kind>B2</kind>
+            <date>20120626</date>
+          </document-id>
+          <application-date>
+            <date>20090629</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="18">
+          <document-id>
+            <country>US</country>
+            <doc-number>8212285</doc-number>
+            <kind>B2</kind>
+            <date>20120703</date>
+          </document-id>
+          <application-date>
+            <date>20050310</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="19">
+          <document-id>
+            <country>EP</country>
+            <doc-number>1668674</doc-number>
+            <kind>B1</kind>
+            <date>20130522</date>
+          </document-id>
+          <application-date>
+            <date>20040824</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="20">
+          <document-id>
+            <country>US</country>
+            <doc-number>8601009</doc-number>
+            <kind>B2</kind>
+            <date>20131203</date>
+          </document-id>
+          <application-date>
+            <date>20090526</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="21">
+          <document-id>
+            <country>DE</country>
+            <doc-number>102012220416</doc-number>
+            <kind>A1</kind>
+            <date>20140515</date>
+          </document-id>
+          <application-date>
+            <date>20121109</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="22">
+          <document-id>
+            <country>US</country>
+            <doc-number>8796804</doc-number>
+            <kind>B2</kind>
+            <date>20140805</date>
+          </document-id>
+          <application-date>
+            <date>20080422</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="23">
+          <document-id>
+            <country>EP</country>
+            <doc-number>1473553</doc-number>
+            <kind>A1</kind>
+            <date>20041103</date>
+          </document-id>
+          <application-date>
+            <date>20030212</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="24">
+          <document-id>
+            <country>EP</country>
+            <doc-number>2214210</doc-number>
+            <kind>A2</kind>
+            <date>20100804</date>
+          </document-id>
+          <application-date>
+            <date>20100115</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="25">
+          <document-id>
+            <country>US</country>
+            <doc-number>20020052192</doc-number>
+            <kind>A1</kind>
+            <date>20020502</date>
+          </document-id>
+          <application-date>
+            <date>20010509</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="26">
+          <document-id>
+            <country>US</country>
+            <doc-number>20140225214</doc-number>
+            <kind>A1</kind>
+            <date>20140814</date>
+          </document-id>
+          <application-date>
+            <date>20140303</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="27">
+          <document-id>
+            <country>US</country>
+            <doc-number>20020049714</doc-number>
+            <kind>A1</kind>
+            <date>20020425</date>
+          </document-id>
+          <application-date>
+            <date>20010510</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="28">
+          <document-id>
+            <country>US</country>
+            <doc-number>20050042808</doc-number>
+            <kind>A1</kind>
+            <date>20050224</date>
+          </document-id>
+          <application-date>
+            <date>20041001</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="29">
+          <document-id>
+            <country>US</country>
+            <doc-number>20050068438</doc-number>
+            <kind>A1</kind>
+            <date>20050331</date>
+          </document-id>
+          <application-date>
+            <date>20030930</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="30">
+          <document-id>
+            <country>US</country>
+            <doc-number>20050068439</doc-number>
+            <kind>A1</kind>
+            <date>20050331</date>
+          </document-id>
+          <application-date>
+            <date>20040211</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="31">
+          <document-id>
+            <country>EP</country>
+            <doc-number>1929541</doc-number>
+            <kind>A2</kind>
+            <date>20080611</date>
+          </document-id>
+          <application-date>
+            <date>20060817</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="32">
+          <document-id>
+            <country>US</country>
+            <doc-number>20020001400</doc-number>
+            <kind>A1</kind>
+            <date>20020103</date>
+          </document-id>
+          <application-date>
+            <date>20010426</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="33">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060157727</doc-number>
+            <kind>A1</kind>
+            <date>20060720</date>
+          </document-id>
+          <application-date>
+            <date>20060117</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="34">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060165294</doc-number>
+            <kind>A1</kind>
+            <date>20060727</date>
+          </document-id>
+          <application-date>
+            <date>20050421</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="35">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060232546</doc-number>
+            <kind>A1</kind>
+            <date>20061019</date>
+          </document-id>
+          <application-date>
+            <date>20060623</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="36">
+          <document-id>
+            <country>US</country>
+            <doc-number>9142585</doc-number>
+            <kind>B2</kind>
+            <date>20150922</date>
+          </document-id>
+          <application-date>
+            <date>20140303</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="37">
+          <document-id>
+            <country>US</country>
+            <doc-number>20070040101</doc-number>
+            <kind>A1</kind>
+            <date>20070222</date>
+          </document-id>
+          <application-date>
+            <date>20040824</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="38">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080048209</doc-number>
+            <kind>A1</kind>
+            <date>20080228</date>
+          </document-id>
+          <application-date>
+            <date>20070724</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="39">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080055437</doc-number>
+            <kind>A1</kind>
+            <date>20080306</date>
+          </document-id>
+          <application-date>
+            <date>20060214</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="40">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080117322</doc-number>
+            <kind>A1</kind>
+            <date>20080522</date>
+          </document-id>
+          <application-date>
+            <date>20071116</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="41">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080237633</doc-number>
+            <kind>A1</kind>
+            <date>20081002</date>
+          </document-id>
+          <application-date>
+            <date>20050310</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="42">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080246105</doc-number>
+            <kind>A1</kind>
+            <date>20081009</date>
+          </document-id>
+          <application-date>
+            <date>20060817</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="43">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090121307</doc-number>
+            <kind>A1</kind>
+            <date>20090514</date>
+          </document-id>
+          <application-date>
+            <date>20071113</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="44">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090166787</doc-number>
+            <kind>A1</kind>
+            <date>20090702</date>
+          </document-id>
+          <application-date>
+            <date>20081226</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="45">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090263674</doc-number>
+            <kind>A1</kind>
+            <date>20091022</date>
+          </document-id>
+          <application-date>
+            <date>20080422</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="46">
+          <document-id>
+            <country>US</country>
+            <doc-number>20100006969</doc-number>
+            <kind>A1</kind>
+            <date>20100114</date>
+          </document-id>
+          <application-date>
+            <date>20090629</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="47">
+          <document-id>
+            <country>US</country>
+            <doc-number>20100054759</doc-number>
+            <kind>A1</kind>
+            <date>20100304</date>
+          </document-id>
+          <application-date>
+            <date>20090630</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="48">
+          <document-id>
+            <country>US</country>
+            <doc-number>20110035798</doc-number>
+            <kind>A1</kind>
+            <date>20110210</date>
+          </document-id>
+          <application-date>
+            <date>20101020</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="49">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090224345</doc-number>
+            <kind>A1</kind>
+            <date>20090910</date>
+          </document-id>
+          <application-date>
+            <date>20070614</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="50">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090239580</doc-number>
+            <kind>A1</kind>
+            <date>20090924</date>
+          </document-id>
+          <application-date>
+            <date>20090526</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="51">
+          <document-id>
+            <country>EP</country>
+            <doc-number>1473553</doc-number>
+            <kind>A4</kind>
+            <date>20070321</date>
+          </document-id>
+          <application-date>
+            <date>20030212</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="52">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2005041247</doc-number>
+            <kind>A3</kind>
+            <date>20050707</date>
+          </document-id>
+          <application-date>
+            <date>20040824</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="53">
+          <document-id>
+            <country>US</country>
+            <doc-number>20150263231</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20130924</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="54">
+          <document-id>
+            <country>EP</country>
+            <doc-number>2214210</doc-number>
+            <kind>A3</kind>
+            <date>20130410</date>
+          </document-id>
+          <application-date>
+            <date>20100115</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="55">
+          <document-id>
+            <country>EP</country>
+            <doc-number>2214210</doc-number>
+            <kind>B1</kind>
+            <date>20170315</date>
+          </document-id>
+          <application-date>
+            <date>20100115</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20100427">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Innovative Technology Licensing, LLC</orgname>
+            <role>02</role>
+            <address>
+              <city>Thousand Oaks</city>
+              <state>CA</state>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>Kozlowski, Lester J.</name>
+            <address>
+              <city>Simi Valley</city>
+              <state>CA</state>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>Sullivan, Gerard J.</name>
+            <address>
+              <city>Newbury Park</city>
+              <state>CA</state>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>Dewames, Roger E.</name>
+            <address>
+              <city>Thousand Oaks</city>
+              <state>CA</state>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4">
+          <addressbook lang="eng">
+            <name>McDermott, Brian T.</name>
+            <address>
+              <city>Glendale</city>
+              <state>AZ</state>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Koppel, Jacobs, Patrick &amp; Heybl</name>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <examiners>
+      <primary-examiner>
+        <last-name>Kim</last-name>
+        <first-name>Robert H.</first-name>
+        <department>2882</department>
+      </primary-examiner>
+      <assistant-examiner>
+        <last-name>Song</last-name>
+        <first-name>Hoon K.</first-name>
+      </assistant-examiner>
+    </examiners>
+    <patent-family date-changed="20120620">
+      <main-family family-id="47594751">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>6476374</doc-number>
+            <kind>B1</kind>
+            <date>20021105</date>
+          </document-id>
+          <application-date>
+            <date>20000425</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="912538">
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2004510352</doc-number>
+            <kind>A</kind>
+            <date>20040402</date>
+          </document-id>
+          <application-date>
+            <date>20010920</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1323193</doc-number>
+            <kind>A2</kind>
+            <date>20030702</date>
+          </document-id>
+          <application-date>
+            <date>20010920</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>9290301</doc-number>
+            <kind>A</kind>
+            <date>20020408</date>
+          </document-id>
+          <application-date>
+            <date>20010920</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>6476374</doc-number>
+            <kind>B1</kind>
+            <date>20021105</date>
+          </document-id>
+          <application-date>
+            <date>20000425</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>0227798</doc-number>
+            <kind>A2</kind>
+            <date>20020404</date>
+          </document-id>
+          <application-date>
+            <date>20010920</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>0227798</doc-number>
+            <kind>A3</kind>
+            <date>20020530</date>
+          </document-id>
+          <application-date>
+            <date>20010920</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>6483116</doc-number>
+            <kind>B1</kind>
+            <date>20021119</date>
+          </document-id>
+          <application-date>
+            <date>20000925</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20100427" lang="eng" format="original">
+    <p id="p-a-00001-en">A photodetector sensitive to visible and shorter wavelengths is capable of single photon sensitivity at room temperatures and video frame rates. It includes (a) a compound semiconductor photodiode, biased below its avalanche breakdown threshold, comprising III-V elemental components and having a bandgap with transition energy higher than the energy of infrared photons; and (b) a high trans-impedance interface circuit, arranged to receive a signal from the photodiode junction and to amplify said signal. Preferably, the photodiode junction is integrated in a first microstructure on a first substrate, and its interface circuit in a second microstructure on a second substrate. Both microstructures are then joined in a laminar, sandwich-like structure and communicate via electrically conducting contacts.</p>
+  </abstract>
+  <legal-data date-changed="20170304">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20000425</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     6476374B1</docdb-publication-number>
+      <docdb-application-id>51806677</docdb-application-id>
+      <new-owner>ROCKWELL TECHNOLOGIES, LLC, CALIFORNIA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:KOZLOWSKI, LESTER J.;SULLIVAN, GERARD J.;DEWAMES, ROGER;REEL/FRAME:010765/0972</free-text-description>
+      <effective-date>
+        <date>20000420</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20010221</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     6476374B1</docdb-publication-number>
+      <docdb-application-id>51806677</docdb-application-id>
+      <new-owner>ROCKWELL TECHNOLOGIES, CALIFORNIA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:MCDERMOTT, BRIAN T.;REEL/FRAME:011565/0619</free-text-description>
+      <effective-date>
+        <date>20010214</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20040315</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     6476374B1</docdb-publication-number>
+      <docdb-application-id>51806677</docdb-application-id>
+      <new-owner>ROCKWELL SCIENTIFIC COMPANY LLC, CALIFORNIA</new-owner>
+      <free-text-description>UCC-1 FINANCING STATEMENT;ASSIGNOR:ALTASENS, INC.;REEL/FRAME:015108/0608</free-text-description>
+      <effective-date>
+        <date>20040308</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="4">
+      <publication-date>
+        <date>20040315</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     6476374B1</docdb-publication-number>
+      <docdb-application-id>51806677</docdb-application-id>
+      <new-owner>ROCKWELL SCIENTIFIC LICENSING, LLC, CALIFORNIA</new-owner>
+      <free-text-description>UCC-1 FINANCING STATEMENT;ASSIGNOR:ALTASENS, INC.;REEL/FRAME:015108/0608</free-text-description>
+      <effective-date>
+        <date>20040308</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="5">
+      <publication-date>
+        <date>20060505</date>
+      </publication-date>
+      <event-code-1>FPAY</event-code-1>
+      <effect>+</effect>
+      <legal-description>FEE PAYMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     6476374B1</docdb-publication-number>
+      <docdb-application-id>51806677</docdb-application-id>
+      <fee-payment-year>4</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="6">
+      <publication-date>
+        <date>20060912</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     6476374B1</docdb-publication-number>
+      <docdb-application-id>51806677</docdb-application-id>
+      <new-owner>ROCKWELL SCIENTIFIC LICENSING, LLC, CALIFORNIA</new-owner>
+      <free-text-description>CHANGE OF NAME;ASSIGNOR:INNOVATIVE TECHNOLOGY LICENSING, LLC;REEL/FRAME:018231/0909</free-text-description>
+      <effective-date>
+        <date>20030919</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="7">
+      <publication-date>
+        <date>20060912</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     6476374B1</docdb-publication-number>
+      <docdb-application-id>51806677</docdb-application-id>
+      <new-owner>INNOVATIVE TECHNOLOGY LICENSING, LLC, CALIFORNIA</new-owner>
+      <free-text-description>CHANGE OF NAME;ASSIGNOR:ROCKWELL TECHNOLOGIES, LLC;REEL/FRAME:018231/0906</free-text-description>
+      <effective-date>
+        <date>20010628</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="8">
+      <publication-date>
+        <date>20080130</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     6476374B1</docdb-publication-number>
+      <docdb-application-id>51806677</docdb-application-id>
+      <new-owner>ALTSENS, INC., CALIFORNIA</new-owner>
+      <free-text-description>CHANGE OF NAME;ASSIGNOR:RSCIS INC.;REEL/FRAME:020431/0857</free-text-description>
+      <effective-date>
+        <date>20040301</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="9">
+      <publication-date>
+        <date>20080130</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     6476374B1</docdb-publication-number>
+      <docdb-application-id>51806677</docdb-application-id>
+      <new-owner>RSCIS INC., CALIFORNIA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:ROCKWELL SCIENTIFIC LICENSING, LLC;REEL/FRAME:020431/0840</free-text-description>
+      <effective-date>
+        <date>20040211</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="10">
+      <publication-date>
+        <date>20090804</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     6476374B1</docdb-publication-number>
+      <docdb-application-id>51806677</docdb-application-id>
+      <new-owner>ALTASENS, INC., CALIFORNIA</new-owner>
+      <free-text-description>EXPIRATION OF UCC-1 FINANCING STATEMENT;ASSIGNOR:ROCKWELL SCIENTIFIC COMPANY, LLC;REEL/FRAME:023044/0227</free-text-description>
+      <effective-date>
+        <date>20090305</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="11">
+      <publication-date>
+        <date>20100505</date>
+      </publication-date>
+      <event-code-1>FPAY</event-code-1>
+      <effect>+</effect>
+      <legal-description>FEE PAYMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     6476374B1</docdb-publication-number>
+      <docdb-application-id>51806677</docdb-application-id>
+      <fee-payment-year>8</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="12">
+      <publication-date>
+        <date>20140613</date>
+      </publication-date>
+      <event-code-1>REMI</event-code-1>
+      <legal-description>MAINTENANCE FEE REMINDER MAILED</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     6476374B1</docdb-publication-number>
+      <docdb-application-id>51806677</docdb-application-id>
+    </legal-event>
+    <legal-event sequence="13">
+      <publication-date>
+        <date>20141105</date>
+      </publication-date>
+      <event-code-1>LAPS</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSE FOR FAILURE TO PAY MAINTENANCE FEES</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     6476374B1</docdb-publication-number>
+      <docdb-application-id>51806677</docdb-application-id>
+    </legal-event>
+    <legal-event sequence="14">
+      <publication-date>
+        <date>20141105</date>
+      </publication-date>
+      <event-code-1>REIN</event-code-1>
+      <effect>+</effect>
+      <legal-description>REINSTATEMENT AFTER MAINTENANCE FEE PAYMENT CONFIRMED</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     6476374B1</docdb-publication-number>
+      <docdb-application-id>51806677</docdb-application-id>
+    </legal-event>
+    <legal-event sequence="15">
+      <publication-date>
+        <date>20141223</date>
+      </publication-date>
+      <event-code-1>FP</event-code-1>
+      <effect>-</effect>
+      <legal-description>EXPIRED DUE TO FAILURE TO PAY MAINTENANCE FEE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     6476374B1</docdb-publication-number>
+      <docdb-application-id>51806677</docdb-application-id>
+      <effective-date>
+        <date>20141105</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="16">
+      <publication-date>
+        <date>20160315</date>
+      </publication-date>
+      <event-code-1>FPAY</event-code-1>
+      <effect>+</effect>
+      <legal-description>FEE PAYMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     6476374B1</docdb-publication-number>
+      <docdb-application-id>51806677</docdb-application-id>
+      <fee-payment-year>12</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="17">
+      <publication-date>
+        <date>20160315</date>
+      </publication-date>
+      <event-code-1>SULP</event-code-1>
+      <effect>+</effect>
+      <legal-description>SURCHARGE FOR LATE PAYMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     6476374B1</docdb-publication-number>
+      <docdb-application-id>51806677</docdb-application-id>
+    </legal-event>
+    <legal-event sequence="18">
+      <publication-date>
+        <date>20160829</date>
+      </publication-date>
+      <event-code-1>PRDP</event-code-1>
+      <effect>+</effect>
+      <legal-description>PATENT REINSTATED DUE TO THE ACCEPTANCE OF A LATE MAINTENANCE FEE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     6476374B1</docdb-publication-number>
+      <docdb-application-id>51806677</docdb-application-id>
+      <effective-date>
+        <date>20160902</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20100427">
+    <summary>
+      <heading level="2">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00001-en">1. Field of the Invention</p>
+      <p id="p-00002-en">This invention relates to solid state, low-level light detectors in general and specifically to room temperature, low-level visible and shorter wavelength imagers using III-V compound semiconductor photodetectors.</p>
+      <p id="p-00003-en">2. Description of the Related Art</p>
+      <p id="p-00004-en">Visible-light sensors transform incident light in the visible region of the spectrum (wavelengths from approximately 0.38 to 0.78 microns) into electrical signals that are used for data collection, processing, and storage. For example, the such sensors can capture images for video or still-frame imaging. Conventional solid-state sensors usually employ silicon photodetectors because they are inexpensive, exhibit adequate signal bandwidth, are sensitive to visible wavelengths, and exhibit a high degree of pixel-to-pixel uniformity when used in an imaging array.</p>
+      <p id="p-00005-en">Silicon photodetectors exhibit significant deficiencies when applied at room temperature for visible wavelength detection, however. At or near room temperature, these detectors have a characteristic “dark current” which is relatively high and causes prominent noise characteristics. The dark current is a fundamental consequence of the detector physics: common silicon photodetectors exhibit an energy bandgap in the 1.1 eV range, which is well below the threshold for visible wavelength absorption. This low bandgap gives rise to a large dark current (at normal room temperatures). Silicon photodetectors which are compatible with. low to moderate cost production also have no gain: i.e. each incident photon generates at most a single electron. The combination of low gain and large dark currents limits the practical application of Silicon photodiode detectors to moderate to bright light conditions, unless active cooling is used. At low light levels and at room temperature such detectors generate inadequate signal-to-noise ratios (SNR).</p>
+      <p id="p-00006-en">In low-light-level applications, the standard silicon photodiode detector is often replaced with a silicon avalanche detector to facilitate gain within the detector so that conventional detector interface amplifiers and ancillary interface circuits can be used to read out the data at video frame rates with a high SNR. Such applications of avalanche photodiodes are disclosed by U.S. Pat. No. 5,146,296 to Huth and U.S. Pat. No. 5,818,052 to Elabd, for example. Unfortunately, the fabrication of avalanche photodiodes is much more difficult and expensive than standard photodiodes, and supplemental amplification is also often required. Currently available avalanche photodiodes exhibit relatively poor uniformity and have limited sensitivity due to their low quantum efficiency. They are also inherently non-linear in their response to light, which is undesirable in many applications.</p>
+      <p id="p-00007-en">Alternative imaging systems are known which use an array of avalanche detectors, various phosphors or intensifiers such as microchannel plates to amplify the available electrons for subsequent detection in enhanced charge coupled devices (CCDs); but these intensified devices respond inadequately to broadband radiation otherwise available to maximize sensitivity. All such CCDs and other metal-insulator-semiconductor (MIS) devices have surface states at the semiconductor/insulator interface that cause spontaneous generation of dark current. Furthermore, intensified CCDs are damaged by the soft x-rays associated with electron bombardment. This damage is manifest as even higher dark current. This current provides an undesirable background signal that reduces dynamic range, both by consuming charge handling capacity and by adding noise. CCD Manufacturers employ various schemes to suppress dark current, such as that described by Saks, “A Technique for suppressing Dark Current Generated by Interface States in Buried Channel CCD Imagers,” IEEE Electron Device Letters, Vol. EDL-1, No. 7, July 1980, pp. 131-133. Nevertheless, mid-gap states are always present that result in unacceptable dark current for room temperature operation of silicon-based low-light-level image sensors.</p>
+      <p id="p-00008-en">A further problem with prior detectors arises from their spectral response characteristics. A large mismatch between the photoresponse required to facilitate CIE (Commission International de LeClairage) chromaticity and the actual spectral response of silicon photodetectors is illustrated in FIG.<b>1</b>. Enabling color reconstruction to minimum CIE specifications for best color fidelity requires high, broadband response from about 380 nm to 780 nm. The photoresponse for scientific-grade silicon detectors instead extends to the bandgap of silicon, at beyond 1 μm. As<figref>FIG. 1</figref>shows, maximizing the photo-response in the red part of the spectrum typically tends to compromise blue response and vice versa. For example, compare the response curve<b>16</b>of the “MIT EPI” device, as compared to response curve<b>18</b>of the “MIT High-rho” (i.e., high-resistivity) device, in FIG.<b>1</b>. (Both devices are available from Lincoln Laboratory of Massachusetts Institute of Technology, in Lexington, Mass.) The high-rho device shows markedly better red response, while the EPI device is more sensitive in the blue region, but neither is inherently color balanced.</p>
+      <p id="p-00009-en">In addition to chromaticity problems with conventional detectors, the unneeded photoresponse in the near infrared from 780 nm to beyond 1 μm creates the requirement for an “infrared-blocking filter” in such cameras to suppress the photoresponse beyond the CIE requirement, thereby increasing both camera cost and complexity. Finally, absorption of photons in silicon via its indirect bandgap mandates thick detectors and/or significant modifications to CCD and CMOS processes for monolithic imagers to fully absorb the longer wavelength photons. This thickness requirement effectively increases the depletion volume subject to dark current generation, thereby further increasing the minimum dark current. The decreasing absorption at longer wavelengths also increases the signal processing required for maximizing color fidelity because of the resulting crosstalk from pixel to pixel and color level imbalance.</p>
+      <heading level="2">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00010-en">In view of the above problems, the present invention is a high-sensitivity photodetector for detecting radiation in the visible or shorter wavelength regions of the spectrum, suitable for operation at room-temperature. The photodetector includes (a) a compound semiconductor photodiode which generates a detector current in response to incident photons, the photodiode biased below its avalanche breakdown threshold, comprising III-V elemental components and having a bandgap with transition energy higher than the energy of infrared photons; and (b) a detector interface circuit at each pixel, arranged to receive a signal from the photodiode junction and to amplify said signal.</p>
+      <p id="p-00011-en">Preferably, the photodetector has its photodiode junction integrated in a first microstructure on a first substrate, and its interface circuit in a second microstructure on a second substrate. The first and second microstructures are then joined in a laminar, sandwich-like structure. The first and second microstructures communicate via electrically conducting contacts.</p>
+      <p id="p-00012-en">In one embodiment, the photodetectors are integrated in an imaging array for use at room temperatures to detect images from low-level visible, ultraviolet or shorter illumination, and suitable for use at video frame rates. Such imaging array is made up of a plurality of addressable photodetecting cells. Each cell includes a compound semiconductor photodiode which linearly generates a detector current in response to incident photons, the photodiode biased below its avalanche breakdown threshold, comprising III-V elemental components and having a bandgap with transition energy higher than the energy of infrared photons. Each cell also includes a high trans-impedance interface circuit at each pixel, arranged to receive a signal from the photodiode junction and amplify the signal.</p>
+      <p id="p-00013-en">In some embodiments, the interface circuit of at least some cells have independently variable gain. Thus, the gain at each pixel can be set to compensate for non-uniform photodiode response across the array.</p>
+      <p id="p-00014-en">The photodetector and array of the invention provide single-photon sensitivities, with higher signal-to-noise ratios at video frame rates and room temperature than previously possible, for detecting and imaging radiation in the visible region of the spectrum.</p>
+      <p id="p-00015-en">These and other features and advantages of the invention will be apparent to those skilled in the art from the following detailed description of preferred embodiments, taken together with the accompanying drawings, in which:</p>
+    </summary>
+    <description-of-drawings>
+      <heading level="2">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00016-en">
+        <figref>FIG. 1</figref>is a graph of relative spectral response as a function of incident wavelength for various prior semiconductor photodetectors;</p>
+      <p id="p-00017-en">
+        <figref>FIG. 2</figref>is a perspective view of an array of photodetector devices in accordance with the invention;</p>
+      <p id="p-00018-en">
+        <figref>FIG. 3</figref>is a magnified cross-sectional view of a representative portion (pixel) of the array of<figref>FIG. 1</figref>;</p>
+      <p id="p-00019-en">
+        <figref>FIG. 4</figref>is a graph of bandgap energy vs. lattice constant for various known compound semiconductors, with points representing binary compounds and lines representing achievable bandgap-lattice relationships for ternary and quaternary compounds;</p>
+      <p id="p-00020-en">
+        <figref>FIG. 5</figref>is a cross-section of an alternate variation in accordance with the invention, suitable for multi-spectral detection and discrimination;</p>
+      <p id="p-00021-en">
+        <figref>FIG. 6</figref>is a schematic diagram of a circuit suitable for use as the interface circuit in<figref>FIG. 2</figref>or<b>4</b>;</p>
+      <p id="p-00022-en">
+        <figref>FIG. 7</figref>is a schematic diagram of an alternate interface circuit using a capacitively coupled, CMOS transimpedance amplifier;</p>
+      <p id="p-00023-en">
+        <figref>FIG. 8</figref>is a another alternate interface circuit which uses an FET source follower amplifier to buffer and amplify the photodiode signal; and</p>
+      <p id="p-00024-en">
+        <figref>FIG. 9</figref>is a graph of dark current (on a logarithmic scale) as a function of temperature in degrees Kelvin (on a linear scale), for typical photodetector devices in accordance with the invention, and for typical conventional devices for comparison.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading level="2">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00025-en">The invention includes a photodetector device and amplifying interface circuit that can render high performance in low-light conditions (in photon flux levels on the order or single photon per sampling period) in the visible or shorter wavelength regions of the spectrum. This invention can effectively detect incident photons that impinge either on discrete photodetectors or on specific pixels in an imaging array. In one embodiment, suitable for video or still frame imaging in low light conditions, a plurality of such photodetector devices and interface circuits are preferably fabricated in a matrix to provide an imaging sensor of multiple pixels.</p>
+      <p id="p-00026-en">An example of an imaging matrix of devices in accordance with the invention is shown in FIG.<b>2</b>. Photons<b>20</b>(with energy hν, where ν is the frequency and h is Plancks constant) impinge upon a photodetector layer<b>22</b>, which includes multiple detector pixels. The photodetector layer<b>22</b>is preferably grown using molecular beam epitaxy or organo-metallic chemical vapor deposition (MOCVD), for example, on a transparent detector substrate, to define a plurality of independent photodiode detectors. The detector layer<b>22</b>is partially cut away in the illustration to better show multiple interlayer interconnection bumps<b>24</b>(typically indium bumps). Underlying the bumps<b>24</b>, and communicating with layer<b>22</b>by means of the bumps<b>24</b>, is an interface layer<b>26</b>in which a plurality of independent interface circuits are fabricated, preferably by using high-quality EPI or neutron transmutation doped wafers with a thin oxide to provide adequate threshold voltage V<sub>T</sub>uniformity. The photodetection layer<b>22</b>is preferably “flip-chip” mounted to the interface layer<b>26</b>, using the interconnecting bumps<b>24</b>to connect photodiodes to respective interface circuits. For a more detailed description of a technique which can suitably be used to mount the layers, see U.S. Pat. No. 5,627,112 to Tennant et al. (1997). A portion<b>28</b>of the interface layer is also used for readout and addressing electronics.</p>
+      <p id="p-00027-en">The cross-sectional view of<figref>FIG. 3</figref>shows a small region of the imaging matrix of FIG.<b>2</b>. The photodetection layer<b>22</b>includes a detector substrate layer<b>30</b>and a Bandgap-engineered detector layer<b>32</b>, which communicates with the interface circuit layer<b>26</b>via the metal (typically indium or solder) bumps<b>24</b>. It should be understood that in this context, a “layer” refers in general to a semiconductor wafer having multiple sublayers according to the various fabrication steps applied, rather than a single homogeneous layer. Accordingly, detector layer<b>32</b>includes suitably a “p doped” region<b>34</b>and an “n+ doped” region<b>36</b>, together forming a photodiode. Although this arrangement is convenient for fabrication, the p and n regions could equivalently be reversed, to form a photodiode with opposite junction polarity, as will be easily recognized.</p>
+      <p id="p-00028-en">The interface layer<b>26</b>preferably underlies the detector layer<b>22</b>, to which it is bonded and communicates via the conductive “bumps”<b>24</b>(only one of many is shown, for clarity), so that the layers lie one upon the other in a laminar fashion, much like a sandwich. It is advantageous to arrange the detector layer as shown in the figure, nearest the incident radiation, in order to maximize optical fill factor and avoid any limitation of the aperture (active surface) which otherwise might be masked by metallization layers.</p>
+      <p id="p-00029-en">The detector layer<b>26</b>includes multiple metallization layers such as<b>50</b>and<b>52</b>, which are fabricated with suitable circuit paths, according to conventional photolithographic or similar techniques, to connect the various active and passive components of the interface circuitry (further described below in connection with FIGS.<b>5</b>through<b>7</b>). Conventional oxide layers<b>54</b>and planarization material layers<b>56</b>are also present to define and separate conventional integrated circuit paths and components. An overglass layer<b>58</b>preferably is added to protect the circuitry during the flip chip bonding process.</p>
+      <p id="p-00030-en">Any number of layers of conventional metallization or other fabrication layers may be included in the layer<b>26</b>, as required to fabricate the desired interface circuit. For clarity, details are omitted, but it should be understood that the cutaway region<b>60</b>may comprise multiple and complex fabrication layers. Typically 5 or six layers would be adequate to service the interface circuitry.</p>
+      <p id="p-00031-en">The lowest layers should typically include the MOS active components<b>64</b>on a (typically silicon) substrate<b>66</b>. Shallow trench isolation and deep sub-micron CMOS processes should preferably be used to limit the size and inherent capacitance of the active devices, and thereby increase the operating speed while reducing pixel size of the detector cells. In accordance with conventional fabrication technique, the MOS component layer<b>66</b>is preferably separated from the overlying metallization layer by polycrystalline silicon (“polysilicon”) layers<b>68</b><i>a</i>and<b>68</b><i>b.</i></p>
+      <p id="p-00032-en">Optionally, the uppermost surface of the photodetector layer (nearest to the incident light) can be coated with a suitable optical coating<b>70</b>, to reduce reflection due to refractive index mismatch, or to correct or customize spectral response. Microlenses can also (optionally) be formed on the uppermost surface of the photodetector layer to maximize the collection of light impinging on each pixel while facilitating minimization of detector capacitance and/or the number of defective pixels by minimizing the captive cross-section of various defects.</p>
+      <p id="p-00033-en">In accordance with the invention, the bandgap in the photoreceptive region of the photodiode<b>38</b>should be tuned to a level high enough to select for visible or shorter wavelengths. The most desirable bandgap will depend upon the exact intended environment and application of the device, which can be somewhat customized. For visible light operation, the photodiode<b>38</b>should preferably be fabricated with a bandgap of at least 1.7 eV. This will produce dark currents at room temperature which are at least several orders of magnitude lower than conventional silicon photodiodes (with 1.1 eV bandgap).</p>
+      <p id="p-00034-en">Table 1 shows suitable detector and substrate layers for various cutoff wavelengths and corresponding bandgaps as desired for various applications. These materials are recommended, but equivalent materials could be substituted without departing from the invention.</p>
+      <p id="p-00035-en">Materials chosen from columns III and V of the periodic table are preferred because they are known to allow engineering of bandgaps in the desired regions, as exemplified in Table 1.<tables id="tables-00001-en"><table frame="none" colsep="0" rowsep="0"><tgroup cols="4" colsep="0" rowsep="0" align="left"><colspec colname="1" colwidth="63pt" align="center" /><colspec colname="2" colwidth="56pt" align="center" /><colspec colname="3" colwidth="56pt" align="center" /><colspec colname="4" colwidth="42pt" align="center" /><thead><row><entry namest="1" nameend="4" rowsep="1">TABLE 1</entry></row><row><entry namest="1" nameend="4" align="center" rowsep="1" /></row><row><entry>Cutoff</entry><entry /><entry /><entry>Detector</entry></row><row><entry>Wavelength (nm)</entry><entry>Bandgap (eV)</entry><entry>Detector Layer</entry><entry>Substrate</entry></row><row><entry namest="1" nameend="4" align="center" rowsep="1" /></row></thead><tbody valign="top"><row><entry>625-700</entry><entry>1.77-1.98</entry><entry>AlGaAS</entry><entry>GaAs</entry></row><row><entry>600-625</entry><entry>1.98-2.07</entry><entry>AlInGaP</entry><entry>InP</entry></row><row><entry>550-600</entry><entry>2.07-2.25</entry><entry>GaP</entry><entry>InP</entry></row><row><entry>250-550</entry><entry>2.25-4.96</entry><entry>InGaN</entry><entry>Sapphire</entry></row><row><entry namest="1" nameend="4" align="center" rowsep="1" /></row></tbody></tgroup></table></tables></p>
+      <p id="p-00036-en">III-V semiconductors have several advantages for application as photodetectors for visible imaging systems. It is very desirable for detectors to have a direct band gap semiconductor, so that the photons are efficiently and quickly absorbed. The band gap should be slightly lower energy than the energy of the desired photon, so that thermal generation of carriers across the band gap, which is undesirable, is minimized. By suitable choice of the III-V alloy composition, direct band gap semiconductors with gap energies covering the near infrared, visible and near ultraviolet can be realized.</p>
+      <p id="p-00037-en">Another requirement for good detectors is low defect density. For minimum defect density, growth on a lattice-matched substrate is desirable. Both GaAs and InP substrates are commercially available, and are of high quality. InGaAsP can be precisely lattice-matched to GaAs, allowing arbitrary thicknesses of the material to be grown without developing strain-related dislocations. The band gap of lattice-matched InGaAsP covers the wavelength range of 0.67 microns to the GaAs gap at 0.89 microns. AlGaAs can be approximately lattice matched to GaAs, allowing a few microns of AlGaAs to be grown with minimal generation of strain-induced dislocations. While high aluminum content AlGaAs is indirect gap, the direct gap compositions of AlGaAs cover approximately the same wavelength range as InGaAsP.</p>
+      <p id="p-00038-en">A range of materials can be grown that are exactly lattice-matched to InP substrates. AlInAsP can cover the wavelength range from 0.82 to 0.91 microns. GaInAsP can cover the wavelength range from 0.91 to 1.78 microns. GaSb substrates also exist, although they are not as highly developed as GaAs and InP substrate technology.</p>
+      <p id="p-00039-en">For higher wavelength radiation, AlGaN alloys have gaps that range from 0.2 microns for AlN to 0.36 microns for GaN. GaInN extend this range to 0.62 microns.</p>
+      <p id="p-00040-en">Another advantage of these III-V alloys is that wider band gap material can usually be placed on the illuminated side of the photo-diode, so that the incident photons are absorbed in the desired depletion region of the photo-diode, rather than in the doped contact region. These wider gap windows improve the quantum efficiency of the detectors.</p>
+      <p id="p-00041-en">For those applications where the desired wavelength is of higher energy than the band gap of the substrate and the radiation is incident from the back-side, there are a variety of techniques for removing the substrate used to grow the photo-detectors. This substrate removal can be done at the wafer-level, in which case the epitaxial layers would need to be attached to another substrate for mechanical reasons, or it can be done after hybridization, in which case there is no need for further mechanical support.</p>
+      <p id="p-00042-en">The dark current, I<sub>gr</sub>, produced by a photodiode in accordance with the invention will be dominated by generation-recombination mechanisms and thus vary as a function of temperature, bias voltage, and bandgap, approximately according to the equation:<maths id="maths-00001-en"><math><mrow><msub><mi>I</mi><mi>gr</mi></msub><mo>[!TildeTilde!]</mo><mfrac><mrow><mi>q</mi><mo>[!it!]</mo><mstyle><mtext> </mtext></mstyle><mo>[!it!]</mo><msub><mi>n</mi><mi>i</mi></msub><mo>[!it!]</mo><mi>A</mi><mo>[!it!]</mo><mstyle><mtext> </mtext></mstyle><mo>[!it!]</mo><mi>W</mi></mrow><msub><mi>τ</mi><mi>eff</mi></msub></mfrac></mrow></math><img he="N/A" wi="N/A" id="img-00001-en" img-content="math" alt="embedded image" file="US6476374B1_00010.PNG" img-format="png" original="US06476374-20021105-M00001.TIF" /></maths></p>
+      <p id="p-00043-en">where q is the electronic charge, τ<sub>eff</sub>is the effective carrier lifetime, n<sub>i</sub>is the intrinsic carrier concentration, A is the surface cross-sectional area of the depletion region boundary and W is the depletion width for an abrupt one-sided junction. The variation of I<sub>gr</sub>is expected to be mostly dominated by the intrinsic carrier concentration. The concentration is governed by:<maths id="maths-00002-en"><math><mrow><msub><mi>n</mi><mi>i</mi></msub><mo>[!Proportional!]</mo><msup><mi>[!ee!]</mi><mrow><mo>-</mo><mstyle><mtext> </mtext></mstyle><mo>[!it!]</mo><mfrac><msub><mi>E</mi><mi>g</mi></msub><mrow><mn>2</mn><mo>[!it!]</mo><mi>k</mi><mo>[!it!]</mo><mstyle><mtext> </mtext></mstyle><mo>[!it!]</mo><mi>T</mi></mrow></mfrac></mrow></msup></mrow></math><img he="N/A" wi="N/A" id="img-00002-en" img-content="math" alt="embedded image" file="US6476374B1_00011.PNG" img-format="png" original="US06476374-20021105-M00002.TIF" /></maths></p>
+      <p id="p-00044-en">where E<sub>g</sub>is the bandgap and the quality of the material is represented in the term τ<sub>eff</sub>.</p>
+      <p id="p-00045-en">To produce a practical low-level detector at a given temperature, therefore, the bandgap should be engineered to produce dark currents at the desired temperature which are lower than the photodetector's single photon current output. For example, for temperatures in the region 280-300 degrees kelvin, which roughly corresponds to common ambient temperatures, an AlGaAs detector on a lattice matched GaAs substrate can be engineered to produce a 1.77 eV bandgap, which would produce approximately 10<sup>−19</sup>Amp. dark current for a 400 micron<sup>2</sup>detector area. Such devices are capable of supporting detection of single quanta of visible light by being distinguishable over the dark current noise.</p>
+      <p id="p-00046-en">
+        <figref>FIG. 4</figref>shows energy bandgap vs. lattice constant for a variety of III-V semiconductor compounds, including those listed in table 1. Several lattice matched systems can be identified from the diagram. Binary compounds are shown as points, such as the AlAs point shown at<b>80</b>and the GaAs point at<b>82</b>. Ternary and quaternary compounds can be formed with properties intermediate between the binarys: for example, the line<b>84</b>between AlAs and GaAs represents achievable bandgap and lattice constants for AlGaAs compounds with mixtures intermediate between the AlAs and GaAs extremes (also referred to in table 1, above). Similarly, The line<b>86</b>represents a continuum of bandgap-lattice constant relations achievable with GaInAsP materials; line<b>88</b>shows bandgaps and lattice constants achievable with AlGaP. Other compound materials can be formulated, as will be evident from the diagram and from known technology.</p>
+      <p id="p-00047-en">
+        <figref>FIG. 5</figref>shows a cross section of an alternate embodiment of the invention, capable of multi-color (or more generally, multi-wavelength) discrimination, suitable for use in a spectral-discriminating imaging matrix. The photodetector layer<b>90</b>in this embodiment includes a plurality of distinct photodiode junctions such as<b>90</b>and<b>92</b>, preferably disposed one above the other, layered in a laminar fashion. In the example shown, the photodiode<b>92</b>, which includes p layer<b>96</b>and n+ layer<b>98</b>, are disposed on top of a second photodiode<b>94</b>made up of second p layer<b>100</b>and second n+ layer<b>102</b>. Preferably, the second (underlying) photodiode<b>94</b>should be engineered from materials to produce a lower bandgap than the first (overlying) photodiode. Thus, wavelengths which are too long to be absorbed by the upper photodiode will penetrate the upper photodiode and be absorbed by the lower photodiode. As in the embodiment of<figref>FIG. 2</figref>, the photodiode signals are passed to the interface circuitry by conductive (typically indium) bumps<b>24</b>. The photodiode outputs are isolated from one another: this is accomplished suitably by providing a top layer interface circuit and a bottom layer interface circuit<b>110</b>, with the output of the one of the photodiodes<b>92</b>or<b>94</b>passing by via<b>114</b>to the lower interface circuit<b>110</b>. Both interface circuits are preferably fabricated in CMOS, employing shallow trench isolation in deep sub-micron silicon.</p>
+      <p id="p-00048-en">Although only two photodiodes<b>92</b>and<b>94</b>are shown, to maintain clarity, three or more photodiodes can be used, as appropriate to a particular application. For example, a three-spectral-band detector would be desirable to discriminate three primary colors of visible light, for use in a color imaging device. To enhance color discrimination, the collecting area for each color layer can be varied to equalize or customize color sensitivity. Color filters can also be used in combination with the varying bandgap detector materials to customize color sensitivity as desired.</p>
+      <p id="p-00049-en">Facilitating fully registered three-color detection in this manner eliminates the spatial and color aliasing that occurs with conventional devices facilitated via opto-mechanical alternative means such as multi-faceted prisms (where at least three single-color imagers are each situated at a minimum of three facets and precisely coregisted) or spinning color wheels (where multiple exposures are used to form the precisely registered color information).</p>
+      <p id="p-00050-en">To realize sufficient signal with low incident light, the photodetector described above will typically require amplification by a high gain, circuit or low, which is preferably fabricated using integrated complementary metal-oxide semiconductor (CMOS) technology (although nMOS or pMOS could also be used). Preferably, one interface circuit per pixel is provided. As previously discussed, fabrication of the CMOS interface layer(s)<b>28</b>can be performed separately from the fabrication of the photodetection layer<b>22</b>, then the layers connected via bump bonding, as described in U.S. Pat. No. 5,627,112 or by equivalent methods.</p>
+      <p id="p-00051-en">
+        <figref>FIG. 6</figref>shows one example of a suitable interface circuit (or “readout circuit”), which can be fabricated in CMOS technology in layer<b>28</b>and which provides sufficient gain to read out single photon events at video frame rates. The low impedance circuit is similar to that disclosed in U.S. Pat. No. 5,929,434 to Kozlowski et al.</p>
+      <p id="p-00052-en">A high-gain amplifier A<b>1</b>is connected in a negative feedback configuration from the source to gate of load FET Q<b>1</b>to minimize the input impedance. In particular, the amplifier's input<b>120</b>is connected to the source of Q<b>1</b>, and its output<b>122</b>is connected to the gate of Q<b>1</b>. The amplifier A<b>1</b>can suitably be a single-ended inverting amplifier or a differential amplifier, as further discussed in U.S. Pat. No. 5,929,434. The voltage V<sub>bias1</sub>at node<b>124</b>is preferably set to a voltage which ensures that the FET Q<b>1</b>operates in its subthreshold region. In this region, the FET's transconductance is very small, which is necessary to achieve high current gain via the ratio of the transconductances of Q<b>2</b>to Q<b>1</b>.</p>
+      <p id="p-00053-en">The photodiode PD<b>1</b>is a compound semiconductor photodiode, bandgap-engineered to provide the proper bandgap as described above in connection with FIG.<b>3</b>and Table 1. The photodiode PD<b>1</b>is preferably reverse-biased in the region below the avalanche breakdown threshold (sometimes called the “linear region” although linearity is not absolutely required by the invention). When a photon<b>20</b>(with energy hν) falls on the photodiode PD<b>1</b>, charge is injected into node<b>120</b>, connected to the source of Q<b>1</b>, resulting in a small signal. The amplifier A<b>1</b>, which is connected in a negative feedback configuration from the source to the gate of Q<b>1</b>, amplifies the small signal and causes the voltage at the gate of Q<b>1</b>to follow the small signal at node<b>120</b>, so that the gate-to-source voltage remains substantially constant across Q<b>1</b>and the small signal at<b>120</b>appears also at node<b>122</b>. See U.S. Pat. No. 5,929,434 for a discussion of the merits of the A<b>1</b>-Q<b>1</b>buffering circuit, which include insensitivity to 1/f FET noise.</p>
+      <p id="p-00054-en">The signal at node<b>122</b>is further amplified by the FET Q<b>2</b>, causing the much larger source-drain current I<b>1</b>to discharge capacitor C<b>1</b>. The voltage across C<b>1</b>therefore approximates an integral of the (amplified) small signal output of the photodetector, where the integration is over time. FET Q<b>3</b>is used to reset the voltage across capacitor C<b>1</b>during an initialization period or between samples, but remains off (approximating an open switch) during sampling integrations. The sampling period is controlled by V<sub>sample</sub>, the voltage applied to the gate of Q<b>3</b>. FET Q<b>4</b>also acts as a switch, and is held in its high impedance (“open”) state during integration, then switched to its low impedance (“Closed”) state periodically by Vread, to read out the integrated voltage (preferably once per sampling period, at the end of the period). Gain of the circuit can be varied by adjusting the transconductance ratio of Q<b>2</b>to Q<b>1</b>, or by adjusting the time window during which the circuit integrates photonic signal.</p>
+      <p id="p-00055-en">Alternate interface circuits are known which are similar to that of<figref>FIG. 6</figref>but which provide a more predictable current gain which is independent of scene illumination. For example, one such circuit is disclosed in U.S. Pat. No. 5,929,434 (discussed in Col. 5, line 49 through Col. 6, line 23 and shown in<figref>FIG. 3</figref>of that patent).</p>
+      <p id="p-00056-en">
+        <figref>FIG. 7</figref>shows an alternate interface circuit with low input impedance which provides very low noise and high gain by using a capacitively coupled, CMOS transimpedance amplifier that is optimized for low-light-level imaging. In this circuit, photodetector signal from PD<b>2</b>is amplified by FETs Q<b>10</b>and Q<b>11</b>, which are connected in a cascode configuration. The cascode inverter amplifier configuration, which comprises FETs Q<b>10</b>, Q<b>11</b>and load FET Q<b>13</b>, maximizes the compact amplifier's voltage gain and minimizes the Miller capacitance used for signal integration. During an initialization period, the CMOS reset switch consisting of complementary FETs Q<b>12</b>and Q<b>14</b>is switched on by complementary reset clock signals φ<sub>r</sub>and {overscore (φ<sub>r</sub>)}, thereby discharging any integrated signal stored on C<sub>int</sub>. The CMOS reset switch minimizes dc offsets generated by feedthrough of the reset clock to the detector node. C<sub>int</sub>represents the gate-to-source overlap capacitance of Q<b>11</b>, which is 300-400 aF per micron of FET width for 0.25 μm CMOS technology.</p>
+      <p id="p-00057-en">Further mitigation of switching feedthrough is achieved by shaping the reset clocks and the pixel readout clocks (φ<sub>read</sub>and {overscore (φ<sub>read</sub>)}). The shaping optimizes the slew rate to perform the necessary clocking at minimum feedthrough. Degradation of readout speed resulting from the shaping of (φ<sub>read</sub>and {overscore (φ<sub>read</sub>)}) is mitigated by increasing the amplifier bias during readout to briefly reduce its output impedance.</p>
+      <p id="p-00058-en">Since the voltage gain of such a CMOS amplifier is significantly greater than 1000 and the III-V photodiode has capacitance less than 15 fF for the configuration of the preferred embodiment, C<sub>int</sub>of approximately 0.5 fF is thereby facilitated. The resulting photo-gain for the amplifier can thus be greater than 300 μV/e−, which is twenty to sixty times larger than achieved with CCDs.</p>
+      <p id="p-00059-en">Similarly, a CMOS transmission gate consisting of complementary FETs Q<b>15</b>and Q<b>16</b>enables the amplified signal to charge C<sub>L</sub>, which serves to band-limit the signal and thereby suppress the wide-band noise of the transimpedance amplifier. Since this configuration enables much larger C<sub>L</sub>than otherwise achievable within the pixel by exploiting the parasitic bus capacitance in conjunction with any additional band-limiting capacitance shared among all the pixels on the bus, the high frequency noise boost of this amplifier configuration is mitigated and &lt;1 e− noise is facilitated.</p>
+      <p id="p-00060-en">The noise transfer function for the transimpedance amplifier of<figref>FIG. 7</figref>is:<maths id="maths-00003-en"><math><mrow><mrow><mfrac><msub><mi>v</mi><mi>o</mi></msub><msub><mi>i</mi><mi>n</mi></msub></mfrac><mo>=</mo><mrow><mfrac><mrow><msub><mi>C</mi><mi>det</mi></msub><mo>+</mo><msub><mi>C</mi><mi>int</mi></msub></mrow><mrow><mi>G</mi><mo>[!CenterDot!]</mo><msub><mi>C</mi><mi>int</mi></msub></mrow></mfrac><mo>[!CenterDot!]</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mrow><mi>s</mi><mo>[!it!]</mo><mstyle><mtext> </mtext></mstyle><mo>[!it!]</mo><mi>τ</mi></mrow></mrow></mfrac></mrow></mrow><mo>;</mo><mstyle><mtext> </mtext></mstyle><mo>[!it!]</mo><mrow><mi>τ</mi><mo>[!TildeTilde!]</mo><mrow><mo>-</mo><mstyle><mtext> </mtext></mstyle><mo>[!it!]</mo><mfrac><mrow><msub><mi>C</mi><mi>L</mi></msub><mo>[!af!]</mo><mrow><mo>(</mo><mrow><msub><mi>C</mi><mi>det</mi></msub><mo>+</mo><msub><mi>C</mi><mi>int</mi></msub></mrow><mo>)</mo></mrow></mrow><mrow><mi>G</mi><mo>[!it!]</mo><mstyle><mtext> </mtext></mstyle><mo>[!it!]</mo><msub><mi>C</mi><mi>int</mi></msub></mrow></mfrac></mrow></mrow></mrow></math><img he="N/A" wi="N/A" id="img-00003-en" img-content="math" alt="embedded image" file="US6476374B1_00012.PNG" img-format="png" original="US06476374-20021105-M00003.TIF" /></maths></p>
+      <p id="p-00061-en">where C<sub>det</sub>is the total detector and input capacitance, and G is the amplifier gain. The amplifier's noise equivalent charge is:<maths id="maths-00004-en"><math><mrow><mrow><msub><mi>N</mi><mi>eq</mi></msub><mo>=</mo><mfrac><mrow><mrow><mo>[!LeftAngleBracket!]</mo><msubsup><mi>v</mi><mi>o</mi><mn>2</mn></msubsup><mo>[!RightAngleBracket!]</mo></mrow><mo>[!it!]</mo><msub><mi>C</mi><mi>int</mi></msub></mrow><mi>q</mi></mfrac></mrow><mo>;</mo><mstyle><mtext> </mtext></mstyle><mo>[!it!]</mo><mi>where</mi></mrow><mtable><mtr><mtd><mrow><msup><mrow><mo>[!LeftAngleBracket!]</mo><msubsup><mi>v</mi><mi>o</mi><mn>2</mn></msubsup><mo>[!RightAngleBracket!]</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup><mo>=</mo><mstyle><mtext> </mtext></mstyle><mo>[!it!]</mo><msqrt><mrow><msubsup><mo>[!Integral!]</mo><mn>0</mn><mi>∞</mi></msubsup><mo>[!it!]</mo><mrow><mn>4</mn><mo>[!it!]</mo><mstyle><mtext> </mtext></mstyle><mo>[!it!]</mo><mi>k</mi><mo>[!it!]</mo><mstyle><mtext> </mtext></mstyle><mo>[!it!]</mo><mi>T</mi><mo>[!it!]</mo><mrow><mo>[!LeftBracketingBar!]</mo><mi>G</mi><mo>[!RightBracketingBar!]</mo></mrow><mo>[!it!]</mo><mstyle><mtext> </mtext></mstyle><mo>[!it!]</mo><msup><mrow><mo>[!LeftBracketingBar!]</mo><mrow><msub><mi>H</mi><mi>n</mi></msub><mo>[!af!]</mo><mrow><mo>(</mo><mi>s</mi><mo>)</mo></mrow></mrow><mo>[!RightBracketingBar!]</mo></mrow><mn>2</mn></msup><mo>[!it!]</mo><mrow><mo>[!dd!]</mo><mi>f</mi></mrow></mrow></mrow></msqrt></mrow></mtd></mtr><mtr><mtd><mrow><mo>=</mo><mstyle><mtext> </mtext></mstyle><mo>[!it!]</mo><msqrt><mrow><mn>4</mn><mo>[!it!]</mo><mstyle><mtext> </mtext></mstyle><mo>[!it!]</mo><mi>k</mi><mo>[!it!]</mo><mstyle><mtext> </mtext></mstyle><mo>[!it!]</mo><mi>T</mi><mo>[!it!]</mo><mrow><mo>[!LeftBracketingBar!]</mo><mi>G</mi><mo>[!RightBracketingBar!]</mo></mrow><mo>[!it!]</mo><mstyle><mtext> </mtext></mstyle><mo>[!it!]</mo><msup><mrow><mo>(</mo><mfrac><mrow><msub><mi>C</mi><mi>det</mi></msub><mo>+</mo><msub><mi>C</mi><mi>int</mi></msub></mrow><mrow><mi>G</mi><mo>[!CenterDot!]</mo><msub><mi>C</mi><mi>int</mi></msub></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup><mo>[!it!]</mo><mrow><msubsup><mo>[!Integral!]</mo><mn>0</mn><mi>∞</mi></msubsup><mo>[!it!]</mo><mrow><msup><mrow><mo>[!LeftBracketingBar!]</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mrow><mi>s</mi><mo>[!it!]</mo><mstyle><mtext> </mtext></mstyle><mo>[!it!]</mo><mi>τ</mi></mrow></mrow></mfrac><mo>[!RightBracketingBar!]</mo></mrow><mn>2</mn></msup><mo>[!it!]</mo><mrow><mo>[!dd!]</mo><mi>f</mi></mrow></mrow></mrow></mrow></msqrt></mrow></mtd></mtr></mtable></math><img he="N/A" wi="N/A" id="img-00004-en" img-content="math" alt="embedded image" file="US6476374B1_00013.PNG" img-format="png" original="US06476374-20021105-M00004.TIF" /></maths></p>
+      <p id="p-00062-en">The integral under the radical is equivalent to 1/4τ where<maths id="maths-00005-en"><math><mrow><mfrac><mn>1</mn><mrow><mn>4</mn><mo>[!it!]</mo><mstyle><mtext> </mtext></mstyle><mo>[!it!]</mo><mi>τ</mi></mrow></mfrac><mo>=</mo><msqrt><mrow><mfrac><mrow><mi>k</mi><mo>[!it!]</mo><mstyle><mtext> </mtext></mstyle><mo>[!it!]</mo><mi>T</mi></mrow><msub><mi>C</mi><mi>int</mi></msub></mfrac><mo>[!CenterDot!]</mo><mfrac><msup><mrow><mo>(</mo><mrow><msub><mi>C</mi><mi>det</mi></msub><mo>+</mo><msub><mi>C</mi><mi>int</mi></msub></mrow><mo>)</mo></mrow><mn>2</mn></msup><mrow><mrow><msub><mi>C</mi><mi>L</mi></msub><mo>[!af!]</mo><mrow><mo>(</mo><mrow><msub><mi>C</mi><mi>det</mi></msub><mo>+</mo><msub><mi>C</mi><mi>int</mi></msub></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>C</mi><mi>int</mi></msub><mo>[!CenterDot!]</mo><msub><mi>C</mi><mi>det</mi></msub></mrow></mrow></mfrac></mrow></msqrt></mrow></math><img he="N/A" wi="N/A" id="img-00005-en" img-content="math" alt="embedded image" file="US6476374B1_00014.PNG" img-format="png" original="US06476374-20021105-M00005.TIF" /></maths></p>
+      <p id="p-00063-en">Substituting, the output-referred amplifier noise voltage is:<maths id="maths-00006-en"><math><mrow><msup><mrow><mo>[!LeftAngleBracket!]</mo><msubsup><mi>v</mi><mi>o</mi><mn>2</mn></msubsup><mo>[!RightAngleBracket!]</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup><mo>=</mo><msqrt><mrow><mfrac><mrow><mi>k</mi><mo>[!it!]</mo><mstyle><mtext> </mtext></mstyle><mo>[!it!]</mo><mi>T</mi></mrow><msub><mi>C</mi><mi>int</mi></msub></mfrac><mo>[!CenterDot!]</mo><mfrac><mrow><msub><mi>C</mi><mi>det</mi></msub><mo>+</mo><msub><mi>C</mi><mi>int</mi></msub></mrow><mrow><msub><mi>C</mi><mi>L</mi></msub><mo>+</mo><mfrac><mrow><msub><mi>C</mi><mi>int</mi></msub><mo>[!CenterDot!]</mo><msub><mi>C</mi><mi>det</mi></msub></mrow><mrow><msub><mi>C</mi><mi>det</mi></msub><mo>+</mo><msub><mi>C</mi><mi>int</mi></msub></mrow></mfrac></mrow></mfrac></mrow></msqrt></mrow></math><img he="N/A" wi="N/A" id="img-00006-en" img-content="math" alt="embedded image" file="US6476374B1_00015.PNG" img-format="png" original="US06476374-20021105-M00006.TIF" /></maths></p>
+      <p id="p-00064-en">Alternatively expressing the output-referred noise in terms of electrons, the amplifier's wideband thermal noise, or channel noise, is:<maths id="maths-00007-en"><math><mrow><mrow><mo>[!Therefore!]</mo><msub><mi>N</mi><mi>channel</mi></msub></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mi>q</mi></mfrac><mo>[!it!]</mo><msqrt><mrow><mi>k</mi><mo>[!it!]</mo><mstyle><mtext> </mtext></mstyle><mo>[!it!]</mo><mi>T</mi><mo>[!it!]</mo><mstyle><mtext> </mtext></mstyle><mo>[!it!]</mo><mrow><msub><mi>C</mi><mi>int</mi></msub><mo>[!CenterDot!]</mo><mfrac><mrow><msub><mi>C</mi><mi>det</mi></msub><mo>+</mo><msub><mi>C</mi><mi>int</mi></msub></mrow><mrow><msub><mi>C</mi><mi>L</mi></msub><mo>+</mo><mfrac><mrow><msub><mi>C</mi><mi>int</mi></msub><mo>[!CenterDot!]</mo><msub><mi>C</mi><mi>det</mi></msub></mrow><mrow><msub><mi>C</mi><mi>det</mi></msub><mo>+</mo><msub><mi>C</mi><mi>int</mi></msub></mrow></mfrac></mrow></mfrac></mrow></mrow></msqrt></mrow></mrow></math><img he="N/A" wi="N/A" id="img-00007-en" img-content="math" alt="embedded image" file="US6476374B1_00016.PNG" img-format="png" original="US06476374-20021105-M00007.TIF" /></maths></p>
+      <p id="p-00065-en">where q is the electron charge, k is Boltzmann's constant and T is the operating temperature. Channel noise of about 1 e− can be achieved with C<sub>det</sub>of 15 fF and C<sub>int</sub>of 0.5 fF at 295K for CL of ˜1.23 pF. Since this is comparable to the bus capacitance for a typical video-format imager, no additional capacitance is needed.</p>
+      <p id="p-00066-en">The preceding analysis does not include the amplifier 1/f noise which increases inversely with the amplifier gate area. The amplifier configuration must therefore be long and narrow to minimize both 1/f noise and overlap capacitance.</p>
+      <p id="p-00067-en">The preceding analysis also does not consider the reset noise associated with resetting C<sub>det</sub>and C<sub>int</sub>. Such noise is suppressed by the inverse square root of the amplifier's gain. The amplifier gain must therefore be greater than 2500 to reduce this noise source to one electron at room temperature for the specified capacitances. Such amplification is readily achieved in CMOS via the cascode configuration and thereby obviates the otherwise compelling need for correlated double sampling. This alternative therefore provides an extremely compact amplifier.</p>
+      <p id="p-00068-en">The band-limited output voltage from the compact amplifier is read from each pixel by applying the complementary clocks φ<sub>read</sub>and {overscore (φ<sub>read</sub>)} and thereby connecting the pixel's signal to a readout Bus. This allows the outputs of multiple such interface circuits to be multiplexed to a common bus, as for example in reading out an array or matrix of photodetectors.</p>
+      <p id="p-00069-en">
+        <figref>FIG. 8</figref>shows an alternate interface circuit with high input impedance. The circuit uses a source follower amplifier to readout from the photodetector diode PD<b>4</b>. When Φ<sub>rst</sub>is high, Q<b>27</b>provides bias to the photodetector diode PD<b>4</b>. The signal developed during the integration time across PD<b>4</b>'s capacitance at node<b>130</b>is amplified and buffered by source follower FET Q<b>28</b>, which is current biased by Q<b>29</b>. The voltage V<sub>bias</sub>(at the gate of Q<b>29</b>) is preferably set to bias Q<b>29</b>in the subthreshold region to minimize its luminance, which would otherwise increase noise and compromise the available dynamic range. The output of the source follower FET Q<b>28</b>is capacitively coupled by series capacitor C<sub>clamp</sub>initially, under control of a reset signal Φ<sub>clamp</sub>applied to the gate of Q<b>31</b>.</p>
+      <p id="p-00070-en">The clamping and sampling facilitated in this manner effects correlated double sampling of the photogenerated signal that is subsequently read through the second stage source follower and offset by the voltage stored across C<sub>clamp</sub>. The correlated noise generated by resetting the detector capacitance is thereby eliminated. By minimizing the capacitances of PD<b>4</b>and the gate of FET Q<b>28</b>, the transimpedance is maximized for reading noise levels below about 10 e− at typical video rates. Since the maximum total capacitance of the III-V detector and the gate of FET Q<b>28</b>is preferably ≦5 fF, a photoconversion gain of 32 μV/e−, the noise level for a background signal of one electron is about 32 μV rms. This is manageable since the noise bandwidth of the pixel amplifier can be limited to about ten times the maximum line rate, which is on the order of 100 kHz. The requisite white noise at this bandwidth is a manageable 0.1 μV/Hz. The output of the pixel amplifier is read from the pixel by enabling Φ<sub>access</sub>to supply the signal to the bus. The signal is appropriately band-limited to about 100 kHz via the parasitic bus capacitance C<sub>L</sub>(not explicitly symbolized) and (optional) additional capacitance external to the pixel, if such is necessary to reduce the amplifier's wide-band thermal noise, depending on the MOS process. The circuit of<figref>FIG. 8</figref>is thus also capable of detecting quanta.</p>
+      <p id="p-00071-en">In one particularly attractive embodiment, a plurality of photodetectors according to the invention as previously described are integrated in a pixellated array or matrix. Independent interface circuits are most preferably provided for each pixel. By using a suitable variable gain interface circuit, for example as described above in connection with<figref>FIGS. 6</figref>,<b>7</b>and<b>8</b>, independently variable gain can be provided for each pixel. The interface matrix can thus be fabricated with pixel gains varying from pixel to pixel in a manner complementary to any pixel to pixel variation (expected or measured) in photodetector sensitivity. Such photodetector variation might arise, for example, from processing inhomogeneities or irregularities.</p>
+      <p id="p-00072-en">One of the primary benefits of the invention is that it uses conventional photodiodes or photoconductors that have unity gain, rather than avalanche photodetectors. Such photodiodes of photoconductors are cheaper, more uniform, easier to fabricate, more reliable, less susceptible to noise and can be fabricated in alternative materials at a variety of cutoff wavelengths to specifically tailor the photoresponse to each application. A second benefit is the near absence of dark current at room temperature. At typical ambient temperatures, the dark current will be less than one quantum for the detector's pixel area (per sample time at video rates). A third benefit is the extremely small detector capacitance that can be achieved via the vertically integrated hybrid. This translates to lower read noise using easily produced photodetectors.</p>
+      <p id="p-00073-en">
+        <figref>FIG. 9</figref>demonstrates the dark current reduction achieved by the invention. A III-V detector capable of responding to 780 nm radiation, shown as the dark current vs. temperature line 180, has several orders of magnitude lower dark current than the best silicon CCDs. Further reducing the long cutoff wavelength to 650 nm to match the minimum red response needed for imagers with RGB color sampling rather than the full CIE specification reduces the dark current at room temperature by over six orders of magnitude (compared with conventional silicon CCDs), as shown by line<b>182</b>. This reduction completely eliminates any need for imager cooling in the temperature range spanned by the data shown (up to at least 320 degrees K, and by extrapolation probably much higher). Included in the figure are representative data for conventional silicon photodetectors including various configurations available in standard CMOS-based imagers. Curve 184 shows the dark current density for a MPP CCD(multi-pinned phase charge coupled device, available for example from Sony Corp.), and curve 186 similarly shows dark current density for a CMOS N+ in P substrate CCD device. It is apparent from the figure that the dark currents obtained by the invention are several orders of magnitude lower than silicon CCDs in the relevant temperature range.</p>
+      <p id="p-00074-en">While several illustrative embodiments of the invention have been shown and described, numerous variations and alternate embodiments will occur to those skilled in the art. In an application where speed is a priority, the photodetector of the invention could be used at rates far exceeding typical video frame rates (given sufficient illumination). On the other hand, in applications requiring extreme sensitivity, sampling can be done at lower than video frame rates, providing much greater photonic sensitivity, at the expense of speed. Cooling could optionally be applied to obtain ultra-low dark current, low noise operation for extremely low light applications (for example, in astronomy). Such variations and alternate embodiments are contemplated, and can be made without departing from the spirit and scope of the invention as defined in the appended claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>We claim:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20100427">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>1. A high-sensitivity photodetector for detecting radiation in the visible or shorter wavelength regions of the spectrum, suitable for room-temperature operation, comprising:<claim-text>a compound semiconductor photodiode which generates a detector current in response to incident photons, said photodiode biased below its avalanche breakdown threshold, comprising III-V elemental components and having a bandgap with transition energy higher than the energy of infrared photons;</claim-text><claim-text>a high trans-impedance interface circuit, arranged to receive a signal from said photodiode junction and amplify said signal, wherein said photodiode junction is integrated on a first substrate and said interface circuit is on a second substrate.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>2. The photodetector of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said photodiode junction is integrated in a first microstructure on said first substrate, said interface circuit is in a second microstructure on said second substrate, and said first and second microstructures are joined in a laminar fashion,<claim-text>and wherein said first and second microstructures communicate via electrically conducting contacts.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>3. The photodetector of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein electrically conducting contacts comprise indium.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>4. The photodetector of <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein said interface circuit comprises:<claim-text>a load FET, having a source arranged to receive a small signal from said photodiode; and</claim-text><claim-text>an amplifier that is connected in a negative feedback loop around said load FET's gate-to-source voltage.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>5. The photodetector of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein said interface circuit further comprises:<claim-text>a sampling circuit that samples the output of said amplifier, said sampling circuit comprising:</claim-text><claim-text>a capacitor that integrates the amplifier output;</claim-text><claim-text>an access switch which is clocked at a sampling frequency to read said output; and</claim-text><claim-text>a reset switch to discharge said capacitor after said voltage is read.</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>6. The photodetector of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said bandgap is at least 1.77 electron volts.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>7. The photodetector of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said bandgap is at least 1.98 electron volts.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>8. The photodetector of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said bandgap is at least 2.07 electron volts.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>9. The photodetector of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said bandgap is at least 2.25 electron volts.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>10. The photodetector of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said photodiode comprises:<claim-text>a detector layer comprising aluminum gallium arsenide; and</claim-text><claim-text>a substrate layer comprising gallium arsenide.</claim-text></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>11. The photodetector of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said photodiode comprises:<claim-text>a detector layer comprising aluminum indium gallium arsenide, and a substrate layer comprising indium phosphide.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>12. The photodetector of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said photodiode comprises:<claim-text>a detector layer comprising gallium phosphide; and</claim-text><claim-text>a substrate layer comprising indium phosphide.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>13. The photodetector of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said photodiode comprises:<claim-text>a detector layer comprising indium gallium nitride; and</claim-text><claim-text>a substrate layer comprising sapphire.</claim-text></claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>14. An imaging array for use at room temperatures to detect images from low-level visible, ultraviolet or shorter illumination, suitable for use at video frame rates, comprising:<claim-text>a plurality of addressable photodetecting cells, each said cell comprising:</claim-text><claim-text>a compound semiconductor photodiode which generates a detector current in response to incident photons, said photodiode biased below its avalanche breakdown threshold, comprising III-V elemental components and having a bandgap with transition energy higher than the energy of infrared photons;</claim-text><claim-text>a high trans-impedance interface circuit, arranged to receive a signal from said photodiode junction and amplify said signal,</claim-text><claim-text>wherein said photodiode is integrated on a first substrate and said interface circuit is on a second substrate.</claim-text></claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>15. The imaging array of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein said photodiode is integrated in a first microstructure on said first substrate, said interface circuit is in a second microstructure on said second substrate, and said first and second microstructures are joined in a laminar fashion,<claim-text>and wherein said first and second microstructures communicate via electrically conducting contacts.</claim-text></claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>16. The imaging array of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein said electrically conducting contacts comprise indium.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>17. The imaging array of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein said interface circuit comprises:<claim-text>a load FET, having a source arranged to receive a small signal from said photodiode; and</claim-text><claim-text>an amplifier that is connected in a negative feedback loop around said load FET's gate-to-source voltage.</claim-text></claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>18. The imaging array of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein said interface circuit further comprises:<claim-text>a sampling circuit that samples the output of said amplifier, said sampling circuit comprising:</claim-text><claim-text>a capacitor that integrates the amplifier output;</claim-text><claim-text>an access switch which is clocked at a sampling frequency to read said output; and</claim-text><claim-text>a reset switch that is clocked at said sampling frequency to discharge said capacitor after said voltage is read.</claim-text></claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>19. The imaging array of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein said bandgap is at least 1.77 electron volts.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>20. The imaging array of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein said bandgap is at least 1.98 electron volts.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>21. The imaging array of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein said bandgap is at least 2.07 electron volts.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>22. The imaging array of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein said bandgap is at least 2.25 electron volts.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>23. The imaging array of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein said photodiode comprises:<claim-text>a detector layer comprising aluminum gallium arsenide; and</claim-text><claim-text>a substrate layer comprising gallium arsenide.</claim-text></claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>24. The imaging array of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein said photodiode comprises:<claim-text>a detector layer comprising aluminum indium gallium arsenide, and</claim-text><claim-text>a substrate layer comprising indium phosphide.</claim-text></claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en">
+      <claim-text>25. The imaging array of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein said photodiode comprises:<claim-text>a detector layer comprising gallium phosphide; and</claim-text><claim-text>a substrate layer comprising indium phosphide.</claim-text></claim-text>
+    </claim>
+    <claim num="26" id="clm-00026-en">
+      <claim-text>26. The imaging array of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein said photodiode comprises:<claim-text>a detector layer comprising indium gallium nitride; and</claim-text><claim-text>a substrate layer comprising sapphire.</claim-text></claim-text>
+    </claim>
+    <claim num="27" id="clm-00027-en">
+      <claim-text>27. The imaging array of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein the respective interface circuits of said cells have variable gain.</claim-text>
+    </claim>
+    <claim num="28" id="clm-00028-en">
+      <claim-text>28. The imaging array of <claim-ref idref="clm-00027-en">claim 27</claim-ref>, wherein the gain of said respective interface circuits is variably set in a manner complementary to a non-uniformity in a response of respective photodiodes of said cells.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US6476374B1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US06476374-20021105-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US6476374B1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US06476374-20021105-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US6476374B1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US06476374-20021105-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US6476374B1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US06476374-20021105-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US6476374B1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US06476374-20021105-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US6476374B1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US06476374-20021105-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US6476374B1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US06476374-20021105-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US6476374B1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US06476374-20021105-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US6476374B1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US06476374-20021105-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US6476374B1_00010.PNG" alt="mathematical image" img-content="math" img-format="png" original="US06476374-20021105-M00001.TIF" inline="yes" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US6476374B1_00011.PNG" alt="mathematical image" img-content="math" img-format="png" original="US06476374-20021105-M00002.TIF" inline="yes" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US6476374B1_00012.PNG" alt="mathematical image" img-content="math" img-format="png" original="US06476374-20021105-M00003.TIF" inline="yes" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US6476374B1_00013.PNG" alt="mathematical image" img-content="math" img-format="png" original="US06476374-20021105-M00004.TIF" inline="yes" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US6476374B1_00014.PNG" alt="mathematical image" img-content="math" img-format="png" original="US06476374-20021105-M00005.TIF" inline="yes" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US6476374B1_00015.PNG" alt="mathematical image" img-content="math" img-format="png" original="US06476374-20021105-M00006.TIF" inline="yes" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US6476374B1_00016.PNG" alt="mathematical image" img-content="math" img-format="png" original="US06476374-20021105-M00007.TIF" inline="yes" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US6476374B1_00017.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US06476374-20021105-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US6476374B1.PDF" type="pdf" size="331709" pages="16" />
+</lexisnexis-patent-document>

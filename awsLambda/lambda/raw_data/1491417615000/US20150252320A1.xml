@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150252320A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021820" date-changed="20150921" time-changed="060353">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121229315">
+        <country>US</country>
+        <doc-number>20150252320</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14706283</doc-number>
+        <date>20150507</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150917">
+      <classification-ipcr sequence="1">
+        <text>C12N   1/20        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>1</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150917">
+      <classification-cpc sequence="1">
+        <text>C12N   1/20        20130101 FI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>1</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C12N   1/36        20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>1</main-group>
+        <subgroup>36</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C12N  11/16        20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>11</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">30</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">METHOD FOR CONTINUOUSLY CULTURING EHRLICHIA CANIS</invention-title>
+    <related-documents date-changed="20150910">
+      <division>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>12674114</doc-number>
+              <date>20100218</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>9051557</doc-number>
+              </document-id>
+            </parent-grant-document>
+            <parent-pct-document>
+              <document-id>
+                <country>WO</country>
+                <doc-number>PCT/US2008/076025</doc-number>
+                <date>20080911</date>
+              </document-id>
+            </parent-pct-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007062</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </division>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61031428</doc-number>
+          <date>20080226</date>
+        </document-id>
+      </provisional-application>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>60971726</doc-number>
+          <date>20070912</date>
+        </document-id>
+      </provisional-application>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>60971716</doc-number>
+          <date>20070912</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Intervet International B.V.</orgname>
+            <address>
+              <city>Boxmeer</city>
+              <country>NL</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>NL</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Battles</last-name>
+            <first-name>Jane Kwun-Lai</first-name>
+            <address>
+              <city>Dagsboro</city>
+              <state>DE</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Proudfoot</last-name>
+            <first-name>Kimberly D.</first-name>
+            <address>
+              <city>Millsboro</city>
+              <state>DE</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Meding</last-name>
+            <first-name>Brenda L.</first-name>
+            <address>
+              <city>Milton</city>
+              <state>DE</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Funk</last-name>
+            <first-name>Patrick G.</first-name>
+            <address>
+              <city>DeSoto</city>
+              <state>KS</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Warthen</last-name>
+            <first-name>R. Monty</first-name>
+            <address>
+              <city>Millsboro</city>
+              <state>DE</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Bethke</last-name>
+            <first-name>F. Randall</first-name>
+            <address>
+              <city>Millsboro</city>
+              <state>DE</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="7" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Ellis</last-name>
+            <first-name>Eric A.</first-name>
+            <address>
+              <city>Whaleyville</city>
+              <state>MD</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="8" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Purse</last-name>
+            <first-name>Amy Y.</first-name>
+            <address>
+              <city>Seaford</city>
+              <state>DE</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>US08076025</doc-number>
+        <date>20080911</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2009036177</doc-number>
+        <date>20090319</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150910">
+      <main-family family-id="173566178">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252320</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150507</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173566177">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252320</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150507</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention relates to a method of culturing bacterial organisms belonging to the family Anaplasmataceae in mammalian embryonic or fetal cells. In particular, the present invention is directed to growth of bacterial organisms belonging to the family Anaplasmataceae including organisms belonging to the <i>Anaplasma, Ehrlichia </i>and <i>Neorickettsia </i>genera. The bacterial organisms may be cultured in mammalian embryonic or fetal host cells including feline embryonic host cells. Bacterial material cultured according to the methods described herein may be used as the basis for vaccines against diseases associated with the Anaplasmataceae bacteria, or as the basis for diagnostic applications useful for diagnosing diseases associated with the Anaplasmataceae bacteria.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to a method of culturing bacterial organisms belonging to the family Anaplasmataceae in mammalian embryonic or fetal cells, such as feline embryonic or fetal cells. In particular, the present invention is directed to growth of bacterial organisms belonging to the family Anaplasmataceae including organisms belonging to the genera <i>Anaplasma, Ehrlichia, Neorickettsia</i>, and <i>Wolbachieae</i>. The bacterial organisms may be cultured in mammalian embryonic or fetal cells, such as feline embryonic or fetal host cells. Bacterial material cultured according to the methods described herein may be used as the basis for vaccines against diseases associated with the Anaplasmataceae bacteria.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">The bacteria of the family Anaplasmataceae are obligate intracellular parasites. As such, these microorganisms are often difficult to grow and the diseases they cause are difficult to diagnose. Because of the difficulty of growing these microorganisms, large-scale preparation of vaccine antigens is costly and sometimes impossible. The bacteria of the Anaplasmataceae family are pathogenic agents of vector-transmitted diseases of human and animals. They are mostly transmitted by invertebrate vectors such as ticks. Within the family Anaplasmataceae, the microorganisms of the genera <i>Anaplasma, Ehrlichia, Neorickettsia </i>and <i>Wolbachieae </i>are causative agents of vector-transmitted diseases and are difficult to grow, especially on a large-scale. Bacterial species belonging to the genus <i>Rickettsieae </i>are not included within the family Anaplasmataceae.</p>
+      <p id="p-00003-en" num="0003">Anaplasmosis is a major tick-borne disease of cattle endemic in the United States. The causative agent, <i>Anaplasma marginale</i>, invades and multiplies in erythrocytes of cattle, causing mild to severe anemia. Annual mortality and morbidity due to anaplasmosis impacting beef cattle herds has caused millions of dollars worth of damage due to, for example; weight loss during acute infections and increased veterinary costs. See e.g., Palmer in Veterinary Protozoan and Hemoparasite Vaccines, J. G. Wright (Ed.) CRC Press Inc., Boca Raton, Fla. 1989.</p>
+      <p id="p-00004-en" num="0004">
+        <i>Anaplasma phagocytophilum </i>causes tick borne fever in sheep, cattle, and bison, and is vecotred by <i>I. ricins</i>. See U.S. Pat. No. 6,284,238, which is fully incorporated by reference herein. In contrast to <i>A. marginale </i>which infects red blood cells, <i>A. phagocytophilum </i>infects granulocytes.</p>
+      <p id="p-00005-en" num="0005">
+        <i>Ehrlichia </i>bacteria are closely related to <i>Anaplasma </i>species. Those species for which a biological vector is known are transmitted by ticks, such as for <i>E. canis</i>. While <i>Anaplasma phagocytophilum </i>prefers to infect granulocytes in its mammalian host, <i>Ehrlichia canis </i>prefers to infect mononuclear white blood cells. Typically, <i>Anaplasma </i>and <i>Ehrlichia </i>are contained within membrane-bound vacuoles of their respective host cells.</p>
+      <p id="p-00006-en" num="0006">The first <i>Ehrlichia </i>species recognized was <i>E. canis</i>. It occurs in all areas of the world where the vector tick, <i>Rhipicephalus sanguineus </i>(the brown dog tick), lives. The disease it causes is sometimes called canine tropical pancytopenia. It is a problem especially in all warm areas of the world, e.g., the southern U.S., Central and South America, the Mediterranean, and South Asia. <i>Ehrlichia canis </i>may be cultivated in the dog cell line DH82 as well as human-dog hybrid cell lines (See Rikihisa, Y. 1991. Clinical Microbiology Reviews, 4:286). Various strains of <i>E. canis </i>are listed in U.S. Patent Application No. 2006/0188524, which is herein incorporated by reference in its entirety. <i>Ehrlichia chaffeensis </i>is associated with human ehrlichiosis. See Maeda, K. et al., 1987, N. Eng. J. Med. 316:853; Dawson, J. E. et al., 1991, J. Clin. Microbiol. 29:2741. <i>E. chaffeensis </i>can also be cultured in DH82 cells.</p>
+      <p id="p-00007-en" num="0007">
+        <i>Neorickettsia </i>bacteria are closely related to <i>Ehrlichia </i>and <i>Anaplasma </i>bacteria. <i>Neorickettsia </i>species include <i>N. risticii </i>and <i>N. sennetsu </i>(both of which were previously classified in the genus <i>Ehrlichia. N. risticii </i>is the causative agent of Potomac horse fever. This disease is known to occur in North America, France and India. <i>N. risticii </i>may be grown in macrophage-monocyte cell lines such as P388D<sub>1</sub>, T-84 and U937. <i>N. sennetsu </i>is the causative agent of Sennetsu erlichiosis of humans. <i>N. sennetsu </i>grows in murine and human cell lines such P388D, L929, and HeLa.</p>
+      <p id="p-00008-en" num="0008">Infections with bacterial organisms of the Anaplasmataceae family may be diagnosed by direct microscopic examination and/or serodiagnosis. Treatment with antibiotics may be effective. Equine vaccines to protect against <i>N. risticii </i>are commercially available. See Compendium of Veterinary Products, 6th ed., Aurora Arrioja, ed., North American Compendiums, Ltd., Port Huron, MI (2001). At least one cattle vaccine to protect against anaplasmosis is also commercially available. See Id. However, vaccines have not been manufactured and sold for large scale prevention of other diseases caused by bacterial organisms such as, for example, <i>E. canis</i>. Presently, it is believed that there are no commercial vaccines for <i>Ehrlichia canis. </i></p>
+      <p id="p-00009-en" num="0009">Efforts have been made to grow certain <i>Rickettsiale </i>organisms in a variety of host cells. U.S. Pat. No. 5,192,679, which is herein incorporated by reference in its entirety, relates to continuous propagation of <i>E. canis </i>in a canine monocyte macrophage cell line DH82 in an in vitro medium that supports the growth of DH82 cells. U.S. Published Application No. 2005/0202046, which is herein incorporated by reference in its entirety, relates to <i>E. canis </i>vaccines where the <i>E. canis </i>was cultured in DH82 cells. U.S. Pat. No. 5,401,656, which is herein incorporated by reference in its entirety, relates to propagation of <i>E. chaffeensis </i>and <i>E. canis </i>in an immortalized human endothelial cell line. U.S. Pat. No. 5,869,335, which is herein incorporated by reference in its entirety, relates to culturing certain <i>Rickettsiale </i>bacteria in <i>Ixodes scapularis </i>cell lines. U.S. Pat. No. 5,989,848, which is herein incorporated by reference in its entirety, relates to growth of certain Ehrlichial species on an immortalized human endothelial cell line. U.S. Pat. No. 3,616,202, which is herein incorporated by reference in its entirety, relates to growth of <i>Anaplasma </i>marginale in a rabbit bone marrow tissue culture. U.S. Published Patent Application No. 2006/0057699, which is herein incorporated by reference in its entirety, relates to growth of certain <i>Anaplasma </i>species in mammalian cells. U.S. Published Patent Application No. 2003/0003508, which is herein incorporated by reference in its entirety, relates to culturing <i>Rickettsia pulicis </i>bacterium on a <i>Xenopus laevis </i>cell line. U.S. Pat. Nos. 5,955,359 and 5,976,860, which are herein incorporated by reference in their entirety, relate to culturing certain bacterial species belonging to the Rickettsiales order in certain mammalian cell lines. U.S. Pat. No. 5,877,159, which is herein incorporated by reference in its entirety, relates to methods for introducing and expressing genes in animal cells using certain live invasive bacterial vectors.</p>
+      <p id="p-00010-en" num="0010">A thesis discussing immunization of dogs against canine ehrlichiosis using inactivated <i>Ehrlichia canis </i>organisms has been submitted. Sunita Mahan, <i>Immunisation of German shepherd dogs against canine ehrlichiosis using inactivated Ehrlichia canis organisms</i>, thesis submitted to the Faculty of Veterinary Science at the University of Zimbabwe (May 1997). This thesis discusses use of a β-propiolactone inactivated <i>E. canis </i>organisms in combination with Quill A.</p>
+      <p id="p-00011-en" num="0011">Because growth of bacterial species belonging to the Anaplasmataceae family in host cells has met with only limited success and apparently has not translated into an abundant supply of vaccines, there remains a general need to develop culturing systems for growing such bacterial species to facilitate the study of these pathogenic microorganisms and for the development of vaccines to guard against the diseases they cause. There is also a need to develop a large scale culturing system for preparation of large amounts of antigen from such microorganisms for use in diagnostics and vaccines.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00012-en" num="0012">The present invention broadly relates to culturing bacterial organisms belonging to the Anaplasmataceae family in mammalian embryonic or fetal host cells. The cultured bacterial organisms can be used as a vaccine against diseases caused by the bacterial organisms. The antigen used in the vaccine can be made from the bacterial organisms isolated from the mammalian host cells. Alternatively, the antigen used in the vaccine can be made from cultures of the mammalian host cells infected with the bacterial organisms. The bacterial organisms (or the host cell if present) can be inactivated. Alternatively, the bacterial organisms can be attenuated live such that they replicate within an animal to which they are administered one or more times without causing the disease state typical of the non-attenuated pathogenic form of the bacterial organism.</p>
+      <p id="p-00013-en" num="0013">With greater particularity, the present invention relates to culturing bacterial organisms of the Anaplasmataceae family in host cells that are embryonic mammalian cells. In one embodiment of the invention, the bacteria are cultured in non-human embryonic mammalian cells. Such host cells can be obtained from any part of a non-human animal embryo or fetus. Such host cells can be differentiated or non-differentiated. The embryonic host cells can be derived from feline, canine, murine, swine, bovine, ovine, simian or equine embryos or fetuses. In one embodiment of the invention, the embryonic host cells are derived from feline embryos or fetuses.</p>
+      <p id="p-00014-en" num="0014">In one embodiment of the invention, the bacterial organisms of the Anaplasmataceae family belong to the genera <i>Anaplasma, Ehrlichia </i>or <i>Neorickettsia</i>. Bacterial organisms belonging to the family Anaplasmataceae do not include those bacterial organisms belonging to the family Rickettsiaceae. (The Rickettsiaceae family includes the genus <i>Rickettsieae</i>, which includes the species <i>R. orientia </i>and <i>R. rickettsia</i>.) The specific bacterial organisms belonging to the <i>Anaplasma </i>genus can be <i>A. bovis, A. centrale, A. marginale</i>, and <i>A. phagocytophilum</i>. The specific bacterial organism belonging to the <i>Ehrlichia </i>genus can be <i>E. canis</i>. The specific bacterial organism belonging to the <i>Neorickettsia </i>genus can be <i>N. risticii. </i></p>
+      <p id="p-00015-en" num="0015">The present invention relates to a method of culturing a bacterial species from the Anaplasmataceae family comprising: i) obtaining bacterial species from the Anaplasmataceae family; ii) infecting non-human mammalian embryonic cells with said bacterial species; and iii) culturing said non-human mammalian embryonic cells under conditions conducive to propagating the non-human mammalian embryonic cells, thereby culturing the bacterial species. The bacterial species can be obtained in a purified state free of any host cell, in a state where it is present in a host cell, or in a state where it is present in a homogenate of infected animal tissue. In one embodiment, the non-human mammalian embryonic cells are infected with a homogenate of mammalian cells isolated from an animal infected with an Anaplasmataceae organism. In another embodiment, the non-human mammalian embryonic cells are infected by exposing the embryonic cells to an Anaplasmataceae organism. The Anaplasmataceae bacterial species can be from the genera <i>Anaplasma, Ehrlichia </i>or <i>Neorickettsia</i>. The Anaplasmataceae bacterial species can be <i>Anaplasma bovis, Ehrlichia canis</i>, or <i>Neorickettsia risticii</i>. In one embodiment, the non-human mammalian embryonic cells are feline cells. The feline cells can be feline embryonic fibroblast cells, FEA feline embryonic cells, or <i>felis catus </i>whole fetus cells. The non-human mammalian embryonic cells can be undifferentiated and/or immortalized. In another embodiment, the non-human mammalian embryonic cells are monkey embryo kidney epithelial cells.</p>
+      <p id="p-00016-en" num="0016">The present invention also relates to compositions comprising non-human mammalian embryonic cells infected with a bacterial species from the Anaplasmataceae family. The bacterial species can be from the genera <i>Anaplasma, Ehrlichia </i>or <i>Neorickettsia</i>. The Anaplasmataceae bacterial species can be any known to the skilled artisan including, without limitation, <i>Anaplasma bovis, Anaplasma phagocytophilum, Ehrlichia canis</i>, or <i>Neorickettsia risticii</i>. The non-human embryonic mammalian cells can be feline embryonic fibroblast (FEF) cells, FEA feline embryonic cells, or <i>felis catus </i>whole fetus cells. The non-human mammalian embryonic cells can be undifferentiated and/or immortalized. The non-human embryonic mammalian cells can also be monkey embryo kidney epithelial cells.</p>
+      <p id="p-00017-en" num="0017">The present invention also relates to methods of preventing infection in a mammal by administering to the mammal a vaccine based upon material cultured according to the methods described herein. The present invention also pertains to methods of protecting a mammal by administering to the mammal a vaccine based upon material cultured according to the methods described herein. The present invention also pertains to methods of treating a mammal by administering to the mammal a vaccine based upon material cultured according to the methods described herein. In particular, the present invention relates to protecting a mammal against a disease caused by an organism belonging to the family Anaplasmataceae by providing to the mammal a therapeutically effective amount of a Anaplasmataceae bacterial antigen. The mammal can be a human, monkey, cat, dog, horse, cow, pig, sheep or goat. In one embodiment of the invention, the animal is a dog.</p>
+      <p id="p-00018-en" num="0018">The present invention also pertains to administering to a mammal an immunologically protective amount of material cultured according to the methods described herein; or administering to a mammal an effective amount of material cultured according to the methods described herein to produce an immune response.</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00019-en" num="0019">Unless otherwise stated, all terms used herein have their ordinary meaning as would be understood by the skilled artisan. Terms for which explicit definitions are provided below have in addition to their explicit meaning the meaning typically ascribed by the ordinarily skilled artisan.</p>
+      <p id="p-00020-en" num="0020">The present invention relates to methods of culturing microorganisms. More particularly, the present invention is related to methods of growing bacterial organisms belonging to the family Anaplasmataceae. More particularly, the present invention is related to methods of continuously growing organisms belonging to the genera <i>Anaplasma, Ehrlichia </i>or <i>Neorickettsia. </i></p>
+      <p id="p-00021-en" num="0021">Non-limiting examples of species belonging to the <i>Anaplasma </i>genus that may be used according to the present invention include <i>A. bovis, A. centrale, A. marginale, A. ovis, A. platys </i>and <i>A. phagocytophilum </i>(previously referred to as <i>Ehrlichia phagocytophila, Ehrlichia equi</i>, human granulocytic ehrlichiosis agent or HGE agent). Non-limiting examples of species belonging to the <i>Ehrlichia </i>genus that may be used according to the present invention include <i>E. canis, E. chaffeensis</i>, and <i>E. muris</i>. Non-limiting examples of species belonging to the <i>Neorickettsia </i>genus that may be used according to the present invention include <i>N. helminthoeca, N. risticii </i>(Potomac horse fever, formerly termed <i>E. risticii</i>), and <i>N. sennetsu. </i></p>
+      <p id="p-00022-en" num="0022">According to the present invention, bacterial organisms of the Anaplasmataceae family are grown in mammalian embryonic or fetal host cells. As used herein, “host cells” are cells that bacterial organisms of the Anaplasmataceae family can infect and in which the bacterial organisms can replicate. Non-limiting examples of mammalian embryonic or fetal host cells include human, feline, canine, murine, swine, bovine, ovine, simian or equine embryonic or fetal cells. As used herein, “infected host cells” refer to host cells that contain one or more Anaplasmataceae bacteria.</p>
+      <p id="p-00023-en" num="0023">The host cells can be derived from a single cell isolated from mammalian embryonic or fetal tissue. For example, the cells can be derived from embryonic feline, canine, bovine, equine, murine, swine, simian or human tissue.</p>
+      <p id="p-00024-en" num="0024">In one embodiment of the present invention, bacterial species belonging to the Anaplasmataceae are cultured in host cells that are derived from non-human mammalian embryonic or fetal tissue. A non-limiting examples of feline embryonic or fetal cells that may be used according to the present invention include feline embryonic fibroblasts (FEF) cells, FEA feline embryonic cells (University of Glasgow, Glagow, Scotland; as described in Jarrett, O. et al., <i>J. gen. Prot </i>20:169-175 (1973)), and <i>felis catus </i>whole fetus cells (FCWF-4, American Type Culture Collection, P.O. Box 1549 Manassas, Va. 20108, United States (hereafter, “ATCC”) deposit CRL-2787).</p>
+      <p id="p-00025-en" num="0025">The bacterial organisms cultured according to the present invention may be used for vaccines, diagnostics or further research including, for example, production of quantities of biological molecules for isolation and study. Accordingly, the bacteria cultured according to present invention may be formulated in a vaccine for administration to a mammal to prevent infection or ameliorate disease caused by the bacterial organism. For example, the bacteria cultured in the host cells could be <i>Ehrlichia canis </i>for use in a vaccine to be given to canines to prevent or ameliorate canine ehrlichiosis.</p>
+      <p id="p-00026-en" num="0026">Hence, the present invention also relates to immunogenic compositions or vaccines based upon material cultured according to the present invention. The therapeutic agent (also referred to as the antigen, active agent, or the immunogenic composition) that can serve as the basis for a vaccine can be one or more of the following:</p>
+      <p id="p-00027-en" num="0027">a) harvested cultures of host cells that are infected with Anaplasmataceae bacteria;</p>
+      <p id="p-00028-en" num="0028">b) extracts or fractions of (a) that are enhanced with respect to the concentration of the Anaplasmataceae bacteria contained within the infected host cells;</p>
+      <p id="p-00029-en" num="0029">c) Anaplasmataceae bacteria enhanced extracts of (a) that contain remnants of the host cells;</p>
+      <p id="p-00030-en" num="0030">d) Anaplasmataceae bacteria extracts of (a) that do not contain remnants of the host cells; or</p>
+      <p id="p-00031-en" num="0031">e) isolated Anaplasmataceae bacterial immunogens.</p>
+      <p id="p-00032-en" num="0032">“Isolated” when used herein means removed from its naturally occurring environment. Hence, isolated Anaplasmataceae bacterial cells broadly include those which have been removed from their naturally occurring environments, which environments can include arthropods, insects or whole live or dead infected mammals. Isolated Anaplasmataceae bacterial cells include thus; that, are contained within mammalian tissue that has been removed from a Anaplasmataceae bacteria-infected mammal. Isolated Anaplasmataceae bacterial cells also include those that are completely or partially separated from mammalian cells of a Anaplasmataceae bacteria-infected mammal, such as from lysing the host cells. Isolated Anaplasmataceae bacterial cells also include those that are contained within host cells as described herein, or separated partially or completely therefrom. Isolated Anaplasmataceae bacterial cells also include those that are substantially free of other microorganisms, e.g., in a culture.</p>
+      <p id="p-00033-en" num="0033">“Isolated” as used in “isolated Anaplasmataceae bacterial immunogens” refers to bacterial immunogens that have been completely or partially separated from their respective source Anaplasmataceae bacteria. Compositions of isolated Anaplasmataceae bacterial immunogens can include some whole intact Anaplasmataceae bacteria, portions or components of Anaplasmataceae bacteria, whole intact host cell, and/or portions or components of host cells. Isolated Anaplasmataceae bacterial immunogens also include compositions that are enriched with respect to one or more Anaplasmataceae bacterial biomolecules.</p>
+      <p id="p-00034-en" num="0034">“Anaplasmataceae bacterial immunogens” as used herein includes whole Anaplasmataceae bacteria that are inactivated or modified live bacteria. Anaplasmataceae bacterial immunogen as used herein can also include proteins (lipoproteins, membranous proteins, cytosolic proteins), immunogenic fragments of such proteins, nucleic acids, lipids, saccharides, lipopolysaccharides or other biological molecules derived from the Anaplasmataceae bacteria. Anaplasmataceae bacterial immunogen can be whole Anaplasmataceae bacterial cells or parts thereof that are present in host cells, wherein both the bacterial and host cells are killed or inactivated. Anaplasmataceae bacterial immunogen can also be whole Anaplasmataceae bacterial cells or parts thereof that are present in host cells, wherein the bacterial or host cells are not killed or inactivated.</p>
+      <p id="p-00035-en" num="0035">The skilled artisan is generally familiar with the techniques by which bacterial or host cells can be killed or inactivated. Such techniques include, physical, chemical and biological means. Non-limiting examples of inactivation techniques include sonication, freeze-thaw techniques, pressure, treatment with heat, chemicals or enzymes. Non-limiting examples of chemical inactivation agents include treatment with binary ethyleneamine (BEA) and formalin (formaldehyde solution).</p>
+      <p id="p-00036-en" num="0036">As stated above, the material cultured according to the present invention can be used to make antigen for vaccines. As used herein, the term “vaccine(s)” means and refers to a product, the administration of which is intended to elicit an immune response that can prevent and/or lessen the severity of one or more infectious diseases. A vaccine contains an antigen (or, “active agent,” “immunogen,” “therapeutic agent,” or “immunogenic composition”) that may be material cultured according to the present invention including a host cell infected with Anaplasmataceae bacteria, whole intact Anaplasmataceae bacteria, or bacterial fractions or parts or biomolecules of a Anaplasmataceae bacteria that act to stimulate the immune system in an animal. An antigen may be a live attenuated or killed preparation of Anaplasmataceae bacteria-infected host cells, live attenuated or killed Anaplasmataceae bacteria, living irradiated cells, crude fractions or purified Anaplasmataceae bacterial immunogens. Hence, a vaccine can comprise enriched, isolated or purified antigen. The vaccines can be made from inactivated or killed cultures of Anaplasmataceae infected host cells, or inactivated or killed Anaplasmataceae bacteria.</p>
+      <p id="p-00037-en" num="0037">A vaccine may also comprise a combination of antigens from more than one Anaplasmataceae bacterial species or from other pathogens (e.g. viral, bacterial parasitical or fungal) as described further below.</p>
+      <p id="p-00038-en" num="0038">Vaccines made from material cultured according to the present invention comprise a therapeutically effective amount of the antigen. In the context of this disclosure, a “therapeutically effective amount” refers to an amount of an antigen or vaccine that would induce an immune response in a mammal receiving the antigen or vaccine which is adequate to prevent or ameliorate signs or symptoms of disease, including adverse health effects or complications thereof, caused by infection with a pathogenic Anaplasmataceae bacterium. Humoral immunity or cell-mediated immunity or both humoral and cell-mediated immunity may be induced. The immunogenic response of an animal to a vaccine may be evaluated, e.g., indirectly through measurement of antibody titers, via microscopic analysis, or directly through monitoring signs and symptoms after challenge with wild type strain. The protective immunity conferred by a vaccine may be evaluated by measuring, e.g., reduction in clinical signs such as mortality, morbidity, body temperature and overall physical condition and overall health and performance of the subject. The amount of a vaccine that is therapeutically effective may vary depending on the particular virus used, or the condition of the subject, and may be determined by one skilled in the art.</p>
+      <p id="p-00039-en" num="0039">The material cultured according to the present invention can also be used to make immunogenic compositions that stimulate an immune response in a subject mammal to which the compositions are administered. Such compositions can be used to identify antigens that can serve as the basis of a vaccine. Thus, for example, immunogenic compositions comprising material cultured according to, the present invention can be administered to a subject mammal. Thereafter, the antibody titer of the subject mammal can be monitored and candidate Anaplasmataceae bacterial antigens can be selected for use or further study in vaccines. Immunoactive compositions of the present invention include compositions that stimulate a humoral immune response and/or a cell-mediated immune response in the subject receiving a vaccine.</p>
+      <p id="p-00040-en" num="0040">As used herein, an “immune response” refers to the subject mammal's active immunity response due to having received one or more vaccines based upon material cultured according to the methods described herein. The immune response can include the production of one or more antibody in response to the antigen or immunogen present in the vaccine. “Immune response” in a subject refers to the development of a humoral immune response, a cellular immune response, or a humoral and a cellular immune response to an antigen. Immune responses may be determined using standard immunoassays and neutralization assays, which are known in the art.</p>
+      <p id="p-00041-en" num="0041">Vaccines made from material cultured according to the present invention can be used to prevent infection within a subject mammal, protect a subject mammal, or treat a subject mammal.</p>
+      <p id="p-00042-en" num="0042">“Preventing infection” and like terms means to prevent or inhibit the replication of the bacteria which cause the identified disease, to inhibit transmission of the bacteria or virus, or to prevent the bacteria from establishing itself in its host animal, or to alleviate the symptoms of the disease caused by infection. The treatment is considered therapeutic if there is a reduction in bacterial load.</p>
+      <p id="p-00043-en" num="0043">“Protection”, “Protecting”, and the like, as used herein with respect to a bacteria, means that the vaccine prevents or reduces the symptoms of the disease caused by the organism from which the antigen(s) used in the vaccine is derived. The terms “protection” and “protecting” and the like, also mean that the vaccine may be used to “treat” the disease or one of more symptoms of the disease that already exists in a subject.</p>
+      <p id="p-00044-en" num="0044">“Treating” refers to reversing, alleviating, inhibiting the progress of, or preventing a disorder, condition or disease to which such term applies, or to preventing one or more symptoms of such disorder, condition or disease. Treating also refers to accelerating the recovery from an infection by one or more Anaplasmataceae organisms. “Treatment” refers to the act of “treating”.</p>
+      <p id="p-00045-en" num="0045">Hence, vaccines made from material cultured according to the present invention can be used to prevent Anaplasmataceae bacterial infection in a subject mammal, protect a subject mammal against Anaplasmataceae bacteria, and treat a subject mammal for Anaplasmataceae bacterial infection. Such prevention, protection or treatment can include (without limitation) reducing or eliminating the risk of infection by the pathogenic Anaplasmataceae organism, ameliorating or alleviating the symptoms of an infection by such Anaplasmataceae organism, reduction in Anaplasmataceae bacterial load, decreasing incidence or duration of Anaplasmataceae infections, reducing acute phase serum protein levels of Anaplasmataceae bacteria, reduced rectal temperatures, and/or increase in food uptake and/or growth, for example.</p>
+      <p id="p-00046-en" num="0046">“Pharmaceutically acceptable” as used herein refers to substances (e.g., adjuvants, immunostimulants, carriers, diluents, emulsifying or stabilizing agents), which are within the scope of sound medical judgment, suitable for use in contact with the tissues of subjects without undue toxicity, irritation, allergic response, and the Like, commensurate with a reasonable benefit-to-risk ratio, and effective for their intended use. Pharmaceutically acceptable substances do not interfere with the effectiveness of the therapeutic agent and are not toxic to the subject to whom it is administered.</p>
+      <p id="p-00047-en" num="0047">“Subject” or “subject mammal” refers to any animal having an immune system, which includes mammals such as humans, cats, cattle, horses, swine, and dogs.</p>
+      <p id="p-00048-en" num="0048">Material cultured according to the present invention can also be used in diagnostic applications to diagnose the presence of diseases or illnesses caused by Anaplasmataceae bacteria. Non-limiting examples of such diagnostic applications include use of bacterial fractions, proteins or other biomolecules in antibody binding assays. The bacterial fractions, proteins or other biomolecules may also be used to generate polyclonal or monoclonal antibodies for such assays.</p>
+      <p id="p-00049-en" num="0049">Host Cell Growth</p>
+      <p id="p-00050-en" num="0050">Host cells for culturing bacterial organisms according to the present invention are first prepared prior to infecting with the desired bacterial organism. A sample of an isolated feline embryonic cell line is seeded into media for either suspended or adherent growth. As used herein, adherent growth conditions wherein a layer of cells coats surfaces contained within the vesicle in which the cells are cultured. The surfaces can include the interior surface of the vesicle itself, or surfaces of glass or polymeric beads contained within the vesicle to increase surface area. Microcarriers can also be used to increase surface area and host cell growth. In contrast to adherent growth, it may be possible to grow the host cells in suspension, in which the host cells need not bind to surfaces within the culturing vesicle.</p>
+      <p id="p-00051-en" num="0051">The skilled artisan is generally familiar with the varieties of culturing media that may be used to grow up the host cells. The host cell growth media may be derived from animals. Alternatively, the host cell growth media may be vegetable or yeast based, and may be animal protein-free. The growth media may be derived from soy bean extracts or from other protein-rich plants or protein-rich plant food products including, for example, legumes. Non-limiting example of specific media useful for growing host cells include Eagle's Minimal Essential Media (MEM), Glasgow-Minimal Essential Media, RPMI1640, OptiMEM, AIM V.</p>
+      <p id="p-00052-en" num="0052">The growth media can contain or be supplemented with fetal bovine serum (FBS), tryptose solution, lacto-albumin hydrosolate solution, L-glutamine, sodium bicarbonate; lactalbumin hydrolysate, Polymyxin B, sodium pyruvate, glucose, magnesium sulfate.</p>
+      <p id="p-00053-en" num="0053">Fresh growth media can be refed or replenished to the host cells prior to or after infection or exposure of the host cells to the Anaplasmataceae bacteria.</p>
+      <p id="p-00054-en" num="0054">Cells can be grown at 36-38° C. for 2-9 days at 5% CO<sub>2</sub>.</p>
+      <p id="p-00055-en" num="0055">Infecting the Host Cells</p>
+      <p id="p-00056-en" num="0056">The host cells may be exposed to or infected with bacterial organisms of the Anaplasmataceae family by bringing the host cells into contact with other eukaryotic cells known to be infected with the bacterial organisms. The skilled artisan is familiar with determining whether such other eukaryotic cells from a mammal, for example, are infected with such bacterial organisms. The infected mammalian cells may be derived from any tissue, including the spleen, liver, pancreas, lungs, heart or other muscle tissue, brain, gall bladder, blood, kidneys, lymph nodes or stomach. The infected mammalian cells may be prepared from a tissue extract via blender homogenization in an appropriate isotonic solution. The homogenate can then be used to innoculate (i.e., infect) a culture of host cells, applied as a layer over the host cells or simply brought into contact with them.</p>
+      <p id="p-00057-en" num="0057">Alternatively, the host cells may be exposed to or infected with isolated bacterial organisms of the Anaplasmataceae family. The skilled artisan is familiar with techniques of isolating such bacterial organisms, or can obtain stocks of isolated bacterial organisms from a biological depository.</p>
+      <p id="p-00058-en" num="0058">The growth medium used to prepare host cells prior to contact with Anaplasmataceae bacteria may be the same as the medium used to propagate the host cells after such contact. The Anaplasmataceae bacteria-exposed (or infected) host cells may be cultured for up to 95 days, up to 35 days, or for about 5 to 10 days, to achieve a titer of ≧1×10<sup>4 </sup>TCID<sub>50 </sub>(Tissue Culture Infectious Dose), and then the culture may be harvested and processed.</p>
+      <p id="p-00059-en" num="0059">Harvesting</p>
+      <p id="p-00060-en" num="0060">The Anaplasmataceae bacterial infected host cells may be harvested by collecting the tissue cell culture fluids and/or cells. The host cells may be harvested from the media (and the culture vesicles) with the Anaplasmataceae bacterial cells contained with the walls of the host cells. Alternatively, during harvesting the concentration of the Anaplasmataceae bacteria may be enriched by techniques that improve the liberation of the infective bacterial cells from the growth substrate, e.g. sonication, freeze thawing, heating or chemical or selective enzymatic lysis of the eukaryotic host cells. An enriched harvest of Anaplasmataceae bacteria can include material that is free of host cells or host cell material. Alternatively, an enriched harvest of Anaplasmataceae bacteria can include material that contains host cells or host cell material.</p>
+      <p id="p-00061-en" num="0061">Inactivating</p>
+      <p id="p-00062-en" num="0062">The skilled artisan is generally familiar with the techniques by which bacterial or host cells can be killed or inactivated. Such techniques include, physical, chemical and biological means. Non-limiting examples of inactivation techniques include sonication, freeze-thaw techniques, pressure, treatment with heat, chemicals or enzymes. Non-limiting examples of chemical inactivation agents include treatment with binary ethyleneimine (BEI), formalin (formaldehyde solution), beta-propiolactone, merthiolate, gluteraldehyde, sodium dodecyl sulfate, or the like, or a mixture thereof. The host cells can also be inactivated by heat or psoralen in the presence of ultraviolet light. These chemical inactivation agents or physical inactivation means can also be used to inactivate the Anaplasmataceae bacterial cells after their having been extracted or separated from the host cells.</p>
+      <p id="p-00063-en" num="0063">Formulating</p>
+      <p id="p-00064-en" num="0064">The inactivated, infected host cells or enriched Anaplasmataceae bacterial cells can serve as the antigen and may be formulated as a liquid suspension or may be lyophilized for its use in the preparation of a vaccine against diseases caused by Anaplasmataceae organisms. Material cultured according to the present invention can be formulated with any pharmaceutically acceptable adjuvants, immunostimulants, carriers, diluents, emulsifying or stabilizing agents, non-limiting examples of which are discussed below. The skilled artisan, however, would recognize that other adjuvants, immunostimulants, carriers, diluents, emulsifying agents or stabilizing agents may be used in formulating vaccines based upon material cultured according to the present invention.</p>
+      <p id="p-00065-en" num="0065">Adjuvants &amp; Immunostimulants</p>
+      <p id="p-00066-en" num="0066">An adjuvant in general is a substance that boosts the immune response of the target in a non-specific manner. Many different adjuvants are known in the art. Non-limiting examples of adjuvants that may be used in the formulation of a vaccine made with material cultured according to the present invention include aluminum salts (e.g., alum, aluminum hydroxide, aluminum phosphate, aluminum oxide), cholesterol, monophosphoryl lipid A adjuvants, amphigen, tocophenols, monophosphenyl lipid A, muramyl dipeptide, oil emulsions, glucans, carbomers, block copolymers, Avridine lipid-amine adjuvant, heat-labile enterotoxin from <i>E. coli </i>(recombinant or otherwise), cholera toxin, or muramyl dipeptide, Freund's Complete and-Incomplete adjuvant, vitamin E, non-ionic block polymers and polyamines such as dextransulphate, carbopol, pyran, saponins and saponin derivatives, block co-polymers, and adjuvants such as those identified in U.S. Pat. Nos. 4,578,269, 4,744,983, 5,254,339, which are all herein fully incorporated by reference. Non-limiting examples of peptides that can serve as adjuvants include muramyldipeptides, dimethylglycine, or tuftsin. Non-limiting examples of oils that can serve as adjuvants include mineral oil, vegetable oils or emulsions thereof.</p>
+      <p id="p-00067-en" num="0067">Vaccines made from material cultured according to the present invention may be formulated as an oil-in water emulsions or as a water-in-oil emulsions. Non-limiting examples of oil-in-water emulsions include paraffin oil-in-water emulsions, or emulsions made from one or more of squalene, block copolymers of ethylene oxide and propylene oxide, polysorbate surfactants, and/or threonyl analogs of muramyl dipeptide.</p>
+      <p id="p-00068-en" num="0068">Oils used as adjuvants may be metabolizable by the subject receiving the vaccine such as vegetable or animal oils. Such oils typically consist largely of mixtures of triacylglycerols, also known as triglycerides or neutral fats. These nonpolar, water insoluble substances are fatty acid triesters of glycerol. Triacylglycerols differ according to the identity and placement of their three fatty acid residues.</p>
+      <p id="p-00069-en" num="0069">Adjuvants can also be non-metabolizable consisting of components that cannot be metabolized by the body of the animal subject to which the emulsion is administered. Non-metabolizable oils suitable for use in the emulsions of the present invention include alkanes, alkenes, alkynes, and their corresponding acids and alcohols, the ethers and esters thereof, and mixtures thereof. The individual compounds of the oil may be light hydrocarbon compounds, e.g., compounds having 6 to 30 carbon atoms. The oil may be synthetically prepared or purified from petroleum products. Non-limiting examples of non-metabolizable oils for use in the preparation of vaccines based upon material cultured according to the present invention include mineral oil, paraffin oil, and cycloparaffins, for example. The term “mineral oil” refers to a non-metabolizable adjuvant oil that is a mixture of liquid hydrocarbons obtained from petrolatum via a distillation technique. The term is synonymous with “liquefied paraffin”, “liquid petrolatum” and “white mineral oil.” The term is also intended to include “light mineral oil,” i.e., oil which is similarly obtained by distillation of petrolatum, but which has a slightly lower specific gravity than white mineral oil.</p>
+      <p id="p-00070-en" num="0070">Other compounds capable of enhancing a humoral immunity response that may be used in the formulation of vaccines based upon material cultured according to the present invention include, without limitation, ethylene maleic anhydrate (EMA) copolymer, latex emulsions of a copolymer of styrene with a mixture of acrylic acid and methacrylic acid.</p>
+      <p id="p-00071-en" num="0071">In addition to the adjuvant, a vaccine based upon material cultured according to the present invention can include immunomodulatory agents such as, e.g., interleukins, interferons, or other cytokines (e.g., Th1-related cytokines, such as interleukin-12 (IL-12), interleukin-18 (IL-18), or gamma interferon).</p>
+      <p id="p-00072-en" num="0072">The amount of adjuvant or immunostimulant added in a vaccine formulation based upon material cultured according to the present invention depends on the nature of the adjuvant or immunostimulant itself. The skilled artisan is capable of selecting an amount that is sufficient to enhance an immune response to the Anaplasmataceae bacterial immunizing agent.</p>
+      <p id="p-00073-en" num="0073">Carriers</p>
+      <p id="p-00074-en" num="0074">Pharmaceutically acceptable carriers suitable for use in vaccine formulated based upon material cultured according to the present invention may be any conventional liquid carrier suitable for veterinary pharmaceutical compositions, including balanced salt solutions such as are suitable for use in tissue culture media. Pharmaceutically acceptable carriers are understood to be compounds that do not adversely effect the health of the animal to be vaccinated, at least not to the extent that the adverse effect is worse than the effects seen when the animal is not vaccinated. Suitable carriers also include sterile water, saline, aqueous buffers such as PBS, solvents, diluents, isotonic agents, buffering agents, dextrose, ethanol, mannitol, sorbitol, lactose and glycerol, and the like.</p>
+      <p id="p-00075-en" num="0075">Vehicle</p>
+      <p id="p-00076-en" num="0076">Vaccines formulated from material cultured according to the present invention can also comprise a vehicle. A vehicle is a compound to which the host cells, Anaplasmataceae bacterial cells, or proteins, protein fragments, nucleic acids or parts thereof, adhere, without being covalently bound to it. Non-limiting examples of such vehicles include bio-microcapsules, micro-alginates, liposomes and macrosols. Some materials that serve as adjuvants can also serve as vehicles such as aluminum-hydroxide, aluminum phosphate, aluminum sulphate or aluminum oxide, silica, kaolin, and bentonite, all known in the art.</p>
+      <p id="p-00077-en" num="0077">Stabilizers</p>
+      <p id="p-00078-en" num="0078">Often, a vaccine is mixed with stabilizers, e.g. to protect degradation-prone components from being degraded, to enhance the shelf-life of the vaccine, or to improve freeze-drying efficiency. Non-limiting examples of stabilizers that may be added to vaccine formulations based upon material cultured according to the present invention include SPGA (Bovarnik et al., 1950, J. Bacteriology, vol. 59, p. 509), skimmed milk, gelatins, bovine serum albumin, carbohydrates (e.g. sorbitol, mannitol, trehalose, starch, sucrose, dextran or glucose), proteins (e.g., albumin, casein or degradation products thereof), non-animal origin stabilizers, and buffers (e.g. alkali metal phosphates). In lyophilized vaccine compositions, one or more stabilizers can be added.</p>
+      <p id="p-00079-en" num="0079">Multivalent Vaccines</p>
+      <p id="p-00080-en" num="0080">The immunogen harvested from the material cultured according to the present invention may be formulated in a vaccine comprising one or more additional immunogens. The additional immunoactive component(s) may be whole parasite, bacteria or virus (inactivated or modified live), or a fractionated portion or extract thereof (e.g., proteins, lipids, lipopolysacharide, carbohydrate or nucleic acid).</p>
+      <p id="p-00081-en" num="0081">Where the immunogen harvested from the material cultured according to the present invention is used in a canine vaccine, antigens for other canine pathogens may be added into the formulation. Non-limiting examples of other pathogens for which additional antigens may be added include <i>Bordetella bronchiseptica</i>, canine distemper virus (CDV), canine adenovirus types 1 and 2 (CAV-1, CAV-2), canine parainfluenza (CPI) virus, canine coronavirus (CCV), canine parvovirus (CPV), <i>Leptospira interrogans </i>serovar <i>canicola, Leptospira interrogans </i>serovar <i>icterohaemorrhagiae, Leptospira interrogans </i>serovar <i>bratislava, Leptospira interrogans </i>serovar <i>pomona; Leptospira kirschneri </i>serovar <i>grippotyphosa</i>, rabies virus, <i>Borrelia burgdorferi</i>, canine rotavirus (CRV), canine herpesvirus (CHV), and Minute Virus of Canines (MVC), <i>Babesia canis, Giardia </i>and <i>Leishmania. </i></p>
+      <p id="p-00082-en" num="0082">Alternatively, a vaccine based upon material cultured according to the present invention may be administered simultaneously or concomitantly with other live or inactivated vaccines.</p>
+      <p id="p-00083-en" num="0083">Freeze-Drying/Reconstitution</p>
+      <p id="p-00084-en" num="0084">For reasons of stability or economy, vaccines based upon material cultured according to the present invention may be freeze-dried. In general this will enable prolonged storage at temperatures above 0° C., e.g. at 4° C. Procedures for freeze-drying are known to persons skilled in the art; equipment for freeze-drying at different scales is available commercially. To reconstitute the freeze-dried vaccine, it may be suspended in a physiologically acceptable diluent. Such diluents may be as simple as sterile water, or a physiological salt solution or other carrier as discussed above.</p>
+      <p id="p-00085-en" num="0085">Dosaging</p>
+      <p id="p-00086-en" num="0086">Vaccines based upon material cultured according to the present invention may be formulated in a dosage unit form to facilitate administration and ensure uniformity of dosage. Herein, a dosage unit as it pertains to the vaccine composition refers to physically discrete units suitable as unitary dosages for animals, each unit containing a predetermined quantity of Anaplasmataceae bacterial immunogen calculated to produce the desired immunogenic effect in association with the required adjuvant system and carrier or vehicle.</p>
+      <p id="p-00087-en" num="0087">The effective immunizing amount of Anaplasmataceae bacterial immunogen can vary depending upon the chosen strain or strains and may be any amount sufficient to evoke a protective immune response. For example, amounts wherein the dosage unit comprises at least about 1×10<sup>4 </sup>TCID<sub>50 </sub>inactivated Anaplasmataceae bacterin are suitable.</p>
+      <p id="p-00088-en" num="0088">Administering</p>
+      <p id="p-00089-en" num="0089">Administration of the vaccine to a subject results in stimulating an immune response in the subject mammal. The route of administration for vaccines based upon material cultured according to the present invention may be administered to the mammalian target according to methods known in the art. Such methods include, but are not limited to, intradermal, intramuscular, intraocular, intraperitoneal, intravenous, oral, oronasal, and subcutaneous, as well as inhalation, suppository, or transdermal. Routes of administration include intradermal, intramuscular, intraperitoneal, oronasal, and subcutaneous injection. The vaccine may be administered by any means that includes, but is not limited to, syringes, nebulizers, misters, needleless injection devices, or microprojectile bombardment gene guns (Biolistic bombardment).</p>
+      <p id="p-00090-en" num="0090">Alternative routes of application that are feasible are by topical application as a drop, spray, gel or ointment to the mucosal epithelium of the eye, nose, mouth, anus, or vagina, or onto the epidermis of the outer skin at any part of the body; by spray as aerosol, or powder. Alternatively, application may be via the alimentary route, by combining with the food, feed or drinking water e.g. as a powder, a liquid, or tablet, or by administration directly into the mouth as a liquid, a gel, a tablet, or a capsule, or to the anus as a suppository. The preferred application route is by intramuscular or by subcutaneous injection.</p>
+      <p id="p-00091-en" num="0091">The vaccine according to the invention may be in several forms, e.g.: a liquid, a gel, an ointment, a powder, a tablet, or a capsule, depending on the desired method of application to the target.</p>
+      <p id="p-00092-en" num="0092">The scheme of the application of the vaccine according to the invention to the target mammalian may be in single or multiple doses, which may be given at the same time or sequentially, in a manner compatible with the dosage and formulation, and in such an amount as will be immunologically effective.</p>
+      <p id="p-00093-en" num="0093">Challenge Model</p>
+      <p id="p-00094-en" num="0094">In order to effectively study and evaluate the pathogenic mechanisms of the Anaplasmataceae bacteria and the defense mechanisms of the host mammals and thereby to advance the vaccine art and improve vaccine products, an effective challenge model should be employed.</p>
+      <p id="p-00095-en" num="0095">A challenge model for canine ehrlichiosis, for example, may be based upon the percentage of test animals to demonstrate persistent and severe clinical symptoms that are commonly associated with canine ehrlichiosis, such as fever, thrombocytopenia, mucopurulent ocular discharge, dehydration, or the like. Alternatively, the challenge model described by published U.S. Application No. 2006/0188524 (which is herein wholly incorporated by reference) may be employed. This <i>E. canis </i>challenge may be obtained in a test animal by administering to said test animal a challenge stock of peripheral blood mononuclear cells (PBMC) containing a virulent culture of live <i>E. canis </i>bacteria. The virulent <i>E. canis </i>culture is prepared by repeatedly passaging the <i>E. canis </i>microorganism such as <i>E. canis </i>Ebony, <i>E. canis </i>Broadfoot or the like, in a host; separating the PBMC from the host blood sample; and mixing the separated PBMC with 20% fetal bovine serum and 10% dimethyl sulfoxide.</p>
+      <p id="p-00096-en" num="0096">A method for the induction of clinical canine ehrlichiosis in a test animal includes administering to said animal an effective amount of an <i>E. canis </i>challenge stock, consisting essentially of a virulent <i>E. canis </i>microorganism in peripheral blood mononuclear cells. Viable cultures of each of <i>E. canis </i>Broadfoot (sometimes referred to as <i>E. canis </i>BF, or Broadfoot), and <i>E. canis </i>Ebony (sometimes referred to as Ebony) have been deposited (Feb. 11, 2004) with the ATCC, 10801 University Boulevard, Manassas, Va. 20110-2209 U.S.A., and have been respectively given the ATCC accession numbers PTA-5811 for the Broadfoot strain, and PTA-5812 for the Ebony strain.</p>
+      <p id="p-00097-en" num="0097">Several other cellular diagnostic methods exist to determine the presence of infection. For example, the presence of infection may be determined by direct immunofluorescence. Other methods to detect infection include staining, e.g., Giemsa, Wright/Giemsa. Acridine Orange can also be utilized to stain the organisms.</p>
+      <p id="p-00098-en" num="0098">Unless defined otherwise, all technical and scientific terms used herein have the same meaning as commonly understood by one of ordinary skill in the art to which this invention belongs. All publications mentioned herein are hereby wholly incorporated by reference.</p>
+      <p id="p-00099-en" num="0099">For a more clear understanding of the invention, the following examples are set forth below. These examples are merely illustrative and are not understood to limit the scope or underlying principles of the invention in any way. Indeed, various modifications of the invention, in addition to those shown and described herein, will become apparent to those skilled in the art from the examples set forth hereinbelow and the foregoing description. Such modifications are also intended to fall within the scope of the appended claims.</p>
+      <heading id="h-00005-en" level="1">EXAMPLES</heading>
+      <heading id="h-00006-en" level="1">Example 1</heading>
+      <heading id="h-00007-en" level="1">Growth of <i>E. canis </i>on FEF Cells in the Presence of DH82 Cells</heading>
+      <heading id="h-00008-en" level="1">1.1 Propagation of Uninfected DH82 Cells</heading>
+      <p id="p-00100-en" num="0100">One frozen vial of uninfected DH82 cells (American Type Culture Collection (ATCC) accession no. CRL-10389, P.O. Box 1549, Manassas, Va. 20108) was thawed, clarified, and used to inoculate a 75-cm<sup>2 </sup>cell culture flask containing DH82 Growth Medium, and incubated at 37° C. with 5% CO<sub>2</sub>. DH82 Growth Medium consists of Dulbecco's MEM base supplemented with 10% fetal bovine serum (FBS) and 1% HEPES. Upon formation of a monolayer, the cells were scraped into the growth medium, harvested, and centrifuged at 1,500 rpm for 10 min. The cell pellet was resuspended in 5 ml of fresh DH82 Growth Medium and split at a ratio ranging from 1:3 to 1:5.</p>
+      <heading id="h-00009-en" level="1">1.2 Infection of Uninfected DH82 Cells with <i>E. canis</i>-Infected DH82 Cells</heading>
+      <p id="p-00101-en" num="0101">One frozen vial of <i>E. canis</i>-infected DH82 cells (ATCC accession no. CRL-10390) was thawed, clarified, and used to inoculate a 175-cm<sup>2 </sup>cell culture flask containing a monolayer (80-90% confluent) with approximately 10<sup>7 </sup>uninfected DH82 cells in DH82 Growth Medium. <i>E. canis</i>-infected DH82 cultures were maintained by refeeding, i.e., replacing 50% of the spent culture medium with fresh DH82 Growth Medium as described above. <i>E. canis</i>-infected cultures were monitored by using either the Diff-Quik staining method on slides containing acetone-fixed cells according to the manufacturer's directions (VWR, West Chester, Pa. #47733-150) or a standard immunofluorescent antibody (IFA) technique. Briefly, plates containing acetone-fixed cells from <i>E. canis</i>-infected and uninfected DH82 cultures were incubated with a polyclonal <i>E. canis </i>dog serum, washed with PBS, incubated with fluorescein-labeled goat anti-dog IgG gamma (Kirkegaard and Perry #02-19-02), washed with PBS, and examined with a fluorescence microscope.</p>
+      <heading id="h-00010-en" level="1">1.3 Propagation of Uninfected FEF Cells</heading>
+      <p id="p-00102-en" num="0102">One vial of frozen feline embryonic fibroblast (FEF) cells was thawed, clarified, and used to inoculate a 175-cm<sup>2 </sup>cell culture flask containing FEF Growth Medium, and incubated at 37° C. with 5% CO<sub>2</sub>. FEF Growth Medium consists of M6B8 medium (MEM base, Glasgow-MEM base, tryptose phosphate, tryptose, lacto-albumin hydrosolate, L-glutamine, and sodium bicarbonate) and 5% FBS. After incubation for 4-5 days, the cultures were ready for passage when the monolayer was 90-95% confluent. After treatment with 0.25% trypsin, the cells were split at a ratio of 1:5 to 1:10.</p>
+      <heading id="h-00011-en" level="1">1.4 Infection of Uninfected FEF Cells with <i>E. canis</i>-Infected DH82 Cells</heading>
+      <p id="p-00103-en" num="0103">
+        <i>E. canis</i>-infected DH82 cells were harvested by scraping into the culture medium, centrifuged at 1,500 rpm for 10 min, and resuspended at 1×10<sup>6 </sup>cells/ml in fresh DH82 Growth Medium. Uninfected FEF cultures that were seeded at 6×10<sup>6 </sup>cells per 175-cm<sup>2 </sup>cell culture flask in FEF Growth Medium and incubated for 18-24 hrs at 37° C. with 5% CO<sub>2 </sub>were suspended in culture medium and placed in 75-cm<sup>2 </sup>cell culture flasks at a split ratio of 1:3. Six ml of resuspended <i>E. canis</i>-infected DH82 cells were then used to infect each 75-cm<sup>2 </sup>cell culture flask containing uninfected FEF cells in suspension, and incubated at 37° C. with 5%. CO<sub>2</sub>. The <i>E. canis</i>-infected DH82/FEF mixed cultures were fed every three days by replacing spent culture medium with fresh FEF Growth Medium. At 14 days post-infection, the mix cultures were split 1:2 and cell suspensions were transferred into the wells of 24-well cell culture plates at 1 ml per well. Following incubation for 16 hrs at 37° C. with 5% CO<sub>2</sub>, culture supernatant from the wells were transferred onto slides, fixed with acetone, and evaluated for presence of <i>E. canis </i>infection using IFA as described above.</p>
+      <heading id="h-00012-en" level="1">Example 2</heading>
+      <heading id="h-00013-en" level="1">Growth of <i>E. canis </i>on a Homogenous Population of FEF Cells</heading>
+      <p id="p-00104-en" num="0104">Dogs were infected intravenously with 0.5-2 mL of <i>E. canis</i>-infected DH82 cells expanded from cells obtained from the ATCC as described above. Such <i>E. canis</i>-infected DH82 cells are described in U.S. Pat. No. 5,192,679, which is fully incorporated by reference herein. Dogs were positively identified as being infected with <i>E. canis </i>via PCR of spleen and blood DNA. DNA was purified from blood and tissue samples using a QIAamp DNA Mini Kit (Qiagen, Valencia, Calif.) according to the manufacturer's instructions. PCR was performed on a RoboCycle® robotic thermocycler (Stratagene, Cedar Creek, Tex.) using 25 μl reactions consisting of 2.5 μl of 10× reaction buffer (Genscript Corporation, Piscataway, N.J.), 0.2 μl of 100 mM dNTPs (Invitrogen Corp., Carlsbad, Calif.), 1 μl of 10 μM oligonucleotide primer 1 (5′-AGA ACG AAC GCT GGC GGC AAG C-3″) and oligonucleotide primer 2 (5′-CGT ATT ACC GCG GCT GCT GGC A-3′), and 0.2 μl of 5 U/μl Taq polymerase (Genscript Corp.) in a thermocycling protocol consisting of a preliminary denaturation step of 94° C. for 5 min, followed by 35 cycles of 94° C. for 1 min, 60° C. for 1 min, and 72° C. for 1 min, followed by a final elongation step of 72° C. for 10 minutes. Homogenates in fresh growth medium were prepared from samples of spleens, lymph nodes, or peripheral blood mononuclear cells (PBMCs) obtained from <i>E. canis</i>-infected dogs and used as an overlay to infect FEF cells.</p>
+      <p id="p-00105-en" num="0105">
+        <i>E. canis</i>-infected spleen homogenate was inoculated into uninfected FEF cells in two separate 75-cm<sup>2 </sup>cell culture flasks containing 30 ml of FEF cell suspension seeded at 2×10<sup>5 </sup>cells/ml per flask bringing the homogenate to a final dilution of 1:10 to 1:100. Following 18-24 hours incubation at 37° C. with 5% CO<sub>2</sub>, the culture medium was replaced with 30 mL of fresh FEF Growth Medium. After 5-7 days of incubation, the cell monolayer was trypsinized and resuspended in 5-10 nil of fresh FEF Growth Medium. Five mL of this suspension was then inoculated into each of two 175-cm<sup>2 </sup>cell culture flasks containing 50 mL of FEF Growth Medium. Cells were then incubated for 7-10 days at 37° C. with 5% CO<sub>2</sub>. To maintain viability, the cultures required “feeding”, which was accomplished by replacing 50% of spent culture medium with fresh FEF Culture Medium. After 10-14 more days of incubation at 37° C. with 5% CO<sub>2</sub>, the cells were trypsinized and resuspended as described above. To maintain continuous propagation, 1 to 2 mL of infected FEF cell suspension was passed onto uninfected FEF cells and incubated at 37° C. with 5% CO<sub>2</sub>. Infected cultures were passed 7 to 13 times using incubation times ranging from 4 to 14 days. The presence of <i>E. canis </i>in the cultured FEF cells was confirmed by the use of IFA and PCR as described above.</p>
+      <heading id="h-00014-en" level="1">Example 3</heading>
+      <heading id="h-00015-en" level="1">Growth of <i>E. canis </i>on a Homogenous Population of FCWF-4 Cells</heading>
+      <heading id="h-00016-en" level="1">3.1 Propagation of Uninfected FCWF-4 Cells (ATCC #CRL-2787)</heading>
+      <p id="p-00106-en" num="0106">One frozen vial of uninfected felis <i>catus </i>whoe fetus-4 (FCWF-4) cells (ATCC accession no. CRL-2787) was thawed, clarified, and used to inoculate a 75-cm<sup>2 </sup>cell culture flask containing FCWF Growth Medium, and incubated at 37° C. with 5% CO<sub>2</sub>. FCWF Growth Medium consists of E-MEM (Eagle's Minimal Essential medium with Earle's balanced salt solution and 2 mM L-glutamine), 1.0 mM sodium pyruvate, 0.1 mM nonessential amino acids, 1.5 g/liter sodium bicarbonate, and 10% FBS. After 4-5 days of incubation, the 90-95% confluent monolayer was treated with 0.25% trypsin and split at a ratio of 1:4 to 1:6.</p>
+      <heading id="h-00017-en" level="1">3.2 Preparation of Homogenous Population of <i>E. canis</i>-Infected FCWF-4 Cells</heading>
+      <p id="p-00107-en" num="0107">Prior to infection with <i>E. canis</i>, uninfected FCWF-4 cells were seeded into a 175-cm<sup>2 </sup>flask at 6×10<sup>6 </sup>cells per flask and incubated for 18-24 hrs. <i>E. canis</i>-infected spleen homogenate was used to infect FCWF-4 cells as described for FEF cells except the FCWF Growth Medium was used in place for the FEF Growth Medium. The presence of <i>E. canis </i>in the cultured FCWF-4 cells was confirmed by the use of IFA and PCR as described above</p>
+      <heading id="h-00018-en" level="1">Example 4</heading>
+      <heading id="h-00019-en" level="1">Growth of E. Marls on a Homogenous Population of FEA Cells</heading>
+      <heading id="h-00020-en" level="1">4.1 Propagation of Uninfected FEA Feline Embryonic Cells</heading>
+      <p id="p-00108-en" num="0108">One vial of frozen uninfected FEA feline embryonic cells was thawed, clarified and used to inoculate a 75 cm<sup>2 </sup>flask containing FEA Growth Medium, and incubated at 37° C. with 5% CO2. FEA Growth Medium consists of Dulbeccos MEM, 2 mM L-glutamine, 1.0 mM sodium pyruvate and 10% FBS. After 7 days of incubation, the confluent monolayer was treated with 0.25% trypsin and passed at a split ratio of 1:2.</p>
+      <heading id="h-00021-en" level="1">4.2 Preparation of Homogenous Population of <i>E. Muris</i>-Infected FEA Feline Embryonic Cells</heading>
+      <p id="p-00109-en" num="0109">Uninfected DH82 cells were propagated as described above, and infected with <i>E. muris </i>using <i>E. muris</i>-infected DH82 cells (ATCC accession no. VR-1411—Asuke strain). The protocol for the preparation of materials and infection essentially followed the protocol as described above for <i>E. canis</i>-infected DH82 cells, except that <i>E. muris</i>-infected DH82 cells were substituted for <i>E. canis</i>-infected DH82 cells. Mice were infected intraperitoneally with 0.5 mL of <i>E. muris</i>-infected DH82 cells.</p>
+      <p id="p-00110-en" num="0110">Mice were positively identified as being infected with <i>E. muris </i>via PCR of spleen and blood DNA. DNA was purified from blood and tissue samples using a Qiagen QIAamp DNA Mini Kit according to the manufacturer's instructions. PCR was performed on a RoboCycler® robotic thermocycler (Stratagene) using 25-μl reactions consisting of 2.5 μl of 10× reaction buffer (Genscript), 0.2 μl of 100 mM dNTPs (Invitrogen), 1 μl of 10 μM oligonucleotide primer 1 (5′-AGA ACG AAC GCT GGC GGC AAG C-3″) and oligonucleotide primer 2 (5′-CGT ATT ACC GCG GCT GCT GGC A-3′), and 0.2 μl of 5 U/μl Taq polymerase (Genscript) in a thermocycling protocol consisting of a preliminary denaturation step of 94° C. for 5 min, followed by 35 cycles of 94° C. for 1 min, 60° C. for 1 min, and 72° C. for 1 min, followed by a final elongation step of 72° C. for 10 minutes.</p>
+      <p id="p-00111-en" num="0111">Homogenates in fresh growth medium were prepared from spleen samples obtained from <i>E. muris</i>-infected mice and used in FEA feline embryonic cells. One ml of the <i>E. muris</i>-infected mouse spleen homogenate was inoculated into uninfected FEA feline embryonic cells in a 25 cm<sup>2 </sup>cell culture flask containing a 24 hour FEA feline embryonic cell monolayer (at ˜80% confluency) and 8 ml of FEA growth medium at a final homogenate dilution of 1:9. Following 5-24 hours incubation at 37° C. with 5% CO2, the culture medium was replaced with 8 ml of fresh FEA Growth Medium. After 5-7 days incubation, the cell monolayer was trypsinized and resuspended in 2 ml fresh FEA growth medium. One ml of this <i>E. muris</i>-infected cell suspension was inoculated into a 75 cm<sup>2 </sup>cell culture flask containing a 24 hour FEA feline embryonic cell monolayer and 30 ml of FEA growth medium. Cells were incubated for 4-7 days at 37° C. with 5% CO<sub>2</sub>. Infected cultures were passed 5 times using incubation times ranging from 4-9 days at 37° C. with 5% CO<sub>2</sub>. For further passage, 1 to 2 ml of infected cells that were trypsinized and resuspended in 4 to 8 ml of growth medium was used to infect additional uninfected FEA feline embryonic cells. Infected cells were inoculated into flasks containing 24-hour-old FEA feline embryonic cell monolayer, incubated for 5-48 hrs at 37° C. with 5% CO<sub>2</sub>, refed with fresh growth medium, and incubated further for 4-9 days at 37° C. with 5% CO<sub>2</sub>. The presence of <i>E. muris </i>in the cultures of FEA feline embryonic cells was confirmed by the use of IFA and PCR, as described above.</p>
+      <heading id="h-00022-en" level="1">Example 5</heading>
+      <heading id="h-00023-en" level="1">Growth of <i>E. muris </i>on a Homogenous Population of FEF Cells</heading>
+      <p id="p-00112-en" num="0112">Homogenates in growth medium were prepared from spleen samples obtained from <i>E. muris</i>-infected mice as described above and was used to infect FEF cells, cultured as described above. Each uninfected cell line was inoculated with 0.5 ml <i>E. muris</i>-infected spleen homogenate per 25 cm<sup>2 </sup>cell culture flask which contained a 24 hour monolayer and 8 ml growth medium. This is a final homogenate dilution of 1:17. Following 24 hours incubation at 37° C. with 5% CO<sub>2</sub>, the culture medium was replaced with 8 ml of appropriate fresh culture medium. After 7 days incubation, the cell monolayer was trypsinized and the entire infected cell contents of the 25 cm<sup>2 </sup>flask was inoculated into a 75 cm<sup>2 </sup>flask containing 30 ml fresh medium (this is a 1:3.75 split). Infected cultures were passed 2 times using incubation times ranging from 7-8 days at 37° C. with 5% CO<sub>2</sub>. The presence of <i>E. muris </i>in the cultures of cells was confirmed by the use of IFA and PCR, as described above.</p>
+      <heading id="h-00024-en" level="1">Example 6</heading>
+      <heading id="h-00025-en" level="1">Growth of <i>E. muris </i>on a Homogenous Population of FCWF-4 Cells</heading>
+      <p id="p-00113-en" num="0113">Homogenates in growth medium were prepared from spleen samples obtained from <i>E. muris</i>-infected mice as described above and was used to infect FCWF-4 cells, cultured as described above. Each uninfected cell line was inoculated with 0.5 ml <i>E. muris</i>-infected spleen homogenate per 25 cm<sup>2 </sup>cell culture flask which contained a 24 hour monolayer and 8 ml growth medium. This is a final homogenate dilution of 1:17. Following 24 hours incubation at 37° C. with 5% CO<sub>2</sub>, the culture medium was replaced with 8 ml of appropriate fresh culture medium. After 7 days incubation, the cell monolayer was trypsinized and the entire infected cell contents of the 25 cm<sup>2 </sup>flask was inoculated into a 75 cm2 flask containing 30 ml fresh medium (this is a 1:3.75 split). Infected cultures were passed 2 times using incubation times ranging from 7-8 days at 37° C. with 5% CO<sub>2</sub>. The presence of <i>E. muris </i>in the cultures of cells was confirmed by the use of IFA and PCR, as described above.</p>
+      <heading id="h-00026-en" level="1">Example 7</heading>
+      <heading id="h-00027-en" level="1">Infection of FEF Cells with <i>N. risticii</i>-Infected P388D1 Cells</heading>
+      <p id="p-00114-en" num="0114">Materials for infecting FEF cells with <i>N. risticii </i>from <i>N. risticii</i>-infected P388D1 cells can be prepared as described above, or as previously described in Vemulapalli, R. et al., J. Clin. Micro. 33(11): 2987-2993 (1995), or as previously described in U.S. Pat. No. 4,759,927, which is herein wholy incorporated by reference.</p>
+      <p id="p-00115-en" num="0115">P388D1 cells (ATCC accession no. CC1-46) infected with the 90-12 strain of <i>N. risticii </i>were added at a multiplicity-of-infection (MOI) of 0.0006 to 0.0028 in 850-cm<sup>2 </sup>roller bottles containing monolayers of 3-4-day-old FEF cells. Prior to infection, the spent culture medium in the roller bottles were replaced with 300 ml of the culture medium used for infection. After inoculation at the specified MOI, the roller bottles were incubated at 37° C. without CO<sub>2</sub>. Culture medium tested included but not limited to D-MEM, MEM Earles, and M6B8; 0 to 5% FBS was used. The infected cultures were harvested when the cytopathic effect (CPE) reached 75% to 85%, which ranged from 8-16 days depending on the MOI used. CPE observed included swelling, rounding, and detachment of infected cells. The cultures were harvested by tapping the sides of roller bottles to dislodge the cells into the culture medium. The presence of infection was confirmed using a standard IFA protocol on cells that were fixed with 70% acetone and 30% methanol in 96-well plates with an <i>N. risticii </i>monoclonal antibody and fluorescein-labeled goat anti-mouse IgG (Bethyl Laboratories, Inc., Montgomery, Tex.).</p>
+      <heading id="h-00028-en" level="1">Example 8</heading>
+      <heading id="h-00029-en" level="1">Infection of MA-104 Cells with <i>E. Muris </i></heading>
+      <heading id="h-00030-en" level="1">8.1. Propagation of Uninfected MA-104 Cells</heading>
+      <p id="p-00116-en" num="0116">One vial of frozen MA-104 cells (monkey embryo kidney epithelial cells, ATCC accession no. CRL-2378.1) was thawed, clarified, and used to inoculate a 75-cm<sup>2 </sup>cell culture flask containing MA-104 Growth Medium, and incubated at 37° C. with 5% CO<sub>2</sub>. MA-104 Growth Medium consists of Eagles Minimal Essential medium with Earles BSS and 2 mM L-glutamine (EMEM) which is supplemented with 1.0 mM sodium pyruvate, 0.1 mM nonessential amino acids, 1.5 g/1 sodium bicarbonate, an additional 1% L-glutamine and 10% FBS. After incubation for 5-7 days, the cultures were ready for passage when the monolayer was 90-95% confluent. After treatment with 0.25% trypsin, the cells were passed at a split ratio of 1:5 to 1:10.</p>
+      <heading id="h-00031-en" level="1">8.2. Preparation of Homogenous Population of <i>E. Muris</i>-Infected MA-104 Cells</heading>
+      <p id="p-00117-en" num="0117">Homogenates were prepared from spleen samples obtained from <i>E. muris</i>-infected mice and used to infect MA-104 cells. <i>E. muris</i>-infected mouse spleen homogenate was used to overlay MA-104 cells in 25-cm2 cell culture flasks. Twenty-four hour old MA-104 monolayers at ˜85% confluency were inoculated with a 1:91 dilution of spleen homogenate (0.1 ml spleen homogenate into 9 ml existing 24 hour flask media).</p>
+      <p id="p-00118-en" num="0118">MA-104 Growth Medium consists of Eagles Minimal Essential medium with Earles BSS and 2 mM L-glutamine (EMEM) which is supplemented with 1.0 mM sodium pyruvate, 0.1 mM nonessential amino acids, 1.5 g/1 sodium bicarbonate, an additional 1% L-glutamine and 10% FBS. After 5 days of incubation at 37° C. with 5% CO<sub>2</sub>, the cells were treated with trypsin and all the cells were resuspended in 30 ml of fresh MA-104 Growth Medium; this 30 ml was then dispensed into a 75 cm<sup>2 </sup>cell culture flask. After 8 days of incubation at 37° C. with 5% CO<sub>2</sub>, these cells were treated with trypsin and all the cells were resuspended in 50 ml of fresh MA-104 Growth Medium; this 50 ml was then dispensed into a 175 cm<sup>2 </sup>cell culture flask. For further passage, 3 mLs of infected cells that were trypsinized and resuspended in 9-10 ml of growth medium were inoculated into fresh 50 ml growth medium in 175 cm<sup>2 </sup>cell culture flasks. Uninfected MA-104 cells were added during passaging when the cytopathic effect in the infected cells appeared advanced, the infected cells were sparse, or the infected cells appeared weak. The incubation range for the infected cells was 5-8 days at 37° C. with 5% CO<sub>2</sub>. The presence of <i>E. muris </i>in the cultured MA-104 cells was confirmed by use of IFA.</p>
+      <p id="p-00119-en" num="0119">All patents, published patent application and other publications are herein incorporated by reference in their entirety.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method for continuously culturing a bacterial species from the Anaplasmataceae family comprising:
+<claim-text>i) obtaining bacterial species from the Anaplasmataceae family;</claim-text><claim-text>ii) infecting feline embryonic cells with said bacterial species; and</claim-text><claim-text>iii) continuously culturing said feline embryonic cells under conditions conducive to propagating the feline embryonic cells, thereby continuously culturing the bacterial species.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said bacterial species are from the Anaplasma genus.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein said bacterial species are Anaplasma phagocytophilum species.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said bacterial species are from the Ehrlichia species.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en" independent="true">
+      <claim-text>
+        <b>5</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said bacterial species are from the Neorickettsia species.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein said bacterial species are Neorickettsia risticii species.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said bacterial species are the infective agents that cause Potomac horse fever.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en" independent="true">
+      <claim-text>
+        <b>9</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en" independent="true">
+      <claim-text>
+        <b>10</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said feline embryonic cells are selected from the group consisting of feline embryonic fibroblast (FEF) cells, FEA feline embryonic cells, and felis catus whole fetus cells.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en" independent="true">
+      <claim-text>
+        <b>12</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said feline embryonic cells are undifferentiated.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said feline embryonic cells are immortalized.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en" independent="true">
+      <claim-text>
+        <b>15</b>. A composition comprising feline embryonic cells infected with a bacterial species from the Anaplasmataceae family.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The composition of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein said bacterial species are from the Anaplasma genus.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The composition of <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein said bacterial species are Anaplasma bovis species.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The composition of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein said bacterial species are selected from the group consisting of the Ehrlichia species and the Neorickettsia species.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en" independent="true">
+      <claim-text>
+        <b>19</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en" independent="true">
+      <claim-text>
+        <b>20</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. The composition of <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein said bacterial species are Neorickettsia risticii species.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. The composition of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein said bacterial species are the infective agents that cause Potomac horse fever.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en" independent="true">
+      <claim-text>
+        <b>23</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>24</b>. The composition of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein said feline embryonic cells are selected from the group consisting of feline embryonic fibroblast (FEF) cells, FEA feline embryonic cells, and felis catus whole fetus cells.</claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en" independent="true">
+      <claim-text>
+        <b>25</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="26" id="clm-00026-en">
+      <claim-text>
+        <b>26</b>. The composition of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein feline embryonic cells are undifferentiated.</claim-text>
+    </claim>
+    <claim num="27" id="clm-00027-en">
+      <claim-text>
+        <b>27</b>. The composition of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein said feline embryonic cells are immortalized.</claim-text>
+    </claim>
+    <claim num="28" id="clm-00028-en" independent="true">
+      <claim-text>
+        <b>28</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="29" id="clm-00029-en" independent="true">
+      <claim-text>
+        <b>29</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="30" id="clm-00030-en" independent="true">
+      <claim-text>
+        <b>30</b>. A method for continuously culturing a bacterial species from the Anaplasmataceae family comprising:
+<claim-text>i) infecting a mammal with a bacterial species from the Anaplasmataceae family;</claim-text><claim-text>ii) obtaining infected tissue from the infected mammal;</claim-text><claim-text>iii) contacting feline embryonic cells with the infected tissue; and</claim-text><claim-text>iv) continuously culturing said feline embryonic cells, thereby continuously culturing the bacterial species.</claim-text></claim-text>
+    </claim>
+  </claims>
+  <image file="US20150252320A1.PDF" type="pdf" size="576732" pages="12" />
+</lexisnexis-patent-document>

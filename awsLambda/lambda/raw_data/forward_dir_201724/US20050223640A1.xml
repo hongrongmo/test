@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2017 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20170419" file="US20050223640A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-changed="20170418" time-changed="085621">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent application (publication)">
+      <document-id id="36266415">
+        <country>US</country>
+        <doc-number>20050223640</doc-number>
+        <kind>A1</kind>
+        <date>20051013</date>
+      </document-id>
+      <document-id data-format="original">
+        <doc-number>~20050223640</doc-number>
+        <kind>A1</kind>
+      </document-id>
+      <document-id data-format="docdb" id="282516972">
+        <doc-number>2005223640</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>US2005223640</doc-number>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id id="31320792">
+        <country>US</country>
+        <doc-number>11088234</doc-number>
+        <kind>A</kind>
+        <date>20050323</date>
+      </document-id>
+      <document-id data-format="original">
+        <doc-number>11088234</doc-number>
+      </document-id>
+      <document-id data-format="docdb" id="47092468">
+        <doc-number>8823405</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>US20050088234</doc-number>
+      </document-id>
+    </application-reference>
+    <application-series-code>11</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>60555472</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>US20050088234</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>US20040555472P</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20090419">
+      <unexamined-printed-without-grant>
+        <date>20051013</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classification-ipc date-changed="20150818">
+      <main-classification>
+        <text> 7A 01G   9/02   A</text>
+        <edition>7</edition>
+        <section>A</section>
+        <class>01</class>
+        <subclass>G</subclass>
+        <main-group>9</main-group>
+        <subgroup>02</subgroup>
+        <qualifying-character>A</qualifying-character>
+      </main-classification>
+    </classification-ipc>
+    <classifications-ipcr date-changed="20150818">
+      <classification-ipcr sequence="1">
+        <text>A01G   9/02        20060101A I20060722RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>G</subclass>
+        <main-group>9</main-group>
+        <subgroup>02</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20060722</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150818">
+      <classification-cpc sequence="1">
+        <text>A01G   9/02        20130101 FI20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>G</subclass>
+        <main-group>9</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <classification-national date-changed="20150818">
+      <country>US</country>
+      <main-classification>
+        <text>47/65.6</text>
+        <class>47</class>
+        <subclass>65.6</subclass>
+      </main-classification>
+    </classification-national>
+    <classifications-ecla date-changed="20150818">
+      <classification-ecla sequence="1" classification-scheme="EC" country="EP">
+        <text>A01G  9/02</text>
+        <section>A</section>
+        <class>01</class>
+        <subclass>G</subclass>
+        <main-group>9</main-group>
+        <subgroup>02</subgroup>
+      </classification-ecla>
+    </classifications-ecla>
+    <number-of-claims calculated="yes">21</number-of-claims>
+    <invention-title id="title_eng" date-changed="20100403" lang="eng" format="original">Plant marking tag</invention-title>
+    <references-cited date-changed="20170418">
+      <patent-citations name="patcit" date-changed="20161018" />
+      <forward-citations name="fwdcit" date-changed="20170418" />
+      <citation>
+        <patcit num="1" dnum="US3707806A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>3707806</doc-number>
+            <kind>A</kind>
+            <name>TOEWS V, et al</name>
+            <date>19730102</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>3707806</doc-number>
+            <kind>A</kind>
+            <date>19730102</date>
+          </document-id>
+          <application-date>
+            <date>19700109</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="USD437617S" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0437617</doc-number>
+            <kind>S</kind>
+            <name>ROSENTHAL GUNTER [CA]</name>
+            <date>20010213</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>D437617</doc-number>
+            <kind>S</kind>
+            <date>20010213</date>
+          </document-id>
+          <application-date>
+            <date>19990105</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US6199319B1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6199319</doc-number>
+            <kind>B1</kind>
+            <name>SKINNER RICHARD B [US]</name>
+            <date>20010313</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>6199319</doc-number>
+            <kind>B1</kind>
+            <date>20010313</date>
+          </document-id>
+          <application-date>
+            <date>19990223</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="US3334434A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>3334434</doc-number>
+            <kind>A</kind>
+            <name>MELIN JOHN E</name>
+            <date>19670808</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>3334434</doc-number>
+            <kind>A</kind>
+            <date>19670808</date>
+          </document-id>
+          <application-date>
+            <date>19650608</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="5" dnum="USD361094S" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0361094</doc-number>
+            <kind>S</kind>
+            <date>19950808</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>D361094</doc-number>
+            <kind>S</kind>
+          </document-id>
+          <application-date>
+            <date>19940715</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="6" dnum="US6463696B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6463696</doc-number>
+            <kind>B2</kind>
+            <name>SKINNER RICHARD B [US]</name>
+            <date>20021015</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>6463696</doc-number>
+            <kind>B2</kind>
+            <date>20021015</date>
+          </document-id>
+          <application-date>
+            <date>20001220</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="7" dnum="USD402863S" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0402863</doc-number>
+            <kind>S</kind>
+            <date>19981222</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>D402863</doc-number>
+            <kind>S</kind>
+          </document-id>
+          <application-date>
+            <date>19970331</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <fwdcit num="1">
+          <document-id>
+            <country>US</country>
+            <doc-number>7624536</doc-number>
+            <kind>B2</kind>
+            <date>20091201</date>
+          </document-id>
+          <application-date>
+            <date>20070427</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="2">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0662989</doc-number>
+            <kind>S</kind>
+            <date>20120703</date>
+          </document-id>
+          <application-date>
+            <date>20110608</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="3">
+          <document-id>
+            <country>US</country>
+            <doc-number>8240073</doc-number>
+            <kind>B1</kind>
+            <date>20120814</date>
+          </document-id>
+          <application-date>
+            <date>20110608</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="4">
+          <document-id>
+            <country>US</country>
+            <doc-number>8429842</doc-number>
+            <kind>B2</kind>
+            <date>20130430</date>
+          </document-id>
+          <application-date>
+            <date>20120710</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="5">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0683407</doc-number>
+            <kind>S</kind>
+            <date>20130528</date>
+          </document-id>
+          <application-date>
+            <date>20120529</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="6">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0697555</doc-number>
+            <kind>S</kind>
+            <date>20140114</date>
+          </document-id>
+          <application-date>
+            <date>20120301</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="7">
+          <document-id>
+            <country>US</country>
+            <doc-number>8881903</doc-number>
+            <kind>B2</kind>
+            <date>20141111</date>
+          </document-id>
+          <application-date>
+            <date>20120815</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="8">
+          <document-id>
+            <country>US</country>
+            <doc-number>20070227067</doc-number>
+            <kind>A1</kind>
+            <date>20071004</date>
+          </document-id>
+          <application-date>
+            <date>20070104</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="9">
+          <document-id>
+            <country>US</country>
+            <doc-number>20070256358</doc-number>
+            <kind>A1</kind>
+            <date>20071108</date>
+          </document-id>
+          <application-date>
+            <date>20070427</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="10">
+          <document-id>
+            <country>US</country>
+            <doc-number>9622773</doc-number>
+            <kind>B2</kind>
+            <date>20170418</date>
+          </document-id>
+          <application-date>
+            <date>20130313</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20070512">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>60555472</doc-number>
+          <date>20040323</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20100403">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Landmark Plastic Corporation</orgname>
+            <role>02</role>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Hall</last-name>
+            <first-name>Walter J.</first-name>
+            <address>
+              <city>Canton</city>
+              <state>OH</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <nationality>
+            <country>US</country>
+          </nationality>
+          <residence>
+            <country>US</country>
+          </residence>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kissinger</last-name>
+            <first-name>Jeffrey T.</first-name>
+            <address>
+              <city>Wadsworth</city>
+              <state>OH</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <nationality>
+            <country>US</country>
+          </nationality>
+          <residence>
+            <country>US</country>
+          </residence>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>HAHN LOESER &amp; PARKS, LLP</name>
+            <address>
+              <address-1>One GOJO Plaza, Suite 300</address-1>
+              <city>AKRON</city>
+              <state>OH</state>
+              <postcode>44311-1076</postcode>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <patent-family date-changed="20070530">
+      <main-family family-id="44025470">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20050223640</doc-number>
+            <kind>A1</kind>
+            <date>20051013</date>
+          </document-id>
+          <application-date>
+            <date>20050323</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="43841861">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20050223640</doc-number>
+            <kind>A1</kind>
+            <date>20051013</date>
+          </document-id>
+          <application-date>
+            <date>20050323</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20070512" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A plant tag having a body and a central leg which is to be inserted into a slot formed in a pot and two side legs which are to be inserted inside the pot into the growing media. The central leg comprises one or more indentations and/or tabs for resisting removal when the central leg is inserted into a slot on a pot. </p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20100403">
+    <related-apps>
+      <p id="p-00001-en" num="0001"> This application claims priority from provisional patent application Ser. No. 60/555,472, filed Mar. 23, 2004, the disclosure of which is hereby incorporated by reference.</p>
+    </related-apps>
+    <summary>
+      <heading level="2" id="h-00001-en">TECHNICAL FIELD </heading>
+      <p id="p-00002-en" num="0002"> The present invention is directed to a plant container and tag assembly. More particularly, the present invention relates to a plant container and a tag where the tag stands upright when attached to the pot and/or in growing media in the pot and resists inadvertent removal from the pot and/or growing media. </p>
+      <heading level="2" id="h-00002-en">BACKGROUND OF THE INVENTION </heading>
+      <p id="p-00003-en" num="0003"> It is common in the horticultural industry to use tags of various types to identify the type of plant in a particular container. Usually, such tags are made of plastic and include a lower tapered end for insertion into the growing media in a pot or a slit or slot in the pot itself. The top end may include an indentation or crease to add stiffness to the tag. One of the main problems with these prior art tags is that the tags tend to slump or fall over while positioned in the pot so that they are not easily seen by a potential purchaser. In other instances, prior art tags may fall back into the plant foliage. This not only obstructs a customers view of the tag, but it may retard growth or otherwise damage the plant. These prior art tags are also easily removed from the growing media in the pot during transport or from handling by consumers. Once the tag is lost, consumers will not purchase the plant, because they cannot be certain of the identity of the growing plant. Further, some retailers are now requiring that tags be “locked” in the pot so that a tag from an expensive plant cannot easily be exchanged for a tag from a less expensive plant. </p>
+      <heading level="2" id="h-00003-en">SUMMARY OF THE INVENTION </heading>
+      <p id="p-00004-en" num="0004"> In a first embodiment of the present invention, a plant tag comprises: a body; a central leg operably attached to the body, the central leg extending from a central portion of the body; a means for preventing removal of the tag from a pot, the means consuming a portion of the central leg; and at least one side leg operably attached to the body, the side leg extending from the body adjacent the central leg. </p>
+      <p id="p-00005-en" num="0005"> In a second embodiment of the present invention, a tagged pot comprises: a pot having a central cup-like recess and a lip surrounding a top end of the central recess, wherein the lip contains at least one perforation; and a plant tag having: a body; a central leg operably attached to the body, the central leg extending from a central portion of the body and being inserted into the at least one perforation; a means for preventing removal of the tag from the pot, the means consuming a portion of the central leg; and at least one side leg operably attached to the body, the side leg extending from the body adjacent the central leg. </p>
+      <p id="p-00006-en" num="0006"> In a third embodiment of the present invention, a method of tagging a pot comprises: providing a pot having a central cavity and a lip extending from the cavity, wherein the lip contains a slot; and placing a tag having: a body; at least one central leg operably attached to the body, the central leg extending from the body and having at least one notch; and at least one side leg operably attached to the body, the side leg extending from the body adjacent the central leg.</p>
+    </summary>
+    <description-of-drawings>
+      <heading level="2" id="h-00004-en">BRIEF DESCRIPTION OF THE DRAWINGS </heading>
+      <p id="p-00007-en" num="0007">
+        <figref>FIG. 1</figref> is a front view of a tag in accordance with the present invention; </p>
+      <p id="p-00008-en" num="0008">
+        <figref>FIG. 2</figref> is a front view of a tag and pot assembly in accordance with the present invention; and </p>
+      <p id="p-00009-en" num="0009">
+        <figref>FIG. 3</figref> is a side cross-sectional view of a tag and pot assembly in accordance with the present invention.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading level="2" id="h-00005-en">DETAILED DESCRIPTION OF THE INVENTION </heading>
+      <p id="p-00010-en" num="0010"> Referring to <figref>FIG. 1</figref>, there is shown a plant tag <b>2</b>, embodying the present invention. Tag <b>2</b> is made of polypropylene or polystyrene, or any other suitable material, such as plastic or other polymeric materials, laminated paper, or cardboard, and may be stamped and die cut from a sheet of material in an integral manufacturing step. In the present embodiment, tag <b>2</b> comprises a body <b>4</b> and a stake-like, tapered, or pointed central leg <b>8</b> extending downwardly from the center of the body <b>4</b>, where the extended end of leg <b>8</b> is pointed like an arrow. It is contemplated that central leg <b>8</b> may not be stake-like, and instead may have a squared or rounded extended end, or extended end may comprise two or more points or arrows. Further, it is contemplated that central leg <b>8</b> may extend in a uniform or tapered fashion (width and/or thickness). In the present embodiment, central leg <b>8</b> is integral with the tag body <b>4</b>. Central leg <b>8</b> may optionally include at least one indentation or notch <b>10</b>. In the embodiment shown in <figref>FIG. 1</figref>, two indentations <b>10</b> and <b>10</b>′ are formed on opposite edges of central leg <b>8</b>. In the present embodiment, the at least one indentation <b>10</b> is positioned adjacent to a lower edge of body <b>4</b>. However, the at least one indentation may be alternatively positioned at a lower point on central leg <b>8</b>. </p>
+      <p id="p-00011-en" num="0011"> The tag of the present invention also includes at least one stake-like, tapered, or pointed side leg <b>6</b> extending downwardly from body. In the present embodiment as shown in <figref>FIGS. 1 and 2</figref>, the tag <b>2</b> includes two integral side legs <b>6</b> and <b>6</b>′ extending downwardly on opposite sides of tag body <b>4</b>. In the present embodiment, the side legs <b>6</b> and <b>6</b>′ are shorter than the central leg. <b>8</b>. In other embodiments, the side legs <b>6</b> and <b>6</b>′ may be the same length or longer than central leg <b>8</b>. In the present embodiment, the tag body <b>4</b>, may be creased or folded along centerline L-L′. This crease or fold increases the stiffness and stability of the tag when it is positioned in a pot and/or soil. </p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIGS. 2 and 3</figref> illustrate a tag and pot assembly in accordance with the present invention. In the present embodiment, pot <b>12</b> is a polymeric thermoformed pot, commonly used by growers to prepare plants for sale. The tag of the present invention could be used with any type of grower's pot, regardless of the materials used or the method of formation. Pots <b>12</b>, generally having a central recess for placing plants and/or soil, in accordance with the present invention have a lip <b>14</b> at a top end thereof. In the present embodiment, a slot <b>16</b> is formed in the lip <b>14</b> by punching out or otherwise removing a section of material from the lip <b>14</b>. In an alternative embodiment, a slit could be made in the lip <b>14</b> by simply slicing a small section of the lip <b>14</b>. </p>
+      <p id="p-00013-en" num="0013"> Information <b>18</b> about the plant growing in the pot is placed on one of the faces of the tag body <b>4</b>. Such information <b>18</b> may include, but is not limited to, a picture of a plant of the same type, the common name of the plant, the scientific name of the plant, the grower or retailers name and contact information, relevant trademarks, or any other information that growers or sellers of plants may deem relevant can be placed on the tag. </p>
+      <p id="p-00014-en" num="0014"> In use, as shown in <figref>FIGS. 2 and 3</figref>, the tag <b>2</b> is positioned so that the central leg <b>8</b> is positioned through perforation (or slot) <b>16</b>, the central leg <b>8</b> extending along the outside of pot <b>12</b>. At least one of the side legs <b>6</b> and <b>6</b>′ are positioned inside the pot in the growing media, with both legs <b>6</b>, <b>6</b>′ being so positioned in the present embodiment. In one embodiment, the central leg <b>8</b> can be positioned so that at least one indentation (or notch) <b>10</b> or <b>10</b>′ is positioned adjacent to an end of perforation <b>16</b>. In this position, the tag <b>2</b> will resist removal as the lower edge <b>20</b> or <b>20</b>′ of the indentation <b>10</b> or <b>10</b>′ abuts against the inner (or bottom) surface <b>22</b> of lip <b>14</b>. It should be understood that, in some embodiments, perforation <b>16</b> and both indentations <b>10</b> and <b>10</b>′ may interact to restrain removal of tag <b>2</b> from pot <b>12</b>. It should be noted that perforation <b>16</b> may be a slot, a slit, or any other perforation capable of accepting central leg <b>8</b>. In another embodiment of the invention, each side of the central leg <b>8</b> may also include one or more small cuts to create one or more tabs (such as <b>30</b> and <b>30</b>′) on opposite sides of the central leg <b>8</b>, whether or not indentations <b>10</b> and <b>10</b>′ exist. The tabs <b>30</b>, <b>30</b>′ may be bent in a direction towards one of the faces of the tag <b>2</b> so that they restrain upward movement of the tag <b>2</b> out of the perforation <b>16</b> on the pot. In the embodiment shown in <figref>FIG. 3</figref>, the tabs <b>30</b>, <b>30</b>′ are bent in opposite directions along a horizontal axis to restrain movement of the tag out of the pot. However, other arrangements of the tabs are within the scope of the present invention, such as being bent along a vertical axis. </p>
+      <p id="p-00015-en" num="0015"> Although the invention has been described herein with reference to the present embodiments, it will become apparent to those skilled in the art that various modifications of the present embodiments of the invention as described herein can be made without departing from the spirit or scope of the invention as defined by the appended claims. </p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20100403">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>. A plant tag comprising: 
+<claim-text>a body; </claim-text><claim-text>a central leg operably attached to the body, the central leg extending from a central portion of the body; </claim-text><claim-text>a means for preventing removal of the tag from a pot, the means consuming a portion of the central leg; and </claim-text><claim-text>at least one side leg operably attached to the body, the side leg extending from the body adjacent the central leg. </claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The plant tag of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the central leg is integral with the body. </claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The plant tag of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the central leg has two opposing notches. </claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The plant tag of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the said at least one notch is located adjacent the body. </claim-text>
+    </claim>
+    <claim num="6" id="clm-00005-en">
+      <claim-text>
+        <b>6</b>. The plant tag of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the central leg has a pointed terminal end. </claim-text>
+    </claim>
+    <claim num="7" id="clm-00006-en">
+      <claim-text>
+        <b>7</b>. The plant tag of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the central leg includes at least one tab formed by bending a cut portion of the central leg. </claim-text>
+    </claim>
+    <claim num="8" id="clm-00007-en">
+      <claim-text>
+        <b>8</b>. The plant tag of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the said at least one side leg is integral with the body. </claim-text>
+    </claim>
+    <claim num="9" id="clm-00008-en">
+      <claim-text>
+        <b>9</b>. The plant tag of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the said at least one side leg has a pointed terminal end. </claim-text>
+    </claim>
+    <claim num="10" id="clm-00009-en">
+      <claim-text>
+        <b>10</b>. The plant tag of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising two side legs, each located on opposing sides of the central leg. </claim-text>
+    </claim>
+    <claim num="11" id="clm-00010-en">
+      <claim-text>
+        <b>11</b>. The plant tag of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the said at least one side leg extends in a direction substantially parallel to the central leg. </claim-text>
+    </claim>
+    <claim num="12" id="clm-00011-en">
+      <claim-text>
+        <b>12</b>. The plant tag of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the said at least one side leg is shorter than the central leg. </claim-text>
+    </claim>
+    <claim num="13" id="clm-00012-en">
+      <claim-text>
+        <b>13</b>. The plant tag of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the tag is formed from a polypropylene or polystyrene. </claim-text>
+    </claim>
+    <claim num="14" id="clm-00013-en">
+      <claim-text>
+        <b>14</b>. The plant tag of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising a bend line, extending linearly and centrally through the extension of the central leg and the body. </claim-text>
+    </claim>
+    <claim num="15" id="clm-00014-en">
+      <claim-text>
+        <b>15</b>. The plant tag of <claim-ref idref="clm-00013-en">claim 14</claim-ref>, wherein the tag is bent along the bend line. </claim-text>
+    </claim>
+    <claim num="16" id="clm-00015-en">
+      <claim-text>
+        <b>16</b>. The plant tag of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the means for preventing removal of the tag from a pot comprises an opposing pair of indentations on the central leg. </claim-text>
+    </claim>
+    <claim num="17" id="clm-00016-en">
+      <claim-text>
+        <b>17</b>. The plant tag of <claim-ref idref="clm-00015-en">claim 16</claim-ref>, wherein the indentations are located adjacent the body. </claim-text>
+    </claim>
+    <claim num="18" id="clm-00017-en">
+      <claim-text>
+        <b>18</b>. The plant tag of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the means for preventing removal of the tag from a pot includes an opposing pair of tabs on the central leg, the tabs being formed by cuts and capable of being bent away from the central leg; and </claim-text>
+    </claim>
+    <claim num="19" id="clm-00018-en">
+      <claim-text>
+        <b>19</b>. The plant tag of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the tag is bent along a bend line, the line extending linearly and centrally through the central leg and the body. </claim-text>
+    </claim>
+    <claim num="20" id="clm-00019-en">
+      <claim-text>
+        <b>20</b>. A method of tagging a pot, comprising: 
+<claim-text>providing a pot having a central cavity and a lip extending from the cavity, wherein the lip contains a perforation; and </claim-text><claim-text>placing a tag into the pot, the tag having: a body; at least one central leg operably attached to the body, the central leg extending from the body and having at least one notch; and at least one side leg operably attached to the body, the side leg extending from the body adjacent the central leg, wherein the at least one central leg is placed into the perforation of the pot. </claim-text></claim-text>
+    </claim>
+    <claim num="21" id="clm-00020-en">
+      <claim-text>
+        <b>21</b>. The method of tagging according to <claim-ref idref="clm-00019-en">claim 20</claim-ref>, wherein the tag resists removal from the pot when a bottom surface of the notch contacts an inner surface of the lip. </claim-text>
+    </claim>
+    <claim num="22" id="clm-00021-en">
+      <claim-text>
+        <b>22</b>. A tagged pot comprising: 
+<claim-text>a pot having a central cup-like recess and a lip surrounding a top end of the central recess, wherein the lip contains at least one perforation; and </claim-text><claim-text>a plant tag having: a body; a central leg operably attached to the body, the central leg extending from a central portion of the body and being inserted into the at least one perforation; a means for preventing removal of the tag from the pot, the means consuming a portion of the central leg; and at least one side leg operably attached to the body, the side leg extending from the body adjacent the central leg.</claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20050223640A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20050223640A1-20051013-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20050223640A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20050223640A1-20051013-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20050223640A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20050223640A1-20051013-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20050223640A1_00004.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20050223640A1-20051013-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20050223640A1.PDF" type="pdf" size="73370" pages="5" />
+</lexisnexis-patent-document>

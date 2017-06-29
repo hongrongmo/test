@@ -1,0 +1,1508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2940170A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151104" time-inserted="090726" date-changed="20160122" time-changed="115415">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121938050">
+        <country>EP</country>
+        <doc-number>2940170</doc-number>
+        <kind>A1</kind>
+        <date>20151104</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>12891023</doc-number>
+        <date>20121228</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>kor</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151104">
+      <priority-claim sequence="1" kind="national">
+        <country>KR</country>
+        <doc-number>1020120154611</doc-number>
+        <date>20121227</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>KR</country>
+        <doc-number>20120154611</doc-number>
+        <kind>A</kind>
+        <date>20121227</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>KR</country>
+        <doc-number>2012011749</doc-number>
+        <kind>W</kind>
+        <date>20121228</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>20120154611</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>2012011749</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>KR20120154611</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>WO2012KR11749</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151105">
+      <gazette-reference>
+        <date>20151104</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151104</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151104</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151105">
+      <request-for-examination>
+        <date>20150629</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20151217">
+      <classification-ipcr sequence="1">
+        <text>C22C  38/00        20060101AFI20151204BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151204</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C21D   6/00        20060101ALI20151204BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>6</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151204</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C21D   8/12        20060101ALI20151204BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>8</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151204</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C21D   9/46        20060101ALI20151204BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>9</main-group>
+        <subgroup>46</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151204</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>C22C  38/02        20060101ALI20151204BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151204</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>C22C  38/04        20060101ALI20151204BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151204</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="7">
+        <text>C22C  38/06        20060101ALI20151204BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151204</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="8">
+        <text>C22C  38/08        20060101ALI20151204BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151204</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="9">
+        <text>C22C  38/16        20060101ALI20151204BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151204</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="10">
+        <text>C22C  38/34        20060101ALI20151204BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>34</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151204</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="11">
+        <text>C22C  38/40        20060101ALI20151204BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>40</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151204</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="12">
+        <text>C22C  38/60        20060101ALI20151204BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>60</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151204</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="13">
+        <text>H01F   1/147       20060101ALI20151204BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>01</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>147</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151204</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="14">
+        <text>H01F   1/16        20060101ALI20151204BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>01</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151204</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="15">
+        <text>H01F  41/02        20060101ALI20151204BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>01</class>
+        <subclass>F</subclass>
+        <main-group>41</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151204</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151217">
+      <classification-cpc sequence="1">
+        <text>H01F   1/14775     20130101 FI20151128BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>14775</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151128</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C21D   6/001       20130101 LI20151128BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>6</main-group>
+        <subgroup>001</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151128</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C21D   6/002       20130101 LI20151128BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>6</main-group>
+        <subgroup>002</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151128</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C21D   6/004       20130101 LI20151128BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>6</main-group>
+        <subgroup>004</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151128</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C21D   6/008       20130101 LI20151128BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>6</main-group>
+        <subgroup>008</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151128</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C21D   8/12        20130101 LI20140915BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>8</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140915</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C21D   8/1222      20130101 LI20151128BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>8</main-group>
+        <subgroup>1222</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151128</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C21D   8/1233      20130101 LI20151128BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>8</main-group>
+        <subgroup>1233</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151128</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C21D   8/1261      20130101 LI20151128BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>8</main-group>
+        <subgroup>1261</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151128</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>C21D   9/46        20130101 LI20151130BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>9</main-group>
+        <subgroup>46</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151130</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>C22C  38/00        20130101 LI20140725BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140725</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>C22C  38/001       20130101 LI20151130BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>001</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151130</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>C22C  38/005       20130101 LI20151130BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>005</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151130</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>C22C  38/008       20130101 LI20151128BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>008</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151128</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="15">
+        <text>C22C  38/02        20130101 LI20151130BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151130</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="16">
+        <text>C22C  38/04        20130101 LI20151130BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151130</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="17">
+        <text>C22C  38/06        20130101 LI20151130BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151130</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="18">
+        <text>C22C  38/08        20130101 LI20151128BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151128</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="19">
+        <text>C22C  38/16        20130101 LI20151128BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151128</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="20">
+        <text>C22C  38/34        20130101 LI20151128BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>34</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151128</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="21">
+        <text>C22C  38/40        20130101 LI20151128BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>40</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151128</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="22">
+        <text>C22C  38/60        20130101 LI20151128BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>60</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151128</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="23">
+        <text>H01F   1/14791     20130101 LI20151128BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>14791</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151128</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="24">
+        <text>H01F   1/16        20130101 LI20151128BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151128</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="25">
+        <text>H01F  41/02        20130101 LI20151128BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>F</subclass>
+        <main-group>41</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151128</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">11</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151104" lang="ger" format="original">KORNORIENTIERTES ELEKTROSTAHLBLECH MIT HERVORRAGENDEM KERNVERLUST UND VERFAHREN ZUR HERSTELLUNG DAVON</invention-title>
+    <invention-title id="title_eng" date-changed="20151104" lang="eng" format="original">GRAIN ORIENTED ELECTRICAL STEEL SHEET HAVING EXCELLENT CORE LOSS, AND METHOD FOR MANUFACTURING SAME</invention-title>
+    <invention-title id="title_fre" date-changed="20151104" lang="fre" format="original">TÔLE D'ACIER MAGNÉTIQUE À GRAINS ORIENTÉS AYANT UNE EXCELLENTE PERTE DE COEUR ET SON PROCÉDÉ DE FABRICATION</invention-title>
+    <parties date-changed="20151104">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Posco</orgname>
+            <registered-number>101453250</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>(Goedong-dong) 6261, Donghaean-ro Nam-gu Pohang-si</address-1>
+              <city>Gyeongsangbuk-do 790-300</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>HONG, Byung-Deug</name>
+            <address>
+              <address-1>c/o Pohang Iron&amp;Steel Works 5 Dongchon-dong Nam-gu</address-1>
+              <city>Pohang-si Kyungsangbook-do 790-360</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>KIM, Dong-Kyun</name>
+            <address>
+              <address-1>c/o Pohang Iron&amp;Steel Works 5 Dongchon-dong Nam-gu</address-1>
+              <city>Pohang-si Kyungsangbook-do 790-360</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Zech, Stefan Markus</name>
+            <registered-number>100755512</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Meissner, Bolte &amp; Partner GbR Postfach 86 06 24</address-1>
+              <city>81633 München</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151104">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>KR12011749</doc-number>
+        <date>20121228</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014104444</doc-number>
+        <date>20140703</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151126">
+      <main-family family-id="166466178">
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020140084770</doc-number>
+            <kind>A</kind>
+            <date>20140707</date>
+          </document-id>
+          <application-date>
+            <date>20121227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940170</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104937123</doc-number>
+            <kind>A</kind>
+            <date>20150923</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>101482354</doc-number>
+            <kind>B1</kind>
+            <date>20150107</date>
+          </document-id>
+          <application-date>
+            <date>20121227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150340137</doc-number>
+            <kind>A1</kind>
+            <date>20151126</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014104444</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="166466174">
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020140084770</doc-number>
+            <kind>A</kind>
+            <date>20140707</date>
+          </document-id>
+          <application-date>
+            <date>20121227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940170</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104937123</doc-number>
+            <kind>A</kind>
+            <date>20150923</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>101482354</doc-number>
+            <kind>B1</kind>
+            <date>20150107</date>
+          </document-id>
+          <application-date>
+            <date>20121227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150340137</doc-number>
+            <kind>A1</kind>
+            <date>20151126</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014104444</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151104" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention relates to a grain oriented electrical steel sheet having excellent core loss and to a method for manufacturing same. The electrical steel sheet according to one aspect of the present invention may have a composition comprising, by weight%, Si: 1.0 to 4.0%, Al: 0.1 to 4.0%, and a rare earth element: 0.0001 to 0.5% by the total content of the whole rare earth element.<img id="imga-00001-en" wi="33" he="114" img-content="drawing" file="imgaf001.tif" img-format="tif" /></p>
+  </abstract>
+  <legal-data date-changed="20160122">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20160113</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2940170A1</docdb-publication-number>
+      <docdb-application-id>419627208</docdb-application-id>
+      <ipc>C22C  38/02        20060101ALI20151204BHEP</ipc>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20160113</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2940170A1</docdb-publication-number>
+      <docdb-application-id>419627208</docdb-application-id>
+      <ipc>H01F   1/147       20060101ALI20151204BHEP</ipc>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20160113</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2940170A1</docdb-publication-number>
+      <docdb-application-id>419627208</docdb-application-id>
+      <ipc>C22C  38/34        20060101ALI20151204BHEP</ipc>
+    </legal-event>
+    <legal-event sequence="4">
+      <publication-date>
+        <date>20160113</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2940170A1</docdb-publication-number>
+      <docdb-application-id>419627208</docdb-application-id>
+      <ipc>C21D   8/12        20060101ALI20151204BHEP</ipc>
+    </legal-event>
+    <legal-event sequence="5">
+      <publication-date>
+        <date>20160113</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2940170A1</docdb-publication-number>
+      <docdb-application-id>419627208</docdb-application-id>
+      <ipc>C22C  38/04        20060101ALI20151204BHEP</ipc>
+    </legal-event>
+    <legal-event sequence="6">
+      <publication-date>
+        <date>20160113</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2940170A1</docdb-publication-number>
+      <docdb-application-id>419627208</docdb-application-id>
+      <ipc>H01F   1/16        20060101ALI20151204BHEP</ipc>
+    </legal-event>
+    <legal-event sequence="7">
+      <publication-date>
+        <date>20160113</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2940170A1</docdb-publication-number>
+      <docdb-application-id>419627208</docdb-application-id>
+      <ipc>C22C  38/40        20060101ALI20151204BHEP</ipc>
+    </legal-event>
+    <legal-event sequence="8">
+      <publication-date>
+        <date>20160113</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2940170A1</docdb-publication-number>
+      <docdb-application-id>419627208</docdb-application-id>
+      <ipc>C22C  38/08        20060101ALI20151204BHEP</ipc>
+    </legal-event>
+    <legal-event sequence="9">
+      <publication-date>
+        <date>20160113</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2940170A1</docdb-publication-number>
+      <docdb-application-id>419627208</docdb-application-id>
+      <ipc>C21D   9/46        20060101ALI20151204BHEP</ipc>
+    </legal-event>
+    <legal-event sequence="10">
+      <publication-date>
+        <date>20160113</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2940170A1</docdb-publication-number>
+      <docdb-application-id>419627208</docdb-application-id>
+      <ipc>C21D   6/00        20060101ALI20151204BHEP</ipc>
+    </legal-event>
+    <legal-event sequence="11">
+      <publication-date>
+        <date>20160113</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2940170A1</docdb-publication-number>
+      <docdb-application-id>419627208</docdb-application-id>
+      <ipc>C22C  38/60        20060101ALI20151204BHEP</ipc>
+    </legal-event>
+    <legal-event sequence="12">
+      <publication-date>
+        <date>20160113</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2940170A1</docdb-publication-number>
+      <docdb-application-id>419627208</docdb-application-id>
+      <ipc>C22C  38/16        20060101ALI20151204BHEP</ipc>
+    </legal-event>
+    <legal-event sequence="13">
+      <publication-date>
+        <date>20160113</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2940170A1</docdb-publication-number>
+      <docdb-application-id>419627208</docdb-application-id>
+      <ipc>C22C  38/06        20060101ALI20151204BHEP</ipc>
+    </legal-event>
+    <legal-event sequence="14">
+      <publication-date>
+        <date>20160113</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2940170A1</docdb-publication-number>
+      <docdb-application-id>419627208</docdb-application-id>
+      <ipc>H01F  41/02        20060101ALI20151204BHEP</ipc>
+    </legal-event>
+    <legal-event sequence="15">
+      <publication-date>
+        <date>20160113</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2940170A1</docdb-publication-number>
+      <docdb-application-id>419627208</docdb-application-id>
+      <ipc>C22C  38/00        20060101AFI20151204BHEP</ipc>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151104">
+    <heading id="h-00001-en">[Technical Field]</heading>
+    <p id="p-00001-en" num="0001">The present disclosure relates to a grain-oriented electrical steel sheet having a low degree of core loss and a method for manufacturing the grain-oriented electrical steel sheet.</p>
+    <heading id="h-00002-en">[Background Art]</heading>
+    <p id="p-00002-en" num="0002">Electrical steel sheets have a high degree of permeability and a low degree of core loss, and are thus frequently used as materials for cores, etc. Electrical steel sheets may be broadly categorized as grain-oriented electrical steel sheets and non-oriented electrical steel sheets.</p>
+    <p id="p-00003-en" num="0003">Grain-oriented electrical steel sheets are characterized by {110}&lt;001&gt; grains having a {110} plane parallel to the rolled surface and a &lt;001&gt; axis (magnetic easy axis) parallel to the rolling direction. Grain-oriented electrical steel sheets have superior magnetic characteristics in a particular direction, and are thus widely used as material for cores of devices that are used at a fixed position, such as transformers, electric motors, generators, or other electric devices. The magnetic characteristics of grain-oriented electrical steel sheets may be expressed by magnetic flux density and core loss. A grain-oriented electrical steel sheet having a higher degree of magnetic flux density and a lower degree of core loss is favored. In general, the magnetic flux density of electrical steel sheets is expressed by B8 values measured in a magnetic field of 800 Amp/m, and the core loss of electrical steel sheets is expressed by W17/50 indicating lost watts per kilogram at 50 Hz and 1.7 Tesla.</p>
+    <p id="p-00004-en" num="0004">N.P. Goss developed an early technique for grain-oriented electrical steel sheets. According to the technique, grains of steel are oriented in the {110}&lt;001&gt; orientation (known as Goss orientation) by a cold rolling method. Thereafter, the technology for grain-oriented electrical steel sheets has been developed up to the present level.</p>
+    <p id="p-00005-en" num="0005">That is, it is necessary to increase the proportion of grains having {110}&lt;001&gt; orientation or a similar orientation so as to manufacture a grain-oriented electrical steel sheet. A heating process is necessary to induce recrystallization of grains of steel sheets, and thus to orient the grains of the steel sheets. In an annealing process, however, the growth of crystals generally occurs in random orientations. Therefore, a particular method is necessary to obtain grain-oriented electrical steel sheets having grains grown in a particular direction.</p>
+    <p id="p-00006-en" num="0006">In general, electrical steel sheets are annealed in two steps: primary recrystallization annealing and secondary recrystallization annealing. Primary recrystallization occurs by using energy accumulated during a cold rolling process as a driving force, and secondary recrystallization occurs by using boundary energy of primarily recrystallized grains as a driving force. During the secondary recrystallization which is also called "abnormal grain growth," grains grow to a size of several millimeters (mm) to several centimeters (cm).</p>
+    <p id="p-00007-en" num="0007">However, secondarily recrystallized grains have different orientations depending on the temperature of recrystallization. If the secondary recrystallization occurs at a certain temperature, the proportion of grains having Goss orientation increases, and thus an electrical steel sheet having a low degree of core loss may be obtained.</p>
+    <p id="p-00008-en" num="0008">Therefore, it is necessary to suppress the secondary recrystallization until the temperature reaches a certain level at which grains having Goss orientation are obtainable and to start the secondary recrystallization at a certain temperature. Generally, inhibitors are used for this purpose. Inhibitors exist in the form of precipitates in steel and suppress the movement of grain boundaries and the formation of new grains. If a proper inhibitor is selected, the inhibitor may not obstruct the growth of grains at a recrystallization temperature at which the grains recrystallize as grains having Goss orientation, for example, because the inhibitor is dissolved or removed at the recrystallization temperature, and thus the recrystallization and growth of grains having Goss orientation may markedly occur at the recrystallization temperature.</p>
+    <p id="p-00009-en" num="0009">Therefore, the selection of a proper inhibitor may be a crucial factor in increasing the proportion of grains having Goss orientation in electrical steel sheets and reducing the core loss of the electrical steel sheets. An MnS-based inhibitor, developed by ARMCO, USA, may be the first inhibitor. However, in techniques in which MnS-based inhibitors are used, since MnS exists as coarse particles in steel slabs and thus does not function as an inhibitor, MnS is first dissolved through a solid solution treatment and is then precipitated as fine particles. To this end, slabs are heated to 1350°C or higher to sufficiently dissolve MnS. However, the slab heating temperature is much higher than a temperature to which steel slabs are generally heated and thus may decrease the lifespan of a heating furnace, thereby causing problems such as a decrease in the lifespan of a heating furnace or corrosion of a slab due to silicon oxides melting and flowing on the surface of the slab. In addition, a method of manufacturing non-oriented electrical steel sheets through two cold rolling processes and an intermediate annealing process therebetween has been proposed by ARMCO. However, electrical steel sheets manufactured by the method thereof do not have sufficient magnetic characteristics.</p>
+    <p id="p-00010-en" num="0010">In 1968, Nippon Steel Corporation proposed a new conceptual electric steel sheet product named "Hi-B." The electric steel sheet product Hi-B uses AlN and MnS as inhibitors and is producible through a single cold rolling process. Although the electric steel sheet product Hi-B has a high degree of magnetic flux density and a low degree of core loss, a slab has to be heated to a high temperature during a solid solution treatment process so as to dissolve inhibitors.</p>
+    <p id="p-00011-en" num="0011">JFE has proposed another electrical steel sheet using MnSe and antimony (Sb) as inhibitors. However, the electrical steel sheet is also disadvantageous in that a slab has to be heated to a high temperature.</p>
+    <p id="p-00012-en" num="0012">To address problems of such high-temperature heating methods of the related art, a low-temperature heating method has been developed. According to the low temperature heating method, inhibitors are not formed at the beginning of a manufacturing process but are formed immediately before secondary recrystallization so that the slab heating temperature may be decreased to 1300°C or lower, or 1280°C or lower. The core technology of the low-temperature heating method is a nitriding annealing process in which nitrogen (N) necessary for forming AlN functioning as an inhibitor is added to steel by diffusing nitrogen gas at a later stage of manufacturing. Therefore, a high-temperature heating process is not necessary for dissolving aluminum (Al) and nitrogen (N) and forming AlN. Thus, various process problems of high-temperature heating methods could be solved.</p>
+    <p id="p-00013-en" num="0013">A method of increasing the specific resistance of electrical steel sheets may be considered an important method of decreasing the core loss of electrical steel sheets. That is, as shown in Formula 1 below, the core loss of steel sheets is reverse proportional to the specific resistance of the steel sheets. Thus, particular elements may be added to steel sheets to increase the specific resistance of the steel sheets. <maths id="maths-00001-en" num="[Formula 1]"><math display="block"><mrow><msub><mi mathvariant="normal">W</mi><mi mathvariant="normal">ec</mi></msub><mo>=</mo><mfenced separators=""><msup><mrow><mi mathvariant="normal">π</mi></mrow><mrow><mn mathvariant="normal">2</mn></mrow></msup><mo>⋅</mo><msup><mrow><mi mathvariant="normal">d</mi></mrow><mrow><mn mathvariant="normal">2</mn></mrow></msup><mo>⋅</mo><msup><mrow><mi mathvariant="normal">I</mi></mrow><mrow><mn mathvariant="normal">2</mn></mrow></msup><mo>⋅</mo><msup><mrow><mi mathvariant="normal">f</mi></mrow><mrow><mn mathvariant="normal">2</mn></mrow></msup></mfenced><mo>/</mo><mfenced separators=""><mi mathvariant="normal">ρ</mi><mo>⋅</mo><mn mathvariant="normal">6</mn></mfenced></mrow></math><img id="img-00001-en" wi="59" he="14" img-content="math" file="imgb0001.tif" img-format="tif" /></maths> where W<sub>ec</sub>: core loss, d: crystal diameter, I: current, f: frequency, and p: specific resistance.</p>
+    <p id="p-00014-en" num="0014">An exemplary element that increases the specific resistance of electrical steel sheets is silicon (Si). That is, the core loss of electrical steel sheets may be reduced by adding as much silicon (Si) as possible to the electrical steel sheets. However, if an excessive amount of silicon (Si) is added to a steel sheet, the brittleness of the steel sheet is increased, and thus cold-rolling characteristics of the steel sheet are deteriorated. Therefore, the method of adding silicon (Si) has practical limitations. Like silicon (Si), phosphorus (P) may increase the specific resistance of steel sheets. However, since even a very small amount of phosphorus (P) increases the brittleness of steel sheets, there is also a limit to adding phosphorus (P).</p>
+    <heading id="h-00003-en">[Disclosure]</heading>
+    <heading id="h-00004-en">[Technical Problem]</heading>
+    <p id="p-00015-en" num="0015">Aspects of the present disclosure may provide an improved electrical steel sheet having superior magnetic characteristics such as a low degree of core loss and designed to be manufactured by a low-temperature heating method, and an improved method for manufacturing the electrical steel sheet.</p>
+    <p id="p-00016-en" num="0016">However, the present disclosure is not limited to the above-mentioned aspects. The above-mentioned aspects and other aspects of the present disclosure will be clearly understood by those of skill in the art through the following description.</p>
+    <heading id="h-00005-en">[Technical Solution]</heading>
+    <p id="p-00017-en" num="0017">According to an aspect of the present disclosure, an electrical steel sheet having a low degree of core loss may include, by wt%, silicon (Si): 1.0% to 4.0%, aluminum (Al): 0.1% to 4.0%, and at least one rare earth element: 0.05% to 0.5% in total content.</p>
+    <p id="p-00018-en" num="0018">The electrical steel sheet may further include carbon (C): 0.003 wt% or less, manganese (Mn): 0.03 wt% to 0.2 wt%, sulfur (S): 0.001 wt% to 0.05 wt%, and nitrogen (N): 0.01 wt% or less.</p>
+    <p id="p-00019-en" num="0019">The electrical steel sheet may further include at least one selected from the group consisting of phosphorus (P): 0.5% or less, tin (Sn): 0.3% or less, antimony (Sb): 0.3% or less, chromium (Cr): 0.3% or less copper (Cu): 0.4% or less, and nickel (Ni): 1% or less.</p>
+    <p id="p-00020-en" num="0020">The rare earth element or a compound of the rare earth element may be used as an inhibitor.</p>
+    <p id="p-00021-en" num="0021">According to another aspect of the present disclosure, a method for manufacturing an electrical steel sheet having a low degree of core loss may include: heating a slab to 1050°C to 1300°C, the slab including, by wt%, silicon (Si): 1.0% to 4.0%, aluminum (Al): 0.1% to 4.0%, and at least one rare earth element: 0.05% to 0.5% in total content; hot rolling the slab; cold rolling the slab; primarily recrystallizing the slab; and secondarily recrystallizing the slab.</p>
+    <p id="p-00022-en" num="0022">The slab may further include carbon (C): 0.1 wt% or less, manganese (Mn) : 0.03 wt% to 0.2 wt%, sulfur (S) : 0.001 wt% to 0.05 wt%, and nitrogen (N): 0.01 wt% or less.</p>
+    <p id="p-00023-en" num="0023">After the hot rolling of the slab, the method may further include at least one selected from: annealing the hot-rolled slab; and pickling the hot-rolled slab.</p>
+    <p id="p-00024-en" num="0024">The cold rolling may be performed at a reduction ratio of 85% to 90%.</p>
+    <p id="p-00025-en" num="0025">The cold rolling may be performed two or more times with an intermediate annealing process therebetween, and a reduction ratio of the final cold rolling may be 60% or greater.</p>
+    <p id="p-00026-en" num="0026">The primary recrystallizing may be performed within a temperature range of 700°C to 950°C.</p>
+    <p id="p-00027-en" num="0027">The secondary recrystallizing may be performed by heating the slab to a maximum temperature of 1100°C to 1300°C at a heating rate of 5°C/hr to 30°C/hr.</p>
+    <heading id="h-00006-en">[Advantageous Effects]</heading>
+    <p id="p-00028-en" num="0028">As described above, according to the present disclosure, rare earth metals (REMs) are used as inhibitors, and a large amount of aluminum (Al) is added to a steel sheet to increase the specific resistance of the steel sheet, thereby markedly decreasing the core loss of the steel sheet.</p>
+    <heading id="h-00007-en">[Description of Drawings]</heading>
+    <p id="p-00029-en" num="0029">
+      <ul id="ul-00001-en" list-style="none" compact="compact">
+        <li>
+          <figref>FIGS. 1A and 1B</figref> are images taken with a microscope to show inhibitors formed in steel sheets to which rare earth elements are added.</li>
+        <li>
+          <figref>FIGS. 2A and 2B</figref> are graphs illustrating core loss according to the total content of rare earth elements.</li>
+      </ul>
+    </p>
+    <heading id="h-00008-en">[Best Mode]</heading>
+    <p id="p-00030-en" num="0030">The present disclosure will now be described in detail.</p>
+    <p id="p-00031-en" num="0031">The inventors have conducted research into a method of manufacturing an electric steel sheet having a low degree of core loss by adding an inhibitor to increase the number of particles having Goss orientation and the specific resistance of the electric steel sheet without increasing the brittleness of the electric steel sheet. As a result, the inventors have found that the objects as described above could be achieved by adding a rare earth metal (REM) (hereinafter referred to as a "rare earth element") to an electrical steel sheet and increasing the content of aluminum (Al) in the electrical steel sheet. Based on this knowledge, the inventors have invented the present invention.</p>
+    <p id="p-00032-en" num="0032">That is, according to the present disclosure, aluminum (Al) is added to an electrical steel sheet in an amount of 0.1 wt% or greater. According to results of the research conducted by the inventors, like silicon (Si), aluminum (Al) has a significant effect on increasing the specific resistance of a steel sheet but does not increase the brittleness of the steel sheet if the content of aluminum (Al) is within a certain range. Although silicon (Si) is additionally added to a steel sheet to increase the specific resistance of the steel sheet, the content of silicon (Si) in the steel sheet is limited because silicon (Si) may increase the brittleness of the steel sheet. Therefore, aluminum (Al) may be used together with silicon (Si) to increase the specific resistance of a steel sheet without increasing the brittleness of the steel sheet. To this end, it may be preferable that aluminum (Al) be added in an amount of 0.1 wt% or greater. However, if the content of aluminum (Al) in the electrical steel sheet is excessively high, the brittleness of the electrical steel sheet is increased. Therefore, the content of aluminum (Al) may be adjusted to be 4.0 wt% or less so as not to affect cold rolling characteristics of the electrical steel sheet.</p>
+    <p id="p-00033-en" num="0033">The above-mentioned aluminum (Al) content range is much higher than the aluminum (Al) content range (for example, 0.05 wt% or less) of general electrical steel sheets using AlN as an inhibitor. That is, if aluminum (Al) is added within the content range of the present disclosure, it may be difficult to finely and uniformly distribute AlN functioning as an inhibitor, and thus AlN may not sufficiently function as an inhibitor for inducing the formation of particles having Goss orientation.</p>
+    <p id="p-00034-en" num="0034">Therefore, the present disclosure proposes a new conceptual inhibitor instead of an AlN inhibitor, so as to improve both the specific resistance and the crystal orientation of electrical steel sheets. To this end, rare earth elements are used as inhibitor forming elements in the present disclosure. Rare earth elements are 17 elements consisting of: scandium (Sc) and yttrium (Y) included in group 3, and the 15 elements with atomic numbers 57 to 71 (the lanthanides) in the periodic table. The rare earth elements serve individually or in the form of a compound with sulfur (S) or oxygen (O) to hinder the movement of boundaries of primarily recrystallized grains but do not hinder the growth of grains having Goss orientation at a secondary recrystallization temperature, thereby having a significant effect on increasing the proportion of particles having Goss orientation. In addition, a compound of a rare earth element is finely and uniformly distributed in a cast slab, and thus it is unnecessary to perform a solid solution treatment on the slab in a later process to finely precipitate the compound. Owing to this, a slab heating temperature may be adjusted within the range of a general low-temperature heating method, and thus problems of high-temperature heating methods may not occur.</p>
+    <p id="p-00035-en" num="0035">One of the rare earth elements may be used, or two or more of the rare earth elements may be used. For example, the total content of rare earth elements in a steel sheet may be adjusted to be 0.05% or greater so as to obtain sufficient inhibitor effects. However, if the total content of rare earth elements is excessively high, coarse compounds may be formed. Thus, the upper limit of the total content of rare earth elements is set to 0.5 wt%. Coarse compounds may not have a sufficient effect on suppressing the growth of grains during primary recrystallization. According to an exemplary embodiment of the present disclosure, a rare earth element or rare earth elements may be added to an electrical steel sheet in a total amount of 0.065% to 0.4% so as to further reduce the core loss of the electrical steel sheet.</p>
+    <p id="p-00036-en" num="0036">That is, an electrical steel sheet of the present disclosure may include aluminum (Al) and at least one rare earth element (REM) in addition to silicon (Si). In this case, the content of silicon (Si) in the electrical steel sheet may be adjusted to be within the range of 1.0 wt% to 4.0 wt% due to the following reasons.</p>
+    <p id="p-00037-en" num="0037">That is, as described above, silicon (Si) may be added in an amount of 1.0% or greater to increase the specific resistance of the electrical steel sheet. As the content of silicon (Si) increases, the specific resistance of the electrical steel sheet increases, and thus the core loss of the electrical steel sheet may decrease. That is, a high content of silicon (Si) may be favored. However, since electrical steel sheets are generally manufactured through a cold rolling process, the content of silicon (Si) may be adjusted to be 4.0 wt% or less by taking into consideration cold-rolling characteristics.</p>
+    <p id="p-00038-en" num="0038">Therefore, the electrical steel sheet of the present disclosure may include, by wt%, silicon (Si): 1.0% to 4.0%, aluminum (Al): 0.1% to 4.0%, and at least one rare earth element: 0.05% to 0.5% in total content.</p>
+    <p id="p-00039-en" num="0039">In addition, the electrical steel sheet of the present disclosure may further include additional elements and inevitable impurities, and there is no particular limit to such additional elements or impurities. For example, elements such as carbon (C), manganese (Mn), sulfur (S), or nitrogen (N) may be additionally added to the electrical steel sheet of the present disclosure, and according to some embodiments of the present disclosure, the contents of the elements may be adjusted as follows.</p>
+    <heading id="h-00009-en">Carbon (C): 0.003 wt% (30 ppm) or less</heading>
+    <p id="p-00040-en" num="0040">A large amount of carbon (C) may be present in a slab, for example, due to the load of a decarbonizing process. However, since carbon (C) causes magnetic aging, the content of carbon (C) in a final product (electrical steel sheet) may be adjusted to be low. That is, the content of carbon (C) in the electrical steel sheet of the present disclosure is limited to 0.003 wt% or less. As described above, since carbon (C) is an undesirable impurity in a final product, the content of carbon (C) in the electrical steel sheet of the present disclosure does not have a particular minimum limit.</p>
+    <heading id="h-00010-en">Manganese (Mn): 0.03 wt% to 0.2 wt%</heading>
+    <p id="p-00041-en" num="0041">Manganese (Mn) lowers a solid-solution temperature at which precipitates dissolve during a reheating process and prevents the creation of cracks in both ends of a steel sheet during a hot rolling process. To obtain these effects, manganese (Mn) may be added in an amount of 0.03% or greater. However, if manganese (Mn) is added in excessively large amounts, Mn oxides and MnS may be formed, and thus the function of the rare earth element may be lowered to result in a high degree of core loss. Therefore, it may be preferable that the content of manganese (Mn) be within the range of 0.03 wt% to 0.2 wt%.</p>
+    <heading id="h-00011-en">Sulfur (S): 0.001 wt% to 0.05 wt%</heading>
+    <p id="p-00042-en" num="0042">Sulfur (S) may combine with the rare earth element to form an inhibitor. To this end, it may be preferable that sulfur (S) be added in an amount of 0.001 wt% or greater. However, an excessively high content of sulfur (S) may lead to the formation of a coarse sulfur compound which does not properly function as an inhibitor suppressing the growth of primarily recrystallized grains. Therefore, the upper limit of the sulfur (S) content is set to be 0.05 wt%.</p>
+    <heading id="h-00012-en">Nitrogen (N): 0.01 wt% or less</heading>
+    <p id="p-00043-en" num="0043">If nitrogen (N) is added to some electrical steel sheets, nitrogen (N) functions as an inhibitor. However, since the electrical steel sheet of the present disclosure does not actively use a nitride inhibitor, nitrogen (N) is not actively added. In addition, if an excessive amount of nitrogen (N) is added to steel, the steel may undergo swelling called blisters. Therefore, the content of nitrogen (N) in the electrical steel sheet of the present disclosure is limited to 0.01 wt% or less.</p>
+    <p id="p-00044-en" num="0044">In addition to the above-listed elements, the electrical steel sheet of the present disclosure may further include other elements such as phosphorus (P), tin (Sn), antimony (Sb), chromium (Cr), copper (Cu), or nickel (Ni) that are usually included in general electrical steel sheets. The contents of such elements in the electrical steel sheet of the present disclosure are not limited to specific ranges as long as the contents of the elements are within generally-acceptable ranges. For example, the electrical steel sheet of the present disclosure may further include one or more of phosphorus (P): 0.5% or less, tin (Sn): 0.3% or less, antimony (Sb): 0.3% or less, chromium (Cr): 0.3% or less, copper (Cu): 0.4% or less, and nickel (Ni): 1% or less.</p>
+    <p id="p-00045-en" num="0045">As described above, the electrical steel sheet of the present disclosure includes a large amount of aluminum (Al), and at least one rare earth element or a compound of the rare earth element is present as an inhibitor in the electrical steel sheet. The aluminum (Al) may increase the specific resistance of the electrical steel sheet, and the inhibitor may increase the proportion of particles having Goss orientation in the electrical steel sheet.</p>
+    <p id="p-00046-en" num="0046">As a result, according to an exemplary embodiment, the electrical steel sheet may have a high degree of magnetic flux density within the range of 1.8 T or greater in B8 and a low degree of core loss.</p>
+    <p id="p-00047-en" num="0047">The electrical steel sheet of the present disclosure may be manufactured by a method used to manufacture general electrical steel sheets. That is, the electrical steel sheet of the present disclosure is not limited to a specific manufacturing method. However, an exemplary embodiment is proposed by taking into consideration the characteristic composition of the electrical steel sheet and resulting behaviors of the inhibitor.</p>
+    <p id="p-00048-en" num="0048">That is, the electrical steel sheet of the present disclosure may be manufactured by a low-temperature heating method including a primary recrystallization annealing process and a secondary recrystallization annealing process after a hot rolling process and a cold rolling process. Specific conditions thereof are as follows.</p>
+    <p id="p-00049-en" num="0049">First, a slab is heated. In the present disclosure, the slab has substantially the same composition as the composition of the electrical steel sheet. However, since carbon (C) is removed from the slab in a later decarbonization annealing process, the content of carbon (C) in the slab may be higher than the content of carbon (C) (for example, 0.0003 wt% or less) in the electrical steel sheet. If the content of carbon (C) in the slab is excessively high, the load of a decarbonization process may be increased, and thus productivity may be decreased. Therefore, the content of carbon (C) in the slab for forming the electrical steel sheet of the present disclosure may be within the range of 0.10 wt% or less. Since carbon (C) is an optional element, the minimum limit of the content of carbon (C) in the slab may not be set. However, if the content of carbon (C) in the slab is excessively low, phase transformation may not sufficiently occur in the slab during a hot rolling process, and thus nuclei of {110}&lt;001&gt; Goss grains may not be sufficiently formed. In this case, the magnetic characteristics of the electrical steel sheet may be deteriorated. Therefore, the lower limit of the content of carbon (C) in the slab may be set to be 0.01 wt%.</p>
+    <p id="p-00050-en" num="0050">Furthermore, at least one rare earth element may be added during a steel making process, and thus the electrical steel sheet of the present disclosure may include at least one rare earth element as described above. In the case of adding two or more rare earth elements, the rare earth elements may be added in the form of a mischmetal in which rare earth elements are mixed. That is, since rare earth elements have similar chemical properties and are difficult to separate from each other, rare earth elements may be smelted in a mixed state. For example, depending on the kind of ore (such as moissanite or bastnasite), a salt in which several rare earth elements are mixed may be obtained. Such a mixed salt is reduced with a reactive metal such as manganese (Mn), calcium (Ca), or sodium (Na), or is electrolyzed so as to obtain a metal. This metal includes a plurality of elements and is called a "mischmetal." A mischmetal may be used to control the contents of rare earth elements during a steel making process, and if the total content of rare earth elements is within the above-mentioned range of the present disclosure, the composition or type of the mischmetal are not limited. In the present disclosure, at least one rare earth element is used as an inhibitor forming element, and an inhibitor formed of the rare earth element may be uniformly and finely distributed in steel even though a solid solution treatment necessary for the case of using other inhibitors such as MnS or MnSe is not performed. Therefore, a high-temperature heating process is not necessary. As such, in the present disclosure, the slab may be heated to 1300°C or lower so as to lower the load of a heating furnace and prevent silicon (Si) oxides formed on the surface of the slab from melting. More preferably, the slab may be heated to 1250°C or lower. However, when a later hot rolling process is considered, it may be preferable that the slab be heated to 1050°C or higher.</p>
+    <p id="p-00051-en" num="0051">After the slab is heated as described above, the slab may be hot rolled. The slab may be hot rolled by a general method. According to an exemplary embodiment, the slab may be hot rolled to obtain a hot-rolled steel sheet having a thickness of 2.0 mm to 3.0 mm. In this case, the load of a later cold rolling process may not be excessive, and a sufficient reduction ratio may be obtained in the later cold rolling process.</p>
+    <p id="p-00052-en" num="0052">Then, the hot-rolled steel sheet may be subjected to a hot band annealing process or a pickling process. However, these processes are not essential.</p>
+    <p id="p-00053-en" num="0053">After the hot rolling process and the optional hot band annealing process, the steel sheet may be subjected to a cold rolling process. The cold rolling process may be performed once, twice, or more times with an intermediate annealing process therebetween. The cold rolling process is important for texturing the steel sheet and may preferably be performed at a reduction ratio of 85% to 90% (total reduction ratio if performed two or more times). That is, the reduction ratio of the cold rolling process may preferably be 85% or greater so as to sufficiently texture the steel sheet and thus induce the formation of a large number of grains having Goss orientation after primary recrystallization and secondary recrystallization. However, if the reduction ratio of the cold rolling process is excessively high, the load of the cold rolling process may also be excessive. Thus, the upper limit of the reduction ratio is set to 90%.</p>
+    <p id="p-00054-en" num="0054">If the cold rolling process is performed two or more times with an intermediate annealing process therebetween, the reduction ratio of the final cold rolling process (for example, the second time if performed twice) may be 50% or greater.</p>
+    <p id="p-00055-en" num="0055">Thereafter, the cold-rolled steel sheet may be processed through a primary recrystallization annealing process. Preferably, the primary recrystallization annealing process may be performed within the temperature range of 700°C to 950°C for sufficient recrystallization. According to an exemplary embodiment, another purpose of the primary recrystallization annealing process may be decarbonization as described later. If the primary recrystallization annealing process is performed at 700°C or lower, decarbonization may occur, and if the primary recrystallization annealing process is performed at 950°C or higher, primarily recrystallized grains may be coarse. In this case, the driving force for secondary recrystallization may be weak, and thus Goss grains may not be fully developed.</p>
+    <p id="p-00056-en" num="0056">The primary recrystallization annealing process may be performed under a wet atmosphere of hydrogen and nitrogen for decarbonizing the steel sheet. In this case, the primary recrystallization annealing process may also be called a "decarbonization annealing process." Conditions of the decarbonization annealing process such as a gas mixing ratio or a dew point are similar to those of a decarbonization annealing process for general electrical steel sheets, and thus there is no particular limit to the conditions.</p>
+    <p id="p-00057-en" num="0057">After the primary recrystallization annealing process, the steel sheet is additionally heated for the following secondary recrystallization annealing process. In the secondary recrystallization annealing process, the steel sheet may preferably be heated at a heating rate of 5°C/hr to 30°C/hr to a final temperature of 1100°C to 1300°C. If the heating rate is 5°C/hr or lower, the productivity of the secondary recrystallization annealing process may be lowered due to a long annealing time. In addition, the primarily recrystallized grains may become coarse before a secondary recrystallization temperature, and thus the driving force for secondary recrystallization may be weak. On the contrary, if the heating rate is 30°C/hr or higher, the inside and outside of a coil of the steel sheet may have different temperatures, and thus secondary recrystallization may non-uniformly occur, thereby deteriorating magnetic characteristics of the steel sheet.</p>
+    <p id="p-00058-en" num="0058">In addition, it may be preferable that the secondary recrystallization annealing process be performed within the temperature range of 1100°C to 1300°C for inducing the recrystallization of most of the grains of the steel sheet. Even if the maximum temperature of secondary recrystallization is 1100°C, secondary recrystallization may occur completely. However, small grains located inside secondarily recrystallized grains may not be completely removed, and thus the core loss of the steel sheet may be increased. If secondary recrystallization occurs at 1300°C or higher, the coil of the steel sheet may undergo deformation, and thus productivity may be lowered.</p>
+    <p id="p-00059-en" num="0059">In some cases, the steel sheet may be coated with an annealing separator before the secondary recrystallization annealing process. Any material such as MgO or Al<sub>2</sub>O<sub>3</sub> widely used in the art to which the present disclosure pertains may be used as the annealing separator.</p>
+    <p id="p-00060-en" num="0060">In addition, any process not described in the above but used to manufacture general electrical steel sheets may be used for manufacturing the electrical steel sheet of the present disclosure.</p>
+    <heading id="h-00013-en">[Mode for Invention]</heading>
+    <p id="p-00061-en" num="0061">Hereinafter, the idea of the present disclosure will be described more specifically through examples. However, the following examples are for illustrative purposes only and are not intended to limit the scope of the present invention. That is, the scope of the present invention is defined by the claims, and modifications and variations reasonably made therefrom.</p>
+    <heading id="h-00014-en">(Examples)</heading>
+    <heading id="h-00015-en">Example 1</heading>
+    <p id="p-00062-en" num="0062">A molten steel producing process was performed to obtain molten steel samples, each including carbon (C): 0.05 wt%, manganese (Mn): 0.07 wt%, sulfur (S): 0.007 wt%, nitrogen (N): 0.006 wt%, and silicon (Si), aluminum (Al), and at least one rare earth element as shown in Table 1 (in which element contents are expressed in wt%). When the molten steel samples were prepared, rare earth elements were added individually or in the form of mischmetals according to the compositions of the molten steel samples. The molten steel samples were cast into slabs having a thickness of 250 mm, and the slabs were heated to 1150°C. Then, the slabs were subjected to a hot rolling process to obtain hot-rolled steel sheets having a thickness of 2.3 mm. Then, a hot band annealing process was performed by heating the hot-rolled steel sheets to 1100°C, and the steel sheets were cooled and pickled. Thereafter, a cold rolling process was performed once on the pickled steel sheets to obtain cold-rolled steel sheets having a thickness of 0.27 mm. The cold-rolled steel sheets were heated to 830°C under a wet atmosphere of hydrogen and nitrogen for primary recrystallization and decarbonization up to a residual carbon level of 30 ppm. Thereafter, the steel sheets were heated to 1200°C at a heating rate of 15°C/hr for secondary recrystallization, and then the steel sheets were cooled. In this manner, electrical steel sheets were prepared under various conditions. In Table 1 below, B8 refers to magnetic flux density, and W17/50 refers to core loss. <tables id="tables-00001-en" num="0001"><table frame="all"><title>[Table 1]</title><tgroup cols="9"><colspec colnum="1" colname="col1" colwidth="15mm" /><colspec colnum="2" colname="col2" colwidth="13mm" /><colspec colnum="3" colname="col3" colwidth="13mm" /><colspec colnum="4" colname="col4" colwidth="16mm" /><colspec colnum="5" colname="col5" colwidth="16mm" /><colspec colnum="6" colname="col6" colwidth="16mm" /><colspec colnum="7" colname="col7" colwidth="17mm" /><colspec colnum="8" colname="col8" colwidth="14mm" /><colspec colnum="9" colname="col9" colwidth="26mm" /><thead><row><entry morerows="1" align="center" valign="top">NO.</entry><entry morerows="1" align="center" valign="top">Si</entry><entry morerows="1" align="center" valign="top">Al</entry><entry namest="col4" nameend="col7" align="center" valign="top">***REEs (individually or as a mischmetal)</entry><entry morerows="1" align="center" valign="top">B8 (T)</entry><entry morerows="1" align="center" valign="top">W17/50 (W/kg)</entry></row><row><entry align="center" valign="top">La</entry><entry align="center" valign="top">Pr</entry><entry align="center" valign="top">Ce</entry><entry align="center" valign="top">others</entry></row></thead><tbody><row><entry>*CSS 1</entry><entry>0.5%</entry><entry>4.5%</entry><entry>0.1%</entry><entry>-</entry><entry /><entry /><entry>1.551</entry><entry>5.811</entry></row><row><entry>CSS 2</entry><entry>4.2%</entry><entry>0.5%</entry><entry /><entry>0.2%</entry><entry /><entry /><entry>1.580</entry><entry>4.512</entry></row><row><entry>**ISS 1</entry><entry>2%</entry><entry>3.0%</entry><entry /><entry>0.1%</entry><entry /><entry /><entry>1.905</entry><entry>0.895</entry></row><row><entry>ISS 2</entry><entry>2%</entry><entry>3.0%</entry><entry /><entry /><entry>0.1%</entry><entry /><entry>1.912</entry><entry>0.889</entry></row><row><entry>ISS 3</entry><entry>2%</entry><entry>3.0%</entry><entry>0.05%</entry><entry>0.05%</entry><entry>0.04%</entry><entry>Nd 0.1%</entry><entry>1.903</entry><entry>0.891</entry></row><row><entry>CSS 3</entry><entry>2%</entry><entry>3%</entry><entry /><entry>0.6%</entry><entry /><entry /><entry>1.754</entry><entry>1.983</entry></row><row><entry>CSS 4</entry><entry>2%</entry><entry>3%</entry><entry>0.2%</entry><entry>0.2%</entry><entry>0.2%</entry><entry /><entry>1.789</entry><entry>2.208</entry></row><row><entry>ISS 4</entry><entry>1.8%</entry><entry>2.7%</entry><entry /><entry>0.2%</entry><entry /><entry /><entry>1.904</entry><entry>0.901</entry></row><row><entry>CSS 5</entry><entry>2.5%</entry><entry>1.5%</entry><entry>0.3%</entry><entry>0.2%</entry><entry>0.2%</entry><entry>Y 0.1%</entry><entry>1.690</entry><entry>4.609</entry></row><row><entry>ISS 5</entry><entry>3.1%</entry><entry>1.0%</entry><entry>0.15%</entry><entry /><entry /><entry /><entry>1.913</entry><entry>0.867</entry></row><row><entry>ISS 6</entry><entry>3.1%</entry><entry>1.0%</entry><entry /><entry>0.15%</entry><entry /><entry /><entry>1.903</entry><entry>0.874</entry></row><row><entry>ISS 7</entry><entry>3.1%</entry><entry>1.0%</entry><entry /><entry /><entry>0.15%</entry><entry>Nd 0.1%</entry><entry>1.919</entry><entry>0.888</entry></row><row><entry>CSS 6</entry><entry>3.1%</entry><entry>1.0%</entry><entry>0.4%</entry><entry /><entry>0.15%</entry><entry /><entry>1.760</entry><entry>2.471</entry></row><row><entry>ISS 8</entry><entry>3.1%</entry><entry>1.0%</entry><entry>0.15%</entry><entry /><entry /><entry>Nd 0.2%</entry><entry>1.921</entry><entry>0.865</entry></row><row><entry>ISS 9</entry><entry>3.1%</entry><entry>1.0%</entry><entry /><entry>0.15%</entry><entry /><entry>Y 0.1%</entry><entry>1.918</entry><entry>0.861</entry></row><row><entry>ISS 10</entry><entry>2.9%</entry><entry>1.5%</entry><entry>0.15%</entry><entry /><entry /><entry /><entry>1.900</entry><entry>0.881</entry></row><row><entry>ISS 11</entry><entry>2.9%</entry><entry>1.5%</entry><entry /><entry>0.15%</entry><entry /><entry /><entry>1.908</entry><entry>0.870</entry></row><row><entry>ISS 12</entry><entry>2.9%</entry><entry>1.5%</entry><entry /><entry /><entry>0.15%</entry><entry>Nd 0.1%</entry><entry>1.910</entry><entry>0.866</entry></row><row><entry>CSS 7</entry><entry>2.9%</entry><entry>1.5%</entry><entry>0.4%</entry><entry>0.17%</entry><entry /><entry /><entry>1.800</entry><entry>1.498</entry></row><row><entry>ISS 13</entry><entry>2.9%</entry><entry>1.5%</entry><entry>0.15%</entry><entry /><entry /><entry>Nd 0.2%</entry><entry>1.911</entry><entry>0.859</entry></row><row><entry>ISS 14</entry><entry>2.9%</entry><entry>1.5%</entry><entry /><entry>0.15%</entry><entry /><entry>Y 0.1%</entry><entry>1.915</entry><entry>0.877</entry></row><row><entry>CSS 8</entry><entry>1.3%</entry><entry>3.5</entry><entry /><entry /><entry /><entry /><entry>1.489</entry><entry>4.352</entry></row><row><entry>CSS 9</entry><entry>3.1</entry><entry>1.0</entry><entry>0.01%</entry><entry>0.02%</entry><entry /><entry /><entry>1.540</entry><entry>1.761</entry></row></tbody></tgroup><tgroup cols="9" rowsep="0"><colspec colnum="1" colname="col1" colwidth="15mm" /><colspec colnum="2" colname="col2" colwidth="13mm" /><colspec colnum="3" colname="col3" colwidth="13mm" /><colspec colnum="4" colname="col4" colwidth="16mm" /><colspec colnum="5" colname="col5" colwidth="16mm" /><colspec colnum="6" colname="col6" colwidth="16mm" /><colspec colnum="7" colname="col7" colwidth="17mm" /><colspec colnum="8" colname="col8" colwidth="14mm" /><colspec colnum="9" colname="col9" colwidth="26mm" /><tbody><row><entry namest="col1" nameend="col9" align="justify">*CSS: Comparative Steel Sample, **ISS: Inventive Steel Sample, ***REEs: Rare Earth Elements</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00063-en" num="0063">Comparative steel sample 1 had a lower silicon (Si) content and a higher aluminum (Al) content when compared to the ranges recommended in the present disclosure. Due to the excessive amount of aluminum (Al), Comparative steel sample 1 had poor cold-rolling characteristics, a low degree of magnetic flux density, and a high degree of core loss. Comparative steel sample 2 having an excessive amount of silicon (Si) had properties similar to those of Comparative steel sample 1.</p>
+    <p id="p-00064-en" num="0064">Comparative steel samples 3, 4, 5, 6, and 7 contained excessive amounts of rare earth elements, and thus the magnetic flux density and core loss thereof were unsatisfactory.</p>
+    <p id="p-00065-en" num="0065">Comparative steel sample 8 contained no rare earth element but a large amount of aluminum (Al). Aluminum (Al) added in large amounts was not so useful for the formation of an inhibitor. Moreover, since a nitriding annealing process was not performed, there was very little possibility of formation of an inhibitor in Comparative steel sample 8, and thus the magnetic flux density and core loss of Comparative steel sample 8 were very unsatisfactory. The total content of rare earth elements in Comparative steel sample 9 was outside the range of the present disclosure, and thus the magnetic flux density and core loss of Comparative steel sample 9 were unsatisfactory even though they were superior to those of Comparative steel sample 8.</p>
+    <p id="p-00066-en" num="0066">However, all inventive steel samples having compositions in accordance with the present disclosure had a magnetic flux density of 1.9 T or greater and a core loss of 0.901 W/kg or less.</p>
+    <heading id="h-00016-en">Example 2</heading>
+    <p id="p-00067-en" num="0067">In this example, the mechanism of how added rare earth elements function as inhibitors was checked by preparing electrical steel slabs having modified compositions. That is, the electrical steel slabs each included carbon (C): 0.05 wt%, manganese (Mn): 0.07 wt%, sulfur (S): 0.007 wt%, nitrogen (N): 0.006 wt%, silicon (Si): 3.1 wt%, aluminum (Al) : 1.5 wt%, and praseodymium (Pr) (rare earth element): 0.08 wt% (refer to <figref>FIG. 1A</figref>) or rare earth elements: 0.24 wt% in total content (corresponding to Inventive steel sample 3 to which a mischmetal was added). AS in Example 1, the electrical steel slabs were subjected to a hot rolling process, a cold rolling process, and a primary recrystallization process to obtain primarily recrystallized steel sheets. Thereafter, inhibitors formed in the primarily recrystallized steel sheets were photographed with a transmission electron microscope by a replica method, and the captured images are shown in <figref>FIGS. 1A and 1B</figref>.</p>
+    <p id="p-00068-en" num="0068">As shown in <figref>FIGS. 1A and 1B</figref>, when praseodymium (Pr) was added (refer to <figref>FIG. 1A</figref>), praseodymium (Pr) or a compound of praseodymium (Pr) was detected as an inhibitor, and when a mischmetal was added (refer to <figref>FIG. 1B</figref>), cerium (Ce), lanthanum (La), neodymium (Nd), and praseodymium (Pr) included in the mischmetal were detected as inhibitors. That is, it could be checked that rare earth elements serve as satisfactory inhibitors as described in the present disclosure.</p>
+    <heading id="h-00017-en">Example 3</heading>
+    <p id="p-00069-en" num="0069">Electrical steel sheets were prepared by the same method as that in Example 1 by using slabs each including carbon (C): 0.05 wt%, manganese (Mn): 0.07 wt%, sulfur (S): 0.007 wt%, nitrogen (N): 0.006 wt%, and silicon (Si): 3.1 wt% and aluminum (Al): 1.0 wt% (refer to <figref>FIG. 2A</figref>), or silicon (Si): 3.1 wt% and aluminum (Al): 2.0 wt% (refer to <figref>FIG. 2B</figref>). Subsequently, a relationship between core loss and total content of rare earth elements of each electrical steel sheet was plotted as shown in <figref>FIGS. 2A and 2B</figref>. As shown in <figref>FIGS. 2A and 2B</figref>, if the total content of rare earth elements is within the range of the present disclosure, core loss is relatively very low.</p>
+    <p id="p-00070-en" num="0070">Therefore, advantageous effects of the present disclosure could be confirmed.</p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151104">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>An electrical steel sheet having a low degree of core loss, the electrical steel sheet comprising, by wt%, silicon (Si): 1.0% to 4.0%, aluminum (Al) : 0.1% to 4.0%, and at least one rare earth element: 0.05% to 0.5% in total content.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The electrical steel sheet of claim 1, further comprising carbon (C): 0.003 wt% or less, manganese (Mn): 0.03 wt% to 0.2 wt%, sulfur (S): 0.001 wt% to 0.05 wt%, and nitrogen (N): 0.01 wt% or less.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The electrical steel sheet of claim 1 or claim 2, further comprising at least one selected from the group consisting of phosphorus (P) : 0.5% or less, tin (Sn) : 0.3% or less, antimony (Sb): 0.3% or less, chromium (Cr): 0.3% or less copper (Cu) : 0.4% or less, and nickel (Ni) : 1% or less.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>The electrical steel sheet of claim 1 or claim 2, wherein the rare earth element or a compound of the rare earth element is used as an inhibitor.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en" independent="true">
+      <claim-text> A method for manufacturing an electrical steel sheet having a low degree of core loss, the method comprising:
+<claim-text>heating a slab to 1050°C to 1300°C, the slab comprising, by wt%, silicon (Si): 1.0% to 4.0%, aluminum (Al): 0.1% to 4.0%, and at least one rare earth element: 0.05% to 0.5% in total content;</claim-text><claim-text>hot rolling the slab;</claim-text><claim-text>cold rolling the slab;</claim-text><claim-text>primarily recrystallizing the slab; and</claim-text><claim-text>secondarily recrystallizing the slab.</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>The method of claim 5, wherein the slab further comprises carbon (C): 0.1 wt% or less, manganese (Mn): 0.03 wt% to 0.2 wt%, sulfur (S) : 0.001 wt% to 0.05 wt%, and nitrogen (N): 0.01 wt% or less.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>The method of claim 5, wherein after the hot rolling of the slab, the method further comprises at least one selected from:
+<claim-text>annealing the hot-rolled slab; and</claim-text><claim-text>pickling the hot-rolled slab.</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>The method of claim 5, wherein the cold rolling is performed at a reduction ratio of 85% to 90%.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>The method of claim 8, wherein the cold rolling is performed two or more times with an intermediate annealing process therebetween, and a reduction ratio of the final cold rolling is 50% or greater.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>The method of claim 5, wherein the primary recrystallizing is performed within a temperature range of 700°C to 950°C.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>The method of claim 5, wherein the secondary recrystallizing is performed by heating the slab to a maximum temperature of 1100°C to 1300°C at a heating rate of 5°C/hr to 30°C/hr.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2940170A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2940170A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0001.tif" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP2940170A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0002.tif" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="EP2940170A1_00004.PNG" alt="mathematical image" img-content="math" img-format="png" original="imgb0001.tif" inline="yes" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="EP2940170A1_00005.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+  </drawings>
+  <image file="EP2940170A1.PDF" type="pdf" size="438127" pages="14" />
+</lexisnexis-patent-document>

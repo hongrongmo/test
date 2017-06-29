@@ -1,0 +1,1249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150252248A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021815" date-changed="20151226" time-changed="173144">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121229243">
+        <country>US</country>
+        <doc-number>20150252248</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14721805</doc-number>
+        <date>20150526</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150917">
+      <classification-ipcr sequence="1">
+        <text>C09K   8/588       20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>588</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150917">
+      <classification-cpc sequence="1">
+        <text>C09K   8/588       20130101 FI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>588</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B01D  17/047       20130101 LI20130903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>17</main-group>
+        <subgroup>047</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C10G  33/04        20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>G</subclass>
+        <main-group>33</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">18</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">METHOD FOR RESOLVING EMULSIONS IN ENHANCED OIL RECOVERY OPERATIONS</invention-title>
+    <related-documents date-changed="20150910">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>12822815</doc-number>
+              <date>20100624</date>
+            </document-id>
+            <parent-status>PENDING</parent-status>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007218</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+    </related-documents>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Nalco Company</orgname>
+            <address>
+              <city>Naperville</city>
+              <state>IL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Nguyen</last-name>
+            <first-name>Duy T.</first-name>
+            <address>
+              <city>Sugar Land</city>
+              <state>TX</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150910">
+      <main-family family-id="173566081">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252248</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150526</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173566080">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252248</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150526</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Disclosed and claimed is a method of demulsifying an emulsion comprising water and oil. The method comprises adding an effective amount of a composition comprising at least one substantially fully quaternized ammonium adduct of polyephalohydrin that has a molecular weight from about 500 Da to about 2,500 Da.</p>
+  </abstract>
+  <legal-data date-changed="20151226">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20151124</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015252248A1</docdb-publication-number>
+      <docdb-application-id>444310555</docdb-application-id>
+      <new-owner>NALCO COMPANY, ILLINOIS</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:NGUYEN, DUY T.;REEL/FRAME:037134/0467</free-text-description>
+      <effective-date>
+        <date>20100624</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATION</heading>
+      <p id="p-00001-en" num="0001">This application is a continuation of U.S. patent application Ser. No. 12/822,815, filed Jun. 24, 2010, the entire content of which is incorporated herein by reference.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">This invention relates generally to the field of enhanced oil production and recovery. More specifically, the invention relates to the field of recovery of crude oil from produced emulsions of surfactant-polymer enhanced oil recovery floods. The invention has particular relevance to the use of quaternary ammonium salt adducts of polyepihalohydrin polymers to resolve such emulsions.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00003-en" num="0003">The production of crude oil from reservoirs typically results in significant quantities of non-produced crude oil remaining in the reservoir. After primary oil recovery has been performed, secondary recovery (typically involving water injection), is commonly used to produce trapped oil. Frequently, much oil remains in the reservoir and tertiary recovery operations have been developed to produce the remaining oil. Most tertiary recovery methods for recovering such remaining crude oil include surfactant-polymer enhanced oil recovery floods, such as injecting a combination of surfactants and polymers in brine solutions into the reservoir. Other methods for enhanced oil recovery may include gas injection, chemical injection, ultrasonic stimulation, microbial injection, and thermal recovery. If the oil recovered using enhanced oil recovery floods cannot be efficiently treated (e.g., the emulsion broken into dry oil and clean water), then most if not all oil producers will be reluctant to conduct chemical floods in favor of other less aggressive and lower recovery processes.</p>
+      <p id="p-00004-en" num="0004">Results of such conventional methods include a produced emulsion that typically contains crude oil, water, surfactant, and polymer. Drawbacks include difficulties in separating the emulsion into clean water and dry oil for efficient recovery of the crude oil and proper disposal of the water in an environmentally safe manner. Heat has been used to aid in resolving such emulsions but is not economical due to the large amounts of water involved. Solvent extraction is disclosed in U.S. Pat. No. 4,559,148, “Method of Extracting and Reutilizing Surfactants from Emulsions,” but is also not practical due to the large capital investment and flammable solvent handling issues.</p>
+      <p id="p-00005-en" num="0005">Consequently, there is a need for improved methods of resolving crude oil and water emulsions. Additional needs include improved methods for demulsifying the produced emulsion to produce a clean separation of the crude oil and water.</p>
+      <heading id="h-00004-en" level="1">BRIEF SUMMARY OF THE INVENTION</heading>
+      <p id="p-00006-en" num="0006">Accordingly, the present invention provides a method for resolving emulsions produced through an enhanced oil recovery process. In an aspect, the method includes adding a composition comprising at least one quaternary ammonium adduct of polyepihalohydrin.</p>
+      <p id="p-00007-en" num="0007">In an aspect, this invention meets the previously unmet need of efficiently demulsifying an emulsion comprising water and oil. The emulsions applicable in the method of the invention are preferably derived from an enhanced oil recovery process, though the method has equal applicability to any emulsions encountered in the art.</p>
+      <p id="p-00008-en" num="0008">It is an advantage of the invention to provide a novel method of resolving an emulsion comprising oil and water.</p>
+      <p id="p-00009-en" num="0009">It is another advantage of the invention to provide a novel method of efficiently resolving an emulsion comprising oil and water that was derived from an enhanced oil recovery process.</p>
+      <p id="p-00010-en" num="0010">It is yet another advantage of the invention to provide a novel method of resolving an emulsion resulting from a chemical enhanced oil recovery flood comprising oil and water to produce dry oil and clean water.</p>
+      <p id="p-00011-en" num="0011">The foregoing has outlined rather broadly the features and technical advantages of the present invention in order that the detailed description of the invention that follows may be better understood. Additional features and advantages of the invention will be described hereinafter that form the subject of the claims of the invention. It should be appreciated by those skilled in the art that the conception and the specific embodiments disclosed may be readily utilized as a basis for modifying or designing other embodiments for carrying out the same purposes of the present invention. It should also be realized by those skilled in the art that such equivalent embodiments do not depart from the spirit and scope of the invention as set forth in the appended claims</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00012-en" num="0012">This invention comprises a method of treating an emulsion comprising oil and water derived from an oil recovery process. A preferred area of the method of the invention are emulsions derived from enhanced oil recovery processes where oil remaining in a reservoir after conventional recovery methods have been exhausted is produced through, for example, a polymer-surfactant flood. It should, however, be appreciated that the method of the invention has equal application to emulsions derived from any conventional or enhanced oil recovery operation. The objective of the present invention is to provide a method of resolving emulsions resulting in dry oil and clean water.</p>
+      <p id="p-00013-en" num="0013">The emulsion produced from an enhanced oil recovery process is typically stabilized with surfactants and polymers. The method of the invention is applicable to any enhanced or tertiary oil recovery process. Exemplary methods of producing oil through such enhanced oil recovery processes are disclosed in U.S. Pat. No. 4,293,428, “Propoxylated Ethoxylated Surfactants and Method of Recovering Oil Therewith” and U.S. Pat. No. 4,018,278, “Surfactant Oil Recovery Process Usable in High Temperature Formations.” U.S. Pat. No. 3,591,520 discloses the process of breaking an oil-in-water emulsion with a blend of high molecular weight quaternary adducts of polyepihalohydrin (MW&gt;3000) and 10% zinc chloride at a ratio of at least 2.5 to 1 of metal salt to adduct. U.S. Pat. No. 3,320,317 discloses the use of partial quaternary ammonium adducts of epichlorohydrin having molecular weight from about 600 to about 100,000 as flocculating agents for improving the sedimentation of sewage solids.</p>
+      <p id="p-00014-en" num="0014">In the method of the invention, emulsions are treated by a composition comprising low molecular weight (weight average molecular weight from about 500 Da to about 2,500 Da) substantially fully quaternized adducts of tertiary amines and polyepihalohydrin (&gt;99% quaternized) to demulsify emulsions produced, for example, by surfactant-polymer enhanced oil recovery floods and recover dry oil and clean water. In a preferred embodiment, zinc chloride is substantially absent from the composition. The composition is more preferably free of zinc chloride. In sour systems, zinc chloride reacts with hydrogen sulfide presence in the crude oil to form zinc sulfide which can cause stable emulsion (i.e., rag layer between oil and water interface) and foul the separation vessels. High molecular weight quaternary ammonium adducts of epihalohydrin and partial quaternary ammonium adducts of epihalohydrin (particularly epichlorohydrin) were found to be less effective (see examples below) in the tested emulsions caused by chemical enhanced oil recovery floods. In such embodiments, the produced emulsions typically contain at least water, crude oil, surfactants, and polymers. Addition of the composition to the produced emulsion separates the oil and water phases. In some embodiments, the separation is a clean separation of oil and water. A clean separation generally refers to dry oil with less than about 1% total sediment and water, a good interface with sharp separation between oil and water, and clean water with less than about 300 parts per million (ppm) residual oil. The composition is added to the emulsion by any suitable method. (See e.g., Z. Ruiquan et al., “<i>Characterization and demulsification of produced liquid from weak base ASP flooding</i>,” Colloids and Surfaces, Vol. 290, pgs 164-171, (2006); U.S. Pat. Nos. 4,374,734 and 4,444,654).</p>
+      <p id="p-00015-en" num="0015">In an embodiment, the composition of the invention includes water soluble quaternary adducts of polyepihalohydrin having molecular weights of from about 500 to 2,500 which have the general formula:</p>
+      <p id="p-00016-en" num="0000">
+        <chemistry id="chem-00001-en" num="00001">
+          <img id="img-00001-en" he="19.56mm" wi="35.22mm" alt="embedded image" img-content="chem" file="US20150252248A1_00001.PNG" img-format="png" original="US20150252248A1-20150910-C00001.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00017-en" num="0000">In the general formula, each R independently represents methyl or ethyl and z ranges from about 4 to about 22. X is a halide selected from fluoride, chloride, bromide, iodide, astatide, and any combination thereof. In a preferred embodiment, X is chloride and z is from 4 to 7. More preferably z is 6. In a further preferred embodiment, X is chloride, z is 6, and at least one R is methyl. More preferably, each R is methyl.</p>
+      <p id="p-00018-en" num="0016">These materials may be prepared by any suitable method. Generally, the materials are prepared by reacting a polyepihalohydrin with trimethylamine or triethylamine at a molar ratio of 1:1.1 at temperatures from about 100° C. to 150° C., preferably at a temperature of about 100° C. If the quaternizing amine is volatile such as trimethylamine, the reaction is typically carried out in a closed vessel under the pressure such as an autoclave. The molecular weight of the polyepihalohydrin can be controlled by the epihalohydrin to water ratio in the presence of boron trifluoride as a catalyst. A preferred catalyst for preparation of the polyepihalohydrins of the invention is boron trifluoride, rather than the more common organoaluminum catalyst (See e.g., U.S. Pat. No. 3,591,520). The main advantage of using the boron trifluoride catalyst is that a smaller amount of catalyst is used.</p>
+      <p id="p-00019-en" num="0017">The disclosed polyepihalohydrin composition may have any desirable amount of active material. In an embodiment, the composition has from about 30 wt % to about 90 wt % active material. Alternatively, the composition has from about 30 wt % to about 60 wt % or from about 40 wt % to about 70 wt %, and further alternatively the composition has from about 50 wt % to about 90 wt % active material. The composition is added to the emulsion in any suitable amount.</p>
+      <p id="p-00020-en" num="0018">Embodiments further include a composition having the disclosed polyepihalohydrin and a solvent. The solvent may be any solvent suitable, for example, for dissolving or suspending the quaternary ammonium adducts of polyepihalohydrin. In embodiments, the solvent is water, alcohol, an organic solvent, or any combination thereof. The alcohol may include any alcohol suitable as a solvent and for use with oil recovery operations. Without limitation, examples of suitable alcohols include glycol, isopropyl alcohol, methanol, butanol, or any combination thereof. According to an embodiment, the organic solvent includes aromatic compounds, either alone or in any combination with the foregoing. In an embodiment, the aromatic compounds have a molecular weight from about 70 to about 400, alternatively from about 100 to about 200. Without limitation, examples of suitable aromatic compounds include toluene, xylene, naphthalene, ethylbenzene, trimethylbenzene, and heavy aromatic naphtha (HAN), other suitable aromatic compounds, and any combination of the foregoing. It is to be understood that the amount of quaternary ammonium adducts of polyepihalohydrin in the composition in relation to the solvent may vary in some embodiments depending upon factors such as temperature, time, and type of surfactant. For instance, without limitation, a higher ratio of a quaternary ammonium adduct of polyepihalohydrin to solvent may be used if a faster reaction time is desired.</p>
+      <p id="p-00021-en" num="0019">The composition may also be added to the emulsion in any suitable amount. In an embodiment, the composition is added in an amount from about 50 ppm to about 20,000 ppm, based on actives and total emulsion volume. In alternative embodiments, from about 100 ppm to about 10,000 ppm of the surfactant, further alternatively from about 200 ppm to about 10,000 ppm surfactant, and further alternatively from about 200 ppm to about 500 ppm surfactant is added to the emulsion, based on actives and total emulsion volume.</p>
+      <p id="p-00022-en" num="0020">In embodiments, the disclosed polyepihalohydrin composition is used in conjunction with other surfactants or additives. These other surfactants or additives may be added as part of the same composition or as a separate composition and may be added simultaneously or sequentially. For example, the composition may be added to the produced emulsion with one or more additional components selected from a cationic surfactant, a nonionic surfactant, an amphoteric surfactant, or any combination thereof.</p>
+      <p id="p-00023-en" num="0021">Without limitation, the cationic surfactants include alkyl ammonium halide surfactants. Representative, cationic surfactants include any combination or at least one of an alkyl trimethyl ammonium halide, an alkyl dimethyl benzyl ammonium halide, and one or more imidazolinium halides. Molecular weights of such quaternary surfactants are in the range of about 200 to about 700, alternatively from about 250 to about 500. The alkyl trimethyl ammonium halide has an average alkyl chain length of C<sub>6 </sub>to C<sub>16</sub>, alternatively C<sub>6 </sub>to C<sub>10</sub>, and alternatively C<sub>12 </sub>to C<sub>18</sub>, and further alternative of C<sub>g</sub>.</p>
+      <p id="p-00024-en" num="0022">Without limitation, examples of suitable polymeric nonionic surfactants include polysorbates, fatty alcohols such as cetyl alcohol and oleyl alcohol, copolymers of polyethylene oxide, copolymers of polypropylene oxide, alkyl polyglucosides such as decyl maltoside, alkylphenol polyethylene oxide, alkyl polyethylene oxide, and ethoxylated propoxylated alkyl phenol-formaldehyde resin chemistry. The polymeric nonionic surfactant is typically dissolved or suspended in a solvent. Any solvent suitable for dissolving or suspending a polymeric nonionic surfactant may be used. Without limitation, examples of suitable solvents include water, ether, alcohol, toluene, xylene, heavy aromatic naphtha (HAN), other suitable organic solvents, or any combination thereof. The alcohol may include any alcohol suitable for use with oil recovery and for dissolving the polymeric nonionic surfactant. In an embodiment, the polymeric nonionic surfactant is dissolved or suspended in a solvent.</p>
+      <p id="p-00025-en" num="0023">Without limitation, amphoteric surfactants useful in the composition of the invention include betaines, alkylamionpropionic acids, N-acyl glycinates, or any combination thereof. Any suitable betaine for use as a surfactant in the produced emulsion may be used. Without limitation, examples of suitable betaines include capryl/capramidopropyl betaine, cocobetaine, cocamidopropylbetaine, octyl betaine, caprylamidopropyl betaine, or any combination thereof. The N-acyl glycinate is preferably tallow dihydroxyethyl glycinate.</p>
+      <p id="p-00026-en" num="0024">In an embodiment, the composition and the one or more additional components are added to the produced emulsion in a weight ratio of composition to polymeric nonionic surfactant from about 9:1, alternatively from about 1:1. In embodiments, the composition and, for example, polymeric nonionic surfactant are added about simultaneously (either as separate formulations or as part of the same formulation) or sequentially to the produced emulsion. Without being limited by theory, simultaneous addition to the produced emulsion of the composition and a polymeric nonionic surfactant generally provide improved quality of separated oil and aqueous phases. For instance, the simultaneous addition to the produced emulsion of the disclosed composition and water with a polymeric nonionic surfactant dissolved in an organic solvent improved the quality of the separated oil and aqueous phases.</p>
+      <p id="p-00027-en" num="0025">The foregoing may be better understood by reference to the following examples, which are intended for illustrative purposes and are not intended to limit the scope of the invention.</p>
+      <heading id="h-00006-en" level="1">Example 1</heading>
+      <p id="p-00028-en" num="0026">9 grams of water (0.50 mole) was added to a 500 ml 3-neck reactor flask, and then sparged with nitrogen for 15 minutes. 2 ml of boron trifluoride was slowly added and the mixture was heated to 60° C. When the temperature was reached 60° C., the heater was removed and 231.3 g of epichlorohydrin (2.5 mole) was slowly added with stirring. This reaction was exorthemic and the temperature was kept between 90 and 100° C. with the use of an ice bath. After complete addition of epichlorohydrin, the reaction was held for another 1 hour at 90° C., and then for 30 minutes at 110° C. The reactor was then cooled to 40° C. and the polyepichlorohydrin was tansferred to an autoclave for quarternization. About 361.22 grams of 45% trimethylamine aqueous solution (2.75 mole of trimethyamine) was added to polyepichlorohydrin. The blend was heated to 100° C. for 24 hours. The composition was clear without sediments. The theoretical molecular weight is about 780 g/mole and this product is named Composition A.</p>
+      <heading id="h-00007-en" level="1">Example 2</heading>
+      <p id="p-00029-en" num="0027">Cocktails 1 and 2 as shown in Table 1 are fluids that were injected into the reservoir to enhance oil recovery. The emulsion was produced in the lab by mixing either Cocktails 1 or 2 with the oil at 90:10 or 50:50 by weight, respectively, under a high shear via the Silverson L4RT Mixer at 5,000 rpm for 2 minutes. The produced emulsion was then subjected to the described testing. Cocktails 1 and 2 contained a very low concentration of the surfactant that was used to achieve ultra low interfacial tension between the trapped oil and the injection fluid/formation water. The ultra low interfacial tension also allowed the alkali present in the injection fluid to penetrate deeply into the formation and contact the trapped oil globules. The alkali present in the fluids (e.g., Na<sub>2</sub>CO<sub>3</sub>) then reacted with the acidic components in the crude oil to form additional surfactant in-situ to continuously provide ultra low interfacial tension and free the trapped oil. In the alkaline surfactant polymer (“ASP”) Process, polymer present in the injection fluid was used to increase the viscosity of the injection fluid, minimize channeling, and provide mobility control. These surfactant and polymer molecules have a tendency to adsorb at the oil droplet, thereby, stabilizing the emulsions.</p>
+      <p id="p-00030-en" num="0028">The tests that produced the data in Tables 2 and 4 were conducted in graduated six ounce prescription bottles to allow for rapid water drop readings. All bottles used 100 ml of emulsion. After pouring the emulsion followed by chemical addition, the bottles were allowed to reach the desired temperature via a water bath. Upon reaching the desired temperature, the samples were shaken via a mechanical shaker and then returned to the water bath. Water drop readings were recorded in millimeters. The values were also used to gauge emulsion stability, where a faster water drop indicated lower emulsion stability. As can be seen in Table 2, the present invention is very effective at resolving the emulsion. Conventional demulsifiers such as ethoxylated propoxylated alkyl phenol-formaldehyde resins and alkylphenol polyethylene oxide were found not to be effective under the tested experimental conditions. Also, cationic surfactant such as alkyldimethylbenzyl ammonium chloride required a much higher dosage (7,000 ppm) as compared to 3,000 ppm for the tested composition of the present invention (i.e., Composition A).</p>
+      <p id="p-00031-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Water chemistry for ASP flood</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="133pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Species</entry>
+                  <entry>Cocktail 1</entry>
+                  <entry>Cocktail 2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="133pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="char" char="." />
+              <colspec colname="3" colwidth="42pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>NaCl (g/L)</entry>
+                  <entry>3.115</entry>
+                  <entry>3.115</entry>
+                </row>
+                <row>
+                  <entry>CaCl<sub>2</sub>•2H2O (g/L)</entry>
+                  <entry>0.096</entry>
+                  <entry>0.096</entry>
+                </row>
+                <row>
+                  <entry>MgCl<sub>2</sub>•6H2O (g/L)</entry>
+                  <entry>0.093</entry>
+                  <entry>0.093</entry>
+                </row>
+                <row>
+                  <entry>NaHCO<sub>3 </sub>(g/L)</entry>
+                  <entry>1.310</entry>
+                  <entry>1.310</entry>
+                </row>
+                <row>
+                  <entry>KCl (g/L)</entry>
+                  <entry>0.054</entry>
+                  <entry>0.054</entry>
+                </row>
+                <row>
+                  <entry>Na<sub>2</sub>SO<sub>4 </sub>(g/L)</entry>
+                  <entry>0.236</entry>
+                  <entry>0.236</entry>
+                </row>
+                <row>
+                  <entry>Surfactant A, ppm</entry>
+                  <entry>1,500</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>Surfactant B, ppm</entry>
+                  <entry>1,500</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>Surfactant C, ppm</entry>
+                  <entry>—</entry>
+                  <entry>1,500</entry>
+                </row>
+                <row>
+                  <entry>Surfactant D, ppm</entry>
+                  <entry>—</entry>
+                  <entry>1,500</entry>
+                </row>
+                <row>
+                  <entry>Diethylene glycol monobutyl ether (DGBE),</entry>
+                  <entry>10,000</entry>
+                  <entry>10,000</entry>
+                </row>
+                <row>
+                  <entry>ppm</entry>
+                </row>
+                <row>
+                  <entry>Na<sub>2</sub>CO<sub>3</sub>, ppm</entry>
+                  <entry>10,000</entry>
+                  <entry>10,000</entry>
+                </row>
+                <row>
+                  <entry>Polyacrylamide, ppm</entry>
+                  <entry>1,500</entry>
+                  <entry>1,500</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00032-en" num="0029">The demulsification was performed at 60° C. using Composition A as described in Example 1.</p>
+      <p id="p-00033-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Bottle test results of demulsification</entry>
+                </row>
+                <row>
+                  <entry>of an Alkaline Surfactant Polymer (ASP) process</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="left" />
+              <colspec colname="3" colwidth="21pt" align="center" />
+              <colspec colname="4" colwidth="133pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>ASP</entry>
+                  <entry />
+                  <entry>Dose</entry>
+                  <entry>Water Drop, (ml per 100 ml emulsion)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="left" />
+              <colspec colname="3" colwidth="21pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="21pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="21pt" align="center" />
+              <colspec colname="8" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>solution</entry>
+                  <entry>Oil Cut</entry>
+                  <entry>(ppm)</entry>
+                  <entry>30 min</entry>
+                  <entry>1 hr</entry>
+                  <entry>2 hrs</entry>
+                  <entry>4 hrs</entry>
+                  <entry>Overnight</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="left" />
+              <colspec colname="3" colwidth="21pt" align="char" char="." />
+              <colspec colname="4" colwidth="28pt" align="char" char="." />
+              <colspec colname="5" colwidth="21pt" align="char" char="." />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="21pt" align="center" />
+              <colspec colname="8" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Cocktail 1</entry>
+                  <entry>10% Oil </entry>
+                  <entry>1,000</entry>
+                  <entry>90</entry>
+                  <entry>90</entry>
+                  <entry>90</entry>
+                  <entry>90</entry>
+                  <entry>90</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Cut</entry>
+                  <entry>2,000</entry>
+                  <entry>90</entry>
+                  <entry>90</entry>
+                  <entry>90</entry>
+                  <entry>90</entry>
+                  <entry>90</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>3,000</entry>
+                  <entry>90</entry>
+                  <entry>90</entry>
+                  <entry>90</entry>
+                  <entry>90</entry>
+                  <entry>90</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>4,000</entry>
+                  <entry>90</entry>
+                  <entry>90</entry>
+                  <entry>90</entry>
+                  <entry>90</entry>
+                  <entry>90</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>50% Oil </entry>
+                  <entry>500</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry> 18E*</entry>
+                  <entry>
+                    <sup> </sup> 30E</entry>
+                  <entry>
+                    <sup> </sup> 30E</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Cut</entry>
+                  <entry>1,000</entry>
+                  <entry>0</entry>
+                  <entry>20</entry>
+                  <entry>40</entry>
+                  <entry>42</entry>
+                  <entry>45</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>2,000</entry>
+                  <entry>5</entry>
+                  <entry>38</entry>
+                  <entry>42</entry>
+                  <entry>43</entry>
+                  <entry>45</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>3,000</entry>
+                  <entry>40</entry>
+                  <entry>42</entry>
+                  <entry>42</entry>
+                  <entry>42</entry>
+                  <entry>45</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>4,000</entry>
+                  <entry>49</entry>
+                  <entry>49</entry>
+                  <entry>49</entry>
+                  <entry>49</entry>
+                  <entry>49</entry>
+                </row>
+                <row>
+                  <entry>Cocktail 2</entry>
+                  <entry>10% Oil </entry>
+                  <entry>500</entry>
+                  <entry>92</entry>
+                  <entry>90</entry>
+                  <entry>90</entry>
+                  <entry>90</entry>
+                  <entry>90</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Cut</entry>
+                  <entry>1,000</entry>
+                  <entry>92</entry>
+                  <entry>90</entry>
+                  <entry>90</entry>
+                  <entry>90</entry>
+                  <entry>90</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>2,000</entry>
+                  <entry>91</entry>
+                  <entry>90</entry>
+                  <entry>90</entry>
+                  <entry>90</entry>
+                  <entry>90</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>50% Oil </entry>
+                  <entry>1,000</entry>
+                  <entry>0</entry>
+                  <entry> 0</entry>
+                  <entry> 0</entry>
+                  <entry> 0</entry>
+                  <entry>
+                    <sup> </sup> 30E</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Cut</entry>
+                  <entry>2,000</entry>
+                  <entry>42</entry>
+                  <entry>43</entry>
+                  <entry>43</entry>
+                  <entry>45</entry>
+                  <entry>45</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>3,000</entry>
+                  <entry>46</entry>
+                  <entry>45</entry>
+                  <entry>46</entry>
+                  <entry>46</entry>
+                  <entry>45</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>4,000</entry>
+                  <entry>46</entry>
+                  <entry>46</entry>
+                  <entry>46</entry>
+                  <entry>46</entry>
+                  <entry>46</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>5,000</entry>
+                  <entry>47</entry>
+                  <entry>46</entry>
+                  <entry>46</entry>
+                  <entry>46</entry>
+                  <entry>46</entry>
+                </row>
+                <row>
+                  <entry>Untreated</entry>
+                  <entry>10% Oil </entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>
+                    <sup> </sup> 78E</entry>
+                  <entry>—</entry>
+                  <entry> 9</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Cut</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00001-en">*Water drop number with an “E” designation indicates the water phase is oil-in-water emulsion (dirty water)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00034-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 3</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Water chemistry for Surfactant Flood</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="28pt" align="left" />
+              <colspec colname="1" colwidth="84pt" align="left" />
+              <colspec colname="2" colwidth="105pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Species</entry>
+                  <entry>Amount</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="28pt" align="left" />
+              <colspec colname="1" colwidth="84pt" align="left" />
+              <colspec colname="2" colwidth="105pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>NaCl (g/L)</entry>
+                  <entry>4.81</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>CaCl<sub>2</sub>•2H<sub>2</sub>O (g/L)</entry>
+                  <entry>1.00</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>MgCl<sub>2</sub>•6H<sub>2</sub>O (g/L)</entry>
+                  <entry>2.01</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>NaHCO<sub>3 </sub>(g/L)</entry>
+                  <entry>3.99</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Na<sub>2</sub>SO<sub>4 </sub>(g/L)</entry>
+                  <entry>0.13</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Petrostep S13D</entry>
+                  <entry>5,000</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(anionic surfactant) (ppm)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(84.32% active)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00035-en" num="0030">Table 3 lists the injection fluid constituents for the composition used in the surfactant flood. The emulsion was produced in the lab by mixing the injection fluid with the oil at 75:25 wt/wt, respectively, by shaking the bottle containing the mixture mechanically for 10 minutes. The demulsifier was added to the above emulsion and the bottle was again shaken for 2 minutes. The demulsification was performed at 25° C. using Composition A and alkyldimethylbenzyl ammonium chloride using the testing method described previously. In the test results presented in Table 4, oil drop readings were recorded (as opposed to water drop readings above) and were converted to the percentage of oil content. As can be seen in Table 4, the present invention (e.g., Composition A) outperformed the alkyldimethylbenzyl ammonium chloride (Composition B) as indicated by a higher value for oil drop and much cleaner water and also yielded a dry oil as indicated by small values of bottom sediment or settlings (BS) and slug. The calculations and definitions of these values are discussed below.</p>
+      <p id="p-00036-en" num="0031">Following the water drop readings, the resolved or partially resolved oil from each bottle was analyzed for water content. Using a syringe with a needle, a small portion of the oil (about 6 ml) was withdrawn. This aliquot of oil was added to a graduated API centrifuge tube containing an equal volume of an aromatic solvent and the contents were shaken by hand. Following centrifugation, the percent residual emulsion, typically referred to BS, was noted for each bottle. After recording BS values, alkyl sulfonate surfactant (a chemical known to resolve the remaining emulsion) was added to the centrifuge tube. Such chemicals are generally called “slugging or knockout chemicals” and are typically low molecular weight sulfonate-based materials. After slugging, the tube was again shaken and centrifuged as previously described. The BS was thus completely eliminated and only water remained in the bottom part of the tube. The slug grindout number is reported as a percentage. Smaller values of BS and slug indicate drier oil.</p>
+      <p id="p-00037-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="259pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 4</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Bottle test results of demulsification</entry>
+                </row>
+                <row>
+                  <entry>of a surfactant flood emulsion with 25% oil cut</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="168pt" align="center" />
+              <colspec colname="3" colwidth="56pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Oil drop, %</entry>
+                  <entry>Thief Grindout</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <colspec colname="8" colwidth="28pt" align="center" />
+              <colspec colname="9" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Treatment</entry>
+                  <entry>ppm</entry>
+                  <entry>0.5 hr</entry>
+                  <entry>1 hr</entry>
+                  <entry>2 hr</entry>
+                  <entry>4 hr</entry>
+                  <entry>20 hr</entry>
+                  <entry>BS</entry>
+                  <entry>Slug</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="char" char="." />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <colspec colname="8" colwidth="28pt" align="char" char="." />
+              <colspec colname="9" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Untreated</entry>
+                  <entry>0</entry>
+                  <entry> 0</entry>
+                  <entry> 8</entry>
+                  <entry> 16</entry>
+                  <entry> 52</entry>
+                  <entry> 72</entry>
+                  <entry>15.2</entry>
+                  <entry>6.0</entry>
+                </row>
+                <row>
+                  <entry>Comp. A</entry>
+                  <entry>2,000</entry>
+                  <entry>100*</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                  <entry>0.8</entry>
+                  <entry>0.8</entry>
+                </row>
+                <row>
+                  <entry>Comp. B</entry>
+                  <entry>2,000</entry>
+                  <entry> 76**</entry>
+                  <entry>  84**</entry>
+                  <entry>  84**</entry>
+                  <entry>  84**</entry>
+                  <entry>  84**</entry>
+                  <entry>0.8</entry>
+                  <entry>0.8</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="left" id="entry-00002-en">*Clean water</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="left" id="entry-00003-en">**Dirty water</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00038-en" num="0032">Table 4 lists an example of the injection fluid used for surfactant-polymer flood (SP). The procedures for making the emulsion and demulsification were described previously. Petrostep is available from Stepan Company located in Northfield, Ill. and Flopaam is available from SNF Floerger located in Andrézieux, France (trademarks are property of the respective owners).</p>
+      <p id="p-00039-en" num="0000">
+        <tables id="tables-00005-en" num="00005">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 4</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Produced Brine Formulations to make</entry>
+                </row>
+                <row>
+                  <entry>100 g Brine for Surfactant-Polymer Flood</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="112pt" align="left" />
+              <colspec colname="1" colwidth="105pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>brine</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="1" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="105pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>NaCl (grams)</entry>
+                  <entry>1.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>CaCl<sub>2</sub>•2H<sub>2</sub>O (grams)</entry>
+                  <entry>0.1834</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(Ca++, ppm)</entry>
+                  <entry>500</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>FLOPAAM ® 3330S</entry>
+                  <entry>0.12</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(grams), 8 MM MW</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>HPAM</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PETROSTEP ® S-1</entry>
+                  <entry>0.9458</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(15.86% active;</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>grams*)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PETROSTEP ® S-2</entry>
+                  <entry>0.2223</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(22.49% active;</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>grams*)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Iso-butyl alcohol (R-</entry>
+                  <entry>0.4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>3041; grams)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="left" id="entry-00004-en">*weight of surfactants as received</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00040-en" num="0033">Table 5 shows the demulsification results conducted at 25° C. In this Table, Compositions C, D, and E have the same chemistry as Composition A (see Example 1) but different molecular weights. The theoretical molecular weights for Compostions A, C, D, and E are 780 g/mole, 2,300 g/mole, 1,500 g/mole, 320 g/mole, respectively. Composition F is a pyridinium benzyl quat and Composition G is a high molecular weight polydiallyldimethylammonium chloride-polyacrylic acid copolymer. Compositions A, D, and E broke the emulsion quickly (15 minutes), gave clean water after the emulsion was resolved, and produced dry oil. Other compostions took longer to break the emulsion, gave dirty water or wet oil.</p>
+      <p id="p-00041-en" num="0000">
+        <tables id="tables-00006-en" num="00006">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 5</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Bottle test results of demulsification</entry>
+                </row>
+                <row>
+                  <entry>of a surfactant-polymer flood emulsion with 30% oil cut.</entry>
+                </row>
+                <row>
+                  <entry>Unless otherwise noted, the water separated</entry>
+                </row>
+                <row>
+                  <entry>from the emulsion was clear and clean</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="105pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Water drop (ml/100 ml</entry>
+                  <entry>Thief </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ppm</entry>
+                  <entry>emulsion)</entry>
+                  <entry>Grindout</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="21pt" align="center" />
+              <colspec colname="7" colwidth="21pt" align="center" />
+              <colspec colname="8" colwidth="21pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Product</entry>
+                  <entry>Actives</entry>
+                  <entry>15 min</entry>
+                  <entry>1 hr</entry>
+                  <entry>2 hr</entry>
+                  <entry>3 hr</entry>
+                  <entry>B.S</entry>
+                  <entry>Slug</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="char" char="." />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="21pt" align="center" />
+              <colspec colname="7" colwidth="21pt" align="char" char="." />
+              <colspec colname="8" colwidth="21pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Untreated</entry>
+                  <entry>0</entry>
+                  <entry>20* </entry>
+                  <entry>50* </entry>
+                  <entry>60* </entry>
+                  <entry>60* </entry>
+                  <entry>28</entry>
+                  <entry>34</entry>
+                </row>
+                <row>
+                  <entry>Comp. A</entry>
+                  <entry>200</entry>
+                  <entry>65 </entry>
+                  <entry>69 </entry>
+                  <entry>69 </entry>
+                  <entry>70 </entry>
+                  <entry>0.6</entry>
+                  <entry>0.6</entry>
+                </row>
+                <row>
+                  <entry>Comp. B</entry>
+                  <entry>210</entry>
+                  <entry>68**</entry>
+                  <entry>68**</entry>
+                  <entry>70**</entry>
+                  <entry>70**</entry>
+                  <entry>0.4</entry>
+                  <entry>0.4</entry>
+                </row>
+                <row>
+                  <entry>Comp. C</entry>
+                  <entry>200</entry>
+                  <entry>65**</entry>
+                  <entry>69 </entry>
+                  <entry>69 </entry>
+                  <entry>69 </entry>
+                  <entry>0.8</entry>
+                  <entry>0.8</entry>
+                </row>
+                <row>
+                  <entry>Comp. D</entry>
+                  <entry>200</entry>
+                  <entry>66**</entry>
+                  <entry>69 </entry>
+                  <entry>69 </entry>
+                  <entry>70 </entry>
+                  <entry>0.8</entry>
+                  <entry>0.8</entry>
+                </row>
+                <row>
+                  <entry>Comp. E</entry>
+                  <entry>200</entry>
+                  <entry>20* </entry>
+                  <entry>40* </entry>
+                  <entry>60* </entry>
+                  <entry>60**</entry>
+                  <entry>13</entry>
+                  <entry>24</entry>
+                </row>
+                <row>
+                  <entry>Comp. F</entry>
+                  <entry>200</entry>
+                  <entry>65**</entry>
+                  <entry>65**</entry>
+                  <entry>68* </entry>
+                  <entry>65* </entry>
+                  <entry>0.6</entry>
+                  <entry>0.2</entry>
+                </row>
+                <row>
+                  <entry>Comp. G</entry>
+                  <entry>210</entry>
+                  <entry>10* </entry>
+                  <entry>39* </entry>
+                  <entry>60* </entry>
+                  <entry>62**</entry>
+                  <entry>11</entry>
+                  <entry>25</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00005-en">*the water is dirty and rag layer (emulsion at the oil/water interface) is present</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00006-en">**the water is dirty but no rag layer is formed</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00042-en" num="0034">All of the compositions and methods disclosed and claimed herein can be made and executed without undue experimentation in light of the present disclosure. While this invention may be embodied in many different forms, there are described in detail herein specific preferred embodiments of the invention. The present disclosure is an exemplification of the principles of the invention and is not intended to limit the invention to the particular embodiments illustrated.</p>
+      <p id="p-00043-en" num="0035">Any ranges given either in absolute terms or in approximate terms are intended to encompass both, and any definitions used herein are intended to be clarifying and not limiting. Notwithstanding that the numerical ranges and parameters setting forth the broad scope of the invention are approximations, the numerical values set forth in the specific examples are reported as precisely as possible. Any numerical value, however, inherently contains certain errors necessarily resulting from the standard deviation found in their respective testing measurements. Moreover, all ranges disclosed herein are to be understood to encompass any and all subranges (including all fractional and whole values) subsumed therein.</p>
+      <p id="p-00044-en" num="0036">Furthermore, the invention encompasses any and all possible combination of some or all of the various embodiments described herein. Any and all patents, patent applications, scientific papers, and other references cited in this application, as well as any references cited therein, are hereby incorporated by reference in their entirety. It should also be understood that various changes and modifications to the presently preferred embodiments described herein will be apparent to those skilled in the art. Such changes and modifications can be made without departing from the spirit and scope of the invention and without diminishing its intended advantages. It is therefore intended that such changes and modifications be covered by the appended claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>The claimed invention is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method of demulsifying an emulsion comprising water and oil, the method comprising adding an effective amount of a composition comprising at least one substantially fully quaternized ammonium adduct of polyepihalohydrin and substantially free of zinc chloride, wherein said adduct(s) have a weight average molecular weight from about 500 Da to about 2,500 Da.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the quaternary ammonium adduct(s) of polyepihalohydrin are fully quaternized.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the composition is free of zinc chloride.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the substantially fully quaternized ammonium adduct(s) of polyepihalohydrin is formed by reacting a polyepihalohydrin with trimethylamine or triethylamine at a molar ratio of 1:1.1 and at temperatures from about 100° C. to 150° C.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the quaternary ammonium adduct(s) of polyepihalohydrin are prepared in the presence of a boron trifluoride catalyst.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the quaternary ammonium adduct(s) of polyepihalohydrin have general formula:</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00001-en" num="00002">
+          <img id="imgc-00001-en" he="19.56mm" wi="35.22mm" alt="embedded image" img-content="chem" file="US20150252248A1_00002.PNG" img-format="png" original="US20150252248A1-20150910-C00002.TIF" />
+        </chemistry><claim-text>wherein each R is independently methyl or ethyl and z ranges from about 4 to about 22</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein X is selected from the group consisting of:
+<claim-text>fluoride, chloride, bromide, iodide, astatide, and any combination thereof.</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein X is chloride.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein z is 6.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein at least one R is methyl.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein each R is methyl.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the composition comprises from about 30 to about 90 wt % active material.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the composition further comprises an organic solvent, water, and any combination thereof.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the organic solvent comprises an alcohol, an ether, an aromatic compound, or any combination thereof.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the effective amount of the composition comprises from about 50 ppm to about 20,000 ppm, based on actives and total emulsion volume.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising adding a component to the emulsion, wherein the component is selected from the group consisting of: a polymeric nonionic surfactant, a polymeric cationic surfactant, a betaine, and any combination thereof.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The method of <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the component and the composition are added about simultaneously to the emulsion.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the emulsion is a produced emulsion from an enhanced oil recovery operation.</claim-text>
+    </claim>
+  </claims>
+  <drawings>
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150252248A1_00001.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252248A1-20150910-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150252248A1_00002.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252248A1-20150910-C00002.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150252248A1.PDF" type="pdf" size="444740" pages="6" />
+</lexisnexis-patent-document>

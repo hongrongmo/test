@@ -1,0 +1,2568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150246863A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021223" date-changed="20151117" time-changed="080529">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121138845">
+        <country>US</country>
+        <doc-number>20150246863</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14627727</doc-number>
+        <date>20150220</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="regional">
+        <country>EP</country>
+        <doc-number>14157386</doc-number>
+        <date>20140228</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151117">
+      <classification-ipcr sequence="1">
+        <text>C07C  29/34        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>29</main-group>
+        <subgroup>34</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>B01J   8/02        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>8</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>B01J   8/08        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>8</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>B01J   8/18        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>8</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>B01J   8/24        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>8</main-group>
+        <subgroup>24</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>C07C   1/24        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>1</main-group>
+        <subgroup>24</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="7">
+        <text>C07C   2/06        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>2</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="8">
+        <text>C10L   1/182       20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>10</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>182</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151117">
+      <classification-cpc sequence="1">
+        <text>C07C  29/34        20130101 FI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>29</main-group>
+        <subgroup>34</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B01J2219/00006     20130101 LA20150930BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>2219</main-group>
+        <subgroup>00006</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150930</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C07C   1/24        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>1</main-group>
+        <subgroup>24</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C07C   2/06        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>2</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C10L   1/023       20130101 LI20151113BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>023</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151113</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C10L   1/026       20130101 LI20151113BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>026</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151113</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C10L   1/1824      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>1824</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C10L2230/20        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>L</subclass>
+        <main-group>2230</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C10L2270/023       20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>L</subclass>
+        <main-group>2270</main-group>
+        <subgroup>023</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>C10L2270/026       20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>L</subclass>
+        <main-group>2270</main-group>
+        <subgroup>026</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>C10L2270/04        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>L</subclass>
+        <main-group>2270</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <combination-set>
+        <group-number>1</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C07C  29/34        20130101 LI20140515BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>07</class>
+            <subclass>C</subclass>
+            <main-group>29</main-group>
+            <subgroup>34</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20140515</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C07C  31/125       20130101 LI20140515BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>07</class>
+            <subclass>C</subclass>
+            <main-group>31</main-group>
+            <subgroup>125</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20140515</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">19</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">Synthesis of Guerbet Alcohols</invention-title>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Arkema France</orgname>
+            <address>
+              <city>Colombes</city>
+              <country>FR</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>FR</country>
+          </residence>
+        </applicant>
+        <applicant sequence="2" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>OBR Spólka Akcyjna</orgname>
+            <address>
+              <city>Plock</city>
+              <country>PL</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>PL</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Dubois</last-name>
+            <first-name>Jean-Luc</first-name>
+            <address>
+              <city>Millery</city>
+              <country>FR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Zhao</last-name>
+            <first-name>Wei</first-name>
+            <address>
+              <city>Breda</city>
+              <country>NL</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Roelant</last-name>
+            <first-name>Raf Edward Anna</first-name>
+            <address>
+              <city>Breda</city>
+              <country>NL</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Keuken</last-name>
+            <first-name>Hans</first-name>
+            <address>
+              <city>Wuustwezel</city>
+              <country>BE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Borges</last-name>
+            <first-name>Pedro Miguel Ramos</first-name>
+            <address>
+              <city>Breda</city>
+              <country>NL</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20151028">
+      <main-family family-id="173457289">
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104876795</doc-number>
+            <kind>A</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20150228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246863</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150220</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2913319</doc-number>
+            <kind>A1</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2913319</doc-number>
+            <kind>A8</kind>
+            <date>20151028</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173457288">
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104876795</doc-number>
+            <kind>A</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20150228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246863</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150220</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2913319</doc-number>
+            <kind>A1</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2913319</doc-number>
+            <kind>A8</kind>
+            <date>20151028</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A method and system for preparing a mixture of Guerbet alcohols where one or more primary alcohols of the formula RCH<sub>2</sub>CH<sub>2</sub>OH are provided, with R representing hydrogen or a straight or branched chain alkyl group of 1 to 14 carbon atoms. A base and a catalyst are provided, which are mixed with the primary alcohol(s). The resulting mixture is heated to a process temperature above the boiling point of water under reaction conditions and the water resulting from the thus obtained condensation and dehydration of the primary alcohols is then removed constantly. When the Guerbet reaction has reached a certain stage, at least part of the reaction mixture is removed, followed by a separation of the desired Guerbet alcohols from the removed part of the reaction mixture. The other alcohols are then returned to the reaction mixture for obtaining a higher amount of the desired Guerbet alcohols.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150402</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246863A1</docdb-publication-number>
+      <docdb-application-id>444209631</docdb-application-id>
+      <new-owner>ARKEMA FRANCE, FRANCE</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:DUBOIS, JEAN-LUC;ZHAO, WEI;ROELANT, RAF EDWARD ANNA;AND OTHERS;SIGNING DATES FROM 20150224 TO 20150308;REEL/FRAME:035320/0770</free-text-description>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20150402</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246863A1</docdb-publication-number>
+      <docdb-application-id>444209631</docdb-application-id>
+      <new-owner>OBR SPOLKA AKCYJNA, POLAND</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:DUBOIS, JEAN-LUC;ZHAO, WEI;ROELANT, RAF EDWARD ANNA;AND OTHERS;SIGNING DATES FROM 20150224 TO 20150308;REEL/FRAME:035320/0770</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">FUNDING</heading>
+      <p id="p-00001-en" num="0001">The research leading to these results has received funding from the European Union Seventh Framework Programme (FP7/2007-2013) under grant agreement No 241718 EuroBioRef.</p>
+      <heading id="h-00002-en" level="1">CROSS-REFERENCE TO PRIORITY APPLICATION</heading>
+      <p id="p-00002-en" num="0002">The present application claims the priority benefit of European Patent Application No. 14157386.5, filed Feb. 28, 2014, which is incorporated in its entirety herein.</p>
+      <heading id="h-00003-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00003-en" num="0003">The present invention relates to the synthesis of long chain Guerbet alcohols, and in particular to the synthesis of mixtures of Guerbet alcohols containing long-chain multi-branched Guerbet alcohols.</p>
+      <heading id="h-00004-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00004-en" num="0004">The term “Guerbet alcohols” is commonly used to describe alcohols formed by Guerbet reaction, named after Marcel Guerbet, which is an auto condensation converting a primary aliphatic alcohol into its β-alkylated dimer alcohol with loss of one equivalent of water. The Guerbet reaction requires a catalyst and elevated temperatures.</p>
+      <p id="p-00005-en" num="0005">Guerbet alcohols are saturated primary alcohols with a defined branching of the carbon chain. They are well known in the state of the art.</p>
+      <p id="p-00006-en" num="0006">The term Guerbet alcohol as used in this specification is to be understood as a monofunctional, primary alcohol comprising at least one branching at the carbon atom adjacent to the carbon atom carrying the hydroxyl group. Chemically, Guerbet alcohols are described as 2-alkyl-1-alkanols, but in the present specification Guerbet alcohols comprise also multi-branched alcohols (multiple alkyl alcohols).</p>
+      <p id="p-00007-en" num="0007">The reaction mechanism leading to Guerbet alcohols comprises essentially the following steps: First, a primary alcohol of the formula RCH<sub>2</sub>CH<sub>2</sub>OH, wherein R may be hydrogen or a straight or branched chain alkyl group, is dehydrogenated (or oxidised) to the respective aldehyde. In the following, two aldehyde molecules undergo an aldol condensation to an α,β-unsaturated aldehyde, which is finally hydrogenated to the “dimer” alcohol. The catalyst used for this reaction may be of alkaline nature (e.g. potassium hydroxide, sodium hydroxide, sodium tert-butoxide, etc.) possibly in the presence of a platinum or palladium catalyst. Usually the reaction takes place under heating and possibly pressurization. An overview of a Guerbet condensation process is given in the illustration below:</p>
+      <p id="p-00008-en" num="0000">
+        <chemistry id="chem-00001-en" num="00001">
+          <img id="img-00001-en" he="48.18mm" wi="75.86mm" alt="embedded image" img-content="chem" file="US20150246863A1_00004.PNG" img-format="png" original="US20150246863A1-20150903-C00001.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00009-en" num="0008">A Guerbet alcohol may also have two or more branches, particularly if it is the product of two or more subsequent condensation reactions. For example, 2-ethyl-1-hexanol, the Guerbet dimer of 1-butanol, may react with 1-propanol to yield 4-ethyl-2-methyl-1-octanol. This further increases the variety of Guerbet alcohols.</p>
+      <p id="p-00010-en" num="0009">An example of a process for preparing branched dimer alcohols based on the Guerbet reaction is for instance disclosed in the patent specification EP 0 299 720 B1 assigned to Exxon Chemical Patents Inc. The process comprises steps of first combining the primary alcohol mixture with KOH and NaOH and heating the mixture until the base dissolves. Thereafter a platinum catalyst on activated carbon support is added and heated to reflux with water being evolved and removed as it is formed.</p>
+      <p id="p-00011-en" num="0010">Another example of a process for dimerizing alcohols in a manner of Guerbet reaction is disclosed in patent application US 2012/0220806 A1 filed by Cognis IP management GmbH. The process converts one or more starting alcohols having 2 to 72 carbon atoms and one to three OH—groups per molecule in the presence of a base (KOH), a carbonyl compound and a metallic hydrogenation catalyst. The process is limited to the use of alcohols that have at least one primary or secondary OH-group and a carbon atom bearing at least one hydrogen atom as a substituent that is directly adjacent to the carbon atom having the primary or secondary OH-group.</p>
+      <p id="p-00012-en" num="0011">For a large scale production of multi-branched Guerbet alcohols, however, an improved manufacturing process is required that further allows to control the final distribution of Guerbet alcohols with respect to carbon number and branching type and number.</p>
+      <heading id="h-00005-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00013-en" num="0012">A respective process is provided by a method for preparing a mixture of Guerbet alcohols comprising the following steps: providing a starting material comprising one or more primary alcohols of the formula RCH<sub>2</sub>CH<sub>2</sub>OH, where R is hydrogen or a straight or branched chain alkyl of 1 to 14 carbon atoms, preferably R is a straight or branched chain alkyl of 1 to 12 carbon atoms, more preferably of 2 to 10 carbon atoms, and in particular 3 to 8 carbon atoms; providing a base; providing a catalyst; mixing the starting material with the base and the catalyst and heating the thus obtained reaction mixture to a process temperature above the boiling point of water or its azeotropes with the components in the system under reaction conditions while removing the water resulting from the thus obtained condensation and dehydration of the primary alcohols; removing at least part of the reaction mixture; separating the desired Guerbet alcohols from the removed part of the reaction mixture; and returning the other alcohols and optionally other intermediates from the removed part of the reaction mixture to the reaction mixture.</p>
+      <p id="p-00014-en" num="0013">A respective process is further provided by a system for synthesising Guerbet alcohols from a starting material comprising one or more primary alcohols of the formula RCH<sub>2</sub>CH<sub>2</sub>OH, where R is hydrogen or a straight or branched chain alkyl of 1 to 14 carbon atoms, preferably R is a straight or branched chain alkyl of 1 to 12 carbon atoms, more preferably of 2 to 10 carbon atoms, and in particular 3 to 8 carbon atoms, whereby the system comprises: a reactor adapted for receiving the starting material, a base, and a catalyst to form a reaction mixture, and for heating the reaction mixture to a temperature above the boiling point of water or its azeotropes with the components in the system under reaction conditions to obtain a Guerbet condensation and dehydration process; a water separation unit connected to the reactor and adapted to receive from the reactor vapour evolving in the progress of the Guerbet condensation and dehydration process, and to remove water from the vapour; an after-treatment system connected to the reactor and adapted to receive from the reactor at least part of the reaction mixture, separating the desired Guerbet alcohols from the removed part of the reaction mixture, and returning the other alcohols and optionally other intermediates from the removed part of the reaction mixture to the reactor.</p>
+      <p id="p-00015-en" num="0014">It should be noted in this context that the terms “comprise”, “include”, “having”, and “with”, as well as grammatical modifications thereof used in this specification or the claims, indicate the presence of technical features such as stated components, figures, integers, steps or the like, and do by no means preclude the presence or addition of one or more other features, particularly other components, integers, steps or groups thereof.</p>
+      <p id="p-00016-en" num="0015">In advantageous embodiments of the method specified above, the starting material further contains secondary alcohols, ketones and aldehydes, and hydrogen is added to the reaction mixture or the removed part of the reaction mixture enabling a higher variety of Guerbet alcohols. As will be appreciated by those skilled in the art, the starting material may also contain unavoidable impurities in minor amounts.</p>
+      <p id="p-00017-en" num="0016">In advantageous embodiments of the method specified above, the starting material contains at least two primary alcohols selected from the group comprising n-propanol, n-butanol, n-pentanol, n-hexanol enabling a mixture of higher carbon number multi-branched Guerbet alcohols.</p>
+      <p id="p-00018-en" num="0017">In further advantageous embodiments of the method specified above, the base is at least one of sodium tert-butoxide, potassium hydroxide, and sodium hydroxide, the first base being a strong base enabling a high alcohol conversion process of the Guerbet condensation reaction even at atmospheric pressure, the other bases allowing a very cost effective formation of Guerbet alcohols at higher process pressures and temperatures.</p>
+      <p id="p-00019-en" num="0018">According to further advantageous embodiments of the method specified above, heterogeneous bases, which may optionally be doped with metals like for example Ni, Pd, or Cu are used. Examples for heterogeneous bases are hydrotalcites, hydroxyapatite, alkali and alkaline earth doped mixed oxides, or oxinitrides such as vanadium-aluminium-phosphorous-oxinitride VAlPON, aluminium-phosphorous-oxinitride AlPON.</p>
+      <p id="p-00020-en" num="0019">In also advantageous embodiments of the method specified above, the catalyst is selected from the group consisting of Cu—Zn-oxide, Cu-chromite, Raney Ni, Ni—MgO/SiO<sub>2</sub>, Pd/C, Pt/C, metal, as for example Ni, Pd, Cu, doped heterogeneous bases and Pd(OAc)<sub>2</sub>, whereby Pd(OAc)<sub>2 </sub>is particularly preferred for lower process pressures like atmospheric pressures. The other, heterogeneous catalysts enable a wider distribution of the Guerbet alcohols achieved.</p>
+      <p id="p-00021-en" num="0020">In also advantageous embodiments of the method specified above, a particularly advantageous configuration comprises a fixed bed, or a slurry fluidised bed or a mobile bed of a solid heterogeneous catalyst.</p>
+      <p id="p-00022-en" num="0021">Embodiments of the method specified above may further be implemented with the alcohols returned to the reaction mixture having a lower boiling point than the desired Guerbet alcohols allowing the lighter than desired alcohols to be returned to the reaction process.</p>
+      <p id="p-00023-en" num="0022">In particular embodiments of the method specified above, the process temperature is equal to or higher than the boiling point of water or its azeotropes with the components in the system under process conditions, and does not exceed the boiling point of the starting material for maximising the conversion rate of the Guerbet condensation process. Since the boiling point of the starting material increases with the pressure, higher process pressures allow higher process temperatures. The reaction temperature is determined by the lowest boiling point compound when operating at reflux conditions. The reaction process is effectively performed in liquid phase at a pressure of 1 bar or higher. The term “in liquid phase” is hereby to be understood as “in a gas-liquid condition” since part of the reactants and the water produced should be in gas phase.</p>
+      <p id="p-00024-en" num="0023">In preferred embodiments of the method described above, and in particular when using bio-alcohols for the Guerbet synthesis, the starting material is pre-treated with respect to removing acidic components and/or water prior to being fed to mixing for preventing a degradation of the base and an inhibition of the condensation process.</p>
+      <p id="p-00025-en" num="0024">In preferred embodiments of the system specified above, the after-treatment system comprises a first after-treatment system adapted to separate a catalytic component and an alkaline component as well as degradation products of the former, such as salts resulting from neutralization of the alkaline from the part of the reaction mixture received from the reactor, and a second after-treatment system connected to the first after-treatment system and adapted to separate the desired Guerbet alcohols from the part of the reaction mixture treated by the first after-treatment system and to return the other alcohols from that mixture to the reactor. A respectively configured after-treatment system enables a catalyst recovery and a purification of the alcohol components of the mixture received from the reactor.</p>
+      <p id="p-00026-en" num="0025">In order to obtain alcohol components substantially free of water, the second after-treatment system comprises in further preferred embodiments a liquid-liquid mixer-settler configuration adapted to receive the reaction mixture treated by the first after-treatment system and to provide a phase separation of the components present in the mixture, an alcohols column adapted to receive the primarily alcohol components containing phase from the liquid-liquid mixer-settler configuration and to dry the alcohol components, and an alcohols splitter column connected to the alcohols column and the reactor, and being adapted to separate the desired Guerbet alcohols from the dried alcohol components and to return the remaining dried alcohols to the reactor.</p>
+      <p id="p-00027-en" num="0026">For achieving a low contaminant wastewater, favoured embodiments of the system specified above have the second after-treatment system further comprising a water column adapted to receive the primarily water containing phase from the liquid-liquid mixer-settler configuration, separate water from that phase, and return alcohols containing water to the liquid-liquid mixer-settler configuration.</p>
+      <p id="p-00028-en" num="0027">For returning the alcoholic components of the vapour received from the reactor back into the reactor and for purifying the azeotropic composition formed by the water separation, the water separation unit is in particularly effective embodiments of the system specified above further adapted to return the vapour components different to the separated water to the reactor, and to provide the still alcohols containing separated water to the liquid-liquid mixer-settler configuration.</p>
+      <p id="p-00029-en" num="0028">In the product return loops described above, one or several systems can be provided to remove certain components which have the tendency to show ever increasing concentrations in this loop because they have no outlet and because they are not converted in the reactor, which have undesirable effects in the reactor or elsewhere in the loop, or which, through reaction, give rise to the formation of components having such undesirable effects. Such removal systems can be selective, e.g. distillation columns, or non-selective, i.e., simple purge streams.</p>
+      <p id="p-00030-en" num="0029">Particularly when reacting bio-alcohols, particularly preferred embodiments of the system specified above further comprise a pre-treatment facility adapted to remove acidic and ester components and/or water from the starting material prior to supplying the starting material to the reactor in order to prevent a degradation of the base forming part of the catalytic system and an inhibition of the condensation process.</p>
+      <p id="p-00031-en" num="0030">Guerbet alcohols obtained by a method as specified above and/or by using a system as specified above are particularly useful as additives for fuels like diesel or jet fuels, where they increase the electric conductivity and thus decrease the probability of ignition by static electricity, as precursors of esters such as acrylates, methacrylates, phthalates or the like, as to be hydrodeoxygenated precursors of gasoline or aviation fuel constituents, such as aviation gasoline and jet fuel, or as precursors of surfactants that are e.g. suited for utilisation in petroleum industry operations or as precursors of alpha-olefins and their polymers and oligomers.</p>
+      <p id="p-00032-en" num="0031">Further features of the invention will be apparent from the following description of exemplary embodiments of the invention together with the claims and the attached figures. It is noted that the present invention is only limited by the scope of the appended claims, and not to the particular examples of embodiments described. Embodiments of the invention may thus combine features described in the context of different exemplary embodiments and may also combine only part of the features described for a particular embodiment or a combination of particular embodiments. Embodiments of the present invention may further also have additional features not described in the context of the exemplary embodiments given herein.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00006-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00033-en" num="0032">A better understanding of the features and advantages of the present teachings can be achieved by reference to the accompanying drawings, which are intended to illustrate, not limit, the present teachings.</p>
+      <p id="p-00034-en" num="0033">
+        <figref>FIG. 1</figref> shows a simplified piping and instrumentation diagram of a process engineering system for a synthesis of Guerbet alcohols from a starting material comprising one or more primary alcohols.</p>
+      <p id="p-00035-en" num="0034">
+        <figref>FIG. 2</figref> shows a flow chart illustrating the basic steps of a method for synthesising Guerbet alcohols from a starting material comprising one or more primary alcohols with a system according to <figref>FIG. 1</figref>.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00007-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00036-en" num="0035">
+        <figref>FIG. 1</figref> shows a simplified piping and instrumentation diagram of a process engineering system <b>100</b> for a synthesis of Guerbet alcohols from one or more primary alcohols.</p>
+      <p id="p-00037-en" num="0036">The synthesis itself takes place in reactor <b>10</b> comprising a feed port <b>11</b> for introducing feedstock into the reactor <b>10</b>, and a discharge port <b>12</b> for discharging material from the reactor <b>10</b>. The reactor <b>10</b> is further provided with a vapour outlet port <b>13</b> and a reflux inlet port <b>14</b>, both connected to a water separation unit <b>20</b>. In preferred embodiments, the reactor further comprises a base inlet port <b>15</b> and catalyst inlet port <b>16</b> for enabling a separate feeding of a base and/or a catalyst into the reactor. The reactor may have further ports (not shown in the Figure) that may be used for other purposes like process control and addition of further reactants, e.g. hydrogen that may be added to the reactor at a later stage of the reaction for facilitating the hydrogenation step in the reaction sequence of Guerbet alcohol formation, or hydrogen capture agents, such as olefins, that may be added at an earlier stage of the reaction to facilitate the formation of the intermediate aldehydes.</p>
+      <p id="p-00038-en" num="0037">The reactor can be a stirred tank reactor, a fixed bed reactor, a mobile bed reactor, a fluidized bed reactor with a homogeneous or heterogeneous catalyst, where the base can be either homogeneous or heterogeneous, and in the latter case can eventually be used as catalyst or as the support phase of an active catalyst.</p>
+      <p id="p-00039-en" num="0038">As explained above, the Guerbet reaction requires a multi-functional catalytic system for enabling a dehydrogenation and a hydrogenation, which are both promoted by a metallic and/or basic function, an aldolisation and a dehydration, which are promoted by acidic-basic properties. Upon a start of operation, the reactor <b>10</b> is therefore filled up to a certain level with a starting material of primary alcohols, a base, and a catalyst, whereby the mixture is heated to a process temperature above the boiling point of water under reaction conditions. The synthesis process can be carried out at atmospheric pressure (1 bar) or higher pressures, like for instance up to 10 bar or even higher, for example 20 bar, whereby higher pressures usually allow higher process temperatures for example temperatures up to 200° C. and even higher, e.g. 250° C.</p>
+      <p id="p-00040-en" num="0039">Since the water formed during the reaction may have a negative effect on the further progress of the reaction, it is continuously removed from the reactor. To this end, vapours including steam, i.e. water vapour, evolving during the reaction process are removed from the reactor through vapour outlet port <b>13</b> and fed into the water separation unit <b>20</b> via the unit's vapour inlet port <b>21</b>. The water separation unit <b>20</b> removes the water contained in the vapour received from the reactor <b>10</b>. The water separation unit <b>20</b> is further configured to recycle part of the alcohols present in the vapour received and to return these via the unit's alcohol outlet port <b>22</b> and the reactor's reflux inlet port <b>14</b> back into the reaction mixture located inside the reactor <b>10</b>. The separated water, usually still containing some of the light alcohols or other products originating from the reaction mixture, is discharged from the water separation unit through the water outlet port <b>23</b>. Examples for water separation units <b>20</b> are water separation columns, Dean-Stark traps, molecular sieves, membranes, or the like. Preferred are distillation separation columns, including rotating packed bed units (HiGee), heat integrated distillation units (HiDic) and any alternative technology suited for the separation of close boiling point compounds.</p>
+      <p id="p-00041-en" num="0040">Between reactor <b>10</b> and water separation unit <b>20</b>, or integrated in the water separation unit <b>20</b>, a separator (not shown in the figure), e.g. flash, column or purge/splitter, can be optionally provided for removing some light components, to facilitate the operation of the water separation unit <b>20</b>.</p>
+      <p id="p-00042-en" num="0041">In some embodiments, a stirrer (not shown in the Figure) is disposed within reactor <b>10</b> for stirring the reaction mixture and facilitating a separation between the liquid and the vapour phases in the reactor. The heating of the reaction can be accomplished using internal coils, a heating jacket, an external heat-exchanger with external recirculation, or any other suitable means.</p>
+      <p id="p-00043-en" num="0042">For separating the desired Guerbet alcohols, at least part of the reaction mixture is discharged from the reactor <b>10</b> via the discharge port <b>12</b>. When applying a batchwise synthesis process, the reaction is performed until completed, which, since the production of water decreases towards the end of the process, can be determined by monitoring the water content of the vapour fed into the water separation unit <b>20</b>. The end of the reaction is then determined when the production of water has sufficiently slowed down. Alternatively, the process will be ended when the desired reaction time has been reached, whereby the desired reaction time can be determined based on experiments and/or simulations. When applying a more continuous processing, part of the reaction mixture is removed from a certain stage of the reaction, and supplied to a separation system where the desired Guerbet alcohols are separated and the lighter alcohols returned to the reactor <b>10</b>. Once started, the removal of part of the reaction mixture can be effected on a continuous or discontinuous basis. Returning the alcohols lighter than the desired long-chain Guerbet alcohols to the reactor <b>10</b> reintroduces these alcohols into the reaction process to thereby increase the process yield with respect to the amount of primary alcohols used.</p>
+      <p id="p-00044-en" num="0043">Prior to a separation of the desired Guerbet alcohols from the other alcohols, the discharged reaction mixture is preferably processed in a first after-treatment system <b>30</b> adapted to remove the catalyst, the base and possibly degradation products of the former, such as salts formed by neutralization of the base. The separation of the catalyst from the discharged reaction mixture depends on the respective catalyst's properties. When using e.g. palladium(II)-acetate (Pd(OAc)<sub>2</sub>) as is preferred in some embodiments, the catalyst may be washed out with water allowing it to precipitate. The catalyst can then be filtered out, optionally dried, and returned to reactor <b>10</b> using catalyst inlet port <b>16</b> or can be eliminated from the process loop and regenerated into fresh catalyst. The homogeneous base may be removed using an acid, which may for example include an ion exchange resin or electrodialysis, and separating the resulting salt from the mixture. The resin may be regenerated by an acid wash. The first after-treatment system <b>30</b> may further also be configured to remove other solids from the discharged reaction mixture.</p>
+      <p id="p-00045-en" num="0044">Optionally an additional hydrogenation reactor (not shown in the figure) is provided downstream of the reactor <b>10</b>, e.g. downstream of the first after-treatment system <b>30</b>. The aim of this reactor is to complete the dehydration-hydrogenation of the reaction intermediates and to enrich the stream in Guerbet alcohols. Any conventional catalyst can be used for this step and preferably catalysts containing Ni, or a noble metal. A supplement of hydrogen (H<sub>2</sub>) is also fed to this reactor.</p>
+      <p id="p-00046-en" num="0045">When operating the system <b>100</b> in a continuous or stepwise continuous way, the amount of material discharged from the reactor is replaced in part by the lighter alcohols from the separation system <b>44</b> that are returned into the reactor, newly added feedstock, and the amounts of base and catalyst required for balancing the respective losses caused by the discharge of materials from the reactor <b>10</b>. While the base replacement is advantageously effected using base inlet port <b>15</b>, replenishment of the catalyst is preferably performed using catalyst inlet port <b>16</b>.</p>
+      <p id="p-00047-en" num="0046">For the separation of the desired Guerbet alcohols and the recovery of the alcohols to be returned to the reaction chamber <b>10</b>, a second after-treatment system <b>40</b> is used which comprises a liquid-liquid mixer-settler (or decanter) configuration <b>41</b>, a water column <b>42</b>, an alcohols column <b>43</b>, and an alcohols splitter column <b>44</b>.</p>
+      <p id="p-00048-en" num="0047">The liquid-liquid mixer-settler configuration <b>41</b> receives the output from the first after-treatment system <b>30</b> as well as the output from the water outlet port <b>23</b> of the water separation unit <b>20</b>. The latter is necessary, because it is not always possible to obtain a pure aqueous stream at the water outlet port <b>23</b> due to the water forming azeotropes with the alcohols received from the reactor <b>10</b> and the water concentration being subazeotropic. The azeotropic composition from the water outlet port <b>23</b> of the water separation unit <b>20</b> and the output from the first after-treatment system <b>30</b> are initially introduced into the mixer where a phase separation is expected to occur.</p>
+      <p id="p-00049-en" num="0048">The organic fraction from the settler is fed into to the alcohols column <b>43</b>, e.g. a stripping column, where the dried alcohols are obtained at the bottom while an azeotropic alcohol/water mixture is taken from the top, condensed, cooled and finally returned to the mixer. The operation of the alcohols column <b>43</b> is preferably effected under vacuum conditions (e.g. at 0.4 bar abs.) enabling a lowering of the working temperature of the reboilers.</p>
+      <p id="p-00050-en" num="0049">Optionally between the liquid-liquid mixer-settler <b>41</b> and the alcohols column <b>43</b>, there is an additional separation unit (not shown in the figure), as e.g. flash, column or purge/splitter, to avoid building-up of some light components.</p>
+      <p id="p-00051-en" num="0050">The aqueous fraction from the settler is fed into the water column <b>42</b>, e.g. a stripping column, where it is split into a water bottom stream representing the systems waste water and an azeotropic mixture on the top that is returned to the mixer after having been condensed and cooled. Also the water column <b>42</b> is preferably operated under vacuum conditions (e.g. at 0.4 bar abs.).</p>
+      <p id="p-00052-en" num="0051">The dried alcohols obtained at the bottom of the alcohols column <b>43</b> are separated by distillation in a single alcohols splitter column <b>44</b>, based on their respective differences in volatility. The lighter alcohols are returned to the reactor while the heavier ones are obtained as product or are used for further processing like for instance hydrogenation and/or dehydration. The average size of the thus separated products can be controlled by setting the separation characteristics of the column <b>44</b>.</p>
+      <p id="p-00053-en" num="0052">In the return loops described above, one or several systems can be provided to remove certain components which have the tendency to show ever increasing concentrations in this loop because they have no outlet and because they are not converted in the reactor, which have undesirable effects in the reactor or elsewhere in the loop, or which, through reaction, give rise to the formation of components having such undesirable effects. Such removal systems can be selective, e.g. distillation columns, or non-selective, i.e., simple purge streams.</p>
+      <p id="p-00054-en" num="0053">As feedstock starting materials composed of primary monofunctional alcohols are used. The starting materials can be of fossil origin or obtained from renewable resources. As materials from renewable resources, plant materials, materials of animal origin or materials resulting from recovered materials (recycled materials) may be used. Plant materials may be for example derived from sugar and/or starches containing plants, such as sugar cane, sugar beet, corn, wheat, potato, macro-algae and the like. The primary alcohols may be produced by fermentation from biomass using biocatalysts. The biocatalyst may be one or more microorganism (e.g. yeast, bacteria, fungi) capable of forming one or a mixture of two or more different alcohols. Fermentation methods and the respective microorganisms used for fermentation are known in the state of the art, and e.g. described in WO 2009/079213. Alcohols can also be mixed with ketones and aldehydes of biobased or fossil origin.</p>
+      <p id="p-00055-en" num="0054">When primary alcohols derived from biomass instead of petro-chemical origins are used, the carbon content of the resulting Guerbet alcohols originates from atmospheric carbon dioxide captured through photosynthesis, thus reducing the carbon dioxide impact on the environment caused by a consumption of the Guerbet alcohols. Alcohols derived from biomass conversion are called bio-alcohols. Bio-alcohols are thus identifiable by their <sup>14</sup>C content. Carbon taken from living organisms and in particular from plant matter used to manufacture bio-alcohols is a mixture of three isotopes, <sup>12</sup>C, <sup>13</sup>C, and <sup>14</sup>C, with the ratio of <sup>14</sup>C to <sup>12</sup>C being kept constant at 1.2·10<sup>−12 </sup>by the continuous exchange of the carbon with the environment. <sup>14</sup>C is radioactively unstable with its concentration therefore decreasing over time. With a half-life of 5,730 years, the <sup>14</sup>C content is, however, considered to be constant from the extraction of the plant matter up to the manufacture of bio-alcohols thereof and even up to the end of the bio alcohol's final use. An alcohol can be identified as bio-alcohol when the <sup>14</sup>C/<sup>12</sup>C ratio is strictly greater than zero and smaller than or equal to 1.2·10<sup>−12</sup>.</p>
+      <p id="p-00056-en" num="0055">The feedstock may contain acidic components, as it is for example known from bio-alcohols, compromising the performance of the Guerbet process through neutralisation of some of the alkaline components present in the reactor <b>10</b>. The feedstock may further contain ester components, which are preferably removed prior to being supplied to the reactor. Preferred embodiments of the system <b>100</b> therefore provide for a preparatory treatment of the feedstock prior to supplying the feedstock to reactor <b>10</b>. The preparatory treatment of the feedstock is performed in the pre-treatment facility <b>50</b> either by a process eliminating the presence of acids or esters by capture, e.g. ion exchange, or neutralisation, e.g. with an appropriate alkaline agent. Since water may be introduced into the feedstock through contact with an aqueous solution during an alkaline pre-treatment or may already have been part of the original feedstock, and since water is known to affect the Guerbet process, preferred embodiments of the pre-treatment facility <b>50</b> are further configured to remove water from the feedstock before it is fed into the reactor <b>10</b>. When only water needs to be removed from the reactant, this step can be combined with the dehydration of reaction products and fresh reactants can be fed to the unit <b>43</b> or <b>42</b> or <b>41</b> depending on their water content. When acids need to be removed from the reactant, this step can be combined with the hydrogenation—finishing step included between unit <b>30</b> and <b>41</b>, not shown on the figure.</p>
+      <p id="p-00057-en" num="0056">The Guerbet reaction enables a preparation of higher alcohols from light alcohols and in particular from bio-alcohols. The Guerbet reaction requires, however, a catalytic system providing a dehydrogenation, aldolisation, dehydration, and hydrogenation. The catalytic system is typically composed of a catalyst and a base.</p>
+      <p id="p-00058-en" num="0057">As catalysts homogeneous and heterogeneous metallic catalysts may be used. Homogenous catalysts have one catalytically active component while heterogeneous catalysts have more than one catalytically active component. An example for a homogeneous catalyst is Pd(Ac)<sub>2</sub>. Examples for heterogeneous metallic catalysts are Pd(2%)/C, Pt/C, Cu—Zn—O, Cu—Cr—O, alkali or alkaline earth doped oxides, hydrotalcites and hydroxylapatites doped with metals as for example Ni, Pd, Cu, Raney Ni, Ni—MgO/SiO<sub>2</sub>. Although the effect of the catalyst on the Guerbet reaction cannot be assessed isolated from the alkaline component of the catalytic system, a tendency has been observed that heterogeneous catalysts promote a formation of a greater variety of reaction products, while homogeneous catalysts boost a formation of particular reaction products. Heterogeneous catalysts and particularly Ni/MgO/SiO<sub>2 </sub>are preferred for the production of higher molecular weight Guerbet alcohols. Furthermore, heterogeneous catalysts like Ni/MgO/SiO<sub>2 </sub>facilitate the product separation.</p>
+      <p id="p-00059-en" num="0058">It has been found that a strong base is beneficial for the Guerbet process, particularly when performed with relative low temperatures at atmospheric pressure. In preferred embodiments of synthesising Guerbet alcohols from primary alcohols with a system <b>100</b> as described above, sodium tert-butoxide (t-BuONa) is used as alkaline component of the catalytic system. The reaction process can be carried out at atmospheric pressure with a process temperature of above 104° C., whereby temperatures corresponding to the boiling temperature of the alcohol mixture fed into the reactor <b>10</b> are preferred. Using for example a feedstock containing 2.9 wt % 1-propanol, 57.8 wt % 1-butanol, 23.7 wt % 1-pentanol, and 15.3 wt % 1 hexanol, the process temperature at atmospheric pressure would be set to about 125° C. At higher pressures, the temperature would be raised accordingly. When carrying out the Guerbet reaction at higher temperatures and pressures, adequate conversion rates may also be achieved with weaker bases, like KOH or NaOH.</p>
+      <p id="p-00060-en" num="0059">The amount of the alkaline component in the reaction mixture is not critical. For sodium tert-butoxide rather similar Guerbet conversion rates were found in batch reactors at low temperature for amounts of the base ranging from 4 to 20 wt % of the primary alcohol starting mixture, whereby Pd(Ac)<sub>2 </sub>has been used as catalyst in a concentration of 0.2 wt % with respect to the primary alcohol starting mixture. Lower catalyst concentrations have shown lower conversion rates. To achieve an adequate conversion rate with a proper base concentration throughout the process, a sodium tert-butoxide concentration of 8 wt % and a Pd(Ac)<sub>2 </sub>concentration of 0.2 wt %, both with respect to the primary alcohol mixture to be converted, is used in some embodiments, whereby care is taken that any water evolving during the reaction process is removed from the mixture in order to avoid an inhibition of the reaction.</p>
+      <p id="p-00061-en" num="0060">One or more primary alcohols of the formula RCH<sub>2</sub>CH<sub>2</sub>OH, where R is hydrogen or a straight or branched chain alkyl of 1 to 14 carbon atoms, are used as starting material for the Guerbet alcohol production. For example, multiple alcohols of different chain length and including secondary alcohols can be reacted. The use of alcohols with a carbon number of 4 or more, as for example 1-butanol, 1-pentanol and/or 1-hexanol, as starting material is preferred, whereby small amounts (as for example less than 10% by weight and particularly less than 5%) of 1-propanol may also be used advantageously in combination with one or more other starting alcohols.</p>
+      <p id="p-00062-en" num="0061">The primary alcohol(s) may also contain secondary alcohols, ketones and aldehydes, since the latter would be intermediate reaction products when alcohols are the primary reactants. When aldehydes and ketones are added as reactants, a supplement of hydrogen is necessary to finally hydrogenate the reaction products to alcohols.</p>
+      <p id="p-00063-en" num="0062">The Guerbet alcohols produced according to the above are a mixture of Guerbet alcohols, comprising a different number of carbon atoms in the chain and comprising at least a branching at the carbon atom adjacent to the carbon atom carrying the hydroxyl group.</p>
+      <p id="p-00064-en" num="0063">The chain length of a Guerbet alcohol produced according to the Guerbet reaction as described above depends in principle on the primary alcohol(s) used as a starting material. When e.g. n-butanol is used as a starting material, 2-ethyl-1-hexanol is produced. A mixture of Guerbet alcohols is produced according to the different possible condensation reactions, using a mixture of starting alcohols differing from each other in the number of carbon atoms. When starting for example with 1-butanol (C<sub>4</sub>) and 1-pentanol (C<sub>5</sub>), the reaction results 2-ethyl-1-hexanol (C<sub>8</sub>), 2-ethyl-1-heptanol (C<sub>9</sub>), 2-propyl-1-hexanol (C<sub>9</sub>), and 2-propyl-1-heptanol (C<sub>10</sub>). With a feeding of a larger number of diverse alcohols, a greater variety of Guerbet alcohols is obtained. Furthermore, when starting with branched primary alcohols and/or reacting Guerbet alcohols already produced in the reaction mixture, multi-branched Guerbet alcohols are formed.</p>
+      <p id="p-00065-en" num="0064">According to an advantageous embodiment, one or more of the Guerbet alcohols in the final mixture comprise two or more branches, particularly if it is the product of two or more subsequent condensation reactions. This further increases the variety of the Guerbet alcohols.</p>
+      <p id="p-00066-en" num="0065">In the following tables, a non-exhaustive listing of examples is given for Guerbet alcohols obtained using one type or different types of primary alcohols as starting materials according to the following reaction scheme:</p>
+      <p id="p-00067-en" num="0066">Alcohol 2→Aldehyde 2</p>
+      <p id="p-00068-en" num="0067">Aldehyde 2+Alcohol 1→Guerbet alcohol</p>
+      <p id="p-00069-en" num="0000">In the tables, the Guerbet alcohols are represented by the respective carbon number of the main chain and the kind and position of the substituent(s), the hydroxyl group of the alcohols being omitted in the table. The following abbreviations are used in the tables below: Me=methyl, diMe=dimethyl, triMe=trimethyl, Et=ethyl, Pr=propyl, iPr=—CH(CH<sub>3</sub>)<sub>2</sub>, Bu=butyl, iBu=—CH<sub>2</sub>CH(CH<sub>3</sub>)<sub>2</sub>, sBu=—CH(CH<sub>3</sub>)—CH<sub>2</sub>CH<sub>3</sub>, Pe=pentyl, A=amyl, iA=—CH<sub>2</sub>CH<sub>2</sub>CH(CH<sub>3</sub>)<sub>2</sub>, sA=—CH(CH<sub>3</sub>)—CH<sub>2</sub>CH<sub>2</sub>CH<sub>3</sub>, s′A=—CH<sub>2</sub>—CH(CH<sub>3</sub>)—CH<sub>2</sub>CH<sub>3</sub>, i=iso, s=sec, specifying the substituent's on the main chain of the Guerbet alcohol. The number preceding the substituent's gives the position of the substituent on the main chain. The number subsequent to “C” specifies the length of the main chain, i.e. stands for the number of carbon atoms in the main chain of the Guerbet alcohol with the hydroxyl group always in position 1 (primary alcohol). For example, 2MeC4 stands for 2-methyl-butanol, 2Et4MeC5 stands for 2-ethyl-4-methyl-1-pentanol, and 2iBu4MeC5 stands for 2-isobutyl-4-methyl-1-pentanol. X stands for a reaction which is either impossible or difficult.</p>
+      <p id="p-00070-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="266pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2a</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Guerbet reactions</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="left" />
+              <colspec colname="3" colwidth="35pt" align="left" />
+              <colspec colname="4" colwidth="35pt" align="left" />
+              <colspec colname="5" colwidth="42pt" align="left" />
+              <colspec colname="6" colwidth="35pt" align="left" />
+              <colspec colname="7" colwidth="35pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Methanol</entry>
+                  <entry>Ethanol</entry>
+                  <entry>Propanol</entry>
+                  <entry>Butanol</entry>
+                  <entry>Isobutanol</entry>
+                </row>
+                <row>
+                  <entry>Alcohol 2</entry>
+                  <entry>Alcohol 1</entry>
+                  <entry>C1</entry>
+                  <entry>C2</entry>
+                  <entry>C3</entry>
+                  <entry>C4</entry>
+                  <entry>iC4</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Methanol</entry>
+                  <entry>C1</entry>
+                  <entry>x</entry>
+                  <entry>Propanol</entry>
+                  <entry>2MeC3</entry>
+                  <entry>2MeC4</entry>
+                  <entry>x</entry>
+                </row>
+                <row>
+                  <entry>Ethanol</entry>
+                  <entry>C2</entry>
+                  <entry>x</entry>
+                  <entry>Butanol</entry>
+                  <entry>2MeC4</entry>
+                  <entry>2EtC4</entry>
+                  <entry>x</entry>
+                </row>
+                <row>
+                  <entry>Propanol</entry>
+                  <entry>C3</entry>
+                  <entry>x</entry>
+                  <entry>Pentanol</entry>
+                  <entry>2MeC5</entry>
+                  <entry>2EtC5</entry>
+                  <entry>x</entry>
+                </row>
+                <row>
+                  <entry>Butanol</entry>
+                  <entry>C4</entry>
+                  <entry>x</entry>
+                  <entry>C6</entry>
+                  <entry>2MeC6</entry>
+                  <entry>2EtC6</entry>
+                  <entry>x</entry>
+                </row>
+                <row>
+                  <entry>Isobutanol</entry>
+                  <entry>iC4</entry>
+                  <entry>x</entry>
+                  <entry>4MeC5</entry>
+                  <entry>2,4diMeC5</entry>
+                  <entry>2Et4MeC5</entry>
+                  <entry>x</entry>
+                </row>
+                <row>
+                  <entry>Pentanol</entry>
+                  <entry>C5</entry>
+                  <entry>x</entry>
+                  <entry>C7</entry>
+                  <entry>2MeC7</entry>
+                  <entry>2EtC7</entry>
+                  <entry>x</entry>
+                </row>
+                <row>
+                  <entry>2MethylBuOH</entry>
+                  <entry>2MeC4</entry>
+                  <entry>x</entry>
+                  <entry>4MeC6</entry>
+                  <entry>2,4diMeC6</entry>
+                  <entry>2Et4MeC6</entry>
+                  <entry>x</entry>
+                </row>
+                <row>
+                  <entry>3MethylBuOH</entry>
+                  <entry>3MeC4</entry>
+                  <entry>x</entry>
+                  <entry>5MeC6</entry>
+                  <entry>2,5diMeC6</entry>
+                  <entry>2Et5MeC6</entry>
+                  <entry>x</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00071-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2b</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Guerbet reactions</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="49pt" align="left" />
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="left" />
+              <colspec colname="3" colwidth="49pt" align="left" />
+              <colspec colname="4" colwidth="49pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Alcohol 1</entry>
+                  <entry>Pentanol</entry>
+                  <entry>2MethylBuOH</entry>
+                  <entry>3MethylBuOH</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="left" />
+              <colspec colname="3" colwidth="35pt" align="left" />
+              <colspec colname="4" colwidth="49pt" align="left" />
+              <colspec colname="5" colwidth="49pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>Alcohol2</entry>
+                  <entry />
+                  <entry>C5</entry>
+                  <entry>2MeC4</entry>
+                  <entry>3MeC4</entry>
+                </row>
+                <row>
+                  <entry>Methanol</entry>
+                  <entry>C1</entry>
+                  <entry>2MeC5</entry>
+                  <entry>x</entry>
+                  <entry>2,3DiMeC4</entry>
+                </row>
+                <row>
+                  <entry>Ethanol</entry>
+                  <entry>C2</entry>
+                  <entry>2EtC5</entry>
+                  <entry>x</entry>
+                  <entry>2Et3MeC4</entry>
+                </row>
+                <row>
+                  <entry>Propanol</entry>
+                  <entry>C3</entry>
+                  <entry>2PrC5</entry>
+                  <entry>x</entry>
+                  <entry>2Pr3MeC4</entry>
+                </row>
+                <row>
+                  <entry>Butanol</entry>
+                  <entry>C4</entry>
+                  <entry>2PrC6</entry>
+                  <entry>x</entry>
+                  <entry>2iPrC6</entry>
+                </row>
+                <row>
+                  <entry>Isobutanol</entry>
+                  <entry>iC4</entry>
+                  <entry>2Pr4MeC5</entry>
+                  <entry>x</entry>
+                  <entry>2iPr4MeC5</entry>
+                </row>
+                <row>
+                  <entry>Pentanol</entry>
+                  <entry>C5</entry>
+                  <entry>2PrC7</entry>
+                  <entry>x</entry>
+                  <entry>2iPrC7</entry>
+                </row>
+                <row>
+                  <entry>2MethylBuOH</entry>
+                  <entry>2MeC4</entry>
+                  <entry>2Pr4MeC6</entry>
+                  <entry>x</entry>
+                  <entry>2iPr4MeC6</entry>
+                </row>
+                <row>
+                  <entry>3MethylBuOH</entry>
+                  <entry>3MeC4</entry>
+                  <entry>2Pr5MeC6</entry>
+                  <entry>x</entry>
+                  <entry>2iPr5MeC6</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00072-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="308pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2c</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Guerbet reactions</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="84pt" align="left" />
+              <colspec colname="1" colwidth="224pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Hexanol</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="left" />
+              <colspec colname="3" colwidth="42pt" align="left" />
+              <colspec colname="4" colwidth="28pt" align="left" />
+              <colspec colname="5" colwidth="42pt" align="left" />
+              <colspec colname="6" colwidth="42pt" align="left" />
+              <colspec colname="7" colwidth="42pt" align="left" />
+              <colspec colname="8" colwidth="28pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>Alcohol 2</entry>
+                  <entry>Alcohol 1</entry>
+                  <entry>C6</entry>
+                  <entry>2MeC5</entry>
+                  <entry>3MeC5</entry>
+                  <entry>4MeC5</entry>
+                  <entry>2,3DiMeC4</entry>
+                  <entry>2EtC4</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Methanol</entry>
+                  <entry>C1</entry>
+                  <entry>2MeC6</entry>
+                  <entry>x</entry>
+                  <entry>2,3diMeC5</entry>
+                  <entry>2,4diMeC5</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                </row>
+                <row>
+                  <entry>Ethanol</entry>
+                  <entry>C2</entry>
+                  <entry>2EtC6</entry>
+                  <entry>x</entry>
+                  <entry>2Et3MeC5</entry>
+                  <entry>2Et4MeC5</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                </row>
+                <row>
+                  <entry>Propanol</entry>
+                  <entry>C3</entry>
+                  <entry>2PrC6</entry>
+                  <entry>x</entry>
+                  <entry>2Pr3MeC5</entry>
+                  <entry>2Pr4MeC5</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                </row>
+                <row>
+                  <entry>Butanol</entry>
+                  <entry>C4</entry>
+                  <entry>2BuC6</entry>
+                  <entry>x</entry>
+                  <entry>2Bu3MeC5</entry>
+                  <entry>2iBuC6</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                </row>
+                <row>
+                  <entry>Isobutanol</entry>
+                  <entry>iC4</entry>
+                  <entry>2Bu4MeC5</entry>
+                  <entry>x</entry>
+                  <entry>2iBu3MeC5</entry>
+                  <entry>2iBu4MeC5</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                </row>
+                <row>
+                  <entry>Pentanol</entry>
+                  <entry>C5</entry>
+                  <entry>2BuC7</entry>
+                  <entry>x</entry>
+                  <entry>2Pe3MeC5</entry>
+                  <entry>2Pe4MeC5</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                </row>
+                <row>
+                  <entry>2MethylBuOH</entry>
+                  <entry>2MeC4</entry>
+                  <entry>2Bu4MeC6</entry>
+                  <entry>x</entry>
+                  <entry>2sBu4MeC6</entry>
+                  <entry>2iBu4MeC6</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                </row>
+                <row>
+                  <entry>3MethylBuOH</entry>
+                  <entry>3MeC4</entry>
+                  <entry>2Bu5MeC6</entry>
+                  <entry>x</entry>
+                  <entry>2sBu5MeC6</entry>
+                  <entry>2iBu5MeC6</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00073-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="280pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2d</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Guerbet reactions</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="84pt" align="left" />
+              <colspec colname="1" colwidth="196pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Heptanol</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="left" />
+              <colspec colname="3" colwidth="42pt" align="left" />
+              <colspec colname="4" colwidth="28pt" align="left" />
+              <colspec colname="5" colwidth="42pt" align="left" />
+              <colspec colname="6" colwidth="42pt" align="left" />
+              <colspec colname="7" colwidth="42pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>Alcohol 2</entry>
+                  <entry>Alcohol 1</entry>
+                  <entry>C7</entry>
+                  <entry>2MeC6</entry>
+                  <entry>3MeC6</entry>
+                  <entry>4MeC6</entry>
+                  <entry>5MeC6</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Methanol</entry>
+                  <entry>C1</entry>
+                  <entry>2MeC7</entry>
+                  <entry>x</entry>
+                  <entry>2,3DiMeC6</entry>
+                  <entry>2,4DiMeC6</entry>
+                  <entry>2,5DiMeC6</entry>
+                </row>
+                <row>
+                  <entry>Ethanol</entry>
+                  <entry>C2</entry>
+                  <entry>2EtC7</entry>
+                  <entry>x</entry>
+                  <entry>2Et3MeC6</entry>
+                  <entry>2Et4MeC6</entry>
+                  <entry>2Et5MeC6</entry>
+                </row>
+                <row>
+                  <entry>Propanol</entry>
+                  <entry>C3</entry>
+                  <entry>2PrC7</entry>
+                  <entry>x</entry>
+                  <entry>2Pr3MeC6</entry>
+                  <entry>2Pr4MeC6</entry>
+                  <entry>2Pr5MeC6</entry>
+                </row>
+                <row>
+                  <entry>Butanol</entry>
+                  <entry>C4</entry>
+                  <entry>2BuC7</entry>
+                  <entry>x</entry>
+                  <entry>2Bu3MeC6</entry>
+                  <entry>2Bu4MeC6</entry>
+                  <entry>2Bu5MeC6</entry>
+                </row>
+                <row>
+                  <entry>Isobutanol</entry>
+                  <entry>iC4</entry>
+                  <entry>2iBuC7</entry>
+                  <entry>x</entry>
+                  <entry>2iBu3MeC6</entry>
+                  <entry>2iBu4MeC6</entry>
+                  <entry>2iBu5MeC6</entry>
+                </row>
+                <row>
+                  <entry>Pentanol</entry>
+                  <entry>C5</entry>
+                  <entry>2PeC7</entry>
+                  <entry>x</entry>
+                  <entry>2sAC7</entry>
+                  <entry>2s′AC7</entry>
+                  <entry>2iAC7</entry>
+                </row>
+                <row>
+                  <entry>2MethylBuOH</entry>
+                  <entry>2MeC4</entry>
+                  <entry>2Pe4MeC6</entry>
+                  <entry>x</entry>
+                  <entry>2sA4MeC6</entry>
+                  <entry>2s′A4MeC6</entry>
+                  <entry>2iA4MeC6</entry>
+                </row>
+                <row>
+                  <entry>3MethylBuOH</entry>
+                  <entry>3MeC4</entry>
+                  <entry>2Pe5MeC6</entry>
+                  <entry>x</entry>
+                  <entry>2sA5MeC6</entry>
+                  <entry>2s′A5MeC6</entry>
+                  <entry>2iA5MeC6</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00074-en" num="0000">
+        <tables id="tables-00005-en" num="00005">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="266pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2e</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Guerbet reactions</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="84pt" align="left" />
+              <colspec colname="1" colwidth="182pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Heptanol</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="left" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="42pt" align="center" />
+              <colspec colname="6" colwidth="56pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>Alcohol2</entry>
+                  <entry>Alcohol 1</entry>
+                  <entry>2,2diMeC5</entry>
+                  <entry>2,3diMeC5</entry>
+                  <entry>2,4diMeC5</entry>
+                  <entry>3,3diMeC5</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Methanol</entry>
+                  <entry>C1</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                  <entry>2,3,3TriMeC5</entry>
+                </row>
+                <row>
+                  <entry>Ethanol</entry>
+                  <entry>C2</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                  <entry>2Et3,3diMeC5</entry>
+                </row>
+                <row>
+                  <entry>Propanol</entry>
+                  <entry>C3</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                  <entry>2Pr3,3diMeC5</entry>
+                </row>
+                <row>
+                  <entry>Butanol</entry>
+                  <entry>C4</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                  <entry>2Bu3,3diMeC5</entry>
+                </row>
+                <row>
+                  <entry>Isobutanol</entry>
+                  <entry>iC4</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                  <entry>2iBu3,3diMeC5</entry>
+                </row>
+                <row>
+                  <entry>Pentanol</entry>
+                  <entry>C5</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                  <entry>2Pe3,3diMeC5</entry>
+                </row>
+                <row>
+                  <entry>2MethylBuOH</entry>
+                  <entry>2MeC4</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                  <entry>2sA3,3diMeC5</entry>
+                </row>
+                <row>
+                  <entry>3MethylBuOH</entry>
+                  <entry>3MeC4</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                  <entry>2iA3,3diMeC5</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00075-en" num="0000">
+        <tables id="tables-00006-en" num="00006">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="273pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2f</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Guerbet reactions</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="84pt" align="left" />
+              <colspec colname="1" colwidth="189pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Heptanol</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="left" />
+              <colspec colname="3" colwidth="56pt" align="left" />
+              <colspec colname="4" colwidth="56pt" align="left" />
+              <colspec colname="5" colwidth="49pt" align="left" />
+              <colspec colname="6" colwidth="28pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>Alcohol2</entry>
+                  <entry>Alcohol 1</entry>
+                  <entry>3,4diMeC5</entry>
+                  <entry>4,4diMeC5</entry>
+                  <entry>2,2,3TriMeC4</entry>
+                  <entry>2EtC5</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Methanol</entry>
+                  <entry>C1</entry>
+                  <entry>2,3,4TriMeC5</entry>
+                  <entry>2,4,4TriMeC5</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                </row>
+                <row>
+                  <entry>Ethanol</entry>
+                  <entry>C2</entry>
+                  <entry>2Et3,4diMeC5</entry>
+                  <entry>2Et4,4diMeC5</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                </row>
+                <row>
+                  <entry>Propanol</entry>
+                  <entry>C3</entry>
+                  <entry>2Pr3,4diMeC5</entry>
+                  <entry>2Pr4,4diMeC5</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                </row>
+                <row>
+                  <entry>Butanol</entry>
+                  <entry>C4</entry>
+                  <entry>2Bu3,4diMeC5</entry>
+                  <entry>2Bu4,4diMeC5</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                </row>
+                <row>
+                  <entry>Isobutanol</entry>
+                  <entry>iC4</entry>
+                  <entry>2iBu3,4diMeC5</entry>
+                  <entry>2iBu4,4diMeC5</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                </row>
+                <row>
+                  <entry>Pentanol</entry>
+                  <entry>C5</entry>
+                  <entry>2Pe3,4diMeC5</entry>
+                  <entry>2Pe4,4diMeC5</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                </row>
+                <row>
+                  <entry>2MethylBuOH</entry>
+                  <entry>2MeC4</entry>
+                  <entry>2sA3,4diMeC5</entry>
+                  <entry>2sA4,4diMeC5</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                </row>
+                <row>
+                  <entry>3MethylBuOH</entry>
+                  <entry>3MeC4</entry>
+                  <entry>2iA3,4diMeC5</entry>
+                  <entry>2iA4,4diMeC5</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00076-en" num="0000">
+        <tables id="tables-00007-en" num="00007">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="259pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2g</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Guerbet reactions</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="91pt" align="left" />
+              <colspec colname="1" colwidth="126pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Heptanol</entry>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="left" />
+              <colspec colname="3" colwidth="42pt" align="left" />
+              <colspec colname="4" colwidth="42pt" align="left" />
+              <colspec colname="5" colwidth="42pt" align="left" />
+              <colspec colname="6" colwidth="42pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>Alcohol2</entry>
+                  <entry>Alcohol 1</entry>
+                  <entry>3EtC5</entry>
+                  <entry>2Et2MeC4</entry>
+                  <entry>2Et3MeC4</entry>
+                  <entry>Octanol C8</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Methanol</entry>
+                  <entry>C1</entry>
+                  <entry>2Me3EtC5</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                  <entry>2MeC8</entry>
+                </row>
+                <row>
+                  <entry>Ethanol</entry>
+                  <entry>C2</entry>
+                  <entry>2Et3EtC5</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                  <entry>2EtC7</entry>
+                </row>
+                <row>
+                  <entry>Propanol</entry>
+                  <entry>C3</entry>
+                  <entry>2Pr3EtC5</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                  <entry>2PrC8</entry>
+                </row>
+                <row>
+                  <entry>Butanol</entry>
+                  <entry>C4</entry>
+                  <entry>2Bu3EtC5</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                  <entry>2BuC8</entry>
+                </row>
+                <row>
+                  <entry>Isobutanol</entry>
+                  <entry>iC4</entry>
+                  <entry>2iBu3EtC5</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                  <entry>2iBuC8</entry>
+                </row>
+                <row>
+                  <entry>Pentanol</entry>
+                  <entry>C5</entry>
+                  <entry>2Pe3EtC5</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                  <entry>2PeC8</entry>
+                </row>
+                <row>
+                  <entry>2MethylBuOH</entry>
+                  <entry>2MeC4</entry>
+                  <entry>2sA3EtC5</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                  <entry>2sAC8</entry>
+                </row>
+                <row>
+                  <entry>3MethylBuOH</entry>
+                  <entry>3MeC4</entry>
+                  <entry>2iA3EtC5</entry>
+                  <entry>x</entry>
+                  <entry>x</entry>
+                  <entry>2s′AC8</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00077-en" num="0068">The flow chart of <figref>FIG. 2</figref> illustrates the basic steps of a method <b>200</b> for synthesising a mixture of Guerbet alcohols from a one or more primary alcohols as described above. The method starts in step S<b>201</b> with the provision of one or more primary alcohols (e.g. a blend corresponding to the feedstock mentioned above) mixed with a base (e.g. sodium tert-butoxide) and a catalyst (e.g. a heterogeneous catalyst like Ni/MgO/SiO<sub>2 </sub>or a homogeneous catalyst like palladium(II)-acetate). The Guerbet conversion is enabled in step S<b>202</b> by heating the mixture to a desired process temperature at the desired pressure (e.g. 125° C. at about 1 bar or 200° C. at about 9 bar) with the water evolving during the process being removed on a permanent basis. Either after a predetermined time or depending on the water content of the vapour transferred to the water separation unit <b>20</b>—when the process is preferably operated in a continuous mode the contact time in the reaction section is constant and determined by the reactant flow—, part of the reaction mixture will be removed from the reactor <b>10</b> in step S<b>203</b>, with the mixture's alcohol components being separated from the base and catalyst components in the first after-treatment system in step S<b>203</b> and transferred to the second after-treatment in step S<b>204</b>. In the second after-treatment system, the alcohol components are further processed in step <b>205</b> for obtaining dried alcohol components with the dried alcohols then being split into those desired and those lighter than the desired ones in step <b>206</b>. The latter are in step S<b>207</b> then returned to the Guerbet reaction taking place within reactor <b>10</b>. The method may further comprise an optional step <b>208</b> compensating for the removed reaction mixture with appropriate amounts of new feedstock, base and catalyst, which may be performed simultaneously to one or more of the steps <b>203</b> to <b>207</b>, or like these on a continuous basis, when a continuous process of manufacture is desired.</p>
+      <p id="p-00078-en" num="0069">The present invention enables a large scale production of multi-branched Guerbet alcohols where the final distribution of Guerbet alcohols can be controlled by splitting the desired reaction products from the lighter ones and returning the latter into the reaction chamber for further reaction processing. Respective Guerbet alcohols may be used as additives for fuels like diesel or jet fuels, where they increase the electric conductivity and thus decrease the probability of ignition by static electricity. The Guerbet alcohols may further be used as precursors of esters such as acrylates, methacrylates, phthalates or the like. The Guerbet alcohols may further also be hydrodeoxygenated and possibly further refined for obtaining gasoline, diesel fuel or aviation gasoline and jet fuel constituents. The Guerbet alcohols may also be dehydrated to alpha-olefins, which can then be polymerized or oligomerized. The Guerbet alcohols may also be used for producing surfactants that are e.g. suited for utilisation in petroleum industry operations.</p>
+      <p id="p-00079-en" num="0070">The present invention includes the following numbered aspects, embodiments, and features, in any order and/or in any combination:</p>
+      <p id="p-00080-en" num="0071">1. A method for preparing a mixture of Guerbet alcohols, the method comprising:</p>
+      <p id="p-00081-en" num="0072">providing a starting material comprising one or more primary alcohols of the formula RCH<sub>2</sub>CH<sub>2</sub>OH, where R is hydrogen or a straight or branched chain alkyl of 1 to 14 carbon atoms;</p>
+      <p id="p-00082-en" num="0073">providing a base;</p>
+      <p id="p-00083-en" num="0074">providing a catalyst;</p>
+      <p id="p-00084-en" num="0075">mixing the starting material with the base and the catalyst and heating the thus obtained reaction mixture to a process temperature above the boiling point of water under reaction conditions while removing the water resulting from the thus obtained condensation and dehydration of the primary alcohols;</p>
+      <p id="p-00085-en" num="0076">removing at least part of the reaction mixture;</p>
+      <p id="p-00086-en" num="0077">separating the desired Guerbet alcohols from the removed part of the reaction mixture; and</p>
+      <p id="p-00087-en" num="0078">returning the other alcohols and optionally other intermediates from the removed part of the reaction mixture to the reaction mixture.</p>
+      <p id="p-00088-en" num="0079">2. The method of any preceding or following embodiment/feature/aspect, wherein the starting material further contains primary alcohols in which the carbon atom in beta-position is bonded to two or three alkyl groups, secondary alcohols, ketones and aldehydes, and hydrogen is added to the reaction mixture or the removed part of the reaction mixture.</p>
+      <p id="p-00089-en" num="0080">3. The method according to of any preceding or following embodiment/feature/aspect, wherein the starting material contains at least two primary alcohols selected from the group comprising n-propanol, n-butanol, n-pentanol, n-hexanol.</p>
+      <p id="p-00090-en" num="0081">4. The method to of any preceding or following embodiment/feature/aspect, wherein the base is selected from the group consisting of sodium tert-butoxide, potassium hydroxide, sodium hydroxide, and heterogeneous bases, which may optionally be doped.</p>
+      <p id="p-00091-en" num="0082">5. The method according to of any preceding or following embodiment/feature/aspect, wherein the catalyst is a homogenous catalyst or a heterogeneous catalyst selected from the group consisting of Pd(OAc)<sub>2</sub>, Pd/C, Pt/C, Cu—Zn—O, Cu—Cr—O, hydrotalcites and hydroxylapatites doped with metals, Raney Ni, and Ni—MgO/SiO<sub>2 </sub></p>
+      <p id="p-00092-en" num="0083">6. The method according to of any preceding or following embodiment/feature/aspect, wherein the catalyst is a solid heterogeneous catalyst provided in a fixed bed, or a slurry fluidized bed, or a mobile bed.</p>
+      <p id="p-00093-en" num="0084">7. The method according to of any preceding or following embodiment/feature/aspect, wherein the alcohols returned to the reaction mixture have a lower boiling point than the desired Guerbet alcohols.</p>
+      <p id="p-00094-en" num="0085">8. The method according to of any preceding or following embodiment/feature/aspect, wherein the process temperature corresponds to the boiling point of the starting material under reaction conditions.</p>
+      <p id="p-00095-en" num="0086">9. The method according to of any preceding or following embodiment/feature/aspect, wherein the reaction process is performed at a pressure in the range of 1 to 20 bar.</p>
+      <p id="p-00096-en" num="0087">10. The method according to of any preceding or following embodiment/feature/aspect, wherein the starting material is pre-treated with respect to removing acidic components, ester components, water, or a combination thereof, prior to being fed to mixing.</p>
+      <p id="p-00097-en" num="0088">11. A system for synthesising Guerbet alcohols from a starting material according to the method of any preceding or following embodiment/feature/aspect, wherein the system comprising:</p>
+      <p id="p-00098-en" num="0089">a reactor adapted for receiving the starting material, a base, and a catalyst to form a reaction mixture, and for heating the reaction mixture to a temperature above the boiling point of water under reaction conditions to obtain a Guerbet condensation and dehydration process;</p>
+      <p id="p-00099-en" num="0090">a water separation unit connected to the reactor and adapted to receive from the reactor vapor evolving in the progress of the Guerbet condensation process, and to remove water from the vapor; and an after-treatment system connected to the reactor and adapted to receive from the reactor at least part of the reaction mixture, separating the desired Guerbet alcohols from the removed part of the reaction mixture, and returning the other alcohols and optionally other intermediates from the removed part of the reaction mixture to the reactor.</p>
+      <p id="p-00100-en" num="0091">12. The system according to of any preceding or following embodiment/feature/aspect, wherein the reactor is one of a stirred tank reactor, a fixed bed reactor, a mobile bed reactor, and a fluidized bed reactor.</p>
+      <p id="p-00101-en" num="0092">13. The system according to of any preceding or following embodiment/feature/aspect, wherein the after-treatment system comprises a first after-treatment system adapted to separate a catalytic component and an alkaline component from the part of the reaction mixture received from the reactor, and a second after-treatment system connected to the first after-treatment system and adapted to separate the desired Guerbet alcohols from the part of the reaction mixture treated by the first after-treatment system and to return the other alcohols from the part of the reaction mixture treated by the first after-treatment system, to the reactor.</p>
+      <p id="p-00102-en" num="0093">14. The system according to of any preceding or following embodiment/feature/aspect, wherein wherein the second after-treatment system comprises a liquid-liquid mixer-settler configuration adapted to receive the reaction mixture treated by the first after-treatment system and to provide a phase separation of the components present in the mixture, an alcohols column adapted to receive the primarily alcohol components containing phase from the liquid-liquid mixer-settler configuration and to dry the alcohol components, and an alcohols splitter column connected to the alcohols column and the reactor, and being adapted to separate the desired Guerbet alcohols from the dried alcohol components and to return the remaining dried alcohols to the reactor.</p>
+      <p id="p-00103-en" num="0094">15. The system according to of any preceding or following embodiment/feature/aspect, wherein the second after-treatment system further comprises a water column adapted to receive the primarily water containing phase from the liquid-liquid mixer-settler configuration, separate water from the primarily water containing phase, and return alcohols containing water to the liquid-liquid mixer-settler configuration.</p>
+      <p id="p-00104-en" num="0095">16. The system according to of any preceding or following embodiment/feature/aspect, wherein the water separation unit is further adapted to return the vapor components different than the separated water, to the reactor, and to provide the still alcohols containing separated water to the liquid-liquid mixer-settler configuration.</p>
+      <p id="p-00105-en" num="0096">17. The system according to of any preceding or following embodiment/feature/aspect, further comprising a pre-treatment facility adapted to remove acidic components, ester components, water, or a combination thereof, from the starting material prior to supplying the starting material to the reactor.</p>
+      <p id="p-00106-en" num="0097">18. The method of of any preceding or following embodiment/feature/aspect, further comprising adding the mixture of Guerbet alcohols to a gasoline, diesel fuel, aviation gasoline, jet fuel, or a combination thereof.</p>
+      <p id="p-00107-en" num="0098">19. The method of of any preceding or following embodiment/feature/aspect, further comprising processing the mixture of Guerbet alcohols optionally with other components to form a surfactant, an alpha-olefin, an alpha-olefin polymer, an alpha-olefin oligomer, or a combination thereof.</p>
+      <heading id="h-00008-en" level="1">EXAMPLES</heading>
+      <p id="p-00108-en" num="0099">The below examples have been obtained by simulations based on the system illustrated in the piping and instrumentation diagram shown in <figref>FIG. 1</figref>. The simulations have been carried out using the Aspen Plus® chemical modelling system from Aspen Technology Inc., USA. The simulation results are summarised in the tables below, listing the process parameters together with the mass flow of several reactants, intermediate products, and products at different positions of the system illustrated in <figref>FIG. 1</figref>. The positions, which are referred to as checkpoints in the tables, are indicated in <figref>FIG. 1</figref> by “measurement point” symbols a to h.</p>
+      <heading id="h-00009-en" level="1">Example 1</heading>
+      <p id="p-00109-en" num="0100">In this example, the simulation has the reactor operated at substantially atmospheric pressure and at a temperature of about 125° C. As starting material, a blend of primary alcohols is used, containing 2.9 wt % 1-propanol, 57.8 wt % 1-butanol, 23.7 wt % 1-pentanol, and 15.3 wt % 1-hexanol. The starting material is provided at an elevated pressure for facilitating the feeding of the reactor. Since the low temperature results in slow reaction kinetics, a stronger base was required; therefore sodium tert-butoxide has been used. The results for the simulation are shown below in the Table SL1.</p>
+      <p id="p-00110-en" num="0000">
+        <tables id="tables-00008-en" num="00008">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="70pt" align="left" />
+              <colspec colname="1" colwidth="28pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="35pt" align="center" />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <colspec colname="8" colwidth="28pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="8" rowsep="1">TABLE SL1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="8" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>a</entry>
+                  <entry>b</entry>
+                  <entry>c</entry>
+                  <entry>d</entry>
+                  <entry>e</entry>
+                  <entry>f</entry>
+                  <entry>g</entry>
+                  <entry>h</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="8" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="char" char="." />
+              <colspec colname="3" colwidth="35pt" align="char" char="." />
+              <colspec colname="4" colwidth="35pt" align="char" char="." />
+              <colspec colname="5" colwidth="35pt" align="char" char="." />
+              <colspec colname="6" colwidth="28pt" align="char" char="." />
+              <colspec colname="7" colwidth="35pt" align="char" char="." />
+              <colspec colname="8" colwidth="28pt" align="char" char="." />
+              <colspec colname="9" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Checkpoint</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Temperature in ° C.</entry>
+                  <entry>125</entry>
+                  <entry>125</entry>
+                  <entry>125</entry>
+                  <entry>50</entry>
+                  <entry>47</entry>
+                  <entry>99</entry>
+                  <entry>111</entry>
+                  <entry>176</entry>
+                </row>
+                <row>
+                  <entry>Pressure in bar</entry>
+                  <entry>3</entry>
+                  <entry>1.01</entry>
+                  <entry>1.01</entry>
+                  <entry>1.01</entry>
+                  <entry>0.4</entry>
+                  <entry>1.01</entry>
+                  <entry>1.01</entry>
+                  <entry>1.01</entry>
+                </row>
+                <row>
+                  <entry>Mole Flow in kmol/h</entry>
+                  <entry>137.6</entry>
+                  <entry>312.4</entry>
+                  <entry>160.3</entry>
+                  <entry>160.3</entry>
+                  <entry>67.7</entry>
+                  <entry>189.2</entry>
+                  <entry>110.7</entry>
+                  <entry>78.6</entry>
+                </row>
+                <row>
+                  <entry>Mass Flow in kg/h</entry>
+                  <entry>11002</entry>
+                  <entry>20773</entry>
+                  <entry>15784</entry>
+                  <entry>15784</entry>
+                  <entry>1348</entry>
+                  <entry>17981</entry>
+                  <entry>8092</entry>
+                  <entry>9889</entry>
+                </row>
+                <row>
+                  <entry>Mass Flow in kg/h</entry>
+                </row>
+                <row>
+                  <entry>C2 alcohol</entry>
+                  <entry>0.2</entry>
+                  <entry>0.5</entry>
+                  <entry>0.1</entry>
+                  <entry>0.1</entry>
+                  <entry>0.4</entry>
+                  <entry>0.2</entry>
+                  <entry>0.2</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry>C3 alcohol</entry>
+                  <entry>317</entry>
+                  <entry>1891</entry>
+                  <entry>382</entry>
+                  <entry>382</entry>
+                  <entry>41</entry>
+                  <entry>1270</entry>
+                  <entry>1269</entry>
+                  <entry>1</entry>
+                </row>
+                <row>
+                  <entry>C4 alcohol</entry>
+                  <entry>6364</entry>
+                  <entry>12343</entry>
+                  <entry>4124</entry>
+                  <entry>4124</entry>
+                  <entry>101</entry>
+                  <entry>5358</entry>
+                  <entry>5331</entry>
+                  <entry>27</entry>
+                </row>
+                <row>
+                  <entry>C5 alcohol</entry>
+                  <entry>2607</entry>
+                  <entry>3582</entry>
+                  <entry>2019</entry>
+                  <entry>2019</entry>
+                  <entry>2</entry>
+                  <entry>2193</entry>
+                  <entry>1274</entry>
+                  <entry>919</entry>
+                </row>
+                <row>
+                  <entry>C6 alcohol</entry>
+                  <entry>1682</entry>
+                  <entry>614</entry>
+                  <entry>1047</entry>
+                  <entry>1047</entry>
+                  <entry>3</entry>
+                  <entry>1047</entry>
+                  <entry>52</entry>
+                  <entry>995</entry>
+                </row>
+                <row>
+                  <entry>C7 alcohol</entry>
+                  <entry>0</entry>
+                  <entry>76</entry>
+                  <entry>250</entry>
+                  <entry>250</entry>
+                  <entry>0</entry>
+                  <entry>250</entry>
+                  <entry>1</entry>
+                  <entry>250</entry>
+                </row>
+                <row>
+                  <entry>C8 alcohol</entry>
+                  <entry>0</entry>
+                  <entry>646</entry>
+                  <entry>4469</entry>
+                  <entry>4469</entry>
+                  <entry>1</entry>
+                  <entry>4469</entry>
+                  <entry>0</entry>
+                  <entry>4469</entry>
+                </row>
+                <row>
+                  <entry>C9 alcohol</entry>
+                  <entry>0</entry>
+                  <entry>113</entry>
+                  <entry>1764</entry>
+                  <entry>1764</entry>
+                  <entry>0</entry>
+                  <entry>1764</entry>
+                  <entry>0</entry>
+                  <entry>1764</entry>
+                </row>
+                <row>
+                  <entry>C10 alcohol</entry>
+                  <entry>0</entry>
+                  <entry>59</entry>
+                  <entry>1457</entry>
+                  <entry>1457</entry>
+                  <entry>0</entry>
+                  <entry>1457</entry>
+                  <entry>0</entry>
+                  <entry>1457</entry>
+                </row>
+                <row>
+                  <entry>Water</entry>
+                  <entry>0</entry>
+                  <entry>983</entry>
+                  <entry>84</entry>
+                  <entry>84</entry>
+                  <entry>1176</entry>
+                  <entry>9</entry>
+                  <entry>9</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry>2-Buten-1-ol</entry>
+                  <entry>32.2</entry>
+                  <entry>464.8</entry>
+                  <entry>187.4</entry>
+                  <entry>187.4</entry>
+                  <entry>23.7</entry>
+                  <entry>165</entry>
+                  <entry>156.2</entry>
+                  <entry>8.8</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables> As can be seen from Table SL1, the reaction can be operated with recycling of the unconverted light compounds. The mass yield of the reaction reaches 90% looking at mass flow rate of product released in h versus mass flow rate of reactants in a. The product distribution contains a low amount of C4 alcohols but some C5 alcohols. The process could have been adjusted to recycle more C5 alcohols to the reactor and so the product would contain less C5 alcohols. </p>
+      <heading id="h-00010-en" level="1">Example 2</heading>
+      <p id="p-00111-en" num="0101">In this example, the simulation has the reactor operated at a pressure of substantially 9.0 bar abs. enabling an operation at a temperature of about 200° C. without excessive evaporation of the components present in the reaction medium. As starting material, again a blend of primary alcohols is used, containing 2.9 wt % 1-propanol, 57.8 wt % 1-butanol, 23.7 wt % 1-pentanol, and 15.3 wt % 1-hexanol. The starting material is provided at an elevated pressure for facilitating a feeding of the reactor. Since the higher temperature results in faster reaction kinetics, it was possible to use a weak base like NaOH or KOH. The results for the simulation are shown below in the Table SL2.</p>
+      <p id="p-00112-en" num="0000">
+        <tables id="tables-00009-en" num="00009">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="70pt" align="left" />
+              <colspec colname="1" colwidth="28pt" align="center" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="35pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="7" rowsep="1">TABLE SL2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="7" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>a</entry>
+                  <entry>b</entry>
+                  <entry>c</entry>
+                  <entry>e</entry>
+                  <entry>f</entry>
+                  <entry>g</entry>
+                  <entry>h</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="7" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="char" char="." />
+              <colspec colname="3" colwidth="28pt" align="char" char="." />
+              <colspec colname="4" colwidth="28pt" align="char" char="." />
+              <colspec colname="5" colwidth="28pt" align="char" char="." />
+              <colspec colname="6" colwidth="35pt" align="char" char="." />
+              <colspec colname="7" colwidth="28pt" align="char" char="." />
+              <colspec colname="8" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Checkpoint</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Temperature in ° C.</entry>
+                  <entry>189</entry>
+                  <entry>203</entry>
+                  <entry>203</entry>
+                  <entry>47</entry>
+                  <entry>99</entry>
+                  <entry>112</entry>
+                  <entry>176</entry>
+                </row>
+                <row>
+                  <entry>Pressure in bar</entry>
+                  <entry>10</entry>
+                  <entry>9</entry>
+                  <entry>9</entry>
+                  <entry>0.4</entry>
+                  <entry>1.01</entry>
+                  <entry>1.01</entry>
+                  <entry>1.01</entry>
+                </row>
+                <row>
+                  <entry>Mole Flow in kmol/h</entry>
+                  <entry>137.6</entry>
+                  <entry>349.4</entry>
+                  <entry>179.3</entry>
+                  <entry>68</entry>
+                  <entry>202.7</entry>
+                  <entry>124.1</entry>
+                  <entry>78.6</entry>
+                </row>
+                <row>
+                  <entry>Mass Flow in kg/h</entry>
+                  <entry>11002</entry>
+                  <entry>24280</entry>
+                  <entry>16802</entry>
+                  <entry>1357</entry>
+                  <entry>19082</entry>
+                  <entry>9196</entry>
+                  <entry>9886</entry>
+                </row>
+                <row>
+                  <entry>Mass Flow in kg/h</entry>
+                </row>
+                <row>
+                  <entry>C2 alcohol</entry>
+                  <entry>0.2</entry>
+                  <entry>0.3</entry>
+                  <entry>0.3</entry>
+                  <entry>0.5</entry>
+                  <entry>0.3</entry>
+                  <entry>0.3</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry>C3 alcohol</entry>
+                  <entry>317</entry>
+                  <entry>2113</entry>
+                  <entry>570</entry>
+                  <entry>29</entry>
+                  <entry>972</entry>
+                  <entry>971</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry>C4 alcohol</entry>
+                  <entry>6364</entry>
+                  <entry>13844</entry>
+                  <entry>5151</entry>
+                  <entry>118</entry>
+                  <entry>6534</entry>
+                  <entry>6502</entry>
+                  <entry>33</entry>
+                </row>
+                <row>
+                  <entry>C5 alcohol</entry>
+                  <entry>2607</entry>
+                  <entry>4805</entry>
+                  <entry>1741</entry>
+                  <entry>2</entry>
+                  <entry>2428</entry>
+                  <entry>1509</entry>
+                  <entry>919</entry>
+                </row>
+                <row>
+                  <entry>C6 alcohol</entry>
+                  <entry>1682</entry>
+                  <entry>752</entry>
+                  <entry>1046</entry>
+                  <entry>2</entry>
+                  <entry>1045</entry>
+                  <entry>52</entry>
+                  <entry>993</entry>
+                </row>
+                <row>
+                  <entry>C7 alcohol</entry>
+                  <entry>0</entry>
+                  <entry>94</entry>
+                  <entry>238</entry>
+                  <entry>0</entry>
+                  <entry>238</entry>
+                  <entry>0</entry>
+                  <entry>238</entry>
+                </row>
+                <row>
+                  <entry>C8 alcohol</entry>
+                  <entry>0</entry>
+                  <entry>1111</entry>
+                  <entry>4481</entry>
+                  <entry>1</entry>
+                  <entry>4480</entry>
+                  <entry>0</entry>
+                  <entry>4480</entry>
+                </row>
+                <row>
+                  <entry>C9 alcohol</entry>
+                  <entry>0</entry>
+                  <entry>205</entry>
+                  <entry>1754</entry>
+                  <entry>0</entry>
+                  <entry>1754</entry>
+                  <entry>0</entry>
+                  <entry>1754</entry>
+                </row>
+                <row>
+                  <entry>C10 alcohol</entry>
+                  <entry>0</entry>
+                  <entry>119</entry>
+                  <entry>1460</entry>
+                  <entry>0</entry>
+                  <entry>1460</entry>
+                  <entry>0</entry>
+                  <entry>1460</entry>
+                </row>
+                <row>
+                  <entry>Water</entry>
+                  <entry>0</entry>
+                  <entry>886</entry>
+                  <entry>179</entry>
+                  <entry>1181</entry>
+                  <entry>10</entry>
+                  <entry>10</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry>2-Buten-1-ol</entry>
+                  <entry>32.2</entry>
+                  <entry>350.8</entry>
+                  <entry>182.3</entry>
+                  <entry>23</entry>
+                  <entry>160.4</entry>
+                  <entry>150.9</entry>
+                  <entry>9.5</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables> As can be seen from a comparison with Table SL1, in this configuration the reaction temperatures are higher but the downstream processing is done at the same temperature. This allows to have faster reactions and to reduce the size of the reactors accordingly, generating a capital cost advantage. In addition in this configuration, the mass yield is still around 90% and the product distribution remains unaffected. The overall process designed with its recycles and features allow to operate with a high yield. </p>
+      <heading id="h-00011-en" level="1">Example 3</heading>
+      <p id="p-00113-en" num="0102">In this example, the simulation has been carried out on a system modified with respect to that shown in <figref>FIG. 1</figref>. The modifications are designed to enable a system performing the Guerbet conversion with a starting material composed of a blend of primary alcohols as used in above examples 1 and 2 and a supplement of aldehydes. The addition of aldehydes is reflected in the simulation by an extra reaction butanol butyraldehyde. The modifications concern an added feed of ethylene for hydrogen capture to the reactor, a separator between the reactor <b>10</b> and the water column for removing the ethane from the vapour supplied to the water column <b>20</b>, a post treatment unit (located with respect to <figref>FIG. 1</figref> between the first after-treatment system <b>30</b> and checkpoint d) for hydrogenating the output from the first after-treatment system <b>30</b>, and separators downstream of the alcohols column <b>43</b> and the alcohols splitter column <b>44</b> for removing by-products from the respective streams. The results for the simulation are shown below in the Table SL3.</p>
+      <p id="p-00114-en" num="0000">
+        <tables id="tables-00010-en" num="00010">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="70pt" align="left" />
+              <colspec colname="1" colwidth="35pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <colspec colname="5" colwidth="35pt" align="center" />
+              <colspec colname="6" colwidth="35pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="6" rowsep="1">TABLE SL3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="6" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>a</entry>
+                  <entry>b</entry>
+                  <entry>d</entry>
+                  <entry>e</entry>
+                  <entry>g</entry>
+                  <entry>h</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="6" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="char" char="." />
+              <colspec colname="3" colwidth="35pt" align="char" char="." />
+              <colspec colname="4" colwidth="35pt" align="char" char="." />
+              <colspec colname="5" colwidth="35pt" align="char" char="." />
+              <colspec colname="6" colwidth="35pt" align="char" char="." />
+              <colspec colname="7" colwidth="35pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Checkpoint</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Temperature in ° C.</entry>
+                  <entry>125</entry>
+                  <entry>125</entry>
+                  <entry>125</entry>
+                  <entry>52.3</entry>
+                  <entry>111.5</entry>
+                  <entry>174.9</entry>
+                </row>
+                <row>
+                  <entry>Pressure in bar</entry>
+                  <entry>3</entry>
+                  <entry>1.013</entry>
+                  <entry>1.013</entry>
+                  <entry>0.4</entry>
+                  <entry>1.013</entry>
+                  <entry>1.013</entry>
+                </row>
+                <row>
+                  <entry>Mole Flow in kmol/h</entry>
+                  <entry>137.6</entry>
+                  <entry>324.0</entry>
+                  <entry>164.1</entry>
+                  <entry>64.8</entry>
+                  <entry>115.0</entry>
+                  <entry>78.7</entry>
+                </row>
+                <row>
+                  <entry>Mass Flow in kg/h</entry>
+                  <entry>11002</entry>
+                  <entry>21624</entry>
+                  <entry>16056</entry>
+                  <entry>1262</entry>
+                  <entry>8398</entry>
+                  <entry>9884</entry>
+                </row>
+                <row>
+                  <entry>Mass Flow in kg/h</entry>
+                </row>
+                <row>
+                  <entry>C2 alcohol</entry>
+                  <entry>0.15</entry>
+                  <entry>0.34</entry>
+                  <entry>0.05</entry>
+                  <entry>0.34</entry>
+                  <entry>0.12</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry>C3 alcohol</entry>
+                  <entry>316.9</entry>
+                  <entry>1824.9</entry>
+                  <entry>345.7</entry>
+                  <entry>32.9</entry>
+                  <entry>1252.3</entry>
+                  <entry>0.278</entry>
+                </row>
+                <row>
+                  <entry>C4 alcohol</entry>
+                  <entry>6363.8</entry>
+                  <entry>12308.3</entry>
+                  <entry>4119.5</entry>
+                  <entry>77.7</entry>
+                  <entry>5315.5</entry>
+                  <entry>26.7</entry>
+                </row>
+                <row>
+                  <entry>C5 alcohol</entry>
+                  <entry>2607.1</entry>
+                  <entry>3426.3</entry>
+                  <entry>1999.4</entry>
+                  <entry>2.1</entry>
+                  <entry>1225.8</entry>
+                  <entry>941.9</entry>
+                </row>
+                <row>
+                  <entry>C6 alcohol</entry>
+                  <entry>1681.9</entry>
+                  <entry>632.4</entry>
+                  <entry>1051.1</entry>
+                  <entry>2.0</entry>
+                  <entry>52.6</entry>
+                  <entry>998.5</entry>
+                </row>
+                <row>
+                  <entry>C7 alcohol</entry>
+                  <entry>0</entry>
+                  <entry>78.0</entry>
+                  <entry>250.11</entry>
+                  <entry>0.06</entry>
+                  <entry>0.52</entry>
+                  <entry>249.5</entry>
+                </row>
+                <row>
+                  <entry>C8 alcohol</entry>
+                  <entry>0</entry>
+                  <entry>674.7</entry>
+                  <entry>4452.4</entry>
+                  <entry>0.46</entry>
+                  <entry>0.18</entry>
+                  <entry>4451.2</entry>
+                </row>
+                <row>
+                  <entry>C9 alcohol</entry>
+                  <entry>0</entry>
+                  <entry>121.91</entry>
+                  <entry>1755.4</entry>
+                  <entry>0.02</entry>
+                  <entry>0.001</entry>
+                  <entry>1754.9</entry>
+                </row>
+                <row>
+                  <entry>C10 alcohol</entry>
+                  <entry>0</entry>
+                  <entry>6é; à</entry>
+                  <entry>1441.6</entry>
+                  <entry>0.07</entry>
+                  <entry>0</entry>
+                  <entry>1441.2</entry>
+                </row>
+                <row>
+                  <entry>C2H6</entry>
+                  <entry>0</entry>
+                  <entry>2.57</entry>
+                  <entry>0.004</entry>
+                  <entry>3.994</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry>H2O</entry>
+                  <entry>0</entry>
+                  <entry>981.3</entry>
+                  <entry>80.6</entry>
+                  <entry>1133.4</entry>
+                  <entry>9.14</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry>ethylene</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry>butanal</entry>
+                  <entry>0</entry>
+                  <entry>2.90</entry>
+                  <entry>0</entry>
+                  <entry>4.02</entry>
+                  <entry>0.11</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry>buten-1-ol</entry>
+                  <entry>32.15</entry>
+                  <entry>1506.4</entry>
+                  <entry>558.4</entry>
+                  <entry>5.89</entry>
+                  <entry>541.6</entry>
+                  <entry>18.6</entry>
+                </row>
+                <row>
+                  <entry>2-ethyl hexenal</entry>
+                  <entry>0</entry>
+                  <entry>1.96</entry>
+                  <entry>0.87</entry>
+                  <entry>0.001</entry>
+                  <entry>0.07</entry>
+                  <entry>0.80</entry>
+                </row>
+                <row>
+                  <entry>2-Ethyl hexanal</entry>
+                  <entry>0</entry>
+                  <entry>0.17</entry>
+                  <entry>1.06</entry>
+                  <entry>0.001</entry>
+                  <entry>0.18</entry>
+                  <entry>0.88</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables> In this example, a reactor (additional finishing hydrogenation reactor) is included between points c and d. The conversion of butanal to butanol, 2-ethylhexenal to 2-ethylhexanal, and of the latter to 2-ethylhexanol have been assumed with partial conversion in some cases. Results show that the process can still be effective if aldehydes are present in the feedstock, injected for example within the loop or formed by the reaction. Aldehydes do not accumulate and are either reacted in the reactor or hydrogenated to alcohols. In this simulation light aldehydes, which are also fast reacting reaction intermediates, such as n-butanal present in stream g, are converted in reactor <b>10</b>, where they have been fed, injected or formed. If not converted, these lighter aldehydes would tend to accumulate in the loop between liquid-liquid mixer-settler (or decanter) <b>41</b> and alcohols column <b>43</b>. This could be prevented by partly or fully returning them back to the reactor upon their removal from the loop by separation or purging. Heavier aldehydes such as 2-ethyl hexenal and 2-ethyl hexanal would tend to leave the reactor by outlet <b>12</b>. So in absence of a hydrogenation finishing reactor most of them leave the process by product stream h, thus contaminating it. When their concentration exceeds the tolerances, a finishing reactor has to be deployed to convert them into alcohols by a hydrogenation between point c and point d under sufficiently stringent conditions. </p>
+      <p id="p-00115-en" num="0103">It is apparent that variations and modifications to the present teachings are possible without departing from its scope and spirit. It is therefore to be understood that the appended claims are to be construed as encompassing all features of patentable novelty that reside in the present teachings, including all features that would be treated as equivalent thereof by those skilled in the art to which the present teachings pertain. All US, International, and foreign patents and publications, as well as non-patent literature, referred to herein are hereby incorporated herein by reference in their entireties. All publications, patents, and patent applications mentioned in this specification are herein incorporated by reference to the same extent as if each individual publication, patent, or patent application was specifically and individually indicated to be incorporated by reference.</p>
+      <p id="p-00116-en" num="0104">While embodiments of the present teachings have been shown and described herein, it will be apparent to those skilled in the art that such embodiments are provided by way of example only. Numerous variations, changes, and substitutions will now occur to those skilled in the art without departing from the present teachings. It is to be understood that various alternatives to the embodiments of the disclosure described herein may be employed in practicing the present teachings. It is intended that the following claims define the scope of the present teachings and that methods and structures within the scope of these claims and their equivalents be covered thereby.</p>
+      <heading id="h-00012-en" level="1">LIST OF REFERENCE SIGNS</heading>
+      <p id="p-00117-en" num="0000">
+        <ul id="ul-00001-en" list-style="none">
+          <li>
+            <b>100</b> process engineering system for a synthesis of Guerbet alcohols from a mixture of primary alcohols</li>
+          <li>
+            <b>10</b> reactor</li>
+          <li>
+            <b>11</b> feed port</li>
+          <li>
+            <b>12</b> discharge port</li>
+          <li>
+            <b>13</b> vapour outlet</li>
+          <li>
+            <b>14</b> reflux inlet</li>
+          <li>
+            <b>15</b> base inlet port</li>
+          <li>
+            <b>16</b> catalyst inlet port</li>
+          <li>
+            <b>20</b> water separation unit</li>
+          <li>
+            <b>21</b> vapour inlet port</li>
+          <li>
+            <b>22</b> alcohol outlet port</li>
+          <li>
+            <b>23</b> water outlet port</li>
+          <li>
+            <b>30</b> first after-treatment system</li>
+          <li>
+            <b>40</b> second after-treatment system</li>
+          <li>
+            <b>41</b> liquid-liquid mixer-settler configuration</li>
+          <li>
+            <b>42</b> water column</li>
+          <li>
+            <b>43</b> alcohols column</li>
+          <li>
+            <b>44</b> separation system/alcohols splitter column</li>
+          <li>
+            <b>50</b> pretreatment facility</li>
+          <li>
+            <b>200</b> simplified method for synthesising Guerbet alcohols from a mixture of primary alcohols</li>
+          <li>S<b>201</b>-S<b>208</b> basic process steps</li>
+        </ul>
+      </p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method for preparing a mixture of Guerbet alcohols, the method comprising:
+<claim-text>providing a starting material comprising one or more primary alcohols of the formula RCH<sub>2</sub>CH<sub>2</sub>OH, where R is hydrogen or a straight or branched chain alkyl group of 1 to 14 carbon atoms;</claim-text><claim-text>providing a base;</claim-text><claim-text>providing a catalyst;</claim-text><claim-text>mixing the starting material with the base and the catalyst and heating the thus obtained reaction mixture to a process temperature above the boiling point of water under reaction conditions while removing the water resulting from the thus obtained condensation and dehydration of the primary alcohols;</claim-text><claim-text>removing at least part of the reaction mixture;</claim-text><claim-text>separating the desired Guerbet alcohols from the removed part of the reaction mixture; and</claim-text><claim-text>returning the other alcohols and optionally other intermediates from the removed part of the reaction mixture to the reaction mixture.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the starting material further contains primary alcohols in which the carbon atom in beta-position is bonded to two or three alkyl groups, secondary alcohols, ketones and aldehydes, and hydrogen is added to the reaction mixture or the removed part of the reaction mixture.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the starting material contains at least two primary alcohols selected from the group comprising n-propanol, n-butanol, n-pentanol, n-hexanol.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the base is selected from the group consisting of sodium tert-butoxide, potassium hydroxide, sodium hydroxide, and heterogeneous bases, which may optionally be doped.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the catalyst is a homogenous catalyst or a heterogeneous catalyst selected from the group consisting of Pd(OAc)<sub>2</sub>, Pd/C, Pt/C, Cu—Zn—O, Cu—Cr—O, hydrotalcites and hydroxylapatites doped with metals, Raney Ni, and Ni—MgO/SiO<sub>2</sub>.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method according to <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the catalyst is a solid heterogeneous catalyst provided in a fixed bed, or a slurry fluidized bed, or a mobile bed.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the alcohols returned to the reaction mixture have a lower boiling point than the desired Guerbet alcohols.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the process temperature corresponds to the boiling point of the starting material under reaction conditions.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the reaction process is performed at a pressure in the range of 1 to 20 bar.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the starting material is pretreated with respect to removing acidic components, ester components, water, or a combination thereof, prior to being fed to mixing.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. A system for synthesising Guerbet alcohols from a starting material, according to the method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, the system comprising:
+<claim-text>a reactor adapted for receiving the starting material, a base, and a catalyst to form a reaction mixture, and for heating the reaction mixture to a temperature above the boiling point of water under reaction conditions to obtain a Guerbet condensation and dehydration process;</claim-text><claim-text>a water separation unit connected to the reactor and adapted to receive from the reactor vapor evolving in the progress of the Guerbet condensation process, and to remove water from the vapor; and</claim-text><claim-text>an after-treatment system connected to the reactor and adapted to receive from the reactor at least part of the reaction mixture, separating the desired Guerbet alcohols from the removed part of the reaction mixture, and returning the other alcohols and optionally other intermediates from the removed part of the reaction mixture to the reactor.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The system according to <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the reactor is one of a stirred tank reactor, a fixed bed reactor, a mobile bed reactor, and a fluidized bed reactor.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The system according to <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the after-treatment system comprises a first after-treatment system adapted to separate a catalytic component and an alkaline component from the part of the reaction mixture received from the reactor, and a second after-treatment system connected to the first after-treatment system and adapted to separate the desired Guerbet alcohols from the part of the reaction mixture treated by the first after-treatment system and to return the other alcohols from the part of the reaction mixture treated by the first after-treatment system, to the reactor.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The system according to <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the second after-treatment system comprises a liquid-liquid mixer-settler configuration adapted to receive the reaction mixture treated by the first after-treatment system and to provide a phase separation of the components present in the mixture, an alcohols column adapted to receive the primarily alcohol components containing phase from the liquid-liquid mixer-settler configuration and to dry the alcohol components, and an alcohols splitter column connected to the alcohols column and the reactor, and being adapted to separate the desired Guerbet alcohols from the dried alcohol components and to return the remaining dried alcohols to the reactor.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The system according to <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein the second after-treatment system further comprises a water column adapted to receive the primarily water containing phase from the liquid-liquid mixer-settler configuration, separate water from the primarily water containing phase, and return alcohols containing water to the liquid-liquid mixer-settler configuration.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The system according to <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein the water separation unit is further adapted to return the vapor components different than the separated water, to the reactor, and to provide the still alcohols containing separated water to the liquid-liquid mixer-settler configuration.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The system according to <claim-ref idref="clm-00011-en">claim 11</claim-ref>, further comprising a pre-treatment facility adapted to remove acidic components, ester components, water, or a combination thereof, from the starting material prior to supplying the starting material to the reactor.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising adding the mixture of Guerbet alcohols to a gasoline, diesel fuel, aviation gasoline, jet fuel, or a combination thereof.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising processing the mixture of Guerbet alcohols optionally with other components to form a surfactant, an alpha-olefin, an alpha-olefin polymer, an alpha-olefin oligomer, or a combination thereof. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150246863A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150246863A1-20150903-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150246863A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246863A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150246863A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246863A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150246863A1_00004.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246863A1-20150903-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150246863A1_00005.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150246863A1-20150903-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150246863A1.PDF" type="pdf" size="1002445" pages="16" />
+</lexisnexis-patent-document>

@@ -1,0 +1,1256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247091A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021455" date-changed="20151110" time-changed="123301">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140159">
+        <country>US</country>
+        <doc-number>20150247091</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14427356</doc-number>
+        <date>20130913</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012202312</doc-number>
+        <date>20120914</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151110">
+      <classification-ipcr sequence="1">
+        <text>C10B  39/00        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>10</class>
+        <subclass>B</subclass>
+        <main-group>39</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C10B   3/00        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>10</class>
+        <subclass>B</subclass>
+        <main-group>3</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C10B  47/20        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>10</class>
+        <subclass>B</subclass>
+        <main-group>47</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151110">
+      <classification-cpc sequence="1">
+        <text>C10B  39/00        20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>B</subclass>
+        <main-group>39</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C10B   3/00        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>B</subclass>
+        <main-group>3</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C10B  47/20        20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>B</subclass>
+        <main-group>47</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C10F   5/06        20130101 LI20140416BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>F</subclass>
+        <main-group>5</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140416</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>F27B   9/36        20130101 LI20150624BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>F</section>
+        <class>27</class>
+        <subclass>B</subclass>
+        <main-group>9</main-group>
+        <subgroup>36</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150624</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>Y02P  20/129       20151101 LA20151103BHEP        </text>
+        <cpc-version-indicator>
+          <date>20151101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>P</subclass>
+        <main-group>20</main-group>
+        <subgroup>129</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151103</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">9</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">FIXED CARBON PRODUCTION DEVICE</invention-title>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>KYUSHU ELECTRIC POWER CO., INC.</orgname>
+            <role>03</role>
+            <address>
+              <city>Fukuoka-shi, Fukuoka</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Harada</last-name>
+            <first-name>Tatsuro</first-name>
+            <address>
+              <city>Fukuoka-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Matsuda</last-name>
+            <first-name>Seiichiro</first-name>
+            <address>
+              <city>Fukuoka-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Mochida</last-name>
+            <first-name>Isao</first-name>
+            <address>
+              <city>Fukuoka-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Hayashi</last-name>
+            <first-name>Jun-ichiro</first-name>
+            <address>
+              <city>Fukuoka-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Matsushita</last-name>
+            <first-name>Yohsuke</first-name>
+            <address>
+              <city>Fukuoka-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Yamamoto</last-name>
+            <first-name>Tsuyoshi</first-name>
+            <address>
+              <city>Fukuoka-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP13074824</doc-number>
+        <date>20130913</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014042239</doc-number>
+        <date>20140320</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150903">
+      <main-family family-id="164794874">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247091</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130913</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014055272</doc-number>
+            <kind>A</kind>
+            <date>20140327</date>
+          </document-id>
+          <application-date>
+            <date>20120914</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2013316429</doc-number>
+            <kind>A1</kind>
+            <date>20150326</date>
+          </document-id>
+          <application-date>
+            <date>20130913</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>112013004502</doc-number>
+            <kind>T5</kind>
+            <date>20150603</date>
+          </document-id>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014042239</doc-number>
+            <kind>A1</kind>
+            <date>20140320</date>
+          </document-id>
+          <application-date>
+            <date>20130913</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="164794873">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247091</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130913</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014055272</doc-number>
+            <kind>A</kind>
+            <date>20140327</date>
+          </document-id>
+          <application-date>
+            <date>20120914</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2013316429</doc-number>
+            <kind>A1</kind>
+            <date>20150326</date>
+          </document-id>
+          <application-date>
+            <date>20130913</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>112013004502</doc-number>
+            <kind>T5</kind>
+            <date>20150603</date>
+          </document-id>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014042239</doc-number>
+            <kind>A1</kind>
+            <date>20140320</date>
+          </document-id>
+          <application-date>
+            <date>20130913</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Provided is a fixed carbon production device excellent in operation stability and safety which has high strength and may have a compact device volume, which makes possible production of high-quality fixed carbon with high yields and in large amounts, which is capable of keeping the dry distillation temperature low, which has few restraints in the compositional material, which, having a low dry distillation temperature and low heat input amount, has excellent energy-saving efficiency, and which is capable of solving problems due to a tar component. This fixed carbon production device is provided with: a quench chamber for collecting fixed carbon; a dry distillation furnace which is erected and fixed in the quench chamber and into which raw material coal is fed; a dry distillation unit which is polygonal in horizontal cross-section and is partitioned by a separating wall which partitions the inside of the dry distillation furnace in the vertical direction; a dry distillation mini-furnace which is polygonal in horizontal cross-section and which is partitioned by a partition which partitions the inside of the dry distillation unit in the vertical direction; a pipe-shaped heating means which is arranged on the separating wall of the dry distillation unit and the partition of the dry distillation mini-furnace and which dry-distills the raw material coal; and a collection path for collecting fixed carbon collected in the quench chamber.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150625</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247091A1</docdb-publication-number>
+      <docdb-application-id>444210083</docdb-application-id>
+      <new-owner>KYUSHU ELECTRIC POWER CO., INC., JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:HARADA, TATSURO;MATSUDA, SEIICHIRO;MOCHIDA, ISAO;AND OTHERS;SIGNING DATES FROM 20150303 TO 20150414;REEL/FRAME:035903/0894</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to a fixed carbon production device which dry-distills dried low rank coal while moving the dried low rank coal in a dry distillation furnace, and which makes it possible to obtain at a high efficiency fixed carbon of a high carbonization ratio at a quench chamber which is a cooled receiving space in the lower portion of the dry distillation furnace.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND ART</heading>
+      <p id="p-00002-en" num="0002">The low rank coal, such as subbituminous coal or brown coal, which has a moisture content higher than about 20 mass % is limited to use within a coal-producing region. This is because, for example, the low rank coal has a low calorific value resulting from its high moisture content and generates a small amount of heat by combustion. On the other hand, when dried, the low rank coal becomes more spontaneously combustible and more hygroscopic, resulting in transportation costs being relatively expensive, etc.</p>
+      <p id="p-00003-en" num="0003">However, the low rank coal has advantages that are not found, e.g., in the bituminous coal that is considered to be a high rank coal. For example, brown coal found in Australia and Indonesia is low in sulfur content and produces less ash. Thus, using the brown coal as a fuel would make it possible to prevent air pollution due to sulfur dioxide gas, etc., as well as to reduce hazardous ash waste.</p>
+      <p id="p-00004-en" num="0004">In this context, such techniques have been suggested which are adopted to carbonize the low rank coal by dehydration reform or thermal reform, thereby compensating for the drawbacks thereof. For example, disclosed in Patent Literature 1 and Patent Literature 2 is a technique by which oil and low rank coal are mixed to obtain raw material slurry; the resulting slurry is heated and dehydrated in the oil, and then further heated to decompose or detach the carboxyl radical or the hydroxyl radical, etc., in the raw material coal by a decarboxylation reaction or a dehydration reaction, thereby reforming the raw material coal. Also disclosed is a technique by which heavy oil, etc., is penetrated into pores of the low rank coal so as to prevent spontaneous combustion.</p>
+      <p id="p-00005-en" num="0005">Further, disclosed in Patent Literature 3 is a method for manufacturing reformed coal and hydrocarbon oil by thermally decomposing brown coal into reformed coal and tar under an inert gas atmosphere or steam atmosphere and catalytically cracking the tar in a steam atmosphere and in the presence of an iron-based catalyst so as to obtain hydrocarbon oil.</p>
+      <p id="p-00006-en" num="0006">Disclosed in Patent Literature 4 is a fixed carbon recycle device in which a plurality of lines are arranged for recycle in recycling the fixed carbon, whereby the flows of the powder materials serve to complement each other, thereby eliminating clogging.</p>
+      <heading id="h-00003-en" level="1">CITATION LIST</heading>
+      <heading id="h-00004-en" level="1">Patent Literature</heading>
+      <p id="p-00007-en" num="0007">PTL 1: Japanese Published Unexamined Patent Application No. H07-233384</p>
+      <p id="p-00008-en" num="0008">PTL 2: Japanese Patent No. 2776278</p>
+      <p id="p-00009-en" num="0009">PTL 3: Japanese Published Unexamined Patent Application No. 2010-144094</p>
+      <p id="p-00010-en" num="0010">PTL 4: Japanese Published Unexamined Patent Application No. 2010-209212</p>
+      <heading id="h-00005-en" level="1">SUMMARY OF INVENTION</heading>
+      <heading id="h-00006-en" level="1">Technical Problem</heading>
+      <p id="p-00011-en" num="0011">However, the above conventional techniques had the following problems:</p>
+      <p id="p-00012-en" num="0012">(1) For Patent Literatures 1 and 2, the use of oil requires various types of facilities for separating oil and coal in the same container, causing an increase in the size of the system and hindering energy-saving efficiency;</p>
+      <p id="p-00013-en" num="0013">(2) The oil or an indirect material is required for the reforming of the coal, thereby causing a significant increase in costs and imposing a high environmental load;</p>
+      <p id="p-00014-en" num="0014">(3) The method which employs the oil causes a heat exchange loss of the energy provided for the brown coal, thus leading to a significant energy loss;</p>
+      <p id="p-00015-en" num="0015">(4) Furthermore, the oil used as an indirect material is mixed into the dried coal, thus causing a high loss of oil and hindering resource-saving efficiency; and</p>
+      <p id="p-00016-en" num="0016">(5) For Patent Literature 3, the brown coal is thermally decomposed at 500° C. to 800° C. to obtain the reformed coal and the tar, and then the tar is catalytically cracked at 400° C. to 600° C. to thereby obtain the reformed coal and a compound. However, in general, when the low rank coal is heated above 500° C., cracks are increased and fine powder is produced, causing unburned coal to increase. Furthermore, since the thermally decomposed gas may increase the risk of easily igniting combustible components or explosion of the powdered coal in a high oxygen concentration, safety and operability are lacking because it is difficult to control the operations of the system such as the control of oxygen concentration or addition of steam.</p>
+      <p id="p-00017-en" num="0017">The present invention aims to solve the above conventional problems. It is an object of the present invention to provide a fixed carbon production device having the following features:</p>
+      <p id="p-00018-en" num="0018">(1) As the dry distillation furnace, there is adopted a moving bed indirect heating dry distillation furnace, whereby the temperature of the product gas may be kept reduced and thus fewer restraints are imposed on materials such as those for gas pipes, thereby providing excellent maintainability;</p>
+      <p id="p-00019-en" num="0019">(2) The thermal decomposition temperature is as low as 350° C. to 500° C., so that there are few restraints in terms of the compositional materials of the system including the input and output sides of the fixed carbon production device. Further, since the input heat value is low, the device is excellent in energy-saving efficiency;</p>
+      <p id="p-00020-en" num="0020">(3) The thermal decomposition temperature is low, and it is possible to perform dry distillation while maintaining the tar component, so that it is possible to solve problems due to the tar component (such as adhesion or caulking). Thus, the device is excellent in operation stability and safety;</p>
+      <p id="p-00021-en" num="0021">(4) A pipe-shaped heating means is provided, and indirect heating by high temperature heat medium such as steam is performed, so that it is possible to make the device volume compact. Further, in the case where there is provided a combustion means for burning dry distillation gas and fixed carbon, it is possible to utilize waste heat, exhaust gas, and steam of the combustion means, so that the device is excellent in energy-saving efficiency;</p>
+      <p id="p-00022-en" num="0022">(5) In the case where oxygen combustion is adopted, when the carbon dioxide gas is separated and recycled, the amount of nitrogen gas is considerably small, so that the concentration of the carbon dioxide gas is high, and it is possible to reduce the carbon dioxide gas separation energy; and</p>
+      <p id="p-00023-en" num="0023">(6) It is possible to effectively utilize the exhaust heat of a boiler, etc., so that the device is excellent in thermal decomposition and resource-saving efficiency; and since no indirect material such as oil is added, the device is light, and the transportation costs are low, making it possible to reform subbituminous coal, brown coal, etc., which are of high moisture content and difficult to use in places other than the point of origin, into fixed carbon such as high rank char, making it possible to use the coal in places other than the coal-producing region. Further, as compared with the case where brown coal, etc., the moisture content of which is about 60%, is transferred, since fixed carbon, which is of lowered moisture content, is transferred, it is possible to provide excellent transfer efficiency.</p>
+      <heading id="h-00007-en" level="1">Solution to Problem</heading>
+      <p id="p-00024-en" num="0024">To solve the above conventional problems, a fixed carbon production device of the present invention is arranged as described below.</p>
+      <p id="p-00025-en" num="0025">A fixed carbon production device according to a first aspect of the present invention is arranged to include: a quench chamber for collecting fixed carbon; a dry distillation furnace which is erected and fixed in the quench chamber; a dry distillation unit which is partitioned into a rectangular or a polygonal shape in the vertical direction on a horizontal cross-section in the dry distillation furnace by a separating wall from an upper portion to a lower portion; a dry distillation mini-furnace which is partitioned into a rectangular or a polygonal shape in the vertical direction on the horizontal cross-section in the dry distillation unit by a partition from an upper portion to a lower portion; a pipe-shaped heating means which is arranged on the separating wall of the dry distillation unit and the partition of the dry distillation mini-furnace; and a collection path for collecting fixed carbon produced in the quench chamber by feeding raw material coal from the upper portion of the dry distillation unit and performing dry distillation in each of the dry distillation mini-furnaces by the pipe-shaped heating means.</p>
+      <p id="p-00026-en" num="0026">As a result of this arrangement, the following effects are achieved:</p>
+      <p id="p-00027-en" num="0027">(1) Since each dry distillation mini-furnace is equipped with a pipe-shaped heating means, indirect heating by a high temperature heat medium is possible; and heating is easily performed substantially uniformly without generating heat gradient in the dry distillation furnace, and the device provides an excellent yield of fixed carbon. Since there are arranged in many rows dry distillation units each equipped with many rows of dry distillation mini-furnaces, the device is excellent in mass productivity. Further, conventionally, when the inner volume of the furnace is simply increased for mass production, it is difficult to make the temperature in the furnace uniform, and there are generated places where dry distillation partially progresses easily, etc.; and the yield of the high-quality fixed carbon is low, the interior of the dry distillation furnace is subdivided, with each subdivided flow path being equipped with a heating means, so that it is possible to substantially improve the dry distillation efficiency;</p>
+      <p id="p-00028-en" num="0028">(2) There are provided dry distillation units each formed with many rows of dry distillation mini-furnaces, and a dry distillation furnace formed with many rows of dry distillation units, so that the device exhibits high rigidity; it undergoes no deformation even when pressure is applied to the inside of the furnace due to generation of a volatile component in the dry distillation furnace or due to expansion of the raw material coal in the dry distillation furnace; thus, the device is excellent in operation stability;</p>
+      <p id="p-00029-en" num="0029">(3) Upon entering in the dry distillation furnace, low rank coal expands due to moisture content, so that it is possible to prevent the coal from being allowed to pass through without undergoing any reaction, resulting in excellent stability in quality;</p>
+      <p id="p-00030-en" num="0030">(4) Fixed carbon being delivered is accumulated in the quench chamber; thus, the reaction makes it possible to progress through trapping there, resulting in excellent stability in quality;</p>
+      <p id="p-00031-en" num="0031">(5) Since the heating means is formed in a pipe-shape, it is possible to perform heating in a stable manner by means of high temperature heat medium such as steam, so that the device is excellent in operation stability;</p>
+      <p id="p-00032-en" num="0032">(6) The quench chamber for collecting fixed carbon is provided in the lower portion of the dry distillation furnace, so that it is possible to cool the fixed carbon reformed in the dry distillation furnace;</p>
+      <p id="p-00033-en" num="0033">(7) In the case of a complex system performing power generation by using hydrocarbon gas generated in a fixed carbon production device, the combustion heat of the hydrocarbon gas is utilized for the heating of the steam for power generation, and for the drying, heat decomposition, gasification of the low rank coal, and the production of fixed carbon;</p>
+      <p id="p-00034-en" num="0034">(8) The heating means makes it possible to effectively utilize the exhaust heat of the boiler, so that the device is excellent in resource-saving efficiency. Further, since no indirect material such as oil is added, the device is light, and the transportation costs are low, making it possible to utilize subbituminous coal, brown coal, etc., which are of high moisture content and difficult to use in places other than the point of origin, at places other than the coal-producing region; and</p>
+      <p id="p-00035-en" num="0035">(9) Since the device has a pipe-shaped heating means, unlike direct heating in which exhaust gas from the combustor is supplied as the heat exchange medium for the dry distillation furnace, it is possible to utilize to the utmost the heat value per unit volume of the volatile content generated by using indirect heating, thus making the device excellent in energy-saving efficiency.</p>
+      <p id="p-00036-en" num="0036">Here, as an example of the dry distillation furnace, there is preferably used one of a size of about 4500 mm in the vertical direction×about 4500 mm in the lateral direction and of a height of about 5000 mm. Therein, preferably, there are provided separating walls such that one dry distillation unit is of a size of about 1500 mm in the vertical direction×about 1500 mm in the lateral direction and of a height of about 5000 mm, with 3×3 rows of dry distillation units being provided in the dry distillation furnace; further, in this dry distillation unit, there are provided partition plates each being of a size in cross-section of about 500 mmin the vertical direction×about 500 mm in the lateral direction and of a height of about 5000 mm, with 3×3 rows of dry distillation mini-furnaces being provided in the dry distillation unit. The cross-section shape of the dry distillation furnace is not restricted to a rectangular one; it is also possible to use as appropriate polygonal ones such as triangular, pentagonal or hexagonal ones. Further, it is possible to perform tests by using the dry distillation mini-furnace as a dry distillation furnace; thus, the device is applicable from small to large systems, which is excellent in terms of the degree of freedom in design and expandability.</p>
+      <p id="p-00037-en" num="0037">As the separating walls and partition plates, there are preferably used ones which are arranged so as to partition each dry distillation unit and each dry distillation mini-furnace from the upper portion to the lower portion, with a heating means for controlling temperature in the partitioned interiors being provided. The heating means may be arranged successively from the upper portion of the partition plate so as to divide it into a plurality of stages. In the case where the heating means is divided into a plurality of stages, it is possible to adjust temperature at each stage so as to make rapid or gentle the dry distillation rate in the dry distillation step, thus controlling the heating pattern; this facilitates the setting of conditions for obtaining high rank coal with high efficiency, thus making the device excellent in productivity.</p>
+      <p id="p-00038-en" num="0038">It is desirable for the quench chamber for collecting fixed coal to perform cooling to a temperature not higher than room temperature. This makes possible the prevention of oxidation of the fixed carbon. Further, as the structure of the quench chamber, it is desirable to employ a structure receiving the fixed carbon in a hermetic state. The interior of the quench chamber is filled with inert gas to thereby prevent oxidation of the dry-distilled coal; at the same time, the dry-distilled coal is cooled indirectly to room temperature by a water-cooling heat conduction pipe installed in the container, thereby obtaining fixed carbon. As the structure for receiving the fixed carbon in a hermetic state, it is desirable to employ, both on the receiving side from the dry distillation furnace and on the extraction port side for the fixed carbon, a valve of a structure such as a rotary valve which seals both the dry distillation furnace and the cooling bath. In this way, it is possible to place the cooling bath in a hermetic state through indirect heating, making it possible to create an inert gas atmosphere, so that it is possible to prevent an accident such as ignition, which is desirable.</p>
+      <p id="p-00039-en" num="0039">As the bottom portion of the quench chamber for collecting fixed carbon, there is preferably employed one the angle of which is not less than an angle of repose. As the angle becomes less than an angle of repose, a bridge of fixed carbon is likely to be generated in the quench chamber, and there is a tendency of making it difficult to smoothly extract the fixed carbon from the fixed carbon extraction port in the lower portion, which is undesirable.</p>
+      <p id="p-00040-en" num="0040">As a pipe-shaped heating means, it is possible to preferably employ finned steam piping. This makes it possible to provide a satisfactory heat exchange efficiency, and efficiently heat the interior of the furnace. As the method for arranging the pipe-shaped heating means, it is not only possible to arrange it through fixing or soldering to the separating wall or the partition plate but also to arrange the pipe-shaped heating means directly on the separating wall or the partition through machining. This makes it not only possible to conduct heat to the interior of the furnace through the wall surface uniformly, but also to reinforce the separating wall and the partition plate, enhancing the rigidity as a whole.</p>
+      <p id="p-00041-en" num="0041">Further, as the pipe-shaped heating means, which performs indirect heating by using a heat medium such as steam, the heating means may also be mounted so as to be parallel to the separating wall or the partition, or may be mounted orthogonally thereto so as to pierce through the partition plate or the separating wall; in the case of orthogonal mounting, the heating means itself serves as a baffle plate, causing the dried coal to flow down by itself; it is also possible to appropriately trap it when dry-distilling it, thus leading to an improvement in quality at the time of dry distillation, which is desirable.</p>
+      <p id="p-00042-en" num="0042">As the raw material coal, dried brown coal is preferably employed. Apart from brown coal, it is also possible to employ lignite, subbituminous coal, etc., in the same manner. Examples of the brown coal that may be employed in the same manner include Victoria coal, North Dakota coal, and Berger coal, etc. While these kinds of coal have desirable properties of low ash and low sulfur content, they tend to be of high moisture content because of their porosity; since they contain a lot of moisture, they are of low calorific value, and are treated as low rank coal. These kinds of coal of high porosity and high moisture content may be employed in the same manner. (Hereinafter, these kinds of coal will be generally referred to as low rank coal. Regarding low rank coal of high moisture content to be dried, these kinds of coal are acceptable regardless of their names and origin as long as their moisture content exceeds about 20%.)</p>
+      <p id="p-00043-en" num="0043">As the dry distillation temperature, a temperature of 300° C. to 900° C., more preferably, 300° C. to 800° C., is preferably employed. This allows for reducing use of special materials that withstand high temperatures as the furnace material. The dried coal is inserted from the furnace top of the dry distillation furnace, and the particles of the dried coal expand, and then contract while successively falling due to gravity; in this process, the particles continuously come into contact with high temperature steam, nitrogen gas, or carbon dioxide gas in the form of a countercurrent or parallel current with respect to the particles, whereby dry distillation is performed, and it is possible to obtain fixed carbon. Further, the gas fed into the furnace may utilize a wide range of flow velocity. In general, it is difficult to make the in-bed temperature uniform; however, the present invention is provided with a dry distillation unit and a dry distillation mini-furnace in the dry distillation furnace, and the wall surface of each of them is equipped with a pipe-shaped heating means, so that it is possible to make the temperature in each bed uniform, making it possible to enhance the yield of fixed carbon.</p>
+      <p id="p-00044-en" num="0044">When there is provided a combustion means using as the fuel hydrocarbon gas or fixed carbon produced by the fixed carbon production device, there is preferably employed, as the combustion means, a fluidized bed combustor, or a hydrocarbon-gas/fixed-carbon combustion boiler.</p>
+      <p id="p-00045-en" num="0045">In the fluidized bed combustor, employed as a bed material is limestone or dolomite, etc. As a fuel additive, preferably employed is a mixed gas of oxygen and carbon dioxide gas for adjusting (diluting) the concentration of oxygen. The fuel used is dried coal of the low rank coal that has been dried in the drying unit, reformed coal of the low rank coal that has been reformed in the reformer or char.</p>
+      <p id="p-00046-en" num="0046">Further, the combustion temperature of the fluidized bed combustor is controlled at 800° C. to 900° C. This allows for reducing use of special materials that withstand high temperatures as the furnace material and for preventing problems such as melting of ash in the fluidized bed.</p>
+      <p id="p-00047-en" num="0047">The catalyst reforming unit performs reforming by allowing the volatile component obtained from the low rank coal or a producer gas (combustion exhaust gas) such as CO<sub>2</sub>, CO, and H<sub>2</sub>O to be brought into contact with the catalyst, thereby yielding, such as, an FT synthesis gas, methanol synthesis gas, ammonia synthesis gas, hydrogen gas, or synthetic natural gas.</p>
+      <p id="p-00048-en" num="0048">Furthermore, a produced tar component may be reformed to continually obtain low molecular-weight hydrocarbon, carbon monoxide, and hydrogen.</p>
+      <p id="p-00049-en" num="0049">The invention according to a second aspect is the fixed carbon production device according to the first aspect, wherein a heating temperature of the dry distillation device is of 350° C. to 500° C.</p>
+      <p id="p-00050-en" num="0050">As a result of this arrangement, in addition to the effects obtained by the first aspect, it is possible to obtain the following effects:</p>
+      <p id="p-00051-en" num="0051">(1) Since dry distillation is performed at a low temperature of 350° C. to 500° C., the hydrocarbon gas (volatile content) is removed, and this makes it possible to convert to high rank coal, making it possible to obtain a high rank coal of a fuel ratio of 2 or more;</p>
+      <p id="p-00052-en" num="0052">(2) Since it is possible to perform dry distillation at low temperature, the device is excellent in cost-saving efficiency in terms of the cost of the device itself and the input heat value;</p>
+      <p id="p-00053-en" num="0053">(3) Further, since the thermal decomposition temperature is low, there are few restraints regarding the compositional material of the system inclusive of the input side and the output side of the fixed carbon production device; thus, the device is excellent in safety and the degree of freedom in device design; and</p>
+      <p id="p-00054-en" num="0054">(4) Further, since the thermal decomposition temperature is low, and it is possible to perform dry distillation while maintaining the heavy oil component such as tar, it is possible to solve the problems due to the heavy oil component (such as adhesion, caulking, or clogging of the reactor); thus, the device is excellent in operation stability and safety.</p>
+      <p id="p-00055-en" num="0055">Here, as the heating temperature of the dry distillation device, a temperature of 350° C. to 500° C. is preferably employed. Preferably, a temperature of 350° C. to 450° C. is preferably employed. When the heating temperature is below 350° C., the fuel ratio is rather low, which is not desirable; on the other hand, when the heating temperature exceeds 450° C., there is a tendency of the effect with respect to the input heat value being reduced, which is not desirable. Further, as the heating temperature increases, the amount of hydrocarbon gas (volatile content) removed through dry distillation increases, and this accompanies an increase in heavy oil; as a result, there is a tendency for problem such as clogging of the reactor being aggravated, which is also undesirable. Thus, through performing temperature control in the range of 350° C. to 450° C., it is possible to perform dry distillation while retaining heavy oil in the fixed carbon, so that there are no problems such as the clogging of the reactor, thus greatly contributing to safe operation. Further, in general, when the low rank coal is heated above 500° C., cracks are increased and fine powder is produced, causing unburned coal to increase; since the thermally decomposed gas may increase the risk of easily igniting combustible components or explosion of the powdered coal in a high oxygen concentration, safety and operability are lacking because it is difficult to control the operations of the system such as the control of oxygen concentration or addition of steam.</p>
+      <p id="p-00056-en" num="0056">As a result of the removal of the hydrocarbon gas (volatile content), conversion to high rank coal progresses; however, it is known that the hydrocarbon gas component is removed also within a temperature range of 100° C. to 300° C.; and that, at a temperature of about 400° C., the fuel ratio of 2 of high-quality Newlands coal is exceeded; thus, as is understood, it is possible to produce a fixed carbon of a high rank coal level currently on the market.</p>
+      <p id="p-00057-en" num="0057">Further, as compared with the conventionally general high temperature dry distillation, the temperature is much lower, which is 350° C. to 500° C., so that the device is excellent in energy-saving efficiency and labor-saving efficiency.</p>
+      <p id="p-00058-en" num="0058">The invention according to a third aspect is the fixed carbon production device according to the first or second aspect, wherein there are arranged in the dry distillation mini-furnace, a baffle plate, a metal mesh, and a metal plate with holes.</p>
+      <p id="p-00059-en" num="0059">As a result of this arrangement, in addition to the effects obtained according to the first or second aspect, it is possible to obtain the following effects:</p>
+      <p id="p-00060-en" num="0060">(1) Since a baffle plate, a metal mesh, a metal plate with a lot of holes, etc., (hereinafter referred to as a baffle plate, etc.) are arranged in the dry distillation mini-furnace, it is possible to appropriately arrange the baffle plate, etc., for the purpose of adjusting the flow velocity of the raw material coal for each dry distillation mini-furnace, making it possible to stabilize unevenness in products and the yield of the fixed carbon; thus, the device provides excellent product yield;</p>
+      <p id="p-00061-en" num="0061">(2) Since a baffle plate, etc., is arranged in the dry distillation furnace, it serves as a reinforcing member inside the furnace, so that the device provides excellent strength;</p>
+      <p id="p-00062-en" num="0062">(3) Further, the baffle plate, etc., are warmed to thereby contribute to making the temperature in the dry distillation furnace uniform, so that the device provides excellent product yield; and</p>
+      <p id="p-00063-en" num="0063">(4) Due to the presence of the baffle plate, etc., there is no fear of the raw material coal fed from the upper portion being allowed to pass through the dry distillation furnace, so that the device provides excellent stability in product quality.</p>
+      <p id="p-00064-en" num="0064">Here, it is also possible for the baffle plate, etc., to be arranged in the dry distillation furnace at an angle with respect to the falling direction of the fixed carbon. Further, the metal mesh, the metal plate with a lot of holes may be installed all over the inside of the dry distillation mini-furnace, or may be installed only partially. In this case also, arrangement at an angle is possible. Further, as an application of these baffle plates, it is also possible to provide, instead of the baffle plates, pipe-shaped heating means in the furnace. By doing so, it becomes easy to make the in-bed temperature uniform, and it is possible to provide excellent product yield for the fixed carbon. In the case where a metal plate with a lot of holes is provided, the dried coal to undergo dry distillation stays on the metal plate, and is caused to fall while being agitated there by the dry distillation gas flowing as a countercurrent, so that it is possible to elongate the reaction time in the furnace, resulting in excellent product yield for the fixed carbon.</p>
+      <p id="p-00065-en" num="0065">The invention according to a fourth aspect is the fixed carbon production device according to the third aspect, wherein the baffle plate is a holed structure at an angle not less than an angle of repose.</p>
+      <p id="p-00066-en" num="0066">As a result of this arrangement, in addition to the effects obtained according to the third aspect, it is possible to obtain the following effect:</p>
+      <p id="p-00067-en" num="0067">(1) Since the baffle plate is at an angle not less than an angle of repose, the fixed carbon does not stay on the baffle plate, making it possible to produce fixed carbon in a stable manner.</p>
+      <p id="p-00068-en" num="0068">Here, the baffle plate may be one each chevron shape of which is mounted at an angle not less than an angle of repose. The thickness and number of the baffle plates may be selected as appropriate.</p>
+      <p id="p-00069-en" num="0069">The invention according to a fifth aspect is the fixed carbon production device according to one of the first through fourth aspects, wherein, at a fixed carbon extraction port at a bottom portion of the quench chamber, there are provided a rotary valve, and a means for sending high temperature steam or a carrier gas such as carbon dioxide gas or nitrogen gas.</p>
+      <p id="p-00070-en" num="0070">As a result of this arrangement, in addition to the effects obtained according to one of the first through fourth aspects, it is possible to obtain the following effect:</p>
+      <p id="p-00071-en" num="0071">(1) Since a rotary valve is provided at the fixed carbon extraction port in the lower portion of the quench chamber, it is possible to appropriately select the place for sending gas into the dry distillation furnace without having to mind gas leakage through the extraction port, so that the device provides excellent variety.</p>
+      <p id="p-00072-en" num="0072">The invention according to a sixth aspect is the fixed carbon production device according to the fifth aspect, wherein the rotary valve has a vane with holes.</p>
+      <p id="p-00073-en" num="0073">As a result of this arrangement, according to the effect obtained according to the fifth aspect, it is possible to obtain the following effects:</p>
+      <p id="p-00074-en" num="0074">(1) Since the rotary valve at the fixed carbon extraction port in the lower portion of the quench chamber is equipped with a vane with holes, it is possible to introduce gas from the extraction port; further, the fixed carbon is agitated by the gas at the bottom portion of the quench chamber, so that it is possible to prevent clogging in the lower portion; thus, the device provides excellent operation stability; and</p>
+      <p id="p-00075-en" num="0075">(2) Due to the arrangement in which the vane of the rotary valve is equipped with holes, when the dry distillation gas is introduced from the fixed carbon extraction port side, the fixed carbon flows in the lower portion to promote the reaction, so that the device provides an excellent yield of the fixed carbon.</p>
+      <p id="p-00076-en" num="0076">Here, the hole of the vane of the rotary valve may be of an appropriate size small enough to prevent passing-through of fixed carbon. Further, the hole may be of any type as long as it is for passing gas, and there is no restriction regarding the number of the holes; further, it is also possible to employ a porous material for the vane.</p>
+      <p id="p-00077-en" num="0077">The invention according to a seventh aspect is the fixed carbon production device according to one of the first through sixth aspects, wherein the raw material coal is a dried coal obtained through drying of low rank coal to a moisture content of not more than 20 mass %.</p>
+      <p id="p-00078-en" num="0078">As a result of this arrangement, it is possible to obtain the following effects in addition to the effects obtained according to one of the first through sixth aspects:</p>
+      <p id="p-00079-en" num="0079">(1) Since dried coal obtained through drying of low rank coal to a moisture content of not more than 20 mass % undergoes dry distillation, it is possible to reduce the input heat value, so that the device provides excellent energy efficiency;</p>
+      <p id="p-00080-en" num="0080">(2) Through the drying, a reduction in specific gravity is achieved, and, inclusive of the heat value for vaporizing the moisture, it is possible to design the dry distillation furnace compact, so that the device provides excellent resource-saving efficiency. Further, it is possible to make the dry-distilled gas recycle system, etc., of the dry distillation furnace compact, so that the device provides excellent resource-saving efficiency; and</p>
+      <p id="p-00081-en" num="0081">(3) Since the moisture content is reduced to not more than 20 wt %, the influence of the expansion due to the moisture in the dry distillation furnace is reduced, so that it is possible to prevent deformation of or damage to the device.</p>
+      <p id="p-00082-en" num="0082">Here, as the drying condition for the low rank coal to be dried, it is desirable to perform the drying of low rank coal of a moisture content of exceeding about 20% in an inert gas atmosphere of nitrogen gas, etc., which is at low temperature (30° C. to 80° C.) and which is of low humidity (RH 70% to 0%). Further, the moisture content of the low rank coal used for dry distillation may be of 20 mass % or less. It is not necessary for all the coal used to be low rank coal; it is also possible to add high rank coal the moisture content of which is less than about 20 mass %. In an experiment, it was possible to reduce to a moisture content of 16 mass %. Thus, by reducing the moisture content of low rank coal to ⅓ or less, it is possible to substantially improve the transportation efficiency. Further, dry distillation is performed to obtain fixed carbon, whereby it is possible to prevent spontaneous combustion, thus achieving an improvement in safety. (Hereinafter, low rank coal used for dry distillation of 20 mass % or less will be referred to as dried coal).</p>
+      <p id="p-00083-en" num="0083">As the inert gas, nitrogen gas is preferably employed. The nitrogen gas used may be the one that is separated in an enzyme separator. The nitrogen gas may be heated in an air preheater which is heated with very hot water of the condenser. In this case, since the oxygen concentration is low, it is possible to prevent the low rank coal, which is spontaneously oxidized and readily increases in temperature as well as readily catches fire, from catching fire, and dry the coal at higher temperatures. Furthermore, since the nitrogen gas separated in the oxygen separator has a low relative humidity, the coal may be dried with increased efficiency. Furthermore, since waste heat is utilized without requiring additional heat energy, the system may be made environmentally friendly and excellent in energy-saving efficiency. In addition, it is possible to recycle clean water from the high humidity exhaust gas discharged through drying, thus making effective use of water.</p>
+      <p id="p-00084-en" num="0084">The invention according to an eighth aspect is the fixed carbon production device according to one of the first through seventh aspects, wherein there is provided on the input side a crushing process for crushing the raw material coal, and wherein the grain size of the raw material coal is adjusted to 0.1 μm to 5 mm.</p>
+      <p id="p-00085-en" num="0085">As a result of this arrangement, it is possible to obtain the following effects in addition to the effects obtained according to one of the first through seventh aspects:</p>
+      <p id="p-00086-en" num="0086">(1) By crushing the coal to a grain size of 0.1 μm to 5 mm, it is possible to shorten the drying time, so that the device provides excellent energy efficiency; and</p>
+      <p id="p-00087-en" num="0087">(2) Further, through the stabilization of the grain size, it is also possible to stabilize the quality of the fixed carbon, which is the end product; thus, the device provides excellent product yield.</p>
+      <p id="p-00088-en" num="0088">Here, the low rank coal is coarsely crushed, as preprocessing before being dried, into controlled grain sizes of 0.1 μm to 5 mm. Crushing into grain sizes of 0.1 μm to 5 mm may simplify the drying so as to shorten the time for drying. When the grain size is less than 0.1 μm, particle size reduction progresses, and the yield of the fixed carbon tends to be reduced, which is not desirable. Further, as the grain size becomes larger than 5 mm, the effect of shortening the drying time is reduced, which is not desirable.</p>
+      <p id="p-00089-en" num="0089">The invention according to a ninth aspect is the fixed carbon production device according to one of the first through eighth aspects, wherein there is provided a combustion means for burning at least a part of the hydrocarbon gas and fixed carbon obtained through dry distillation of the raw material coal, and wherein the heating means utilizes the exhaust gas or waste heat of the combustion means.</p>
+      <p id="p-00090-en" num="0090">As a result of this arrangement, it is possible to obtain the following effects in addition to the effects obtained according to one of the first through eighth aspects:</p>
+      <p id="p-00091-en" num="0091">(1) Since it uses the exhaust gas or waste heat obtained by the combustion means, the device provides excellent energy efficiency; and</p>
+      <p id="p-00092-en" num="0092">(2) By using the exhaust gas of the combustion means as gasified gas in the dry distillation furnace, it is possible to provide excellent energy efficiency. Further, since exhaust gas, which is of a small oxygen amount is used, it is possible to perform the dry distillation safely; thus, the device provides excellent safety.</p>
+      <p id="p-00093-en" num="0093">Here, as the combustion means, there is preferably used a combustion boiler using as the fuel the hydrocarbon gas and fixed carbon obtained at the dry distillation furnace. The combustion temperature of the combustor is adjusted to 800° C. to 900° C. As a result of this arrangement, it is possible to reduce the use amount of the special material withstanding high temperature which is used as the furnace material. When there is provided a combustor, it is also possible to use this exhaust gas as the gasified gas of the dry distillation furnace. When the combustor is a boiler for rotating the turbine of a power generating apparatus, it is also possible to supply this steam to the heating means of the dry distillation furnace, so that it is possible to build a system excellent in heat efficiency.</p>
+      <heading id="h-00008-en" level="1">Advantageous Effects of Invention</heading>
+      <p id="p-00094-en" num="0094">As described above, the fixed carbon production device of the present invention and the combustion system equipped with the same provide the following advantageous effects:</p>
+      <p id="p-00095-en" num="0095">According to the invention of the first aspect, the following effects are obtained:</p>
+      <p id="p-00096-en" num="0096">(1) Indirect heating by a high temperature heat medium is possible, it is easy to make the temperature in the dry distillation furnace uniform, and it is possible to provide an excellent fixed carbon yield. Further, there are provided a dry distillation unit equipped with many rows of dry distillation mini-furnaces, and a dry distillation furnace equipped with many rows of the dry distillation units, so that it is possible to provide a fixed carbon production device excellent in mass production efficiency; and</p>
+      <p id="p-00097-en" num="0097">(2) It is possible to provide a fixed carbon production device excellent in energy-saving efficiency which uses, as the heat exchange medium of the dry distillation furnace, unlike direct heating in which the exhaust gas of the combustor is supplied, but indirect heating, whereby it is possible to utilize to the utmost the heat value per unit volume of the volatile content generated.</p>
+      <p id="p-00098-en" num="0098">According to the invention of the second aspect, the following advantageous effects are obtained in addition to the effects of the first aspect:</p>
+      <p id="p-00099-en" num="0099">(1) It is possible to provide a fixed carbon production device in which the hydrocarbon gas (volatile content) is removed, making it possible to convert to high rank coal, making it possible to obtain a high rank coal of a fuel ratio of 2 or more, and which provides excellent cost-saving efficiency in terms of the cost of the device itself and the input heat value; and</p>
+      <p id="p-00100-en" num="0100">(2) Dry distillation is possible while retaining heavy oil, so that there are no problems such as the clogging of the reactor, thus making it possible to provide a fixed carbon production device excellent in operation stability.</p>
+      <p id="p-00101-en" num="0101">According to the invention of the third aspect, it is possible to obtain the following advantageous effects in addition to the effects of the first or second aspect:</p>
+      <p id="p-00102-en" num="0102">(1) To adjust the ease of flowing for each dry distillation mini-furnace, it is possible to appropriately arrange a baffle plate, etc., making it possible to stabilize the product uniformity and the yield of the fixed carbon, thus making it possible to provide a fixed carbon production device excellent in product yield; and</p>
+      <p id="p-00103-en" num="0103">(2) Inside the furnace, the baffle plate, etc., serves as a reinforcing member, so that it is possible to provide a fixed carbon production device excellent in strength.</p>
+      <p id="p-00104-en" num="0104">According to the invention of the fourth aspect, it is possible to obtain the following advantageous effect in addition to the effects of the third aspect:</p>
+      <p id="p-00105-en" num="0105">(1) Fixed carbon does not stay on the baffle plate, so that it is possible to provide a fixed carbon production device excellent in production stability for the fixed carbon.</p>
+      <p id="p-00106-en" num="0106">According to the invention of the fifth aspect, it is possible to obtain the following advantageous effect in addition to the effects of one of the first through fourth aspects:</p>
+      <p id="p-00107-en" num="0107">(1) It is possible to appropriately select the place for sending gas into the dry distillation furnace without having to pay attention to gas leakage through the extraction port, so that it is possible to provide a fixed carbon production device excellent in variety.</p>
+      <p id="p-00108-en" num="0108">According to the invention of the sixth aspect, it is possible to obtain the following advantageous effects in addition to the effect of the fifth aspect:</p>
+      <p id="p-00109-en" num="0109">(1) It is possible to introduce gas from the extraction port, and the fixed carbon is agitated by the gas at the bottom portion of the quench chamber, so that it is possible to prevent clogging in the lower portion, making it possible to provide a fixed carbon production device excellent in operation stability; and</p>
+      <p id="p-00110-en" num="0110">(2) The fixed carbon flows in the lower portion to promote the reaction, so that it is possible to provide a fixed carbon production device excellent in the yield of the fixed carbon.</p>
+      <p id="p-00111-en" num="0111">According to the invention of the seventh aspect, it is possible to obtain the following advantageous effects in addition to the effects of one of the first through sixth aspects:</p>
+      <p id="p-00112-en" num="0112">(1) It is possible to provide a fixed carbon production device excellent in energy efficiency which allows a reduction in the input heat value; and</p>
+      <p id="p-00113-en" num="0113">(2) It is possible to provide a fixed carbon production device excellent in resource-saving efficiency which is reduced in specific gravity through drying, and which allows compact design of the dry distillation furnace inclusive of the heat value for vaporizing the moisture. Further, it is possible to provide a fixed carbon production device excellent in resource-saving efficiency which allows compact design of the dry distillation gas recycle system, etc., of the dry distillation furnace.</p>
+      <p id="p-00114-en" num="0114">According to the invention of the eighth aspect, it is possible to obtain the following advantageous effects in addition to the effects of one of the first through seventh aspects:</p>
+      <p id="p-00115-en" num="0115">(1) It is possible to provide a fixed carbon production device excellent in energy efficiency which makes it possible to shorten the drying time; and</p>
+      <p id="p-00116-en" num="0116">(2) It is possible to provide a fixed carbon production device excellent in product yield which makes it possible to stabilize the quality of the product fixed carbon through stabilization of the grain size as well.</p>
+      <p id="p-00117-en" num="0117">According to the invention of the ninth aspect, it is possible to obtain the following advantageous effect in addition to the effects of one of the first through eighth aspects:</p>
+      <p id="p-00118-en" num="0118">(1) It is possible to provide a fixed carbon production device excellent in safety which is excellent in energy efficiency and which makes it possible to perform dry distillation safely.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00009-en" level="1">BRIEF DESCRIPTION OF DRAWINGS</heading>
+      <p id="p-00119-en" num="0119">
+        <figref>FIG. 1</figref> is a schematic diagram illustrating a fixed carbon production device according to an embodiment.</p>
+      <p id="p-00120-en" num="0120">
+        <figref>FIG. 2</figref> is a schematic diagram illustrating a simulated moving bed indirect heating dry distillation furnace.</p>
+      <p id="p-00121-en" num="0121">
+        <figref>FIG. 3</figref> is a graph illustrating analysis results of dry-distilled coal according to dry distillation temperatures.</p>
+      <p id="p-00122-en" num="0122">
+        <figref>FIG. 4</figref> is a graph illustrating thermogravimetric analysis results of dry-distilled coal according to dry distillation temperatures.</p>
+      <p id="p-00123-en" num="0123">
+        <figref>FIG. 5</figref> is a graph illustrating temperature change in brown coal in a dry distillation device.</p>
+      <p id="p-00124-en" num="0124">
+        <figref>FIG. 6</figref> is a graph illustrating changes in various combustion-related components of fixed carbon at a brown coal dry distillation processing temperature.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00010-en" level="1">DESCRIPTION OF EMBODIMENTS</heading>
+      <p id="p-00125-en" num="0125">In the following, the mode for carrying out the present invention will be described with reference to the drawings.</p>
+      <heading id="h-00011-en" level="1">Embodiments</heading>
+      <p id="p-00126-en" num="0126">
+        <figref>FIG. 1</figref> is a schematic diagram illustrating a fixed carbon production device according to an embodiment.</p>
+      <p id="p-00127-en" num="0127">In the drawing, <b>1</b> denotes a fixed carbon production device; <b>2</b> denotes a quench chamber for cooling and receiving fixed carbon (product dry-distilled char); <b>3</b> denotes a dry distillation furnace including a dry distillation unit which is erected on the upper portion of the quench chamber and which is partitioned by a separating wall portion described below, dry distillation mini-furnaces partitioned by partition plates described below provided in the dry distillation unit, steam piping and high temperature waste gas piping which are heated to a temperature of 500° C. to 600° C. are provided on the inner surface of the dry distillation furnace, the separating wall, and the partition plate, and dry-distills fed dried brown coal at a temperature of 350° C. to 500° C.; <b>3</b><i>a </i>denotes the separating wall arranged vertically from the upper portion to the lower portion of the dry distillation furnace <b>3</b> to divide the dry distillation furnace into rectangular dry distillation units; <b>3</b><i>b </i>denotes partition plates arranged vertically from the upper portion to the lower portion of the dry distillation furnace to divide each dry distillation unit divided by the separating wall into rectangular dry distillation mini-furnaces; <b>4</b> denotes dry distillation gas piping for recycling dry distillation gas produced through dry distillation which is provided in the upper portion or the lower portion; <b>5</b> denotes a dried brown coal feeding device for feeding into the dry distillation furnace dried brown coal obtained through drying of low rank coal to a moisture content of not more than 20 mass %; and <b>6</b> denotes a path for fixed carbon (product dry-distilled char).</p>
+      <p id="p-00128-en" num="0128">The fixed carbon production device according to the embodiment arranged as described above provides the following effects:</p>
+      <p id="p-00129-en" num="0129">(1) Each of the dry distillation mini-furnaces is equipped with a pipe-shaped heating means, so that it is possible to perform indirect heating by high temperature heat medium, it is easy to make the temperature in the dry distillation furnace uniform, and it is possible to prevent generation of heating spots. Further, there are provided dry distillation units each equipped with many rows of dry distillation mini-furnaces, and a dry distillation furnace equipped with many rows of the dry distillation units, so that the device is excellent in rigidity and durability;</p>
+      <p id="p-00130-en" num="0130">(2) Since there are provided dry distillation units each formed with many rows of dry distillation mini-furnaces, and a dry distillation furnace formed with many rows of dry distillation units, the device is of high rigidity and undergoes no deformation even when pressure is applied to the inside of the furnace due to generation of a volatile component in the dry distillation furnace or due to expansion of the raw material coal in the dry distillation furnace; thus the device is excellent in operation stability;</p>
+      <p id="p-00131-en" num="0131">(3) Since a pipe-shaped heating means is formed, it is possible to perform heating in a stable manner by using high temperature heat medium such as steam, so that the device is excellent in operation stability;</p>
+      <p id="p-00132-en" num="0132">(4) There is provided a quench chamber for collecting fixed carbon in the lower portion of the dry distillation furnace, so that it is possible to cool the fixed carbon reformed in the dry distillation furnace, and to collect the product dry-distilled char in a stable manner;</p>
+      <p id="p-00133-en" num="0133">(5) Since the dry distillation is performed at 350° C. to 500° C., the hydrocarbon gas (volatile content) is removed, and it is possible to convert to high rank coal, making it possible to obtain a high rank coal of a fuel ratio of 2 or more;</p>
+      <p id="p-00134-en" num="0134">(6) Since it is possible to perform the dry distillation at a low temperature of 350° C. to 500° C., the device is excellent in cost-saving efficiency in terms of the cost of the device itself and the input heat value; and</p>
+      <p id="p-00135-en" num="0135">(7) Since it is possible to perform the dry distillation while retaining heavy oil, there are no problems such as the clogging of the reactor.</p>
+      <heading id="h-00012-en" level="1">Experiment Example 1</heading>
+      <heading id="h-00013-en" level="1">Dry Distillation Test</heading>
+      <p id="p-00136-en" num="0136">In experiment example 1, the dry distillation temperature of the moving bed indirect heating dry distillation furnace was examined.</p>
+      <p id="p-00137-en" num="0137">
+        <figref>FIG. 2</figref> is a schematic view of the simulated moving bed indirect heating dry distillation furnace used for collecting test data of the present embodiment.</p>
+      <p id="p-00138-en" num="0138">In <figref>FIG. 2</figref>, <b>20</b> denotes a simulated moving bed indirect heating dry distillation furnace; <b>21</b> denotes a container furnace filled with a brown coal specimen (which was obtained through pre-heating and drying Loy Yang brown coal (raw coal) in the atmosphere and at room temperature to reduce its moisture content to around 20 mass %, setting the grain sizes to 0.3 mm to 0.5 mm through crushing/classification, drying the resultant coal in an inert gas atmosphere at 110° C., and removing the moisture therefrom) and partitioned in the length direction and the perpendicular direction (horizontal plane direction) with a SUS mesh; <b>21</b><i>a </i>denotes an inert gas feeding port through which N<sub>2 </sub>gas is caused to flow in at a rate of 200 ml/min to create an inert gas atmosphere in the container furnace <b>21</b>; <b>21</b><i>b </i>denotes an inert gas outlet for the inert gas input from the inert gas feeding port <b>21</b><i>a</i>; <b>22</b> denotes an electric furnace arranged in many stages in order to form a temperature distribution; <b>23</b> denotes a motor for moving the container furnace <b>21</b> inside the electric furnace <b>22</b> at a constant speed for spuriously preparing the data regarding the carbon flowing down in the furnace; and <b>24</b> denotes the moving direction of the container furnace.</p>
+      <p id="p-00139-en" num="0139">The inert gas flows from the inert gas feeding port <b>21</b><i>a </i>toward the inert gas outlet <b>21</b><i>b </i>in <figref>FIG. 2</figref> (from the upper side toward the lower side in <figref>FIG. 3</figref>).</p>
+      <p id="p-00140-en" num="0140">The simulated moving bed indirect heating dry distillation furnace <b>20</b> is a device simulating the brown coal conversion characteristics and the gasification characteristics in the dry distillation. The container furnaces <b>21</b> of cylindrical reactors formed of SUS are fixed in series in 15 stages, and these are raised by the motor <b>23</b> in the direction of the moving direction <b>24</b> from the lower portion toward the upper portion of the vertical electric furnaces <b>22</b> arranged in a number of stages, whereby there was obtained the test data when the brown coal filled in the container furnace <b>21</b> flowed down from the upper portion to the lower portion of the moving bed. From the upper side in <figref>FIG. 2</figref>, the container furnaces <b>21</b> were numbered as the first, second, . . . , to 15th container. There were provided nine electric furnaces <b>22</b>; and the first through fourth electric furnaces as ordered from the lower side in <figref>FIG. 2</figref> were set to 165° C., the fifth furnace was set to 300° C., the sixth furnace was set to 400° C., the seventh furnace was set to 500° C., the eighth furnace was set to 600° C., and the ninth furnace was set to 700° C., respectively. It is noted that the container furnaces <b>21</b> were raised at a rate of 6.9 ram/min within the electric furnaces <b>22</b>. The temperature rise rate at this time of the container furnaces <b>21</b> was about 10° C./min. Of the fifteen container furnaces <b>21</b>, the container furnaces <b>21</b> which have passed the electric furnace uppermost portion were the first through sixth container furnaces <b>21</b>.</p>
+      <p id="p-00141-en" num="0141">
+        <figref>FIG. 3</figref> and (Table 1) are graphs showing the dry-distilled coal analysis results according to the dry distillation temperatures. More specifically, <figref>FIG. 3</figref> shows the solid yields of the respective containers obtained based on the mass of the solid remaining after the completion of the experiment using the simulated moving bed indirect heating dry distillation furnace <b>20</b> of <figref>FIG. 2</figref>.</p>
+      <p id="p-00142-en" num="0142">At this time, the first through sixth of the container furnaces <b>21</b> have passed the electric furnaces; the seventh through eleventh container furnaces <b>21</b> correspond to 200° C. to 595° C. of the thermal decomposition zone; and the 12th to 15th container furnaces <b>21</b> are the portions heated at 165° C. and they are at a temperature of about 140° C.</p>
+      <p id="p-00143-en" num="0143">The carbide yield at the first container furnace <b>21</b> was 55 mass %; the carbide yield gradually increased from the second to the sixth container furnaces <b>21</b>, i.e., the lower the stage; and the yield attained 60 mass % at the sixth container furnace <b>21</b>. This resulted from the volatile component containing heavy oil generated from the upper stage container coming into contact with the brown coal carbide and half-carbide of the lower stage, with the carbide yield increasing due to sorption of the heavy oil and co-carbonization of the heavy oil and the brown coal. Further, from the 12th container furnace <b>21</b> onward, there was recognized an increase in weight by 10% to 20% of deadweight probably attributable mainly to the sorption of the heavy oil. On the downstream side of the reactor (the 12th to 15th container furnaces <b>21</b>), the production gas and the condensation component were recycled, and the recycle rate of these generated products was 99% or more. As a result of the analysis of the recycled condensation component, it was found that the high boiling point heavy oil condensed due to the presence of a low temperature portion in the furnace; further, it is possible to perform selective production of light oil components through supply of heavy oil due to the brown coal particles present here; and, as shown in <figref>FIG. 3</figref> and (Table 1), in the temperature range of 200° C. to 595° C., dry distillation rapidly progressed in the moving bed indirect heating dry distillation furnace, making it possible to retain the heavy oil component in the fixed carbon.</p>
+      <p id="p-00144-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="175pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="1" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Container furnace number</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="21pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="21pt" align="center" />
+              <colspec colname="6" colwidth="21pt" align="center" />
+              <colspec colname="7" colwidth="21pt" align="center" />
+              <colspec colname="8" colwidth="21pt" align="center" />
+              <colspec colname="9" colwidth="21pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>1</entry>
+                  <entry>2</entry>
+                  <entry>3</entry>
+                  <entry>4</entry>
+                  <entry>5</entry>
+                  <entry>6</entry>
+                  <entry>7</entry>
+                  <entry>8</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Solidyield</entry>
+                  <entry>56</entry>
+                  <entry>56.4</entry>
+                  <entry>56.9</entry>
+                  <entry>57.5</entry>
+                  <entry>57.9</entry>
+                  <entry>58.7</entry>
+                  <entry>59.3</entry>
+                  <entry>61.4</entry>
+                </row>
+                <row>
+                  <entry>(mass %)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="175pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Container furnace number</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="21pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="21pt" align="center" />
+              <colspec colname="6" colwidth="21pt" align="center" />
+              <colspec colname="7" colwidth="21pt" align="center" />
+              <colspec colname="8" colwidth="21pt" align="center" />
+              <colspec colname="9" colwidth="21pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>9</entry>
+                  <entry>10</entry>
+                  <entry>11</entry>
+                  <entry>12</entry>
+                  <entry>13</entry>
+                  <entry>14</entry>
+                  <entry>15</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Solidyield</entry>
+                  <entry>65.7</entry>
+                  <entry>72.4</entry>
+                  <entry>88.9</entry>
+                  <entry>107.9</entry>
+                  <entry>112.4</entry>
+                  <entry>110.4</entry>
+                  <entry>108.9</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>(mass %)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00014-en" level="1">Experiment Example 2</heading>
+      <heading id="h-00015-en" level="1">Evaluation Test Through Thermogravimetric Analysis</heading>
+      <p id="p-00145-en" num="0144">In experiment example 2, the dry distillation temperature was examined through thermogravimetric analysis.</p>
+      <p id="p-00146-en" num="0145">
+        <figref>FIG. 4</figref>, (Table 2), and (Table 3) are graphs showing the results of the dry-distilled coal thermogravimetric analysis according to the dry distillation temperatures. More specifically, in order to check the dry distillation temperature through thermal decomposition of brown coal, Loy Yang brown coal (raw coal) was pre-heated and dried at room temperature and in the atmosphere to reduce its moisture content to around 20 mass %; then, its grain sizes were set to 0.3 mm to 0.5 mm through crushing/classification, and the coal was dried in an inert gas atmosphere at 110° C. to remove moisture therefrom; the resultant coal was measured by using a thermogravimetric analysis apparatus (EXSTAR TG/DTA 6000 manufactured by SII Nanotechnology Inc.) to obtain the following results.</p>
+      <p id="p-00147-en" num="0146">As shown in <figref>FIG. 4</figref>, (Table 2), and (Table 3), it is recognized that the brown coal weight began to decrease at around 350° C., with the dry distillation being conspicuous from this temperature. Further, in a stationary bed dry distillation furnace, a similar specimen was dry-distilled in a nitrogen stream at 500° C., 550° C., 600° C., and 650° C., with the temperature rise rate being 10° C./min, and the retaining time at the peak temperature being zero seconds. The relationship between the fixed carbon yield and the temperature at this time is plotted in <figref>FIG. 4</figref>. By checking the graph, it is understood that the results of the thermogravimetric analysis and the temperature definition in the dry distillation furnace are in a satisfactory correlationship. The results of the dry-distilled coal thermogravimetric analysis in <figref>FIG. 4</figref> are plotted in (Table 2), and the relationship between the fixed carbon yield and temperature in <figref>FIG. 4</figref> is plotted in (Table 3).</p>
+      <p id="p-00148-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="21pt" align="center" />
+              <colspec colname="3" colwidth="21pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="21pt" align="center" />
+              <colspec colname="6" colwidth="21pt" align="center" />
+              <colspec colname="7" colwidth="21pt" align="center" />
+              <colspec colname="8" colwidth="21pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="8" rowsep="1">TABLE 2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Temperature (° C.)</entry>
+                  <entry>200</entry>
+                  <entry>300</entry>
+                  <entry>400</entry>
+                  <entry>500</entry>
+                  <entry>600</entry>
+                  <entry>700</entry>
+                  <entry>800</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Weight change</entry>
+                  <entry>0.99</entry>
+                  <entry>0.95</entry>
+                  <entry>0.85</entry>
+                  <entry>0.7</entry>
+                  <entry>0.62</entry>
+                  <entry>0.57</entry>
+                  <entry>0.53</entry>
+                </row>
+                <row>
+                  <entry>amount (mass %)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00149-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="84pt" align="left" />
+              <colspec colname="2" colwidth="21pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="35pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="5" rowsep="1">TABLE 3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Peak temperature (° C.)</entry>
+                  <entry>500</entry>
+                  <entry>550</entry>
+                  <entry>600</entry>
+                  <entry>650</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="5" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Yield of fixed carbon</entry>
+                  <entry>0.71</entry>
+                  <entry>0.67</entry>
+                  <entry>0.63</entry>
+                  <entry>0.6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00016-en" level="1">Experiment Example 3</heading>
+      <heading id="h-00017-en" level="1">High Rank Conversion Temperature Demonstration Test</heading>
+      <p id="p-00150-en" num="0147">In experiment example 3, the requisite temperature for conversion from low rank coal to high rank coal was examined.</p>
+      <p id="p-00151-en" num="0148">
+        <figref>FIG. 5</figref> and (Table 4) are graphs showing temperature changes in brown coal inside the dry distillation device. More specifically, Loy Yang brown coal (raw coal) was placed in a horizontally installed tubular furnace with N<sub>2 </sub>gas circulating therethrough; in this state, the in-furnace temperature was raised to each measurement temperature, and the temperature change time at that time and each temperature were measured.</p>
+      <p id="p-00152-en" num="0149">As shown in <figref>FIG. 5</figref>, it is understood that even after the moisture had vaporized at around 100° C., the temperature increased gradually; even when the set temperature was 300° C., there was a latent heat component, which shows that conversion to high rank coal occurred.</p>
+      <p id="p-00153-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="105pt" align="left" />
+              <colspec colname="1" colwidth="210pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="1" rowsep="1">TABLE 4</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Reaction time (min)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="11" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="105pt" align="left" />
+              <colspec colname="1" colwidth="21pt" align="center" />
+              <colspec colname="2" colwidth="21pt" align="center" />
+              <colspec colname="3" colwidth="21pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="21pt" align="center" />
+              <colspec colname="6" colwidth="21pt" align="center" />
+              <colspec colname="7" colwidth="21pt" align="center" />
+              <colspec colname="8" colwidth="21pt" align="center" />
+              <colspec colname="9" colwidth="21pt" align="center" />
+              <colspec colname="10" colwidth="21pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>1</entry>
+                  <entry>2</entry>
+                  <entry>3</entry>
+                  <entry>4</entry>
+                  <entry>5</entry>
+                  <entry>6</entry>
+                  <entry>7</entry>
+                  <entry>8</entry>
+                  <entry>9</entry>
+                  <entry>10</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="10" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="13" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="21pt" align="char" char="." />
+              <colspec colname="3" colwidth="42pt" align="left" />
+              <colspec colname="4" colwidth="21pt" align="char" char="." />
+              <colspec colname="5" colwidth="21pt" align="char" char="." />
+              <colspec colname="6" colwidth="21pt" align="char" char="." />
+              <colspec colname="7" colwidth="21pt" align="char" char="." />
+              <colspec colname="8" colwidth="21pt" align="char" char="." />
+              <colspec colname="9" colwidth="21pt" align="char" char="." />
+              <colspec colname="10" colwidth="21pt" align="char" char="." />
+              <colspec colname="11" colwidth="21pt" align="char" char="." />
+              <colspec colname="12" colwidth="21pt" align="char" char="." />
+              <colspec colname="13" colwidth="21pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Set</entry>
+                  <entry>300</entry>
+                  <entry>Specimen</entry>
+                  <entry>88</entry>
+                  <entry>93</entry>
+                  <entry>93</entry>
+                  <entry>104</entry>
+                  <entry>133</entry>
+                  <entry>182</entry>
+                  <entry>229</entry>
+                  <entry>259</entry>
+                  <entry>276</entry>
+                  <entry>287</entry>
+                </row>
+                <row>
+                  <entry>temperature</entry>
+                  <entry>350</entry>
+                  <entry>temperature</entry>
+                  <entry>96</entry>
+                  <entry>95</entry>
+                  <entry>95</entry>
+                  <entry>124</entry>
+                  <entry>187</entry>
+                  <entry>254</entry>
+                  <entry>296</entry>
+                  <entry>319</entry>
+                  <entry>333</entry>
+                  <entry>341</entry>
+                </row>
+                <row>
+                  <entry>(° C.)</entry>
+                  <entry>400</entry>
+                  <entry>(° C.)</entry>
+                  <entry>96</entry>
+                  <entry>115</entry>
+                  <entry>225</entry>
+                  <entry>315</entry>
+                  <entry>352</entry>
+                  <entry>371</entry>
+                  <entry>381</entry>
+                  <entry>386</entry>
+                  <entry>390</entry>
+                  <entry>392</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>500</entry>
+                  <entry />
+                  <entry>97</entry>
+                  <entry>111</entry>
+                  <entry>265</entry>
+                  <entry>381</entry>
+                  <entry>453</entry>
+                  <entry>489</entry>
+                  <entry>500</entry>
+                  <entry>500</entry>
+                  <entry>500</entry>
+                  <entry>500</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>600</entry>
+                  <entry />
+                  <entry>101</entry>
+                  <entry>127</entry>
+                  <entry>376</entry>
+                  <entry>525</entry>
+                  <entry>565</entry>
+                  <entry>578</entry>
+                  <entry>584</entry>
+                  <entry>588</entry>
+                  <entry>590</entry>
+                  <entry>592</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>700</entry>
+                  <entry />
+                  <entry>114</entry>
+                  <entry>462</entry>
+                  <entry>626</entry>
+                  <entry>661</entry>
+                  <entry>675</entry>
+                  <entry>682</entry>
+                  <entry>685</entry>
+                  <entry>688</entry>
+                  <entry>690</entry>
+                  <entry>691</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>800</entry>
+                  <entry />
+                  <entry>102</entry>
+                  <entry>464</entry>
+                  <entry>715</entry>
+                  <entry>753</entry>
+                  <entry>767</entry>
+                  <entry>774</entry>
+                  <entry>778</entry>
+                  <entry>782</entry>
+                  <entry>784</entry>
+                  <entry>786</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="13" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00018-en" level="1">Experiment Example 4</heading>
+      <heading id="h-00019-en" level="1">Dry Distillation Temperature Effect Test</heading>
+      <p id="p-00154-en" num="0150">In experiment example 4, dry distillation temperature and the performance of the resultant fixed carbon were examined.</p>
+      <p id="p-00155-en" num="0151">
+        <figref>FIG. 6</figref> and (Table 5) are graphs showing changes in the combustion-related components of the fixed carbon at the brown coal dry distillation processing temperatures. More specifically, Loy Yang brown coal (raw coal) was pre-heated and dried at room temperature and in the atmosphere, reducing its moisture content to around 20 mass %; the resultant coal was placed in a horizontally installed tubular furnace with N<sub>2 </sub>gas circulating therethrough; in this state, the in-furnace temperature was raised to 400° C., 600° C., 700° C., and 800° C., and the inherent moisture, volatile content, ash, fixed carbon yield (%), and the fuel ratio at that time were measured.</p>
+      <p id="p-00156-en" num="0152">As shown in <figref>FIG. 6</figref> and (Table 5), in the coal processed at 400° C., the fuel ratio was 2.5, thus showing that there has been realized a fuel ratio on the order of bituminous coal like Newlands coal.</p>
+      <p id="p-00157-en" num="0000">
+        <tables id="tables-00005-en" num="00005">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="91pt" align="left" />
+              <colspec colname="1" colwidth="91pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" rowsep="1">TABLE 5</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Processing temperature (° C.)</entry>
+                  <entry>Newlands</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="91pt" align="left" />
+              <colspec colname="1" colwidth="21pt" align="center" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="21pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>400</entry>
+                  <entry>600</entry>
+                  <entry>700</entry>
+                  <entry>800</entry>
+                  <entry>coal</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="91pt" align="left" />
+              <colspec colname="2" colwidth="21pt" align="char" char="." />
+              <colspec colname="3" colwidth="28pt" align="char" char="." />
+              <colspec colname="4" colwidth="21pt" align="char" char="." />
+              <colspec colname="5" colwidth="21pt" align="char" char="." />
+              <colspec colname="6" colwidth="35pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Inherent moisture (mass %)</entry>
+                  <entry>6.3</entry>
+                  <entry>8.4</entry>
+                  <entry>10.3</entry>
+                  <entry>14.6</entry>
+                  <entry>2.7</entry>
+                </row>
+                <row>
+                  <entry>Volatile content (mass %)</entry>
+                  <entry>26.3</entry>
+                  <entry>13.0</entry>
+                  <entry>10.2</entry>
+                  <entry>7.3</entry>
+                  <entry>27.3</entry>
+                </row>
+                <row>
+                  <entry>Ash (mass %)</entry>
+                  <entry>2.5</entry>
+                  <entry>3.3</entry>
+                  <entry>3.6</entry>
+                  <entry>3.7</entry>
+                  <entry>14.7</entry>
+                </row>
+                <row>
+                  <entry>Fixed carbon (mass %)</entry>
+                  <entry>64.8</entry>
+                  <entry>75.3</entry>
+                  <entry>76.0</entry>
+                  <entry>74.4</entry>
+                  <entry>55.3</entry>
+                </row>
+                <row>
+                  <entry>Fuel ratio</entry>
+                  <entry>2.5</entry>
+                  <entry>5.8</entry>
+                  <entry>7.5</entry>
+                  <entry>10.2</entry>
+                  <entry>2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00158-en" num="0153">In this context, the present inventors have intensively made a close study of the complex system for utilizing coal, which is high in calorific value and power generation efficiency, for manufacture of char and raw material gas and electric power generation and completed as an invention, the complex system being adopted to vaporize the moisture of the low rank coal with a small amount of heat energy as well as to detach the high volatile component with the energy of the combustion gas so as to utilize the same not as a fuel but as a raw material for chemical products.</p>
+      <heading id="h-00020-en" level="1">INDUSTRIAL APPLICABILITY</heading>
+      <p id="p-00159-en" num="0154">The present invention provides a fixed carbon production device which performs thermal decomposition and gasification while moving dried low rank coal in a dry distillation furnace and which makes it possible to recycle fixed carbon, hydrocarbon gas, etc.</p>
+      <heading id="h-00021-en" level="1">REFERENCE SIGNS LIST</heading>
+      <p id="p-00160-en" num="0000">
+        <ul id="ul-00001-en" list-style="none">
+          <li>
+            <ul id="ul-00002-en" list-style="none">
+              <li>
+                <b>1</b> Fixed carbon production device</li>
+              <li>
+                <b>2</b> Quench chamber</li>
+              <li>
+                <b>3</b> Dry distillation furnace</li>
+              <li>
+                <b>3</b>
+                <i>a </i>Separating wall</li>
+              <li>
+                <b>3</b>
+                <i>b </i>Partition plate</li>
+              <li>
+                <b>4</b> Dry distillation gas piping</li>
+              <li>
+                <b>5</b> Dried brown coal</li>
+              <li>
+                <b>6</b> Fixed carbon</li>
+              <li>
+                <b>20</b> Simulated moving bed indirect heating dry distillation furnace</li>
+              <li>
+                <b>21</b> Container furnace</li>
+              <li>
+                <b>21</b>
+                <i>a </i>Inert gas feeding port</li>
+              <li>
+                <b>21</b>
+                <i>b </i>Inert gas outlet</li>
+              <li>
+                <b>22</b> Electric furnace</li>
+              <li>
+                <b>23</b> Motor</li>
+              <li>
+                <b>24</b> Moving direction</li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A fixed carbon production device comprising: a quench chamber for collecting fixed carbon; a dry distillation furnace which is erected and fixed in the quench chamber; a dry distillation unit which is partitioned into a rectangular or a polygonal shape in the vertical direction on a horizontal cross-section in the dry distillation furnace by a separating wall from an upper portion to a lower portion; a dry distillation mini-furnace which is partitioned into a rectangular or a polygonal shape in the vertical direction on the horizontal cross-section in the dry distillation unit by a partition from an upper portion to a lower portion; a pipe-shaped heating means which is arranged on the separating wall of the dry distillation unit and the partition of the dry distillation mini-furnace; and a collection path for collecting fixed carbon produced in the quench chamber by feeding raw material coal from an upper portion of the dry distillation unit and performing dry distillation in each of the dry distillation mini-furnaces by the pipe-shaped heating means.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The fixed carbon production device according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein a heating temperature of the dry distillation furnace is of 350° C. to 500° C.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The fixed carbon production device according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein there are arranged in the dry distillation mini-furnace, a baffle plate, a metal mesh, and a metal plate with holes.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The fixed carbon production device according to <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein the baffle plate is a holed structure at an angle not less than an angle of repose.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The fixed carbon production device according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein, at a fixed carbon extraction port at a bottom portion of the quench chamber, there are provided a rotary valve, and a means for sending high temperature steam or a carrier gas such as carbon dioxide gas or nitrogen gas.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The fixed carbon production device according to <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the rotary valve has a rotating vane with holes.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The fixed carbon production device according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the raw material coal is a dried coal obtained through drying of low rank coal to a moisture content of not more than 20 mass %.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The fixed carbon production device according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the grain size of the raw material coal is adjusted to 0.1 μm to 5 mm.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The fixed carbon production device according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein there is provided a combustion means for burning at least a part of the hydrocarbon gas and fixed carbon obtained through dry distillation of the raw material coal, and wherein the heating means utilizes the exhaust gas or waste heat of the combustion means. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150247091A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150247091A1-20150903-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150247091A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247091A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150247091A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247091A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150247091A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247091A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150247091A1_00005.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150247091A1-20150903-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150247091A1.PDF" type="pdf" size="708272" pages="14" />
+</lexisnexis-patent-document>

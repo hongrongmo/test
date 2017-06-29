@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150259257A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030101" date-changed="20151208" time-changed="150647">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121314043">
+        <country>US</country>
+        <doc-number>20150259257</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14206861</doc-number>
+        <date>20140312</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151208">
+      <classification-ipcr sequence="1">
+        <text>C04B  41/51        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>41</main-group>
+        <subgroup>51</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>B05D   3/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>05</class>
+        <subclass>D</subclass>
+        <main-group>3</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>B05D   5/06        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>05</class>
+        <subclass>D</subclass>
+        <main-group>5</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C25D   3/54        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>25</class>
+        <subclass>D</subclass>
+        <main-group>3</main-group>
+        <subgroup>54</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>C25D   3/56        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>25</class>
+        <subclass>D</subclass>
+        <main-group>3</main-group>
+        <subgroup>56</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>C25D   7/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>25</class>
+        <subclass>D</subclass>
+        <main-group>7</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151208">
+      <classification-cpc sequence="1">
+        <text>C25D   3/56        20130101 FI20151020BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>25</class>
+        <subclass>D</subclass>
+        <main-group>3</main-group>
+        <subgroup>56</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151020</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C04B  41/009       20130101 LI20151015BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>41</main-group>
+        <subgroup>009</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151015</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C04B  41/51        20130101 LI20151015BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>41</main-group>
+        <subgroup>51</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151015</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C04B2111/2092      20130101 LA20151015BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>2111</main-group>
+        <subgroup>2092</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151015</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C23C  14/18        20130101 LI20151130BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>14</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151130</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C25D   3/54        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>25</class>
+        <subclass>D</subclass>
+        <main-group>3</main-group>
+        <subgroup>54</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C25D   7/00        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>25</class>
+        <subclass>D</subclass>
+        <main-group>7</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <combination-set>
+        <group-number>1</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C04B  41/009       20130101 LI20151015BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>04</class>
+            <subclass>B</subclass>
+            <main-group>41</main-group>
+            <subgroup>009</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151015</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C04B  14/00        20130101 LI20151015BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>04</class>
+            <subclass>B</subclass>
+            <main-group>14</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151015</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>2</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C04B  41/51        20130101 LI20151015BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>04</class>
+            <subclass>B</subclass>
+            <main-group>41</main-group>
+            <subgroup>51</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151015</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C04B2103/54        20130101 LA20151015BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>04</class>
+            <subclass>B</subclass>
+            <main-group>2103</main-group>
+            <subgroup>54</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20151015</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">18</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">METALLIZED SAND ROSES AND METHOD OF PRESERVING SAND ROSES</invention-title>
+    <references-cited date-changed="20151117">
+      <patent-citations name="patcit" date-changed="20151117" />
+      <non-patent-citations name="nplcit" date-changed="20151117" />
+      <citation>
+        <patcit num="1" dnum="US5816072A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5816072</doc-number>
+            <kind>A</kind>
+            <name>MICHAELS THOMAS [US]</name>
+            <date>19981006</date>
+          </document-id>
+          <application-date>
+            <date>19970916</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US5494505A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5494505</doc-number>
+            <kind>A</kind>
+            <name>TOMIOKA TOSHIKAZU [JP], et al</name>
+            <date>19960227</date>
+          </document-id>
+          <application-date>
+            <date>19950126</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <nplcit num="1">
+          <text>Forthegoodknight, "Unique Geode Pendant Using Electroforming", 2012, p. 1-14; Accessed at http://web.archive.org/web/20120625111617/http://www.instructables.com/id/Unique-Geode-Pendant-using-Electroforming/?ALLSTEPS.</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="2">
+          <text>Crystals, Rocks, and Gems, "Desert Rose Healing Crystals", 2009, p. 1-2; Accessed at http://web.archive.org/web/20091202233556/http://www.crystalsrocksandgems.com/Healing_Crystals/DesertRose.html.</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="3">
+          <text>Merriam-Webster Online Dictionary entry for "Pigment" p. 1, Accessed on 10/28/15 at http://www.merriam-webster.com/dictionary/pigment.</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="4">
+          <text>Haab, S.; "Comparing Conductive Paints for Electroforming", p. 1, Accessed on 10/28/15 at https://cdn.shopify.com/s/files/1/0347/8621/files/Conductive_Paints_for_Electroforming.pdf.</text>
+        </nplcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Woog</last-name>
+            <first-name>Philippe-Guy</first-name>
+            <address>
+              <city>Vesenaz</city>
+              <country>CH</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>CH</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Woog</last-name>
+            <first-name>Philippe-Guy</first-name>
+            <address>
+              <city>Vesenaz</city>
+              <country>CH</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173666716">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259257</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140312</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173666715">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259257</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140312</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention is directed toward metallized sand rose compositions and a method of preserving a sand rose by coating the sand rose with a metal or metal alloy. The present invention is more particularly directed to a method of preserving a sand rose by depositing or forming a metal or metal alloy layer on the surface of the sand rose.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00001-en" num="0001">The present invention relates generally to the field of sand roses and is directed to a metallized sand rose composition and a method of preserving a sand rose using metallization.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE DISCLOSURE</heading>
+      <p id="p-00002-en" num="0002">Gypsum is a soft sulfate mineral composed of calcium sulfate dihydrate with the chemical formula CaSO<sub>4</sub>—2H<sub>2</sub>O. Gypsum is one of the more evaporative minerals in the sedimentary environment and is naturally occurring in several varieties, including alabaster in massive form and selenite in crystalline form.</p>
+      <p id="p-00003-en" num="0003">Selenite mineral is a crystalline form of gypsum. Selenite crystals commonly occur as tubular, reticular and columnar crystals, often with no imperfections or inclusions and can appear water or glass like. At times the crystals include interesting inclusions such as fossils. Satin spar variety is almost prismatic and fibrous in a parallel crystal habit. Another variety of selenite crystals exhibits a rosette formation.</p>
+      <p id="p-00004-en" num="0004">The minerals barite and celestine can also exhibit a rosette formation.</p>
+      <p id="p-00005-en" num="0005">The rosette formation, in particular, can be visually pleasing. However, the rosette formation is brittle, fragile and susceptible to breakage and disintegration. The present invention provides a composition and method that addresses the above and other issues.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00006-en" num="0006">The present invention is directed toward metallized sand rose compositions and a method of preserving a sand rose by coating the sand rose with a metal or metal alloy. The present invention is more particularly directed to a method of preserving a sand rose by depositing or forming a metal or metal alloy layer on the surface of the sand rose.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00007-en" num="0007">The present invention will be better understood by reference to the following drawing of which:</p>
+      <p id="p-00008-en" num="0008">
+        <figref>FIG. 1</figref> is a metallized sand rose</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00009-en" num="0009">A sand rose is a mineral formation that results when sand crystallizes with gypsum or barite crystals to form a rosette shape.</p>
+      <p id="p-00010-en" num="0010">Each sand rose forms a uniquely shaped mineral flower. The petals constituting these mineral flowers are actually crystals flattened in the crystallographic axis, fanning open in radiating clusters. Some sand roses consist of a few large blades while other sand roses consist of large clusters of rosettes. Gypsum sand roses thin toward the edge of the blade or petal, where the blade becomes transparent and sharp. The edges of the gypsum or selenite sand roses are sharper and the crystalline structure thereof is less hard and more delicate than the sand roses formed from barite. The blades or petals taper as the blades and petals extend from the center of the sand rose. In some circumstances sand roses look remarkably like a spherical rose flower with its petals wide open.</p>
+      <p id="p-00011-en" num="0011">Sand roses are found in a variety of sizes, ranging from a small rosette that is a centimeter in diameter to large clusters that exceed more than one meter in diameter. A sand rose crystal can be free-floating or attached to a matrix or base rock.</p>
+      <p id="p-00012-en" num="0012">Gypsum sand roses are found in arid regions all over the world, such as California, Libya, Mexico, Egypt and Saudi Arabia, in lake muds, clay beds, evaporated seas, salt flats, salt springs, caves and deserts. Sand roses frequently occur in arid sandy environments such as the evaporation of shallow salt basins. Sand roses form when water evaporates in arid sandy conditions, usually after a short rain. During the growth of the sand rose grains of sand remain trapped in the gypsum. Gypsum and in particular the selenite variety of gypsum is transparent. The trapped sand grains give the sand rose the color of the surrounding desert soil that may be different depending upon where the desert rose is created. Gypsum sand roses are generally brown, reddish, or dusty rose in color.</p>
+      <p id="p-00013-en" num="0013">Sand roses can take years, even hundreds of years, to form depending upon the levels of gypsum in the groundwater. Weather conditions also contribute to the formation of sand roses. Gypsum sand roses are extremely water soluble and if the pH levels and compositions of the groundwater alter too much the sand rose will simply dissolve.</p>
+      <p id="p-00014-en" num="0014">When a sand rose outcrops, if the sand rose is left to the weather, the embedded sand grains become lighter as the sand grains oxidize and the gypsum matrix turns white and soft. Eventually the sand rose will transform from a solid mineral formation to a powder. The length of time it takes the sand rose to erode and dissolve into a powder depends upon the size of the sand rose.</p>
+      <p id="p-00015-en" num="0015">Some sand roses can appear and be found at the ground surface. However, surface appearing gypsum sand roses are often damaged because gypsum is a soft mineral. If left on the ground surface exposed to weather, the sand roses transform or degrade quickly.</p>
+      <p id="p-00016-en" num="0016">Sand roses typically crystallize about one meter below the ground surface. Digging to the water table locates well-formed and undamaged sand roses, that can be difficult to extract because of the suction of wet sand on the contorted surface of the sand rose. Newly dug sand roses are quite fragile and easy to break. The sand roses harden as they dry but remain a soft mineral classified at about a “2” on the Mohs scale of Hardness and can be scratched with a fingernail. As a result care must be taken during the extraction process as well as subsequent handling and packing thereof.</p>
+      <p id="p-00017-en" num="0017">Gypsum is not stable in the presence of water and humidity. If left exposed to weather, sand roses will degrade. If protected from weather the sand roses can still degrade depending upon the amount of humidity in the air.</p>
+      <p id="p-00018-en" num="0018">Coating a gypsum sand rose with a metal or metal alloy encapsulates the fragile sand rose structure and creates a brilliant, metallized sand rose composition that retains the unique structure of the original sand rose. The metal layer prevents the degradation of the sand rose through erosion and humidity. In addition, the metallized sand rose composition is strengthened and the blades or petals become resistant to breakage. Furthermore, coating the entire sand rose surface encloses any impurities that can exist in the sand rose, including but not limited to bacteria present in the soil, within the metallized sand rose composition thereby preventing proliferation of any impurities such as bacteria and reducing exposure thereto.</p>
+      <p id="p-00019-en" num="0019">Referring now to <figref>FIG. 1</figref>, illustrated is a metallized gypsum sand rose composition of the present invention. In this embodiment, the sand rose illustrated is coated using electroplating technology with a brilliant layer of sterling silver to form a composition consisting of a sand rose and sterling silver. The delicate edges of the blades or petals are sharply defined and visibly distinct. The sand rose composition consisting of a sand rose and sterling silver creates an attractive sculpture with visual appeal.</p>
+      <p id="p-00020-en" num="0020">The dimensions of the sand rose illustrated in <figref>FIG. 1</figref> are 16.5 cm height, 30 cm width and 25 cm diameter. The metallized sand rose shown weighs 4,800 g. This description being for illustrative purposes only without intent to limit the invention. The dimensions and weight of a metallized sand rose composition in accordance with the present invention are not limited to the illustrated metallized sand rose composition in <figref>FIG. 1</figref>. The dimensions and weight of the metallized sand rose composition in accordance with the present invention can be higher or lower and are dependent upon the actual size of the sand rose selected to be metallized and the metal or metal alloy material used to coat the sand rose. The metal material may include any metal which is suitable for metallization. Exemplary metals include aluminum, copper, tin, zinc, platinum, titanium, lead, nickel, iron, gold, silver, chrome and the like. Exemplary metal alloys include copper based alloys, aluminum based alloys, titanium based alloys, iron based alloys and corrosion and/or abrasion resistant alloys.</p>
+      <p id="p-00021-en" num="0021">The present invention is also directed to a method of preserving a sand rose by metallizing the sand rose. Metallizing is the process of coating metal or metal alloy onto a non-metallic surface.</p>
+      <p id="p-00022-en" num="0022">The application of a metal or metal alloy coating is well known in the art. Exemplary metallizing processes include galvanization, electroplating, electrodeposition metallization, metal spraying, hot dip metallization, diffusion metallization, vacuum metallization, sputtering, ion implantation or ion plating and contact metallization. Exemplary metallizing techniques include aluminizing, chromium plating, zinc coating, tin plating, cadmium plating, copperizing, nickel plating, lead plating, silver plating, gold plating and the like. Suffice to say, the metallizing process for the present invention covers the surface of the sand rose with a layer of metal or metal alloy. The metallization process is selected in view of the size of the sand rose to be coated and the coating material. Electroplated coatings tend to be thin and brightly reflective. In the present invention galvanization/electroplating processes are particularly suitable for copper, silver, nickel, sterling silver, yellow gold and pink gold materials. Vacuum metallization is particularly suitable to evenly coat larger sand rose specimens and to add color to the metallic coating.</p>
+      <p id="p-00023-en" num="0023">In one embodiment utilizing a vacuum metallization process, the metal or metal alloy layer is deposited on the sand rose by evaporating the metal or metal alloy and recondensing it on the sand rose surface. The process is carried out in a chamber from which the air is evacuated until the residual pressure is approximately one-millionth normal atmospheric pressure. The sand rose is cleaned and then the cleaned sand rose is mounted within a vacuum chamber in such a way that it is exposed by line of sight to the metal vapor. The metal vapor is produced by heating the metal to be evaporated to such a temperature that its vapor pressure appreciably exceeds the residual pressure within the chamber. Thus, the metal is converted to a vapor and is transferred in this form to the surface of the relatively cool sand rose.</p>
+      <p id="p-00024-en" num="0024">In another embodiment utilizing electroplating, the sand rose and the metal or metal alloy material are immersed in an electrolyte solution containing one or more dissolved metal salts as well as other ions that permit the flow of electricity. A power supply supplies a direct current to the anode made of the metal to be plated, oxidizing the metal atoms that comprise it and allowing them to dissolve in the solution. At the cathode comprising the sand rose, the dissolved metal ions in the electrolyte solution are reduced at the interface between the solution and the sand rose, such that they “plate out” onto the sand rose. The rate at which the metal or metal alloy, is dissolved is equal to the rate at which the sand rose, is plated, vis-a-vis the current flowing through the circuit</p>
+      <p id="p-00025-en" num="0025">It may be desirable to produce a metal or metal alloy layer that includes a non-metallic color. Exemplary colors include green, lilac, magenta, blue, orange, red, and the like. To achieve this result, pigment can be incorporated in the metallizing step. For instance, during the electroplating process described herein pigment can be added to the highly concentrated liquid solution of metal salts and will be plated along with the metal or metal alloy. Alternatively, the color can be added in a separate step subsequent to the metallizing step wherein the metal or metal alloy layer is coated with a color coating. The color coating is preferably transparent to maintain the benefit of the reflective properties of the metal or metal alloy layer. Exemplary color coating materials include metal oxides or other pigment containing material or resin.</p>
+      <p id="p-00026-en" num="0026">The structure of the layer of metal or metal alloy and its features depends upon the conditions of the coating process, cleanness of surface of the sand rose and features of the metal or metal alloy and sand rose.</p>
+      <p id="p-00027-en" num="0027">To achieve a brilliant blemish-free coating, the sand rose must be free of surface contaminates such as mold releases, fingerprints, dust, dirt, oil and grease. Accordingly, the present invention contemplates the additional step of cleaning the sand rose and preparing the sand rose for coating with metal. In one embodiment the cleaning step consists of dusting the sand rose with a fine brush. The cleaning step can serve a dual purpose. When the sand rose is cleaned with an acid or an alcalic solution, the surface of the sand rose is also prepared for the metal to adhere to the surface. Other cleaning methods and surface preparation methods and techniques can be employed in the present invention.</p>
+      <p id="p-00028-en" num="0028">The present invention contemplates the creation of a sculpture of extraordinary and breath-taking appeal by encapsulating a mineral sand rose in a metal or metal alloy. The metal or metal alloy is coated onto the surface of the sand rose. As a result the structure of the unique mineral flower is reinforced and maintained. More particularly, the fragile sand rose petals are reinforced and strengthened creating an aesthetically pleasing three-dimensional metal coated sculpture or structure in the form of a sand rose. The reflective properties of the metal or metal alloy define more sharply and distinctly the natural positioning and extension of the blades or petals thereby capturing, preserving and enhancing the beauty of this mineral flower. The result is an extraordinary preservation of a unique mineral flower structure that otherwise would simply erode or dissolve.</p>
+      <p id="p-00029-en" num="0029">From the foregoing, it will be observed that numerous modifications and variations can be affected without departing from the true spirit and scope of the novel concept of the present invention. It is to be understood that no limitation with respect to the specific embodiments illustrated herein is intended or should be inferred. The disclosure is intended to cover, by the appended claims, all such modifications as fall within the scope of the claims.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A metallized sand rose comprising a sand rose and a coating formed on the sand rose, said coating comprising a metal or metal alloy material.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The metallized sand rose of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein said metal or metal alloy material comprises gold, rose gold, vaporized metal, copper, sterling silver, nickel, platinum, aluminum, zinc, tin, titanium, chrome, lead, iron, copper based alloys, aluminum based alloys, titanium based alloys and iron based alloys.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The metallized sand rose of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein said coating further includes pigment.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The metallized sand rose of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein said sand rose is preserved.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The metallized sand rose of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein said coating encapsulates said sand rose and acts as a protective barrier.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The metallized sand rose of <claim-ref idref="clm-00005-en">claim 5</claim-ref> wherein said coating acts as a protective barrier against proliferation of bacterias.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en" independent="true">
+      <claim-text>
+        <b>7</b>. A method of preserving a sand rose comprising the step of coating the surface of the sand rose with a metal or metal alloy.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method of <claim-ref idref="clm-00007-en">claim 7</claim-ref> wherein said step of coating comprises metallizing.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method of <claim-ref idref="clm-00007-en">claim 7</claim-ref> wherein said step of coating comprises electroplating, electrotyping, galvanizing or vacuum metallizing.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method of <claim-ref idref="clm-00007-en">claim 7</claim-ref> wherein said method of preserving a sand rose prevents erosion and strengthens the sand rose structure.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method of <claim-ref idref="clm-00007-en">claim 7</claim-ref> wherein said method encapsulates the entire sand rose.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method of <claim-ref idref="clm-00007-en">claim 7</claim-ref> wherein said metal comprises gold, rose gold, vaporized metal, copper, sterling silver, nickel, platinum, aluminum, zinc, tin, titanium and chrome.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method of <claim-ref idref="clm-00007-en">claim 7</claim-ref> wherein said metal alloy comprises copper based alloys, aluminum based alloys, titanium based alloys and iron based alloys.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method of preserving a sand rose of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, further comprising the steps of selecting a sand rose and cleaning the sand rose, prior to coating the surface of the sand rose with a metal or metal alloy.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method of <claim-ref idref="clm-00014-en">claim 14</claim-ref> wherein said coating comprises metallizing.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method of <claim-ref idref="clm-00015-en">claim 15</claim-ref> wherein said metallizing comprises electroplating, electrotyping, galvanizing or vacuum metallizing.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The method of <claim-ref idref="clm-00014-en">claim 14</claim-ref> wherein said metal comprises gold, rose gold, vaporized metal, copper, sterling silver, nickel, platinum, aluminum, zinc, tin, titanium and chrome.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en" independent="true">
+      <claim-text>
+        <b>18</b>. A method of creating a sculpture comprising the steps of selecting a sand rose and preserving the sand rose by metallizing the sand rose.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150259257A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150259257A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150259257A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259257A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150259257A1_00003.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150259257A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150259257A1.PDF" type="pdf" size="408143" pages="5" />
+</lexisnexis-patent-document>

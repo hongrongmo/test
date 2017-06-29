@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150246941A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021237" date-changed="20160124" time-changed="162640">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121139015">
+        <country>US</country>
+        <doc-number>20150246941</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14430217</doc-number>
+        <date>20130924</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>C07F  15/06        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>F</subclass>
+        <main-group>15</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C23C  16/18        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>16</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C23C  16/44        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>16</main-group>
+        <subgroup>44</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>C07F  15/06        20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>F</subclass>
+        <main-group>15</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C23C  16/18        20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>16</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C23C  16/44        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>16</main-group>
+        <subgroup>44</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C23C  16/4485      20130101 LI20140523BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>16</main-group>
+        <subgroup>4485</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140523</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C23C  16/45553     20130101 LI20140523BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>16</main-group>
+        <subgroup>45553</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140523</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">27</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">COBALT PRECURSORS FOR LOW TEMPERATURE ALD OR CVD OF COBALT-BASED THIN FILMS</invention-title>
+    <references-cited date-changed="20151110">
+      <forward-citations name="fwdcit" date-changed="20151110" />
+      <citation>
+        <fwdcit num="1">
+          <document-id>
+            <country>US</country>
+            <doc-number>20150093890</doc-number>
+            <kind>A1</kind>
+            <date>20150402</date>
+          </document-id>
+          <application-date>
+            <date>20130927</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20150903">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61705583</doc-number>
+          <date>20120925</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Entegris, Inc.</orgname>
+            <role>02</role>
+            <address>
+              <city>Billerica</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Peters</last-name>
+            <first-name>David W.</first-name>
+            <address>
+              <city>Burnet</city>
+              <state>TX</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>US13061417</doc-number>
+        <date>20130924</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014052316</doc-number>
+        <date>20140403</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173461780">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246941</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130924</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173461779">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246941</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130924</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Cobalt silylamide and cobalt carbonyl precursors are described, which are usefully employed in vapor deposition processes, such as chemical vapor deposition and atomic layer deposition, to deposit cobalt and to form high purity cobalt-containing films at temperatures below 400° C. These precursors and processes can be utilized in the manufacture of integrated circuitry and production of devices such as microprocessors, and logic and memory chips.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150204</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246941A1</docdb-publication-number>
+      <docdb-application-id>444209782</docdb-application-id>
+      <new-owner>ENTEGRIS, INC., MASSACHUSETTS</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:ADVANCED TECHNOLOGY MATERIALS, INC.;REEL/FRAME:034894/0025</free-text-description>
+      <effective-date>
+        <date>20150204</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATION</heading>
+      <p id="p-00001-en" num="0001">The benefit of priority of U.S. Provisional Patent Application No. 61/705,583 filed Sep. 25, 2013 is hereby claimed under the provisions of 35 USC 119. The disclosure of such U.S. Provisional Patent Application No. 61/705,583 is hereby incorporated herein by reference, in its entirety, for all purposes.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">FIELD</heading>
+      <p id="p-00002-en" num="0002">The present disclosure relates to cobalt precursors for low temperature atomic layer deposition (ALD) or chemical vapor deposition (CVD) of cobalt on substrates, and to processes for utilizing such precursors to form cobalt-containing films, e.g., in the manufacture of integrated circuits or other devices or products.</p>
+      <heading id="h-00003-en" level="1">DESCRIPTION OF THE RELATED ART</heading>
+      <p id="p-00003-en" num="0003">As integrated circuit (IC) device dimensions have continually decreased, in the use of lithography scaling methods used to shrink device geometries, new deposition materials and processes are required to maintain high-integrity, electrically interconnected thin-films. Considerations of device integrity and long-term reliability require that film corrosion be limited and that film-to-film integrity be very high. As future devices progress from two-dimensional to three-dimensional structures, such integrity and reliability are critical requirements, especially for multi-level interconnects.</p>
+      <p id="p-00004-en" num="0004">Low temperature deposition of cobalt-based thin films is vital in current semiconductor device processing. Cobalt-based films are becoming increasingly important in the formation of advanced ICs, including microprocessor, logic and memory based devices. As copper interconnects have become more widely adopted, the need for corrosion inhibition has increased in importance. Towards this end, capping films and interfacial electrode materials have become more widely explored. Cobalt alloys, such as CoWP, have been widely investigated as materials for limiting copper corrosion and enhancing electro-migration in multi-level integrated devices structures.</p>
+      <p id="p-00005-en" num="0005">Recent studies have explored electroless and electrochemical plating solutions for the formation of boron- or phosphorus-doped Co alloys, such as CoWB or CoWP, respectively. Several papers have described the successful electroless plating of CoWP as a thin-film barrier layer for copper-plated interconnections. These layers provide good electrical properties while also reducing auto-oxidation and corrosion of the encapsulated copper features.</p>
+      <p id="p-00006-en" num="0006">Research and development into novel chemical precursors, used to deposit cobalt-based thin-films at low temperatures from the gas-phase, is a major focus for material suppliers and device makers. The real challenge for material suppliers is in balancing the precursor thermal stability and volatility, while achieving high-purity films at relatively low processing temperatures. The precursors must be stable towards transport and handling at room temperature, while decomposing into high-purity cobalt films upon thermal or chemical decomposition at deposition temperatures. A number of precursors for cobalt have been previously reported for both CVD and ALD, such as di-cobalt octacarbonyl, cobalt nitrosyl complexes, and β-diketonates of cobalt (II) and cobalt (III).</p>
+      <p id="p-00007-en" num="0007">For most device related processes, thin films are preferably deposited at temperatures below 400° C., and more preferably below 300° C. To achieve these low deposition temperatures, chemical precursors are required that can decompose cleanly to the desired metal films at correspondingly low temperatures (&lt;400° C.). To achieve low temperature, highly conformal films, the industry is also exploring ALD methods for film deposition. These deposition processes can rely on oxidizing co-reactants, such as O<sub>2</sub>, O<sub>3</sub>, N<sub>2</sub>O, or water, or reducing co-reactants, such as H<sub>2</sub>, NH<sub>3</sub>, and other reducing species known to produce cobalt, cobalt alloy or cobalt nitride thin films. In some cases, a second metal-containing co-reactant is used to produce Co—W alloy films, such as CoW, CoWP or CoWB.</p>
+      <p id="p-00008-en" num="0008">The art continues to seek new low-cost, thermally stable precursors for forming conformal cobalt-containing thin films, particularly in the formation of such films in high-aspect ratio features as required for future IC devices.</p>
+      <heading id="h-00004-en" level="1">SUMMARY</heading>
+      <p id="p-00009-en" num="0009">The present disclosure relates to cobalt precursors useful in low temperature ALD or CVD processes for depositing cobalt on substrates, and to processes employing such precursors for cobalt deposition, e.g., for manufacturing ICs or other devices or products.</p>
+      <p id="p-00010-en" num="0010">In one aspect, the disclosure relates to a method of depositing cobalt, comprising volatilizing a cobalt precursor to form precursor vapor, and depositing cobalt from the precursor vapor in a vapor deposition process, wherein the cobalt precursor is selected from the group consisting of: <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>(a) cobalt hexacarbonyl complex precursors of the formula:</li></ul></li></ul></p>
+      <p id="p-00011-en" num="0000">
+        <chemistry id="chem-00001-en" num="00001">
+          <img id="img-00001-en" he="25.06mm" wi="27.94mm" alt="embedded image" img-content="chem" file="US20150246941A1_00006.PNG" img-format="png" original="US20150246941A1-20150903-C00001.TIF" />
+        </chemistry>
+        <ul id="ul-00003-en" list-style="none">
+          <li>
+            <ul id="ul-00004-en" list-style="none">
+              <li>
+                <ul id="ul-00005-en" list-style="none">
+                  <li>wherein R<sup>1 </sup>and R<sup>2 </sup>may be the same as or different from one another, and each is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes, and wherein R<sup>1 </sup>and R<sup>2 </sup>are not both H;</li>
+                </ul>
+              </li>
+              <li>(b) cobalt silylamide precursors;</li>
+              <li>(c) cobalt (0) carbonyl complex precursors including at least one ligand selected from the group consisting of alkenes, allenes, alkynes, and Lewis base ligands;</li>
+              <li>(d) cobalt hexacarbonyl dinitrile precursors of the formula [RNC≡Co(CO)<sub>3</sub>]<sub>2</sub>, wherein R is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes; and</li>
+              <li>(e) cobalt dicarbonyl nitrile precursors of the formula (CO)<sub>2</sub>CoN≡O(C≡NR) wherein R is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes.</li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+      <p id="p-00012-en" num="0017">In another aspect, the disclosure relates to a method of providing for use in a vapor deposition process for depositing cobalt, a packaged cobalt precursor, wherein the cobalt precursor is selected from the group consisting of: <ul id="ul-00006-en" list-style="none"><li><ul id="ul-00007-en" list-style="none"><li>(a) cobalt hexacarbonyl complex precursors of the formula:</li></ul></li></ul></p>
+      <p id="p-00013-en" num="0000">
+        <chemistry id="chem-00002-en" num="00002">
+          <img id="img-00002-en" he="25.06mm" wi="27.94mm" alt="embedded image" img-content="chem" file="US20150246941A1_00007.PNG" img-format="png" original="US20150246941A1-20150903-C00002.TIF" />
+        </chemistry>
+        <ul id="ul-00008-en" list-style="none">
+          <li>
+            <ul id="ul-00009-en" list-style="none">
+              <li>
+                <ul id="ul-00010-en" list-style="none">
+                  <li>wherein R<sup>1 </sup>and R<sup>2 </sup>may be the same as or different from one another, and each is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes, and wherein R<sup>1 </sup>and R<sup>2 </sup>are not both H;</li>
+                </ul>
+              </li>
+              <li>(b) cobalt silylamide precursors;</li>
+              <li>(c) cobalt (0) carbonyl complex precursors including at least one ligand selected from the group consisting of alkenes, allenes, alkynes, and Lewis base ligands;</li>
+              <li>(d) cobalt hexacarbonyl dinitrile precursors of the formula [RN≡C—Co(CO)<sub>3</sub>]<sub>2</sub>, wherein R is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes; and</li>
+              <li>(e) cobalt dicarbonyl nitrile precursors of the formula (CO)<sub>2</sub>CoN≡O(C≡NR) wherein R is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes.</li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+      <p id="p-00014-en" num="0024">In a further aspect, the disclosure relates to a cobalt precursor selected from the group consisting of: <ul id="ul-00011-en" list-style="none"><li><ul id="ul-00012-en" list-style="none"><li>(a) cobalt hexacarbonyl complex precursors of the formula:</li></ul></li></ul></p>
+      <p id="p-00015-en" num="0000">
+        <chemistry id="chem-00003-en" num="00003">
+          <img id="img-00003-en" he="25.06mm" wi="27.94mm" alt="embedded image" img-content="chem" file="US20150246941A1_00008.PNG" img-format="png" original="US20150246941A1-20150903-C00003.TIF" />
+        </chemistry>
+        <ul id="ul-00013-en" list-style="none">
+          <li>
+            <ul id="ul-00014-en" list-style="none">
+              <li>
+                <ul id="ul-00015-en" list-style="none">
+                  <li>wherein R<sup>1 </sup>and R<sup>2 </sup>may be the same as or different from one another, and each is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes, and wherein R<sup>1 </sup>and R<sup>2 </sup>are not both H;</li>
+                </ul>
+              </li>
+              <li>(b) cobalt (0) carbonyl complex precursors including at least one ligand selected from the group consisting of alkenes, allenes, alkynes, and Lewis base ligands;</li>
+              <li>(c) cobalt hexacarbonyl dinitrile precursors of the formula [RN≡C—Co(CO)<sub>3</sub>]<sub>2</sub>, wherein R is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes; and</li>
+              <li>(d) cobalt dicarbonyl nitrile precursors of the formula (CO)<sub>2</sub>CoN≡O(C≡NR) wherein R is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes.</li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+      <p id="p-00016-en" num="0030">Other aspects, features and embodiments of the disclosure will be more fully apparent from the ensuing disclosure and appended claims.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00017-en" num="0031">
+        <figref>FIG. 1</figref> is a thermal analysis (TGA/DSC) plot for bis (trimethylsilyl)amido cobalt (II).</p>
+      <p id="p-00018-en" num="0032">
+        <figref>FIG. 2</figref> is a schematic depiction of a di-cobalt octacarbonyl structure, in which all eight carbonyl groups are free pendant groups.</p>
+      <p id="p-00019-en" num="0033">
+        <figref>FIG. 3</figref> is a schematic depiction of a di-cobalt octacarbonyl structure, including two bridging carbonyl groups and six free pendant group carbonyl moieties.</p>
+      <p id="p-00020-en" num="0034">
+        <figref>FIG. 4</figref> is a thermal analysis (TGA/DSC) plot for dicobalt hexacarbonyl (trimethylsilylacetylene).</p>
+      <p id="p-00021-en" num="0035">
+        <figref>FIG. 5</figref> is a schematic representation of a material storage and dispensing package containing a cobalt precursor, according to one embodiment of the present disclosure.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00022-en" num="0036">The present disclosure relates to cobalt precursors and vapor deposition processes utilizing same.</p>
+      <p id="p-00023-en" num="0037">As used herein and in the appended claims, the singular forms “a”, “and”, and “the” include plural referents unless the context clearly dictates otherwise.</p>
+      <p id="p-00024-en" num="0038">As used herein, the term “film” refers to a layer of deposited material having a thickness below 1000 micrometers, e.g., from such value down to atomic monolayer thickness values. In various embodiments, film thicknesses of deposited material layers in the practice of the invention may for example be below 100, 10, or 1 micrometers, or in various thin film regimes below 200, 100, or 50 nanometers, depending on the specific application involved. As used herein, the term “thin film” means a layer of a material having a thickness below 1 micrometer.</p>
+      <p id="p-00025-en" num="0039">As used herein, the identification of a carbon number range, e.g., in C<sub>1</sub>-C<sub>12 </sub>alkyl, is intended to include each of the component carbon number moieties within such range, so that each intervening carbon number and any other stated or intervening carbon number value in that stated range, is encompassed, it being further understood that sub-ranges of carbon number within specified carbon number ranges may independently be included in smaller carbon number ranges, within the scope of the disclosure, and that ranges of carbon numbers specifically excluding a carbon number or numbers are included in the disclosure, and sub-ranges excluding either or both of carbon number limits of specified ranges are also included in the disclosure. Accordingly, C<sub>1</sub>-C<sub>12 </sub>alkyl is intended to include methyl, ethyl, propyl, butyl, pentyl, hexyl, heptyl, octyl, nonyl, decyl, undecyl and dodecyl, including straight chain as well as branched groups of such types. It therefore is to be appreciated that identification of a carbon number range, e.g., C<sub>1</sub>-C<sub>12</sub>, as broadly applicable to a substituent moiety, enables, in specific embodiments of the disclosure, the carbon number range to be further restricted, as a sub-group of moieties having a carbon number range within the broader specification of the substituent moiety. By way of example, the carbon number range e.g., C<sub>1</sub>-C<sub>12 </sub>alkyl, may be more restrictively specified, in particular embodiments of the invention, to encompass sub-ranges such as C<sub>1</sub>-C<sub>4 </sub>alkyl, C<sub>2</sub>-C<sub>8 </sub>alkyl, C<sub>2</sub>-C<sub>4 </sub>alkyl, C<sub>3</sub>-C<sub>5 </sub>alkyl, or any other sub-range within the broad carbon number range. In other words, a carbon number range is deemed to affirmatively set forth each of the carbon number species in the range, as to the substituent, moiety, or compound to which such range applies, as a selection group from which specific ones of the members of the selection group may be selected, either as a sequential carbon number sub-range, or as specific carbon number species within such selection group.</p>
+      <p id="p-00026-en" num="0040">The same construction and selection flexibility is applicable to stoichiometric coefficients and numerical values specifying the number of atoms, functional groups, ions or moieties, as to specified ranges, numerical value constraints (e.g., inequalities, greater than, less than constraints), as well as oxidation states and other variables determinative of the specific form, charge state, and composition applicable to chemical entities within the broad scope of the present disclosure.</p>
+      <p id="p-00027-en" num="0041">“Alkyls” as used herein include, but are not limited to, methyl, ethyl, propyl, isopropyl, butyl, s-butyl, t-butyl, pentyl and isopentyl and the like. “Aryls” as used herein includes hydrocarbons derived from benzene or a benzene derivative that are unsaturated aromatic carbocyclic groups of from 6 to 10 carbon atoms. The aryls may have a single or multiple rings. The term “aryl” as used herein also includes substituted aryls. Examples include, but are not limited to phenyl, naphthyl, xylene, phenylethane, substituted phenyl, substituted naphthyl, substituted xylene, substituted phenylethane and the like. “Cycloalkyls” as used herein include, but are not limited to cyclopropyl, cyclobutyl, cyclopentyl, cyclohexyl and the like. In all chemical formulae herein, a range of carbon numbers will be regarded as specifying a sequence of consecutive alternative carbon-containing moieties, including all moieties containing numbers of carbon atoms intermediate the endpoint values of carbon number in the specific range as well as moieties containing numbers of carbon atoms equal to an endpoint value of the specific range, e.g., C<sub>1</sub>-C<sub>6</sub>, is inclusive of C<sub>1</sub>, C<sub>2</sub>, C<sub>3</sub>, C<sub>4</sub>, C<sub>5 </sub>and C<sub>6</sub>, and each of such broader ranges may be further limitingly specified with reference to carbon numbers within such ranges, as sub-ranges thereof. Thus, for example, the range C<sub>1</sub>-C<sub>6 </sub>would be inclusive of and can be further limited by specification of sub-ranges such as C<sub>1</sub>-C<sub>3</sub>, C<sub>1</sub>-C<sub>4</sub>, C<sub>2</sub>-C<sub>6</sub>, C<sub>4</sub>-C<sub>6</sub>, etc. within the scope of the broader range.</p>
+      <p id="p-00028-en" num="0042">The disclosure, as variously set out herein in respect of features, aspects and embodiments thereof, may in particular implementations be constituted as comprising, consisting, or consisting essentially of, some or all of such features, aspects and embodiments, as well as elements and components thereof being aggregated to constitute various further implementations of the disclosure. The disclosure is described herein in various embodiments, and with reference to various features and aspects. The disclosure contemplates such features, aspects and embodiments in various permutations and combinations, as being within the scope of the disclosure. The disclosure may therefore be specified as comprising, consisting or consisting essentially of, any of such combinations and permutations of these specific features, aspects and embodiments, or a selected one or ones thereof.</p>
+      <p id="p-00029-en" num="0043">In one aspect, the disclosure relates to a method of depositing cobalt, comprising volatilizing a cobalt precursor to form precursor vapor, and depositing cobalt from the precursor vapor in a vapor deposition process, wherein the cobalt precursor is selected from the group consisting of: <ul id="ul-00016-en" list-style="none"><li><ul id="ul-00017-en" list-style="none"><li>(a) cobalt hexacarbonyl complex precursors of the formula:</li></ul></li></ul></p>
+      <p id="p-00030-en" num="0000">
+        <chemistry id="chem-00004-en" num="00004">
+          <img id="img-00004-en" he="21.51mm" wi="24.38mm" alt="embedded image" img-content="chem" file="US20150246941A1_00009.PNG" img-format="png" original="US20150246941A1-20150903-C00004.TIF" />
+        </chemistry>
+        <ul id="ul-00018-en" list-style="none">
+          <li>
+            <ul id="ul-00019-en" list-style="none">
+              <li>
+                <ul id="ul-00020-en" list-style="none">
+                  <li>wherein R<sup>1 </sup>and R<sup>2 </sup>may be the same as or different from one another, and each is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes, and wherein R<sup>1 </sup>and R<sup>2 </sup>are not both H;</li>
+                </ul>
+              </li>
+              <li>(b) cobalt silylamide precursors;</li>
+              <li>(c) cobalt (0) carbonyl complex precursors including at least one ligand selected from the group consisting of alkenes, allenes, alkynes, and Lewis base ligands;</li>
+              <li>(d) cobalt hexacarbonyl dinitrile precursors of the formula [RN≡C—Co(CO)<sub>3</sub>]<sub>2</sub>, wherein R is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes; and</li>
+              <li>(e) cobalt dicarbonyl nitrile precursors of the formula (CO)<sub>2</sub>CoN≡O(C≡NR) wherein R is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes.</li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+      <p id="p-00031-en" num="0050">In such method, the vapor deposition process may comprise a chemical vapor deposition (CVD) process, a digital CVD process, an atomic layer deposition (ALD) process, or other suitable vapor deposition process.</p>
+      <p id="p-00032-en" num="0051">The vapor deposition process is advantageously conducted at temperature below 400° C., e.g., a temperature of 300° C. or less.</p>
+      <p id="p-00033-en" num="0052">One class of precursors of the present disclosure includes cobalt hexacarbonyl complex precursors of the formula:</p>
+      <p id="p-00034-en" num="0000">
+        <chemistry id="chem-00005-en" num="00005">
+          <img id="img-00005-en" he="21.51mm" wi="24.38mm" alt="embedded image" img-content="chem" file="US20150246941A1_00010.PNG" img-format="png" original="US20150246941A1-20150903-C00005.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00035-en" num="0000">wherein R<sup>1 </sup>and R<sup>2 </sup>may be the same as or different from one another, and each is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes, and wherein R<sup>1 </sup>and R<sup>2 </sup>are not both H. In an illustrative precursor of such formula, R<sup>1</sup>═H and R<sup>2</sup>═Si(Me)<sub>3</sub>.</p>
+      <p id="p-00036-en" num="0053">Another class of cobalt precursors of the present disclosure includes cobalt silylamide precursors. Cobalt (II) silylamides have been reported in the literature, but are not described as precursors for use in CVD or ALD processes. See, for example, H. Bürger and U. Wannagat, “Silylamido-Derivate von Eisen and Kobalt”. <i>Monatshefte für Chemie, </i>94, 1007-1012, 1963, and J. Chem. Soc. Dalton Trans., 1982, 887). To our knowledge, cobalt silylamides have not been used or proposed for deposition of any cobalt-containing films. We have synthesized cobalt silylamides compounds and examined their material properties with respect to volatility and thermal stability, and confirmed that they are useful precursors for the low temperature ALD and low temperature CVD deposition of cobalt containing films.</p>
+      <p id="p-00037-en" num="0054">These cobalt silylamide precursors exhibit good thermal stability, good volatility and thermal reactivity at substrate temperatures suitable for deposition. The chemical reactivity of the precursors allows for effective film growth at low substrate temperatures at which traditional cobalt precursor materials are inert and thus, exhibit little to no deposition behavior. The thermal stability of these cobalt silylamide precursors ensures process stability, since they do not undergo undesired decomposition during delivery and film growth processes. Their good thermal stability also enhances step coverage and conformality in complex, high-aspect ratio structures, since the precursor is evenly adsorbed on 3D surfaces, prior to cobalt film formation.</p>
+      <p id="p-00038-en" num="0055">Cobalt (II) silylamides of the present disclosure include compounds of the formula</p>
+      <p id="p-00039-en" num="0000">[in-line-formulae]CO[N(SiR<sub>3</sub>)<sub>2</sub>]<sub>a </sub>[/in-line-formulae]</p>
+      <p id="p-00040-en" num="0000">wherein: <br /> each R is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, and C<sub>1</sub>-C<sub>4 </sub>cycloalkyl; and <br /> a is 2 or 3, depending on the oxidation state of cobalt, <br /> as well as compounds of the formula </p>
+      <p id="p-00041-en" num="0000">[in-line-formulae](Co[N(SiR<sub>3</sub>)<sub>2</sub>]<sub>2</sub>)<sub>2 </sub>[/in-line-formulae]</p>
+      <p id="p-00042-en" num="0000">wherein: <br /> each R is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, and C<sub>1</sub>-C<sub>4 </sub>cycloalkyl; and the oxidation state of cobalt is 2. </p>
+      <p id="p-00043-en" num="0056">Thus, the cobalt silylamide precursor may be constituted as having two or three trimethylsilylamido ligands coordinated to each cobalt atom in the precursor. In some embodiments of the cobalt silylamide precursors, substituent(s) such as H, C<sub>1</sub>-C<sub>4 </sub>alkyl, and C<sub>1</sub>-C<sub>4 </sub>cycloalkyl may be present on a silicon atom of a silylamide moiety of the precursor.</p>
+      <p id="p-00044-en" num="0057">In one preferred cobalt silylamide precursor of the formula Co[N{SiR<sub>3</sub>}<sub>2</sub>]<sub>a</sub>, R=methyl. In the dimer compounds of the formula (Co[N{SiR<sub>3</sub>}<sub>2</sub>]<sub>2</sub>)<sub>2</sub>, R also may be methyl, corresponding to (Co[N{Si(CH<sub>3</sub>)<sub>3</sub>}<sub>2</sub>]<sub>2</sub>)<sub>2</sub>, bis (trimethylsilyl)amido cobalt (II), having the structure:</p>
+      <p id="p-00045-en" num="0000">
+        <chemistry id="chem-00006-en" num="00006">
+          <img id="img-00006-en" he="19.47mm" wi="36.41mm" alt="embedded image" img-content="chem" file="US20150246941A1_00011.PNG" img-format="png" original="US20150246941A1-20150903-C00006.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00046-en" num="0000">wherein: <br /> TMS is trimethylsilyl. </p>
+      <p id="p-00047-en" num="0058">The foregoing cobalt precursors are readily synthesized from common starting materials and isolated in good yields, within the skill of the art, based on the disclosure herein. These precursors have low melting point, good thermal stability, and useful vapor pressures (volatility) for vapor deposition of cobalt by processes such as CVD and ALD.</p>
+      <p id="p-00048-en" num="0059">The thermal analysis (TGA/DSC) plot for bis (trimethylsilyl)amido cobalt (II) is shown in <figref>FIG. 1</figref>, including graphs of thermogravimetric analysis and of differential scanning calorimetry data for such precursor. Such plot shows bis (trimethylsilyl) amido cobalt (II) to have a melting point of 64° C. with efficient thermal transport (6.7% residual mass) and a t<sub>50 </sub>value=168° C. (t<sub>50 </sub>is the temperature corresponding to transport of half of the precursor material). Thermal stability of such bis (trimethylsilyl)amido cobalt (II) precursor was confirmed using proton NMR spectroscopy.</p>
+      <p id="p-00049-en" num="0060">Such representative precursor bis (trimethylsilyl)amido cobalt (II) can be delivered to a deposition reactor at high flux at temperature in a range of from 60 to 100° C. and at pressure on the order of 1 Torr. At a delivery temperature above 64° C., bis (trimethylsilyl)amido cobalt (II) is a liquid, thereby facilitating precursor delivery by liquid delivery techniques. In addition, bis (trimethylsilyl)amido cobalt (II) is resistant to thermal decomposition, thereby ensuring process stability by limiting undesired decomposition of the cobalt (II) silylamides during delivery and deposition.</p>
+      <p id="p-00050-en" num="0061">Another class of cobalt precursors of the present disclosure comprise cobalt (0) carbonyl complex precursors including at least one ligand selected from the group consisting of alkenes, allenes, alkynes, and Lewis base ligands.</p>
+      <p id="p-00051-en" num="0062">Cobalt precursors of such type may be formed by reaction of cobalt carbonyl compounds with a suitable ligand source compound. For example, the disclosure contemplates di-cobalt octacarbonyl derivatives formed from di-cobalt octacarbonyl of the structure shown in <figref>FIG. 2</figref>, in which all eight carbonyl groups are free pendant groups, or di-cobalt octacarbonyl derivatives formed from di-cobalt octacarbonyl of the structure shown in <figref>FIG. 3</figref>, including two bridging carbonyl groups and six free pendant group carbonyl moieties. These di-cobalt octacarbonyl compounds can be reacted with reactive species such as alkenes, allenes, alkynes, and/or Lewis base ligands, to form mixed ligand cobalt carbonyl complexes. The reaction typically eliminates two carbonyl groups.</p>
+      <p id="p-00052-en" num="0063">An illustrative example of such mixed ligand di-cobalt carbonyl precursor is the acetylene substituted dicobalt hexacarbonyl precursor, dicobalt hexacarbonyl (trimethylsilylacetylene). The results of thermal analysis of such cobalt precursor are shown in <figref>FIG. 4</figref>, demonstrating that dicobalt hexacarbonyl (trimethylsilylacetylene) is a useful precursor for deposition of cobalt containing films. Di-cobalt hexacarbonyl (trimethylsilylacetylene) has a melting point of 35° C., good thermal stability and efficient transport characterized by a t50 value centered at 143° C. The residual mass for this precursor, as measured by thermogravimetric analysis, was 7.8% at elevated temperature greater than 300° C.</p>
+      <p id="p-00053-en" num="0064">Another class of cobalt precursors of the present disclosure includes cobalt hexacarbonyl dinitrile precursors of the formula [RN≡C—Co(CO)<sub>3</sub>]<sub>2</sub>, wherein R is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes. An illustrative example of such precursor is [<sup>t</sup>BuNC Co(CO)<sub>3</sub>]<sub>2</sub>,</p>
+      <p id="p-00054-en" num="0000">
+        <chemistry id="chem-00007-en" num="00007">
+          <img id="img-00007-en" he="25.99mm" wi="56.39mm" alt="embedded image" img-content="chem" file="US20150246941A1_00012.PNG" img-format="png" original="US20150246941A1-20150903-C00007.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00055-en" num="0000">This precursor is a solid at 25° C.</p>
+      <p id="p-00056-en" num="0065">A further class of cobalt precursors of the present disclosure includes cobalt dicarbonyl nitrile precursors of the formula (CO)<sub>2</sub>CoN≡O(C≡NR) wherein R is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes. An illustrative precursor of such type is (CO)<sub>2</sub>CoN≡O(CN<sup>t</sup>Bu),</p>
+      <p id="p-00057-en" num="0000">
+        <chemistry id="chem-00008-en" num="00008">
+          <img id="img-00008-en" he="21.17mm" wi="31.07mm" alt="embedded image" img-content="chem" file="US20150246941A1_00013.PNG" img-format="png" original="US20150246941A1-20150903-C00008.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00058-en" num="0000">which is a free flowing liquid at 25° C.</p>
+      <p id="p-00059-en" num="0066">The cobalt precursors described herein can be used to deposit high-purity cobalt thin-films and alloys via CVD, digital CVD, and ALD. Co-reactants can be used to deposit specific thin-film compositions. For example, water, O<sub>2</sub>, O<sub>3 </sub>and N<sub>2</sub>O can be used to react with cobalt precursors to form CoO<sub>x </sub>films. H<sub>2</sub>, NH<sub>3 </sub>or alkylamines with H<sub>2 </sub>can be used to form Co or CoN<sub>x</sub>, films. Carbon sources, such as methane or ethane can be used to form CoC films. Cobalt silicate films can be used as high k materials and require co-reaction with a silicon species. In some cases, the cobalt silylamides or carbonyl complexes containing silicon ligands, can be used advantageously to form CoSiOx films in an oxidizing environment. Other film growth co-reactants will be appreciated by those skilled in the art of thin-film formation methods, based on the disclosure herein.</p>
+      <p id="p-00060-en" num="0067">Thus, the disclosure contemplates the use of precursors as variously described herein to form cobalt-containing films comprising at least one of oxygen, nitrogen, carbon and silicon, e.g., in a vapor deposition process in which the cobalt precursor and the film contain silicon. The vapor deposition process may be conducted to form a cobalt-containing film comprising at least one of oxygen, nitrogen, carbon and silicon, e.g., wherein the film comprises cobalt oxide, and the co-reactant comprises at least one of water, O<sub>2</sub>, O<sub>3 </sub>and N<sub>2</sub>O, or wherein the film comprises cobalt nitride, and the co-reactant comprises at least one of ammonia and amine, e.g., an alkylamine, or wherein the film comprises cobalt carbide, and the co-reactant comprises a hydrocarbon gas, e.g., methane or ethane. The film formed in the vapor deposition process using a precursor of the present disclosure may comprise silicon, e.g., cobalt silicate, as produced by a cobalt precursor containing silicon, and a co-reactant comprising at least one of water, O<sub>2</sub>, O<sub>3 </sub>and N<sub>2</sub>O.</p>
+      <p id="p-00061-en" num="0068">The cobalt deposition using the cobalt precursors of the present disclosure may be conducted in a process for manufacturing an integrated circuit or other product, e.g., a microprocessor, logic device, or a memory device.</p>
+      <p id="p-00062-en" num="0069">The present disclosure also contemplates a method of providing for use in a vapor deposition process for depositing cobalt, a packaged cobalt precursor, wherein the cobalt precursor is selected from the group consisting of: <ul id="ul-00021-en" list-style="none"><li><ul id="ul-00022-en" list-style="none"><li>(a) cobalt hexacarbonyl complex precursors of the formula:</li></ul></li></ul></p>
+      <p id="p-00063-en" num="0000">
+        <chemistry id="chem-00009-en" num="00009">
+          <img id="img-00009-en" he="21.51mm" wi="24.38mm" alt="embedded image" img-content="chem" file="US20150246941A1_00014.PNG" img-format="png" original="US20150246941A1-20150903-C00009.TIF" />
+        </chemistry>
+        <ul id="ul-00023-en" list-style="none">
+          <li>
+            <ul id="ul-00024-en" list-style="none">
+              <li>
+                <ul id="ul-00025-en" list-style="none">
+                  <li>wherein R<sup>1 </sup>and R<sup>2 </sup>may be the same as or different from one another, and each is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes, and wherein R<sup>1 </sup>and R<sup>2 </sup>are not both H;</li>
+                </ul>
+              </li>
+              <li>(b) cobalt silylamide precursors;</li>
+              <li>(c) cobalt (0) carbonyl complex precursors including at least one ligand selected from the group consisting of alkenes, allenes, alkynes, and Lewis base ligands;</li>
+              <li>(d) cobalt hexacarbonyl dinitrile precursors of the formula [RN≡C—Co(CO)<sub>3</sub>]<sub>2</sub>, wherein R is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes; and</li>
+              <li>(e) cobalt dicarbonyl nitrile precursors of the formula (CO)<sub>2</sub>CoN≡O(C≡NR) wherein R is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes.</li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+      <p id="p-00064-en" num="0076">In such method, the packaged precursor can comprise a precursor storage and dispensing vessel of suitable type, containing the cobalt precursor. The method may further comprise supplying for use in the vapor deposition process with the cobalt precursor a packaged co-reactant, e.g., a co-reactant as described hereinabove.</p>
+      <p id="p-00065-en" num="0077">The disclosure in another aspect relates to a cobalt precursor selected from the group consisting of: <ul id="ul-00026-en" list-style="none"><li><ul id="ul-00027-en" list-style="none"><li>(a) cobalt hexacarbonyl complex precursors of the formula:</li></ul></li></ul></p>
+      <p id="p-00066-en" num="0000">
+        <chemistry id="chem-00010-en" num="00010">
+          <img id="img-00010-en" he="21.51mm" wi="24.38mm" alt="embedded image" img-content="chem" file="US20150246941A1_00015.PNG" img-format="png" original="US20150246941A1-20150903-C00010.TIF" />
+        </chemistry>
+        <ul id="ul-00028-en" list-style="none">
+          <li>
+            <ul id="ul-00029-en" list-style="none">
+              <li>
+                <ul id="ul-00030-en" list-style="none">
+                  <li>wherein R<sup>1 </sup>and R<sup>2 </sup>may be the same as or different from one another, and each is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes, and wherein R<sup>1 </sup>and R<sup>2 </sup>are not both H;</li>
+                </ul>
+              </li>
+              <li>(b) cobalt (0) carbonyl complex precursors including at least one ligand selected from the group consisting of alkenes, allenes, alkynes, and Lewis base ligands;</li>
+              <li>(c) cobalt hexacarbonyl dinitrile precursors of the formula [RN≡C—Co(CO)<sub>3</sub>]<sub>2</sub>, wherein R is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes; and</li>
+              <li>(d) cobalt dicarbonyl nitrile precursors of the formula (CO)<sub>2</sub>CoN≡O(C≡NR) wherein R is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes.</li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+      <p id="p-00067-en" num="0083">The cobalt precursors may be of a specific class or classes, as variously described herein.</p>
+      <p id="p-00068-en" num="0084">Cobalt silylamide and substituted carbonyl precursors of the present disclosure can be used to form conformal films, as required for high aspect-ratio features encountered in high density and high performance IC devices. Such cobalt films can be used in microprocessor, logic and memory devices where high-quality thin films are needed. Further, the low temperature precursors of the present disclosure enable deposition of cobalt on thermally sensitive substrates, such as may be encountered in flexible substrates, flat-panel displays, mobile devices and other portable computing applications.</p>
+      <p id="p-00069-en" num="0085">Cobalt silylamide and cobalt carbonyl precursors of the present disclosure that are in solid form can be used in solid delivery systems, such as the ProE-Vap system commercially available from ATMI, Inc, Danbury, Conn., USA. The precursors may also be dissolved in appropriate solvents, e.g., hydrocarbon solvents, which facilitate liquid delivery of the precursor using liquid delivery systems coupled with a deposition reactor. The precursors can be used in liquid form, e.g., with direct liquid injection (DLI) systems, standard bubblers and modified bubblers. Delivery methods of widely varied character may be employed.</p>
+      <p id="p-00070-en" num="0086">The use of any solvent or precursor solution, however, requires chemical compatibility with the cobalt silylamide or carbonyl complex precursor, thereby avoiding any deleterious reaction or premature decomposition of the precursor when dissolved in the solvent.</p>
+      <p id="p-00071-en" num="0087">The precursors of the present disclosure can be packaged in any suitable manner, for storage and subsequent dispensing of the precursor for use.</p>
+      <p id="p-00072-en" num="0088">
+        <figref>FIG. 5</figref> is a schematic representation of an illustrative cobalt precursor storage and dispensing package <b>100</b> containing a cobalt precursor, according to one embodiment of the present disclosure.</p>
+      <p id="p-00073-en" num="0089">The material storage and dispensing package <b>100</b> includes a vessel <b>102</b> that may for example be of generally cylindrical shape as illustrated, defining an interior volume <b>104</b> therein. In this embodiment, the cobalt precursor is a solid at ambient temperature conditions, and such precursor may be supported on surfaces of the trays <b>106</b> disposed in the interior volume <b>104</b> of the vessel, with the trays having flow passage conduits <b>108</b> associated therewith, for flow of vapor upwardly in the vessel to the valve head assembly, for dispensing in use of the vessel.</p>
+      <p id="p-00074-en" num="0090">The solid precursor can be coated on interior surfaces in the interior volume of the vessel, e.g., on the surfaces of the trays <b>106</b> and conduits <b>108</b>. Such coating may be effected by introducing the precursor into the vessel in a vapor form from which the solid precursor is condensed in a film on the surfaces in the vessel. Alternatively, the precursor solid may be dissolved or suspended in a solvent medium and deposited on surfaces in the interior volume of the vessel by solvent evaporation. In yet another method the precursor may be melted and poured onto the surfaces in the interior volume of the vessel, to solidify on the internal surfaces for subsequent volatilization as the solid material is heated, e.g., by flow of heated carrier gas through the vessel, and/or external heating of the vessel. For such purpose, the vessel may contain substrate articles or elements that provide additional surface area in the vessel for support of the precursor film thereon.</p>
+      <p id="p-00075-en" num="0091">As a still further alternative, the solid precursor may be provided in granular or finely divided form, which is poured into the vessel to be retained on the top supporting surfaces of the respective trays <b>106</b> therein.</p>
+      <p id="p-00076-en" num="0092">The vessel <b>102</b> has a neck portion <b>109</b> to which is joined the valve head assembly <b>110</b>. The valve head assembly is equipped with a hand wheel <b>112</b> in the embodiment shown, but may alternatively employ an automatic valve actuator coupled to an automatic control system. The valve head assembly <b>110</b> includes a dispensing port <b>114</b>, which may be configured for coupling to a fitting or connection element to join flow circuitry to the vessel. Such flow circuitry is schematically represented by arrow A in <figref>FIG. 1</figref>, and the flow circuitry may be coupled to a downstream ALD or CVD chamber or other cobalt precursor-utilizing system (not shown in <figref>FIG. 1</figref>).</p>
+      <p id="p-00077-en" num="0093">In use, the vessel <b>102</b> is heated, such input of heat being schematically shown by the reference arrow Q, so that solid precursor in the vessel is at least partially volatilized to provide precursor vapor. The precursor vapor is discharged from the vessel through the valve passages in the valve head assembly <b>110</b> when the hand wheel <b>112</b> is translated to an open valve position, whereupon vapor deriving from the precursor is dispensed into the flow circuitry schematically indicated by arrow A.</p>
+      <p id="p-00078-en" num="0094">In lieu of solid delivery of the precursor, the precursor may be provided in a solvent medium, forming a solution or suspension. Such precursor-containing solvent composition then may be delivered by liquid delivery and flash vaporized to produce a precursor vapor. The precursor vapor is contacted with a substrate under deposition conditions, to deposit the cobalt on the substrate in a film thereon.</p>
+      <p id="p-00079-en" num="0095">In one embodiment, the precursor is dissolved in an ionic liquid medium, from which precursor vapor is withdrawn from the ionic liquid solution under dispensing conditions.</p>
+      <p id="p-00080-en" num="0096">It will be recognized that the cobalt precursors of the present disclosure may be packaged in a variety of suitable vessels for dispensing of precursor material to a downstream precursor-utilizing process tool or facility, and that precursors of the present disclosure can be employed for a wide variety of end-use applications requiring cobalt deposition.</p>
+      <p id="p-00081-en" num="0097">While the disclosure has been set out herein in reference to specific aspects, features and illustrative embodiments, it will be appreciated that the utility of the disclosure is not thus limited, but rather extends to and encompasses numerous other variations, modifications and alternative embodiments, as will suggest themselves to those of ordinary skill in the field of the present disclosure, based on the description herein. Correspondingly, the invention as hereinafter claimed is intended to be broadly construed and interpreted, as including all such variations, modifications and alternative embodiments, within its spirit and scope.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>. A method of depositing cobalt, comprising volatilizing a cobalt precursor to form precursor vapor, and depositing cobalt from the precursor vapor in a vapor deposition process, wherein the cobalt precursor is selected from the group consisting of:
+<claim-text>(a) cobalt hexacarbonyl complex precursors of the formula:</claim-text></claim-text>
+      <claim-text>
+        <chemistry id="chemc-00001-en" num="00011">
+          <img id="imgc-00001-en" he="21.51mm" wi="24.38mm" alt="embedded image" img-content="chem" file="US20150246941A1_00016.PNG" img-format="png" original="US20150246941A1-20150903-C00011.TIF" />
+        </chemistry><claim-text><claim-text>wherein R<sup>1 </sup>and R<sup>2 </sup>may be the same as or different from one another, and each is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes, and wherein R<sup>1 </sup>and R<sup>2 </sup>are not both H;</claim-text></claim-text><claim-text>(b) cobalt silylamide precursors;</claim-text><claim-text>(c) cobalt (0) carbonyl complex precursors including at least one ligand selected from the group consisting of alkenes, allenes, alkynes, and Lewis base ligands;</claim-text><claim-text>(d) cobalt hexacarbonyl dinitrile precursors of the formula [RN≡C—Co(CO)<sub>3</sub>]<sub>2</sub>, wherein R is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes; and</claim-text><claim-text>(e) cobalt dicarbonyl nitrile precursors of the formula (CO)<sub>2</sub>CoN≡O(C≡NR) wherein R is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>.-<b>5</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>6</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the cobalt precursor comprises a cobalt silylamide precursor.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>7</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>8</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the cobalt precursor is selected from among cobalt compounds of the formula:
+<claim-text>CO[N(SiR<sub>3</sub>)<sub>2</sub>]<sub>a </sub></claim-text><claim-text>wherein:</claim-text><claim-text>each R is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, and C<sub>1</sub>-C<sub>4 </sub>cycloalkyl; and</claim-text><claim-text>a is 2 or 3;</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>9</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the cobalt precursor is selected from among cobalt compounds of the formula:
+<claim-text>(Co[N(SiR<sub>3</sub>)<sub>2</sub>]<sub>2</sub>)<sub>2 </sub></claim-text><claim-text>wherein:</claim-text><claim-text>each R is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, and C<sub>1</sub>-C<sub>4 </sub>cycloalkyl.</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>10</b>.-<b>11</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>12</b>. The method of <claim-ref idref="clm-00003-en">claim 6</claim-ref>, wherein the cobalt precursor comprises bis (trimethylsilyl) amido cobalt (II).</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>13</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the cobalt precursor comprises a cobalt (0) carbonyl complex precursors including at least one ligand selected from the group consisting of alkenes, allenes, alkynes, and Lewis base ligands.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>14</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>15</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the cobalt precursor comprises a cobalt hexacarbonyl dinitrile precursor of the formula [RN≡C—Co(CO)<sub>3</sub>]<sub>2</sub>, wherein R is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>16</b>. The method of <claim-ref idref="clm-00011-en">claim 15</claim-ref>, wherein the cobalt precursor comprises [<sup>t</sup>BuNC Co(CO)<sub>3</sub>]<sub>2</sub>,</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00002-en" num="00012">
+          <img id="imgc-00002-en" he="25.99mm" wi="56.39mm" alt="embedded image" img-content="chem" file="US20150246941A1_00017.PNG" img-format="png" original="US20150246941A1-20150903-C00012.TIF" />
+        </chemistry>
+      </claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>17</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the cobalt precursor comprises a cobalt dicarbonyl nitrile precursor of the formula (CO)<sub>2</sub>CoN≡O(C≡NR) wherein R is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>18</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>19</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the cobalt precursor comprises a cobalt hexacarbonyl complex precursor of the formula:</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00003-en" num="00013">
+          <img id="imgc-00003-en" he="21.51mm" wi="24.38mm" alt="embedded image" img-content="chem" file="US20150246941A1_00018.PNG" img-format="png" original="US20150246941A1-20150903-C00013.TIF" />
+        </chemistry>
+      </claim-text>
+      <claim-text>wherein R<sup>1 </sup>and R<sup>2 </sup>may be the same as or different from one another, and each is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes, and wherein R<sup>1 </sup>and R<sup>2 </sup>are not both H.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>20</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the vapor deposition process is conducted to form a cobalt-containing film comprising at least one of oxygen, nitrogen, carbon and silicon.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>21</b>.-<b>31</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>32</b>. A method of providing for use in a vapor deposition process for depositing cobalt, a packaged cobalt precursor, wherein the cobalt precursor is selected from the group consisting of:
+<claim-text>(a) cobalt hexacarbonyl complex precursors of the formula:</claim-text></claim-text>
+      <claim-text>
+        <chemistry id="chemc-00004-en" num="00014">
+          <img id="imgc-00004-en" he="21.51mm" wi="24.38mm" alt="embedded image" img-content="chem" file="US20150246941A1_00019.PNG" img-format="png" original="US20150246941A1-20150903-C00014.TIF" />
+        </chemistry><claim-text><claim-text>wherein R<sup>1 </sup>and R<sup>2 </sup>may be the same as or different from one another, and each is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes, and wherein R<sup>1 </sup>and R<sup>2 </sup>are not both H;</claim-text></claim-text><claim-text>(b) cobalt silylamide precursors;</claim-text><claim-text>(c) cobalt (0) carbonyl complex precursors including at least one ligand selected from the group consisting of alkenes, allenes, alkynes, and Lewis base ligands;</claim-text><claim-text>(d) cobalt hexacarbonyl dinitrile precursors of the formula [RN≡C—Co(CO)<sub>3</sub>]<sub>2</sub>, wherein R is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes; and</claim-text><claim-text>(e) cobalt dicarbonyl nitrile precursors of the formula (CO)<sub>2</sub>CoN≡O(C≡NR) wherein R is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes.</claim-text></claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>33</b>.-<b>34</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>35</b>. A cobalt precursor selected from the group consisting of:
+<claim-text>(a) cobalt hexacarbonyl complex precursors of the formula:</claim-text></claim-text>
+      <claim-text>
+        <chemistry id="chemc-00005-en" num="00015">
+          <img id="imgc-00005-en" he="21.51mm" wi="24.38mm" alt="embedded image" img-content="chem" file="US20150246941A1_00020.PNG" img-format="png" original="US20150246941A1-20150903-C00015.TIF" />
+        </chemistry><claim-text><claim-text>wherein R<sup>1 </sup>and R<sup>2 </sup>may be the same as or different from one another, and each is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes, and wherein R<sup>1 </sup>and R<sup>2 </sup>are not both H;</claim-text></claim-text><claim-text>(b) cobalt (0) carbonyl complex precursors including at least one ligand selected from the group consisting of alkenes, allenes, alkynes, and Lewis base ligands;</claim-text><claim-text>(c) cobalt hexacarbonyl dinitrile precursors of the formula [RN≡C—Co(CO)<sub>3</sub>]<sub>2</sub>, wherein R is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes; and</claim-text><claim-text>(d) cobalt dicarbonyl nitrile precursors of the formula (CO)<sub>2</sub>CoN≡O(C≡NR) wherein R is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes.</claim-text></claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>36</b>. The cobalt precursor of <claim-ref idref="clm-00020-en">claim 35</claim-ref>, comprising a cobalt (0) carbonyl complex precursor including at least one ligand selected from the group consisting of alkenes, allenes, alkynes, and Lewis base ligands.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>37</b>. The cobalt precursor of <claim-ref idref="clm-00020-en">claim 35</claim-ref>, comprising dicobalt hexacarbonyl (trimethylsilylacetylene).</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>38</b>. The cobalt precursor of <claim-ref idref="clm-00020-en">claim 35</claim-ref>, comprising a cobalt hexacarbonyl dinitrile precursor of the formula [RN≡C—Co(CO)<sub>3</sub>]<sub>2</sub>, wherein R is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>39</b>. The cobalt precursor of <claim-ref idref="clm-00023-en">claim 38</claim-ref>, wherein the cobalt precursor comprises [<sup>t</sup>BuNC Co(CO)<sub>3</sub>]<sub>2</sub>,</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00006-en" num="00016">
+          <img id="imgc-00006-en" he="25.99mm" wi="56.39mm" alt="embedded image" img-content="chem" file="US20150246941A1_00021.PNG" img-format="png" original="US20150246941A1-20150903-C00016.TIF" />
+        </chemistry>
+      </claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en">
+      <claim-text>
+        <b>40</b>. The cobalt precursor of <claim-ref idref="clm-00020-en">claim 35</claim-ref>, comprising a cobalt dicarbonyl nitrile precursor of the formula (CO)<sub>2</sub>CoN≡O(C≡NR) wherein R is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes.</claim-text>
+    </claim>
+    <claim num="26" id="clm-00026-en">
+      <claim-text>
+        <b>41</b>. The cobalt precursor of <claim-ref idref="clm-00025-en">claim 40</claim-ref>, comprising (CO)<sub>2</sub>CoN≡O(CN<sup>t</sup>Bu),</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00007-en" num="00017">
+          <img id="imgc-00007-en" he="21.17mm" wi="31.07mm" alt="embedded image" img-content="chem" file="US20150246941A1_00022.PNG" img-format="png" original="US20150246941A1-20150903-C00017.TIF" />
+        </chemistry>
+      </claim-text>
+    </claim>
+    <claim num="27" id="clm-00027-en">
+      <claim-text>
+        <b>42</b>. The cobalt precursor of <claim-ref idref="clm-00020-en">claim 35</claim-ref>, comprising a cobalt hexacarbonyl complex precursor of the formula:</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00008-en" num="00018">
+          <img id="imgc-00008-en" he="21.51mm" wi="24.38mm" alt="embedded image" img-content="chem" file="US20150246941A1_00023.PNG" img-format="png" original="US20150246941A1-20150903-C00018.TIF" />
+        </chemistry>
+      </claim-text>
+      <claim-text>wherein R<sup>1 </sup>and R<sup>2 </sup>may be the same as or different from one another, and each is independently selected from among H, C<sub>1</sub>-C<sub>4 </sub>alkyl, silyl-substituted alkyl, dialkylamide, ethylene, acetylene, alkynes, substituted alkenes, C<sub>1</sub>-C<sub>4 </sub>substituted alkynes, silylalkyl, silylamide, trimethylsilyl, trialkylsilyl-substituted alkynes, and trialkylsilylamido-substituted alkynes, and wherein R<sup>1 </sup>and R<sup>2 </sup>are not both H.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150246941A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150246941A1-20150903-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150246941A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246941A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150246941A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246941A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150246941A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246941A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150246941A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246941A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150246941A1_00006.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246941A1-20150903-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150246941A1_00007.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246941A1-20150903-C00002.TIF" inline="yes" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150246941A1_00008.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246941A1-20150903-C00003.TIF" inline="yes" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150246941A1_00009.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246941A1-20150903-C00004.TIF" inline="yes" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150246941A1_00010.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246941A1-20150903-C00005.TIF" inline="yes" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150246941A1_00011.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246941A1-20150903-C00006.TIF" inline="yes" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150246941A1_00012.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246941A1-20150903-C00007.TIF" inline="yes" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150246941A1_00013.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246941A1-20150903-C00008.TIF" inline="yes" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150246941A1_00014.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246941A1-20150903-C00009.TIF" inline="yes" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150246941A1_00015.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246941A1-20150903-C00010.TIF" inline="yes" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150246941A1_00016.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246941A1-20150903-C00011.TIF" inline="yes" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150246941A1_00017.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246941A1-20150903-C00012.TIF" inline="yes" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150246941A1_00018.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246941A1-20150903-C00013.TIF" inline="yes" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="US20150246941A1_00019.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246941A1-20150903-C00014.TIF" inline="yes" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="US20150246941A1_00020.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246941A1-20150903-C00015.TIF" inline="yes" />
+    </figure>
+    <figure num="21">
+      <img he="N/A" wi="N/A" file="US20150246941A1_00021.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246941A1-20150903-C00016.TIF" inline="yes" />
+    </figure>
+    <figure num="22">
+      <img he="N/A" wi="N/A" file="US20150246941A1_00022.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246941A1-20150903-C00017.TIF" inline="yes" />
+    </figure>
+    <figure num="23">
+      <img he="N/A" wi="N/A" file="US20150246941A1_00023.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246941A1-20150903-C00018.TIF" inline="yes" />
+    </figure>
+    <figure num="24">
+      <img he="N/A" wi="N/A" file="US20150246941A1_00024.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150246941A1-20150903-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150246941A1.PDF" type="pdf" size="598352" pages="14" />
+</lexisnexis-patent-document>

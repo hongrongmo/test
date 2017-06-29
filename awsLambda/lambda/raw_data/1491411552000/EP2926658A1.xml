@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2926658A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151007" time-inserted="093507" date-changed="20151027" time-changed="082724">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121592690">
+        <country>EP</country>
+        <doc-number>2926658</doc-number>
+        <kind>A1</kind>
+        <date>20151007</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>13850135</doc-number>
+        <date>20131030</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>jpn</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151007">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012239465</doc-number>
+        <date>20121030</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2012239465</doc-number>
+        <kind>A</kind>
+        <date>20121030</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2013079388</doc-number>
+        <kind>W</kind>
+        <date>20131030</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>2012239465</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>2013079388</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>JP20120239465</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>WO2013JP79388</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151008">
+      <gazette-reference>
+        <date>20151007</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151007</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151007</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151008">
+      <request-for-examination>
+        <date>20150528</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20151027">
+      <classification-ipcr sequence="1">
+        <text>A01N   1/02        20060101AFI20140521BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>1</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140521</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151027">
+      <classification-cpc sequence="1">
+        <text>G01N   1/30        20130101 FI20151009BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>1</main-group>
+        <subgroup>30</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151009</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A01N   1/0231      20130101 LI20151009BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>1</main-group>
+        <subgroup>0231</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151009</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>G01N2001/305       20130101 LA20151008BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>2001</main-group>
+        <subgroup>305</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">14</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151007" lang="ger" format="original">KIT ZUR HERSTELLUNG TRANSPARENTIERTER BIOLOGISCHER PROBEN UND VERFAHREN ZUR HERSTELLUNG TRANSPARENTIERTER BIOLOGISCHER PROBEN</invention-title>
+    <invention-title id="title_eng" date-changed="20151007" lang="eng" format="original">KIT FOR PRODUCING TRANSPARENTIZED BIOLOGICAL SPECIMEN, AND METHOD FOR PRODUCING TRANSPARENTIZED BIOLOGICAL SPECIMEN</invention-title>
+    <invention-title id="title_fre" date-changed="20151007" lang="fre" format="original">TROUSSE POUR LA PRODUCTION D'UN ÉCHANTILLON BIOLOGIQUE RENDU TRANSPARENT, ET PROCÉDÉ DE PRODUCTION D'UN ÉCHANTILLON BIOLOGIQUE RENDU TRANSPARENT</invention-title>
+    <parties date-changed="20151007">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Kanazawa Medical University</orgname>
+            <registered-number>101201091</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>1-1 Azadaigaku Uchinada-machi Kahoku-gun</address-1>
+              <city>Ishikawa 920-0293</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>HATTA, Toshihisa</name>
+            <address>
+              <address-1>c/o Kanazawa Medical University 1-1 Daigaku Uchinada-machi</address-1>
+              <city>Kahoku-gun Ishikawa 920-0293</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>UCHISHIBA, Maimi</name>
+            <address>
+              <address-1>c/o Kanazawa Medical University 1-1 Daigaku Uchinada-machi</address-1>
+              <city>Kahoku-gun Ishikawa 920-0293</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>HIGASHI, Nobuaki</name>
+            <address>
+              <address-1>c/o Kanazawa Medical University 1-1 Daigaku Uchinada-machi</address-1>
+              <city>Kahoku-gun Ishikawa 920-0293</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4">
+          <addressbook lang="eng">
+            <name>SHIMADA, Hiroki</name>
+            <address>
+              <address-1>c/o Kanazawa Medical University 1-1 Daigaku Uchinada-machi</address-1>
+              <city>Kahoku-gun Ishikawa 920-0293</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5">
+          <addressbook lang="eng">
+            <name>SHIMAMURA, Eriko</name>
+            <address>
+              <address-1>c/o Kanazawa Medical University 1-1 Daigaku Uchinada-machi</address-1>
+              <city>Kahoku-gun Ishikawa 920-0293</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Zimmermann &amp; Partner Patentanwälte mbB</name>
+            <registered-number>101526593</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Josephspitalstr. 15</address-1>
+              <city>80331 München</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151007">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP13079388</doc-number>
+        <date>20131030</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014069519</doc-number>
+        <date>20140508</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151008">
+      <main-family family-id="165559017">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150285718</doc-number>
+            <kind>A1</kind>
+            <date>20151008</date>
+          </document-id>
+          <application-date>
+            <date>20131030</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2926658</doc-number>
+            <kind>A1</kind>
+            <date>20151007</date>
+          </document-id>
+          <application-date>
+            <date>20131030</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014069519</doc-number>
+            <kind>A1</kind>
+            <date>20140508</date>
+          </document-id>
+          <application-date>
+            <date>20131030</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="165559016">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150285718</doc-number>
+            <kind>A1</kind>
+            <date>20151008</date>
+          </document-id>
+          <application-date>
+            <date>20131030</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2926658</doc-number>
+            <kind>A1</kind>
+            <date>20151007</date>
+          </document-id>
+          <application-date>
+            <date>20131030</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014069519</doc-number>
+            <kind>A1</kind>
+            <date>20140508</date>
+          </document-id>
+          <application-date>
+            <date>20131030</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151007" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Provided are: a method and a kit for producing a biological specimen clear, which enable the clearing within a short time and by which a wide variety of biological specimens can be cleared; and a method and a kit for preserving a cleared biological specimen. A method for producing a cleared biological specimen, comprising steps as mentioned in items (A) to (C). (A) Step (1) of treating a material to be cleared with a fixing solution that is an aqueous solution containing paraformaldehyde or the like, a nonionic surfactant (at a concentration of 1% or more) and an alkali and optionally containing a buffering agent to produce the material that is cleared is involved. (B) Step (2) of treating the material that is produced in step (1) or a material to be cleared which is produced by a conventional fixing method with a clearing accelerator solution that is an aqueous solution containing a nonionic surfactant (at a concentration of 1% or more) and an alkali to produce the material that is cleared is involved. (C) Step (3) of treating the material produced in step (1) or (2) with a preservation solution that is an aqueous solution containing a nonionic surfactant (at a concentration of 1% or more) and a polyhydric alcohol to produce the material that is cleared is involved. A kit which can be used in the method.<img id="imga-00001-en" wi="79" he="41" img-content="drawing" file="imgaf001.tif" img-format="tif" /></p>
+  </abstract>
+  <legal-data date-changed="20151016">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20151007</date>
+      </publication-date>
+      <event-code-1>17P</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXAMINATION FILED</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2926658A1</docdb-publication-number>
+      <docdb-application-id>417633605</docdb-application-id>
+      <effective-date>
+        <date>20150528</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20151007</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2926658A1</docdb-publication-number>
+      <docdb-application-id>417633605</docdb-application-id>
+      <corresponding-kind>A1</corresponding-kind>
+      <legal-designated-states>
+        <country>AL</country>
+        <country>AT</country>
+        <country>BE</country>
+        <country>BG</country>
+        <country>CH</country>
+        <country>CY</country>
+        <country>CZ</country>
+        <country>DE</country>
+        <country>DK</country>
+        <country>EE</country>
+        <country>ES</country>
+        <country>FI</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>GR</country>
+        <country>HR</country>
+        <country>HU</country>
+        <country>IE</country>
+        <country>IS</country>
+        <country>IT</country>
+        <country>LI</country>
+        <country>LT</country>
+        <country>LU</country>
+        <country>LV</country>
+        <country>MC</country>
+        <country>MK</country>
+        <country>MT</country>
+        <country>NL</country>
+        <country>NO</country>
+        <country>PL</country>
+        <country>PT</country>
+        <country>RO</country>
+        <country>RS</country>
+        <country>SE</country>
+        <country>SI</country>
+        <country>SK</country>
+        <country>SM</country>
+        <country>TR</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20151007</date>
+      </publication-date>
+      <event-code-1>AX</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXTENSION OF THE EUROPEAN PATENT TO</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2926658A1</docdb-publication-number>
+      <docdb-application-id>417633605</docdb-application-id>
+      <countries-concerned>
+        <country>BA</country>
+        <country>ME</country>
+      </countries-concerned>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151007">
+    <heading id="h-00001-en">
+      <b>Cross-Reference to Related Applications</b>
+    </heading>
+    <p id="p-00001-en" num="0001">This application claims priority to Japanese Patent Application No. <patcit id="pcit-00001" dnum="JP2012239465A"><text>2012-239465 filed on October 30, 2012</text></patcit>, which is expressly incorporated herein by reference in its entirety.</p>
+    <heading id="h-00002-en">
+      <b>Technical Field</b>
+    </heading>
+    <p id="p-00002-en" num="0002">The present invention relates to kits for producing cleared biological specimens and to methods for producing cleared biological specimens. More specifically, the present invention relates to a kit for producing cleared biological specimens, a kit for storing biological specimens that have been cleared, a method for producing cleared biological specimens, and a method for storing biological specimens that have been producing cleared.</p>
+    <heading id="h-00003-en">
+      <b>Background Art</b>
+    </heading>
+    <p id="p-00003-en" num="0003">Techniques of making biological samples clear are necessary for the observation of biological samples and have been known for some time. In recent years, biological samples have often been observed using florescent stains, which have also been used to observe fine tissue such as neurons.</p>
+    <p id="p-00004-en" num="0004">Whole-mount bone staining with alizarin red S is one method of making biological specimens clear that has been in use for some time. Specifically, it is a protocol by which (1) an alkali solution or various digestive enzymes are used to digest tissue (<nplcit id="ncit-00001" npl-type="s"><text>Dingerkus et al., Stain Technology, 52: 229-232, 1977</text></nplcit>, Nonpatent Reference 1, the entire contents of which are hereby specifically incorporated by reference); (2) a mixed solution of alkali solution and glycerol is used to decolor (segregate) excess stain sites; and (3) substitution is made onto an ascending glycerol series.</p>
+    <p id="p-00005-en" num="0005">There also exist methods of clearing with a mixed solution of benzyl benzoate and benzyl alcohol (<nplcit id="ncit-00002" npl-type="s"><text>Yokomizo et al., Nature Protocols, 7: 421-423, 2012</text></nplcit>, Nonpatent Reference 2, the entire contents of which are hereby specifically incorporated by reference); Scale reagent, which has a principal component in the form of urea and was reported in 2011 (<nplcit id="ncit-00003" npl-type="s"><text>Hama et al., Nature Neuroscience 14 (11): 1,481 to 1,488, 2011</text></nplcit>, Nonpatent Reference 3, the entire contents of which are hereby specifically incorporated by reference) (product name SCALEVIEW (registered trademark)); and the like.</p>
+    <heading id="h-00004-en">
+      <b>Summary of the Invention</b>
+    </heading>
+    <heading id="h-00005-en">
+      <b>Problem to Be Solved by the Invention</b>
+    </heading>
+    <p id="p-00006-en" num="0006">Conventional methods of making biological specimens clear mainly present the following problems: <ol><li>(1) The tissue tends to be damaged in tissue digestion with protein-degrading enzymes or alkali solutions.</li><li>(2) Long periods (several days to several months) are required for separate staining with mixed solutions of alkali and glycerol.</li><li>(3) Long periods (several days to several months) are required for clearing by glycerol or Scale reagent. Great difficulty is also present in making specific organs clear, such as the brain, liver, and placenta.</li><li>(4) Benzyl alcohol and benzyl benzoate mixed solutions are organic solvents, treatment with these mixed solutions weakens the fluorescence signal (Patent Reference 3), and the scope of application, including observation following clearing, is limited.</li></ol></p>
+    <p id="p-00007-en" num="0007">Based on the above problems, the present invention has for its object to provide a method and a kit for making biological specimens clear that tend not to damage tissue, in which organic solvents such as benzyl alcohol and benzyl benzoate are not employed, that produce transparency in a relatively short time (short period), and which are able to make clear a wide range of biological specimens. A further object of the present invention is to provide a kit and a method for storing in a cleared state biological specimen that has been cleared by the method of the present invention.</p>
+    <heading id="h-00006-en">
+      <b>Means of Solving the Problems</b>
+    </heading>
+    <p id="p-00008-en" num="0008">The method (A) for producing a cleared biological specimen of the present invention comprises: <ul id="ul-00001-en" list-style="none" compact="compact"><li>a step (1) of treating a material to be cleared in the form of a biological specimen with a fixing liquid to obtain a cleared material that has been cleared;</li><li>wherein the fixing liquid is (a) an aqueous solution comprising formaldehyde or paraformaldehyde, a nonionic surfactant, an alkali, and a buffer or (b) an aqueous solution comprising formaldehyde or paraformaldehyde, an nonionic surfactant, and an alkali; and</li><li>the concentration of the nonionic surfactant in the fixing liquid is 1% or greater.</li></ul></p>
+    <p id="p-00009-en" num="0009">The method (B) for producing a cleared biological specimen of the present invention comprises: <ul id="ul-00002-en" list-style="none" compact="compact"><li>a step (2) of treating a material being cleared in the form of a biological specimen that has been fixed or a material being cleared that has been treated with a fixing liquid in the method (A) of producing a cleared biological specimen of the present invention with a clearing-promoting liquid to obtain a material that has been cleared;</li><li>wherein the clearing-promoting liquid is an aqueous solution comprising a nonionic surfactant and an alkali; and</li><li>the concentration of the nonionic surfactant in the clearing-promoting liquid is 1% or greater.</li></ul></p>
+    <p id="p-00010-en" num="0010">The method (C) for producing a cleared biological specimen of the present invention comprises: <ul id="ul-00003-en" list-style="none" compact="compact"><li>a step (3) of obtaining a material that has been cleared by treating with a storage liquid or storing a material being cleared that has been subjected to a fixing treatment in the method (A) of producing a cleared biological specimen of the present invention or a material being cleared that has been treated with a fixing liquid and a clearing-promoting liquid in the method (B) for producing a cleared biological specimen of the present invention;</li><li>wherein the storage liquid is an aqueous solution containing a nonionic surfactant and a polyhydric alcohol; and</li><li>the concentration of the nonionic surfactant in the storage liquid is 1% or greater.</li></ul></p>
+    <p id="p-00011-en" num="0011">The kit (A) for producing cleared biological specimens of the present invention comprises a fixing liquid,<br /> wherein the fixing liquid is (a) an aqueous solution comprising formaldehyde or paraformaldehyde, a nonionic surfactant, an alkali, and a buffer or (b) an aqueous solution comprising formaldehyde or paraformaldehyde, a nonionic surfactant, and an alkali, and<br /> the concentration of nonionic surfactant in the fixing liquid is 1% or greater.</p>
+    <p id="p-00012-en" num="0012">In the kit (B) for producing cleared biological specimens of the present invention, which comprises a fixing liquid and a clearing-promoting liquid,<br /> the fixing liquid is an aqueous solution containing formaldehyde or paraformaldehyde, a nonionic surfactant, an alkali, and a buffer;<br /> the clearing-promoting liquid is an aqueous solution containing a nonionic surfactant and an alkali; and<br /> the concentrations of the nonionic surfactants contained in the fixing liquid and the clearing-promoting liquid are independently each 1% or greater.</p>
+    <p id="p-00013-en" num="0013">In the kit (C) for producing a cleared biological specimen of the present invention comprising either a fixing liquid and a storage liquid or comprising a clearing-promoting liquid and a storage liquid;<br /> the fixing liquid is an aqueous solution comprising formaldehyde or paraformaldehyde, a nonionic surfactant, an alkali, and a buffer;<br /> the clearing-promoting liquid is an aqueous solution comprising a nonionic surfactant and an alkali;<br /> the storage liquid is an aqueous solution comprising a nonionic surfactant and a polyhydric alcohol; and<br /> the concentrations of the nonionic surfactants contained in the fixing liquid, the clearing-promoting liquid, and the storage liquid are independently each 1% or greater.</p>
+    <p id="p-00014-en" num="0014">The kit (D) for producing a cleared biological specimen of the present invention comprises a clearing-promoting liquid,<br /> wherein the clearing-promoting liquid is an aqueous solution comprising a nonionic surfactant and an alkali; and<br /> the concentration of the nonionic surfactant in the clearing-promoting liquid is 1% or greater.</p>
+    <heading id="h-00007-en">
+      <b>Effect of the Invention</b>
+    </heading>
+    <p id="p-00015-en" num="0015">The method for producing cleared biological specimens of the present invention has the following effects in bone staining: <ol><li>(1) Remarkably shortening the staining period (conventional method: several days to several months; present invention: one to several days);</li><li>(2) Greatly shortening the clearing period (glycerol: several days to several months; Scale: several days to several weeks or more; present invention: overnight to several days);</li><li>(3) Permitting the staining of large amounts of bone (required for gametogenesis toxicity testing of pharmaceuticals, agricultural chemicals, and the like); and</li><li>(4) Permitting the automation of bone staining by means of a simple protocol.</li></ol></p>
+    <p id="p-00016-en" num="0016">The method for producing cleared biological specimens of the present invention has the following effects in examples of applications other than bone staining: <ol><li>(1) Affording a broad scope of application such as florescence observation and the like due to clearing in a buffering liquid;</li><li>(2) Permitting application to alkali phosphatase staining employed in in situ hybridization and whole-mount immunological staining due to being a water-soluble storage solution;</li><li>(3) Permitting bone observation through skin that has been cleared without applying bone stain due to the progression of clearing to a degree permitting internal observation in the fixation stage;</li><li>(4) Permitting histopathological observation of crystalline lenses in fixed specimens due to the lack of crystalline lens clouding;</li><li>(5) Because melanin pigment remains when Tween 20 is employed as the surfactant in the fixing liquid, the distribution of melanocytes spreading in organ tissue that has been cleared can be observed;</li><li>(6) With regard to the brain, liver, kidneys, and placenta, which are difficult to make clear by conventional methods, the present invention achieves adequate clearing within a short period (primarily by employing the composition of the present invention as the composition of the fixing liquid); and</li><li>(7) It is possible to greatly extend the depth to which microscopic observation is possible by applying the present invention to the penetration of thick sections (40 µm or greater) (application as the mounting agent of a tissue specimen is possible).</li></ol></p>
+    <heading id="h-00008-en">
+      <b>Brief Description of the Drawings</b>
+    </heading>
+    <p id="p-00017-en" num="0017">
+      <ul id="ul-00004-en" list-style="none" compact="compact">
+        <li>
+          <figref>Figure 1</figref> shows the results of an examination of the relation between clearing and surfactant concentration when employing Triton X100 and Tween 20.</li>
+        <li>
+          <figref>Figure 2</figref> shows the results of clearing tests on killifish.</li>
+        <li>
+          <figref>Figure 3</figref> shows the results of clearing tests on tree frogs.</li>
+        <li>
+          <figref>Figure 4</figref> shows the results of clearing tests on mouse fetuses (at 14 days of gestation).</li>
+        <li>
+          <figref>Figure 5</figref> shows the results of clearing tests on newborns (at two days after birth).</li>
+        <li>
+          <figref>Figure 6</figref> shows the results of clearing tests on the small intestines of mature mice.</li>
+        <li>
+          <figref>Figure 7</figref> shows the results of clearing tests on the livers of mature mice.</li>
+        <li>
+          <figref>Figure 8</figref> shows the results of clearing tests on the brains of mature female C57B6/J.</li>
+        <li>
+          <figref>Figure 9-1</figref> shows the results of clearing tests on the brains of mature female C57B6/J (with additional glycerol treatment).</li>
+        <li>
+          <figref>Figure 9-2</figref> shows the results (continued) of clearing tests on the brains of mature female C57B6/J (with additional glycerol treatment).</li>
+        <li>
+          <figref>Figure 10</figref> shows the results of clearing tests on the brains of mature ICR mice (9 weeks, male).</li>
+        <li>
+          <figref>Figure 11</figref> shows the results of clearing tests on the forelegs of mature rats.</li>
+        <li>
+          <figref>Figure 12</figref> shows the results of clearing tests on killifish.</li>
+        <li>
+          <figref>Figure 13</figref> shows the results of clearing tests on angelfish.</li>
+        <li>
+          <figref>Figure 14</figref> shows the results of clearing tests when employing a fixing liquid not containing a phosphate buffer solution.</li>
+        <li>
+          <figref>Figure 15</figref> shows the results of clearing tests when employing a fixing liquid not containing a phosphate buffer solution.</li>
+      </ul>
+    </p>
+    <heading id="h-00009-en">
+      <b>Modes of Carrying Out the Invention</b>
+    </heading>
+    <heading id="h-00010-en">&lt; Method (A) for producing cleared biological specimens &gt;</heading>
+    <p id="p-00018-en" num="0018">The method (A) for producing cleared biological specimens of the present invention comprises at least step (1) below.</p>
+    <heading id="h-00011-en">Step (1) of treating with a fixing liquid a biological specimen in the form of a material being cleared</heading>
+    <heading id="h-00012-en">Step (1)</heading>
+    <p id="p-00019-en" num="0019">The fixing liquid employed in step (1) is (a) an aqueous solution comprising formaldehyde or paraformaldehyde, a nonionic surfactant, an alkali, and a buffer or (b) an aqueous solution comprising formaldehyde or paraformaldehyde, an nonionic surfactant, and an alkali. The treatment with the fixing liquid is one that produces moderate digestion and a marked clearing effect while simultaneously fixing tissue, primarily in a material being cleared.</p>
+    <p id="p-00020-en" num="0020">The formaldehyde or paraformaldehyde is a component that fixes the tissue. Formaldehyde and paraformaldehyde can be employed singly, or can be mixed for use. The concentration of the formaldehyde or paraformaldehyde in the aqueous solution is suitably determined from the perspective of permitting suitable tissue fixation. For example, it can fall within a range of 1 to 10 w/v%, desirably falling within a range of 2 to 7 w/v%. However, these ranges are not intended as limitations.</p>
+    <p id="p-00021-en" num="0021">The nonionic surfactant is a component that makes the biological specimen clear. Any surfactant that is nonionic can be employed without restriction. Examples are esters, ethers, ester-ethers, and other forms of nonionic surfactants. Nonionic surfactants in the form of ethers are desirable. Examples of ether nonionic surfactants are Triton X-100 (octylphenolpoly(ethyleneglycolether)<sub>n</sub>, where n denotes about 10, HLB 13.4 to 13.5) and Tween 20 (polysorbate 20, polyoxyethylene sorbitan monolaurate, HLB 16.7). Tween 20 is a type of polysorbate. This polysorbate has about 20 molecules of ethylene oxide condensed into a sorbitan fatty acid ester. Examples in addition to Tween 20 are Tween 40 (polysorbate 40, polyoxyethylene sorbitan monopalmitate, HLB 15.6), Tween 60 (polysorbate 60, polyoxyethylene sorbitan monostearate, HLB 14.9), Tween 65 (polysorbate 65, polyoxyethylene sorbitan tristearate, HLB 10.5), and Tween 80 (polysorbate 80, polyoxyethylene sorbitan oleate, HLB 15.0).</p>
+    <p id="p-00022-en" num="0022">The nonionic surfactant is a component that makes the biological specimen clear, as set forth above. To make the biological specimen clear, the concentration of the nonionic surfactant in the fixing liquid, for example, falls within a range of 1 to 40 v/v%. The concentration can be suitably selected based on the type of nonionic surfactant and the type of material being cleared. The concentration of the nonionic surfactant in the clearing-promoting liquid desirably falls within a range of 2 to 30 v/v%, preferably within a range of 5 to 25 v/v%. However, these ranges are not intended as limitations. Tween 20 has generally been found to exhibit a clearing effect at lower concentrations that Triton X-100. However, Tween 20 imparts a yellow coloration and there are times when its use at high concentration (5% or higher) is difficult. In bright fields, with the naked eye, and under a microscope, there are cases where a concentration falling within a range of 1 to 5 v/v% is desirable. Triton X100 is desirably incorporated at relatively high concentration and Tween 20 at relatively low concentration. However, when Triton X100 exceeds 30%, the consistency increases sharply. The practical upper concentration limit is 25 v/v%.</p>
+    <p id="p-00023-en" num="0023"> As shown in Reference Example 1, as compared to Triton X-100 with an HLB of 13.4 to 13.5, Tween 20 with an HLB of 16.7 exhibits a clearing effect even at low concentration. Thus, there tend to be differences in the clearing effects based on the HLB of the nonionic surfactant. Further, as shown in Reference Example 1, a better clearing effect is achieved when Tween 20 and Triton X-100 are employed in combination as compared to when employed singly. Although the reason for this is unclear, the type and concentration of the nonionic surfactant in the fixing liquid can be suitably selected within ranges that are suited to clearing taking these points into account.</p>
+    <p id="p-00024-en" num="0024">The alkali is a component for biological (protein) digestion and can be a hydroxide of an alkali metal element (such as Li, Na, or K). Specifically, it can be KOH or NaOH. The concentration of the alkali can be suitably determined by taking into account the degree of biological (protein) digestion. For example, it can fall within a range of 0.1 to 10 w/v%, desirably within a range of 0.5 to 2 w/v%.</p>
+    <p id="p-00025-en" num="0025">Fixing liquid (a) contains a buffer in addition to formaldehyde or paraformaldehyde, a nonionic surfactant, and an alkali. Fixing liquid (b) contains formaldehyde or paraformaldehyde, a nonionic surfactant, and an alkali, but not a buffer. The buffer is a component for adjusting the pH of the fixing liquid to within a prescribed range (such as 5 to 12, desirably 7 to 11). The presence of a buffer (for example, pH 5 to 8) further inhibits damage to the tissue by alkali digestion. However, even in fixing liquid (b) which does not contain a buffer, incorporating the above components enables to fix the material being cleared. However, when employing fixing liquid (a) not containing a buffer, it is possible to inhibit damage to tissue by the alkali digestion. A single buffer can be incorporated so long as it is a material having a pH-buffering effect. Examples are phosphate buffers (such as phosphoric acid, sodium monohydrogen phosphate, sodium dihydrogen phosphate, potassium monohydrogen phosphate, potassium dihydrogen phosphate, sodium phosphate, potassium phosphate, employed singly or in mixtures) and boric acid - borax buffers. There is no intension to limit to phosphate buffers, but phosphate buffers are desirable.</p>
+    <p id="p-00026-en" num="0026">Specifically, fixing liquid (a) can be a mixed aqueous solution of, for example, 2 to 4% formaldehyde phosphate buffer or 2 to 4% paraformaldehyde phosphate buffer, alkali solution (1% KOH or NaOH), and nonionic surfactant (5% Triton X-100 or Tween 20). Specifically, fixing liquid (b) can be a mixed aqueous solution of, for example, 2-4% formaldehyde aqueous solution or 2 to 4% paraformaldehyde aqueous solution, alkali solution (1 % KOH or NaOH), and nonionic surfactant (5% Triton X-100 or Tween 20).</p>
+    <p id="p-00027-en" num="0027">However, the concentrations of the various components are not intended to be limited to the above values. The above are merely examples.</p>
+    <p id="p-00028-en" num="0028">The treatment of the material being cleared with the fixing liquid can be conducted, for example, by immersing the material being cleared in a prescribed quantity (a quantity at least sufficient to fully immerse the material being cleared in the fixing liquid) of fixing liquid at room temperature (for example, at 5 to 35°C, desirably 15 to 30°C, identical below) or at a temperature within a range of 60°C from room temperature, for a period falling within a range of 1 to 48 hours, desirably within range of 1 to 24 hours, and preferably within a range of 2 to 12 hours. The higher the temperature, the more quickly fixation tends to be completed. However, depending on the type of material being cleared, there may be a risk of greatly damaging the tissue. Thus, the treatment temperature is desirably suitably adjusted taking this point into account. However, the above temperatures and times are merely examples, and no limitation to these ranges is intended. When employing fixing liquid (b), which does not contain a buffer, from the perspective of inhibiting damage to the tissue by alkali digestion, the treatment is desirably conducted at a relatively low temperature, such as at room temperature.</p>
+    <p id="p-00029-en" num="0029">The treatment of the above material being cleared with the fixing liquid can be conducted with irradiation by microwaves during part or all of the treatment operation. The frequency of the microwaves can be, for example, 2.45 GHz, but this is not intended as a limitation. Conducting the above treatment of the material being cleared with the fixing liquid with irradiation by microwaves makes it possible to further promote the clearing. The output of the microwaves being irradiated can be suitably determined taking into account the type and magnitude of the material being cleared and the quantity of fixing liquid.</p>
+    <p id="p-00030-en" num="0030">The biological specimen that is the material being cleared is not specifically limited. For example, the biological specimen can be a fish, amphibian, reptile, or mammal, (however, excluding humans in the case of an entire organism). The biological specimen can also be a biological tissue. Every tissue of an organism can be targeted, such as an internal organ, blood vessel, nerve, the brain, or bone. A cleared specimen of a human organ or the like can be prepared from the view point of technique. For example, such would be suitably conducted in terms of ethical considerations by obtaining the approval of an ethics committee or the like. However, these are merely examples. So long as it is a biological specimen, there is no limitation. However, from the perspective of ease of clearing by means of treatment with a fixing liquid, the material that is being cleared can be a fish, amphibian, bird, mammal, or some tissue thereof.</p>
+    <p id="p-00031-en" num="0031">The biological specimen that is the material that is being cleared can be subjected to a staining treatment in advance. The stain that is used in the staining treatment is not specifically limited. In addition to pigmented ink, stains such as fluorescent stains can also be employed.</p>
+    <p id="p-00032-en" num="0032">Following treatment with the fixing liquid, as needed, the material being cleared can be washed. Distilled water, buffer solution, ethylene glycol/PB(S), or the like can be employed for washing. The washing can be conducted at room temperature.</p>
+    <p id="p-00033-en" num="0033">A bleaching treatment, degreasing treatment, or bleaching and degreasing treatment can be conducted during the treatment of the material being cleared with the fixing liquid, or during the treatment with the fixing liquid and after washing, as needed. For example, hydrogen peroxide can be used for bleaching, and for example, acetone or ethanol can be used for degreasing.</p>
+    <p id="p-00034-en" num="0034">In the method (A) for producing a cleared biological specimen, the treatment of the material being cleared with the fixing liquid yields a material that has been cleared. The material that has been cleared can be used as is in subsequent observation, for example. However, depending on the type of material being cleared, the clearing may sometimes be insufficient. Such materials being cleared can then be subjected to the method (B) for producing a cleared biological specimen of the present invention or the method (C) for producing a cleared biological specimen of the present invention to further promote the clearing. When storage is necessary, storage is desirably conducted by the method (C) for producing a cleared biological specimen of the present invention, described farther below.</p>
+    <heading id="h-00013-en">&lt; Method (B) for producing cleared biological specimens &gt;</heading>
+    <p id="p-00035-en" num="0035">The method (B) for producing cleared biological specimens of the present invention comprises a step (2) of treating with a clearing-promoting liquid a material being cleared that has been obtained by fixing a biological specimen by a method other than method (A) for producing a cleared biological specimens of the present invention, or a material being cleared that has been treated with a fixing liquid in method (A) for producing cleared biological specimens of the present invention.</p>
+    <heading id="h-00014-en">Step (2)</heading>
+    <p id="p-00036-en" num="0036">The clearing-promoting liquid that is employed in step (2) is an aqueous solution comprising a nonionic surfactant and an alkali. The same nonionic surfactant and alkali as are employed in the fixing liquid can be employed.</p>
+    <p id="p-00037-en" num="0037">The nonionic surfactant is a component that makes the biological specimen clear. Following fixation, the biological specimen is further cleared by the clearing-promoting liquid. The concentration of the nonionic surfactant in the clearing-promoting liquid, for example, falls within a range of 1 to 40 w/v%, and can be suitably selected based on the type of nonionic surfactant, the type of material being cleared, and the conditions of processing with the fixing liquid (including the composition of the fixing liquid). The concentration of the nonionic surfactant in the clearing-promoting liquid desirably falls within a range of 2 to 20 w/v%, preferably within a range of 5 to 10 w/v%. However, these ranges are not intended as limitations.</p>
+    <p id="p-00038-en" num="0038">As shown in Reference Example 1, there tend to be differences in clearing-promoting effects based on the HLB of the nonionic surfactant. As also shown in Reference Example 1, the clearing-promoting effect that is achieved when Tween 20 and Triton X-100 are employed in combination tends to be better than when they are employed singly. Although the reason for this is unclear, taking these points in account, the type and concentration of the nonionic surfactant can be suitably selected within a range that is suited to promoting clearing.</p>
+    <p id="p-00039-en" num="0039">The alkali is a component for biological (protein) digestion. The concentration thereof can be suitably selected taking into account the degree of biological (protein) digestion in the same manner as for the fixing liquid. For example, it can fall within a range of 0.1 to 10 w/v%, desirably within a range of 0.5 to 2 w/v%. It is not necessary for the clearing-promoting liquid to contain a buffer (but a buffer can be contained as needed). The biological (protein) digesting effect due to the alkali is stronger than that of the fixing liquid. However, since moderate digestion is first conducted by the fixing liquid, even when a clearing-promoting liquid that does not contain a buffer is employed, the tissue is not markedly damaged. However, depending on the type of tissue, the concentration of the alkali is desirably adjusted and clearing is desirably promoted while inhibiting tissue damage.</p>
+    <p id="p-00040-en" num="0040">The material being cleared is a material being cleared that has been treated with a fixing liquid in the method (A) for producing cleared biological specimens of the present invention or a material being cleared that has been obtained by fixing a biological specimen by a method other than the method (A) for producing cleared biological specimens of the present invention. The method other than the method (A) for producing cleared biological specimens of the present invention can be a conventionally known method. For example, it can be a method of treating a biological specimen with an aqueous solution that contains formaldehyde or paraformaldehyde, but does not contain a nonionic surfactant, or does not contain an alkali, or does not contain either. The aqueous solution that contains formaldehyde or paraformaldehyde, but does not contain a nonionic surfactant, or does not contain an alkali, or does not contain either, for example, can contain a 2 to 4% formaldehyde aqueous solution, a 2 to 4% paraformaldehyde aqueous solution, a 2 to 4% formaldehyde phosphate buffer, or a 2 to 4% paraformaldehyde phosphate buffer.</p>
+    <p id="p-00041-en" num="0041">The treatment of the material being cleared with the clearing-promoting liquid, for example, can be conducted by immersing the material being cleared in a prescribed quantity (a quantity at least sufficient to fully immerse the material being cleared in the clearing-promoting liquid) of the clearing-promoting liquid at room temperature (for example, 5 to 35°C, desirably 15 to 30°C, identical below) or at a temperature within a range of 60°C from room temperature, for a period falling within a range of from 10 minutes to 48 hours, desirably within a range of from 30 minutes to 24 hours, and preferably within a range of from 1 to 12 hours. A high temperature tends to rapidly produce a clearing-promoting effect. However, depending on the type of material being cleared, there is considerable risk of damaging the tissue. Taking this point into account, the treatment temperature is desirably suitably adjusted. However, the above temperatures and times are merely examples and limitation to these scopes is not intended.</p>
+    <p id="p-00042-en" num="0042">The treatment of the material being cleared with the clearing-promoting liquid can be conducted while irradiating microwaves during some portion or all of the treatment operation. The frequency of the microwaves can be, for example, 2.45 GHz. However, this is not intended as a limitation. Conducting the above treatment of the material being cleared with the clearing-promoting liquid while irradiating microwaves makes it possible to promote clearing and rapidly achieve transparency. In particular, conducting the above treatment of the material being cleared with the clearing-promoting liquid with irradiation with microwaves at 40 to 50 °C makes it possible to achieve clearing without damaging the specimen within a relatively short period of about 10 to 90 minutes. The output of the microwaves that are irradiated can be suitably determined by taking into account the type and size of the material being cleared and the quantity of clearing-promoting liquid.</p>
+    <p id="p-00043-en" num="0043">Treating the material being cleared with the clearing-promoting liquid yields a cleared biological specimen. The cleared biological specimen thus obtained can be used as is in subsequent observation, for example. However, depending on the type of material being cleared, there will be cases where adequate clearing is not achieved. Such materials being cleared can then be subjected to the method (C) for producing a cleared biological specimen of the present invention to further promote clearing. In cases where storage is necessary, it is also desirable to apply the method (C) for producing a cleared biological sample of the present invention and conduct storage.</p>
+    <heading id="h-00015-en">&lt; Method (C) for clearing a biological sample&gt;</heading>
+    <p id="p-00044-en" num="0044">Method (C) for clearing a biological sample of the present invention comprises a step (3) of obtaining a material that has been cleared by treating with a storage liquid or storing a material being cleared that has been subjected to a fixing treatment in the method (A) of producing a cleared biological specimen of the present invention or a material being cleared that has been treated with a fixing liquid and a clearing-promoting liquid in the method (B) for producing a cleared biological specimen of the present invention.</p>
+    <heading id="h-00016-en">Step (3)</heading>
+    <p id="p-00045-en" num="0045">The storage liquid that is used in step (3) is an aqueous solution comprising a nonionic surfactant and a polyhydric alcohol, in which the concentration of the nonionic surfactant is 1% or greater. The nonionic surfactant is a component for clearing the biological sample, and a component that maintains the transparency of the biological sample once it has been cleared. The same nonionic surfactants as are employed in the fixing liquid and the clearing-promoting liquid can be employed.</p>
+    <p id="p-00046-en" num="0046"> The concentration of the nonionic surfactant in the storage liquid can fall within a range of 1 to 40%, by way of example. This concentration can be suitably selected based on the type of nonionic surfactant, the type of material being cleared, and the conditions of treatment with the fixing liquid and/or clearing-promoting liquid (including the composition of the fixing liquid and/or that of the clearing-promoting liquid). Keeping the material being cleared in a storage liquid after it has been treated with the clearing-promoting liquid will sometimes further promote clearing and maintain transparency. In the same manner as for the fixing liquid and the clearing-promoting liquid, the HLB of the nonionic surfactant tends to produce differences in the effects of promoting clearing and maintaining transparency. Further, as shown in Reference Example 1, the combined use of Tween 20 and Triton X-100 achieves a better clearing-promoting effect and transparency-maintaining effect than when either is used alone. Although the reason for this is unclear, it is possible to suitably select the type and concentration of the surfactant within ranges suited to maintaining transparency by taking these points into account.</p>
+    <p id="p-00047-en" num="0047">The polyhydric alcohol is a component that promotes clearing. An example is glycol compounds. An example of a glycol compound is ethylene glycol. The concentration of the glycol compound can be suitably determined taking into account the transparency of the specimen. For example, a range of 1 to 50 w/v% is possible, and a range of 10 to 30 w/v% is desirable. However, these ranges are not intended as limitations.</p>
+    <p id="p-00048-en" num="0048">In addition to a nonionic surfactant and a polyhydric alcohol, dimethyl sulfoxide (DMSO) can be incorporated into the storage liquid. Incorporating DMSO further promotes the clearing. The content of DMSO can fall within a range of 0.5 to 10 v/v%, for example. The effect of adding DMSO varies with the type of tissue and organ being treated. In the case of most organs, a range of 0.5 to 10 v/v% is suitable. In the case of the brain, the addition of DMSO causes swelling, so a relatively small quantity falling within a range of 0.5 to 1 v/v% is suitable for long-term storage. For short-term observation, DMSO can be used in a range of up to 10 v/v%.</p>
+    <p id="p-00049-en" num="0049">The material being treated for clearing that has been treated with the fixing liquid and/or clearing-promoting liquid is treated with the storage liquid by being immersed in a prescribed quantity of storage liquid (at least a quantity sufficient to fully immerse the material being cleared in the storage liquid) at room temperature (for example, 5 to 35°C, desirably 15 to 30°C, identical below) or at a temperature falling within a range of 60°C from room temperature for a period falling within a range of from 10 minutes to 48 hours, desirably within a range of from 30 minutes to 24 hours, and preferably falling within a range of from 1 to 12 hours. A high temperature tends to rapidly produce a clearing-promoting effect. However, depending on the type of material being cleared, there is a risk of great damage to the tissue. The treatment temperature is desirably suitably adjusted taking this point into account. However, the above temperature and periods are merely examples, and are not intended as limitations. In the case of storage, it is possible to store at room temperature as is.</p>
+    <p id="p-00050-en" num="0050">The treatment of the material being cleared with the storage liquid can be conducted with microwave irradiation during part or all of the treatment operation. The frequency of the microwaves can be 2.45 GHz, for example, but this is not intended as a limitation. Treating the material being cleared with the storage liquid while irradiating it with microwaves promotes the clearing, making it possible to rapidly achieve clearing. Specifically, at a temperature of 40 to 50°C, treating the material being cleared with the storage liquid while irradiating it with microwaves makes it possible to relatively rapidly achieve clearing in about 10 to 90 minutes without damaging the specimen. The output of the microwaves being irradiated can be suitably determined by taking into account the type and size of the material being cleared, the quantity of storage liquid, and the like.</p>
+    <p id="p-00051-en" num="0051">Treating the material being cleared with the fixing liquid makes it possible to obtain a cleared biological specimen. The cleared biological specimen obtained can be subsequently used as is for observation, for example, or can be stored as is. However, depending on the type of material being cleared, clearing will sometimes be inadequate. For such materials being sized, repeatedly implementing steps (2) and (3) will promote the clearing. Alternatively, when clearing is insufficient, treatment can be conducted with the following additional clearing-promoting liquid. Treatment with an additional clearing-promoting liquid can also be implemented on the cleared biological specimen obtained by the method of (A) or (B) for clearing a biological specimen.</p>
+    <heading id="h-00017-en">&lt; Treatment with additional clearing-promoting liquid &gt;</heading>
+    <p id="p-00052-en" num="0052">The cleared biological specimen obtained by methods (A) to (C) for clearing a biological specimen of the present invention can be immersed in an additional clearing-promoting liquid comprised of a trivalent alcohol or an aqueous solution of a trivalent alcohol. The material being cleared that is obtained following immersion in the additional clearing-promoting liquid can then be maintained in the above storage liquid to obtain a cleared material. Trivalent alcohol is a component that further promotes clearing. This treatment will sometimes further promote clearing. An example of a trivalent alcohol is glycerol. Treatment with an additional clearing-promoting liquid is effective when increasing the transparency of bone and nerve fiber, for example.</p>
+    <p id="p-00053-en" num="0053">The treatment with an additional clearing-promoting liquid of the material being cleared that has been treated with a fixing liquid, clearing-promoting liquid, or storage liquid is conducted, for example, by immersion in a prescribed quantity of storage liquid (a quantity at least adequate to fully immerse the material being cleared in the additional clearing-promoting liquid) at room temperature (for example, from 5 to 35°C, desirably 15 to 30°C, identical below) or at a temperature falling within a range of 60°C from room temperature for a period falling within a range of from 30 minutes to 48 hours, desirably within a range of from 1 to 24 hours, and preferably within a range of from 1 to 12 hours. A high temperature tends to rapidly produce a clearing-enhancing effect. However, depending on the type of material being cleared, there is a risk of great damage to the tissue. It is thus desirable to suitably adjust the treatment temperature by taking this point into account. However, these temperatures and periods are merely examples; these ranges are not intended as limitations.</p>
+    <p id="p-00054-en" num="0054"> Treatment of the above material being cleared with an additional clearing-promoting liquid can be conducted by irradiating microwaves during part or all of the treatment operations. The frequency of the microwaves can be 2.45 GHz, for example. However, this is not intended as a limitation. Conducting treatment of the material being cleared with the additional clearing-promoting liquid while irradiating it with microwaves further promotes clearing and makes it possible to rapidly achieve clearing. Specifically, at a temperature of 40 to 50°C, conducting treatment of the material being cleared with the additional clearing-promoting liquid while irradiating it with microwaves makes it possible to achieve clearing within a relatively short period of about 10 to 90 minutes without damaging the specimen. The output of the microwaves being irradiated can be suitably determined taking into account the type and size of the material being cleared, the quantity of additional clearing-promoting liquid, and the like.</p>
+    <p id="p-00055-en" num="0055">The example of a basic protocol (steps 1 to 4) for clearing a tissue using treatment with a fixing liquid (1), treatment with a clearing-promoting liquid (2), and treatment with a storage liquid (3) will be given below.</p>
+    <heading id="h-00018-en">Step 1. Fixing liquid for producing cleared specimens: room temperature, several hours to several days</heading>
+    <p id="p-00056-en" num="0056">
+      <ol>
+        <li>(a) A mixed solution of 2 to 4% formaldehyde phosphate buffer or 2 to 4% paraformaldehyde phosphate buffer, 5% Triton X-100 or 5% Tween 20, 1 % KOH;</li>
+        <li>(b) A mixed solution of 2 to 4% formaldehyde aqueous solution or 2 to 4% paraformaldehyde aqueous solution, 5% Triton X-100 or 5% Tween 20, 1% KOH.</li>
+      </ol>
+    </p>
+    <heading id="h-00019-en">Step 2. Washing: 30 minutes to overnight at room temperature</heading>
+    <p id="p-00057-en" num="0057">
+      <ol>
+        <li>(i) Distilled water or</li>
+        <li>(ii) Tris-HCL buffer liquid (TB(S), pH 7.5), or</li>
+        <li>(iii) Phosphate buffer solution (PB(S), pH 7.2 to 7.4), or</li>
+        <li>(iv) 40% ethylene glycol/PB(S)</li>
+      </ol>
+    </p>
+    <heading id="h-00020-en">(Optional: bleaching and degreasing)</heading>
+    <p id="p-00058-en" num="0058">Bleaching: (i) Mixed solution of 0.3% hydrogen peroxide aqueous solution, 50% (70 to 50%) acetone, 50% (30 to 50%) ethylene glycol or (ii) Mixed solution of 0.3% hydrogen peroxide aqueous solution, 50% ethanol, 50% ethylene glycol, room temperature, several hours to overnight.</p>
+    <heading id="h-00021-en">Degreasing:</heading>
+    <p id="p-00059-en" num="0059">
+      <ol>
+        <li>(i) Mixed solution of 50% (70 to 50%) acetone, 50% (30 to 50%) ethylene glycol, or</li>
+        <li>(ii) mixed solution of 50% ethanol, 50% ethylene glycol, room temperature, several hours to several days, or</li>
+        <li>(iii) mixed solution of 50% ethanol and 50% glycerol</li>
+      </ol> * Degreasing effect of (i) acetone mixed solution is good.<br /> * For mature mouse brain, 1 day of bleaching and 1 to 2 days of degreasing are suitable. For mature rat brain, one day of bleaching and 2 to 3 days of degreasing are suitable.</p>
+    <heading id="h-00022-en">Step 3. Tissue clearing-promoting liquid: room temperature or 50°C, 30 minutes to 2 days</heading>
+    <p id="p-00060-en" num="0060">
+      <ul id="ul-00005-en" list-style="none" compact="compact">
+        <li>Clearing-promoting liquid 1: 20% (5 to 20%) Triton X-100, 1% KOH or</li>
+        <li>Clearing-promoting liquid 2: 20% (5 to 20%) Tween 20, 1% KOH or</li>
+        <li>Clearing-promoting liquid 3: 10% (5 to 20%) Triton X-100, 10% (5 to 25%) Tween 20, 1% KOH</li>
+        <li>Clearing-promoting effect: Promoting liquid 3 &gt; promoting liquid 1 &gt; promoting liquid 2</li>
+      </ul>
+    </p>
+    <heading id="h-00023-en">Step 4. Cleared specimen storage liquid: room temperature or 50°C, 30 minutes to 2 days (clearing is promoted at 50 to 60°C)</heading>
+    <p id="p-00061-en" num="0061">
+      <ul id="ul-00006-en" list-style="none" compact="compact">
+        <li>Storage liquid 1: 20% (5 to 20%) Triton X-100, 20% ethylene glycol or</li>
+        <li>Storage liquid 2: 20% (5 to 20%) Tween 20, 20% ethylene glycol or</li>
+        <li>Storage liquid 3: 25% (5 to 25%) Triton X-100, 5% (5 to 1 %) Tween 20, 20% ethylene glycol</li>
+        <li>Storage liquid 4: 20% (5 to 20%) Triton X-100, 20% ethylene glycol, 10% (0.5 to 10%) DMSO (dimethyl sulfoxide) (pH 8 to 9)</li>
+        <li>Clearing-promoting effect: storage liquid 4 &gt; storage liquid 3 &gt; storage liquid 1 &gt; storage liquid 2</li>
+      </ul>
+    </p>
+    <p id="p-00062-en" num="0062">When the transparency of the specimen obtained in step 4 is inadequate, it is possible to further enhance transparency by repeatedly conducting step 3 with the clearing-promoting liquid and step 4 with the storage liquid. In that case, any one of clear specimen storage liquids 1 to 4 can be used for storage (transparency: 4 &gt; 3 &gt; 1 &gt; 2).</p>
+    <heading id="h-00024-en">Step 5</heading>
+    <p id="p-00063-en" num="0063">When it is desirable to further enhance the transparency of the specimen, or when it is desirable to enhance the transparency of bone, nerve fiber, or the like, treatment with the following additional clearing-promoting liquid can be added. The additional clearing-promoting liquid is either a 100% glycerol solution or an aqueous solution with 50% or more glycerol. The higher the glycerol concentration, the greater the additional clearing-promoting effect. An example of a specific protocol is given below.</p>
+    <heading id="h-00025-en">5.1 Emulsification: Incubation at room temperature for from 30 minutes to several hours in 100% glycerol.</heading>
+    <p id="p-00064-en" num="0064">Emulsification begins simultaneously with the introduction of the specimen. The solution assumes a milk-white color. Simultaneously, clearing of the specimen progresses rapidly and it hardens. In the cleared specimen storage liquid of step 4, tissue swelling is observed. However, shrinkage occurs during the glycerol treatment.</p>
+    <p id="p-00065-en" num="0065">5.2 Storage: The specimen of 5.1 is further treated with 60% glycerol. Treatment with 60% glycerol rather than 100% glycerol yields a specimen of higher transparency. In this processing, some turbidity and swelling (+) occur overnight. Following the treatment of 5.2, storage in storage liquid 1 (25% Triton X-100, 5% Tween 20, ethylene glycol) or storage liquid 3 (20% Triton X-100, 5% Tween 20, 20% ethylene glycol) immediately enhances transparency. Transparency in the case of brain is: storage liquid 1 &gt; storage liquid 3 (for liver, storage liquid 1 &lt; storage liquid 3).</p>
+    <p id="p-00066-en" num="0066">
+      <ul id="ul-00007-en" list-style="dash" compact="compact">
+        <li>In soft tissue treated with additional clearing-promoting liquid, the transparency increases sharply.</li>
+        <li>Treatment with the additional clearing-promoting liquid is particularly suited to clearing of brain.</li>
+        <li>In the treatment of steps 1 to 4, a milk-white sediment will sometimes be produced in fiber of white matter (identical in ossified portions). An effective treatment for removing this is heating at 50 to 60°C. However, when 72 hours are exceeded, sudden dissolution (collapsing) and liquefaction of the brain sometimes occur. Thus, it is desirable to suitably manage the temperature and duration.</li>
+        <li>In treatment with the additional clearing-promoting liquid, the color of ossified portions where white has been intensified in fetuses will decrease (become cleared). Accordingly, when it is desirable for the bone not to be seen, treatment with the additional clearing-promoting liquid is effective.</li>
+      </ul>
+    </p>
+    <heading id="h-00026-en">&lt; Kit for producing cleared biological specimens &gt;</heading>
+    <p id="p-00067-en" num="0067">The kits for producing cleared biological specimens of the present invention include a kit (A) comprising a fixing liquid, a kit (B) comprising a fixing liquid and a clearing-promoting liquid, a kit (C) comprising a fixing liquid and a storage liquid or a fixing liquid, a clearing-promoting liquid, and a storage liquid, and a kit (D) comprising a clearing-promoting liquid, respectively.</p>
+    <p id="p-00068-en" num="0068">The fixing liquid is an aqueous solution comprising (a) formaldehyde or paraformaldehyde, a nonionic surfactant, an alkali, and a buffer, or (b) an aqueous solution comprising formaldehyde or paraformaldehyde, a nonionic surfactant, and an alkali. Fixing liquid (b) does not contain a buffer. The clearing-promoting liquid is an aqueous solution comprising a nonionic surfactant and an alkali. The storage liquid is an aqueous solution comprising a nonionic surfactant and a polyhydric alcohol. The concentration of the nonionic surfactant in the fixing liquid, clearing-promoting liquid, and storage liquid is 1% or greater in each independently. The composition, concentration, and the like of the fixing liquid, clearing-promoting liquid, and storage liquid are identical to those set forth above for methods (A), (B), and (C) for producing cleared biological specimens.</p>
+    <p id="p-00069-en" num="0069">The kits of the present invention can be suitably employed in methods (A) to (C) for producing cleared biological specimens of the present invention.</p>
+    <p id="p-00070-en" num="0070">The kits of the present invention can further contain an additional clearing-promoting liquid comprised of a trivalent alcohol solution or a trivalent alcohol-containing aqueous solution. An example of a trivalent alcohol is glycerol. The composition, concentration, and the like of the additional clearing-promoting liquid is the same as that set forth above for the method for producing cleared biological samples and the treatment with an additional clearing-promoting liquid.</p>
+    <heading id="h-00027-en">
+      <b>Examples</b>
+    </heading>
+    <p id="p-00071-en" num="0071">The present invention will be described in greater detail below through Examples. However, the present invention is not intended to be limited by these Examples. The storage liquid 3 and promoting liquid 3 in the Examples have been described in the above protocol.</p>
+    <heading id="h-00028-en">Reference Example 1</heading>
+    <heading id="h-00029-en">Examination of the composition of the clear specimen storage liquid</heading>
+    <heading id="h-00030-en">(1) Examination of Triton X-100 and Tween 2 concentrations</heading>
+    <p id="p-00072-en" num="0072">The livers of mature rats that had been subjected to intravenous injection of pigment ink were employed as specimens.</p>
+    <p id="p-00073-en" num="0073">Following perfusion of a mixed solution of 2% formaldehyde (paraformaldehyde) phosphate buffer, 5% Triton X-100, and 1% KOH, immersion and fixation were conducted for 12 hours in the same fixing liquid, followed by storage at room temperature in 40% ethylene glycol/PB (phosphate buffer).</p>
+    <heading id="h-00031-en">(Setting concentration conditions and determining effects)</heading>
+    <p id="p-00074-en" num="0074">
+      <ul id="ul-00008-en" list-style="none" compact="compact">
+        <li>Triton X-100 (Tx100): 20%, 10%, 5%, 1.25%</li>
+        <li>Tween 20 (Tw20): 40%, 20%, 10%, 5%, 1.25%</li>
+        <li>Tx+Tw (each in identical concentration): 20%, 10%, 5%, 1.25%</li>
+        <li>Containing neither Tx nor Tw: 0%</li>
+      </ul>
+    </p>
+    <p id="p-00075-en" num="0075">Following 24 hours of incubation at room temperature, the blood vessels within the liver (stained black with ink) were used as indicators and the transparency of tissue was evaluated under a stereomicroscope. The results are given in <figref>Figure 1</figref>.</p>
+    <p id="p-00076-en" num="0076">
+      <ul id="ul-00009-en" list-style="dash" compact="compact">
+        <li>Because 40% Triton 100 solidified at room temperature, it was not examined.</li>
+        <li>The treated groups to the left of the red line were found to exhibit a clearing effect.</li>
+        <li>When Triton X-100 and Tween 20 were employed alone, a clearing effect was observed. However, a mixed liquid of the two exhibited a clearing effect beginning in the low concentration range.</li>
+      </ul>
+    </p>
+    <heading id="h-00032-en">&lt; Example of sample preparation &gt;</heading>
+    <heading id="h-00033-en">Example 1</heading>
+    <p id="p-00077-en" num="0077">Clearing killifish and tree frogs</p>
+    <heading id="h-00034-en">&lt; Conditions &gt;</heading>
+    <heading id="h-00035-en">(1) Fixation</heading>
+    <p id="p-00078-en" num="0078">Mixed solution of 2% formaldehyde (paraformaldehyde) phosphate buffer, 5% Triton X-100, and 1 % KOH<br /> Room temperature, 1 hour to overnight</p>
+    <heading id="h-00036-en">(2) Washing</heading>
+    <p id="p-00079-en" num="0079">Phosphate buffer physiological saline (PBS, pH 7.2 to 7.4)<br /> Room temperature, 30 minutes</p>
+    <heading id="h-00037-en">(3) Tissue clearing-promoting liquid</heading>
+    <p id="p-00080-en" num="0080">Promoting liquid: 20% Tween 20, 1 % KOH<br /> Room temperature, 10 to 30 minutes</p>
+    <heading id="h-00038-en">(4) Cleared specimen storage liquid</heading>
+    <p id="p-00081-en" num="0081">20% Triton X-100, 5% Tween 20, 20% ethylene glycol (storage liquid 3)<br /> Room temperature, 10 to 30 minutes.</p>
+    <heading id="h-00039-en">&lt; Results &gt;</heading>
+    <p id="p-00082-en" num="0082">The results are given in <figref>Figure 2</figref>. In the conventional clearing treatment method, about several days to a week (not including the fixation period) are required to complete clearing. The present method is characterized in that the entire specimen becomes clear like glass. It is also characterized in that when compared to a clear specimen prepared with convention glycerol or Scale reagent, the transparency is much higher and the tissue is harder. In the killifish shown in <figref>Figure 2</figref>, the skin, muscle, and internal organs all remain. Melanin pigment remains. In the tree frog shown in <figref>Figure 3</figref>, the skin and muscle remain. It is possible to see through to the internal organs.</p>
+    <heading id="h-00040-en">Example 2</heading>
+    <p id="p-00083-en" num="0083">
+      <u>Clearing mouse fetus (at day 14 of gestation) and newborn mouse (at</u>
+      <u>day 2 after birth)</u>
+    </p>
+    <heading id="h-00041-en">&lt; Conditions &gt;</heading>
+    <heading id="h-00042-en">(1) Fixation</heading>
+    <p id="p-00084-en" num="0084">Mixed solution of 2% formaldehyde (paraformaldehyde) phosphate buffer, 5% Triton X-100, 1% KOH<br /> Room temperature, 1 hour to overnight</p>
+    <heading id="h-00043-en">(2) Washing</heading>
+    <p id="p-00085-en" num="0085">Phosphate buffer physiological saline (PBS, pH 7.2 to 7.4),<br /> Room temperature, 30 minutes</p>
+    <heading id="h-00044-en">(3) Bleaching (just newborn mouse)</heading>
+    <p id="p-00086-en" num="0086">Mixed solution of 0.3% hydrogen peroxide aqueous solution, 50% acetone, 50% ethylene glycol,<br /> Room temperature, 1 hour</p>
+    <heading id="h-00045-en">(4) Clearing treatment</heading>
+    <p id="p-00087-en" num="0087">20% Triton X-100, 5% Tween 20, 20% ethylene glycol (storage liquid 3)<br /> Room temperature, overnight</p>
+    <heading id="h-00046-en">(5) Treatment to promote clearing of tissue</heading>
+    <p id="p-00088-en" num="0088">10% Triton X-100, 10% Tween 20, 1 % KOH (promoting solution 3)<br /> Room temperature, 1 hour (fetus), overnight to several days (newborn)</p>
+    <heading id="h-00047-en">(6) Clearing treatment</heading>
+    <p id="p-00089-en" num="0089">20% Triton X-100, 5% Tween 20, 20% ethylene glycol (storage liquid 3)<br /> Room temperature, 30 minutes, overnight to several days (newborn)</p>
+    <heading id="h-00048-en">&lt; Results &gt;</heading>
+    <p id="p-00090-en" num="0090">The results are given in <figref>Figures 4</figref> and <figref>5</figref>. With the conventional clearing treatment method, about several days to a week are required to achieve clearing (excluding the fixation period). The present method is characterized in that the entire specimen becomes cleared like glass. It is also characterized in that when compared to a cleared specimen prepared with convention glycerol or Scale reagent, the transparency is much higher and the tissue is harder. Simultaneously with clearing, ossified portions are intensified in white (which is thought to be the effect of Tween 20 or both Tween 20 and ethylene glycol). A sensitivity equal to or better than that of bone staining with Alizarin Red is exhibited.</p>
+    <p id="p-00091-en" num="0091">As shown in <figref>Figure 4</figref>, the E14 mouse fetus was highly cleared. The degree of transparency was so high that it was difficult to recognize soft tissue with the naked eye. In addition to clearing of soft tissue, portions in extremely early stages of ossification were stained white (presumed to be the effect of Tween 20). Thus, without conducting separate bone staining, application as a bone staining method of extremely high sensitivity was possible (cartilage portions were not stained). The placenta was also cleared.</p>
+    <p id="p-00092-en" num="0092">In the two-day-old newborn mouse shown in <figref>Figure 5</figref>, clearing was achieved with the lanugo, skin, internal organs, and the like all still remaining. The shadows of internal organs in the abdomen were observed from the body surface. The bones were stained and emphasized (thought to be the effect of Tween 20).</p>
+    <heading id="h-00049-en">Example 3</heading>
+    <heading id="h-00050-en">
+      <u>Clearing digestive tract tissue of mature mouse (ink injected through arteries)</u>
+    </heading>
+    <heading id="h-00051-en">&lt; Conditions &gt;</heading>
+    <heading id="h-00052-en">(1) Fixation</heading>
+    <p id="p-00093-en" num="0093">Mixed solution of 2% formaldehyde (paraformaldehyde) phosphate buffer, 5% Triton X-100, 1% KOH<br /> Room temperature, 1 hour to overnight</p>
+    <heading id="h-00053-en">(2) Washing</heading>
+    <p id="p-00094-en" num="0094">Phosphate buffer physiological saline (PBS, pH 7.2 to 7.4)<br /> Room temperature, 30 minutes</p>
+    <heading id="h-00054-en">(3) Degreasing</heading>
+    <p id="p-00095-en" num="0095">Mixed solution of 50% acetone, 50% ethylene glycol<br /> Room temperature, several hours to overnight</p>
+    <heading id="h-00055-en">(4) Clearing treatment</heading>
+    <p id="p-00096-en" num="0096">20% Triton X-100, 5% Tween 20, 20% ethylene glycol (storage liquid 3)<br /> Room temperature, 30 minutes to 1 hour</p>
+    <heading id="h-00056-en">&lt; Results &gt;</heading>
+    <p id="p-00097-en" num="0097">The results are given in <figref>Figures 6</figref> and <figref>7</figref>.</p>
+    <p id="p-00098-en" num="0098">In the case of specimens with tissue thicknesses of about 1 to 2 mm, such as the digestive tract and abdominal wall, in the stage of fixation with the fixing liquid for cleared specimens, the tissue became adequately cleared (fixation alone permitted observation of the interior).</p>
+    <p id="p-00099-en" num="0099">In portions of the small intestinal wall and the like where degreasing was unneeded, an adequate clearing treatment was completed in about 3 hours. The transparency was quite high.</p>
+    <p id="p-00100-en" num="0100">For the liver, the elimination of bilirubin progressed by lengthening the fixation period and transparency was enhanced. In the degreasing stage, an aqueous solution of hydrogen peroxide was added to a final concentration of 0.3% and bleaching was conducted for from several hours to overnight, making it possible to remove almost all of the coloration from the tissue.</p>
+    <p id="p-00101-en" num="0101">In the small intestine of the mature mouse shown in <figref>Figure 6</figref>, the capillary vessel network within the intestinal villi became visible.</p>
+    <p id="p-00102-en" num="0102">In the liver of a mature mouse shown in <figref>Figure 7</figref>, the arteries distributed throughout the liver could be observed in great detail.</p>
+    <heading id="h-00057-en">Example 4</heading>
+    <heading id="h-00058-en">
+      <u>Clearing the brain of a mature mouse (part 1)</u>
+    </heading>
+    <heading id="h-00059-en">&lt; Conditions &gt;</heading>
+    <heading id="h-00060-en">(1) Fixation</heading>
+    <p id="p-00103-en" num="0103">Mixed solution of 2% formaldehyde (paraformaldehyde) phosphate buffer, 5% Triton X-100, 1% KOH<br /> Room temperature, 1 hour to overnight</p>
+    <heading id="h-00061-en">(2) Washing</heading>
+    <p id="p-00104-en" num="0104">Phosphate buffer physiological saline (PBS, pH 7.2 to 7.4)<br /> Room temperature, 30 minutes</p>
+    <heading id="h-00062-en">(3) Bleaching</heading>
+    <p id="p-00105-en" num="0105">Mixed solution of 0.3% hydrogen peroxide aqueous solution, 50% acetone, 50% ethylene glycol<br /> Room temperature, 24 hours</p>
+    <heading id="h-00063-en">(4) Degreasing</heading>
+    <p id="p-00106-en" num="0106">Mixed solution of 50% acetone, 50% ethylene glycol<br /> Room temperature, several hours to overnight</p>
+    <heading id="h-00064-en">(5) Clearing treatment</heading>
+    <p id="p-00107-en" num="0107">20% Triton X-100, 5% Tween 20, 20% ethylene glycol (storage liquid 3)<br /> Room temperature or 50°C, 24 hours or more</p>
+    <heading id="h-00065-en">[6] Tissue clearing-promoting treatment</heading>
+    <p id="p-00108-en" num="0108">10% Triton X-100, 10% Tween 20, 1% KOH (promoting liquid 3)<br /> Room temperature or 50°C, 24 to 48 hours</p>
+    <heading id="h-00066-en">(7) Clearing treatment, storage</heading>
+    <p id="p-00109-en" num="0109">20% Triton X-100, 5% Tween, 20% ethylene glycol (storage liquid 3)</p>
+    <heading id="h-00067-en">&lt; Results &gt;</heading>
+    <p id="p-00110-en" num="0110">The results are given in <figref>Figures 8</figref> and 9.</p>
+    <p id="p-00111-en" num="0111">The gray matter in the cerebral neocortex did not require bleaching or degreasing treatment. Incubation for 12 hours each in the promoting liquid and storage liquid achieved clearing. Clearing progressed to a degree that made viewing by eye difficult.</p>
+    <p id="p-00112-en" num="0112">
+      <figref>Figure 8</figref> shows the brain of a mature female C57B6/J mouse. Following treatment with a mixed solution of 2% formaldehyde phosphate buffer, 5% Triton X-100, and 1% KOH (room temperature, overnight), degreasing was conducted with a mixed solution of acetone and ethylene glycol at room temperature for 72 hours. The results are given in <figref>Figure 8(A)</figref>. Results obtained by treatment with promoting liquid 3 (room temperature, 12 hours) and storage liquid 3 (room temperature, 24 hours) are given in <figref>Figure 8(B)</figref>. The gray matter was extremely cleared, but a milk-white precipitate formed in the white matter (nerve fiber).</p>
+    <p id="p-00113-en" num="0113">The milk-white precipitate component that formed in the white matter (nerve fiber) was unknown. However, the precipitate was removed by incubation for 12 to 48 hours at 50°C in storage liquid 3. The results are given in <figref>Figure 8(C)</figref>. The white precipitate nearly completely disappeared, but some turbidity was found in the white matter fiber with dark field observation. It was possible to observe under a microscope the blood vessels running beneath the outer surface of the brain from the dorsal cortex surface.</p>
+    <p id="p-00114-en" num="0114">- An additional treatment with glycerol further enhanced the clearing (particularly the clearing of white matter). The results are given in Tables 9-1 and 9-2. Transparency with storing liquid 3 was adequately high, but transparency fell off somewhat in the deep white matter (nerve fiber). When a brain that had been cleared with the storage liquid was placed in 100% glycerol, the transparency of the entire specimen was rapidly and markedly enhanced, and the turbidity in the white matter disappeared. Better results (enhanced transparency) were achieved for storage in the present experiment by returning to storage liquid 3 rather than 60% glycerol.</p>
+    <heading id="h-00068-en">Example 5</heading>
+    <p id="p-00115-en" num="0115">Clearing the brain of an ICR mature mouse (9 weeks, male) (part 2)</p>
+    <heading id="h-00069-en">&lt; Conditions &gt;</heading>
+    <heading id="h-00070-en">(1) Fixation</heading>
+    <p id="p-00116-en" num="0116">Storage for several months in fixing liquid of 2% PFA (paraformaldehyde), 5% Triton X-100, 0.5% KOH until use</p>
+    <heading id="h-00071-en">(2) Pretreatment (washing)</heading>
+    <p id="p-00117-en" num="0117">20% ethylene glycol, 5% Triton X-100, 1% KOH, room temperature, overnight</p>
+    <heading id="h-00072-en">(3) Storage liquid (clearing treatment 1)</heading>
+    <p id="p-00118-en" num="0118">20% ethylene glycol, 25% Triton X-100, pH 8.5, room temperature, overnight (several hours were adequate)</p>
+    <heading id="h-00073-en">(4) Storage liquid (clearing treatment 4)</heading>
+    <p id="p-00119-en" num="0119">20% ethylene glycol, 20% Triton X-100, 10% DMSO, pH 8.5, room temperature, overnight (several hours were adequate)</p>
+    <heading id="h-00074-en">&lt; Results &gt;</heading>
+    <p id="p-00120-en" num="0120">The results (photographs) following each of the treatments of (2), (3), and (4) above are shown in <figref>Figure 10</figref>.</p>
+    <p id="p-00121-en" num="0121">In Example 5, the glycerol and heating that were employed in Example 4 were unnecessary. In the treatment of (2), clearing progressed, but clearing was nearly complete after the treatment of (3). Following the treatment of (4), clearing progressed to a degree that made viewing by eye difficult. In the present Example, the storage liquid of (4) contained 10% DMSO, causing the specimen to swell. This was suited to observation for a short period. The present Example provides the example of the brain. However, the fact that clearing progresses to the same degree in the lung has also been confirmed. In the case of the lung, there was no swelling of the specimen even when the storage liquid of (4) contained 10% DMSO.</p>
+    <heading id="h-00075-en">Example 6</heading>
+    <heading id="h-00076-en">
+      <u>Foreleg of mature rat (with arterial injection of ink)</u>
+    </heading>
+    <p id="p-00122-en" num="0122">The process of producing the specimen was based on the process of producing the brain specimen described in Example 4. The results are given in <figref>Figure 11</figref>. <ul id="ul-00010-en" list-style="dash" compact="compact"><li>Clearing was conducted with all the muscles remaining. The bones were clearly evident through the thick muscle of the forelegs.</li><li>The blood vessel network distributed within the muscle was visible.</li><li>Muscle fiber running through the focus plane of a microscope could be made out (observation such as tomographic imaging was possible).</li></ul></p>
+    <heading id="h-00077-en">Example 7</heading>
+    <heading id="h-00078-en">
+      <u>Rapid muscle staining method</u>
+    </heading>
+    <heading id="h-00079-en">&lt; Conditions &gt;</heading>
+    <heading id="h-00080-en">(1) Fixation: overnight to several days, room temperature</heading>
+    <p id="p-00123-en" num="0123">2% formaldehyde (paraformaldehyde) phosphate buffer, 5% Triton X-100, 1% KOH</p>
+    <p id="p-00124-en" num="0124">
+      <ul id="ul-00011-en" list-style="dash" compact="compact">
+        <li>Following fixation, clearing was immediately begun.</li>
+        <li>The color was steadily stripped away. Red was particularly well removed. However, melanin tended not to be removed.</li>
+        <li>When adequate clearing was conducted in advance in this stage, the decoloration and separation period following bone staining was greatly reduced.</li>
+        <li>When the skin was removed in advance, the clearing period was shortened. However, even when the skin was left on, adequate clearing was achieved.</li>
+        <li>For killifish, overnight fixation was suitable. A glasslike state was achieved by several days in fixing liquid.</li>
+        <li>Overnight fixation was suitable for a loach. However, the body color was not adequately removed. When 2 to 3 weeks were used to obtain pure white, followed by staining, completion required about half a day.</li>
+      </ul>
+    </p>
+    <heading id="h-00081-en">(2) Skin removal (an option when the skin gets in the way of goals such as bone staining)</heading>
+    <p id="p-00125-en" num="0125">It is suggested that the skin be removed after several hours of fixation. <ul id="ul-00012-en" list-style="dash" compact="compact"><li>When the skin is removed prior to fixation, clearing becomes extremely rapid, but the sample tends to fall apart when the skin is removed.</li><li>When clearing is adequately advanced by several days of fixation, skin removal is greatly facilitated.</li><li>When one takes one's time with this method, the skin is adequately penetrated, so skin removal is unnecessary.</li></ul></p>
+    <heading id="h-00082-en">(3) Bone staining: room temperature, 2 hours</heading>
+    <p id="p-00126-en" num="0126">0.05% alizarin red S, 1% KOH, 1% Tween 20 (or 1% Triton X-100)</p>
+    <heading id="h-00083-en">(4) Promoting clearing and washing: 50°C, several hours to overnight, clearing-promoting liquid 2: 20% Tween 20, 1% KOH</heading>
+    <p id="p-00127-en" num="0127"> When removal of the stain liquid is poor and clearing does not progress adequately, any one of the following clearing-promoting liquids can be employed. <ul id="ul-00013-en" list-style="none" compact="compact"><li>Clearing-promoting liquid 1: 20% Triton X-100, 1% KOH, 50°C</li><li>Clearing-promoting liquid 3: 10% Triton X-100, 10% Tween 20, 1% KOH</li></ul></p>
+    <p id="p-00128-en" num="0128">
+      <ul id="ul-00014-en" list-style="dash" compact="compact">
+        <li>In fish and frogs, clearing-promoting liquid 2 is suitable.</li>
+        <li>For mammals, clearing-promoting liquid 3 is good.</li>
+        <li>When the specimen becomes semi-cleared during fixation, the staining step can be ended after 3 to 4 hours.</li>
+        <li>Washing can be conducted at room temperature, but slow washing at 50°C is desirable.</li>
+        <li>At neutral to acid pH, acute tissue degradation occurs. Thus, KOH is added to the clearing-promoting liquid.</li>
+      </ul>
+    </p>
+    <heading id="h-00084-en">(5) Cleared specimen storage liquid</heading>
+    <p id="p-00129-en" num="0129">Storage liquid 3: 20% Triton X-100, 5% Tween 20, 20% ethylene glycol <ul id="ul-00015-en" list-style="none" compact="compact"><li>* Storage liquid 3 sometimes achieved greater transparency than glycerol (particularly in the case of tissue from mammals).</li><li>* In methods of clearing by glycerol substitution, the time required following fixation to the completion of staining is from several days to a week in killifish, frogs, and the like. This was completed in from half a day to a day by the present method.</li></ul></p>
+    <p id="p-00130-en" num="0130">
+      <figref>Figures 12 and 13</figref> show the bone staining specimens (fixation: 2% paraformaldehyde phosphate buffer, 5% Triton X-100, 1% KOH) that were obtained from fish.</p>
+    <p id="p-00131-en" num="0131">The killifish shown in <figref>Figure 12</figref> was completed in half a day. The transparency is greater than that obtained with a glycerol specimen.</p>
+    <p id="p-00132-en" num="0132">The angelfish shown in <figref>Figure 13</figref> was completed in about 24 hours despite being a relatively large specimen.</p>
+    <heading id="h-00085-en">Example 8 (Method employing fixing liquid not containing phosphate buffer liquid)</heading>
+    <heading id="h-00086-en">Condition 1:</heading>
+    <p id="p-00133-en" num="0133">
+      <ul id="ul-00016-en" list-style="none" compact="compact">
+        <li>Fixation: Fixation (room temperature, overnight) with fixing liquid (mixed solution of 2% paraformaldehyde, 5% Triton X-100, 1% KOH).</li>
+        <li>Storage: Storage with storage liquid (25% Triton X-100, 1% Tween 20, 20% polyethylene glycol).</li>
+      </ul>
+    </p>
+    <heading id="h-00087-en">Condition 2 (Clearing processing of the present invention after usual fixation)</heading>
+    <p id="p-00134-en" num="0134">
+      <ul id="ul-00017-en" list-style="none" compact="compact">
+        <li>Fixation: Fixation (room temperature, overnight) with fixing liquid (2% paraformaldehyde).</li>
+        <li>Clearing-promotion: Clearing-promoting liquid (mixed solution of 5% Triton X-100 and 1% KOH) (room temperature, overnight).</li>
+        <li>Storage: Storage with storage liquid (25% Triton X-100, 1% Tween 20, 20% polyethylene glycol).</li>
+      </ul>
+    </p>
+    <heading id="h-00088-en">Condition 3 (clearing treatment of present invention after usual fixation)</heading>
+    <p id="p-00135-en" num="0135">
+      <ul id="ul-00018-en" list-style="none" compact="compact">
+        <li>Fixation: Fixation (room temperature, overnight) with fixing liquid (4% paraformaldehyde).</li>
+        <li>Clearing promotion: Fixation (room temperature, overnight) with clearing-promoting liquid (mixed solution of 5% Triton X-100, 1% KOH)</li>
+        <li>Storage: Storage with storage liquid (25% Triton X-100, 1% Tween 20, 20% polyethylene glycol).</li>
+      </ul>
+    </p>
+    <p id="p-00136-en" num="0136">
+      <figref>Figure 14</figref> shows photographs of a specimen after fixation and a specimen after clearing and storage. The numbers in the photographs are the condition numbers.</p>
+    <heading id="h-00089-en">Example 9 (Method of bone staining employing fixing liquid not containing phosphate buffer)</heading>
+    <p id="p-00137-en" num="0137">Condition 1: <ul id="ul-00019-en" list-style="none" compact="compact"><li>Fixation: Fixation (room temperature, overnight) with fixing liquid (mixed solution of 2% paraformaldehyde, 5% Triton X-100, 1% KOH).</li><li>Staining: Bone stained with Alizarin red S</li><li>Clearing promotion: Clearing-promoting liquid (20% Tween 20, 1% KOH) (42°C, overnight)</li><li>Additional clearing promotion: Additional clearing-promoting liquid (glycerol (100%))</li></ul></p>
+    <heading id="h-00090-en">Condition 2 (Clearing treatment after usual fixation)</heading>
+    <p id="p-00138-en" num="0138">
+      <ul id="ul-00020-en" list-style="none" compact="compact">
+        <li>Fixation: Fixation (room temperature, overnight) with fixing liquid (2% paraformaldehyde).</li>
+        <li>Clearing promotion: Clearing-promoting liquid (mixed solution of 5% Triton X-100 and 1% KOH) (room temperature, overnight)</li>
+        <li>Staining: Bone stained with Alizarin red S</li>
+        <li>Clearing promotion: Clearing-promoting liquid (20% Tween 20, 1% KOH) (42°C, overnight)</li>
+        <li>Additional clearing promotion: Additional clearing-promoting liquid (glycerol (100%))</li>
+      </ul>
+    </p>
+    <heading id="h-00091-en">Condition 3 (Clearing treatment following usual fixation)</heading>
+    <p id="p-00139-en" num="0139">
+      <ul id="ul-00021-en" list-style="none" compact="compact">
+        <li>Fixation: Fixation (room temperature, overnight) with fixing liquid (4% paraformaldehyde).</li>
+        <li>Clearing promotion: Clearing-promoting liquid (mixed solution of 5% Triton X-100, 1% KOH) (room temperature, overnight)</li>
+        <li>Staining: Bone stained with alizarin red S</li>
+        <li>Clearing promotion: Clearing-promoting liquid (20% Tween 20, 1% KOH) (42°C, overnight)</li>
+        <li>Additional clearing promotion: Additional clearing-promoting liquid (glycerol (100%))</li>
+      </ul>
+    </p>
+    <p id="p-00140-en" num="0140">
+      <figref>Figure 15</figref> shows photographs of a specimen following fixation and a specimen following clearing and storage. The numbers in the photographs are the condition numbers.</p>
+    <heading id="h-00092-en">
+      <b>Industrial Applicability</b>
+    </heading>
+    <p id="p-00141-en" num="0141">The present invention is useful in fields where the observing of biological specimens is essential.</p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151007">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>A kit for producing a cleared biological specimen comprising any one of a fixing liquid, a clearing-promoting liquid and a storage liquid;<br />
+the fixing liquid is (a) an aqueous solution comprising formaldehyde or paraformaldehyde, a nonionic surfactant, an alkali, and a buffer or (b) an aqueous solution comprising formaldehyde or paraformaldehyde, a nonionic surfactant, and an alkali;<br />
+the clearing-promoting liquid is an aqueous solution comprising a nonionic surfactant and an alkali;<br />
+the storage liquid is an aqueous solution comprising a nonionic surfactant and a polyhydric alcohol; and<br />
+the concentrations of the nonionic surfactants contained in the fixing liquid, the clearing-promoting liquid, and the storage liquid are independently each equal to or greater than 1%.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The kit according to claim 1, wherein an additional clearing-promoting liquid comprised of a trivalent alcohol or an aqueous solution of a trivalent alcohol is further included.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en" independent="true">
+      <claim-text>A method for producing a cleared biological specimen comprises:
+<claim-text>a step (1) of treating a material being cleared in the form of a biological specimen with a fixing liquid to obtain a material being cleared that has been cleared;</claim-text><claim-text>wherein the fixing liquid is (a) an aqueous solution comprising formaldehyde or paraformaldehyde, a nonionic surfactant, an alkali, and a buffer or (b) an aqueous solution comprising formaldehyde or paraformaldehyde, an nonionic surfactant, and an alkali; and</claim-text><claim-text>the concentration of the nonionic surfactant in the fixing liquid is equal to or greater than 1%.</claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>A method for producing a cleared biological specimen comprises:
+<claim-text>a step (2) of treating a material being cleared in the form of a biological specimen that has been fixed or a material being cleared that has been treated with a fixing liquid in the method according to claim 3 with a clearing-promoting liquid to obtain a material being cleared that has been cleared;</claim-text><claim-text>wherein the clearing-promoting liquid is an aqueous solution comprising a nonionic surfactant and an alkali; and</claim-text><claim-text>the concentration of the nonionic surfactant in the clearing-promoting liquid is equal to or greater than 1%.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>The method according to claim 4, wherein the material being cleared in the form of a biological specimen that has been fixed is a biological specimen that has treated with an aqueous solution comprising formaldehyde or paraformaldehyde but not comprising either a nonionic surfactant or an alkali or the both.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>A method for producing a cleared biological specimen comprises:
+<claim-text>a step (3) of obtaining a material being cleared that has been cleared by treating with a storage liquid a material being cleared that has been subjected to a fixing treatment in step (1) of the method according to claim 3 or a material being cleared that has been treated with a clearing-promoting liquid in step (2) of the method according to claim 4 or 5;</claim-text><claim-text>wherein the storage liquid is an aqueous solution containing a nonionic surfactant and a polyhydric alcohol; and</claim-text><claim-text>the concentration of the nonionic surfactant is equal to or greater than 1 %.</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>The method according to claim 4 or 5, wherein the material being cleared with the fixing liquid is treated in a bleaching treatment, degreasing treatment, or bleaching and degreasing treatment and then the treatment with the clearing-promoting liquid of the fixing liquid is conducted.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>The method according to any one of claims 3 to 7, wherein the treatment of steps of (1) to (3) is conducted independently at a temperature of 5 to 60°C.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>The method according to any one of claims 3 to 8, wherein the material being cleared that has been cleared obtained in any one of the steps of (1) to (3) is immersed in an additional clearing-promoting liquid comprised of a trivalent alcohol or an aqueous solution of a trivalent alcohol, and then the material being cleared that has been immersed in the additional clearing-promoting liquid is storing in the storage liquid of claim 5 to obtain a material being cleared that has been cleared.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>The method according to any one of claims 3 to 9, wherein the biological specimen is fish, reptile, amphibian, bird or mammal.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>The method according to any one of claims 3 to 10, wherein the biological specimen is a biological tissue, wherein the biological tissue is an internal organ, the brain, or bone.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>The method according to any one of claims 3 to 11, wherein the material that is being cleared is one subjected to a staining treatment in advance or after the treatment with the fixing liquid.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>The method according to claim 12, wherein the staining treatment is a fluorescent staining.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>The kit according to claim 1 or 2 for use in the method according to any one of claims 3 to 13.</claim-text>
+    </claim>
+  </claims>
+  <image file="EP2926658A1.PDF" type="pdf" size="4153952" pages="31" />
+</lexisnexis-patent-document>

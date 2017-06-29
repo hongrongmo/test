@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150250261A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="022139" date-changed="20151128" time-changed="231331">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121232431">
+        <country>US</country>
+        <doc-number>20150250261</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14663999</doc-number>
+        <date>20150320</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150917">
+      <classification-ipcr sequence="1">
+        <text>A43B  13/16        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>43</class>
+        <subclass>B</subclass>
+        <main-group>13</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A43D  63/00        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>43</class>
+        <subclass>D</subclass>
+        <main-group>63</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150917">
+      <classification-cpc sequence="1">
+        <text>A43B  13/16        20130101 FI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>43</class>
+        <subclass>B</subclass>
+        <main-group>13</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A43B   1/0072      20130101 LI20141223BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>43</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>0072</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141223</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A43B  13/04        20130101 LI20141223BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>43</class>
+        <subclass>B</subclass>
+        <main-group>13</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141223</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A43B  13/14        20130101 LI20141223BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>43</class>
+        <subclass>B</subclass>
+        <main-group>13</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141223</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A43B  13/143       20130101 LI20141223BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>43</class>
+        <subclass>B</subclass>
+        <main-group>13</main-group>
+        <subgroup>143</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141223</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A43B  13/146       20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>43</class>
+        <subclass>B</subclass>
+        <main-group>13</main-group>
+        <subgroup>146</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A43D  63/00        20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>43</class>
+        <subclass>D</subclass>
+        <main-group>63</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">Article Of Footwear With A Cavity Viewing System</invention-title>
+    <related-documents date-changed="20150910">
+      <division>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13167162</doc-number>
+              <date>20110623</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>9009991</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14006639</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </division>
+    </related-documents>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>NIKE, Inc.</orgname>
+            <address>
+              <city>Beaverton</city>
+              <state>OR</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Sills</last-name>
+            <first-name>Craig K.</first-name>
+            <address>
+              <city>Tigard</city>
+              <state>OR</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150910">
+      <main-family family-id="173569504">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150250261</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150320</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173569503">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150250261</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150320</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A sole structure for an article of footwear and a method of making the sole structure is disclosed. The sole structure can include an outsole and a midsole. The midsole includes a cavity with a protruding portion. A U-shaped or L-shaped transparent member is configured to cover the cavity so that the protruding portion remains visible from within the cavity.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS REFERENCE TO RELATED APPLICATION</heading>
+      <p id="p-00001-en" num="0001">This non-provisional U.S. patent application is a divisional of and claims priority under 35 U.S.C. 121 to U.S. application Ser. No. 13/167,162 entitled “Article Of Footwear With A Cavity Viewing System,” filed on Jun. 23, 2011, which published as U.S. Patent Application Publication Number US 2012/0324761 on Dec. 27, 2012 and was allowed on Dec. 24, 2014, the disclosure of which application is hereby incorporated by reference in its entirety.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">The present invention relates generally to an article of footwear, and in particular to an article of footwear with a cavity viewing system.</p>
+      <p id="p-00003-en" num="0003">Nakano (U.S. patent application publication number 2008/0263894 A1) teaches a footwear sole that includes a shock absorbing device having an upper plate, a lower plate and a plurality of shock absorbing elements that extend from the plates. The lower plate includes an upper surface, a peripheral edge and a peripheral wall that extends upwardly from the peripheral edge to form a shell. The peripheral wall may be integrally formed with the lower plate and both may be molded from plastic, such as TPU, and formed from a transparent material. The plates and the wall of the device are positioned between the upper and the outsole of the shoe and are retained in the heel region of a top surface of the outsole between an upwardly extending rear wall and a front wall. The surface may alternatively include a midsole or other component between the upper and the outsole. When the device is positioned in the heel region of the outsole, the shock absorbing elements are visible through the peripheral wall and/or the lower plate. Likewise, the plate is exposed, in part, through a cutout portion disposed in the heel region of the outsole.</p>
+      <p id="p-00004-en" num="0004">Wakley (U.S. patent application publication 2007/0113425 A1) teaches a midsole for footwear that includes solid or hollow cushioning tubes. Each tube is the exact width of the midsole so that the tubes are visible from the exterior of the shoe on both of its sides. Both a lower midsole portion and an upper midsole portion have cavities molded in the exact shape of the tubes. The tubes can be open ended at the edge of the midsole or may be enclosed inside a transparent material.</p>
+      <p id="p-00005-en" num="0005">Weiss (U.S. patent application publication 2006/0179683) teaches a pair of inserts for footwear that may be inserted into any portion of the sole but which are preferably inserted into a heel portion. The inserts each have a compressible core and a transparent and flexible casing for surrounding at least a portion of the cores. The cores may include decorative patterns or ribs which are visible through the transparent casing. A portion of the inserts are exposed at any surface, including the bottom, sides and rear of the shoe so that they may be touched. Moreover, the decorative core is visible through the transparent casing from the exterior of the shoe wherever the insert is exposed. The pair of inserts may alternatively be a single larger insert.</p>
+      <p id="p-00006-en" num="0006">The related art lack provisions for providing a low cost alternative to the shock absorbing devices used in a shoe. There is a need for articles that address the limitations of the related art.</p>
+      <heading id="h-00003-en" level="1">SUMMARY</heading>
+      <p id="p-00007-en" num="0007">In one aspect, the invention provides an article of footwear, comprising: a sole structure including a lower portion, a lateral portion and a medial portion; the sole structure including a cavity, the cavity further comprising a medial opening disposed on the medial portion, a lateral opening disposed on the lateral portion and a lower opening disposed on the lower portion; a transparent member, the transparent member being approximately U-shaped; and where the transparent member corresponds to the cavity and wherein the transparent member is configured to cover the lateral opening, the medial opening and the lower opening.</p>
+      <p id="p-00008-en" num="0008">In one aspect, the invention provides an article of footwear, comprising: a sole structure including a lower portion, a lateral portion and a medial portion; the sole structure including a cavity, the cavity having an upper surface; the cavity further comprising a medial opening disposed on the medial portion, a lateral opening disposed on the lateral portion and a lower opening disposed on the lower portion; a transparent member, the transparent member being substantially U-shaped; the transparent member being configured to cover the lateral opening, the medial opening and the lower opening; the sole structure including a protruding portion that extends from the upper surface into the cavity; and where an end of the protruding portion contacts the transparent member.</p>
+      <p id="p-00009-en" num="0009">In one aspect, the invention provides a method of making an article of footwear, comprising: forming a sole structure by forming a cavity on a lower portion, the cavity being open on the lower portion, a lateral portion and a medial portion of the sole structure; attaching a bent transparent member to the sole structure, the bent transparent member comprising a first end portion, a second end portion and an intermediate portion and wherein the first end portion is bent with respect to the intermediate portion and wherein the second end portion is bent with respect to the intermediate portion; covering a lateral opening of the cavity disposed on the lateral portion with the first end portion;</p>
+      <p id="p-00010-en" num="0010">covering a medial opening of the cavity disposed on the medial portion with the second end portion; covering a lower opening of the cavity disposed on the lower portion with the intermediate portion; and where the cavity can be viewed through the bent transparent member.</p>
+      <p id="p-00011-en" num="0011">In one aspect, the present disclosure is directed to an article of footwear. The article of footwear may include a sole structure including a lower portion, a lateral portion and a medial portion. The sole structure may further include a cavity, wherein the cavity includes a medial opening disposed on the medial portion, a lateral opening disposed on the lateral portion and a lower opening disposed on the lower portion. In addition, the article of footwear may include a first transparent member, the transparent member being approximately L-shaped. Also, the first transparent member may correspond to the cavity and the first transparent member may be configured to cover the lateral opening and extend medially along a bottom portion of the cavity or cover the medial opening and extend laterally along a bottom portion of the cavity.</p>
+      <p id="p-00012-en" num="0012">Other systems, methods, features and advantages of the invention will be, or will become, apparent to one of ordinary skill in the art upon examination of the following figures and detailed description. It is intended that all such additional systems, methods, features and advantages be included within this description and this summary, be within the scope of the invention, and be protected by the following claims.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00013-en" num="0013">The invention can be better understood with reference to the following drawings and description. The components in the figures are not necessarily to scale, emphasis instead being placed upon illustrating the principles of the invention. Moreover, in the figures, like reference numerals designate corresponding parts throughout the different views.</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 1</figref> is an exploded isometric view of an embodiment of an article of footwear;</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 2</figref> is an enlarged isometric view of an embodiment of a portion of an article of footwear;</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 3</figref> is an enlarged isometric view of an embodiment of a portion of an article of footwear;</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 4</figref> is an isometric exploded view of an embodiment of an article of footwear;</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 5</figref> is an isometric view of an embodiment of an article of footwear;</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 6</figref> is an isometric view of an embodiment of an article of footwear;</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 7</figref> is a side view of an embodiment of an article of footwear;</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 8</figref> is a side view of an embodiment of an article of footwear;</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 9</figref> is a cross sectional view of an embodiment of an article of footwear;</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 9A</figref> is a cross sectional view of an embodiment of an article of footwear;</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 9B</figref> is a cross sectional view of an embodiment of an article of footwear;</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 9C</figref> is a cross sectional view of an embodiment of an article of footwear;</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 10</figref> is an isometric view of an embodiment of an article of footwear; and</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 11</figref> is an isometric view of an embodiment of an article of footwear.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00028-en" num="0028">
+        <figref>FIGS. 1 through 9</figref> illustrate views of an exemplary embodiment of article of footwear <b>100</b>. For clarity, the following detailed description discusses an exemplary embodiment, in the form of a sports shoe, but it should be noted that the present invention could take the form of any article of footwear including, but not limited to: hiking boots, soccer shoes, football shoes, sneakers, rugby shoes, basketball shoes, baseball shoes as well as other kinds of shoes. As shown in <figref>FIGS. 1 through 9</figref>, article of footwear <b>100</b>, also referred to simply as article <b>100</b>, is intended to be used with a right foot; however, it should be understood that the following discussion may equally apply to a mirror image of article of footwear <b>100</b> that is intended for use with a left foot.</p>
+      <p id="p-00029-en" num="0029">Referring to <figref>FIGS. 1 through 6</figref>, for purposes of reference, article <b>100</b> may be divided into forefoot portion <b>10</b>, midfoot portion <b>12</b> and heel portion <b>14</b>. Forefoot portion <b>10</b> may be generally associated with the toes and joints connecting the metatarsals with the phalanges. Midfoot portion <b>12</b> may be generally associated with the arch of a foot. Likewise, heel portion <b>14</b> may be generally associated with the heel of a foot, including the calcaneus bone. In addition, article <b>100</b> may include lateral side <b>16</b> and medial side <b>18</b>. In particular, lateral side <b>16</b> and medial side <b>18</b> may be opposing sides of article <b>100</b>. Furthermore, both lateral side <b>16</b> and medial side <b>18</b> may extend through forefoot portion <b>10</b>, midfoot portion <b>12</b> and heel portion <b>14</b>.</p>
+      <p id="p-00030-en" num="0030">It will be understood that forefoot portion <b>10</b>, midfoot portion <b>12</b> and heel portion <b>14</b> are only intended for purposes of description and are not intended to demarcate precise regions of article <b>100</b>. Likewise, lateral side <b>16</b> and medial side <b>18</b> are intended to represent generally two sides of an article, rather than precisely demarcating article <b>100</b> into two halves. In addition, forefoot portion <b>10</b>, midfoot portion <b>12</b> and heel portion <b>14</b>, as well as lateral side <b>16</b> and medial side <b>18</b>, can also be applied to individual components of an article, such as a sole structure and/or an upper.</p>
+      <p id="p-00031-en" num="0031">For consistency and convenience, directional adjectives are employed throughout this detailed description corresponding to the illustrated embodiments. The term “longitudinal” as used throughout this detailed description and in the claims refers to a direction extending a length of an article. In some cases, the longitudinal direction may extend from a forefoot portion to a heel portion of the article. Also, the term “lateral” as used throughout this detailed description and in the claims refers to a direction extending a width of an article. In other words, the lateral direction may extend between a medial side and a lateral side of an article. Furthermore, the term “vertical” as used throughout this detailed description and in the claims refers to a direction generally perpendicular to a lateral and longitudinal direction. For example, in cases where an article is planted flat on a ground surface, the vertical direction may extend from the ground surface upward. It will be understood that each of these directional adjectives may be applied to individual components of an article, such as an upper and/or a sole structure.</p>
+      <p id="p-00032-en" num="0032">Article <b>100</b> can include upper <b>102</b> and sole structure <b>110</b>. Generally, upper <b>102</b> may be any type of upper. In particular, upper <b>102</b> may have any design, shape, size and/or color. For example, in embodiments where article <b>100</b> is a basketball shoe, upper <b>102</b> could be a high top upper that is shaped to provide high support on an ankle. In embodiments where article <b>100</b> is a running shoe, upper <b>102</b> could be a low top upper.</p>
+      <p id="p-00033-en" num="0033">In some embodiments, sole structure <b>110</b> may be configured to provide traction for article <b>100</b>. In addition to providing traction, sole structure <b>110</b> may attenuate ground reaction forces when compressed between the foot and the ground during walking, running or other ambulatory activities. The configuration of sole structure <b>110</b> may vary significantly in different embodiments to include a variety of conventional or non-conventional structures. In some cases, the configuration of sole structure <b>110</b> can be configured according to one or more types of ground surfaces on which sole structure <b>110</b> may be used. Examples of ground surfaces include, but are not limited to: natural turf, synthetic turf, dirt, as well as other surfaces.</p>
+      <p id="p-00034-en" num="0034">Sole structure <b>110</b> is secured to upper <b>102</b> and extends between the foot and the ground when article <b>100</b> is worn. In different embodiments, sole structure <b>110</b> may include different components. For example, sole structure <b>110</b> may include an outsole, a midsole, and/or an insole. In some cases, one or more of these components may be optional. In an exemplary embodiment, sole structure <b>110</b> can include midsole <b>120</b> and outsole <b>122</b>.</p>
+      <p id="p-00035-en" num="0035">Midsole <b>120</b> can comprise lower portion <b>132</b>, lateral portion <b>134</b> and medial portion <b>136</b>. In some cases, lower portion <b>132</b> may be associated with outsole <b>122</b>. In other cases, lower portion <b>132</b> may be configured to contact a ground surface. In addition, in some cases, lateral portion <b>134</b> and medial portion <b>136</b> may be associated with lateral and medial sidewalls, respectively, of midsole <b>120</b>.</p>
+      <p id="p-00036-en" num="0036">Midsole <b>120</b> can include cavity <b>200</b>. In different embodiments, cavity <b>200</b> can be disposed on different portions of midsole <b>120</b>. In some cases, cavity <b>200</b> can be disposed on forefoot portion <b>10</b> of midsole <b>120</b>. In other cases, cavity <b>200</b> can be disposed on midfoot portion <b>12</b> of midsole <b>120</b>. In still other cases, cavity <b>200</b> can be disposed on heel portion <b>14</b> of midsole <b>120</b>. In still other cases, cavity <b>200</b> can be disposed on any combination of forefoot portion <b>10</b>, midfoot portion <b>12</b> and heel portion <b>14</b>. In an exemplary embodiment, cavity <b>200</b> may be disposed on heel portion <b>14</b>.</p>
+      <p id="p-00037-en" num="0037">Cavity <b>200</b> can be associated with one or more portions of midsole <b>120</b>. In some cases, cavity <b>200</b> can be associated with lower portion <b>132</b>. In other cases, cavity <b>200</b> can be associated with medial portion <b>136</b>. In still other cases, cavity <b>200</b> can be associated with lateral portion <b>134</b>. In an exemplary embodiment, cavity <b>200</b> can be associated with lower portion <b>132</b>, lateral portion <b>134</b> and medial portion <b>136</b>.</p>
+      <p id="p-00038-en" num="0038">Cavity <b>200</b> can include various openings associated with different portions of midsole <b>120</b>. In this embodiment, cavity <b>200</b> may include lower opening <b>202</b> that is disposed on lower portion <b>132</b>. In addition, cavity <b>200</b> may include lateral opening <b>204</b> that is disposed on lateral portion <b>134</b>. Also, cavity <b>200</b> may include medial opening <b>206</b> that is disposed on medial portion <b>136</b>. In other words, cavity <b>200</b> may be open on lower portion <b>132</b>, lateral portion <b>134</b> and medial portion <b>136</b> of midsole <b>120</b>. With this arrangement, lower opening <b>202</b>, lateral opening <b>204</b> and medial opening <b>206</b> can be configured as an approximately U-shaped opening that wraps around midsole <b>120</b> from lateral portion <b>134</b>, across lower portion <b>132</b>, to medial portion <b>136</b>. In other embodiments, lower opening <b>202</b>, lateral opening <b>204</b> and medial opening <b>206</b> could be configured in any other shape.</p>
+      <p id="p-00039-en" num="0039">Cavity <b>200</b> may comprise upper surface <b>210</b>, first sidewall surface <b>212</b> and second sidewall surface <b>214</b>. Upper surface <b>210</b> may be recessed from lower portion <b>132</b>. Also, in some cases, upper surface <b>210</b> may be approximately parallel with lower portion <b>132</b>. In other cases, however, upper surface <b>210</b> may be angled with respect to lower portion <b>132</b>.</p>
+      <p id="p-00040-en" num="0040">First sidewall surface <b>212</b> and second sidewall surface <b>214</b> may extend between upper surface <b>210</b> and lower portion <b>132</b>. In particular, first sidewall surface <b>212</b> and second sidewall surface <b>214</b> (see <figref>FIG. 4</figref>) may be angled with respect to upper surface <b>210</b>. In addition, in some embodiments, first sidewall surface <b>212</b> and second sidewall surface <b>214</b> may be angled with respect to lower portion <b>132</b>.</p>
+      <p id="p-00041-en" num="0041">In some embodiments, first sidewall surface <b>212</b> may be oriented to face in the longitudinal direction. Likewise, in some embodiments, second sidewall surface <b>214</b> may be oriented to face in the longitudinal direction. In other embodiments, however, first sidewall surface <b>212</b> can be oriented in any other direction. Likewise, in other embodiments, second sidewall surface <b>214</b> can be oriented in any other direction.</p>
+      <p id="p-00042-en" num="0042">In different embodiments, the arrangement of upper surface <b>210</b>, first sidewall surface <b>212</b> and second sidewall surface <b>214</b> can vary. For example, in one embodiment, upper surface <b>210</b>, first sidewall surface <b>212</b> and second sidewall surface <b>214</b> can have an arch-like shape. In other embodiments, upper surface <b>210</b>, first sidewall surface <b>212</b> and second sidewall surface <b>214</b> can be approximately U-shaped. In addition, it will be understood that in different embodiments, the angle between first sidewall surface <b>212</b> and upper surface <b>210</b> can vary between 0 and 180 degrees. In a similar manner, the angle between second sidewall surface <b>214</b> and upper surface <b>210</b> can vary between 0 and 180 degrees.</p>
+      <p id="p-00043-en" num="0043">By varying the arrangement of upper surface <b>210</b>, first sidewall surface <b>212</b> and second sidewall surface <b>214</b>, the shapes and sizes of various openings of cavity <b>200</b> can vary. In the exemplary embodiment, lower opening <b>202</b> may have an approximately rectangular shape. In addition, lateral opening <b>204</b> and medial opening <b>206</b> may both have approximately trapezoidal shapes. However, in other embodiments, lower opening <b>202</b>, lateral opening <b>204</b> and medial opening <b>206</b> may have any shapes including, but not limited to: rounded shapes, rectangular shapes, polygonal shapes, regular shapes, irregular shapes, as well as any other types of shapes.</p>
+      <p id="p-00044-en" num="0044">Cavity <b>200</b> can include first peripheral portion <b>240</b>. First peripheral portion <b>240</b> may be associated with the edges of upper surface <b>210</b>, first sidewall surface <b>212</b> and second sidewall surface <b>214</b>. In addition, in some cases, first peripheral portion <b>240</b> may be further associated with lowered peripheral ledge <b>242</b> that extends around a majority of first peripheral portion <b>240</b>.</p>
+      <p id="p-00045-en" num="0045">In different embodiments, the depth of lowered peripheral ledge <b>242</b> with respect to lower portion <b>132</b> can vary. In this embodiment, lowered peripheral ledge <b>242</b> can have depth D<b>1</b> with respect to lower portion <b>132</b>, as illustrated in <figref>FIG. 1</figref>. In some cases, depth D<b>1</b> may have a value in the range between 0.001 millimeters and 1 centimeter. In other cases, depth D<b>1</b> can have any other value.</p>
+      <p id="p-00046-en" num="0046">An article of footwear can include provisions for reducing manufacturing costs. In some embodiments, an article of footwear with a cavity can be configured to give the appearance of a shoe that includes various energy return systems. In an exemplary embodiment, an article of footwear can include portions that resemble structural features of an energy return system.</p>
+      <p id="p-00047-en" num="0047">In some embodiments, cavity <b>200</b> can be associated with one or more protruding portions. The term “protruding portion” as used throughout this detailed description and in the claims refers to any portions that extend outwards from one or more surfaces of a cavity. For example, in one embodiment, cavity <b>200</b> can include protruding portion set <b>230</b>. Generally, protruding portion set <b>230</b> can include any number of protruding portions. In some cases, protruding portion set <b>230</b> can include a single protruding portion. In other cases, protruding portion set <b>230</b> can include two or more protruding portions. In this embodiment, protruding portion set <b>230</b> may include four protruding portions. In particular, protruding portion set <b>230</b> may comprise first protruding portion <b>231</b>, second protruding portion <b>232</b>, third protruding portion <b>233</b> and fourth protruding portion <b>234</b>.</p>
+      <p id="p-00048-en" num="0048">In different embodiments, the geometry of one or more protruding portions can vary. In one embodiment, first protruding portion <b>231</b> may have a truncated conical shape. In particular, first protruding portion <b>231</b> can have a generally circular cross-sectional shape that varies in diameter between first end <b>243</b> and second end <b>244</b>, as seen in <figref>FIG. 1</figref>. For example, the cross sectional diameter of first end <b>243</b> may be larger than the cross sectional diameter of second end <b>244</b>. In a similar manner, in some embodiments, the shapes of second protruding portion <b>232</b>, third protruding portion <b>233</b> and fourth protruding portion <b>234</b> can be substantially similar to first protruding portion <b>231</b>.</p>
+      <p id="p-00049-en" num="0049">Although the current embodiment includes protruding portions with substantially circular cross sectional shapes, in other embodiments, the cross sectional shapes of one or more protruding portions of protruding portion set <b>230</b> can be different. Examples of different cross sectional shapes that may be used include, but are not limited to: rectangular shapes, triangular shapes, oval shapes, polygonal shapes, irregular shapes as well as any other kinds of shapes. Still further, in other embodiments the cross sectional diameter can vary, as in the current embodiment, or remain substantially constant. For example, in another embodiment, one or more protruding portions of protruding portion set <b>230</b> can have substantially cylindrical shapes. In particular, each protruding portion can have an approximately circular cross sectional shape with a diameter that remains substantially constant over the vertical height of the protruding portion.</p>
+      <p id="p-00050-en" num="0050">In other embodiments, the shapes of one or more protruding portions can be similar to the shapes of one or more structural members that may be associated with various types of footwear. For example, in one embodiment, the shapes of one or more protruding portions can be similar to support columns that can be used for providing shock absorption and/or cushioning effects in an article of footwear. Examples of such support columns can be found in U.S. Pat. No. 6,964,120, the entirety of which is hereby incorporated by reference. In addition, in some embodiments, the geometry of one or more protruding portions can be varied to incorporate ribs, holes, smooth surfaces, indentations as well as other features disclosed in U.S. Pat. No. 7,100,309, the entirety of which is hereby incorporated by reference.</p>
+      <p id="p-00051-en" num="0051">In different embodiments, one or more protruding portions of protruding portion set <b>230</b> can be associated with various surfaces of cavity <b>200</b>. In some cases, protruding portion set <b>230</b> can include protruding portions that extend from upper surface <b>210</b>. In other cases, protruding portion set <b>230</b> can include protruding portions that extend from first sidewall surface <b>212</b>. In other cases, protruding portion set <b>230</b> can include protruding portions that extend from second sidewall surface <b>214</b>. In an exemplary embodiment, first protruding portion <b>231</b>, second protruding portion <b>232</b>, third protruding portion <b>233</b> and fourth protruding portion <b>234</b> may extend from upper surface <b>210</b> in a generally vertical direction. In other words, first protruding portion <b>231</b>, second protruding portion <b>232</b>, third protruding portion <b>233</b> and fourth protruding portion <b>234</b> may each extend between upper surface <b>210</b> and lower portion <b>132</b>.</p>
+      <p id="p-00052-en" num="0052">A sole structure including a cavity with protruding portions can include provisions for covering one or more openings of the cavity. In some embodiments, the sole structure can include provisions for covering the cavity in a manner that allows the protruding portions to be viewed from outside of the cavity. In an exemplary embodiment, a sole structure can be associated with a transparent member that is configured to cover one or more openings of a cavity in a manner that keeps the protruding portions visible from outside the cavity.</p>
+      <p id="p-00053-en" num="0053">Sole structure <b>110</b> can be associated with transparent member <b>300</b>. Generally, transparent member <b>300</b> may be formed from any generally two-dimensional material. The term “two-dimensional material” as used through this detailed description and in the claims refers to any generally flat material exhibiting a length and width that are substantially greater than a thickness of the material. Examples of different materials that could be used for transparent member <b>300</b> include, but are not limited to: textiles, polymer sheets or combinations of textiles and polymer sheets. In embodiments where textiles are used, the textiles should be made of a substantially transparent material or have a mesh size that provides for substantial transparency. In embodiments where polymer sheets are used, the polymer sheets may be extruded, rolled, or otherwise formed from a polymer material to exhibit a generally flat aspect. Two-dimensional materials may also encompass laminated or otherwise layered materials that include two or more layers of textiles, polymer sheets, or combinations of textiles and polymer sheets. In addition to textiles and polymer sheets, other two-dimensional materials may be utilized for transparent member <b>300</b>. Although two-dimensional materials may have smooth or generally untextured surfaces, some two-dimensional materials will exhibit textures or other surface characteristics, such as dimpling, protrusions, ribs, or various patterns, for example. Despite the presence of surface characteristics, two-dimensional materials remain generally flat and exhibit a length and a width that are substantially greater than a thickness.</p>
+      <p id="p-00054-en" num="0054">In some embodiments, transparent member <b>300</b> may be formed from a substantially transparent polymer sheet or layer. In one exemplary embodiment, transparent member <b>300</b> may be made of a thermoplastic polymer material. In one embodiment, transparent member <b>300</b> may comprise a layer of thermoplastic urethane (TPU).</p>
+      <p id="p-00055-en" num="0055">Although transparent member <b>300</b> is formed from a generally two-dimensional material, transparent member <b>300</b> may be configured with some thickness. For example, in one embodiment, transparent member <b>300</b> can be associated with thickness T<b>1</b>, as seen in <figref>FIG. 1</figref>. In some cases, thickness T<b>1</b> can have a value in the range between 0.001 millimeters and 1 centimeter. In other cases, thickness T<b>1</b> can have any other value. Additionally, it will be understood that the height and width of transparent member <b>300</b> can be selected according to the size of cavity <b>200</b> and that the height and width may have values that are substantially larger than the value of thickness T<b>1</b>.</p>
+      <p id="p-00056-en" num="0056">Transparent member <b>300</b> may comprise first end portion <b>302</b> and second end portion <b>304</b>. In addition, transparent member <b>300</b> may comprise intermediate portion <b>306</b> that is disposed between first end portion <b>302</b> and second end portion <b>304</b>. Furthermore, transparent member <b>300</b> may be associated with second peripheral portion <b>310</b> that extends around the edges of first end portion <b>302</b>, second end portion <b>304</b> and intermediate portion <b>306</b>.</p>
+      <p id="p-00057-en" num="0057">In different embodiments, the geometry of transparent member <b>300</b> can vary. In some cases, transparent member <b>300</b> may be a bent transparent member. In other words, transparent member <b>300</b> can include first bend <b>320</b> disposed between first end portion <b>302</b> and intermediate portion <b>306</b>. In other words, first end portion <b>302</b> may be angled with respect to intermediate portion <b>306</b>. In addition, transparent member <b>300</b> can include second bend <b>322</b> disposed between second end portion <b>304</b> and intermediate portion <b>306</b>. In other words, second end portion <b>304</b> may be angled with respect to intermediate portion <b>306</b>. With this arrangement, transparent member <b>300</b> may be configured with U shape.</p>
+      <p id="p-00058-en" num="0058">In different embodiments, the angle between first end portion <b>302</b> and intermediate portion <b>306</b> can vary. In some cases, the angle can have a value in the range between 0 and 180 degrees. In other cases, the angle can have a value in the range between 45 and 135 degrees. Likewise, the angle between second end portion <b>304</b> and intermediate portion <b>306</b> can vary. In some cases, the angle can have a value in the range between 0 and 180 degrees. In other cases, the angle can have a value in the range between 45 and 135 degrees.</p>
+      <p id="p-00059-en" num="0059">Transparent member <b>300</b> can be configured to cover cavity <b>200</b>. In some embodiments, first end portion <b>302</b> may be configured to cover lateral opening <b>204</b>. Also, second end portion <b>304</b> may be configured to cover medial opening <b>206</b>. In addition, intermediate portion <b>306</b> may be configured to cover lower opening <b>202</b>. With this arrangement, transparent member <b>300</b> may cover a substantial entirety of cavity <b>200</b>. For example, as shown in <figref>FIG. 9</figref>, which is a cross sectional view of article of footwear <b>100</b>, transparent member <b>300</b> may be configured to cover lateral opening <b>204</b>, medial opening <b>206</b>, and lower opening <b>202</b>.</p>
+      <p id="p-00060-en" num="0060">In other embodiments, a transparent member may be configured to cover only a portion of a cavity. For example, transparent members may be configured to cover a medial opening and a lateral opening, but not a lower opening. In some embodiments, either a medial opening or a lateral opening may be covered, rather than both. For example, it may be desirable to include a transparent member only on a lateral side of an article of footwear. An exemplary situation in which this may be desirable could be for an article of footwear that is anticipated to be used in harsh environments. In such a case, it may not be desirable to include a transparent member on a medial or lower side, as it could be subjected to much higher levels of abuse than a lateral side of the article of footwear. Such abuse could leave significant markings on a transparent member, which may not be desirable. Different activities may be harsher on other portions of the article of footwear and, therefore, other configurations for transparent members may be implemented in view of the environment and activity for which the article of footwear will be used.</p>
+      <p id="p-00061-en" num="0061">In addition, it may be desirable to include only one transparent member (e.g., lateral or medial) based on anticipated stresses the shoe will be likely to undergo during use. In some embodiments, the placement of a lateral transparent member that wraps around a lower lateral edge of a sole structure, may provide increased stability to the lateral side of the article of footwear. This may be applicable, for example, to reduce the likelihood of sprained ankles. Similarly, it may be desirable to implement a transparent member on a medial side to provide additional support, for example, to reduce the likelihood of pronation. For such embodiments where lateral and/or medial transparent members are implemented as a stabilizing element, materials may be selected for the transparent members that are suitable for such applications. For example, such suitable materials may be resistant to stretching and/or other modes of deformation.</p>
+      <p id="p-00062-en" num="0062">
+        <figref>FIGS. 9A-9C</figref> illustrate alternative embodiments having transparent members that cover various portions of a cavity. For example, <figref>FIG. 9A</figref> shows a schematic cross-sectional view of an exemplary article of footwear <b>900</b>. Article of footwear <b>900</b> may include many of the same or similar components as article of footwear <b>100</b>. For example, article <b>900</b> may include an upper <b>902</b>, a midsole <b>920</b>, and an outsole <b>922</b>. Article <b>900</b> may also include a cavity <b>950</b> defined by midsole <b>920</b>. For example, midsole <b>920</b> may at least partially define an upper surface of cavity <b>950</b>. In some embodiments, cavity <b>950</b> may include a lateral opening <b>952</b>, a medial opening <b>954</b>, and a lower opening <b>956</b>. Within cavity <b>950</b>, may be disposed elements of an energy return system (or elements having the appearance of an energy return system). For example, one or more protruding portions <b>931</b> may be disposed within cavity <b>950</b>. Although article <b>900</b> may include any suitable number of protruding portions <b>931</b>, <figref>FIGS. 9A-9C</figref> only show a lateral protruding portion <b>932</b> and a medial protruding portion <b>933</b>. These elements may have properties and configurations that are the same or substantially similar to corresponding components of article <b>100</b>.</p>
+      <p id="p-00063-en" num="0063">As further shown in <figref>FIG. 9A</figref>, article <b>900</b> may include dual transparent members <b>902</b>. For example, article <b>900</b> may include a lateral transparent member <b>910</b> and a medial transparent member <b>912</b>. In some embodiments, one or both of transparent members <b>902</b> may be approximately L-shaped, for example as shown in <figref>FIG. 9A</figref>. Transparent members <b>902</b> may be configured to at least partially enclose cavity <b>950</b> by covering lateral opening <b>952</b> and medial opening <b>954</b>, as shown in <figref>FIG. 9A</figref>. As further shown in <figref>FIG. 9A</figref>, lower opening <b>956</b> may be covered by outsole <b>922</b>, and thus, in some embodiments, cavity <b>950</b> of article <b>900</b> may not be visible from below article <b>900</b>. Transparent members <b>902</b> may wrap around lower lateral and lower medial portions of cavity <b>950</b>, and extend partially inward (i.e., laterally or medially), along a bottom portion of cavity <b>950</b>, toward a centerline of article <b>900</b>. For example, transparent members <b>902</b> may be disposed at least partially between outsole <b>922</b> and cavity <b>950</b>. In some embodiments, inner end portions <b>904</b> of transparent members <b>902</b> may extend inwardly to a central part of protruding portions <b>931</b>, as shown in <figref>FIG. 9A</figref>. In other embodiments, inner end portions <b>904</b> may extend more inward or less inward.</p>
+      <p id="p-00064-en" num="0064">Outsole <b>922</b> may be associated with the lower portion of cavity <b>950</b>. In some embodiments, outsole <b>922</b> may include an aperture (see, e.g., <figref>FIG. 10</figref>). In some embodiments, the aperture may be disposed on at least one of transparent members <b>902</b>. Accordingly, in such embodiments, the interior of cavity <b>950</b> may be visible through the aperture in outsole <b>922</b>.</p>
+      <p id="p-00065-en" num="0065">In some embodiments, ends of protruding portions <b>931</b> may contact either or both of transparent members <b>902</b>. For example, in some embodiments, the end of the protruding portion <b>931</b> may extend to lower opening <b>956</b>, as shown in <figref>FIG. 9A</figref>. Therefore, in some embodiments, protruding portions <b>931</b> can be viewed through either or both of transparent members <b>902</b>. For example, protruding portions <b>931</b> may be viewed through lateral opening <b>952</b>, medial opening <b>954</b>, and/or lower opening <b>956</b>.</p>
+      <p id="p-00066-en" num="0066">As shown in <figref>FIG. 9B</figref>, in some embodiments, article <b>900</b> may be provided with a transparent member on a medial side of article <b>900</b> but not a lateral side. For example, a medial transparent member <b>960</b> may at least partially enclose cavity <b>950</b> by covering medial opening <b>954</b>. In some embodiments, medial transparent member <b>960</b> may be approximately L-shaped, for example as shown in <figref>FIG. 9B</figref>. In some embodiments, medial transparent member <b>960</b> may extend laterally, along the bottom portion of cavity <b>950</b>, far enough to cover all or part of lower opening <b>956</b>, as shown in <figref>FIG. 9B</figref>.</p>
+      <p id="p-00067-en" num="0067">As in other embodiments, outsole <b>922</b> may include an aperture (see, e.g., <figref>FIG. 10</figref>). In some embodiments, the aperture may be disposed on medial transparent member <b>960</b>. Accordingly, in such embodiments, the interior of cavity <b>950</b> may be visible through the aperture in outsole <b>922</b>.</p>
+      <p id="p-00068-en" num="0068">In some embodiments, ends of protruding portions <b>931</b> may contact medial transparent member <b>960</b>. For example, in some embodiments, the end of the protruding portion <b>931</b> may extend to lower opening <b>956</b>, as shown in <figref>FIG. 9B</figref>. Therefore, in some embodiments, protruding portions <b>931</b> can be viewed through medial transparent member <b>960</b>. For example, protruding portions <b>931</b> may be viewed through lateral opening <b>952</b>, medial opening <b>954</b>, and/or lower opening <b>956</b>.</p>
+      <p id="p-00069-en" num="0069">As shown in <figref>FIG. 9C</figref>, in some embodiments, article <b>900</b> may be provided with a transparent member on only a lateral side of article <b>900</b>, but not a medial side. For example, a lateral transparent member <b>970</b> may at least partially enclose cavity <b>950</b> by covering lateral opening <b>952</b>. In some embodiments, medial transparent member <b>960</b> may be approximately L-shaped, for example as shown in <figref>FIG. 9C</figref>. In some embodiments, lateral transparent member <b>970</b> may extend medially, along the bottom portion of cavity <b>950</b>, far enough to cover all or part of lower opening <b>956</b>. In other embodiments, lateral transparent member <b>970</b> may not extend as far medially, as shown in <figref>FIG. 9B</figref>.</p>
+      <p id="p-00070-en" num="0070">As in other embodiments, outsole <b>922</b> may include an aperture (see, e.g., <figref>FIG. 10</figref>). In some embodiments, the aperture may be disposed on lateral transparent member <b>970</b>. Accordingly, in such embodiments, the interior of cavity <b>950</b> may be visible through the aperture in outsole <b>922</b>.</p>
+      <p id="p-00071-en" num="0071">In some embodiments, ends of protruding portions <b>931</b> may contact lateral transparent member <b>970</b>. In some embodiments, the end of the protruding portion <b>931</b> may extend to lower opening <b>956</b>, as shown in <figref>FIG. 9C</figref>. Therefore, in some embodiments, protruding portions <b>931</b> can be viewed through lateral transparent member <b>970</b>. For example, protruding portions <b>931</b> may be viewed through lateral opening <b>952</b>, medial opening <b>954</b>, and/or lower opening <b>956</b>.</p>
+      <p id="p-00072-en" num="0072">As discussed above with respect to transparent members <b>902</b>, lateral transparent member <b>970</b> may extend medially any suitable distance. Therefore, lateral transparent member <b>970</b> may or may not be contacted by protruding portions <b>931</b>. Further, the aperture in outsole <b>922</b> may or may not be disposed on lateral transparent member <b>970</b>.</p>
+      <p id="p-00073-en" num="0073">It should be noted that any of the configurations discussed with respect to <figref>FIGS. 9A-9C</figref> may be combined in any suitable way. For example, medial transparent member <b>960</b> could be employed in the same embodiment as lateral transparent member <b>970</b>. If medial transparent member <b>960</b> and lateral transparent member <b>970</b> are configured as shown in <figref>FIGS. 9B and 9C</figref>, combining these two transparent members would leave only a small gap between the lower portion of these transparent members. Such a configuration is among many envisaged combinations. Those having ordinary skill in the art will recognize suitable configurations and combinations of the disclosed transparent members.</p>
+      <p id="p-00074-en" num="0074">A midsole can include provisions for receiving a transparent member in a manner that provides for a generally smooth outer surface on the sole structure. In some embodiments, a ledge of a peripheral portion can be shaped to receive a peripheral portion of a transparent member. In an exemplary embodiment, a ledge may be configured with a depth that is substantially similar to the thickness of the transparent member in order to provide a generally flush arrangement on an outer surface of the midsole. In other embodiments, however, a midsole may not include a ledge and instead a transparent member may have a tapered peripheral portion.</p>
+      <p id="p-00075-en" num="0075">In this embodiment, midsole <b>120</b> can include provisions for receiving transparent member <b>300</b>. In some embodiments, lowered peripheral ledge <b>242</b> may be shaped to receive second peripheral portion <b>310</b> of transparent member <b>300</b>. In some cases, lowered peripheral ledge <b>242</b> may be configured to receive transparent member <b>300</b> in a manner so that transparent member <b>300</b> is substantially flush with lower portion <b>132</b>, lateral portion <b>134</b> and medial portion <b>136</b>. For example, in one embodiment, depth D<b>1</b> of lowered peripheral ledge <b>242</b> may be substantially similar to thickness T<b>1</b> of second peripheral portion <b>310</b>. This arrangement can be seen in <figref>FIG. 9</figref>, which is a cross sectional view of article of footwear <b>100</b>. With this arrangement, transparent member <b>300</b> may be substantially flush with an outer surface <b>150</b> of midsole <b>120</b>. In other embodiments, depth D<b>1</b> could be substantially larger than thickness T<b>1</b> so that transparent member <b>300</b> is recessed with respect to outer surface <b>150</b>. In still other embodiments, depth D<b>1</b> could be substantially less than thickness T<b>1</b> so that transparent member <b>300</b> is raised with respect to outer surface <b>150</b> of midsole <b>120</b>.</p>
+      <p id="p-00076-en" num="0076">As discussed above, in different embodiments, depth D<b>1</b> of lowered peripheral ledge <b>242</b> can vary. In some cases, the value of depth D<b>1</b> can be selected according to the thickness of transparent member <b>300</b>. For example, in one embodiment, if the value of thickness T<b>1</b> of second peripheral portion <b>310</b> of transparent member <b>300</b> is known, the value of depth D<b>1</b> can be selected to accommodate thickness T<b>1</b>. In other cases, wherein the value of depth D<b>1</b> is known, the value of thickness T<b>1</b> can be selected to accommodate the value of depth D<b>1</b>.</p>
+      <p id="p-00077-en" num="0077">Referring to <figref>FIGS. 6 through 9</figref>, in some embodiments, outsole <b>122</b> may be configured to cover lower portion <b>132</b> of midsole <b>120</b>. Furthermore, heel portion <b>14</b> of outsole <b>122</b> may cover a portion of transparent member <b>300</b>. In particular, outsole <b>122</b> may be configured to cover intermediate portion <b>306</b> of transparent member <b>300</b>. In contrast, first end portion <b>302</b> and second end portion <b>304</b> of transparent member <b>300</b> may be visible on lateral portion <b>134</b> and medial portion <b>136</b>, respectively, of midsole <b>120</b>, since outsole <b>122</b> does not extend to lateral portion <b>134</b> or medial portion <b>136</b> of midsole <b>120</b>. With this arrangement, protruding portion set <b>230</b> may be substantially visible through transparent member <b>300</b> on medial portion <b>136</b> and lateral portion <b>134</b>. This configuration may allow article <b>100</b> to provide the appearance of an energy return system used in some types of footwear at a substantially reduced cost.</p>
+      <p id="p-00078-en" num="0078">In some embodiments, one or more protruding portions of protruding portion set <b>230</b> may be configured to extend to transparent member <b>300</b>. For example, in one embodiment, second end <b>244</b> of first protruding portion <b>231</b> may be configured to contact intermediate portion <b>306</b> of transparent member <b>300</b>, as illustrated in <figref>FIG. 9</figref>. In a similar manner, the ends of second protruding portion <b>232</b>, third protruding portion <b>233</b> and fourth protruding portion <b>234</b> may be configured to contact transparent member <b>300</b>. With this arrangement, protruding portion set <b>230</b> may be configured to transmit vertical forces within midsole <b>120</b>. In other embodiments, however, one or more protruding portions of protruding portion set <b>230</b> may be spaced apart from transparent member <b>300</b>.</p>
+      <p id="p-00079-en" num="0079">An article including a transparent member can include provisions for preventing portions of an outsole from covering the transparent member on a lower portion of the midsole. In some cases, an outsole can be provided with an aperture or hole for viewing the transparent member on the lower portion of the midsole.</p>
+      <p id="p-00080-en" num="0080">
+        <figref>FIG. 10</figref> illustrates an alternative embodiment of article <b>100</b>. Referring to <figref>FIG. 10</figref>, outsole <b>122</b> is provided with aperture <b>600</b>. Aperture <b>600</b> may be configured to extend through the entire depth of outsole <b>122</b>. In particular, aperture <b>600</b> may be configured so that intermediate portion <b>306</b> of transparent member <b>300</b> may be visible through aperture <b>600</b>.</p>
+      <p id="p-00081-en" num="0081">In different embodiments, the geometry of aperture <b>600</b> can vary. In some cases, aperture <b>600</b> can have a square like geometry. In other cases, aperture <b>600</b> can have a rectangular geometry. In still other cases, aperture <b>600</b> can have a rounded geometry. In still other cases, aperture <b>600</b> can have any other type of geometry including regular polygonal geometries, symmetric geometries, irregular geometries and asymmetric geometries. In an exemplary embodiment, aperture <b>600</b> can have a substantially rectangular shape.</p>
+      <p id="p-00082-en" num="0082">In different embodiments, the size of aperture <b>600</b> can vary. For example, in some cases, the size of aperture <b>600</b> can be selected so that aperture <b>600</b> has an approximately similar size to intermediate portion <b>306</b> of transparent member <b>300</b>. In other cases, the size of aperture <b>600</b> can be selected so that aperture <b>600</b> is substantially larger than intermediate portion <b>306</b>. In still other cases, the size of aperture <b>600</b> can be selected so that aperture <b>600</b> has a substantially smaller size than intermediate portion <b>306</b>. In still another embodiment, aperture <b>600</b> can have a size that is slightly smaller than intermediate portion <b>306</b>. In particular, for example, the size of aperture <b>600</b> can be selected so that a lowered peripheral ledge is not substantially visible through aperture <b>600</b>.</p>
+      <p id="p-00083-en" num="0083">Although a single aperture is used in the current embodiment, other embodiments can include two or more apertures. In some cases, multiple apertures can be arranged in a pattern on outsole <b>122</b> adjacent to intermediate portion <b>306</b> to increase the visibility of intermediate portion <b>306</b> through outsole <b>122</b>. In addition, in some cases, any number of apertures can be applied to other portions of outsole <b>122</b> to reveal the lower portion of midsole <b>120</b> as well as transparent member <b>300</b>.</p>
+      <p id="p-00084-en" num="0084">
+        <figref>FIGS. 1 through 6</figref> may be generally illustrative of a method of making article of footwear <b>100</b>. The following discussion includes steps for one method of making article of footwear <b>100</b>, but it should be understood that in other embodiments different steps may be used. In some cases, one or more of the steps discussed below may be optional. In other cases, additional steps could be provided.</p>
+      <p id="p-00085-en" num="0085">Referring back to <figref>FIGS. 1 through 6</figref>, during a first step of making article of footwear <b>100</b>, midsole <b>120</b> can be formed with cavity <b>200</b> on lower portion <b>132</b>, lateral portion <b>134</b> and medial portion <b>136</b>. In some embodiments, cavity <b>200</b> can be formed on midsole <b>120</b> by using a molding technique for forming midsole <b>120</b> that is configured to form cavity <b>200</b>. Furthermore, the molding technique can be configured to form protruding portion set <b>230</b> simultaneously with cavity <b>200</b>. In other embodiments, cavity <b>200</b> can be cut from midsole <b>120</b> after midsole <b>120</b> has been formed. In such embodiments, cavity <b>200</b> can be cut out in a manner that leaves protruding portion set <b>230</b> formed within cavity <b>200</b>. In still other embodiments, other techniques known in the art for forming cavities in any portion of a sole structure can be used for forming cavity <b>200</b> and protruding portion set <b>230</b>. It will also be understood that in embodiments not including a protruding portion, the method can include steps for forming a cavity in a midsole without forming any protruding portions.</p>
+      <p id="p-00086-en" num="0086">In some embodiments, lowered peripheral ledge <b>242</b> can also be formed on first peripheral portion <b>240</b> of cavity <b>200</b>. In embodiments where midsole <b>120</b> is molded, the mold can include features to form lowered peripheral ledge <b>242</b>. In other embodiments, lowered peripheral ledge <b>242</b> can be cut from midsole <b>120</b> after midsole <b>120</b> has been formed. In still other embodiments, lowered peripheral ledge <b>242</b> could be formed in any other manner.</p>
+      <p id="p-00087-en" num="0087">Once midsole <b>120</b> has been formed with cavity <b>200</b> and including protruding portion set <b>230</b>, midsole <b>120</b> can be associated with transparent member <b>300</b>. In some embodiments, transparent member <b>300</b> can have an initially flat shape. During the step of associating transparent member <b>300</b> with cavity <b>200</b>, transparent member <b>300</b> can be bent in a manner so that the geometry of transparent member <b>300</b> conforms to the geometry of lower opening <b>202</b>, lateral opening <b>204</b> and medial opening <b>206</b> of cavity <b>200</b>. In particular, first end portion <b>302</b> may be bent with respect to intermediate portion <b>306</b> to form first bend <b>320</b>. Likewise, second end portion <b>304</b> may be bent with respect to intermediate portion <b>306</b> to form second bend <b>322</b>. With this arrangement, transparent member <b>300</b> may be formed into an approximate U shape. In other embodiments, however, transparent member <b>300</b> may be pre-formed with a bent geometry.</p>
+      <p id="p-00088-en" num="0088">Next, transparent member <b>300</b> may be applied to midsole <b>120</b> in a manner that covers cavity <b>200</b>. In some embodiments, second peripheral portion <b>310</b> may be applied to first peripheral portion <b>240</b>. In particular, second peripheral portion <b>310</b> can be disposed against lowered peripheral ledge <b>242</b> to provide a substantially flush outer surface <b>150</b> for midsole <b>120</b>. Furthermore, first end portion <b>302</b> may be applied in a manner that covers lateral opening <b>204</b>. Also, second end portion <b>304</b> may be applied in a manner that covers medial opening <b>206</b>. In addition, intermediate portion <b>306</b> may be applied in a manner that covers lower opening <b>202</b>. In an exemplary embodiment, an adhesive can be applied between first peripheral portion <b>240</b> and second peripheral portion <b>310</b>. This arrangement may provide a secure attachment of transparent member <b>300</b> to midsole <b>120</b>.</p>
+      <p id="p-00089-en" num="0089">In some embodiments, outsole <b>122</b> can be applied to lower portion <b>132</b> after transparent member <b>300</b> has been joined with midsole <b>120</b>. In embodiments where outsole <b>122</b> includes an aperture configured to provide a view of intermediate portion <b>306</b>, the aperture can be aligned with intermediate portion <b>306</b>. In other embodiments, however, an outsole may not be applied to lower portion <b>132</b>. Instead, lower portion <b>132</b> can be configured as a ground contacting surface for article of footwear <b>100</b>.</p>
+      <p id="p-00090-en" num="0090">Using this arrangement, an article of footwear can be made that allows an observer to view the interior of a cavity that is disposed internally to a sole structure. Furthermore, in embodiments where the cavity is filled with one or more structures, the structures can be easily viewed on lower, medial and/or lateral portions of the sole structure.</p>
+      <p id="p-00091-en" num="0091">Although the embodiments discussed above illustrate a cavity associated with a lower portion of a midsole, in other embodiments a cavity could be associated with any other portion of a midsole. For example, in another embodiment, a cavity could be associated with an upper portion of a midsole.</p>
+      <p id="p-00092-en" num="0092">
+        <figref>FIG. 11</figref> illustrates another alternative embodiment of article of footwear <b>100</b>. Referring to <figref>FIG. 11</figref>, cavity <b>700</b> may be associated with upper portion <b>702</b>, lateral portion <b>134</b> and medial portion <b>136</b> of midsole <b>120</b>. In particular, the geometry of cavity <b>700</b> may be substantially similar to the geometry of cavity <b>200</b> of the previous embodiments. In contrast to the previous embodiments, however, cavity <b>700</b> may be disposed adjacent to upper <b>102</b> (shown in phantom), rather than outsole <b>122</b>.</p>
+      <p id="p-00093-en" num="0093">Cavity <b>700</b> can include protruding portion set <b>730</b>. In some cases, protruding portion set <b>730</b> can be substantially similar to protruding portion <b>230</b> discussed in the previous embodiment. Furthermore, protruding portion set <b>730</b> may be associated with lower surface <b>720</b> of cavity <b>700</b>. In other words, protruding portion set <b>730</b> may extend upwards from lower surface <b>720</b> towards upper portion <b>702</b> of midsole <b>120</b>.</p>
+      <p id="p-00094-en" num="0094">In addition, article <b>100</b> includes transparent member <b>800</b> that is configured with a substantially similar shape to the shape of transparent member <b>300</b> discussed above. In particular, transparent member <b>800</b> is configured with a shape that covers the opening of cavity <b>700</b>. With this arrangement, cavity <b>700</b> is visible on medial portion <b>136</b> and lateral portion <b>134</b> of midsole <b>120</b>. However, using this arrangement, cavity <b>700</b> may not be visible on upper portion <b>702</b> of midsole <b>120</b>, since upper portion <b>702</b> is covered by upper <b>102</b>.</p>
+      <p id="p-00095-en" num="0095">In addition to providing visibility, transparent member <b>800</b> can be configured to provide enhanced cushioning for a foot disposed within upper <b>102</b>. For example, in some embodiments, transparent member <b>800</b> can be disposed below a heel of a foot. During use, as a heel is depressed downwards, transparent member <b>800</b> may deflect downwards towards protruding portion set <b>730</b>. Furthermore, in some cases, protruding portion set <b>730</b> can be configured to compress in a manner that provides some cushioning for the heel. Also, in embodiments without protruding portion set <b>730</b>, transparent member <b>800</b> can be configured to provide a restoring force following deflection that also provides enhanced cushioning for the heel.</p>
+      <p id="p-00096-en" num="0096">It will be understood that while the current embodiment includes one or more protruding portions, in other embodiments, a cavity may not include protruding portions. In some cases, a cavity can include other structures that may give the appearance of an energy absorbing system that may be known in the art. Still further, in other embodiments a cavity may not include any interior structures. In other words, in other embodiments, a cavity could be substantially empty. With this arrangement, the cavity may provide the appearance of a hollow air cavity that enhances shock absorption.</p>
+      <p id="p-00097-en" num="0097">Articles of the embodiments discussed above may be made from materials known in the art for making articles of footwear. For example, a sole structure may be made from any suitable material, including, but not limited to: elastomers, siloxanes, natural rubber, other synthetic rubbers, aluminum, steel, natural leather, synthetic leather, foams or plastics. Also, an upper may be made from any suitable material, including, but not limited to: nylon, natural leather, synthetic leather, natural rubber or synthetic rubber.</p>
+      <p id="p-00098-en" num="0098">While various embodiments of the invention have been described, the description is intended to be exemplary, rather than limiting and it will be apparent to those of ordinary skill in the art that many more embodiments and implementations are possible that are within the scope of the invention. Accordingly, the invention is not to be restricted except in light of the attached claims and their equivalents. Also, various modifications and changes may be made within the scope of the attached claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method of making an article of footwear, comprising:
+<claim-text>forming a sole structure by forming a cavity on a lower portion, the cavity being open on the lower portion, a lateral portion and a medial portion of the sole structure;</claim-text><claim-text>attaching a bent transparent member to the sole structure, the bent transparent member comprising a first end portion, a second end portion and an intermediate portion and wherein the first end portion is bent with respect to the intermediate portion and wherein the second end portion is bent with respect to the intermediate portion;</claim-text><claim-text>covering a lateral opening of the cavity disposed on the lateral portion with the first end portion;</claim-text><claim-text>covering a medial opening of the cavity disposed on the medial portion with the second end portion; and</claim-text><claim-text>covering a lower opening of the cavity disposed on the lower portion with the intermediate portion;</claim-text><claim-text>whereby the cavity can be viewed through the bent transparent member.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the step of forming the sole structure includes a step of forming a protruding portion on a surface of the cavity.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the protruding portion can be viewed through the transparent member.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the step of attaching the bent transparent member to the sole structure includes a step of associating a first peripheral portion of the cavity with a second peripheral portion of the bent transparent member and wherein the first peripheral portion includes a lowered peripheral ledge configured to receive the second peripheral portion.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the step of covering the lower opening is followed by a step of applying an outsole to the lower portion.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en" independent="true">
+      <claim-text>
+        <b>6</b>. An article of footwear, comprising:
+<claim-text>a sole structure including a lower portion, a lateral portion and a medial portion;</claim-text><claim-text>the sole structure including a cavity, the cavity further comprising a medial opening disposed on the medial portion, a lateral opening disposed on the lateral portion and a lower opening disposed on the lower portion; and</claim-text><claim-text>a first transparent member, the transparent member being approximately L-shaped; and</claim-text><claim-text>wherein the first transparent member corresponds to the cavity and wherein the first transparent member is configured to cover the lateral opening and extend medially along a bottom portion of the cavity or cover the medial opening and extend laterally along a bottom portion of the cavity.</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The article of footwear according to <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the first transparent member extends far enough along the bottom portion of the cavity to cover at least a portion of the lower opening.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The article of footwear according to <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the sole structure includes an outsole that is associated with the lower portion and wherein the outsole includes an aperture that is disposed on the first transparent member.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The article of footwear according to <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein article of footwear includes a midsole defining an upper surface of the cavity, wherein the sole structure includes a protruding portion that extends from the upper surface into the cavity.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The article of footwear according to <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein an end of the protruding portion contacts the first transparent member.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The article of footwear according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the end of the protruding portion extends to the lower opening.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The article of footwear according to <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the protruding portion can be viewed through the first transparent member.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The article of footwear according to <claim-ref idref="clm-00006-en">claim 6</claim-ref>, further including a second transparent member, wherein the first transparent member is configured to cover the lateral opening and the second transparent member is configured to cover the medial opening and extend laterally along the bottom portion of the cavity.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The article of footwear according to <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein at least one of the first transparent member and the second transparent member extends far enough along the bottom portion of the cavity to cover at least a portion of the lower opening.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The article of footwear according to <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein the sole structure includes an outsole that is associated with the lower portion and wherein the outsole includes an aperture that is disposed on the first transparent member or the second transparent member.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The article of footwear according to <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein article of footwear includes a midsole defining an upper surface of the cavity, wherein the sole structure includes a protruding portion that extends from the upper surface into the cavity.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The article of footwear according to <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein an end of the protruding portion contacts the first transparent member or the second transparent member.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The article of footwear according to <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the end of the protruding portion extends to the lower opening.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The article of footwear according to <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the protruding portion can be viewed through the first transparent member or the second transparent member.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en" independent="true">
+      <claim-text>
+        <b>20</b>. An article of footwear, comprising:
+<claim-text>a sole structure including a lower portion, a lateral portion and a medial portion;</claim-text><claim-text>the sole structure including a cavity, the cavity having an upper surface;</claim-text><claim-text>the cavity further comprising a medial opening disposed on the medial portion, a lateral opening disposed on the lateral portion and a lower opening disposed on the lower portion; and</claim-text><claim-text>a transparent member, the transparent member being substantially U-shaped;</claim-text><claim-text>the transparent member being configured to cover the lateral opening, the medial opening and the lower opening;</claim-text><claim-text>the sole structure including a protruding portion that extends from the upper surface into the cavity;</claim-text><claim-text>wherein an end of the protruding portion contacts the transparent member;</claim-text><claim-text>wherein the sole structure includes an outsole that is associated with the lower portion and wherein the outsole includes an aperture that is disposed on the transparent member. </claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150250261A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150250261A1-20150910-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150250261A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250261A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150250261A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250261A1-20150910-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150250261A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250261A1-20150910-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150250261A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250261A1-20150910-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150250261A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250261A1-20150910-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150250261A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250261A1-20150910-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150250261A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250261A1-20150910-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150250261A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250261A1-20150910-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150250261A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250261A1-20150910-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150250261A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250261A1-20150910-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150250261A1_00012.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150250261A1-20150910-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150250261A1.PDF" type="pdf" size="721198" pages="20" />
+</lexisnexis-patent-document>

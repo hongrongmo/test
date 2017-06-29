@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2017 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20170422" file="US8506667B2.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20130813" time-inserted="040445" date-changed="20170422" time-changed="013334">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Grant" publ-desc="Patent with a pre-grant publication">
+      <document-id id="111412033">
+        <country>US</country>
+        <doc-number>8506667</doc-number>
+        <kind>B2</kind>
+        <date>20130813</date>
+      </document-id>
+      <document-id data-format="original">
+        <country>US</country>
+        <doc-number>08506667</doc-number>
+        <kind>B2</kind>
+        <date>20130813</date>
+      </document-id>
+      <document-id data-format="docdb" id="409483227">
+        <doc-number>8506667</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>US8506667</doc-number>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id id="44692573">
+        <country>US</country>
+        <doc-number>13006525</doc-number>
+        <date>20110114</date>
+      </document-id>
+      <document-id data-format="original">
+        <country>US</country>
+        <doc-number>13006525</doc-number>
+        <date>20110114</date>
+      </document-id>
+      <document-id data-format="docdb" id="365199950">
+        <doc-number>201113006525</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>US201113006525</doc-number>
+      </document-id>
+    </application-reference>
+    <application-series-code>13</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20130822">
+      <unexamined-printed-without-grant>
+        <date>20120719</date>
+      </unexamined-printed-without-grant>
+      <printed-with-grant>
+        <date>20130813</date>
+      </printed-with-grant>
+    </dates-of-public-availability>
+    <term-of-grant>
+      <us-term-extension>298</us-term-extension>
+    </term-of-grant>
+    <classifications-ipcr date-changed="20130922">
+      <classification-ipcr sequence="1">
+        <text>B01D  39/00        20060101AFI20130813BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>39</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130813</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20130922">
+      <classification-cpc sequence="1">
+        <text>B01D  29/21        20130101 FI20121206BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>29</main-group>
+        <subgroup>21</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20121206</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B01D  29/111       20130101 LI20121206BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>29</main-group>
+        <subgroup>111</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20121206</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>B01D  46/2411      20130101 LI20130118BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>46</main-group>
+        <subgroup>2411</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130118</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>B01D  46/523       20130101 LI20130118BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>46</main-group>
+        <subgroup>523</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130118</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>B01D2201/02        20130101 LA20121206BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>2201</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20121206</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>B01D2201/127       20130101 LA20121206BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>2201</main-group>
+        <subgroup>127</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20121206</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>B01D2265/06        20130101 LA20130118BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>2265</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130118</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>B01D2275/201       20130101 LA20130118BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>2275</main-group>
+        <subgroup>201</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130118</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <classification-national date-changed="20130922">
+      <country>US</country>
+      <main-classification>
+        <text>55/498</text>
+        <class>55</class>
+        <subclass>498</subclass>
+      </main-classification>
+      <further-classification sequence="1">
+        <text>55/521</text>
+        <class>55</class>
+        <subclass>521</subclass>
+      </further-classification>
+      <further-classification sequence="2">
+        <text>210/232</text>
+        <class>210</class>
+        <subclass>232</subclass>
+      </further-classification>
+      <further-classification sequence="3">
+        <text>210/411</text>
+        <class>210</class>
+        <subclass>411</subclass>
+      </further-classification>
+      <further-classification sequence="4">
+        <text>210/485</text>
+        <class>210</class>
+        <subclass>485</subclass>
+      </further-classification>
+      <further-classification sequence="5">
+        <text>210/493.1</text>
+        <class>210</class>
+        <subclass>493.1</subclass>
+      </further-classification>
+      <further-classification sequence="6">
+        <text>264/249</text>
+        <class>264</class>
+        <subclass>249</subclass>
+      </further-classification>
+    </classification-national>
+    <field-of-search date-changed="20130813">
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>55/498</text>
+          <class>55</class>
+          <subclass>498</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>55/521</text>
+          <class>55</class>
+          <subclass>521</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>55/DIG.5</text>
+          <class>55</class>
+          <subclass>DIG.5</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>210/232</text>
+          <class>210</class>
+          <subclass>232</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>210/411</text>
+          <class>210</class>
+          <subclass>411</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>210/493.1-493.5</text>
+          <class>210</class>
+          <subclass>493.1-493.5</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>210/485</text>
+          <class>210</class>
+          <subclass>485</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>210/489</text>
+          <class>210</class>
+          <subclass>489</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>264/249</text>
+          <class>264</class>
+          <subclass>249</subclass>
+        </main-classification>
+      </classification-national>
+    </field-of-search>
+    <number-of-claims>18</number-of-claims>
+    <exemplary-claim>1</exemplary-claim>
+    <exemplary-claim>8</exemplary-claim>
+    <exemplary-claim>14</exemplary-claim>
+    <invention-title id="title_eng" date-changed="20130813" lang="eng" format="original">Filters and methods for imparting structural support to pleated filter media</invention-title>
+    <references-cited date-changed="20140506">
+      <patent-citations name="patcit" date-changed="20130813" />
+      <forward-citations name="fwdcit" date-changed="20140506" />
+      <citation srep-phase="1">
+        <patcit num="1" dnum="US4402830A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4402830</doc-number>
+            <kind>A</kind>
+            <name>Pall</name>
+            <date>19830906</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>4402830</doc-number>
+            <kind>A</kind>
+            <date>19830900</date>
+          </document-id>
+          <application-date>
+            <date>19820113</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="1">
+        <patcit num="2" dnum="US5252207A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5252207</doc-number>
+            <kind>A</kind>
+            <name>Miller et al.</name>
+            <date>19931012</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>5252207</doc-number>
+            <kind>A</kind>
+            <date>19931000</date>
+          </document-id>
+          <application-date>
+            <date>19910722</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="3" dnum="US5552048A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5552048</doc-number>
+            <kind>A</kind>
+            <name>Miller et al.</name>
+            <date>19960903</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>5552048</doc-number>
+            <kind>A</kind>
+            <date>19960900</date>
+          </document-id>
+          <application-date>
+            <date>19950307</date>
+          </application-date>
+        </patcit>
+        <classification-national>
+          <country>US</country>
+          <main-classification>
+            <text>210/489</text>
+            <class>210</class>
+            <subclass>489</subclass>
+          </main-classification>
+        </classification-national>
+      </citation>
+      <citation srep-phase="1">
+        <patcit num="4" dnum="US6508934B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6508934</doc-number>
+            <kind>B2</kind>
+            <name>Van Pelt et al.</name>
+            <date>20030121</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>6508934</doc-number>
+            <kind>B2</kind>
+            <date>20030100</date>
+          </document-id>
+          <application-date>
+            <date>20001215</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="1">
+        <patcit num="5" dnum="US6887343B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6887343</doc-number>
+            <kind>B2</kind>
+            <name>Schukar et al.</name>
+            <date>20050503</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>6887343</doc-number>
+            <kind>B2</kind>
+            <date>20050500</date>
+          </document-id>
+          <application-date>
+            <date>20021220</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="6" dnum="US6911144B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6911144</doc-number>
+            <kind>B2</kind>
+            <name>Van Pelt et al.</name>
+            <date>20050628</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>6911144</doc-number>
+            <kind>B2</kind>
+            <date>20050600</date>
+          </document-id>
+          <application-date>
+            <date>20021213</date>
+          </application-date>
+        </patcit>
+        <classification-national>
+          <country>US</country>
+          <main-classification>
+            <text>210/232</text>
+            <class>210</class>
+            <subclass>232</subclass>
+          </main-classification>
+        </classification-national>
+      </citation>
+      <citation srep-phase="1">
+        <patcit num="7" dnum="US2002/0074279A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20020074279</doc-number>
+            <kind>A1</kind>
+            <name>Van Pelt et al.</name>
+            <date>20020620</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>2002/0074279</doc-number>
+            <kind>A1</kind>
+            <date>20020600</date>
+          </document-id>
+          <application-date>
+            <date>20001215</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="8" dnum="US2003/0070976A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20030070976</doc-number>
+            <kind>A1</kind>
+            <name>Van Pelt et al.</name>
+            <date>20030417</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>2003/0070976</doc-number>
+            <kind>A1</kind>
+            <date>20030400</date>
+          </document-id>
+          <application-date>
+            <date>20021213</date>
+          </application-date>
+        </patcit>
+        <classification-national>
+          <country>US</country>
+          <main-classification>
+            <text>210/232</text>
+            <class>210</class>
+            <subclass>232</subclass>
+          </main-classification>
+        </classification-national>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="9" dnum="US2008/0272048A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080272048</doc-number>
+            <kind>A1</kind>
+            <name>Mei et al.</name>
+            <date>20081106</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>US</country>
+            <doc-number>2008/0272048</doc-number>
+            <kind>A1</kind>
+            <date>20081100</date>
+          </document-id>
+          <application-date>
+            <date>20070501</date>
+          </application-date>
+        </patcit>
+        <classification-national>
+          <country>US</country>
+          <main-classification>
+            <text>210/493.2</text>
+            <class>210</class>
+            <subclass>493.2</subclass>
+          </main-classification>
+        </classification-national>
+      </citation>
+      <citation srep-phase="1">
+        <patcit num="10" dnum="EP0 083 789A2" dnum-type="publication number">
+          <document-id>
+            <country>EP</country>
+            <doc-number> 083 789</doc-number>
+            <kind>A2</kind>
+            <date>19830700</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>EP</country>
+            <doc-number>0 083 789</doc-number>
+            <kind>A2</kind>
+            <date>19830700</date>
+          </document-id>
+        </patcit>
+      </citation>
+      <citation srep-phase="1">
+        <patcit num="11" dnum="EP0 470 485A2" dnum-type="publication number">
+          <document-id>
+            <country>EP</country>
+            <doc-number>470485</doc-number>
+            <kind>A2</kind>
+            <date>19920212</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>EP</country>
+            <doc-number>0 470 485</doc-number>
+            <kind>A2</kind>
+            <date>19920200</date>
+          </document-id>
+          <application-date>
+            <date>19910730</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <fwdcit num="1">
+          <document-id>
+            <country>US</country>
+            <doc-number>20120324843</doc-number>
+            <kind>A1</kind>
+            <date>20121227</date>
+          </document-id>
+          <application-date>
+            <date>20110623</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="2">
+          <document-id>
+            <country>US</country>
+            <doc-number>8715384</doc-number>
+            <kind>B2</kind>
+            <date>20140506</date>
+          </document-id>
+          <application-date>
+            <date>20110623</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20130813">
+      <related-publication>
+        <document-id>
+          <country>US</country>
+          <doc-number>20120180444</doc-number>
+          <date>20120719</date>
+        </document-id>
+        <document-id data-format="original">
+          <country>US</country>
+          <doc-number>20120180444</doc-number>
+          <kind>A1</kind>
+          <date>20120719</date>
+        </document-id>
+      </related-publication>
+    </related-documents>
+    <parties date-changed="20130813">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>General Electric Company</orgname>
+            <role>02</role>
+            <address>
+              <city>Schenectady</city>
+              <state>NY</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Nikolin</last-name>
+            <first-name>Przemyslaw Krzysztof</first-name>
+            <address>
+              <city>Hampshire</city>
+              <country>GB</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Janawitz</last-name>
+            <first-name>Jamison William</first-name>
+            <address>
+              <city>Overland Park</city>
+              <state>KS</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Mei</last-name>
+            <first-name>Jason</first-name>
+            <address>
+              <city>Lee's Summit</city>
+              <state>MO</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Sutherland Asbill &amp; Brennan LLP</name>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <examiners>
+      <primary-examiner>
+        <last-name>Clemente</last-name>
+        <first-name>Robert</first-name>
+        <department>1772</department>
+      </primary-examiner>
+      <assistant-examiner>
+        <last-name>Hawkins</last-name>
+        <first-name>Karla</first-name>
+      </assistant-examiner>
+    </examiners>
+    <patent-family date-changed="20150811">
+      <main-family family-id="152620206">
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>102580377</doc-number>
+            <kind>A</kind>
+            <date>20120718</date>
+          </document-id>
+          <application-date>
+            <date>20120113</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020120082825</doc-number>
+            <kind>A</kind>
+            <date>20120724</date>
+          </document-id>
+          <application-date>
+            <date>20120112</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20120180444</doc-number>
+            <kind>A1</kind>
+            <date>20120719</date>
+          </document-id>
+          <application-date>
+            <date>20110114</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>8506667</doc-number>
+            <kind>B2</kind>
+            <date>20130813</date>
+          </document-id>
+          <application-date>
+            <date>20110114</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="152620202">
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>102580377</doc-number>
+            <kind>A</kind>
+            <date>20120718</date>
+          </document-id>
+          <application-date>
+            <date>20120113</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020120082825</doc-number>
+            <kind>A</kind>
+            <date>20120724</date>
+          </document-id>
+          <application-date>
+            <date>20120112</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20120180444</doc-number>
+            <kind>A1</kind>
+            <date>20120719</date>
+          </document-id>
+          <application-date>
+            <date>20110114</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>8506667</doc-number>
+            <kind>B2</kind>
+            <date>20130813</date>
+          </document-id>
+          <application-date>
+            <date>20110114</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20130813" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Certain embodiments of the invention may include filters and methods for imparting structural support to a pleated filter material. According to an example embodiment, the method includes forming a filter structure from one or more sections of pleated filter media, wherein the filter structure comprises one or more filter pleats. The method also includes extruding a banding material to form one or more radial support regions in at least circumferential contact with at least one of an inner or an outer surface of the filter structure, and maintaining spacing between the one or more filter pleats of the filter structure with the one or more radial support regions.</p>
+  </abstract>
+  <legal-data date-changed="20170412">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20110114</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     8506667B2</docdb-publication-number>
+      <docdb-application-id>365199950</docdb-application-id>
+      <new-owner>GENERAL ELECTRIC COMPANY, NEW YORK</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:NIKOLIN, PRZEMYSLAW KRZYSZTOF;JANAWITZ, JAMISON WILLIAM;MEI, JASON;SIGNING DATES FROM 20101208 TO 20101210;REEL/FRAME:025639/0395</free-text-description>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20140103</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     8506667B2</docdb-publication-number>
+      <docdb-application-id>365199950</docdb-application-id>
+      <new-owner>BHA ALTAIR, LLC, TENNESSEE</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:GENERAL ELECTRIC COMPANY;BHA GROUP, INC.;ALTAIR FILTER TECHNOLOGY LIMITED;REEL/FRAME:031911/0797</free-text-description>
+      <effective-date>
+        <date>20131216</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20170324</date>
+      </publication-date>
+      <event-code-1>REMI</event-code-1>
+      <legal-description>MAINTENANCE FEE REMINDER MAILED</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US     8506667B2</docdb-publication-number>
+      <docdb-application-id>365199950</docdb-application-id>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20130813">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00001-en" num="0001">This invention generally relates to filters, and in particular, to imparting structural support to pleated filter media.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">Pleated filter materials have proven to be useful in many gas and/or fluid filtering applications where space is limited and/or where a large effective filtering surface area is desired within a confined space. Pleated filter materials may also be utilized to minimize the pressure drop across the filter media during the filtering process. Some filter cartridges include pleated filter media with metal reinforcing housings, mesh, or banding structures to contain and support the filter media. Often, the metal reinforcement material can be expensive, bulky, and challenging to manufacture. Some of these reinforcing structures may be attached to the filter media with an adhesive that may degrade in corrosive or high temperature environments.</p>
+      <p id="p-00003-en" num="0003">A need remains for improved filter media, reinforcement material, and methods for imparting structural support to pleated filter media.</p>
+      <heading id="h-00003-en" level="1">BRIEF SUMMARY OF THE INVENTION</heading>
+      <p id="p-00004-en" num="0004">Some or all of the above needs may be addressed by certain embodiments of the invention. Certain embodiments of the invention may include filters and methods for imparting structural support to pleated filter media.</p>
+      <p id="p-00005-en" num="0005">According to an example embodiment of the invention, a method is provided for imparting structural support to a pleated filter material, the method can include forming a filter structure from one or more sections of pleated filter media, where the filter structure may include one or more filter pleats. The method also includes extruding a banding material to form one or more radial support regions in at least circumferential contact with at least one of an inner or an outer surface of the filter structure, and maintaining spacing between the one or more filter pleats of the filter structure with the one or more radial support regions.</p>
+      <p id="p-00006-en" num="0006">According to another example embodiment, a filter cartridge is provided for filtering particles from a gas or liquid. The filter cartridge includes a filter media having a plurality of pleats and arranged in a substantially cylindrical or conical shape about an axis. The filter cartridge also includes at least one end cap where least a portion of the filter media is secured to the at least one end cap. The filter cartridge also includes one or more radial support regions in circumferential contact with at least one of an inner or an outer surface of the filter media, where spacing of at least some of the plurality of pleats is maintained at least in part by the one or more radial support regions.</p>
+      <p id="p-00007-en" num="0007">According to another example embodiment, another filter cartridge is provided for filtering particles from a gas or liquid. The filter cartridge includes a filter media having a plurality of pleats and arranged in a substantially cylindrical or conical shape about an axis. The filter cartridge also includes one or more radial support regions in circumferential contact with at least one of an inner or an outer surface of the filter media, where spacing of at least some of the plurality of pleats is maintained at least in part by the one or more radial support regions.</p>
+      <p id="p-00008-en" num="0008">Other embodiments and aspects of the invention are described in detail herein and are considered a part of the claimed invention. Other embodiments and aspects can be understood with reference to the following detailed description, accompanying drawings, and claims.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE FIGURES</heading>
+      <p id="p-00009-en" num="0009">Reference will now be made to the accompanying tables and drawings, which are not necessarily drawn to scale, and wherein:</p>
+      <p id="p-00010-en" num="0010">
+        <figref>FIG. 1</figref> is a block diagram of an illustrative filter house according to an example embodiment of the invention.</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 2</figref> is an illustration of a filter cartridge, according to an example embodiment of the invention.</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 3</figref> is an illustration of a filter end view, according to an example embodiment of the invention.</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 4</figref> is an illustration of another filter cartridge, according to an example embodiment of the invention.</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 5</figref> is an illustration of another filter cartridge, according to an example embodiment of the invention.</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 6</figref> is a flow diagram of an example method according to an example embodiment of the invention.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00016-en" num="0016">Embodiments of the invention will be described more fully hereinafter with reference to the accompanying drawings, in which embodiments of the invention are shown. This invention may, however, be embodied in many different forms and should not be construed as limited to the embodiments set forth herein; rather, these embodiments are provided so that this disclosure will be thorough and complete, and will fully convey the scope of the invention to those skilled in the art. Like numbers refer to like elements throughout.</p>
+      <p id="p-00017-en" num="0017">Certain embodiments of the invention may enable imparting structural support to a pleated filter material. In an example embodiment, a thermoplastic elastomer material (herein referred to as “iPLAS”) may be extruded and applied externally on a rolled section of pleated media to impart structural support. According to example embodiments, iPLAS retaining material may be applied on an inner diameter of the rolled pleated material to provide structural support for a filter made with pleated filter material. In accordance with certain example embodiments, the iPLAS retaining material may be extruded and applied in one or more continuous loops on the outer and/or inner diameter of the pleated media element. In accordance with example embodiments, the iPLAS retaining material may be extruded and applied to maintain shape, pleat spacing and/or relative position of the pleats.</p>
+      <p id="p-00018-en" num="0018">According to example embodiments of the invention, the iPLAS material may be extruded and applied to the pleated filter material in a semi-liquid form, with viscosity and flow controlled at least in part by temperature. According to certain example embodiments, the iPLAS material, in its heated or semi-liquid state, may partially absorb into a depth of the pleated filter material upon application, and may become attached, entangled, or fused within at least a portion of the filter's fiber structure. Then, according to an example embodiment, when the iPLAS material cools and becomes a substantially solid support structure, the portion of the thermoplastic in contact with the filter material may be attached to the tips of the pleated filter material without additional adhesive.</p>
+      <p id="p-00019-en" num="0019">According to example embodiments of the invention, filters made using the methods described herein may be suitable for imparting strength to filters for structural integrity and to prevent ripping or damage to the filter during filtering and/or during reverse pulse cleaning processes.</p>
+      <p id="p-00020-en" num="0020">As indicated in the background section above, a typical pulse or static filter cartridge contains filter media sandwiched between two layers of expandable metal mesh. The metal mesh layers create a rigid cage around the filter element. In contrast, and according to example embodiments of the invention, one or more of the metal mesh layers may be replaced by the iPLAS material. In one example embodiment, a filter cartridge may include iPLAS material instead of expandable metal reinforcement on the outer diameter. In another example embodiment, a filter cartridge may include iPLAS material instead of expandable metal reinforcement on the inner diameter. In another example embodiment, a filter cartridge may include iPLAS material instead of expandable metal reinforcement on both the inner and outer diameters, thereby sandwiching the pleated filter material between bands of iPLAS. In an example embodiment, the iPLAS band may be configured to provide structural support, similar to the metal mesh, but the iPLAS may provide additional exposure of the filtration media to the surrounding plenum, which may be beneficial during filtering and/or during the reverse pulse cleaning process.</p>
+      <p id="p-00021-en" num="0021">Various thermoplastic elastomer extrusion configurations in conjunction with pleated filter media may be utilized for preparing filter cartridges, according to example embodiments of the invention, and will now be described with reference to the accompanying figures.</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 1</figref> illustrates an example filter house <b>100</b>, according to an example embodiment, for which embodiments of the invention may be utilized. For example, the filter house <b>100</b> may include an array of filter cartridges <b>102</b>. In an example embodiment, un-filtered air <b>104</b> may enter the filter house <b>100</b> via an unfiltered air plenum <b>106</b> in communication with at least one side of the filter cartridges <b>102</b> (in this case, for example, an exterior side). In an example embodiment, impurities may be removed from the input air <b>104</b> air passing through the filter cartridges <b>102</b>, and the clean air on the interior part of the filter cartridges <b>102</b> may travel through a clean air plenum <b>108</b>. In an example embodiment, the unfiltered air plenum <b>106</b> and the clean air plenum <b>106</b> are separated by the filter media so that unfiltered air <b>104</b> passes through the filter cartridges <b>102</b> to enter the clean air plenum <b>108</b>.</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 1</figref> depicts a filter house having twelve filter cartridges <b>102</b> in each vertical column, in accordance with an embodiment of the invention. However, the filter house may include any number of filter cartridges <b>102</b>. The filter cartridges <b>102</b> are generally elongate and may be arranged parallel (e.g., along axes of elongation) to each other in a substantially vertical manner. It can be appreciated that the filter cartridges may have lengths, widths, and profile shapes that differ dependent upon desired configurations.</p>
+      <p id="p-00024-en" num="0024">According to example embodiments, the filter cartridges <b>102</b> may be capable of filtering air to remove a variety of impurities. For instance, the filter cartridges <b>102</b> may be used, but are not limited, to filter hot gas(es) with temperature of up to approximately 500° F. (260° C.) and with temperature surges up to approximately 700° F. (371° C.). In addition, example embodiment of the filter cartridges <b>102</b> may be used in applications in environments that may have gas streams or dust that is acidic or alkaline. These applications may include, but are not limited to, carbon black processing, titanium dioxide processing, etc.</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 2</figref> depicts an example embodiment of a filter cartridge <b>200</b> having pleated filter material <b>202</b> supported radially by bands of outer supports <b>204</b>, in accordance with another embodiment of the invention. The outer supports <b>204</b> may be made by extruding thermoplastic elastomer (iPLAS) in one or more continuous rings. According to an example embodiment, the outer supports <b>204</b> may be extruded directly onto the pleated filter material <b>202</b> and the column of pleated filter material <b>202</b> may be rotated about an axis of elongation while extruding the iPLAS material in order to form one or more continuous outer support <b>204</b> bands. In another example embodiment, the outer supports <b>204</b> may be extruded directly onto the pleated filter material <b>202</b> and the column of pleated filter material <b>202</b> may be rotated about an axis of elongation while translating the column of pleated material <b>202</b> along the axis of elongation while extruding the iPLAS material in order to form a continuous helical spiral of outer support <b>204</b> along the length of the filter cartridge <b>202</b>.</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 2</figref> also shows an example embodiment of the invention where the filter cartridge <b>200</b> includes an inner mesh support <b>208</b>, but outer extruded iPLAS outer supports <b>204</b>. Example embodiments of the invention may include a filter aperture <b>206</b> for which clean air may exit or dirty air may enter, depending on the air handling configuration. Example embodiments may include a housing seal <b>210</b>. In an example embodiment, the housing seal <b>210</b> may provide an air-tight seal with a filter house tube sheet or other mounting interface. In an example embodiment, the housing seal <b>210</b> may include metal. In an example embodiment, the housing seal <b>210</b> may include extruded iPLAS material.</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 3</figref> depicts a cross sectional view of a filter cartridge <b>300</b>, according to an example embodiment of the invention. As indicated in this example embodiment, the filter cartridge <b>300</b> may include pleated filter material <b>302</b>, outer support material <b>304</b>, optional inner support material <b>306</b>, filter material ends <b>308</b>, and a filter aperture <b>310</b>. According to an example embodiment, the outer support <b>304</b> may be extruded thermoplastic elastomer (iPLAS) materials. According to another example embodiment, the outer support <b>304</b> may be expanded metal mesh. The inner support material <b>306</b> may either be omitted, or embodied in one of two alternative forms, according to example embodiments of the invention: (i) extruded thermoplastic elastomer (iPLAS) material, or (ii) expanded metal mesh.</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 4</figref> depicts an example two-piece filter cartridge <b>400</b>, according to an example embodiment of the invention, having outer iPLAS supports <b>404</b> and inner iPLAS supports <b>408</b> for retaining and supporting the pleated filter material <b>402</b>. According to an example embodiment, the filter cartridge <b>400</b> may include a housing seal <b>410</b>. In an example embodiment, the housing seal <b>410</b> may provide an air-tight seal interface with a filter house tube sheet or other mounting interface. In an example embodiment, the housing seal <b>410</b> may include metal. In an example embodiment, the housing seal <b>410</b> may include extruded iPLAS material. In other example embodiments, the housing seal <b>410</b> may include combinations of metal and other suitable materials such as plastic, rubber, etc.</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 5</figref> illustrates another example view of a two-piece filter cartridge <b>500</b> according to an embodiment of the invention. In this example embodiment, the filter cartridge may include an end support and cap <b>502</b>, that is positioned at the end of the filter cartridge <b>500</b>, and opposite of the filter aperture (as in <b>206</b>, <figref>FIG. 2</figref>). In an example embodiment, the end support and cap <b>502</b> may be made of metal or rigid plastic, and may provide a means for attaching and securing the filter cartridge to the filter house tube sheet. According to an example embodiment, and as illustrated in both <figref>FIG. 4</figref> and <figref>FIG. 5</figref>, the filter cartridge <b>500</b> may include two sections: a cylindrical section <b>504</b>, and a conical section <b>506</b>, for example. In an example embodiment, the two sections <b>504</b><b>506</b> may be joined or pressed together near the midsection of the combined cartridge <b>500</b>, and may provide a means to increase the size and effective filtering surface area of the combined filter cartridge <b>500</b>, while allowing the weight of each filter section to be light enough for service personnel to manually install or replace the filters.</p>
+      <p id="p-00030-en" num="0030">An example method <b>600</b> for imparting structural support to a pleated filter material in accordance with an embodiment of the invention will now be described with reference to the flowchart of <figref>FIG. 6</figref>. The method <b>600</b> starts in block <b>602</b>, and according to an example embodiment of the invention, the method <b>600</b> includes forming a filter structure from one or more sections of pleated filter media, wherein the filter structure comprises one or more filter pleats. In block <b>604</b>, the method <b>600</b> includes extruding a banding material to form one or more radial support regions in at least circumferential contact with at least one of an inner or an outer surface of the filter structure. In block <b>606</b>, the method <b>600</b> includes maintaining spacing between the one or more filter pleats of the filter structure with the one or more radial support regions. The method <b>600</b> ends after block <b>606</b>.</p>
+      <p id="p-00031-en" num="0031">According to example embodiments, a filter structure may be formed by connecting at least two ends of a continuous section of pleated filter material. Example embodiments of the invention may include extruding radial support regions or banding material in one or more continuous bands in contact with the pleated filter material. In an example embodiment, the radial support regions or banding material may provide radial structural support of the pleated filter material. Example embodiments may include extruding a banding material that includes a thermoplastic elastomeric (TPE) material and such example materials may form a substantially solid structure that fuses with one or more portions of the pleated filter material. According to example embodiments, the banding material may be extruded in continuous bands up to about 1 inch (2.5 cm) in width. Certain example embodiments may further include applying a metal mesh in contact with at least one of an inner or an outer surface of the filter structure.</p>
+      <p id="p-00032-en" num="0032">In accordance with an example embodiment of the invention, the banding or support structures can be made from any suitable material. In an example embodiment, extruded polyester material may be used. According to example embodiments, polyester material may include thermoplastic, polyester, elastomers, etc. A non-limiting example of thermoplastic, polyester, elastomers includes HYTREL®available from E. I. Du Pont de Nemours &amp; Company, having a place of business at 1007 Market Street, Wilmington, Del. 19898. HYTREL® utilizes polyether-ester block copolymers consisting of hard (crystalline) segment of polybutylene terephthalate and soft (amorphous) segment based on long-chain polyether glycols. In addition, HYTREL® combines the features found in elastomers and flexible plastics including toughness, resilience, high resistance to creep, impact and flex fatigue, flexibility at low temperatures and good property retention at elevated temperatures. Moreover, HYTREL® resists deterioration from many industrial chemicals, oils and solvents. Furthermore, HYTREL® is supplied as cylindrical to oval-shaped pellets that may be extruded under heat and pressure.</p>
+      <p id="p-00033-en" num="0033">Two specific grades of HYTREL® that are suitable for use in the banding or support structures, according to example embodiments, include HYTREL® 5556 or HYTREL® 8238 thermoplastic polyester elastomers. HYTREL® 8238, without additional additives, is a high modulus molding and extrusion grade, thermoplastic, polyester, elastomer that also contains color-stable antioxidants. The hardness measured by a durometer for HYTREL® 8238 is 82 Shore D, while the flexural modulus at −40° C., 23° C., and 100° C. is 3,030 MPa, 1,210 MPa, and 255 MPa, respectively. Tensile strength at breaking, elongation at breaking, tensile strength at 5% strain, and tensile strength at 10% strain for HYTREL® 8238 is 48.3 MPa, 350%, 27.6 MPa, and 30.3 MPa, respectively. Toughness characteristics for the HYTREL® 8238 includes izod impact at −40° C. and 23° C., resistance to flex cut growth and initial tear resistance with values of 30 J/m, 40 J/m, NA (cycles to 5× cut growth) and 253 kN/m respectively. Thermal characteristics for the HYTREL® 8238 includes a melt flow rate, a melting point, a vicat softening point, and a deflection temperature under flexural load at values of 0.5 MPa and 1.8 MPa with values of 12.5 g/10 minutes, 240° C., 223° C., 212° C., 140° C., and 55° C., respectively. Other characteristics for the HYTREL® 8238 include specific gravity, water absorption at a 1 kilogram load, taber abrasion with a CS-17 wheel and taber abrasion with a H-18 wheel with values of 1.28, 0.3%, 9 and 20, respectively.</p>
+      <p id="p-00034-en" num="0034">HYTREL® 5556, without additional additives, is a medium modulus molding and extrusion grade, thermoplastic, polyester, elastomer that contains color-stable antioxidants. The hardness measured by a durometer for HYTREL® 5556 is 55 Shore D, while the flexural modulus at −40° C., 23° C. and 100° C. is 760 MPa, 207 MPa and 110 MPa, respectively. Tensile strength at breaking, elongation at breaking, tensile strength at 5% strain, and tensile strength at 10% strain for HYTREL® 5556 is 40 MPa, 500%, 6.9 MPa, and 10.3 MPa, respectively. Toughness characteristics for the HYTREL® 5556 include an izod impact at −40° C. and 23° C., resistance to flex cut growth and initial tear resistance with values of 170 J/m, No Break, 5×10<sup>5 </sup>(cycles to 5× cut growth) and 158 kN/m respectively. Thermal characteristics for the HYTREL® 5556 includes a melt flow rate, a melting point, a vicat softening point, and a deflection temperature under flexural load at values of 0.5 MPa and 1.8 MPa, with values of 7.5 g/10 minutes, 220° C., 203° C., 180° C., 90° C., and 49° C., respectively. Other characteristics for the HYTREL® 5556 include specific gravity, water absorption at a 1-kilogram load, taber abrasion with a CS-17 wheel and taber abrasion with a H-18 wheel with values of 1.20, 0.5%, 6 and 64, respectively.</p>
+      <p id="p-00035-en" num="0035">In accordance with example embodiments of the invention, thermoplastic, polyester, elastomers have been developed for use with the banding or support structures. Example material embodiments may be referred to as iPLAS technology. In an example embodiment, the hardness measured by a durometer for the thermoplastic, polyester, elastomer may range from about 40 Shore D to about 82 Shore D. In another example embodiment, the hardness for the thermoplastic, polyester, elastomer may range from about 50 Shore D to about 65 Shore D.</p>
+      <p id="p-00036-en" num="0036">In an example embodiment, the flexural modulus at −40° C. for the thermoplastic, polyester, elastomer may range from about 155 MPa to about 3,030 MPa. According to another example embodiment, the flexural modulus at −40° C. for the thermoplastic, polyester, elastomer may range from about 500 MPa to about 2,410 MPa. According to another example embodiment, the flexural modulus at −40° C. for the thermoplastic, polyester, elastomer may range from about 760 MPa to about 1,800 MPa. According to an example embodiment, the flexural modulus at 23° C. for the thermoplastic, polyester, elastomer may be within a range from about 62 MPa to about 1,210 MPa. According to another example embodiment, the flexural modulus at 23° C. for the thermoplastic, polyester, elastomer may be within a range from about 150 MPa to about 570 MPa, or in a range from about 207 MPa to about 330 MPa. In accordance with an example embodiment, the flexural modulus at 100° C. for the thermoplastic, polyester, elastomer may be in the range from about 27 MPa to about 255 MPa, in a range from about 75 MPa to about 207 MPa, or in a range from about 110 MPa to about 150 MPa.</p>
+      <p id="p-00037-en" num="0037">According to example embodiments, the tensile strength at breaking for the thermoplastic, polyester, elastomer may be in a range from about 28 MPa to about 48.3 MPa, in a range from about 35 MPa to about 45.8 MPa, or in a range from about 40 MPa to about 41 MPa.</p>
+      <p id="p-00038-en" num="0038">According to example embodiments, the elongation at breaking for the thermoplastic, polyester, elastomer may be in a range from about 350% to about 550%, in a range from about 360% to about 525%, or in a range from about 420% to about 500%. According to example embodiments, the tensile strength at 5% strain for the thermoplastic, polyester, elastomer may be in a range from about 2.4 MPa to about 27.6 MPa, in a range from about 5.0 MPa to about 14 MPa, or in a range from about 6.9 MPa to about 12 MPa.</p>
+      <p id="p-00039-en" num="0039">According to example embodiments, the tensile strength at 10% strain for the thermoplastic, polyester, elastomer may be in a range from about 3.6 MPa to about 30.3 MPa, in a range from about 7.5 MPa to about 20 MPa, or in a range from about 10.3 MPa to about 16 MPa.</p>
+      <p id="p-00040-en" num="0040">The notched izod impact at −40° C. for the thermoplastic, polyester, elastomer may be in a range from about 25 J/m to “No Break”, in a range from about 40 J/m to “No Break”, or in a range from about 170 J/m to “No Break”. In example embodiments, the notched izod impact at 23° C. for the thermoplastic, polyester, elastomer is preferably in a range from about 35 J/m to “No Break”, or in a range from “No Break” to “No Break”.</p>
+      <p id="p-00041-en" num="0041">In accordance with example embodiments, the resistance to flex cut growth for the thermoplastic, polyester, elastomer is in a range from about 3×10<sup>4 </sup>cycles to 5× cut growth to greater than 1×10<sup>6 </sup>cycles to 5<i>x </i>cut growth, in a range from about 4×10<sup>5 </sup>cycles to 5× cut growth to greater than 1×10<sup>6 </sup>cycles to 5× cut growth, or in a range from about 5×10<sup>5 </sup>cycles to 5× cut growth to greater than 1×10<sup>6 </sup>cycles to 5× cut growth.</p>
+      <p id="p-00042-en" num="0042">In accordance with example embodiments, the initial tear resistance for the thermoplastic, polyester, elastomer is in a range from about 100 kN/m to about 260 kN/m, in a range from about 130 kN/m to about 200 kN/m, or in a range from about 150 kN/m to about 180 kN/m.</p>
+      <p id="p-00043-en" num="0043">In certain example embodiments, the melt flow rate for the thermoplastic, polyester, elastomer is in a range from about 4.0 g/10 minutes to about 15.0 g/10 minutes, in a range from about 7.0 g/10 minutes to about 11.0 g/10 minutes, or in a range from about 7.0 g/10 minutes to about 9.0 g/10 minutes.</p>
+      <p id="p-00044-en" num="0044">In example embodiments, the melting point for the thermoplastic, polyester, elastomer is in a range from about 150° C. to about 225° C., in a range from about 195° C. to about 218° C., or in a range from about 203° C. to about 211° C.</p>
+      <p id="p-00045-en" num="0045">According to example embodiments, the vicat softening point for the thermoplastic, polyester, elastomer is in a range from about 108° C. to about 220° C., in a range from about 160° C. to about 205° C., or in a range from about 180° C. to about 195° C.</p>
+      <p id="p-00046-en" num="0046">In accordance with example embodiments, the deflection temperature under flexural load at values of 0.5 MPa for the thermoplastic, polyester, elastomer may be in a range from about 50° C. to about 150° C., in a range from about 70° C. to about 130° C., or in a range from about 90° C. to about 115° C.</p>
+      <p id="p-00047-en" num="0047">In example embodiments, the deflection temperature under flexural load at values of 1.8 MPa for the thermoplastic, polyester, elastomer may be in a range from about 40° C. to about 60° C., in a range from about 45° C. to about 52° C., or in a range from about 49° C. to about 51° C.</p>
+      <p id="p-00048-en" num="0048">In accordance with example embodiments, the specific gravity for the thermoplastic, polyester, elastomer may be in a range from about 1.10 to about 1.30, in a range from about 1.15 to about 1.25, or in a range from about 1.20 to about 1.22.</p>
+      <p id="p-00049-en" num="0049">The water absorption at a 1 kilogram load for the thermoplastic, polyester, elastomer may be in a range from about 0.25% to about 0.75%, in a range from about 0.3% to about 0.6%, or in a range from about 0.3% to about 0.5%. The taber abrasion with a CS-17 wheel for the thermoplastic, polyester, elastomer may be in a range from about 3 mg/1,000 revolutions to about 15 mg/1,000 revolutions, in a range from about 6 mg/1,000 revolutions to about 13 mg/1,000 revolutions. or in a range from about 7 mg/1,000 revolutions to about 10 mg/1,000 revolutions. The taber abrasion with a H-18 wheel for the thermoplastic, polyester, elastomer may be in a range from about 20 mg/1,000 revolutions to about 100 mg/1,000 revolutions, in a range from about 50 mg/1,000 revolutions to about 75 mg/1,000 revolutions, or in a range from about 60 mg/1,000 revolutions to about 70 mg/1,000 revolutions.</p>
+      <p id="p-00050-en" num="0050">According to example embodiments of the invention, additives may be included in the thermoplastic, polyester, elastomer. For example, pure thermoplastic, polyester, elastomer without additional additives may be in range from about 80 volume % to about 95 volume %, in a range from about 82 volume % to about 90 volume %, or in range from about 85 volume % to about 86 volume %.</p>
+      <p id="p-00051-en" num="0051">A first illustrative, but non-limiting, example of an additive can include a hydrolytic stabilizer compound for improving serviceability in hot, moist environments. An illustrative, but non-limiting example, includes HYTREL® 10MS available from E. I. Du Pont de Nemours &amp; Company, having a place of business at 1007 Market Street, Wilmington, Del. 19898. In illustrative, but non-limiting examples, a percentage of hydrolytic stabilizer in the thermoplastic, polyester, elastomer compound may be in a range from about 2.0 volume % to about 12.0 volume %, in a range from about 5.0 volume % to about 10 volume %, or in a range from about 9.0 volume % to about 9.5 volume %.</p>
+      <p id="p-00052-en" num="0052">According to example embodiments, another additive can also include a heat stabilizer for retarding thermal oxidative degradation and extend useful life at elevated temperatures. For example, an additive can include HYTREL® 30HS available from E. I. Du Pont de Nemours &amp; Company, having a place of business at 1007 Market Street, Wilmington, Del. 19898. In an example embodiment, heat stabilizer in the thermoplastic, polyester, elastomer compound may be in a range from about 2.0 volume % to about 6.0 volume %, in a range from about 3.0 volume % to about 5.0 volume %, or in a range from about 4.0 volume % to about 4.75 volume %. These additives are illustrative examples of the numerous additives that may be utilized with the invention.</p>
+      <p id="p-00053-en" num="0053">In accordance with example embodiments, HYTREL® 5556 may be utilized with the above two additives. In such embodiments, the melt flow rate at 220° C. may be in a range from 5.0 grams per 10 minutes to about 10.0 grams per 10 minutes, or in a range of 6.0 grams per 10 minutes to about 9.0 grams per 10 minutes. According to example embodiments, the number average molecular weight may be in a range from 30,000 to about 60,000, or in a range of 35,000 to about 55,000. In certain example embodiments, the weight average molecular weight may be in a range from 60,000 to about 100,000, or in a range of 65,000 to about 98,000. According to example embodiments, the intrinsic viscosity may be in a range from 0.7 dL/g to about 1.8 dL/g, or in a range of 1.1 dL/g to about 1.5 dL/g.</p>
+      <p id="p-00054-en" num="0054">According to example embodiments of the inventions, a filter cartridge may be made according to example embodiments presented herein and may be utilized for filtering particles from a gas or liquid. Example embodiments include a filter media having a plurality of pleats and arranged in a substantially cylindrical or conical shape about an axis. Example embodiments may include at least one end cap wherein least a portion of the filter media is secured to the at least one end cap. Example embodiments may also include one or more radial support regions in circumferential contact with at least one of an inner or an outer surface of the filter media, wherein spacing of at least some of the plurality of pleats is maintained at least in part by the one or more radial support regions.</p>
+      <p id="p-00055-en" num="0055">Accordingly, example embodiments of the invention can provide the technical effects of imparting structural support to pleated filter media. Example embodiments of the invention can also provide the further technical effects of replacing expensive metal mesh components by extruding and applying thermoplastic elastomer supports to the filter. Example embodiments of the invention can also provide the further technical effects of reducing or eliminating the need to glue the filter support structure to the filter media. Example embodiments of the invention can also provide the further technical effects of creating greater media exposure to the surrounding plenum.</p>
+      <p id="p-00056-en" num="0056">As desired, embodiments of the invention may include the filter cartridges and extruded thermoplastic elastomer supports with more or less of the components illustrated in <figref>FIGS. 1 through 5</figref>.</p>
+      <p id="p-00057-en" num="0057">While the invention has been described in connection with what is presently considered to be the most practical and various embodiments, it is to be understood that the invention is not to be limited to the disclosed embodiments, but on the contrary, is intended to cover various modifications and equivalent arrangements included within the scope of the appended claims. Although specific terms are employed herein, they are used in a generic and descriptive sense only and not for purposes of limitation.</p>
+      <p id="p-00058-en" num="0058">This written description uses examples to disclose the invention, including the best mode, and also to enable any person skilled in the art to practice the invention, including making and using any devices or systems and performing any incorporated methods. The patentable scope of the invention is defined in the claims, and may include other examples that occur to those skilled in the art. Such other examples are intended to be within the scope of the claims if they have structural elements that do not differ from the literal language of the claims, or if they include equivalent structural elements with insubstantial differences from the literal language of the claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>The claimed invention is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20130813">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>1. A method for imparting structural support to a pleated filter material, the method comprising:
+<claim-text>forming a filter structure from one or more sections of pleated filter media, wherein the filter structure comprises one or more filter pleats;</claim-text><claim-text>extruding a thermoplastic polyester elastomeric (TPE) material to form one or more radial support regions in at least circumferential contact with an inner surface and an outer surface of the filter structure; and</claim-text><claim-text>maintaining spacing between the one or more filter pleats of the filter structure with the one or more radial support regions.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>2. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising maintaining radial structural support of the pleated filter material with the one or more extruded radial support regions.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>3. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the TPE material forms a substantially solid structure that fuses with one or more portions of the pleated filter material.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>4. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein extruding the TPE material comprises extruding one or more continuous bands in contact with the pleated filter material.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>5. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising applying a metal mesh in contact with at least one of the inner surface or the outer surface of the filter structure.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>6. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein extruding the TPE material comprises extruding one or more continuous bands up to 1″ in width.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>7. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein forming the filter structure comprises connecting at least two ends of a continuous section of pleated filter material.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>8. A filter cartridge for filtering particles from a gas or liquid, comprising:
+<claim-text>a filter media comprising a plurality of pleats and arranged in a substantially cylindrical or conical shape about an axis;</claim-text><claim-text>at least one end cap wherein at least a portion of the filter media is secured to the at least one end cap; and</claim-text><claim-text>one or more radial support regions in circumferential contact with an inner surface and an outer surface of the filter media, wherein spacing of at least some of the plurality of pleats is maintained at least in part by the one or more radial support regions, and wherein the one or more radial support regions comprise extruded thermoplastic polyester elastomeric (TPE) material.</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>9. The filter cartridge of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the one or more radial support regions are configured to provide radial support and containment of the filter media.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>10. The filter cartridge of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the one or more radial support regions comprise one or more continuous bands in contact with at least a portion of the filter media.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>11. The filter cartridge of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, further comprising a metal mesh in contact with at least one of the inner surface or the outer surface of the filter media.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>12. The filter cartridge of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the one or more radial support regions comprise extruded continuous bands up to 1″ in width.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>13. A filter cartridge configured for filtering particles from a gas or liquid, comprising:
+<claim-text>a filter media comprising a plurality of pleats and arranged in a substantially cylindrical or conical structure about an axis; and</claim-text><claim-text>one or more radial support regions in circumferential contact with an inner surface and an outer surface of the filter media, wherein spacing of the plurality of pleats is maintained at least in part by the one or more radial support regions, and wherein the one or more radial support regions comprise extruded thermoplastic polyester elastomeric (TPE) material.</claim-text></claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>14. The filter cartridge of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the one or more radial support regions are configured to provide radial support and containment of the filter media.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>15. The filter cartridge of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the one or more radial support regions comprise one or more continuous bands in contact with at least a portion of the filter media.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>16. The filter cartridge of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, further comprising a metal mesh in contact with at least one of the inner surface or the outer surface of the filter media.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>17. The filter cartridge of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the one or more radial support regions comprise extruded continuous bands up to 1″ in width.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>18. The filter cartridge of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, further comprising at least one end cap with at least a portion of the filter media secured to the end cap.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US8506667B2_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US08506667-20130813-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US8506667B2_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US08506667-20130813-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US8506667B2_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US08506667-20130813-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US8506667B2_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US08506667-20130813-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US8506667B2_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US08506667-20130813-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US8506667B2_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US08506667-20130813-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US8506667B2_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US08506667-20130813-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US8506667B2_00008.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US08506667-20130813-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US8506667B2.PDF" type="pdf" size="649303" pages="13" />
+</lexisnexis-patent-document>

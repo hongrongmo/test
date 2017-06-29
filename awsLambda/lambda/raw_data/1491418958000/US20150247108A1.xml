@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247108A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021456" date-changed="20160118" time-changed="124402">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140188">
+        <country>US</country>
+        <doc-number>20150247108</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14612475</doc-number>
+        <date>20150203</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="regional">
+        <country>EP</country>
+        <doc-number>14157264</doc-number>
+        <date>20140228</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>C11D   3/00        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>11</class>
+        <subclass>D</subclass>
+        <main-group>3</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C11D   3/20        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>11</class>
+        <subclass>D</subclass>
+        <main-group>3</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C11D   3/37        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>11</class>
+        <subclass>D</subclass>
+        <main-group>3</main-group>
+        <subgroup>37</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>C11D   3/0089      20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>11</class>
+        <subclass>D</subclass>
+        <main-group>3</main-group>
+        <subgroup>0089</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C11D   3/2006      20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>11</class>
+        <subclass>D</subclass>
+        <main-group>3</main-group>
+        <subgroup>2006</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C11D   3/201       20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>11</class>
+        <subclass>D</subclass>
+        <main-group>3</main-group>
+        <subgroup>201</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C11D   3/3749      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>11</class>
+        <subclass>D</subclass>
+        <main-group>3</main-group>
+        <subgroup>3749</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C11D   3/3765      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>11</class>
+        <subclass>D</subclass>
+        <main-group>3</main-group>
+        <subgroup>3765</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C11D   3/40        20130101 LI20140912BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>11</class>
+        <subclass>D</subclass>
+        <main-group>3</main-group>
+        <subgroup>40</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140912</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C11D   7/261       20130101 LI20140912BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>11</class>
+        <subclass>D</subclass>
+        <main-group>7</main-group>
+        <subgroup>261</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140912</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">19</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">DETERGENT</invention-title>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>The Procter &amp; Gamble Company</orgname>
+            <address>
+              <city>Cincinnati</city>
+              <state>OH</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>BETTIOL</last-name>
+            <first-name>Jean-Luc Philippe</first-name>
+            <address>
+              <city>Etterbeek</city>
+              <country>BE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>MAES</last-name>
+            <first-name>Jef Annie Alfons</first-name>
+            <address>
+              <city>Sint-Niklaas</city>
+              <country>BE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>KEULEERS</last-name>
+            <first-name>Robby Renilde Francois</first-name>
+            <address>
+              <city>Lippelo</city>
+              <country>BE</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173457151">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015130735</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247108</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150203</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2913388</doc-number>
+            <kind>A1</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173457150">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015130735</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150225</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247108</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150203</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2913388</doc-number>
+            <kind>A1</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A liquid detergent aqueous composition comprising a mono-alcohol and an opacifier wherein the opacifier has improved stability in ethanol versus Acusol 301 and wherein the opacifier preferably is a high order polymer.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150203</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247108A1</docdb-publication-number>
+      <docdb-application-id>444210117</docdb-application-id>
+      <new-owner>THE PROCTER &amp; GAMBLE COMPANY, OHIO</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:BETTIOL, JEAN-LUC;MAES, JEF ANNIE ALFONS;KEULEERS, ROBBYRENILDE FRANCOIS;SIGNING DATES FROM 20140630 TO 20140807;REEL/FRAME:034874/0714</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00001-en" num="0001">The present invention is in the field of detergents. In particular, it relates to a liquid detergent, more in particular to an aqueous liquid detergent comprising a mono-alcohol and an opacifier. The invention also relates to a process for making a premix and a process for making a liquid detergent using the premix. The detergent is aesthetically pleasant and presents good stability. The process entitles easiness of manufacture and versatility.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">Some consumers find aesthetically pleasant opaque liquid detergents. Opaque products seem to connote quality and sophistication. This appearance can be achieved by the use of opacifiers. Opacifiers are usually suspensions of submicron size particles that modify the appearance of liquids through mainly light scattering. The level of opacifier necessary to confer this pleasant aesthetics to a liquid detergent is not very high.</p>
+      <p id="p-00003-en" num="0003">It can be very difficult to handle an opacifier during manufacture because the particles can be prone to flocculation, sedimentation or any other type of separation. It is also difficult to keep the particles of the opacifier suspended during the life of a liquid detergent.</p>
+      <p id="p-00004-en" num="0004">Opacifiers can be susceptible to microbial growth. In order to store an opacifier in a manufacturing environment a preservative needs to be added. Mono-alcohols are usually added as preservatives to pre-mixes containing an opacifier. A problem might occur when mixing is not totally homogeneous and local pockets of mono-alcohol are formed. In these cases the mono-alcohol, that usually has good solvency properties, can negatively impact the stability of the suspension. Thus good mixing is needed in the process of manufacture in order to avoid these local pockets of mono-alcohol. This sometimes can impose too strenuous manufacturing limitations, such a long mixing times resulting in manufacturing capacity reduction, they also need more energy for mixing, etc. It has been surprisingly found that with the opacifier of the invention, this problem can be ameliorated and it can even be avoided, thereby providing manufacture flexibility.</p>
+      <p id="p-00005-en" num="0005">The objective of the present invention is to provide a detergent with an opaque appearance that is physically stable under storage and transport and a process for making the product. The process should be flexible and versatile.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00006-en" num="0006">According to the first aspect of the invention, there is provided a liquid detergent composition. The composition is aqueous. By “aqueous” is herein meant that the composition comprises more than 15%, preferably more than 20% and more preferably more than 30% by weight of the composition of water.</p>
+      <p id="p-00007-en" num="0007">The composition comprises a mono-alcohol and an opacifier. By “mono-alcohol” is herein meant a hydrocarbon comprising only one —OH group.</p>
+      <p id="p-00008-en" num="0008">According to the first aspect, the opacifier has improved stability in ethanol. By “improved stability” is herein meant that under the same conditions the opacifier of the invention is stable, preferably physically stabile, in a water-ethanol solution comprising a higher level of ethanol than the same solution comprising Acusol 301. Stability is evaluated by visual observation. By “stable” is herein meant that when the solution is observed with the naked eye no separation of the particles can be seen. In particular for the purpose of this invention an opacifier is considered to be more stable than Acusol 301 if the opacifier is stable in a water-ethanol mixture comprising 10% by weight of the mixture of opacifier and more than 50% of ethanol.</p>
+      <p id="p-00009-en" num="0009">Acusol OP 301, herein shortened as Acusol 301, is an opacifier supplied by Dow. Acusol 301 is provided as an aqueous polymeric dispersion comprising 40% polymeric particles by weight of the dispersion. The polymer is synthesized from styrene and acrylate comonomers and is made through emulsion polymerization. The polymer is present in the dispersion in particulate form.</p>
+      <p id="p-00010-en" num="0010">“Polymer,” as used herein and as defined by F W Billmeyer, JR. in Textbook of Polymer Science, second edition, 1971, is a relatively large molecule made up of the reaction products of smaller chemical repeat units. Normally, polymers have 11 or more repeat units. Polymers may have structures that are linear, branched, star shaped, looped, hyperbranched, crosslinked, or a combination thereof; polymers may have a single type of repeat unit or they may have more than one type of repeat unit. Polymers may have the various types of repeat units arranged randomly, in sequence, in blocks, in other arrangements, or in any mixture or combination thereof. Chemicals that react with each other to form the repeat units of a polymer are known herein as “monomers” and a polymer is said herein to be made of “polymerized units” of the monomers that reacted to form the repeat units.</p>
+      <p id="p-00011-en" num="0011">Preferably the opacifier of the invention is a polymer and more preferably a high order polymer. By “high order polymer” is meant a polymer that is made from more than two monomers, preferably three or more. According to the second aspect of the invention, the polymer is a high order polymer.</p>
+      <p id="p-00012-en" num="0012">Preferably, the opacifier of the invention is a polymer comprising monomers comprising styrene. More preferably, the opacifier further comprises monomers comprising units selected from the group consisting of carboxylates including acrylate, maleate and methacrylate; carboxylic amides including acrylamide; alkenyl; alkoxy; polyalkoxy and mixtures thereof. Preferred carboxylate include acrylate and maleate.</p>
+      <p id="p-00013-en" num="0013">Especially preferred for use herein is a polymer comprising styrene, acrylate and monomers comprising maleate. In particular a styrene-polyethylene glycol-10 maleate-acrylate or a styrene/polyethylene glycol-10 maleate/nonoxanol-10 maleate/acrylate copolymer.</p>
+      <p id="p-00014-en" num="0014">Preferably the composition of the invention comprises from about 0.001% to about 3%, more preferably from about 0.005% to about 2% and especially from about 0.05% to about 1.5% by weight of the composition of opacifier. This level of opacifier seems to be optimum to provide the liquid detergent very appealing appearance.</p>
+      <p id="p-00015-en" num="0015">The liquid detergent of the invention comprises a mono-alcohol; the primary function of the mono-alcohol is to act as anti-microbial active. Preferably, the mono-alcohol has Hansen polarity parameter of from about 5 to about 15 (Mpa)<sup>1/2 </sup>and a Hansen hydrogen bonding parameter of from about 15 to about 25 (Mpa)<sup>1/2</sup>. Best performing alcohols have been found to be those selected from the group consisting of C1 to C3 alcohols and mixtures thereof, most preferred for use herein being ethanol.</p>
+      <p id="p-00016-en" num="0016">Especially preferred for use herein, in terms of appearance and stability, are compositions wherein the polymer is a styrene-polyethylene glycol-10 maleate-acrylate or a styrene/polyethylene glycol-10 maleate/nonoxanol-10 maleate/acrylate copolymer and the mono-alcohol is ethanol.</p>
+      <p id="p-00017-en" num="0017">According to a third aspect of the invention, there is provided a process for making a premix.</p>
+      <p id="p-00018-en" num="0018">The process comprises the step of mixing water, a mono-alcohol and an opacifier wherein the opacifier has improved stability in ethanol versus Acusol 301 and wherein the opacifier preferably is a high order polymer. The mixing step does not need to achieve perfect mixing, even if some pockets of mono-alcohol are formed, the opacifier is robust enough not to become instable. This presents a great advantage from the manufacture feasibility view point, reduce the mixing time and energy required.</p>
+      <p id="p-00019-en" num="0019">A “premix” for the purpose of this invention is the combination of a plurality of ingredients prior to its addition to subsequent ingredients to form the finish product.</p>
+      <p id="p-00020-en" num="0020">Preferably, the opacifier used to make the premix is in the form of an aqueous dispersion with a solid content of from about 10 to about 50% by weight of the dispersion. Preferably, the level of opacifier in the premix is from 2% to 20% by weight thereof. Preferably, the level of mono-alcohol is below 20%, more preferably from 15% to 1%, and especially from 12% to 5% by weight of the premix. When given the level of opacifier in the present invention, it meant the level of polymer particles.</p>
+      <p id="p-00021-en" num="0021">Especially preferred premixes comprise a styrene-polyethylene glycol-10 maleate-acrylate or a styrene/polyethylene glycol-10 maleate/nonoxanol-10 maleate/acrylate copolymer as opacifier and ethanol as mono-alcohol. This premix has been found to be very stable.</p>
+      <p id="p-00022-en" num="0022">According to another aspect of the invention, there is provided a process for making a liquid detergent composition comprising the steps of adding the premix of the invention to a detergent base.</p>
+      <p id="p-00023-en" num="0023">The features of the opacifier of the liquid detergent of the invention apply mutatis mutandis to the process for making the premix and the process for making the detergent.</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00024-en" num="0024">The present invention envisages a liquid detergent comprising a mono-alcohol and an opacifier. The detergent presents a good aesthetic profile and good stability. The invention also envisages a process for making a premix and a process for making a liquid detergent comprising the premix. The process is very robust in terms of stability of the final detergent.</p>
+      <heading id="h-00005-en" level="2">Mono-Alcohol</heading>
+      <p id="p-00025-en" num="0025">As stated before a “mono-alcohol” is a hydrocarbon comprising only one —OH group. Preferably, the mono-alcohol of the invention has a Hansen polarity parameter of from about 5 to about 15 (Mpa)<sup>1/2 </sup>and a Hansen hydrogen bonding parameter of from about 15 to about 25 (Mpa)<sup>1/2</sup>. The parameters can be found in Charles Hansen's Hansen Solubility Parameters, A User's Handbook, 2<sup>nd </sup>Edition from 2007.</p>
+      <p id="p-00026-en" num="0026">Preferably the mono-alcohol is selected from the group consisting of C1 to C3 alcohols and mixtures thereof, more preferably the mono-alcohol is ethanol.</p>
+      <heading id="h-00006-en" level="2">Opacifiers</heading>
+      <p id="p-00027-en" num="0027">Opacifiers are usually inert submicron size particles that when dispersed in liquid compositions can scatter light. They impart a milky and/or creamy appearance with uniform opacity to liquids. The opacifier of the invention exhibits an improved stability in ethanol compared to Acusol OP 301. Acusol OP 301 is commercially available from the Dow Company. Preferably the opacifier of the invention is an organic based opacifier, more preferably a polymeric opacifer, and especially a polymeric opacifier wherein the polymers are synthesized through emulsion polymerisation from styrene and acrylate monomers and monomers comprising maleate.</p>
+      <p id="p-00028-en" num="0028">Suitable opacifiers include those but are not limited to those commercially available from the Dow Company. Examples include Acusol OP 302 (Styrene-acrylate-divinylbenzene copolymer), Acusol OP 303 (Styrene-acrylamide copolymer) and Acusol OP 305 (Styrene/PEG-10 maleate—Nonoxynol-10 maleate/acrylate copolymer), most preferably Acusol OP 305. Opacifiers from the Opulyn series might also be suitable for the purpose of the invention. Alternatively, opacifiers could be sourced from the Cognis, Interpolymer, Omnova, Derypol, Indulor, Synthron and EOC surfactants companies.</p>
+      <p id="p-00029-en" num="0029">Preferred opacifiers have a molecular weight of from 1,000 to 1,000,000, more preferably from about 2,000 to about 500,000, most preferably from about 5,000 to about 20,000 g/mol, and a particle size (weight average mean diameter) of from about 10 to about 1,000 nm, more preferably about 100 to about 750 nm, most preferably of about 150 to about 500 nm</p>
+      <p id="p-00030-en" num="0030">The opacifier is preferably present at a level of from 0.001% to 3%, more preferably from 0.0025% to 2%, most preferably from 0.005 to 1% by weight of the final detergent composition.</p>
+      <p id="p-00031-en" num="0031">When formulated in the water/mono-alcohol premix, the opacifier is preferably present at a level between about 1 and about 50%, preferably about 3 and about 40%, most preferably between about 5 and about 20%.</p>
+      <heading id="h-00007-en" level="2">The Liquid Detergent</heading>
+      <p id="p-00032-en" num="0032">The liquid detergent is suitable for hand dishwashing, heavy duty laundry, hard surface cleaning, etc. Preferably the liquid detergent is a hand dishwashing detergent. It typically contains from 30% to 95%, preferably from 40% to 90%, more preferably from 50% to 85% by weight of a liquid carrier in which the other essential and optional components are dissolved, dispersed or suspended. One preferred component of the liquid carrier is water.</p>
+      <p id="p-00033-en" num="0033">Preferably the pH of the detergent is adjusted to between 3 and 14, more preferably between 4 and 13, more preferably between 6 and 12 and most preferably between 8 and 10. The pH of the detergent can be adjusted using pH modifying ingredients known in the art.</p>
+      <p id="p-00034-en" num="0034">The liquid detergent herein preferably comprises a surfactant system and more preferably a number of other optional ingredients such as builders, chelants, conditioning polymers, cleaning polymers, surface modifying polymers, soil flocculating polymers, structurants, emmolients, humectants, skin rejuvenating actives, enzymes, carboxylic acids, scrubbing particles, bleach and bleach activators, perfumes, malodor control agents, pigments, dyes, additional opacifiers, beads, pearlescent particles, microcapsules, organic and inorganic cations such as alkaline earth metals such as Ca/Mg-ions and diamines, suds suppressors/stabilizers/boosters, antibacterial agents, preservatives and pH adjusters and buffering means.</p>
+      <p id="p-00035-en" num="0035">The liquid detergent can comprise from about 1% to about 50%, preferably from about 5% to about 40% more preferably from about 8% to about 35% by weight thereof of a surfactant system. The surfactant system preferably comprises an alkoxylated anionic surfactant. The system can optionally comprise an amphoteric, non-ionic, zwitterionic, cationic surfactant and mixtures thereof.</p>
+      <p id="p-00036-en" num="0036">Preferably, the surfactant system comprises alkyl sulfates and/or alkyl ethoxy sulfates; more preferably a combination of alkyl sulfates and/or alkyl ethoxy sulfates with a combined ethoxylation degree of less than 5, preferably less than 3, more preferably less than 2 and more than 0.5. Preferably, the composition of the present invention will further comprise amphoteric and/or zwitterionic surfactant, more preferably an amine oxide or betaine surfactant.</p>
+      <p id="p-00037-en" num="0037">The most preferred surfactant system for the liquid detergent of the present invention will therefore comprise: (i) 1% to 40%, preferably 6% to 32%, more preferably 8% to 25% weight of the total composition of an anionic surfactant (2) combined with 0.01% to 20% wt, preferably from 0.2% to 15% wt, more preferably from 0.5% to 10% by weight of the composition of amphoteric and/or zwitterionic and/or nonionic surfactant, more preferably an amphoteric and even more preferred an amine oxide surfactant. It has been found that such surfactant system will provide the excellent cleaning required from a hand dishwashing detergent while being very soft and gentle to the hands.</p>
+      <p id="p-00038-en" num="0038">Nonionic surfactant, when present, is comprised in a typical amount of from 0.1% to 30%, preferably 0.2% to 20%, most preferably 0.5% to 10% by weight of the composition. Suitable nonionic surfactants include the condensation products of aliphatic alcohols with from 1 to 25 moles of ethylene oxide. The alkyl chain of the aliphatic alcohol can either be straight or branched, primary or secondary, and generally contains from 8 to 22 carbon atoms. Particularly preferred are the condensation products of alcohols having an alkyl group containing from 10 to 18 carbon atoms, preferably from 10 to 15 carbon atoms with from 2 to 18 moles, preferably 2 to 15, more preferably 5-12 of ethylene oxide per mole of alcohol.</p>
+      <p id="p-00039-en" num="0039">The liquid detergent herein preferably comprises a surfactant system comprising an anionic, an amphoteric and a non-ionic surfactant.</p>
+      <heading id="h-00008-en" level="2">Process for Making the Detergent</heading>
+      <p id="p-00040-en" num="0040">In some instances late product differentiation of liquid detergent is desired. A base detergent containing of the main ingredients is made and minors are added at a later state. This facilitates the manufacture of a plurality of different products starting from the same base. Aesthetics modifications of detergents sometimes take place at the end of the manufacturing process, i.e., when the main ingredients have already been mixed. In some instances, it is desirable to make a premix that will be subsequently added to the mixture of the base. A premix of a minor ingredient can be advantageous when the level of active required is very low, this can help with accurate dosing during the manufacturing process. In some instances, anti-microbial agents need to be added in order to avoid microbial growth. Mono-alcohols present good anti-microbial properties. However, it has been found that mono-alcohols when added to opacifiers can bring instability issues, such as sedimentation and separation of the opacifier in the premix. Once the instability takes place it is very difficult to correct it later on in the process and it will bring instability to the final detergent. Thus the mixing of the premix needs to be such that a quasi perfect mixture is obtained. This requirement bring a lot of constrains to the manufacture process (increased mixing time and energy). The process of the present invention overcomes the above issues thereby improving process flexibility and efficiency.</p>
+      <p id="p-00041-en" num="0041">The premix of the present invention comprises the step of mixing water, a mono-alcohol and an opacifier. Mixing can take place in any mixing vessel, the premix can be consequently stored, preferably the premix is kept under agitation in the storage tank. It has been found that mixing from about 5-10% of opacifer, in particular Acusol 305, from about 10-15% of ethanol and from about 75 to 85% of water a very stable premix is obtained.</p>
+      <p id="p-00042-en" num="0042">The premix is added to a base detergent to make the finish liquid detergent.</p>
+      <heading id="h-00009-en" level="2">Stability Test</heading>
+      <p id="p-00043-en" num="0043">The stability of the opacifier of the invention versus the stability of Acusol 301 is compared using the method described herein below.</p>
+      <p id="p-00044-en" num="0044">Solutions are made at 20° C. containing 3 parts of mono-alcohol and 1 part of Acusol (Acusol is provided in liquid form with 40% solids (as supplied by the Dow Company)). Solutions were mixed till a visually homogeneous dispersion was obtained. The solutions are stored for 12 hours at room temperature. This datapoint refers to the 100% datapoint.</p>
+      <p id="p-00045-en" num="0045">Solutions with different mono-alcohol concentration were prepared in which 3 parts of mono-alcohol solvent were gradually replaced by demineralized water (not touching Acusol concentration in Acusol—solvent/water mixture) to detect the mono-alcohol concentration at which respective Acusol emulsions remain stable upon overnight storage at 20° C.</p>
+      <p id="p-00046-en" num="0046">The 50% datapoint reflects half of the mono-alcohol being replaced by water, resulting in a 1.5 part water—1.5 part mono-alcohol—1 part 40% active Acusol mixture.</p>
+      <p id="p-00047-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="left" />
+              <colspec colname="3" colwidth="35pt" align="left" />
+              <colspec colname="4" colwidth="49pt" align="left" />
+              <colspec colname="5" colwidth="49pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="5" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Acusol 301</entry>
+                  <entry>Acusol 305</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>failure onset</entry>
+                  <entry>failure onset</entry>
+                </row>
+                <row>
+                  <entry>Alcohol</entry>
+                  <entry>P-value</entry>
+                  <entry>H-value </entry>
+                  <entry>concentration </entry>
+                  <entry>concentration</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="char" char="." />
+              <colspec colname="3" colwidth="35pt" align="char" char="." />
+              <colspec colname="4" colwidth="49pt" align="left" />
+              <colspec colname="5" colwidth="49pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>methanol</entry>
+                  <entry>12.3</entry>
+                  <entry>22.3</entry>
+                  <entry>65% ok, </entry>
+                  <entry>100% ok</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>75% fails</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>ethanol</entry>
+                  <entry>8.8</entry>
+                  <entry>19.4</entry>
+                  <entry>35% ok, </entry>
+                  <entry> 75% ok, </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>50% fails</entry>
+                  <entry>100% fails</entry>
+                </row>
+                <row>
+                  <entry>1-propanol</entry>
+                  <entry>6.8</entry>
+                  <entry>17.4</entry>
+                  <entry>25% fails</entry>
+                  <entry>100% ok</entry>
+                </row>
+                <row>
+                  <entry>2-propanol</entry>
+                  <entry>6.1</entry>
+                  <entry>16.4</entry>
+                  <entry>25% ok, </entry>
+                  <entry>100% ok</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>35% fails</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00048-en" num="0047">As it can be seen from Table 1 Acusol 305 is more stable in the presence of mono-alcohols than Acusol 301.</p>
+      <p id="p-00049-en" num="0048">Example of a hand dish formulation comprising Acusol 305.</p>
+      <p id="p-00050-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="119pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" rowsep="1">TABLE 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ingredient</entry>
+                  <entry>% active weight</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="119pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Alkyl C10-14</entry>
+                  <entry>13.22</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ethoxy sulfate</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>C12-14 dimethyl</entry>
+                  <entry>4.41</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>aminoxide</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Non-ionic</entry>
+                  <entry>4.5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>surfactant</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>NaCl</entry>
+                  <entry>1.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Polypropylene</entry>
+                  <entry>0.5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>glycol Mw 2000</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>NaOH</entry>
+                  <entry>0.15</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>MIT</entry>
+                  <entry>0.0075</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Phenoxy ethanol</entry>
+                  <entry>0.15</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Cationic polymer</entry>
+                  <entry>0.1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Opacifier premix</entry>
+                  <entry>1%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00010-en" level="2">Opacifier Premix</heading>
+      <p id="p-00051-en" num="0049" />
+      <p id="p-00052-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="63pt" align="center" />
+              <colspec colname="3" colwidth="56pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" rowsep="1">TABLE 3</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>As 100% active RM</entry>
+                  <entry>% parts</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="63pt" align="char" char="." />
+              <colspec colname="3" colwidth="56pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Acusol OP305 (40% active)</entry>
+                  <entry>8</entry>
+                  <entry>20</entry>
+                </row>
+                <row>
+                  <entry>Ethanol</entry>
+                  <entry>10.61</entry>
+                  <entry>11.50</entry>
+                </row>
+                <row>
+                  <entry>Water</entry>
+                  <entry>81.39</entry>
+                  <entry>68.50</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00053-en" num="0050">A detergent base is made comprising all the ingredients shown in Table 2 apart from the cationic polymer. The cationic polymer and the opacifier premix are subsequently added to the detergent base to obtain the finished product. The finished product has a very appealing opaque appearance and it is very stable.</p>
+      <p id="p-00054-en" num="0051">The dimensions and values disclosed herein are not to be understood as being strictly limited to the exact numerical values recited. Instead, unless otherwise specified, each such dimension is intended to mean both the recited value and a functionally equivalent range surrounding that value. For example, a dimension disclosed as “40 mm” is intended to mean “about 40 mm”</p>
+      <p id="p-00055-en" num="0052">Every document cited herein, including any cross referenced or related patent or application, is hereby incorporated herein by reference in its entirety unless expressly excluded or otherwise limited. The citation of any document is not an admission that it is prior art with respect to any invention disclosed or claimed herein or that it alone, or in any combination with any other reference or references, teaches, suggests or discloses any such invention. Further, to the extent that any meaning or definition of a term in this document conflicts with any meaning or definition of the same term in a document incorporated by reference, the meaning or definition assigned to that term in this document shall govern.</p>
+      <p id="p-00056-en" num="0053">While particular embodiments of the present invention have been illustrated and described, it would be obvious to those skilled in the art that various other changes and modifications can be made without departing from the spirit and scope of the invention. It is therefore intended to cover in the appended claims all such changes and modifications that are within the scope of this invention.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A liquid detergent aqueous composition comprising a mono-alcohol and an opacifier wherein the opacifier comprises a high order polymer.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. A liquid detergent according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the polymer comprises monomers comprising styrene.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. A liquid detergent according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the polymer comprises monomers comprising units selected from the group consisting of carboxylates, carboxylic amides, alkenyl, alkoxy, polyalkoxy and mixtures thereof.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. A liquid detergent according to <claim-ref idref="clm-00003-en">claim 3</claim-ref> wherein the carboxylate is selected from acrylate, maleate and mixtures thereof.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. A liquid detergent according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the polymer comprises monomers comprising styrene, monomers comprising maleate, and monomers comprising acrylate.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. A liquid detergent according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the polymer is a styrene/polyethlylene glycol-10, maleate/nonoxynol-10, maleate/acrylate polymer.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. A liquid detergent according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> comprising from about 0.001% to about 3% by weight of the composition of opacifier.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. A liquid detergent according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the mono-alcohol has Hansen polarity parameter of from about 5 to about 15 (Mpa)<sup>1/2 </sup>and a Hansen hydrogen bonding parameter of from about 15 to about 25 (Mpa)<sup>1/2</sup>.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. A liquid detergent according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the mono-alcohol is selected from the group consisting of C1 to C3 alcohols and mixtures thereof.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. A liquid detergent according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the polymer is a styrene/polyethlylene glycol-10, maleate/nonoxynol-10, maleate/acrylate polymer and the mono-alcohol is ethanol.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. A liquid detergent according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> comprising from 0.5 to 5% by weight of the composition of mono-alcohol.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en" independent="true">
+      <claim-text>
+        <b>12</b>. A process for making a premix comprising the step of mixing water, a mono-alcohol and an opacifier wherein the opacifier comprises a high order polymer.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. A process according to <claim-ref idref="clm-00012-en">claim 12</claim-ref> wherein the mixing step does not require homogeneous mixing.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. A process according to <claim-ref idref="clm-00012-en">claim 12</claim-ref> wherein the opacifier used to make the premix is in the form of an aqueous dispersion with a solid content of from 10 to 50% by weight of the dispersion.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. A process according to <claim-ref idref="clm-00012-en">claim 12</claim-ref> wherein the level of opacifier in the premix is from 2% to 20% by weight thereof.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. A process according to <claim-ref idref="clm-00012-en">claim 12</claim-ref> wherein the level of mono-alcohol is below 20% by weight of the premix.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. A process for making a liquid detergent composition comprising the steps of adding the premix according to <claim-ref idref="clm-00012-en">claim 12</claim-ref> to a detergent base.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. A process according to <claim-ref idref="clm-00017-en">claim 17</claim-ref> wherein the process is continuous.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. A process according to <claim-ref idref="clm-00017-en">claim 17</claim-ref> for making the liquid detergent of <claim-ref idref="clm-00001-en">claims 1</claim-ref>.</claim-text>
+    </claim>
+  </claims>
+  <image file="US20150247108A1.PDF" type="pdf" size="288006" pages="5" />
+</lexisnexis-patent-document>

@@ -1,0 +1,1198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150259579A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030128" date-changed="20151202" time-changed="024245">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121314666">
+        <country>US</country>
+        <doc-number>20150259579</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14708926</doc-number>
+        <date>20150511</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2010205565</doc-number>
+        <date>20100914</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151013">
+      <classification-ipcr sequence="1">
+        <text>C09J 133/26        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>J</subclass>
+        <main-group>133</main-group>
+        <subgroup>26</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C08F 220/56        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>F</subclass>
+        <main-group>220</main-group>
+        <subgroup>56</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151013">
+      <classification-cpc sequence="1">
+        <text>C09J 105/16        20130101 FI20151008BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>J</subclass>
+        <main-group>105</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C08F 220/54        20130101 LA20150205BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>F</subclass>
+        <main-group>220</main-group>
+        <subgroup>54</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150205</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C08F 220/56        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>F</subclass>
+        <main-group>220</main-group>
+        <subgroup>56</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C08G  83/008       20130101 LI20150205BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>83</main-group>
+        <subgroup>008</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150205</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C08J   3/075       20130101 LI20150205BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>3</main-group>
+        <subgroup>075</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150205</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C08J2333/26        20130101 LA20150205BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>2333</main-group>
+        <subgroup>26</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150205</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C08L  33/26        20130101 LI20150205BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>33</main-group>
+        <subgroup>26</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150205</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C08L 101/02        20130101 LI20150205BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>101</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150205</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C09J 133/26        20130101 LI20151008BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>J</subclass>
+        <main-group>133</main-group>
+        <subgroup>26</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <combination-set>
+        <group-number>1</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C08F 220/54        20130101 LA20150205BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>F</subclass>
+            <main-group>220</main-group>
+            <subgroup>54</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150205</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C08F 222/385       20130101 LA20150205BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>F</subclass>
+            <main-group>222</main-group>
+            <subgroup>385</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20150205</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>2</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C08L  33/26        20130101 LI20150205BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>33</main-group>
+            <subgroup>26</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20150205</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C08L  33/26        20130101 LI20150205BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>33</main-group>
+            <subgroup>26</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20150205</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">7</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">MATERIAL SELF-ASSEMBLY METHOD AND SELECTIVE ADHESION METHOD BASED ON MOLECULAR RECOGNITION</invention-title>
+    <related-documents date-changed="20150917">
+      <division>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13822918</doc-number>
+              <date>20130313</date>
+            </document-id>
+            <parent-status>PENDING</parent-status>
+            <parent-pct-document>
+              <document-id>
+                <country>WO</country>
+                <doc-number>PCT/JP2011/070502</doc-number>
+                <date>20110908</date>
+              </document-id>
+            </parent-pct-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007089</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </division>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Osaka University</orgname>
+            <address>
+              <city>Suita</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>JP</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Harada</last-name>
+            <first-name>Akira</first-name>
+            <address>
+              <city>Suita-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kobayashi</last-name>
+            <first-name>Ryosuke</first-name>
+            <address>
+              <city>Suita-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Yamaguchi</last-name>
+            <first-name>Hiroyasu</first-name>
+            <address>
+              <city>Suita-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Hashidzume</last-name>
+            <first-name>Akihito</first-name>
+            <address>
+              <city>Suita-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Takashima</last-name>
+            <first-name>Yoshinori</first-name>
+            <address>
+              <city>Suita-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP11070502</doc-number>
+        <date>20110908</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>JP</country>
+        <doc-number>WO2012036069</doc-number>
+        <date>20140203</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151006">
+      <main-family family-id="150958142">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2012036069</doc-number>
+            <kind>A1</kind>
+            <date>20120322</date>
+          </document-id>
+          <application-date>
+            <date>20110908</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>5615373</doc-number>
+            <kind>B2</kind>
+            <date>20141029</date>
+          </document-id>
+          <application-date>
+            <date>20110908</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2617777</doc-number>
+            <kind>A1</kind>
+            <date>20130724</date>
+          </document-id>
+          <application-date>
+            <date>20110908</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2617777</doc-number>
+            <kind>A4</kind>
+            <date>20140115</date>
+          </document-id>
+          <application-date>
+            <date>20110908</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>WO2012036069</doc-number>
+            <kind>A1</kind>
+            <date>20140203</date>
+          </document-id>
+          <application-date>
+            <date>20110908</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20130172479</doc-number>
+            <kind>A1</kind>
+            <date>20130704</date>
+          </document-id>
+          <application-date>
+            <date>20110908</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259579</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150511</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>9150762</doc-number>
+            <kind>B2</kind>
+            <date>20151006</date>
+          </document-id>
+          <application-date>
+            <date>20110908</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="150958141">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2012036069</doc-number>
+            <kind>A1</kind>
+            <date>20120322</date>
+          </document-id>
+          <application-date>
+            <date>20110908</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>5615373</doc-number>
+            <kind>B2</kind>
+            <date>20141029</date>
+          </document-id>
+          <application-date>
+            <date>20110908</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2617777</doc-number>
+            <kind>A1</kind>
+            <date>20130724</date>
+          </document-id>
+          <application-date>
+            <date>20110908</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2617777</doc-number>
+            <kind>A4</kind>
+            <date>20140115</date>
+          </document-id>
+          <application-date>
+            <date>20110908</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>WO2012036069</doc-number>
+            <kind>A1</kind>
+            <date>20140203</date>
+          </document-id>
+          <application-date>
+            <date>20110908</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20130172479</doc-number>
+            <kind>A1</kind>
+            <date>20130704</date>
+          </document-id>
+          <application-date>
+            <date>20110908</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259579</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150511</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>9150762</doc-number>
+            <kind>B2</kind>
+            <date>20151006</date>
+          </document-id>
+          <application-date>
+            <date>20110908</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention provides a selective adhesion method and a self-assembly method for macroscale materials based on molecular recognition. One or more host bodies formed from a macromolecule having one or more host groups on the side chains, and one or more guest bodies formed from a macromolecule having one or more guest groups on the side chains are vibrated in a solvent to selectively form an assembly.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to a selective adhesion method and a self-assembly method for materials based on molecular recognition.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND ART</heading>
+      <p id="p-00002-en" num="0002">Though many reports are available on molecular self-assembly, self-assembly of components of an observable size (macroscale self-assembly) is not well studied. There is a report of macroscale self-assembly that involves, for example, magnetic interaction, electrical interaction, hydrophilic-lipophilic balance, and capillary (Non-Patent Literature 1). However, there is hardly any report of self-assembly of macroscale materials based on molecular recognition.</p>
+      <heading id="h-00003-en" level="1">CITATION LIST</heading>
+      <heading id="h-00004-en" level="1">Non-Patent Literature</heading>
+      <p id="p-00003-en" num="0003">NPL 1: Whitesides, G. M. &amp; Grzybowski, B., Self-assembly at all scale, Science, 295, 2418-2421 (2002)</p>
+      <heading id="h-00005-en" level="1">SUMMARY OF INVENTION</heading>
+      <heading id="h-00006-en" level="1">Technical Problem</heading>
+      <p id="p-00004-en" num="0004">It is an object of the present invention to provide a selective adhesion method and a self-assembly method for macroscale materials based on molecular recognition.</p>
+      <heading id="h-00007-en" level="1">Solution to Problem</heading>
+      <p id="p-00005-en" num="0005">The present inventors conducted intensive studies over the foregoing problem, and found that an assembly can be formed when one or more host bodies formed from a macromolecule having one or more host groups on the side chains, and one or more guest bodies formed from a macromolecule having one or more guest groups on the side chains are vibrated in a solvent. It was also found that the host body and the guest body selectively form an assembly by molecular recognition. The present invention was completed after further studies based on these findings.</p>
+      <p id="p-00006-en" num="0006">Specifically, the present invention provides a selective adhesion method and a self-assembly method for macroscale materials based on molecular recognition, as follows.</p>
+      <heading id="h-00008-en" level="2">Item 1</heading>
+      <p id="p-00007-en" num="0007">An assembly comprising one or more host bodies formed from a macromolecule having one or more host groups in the side chains, and one or more guest bodies formed from a macromolecule having one or more guest groups in the side chains, wherein the one or more host bodies and the one or more guest bodies are in contact with each other and form the assembly.</p>
+      <heading id="h-00009-en" level="2">Item 2</heading>
+      <p id="p-00008-en" num="0008">An assembly according to Item 1, wherein the association constant between the one or more host bodies and the one or more guest bodies is 50 or more.</p>
+      <heading id="h-00010-en" level="2">Item 3</heading>
+      <p id="p-00009-en" num="0009">An assembly according to Item 1 or 2, wherein the one or more host bodies are a polymer having repeating units represented by the following general formulae (1) and (2)</p>
+      <p id="p-00010-en" num="0000">
+        <chemistry id="chem-00001-en" num="00001">
+          <img id="img-00001-en" he="20.57mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150259579A1_00004.PNG" img-format="png" original="US20150259579A1-20150917-C00001.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00011-en" num="0010">wherein X represents a hydroxyl group, C(O)NH<sub>2</sub>, or C(O)OH, and n is 1 to 200,000,</p>
+      <p id="p-00012-en" num="0000">
+        <chemistry id="chem-00002-en" num="00002">
+          <img id="img-00002-en" he="38.61mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150259579A1_00005.PNG" img-format="png" original="US20150259579A1-20150917-C00002.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00013-en" num="0011">wherein CD represents α-cyclodextrin, β-cyclodextrin, or γ-cyclodextrin, and m is 1 to 200,000.</p>
+      <heading id="h-00011-en" level="2">Item 4</heading>
+      <p id="p-00014-en" num="0012">An assembly according to Item 3, wherein the one or more host bodies are a copolymer of acrylamide and an acrylamide that has cyclodextrin on the side chain.</p>
+      <heading id="h-00012-en" level="2">Item 5</heading>
+      <p id="p-00015-en" num="0013">An assembly according to Item 3 or 4, wherein the one or more host bodies are a gel of a crosslinked polymer having repeating units represented by the general formulae (1) and (2).</p>
+      <heading id="h-00013-en" level="2">Item 6</heading>
+      <p id="p-00016-en" num="0014">An assembly according to any one of Items 1 to 5, wherein the one or more guest bodies are a polymer having repeating units represented by the following general formulae (1) and (3)</p>
+      <p id="p-00017-en" num="0000">
+        <chemistry id="chem-00003-en" num="00003">
+          <img id="img-00003-en" he="20.57mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150259579A1_00006.PNG" img-format="png" original="US20150259579A1-20150917-C00003.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00018-en" num="0015">wherein X represents a hydroxyl group, C(O)NH<sub>2</sub>, or C(O)OH, and n is 1 to 200,000,</p>
+      <p id="p-00019-en" num="0000">
+        <chemistry id="chem-00004-en" num="00004">
+          <img id="img-00004-en" he="37.59mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150259579A1_00007.PNG" img-format="png" original="US20150259579A1-20150917-C00004.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00020-en" num="0016">wherein A represents O or NH, R represents an optionally-substituted alkyl group, or an optionally-substituted aryl group, and 1 is 1 to 200,000.</p>
+      <heading id="h-00014-en" level="2">Item 7</heading>
+      <p id="p-00021-en" num="0017">An assembly according to Item 6, wherein the one or more guest bodies are a copolymer of acrylamide and an acryl compound selected from the group consisting of an alkyl ester of acrylic acid, an aryl ester of acrylic acid, and an acrylamide having a cycloalkyl group on the side chain.</p>
+      <heading id="h-00015-en" level="2">Item 8</heading>
+      <p id="p-00022-en" num="0018">An assembly according to Item 6 or 7, wherein the one or more guest bodies are a gel of a crosslinked polymer having the repeating units represented by the general formulae (1) and (3).</p>
+      <heading id="h-00016-en" level="2">Item 9</heading>
+      <p id="p-00023-en" num="0019">A polymer that has one or more host groups and one or more guest groups on the side chains, and that has repeating units represented by the following general formulae (2) and (3)</p>
+      <p id="p-00024-en" num="0000">
+        <chemistry id="chem-00005-en" num="00005">
+          <img id="img-00005-en" he="38.61mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150259579A1_00008.PNG" img-format="png" original="US20150259579A1-20150917-C00005.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00025-en" num="0020">wherein CD represents α-cyclodextrin, β-cyclodextrin, or γ-cyclodextrin, and m is 1 to 200,000,</p>
+      <p id="p-00026-en" num="0000">
+        <chemistry id="chem-00006-en" num="00006">
+          <img id="img-00006-en" he="37.59mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150259579A1_00009.PNG" img-format="png" original="US20150259579A1-20150917-C00006.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00027-en" num="0021">wherein A represents O or NH, R represents an optionally-substituted alkyl group, or an optionally-substituted aryl group, and 1 is 1 to 200,000.</p>
+      <heading id="h-00017-en" level="2">Item 10</heading>
+      <p id="p-00028-en" num="0022">A gel formed by crosslinking of the polymer of Item 9.</p>
+      <heading id="h-00018-en" level="2">Item 11</heading>
+      <p id="p-00029-en" num="0023">A method for selective adhesion of the gel of Item 10 through contact in an aqueous solvent.</p>
+      <heading id="h-00019-en" level="2">Item 12</heading>
+      <p id="p-00030-en" num="0024">A method for causing one or more host bodies formed from a macromolecule having one or more host groups on the side chains, and one or more guest bodies formed from a macromolecule having one or more guest groups on the side chains to selectively adhere to each other through contact in an aqueous solvent.</p>
+      <heading id="h-00020-en" level="1">Advantageous Effects of Invention</heading>
+      <p id="p-00031-en" num="0025">The present invention enables selective adhesion of macroscale molecules based on molecular recognition. The invention also enables selective adhesion and self-assembly, and selective adhesion in water upon appropriately selecting host-guest molecules.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00021-en" level="1">BRIEF DESCRIPTION OF DRAWINGS</heading>
+      <p id="p-00032-en" num="0026">
+        <figref>FIG. 1</figref> is an image showing how a β-CD-gel (host body gel) and an Ad-gel (guest body gel) adhere to each other and form a self-assembly.</p>
+      <p id="p-00033-en" num="0027">
+        <figref>FIG. 2</figref> is an image showing how a β-CD-gel and an α-CD-gel (host body gels) selectively adhere to an n-Bu-gel and a t-Bu-gel (guest body gels) and form self-assemblies.</p>
+      <p id="p-00034-en" num="0028">
+        <figref>FIG. 3</figref> is a graph representing a stress-strain curve of an assembly formed by the adhesion of a β-CD-gel (host body gel) and an Ad-gel (guest body gel).</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00022-en" level="1">DESCRIPTION OF EMBODIMENTS</heading>
+      <p id="p-00035-en" num="0029">The present invention is described below in detail.</p>
+      <heading id="h-00023-en" level="2">1. Host Body</heading>
+      <p id="p-00036-en" num="0030">The host body of the present invention is formed from a macromolecule having one or more host groups on the side chains.</p>
+      <p id="p-00037-en" num="0031">Examples of the host groups include artificial host molecules such as derivatives of cyclodextrin (CD), calixarene, crown ether, cyclophane, and cucurbituril. Specific examples include α-cyclodextrin, β-cyclodextrin, γ-cyclodextrin, calix[6] arene sulfonate, calix[8] arene sulfonate, 12-crown-4,18-crown-6, [6]paracyclophane, [2,2]paracyclophane, cucurbit[6]uril, and cucurbit[8]uril. Of these, α-cyclodextrin, β-cyclodextrin, and γ-cyclodextrin are preferred.</p>
+      <p id="p-00038-en" num="0032">Examples of the macromolecules having one or more host groups on the side chains include polymers having the repeating units represented by the foregoing general formulae (1) and (2). The number of repeating units (n, m) in the polymers having the repeating units represented by the foregoing general formulae (1) and (2) is 1 to 200,000, preferably 5,000 to 15,000.</p>
+      <p id="p-00039-en" num="0033">The macromolecules having the repeating units represented by the general formulae (1) and (2) may be produced by, for example, the reaction of the monomer of the following general formula (4) with the monomer of the general formula (5) below.</p>
+      <p id="p-00040-en" num="0000">
+        <chemistry id="chem-00007-en" num="00007">
+          <img id="img-00007-en" he="22.52mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150259579A1_00010.PNG" img-format="png" original="US20150259579A1-20150917-C00007.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00041-en" num="0034">wherein X represents a hydroxyl group, C(O)NH<sub>2</sub>, or C(O)OH.</p>
+      <p id="p-00042-en" num="0000">
+        <chemistry id="chem-00008-en" num="00008">
+          <img id="img-00008-en" he="36.83mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150259579A1_00011.PNG" img-format="png" original="US20150259579A1-20150917-C00008.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00043-en" num="0035">wherein CD represents α-cyclodextrin, β-cyclodextrin, or γ-cyclodextrin.</p>
+      <p id="p-00044-en" num="0036">Any known monomer compounds may be used as the water-soluble monomers represented by the general formula (4). The monomer compounds may be used either alone or in a combination of two or more.</p>
+      <p id="p-00045-en" num="0037">Particularly preferred as the monomer of the general formula (4) is the compound in which X is C(O)NH<sub>2</sub>, specifically, acrylamide.</p>
+      <p id="p-00046-en" num="0038">The monomer represented by the general formula (5) is produced by the reaction of acryloyl chloride with 6-aminocyclodextrin. Typically, acryloyl chloride and 6-aminocyclodextrin are mixed and stirred in a solvent.</p>
+      <p id="p-00047-en" num="0039">The reaction may be performed either solvent-free, or with a solvent (an organic solvent or an aqueous solvent) commonly used in organic synthesis reactions. Examples of the organic solvent include dimethylsulfoxide (DMSO), and dimethylformamide (DMF). Examples of the aqueous solvent include water, and buffers that contain salts such as sodium phosphate and sodium carbonate as required. When used, the amount of the solvent may be appropriately adjusted.</p>
+      <p id="p-00048-en" num="0040">The monomer of the general formula (5) may also be produced by using a method in which 1,1′-carbonyldiimidazole (CDI) or 1-ethyl-3-(3-dimethylaminopropyl) carbodiimidehydrochloride (EDC) is added to acrylic acid under ice-cooled conditions, and aminocyclodextrin is added to the mixture and stirred overnight to form an amide bond. Alternatively, the monomer of the general formula (5) may be produced by obtaining an amide compound from acrylic acid via an active ester, using dicyclohexylcarbodiimide (DCC) and 1-hydroxybenzotriazole (HOBt) or N-hydroxysuccinimide (HOSu) as condensing agents.</p>
+      <p id="p-00049-en" num="0041">The monomer of the general formula (5), and the known monomer of the general formula (4) are reacted to produce the polymer having the repeating units of the general formulae (1) and (2). Preferably, the polymer is obtained as a gel, by using a crosslinker.</p>
+      <p id="p-00050-en" num="0042">Preferably, the polymer is a polymer gel containing the repeating unit of the general formula (1) in an amount of 90 to 99 mol %, and the repeating unit of the general formula (2) in an amount of 10 to 1 mol %, with 0.1 to 10% of the repeating units being crosslinked. Particularly preferably, the repeating unit of the general formula (1) accounts for 95 to 98 mol %, and the repeating unit of the general formula (2) accounts for 5 to 2 mol %, and 0.5 to 1% of the repeating units are crosslinked.</p>
+      <p id="p-00051-en" num="0043">Further, the polymer preferably contains cyclodextrin in a proportion of 1.0 to 5.0 mol %, particularly preferably 2.0 to 5.0 mol % with respect to the whole polymer having the repeating units of the general formulae (1) and (2).</p>
+      <p id="p-00052-en" num="0044">The following describes a specific producing process of the polymer gel having the repeating units of the general formulae (1) and (2).</p>
+      <p id="p-00053-en" num="0045">The polymer having the repeating units of the general formulae (1) and (2) is produced by the radical polymerization of the monomers of the general formulas (4) and (5) with a crosslinker. Typically, the monomers of the general formulae (4) and (5), a crosslinker, and, optionally, a radical polymerization initiator are mixed and stirred in a vessel flushed with inert gas, or in a vacuum-deaerated vessel.</p>
+      <p id="p-00054-en" num="0046">The radical polymerization reaction may be performed either solvent-free, or with a solvent (an organic solvent or an aqueous solvent) commonly used in radical polymerization. Examples of the organic solvent include benzene, toluene, N,N-dimethylformamide (DMF), dimethylsulfoxide (DMSO), acetone, chloroform, carbon tetrachloride, tetrahydrofuran (THF), ethyl acetate, chlorobenzene, dichlorobenzene, trifluoromethylbenzene, and anisole. Examples of the aqueous solvent include water, and solvents that contain, for example, methanol, ethanol, isopropanol, n-butanol, ethyl cellosolve, butyl cellosolve, and 1-methoxy-2-propanol, as required.</p>
+      <p id="p-00055-en" num="0047">When used, the amount of the solvent may be appropriately adjusted. For example, the solvent is typically used in 0.1 to 1 liter, preferably 0.2 to 0.5 liters with respect to the total amount 1 mole of the monomers used for the polymerization.</p>
+      <p id="p-00056-en" num="0048">The crosslinker may be any known crosslinker. For example, N,N′-methylene-bisacrylamide is preferably used.</p>
+      <p id="p-00057-en" num="0049">The radical polymerization reaction may be performed in the presence or absence of a radical polymerization initiator. Typically, the radical polymerization reaction is preferably performed in the presence of a radical polymerization initiator. The radical polymerization reaction may involve spontaneous thermal polymerization in the absence of a radical polymerization initiator, or photoirradiation in the presence or absence of a radical polymerization initiator. In the case of photoirradiation radical polymerization, a light source such as a mercury lamp or a xenon lamp is typically used for the polymerization. The light source may be appropriately selected taking into consideration factors such as the type of the vinyl monomer, and the type of the polymerization initiator used.</p>
+      <heading id="h-00024-en" level="2">2. Guest Body</heading>
+      <p id="p-00058-en" num="0050">The guest body of the present invention is formed from a macromolecule having one or more guest groups on the side chains.</p>
+      <p id="p-00059-en" num="0051">The guest group may be any group that can be a guest group for a corresponding host group. Examples include alkyl groups that may have a substituent or substituents, cycloalkyl groups, and aryl groups that may have a substituent or substituents.</p>
+      <p id="p-00060-en" num="0052">Examples of the macromolecules having one or more guest groups on the side chains include polymers having the repeating units represented by the general formulae (1) and (3). The number of repeating units (n, 1) in the polymers represented by the general formulae (1) and (3) is 1 to 200,000, preferably 5,000 to 15,000.</p>
+      <p id="p-00061-en" num="0053">The polymers having the repeating units represented by the general formulae (1) and (3) can be produced by, for example, the reaction of the monomer of the following general formula (4) with the monomer of the general formula (6) below.</p>
+      <p id="p-00062-en" num="0000">
+        <chemistry id="chem-00009-en" num="00009">
+          <img id="img-00009-en" he="20.91mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150259579A1_00012.PNG" img-format="png" original="US20150259579A1-20150917-C00009.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00063-en" num="0054">wherein X represents a hydroxyl group, C(O)NH<sub>2</sub>, or C(O)OH.</p>
+      <p id="p-00064-en" num="0000">
+        <chemistry id="chem-00010-en" num="00010">
+          <img id="img-00010-en" he="36.75mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150259579A1_00013.PNG" img-format="png" original="US20150259579A1-20150917-C00010.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00065-en" num="0055">wherein A represents O or NH, and R represents an optionally-substituted alkyl group, or an optionally-substituted aryl group.</p>
+      <p id="p-00066-en" num="0056">Any known monomer compounds may be used as the water-soluble monomers represented by the general formula (4). The monomer compounds may be used either alone or in a combination of two or more. It is particularly preferable to use the same monomer compounds used for the host body.</p>
+      <p id="p-00067-en" num="0057">Particularly preferred as the monomer of the general formula (4) is the compound in which X is C(O)NH<sub>2</sub>, specifically, acrylamide.</p>
+      <p id="p-00068-en" num="0058">Examples of the alkyl groups, which may be optionally substituted, represented by R in the general formula (6) include linear, branched, or cyclic alkyl groups of C1 to C18. Specific examples include alkyls such as methyl, ethyl, n-propyl, isopropyl, n-butyl, isobutyl, sec-butyl, tert-butyl, pentyl, cyclopentyl, hexyl, cyclohexyl, isohexyl, dodecyl, octadecyl, and adamantyl. Of these, adamantyl and butyl are preferred, and adamantyl is particularly preferred. The alkyl group may have 1 to 3 substituents, for example, such as halogen atoms (for example, such as fluorine, chlorine, and bromine), carboxyl groups, ester groups, amide groups, and hydroxyl groups that may be protected. Further, the alkyl group may be one in which the organometal complex ferrocene is attached as a substituent.</p>
+      <p id="p-00069-en" num="0059">Examples of the aryl groups, which may be optionally substituted, represented by R in the general formula (6) include monocyclic aryl groups, and aryl groups with two or more rings. Specific examples include phenyl, toluyl, xylyl, naphthyl, anthryl, and phenanthryl. The aryl group may have 1 to 3 substituents, for example, such as alkyl groups (for example, such as C1 to C18 alkyl groups), halogen atoms (for example, such as fluorine, chlorine, and bromine), carboxyl groups, ester groups, amide groups, azo groups having aryl groups, and hydroxyl groups that may be protected.</p>
+      <p id="p-00070-en" num="0060">The monomer of the general formula (6) is produced by the reaction of acryloyl chloride with an alkyl amine or an aryl amine that provides an alkyl or an aryl for the substituent R. Typically, acryloyl chloride is mixed and stirred in a solvent with an alkyl amine or an aryl amine that provides an alkyl or an aryl for the substituent R.</p>
+      <p id="p-00071-en" num="0061">The same solvent used for the production of the monomer of the general formula (5) may be used in the reaction. When used, the amount of the solvent may be appropriately adjusted.</p>
+      <p id="p-00072-en" num="0062">The monomer of the general formula (6) may also be produced by using a method in which 1,1′-carbonyldiimidazole (CDI) or 1-ethyl-3-(3-dimethylaminopropyl)carbodiimidehydrochloride (EDC) is added to acrylic acid under ice-cooled conditions, and aminocyclodextrin is added to the mixture and stirred overnight to form an amide bond. Alternatively, the monomer of the general formula (6) may be produced by obtaining an amide compound from acrylic acid via an active ester, using dicyclohexylcarbodiimide (DCC) and 1-hydroxybenzotriazole (HOBt) or N-hydroxysuccinimide (HOSu) as condensing agents.</p>
+      <p id="p-00073-en" num="0063">The monomer of the general formula (6), and the known monomer of the general formula (4) are reacted to produce the polymer having the repeating units of the general formulae (1) and (3). Preferably, the polymer is obtained as a gel, by using a crosslinker.</p>
+      <p id="p-00074-en" num="0064">Preferably, the polymer is a polymer gel containing the repeating unit of the general formula (1) in an amount of 90 to 99 mol %, and the repeating unit of the general formula (3) in an amount of 10 to 1 mol %, with 0.1 to 10% of the repeating units being crosslinked. Particularly preferably, the repeating unit of the general formula (1) accounts for 95 to 98 mol %, and the repeating unit of the general formula (3) accounts for 5 to 2 mol %, and 0.5 to 1% of the repeating units are crosslinked.</p>
+      <p id="p-00075-en" num="0065">Further, the polymer gel preferably contains the guest group in a proportion of 1.0 to 5.0 mol %, particularly preferably 2.0 to 5.0 mol % with respect to the whole polymer having the repeating units of the general formulae (1) and (3).</p>
+      <p id="p-00076-en" num="0066">The polymer gel having the repeating units of the general formulae (1) and (3) is produced by using the same process used to produce the polymer gel having the repeating units of the general formulae (1) and (2).</p>
+      <heading id="h-00025-en" level="2">3. Polymer Having Host Group and Guest Group</heading>
+      <p id="p-00077-en" num="0067">In the present invention, the polymer having one or more host groups and one or more guest groups on the side chains is a polymer having the repeating units of the following general formulae (2) and (3)</p>
+      <p id="p-00078-en" num="0000">
+        <chemistry id="chem-00011-en" num="00011">
+          <img id="img-00011-en" he="39.96mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150259579A1_00014.PNG" img-format="png" original="US20150259579A1-20150917-C00011.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00079-en" num="0068">wherein CD represents α-cyclodextrin, β-cyclodextrin, or γ-cyclodextrin, and m is 1 to 200,000.</p>
+      <p id="p-00080-en" num="0000">
+        <chemistry id="chem-00012-en" num="00012">
+          <img id="img-00012-en" he="37.59mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150259579A1_00015.PNG" img-format="png" original="US20150259579A1-20150917-C00012.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00081-en" num="0069">wherein A represents O or NH, R represents an optionally-substituted alkyl group, or an optionally-substituted aryl group, and 1 is 1 to 200,000.</p>
+      <p id="p-00082-en" num="0070">The number of repeating units (m, l) in the polymer having the repeating units of the general formulae (2) and (3) is 1 to 200,000, preferably 5,000 to 15,000.</p>
+      <p id="p-00083-en" num="0071">The polymer having the repeating units of the general formulae (2) and (3) may be produced, for example, by the reaction of the monomer of the general formula (5) described in Section 1. above with the monomer of the general formula (6) described in Section 2.</p>
+      <p id="p-00084-en" num="0072">In the reaction, the monomer of the general formula (4) may be further polymerized. Preferably, the polymer is obtained as a gel, by using a crosslinker.</p>
+      <p id="p-00085-en" num="0073">Preferably, the polymer is a polymer gel containing the repeating unit of the general formula (2) in an amount of 40 to 60 mol %, and the repeating unit of the general formula (3) in an amount of 60 to 40 mol %, with 0.1 to 10% of the repeating units being crosslinked. Particularly preferably, the repeating unit of the general formula (2) accounts for 50 mol %, and the repeating unit of the general formula (3) accounts for 50 mol %, and 0.5 to 1% of the repeating units are crosslinked.</p>
+      <p id="p-00086-en" num="0074">Further, the polymer gel preferably contains the one or more host groups in a proportion of 40 to 60 mol %, particularly preferably 50 mol %, and the guest group in a proportion of 60 to 40 mol %, particularly preferably 50 mol % with respect to the whole polymer having the repeating units of the general formulae (2) and (3).</p>
+      <p id="p-00087-en" num="0075">The polymer gel having the repeating units of the general formulae (2) and (3) is produced by using the same process used to produce the polymer gel having the repeating units of the general formulae (1) and (2).</p>
+      <heading id="h-00026-en" level="2">4. Assembly</heading>
+      <p id="p-00088-en" num="0076">The assembly of the present invention is obtained by bringing into contact (i) the host body and the guest body, (ii) the polymers having the host group and the guest group on the side chains, (iii) the host body and the polymer having the host group and the guest group on the side chains, and (iv) the guest body and the polymer having the host group and the guest group on the side chains.</p>
+      <p id="p-00089-en" num="0077">Particularly preferably, the assembly of the present invention can be obtained by bringing into contact the host body, the guest body, and the polymer having the host group and the guest group on the side chains in gel form in an aqueous solvent.</p>
+      <p id="p-00090-en" num="0078">Specifically, by taking the contact between the host body and the guest body as an example, a host body gel and a guest body gel are placed in an aqueous solvent, and brought into contact with each other under vibration or stirring.</p>
+      <p id="p-00091-en" num="0079">Examples of the aqueous solvent include water, aqueous solutions that contain salts such as sodium phosphate and sodium carbonate as required, and mixed solvents of, for example, alcohol and water. The aqueous solvent is preferably water.</p>
+      <p id="p-00092-en" num="0080">Any means can be used as the vibration or stirring method, as long as the host body and the guest body can be brought close to each other within a certain distance. Examples include methods that use a stirrer or a shaking machine such as a vortex mixer and a shaker, and methods that irradiate ultrasonic waves.</p>
+      <p id="p-00093-en" num="0081">The same solvent, and the same vibration or stirring method may be used for the polymer having the host group and the guest group on the side chains.</p>
+      <p id="p-00094-en" num="0082">As used herein, the term assembly is used to refer to a form in which the host body and the guest body, or the polymers having the host group and the guest group on the side chains contact and adhere to each other on their surfaces.</p>
+      <p id="p-00095-en" num="0083">The assembly of the present invention occurs, for example, as the host body and the guest body are brought close to each other within a certain distance, and attract and adhere to each other over the adjacent surfaces. In the present invention, the adhesion between the host body and the guest body is selective as determined by the combination of the host body and the guest body. Likewise, the adhesion between the polymers having the host group and the guest group on the side chains is also selective as determined by the combination of the host group and the guest group. Specifically, the adhesion is based on molecular recognition, and the certain distance and the attraction force by which the host body (group) and the guest body (group) attract each other is determined by the combination of the host body (group) and the guest body (group).</p>
+      <p id="p-00096-en" num="0084">Adhesion occurs when the guest body (group) has a size that can be accommodated by the internal space of the host body (group), and when the guest body (group) has interactions with the host body (group) (interactions that involve at least one of hydrophobic interaction (Van der Waals force), hydrogen bonding, electrostatic interaction, and coordinate bonding).</p>
+      <p id="p-00097-en" num="0085">The selectivity is believed to involve association constant (K).</p>
+      <p id="p-00098-en" num="0086">Here, association constant (K) is a value determined from NMR peak shifts by using the Benesi-Hildebrand method, as described below in detail.</p>
+      <p id="p-00099-en" num="0087">Cyclodextrin is added to a guest molecule of a certain concentration (the concentration of the guest sites in the monomer or polymer is held constant), and a signal shift originating in the guest sites is measured. When the signal shift amount is M, (and when the maximum shift amount (the shift amount of when the cyclodextrin binds to all the guest sites) is Amax), the association constant K is calculated as follows.</p>
+      <p id="p-00100-en" num="0000">[in-line-formulae]1/Δδ=(1/<i>K</i>Δδmax)·(1/[cyclodextrin])+1/Δδmax  Equation[/in-line-formulae]</p>
+      <p id="p-00101-en" num="0088">Here, Δδmax can be calculated from the ordinate intercept, and K from the slope (and the Δδmax determined first) by plotting 1/Δδ and 1/[cyclodextrin] against the vertical axis and the horizontal axis (a double reciprocal plot of Δδ and [cyclodextrin]).</p>
+      <p id="p-00102-en" num="0089">In the assembly of the present invention, the association constant between the host body (group) and the guest body (group) is preferably about 50 or more.</p>
+      <p id="p-00103-en" num="0090">For example, when α-cyclodextrin (cavity size: 4.7 to 5.2 Å) is used as the host body (group), examples of the guest body (group) that satisfies the foregoing conditions include alkyl compounds of 4 to 18 carbon atoms, alcohol derivatives thereof, carboxylic acid derivatives, amino derivatives, azobenzene derivatives having a cyclic alkyl group or a phenyl group, and cinnamic acid derivatives. Examples of the alkyl compounds (groups) of 4 to 18 carbon atoms include n-butyl, pentyl, hexyl, heptyl, octyl, nonyl, decyl, undecyl, dodecyl, tridecyl, tetradecyl, pentadecyl, hexadecyl, heptadecyl, and octadecyl.</p>
+      <p id="p-00104-en" num="0091">When β-cyclodextrin (cavity size: 6.0 to 6.5 Å) is used, examples of the guest body (group) that satisfies the foregoing conditions include t-butyl, adamantyl, aromatic compounds and alcohol derivatives thereof, carboxylic acid derivatives, amino derivatives, ferrocene derivatives, azobenzene, naphthalene derivatives, and dansyl.</p>
+      <p id="p-00105-en" num="0092">When γ-cyclodextrin (cavity size: 7.5 to 8.5 Å) is used, examples of the guest body (group) that satisfies the foregoing conditions include alkyl of up to 18 carbon atoms, alcohol derivatives thereof, carboxylic acid derivatives, amino derivatives, adamantyl, clusters of carbon atoms (such as fullerene), aromatic dansyl, ferrocene derivatives, and anthracene derivatives.</p>
+      <p id="p-00106-en" num="0093">The break strength of the assembly tends to increase as the association constant between the host body and the guest body increases. Preferably, the assembly has a break strength of 200 to 1,000 kPa, and a fracture elongation of 10 to 90%.</p>
+      <p id="p-00107-en" num="0094">The polymers having the host group and the guest group on the side chains adhere in the same manner as in the adhesion of the host body and the guest body. The polymer gel having the host group and the guest group on the side chains can remain adherent even when cut, because any cut in the gel exposes the host group and the guest group.</p>
+      <p id="p-00108-en" num="0095">The present invention enables selective adhesion of macrosbale materials based on molecular recognition. Further, the present invention enables selective adhesion and self-assembly, and selective adhesion in water upon appropriately selecting host-guest molecules.</p>
+      <p id="p-00109-en" num="0096">Because the present invention enables selective adhesion of macroscale materials based on host-guest molecular recognition, selective adhesion and self-assembly can take place at an adhesion strength that can be adjusted by appropriately selecting host-guest molecules. The present invention also enables selective adhesion in water.</p>
+      <p id="p-00110-en" num="0097">Thus, by taking advantage of the selectivity, the selective adhesion and self-assembly based on molecular recognition of the present invention has applications, for example, such as in cell and tissue fixing material, organ adhesion inhibiting material, alternative suture material, and DDS material. Further, because the adhesion and self-assembly occurs at macroscale, the invention is also applicable to, for example, sensor materials. Further, because the adhesion can take place in a gel state, the invention has potential application in plastic processing techniques that involve drying of the adhered product for production of small and hard assemblies.</p>
+      <heading id="h-00027-en" level="1">EXAMPLES</heading>
+      <p id="p-00111-en" num="0098">The present invention is described below in greater detail using Examples. It should be noted, however, that the invention is not limited by the descriptions of the following Examples.</p>
+      <heading id="h-00028-en" level="2">Measurement Devices</heading>
+      <p id="p-00112-en" num="0099">The following devices were used for the measurements of various properties in the Examples and Comparative Examples.</p>
+      <p id="p-00113-en" num="0100">
+        <sup>1</sup>H-NMR: JEOL ECA-500 (500 MHz)</p>
+      <p id="p-00114-en" num="0101">MS: Shimadzu Corporation AXIMA-CFR (time-of-flight)</p>
+      <p id="p-00115-en" num="0102">Elemental analysis: Yanaco, CHNCORDER MT-6 (differential thermal conductivity method)</p>
+      <p id="p-00116-en" num="0103">Break strength and elongation: Rhenoner, RE-33005, Yamaden Ltd. (test piece: 1 cm×1 cm; pulling rate: 0.1 mm/sec; measurement temperature: room temperature)</p>
+      <heading id="h-00029-en" level="1">Production of Host Body Polymerization Monomer</heading>
+      <heading id="h-00030-en" level="1">Production Example 1</heading>
+      <heading id="h-00031-en" level="1">6-acrylamide-α-cyclodextrin</heading>
+      <p id="p-00117-en" num="0104">6-Amino-α-cyclodextrin (0.58 g; 0.60 mmol) was dissolved in a 50-ml NaHCO<sub>3 </sub>aqueous solution (0.5 g), and the pH of the solution was brought to about 10 with NaOH. Acryloyl chloride (90 μl; 1.2 mmol) was added to the 6-amino-α-cyclodextrin solution on an ice bath, and the mixture was stirred for 6 hours. After the reaction, the mixture was concentrated to about 50% of the total amount, and poured into acetone (500 mL). Thereafter, the precipitate was collected by centrifugation, and dried overnight in a vacuum oven. The resulting crude product was generated by reversed-phase chromatography with HP-20 polystyrene gel (methanol/water) to give 6-acrylamide-α-cyclodextrin (0.49 g; yield: 79%).</p>
+      <p id="p-00118-en" num="0105">
+        <sup>1</sup>H-NMR (DMSO-d<sub>6</sub>): δ8.00 (t, 1H, amido), 6.27 (dd, 1H, olefin), 6.02 (d, 1H, olefin), 5.58-5.34 (d, 1H, olefin, m, 13H, O<sub>2</sub>, <sub>3</sub>H of CD), 4.89-4.74 (m, 6H, C<sub>1</sub>H of CD), 4.54-4.38 (m, 5H, O<sub>6</sub>H of CD), 3.84-3.20 (m, overlaps with HOD)</p>
+      <p id="p-00119-en" num="0106">MALDI-TOF MS; m/z=1025.3 ([C<sub>39</sub>H<sub>63</sub>NO<sub>30</sub>+Na]+=1048.3) [C<sub>39</sub>H<sub>63</sub>NO<sub>30</sub>+K]+=1064.4)</p>
+      <p id="p-00120-en" num="0107">Elemental analysis (C<sub>39</sub>H<sub>63</sub>NO<sub>30 </sub>(H<sub>2</sub>O)<sub>6</sub>): C, 41.31; H, 6.67; N, 1.24</p>
+      <p id="p-00121-en" num="0108">Measurement result: C, 41.24; H, 6.36; N, 1.30</p>
+      <heading id="h-00032-en" level="1">Production Example 2</heading>
+      <heading id="h-00033-en" level="1">6-acrylamide-β-cyclodextrin</heading>
+      <p id="p-00122-en" num="0109">6-Amino-β-cyclodextrin (0.68 g; 0.60 mmol) was dissolved in a 50-ml NaHCO<sub>3 </sub>aqueous solution (0.5 g), and the pH of the solution was brought to about 10 with NaOH. Acryloyl chloride (90 μl; 1.2 mmol) was added to the 6-amino-β-cyclodextrin solution on an ice bath, and the mixture was stirred for 6 hours. After the reaction, the mixture was concentrated to 10% of the total amount, and poured into acetone (500 mL). Thereafter, the precipitate was collected by centrifugation, and dried overnight in a vacuum oven. The resulting crude product was generated by reversed-phase chromatography with HP-20 polystyrene gel (methanol/water) to give 6-acrylamide-β-cyclodextrin (0.53 g; yield: 74%)</p>
+      <p id="p-00123-en" num="0110">
+        <sup>1</sup>H-NMR (DMSO-d<sub>6</sub>): δ7.90 (t, 1H, amido), 6.27 (dd, 1H, olefin), 6.02 (d, 1H, olefin), 5.90-5.60 (d, 1H, olefin, m, 15H, O<sub>2</sub>, <sub>3</sub>H of CD), 4.89-4.74 (m, 7H, C<sub>1</sub>H of CD), 4.54-4.38 (m, 6H, O<sub>6</sub>H of CD), 3.84-3.20 (m, overlaps with HOD)</p>
+      <p id="p-00124-en" num="0111">MALDI-TOF MS; m/z=1208.0 ([C<sub>45</sub>H<sub>73</sub>NO<sub>35</sub>+Na]+=1210.4) 1223.8 ([C<sub>45</sub>H<sub>73</sub>NO<sub>35</sub>+K]+=1226.5)</p>
+      <p id="p-00125-en" num="0112">Elemental analysis (C<sub>45</sub>H<sub>73</sub>NO<sub>35</sub>(H<sub>2</sub>O)<sub>3.32</sub>): C, 41.54; H, 6.17; N, 1.07</p>
+      <p id="p-00126-en" num="0113">Measurement result: C, 41.54; H, 6.37; N, 1.16</p>
+      <heading id="h-00034-en" level="1">Production of Guest Body Polymerization Monomer</heading>
+      <heading id="h-00035-en" level="1">Production Example 3</heading>
+      <heading id="h-00036-en" level="1">N-(1-adamantyl)acrylamide</heading>
+      <p id="p-00127-en" num="0114">1-Adamantylamine (0.76 g; 5.0 mmol) and triethylamine (0.77 ml; 5.5 mmol) were dissolved in dry THF (40 mL) on an ice bath. After dropping acryloyl chloride (0.45 ml; 5.5 mmol) onto the solution, the mixture was stirred for 4 hours. After the reaction, the precipitate was removed by filtration, and the supernatant liquid was concentrated under reduced pressure. The resulting crude product was recrystallized from chloroform to give N-(1-adamantyl)acrylamide (0.85 mg; yield: 83%).</p>
+      <p id="p-00128-en" num="0115">
+        <sup>1</sup>H-NMR ((CD<sub>3</sub>)SO): δ6.15 (dd, 1H, olefin), 5.96 (dd, 1H, olefin), 5.56 (dd, 1H, olefin), 5.56 (dd, 1H, olefin), 5.15 (brs, 1H, NH), 2.06 (m, 9H, adamantine), 1.59 (m, 6H, adamantine)</p>
+      <p id="p-00129-en" num="0116">MALDI-TOF MS; m/z=228.6 ([C<sub>13</sub>H<sub>19</sub>NO+Na]+=228.1) [C<sub>39</sub>H<sub>63</sub>NO<sub>30</sub>+K]+=244.4)</p>
+      <p id="p-00130-en" num="0117">Elemental analysis (C<sub>13</sub>H<sub>19</sub>NO(H<sub>2</sub>O)<sub>0.16</sub>): C, 74.09; H, 9.24; N, 6.64</p>
+      <p id="p-00131-en" num="0118">Measurement result: C, 74.06; H, 9.18; N, 6.61</p>
+      <heading id="h-00037-en" level="1">Production of Host Body Macromolecule</heading>
+      <heading id="h-00038-en" level="1">Polymerization Example 1</heading>
+      <p id="p-00132-en" num="0119">The 6-acrylamide-β-cyclodextrin (6.8 mmol) obtained in Production Example 2, and acrylamide (340 mmol) were subjected to a radical polymerization reaction in water, using ammonium persulfate (APS; 0.006 mmol) and N,N,N′,N′-tetramethylethylenediamine (TMEDA; 0.006 mmol) as initiators. After 12 hours of reaction, the unreactant was removed by dialysis. The resulting solution was concentrated under reduced pressure to give a host macromolecule (yield 87%).</p>
+      <p id="p-00133-en" num="0120">
+        <sup>1</sup>H NMR (500 MHz, D<sub>2</sub>O): δ5.20-5.10 (m, 7H, C<sub>1</sub>H of CD), 4.10-3.60 (m, 42H, C<sub>2,3,4,5,6</sub>H of CD), 2.50-2.10 (methine proton of the polymer main chain), 2.00-1.50 (methylene proton of the polymer main chain).</p>
+      <heading id="h-00039-en" level="1">Polymerization Example 2</heading>
+      <p id="p-00134-en" num="0121">A host macromolecule (yield 83%) was obtained in the same manner as in Polymerization Example 1, except that the 6-acrylamide-α-CD obtained in Production Example 1 was used in place of the 6-acrylamide-β-CD.</p>
+      <p id="p-00135-en" num="0122">
+        <sup>1</sup>H NMR (500 MHz, D<sub>2</sub>O): δ5.20-5.10 (m, 6H, C<sub>1</sub>H of CD), 4.10-3.60 (m, 36H, C<sub>2,3,4,5,6</sub>H of CD), 2.50-2.10 (methine proton of the polymer main chain), 2.00-1.45 (methylene proton of the polymer main chain).</p>
+      <heading id="h-00040-en" level="1">Production of Guest Body Macromolecule</heading>
+      <heading id="h-00041-en" level="1">Polymerization Example 3</heading>
+      <p id="p-00136-en" num="0123">The N-(1-Ad)acrylamide (0.62 mmol) obtained in Production Example 3, and acrylamide (31 mmol) were subjected to a radical polymerization reaction in dimethylsulfoxide (DMSO; 30 ml) at 60° C., using 2,2′-azobis(isobutyronitrile) (AIBN; 0.04 mmol).</p>
+      <p id="p-00137-en" num="0124">After 12 hours of reaction, the mixture was reprecipitated with methanol, and dried under reduced pressure to obtain a crude product. This procedure was repeated three times to produce a guest macromolecule (yield 93%).</p>
+      <p id="p-00138-en" num="0125">
+        <sup>1</sup>H NMR (500 MHz, D<sub>2</sub>O): δ2.50-1.95 (methine proton of the polymer main chain, adamantane proton), 1.95-1.40 (methylene proton of the polymer main chain, adamantane proton).</p>
+      <heading id="h-00042-en" level="1">Production of Host Body Gel</heading>
+      <heading id="h-00043-en" level="1">Crosslink Example 1</heading>
+      <p id="p-00139-en" num="0126">The 6-acrylamide-β-CD (0.31 mmol) obtained in Production Example 2, acrylamide (6.2 mmol), and N,N′-methylenebis(acrylamide) (0.03 mmol) were subjected to a radical polymerization reaction in water to obtain a host body gel, using APS (0.0013 mmol) and TMEDA (0.0052 mmol) as initiators.</p>
+      <heading id="h-00044-en" level="1">Crosslink Example 2</heading>
+      <p id="p-00140-en" num="0127">A host body gel was obtained in the same manner as in Crosslink Example 1, except that the 6-acrylamide-α-CD obtained in Production Example 1 was used in place of the 6-acrylamide-β-CD.</p>
+      <heading id="h-00045-en" level="1">Production of Guest Body Gel</heading>
+      <heading id="h-00046-en" level="1">Crosslink Example 3</heading>
+      <p id="p-00141-en" num="0128">The N-(1-Ad) acrylamide (0.32 mmol) obtained in Production Example 3, acrylamide (6.2 mmol), and N,N′-methylenebis(acrylamide) (0.12 mmol) were subjected to a radical polymerization reaction in DMSO (3.5 ml) at 63° C., using AIBN (0.03 mmol). After 12 hours of reaction, the solvent in the gel was displaced with water in repeating fashion to obtain a guest body gel.</p>
+      <heading id="h-00047-en" level="1">Crosslink Example 4</heading>
+      <p id="p-00142-en" num="0129">A guest body gel was obtained in the same manner as in Crosslink Example 3, except that n-butyl acrylate (Tokyo Chemical Industry Co., Ltd.) was used in place of the N-(1-Ad) acrylamide.</p>
+      <heading id="h-00048-en" level="1">Crosslink Example 5</heading>
+      <p id="p-00143-en" num="0130">A guest body gel was obtained in the same manner as in Crosslink Example 3, except that t-butyl acrylate (Tokyo Chemical Industry Co., Ltd.) was used in place of the N-(1-Ad) acrylamide.</p>
+      <heading id="h-00049-en" level="2">Contacting of Gels</heading>
+      <p id="p-00144-en" num="0131">The Gels obtained in Crosslink Examples 1 to 5 were each cut into a cube measuring 3 mm×3 mm×3 mm.</p>
+      <p id="p-00145-en" num="0132">For the visual inspection of assembly formation, the gel having β-CD obtained in Crosslink Example 1 was dyed red by being dipped in a red dye (erythrosine, red 3) solution.</p>
+      <p id="p-00146-en" num="0133">In the same manner, the gel having α-CD obtained in Crosslink Example 2 was dyed blue (brilliant blue, blue 1), the gel having Ad obtained in Crosslink Example 3 was dyed pale green (malachite green, or a mixture of low-concentration blue 1 and yellow 4), the gel having n-Bu group obtained in Crosslink Example 4 was dyed yellow (tartrazine, yellow 4), and the gel having t-Bu group obtained in Crosslink Example 5 was dyed green (a mixture of blue 1 and yellow 4).</p>
+      <heading id="h-00050-en" level="1">Example 1</heading>
+      <p id="p-00147-en" num="0134">The gel having the host group β-CD (Crosslink Example 1), and the gel having the guest group Ad (Crosslink Example 3) were placed in a petri dish, and vibrated at room temperature for several minutes with EYELA CM-1000 after adding water (5 mL).</p>
+      <p id="p-00148-en" num="0135">As shown in <figref>FIG. 1</figref>, the β-CD-containing host body gel and the Ad-containing guest body gel attracted each other when brought close to each other, and strongly adhered to each other and formed an assembly.</p>
+      <p id="p-00149-en" num="0136">The assembly was measured for fracture elongation and break strength. The resulting stress-strain curve is represented in <figref>FIG. 3</figref>. The measurement results are presented in Table 1.</p>
+      <heading id="h-00051-en" level="1">Example 2</heading>
+      <p id="p-00150-en" num="0137">The gel having the host group α-CD (Crosslink Example 2), and the gel having the guest group Ad (Crosslink Example 3) were placed in a petri dish, and vibrated at room temperature for several minutes with EYELA CM-1000 after adding water (5 mL).</p>
+      <p id="p-00151-en" num="0138">The α-CD-containing host body gel and the Ad-containing guest body gel attracted each other when brought close to each other, and adhered to each other and formed an assembly.</p>
+      <p id="p-00152-en" num="0139">The assembly was measured for fracture elongation and break strength. The results are presented in Table 1.</p>
+      <heading id="h-00052-en" level="1">Example 3</heading>
+      <p id="p-00153-en" num="0140">The gel having the host group β-CD (Crosslink Example 1), the gel having the host group α-CD (Crosslink Example 2), the gel having the guest group n-Bu (Crosslink Example 4), and the gel having the guest group t-Bu (Crosslink Example 5) were placed in a petri dish, and vibrated at room temperature for several minutes with EYELA CM-1000 after adding water (5 mL).</p>
+      <p id="p-00154-en" num="0141">As shown in <figref>FIG. 2</figref>, the β-CD-containing host body gel did not adhere to the n-Bu group-containing guest body gel, and selectively formed an assembly only with the t-Bu group-containing guest body gel. The α-CD-containing host body gel did not adhere to the t-Bu group-containing guest body gel, and selectively formed an assembly only with the n-Bu group-containing guest body gel.</p>
+      <p id="p-00155-en" num="0142">The assemblies were measured for fracture elongation and break strength. The results are presented in Table 1.</p>
+      <p id="p-00156-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="left" />
+              <colspec colname="3" colwidth="35pt" align="left" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="35pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="6" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="6" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Fracture</entry>
+                  <entry>Associa-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Break</entry>
+                  <entry>elonga-</entry>
+                  <entry>tion</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>strength</entry>
+                  <entry>tion</entry>
+                  <entry>constant</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Host gel</entry>
+                  <entry>Guest gel</entry>
+                  <entry>Adhesion<sup>a</sup></entry>
+                  <entry>(kPa)</entry>
+                  <entry>(%)</entry>
+                  <entry>(Ka/M<sup>−1</sup>)<sup>b</sup></entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="6" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="21pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="left" />
+              <colspec colname="3" colwidth="35pt" align="left" />
+              <colspec colname="4" colwidth="35pt" align="left" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="35pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Ex. 1</entry>
+                  <entry>β-CD-gel</entry>
+                  <entry>Ad-gel</entry>
+                  <entry>Excellent</entry>
+                  <entry>900</entry>
+                  <entry>85</entry>
+                  <entry>1,500</entry>
+                </row>
+                <row>
+                  <entry>Ex. 2</entry>
+                  <entry>α-CD-gel</entry>
+                  <entry>Ad-gel</entry>
+                  <entry>Good</entry>
+                  <entry>750</entry>
+                  <entry>65</entry>
+                  <entry>98</entry>
+                </row>
+                <row>
+                  <entry>Ex. 3</entry>
+                  <entry>α-CD-gel</entry>
+                  <entry>n-Bu-gel</entry>
+                  <entry>Good</entry>
+                  <entry>200</entry>
+                  <entry>15</entry>
+                  <entry>57</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>α-CD-gel</entry>
+                  <entry>t-Bu-gel</entry>
+                  <entry>Poor</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>≈15</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>β-CD-gel</entry>
+                  <entry>n-Bu-gel</entry>
+                  <entry>Poor</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>&lt;10</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>β-CD-gel</entry>
+                  <entry>t-Bu-gel</entry>
+                  <entry>Good</entry>
+                  <entry>700</entry>
+                  <entry>18</entry>
+                  <entry>170</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="left" id="entry-00001-en">
+                    <sup>a</sup>Excellent means strong adhesion; Good means adhesion; Poor means no adhesion</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="left" id="entry-00002-en">
+                    <sup>b</sup>Calculated from <sup>1</sup>H NMR according to Benesi-Hildebrand method</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00157-en" num="0143">It can be seen from the results presented in Table 1 that the assemblies with larger association constants have larger break strengths.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>-<b>12</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>13</b>. A polymer that has one or more host groups and one or more guest groups on the side chains,
+<claim-text>wherein the host groups are cyclodextrins,</claim-text><claim-text>wherein the guest groups are an optionally-substituted alkyl group, or an optionally-substituted aryl group.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>14</b>. A polymer according to <claim-ref idref="clm-00002-en">claim 13</claim-ref>, which has repeating units represented by the following general formulae (2) and (3)</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00001-en" num="00013">
+          <img id="imgc-00001-en" he="23.37mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150259579A1_00016.PNG" img-format="png" original="US20150259579A1-20150917-C00013.TIF" />
+        </chemistry><claim-text>wherein CD represents α-cyclodextrin, β-cyclodextrin, or γ-cyclodextrin, and m is 1 to 200,000,</claim-text></claim-text>
+      <claim-text>
+        <chemistry id="chemc-00002-en" num="00014">
+          <img id="imgc-00002-en" he="22.35mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150259579A1_00017.PNG" img-format="png" original="US20150259579A1-20150917-C00014.TIF" />
+        </chemistry><claim-text>wherein A represents O or NH, R represents an optionally-substituted alkyl group, or an optionally-substituted aryl group, and 1 is 1 to 200,000.</claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>15</b>. A polymer according to <claim-ref idref="clm-00003-en">claim 14</claim-ref>, which further has repeating units represented by the following general formula (1):</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00003-en" num="00015">
+          <img id="imgc-00003-en" he="12.02mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150259579A1_00018.PNG" img-format="png" original="US20150259579A1-20150917-C00015.TIF" />
+        </chemistry><claim-text>wherein X represents a hydroxyl group, C(O)NH<sub>2</sub>, or C(O)OH, and n is 1 to 200,000, the repeating units being formed by polymerizing a monomer represented by the following general formula (4):</claim-text></claim-text>
+      <claim-text>
+        <chemistry id="chemc-00004-en" num="00016">
+          <img id="imgc-00004-en" he="10.24mm" wi="69.85mm" alt="embedded image" img-content="chem" file="US20150259579A1_00019.PNG" img-format="png" original="US20150259579A1-20150917-C00016.TIF" />
+        </chemistry><claim-text>wherein X represents a hydroxyl group, C(O)NH<sub>2</sub>, or C(O)OH.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>16</b>. A gel comprising the polymer of <claim-ref idref="clm-00002-en">claim 13</claim-ref>.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>17</b>. An assembly obtained by bringing into contact the one or more gels of <claim-ref idref="clm-00005-en">claim 16</claim-ref>.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>18</b>. A method for selective adhesion of the one or more gels of <claim-ref idref="clm-00005-en">claim 16</claim-ref> through contact in an aqueous solvent.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150259579A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259579A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150259579A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259579A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150259579A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259579A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150259579A1_00004.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259579A1-20150917-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150259579A1_00005.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259579A1-20150917-C00002.TIF" inline="yes" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150259579A1_00006.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259579A1-20150917-C00003.TIF" inline="yes" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150259579A1_00007.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259579A1-20150917-C00004.TIF" inline="yes" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150259579A1_00008.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259579A1-20150917-C00005.TIF" inline="yes" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150259579A1_00009.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259579A1-20150917-C00006.TIF" inline="yes" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150259579A1_00010.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259579A1-20150917-C00007.TIF" inline="yes" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150259579A1_00011.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259579A1-20150917-C00008.TIF" inline="yes" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150259579A1_00012.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259579A1-20150917-C00009.TIF" inline="yes" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150259579A1_00013.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259579A1-20150917-C00010.TIF" inline="yes" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150259579A1_00014.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259579A1-20150917-C00011.TIF" inline="yes" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150259579A1_00015.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259579A1-20150917-C00012.TIF" inline="yes" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150259579A1_00016.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259579A1-20150917-C00013.TIF" inline="yes" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150259579A1_00017.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259579A1-20150917-C00014.TIF" inline="yes" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150259579A1_00018.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259579A1-20150917-C00015.TIF" inline="yes" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="US20150259579A1_00019.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259579A1-20150917-C00016.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150259579A1.PDF" type="pdf" size="713106" pages="12" />
+</lexisnexis-patent-document>

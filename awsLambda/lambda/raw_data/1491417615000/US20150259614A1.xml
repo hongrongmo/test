@@ -1,0 +1,925 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150259614A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030037" date-changed="20160127" time-changed="023640">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121313723">
+        <country>US</country>
+        <doc-number>20150259614</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14668508</doc-number>
+        <date>20150325</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>KR</country>
+        <doc-number>1020130055031</doc-number>
+        <date>20130515</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20160127">
+      <classification-ipcr sequence="1">
+        <text>C10L   1/02        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>10</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>B01J  19/24        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>19</main-group>
+        <subgroup>24</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C07C  67/02        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>67</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C07C  67/58        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>67</main-group>
+        <subgroup>58</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20160127">
+      <classification-cpc sequence="1">
+        <text>C10L   1/026       20130101 FI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>026</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B01J  19/24        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>19</main-group>
+        <subgroup>24</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>B01J2219/24        20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>2219</main-group>
+        <subgroup>24</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C07C  67/02        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>67</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C07C  67/03        20130101 LI20151109BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>67</main-group>
+        <subgroup>03</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151109</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C07C  67/08        20130101 LI20151109BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>67</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151109</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C07C  67/58        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>67</main-group>
+        <subgroup>58</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C10G2300/1003      20130101 LA20150702BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>G</subclass>
+        <main-group>2300</main-group>
+        <subgroup>1003</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150702</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C10L2200/0476      20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>L</subclass>
+        <main-group>2200</main-group>
+        <subgroup>0476</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>C10L2270/026       20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>L</subclass>
+        <main-group>2270</main-group>
+        <subgroup>026</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>C10L2290/06        20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>L</subclass>
+        <main-group>2290</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>C10L2290/54        20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>L</subclass>
+        <main-group>2290</main-group>
+        <subgroup>54</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>C11C   3/003       20130101 LI20150703BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>11</class>
+        <subclass>C</subclass>
+        <main-group>3</main-group>
+        <subgroup>003</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150703</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>Y02E  50/13        20130101 LA20160120BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>E</subclass>
+        <main-group>50</main-group>
+        <subgroup>13</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20160120</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="15">
+        <text>Y02P  30/20        20151101 LA20151103BHEP        </text>
+        <cpc-version-indicator>
+          <date>20151101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>P</subclass>
+        <main-group>30</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151103</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <combination-set>
+        <group-number>1</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C07C  67/08        20130101 LI20151109BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>07</class>
+            <subclass>C</subclass>
+            <main-group>67</main-group>
+            <subgroup>08</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151109</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C07C  69/52        20130101 LI20151109BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>07</class>
+            <subclass>C</subclass>
+            <main-group>69</main-group>
+            <subgroup>52</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151109</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>2</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C07C  67/03        20130101 LI20151109BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>07</class>
+            <subclass>C</subclass>
+            <main-group>67</main-group>
+            <subgroup>03</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151109</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C07C  69/52        20130101 LI20151109BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>07</class>
+            <subclass>C</subclass>
+            <main-group>69</main-group>
+            <subgroup>52</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151109</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">5</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">METHOD AND DEVICE FOR MANUFACTURING BIODIESEL FROM SEWAGE SLUDGE</invention-title>
+    <related-documents date-changed="20150917">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>WO</country>
+              <doc-number>/KR2014/002972</doc-number>
+              <date>20140407</date>
+            </document-id>
+            <parent-status>PENDING</parent-status>
+            <parent-pct-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>PCT/KR2014/002972</doc-number>
+                <date>20140407</date>
+              </document-id>
+            </parent-pct-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14006685</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Korea University Research and Business Foundation</orgname>
+            <address>
+              <city>Seoul</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>KR</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Lee</last-name>
+            <first-name>Jae Woo</first-name>
+            <address>
+              <city>Seoul</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Choi</last-name>
+            <first-name>Ou-Kyung</first-name>
+            <address>
+              <city>Yongin</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>KR14002972</doc-number>
+        <date>20140407</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014185629</doc-number>
+        <date>20141120</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150917">
+      <main-family family-id="168093112">
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104662133</doc-number>
+            <kind>A</kind>
+            <date>20150527</date>
+          </document-id>
+          <application-date>
+            <date>20140407</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014185629</doc-number>
+            <kind>A1</kind>
+            <date>20141120</date>
+          </document-id>
+          <application-date>
+            <date>20140407</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>101436428</doc-number>
+            <kind>B1</kind>
+            <date>20140826</date>
+          </document-id>
+          <application-date>
+            <date>20130515</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259614</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150325</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="168093111">
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104662133</doc-number>
+            <kind>A</kind>
+            <date>20150527</date>
+          </document-id>
+          <application-date>
+            <date>20140407</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014185629</doc-number>
+            <kind>A1</kind>
+            <date>20141120</date>
+          </document-id>
+          <application-date>
+            <date>20140407</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>101436428</doc-number>
+            <kind>B1</kind>
+            <date>20140826</date>
+          </document-id>
+          <application-date>
+            <date>20130515</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259614</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150325</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Disclosed are a method and an apparatus for producing biodiesel from water-containing sewage sludge, using xylene or toluene, higher in boiling point than water, as a cosolvent.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150325</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015259614A1</docdb-publication-number>
+      <docdb-application-id>444514819</docdb-application-id>
+      <new-owner>KOREA UNIVERSITY RESEARCH AND BUSINESS FOUNDATION,</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:LEE, JAE WOO;CHOI, OU-KYUNG;REEL/FRAME:035255/0481</free-text-description>
+      <effective-date>
+        <date>20150306</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application is a continuation of International Application No. PCT/KR2014/002972 filed on Apr. 7, 2014, which claims priority to Korean Patent Application No. 10-2013-0055031, filed on May 15, 2013. The applications are incorporated herein by reference.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00002-en" num="0002">The present invention relates to a method and an apparatus for the production of biodiesel from sewage sludge. More particularly, the present invention relates to a method and an apparatus for producing biodiesel by transesterifying oil components and fatty acids of primary and secondary sewage sludge generated upon sewage treatment.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND ART</heading>
+      <p id="p-00003-en" num="0003">In South Korea, the production of sludge during sewage treatment amounts to approximately 9,000 tons/day and increases every year. However, the direct landfill of sewage sludge has been prohibited when its water content is 85% or higher, and ocean disposal, a main treatment method, also has been banned from 2012. Accordingly, there is an urgent need for a technical method for stably treating and disposing sewage sludge. Meanwhile, keen attention has been paid to energy conversion techniques from waste resources such as sewage, with an increase in the international awareness of energy security and climate change.</p>
+      <p id="p-00004-en" num="0004">Anaerobic digestion is a currently used inland treatment technique for sewage sludge which is arousing great interest. However, the anaerobic digestion technique is known to suffer from the disadvantages of: being poor in digestion rate due to long chain fatty acids in the waste activated sludge (secondary sludge), consuming high energy for drying sludge in conversion into a fuel, and producing a foul odor. Meanwhile, an active attempt has been made, particularly in the USA to convert the oil components of primary and secondary sewage sludge and the fatty acids, used as phospholipid membranes of microorganisms, of activated sludge, into biodiesel by transesterification. When produced from organic wastes such as sewage sludge, biodiesel has an advantage over biogas in terms of the easy of storage and handling. Further, the production of biodiesel from sewage sludge is very valuable in terms of renewable energy production as well as resource recycling, with the subsequent propagation of an enormous ripple effect. Biodiesel is now regarded as an important alternative to traditional petroleum diesel. The Ministry of Trade, Industry and Energy in South Korea established the goal of increasing the domestic distribution rate up to 7% by 2030. For conventional biodiesel production methods, however, a very high proportion of the cost of material is in the production cost. Particularly, it is very difficult to generate plant-based raw materials in South Korea because its arable land resources are limited. For these reasons, most of the biodiesel consumed in South Korea is imported. Accordingly, the use of sewage sludge as a raw material for new biodiesel is very important and valuable in terms of energy production in lieu of energy importation and the recycling management of waste resources that are difficult to dispose of.</p>
+      <p id="p-00005-en" num="0005">Studies on esterification technology to produce biodiesel from sewage sludge still remain in a nascent stage, and most of them are limited to the use of dried sewage sludge as a material.</p>
+      <heading id="h-00004-en" level="1">SUMMARY</heading>
+      <p id="p-00006-en" num="0006">The present invention aims to produce biodiesel with a high content of fatty acid methyl ester from sewage sludge by transesterification using a hydrophobic cosolvent having a high boiling point.</p>
+      <p id="p-00007-en" num="0007">Also, the present invention aims to enhance the efficiency of the esterification reaction, useful for the production of biodiesel from sewage sludge, by separating oils and fatty acids from water of the sewage via proper temperature control, and reacting the oils and fatty acids with methanol.</p>
+      <p id="p-00008-en" num="0008">To accomplish above objects, the present invention provides a method for producing biodiesel, comprising:</p>
+      <p id="p-00009-en" num="0009">(a) heating water-containing sewage sludge and a mixture solution, together with xylene or toluene as a cosolvent, in a reaction tank <b>30</b> to induce a transesterification reaction, the mixture solution including methanol or ethanol and an acid catalyst at a volume ratio of 1:0.01 to 1:0.05;</p>
+      <p id="p-00010-en" num="0010">(b) cooling and condensing a mixed steam generated in step (a) to separate respective layers of an aqueous methanol or ethanol solution and the cosolvent, followed by circulating the cosolvent to the reaction tank;</p>
+      <p id="p-00011-en" num="0011">(c) further adding methanol and ethanol to the reaction tank to perform the transesterification reaction to completion, with the concomitant production of biodiesel; and</p>
+      <p id="p-00012-en" num="0012">(d) isolating and recovering the biodiesel from the aqueous methanol or ethanol solution, the cosolvent, and the residual solid.</p>
+      <p id="p-00013-en" num="0013">Also, the present invention provides an apparatus for producing biodiesel, comprising:</p>
+      <p id="p-00014-en" num="0014">a cosolvent reservoir <b>10</b>;</p>
+      <p id="p-00015-en" num="0015">a solvent reservoir <b>20</b>;</p>
+      <p id="p-00016-en" num="0016">a reaction tank <b>30</b>, provided at upper positions thereof with a solvent supply unit <b>90</b> for introducing a cosolvent and a solvent, respectively, from the cosolvent reservoir and the solvent reservoir and with a sludge supply unit <b>80</b>, at a lower portion with a sludge discharge unit <b>120</b> for discharging residual sludge from the reactor tank, at a middle position with a biodiesel discharge unit <b>110</b>, and at a top position with a water steam discharge unit <b>100</b>;</p>
+      <p id="p-00017-en" num="0017">a condenser connected to the water steam discharge unit <b>40</b>;</p>
+      <p id="p-00018-en" num="0018">a liquid phase separator <b>50</b> for separating the condensed, aqueous methanol or ethanol solution that is released from the condenser;</p>
+      <p id="p-00019-en" num="0019">a solvent recovery unit <b>41</b> for recovering the condensed solvent discharged from the condenser;</p>
+      <p id="p-00020-en" num="0020">a solvent recovery tank <b>60</b> for storing the solvent recovered by the solvent recovery unit <b>41</b>; and</p>
+      <p id="p-00021-en" num="0021">a solvent circulating pump <b>70</b>.</p>
+      <p id="p-00022-en" num="0022">Characterized by using xylene or toluene, high in boiling point, as a cosolvent, the method for producing biodiesel from sewage sludge allows the transesterification to proceed without water inhibition, bringing about the advantage of decreasing the amount of methanol to be used, and improving the conversion of fatty acid methyl esters from lipids or fatty acids to produce biodiesel with a high content of fatty acid methyl esters at a high yield.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">DESCRIPTION OF DRAWINGS</heading>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 1</figref> is a schematic view of an apparatus for producing biodiesel in accordance with an exemplary embodiment of the present invention.</p>
+      <p id="p-00024-en" num="0024">(<b>10</b>: cosolvent reservoir, <b>20</b>: solvent reservoir, <b>30</b>: reaction tank, <b>40</b>: condenser, <b>41</b>: solvent recovery unit, <b>50</b>: liquid phase separator, <b>51</b>: conveyor, <b>52</b>: potassium carbonate supply pump, <b>53</b>: methanol or ethanol recovering unit, <b>54</b>: water discharging unit, <b>60</b>: solvent recovery tank, <b>70</b>: solvent circulating pump, <b>80</b>: sludge supply unit, <b>90</b>: solvent supply unit, <b>100</b>: water steam discharge unit, <b>110</b>: biodiesel discharge unit, <b>120</b>: sludge discharge unit).</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 2</figref> is a schematic view of a condenser in which a cosolvent is separated from methanol or ethanol.</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 3</figref> is a schematic view of a liquid phase separator in which methanol or ethanol is separated from water.</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 4</figref> is a mass spectrum showing fatty acid methyl esters of Example 1.</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 5</figref> is a mass spectrum showing fatty acid methyl esters of Comparative Example 1.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00029-en" num="0029">Below, a detailed description will be given of the present invention.</p>
+      <p id="p-00030-en" num="0030">The present invention addresses a method for producing biodiesel from sewage sludge. The method includes:</p>
+      <p id="p-00031-en" num="0031">(a) heating water-containing sewage sludge and a mixture solution, together with xylene or toluene as a cosolvent, in a reaction tank to induce a transesterification reaction, the mixture solution including methanol or ethanol and an acid catalyst at a volume ratio of 1:0.01 to 1:0.05;</p>
+      <p id="p-00032-en" num="0032">(b) cooling and condensing the mixed steam generated in step (a) to separate respective layers of an aqueous methanol or ethanol solution and the cosolvent, followed by circulating the cosolvent to the reaction tank;</p>
+      <p id="p-00033-en" num="0033">(c) further adding methanol and ethanol to the reaction tank to perform the transesterification reaction to completion, with the concomitant production of biodiesel; and</p>
+      <p id="p-00034-en" num="0034">(d) isolating and recovering the biodiesel from the aqueous methanol or ethanol solution, the cosolvent, and the residual solid.</p>
+      <p id="p-00035-en" num="0035">The sewage sludge may be primary or secondary sewage sludge, or may be before a drying process has been carried out. The water content of sewage sludge may be preferably in the order of 0 to 85% by weight, or more preferably in the order of 80 to 85% by weight.</p>
+      <p id="p-00036-en" num="0036">As a solvent for transesterification, methanol or ethanol may be used. An acid catalyst is added to the solvent to increase an initial reaction rate. Preferably, the volume ratio of methanol or ethanol to acid catalyst ranges from 1:0.01 to 1:0.05. Within the range, biodiesel can be produced at a high yield.</p>
+      <p id="p-00037-en" num="0037">In addition, the acid catalyst may be selected from the group consisting of, but not limited to, sulfuric acid, hydrochloric acid, sulfonic acid, and a combination thereof, with the most preference for sulfuric acid.</p>
+      <p id="p-00038-en" num="0038">Xylene or toluene may function as the cosolvent. Because the cosolvents boil at 138.5 and 111° C., respectively, water can be separated in the transesterification reaction. That is, when being heated, the water of the sludge is evaporated and discharged before the temperature reaches the boiling points of the hydrophobic cosolvent. In the meanwhile, hydrophobic oils and fatty acids migrate to and remain in the hydrophobic cosolvent to increase the production yield of biodiesel and the content of fatty acid methyl esters and to decrease the amount of methanol to be used.</p>
+      <p id="p-00039-en" num="0039">The mixture solution of methanol or ethanol and acid catalyst may be preferably mixed at a volume ratio of 1:0.25 to 1:1 with the cosolvent, and more preferably at a volume ratio of 1:0.5 to 1:0.75. At the preferable volume ratio between methanol and the cosolvent, the hydrophobic oil and fatty acid components extracted by transesterification can migrate into the cosolvent at maximum efficiency.</p>
+      <p id="p-00040-en" num="0040">In addition, the transesterification reaction may be preferably carried out at 80 to 110° C. for 4 to 8 hrs and more preferably at 90 to 105° C. In the temperature range, the time of transesterification can be reduced by 4 hrs to 8 hrs, compared to that using a low-boiling point cosolvent such as hexane.</p>
+      <p id="p-00041-en" num="0041">The mixed gas generated during the transesterification of step (a) includes water vapor, methanol or ethanol gas, and cosolvent gas, and is cooled and condensed in a condenser <b>40</b>. At this time, layer separation occurs into an aqueous methanol or ethanol solution layer and a cosolvent layer. The separated cosolvent is circulated back to the reaction tank.</p>
+      <p id="p-00042-en" num="0042">Afterwards, the further addition of methanol or ethanol to the reaction tank leads the transesterification to the completion. The methanol or ethanol solution separated in step (b) is introduced into a liquid phase separator to which a salt is then added to separate methanol or ethanol from water. This methanol or ethanol may be used. That is, it can be recycled to the reaction tank where the transesterification reaction is completed. The salt may be calcium carbonate or sodium carbonate, but is not limited thereto.</p>
+      <p id="p-00043-en" num="0043">Step (d) is to separate and recover the produced biodiesel from the methanol or ethanol, the cosolvent and the residues by gravitational sedimentation after the completion of transesterification. For effective separation, water may be further added.</p>
+      <p id="p-00044-en" num="0044">In the produced biodiesel of step (c), the cosolvent is still included. Thus, separation of the cosolvent is additionally needed so as to increase the purity of biodiesel. By conducting steps (a) to (d), biodiesel with a high content of fatty acid methyl esters can be produced at high yield.</p>
+      <p id="p-00045-en" num="0045">Also, the present invention addresses an apparatus for producing biodiesel. The apparatus includes a cosolvent reservoir <b>10</b>; a solvent reservoir <b>20</b>; a reaction tank <b>30</b> provided at upper positions thereof with a solvent supply unit <b>90</b> for introducing a cosolvent and a solvent respectively from the cosolvent reservoir <b>10</b> and the solvent reservoir <b>20</b> and with a sludge supply unit <b>80</b>, at a lower portion with a sludge discharge unit <b>120</b> for discharging residual sludge from the reactor tank, at a middle position with a biodiesel discharge unit <b>110</b>, and at a top position with a water steam discharge unit <b>100</b>; a condenser <b>40</b> connected to the water steam discharge unit; a liquid phase separator <b>50</b> for separating the condensed, aqueous methanol or ethanol solution that is released from the condenser; a solvent recovery unit <b>41</b> for recovering the condensed solvent discharged from the condenser; a solvent recovery tank <b>60</b>; and a solvent circulating pump <b>70</b>.</p>
+      <p id="p-00046-en" num="0046">In one exemplary embodiment of the present invention, the aqueous methanol or ethanol solution discharged from the condenser <b>40</b> is transferred to the liquid phase separator <b>50</b> by a conveyor <b>51</b>. Introduction of potassium carbonate into the liquid phase separator by a potassium carbonate supply pump <b>52</b> causes the aqueous methanol or ethanol solution to be separated into water and methanol or ethanol. The water is discharged to a water discharging unit <b>54</b> while the methanol or ethanol is flowed towards the solvent recovery tank <b>60</b> by a methanol or ethanol recovering unit <b>53</b>.</p>
+      <heading id="h-00007-en" level="1">EXAMPLES</heading>
+      <p id="p-00047-en" num="0047">A better understanding of the present invention may be obtained through the following examples which are set forth to illustrate, but are not to be construed as limiting the present invention.</p>
+      <heading id="h-00008-en" level="1">Example 1</heading>
+      <heading id="h-00009-en" level="1">Production of Biodiesel from Sewage Sludge Using Xylene</heading>
+      <p id="p-00048-en" num="0048">To a flask was introduced 150 g of sewage sludge with a water content of 85% by weight. Then, a mixture solution of 300 mL of methanol and 15 mL of sulfuric acid was added, together with 300 mL of xylene, to the flask. After the secondary sewage sludge was completely dissolved in the solvent mixture, transesterification was carried out at 105° C. for 4 hrs. The mixed steam generated during heating was cooled in a condenser to form two separate layers of xylene and an aqueous methanol solution. After being isolated, the aqueous methanol solution was further separated into water and methanol using potassium carbonate. Both the methanol and the xylene, thus separated, were recycled to the reaction tank <b>30</b>. When the transesterification was completed, water was added to the reaction tank to allow the separation of biodiesel from the aqueous methanol solution and residual solids by gravitational sedimentation.</p>
+      <heading id="h-00010-en" level="1">Comparative Example 1</heading>
+      <heading id="h-00011-en" level="1">Production of Biodiesel from Sewage Sludge Using Hexane</heading>
+      <p id="p-00049-en" num="0049">The same procedure as in Example 1 was repeated, with the exception that hexane was used instead of xylene and the transesterification was carried out for 4 hrs at 55° C. instead of at 105° C.</p>
+      <heading id="h-00012-en" level="1">Experimental Example 1</heading>
+      <heading id="h-00013-en" level="1">Production Yield of Biodiesel from Sewage Sludge</heading>
+      <p id="p-00050-en" num="0050">The production yields of biodiesel in Example 1 and Comparative Example 1 were measured, and the results are summarized in Table 1, below.</p>
+      <p id="p-00051-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="left" />
+              <colspec colname="2" colwidth="63pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="63pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="4" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Rxn. Temp.</entry>
+                  <entry>Rxn. Time</entry>
+                  <entry>Biodiesel Yield</entry>
+                </row>
+                <row>
+                  <entry>Solvent</entry>
+                  <entry>(° C.)</entry>
+                  <entry>(hr)</entry>
+                  <entry>(%)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="left" />
+              <colspec colname="2" colwidth="63pt" align="char" char="." />
+              <colspec colname="3" colwidth="35pt" align="char" char="." />
+              <colspec colname="4" colwidth="63pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Ex. 1 (Xylene)</entry>
+                  <entry>105</entry>
+                  <entry>4</entry>
+                  <entry>15.9</entry>
+                </row>
+                <row>
+                  <entry>C. Ex. 1(Hexane)</entry>
+                  <entry>55</entry>
+                  <entry>8</entry>
+                  <entry>8.22</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00052-en" num="0051">In Comparative Example 1 where hexane having a boiling point of 69° C. (lower than that of water) was employed as a solvent, a low production yield of biodiesel was obtained. In contrast, the production yield of biodiesel in Example 1 using xylene, which boils at a higher temperature than does water, amounted to as high as 15.9%. Because it was difficult to extract the water of sewage from the biodiesel when the boiling point of the solvent was lower than that of water, the reaction could not be easily carried out, and thus the production of biodiesel from sewage was inefficient.</p>
+      <p id="p-00053-en" num="0052">In addition, the use of xylene as in Example 1 afforded biodiesel with a higher content of fatty acid methyl esters than did the use of hexane as in Comparative Example 1. The results are given in <figref>FIGS. 4 and 5</figref>.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method for producing biodiesel from sewage sludge, including:
+<claim-text>(a) heating water-containing sewage sludge and a mixture solution, together with xylene or toluene as a cosolvent, in a reaction tank (<b>30</b>) to induce a transesterification reaction, the mixture solution including methanol or ethanol and an acid catalyst at a volume ratio of 1:0.01 to 1:0.05;</claim-text><claim-text>(b) cooling and condensing a mixed steam generated in step (a) to separate respective layers of an aqueous methanol or ethanol solution and the cosolvent, followed by circulating the cosolvent to the reaction tank;</claim-text><claim-text>(c) further adding methanol or ethanol to the reaction tank to perform the transesterification reaction to completion, with the concomitant production of biodiesel; and</claim-text><claim-text>(d) isolating and recovering the biodiesel from the aqueous methanol or ethanol solution, the cosolvent, and the residual solid.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the mixture solution is mixed at a volume ratio of 1:0.25 to 1:1 with the cosolvent in step (a), and the transesterification reaction is carried out at 80 to 110° C. for 4 to 8 hrs.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further including adding a salt to the aqueous methanol or ethanol solution condensed and separated in step (b) to separate the aqueous methanol solution into methanol or ethanol and water, and recycling the methanol or ethanol into the reaction tank.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en" independent="true">
+      <claim-text>
+        <b>4</b>. An apparatus for producing biodiesel, including:
+<claim-text>a cosolvent reservoir (<b>10</b>);</claim-text><claim-text>a solvent reservoir (<b>20</b>);</claim-text><claim-text>a reaction tank (<b>30</b>) provided at upper positions thereof with a solvent supply unit (<b>90</b>) for introducing a cosolvent and a solvent, respectively, from the cosolvent reservoir and the solvent reservoir and with a sludge supply unit (<b>80</b>), at a lower portion with a sludge discharge unit (<b>120</b>) for discharging residual sludge from the reactor tank, at a middle position with a biodiesel discharge unit (<b>110</b>), and at a top position with a water steam discharge unit (<b>100</b>);</claim-text><claim-text>a condenser connected to the water steam discharge unit (<b>40</b>);</claim-text><claim-text>a liquid phase separator (<b>50</b>) for separating the condensed, aqueous methanol or ethanol solution that is released from the condenser;</claim-text><claim-text>a solvent recovery unit (<b>41</b>) for recovering the condensed solvent discharged from the condenser;</claim-text><claim-text>a solvent recovery tank (<b>60</b>) for storing the solvent recovered by the solvent recovery unit (<b>41</b>); and</claim-text><claim-text>a solvent circulating pump (<b>70</b>).</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The apparatus of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, further including a liquid phase separator (50) to which the aqueous methanol or ethanol solution discharged from the condenser (40) is transferred by a conveyor (51), the liquid phase separator (50) being provided with a potassium carbonate supply pump (52), and at upper positions with a methanol or ethanol recovery unit (53) and a water discharge unit (54).</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150259614A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259614A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150259614A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259614A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150259614A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259614A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150259614A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259614A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150259614A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259614A1-20150917-D00005.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150259614A1.PDF" type="pdf" size="375879" pages="10" />
+</lexisnexis-patent-document>

@@ -1,0 +1,1830 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150246043A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021304" date-changed="20160118" time-changed="124133">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121139155">
+        <country>US</country>
+        <doc-number>20150246043</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14417226</doc-number>
+        <date>20130725</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="regional">
+        <country>EP</country>
+        <doc-number>12005485</doc-number>
+        <date>20120727</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>A61K  31/519       20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>519</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61J   3/00        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>J</subclass>
+        <main-group>3</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61J   3/10        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>J</subclass>
+        <main-group>3</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>A61K   9/28        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>28</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>A61K  31/519       20130101 FI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>31</main-group>
+        <subgroup>519</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61J   3/005       20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>J</subclass>
+        <main-group>3</main-group>
+        <subgroup>005</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61J   3/10        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>J</subclass>
+        <main-group>3</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61K   9/0004      20130101 LI20150722BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>0004</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150722</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61K   9/2027      20130101 LI20150722BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>2027</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150722</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61K   9/2077      20130101 LI20150722BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>2077</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150722</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61K   9/2086      20130101 LI20150722BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>2086</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150722</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61K   9/28        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>28</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>A61K   9/2866      20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>2866</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">16</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">ORAL DOSAGE FORMS FOR MODIFIED RELEASE COMPRISING RUXOLITINIB</invention-title>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>ratiopharm GmbH</orgname>
+            <address>
+              <city>Ulm</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>DE</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Stefan</last-name>
+            <first-name>Ralph</first-name>
+            <address>
+              <city>Ebenweiler</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Sievert</last-name>
+            <first-name>Frank</first-name>
+            <address>
+              <city>Allmendingen</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Rimkus</last-name>
+            <first-name>Katrin</first-name>
+            <address>
+              <city>Pullach</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>EP13065771</doc-number>
+        <date>20130725</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014016396</doc-number>
+        <date>20140130</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150903">
+      <main-family family-id="164115391">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014016396</doc-number>
+            <kind>A1</kind>
+            <date>20140130</date>
+          </document-id>
+          <application-date>
+            <date>20130725</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2879603</doc-number>
+            <kind>A1</kind>
+            <date>20140130</date>
+          </document-id>
+          <application-date>
+            <date>20130725</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EA</country>
+            <doc-number>201590272</doc-number>
+            <kind>A1</kind>
+            <date>20150529</date>
+          </document-id>
+          <application-date>
+            <date>20130725</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2877162</doc-number>
+            <kind>A1</kind>
+            <date>20150603</date>
+          </document-id>
+          <application-date>
+            <date>20130725</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246043</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130725</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="164115390">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014016396</doc-number>
+            <kind>A1</kind>
+            <date>20140130</date>
+          </document-id>
+          <application-date>
+            <date>20130725</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2879603</doc-number>
+            <kind>A1</kind>
+            <date>20140130</date>
+          </document-id>
+          <application-date>
+            <date>20130725</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EA</country>
+            <doc-number>201590272</doc-number>
+            <kind>A1</kind>
+            <date>20150529</date>
+          </document-id>
+          <application-date>
+            <date>20130725</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2877162</doc-number>
+            <kind>A1</kind>
+            <date>20150603</date>
+          </document-id>
+          <application-date>
+            <date>20130725</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246043</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130725</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The invention essentially relates to oral dosage forms comprising a JAK kinase inhibitor, preferably Ruxolitinib, suitable for modified release, and processes of preparing such oral dosage forms.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150424</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246043A1</docdb-publication-number>
+      <docdb-application-id>444208016</docdb-application-id>
+      <new-owner>RATIOPHARM GMBH, GERMANY</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:STEFAN, RALPH;SIEVERT, FRANK;RIMKUS, KATRIN;SIGNING DATES FROM 20150225 TO 20150227;REEL/FRAME:035486/0324</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <p id="p-00001-en" num="0001">The invention essentially relates to oral dosage forms comprising a pharmaceutically active substance, preferably (3R)-3-cyclopentyl-3-[4-(7H-pyrrolo[2,3-d]pyrimidin-4-yl)pyrazol-1-yl]propanenitrile, its pharmaceutically acceptable salts, its metabolites or pharmaceutically acceptable salts thereof, suitable for modified release, and processes of preparing such oral dosage forms.</p>
+      <p id="p-00002-en" num="0002">(3R)-3-cyclopentyl-3-[4-(7H-pyrrolo[2,3-d]pyrimidin-4-yl)pyrazol-1-yl]propanenitrile has the chemical formula C<sub>17</sub>H<sub>18</sub>N<sub>6 </sub>and is reported in WO2007070514 as an inhibitor of protein kinases, such as the enzyme Janus Kinase in its subtypes 1 and 2 (hereinafter also referred to as “JAK1” and “JAK2”) and as such it has been asserted that it is useful in the therapy of various diseases, e.g. cancer. The compound is also known under the INN Ruxolitinib and apparently has the following structure (I):</p>
+      <p id="p-00003-en" num="0000">
+        <chemistry id="chem-00001-en" num="00001">
+          <img id="img-00001-en" he="49.28mm" wi="55.80mm" alt="embedded image" img-content="chem" file="US20150246043A1_00001.PNG" img-format="png" original="US20150246043A1-20150903-C00001.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00004-en" num="0003">Pharmaceutically acceptable salts of Ruxolitinib have been reported in WO 2008/157208 and compounds described as metabolites of Ruxolitinib have been reported in WO 2008/157207 as well as WO 2011/044481.</p>
+      <p id="p-00005-en" num="0004">Ruxolitinib and especially its pharmaceutically acceptable salts like the phosphate salt described in WO 2008/157208 are reported to possess a very high aqueous solubility and belong to Biopharmaceutics Classification System class I (high permeability, high solubility). These properties as well as various other physiological factors such as gastrointestinal pH, enzyme activities, gastric and intestinal transit rates negatively influence the bioavailability of Ruxolitinib and make it difficult to prepare a modified-release formulation of Ruxolitinib or pharmaceutically acceptable salts of Ruxolitinib as well as the described metabolites of Ruxolitinib or pharmaceutically acceptable salts thereof.</p>
+      <p id="p-00006-en" num="0005">Hence, there is a need for the provision of pharmaceutical dosage forms and processes for the manufacture of these pharmaceutical dosage forms comprising Ruxolitinib, which do not suffer from the above mentioned draw-backs. Preferably, an oral dosage form should be provided having improved properties like content-uniformity, solubility, dissolution profile, well-defined, predictable and reproducible dissolution rates, stability, and bioavailability. Such an oral dosage form should be producible in a large scale in an economic beneficial way and should be able to provide desirable plasma levels of the drug.</p>
+      <p id="p-00007-en" num="0006">The inventors of the present invention unexpectedly have found that the above drawbacks can be overcome by providing oral dosage forms for modified release comprising <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>(a) Ruxolitinib, and</li><li>(b) a non-erodible material.</li></ul></li></ul></p>
+      <p id="p-00008-en" num="0009">It is found that the dosage forms of the present invention have the advantage that the Ruxolitinib is gradually released over a relatively long period so that the drug is maintained in the blood stream for a superior long time and at a superior uniform concentration. This allows administration e.g. only once daily. Administration of the oral dosage forms of the present invention results in superior blood level fluctuation, that means periods of transient therapeutic overdose, followed by a period of therapeutic underdosing can be avoided. Consequently, the dosage forms of the present invention, particularly provide a constant release of Ruxolitinib, preferably over a prolonged period of time, which avoids blood level fluctuations of the drug in the patient.</p>
+      <p id="p-00009-en" num="0010">Moreover, the dosage form of the present invention is released in the gastrointestinal tract of the patient but not in the stomach, in order to avoid a “nervous stomach” or nausea.</p>
+      <p id="p-00010-en" num="0011">A further subject of the present invention is a process for manufacturing the oral dosage forms of the present invention, preferably in form of a modified release tablet or capsule.</p>
+      <p id="p-00011-en" num="0012">In the following, explanations regarding the pharmaceutical dosage form of the present invention are given. However, these explanations also apply to the processes for manufacturing the pharmaceutical dosage form, such as the modified release tablet or capsule of the present invention, and to the use of the present invention.</p>
+      <p id="p-00012-en" num="0013">Within the present application generally the term “modified release” is used as defined by the USP. Preferably, modified release dosage forms are those whose drug release characteristics accomplish therapeutic or convenience objectives not offered by immediate release forms. Generally, immediate release (IR) forms release at least 70% of the drug within 1 hour or less. The term “modified release” can comprise delayed release, prolonged release, sustained release, extended release and/or controlled release.</p>
+      <p id="p-00013-en" num="0014">Delayed release usually indicates that the drug (=Ruxolitinib) is not being released immediately after administration but at a later time, preferably less than 10% are released within two hours after administration.</p>
+      <p id="p-00014-en" num="0015">Prolonged release usually indicates that the drug (=Ruxolitinib) is provided for absorption over a longer period of time than IR forms, preferably for about 2 to 24 hours, in particular for 3 to 12 hours.</p>
+      <p id="p-00015-en" num="0016">Sustained release usually indicates an initial release of drug (=Ruxolitinib), sufficient to provide a therapeutic dose soon after administration, preferably within two hours after administration, and then a gradual release after an extended period of time, preferably for about 3 to 18 hours, in particular for 4 to 8 hours.</p>
+      <p id="p-00016-en" num="0017">Extended release usually indicates a slow drug (=Ruxolitinib) release, so that plasma concentrations are maintained at a therapeutic level for a time period of between 6 and 36 hours, preferably between 8 and 24 hours.</p>
+      <p id="p-00017-en" num="0018">Controlled release dosage forms usually release the drug (=Ruxolitinib) at a constant rate and provide plasma concentrations that remain essentially invariant with time.</p>
+      <p id="p-00018-en" num="0019">In a preferred embodiment the oral dosage form of the present invention is an extended release dosage form.</p>
+      <p id="p-00019-en" num="0020">In particular, the oral dosage form of the present invention shows a drug release of less than 10% within 2.0 hours. Further, the oral dosage form of the present invention shows a drug release of more than 80% within 3.0 to 12.0 hours, preferably between 4.0 and 8.0 hours.</p>
+      <p id="p-00020-en" num="0021">Generally, within this application the release profile is determined according to USP 31-NF26 release method, apparatus II (paddle). The measurements are carried out in 0.1 HCl at 37° C., wherein the stirring speed is 75 rpm, and re-buffering after 2 hours to pH 6.8.</p>
+      <p id="p-00021-en" num="0022">In a preferred embodiment, the oral dosage form of the present invention is a solid oral dosage form, in particular a solid peroral dosage form.</p>
+      <p id="p-00022-en" num="0023">The term Ruxolitinib (component (a)) as used in the present invention relates to the compound as shown in formula I (free base) or to pharmaceutically acceptable salts thereof, preferably pharmaceutically acceptable acid addition salts, e.g. as described in WO 2008/157208. The acids, which are used to prepare the pharmaceutically acceptable acid addition salts, are preferably those which form non-toxic acid addition salts.</p>
+      <p id="p-00023-en" num="0024">In the oral dosage form of the present invention, Ruxolitinib as the active ingredient (component (a)) can be provided in amorphous form, in crystalline form or as a mixture of both forms. In a preferred embodiment of the present invention Ruxolitinib is provided as the phosphate. Most preferred is the crystalline form of the phosphate of Ruxolitinib.</p>
+      <p id="p-00024-en" num="0025">In a preferred embodiment the oral dosage form of the present invention comprises 1.0 to 60 wt. %, more preferably 2.0 to 30 wt.-%, still more preferably 3.0 to 20 wt. %, in particular 4.0 to 15 wt. % Ruxolitinib, based upon the total weight of the oral dosage form and based on the weight of Ruxolitinib in form of the free base, i.e. as shown in formula (I) above.</p>
+      <p id="p-00025-en" num="0026">In a preferred embodiment the oral dosage form of the present invention comprises 1.0 to 100 mg, more preferably 10 to 75 mg, in particular 25 to 50 mg, based on Ruxolitinib in form of the free base, i.e. as shown in formula (I) above.</p>
+      <p id="p-00026-en" num="0027">The modified release tablet of the present invention further contains a non-erodible material (b). Generally, the non-erodible material is suitable as release controlling agent.</p>
+      <p id="p-00027-en" num="0028">In a first embodiment the non-erodible material can be described as providing a scaffold (matrix) for embedding the active ingredient and to form a physical barrier, which hinders the active ingredient from being released immediately from the dosage form. Thus, the non-erodible material has the effect that the active ingredient can be released from the scaffold in continuous manner. Release of the drug from the matrix can further be by dissolution controlled as well as diffusion controlled mechanisms. In this first embodiment the non-erodible material functions as matrix forming material.</p>
+      <p id="p-00028-en" num="0029">In a second embodiment the non-erodible material can be described as a shell-forming material. Preferably, in that embodiment the oral dosage form is a tablet. The release modifying shell preferably encompasses the drug containing tablet core.</p>
+      <p id="p-00029-en" num="0030">In a third embodiment the non-erodible material can be described as release modifying coating in a multiple unit pellet system (MUPS).</p>
+      <p id="p-00030-en" num="0031">Generally, (i.e. for all three above described embodiments) the oral dosage form of the present invention further comprises a non-erodible material (b). Non-erodible materials are materials, which are able to provide modified release properties, preferably due to their limited solubility, more preferably due to their limited solubility in aqueous conditions at pH 5.0. Preferably, the non-erodible polymer has a water solubility of less than 33 mg/I at a temperature of 25° C. at a pH of 5.0, more preferably of less than 22 mg/I, still more preferably of less than 11 mg/I, especially from 0.01 to 5 mg/I. The water-solubility is determined according to the column elution method of the Dangerous Substances Directive (67/548/EEC), Annex V, Chapter A6. The pH value is determined according to Ph. Eur. 6.0, 2.2.3. The pH value of the aqueous medium usually is achieved by addition of HCl (or NaOH), if necessary.</p>
+      <p id="p-00031-en" num="0032">The solubility of the non-erodible material can be pH independent or pH dependent. Both embodiments are preferred. If the non-erodible material is pH dependent, it is preferred that the non-erodible material has a solubility in water at 25° C. at a pH of 7.0 of more than 33 g/l, more preferably of 50 g/l to 10,000 g/l, still more preferably from 100 g/l to 5,000 g/l, in particular from 200 g/l to 2,000 g/l.</p>
+      <p id="p-00032-en" num="0033">The non-erodible material can comprise an inert non-erodible material, a lipid non-erodible material and/or a hydrophilic non-erodible material. Examples for an inert non-erodible material are ethylcellulose, methacrylate copolymer, polyamide, polyethylene, and polyvinyl acetate; examples for lipid non-erodible materials are carnauba wax, cetyl alcohol, hydrogenated vegetable oils, microcrystalline waxes, monoglycerides, triglycerides and PEG monostearate; examples for hydrophilic non-erodible materials are alginates, carbopol, gelatin, hydroxypropyl cellulose, hydroxypropyl methylcellulose, methylcellulose, xanthan gum and polyethylene oxide.</p>
+      <p id="p-00033-en" num="0034">In a preferred embodiment the non-erodible material is a non-erodible polymer. The non-erodible polymer usually has a weight average molecular weight ranging from 30.000 to 3,000,000 g/mol, preferably from more than 50,000 to 2,500,000 g/mol, more preferably from more than 125,000 to 2,000,000 g/mol, still more preferably from 250,000 to 2,200,000 g/mol, particularly preferred from 400,000 to 1,500,000 g/mol. Furthermore, a 2% w/w solution of the non-erodible polymer in water at pH 7.0 preferably has a viscosity of more than 2 mPas, more preferably of more than 5 mPas, particularly more than 8 mPas and up to 850 mPas, when measured at 25° C. The viscosity is determined according to Ph. Eur., 6<sup>th </sup>edition, Chapter 2.2.10. In the above definition the term “solution” may also refer to a partial solution (in case that the polymer does not dissolve completely in the solution). The weight average molecular weight is preferably determined by gel electrophoresis.</p>
+      <p id="p-00034-en" num="0035">It is further preferred that the non-erodible polymer has a melting temperature of below 220° C., more preferably of between 25° C. and 200° C. In a particularly preferred embodiment the melting temperature is between 35° C. and 190° C. The determination of the melting temperature is carried out according to Ph. Eur., 6<sup>th </sup>edition, Chapter 2.2.15.</p>
+      <p id="p-00035-en" num="0036">If the non-erodible material b) is a polymeric material, it preferably can be selected from acrylic polymers or acrylic copolymers such as polymers obtained from acrylic acid and/or methacrylic acid monomers. Other preferred polymers include, but are not limited to, cellulose and cellulose derivatives such as cellulose acetate phthalate (CAP), hydroxypropyl methyl cellulose (HPMC), hydroxypropyl cellulose (HPC), hydroxypropyl methyl cellulose acetate (HPMCA), hydroxypropyl methyl cellulose phthalate (HPMCP) and cellulose acetate succinate (CAS), polyvinyl polymers such as polyvinyl alcohol phthalate, polyvinyl acetate phthalate and polyvinyl butyl phthalate, and mixtures of one or more of these polymers.</p>
+      <p id="p-00036-en" num="0037">In particular, the following kinds of non-erodible polymers are particularly preferred.</p>
+      <p id="p-00037-en" num="0000">1. Cellulose ether, such as ethyl cellulose, hydroxypropyl methyl cellulose (HPMC) and hydroxypropyl cellulose (HPC), preferably ethyl cellulose, preferably ethyl cellulose having an average molecular weight of 150,000 to 300,000 g/mol and/or an average degree of substitution, ranging from 1.8 to 3.0, preferably from 2.2 to 2.6. This embodiment preferably is used for MUPS or core/shell-tablets; <br /> 2. Cellulose ester, preferably cellulose acetate phthalate, carboxymethyl ethyl cellulose, hydroxypropyl methylcellulose phthalate. This embodiment is preferably used for core/shell tablets; <br /> 3. Copolymers of methacrylic acid or methacrylic acid esters, preferably ethylacrylate-methyl methacrylate-trimethylammonioethyl methacrylate-chloride ethylacrylate-methyl-methacrylate-trimethylammonioethylmethacrylate-chloride ethylacrylate-methylmeth-acrylate, methacrylic acidmethylmethacrylate, wherein the weight ratio is 1:2 methacrylic acid-methylmethacrylate, wherein the weight ratio is 1:1; preferred acrylic polymers are e.g. polyacrylate, polymethacrylate as well as derivatives and mixtures or copolymers thereof; <br /> 4. Polyvinyl acetate or polyvinyl acetate copolymers, preferably polyvinyl acetate phthalate; and mixtures thereof. </p>
+      <p id="p-00038-en" num="0038">The non-erodible material (b) is contained in the tablet or capsule in an amount of 5 to 80 wt. %, preferably from 10 to 50 wt. %, most preferably from 15 to 40 wt. %, based upon the total weight of the oral dosage form. If too little non-erodible material is used, the formulations may break up during the passage down the gastrointestinal tract and this, in turn, may lead to a premature release of a large portion of the content of the drug. If too much matrix former is used, there is a risk that some of the drug will be encapsulated and not released from the tablet.</p>
+      <p id="p-00039-en" num="0039">The oral dosage form of the invention further optionally comprises a pore-forming material c). The term “channeling agent” is in the art often synonymously used for the pore-forming material of the present invention. Since the pore-forming material is generally soluble in the gastrointestinal tract and leaches out from the oral dosage form, the pore-forming material can be described has having the effect of forming pores, such as small holes within the tablet, through which the active ingredient can be released from the tablet matrix in a controlled manner. Thus, release of the active ingredient generally depends on dissolving the pore forming material and thereby forming a porous matrix of capillaries such that the drug can leach out of the matrix.</p>
+      <p id="p-00040-en" num="0040">The pore-forming substance usually has a water solubility of more than 50 mg/I, preferably more than 100 mg/I, at a temperature of 25° C. and pH 5.0, more preferred of more than 250 mg/I and particularly preferred of more than 25 g/l. The water-solubility of the pore-forming substance may range up to 2.5 kg/l. The water-solubility is determined according to the column elution method of the Dangerous Substances Directive (67/548/EEC), Annex V, Chapter A6.</p>
+      <p id="p-00041-en" num="0041">The pore-forming substances can be selected from inorganic substances, preferably from inorganic salts such as NaCl, KCl, Na<sub>2</sub>SO<sub>4</sub>. Furthermore, the pore-forming substances can be selected from organic substances, in particular from organic substances being solid at 30° C. and having the above-mentioned water solubility. Suitable examples are PEG, particularly PEG, having a weight average molecular weight of from 2,000 to 10,000 g/mol.</p>
+      <p id="p-00042-en" num="0042">Furthermore, polyvinylpyrrolidone, preferably having a weight average molecular weight of from 5,000 to 29,000 g/mol, PEG with a weight average molecular weight of 380-4800, polyethylene oxide with a weight average molecular weight of less than 100,000 and a viscosity of less than 20 mPa·s, sugar alcohols like mannitol, sorbitol, xylitol, isomalt, and mono or disaccharides, like lactose, are also suitable as pore-forming substances.</p>
+      <p id="p-00043-en" num="0043">The pore forming material is usually contained in the tablet in an amount of 1 to 50 wt. %, preferably from 2 to 40 wt. %, most preferably from 5 to 30 wt. %, based upon the total weight of the oral dosage form.</p>
+      <p id="p-00044-en" num="0044">The tablet of the present invention can further comprise at least one excipient (d) selected from fillers (d1), disintegrants (d2), lubricants (d3), surfactants (d4), glidants (d5), anti-sticking agents (d6), plasticizers (d7) and mixtures thereof.</p>
+      <p id="p-00045-en" num="0045">Generally, fillers are used to top up the volume for an appropriate oral deliverable dose, when low concentrations of the active pharmaceutical ingredients (about 30 wt. % or lower) are present. Preferred fillers of the invention are calcium phosphate, saccharose, calcium carbonate, calcium silicate, magnesium carbonate, magnesium oxide, maltodextrin, glucopyranosyl mannitol, calcium sulfate, dextrate, dextrin, dextrose, hydrogenated vegetable oil and/or cellulose derivatives, such as microcrystalline cellulose. A pharmaceutical composition according to the invention may comprise an inorganic salt as a filler. Preferably, this inorganic salt is dicalcium phosphate, preferably in form of the dihydrate (dicafos).</p>
+      <p id="p-00046-en" num="0046">Dicalcium phosphate dihydrate is insoluble in water, non-hygroscopic, but still hydrophilic. Surprisingly, this behavior contributes to a high storage stability of the composition.</p>
+      <p id="p-00047-en" num="0047">Usually, fillers can be used in an amount of 0 to 60 wt. %, preferably of 5 to 40 wt. %, based on the total weight of the composition.</p>
+      <p id="p-00048-en" num="0048">The oral composition of the present invention can further comprise one or more of a disintegrant. In a preferred embodiment of the invention, the tablet does not contain a disintegrant.</p>
+      <p id="p-00049-en" num="0049">Generally, disintegrants are compounds, capable of promoting the break up of a solid composition into smaller pieces when the composition gets in contact with a liquid, preferably water.</p>
+      <p id="p-00050-en" num="0050">Preferred disintegrants are sodium carboxymethyl starch, cross-linked polyvinylpyrrolidone (crospovidone), sodium carboxymethyl glycolate (e.g. Explotab®), swelling polysaccharide, e.g. soya polysaccharide, carrageenan, agar, pectin, starch and derivates thereof, protein, e.g. formaldehyde—casein, sodium bicarbonate or mixtures thereof. Crospovidone is particularly preferred as disintegrant. Furthermore, a combination of crospovidone and agar is particularly preferred.</p>
+      <p id="p-00051-en" num="0051">Usually, disintegrants can be used in an amount of 0 to 20 wt. %, preferably of 1 to 10 wt. %, based on the total weight of the composition.</p>
+      <p id="p-00052-en" num="0052">In a preferred embodiment of the present invention the oral dosage form is free of any disintegrants.</p>
+      <p id="p-00053-en" num="0053">The oral dosage form of the present invention might further comprise one or more of a surfactant. Preferably, sodium lauryl sulfate is used as surfactant.</p>
+      <p id="p-00054-en" num="0054">Usually, surfactants can be used in an amount of 0.05 to 2 wt. %, preferably of 0.1 to 1.5 wt. %, based on the total weight of the oral dosage form.</p>
+      <p id="p-00055-en" num="0055">Additionally, the oral dosage form of the present invention may comprise a lubricant, a glidant and/or an anti-sticking agent.</p>
+      <p id="p-00056-en" num="0056">In a preferred embodiment of this invention, a lubricant may be used. Lubricants are generally employed to reduce dynamic friction. The lubricant preferably is a stearate, talcum powder or fatty acid, more preferably, hexanedioic acid or an earth alkali metal stearate, such as magnesium stearate. The lubricant is suitably present in an amount of 0.1 to 3 wt. %, preferably about 0.5 to 1.5 wt. % of the total weight of the composition. Preferably, the lubricant is applied in a final lubrication step during the powder preparation. The lubricant generally increases the powder flowability.</p>
+      <p id="p-00057-en" num="0057">The glidant can for example be colloidal silicone dioxide (e.g. Aerosil®). Preferably, the glidant agent is present in an amount of 0 to 8 wt. %, more preferably at 0.1 to 3 wt. % of the total weight of the composition. Preferably, the silicone dioxide has a specific surface area of 50 to 400 m<sup>2</sup>/g, measured by gas adsorption according to Ph. Eur., 6th edition, Chapter 2.9.26. multipoint method, volumetric determination</p>
+      <p id="p-00058-en" num="0058">The anti-sticking agent is for example talcum and may be present in amounts of 0.05 to 5 wt. %, more preferably in an amount of 0.5 to 3 wt. % of the total weight of the composition.</p>
+      <p id="p-00059-en" num="0059">Furthermore, in a preferred embodiment the pharmaceutical composition of the present invention further comprises one or more plasticizers. The “plasticizers” usually are compounds capable of lowering the glass transition temperature (T<sub>g</sub>) of the non-erodible material, preferably the non-erodible polymer, preferably of lowering T<sub>g </sub>from 1 to 50° C., especially from 5 to 30° C. Plasticizers usually are low molecular weight compounds (having a molecular weight from 50 to 500 g/mol) and comprise at least one hydrophilic group.</p>
+      <p id="p-00060-en" num="0060">Examples of suitable plasticizers are dibutyl sebacetate (DBS), Myvacet® (acetylated monoglycerides), triacetin (GTA), citric acid esters, like acetyltriethyl citrate (ATEC) or triethyl citrate (TEC), propylene glycol, dibutyl phthalate, diethyl phthalate, or mixtures thereof.</p>
+      <p id="p-00061-en" num="0061">The combined use of the non-erodible polymer (b) and the pore-forming substance (c) and optionally the plasticizer preferably is capable of modifying the drug release rate. The use of plasticizers is particularly preferred in the third embodiment concerning MUPS.</p>
+      <p id="p-00062-en" num="0062">Regarding the above mentioned pharmaceutically acceptable excipients, the application generally refers to “Lexikon der Hilfsstoffe für Pharmazie, Kosmetik and angrenzende Gebiete”, edited by H. P. Fiedler, 5<sup>th </sup>Edition, Editio Cantor Verlag, Aulendorf and earlier editions, and “Handbook of Pharmaceutical Excipients”, third edition, edited by Arthur H. Kibbe, American Pharmaceutical Association, Ishington, USA, and Pharmaceutical Press, London.</p>
+      <p id="p-00063-en" num="0063">In the tablet according to the present invention the non-erodible material (b), the pore forming material (c) and/or the at least one excipient (d) preferably have a surface of 0.2 to 10 m<sup>2</sup>/g, preferably of 0.3 to 8 m<sup>2</sup>/g, most preferably of 0.4 to 5 m<sup>2</sup>/g, as measured by gas adsorption according to Ph. Eur., 6th edition, Chapter 2.9.26, multipoint method, volumetric determination.</p>
+      <p id="p-00064-en" num="0064">In the tablet of the invention the at least one non-erodible material (b), the pore forming material (c) and/or the excipient(s) (d) generally show a plastic behavior, such as a ductile behaviour. This behavior can be described by the yield pressure of the material. The materials of components (a), (b) and/or (c) generally have a yield pressure of less than 150 MPa, preferably less then 100 MPa, most preferably of less than 75 MPa. If the yield pressure is above 150 MPa, the material is too brittle and causes difficulties in being compressed into a tablet, bearing the risk that the tablet breakes or crumbles. The yield pressure can be determined from a Heckel plot. According to Heckel, there is a linear relationship between the relative porosity (inverse density) of a powder and the applied pressure. The slope of the linear regression is the Heckel constant, a material dependent parameter inversely proportional to the mean yield pressure (the minimum pressure required to cause deformation of the material undergoing compression). Thus, the yield pressure is obtained by measuring the reciprocal value from the slope of the Heckel plot.</p>
+      <p id="p-00065-en" num="0065">In this context it is generally noted that, due to the nature of pharmaceutical excipients, it cannot be excluded that a certain compound meets the functional requirements of more than one of the above mentioned excipient classes. However, in order to enable an unambiguous distinction and terminology in the present application, the same pharmaceutical compound can only be subsumed as one of the functional excipient classes presented above. For example, if microcrystalline cellulose is used as a filler, it cannot additionally classify as a disintegrant (although microcrystalline cellulose has some disintegrating properties).</p>
+      <p id="p-00066-en" num="0066">As explained above, the present invention concerns three preferred embodiments of the solid oral dosage form. Hence, the present invention further relates to three preferred embodiments of a process for producing said oral dosage forms.</p>
+      <p id="p-00067-en" num="0067">In the first preferred embodiment the present invention concerns a matrix dosage form, preferably a matrix tablet. The matrix tablet preferably is produced by a process 10, comprising the steps of <ul id="ul-00003-en" list-style="none"><li><ul id="ul-00004-en" list-style="none"><li>(1-I) providing (and optionally blending) components (a), (b), optionally c), and optionally (d),</li><li>(1-II) optionally agglomerating the components of step (I) to yield granules,</li><li>(1-III) compressing the mixture resulting from step (I) or (II) into tablets; and</li><li>(1-IV) optionally coating the tablets, preferably with a suitable film (e).</li></ul></li></ul></p>
+      <p id="p-00068-en" num="0072">In this first preferred embodiment of the invention, the dosage form preferably comprises Ruxolitinib, a non-erodible material, a pore-forming material, a filler, a glidant and a lubricant. In a further preferred embodiment, the composition comprises from 5 to 20 wt. % of Ruxolitinib, from 15 to 60 wt. % of non-erodible material, from 10 to 40 wt. % of a pore-forming material, from 10 to 40 wt % of a filler, from 1 to 10 wt. % of a glidant and from 1 to 10 wt. % of a lubricant, based upon the total weight of the dosage form. In an alternative preferred embodiment, the non-erodible material is present in an amount of from 25-60 wt %.</p>
+      <p id="p-00069-en" num="0073">In a second preferred embodiment of the invention, the oral dosage form is in form of a tablet, comprising a core and a shell, wherein the core comprises components (a) and optionally (c) and/or (d), and wherein the shell comprises components (b) and optionally (c) and/or (d).</p>
+      <p id="p-00070-en" num="0074">Process for manufacturing a tablet according to any of the claim <b>1</b> to <b>9</b> or <b>11</b> comprising the steps of <ul id="ul-00005-en" list-style="none"><li><ul id="ul-00006-en" list-style="none"><li>(2-I) mixing components (a) and optionally (c) and/or (d),</li><li>(2-II) optionally agglomerating the components of step (I) to yield granules,</li><li>(2-III) compressing the mixture into tablets, and</li><li>(2-IV) coating the tablets with a coating comprising components (b) and optionally (c) and/or (d).</li><li>(2-V) Optionally, the resulting tablets can be film-coated with a suitable film (e).</li></ul></li></ul></p>
+      <p id="p-00071-en" num="0080">The preferred processes of the first and second embodiment are described below in more detail.</p>
+      <p id="p-00072-en" num="0081">In step (1-I) or (2-I) components (a), (b), (c) and/or (d) can be provided in micronized form. Micronization can be carried out by milling, such as in a air jet mill. Preferably, the mean particle size (D50) of Ruxolitinib (a) is from 20 to 120 μm, and from components (b), (c) and/or (d) it is from 30 to 150 μm.</p>
+      <p id="p-00073-en" num="0082">Optionally, the ingredients of the tablet of the invention are blended in order to provide a formulation having a homogenous distribution of Ruxolitinib (a) within the formulation.</p>
+      <p id="p-00074-en" num="0083">Blending can be carried out with conventional mixing devices, e.g. in a free-fall mixer like Turbula® T10B (Bachofen AG, Switzerland). Blending can be carried out e.g. for 1 minute to 30 minutes, preferably for 2 minutes to less than 10 minutes.</p>
+      <p id="p-00075-en" num="0084">Generally, the step (1-II) or (2-II) of “agglomerating” components (a) to (d) (components (c) and (d) optional) refers to a process, wherein particles are attached to each other, thereby giving larger particles. The attachments may occur through physical forces, preferably van der Waals forces. The attachment of particles preferably does not occur through chemical reactions.</p>
+      <p id="p-00076-en" num="0085">Agglomeration (II) can be carried out in different devices. For example, agglomeration can be carried out by a granulation device, preferably by a dry granulation device. More preferably, agglomeration can be carried out by intensive blending. For example, agglomeration can be carried out by blending in a free-fall mixer or a container mixer. An example for a suitable free fall mixer is Turbula® T10B (Bachofen AG, Switzerland). Generally, the blending is carried out for a time, being long enough for agglomeration to occur. Usually, blending is carried out for 10 minutes to 2 hours, preferably for 15 minutes to 60 minutes, more preferably from 20 minutes to 45 minutes.</p>
+      <p id="p-00077-en" num="0086">In a preferred embodiment the agglomeration step is carried out as a dry-compaction step. In a preferred embodiment the dry-compaction step is carried out by roller compaction. Alternatively, e.g. slugging can be used. If roller compaction is applied, the compaction force usually ranges from 1 to 30 kN/cm, preferably from 2 to 20 kN/cm, more preferably from 2 to 10 kN/cm. The gap width of the roller compactor usually is 0.8 to 5 mm, preferably 1 to 4 mm, more preferably 1.5 to 3.2 mm, especially 1.8 to 3.0 mm. After the compaction step, the received comprimate preferably is granulated. Preferably, the granulation step is carried out by an elevated sieving equipment, e.g. Comil® U5 (Quadro Engineering, USA). Alternatively, compaction and granulation can be carried out within one device.</p>
+      <p id="p-00078-en" num="0087">That means, the agglomeration step preferably is carried out in the absence of solvents, preferably in the absence of organic solvents and/or in the absence of water and preferably results in agglomerates or granules.</p>
+      <p id="p-00079-en" num="0088">In a preferred embodiment the agglomeration conditions in step (1-II) or (2-II) are chosen such that the resulting agglomerated pharmaceutical composition comprises a volume mean particle size (D50) of 5 to 500 μm, more preferably of 20 to 250 μm, further more preferably of 50 to 200 μm.</p>
+      <p id="p-00080-en" num="0089">The bulk density of the agglomerated pharmaceutical composition made by the process of the present invention generally ranges from of 0.1 to 0.85 g/ml, preferably of from 0.25 to 0.85 g/ml, more preferably of from 0.3 to 0.75 g/ml.</p>
+      <p id="p-00081-en" num="0090">In a preferred embodiment the composition has a bulk density of 0.5 to 0.8 g/ml when used for direct compressing and 0.1 to 0.5 when used for dry compaction.</p>
+      <p id="p-00082-en" num="0091">The Hausner factor of the agglomerated (or granulated) composition is less than 1.3, preferably less than 1.2 and most preferably less than 1.15. The agglomerated pharmaceutical composition resulting from step (iii) of the invention preferably possesses Hausner ratios in the range of 1.02 to 1.5, preferably of 1.05 to 1.4, more preferably between 1.08 to 1.3. The Hausner ratio is the ratio of tapped density to bulk density. Bulk density and tapped density are determined according to USP 24, Test 616 “Bulk Density and Tapped Density”.</p>
+      <p id="p-00083-en" num="0092">The compression step (1-III) or (2-III), can be carried out on a rotary press, e.g. on a Fette® 102i (Fette GmbH, Germany) or a Riva® piccola (Riva, Argentina). If a rotary press is applied, the main compaction force usually ranges from 1 to 50 kN, preferably from 2 to 40 kN, more preferably from 3.5 to 30 kN. The resulting tablets usually have a hardness of 30 to 100N, preferably of 50 to 85 N.</p>
+      <p id="p-00084-en" num="0093">The shell of the tablets of the second preferred embodiment of the present invention is applied in process step (2-IV). Said step comprises coating the tablet core with a coating comprising preferably components (b) and optionally (c) and/or (d). Preferably, the coating comprises components (b), (c) and a plasticizer.</p>
+      <p id="p-00085-en" num="0094">The coating process is generally carried out in a continuously process in a pan coater or a fluid bed dryer. The coating process is preferably carried out on a pan coater, e.g. on a Lödige LHC 25 (Lödige GmbH, Germany). If a pan coater is applied, the spray pressure usually ranges from 0.8-2 bar, preferably from 1-1.5 bar. The product temperature varies according to the applied polymer. Usually the product temperature is adjusted by 20-40° C., preferably from 32-38° C.</p>
+      <p id="p-00086-en" num="0095">The coating usually has a thickness of 0.01 to 2 mm, preferably from 0.1 to 1.5 mm, more preferably from 0.2 to 1 mm.</p>
+      <p id="p-00087-en" num="0096">After having received the compressed tablets, in both preferred processes the compressed tablet could be film-coated (step 1-IV or 2-V).</p>
+      <p id="p-00088-en" num="0097">In the present invention, the following three types of film-coatings are possible: <ul id="ul-00007-en" list-style="none"><li><ul id="ul-00008-en" list-style="none"><li>e1) film-coating without effecting the release of the active ingredient (preferred),</li><li>e2) gastric juice resistant film-coatings,</li><li>e3) retard coatings.</li></ul></li></ul></p>
+      <p id="p-00089-en" num="0101">Film-coatings without effecting the release of the active ingredient are preferred. Generally, said coating is water-soluble (preferably having a water solubility at 25° C. of more than 250 mg/ml). In gastric juice resistant coatings the solubility depends on the pH of the surrounding. Retard coatings are usually non-soluble (preferably having a water solubility at 25° C. of less than 10 mg/ml).</p>
+      <p id="p-00090-en" num="0102">Generally, film-coatings e1) are prepared using cellulose derivatives, poly(meth)-acrylate, polyvinyl pyrrolidone, polyvinyl acetatephthalate, and/or shellac or natural rubbers such as carrageenan.</p>
+      <p id="p-00091-en" num="0103">Preferred examples of coatings, which do not affect the release of the active ingredient are those including methylcellulose (MC), hydroxypropyl methylcellulose (HPMC), hydroxypropyl cellulose (HPC), hydroxyethyl cellulose (HEC), polyvinyl pyrrolidone (PVP) and mixtures thereof. These polymers generally have a median molecular weight of 10,000 to 150,000 g/mol.</p>
+      <p id="p-00092-en" num="0104">A preferred polymer is HPMC, most preferably a HPMC having a median molecular weight of 10,000 to 150,000 g/mol and a median level of substitution of —OCH<sub>3</sub>-residues of 1.2 to 2.</p>
+      <p id="p-00093-en" num="0105">Examples of gastric juice resistant coatings e2) are cellulose acetate phthalate (CAP), hydroxypropyl methylcellulose phthalate (HPMCP and polyvinyl acetate phthalate (PVAP). Examples of retard coatings e3) are ethyl cellulose (EC, commercially available e.g. as Surelease®) and poly(meth)acrylate (commercially available e.g. as Eudragit® RL or RS and L/S).</p>
+      <p id="p-00094-en" num="0106">The coating e) can be free of active ingredient. However, it is also possible that the coating contains active ingredient (Ruxolitinib). In such a case, that amount of active ingredient would function as an initial dose. In such a case the coating e) preferably comprises 1 to 45 wt. %, preferably 5 to 35 wt. %, most preferably 10 to 30 wt. % of Ruxolitinib, based on the total amount of Ruxolitinib contained in the tablet. In this embodiment, the coating preferably is a coating, which does not effect the release of Ruxolitinib.</p>
+      <p id="p-00095-en" num="0107">In case the film coating does not contain Ruxolitinib (which is preferred), it usually has a thickness of 2 μm to 100 μm, preferably from 20 to 60 μm. In case of a coating containing Ruxolitinib, the thickness of the coating is usually 10 μm to 2 mm, more preferably from 50 to 500 μm.</p>
+      <p id="p-00096-en" num="0108">Accordingly, in a further embodiment the subject invention relates to a tablet in which 1 to 45 wt. %, preferably 5 to 35 wt. %, most preferably 10 to 30 wt. % of the total amount of the Ruxolitinib contained in the tablet, are present as initial doses having immediate release, and 55 to 99 wt. %, preferably 65 to 95 wt. %, most preferably 70 to 90 wt. % of the active ingredient are present in the tablet as a modified release formulation.</p>
+      <p id="p-00097-en" num="0109">In a third aspect of the present invention Ruxolitinib may be incorporated into an osmotic controlled release device. Such devices have at least two components: (a) the core which contains an osmotic agent and Ruxolitinib; and (b) a water permeable, non-dissolving coating, which comprises the non-erodible material surrounding the core, the coating controlling the influx of water to the core from an aqueous environment of use so as to cause drug release by extrusion of some or all of the core to the environment of use. The osmotic agent contained in the core of this device may be an aqueous-swellable hydrophilic polymer or it may be an osmogen. The coating is preferably polymeric, aqueous-permeable, and has at least one delivery port. Examples of such devices are disclosed more fully in U.S. Pat. No. 6,706,283 the disclosure of which is hereby incorporated by reference.</p>
+      <p id="p-00098-en" num="0110">In addition to Ruxolitinib, the core comprises a osmotic agent, which creates a driving force for transport of water from the environment of use into the core of the device. Exemplary osmotic agents are water-swellable hydrophilic polymers. The amount of water-swellable hydrophilic polymers present in the core may range from about 5 to about 80 wt %, preferably 10 to 50 wt %. Exemplary materials include hydrophilic vinyl and acrylic polymers, polysaccharides such as calcium alginate, polyethylene oxide (PEO), polyethylene glycol (PEG), polypropylene glycol (PPG), poly(2-hydroxyethyl methacrylate), poly(acrylic) acid, poly(methacrylic) acid, polyvinylpyrrolidone (PVP) and crosslinked PVP, polyvinyl alcohol (PVA), PVA/PVP copolymers and PVA/PVP copolymers with hydrophobic monomers such as methyl methacrylate, vinyl acetate, and the like, hydrophilic polyurethanes containing large PEO blocks, sodium croscarmellose, carrageenan, hydroxyethyl cellulose (HEC), hydroxypropyl cellulose (HPC), hydroxypropyl methyl cellulose (HPMC), carboxymethyl cellulose (CMC) and carboxyethyl cellulose (CEC), sodium alginate, polycarbophil, gelatin, xanthan gum, and sodium starch glycolate. Typical classes of suitable osmotic agents are water-soluble organic acids, salts and sugars that are capable of imbibing water to thereby effect an osmotic pressure gradient across the barrier of the surrounding coating. Typical useful osmogens include magnesium sulfate, magnesium chloride, calcium chloride, sodium chloride, lithium chloride, potassium sulfate, sodium carbonate, sodium sulfite, lithium sulfate, potassium chloride, sodium sulfate, mannitol, xylitol, urea, sorbitol, sucrose, glucose, fructose, lactose, and mixtures thereof. The core may include a wide variety of additives and excipients that enhance the performance of the dosage form or that promote stability, tabletting or processing.</p>
+      <p id="p-00099-en" num="0111">Such osmotic delivery devices may be fabricated in various geometries including bilayer, wherein the core comprises a drug layer and a sweller layer adjacent to each other; trilayer, wherein the core comprises a sweller layer “sandwiched” between two drug layers; and concentric, wherein the core comprises a central sweller composition surrounded by the drug layer.</p>
+      <p id="p-00100-en" num="0112">The coating of such a tablet comprises a non-erodible membrane insoluble in water, but permeable to water and substantially impermeable to drug and excipients contained within. The coating contains one or more exit passageways or ports in communication with the drug-containing layer(s) for delivering the drug composition. The drug-containing layer(s) of the core contains the drug composition while the sweller layer consists of an expandable hydrogel, with or without additional osmotic agents. When placed in an aqueous medium, the tablet imbibes water through the membrane, causing the composition to form a dispensable aqueous composition, and causing the hydrogel layer to expand and push against the drug-containing composition, forcing the composition out of the exit passageway. The composition can swell, aiding in forcing the drug out of the passageway. Drug can be delivered from this type of delivery system either dissolved or dispersed in the composition that is expelled from the exit passageway.</p>
+      <p id="p-00101-en" num="0113">In the case of a bilayer geometry, the delivery pots) or exit passageway(s) may be located on the side of the tablet containing the drug composition or may be on both sides of the tablet or even on the edge of the tablet so as to connect both the drug layer and the sweller layer with the exterior of the device. The exit passageway(s) may be produced by mechanical means or by laser drilling, or by creating a difficult-to-coat region on the tablet by use of special tooling during tablet compression or by other means.</p>
+      <p id="p-00102-en" num="0114">A particularly useful embodiment of an osmotic device comprises: (a) a single-layer compressed core comprising: (i) Ruxolitinib (ii) a hydroxyethylcellulose, and (iii) an osmotic agent, wherein the hydroxyethylcellulose is present in the core from about 2.0% to about 35% by weight and the osmotic agent is present from about 15% to about 70% by weight; (b) a water-permeable layer surrounding the core; and (c) at least one passageway within the layer (b) for delivering the drug to a fluid environment surrounding the tablet.</p>
+      <p id="p-00103-en" num="0115">Several disintegrants tend to form gels as they swell with water, thus hindering drug delivery from the device. Non-gelling, non-swelling disintegrants provide a more rapid dispersion of the drug particles within the core as water enters the core. Preferred non-gelling, non-swelling disintegrants are resins, preferably ion-exchange resins. A preferred resin is Amberlite™ IRP 88 (available from Rohm and Haas, Philadelphia, Pa.). When used, the disintegrant is present in amounts ranging from about 1-25% of the core composition.</p>
+      <p id="p-00104-en" num="0116">Another example of an osmotic device is an osmotic capsule. The capsule shell or portion of the capsule shell can be semipermeable.</p>
+      <p id="p-00105-en" num="0117">Coating is conducted in conventional fashion, typically by dissolving or suspending the coating material in a solvent and then coating by dipping, spray coating or preferably by pan-coating. A preferred coating solution contains 5 to 15 wt % polymer. Typical solvents useful with the cellulosic polymers mentioned above include acetone, methyl acetate, ethyl acetate, isopropyl acetate, n-butyl acetate, methyl isobutyl ketone, methyl propyl ketone, ethylene glycol monoethyl ether, ethylene glycol monoethyl acetate, methylene dichloride, ethylene dichloride, propylene dichloride, nitroethane, nitropropane, tetrachloroethane, 1,4-dioxane, tetrahydrofuran, diglyme, water, and mixtures thereof. Pore-formers and non-solvents (such as water, glycerol and ethanol) or plasticizers (such as diethyl phthalate) may also be added in any amount as long as the polymer remains soluble at the spray temperature. Pore-formers and their use in fabricating coatings are described in U.S. Pat. No. 5,612,059, the pertinent disclosures of which are incorporated herein by reference.</p>
+      <p id="p-00106-en" num="0118">Coatings may also be hydrophobic microporous layers wherein the pores are substantially filled with a gas and are not wetted by the aqueous medium but are permeable to water vapor, as disclosed in U.S. Pat. No. 5,798,119, the pertinent disclosures of which are incorporated herein by reference. Such hydrophobic but water-vapor permeable coatings are typically composed of hydrophobic polymers such as polyalkenes, polyacrylic acid derivatives, polyethers, polysulfones, polyethersulfones, polystyrenes, polyvinyl halides, polyvinyl esters and ethers, natural waxes and synthetic waxes. Especially preferred hydrophobic microporous coating materials include polystyrene, polysulfones, polyethersulfones, polyethylene, polypropylene, polyvinyl chloride, polyvinylidene fluoride and polytetrafluoroethylene. Such hydrophobic coatings can be made by known phase inversion methods using any of vapor-quench, liquid quench, thermal processes, leaching soluble material from the coating or by sintering coating particles. In thermal processes, a solution of polymer in a latent solvent is brought to liquid-liquid phase separation in a cooling step. When evaporation of the solvent is not prevented, the resulting membrane will typically be porous. Such coating processes may be conducted by the processes disclosed in U.S. Pat. Nos. 4,247,498; 4,490,431 and 4,744,906, the disclosures of which are also incorporated herein by reference.</p>
+      <p id="p-00107-en" num="0119">Osmotic control led-release devices may be prepared using procedures known in the pharmaceutical arts. See for example, Remington: The Science and Practice of Pharmacy, 20th Edition, 2000.</p>
+      <p id="p-00108-en" num="0120">The fourth preferred embodiment of the present invention relates to a multiple unit pellet system (MUPS). As the name implies, this type of dosage form comprises more than one discrete unit. Typically, such systems comprise 2 to 50, preferably 3 to 30 discrete units. Typically, such discrete units are coated spheroids. Preferably, such coated spheroids are filled into capsules, preferably hard gelatin capsules. Alternatively, such coated spheroids are compressed into tablets.</p>
+      <p id="p-00109-en" num="0121">Hence, a further subject of the present invention is a process for manufacturing an oral modified release dosage form comprising Ruxolitinib, comprising the steps of <ul id="ul-00009-en" list-style="none"><li><ul id="ul-00010-en" list-style="none"><li>(3-I) providing a pellet core,</li><li>(3-II) spraying a solution or suspension comprising component (a) and optionally (d) onto the pellet core,</li><li>(3-III) spraying a solution or suspension comprising component (b) and optionally (c) and/or (d) onto the pellet, preferably onto the pellet resulting from step (3-II),</li><li>(3-IV) optionally blending the pellets with components (b) and (c) and/or (d); and</li><li>(3-V) further processing the resulting mixture into a final oral dosage form.</li></ul></li></ul></p>
+      <p id="p-00110-en" num="0127">In this pellet layering embodiment, the present invention provides a process for the manufacture of a modified release dosage form comprising Ruxolitinib, employing a pellet layering process.</p>
+      <p id="p-00111-en" num="0128">In step (3-I) a pellet core is provided. Preferably, the pellet core is a so-called neutral pellet core, that means it does not comprise an active ingredient. Such pellet cores are known in the art as nonpareils. The pellet core can be made of suitable materials, e.g. cellulose, sucrose, starch or mannitol or combinations thereof.</p>
+      <p id="p-00112-en" num="0129">Suitable pellet cores are commercially available under the trade name Cellets® and preferably comprise a mixture of lactose and microcrystalline cellulose.</p>
+      <p id="p-00113-en" num="0130">Furthermore, in a preferred embodiment, pellet cores commercially available as Suglets® are used. Those preferred pellet cores comprise a mixture of corn starch and sucrose. The mixture usually comprises 1 to 20 wt. % corn starch and 80 to 99 wt. % sucrose, in particular, about 8 wt. % corn starch and 92% sucrose.</p>
+      <p id="p-00114-en" num="0131">In step (3-II) the Ruxolitinib is dissolved or suspended in a solvent. The solvent can be water, a pharmaceutically acceptable organic solvent or mixtures thereof. Preferably, the solvent is water or an alcohol. Most preferably, the solvent is methanol.</p>
+      <p id="p-00115-en" num="0132">The solution or dispersion of Ruxolitinib can comprise further excipients (d). It preferably comprises a solubilizer (d1) and/or a plasticizer (d8). Generally, it is noted that all comments made above regarding the excipients (d) used in the present invention also apply for the processes of the present invention. In addition, the solution or dispersion may comprise anti-sticking agents and lubricants.</p>
+      <p id="p-00116-en" num="0133">The resulting emulsion or suspension is sprayed onto the pellet core, preferably by a fluid bed dryer, e.g. Glatt GPCG 3 (Glatt GmbH, Germany).</p>
+      <p id="p-00117-en" num="0134">Subsequently, the spraying step is repeated. In step (3-III) a solution or suspension comprising component (b) and optionally (c) and/or (d) is sprayed onto the pellet resulting from step (3-II). In the spraying step (3-III), preferably solubilizer (d1) and/or plasticizer (d8) are used as excipients.</p>
+      <p id="p-00118-en" num="0135">Alternatively, the spraying steps (3-II) and (3-III) can be combined. In such a case, the solution or dispersion of Ruxolitinib further comprises components (b) and optionally (c) and/or excipients (d).</p>
+      <p id="p-00119-en" num="0136">In a preferred embodiment, the spraying conditions are chosen such that the resulting coated spheroids have a mean particle size (D50) of 10 to 1000 μm, more preferably of 50 to 800 μm, further more preferably of 100 to 750 μm, most preferably of 250 to 650 μm.</p>
+      <p id="p-00120-en" num="0137">The coated spheroids of the present invention (i.e. the primary pharmaceutical composition) may be used to prepare suitable solid oral dosage forms with modified released properties. That means, the primary pharmaceutical composition can be further processed to give a “final pharmaceutical composition”, i.e. to give a final oral dosage form.</p>
+      <p id="p-00121-en" num="0138">Hence, the present invention encompasses a process for producing oral dosage forms comprising a pharmaceutical composition as received by the above-described pellet layering process, comprising the steps of <ul id="ul-00011-en" list-style="none"><li><ul id="ul-00012-en" list-style="none"><li>(3-V-i) optionally mixing the granulates as received by the above-described pellet layering process with further excipients,</li><li>(3-V-ii) further processing the resulting mixture into a final oral dosage form.</li></ul></li></ul></p>
+      <p id="p-00122-en" num="0141">Preferably, step (ii) comprises <ul id="ul-00013-en" list-style="none"><li><ul id="ul-00014-en" list-style="none"><li>(3-V-ii-α) filling the resulting mixture into capsules,</li><li>(3-V-ii-β) filling the resulting mixture into sachets, or</li><li>(3-V-ii-γ) compressing the resulting mixture into tablets. The tablets can be film-coated (e), as described above.</li></ul></li></ul></p>
+      <p id="p-00123-en" num="0145">Generally, it is noted that all comments made above with respect to the tablets of the present invention also apply for the process of manufacturing such a tablet and the use of the tablet of the present invention.</p>
+      <p id="p-00124-en" num="0146">Consequently, further subjects of the present invention are tablets obtainable by any of the processes as described above.</p>
+      <p id="p-00125-en" num="0147">All explanations above given for the process of the present invention also apply for the tablet of the present invention.</p>
+      <p id="p-00126-en" num="0148">The release profile of a non-coated tablet or a coated tablet, wherein the coating is free of drug, usually shows a constant release as determined by method USP (paddle). Preferably, the slope of the initial drug release is less than 0.6 to 0.8% per minute.</p>
+      <p id="p-00127-en" num="0149">In a preferred embodiment, the oral dosage form of the present invention is suitable for an administration once or twice per day, most preferably once per day. Alternatively, the oral dosage form of the present invention can be administered every second day, thrice a week, twice a week or once a week.</p>
+      <p id="p-00128-en" num="0150">Finally, the present invention provides the use of the modified release tablet of the present invention as immunosuppressive agent for organ transplants, xeno transplantation, lupus, multiple sclerosis, rheumatoid arthritis, psoriasis, Type I diabetes and complications from diabetes, cancer, asthma, atopic dermatitis, autoimmune thyroid disorders, ulcerative colitis, Crohn's disease, Alzheimer's disease, leukemia.</p>
+      <p id="p-00129-en" num="0151">The present invention is illustrated by the following examples.</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00001-en" level="1">EXAMPLES</heading>
+      <p id="p-00130-en" num="0152">The following commercially available compounds are used in the examples below:</p>
+      <p id="p-00131-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="left" />
+              <colspec colname="2" colwidth="154pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Eudragit ®</entry>
+                  <entry>anionic copolymer of methacrylic acid and acrylic</entry>
+                </row>
+                <row>
+                  <entry>L100-55 (Röhm):</entry>
+                  <entry>acid ethylester</entry>
+                </row>
+                <row>
+                  <entry>Eudragit ®</entry>
+                  <entry>copolymer of acrylic and methacrylic acid esters</entry>
+                </row>
+                <row>
+                  <entry>RL PO (Röhm):</entry>
+                  <entry>containing quaternary ammonium groups</entry>
+                </row>
+                <row>
+                  <entry>Klucel EF</entry>
+                  <entry>hydroxypropyl cellulose with a molecular weight of</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>approximately 80,000 g/mol</entry>
+                </row>
+                <row>
+                  <entry>Klucel HF</entry>
+                  <entry>hydroxypropyl cellulose with a molecular weight of</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>approximately 1,150,000 g/mol</entry>
+                </row>
+                <row>
+                  <entry>Galen IQ</entry>
+                  <entry>hydrogenated isomaltulose</entry>
+                </row>
+                <row>
+                  <entry>StarLac</entry>
+                  <entry>coprocessed lactose and starch</entry>
+                </row>
+                <row>
+                  <entry>Prosolv</entry>
+                  <entry>silicified microcrystalline cellulose</entry>
+                </row>
+                <row>
+                  <entry>Granulac</entry>
+                  <entry>lactose monohydrate</entry>
+                </row>
+                <row>
+                  <entry>PVP25</entry>
+                  <entry>polyvinyl-2-pyrrolidinone with a molecular</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>weight of approximately 30,000 g/mol</entry>
+                </row>
+                <row>
+                  <entry>PVP90</entry>
+                  <entry>polyvinyl-2-pyrrolidinone with a molecular</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>weight of approximately 1,000,000 g/mol</entry>
+                </row>
+                <row>
+                  <entry>RetaLac</entry>
+                  <entry>50% lactose monohydrate + 50% hydroxypropyl</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>methyl cellulose</entry>
+                </row>
+                <row>
+                  <entry>Prosolv SMCC</entry>
+                  <entry>microcrystalline cellulose + 2% silicon dioxide</entry>
+                </row>
+                <row>
+                  <entry>Kollicoat ® MAE</entry>
+                  <entry>methacrylic acid copolymer</entry>
+                </row>
+                <row>
+                  <entry>100P (BASF):</entry>
+                </row>
+                <row>
+                  <entry>Kollidon ® SR</entry>
+                  <entry>mixture of 80% hydrophobic polyvinyl acetate, 19%</entry>
+                </row>
+                <row>
+                  <entry>(BASF):</entry>
+                  <entry>hydrophilic polyvinyl pyrrolidone, 0.8% sodium</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>lauryl sulfate and 0.2% colloidal silicate</entry>
+                </row>
+                <row>
+                  <entry>Aerosil ® 200</entry>
+                  <entry>highly dispersed silicium dioxide</entry>
+                </row>
+                <row>
+                  <entry>(Degussa):</entry>
+                </row>
+                <row>
+                  <entry>Avicel ® PH102</entry>
+                  <entry>microcrystalline cellulose, with D50 particle size</entry>
+                </row>
+                <row>
+                  <entry>(FMC):</entry>
+                  <entry>of about 100 μm</entry>
+                </row>
+                <row>
+                  <entry>Lubritab ®</entry>
+                  <entry>hydrogenated vegetable oil</entry>
+                </row>
+                <row>
+                  <entry>Opadry ®</entry>
+                  <entry>film-coating</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00002-en" level="1">Example 1</heading>
+      <heading id="h-00003-en" level="1">Matrix Tablet, Direct Compression</heading>
+      <p id="p-00132-en" num="0153" />
+      <p id="p-00133-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="119pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Ruxolitinib phosphate</entry>
+                  <entry>50 mg (based on the free base) (17.0%)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="98pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="right" />
+              <colspec colname="3" colwidth="70pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>Eudragit ® L100-55</entry>
+                  <entry>120</entry>
+                  <entry>mg (40.8%)</entry>
+                </row>
+                <row>
+                  <entry>Lactose monohydrate</entry>
+                  <entry>60</entry>
+                  <entry>mg (20.4%)</entry>
+                </row>
+                <row>
+                  <entry>Dicalcium phosphate anhydrate</entry>
+                  <entry>60</entry>
+                  <entry>mg (20.4%)</entry>
+                </row>
+                <row>
+                  <entry>Aerosil ® 200</entry>
+                  <entry>2</entry>
+                  <entry>mg (0.7%)</entry>
+                </row>
+                <row>
+                  <entry>Magnesium stearate</entry>
+                  <entry>2</entry>
+                  <entry>mg (0.7%)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00134-en" num="0154">All ingredients except magnesium stearate is blended in a free fall mixer for 15 min. Then, sieved magnesium stearate is added and the mixture is blended for further 5 min. The final blend is compressed into tablets.</p>
+      <heading id="h-00004-en" level="1">Example 2</heading>
+      <heading id="h-00005-en" level="1">Matrix Tablet, Wet Granulation</heading>
+      <p id="p-00135-en" num="0155" />
+      <p id="p-00136-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="84pt" align="left" />
+              <colspec colname="2" colwidth="133pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Ruxolitinib free base</entry>
+                  <entry> 50 mg (based on the free base) (19.2%)</entry>
+                </row>
+                <row>
+                  <entry>Kollicoat ® MAE 100P</entry>
+                  <entry>120 mg (46.2%)</entry>
+                </row>
+                <row>
+                  <entry>Lactose monohydrate</entry>
+                  <entry> 50 mg (19.2%)</entry>
+                </row>
+                <row>
+                  <entry>Avicel ® PH102</entry>
+                  <entry> 34 mg (13.1%)</entry>
+                </row>
+                <row>
+                  <entry>Aerosil ® 200</entry>
+                  <entry> 4 mg (1.5%)</entry>
+                </row>
+                <row>
+                  <entry>Magnesium stearate</entry>
+                  <entry> 2 mg (0.8%)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00137-en" num="0156">Ruxolitinib, Kollicoat® and lactose are sieved (1.25 mm mesh) into the pot of a Diosna® P1-6 wet granulator and blended for 2 min. This pre-mixture is granulated, adding a suitable amount of water to gain a mixture having a “snow ball” consistency. The wet granulate is sieved (2 mm mesh) and dried for 2 h at 40° C. in a cabinet drier. The dried granulate is sieved (1.25 mm mesh) and Avicel® and Aerosil® (both sieved with 1.25 mm mesh) are added and the resulting mixture is blended for further 15 min in a free fall mixer. Sieved (500 μm mesh) magnesium stearate is added and the resulting mixture is blended in a free fall mixer for 5 min. The final blend is compressed into tablets.</p>
+      <heading id="h-00006-en" level="1">Example 3</heading>
+      <heading id="h-00007-en" level="1">Dry Granulation</heading>
+      <p id="p-00138-en" num="0157" />
+      <p id="p-00139-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="105pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="right" />
+              <colspec colname="3" colwidth="63pt" align="left" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Ruxolitinib free base</entry>
+                  <entry>50</entry>
+                  <entry>mg (17.0%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Eudragit L 100-55</entry>
+                  <entry>120</entry>
+                  <entry>mg (40.8%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>GalenIQ 800</entry>
+                  <entry>60</entry>
+                  <entry>mg (20.4%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Dicalcium phosphate anhydrate</entry>
+                  <entry>60</entry>
+                  <entry>mg (20.4%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Aerosil 200</entry>
+                  <entry>2</entry>
+                  <entry>mg (0.7%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Magnesium stearate</entry>
+                  <entry>2</entry>
+                  <entry>mg (0.7%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00140-en" num="0158">All ingredients except the Aerosil and the magnesium stearate are passed through a sieve (1 mm) and then mixed in a free fall mixer for 15 min. The pre-mix is then compacted and the resulting mixture is passed through a sieve (1 mm). Aerosil is added through a sieve (1 mm). the mixture is mix in a free fall mixer for 10 min. Magnesium stearate is added through a sieve (0.5 mm) and the mixture is mixed for another 5 min. Finally, the mixture is pressed to obtain tablets.</p>
+      <heading id="h-00008-en" level="1">Example 4</heading>
+      <heading id="h-00009-en" level="1">Direct Compression</heading>
+      <p id="p-00141-en" num="0159" />
+      <p id="p-00142-en" num="0000">
+        <tables id="tables-00005-en" num="00005">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="133pt" align="left" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Ruxolitinib phosphate</entry>
+                  <entry> 50 mg (based on the free base) (17.0%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Kollidon ® SR</entry>
+                  <entry>120 mg (40.8%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Lactose monohydrate</entry>
+                  <entry> 60 mg (20.4%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Dicalcium phosphate</entry>
+                  <entry> 60 mg (20.4%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>anhydrate</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Aerosil ® 200</entry>
+                  <entry> 2 mg (0.7%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Magnesium stearate</entry>
+                  <entry> 2 mg (0.7%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00143-en" num="0160">All ingredients, except magnesium stearate, are sieved (1 mm mesh) and blended in a free fall mixer for 15 min. Then, sieved (500 μm) magnesium stearate is added and the mixture blended for further 5 min. The final blend is compressed into tablets.</p>
+      <heading id="h-00010-en" level="1">Example 5</heading>
+      <heading id="h-00011-en" level="1">Wet Granulation</heading>
+      <heading id="h-00012-en" level="2">Tablet Formulation 5:</heading>
+      <p id="p-00144-en" num="0161" />
+      <p id="p-00145-en" num="0000">
+        <tables id="tables-00006-en" num="00006">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="133pt" align="left" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Ruxolitinib phosphate</entry>
+                  <entry> 50 mg (based on the free base) (20.0%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Eudragit ® RL PO</entry>
+                  <entry>110 mg (44.0%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Lactose monohydrate</entry>
+                  <entry> 50 mg (20.0%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Avicel ® PH102</entry>
+                  <entry> 34 mg (13.6%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Aerosil ® 200</entry>
+                  <entry> 4 mg (1.6%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Magnesium stearate</entry>
+                  <entry> 2 mg (0.8%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00146-en" num="0162">Ruxolitinib, Eudragit® and lactose are sieved (1.25 mm mesh) into the pot of a Diosna® P1-6 wet granulator and blended for 2 min. This pre-mixture is granulated, adding a suitable amount of water to gain a mixture having a “snow ball” consistency. The wet granulate is sieved (2 mm mesh) and dried for 2 h at 40° C. in a cabinet drier. The dried granulate is sieved (1.25 mm mesh) and Avicel® and Aerosil® (both sieved with 1.25 mm mesh) are added and the resulting mixture is blended for further 15 min in a free fall mixer. Sieved (500 μm mesh) magnesium stearate is added and the resulting mixture is blended in a free fall mixer for 5 min. The final blend is compressed into tablets.</p>
+      <heading id="h-00013-en" level="1">Example 6</heading>
+      <heading id="h-00014-en" level="1">Coated Tablet</heading>
+      <heading id="h-00015-en" level="2">Tablet Core</heading>
+      <p id="p-00147-en" num="0163" />
+      <p id="p-00148-en" num="0000">
+        <tables id="tables-00007-en" num="00007">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="119pt" align="left" />
+              <colspec colname="2" colwidth="77pt" align="left" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Ruxolitinib free base</entry>
+                  <entry> 50 mg (13.8%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>StarLac</entry>
+                  <entry>200 mg (55.2%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Dicalcium phosphate anhydrate</entry>
+                  <entry> 30 mg (8.3%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Aerosil 200</entry>
+                  <entry> 2 mg (0.6%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Magnesium stearate</entry>
+                  <entry> 2 mg (0.6%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00149-en" num="0164">All excipients, excluding magnesium stearate, are sieved (800 μm) and mixed for 15 min in a free fall mixer. Sieved (500 μm mesh) magnesium stearate is added and the resulting mixture is blended in a free fall mixer for 5 min. The final blend is compressed into tablets.</p>
+      <heading id="h-00016-en" level="2">Tablet Coating</heading>
+      <p id="p-00150-en" num="0165" />
+      <p id="p-00151-en" num="0000">
+        <tables id="tables-00008-en" num="00008">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="84pt" align="left" />
+              <colspec colname="2" colwidth="91pt" align="left" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Ethyl cellulose</entry>
+                  <entry>60 mg (16.6%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PEG 6000</entry>
+                  <entry> 3 mg (0.8%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>TEC</entry>
+                  <entry>15 mg (4.1%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00152-en" num="0166">The coating process is carried out on a pan coater, e.g. on a Lödige LHC 25 (Lödige GmbH, Germany). The spray pressure usually ranges from 1-1.5 bar. The product temperature varies according to the applied polymer from 32-38° C.</p>
+      <heading id="h-00017-en" level="1">Example 7</heading>
+      <heading id="h-00018-en" level="1">Matrix Tablet, Wet Granulation</heading>
+      <p id="p-00153-en" num="0167" />
+      <p id="p-00154-en" num="0000">
+        <tables id="tables-00009-en" num="00009">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="right" />
+              <colspec colname="3" colwidth="98pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Ruxolitinib phosphate</entry>
+                  <entry>30</entry>
+                  <entry>mg (5.9%) based on free base</entry>
+                </row>
+                <row>
+                  <entry>MCC, Prosolv SMCC</entry>
+                  <entry>66</entry>
+                  <entry>mg (13.0%)</entry>
+                </row>
+                <row>
+                  <entry>PVP 25/90</entry>
+                  <entry>12.5/44.8</entry>
+                  <entry>mg (11.3%)</entry>
+                </row>
+                <row>
+                  <entry>Hyprolose, Klucel HF</entry>
+                  <entry>250</entry>
+                  <entry>mg (49.2%)</entry>
+                </row>
+                <row>
+                  <entry>Granulac</entry>
+                  <entry>101.4</entry>
+                  <entry>mg (20.0%)</entry>
+                </row>
+                <row>
+                  <entry>Magnesium stearate</entry>
+                  <entry>3.0</entry>
+                  <entry>mg (0.6%)</entry>
+                </row>
+                <row>
+                  <entry>Water</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00155-en" num="0168">PVP 25 is dissolved in water. All other components, except Magnesium stearate are mixed in a high share mixer for 15 minutes. This powder is sieved through a sieve of 800 μm.</p>
+      <p id="p-00156-en" num="0169">After sieving, the powder is granulated with the solution of PVP in water.</p>
+      <p id="p-00157-en" num="0170">The granules are dried for 2 hours at 40° C. and sieved afterwards through a sieve of 1 mm. Magnesium stearate is added, mixed for another 5 minutes and compressed into tablets.</p>
+      <heading id="h-00019-en" level="1">Example 8</heading>
+      <heading id="h-00020-en" level="1">Matrix Tablet, Wet Granulation</heading>
+      <p id="p-00158-en" num="0171" />
+      <p id="p-00159-en" num="0000">
+        <tables id="tables-00010-en" num="00010">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="84pt" align="left" />
+              <colspec colname="2" colwidth="119pt" align="left" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Ruxolitinib phosphate</entry>
+                  <entry>  30 mg (5.6%) based on free base</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>MCC, Prosolv SMCC</entry>
+                  <entry>66.0 mg (12.2%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Klucel EF</entry>
+                  <entry> 125 mg (23.1%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hyprolose, Klucel HF</entry>
+                  <entry> 250 mg (46.3%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Granulac</entry>
+                  <entry>66.4 mg (12.3%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Magnesium stearate</entry>
+                  <entry> 3.0 mg (0.5%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Water</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00160-en" num="0172">Klucel EF is dissolved in water. All other components, except Magnesium stearate are mixed in a high share mixer for 15 minutes. This powder is sieved through a sieve of 800 μm.</p>
+      <p id="p-00161-en" num="0173">After sieving, the powder is granulated with the solution of Klucel EF in water.</p>
+      <p id="p-00162-en" num="0174">The granules are dried for 2 hours at 40° C. and sieved afterwards through a sieve of 1 mm. Magnesium stearate is added, mixed for another 5 minutes and compressed into tablets.</p>
+      <heading id="h-00021-en" level="1">Examples 9-11</heading>
+      <p id="p-00163-en" num="0175" />
+      <p id="p-00164-en" num="0000">
+        <tables id="tables-00011-en" num="00011">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="28pt" align="left" />
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="right" />
+              <colspec colname="3" colwidth="63pt" align="left" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Ruxolitinib phosphate</entry>
+                  <entry>39.98</entry>
+                  <entry>mg (7.26%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Retalac</entry>
+                  <entry>251.00</entry>
+                  <entry>mg (45.55%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Granulac/Prosolv SMCC</entry>
+                  <entry>257.00</entry>
+                  <entry>mg (46.64%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Mg stearate</entry>
+                  <entry>3.00</entry>
+                  <entry>mg (0.54%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ruxolitinib phosphate</entry>
+                  <entry>39.98</entry>
+                  <entry>mg (7.26%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Retalac</entry>
+                  <entry>200.00</entry>
+                  <entry>mg (36.30%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Granulac/Prosolv SMCC</entry>
+                  <entry>308.00</entry>
+                  <entry>mg (55.90%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Mg stearate</entry>
+                  <entry>3.00</entry>
+                  <entry>mg (0.54%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ruxolitinib phosphate</entry>
+                  <entry>39.98</entry>
+                  <entry>mg (7.26%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Retalac</entry>
+                  <entry>300.00</entry>
+                  <entry>mg (54.45%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Granulac/Prosolv SMCC</entry>
+                  <entry>208.00</entry>
+                  <entry>mg (37.75%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Mg stearate</entry>
+                  <entry>3.00</entry>
+                  <entry>mg (0.54%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00165-en" num="0176">Ruxolitinib, RetaLac, Granulac and Prosolv SMCC were blended in das mixer (Turbula TB10) for 15 minutes at 23 rpm.</p>
+      <p id="p-00166-en" num="0177">The mixture was sieved through an appropriate sieve with 630-1000□m mesh.</p>
+      <p id="p-00167-en" num="0178">Then magnesium stearate was added and again mixed for 3 minutes. The final blend was compressed into tablets with an Kirsch EK0 excenter press.</p>
+      <heading id="h-00022-en" level="1">Example 12</heading>
+      <heading id="h-00023-en" level="1">Osmotic-Controlled Tablet</heading>
+      <heading id="h-00024-en" level="2">Tablet Core</heading>
+      <p id="p-00168-en" num="0179" />
+      <p id="p-00169-en" num="0000">
+        <tables id="tables-00012-en" num="00012">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="112pt" align="left" />
+              <colspec colname="2" colwidth="21pt" align="right" />
+              <colspec colname="3" colwidth="84pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Ruxolitinib phosphate</entry>
+                  <entry>50</entry>
+                  <entry>mg (based on the free base)</entry>
+                </row>
+                <row>
+                  <entry>PolyOx WSR-N80 (Dow)</entry>
+                  <entry>238</entry>
+                  <entry>mg</entry>
+                </row>
+                <row>
+                  <entry>Xylitol (trade name XYLITAB 200)</entry>
+                  <entry>118</entry>
+                  <entry>mg</entry>
+                </row>
+                <row>
+                  <entry>Magnesium stearate</entry>
+                  <entry>2 × 2</entry>
+                  <entry>mg</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00170-en" num="0180">Polyox and xylitol are combined and blended in a free fall mixer. The blended material is passed through a sieve (800 μm). The resulting material is added to a blender and the Ruxolitinib phosphate is added and the resulting mixture is mixed for 15 min. Magnesium stearate (2 mg) is added and the resulting blend is mixed for another 5 min. The blend is roller compacted. The resulting granules are transferred to a free fall mixer. Magnesium stearate (2 mg) is added and the final blend is mixed for another 15 min.</p>
+      <p id="p-00171-en" num="0000">
+        <tables id="tables-00013-en" num="00013">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="35pt" align="left" />
+              <colspec colname="1" colwidth="119pt" align="left" />
+              <colspec colname="2" colwidth="63pt" align="left" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>PEO WSR Coagulant (Dow)</entry>
+                  <entry> 129 mg</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Avicel PH 200 (FMC)</entry>
+                  <entry>51.6 mg</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Sodium chloride</entry>
+                  <entry>17.2 mg</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>FD&amp;C #2 Blue Lake</entry>
+                  <entry> 0.6 mg</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Magnesium stearate</entry>
+                  <entry>  1 mg</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00172-en" num="0181">Coagulant, Avicel, sodium chloride and FD&amp;C are mixed in a free fall mixer for 15 min. Magnesium stearate is added are the final blend for the swellable layer is mixed for 15 min.</p>
+      <p id="p-00173-en" num="0182">Tablet cores are formed by compressing 600 mg (400 mg Ruxolitinib-containing layer; 200 mg swellable layer) using a rotary tri-layer press (e.g. Elizabeth-HATA AP-55). Feed hopper #1 is filled with the Ruxolitinib-containing layer, feed hopper #2 is empty and feed hopper #3 is filled with the swellable layer. A tamp force of 50-65 kg is used for the Ruxolitinib-containing layer and the tamp force of 500-600 kg is used after hopper #3 and the final compression force is approx. 14 kN resulting in tablets of approx. 15 kP hardness.</p>
+      <heading id="h-00025-en" level="2">Coating</heading>
+      <p id="p-00174-en" num="0183" />
+      <p id="p-00175-en" num="0000">
+        <tables id="tables-00014-en" num="00014">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="35pt" align="left" />
+              <colspec colname="1" colwidth="63pt" align="left" />
+              <colspec colname="2" colwidth="119pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Polyethylene glycol</entry>
+                  <entry>8.0 mg </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Water</entry>
+                  <entry>40 mg</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Acetone</entry>
+                  <entry>920 mg </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Cellulose acetate</entry>
+                  <entry>32 mg</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00176-en" num="0184">Polyethylene glycol (PEG 3350) is dissolved in water and acetone and added to the. The cellulose acetate (CA 398-10 from Eastman Fine Chemical) is added to the solution and the resulting solution is mixed until homogeneous. The coating solution is applied to the tablet cores using a pan coater, e.g. on a Lödige LHC 25 (Lödige GmbH, Germany). The spray pressure usually ranges from 1-1.5 bar. The product temperature varies according to the applied polymer from 32-38° C. The so-coated tablets are dried in a convection oven. One 1200 μm diameter hole is then laser-drilled in the coating on the drug-containing composition side of the tablet to providing one delivery port per tablet.</p>
+      <heading id="h-00026-en" level="1">Example 13</heading>
+      <heading id="h-00027-en" level="1">MUPS</heading>
+      <p id="p-00177-en" num="0185" />
+      <p id="p-00178-en" num="0000">
+        <tables id="tables-00015-en" num="00015">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="28pt" align="left" />
+              <colspec colname="1" colwidth="112pt" align="left" />
+              <colspec colname="2" colwidth="77pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Ruxolitinib, free base micronized</entry>
+                  <entry>50 mg</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Polyoxyethylenepropylene copolymer</entry>
+                  <entry>12 mg</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ethylcellulose:</entry>
+                  <entry>50 mg</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PEG 4000</entry>
+                  <entry> 8 mg</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Nonpareils</entry>
+                  <entry>80 mg</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>MCC</entry>
+                  <entry>400 mg </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Polyvinylpyrrolidone</entry>
+                  <entry>20 mg</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Lubritab ®</entry>
+                  <entry>10 mg</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Aerosil ®</entry>
+                  <entry> 4 mg</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Opadry ®</entry>
+                  <entry> 5 mg</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00179-en" num="0186">Ruxolitinib is suspended together with ethyl cellulose in an aqueous solution of polyoxyethylene propylene copolymer and PEG. The placebo pellets are pre-heated to 38° C. in a fluid bed dryer. Subsequently the pellets are coated with the suspension, using the following parameter:</p>
+      <p id="p-00180-en" num="0000">
+        <tables id="tables-00016-en" num="00016">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="28pt" align="left" />
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="63pt" align="right" />
+              <colspec colname="3" colwidth="56pt" align="left" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Inlet temperature:</entry>
+                  <entry>40-80°</entry>
+                  <entry>C.</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Product temperature:</entry>
+                  <entry>35-40°</entry>
+                  <entry>C.</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Spray nozzle:</entry>
+                  <entry>1-2</entry>
+                  <entry>mm</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Spray pressure:</entry>
+                  <entry>1-2</entry>
+                  <entry>bar</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00181-en" num="0187">After sintering at elevated temperature the pellets are blended with MCC and Aerosil® and polyvinylpyrrolidone for 25 min in a tumble blender. Afterwards, Lubritab® is added and the blend is mixed for additional 3 minutes.</p>
+      <p id="p-00182-en" num="0188">The final blend is compressed on a Fette® 102 rotary press, characterized by following parameters:</p>
+      <p id="p-00183-en" num="0000">
+        <tables id="tables-00017-en" num="00017">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="49pt" align="left" />
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="91pt" align="left" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Hardness:</entry>
+                  <entry>80-110 N</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Friability:</entry>
+                  <entry>less than 1%.</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00184-en" num="0189">The tablets are film-coated in order to achieve a better compliance with an aqueous solution of Opadry® (Colorcon®):</p>
+      <p id="p-00185-en" num="0000">
+        <tables id="tables-00018-en" num="00018">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="35pt" align="left" />
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="56pt" align="right" />
+              <colspec colname="3" colwidth="49pt" align="left" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Product temperature:</entry>
+                  <entry>37-40°</entry>
+                  <entry>C.</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Supply air temperature:</entry>
+                  <entry>40-80°</entry>
+                  <entry>C.</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Nozzle diameter:</entry>
+                  <entry>1.2</entry>
+                  <entry>mm</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Spray pressure:</entry>
+                  <entry>1-3</entry>
+                  <entry>bar</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00186-en" num="0190">Afterwards, the tablets are sintered at 60° C. for 0.5 hour.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. Oral dosage form for modified release comprising
+<claim-text>(a) Ruxolitinib, and</claim-text><claim-text>(b) a non-erodible material.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. Oral dosage form according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein Ruxolitinib is contained in an amount of 1 to 60 weight percent, based upon the total weight of the oral dosage form.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. Oral dosage form according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the non-erodible material has a solubility in water at 25° C. at a pH of 5.0 of less than 33 g/l.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. Oral dosage form according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the non-erodible material has a solubility in water at 25° C. at a pH of 7.0 of more than 33 g/l.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. Oral dosage form according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the non-erodible material is a non-erodible polymer having a weight average molecular weight from 30,000 to 3,000,000 g/mol.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. Oral dosage form according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the non-erodible material is contained in an amount of 5 to 80 weight percent based upon the total weight of the oral dosage form.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. Oral dosage form according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising a pore-forming material (c).</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. Oral dosage form according to <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the pore-forming material has a solubility in water at 25° C. and at a pH of 5.0 of more than 50 g/l.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. Oral dosage form according to <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the pore-forming material is contained in an amount of 1 to 50 weight percent, based upon the total weight of the oral dosage form.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. Oral dosage form according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising at least one further excipient (d) selected from fillers, lubricants, disintegrants, glidants, anti-sticking agents, plasticizers and mixtures thereof.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. Oral dosage form according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> in form of a matrix tablet.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. Oral dosage form according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> in form of a tablet comprising a core and a shell, wherein the core comprises components (a) and optionally (c) and/or (d) and wherein the shell comprises components (b) and optionally (c) and/or (d).</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. Oral dosage form according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> in form of a multiple unit pellet system.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. Process for manufacturing the oral dosage form according to <claim-ref idref="clm-00010-en">claim 10</claim-ref> comprising the steps of:
+<claim-text>(1-I) providing components (a), (b), optionally (c), and optionally (d),</claim-text><claim-text>(1-II) optionally agglomerating the components of step (I) to yield granules,</claim-text><claim-text>(1-III) compressing the mixture resulting from step (I) or (II) into tablets; and (1-IV) optionally film-coating the tablets.</claim-text></claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. Process for manufacturing the oral dosage form according to <claim-ref idref="clm-00011-en">claim 11</claim-ref> comprising the steps of:
+<claim-text>(2-I) mixing components (a) and optionally (c) and/or (d),</claim-text><claim-text>(2-II) optionally agglomerating the components of step (I) to yield granules,</claim-text><claim-text>(2-III) compressing the mixture into tablets, and</claim-text><claim-text>(2-IV) coating the tablets with a coating comprising components (b) and optionally (c) and/or (d),</claim-text></claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. Process for manufacturing an oral dosage form according to <claim-ref idref="clm-00012-en">claim 12</claim-ref> comprising the steps of:
+<claim-text>(3-I) providing a pellet core,</claim-text><claim-text>(3-II) spraying a solution or suspension comprising component (a) and optionally (d) onto the pellet core,</claim-text><claim-text>(3-III) spraying a solution or suspension comprising component (b) and optionally (c) and/or (d) onto the pellet,</claim-text><claim-text>(3-IV) optionally blending the pellets with components (b) and (c) and/or (d); and</claim-text><claim-text>(3-V) further processing the resulting mixture into a final oral dosage form. </claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings>
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150246043A1_00001.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150246043A1-20150903-C00001.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150246043A1.PDF" type="pdf" size="633346" pages="13" />
+</lexisnexis-patent-document>

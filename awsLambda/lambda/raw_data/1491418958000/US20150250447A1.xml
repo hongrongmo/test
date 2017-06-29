@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150250447A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="022157" date-changed="20151006" time-changed="063127">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121232787">
+        <country>US</country>
+        <doc-number>20150250447</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14720535</doc-number>
+        <date>20150522</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150910">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012256978</doc-number>
+        <date>20121123</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151006">
+      <classification-ipcr sequence="1">
+        <text>A61B   8/08        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>8</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61B   8/00        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>8</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61B   8/12        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>8</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>A61B  17/34        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>17</main-group>
+        <subgroup>34</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151006">
+      <classification-cpc sequence="1">
+        <text>A61B   8/0841      20130101 FI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>8</main-group>
+        <subgroup>0841</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61B   8/12        20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>8</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61B   8/4209      20130101 LI20151001BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>8</main-group>
+        <subgroup>4209</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151001</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61B   8/445       20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>8</main-group>
+        <subgroup>445</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61B   8/4455      20130101 LI20140624BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>8</main-group>
+        <subgroup>4455</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140624</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61B  17/3403      20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>17</main-group>
+        <subgroup>3403</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61B2017/3413      20130101 LA20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2017</main-group>
+        <subgroup>3413</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">10</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">PUNCTURE ADAPTER AND ULTRASOUND PROBE</invention-title>
+    <related-documents date-changed="20150910">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>WO</country>
+              <doc-number>/JP2013/081490</doc-number>
+              <date>20131122</date>
+            </document-id>
+            <parent-status>PENDING</parent-status>
+            <parent-pct-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>PCT/JP2013/081490</doc-number>
+                <date>20131122</date>
+              </document-id>
+            </parent-pct-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007205</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+    </related-documents>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Kabushiki Kaisha Toshiba</orgname>
+            <role>03</role>
+            <address>
+              <city>Minato-ku</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant sequence="2" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Toshiba Medical Systems Corporation</orgname>
+            <role>03</role>
+            <address>
+              <city>Otawara-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>KUBOTA</last-name>
+            <first-name>Takashi</first-name>
+            <address>
+              <city>Otawara</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>TAKEUCHI</last-name>
+            <first-name>Takashi</first-name>
+            <address>
+              <city>Otawara</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>MAKITA</last-name>
+            <first-name>Yasuhisa</first-name>
+            <address>
+              <city>Nasushiobara</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>AOKI</last-name>
+            <first-name>Minoru</first-name>
+            <address>
+              <city>Yaita</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP13081490</doc-number>
+        <date>20131122</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014081008</doc-number>
+        <date>20140530</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150910">
+      <main-family family-id="165905483">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150250447</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150522</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104797197</doc-number>
+            <kind>A</kind>
+            <date>20150722</date>
+          </document-id>
+          <application-date>
+            <date>20131122</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014121595</doc-number>
+            <kind>A</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131122</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014081008</doc-number>
+            <kind>A1</kind>
+            <date>20140530</date>
+          </document-id>
+          <application-date>
+            <date>20131122</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="165905479">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150250447</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150522</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104797197</doc-number>
+            <kind>A</kind>
+            <date>20150722</date>
+          </document-id>
+          <application-date>
+            <date>20131122</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014121595</doc-number>
+            <kind>A</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131122</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014081008</doc-number>
+            <kind>A1</kind>
+            <date>20140530</date>
+          </document-id>
+          <application-date>
+            <date>20131122</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A puncture adapter includes a guide of a puncture needle, a gripper to hold an ultrasound probe, and a pinch. The gripper grips the ultrasound probe. The puncture adapter is attached to the ultrasound probe by the engagement between the gripper and the ultrasound probe. The pinch is used to release the grip of the gripper. The pinch is located adjacent to the gripper in a direction that intersects a direction in which the gripper grips the ultrasound probe.</p>
+  </abstract>
+  <legal-data date-changed="20150925">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150522</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015250447A1</docdb-publication-number>
+      <docdb-application-id>444307024</docdb-application-id>
+      <new-owner>KABUSHIKI KAISHA TOSHIBA, JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:KUBOTA, TAKASHI;TAKEUCHI, TAKASHI;MAKITA, YASUHISA;AND OTHERS;REEL/FRAME:035702/0614</free-text-description>
+      <effective-date>
+        <date>20150514</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20150522</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015250447A1</docdb-publication-number>
+      <docdb-application-id>444307024</docdb-application-id>
+      <new-owner>TOSHIBA MEDICAL SYSTEMS CORPORATION, JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:KUBOTA, TAKASHI;TAKEUCHI, TAKASHI;MAKITA, YASUHISA;AND OTHERS;REEL/FRAME:035702/0614</free-text-description>
+      <effective-date>
+        <date>20150514</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <summary>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATION</heading>
+      <p id="p-00001-en" num="0001">This application is based upon and claims the benefit of priority from Japanese Patent Application No. 2012-256978, filed 23 Nov. 2012; the entire contents of which are incorporated herein by reference.</p>
+      <heading id="h-00002-en" level="1">FIELD</heading>
+      <p id="p-00002-en" num="0002">Embodiments described herein relate generally to a puncture adapter and an ultrasound probe.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND</heading>
+      <p id="p-00003-en" num="0003">A puncture is a medical procedure usually performed by inserting a puncture needle such as an injection needle in a living body. For example, a puncture is performed for the examination of the tumor by sampling tissues such as cells, the topical administration of a drug, thermal treatment and ablation treatment such as irradiation of microwaves or radio waves from the puncture needle, and the like. With the injection of a drug by puncture, it became possible to treat the case that has required surgery without performing the surgery. The conventional surgical operation may involve significant ablation of tissue, and in some cases the patient has to bear an excessive burden such as the loss of the functions of the tissue and changes in the appearance. In contrast, the puncture can reduce the excessive burden on the patient.</p>
+      <p id="p-00004-en" num="0004">In the puncture, an ultrasound probe is fitted with an instrument (puncture adapter) to guide a puncture needle. The puncture adapter, which is secured to the ultrasound probe, supports the puncture needle and guides it in the insertion direction. That is, the puncture adapter is fixed to the ultrasound probe</p>
+      <p id="p-00005-en" num="0005">The puncture adapter may be fixed to the ultrasound probe in, for example, such a manner as follows. That is, the puncture adapter is fixed by the use of a fixing band that is attached to surround the outer peripheral surface of the ultrasound probe. The fixing band is often configured to be secured by a locking mechanism such as screws. As a result, it may be difficult for the operator to fix a puncture adapter to an ultrasound probe using the fixing band.</p>
+      <p id="p-00006-en" num="0006">For example, while a puncture needle is held by the puncture adapter, the operator grips the ultrasound probe with one hand. At this time, the operator takes a screw of the fixing band in the other hand instead of the puncture needle. The operator then rotates the screw with the other hand to release the locking mechanism of the puncture adapter. In the case of fixing the puncture adapter by using the fixing band with a locking mechanism, operation for fixation or release of the fixation may become complicated. For this reason, there has been used a puncture adapter configured to elastically hold an ultrasound probe.</p>
+      <p id="p-00007-en" num="0007">If elastically holding an ultrasound probe, the puncture adapter has such a configuration as not to shift from the ultrasound probe in the fixed state. For example, a configuration is employed in which a holding part of the puncture adapter is engaged (fitted, etc.) with a held part of the ultrasound probe. In this configuration, one of the parts is convex, and the other is concave. In the holding state, the convex part fits in the concave part, and thus the fixed state of the ultrasound probe and the puncture adapter is retained.</p>
+      <p id="p-00008-en" num="0008">When the operator removes the puncture adapter from the ultrasound probe, the holding state of the puncture adapter is released. The release of the holding state requires to release the engagement between the holding part of the puncture adapter and the held part of the ultrasound probe. To release the engagement, the operator separates (opens) holding parts of the puncture adapter from each other against elasticity to release the ultrasound probe. For example, the operator removes the convex part from the concave part.</p>
+      <p id="p-00009-en" num="0009">The puncture adapter is provided with a functional part related to the removal operation from the ultrasound probe. This functional part is intended to release the engagement as described above, and includes, for example, a pair of operation parts for separating the holding parts. For example, as in a common pinch, the holding parts separate from each other when the operation parts are brought close to each other against elasticity.</p>
+      <p id="p-00010-en" num="0010">In such a configuration, the greater required force is to separate the holding parts from each other, the operability of the removal operation of the puncture adapter decreases. Further, if the operator removes the puncture adapter while the holding state remains not completely released, attached substance (blood, etc.) on the puncture adapter or the ultrasound probe may be scattered.</p>
+      <p id="p-00011-en" num="0011">On the other hand, by increasing the distance between the operation parts and the holding parts of the puncture adapter, the operability of the removal operation may be improved. However, it is necessary to avoid that the operation parts protrude significantly in a direction toward the outer peripheral surface from the central axis of the ultrasound probe. For example, if the operation parts protrude significantly from the outer peripheral surface of the ultrasound probe, which may interfere with the puncture. In addition, if the puncture adapter is to be attached to an intracavitary probe or the like that is inserted in the object, the burden on the insertion part may increase as the amount of protrusion from the outer peripheral surface increases in the operation parts.</p>
+      <p id="p-00012-en" num="0012">However, if the puncture adapter is designed to be small not to interfere with the puncture and to reduce the burden, it is difficult to secure the distance between the operation parts and the holding parts. This increases the rigidity of a connection part. Accordingly, a larger operating force (a force to grip the pair of the operation parts) is required for the removal operation, which makes the removal difficult.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 1</figref> is a schematic perspective view of an ultrasound probe according to a first embodiment;</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 2</figref> is a schematic perspective view of a puncture adapter of the first embodiment;</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 3</figref> is a schematic perspective view of the main body of the puncture adapter of the first embodiment;</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 4</figref> is a schematic perspective view of a cover of the puncture adapter of the first embodiment;</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 5</figref> is a schematic perspective view of the puncture adapter illustrated in <figref>FIG. 2</figref> viewed from the back;</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 6</figref> is a schematic partial enlarged view of a gripper and a first operation part of the adapter body illustrated in <figref>FIG. 5</figref>;</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 7</figref> is a schematic perspective view of an ultrasound probe fitted with the puncture adapter of the first embodiment;</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 8</figref> is a schematic cross-sectional view taken along line A-A in <figref>FIG. 7</figref>;</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 9</figref> is a schematic cross-sectional view taken along line B-B in <figref>FIG. 7</figref>;</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 10</figref> is a schematic cross-sectional view taken along line C-C in <figref>FIG. 7</figref>;</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 11A</figref> is a schematic cross-sectional view conceptually illustrating the engaged state of the gripper of the adapter body of the first embodiment;</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 11B</figref> is a schematic cross-sectional view conceptually illustrating the non-engaged state of the gripper of the adapter body of the first embodiment;</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 12</figref> is a schematic cross-sectional view of a probe cover of the ultrasound probe and engaging parts of the puncture adapter;</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 13A</figref> is a schematic perspective view of an example of an ultrasound probe according to a second embodiment;</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 13B</figref> is a schematic view of a proximal end side engaging part, a sub engaging part, and a slope of the ultrasound probe of the second embodiment;</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 14A</figref> is a schematic cross-sectional view of the proximal end side engaging part and the like of the ultrasound probe of the second embodiment;</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 14B</figref> is a schematic cross-sectional view of the proximal end side engaging part and the like of the ultrasound probe of the second embodiment; and</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 14C</figref> is a schematic cross-sectional view of the proximal end side engaging part and the like of the ultrasound probe of the second embodiment.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00031-en" num="0031">In general, according to one embodiment, a puncture adapter includes a guide of a puncture needle, a gripper to grip an ultrasound probe, and a pinch. The gripper holds the ultrasound probe. The puncture adapter is attached to the ultrasound probe by the engagement between the gripper and the ultrasound probe. The pinch is used to release the grip of the gripper. The pinch is located adjacent to the gripper in a direction that intersects a direction in which the gripper grips the ultrasound probe.</p>
+      <p id="p-00032-en" num="0032">In the following, a description is given of an example of a puncture adapter and an ultrasound probe (ultrasound probe body) according to embodiments with reference to <figref>FIGS. 1 to 14C</figref>. The puncture adapter of the embodiments is attachable/detachable to/from the ultrasound probe. While the puncture adapter of the embodiments is described below as being attached to an intracavitary ultrasound probe that is insertable in a subject, the ultrasound probe is not limited to be of a predetermined shape.</p>
+      <heading id="h-00006-en" level="1">First Embodiment</heading>
+      <heading id="h-00007-en" level="1">Configuration of the Ultrasound Probe</heading>
+      <p id="p-00033-en" num="0033">A description is given of the configuration of an ultrasound probe according to a first embodiment. <figref>FIG. 1</figref> is a schematic perspective view of an ultrasound probe <b>100</b> of the embodiment. <figref>FIG. 1</figref> illustrates the ultrasound probe <b>100</b> without a puncture adapter <b>200</b>. As illustrated in <figref>FIG. 1</figref>, the ultrasound probe <b>100</b> includes an insertion part <b>110</b> to be inserted into a subject, and a handle <b>120</b> that the user grips. In the example of <figref>FIG. 1</figref>, the insertion part <b>110</b> has a columnar shape with a curved end. The proximal end side of the insertion part <b>110</b> forms a boundary with the handle <b>120</b>. The outer peripheral surface of the insertion part <b>110</b> is continuous with that of the handle <b>120</b>.</p>
+      <p id="p-00034-en" num="0034">The distal end of the insertion part <b>110</b> accommodates an ultrasound generator <b>111</b> in the ultrasound probe <b>100</b>. That is, a plurality of ultrasound transducers are provided as the ultrasound generator <b>111</b> inside the distal end of the insertion part <b>110</b>. When the ultrasound probe <b>100</b> receives a drive signal from an ultrasound diagnostic apparatus, the ultrasound transducers are driven, and thereby the ultrasound generator <b>111</b> generates ultrasound waves. The ultrasound transducers also receive reflected waves from a subject. An acoustic lens or the like is provided on the distal end surface of the ultrasound probe <b>100</b> (the insertion part <b>110</b>). The ultrasound transducers may form a one-dimensional array in which they are arrayed in a scanning direction or two-dimensional arrays.</p>
+      <p id="p-00035-en" num="0035">Although not illustrated, the handle <b>120</b> is connected to a cable for transmitting/receiving signals to/from the ultrasound diagnostic apparatus. In addition, the handle <b>120</b> may be provided with an electrical circuit for processing signals fed from the ultrasound diagnostic apparatus and the ultrasound transducers.</p>
+      <p id="p-00036-en" num="0036">The ultrasound probe <b>100</b> transmits ultrasound waves to the subject based on a signal received from the ultrasound diagnostic apparatus. The ultrasound probe <b>100</b> converts the reflected waves from the subject into an electrical signal (echo signal) by the ultrasound transducers, and sends the electrical signal to the ultrasound diagnostic apparatus. The ultrasound diagnostic apparatus visualizes the biological information (morphological information, functional information, etc.) of the subject into an image based on the electrical signal received from the ultrasound probe <b>100</b>. Such electrical processing and image processing are performed in a conventional manner.</p>
+      <p id="p-00037-en" num="0037">The ultrasound probe <b>100</b> is provided with a distal end side engaging part <b>130</b> and a proximal end side engaging part <b>140</b> on its outer peripheral surface. In the example of <figref>FIG. 1</figref>, the distal end side engaging part <b>130</b> is located in the vicinity of the ultrasound generator <b>111</b> in the insertion part <b>110</b>, and is formed in a recess that engages each of engaging protrusions <b>412</b><i>a </i>and <b>412</b><i>b </i>(described later) of the puncture adapter <b>200</b> (see <figref>FIGS. 2 and 4</figref>). A pair of the distal end side engaging parts <b>130</b> is arranged on the distal end side of the insertion part <b>110</b> so that they are interposed between the engaging protrusions <b>412</b><i>a </i>and <b>412</b><i>b </i>of the puncture adapter <b>200</b>. Also in the example of <figref>FIG. 1</figref>, the proximal end side engaging part <b>140</b> is located in the insertion part <b>110</b> in the vicinity of the boundary with the handle <b>120</b>, and is formed in a recess that engages a gripper <b>320</b> (see <figref>FIG. 2</figref>) of the puncture adapter <b>200</b>.</p>
+      <heading id="h-00008-en" level="2">[Configuration of the Puncture Adapter]</heading>
+      <p id="p-00038-en" num="0038">The puncture adapter <b>200</b> is described below with reference to <figref>FIGS. 2 to 11B</figref>. The puncture adapter <b>200</b> is attached and fixed to the ultrasound probe <b>100</b> by engagement. The puncture adapter <b>200</b> has a function of guiding a puncture needle in the insertion direction when the puncture needle is inserted therein.</p>
+      <heading id="h-00009-en" level="2">(Outline of the Puncture Adapter <b>200</b>)</heading>
+      <p id="p-00039-en" num="0039">The outline of the puncture adapter <b>200</b> is described with reference to <figref>FIGS. 2 to 4</figref>. <figref>FIG. 2</figref> is a schematic external view of the puncture adapter <b>200</b> of the first embodiment. <figref>FIG. 3</figref> is a schematic external view of an adapter body <b>300</b> of the puncture adapter <b>200</b> of the first embodiment. <figref>FIG. 4</figref> is a schematic external view of a cover <b>400</b> of the puncture adapter <b>200</b> of the first embodiment. As illustrated in <figref>FIGS. 2 to 4</figref>, the puncture adapter <b>200</b> includes the adapter body <b>300</b> and the cover <b>400</b>. The puncture adapter <b>200</b> further includes a plurality of engaging parts each for engaging one of the distal end side engaging parts <b>130</b> and the proximal end side engaging parts <b>140</b> of the ultrasound probe <b>100</b>. The puncture adapter <b>200</b> is attached to the ultrasound probe <b>100</b> through the engaging parts. As illustrated in <figref>FIGS. 2 and 4</figref>, the cover <b>400</b> of the puncture adapter <b>200</b> is configured to be detachably attached to the adapter body <b>300</b>.</p>
+      <p id="p-00040-en" num="0040">While the puncture adapter <b>200</b> is configured to be separated into the adapter body <b>300</b> and the cover <b>400</b>, it may be formed integrally. However, in the first embodiment, the puncture adapter <b>200</b> can be separated into the adapter body <b>300</b> and the cover <b>400</b> to improve the maintenance efficiency such as facilitating the cleaning after the removal of the puncture adapter <b>200</b> from the ultrasound probe <b>100</b>.</p>
+      <p id="p-00041-en" num="0041">A puncture needle (not illustrated) is inserted through a space formed between a guide plate <b>312</b> of a plate-like member <b>310</b> of the adapter body <b>300</b> (see <figref>FIG. 3</figref>) and the inner peripheral surface of the cover <b>400</b> (see <figref>FIG. 8</figref>). The puncture needle is guided in the insertion direction by the guide plate <b>312</b> and the inner peripheral surface (see arrow A in <figref>FIG. 2</figref>). This insertion direction is a direction that intersects with the cross section of <figref>FIG. 8</figref> (perpendicular direction, etc.). Incidentally, at least one of the guide plate <b>312</b> and the inner peripheral surface corresponds to an example of “guide”.</p>
+      <heading id="h-00010-en" level="2">(Configuration of the Adapter Body <b>300</b>)</heading>
+      <p id="p-00042-en" num="0042">Next, the configuration of the adapter body <b>300</b> is described with reference to <figref>FIGS. 2 to 10</figref>. <figref>FIG. 5</figref> is a schematic perspective view of the puncture adapter <b>200</b> illustrated in <figref>FIG. 2</figref> viewed from the back. <figref>FIG. 6</figref> is a schematic partial enlarged view of the gripper <b>320</b> and a first operation part <b>330</b> of the adapter body <b>300</b> illustrated in <figref>FIG. 5</figref>. <figref>FIG. 7</figref> is a schematic perspective view of the ultrasound probe <b>100</b> fitted with the puncture adapter <b>200</b> of the first embodiment. <figref>FIGS. 8</figref>, <b>9</b> and <b>10</b> are schematic cross-sectional views respectively taken along lines A-A, B-B and C-C in <figref>FIG. 7</figref>. <figref>FIG. 8</figref> illustrates the first operation part <b>330</b> and a fulcrum <b>331</b>, and a second operation part <b>340</b> and a fulcrum <b>341</b>. <figref>FIG. 9</figref> illustrates a first holding part <b>321</b><i>a </i>and a first engaging part <b>322</b><i>a</i>, and a second holding part <b>321</b><i>b </i>and a second engaging part <b>322</b><i>b</i>. <figref>FIG. 10</figref> illustrates the first holding part <b>321</b><i>a </i>and a first engaging part <b>323</b><i>a</i>, and the second holding part <b>321</b><i>b </i>and a second engaging part <b>323</b><i>b. </i></p>
+      <p id="p-00043-en" num="0043">Note that the first operation part <b>330</b> and the second operation part <b>340</b> correspond to an example of “pinch”.</p>
+      <heading id="h-00011-en" level="2">&lt;Overall Configuration&gt;</heading>
+      <p id="p-00044-en" num="0044">As illustrated in <figref>FIG. 3</figref>, the adapter body <b>300</b> includes the plate-like member <b>310</b>, the gripper <b>320</b>, the first operation part <b>330</b>, and the second operation part <b>340</b>. The plate-like member <b>310</b> is a flat plate, and gradually becomes narrower from the proximal end toward the distal end. In the example of <figref>FIG. 3</figref>, the plate-like member <b>310</b> has a portion having a substantially constant first width at the proximal end. The first width continues to some extent toward the distal end side (in the puncture direction), and in the middle of the way to the distal end, the first width reduces to a second width. The plate-like member <b>310</b> gradually becomes further narrower toward the distal end from where the first width changes to the second width. <figref>FIG. 3</figref> illustrates a boundary at which the first width changes to the second width. That is, at the boundary where the width changes, steps <b>311</b><i>a </i>and <b>311</b><i>b </i>are formed in the width direction on the right and left of the plate-like member <b>310</b>, respectively. The step <b>311</b><i>a </i>is fitted to a fitting part <b>411</b><i>a </i>of the cover <b>400</b> (described later). Similarly, the step <b>311</b><i>b </i>is fitted to a fitting part of the cover <b>400</b>. With this, the adapter body <b>300</b> and the cover <b>400</b> are combined and fixed.</p>
+      <heading id="h-00012-en" level="2">&lt;Plate-Like Member&gt;</heading>
+      <p id="p-00045-en" num="0045">The plate-like member <b>310</b> includes the guide plate <b>312</b>, with which the puncture needle makes contact in the longitudinal direction from the proximal end toward the distal end, and side plates <b>313</b><i>a </i>and <b>313</b><i>b </i>that protrude substantially parallel to the guide plate <b>312</b> on the right and left of the guide plates <b>312</b>, respectively, and extend along the longitudinal direction of the guide plates <b>312</b>. The side plates <b>313</b><i>a </i>and <b>313</b><i>b </i>are each configured to abut on the inner peripheral surface of the cover <b>400</b>, thereby reducing the misalignment between the adapter body <b>300</b> and the cover <b>400</b>.</p>
+      <heading id="h-00013-en" level="2">&lt;Overall Configuration of the Gripper&gt;</heading>
+      <p id="p-00046-en" num="0046">Next, with reference to <figref>FIGS. 3</figref>, and <b>5</b> to <b>10</b>, the overall configuration of the gripper <b>320</b> is described. As illustrated in <figref>FIGS. 3 and 5</figref>, the adapter body <b>300</b> is provided with the gripper <b>320</b> having a curved surface along the outer peripheral surface of the ultrasound probe <b>100</b>. The gripper <b>320</b> protrudes from both side edges of the plate-like member <b>310</b> in a direction away from the plate-like member <b>310</b>. As illustrated in the figures, the gripper <b>320</b> is located on the proximal end side of the step <b>311</b><i>a </i>of the plate-like member <b>310</b>. The gripper <b>320</b> includes the first holding part <b>321</b><i>a</i>, the second holding part <b>321</b><i>b</i>, and a part of the plate-like member <b>310</b> as their connector. That is, the first holding part <b>321</b><i>a </i>protrudes from one side edge of the plate-like member <b>310</b> toward one of the proximal end side engaging parts <b>140</b> on the outer peripheral surface of the ultrasound probe <b>100</b> at the time of attachment. The second holding part <b>321</b><i>b </i>protrudes from the other side edge toward the other of the proximal end side engaging parts <b>140</b> on the outer peripheral surface of the ultrasound probe <b>100</b>. The plate-like member <b>310</b> located between the first holding part <b>321</b><i>a </i>and the second holding part <b>321</b><i>b </i>has the function of a connector for connecting them. The first holding part <b>321</b><i>a </i>and the second holding part <b>321</b><i>b </i>face across the connector. That is, the first holding part <b>321</b><i>a</i>, the connector, and the second holding part <b>321</b><i>b </i>forms the gripper <b>320</b> together in a shape that surrounds the outer peripheral surface of the ultrasound probe <b>100</b>.</p>
+      <heading id="h-00014-en" level="2">&lt;Configuration of Holding Part&gt;</heading>
+      <p id="p-00047-en" num="0047">With reference to <figref>FIGS. 5 and 6</figref>, the first holding part <b>321</b><i>a </i>and the second holding part <b>321</b><i>b </i>are described below. Note that the first holding part <b>321</b><i>a </i>and the second holding part <b>321</b><i>b </i>are bilaterally symmetrical, and thus but one of them, i.e., the first holding part <b>321</b><i>a </i>is described to explain their configuration. The description of the second holding part <b>321</b><i>b </i>is omitted.</p>
+      <p id="p-00048-en" num="0048">As illustrated in <figref>FIGS. 5 and 6</figref>, the first engaging part <b>322</b><i>a </i>is arranged in the vicinity of the distal end of the first holding part <b>321</b><i>a </i>that protrudes from the side edge of the plate-like member <b>310</b> in a direction away therefrom. The first engaging part <b>322</b><i>a </i>extends in a direction perpendicular to the protruding direction. The first engaging part <b>322</b><i>a </i>protrudes or is raised toward the second engaging part <b>322</b><i>b </i>that faces the inner surface of the first holding part <b>321</b><i>a</i>. The first engaging part <b>322</b><i>a </i>has a shape corresponding to the recess of the proximal end side engaging part <b>140</b> in the insertion part <b>110</b> of the ultrasound probe <b>100</b> (see <figref>FIG. 1</figref>), and is engaged with the proximal end side engaging part <b>140</b> when the gripper <b>320</b> is in the closed state (see <figref>FIGS. 9 and 10</figref>). Note that the closed state refers to a state of the gripper <b>320</b> when the removal operation or the like is not performed by the operator. In the closed state, i.e., when the operator is not applying a predetermined pressing force to the first operation part <b>330</b> and the second operation part <b>340</b>, the distance between the first engaging part <b>322</b><i>a </i>and the second engaging part <b>322</b><i>b </i>is the shortest.</p>
+      <p id="p-00049-en" num="0049">Besides, as illustrated in <figref>FIGS. 5 and 6</figref>, the first holding part <b>321</b><i>a </i>is provided with the first engaging part <b>323</b><i>a </i>that is formed to be continuous with one longitudinal end of the first engaging part <b>322</b><i>a</i>. As with the first engaging part <b>322</b><i>a</i>, the first engaging part <b>323</b><i>a </i>protrudes or is raised from the inner surface of the first holding part <b>321</b><i>a </i>toward the second engaging part <b>322</b><i>b </i>that faces the first holding part <b>321</b><i>a</i>. The first engaging part <b>323</b><i>a </i>is arranged to have a predetermined length from the proximal end side (the plate-like member <b>310</b> side) of the first holding part <b>321</b><i>a </i>in a direction away from the first engaging part <b>322</b><i>a</i>. As illustrated in <figref>FIG. 6</figref>, the first engaging part <b>323</b><i>a </i>has a shape corresponding to the recess of the proximal end side engaging part <b>140</b> in the insertion part <b>110</b> of the ultrasound probe <b>100</b> (see <figref>FIG. 1</figref>), and is engaged with the proximal end side engaging part <b>140</b> when the gripper <b>320</b> is in the closed state (see <figref>FIGS. 9 and 10</figref>).</p>
+      <p id="p-00050-en" num="0050">One end of the first engaging part <b>322</b><i>a </i>is formed to be continuous with one end of the first engaging part <b>323</b><i>a</i>. The continuous protrusions are engaged with the proximal end side engaging part <b>140</b>. In the example of <figref>FIG. 6</figref>, the combination of the first engaging parts <b>322</b><i>a </i>and <b>323</b><i>a </i>forms a substantially L-shape. In the above description referring to examples of <figref>FIGS. 5 and 6</figref>, the first engaging part <b>322</b><i>a </i>is distinguished from the first engaging part <b>323</b><i>a </i>for convenience of description. The first engaging parts (<b>322</b><i>a</i>, <b>323</b><i>a</i>) form a protrusion to be engaged with the proximal end side engaging part <b>140</b>. However, this is not so limited, and the first engaging parts <b>322</b><i>a </i>and <b>323</b><i>a </i>may be separated from each other, or there may be three or more independent protrusions. If the proximal end side engaging parts <b>140</b> are convex, the first engaging parts <b>322</b><i>a </i>and <b>323</b><i>a </i>are formed in a concave shape. If the proximal end side engaging parts <b>140</b> are a combination of convex and concave parts, the first engaging part <b>322</b><i>a </i>and the like are formed to be a combination of concave and convex parts corresponding thereto. The same applies to the second engaging parts <b>322</b><i>b </i>and <b>323</b><i>b </i>described below.</p>
+      <p id="p-00051-en" num="0051">As described above, the second holding part <b>321</b><i>b </i>is bilaterally symmetrical to the first holding part <b>321</b><i>a</i>, and the combination of the second engaging parts <b>322</b><i>b </i>and <b>323</b><i>b </i>has a substantially L-shape symmetrical to the L-shape described above. As with the first engaging parts <b>322</b><i>a </i>and <b>323</b><i>a</i>, the second engaging parts <b>322</b><i>b </i>and <b>323</b><i>b </i>are formed so that their shape corresponds to the recess of the other proximal end side engaging part <b>140</b> of the insertion part <b>110</b>. The second engaging parts <b>322</b><i>b </i>and <b>323</b><i>b </i>are engaged with the proximal end side engaging part <b>140</b> when the gripper <b>320</b> is in the closed state. The first holding part <b>321</b><i>a </i>and the second holding part <b>321</b><i>b </i>have elasticity as well as flexibility. Therefore, when the first holding part <b>321</b><i>a </i>and the second holding part <b>321</b><i>b </i>are opened by the operator in the direction away from each other, the elasticity causes a force that brings them to return to their original positions. Accordingly, the first holding part <b>321</b><i>a </i>and the second holding part <b>321</b><i>b </i>are biased in a direction in which they come close to each other. By the biasing force of the gripper <b>320</b>, the gripper <b>320</b> holds the insertion part <b>110</b> of the ultrasound probe <b>100</b>.</p>
+      <p id="p-00052-en" num="0052">&lt;Configuration of the First Operation Part and the Second Operation Part&gt;</p>
+      <p id="p-00053-en" num="0053">Next, with reference to <figref>FIGS. 3 and 5</figref> to <b>8</b>, the configuration of the first operation part <b>330</b> and the second operation part <b>340</b> are described. As illustrated in <figref>FIG. 5</figref>, the first operation part <b>330</b> and the second operation part <b>340</b> are arranged to face each other across the plate-like member <b>310</b>. The first operation part <b>330</b> and the second operation part <b>340</b> have elasticity as well as flexibility. When the operator applies a predetermined pressing force to the operation parts, the first operation part <b>330</b> and the second operation part <b>340</b> come close to each other. On the other hand, if the operator lowers the pressure on the operation parts or removes his/her hand therefrom, the first engaging part <b>322</b><i>a </i>and the second engaging part <b>322</b><i>b </i>return to their original positions by the elastic force of the gripper <b>320</b> and the like. In addition, by the elastic force of the gripper <b>320</b>, the first operation part <b>330</b> and the second operation part <b>340</b> are biased in a direction in which they are separated from each other. In other words, the first engaging parts (<b>322</b><i>a</i>, <b>323</b><i>a</i>) and the second engaging parts (<b>322</b><i>b</i>, <b>323</b><i>b</i>) are each configured to move by the biasing force to the original position from a position when the operation parts are being pressed.</p>
+      <p id="p-00054-en" num="0054">As illustrated in <figref>FIGS. 3 and 5</figref>, the adapter body <b>300</b> is provided with the first operation part <b>330</b> that is adjacent to the first holding part <b>321</b><i>a </i>in the proximal end direction of the plate-like member <b>310</b> and is connected to the first holding part <b>321</b><i>a</i>. In the example of <figref>FIG. 6</figref>, the first holding part <b>321</b><i>a </i>and the first operation part <b>330</b> are formed continuously. As illustrated in <figref>FIG. 5</figref>, the first operation part <b>330</b> is connected to the first holding part <b>321</b><i>a </i>on an extension of the first engaging part <b>322</b><i>a </i>in the extending direction, and other parts are disconnected. In other words, a part of the first operation part <b>330</b> that is pressed (effort), the fulcrum <b>331</b> of the first operation part <b>330</b>, and the first engaging part <b>322</b><i>a </i>(operating point) are not aligned in a straight line. That is, the first holding part <b>321</b><i>a </i>and the first operation part <b>330</b> are connected such that the effort and the operating point are misaligned upon opening and closing the gripper <b>320</b>.</p>
+      <p id="p-00055-en" num="0055">The proximal end direction of the plate-like member <b>310</b> with respect to the first holding part <b>321</b><i>a </i>corresponds to an example of “a direction that intersects a direction in which the gripper grips the ultrasound probe”.</p>
+      <p id="p-00056-en" num="0056">In addition, as illustrated in <figref>FIG. 6</figref>, the fulcrum <b>331</b> that protrudes toward the second operation part <b>340</b> is arranged on the surface of the first operation part <b>330</b> facing the second operation part <b>340</b>. When attaching the puncture adapter <b>200</b> to the ultrasound probe <b>100</b>, the operator presses the first operation part <b>330</b> against the outer peripheral surface of the insertion part <b>110</b> (see direction P<b>1</b> in <figref>FIG. 8</figref>). With this, the fulcrum <b>331</b> abuts on the outer peripheral surface of the ultrasound probe <b>100</b> (see <figref>FIGS. 11A and 11B</figref>). As a result, the force that presses the first operation part <b>330</b> against the outer peripheral surface of the ultrasound probe <b>100</b> acts to bring the first holding part <b>321</b><i>a </i>away from the outer peripheral surface through the fulcrum <b>331</b>. For more details, the function of the puncture adapter <b>200</b> is described later with reference to <figref>FIGS. 11A and 11B</figref>.</p>
+      <p id="p-00057-en" num="0057">As described above, the first operation part <b>330</b> is adjacent to the first holding part <b>321</b><i>a </i>on the proximal end side of the plate-like member <b>310</b> (see <figref>FIG. 5</figref>). Accordingly, while the puncture adapter <b>200</b> is being attached to the ultrasound probe <b>100</b>, when strongly pressed against the outer peripheral surface of the insertion part <b>110</b> (see direction P<b>1</b> in <figref>FIG. 8</figref>), the first operation part <b>330</b> makes contact with the outer peripheral surface of the plate-like member <b>310</b> or the cover <b>400</b>. That is, the puncture adapter <b>200</b> is configured to limit the movable range of the first operation part <b>330</b>. Thus, even if excessive pressing force is applied to the first operation part <b>330</b>, it is possible to prevent damage to the adapter body <b>300</b> including the first operation part <b>330</b>.</p>
+      <p id="p-00058-en" num="0058">The second operation part <b>340</b> is bilaterally symmetrical to the first operation part <b>330</b>. Therefore, the connection relationship between the second operation part <b>340</b> and the second holding part <b>321</b><i>b </i>is similar to that between the first operation part <b>330</b> and the first holding part <b>321</b><i>a</i>. That is, the second operation part <b>340</b> is adjacent to the second holding part <b>321</b><i>b </i>in the proximal end direction of the plate-like member <b>310</b>. The second operation part <b>340</b> is connected to the second holding part <b>321</b><i>b</i>. The fulcrum <b>341</b> that protrudes toward the first operation part <b>330</b> is arranged on the surfaces of the second operation part <b>340</b> facing the first operation part <b>330</b>. Similar to the fulcrum <b>331</b>, when the second operation part <b>340</b> is pressed against the outer peripheral surface of the insertion part <b>110</b> (see direction P<b>2</b> in <figref>FIG. 8</figref>), the fulcrum <b>341</b> abuts on the outer peripheral surface of the ultrasound probe <b>100</b> (see <figref>FIGS. 11A and 11B</figref>). With this, the force that presses the second operation part <b>340</b> acts in the direction of releasing the engagement of the first holding part <b>321</b><i>a</i>. For more details, the function of the puncture adapter <b>200</b> is described later with reference to <figref>FIGS. 11A and 11B</figref>.</p>
+      <p id="p-00059-en" num="0059">Also, as with the first operation part <b>330</b>, when strongly pressed against the outer peripheral surface of the insertion part <b>110</b> (see direction P<b>2</b> in <figref>FIG. 8</figref>), the second operation part <b>340</b> makes contact with the outer peripheral surface of the plate-like member <b>310</b> or the cover <b>400</b>. That is, the puncture adapter <b>200</b> is configured to limit the movable range of the second operation part <b>340</b>. Thus, even if excessive pressing force is applied to the second operation part <b>340</b>, it is possible to prevent damage to the adapter body <b>300</b> including the second operation part <b>340</b>.</p>
+      <p id="p-00060-en" num="0060">The first operation part <b>330</b> and the second operation part <b>340</b> each have a curved shape at the edge on the distal end side of the plate-like member <b>310</b>. This shape is further described. The embodiment has described the puncture adapter <b>200</b> that is attached to an intracavitary probe as an example. In the puncture adapter <b>200</b>, the first operation part <b>330</b> and the second operation part <b>340</b> are located on the proximal end side of the insertion part <b>110</b>. This is because the size around the operation parts tends to be large due to the operation parts that are operated as being pinched.</p>
+      <p id="p-00061-en" num="0061">In the puncture adapter <b>200</b> that is attached to the ultrasound probe <b>100</b>, the size around the operation parts includes the size of the ultrasound probe <b>100</b> having a predetermined diameter (or width/thickness) and the protruding length of the operation parts surrounding it. The operation parts are likely to be formed in protrusions to reduce the force required for the pinch operation. Accordingly, the size may become thicker radially from the central axis of the ultrasound probe <b>100</b>. For example, the operation parts (<b>330</b>, <b>340</b>) of the puncture adapter <b>200</b> are located in the vicinity of the boundary between the insertion part <b>110</b> and the handle <b>120</b> so that they are spaced apart as much as possible from the distal end of the insertion part <b>110</b> of the probe to be inserted into the human body. In the configuration in which the operation parts are located in such positions, the smooth curved surface of the distal end edge of each operation part has advantages that, when the operation part makes contact with the insertion opening as the insertion length of the insertion part <b>110</b> increases, less burden is placed on the insertion opening of the subject.</p>
+      <p id="p-00062-en" num="0062">Note that the first operation part <b>330</b> and the second operation part <b>340</b> need not be directly connected to the first holding part <b>321</b><i>a </i>and the second holding part <b>321</b><i>b</i>, respectively. Any configuration may be employed as long as the first holding part <b>321</b><i>a </i>and the second holding part <b>321</b><i>b </i>separate from each other in response to pressing of the first operation part <b>330</b> and the second operation part <b>340</b>. For example, the first operation part <b>330</b> and the second operation part <b>340</b> may be configured to abut on the first holding part <b>321</b><i>a </i>and the second holding part <b>321</b><i>b</i>, respectively, to transmit a pressing force applied thereto to the holding parts. Besides, the locations of the fulcrums <b>331</b> and <b>341</b> of the first operation part <b>330</b> and the second operation part <b>340</b> are not limited to the positions illustrated in <figref>FIG. 6</figref>. These positions are on the facing surfaces of the operation parts. The fulcrum <b>331</b> is located between the first engaging part <b>322</b><i>a </i>and a part of the first operation part <b>330</b> which is pressed. Similarly, the fulcrum <b>341</b> is located between the second engaging part <b>322</b><i>b </i>and a part of the second operation part <b>340</b> which is pressed. The protruding shape of the fulcrums <b>331</b> and <b>341</b> is not limited to a linear shape as illustrated in <figref>FIG. 6</figref>, and may be a point-like shape. Also, the shape of each operation part in the plane direction is not limited to a linear shape as illustrated in <figref>FIG. 6</figref>, and may be a point-like shape.</p>
+      <p id="p-00063-en" num="0063">Incidentally, the fulcrums <b>331</b> and <b>341</b> correspond to examples of “first protrusion” and “second protrusion”, respectively.</p>
+      <heading id="h-00015-en" level="2">(Cover <b>400</b>)</heading>
+      <p id="p-00064-en" num="0064">Next, with reference to <figref>FIGS. 4 and 8</figref>, the configuration of the cover <b>400</b> is described. As illustrated in <figref>FIGS. 4 and 8</figref>, the cover <b>400</b> has a generally semi-cylindrical shape. That is, the cover <b>400</b> has an arcuate curved surface. In addition, the cover <b>400</b> has a predetermined length in the longitudinal direction perpendicular to the curved surface. As illustrated in <figref>FIG. 4</figref>, the cover <b>400</b> is formed wider in positions corresponding to the operation parts and the gripper <b>320</b> of the adapter body <b>300</b>, and gradually becomes narrower toward the distal end side. Further, the cover <b>400</b> is provided with the fitting part <b>411</b><i>a </i>for receiving the step <b>311</b><i>a </i>of the adapter body <b>300</b> at a position corresponding to the step <b>311</b><i>a</i>. Similarly, the cover <b>400</b> is provided with a fitting part (not illustrated) for receiving the step <b>311</b><i>b </i>at a position corresponding to the step <b>311</b><i>b</i>. When the steps <b>311</b><i>a </i>and <b>311</b><i>b </i>are each fitted in the fitting part <b>411</b><i>a </i>or the like (see <figref>FIG. 2</figref>), the cover <b>400</b> is attached to the adapter body <b>300</b> and fixed.</p>
+      <p id="p-00065-en" num="0065">In addition, as illustrated in <figref>FIGS. 2 and 4</figref>, the cover <b>400</b> is provided, on the distal end side, with the engaging protrusions <b>412</b><i>a </i>and <b>412</b><i>b </i>corresponding to the insertion part <b>110</b> and the pair of the distal end side engaging parts <b>130</b> of the ultrasound probe <b>100</b>. Since the distal end side engaging part <b>130</b> is a recess as illustrated in each figure, the engaging protrusions <b>412</b><i>a </i>and <b>412</b><i>b </i>are each formed in a protruding shape corresponding to the recess. Each of the distal end side engaging parts <b>130</b> engages one of the engaging protrusions <b>412</b><i>a </i>and <b>412</b><i>b</i>, and thereby the distal end side of the puncture adapter <b>200</b> and the distal end side of the insertion part <b>110</b> of the ultrasound probe <b>100</b> are fixed.</p>
+      <p id="p-00066-en" num="0066">Also, as illustrated in <figref>FIGS. 2 and 4</figref>, the cover <b>400</b> is provided with a puncture needle outlet <b>420</b> at a position between the engaging protrusions <b>412</b><i>a </i>and <b>412</b><i>b </i>on the distal end side. The cover <b>400</b> is further provided with a guide plate engaging part <b>430</b> for receiving the distal end of the guide plate <b>312</b> at a position slightly below the distal end of the puncture needle outlet <b>420</b> (on the ultrasound probe <b>100</b> side). The guide plate engaging part <b>430</b> is formed in a recess and receives the distal end of the guide plate <b>312</b>, thereby achieving the positioning of the distal end of the guide plate <b>312</b>. Further, by the engagement between the guide plate engaging part <b>430</b> and the guide plate <b>312</b>, the adapter body <b>300</b> and the cover <b>400</b> are fixed on the distal end side of the puncture adapter <b>200</b>.</p>
+      <p id="p-00067-en" num="0067">As illustrated in <figref>FIG. 2</figref>, the puncture needle is inserted from a puncture needle insertion opening between the proximal end of the plate-like member <b>310</b> and the proximal end of the cover <b>400</b> (see upper part in <figref>FIG. 8</figref>). On the distal end side, the puncture needle comes out from the puncture needle outlet <b>420</b> between the cover <b>400</b> and the guide plate <b>312</b>.</p>
+      <heading id="h-00016-en" level="2">[Action of the Puncture Adapter]</heading>
+      <p id="p-00068-en" num="0068">In the following, with reference to <figref>FIGS. 8 to 11B</figref>, a description is given of the pinch operation on the first operation part <b>330</b> and the second operation part <b>340</b>, and the action of the gripper <b>320</b> corresponding to the operation. <figref>FIG. 11A</figref> is a schematic cross-sectional view conceptually illustrating the engaged state of the gripper <b>320</b> of the adapter body <b>300</b> of the embodiment. <figref>FIG. 11B</figref> is a schematic cross-sectional view conceptually illustrating the non-engaged state of the gripper <b>320</b> of the adapter body <b>300</b> of the embodiment. <figref>FIG. 11A</figref> illustrates a state of the operation part before receiving the pressing operation. <figref>FIG. 11B</figref> illustrates a state of the operation part being pressed.</p>
+      <p id="p-00069-en" num="0069">As illustrated in <figref>FIG. 9</figref>, before the first operation part <b>330</b> and the second operation part <b>340</b> receive the pinch operation by the operator, the first engaging part <b>322</b><i>a </i>and the second engaging part <b>322</b><i>b </i>are each engaged with one of the proximal end side engaging parts <b>140</b>.</p>
+      <p id="p-00070-en" num="0070">As indicated by directions P<b>1</b> and P<b>2</b> in <figref>FIG. 8</figref>, when the first operation part <b>330</b> and the second operation part <b>340</b> are pressed to approach each other by the operator, as illustrated in <figref>FIG. 11A</figref>, each operation part comes close to the ultrasound probe <b>100</b> (X direction). At this time, the fulcrums <b>331</b> and <b>341</b> are brought into contact with the outer peripheral surface of the ultrasound probe <b>100</b>. Thus, by using leverage where the first operation part <b>330</b> is the effort, the fulcrum <b>331</b> is the fulcrum, and the first engaging part <b>322</b><i>a </i>is the operating point, the first engaging parts <b>322</b><i>a </i>and <b>323</b><i>a </i>of the embodiment move in a direction (Y direction) away from the outer peripheral surface of the ultrasound probe <b>100</b>. Similarly, by using the second operation part <b>340</b> as the effort, the fulcrum <b>341</b> as the fulcrum, and the second engaging part <b>322</b><i>b </i>as the operating point, the second engaging parts <b>322</b><i>b </i>and <b>323</b><i>b </i>move in a direction (Y direction) away from the outer peripheral surface of the ultrasound probe <b>100</b>.</p>
+      <p id="p-00071-en" num="0071">Thereby, as illustrated in <figref>FIG. 11B</figref>, the engagement between the proximal end side engaging parts <b>140</b> and the first engaging part <b>322</b><i>a </i>and the second engaging part <b>322</b><i>b </i>is released. Thus, the puncture adapter <b>200</b> can be removed from the ultrasound probe <b>100</b>. Further, as illustrated in <figref>FIG. 11B</figref>, even in the released state, the fulcrums <b>331</b> and <b>341</b> are in contact with the outer peripheral surface of the ultrasound probe <b>100</b>. Since the ultrasound probe <b>100</b> has a curved outer peripheral surface, the fulcrums <b>331</b> and <b>341</b> slid along the outer peripheral surface of the ultrasound probe <b>100</b> (Z direction), and act to facilitate the removal of the puncture adapter <b>200</b>. In this regard, by forming each fulcrum into a curved surface corresponding to the outer peripheral surface of the ultrasound probe <b>100</b>, the fulcrum can be more easily slidable on the outer peripheral surface. Thus, it may be possible to facilitate the removal of the puncture adapter <b>200</b>.</p>
+      <p id="p-00072-en" num="0072">In general, the puncture adapter <b>200</b> is provided with a protruding pinch to reduce the force required for the pinch operation. However, in the intracavitary probe, if the pinch overly protrudes from the ultrasound probe <b>100</b>, the ultrasound probe <b>100</b> is not compatible with the size of the insertion path in a body cavity, which increases the burden on the subject. On the other hand, if the protruding length of the pinch is reduced, more force is required for the pinch operation. When the operation force required for the pinch operation increases, the removal of the puncture adapter <b>200</b> becomes difficult.</p>
+      <p id="p-00073-en" num="0073">In this regard, in the puncture adapter <b>200</b> of the embodiment, the first operation part <b>330</b> is adjacent to the first holding part <b>321</b><i>a </i>in the proximal end direction of the plate-like member <b>310</b> and is connected to the first holding part <b>321</b><i>a</i>. In the same manner, the second operation part <b>340</b> is adjacent to the second holding part <b>321</b><i>b </i>in the proximal end direction of the plate-like member <b>310</b> and is connected to the second holding part <b>321</b><i>b</i>. In other words, assuming the first holding part <b>321</b><i>a</i>, the second holding part <b>321</b><i>b</i>, and a plane passing through a plane on the proximal end side of their connector (<b>310</b>), the first operation part <b>330</b> is connected to the first holding part <b>321</b><i>a </i>as being adjacent thereto in a direction generally perpendicular to the assumed plane. The second operation part <b>340</b> is connected to the second holding part <b>321</b><i>b </i>as being adjacent thereto in a direction generally perpendicular to the assumed plane. Besides, if it is defined that a direction that connects the boundary between the first holding part <b>321</b><i>a </i>and the second holding part <b>321</b><i>b </i>to the outlet of the puncture needle on the distal end side of the puncture adapter <b>200</b> (the end in the insertion direction of the puncture needle) is the longitudinal direction of the puncture adapter <b>200</b>, the first operation part <b>330</b> is connected to the first holding part <b>321</b><i>a </i>as being adjacent thereto in the longitudinal direction. The second operation part <b>340</b> is connected to the second holding part <b>321</b><i>b </i>as being adjacent thereto in the longitudinal direction. Note that, in the embodiment, the boundary is an intermediate position of the connector between the first holding part <b>321</b><i>a </i>and the second holding part <b>321</b><i>b. </i></p>
+      <p id="p-00074-en" num="0074">With this configuration, the entire puncture adapter <b>200</b> can be downsized. Further, less force is required for the pinch operation to remove the puncture adapter <b>200</b> from the ultrasound probe <b>100</b>, which facilitates the removal of the puncture adapter <b>200</b>.</p>
+      <heading id="h-00017-en" level="2">[Modification]</heading>
+      <p id="p-00075-en" num="0075">In the first embodiment, the puncture adapter is described as being used in an intracavitary probe; however, the embodiment is not limited to this, and may be applicable to an ultrasound probe that is used outside the body cavity. In the case of the probe used outside the body cavity also, if the pinch overly protrudes from the ultrasound probe, this may interfere with the insertion of a puncture needle. Besides, if the pinch overly protrudes from the ultrasound probe, this may interfere with the operation of applying the ultrasound probe to the body surface. In this way, the protruding pinch of the puncture adapter may interfere with a puncture also in the ultrasound probe used outside the body cavity. On the other hand, if the protruding length of the pinch is reduced, more force is required for the pinch operation. As a result, the removal of the puncture adapter becomes difficult.</p>
+      <p id="p-00076-en" num="0076">In this regard, assuming the first holding part, the second holding part, and a plane passing through the connection part of them, also in this modification, one of the operation parts is connected to the first holding part as being adjacent thereto in a direction generally perpendicular to the assumed plane. In addition, the other operation part is connected to the second holding part as being adjacent thereto in a direction generally perpendicular to the assumed plane. In other words, each operation part is adjacent to a holding part (including an engaging part) corresponding thereto, and the direction in which the operation part is adjacent to the holding part is defined as a direction intersecting the gripping direction of the holding parts. Thus, the entire puncture adapter can be downsized. Further, less force is required for the pinch operation to remove the puncture adapter from the ultrasound probe, which facilitates the removal of the puncture adapter.</p>
+      <heading id="h-00018-en" level="1">Second Embodiment</heading>
+      <p id="p-00077-en" num="0077">Next, with reference to <figref>FIGS. 12 to 14C</figref>, a description is given of an ultrasound probe according to a second embodiment. <figref>FIG. 12</figref> is a schematic cross-sectional view of a probe cover of the ultrasound probe and engaging parts of the puncture adapter. <figref>FIG. 13A</figref> is a schematic perspective view of an example of the ultrasound probe <b>100</b> of the second embodiment. <figref>FIG. 13B</figref> is a schematic view of the proximal end side engaging part <b>140</b>, a sub engaging part <b>141</b>, and a slope <b>143</b> of the ultrasound probe <b>100</b> of the second embodiment. <figref>FIGS. 14A to 14C</figref> are schematic cross-sectional views illustrating the proximal end side engaging part <b>140</b> and the like in the ultrasound probe <b>100</b> of the second embodiment. <figref>FIG. 14A</figref> is a schematic cross-sectional view illustrating a state where the engaging part of the puncture adapter engages the sub engaging part <b>141</b>. <figref>FIG. 14B</figref> is a schematic cross-sectional view illustrating a state where the engaging part of the puncture adapter runs onto the slope <b>143</b>. <figref>FIG. 14C</figref> is a schematic cross-sectional view illustrating a state in which the engaging part of the puncture adapter engages the proximal end side engaging part <b>140</b>.</p>
+      <p id="p-00078-en" num="0078">In the description of the ultrasound probe <b>100</b> of the second embodiment, with respect to the line connecting to the proximal end side engaging parts <b>140</b>, the position on the side of the puncture adapter <b>200</b> to be attached is defined as “upper side” (see <figref>FIGS. 14A to 14C</figref>). In addition, a direction toward the proximal end side engaging part <b>140</b> viewed from the “upper side” is defined as “lower side”. In this assumption, the ultrasound probe <b>100</b> of the second embodiment is provided with the slope <b>143</b> adjacent to the upper side of the proximal end side engaging part <b>140</b>. The ultrasound probe <b>100</b> is further provided with the sub engaging part <b>141</b> adjacent to the upper side of the slope.</p>
+      <p id="p-00079-en" num="0079">As indicated by a broken line in <figref>FIG. 12</figref>, the ultrasound probe may be fitted with a probe cover. For the intracavitary probe, for example, the cover is made of latex, polyester, or the like. As described above, when the puncture adapter <b>200</b> is attached to the ultrasound probe <b>100</b>, the outer peripheral surface of the ultrasound probe <b>100</b> is sandwiched between the first engaging part <b>322</b><i>a </i>and the second engaging part <b>322</b><i>b</i>. When sandwiching the outer peripheral surface of the ultrasound probe <b>100</b>, the first engaging part <b>322</b><i>a </i>and the second engaging part <b>322</b><i>b </i>press the outer peripheral surface of the ultrasound probe <b>100</b> by the elastic force of the entire gripper <b>320</b> in a direction in which they face each other. Accordingly, the probe cover placed over the ultrasound probe <b>100</b> is also pressed against the outer peripheral surface of the ultrasound probe.</p>
+      <p id="p-00080-en" num="0080">When the operator attaches the puncture adapter <b>200</b> to the ultrasound probe <b>100</b>, each of the first engaging part <b>322</b><i>a </i>and the second engaging part <b>322</b><i>b </i>is slid to the proximal end side engaging parts <b>140</b> while pressing a probe cover PC against the outer peripheral surface of the ultrasound probe <b>100</b>.</p>
+      <p id="p-00081-en" num="0081">In this manner, when the probe cover PC is slid to the proximal end side engaging part <b>140</b> as being pressed against the outer peripheral surface of the ultrasound probe <b>100</b> by each engaging part, the probe cover PC may be caught in the engaging parts. If the probe cover PC is caught in the engaging part, this increases the resistance to the slide movement of each engaging part of the puncture adapter <b>200</b> on the outer peripheral surface of the ultrasound probe <b>100</b>. If the amount of the probe cover PC caught by the engaging parts increases, the engaging parts may be retained at positions before reaching the proximal end side engaging parts <b>140</b> on the outer peripheral surface of the ultrasound probe <b>100</b> due to the entrapped probe cover PC.</p>
+      <p id="p-00082-en" num="0082">If this occurs, the operator who is attaching the puncture adapter may mistakenly perceive that the attachment of the puncture adapter <b>200</b> to the ultrasound probe <b>100</b> is completed. Specifically, despite the fact that the engaging parts are only retained at positions before reaching the proximal end side engaging parts <b>140</b> on the outer peripheral surface of the ultrasound probe <b>100</b> due to the entrapped probe cover PC, the operator may have a misunderstanding that each engaging part has reached the proximal end side engaging part <b>140</b> and is fixed reliably.</p>
+      <p id="p-00083-en" num="0083">To avoid such a situation, as illustrated in <figref>FIGS. 13A and 13B</figref>, the ultrasound probe <b>100</b> of the second embodiment is provided with the sub engaging part <b>141</b> and the slope <b>143</b> adjacent to the upper side of the proximal end side engaging part <b>140</b>. Described below are the slope <b>143</b> and the sub engaging part <b>141</b>.</p>
+      <heading id="h-00019-en" level="2">[Sub Engaging Part]</heading>
+      <p id="p-00084-en" num="0084">As illustrated in <figref>FIG. 14A</figref>, the sub engaging part <b>141</b> is arranged adjacent to the upper side of the proximal end side engaging part <b>140</b> on the outer peripheral surface of the ultrasound probe <b>100</b>. The sub engaging part <b>141</b> is formed in a recess. In one example, the depth of the sub engaging part <b>141</b> is shallower than the depth of the proximal end side engaging part <b>140</b>.</p>
+      <p id="p-00085-en" num="0085">Incidentally, the proximal end side engaging part <b>140</b> corresponds to an example of “first engaged part”. The sub engaging part <b>141</b> corresponds to an example of “second engaged part”.</p>
+      <heading id="h-00020-en" level="2">[Slope]</heading>
+      <p id="p-00086-en" num="0086">As illustrated in <figref>FIGS. 13B and 14A</figref>, the slope <b>143</b> is adjacent to the upper side of the proximal end side engaging part <b>140</b> on the outer peripheral surface of the ultrasound probe <b>100</b>, and is adjacent to the lower side of the sub engaging part <b>141</b>. In other words, the slope <b>143</b> is arranged to be interposed between the proximal end side engaging part <b>140</b> and the sub engaging part <b>141</b>. The slope <b>143</b> is formed to protrude from the bottom surface of the proximal end side engaging part <b>140</b> and the sub engaging part <b>141</b> (a surface on the central axis side of the ultrasound probe <b>100</b>) toward the outside. In the example of <figref>FIG. 13B</figref>, the slope <b>143</b> is formed to have a gentle inclination on the sub engaging part <b>141</b> side. Also in this example, the slope <b>143</b> is formed to have a steep inclination on the proximal end side engaging part <b>140</b> side. The protruding height of the slope <b>143</b> coincides with the position of the other outer peripheral surface of the ultrasound probe <b>100</b>, for example. In other words, the slope <b>143</b> is comparable with the other outer peripheral surface of the ultrasound probe <b>100</b> in the distance from the central axis.</p>
+      <heading id="h-00021-en" level="2">[Operation of the Engaging Part of the Puncture Adapter in Attachment Work]</heading>
+      <p id="p-00087-en" num="0087">Next, with reference to <figref>FIGS. 14A to 14C</figref>, a description is given of the operation of the first engaging part <b>322</b><i>a </i>and the second engaging part <b>322</b><i>b </i>of the puncture adapter <b>200</b> with respect to the ultrasound probe <b>100</b> of the second embodiment.</p>
+      <heading id="h-00022-en" level="2">&lt;First Stage&gt;</heading>
+      <p id="p-00088-en" num="0088">When the operator presses the puncture adapter <b>200</b> against the ultrasound probe <b>100</b>, first, as illustrated in <figref>FIG. 14A</figref>, each of the first engaging part <b>322</b><i>a </i>and the second engaging part <b>322</b><i>b </i>reaches the sub engaging part <b>141</b> of the ultrasound probe <b>100</b>. In this position, the distance between the sub engaging parts <b>141</b> is shorter than the distance between the proximal end side engaging parts <b>140</b>. Therefore, the amount of the entrapped probe cover is small.</p>
+      <heading id="h-00023-en" level="2">&lt;Second Stage&gt;</heading>
+      <p id="p-00089-en" num="0089">When the operator further presses the puncture adapter <b>200</b> against the ultrasound probe <b>100</b> after the first stage, as illustrated in <figref>FIG. 14B</figref>, each of the first engaging part <b>322</b><i>a </i>and the second engaging part <b>322</b><i>b </i>reaches the slope <b>143</b>. At this time, the first engaging part <b>322</b><i>a </i>and the second engaging part <b>322</b><i>b </i>that remain in the sub engaging part <b>141</b> once run onto the slope <b>143</b>. Accordingly, the operator who is pressing the puncture adapter <b>200</b> feels a resistance.</p>
+      <p id="p-00090-en" num="0090">Besides, as illustrated in <figref>FIG. 13B</figref>, if the slope <b>143</b> is formed to have a gentle inclination on the sub engaging part <b>141</b> side, the engaging parts smoothly run onto the slope.</p>
+      <heading id="h-00024-en" level="2">&lt;Third Stage&gt;</heading>
+      <p id="p-00091-en" num="0091">When the operator further presses the puncture adapter <b>200</b> against the ultrasound probe <b>100</b> after the second stage, as illustrated in <figref>FIG. 14C</figref>, each of the first engaging part <b>322</b><i>a </i>and the second engaging part <b>322</b><i>b </i>climbs over the top of the slope <b>143</b>, and reaches the proximal end side engaging part <b>140</b>. When the first engaging part <b>322</b><i>a </i>and the second engaging part <b>322</b><i>b </i>reach the proximal end side engaging parts <b>140</b>, the engagement is secured. At this time, the first engaging part <b>322</b><i>a </i>and the second engaging part <b>322</b><i>b </i>that have once run onto the top of the slope <b>143</b> (see the part denoted by reference numeral <b>322</b><i>a</i>′ in <figref>FIG. 14C</figref>) slide the proximal end side engaging part <b>140</b> side of the slope <b>143</b>, and reach the proximal end side engaging part <b>140</b> (see the part denoted by reference numeral <b>322</b><i>a</i>″ in <figref>FIG. 14C</figref>). Therefore, after feeling a resistance to the pressing operation, the operator feels the engagement between the first engaging part <b>322</b><i>a </i>and the like and the proximal end side engaging part <b>140</b>.</p>
+      <p id="p-00092-en" num="0092">In addition, as illustrated in <figref>FIGS. 14A to 14C</figref> and the like, if the slope <b>143</b> is formed to have a steep inclination on the proximal end side engaging part <b>140</b> side, the engaging parts of the puncture adapter side immediately reach the proximal end side engaging part <b>140</b> after climbing over the top of the slope <b>143</b>. Thus, the operator can feel the engagement more certainly.</p>
+      <p id="p-00093-en" num="0093">The ultrasound probe <b>100</b> of the second embodiment is provided with the slope <b>143</b> adjacent to the upper side (the small diameter side of the outer peripheral surface) of the proximal end side engaging part <b>140</b>. The ultrasound probe <b>100</b> is further provided with the sub engaging part <b>141</b> adjacent to the upper side of the slope. Thus, the operator can recognize the feeling of the engagement more certainly. Further, it is possible to avoid a situation where, despite the fact that the engaging parts of the puncture adapter are only retained at positions before reaching the proximal end side engaging parts <b>140</b> on the outer peripheral surface of the ultrasound probe <b>100</b>, the operator mistakenly perceives that the attachment of the puncture adapter <b>200</b> is completed.</p>
+      <p id="p-00094-en" num="0094">With the puncture adapter and the ultrasound probe according to the first and the second embodiments described above, the puncture adapter can be easily attached/removed. As a result, the operator can smoothly perform a puncture, and thus it is possible to reduce the burden on the patient.</p>
+      <p id="p-00095-en" num="0095">While certain embodiments have been described, these embodiments have been presented by way of example only, and are not intended to limit the scope of the inventions. Indeed, the novel embodiments described herein may be embodied in a variety of other forms; furthermore, various omissions, substitutions and changes in the form of the embodiments described herein may be made without departing from the spirit of the inventions. The accompanying claims and their equivalents are intended to cover such forms or modifications as would fall within the scope and spirit of the inventions.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A puncture adapter comprising a guide of a puncture needle and a gripper configured to grip an ultrasound probe, the puncture adapter configured to be attached to the ultrasound probe by engagement therewith, the puncture adapter further comprising:
+<claim-text>a pinch located adjacent to the gripper in an intersecting direction that intersects a direction in which the gripper grips the ultrasound probe, the pinch configured to be used to release a grip of the gripper.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The puncture adapter of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the intersecting direction is a direction that connects the gripper and an end of the guide in an insertion direction in which the puncture needle is inserted.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The puncture adapter of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the pinch is located adjacent to the gripper on a side opposite to an insertion direction in which the puncture needle is inserted.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The puncture adapter of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein
+<claim-text>the gripper includes a pair of engaging parts configured to engage the ultrasound probe, and</claim-text><claim-text>the pinch is located adjacent to the gripper on a side in a direction from the end toward a position between the engaging parts.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The puncture adapter of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, further comprising a pair of protrusions protruding toward the ultrasound probe gripped, wherein the protrusions are located closer to the pinch than the engaging parts are.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The puncture adapter of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein
+<claim-text>the gripper includes a first gripper and a second gripper,</claim-text><claim-text>the pinch includes a first operation part and a second operation part,</claim-text><claim-text>the protrusions includes a first protrusion corresponding to the first operation part and a second protrusion corresponding to the second operation part,</claim-text><claim-text>the first protrusion is located in the first operation part or a boundary between the first operation part and the first gripper, and</claim-text><claim-text>the second protrusion is located in the second operation part or a boundary between the second operation part and the second gripper.</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The puncture adapter of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the first operation part and the second operation part are configured to make contact with the guide of the puncture needle when brought close to each other to limit movable range of each other.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en" independent="true">
+      <claim-text>
+        <b>8</b>. An ultrasound probe comprising:
+<claim-text>an ultrasound probe body configured to be inserted in a subject; and</claim-text><claim-text>a puncture adapter configured to be attached to the ultrasound probe body to guide a puncture needle, the puncture adapter including
+<claim-text>a gripper including a pair of holding parts and a connector configured to connect the holding parts, the gripper configured to hold the ultrasound probe body while gripping part of outer periphery of the ultrasound probe body by the holding parts,</claim-text><claim-text>a pair of engaging parts arranged in each of the holding parts, the engaging parts each configured to engage part of the ultrasound probe body, and</claim-text><claim-text>a pinch located adjacent to each of the holding parts in a direction that intersects a direction in which the gripper grips the ultrasound probe body, the pinch configured to be used to release a grip of the gripper.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en" independent="true">
+      <claim-text>
+        <b>9</b>. An ultrasound probe having a curved outer peripheral surface, comprising:
+<claim-text>a pair of first engaged parts arranged spaced apart by a first distance on the outer peripheral surface, the first engaged parts each configured to receive an engaging part of a puncture adapter;</claim-text><claim-text>a pair of second engaged parts arranged spaced apart by a second distance that is shorter than the first distance on the outer peripheral surface, the second engaged parts each configured to receive an engaging part of the puncture adapter;</claim-text><claim-text>a first slope formed between one of the first engaged parts and corresponding one of the second engaged parts; and</claim-text><claim-text>a second slope formed between another of the first engaged parts and corresponding one of the second engaged parts.</claim-text></claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The ultrasound probe of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the first slope and the second slope each have a gentle inclination on a side of the second engaged parts. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150250447A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150250447A1-20150910-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150250447A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250447A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150250447A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250447A1-20150910-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150250447A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250447A1-20150910-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150250447A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250447A1-20150910-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150250447A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250447A1-20150910-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150250447A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250447A1-20150910-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150250447A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250447A1-20150910-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150250447A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250447A1-20150910-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150250447A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250447A1-20150910-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150250447A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250447A1-20150910-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150250447A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250447A1-20150910-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150250447A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250447A1-20150910-D00012.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150250447A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250447A1-20150910-D00013.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150250447A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250447A1-20150910-D00014.TIF" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150250447A1_00016.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250447A1-20150910-D00015.TIF" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150250447A1_00017.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250447A1-20150910-D00016.TIF" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150250447A1_00018.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250447A1-20150910-D00017.TIF" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="US20150250447A1_00019.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250447A1-20150910-D00018.TIF" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="US20150250447A1_00020.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150250447A1-20150910-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150250447A1.PDF" type="pdf" size="923602" pages="28" />
+</lexisnexis-patent-document>

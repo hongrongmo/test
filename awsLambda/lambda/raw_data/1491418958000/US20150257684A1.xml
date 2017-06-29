@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257684A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030214" date-changed="20151201" time-changed="000147">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121315820">
+        <country>US</country>
+        <doc-number>20150257684</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14203884</doc-number>
+        <date>20140311</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151201">
+      <classification-ipcr sequence="1">
+        <text>A61B   5/12        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151201">
+      <classification-cpc sequence="1">
+        <text>A61B   5/126       20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>126</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61B2562/168       20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2562</main-group>
+        <subgroup>168</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">14</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">ELECTRIC PUMP AND DEVICE FOR SUCH PUMP</invention-title>
+    <references-cited date-changed="20151020">
+      <patent-citations name="patcit" date-changed="20151020" />
+      <citation>
+        <patcit num="1" dnum="US2007112279A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20070112279</doc-number>
+            <kind>A1</kind>
+            <name>ISEBERG STEVE [US], et al</name>
+            <date>20070517</date>
+          </document-id>
+          <application-date>
+            <date>20051116</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US6345595B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6345595</doc-number>
+            <kind>B2</kind>
+            <name>YAMADA YOSHIHIKO [JP]</name>
+            <date>20020212</date>
+          </document-id>
+          <application-date>
+            <date>20010117</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US4984579A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4984579</doc-number>
+            <kind>A</kind>
+            <name>BURGERT PAUL H [US], et al</name>
+            <date>19910115</date>
+          </document-id>
+          <application-date>
+            <date>19890721</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="US2008145249A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080145249</doc-number>
+            <kind>A1</kind>
+            <name>SMISSON HUGH F [US], et al</name>
+            <date>20080619</date>
+          </document-id>
+          <application-date>
+            <date>20070807</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="5" dnum="US5315219A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5315219</doc-number>
+            <kind>A</kind>
+            <name>KISHI JUN [JP]</name>
+            <date>19940524</date>
+          </document-id>
+          <application-date>
+            <date>19930226</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="6" dnum="US4841986A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4841986</doc-number>
+            <kind>A</kind>
+            <name>MARCHBANKS ROBERT J [GB]</name>
+            <date>19890627</date>
+          </document-id>
+          <application-date>
+            <date>19870917</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="7" dnum="US4002161A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4002161</doc-number>
+            <kind>A</kind>
+            <name>KLAR IRWIN, et al</name>
+            <date>19770111</date>
+          </document-id>
+          <application-date>
+            <date>19751202</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kandzia</last-name>
+            <first-name>Florian</first-name>
+            <address>
+              <city>Munchen</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>DE</country>
+          </residence>
+        </applicant>
+        <applicant sequence="2" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Lodwig</last-name>
+            <first-name>Andre</first-name>
+            <address>
+              <city>Worthsee</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>DE</country>
+          </residence>
+        </applicant>
+        <applicant sequence="3" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Oswald</last-name>
+            <first-name>Johann</first-name>
+            <address>
+              <city>Grafing</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>DE</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kandzia</last-name>
+            <first-name>Florian</first-name>
+            <address>
+              <city>Munchen</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Lodwig</last-name>
+            <first-name>Andre</first-name>
+            <address>
+              <city>Worthsee</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Oswald</last-name>
+            <first-name>Johann</first-name>
+            <address>
+              <city>Grafing</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173669430">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257684</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140311</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173669418">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257684</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140311</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A reversible electric motor driven pump mounted within a housing with one end in communication and seals with the ear canal when inserted therein has a drive shall employing pump controls operably associated with the electric motor to selectively control the start, stop, operating speed, position and direction of the drive shaft in either a clockwise or counterclockwise direction to drive a rotating gear with lever structure configured to reciprocate when driven by the drive shaft to selectively compress the bellows and piston forcing air through a port to create positive pressure is the ear canal in one mode, and expand the bellows and harmonic piston to withdraw air from the ear canal and create negative pressure therein in another mode.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20140312</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257684A1</docdb-publication-number>
+      <docdb-application-id>444511048</docdb-application-id>
+      <new-owner>PATH MEDICAL GMBH, GERMANY</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:KANDZIA, FLORIAN, DR;OSWALD, JOHANN, DR;LODWIG, ANDRE, DR;REEL/FRAME:032420/0523</free-text-description>
+      <effective-date>
+        <date>20140227</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00001-en" num="0001">1. Field</p>
+      <p id="p-00002-en" num="0002">This invention relates to hearing testing pumps. In particular, it pertains to a reversible electric motor driven pump with drive shaft employing pump controls operably associated with the electric motor to selectively control the start, stop, operating speed and rotation of the drive shaft in either a clockwise or counterclockwise direction to drive a rotating gear with lever structure configured to reciprocate when driven by the drive, shaft to selectively compress bellows and/or a piston forcing air through a tubing structure to create positive pressure entering art ear canal in one mode, and expand the bellows and/or a piston to withdraw air from the ear canal and create negative pressure therein in another mode.</p>
+      <p id="p-00003-en" num="0003">2. State of the Art</p>
+      <p id="p-00004-en" num="0004">Special hearing tests, namely Tympanometry, employ air pumps to change the pressure in the ear canal during hearing testing. These instruments vary the pressure in the ear canal with a pump, generate a pure tone, and then measure the eardrum responses to the sound tone at different pressures. This produces a series of data measuring how admittance of the reflected sound varies with pressure and is plotted as a tympanogram. Normally, the air pressure in the middle ear canal is the same as ambient pressure, and under normal conditions the air pressure in the middle ear is approximately the same as the ambient pressure since the Eustachian tube opens periodically to ventilate the middle ear to equalize pressure. The tympanograms of a normal person show normal mobility of the eardrum and the conduction hones forming a symmetrical bell shaped curve tympanogram. A skewed tympanogram curve may reveal fluid in the middle ear, perforation of the tympanic membrane, scarring of the tympanic membrane, lack of contact between the condition bones of the middle ear, or a tumor in the middle ear; see http://en.wikipedia.org/wiki/Tympanometry.</p>
+      <p id="p-00005-en" num="0005">One of the key parts of these pressure changing hearing equipment systems is the pump. It should be small, low power, low noise, safe, and inexpensive.</p>
+      <p id="p-00006-en" num="0006">Current tympanometers use linear piston or harmonic/bellow-style pumps. Both concepts typically use a step motor or DC motor driving a threaded bar and a nut to convert the rotational motion into a linear shift. The nut is usually mechanically coupled to a piston or bellows. When activated by the motor, this linear drive alternatively compresses the bellows or piston compressing air or stretches the bellows and retracts the piston to expand from the ear canal as shown in <figref>FIGS. 1 and 2</figref>. These constructions typically use one or more switches to detect at least one special displacement position, which is needed to calibrate the position of the pump during power-up.</p>
+      <p id="p-00007-en" num="0007">Other pumps use different linear movers, such as belts, tooth belts or levers. These pumps also need a means to detect at least one special displacement position of the mover, typically achieved by one or more switches.</p>
+      <p id="p-00008-en" num="0008">Another pump routinely used for hearing tests is the peristaltic pump, see http://en.wikipedia.org/wiki/Peristaltic pump shown in <figref>FIG. 3</figref> and Kusch et al., US 2012/0156074 published Jun. 21, 2012. The peristaltic pump has a flexible tube with an intake fitted inside a circular pump casing. A rotor supporting a number of rollers, shoes, wipers or lobes selectively contacts the tube in a manner to compress the tube as the rotor turns to alternatively compress air, or expand air when operated reversed as the tube opens to its natural state after the passage of the rollers, etc. This pump does not need any position encoding, since it runs continuously.</p>
+      <p id="p-00009-en" num="0009">Consequently, for tympanometer type testing, bellows, pistons, or tube pumps are used. These pumps should have low noise, be bi-directional, lightweight, small low power, safe, provide up to ±600 daPa of pressure. They also should preferably be low cost and easy to service.</p>
+      <p id="p-00010-en" num="0010">Existing pumps have the following drawbacks:</p>
+      <p id="p-00011-en" num="0011">a. Tube pumps age quickly, consume much power, are big and relatively expensive.</p>
+      <p id="p-00012-en" num="0012">b. Bellows and harmonica piston pumps use linear drives, based on threaded control rods or similar constructions. These drives are relatively complex and cannot easily be constructed from off-the-shelf components. The linear drives tend to be bulky and need additional means to calibrate their position.</p>
+      <p id="p-00013-en" num="0013">c. Stepper motors effectively have multiple “toothed” electromagnets arranged around a central gear-shaped piece of iron. The electromagnets are energized by an external control circuit. To make the motor shaft turn, first, one electromagnet is given power, which magnetically attracts the gear's teeth. When the gear's teeth are aligned to the first electromagnet, they are slightly offset from the next electromagnet. So when the next electromagnet is turned on and the first is turned off the gear rotates slightly to align with the next one, and from there the process is repeated. Each of those rotations is called a “step”, with an integer number of steps making a full rotation. In that way, the motor can be turned by a precise angle. The disadvantage of stepper motors is that initial position calibration is needed for step-motor based constructions that use end-switches. Their stepped movement causes these motors tend to generate significant unwanted noise. Moreover, stepper motors need a hold current even when not stepping, thus consuming idle power.</p>
+      <p id="p-00014-en" num="0014">There thus remains a need for an inexpensive, compact, low power, long living pump for tympanometry. The device described below provides such an invention.</p>
+      <heading id="h-00002-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00015-en" num="0015">A hearing pump comprising: a reversible electric motor with a shaft, pump controls operably associated with the motor to selectively control the operating speed and directional drive of the motor shaft in cither a clockwise or counterclockwise rotation. A rotating gear is associated with the shaft with lever structure adapted to reciprocate a bellows or harmonic pump back and forth to alternatively compress or expand air to provide positive or negative pressure in the connected ear canal.</p>
+      <p id="p-00016-en" num="0016">A potentiometer senses the position of the harmonic pump piston or bellows displacement. The controlling circuit uses this signal to initialize the pomp at startup and to know when the maximum displacement is reached.</p>
+      <p id="p-00017-en" num="0017">The potentiometer-based position control allows more sophisticated pump control by the electric motor, and makes the initial position calibration of step-motor based constructions that use end-switches obsolete. The first derivation of the position dpos/dt can also be used as a measure of rotating speed.</p>
+      <p id="p-00018-en" num="0018">The pump can be operated in a wide range of speeds, especially if equipped with a tachometer generator or tachometer-less speed controlling circuit. This allows the pump to reset very quickly.</p>
+      <p id="p-00019-en" num="0019">The pump cannot operate continuously. However, with added valves, it can return to a middle position and continue pumping with relatively short interruption. Typical time constants for off-the-shelf components are 0.5 seconds for such a cycle. It can therefore generate quasi-constant pressure by closing the output terminal with an additional valve, rewind the pump, and then continue pumping. Existing constructions are relatively slow in rewinding, while this new servo-based construction can resume pumping in less than a second.</p>
+      <p id="p-00020-en" num="0020">The invention thus provides a rotationally driven harmonica or piston style pump controlled by an electric motor with a potentiometer sensing the displacement of a gear driven connecting rod or lateral extension lever activating a bellows or piston, which alters the pressure within the ear canal during testing to provide different pressure levels of up to ±600 daPa of pressure within the ear canal.</p>
+      <p id="p-00021-en" num="0021">The linkage from the motor to a bellows may be configured as a rocker arm to provide non-linear compression and expansion of the bellows.</p>
+      <p id="p-00022-en" num="0022">The hearing test pump preferably uses an off-the-shelf (RC-model) servo as driving the gearing and electric motor. For the bellows, a disposable harmonica-style pipette may be used as a replaceable pump element in a configuration allowing a user to periodically replace the same. A potentiometer is used as the position encoder. Such a potentiometer is already Included in commercially available servos used in RC-models. To improve motor startup torque and speed control a tachometer may be employed. Also a negative-impedance-circuit may be included to improve DC-motor startup torque and speed control without the need of a tachometer. Such a negative impedance circuit can compensate the DC resistance of the motor coils and therefore provide a significantly improved speed control.</p>
+      <p id="p-00023-en" num="0023">The complete pump unit thus uses user exchangeable components, and is itself a user-exchangeable module.</p>
+      <p id="p-00024-en" num="0024">The pump preferably is equipped with a vent that allows it to open to the ambiance. This allows the pump to initialize to a defined start position without any pressure being built up.</p>
+      <p id="p-00025-en" num="0025">In one configuration, an additional second valve may be included to allow quasi-constant pressure by adding a quick “rebreathing-cycle” via the bellows or piston. During such a “rebreathing cycle”, the second valve would close the air duct to the ear. A first valve then opens the pump to the ambience. The pump drive returns back to a middle position, then the first valve closes and the second valve opens again, thus resuming operation.</p>
+      <p id="p-00026-en" num="0026">In one embodiment, the pump is structured as a one-piece housing with a sealing ear tip similar to that shown in Heller et al., U.S. Pat. No. 4,688,582 <figref>FIG. 1</figref> to <figref>FIG. 3</figref>. It is held within the ear canal to send and receive signals as the device is held next to the ear. In another embodiment, the pump is structured as a desktop unit placed on a support surface with an ear probe similar to that shown in <figref>FIG. 1</figref> in Kiar et al., U.S. Pat. No. 4,002,161 (showing an optional head mount). The pump is connected via an electrical wire and flexible tube associated with the ear probe so that the tube connects to the pump port at one end and the other end of the probe is adapted to fit within and seal the ear canal as signals are sent and received by the desktop housing. In still other variations, the desk top unit with a probe and probe connection is employed. It is structured with the option of connecting to an extender that contains the pump unit, which in turn connects to the ear probe that is designed to fit within and seal the ear canal as signals are sent mid received by the main device and the added pumping unit.</p>
+      <p id="p-00027-en" num="0027">The invention thus provides an inexpensive, compact, low power, long living pump for tympanometry.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00003-en" level="1">DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 1</figref> illustrates a conventional tympanometer pump using a threaded rod, driven by a stepper or DC-motor, and a piston pump.</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 2</figref> shows a conventional tympanometer pump, using a threaded rod, driven by a stepper or DC-motor, and a bellows pump.</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 3</figref> illustrates a peristaltic pump.</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 4</figref> is an embodiment of a bellows pump, operated by a gear motor, rudder arm lever and driving rod connected to the bellows.</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 5</figref> shows the embodiment of <figref>FIG. 4</figref> with the rudder arm lever directly connected to the bellows.</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 6</figref> illustrates a general tympanometer setup using the invention as its pump.</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIG. 7</figref> illustrates an example of a tachometer-less motor driver circuit with negative output impedance.</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIG. 8</figref> illustrates the general typanometer setup of <figref>FIG. 6</figref> with an additional valve providing a breathing cycle.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DESCRIPTION OF THE ILLUSTRATED EMBODIMENTS</heading>
+      <p id="p-00036-en" num="0036">
+        <figref>FIG. 1</figref> illustrates a conventional tympanometer pump (A) using a threaded rod <b>5</b>, driven by a stepper or DC-motor <b>1</b>, and a piston pump (A). A Step- or DC motor <b>1</b> turns a threaded rod <b>5</b> that moves a slider <b>3</b> back and forth depending upon the rotation of the rod <b>5</b>. The slider <b>3</b> reciprocates the piston rod <b>9</b> and piston <b>7</b> within a cylinder <b>7</b><i>a </i>to provide a compression and decompression cycle forcing air into and oat of a port <b>6</b> in communication with the ear canal. End switches <b>2</b> and <b>4</b> are contacted by the slider <b>3</b> to signal the motor <b>1</b> to reverse the direction of the threaded rod <b>5</b>, and are used to calibrate the initial position.</p>
+      <p id="p-00037-en" num="0037">
+        <figref>FIG. 2</figref> shows the conventional tympanometer pump (B), using a threaded rod <b>5</b>, driven by a stepper or DC-motor <b>1</b>, and a bellows pump (B). A Step- or DC motor <b>1</b> turns a threaded rod <b>5</b> that moves a slider <b>3</b>. The slider <b>3</b> alternatively compresses and expands the bellows <b>8</b> as it reverses position to force air into and out of a port <b>6</b> in communication with the ear canal. Again, end switches <b>2</b> and <b>4</b> are contacted by the slider <b>3</b> to signal the motor <b>1</b> to reverse the direction of the threaded rod <b>5</b>, and are used to calibrate the initial position.</p>
+      <p id="p-00038-en" num="0038">
+        <figref>FIG. 3</figref> illustrates a typical peristaltic pump (C) used with current typanometers. It has a flexible tube <b>12</b> with an intake <b>13</b> fitted inside a circular pump casing <b>14</b>. A rotor <b>16</b> supporting a number of rollers, shoes, wipers, or lobes <b>18</b>, all referred to hereafter as “rollers”, which selectively contact the tube <b>12</b> in a manner to compress the tube <b>12</b> as the rotor <b>16</b> turns to alternatively force fluids through a nozzle (not shown) by compression, and then draw in fluids as the tube opens to its natural state after the passage of the rollers <b>18</b>.</p>
+      <p id="p-00039-en" num="0039">An example of the present invention is shown in <figref>FIGS. 4 and 5</figref>. The rotationally driven hearing pump <b>20</b> comprises a reversible electric gear motor <b>22</b> mounted within a housing <b>24</b>. The gear motor <b>22</b> drives a rocker rudder arm <b>26</b> with a driving rod <b>28</b> operably associated with bellows <b>30</b>. Compressing the bellows <b>30</b> generates positive pressure at its air inlet/outlet <b>32</b>. Retracting the bellows <b>30</b> generates negative pressure at the air inlet/outlet <b>32</b>. <figref>FIG. 5</figref> illustrates an embodiment that does not need a driving rod <b>28</b> and makes use of the fact that a bellows <b>30</b> does not need to be operated strictly linear.</p>
+      <p id="p-00040-en" num="0040">
+        <figref>FIG. 6</figref> illustrates a tympanometry setup using the invention. The rotationally driven hearing pump <b>20</b> is driven by a controller unit <b>34</b> controlling a pump drive consisting of a gear motor <b>22</b> driving a rocker rudder arm <b>26</b> with a driving rod <b>28</b> operably associated with bellows <b>30</b> of <figref>FIG. 4</figref>. The controller unit <b>34</b> is connected via connections <b>36</b> to the gear motor <b>22</b> and potentiometer (not shown) of the gear motor assembly. The pump outlet <b>32</b> is connected via a tube <b>38</b> to an ear probe <b>40</b>, which also is associated with a microphone <b>42</b> and a loudspeaker <b>44</b>. A release valve <b>46</b> opens the air ducts to the ambience during initialization. An optional valve <b>48</b> shown in <figref>FIG. 8</figref> would close the tube connection to the ear probe during re-initialization to allow quasi-continuous pumping.</p>
+      <p id="p-00041-en" num="0041">During tympanometry, the loudspeaker <b>44</b> would be driven with a tone of typically 226 Hz, and the microphone <b>42</b> records the sound pressure of this tone in the ear canal. During the recording, the pump <b>20</b> would generate a varying pressure from typically −400 dPa to 400 dPa. The recorded sound pressure as a function of pump-generated air pressure would then be processed and plotted as the typanogram.</p>
+      <p id="p-00042-en" num="0042">Typically, the controller unit <b>34</b> would consist of a digital, controller with AD and DA converters, amplifiers, motor drivers, interfaces and display (all not shown).</p>
+      <p id="p-00043-en" num="0043">
+        <figref>FIG. 7</figref> shows an example circuit <b>44</b> to provide the negative impedance driver to the DC motor <b>22</b>. Alternatively, a tachometer generator (not shown) can be used as feedback providing the motor speed to the driver and/or controller <b>34</b>. The feedback signal from current sensing resistor R<b>1</b> is used to compensate the motor's coil resistance this allowing a much more precise response to the input signal of the driver.</p>
+      <p id="p-00044-en" num="0044">
+        <figref>FIG. 8</figref> illustrates the general typanometer setup of <figref>FIG. 6</figref> with an additional second valve <b>48</b> providing a breathing cycle. The second valve <b>48</b> is Inserted into the tubing <b>38</b> leading to the ear. During the “rebreathing cycle”, the second valve <b>48</b> closes the tubing <b>38</b> air duct to the ear. The release valve <b>46</b> then opens the pump to the ambience to allow quasi-constant pressure by adding a quick “rebreathing-cycle” for the bellows <b>8</b> or piston <b>7</b>. The pump drive returns back to a middle position, then the release valve <b>46</b> closes and the second valve <b>48</b> opens again, thus resuming operation.</p>
+      <p id="p-00045-en" num="0045">The present invention may be embodied in other specific forms without departing from its structures, methods, or other essential characteristics as broadly described herein and claimed hereinafter. The described embodiments are to be considered in all respects only as illustrative, and not restrictive. The scope of the invention is, therefore, indicated by the appended claims, rather than by the foregoing description. All changes that come within the meaning and range of equivalency of the claims are to be embraced within their scope.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A rotationally driven hearing testing pump comprising:
+<claim-text>a) a reversible electric motor with a gear mechanism, providing an output shaft with a lever,</claim-text><claim-text>b) a potentiometer operably associated to the gear mechanism, adapted to read the position of the output shaft,</claim-text><claim-text>c) a bellows or harmonic piston operably associated with the lever to alternatively vary output by compressing the bellows or harmonic piston to displace air out a port in one mode and expand the bellows or harmonic piston to draw in air through the port in another mode,</claim-text><claim-text>d) pump controls operably associated with the reversible electric motor and the potentiometer to selectively control the start, stop, operating speed, position and direction of the shaft rotation in either a clockwise or counterclockwise direction, and</claim-text><claim-text>e) output structure associated with the bellows or harmonic piston output in communication with the ear canal to alter the pressure therein in response to the action of the bellows or harmonic piston.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. A rotationally driven hearing testing pump according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the bellows or harmonic piston displacement generates up to +600 daPa of pressure in a compression mode, and up to −600 daPa of pressure in a de-compression mode.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. A rotationally driven hearing testing pump according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, including a tympanometer type device structured to seal within the ear canal with
+<claim-text>i. a tone generator and at least one loudspeaker to transmit tones into the ear canal, and</claim-text><claim-text>ii. at least one microphone to record sound pressure at different pump pressures to produce tympanograms.</claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. A rotationally driven hearing testing pump according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the reversible electric motor is a servo assembly as used in radio-controlled (RC) models.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. A rotationally driven hearing testing pump according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the bellows comprises a disposable harmonica-style pipette.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. A rotationally driven hearing testing pump according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the harmonic piston has a joint-less connecting rod.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. A rotationally driven bearing testing pump according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the potentiometer is used as a position encoder.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. A rotationally driven hearing testing pump according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the electric motor includes a tachometer for motor startup and speed control.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. A rotationally driven hearing testing pump according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, including a negative-impedance-circuit associated with the electric motor for DC-motor startup torque and speed control.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. A rotationally driven hearing testing pump according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, including a first valve associated with the bellows or harmonic piston output to open the pump to ambient air, and a second valve that closes the structure in communication with the ear canal, to interrupt pumping by consecutively closing the second valve, opening the first valve, repositioning the lever, closing the first valve and opening the second valve.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. A rotationally driven hearing testing pump according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, including a housing encasing the pump motor, potentiometer, bellows or harmonic piston, and pump control components structured to allow access to those pump components constructed of user-exchangeable modules.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. A rotationally driven hearing testing pump according to <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the housing is structured to be directly held to the ear under test.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. A rotationally driven bearing testing pump according to <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein the output structure comprises an ear probe connected via electric wires and at least one flexible tube structured to seal into the ear canal under test.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. A rotationally driven hearing testing pump according to <claim-ref idref="clm-00013-en">claim 13</claim-ref>, including an extension unit connecting the ear probe to a main unit housing the pump motor, potentiometer, bellows or harmonic piston, and pump control components for the main unit to do tympanometric tests.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257684A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257684A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257684A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257684A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257684A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257684A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257684A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257684A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257684A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257684A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257684A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257684A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257684A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257684A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150257684A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257684A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150257684A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257684A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150257684A1_00010.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257684A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257684A1.PDF" type="pdf" size="481270" pages="13" />
+</lexisnexis-patent-document>

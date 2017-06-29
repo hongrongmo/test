@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150259823A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030058" date-changed="20151202" time-changed="015219">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121313949">
+        <country>US</country>
+        <doc-number>20150259823</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14257202</doc-number>
+        <date>20140421</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>KR</country>
+        <doc-number>1020140030657</doc-number>
+        <date>20140314</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151103">
+      <classification-ipcr sequence="1">
+        <text>C30B  15/00        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>30</class>
+        <subclass>B</subclass>
+        <main-group>15</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C30B  15/10        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>30</class>
+        <subclass>B</subclass>
+        <main-group>15</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C30B  15/12        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>30</class>
+        <subclass>B</subclass>
+        <main-group>15</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C30B  15/14        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>30</class>
+        <subclass>B</subclass>
+        <main-group>15</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151103">
+      <classification-cpc sequence="1">
+        <text>C30B  15/002       20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>30</class>
+        <subclass>B</subclass>
+        <main-group>15</main-group>
+        <subgroup>002</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C30B  15/12        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>30</class>
+        <subclass>B</subclass>
+        <main-group>15</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C30B  15/14        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>30</class>
+        <subclass>B</subclass>
+        <main-group>15</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C30B  29/06        20130101 LI20151026BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>30</class>
+        <subclass>B</subclass>
+        <main-group>29</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151026</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>Y10T 117/1052      20130101 LA20151001BCEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>117</main-group>
+        <subgroup>1052</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151001</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">16</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">Apparatus for manufacturing ingot</invention-title>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>TECHNOVALUE CO., LTD.</orgname>
+            <role>03</role>
+            <address>
+              <city>Seoul</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kwon</last-name>
+            <first-name>Hyun Goo</first-name>
+            <address>
+              <city>Uiwang</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Yoon</last-name>
+            <first-name>Yeo Kyun</first-name>
+            <address>
+              <city>Hwaseong</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Son</last-name>
+            <first-name>Min Soo</first-name>
+            <address>
+              <city>Seoul</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20151009">
+      <main-family family-id="173666578">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259823</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140421</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150107540</doc-number>
+            <kind>A</kind>
+            <date>20150923</date>
+          </document-id>
+          <application-date>
+            <date>20140314</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173666577">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259823</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140421</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150107540</doc-number>
+            <kind>A</kind>
+            <date>20150923</date>
+          </document-id>
+          <application-date>
+            <date>20140314</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Disclosed is an ingot manufacturing apparatus that includes: an inner wall which has a growth zone where an ingot IG grows from molten silicon; a crucible which surrounds the inner wall; and a heat reflector which is formed convexly toward an interface between a surface of the molten silicon of the growth zone and the inner wall.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20140422</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015259823A1</docdb-publication-number>
+      <docdb-application-id>444515231</docdb-application-id>
+      <new-owner>TECHNOVALUE CO., LTD., KOREA, REPUBLIC OF</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:KWON, HYUN GOO;YOON, YEO KYUN;SON, MIN SOO;REEL/FRAME:032725/0115</free-text-description>
+      <effective-date>
+        <date>20140415</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">BACKGROUND OF THE DISCLOSURE</heading>
+      <p id="p-00001-en" num="0001">1. Field of the Disclosure</p>
+      <p id="p-00002-en" num="0002">The present invention relates to an ingot manufacturing apparatus.</p>
+      <p id="p-00003-en" num="0003">2. Description of the Related Art</p>
+      <p id="p-00004-en" num="0004">An ingot is important in the manufacture of a semiconductor chip or a solar cell. The ingot is manufactured during a process of melting and solidifying silicon in a crucible.</p>
+      <p id="p-00005-en" num="0005">The ingot is manufactured by Czochralski method in which, while a rod or a seed crystal which has penetrated molten silicon is slowly lifted, the silicon attached in the vicinity of the rod or the seed crystal is solidified.</p>
+      <p id="p-00006-en" num="0006">Recently, research is being devoted to an ingot manufacturing apparatus using a continuous Czochralski method capable of a plurality of ingots by continuously supplying the silicon.</p>
+      <heading id="h-00002-en" level="1">SUMMARY</heading>
+      <p id="p-00007-en" num="0007">One embodiment is an ingot manufacturing apparatus that includes: an inner wall which has a growth zone where an ingot IG grows from molten silicon; a crucible which surrounds the inner wall; and a heat reflector which is formed convexly toward an interface between a surface of the molten silicon of the growth zone and the inner wall.</p>
+      <p id="p-00008-en" num="0008">The ingot manufacturing apparatus may further include a heat shield which is disposed over the crucible, and a cone which is continuously formed with the heat shield and is disposed between the ingot and the inner wall. The heat reflector may be disposed on the cone.</p>
+      <p id="p-00009-en" num="0009">An imaginary line formed by connecting a center of a radius of curvature of the heat reflector to the interface may pass through the heat reflector.</p>
+      <p id="p-00010-en" num="0010">The radius of curvature may be smaller than a distance between the interface and the center.</p>
+      <p id="p-00011-en" num="0011">The heat reflector may have a first end and a second end closer to the inner wall than the first end. When the imaginary line connects the center with the interface between the inner wall and the surface of the molten silicon having an initial height, an angle formed between the imaginary line and the surface of the molten silicon may be the same as or greater than an angle formed between a first imaginary auxiliary line which passes through the center and is parallel with the molten silicon and a second imaginary auxiliary line which passes through the center and the second end, and the angle formed between the imaginary line and the surface of the molten silicon may be less than an angle formed between the first imaginary auxiliary line and a third imaginary auxiliary line which passes through the center and the first end.</p>
+      <p id="p-00012-en" num="0012">The surface of the heat reflector may be made of one of SiC, SiN, SiCN, SiBN, SicBN, ZrC, ZrN, ZrCN, ZrBN, ZrcBN, TiC, TiN, TiCN, TiBN, TicBN, tungsten carbide, molybdenum, tungsten, tantalum, or chrome.</p>
+      <p id="p-00013-en" num="0013">Another embodiment is an ingot manufacturing apparatus that includes: an inner wall which has a growth zone where an ingot IG grows from molten silicon; a crucible which surrounds the inner wall; a heat shield which is disposed over the inner wall; and a heat reflector which is disposed beneath a bottom surface of the heat shield parallel with a surface of the molten silicon.</p>
+      <p id="p-00014-en" num="0014">The ingot manufacturing apparatus may further include a cone which is continuously formed with the heat shield and has an end located between the ingot and the inner wall.</p>
+      <p id="p-00015-en" num="0015">The thickness of the heat reflector may be increased or decreased toward the ingot.</p>
+      <p id="p-00016-en" num="0016">The surface of the heat reflector may be made of one of SiC, SiN, SiCN, SiBN, SicBN, ZrC, ZrN, ZrCN, ZrBN, ZrcBN, TiC, TiN, TiCN, TiBN, TicBN, tungsten carbide, molybdenum, tungsten, tantalum, or chrome.</p>
+      <p id="p-00017-en" num="0017">A reflective surface of the heat reflector may be flat.</p>
+      <p id="p-00018-en" num="0018">Further another embodiment is an ingot manufacturing apparatus that includes: an inner wall which has a growth zone where an ingot IG grows from molten silicon; a crucible which surrounds the inner wall; a heat reflector which reflects heat of the molten silicon toward an interface between a surface of the molten silicon of the growth zone and the inner wall; and a gas nozzle which sprays sweeping gas toward a surface of the heat reflector.</p>
+      <p id="p-00019-en" num="0019">The ingot manufacturing apparatus may further include a heat shield which is disposed over the inner wall, and a cone which is continuously formed with the heat shield and is disposed between the ingot and the inner wall. The heat reflector may be formed convexly toward the interface between the surface of the molten silicon of the growth zone and the inner wall. The gas nozzle may spray the sweeping gas moving through a flow path formed within the cone.</p>
+      <p id="p-00020-en" num="0020">The flow path may be divided into a plurality of sub flow paths by partitions. The plurality of the sub flow paths may have substantially the same area as each other.</p>
+      <p id="p-00021-en" num="0021">The ingot manufacturing apparatus may further include a heat shield which is disposed over the inner wall, and a cone which is continuously formed with the heat shield and is disposed between the ingot and the inner wall. The heat reflector may be disposed beneath a bottom surface of the heat shield parallel with the surface of the molten silicon. The gas nozzle may spray the sweeping gas moving through a flow path formed within the heat shield.</p>
+      <p id="p-00022-en" num="0022">The flow path may be divided into a plurality of sub flow paths by partitions. The plurality of the sub flow paths may have substantially the same area as each other.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00003-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 1</figref> shows an ingot manufacturing apparatus according to a first embodiment of the present invention;</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIGS. 2 and 3</figref> show surface temperature distributions of a growth zone by simulation;</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 4</figref> shows a heat reflector of the ingot manufacturing apparatus according to the first embodiment of the present invention and a comparison example;</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 5</figref> shows a design condition of the heat reflector of the ingot manufacturing apparatus according to the first embodiment of the present invention;</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 6</figref> shows an ingot manufacturing apparatus according to a second embodiment of the present invention;</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIGS. 7 and 8</figref> show a modified example of the ingot manufacturing apparatus according to the second embodiment of the present invention;</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIGS. 9 and 11</figref> show an ingot manufacturing apparatus according to a third embodiment of the present invention;</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 10</figref> shows a flow path of the ingot manufacturing apparatus of <figref>FIG. 9</figref>; and</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 12</figref> shows a flow path of the ingot manufacturing apparatus of <figref>FIG. 10</figref>.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION OF EXEMPLARY EMBODIMENTS</heading>
+      <p id="p-00032-en" num="0032">Hereafter, an embodiment of the present invention will be described in detail with reference to accompanying drawings. However, the accompanied drawings are provided only for more easily describing the present invention. It is easily understood by those skilled in the art that the spirit and scope of the present invention is not limited to the scope of the accompanied drawings.</p>
+      <p id="p-00033-en" num="0033">Terms used in the present specification are provided for description of only specific embodiments of the present invention, and not intended to be limiting. An expression of a singular form includes the expression of plural form thereof unless otherwise explicitly mentioned in the context.</p>
+      <p id="p-00034-en" num="0034">In the present specification, it should be understood that the term “include” or “comprise” and the like is intended to specify characteristics, numbers, steps, operations, components, parts or any combination thereof which are mentioned in the specification, and intended not to previously exclude the possibility of existence or addition of at least one another characteristics, numbers, steps, operations, components, parts or any combination thereof.</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIG. 1</figref> shows an ingot manufacturing apparatus according to a first embodiment of the present invention. As shown in <figref>FIG. 1</figref>, the ingot manufacturing apparatus according to the first embodiment of the present invention includes an inner wall <b>110</b>, a crucible <b>120</b>, and a heat reflector <b>130</b>. The ingot manufacturing apparatus according to the first embodiment of the present invention may use Continuous Czochralski method (hereafter, referred to as CCz method) capable of intermittently or continuously supplying silicon during the growth of an ingot IG.</p>
+      <p id="p-00036-en" num="0036">The inner wall <b>110</b> has a growth zone (GZ) where the ingot IG grows from molten silicon (MS).</p>
+      <p id="p-00037-en" num="0037">The crucible <b>120</b> surrounds the inner wall <b>110</b>. The crucible <b>120</b> includes a melting zone (MZ) where the molten silicon (MS) is formed by the melting of the silicon. Here, the melting zone (MZ) may be a zone between the crucible <b>120</b> and the inner wall <b>110</b>.</p>
+      <p id="p-00038-en" num="0038">The molten silicon (MS) formed in the melting zone (MZ) may be introduced into the growth zone (GZ). An inlet hole H may be formed in the inner wall <b>110</b>. The molten silicon (MS) may be introduced from the melting zone (MZ) to the growth zone (GZ) through the inlet hole H.</p>
+      <p id="p-00039-en" num="0039">The heat reflector <b>130</b> is formed convexly toward an interface between the surface of the molten silicon (MS) of the growth zone (GZ) and the inner wall <b>110</b>.</p>
+      <p id="p-00040-en" num="0040">Next, an icing phenomenon which may occur during the growth of the ingot IG will be described with reference to <figref>FIGS. 2 and 3</figref>.</p>
+      <p id="p-00041-en" num="0041">
+        <figref>FIGS. 2 and 3</figref> show surface temperature distributions of the growth zone (GZ) by simulation.</p>
+      <p id="p-00042-en" num="0042">The graph of <figref>FIG. 2</figref> shows the temperature distribution when the growth rate of the ingot IG varies under the same conditions (e.g., the height L of the molten silicon (MS), the length of the ingot IG, the supply rate of the silicon, etc.).</p>
+      <p id="p-00043-en" num="0043">The temperature falls in the inner wall <b>110</b> because heat comes out from the inner wall <b>110</b>. Here, with the increase of the growth rate of the ingot IG, the productivity of the ingot IG is increased, however, the temperature of the inner wall <b>110</b> falls, thereby increasing the possibility of occurrence of the icing phenomenon in which the molten silicon (MS) in contact with the inside of the inner wall <b>110</b> is solidified. As a result, the ingot IG may be difficult to be manufactured.</p>
+      <p id="p-00044-en" num="0044">The graph of <figref>FIG. 3</figref> shows the temperature distribution when the height L of the molten silicon (MS) changes under the same conditions (e.g., the length of the ingot IG, the growth rate of the ingot IG, the supply rate of the silicon, etc.).</p>
+      <p id="p-00045-en" num="0045">The Melt Level of <figref>FIG. 3</figref> may correspond to the height of the molten silicon (MS). Melt Level 100% may correspond to the initial height of the molten silicon (MS), and Melt Level 80% may correspond to 80% of the initial height of the molten silicon (MS). Here, the initial height may correspond to the height of the molten silicon (MS) at the time when the ingot IG begins to grow.</p>
+      <p id="p-00046-en" num="0046">In <figref>FIG. 3</figref>, L<b>100</b> corresponds to Melt Level 100%, and L<b>80</b> corresponds to Melt Level 80%.</p>
+      <p id="p-00047-en" num="0047">When the height of the molten silicon (MS) is reduced from L<b>100</b> to L<b>80</b>, the temperature of the inside of the inner wall <b>110</b> falls, so that the possibility of the occurrence of the icing phenomenon increases. As a result, the ingot IG may be difficult to be manufactured.</p>
+      <p id="p-00048-en" num="0048">As such, since the icing phenomenon may occur at the interface between the inner wall <b>110</b> and the molten silicon (MS), the ingot manufacturing apparatus according to the first embodiment of the present invention is able to prevent the icing by reflecting the heat of the molten silicon (MS) toward the interface through the heat reflector <b>130</b>.</p>
+      <p id="p-00049-en" num="0049">
+        <figref>FIG. 4</figref> shows the heat reflector <b>130</b> of the ingot manufacturing apparatus according to the first embodiment of the present invention and a comparison example. The heat reflector <b>130</b> of the ingot manufacturing apparatus according to the first embodiment of the present invention has a convex shape. A heat reflector <b>131</b> of the comparison example has a flat shape.</p>
+      <p id="p-00050-en" num="0050">In <figref>FIG. 4</figref>, a first level L<b>1</b> and a second level L<b>2</b> represent the height of the molten silicon (MS).</p>
+      <p id="p-00051-en" num="0051">P<b>1</b> and P<b>11</b> represent a first interface where the molten silicon (MS) having a height of the first level L<b>1</b> contacts with the inner wall <b>110</b>. P<b>2</b> and P<b>22</b> represent a second interface where the molten silicon (MS) having a height of the second level L<b>2</b> contacts with the inner wall <b>110</b>.</p>
+      <p id="p-00052-en" num="0052">Also, P<b>3</b> and P<b>33</b> may represent a point of the molten silicon (MS) having the first level L<b>1</b>, which radiates the heat which is reflected from one end of the heat reflectors <b>130</b> and <b>131</b> and goes to the first interface.</p>
+      <p id="p-00053-en" num="0053">P<b>4</b> and P<b>44</b> may represent a point of the molten silicon (MS) having the second level L<b>2</b>, which radiates the heat which is reflected from one end of the heat reflectors <b>130</b> and <b>131</b> and goes to the second interface.</p>
+      <p id="p-00054-en" num="0054">As shown in <figref>FIG. 4</figref>, the heat reflector <b>130</b> of the ingot manufacturing apparatus according to the first embodiment of the present invention is able to reflect the heat of a relatively wider area toward the interface than the heat of the area of the comparison example.</p>
+      <p id="p-00055-en" num="0055">That is, the heat reflector <b>130</b> of the ingot manufacturing apparatus according to the first embodiment of the present invention is able to reflect toward the first interface P<b>1</b> the heat of the area between the P<b>1</b> and P<b>3</b> of the molten silicon (MS) having the first level L<b>1</b>. The heat reflector <b>131</b> of the comparison example is able to reflect toward the first interface P<b>11</b> the heat of the area between the P<b>11</b> and P<b>33</b> of the molten silicon (MS) having the first level L<b>1</b>.</p>
+      <p id="p-00056-en" num="0056">Also, the heat reflector <b>130</b> of the ingot manufacturing apparatus according to the first embodiment of the present invention is able to reflect toward the second interface P<b>2</b> the heat of the area between the P<b>2</b> and P<b>4</b> of the molten silicon (MS) having the second level L<b>2</b>. The heat reflector <b>131</b> of the comparison example is able to reflect toward the second interface P<b>22</b> the heat of the area between the P<b>22</b> and P<b>44</b> of the molten silicon (MS) having the second level L<b>2</b>.</p>
+      <p id="p-00057-en" num="0057">Here, the area between the P<b>1</b> and P<b>3</b> of the molten silicon (MS) is greater than the area between the P<b>11</b> and P<b>33</b> of the molten silicon (MS), and the area between the P<b>2</b> and P<b>4</b> of the molten silicon (MS) is greater than the area between the P<b>22</b> and P<b>44</b> of the molten silicon (MS).</p>
+      <p id="p-00058-en" num="0058">Since the heat reflector <b>130</b> of the ingot manufacturing apparatus according to the first embodiment of the present invention has a convex shape, the heat reflector <b>130</b> is able to reflect the heat of a wider area toward the first interface P<b>1</b> and the second interface P<b>2</b> than the heat reflector <b>131</b> having a flat shape of the comparison example. As a result, the heat reflector <b>130</b> of the ingot manufacturing apparatus according to the first embodiment of the present invention is able to prevent more effectively the icing phenomenon than the heat reflector <b>131</b> of the comparison example.</p>
+      <p id="p-00059-en" num="0059">The heat reflector <b>130</b> having a convex shape changes the reflecting areas P<b>1</b> to P<b>3</b> and P<b>2</b> to P<b>4</b> to a lower degree in accordance with the height of the molten silicon (MS) than the heat reflector <b>131</b> of the comparison example, thereby maintaining relatively the reflecting areas well.</p>
+      <p id="p-00060-en" num="0060">Meanwhile, as shown in <figref>FIG. 1</figref>, the ingot manufacturing apparatus according to the first embodiment of the present invention may further include a heat shield <b>140</b> and a cone <b>150</b>.</p>
+      <p id="p-00061-en" num="0061">The heat shield <b>140</b> may be disposed over the crucible <b>120</b>. The cone <b>150</b> may be continuously formed with the heat shield <b>140</b> and disposed between the ingot IG and the inner wall <b>110</b>. The heat shield <b>140</b> and the cone <b>150</b> may improve thermal efficiency by insulating the heat which is radiated from the molten silicon (MS) and protect the inner wall of a chamber <b>160</b> from high temperature radiant heat.</p>
+      <p id="p-00062-en" num="0062">The heat reflector <b>130</b> may be disposed on the cone <b>150</b> disposed between the ingot IG and the inner wall <b>110</b>. Thus, the heat reflector <b>130</b> is able to reflect the heat of the molten silicon (MS) toward the interface between the inner wall <b>110</b> and the molten silicon (MS) of the growth zone GZ.</p>
+      <p id="p-00063-en" num="0063">Here, the heat shield <b>140</b> and the cone <b>150</b> may form a flow path of sweeping gas. As the crucible <b>120</b> and the inner wall <b>110</b> contact with the high temperature molten silicon (MS), oxygen may be generated from the crucible <b>120</b> and the inner wall <b>110</b>.</p>
+      <p id="p-00064-en" num="0064">The oxygen is combined with the silicon, and then silicon oxide is formed. If the silicon oxide contacts with the growing ingot IG, the growth of the ingot IG may be interrupted by the silicon oxide.</p>
+      <p id="p-00065-en" num="0065">Since the silicon oxide is distributed on the surface of the molten silicon (MS), the heat shield <b>140</b> and the cone <b>150</b> may form a flow path that allows the sweeping gas introduced from the outside of the chamber <b>160</b> to pass the surface of the molten silicon (MS) in the growth zone GZ.</p>
+      <p id="p-00066-en" num="0066">When the cone <b>150</b> is equipped with the heat reflector <b>130</b>, it is possible to prevent the icing phenomenon that may occur at the interface between the inner wall <b>110</b> and the molten silicon (MS), and possible to remove the silicon oxide caused by the sweeping gas.</p>
+      <p id="p-00067-en" num="0067">The sweeping gas may move to an outlet <b>170</b> through the flow path formed by the heat shield <b>140</b> and the cone <b>150</b>. The outlet <b>170</b> may discharge the sweeping gas to the outside of the chamber <b>160</b>. Here, the outlet <b>170</b> may be disposed on the side of the chamber <b>160</b>, and unlike <figref>FIG. 1</figref>, may be disposed on the bottom of the chamber <b>160</b></p>
+      <p id="p-00068-en" num="0068">
+        <figref>FIG. 5</figref> shows a design condition of the heat reflector of the ingot manufacturing apparatus according to the first embodiment of the present invention.</p>
+      <p id="p-00069-en" num="0069">In <figref>FIG. 5</figref>, C may correspond to the center of a circle having the radius of curvature of the heat reflector <b>130</b>. O<b>1</b> may correspond to an interface between the inner wall <b>110</b> and the molten silicon (MS) having the initial height in the growth zone GZ. O<b>2</b> may correspond to an interface between the inner wall <b>110</b> and the molten silicon (MS) having a height less than the initial height in the growth zone GZ. Here, the initial height may correspond to the height of the molten silicon (MS) at the time when the ingot IG begins to grow.</p>
+      <p id="p-00070-en" num="0070">P may correspond to a first end of the heat reflector <b>130</b>. Q may correspond to a second end of the heat reflector <b>130</b>, which is closer to the inner wall <b>110</b> than the first end. E<b>1</b> may correspond to a maximum point where reflected heat can reach the O<b>1</b> from the molten silicon (MS) having the initial height. E<b>2</b> may correspond to a maximum point where the reflected heat can reach the O<b>2</b> from the molten silicon (MS) having a height less than the initial height. I may correspond to a point where the ingot IG and the molten silicon (MS) contact with each other.</p>
+      <p id="p-00071-en" num="0071">R may correspond to a distance between O<b>1</b> and C. r may correspond to the radius of curvature of the heat reflector <b>130</b>. L may correspond to a distance between the outside of the ingot IG and the inside of the inner wall <b>110</b>, that is to say, a distance between O<b>1</b> and I. 11 may correspond to a maximum distance capable of heating O<b>1</b> from the molten silicon (MS) having an initial height. 12 may correspond to a maximum distance capable of heating O<b>2</b> from the molten silicon (MS) having a height less than the initial height.</p>
+      <p id="p-00072-en" num="0072">As shown in <figref>FIG. 5</figref>, imaginary lines CO<b>1</b> and CO<b>2</b> formed by connecting the center C of the radius of curvature of the heat reflector <b>130</b> to the interfaces O<b>1</b> and O<b>2</b> respectively may pass through the heat reflector <b>130</b>. As a result, the heat reflector <b>130</b> formed convexly toward the interfaces O<b>1</b> and O<b>2</b> is able to reflect the heat toward the interfaces O<b>1</b> and O<b>2</b>.</p>
+      <p id="p-00073-en" num="0073">Here, the radius of curvature r may be smaller than the distance between the interfaces O<b>1</b> and O<b>2</b> and the center C. Unlike this, when the radius of curvature r is equal to or greater than the distance between the interfaces O<b>1</b> and O<b>2</b> and the center C, the heat reflector <b>130</b> contacts with the inner wall <b>110</b>, so that the heat reflector <b>130</b> may be difficult to be installed.</p>
+      <p id="p-00074-en" num="0074">As described above, the heat reflector <b>130</b> may have the first end P and the second end Q closer to the inner wall <b>110</b> than the first end P. Here, when the imaginary line CO<b>1</b> connects the center with the interface between the inner wall <b>110</b> and the surface of the molten silicon (MS) having the initial height, an angle θ formed between the imaginary line CO<b>1</b> and the surface of the molten silicon (MS) may be the same as or greater than an angle θ<b>1</b> formed between a first imaginary auxiliary line AL<b>1</b> which passes through the center C and is parallel with the molten silicon (MS) and a second imaginary auxiliary line AL<b>2</b> which passes through the center C and the second end Q. If θ is less than θ<b>1</b>, the heat reflector <b>130</b> may not reflect the heat radiated from the interface θ<b>1</b> toward the interface θ<b>1</b>.</p>
+      <p id="p-00075-en" num="0075">Further, the angle θ formed between the imaginary line CO<b>1</b> and the surface of the molten silicon (MS) may be less than an angle θ<b>2</b> formed between the first imaginary auxiliary line AL<b>1</b> and a third imaginary auxiliary line AL<b>3</b> which passes through the center C and the first end P. As such, only when θ<b>2</b> is greater than 0, the heat reflector <b>130</b> is able to reflect toward the interface O<b>1</b> the heat of the molten silicon (MS) within a range from the interface O<b>1</b> to the maximum point E<b>1</b>.</p>
+      <p id="p-00076-en" num="0076">Here, θ<b>2</b> may be the same as or less than π/2. Contrary to this, if θ<b>2</b> is greater than π/2, the heat is reflected toward the ingot IG, so that the growth of the ingot IG may be interrupted.</p>
+      <p id="p-00077-en" num="0077">Meanwhile, when it is set that the coordinates of O<b>1</b> is (0,0), the coordinates of O<b>2</b> is (0, −h), the coordinates of P is (Px,Py), the coordinates of E<b>1</b> is (11,0), the coordinates of E<b>2</b> is (12, −h), and the coordinates of I is (L,0), Px may be R cos θ−r cos θ<b>2</b>, and Py may be R sin θ−r sin θ<b>2</b>.</p>
+      <p id="p-00078-en" num="0078">Here, when B is assumed to be Py/Px, 11 may be the following equation (1).</p>
+      <p id="p-00079-en" num="0000">[in-line-formulae]11=<i>Px+Py[{</i>1+<i>B </i>tan(2θ2)}/{<i>B</i>−tan(2θ2)}]  equation (1).[/in-line-formulae]</p>
+      <p id="p-00080-en" num="0079">Therefore, when it is assumed that B′=(Py+h)/Px, 12 may be the following equation (2).</p>
+      <p id="p-00081-en" num="0000">[in-line-formulae]12=<i>Px</i>+(<i>Py+h</i>)[{1+<i>B</i>′ tan(2θ2)}/{<i>B</i>′−tan(2θ2)}]  equation (2)[/in-line-formulae]</p>
+      <p id="p-00082-en" num="0080">As can be seen through <figref>FIG. 5</figref>, Px is less than L. When Px is greater than L to the contrary, not only O<b>1</b> receives the heat but also the ingot IG also becomes to receive the reflected heat, so that the growth of the ingot IG may be interrupted.</p>
+      <p id="p-00083-en" num="0081">In the meantime, the surface of the heat reflector <b>130</b> may be made of one of SiC, SiN, SiCN, SiBN, SicBN, ZrC, ZrN, ZrCN, ZrBN, ZrcBN, TiC, TiN, TiCN, TiBN, TicBN, tungsten carbide, molybdenum, tungsten, tantalum, or chrome.</p>
+      <p id="p-00084-en" num="0082">For example, the heat reflector <b>130</b> may be formed by coating graphite with one of SiC, SiN, SiCN, SiBN, SicBN, ZrC, ZrN, ZrCN, ZrBN, ZrcBN, TiC, TiN, TiCN, TiBN, TicBN.</p>
+      <p id="p-00085-en" num="0083">The heat reflector <b>130</b> may be made of one of SiC, SiN, SiCN, SiBN, SicBN, ZrC, ZrN, ZrCN, ZrBN, ZrcBN, TiC, TiN, TiCN, TiBN, TicBN or tungsten carbide.</p>
+      <p id="p-00086-en" num="0084">The heat reflector <b>130</b> may be made of molybdenum, tungsten, and tantalum.</p>
+      <p id="p-00087-en" num="0085">The heat reflector <b>130</b> may be formed by coating the surface of glass or quartz with chrome.</p>
+      <p id="p-00088-en" num="0086">Next, an ingot manufacturing apparatus according to a second embodiment of the present invention will be described with reference to the drawings.</p>
+      <p id="p-00089-en" num="0087">
+        <figref>FIG. 6</figref> shows the ingot manufacturing apparatus according to the second embodiment of the present invention. The ingot manufacturing apparatus according to the second embodiment of the present invention includes the inner wall <b>110</b>, the crucible <b>120</b>, the heat shield <b>140</b>, and the heat reflector <b>130</b>. Since the inner wall <b>110</b>, the crucible <b>120</b>, and the heat shield <b>140</b> have been described in the first embodiment, detailed descriptions thereof will be omitted.</p>
+      <p id="p-00090-en" num="0088">As shown in <figref>FIG. 6</figref>, the heat reflector <b>130</b> is disposed beneath the bottom surface of the heat shield <b>140</b> parallel with the surface of the molten silicon (MS). Here, the reflective surface of the heat reflector <b>130</b> may be flat.</p>
+      <p id="p-00091-en" num="0089">Because the reflected heat received by the interfaces O<b>1</b> and O<b>2</b> is changed to a small extent in accordance with the height of the molten silicon (MS), the heat reflector <b>130</b> makes it easier to maintain a temperature condition for preventing the icing from occurring.</p>
+      <p id="p-00092-en" num="0090">The ingot manufacturing apparatus according to the second embodiment of the present invention may further include the cone <b>150</b>. The cone <b>150</b> may be continuously formed with the heat shield <b>140</b> and may have an end located between the ingot IG and the inner wall <b>110</b>.</p>
+      <p id="p-00093-en" num="0091">The area of the molten silicon (MS), which is capable of radiating the heat to the heat reflector <b>130</b>, may be limited by the cone <b>150</b>. For example, the heat reflector <b>130</b> is able to reflect toward the interface O<b>1</b> the heat radiated from the area between O<b>1</b> and T<b>1</b> of the molten silicon (MS) having the initial height.</p>
+      <p id="p-00094-en" num="0092">Also, the heat reflector <b>130</b> is able to reflect toward the interface O<b>2</b> the heat radiated from the area between O<b>2</b> and T<b>2</b> of the molten silicon (MS) having a height less than the initial height.</p>
+      <p id="p-00095-en" num="0093">As such, since the area of the molten silicon (MS), which is capable of radiating the heat to the heat reflector <b>130</b>, is limited by the cone <b>150</b>, the heat reflected by the heat reflector <b>130</b> may be concentrated on the molten silicon (MS) in the vicinity of the inner wall. As a result, the heat reflected by the heat reflector <b>130</b> is difficult to reach the ingot IG, so that the ingot IG can stably grow.</p>
+      <p id="p-00096-en" num="0094">
+        <figref>FIGS. 7 and 8</figref> show a modified example of the ingot manufacturing apparatus according to the second embodiment of the present invention.</p>
+      <p id="p-00097-en" num="0095">As shown in <figref>FIGS. 7 and 8</figref>, the thickness of the heat reflector <b>130</b> may be increased or decreased toward the ingot IG. As described above, the area of the molten silicon (MS), which is capable of radiating the heat to the heat reflector <b>130</b>, may be limited by the cone <b>150</b>.</p>
+      <p id="p-00098-en" num="0096">The heat reflector <b>130</b> of <figref>FIG. 7</figref> can be applied to increase the limited area. The heat reflector <b>130</b> of <figref>FIG. 8</figref> can be applied to reduce the limited area. As such, it is possible to variously set the limited area.</p>
+      <p id="p-00099-en" num="0097">The surface of the heat reflector <b>130</b> may be made of one of SiC, SiN, SiCN, SiBN, SicBN, ZrC, ZrN, ZrCN, ZrBN, ZrcBN, TiC, TiN, TiCN, TiBN, TicBN, tungsten carbide, molybdenum, tungsten, tantalum, or chrome.</p>
+      <p id="p-00100-en" num="0098">For example, the heat reflector <b>130</b> may be formed by coating graphite with one of SiC, SiN, SiCN, SiBN, SicBN, ZrC, ZrN, ZrCN, ZrBN, ZrcBN, TiC, TiN, TiCN, TiBN, TicBN.</p>
+      <p id="p-00101-en" num="0099">The heat reflector <b>130</b> may be made of one of SiC, SiN, SiCN, SiBN, SicBN, ZrC, ZrN, ZrCN, ZrBN, ZrcBN, TiC, TiN, TiCN, TiBN, TicBN or tungsten carbide.</p>
+      <p id="p-00102-en" num="0100">The heat reflector <b>130</b> may be made of molybdenum, tungsten, and tantalum.</p>
+      <p id="p-00103-en" num="0101">The heat reflector <b>130</b> may be formed by coating the surface of glass or quartz with chrome.</p>
+      <p id="p-00104-en" num="0102">Next, an ingot manufacturing apparatus according to a third embodiment of the present invention will be described with reference to the drawings.</p>
+      <p id="p-00105-en" num="0103">
+        <figref>FIGS. 9 and 10</figref> show the ingot manufacturing apparatus according to the third embodiment of the present invention. As shown in <figref>FIGS. 9 and 10</figref>, the ingot manufacturing apparatus according to the third embodiment of the present invention includes the inner wall <b>110</b>, the crucible <b>120</b>, the heat reflector <b>130</b>, and a gas nozzle <b>180</b>.</p>
+      <p id="p-00106-en" num="0104">Since the inner wall <b>110</b>, the crucible <b>120</b>, and the heat reflector <b>130</b> have been described in the first embodiment and the second embodiment, detailed descriptions thereof will be omitted.</p>
+      <p id="p-00107-en" num="0105">The gas nozzle <b>180</b> sprays the sweeping gas toward the surface of the heat reflector <b>130</b>. As described above, the silicon oxide may be produced during the manufacturing process of the ingot IG. The silicon oxide may be attached to the heat reflector <b>130</b>. The silicon oxide attached to the heat reflector <b>130</b> may deteriorate the heat reflection efficiency of the heat reflector <b>130</b>.</p>
+      <p id="p-00108-en" num="0106">The gas nozzle <b>180</b> sprays the sweeping gas toward the surface of the heat reflector <b>130</b>, thereby removing the silicon oxide attached to the surface of the heat reflector <b>130</b> or preventing the silicon oxide from being attached to the surface of the heat reflector <b>130</b>.</p>
+      <p id="p-00109-en" num="0107">As shown in <figref>FIG. 9</figref>, the ingot manufacturing apparatus according to the third embodiment of the present invention may further include the heat shield <b>140</b> which is disposed over the inner wall <b>110</b>, and the cone <b>150</b> which is continuously formed with the heat shield <b>140</b> and disposed between the ingot IG and the inner wall <b>110</b>.</p>
+      <p id="p-00110-en" num="0108">Here, the heat reflector <b>130</b> may be formed convexly toward the interface between the inner wall <b>110</b> and the surface of the molten silicon (MS) of the growth zone GZ. The gas nozzle <b>180</b> may spray the sweeping gas moving through a flow path <b>190</b> formed within the cone <b>150</b>.</p>
+      <p id="p-00111-en" num="0109">Although <figref>FIG. 1</figref> shows that the flow path <b>190</b> communicates with the outside of the chamber <b>160</b> through the side of the chamber <b>160</b>, there is no limit to this. The sweeping gas flowing through the flow path <b>190</b> may be introduced from the top or bottom of the chamber <b>160</b>.</p>
+      <p id="p-00112-en" num="0110">
+        <figref>FIG. 10</figref> shows the flow path of the ingot manufacturing apparatus of <figref>FIG. 9</figref>. <figref>FIG. 10</figref> is a top cross sectional view of the ingot manufacturing apparatus of <figref>FIG. 9</figref>. As shown in <figref>FIG. 10</figref>, the flow path <b>190</b> is divided into a plurality of sub flow paths <b>195</b> by partitions. The plurality of the sub flow paths <b>195</b> may have substantially the same area as each other. Since the flow path <b>190</b> is equally divided into the sub flow paths <b>195</b>, the sweeping gas may be evenly sprayed with respect to the entire heat reflector <b>130</b>.</p>
+      <p id="p-00113-en" num="0111">Meanwhile, as shown in <figref>FIG. 11</figref>, the ingot manufacturing apparatus according to the third embodiment of the present invention may further include the heat shield <b>140</b> which is disposed over the inner wall <b>110</b>, and the cone <b>150</b> which is continuously formed with the heat shield <b>140</b> and disposed between the ingot IG and the inner wall <b>110</b>. Here, heat reflector <b>130</b> may be disposed beneath the bottom surface of the heat shield <b>140</b> parallel with the surface of the molten silicon (MS). The gas nozzle <b>180</b> may spray the sweeping gas moving through a flow path <b>200</b> formed within the heat shield <b>140</b>.</p>
+      <p id="p-00114-en" num="0112">Although the flow path <b>200</b> of <figref>FIG. 11</figref> is not shown in <figref>FIG. 1</figref>, the flow path <b>200</b> may communicate with the outside of the chamber <b>160</b> through the side, top or bottom of the chamber <b>160</b>.</p>
+      <p id="p-00115-en" num="0113">As shown in <figref>FIG. 12</figref>, the flow path <b>200</b> is divided into a plurality of sub flow paths <b>205</b> by partitions. The plurality of the sub flow paths <b>205</b> may have substantially the same area as each other. Since the flow path <b>200</b> is equally divided into the sub flow paths <b>205</b>, the sweeping gas may be evenly sprayed with respect to the entire heat reflector <b>130</b>.</p>
+      <p id="p-00116-en" num="0114">Meanwhile, a feeding part <b>210</b> of <figref>FIG. 1</figref> supplies the silicon for the crucible <b>120</b> during the growth of the ingot IG such that the height of the molten silicon (MS) changes. The feeding part <b>210</b> may have a pipe shape or a tubular shape. However there is no limit to the shape of the feeding part <b>210</b>.</p>
+      <p id="p-00117-en" num="0115">A susceptor <b>220</b> may surround the outside of the crucible <b>120</b>. Since the silicon is melted at a high temperature, the crucible <b>120</b> may be softened. The susceptor <b>220</b> may function to support the maintenance of the shape of the crucible <b>120</b>.</p>
+      <p id="p-00118-en" num="0116">A heater <b>230</b> heats the crucible <b>120</b> for the purpose of forming the molten silicon (MS). That is, the heater <b>230</b> heats the crucible <b>120</b> in order to melt the silicon supplied through the feeding part <b>210</b>. The heater <b>230</b> may be installed adjacent to the susceptor <b>220</b>. The heater <b>230</b> is able to heat the silicon to about 1,420 degrees Celsius, that is to say, the melting temperature of the silicon. Accordingly, the silicon can be melted in the crucible <b>120</b>.</p>
+      <p id="p-00119-en" num="0117">A shaft <b>240</b> is connected to the susceptor <b>220</b> and supports the crucible <b>120</b>. When the susceptor <b>220</b> is not provided, the shaft <b>240</b> may be directly connected to the crucible <b>120</b>.</p>
+      <p id="p-00120-en" num="0118">Until now, the embodiments of the present invention have been and described. It is understood by those skilled in the art that the embodiments can be variously modified without departing from the spirit and scope of the present invention. Therefore, the embodiment should not be limited and should be construed as an example. Accordingly, the present invention is not limited to the above-description and is changeable within the scope of the appended claims as well as all equivalents thereto.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. An ingot manufacturing apparatus comprising:
+<claim-text>an inner wall which has a growth zone where an ingot grows from molten silicon;</claim-text><claim-text>a crucible which surrounds the inner wall; and</claim-text><claim-text>a heat reflector which is formed convexly toward an interface between a surface of the molten silicon of the growth zone and the inner wall.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The ingot manufacturing apparatus of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising a heat shield which is disposed over the crucible, and a cone which is continuously formed with the heat shield and is disposed between the ingot and the inner wall, wherein the heat reflector is disposed on the cone.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The ingot manufacturing apparatus of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein an imaginary line formed by connecting a center of a radius of curvature of the heat reflector to the interface passes through the heat reflector.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The ingot manufacturing apparatus of <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein the radius of curvature is smaller than a distance between the interface and the center.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The ingot manufacturing apparatus of <claim-ref idref="clm-00003-en">claim 3</claim-ref>,
+<claim-text>wherein the heat reflector has a first end and a second end closer to the inner wall than the first end,</claim-text><claim-text>wherein, when the imaginary line connects the center with the interface between the inner wall and the surface of the molten silicon having an initial height, an angle formed between the imaginary line and the surface of the molten silicon is the same as or greater than an angle formed between a first imaginary auxiliary line which passes through the center and is parallel with the molten silicon and a second imaginary auxiliary line which passes through the center and the second end, and</claim-text><claim-text>wherein the angle formed between the imaginary line and the surface of the molten silicon is less than an angle formed between the first imaginary auxiliary line and a third imaginary auxiliary line which passes through the center and the first end.</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The ingot manufacturing apparatus of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein a surface of the heat reflector is made of one of SiC, SiN, SiCN, SiBN, SicBN, ZrC, ZrN, ZrCN, ZrBN, ZrcBN, TiC, TiN, TiCN, TiBN, TicBN, tungsten carbide, molybdenum, tungsten, tantalum, or chrome.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en" independent="true">
+      <claim-text>
+        <b>7</b>. An ingot manufacturing apparatus comprising:
+<claim-text>an inner wall which has a growth zone where an ingot grows from molten silicon;</claim-text><claim-text>a crucible which surrounds the inner wall;</claim-text><claim-text>a heat shield which is disposed over the inner wall; and</claim-text><claim-text>a heat reflector which is disposed beneath a bottom surface of the heat shield parallel with a surface of the molten silicon.</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The ingot manufacturing apparatus of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, further comprising a cone which is continuously formed with the heat shield and has an end located between the ingot and the inner wall.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The ingot manufacturing apparatus of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein a thickness of the heat reflector is increased or decreased toward the ingot.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The ingot manufacturing apparatus of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein a surface of the heat reflector is made of one of SiC, SiN, SiCN, SiBN, SicBN, ZrC, ZrN, ZrCN, ZrBN, ZrcBN, TiC, TiN, TiCN, TiBN, TicBN, tungsten carbide, molybdenum, tungsten, tantalum, or chrome.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The ingot manufacturing apparatus of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein a reflective surface of the heat reflector is flat.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en" independent="true">
+      <claim-text>
+        <b>12</b>. An ingot manufacturing apparatus comprising:
+<claim-text>an inner wall which has a growth zone where an ingot grows from molten silicon;</claim-text><claim-text>a crucible which surrounds the inner wall;</claim-text><claim-text>a heat reflector which reflects heat of the molten silicon toward an interface between a surface of the molten silicon of the growth zone and the inner wall; and</claim-text><claim-text>a gas nozzle which sprays sweeping gas toward a surface of the heat reflector.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The ingot manufacturing apparatus of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, further comprising a heat shield which is disposed over the inner wall, and a cone which is continuously formed with the heat shield and is disposed between the ingot and the inner wall,
+<claim-text>wherein the heat reflector is formed convexly toward the interface between the surface of the molten silicon of the growth zone and the inner wall, and wherein the gas nozzle sprays the sweeping gas moving through a flow path formed within the cone.</claim-text></claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The ingot manufacturing apparatus of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the flow path is divided into a plurality of sub flow paths by partitions, and wherein the plurality of the sub flow paths have substantially the same area as each other.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The ingot manufacturing apparatus of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, further comprising a heat shield which is disposed over the inner wall, and a cone which is continuously formed with the heat shield and is disposed between the ingot and the inner wall,
+<claim-text>wherein the heat reflector is disposed beneath a bottom surface of the heat shield parallel with the surface of the molten silicon, and wherein the gas nozzle sprays the sweeping gas moving through a flow path formed within the heat shield.</claim-text></claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The ingot manufacturing apparatus of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein the flow path is divided into a plurality of sub flow paths by partitions, and wherein the plurality of the sub flow paths have substantially the same area as each other. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150259823A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150259823A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150259823A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259823A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150259823A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259823A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150259823A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259823A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150259823A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259823A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150259823A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259823A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150259823A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259823A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150259823A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259823A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150259823A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259823A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150259823A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259823A1-20150917-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150259823A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259823A1-20150917-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150259823A1_00012.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150259823A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150259823A1.PDF" type="pdf" size="797888" pages="17" />
+</lexisnexis-patent-document>

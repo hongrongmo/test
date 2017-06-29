@@ -1,0 +1,1248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247072A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021455" date-changed="20150914" time-changed="042017">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140148">
+        <country>US</country>
+        <doc-number>20150247072</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14709962</doc-number>
+        <date>20150512</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>C09J 147/00        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>J</subclass>
+        <main-group>147</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C09J   9/00        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>J</subclass>
+        <main-group>9</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>C09J 147/00        20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>J</subclass>
+        <main-group>147</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C09J   9/00        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>J</subclass>
+        <main-group>9</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C09J 123/28        20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>J</subclass>
+        <main-group>123</main-group>
+        <subgroup>28</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C09J 123/286       20130101 LI20150413BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>J</subclass>
+        <main-group>123</main-group>
+        <subgroup>286</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150413</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C09J 123/34        20130101 LI20150413BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>J</subclass>
+        <main-group>123</main-group>
+        <subgroup>34</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150413</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>Y10T 428/31692     20150401 LA20150410BCEP        </text>
+        <cpc-version-indicator>
+          <date>20150401</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>428</main-group>
+        <subgroup>31692</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150410</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">12</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">WATERBORNE ADHESIVES FOR ELASTOMERS</invention-title>
+    <related-documents date-changed="20150903">
+      <division>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>11982374</doc-number>
+              <date>20071101</date>
+            </document-id>
+            <parent-status>PENDING</parent-status>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007099</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </division>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>60859228</doc-number>
+          <date>20061115</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Rohm and Haas Company</orgname>
+            <address>
+              <city>Philadelphia</city>
+              <state>PA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Hoy</last-name>
+            <first-name>Dean E.</first-name>
+            <address>
+              <city>West Alexandria</city>
+              <state>OH</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Weir</last-name>
+            <first-name>James P.</first-name>
+            <address>
+              <city>Miamisburg</city>
+              <state>OH</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173463228">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247072</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150512</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173463227">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247072</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150512</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">There is provided a process for forming a waterborne adhesive composition comprising the steps of <ul id="ula-00001-en" list-style="none"><li><ul id="ula-00002-en" list-style="none"><li>A. forming a solution in organic solvent comprising         <ul id="ula-00003-en" list-style="none"><li>(a) one or more bromine substituted olefin polymer,</li><li>(b) one or more halosulfonated olefin polymer,</li><li>(c) one or more epoxy resin,</li></ul></li><li>B. adding water to said solution to form an oil in water emulsion, and</li><li>C. then removing said organic solvent.</li></ul></li></ul></p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <p id="p-00001-en" num="0001">This application claims the benefit of priority under 35 U.S.C. §119(e) of U.S. Provisional Patent Application No. 60/859,228 filed on Nov. 15, 2006.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00001-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">One useful class of materials is elastomer-bonding compositions (i.e., compositions that are capable of bonding to elastomer substrates). In some situations, it is useful to find elastomer-bonding compositions that are waterborne. Various polymers are known to be useful in one or more specific formulations that are capable of bonding to elastomer substrates. For example, US 2003/0158338 describes aqueous compositions useful for adhering elastomers to other substrates and lists a variety of polymers that may be included in such a composition, including halogen-substituted olefin polymers and sulfonyl halide-substituted olefin polymers.</p>
+      <p id="p-00003-en" num="0003">It is desired to make elastomer-bonding compositions that contain blends of two or more different polymers. In some cases, a blend of two or more different polymers is desired because each polymer, when used alone, provides some specific benefit to an elastomer-bonding composition. However, it has been discovered that when some of such blends are made, the resulting composition has poor shelf stability. For example, it is expected that blends of bromine substituted olefin polymer and halosulfonated olefin polymer will sometimes have poor shelf stability. It is known, for example, that solvent based adhesives that are blends of mixed-halogen substituted olefin polymer and halosulfonated olefin polymer sometimes have poor shelf stability. Likewise, it has been discovered that waterborne blends of mixed-halogen substituted olefin polymer and halosulfonated olefin polymer sometimes have poor shelf stability. It is desired to provide waterborne compositions that contain both bromine substituted olefin polymer and halosulfonated olefin polymer and that have improved shelf stability.</p>
+      <heading id="h-00002-en" level="1">STATEMENT OF THE INVENTION</heading>
+      <p id="p-00004-en" num="0004">In one aspect of the present invention, there is provided a waterborne adhesive composition comprising <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>(a) one or more bromine substituted olefin polymer,</li><li>(b) one or more halosulfonated olefin polymer,</li><li>(c) one or more compatibilizer selected from the group consisting of epoxy resins, phenolic resins, chlorinated polyolefin, and mixtures thereof.</li></ul></li></ul></p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00003-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00005-en" num="0008">A waterborne composition is a composition that contains water and other ingredients. In a waterborne composition, the ingredients other than water are dissolved in the water or dispersed in the water or a combination thereof. A specific ingredient other than water may be dissolved in the water or dispersed in the water or a combination thereof. If two or more ingredients other than water are present, there may be any combination of dissolved ingredients or dispersed ingredients or combination thereof. For example, if any two ingredients other than water are considered, both ingredients other than water may be dispersed; or one ingredient other than water may be dissolved while the other ingredient other than water may be dispersed; or one ingredient other than water may be both dissolved and dispersed while the other ingredient other than water may be dissolved or dispersed or both dissolved and dispersed.</p>
+      <p id="p-00006-en" num="0009">An ingredient that is dispersed in water is in the form of discrete particles distributed throughout the water. The distribution of particles in water may be in any form, such as, for example, a dispersion, a suspension, an emulsion, a latex, or a combination thereof. The discrete particles may be solid, liquid, or a combination thereof. Independently, the discrete particles may form a colloid or other form of distribution.</p>
+      <p id="p-00007-en" num="0010">In some embodiments, the practice of the present invention involves contacting a layer of an adhesive composition with an elastomer substrate. The elastomer substrate used in the practice of the present invention may be any of a wide variety of elastic materials. Elastomers are well known in the art. One description can be found in <i>Textbook of Polymer Science</i>, second edition, by F. W. Billmeyer Jr., Wiley-Interscience, 1971. As described by Billmeyer, elastomers are materials that stretch under tension to a new length that is generally at least 1.1 times their original length and may be many times their original length; they exhibit relatively high strength and stiffness when stretched; after deformation, they tend to recover their original shapes relatively quickly, with relatively little residual permanent deformation. For purposes of the present invention, materials exhibiting most or all of these characteristics will be considered “elastomers.” Elastomers can be made from a wide variety of materials, such as for example natural rubber and synthetic rubber. Synthetic rubbers include, for example, polybutadiene, neoprene, butyl rubber, polyisoprene, nitrile rubbers, styrene butadiene rubbers (also called SBRs), ethylene propylene diene based rubbers (some of which are called EPDM), and the like. Elastomers include both thermoplastic elastomers (also called elastoplastics or melt-processable rubbers) and crosslinked (also called vulcanized) elastomers. The present invention may be practiced to bond any elastomer. Preferred elastomers are crosslinked synthetic or natural rubbers; more preferred are crosslinked elastomers made using natural rubber.</p>
+      <p id="p-00008-en" num="0011">The adhesive compositions of the present invention may be used to bond elastomers to any of a wide variety of useful materials, including for example other elastomers; non-elastomeric but flexible materials such as for example fabrics or films; and rigid materials such as plastics, engineering plastics, wood, and metal. Some compositions of the present invention work well at bonding elastomers to metal.</p>
+      <p id="p-00009-en" num="0012">The practice of the present invention involves the use of olefin polymer. Olefin polymers, also called polyolefins, include polymers based on monomer molecules that are unsaturated aliphatic hydrocarbons containing one double bond per molecule. Examples of such olefin polymers are polyethylene, polypropylene, polyisobutene, polybut-1-ene, poly-4-methylpent-1-ene, and the various copolymers thereof. Also included in the class of olefin polymers are polymers based on natural rubber and polymers based on synthetic rubber such as for example polyisoprene; polybutadiene; polymers of adducts of butadiene and cyclic conjugated dienes; copolymers of butadiene and styrene; copolymers of ethylene, propylene, and dienes; copolymers of acrylonitrile and butadiene; and the various copolymers thereof. Also included in the class of olefin polymers are the polymers described above that also include one or more multiply functional monomers to provide crosslinking.</p>
+      <p id="p-00010-en" num="0013">Halogenated olefin polymers have structures that are the same as those of polyolefins except that halogen atoms replace one or more of the hydrogen atoms. The halogens may be chlorine, bromine, fluorine, or a mixture thereof. The preferred halogens are chlorine, bromine, and mixtures thereof. The amount of halogen does not appear critical and can range from 3 to 70 percent by weight of the polymer.</p>
+      <p id="p-00011-en" num="0014">A bromine substituted olefin polymer is a halogenated olefin polymer in which at least one halogen is bromine A bromine substituted olefin polymer may or may not contain atoms of halogens other than bromine A bromine substituted olefin polymer is known herein as a “polymer (a).”</p>
+      <p id="p-00012-en" num="0015">In some embodiments, a bromine substituted olefin polymer is used that is a mixed-halogen substituted olefin polymer. A mixed-halogen substituted olefin polymer is a bromine substituted olefin polymer that contains, in addition to bromine atom or atoms, at least one halogen atom that is not bromine.</p>
+      <p id="p-00013-en" num="0016">In some embodiments, a polymer (a) is used that has chlorine and bromine. Independently, in some embodiments, a polymer (a) is used that is a substituted polydiene polymer (i.e., a polymer that has the structure of a polydiene polymer in which two or more different types of halogen atoms are substituted for hydrogen atoms). In some embodiments, every polymer (a) is a substituted polydiene polymer. Suitable polydiene polymers include, for example, polybutadiene, polyisoprene, and mixtures thereof. Some suitable polydiene polymers have no monomer units that are not residues of diene molecules. In some embodiments, every polymer (a) is a substituted polydiene polymer in which there are no monomer units that are not residues of diene molecules. One suitable mixed-halogen substituted olefin polymer, for example, is brominated polydichlorobutadiene (“BPDCD”).</p>
+      <p id="p-00014-en" num="0017">In some embodiments, at least one polymer (a) is used that has no substituent on the polyolefin selected from nitrile, carboxyl, carboxylate ester, ether, peroxyester, or combination thereof. In some embodiments, every polymer (a) has no substituent on the polyolefin selected from nitrile, carboxyl, carboxylate ester, ether, peroxyester, or combination thereof. In some embodiments, at least one polymer (a) is used that has no substituent on the polyolefin other than halogen. In some embodiments, every polymer (a) has no substituent on the polyolefin other than halogen.</p>
+      <p id="p-00015-en" num="0018">Halosulfonated olefin polymers are polymers that have the structure of olefin polymers in which some hydrogen atoms are replaced by halogen atoms and in which other hydrogen atoms are replaced by sulfonyl halide groups, which have the chemical formula SO<sub>2</sub>X, where X is a halogen atom. A halosulfonated olefin polymer is known herein as a “polymer (b).” The halogens in the sulfonyl halide groups may be chlorine, bromine, fluorine, or a mixture thereof. In some embodiments, the halogens in the sulfonyl halide groups are chlorine, bromine, or a mixture thereof. In some embodiments, the halogen in the sulfonyl halide groups is chlorine. In some embodiments, every halogen in every sulfonyl halide group every polymer (b) is either chlorine or bromine. In some embodiments, every halogen in every sulfonyl halide group every polymer (b) is chlorine.</p>
+      <p id="p-00016-en" num="0019">In dependently, in some embodiments, a polymer (b) is used that is a substituted EP polymer (i.e., a polymer that has the structure of an EP polymer in which sulfonyl halide groups are substituted for some hydrogen atoms). An EP polymer is a polymer that has 50 mole % or more of its monomer units chosen from ethylene or propylene or a mixture thereof. In some embodiments, every polymer (b) is a substituted EP polymer. Some suitable EP polymers are, for example, polyethylene, polypropylene, copolymers of ethylene and propylene, copolymers of ethylene and propylene and one or more diene monomer, and mixtures thereof. Some suitable halosulfonated olefin polymers include, for example, chlorosulfonated polyethylene (CSPE), chlorosulfonated polypropylene, bromosulfonated polyethylene, bromosulfonated polypropylene, and mixtures thereof. In some embodiments, every polymer (b) is selected from (CSPE), chlorosulfonated polypropylene, bromosulfonated polyethylene, bromosulfonated polypropylene, and mixtures thereof. In some embodiments, every polymer (b) is CSPE.</p>
+      <p id="p-00017-en" num="0020">In some embodiments, at least one polymer (b) is used that has no substituent on the polyolefin selected from nitrile, carboxyl, carboxylate ester, ether, peroxyester, or combination thereof. In some embodiments, every polymer (b) has no substituent on the polyolefin selected from nitrile, carboxyl, carboxylate ester, ether, peroxyester, or combination thereof. In some embodiments, at least one polymer (b) is used that has no substituent on the polyolefin other than halogen and halosulfonyl group. In some embodiments, every polymer (b) has no substituent on the polyolefin other than halogen and halosulfonyl group.</p>
+      <p id="p-00018-en" num="0021">In some embodiments, no significant amount of any halogenated polyolefin that is neither a polymer (a) nor a polymer (b) is present. In some embodiments, no halogenated polyolefin that is neither a polymer (a) nor a polymer (b) is present.</p>
+      <p id="p-00019-en" num="0022">As used herein, a “significant amount” of an ingredient is an amount that has an effect on the performance of the composition. In some embodiments, an ingredient that is a polymer or a resin is considered to be present in a significant amount if the ratio of the dry weight of that ingredient to the sum of the dry weights of polymer (a) and polymer (b) is 0.005 or lower.</p>
+      <p id="p-00020-en" num="0023">Each polymer (a) and each polymer (b), independently of each other, may be made by any method. A variety of methods are known in the art. For example, the halogen atoms and/or sulfonyl halide groups may be present on a monomer before polymerization; they may be put onto the polymer after polymerization; or both methods may be used.</p>
+      <p id="p-00021-en" num="0024">In the practice of the present invention, polymer (a) and polymer (b), independently of each other, can be prepared by any of a variety of methods known in the art. The method of preparation is not critical to the present invention. Polymer (a) or polymer (b) can be either made in an aqueous form or else made in some convenient form and then converted to aqueous form. In some embodiments, a polymer (a) or a polymer (b) is made by aqueous emulsion polymerization of one or more ethylenically unsaturated monomer; the resulting polymer may, for example, be stabilized with polyvinyl alcohol, with one or more non-polymeric surfactants, or with a combination thereof.</p>
+      <p id="p-00022-en" num="0025">In some embodiments, one or both of a polymer (a) or a polymer (b) is prepared as a solution in organic solvent. In such embodiments, one or both of the polymer (a) or polymer (b) may be made by solution polymerization and used in that solution, optionally with further dilution, or may be made by any method, isolated, and then dissolved in organic solvent as desired. In embodiments in which one or both of polymer (a) or polymer (b) is in the form of a solution in an organic solvent, such a solution, if desired, may then be converted to an aqueous latex. One method of converting an organic solution of a polymer to a latex is to add surfactant and water to the solution with high shear to emulsify the polymer and then strip away the solvent.</p>
+      <p id="p-00023-en" num="0026">In some embodiments, at least one polymer (a) is polymerized by methods other than aqueous emulsion polymerization. In some embodiments, every polymer (a) that is present in the adhesive composition is polymerized by methods other than aqueous emulsion polymerization. Independently, in some embodiments, at least one polymer (b) is polymerized by methods other than aqueous emulsion polymerization. In some embodiments, every polymer (b) that is present in the adhesive composition is polymerized by methods other than aqueous emulsion polymerization.</p>
+      <p id="p-00024-en" num="0027">In some embodiments, the waterborne composition contains discrete polymer particles dispersed in water, and at least some of such particles contain both polymer (a) and polymer (b). In some embodiments, the amount of polymer (a) that is contained in particles that contain both polymer (a) and polymer (b) is, by dry weight based on the total dry weight of polymer (a), 10% or more; or 20% or more; or 50% or more.</p>
+      <p id="p-00025-en" num="0028">In some embodiments, the waterborne composition contains discrete polymer particles dispersed in water, and at least some of such particles contain all three of polymer (a), polymer (b), and compatibilizer.</p>
+      <p id="p-00026-en" num="0029">In some embodiments, the ratio of the dry weight of polymer (a) to the dry weight of polymer (b) is 0.5 or higher; or 1 or higher; or 2 or higher; or 3 or higher. Independently, in some embodiments, the ratio of the dry weight of polymer (a) to the dry weight of polymer (b) is 10 or lower; or 8 or lower; or 6 or lower; or 5 or lower.</p>
+      <p id="p-00027-en" num="0030">The practice of the present invention involves the use of a compatibilizer selected from epoxy resins, phenolic resins, chlorinated polyolefin, and mixtures thereof. In some embodiments, one or more compatibilizer is used that is insoluble in water. A compound is insoluble in water if less than 1 gram of that compound will dissolve in 100 grams of water at 25° C. In some embodiments, at least one compatibilizer is used that has solubility in 100 grams of water at 25° C. of 0.3 gram or less; or 0.1 gram or less; or 0.03 gram or less. In some embodiments, every compatibilizer that is used is insoluble in water.</p>
+      <p id="p-00028-en" num="0031">As used herein, chlorinated polyolefin is a halogenated polyolefin in which every halogen is chlorine. One suitable chlorinated polyolefin, for example, is chlorinated polyethylene (CPE).</p>
+      <p id="p-00029-en" num="0032">Independently, in some embodiments, at least one compatibilizer is used that is “solvent compatible” with one or both of polymer (a) and polymer (b). Two materials are said herein to be “solvent compatible” with each other if at least one solvent can be found in which each of those two materials is soluble at 25° C. in the amount of 1 gram or more of material per 100 grams of solvent. In some embodiments, at least one compatibilizer is used that is solvent compatible with both polymer (a) and polymer (b). In some embodiments, a solvent is used in which each of polymer (a), polymer (b), and compatibilizer is, individually, soluble in that solvent at 25° C. in the amount of 1 gram or more of material per 100 grams of solvent.</p>
+      <p id="p-00030-en" num="0033">In some embodiments, the ratio of the dry weight of compatibilizer to the sum of the dry weights of polymer (a) and polymer (b) is 0.01 or higher; or 0.03 or higher; or 0.1 or higher; or 0.15 or higher; or 0.2 or higher. Independently, in some embodiments, the ratio of the dry weight of compatibilizer to the sum of the dry weights of polymer (a) and polymer (b) is 0.5 or lower; or 0.4 or lower; or 0.3 or lower.</p>
+      <p id="p-00031-en" num="0034">In some embodiments, the compatibilizer includes at least one epoxy resin. In some embodiments, the composition of the present invention does not include any significant amount (as defined herein above) of phenolic resin. In some embodiments, the composition does not include any phenolic resin. Independently, in some embodiments, the composition of the present invention does not include any significant amount of chlorinated polyolefin. In some embodiments, the composition of the present invention does not include any chlorinated polyolefin.</p>
+      <p id="p-00032-en" num="0035">Among embodiments in which the compatibilizer includes at least one phenolic resin, suitable phenolic resins include, for example, resorcinol type phenolic resins, novalac type phenolic resins, and mixtures thereof.</p>
+      <p id="p-00033-en" num="0036">Among embodiments in which the compatibilizer includes at least one epoxy resin, suitable epoxy resin compositions include, for example, epoxy phenol-novolac, epoxy cresol-novolak, diglycidyl ethers of bisphenol A, triglycidyl isocyanurate resins, N,N,N,N-tetraglycidyl-4,4-diaminodiphenylmethane, similar resins, and mixtures thereof. In some embodiments, the compatibilizer includes one or more epoxy cresol-novolak resin.</p>
+      <p id="p-00034-en" num="0037">Among embodiments in which the compatibilizer includes at least one epoxy resin, independent of the type of epoxy resin composition, the epoxy resin may usefully be characterized by its molecular weight. Some suitable epoxy resins, for example, have molecular weight of 200 or higher; or 500 or higher; or 750 or higher; or 1,000 or higher. Independently, some suitable epoxy resins, for example, have molecular weight of 5,000 or lower; or 2,500 or lower; or 2,000 or lower; or 1,500 or lower.</p>
+      <p id="p-00035-en" num="0038">Among embodiments in which the compatibilizer includes at least one epoxy resin, independent of the type of epoxy resin, the epoxy resin may usefully be characterized by its epoxy value. Some suitable epoxy resins, for example, have epoxy value, in equivalents per kilogram, of 1 or higher; or 2 or higher; or 3 or higher; or 4 or higher. Independently, suitable epoxy resins, for example, have epoxy value, in equivalents per kilogram, of 8 or lower; or 7 or lower; or 6 or lower.</p>
+      <p id="p-00036-en" num="0039">In some embodiments, a composition of the present invention contains one or more additional ingredients. The amount of each such ingredient is characterized by PHR, defined herein as 100 times the ratio of the dry weight of that ingredient to the sum of the dry weights of polymer (a), polymer (b), and compatibilizer.</p>
+      <p id="p-00037-en" num="0040">In some embodiments, a composition of the present invention contains one or more polymeric surfactant. One suitable polymeric surfactant is, for example, polyvinyl alcohol (PVOH). Among embodiments in which polymeric surfactant is used, some suitable amounts of polymeric surfactant are, for example, 1 PHR or more; or 2 PHR or more. Independently, among embodiments in which polymeric surfactant is used, some suitable amounts of polymeric surfactant are, for example, 10 PHR or less; or 8 PHR or less; or 6 PHR or less; or 5 PHR or less.</p>
+      <p id="p-00038-en" num="0041">In some embodiments, a composition of the present invention contains one or more colloid stabilizer. Some suitable colloid stabilizers, for example, are cellulose compounds, including, for example, hydroxyethyl cellulose. Among embodiments in which colloid stabilizer is used, some suitable amounts of colloid stabilizer are, for example, 0.1 PHR or more; or 0.2 PHR or more; or 0.3 PHR or more. Independently, among embodiments in which colloid stabilizer is used, some suitable amounts of colloid stabilizer are, for example, 1 PHR or less; or 0.8 PHR or less; or 0.6 PHR or less.</p>
+      <p id="p-00039-en" num="0042">In some embodiments, a composition of the present invention contains one or more nonionic surfactant. Some suitable nonionic surfactants, for example, are alkoxylates, copolymers of ethylene oxide and propylene oxide, and mixtures thereof. Among the suitable alkoxylates are, for example, ethoxylates, which have the structure</p>
+      <p id="p-00040-en" num="0000">[in-line-formulae]R—O—(—CH<sub>2</sub>CH<sub>2</sub>O—)<sub>x</sub>—H[/in-line-formulae]</p>
+      <p id="p-00041-en" num="0043">where R is an aliphatic group, an aromatic group, an aliphatic-substituted aromatic group, and aromatic-substituted aliphatic group, or a mixture thereof; and x is from 5 to 200. In some embodiments R is alkyl-substituted benzene, with the structure R1-R2-, where R1 is a linear alkyl group and R2 is an aromatic ring. One suitable nonionic surfactant is nonylphenol ethoxylate.</p>
+      <p id="p-00042-en" num="0044">Among embodiments in which nonionic surfactant is used, some suitable amounts of nonionic surfactant are, for example, 3 PHR or more; or 5 PHR or more; or 8 PHR or more. Independently, among embodiments in which nonionic surfactant is used, some suitable amounts of nonionic surfactant are, for example, 30 PHR or less; or 20 PHR or less; or 15 PHR or less.</p>
+      <p id="p-00043-en" num="0045">In some embodiments, a composition of the present invention contains one or more anionic surfactant. Among embodiments in which anionic surfactant is used, some suitable amounts of anionic surfactant are, for example, 3 PHR or more; or 5 PHR or more; or 8 PHR or more. Independently, among embodiments in which anionic surfactant is used, some suitable amounts of anionic surfactant are, for example, 30 PHR or less; or 20 PHR or less; or 15 PHR or less.</p>
+      <p id="p-00044-en" num="0046">In some embodiments, the amount of anionic surfactant in the composition of the present invention in 0.1 PHR or less; or 0.01 PHR or less. In some embodiments, no anionic surfactant is present.</p>
+      <p id="p-00045-en" num="0047">In some embodiments, a composition of the present invention contains one or more polynitroso compound or polynitroso precursor or a mixture thereof. A polynitroso compound is an aromatic hydrocarbon containing at least two nitroso groups attached directly to non-adjacent nuclear carbon atoms. By “nuclear” carbon atom we mean a carbon atom that is part of an aromatic ring. Suitable aromatic compounds may have 1 to 3 aromatic nuclei, including fused aromatic nuclei. Suitable polynitroso compounds may have 2 to 6 nitroso groups attached directly to non-adjacent nuclear carbon atoms. Also included in the class of polynitroso compounds are the substituted polynitroso compounds, in which one or more hydrogen atoms attached to nuclear carbon atoms are replaced by organic or inorganic substituent groups, such as for example alkyl, alkoxy, cycloalkyl, aryl, aralkyl, alkaryl, arylamine, arylnitroso, amino, and halogen. In some embodiments, a composition of the present invention contains one or more polynitroso compound with 2 nitroso groups.</p>
+      <p id="p-00046-en" num="0048">In some embodiments, one or more polynitroso compound is used that has the chemical formula R<sub>m</sub>—Ar—(NO)<sub>2</sub>, where Ar is phenylene or naphthalene; R is a monovalent organic radical having 1 to 20 carbon atoms, an amino group, or a halogen; and m is 0, 1, 2, 3, or 4. If m is greater than 1, the m R groups may be the same or different from each other. R is, in some embodiments, an alkyl, cycloalkyl, aryl, aralkyl, alkaryl, arylamine, or alkoxy radical with 1 to 20 carbon atoms; or R is, in some embodiments, an alkyl group with 1 to 8 carbon atoms. Independently, in some embodiments, the value of m is zero.</p>
+      <p id="p-00047-en" num="0049">Some examples of suitable polynitroso compounds are m-dinitrosobenzene; p-dinitrosobenzene; m-dinitrosonaphthalene; p-dinitrosonaphthalene; 2,5-dinitroso-p-cymene; 2-methyl-1,4-dinitrosobenzene; 2-methyl-5-chloro-1,4-dinitrosobenzene; 2-fluoro-1,4-dinitrosobenzene; 2-methoxy-1,3-dinitrosobenzene; 2-benzyl-1,4-dinitrosobenzene; 2-cyclohexyl-1,4,-dinitrosobenzene; and mixtures thereof. In some embodiments, one or more polynitroso compound is used that is selected from dinitrosobenzenes, substituted dinitrosobenzenes, dinitrosonaphthalenes, substituted dinitrosonaphthalenes, and mixtures thereof.</p>
+      <p id="p-00048-en" num="0050">Also included in the class of polynitroso compounds are compounds as described above which exist in polymeric form (called “polymeric polynitroso compounds” herein), as described in Czerwinski, U.S. Pat. No. 4,308,365, and Hargis et. al., U.S. Pat. No. 5,478,654. In some embodiments, one or more polynitroso compound is used that is selected from the polymeric form of p-dinitrosobenzene, the polymeric form of 1,4-dinitrosonaphthalene, and mixtures thereof. In some embodiments, the polymeric form of 1,4-dinitrosobenzene is used.</p>
+      <p id="p-00049-en" num="0051">A polynitroso precursor is a compound that is capable of a chemical reaction, at least one product of which is a polynitroso compound. Some suitable polynitroso precursors are, for example, compounds that have the structure of compounds that could be made by reduction of any of the polynitroso compounds described herein above. Some suitable precursors are, for example, substituted p-quinone dioximes, p-quinone dioxime, and mixtures thereof.</p>
+      <p id="p-00050-en" num="0052">In some embodiments in which a composition of the present invention contains a polynitroso compound, polynitroso precursor, or mixture thereof, the amount of polynitroso compound, polynitroso precursor, or mixture thereof may be, for example, 0.5 PHR or more; or 1 PHR or more; or 1.5 PHR or more. Independently, in some embodiments, the amount of polynitroso compound, polynitroso precursor, or mixture thereof may be, for example, 40 PHR or less; or 15 PHR or less; or 10 PHR or less; or 5 PHR or less; or 2.5 PHR or less.</p>
+      <p id="p-00051-en" num="0053">In some embodiments, a composition of the present invention contains one or more anti-corrosion pigment. Some suitable anti-corrosion pigments are, for example, lead oxide, zinc oxide, molybdate modified zinc oxide, other pigments, and mixtures thereof. In some embodiments, no anti-corrosion pigment is used. In embodiments in which an anti-corrosion pigment is present, the amount of anti-corrosion pigment may be, for example, 2 PHR or more; or 5 PHR or more; or 8 PHR or more. Independently, in embodiments in which an anti-corrosion pigment is present, the amount of anti-corrosion pigment may be, for example, 20 PHR or less; or 15 PHR or less; or 12 PHR or less.</p>
+      <p id="p-00052-en" num="0054">In some embodiments, a composition of the present invention contains clay. In some embodiments, no clay is used. In embodiments in which clay is present, the amount of clay may be, for example, 2 PHR or more; or 5 PHR or more; or 8 PHR or more. Independently, in embodiments in which clay is present, the amount of clay may be, for example, 20 PHR or less; or 15 PHR or less; or 12 PHR or less.</p>
+      <p id="p-00053-en" num="0055">In some embodiments, a composition of the present invention contains carbon black. In some embodiments, no carbon black is used. In embodiments in which carbon black is present, the amount of carbon black may be, for example, 2 PHR or more; or 5 PHR or more; or 8 PHR or more. Independently, in embodiments in which carbon black is present, the amount of carbon black may be, for example, 20 PHR or less; or 15 PHR or less; or 12 PHR or less.</p>
+      <p id="p-00054-en" num="0056">In some embodiments, a composition of the present invention contains manganese dioxide. In some embodiments, no manganese dioxide is used. In embodiments in which manganese dioxide is present, the amount of manganese dioxide may be, for example, 5 PHR or more; or 10 PHR or more; or 20 PHR or more. Independently, in embodiments in which manganese dioxide is present, the amount of manganese dioxide may be, for example, 60 PHR or less; or 30 PHR or less.</p>
+      <p id="p-00055-en" num="0057">In some embodiments, a composition of the present invention contains one or more dispersant. Dispersants, as used herein, include, for example, polymeric surfactants, polymeric colloid stabilizers, dispersants normally used dispersing for mineral pigments, anionic surfactants, nonionic surfactants, and mixtures thereof. In some embodiments, no dispersant is used. In some embodiments in which one or more dispersant is used, the amount of dispersant may be, for example, 0.5 PHR or more; or 1.0 PHR or more; or 1.5 PHR or more. Independently, in some embodiments in which one or more dispersant is used, the amount of dispersant may be, for example, 10 PHR or less; or 5 PHR or less; or 2.5 PHR or less.</p>
+      <p id="p-00056-en" num="0058">In some embodiments, a composition of the present invention contains one or more amine. In some embodiments in which one or more amine is used, the amount of amine may be, for example, 0.1 PHR or more; or 0.2 PHR or more; or 0.5 PHR or more. Independently, in some embodiments in which one or more amine is used, the amount of amine may be, for example, 4 PHR or less; or 3 PHR or less; or 2 PHR or less.</p>
+      <p id="p-00057-en" num="0059">The waterborne adhesive composition of the present invention may be prepared by any method. Some suitable methods, for example, involve use of a solution in organic solvent. That is, a solution in an organic solvent may be made that contains any one of, any two of, or all three of at least one polymer (a), at least one polymer (b), and at least one compatibilizer. In some embodiments, the organic solvent is not miscible with water. Independently, in some embodiments, a solvent is used that has boiling point less than 100° C. Some suitable organic solvents, for example, are aromatic and substituted aromatic compounds that are liquid at 25° C., including, for example, alkyl aromatic compounds such as, for example, benzene, toluene, or xylene.</p>
+      <p id="p-00058-en" num="0060">In some embodiments that use a solution in organic solvent of one or more of polymer (a), polymer (b), and compatibilizer, such a solution is converted to a latex by a process of emulsification. In such processes, for example, one or more of the following may be added to the solution, usually while high shear rate is maintained: at least one polymeric surfactant, at least one colloid stabilizer, at least one nonionic surfactant, at least one anionic surfactant, or any combination thereof. In some emulsification processes, for example, water may then be added, usually while high shear rate is maintained. In some processes, for example, water is added slowly while high shear rate is maintained; at low levels of water, the solution becomes a water-in-oil emulsion, which converts at high enough water content to an oil-in-water emulsion. An oil-in-water emulsion may, for example, then have organic solvent removed, for example by vacuum stripping. When organic solvent is thus removed, in some embodiments, the amount of residual solvent is, by weight of solvent based on the total weight of the emulsion, 2% or less, or 1% or less, or 0.5% or less. The result of such a process has discrete particles dispersed in water; some of those particles contain one or more of polymer (a), polymer (b), compatibilizer, or a mixture thereof. A dispersion that contains discrete particles of at least one polymer dispersed in water is known herein as a latex.</p>
+      <p id="p-00059-en" num="0061">High shear is normally imparted to a composition by using a device that imparts higher shear than that imparted by an ordinary mixing device. Devices that impart high shear are commonly known, for example, as emulsifiers or homogenizers. Some illustrative examples of such devices are Ross Mixer Emulsifier unit, Cowles Disperser, any inline rotor stator system, and any other equipment designed for mechanical inputting of high shear rates into a water/solvent system</p>
+      <p id="p-00060-en" num="0062">When organic solvent is removed from a latex, any removal method may be used. Some examples of devices that can be used for performing such removal include a stripping vessel with a foam break unit, a thin film evaporator, or any other equipment designed to extract solvent out of the finished emulsion.</p>
+      <p id="p-00061-en" num="0063">In some embodiments, the waterborne adhesive composition is made by providing a latex, for example using the methods described herein above. For example, such a latex may be an “ABC latex,” which is defined herein as a latex that contains at least one polymer (a), at least one polymer (b), and at least one compatibilizer.</p>
+      <p id="p-00062-en" num="0064">In some embodiments involving an ABC latex, for example, the ABC latex may be mixed with one or more dispersion enhancement compounds (defined herein as polymeric surfactants, colloid stabilizers, nonionic surfactants, and anionic surfactants), in addition to any dispersion enhancement compounds that were already added to the ABC latex during the process of forming the ABC latex. In embodiments in which one or more dispersion enhancement compound is added to the ABC latex after formation of the ABC latex, the ratio of the dry weight of all dispersion enhancement compounds added to the ABC latex after formation of the ABC latex to the dry weight of all dispersion enhancement compounds added to the ABC latex during formation of the ABC latex may be, for example, zero; or 0.02 or higher; or 0.05 or higher; or 0.2 or higher; or 0.1 or higher. Independently, the ratio of the dry weight of all dispersion enhancement compounds added to the ABC latex after formation of the ABC latex to the dry weight of all dispersion enhancement compounds added to the ABC latex during formation of the ABC latex may be, for example, 2 or lower; or 1 or lower; or 0.5 or lower; or 0.25 or lower.</p>
+      <p id="p-00063-en" num="0065">Independently, forming the composition of the present invention may, for example, involve mixing an ABC latex with one or more of the following: one or more polynitroso compound, one or more anti-corrosion pigment, clay, carbon black, manganese dioxide, amine, or any mixture of some or all thereof.</p>
+      <p id="p-00064-en" num="0066">In some embodiments, the composition of the present invention does not contain any significant amount (as defined herein above) of any polyisocyanate. A polyisocyanate is a compound having two or more isocyanate groups. In some embodiments, the composition of the present invention does not contain any significant amount of any isocyanate compound. In some embodiments, the composition of the present invention does not contain any polyisocyanate. In some embodiments, the composition of the present invention does not contain any isocyanate compound.</p>
+      <p id="p-00065-en" num="0067">In some embodiments, the waterborne adhesive composition of the present invention is used to bond two or more substrates together. For example, a layer of the waterborne adhesive composition may be applied to a first substrate. In some embodiments, the layer of adhesive composition may optionally be dried before the layer of adhesive composition is brought into contact with any additional substrate. In some embodiments, at least one additional substrate is brought into contact with the layer of adhesive composition.</p>
+      <p id="p-00066-en" num="0068">In some embodiments, a first substrate is used that as metal. One suitable metal is steel. In some of such embodiments, a layer of waterborne adhesive composition is applied to the metal and then dried, optionally at temperature above 25° C. In some embodiments, a layer of an uncured rubber formulation (including green rubber, crosslinking chemicals, and, optionally, other ingredients) is then applied to the layer of (optionally dried) adhesive composition. The article thus formed, in some embodiments, is then heated above 125° C. to cure the rubber formulation.</p>
+      <p id="p-00067-en" num="0069">In some embodiments, a layer of waterborne adhesive composition is applied to a metal substrate and dried. Among such embodiments, a primer may or may not be applied to the metal and dried, and then the layer of the waterborne adhesive of the present invention is applied to the layer of primer. Independently of whether a primer is used, in some embodiments involving a metal substrate, the metal substrate and the dried adhesive composition are prebaked (i.e., heated to the temperature that is appropriate for curing a particular rubber formulation). Then, after the metal substrate and the dried adhesive composition are held at that temperature for a time, a layer of that particular uncured rubber formulation is applied to the layer of dried adhesive formulation, and the article thus formed is held at that temperature for a time sufficient to cure the rubber formulation.</p>
+      <p id="p-00068-en" num="0070">It is to be understood that for purposes of the present specification and claims that the range and ratio limits recited herein can be combined. For example, if ranges of 60 to 120 and 80 to 110 are recited for a particular parameter, it is understood that the ranges of 60 to 110 and 80 to 120 are also contemplated. As a further, independent, example, if a particular parameter is disclosed to have suitable minima of 1, 2, and 3, and if that parameter is disclosed to have suitable maxima of 9 and 10, then all the following ranges are contemplated: 1 to 9, 1 to 10, 2 to 9, 2 to 10, 3 to 9, and 3 to 10.</p>
+      <heading id="h-00004-en" level="1">EXAMPLES</heading>
+      <heading id="h-00005-en" level="1">Example 1</heading>
+      <heading id="h-00006-en" level="1">Latex</heading>
+      <heading id="h-00007-en" level="2">Ingredients Used in Making a Latex:</heading>
+      <p id="p-00069-en" num="0071" />
+      <p id="p-00070-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="84pt" align="left" />
+              <colspec colname="2" colwidth="77pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Latex</entry>
+                  <entry>Latex</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>1A</entry>
+                  <entry>1B-C</entry>
+                </row>
+                <row>
+                  <entry>Ingredient</entry>
+                  <entry>Vendor and Tradename</entry>
+                  <entry>Amount</entry>
+                  <entry>Amount</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Polyvinyl Alcohol (PVOH)</entry>
+                  <entry>Celanese-Celvol ™ 540</entry>
+                  <entry> 0.5%</entry>
+                  <entry> 0.5%</entry>
+                </row>
+                <row>
+                  <entry>CAS#25213-24-5</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Hydroxyethyl Cellulose</entry>
+                  <entry>Dow Chemical Co.</entry>
+                  <entry>0.08%</entry>
+                  <entry>0.08%</entry>
+                </row>
+                <row>
+                  <entry>(HEC) CAS#9004-62-0</entry>
+                  <entry>Cellosize ™ QP-100-M</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Ethoxylated Nononyl Phenol </entry>
+                  <entry>Rhodia-Abex ™ 100</entry>
+                  <entry>0.55%</entry>
+                  <entry>0.55%</entry>
+                </row>
+                <row>
+                  <entry>(ENP) CAS#68649-55-8</entry>
+                  <entry>and Abex ™ 120</entry>
+                  <entry>1.25%</entry>
+                  <entry>1.25%</entry>
+                </row>
+                <row>
+                  <entry>Anionic Surfactant</entry>
+                  <entry>Lanxess-</entry>
+                  <entry>0.17%</entry>
+                  <entry>0.17%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Protowet ™ D-75</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>BPDCD</entry>
+                  <entry>Rohm and Haas</entry>
+                  <entry>10.9%</entry>
+                  <entry>zero</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Company</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>CSM (Chlorosulfonated</entry>
+                  <entry>Dupont-Hypalon ™ 40</entry>
+                  <entry> 2.6%</entry>
+                  <entry>6.02%</entry>
+                </row>
+                <row>
+                  <entry>polyethylene)</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>EPOXY Resin</entry>
+                  <entry>Ciba-Giegy - Ardalite ™ </entry>
+                  <entry> 3.3%</entry>
+                  <entry>zero</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>1299</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Chlorinated Polyethylene</entry>
+                  <entry>Nippon Paper-</entry>
+                  <entry>zero</entry>
+                  <entry>9.06%</entry>
+                </row>
+                <row>
+                  <entry>(CPE)</entry>
+                  <entry>Superchlon ™ HE-1200</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Xylene</entry>
+                  <entry>commodity</entry>
+                  <entry>23.9%</entry>
+                  <entry>23.9%</entry>
+                </row>
+                <row>
+                  <entry>Water</entry>
+                  <entry>commodity</entry>
+                  <entry>56.9%</entry>
+                  <entry> 5.4%</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00008-en" level="2">Polymer Latex was Made as Follows:</heading>
+      <p id="p-00071-en" num="0072">a. BPDCD (40% by weight solution in Xylene) was charged into the vessel to be used to make emulsion, and the agitator was started</p>
+      <p id="p-00072-en" num="0073">b. With agitation, solid CSM polymer and compatibilizing polymer (in solid or liquid form, not in solution) were added and mixed at room temperature until all polymers were dissolved</p>
+      <p id="p-00073-en" num="0074">c. Agitation was increased to maximum for the equipment used (If Cowles mixer was used, agitation was above 3500 rpm; if a mixer emulsifier or a rotor stator was used, agitation was above 5000 rpm; no different effects were observed from using different equipment) Surfactants and colloidal stabilizing materials (the first 4 ingredients in the above list) were added to polymer solution, allowing any solid surfactants to dissolve before proceeding to next material.</p>
+      <p id="p-00074-en" num="0075">d. Once all surfactants were charged and the solution was homogeneous, water was added slowly so that it was added over 60-70 minutes. Once the inversion point was reached, the water addition rate was increased. The inversion point is the point where the viscosity of the emulsion has reached a maximum with a consistency of a thick paste, and additional water, when added rapidly, reduces the viscosity. This is the point at which the emulsion goes from a water in oil emulsion to a oil in water emulsion.</p>
+      <p id="p-00075-en" num="0076">e. Once all of the water was added, the batch was transferred to a stripping vessel, and the batch was then heated to 70-80° C.</p>
+      <p id="p-00076-en" num="0077">f. Once batch reached the desired temperature, the pressure in the vessel was reduced to remove solvent.</p>
+      <p id="p-00077-en" num="0000">Note: for emulsion 1B-C, the CSM and CPE were charged to the solvent and allowed to dissolve, and the process proceeded as described above.</p>
+      <heading id="h-00009-en" level="1">Example 2</heading>
+      <heading id="h-00010-en" level="1">Adhesive Compositions</heading>
+      <p id="p-00078-en" num="0078" />
+      <p id="p-00079-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="77pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="105pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Dry Weight Percent</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="77pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="21pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Example</entry>
+                  <entry>Example</entry>
+                  <entry>Example</entry>
+                  <entry>Example</entry>
+                </row>
+                <row>
+                  <entry>Ingredients</entry>
+                  <entry>Supplier</entry>
+                  <entry>2A</entry>
+                  <entry>2B</entry>
+                  <entry>2C-C</entry>
+                  <entry>2D-C</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="char" char="." />
+              <colspec colname="4" colwidth="28pt" align="char" char="." />
+              <colspec colname="5" colwidth="28pt" align="char" char="." />
+              <colspec colname="6" colwidth="21pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Latex 1A</entry>
+                  <entry>Example 1</entry>
+                  <entry>56.85</entry>
+                  <entry>66.27</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry>Latex 1B-C</entry>
+                  <entry>Example 1</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>56.85</entry>
+                  <entry>66.27</entry>
+                </row>
+                <row>
+                  <entry>polymeric </entry>
+                  <entry>commodity</entry>
+                  <entry>9.95</entry>
+                  <entry>11.60</entry>
+                  <entry>9.95</entry>
+                  <entry>11.60</entry>
+                </row>
+                <row>
+                  <entry>dinitrosobenzene</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Carbon Black-Raven ™</entry>
+                  <entry>Columbian</entry>
+                  <entry>5.69</entry>
+                  <entry>6.63</entry>
+                  <entry>5.69</entry>
+                  <entry>6.63</entry>
+                </row>
+                <row>
+                  <entry>H<sub>2</sub>O</entry>
+                  <entry>Chemical</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Company</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Clay-Polyplate ™ HMT</entry>
+                  <entry>Huber</entry>
+                  <entry>10.00</entry>
+                  <entry>6.63</entry>
+                  <entry>10.0</entry>
+                  <entry>6.63</entry>
+                </row>
+                <row>
+                  <entry>Molywhite 101</entry>
+                  <entry>Dupont</entry>
+                  <entry>5.69</entry>
+                  <entry>6.63</entry>
+                  <entry>5.69</entry>
+                  <entry>6.63</entry>
+                </row>
+                <row>
+                  <entry>Dispersants*</entry>
+                  <entry />
+                  <entry>1.93</entry>
+                  <entry>2.15</entry>
+                  <entry>1.93</entry>
+                  <entry>2.15</entry>
+                </row>
+                <row>
+                  <entry>Starfactant ™ 20 </entry>
+                  <entry>Cognis</entry>
+                  <entry>0.85</entry>
+                  <entry>0.99</entry>
+                  <entry>0.85</entry>
+                  <entry>0.99</entry>
+                </row>
+                <row>
+                  <entry>polymeric Dispersant</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>EFKA ™ 4580 Acrylic</entry>
+                  <entry>EFKA</entry>
+                  <entry>0.85</entry>
+                  <entry>0.99</entry>
+                  <entry>0.85</entry>
+                  <entry>0.99</entry>
+                </row>
+                <row>
+                  <entry>based Dispersant</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Marasperse ™ CBOS-3</entry>
+                  <entry>Lignotech</entry>
+                  <entry>0.23</entry>
+                  <entry>0.27</entry>
+                  <entry>0.23</entry>
+                  <entry>0.27</entry>
+                </row>
+                <row>
+                  <entry>lignosulfonate dispersant</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Manganese Dioxide</entry>
+                  <entry>Kerr</entry>
+                  <entry>25.00</entry>
+                  <entry>0</entry>
+                  <entry>25.00</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>McGee</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00011-en" level="1">Example 3</heading>
+      <heading id="h-00012-en" level="1">Testing of Adhesive Formulations</heading>
+      <p id="p-00080-en" num="0079">Adhesive formulations were tested using the tensile button test (“button” herein) (ASTM D-429A), the 90-degree peel test (“peel” herein) (ASTM D-429B), and the prebake test (also ASTM D-429B). For the 90-degree peel test and the tensile button test, steel bars were cleaned and grit blasted, then primed with Robond™ TR-100 (Rohm and Haas Co.), then coated with adhesive formulation by spray to thickness of 0.0102 mm to 0.0152 mm (0.0004 inch to 0.0006 inch). The adhesive layer was dried at 70° C. for 10 minutes. Then a rubber layer was applied and cured as follows:</p>
+      <p id="p-00081-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="77pt" align="center" />
+              <colspec colname="2" colwidth="119pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>rubber type</entry>
+                  <entry>cure</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>sulfur cured SBR (“R1”)</entry>
+                  <entry>20 minutes at 170° C. (338° F.)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>high sulfur NR (“R2”)</entry>
+                  <entry>20 minutes at 170° C. (338° F.)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>semi EV NR (“R3”)</entry>
+                  <entry>10 minutes at 160° C. (320° F.)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables> Test results were as follows: </p>
+      <p id="p-00082-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="center" />
+              <colspec colname="2" colwidth="56pt" align="left" />
+              <colspec colname="3" colwidth="112pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Adhesive Formulation Sample No.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="center" />
+              <colspec colname="2" colwidth="56pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>rubber layer</entry>
+                  <entry>Test</entry>
+                  <entry>2A</entry>
+                  <entry>2C-C</entry>
+                  <entry>2B</entry>
+                  <entry>2D-C</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="center" />
+              <colspec colname="2" colwidth="56pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="char" char="." />
+              <colspec colname="4" colwidth="28pt" align="char" char="." />
+              <colspec colname="5" colwidth="28pt" align="char" char="." />
+              <colspec colname="6" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>R1</entry>
+                  <entry>peel, in kgf/mm </entry>
+                  <entry>2.16</entry>
+                  <entry>0.10</entry>
+                  <entry>1.98</entry>
+                  <entry>0.66</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(lbf/inch)</entry>
+                  <entry>(121)</entry>
+                  <entry>(5.9)</entry>
+                  <entry>(111)</entry>
+                  <entry>(37)</entry>
+                </row>
+                <row>
+                  <entry>R1</entry>
+                  <entry>prebake, kgf/mm </entry>
+                  <entry>0.86</entry>
+                  <entry>0.82</entry>
+                  <entry>0.75</entry>
+                  <entry>0.71</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(lbf/inch)</entry>
+                  <entry>(48)</entry>
+                  <entry>(46)</entry>
+                  <entry>(42)</entry>
+                  <entry>(40)</entry>
+                </row>
+                <row>
+                  <entry>R1</entry>
+                  <entry>button, in MPa</entry>
+                  <entry>9.06</entry>
+                  <entry>1.23</entry>
+                  <entry>9.20</entry>
+                  <entry>4.61</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(psi)</entry>
+                  <entry>(1314)</entry>
+                  <entry>(178)</entry>
+                  <entry>(1334)</entry>
+                  <entry>(668)</entry>
+                </row>
+                <row>
+                  <entry>R2</entry>
+                  <entry>peel, in kgf/mm </entry>
+                  <entry>2.29</entry>
+                  <entry>0.50</entry>
+                  <entry>1.57</entry>
+                  <entry>0.50</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(lbf/inch)</entry>
+                  <entry>(128)</entry>
+                  <entry>(28)</entry>
+                  <entry>(88)</entry>
+                  <entry>(28)</entry>
+                </row>
+                <row>
+                  <entry>R2</entry>
+                  <entry>prebake, kgf/mm </entry>
+                  <entry>1.84</entry>
+                  <entry>0.93</entry>
+                  <entry>1.79</entry>
+                  <entry>0.39</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(lbf/inch)</entry>
+                  <entry>(103)</entry>
+                  <entry>(52)</entry>
+                  <entry>(100)</entry>
+                  <entry>(22)</entry>
+                </row>
+                <row>
+                  <entry>R2</entry>
+                  <entry>button, in MPa</entry>
+                  <entry>9.62</entry>
+                  <entry>3.54</entry>
+                  <entry>10.37</entry>
+                  <entry>4.93</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(psi)</entry>
+                  <entry>(1395)</entry>
+                  <entry>(513)</entry>
+                  <entry>(1504)</entry>
+                  <entry>(715)</entry>
+                </row>
+                <row>
+                  <entry>R3</entry>
+                  <entry>peel, in kgf/mm </entry>
+                  <entry>0.98</entry>
+                  <entry>0.70</entry>
+                  <entry>1.07</entry>
+                  <entry>0.42</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(lbf/inch)</entry>
+                  <entry>(55)</entry>
+                  <entry>(39)</entry>
+                  <entry>(60)</entry>
+                  <entry>(23.4)</entry>
+                </row>
+                <row>
+                  <entry>R3</entry>
+                  <entry>prebake, kgf/mm </entry>
+                  <entry>0.12</entry>
+                  <entry>0.52</entry>
+                  <entry>0.12</entry>
+                  <entry>0.16</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(lbf/inch)</entry>
+                  <entry>(7)</entry>
+                  <entry>(29)</entry>
+                  <entry>(7)</entry>
+                  <entry>(9)</entry>
+                </row>
+                <row>
+                  <entry>R3</entry>
+                  <entry>button, in MPa</entry>
+                  <entry>8.69</entry>
+                  <entry>5.46</entry>
+                  <entry>8.08</entry>
+                  <entry>4.45</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(psi)</entry>
+                  <entry>(1261)</entry>
+                  <entry>(792)</entry>
+                  <entry>(1172)</entry>
+                  <entry>(645)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00083-en" num="0080">Sample 2A and Comparative Sample 2C-C are similar except that Comparative Sample 2C-C used typical CSM and CPE emulsion found in currently-known waterborne adhesives. Both of these two samples contained manganese dioxide. When these two samples are compared, 2A always has better peel and button results, and 2A usually has better prebake results. It is noted that Sample 2A was not compared to a hypothetical sample containing polymer (a), polymer (b), and no compatibilizer, because such a hypothetical sample is not viable in normal usage because of its poor shelf stability. Thus, Sample 2A is compared with Sample 2C-C, which contains typical CSM and CPE emulsion that is known for use in waterborne adhesives. Sample 2C-C is contemplated to represent the closest adhesive composition to Sample 2A from among previously-known compositions that are viable in normal usage. The results show that Sample 2A gave improved performance, demonstrating that polymer (a) and polymer (b) can be combined to give the benefits of both, without losing shelf stability, as shown in greater detail below.</p>
+      <p id="p-00084-en" num="0081">Similarly, Sample 2B and Comparative Sample 2D-C are similar except that Comparative Sample 2D-C contains typical CSM and CPE emulsion that is known for use in waterborne adhesives. Both of these samples were made without manganese dioxide. The comparison between Sample 2B and Sample 2D-C is the same type of comparison that was made between Samples 2A and 2C-C, as discussed above. When these two samples are compared, 2B always had better peel and button results, and 2B usually had better prebake results.</p>
+      <heading id="h-00013-en" level="1">Example 4</heading>
+      <heading id="h-00014-en" level="1">Shelf Life Testing</heading>
+      <p id="p-00085-en" num="0082">Stability-test sample 4A and Comparative 4B-C were made using the following ingredients. The materials were the same as those listed in Example 1.</p>
+      <p id="p-00086-en" num="0000">
+        <tables id="tables-00005-en" num="00005">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="98pt" align="center" />
+              <colspec colname="2" colwidth="119pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Percent by dry weight:</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="98pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="84pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Ingredient</entry>
+                  <entry>Sample 4A</entry>
+                  <entry>Sample 4B-C</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>BPDCD</entry>
+                  <entry>56.6%</entry>
+                  <entry>70.6%</entry>
+                </row>
+                <row>
+                  <entry>CSM</entry>
+                  <entry>13.5%</entry>
+                  <entry>16.3%</entry>
+                </row>
+                <row>
+                  <entry>Epoxy resin</entry>
+                  <entry>16.8%</entry>
+                  <entry>   0%</entry>
+                </row>
+                <row>
+                  <entry>PVOH</entry>
+                  <entry> 2.5%</entry>
+                  <entry> 2.5%</entry>
+                </row>
+                <row>
+                  <entry>HEC</entry>
+                  <entry> 0.4%</entry>
+                  <entry> 0.4%</entry>
+                </row>
+                <row>
+                  <entry>Protowet ™ D-75</entry>
+                  <entry> 1.0%</entry>
+                  <entry> 1.0%</entry>
+                </row>
+                <row>
+                  <entry>ENP</entry>
+                  <entry> 9.2%</entry>
+                  <entry> 9.2%</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables> Each sample was used to make a latex using the procedure of Example 1. After solvent was removed, each latex was filtered, and the amount of coagulum on the filter was noted as percent weight based on the total weight of the latex (?? or is it solids weight?). The amounts of coagulum were as follows: </p>
+      <p id="p-00087-en" num="0083">Latex 4A: less than 5%</p>
+      <p id="p-00088-en" num="0084">Comparative Latex 4B-C: 5 to 10%.</p>
+      <p id="p-00089-en" num="0000">Both latexes were stored at room temperature (20° C. to 25° C.). Each latex was tested at the time the samples were made and then at various times after that. The latexes were inspected visually to determine whether the latex remained continuous (i.e., whether coagulum had formed) after mixing, since the emulsion will form two phases over time. Also, each latex was subjected during the inspection to mechanical mixing with axial flow impeller of 3.81 cm (1.5 inch) diameter at 120 revolutions per minute, and it was noted whether or not coagulum accumulated on the mixer. Latex was characterized as “ok” if no coagulum accumulated on the mixer and the latex was homogeneous. <br /> Results were as follows: </p>
+      <p id="p-00090-en" num="0000">
+        <tables id="tables-00006-en" num="00006">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <colspec colname="5" colwidth="42pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Latex 4A</entry>
+                  <entry>Latex 4A</entry>
+                  <entry>Latex 4B-C</entry>
+                  <entry>Latex 4B-C</entry>
+                </row>
+                <row>
+                  <entry>Time</entry>
+                  <entry>Appearance</entry>
+                  <entry>Mixing</entry>
+                  <entry>Appearance</entry>
+                  <entry>Mixing</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="14pt" align="right" />
+              <colspec colname="2" colwidth="28pt" align="left" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="49pt" align="center" />
+              <colspec colname="6" colwidth="42pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>0 </entry>
+                  <entry>days</entry>
+                  <entry>continuous</entry>
+                  <entry>not tested</entry>
+                  <entry>continuous</entry>
+                  <entry>not tested</entry>
+                </row>
+                <row>
+                  <entry>30 </entry>
+                  <entry>days</entry>
+                  <entry>continuous</entry>
+                  <entry>not tested</entry>
+                  <entry>continuous</entry>
+                  <entry>Coagulum</entry>
+                </row>
+                <row>
+                  <entry>60 </entry>
+                  <entry>days</entry>
+                  <entry>continuous</entry>
+                  <entry>ok</entry>
+                  <entry>continuous</entry>
+                  <entry>Coagulum</entry>
+                </row>
+                <row>
+                  <entry>90 </entry>
+                  <entry>days</entry>
+                  <entry>continuous</entry>
+                  <entry>not tested</entry>
+                  <entry>hard coagulum</entry>
+                  <entry>severe</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>settles to bottom</entry>
+                  <entry>coagulum</entry>
+                </row>
+                <row>
+                  <entry>180 </entry>
+                  <entry>days</entry>
+                  <entry>continuous</entry>
+                  <entry>ok</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>360 </entry>
+                  <entry>days</entry>
+                  <entry>continuous</entry>
+                  <entry>ok</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>540 </entry>
+                  <entry>days</entry>
+                  <entry>continuous</entry>
+                  <entry>ok</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables> Latex 4A remained continuous and also stable during mixing throughout the test period. Comparative Latex 4B-C showed coagulum on mixing at 30 and 60 days. At 90 days, Comparative Latex 4B-C became useless and could not be further tested. </p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>We claim:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A process for forming a waterborne adhesive composition comprising the steps of
+<claim-text>A. forming a solution in organic solvent comprising
+<claim-text>(a) one or more bromine substituted olefin polymer,</claim-text><claim-text>(b) one or more halosulfonated olefin polymer,</claim-text><claim-text>(c) one or more epoxy resin,</claim-text></claim-text><claim-text>B. adding water to said solution to form an oil in water emulsion, and</claim-text><claim-text>C. then removing said organic solvent.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The process of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the ratio of the dry weight of said epoxy resin to the sum of the dry weights of said polymer (a) and said polymer (b) is 0.1 or higher.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The process of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein every said bromine substituted olefin polymer in said composition is a substituted diene polymer in which there are no monomer units that are not residues of diene molecules.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The process of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said bromine substituted olefin polymer comprises at least one mixed-halogen substituted olefin polymer.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The process of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said halosulfonated olefin polymer comprises chlorosulfonated polyethylene.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said organic solvent is xylene.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said solution in organic solvent further comprises one or more surfactant.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein said surfactant comprises one or more nonionic surfactant.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein said nonionic surfactant is present in an amount of 3 PHR to 15 PHR, wherein PHR is defined as 100 times the ratio of the dry weight of said nonionic surfactant to the sum of the dry weights of said polymer (a), said polymer (b), and said epoxy resin.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said step B is performed under high shear.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said composition additionally comprises polyvinyl alcohol, and wherein said solution in organic solvent additionally comprises polyvinyl alcohol.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein said polyvinyl alcohol is present in an amount of 1 PHR to 10 PHR, wherein PHR is defined as 100 times the ratio of the dry weight of said polyvinyl alcohol to the sum of the dry weights of said polymer (a), said polymer (b), and said epoxy resin. </claim-text>
+    </claim>
+  </claims>
+  <image file="US20150247072A1.PDF" type="pdf" size="538392" pages="9" />
+</lexisnexis-patent-document>

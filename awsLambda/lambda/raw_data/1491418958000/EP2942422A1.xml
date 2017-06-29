@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2942422A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151111" time-inserted="082432" date-changed="20151223" time-changed="194523">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="122017152">
+        <country>EP</country>
+        <doc-number>2942422</doc-number>
+        <kind>A1</kind>
+        <date>20151111</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>15168449</doc-number>
+        <date>20060105</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151111">
+      <priority-claim sequence="1" kind="national">
+        <country>US</country>
+        <doc-number>34416</doc-number>
+        <date>20050112</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>US</country>
+        <doc-number>3441605</doc-number>
+        <kind>A</kind>
+        <date>20050112</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>EP</country>
+        <doc-number>06717466</doc-number>
+        <kind>A</kind>
+        <date>20060105</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>34416</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>06717466.4</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>US20050034416</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>EP20060717466</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151112">
+      <gazette-reference>
+        <date>20151111</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151111</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151111</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151112">
+      <classification-ipcr sequence="1">
+        <text>C23C  22/34        20060101AFI20151006BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>22</main-group>
+        <subgroup>34</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151006</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151112">
+      <classification-cpc sequence="1">
+        <text>C23C  22/34        20130101 FI20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>22</main-group>
+        <subgroup>34</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C23C2222/20        20130101 LA20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>2222</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">8</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151111" lang="ger" format="original">SPÜLBARES VORBEHANDLUNGSVERFAHREN UND ZUSAMMENSETZUNG FÜR METALL</invention-title>
+    <invention-title id="title_eng" date-changed="20151111" lang="eng" format="original">RINSABLE METAL PRETREATMENT METHODS AND COMPOSITIONS</invention-title>
+    <invention-title id="title_fre" date-changed="20151111" lang="fre" format="original">PROCEDES ET COMPOSITIONS DE PRETRAITEMENT D'UN METAL POUVANT ETRE RINCES</invention-title>
+    <references-cited date-changed="20151117">
+      <patent-citations name="patcit" date-changed="20151117" />
+      <non-patent-citations name="nplcit" date-changed="20151117" />
+      <citation>
+        <patcit num="1" dnum="US2003196728A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20030196728</doc-number>
+            <kind>A1</kind>
+            <name>NISHIMURA SATOSHI [JP], et al</name>
+            <date>20031023</date>
+          </document-id>
+          <application-date>
+            <date>20030423</date>
+          </application-date>
+        </patcit>
+        <category>D</category>
+        <category>I</category>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="JP2003313679A" dnum-type="publication number">
+          <document-id>
+            <country>JP</country>
+            <doc-number>2003313679</doc-number>
+            <kind>A</kind>
+            <name>NIPPON PAINT CO LTD</name>
+            <date>20031106</date>
+          </document-id>
+          <application-date>
+            <date>20020423</date>
+          </application-date>
+        </patcit>
+        <category>D</category>
+        <category>I</category>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US2004094235A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20040094235</doc-number>
+            <kind>A1</kind>
+            <name>RODZEWICH EDWARD A [US], et al</name>
+            <date>20040520</date>
+          </document-id>
+          <application-date>
+            <date>20021118</date>
+          </application-date>
+        </patcit>
+        <category>D</category>
+        <category>I</category>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="WO0132952A1" dnum-type="publication number">
+          <document-id>
+            <country>WO</country>
+            <doc-number>0132952</doc-number>
+            <kind>A1</kind>
+            <name>HENKEL CORP [US], et al</name>
+            <date>20010510</date>
+          </document-id>
+          <application-date>
+            <date>20001024</date>
+          </application-date>
+        </patcit>
+        <category>D</category>
+        <category>A</category>
+      </citation>
+      <citation>
+        <patcit num="5" dnum="EP1206977A2" dnum-type="publication number">
+          <document-id>
+            <country>EP</country>
+            <doc-number>1206977</doc-number>
+            <kind>A2</kind>
+            <name>CHEMETALL GMBH [DE]</name>
+            <date>20020522</date>
+          </document-id>
+          <application-date>
+            <date>20011005</date>
+          </application-date>
+        </patcit>
+        <category>A</category>
+      </citation>
+      <citation>
+        <patcit num="6" dnum="EP0437722A1" dnum-type="publication number">
+          <document-id>
+            <country>EP</country>
+            <doc-number>437722</doc-number>
+            <kind>A1</kind>
+            <name>GRACE W R &amp; CO [US]</name>
+            <date>19910724</date>
+          </document-id>
+          <application-date>
+            <date>19901207</date>
+          </application-date>
+        </patcit>
+        <category>A</category>
+      </citation>
+      <citation>
+        <patcit num="7" dnum="US2003196728A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20030196728</doc-number>
+            <kind>A1</kind>
+            <name>NISHIMURA SATOSHI [JP], et al</name>
+            <date>20031023</date>
+          </document-id>
+          <application-date>
+            <date>20030423</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="8" dnum="JP2003313679A" dnum-type="publication number">
+          <document-id>
+            <country>JP</country>
+            <doc-number>2003313679</doc-number>
+            <kind>A</kind>
+            <name>NIPPON PAINT CO LTD</name>
+            <date>20031106</date>
+          </document-id>
+          <application-date>
+            <date>20020423</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="9" dnum="US2004094235A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20040094235</doc-number>
+            <kind>A1</kind>
+            <name>RODZEWICH EDWARD A [US], et al</name>
+            <date>20040520</date>
+          </document-id>
+          <application-date>
+            <date>20021118</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="10" dnum="WO0132952A1" dnum-type="publication number">
+          <document-id>
+            <country>WO</country>
+            <doc-number>0132952</doc-number>
+            <kind>A1</kind>
+            <name>HENKEL CORP [US], et al</name>
+            <date>20010510</date>
+          </document-id>
+          <application-date>
+            <date>20001024</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="11" dnum="US6203854B1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6203854</doc-number>
+            <kind>B1</kind>
+            <name>AFFINITO JOHN C [US]</name>
+            <date>20010320</date>
+          </document-id>
+          <application-date>
+            <date>19980916</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <nplcit num="1">
+          <text>"Corrosion", vol. 2, 1994, BUTTERWORTH-HEINEMANN LTD</text>
+        </nplcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20151111">
+      <division>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>EP</country>
+              <doc-number>06717466.4</doc-number>
+              <date>20060105</date>
+            </document-id>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>EP</country>
+              <doc-number>15168449</doc-number>
+              <date>20060105</date>
+            </document-id>
+          </child-doc>
+        </relation>
+      </division>
+    </related-documents>
+    <parties date-changed="20151111">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Chemetall Corp.</orgname>
+            <registered-number>101151333</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>100 Overlook Center</address-1>
+              <city>Princeton, NJ 08540</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>Rodzewich, Edward, A.</name>
+            <address>
+              <address-1>13 Highland Avenue</address-1>
+              <city>Flourtown, PA Pennsylvania 19031</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>Melzer, Jeffrey, I.</name>
+            <address>
+              <address-1>246 Twining Road</address-1>
+              <city>Lansdale, PA Pennsylvania 19446</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>Deck, Philip, D.</name>
+            <address>
+              <address-1>318 Abington Aveneu</address-1>
+              <city>Glenside, PA Pennsylvania 19038</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4">
+          <addressbook lang="eng">
+            <name>Whisenhunt, Donald, W., Jr</name>
+            <address>
+              <address-1>1338 Dean Street</address-1>
+              <city>Niskayuna, NY New York 12309</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5">
+          <addressbook lang="eng">
+            <name>Carey, William, S.</name>
+            <address>
+              <address-1>1012 Beech Road</address-1>
+              <city>Wallingford, PA Pennsylvania 19086</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6">
+          <addressbook lang="eng">
+            <name>Engel, Davidl, B.</name>
+            <address>
+              <address-1>14 Wild Aster Court</address-1>
+              <city>The Woodlands, TX Texas 77382</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="7">
+          <addressbook lang="eng">
+            <name>Chisholm, Bret</name>
+            <address>
+              <address-1>3710 North Sedona Court</address-1>
+              <city>West Fargo, ND North Dakota 58078</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="8">
+          <addressbook lang="eng">
+            <name>Carter, Christopher, M.</name>
+            <address>
+              <address-1>20047 Tournament Cover South</address-1>
+              <city>Gulfport, MS Mississippi 39503</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Uppena, Franz</name>
+            <registered-number>100737661</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Chemetall GmbH Patente, Marken &amp; Lizenzen Trakehner Strasse 3</address-1>
+              <city>60487 Frankfurt/Main</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151111">
+      <designation-epc>
+        <contracting-states>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>NL</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>TR</country>
+        </contracting-states>
+      </designation-epc>
+    </designation-of-states>
+    <patent-family date-changed="20151203">
+      <main-family family-id="174535918">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2942422</doc-number>
+            <kind>A1</kind>
+            <date>20151111</date>
+          </document-id>
+          <application-date>
+            <date>20060105</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2949781</doc-number>
+            <kind>A1</kind>
+            <date>20151202</date>
+          </document-id>
+          <application-date>
+            <date>20060105</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="174535917">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2942422</doc-number>
+            <kind>A1</kind>
+            <date>20151111</date>
+          </document-id>
+          <application-date>
+            <date>20060105</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2949781</doc-number>
+            <kind>A1</kind>
+            <date>20151202</date>
+          </document-id>
+          <application-date>
+            <date>20060105</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151111" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Chromate-free and metal phosphate free treatments and compositions for applying a conversion or passivation coating for metals, more particularly, steel, zinc coated steel, and aluminum surfaces. The methods of the invention comprise contacting the requisite metal surface with a treatment composition comprising a member or members comprising one or more Group IV B elements, fluoride, and phosphonic acid or phosphonate. Optionally, a silane may be added as a treatment component.</p>
+  </abstract>
+  <legal-data date-changed="20151223">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20151111</date>
+      </publication-date>
+      <event-code-1>AC</event-code-1>
+      <legal-description>DIVISIONAL APPLICATION (ART. 76) OF:</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2942422A1</docdb-publication-number>
+      <docdb-application-id>440509434</docdb-application-id>
+      <corresponding-publication-number>1841898</corresponding-publication-number>
+      <corresponding-authority>
+        <country>EP</country>
+      </corresponding-authority>
+      <corresponding-kind>P</corresponding-kind>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20151111</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2942422A1</docdb-publication-number>
+      <docdb-application-id>440509434</docdb-application-id>
+      <corresponding-kind>A1</corresponding-kind>
+      <legal-designated-states>
+        <country>AT</country>
+        <country>BE</country>
+        <country>BG</country>
+        <country>CH</country>
+        <country>CY</country>
+        <country>CZ</country>
+        <country>DE</country>
+        <country>DK</country>
+        <country>EE</country>
+        <country>ES</country>
+        <country>FI</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>GR</country>
+        <country>HU</country>
+        <country>IE</country>
+        <country>IS</country>
+        <country>IT</country>
+        <country>LI</country>
+        <country>LT</country>
+        <country>LU</country>
+        <country>LV</country>
+        <country>MC</country>
+        <country>NL</country>
+        <country>PL</country>
+        <country>PT</country>
+        <country>RO</country>
+        <country>SE</country>
+        <country>SI</country>
+        <country>SK</country>
+        <country>TR</country>
+      </legal-designated-states>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151111">
+    <heading id="h-00001-en">FIELD OF INVENTION</heading>
+    <p id="p-00001-en" num="0001">The present invention relates to non-chrome containing coatings for metals. More particularly, the present invention relates to rinsable, non-chromate, non-metal phosphate coatings for steel, zinc coated steel, and aluminum surfaces to improve the adhesion of siccative coatings to the surface and provide enhanced corrosion protection.</p>
+    <heading id="h-00002-en">BACKGROUND OF THE INVENTION</heading>
+    <p id="p-00002-en" num="0002">It is well known to those skilled in the art to employ a chromate or phosphate conversion or passivation coating on the surface of metals to impart improved corrosion resistance of bare and painted metal, improve adhesion of coatings, and for aesthetic purposes. For example, see <nplcit id="ncit-00001" npl-type="b"><text>Corrosion, L.L. Sheir, R.A. Jarman, G.T. Burstein, Eds. (3rd Edition, Butterworth-Heinemann Ltd, Oxford, 1994), Volume 2, chapter 15.3</text></nplcit>.</p>
+    <p id="p-00003-en" num="0003">Growing concerns exist regarding the toxicity profile of chromium and the pollution effect of chromates, phosphates and other heavy metals discharged into rivers and waterways by such processes. Because of the high solubility and the strongly oxidizing character of hexavalent chromium ions, conventional chromate conversion processes require extensive water treatment procedures to control their discharge. Phosphate processes also require waste treatment procedures prior to discharge. In addition, the disposal of the solid sludge from such waste treatment procedures is a significant problem.</p>
+    <p id="p-00004-en" num="0004">Accordingly, there is a need in the art to provide an effective non-chromate, non metal phosphate, or reduced phosphate based treatment to inhibit metal surface corrosion and enhance adhesion of paint or other coatings that may be applied to the surface.</p>
+    <p id="p-00005-en" num="0005">
+      <patcit id="pcit-00001" dnum="US20030196728A1"><text>US 2003/0196728 A1</text></patcit> discloses a nonchromate surface-treating agent for aluminium and its alloys comprising a water-soluble Ti/Zr compound, an organic phosphonic acid compound and a tannin. <patcit id="pcit-00002" dnum="JP2003313679A"><text>JP 2003-313679 A</text></patcit> concerns a process with a water-soluble Ti and/or Zr compound and an organic phosphonic acid, which general formulas are disclosed. <patcit id="pcit-00003" dnum="US20040094235A1"><text>US 2004/0094235 A1</text></patcit> teaches a method of coating an aluminium or aluminium alloy metal surface comprising contacting said surface with a chromate free, acidic aqueous treatment solution comprising a (a) water soluble fluoacid of a Group IVB metal or mixtures thereof, (b) fluoboric acid, (c) boric acid, (d) gluconic acid, and, optionally a topping agent (e) selected from the group of (ei) aminosilane adhesion promoter and/or (eii) organophosphonate corrosion inhibitors. <patcit id="pcit-00004" dnum="WO0132952A1"><text>WO 01/32952 A1</text></patcit> describes an acidic aqueous liquid composition comprising water and "fluorometallate" anions of Ti/Zr/Hf/Si/Al/B, divalent or tetravalent cations of Co/Mg/Mn/Zn/Ni/Sn/Cu/Zr/Fe/Sr, phosphorus-containing inorganic oxyanions and phosphonate anions and water-based polymers of modified hydroxy styrene resin.</p>
+    <heading id="h-00003-en">SUMMARY OF THE INVENTION</heading>
+    <p id="p-00006-en" num="0006">Acidic, aqueous solutions or dispersions are provided for contact with the requisite metal surfaces such as steel, zinc coated steel, and aluminum surfaces. The solutions and dispersions are chromate free and provide enhanced corrosion protection and adherence of siccative coatings on the metal surface. These siccative coatings typically include paints, lacquers, inks, varnishes, resins, etc.</p>
+    <p id="p-00007-en" num="0007">The object is solved with an acidic, aqueous composition or dispersion for forming a conversion or passivation coating on metallic surfaces, said composition being free of chromate and comprising a) material or materials comprising one or more elements selected from Group IV B elements, b) fluoride, and c) a phosphonic acid or phosphonate, wherein said phosphonic acid or phosphonate (c) is selected from the group consisting of the formula II, of 3-trihydroxysilylpropylmethylphosphonate, of phosphonic acid [[(2-hydroxyethyl)imino] bis (methylene)] bis-, N oxide - referenced to herein as linear EBO, and of phosphonic acid [tetrahydro-2-hydroxy-4H-1,4,2-oxazaphosphorin-4-yl) methyl]-N,P-dioxide - referred to herein as cyclic EBO, wherein formula II has the structure: <chemistry id="chem-00001-en" num="0001"><img id="img-00001-en" wi="82" he="55" img-content="chem" file="EP2942422A1_00001.PNG" img-format="png" original="imgb0001.tif" /></chemistry> wherein R<sub>1</sub> is PO<sub>3</sub>X<sub>2</sub> or R<sub>2</sub>PO<sub>3</sub>X<sub>2</sub> wherein X<sub>2</sub> is a cation or H; R<sub>2</sub> is C<sub>1</sub>-C<sub>5</sub> alkylene and Z is a member selected from H, halo, C<sub>1</sub>-C<sub>5</sub> alkyl, NO<sub>2</sub> and COOH.</p>
+    <p id="p-00008-en" num="0008">The object is further on solved with a method of coating a metal or metal alloy surface comprising contacting said surface with an effective amount of a chromate free aqueous treatment solution or dispersion comprising (a) a material or materials comprising one or more elements selected from Group IV B elements, (b) fluoride, (c) phosphonic acid or phosphonate, wherein said phosphonic acid or phosphonate (c) is selected from the group consisting of the formula II, of 3-trihydroxysilylpropylmethylphosphonate, of phosphonic acid [[(2-hydroxyethyl)imino] bis (methylene)] bis-, N oxide - referenced to herein as linear EBO, and of phosphonic acid [tetrahydro-2-hydroxy-4H-1,4,2-oxazaphosphorin-4-yl) methyl]-N,P-dioxide - referred to herein as cyclic EBO, wherein formula II has the structure: <chemistry id="chem-00002-en" num="0002"><img id="img-00002-en" wi="82" he="55" img-content="chem" file="EP2942422A1_00002.PNG" img-format="png" original="imgb0002.tif" /></chemistry> wherein R<sub>1</sub> is PO<sub>3</sub>X<sub>2</sub> or R<sub>2</sub>PO<sub>3</sub>X<sub>2</sub> wherein X<sub>2</sub> is a cation or H; R<sub>2</sub> is C<sub>1</sub>-C<sub>5</sub> alkylene and Z is a member selected from H, halo, C<sub>1</sub>-C<sub>5</sub> alkyl, NO<sub>2</sub> and COOH.</p>
+    <p id="p-00009-en" num="0009">The methods of the invention comprise contacting the requisite metal surface with an effective amount of an acidic aqueous composition or dispersion to enhance corrosion protection and adherence of siccative coatings. The chromate and inorganic phosphate free composition or dispersion comprise (a) a material or materials including a Group IV B element; (b) a fluoride source; and (c) phosphonic acid or phosphonate. After contact of the surface with the above composition or dispersion, the coating may be rinsed and dried in place. The surface is then ready for application of a paint, lacquer, varnish, resin, or other siccative coating thereto.</p>
+    <heading id="h-00004-en">DETAILED DESCRIPTION</heading>
+    <p id="p-00010-en" num="0010">The inventors have found that an improved, non-chromate conversion or passivation coating can be provided on metal surfaces, particularly steel surfaces, zinc coated steel and aluminum surfaces. The acidic aqueous compositions or dispersions comprise (a) a material or materials comprising one or more elements selected from the Group IV B elements as set forth in the CAS version of the Periodic Table of Elements. Such elements comprise Zr, Ti, and Hf. Mixtures of these elements may be included. Zr and Ti containing materials are preferred. Exemplary Zr sources are adapted to provide Zr anions in an acidic medium and include a soluble fluozirconate, zirconium fluoride (ZrF<sub>4</sub>), or water soluble zirconium salt such as zirconium nitrate or sulfate. Further, the zirconium source can comprise an ammonium or alkali zirconium salt. Zirconium oxides and Zr metal itself may be used provided it ionizes to Zr anion in an acidic medium. Most preferably, the Zr source comprises fluozirconic acid, H<sub>2</sub>ZrF<sub>6</sub>. Additionally, organic Zr containing compounds may be utilized provided they liberate Zr in the acidic aqueous medium.</p>
+    <p id="p-00011-en" num="0011">The Group IV B element may also comprise Ti. The preferred Ti source is H<sub>2</sub>TiF<sub>6</sub>, but titanium fluorides such as TiF<sub>3</sub> and TiF<sub>4</sub> may also be mentioned. Nitrate, sulfate, ammonium or alkali titanium salts can also be used as well as Ti metal itself. Additionally, organic Ti compounds can be used if they liberate Ti in the acidic medium. Preliminary tests have included use of Ti(iv) isopropoxide as a Ti source component especially if it is reacted with an acidic solution such as H<sub>2</sub>ZrF<sub>6</sub>.</p>
+    <p id="p-00012-en" num="0012">The fluoride source (b) that is used as a component of the acidic treatment or composition may most preferably be the same fluozirconic or fluotitanic acid that may be employed to provide the Ti and/or Zr. It is most preferred that the treatment comprise H<sub>2</sub>ZrF<sub>6</sub> and H<sub>2</sub>TiF<sub>6</sub> which combination will adequately serve as a source of the Zr, Ti, and fluoride. Other suitable F sources include hydrofluoridic acid and salts thereof, alkali metal bifluorides, H<sub>2</sub>SiF<sub>6</sub> and HBF<sub>4</sub>. Again, the source must be capable of liberating F in the medium. Most preferably, the combined Zr, Ti, and F sources liberate fluotitanate and fluozirconate, i.e., (TiF<sub>6</sub>)<sup>-2</sup> and (ZrF<sub>6</sub>)<sup>-2</sup>, in the medium.</p>
+    <p id="p-00013-en" num="0013">The desirable fluoride concentration is that which will combine with the Zr and Ti to form a soluble complex therewith, for example, a fluozirconate and fluotitanate. Generally, at least about 4 moles of fluoride is provided per mole of Zr and Ti present. Zirconium and titanium may be present in the treatment medium in amounts up to slightly greater that their solubility limits.</p>
+    <p id="p-00014-en" num="0014">With regard to component (c) of the formulation, the phosphonic acids and phosphonates, these may be mentioned as including any compounds having the formula <chemistry id="chem-00003-en" num="0003"><img id="img-00003-en" wi="84" he="33" img-content="chem" file="EP2942422A1_00003.PNG" img-format="png" original="imgb0003.tif" /></chemistry> wherein X is H or a cation; R is any organic moiety including alkyl, cycloalkyl, substituted and unsubstituted N and/or P containing heterocyles, aryl, substituted aryl including halogenated aryl and alkyl substituted aryl, substituted alkyl such as aminoalkyl, carboxyalkyl, phosphonoalkyl, alkylimino, hydroxyalkyl, silane substituted alkyl, etc.</p>
+    <p id="p-00015-en" num="0015">The phosphonate may more particularly be selected from phosphonic acids and phosphonates having formulas as per II, and IV, as follows whereas phosphonate (II) has the formula: <chemistry id="chem-00004-en" num="0004"><img id="img-00004-en" wi="82" he="55" img-content="chem" file="EP2942422A1_00004.PNG" img-format="png" original="imgb0004.tif" /></chemistry> wherein R<sub>1</sub> is PO<sub>3</sub>X<sub>2</sub> or R<sub>2</sub>PO<sub>3</sub>X<sub>2</sub>, wherein X<sub>2</sub> is independently chosen from H or a cation, and R<sub>2</sub> is a C<sub>1</sub>-C<sub>5</sub> alkylene, preferably methylene. Z is a member selected from H, halo, C<sub>1</sub>-C<sub>5</sub> alkyl, NO<sub>2</sub>, and COOH. Preferably Z is located in the para position. Exemplary members of this group include 4-bromobenzylphosphonic acid, 4-tertbutylbenzylphosphonic acid, phenylphosphonic acid, 4-hydroxybenzylphosphonic acid, 4-nitrobenzylphosphonic acid, 4-methylbenzylphosphonic acid, 4-carboxybenzylphosphonic acid, and 4-bromobenzyl phosphonate ethyl ester.</p>
+    <p id="p-00016-en" num="0016">The phosphonate can also be chosen from formula IV. <chemistry id="chem-00005-en" num="0005"><img id="img-00005-en" wi="99" he="43" img-content="chem" file="EP2942422A1_00005.PNG" img-format="png" original="imgb0005.tif" /></chemistry> wherein X is as defined above in formula I. R<sub>4</sub> and R<sub>5</sub> are independently chosen from hydrogen, C<sub>1</sub>-C<sub>5</sub> alkyl, C<sub>1</sub>-C<sub>5</sub> hydroxyalkyl, and C<sub>1</sub>-C<sub>5</sub> phosphonoalkyl, with the proviso that R<sub>4</sub> and R<sub>5</sub> may, together as covalently bonded, form a cyclic structure, R<sub>6</sub> may or may not be present and, when present, is chosen from C<sub>1</sub>-C<sub>5</sub> alkylene; Q is N or N oxide (i.e., N=O<sup>+</sup>). Exemplary members of this Group IV include phosphonic acid [[(2-hydroxyethyl)imino] bis (methylene)] bis-, N oxide referenced to herein aslinear EBO -- CAS 137006-87-2; and phosphonic acid [(tetrahydro-2-hydroxy-4H-1,4,2-oxazaphosphorin-4-yl) methyl]-N,P-dioxide CAS 133839-05-01 - referred to herein as cyclic EBO.</p>
+    <p id="p-00017-en" num="0017">Preferably both linear EBO and cyclic EBO are present at once in the form of mixed solution. Based upon preliminary data, a mixture of linear EBO and cyclic EBO is preferred for use. These phosphonates may be prepared via the following preparatory route.</p>
+    <p id="p-00018-en" num="0018">Phosphonate Preparation: Linear EBO and Cyclic EBO Mixture (Group IV)</p>
+    <p id="p-00019-en" num="0019">To a glass reactor vessel equipped with a mechanical stirrer, thermometer, overhead condenser, and addition port are charged 70% aqueous phosphorous acid (2.00 mole) and 32% aqueous hydrochloric acid (0.33 mole). 90% actives paraformaldehyde (2.00 mole) is then added drop wise to the acid solution with mixing. After addition, the reactor contents are heated to 85±2°C under a nitrogen sparge and held for 30 minutes. The nitrogen sparge is then switched to a nitrogen blanket and 99% monoethanolamine (1.00 mole) is charged drop wise over a 1 to 2-hour period while maintaining a batch temperature of 85±2°C. After addition, the batch is heated to 93±2°C and held for 8 hours. After the hold, the batch is cooled and adjusted to pH 9-10 by addition of 50% aqueous sodium hydroxide (3.73 mole). The batch temperature is then adjusted to 40±2°C and 35% aqueous hydrogen peroxide (1.07 mole) is charged drop wise over approximately a 1-hour period with cooling to maintain the batch temperature between 38-52°C. After addition, the batch is held at 50±2°C for 2 hours. The batch is then cooled to room temperature and collected. During the cool down, 50% aqueous gluconic acid (0.005 mole) is charged to the batch.</p>
+    <p id="p-00020-en" num="0020">The product as produced is characterized by 13P NMR as a nominal 1:1 molar ratio of the sodium salts of Linear EBO and Cyclic EBO and is referred collectively hereinafter as EBO. The material is also composed of traces of the sodium salts of residual phosphorous acid, oxidized byproduct phosphoric acid, and byproduct methylenediphosphonic acid. It is a preferred embodiment of the invention to utilize the product as produced without any purification.</p>
+    <p id="p-00021-en" num="0021">Other exemplary phosphonates may be prepared as follows: <ul id="ul-00001-en" list-style="none"><li>Phosphonate Preparation: 4-Bromobenzylphosphonic Acid (BBPA) (Group II)</li><li>4-bromobenzyl bromide (4.4 g, 0.017 mol) was combined with the triethylphosphonate (3.5 g., 3.5 mL, 0.021 mol) and heated at 130°C for 12 hours. The reaction was cooled to room temperature and stored in the dark. The intermediate was dissolved in 20 mL MeCN and treated with solid KI (8.7 g, 0.0525 mol) followed by Me<sub>3</sub>SiCl (5.63 g, 6.6 mL, 0.105 mol). The reaction was stirred for 6 hours at 60°C and cooled to room temperature. The solid KCl was filtered, and the residue was evaporated to dryness. The residue was taken in 10 mL distilled water. The amber oil precipitated in 5 minutes. The solid was fileted and washed with cold hexanes. This gave 3.02 g (70%) of the product as a white-gray powder.</li><li>Phosphonate Preparation: 4-tert-Butylbenzylphosphonic Acid (TBBPA) (Group II)</li><li>4-<i>tert</i>-butylbenzyl bromide (0.91 g, 4.0 mmol) was combined with the triethylphosphonate (0.798 g, 0.836 mL, 4.8 mmol) and heated at 130°C for 24 hours. The reaction was cooled to room temperature and stored in the dark. The intermediate was then dissolved in 5 mL MeCN and treated with solid KI (1.92 g, 11.62 mmol) followed by Me<sub>3</sub>SiCl (1.27 g, 1.47 mL, 11.62 mmol). The reaction was stirred for 12 hours at 60°C and cooled to room temperature. The solid KCl was filtered, and the residue was evaporated to dryness. The residue was taken in 5 mL distilled water. The amber oil precipitated in 5 minutes. The solid was filtered and washed with cold hexanes. This gave 0.80 g (90%) of the product as a white-amber powder.</li></ul></p>
+    <p id="p-00022-en" num="0022">The other substituted benzyl phosphonates of class II are similarly prepared. That is, the corresponding benzyl bromide is used as the starting reactant and then reacted with triethylphosphonate to form the desired substituted benzylphosphonate ester. The ester may be converted to the acid form via conventional techniques or used in its so produced ester form.</p>
+    <p id="p-00023-en" num="0023">All of the other specifically enumerated phosphonates are commercially available.</p>
+    <p id="p-00024-en" num="0024">Additionally, a silane (d) may be included in the acidic treatment composition. Representative silanes include, but are not limited to, alkoxysilane, aminosilane, ureidosilane, glycidoxysilane, or mixtures thereof. Preferred alkoxysilanes and aminosilanes are taught in <patcit id="pcit-00005" dnum="US6203854B"><text>U.S. Patent 6,203,854</text></patcit>. At present, most preferred is ureidopropyltrimethoxy silane available from GE Silicones- OSI under the designation Silquest A 1524.</p>
+    <p id="p-00025-en" num="0025">Preferred acidic, aqueous compositions in accordance with the invention are chromate free and include: <ul id="ul-00002-en" list-style="none"><li>a1) a zirconium source present in an amount of from 0.01 wt% to 10 wt% above its solubility limit;</li><li>a2) a titanium source present in an amount of from 0.01 wt% to 10 wt% above its solubility limit;</li><li>b) a fluoride source wherein fluoride is present in a molar excess relative to the total moles of Zr and Ti present, preferably in a molar excess of at least about four times the total molar amount of Zr and Ti present;</li><li>c) phosphonic acid or phosphonate present in an amount of 0.01-50 wt%; and optionally</li><li>d) a silane.</li></ul></p>
+    <p id="p-00026-en" num="0026">The remainder of the composition comprises water and pH adjustment agent to regulate the pH within the range of 0.5-6. The weight of the acidic aqueous composition is 100 wt%.</p>
+    <p id="p-00027-en" num="0027">In a more specific aspect of the invention, the acidic, aqueous compositions comprise: <ol><li>1) H<sub>2</sub>ZrF<sub>6</sub> in an amount of 0.01-40 wt%;</li><li>2) H<sub>2</sub>TiF<sub>6</sub> in an amount of 0.01-40 wt%;</li><li>3) phosphonic acid or phosphonate in an amount of 0.01-50 wt%;</li><li>4) pH adjustment agent: and</li><li>5) silane in an amount of 0.00-20 wt%;</li></ol> remainder water. The composition, in total, including water is 100 wt%.</p>
+    <p id="p-00028-en" num="0028">Preferred compositions include <ol><li>1) H<sub>2</sub>ZrF<sub>6</sub> in an amount of 0.01-40wt%;</li><li>2) H<sub>2</sub>TiF<sub>6</sub> in an amount of 0.01-40 wt%;</li><li>3) a phosphonic acid or phosphonate selected from the group of (i) Linear EBO and (ii) Cyclic EBO and mixtures of (i) and (ii). These phosphonates are present in a combined amount of 0.01-50 wt%. The remainder of the composition is optional silane (4) in an amount of 0.00-20 wt%, water and pH adjustment agent.</li></ol></p>
+    <p id="p-00029-en" num="0029">The requisite metal surface may be contacted by the treatment in spray, immersion, or other application forms. The treatment may be rinsed and dried with the thus prepared metal surface then ready for application of a siccative coating thereto.</p>
+    <p id="p-00030-en" num="0030">The acidic aqueous solution or dispersion in accordance with the invention is applied to the metal surface to result in a coating weight of greater than 1 milligram per square foot to the treated surface with a weight of 2-500 milligrams per square foot being more preferred. For use in commercial applications, working solutions comprising 3-100 wt%, preferably 10-100 wt% concentration, of the above formulations may be used to contact the desired metal surfaces.</p>
+    <p id="p-00031-en" num="0031">As is customary for commercial applications, additives can be included in the formulation to facilitate formation of the conversion coating. Oxidizing agents such as nitrate, nitrites, chlorates, bromates, and nitro aromatic compounds can be added to speed up and maintain coating formation. Inorganic or organic acids and bases can be added to maintain pH of the working bath.</p>
+    <heading id="h-00005-en">EXAMPLES</heading>
+    <p id="p-00032-en" num="0032">The invention will now be described in conjunction with the following comparative example and working examples. The working examples are to be regarded as being illustrative of certain embodiments of the invention but should not be viewed to restrict the scope of the same.</p>
+    <heading id="h-00006-en">Comparative Example 1</heading>
+    <p id="p-00033-en" num="0033">In order to establish baseline performance, the titanium and zirconium components were evaluated without any additional additives.</p>
+    <heading id="h-00007-en">General Pretreatment Process:</heading>
+    <p id="p-00034-en" num="0034">ACT Laboratories cold rolled steel panels were used.<br /> Clean with 2% Betz Kleen 132 (commercially available from GE Water &amp; Process Technologies) 140°F = 60 °C, 90 second spray.<br /> Rinse - tap water spray applied for 30 seconds.<br /> Pretreat - immersion for 2 minutes at 140°F = 60 °C.<br /> Rinse - De-ionized water flooding rinse for 30 seconds.<br /> Dry - hot air gun.</p>
+    <p id="p-00035-en" num="0035">Formulation: <tables id="tables-00001-en" num="0001"><table frame="all"><tgroup cols="2"><colspec colnum="1" colname="col1" colwidth="24mm" /><colspec colnum="2" colname="col2" colwidth="21mm" /><thead><row><entry valign="top">Components</entry><entry valign="top">Grams/L</entry></row></thead><tbody><row><entry>Ti(iOPr)<sub>4</sub></entry><entry>0.12</entry></row><row><entry>H<sub>2</sub>ZrF<sub>6</sub> (45%)</entry><entry>1.5</entry></row><row><entry>Water</entry><entry>Remaining</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00036-en" num="0036">After pretreatment, panels were painted with a single coat polyester paint system, White Polycron III (AG452W3223), from PPG Industries. The paint was applied and cured per the manufacturer's specifications. After painting, the panels were subjected to Neutral Salt Spray tests (NSS) according to ASTM B-117 at 168 hours and rated for creep from the scribe in accordance with ASTM D-1654 (Table 1). <tables id="tables-00002-en" num="0002"><table frame="none"><title>Table 1</title><tgroup cols="2" colsep="0" rowsep="0"><colspec colnum="1" colname="col1" colwidth="37mm" /><colspec colnum="2" colname="col2" colwidth="37mm" /><thead><row><entry namest="col1" nameend="col2" align="left" valign="top">Neutral Salt Spray Performance Creep from scribe</entry></row></thead><tbody><row><entry>168 Hours Exposure</entry><entry>336 Hours Exposure</entry></row><row><entry>3.4 +/- 1.5 millimeters</entry><entry>6.7 +/- 1.7 millimeters</entry></row></tbody></tgroup></table></tables></p>
+    <heading id="h-00008-en">Example 1</heading>
+    <p id="p-00037-en" num="0037">The following formulations were evaluated to examine the effect of phosphonate addition to the base titanium + zirconium formulation Panels were processed and painted as in Comparative Example 1. Test results are contained in Table 2. The formulations A-1, A-3 to A-5 and A-10 are according to the present invention. <tables id="tables-00003-en" num="0003"><img id="img-00006-en" wi="163" he="108" img-content="table" file="EP2942422A1_00006.PNG" img-format="png" original="imgb0006.tif" /></tables></p>
+    <p id="p-00038-en" num="0038">Abbreviations used: <dl id="dl-00001-en" compact="compact"><dt>Ti(ioPr)<sub>4</sub></dt><dd>= Titanium Isopropoxide</dd><dt>EBO</dt><dd>= mixed linear and cyclic EBOs</dd><dt>Linear EBO</dt><dd>= Phosphonic acid [[(2-hydroxyethyl)imino] bis (methylene)] bis-, N-oxide</dd><dt>Cyclic EBO</dt><dd>= Phosphonic acid [(tetrahydro-2-hydroxy-4H-1,4,2-oxazaphosphorin-4-yl)methyl]-N, P-dioxide</dd><dt>BBPA</dt><dd>= 4-bromobenzylphosphonic acid</dd><dt>CEPA</dt><dd>= 2-carboxyethylphosphonic acid</dd><dt>TEOS</dt><dd>= tetraethylorthosilicate</dd><dt>GPTMS</dt><dd>= glycidoxypropyltrimethoxy silane</dd><dt>UPTMS</dt><dd>= ureidopropyltrimethoxy silane</dd><dt>TBBPA</dt><dd>= 4-tertbutylbenzenephosphonic acid</dd><dt>EDPA</dt><dd>= 1,2-ethylenediphosphonic acid</dd><dt>THSPMP</dt><dd>= 3-trihydroxysilyl propylmethylphosphonate</dd></dl><tables id="tables-00004-en" num="0004"><table frame="none"><title>Table 2</title><tgroup cols="3" colsep="0" rowsep="0"><colspec colnum="1" colname="col1" colwidth="23mm" /><colspec colnum="2" colname="col2" colwidth="29mm" /><colspec colnum="3" colname="col3" colwidth="29mm" /><thead><row><entry valign="top">Formulation</entry><entry namest="col2" nameend="col3" align="center" valign="top">Average Mean Creepage -millimeters.</entry></row><row><entry valign="top" /><entry align="center" valign="top">168 hours</entry><entry align="center" valign="top">336 hours</entry></row></thead><tbody><row><entry>A-1</entry><entry align="center">0.3</entry><entry align="center">1.2</entry></row><row><entry>A-2</entry><entry align="center">1.0</entry><entry align="center">5.4</entry></row><row><entry>C-1</entry><entry align="center">5.0</entry><entry align="center">9.0</entry></row><row><entry>A-3</entry><entry align="center">0.6</entry><entry align="center">1.0</entry></row><row><entry>A-4</entry><entry align="center">0.6</entry><entry align="center">1.9</entry></row><row><entry>A-5</entry><entry align="center">0.8</entry><entry align="center">1.4</entry></row><row><entry>A-6</entry><entry align="center">0.7</entry><entry align="center">2.8</entry></row><row><entry>A-7</entry><entry align="center">1.2</entry><entry align="center">4.9</entry></row><row><entry>A-8</entry><entry align="center">1.7</entry><entry align="center">2.4</entry></row><row><entry>A-9</entry><entry align="center">1.3</entry><entry align="center">3.3</entry></row><row><entry>A-10</entry><entry align="center">3.2</entry><entry align="center">NA</entry></row><row><entry>B 958/P60</entry><entry align="center">1.5</entry><entry align="center" /></row><row><entry>B 1000/P60</entry><entry align="center">1.1</entry><entry align="center" /></row><row><entry>B 958/P95</entry><entry align="center">1.4</entry><entry align="center" /></row></tbody></tgroup></table></tables> B 958/P60; B 1000/P60; and B 958/P95 panels were purchased from ACT Laboratories, Inc..</p>
+    <heading id="h-00009-en">Example 2</heading>
+    <p id="p-00039-en" num="0039">The following additional formulations were prepared and painted as in Comparative Example 1. The formulations X-1 to X-12 are according to the present invention. <tables id="tables-00005-en" num="0005"><table frame="all"><tgroup cols="8"><colspec colnum="1" colname="col1" colwidth="24mm" /><colspec colnum="2" colname="col2" colwidth="21mm" /><colspec colnum="3" colname="col3" colwidth="21mm" /><colspec colnum="4" colname="col4" colwidth="21mm" /><colspec colnum="5" colname="col5" colwidth="21mm" /><colspec colnum="6" colname="col6" colwidth="21mm" /><colspec colnum="7" colname="col7" colwidth="21mm" /><colspec colnum="8" colname="col8" colwidth="21mm" /><thead><row><entry valign="top">Grams/Liter</entry><entry valign="top">X-1</entry><entry valign="top">X-2</entry><entry valign="top">X-3</entry><entry valign="top">X-4</entry><entry valign="top">X-5</entry><entry valign="top">X-6</entry><entry valign="top">X-7</entry></row></thead><tbody><row><entry>Ti(ioPr)<sub>4</sub></entry><entry>0.12</entry><entry>0.24</entry><entry>0.12</entry><entry>0.24</entry><entry>0.12</entry><entry>0.24</entry><entry>0.12</entry></row><row><entry>H<sub>2</sub>ZrF<sub>6</sub>(45%)</entry><entry>1.5</entry><entry>3.0</entry><entry>1.5</entry><entry>3.0</entry><entry>1.5</entry><entry>3.0</entry><entry>1.5</entry></row><row><entry>EBO</entry><entry /><entry /><entry>0.25</entry><entry>0.25</entry><entry>0.25</entry><entry>0.51</entry><entry>2.53</entry></row><row><entry>BBPA</entry><entry>0.07</entry><entry /><entry>0.3</entry><entry /><entry /><entry /><entry /></row><row><entry>PPA</entry><entry /><entry>0.131</entry><entry>0.70</entry><entry>1.4</entry><entry /><entry /><entry>1.0</entry></row><row><entry>Water</entry><entry>Remainder</entry><entry>Remainder</entry><entry>Remainder</entry><entry>Remainder</entry><entry>Remainder</entry><entry>Remainder</entry><entry>Remainder</entry></row><row><entry namest="col1" nameend="col8" align="left" /></row></tbody></tgroup><tgroup cols="8"><colspec colnum="1" colname="col1" colwidth="24mm" /><colspec colnum="2" colname="col2" colwidth="21mm" /><colspec colnum="3" colname="col3" colwidth="21mm" /><colspec colnum="4" colname="col4" colwidth="21mm" /><colspec colnum="5" colname="col5" colwidth="21mm" /><colspec colnum="6" colname="col6" colwidth="21mm" /><colspec colnum="7" colname="col7" colwidth="21mm" /><colspec colnum="8" colname="col8" colwidth="21mm" /><thead><row><entry valign="top">Grams/Liter</entry><entry valign="top">X-8</entry><entry valign="top">X-9</entry><entry valign="top">X-10</entry><entry valign="top">X-11</entry><entry valign="top">X-12</entry><entry valign="top">X-14</entry><entry valign="top">X-15</entry></row></thead><tbody><row><entry>Ti(ioPr)<sub>4</sub></entry><entry>0.24</entry><entry>0.12</entry><entry>0.24</entry><entry>0.12</entry><entry>0.23</entry><entry>0.12</entry><entry>0.24</entry></row><row><entry>H<sub>2</sub>ZrF<sub>6</sub>(45%)</entry><entry>3.0</entry><entry>1.5</entry><entry>3.0</entry><entry>1.5</entry><entry>2.9</entry><entry>1.5</entry><entry>3.0</entry></row><row><entry>EBO</entry><entry>5.0</entry><entry /><entry /><entry /><entry /><entry /><entry /></row><row><entry>BBPA</entry><entry /><entry>0.07</entry><entry>0.13</entry><entry>0.62</entry><entry /><entry /><entry /></row><row><entry>TBBPA</entry><entry /><entry /><entry /><entry /><entry>2.17</entry><entry /><entry /></row><row><entry>Water</entry><entry>Remainder</entry><entry>Remainder</entry><entry>Remainder</entry><entry>Remainder</entry><entry>Remainder</entry><entry>Remainder</entry><entry>Remainder</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00040-en" num="0040">Abbreviations used:<br /> Same as in Example 2, additionally PPA = phenylphosphonic acid. Neutral Spray Salt Tests in accordance with ASTM B-117 and D-1654 were conducted as reported in Example 1. Results are reported in Table 3. <tables id="tables-00006-en" num="0006"><table frame="none"><title>Table 3</title><tgroup cols="3" colsep="0" rowsep="0"><colspec colnum="1" colname="col1" colwidth="23mm" /><colspec colnum="2" colname="col2" colwidth="29mm" /><colspec colnum="3" colname="col3" colwidth="29mm" /><thead><row><entry valign="top">Formulation</entry><entry namest="col2" nameend="col3" align="center" valign="top">Average Mean Creepage -millimeters.</entry></row><row><entry valign="top" /><entry valign="top">168 hours</entry><entry valign="top">336 hours</entry></row></thead><tbody><row><entry>X-1</entry><entry>1.2</entry><entry>3.0</entry></row><row><entry>X-2</entry><entry>2.6</entry><entry>6.3</entry></row><row><entry>X-3</entry><entry>3.3</entry><entry>7.5</entry></row><row><entry>X-4</entry><entry>5.0</entry><entry>10</entry></row><row><entry>X-5</entry><entry>0.9</entry><entry>2.6</entry></row><row><entry>X-6</entry><entry>1.1</entry><entry>2.1</entry></row><row><entry>X-7</entry><entry>3.1</entry><entry>8.75</entry></row><row><entry>X-8</entry><entry>4.9</entry><entry>10.0</entry></row><row><entry>X-9</entry><entry>1.4</entry><entry>2.7</entry></row><row><entry>X-10</entry><entry>1.7</entry><entry>3.8</entry></row><row><entry>X-11</entry><entry>3.3</entry><entry>8.7</entry></row><row><entry>X-12</entry><entry>10.0</entry><entry>NA</entry></row><row><entry>X-14</entry><entry>1.0</entry><entry>3.9</entry></row><row><entry>X-15</entry><entry>1.5</entry><entry>3.1</entry></row></tbody></tgroup></table></tables></p>
+    <heading id="h-00010-en">Example 3</heading>
+    <p id="p-00041-en" num="0041">Additional phosphonates were evaluated as in Example 1. A base formulation of Ti and Zr components was prepared as follows:<br /> Base Formulation: <tables id="tables-00007-en" num="0007"><table frame="all"><tgroup cols="2"><colspec colnum="1" colname="col1" colwidth="24mm" /><colspec colnum="2" colname="col2" colwidth="21mm" /><thead><row><entry valign="top">Components</entry><entry valign="top">Grams/L</entry></row></thead><tbody><row><entry>Ti(iOPr)<sub>4</sub></entry><entry>0.12</entry></row><row><entry>H<sub>2</sub>ZrF<sub>6</sub> (45%)</entry><entry>1.5</entry></row><row><entry>Water</entry><entry>Remaining</entry></row></tbody></tgroup></table></tables> Neutral salt spray results are reported in Table 4. <tables id="tables-00008-en" num="0008"><table frame="all"><title>Table 4</title><tgroup cols="5"><colspec colnum="1" colname="col1" colwidth="12mm" /><colspec colnum="2" colname="col2" colwidth="65mm" /><colspec colnum="3" colname="col3" colwidth="32mm" /><colspec colnum="4" colname="col4" colwidth="29mm" /><colspec colnum="5" colname="col5" colwidth="29mm" /><thead><row><entry align="center" valign="top">Exs.</entry><entry align="center" valign="top">Phosphonate</entry><entry align="center" valign="top">Phosphonate Level (grams/L)</entry><entry align="center" valign="top">168 hours NSS (mm creep)</entry><entry align="center" valign="top">336 hours NSS (mm creep)</entry></row></thead><tbody><row><entry align="center">CE</entry><entry>2-Carboxyethylphosphonic Acid</entry><entry align="center">0.5</entry><entry align="center">0.7</entry><entry align="center">2.8</entry></row><row><entry align="center">E</entry><entry>4-Bromobenzylphosphonic Acid</entry><entry align="center">0.5</entry><entry align="center">0.3</entry><entry align="center">1.2</entry></row><row><entry align="center">E</entry><entry>4-tertbutylbenzenephosphonic Acid</entry><entry align="center">0.5</entry><entry align="center">1.7</entry><entry align="center">2.3</entry></row><row><entry align="center">E</entry><entry>3-Trihydroxysilylpropylmethylphosphonate</entry><entry align="center">0.5</entry><entry align="center">0.8</entry><entry align="center">1.4</entry></row><row><entry align="center">E</entry><entry>4-hydroxybenzylphosphonic acid</entry><entry align="center">0.25</entry><entry align="center">0.7</entry><entry align="center">1.0</entry></row><row><entry align="center">E</entry><entry>4-nitrobenzylphosphonic acid</entry><entry align="center">0.25</entry><entry align="center">1.1</entry><entry align="center">1.4</entry></row><row><entry align="center">E</entry><entry>4-methylbenzylphosphonic acid</entry><entry align="center">0.25</entry><entry align="center">1.3</entry><entry align="center">1.5</entry></row><row><entry align="center">E</entry><entry>4-Bromobenzyl phosphonate ester</entry><entry align="center">0.25</entry><entry align="center">0.9</entry><entry align="center">1.4</entry></row><row><entry align="center">E</entry><entry>Bromophenyltrimethoxysilane</entry><entry align="center">0.5</entry><entry align="center">0.8</entry><entry align="center">1.4</entry></row><row><entry align="center">CE</entry><entry>Iminobis(methylphosphonic acid)</entry><entry align="center">0.1</entry><entry align="center">1.0</entry><entry align="center">2.7</entry></row><row><entry align="center">CE</entry><entry>tert-butylphosphonic Acid</entry><entry align="center">0.1</entry><entry align="center">0.7</entry><entry align="center">1.5</entry></row><row><entry align="center">E</entry><entry>EBO phosphonate</entry><entry align="center">0.25</entry><entry align="center">* 1.5 +/-0.4</entry><entry align="center">*2.5 +/-0.6</entry></row><row><entry align="center">CE</entry><entry>*Zinc phosphate/chrome sealed</entry><entry align="center">B 958/P60</entry><entry align="center">0.91</entry><entry align="center">1.85</entry></row><row><entry align="center">CE</entry><entry>*Zinc phosphate/non-chrome sealed</entry><entry align="center">B 958/P95</entry><entry align="center">0.95</entry><entry align="center">1.93</entry></row></tbody></tgroup><tgroup cols="5" rowsep="0"><colspec colnum="1" colname="col1" colwidth="12mm" /><colspec colnum="2" colname="col2" colwidth="65mm" /><colspec colnum="3" colname="col3" colwidth="32mm" /><colspec colnum="4" colname="col4" colwidth="29mm" /><colspec colnum="5" colname="col5" colwidth="29mm" /><tbody><row><entry namest="col1" nameend="col5" align="justify">Note - NSS results are averages of 2 panels. * Average of 20 panels.  E = Examples according to the present invention. CE = Comparison Examples.</entry></row></tbody></tgroup></table></tables></p>
+    <heading id="h-00011-en">Example 4</heading>
+    <p id="p-00042-en" num="0042">To further evaluate the performance of the invention, the following formulations were prepared and tested. Multiple baths of each composition were prepared and used so that a number of replicates could be produced. The NSS results are the average of twenty panels run through each composition. Panels were processed as in Example 1. <tables id="tables-00009-en" num="0009"><table frame="all"><tgroup cols="3"><colspec colnum="1" colname="col1" colwidth="45mm" /><colspec colnum="2" colname="col2" colwidth="14mm" /><colspec colnum="3" colname="col3" colwidth="12mm" /><thead><row><entry valign="top">Bath component</entry><entry valign="top">A (CE)</entry><entry valign="top">B (E)</entry></row></thead><tbody><row><entry>Fluozirconic acid (45%)</entry><entry>1.5 g/L</entry><entry>1.5</entry></row><row><entry>Fluotitanic acid (60%)</entry><entry>0.12</entry><entry>0.12</entry></row><row><entry>EBO phosphonate</entry><entry /><entry>0.25</entry></row><row><entry>168 hour NSS creepage (mm)</entry><entry>3.4</entry><entry>1.5</entry></row><row><entry>336 hour NSS creepage (mm)</entry><entry>6.8</entry><entry>2.5</entry></row></tbody></tgroup></table></tables></p>
+    <heading id="h-00012-en">Example 5</heading>
+    <p id="p-00043-en" num="0043">In order to illustrate the use of oxidizing and pH adjustment agents the following examples were prepared.</p>
+    <p id="p-00044-en" num="0044">CRS panels from ACT Laboratories were prepared by the following process sequence: <ul id="ul-00003-en" list-style="none" compact="compact"><li>Clean for 60 s at 140°F = 60 °C in an alkaline cleaner (Kleen 132).</li><li>Rinse with water for 15 s.</li><li>Treat - spray application at 120°F = 47 °C and 10 psi for 30.</li><li>Rinse with deionized water for 10 s.</li><li>Warm air dry.</li></ul></p>
+    <p id="p-00045-en" num="0045">The formulations A to E are according to the present invention. <tables id="tables-00010-en" num="0010"><table frame="all"><tgroup cols="6"><colspec colnum="1" colname="col1" colwidth="44mm" /><colspec colnum="2" colname="col2" colwidth="17mm" /><colspec colnum="3" colname="col3" colwidth="12mm" /><colspec colnum="4" colname="col4" colwidth="12mm" /><colspec colnum="5" colname="col5" colwidth="12mm" /><colspec colnum="6" colname="col6" colwidth="12mm" /><thead><row><entry align="center" valign="top">Bath component</entry><entry align="center" valign="top">A</entry><entry align="center" valign="top">B</entry><entry align="center" valign="top">C</entry><entry align="center" valign="top">D</entry><entry align="center" valign="top">E</entry></row></thead><tbody><row><entry>Fluozirconic acid (45%)</entry><entry align="center">0.75 g/L</entry><entry align="center">0.75</entry><entry align="center">2.2</entry><entry align="center">1.5</entry><entry align="center">1.5</entry></row><row><entry>Fluotitanic acid (60%)</entry><entry align="center">0.18</entry><entry align="center">0.06</entry><entry align="center">0.06</entry><entry align="center">0.12</entry><entry align="center">0.12</entry></row><row><entry>EBO phosphonate</entry><entry align="center">0.38</entry><entry align="center">0.38</entry><entry align="center">0.38</entry><entry align="center">0.25</entry><entry align="center">0.25</entry></row><row><entry>Boric acid</entry><entry align="center">0.30</entry><entry align="center">0.30</entry><entry align="center">0.30</entry><entry align="center">0.80</entry><entry align="center">0.20</entry></row><row><entry>Na nitrobenzenesulfonate</entry><entry align="center">1.0</entry><entry align="center">1.0</entry><entry align="center">1.0</entry><entry align="center">0.80</entry><entry align="center">0.80</entry></row><row><entry>Sodium nitrate</entry><entry align="center">0.70</entry><entry align="center">0.70</entry><entry align="center">0.70</entry><entry align="center">0.70</entry><entry align="center">0.70</entry></row><row><entry>Fe (added as FeSO<sub>4</sub> ·7H<sub>2</sub>O)</entry><entry align="center">0.04</entry><entry align="center">0.04</entry><entry align="center">0.04</entry><entry align="center">0.04</entry><entry align="center">0.04</entry></row><row><entry>Bath pH</entry><entry align="center">4.8</entry><entry align="center">4.8</entry><entry align="center">4.8</entry><entry align="center">5.0</entry><entry align="center">4.0</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00046-en" num="0046">Panels were painted with Polycron paint and performance evaluated at 240 hour neutral salt spray exposure. <tables id="tables-00011-en" num="0011"><table frame="all"><title>Table 5</title><tgroup cols="7"><colspec colnum="1" colname="col1" colwidth="39mm" /><colspec colnum="2" colname="col2" colwidth="14mm" /><colspec colnum="3" colname="col3" colwidth="14mm" /><colspec colnum="4" colname="col4" colwidth="14mm" /><colspec colnum="5" colname="col5" colwidth="14mm" /><colspec colnum="6" colname="col6" colwidth="14mm" /><colspec colnum="7" colname="col7" colwidth="29mm" /><thead><row><entry valign="top" /><entry align="center" valign="top">A</entry><entry align="center" valign="top">B</entry><entry align="center" valign="top">C</entry><entry align="center" valign="top">D</entry><entry align="center" valign="top">E</entry><entry align="center" valign="top">*B 958/no seal</entry></row></thead><tbody><row><entry>mm creep from scribe</entry><entry align="center">2.2</entry><entry align="center">2.5</entry><entry align="center">2.7</entry><entry align="center">3.8</entry><entry align="center">5.3</entry><entry align="center">3.4</entry></row></tbody></tgroup><tgroup cols="7" rowsep="0"><colspec colnum="1" colname="col1" colwidth="39mm" /><colspec colnum="2" colname="col2" colwidth="14mm" /><colspec colnum="3" colname="col3" colwidth="14mm" /><colspec colnum="4" colname="col4" colwidth="14mm" /><colspec colnum="5" colname="col5" colwidth="14mm" /><colspec colnum="6" colname="col6" colwidth="14mm" /><colspec colnum="7" colname="col7" colwidth="29mm" /><tbody><row><entry namest="col1" nameend="col7" align="justify">* B 958 - a zinc phosphate non-sealed pretreated panel purchased from ACT Laboratories Inc..</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00047-en" num="0047">While the invention has been described with respect to particular embodiments, it is apparent that numerous other forms and modifications of the inventions will be obvious to those skilled in the art. The appended claims and this invention generally should be construed to cover all such obvious forms and modifications which are within the true spirit and scope of the invention.</p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151111">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>A method of coating a metal or metal alloy surface comprising contacting said surface with an effective amount of a chromate free aqueous treatment solution or dispersion comprising (a) a material or materials comprising one or more elements selected from Group IV B elements, (b) fluoride, (c) phosphonic acid or phosphonate, wherein said phosphonic acid or phosphonate (c) is selected from the group consisting of phosphonic acid [[(2-hydroxyethyl)imino] bis (methylene)] bis-, N oxide - referenced to herein as linear EBO, and phosphonic acid [(tetrahydro-2-hydroxy-4H-1,4,2-oxazaphosphorin-4-yl) methyl]-N,P-dioxide - referred to herein as cyclic EBO.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The method as recited in claim 1, wherein (a) comprises H<sub>2</sub>ZrF<sub>6</sub> and H<sub>2</sub>TiF<sub>6</sub>.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The method as recited in claim 1, wherein said phosphonic acid or phosphonate (c) comprises linear EBO, or cyclic EBO, or mixtures thereof.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en" independent="true">
+      <claim-text>An acidic, aqueous composition or dispersion for forming a conversion or passivation coating on metallic surfaces, said composition being free of chromate and comprising a) material or materials comprising one or more elements selected from Group IV B elements, b) fluoride, and c) a phosphonic acid or phosphonate, wherein said phosphonic acid or phosphonate (c) is selected from the group consisting of phosphonic acid [[(2-hydroxyethyl)imino] bis (methylene)] bis-, N oxide - referenced to herein as linear EBO, and of phosphonic acid [(tetrahydro-2-hydroxy-4H-1,4,2-oxazaphosphorin-4-yl) methyl]-N,P-dioxide - referred to herein as cyclic EBO.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>The composition as recited in claim 4, wherein (a) comprises H<sub>2</sub>ZrF<sub>6</sub> and H<sub>2</sub>TiF<sub>6</sub>.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>The composition as recited in claim 4, wherein said phosphonic acid or phosphonate (c) comprises linear EBO or cyclic EBO or mixtures thereof.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>The composition as recited in claim 4, said composition comprising an acidic aqueous solution or dispersion of
+<claim-text>1) H<sub>2</sub>ZrF<sub>6</sub> in an amount of 0.01-40 wt%;</claim-text><claim-text>2) H<sub>2</sub>TiF<sub>6</sub> in an amount of 0.01-40 wt%;</claim-text><claim-text>3) a phosphonic acid or phosphonate (c) in an amount of 0.01-50 wt%;</claim-text><claim-text>4) pH adjustment agent; and</claim-text><claim-text>5) silane in an amount of 0.00-20 wt%;<br />
+remainder water to equal 100 wt%.</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>The composition as recited in claim 7, wherein said phosphonic acid or phosphonate is linear EBO, cyclic EBO, or mixtures thereof.</claim-text>
+    </claim>
+  </claims>
+  <drawings>
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2942422A1_00001.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0001.tif" inline="yes" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2942422A1_00002.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0002.tif" inline="yes" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP2942422A1_00003.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0003.tif" inline="yes" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="EP2942422A1_00004.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0004.tif" inline="yes" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="EP2942422A1_00005.PNG" alt="chemical image" img-content="chem" img-format="png" original="imgb0005.tif" inline="yes" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="EP2942422A1_00006.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0006.tif" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="EP2942422A1.PDF" type="pdf" size="249584" pages="15" />
+</lexisnexis-patent-document>

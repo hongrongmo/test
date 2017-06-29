@@ -1,0 +1,1108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150252026A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021749" date-changed="20151117" time-changed="080550">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121229021">
+        <country>US</country>
+        <doc-number>20150252026</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14429736</doc-number>
+        <date>20130919</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150910">
+      <priority-claim sequence="1" kind="regional">
+        <country>EP</country>
+        <doc-number>12185460</doc-number>
+        <date>20120921</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150917">
+      <classification-ipcr sequence="1">
+        <text>C07D 403/14        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>403</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150917">
+      <classification-cpc sequence="1">
+        <text>C07D 403/14        20130101 FI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>403</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">24</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">4-(INDOLYL OR BENZIMIDAZOLYL)AMINO-2-(2-(INDOL-3-YL)ETHYL)AMINOPYRIMIDINES USEFUL FOR THE TREATMENT OF CANCER</invention-title>
+    <references-cited date-changed="20151117">
+      <patent-citations name="patcit" date-changed="20151117" />
+      <non-patent-citations name="nplcit" date-changed="20151117" />
+      <citation>
+        <patcit num="1" dnum="US9006241B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>9006241</doc-number>
+            <kind>B2</kind>
+            <name>HÖGBERG MARITA [SE], et al</name>
+            <date>20150414</date>
+          </document-id>
+          <application-date>
+            <date>20120323</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <nplcit num="1">
+          <text>Li et al., Suppressino of cancer relapse and metastasis by inhibiting cancer stemness, PNAS, Vol. 112, No. 6, pp. 1839-1844 (2015).</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-84922611324&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="2">
+          <text>Johnson et al., Relationships between drug activity in NCI preclinical in vitro and in vivo models and early clinical trials, British Journal of Cancer, 84(10):1424-1431,2001.</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-2042458747&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="3">
+          <text>Pearce et al., Failure modes in anticancer drug discovery and development, Cancer Drug Design and Discovery Edited by Stephen Neidle, Chapter 18, pp. 424-435 (2008).</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="4">
+          <text>Simone, Oncology: Introduction, Cecil Textbook of Medicine, 20th Edition, Vol. 1, pp. 1004-101 O, 1995.</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="5">
+          <text>Gura et al., Systems for identifying new drugs are often faulty, Science, 278:1041-1042, 1997.</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-0030695955&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="6">
+          <text>Douglas, Jr., Introduction to Viral Diseases, Cecil Textbook of Medicine, 20th Edition, Vol. 2, pp. 1739-1747, 1996.</text>
+        </nplcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20150910">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61777241</doc-number>
+          <date>20130312</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>NOVIGA RESEARCH AB</orgname>
+            <role>03</role>
+            <address>
+              <city>Tullinge</city>
+              <country>SE</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Johansson</last-name>
+            <first-name>Tommy</first-name>
+            <address>
+              <city>Svartsjo</city>
+              <country>SE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Smitt</last-name>
+            <first-name>Olof</first-name>
+            <address>
+              <city>Sodertalje</city>
+              <country>SE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Dahlstedt</last-name>
+            <first-name>Emma</first-name>
+            <address>
+              <city>Huddinge</city>
+              <country>SE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Högberg</last-name>
+            <first-name>Marita</first-name>
+            <address>
+              <city>Tullinge</city>
+              <country>SE</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>EP13069477</doc-number>
+        <date>20130919</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014044755</doc-number>
+        <date>20140327</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150910">
+      <main-family family-id="164879163">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252026</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20130919</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2711364</doc-number>
+            <kind>A1</kind>
+            <date>20140326</date>
+          </document-id>
+          <application-date>
+            <date>20120921</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="164905949">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014044755</doc-number>
+            <kind>A1</kind>
+            <date>20140327</date>
+          </document-id>
+          <application-date>
+            <date>20130919</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2897952</doc-number>
+            <kind>A1</kind>
+            <date>20150729</date>
+          </document-id>
+          <application-date>
+            <date>20130919</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2711364</doc-number>
+            <kind>A1</kind>
+            <date>20140326</date>
+          </document-id>
+          <application-date>
+            <date>20120921</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252026</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20130919</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The invention provides novel indole-and benzimidazole-substituted diaminopyrimidines of formula I, to methods of preparing such compounds, to pharmaceutical compositions containing such compounds, and to methods for using such compounds treatment of diseases including cancer; wherein R<sup>1</sup>-R<sup>3 </sup>are as defined in the specification.</p>
+    <p id="p-a-00002-en" num="0000">
+      <chemistry id="chema-00001-en" num="00001">
+        <img id="imga-00001-en" he="35.64mm" wi="66.72mm" alt="embedded image" img-content="chem" file="US20150252026A1_00001.PNG" img-format="png" original="US20150252026A1-20150910-C00001.TIF" />
+      </chemistry>
+    </p>
+  </abstract>
+  <legal-data date-changed="20150925">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150417</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015252026A1</docdb-publication-number>
+      <docdb-application-id>444310119</docdb-application-id>
+      <new-owner>NOVIGA RESEARCH AB, SWEDEN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:JOHANSSON, TOMMY;SMITT, OLOF;DAHLSTEDT, EMMA;AND OTHERS;SIGNING DATES FROM 20150323 TO 20150401;REEL/FRAME:035431/0596</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF INVENTION</heading>
+      <p id="p-00001-en" num="0001">This invention relates to novel indole-and benzimidazole-substituted diaminopyrimidines, to methods of preparing such compounds, to pharmaceutical compositions containing such compounds, and to methods for using such compounds in treatment of diseases including cancer.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF INVENTION</heading>
+      <p id="p-00002-en" num="0002">Cancer is a major and often fatal disease. Accordingly, the development of new therapies for cancer is an ongoing process of outmost importance. The majority of cancers are present as solid tumours, such as lung cancer, breast cancer, and prostate cancer, while others represent haematological malignancies, such as leukemias, lymphomas, and multiple myeloma.</p>
+      <p id="p-00003-en" num="0003">One important molecular target for the cancer chemotherapy is tubulin. The targeting drugs in this therapy interrupt microtubule spindle-mediated chromosome segregation, arrest the dividing tumor cells in mitosis and subsequently induce apoptosis. Existing drugs are targeting microtubules via two different mechanisms, e.g. molecules of the taxane class (that stabilize the tubulins) and several vinca alkaloids (destabilizers). The potency, efficacy, and widespread clinical use of these agents of natural origin in a variety of cancers, e.g. breast, ovarian, prostate, lung, leukemias, and lymphomas, stand testament to the importance of tubulin and its role in cancer growth. Derivatives and analogs of these plant compounds are constantly being isolated or synthesized to find more efficacious anticancer agents. For examples of novel tubulin polymerization inhibitors, see e.g. WO2009/070645, US2010/0279410, Mahindroo, N. et al.; Expert Opin. Ther. Patents 2006, 16, 647-691; Carlson, R.; Expert Opin. Ther. Patents 2007, 17, 707-722; and Chen, S-M. et al.; Expert Opin. Investig. Drugs 2010, 19, 329-343.</p>
+      <p id="p-00004-en" num="0004">A number of small molecule tubulin-acting agents under development have been shown not only to exert their effect on dividing cells, but also to disrupt existing blood vessels in tumors (Lu, Y.et al., Pharm. Res. 2012, 29(11): 2943-71). The mechanism of action of these compounds, called vascular disrupting agents, is therefore broader and the compounds can possibly have effect on other diseases with deregulated blood vessels such as age-related macular degeneration in the eye.</p>
+      <p id="p-00005-en" num="0005">In the clinic cancer chemotherapy is used in attempts to cure or palliate the disease. In most cases this therapy is delivered in the form of combination chemotherapy, i.e. when two or more drugs having different modes of action are used together in order to optimise the effect on the cancer cells and to minimise side effects. The results obtained with chemotherapy vary according to tumour type. Some tumours are very sensitive and the treatment has a high probability of leading to beneficial treatment results including cure of the disease. Examples of this type of tumours are acute leukemias, malignant lymphomas, testicular cancer, chorion carcinomas, and Wilms tumour. Other types of cancer chemotherapy can result in effective palliation and prolonged survival. Examples of such tumours are breast cancer, colorectal cancer, ovarian cancer, small-cell lung cancer, bladder cancer, multiple myeloma, and chronic leukemias of both the lymphatic and myeloid type. Primary drug resistant tumours which respond poorly to classical chemotherapy include malignant glioma, melanoma, prostate cancer, sarcomas, and gastrointestinal tumours other than colorectal cancers (e.g. DeVita, Hellman, and Rosenberg; Cancer: Principles &amp; Practice of Oncology, 8th Edition ISBN: 978-0-7817-7207-5).</p>
+      <p id="p-00006-en" num="0006">During the recent decade much interest has been devoted to drugs directed to specific target molecules. Molecules regulating cell proliferation and death, such as Tyrosine Kinase Receptors (RTKs) for growth factors, are among targets for this type of therapeutic approach. Two classes of compounds targeting RTKs are currently used in clinical practice: monoclonal antibodies and tyrosine kinase inhibitors. The first approved targeted therapies were trastuzumab, a monoclonal antibody against HER2, for treatment of metastatic breast cancer, and imatinib, a small tyrosine kinase inhibitor targeting BCR-Abl, in Chronic Myeloid Leukemia. Despite good treatment results many of the treated patients have developed drug resistance, often due to the activation of alternative RTKs pathways. Currently there is a general idea that molecules interfering simultaneously with multiple RTKs might be more effective than single target agents. There are a few recently approved drugs, such as sorafenib and sunitinib, that apparently target multiple pathways and could serve as representatives of this new generation of anti-cancer drugs (see e.g. Gossage, L. et al; Clin. Cancer. Res. 2010, 16, 1973-1978).</p>
+      <p id="p-00007-en" num="0007">Certain pyrimidine compounds and their potential use in the treatment of e.g. cancer are disclosed in for example WO2002/079187, WO2003/030909, WO2003/059913, WO2003/063794, WO2004/056807, WO2004/002964, WO2004/056786, WO2006/133426, WO2007/085833, WO2007/071455, WO2008/152093, WO2008/128231, WO2008/024634, WO2009/063240, WO2009/071535, WO2010/067988, WO2011/144742, US2009/142832 and EP1506960.</p>
+      <p id="p-00008-en" num="0008">What is needed in the art are targeted drugs that work in a specific manner, being selective in eliminating subpopulations of cells involved in tumour survival and progression. The present invention provides novel indole-and benzimidazole-substituted diaminopyrimidines that have a surprisingly efficient antiproliferative activity. Hence, these novel compounds are useful in the treatment of proliferative diseases, such as cancer. Further, compounds of the invention have beneficial physicochemical and ADME (absorption, distribution, metabolism and excretion) properties.</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00003-en" level="1">DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00009-en" num="0009">In a first aspect of the present invention, there is provided a compound of formula I or a pharmaceutically acceptable solvate or salt thereof,</p>
+      <p id="p-00010-en" num="0000">
+        <chemistry id="chem-00001-en" num="00002">
+          <img id="img-00001-en" he="35.64mm" wi="66.72mm" alt="embedded image" img-content="chem" file="US20150252026A1_00002.PNG" img-format="png" original="US20150252026A1-20150910-C00002.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00011-en" num="0000">wherein</p>
+      <p id="p-00012-en" num="0010">R<sup>1 </sup>is selected from hydrogen and (C<sub>1</sub>-C<sub>4</sub>)alkyl;</p>
+      <p id="p-00013-en" num="0011">R<sup>2 </sup>represents O(C<sub>1</sub>-C<sub>4</sub>)alkyl; and</p>
+      <p id="p-00014-en" num="0012">R<sup>3 </sup>represents</p>
+      <p id="p-00015-en" num="0000">
+        <chemistry id="chem-00002-en" num="00003">
+          <img id="img-00002-en" he="142.41mm" wi="56.98mm" alt="embedded image" img-content="chem" file="US20150252026A1_00003.PNG" img-format="png" original="US20150252026A1-20150910-C00003.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00016-en" num="0000">provided that when R<sup>1 </sup>is hydrogen and R<sup>3 </sup>is B, R<sup>2 </sup>is ethoxy;</p>
+      <p id="p-00017-en" num="0013">when R<sup>3 </sup>is C or D, R<sup>1 </sup>is methyl; and</p>
+      <p id="p-00018-en" num="0014">when R<sup>3 </sup>represents E, R<sup>1 </sup>is methyl and R<sup>2 </sup>is ethoxy.</p>
+      <p id="p-00019-en" num="0015">In one embodiment of this aspect there is provided a compound of formula I, wherein</p>
+      <p id="p-00020-en" num="0016">R<sup>1 </sup>is hydrogen;</p>
+      <p id="p-00021-en" num="0017">R<sup>2 </sup>is methoxy or ethoxy; and</p>
+      <p id="p-00022-en" num="0018">R<sup>3 </sup>represents</p>
+      <p id="p-00023-en" num="0000">
+        <chemistry id="chem-00003-en" num="00004">
+          <img id="img-00003-en" he="20.74mm" wi="50.97mm" alt="embedded image" img-content="chem" file="US20150252026A1_00004.PNG" img-format="png" original="US20150252026A1-20150910-C00004.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00024-en" num="0019">In another embodiment of this aspect there is provided a compound of formula I,</p>
+      <p id="p-00025-en" num="0020">wherein</p>
+      <p id="p-00026-en" num="0021">R<sup>1 </sup>is methyl;</p>
+      <p id="p-00027-en" num="0022">R<sup>2 </sup>is methoxy or ethoxy; and</p>
+      <p id="p-00028-en" num="0023">R<sup>3 </sup>represents</p>
+      <p id="p-00029-en" num="0000">
+        <chemistry id="chem-00004-en" num="00005">
+          <img id="img-00004-en" he="20.66mm" wi="50.88mm" alt="embedded image" img-content="chem" file="US20150252026A1_00005.PNG" img-format="png" original="US20150252026A1-20150910-C00005.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00030-en" num="0024">In another embodiment of this aspect there is provided a compound of formula I,</p>
+      <p id="p-00031-en" num="0025">wherein</p>
+      <p id="p-00032-en" num="0026">R<sup>1 </sup>is methyl;</p>
+      <p id="p-00033-en" num="0027">R<sup>2 </sup>is methoxy or ethoxy; and</p>
+      <p id="p-00034-en" num="0028">R<sup>3 </sup>represents</p>
+      <p id="p-00035-en" num="0000">
+        <chemistry id="chem-00005-en" num="00006">
+          <img id="img-00005-en" he="16.00mm" wi="53.51mm" alt="embedded image" img-content="chem" file="US20150252026A1_00006.PNG" img-format="png" original="US20150252026A1-20150910-C00006.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00036-en" num="0029">In another embodiment of this aspect there is provided a compound of formula I, said compound being selected from:</p>
+      <p id="p-00037-en" num="0030">N<sup>4</sup>-(1,2-dimethyl-1H-benzo[d]imidazol-5-yl)-N<sup>2</sup>-[2-(5-ethoxy-1H-indol-3-yl )ethyl]pyrimidine-2,4-diamine;</p>
+      <p id="p-00038-en" num="0031">N<sup>2</sup>-[2-(5-methoxy-1H-indol-3-yl)ethyl]-N<sup>4</sup>-(1-methylbenzimidazol-4-yl)pyrimidine-2,4-diamine;</p>
+      <p id="p-00039-en" num="0032">N<sup>2</sup>-[2-(5-ethoxy-1H-indol-3-yl)ethyl]-N<sup>4</sup>-(1-methylbenzimidazol-4-yl)pyrimidine-2,4-diamine;</p>
+      <p id="p-00040-en" num="0033">N<sup>2</sup>-[2-(5-ethoxy-1H-indol-3-yl)ethyl]-N<sup>4</sup>-(1H-indol-5-yl)-6-methyl-pyrimidine-2,4-diamine;</p>
+      <p id="p-00041-en" num="0034">N<sup>2</sup>-[2-(5-methoxy-1H-indol-3-yl)ethyl]-6-methyl-N<sup>4</sup>-(2-methyl-1H-indol-6-yl)pyrimidine-2,4-diamine;</p>
+      <p id="p-00042-en" num="0035">N<sup>2</sup>-[2-(5-ethoxy-1H-indol-3-yl)ethyl]-6-methyl-N<sup>4</sup>-(2-methyl-1H-indol-6-y1)pyrimidine-2,4-diamine;</p>
+      <p id="p-00043-en" num="0036">N<sup>2</sup>-[2-(5-methoxy-1H-indol-3-yl)ethyl]-6-methyl-N<sup>4</sup>-(1-methylindol-4-yl)pyrimidine-2,4-diamine; and</p>
+      <p id="p-00044-en" num="0037">N<sup>2</sup>-[2-(5-ethoxy-1H-indol-3-yl)ethyl]-6-methyl-N<sup>4</sup>-(1-methylindol-4-yl)pyrimidine-2,4-diamine;</p>
+      <p id="p-00045-en" num="0038">and a pharmaceutically acceptable solvate or salt thereof.</p>
+      <p id="p-00046-en" num="0039">In another embodiment of this aspect there is provided a compound of formula I, said compound being selected from:</p>
+      <p id="p-00047-en" num="0040">N<sup>2</sup>-[2-(5-methoxy-1H-indol-3-yl)ethyl]-N<sup>4</sup>-(1-methylbenzimidazol-4-yl)pyrimidine-2,4-diamine; and</p>
+      <p id="p-00048-en" num="0041">N<sup>2</sup>-[2-(5-ethoxy-1H-indol-3-yl)ethyl]-N<sup>4</sup>-(1-methylbenzimidazol-4-yl)pyrimidine-2,4-diamine;</p>
+      <p id="p-00049-en" num="0042">and a pharmaceutically acceptable solvate or salt thereof.</p>
+      <p id="p-00050-en" num="0043">In another embodiment of this aspect there is provided a compound of formula I, said compound being:</p>
+      <p id="p-00051-en" num="0044">N<sup>4</sup>-(1,2-dimethyl-1H-benzo[d]imidazol-5-yl)-N<sup>2</sup>-[2-(5-ethoxy-1H-indol-3-yl)ethyl]pyrimidine-2,4-diamine;</p>
+      <p id="p-00052-en" num="0045">and a pharmaceutically acceptable solvate or salt thereof.</p>
+      <p id="p-00053-en" num="0046">In another embodiment of this aspect there is provided a compound of formula I, said compound being selected from:</p>
+      <p id="p-00054-en" num="0047">N<sup>2</sup>-[2-(5-methoxy-1H-indol-3-yl)ethyl]-6-methyl-N<sup>4</sup>-(1-methylindol-4-yl)pyrimidine-2,4-diamine; and</p>
+      <p id="p-00055-en" num="0048">N<sup>2</sup>-[2-(5-ethoxy-1H-indol-3-yl)ethyl]-6-methyl-N<sup>4</sup>-(1-methylindol-4-yl)pyrimidine-2,4-diamine;</p>
+      <p id="p-00056-en" num="0049">and a pharmaceutically acceptable solvate or salt thereof.</p>
+      <p id="p-00057-en" num="0050">In another embodiment of this aspect there is provided a compound of formula I, said compound being selected from:</p>
+      <p id="p-00058-en" num="0051">N<sup>2</sup>-[2-(5-methoxy-1H-indol-3-yl)ethyl]-6-methyl-N<sup>4</sup>-(2-methyl-1H-indol-6-yl)pyrimidine-2,4-diamine;</p>
+      <p id="p-00059-en" num="0052">N<sup>2</sup>-[2-(5-ethoxy-1H-indol-3-yl)ethyl]-6-methyl-N<sup>4</sup>-(2-methyl-1H-indol-6-yl)pyrimidine-2,4-diamine;</p>
+      <p id="p-00060-en" num="0053">and a pharmaceutically acceptable solvate or salt thereof.</p>
+      <p id="p-00061-en" num="0054">In another embodiment of this aspect there is provided a compound of formula I said compound being:</p>
+      <p id="p-00062-en" num="0055">N<sup>2</sup>-[2-(5-ethoxy-1H-indol-3-yl)ethyl]-N<sup>4</sup>-(1H-indol-5-yl)-6-methyl-pyrimidine-2,4-diamine;</p>
+      <p id="p-00063-en" num="0056">and a pharmaceutically acceptable solvate or salt thereof.</p>
+      <p id="p-00064-en" num="0057">In another aspect of the invention, there is provided a compound of formula I, for use in therapy.</p>
+      <p id="p-00065-en" num="0058">In another aspect of the invention, there is provided a compound of formula I, for use in treatment of cancer.</p>
+      <p id="p-00066-en" num="0059">In another aspect of the invention, there is provided a compound of formula I, for use in treatment of a cancer selected from leukemia, lymphoma, myeloma, breast cancer, ovarian cancer, prostate cancer, lung cancer, pancreatic cancer, colorectal cancer, and glioma.</p>
+      <p id="p-00067-en" num="0060">In another aspect of the invention, there is provided use of a compound of formula I, for treatment of cancer, in combination with another compound of formula I, in combination with radiation therapy, or in combination with another anticancer agent selected from alkylating agents, antimetabolites, anticancer camptothecin derivatives, plant-derived anticancer agents, antibiotics, enzymes, platinum coordination complexes, tubulin inhibitors, tyrosine kinase inhibitors, hormones, hormone antagonists, monoclonal antibodies, interferons, and biological response modifiers.</p>
+      <p id="p-00068-en" num="0061">In another aspect of the invention, there is provided a compound of formula I, for use in treatment of a disease selected from Crohns disease, rheumatic diseases, tuberculosis, inflammatory diseases, multiple sclerosis, amyotrophic lateral sclerosis, Parkinson's disease and diseases caused by bacteria, viruses, fungus, and parasites.</p>
+      <p id="p-00069-en" num="0062">In another aspect of the invention, there is provided a compound of formula I, for use in treatment of a disease involving angiogenesis and/or neovascularization such as age-related macular degeneration.</p>
+      <p id="p-00070-en" num="0063">The compounds of the invention appear to inhibit tubulin polymerization and/or to induce apoptosis. Consequently, in another aspect of the invention, there is provided a compound of formula I, for use in treatment of a disease, wherein inhibition of tubulin polymerization is beneficial. Further, in another aspect of the invention, there is provided a compound of formula I, for use in treatment of a disease, wherein induction of apoptosis is beneficial.</p>
+      <p id="p-00071-en" num="0064">In another aspect of the invention, there is provided use of a compound of formula I, in the manufacture of a medicament and pharmaceutical compositions for treatment of cancer.</p>
+      <p id="p-00072-en" num="0065">In another aspect of the invention, there is provided use of a compound of formula I, in the manufacture of a medicament for treatment of cancer, said cancer being selected from leukemia, lymphoma, myeloma, breast cancer, ovarian cancer, prostate cancer, lung cancer, pancreatic cancer, colorectal cancer, and glioma.</p>
+      <p id="p-00073-en" num="0066">In another aspect of the invention, there is provided use of a compound of formula I, in the manufacture of a medicament for treatment of a disease selected from Crohns disease, rheumatic diseases, tuberculosis, inflammatory diseases, multiple sclerosis, amyotrophic lateral sclerosis, Parkinson's disease and diseases caused by bacteria, viruses, fungus, and parasites.</p>
+      <p id="p-00074-en" num="0067">In another aspect of the invention, there is provided use of a compound of formula I, in the manufacture of a medicament for treatment of diseases involving angiogenesis and/or neovascularization such as age-related macular degeneration.</p>
+      <p id="p-00075-en" num="0068">In another aspect of the invention, there is provided a pharmaceutical composition comprising a compound of formula I, together with pharmaceutically acceptable diluents and carriers.</p>
+      <p id="p-00076-en" num="0069">In another aspect of the invention, there is provided a method for treatment of cancer, which comprises administering to a subject in need thereof, a therapeutically effective amount of a compound of formula I.</p>
+      <p id="p-00077-en" num="0070">In another aspect of the invention, there is provided a method for treatment of cancer, said cancer being selected from leukemia, lymphoma, myeloma, breast cancer, ovarian cancer, prostate cancer, lung cancer, pancreatic cancer, colorectal cancer, and glioma, which comprises administering to a subject in need thereof, a therapeutically effective amount of a compound of formula I.</p>
+      <p id="p-00078-en" num="0071">In another aspect of the invention, there is provided a method for treatment of a disease selected from Crohns disease, rheumatic diseases, tuberculosis, inflammatory diseases, multiple sclerosis, amyotrophic lateral sclerosis, Parkinson's disease or diseases caused by bacteria, viruses, fungus, and parasites, which comprises administering to a subject in need thereof, a therapeutically effective amount of a compound of formula I.</p>
+      <p id="p-00079-en" num="0072">In another aspect of the invention, there is provided a method for treatment of a disease involving angiogenesis and/or neovascularization such as age-related macular degeneration, which comprises administering to a subject in need thereof, a therapeutically effective amount of a compound of formula I.</p>
+      <p id="p-00080-en" num="0073">In another aspect of the invention, there is provided a method for treatment of cancer, which comprises administering to a subject in need thereof, a therapeutically effective amount of a compound of formula I, in combination with another compound of formula I, in combination with radiation therapy, or in combination with another anticancer agent selected from alkylating agents, antimetabolites, anticancer camptothecin derivatives, plant-derived anticancer agents, antibiotics, enzymes, platinum coordination complexes, tubulin inhibitors, tyrosine kinase inhibitors, hormones, hormone antagonists, monoclonal antibodies, interferons, and biological response modifiers.</p>
+      <p id="p-00081-en" num="0074">Compound names in the present application were generated in accordance with IUPAC by ChemBioDraw Ultra version 11.0</p>
+      <p id="p-00082-en" num="0075">Depending upon the substituents present in compounds of the formula I, the compounds may form esters, amides, and/or salts which are within the scope of the present invention. Salts and solvates of compounds of formula I which are suitable for use in medicine are those wherein a counterion or an associated solvent is pharmaceutically acceptable. However, salts and solvates having non-pharmaceutically acceptable counterions or associated solvents are within the scope of the present invention, for example, for use as intermediates in the preparation of the compounds of formula I and their pharmaceutically acceptable salts, solvates, and physiologically functional derivatives. By the term “physiologically functional derivative” is meant a chemical derivative of a compound of formula I having the same physiological function as the free compound of formula I, for example, by being convertible in the body thereto. Esters and amides are examples of physiologically functional derivatives.</p>
+      <p id="p-00083-en" num="0076">A compound which, upon administration to the recipient, is capable of being converted into a compound of formula I as described above, or an active metabolite or residue thereof, is known as a “prodrug”. A prodrug may, for example, be converted within the body, e. g. by hydrolysis in the blood, into its active form that has medical effects. Pharmaceutical acceptable prodrugs are described in T. Higuchi and V. Stella, Prodrugs as Novel Delivery Systems, Vol. 14 of the A. C. S. Symposium Series (1976); “Design of Prodrugs” ed. H. Bundgaard, Elsevier, 1985; and in Edward B. Roche, ed., Bioreversible Carriers in Drug Design, American Pharmaceutical Association and Pergamon Press, 1987, which are incorporated herein by reference.</p>
+      <p id="p-00084-en" num="0077">Suitable salts according to the invention include those formed with organic or inorganic acids or bases. In particular, suitable salts formed with acids according to the invention include those formed with mineral acids, strong organic carboxylic acids, such as alkanecarboxylic acids of 1 to 4 carbon atoms which are unsubstituted or substituted, for example, by halogen, such as saturated or unsaturated dicarboxylic acids, such as hydroxycarboxylic acids, such as amino acids, or with organic sulfonic acids, such as (C<sub>1</sub>-C<sub>4</sub>)alkyl-or aryl-sulfonic acids which are unsubstituted or substituted, for example by halogen. Pharmaceutically acceptable acid addition salts include those formed from hydrochloric, hydrobromic, sulphuric, nitric, citric, tartaric, acetic, phosphoric, lactic, pyruvic, acetic, trifluoroacetic, succinic, perchloric, fumaric, maleic, glycolic, lactic, salicylic, oxaloacetic, methanesulfonic, ethanesulfonic, p-toluenesulfonic, formic, benzoic, malonic, naphthalene-2-sulfonic, benzenesulfonic, isethionic, ascorbic, malic, phthalic, aspartic, and glutamic acids, lysine, and arginine. Other acids such as oxalic, while not inherently pharmaceutically acceptable, may be useful as intermediates in obtaining the compounds of the invention and their pharmaceutical acceptable acid addition salts.</p>
+      <p id="p-00085-en" num="0078">Pharmaceutically acceptable base salts include ammonium salts, alkali metal salts, for example those of potassium and sodium, alkaline earth metal salts, for example those of calcium and magnesium, and salts with organic bases, for example dicyclohexylamine, N-methyl-D-glucamine, morpholine, thiomorpholine, piperidine, pyrrolidine, a mono-, di-or tri-lower alkylamine, for example ethyl-, tert-butyl-, diethyl-, diisopropyl-, triethyl-, tributyl-or dimethyl-propylamine, or a mono-, di- or trihydroxy lower alkylamine, for example mono-, di-or triethanolamine. Corresponding internal salts may furthermore be formed.</p>
+      <p id="p-00086-en" num="0079">Those skilled in the art of organic chemistry will appreciate that many organic compounds can form complexes with solvents in which they are reacted or from which they are precipitated or crystallized. These complexes are known as “solvates”. For example, a complex with water is known as a “hydrate”.</p>
+      <p id="p-00087-en" num="0080">The following definitions apply to the terms as used throughout this specification, unless otherwise limited in specific instances.</p>
+      <p id="p-00088-en" num="0081">As used herein, the term “alkyl” means both straight and branched chain saturated hydrocarbon groups. Examples of alkyl groups include methyl, ethyl, n-propyl, iso-propyl, n-butyl, t-butyl, iso-butyl, and sec-butyl groups. Among unbranched alkyl groups, there are preferred methyl, ethyl, n-propyl, and n-butyl groups. Among branched alkyl groups, there may be mentioned iso-propyl, t-butyl, iso-butyl, and sec-butyl groups.</p>
+      <p id="p-00089-en" num="0082">As used herein, the term “alkoxy” means the group 0-alkyl, where “alkyl” is used as described above. Examples of alkoxy groups include, but are not limited to, methoxy and ethoxy groups. Other examples include propoxy and butoxy, such as iso-propoxy, n-propoxy, tert-butoxy, iso-butoxy and sec-butoxy.</p>
+      <p id="p-00090-en" num="0083">The compounds of the invention may be used in the prophylaxis and treatment as such, or preferably in a form of a pharmaceutical composition. While it is possible for the active ingredient to be administered alone, it is preferable for it to be present in a pharmaceutical formulation or composition. Accordingly, the invention provides a pharmaceutical formulation comprising a compound according to the invention, and a pharmaceutically acceptable diluent, excipient or carrier (collectively referred to herein as “carrier” materials). Pharmaceutical compositions of the invention may take the form of a pharmaceutical formulation as described below. Thus, the present invention relates to a pharmaceutical composition containing at least one compound of formula I together with conventional excipients.</p>
+      <p id="p-00091-en" num="0084">Exemplary compositions for oral administration include suspensions (including nanosuspensions) which can contain, for example, microcrystalline cellulose for imparting bulk, alginic acid or sodium alginate as a suspending agent, methylcellulose as a viscosity enhancer, and sweeteners or flavoring agents such as those known in the art; and immediate release tablets which can contain, for example, microcrystalline cellulose, dicalcium phosphate, starch, magnesium stearate, calcium sulfate, sorbitol, glucose, and/or lactose and/or other excipients, binders, extenders, disintegrants, diluents, and lubricants such as those known in the art. Suitable binders include starch, gelatin, natural sugars such as glucose or beta-lactose, corn sweeteners, natural and synthetic gums such as acacia, tragacanth or sodium alginate, carboxymethylcellulose, polyethylene glycol, waxes, and the like. Disintegrators include without limitation starch, methylcellulose, agar, bentonite, xanthan gum, and the like. The compounds of formula I can also be delivered through the oral cavity by sublingual and/or buccal administration. Molded tablets, compressed tablets or freeze-dried tablets are exemplary forms which may be used. Exemplary compositions include those formulating the present compound(s) with fast dissolving diluents such as mannitol, lactose, sucrose, and/or cyclodextrins. Also included in such formulations may be high molecular weight excipients such as celluloses (avicel) or polyethylene glycols (PEG). Such formulations can also include an excipient to aid mucosal adhesion such as hydroxy propyl cellulose (HPC), hydroxy propyl methyl cellulose (HPMC), sodium carboxy methyl cellulose (SCMC), maleic anhydride copolymer (e.g., Gantrez), and agents to control release such as polyacrylic copolymer (e.g. Carbopol 934). Lubricants, glidants, flavors, coloring agents, and stabilizers may also be added for ease of fabrication and use. Lubricants used in these dosage forms include sodium oleate, sodium stearate, magnesium stearate, sodium benzoate, sodium acetate, sodium chloride, and the like. For oral administration in liquid form, the oral drug components can be combined with any oral, non-toxic, pharmaceutically acceptable inert carrier such as ethanol, glycerol, water, and the like.</p>
+      <p id="p-00092-en" num="0085">The pharmaceutical formulations according to the invention include those suitable for oral, parenteral [including subcutaneous, intradermal, intramuscular, intravenous (bolus or infusion), and intraarticular], inhalation (including fine particle dusts or mists which may be generated by means of various types of metered dose pressurized aerosols), nebulizers or insufflators, rectal, intraperitoneal, and topical (including dermal, buccal, sublingual, and intraocular) administration, although the most suitable route may depend upon, for example, the condition and disorder of the recipient.</p>
+      <p id="p-00093-en" num="0086">Formulations of the present invention suitable for oral administration may be presented as discrete units such as capsules, cachets, pills or tablets each containing a predetermined amount of the active ingredient; as a powder or granules; as a solution or a suspension in an aqueous liquid or a non-aqueous liquid, for example as elixirs, tinctures, suspensions (including nanosuspensions) or syrups; or as an oil-in-water liquid emulsion or a water-in-oil liquid emulsion. The active ingredient may also be presented as a bolus, electuary or paste.</p>
+      <p id="p-00094-en" num="0087">A tablet may be made by compression or moulding, optionally with one or more accessory ingredients. Compressed tablets may be prepared by compressing in a suitable machine the active ingredient in a free-flowing form such as a powder or granules, optionally mixed with a binder, lubricant, inert diluent, lubricating, surface active or dispersing agent. Moulded tablets may be made by moulding in a suitable machine a mixture of the powdered compound moistened with an inert liquid diluent. The tablets may optionally be coated or scored and may be formulated so as to provide slow or controlled release of the active ingredient therein. The present compounds can, for example, be administered in a form suitable for immediate release or extended release. Immediate release or extended release can be achieved by the use of suitable pharmaceutical compositions comprising the present compounds, or, particularly in the case of extended release, by the use of devices such as subcutaneous implants or osmotic pumps. The present compounds can also be administered liposomally. Preferred unit dosage formulations are those containing an effective dose, as hereinbefore recited, or an appropriate fraction thereof, of the active ingredient.</p>
+      <p id="p-00095-en" num="0088">It should be understood that in addition to the ingredients particularly mentioned above, the formulations of this invention may include other agents conventional in the art having regard to the type of formulation in question, for example those suitable for oral administration may include flavouring agents.</p>
+      <p id="p-00096-en" num="0089">The formulations may conveniently be presented in unit dosage form and may be prepared by any of the methods well known in the art of pharmacy. All methods include the step of bringing the active ingredient into association with the carrier which constitutes one or more accessory ingredients. In general the formulations are prepared by uniformly and intimately bringing into association the active ingredient with liquid carriers or finely divided solid carriers or both and then, if necessary, shaping the product into the desired formulation.</p>
+      <p id="p-00097-en" num="0090">The compounds of the present invention can also be administered in the form of liposome delivery systems, such as small unilamellar vesicles, large unilamellar vesicles, and multilamellar vesicles. Liposomes can be formed from a variety of phospho lipids, 1 ,2-dipalmitoylphosphatidylcholine, phosphatidyl ethanolamine (cephaline), phosphatidylserine, phosphatidylinositol, diphosphatidylglycerol (cardiolipin) or phosphatidylcho line (lecithin).</p>
+      <p id="p-00098-en" num="0091">Formulations for parenteral administration include aqueous and non-aqueous sterile injection solutions which may contain anti-oxidants, buffers, bacteriostats, and solutes which render the formulation isotonic with the blood of the intended recipient; and aqueous and non-aqueous sterile suspensions (including nanosuspensions) which may include suspending agents and thickening agents. The formulations may be presented in unit-dose or multi-dose containers, for example sealed ampoules and vials, and may be stored in a freeze-dried (lyophilised) condition requiring only the addition of the sterile liquid carrier, for example saline or water-for-injection, immediately prior to use. Extemporaneous injection solutions and suspensions may be prepared from sterile powders, granules, and tablets of the kind previously described. Exemplary compositions for parenteral administration include injectable solutions or suspensions which can contain, for example, suitable non-toxic, parenterally acceptable diluents or solvents, such as polyethylene glycol, ethanol, 1,3-butanediol, water, Ringer's solution, an isotonic sodium chloride solution, or other suitable dispersing or wetting and suspending agents, including synthetic mono-or diglycerides, and fatty acids, including oleic acid, polysorbates, and Cremaphor.</p>
+      <p id="p-00099-en" num="0092">Exemplary compositions for nasal, aerosol or inhalation administration include solutions in saline, which can contain, for example, benzyl alcohol or other suitable preservatives, absorption promoters to enhance bioavailability, and/or other solubilizing or dispersing agents such as those known in the art.</p>
+      <p id="p-00100-en" num="0093">Formulations for rectal administration may be presented as a suppository with the usual carriers such as cocoa butter, synthetic glyceride esters or polyethylene glycol. Such carriers are typically solid at ordinary temperatures, but liquefy and/or dissolve in the rectal cavity to release the drug.</p>
+      <p id="p-00101-en" num="0094">Formulations for topical administration in the mouth, for example buccally or sublingually, include lozenges comprising the active ingredient in a flavoured basis such as sucrose and acacia or tragacanth, and pastilles comprising the active ingredient in a basis such as gelatin and glycerine or sucrose and acacia. Exemplary compositions for topical administration include a topical carrier such as Plastibase (mineral oil gelled with polyethylene).</p>
+      <p id="p-00102-en" num="0095">The amount of active ingredient which is required to achieve a therapeutic effect will, of course, vary with the particular compound, the route of administration, the subject under treatment, including the type, species, age, weight, sex, and medical condition of the subject and the renal and hepatic function of the subject, and the particular disorder or disease being treated, as well as its severity. An ordinarily skilled physician, veterinarian or clinician can readily determine and prescribe the effective amount of the drug required to prevent, counter or arrest the progress of the condition.</p>
+      <p id="p-00103-en" num="0096">Oral dosages of the present invention, when used for the indicated effects, will range between about 0.01 mg per kg of body weight per day (mg/kg/day) to about 100 mg/kg/day, preferably 0.01 mg per kg of body weight per day (mg/kg/day) to 10 mg/kg/day, and most preferably 0.1 to 5.0 mg/kg/day, for adult humans. For oral administration, the compositions are preferably provided in the form of tablets or other forms of presentation provided in discrete units containing 0.01, 0.05, 0.1, 0.5, 1.0, 2.5, 5.0, 10.0, 15.0, 25.0, 50.0, 100, and 500 milligrams of the active ingredient for the symptomatic adjustment of the dosage to the patient to be treated. A medicament typically contains from about 0.01 mg to about 500 mg of the active ingredient. Furthermore, preferred compounds for the present invention can be administered in intranasal form via topical use of suitable intranasal vehicles, or via transdermal routes, using those forms of transdermal skin patches well known to those of ordinary skill in the art. To be administered in the form of a transdermal delivery system, the dosage administration will, of course, be continuous rather than intermittent throughout the dosage regimen.</p>
+      <p id="p-00104-en" num="0097">The invention also provides the use of a compound of formula I, for the manufacture of a medicament for the treatment or prophylaxis of cancer.</p>
+      <p id="p-00105-en" num="0098">The compounds and the pharmaceutical compositions of the invention may be used in the prophylaxis and treatment of diseases such as cancer, diseases caused by parasites, allergic diseases, Crohns disease, rheumatic diseases, tuberculosis, diabetes, Alzheimer's disease, inflammatory diseases, multiple sclerosis (MS), amyotrophic lateral sclerosis (ALS), Parkinson's disease and diseases caused by bacteria, viruses, and fungus, and diseases involving angiogenesis and/or neovascularization.</p>
+      <p id="p-00106-en" num="0099">The compounds and the pharmaceutical compositions of the invention find particular application in the treatment or prophylaxis of various proliferative disorders and cancer types, including but not limited to, cancer of the bone, breast, respiratory tract, brain, reproductive organs, digestive tract, urinary tract, eye, liver, skin, head, neck, thyroid, parathyroid, and metastatic forms thereof. Proliferative disorders of the breast include, but are not limited to, invasive ductal carcinoma, invasive lobular carcinoma, ductal carcinoma, lobular carcinoma in situ, and metastatic breast cancer. Proliferative disorders of the skin include, but are not limited to, basal cell carcinoma, squamous cell carcinoma, malignant melanoma, and Kaposi's sarcoma. Proliferative disorders of the respiratory tract include, but are not limited to, small cell and non-small cell lung carcinoma, bronchial adenoma, pleuropulmonary blastoma, and malignant mesothelioma. Proliferative disorders of the brain include, but are not limited to, brain stem and hypothalamic glioma, cerebellar and cerebral astrocytoma, medulloblastoma, ependymal tumors, oligodendroglial tumors, meningiomas and neuroectodermal, and pineal tumors. Proliferative disorders of the male reproductive organs include, but are not limited to, prostate, testicular, and penis cancer. Proliferative disorders of the female reproductive organs include, but are not limited to, uterine, cervical, ovarian, vaginal, vulval cancer, uterine sarcoma, and ovarian germ cell tumor. Proliferative disorders of the digestive tract include, but are not limited to, anal, colon, colorectal, esophageal, gall bladder, stomach, pancreatic, rectal, small intestine, and salivary gland cancer. Proliferative disorders of the liver include, but are not limited to, hepatocellular carcinoma, cholangiocarcinoma, and primary liver cancer. Proliferative disorders of the eye include, but are not limited to, intraocular melanoma, retinoblastoma, and rhabdomyosarcoma. Proliferative disorders of the head include, but are not limited to, laryngeal, hypopharyngeal, nasopharyngeal, oropharyngeal, lip, oral, and metastatic paranasal sinus cancer. Proliferative disorders of the lymphomas include, but are not limited to, T cell and B cell lymphomas, non-Hodgkin's lymphoma, cutaneous T cell lymphoma, Hodgkin's disease, and lymphoma of the central nervous system. Leukemia includes, but is not limited to, acute myeloid leukemia, chronic myelogenous leukemia, and hairy cell leukemia. Proliferative disorders of the thyroid include, but are not limited to, thyroid cancer, thymoma, and malignant thymoma. Proliferative disorders of the urinary tract include, but are not limited to, kidney cancer and bladder cancer. Sarcomas include, but are not limited to, sarcoma of the soft tissue, osteosarcoma, malignant fibrous histiocytoma, lymphosarcoma, and rhabdomyosarcoma.</p>
+      <p id="p-00107-en" num="0100">Whilst a compound of the invention may be used alone, it is also possible for the compounds to be used in combination with each other, in combination with radiation therapy, or in combination with other anticancer agents. Various classes of anticancer and antineoplastic compounds include, but are not limited to, alkylating agents, antimetabolites, anticancer camptothecin derivatives, plant-derived anticancer agents, antibiotics, enzymes, platinum coordination complexes, tubulin inhibitors, tyrosine kinase inhibitors, hormones and hormone antagonists, monoclonal antibodies, interferons, biological response modifiers and other anticancer agents. Examples of alkylating agents include, but are not limited to, mechlorethamine, cyclophosphamide, ifosfamide, melphalan, chlorambucil, busulfan, mitobronitol, ranimustin, nimustin, temozolomide, and carmustine; examples of antimetabolites include, but are not limited to, methotrexate, fluorouracil, cytarabine, gemcitabine, fludarabine, mercaptopurine, thioguanine, and azathioprine; examples of camptothecin derivatives include, but are not limited to, irinotecan, topotecan, and camptothecin; examples of plant-derived agents include, but are not limited to, vinblastine, vincristine, docetaxel, paclitaxel, and colchicines; examples of antibiotics include, but are not limited to, salinomycin, actinomycin D, daunorubicin, and bleomycin. One example of enzyme effective as antineoplastic agent includes L-asparaginase. Examples of coordination compounds include, but are not limited to, cisplatin and carboplatin; examples of tubulin inhibitors include, but are not limited to, the above mentioned plant-derived agents; examples of tyrosine kinase inhibitors include, but are not limited to, gefitinib, imatinib, sunitinib, nilotinib, dasatinib, erlotinib, and pazopanib; examples of hormones and hormone related compounds include, but are not limited to, prednisone, dexamethasone, formestane, aminoglutethimide, anastrozole, hydroxyprogesterone caproate, medroxyprogesterone, and tamoxifen; examples of interferons include, but are not limited to, interferon α, interferon α-2a, interferon α-2b, interferon β, interferon γ-1a, and interferon γ-n1; examples of biological response modifiers include, but are not limited to, krestin, lentinan, sizofiran, picibanil, and ubenimex. Examples of other anticancer agents include, but are not limited to, mitoxantrone, procarbazine, dacarbazine, hydroxycarbamide, pentostatin, tretinoin, leuprorelin, flutamide, and aldesleukin.</p>
+      <p id="p-00108-en" num="0101">Several synthetic routes to the compounds of the present invention can be devised by any person skilled in the art and the possible synthetic routes described below do not limit the invention.</p>
+      <p id="p-00109-en" num="0102">Procedure for Synthesizing Compounds of General Formula I</p>
+      <p id="p-00110-en" num="0103">The appropriate amine (II) was dissolved in isopropanol or methanol (0.2 g/mL). 1.2 eq of pyrimidine (III) and base were added [1.5 eq of N,N-diisopropylethylamine (DIPEA) or 3 eq of NaHCO<sub>3</sub>] and the mixture was stirred at temperatures between 25° C. and 100° C. for 1 h to 48 h. The reaction mixture was dissolved in EtOAc/MeOH 9:1 and washed with saturated aqueous NaHCO<sub>3</sub>, water, and brine. The solvent was removed in vacuo and the residue was purified by column chromatography on silica gel with heptane/EtOAc as eluent to give the intermediate (IV). In some cases the intermediate (IV) was precipitated out of the reaction mixture by the addition of water. No further purification was done in those cases.</p>
+      <p id="p-00111-en" num="0104">The intermediate (IV) was mixed in ethylene glycol (0.2 g/mL) with 1.2-1.4 eq of amine hydrochloride (V) and 3 eq of N,N-diisopropylethylamine (DIPEA) were added. The mixture was then stirred at 145° C. for 1-2 h. The reaction mixture was dissolved in EtOAc/MeOH 9:1 and washed with saturated aqueous NaHCO<sub>3</sub>, water, and brine. The solvent was removed in vacuo and the residue was purified by column chromatography on silica gel with heptane/EtOAc or CH<sub>2</sub>Cl<sub>2</sub>/MeOH/NH<sub>3 </sub>(aq) as eluents to give the compound of formula I. In some cases the compound of formula I could be purified by crystallization from EtOH and water.</p>
+      <p id="p-00112-en" num="0105">This procedure is exemplified in Scheme 1.</p>
+      <p id="p-00113-en" num="0000">
+        <chemistry id="chem-00006-en" num="00007">
+          <img id="img-00006-en" he="112.01mm" wi="75.86mm" alt="embedded image" img-content="chem" file="US20150252026A1_00007.PNG" img-format="png" original="US20150252026A1-20150910-C00007.TIF" />
+        </chemistry>
+      </p>
+      <heading id="h-00004-en" level="1">EXAMPLE 1 </heading>
+      <heading id="h-00005-en" level="1">N<sup>4</sup>-(1 2-dimethyl-1H-benzo[d]imidazol-5-yl)-N<sup>2</sup>-[2-(5-ethoxy-1H-indol-3-yl)ethyl]pyrimidine-2,4-diamine</heading>
+      <p id="p-00114-en" num="0106">
+        <chemistry id="chem-00007-en" num="00008">
+          <img id="img-00007-en" he="27.35mm" wi="74.17mm" alt="embedded image" img-content="chem" file="US20150252026A1_00008.PNG" img-format="png" original="US20150252026A1-20150910-C00008.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00115-en" num="0107">
+        <sup>1</sup>H NMR (400 MHz, DMSO-d<sub>6</sub>, 75° C.) δ 10.41 (s, 1H), 8.71 (s, 1H), 7.87 (d, 1H), 7.82 (d, 1H), 7.38 (dd, 1H), 7.29 (d, 1H), 7.22 (d, 1H), 7.16 (d, 1H), 7.07 (d, 1H), 6.72 (dd, 1H), 6.26 (t, 1H), 5.97 (d, 1H), 4.01 (q, 2H), 3.70 (s, 3H), 3.58 (q, 2H), 2.95 (t, 2H), 2.52-2.48 (m, 6H).</p>
+      <p id="p-00116-en" num="0108">MS (ESI<sup>+</sup>) m/z 442.2 [M+H]<sup>+</sup>.</p>
+      <heading id="h-00006-en" level="1">EXAMPLE 2</heading>
+      <heading id="h-00007-en" level="1">N<sup>2</sup>-[2-(5-methoxy-1H-indol-3-yl)ethyl]-N<sup>4</sup>-(1-methylbenzimidazol-4-yl)pyrimidine-2,4-diamine</heading>
+      <p id="p-00117-en" num="0109">
+        <chemistry id="chem-00008-en" num="00009">
+          <img id="img-00008-en" he="27.01mm" wi="74.51mm" alt="embedded image" img-content="chem" file="US20150252026A1_00009.PNG" img-format="png" original="US20150252026A1-20150910-C00009.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00118-en" num="0110">
+        <sup>1</sup>H NMR (400 MHz, DMSO-d<sub>6</sub>, 105° C.) δ 10.35 (s, 1H), 8.37 (s, 1H), 8.09 (dd, 1H), 8.06 (s, 1H), 7.92 (d, 1H), 7.25 (d, 1H), 7.14 (d, 2H), 7.11 (dd, 2H), 6.74 (dd, 1H), 6.35 (d, 1H), 6.26 (dd, 1H), 3.85 (s, 3H), 3.77 (s, 3H), 3.65 (q, 2H), 2.99 (t, 2H).</p>
+      <p id="p-00119-en" num="0111">MS (ESI<sup>+</sup>) m/z 414.2 [M+H]<sup>+</sup>.</p>
+      <heading id="h-00008-en" level="1">EXAMPLE 3</heading>
+      <heading id="h-00009-en" level="1">N<sup>2</sup>-[2-(5-ethoxy-1H-indol-3-yl)ethyl]-N<sup>4</sup>-(1-methylbenzimidazol-4-yl)pyrimidine-2,4-diamine</heading>
+      <p id="p-00120-en" num="0112">
+        <chemistry id="chem-00009-en" num="00010">
+          <img id="img-00009-en" he="25.82mm" wi="74.85mm" alt="embedded image" img-content="chem" file="US20150252026A1_00010.PNG" img-format="png" original="US20150252026A1-20150910-C00010.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00121-en" num="0113">
+        <sup>1</sup>H NMR (400 MHz, DMSO-d<sub>6</sub>, 105° C.) δ 10.30 (s, 1H), 8.37 (s, 1H), 8.10 (dd, 1H), 8.06 (s, 1H), 7.92 (d, 1H), 7.24 (d, 1H), 7.17-7.14 (m, 2H), 7.10 (dd, 2H), 6.73 (dd, 1H), 6.35 (d, 1H), 6.25 (dd, 1H), 4.03 (q, 2H), 3.85 (s, 3H), 3.65 (q, 2H), 2.99 (t, 2H), 1.32 (t, 3H).</p>
+      <p id="p-00122-en" num="0114">MS (ESI<sup>+</sup>) m/z 428.2 [M+H]<sup>+</sup>.</p>
+      <heading id="h-00010-en" level="1">EXAMPLE 4</heading>
+      <heading id="h-00011-en" level="1">N<sup>2</sup>-[2-(5-ethoxy-1H-indol-3-yl)ethyl]-N<sup>4</sup>-(1H-indol-5-yl)-6-methyl-pyrimidine-2,4-diamine</heading>
+      <p id="p-00123-en" num="0115">
+        <chemistry id="chem-00010-en" num="00011">
+          <img id="img-00010-en" he="26.50mm" wi="75.69mm" alt="embedded image" img-content="chem" file="US20150252026A1_00011.PNG" img-format="png" original="US20150252026A1-20150910-C00011.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00124-en" num="0116">
+        <sup>1</sup>H NMR (400 MHz, DMSO-d<sub>6</sub>, 75° C.) δ 10.73 (s, 1H), 10.41 (s, 1H), 8.44 (s, 1H), 7.78 (d, 1H), 7.30 (d, 1H), 7.26-7.21 (m, 2H), 7.19 (dd, 1H), 7.09 (dd, 2H), 6.72 (dd, 1H), 6.31 (m, 1H), 6.12 (m, 1H), 5.82 (s, 1H), 4.02 (q, 2H), 3.59 (q, 2H), 2.95 (t, 2H), 2.10 (s, 3H), 1.32 (t, 3H).</p>
+      <p id="p-00125-en" num="0117">MS (ESI<sup>+</sup>) m/z 427.2 [M+H]<sup>+</sup>.</p>
+      <heading id="h-00012-en" level="1">EXAMPLE 5 </heading>
+      <heading id="h-00013-en" level="1">N<sup>2</sup>-[2-(5-methoxy-1H-indol-3-yl)ethyl]-6-methyl-N<sup>4</sup>-(2-methyl -1H-indol-6-yl)pyrimidine-2,4-diamine</heading>
+      <p id="p-00126-en" num="0118">
+        <chemistry id="chem-00011-en" num="00012">
+          <img id="img-00011-en" he="25.99mm" wi="75.69mm" alt="embedded image" img-content="chem" file="US20150252026A1_00012.PNG" img-format="png" original="US20150252026A1-20150910-C00012.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00127-en" num="0119">
+        <sup>1</sup>H NMR (400 MHz, DMSO-d<sub>6</sub>, 75° C.) δ 10.40 (s, 1H), 10.30 (s, 1H), 8.44 (s, 1H), 7.54 (s, 1H), 7.27-7.23 (m, 2H), 7.11-7.07 (m, 3H), 6.73 (dd, 1H), 6.03-6.00 (m, 2H), 5.85 (s, 1H), 3.76 (s, 3H), 3.61 (q, 2H), 2.96 (t, 2H), 2.36 (s, 3H), 2.10 (s, 3H).</p>
+      <p id="p-00128-en" num="0120">MS (ESI<sup>+</sup>) m/z 427.2 [M+H]<sup>+</sup>.</p>
+      <heading id="h-00014-en" level="1">EXAMPLE 6 </heading>
+      <heading id="h-00015-en" level="1">N<sup>2</sup>-2-5-ethoxy-1H-indol-3-yl)ethyl]-6-methyl-N<sup>4</sup>-(2-methyl-1H-indol-6-yl)pyrimidine-2,4-diamine</heading>
+      <p id="p-00129-en" num="0121">
+        <chemistry id="chem-00012-en" num="00013">
+          <img id="img-00012-en" he="24.64mm" wi="75.18mm" alt="embedded image" img-content="chem" file="US20150252026A1_00013.PNG" img-format="png" original="US20150252026A1-20150910-C00013.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00130-en" num="0122">
+        <sup>1</sup>H NMR (400 MHz, DMSO-d<sub>6</sub>, 75° C.) δ 10.41 (s, 1H), 10.38 (s, 1H), 8.45 (s, 1H), 7.54 (s, 1H), 7.27-7.22 (m, 2H), 7.10-7.07 (m, 3H), 6.72 (dd, 1H), 6.03-6.00 (m, 2H), 5.85 (s, 1H), 4.01 (q, 2H), 3.60 (q, 2H), 2.95 (t, 2H), 2.36 (s, 3H), 2.10 (s, 3H), 1.31 (t, 3H).</p>
+      <p id="p-00131-en" num="0123">MS (ESI<sup>+</sup>) m/z 441.2 [M+H]<sup>+</sup>.</p>
+      <heading id="h-00016-en" level="1">EXAMPLE 7 </heading>
+      <heading id="h-00017-en" level="1">N<sup>2</sup>-[2-(5-methoxy-1H-indol-3-yl)ethyl]-6-methyl-N<sup>4</sup>-(1-methylindol-4-yl)pyrimidine-2,4-diamine</heading>
+      <p id="p-00132-en" num="0124">
+        <chemistry id="chem-00013-en" num="00014">
+          <img id="img-00013-en" he="27.35mm" wi="75.18mm" alt="embedded image" img-content="chem" file="US20150252026A1_00014.PNG" img-format="png" original="US20150252026A1-20150910-C00014.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00133-en" num="0125">
+        <sup>1</sup>H NMR (400 MHz, DMSO-d<sub>6</sub>, 75° C.) δ 10.43 (s, 1H), 8.37 (s, 1H), 7.69 (d, 1H), 7.24 (d, 1H), 7.20 (d, 1H), 7.12-7.02 (m, 4H), 6.74 (dd, 1H), 6.64 (d, 1H), 6.18 (dd, 1H), 6.03 (s, 1H), 3.78 (s, 3H), 3.76 (s, 3H), 3.60 (q, 2H), 2.95 (t, 2H), 2.13 (s, 3H).</p>
+      <p id="p-00134-en" num="0126">MS (ESI<sup>+</sup>) m/z 427.2 [M+H]<sup>+</sup>.</p>
+      <heading id="h-00018-en" level="1">EXAMPLE 8</heading>
+      <heading id="h-00019-en" level="1">N<sup>2</sup>-[2-(5-ethoxy-1H-indol-3-yl)ethyl]-6-methyl-N<sup>4</sup>-(1-methylindol-4-yl)pyrimidine-2,4-diamine</heading>
+      <p id="p-00135-en" num="0127">
+        <chemistry id="chem-00014-en" num="00015">
+          <img id="img-00014-en" he="26.25mm" wi="75.69mm" alt="embedded image" img-content="chem" file="US20150252026A1_00015.PNG" img-format="png" original="US20150252026A1-20150910-C00015.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00136-en" num="0128">
+        <sup>1</sup>H NMR (400 MHz, DMSO-d<sub>6</sub>, 75° C.) δ 10.41 (s, 1H), 8.37 (s, 1H), 7.69 (d, 1H), 7.23 (d, 1H), 7.20 (d, 1H), 7.12-7.02 (m, 4H), 6.73 (dd, 1H), 6.64 (d, 1H), 6.17 (dd, 1H), 6.01 (s, 1H), 4.02 (q, 2H), 3.78 (s, 3H), 3.59 (q, 2H), 2.94 (t, 2H), 2.13 (s, 3H), 1.31 (t, 3H).</p>
+      <p id="p-00137-en" num="0129">MS (ESI<sup>+</sup>) m/z 441.2 [M+H]<sup>+</sup>.</p>
+      <heading id="h-00020-en" level="1">INTERMEDIATE 9</heading>
+      <heading id="h-00021-en" level="1">N-(2-chloropyrimidin-4-yl)-1,2-dimethyl-1H-benzo[d]imidazol-5-amine</heading>
+      <p id="p-00138-en" num="0130">
+        <chemistry id="chem-00015-en" num="00016">
+          <img id="img-00015-en" he="17.86mm" wi="50.12mm" alt="embedded image" img-content="chem" file="US20150252026A1_00016.PNG" img-format="png" original="US20150252026A1-20150910-C00016.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00139-en" num="0131">
+        <sup>1</sup>H NMR (500 MHz, DMSO-d<sub>6</sub>, 75° C.) δ 9.71 (s, 1H), 8.07 (d, 1H), 7.72 (s, 1H), 7.43 (d, 1H), 7.25 (dd, 1H), 6.65 (d, 1H), 3.73 (s, 3H), 2.52 (s, 3H).</p>
+      <p id="p-00140-en" num="0132">MS (ESI<sup>+</sup>) m/z 274.2 [M+H]<sup>+</sup>.</p>
+      <heading id="h-00022-en" level="1">INTERMEDIATE 10</heading>
+      <heading id="h-00023-en" level="1">N-(2-chloropyrimidin-4-yl)-1-methyl-benzimidazol-4-amine</heading>
+      <p id="p-00141-en" num="0133">
+        <chemistry id="chem-00016-en" num="00017">
+          <img id="img-00016-en" he="17.86mm" wi="45.55mm" alt="embedded image" img-content="chem" file="US20150252026A1_00017.PNG" img-format="png" original="US20150252026A1-20150910-C00017.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00142-en" num="0134">
+        <sup>1</sup>H NMR (400 MHz, DMSO-d<sub>6</sub>, 75° C.) δ 9.75 (br s, 1H), 8.71 (s, 1H), 7.88 (s, 1H), 6.95 (dd, 1H), 6.69 (d, 1H), 6.41 (d, 1H), 5.05 (br s, 2H), 3.75 (s, 3H).</p>
+      <p id="p-00143-en" num="0135">MS (ESI<sup>+</sup>) m/z 260.0 [M+H]<sup>+</sup>.</p>
+      <heading id="h-00024-en" level="1">INTERMEDIATE 11</heading>
+      <heading id="h-00025-en" level="1">N-(2-chloro-6-methyl-pyrimidin-4-yl)-1H-indol-5-amine</heading>
+      <p id="p-00144-en" num="0136">
+        <chemistry id="chem-00017-en" num="00018">
+          <img id="img-00017-en" he="19.73mm" wi="44.53mm" alt="embedded image" img-content="chem" file="US20150252026A1_00018.PNG" img-format="png" original="US20150252026A1-20150910-C00018.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00145-en" num="0137">
+        <sup>1</sup>H NMR (400 MHz, DMSO-d<sub>6</sub>, 75° C.) δ 10.90 (s, 1H), 9.39 (s, 1H), 7.61 (d, 1H), 7.41 (d, 1H), 7.33 (dd, 1H), 7.11 (dd, 1H), 6.44-6.42 (m, 2H), 2.23 (d, 3H).</p>
+      <p id="p-00146-en" num="0138">MS (ESI<sup>+</sup>) m/z 259.1 [M+H]<sup>+</sup>.</p>
+      <heading id="h-00026-en" level="1">INTERMEDIATE 12</heading>
+      <heading id="h-00027-en" level="1">N-(2-chloro-6-methylpyrimidin-4-yl)-2-methyl-1H-indol-6-amine</heading>
+      <p id="p-00147-en" num="0139">
+        <chemistry id="chem-00018-en" num="00019">
+          <img id="img-00018-en" he="19.73mm" wi="50.12mm" alt="embedded image" img-content="chem" file="US20150252026A1_00019.PNG" img-format="png" original="US20150252026A1-20150910-C00019.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00148-en" num="0140">
+        <sup>1</sup>H NMR (400 MHz, DMSO-d<sub>6</sub>, 75° C.) δ 10.75 (s, 1H), 9.44 (s, 1H), 7.51 (s, 1H), 7.36 (d, 1H), 6.95 (dd, 1H), 6.48 (s, 1H), 6.09 (s, 1H), 2.38 (s, 3H), 2.24 (s, 3H).</p>
+      <p id="p-00149-en" num="0141">MS (ESI<sup>+</sup>) m/z 273.1 [M+H]<sup>+</sup>.</p>
+      <heading id="h-00028-en" level="1">INTERMEDIATE 13 </heading>
+      <heading id="h-00029-en" level="1">N-(2-chloro-6-methyl-pyrimidin-4-yl)-1-methyl-indol-4-amine</heading>
+      <p id="p-00150-en" num="0142">
+        <chemistry id="chem-00019-en" num="00020">
+          <img id="img-00019-en" he="23.20mm" wi="45.55mm" alt="embedded image" img-content="chem" file="US20150252026A1_00020.PNG" img-format="png" original="US20150252026A1-20150910-C00020.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00151-en" num="0143">
+        <sup>1</sup>H NMR (400 MHz, DMSO-d<sub>6</sub>, 75° C.) δ 7.30 (d, 1H), 7.28 (d, 2H), 7.17 (dd, 1H), 6.53 (s, 1H), 6.47 (dd, 1H), 3.81 (s, 3H), 2.24 (s, 3H).</p>
+      <p id="p-00152-en" num="0144">MS (ESI<sup>+</sup>) m/z 273.1 [M+H]<sup>+</sup>.</p>
+      <p id="p-00153-en" num="0145">Biological Assays</p>
+      <p id="p-00154-en" num="0146">The Fluorometric Microculture Cytotoxicity Assay, FMCA (Larsson, R., et al.; Anticancer Res, 1989, 9, 1111-1119), is a three day non-clonogenic microplate-based cell viability assay used for measurement of the cytotoxic and/or cytostatic effect of compounds in vitro (Lindhagen, E. et al.; Nat. Protoc., 2008, 3, 1364-1369). FMCA represents a valuable method to measure cytotoxicity in a number of cell types, both cell lines and primary cells from patients (Larsson, R., et al.; Int. J. Cancer, 1992, 50, 177-185; Fridborg, H., et al.; Eur. J. Cancer, 1999. 35, 424-432; Dhar, S., et al.; Br. J. Cancer, 1996, 74, 888-896).</p>
+      <p id="p-00155-en" num="0147">FMCA is based on the principle that fluorescein diacetate (FDA) is converted to the fluorescent probe fluorescein by esterases in the plasma membranes of living cells. For experiments, 96-well microplates are prepared with compounds and stored at −20° C. or −70° C. until use. Cells are then seeded into the drug-prepared plates and placed in an incubator for 72 h. On the last day of incubation, the plates are washed and a buffer containing FDA is added and incubated with the cells for 45 minutes. Finally the fluorescence per well is measured in a fluorometer and a Survival Index % (SI) for each compound-treated well is calculated with the equation: Compound-treated cells minus blank divided by control cells minus blank. A high SI-value indicates a large percentage of living cells and vice versa.</p>
+      <p id="p-00156-en" num="0148">For experiments with compounds of the invention, 96-well plates were prepared as follows:</p>
+      <p id="p-00157-en" num="0149">Compounds were dissolved in DMSO to 10 mM and stored at −20° C. The test compounds were thawed, protected from light, mixed, and 3 μl stock solution was added to test tubes containing 297 μl culture medium RPMI-1640, to give the concentration 100 μM. Then, compounds were serially diluted to concentrations ten times higher than the desired test concentrations. Finally, 20 μl of each compound solution was added in duplicates to wells in two V-bottomed 96-well plates. The plates were stored at −20° C. until use.</p>
+      <p id="p-00158-en" num="0150">On the day of cell seeding, 180 μl of cell suspension was added to each well in the two assay plates. The final concentrations of compounds tested were 10 μM, 1 μM, 0.1 μM and 0.01 μM. The experiment was performed twice.</p>
+      <p id="p-00159-en" num="0151">In subsequent experiments, compounds were tested, along with a number of approved cancer drugs (dasatinib and pazopanib) as described above. The acute lymphoblastic leukemia cell line CCRF-CEM was used throughout. In the assay plates, medium was added to eight empty wells (blank wells) and wells filled with cell suspension served as control wells. SI-values were then calculated for each compound-treated well as described above. All experiments were conducted twice and a new batch of plates was prepared for each experiment. The data obtained showed the activity of the example compounds compared to the comparative compounds.</p>
+      <p id="p-00160-en" num="0152">To obtain EC<sub>50</sub>-values, plates were prepared with compounds serially diluted in culture media to suitable concentration ranges for each compound. Thereafter cells were added at a density of 10 000 cells per well and FMCA was performed after 72 h. Data analysis was performed using GraphPadPrism software, where SI values for each concentration were plotted on a log scale and processed with non-linear regression and a standard sigmoidal dose-response model.</p>
+      <p id="p-00161-en" num="0153">The example compounds of the invention were active in the CCRF-CEM cell measurements, showing EC<sub>50 </sub>values less than 1000 nM. Preferred compounds of the invention had EC<sub>50 </sub>values less than 100 nM. More preferred compounds of the invention had EC<sub>50 </sub>values less than 10 nM. The reference compounds dasatinib and pazopanib had EC<sub>50 </sub>values of 9700 nM, and 25900 nM, respectively. All of the compounds of the invention showed lower EC<sub>50 </sub>values than the reference compounds and data is presented in Table 1.</p>
+      <p id="p-00162-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>EC<sub>50 </sub>(nM) in CCRF-CEM cancer cells - leukemia</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="35pt" align="center" />
+              <colspec colname="2" colwidth="140pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Example</entry>
+                  <entry>CCRF-CEM</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>number</entry>
+                  <entry>EC<sub>50 </sub>(nM)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="35pt" align="center" />
+              <colspec colname="2" colwidth="140pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>1</entry>
+                  <entry>12</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>2</entry>
+                  <entry>9.7</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>3</entry>
+                  <entry>5.6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>4</entry>
+                  <entry>800</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>5</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>6</entry>
+                  <entry>69</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>7</entry>
+                  <entry>32</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>8</entry>
+                  <entry>110</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ref. 1</entry>
+                  <entry>9700</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ref. 2</entry>
+                  <entry>25900</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="left" id="entry-00001-en">Ref. 1 denotes reference compound dasatinib</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="left" id="entry-00002-en">Ref. 2 denotes reference compound pazopanib</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00163-en" num="0154">The compounds of the invention were also tested on further cancer cell lines related to ovarian cancer (A2780; see e.g. Hamilton, T. et al.; Semin. Oncol., 1984, 11, 285-298) and multidrug-resistant ovarian cancer (A2780/Adr). The known microtubule interfering agents vincristine and paclitaxel were included as references in the resistant and non-resistant ovarian cancer cell lines. The results are presented in Table 2.</p>
+      <p id="p-00164-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>EC<sub>50 </sub>(nM) in various cancer cell lines</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="98pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="84pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>A2780</entry>
+                  <entry>A2780/Adr</entry>
+                </row>
+                <row>
+                  <entry>Example number</entry>
+                  <entry>EC<sub>50 </sub>(nM)</entry>
+                  <entry>EC<sub>50 </sub>(nM)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="98pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="char" char="." />
+              <colspec colname="3" colwidth="84pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>1</entry>
+                  <entry>17</entry>
+                  <entry>380</entry>
+                </row>
+                <row>
+                  <entry>2</entry>
+                  <entry>3.3</entry>
+                  <entry>17</entry>
+                </row>
+                <row>
+                  <entry>3</entry>
+                  <entry>9.2</entry>
+                  <entry>24</entry>
+                </row>
+                <row>
+                  <entry>4</entry>
+                  <entry>950</entry>
+                  <entry>930</entry>
+                </row>
+                <row>
+                  <entry>5</entry>
+                  <entry>130</entry>
+                  <entry>400</entry>
+                </row>
+                <row>
+                  <entry>6</entry>
+                  <entry>170</entry>
+                  <entry>450</entry>
+                </row>
+                <row>
+                  <entry>7</entry>
+                  <entry>12</entry>
+                  <entry>53</entry>
+                </row>
+                <row>
+                  <entry>8</entry>
+                  <entry>48</entry>
+                  <entry>130</entry>
+                </row>
+                <row>
+                  <entry>Vincristine</entry>
+                  <entry>0.22</entry>
+                  <entry>210</entry>
+                </row>
+                <row>
+                  <entry>Paclitaxel</entry>
+                  <entry>0.26</entry>
+                  <entry>810</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00165-en" num="0155">Example compounds were further tested in a tubulin polymerization assay kit from Cytoskeleton Inc (Denver, Colo., USA). Polymerization is followed by fluorescence enhancement due to the incorporation of a fluorescent reporter into microtubules as polymerization occurs. Vincristine and paclitaxel at 3 μM were used as positive controls for tubulin polymerization inhibition and stabilisation, respectively. All compounds were dissolved in DMSO, which was used as solvent control. For experiments, example compounds (1, 3, and 10 μM) and control compounds (3 μM) were incubated with bovine tubulin protein in a cell-free environment and the fluorescence was then measured in a fluorometer (Fluostar Optima, BMG Labtech, Offenburg, Germany) at 360/450 nm every minute for a total of 60 mins. Selected example compounds were tested and at least examples 1, 2, 5 and 8 showed inhibitory effects on tubulin polymerization (Table 3).</p>
+      <p id="p-00166-en" num="0156">To study whether the compounds bind to the colchicine site on tubulin, a colchicine displacement assay using fluorometric detection was performed as previously described (Bhattacharyya B. et al.; Proc Natl Acad Sci USA 1974, 71:2627-31; Risinger A L. et al.; J Pharmacol Exp Ther 2011; 336:652-60). Porcine brain tubulin at 2 μM (Cytoskeleton) in a buffer consisting of 80 mM PIPES, 2 mM MgCl<sub>2</sub>, 0.5 mM EGTA at pH 7.0 with addition of 1 mM GTP, was incubated alone, with 2 μM colchicine or with 2 μM colchicine in the presence of test compounds or reference compound combretastatin A4 at 20 μM for 2 h in a black half-area 96-well plate (Corning Inc, Corning, N.Y., USA). Thereafter, the fluorescence was measured using a FLUOStar Optima (BMG Labtech) at an excitation of 380 nm and emission of 440 nm. The results are presented as percent of control i.e. colchicine bound to tubulin. Results of selected example compounds and the known colchicine site binder combretastatin A4 are presented in Table 3.</p>
+      <p id="p-00167-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 3</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Data on tubulin polymerization and colchicine-tubulin binding</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="77pt" align="center" />
+              <colspec colname="2" colwidth="63pt" align="center" />
+              <colspec colname="3" colwidth="77pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Inhibition of tubulin</entry>
+                  <entry>Colchicine-tubulin</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>polymerization</entry>
+                  <entry>binding</entry>
+                </row>
+                <row>
+                  <entry>Example number</entry>
+                  <entry>IC50 (μM)</entry>
+                  <entry>Percent of control</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>1</entry>
+                  <entry>1-3</entry>
+                  <entry>95</entry>
+                </row>
+                <row>
+                  <entry>2</entry>
+                  <entry>1-3</entry>
+                  <entry>81</entry>
+                </row>
+                <row>
+                  <entry>4</entry>
+                  <entry>&gt;&gt;10</entry>
+                  <entry>Nt*</entry>
+                </row>
+                <row>
+                  <entry>5</entry>
+                  <entry> 3-10</entry>
+                  <entry>Nt*</entry>
+                </row>
+                <row>
+                  <entry>8</entry>
+                  <entry>
+                    <sup>~</sup>3</entry>
+                  <entry>82</entry>
+                </row>
+                <row>
+                  <entry>Vincristine</entry>
+                  <entry>&lt;&lt;3</entry>
+                  <entry>Nt*</entry>
+                </row>
+                <row>
+                  <entry>Combretastatin A4</entry>
+                  <entry>Nt*</entry>
+                  <entry>66</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="left" id="entry-00003-en">*Nt denotes “not tested”</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A compound of formula I or a pharmaceutically acceptable solvate or salt thereof,</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00001-en" num="00021">
+          <img id="imgc-00001-en" he="31.75mm" wi="67.65mm" alt="embedded image" img-content="chem" file="US20150252026A1_00021.PNG" img-format="png" original="US20150252026A1-20150910-C00021.TIF" />
+        </chemistry><claim-text>wherein</claim-text><claim-text>R<sup>1 </sup>is selected from hydrogen, and (C<sub>1</sub>-C<sub>4</sub>)alkyl;</claim-text><claim-text>R<sup>2 </sup>represents 0(C<sub>1</sub>-C<sub>4</sub>)alkyl; and</claim-text><claim-text>R<sup>3 </sup>represents</claim-text></claim-text>
+      <claim-text>
+        <chemistry id="chemc-00002-en" num="00022">
+          <img id="imgc-00002-en" he="119.97mm" wi="56.22mm" alt="embedded image" img-content="chem" file="US20150252026A1_00022.PNG" img-format="png" original="US20150252026A1-20150910-C00022.TIF" />
+        </chemistry><claim-text>provided that when R<sup>1 </sup>is hydrogen and R<sup>3 </sup>is B, R<sup>2 </sup>is ethoxy;</claim-text><claim-text>when R<sup>3 </sup>is C or D, R<sup>1 </sup>is methyl; and</claim-text><claim-text>when R<sup>3 </sup>represents E, R<sup>1 </sup>is methyl and R<sup>2 </sup>is ethoxy.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. A compound according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein
+<claim-text>R<sup>1 </sup>is hydrogen;</claim-text><claim-text>R<sup>2 </sup>is methoxy or ethoxy; and</claim-text><claim-text>R<sup>3 </sup>represents</claim-text></claim-text>
+      <claim-text>
+        <chemistry id="chemc-00003-en" num="00023">
+          <img id="imgc-00003-en" he="20.74mm" wi="51.22mm" alt="embedded image" img-content="chem" file="US20150252026A1_00023.PNG" img-format="png" original="US20150252026A1-20150910-C00023.TIF" />
+        </chemistry>
+      </claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. A compound according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein
+<claim-text>R<sup>1 </sup>is methyl;</claim-text><claim-text>R<sup>2 </sup>is methoxy or ethoxy; and</claim-text><claim-text>R<sup>3 </sup>represents</claim-text></claim-text>
+      <claim-text>
+        <chemistry id="chemc-00004-en" num="00024">
+          <img id="imgc-00004-en" he="20.57mm" wi="51.14mm" alt="embedded image" img-content="chem" file="US20150252026A1_00024.PNG" img-format="png" original="US20150252026A1-20150910-C00024.TIF" />
+        </chemistry>
+      </claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. A compound according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein
+<claim-text>R<sup>1 </sup>is methyl;</claim-text><claim-text>R<sup>2 </sup>is methoxy or ethoxy; and</claim-text><claim-text>R<sup>3 </sup>represents</claim-text></claim-text>
+      <claim-text>
+        <chemistry id="chemc-00005-en" num="00025">
+          <img id="imgc-00005-en" he="16.00mm" wi="53.51mm" alt="embedded image" img-content="chem" file="US20150252026A1_00025.PNG" img-format="png" original="US20150252026A1-20150910-C00025.TIF" />
+        </chemistry>
+      </claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. A compound according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, said compound being selected from:
+<claim-text>N<sup>4</sup>-(1,2-dimethyl-1H-benzo[d]imidazol-5-yl)-N<sup>2</sup>-[2 (5-ethoxy-1H-indol-3-yl)ethyl]pyrimidine-2,4-diamine;</claim-text><claim-text>N<sup>2</sup>-[2-(5-methoxy-1H-indol-3-yl)ethyl]-N<sup>4</sup>-(1-methylbenzimidazol-4-yl)pyrimidine-2,4-diamine;</claim-text><claim-text>N<sup>2</sup>-[2-(5-ethoxy-1H-indol-3-yl)ethyl]-N<sup>4</sup>-(1-methylbenzimidazol-4-yl)pyrimidine-2,4-diamine;</claim-text><claim-text>N<sup>2</sup>-[2-(5-ethoxy-1H-indol-3-yl)ethyl]-N<sup>4</sup>-(1H-indol-5-yl)-6-methyl-pyrimidine-2,4-diamine;</claim-text><claim-text>N<sup>2</sup>-[2-(5-methoxy-1H-indol-3-yl)ethyl]-6-methyl-N<sup>4</sup>-(2-methyl-1H-indol-6-yl)pyrimidine-2,4-diamine;</claim-text><claim-text>N<sup>2</sup>-[2-(5-ethoxy-1 H-indol-3-yl)ethyl]-6-methyl-N<sup>4</sup>-(2-methyl-1H-indol-6-yl)pyrimidine-2,4-diamine;</claim-text><claim-text>N<sup>2</sup>-[2-(5-methoxy-1 H-indol-3-yl)ethyl]-6-methyl-N<sup>4</sup>-(1-methylindol-4-yl)pyrimidine-2,4-diamine; and</claim-text><claim-text>N<sup>2</sup>-[2 -(5-ethoxy-1H-indol-3-yl)ethyl]-6-methyl-N<sup>4</sup>-(1-methylindol-4-yl)pyrimidine-2,4-diamine;</claim-text><claim-text>and a pharmaceutically acceptable ester, amide, solvate or salt thereof.</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. A compound according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, said compound being selected from:
+<claim-text>N<sup>2</sup>-[2-(5-methoxy-1H-indol-3-yl)ethyl]-N<sup>4</sup>-(1-methylbenzimidazol-4-yl)pyrimidine-2,4-diamine; and</claim-text><claim-text>N<sup>2</sup>-[2-(5-ethoxy-1H-indol-3-yl)ethyl]-N<sup>4</sup>-(1-methylbenzimidazol-4-yl)pyrimidine-2,4 -diamine;</claim-text><claim-text>and a pharmaceutically acceptable ester, amide, solvate or salt thereof.</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. A compound according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, said compound being:
+<claim-text>N<sup>4</sup>-(1,2-dimethyl-1H-benzo[d]imidazol-5-yl)-N<sup>2</sup>-[2-(5-ethoxy-1H-indol-3-yl)ethyl]pyrimidine-2,4-diamine;</claim-text><claim-text>and a pharmaceutically acceptable ester, amide, solvate or salt thereof.</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. A compound according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, said compound being selected from:
+<claim-text>N<sup>2</sup>-[2-(5-methoxy-1H-indol-3-yl)ethyl]-6-methyl-N<sup>4</sup>-(1-methylindol-4-yl)pyrimidine-2,4-diamine; and</claim-text><claim-text>N<sup>2</sup>-[2-(5-ethoxy-1H-indol-3-yl)ethyl]-6-methyl-N<sup>4</sup>-(1-methylindol-4-yl)pyrimidine-2,4-diamine;</claim-text><claim-text>and a pharmaceutically acceptable solvate or salt thereof.</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. A compound according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, said compound being selected from:
+<claim-text>N<sup>2</sup>-[2-(5-methoxy-1H-indol-3-yl)ethyl]-6-methyl-N<sup>4</sup>-(2-methyl-1H-indol-6-yl)pyrimidine-2,4-diamine; and</claim-text><claim-text>N<sup>2</sup>-[2-(5-ethoxy-1H-indol-3-yl)ethyl]-6-methyl-N<sup>4</sup>-(2-methyl-1H-indol-6-yl)pyrimidine-2,4-diamine;</claim-text><claim-text>and a pharmaceutically acceptable solvate or salt thereof</claim-text></claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. A compound according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, said compound being:
+<claim-text>N<sup>2</sup>-[2-(5-ethoxy-1H-indol-3-yl)ethyl]-N<sup>4</sup>-(1H-indol-5-yl)-6-methyl-pyrimidine-2,4-diamine;</claim-text><claim-text>and a pharmaceutically acceptable solvate or salt thereof</claim-text></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en" independent="true">
+      <claim-text>
+        <b>11</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en" independent="true">
+      <claim-text>
+        <b>12</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en" independent="true">
+      <claim-text>
+        <b>13</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en" independent="true">
+      <claim-text>
+        <b>14</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en" independent="true">
+      <claim-text>
+        <b>15</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en" independent="true">
+      <claim-text>
+        <b>16</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en" independent="true">
+      <claim-text>
+        <b>17</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en" independent="true">
+      <claim-text>
+        <b>18</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en" independent="true">
+      <claim-text>
+        <b>19</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. A pharmaceutical composition comprising a compound according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, together with pharmaceutically acceptable diluents and carriers.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. A method for treatment of cancer, which comprises administering to a subject in need thereof, a therapeutically effective amount of a compound according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. A method for treatment of cancer, said cancer being selected from leukemia, lymphoma, myeloma, breast cancer, ovarian cancer, prostate cancer, lung cancer, pancreatic cancer, colorectal cancer, and glioma, which comprises administering to a subject in need thereof, a therapeutically effective amount of a compound according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>23</b>. A method for treatment of a disease selected from Crohns disease, rheumatic diseases, tuberculosis, inflammatory diseases, multiple sclerosis, amyotrophic lateral sclerosis, Parkinson's disease or diseases caused by bacteria, viruses, fungus, and parasites, which comprises administering to a subject in need thereof, a therapeutically effective amount of a compound according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>24</b>. A method for treatment of a disease involving angiogenesis and/or neovascularization, which comprises administering to a subject in need thereof, a therapeutically effective amount of a compound according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text>
+    </claim>
+  </claims>
+  <drawings>
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150252026A1_00001.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252026A1-20150910-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150252026A1_00002.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252026A1-20150910-C00002.TIF" inline="yes" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150252026A1_00003.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252026A1-20150910-C00003.TIF" inline="yes" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150252026A1_00004.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252026A1-20150910-C00004.TIF" inline="yes" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150252026A1_00005.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252026A1-20150910-C00005.TIF" inline="yes" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150252026A1_00006.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252026A1-20150910-C00006.TIF" inline="yes" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150252026A1_00007.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252026A1-20150910-C00007.TIF" inline="yes" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150252026A1_00008.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252026A1-20150910-C00008.TIF" inline="yes" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150252026A1_00009.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252026A1-20150910-C00009.TIF" inline="yes" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150252026A1_00010.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252026A1-20150910-C00010.TIF" inline="yes" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150252026A1_00011.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252026A1-20150910-C00011.TIF" inline="yes" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150252026A1_00012.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252026A1-20150910-C00012.TIF" inline="yes" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150252026A1_00013.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252026A1-20150910-C00013.TIF" inline="yes" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150252026A1_00014.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252026A1-20150910-C00014.TIF" inline="yes" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150252026A1_00015.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252026A1-20150910-C00015.TIF" inline="yes" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150252026A1_00016.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252026A1-20150910-C00016.TIF" inline="yes" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150252026A1_00017.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252026A1-20150910-C00017.TIF" inline="yes" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150252026A1_00018.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252026A1-20150910-C00018.TIF" inline="yes" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="US20150252026A1_00019.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252026A1-20150910-C00019.TIF" inline="yes" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="US20150252026A1_00020.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252026A1-20150910-C00020.TIF" inline="yes" />
+    </figure>
+    <figure num="21">
+      <img he="N/A" wi="N/A" file="US20150252026A1_00021.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252026A1-20150910-C00021.TIF" inline="yes" />
+    </figure>
+    <figure num="22">
+      <img he="N/A" wi="N/A" file="US20150252026A1_00022.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252026A1-20150910-C00022.TIF" inline="yes" />
+    </figure>
+    <figure num="23">
+      <img he="N/A" wi="N/A" file="US20150252026A1_00023.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252026A1-20150910-C00023.TIF" inline="yes" />
+    </figure>
+    <figure num="24">
+      <img he="N/A" wi="N/A" file="US20150252026A1_00024.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252026A1-20150910-C00024.TIF" inline="yes" />
+    </figure>
+    <figure num="25">
+      <img he="N/A" wi="N/A" file="US20150252026A1_00025.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252026A1-20150910-C00025.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150252026A1.PDF" type="pdf" size="612878" pages="13" />
+</lexisnexis-patent-document>

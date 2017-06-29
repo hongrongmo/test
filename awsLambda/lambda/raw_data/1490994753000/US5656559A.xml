@@ -1,0 +1,2598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2017 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20170321" file="US5656559A.xml" produced-by="LexisNexis-Univentio" lang="eng" date-changed="20170321" time-changed="130703">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Grant" publ-desc="Patent">
+      <document-id id="39189547">
+        <country>US</country>
+        <doc-number>5656559</doc-number>
+        <kind>A</kind>
+        <date>19970812</date>
+      </document-id>
+      <document-id data-format="original">
+        <doc-number>5656559</doc-number>
+        <kind>A</kind>
+      </document-id>
+      <document-id data-format="docdb">
+        <doc-number>5656559</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>US5656559</doc-number>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id id="49692807">
+        <country>US</country>
+        <doc-number>08494000</doc-number>
+        <date>19950623</date>
+      </document-id>
+      <document-id data-format="original">
+        <country>US</country>
+        <doc-number>08494000</doc-number>
+        <date>19950623</date>
+      </document-id>
+      <document-id data-format="docdb" id="51320851">
+        <doc-number>49400095</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>US19950494000</doc-number>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20090326">
+      <priority-claim sequence="1" kind="national">
+        <country>FR</country>
+        <doc-number>94007725</doc-number>
+        <date>19940623</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>94 07725</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>FR19940007725</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20090326">
+      <unexamined-printed-without-grant>
+        <date>19970812</date>
+      </unexamined-printed-without-grant>
+      <printed-with-grant>
+        <date>19970812</date>
+      </printed-with-grant>
+    </dates-of-public-availability>
+    <classification-ipc date-changed="20121205">
+      <main-classification>
+        <text> 6C 03C   3/087  A</text>
+        <edition>6</edition>
+        <section>C</section>
+        <class>03</class>
+        <subclass>C</subclass>
+        <main-group>3</main-group>
+        <subgroup>087</subgroup>
+        <qualifying-character>A</qualifying-character>
+      </main-classification>
+      <further-classification sequence="1">
+        <text> 6C 03C   3/089  B</text>
+        <edition>6</edition>
+        <section>C</section>
+        <class>03</class>
+        <subclass>C</subclass>
+        <main-group>3</main-group>
+        <subgroup>089</subgroup>
+        <qualifying-character>B</qualifying-character>
+      </further-classification>
+      <further-classification sequence="2">
+        <text> 6C 03C   3/091  B</text>
+        <edition>6</edition>
+        <section>C</section>
+        <class>03</class>
+        <subclass>C</subclass>
+        <main-group>3</main-group>
+        <subgroup>091</subgroup>
+        <qualifying-character>B</qualifying-character>
+      </further-classification>
+    </classification-ipc>
+    <classifications-ipcr date-changed="20121205">
+      <classification-ipcr sequence="1">
+        <text>C03C   3/076       20060101C I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>C</classification-level>
+        <section>C</section>
+        <class>03</class>
+        <subclass>C</subclass>
+        <main-group>3</main-group>
+        <subgroup>076</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C03C   3/078       20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>03</class>
+        <subclass>C</subclass>
+        <main-group>3</main-group>
+        <subgroup>078</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C03C   3/087       20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>03</class>
+        <subclass>C</subclass>
+        <main-group>3</main-group>
+        <subgroup>087</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C03C   6/00        20060101CLI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>C</classification-level>
+        <section>C</section>
+        <class>03</class>
+        <subclass>C</subclass>
+        <main-group>6</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>C03C   6/04        20060101ALI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>03</class>
+        <subclass>C</subclass>
+        <main-group>6</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20121205">
+      <classification-cpc sequence="1">
+        <text>C03C   3/078       20130101  I20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>03</class>
+        <subclass>C</subclass>
+        <main-group>3</main-group>
+        <subgroup>078</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C03C   3/087       20130101  I20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>03</class>
+        <subclass>C</subclass>
+        <main-group>3</main-group>
+        <subgroup>087</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <classification-national date-changed="20121205">
+      <country>US</country>
+      <main-classification>
+        <text>501/70</text>
+        <class>501</class>
+        <subclass>70</subclass>
+      </main-classification>
+      <further-classification sequence="1">
+        <text>501/65</text>
+        <class>501</class>
+        <subclass>65</subclass>
+      </further-classification>
+      <further-classification sequence="2">
+        <text>501/66</text>
+        <class>501</class>
+        <subclass>66</subclass>
+      </further-classification>
+      <further-classification sequence="3">
+        <text>501/71</text>
+        <class>501</class>
+        <subclass>71</subclass>
+      </further-classification>
+    </classification-national>
+    <classifications-ecla date-changed="20121205">
+      <classification-ecla sequence="1" classification-scheme="EC" country="EP">
+        <text>C03C  3/078</text>
+        <section>C</section>
+        <class>03</class>
+        <subclass>C</subclass>
+        <main-group>3</main-group>
+        <subgroup>078</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="2" classification-scheme="EC" country="EP">
+        <text>C03C  3/087</text>
+        <section>C</section>
+        <class>03</class>
+        <subclass>C</subclass>
+        <main-group>3</main-group>
+        <subgroup>087</subgroup>
+      </classification-ecla>
+    </classifications-ecla>
+    <field-of-search date-changed="20070520">
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>501/65</text>
+          <class>501</class>
+          <subclass>65</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>501/66</text>
+          <class>501</class>
+          <subclass>66</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>501/70</text>
+          <class>501</class>
+          <subclass>70</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>501/71</text>
+          <class>501</class>
+          <subclass>71</subclass>
+        </main-classification>
+      </classification-national>
+    </field-of-search>
+    <number-of-claims calculated="yes">18</number-of-claims>
+    <invention-title id="title_eng" date-changed="20070520" lang="eng" format="original">Clear glass composition intended for the production of panes</invention-title>
+    <references-cited date-changed="20161018">
+      <patent-citations name="patcit" date-changed="20070823" />
+      <non-patent-citations name="nplcit" date-changed="20090326" />
+      <forward-citations name="fwdcit" date-changed="20161018" />
+      <citation srep-phase="e">
+        <patcit num="1" dnum="RE 25312">
+          <document-id>
+            <country>US</country>
+            <doc-number>RE025312</doc-number>
+            <kind>E</kind>
+            <name>Duncan et al.</name>
+            <date>19630101</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>RE 25312</doc-number>
+          </document-id>
+          <application-date>
+            <date>19610515</date>
+          </application-date>
+        </patcit>
+        <classification-national>
+          <country>US</country>
+          <main-classification>
+            <text>501/71</text>
+            <class>501</class>
+            <subclass>71</subclass>
+          </main-classification>
+        </classification-national>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="2" dnum="3723142">
+          <document-id>
+            <country>US</country>
+            <doc-number>3723142</doc-number>
+            <kind>A</kind>
+            <name>Kato et al.</name>
+            <date>19730327</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>3723142</doc-number>
+          </document-id>
+          <application-date>
+            <date>19701211</date>
+          </application-date>
+        </patcit>
+        <classification-national>
+          <country>US</country>
+          <main-classification>
+            <text>501/71</text>
+            <class>501</class>
+            <subclass>71</subclass>
+          </main-classification>
+        </classification-national>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="3" dnum="4104076">
+          <document-id>
+            <country>US</country>
+            <doc-number>4104076</doc-number>
+            <kind>A</kind>
+            <name>Pons</name>
+            <date>19780801</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>4104076</doc-number>
+          </document-id>
+          <application-date>
+            <date>19760908</date>
+          </application-date>
+        </patcit>
+        <classification-national>
+          <country>US</country>
+          <main-classification>
+            <text>501/66</text>
+            <class>501</class>
+            <subclass>66</subclass>
+          </main-classification>
+        </classification-national>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="4" dnum="4190452">
+          <document-id>
+            <country>US</country>
+            <doc-number>4190452</doc-number>
+            <kind>A</kind>
+            <name>Fischer et al.</name>
+            <date>19800226</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>4190452</doc-number>
+          </document-id>
+          <application-date>
+            <date>19780214</date>
+          </application-date>
+        </patcit>
+        <classification-national>
+          <country>US</country>
+          <main-classification>
+            <text>501/66</text>
+            <class>501</class>
+            <subclass>66</subclass>
+          </main-classification>
+        </classification-national>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="5" dnum="4792536">
+          <document-id>
+            <country>US</country>
+            <doc-number>4792536</doc-number>
+            <kind>A</kind>
+            <name>Pecoraro et al.</name>
+            <date>19881220</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>4792536</doc-number>
+          </document-id>
+          <application-date>
+            <date>19870629</date>
+          </application-date>
+        </patcit>
+        <classification-national>
+          <country>US</country>
+          <main-classification>
+            <text>501/70</text>
+            <class>501</class>
+            <subclass>70</subclass>
+          </main-classification>
+        </classification-national>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="6" dnum="5023210">
+          <document-id>
+            <country>US</country>
+            <doc-number>5023210</doc-number>
+            <kind>A</kind>
+            <name>Kromwiede et al.</name>
+            <date>19910611</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>5023210</doc-number>
+          </document-id>
+          <application-date>
+            <date>19891103</date>
+          </application-date>
+        </patcit>
+        <classification-national>
+          <country>US</country>
+          <main-classification>
+            <text>501/71</text>
+            <class>501</class>
+            <subclass>71</subclass>
+          </main-classification>
+        </classification-national>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="7" dnum="5030593">
+          <document-id>
+            <country>US</country>
+            <doc-number>5030593</doc-number>
+            <kind>A</kind>
+            <name>Heithoff</name>
+            <date>19910709</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>5030593</doc-number>
+          </document-id>
+          <application-date>
+            <date>19900629</date>
+          </application-date>
+        </patcit>
+        <classification-national>
+          <country>US</country>
+          <main-classification>
+            <text>501/70</text>
+            <class>501</class>
+            <subclass>70</subclass>
+          </main-classification>
+        </classification-national>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="8" dnum="5030594">
+          <document-id>
+            <country>US</country>
+            <doc-number>5030594</doc-number>
+            <kind>A</kind>
+            <name>Heithoff</name>
+            <date>19910709</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>5030594</doc-number>
+          </document-id>
+          <application-date>
+            <date>19900629</date>
+          </application-date>
+        </patcit>
+        <classification-national>
+          <country>US</country>
+          <main-classification>
+            <text>501/70</text>
+            <class>501</class>
+            <subclass>70</subclass>
+          </main-classification>
+        </classification-national>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="9" dnum="5264400">
+          <document-id>
+            <country>US</country>
+            <doc-number>5264400</doc-number>
+            <kind>A</kind>
+            <name>Nakaguchi et al.</name>
+            <date>19931123</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>5264400</doc-number>
+          </document-id>
+          <application-date>
+            <date>19921013</date>
+          </application-date>
+        </patcit>
+        <classification-national>
+          <country>US</country>
+          <main-classification>
+            <text>501/70</text>
+            <class>501</class>
+            <subclass>70</subclass>
+          </main-classification>
+        </classification-national>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="10" dnum="5278108">
+          <document-id>
+            <country>US</country>
+            <doc-number>5278108</doc-number>
+            <kind>A</kind>
+            <name>Cheng et al.</name>
+            <date>19940111</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>5278108</doc-number>
+          </document-id>
+          <application-date>
+            <date>19920702</date>
+          </application-date>
+        </patcit>
+        <classification-national>
+          <country>US</country>
+          <main-classification>
+            <text>501/71</text>
+            <class>501</class>
+            <subclass>71</subclass>
+          </main-classification>
+        </classification-national>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="11" dnum="5346867">
+          <document-id>
+            <country>US</country>
+            <doc-number>5346867</doc-number>
+            <kind>A</kind>
+            <name>Jones et al.</name>
+            <date>19940913</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>5346867</doc-number>
+          </document-id>
+          <application-date>
+            <date>19931217</date>
+          </application-date>
+        </patcit>
+        <classification-national>
+          <country>US</country>
+          <main-classification>
+            <text>501/70</text>
+            <class>501</class>
+            <subclass>70</subclass>
+          </main-classification>
+        </classification-national>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="12" dnum="5352640">
+          <document-id>
+            <country>US</country>
+            <doc-number>5352640</doc-number>
+            <kind>A</kind>
+            <name>Combes et al.</name>
+            <date>19941004</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>5352640</doc-number>
+          </document-id>
+          <application-date>
+            <date>19930407</date>
+          </application-date>
+        </patcit>
+        <classification-national>
+          <country>US</country>
+          <main-classification>
+            <text>501/71</text>
+            <class>501</class>
+            <subclass>71</subclass>
+          </main-classification>
+        </classification-national>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="13" dnum="5362689">
+          <document-id>
+            <country>US</country>
+            <doc-number>5362689</doc-number>
+            <kind>A</kind>
+            <name>Morimoto et al.</name>
+            <date>19941108</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>5362689</doc-number>
+          </document-id>
+          <application-date>
+            <date>19930827</date>
+          </application-date>
+        </patcit>
+        <classification-national>
+          <country>US</country>
+          <main-classification>
+            <text>501/70</text>
+            <class>501</class>
+            <subclass>70</subclass>
+          </main-classification>
+        </classification-national>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="14" dnum="5364820">
+          <document-id>
+            <country>US</country>
+            <doc-number>5364820</doc-number>
+            <kind>A</kind>
+            <name>Morimoto et al.</name>
+            <date>19941115</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>5364820</doc-number>
+          </document-id>
+          <application-date>
+            <date>19930317</date>
+          </application-date>
+        </patcit>
+        <classification-national>
+          <country>US</country>
+          <main-classification>
+            <text>501/71</text>
+            <class>501</class>
+            <subclass>71</subclass>
+          </main-classification>
+        </classification-national>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="15" dnum="5380685">
+          <document-id>
+            <country>US</country>
+            <doc-number>5380685</doc-number>
+            <kind>A</kind>
+            <name>Morimoto et al.</name>
+            <date>19950110</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>5380685</doc-number>
+          </document-id>
+          <application-date>
+            <date>19930316</date>
+          </application-date>
+        </patcit>
+        <classification-national>
+          <country>US</country>
+          <main-classification>
+            <text>501/71</text>
+            <class>501</class>
+            <subclass>71</subclass>
+          </main-classification>
+        </classification-national>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="16" dnum="5478783">
+          <document-id>
+            <country>US</country>
+            <doc-number>5478783</doc-number>
+            <kind>A</kind>
+            <name>Higby et al.</name>
+            <date>19951226</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>5478783</doc-number>
+          </document-id>
+          <application-date>
+            <date>19940803</date>
+          </application-date>
+        </patcit>
+        <classification-national>
+          <country>US</country>
+          <main-classification>
+            <text>501/71</text>
+            <class>501</class>
+            <subclass>71</subclass>
+          </main-classification>
+        </classification-national>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="17" dnum="5523263">
+          <document-id>
+            <country>US</country>
+            <doc-number>5523263</doc-number>
+            <kind>A</kind>
+            <name>Penrod</name>
+            <date>19960604</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>5523263</doc-number>
+          </document-id>
+          <application-date>
+            <date>19940826</date>
+          </application-date>
+        </patcit>
+        <classification-national>
+          <country>US</country>
+          <main-classification>
+            <text>501/27</text>
+            <class>501</class>
+            <subclass>27</subclass>
+          </main-classification>
+        </classification-national>
+      </citation>
+      <citation srep-phase="o">
+        <patcit num="18" dnum="0413254">
+          <document-id>
+            <country>EP</country>
+            <doc-number>413254</doc-number>
+            <kind>A1</kind>
+            <date>19910220</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>0413254</doc-number>
+          </document-id>
+          <application-date>
+            <date>19900809</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="o">
+        <patcit num="19" dnum="2672587">
+          <document-id>
+            <country>FR</country>
+            <doc-number>2672587</doc-number>
+            <kind>A1</kind>
+            <date>19920814</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>2672587</doc-number>
+          </document-id>
+          <application-date>
+            <date>19920207</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="o">
+        <patcit num="20" dnum="52102310">
+          <document-id>
+            <country>JP</country>
+            <doc-number>52102310</doc-number>
+            <kind>A</kind>
+            <date>19770827</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>52102310</doc-number>
+          </document-id>
+          <application-date>
+            <date>19760224</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="o">
+        <patcit num="21" dnum="1470679">
+          <document-id>
+            <country>SU</country>
+            <doc-number>1470679</doc-number>
+            <kind>A1</kind>
+            <date>19890407</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>1470679</doc-number>
+          </document-id>
+          <application-date>
+            <date>19870527</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="o">
+        <patcit num="22" dnum="1565815">
+          <document-id>
+            <country>SU</country>
+            <doc-number>1565815</doc-number>
+            <kind>A1</kind>
+            <date>19900523</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>1565815</doc-number>
+          </document-id>
+          <application-date>
+            <date>19880729</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="o">
+        <patcit num="23" dnum="1744067">
+          <document-id>
+            <country>SU</country>
+            <doc-number>1744067</doc-number>
+            <kind>A1</kind>
+            <date>19920630</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>1744067</doc-number>
+          </document-id>
+          <application-date>
+            <date>19890714</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="o">
+        <patcit num="24" dnum="1168769">
+          <document-id>
+            <country>GB</country>
+            <doc-number>1168769</doc-number>
+            <kind>A</kind>
+            <date>19691029</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>1168769</doc-number>
+          </document-id>
+          <application-date>
+            <date>19660906</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="o">
+        <patcit num="25" dnum="2252973">
+          <document-id>
+            <country>GB</country>
+            <doc-number>2252973</doc-number>
+            <kind>A</kind>
+            <date>19920826</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>2252973</doc-number>
+          </document-id>
+          <application-date>
+            <date>19920122</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="0">
+        <nplcit num="1">
+          <text>M. B. Volf, Chemical Approach to Glass Elsevier 1984, p. 274.</text>
+        </nplcit>
+      </citation>
+      <citation srep-phase="0">
+        <nplcit num="2">
+          <text>Database WPI, Derwent Publications, AN 85 307908, JP 60 215546, Oct. 28, 1985.</text>
+        </nplcit>
+      </citation>
+      <citation srep-phase="0">
+        <nplcit num="3">
+          <text>Sprechsaal, vol. 126, No. 5, 1993, pp. 292 297, J.P. Stevenson, Minor Additions of B203 To Container Glass Formulations.</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <fwdcit num="1">
+          <document-id>
+            <country>EP</country>
+            <doc-number>1116699</doc-number>
+            <kind>B1</kind>
+            <date>20060215</date>
+          </document-id>
+          <application-date>
+            <date>19990901</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="2">
+          <document-id>
+            <country>EP</country>
+            <doc-number>1201615</doc-number>
+            <kind>B1</kind>
+            <date>20060531</date>
+          </document-id>
+          <application-date>
+            <date>20010302</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="3">
+          <document-id>
+            <country>US</country>
+            <doc-number>5830812</doc-number>
+            <kind>A</kind>
+            <date>19981103</date>
+          </document-id>
+          <application-date>
+            <date>19970212</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="4">
+          <document-id>
+            <country>US</country>
+            <doc-number>5994248</doc-number>
+            <kind>A</kind>
+            <date>19991130</date>
+          </document-id>
+          <application-date>
+            <date>19971106</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="5">
+          <document-id>
+            <country>WO</country>
+            <doc-number>0164595</doc-number>
+            <kind>A1</kind>
+            <date>20010907</date>
+          </document-id>
+          <application-date>
+            <date>20010302</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="6">
+          <document-id>
+            <country>US</country>
+            <doc-number>7169722</doc-number>
+            <kind>B2</kind>
+            <date>20070130</date>
+          </document-id>
+          <application-date>
+            <date>20030923</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="7">
+          <document-id>
+            <country>US</country>
+            <doc-number>7585801</doc-number>
+            <kind>B2</kind>
+            <date>20090908</date>
+          </document-id>
+          <application-date>
+            <date>20051102</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="8">
+          <document-id>
+            <country>US</country>
+            <doc-number>7666806</doc-number>
+            <kind>B2</kind>
+            <date>20100223</date>
+          </document-id>
+          <application-date>
+            <date>20051102</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="9">
+          <document-id>
+            <country>US</country>
+            <doc-number>7683000</doc-number>
+            <kind>B2</kind>
+            <date>20100323</date>
+          </document-id>
+          <application-date>
+            <date>20081217</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="10">
+          <document-id>
+            <country>US</country>
+            <doc-number>7482294</doc-number>
+            <kind>B2</kind>
+            <date>20090127</date>
+          </document-id>
+          <application-date>
+            <date>20060831</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="11">
+          <document-id>
+            <country>US</country>
+            <doc-number>7482295</doc-number>
+            <kind>B2</kind>
+            <date>20090127</date>
+          </document-id>
+          <application-date>
+            <date>20060929</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="12">
+          <document-id>
+            <country>US</country>
+            <doc-number>7435696</doc-number>
+            <kind>B2</kind>
+            <date>20081014</date>
+          </document-id>
+          <application-date>
+            <date>20050715</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="13">
+          <document-id>
+            <country>US</country>
+            <doc-number>7144837</doc-number>
+            <kind>B2</kind>
+            <date>20061205</date>
+          </document-id>
+          <application-date>
+            <date>20030106</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="14">
+          <document-id>
+            <country>US</country>
+            <doc-number>7030047</doc-number>
+            <kind>B2</kind>
+            <date>20060418</date>
+          </document-id>
+          <application-date>
+            <date>20040329</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="15">
+          <document-id>
+            <country>US</country>
+            <doc-number>7037869</doc-number>
+            <kind>B2</kind>
+            <date>20060502</date>
+          </document-id>
+          <application-date>
+            <date>20040225</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="16">
+          <document-id>
+            <country>US</country>
+            <doc-number>7071134</doc-number>
+            <kind>B2</kind>
+            <date>20060704</date>
+          </document-id>
+          <application-date>
+            <date>20040205</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="17">
+          <document-id>
+            <country>US</country>
+            <doc-number>6949484</doc-number>
+            <kind>B2</kind>
+            <date>20050927</date>
+          </document-id>
+          <application-date>
+            <date>20030610</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="18">
+          <document-id>
+            <country>US</country>
+            <doc-number>6903037</doc-number>
+            <kind>B2</kind>
+            <date>20050607</date>
+          </document-id>
+          <application-date>
+            <date>20040205</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="19">
+          <document-id>
+            <country>US</country>
+            <doc-number>6844280</doc-number>
+            <kind>B2</kind>
+            <date>20050118</date>
+          </document-id>
+          <application-date>
+            <date>20020906</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="20">
+          <document-id>
+            <country>US</country>
+            <doc-number>6831030</doc-number>
+            <kind>B2</kind>
+            <date>20041214</date>
+          </document-id>
+          <application-date>
+            <date>20020905</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="21">
+          <document-id>
+            <country>US</country>
+            <doc-number>6610622</doc-number>
+            <kind>B1</kind>
+            <date>20030826</date>
+          </document-id>
+          <application-date>
+            <date>20020128</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="22">
+          <document-id>
+            <country>US</country>
+            <doc-number>6548434</doc-number>
+            <kind>B2</kind>
+            <date>20030415</date>
+          </document-id>
+          <application-date>
+            <date>20011101</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="23">
+          <document-id>
+            <country>US</country>
+            <doc-number>6506700</doc-number>
+            <kind>B1</kind>
+            <date>20030114</date>
+          </document-id>
+          <application-date>
+            <date>19970227</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="24">
+          <document-id>
+            <country>US</country>
+            <doc-number>6461736</doc-number>
+            <kind>B1</kind>
+            <date>20021008</date>
+          </document-id>
+          <application-date>
+            <date>20010302</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="25">
+          <document-id>
+            <country>US</country>
+            <doc-number>6469443</doc-number>
+            <kind>B1</kind>
+            <date>20021022</date>
+          </document-id>
+          <application-date>
+            <date>20010320</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="26">
+          <document-id>
+            <country>US</country>
+            <doc-number>6413893</doc-number>
+            <kind>B1</kind>
+            <date>20020702</date>
+          </document-id>
+          <application-date>
+            <date>19990903</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="27">
+          <document-id>
+            <country>US</country>
+            <doc-number>6218323</doc-number>
+            <kind>B1</kind>
+            <date>20010417</date>
+          </document-id>
+          <application-date>
+            <date>19990812</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="28">
+          <document-id>
+            <country>US</country>
+            <doc-number>7732360</doc-number>
+            <kind>B2</kind>
+            <date>20100608</date>
+          </document-id>
+          <application-date>
+            <date>20040420</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="29">
+          <document-id>
+            <country>US</country>
+            <doc-number>7858545</doc-number>
+            <kind>B2</kind>
+            <date>20101228</date>
+          </document-id>
+          <application-date>
+            <date>20100204</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="30">
+          <document-id>
+            <country>EP</country>
+            <doc-number>1116699</doc-number>
+            <kind>A1</kind>
+            <date>20010718</date>
+          </document-id>
+          <application-date>
+            <date>19990901</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="31">
+          <document-id>
+            <country>US</country>
+            <doc-number>8168552</doc-number>
+            <kind>B2</kind>
+            <date>20120501</date>
+          </document-id>
+          <application-date>
+            <date>20061009</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="32">
+          <document-id>
+            <country>US</country>
+            <doc-number>8298972</doc-number>
+            <kind>B2</kind>
+            <date>20121030</date>
+          </document-id>
+          <application-date>
+            <date>20110714</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="33">
+          <document-id>
+            <country>US</country>
+            <doc-number>8461070</doc-number>
+            <kind>B2</kind>
+            <date>20130611</date>
+          </document-id>
+          <application-date>
+            <date>20080320</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="34">
+          <document-id>
+            <country>CN</country>
+            <doc-number>102557441</doc-number>
+            <kind>B</kind>
+            <date>20140611</date>
+          </document-id>
+          <application-date>
+            <date>20111207</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="35">
+          <document-id>
+            <country>CN</country>
+            <doc-number>102515532</doc-number>
+            <kind>B</kind>
+            <date>20140730</date>
+          </document-id>
+          <application-date>
+            <date>20111207</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="36">
+          <document-id>
+            <country>CN</country>
+            <doc-number>102503128</doc-number>
+            <kind>B</kind>
+            <date>20140903</date>
+          </document-id>
+          <application-date>
+            <date>20111008</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="37">
+          <document-id>
+            <country>CN</country>
+            <doc-number>102515531</doc-number>
+            <kind>B</kind>
+            <date>20141008</date>
+          </document-id>
+          <application-date>
+            <date>20111207</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="38">
+          <document-id>
+            <country>US</country>
+            <doc-number>20030199384</doc-number>
+            <kind>A1</kind>
+            <date>20031023</date>
+          </document-id>
+          <application-date>
+            <date>20030106</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="39">
+          <document-id>
+            <country>US</country>
+            <doc-number>20040158532</doc-number>
+            <kind>A1</kind>
+            <date>20040812</date>
+          </document-id>
+          <application-date>
+            <date>20040226</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="40">
+          <document-id>
+            <country>US</country>
+            <doc-number>20040157722</doc-number>
+            <kind>A1</kind>
+            <date>20040812</date>
+          </document-id>
+          <application-date>
+            <date>20040205</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="41">
+          <document-id>
+            <country>US</country>
+            <doc-number>20040162212</doc-number>
+            <kind>A1</kind>
+            <date>20040819</date>
+          </document-id>
+          <application-date>
+            <date>20040205</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="42">
+          <document-id>
+            <country>US</country>
+            <doc-number>20040180775</doc-number>
+            <kind>A1</kind>
+            <date>20040916</date>
+          </document-id>
+          <application-date>
+            <date>20040329</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="43">
+          <document-id>
+            <country>US</country>
+            <doc-number>20050061683</doc-number>
+            <kind>A1</kind>
+            <date>20050324</date>
+          </document-id>
+          <application-date>
+            <date>20030922</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="44">
+          <document-id>
+            <country>US</country>
+            <doc-number>20050233891</doc-number>
+            <kind>A1</kind>
+            <date>20051020</date>
+          </document-id>
+          <application-date>
+            <date>20040420</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="45">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060293163</doc-number>
+            <kind>A1</kind>
+            <date>20061228</date>
+          </document-id>
+          <application-date>
+            <date>20060831</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="46">
+          <document-id>
+            <country>US</country>
+            <doc-number>20070015654</doc-number>
+            <kind>A1</kind>
+            <date>20070118</date>
+          </document-id>
+          <application-date>
+            <date>20050715</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="47">
+          <document-id>
+            <country>US</country>
+            <doc-number>20070099788</doc-number>
+            <kind>A1</kind>
+            <date>20070503</date>
+          </document-id>
+          <application-date>
+            <date>20051102</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="48">
+          <document-id>
+            <country>US</country>
+            <doc-number>20070099789</doc-number>
+            <kind>A1</kind>
+            <date>20070503</date>
+          </document-id>
+          <application-date>
+            <date>20051102</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="49">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080241523</doc-number>
+            <kind>A1</kind>
+            <date>20081002</date>
+          </document-id>
+          <application-date>
+            <date>20050223</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="50">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080269039</doc-number>
+            <kind>A1</kind>
+            <date>20081030</date>
+          </document-id>
+          <application-date>
+            <date>20061009</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="51">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090124480</doc-number>
+            <kind>A1</kind>
+            <date>20090514</date>
+          </document-id>
+          <application-date>
+            <date>20081217</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="52">
+          <document-id>
+            <country>CN</country>
+            <doc-number>104496180</doc-number>
+            <kind>A</kind>
+            <date>20150408</date>
+          </document-id>
+          <application-date>
+            <date>20150106</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="53">
+          <document-id>
+            <country>CN</country>
+            <doc-number>104556698</doc-number>
+            <kind>A</kind>
+            <date>20150429</date>
+          </document-id>
+          <application-date>
+            <date>20150106</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="54">
+          <document-id>
+            <country>CN</country>
+            <doc-number>104556696</doc-number>
+            <kind>A</kind>
+            <date>20150429</date>
+          </document-id>
+          <application-date>
+            <date>20150106</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="55">
+          <document-id>
+            <country>US</country>
+            <doc-number>20100152014</doc-number>
+            <kind>A1</kind>
+            <date>20100617</date>
+          </document-id>
+          <application-date>
+            <date>20100204</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="56">
+          <document-id>
+            <country>US</country>
+            <doc-number>20100255980</doc-number>
+            <kind>A1</kind>
+            <date>20101007</date>
+          </document-id>
+          <application-date>
+            <date>20090403</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="57">
+          <document-id>
+            <country>US</country>
+            <doc-number>20070021289</doc-number>
+            <kind>A1</kind>
+            <date>20070125</date>
+          </document-id>
+          <application-date>
+            <date>20060929</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="58">
+          <document-id>
+            <country>CN</country>
+            <doc-number>103922592</doc-number>
+            <kind>A</kind>
+            <date>20140716</date>
+          </document-id>
+          <application-date>
+            <date>20140320</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="59">
+          <document-id>
+            <country>CN</country>
+            <doc-number>103922593</doc-number>
+            <kind>A</kind>
+            <date>20140716</date>
+          </document-id>
+          <application-date>
+            <date>20140320</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="60">
+          <document-id>
+            <country>CN</country>
+            <doc-number>103922594</doc-number>
+            <kind>A</kind>
+            <date>20140716</date>
+          </document-id>
+          <application-date>
+            <date>20140320</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="61">
+          <document-id>
+            <country>CN</country>
+            <doc-number>103936282</doc-number>
+            <kind>A</kind>
+            <date>20140723</date>
+          </document-id>
+          <application-date>
+            <date>20140320</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="62">
+          <document-id>
+            <country>CN</country>
+            <doc-number>104478214</doc-number>
+            <kind>A</kind>
+            <date>20150401</date>
+          </document-id>
+          <application-date>
+            <date>20150106</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="63">
+          <document-id>
+            <country>CN</country>
+            <doc-number>104496178</doc-number>
+            <kind>A</kind>
+            <date>20150408</date>
+          </document-id>
+          <application-date>
+            <date>20150106</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="64">
+          <document-id>
+            <country>CN</country>
+            <doc-number>104496179</doc-number>
+            <kind>A</kind>
+            <date>20150408</date>
+          </document-id>
+          <application-date>
+            <date>20150106</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="65">
+          <document-id>
+            <country>CN</country>
+            <doc-number>104556697</doc-number>
+            <kind>A</kind>
+            <date>20150429</date>
+          </document-id>
+          <application-date>
+            <date>20150106</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="66">
+          <document-id>
+            <country>CN</country>
+            <doc-number>104496179</doc-number>
+            <kind>B</kind>
+            <date>20160217</date>
+          </document-id>
+          <application-date>
+            <date>20150106</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="67">
+          <document-id>
+            <country>CN</country>
+            <doc-number>103922592</doc-number>
+            <kind>B</kind>
+            <date>20160323</date>
+          </document-id>
+          <application-date>
+            <date>20140320</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="68">
+          <document-id>
+            <country>CN</country>
+            <doc-number>103922593</doc-number>
+            <kind>B</kind>
+            <date>20160323</date>
+          </document-id>
+          <application-date>
+            <date>20140320</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="69">
+          <document-id>
+            <country>CN</country>
+            <doc-number>103936282</doc-number>
+            <kind>B</kind>
+            <date>20160323</date>
+          </document-id>
+          <application-date>
+            <date>20140320</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="70">
+          <document-id>
+            <country>CN</country>
+            <doc-number>104478214</doc-number>
+            <kind>B</kind>
+            <date>20160323</date>
+          </document-id>
+          <application-date>
+            <date>20150106</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="71">
+          <document-id>
+            <country>CN</country>
+            <doc-number>104496178</doc-number>
+            <kind>B</kind>
+            <date>20160323</date>
+          </document-id>
+          <application-date>
+            <date>20150106</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="72">
+          <document-id>
+            <country>CN</country>
+            <doc-number>104556696</doc-number>
+            <kind>B</kind>
+            <date>20160323</date>
+          </document-id>
+          <application-date>
+            <date>20150106</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="73">
+          <document-id>
+            <country>CN</country>
+            <doc-number>104556697</doc-number>
+            <kind>B</kind>
+            <date>20160323</date>
+          </document-id>
+          <application-date>
+            <date>20150106</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="74">
+          <document-id>
+            <country>CN</country>
+            <doc-number>104556698</doc-number>
+            <kind>B</kind>
+            <date>20160323</date>
+          </document-id>
+          <application-date>
+            <date>20150106</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="75">
+          <document-id>
+            <country>CN</country>
+            <doc-number>104496180</doc-number>
+            <kind>B</kind>
+            <date>20160323</date>
+          </document-id>
+          <application-date>
+            <date>20150106</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="76">
+          <document-id>
+            <country>CN</country>
+            <doc-number>104556699</doc-number>
+            <kind>B</kind>
+            <date>20160323</date>
+          </document-id>
+          <application-date>
+            <date>20150106</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="77">
+          <document-id>
+            <country>CN</country>
+            <doc-number>102442779</doc-number>
+            <kind>A</kind>
+            <date>20120509</date>
+          </document-id>
+          <application-date>
+            <date>20111008</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="78">
+          <document-id>
+            <country>CN</country>
+            <doc-number>102503127</doc-number>
+            <kind>A</kind>
+            <date>20120620</date>
+          </document-id>
+          <application-date>
+            <date>20111008</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="79">
+          <document-id>
+            <country>CN</country>
+            <doc-number>102503128</doc-number>
+            <kind>A</kind>
+            <date>20120620</date>
+          </document-id>
+          <application-date>
+            <date>20111008</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="80">
+          <document-id>
+            <country>CN</country>
+            <doc-number>102503126</doc-number>
+            <kind>A</kind>
+            <date>20120620</date>
+          </document-id>
+          <application-date>
+            <date>20111008</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="81">
+          <document-id>
+            <country>CN</country>
+            <doc-number>102515531</doc-number>
+            <kind>A</kind>
+            <date>20120627</date>
+          </document-id>
+          <application-date>
+            <date>20111207</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="82">
+          <document-id>
+            <country>CN</country>
+            <doc-number>102515532</doc-number>
+            <kind>A</kind>
+            <date>20120627</date>
+          </document-id>
+          <application-date>
+            <date>20111207</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="83">
+          <document-id>
+            <country>CN</country>
+            <doc-number>102515473</doc-number>
+            <kind>A</kind>
+            <date>20120627</date>
+          </document-id>
+          <application-date>
+            <date>20111206</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="84">
+          <document-id>
+            <country>CN</country>
+            <doc-number>102531340</doc-number>
+            <kind>A</kind>
+            <date>20120704</date>
+          </document-id>
+          <application-date>
+            <date>20111207</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="85">
+          <document-id>
+            <country>CN</country>
+            <doc-number>102557441</doc-number>
+            <kind>A</kind>
+            <date>20120711</date>
+          </document-id>
+          <application-date>
+            <date>20111207</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="86">
+          <document-id>
+            <country>CN</country>
+            <doc-number>102336522</doc-number>
+            <kind>A</kind>
+            <date>20120201</date>
+          </document-id>
+          <application-date>
+            <date>20110627</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="87">
+          <document-id>
+            <country>CN</country>
+            <doc-number>103922594</doc-number>
+            <kind>B</kind>
+            <date>20160525</date>
+          </document-id>
+          <application-date>
+            <date>20140320</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="88">
+          <document-id>
+            <country>US</country>
+            <doc-number>5776844</doc-number>
+            <kind>A</kind>
+            <date>19980707</date>
+          </document-id>
+          <application-date>
+            <date>19961213</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="89">
+          <document-id>
+            <country>US</country>
+            <doc-number>20160018919</doc-number>
+            <kind>A1</kind>
+            <date>20160121</date>
+          </document-id>
+          <application-date>
+            <date>20140312</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="90">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2010134796</doc-number>
+            <kind>A1</kind>
+            <date>20101125</date>
+          </document-id>
+          <application-date>
+            <date>20100521</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="91">
+          <document-id>
+            <country>US</country>
+            <doc-number>20100040812</doc-number>
+            <kind>A1</kind>
+            <date>20100218</date>
+          </document-id>
+          <application-date>
+            <date>20080320</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="92">
+          <document-id>
+            <country>US</country>
+            <doc-number>20110073182</doc-number>
+            <kind>A1</kind>
+            <date>20110331</date>
+          </document-id>
+          <application-date>
+            <date>20090609</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20070520">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Saint-Gobain Vitrage</orgname>
+            <address>
+              <city>Courbevoie</city>
+              <country>FR</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <last-name>Combes</last-name>
+            <first-name>Jean-Marie</first-name>
+            <address>
+              <city>Paris</city>
+              <country>FR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <last-name>Sachot</last-name>
+            <first-name>Dominique</first-name>
+            <address>
+              <city>Joinville Le Pont</city>
+              <country>FR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Oblon, Spivak, McClelland, Maier &amp; Neustadt, P.C.</name>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <examiners>
+      <primary-examiner>
+        <name>Bell; Mark L.</name>
+      </primary-examiner>
+      <assistant-examiner>
+        <name>Troilo; Louis M.</name>
+      </assistant-examiner>
+    </examiners>
+    <patent-family date-changed="20100529">
+      <main-family family-id="2180883">
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>69514044</doc-number>
+            <kind>D1</kind>
+            <date>20000127</date>
+          </document-id>
+          <application-date>
+            <date>19950622</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>PT</country>
+            <doc-number>688741</doc-number>
+            <kind>T</kind>
+            <date>20000630</date>
+          </document-id>
+          <application-date>
+            <date>19950622</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>ES</country>
+            <doc-number>2143017</doc-number>
+            <kind>T3</kind>
+            <date>20000501</date>
+          </document-id>
+          <application-date>
+            <date>19950622</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>FR</country>
+            <doc-number>2721600</doc-number>
+            <kind>A1</kind>
+            <date>19951229</date>
+          </document-id>
+          <application-date>
+            <date>19940623</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>3996217</doc-number>
+            <kind>B2</kind>
+            <date>20071024</date>
+          </document-id>
+          <application-date>
+            <date>19950623</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>PT</country>
+            <doc-number>688741</doc-number>
+            <kind>E</kind>
+            <date>20000630</date>
+          </document-id>
+          <application-date>
+            <date>19950622</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>69514044</doc-number>
+            <kind>T2</kind>
+            <date>20000629</date>
+          </document-id>
+          <application-date>
+            <date>19950622</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>688741</doc-number>
+            <kind>A1</kind>
+            <date>19951227</date>
+          </document-id>
+          <application-date>
+            <date>19950622</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>688741</doc-number>
+            <kind>B1</kind>
+            <date>19991222</date>
+          </document-id>
+          <application-date>
+            <date>19950622</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>FR</country>
+            <doc-number>2721600</doc-number>
+            <kind>B1</kind>
+            <date>19960809</date>
+          </document-id>
+          <application-date>
+            <date>19940623</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>08040742</doc-number>
+            <kind>A</kind>
+            <date>19960213</date>
+          </document-id>
+          <application-date>
+            <date>19950623</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>5656559</doc-number>
+            <kind>A</kind>
+            <date>19970812</date>
+          </document-id>
+          <application-date>
+            <date>19950623</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="137960264">
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>3996217</doc-number>
+            <kind>B2</kind>
+            <date>20071024</date>
+          </document-id>
+          <application-date>
+            <date>19950623</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>PT</country>
+            <doc-number>688741</doc-number>
+            <kind>E</kind>
+            <date>20000630</date>
+          </document-id>
+          <application-date>
+            <date>19950622</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>688741</doc-number>
+            <kind>B1</kind>
+            <date>19991222</date>
+          </document-id>
+          <application-date>
+            <date>19950622</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>ES</country>
+            <doc-number>2143017</doc-number>
+            <kind>T3</kind>
+            <date>20000501</date>
+          </document-id>
+          <application-date>
+            <date>19950622</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>FR</country>
+            <doc-number>2721600</doc-number>
+            <kind>A1</kind>
+            <date>19951229</date>
+          </document-id>
+          <application-date>
+            <date>19940623</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>5656559</doc-number>
+            <kind>A</kind>
+            <date>19970812</date>
+          </document-id>
+          <application-date>
+            <date>19950623</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>69514044</doc-number>
+            <kind>T2</kind>
+            <date>20000629</date>
+          </document-id>
+          <application-date>
+            <date>19950622</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>688741</doc-number>
+            <kind>A1</kind>
+            <date>19951227</date>
+          </document-id>
+          <application-date>
+            <date>19950622</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>08040742</doc-number>
+            <kind>A</kind>
+            <date>19960213</date>
+          </document-id>
+          <application-date>
+            <date>19950623</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20070520" lang="eng" format="original">
+    <p>A composition for soda-lime-silica glass intended for the production of panes, which comprises, in percentages by weight: TBL ______________________________________ SiO.sub.2 69 to 75% Al.sub.2 O.sub.3 0 to 3% B.sub.2 O.sub.3 0.5% CaO 2 to 10% MgO &lt; to 2% Na.sub.2 O 9 to 17% K.sub.2 O 0 to 8% Se 0 to 0.002% CoO 0 to 0.001% Cr.sub.2 O.sub.3 0 to 0.001% with 0.02% &lt; Fe.sub.2 O.sub.3 (total) &lt; 0.2%. ______________________________________ PAL This composition may further comprise fluorine, oxides of zinc and zirconium and less than 4% of barium oxide, the total of the percentages of the alkaline earth oxides remaining equal to or less than 10%. The panes made from such glasses are particularly well adapted for architectural applications.</p>
+  </abstract>
+  <legal-data date-changed="20170304">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>19950925</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     5656559A </docdb-publication-number>
+      <docdb-application-id>51320851</docdb-application-id>
+      <new-owner>SAINT-GOBAIN VITRAGE, FRANCE</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:COMBES, JEAN-MARIE;SACHOT, DOMINIQUE;REEL/FRAME:007642/0792</free-text-description>
+      <effective-date>
+        <date>19950915</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20010111</date>
+      </publication-date>
+      <event-code-1>FPAY</event-code-1>
+      <effect>+</effect>
+      <legal-description>FEE PAYMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     5656559A </docdb-publication-number>
+      <docdb-application-id>51320851</docdb-application-id>
+      <fee-payment-year>4</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20050118</date>
+      </publication-date>
+      <event-code-1>FPAY</event-code-1>
+      <effect>+</effect>
+      <legal-description>FEE PAYMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     5656559A </docdb-publication-number>
+      <docdb-application-id>51320851</docdb-application-id>
+      <fee-payment-year>8</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="4">
+      <publication-date>
+        <date>20090115</date>
+      </publication-date>
+      <event-code-1>FPAY</event-code-1>
+      <effect>+</effect>
+      <legal-description>FEE PAYMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     5656559A </docdb-publication-number>
+      <docdb-application-id>51320851</docdb-application-id>
+      <fee-payment-year>12</fee-payment-year>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20070520">
+    <summary>
+      <p>1. Field of the Invention</p>
+      <p>This invention relates to a composition of soda-lime-silica glass suitable for the production of panes that may be used in the architectural field or the automobile industry. The composition according to the invention is especially adapted for production in the form of a continuous glass ribbon by the float glass technique.</p>
+      <p>2. Discussion of the Background</p>
+      <p>Compositions of soda-lime-silica glass used in this technique have been characterized by very slight variations from an average glass. The following composition, expressed in percentages by weight, is very representative:</p>
+      <p>
+        <tables>
+          <table>
+            <tgroup cols="1">
+              <tbody>
+                <row>
+                  <entry> ______________________________________ SiO.sub.2 73.08 Al.sub.2 O.sub.3 0.11 CaO 8.94 MgO 3.88 Na.sub.2 O 13.68 K.sub.2 O 0.02 Fe.sub.2 O.sub.3 0.12 SO.sub.3 0.23 ______________________________________</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p>This glass, which is notably characterized by a low content of iron oxides, enables glass sheets to be produced with a particularly high total light transmission factor under illuminant A (TL.sub.A). This characteristic is desirable for panes intended to be mounted on automobile vehicles or to be installed in buildings.</p>
+      <p>Iron, traditionally expressed as Fe.sub.2 O.sub.3, is distributed through the glass in the form of ferric oxide and ferrous oxide, the respective concentrations of which depend upon the degree of oxidation/reduction of the glass. The presence of ferric oxide enables the absorption of ultraviolet radiation and those radiations that have short wavelengths in the visible range of the spectrum. The presence of ferrous oxide makes possible the absorption of the radiations in the near infrared and those corresponding to the long wavelengths of the visible range. The latter phenomenon of absorption has the effect of reducing the total energy transmission factor (T.sub.g). These iron oxides, in particular FeO, contribute to the coloration of the glass.</p>
+      <p>A pane made from a glass of the type mentioned above has, for a large thickness, a non-negligible coloration in spite of the low content of iron oxides.</p>
+      <p>The present invention is a soda-lime-silica glass composition which enables panes to be produced that have a lower coloration than that of the known glasses and a better absorption of the infrared radiation, even with the same iron content in the form of FeO and the same thickness.</p>
+      <p>The glass of the present invention has a composition with a grey or bronze coloration, and a high light transmission factor under illuminant A.</p>
+      <p>These objectives are achieved by a soda-lime-silica glass composition which contains, expressed in percentages by weight, the following limits, including all values therebetween:</p>
+      <p>
+        <tables>
+          <table>
+            <tgroup cols="1">
+              <tbody>
+                <row>
+                  <entry> ______________________________________ SiO.sub.2 69 to 75% Al.sub.2 O.sub.3 0 to 3% B.sub.2 O.sub.3 0 to 5% CaO 2 to 10% MgO &lt;2% Na.sub.2 O 9 to 17% K.sub.2 O 0 to 8% Se 0 to 0.002% CoO 0 to 0.001% Cr.sub.2 O.sub.3 0 to 0.001% with 0.02% &lt; Fe.sub.2 O.sub.3 (total) &lt; 0.2% ______________________________________</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p>This composition may further contain fluorine, oxides of zinc and zirconium, and less than 4% barium oxide. The sum of the percentages of the alkaline-earth oxides is equal to or less than 10%. The content and nature of each of the constituents forming part of the composition of the glasses of this invention enables glasses to be obtained which have a displacement of the maximum of the FeO absorption band towards the longer wavelengths. The glasses of the invention also have the properties required for the production of panes from sheets, which have been cut from a ribbon of float glass.</p>
+      <p>Silica is kept within relatively narrow limits. With a silica content above approximately 75%, the viscosity of the glass and its aptitude for devitrification greatly increases, making it more difficult to melt and cast onto a tin bath. With a silica content below 69%, the hydrolytic resistance of the glass decreases very rapidly, and the transmission in the visible range also decreases.</p>
+      <p>A decrease in the hydrolytic resistance of the glass can be compensated, at least partly, by the introduction of Al.sub.2 O.sub.3. However, this oxide contributes to an increase in viscosity and to a decrease in the transmission in the visible range; it can therefore be used only in a very limited quantity.</p>
+      <p>The alkaline oxides Na.sub.2 O and K.sub.2 O facilitate the melting of the glass, and allow the viscosity at high temperatures to be maintained closer to that of a standard glass. K.sub.2 O can be used up to approximately 8%. Above this percentage, the increase in cost of the composition becomes an economic handicap. Moreover, the increase of the percentage of K.sub.2 O can only be carried out, basically, at the expense of Na.sub.2 O, contributing to the increase in viscosity. Under specific conditions, however, the presence of K.sub.2 O enables the absorption of the glass in the infrared to be increased. The sum of the percentages by weight of Na.sub.2 O and K.sub.2 O is, preferably, greater than 15%.</p>
+      <p>The alkaline-earth oxides fulfill an important role in achieving the properties of the glasses of the present invention. It has been found that limiting the MgO content to a percentage less than 2% and, preferably, less than 1%, or indeed eliminating it altogether, has the effect of displacing the FeO absorption band towards the longer wavelengths. The total elimination of MgO, which exerts an important influence upon the viscosity, may be partly compensated for by increasing the content of Na.sub.2 O. Thus, when the MgO content is zero, the sum of the contents by weight of Na.sub.2 O and K.sub.2 O is preferably greater than 15%. MgO may be present in very small amounts, such as 0.1% or even 0.01%, by weight.</p>
+      <p>CaO should be limited to 10%. Above this value, the tendency of the glass towards devitrification increases too rapidly.</p>
+      <p>BaO, which enables the light transmission to be increased, can be added to the inventive compositions in an amount lower than 4%. In fact, BaO has a much smaller influence than MgO and CaO upon the viscosity of the glass. Within the framework of the invention, the increase in BaO is made essentially at the expense of the alkaline oxides, MgO and especially CaO. Any large increase in BaO therefore contributes to increasing the viscosity of the glass, especially at low temperatures. Furthermore, the introduction of a high percentage of BaO substantially raises the cost of the composition and has a tendency to lower the hydrolytic resistance of the glass. When the glasses of this invention contain barium oxide, the percentages of this oxide is, preferably, between 0.5 and 3.5% by weight, including all values therebetween.</p>
+      <p>Apart from complying with the limits defined above for the variation in the content of each alkaline-earth oxide, in order to obtain the desired transmission properties, it is important to limit the sum of the percentages of MgO, CaO and BaO to a value equal to or less than 10%. It should be noted that for reasons of an essentially economic nature the glasses according to this invention do not require any strontium oxide.</p>
+      <p>The glasses according to the invention may also contain fluorine, preferably from 0.5 to 2% by weight, including all values therebetween. Apart from its well known action upon the melting and viscosity of the glass, fluorine has a specific influence upon the absorption of infrared radiation, an effect that is additive to the effect produced by the elimination of MgO and the introduction of K.sub.2 O and BaO. This effect manifests itself by a slight displacement of the maximum of the FeO absorption band in the infrared, but in particular by the straightening of the slope of the band at the end of the visible range near the infrared.</p>
+      <p>The glasses according to the invention may also contain zinc oxide. This oxide enables the viscosity of the glass to be reduced, if necessary, and contributes to an increase in the hydrolytic resistance of the glass and a reduction in its tendency to devitrify. This is why ZnO is preferably introduced into the inventive glasses containing a high percentage of silica and/or not containing alumina. Zinc oxide may also advantageously be added to the vitrifiable mixture which will be used for producing a reduced glass. This oxide enables the appearance of an amber color to be prevented, which would result from the formation of iron sulphides in this type of glass. Thus, zinc oxide can be introduced into the glasses according to the invention in a proportion of at least 0.05% when the FeO/Fe.sub.2 O.sub.3 (total) ratio is equal to or greater than approximately 0.4. In order not to increase excessively the expense of the composition, the ZnO content does not usually exceed approximately 3% by weight.</p>
+      <p>The glasses according to the invention may also contain zirconium oxide. This oxide enables the glass to be stabilized and the chemical resistance of the glass, in particular, its hydrolytic resistance, to be improved. This oxide is introduced preferably into the inventive glasses containing little or no alumina, in quantities that can reach 1.5% by weight.</p>
+      <p>The glasses according to the invention may also contain up to 1% of other constituents provided by the impurities in the vitrifiable raw materials and/or as a result of the introduction of culler into the vitrifiable mixture and/or arising from the use of a refining agent (SO.sub.3, Cl, Sb.sub.2 O.sub.3, As.sub.2 O.sub.3).</p>
+      <p>The glasses according to the invention that have a bronze coloration generally contain selenium and cobalt. They are characterized by dominant wavelengths, under illuminant C, exceeding approximately 565 nm. It is possible for the composition to contain 0.0001% cobalt, and/or 0.0001% Se, by weight.</p>
+      <p>The glasses to this invention that have a gray shade generally contain selenium and also cobalt oxide and chromium oxides. They are characterized by dominant wavelengths, under illuminant C, of less than approximately 560 nm.</p>
+      <p>The glasses according to this invention may be produced in conditions that enable the desired oxidation/reduction degree to be achieved. Thus the glasses according to the invention may be produced by using known refining agents, such as sulphates, their redox being less than 0.35 and generally between 0.2 and 0.3. This is the case for the glasses which contain selenium. They can also be produced in conditions described, for example, by the Patent EP-B-297 404 and may have a redox greater than 0.4 or 0.15; the redox of the glasses according to the invention always remains, however, below 0.8.</p>
+      <p>The content and the nature of each of the constituents forming part of the composition of the inventive glasses, principally the alkaline-earth oxide, enable glasses to be obtained with the near infrared modified by a displacement towards the longer wavelengths of the maximum of the FeO absorption band in this spectral range. The displacement is frequently accompanied by an increase in the intensity of this absorption band and/or of its width. The displacement has the effect of not only increasing the absorption in the infrared of the inventive glasses, but also of lessening the coloration caused by FeO. This phenomenon thus allows glasses of lesser coloration to be produced for a given thickness, than for the common glasses having identical iron content; glasses which have a comparable quality of vitrifiable raw materials. It is now possible to produce glasses having the same coloration as conventional glasses for a given thickness, but with a higher iron content, possibly made from less pure vitrifiable raw materials. As a result of this phenomenon a non-negligible absorption of the infrared radiations and a weak coloration of the glass are obtained when the total iron content of the glasses according to the invention, expressed in the form Fe.sub.2 O.sub.3, is greater than approximately 0.04% by weight.</p>
+      <p>The glasses according to this invention are characterized by a total light transmission factor greater than 80% for a thickness of 3.85 millimeters and have a ratio TL.sub.A /T.sub.E equal to or greater than 1.</p>
+      <p>The glasses according to the invention have an excitation purity under illuminant C (Pc) less than 2% for a thickness of 3.85 millimeters. For the grey glasses according to this invention, this purity is lower than 1.5% for the same thickness and lower than 1% for the thickness of 3.15 millimeters.</p>
+    </summary>
+    <detailed-desc>
+      <heading>DETAILED DESCRIPTION OF THE PREFERRED EMBODIMENTS</heading>
+      <p>The advantages of the glasses according to the invention will be better perceived from the reference examples described below, which are given for illustration of the invention and are not intended to be limiting thereof. The two compositions of glass below are expressed in percentages by weight. Glass 1 is representative of the glasses of a known type, notably with regard to the MgO content. Glass 2 illustrates the invention. The total light transmission factor under illuminant A (TL.sub.A) and total energy transmission factor (T.sub.E), and also the transmission in the infrared (T.sub.IR) were measured by the PARRY MOON MASS 2 method, for a thickness of 3.85 millimeters. The two glasses have an identical content of FeO, equal to 0.028%.</p>
+      <p>
+        <tables>
+          <table>
+            <tgroup cols="1">
+              <tbody>
+                <row>
+                  <entry> ______________________________________ SiO.sub.2 71.10 73.50 Al.sub.2 O.sub.3 0.70 0.90 CaO 8.80 9.00 MgO 4.00 -- Na.sub.2 O 14.30 15.80 K.sub.2 O 0.22 0.29 Fe.sub.2 O.sub.3 0.10 0.10 SO.sub.3 0.30 0.30 .lambda..sup.FeO (nm) 1020 1110 .delta..sup.FeO (nm) 180 450 TL.sub.A (%) 89.20 89.90 TL.sub.A /T.sub.E 1.03 1.05 T.sub.IR 81.80 80.50 Pc (%) 0.25 0.30 .lambda..sub.D (nm) 518 541 ______________________________________</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p>The displacement of approximately 90 nanometers of the wavelength (.lambda..sub.FeO) corresponding to the maximum of the absorption band due to FeO of the glass illustrating this invention, as compared with the known glass, is accompanied by a considerable broadening of the band. The amount of this broadening an be appreciated by the difference (.delta..sub.FeO) existing between the two wavelengths, which corresponds to the transmission values higher, by 0.5%, than the minimum transmission. Apart from the influence upon the coloration of the glass, this spectral modification causes a slight increase in the absorption in the infrared of the inventive glasses for an identical FeO content and in spite of the small content of the oxide.</p>
+      <p>The glasses according to this invention are compatible with the usual manufacturing techniques for float glass. The thickness of the ribbon of glass obtained by pouring molten glass onto a bath of tin can vary from 0.8 to 10 millimeters. The pane obtained by cutting from the glass ribbon may later be subjected to a bending operation, notably when it is to be mounted on an automobile vehicle.</p>
+      <p>In the manner of other panes, the panes obtained from the glasses according to this invention may be subjected in advance to surface treatments or may be associated, for example, with an organic coating such as a film based upon polyurethanes having antilaceration properties, or a film assuring leaktightness in case of breakage; it may also be coated locally with a coating such as an enamel coating.</p>
+      <p>The glasses according to this invention may be coated with at least one film of metallic oxide produced by chemical deposition at high temperature according to the pyrolysis techniques or by chemical deposition in the vapor phase (CVD) or deposition under vacuum.</p>
+      <p>Obviously, numerous modifications and variations of the present invention are possible in light of the above teachings. It is therefore to be understood that within the scope of the appended claims, the invention may be practiced otherwise as is specifically described herein.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20070520">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>1. A composition for soda-lime-silica glass comprising, in percentages by weight: </claim-text>
+    </claim>
+    <claim num="2">
+      <claim-text>
+        <tables>
+          <table>
+            <tgroup cols="1">
+              <tbody>
+                <row>
+                  <entry> ______________________________________ SiO.sub.2 69 to 75% CaO 2 to 10% Na.sub.2 O 9 to 17% BaO 0 to 3.5% with 0.02% &lt; Fe.sub.2 O.sub.3 (total) &lt; 0.2% ______________________________________ </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </claim-text>
+    </claim>
+    <claim num="3">
+      <claim-text> wherein the sum of the percentages of alkaline-earth oxides is equal to or less than 10%, the MgO content is less than 1%, and wherein said glass has, for a thickness of 3.85 millimeters, a factor TL.sub.A equal to at least 80%. </claim-text>
+    </claim>
+    <claim num="4">
+      <claim-text>2. The glass composition according to claim 1, wherein the sum of alkaline oxides is greater than approximately 15%, by weight. </claim-text>
+    </claim>
+    <claim num="5">
+      <claim-text>3. The glass composition according to claim 1, comprising 0.5 to 3.5% by weight of BaO. </claim-text>
+    </claim>
+    <claim num="6">
+      <claim-text>4. The glass composition according to claim 1, further comprising 0.5 to 2% by weight of fluorine. </claim-text>
+    </claim>
+    <claim num="7">
+      <claim-text>5. The glass composition according to claim 1, further comprising 0.05 to 3% by weight of ZnO. </claim-text>
+    </claim>
+    <claim num="8">
+      <claim-text>6. The glass composition according to claim 1, further comprising no more than 1.5% by weight of ZrO.sub.2. </claim-text>
+    </claim>
+    <claim num="9">
+      <claim-text>7. The glass composition according to claim 1, further comprising no more than 3% by weight of Al.sub.2 O.sub.3. </claim-text>
+    </claim>
+    <claim num="10">
+      <claim-text>8. The glass composition according to claim 1, further comprising no more than 5% by weight of B.sub.2 O.sub.3. </claim-text>
+    </claim>
+    <claim num="11">
+      <claim-text>9. The glass composition according to claim 1, further comprising no more than 8% by weight of K.sub.2 O. </claim-text>
+    </claim>
+    <claim num="12">
+      <claim-text>10. The glass composition according to claim 1, further comprising no more than 0.002% by weight of Se. </claim-text>
+    </claim>
+    <claim num="13">
+      <claim-text>11. The glass composition according to claim 1, further comprising no more than 0.001% by weight of CoO. </claim-text>
+    </claim>
+    <claim num="14">
+      <claim-text>12. The glass composition according to claim 1, further comprising no more than 0.001% by weight of Cr.sub.2 O.sub.3. </claim-text>
+    </claim>
+    <claim num="15">
+      <claim-text>13. The glass composition according to claim 1, wherein the amount of MgO is zero. </claim-text>
+    </claim>
+    <claim num="16">
+      <claim-text>14. A pane, comprising at least one sheet of glass, said glass comprising, in percentages by weight: </claim-text>
+    </claim>
+    <claim num="17">
+      <claim-text>
+        <tables>
+          <table>
+            <tgroup cols="1">
+              <tbody>
+                <row>
+                  <entry> ______________________________________ SiO.sub.2 69 to 75% CaO 2 to 10% Na.sub.2 O 9 to 17% BaO 0 to 3.5% with 0.02% &lt; Fe.sub.2 O.sub.3 (total) &lt; 0.2% ______________________________________ </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </claim-text>
+    </claim>
+    <claim num="18">
+      <claim-text> wherein the sum of the percentages of alkaline-earth oxides is equal to or less than 10%, the MgO content is less than 1%, wherein said glass has, for a thickness of 3.85 millimeters, a factor TL.sub.A equal to at least 80% and wherein the sheet of glass has a thickness of 0.8 to 10 mm. </claim-text>
+    </claim>
+  </claims>
+  <image file="US5656559A.PDF" type="pdf" size="159823" pages="4" />
+</lexisnexis-patent-document>

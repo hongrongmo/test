@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257651A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030151" date-changed="20151208" time-changed="150651">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121315170">
+        <country>US</country>
+        <doc-number>20150257651</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14657383</doc-number>
+        <date>20150313</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151208">
+      <classification-ipcr sequence="1">
+        <text>A61B   5/00        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61B   5/01        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>01</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151208">
+      <classification-cpc sequence="1">
+        <text>A61B   5/0091      20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>0091</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61B   5/0013      20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>0013</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61B   5/004       20130101 LI20151130BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>004</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151130</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61B   5/015       20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>015</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61B   5/418       20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>418</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61B   5/4312      20130101 LI20150610BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>4312</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150610</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61B  10/0041      20130101 LI20150615BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>10</main-group>
+        <subgroup>0041</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150615</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61B2560/0233      20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2560</main-group>
+        <subgroup>0233</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>A61B2560/0437      20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2560</main-group>
+        <subgroup>0437</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>A61B2562/0271      20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2562</main-group>
+        <subgroup>0271</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">APPARATUS AND METHOD FOR DETECTING A PRESENCE OF CANCER</invention-title>
+    <related-documents date-changed="20150917">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61952332</doc-number>
+          <date>20140313</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>First Sense Medical, LLC</orgname>
+            <address>
+              <city>Pontiac</city>
+              <state>MI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Angott</last-name>
+            <first-name>Paul G.</first-name>
+            <address>
+              <city>Bloomfield Hills</city>
+              <state>MI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Vempaty</last-name>
+            <first-name>Pavan</first-name>
+            <address>
+              <city>Auburn Hills</city>
+              <state>MI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Henke</last-name>
+            <first-name>Steven</first-name>
+            <address>
+              <city>Canton</city>
+              <state>MI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Mudunuri</last-name>
+            <first-name>Ajay</first-name>
+            <address>
+              <city>Detroit</city>
+              <state>MI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173668374">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257651</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150313</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173668372">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015138893</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150313</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257651</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150313</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257650</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150313</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A method of examining breasts of a patient in an examination room to detect for potential breast cancer includes sliding a camera assembly along a rail between a pair of rail ends on a horizontal plane between a plurality of positions. A plurality of control thermographic images and a plurality of test thermographic images are recorded during the sliding movement to allow the camera assembly to consecutively record the control and test thermographic images of breasts of the patient from each of the plurality of positions. The camera assembly is slid to first and second optimal positions that are each disposed adjacent to one of the rail ends and in alignment with first and second sides of the breasts of the patient to capture images of the lymph nodes on the sides of the breasts.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150313</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257651A1</docdb-publication-number>
+      <docdb-application-id>444510982</docdb-application-id>
+      <new-owner>FIRST SENSE MEDICAL, LLC, MICHIGAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:ANGOTT, PAUL G.;VEMPATY, PAVAN;HENKE, STEVEN;AND OTHERS;REEL/FRAME:035164/0090</free-text-description>
+      <effective-date>
+        <date>20150312</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20150313</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257651A1</docdb-publication-number>
+      <docdb-application-id>444510982</docdb-application-id>
+      <new-owner>FIRST SENSE MEDICAL, LLC, MICHIGAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:ANGOTT, PAUL G.;VEMPATY, PAVAN;HENKE, STEVEN;AND OTHERS;REEL/FRAME:035164/0277</free-text-description>
+      <effective-date>
+        <date>20150312</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20150316</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257651A1</docdb-publication-number>
+      <docdb-application-id>444510982</docdb-application-id>
+      <new-owner>WAYNE COUNTY EMPLOYEES' RETIREMENT SYSTEM, MICHIGA</new-owner>
+      <free-text-description>SECURITY INTEREST;ASSIGNOR:FIRST SENSE MEDICAL, LLC;REEL/FRAME:035173/0528</free-text-description>
+      <effective-date>
+        <date>20120824</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="4">
+      <publication-date>
+        <date>20150605</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257651A1</docdb-publication-number>
+      <docdb-application-id>444510982</docdb-application-id>
+      <new-owner>FIRST SENSE MEDICAL, LLC, MICHIGAN</new-owner>
+      <free-text-description>RELEASE BY SECURED PARTY;ASSIGNOR:WAYNE COUNTY EMPLOYEES' RETIREMENT SYSTEM;REEL/FRAME:035840/0696</free-text-description>
+      <effective-date>
+        <date>20150529</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS REFERENCE TO RELATED APPLICATION</heading>
+      <p id="p-00001-en" num="0001">This application claims the benefit of U.S. provisional patent application Ser. No. 61/952,332 filed Mar. 13, 2014, and entitled “ADVANCED THERMOGRAPHIC IMAGING DIAGNOSTIC APPARATUS AND METHOD”, the entire disclosure of which is hereby incorporated by reference.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">1. Field of the Invention</p>
+      <p id="p-00003-en" num="0003">A diagnostic method for detecting a presence of breast cancer in a patient.</p>
+      <p id="p-00004-en" num="0004">2. Description of the Prior Art</p>
+      <p id="p-00005-en" num="0005">Various diagnostic apparatuses and methods are utilized in the fields of cancer research and treatment to detect a presence of cancer in patients. Known apparatuses often utilize at least one stationary thermographic camera for recording thermographic images of the breasts of the patient which are thereafter analyzed to detect symptoms of cancer. Such diagnostic apparatuses typically require ether a plurality of stationary thermographic cameras or a shifting of the entire diagnostic apparatus relative to the patient to record thermographic images of the breasts. One such diagnostic apparatus is disclosed in U.S. Pat. No. 7,292,719 to Boaz Arnon. Even with multiple thermographic cameras or relative movement of the diagnostic apparatus, the resultant thermographic images often do not adequately capture all aspects of the breasts necessary to conduct a complete analysis of the breasts to detect for the presence of breast cancer. Accordingly, these systems and methods do not complete a thorough analysis of the breasts of the patient and thus may lead to the test results in some cases being inaccurate. Additionally, these apparatuses suffer from other drawbacks, such as high equipment and operation costs for doctors that are ultimately passed onto patient, necessarily reducing the number of patients who participate in the breast screening due to its high out-of-pocket expense.</p>
+      <p id="p-00006-en" num="0006">Other known diagnostic apparatuses and methods of detecting a presence of cancer subject the patient to a cold stress for a predetermined period of time during the diagnostic test. The use of the cold stress is based on the recognition that blood vessels that feed cancerous tumors in breasts, i.e., angiogenic blood vessels, have a different anatomical structure than normal blood vessels, causing such angiogenic blood vessels to constrict to a lesser degree than normal blood vessels in response to a cold stimulus that is applied to the body of a patient. As such, the temperature associated with normal blood vessels decreases to a greater extent than angiogenic blood vessels when the body of the patient is exposed to the cold stimulus.</p>
+      <p id="p-00007-en" num="0007">One example of a diagnostic apparatus and method utilizing a cold stress is disclosed in U.S. Pat. No. 7,558,618 to Darin S. Williams (hereinafter “Williams”). As set forth in the background section of Williams, a control thermographic image of the breasts of the patient is first recorded, after which the hands of the patient are subjected to a cold stress by placing the hands of the patient in a bucket of ice water. After the hands of the patient are cold stressed, a test thermographic image of the breasts of the patient is recorded. The control and test thermographic images are compared with one another to identify regions of the breasts in which the temperature remained substantially unchanged after the cooling of the hands.</p>
+      <p id="p-00008-en" num="0008">Like the previously mentioned diagnostic apparatuses and methods, these cold stress apparatuses and methods do not adequately capture all aspect of the breasts necessary for an accurate detection of breasts cancer at least in part because stationary cameras are utilized. Furthermore, such apparatuses and methods require a technician to be in the room at all times to facilitate the application of the cold stress and to record the thermographic images of the patient. Therefore operational costs necessarily increase from the added labor costs, leading to higher out-of-pocket expense for patients. Additionally the patient is afforded low levels of privacy when they disrobe for the recording of thermographic images. These factors are known to make patients weary of undergoing such examinations, and reduce the number of patients who participate in breast screening.</p>
+      <p id="p-00009-en" num="0009">Accordingly, there remains a need for apparatuses and methods of detecting cancer that are more accurate, reliable, affordable and provide for high levels of privacy for a large number of patients.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00010-en" num="0010">A method of examining breasts of a patient in an examination room to detect for potential breast cancer includes sliding a camera assembly along a horizontal plane between a plurality of positions. A plurality of control thermographic images and a plurality of test thermographic images are recorded during the sliding movement to allow the camera assembly to consecutively record the control and test thermographic images of breasts of the patient from each of the plurality of positions.</p>
+      <heading id="h-00004-en" level="1">ADVANTAGES OF THE INVENTION</heading>
+      <p id="p-00011-en" num="0011">The invention in its broadest aspect therefore provides for an imaging method that easily and reliably records images of the breasts of a patient at various positions, including positions that capture lymph nodes on the sides of the breasts of the patient. Additionally, the apparatus which the method utilizes is simple in design and inexpensive to operate, which ultimately can save money for both doctors and patients. More specifically, since the overall method is simpler and less expensive than the prior art systems, this leads to the breast cancer test being accessible to more patients. In other words, lower upfront tester and operation costs ultimately provides for lower examination costs for patients, thus reducing or eliminating the cost barriers for patient participation. As a result, the subject diagnostic method is accessible to more patients which leads to increased participation in breast cancer screenings.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00012-en" num="0012">Other advantages of the present invention will be readily appreciated, as the same becomes better understood by reference to the following detailed description when considered in connection with the accompanying drawings wherein:</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 1</figref> is a perspective front view of the preferred arrangement of a diagnostic apparatus;</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 2</figref> is a perspective rear view of the preferred arrangement of the diagnostic apparatus;</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 3</figref> is a cutaway back of the preferred arrangement of the diagnostic apparatus presenting tracks and a lead screw for vertically moving a housing;</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 4</figref> is a perspective front view of the preferred embodiment of the diagnostic apparatus illustrating sliding movement of a camera assembly along a rail;</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 5</figref> is a perspective front view of the preferred arrangement of the diagnostic apparatus illustrating the rail disposed in surrounding relationship with the breasts of a patient positioned in a testing position;</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 6</figref> is a perspective view of a trolley and camera assembly of the preferred arrangement of the diagnostic apparatus;</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 7</figref> is a perspective view of a backing of the trolley of <figref>FIG. 6</figref>;</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 8</figref> is a flow diagram of a first embodiment of a method of examining breasts of a patient in an examination room to detect for potential breast cancer; and</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 9</figref> is a flow diagram of a second embodiment of a method of examining breasts of a patient in an examination room to detect for potential breast cancer.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DESCRIPTION OF THE ENABLING EMBODIMENTS</heading>
+      <p id="p-00022-en" num="0022">Referring to the Figures, wherein like numerals indicate corresponding parts throughout the several views, a diagnostic apparatus <b>20</b> is generally shown for detecting a presence of breast cancer in a patient disposed in a testing position. As best shown in <figref>FIG. 5</figref>, in a preferred arrangement, the testing position is defined by the patient sitting in a standard doctor office chair. However, the testing position could also include a patient standing in an examination room, sitting in a wheel chair, sitting on an examination table, or other style of seating surface.</p>
+      <p id="p-00023-en" num="0023">The diagnostic apparatus <b>20</b> includes a power source <b>22</b> of electrical energy for providing electrical energy to the diagnostic apparatus <b>20</b>. The diagnostic apparatus <b>20</b> further includes a controller <b>24</b> having a processor <b>26</b> for executing diagnostic operations to control the diagnostic apparatus <b>20</b>. The controller <b>24</b> also includes a hard drive <b>28</b> for storing test information such as thermographic and three-dimensional images, as will be described greater detail below, that are received from the executed diagnostic operations.</p>
+      <p id="p-00024-en" num="0024">In a preferred arrangement, the diagnostic apparatus <b>20</b> includes a base <b>30</b> that has a rectangular boundary border which includes a front wall <b>32</b>, a back wall <b>34</b> and a pair of side walls <b>36</b> interconnecting the front wall <b>32</b> and the back wall <b>34</b> at four base corners. A plurality of legs <b>38</b> each extend outwardly from one of the base corners of the base <b>30</b> to a terminal end. A caster <b>40</b> is connected to the terminal end of each of the legs <b>38</b> for establishing rolling movement of the diagnostic apparatus <b>20</b> over a floor in an examination room. In the preferred arrangement, the casters <b>40</b> are relatively large in size to ease rolling movement of the diagnostic apparatus <b>20</b> to various positions within the examination room. Each caster <b>40</b> includes a lock <b>42</b> for selectively locking the casters <b>40</b> to prevent the rolling movement of the diagnostic apparatus <b>20</b> during testing to ensure the accurate operation of the diagnostic apparatus <b>20</b>. Each lock <b>42</b> can include an actuator that is electrically connected with the controller <b>24</b> for automatically locking the caster <b>40</b> in response to a command sent from the controller <b>24</b>.</p>
+      <p id="p-00025-en" num="0025">A housing <b>44</b> is connected with the base <b>30</b> and has a generally cuboid shape that includes a bottom periphery <b>46</b>, a top periphery <b>48</b>, a front periphery <b>50</b>, a rear periphery <b>52</b> and a pair of side peripheries <b>34</b>. However, the housing <b>44</b> could have other shapes without departing from the scope of the subject disclosure. A power button <b>55</b> is disposed on the front periphery <b>50</b> of the housing <b>44</b> for turning the diagnostic apparatus <b>20</b> on and off. The power button <b>55</b> could be located at other locations of the housing <b>44</b> and could alternatively be in the form of a switch or other activation mechanism without departing from the scope of the subject disclosure. Further, a first graphical user interface <b>56</b> is disposed on the rear periphery <b>52</b> of the housing <b>44</b> and electrically connected to the controller <b>24</b> for presenting operational data related to the diagnostic apparatus <b>20</b> to a technician and for receiving input data from the technician when the diagnostic apparatus <b>20</b> is turned on. For example, the first graphical user interface <b>56</b> is configured to display a start/stop test option to allow the technician to start and stop a testing procedure of the diagnostic apparatus <b>20</b>. Further, the first graphical user interface <b>56</b> is configured to display a help/information button that the technician may utilize if they have questions during operation of the diagnostic apparatus <b>20</b>. In the preferred arrangement, the first graphical user interface <b>56</b> is a touch-screen interface to allow the technician to easily and quickly input information into the diagnostic apparatus <b>20</b>. However, an input device like a keyboard may alternatively or additionally be connected thereto to provide input to the diagnostic apparatus <b>20</b> without departing from the scope of the subject disclosure.</p>
+      <p id="p-00026-en" num="0026">A camera assembly <b>58</b> is supported by the housing <b>44</b> for recording images of the breasts of the patient in the testing position. The camera assembly <b>58</b> includes a three-dimensional camera <b>60</b> for recording three-dimensional images of the breasts of the patient and a thermographic camera <b>62</b> for recording thermographic images of the breasts of the patient. The three-dimensional camera <b>60</b> is capable of providing an accurate three-dimensional, color, model of the breasts of the patients that can be utilized to identify a nipple and breast profile for use in correlating subsequent analyses. The three-dimensional breast model captured by the three-dimensional camera includes the exact size and shape of the breasts and therefore can be used to measure and identify features indicative of cancer such as flat spots, bulges, depressions and the like in the breasts of the patient. In the preferred arrangement, the thermographic camera <b>62</b> has a fixed focal lens (rather than a variable lens) and is small and compact in size to reduce manufacturing and distribution costs for the diagnostic apparatus <b>20</b>. However, other types of thermographic cameras <b>62</b> could be utilized without departing from the scope of the subject disclosure.</p>
+      <p id="p-00027-en" num="0027">A handle <b>64</b> is connected to the front periphery <b>50</b> of the housing <b>44</b> and is spaced from and surrounds the rear and side peripheries <b>52</b>, <b>54</b> of the housing <b>44</b>. The handle <b>64</b> is U-shaped to define a pair of limbs <b>66</b> that extend outwardly from the front periphery <b>50</b> of the housing <b>44</b>. A pair of cold bars <b>68</b> are supported by the limbs <b>66</b> within the handle <b>64</b> for receiving the hands of the patient and for protecting the cold bars <b>68</b> during transportation and rolling movement of the diagnostic apparatus <b>20</b> about the examination room.</p>
+      <p id="p-00028-en" num="0028">Each of the cold bars <b>68</b> include a chassis <b>70</b> that has a generally box shape and a pommel <b>72</b> of an aluminum material that is connected with the chassis <b>70</b> for receiving a respective hand of the patient. The pommel <b>72</b> could be made out of other materials, e.g., other metals, without departing from the scope of the subject disclosure. The chassis <b>70</b> of each of the cold bars <b>68</b> engages one of the limbs <b>66</b> of the handle <b>64</b> to space the pommels <b>72</b> from the housing <b>44</b>. The pommel <b>72</b> of each of the cold bars <b>68</b> is angled from the handle <b>64</b> toward the floor for providing an ergonomic grip space on the cold bars <b>68</b> for the patient.</p>
+      <p id="p-00029-en" num="0029">An arc-shaped rail <b>76</b> extends perpendicularly from the front periphery <b>50</b> of the housing <b>44</b> in a horizontal plane P and terminates at a pair of rail ends <b>80</b> disposed in an extended position spaced and aligned with one another. As best shown in <figref>FIG. 5</figref>, the arc-shaped rail is ultimately disposed in spaced and surrounding relationship to the breasts of the patient in the testing position to align each rail end <b>80</b> with a side of a respective breast of a patient. Put another way, one rail end <b>80</b> is disposed in aligned relationship with a side of the left breast and the other rail end <b>80</b> is disposed in aligned relationship with a side of the right breast when the patient is disposed in the testing position. The rail <b>76</b> extends between a top margin <b>82</b> and a bottom margin <b>84</b> and presents a front surface <b>86</b> therebetween. The rail <b>76</b> could have other shapes, but the rail ends <b>80</b> should he spaced and aligned with the breasts of the patient when the patient is in the testing position.</p>
+      <p id="p-00030-en" num="0030">A trolley <b>88</b> interconnects the camera assembly <b>58</b> and the rail <b>76</b> and is slideable along the rail <b>76</b> for slideable movement between the rail ends <b>80</b> for allowing the camera assembly <b>58</b> to slide around the breasts of the patient and into alignment with the sides of the breasts. The sliding movement of the trolley <b>88</b> allows the camera assembly <b>58</b> to consecutively record images of the patient along different lengths of the rail <b>76</b>. For example, <figref>FIG. 4</figref> illustrates a position of the trolley <b>88</b> and camera assembly <b>58</b> being spaced toward the rail ends <b>80</b> relative to the position of the trolley <b>88</b> and camera assembly <b>58</b> shown in <figref>FIG. 1</figref>. The trolley <b>88</b>, also facilitates recording images of the lymph nodes of the patient when the camera assembly <b>58</b> is disposed adjacent to the rail ends <b>80</b> and in alignment with the sides of the breasts of the patient. This is an improvement over traditional testing methods, like mammogram treatments, which are unable to utilize and take into account the lymph nodes during its analysis to detect for breast cancer. Furthermore, sliding movement of the trolley <b>88</b> in a single horizontal plane P reduces complexity and cost of the recording process as compared to the prior art imaging methods, and image to image accuracy is improved since the recorded images are lined up next to each other on the same horizontal plane P. Additionally, because the trolley <b>88</b> supports and moves both the three-dimensional camera <b>60</b> as well as the thermographic camera <b>62</b> together, a spatial relationship is maintained between the three-dimensional and thermographic cameras <b>62</b>, and therefore data from each respective camera is easily and accurately compared and analyzed.</p>
+      <p id="p-00031-en" num="0031">As best shown in <figref>FIG. 1</figref>, a cable guard <b>89</b> is positioned between the front periphery <b>50</b> of the housing <b>44</b> and the rail <b>76</b> for preventing various cables of the diagnostic apparatus <b>20</b> from interfering with movement of the trolley <b>88</b>.</p>
+      <p id="p-00032-en" num="0032">As best shown in <figref>FIGS. 6-7</figref>, the trolley <b>88</b> includes a backing <b>90</b> that has a front face <b>92</b>, a rear face <b>94</b>, a top edge <b>96</b>, a bottom edge <b>98</b>, and a pair of side edges <b>100</b> that extend between the top and bottom edges <b>96</b>, <b>98</b>. A pair of upper wheels <b>102</b> are rotatably connected to and extend through the front face <b>92</b>, each adjacent to the top edge <b>96</b> and one of the side edges <b>100</b>, and a pair of upper blocks <b>104</b> each extend from the rear face <b>94</b> adjacent to one of the side edges <b>100</b>. Furthermore, a pair of lower blocks <b>106</b> are each positioned below one of the upper blocks <b>104</b>. A pair of lower wheels <b>108</b> each extend through one of the lower blocks <b>106</b> in spaced and parallel relationship with one of the upper wheels <b>102</b>.</p>
+      <p id="p-00033-en" num="0033">The upper wheels <b>102</b> are disposed against the top margin <b>82</b> of the rail <b>76</b> for rolling along the top margin <b>82</b> during movement of the camera assembly <b>58</b>, and the lower wheels <b>108</b> are disposed against the bottom margin <b>84</b> of the rail <b>76</b> for rolling along the bottom margin <b>84</b> to provide for the sliding movement of the camera assembly <b>58</b> along the rail <b>76</b>. A spring mechanism HO connects the higher block <b>104</b> and the lower block <b>106</b> for biasing the upper and lower wheels <b>102</b>, <b>108</b> against the rail <b>76</b> and for accommodating variances in the width of the rail <b>76</b>. The trolley <b>88</b> further includes a trolley motor <b>112</b> that is connected to the rear face <b>94</b> of the backing <b>90</b>. The trolley motor <b>112</b> has a driving wheel <b>114</b> that frictionally engages the rail <b>76</b> for providing the sliding movement of the camera assembly <b>58</b>. In the preferred arrangement, the trolley motor <b>112</b> is a stepper motor, but other types of motors could be utilized. The trolley motor <b>112</b> is electrically connected to the controller <b>24</b> for controlling the movement of the trolley <b>88</b> along the rail <b>76</b>. Furthermore, the front surface <b>86</b> in conjunction with the top and bottom margins <b>82</b>, <b>84</b> of the rail <b>76</b> provide for a clean edge for the trolley <b>88</b> to roll on from position to position.</p>
+      <p id="p-00034-en" num="0034">As best shown in <figref>FIGS. 2 and 3</figref>, a pair of hinges <b>113</b> are disposed along the rail <b>76</b> in spaced relationship with one another for pivoting the rail ends <b>80</b> in the horizontal plane P from the extended position and toward the housing <b>44</b> to establish a compact position of the diagnostic apparatus <b>20</b>. A pair of latches <b>116</b> are each pivotally disposed along the rail <b>76</b> adjacent to the hinges <b>113</b> for locking the rail <b>76</b> in the extended or the compact positions. A hinge sensor <b>118</b> is disposed adjacent to each of the hinges <b>113</b> to determine the position of the rail ends <b>80</b>. The overall compact size of the diagnostic apparatus <b>20</b>, established by the compact position, allows the diagnostic apparatus <b>20</b> to utilize minimal examination room space, eases shipment of the diagnostic apparatus <b>20</b> to different locations in vehicles and carriers, and allows the diagnostic apparatus <b>20</b> to be easily moved between examination rooms, even during the short period of time in which the patient waits for the doctor in the examination room.</p>
+      <p id="p-00035-en" num="0035">The assembly further includes a black body radiator <b>120</b> preferably of a copper material for emitting heat toward the camera assembly <b>58</b>. The black body radiator <b>120</b> provides a continuous surface maintained at a predetermined calibration temperature (32 degrees Celsius in the preferred arrangement) for use in calibrating the thermographic camera <b>62</b>. The use of the black body radiator <b>120</b> to calibrate the camera assembly <b>58</b> prevents camera drift during the recording of the consecutive thermographic images, allowing the temperature in consecutive images to be accurately compared to each other. More specifically, when the thermographic camera <b>62</b> is aligned with the black body radiator <b>120</b>, the thermographic camera <b>62</b> performs a non-uniformity correction (NUC) wherein all pixels may be set to the same value to provide a correction that removes camera drift. The NUC function normalizes all of the pixels (76,800 in the preferred arrangement) of the IR camera to exactly 32 degrees Celsius. The black body radiator <b>120</b> has a custom circuit to maintain the known temperature accurately. More specifically, the black body radiator <b>120</b> includes a thermocouple that is electrically connected with the controller <b>24</b> for monitoring and maintaining the temperature of the black body radiator <b>120</b>. Other ranges of pixels and temperatures could be utilized. Further, the thermographic camera <b>62</b> may be calibrated between the recording of any number of images.</p>
+      <p id="p-00036-en" num="0036">Moreover, the black body radiator <b>120</b> is coated with a matt-finish paint to minimize thermographic camera reflections to provide for a uniform temperature surface with high emissivity. This is contrary to a reflective surface of the black body radiator <b>120</b>, which would cause the black body radiator <b>120</b> to pick up the reflection of the lens of the thermographic camera <b>62</b> and therefore increase the temperature of the thermographic readings within the thermographic images. Alternatively, other non-reflective materials like a flocking material, could be utilized to minimize thermographic camera reflections to provide the uniform temperature surface without departing from the scope of the subject disclosure.</p>
+      <p id="p-00037-en" num="0037">A spacing member <b>122</b> interconnects the black body radiator <b>120</b> and the front periphery <b>50</b> of the housing <b>44</b> by a clearance distance for allowing the camera assembly <b>58</b> to slide along the rail <b>76</b> between the black body radiator <b>120</b> and the front periphery <b>50</b> of the housing <b>44</b>. In the preferred arrangement, the black body radiator <b>120</b> is spaced one inch from the thermographic camera <b>62</b> when the camera assembly <b>58</b> is disposed in alignment with the black body radiator <b>120</b> to ensure that the thermographic camera <b>62</b> is accurately calibrated. Other distances could be utilized as is necessary to calibrate the thermographic camera. Additionally, the black body radiator <b>120</b> is pivotally connected to the spacing member <b>122</b> for allowing the black body radiator <b>120</b> to pivot out of alignment with the camera assembly <b>58</b>. The black body radiator <b>120</b> could alternatively be slideably connected to the spacing member <b>122</b> to allow the black body radiator <b>120</b> to slide vertically or horizontally out of alignment with the camera assembly <b>58</b> without departing from the scope of the subject disclosure.</p>
+      <p id="p-00038-en" num="0038">In order to determine the position of the camera assembly <b>58</b> along the rail <b>76</b>, a pair of position sensors <b>124</b> are each disposed adjacent to one of the ends <b>80</b> of the rail <b>76</b>. Further, the controller <b>24</b> is configured to monitor the number of steps taken by the trolley motor <b>112</b> to determine the position of the camera assembly <b>58</b> along the rail <b>76</b> at any time during the diagnostic test. Alternatively, the trolley motor could include an encoder that is electrically connected to the controller <b>24</b> to measure the position of the trolley motor <b>112</b>. It should be appreciated that knowing the location of the camera assembly <b>58</b> ensures that the camera assembly <b>58</b> is in the proper position during all phases of testing.</p>
+      <p id="p-00039-en" num="0039">A second graphical user interface <b>74</b> is disposed on the front periphery <b>50</b> of the housing <b>44</b> for presenting operational data related to the diagnostic apparatus <b>20</b> to the patient and for receiving input data from the patient before and during operation of the diagnostic apparatus <b>20</b>. More specifically, the second graphical user interface <b>74</b> is electrically connected to the controller <b>24</b>, and is configured to inquire about and receive information from the patient before the diagnostic test and then subsequently guide the patient through the testing procedure. Like the first graphical user interface <b>56</b>, in the preferred arrangement, the second graphical user interface <b>74</b> is a touch-screen interface. However, an input device like a keyboard may alternatively or additionally be connected thereto to allow the patient to input information to the diagnostic apparatus <b>20</b>. A speaker may be connected to the diagnostic apparatus <b>20</b> adjacent to the second graphical interface to play audio to the patient that correlates with the information presented on the second graphical user interface <b>74</b>.</p>
+      <p id="p-00040-en" num="0040">As an alternative or supplement to inputting information via the second graphical user interface <b>74</b>, patients may also upload information to the internet from their home or other remote location such as a doctor's office. The input information may include the patient's personal and family medical histories. Such medical histories may include but are not limited to, any past or current medicines or medical operations such as a mastectomy, lumpectomy, hysterectomy and endometrial ablation. Additionally, the input information may include any present changes or concerns of the patient such as pain, color, physical distortion, etc. of the breast. Such input information may be considered in current or subsequent analyses to determine the likelihood of a presence of cancer, and may significantly affect the analyses. For example, the diagnostic apparatus and method can take into account the patient's medical history because a ratio of the temperature between breasts of the patient may change by approximately 20-30% based on the types of medications that the patient is taking or medical operations that the patient has undergone.</p>
+      <p id="p-00041-en" num="0041">The second graphical user interface <b>74</b> and/or speakers are configured to alert the patient when each step of the testing procedure is about to begin. Furthermore, the second graphical user interface <b>74</b> and/or speakers instruct the patient on how to position themselves in the appropriate posture for each stage of the testing procedure. More specifically, the second graphical user interface <b>74</b> is electrically connected to the three-dimensional camera <b>60</b> to display a live three-dimensional image of the patient, along with live instructions to the patient to correct their posture, e.g., to move slightly forward or backward, left or right, to sit up, etc. In the event the patient does not correct their posture in a timely manner, an audible alarm may be produced by the speaker or the testing procedure may be stopped in its entirety. Further, the second graphical user interface <b>74</b> displays videos to the patient before the testing procedure which explain the benefits of using the diagnostic apparatus <b>20</b>. Other videos could be displayed at different stages of the testing procedure.</p>
+      <p id="p-00042-en" num="0042">Like the first graphical user interface <b>56</b>, the second graphical user interface <b>74</b> is configured to display a start/stop test option to allow the patient to start and stop the testing procedure. Further, the second graphical user interface <b>74</b> is configured to display a help/information button that the patient may utilize if they have questions about operating the diagnostic apparatus <b>20</b>. Additionally, the second graphical user interface <b>74</b> includes a privacy button that the patient may push to notify technicians to remain out of the examination room so that the patient may disrobe and proceed with the testing procedure in privacy.</p>
+      <p id="p-00043-en" num="0043">The first and second graphical user interfaces <b>56</b>, <b>74</b> may present further forms of operational information to the patient/technician, such as whether the camera assembly <b>58</b> is in condition for operation, whether the power source <b>22</b> is properly connected, a list of tests to be performed, room characteristics, the status of the diagnostic apparatus <b>20</b>, issues with the diagnostic apparatus <b>20</b> and explanations, test completion time, whether the privacy mode is activated, battery status, and other information. Furthermore, the controller <b>24</b> is configured to notify the patient via the second graphical user interface <b>74</b> and/or speakers that the testing procedure has been completed or aborted. Likewise, the controller <b>24</b> is configured to inform the technician via email, text message or the like that the testing procedure has been completed or aborted. This is particularly useful when the privacy mode is activated by the patient.</p>
+      <p id="p-00044-en" num="0044">It should be appreciated that after the diagnostic apparatus <b>20</b> is placed in front of the patient by the technician and the patient is disposed in the testing position, testing can be initiated without further assistance from the technician since the diagnostic apparatus <b>20</b> is configured to allow the second graphical user interface <b>74</b> to easily transmit and receive information from the patient and guide the patient through the testing procedure. This advantageously provides for increased patient privacy and reduced operational costs since a technician does not need to be actively employed to assist the patient through the testing procedure. This leads to increased comfort for the patient as well as decreased costs to operate and perform the diagnostic test.</p>
+      <p id="p-00045-en" num="0045">A plurality of sensors <b>126</b>, <b>128</b>, <b>130</b> are disposed on the housing <b>44</b> for recording various conditions within the examination room. For example an air flow sensor <b>126</b> is disposed on the housing <b>44</b> for measuring ambient air flow in the examination room, a temperature sensor <b>128</b> is disposed on the housing <b>44</b> for measuring the ambient temperature in the examination room, and a humidity sensor <b>130</b> is disposed on the housing <b>44</b> for measuring ambient humidity in the examination room. The controller <b>24</b> is electrically connected with the air flow, temperature and humidity sensors <b>126</b>, <b>128</b>, <b>130</b> and is configured to analyze the air flow, temperature and humidity of the examination room prior to and during examination of the patient to prevent inaccurate temperature readings by the thermographic camera <b>62</b>.</p>
+      <p id="p-00046-en" num="0046">With further reference to the air flow sensor <b>126</b>, in the event that the air flow sensor <b>126</b> detects too much air movement in the examination room, the controller <b>24</b> instructs the technician, via the first graphical user interface <b>56</b> and/or speakers, to add baffles to the ceiling or other location around the diagnostic apparatus <b>20</b> and block unwanted air flow to prevent inaccurate recordings from the thermographic camera <b>62</b>. Furthermore, if the air flow is too high, the controller <b>24</b> is configured to either entirely stop the examination procedure or allow the examination procedure to continue with a note on a subsequently provided diagnostic report that the air flow was too high.</p>
+      <p id="p-00047-en" num="0047">In the preferred arrangement, the ideal temperature range in the examination room to operate the thermographic camera <b>62</b> is approximately 75 degrees Fahrenheit or less. This temperature range ensures that there is a sufficient temperature difference between the temperature of the examination room and the body temperature of the patient. In the event the temperature sensor <b>128</b> detects that the temperature in the examination room is above the upper threshold of this temperature range, the controller <b>24</b> instructs the technician, via the first graphical user interface <b>56</b> and/or speakers, to lower the temperature in the examination room. If the temperature is too high, the controller <b>24</b> is configured to either stop the examination procedure or allow the examination procedure to continue with a note on a subsequently provided diagnostic report that the temperature was too high.</p>
+      <p id="p-00048-en" num="0048">Regarding the humidity sensor <b>130</b>, if the humidity sensor <b>130</b> detects that the humidity in the examination room is too high, the controller <b>24</b> instructs the technician via the first graphical user interface <b>56</b> and/or speakers to take appropriate action to reduce the humidity in the examination room. If the humidity is too high, the controller <b>24</b> may either stop the examination procedure or allow the examination procedure to continue with a note on a subsequently provided diagnostic report that the humidity was too high.</p>
+      <p id="p-00049-en" num="0049">As best shown in <figref>FIG. 3</figref>, the diagnostic apparatus <b>20</b> also includes a lifting mechanism <b>132</b> for vertically moving the housing <b>44</b> relative to the base <b>30</b> to adjust the height of the cold bars <b>68</b> and the camera assembly <b>58</b> for providing an ergonomic grip of the cold bars <b>68</b> by various patients and for placing the camera assembly <b>58</b> in vertical alignment with the breasts of the patient. Although the patient sits in a standard doctor's office chair in the preferred arrangement (as best shown in <figref>FIG. 5</figref>), the lifting mechanism <b>132</b> allows the diagnostic apparatus <b>20</b> to accommodate differently sued patients (height and weight) as well as those patients who must stand or sit in a wheel chair or other style of a seating surface. Additionally, in event that the entire vertical shape of the breasts of the patient are not completely captured by the camera assembly <b>58</b> in the initial horizontal position, the lifting mechanism <b>132</b> can move the housing <b>44</b> up and down to take multiple images that are vertically stacked on top of one another to capture the entirety of the breasts in both the horizontal and vertical directions.</p>
+      <p id="p-00050-en" num="0050">The lifting mechanism <b>132</b> includes a pair of tracks <b>134</b> that extend upwardly from the base <b>30</b> in spaced and parallel relationship with one another and connected to the housing <b>44</b>. A channel <b>136</b> is defined by the bottom periphery <b>46</b> of the housing <b>44</b> and telescopically receives the tracks <b>134</b> for allowing the housing <b>44</b> to vertically and linearly move along the tracks <b>134</b>. A lead screw <b>138</b> extends upwardly from the base <b>30</b> between the tracks <b>134</b> and a driving motor <b>139</b> engages the base <b>30</b> and includes a piston that is rotatably connected with the lead screw <b>138</b> for providing rotary motion of the lead screw <b>138</b>. A belt <b>140</b> is disposed about the piston of the driving motor <b>139</b> and the lead screw <b>138</b> for transferring rotating motion of the piston to the lead screw <b>138</b>. Further, a cross-member <b>142</b> that has a cuboid shape extends transversely between the side peripheries <b>54</b> at the bottom periphery <b>46</b> of the housing <b>44</b>. The lead screw <b>138</b> threadedly extends through the cross-member <b>142</b> for converting rotary motion of the lead screw <b>138</b> into vertical and linear motion of the cross-member <b>142</b> along the lead screw <b>138</b> to provide for the vertical and linear movement of the housing <b>44</b>. The lifting mechanism <b>132</b> further includes a pair of supporting rods which are surrounded by the tracks <b>134</b> and extend from the base <b>30</b> and through the cross-member <b>142</b> in spaced and parallel relationship with the lead screw <b>138</b> for guiding the cross-member <b>142</b> during vertical movement of the housing <b>44</b>.</p>
+      <p id="p-00051-en" num="0051">The controller <b>24</b> is electrically connected to the driving motor <b>139</b> for controlling the driving motor <b>139</b> to control the vertical movement of the housing <b>44</b>. Furthermore, like the trolley motor <b>112</b>, the driving motor <b>139</b> is a stepper motor, and is electrically connected to the controller <b>24</b> to monitor the number of steps taken by the trolley motor <b>112</b> to determine the vertical position of the housing <b>44</b> and components of the lifting mechanism <b>132</b> at any time during the diagnostic test. Alternatively, the driving motor <b>139</b> could have an encoder that measures the position of the driving motor <b>139</b>, housing <b>44</b> and components of the lifting mechanism <b>132</b> without departing from the scope of the subject disclosure.</p>
+      <p id="p-00052-en" num="0052">The controller <b>24</b> also includes a wireless communication module <b>144</b>, such as a Wi-Fi card, for connecting with a cloud server <b>145</b> for transmitting information to and from the cloud server <b>145</b>. The controller <b>24</b> is further electrically connected with the camera assembly <b>58</b> for receiving the three-dimensional and thermographic images from the camera assembly <b>58</b> and transmitting them to the cloud server <b>145</b> for subsequent processing at the cloud server <b>145</b>. The connection between the controller <b>24</b> and the cloud server allows processing of data captured by the diagnostic apparatus <b>20</b> to be performed securely over the cloud server <b>145</b>. Furthermore, the cloud server <b>145</b> ensures that data is not lost due to issues with the diagnostic apparatus <b>20</b> like a fire, flood or the like. Additionally, connecting to the cloud server <b>145</b> allows patient data to be transmitted between diagnostic apparatuses <b>20</b> in various locations, allowing patients to have tests performed analyzed, and reviewed by doctors and technicians at several different locations and times.</p>
+      <p id="p-00053-en" num="0053">The cloud server <b>145</b> also provides for a reliable means for updating the software associated with the diagnostic apparatus <b>20</b> and allows input data from biopsies or other medical procedures to be downloaded to the controller <b>24</b> to adjust the testing procedure and analysis as appropriate. Moreover, the cloud server <b>145</b> monitors the operation of the diagnostic apparatus <b>20</b> to ensure that it is performing correctly. For example, if the camera assembly <b>58</b> moves along the rail <b>76</b> at a faster speed in a second of two tests, the cloud server <b>145</b> may send a signal to the controller <b>24</b> to alert the technician via the first graphical user interface <b>56</b>, speakers, text message, email or the like of the potential issue so that appropriate repairs may be made if necessary.</p>
+      <p id="p-00054-en" num="0054">The cloud server <b>145</b> includes a database <b>147</b> for storing records of all tests performed with different diagnostic assemblies on different patients and at different locations. Over time, the cloud server <b>145</b> can evaluate hundreds of thousands of tested patients. This allows algorithms of the controller <b>24</b> to be improved to provide for improved sensitivity and specificity. Furthermore, the cloud server <b>145</b> can monitor a variety of other factors such as the effect of certain medicines, treatments or environmental factors. For example, by knowing the location of the patient, the cloud server <b>145</b> can measure the occurrences of breast cancer for those who live next to salt water, or it could measure the risk of obese women to develop breast cancer.</p>
+      <p id="p-00055-en" num="0055">A power container <b>146</b> that has a rectangular shape is connected to the front periphery <b>50</b> of the housing <b>44</b>. A pair of hooks <b>147</b> extend from the power container <b>146</b> in spaced and parallel relationship for receiving a wrapped power cable. The power source <b>22</b> includes a pair of power sockets <b>148</b> that are defined by the power container <b>146</b> for electrically connecting the diagnostic apparatus <b>20</b> with a wall socket or other AC/DC power connection. The power source <b>22</b> further includes a backup battery <b>150</b> that engages the housing <b>44</b> for providing backup power to the diagnostic apparatus <b>20</b> in the event of a power failure. The backup battery <b>150</b> is adapted to allow the thermographic camera <b>62</b> to be powered for up to four hours. This is greater than the minimum warmup time of the thermographic camera <b>62</b> of approximately 30 minutes. The power source <b>22</b> and controller <b>24</b> are configured to automatically warmup the thermographic camera <b>62</b> at least minutes prior to upcoming tests.</p>
+      <p id="p-00056-en" num="0056">With reference to <figref>FIGS. 8 and 9</figref>, a method of examining breasts of a patient in an examination room to detect for potential breast cancer using a diagnostic apparatus <b>20</b> is also disclosed. The method begins by <b>298</b> positioning the patient in the testing position. As previously mentioned, the patient may be standing, sitting in a doctor office chair, sitting in a wheel chair, or the like in the testing position. The examination by the diagnostic apparatus proceeds by having a technician move the diagnostic apparatus <b>20</b> in front of the patient and commencing operation of the diagnostic apparatus <b>20</b> to begin an examination of the breasts of the patient. The method proceeds by <b>300</b> positioning a black body radiator <b>120</b> in alignment with the camera assembly <b>58</b>. More specifically, the camera assembly <b>58</b> is slid along the rail <b>76</b> to define a calibration position in alignment with the black body radiator <b>120</b>. Once the camera assembly <b>58</b> is in the calibration position, the method proceeds by <b>302</b> emitting heat from the black body radiator <b>120</b> and calibrating the thermographic camera <b>62</b> based on the heat emitted from the black body radiator <b>120</b>.</p>
+      <p id="p-00057-en" num="0057">The method proceeds by <b>304</b> moving the housing <b>44</b> to a vertical position wherein the camera assembly <b>58</b> is vertically aligned with the breasts of the patient and the cold bars <b>68</b> are ergonomically positioned to accommodate for the height and arm length of the patient. This ergonomic position provides for increased comfort of the patient and maintains the arms of the patient in a position spaced from the breasts of the patient.</p>
+      <p id="p-00058-en" num="0058">Once the housing <b>44</b> is moved to an ergonomic position, the method proceeds by <b>306</b> positioning the patient in a first posture for a predetermined period of acclimation to acclimate the breasts of the patient to the ambient temperature within the examination room. In the preferred arrangement, the predetermined period of acclimation is approximately five minutes, however, the period of acclimation may be longer or shorter depending on the body type of the patient and the ambient conditions within the examination room. The first posture preferably includes positioning the hands of the patient on their hips to space the arms from the breasts of the patient. However, other postures which keep the arms in spaced relationship to the breasts could also be used without departing from the scope of the subject disclosure.</p>
+      <p id="p-00059-en" num="0059">During the period of acclimation, the thermographic camera <b>62</b> actively monitors the temperature of the breasts of the patient to determine when they reach steady state, thus indicating when it is appropriate to begin the next steps in the process. This minimizes the length of time necessary to complete the test since the patient may reach steady state before the full predetermined period of acclimation is completed.</p>
+      <p id="p-00060-en" num="0060">Once the predetermined period of acclimation passes, the method proceeds by <b>308</b> positioning the hands of the patient behind their head of the patient to define a second posture. After the patient is positioned in the second posture, the method continues by <b>310</b> sliding the camera assembly <b>58</b> along the rail <b>76</b> to a first registration position that is spaced from the calibration position toward one of the rail ends <b>80</b> and aligned with a first side of the breasts of the patient. Once the camera assembly <b>58</b> is positioned in the first registration position, the method continues by <b>312</b> recording a first control three-dimensional image of the breasts of the patient. The method then proceeds by <b>314</b> processing the first control three-dimensional image with the controller <b>24</b> to determine a first optimal camera position for recording the lymph nodes on the first side of the breasts of the patient. For example, depending on a size of the patient's breasts, the first optimal position may be outward from the first registration position. In any event, the cosine rule is utilized by the controller <b>24</b> to determine the optimal camera position to ensure accurate temperature data is recorded of the sides of the breasts of the patient. Therefore, angles that would degrade the recorded thermographic images of the breasts are not utilized by the camera assembly <b>58</b>. In more detail, to determine the first optimal position, the first control three-dimensional image is processed by the controller <b>24</b> via a breast extraction algorithm. The breast extraction algorithm draws a normal vector on the breast on the first side of the breasts that does not violate the cosine rule. Based on the normal vector, a path for the trolley <b>88</b> to the first optimal camera position is calculated using a coordinate system in terms of angles and degrees. It should be appreciated that these processing steps can be utilized to determine all additional optimal camera positions described below.</p>
+      <p id="p-00061-en" num="0061">Once the first optimal camera position is determined, the method continues by <b>316</b> sliding the camera assembly <b>58</b> to the first optimal position and subsequently <b>317</b> recording a first control thermographic image with the camera assembly <b>58</b> disposed in the first optimal position. This step allows the camera assembly <b>58</b> to record and capture the lymph nodes on the first side of the breasts in the first control thermographic image.</p>
+      <p id="p-00062-en" num="0062">After the first control three-dimensional and thermographic images are recorded, the method proceeds by <b>318</b> sliding the camera assembly <b>58</b> along the rail <b>76</b> to a second registration position being spaced from both the first registration and optimal positions and toward the other of the rail ends <b>80</b> in alignment with a second side of the breasts of the patient. The method then proceeds by <b>320</b> recording a second control three-dimensional image of the breasts of the patient, and then <b>322</b> processing the second control three-dimensional image with the controller <b>24</b> to determine a second optimal camera position for recording and capturing the lymph nodes on the second side of the breasts of the patient. It should be appreciated that additional optimal camera positions may be determined in accordance with the above described teachings. Such additional optimal camera positions may be located at the left front portion of the breasts, the right front portion of the breasts and the subclavian region of the breasts.</p>
+      <p id="p-00063-en" num="0063">Once the second optimal camera position is determined, the method proceeds by <b>324</b> sliding the camera assembly <b>58</b> to the second optimal position and subsequently <b>325</b> recording a second control thermographic image with the camera assembly <b>58</b> disposed in the second optimal position. This step allows the camera assembly <b>58</b> to record and capture the lymph nodes on the second side of the breasts in the second control thermographic image.</p>
+      <p id="p-00064-en" num="0064">The method proceeds by <b>326</b> positioning each of the hands of the patient on a cold surface to define a third posture, then <b>327</b> maintaining the third posture for a predetermined period of cold stress for cooling the hands of the patient. In the preferred arrangement, the predetermined period of cold stress is one minute, however, other periods of cold stress could be used without departing from the scope of the subject disclosure. The step of positioning each of the hands of the patient on a cold surface includes positioning each of the hands of the patient on the pommel <b>72</b> of one of the cold bars <b>68</b>. It should be appreciated that the patient could be positioned in other postures to subject them to a period of cold stress. For example, a cold draft of air could be applied to the breasts, or other area of the patient, to provide for the period of cold stress.</p>
+      <p id="p-00065-en" num="0065">After the period of cold-stress, the method proceeds by <b>328</b> re-positioning the patient in the second posture. Once the patient is in the second posture, the method proceeds by <b>330</b> sliding the camera assembly <b>58</b> along the rail <b>76</b> to the first optimal position and <b>331</b> recording at least one first test three-dimensional image and one first test thermographic image with the camera assembly <b>58</b> disposed in the first optimal position. Once again, this allows the camera assembly <b>58</b> to record and capture the lymph nodes on the first side of the breasts in the first test three-dimensional image and first test thermographic image. The method then continues with <b>332</b> sliding the camera assembly <b>58</b> along the rail <b>76</b> to the second optimal position and <b>333</b> recording a second test three-dimensional image and second test thermographic image with the camera assembly <b>58</b> disposed in the second optimal position. Again, this allows the camera assembly <b>58</b> to record and capture the lymph nodes on the second side of the breasts in the second test three-dimensional image.</p>
+      <p id="p-00066-en" num="0066">After the test three-dimensional and thermographic images are recorded, the method proceeds by <b>334</b> electronically transmitting the control three-dimensional and thermographic images, and the test three-dimensional and thermographic images to the cloud server. The method then proceeds by <b>336</b> comparing the test thermographic images to the control thermographic images to identify regions of the breasts in which the temperature remained substantially unchanged by the predetermined period of cold stress. In the preferred arrangement, the step of comparing the test thermographic image to the control thermographic image is executed by the cloud server. However, the comparison could alternatively be conducted by the controller <b>24</b> at the diagnostic apparatus <b>20</b>. The results of the comparison are transmitted back to the testing apparatus such that they may be reviewed by doctors and/or technicians. The results may be provided in the form of an electronic or written report to the doctor and/or patient and can even be provided to the patient via email, text message or the like.</p>
+      <p id="p-00067-en" num="0067">As elaborated upon above, in the preferred arrangement of the method, thermographic images are recorded at two locations along the rail <b>76</b>, namely the first and second optimal positions. However, additional images could also be recorded from additional locations along the rail <b>76</b>. Further, it should be appreciated that because of the relative position of the camera assembly <b>58</b> to the breasts, images including substantially the whole breasts can be recorded, which can advantageously eliminate the need for splicing the thermographic images. Furthermore, in the preferred arrangement each thermographic image is approximately 11×8.5 inches to provide for a complete view of the breasts and to provide for relatively high pixel density, which allows for better analysis of the temperature of thermographic images.</p>
+      <p id="p-00068-en" num="0068">The controller <b>24</b> is further configured to optimize the ratio of sensitivity and specificity of the testing procedure. These criteria may be changed based on preferences of the technician and patient, for example, to decrease the number of false positives detected. Furthermore, the controller <b>24</b> is configured to monitor the movement of the patient during the testing procedure via the three-dimensional camera <b>60</b> to ensure that the patient is positioned in the correct posture. If the controller <b>24</b> determines that the patient is positioned in the incorrect posture, it informs the patient, via the second graphical user interface <b>74</b> and/or speakers connected thereto of the need to correct their posture. For example, if the patient removes her hands from her hips during the acclimation period, the patient is informed via the second graphical user interface <b>74</b> of the need to correct her posture. If the posture is not corrected, the method may even be stopped by the controller <b>24</b>.</p>
+      <p id="p-00069-en" num="0069">The first control three-dimensional image (and subsequent three-dimensional images) can also utilized to allow the diagnostic apparatus <b>20</b> to be wheeled toward or away from the patient to align the camera assembly <b>58</b> by approximately 19 inches away from the breast midpoint of the patient. This ensures that subsequent thermographic images are focused and recorded with high temperature accuracy. In the preferred arrangement, the controller <b>24</b> is configured to only allow the camera assembly <b>58</b> to record images when the camera assembly <b>58</b> is spaced by approximately 19 inches from the breast midpoint, however, other distances could be utilized for different configurations of the camera assembly <b>58</b>. The breast midpoint is defined by a point disposed halfway between a nipple and chest wall of the patient. Further, the cold bars <b>68</b> are positioned such that the patient may easily reach them while maintaining the approximately 19 inch distance from the camera assembly <b>58</b> to the breasts of the patient. The camera assembly <b>58</b> may alternatively be configured to slide the camera assembly <b>58</b> toward and away from the patient to ensure that the cameras <b>60</b>, <b>62</b> are adequately focused. The controller <b>24</b> is configured to detect this distance and notify the technician or patient of the need to adjust the diagnostic apparatus <b>20</b>. In the event this distance is not corrected, the method could be stopped by the controller <b>24</b>.</p>
+      <p id="p-00070-en" num="0070">The controller <b>24</b> is programmed to filter the background in each thermographic image to be consistent with one another to prevent inaccuracies in the thermographic images. In addition to software filters, a backdrop may be positioned behind the testing position to standardize the image behind the patient. The backdrop may be a hard or soft surface, and may further be made of a reflective material like a crinkled aluminum to reflect the temperature of the patient to minimize background temperature to improve temperature integrity. Additionally, the backdrop may utilize heated plates positioned on each side of the patient to accomplish this same result.</p>
+      <p id="p-00071-en" num="0071">Furthermore, prior to starting the examination process, preliminary notices related to the examination process may be provided to the patient via email, text message or the like. Such notices may include a calendar reminder of a testing appointment or a reminder not to wear deodorant, drink caffeine or exercise during the day of testing.</p>
+      <p id="p-00072-en" num="0072">Obviously, many modifications and variations of the present invention are possible in light of the above teachings and may be practiced otherwise than as specifically described while within the scope of the appended claims. These antecedent recitations should be interpreted to cover any combination in which the inventive novelty exercises its utility. The use of the word “said” in the apparatus claims refers to an antecedent that is a positive recitation meant to be included in the coverage of the claims whereas the word the precedes a word not meant to be included in the coverage of the claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method of examining breasts of a patient in an examination room to detect for potential breast cancer using a camera assembly including a thermographic camera, said method comprising the steps of;
+<claim-text>recording a plurality of control thermographic images of the breasts of the patient,</claim-text><claim-text>subjecting the patient to a cold stress for a predetermined period of time,</claim-text><claim-text>recording a plurality test thermographic images of the breasts of the patient,</claim-text><claim-text>comparing the plurality of test thermographic images to the plurality of control thermographic images to identify regions of the breasts in which the temperature remained substantially unchanged by said predetermined period of cold stress, and</claim-text><claim-text>sliding the camera assembly along a horizontal plane between a plurality of positions during said step of recording the plurality of control thermographic images and said step of recording the plurality of test thermographic images for allowing said camera assembly to consecutively record the control and test thermographic images of breasts of the patient from the plurality of positions.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method as set forth in <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein said step of sliding the camera assembly between a plurality of positions includes sliding the camera assembly along a rail between a pair of rail ends.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method as set forth in <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein said step of sliding the camera assembly between a plurality of positions includes sliding the camera assembly to a first optimal position disposed adjacent to one of the rail ends and in aliment with a first side of the breasts of the patient.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method as set forth in <claim-ref idref="clm-00003-en">claim 3</claim-ref> wherein said step of recording a plurality of control thermographic image of the breasts of the patient includes recording a first control thermographic image with the camera assembly disposed in the first optimal position to allow the camera assembly to capture lymph nodes on the first side of the breasts in the first control thermographic image, and said step of recording a plurality of test thermographic image of the breasts of the patient includes recording a first test thermographic image with the camera assembly disposed in the first optimal position to allow the camera assembly to capture the lymph nodes on the first side of the breasts in the first test thermographic image.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method as set forth in <claim-ref idref="clm-00004-en">claim 4</claim-ref> wherein said step of sliding the camera assembly between a plurality of positions further includes sliding the camera assembly to a second optimal position aligned with a second side of the breasts of the patient.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method as set forth in <claim-ref idref="clm-00005-en">claim 5</claim-ref> wherein said step of recording a plurality of control thermographic image of the breasts of the patient includes recording a second control thermographic image with the camera assembly disposed in the second optimal position to allow the camera assembly to capture lymph nodes on the second side of the breasts in the second control thermographic image, and said step of recording a plurality of test thermographic image of the breasts of the patient includes recording a second test thermographic image with the camera assembly disposed in the second optimal position to allow the camera assembly to capture the lymph nodes on the second side of the breasts in the second test thermographic image.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method as set forth in <claim-ref idref="clm-00006-en">claim 6</claim-ref> further including electronically transmitting the control thermographic image and test thermographic images to a cloud server, and said step of comparing the test thermographic images to the control thermographic images includes executing the comparison of the test thermographic image to the control thermographic image on the cloud server.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method as set forth in <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein said step of positioning the camera assembly in a plurality of positions includes sliding the camera assembly along a rail to a first registration position being generally aligned with the first side of the breasts of the patient, and further including recording at least one control three-dimensional image of the breasts of the patient with a three-dimensional camera of the camera assembly while the camera assembly disposed in the first registration position.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method as set forth in <claim-ref idref="clm-00008-en">claim 8</claim-ref> further including;
+<claim-text>processing the first control three-dimensional image with a controller to determine a first optimal camera position in alignment with the lymph nodes of the first side of the breasts of the patient, and sliding the camera assembly along the rail to the first optimal camera position.</claim-text></claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method as set forth in <claim-ref idref="clm-00009-en">claim 9</claim-ref> wherein said step of recording a plurality control thermographic image of the breasts of the patient includes recording the first control thermographic image with the camera assembly disposed in the first optimal position to allow the camera assembly to capture the lymph nosed on the first side of the breasts in the first control thermographic image.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method as set forth in <claim-ref idref="clm-00010-en">claim 10</claim-ref> further including;
+<claim-text>sliding the camera assembly along the rail to a second registration position being spaced from the first registration and optimal camera positions and to and one of the rail ends and aligned with a second side of the breasts of the patient, and said step of recording a plurality of control three-dimensional image of the breasts of the patient further includes recording a second control three-dimensional image with the camera assembly disposed in the second registration position.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method as set forth in <claim-ref idref="clm-00011-en">claim 11</claim-ref> further including;
+<claim-text>processing the second control three-dimensional image with the controller to determine a second optimal camera position in alignment with the lymph nodes on the second side of the breasts of the patient, and sliding the camera assembly along the rail to the second optimal camera position.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method as set forth in <claim-ref idref="clm-00012-en">claim 12</claim-ref> wherein said step of recording a plurality of control thermographic image of the breasts of the patient further includes recording a second control thermographic image with the camera assembly disposed in the second optimal position to allow the camera assembly to capture the lymph nodes on the second side of the breasts in the second control thermographic image.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method as set forth in <claim-ref idref="clm-00013-en">claim 13</claim-ref> wherein said step of recording as plurality of test three-dimensional images of the breasts of the patient includes recording a first test three-dimensional image with the camera assembly disposed in the first optimal position to allow the camera assembly to capture the lymph nodes on the first side of the breasts in the first three-dimensional image and recording a second test three-dimensional image with the camera assembly disposed in the second optimal position to allow the camera assembly to capture the lymph nodes on the second side of the breasts in the second test three-dimensional image.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method as set forth in <claim-ref idref="clm-00014-en">claim 14</claim-ref> wherein said step of recording a plurality of test thermographic image of the breasts of the patient includes recording as first test thermographic image with the camera assembly disposed in the first optimal position to allow the camera assembly to capture the lymph nodes on the first side of the breasts in the first thermographic image and recording a second test thermographic image with the camera assembly disposed in the second optimal position to allow the camera assembly to capture the lymph nodes on the second side of the breasts in the second test thermographic image.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method as set forth in <claim-ref idref="clm-00001-en">claim 1</claim-ref> further including sliding the camera assembly along a rail in alignment with a black body radiator to define a calibration position, and emitting heat from the black body radiator and calibrating the thermographic camera based on the heat emitted from the black body radiator.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The method as set forth in <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein said step of subjecting the patient to a cod stress includes positioning each of the hands of the patient on a cold bar for cooling the hands of the patient.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method as set forth in <claim-ref idref="clm-00001-en">claim 1</claim-ref> further including moving the camera assembly to a vertical position in vertical alignment with the breasts of the patient.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en" independent="true">
+      <claim-text>
+        <b>19</b>. A method of examining breasts of a patient in an examination room to detect for potential breast cancer using a diagnostic apparatus including a controller and a housing having a rail disposed thereon and a camera assembly slideably disposed on the rail between a pair of rail ends, said method comprising the steps of;
+<claim-text>positioning a black body radiator in alignment with the camera assembly,</claim-text><claim-text>emitting heat from the black body radiator and calibrating the thermographic camera based on the heat emitted from the black body radiator,</claim-text><claim-text>positioning the patient in a first posture for a predetermined period of acclimation to acclimate the breasts of the patient to the ambient temperature within the examination room,</claim-text><claim-text>the first posture includes positioning the hands of the patient on the hips of the patient to space the arms from the breasts of the patient,</claim-text><claim-text>positioning the hands behind the head of the patient to define a second posture,</claim-text><claim-text>recording at least one control three-dimensional image of the breasts of the patient while positioned in the second posture,</claim-text><claim-text>recording at least one control thermographic image of the breasts of the patient while positioned in the second posture,</claim-text><claim-text>positioning each of the hands of the patient on a cold surface to define a third posture,</claim-text><claim-text>maintaining the third posture for a predetermined period of cold stress for cooling the hands of the patient,</claim-text><claim-text>re-positioning the patient in the second posture after said predetermined period of cold stress,</claim-text><claim-text>recording at least one test three-dimensional image of the breasts of the patient while re-positioned in the second posture,</claim-text><claim-text>recording at least one test thermographic image of the breasts of the patient while re-positioned in the second posture,</claim-text><claim-text>comparing the test thermographic image to the control thermographic image to identify regions of the breasts in which the temperature remained substantially unchanged by said predetermined period of cold stress,</claim-text><claim-text>said step of positioning a black body radiator in alignment with the camera assembly includes sliding the camera assembly along the rail into a calibration position in alignment with the black body radiator,</claim-text><claim-text>said step of positioning each of the hands of the patient on a cold surface to define a third posture includes positioning each of the hands of the patient on a cold bar,</claim-text><claim-text>moving the housing to a vertical position to dispose the camera assembly in vertical alignment with the breasts of the patient and to ergonomically position the cold bars to accommodate for the height and arm length of the patient for increasing comfort of the patient and maintaining the arms of the patient in a position spaced from the breasts of the patient when the patient is in the third posture,</claim-text><claim-text>sliding the camera assembly along the rail to a first registration position being spaced from the calibration position toward one of the rail ends and generally aligned with a first side of the breasts of the patient,</claim-text><claim-text>said step of recording at least one control three-dimensional image of the breasts of the patient includes recording a first control three-dimensional image with the camera assembly disposed in the first registration position,</claim-text><claim-text>processing the first control three-dimensional image with the controller to determine a first optimal camera position in alignment with the lymph nodes on the first side of the breasts of the patient,</claim-text><claim-text>sliding the camera assembly along the rail to the first optimal camera position,</claim-text><claim-text>said step of recording at least one control thermographic image of the breasts of the patient includes recording a first control thermographic image with the camera assembly disposed in the first optimal position to allow the camera assembly to capture the lymph nodes on the first side of the breasts in the first control thermographic image,</claim-text><claim-text>sliding the camera assembly along the rail to a second registration position being spaced from the first registration and optimal positions toward one of the rail ends and aligned with a second side of the breasts of the patient,</claim-text><claim-text>said step of recording at least one control three-dimensional image of the breasts of the patient further includes recording a second control three-dimensional image with the camera assembly disposed in the second registration position,</claim-text><claim-text>processing the second control three-dimensional image with the controller to determine a second optimal camera position in alignment with the lymph nodes on the second side of the breasts of the patient,</claim-text><claim-text>sliding the camera assembly along the rail to the second optimal camera position,</claim-text><claim-text>said step of recording at least one control thermographic image of the breasts of the patient further includes recording a second control thermographic image with the camera assembly disposed in the second optimal position to allow the camera assembly to capture the lymph nodes on the second side of the breasts in the second control thermographic image,</claim-text><claim-text>said step of recording at least one test three-dimensional image of the breasts of the patient includes recording a first test three-dimensional image with the camera assembly disposed in the first optimal position to allow the camera assembly to capture the lymph nodes on the first side of the breasts in the first test three-dimensional image and recording a second test three-dimensional image with the camera assembly disposed in the second optimal position to allow the camera assembly to capture the lymph nodes on the second side of the breasts in the second test three-dimensional image, and</claim-text><claim-text>said step of recording at least one test thermographic image of the breasts of the patient includes recording a first test thermographic image with the camera assembly disposed in the first optimal position to allow the camera assembly to capture the lymph nodes on the first side of the breasts in the first test thermographic image and recording a second test thermographic image with the camera assembly disposed in the second optimal position to allow the camera assembly to capture the lymph nodes on the second side of the breasts in the second test thermographic image.</claim-text></claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The method as set forth in <claim-ref idref="clm-00019-en">claim 19</claim-ref> further including;
+<claim-text>electronically transmitting the control three-dimensional and thermographic images and the test three-dimensional and thermographic images to a cloud server, and said step of comparing the test thermographic image to the control thermographic image includes executing the comparison of the test thermographic image to the control thermographic image on the cloud server.</claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257651A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257651A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257651A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257651A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257651A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257651A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257651A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257651A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257651A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257651A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257651A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257651A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257651A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257651A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150257651A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257651A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150257651A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257651A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150257651A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257651A1-20150917-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150257651A1_00011.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257651A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257651A1.PDF" type="pdf" size="815599" pages="20" />
+</lexisnexis-patent-document>

@@ -1,0 +1,981 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150252249A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021815" date-changed="20160118" time-changed="124600">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121229244">
+        <country>US</country>
+        <doc-number>20150252249</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14721155</doc-number>
+        <date>20150526</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150917">
+      <classification-ipcr sequence="1">
+        <text>C09K   8/60        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>60</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C09K   8/86        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>86</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150917">
+      <classification-cpc sequence="1">
+        <text>C09K   8/602       20130101 FI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>602</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C09K   8/68        20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>68</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C09K   8/86        20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>86</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">12</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">METHODS AND COMPOSITIONS FOR STIMULATING THE PRODUCTION OF HYDROCARBONS FROM SUBTERRANEAN FORMATIONS</invention-title>
+    <related-documents date-changed="20150910">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13829434</doc-number>
+              <date>20130314</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>9068108</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007211</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+    </related-documents>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>CESI Chemical, Inc.</orgname>
+            <role>02</role>
+            <address>
+              <city>Houston</city>
+              <state>TX</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Hill</last-name>
+            <first-name>Randal M.</first-name>
+            <address>
+              <city>The Woodlands</city>
+              <state>TX</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Champagne</last-name>
+            <first-name>Lakia M.</first-name>
+            <address>
+              <city>The Woodlands</city>
+              <state>TX</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Lett</last-name>
+            <first-name>Nathan L.</first-name>
+            <address>
+              <city>Cypress</city>
+              <state>TX</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Green</last-name>
+            <first-name>Maria Elizabeth</first-name>
+            <address>
+              <city>Conroe</city>
+              <state>TX</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150910">
+      <main-family family-id="173566089">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252249</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150526</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173566087">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252249</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150526</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Methods and compositions for stimulating of the production of hydrocarbons (e.g., formation crude oil and/or formation gas) from subterranean formations are provided. In some embodiments, the compositions are emulsions or microemulsions, which may include water, a terpene, and a surfactant. In some embodiments, methods of selecting a composition for treating an oil or gas well are provided.</p>
+  </abstract>
+  <legal-data date-changed="20151226">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20151119</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015252249A1</docdb-publication-number>
+      <docdb-application-id>444310557</docdb-application-id>
+      <new-owner>CESI CHEMICAL, INC., TEXAS</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:HILL, RANDAL M.;CHAMPAGNE, LAKIA M.;LETT, NATHAN L.;AND OTHERS;REEL/FRAME:037087/0828</free-text-description>
+      <effective-date>
+        <date>20130819</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <related-apps>
+      <heading id="h-00001-en" level="1">RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application is a continuation of U.S. application Ser. No. 13/829,434, filed Mar. 14, 2013, which is incorporated herein by reference in its entirety.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">FIELD OF INVENTION</heading>
+      <p id="p-00002-en" num="0002">The present invention generally provides methods and compositions for stimulating the production of hydrocarbons (e.g., formation crude oil and/or formation gas) from subterranean formations.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND OF INVENTION</heading>
+      <p id="p-00003-en" num="0003">For many years, petroleum has been recovered from subterranean reservoirs through the use of drilled wells and production equipment. During the production of desirable hydrocarbons, such as crude oil and natural gas, a number of other naturally occurring substances may also be encountered within the subterranean environment. The term “stimulation” generally refers to the treatment of geological formations to improve the recovery of liquid hydrocarbons (e.g., formation crude oil and/or formation gas). Common stimulation techniques include well fracturing and acidizing operations.</p>
+      <p id="p-00004-en" num="0004">Oil and natural gas are found in, and produced from, porous and permeable subterranean formations. The porosity and permeability of the formation determine its ability to store hydrocarbons, and the facility with which the hydrocarbons can be extracted from the formation. Hydraulic fracturing is commonly used to stimulate low permeability geological formations to improve the recovery of hydrocarbons. The process can involve suspending chemical agents in a well-treatment fluid (e.g., fracturing fluid) and injecting the fluid down the wellbore. However, the assortment of chemicals pumped down the well can cause damage to the surrounding formation by entering the reservoir rock and blocking the pore throats. It is known that fluid invasion can have a detrimental effect on gas permeability and can impair well productivity. In addition, fluids may become trapped in the formation due to capillary end effects in and around the vicinity of the formation fractures.</p>
+      <p id="p-00005-en" num="0005">In efforts to reduce phase trapping, additives have been incorporated into well-treatment fluids. Generally, the composition of additives comprises multi-component chemical substances and compositions that contain mutually distributed nanodomains of normally immiscible solvents, such as water and hydrocarbon-based organic solvents, stabilized by surfactants (e.g., microemulsions). The incorporation of additives into well-treatment fluids can increase crude oil or formation gas, for example by reducing capillary pressure and/or minimizing capillary end effects.</p>
+      <p id="p-00006-en" num="0006">Although a number of additives are known in the art, there is a continued need for more effective additives for increasing crude oil or formation gas for wellbore remediation, drilling operations, and formation stimulation.</p>
+      <heading id="h-00004-en" level="1">SUMMARY OF INVENTION</heading>
+      <p id="p-00007-en" num="0007">Methods and compositions for stimulating the production of hydrocarbons (e.g., formation crude oil and/or formation gas) from subterranean formations are provided.</p>
+      <p id="p-00008-en" num="0008">In some embodiments, methods of selecting a composition for treating an oil or gas well having a wellbore are provided comprising determining whether displacement of residual aqueous treatment fluid by formation crude oil or displacement of residual aqueous treatment fluid by formation gas is preferentially stimulated for the oil or gas well having a wellbore; and selecting an emulsion or a microemulsion for injection into the wellbore to increase formation crude oil or formation gas production by the well, wherein the emulsion or the microemulsion comprises water, a terpene, and a surfactant, the ratio of water to terpene is between about 3:1 and about 1:2; wherein the terpene has a phase inversion temperature greater than 43° C. when displacement of residual aqueous treatment fluid by formation crude oil is preferentially stimulated, or wherein the terpene has a phase inversion temperature less than 43° C. when displacement of residual aqueous treatment fluid by formation gas is preferentially stimulated. In some embodiments, the method further comprises injecting the emulsion or the microemulsion into the wellbore to increase production of formation crude oil or formation gas by the well.</p>
+      <p id="p-00009-en" num="0009">In some embodiments, methods of treating an oil or gas well having a wellbore are provided comprising injecting an emulsion or a microemulsion into the wellbore of the oil or gas well to stimulate displacement of residual aqueous treatment fluid by formation crude oil and increase production of formation crude oil by the well, wherein the emulsion or the microemulsion comprises water, a terpene, and a surfactant; wherein the ratio of water to terpene is between about 3:1 and about 1:2; and wherein the terpene has a phase inversion temperature greater than 43° C.</p>
+      <p id="p-00010-en" num="0010">In some embodiments, methods of treating an oil or gas well having a wellbore are provided comprising injecting an emulsion or a microemulsion into the wellbore of the oil or gas well to stimulate displacement of residual aqueous treatment fluid by formation gas and increase production of formation gas by the well, wherein the emulsion or the microemulsion comprises water, a terpene, and a surfactant; wherein the ratio of water to terpene is between about 3:1 and about 1:2; and wherein the terpene has a phase inversion temperature less than 43° C.</p>
+      <p id="p-00011-en" num="0011">In some embodiments, methods of treating an oil or gas well having a wellbore are provided comprising using an emulsion or a microemulsion to stimulate displacement of residual aqueous treatment fluid by formation crude oil or displacement of residual aqueous treatment fluid by formation gas by injecting the emulsion or the microemulsion into the wellbore of the oil or gas well, and increase production of formation crude oil or formation gas by the well, wherein the emulsion or the microemulsion comprises water, a terpene, and a surfactant; wherein the ratio of water to terpene is between about 10:1 and about 3:1; and wherein the terpene has a phase inversion temperature of greater than 43° C.</p>
+      <p id="p-00012-en" num="0012">In some embodiments, methods of treating an oil or gas well having a wellbore are provided comprising using an emulsion or a microemulsion to stimulate displacement of residual aqueous treatment fluid by oil or displacement of residual aqueous treatment fluid by gas by injecting the emulsion or the microemulsion into the wellbore of the oil or gas well, and increase production of formation crude oil or formation gas by the well, wherein the emulsion or the microemulsion comprises water, a terpene, and a surfactant; wherein the ratio of water to terpene is between about 10:1 and about 3:1; and wherein the terpene has a phase inversion temperature of less than 43° C.</p>
+      <p id="p-00013-en" num="0013">In some embodiments, an emulsion or a microemulsion for stimulating an oil or gas well is provided comprising an aqueous phase; a surfactant; a freezing point depression agent; and a terpene, wherein the terpene is nopol.</p>
+      <p id="p-00014-en" num="0014">In some embodiments, an emulsion or a microemulsion for stimulating an oil or gas well is provided comprising an aqueous phase; a surfactant; a freezing point depression agent; and a terpene, wherein the terpene is eucalyptol.</p>
+      <p id="p-00015-en" num="0015">Other aspects, embodiments, and features of the invention will become apparent from the following detailed description when considered in conjunction with the accompanying drawings. All patent applications and patents incorporated herein by reference are incorporated by reference in their entirety. In case of conflict, the present specification, including definitions, will control.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00016-en" num="0016">The accompanying drawings are not intended to be drawn to scale. In the drawings, each identical or nearly identical component that is illustrated in various figures is represented by a like numeral. For purposes of clarity, not every component may be labeled in every drawing. In the drawings:</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 1</figref> shows an exemplary plot for determining the phase inversion temperature of a microemulsion, according to some embodiments.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00018-en" num="0018">The present invention generally relates to methods and well-treatment compositions (e.g., emulsions or microemulsions) for stimulating of the production of liquid hydrocarbons (e.g., formation crude oil and/or formation gas) from subterranean formations. In some embodiments, the compositions comprise an emulsion or a microemulsion, as described in more detail herein. The emulsions or the microemulsions may include water, a terpene, a surfactant, and optionally a freezing point depression agent or other components. In some embodiments, the methods relate to stimulating displacement of residual aqueous treatment fluid by formation crude oil or formation gas to increase production of liquid hydrocarbons, as described in more detail below. In some embodiments, methods of selecting an emulsion or a microemulsion comprising a terpene are provided, wherein the emulsion or the microemulsion is selected so as to increase liquid hydrocarbon production.</p>
+      <p id="p-00019-en" num="0019">As described herein, in some embodiments, the inventors have found that microemulsions or emulsions comprising certain terpenes increase the displacement (e.g., flowback) of residual aqueous treatment fluid by liquid hydrocarbons (e.g., crude oil) as compared to other terpenes. In other embodiments, emulsions or microemulsions comprising certain terpenes increase the displacement of residual aqueous treatment fluid by gaseous hydrocarbons as compared to other terpenes. Laboratory tests may be conducted, as described herein, to determine the displacement of residual aqueous treatment fluid by liquid hydrocarbons and/or gaseous hydrocarbons of an emulsion or a microemulsion</p>
+      <p id="p-00020-en" num="0020">Petroleum is generally recovered from subterranean reservoirs through the use of drilled wells and production equipment. Wells are “stimulated” using various treatments (e.g., fracturing, acidizing) of geological formations to improve the recovery of liquid hydrocarbons. Oil and natural gas are found in, and produced from, porous and permeable subterranean formations. Based on techniques known in the art, as well as the preference for the desired product isolated (e.g., formation crude oil or formation gas), it may be preferential to stimulate either crude oil production or gas production from each well. A well drilled into a subterranean formation may penetrate formations containing liquid or gaseous hydrocarbons or both, as well as connate water or brine. The gas-to-oil ratio is termed the GOR. The operator of the well may choose to complete the well in such a way as to produce (for example) predominantly liquid hydrocarbons (crude oil). Alternatively, the operator may be fracturing a tight gas shale formation containing predominantly gaseous hydrocarbons.</p>
+      <p id="p-00021-en" num="0021">Incorporation of the emulsions or the microemulsions described herein (e.g., comprising water, a terpene, and a surfactant) into well-treatment fluids (e.g., fracturing fluids) can aid in reducing fluid trapping, for example, by reducing capillary pressure and/or minimizing capillary end effects. In additional, incorporation of the emulsions or the microemulsions described herein into well-treatment fluids can promote increased flow back of aqueous phases following well treatment, and thus, increase production of liquid and/or gaseous hydrocarbons. That is, incorporation of an emulsion or a microemulsion described herein can aid in the displacement of residual aqueous treatment fluid by formation crude oil and/or formation gas. Residual aqueous treatment fluids may include those fluids employed for fracturing, as well as residual aqueous fluids originally present in the well.</p>
+      <p id="p-00022-en" num="0022">In some embodiments, methods of treating an oil or gas well are provided. In some embodiments, the methods comprise injecting an emulsion or a microemulsion into the wellbore of the oil or gas well to stimulate displacement of residual aqueous treatment fluid by formation crude oil or formation gas, and increase production of liquid hydrocarbons by the well.</p>
+      <p id="p-00023-en" num="0023">In some embodiments, methods are provided for selecting a composition for treating an oil or gas well. The inventors have discovered that certain terpenes are more effective at stimulating displacement of residual aqueous treatment fluid by formation crude oil or displacement of residual aqueous treatment fluid by formation gas for the oil or gas well and that the selection of the terpene may be influenced by the ratio of water to terpene in the emulsion or the microemulsion.</p>
+      <p id="p-00024-en" num="0024">In some embodiments, if displacement of residual aqueous treatment fluid by formation crude oil is preferentially stimulated and the emulsion or the microemulsion comprises water to terpene at a ratio between about 3:1 and about 1:2, then the terpene may be selected to have a phase inversion temperature greater than 43° C., as determined by the method described herein. Alternatively, if displacement of residual aqueous treatment fluid by formation gas is preferentially stimulated and the emulsion or the microemulsion comprises water to terpene at a ratio between about 3:1 and about 1:2, then the terpene may be selected to have a phase inversion temperature less than 43° C., as determined by the method described herein In some embodiments, the ratio of water to terpene is between about 3:1 and about 1:1.5, or between about 2:1 and about 1:1.5.</p>
+      <p id="p-00025-en" num="0025">In some embodiments, to stimulate displacement of residual aqueous treatment fluid by formation crude oil, the ratio of water to terpene in the emulsion or the microemulsion may be between about 3:1 and about 1:2, or between about 2:1 and about 1:1.5, and the terpene may be selected to have a phase inversion temperature greater than 43° C., as determined by the method described herein. In some embodiments, to stimulate displacement of residual aqueous treatment fluid by formation crude oil or formation gas and increase production of formation gas the well, the ratio of water to terpene in the emulsion or the microemulsion may be between about 3:1 and about 1:2, or between about 2:1 and about 1:1.5, and the terpene may be selected to have a phase inversion temperature less than 43° C., as determined by the method described herein.</p>
+      <p id="p-00026-en" num="0026">In some embodiments, to stimulate displacement of residual aqueous treatment fluid by formation crude oil, wherein the ratio of water to terpene in the emulsion or the microemulsion is between about 10:1 and about 3:1, the terpene may be selected to have a phase inversion temperature greater than 43° C., as determined by the method described herein. In some embodiments, to stimulate displacement of residual aqueous treatment fluid by formation gas and increase production of formation gas by the well, wherein the ratio of water to terpene in the emulsion or the microemulsion is between about 10:1 and about 3:1, the terpene may be selected to have a phase inversion temperature less than 43° C., as determined by the method described herein. In some embodiments, the ratio of water to terpene is between about 6:1 and about 5:1.</p>
+      <p id="p-00027-en" num="0027">It should understood, that in embodiments where a microemulsion is said to be injected into a wellbore, that the microemulsion may be diluted and/or combined with other liquid component(s) prior to and/or during injection. For example, in some embodiments, the microemulsion is diluted with an aqueous carrier fluid (e.g., water, brine, sea water, fresh water, or a treatment fluid such as a fracturing fluid comprising polymers, sand, etc.) prior to and/or during injection into the wellbore. In some embodiments, a composition for injecting into a wellbore is provided comprising a microemulsion as described herein and an aqueous carrier fluid, wherein the microemulsion is present in an amount between about 0.1 and about 50 gallons per thousand gallons of dilution fluid (“gpt”), or between about 0.5 and about 10 gpt, or between about 0.5 and about 2 gpt. Generally, dilution of a microemulsion does not result in the breakdown of the microemulsion.</p>
+      <p id="p-00028-en" num="0028">In some embodiments, emulsions or microemulsion are provided. The terms should be understood to include emulsions or microemulsions that have a water continuous phase, or that have an oil continuous phase, or microemulsions that are bicontinuous.</p>
+      <p id="p-00029-en" num="0029">As used herein, the term “emulsion” is given its ordinary meaning in the art and refers to dispersions of one immiscible liquid in another, in the form of droplets, with diameters approximately in the range of 100-1,000 nanometers. Emulsions may be thermodynamically unstable and/or require high shear forces to induce their formation.</p>
+      <p id="p-00030-en" num="0030">As used herein, the term “microemulsion” is given its ordinary meaning in the art and refers to dispersions of one immiscible liquid in another, in the form of droplets, with diameters approximately in the range of about 10-100 nanometers. Microemulsions are clear or transparent because they contain particles smaller than the wavelength of visible light. In addition, microemulsions are thermodynamically stable and form spontaneously, and thus, differ markedly from thermodynamically unstable emulsions, which generally depend upon intense mixing energy for their formation. The microemulsion may be single phased. Microemulsions may be characterized by a variety of advantageous properties including, by not limited to, (i) clarity, (ii) very small particle size, (iii) ultra-low interfacial tensions, (iv) the ability to combine properties of water and oil in a single homogeneous fluid, (v) shelf stability, and (vi) ease of preparation.</p>
+      <p id="p-00031-en" num="0031">It should be understood, that while much of the description herein focuses on microemulsions, this is by no means limiting, and emulsions may be employed where appropriate.</p>
+      <p id="p-00032-en" num="0032">In some embodiments, a microemulsion comprises water, a terpene, and a surfactant. In some embodiments, the microemulsion may further comprise addition components, for example, a freezing point depression agent. Details of each of the components of the microemulsions are described in detail herein. In some embodiments, the components of the microemulsions are selected so as to reduce or eliminate the hazards of the microemulsion to the environment and/or the subterranean reservoirs.</p>
+      <p id="p-00033-en" num="0033">In some embodiments, the microemulsion comprises a terpene. The microemulsion may comprise a single terpene or a combination of two or more terpenes. For example, in some embodiments, the terpene comprises a first type of terpene and a second type of terpene. Terpenes may be generally classified as monoterpenes (e.g., having two isoprene units), sesquiterpenes (e.g., having 3 isoprene units), diterpenes, or the like. In some embodiments, the terpene is a monoterpene. Monoterpenes may be further classified as acyclic, monocyclic, and bicyclic [18-20], as well as whether the monoterpene comprises one or more oxygen atoms (e.g., alcohol groups, ester groups, carbonyl groups, etc.). In some embodiments, the terpene comprises an alcohol group. Non-limiting examples of terpenes comprising an alcohol group are linalool, geraniol, nopol, α-terpineol, and menthol. In some embodiments, the terpene comprises an ether-oxygen, for example, eucalyptol, or a carbonyl oxygen, for example, menthone. In some embodiments, the terpene does not comprise an oxygen atom, for example, d-limonene.</p>
+      <p id="p-00034-en" num="0034">Non-limiting examples of terpenes include linalool, geraniol, nopol, α-terpineol, menthol, eucalyptol, menthone, d-limonene, terpinolene, β-occimene, γ-terpinene, α-pinene, and citronellene. In a particular embodiment, the terpene is selected from the group consisting of α-terpeneol, α-pinene, nopol, and eucalyptol. In one embodiment, the terpene is nopol. In another embodiment, the terpene is eucalyptol. In some embodiments, the terpene is not limonene (e.g., d-limonene). In some embodiments, the emulsion is free of limonene</p>
+      <p id="p-00035-en" num="0035">In some embodiments, the terpene may be classified in terms of its phase inversion temperature (“PIT”). The term “phase inversion temperature” is given its ordinary meaning in the art and refers to the temperature where an oil in water microemulsion inverts to a water in oil microemulsion (or vice versa). Those of ordinary skill in the art will be aware of methods for determining the PIT for a microemulsion comprising a terpene (e.g., see Strey, Colloid &amp; Polymer Science, 1994. 272(8): p. 1005-1019; Kahlweit et al., Angewandte Chemie International Edition in English, 1985. 24(8): p. 654-668). The PIT values described herein were determined using a 1:1 ratio of terpene (e.g., one or more terpenes):de-ionized water and varying amounts (e.g., between about 20 wt % and about 60 wt %; generally, between 3 and 9 different amounts are employed) of a 1:1 blend of surfactant comprising linear C<sub>12</sub>-C<sub>15 </sub>alcohol ethoxylates with on average 7 moles of ethylene oxide (e.g., Neodol 25-7):isopropyl alcohol wherein the upper and lower temperature boundaries of the microemulsion region can be determined and a phase diagram may be generated. Those of ordinary skill in the art will recognize that such a phase diagram (e.g., a plot of temperature against surfactant concentration at a constant oil-to-water ratio) may be referred to as “fish” diagram or a Kahlweit plot. The temperature at the vertex is the PIT. An exemplary fish diagram indicating the PIT is shown in <figref>FIG. 1</figref>. PITs for non-limiting examples of terpenes determined using this experimental procedure outlined above are given in Table 1.</p>
+      <p id="p-00036-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Phase inversion temperatures for non-</entry>
+                </row>
+                <row>
+                  <entry>limiting examples of terpenes.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="147pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Terpene</entry>
+                  <entry>Phase Inversion Temperature (° C.)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="147pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Linalool</entry>
+                  <entry>−4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Geraniol</entry>
+                  <entry>−0.5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Nopol</entry>
+                  <entry>2.5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>α-Terpineol</entry>
+                  <entry>4.6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Menthol</entry>
+                  <entry>16</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Eucalyptol</entry>
+                  <entry>31</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Menthone</entry>
+                  <entry>32</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>d-Limonene</entry>
+                  <entry>43</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Terpinolene</entry>
+                  <entry>48</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>β-Occimene</entry>
+                  <entry>49</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>γ-Terpinene</entry>
+                  <entry>49</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>α-Pinene</entry>
+                  <entry>57</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Citronellene</entry>
+                  <entry>58</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00037-en" num="0036">In some embodiments, as described in more detail herein, the terpene has a PIT greater than and/or less than 43° C., as determined by the method described herein. In some embodiments, the terpene has a PIT greater than 43° C., as determined by the method described herein. In some embodiments, the terpene has a PIT less than 43° C., as determined by the method described herein. In some embodiments, the terpene has a PIT greater than 32° C., as determined by the method described herein. In some embodiments, the terpene has a PIT less than 32° C., as determined by the method described herein. In some embodiments, the PIT is between about −10° C. and about 70° C., or between about −4° C. and about 60° C., as determined by the method described herein. In some embodiments, the minimum PIT is −10° C., or −4° C., as determined by the method described herein. In some embodiments, the maximum PIT is 70° C., or 60° C., as determined by the method described herein.</p>
+      <p id="p-00038-en" num="0037">The terpene may be present in the microemulsion in any suitable amount. In some embodiments, terpene is present in an amount between about between about 2 wt % and about 60 wt %, or between about 5 wt % and about 40 wt %, or between about 5 wt % and about 30 wt %, versus the total microemulsion composition.</p>
+      <p id="p-00039-en" num="0038">The water to terpene ratio in a microemulsion may be varied, as described herein. In some embodiments, the ratio of water to terpene, along with other parameters of the terpene (e.g., phase inversion temperature of the terpene) may be varied so that displacement of residual aqueous treatment fluid by formation gas and/or formation crude is preferentially stimulated. In some embodiments, the ratio of water to terpene is between about 3:1 and about 1:2, or between about 2:1 and about 1:1.5. In other embodiments, the ratio of water to terpene is between about 10:1 and about 3:1, or between about 6:1 and about 5:1.</p>
+      <p id="p-00040-en" num="0039">In some embodiments, the microemulsion comprises a surfactant. The microemulsion may comprise a single surfactant or a combination of two or more surfactants. For example, in some embodiments, the surfactant comprises a first type of surfactant and a second type of surfactant. The term “surfactant,” as used herein, is given its ordinary meaning in the art and refers to compounds having an amphiphilic structure which gives them a specific affinity for oil/water-type and water/oil-type interfaces which helps the compounds to reduce the free energy of these interfaces and to stabilize the dispersed phase of a microemulsion. The term surfactant encompasses cationic surfactants, anionic surfactants, amphoteric surfactants, nonionic surfactants, zwitterionic surfactants, and mixtures thereof. In some embodiments, the surfactant is a nonionic surfactant. Nonionic surfactants generally do not contain any charges. Amphoteric surfactants generally have both positive and negative charges, however, the net charge of the surfactant can be positive, negative, or neutral, depending on the pH of the solution. Anionic surfactants generally possess a net negative charge. Cationic surfactants generally possess a net positive charge.</p>
+      <p id="p-00041-en" num="0040">Suitable surfactants for use with the compositions and methods described herein will be known in the art. In some embodiments, the surfactant is an alkyl polyglycol ether, for example, having 2-40 ethylene oxide (EO) units and alkyl groups of 4-20 carbon atoms. In some embodiments, the surfactant is an alkylaryl polyglycol ether having 2-40 EO units and 8-20 carbon atoms in the alkyl and aryl groups. In some embodiments, the surfactant is an ethylene oxide/propylene oxide (EO/PO) block copolymer having 8-40 EO or PO units. In some embodiments, the surfactant is a fatty acid polyglycol ester having 6-24 carbon atoms and 2-40 EO units. In some embodiments, the surfactant is a polyglycol ether of hydroxyl-containing triglycerides (e.g., castor oil). In some embodiments, the surfactant is an alkylpolyglycoside of the general formula R″—O—Z<sub>n</sub>, where R″ denotes a linear or branched, saturated or unsaturated alkyl group having on average 8-24 carbon atoms and Z<sub>n </sub>denotes an oligoglycoside group having on average n=1-10 hexose or pentose units or mixtures thereof. In some embodiments, the surfactant is a fatty ester of glycerol, sorbitol, or pentaerythritol. In some embodiments, the surfactant is an amine oxide (e.g., dodecyldimethylamine oxide). In some embodiments, the surfactant is an alkyl sulfate, for example having a chain length of 8-18 carbon atoms, alkyl ether sulfates having 8-18 carbon atoms in the hydrophobic group and 1-40 ethylene oxide (EO) or propylene oxide (PO) units. In some embodiments, the surfactant is a sulfonate, for example, an alkyl sulfonate having 8-18 carbon atoms, an alkylaryl sulfonate having 8-18 carbon atoms, an ester or half ester of sulfosuccinic acid with monohydric alcohols or alkylphenols having 4-15 carbon atoms. In some cases, the alcohol or alkylphenol can also be ethoxylated with 1-40 EO units. In some embodiments, the surfactant is an alkali metal salt or ammonium salt of a carboxylic acid or poly(alkylene glycol) ether carboxylic acid having 8-20 carbon atoms in the alkyl, aryl, alkaryl or aralkyl group and 1-40 EO or PO units. In some embodiments, the surfactant is a partial phosphoric ester or the corresponding alkali metal salt or ammonium salt, e.g. an alkyl and alkaryl phosphate having 8-20 carbon atoms in the organic group, an alkylether phosphate or alkarylether phosphate having 8-20 carbon atoms in the alkyl or alkaryl group and 1-40 EO units. In some embodiments, the surfactant is a salt of primary, secondary, or tertiary fatty amine having 8-24 carbon atoms with acetic acid, sulfuric acid, hydrochloric acid, and phosphoric acid. In some embodiments, the surfactant is a quaternary alkyl- and alkylbenzylammonium salt, whose alkyl groups have 1-24 carbon atoms (e.g., a halide, sulfate, phosphate, acetate, or hydroxide salt). In some embodiments, the surfactant is an alkylpyridinium, an alkylimidazolinium, or an alkyloxazolinium salt whose alkyl chain has up to 18 carbons atoms (e.g., a halide, sulfate, phosphate, acetate, or hydroxide salt). In some embodiments, the surfactant is amphoteric, including sultaines (e.g., cocamidopropyl hydroxysultaine), betaines (e.g., cocamidopropyl betaine), or phosphates (e.g., lecithin). Non-limiting examples of specific surfactants include a linear C<sub>12</sub>-C<sub>15 </sub>ethoxylated alcohols with 5-12 moles of EO, lauryl alcohol ethoxylate with 4-8 moles of EO, nonyl phenol ethoxylate with 5-9 moles of EO, octyl phenol ethoxylate with 5-9 moles of EO, tridecyl alcohol ethoxylate with 5-9 moles of EO, Pluronic® matrix of EO/PO copolymers, ethoxylated cocoamide with 4-8 moles of EO, ethoxylated coco fatty acid with 7-11 moles of EO, and cocoamidopropyl amine oxide.</p>
+      <p id="p-00042-en" num="0041">Those of ordinary skill in the art will be aware of methods and techniques for selecting surfactant for use in the microemulsions described herein. In some cases, the surfactant(s) are matched to and/or optimized for the particular oil or solvent in use. In some embodiments, the surfactant(s) are selected by mapping the phase behavior of the microemulsion and choosing the surfactant(s) that gives the desired range of stability. In some cases, the stability of the microemulsion over a wide range of temperatures is targeting as the microemulsion may be subject to a wide range of temperatures due to the environmental conditions present at the subterranean formation.</p>
+      <p id="p-00043-en" num="0042">The surfactant may be present in the microemulsion in any suitable amount. In some embodiments, the surfactant is present in an amount between about 10 wt % and about 70 wt %, or between about 15 wt % and about 55 wt % versus the total microemulsion composition, or between about 20 wt % and about 50 wt %, versus the total microemulsion composition.</p>
+      <p id="p-00044-en" num="0043">In some embodiments, the microemulsion comprises a freezing point depression agent. The microemulsion may comprise a single freezing point depression agent or a combination of two or more freezing point depression agent. For example, in some embodiments, the freezing point depression agent comprises a first type of freezing point depression agent and a second type of freezing point depression agent. The term “freezing point depression agent” is given its ordinary meaning in the art and refers to a compound which is added to a solution to reduce the freezing point of the solution. That is, a solution comprising the freezing point depression agent has a lower freezing point as compared to an essentially identical solution not comprising the freezing point depression agent. Those of ordinary skill in the art will be aware of suitable freezing point depression agents for use in the microemulsions described herein. Non-limiting examples of freezing point depression agents include primary, secondary, and tertiary alcohols with between 1 and 20 carbon atoms. In some embodiments, the alcohol comprises at least 2 carbon atoms, alkylene glycols including polyalkylene glycols, and salts. Non-limiting examples of alcohols include methanol, ethanol, i-propanol, n-propanol, t-butanol, n-butanol, n-pentanol, n-hexanol, and 2-ethyl-hexanol. In some embodiments, the freezing point depression agent is not methanol (e.g., due to toxicity). Non-limiting examples of alkylene glycols include ethylene glycol (EG), polyethylene glycol (PEG), propylene glycol (PG), and triethylene glycol (TEG). In some embodiments, the freezing point depression agent is not ethylene oxide (e.g., due to toxicity). Non-limiting examples of salts include salts comprising K, Na, Br, Cr, Cr, Cs, or Bi, for example, halides of these metals, including NaCl, KCl, CaCl<sub>2</sub>, and MgCl. In some embodiments, the freezing point depression agent comprises an alcohol and an alkylene glycol. In some embodiments, the microemulsion comprising the freezing point depression agent is stable over a wide range of temperatures, for example, between about −25° F. to 150° F.</p>
+      <p id="p-00045-en" num="0044">The freezing point depression agent may be present in the microemulsion in any suitable amount. In some embodiments, the freezing point depression agent is present in an amount between about 1 wt % and about 40 wt %, or between about 3 wt % and about 20 wt %, or between about 8 wt % and about 16 wt %, versus the total microemulsion composition.</p>
+      <p id="p-00046-en" num="0045">In some embodiments, the components of the microemulsion and/or the amounts of the components may be selected so that the microemulsion is stable over a wide-range of temperatures. For example, the microemulsion may exhibit stability between about −40° F. and about 300° F., or between about −40° F. and about 150° F. Those of ordinary skill in the art will be aware of methods and techniques for determining the range of stability of the microemulsion. For example, the lower boundary may be determined by the freezing point and the upper boundary may be determined by the cloud point and/or using spectroscopy methods. Stability over a wide range of temperatures may be important in embodiments where the microemulsions are being employed in applications comprising environments wherein the temperature may vary significantly, or may have extreme highs (e.g., desert) or lows (e.g., artic).</p>
+      <p id="p-00047-en" num="0046">The microemulsions described herein may be formed using methods known to those of ordinary skill in the art. In some embodiments, the aqueous and non-aqueous phases may be combined (e.g., the water and the terpene(s)), followed by addition of a surfactant(s) and optionally other components (e.g., freezing point depression agent(s)) and agitation. The strength, type, and length of the agitation may be varied as known in the art depending on various factors including the components of the microemulsion, the quantity of the microemulsion, and the resulting type of microemulsion formed. For example, for small samples, a few seconds of gentle mixing can yield a microemulsion, whereas for larger samples, longer agitation times and/or stronger agitation may be required. Agitation may be provided by any suitable source, for example, a vortex mixer, a stirrer (e.g., magnetic stirrer), etc.</p>
+      <p id="p-00048-en" num="0047">Any suitable method for injecting the microemulsion (e.g., a diluted microemulsion) into a wellbore may be employed. For example, in some embodiments, the microemulsion, optionally diluted, may be injected into a subterranean formation by injecting it into a well or wellbore in the zone of interest of the formation and thereafter pressurizing it into the formation for the selected distance. Methods for achieving the placement of a selected quantity of a mixture in a subterranean formation are known in the art. The well may be treated with the microemulsion for a suitable period of time. The microemulsion and/or other fluids may be removed from the well using known techniques, including producing the well.</p>
+      <p id="p-00049-en" num="0048">In some embodiments, experiments may be carried out to determine displacement of residual aqueous treatment fluid by formation crude oil or formation gas by a microemulsion (e.g., a diluted microemulsion). For example, displacement of residual aqueous treatment fluid by formation crude oil may be determined using the method described in Example 3 and/or displacement of residual aqueous treatment fluid by formation gas may be determined using the method described in Example 2.</p>
+      <p id="p-00050-en" num="0049">These and other aspects of the present invention will be further appreciated upon consideration of the following Examples, which are intended to illustrate certain particular embodiments of the invention but are not intended to limit its scope, as defined by the claims.</p>
+      <heading id="h-00007-en" level="1">EXAMPLES</heading>
+      <heading id="h-00008-en" level="1">Example 1</heading>
+      <p id="p-00051-en" num="0050">A series of laboratory tests were conducted to characterize the effectiveness of a series of microemulsions incorporating a range of terpenes. For these experiments, samples of a base microemulsion were prepared in which a detergent range alcohol ethoxylate surfactant was first blended in a 1:1 ratio with isopropyl alcohol. Suitable detergent range alcohol ethoxylate surfactants include Neodol 25-7 (obtained from Shell Chemical Co.; e.g., a surfactant comprising linear C<sub>12</sub>-C<sub>15 </sub>alcohol ethoxylates with on average 7 moles of ethylene oxide), or comparable linear and branched alcohol ethoxylate surfactants available from SASOL, Huntsman or Stepan. The examples in Table 2 were prepared using Neodol 25-7. 46 parts by weight of this blend was mixed with 27 parts by weight of terpene and 27 parts by weight of water. Although substantial differences in the microemulsion phase behavior of the different terpenes were observed, this composition was chosen because at this composition, the exemplary terpenes that were tested spontaneously formed transparent stable microemulsions with gentle mixing of the ingredients. Subsequently, 1-2 gallons per thousand (gpt) dilutions were prepared and tested.</p>
+      <p id="p-00052-en" num="0051">A transparent low-viscosity mixture that exhibited the characteristic properties of a microemulsion was prepared using 46% by weight of a blend of Neodol 25-7 and isopropyl alcohol, 27% by weight of water, and 27% by weight of technical grade d-limonene. This mixture was identified as a microemulsion based on the spontaneous formation with minimal mechanical energy input to form a clear dispersion from an immiscible mixture of water and d-limonene upon addition of an appropriate amount of surfactant and co-solvent. The order of mixing of this and other compositions described in this example were not necessary, but for convenience, a procedure was generally followed in which a mixture of the surfactant and the isopropyl alcohol was first prepared then combined that with a mixture of the terpene and water. With small samples, in the laboratory, a few seconds of gentle mixing yielded a transparent dispersion.</p>
+      <p id="p-00053-en" num="0052">The non-limiting terpenes used this example were classified by measuring their phase inversion temperature (PIT) using methods described in the literature (e.g., see Strey, Microemulsion microstructure and interfacial curvature. Colloid &amp; Polymer Science, 1994. 272(8): p. 1005-1019; Kahlweit et al., Phase Behavior of Ternary Systems of the Type H<sub>2</sub>O-Oil-Nonionic Amphiphile (Microemulsions). Angewandte Chemie International Edition in English, 1985. 24(8): p. 654-668.). As will be known in the art, the PIT measured for a given oil or solvent depends on the surfactant and aqueous phase in which it is measured. In this example, a 1:1 mixture of terpene solvent and de-ionized water was combined with varying amounts of a 1:1 blend of Neodol 25-7 and IPA and the upper and lower temperature boundaries of the one-phase microemulsion region were determined. A phase diagram such as this, plotting temperature against surfactant concentration at a constant oil-to-water ratio is often called a “fish” diagram or a Kahlweit plot. The phase inversion temperature was determined as the point at the “fish-tail” at which the temperature range of one-phase microemulsion closes to a vertex. In this example, the temperature at the vertex was selected as the PIT. An exemplary fish diagram indicating the PIT is shown in <figref>FIG. 1</figref>. For the terpene solvents used in this example, the PIT values which were measured using this above-described procedure are shown in Table 2. Those terpenes containing alcohol groups (linalool, geraniol, nopol, a-terpineol and menthol), gave PIT values between −4° C. and 16° C. Eucalyptol, containing an ether-oxygen, and menthone, containing a carbonyl oxygen, gave somewhat higher values near 30° C. D-limonene gave 43° C., while other non-oxygen containing terpenes gave values between 48-58° C. As described in more detail below, displacement of residual treatment fluid (containing 1-2 gpt of the microemulsion well treatment) from a sand pack by crude oil or gas was found to correlate to the PIT values.</p>
+      <p id="p-00054-en" num="0053">Table 2 shows results for displacement of residual aqueous treatment fluid by oil and gas for formulations (e.g., using the experimental procedures outlined in Examples 3 and 4) using dilutions of the microemulsions prepared in this example (e.g., the microemulsions comprising 46 parts of 1:1 Neodol 25-7, 27 parts deionized water, and 27 parts terpene solvent). The dilutions were prepared of each microemulsion in 2% KCl, at 2 gpt. The table shows that the terpene solvents with PIT values higher than 43° C. all give approximately 90% recovery, while those below 43° C. give significantly lower recovery. Table 2 also shows displacement by gas results for the dilutions that demonstrates that terpene solvents with PIT values higher than 43° C. give approximately 40% recovery, while those with PIT values below 43° C. give significantly higher recovery.</p>
+      <p id="p-00055-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>PIT values for various terpene solvents (e.g., measured</entry>
+                </row>
+                <row>
+                  <entry>at 1:1 water-oil). Displacement results for 2 gpt dilution</entry>
+                </row>
+                <row>
+                  <entry>of microemulsions comprising 46:27:27 surfactant:water:terpene +</entry>
+                </row>
+                <row>
+                  <entry>isopropanol formulations.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="center" />
+              <colspec colname="3" colwidth="63pt" align="center" />
+              <colspec colname="4" colwidth="63pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Phase Inversion</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Temperature</entry>
+                  <entry>% displacement of</entry>
+                  <entry>% displacement of</entry>
+                </row>
+                <row>
+                  <entry>Terpene</entry>
+                  <entry>(° C.)</entry>
+                  <entry>brine by crude oil</entry>
+                  <entry>brine by gas</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="char" char="." />
+              <colspec colname="3" colwidth="63pt" align="center" />
+              <colspec colname="4" colwidth="63pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Linalool</entry>
+                  <entry>−4</entry>
+                  <entry>—</entry>
+                  <entry>81.9</entry>
+                </row>
+                <row>
+                  <entry>Geraniol</entry>
+                  <entry>−0.5</entry>
+                  <entry>69.3</entry>
+                  <entry>67.8</entry>
+                </row>
+                <row>
+                  <entry>Nopol</entry>
+                  <entry>2.5</entry>
+                  <entry>80.3</entry>
+                  <entry>58.8</entry>
+                </row>
+                <row>
+                  <entry>α-Terpineol</entry>
+                  <entry>4.6</entry>
+                  <entry>80</entry>
+                  <entry>92.9</entry>
+                </row>
+                <row>
+                  <entry>Menthol</entry>
+                  <entry>16</entry>
+                  <entry>49.7</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>Eucalyptol</entry>
+                  <entry>31</entry>
+                  <entry>—</entry>
+                  <entry>54.6</entry>
+                </row>
+                <row>
+                  <entry>Menthone</entry>
+                  <entry>32</entry>
+                  <entry>79.4</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>d-Limonene</entry>
+                  <entry>43</entry>
+                  <entry>89.3</entry>
+                  <entry>45.6</entry>
+                </row>
+                <row>
+                  <entry>Terpinolene</entry>
+                  <entry>48</entry>
+                  <entry>90.5</entry>
+                  <entry>41.8</entry>
+                </row>
+                <row>
+                  <entry>β-Occimene</entry>
+                  <entry>49</entry>
+                  <entry>90.2</entry>
+                  <entry>44.2</entry>
+                </row>
+                <row>
+                  <entry>γ-Terpinene</entry>
+                  <entry>49</entry>
+                  <entry>89</entry>
+                  <entry>32.2</entry>
+                </row>
+                <row>
+                  <entry>α-Pinene</entry>
+                  <entry>57</entry>
+                  <entry>89.9</entry>
+                  <entry>38.7</entry>
+                </row>
+                <row>
+                  <entry>Citronellene</entry>
+                  <entry>58</entry>
+                  <entry>88.2</entry>
+                  <entry>40.5</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00056-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 3</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Oil and Gas displacement results for α-pinene and α-terpineol as</entry>
+                </row>
+                <row>
+                  <entry>a function of surfactant concentration and solvent-to-water ratio.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="left" />
+              <colspec colname="3" colwidth="63pt" align="center" />
+              <colspec colname="4" colwidth="63pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Formulation</entry>
+                  <entry />
+                  <entry>% displacement of</entry>
+                  <entry>% displacement of</entry>
+                </row>
+                <row>
+                  <entry>T/S/W*</entry>
+                  <entry>Terpene</entry>
+                  <entry>brine by crude oil</entry>
+                  <entry>brine by gas</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="left" />
+              <colspec colname="3" colwidth="63pt" align="char" char="." />
+              <colspec colname="4" colwidth="63pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>27-46-27</entry>
+                  <entry>α-terpineol</entry>
+                  <entry>80</entry>
+                  <entry>92.9</entry>
+                </row>
+                <row>
+                  <entry>27-46-27</entry>
+                  <entry>α-pinene</entry>
+                  <entry>89.9</entry>
+                  <entry>38.7</entry>
+                </row>
+                <row>
+                  <entry>21-46-33</entry>
+                  <entry>α-terpineol</entry>
+                  <entry>88</entry>
+                  <entry>83</entry>
+                </row>
+                <row>
+                  <entry>21-46-33</entry>
+                  <entry>α-pinene</entry>
+                  <entry>87</entry>
+                  <entry>46</entry>
+                </row>
+                <row>
+                  <entry>11-46-43</entry>
+                  <entry>α-terpineol</entry>
+                  <entry>88.5</entry>
+                  <entry>80</entry>
+                </row>
+                <row>
+                  <entry>11-46-43</entry>
+                  <entry>α-pinene</entry>
+                  <entry>96</entry>
+                  <entry>47</entry>
+                </row>
+                <row>
+                  <entry>15-56-28</entry>
+                  <entry>α-terpineol</entry>
+                  <entry>87.8</entry>
+                  <entry>85</entry>
+                </row>
+                <row>
+                  <entry>15-56-28</entry>
+                  <entry>α-pinene</entry>
+                  <entry>88.6</entry>
+                  <entry>52</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="left" id="entry-00001-en">*T/S/W stands for terpene weight %/1:1 surfactant-IPA weight %/deionized water wt %</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00057-en" num="0054">The results shown in Table 3 demonstrate that at a 1:1 ratio of terpene to water, and 46 weight % surfactant-IPA, the high PIT α-pinene performed better on oil displacement and much poorer on gas displacement than the low PIT α-terpineol. As the terpene-to-water ratio decreases from 27-27 to 21-33 to 11-43, the difference in oil displacement performance decreased, then increased again at the lower level. Higher surfactant levels did not substantially increase or decrease the displacement (which may suggest that the microemulsion is performing differently than a surfactant package lacking the terpene solvent). The displacement by gas was better for the low PIT α-terpineol than for the high PIT α-pinene.</p>
+      <heading id="h-00009-en" level="1">Example 2</heading>
+      <p id="p-00058-en" num="0055">Microemulsions were prepared having the following formulation, wherein the terpene was varied as indicated in Table 4. The water to terpene ratio was about 5.5:1.</p>
+      <heading id="h-00010-en" level="2">Microemulsion Formulation:</heading>
+      <p id="p-00059-en" num="0056" />
+      <p id="p-00060-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="28pt" align="left" />
+              <colspec colname="1" colwidth="91pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="right" />
+              <colspec colname="3" colwidth="49pt" align="left" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Water</entry>
+                  <entry>27.35</entry>
+                  <entry>wt %</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ethoxylated alcohol surfactant</entry>
+                  <entry>52.5</entry>
+                  <entry>wt %</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>2-propanol</entry>
+                  <entry>8.75</entry>
+                  <entry>wt %</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Triethylene Glycol</entry>
+                  <entry>3</entry>
+                  <entry>wt %</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Propylene Glycol</entry>
+                  <entry>3.3</entry>
+                  <entry>wt %</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ethoxylated castor oil</entry>
+                  <entry>0.1</entry>
+                  <entry>wt %</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Terpene</entry>
+                  <entry>5</entry>
+                  <entry>wt %</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00061-en" num="0057">1 gallon per thousand dilutions were prepared of each microemulsion in 2% KCl. The dilutions were then employed to determine the displacement of brine by oil and gas (e.g., using the experimental procedures outlined in Examples 3 and 4). The results are given in Table 4.</p>
+      <p id="p-00062-en" num="0000">
+        <tables id="tables-00005-en" num="00005">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 4</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Brine displacement by oil and gas</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="84pt" align="center" />
+              <colspec colname="3" colwidth="84pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Effectiveness of brine</entry>
+                  <entry>Effectiveness of brine</entry>
+                </row>
+                <row>
+                  <entry>Terpene</entry>
+                  <entry>displacement by gas (%)</entry>
+                  <entry>displacement by oil (%)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>d-limonene</entry>
+                  <entry>79</entry>
+                  <entry>64</entry>
+                </row>
+                <row>
+                  <entry>α-terpineol</entry>
+                  <entry>90</entry>
+                  <entry>88</entry>
+                </row>
+                <row>
+                  <entry>α-pinene</entry>
+                  <entry>86</entry>
+                  <entry>87</entry>
+                </row>
+                <row>
+                  <entry>geraniol</entry>
+                  <entry>87</entry>
+                  <entry>89</entry>
+                </row>
+                <row>
+                  <entry>linalool</entry>
+                  <entry>88</entry>
+                  <entry>87</entry>
+                </row>
+                <row>
+                  <entry>nopol</entry>
+                  <entry>89</entry>
+                  <entry>88</entry>
+                </row>
+                <row>
+                  <entry>turpentine</entry>
+                  <entry>83</entry>
+                  <entry>76</entry>
+                </row>
+                <row>
+                  <entry>menthol</entry>
+                  <entry>82</entry>
+                  <entry>90</entry>
+                </row>
+                <row>
+                  <entry>eucalyptol</entry>
+                  <entry>77</entry>
+                  <entry>90</entry>
+                </row>
+                <row>
+                  <entry>terpinolene</entry>
+                  <entry>79</entry>
+                  <entry>72</entry>
+                </row>
+                <row>
+                  <entry>β-ocimene</entry>
+                  <entry>71</entry>
+                  <entry>68</entry>
+                </row>
+                <row>
+                  <entry>λ-terpinene</entry>
+                  <entry>74</entry>
+                  <entry>60</entry>
+                </row>
+                <row>
+                  <entry>citronellene</entry>
+                  <entry>73</entry>
+                  <entry>88</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00011-en" level="1">Example 3</heading>
+      <p id="p-00063-en" num="0058">This example described a non-limiting experiment for determining displacement of residual aqueous treatment fluid by formation crude oil. A 25 cm long, 2.5 cm diameter capped glass chromatography column was packed with 77 grams of 100 mesh sand. The column was left open on one end and a PTFE insert containing a recessed bottom, 3.2 mm diameter outlet, and nipple was placed into the other end. Prior to placing the insert into the column, a 3 cm diameter filter paper disc (Whatman, #40) was pressed firmly into the recessed bottom of the insert to prevent leakage of 100 mesh sand. A 2″ piece of vinyl tubing was placed onto the nipple of the insert and a clamp was fixed in place on the tubing prior to packing. The columns were gravity-packed by pouring approximately 25 grams of the diluted microemulsions (e.g., the microemulsions described in Examples 1 or 2, and diluted with 2% KCl, e.g., to about 2 gpt, or about 1 gpt) into the column followed by a slow, continuous addition of sand. After the last portion of sand had been added and was allowed to settle, the excess of brine was removed from the column so that the level of liquid exactly matched the level of sand. Pore volume in the packed column was calculated as the difference in mass of fluid prior to column packing and after the column had been packed. Three additional pore volumes of brine were passed through the column. After the last pore volume was passed, the level of brine was adjusted exactly to the level of sand bed. Light condensate oil was then added on the top of sand bed to form the 5 cm oil column above the bed. Additional oil was placed into a separatory funnel with a side arm open to an atmosphere. Once the setup was assembled, the clamp was released from the tubing, and timer was started. Throughout the experiment the level of oil was monitored and kept constant at a 5 cm mark above the bed. Oil was added from the separatory funnel as necessary, to ensure this constant level of head in the column. Portions of effluent coming from the column were collected into plastic beakers over a measured time intervals. The amount of fluid was monitored. When both brine and oil were produced from the column, they were separated with a syringe and weighed separately. The experiment was conducted for 3 hours at which the steady-state conditions were typically reached. The cumulative % or aqueous fluid displaced from the column over 120 minute time period, and the steady-state mass flow rate of oil at t=120 min through the column were determined.</p>
+      <heading id="h-00012-en" level="1">Example 4</heading>
+      <p id="p-00064-en" num="0059">This example described a non-limiting experiment for determining displacement of residual aqueous treatment fluid by formation gas. A 51 cm long, 2.5 cm inner-diameter capped glass chromatography column was filled with approximately 410±20 g of 20/40 mesh Ottawa sand and the diluted microemulsions (e.g., the microemulsions described in Examples 1 or 2, and diluted with 2% KCl, e.g., to about 2 gpt, or about 1 gpt) To ensure uniform packing, small amounts of proppant were interchanged with small volumes of liquid. Periodically the mixture in the column was homogenized with the help of an electrical hand massager, in order to remove possible air pockets. Sand and brine were added to completely fill the column to the level of the upper cap. The exact amounts of fluid and sand placed in the column were determined in each experiment. The column was oriented vertically and was connected at the bottom to a nitrogen cylinder via a gas flow controller pre-set at a flow rate of 60 cm<sup>3</sup>/min. The valve at the bottom was slowly opened and liquid exiting the column at the top was collected into a tarred jar placed on a balance. Mass of collected fluid was recorded as a function of time by a computer running a data logging software. The experiments were conducted until no more brine could be displaced from the column. The total % of fluid recovered was then calculated.</p>
+      <heading id="h-00013-en" level="1">Example 5</heading>
+      <p id="p-00065-en" num="0060">This examples describes a general preparation method for the production of diluted microemulsion. The microemulsions were prepared in the laboratory by mixing the ingredients listed in specific examples. All ingredients are commercially available materials. In some embodiments, the components were mixed together in the order water-alcohol-surfactant-citrus terpene solvent, but other order of addition may also be employed. The mixtures were then agitated on a magnetic stirrer for 5-10 minutes. The microemulsions were then diluted to concentrations of 1 or 2 gallons per 1000 gallons with 2% KCl brine and these diluted fluids were used in displacement experiments described in Examples 3 and 4.</p>
+      <p id="p-00066-en" num="0061">It will be evident to one skilled in the art that the present disclosure is not limited to the foregoing illustrative examples, and that it can be embodied in other specific forms without departing from the essential attributes thereof. It is therefore desired that the examples be considered in all respects as illustrative and not restrictive, reference being made to the appended claims, rather than to the foregoing examples, and all changes which come within the meaning and range of equivalency of the claims are therefore intended to be embraced therein.</p>
+      <p id="p-00067-en" num="0062">While several embodiments of the present invention have been described and illustrated herein, those of ordinary skill in the art will readily envision a variety of other means and/or structures for performing the functions and/or obtaining the results and/or one or more of the advantages described herein, and each of such variations and/or modifications is deemed to be within the scope of the present invention. More generally, those skilled in the art will readily appreciate that all parameters, dimensions, materials, and configurations described herein are meant to be exemplary and that the actual parameters, dimensions, materials, and/or configurations will depend upon the specific application or applications for which the teachings of the present invention is/are used. Those skilled in the art will recognize, or be able to ascertain using no more than routine experimentation, many equivalents to the specific embodiments of the invention described herein. It is, therefore, to be understood that the foregoing embodiments are presented by way of example only and that, within the scope of the appended claims and equivalents thereto, the invention may be practiced otherwise than as specifically described and claimed. The present invention is directed to each individual feature, system, article, material, kit, and/or method described herein. In addition, any combination of two or more such features, systems, articles, materials, kits, and/or methods, if such features, systems, articles, materials, kits, and/or methods are not mutually inconsistent, is included within the scope of the present invention.</p>
+      <p id="p-00068-en" num="0063">The indefinite articles “a” and “an,” as used herein in the specification and in the claims, unless clearly indicated to the contrary, should be understood to mean “at least one.”</p>
+      <p id="p-00069-en" num="0064">The phrase “and/or,” as used herein in the specification and in the claims, should be understood to mean “either or both” of the elements so conjoined, i.e., elements that are conjunctively present in some cases and disjunctively present in other cases. Other elements may optionally be present other than the elements specifically identified by the “and/or” clause, whether related or unrelated to those elements specifically identified unless clearly indicated to the contrary. Thus, as a non-limiting example, a reference to “A and/or B,” when used in conjunction with open-ended language such as “comprising” can refer, in one embodiment, to A without B (optionally including elements other than B); in another embodiment, to B without A (optionally including elements other than A); in yet another embodiment, to both A and B (optionally including other elements); etc.</p>
+      <p id="p-00070-en" num="0065">As used herein in the specification and in the claims, “or” should be understood to have the same meaning as “and/or” as defined above. For example, when separating items in a list, “or” or “and/or” shall be interpreted as being inclusive, i.e., the inclusion of at least one, but also including more than one, of a number or list of elements, and, optionally, additional unlisted items. Only terms clearly indicated to the contrary, such as “only one of” or “exactly one of,” or, when used in the claims, “consisting of,” will refer to the inclusion of exactly one element or a list of elements. In general, the term “or” as used herein shall only be interpreted as indicating exclusive alternatives (i.e. “one or the other but not both”) when preceded by terms of exclusivity, such as “either,” “one of,” “only one of,” or “exactly one of.” “Consisting essentially of,” when used in the claims, shall have its ordinary meaning as used in the field of patent law.</p>
+      <p id="p-00071-en" num="0066">As used herein in the specification and in the claims, the phrase “at least one,” in reference to a list of one or more elements, should be understood to mean at least one element selected from any one or more of the elements in the list of elements, but not necessarily including at least one of each and every element specifically listed within the list of elements and not excluding any combinations of elements in the list of elements. This definition also allows that elements may optionally be present other than the elements specifically identified within the list of elements to which the phrase “at least one” refers, whether related or unrelated to those elements specifically identified. Thus, as a non-limiting example, “at least one of A and B” (or, equivalently, “at least one of A or B,” or, equivalently “at least one of A and/or B”) can refer, in one embodiment, to at least one, optionally including more than one, A, with no B present (and optionally including elements other than B); in another embodiment, to at least one, optionally including more than one, B, with no A present (and optionally including elements other than A); in yet another embodiment, to at least one, optionally including more than one, A, and at least one, optionally including more than one, B (and optionally including other elements); etc.</p>
+      <p id="p-00072-en" num="0067">In the claims, as well as in the specification above, all transitional phrases such as “comprising,” “including,” “carrying,” “having,” “containing,” “involving,” “holding,” and the like are to be understood to be open-ended, i.e., to mean including but not limited to. Only the transitional phrases “consisting of” and “consisting essentially of” shall be closed or semi-closed transitional phrases, respectively, as set forth in the United States Patent Office Manual of Patent Examining Procedures, Section 2111.03.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. An emulsion or a microemulsion for stimulating an oil or gas well, comprising:
+<claim-text>an aqueous phase;</claim-text><claim-text>a surfactant;</claim-text><claim-text>a freezing point depression agent; and</claim-text><claim-text>a non-aqueous phase comprising a first type of terpene and a second type of terpene, wherein the first type of terpene is nopol and the second type of terpene is d-limonene.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en" independent="true">
+      <claim-text>
+        <b>2</b>. An emulsion or a microemulsion for stimulating an oil or gas well, comprising:
+<claim-text>an aqueous phase;</claim-text><claim-text>a surfactant;</claim-text><claim-text>a freezing point depression agent; and</claim-text><claim-text>an oil continuous phase being the first type of terpene and the second type of terpene.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The emulsion or the microemulsion of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the ratio of water to the total amount of terpene is between about 3:1 and about 1:2.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The emulsion or the microemulsion of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the ratio of water to the total amount of terpene is between about 10:1 and about 3:1.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The emulsion or the microemulsion of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the emulsion or the microemulsion comprises a first type of freezing point depression agent and a second type of freezing point depression agent.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The emulsion or the microemulsion of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the freezing point depression agent comprises an alkylene glycol, an alcohol, and/or a salt.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The emulsion or the microemulsion of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the freezing point depression agent is present in an amount between about 5 wt % and about 40 wt %.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The emulsion or the microemulsion of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the emulsion or the microemulsion comprises a first type of surfactant and a second type of surfactant.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The emulsion or the microemulsion of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the surfactant is selected from the group consisting of alkyl polyglycol or alkyl polyglucoside nonionic surfactants, or mixtures of said nonionic surfactants with an ionic surfactant comprising anionic, cationic, or zwitterionic surfactants.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The emulsion or the microemulsion of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the surfactant is present in an amount between about 15 wt % and 55 wt %.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. A composition for injecting into a wellbore, comprising:
+<claim-text>an aqueous carrier fluid; and</claim-text><claim-text>the emulsion or a microemulsion as in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the emulsion or the microemulsion is present in an amount between about 0.1 wt % and about 2 wt % versus the total composition.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. A composition for injecting into a wellbore, comprising:
+<claim-text>an aqueous carrier fluid; and</claim-text><claim-text>the emulsion or a microemulsion as in <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the emulsion or the microemulsion is present in an amount between about 0.1 wt % and about 2 wt % versus the total composition. </claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150252249A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252249A1-20150910-D00001.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150252249A1.PDF" type="pdf" size="562903" pages="11" />
+</lexisnexis-patent-document>

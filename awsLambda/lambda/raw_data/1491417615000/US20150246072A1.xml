@@ -1,0 +1,1183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150246072A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021308" date-changed="20151214" time-changed="185315">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121139180">
+        <country>US</country>
+        <doc-number>20150246072</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14425523</doc-number>
+        <date>20130903</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>A61K  35/12        20150101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20150101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>35</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>A61K  35/12        20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>35</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61L  27/18        20130101 LI20140815BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>L</subclass>
+        <main-group>27</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140815</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61L  27/3633      20130101 LI20140815BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>L</subclass>
+        <main-group>27</main-group>
+        <subgroup>3633</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140815</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61L  27/38        20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>L</subclass>
+        <main-group>27</main-group>
+        <subgroup>38</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61L  27/56        20130101 LI20140815BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>L</subclass>
+        <main-group>27</main-group>
+        <subgroup>56</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140815</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <combination-set>
+        <group-number>1</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>A61L  27/18        20130101 LI20140815BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>61</class>
+            <subclass>L</subclass>
+            <main-group>27</main-group>
+            <subgroup>18</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20140815</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C08L  67/04        20130101 LI20140815BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>67</main-group>
+            <subgroup>04</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20140815</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">133</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">METHODS OF TISSUE GENERATION</invention-title>
+    <related-documents date-changed="20150903">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61696487</doc-number>
+          <date>20120904</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>ANTHROGENESIS CORPORATION</orgname>
+            <role>02</role>
+            <address>
+              <city>Warren</city>
+              <state>NJ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Bhatia</last-name>
+            <first-name>Mohit B.</first-name>
+            <address>
+              <city>Manalapan</city>
+              <state>NJ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Hariri</last-name>
+            <first-name>Robert J.</first-name>
+            <address>
+              <city>Bernardsville</city>
+              <state>NJ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Hofgartner</last-name>
+            <first-name>Wolfgang</first-name>
+            <address>
+              <city>Florham Park</city>
+              <state>NJ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Wang</last-name>
+            <first-name>Jia-Lun</first-name>
+            <address>
+              <city>Kendall Park</city>
+              <state>NJ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Ye</last-name>
+            <first-name>Qian</first-name>
+            <address>
+              <city>Livingston</city>
+              <state>NJ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>US13057806</doc-number>
+        <date>20130903</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014039429</doc-number>
+        <date>20140313</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173462008">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246072</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130903</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173462007">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246072</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130903</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Provided herein are methods for forming three-dimensional tissues in vivo. In one embodiment, provided herein is a method for forming a three-dimensional tissue in vivo, comprising depositing on a surface that is in or on a subject at least one composition that comprises cells. In another embodiment, provided herein is a method for forming a three-dimensional tissue in vivo, comprising depositing on a surface that is in or on a subject at least one composition that comprises cells and at least one composition that comprises an extracellular matrix (ECM). In another embodiment, provided herein is a method for forming a three-dimensional tissue in vivo, comprising depositing on a surface that is in or on a subject at least one composition that comprises cells, at least one composition that comprises an extracellular matrix (ECM), and at least one other additional components.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <p id="p-00001-en" num="0001">This application claims priority to U.S. provisional patent application No. 61/696,487, filed Sep. 4, 2012, the disclosure of which is herein incorporated by reference in its entirety.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00001-en" level="1">1. INTRODUCTION</heading>
+      <p id="p-00002-en" num="0002">Provided herein are methods of generating three-dimensional tissues in vivo comprising the deposition and/or administration of cells and extracellular matrix components to a subject.</p>
+      <heading id="h-00002-en" level="1">2. BACKGROUND</heading>
+      <p id="p-00003-en" num="0003">Bioprinting (e.g., organ printing) is an area of research and engineering that involves printing devices, such as modified ink-jet printers, that deposit biological materials. The technology involves the rapid creation and release of liquid droplets comprising cells followed by their precise deposition on a substrate. Tissues and organs engineered using basic cellular materials by means of bioprinting represent a promising alternative to donor-derived tissues and organs used today in standard transplantation approaches.</p>
+      <heading id="h-00003-en" level="1">3. SUMMARY</heading>
+      <p id="p-00004-en" num="0004">Provided herein are methods for forming three-dimensional tissues in vivo. In one embodiment, provided herein is a method for forming a three-dimensional tissue in vivo, comprising depositing on a surface that is in or on a subject at least one composition that comprises cells. In another embodiment, provided herein is a method for forming a three-dimensional tissue in vivo, comprising depositing on a surface that is in or on a subject at least one composition that comprises cells and at least one composition that comprises an extracellular matrix (ECM). In another embodiment, provided herein is a method for forming a three-dimensional tissue in vivo, comprising depositing on a surface that is in or on a subject at least one composition that comprises cells, at least one composition that comprises an extracellular matrix (ECM), and at least one other additional components. Cells that may be used in accordance with the methods described herein are described in Section 4.1.1, below. Tissues and Organs onto which cells, ECM, and/or other additional components can be deposited in accordance with the methods described herein are described in Section 4.1.2, below. ECM that may be used in accordance with the methods described herein is described in Section 4.1.3, below. Surfaces onto which cells, ECM, and/or additional components may be deposited in accordance with the methods described herein are described in Section 4.1.4, below.</p>
+      <p id="p-00005-en" num="0005">In one embodiment, the cells and ECM used in the methods for forming three-dimensional tissues in vivo described herein are deposited as part of the same composition. In another embodiment, the cells and ECM used in the methods for forming three-dimensional tissues in vivo described herein are deposited as part of different compositions. In a specific embodiment, the ECM used in the methods for forming three-dimensional tissues in vivo described herein comprises flowable ECM. In another specific embodiment, the cells and ECM used in the methods for forming three-dimensional tissues in vivo described herein are deposited as part of different compositions, for example, wherein the ECM is deposited separate from, e.g., before, the deposition of the cells, and/or wherein the ECM is dehydrated prior to the deposition of the cells. In embodiments where the ECM is dehydrated, it may later be rehydrated at a desired time, e.g., at the time cells are deposited onto the surface that the ECM and cells have been deposited on.</p>
+      <p id="p-00006-en" num="0006">In certain embodiments, the cells and/or ECM used in the methods for forming three-dimensional tissues in vivo described herein are deposited onto a surface in or on a subject concurrently, before, or after deposition of one or more additional components, e.g., a growth factor(s), a cross-linker(s), a polymerizable monomer(s), a polymer, a hydrogel(s), etc. In certain embodiments, the one or more additional components are bioprinted onto said surface in accordance with the methods described herein.</p>
+      <p id="p-00007-en" num="0007">In certain embodiments, the cells and/or ECM used in the methods for forming three-dimensional tissues in vivo described herein are deposited onto a surface in or on a subject concurrently, before, or after deposition of a biomolecule, wherein said biomolecule comprises a type of collagen, a type of fibronectin, a type of laminin, or a tissue adhesive. In certain embodiments, the biomolecule(s) is bioprinted onto said surface in accordance with the methods described herein.</p>
+      <p id="p-00008-en" num="0008">In certain embodiments, the cells and/or ECM used in accordance with the methods described herein are not bioprinted onto a surface in or on a subject, e.g., the cells and ECM are not bioprinted but, rather, are applied to said surface by a method that does not comprise bioprinting. In certain embodiments, the cells and/or ECM that are not bioprinted onto a surface in or on a subject are applied to a surface that has been bioprinted, e.g., the cells and/or flowable ECM are applied to a scaffold, e.g., a synthetic scaffold, such as a synthetic matrix, that has been bioprinted in or on the subject. In a specific embodiment, the cells and/or ECM are applied to only part, e.g., one side, of the scaffold (e.g., the surface). In another specific embodiment, the cells and/or ECM are applied to all sides of the scaffold, i.e., the entire scaffold has cells and/or ECM applied to it. In another specific embodiment, the scaffold is polycaprolactone (PCL).</p>
+      <p id="p-00009-en" num="0009">In certain embodiments, the cells and/or flowable ECM (as well as additional components) used in the methods for forming three-dimensional tissues in vivo described herein are printed onto said surface, e.g., the cells and ECM are bioprinted (e.g., with an inkjet printer). In certain embodiments, the cells and flowable ECM (as well as additional components) used in the methods for forming three-dimensional tissues in vivo described herein are sprayed onto said surface. In certain embodiments, the cells and/or flowable ECM (as well as additional components) used in the methods for forming three-dimensional tissues in vivo described herein are deposited onto said surface via aerosolization.</p>
+      <p id="p-00010-en" num="0010">In certain embodiments, the surface onto which cells, ECM, and/or additional components may be deposited comprises an artificial surface, i.e., a surface that has been man-made. In another specific embodiment, the surface onto which cells, ECM, and/or additional components may be deposited comprises tissue or an organ (or portion thereof) of a subject (e.g., a human subject). In certain embodiments, the surface of said tissue or organ may be decellularized, e.g., treated so as to remove cells from all or part of the surface of the tissue or organ. In a specific embodiment, the surface onto which cells, ECM, and/or additional components may be deposited in accordance with the methods described herein is a surface that has been bioprinted, e.g., bioprinted in accordance with the methods described herein. In a specific embodiment, the surface is polycaprolactone (PCL).</p>
+      <p id="p-00011-en" num="0011">In specific embodiments, the methods described herein are used for therapeutic purposes, e.g., the methods are used to deposit cells corresponding to a specific tissue type, or cells corresponding to multiple tissue types, onto a surface (i.e., a tissue or organ) of said subject that will benefit from the deposition of said cells. Such methods may additionally comprise the deposition of ECM (e.g., a flowable ECM) and/or additional components onto said surface of said subject.</p>
+      <p id="p-00012-en" num="0012">In another aspect, provided herein are compositions comprising cells and ECM (e.g., a flowable ECM), wherein said compositions are suitable for use in the methods described herein. Also provided herein are kits comprising, in one or more containers, said compositions, as well as instructions for using said compositions in accordance with one or more of the methods described herein.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">3.1 BRIEF DESCRIPTION OF DRAWINGS</heading>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 1</figref> depicts scaffolds comprising polycaprolactone (PCL) that were bioprinted at various angles and in such a way that scaffolds of various pore sizes were generated.</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 2</figref> depicts multiple view of bioprinted scaffolds onto which extracellular matrix (ECM) has been applied to both sides of the scaffold and subsequently dehydrated.</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 3</figref> depicts the results of a cell proliferation assay. Placental stem cells cultured on a hybrid scaffold comprising bioprinted PCL and dehydrated ECM proliferate over an 8-day culture period.</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 4</figref> depicts the results of a cell viability assay. Placental stem cells cultured on a hybrid scaffold comprising bioprinted PCL and dehydrated ECM proliferated and remained viable over an 8-day culture period.</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 5</figref> depicts an intact three-dimensional hybrid scaffold comprising PCL, ECM, and placental stem cells, each of which were bioprinted as layers (layers of PCL and layers of ECM/cells).</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 6</figref> demonstrates that placental stem cells distribute throughout three-dimensional bioprinted scaffolds over a 7-day culture period.</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 7</figref> depicts the results of a cell viability assay. Placental stem cells bioprinted with ECM and PCL to form a three-dimensional hybrid scaffold proliferate and remain viable over a 7-day culture period.</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 8</figref> demonstrates that stem cells bioprinted with ECM and PCL to form a three-dimensional hybrid scaffold spread throughout the ECM in the hybrid scaffolds over a 7-day culture period.</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 9</figref> depicts the results of a cell proliferation assay. Placental stem cells cultured in a three-dimensional hybrid scaffold that was generated by bioprinting PCL, ECM, and placental stem cells proliferate over a 7-day culture period.</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 10</figref> depicts a bioprinted scaffold comprising PCL, placental ECM, and insulin-producing cells (β-TC-6 cells).</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 11</figref> depicts the results of a cell proliferation assay. Numbers of insulin-producing cells (β-TC-6 cells) in a bioprinted scaffold comprising PCL, placental ECM, and insulin-producing cells remained steady over a 14-day culture period.</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 12</figref> depicts levels of insulin production from bioprinted scaffolds comprising PCL, placental ECM, and insulin-producing cells (β-TC-6 cells).</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 13</figref> depicts levels of insulin production from bioprinted scaffolds comprising PCL, placental ECM, and insulin-producing cells (β-TC-6 cells) following exposure to glucose challenge (A) or under control conditions (B, C).</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">4. DETAILED DESCRIPTION</heading>
+      <p id="p-00026-en" num="0026">Provided herein are methods for forming three-dimensional tissues in vivo. In one embodiment, provided herein is a method for forming a three-dimensional tissue in vivo, comprising depositing on a surface that is in or on a subject at least one composition that comprises cells. In another embodiment, provided herein is a method for forming a three-dimensional tissue in vivo, comprising depositing on a surface that is in or on a subject at least one composition that comprises cells and at least one composition that comprises an extracellular matrix (ECM). In another embodiment, provided herein is a method for forming a three-dimensional tissue in vivo, comprising depositing on a surface that is in or on a subject at least one composition that comprises cells, at least one composition that comprises an extracellular matrix (ECM), and at least one other additional components. Cells that may be used in accordance with the methods described herein are described in Section 4.1.1, below. Tissues and Organs onto which cells, ECM, and/or other additional components can be deposited in accordance with the methods described herein are described in Section 4.1.2, below. ECM that may be used in accordance with the methods described herein is described in Section 4.1.3, below. Surfaces onto which cells, ECM, and/or additional components may be deposited in accordance with the methods described herein are described in Section 4.1.4, below.</p>
+      <p id="p-00027-en" num="0027">In one embodiment, provided herein is a method for forming a three-dimensional tissue in vivo, comprising depositing on a surface that is in or on a subject at least one composition that comprises cells. In a specific embodiment, said cells are deposited using a bioprinter. In another specific embodiment, said cells comprise a single type of cell. In another specific embodiment, said cells comprise more than one type of cell.</p>
+      <p id="p-00028-en" num="0028">In another embodiment, provided herein is a method for forming a three-dimensional tissue in vivo, comprising depositing on a surface that is in or on a subject at least one composition that comprises cells and at least one composition that comprises an extracellular matrix (ECM), wherein said ECM comprises flowable ECM. In a specific embodiment, said cells and said ECM are deposited using a bioprinter. In another specific embodiment, said cells comprise a single type of cell. In another specific embodiment, said cells comprise more than one type of cell.</p>
+      <p id="p-00029-en" num="0029">In another embodiment, provided herein is a method for forming a three-dimensional tissue in vivo, comprising depositing on a surface that is in or on a subject at a composition that comprises cells and extracellular matrix (ECM), wherein said ECM comprises flowable ECM. In a specific embodiment, said cells and said ECM are deposited using a bioprinter. In another specific embodiment, said cells comprise a single type of cell. In another specific embodiment, said cells comprise more than one type of cell.</p>
+      <p id="p-00030-en" num="0030">In another embodiment, provided herein is a method for forming a three-dimensional tissue in vivo, comprising depositing on a surface that is in or on a subject cells, extracellular matrix (ECM), and at least one additional component. In a specific embodiment, said cells, said ECM, and said one or more additional components are deposited using a bioprinter. In another specific embodiment, said cells comprise a single type of cell. In another specific embodiment, said cells comprise more than one type of cell. In another specific embodiment, said cells, said ECM, and said one or more additional components are formulated as part of the same composition. In another specific embodiment, said cells, said ECM, and said one or more additional components are formulated as part separate compositions. In another specific embodiment, said one or more additional components is a growth factor, a polymerizable monomer, a cross-linker, a polymer, or a hydrogel.</p>
+      <p id="p-00031-en" num="0031">In certain embodiments, the surface in or on a subject onto which cells, ECM, and/or additional components may be deposited in accordance with the methods described herein comprises an artificial surface, i.e., a surface that has been man-made (e.g., a prosthetic). In another specific embodiment, the surface in or on a subject onto which cells, ECM, and/or additional components may be deposited in accordance with the methods described herein comprises tissue or an organ (or portion thereof) in a subject (e.g., a human subject). In certain embodiments, the surface of said tissue or organ in a subject may be decellularized, e.g., treated so as to remove cells from all or part of the surface of the tissue or organ. In a specific embodiment, the surface onto which cells, ECM, and/or additional components may be deposited in accordance with the methods described herein is a surface that has been bioprinted, e.g., bioprinted in accordance with the methods described herein. In a specific embodiment, the surface comprises a synthetic material, e.g., a synthetic polymer. In another specific embodiment, the synthetic polymer is PCL.</p>
+      <p id="p-00032-en" num="0032">In certain embodiments, the cells and ECM (e.g., a flowable ECM) are not deposited concurrently, but are deposited in layers. In a specific embodiment, a layer of cells is deposited on a surface in or on a subject, followed by the deposition of a layer of ECM on the surface in or on the subject. In another specific embodiment, a layer of ECM is deposited on a surface in or on a subject, followed by the deposition of a layer of cells on the surface in or on the subject. In certain embodiments, multiple layers of ECM can be deposited on a surface in or on a subject followed by the deposition of multiple layers of cells on the surface in or on the subject, and vice versa. Likewise, additional components that are deposited concurrently with, before, or after the deposition of cells and/or ECM may be layered among cells and ECM in accordance with the methods described herein.</p>
+      <p id="p-00033-en" num="0033">In certain embodiments, the cells and ECM (e.g., a flowable ECM) are deposited such that the surface in or on a subject being deposited on is wholly covered by both cells and ECM. In other embodiments, the cells and ECM (e.g., a flowable ECM) are deposited such that the surface in or on a subject being deposited on is partially covered by both cells and ECM.</p>
+      <p id="p-00034-en" num="0034">In certain embodiments, the cells and ECM (e.g., a flowable ECM) are deposited such that the surface in or on a subject being deposited on is covered by cells in specific, desired areas; and covered by ECM in specific, desired areas, wherein such specific areas may or may not overlap.</p>
+      <p id="p-00035-en" num="0035">In certain embodiments, the cells and ECM (e.g., a flowable ECM) may be deposited/printed onto a surface three dimensionally. As used herein “three-dimensional printing” or “three-dimensional deposition” refers to the process of printing/depositing such that, e.g., the print heads of a bioprinter move below, above, and around a three-dimensional surface (e.g., an organ or bone in a subject), e.g., the printer heads are mechanically controlled so as to rotate along a specified path. As used herein, three-dimensional printing and three-dimensional deposition is in contrast to standard methods of bioprinting that are known in the art, where the printing is performed by starting to build tissue on a flat/planar/two-dimensional surface.</p>
+      <heading id="h-00006-en" level="1">4.1 Bioprinting</heading>
+      <p id="p-00036-en" num="0036">“Bioprinting,” as used herein, generally refers to the deposition of living cells, as well as other components (e.g., a flowable ECM; synthetic matrices) onto a surface using standard or modified printing technology, e.g., ink jet printing technology. Basic methods of depositing cells onto surfaces, and of bioprinting cells, including cells in combination with hydrogels, are described in Warren et al. U.S. Pat. No. 6,986,739, Boland et al. U.S. Pat. No. 7,051,654, Yoo et al. US 2009/0208466 and Xu et al. US 2009/0208577, the disclosures of each of which are incorporated by reference herein their entirety. Additionally, bioprinters suitable for the methods described herein are commercially available, e.g., the 3D-Bioplotter™ from Envisiontec GmbH (Gladbeck, Germany); and the NovoGen MMX Bioprinter™ from Organovo (San Diego, Calif.).</p>
+      <p id="p-00037-en" num="0037">The bioprinter used in the methods described herein may include mechanisms and/or software that enables control of the temperature, humidity, shear force, speed of printing, and/or firing frequency, by modifications of, e.g., the printer driver software and/or the physical makeup of the printer. In certain embodiments, the bioprinter software and/or hardware preferably may be constructed and/or set to maintain a cell temperature of about 37° C. during printing.</p>
+      <p id="p-00038-en" num="0038">In certain embodiments, the inkjet printing device may include a two-dimensional or three-dimensional printer. In certain embodiments, the bioprinter comprises a DC solenoid inkjet valve, one or more reservoir for containing one or more types of cells, e.g., cells in a flowable composition, and/or ECM (e.g., a flowable ECM) prior to printing, e.g., connected to the inkjet valve. The bioprinter may have 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 or more reservoirs, e.g., one for each cell type or each ECM used to construct the tissues and organs described herein. The cells may be delivered from the reservoir to the inkjet valve by air pressure, mechanical pressure, or by other means. Typically, the bioprinter, e.g., the print heads in the bioprinter, is/are computer-controlled such that the one or more cell types, and said ECM, are deposited in a predetermined pattern. Said predetermined pattern can be a pattern that recreates or recapitulates the natural arrangement of said one or more types of cells in an organ or tissue from which the cells are derived or obtained, or a pattern that is different from the natural arrangement of said one or more types of cells.</p>
+      <p id="p-00039-en" num="0039">In certain embodiments, the bioprinter used in the methods provided herein may be a thermal bubble inkjet printer, see, e.g., Niklasen et al. U.S. Pat. No. 6,537,567, or a piezoelectric crystal vibration print head, e.g., using frequencies up to 30 kHz and power sources ranging from 12 to 100 Watts. Bioprinter print head nozzles, in some embodiments, are each independently between 0.05 and 200 micrometers in diameter, or between 0.5 and 100 micrometers in diameter, or between 10 and 70 micrometers in diameter, or between 20 and 60 micrometers in diameter. In further embodiments, the nozzles are each independently about 40 or 50 micrometers in diameter. Multiple nozzles with the same or different diameters may be used. In some embodiments the nozzles have a circular opening; in other embodiments, other suitable shapes may be used, e.g., oval, square, rectangle, etc., without departing from the spirit of the invention.</p>
+      <p id="p-00040-en" num="0040">In certain embodiments, the bioprinter used in accordance with the methods described herein comprises a plurality of print heads and/or a plurality of print jets, wherein said plurality of print heads or print jets may, in certain embodiments, be separately controllable. In certain embodiments, each of said print heads or print jets operates independently from the remaining said print heads or print jets. In certain embodiments, at least one of said plurality of print heads or plurality of print jets may print compositions comprising cells, and at least one of said plurality of print heads or plurality of print jets may print compositions comprising ECM. In certain embodiments, at least one of said plurality of print heads or plurality of print jets may print compositions comprising cells, at least one of said plurality of print heads or plurality of print jets may print compositions comprising ECM, and at least one of said plurality of print heads or plurality of print jets may print compositions comprising an additional component.</p>
+      <p id="p-00041-en" num="0041">In certain embodiments, one or more print heads or print jets of a bioprinter used in accordance with the methods described herein may be modified so that it is suitable for printing on certain surface. For example, a print head or print jet may be modified by attaching it to a certain surgical instrument, e.g., a laparoscope. In accordance with such embodiments, the surgical instrument may be fitted with one or more other components that aid in the printing procedure, e.g., a camera.</p>
+      <p id="p-00042-en" num="0042">In certain embodiments, an anatomical image of the tissue or organ to be printed on may be constructed using software, e.g., a computer-aided design (CAD) software program. In accordance with such embodiments, programs can be generated that allow for three-dimensional printing on a three-dimensional surface that is representative of the structure of the tissue or organ to be printed on. For example, if it is desired to print on a bone, an anatomical image of the bone may be constructed and a program may be generated that directs the printer heads of the bioprinter to rotate around the three-dimensional bone inside the subject surface during printing.</p>
+      <p id="p-00043-en" num="0043">In certain embodiments, the surface of the tissue or organ to be printed on is scanned in or on said the subject so as to form a surface map, and said surface map is used to guide the depositing of the cells, ECM, and/or any additional components to be printed. Such scanning may comprise, without limitation, the use of a laser, electron beam, magnetic resonance imaging, microwave, or computed tomography. The scan of said surface may comprise a resolution of least 1000, 100, 10, 1, or 0.1 microns.</p>
+      <p id="p-00044-en" num="0044">In certain embodiments, the methods of bioprinting provided herein comprise the delivery/deposition of individual droplets of cells (e.g., compositions comprising single cells or compositions comprising multiple cells) and flowable extracellular matrix (ECM) on a surface in or on a subject.</p>
+      <p id="p-00045-en" num="0045">In certain embodiments, the methods of bioprinting provided herein comprise the deposition of a single cell type and flowable ECM on a surface in or on a subject. Exemplary cell types that can be used in accordance with such methods are provided in Section 4.1.1, below. ECM, including flowable ECM, is described in Section 4.1.3, below.</p>
+      <p id="p-00046-en" num="0046">In other embodiments, the methods of bioprinting provided herein comprise the deposition of multiple (e.g., two, three, four, five or more) cell types and flowable ECM on a surface in or on a subject. In a specific embodiment, the multiple cell types are deposited as part of the same composition, i.e., the source of the cells is a single composition that comprises the multiple cell types. In another specific embodiment, the multiple cell types are deposited as part of different compositions, i.e., the source of the cells are distinct compositions that comprise the multiple cell types. In another specific embodiment, a portion of the multiple cell types are deposited as part of one composition (e.g., two or more cell types are in a single composition) and another portion of the multiple types are deposited as a different composition (e.g., one or more cell types are in a single composition). Exemplary cell types that can be used in accordance with such methods are provided in Section 4.1.2, below.</p>
+      <p id="p-00047-en" num="0047">In a specific embodiment, the cells to be deposited and the flowable ECM are deposited on a surface in or on a subject together (e.g., simultaneously) as part of the same composition. In another specific embodiment, the cells to be deposited and the flowable ECM are deposited on a surface in or on a subject together as part of different compositions. In another specific embodiment, the cells to be deposited and the flowable ECM are deposited on a surface in or on a subject separately (e.g., at different times).</p>
+      <p id="p-00048-en" num="0048">In certain embodiments, the cells and flowable ECM are deposited on a surface in or on a subject with one or more additional components. In one embodiment, the one or more additional components are formulated in the same composition as the cells. In another embodiment, the one or more additional components are formulated in the same composition as the ECM. In another embodiment, the one or more additional components are formulated in the same composition as the cells and the ECM (i.e., a single composition comprises the cells, the flowable ECM, and the one or more additional components). In another embodiment, the one or more additional components are formulated in a composition that is separate from the compositions comprising the cells and/or ECM, and is deposited concurrently with, before, or after the deposition of the cells and/or ECM on a surface in or on a subject. In a specific embodiment, the one or more additional components promote the survival, differentiation, proliferation, etc. of the cell(s). In another specific embodiment, the one or more additional components comprise a cross-linker (see Section 4.1.3.2). In another specific embodiment, the one or more additional components comprise a hydrogel. In another specific embodiment, the one or more additional components comprise a synthetic polymer.</p>
+      <p id="p-00049-en" num="0049">Those of skill in the art will recognize that the cells and flowable ECM, as well as any additional components used in accordance with the methods described herein, may be printed from separate nozzles of a printer, or through the same nozzle of a printer in a common composition, depending upon the particular tissue or organ being formed. It also will be recognized by those of skill in the art that the printing may be simultaneous or sequential, or any combination thereof and that some of the components (e.g., cells, flowable ECM, or additional components) may be printed in the form of a first pattern and some of the components may be printed in the form of a second pattern, and so on. The particular combination and manner of printing will depend upon the particular tissue or organ in a subject that is being printed on.</p>
+      <p id="p-00050-en" num="0050">In certain embodiments, the cells, ECM, and/or any other materials (e.g., synthetic matrices, e.g., PCL) may be bioprinted in a specified pattern so as to yield a desired result. For example, bioprinted materials (e.g., cells, ECM, matrices, and other components described herein) may be bioprinted in layers at varying angles so as to generate specific desirable patterns, such as three-dimensional structures having specific pore sizes. In a specific embodiment, bioprinted materials (e.g., cells, ECM, matrices, and other components described herein) are printed in a criss-cross fashion so as to generate a bioprinted structure with pores of desired sizes that appear box-like. In another specific embodiment, bioprinted materials (e.g., cells, ECM, matrices, and other components described herein) are printed angles, so as to generate pores of desired sizes that appear triangular or diamond-like. For example, bioprinted materials (e.g., cells, ECM, matrices, and other components described herein) at angles of specific degrees, e.g., 30 degree angles, 45 degree angles, 60 degree angles, in order to generate desired patterns. In accordance with such methods of printing, bioprinted structures having desirable qualities, e.g., the ability to foster cellular growth and proliferation, can be generated. See Example 1, below. In a specific embodiment, matrices, e.g., synthetic matrices are bioprinted in specific patterns that are conducive to supporting the growth and proliferation of cells on said bioprinted matrices. In specific embodiments, the synthetic matrix is PCL.</p>
+      <heading id="h-00007-en" level="1">4.1.1 Cells</heading>
+      <p id="p-00051-en" num="0051">Any type of cell known in the art can be used in accordance with the methods described herein, including prokaryotic and eukaryotic cells.</p>
+      <p id="p-00052-en" num="0052">The cells used in accordance with the methods described herein may be syngeneic (i.e., genetically identical or closely related to the cells of the recipient subject, so as to minimize tissue transplant rejection), allogeneic (i.e., from a non-genetically identical member of the same species of the recipient subject) or xenogeneic (i.e., from a member of a different species than the recipient subject). Syngeneic cells include those that are autogeneic (i.e., from the recipient subject) and isogeneic (i.e., from a genetically identical but different subject, e.g., from an identical twin). Cells may be obtained from, e.g., a donor (either living or cadaveric) or derived from an established cell strain or cell line. For example, cells may be harvested from a donor (e.g., a potential recipient) using standard biopsy techniques known in the art.</p>
+      <p id="p-00053-en" num="0053">In certain embodiments, the cells used in accordance with the methods described herein are contained within a flowable physiologically-acceptable composition, e.g., water, buffer solutions (e.g., phosphate buffer solution, citrate buffer solution, etc.), liquid media (e.g., 0.9N saline solution, Kreb's solution, modified Kreb's solution, Eagle's medium, modified Eagle's medium (MEM), Dulbecco's Modified Eagle's Medium (DMEM), Hank's Balanced Salts, etc.), and the like.</p>
+      <p id="p-00054-en" num="0054">In certain embodiments, the cells used in accordance with the methods described herein may comprise primary cells that have been isolated from a tissue or organ, using one or more art-known proteases, e.g., collagenase, dispase, trypsin, LIBERASE, or the like. Organ tissue may be physically dispersed prior to, during, or after treatment of the tissue with a protease, e.g., by dicing, macerating, filtering, or the like. Cells may be cultured using standard, art-known cell culture techniques prior to use of the cells in the methods described herein, e.g., in order to produce homogeneous or substantially homogeneous cell populations, to select for particular cell types, or the like.</p>
+      <p id="p-00055-en" num="0055">In one embodiment, the cell type(s) used in the methods described herein comprises stem cells. A non-limiting list of stem cells that can be used in accordance with the methods described herein includes: embryonic stem cells, embryonic germ cells, induced pluripotent stem cells, mesenchymal stem cells, bone marrow-derived mesenchymal stem cells (BM-MSCs), tissue plastic-adherent placental stem cells (PDACs), umbilical cord stem cells, amniotic fluid stem cells, amnion derived adherent cells (AMDACs), osteogenic placental adherent cells (OPACs), adipose stem cells, limbal stem cells, dental pulp stem cells, myoblasts, endothelial progenitor cells, neuronal stem cells, exfoliated teeth derived stem cells, hair follicle stem cells, dermal stem cells, parthenogenically derived stem cells, reprogrammed stem cells, amnion derived adherent cells, or side population stem cells.</p>
+      <p id="p-00056-en" num="0056">In a specific embodiment, the methods described herein comprise the use of placental stem cells (e.g., the placental stem cells described in U.S. Pat. No. 7,468,276 and U.S. Pat. No. 8,057,788). In another specific embodiment, said placental stem cells are PDACs®. In one embodiment, said PDACs are CD34−, CD10+, CD105+, and CD200+. In another embodiment, said PDACs are CD34−, CD10+, CD105+, and CD200+and additionally are CD45−, CD80−, CD86−, and/or CD90+.</p>
+      <p id="p-00057-en" num="0057">In another specific embodiment, the methods described herein comprise the use of AMDACs (e.g., the AMDACs described in international application publication no. WO10/059828). In one embodiment, said AMDACs are Oct4−. In another embodiment, said AMDACs are CD49f+. In another embodiment, said AMDACs are Oct4− and CD49f+.</p>
+      <p id="p-00058-en" num="0058">In another specific embodiment, the methods described herein comprise the use of PDACs and AMDACs.</p>
+      <p id="p-00059-en" num="0059">In another specific embodiment, the methods described herein comprise the use of BM-MSCs.</p>
+      <p id="p-00060-en" num="0060">In another embodiment, the cell type(s) used in the methods described herein comprise differentiated cells. In a specific embodiment, the differentiated cell(s) used in accordance with the methods described herein comprise endothelial cells, epithelial cells, dermal cells, endodermal cells, mesodermal cells, fibroblasts, osteocytes, chondrocytes, natural killer cells, dendritic cells, hepatic cells, pancreatic cells, and/or stromal cells. In another specific embodiment, the cells are insulin-producing cells, e.g., pancreatic cells (e.g., islet cells) or an insulin-producing cell line, e.g., β-TC-6 cells.</p>
+      <p id="p-00061-en" num="0061">In another specific embodiment, the differentiated cell(s) used in accordance with the methods described herein comprise salivary gland mucous cells, salivary gland serous cells, von Ebner's gland cells, mammary gland cells, lacrimal gland cells, ceruminous gland cells, eccrine sweat gland dark cells, eccrine sweat gland clear cells, apocrine sweat gland cells, gland of Moll cells, sebaceous gland cells. bowman's gland cells, Brunner's gland cells, seminal vesicle cells, prostate gland cells, bulbourethral gland cells, Bartholin's gland cells, gland of Littre cells, uterus endometrium cells, isolated goblet cells, stomach lining mucous cells, gastric gland zymogenic cells, gastric gland oxyntic cells, pancreatic acinar cells, paneth cells, type II pneumocytes, and/or clara cells.</p>
+      <p id="p-00062-en" num="0062">In another specific embodiment, the differentiated cell(s) used in accordance with the methods described herein comprise somatotropes, lactotropes, thyrotropes, gonadotropes, corticotropes, intermediate pituitary cells, magnocellular neurosecretory cells, gut cells, respiratory tract cells, thyroid epithelial cells, parafollicular cells, parathyroid gland cells, parathyroid chief cell, oxyphil cell, adrenal gland cells, chromaffin cells, Leydig cells, theca interna cells, corpus luteum cells, granulosa lutein cells, theca lutein cells, juxtaglomerular cell, macula densa cells, peripolar cells, and/or mesangial cells.</p>
+      <p id="p-00063-en" num="0063">In another specific embodiment, the differentiated cell(s) used in accordance with the methods described herein comprise blood vessel and lymphatic vascular endothelial fenestrated cells, blood vessel and lymphatic vascular endothelial continuous cells, blood vessel and lymphatic vascular endothelial splenic cells, synovial cells, serosal cell (lining peritoneal, pleural, and pericardial cavities), squamous cells, columnar cells, dark cells, vestibular membrane cell (lining endolymphatic space of ear), stria vascularis basal cells, stria vascularis marginal cell (lining endolymphatic space of ear), cells of Claudius, cells of Boettcher, choroid plexus cells, pia-arachnoid squamous cells, pigmented ciliary epithelium cells, nonpigmented ciliary epithelium cells, corneal endothelial cells, peg cells, respiratory tract ciliated cells, oviduct ciliated cell, uterine endometrial ciliated cells, rete testis ciliated cells, ductulus efferens ciliated cells, and/or ciliated ependymal cells.</p>
+      <p id="p-00064-en" num="0064">In another specific embodiment, the differentiated cell(s) used in accordance with the methods described herein comprise epidermal keratinocytes, epidermal basal cells, keratinocyte of fingernails and toenails, nail bed basal cells, medullary hair shaft cells, cortical hair shaft cells, cuticular hair shaft cells, cuticular hair root sheath cells, hair root sheath cells of Huxley's layer, hair root sheath cells of Henle's layer, external hair root sheath cells, hair matrix cells, surface epithelial cells of stratified squamous epithelium, basal cell of epithelia, and/or urinary epithelium cells.</p>
+      <p id="p-00065-en" num="0065">In another specific embodiment, the differentiated cell(s) used in accordance with the methods described herein comprise auditory inner hair cells of organ of Corti, auditory outer hair cells of organ of Corti, inner pillar cells of organ of Corti, outer pillar cells of organ of Corti, inner phalangeal cells of organ of Corti, outer phalangeal cells of organ of Corti, border cells of organ of Corti, Hensen cells of organ of Corti, vestibular apparatus supporting cells, taste bud supporting cells, olfactory epithelium supporting cells, Schwann cells, satellite cells, enteric glial cells, basal cells of olfactory epithelium, cold-sensitive primary sensory neurons, heat-sensitive primary sensory neurons, Merkel cells of epidermis, olfactory receptor neurons, pain-sensitive primary sensory neurons, photoreceptor rod cells, photoreceptor blue-sensitive cone cells, photoreceptor green-sensitive cone cells, photoreceptor red-sensitive cone cells, proprioceptive primary sensory neurons, touch-sensitive primary sensory neurons, type I carotid body cells, type II carotid body cell (blood pH sensor), type I hair cell of vestibular apparatus of ear (acceleration and gravity), type II hair cells of vestibular apparatus of ear, type I taste bud cells, cholinergic neural cells, adrenergic neural cells, and/or peptidergic neural cells.</p>
+      <p id="p-00066-en" num="0066">In another specific embodiment, the differentiated cell(s) used in accordance with the methods described herein comprise astrocytes, neurons, oligodendrocytes, spindle neurons, anterior lens epithelial cells, crystallin-containing lens fiber cells, hepatocytes, adipocytes, white fat cells, brown fat cells, liver lipocytes, kidney glomerulus parietal cells, kidney glomerulus podocytes, kidney proximal tubule brush border cells, loop of Henle thin segment cells, kidney distal tubule cells, kidney collecting duct cells, type I pneumocytes, pancreatic duct cells, nonstriated duct cells, duct cells, intestinal brush border cells, exocrine gland striated duct cells, gall bladder epithelial cells, ductulus efferens nonciliated cells, epididymal principal cells, and/or epididymal basal cells.</p>
+      <p id="p-00067-en" num="0067">In another specific embodiment, the differentiated cell(s) used in accordance with the methods described herein comprise ameloblast epithelial cells, planum semilunatum epithelial cells, organ of Corti interdental epithelial cells, loose connective tissue fibroblasts, corneal keratocytes, tendon fibroblasts, bone marrow reticular tissue fibroblasts, nonepithelial fibroblasts, pericytes, nucleus pulposus cells, cementoblast/cementocytes, odontoblasts, odontocytes, hyaline cartilage chondrocytes, fibrocartilage chondrocytes, elastic cartilage chondrocytes, osteoblasts, osteocytes, osteoclasts, osteoprogenitor cells, hyalocytes, stellate cells (ear), hepatic stellate cells (Ito cells), pancreatic stelle cells, red skeletal muscle cells, white skeletal muscle cells, intermediate skeletal muscle cells, nuclear bag cells of muscle spindle, nuclear chain cells of muscle spindle, satellite cells, ordinary heart muscle cells, nodal heart muscle cells, Purkinje fiber cells, mooth muscle cells, myoepithelial cells of iris, and/or myoepithelial cells of exocrine glands.</p>
+      <p id="p-00068-en" num="0068">In another specific embodiment, the differentiated cell(s) used in accordance with the methods described herein comprise reticulocytes, megakaryocytes, monocytes, connective tissue macrophages. epidermal Langerhans cells, dendritic cells, microglial cells, neutrophils, eosinophils, basophils, mast cell, helper T cells, suppressor T cells, cytotoxic T cell, natural Killer T cells, B cells, natural killer cells, melanocytes, retinal pigmented epithelial cells, oogonia/oocytes, spermatids, spermatocytes, spermatogonium cells, spermatozoa, ovarian follicle cells, Sertoli cells, thymus epithelial cell, and/or interstitial kidney cells.</p>
+      <p id="p-00069-en" num="0069">The cells used in accordance with the methods described herein can be formulated in compositions. In certain embodiments, the cells used in accordance with the methods described herein are formulated in compositions that comprise only a single cell type, i.e., the population of cells in the composition is homogeneous. In other embodiments, the cells used in accordance with the methods described herein are formulated in compositions that comprise more than one cell type, i.e., the population of cells in the composition is heterogeneous.</p>
+      <p id="p-00070-en" num="0070">In certain embodiments, the cells used in accordance with the methods described herein are formulated in compositions that additionally comprise flowable ECM (see Section 4.1.3). Alternatively, said flowable ECM may be deposited as part of a separate composition in accordance with the methods described herein concurrently with, before, or after the deposition of said cells. In certain embodiments, the cells used in accordance with the methods described herein are formulated in compositions that additionally comprise one or more synthetic monomers or polymers. Alternatively, said synthetic monomers or polymers may be deposited as part of a separate composition in accordance with the methods described herein concurrently with, before, or after the deposition of said cells. In certain embodiments, the cells used in accordance with the methods described herein are formulated in compositions that additionally comprise flowable ECM and one or more synthetic monomers or polymers. In certain embodiments, the cells used in accordance with the methods described herein are formulated in compositions that additionally comprise a cross-linking agent. Alternatively, said cross-linking agent may be deposited as part of a separate composition in accordance with the methods described herein concurrently with, before, or after the deposition of said cells.</p>
+      <p id="p-00071-en" num="0071">In certain embodiments, the cells used in accordance with the methods described herein are formulated in compositions that additionally comprise one or more additional components, e.g., components that promote the survival, differentiation, proliferation, etc. of the cell(s). Such components may include, without limitation, nutrients, salts, sugars, survival factors, and growth factors. Exemplary growth factors that may be used in accordance with the methods described herein include, without limitation, insulin-like growth factor (e.g., IGF-1), transforming growth factor-beta (TGF-beta), bone-morphogenetic protein, fibroblast growth factor, platelet derived growth factor (PDGF), vascular endothelial growth factor (VEGF), connective tissue growth factor (CTGF), basic fibroblast growth factor (bFGF), epidermal growth factor, fibroblast growth factor (FGF) (numbers 1, 2 and 3), osteopontin, bone morphogenetic protein-2, growth hormones such as somatotropin, cellular attractants and attachment agents, etc., and mixtures thereof. Alternatively, said one or more additional components that promote the survival, differentiation, proliferation, etc. of the cell(s) may be deposited as part of a separate composition in accordance with the methods described herein concurrently with, before, or after the deposition of said cells.</p>
+      <p id="p-00072-en" num="0072">In certain embodiments, the cells used in accordance with the methods described herein are primary culture cells, e.g., cells that have been cultured in vitro. Such primary cells can be passaged once or multiple times, e.g. twice, three times, four times, five times, six times, seven times, eight times, nine times, ten times, or more than ten times. In a specific embodiment, said primary cells have been passaged no more than six times. In another specific embodiment, said primary cells are derived from the subject to be printed in or on.</p>
+      <p id="p-00073-en" num="0073">In certain embodiments, the cells used in accordance with the methods described herein are genetically engineered to produce a protein(s) or polypeptide(s) that is not naturally produced by the cell, or have been genetically engineered to produce a protein(s) or polypeptide(s) in an amount that is greater than that naturally produced by the cell. In a specific embodiment, such cells comprise or consist of differentiated cells. In another specific embodiment, said cells comprise a plasmid that directs the production of said protein or polypeptide. Such cells may be cultured in such a manner that the amount of protein or polypeptide can be controlled and/or optimized. For example, said cells may be engineered so that approximately 1×10<sup>6 </sup>of said cells produces about or at least 0.01 to 0.1, 0.1 to 1.0, 1.0 to 10.0, or 10.0 to 100.0 μM of said protein or polypeptide in an in vitro culture in growth medium over approximately 24 hours.</p>
+      <p id="p-00074-en" num="0074">In a specific embodiment, the cells used in accordance with the methods described herein are genetically engineered to produce a cytokine or a peptide comprising an active part thereof. Exemplary cytokines that may be produced by such engineered cells include, without limitation, adrenomedullin (AM), angiopoietin (Ang), bone morphogenetic protein (BMP), brain-derived neurotrophic factor (BDNF), epidermal growth factor (EGF), erythropoietin (Epo), fibroblast growth factor (FGF), glial cell line-derived neurotrophic factor (GNDF), granulocyte colony stimulating factor (G-CSF), granulocyte-macrophage colony stimulating factor (GM-CSF), growth differentiation factor (GDF-9), hepatocyte growth factor (HGF), hepatoma derived growth factor (HDGF), insulin-like growth factor (IGF), migration-stimulating factor, myostatin (GDF-8), myelomonocytic growth factor (MGF), nerve growth factor (NGF), placental growth factor (P1GF), platelet-derived growth factor (PDGF), thrombopoietin (Tpo), transforming growth factor alpha (TGF-α), TGF-P, tumor necrosis factor alpha (TNF-α), vascular endothelial growth factor (VEGF), or a Wnt protein.</p>
+      <p id="p-00075-en" num="0075">In another specific embodiment, the cells used in accordance with the methods described herein are genetically engineered to produce a soluble receptor for a protein or polypeptide, e.g., a soluble receptor for a cytokine Exemplary soluble receptors that may be produced by such cells include, without limitation, soluble receptors for AM, Ang, BMP, BDNF, EGF, Epo, FGF, GNDF, G-CSF, GM-CSF, GDF-9, HGF, HDGF, IGF, migration-stimulating factor, GDF-8, MGF, NGF, P1GF, PDGF, Tpo, TGF-α, TGF-β, TNF-α, VEGF, and Wnt protein.</p>
+      <p id="p-00076-en" num="0076">In another specific embodiment, the cells used in accordance with the methods described herein are genetically engineered to produce an interleukin. Exemplary interleukins that may be produced by such cells include, without limitation, interleukin-1 alpha (IL-1α), IL-1β, IL-1F1, IL-1F2, IL-1F3, IL-1F4, IL-1F5, IL-1F6, IL-1F7, IL-1F8, IL-1F9, IL-2, IL-3, IL-4, IL-5, IL-6, IL-7, IL-8, IL-9, IL-10, IL-11, IL-12 35 kDa alpha subunit, IL-12 40 kDa beta subunit, both IL-12 alpha and beta subunits, IL-13, IL-14, IL-15, IL-16, IL-17A, IL-17B, IL-17C, IL-17D, IL-17E, IL-17F isoform 1, IL-17F isoform 2, IL-18, IL-19, IL-20, IL-21, IL-22, IL-23 p19 subunit, IL-23 p40 subunit, IL-23 p19 subunit and IL-23 p40 subunit together, IL-24, IL-25, IL-26, IL-27B, IL-27-p28, IL-27B and IL-27-p28 together, IL-28A, IL-28B, IL-29, IL-30, IL-31, IL-32, IL-33, IL-34, IL-35, IL-36α, IL-36β, and IL-36γ.</p>
+      <p id="p-00077-en" num="0077">In another specific embodiment, the cells used in accordance with the methods described herein are genetically engineered to produce a soluble receptor for an interleukin. Exemplary soluble receptors for interleukins that may be produced by such cells include, without limitation, soluble receptors for IL-1α, IL-1β, IL-1F1, IL-1F2, IL-1F3, IL-1F4, IL-1F5, IL-1F6, IL-1F7, IL-1F8, IL-1F9, IL-2, IL-3, IL-4, IL-5, IL-6, IL-7, IL-8, IL-9, IL-10, IL-11, IL-12 35 kDa alpha subunit, IL-12 40 kDa beta subunit, IL-13, IL-14, IL-15, IL-16, IL-17A, IL-17B, IL-17C, IL-17D, IL-17E, IL-17F isoform 1, IL-17F isoform 2, IL-18, IL-19, IL-20, IL-21, IL-22, IL-23 p19 subunit, IL-23 p40 subunit, IL-24, IL-25, IL-26, IL-27B, IL-27-p28, IL-28A, IL-28B, IL-29, IL-30, IL-31, IL-32, IL-33, IL-34, IL-35, IL-36α, IL-36β, and IL-36γ.</p>
+      <p id="p-00078-en" num="0078">In another specific embodiment, the cells used in accordance with the methods described herein are genetically engineered to produce an interferon. Exemplary interferons that may be produced by such cells include, without limitation, IFN-α, IFN-β, IFN-γ, IFN-λ1, IFN-λ2, IFN-λ3, IFN-K, IFN-ε, IFN-κ, IFN-τ, IFN-δ, IFN-ζ, IFN-ω, and IFN-v.</p>
+      <p id="p-00079-en" num="0079">In another specific embodiment, the cells used in accordance with the methods described herein are genetically engineered to produce a soluble receptor for an interferon. Exemplary soluble receptors for interferons that may be produced by such cells include, without limitation, soluble receptors for IFN-α, IFN-β, IFN-γ, IFN-λ1, IFN-λ2, IFN-λ3, IFN-K, IFN-ε, IFN-κ, IFN-τ, IFN-δ, IFN-ζ, IFN-ω, or IFN-v.</p>
+      <p id="p-00080-en" num="0080">In another specific embodiment, the cells used in accordance with the methods described herein are genetically engineered to produce insulin or proinsulin. In another specific embodiment, the cells used in accordance with the methods described herein are genetically engineered to produce a receptor for insulin. In certain embodiments, said cells genetically engineered to produce insulin or proinsulin, and/or a receptor for insulin, are additionally genetically engineered to produce one or more of prohormone convertase 1, prohormone convertase 2, or carboxypeptidase E.</p>
+      <p id="p-00081-en" num="0081">In another specific embodiment, the cells used in accordance with the methods described herein are genetically engineered to produce leptin. In another specific embodiment, the cells used in accordance with the methods described herein are genetically engineered to produce erythropoietin (EPO). In another specific embodiment, the cells used in accordance with the methods described herein are genetically engineered to produce thrombopoietin.</p>
+      <p id="p-00082-en" num="0082">In another specific embodiment, the cells used in accordance with the methods described herein are genetically engineered to produce tyrosine 3-monooxygenase, a protein capable of producing L-DOPA from 1-tyrosine. In certain embodiments, said cells are further engineered to express aromatic L-amino acid decarboxylase, which produces dopamine from L-DOPA.</p>
+      <p id="p-00083-en" num="0083">In another specific embodiment, the cells used in accordance with the methods described herein are genetically engineered to produce a hormone or prohormone. Exemplary hormones that may be produced by such cells include, without limitation, antimullerian hormone (AMH), adiponectin (Acrp30), adrenocorticotropic hormone (ACTH), angiotensin (AGT), angiotensinogen (AGT), antidiuretic hormone (ADH), vasopressin, atrial-natriuretic peptide (ANP), calcitonin (CT), cholecystokinin (CCK), corticotrophin-releasing hormone (CRH), erythropoietin (Epo), follicle-stimulating hormone (FSH), testosterone, estrogen, gastrin (GRP), ghrelin, glucagon (GCG), gonadotropin-releasing hormone (GnRH), growth hormone (GH), growth hormone releasing hormone (GHRH), human chorionic gonadotropin (hCG), human placental lactogen (HPL), inhibin, leutinizing hormone (LH), melanocyte stimulating hormone (MSH), orexin, oxytocin (OXT), parathyroid hormone (PTH), prolactin (PRL), relaxin (RLN), secretin (SCT), somatostatin (SRIF), thrombopoietin (Tpo), thyroid-stimulating hormone (Tsh), and thyrotropin-releasing hormone (TRH).</p>
+      <p id="p-00084-en" num="0084">In another specific embodiment, the cells used in accordance with the methods described herein are genetically engineered to produce cytochrome P450 side chain cleavage enzyme (P450SCC).</p>
+      <p id="p-00085-en" num="0085">In another specific embodiment, the cells used in accordance with the methods described herein are genetically engineered to produce low density lipoprotein receptor (LDLR).</p>
+      <p id="p-00086-en" num="0086">In another specific embodiment, the cells used in accordance with the methods described herein are genetically engineered to produce polycystin-1 (PKD1), PKD-2 or PKD3.</p>
+      <p id="p-00087-en" num="0087">In another specific embodiment, the cells used in accordance with the methods described herein are genetically engineered to produce phenylalanine hydroxylase.</p>
+      <p id="p-00088-en" num="0088">In certain embodiments, the cells used in accordance with the methods described herein are formulated in compositions that additionally comprise a polymerizable monomer(s). In such embodiments, for example, a polymerization catalyst may be added immediately prior to bioprinting, such that once the cells are printed, the monomer polymerizes, forming a gel that traps and/or physically supports the cells. For example, the composition comprising the cells can comprise acrylamide monomers, whereupon TEMED and Ammonium persulfate, or riboflavin, are added to the composition immediately prior to bioprinting. Upon deposition of the cells in the composition onto a surface, the acrylamide polymerizes, sequestering and supporting the cells.</p>
+      <p id="p-00089-en" num="0089">In certain embodiments, the cells used in accordance with the methods described herein are formulated in compositions that additionally comprise adhesives. In a specific embodiment, the cells used in accordance with the methods described herein are formulated in compositions that additionally comprise soft tissue adhesives including, without limitation, cyanoacrylate esters, fibrin sealant, and/or gelatin-resorcinol-formaldehyde glues. In another specific embodiment, the cells used in accordance with the methods described herein are formulated in compositions that additionally comprise arginine-glycine-aspartic acid (RGD) ligands, extracellular proteins, and/or extracellular protein analogs.</p>
+      <p id="p-00090-en" num="0090">In certain embodiments, the cells used in accordance with the methods described herein are formulated in compositions such that the cells can be deposited on a surface in or on a subject as single cells (i.e., the cells are deposited one cell at a time).</p>
+      <p id="p-00091-en" num="0091">In certain embodiments, the cells used in accordance with the methods described herein are formulated in compositions such that the cells can be deposited on a surface in or on a subject as aggregates that comprise multiple cells. Such aggregates may comprise cells of single type, or may comprise multiple cell types, e.g., two, three, four, five or more cell types.</p>
+      <p id="p-00092-en" num="0092">In certain embodiments, the cells used in accordance with the methods described herein are formulated in compositions such that the cells form a tissue as part of the composition, wherein said tissue can be deposited on a surface in or on a subject using the methods described herein. Such tissues may comprise cells of single type, or may comprise multiple cell types, e.g., two, three, four, five or more cell types.</p>
+      <p id="p-00093-en" num="0093">In certain embodiments, the cells used in accordance with the methods described herein are deposited onto a surface in or on a subject as individual droplets of cells and/or compositions having small volumes, e.g., from 0.5 to 500 picoliters per droplet. In various embodiments, the volume of cells, or composition comprising the cells, is about 0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 25, 20, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95 or 100 picoliters, or between about 1 to 90 picoliters, about 5 to 85 picoliters, about 10 to 75 picoliters, about 15 to 70 picoliters, about 20 to 65 picoliters, or about 25 to about 60 picoliters.</p>
+      <heading id="h-00008-en" level="1">4.1.2 Tissues and Organs</heading>
+      <p id="p-00094-en" num="0094">Provided herein are methods of bioprinting on tissues and organs in or on a subject using one or more of the methods provided herein. Also provided herein are methods of bioprinting new tissue in or on a subject. Also provided herein are methods of bioprinting tissue in or on existing organs in a subject, as well as the generation of new organs in a subject.</p>
+      <p id="p-00095-en" num="0095">Any type of tissue known in the art can be printed in or on a subject using the methods described herein. In certain embodiments, the tissue printed in or on a subject comprises a single cell type. In other embodiments, the tissue printed in or on a subject multiple cell types. In certain embodiments, the tissue printed in or on a subject comprises more than one type of tissue.</p>
+      <p id="p-00096-en" num="0096">In certain embodiments, the methods described herein comprise deposition of cells, ECM, and/or other components on a surface in or on a subject, wherein said surface comprises tissue from a subject. In certain embodiments, the methods described herein comprise deposition of cells, ECM, and/or other components on a surface in or on a subject, wherein said surface comprises an organ of the subject.</p>
+      <p id="p-00097-en" num="0097">In a specific embodiment, the cells printed in or on a subject comprise connective tissue cells. In certain embodiments, said connective tissue cells are printed on connective tissue of said subject (i.e., connective tissue in or on the subject).</p>
+      <p id="p-00098-en" num="0098">In another specific embodiment, the cells printed in or on a subject comprise muscle tissue cells. In certain embodiments, said muscle tissue cells are printed on muscle tissue of said subject (i.e., muscle tissue in or on the subject). The muscle tissue can comprise visceral (smooth) muscle tissue, skeletal muscle tissue, or cardiac muscle tissue.</p>
+      <p id="p-00099-en" num="0099">In another specific embodiment, the cells printed in or on a subject comprise neural tissue cells. In certain embodiments, said neural tissue cells are printed on neural tissue of said subject (i.e., neural tissue in or on the subject). The neural tissue can comprise central nervous system tissue (e.g., brain tissue or spinal cord tissue) or peripheral nervous system tissue (e.g., cranial nerves and spinal nerves).</p>
+      <p id="p-00100-en" num="0100">In another specific embodiment, the cells printed in or on a subject comprise epithelial tissue cells. In certain embodiments, said epithelial tissue cells are printed on epithelial tissue of said subject (i.e., epithelial tissue in or on the subject). The epithelial tissue can comprise endothelium.</p>
+      <p id="p-00101-en" num="0101">In certain embodiments, the cells, ECM, and/or other components printed in or on a subject are printed on an organ of the subject. The cells, ECM, and/or other components can be printed in or on an organ of a subject that is associated with any of the known mammalian organ systems, i.e., the digestive system, circulatory system, endocrine system, excretory system, immune system, integumentary system, muscular system, nervous system, reproductive system, respiratory system, and/or skeletal system. Exemplary organs that can be generated or formed in accordance with the methods described herein include, without limitation, lungs, liver, heart, brain, kidney, skin, bone, stomach, pancreas, bladder, gall bladder, small intestine, large intestine, prostate, testes, ovaries, spinal cord, pharynx, larynx, trachea, bronchi, diaphragm, ureter, urethra, esophagus, colon, thymus, and spleen. In a specific embodiment, a pancreas or portion thereof is generated or formed in accordance with the methods described herein.</p>
+      <p id="p-00102-en" num="0102">In a specific embodiment, the cells, ECM, and/or other components printed in or on a subject are printed on bone. In another specific embodiment, the cells, ECM, and/or other components printed in or on a subject are printed on skin. In another specific embodiment, the cells, ECM, and/or other components printed in or on a subject are not printed on skin. In another specific embodiment, the cells, ECM, and/or other components printed in or on a subject are printed on lung tissue, or a lung or portion thereof. In another specific embodiment, the cells, ECM, and/or other components printed in or on a subject are printed on liver tissue, or a liver or portion thereof. In another specific embodiment, the cells, ECM, and/or other components printed in or on a subject are printed on neural tissue, or a nerve or portion thereof.</p>
+      <heading id="h-00009-en" level="1">4.1.3 Extracellular Matrix (ECM)</heading>
+      <p id="p-00103-en" num="0103">The methods described herein comprise the deposition of cells (e.g., compositions comprising single cells and/or compositions comprising multiple cells) and extracellular matrix (ECM), including flowable ECM, on a surface in or on a subject. The ECM can be derived from any known source of ECM, and can be made flowable using any method known in the art. In specific embodiments, the ECM comprises flowable ECM. The ECM can be made flowable using, e.g., the methods described in Section 4.1.3.1, below. In certain embodiments, the ECM can be cross-linked using, e.g., using the methods described in Section 4.1.3.2, below.</p>
+      <p id="p-00104-en" num="0104">The ECM (e.g., a flowable ECM) used in accordance with the methods described herein can be formulated as part of a composition for use in accordance with the methods provided herein.</p>
+      <p id="p-00105-en" num="0105">In certain embodiments, the ECM used in accordance with the methods described herein comprises mammalian ECM, plant ECM, molluscan ECM, and/or piscine ECM.</p>
+      <p id="p-00106-en" num="0106">In a specific embodiment, the ECM used in accordance with the methods described herein comprises mammalian ECM. In another specific embodiment, the ECM used in accordance with the methods described herein comprises mammalian ECM, wherein said mammalian ECM is derived from a placenta (e.g., a human placenta). In another specific embodiment, said placental-derived ECM comprises telopeptide collagen.</p>
+      <p id="p-00107-en" num="0107">In another specific embodiment, said placental-derived ECM comprises base-treated and/or detergent treated Type I telopeptide placental collagen that has not been chemically modified or contacted with a protease, wherein said ECM comprises less than 5% fibronectin or less than 5% laminin by weight; between 25% and 92% Type I collagen by weight; and 2% to 50% Type III collagen or 2% to 50% type IV collagen by weight.</p>
+      <p id="p-00108-en" num="0108">In another specific embodiment, said placental-derived ECM comprises base-treated, detergent treated Type I telopeptide placental collagen that has not been chemically modified or contacted with a protease, wherein said ECM comprises less than 1% fibronectin or less than 1% laminin by weight; between 74% and 92% Type I collagen by weight; and 4% to 6% Type III collagen or 2% to 15% type IV collagen by weight.</p>
+      <p id="p-00109-en" num="0109">Placental ECM, e.g., ECM comprising placental telopeptide collagen, used in accordance with the methods described herein, may be prepared using methods known in the art, or may be prepared as follows. First, placental tissue (either whole placenta or part thereof) is obtained by standard methods, e.g., collection as soon as practical after Caesarian section or normal birth, e.g., aseptically. The placental tissue can be from any part of the placenta including the amnion, whether soluble or insoluble or both, the chorion, the umbilical cord or from the entire placenta. In certain embodiments, the collagen composition is prepared from whole human placenta without the umbilical cord. The placenta may be stored at room temperature, or at a temperature of about 2° C. to 8° C., until further treatment. The placenta is preferably exsanguinated, i.e., completely drained of the placental and cord blood remaining after birth. The expectant mother, in certain embodiments, is screened prior to the time of birth, for, e.g., HIV, HBV, HCV, HTLV, syphilis, CMV, and other viral pathogens known to contaminate placental tissue.</p>
+      <p id="p-00110-en" num="0110">The placental tissue may be decellularized prior to production of the ECM. The placental tissue can be decellularized according to any technique known to those of skill in the art such as those described in detail in U.S. Patent Application Publication Nos. 20040048796 and 20030187515, the contents of which are hereby incorporated by reference in their entireties.</p>
+      <p id="p-00111-en" num="0111">The placental tissue may be subjected to an osmotic shock. The osmotic shock can be in addition to any clarification step or it can be the sole clarification step according to the judgment of one of skill in the art. The osmotic shock can be carried out in any osmotic shock conditions known to those of skill in the art. Such conditions include incubating the tissue in solutions of high osmotic potential, or of low osmotic potential or of alternating high and low osmotic potential. The high osmotic potential solution can be any high osmotic potential solution known to those of skill in the art such as a solution comprising one or more of NaCl (e.g., 0.2-1.0 M or 0.2-2.0 M), KCl (e.g., 0.2-1.0 or 0.2 to 2.0 M), ammonium sulfate, a monosaccharide, a disaccharide (e.g., 20% sucrose), a hydrophilic polymer (e.g., polyethylene glycol), glycerol, etc. In certain embodiments, the high osmotic potential solution is a sodium chloride solution, e.g., at least 0.25 M, 0.5M, 0.75M, 11.0M, 1.25M, 1.5M, 1.75M, 2M, or 2.5M NaCl. In some embodiments, the sodium chloride solution is about 0.25-5M, about 0.5-4M, about 0.75-3M, or about 1.0-2.0M NaCl. The low osmotic potential solution can be any low osmotic potential solution known to those of skill in the art, such as water, for example water deionized according to any method known to those of skill. In some embodiments, the osmotic shock solution comprises water with an osmotic shock potential less than that of 50 mM NaCl. In certain embodiments, the osmotic shock is in a sodium chloride solution followed by a water solution. In certain embodiments, one or two NaCl solution treatments are followed by a water wash.</p>
+      <p id="p-00112-en" num="0112">The composition resulting from the osmotic shock may then, in certain embodiments, be incubated with a detergent. The detergent can be any detergent known to those of skill in the art to be capable of disrupting cellular or subcellular membranes, e.g., an ionic detergent, a nonionic detergent, deoxycholate, sodium dodecylsulfate, Triton X 100, TWEEN, or the like. Detergent treatment can be carried out at about 0° C. to about 30° C., about 5° C. to about 25° C., about 5° C. to about 20 ° C., about 5° C. to about 15° C., about 0° C., about 5° C., about 10° C., about 15° C., about 20° C., about 25° C., or about 30° C. Detergent treatment can be carried out for, e.g., about 1-24 hours, about 2-20 hours, about 5-15 hours, about 8-12 hours, or about 2-5 hours.</p>
+      <p id="p-00113-en" num="0113">The composition resulting from the detergent treatment may then, in certain embodiments, be incubated under basic conditions. Particular bases for the basic treatment include biocompatible bases, volatile bases, or any organic or inorganic bases at a concentration of, for example, 0.2-1.0M. In certain embodiments, the base is selected from the group consisting of NH<sub>4</sub>OH, KOH and NaOH, e.g., 0.1M NaOH, 0.25M NaOH, 0.5M NaOH, or 1M NaOH. The base treatment can be carried out at, e.g., 0° C. to 30° C., 5° C. to 25° C., 5° C. to 20° C., 5° C. to 15° C., about 0° C., about 5° C., about 10° C., about 15° C., about 20° C., about 25° C., or about 30° C., for, e.g., about 1-24 hours, about 2-20 hours, about 5-15 hours, about 8-12 hours, or about 2-5 hours.</p>
+      <p id="p-00114-en" num="0114">The ECM can be produced without treatment by a base; omission of a base treatment step typically results in an ECM composition comprising relatively higher amounts of elastin, fibronectin and/or laminin than the ECM composition produced with inclusion of the basic treatment.</p>
+      <p id="p-00115-en" num="0115">Typically, the process described above for human placental tissue results in production of placental ECM comprising base-treated and/or detergent treated Type I telopeptide placental collagen that has not been chemically modified or contacted with a protease, wherein said ECM comprises less than 5% fibronectin or less than 5% laminin by weight; between 25% and 92% Type I collagen by weight; between 2% and 50% Type III collagen; between 2% and 50% type IV collagen by weight; and/or less than 40% elastin by weight. In a more specific embodiment, the process results in production of base-treated, detergent treated Type I telopeptide placental collagen, wherein said collagen has not been chemically modified or contacted with a protease, and wherein said composition comprises less than 1% fibronectin by weight; less than 1% laminin by weight; between 74% and 92% Type I collagen by weight; between 4% and 6% Type III collagen by weight; between 2% and 15% type IV collagen by weight; and/or less than 12% elastin by weight.</p>
+      <p id="p-00116-en" num="0116">In certain embodiments, compositions provided herein that comprise flowable ECM may additionally comprise other components. In certain embodiments, the compositions provided herein that comprise flowable ECM additionally comprise one or more cell types, e.g., one or more of the cell types detailed in Section 4.1.1, above. Alternatively, said cells may be deposited as part of a separate composition in accordance with the methods described herein concurrently with, before, or after the deposition of said ECM.</p>
+      <p id="p-00117-en" num="0117">In certain embodiments, the compositions provided herein that comprise flowable ECM additionally comprise a hydrogel (e.g., a thermosensitive hydrogel and/or a photosensitive hydrogel). Alternatively, a hydrogel may be deposited as part of a separate composition in accordance with the methods described herein concurrently with, before, or after the deposition of said ECM.</p>
+      <p id="p-00118-en" num="0118">In certain embodiments, the compositions provided herein that comprise flowable ECM additionally comprise one or more cell types, e.g., one or more of the cell types detailed in Section 4.1.1, above, and a hydrogel. In a specific embodiment, the compositions provided herein that comprise flowable ECM and a hydrogel (e.g., a thermosensitive hydrogel and/or a photosensitive hydrogel) are formulated such that the ratio of ECM:hydrogel ranges from about 10:1 to about 1:10 by weight.</p>
+      <p id="p-00119-en" num="0119">Exemplary hydrogels may comprise include organic polymers (natural or synthetic) that may be cross-linked via covalent, ionic, or hydrogen bonds to create a three-dimensional open-lattice structure that entraps water molecules to form a gel. Suitable hydrogels for such compositions include self-assembling peptides, such as RAD16. Hydrogel-forming materials include polysaccharides such as alginate and salts thereof, peptides, polyphosphazines, and polyacrylates, which are crosslinked ionically, or block polymers such as polyethylene oxide-polypropylene glycol block copolymers which are crosslinked by temperature or pH, respectively. In some embodiments, the hydrogel or matrix may be biodegradable.</p>
+      <p id="p-00120-en" num="0120">In certain embodiments, the compositions provided herein that comprise flowable ECM additionally comprise a synthetic polymer. In a specific embodiment, the synthetic polymer comprises polyacrylamide, polyvinylidine chloride, poly(o-carboxyphenoxy)-p-xylene) (poly(o-CPX)), poly(lactide-anhydride) (PLAA), n-isopropyl acrylamide, pent erythritol diacrylate, polymethyl acrylate, carboxymethylcellulose, and/or poly(lactic-co-glycolic acid) (PLGA). In another specific embodiment, the synthetic polymer comprises a thermoplastic, e.g., polycaprolactone (PCL), polylactic acid, polybutylene terephthalate, polyethylene terephthalate, polyethylene, polyester, polyvinyl acetate, and/or polyvinyl chloride. Alternatively, one or more synthetic polymers may be deposited as part of a separate composition in accordance with the methods described herein concurrently with, before, or after the deposition of said ECM. In a specific embodiment, the synthetic polymer is PCL.</p>
+      <p id="p-00121-en" num="0121">In certain embodiments, the compositions provided herein that comprise flowable ECM additionally comprise tenascin C, a human protein known to interact with fibronectin, or a fragment thereof. Alternatively, tenascin C may be deposited as part of a separate composition in accordance with the methods described herein concurrently with, before, or after the deposition of said ECM.</p>
+      <p id="p-00122-en" num="0122">In certain embodiments, the compositions provided herein that comprise flowable ECM additionally comprise titanium-aluminum-vanadium (Ti<sub>6</sub>Al<sub>4</sub>V). Alternatively, Ti<sub>6</sub>Al<sub>4</sub>V may be deposited as part of a separate composition in accordance with the methods described herein concurrently with, before, or after the deposition of said ECM.</p>
+      <p id="p-00123-en" num="0123">In certain embodiments, the ECM in a composition provided herein and/or an additional component of the composition, such as a synthetic polymer, may be derivatized. Methods for derivatization of ECM and synthetic polymers are known in the art, and include, without limitation, derivatization using cell attachment peptides (e.g., a peptide comprising one or more RGD motifs), derivatization using cell attachment proteins, derivatization using cytokines (e.g., vascular endothelial growth factor (VEGF), or a bone morphogenetic protein (BMP)), and derivatization using glycosaminoglycans.</p>
+      <heading id="h-00010-en" level="1">4.1.3.1 Methods of Generating Flowable ECM</heading>
+      <p id="p-00124-en" num="0124">The ECM used in accordance with the methods described herein can be made flowable using methods known in the art and described herein.</p>
+      <p id="p-00125-en" num="0125">In one embodiment, the ECM used in accordance with the methods described herein is made flowable by contacting the ECM with an acid or base, e.g., an acidic or basic solution comprising an amount of said acid or base that is sufficient to solubilize said ECM. Once the ECM has been made flowable, if desired, the ECM containing composition can be made neutral, or brought to a desired pH, using methods known in the art.</p>
+      <p id="p-00126-en" num="0126">In another embodiment, the ECM used in accordance with the methods described herein is made flowable by contacting the ECM with an enzyme or combination of enzymes, e.g., a protease, such as trypsin, chymotrypsin, pepsin, papain, and/or elastase. Once the ECM has been made flowable, if desired, the enzymes can be inactivated using methods known in the art.</p>
+      <p id="p-00127-en" num="0127">In another embodiment, the ECM used in accordance with the methods described herein is made flowable using physical approaches. In a specific embodiment, the ECM used in accordance with the methods described herein is made flowable by milling the ECM, i.e., grinding the ECM so as to overcome of the interior bonding forces. In another specific embodiment, the ECM used in accordance with the methods described herein is made flowable by shearing the ECM, e.g., with a blender or other source. In another specific embodiment, the ECM used in accordance with the methods described herein is made flowable by cutting the ECM. In certain embodiments, when ECM is made more flowable by use of physical approaches, the ECM may be manipulated in a frozen state (e.g., the ECM is freeze-dried or frozen in liquid nitrogen).</p>
+      <heading id="h-00011-en" level="1">4.1.3.2 Methods of Cross-linking ECM</heading>
+      <p id="p-00128-en" num="0128">The ECM used in accordance with the methods described herein can be cross-linked using methods known in the art and described herein.</p>
+      <p id="p-00129-en" num="0129">In certain embodiments, the ECM is cross-linked before it is applied to a surface in or on a subject, i.e., the ECM may be cross-linked before printing. In accordance with such embodiments, a cross-linker may be included in a composition that comprises the ECM and, if necessary, the composition comprising the ECM and cross-linker may be treated under conditions that give rise to the cross-linking of the ECM before the printing of the ECM.</p>
+      <p id="p-00130-en" num="0130">In other embodiments, the ECM is cross-linked after it is applied to a surface in or on a subject, i.e., the ECM may be cross-linked after printing. In one embodiment, the ECM is cross-linked after it is applied to a surface in or on a subject by first printing the ECM onto said surface, followed by printing of a cross-linker to said surface (i.e., the ECM and the cross-linker are printed as separate compositions). In accordance with this embodiment, if necessary, the ECM can subsequently be cross-linked by treating the ECM and cross-linker under conditions that give rise to the cross-linking of the ECM.</p>
+      <p id="p-00131-en" num="0131">In another embodiment, the ECM is cross-linked after it is applied to a surface in or on a subject by printing a composition comprising both the ECM and a cross-linker onto a surface and, after said printing, treating the ECM and cross-linker under conditions that give rise to the cross-linking of the ECM.</p>
+      <p id="p-00132-en" num="0132">In a specific embodiment, the ECM is cross-linked by chemical cross-linking of hyaluronic acid, an ECM component. In another specific embodiment, the ECM is cross-linked by chemical cross-linking of ECM proteins. Exemplary means of chemical cross-linking hyaluronic acid and ECM components include those described in, e.g., Burdick and Prestwich, 2011, Adv. Mater. 23:H41-H56.</p>
+      <p id="p-00133-en" num="0133">In another specific embodiment, the ECM is cross-linked by photopolymerization of hyaluronic acid using, e.g., methacrylic anhydride and/or Glycidyl methacrylate (see, e.g., ., Burdick and Prestwich, 2011, Adv. Mater. 23:H41-H56).</p>
+      <p id="p-00134-en" num="0134">In another specific embodiment, the ECM is cross-linked by the use of enzymes. Enzymes suitable for cross-linking of ECM include, without limitation, lysyl oxidase (see, e.g., Levental et al., 2009, Cell 139:891-906) and tissue type transglutaminases (see, e.g., Griffin et al., 2002, J. Biochem. 368:377-96).</p>
+      <p id="p-00135-en" num="0135">Those of skill in the art will understand the need to select biocompatible chemical cross-linkers, i.e., cross-linkers that have been deemed safe for use in subjects (e.g., human subjects).</p>
+      <heading id="h-00012-en" level="1">4.1.4 Surfaces</heading>
+      <p id="p-00136-en" num="0136">Any suitable surface in or on a subject can be used as the surface upon which the cells, flowable ECM, and/or any additional components can be deposited (e.g., printed) on in accordance with methods described herein.</p>
+      <p id="p-00137-en" num="0137">In one embodiment, the surface in or on a subject upon which the cells, flowable ECM, and/or any additional components are deposited comprises an artificial surface that has been transplanted into said subject, i.e., a surface that has been man-made. In a specific embodiment, said artificial surface is a prosthetic. Such artificial surfaces may be selected based on their suitability for administration to and/or transplantation in a subject, e.g., a human subject. For example, an artificial surface known not to be immunogenic (i.e., a surface that does not elicit a host immune response) may be selected for use. In certain embodiments, an artificial surface may be treated so as to render it suitable for administration to and/or transplantation in a subject, e.g., a human subject.</p>
+      <p id="p-00138-en" num="0138">In one embodiment, the surface in or on a subject upon which the cells, flowable ECM, and/or any additional components are deposited comprises a plastic surface. Exemplary types of plastic surfaces onto which said cells, ECM, and/or additional components can be deposited include, without limitation, polyester, polyethylene terephtalate, polyethylene, polyvinyl chloride, polyvinylidene chloride, polypropylene, polystyrene, polyamides, polycarbonate, and polyurethanes.</p>
+      <p id="p-00139-en" num="0139">In one embodiment, the surface in or on a subject upon which the cells, flowable ECM, and/or any additional components are deposited comprises a metal surface. Exemplary types of plastic surfaces onto which said cells, ECM, and/or additional components can be deposited include, without limitation, aluminum, chromium, cobalt, copper, gold, iron, lead, magnesium, manganese, mercury, nickel, platinum, silver, tin, titanium, tungsten, and zinc.</p>
+      <p id="p-00140-en" num="0140">In certain embodiments, the artificial surfaces in or on a subject upon which the cells, flowable ECM, and/or any additional components are deposited are engineered so that they form a particular shape. For example, an artificial surface may be engineered so that is the shape of a bone (e.g., an otic bone), and the appropriate cells (e.g., osteocytes, osteoblasts, osteoclasts and other bone-related cells), flowable ECM, and/or any additional components may be deposited on and/or in said surface.</p>
+      <p id="p-00141-en" num="0141">In another embodiment, said surface in or on a subject comprises a tissue or an organ of a subject (e.g., a human subject). In certain embodiments, the surface in or on a subject of said tissue or organ from a subject may be decellularized, e.g., treated so as to remove cells from all or part of the surface of the tissue or organ.</p>
+      <p id="p-00142-en" num="0142">In another embodiment, said surface in or on a subject is prepared for a method described herein by depositing a composition comprising a biomolecule on said surface prior to said printing, wherein said biomolecule is or comprises a type of collagen, a type of fibronectin, a type of laminin, or a tissue adhesive.</p>
+      <p id="p-00143-en" num="0143">In another embodiment, said surface in or on a subject is prepared for a method described herein by covering all or a portion of said surface with a decellularized tissue, e.g., decellularized amniotic membrane, decellularized diaphragm, decellularized skin, or decellularized fascia.</p>
+      <p id="p-00144-en" num="0144">In accordance with the methods described herein, cells, flowable ECM, and/or any additional components may be deposited on (e.g., printed on) any suitable tissue or organ of a subject. In a specific embodiment, the tissue of the subject that provides the printing surface is connective tissue (including bone), muscle tissue (including visceral (smooth) muscle tissue, skeletal muscle tissue, and cardiac muscle tissue), neural tissue (including central nervous system tissue (e.g., brain tissue or spinal cord tissue) or peripheral nervous system tissue (e.g., cranial nerves and spinal nerves)), or epithelial tissue (including endothelium). In another specific embodiment, the organ of the subject that provides the printing surface is from any of the known mammalian organ systems, including the digestive system, circulatory system, endocrine system, excretory system, immune system, integumentary system, muscular system, nervous system, reproductive system, respiratory system, and/or skeletal system. In another specific embodiment, the organ of a subject that provides the printing surface is all or part of a lung, liver, heart, brain, kidney, skin, bone, stomach, pancreas, bladder, gall bladder, small intestine, large intestine, prostate, testes, ovaries, spinal cord, pharynx, larynx, trachea, bronchi, diaphragm, ureter, urethra, esophagus, colon, thymus, and spleen. In another specific embodiment, a pancreas of a subject that provides the printing surface for the methods described herein.</p>
+      <p id="p-00145-en" num="0145">In a specific embodiment, the cells, flowable ECM, and/or any additional components are deposited on (e.g., printed on) a surface in or on a subject that comprises or consists of bone. Exemplary bones that can be printed on include long bones, short bones, flat bones, irregular bones, and seismoid bones. Specific bones that can be printed on include, without limitation, cranial bones, facial bones, otic bones, bones of the phalanges, arm bones, leg bones, ribs, bones of the hands and fingers, bones of the feet and toes, ankle bones, wrist bones, chest bones (e.g., the sternum), and the like.</p>
+      <p id="p-00146-en" num="0146">In a specific embodiment, the cells, flowable ECM, and/or any additional components are deposited on (e.g., printed on) a surface in or on a subject, wherein the surface is on the exterior of said subject. In a specific embodiment, the cells, flowable ECM, and/or any additional components are deposited on (e.g., printed on) a surface in or on a subject, wherein the surface is within the interior of said individual. In a specific embodiment, the cells, flowable ECM, and/or any additional components are deposited on (e.g., printed on) a surface in or on a subject, wherein the surface is within a body cavity or organ of said individual.</p>
+      <p id="p-00147-en" num="0147">In certain embodiments, the surfaces in or on a subject described herein that serve as scaffolds for the deposition (e.g., deposition by bioprinting or by other means) of cells, flowable ECM, and/or any additional components are surfaces that have not been bioprinted. In certain embodiments, the surfaces in or on a subject described herein that serve as scaffolds for the deposition (e.g., deposition by bioprinting or by other means) of cells, flowable ECM, and/or any additional components are surfaces that have been bioprinted, e.g., bioprinted in accordance with the methods described herein. In a specific embodiment, the bioprinted surface comprises a synthetic material. In a specific embodiment, the synthetic material is PCL.</p>
+      <heading id="h-00013-en" level="1">4.2 Compositions</heading>
+      <p id="p-00148-en" num="0148">Provided herein are compositions that can be used in accordance with the methods described herein. In one embodiment, provided herein are compositions comprising cells (e.g., the cells described in Section 4.1.1, above) that are suitable for use in accordance with the methods described herein. In another embodiment, provided herein are compositions comprising flowable ECM (e.g., the flowable ECM described in Section <b>4</b>.<b>1</b>.<b>3</b>, above) that is suitable for use in accordance with the methods described herein. In another embodiment, provided are compositions comprising one or more cross-linkers (e.g., the cross-linkers described in Section 4.1.3.2, above) suitable for use in accordance with the methods described herein.</p>
+      <p id="p-00149-en" num="0149">In one embodiment, provided herein is a composition comprising cells (e.g., the cells described in Section 4.1.1, above) and flowable ECM (e.g., the flowable ECM described in Section 4.1.3, above). In a specific embodiment, the cells comprise stem cells, e.g., bone marrow-derived mesenchymal stem cells (BM-MSCs), tissue plastic-adherent placental stem cells (PDACs), and/or amnion derived adherent cells (AMDACs). In another specific embodiment, the flowable ECM is derived from placenta (e.g., human placenta).</p>
+      <p id="p-00150-en" num="0150">In another embodiment, provided herein is a composition comprising flowable ECM (e.g., the flowable ECM described in Section 4.1.3, above) and one or more cross-linkers (e.g., the cross-linkers described in Section 4.1.3.2, above).</p>
+      <p id="p-00151-en" num="0151">In another embodiment, provided herein is a composition comprising cells (e.g., the cells described in Section 4.1.1, above) and one or more cross-linkers (e.g., the cross-linkers described in Section 4.1.3.2, above).</p>
+      <p id="p-00152-en" num="0152">In another embodiment, provided herein is a composition comprising cells (e.g., the cells described in Section 4.1.1, above), flowable ECM (e.g., the flowable ECM described in Section 4.1.3, above), and one or more cross-linkers (e.g., the cross-linkers described in Section 4.1.3.2, above).</p>
+      <p id="p-00153-en" num="0153">In a specific embodiment, a composition provided herein comprises stem cells and flowable ECM, wherein said stem cells are PDACs and wherein said flowable ECM is derived from placenta. In another specific embodiment, a composition provided herein comprises stem cells and a cross-linker, wherein said stem cells are PDACs. In another specific embodiment, a composition provided herein comprises stem cells, flowable ECM, and a cross-linker, wherein said stem cells are PDACs and wherein said flowable ECM is derived from placenta.</p>
+      <p id="p-00154-en" num="0154">In another specific embodiment, a composition provided herein comprises stem cells and flowable ECM, wherein said stem cells are AMDACs and wherein said flowable ECM is derived from placenta. In another specific embodiment, a composition provided herein comprises stem cells and a cross-linker, wherein said stem cells are AMDACs. In another specific embodiment, a composition provided herein comprises stem cells, flowable ECM, and a cross-linker, wherein said stem cells are AMDACs and wherein said flowable ECM is derived from placenta.</p>
+      <p id="p-00155-en" num="0155">In another specific embodiment, a composition provided herein comprises stem cells and flowable ECM, wherein said stem cells are BM-MSCs and wherein said flowable ECM is derived from placenta. In another specific embodiment, a composition provided herein comprises stem cells and a cross-linker, wherein said stem cells are BM-MSCs. In another specific embodiment, a composition provided herein comprises stem cells, flowable ECM, and a cross-linker, wherein said stem cells are BM-MSCs and wherein said flowable ECM is derived from placenta.</p>
+      <p id="p-00156-en" num="0156">The compositions provided herein, in addition to comprising cells (e.g., the cells described in Section 4.1.1, above) and/or flowable ECM (e.g., the flowable ECM described in Section 4.1.3, above) and/or one or more cross-linkers (e.g., the cross-linkers described in Section 4.1.3.2, above) may additionally comprise other components. In certain embodiments, the compositions provided herein additionally comprise a hydrogel (e.g., a thermosensitive hydrogel and/or a photosensitive hydrogel. Alternatively, a hydrogel may be formulated in a composition separate from the cell and ECM comprising compositions provided herein. In certain embodiments, the compositions provided herein additionally comprise a synthetic polymer, such as polyacrylamide, polyvinylidine chloride, poly(o-carboxyphenoxy)-p-xylene) (poly(o-CPX)), poly(lactide-anhydride) (PLAA), n-isopropyl acrylamide, pent erythritol diacrylate, polymethyl acrylate, carboxymethylcellulose, poly(lactic-co-glycolic acid) (PLGA), and/or a thermoplastic (e.g., polycaprolactone, polylactic acid, polybutylene terephthalate, polyethylene terephthalate, polyethylene, polyester, polyvinyl acetate, and/or polyvinyl chloride). Alternatively, a synthetic polymer may be formulated in a composition separate from the cell and ECM comprising compositions provided herein. In certain embodiments, the compositions provided herein additionally comprise tenascin C or a fragment thereof. Alternatively, tenascin C or a fragment thereof may be formulated in a composition separate from the cell and ECM comprising compositions provided herein. In certain embodiments, the compositions provided herein that additionally comprise titanium-aluminum-vanadium (Ti<sub>6</sub>Al<sub>4</sub>V). Alternatively, Ti<sub>6</sub>Al<sub>4</sub>V may be formulated in a composition separate from the cell and ECM comprising compositions provided herein.</p>
+      <p id="p-00157-en" num="0157">In certain embodiments, the compositions provided herein additionally comprise one or more additional components that promote the survival, differentiation, proliferation, etc. of the cell(s) used in the compositions. Such components may include, without limitation, nutrients, salts, sugars, survival factors, and growth factors. Exemplary growth factors that may be used in accordance with the methods described herein include, without limitation, insulin-like growth factor (e.g., IGF-1), transforming growth factor-beta (TGF-beta), bone-morphogenetic protein, fibroblast growth factor, platelet derived growth factor (PDGF), vascular endothelial growth factor (VEGF), connective tissue growth factor (CTGF), basic fibroblast growth factor (bFGF), epidermal growth factor, fibroblast growth factor (FGF) (numbers 1, 2 and 3), osteopontin, bone morphogenetic protein-2, growth hormones such as somatotropin, cellular attractants and attachment agents, etc., and mixtures thereof. Alternatively, one or more additional components that promote the survival, differentiation, proliferation, etc. of the cell(s) may be formulated in a composition separate from the cell and ECM comprising compositions provided herein.</p>
+      <heading id="h-00014-en" level="1">4.3 Uses</heading>
+      <p id="p-00158-en" num="0158">The methods described herein can be used for any suitable purpose. In a specific embodiment, the methods described herein are used for therapeutic purposes, e.g., cells, ECM, and/or other additional components are printed in or on a subject so as to result in a therapeutic effect in said subject.</p>
+      <heading id="h-00015-en" level="1">4.3.1 Therapeutic Uses</heading>
+      <p id="p-00159-en" num="0159">In certain embodiments, the methods described herein are used to treat a subject in need of a transplant (e.g., a tissue or organ transplant). In certain embodiments, the methods described herein are used to treat a subject in need of a graft (e.g., a skin graft). Methods of transplantation, including grafting (e.g., skin grafting) and surgical transplantation procedures are well-known to those of skill in the art and can be modified to conform to the methods described herein.</p>
+      <p id="p-00160-en" num="0160">In certain embodiments, the cells and/or ECM used in the methods described herein are derived are from the transplant recipient. In other embodiments, the cells and/or ECM used in the methods described herein are not from the transplant recipient, but are from another subject, e.g., a donor, a cadaver, etc. In certain embodiments, the cells used in the methods described herein are from the transplant recipient, and the ECM used in the methods described herein is not from the transplant recipient, but is from another source. In a specific embodiment, the ECM used in the methods described herein is derived is from a placenta (e.g., a human placenta). In certain embodiments, the ECM used in the methods described herein is derived is from the transplant recipient, and the cells used in the methods described herein are not from the transplant recipient, but are from another source.</p>
+      <p id="p-00161-en" num="0161">In a specific embodiment, the methods described herein are used to generate epithelial tissue (e.g., skin, dermis, or epidermis) on a surface in or on a subject, wherein said subject is in need of such epithelial tissue (e.g., the subject is a burn victim or has or had a form of skin disease). In a specific embodiment, said subject is human. In another specific embodiment, at least one cellular composition used in the method comprises epidermal cells. In another specific embodiment, at least one cellular composition used in the method comprises dermal cells. In another specific embodiment, at least one cellular composition used in the method comprises mesenchymal stem cells. In another specific embodiment, the cellular composition(s) used in the method comprise epidermal cells, dermal cells, and mesenchymal stem cells. In another specific embodiment, the surface of the subject is a portion of the subject's skin.</p>
+      <p id="p-00162-en" num="0162">In another specific embodiment, the methods described herein are not used to generate epithelial tissue (e.g., skin, dermis, or epidermis) on a surface in or on a subject.</p>
+      <p id="p-00163-en" num="0163">In another specific embodiment, the methods described herein are used to generate connective tissue (e.g., bone) on a surface in or on a subject, wherein said subject is in need of such connective tissue (e.g., the subject has or had osteoporosis or bone cancer). In a specific embodiment, said subject is human. In another specific embodiment, the surface of the subject is one or more of the subject's bones.</p>
+      <p id="p-00164-en" num="0164">In another specific embodiment, the methods described herein are used to generate neural tissue (e.g., brain tissue or spinal cord tissue) on a surface in or on a subject, wherein said subject is in need of such neural tissue. In a specific embodiment, said subject has been diagnosed with a neural disease (i.e., a disease of the central or peripheral nervous system). In another specific embodiment, said subject has suffered trauma that has damaged the central or peripheral nervous system of the subject, e.g., the subject has suffered a traumatic brain injury (TBI) or spinal cord injury (SCI). In another specific embodiment, said subject is human. In another specific embodiment, the surface of the subject is the subject's brain. . In another specific embodiment, the surface of the subject is the subject's spinal cord.</p>
+      <p id="p-00165-en" num="0165">In another specific embodiment, the methods described herein are used to generate liver tissue on a surface in or on a subject, wherein said subject is in need of such liver tissue (e.g., the subject has or had cirrhosis of the liver, hepatitis, or liver cancer). In a specific embodiment, said subject is human. In another specific embodiment, the surface of the subject is the subject's liver.</p>
+      <p id="p-00166-en" num="0166">In another specific embodiment, the methods described herein are used to generate lung tissue on a surface in or on a subject, wherein said subject is in need of such lung tissue (e.g., the subject has or had lung cancer, emphysema, or COPD). In a specific embodiment, said subject is human. In another specific embodiment, the surface of the subject is the subject's lung.</p>
+      <p id="p-00167-en" num="0167">In another specific embodiment, the methods described herein are used to generate circulatory system tissue (e.g., heart tissue, arteries, or veins) on a surface in or on a subject, wherein said subject is in need of such circulatory system tissue (e.g., the subject has or had heart disease, coronary artery disease, or issues with the valves of the heart). In a specific embodiment, said subject is human. In another specific embodiment, the surface of the subject is the subject's heart. In another specific embodiment, the surface of the subject is the one or more of the subject's arteries or veins.</p>
+      <p id="p-00168-en" num="0168">In another specific embodiment, the methods described herein are used to generate kidney tissue on a surface in or on a subject, wherein said subject is in need of such kidney tissue (e.g., the subject has or had a form of kidney disease). In a specific embodiment, said subject is human. In another specific embodiment, the cellular composition used in the method comprises at least one type of parenchymal cell and one type of stromal cell. In another specific embodiment, said one type of parenchymal cell and said one type of stromal cells are present in a population of kidney cells disaggregated from autologous or allogeneic kidney tissue. In another specific embodiment, the surface of the subject is one or both of the subject's kidneys.</p>
+      <p id="p-00169-en" num="0169">In another specific embodiment, the methods described herein are used to generate pancreatic tissue on a surface in or on a subject, wherein said subject is in need of such pancreatic tissue (e.g., the subject has or had pancreatic cancer). In a specific embodiment, said subject is human. In another specific embodiment, the surface of the subject is the subject's pancreas.</p>
+      <p id="p-00170-en" num="0170">In another specific embodiment, the methods described herein are used to generate prostate tissue on a surface in or on a subject, wherein said subject is in need of such prostate tissue (e.g., the subject has or had prostate cancer). In a specific embodiment, said subject is human. In another specific embodiment, the surface of the subject is the subject's prostate.</p>
+      <p id="p-00171-en" num="0171">In another specific embodiment, the methods described herein are used to generate stomach tissue on a surface in or on a subject, wherein said subject is in need of such stomach tissue (e.g., the subject has or had stomach cancer). In a specific embodiment, said subject is human. In another specific embodiment, the surface of the subject is the subject's stomach.</p>
+      <p id="p-00172-en" num="0172">In another specific embodiment, the methods described herein are used to generate colon tissue on a surface in or on a subject, wherein said subject is in need of such colon tissue (e.g., the subject has or had colon cancer). In a specific embodiment, said subject is human. In another specific embodiment, the surface of the subject is the subject's colon.</p>
+      <p id="p-00173-en" num="0173">In another specific embodiment, the methods described herein are used to generate intestinal tissue (e.g., one or more tissues associated with the small or large intestine) on a surface in or on a subject, wherein said subject is in need of such intestinal tissue (e.g., the subject has or had a disease of the intestines). In a specific embodiment, said subject is human. In another specific embodiment, the surface of the subject is a portion of the subject's small intestine. In another specific embodiment, the surface of the subject is a portion of the subject's large intestine.</p>
+      <p id="p-00174-en" num="0174">In another specific embodiment, the methods described herein are used to generate esophageal tissue on a surface in or on a subject, wherein said subject is in need of such esophageal tissue. In a specific embodiment, said subject is human. In another specific embodiment, the surface of the subject is the subject's esophagus.</p>
+      <p id="p-00175-en" num="0175">In another specific embodiment, the methods described herein are used to generate thyroid tissue on a surface in or on a subject, wherein said subject is in need of such thyroid tissue. In a specific embodiment, said subject is human. In another specific embodiment, the surface of the subject is the subject's thyroid.</p>
+      <p id="p-00176-en" num="0176">In another specific embodiment, the methods described herein are used to deposit cells in a subject, wherein said cells are engineered to express one or more factors (e.g., proteins or polypeptides), and wherein said subject is in need of said one or more factors, e.g., the subject is deficient in said one or more factors (e.g., due to genetic mutation or genetic predisposition). In a specific embodiment, the subject is a human, e.g., a human with a genetic disease or disorder, wherein said genetic disease or disorder can be treated with, in whole or in part, said one or more factors. In another specific embodiment, the subject is a human with a disease that can be treated with, in whole or in part, said one or more factors. In accordance with such embodiments, the cells can be deposited on any surface, in or on said subject, so long as the one or more factors are expressed by the cell in amount sufficient to treat the disease or disorder in question. Exemplary tissues and organs in or on a subject upon which said cells can be deposited are described in Section 4.1.2, above. Exemplary factors that can be produced by said cells are described in Section 4.1.1, above.</p>
+      <heading id="h-00016-en" level="1">4.3.2 Patient Populations</heading>
+      <p id="p-00177-en" num="0177">The methods described herein can be used to benefit various patient populations. In one embodiment, the methods described herein are used in subjects that require an organ transplant. In another embodiment, the methods described herein are used in subjects that require treatment of a disease or disorder.</p>
+      <p id="p-00178-en" num="0178">In a specific embodiment, the methods described herein are used to engineer tissue in a subject that has been diagnosed with cancer, i.e., to replace all or part of one or more of the organs/tissues of said subject that have been affected by the cancer. In a specific embodiment, the methods described herein are used to engineer tissue in a subject that has been diagnosed with a bone or connective tissue sarcoma, brain cancer, breast cancer, ovarian cancer, kidney cancer, pancreatic cancer, esophageal cancer, stomach cancer, esophageal cancer, liver cancer, lung cancer (e.g., small cell lung cancer (SCLC), non-small cell lung cancer (NSCLC), throat cancer, and mesothelioma), colon cancer and/or prostate cancer.</p>
+      <p id="p-00179-en" num="0179">In another specific embodiment, the methods described herein are used to engineer tissue in a subject that has been diagnosed with a respiratory disease, e.g., the subject has been diagnosed with asthma, chronic obstructive pulmonary disorder (COPD), emphysema, pneumonia, tuberculosis, lung cancer and/or cystic fibrosis.</p>
+      <p id="p-00180-en" num="0180">In another specific embodiment, the methods described herein are used to engineer tissue in a subject that has been diagnosed with a liver disease, e.g., the subject has been diagnosed with hepatitis (e.g., Hepatitis A, B, or C), liver cancer, hemochromatosis, or cirrhosis of the liver.</p>
+      <p id="p-00181-en" num="0181">In another specific embodiment the methods described herein are used to engineer tissue in a subject that has been diagnosed with bone cancer (e.g., osteosarcoma), osteonecrosis, metabolic bone disease, Fibrodysplasia ossificans progressive, or osteoporosis.</p>
+      <p id="p-00182-en" num="0182">In another specific embodiment, the methods described herein are used to engineer tissue in a subject that has been diagnosed with a neural disease (i.e., a disease of the central or peripheral nervous system), e.g., the subject has been diagnosed with brain cancer, encephalitis, meningitis, Alzheimer's disease, Parkinson's disease, stroke, or multiple sclerosis.</p>
+      <p id="p-00183-en" num="0183">In another specific embodiment, the methods described herein are used to engineer tissue in a subject that has undergone trauma that has damaged the central or peripheral nervous system of the subject, e.g., the subject has suffered a traumatic brain injury (TBI) or spinal cord injury (SCI).</p>
+      <p id="p-00184-en" num="0184">In another specific embodiment, the methods described herein are used to engineer tissue in a subject that has been diagnosed with a disease of the circulatory system, e.g., the subject has been diagnosed with coronary heart disease, cardiomyopathy (e.g., intrinsic or extrinsic cardiomyopathy), heart attack, stroke, inflammatory heart disease, hypertensive heart disease, or valvular heart disease.</p>
+      <p id="p-00185-en" num="0185">In another specific embodiment, the methods described herein are used to engineer tissue in a subject that has been diagnosed with kidney disease. In one embodiment, the subject possesses one kidney that is malfunctioning. In another embodiment, the subject possesses two kidneys that are malfunctioning.</p>
+      <p id="p-00186-en" num="0186">In another specific embodiment, the methods described herein are used to engineer tissue in a subject that has been diagnosed with a genetic disease or disorder, e.g., the subject has been diagnosed with familial hypercholesterolemia, polycystic kidney disease, or phenylketonuria.</p>
+      <p id="p-00187-en" num="0187">In another specific embodiment, the methods described herein are used to engineer tissue in a subject that has been diagnosed with diabetes.</p>
+      <p id="p-00188-en" num="0188">In another specific embodiment, the methods described herein are used to engineer tissue in a subject that has been diagnosed with a cleft palate.</p>
+      <p id="p-00189-en" num="0189">In another specific embodiment, the methods described herein are used to engineer tissue in a subject that undergoes regular procedures that require piercing of the subject's skin (e.g., the subject is a dialysis patient).</p>
+      <p id="p-00190-en" num="0190">In some embodiments, a subject to which a tissue or organ generated in accordance with the methods described herein is transplanted is an animal. In certain embodiments, the animal is a bird. In certain embodiments, the animal is a canine. In certain embodiments, the animal is a feline. In certain embodiments, the animal is a horse. In certain embodiments, the animal is a cow. In certain embodiments, the animal is a mammal, e.g., a horse, swine, mouse, or primate, preferably a human. In a specific embodiment, a subject to which a tissue or organ generated in accordance with the methods described herein is transplanted is a human.</p>
+      <p id="p-00191-en" num="0191">In certain embodiments, a subject to which a tissue or organ generated in accordance with the methods described herein is transplanted is a human adult. In certain embodiments, a subject to which a tissue or organ generated in accordance with the methods described herein is transplanted is a human infant. In certain embodiments, a subject to which a tissue or organ generated in accordance with the methods described herein is transplanted is a human child.</p>
+      <heading id="h-00017-en" level="1">4.4 Kits</heading>
+      <p id="p-00192-en" num="0192">Provided herein is a pharmaceutical pack or kit comprising one or more containers filled with one or more of the ingredients of the compositions described herein. Optionally associated with such container(s) can be a notice in the form prescribed by a governmental agency regulating the manufacture, use or sale of pharmaceuticals or biological products, which notice reflects approval by the agency of manufacture, use or sale for human administration.</p>
+      <p id="p-00193-en" num="0193">In a specific embodiment, a kit provided herein comprises a composition comprising the cells described herein and the flowable ECM described herein. Such a kit may optionally comprise a composition comprising one or more additional components. The kits encompassed herein can be used in accordance with the methods described herein.</p>
+      <heading id="h-00018-en" level="1">5. EXAMPLES</heading>
+      <heading id="h-00019-en" level="1">5.1 Example 1</heading>
+      <heading id="h-00020-en" level="1">Bioprinted Scaffolds Support Attachment and Growth of Placental Stem Cells</heading>
+      <p id="p-00194-en" num="0194">This example demonstrates that synthetic material can be bioprinted to produce scaffolds of controlled fiber diameter and pore size, and that such scaffolds provide a suitable substrate for the application of extracellular matrix (ECM). This example further demonstrates that scaffolds comprising bioprinted synthetic material and ECM (hybrid scaffolds) represent a suitable substrate for the attachment and growth of cells, including placental cells, such as placental stem cells.</p>
+      <heading id="h-00021-en" level="1">5.1.1 Methods</heading>
+      <p id="p-00195-en" num="0195">To fabricate hybrid scaffolds comprising synthetic material and ECM, polycaprolactone (PCL) (Mn 45,000, Sigma) was first printed into scaffolds (54×54'0.64 mm) using a bioprinter (EnvisionTEC, Gladbeck, Germany). The printing conditions were as follows: temperature at 90° C., printing pressure 3-5.5 bar, printing speed 2-6 mm/s, with suitable size needles. ECM was isolated from human placenta as previously described (see, e.g., Bhatia M B, Wounds 20, 29, 2008). Isolated ECM was applied to both sides of the bioprinted PCL scaffolds and allowed to dry (dehydrate) so as to generate hybrid scaffolds comprising PCL and ECM. The resultant hybrid PCL-ECM scaffolds were punched into 10 mm diameter disks, pre-wet with media overnight, and seeded with placental stem cells prepared in accordance with the methods described herein (see, e.g., Section 4.1.1) at 12,500 cells/cm<sup>2</sup>. The cells were cultured over an 8-day time period. Calcein staining and MTS proliferation assays were performed in accordance with standard protocols at different time points (n=<b>3</b>) to determine cell viability and proliferation.</p>
+      <heading id="h-00022-en" level="1">5.1.2 Results</heading>
+      <p id="p-00196-en" num="0196">By optimizing printing conditions, PCL scaffolds of different fiber sizes, pore sizes and pore structures were generated (<figref>FIG. 1</figref>). The printed fibers formed a stable network for the generation of hybrid scaffolds comprising PCL and ECM. Further, the printing of varying fiber sizes and pore structures made it possible to make hybrid scaffolds comprising various properties.</p>
+      <p id="p-00197-en" num="0197">Dehydration of ECM on both sides of the bioprinted PCL scaffolds resulted in the generation of hybrid scaffolds. Good integration was seen between the PCL and ECM; no separation between the PCL and ECM was noticed when the hybrid scaffolds were manipulated by processing or culturing of the scaffolds, which included rehydration (<figref>FIG. 2</figref>).</p>
+      <p id="p-00198-en" num="0198">The placental stem cells spread over the surface of the hybrid scaffolds over time, and covered the majority of the surface of the hybrid scaffolds by day 6 of culture. The MTS cell proliferation assay demonstrated that cell number significantly increased over time (<figref>FIG. 3</figref>). In addition, the placental stem cells seeded on the hybrid scaffolds demonstrated good viability over the 8 day culture period, as indicated by calcein staining (<figref>FIG. 4</figref>). Together, these data indicate that PCL-ECM hybrid scaffolds support cellular attachment, survival, and growth.</p>
+      <heading id="h-00023-en" level="1">5.1.3 Conclusion</heading>
+      <p id="p-00199-en" num="0199">This example demonstrates that hybrid scaffolds comprising ECM and synthetic material (PCL) can be generated by methods that comprise bioprinting, and that cells not only attach to such scaffolds, but survive and proliferate when cultured on such scaffolds.</p>
+      <heading id="h-00024-en" level="1">5.2 Example 2  </heading>
+      <heading id="h-00025-en" level="1">Bioprinted Scaffolds Support Attachment and Growth of Placental Stem Cells</heading>
+      <p id="p-00200-en" num="0200">This example demonstrates that synthetic material and ECM comprising cells, such as placental cells, e.g., placental stem cells, can be simultaneously bioprinted to produce hybrid scaffolds. As demonstrated by this Example, the bioprinted cells not only survive the bioprinting process, but proliferate over time in culture with the hybrid scaffolds.</p>
+      <heading id="h-00026-en" level="1">5.2.1 Methods</heading>
+      <p id="p-00201-en" num="0201">ECM was prepared as described in Example 1 and mixed with 0.5% alginate hydrogel containing 1 million/ml placental stem cells. Next, PCL and the cell-containing ECM were bioprinted, in layers, to generate a hybrid scaffold comprising PCL and ECM. In each layer of the scaffold, PCL was first printed, then the ECM/cell component was printed to fill the gaps in between the PCL lines. Two or five of such layers were printed and crosslinked with CaCl<sub>2 </sub>solution to generate the hybrid scaffolds. The bioprinted, cell-containing scaffolds (cells/ECM/PCL) were cultured for seven days, and cell proliferation and survival were assessed at various time points via calcein staining and an MTS cell proliferation assay.</p>
+      <heading id="h-00027-en" level="1">5.2.2 Results</heading>
+      <p id="p-00202-en" num="0202">The bioprinted scaffolds maintained an intact structure throughout the duration of cell culture (<figref>FIG. 5</figref>). PCL provided a good structural support for the ECM hydrogels, which allowed for the generation of three-dimensional constructs. Following bioprinting and throughout culture, the cells were well-distributed throughout the three-dimensional constructs; cells were found throughout the depth of the scaffolds during culture (<figref>FIG. 6</figref>).</p>
+      <p id="p-00203-en" num="0203">The placental stem cells survived the bioprinting process and continued to proliferate in the three-dimensional bioprinted hybrid scaffolds throughout culture, as evidenced by calcein staining (<figref>FIG. 7</figref>). As shown in <figref>FIG. 8</figref>, most of the cells were found to spread throughout the ECM in the hybrid scaffolds, indicating that the ECM enhanced cell attachment and spreading in the ECM hydrogel. This was confirmed by comparing the location of cells in alginate alone with that of the cells in the scaffolds. Additionally, as shown in <figref>FIG. 9</figref>, an MTS cell proliferation assay demonstrated increases in cell number for both the 2-layer and 5-layer scaffolds, indicating that these hybrid scaffolds supported cell growth.</p>
+      <heading id="h-00028-en" level="1">5.2.3 Conclusion</heading>
+      <p id="p-00204-en" num="0204">This example demonstrates that hybrid scaffolds comprising ECM and synthetic material (PCL) can be generated by methods that comprise simultaneous bioprinting of ECM and PCL. Also demonstrated by this Example is the fact that cells can be bioprinted along with the components of the hybrid scaffold (ECM and PCL), and that the cells survive the bioprinting process. Further, the cells bioprinted along with the components of the hybrid scaffold proliferate when cultured on such scaffolds and intersperse throughout the scaffolds better than when cultured in cellular matrix (alginate) alone.</p>
+      <heading id="h-00029-en" level="1">5.3 Example 3  </heading>
+      <heading id="h-00030-en" level="1">Functional Bioprinted Scaffolds</heading>
+      <p id="p-00205-en" num="0205">This example demonstrates that synthetic material and ECM comprising cells can be bioprinted to produce functional scaffolds.</p>
+      <p id="p-00206-en" num="0206">β-TC-6 cells, an insulin producing cell line, were bioprinted with human placenta derived extracellular matrix (ECM) into a bioprinted scaffold. The scaffold was 15×15×2.5 mm in dimensions, and contained 5 layers. In each layer, polycaprolactone (PCL) was first printed, followed by printing of β-TC-6 cells, mixed at 15 million cells/ml in alginate-ECM hydrogel (1% alginate and 12% ECM) between the PCL lines. The entire scaffold was immersed in 1% calcium chloride solution to crosslink for 20 minutes. The scaffolds then were cultured in DMEM medium containing 15% fetal calf serum in a cell culture incubator in 6 well plates (3 to 5 ml of medium per well). At different time points, the scaffolds were harvested for calcein staining and MTS proliferation assays, to characterize cell viability and cell proliferation, respectively. <figref>FIG. 10</figref> shows the structure of the bio-printed scaffolds.</p>
+      <p id="p-00207-en" num="0207">Calcein staining demonstrated that the β-TC-6 cells survived the printing process and remained viable during culture. A cross-sectional view of the scaffolds showed that the cells distributed evenly throughout the scaffolds, and remained alive in each layer (see <figref>FIG. 10</figref>). The MTS assay confirmed that the insulin producing β-TC-6 cells remained viable for up to 3 weeks, with the overall number of viable cells remaining constant (see <figref>FIG. 11</figref>).</p>
+      <p id="p-00208-en" num="0208">To determine whether the β-TC-6 cells could function in the bioprinted scaffold, insulin production by the cells was measured. To measure insulin production, the bio-printed scaffolds were exposed to fresh growth medium (3 ml/well in a 6-well plate) for 2 hours and aliquots of the supernatant from each scaffold were measured for insulin concentration using a mouse insulin ELISA kit (Millipore). The highest level of insulin produced was detected at day 0 (see <figref>FIG. 12</figref>). The levels of secreted insulin decreased in culture afterwards (day-3 and day-6) but remained stable from day 3 to day 6 in the culture (see <figref>FIG. 12</figref>). Thus, the β-TC-6 cells maintained the ability to produce and secrete insulin after being bioprinted.</p>
+      <p id="p-00209-en" num="0209">A key function of insulin producing cells in the pancreas is to produce insulin in response to increased glucose levels in the blood. It was thus examined whether the bioprinted scaffolds comprising PCL, ECM, and β-TC-6 cells retained this function by exposing the scaffolds to a glucose surge challenge (see <figref>FIG. 13</figref>). One scaffold (“A” of <figref>FIG. 13</figref>) was exposed to glucose starvation conditions (IMDM medium without glucose, 10% FCS) for two days and then challenged with an insulin producing condition (50 mM glucose/1 mM IBMX). As controls, bioprinted scaffolds were maintained in normal culture medium with steady glucose levels (“B” and “C” of <figref>FIG. 13</figref>). In the controls, the medium was changed at the same time that the challenge with an insulin producing condition was performed for the test scaffold (i.e., A of <figref>FIG. 13</figref>). The supernatant from each culture (A, B, and C) was sampled every half hour and the insulin concentration from each supernatant was measured by ELISA. <figref>FIG. 13</figref> shows the levels of insulin production from each culture at the different time points and demonstrates that the bioprinted scaffold exposed to glucose starvation conditions followed by challenge with an insulin producing condition (i.e., A of <figref>FIG. 13</figref>) produced greater than 80-fold more insulin after 3 hours after challenge as compared to its level of insulin production at 0.5 hours post-challenge, while the controls (i.e., B and C of <figref>FIG. 13</figref>) produced much less insulin (only approximately 2-fold more insulin after 3 hours following media change as compared to the level of insulin production at 0.5 hour post-media change).</p>
+      <p id="p-00210-en" num="0210">This Example demonstrates that bioprinted scaffolds comprising synthetic material, cells, and ECM can be generated and that the cells of the bioprinted scaffolds remain both viable and functional.</p>
+      <p id="p-00211-en" num="0211">The compositions and methods disclosed herein are not to be limited in scope by the specific embodiments described herein. Indeed, various modifications of the compositions and methods in addition to those described will become apparent to those of skill in the art from the foregoing description and accompanying figures. Such modifications are intended to fall within the scope of the appended claims.</p>
+      <p id="p-00212-en" num="0212">Various publications, patents and patent applications are cited herein, the disclosures of which are incorporated by reference in their entireties.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method of forming a three-dimensional tissue comprising depositing at least one cellular composition and extracellular matrix (ECM) onto a surface in or on a subject.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said cellular composition and said ECM are both deposited onto said surface.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said cellular composition and said ECM are both printed onto said surface.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said surface is an artificial surface.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said artificial surface is a prosthetic device or structure.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said surface is decellularized tissue or a decellularized organ.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method of any of <claim-ref idref="clm-00001-en">claims 1 </claim-ref>-6, wherein said surface is a surface on the exterior of said subject.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method of any of <claim-ref idref="clm-00001-en">claims 1 </claim-ref>-6, wherein said surface is a surface within the interior of said subject.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein said surface is a surface within a body cavity, bone, or organ of said subject.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method of any of <claim-ref idref="clm-00001-en">claims 1 </claim-ref>-9, comprising scanning said surface in or on said subject so as to form a surface map, and using said surface map to guide said depositing.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method of <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein said scanning comprises the use of a laser, electron beam, magnetic resonance imaging, microwave, x-ray, or computed tomography.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method of any of <claim-ref idref="clm-00001-en">claims 1 </claim-ref>-11, wherein said ECM comprises mammalian ECM, molluscan ECM, piscene ECM, and or plant ECM.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein said mammalian ECM is placental ECM.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein said ECM comprises telopeptide placental collagen.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein said telopeptide placental collagen comprises base-treated, detergent treated Type I telopeptide placental collagen.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method of <claim-ref idref="clm-00014-en">claim 14 </claim-ref> or <claim-ref idref="clm-00015-en">15</claim-ref>, wherein said collagen has not been chemically modified or contacted with a protease.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The method of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein said placental ECM comprises base-treated and/or detergent treated Type I telopeptide placental collagen that has not been chemically modified or contacted with a protease, wherein said ECM comprises less than 5% fibronectin or less than 5% laminin by weight; between 25% and 92% Type I collagen by weight; and 2% to 50% Type III collagen or 2% to 50% type IV collagen by weight.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein said placental ECM comprises base-treated, detergent treated Type I telopeptide placental collagen that has not been chemically modified or contacted with a protease, wherein said ECM comprises less than 1% fibronectin or less than 1% laminin by weight; between 74% and 92% Type I collagen by weight; and 4% to 6% Type III collagen or 2% to 15% type IV collagen by weight.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The method of any of <claim-ref idref="clm-00001-en">claims 1 </claim-ref>-18, further comprising deposition of a hydrogel.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The method of <claim-ref idref="clm-00019-en">claim 19</claim-ref>, wherein said hydrogel is a thermosensitive hydrogel.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. The method of <claim-ref idref="clm-00019-en">claim 19</claim-ref>, wherein said hydrogel is a photosensitive hydrogel.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. The method of any of <claim-ref idref="clm-00019-en">claims 19 </claim-ref>-21, wherein said ECM and said hydrogel are combined in a ratio of about 10:1 to 1:10 by weight.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>23</b>. The method of any of <claim-ref idref="clm-00001-en">claims 1 </claim-ref>-18, further comprising deposition of a synthetic polymer.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>24</b>. The method of <claim-ref idref="clm-00023-en">claim 23</claim-ref>, wherein said synthetic polymer is thermosensitive.</claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en">
+      <claim-text>
+        <b>25</b>. The method of <claim-ref idref="clm-00023-en">claim 23</claim-ref>, wherein said synthetic polymer is photosensitive.</claim-text>
+    </claim>
+    <claim num="26" id="clm-00026-en">
+      <claim-text>
+        <b>26</b>. The method of <claim-ref idref="clm-00023-en">claim 23</claim-ref>, wherein said synthetic polymer comprises a thermoplastic.</claim-text>
+    </claim>
+    <claim num="27" id="clm-00027-en">
+      <claim-text>
+        <b>27</b>. The method of <claim-ref idref="clm-00026-en">claim 26</claim-ref>, wherein said synthetic polymer is poly(L-lactide-co-glycolide) (PLGA).</claim-text>
+    </claim>
+    <claim num="28" id="clm-00028-en">
+      <claim-text>
+        <b>28</b>. The method of <claim-ref idref="clm-00026-en">claim 26</claim-ref>, wherein said thermoplastic is polycaprolactone, polylactic acid, polybutylene terephthalate, polyethylene terephthalate, polyethylene, polyester, polyvinyl acetate, or polyvinyl chloride.</claim-text>
+    </claim>
+    <claim num="29" id="clm-00029-en">
+      <claim-text>
+        <b>29</b>. The method of <claim-ref idref="clm-00023-en">claim 23</claim-ref>, wherein said synthetic polymer is polyacrylamide, polyvinylidine chloride, poly(o-carboxyphenoxy)-p-xylene) (poly(o-CPX)), poly(lactide-anhydride) (PLAA), n-isopropyl acrylamide, pent erythritol diacrylate, polymethyl acrylate, carboxymethylcellulose, or poly(lactic-co-glycolic acid) (PLGA).</claim-text>
+    </claim>
+    <claim num="30" id="clm-00030-en">
+      <claim-text>
+        <b>30</b>. The method of any of <claim-ref idref="clm-00001-en">claims 1 </claim-ref>-30, further comprising deposition of tenascin C or a fragment thereof.</claim-text>
+    </claim>
+    <claim num="31" id="clm-00031-en">
+      <claim-text>
+        <b>31</b>. The method of any of <claim-ref idref="clm-00001-en">claims 1 </claim-ref>-31, further comprising deposition of a titanium-aluminum-vanadium (Ti<sub>6</sub>Al<sub>4</sub>V) composition.</claim-text>
+    </claim>
+    <claim num="32" id="clm-00032-en">
+      <claim-text>
+        <b>32</b>. The method of <claim-ref idref="clm-00031-en">claim 31</claim-ref>, wherein said titanium-aluminum-vanadium composition is deposited in the form of an interconnected porous network of fibers.</claim-text>
+    </claim>
+    <claim num="33" id="clm-00033-en">
+      <claim-text>
+        <b>33</b>. The method of any one of <claim-ref idref="clm-00014-en">claims 14 </claim-ref>-18, wherein said telopeptide collagen is derivatized prior to said depositing.</claim-text>
+    </claim>
+    <claim num="34" id="clm-00034-en">
+      <claim-text>
+        <b>34</b>. The method of <claim-ref idref="clm-00033-en">claim 33</claim-ref>, wherein said telopeptide collagen is derivatized with one or more of a cell attachment peptide, a cell attachment protein, a cytokine, or a glycosaminoglycan.</claim-text>
+    </claim>
+    <claim num="35" id="clm-00035-en">
+      <claim-text>
+        <b>35</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said ECM comprises or is derivatized with a cell attachment peptide, a cell attachment protein, a cytokine, or a glycosaminoglycan.</claim-text>
+    </claim>
+    <claim num="36" id="clm-00036-en">
+      <claim-text>
+        <b>36</b>. The method of <claim-ref idref="clm-00034-en">claim 34 </claim-ref> or <claim-ref idref="clm-00035-en">claim 35</claim-ref>, wherein said cytokine is vascular endothelial growth factor (VEGF), or a bone morphogenetic protein (BMP).</claim-text>
+    </claim>
+    <claim num="37" id="clm-00037-en">
+      <claim-text>
+        <b>37</b>. The method of <claim-ref idref="clm-00034-en">claim 34 </claim-ref> or <claim-ref idref="clm-00035-en">claim 35</claim-ref>, wherein said cell attachment peptide is a cell responsive peptide comprising one or more RGD motifs.</claim-text>
+    </claim>
+    <claim num="38" id="clm-00038-en">
+      <claim-text>
+        <b>38</b>. The method of any of <claim-ref idref="clm-00001-en">claims 1 </claim-ref>-37 wherein said cellular composition comprises bone marrow-derived mesenchymal stem cells (BM-MSCs).</claim-text>
+    </claim>
+    <claim num="39" id="clm-00039-en">
+      <claim-text>
+        <b>39</b>. The method of any of <claim-ref idref="clm-00001-en">claims 1 </claim-ref>-37, wherein said cellular composition comprises tissue culture plastic-adherent CD34−, CD10+, CD105+, CD200+ placental stem cells.</claim-text>
+    </claim>
+    <claim num="40" id="clm-00040-en">
+      <claim-text>
+        <b>40</b>. The method of <claim-ref idref="clm-00039-en">claim 39</claim-ref>, wherein said placental stem cells are additionally one or more of CD45<sup>−</sup>, CD80<sup>−</sup>, CD86<sup>−</sup>, or CD90<sup>+</sup>.</claim-text>
+    </claim>
+    <claim num="41" id="clm-00041-en">
+      <claim-text>
+        <b>41</b>. The method of <claim-ref idref="clm-00040-en">claim 40</claim-ref>, wherein said placental stem cells are additionally CD45<sup>−</sup>, CD80<sup>−</sup>, CD86<sup>−</sup>, and CD90<sup>+</sup>.</claim-text>
+    </claim>
+    <claim num="42" id="clm-00042-en">
+      <claim-text>
+        <b>42</b>. The method of any of <claim-ref idref="clm-00039-en">claims 39 </claim-ref>-41, wherein said placental stem cells suppress an immune response in said recipient.</claim-text>
+    </claim>
+    <claim num="43" id="clm-00043-en">
+      <claim-text>
+        <b>43</b>. The method of <claim-ref idref="clm-00042-en">claim 42</claim-ref>, wherein said placental stem cells suppresses an immune response locally within said recipient.</claim-text>
+    </claim>
+    <claim num="44" id="clm-00044-en">
+      <claim-text>
+        <b>44</b>. The method of any of <claim-ref idref="clm-00001-en">claims 1 </claim-ref>-37, wherein said cellular composition comprises embryonic stem cells, embryonic germ cells, induced pluripotent stem cells, mesenchymal stem cells, bone marrow-derived mesenchymal stem cells, bone marrow-derived mesenchymal stromal cells, tissue plastic-adherent placental stem cells (PDACs), umbilical cord stem cells, amniotic fluid stem cells, amnion derived adherent cells (AMDACs), osteogenic placental adherent cells (OPACs), adipose stem cells, limbal stem cells, dental pulp stem cells, myoblasts, endothelial progenitor cells, neuronal stem cells, exfoliated teeth derived stem cells, hair follicle stem cells, dermal stem cells, parthenogenically derived stem cells, reprogrammed stem cells, amnion derived adherent cells, or side population stem cells.</claim-text>
+    </claim>
+    <claim num="45" id="clm-00045-en">
+      <claim-text>
+        <b>45</b>. The method of any of <claim-ref idref="clm-00001-en">claims 1 </claim-ref>-37, wherein said cellular composition comprises differentiated cells.</claim-text>
+    </claim>
+    <claim num="46" id="clm-00046-en">
+      <claim-text>
+        <b>46</b>. The method of <claim-ref idref="clm-00045-en">claim 45</claim-ref>, wherein said differentiated cells comprise endothelial cells, epithelial cells, dermal cells, endodermal cells, mesodermal cells, fibroblasts, osteocytes, chondrocytes, natural killer cells, dendritic cells, hepatic cells, pancreatic cells, or stromal cells.</claim-text>
+    </claim>
+    <claim num="47" id="clm-00047-en">
+      <claim-text>
+        <b>47</b>. The method of <claim-ref idref="clm-00045-en">claim 45</claim-ref>, wherein said differentiated cells are salivary gland mucous cells, salivary gland serous cells, von Ebner's gland cells, mammary gland cells, lacrimal gland cells, ceruminous gland cells, eccrine sweat gland dark cells, eccrine sweat gland clear cells, apocrine sweat gland cells, gland of Moll cells, sebaceous gland cells. bowman's gland cells, Brunner's gland cells, seminal vesicle cells, prostate gland cells, bulbourethral gland cells, Bartholin's gland cells, gland of Littre cells, uterus endometrium cells, isolated goblet cells, stomach lining mucous cells, gastric gland zymogenic cells, gastric gland oxyntic cells, pancreatic acinar cells, paneth cells, type II pneumocytes, clara cells,
+<claim-text>somatotropes, lactotropes, thyrotropes, gonadotropes, corticotropes, intermediate pituitary cells, magnocellular neurosecretory cells, gut cells, respiratory tract cells, thyroid epithelial cells, parafollicular cells, parathyroid gland cells, parathyroid chief cell, oxyphil cell, adrenal gland cells, chromaffin cells, Leydig cells, theca interna cells, corpus luteum cells, granulosa lutein cells, theca lutein cells, juxtaglomerular cell, macula densa cells, peripolar cells, mesangial cell, blood vessel and lymphatic vascular endothelial fenestrated cells, blood vessel and lymphatic vascular endothelial continuous cells, blood vessel and lymphatic vascular endothelial splenic cells, synovial cells, serosal cell (lining peritoneal, pleural, and pericardial cavities), squamous cells, columnar cells, dark cells, vestibular membrane cell (lining endolymphatic space of ear), stria vascularis basal cells, stria vascularis marginal cell (lining endolymphatic space of ear), cells of Claudius, cells of Boettcher, choroid plexus cells, pia-arachnoid squamous cells, pigmented ciliary epithelium cells, nonpigmented ciliary epithelium cells, corneal endothelial cells, peg cells,</claim-text><claim-text>respiratory tract ciliated cells, oviduct ciliated cell, uterine endometrial ciliated cells, rete testis ciliated cells, ductulus efferens ciliated cells, ciliated ependymal cells,</claim-text><claim-text>epidermal keratinocytes, epidermal basal cells, keratinocyte of fingernails and toenails, nail bed basal cells, medullary hair shaft cells, cortical hair shaft cells, cuticular hair shaft cells, cuticular hair root sheath cells, hair root sheath cells of Huxley's layer, hair root sheath cells of Henle's layer, external hair root sheath cells, hair matrix cells,</claim-text><claim-text>surface epithelial cells of stratified squamous epithelium, basal cell of epithelia, urinary epithelium cells,</claim-text><claim-text>auditory inner hair cells of organ of Corti, auditory outer hair cells of organ of Corti, basal cells of olfactory epithelium, cold-sensitive primary sensory neurons, heat-sensitive primary sensory neurons, Merkel cells of epidermis, olfactory receptor neurons, pain-sensitive primary sensory neurons, photoreceptor rod cells, photoreceptor blue-sensitive cone cells, photoreceptor green-sensitive cone cells, photoreceptor red-sensitive cone cells, proprioceptive primary sensory neurons, touch-sensitive primary sensory neurons, type I carotid body cells, type II carotid body cell (blood pH sensor), type I hair cell of vestibular apparatus of ear (acceleration and gravity), type II hair cells of vestibular apparatus of ear, type I taste bud cells</claim-text><claim-text>cholinergic neural cells, adrenergic neural cells, peptidergic neural cells,</claim-text><claim-text>inner pillar cells of organ of Corti, outer pillar cells of organ of Corti, inner phalangeal cells of organ of Corti, outer phalangeal cells of organ of Corti, border cells of organ of Corti, Hensen cells of organ of Corti, vestibular apparatus supporting cells, taste bud supporting cells, olfactory epithelium supporting cells, Schwann cells, satellite cells, enteric glial cells,</claim-text><claim-text>astrocytes, neurons, oligodendrocytes, spindle neurons,</claim-text><claim-text>anterior lens epithelial cells, crystallin-containing lens fiber cells,</claim-text><claim-text>hepatocytes, adipocytes, white fat cells, brown fat cells, liver lipocytes,</claim-text><claim-text>kidney glomerulus parietal cells, kidney glomerulus podocytes, kidney proximal tubule brush border cells, loop of Henle thin segment cells, kidney distal tubule cells, kidney collecting duct cells, type I pneumocytes, pancreatic duct cells, nonstriated duct cells, duct cells, intestinal brush border cells, exocrine gland striated duct cells, gall bladder epithelial cells, ductulus efferens nonciliated cells, epididymal principal cells, epididymal basal cells,</claim-text><claim-text>ameloblast epithelial cells, planum semilunatum epithelial cells, organ of Corti interdental epithelial cells, loose connective tissue fibroblasts, corneal keratocytes, tendon fibroblasts, bone marrow reticular tissue fibroblasts, nonepithelial fibroblasts, pericytes, nucleus pulposus cells, cementoblast/cementocytes, odontoblasts, odontocytes, hyaline cartilage chondrocytes, fibrocartilage chondrocytes, elastic cartilage chondrocytes, osteoblasts, osteocytes, osteoclasts, osteoprogenitor cells, hyalocytes, stellate cells (ear), hepatic stellate cells (Ito cells), pancreatic stelle cells,</claim-text><claim-text>red skeletal muscle cells, white skeletal muscle cells, intermediate skeletal muscle cells, nuclear bag cells of muscle spindle, nuclear chain cells of muscle spindle, satellite cells, ordinary heart muscle cells, nodal heart muscle cells, Purkinje fiber cells, smooth muscle cells, myoepithelial cells of iris, myoepithelial cell of exocrine glands,</claim-text><claim-text>reticulocytes, megakaryocytes, monocytes, connective tissue macrophages. epidermal Langerhans cells, dendritic cells, microglial cells, neutrophils, eosinophils, basophils, mast cell, helper T cells, suppressor T cells, cytotoxic T cell, natural Killer T cells, B cells, natural killer cells,</claim-text><claim-text>melanocytes, retinal pigmented epithelial cells,</claim-text><claim-text>oogonia/oocytes, spermatids, spermatocytes, spermatogonium cells, spermatozoa, ovarian follicle cells, Sertoli cells, thymus epithelial cell, and/or interstitial kidney cells.</claim-text></claim-text>
+    </claim>
+    <claim num="48" id="clm-00048-en">
+      <claim-text>
+        <b>48</b>. The method of any of <claim-ref idref="clm-00001-en">claims 1 </claim-ref>-47, wherein cells in said cellular composition are primary culture cells.</claim-text>
+    </claim>
+    <claim num="49" id="clm-00049-en">
+      <claim-text>
+        <b>49</b>. The method of any of <claim-ref idref="clm-00001-en">claims 1 </claim-ref>-48, wherein cells in said cellular composition are cells that have been cultured in vitro.</claim-text>
+    </claim>
+    <claim num="50" id="clm-00050-en">
+      <claim-text>
+        <b>50</b>. The method of <claim-ref idref="clm-00048-en">claim 48</claim-ref>, wherein said cells have been passaged at least one time.</claim-text>
+    </claim>
+    <claim num="51" id="clm-00051-en">
+      <claim-text>
+        <b>51</b>. The method of <claim-ref idref="clm-00048-en">claim 48</claim-ref>, wherein said cells have been passaged no more than six times.</claim-text>
+    </claim>
+    <claim num="52" id="clm-00052-en">
+      <claim-text>
+        <b>52</b>. The method of <claim-ref idref="clm-00048-en">claim 48</claim-ref>, wherein said cells are cells from said subject.</claim-text>
+    </claim>
+    <claim num="53" id="clm-00053-en">
+      <claim-text>
+        <b>53</b>. The method of any of <claim-ref idref="clm-00001-en">claims 1 </claim-ref>-52, wherein said surface on or in said subject is prepared to facilitate said depositing.</claim-text>
+    </claim>
+    <claim num="54" id="clm-00054-en">
+      <claim-text>
+        <b>54</b>. The method of any of <claim-ref idref="clm-00001-en">claims 1 </claim-ref>-52, wherein said cells have been genetically engineered to produce a protein or polypeptide not naturally produced by the cell, or have been genetically engineered to produce a protein or polypeptide in an amount greater than that naturally produced by the cell, wherein said cellular composition comprises differentiated cells.</claim-text>
+    </claim>
+    <claim num="55" id="clm-00055-en">
+      <claim-text>
+        <b>55</b>. The method of <claim-ref idref="clm-00054-en">claim 54</claim-ref>, wherein said protein or polypeptide is a cytokine or a peptide comprising an active part thereof.</claim-text>
+    </claim>
+    <claim num="56" id="clm-00056-en">
+      <claim-text>
+        <b>56</b>. The method of <claim-ref idref="clm-00055-en">claim 55</claim-ref>, wherein said cytokine is adrenomedullin (AM), angiopoietin (Ang), bone morphogenetic protein (BMP), brain-derived neurotrophic factor (BDNF), epidermal growth factor (EGF), erythropoietin (Epo), fibroblast growth factor (FGF), glial cell line-derived neurotrophic factor (GNDF), granulocyte colony stimulating factor (G-CSF), granulocyte-macrophage colony stimulating factor (GM-CSF), growth differentiation factor (GDF-9), hepatocyte growth factor (HGF), hepatoma derived growth factor (HDGF), insulin-like growth factor (IGF), migration-stimulating factor, myostatin (GDF-8), myelomonocytic growth factor (MGF), nerve growth factor (NGF), placental growth factor (P1GF), platelet-derived growth factor (PDGF), thrombopoietin (Tpo), transforming growth factor alpha (TGF-α), TGF-β, tumor necrosis factor alpha (TNF-α), vascular endothelial growth factor (VEGF), or a Wnt protein.</claim-text>
+    </claim>
+    <claim num="57" id="clm-00057-en">
+      <claim-text>
+        <b>57</b>. The method of <claim-ref idref="clm-00055-en">claim 55 </claim-ref> or <claim-ref idref="clm-00056-en">claim 56</claim-ref>, wherein 1×10<sup>6 </sup>of said cells produces at least 1.0 to 10 μM of said cytokine in in vitro culture in growth medium over 24 hours.</claim-text>
+    </claim>
+    <claim num="58" id="clm-00058-en">
+      <claim-text>
+        <b>58</b>. The method of <claim-ref idref="clm-00053-en">claim 53</claim-ref>, wherein said protein or polypeptide is a soluble receptor for AM, Ang, BMP, BDNF, EGF, Epo, FGF, GNDF, G-CSF, GM-CSF, GDF-9, HGF, HDGF, IGF, migration-stimulating factor, GDF-8, MGF, NGF, P1GF, PDGF, Tpo, TGF-α, TGF-β, TNF-α, VEGF, or a Wnt protein.</claim-text>
+    </claim>
+    <claim num="59" id="clm-00059-en">
+      <claim-text>
+        <b>59</b>. The method of <claim-ref idref="clm-00058-en">claim 58</claim-ref>, wherein 1×10<sup>6 </sup>of said cells produces at least 1.0 to 10 μM of said soluble receptor in in vitro culture in growth medium over 24 hours.</claim-text>
+    </claim>
+    <claim num="60" id="clm-00060-en">
+      <claim-text>
+        <b>60</b>. The method of <claim-ref idref="clm-00053-en">claim 53</claim-ref>, wherein said protein is an interleukin.</claim-text>
+    </claim>
+    <claim num="61" id="clm-00061-en">
+      <claim-text>
+        <b>61</b>. The method of <claim-ref idref="clm-00060-en">claim 60</claim-ref>, wherein said interleukin is interleukin-1 alpha (IL-1α), IL-1β, IL-1F1, IL-1F2, IL-1F3, IL-1F4, IL-1F5, IL-1F6, IL-1F7, IL-1F8, IL-1F9, IL-2, IL-3, IL-4, IL-5, IL-6, IL-7, IL-8, IL-9, IL-10, IL-11, IL-12 35 kDa alpha subunit, IL-12 40 kDa beta subunit, both IL-12 alpha and beta subunits, IL-13, IL-14, IL-15, IL-16, IL-17A, IL-17B, IL-17C, IL-17D, IL-17E, IL-17F isoform 1, IL-17F isoform 2, IL-18, IL-19, IL-20, IL-21, IL-22, IL-23 p19 subunit, IL-23 p40 subunit, IL-23 p19 subunit and IL-23 p40 subunit together, IL-24, IL-25, IL-26, IL-27B, IL-27-p28, IL-27B and IL-27-p28 together, IL-28A, IL-28B, IL-29, IL-30, IL-31, IL-32, IL-33, IL-34, IL-35, IL-36α, IL-36β, IL-36γ.</claim-text>
+    </claim>
+    <claim num="62" id="clm-00062-en">
+      <claim-text>
+        <b>62</b>. The method of <claim-ref idref="clm-00060-en">claim 60 </claim-ref> or <claim-ref idref="clm-00061-en">claim 61</claim-ref>, wherein 1×10<sup>6 </sup>of said cells produces at least 1.0 to 10 μM of said interleukin in in vitro culture in growth medium over 24 hours.</claim-text>
+    </claim>
+    <claim num="63" id="clm-00063-en">
+      <claim-text>
+        <b>63</b>. The method of <claim-ref idref="clm-00053-en">claim 53</claim-ref>, wherein said protein or polypeptide is a soluble receptor for IL-1α, IL-1β, IL-1F1, IL-1F2, IL-1F3, IL-1F4, IL-1F5, IL-1F6, IL-1F7, IL-1F8, IL-1F9, IL-2, IL-3, IL-4, IL-5, IL-6, IL-7, IL-8, IL-9, IL-10, IL-11, IL-12 35 kDa alpha subunit, IL-12 40 kDa beta subunit, IL-13, IL-14, IL-15, IL-16, IL-17A, IL-17B, IL-17C, IL-17D, IL-17E, IL-17F isoform 1, IL-17F isoform 2, IL-18, IL-19, IL-20, IL-21, IL-22, IL-23 p19 subunit, IL-23 p40 subunit, IL-24, IL-25, IL-26, IL-27B, IL-27-p28, IL-28A, IL-28B, IL-29, IL-30, IL-31, IL-32, IL-33, IL-34, IL-35, IL-36α, IL-36β, IL-36γ.</claim-text>
+    </claim>
+    <claim num="64" id="clm-00064-en">
+      <claim-text>
+        <b>64</b>. The method of <claim-ref idref="clm-00063-en">claim 63</claim-ref>, wherein 1×10<sup>6 </sup>of said cells produces at least 1.0 to 10 μM of said soluble receptor in in vitro culture in growth medium over 24 hours.</claim-text>
+    </claim>
+    <claim num="65" id="clm-00065-en">
+      <claim-text>
+        <b>65</b>. The method of <claim-ref idref="clm-00053-en">claim 53</claim-ref>, wherein said protein is an interferon (IFN).</claim-text>
+    </claim>
+    <claim num="66" id="clm-00066-en">
+      <claim-text>
+        <b>66</b>. The method of <claim-ref idref="clm-00035-en">claim 35</claim-ref>, wherein said interferon is IFN-α, IFN-β, IFN-γ, IFN-λ1, IFN-λ2, IFN-λ3, IFN-K, IFN-ε, IFN-κ, IFN-τ, IFN-δ, IFN-ζ, IFN-ω, or IFN-v.</claim-text>
+    </claim>
+    <claim num="67" id="clm-00067-en">
+      <claim-text>
+        <b>67</b>. The method of <claim-ref idref="clm-00064-en">claim 64 </claim-ref> or <claim-ref idref="clm-00065-en">claim 65</claim-ref>, wherein 1×10<sup>6 </sup>of said cells produces at least 1.0 to 10 μM of said interferon in in vitro culture in growth medium over 24 hours.</claim-text>
+    </claim>
+    <claim num="68" id="clm-00068-en">
+      <claim-text>
+        <b>68</b>. The method of <claim-ref idref="clm-00053-en">claim 53</claim-ref>, wherein said protein or polypeptide is a soluble receptor for IFN-α, IFN-β, IFN-γ, IFN-λ1, IFN-λ2, IFN-λ3, IFN-K, IFN-ε, IFN-κ, IFN-τ, IFN-δ, IFN-ζ, IFN-ω, or IFN-v.</claim-text>
+    </claim>
+    <claim num="69" id="clm-00069-en">
+      <claim-text>
+        <b>69</b>. The method of <claim-ref idref="clm-00068-en">claim 68</claim-ref>, wherein 1×10<sup>6 </sup>of said cells produces at least 1.0 to 10 μM of said soluble receptor in in vitro culture in growth medium over 24 hours.</claim-text>
+    </claim>
+    <claim num="70" id="clm-00070-en">
+      <claim-text>
+        <b>70</b>. The method of <claim-ref idref="clm-00053-en">claim 53</claim-ref>, wherein said protein is insulin or proinsulin.</claim-text>
+    </claim>
+    <claim num="71" id="clm-00071-en">
+      <claim-text>
+        <b>71</b>. The method of <claim-ref idref="clm-00070-en">claim 70</claim-ref>, wherein 1×10<sup>6 </sup>of said cells produces at least 1.0 to 10 μM of said protein in in vitro culture in growth medium over 24 hours.</claim-text>
+    </claim>
+    <claim num="72" id="clm-00072-en">
+      <claim-text>
+        <b>72</b>. The method of <claim-ref idref="clm-00053-en">claim 53</claim-ref>, wherein said protein is a receptor for insulin.</claim-text>
+    </claim>
+    <claim num="73" id="clm-00073-en">
+      <claim-text>
+        <b>73</b>. The method of <claim-ref idref="clm-00071-en">claim 71 </claim-ref> or <claim-ref idref="clm-00072-en">claim 72</claim-ref>, wherein said cells have additionally been genetically engineered to produce one or more of prohormone convertase 1, prohormone convertase 2, or carboxypeptidase E.</claim-text>
+    </claim>
+    <claim num="74" id="clm-00074-en">
+      <claim-text>
+        <b>74</b>. The method of <claim-ref idref="clm-00053-en">claim 53</claim-ref>, wherein said protein is leptin (LEP).</claim-text>
+    </claim>
+    <claim num="75" id="clm-00075-en">
+      <claim-text>
+        <b>75</b>. The method of <claim-ref idref="clm-00074-en">claim 74</claim-ref>, wherein 1×10<sup>6 </sup>of said cells produces at least 1.0 to 10 μM of said protein in in vitro culture in growth medium over 24 hours.</claim-text>
+    </claim>
+    <claim num="76" id="clm-00076-en">
+      <claim-text>
+        <b>76</b>. The method of <claim-ref idref="clm-00053-en">claim 53</claim-ref>, wherein said protein is erythropoietin.</claim-text>
+    </claim>
+    <claim num="77" id="clm-00077-en">
+      <claim-text>
+        <b>77</b>. The method of <claim-ref idref="clm-00076-en">claim 76</claim-ref>, wherein 1×10<sup>6 </sup>of said cells produces at least 1.0 to 10 μM of said protein in in vitro culture in growth medium over 24 hours.</claim-text>
+    </claim>
+    <claim num="78" id="clm-00078-en">
+      <claim-text>
+        <b>78</b>. The method of <claim-ref idref="clm-00053-en">claim 53</claim-ref>, wherein said protein is thrombopoietin.</claim-text>
+    </claim>
+    <claim num="79" id="clm-00079-en">
+      <claim-text>
+        <b>79</b>. The method of <claim-ref idref="clm-00078-en">claim 78</claim-ref>, wherein 1×10<sup>6 </sup>of said cells produces at least 1.0 to 10 μM of said protein in in vitro culture in growth medium over 24 hours.</claim-text>
+    </claim>
+    <claim num="80" id="clm-00080-en">
+      <claim-text>
+        <b>80</b>. The method of <claim-ref idref="clm-00053-en">claim 53</claim-ref>, wherein said protein is tyrosine 3-monooxygenase.</claim-text>
+    </claim>
+    <claim num="81" id="clm-00081-en">
+      <claim-text>
+        <b>81</b>. The method of <claim-ref idref="clm-00080-en">claim 80</claim-ref>, wherein 1×10<sup>6 </sup>of said cells produces at least 1.0 to 10 μM of said protein in in vitro culture in growth medium over 24 hours.</claim-text>
+    </claim>
+    <claim num="82" id="clm-00082-en">
+      <claim-text>
+        <b>82</b>. The method of <claim-ref idref="clm-00080-en">claim 80 </claim-ref> or <claim-ref idref="clm-00081-en">claim 81</claim-ref>, wherein said cells are further engineered to express aromatic L-amino acid decarboxylase.</claim-text>
+    </claim>
+    <claim num="83" id="clm-00083-en">
+      <claim-text>
+        <b>83</b>. The method of <claim-ref idref="clm-00082-en">claim 82</claim-ref>, wherein 1×10<sup>6 </sup>of said cells produces at least 1.0 to 10 μM of said aromatic L-amino acid decarboxylase in in vitro culture in growth medium over 24 hours.</claim-text>
+    </claim>
+    <claim num="84" id="clm-00084-en">
+      <claim-text>
+        <b>84</b>. The method of <claim-ref idref="clm-00053-en">claim 53</claim-ref>, wherein said protein is a hormone or prohormone.</claim-text>
+    </claim>
+    <claim num="85" id="clm-00085-en">
+      <claim-text>
+        <b>85</b>. The method of <claim-ref idref="clm-00084-en">claim 84</claim-ref>, wherein said hormone is antimullerian hormone (AMH), adiponectin (Acrp30), adrenocorticotropic hormone (ACTH), angiotensin (AGT), angiotensinogen (AGT), antidiuretic hormone (ADH), vasopressin, atrial-natriuretic peptide (ANP), calcitonin (CT), cholecystokinin (CCK), corticotrophin-releasing hormone (CRH), erythropoietin (Epo), follicle-stimulating hormone (FSH), testosterone, estrogen, gastrin (GRP), ghrelin, glucagon (GCG), gonadotropin-releasing hormone (GnRH), growth hormone (GH), growth hormone releasing hormone (GHRH), human chorionic gonadotropin (hCG), human placental lactogen (HPL), inhibin, leutinizing hormone (LH), melanocyte stimulating hormone (MSH), orexin, oxytocin (OXT), parathyroid hormone (PTH), prolactin (PRL), relaxin (RLN), secretin (SCT), somatostatin (SRIF), thrombopoietin (Tpo), thyroid-stimulating hormone (Tsh), and/or thyrotropin-releasing hormone (TRH).</claim-text>
+    </claim>
+    <claim num="86" id="clm-00086-en">
+      <claim-text>
+        <b>86</b>. The method of <claim-ref idref="clm-00053-en">claim 53</claim-ref>, wherein said protein is cytochrome P450 side chain cleavage enzyme (P450SCC).</claim-text>
+    </claim>
+    <claim num="87" id="clm-00087-en">
+      <claim-text>
+        <b>87</b>. The method of <claim-ref idref="clm-00086-en">claim 86</claim-ref>, wherein said protein is a protein missing or malfunctioning in a subject who has a genetic disorder or disease.</claim-text>
+    </claim>
+    <claim num="88" id="clm-00088-en">
+      <claim-text>
+        <b>88</b>. The method of <claim-ref idref="clm-00087-en">claim 87</claim-ref>, wherein:
+<claim-text>said genetic disease is familial hypercholesterolemia and said protein is low density lipoprotein receptor (LDLR);</claim-text><claim-text>said genetic disease is polycystic kidney disease, and said protein is polycystin-1 (PKD1), PKD-2 or PKD3; or</claim-text><claim-text>said genetic disease is phenylketonuria and said protein is phenylalanine hydroxylase.</claim-text></claim-text>
+    </claim>
+    <claim num="89" id="clm-00089-en">
+      <claim-text>
+        <b>89</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said surface is prepared by depositing a composition comprising a biomolecule on said surface prior to said printing.</claim-text>
+    </claim>
+    <claim num="90" id="clm-00090-en">
+      <claim-text>
+        <b>90</b>. The method of <claim-ref idref="clm-00089-en">claim 89</claim-ref>, wherein said biomolecule is or comprises a type of collagen, a type of fibronectin, a type of laminin, or a tissue adhesive.</claim-text>
+    </claim>
+    <claim num="91" id="clm-00091-en">
+      <claim-text>
+        <b>91</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said surface is prepared by covering all or a portion of said surface with a decellularized tissue.</claim-text>
+    </claim>
+    <claim num="92" id="clm-00092-en">
+      <claim-text>
+        <b>92</b>. The method of <claim-ref idref="clm-00091-en">claim 91</claim-ref>, wherein said decellularized tissue is decellularized amniotic membrane, decellularized diaphragm, decellularized skin, or decellularized fascia.</claim-text>
+    </claim>
+    <claim num="93" id="clm-00093-en">
+      <claim-text>
+        <b>93</b>. The method of any of <claim-ref idref="clm-00001-en">claims 1 </claim-ref>-92, wherein said surface is a surface of a heart, blood vessel, skin, liver, pancreas, lung, kidney, thyroid, section of intestine, stomach, trachea, esophagus, or duodenum in said subject.</claim-text>
+    </claim>
+    <claim num="94" id="clm-00094-en">
+      <claim-text>
+        <b>94</b>. The method of any of <claim-ref idref="clm-00001-en">claims 1 </claim-ref>-92, wherein said surface is damaged skin.</claim-text>
+    </claim>
+    <claim num="95" id="clm-00095-en">
+      <claim-text>
+        <b>95</b>. The method of <claim-ref idref="clm-00094-en">claim 94</claim-ref>, wherein said skin has been damaged by burning.</claim-text>
+    </claim>
+    <claim num="96" id="clm-00096-en">
+      <claim-text>
+        <b>96</b>. The method of <claim-ref idref="clm-00094-en">claim 94 </claim-ref> or <claim-ref idref="clm-00095-en">95</claim-ref>, wherein said cellular composition comprises epidermal cells.</claim-text>
+    </claim>
+    <claim num="97" id="clm-00097-en">
+      <claim-text>
+        <b>97</b>. The method of <claim-ref idref="clm-00094-en">claim 94 </claim-ref> or <claim-ref idref="clm-00095-en">95</claim-ref>, wherein said cellular composition comprises dermal cells.</claim-text>
+    </claim>
+    <claim num="98" id="clm-00098-en">
+      <claim-text>
+        <b>98</b>. The method of <claim-ref idref="clm-00094-en">claim 94 </claim-ref> or <claim-ref idref="clm-00095-en">95</claim-ref>, wherein said cellular composition comprises mesenchymal stem cells.</claim-text>
+    </claim>
+    <claim num="99" id="clm-00099-en">
+      <claim-text>
+        <b>99</b>. The method of <claim-ref idref="clm-00094-en">claim 94 </claim-ref> or <claim-ref idref="clm-00095-en">95</claim-ref>, wherein said at least one cellular composition comprises a first cellular composition comprising epidermal cells, a second cellular composition comprising dermal cells, and a third cellular composition comprising mesenchymal stem cells.</claim-text>
+    </claim>
+    <claim num="100" id="clm-00100-en">
+      <claim-text>
+        <b>100</b>. The method of <claim-ref idref="clm-00099-en">claim 99</claim-ref>, wherein said method comprises (a) first printing said mesenchymal stem cells onto said surface, then (b) printing said dermal cells onto said surface, then (c) printing said epidermal cells onto said surface.</claim-text>
+    </claim>
+    <claim num="101" id="clm-00101-en">
+      <claim-text>
+        <b>101</b>. The method of <claim-ref idref="clm-00099-en">claim 99</claim-ref>, wherein said method comprises (a) first printing said dermal cells onto said surface, then (b) printing said epidermal cells onto said surface.</claim-text>
+    </claim>
+    <claim num="102" id="clm-00102-en">
+      <claim-text>
+        <b>102</b>. The method of <claim-ref idref="clm-00099-en">claim 99</claim-ref>, comprising printing said first cellular composition, said second cellular composition and/or said third cellular composition in two or more printing passes.</claim-text>
+    </claim>
+    <claim num="103" id="clm-00103-en">
+      <claim-text>
+        <b>103</b>. The method of any of <claim-ref idref="clm-00094-en">claims 94 </claim-ref>-102, comprising depositing ECM between said surface and said first cellular composition; between said first cellular composition and said second cellular composition; between said second cellular composition and said third cellular composition; or any combination thereof.</claim-text>
+    </claim>
+    <claim num="104" id="clm-00104-en">
+      <claim-text>
+        <b>104</b>. The method of <claim-ref idref="clm-00103-en">claim 103</claim-ref>, wherein said epidermal cells and said dermal cells; said dermal cells and said mesenchymal stem cell; or said epidermal cells, said dermal cells, and said mesenchymal stem cells are contained within the same cellular composition.</claim-text>
+    </claim>
+    <claim num="105" id="clm-00105-en">
+      <claim-text>
+        <b>105</b>. The method of any of <claim-ref idref="clm-00001-en">claims 1 </claim-ref>-92, wherein said surface is a surface of a kidney in said subject.</claim-text>
+    </claim>
+    <claim num="106" id="clm-00106-en">
+      <claim-text>
+        <b>106</b>. The method of <claim-ref idref="clm-00105-en">claim 105</claim-ref>, wherein said cellular composition comprises at least one type of parenchymal cell and one type of stromal cell.</claim-text>
+    </claim>
+    <claim num="107" id="clm-00107-en">
+      <claim-text>
+        <b>107</b>. The method of <claim-ref idref="clm-00106-en">claim 106</claim-ref> wherein said one type of parenchymal cell and said one type of stromal cells are present in a population of kidney cells disaggregated from autologous or allogeneic kidney tissue.</claim-text>
+    </claim>
+    <claim num="108" id="clm-00108-en">
+      <claim-text>
+        <b>108</b>. The method of <claim-ref idref="clm-00106-en">claim 106 </claim-ref> or <claim-ref idref="clm-00107-en">107</claim-ref>, wherein said at least one type of stromal cells are mesenchymal stem cells.</claim-text>
+    </claim>
+    <claim num="109" id="clm-00109-en">
+      <claim-text>
+        <b>109</b>. The method of <claim-ref idref="clm-00106-en">claim 106 </claim-ref> or <claim-ref idref="clm-00107-en">107</claim-ref>, wherein said at least one type of stromal cells are bone marrow-derived mesenchymal stem cells.</claim-text>
+    </claim>
+    <claim num="110" id="clm-00110-en">
+      <claim-text>
+        <b>110</b>. The method of <claim-ref idref="clm-00106-en">claim 106 </claim-ref> or <claim-ref idref="clm-00107-en">107</claim-ref>, wherein said at least one type of stromal cells are tissue culture plastic-adherent CD34−, CD10+, CD105+, CD200+placental stem cells.</claim-text>
+    </claim>
+    <claim num="111" id="clm-00111-en">
+      <claim-text>
+        <b>111</b>. The method of <claim-ref idref="clm-00105-en">claim 105</claim-ref>, wherein at least a portion of said kidney comprising said surface is damaged or malfunctioning.</claim-text>
+    </claim>
+    <claim num="112" id="clm-00112-en">
+      <claim-text>
+        <b>112</b>. The method of <claim-ref idref="clm-00105-en">claim 105</claim-ref>, comprising analyzing the damaged or malfunctioning surface of said kidney to determine the types of kidney cells in said damaged or malfunctioning surface, and depositing the same types of cells on said surface.</claim-text>
+    </claim>
+    <claim num="113" id="clm-00113-en">
+      <claim-text>
+        <b>113</b>. The method of <claim-ref idref="clm-00112-en">claim 112</claim-ref>, wherein said damaged or malfunctioning kidney is surgically altered to remove said damaged or malfunctioning portion.</claim-text>
+    </claim>
+    <claim num="114" id="clm-00114-en">
+      <claim-text>
+        <b>114</b>. The method of <claim-ref idref="clm-00113-en">claim 113</claim-ref>, wherein said surface is a surface of said kidney remaining after said surgical alteration.</claim-text>
+    </claim>
+    <claim num="115" id="clm-00115-en">
+      <claim-text>
+        <b>115</b>. The method of any of <claim-ref idref="clm-00001-en">claims 1 </claim-ref>-18, comprising depositing said cellular composition and/or said ECM at least in part according to a standardized computer model of a tissue or organ that comprises said surface.</claim-text>
+    </claim>
+    <claim num="116" id="clm-00116-en">
+      <claim-text>
+        <b>116</b>. The method of any of <claim-ref idref="clm-00115-en">claim 115</claim-ref>, additionally comprising depositing said cellular composition and/or said ECM according to data obtained from a scan of said surface.</claim-text>
+    </claim>
+    <claim num="117" id="clm-00117-en">
+      <claim-text>
+        <b>117</b>. The method of <claim-ref idref="clm-00116-en">claim 116</claim-ref>, wherein said scan of said surface is obtained by computer assisted tomography, magnetic resonance imaging, electron beam, or x-ray.</claim-text>
+    </claim>
+    <claim num="118" id="clm-00118-en">
+      <claim-text>
+        <b>118</b>. The method of <claim-ref idref="clm-00117-en">claim 117</claim-ref>, wherein said scan of said surface is at least at a 100 micron resolution.</claim-text>
+    </claim>
+    <claim num="119" id="clm-00119-en">
+      <claim-text>
+        <b>119</b>. The method of <claim-ref idref="clm-00117-en">claim 117</claim-ref>, wherein said scan of said surface is at least at a 1 micron resolution.</claim-text>
+    </claim>
+    <claim num="120" id="clm-00120-en">
+      <claim-text>
+        <b>120</b>. The method of any of <claim-ref idref="clm-00001-en">claims 1 </claim-ref>-119, wherein said depositing is performed laparoscopically.</claim-text>
+    </claim>
+    <claim num="121" id="clm-00121-en">
+      <claim-text>
+        <b>121</b>. The method of any of <claim-ref idref="clm-00001-en">claims 1 </claim-ref>-119, wherein said depositing is accomplished by aerosolization.</claim-text>
+    </claim>
+    <claim num="122" id="clm-00122-en">
+      <claim-text>
+        <b>122</b>. The method of any of <claim-ref idref="clm-00001-en">claims 1 </claim-ref>-119, wherein said depositing is accomplished by spraying.</claim-text>
+    </claim>
+    <claim num="123" id="clm-00123-en">
+      <claim-text>
+        <b>123</b>. The method of any of <claim-ref idref="clm-00001-en">claims 1 </claim-ref>-119, wherein said depositing is accomplished by printing.</claim-text>
+    </claim>
+    <claim num="124" id="clm-00124-en">
+      <claim-text>
+        <b>124</b>. The method of any of <claim-ref idref="clm-00001-en">claims 1 </claim-ref>-119, wherein said depositing is accomplished by inkjet printing.</claim-text>
+    </claim>
+    <claim num="125" id="clm-00125-en">
+      <claim-text>
+        <b>125</b>. The method of any of <claim-ref idref="clm-00124-en">claim 124</claim-ref>, wherein said inkjet printing is performed using a printer with a plurality of print heads or a plurality of print jets.</claim-text>
+    </claim>
+    <claim num="126" id="clm-00126-en">
+      <claim-text>
+        <b>126</b>. The method of <claim-ref idref="clm-00125-en">claim 125</claim-ref>, wherein each of said plurality of print heads or print jets is separately controllable.</claim-text>
+    </claim>
+    <claim num="127" id="clm-00127-en">
+      <claim-text>
+        <b>127</b>. The method of <claim-ref idref="clm-00125-en">claim 125</claim-ref>, wherein each of said print heads or print jets operates independently from the remaining said print heads or print jets.</claim-text>
+    </claim>
+    <claim num="128" id="clm-00128-en">
+      <claim-text>
+        <b>128</b>. The method of <claim-ref idref="clm-00125-en">claim 125</claim-ref>, wherein at least one of said plurality of print heads or print jets prints said cellular composition, and at least one other of said plurality of print heads or print jets prints said substrate.</claim-text>
+    </claim>
+    <claim num="129" id="clm-00129-en">
+      <claim-text>
+        <b>129</b>. The method of <claim-ref idref="clm-00023-en">claim 23</claim-ref>, wherein said synthetic polymer is deposited in a manner that physically supports said ECM and said cellular composition.</claim-text>
+    </claim>
+    <claim num="130" id="clm-00130-en">
+      <claim-text>
+        <b>130</b>. The method of <claim-ref idref="clm-00023-en">claim 23</claim-ref>, wherein said synthetic polymer is deposited as a series of fibers in said tissue.</claim-text>
+    </claim>
+    <claim num="131" id="clm-00131-en">
+      <claim-text>
+        <b>131</b>. The method of <claim-ref idref="clm-00130-en">claim 130</claim-ref>, wherein said synthetic polymer is deposited two or more times, and is deposited in a different orientation in at least one of said two or more times compared to the remaining time(s).</claim-text>
+    </claim>
+    <claim num="132" id="clm-00132-en">
+      <claim-text>
+        <b>132</b>. The method of <claim-ref idref="clm-00130-en">claim 130</claim-ref>, wherein said synthetic polymer is deposited two or more times, and is deposited in a different orientation each of said two or more times.</claim-text>
+    </claim>
+    <claim num="133" id="clm-00133-en">
+      <claim-text>
+        <b>133</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said surface is not skin, epidermis, or dermis.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150246072A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246072A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150246072A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246072A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150246072A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246072A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150246072A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246072A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150246072A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246072A1-20150903-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150246072A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246072A1-20150903-D00006.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150246072A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246072A1-20150903-D00007.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150246072A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246072A1-20150903-D00008.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150246072A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246072A1-20150903-D00009.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150246072A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246072A1-20150903-D00010.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150246072A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246072A1-20150903-D00011.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150246072A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246072A1-20150903-D00012.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150246072A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246072A1-20150903-D00013.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150246072A1.PDF" type="pdf" size="2216926" pages="36" />
+</lexisnexis-patent-document>

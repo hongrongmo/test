@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257397A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030215" date-changed="20150928" time-changed="061110">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121315849">
+        <country>US</country>
+        <doc-number>20150257397</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14724176</doc-number>
+        <date>20150528</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>DK</country>
+        <doc-number> 2010 00406</doc-number>
+        <date>20100507</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>A22C  17/00        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>17</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>B07C   5/34        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>5</main-group>
+        <subgroup>34</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>A22C  17/008       20130101 FI20141107BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>17</main-group>
+        <subgroup>008</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141107</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A22C  17/0073      20130101 LI20141107BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>17</main-group>
+        <subgroup>0073</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141107</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A22C  17/0093      20130101 LI20140903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>17</main-group>
+        <subgroup>0093</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>B07C   5/00        20130101 LI20140903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>5</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>B07C   5/34        20130101 LI20141106BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>5</main-group>
+        <subgroup>34</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141106</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">32</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">FAT/MEAT GRADING METHOD AND SYSTEM</invention-title>
+    <related-documents date-changed="20150917">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14336049</doc-number>
+              <date>20140721</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>9066524</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007241</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13696192</doc-number>
+              <date>20130109</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>8820534</doc-number>
+              </document-id>
+            </parent-grant-document>
+            <parent-pct-document>
+              <document-id>
+                <country>WO</country>
+                <doc-number>PCT/EP2011/002299</doc-number>
+                <date>20110509</date>
+              </document-id>
+            </parent-pct-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14003360</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Marel HF</orgname>
+            <address>
+              <city>Gardabaer</city>
+              <country>IS</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>IS</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Thorsson</last-name>
+            <first-name>Brynjolfur</first-name>
+            <address>
+              <city>Reykjavik</city>
+              <country>IS</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Erlingsson</last-name>
+            <first-name>Vidar</first-name>
+            <address>
+              <city>Gardabaer</city>
+              <country>IS</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Gardarsson</last-name>
+            <first-name>Saevar</first-name>
+            <address>
+              <city>Mosfellsbaer</city>
+              <country>IS</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>EP11002299</doc-number>
+        <date>20110509</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2011138052</doc-number>
+        <date>20111110</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151028">
+      <main-family family-id="160659340">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20130199971</doc-number>
+            <kind>A1</kind>
+            <date>20130808</date>
+          </document-id>
+          <application-date>
+            <date>20110509</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20140326644</doc-number>
+            <kind>A1</kind>
+            <date>20141106</date>
+          </document-id>
+          <application-date>
+            <date>20140721</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257397</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150528</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="145720629">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20130199971</doc-number>
+            <kind>A1</kind>
+            <date>20130808</date>
+          </document-id>
+          <application-date>
+            <date>20110509</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20140326644</doc-number>
+            <kind>A1</kind>
+            <date>20141106</date>
+          </document-id>
+          <application-date>
+            <date>20140721</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2011250203</doc-number>
+            <kind>B2</kind>
+            <date>20150122</date>
+          </document-id>
+          <application-date>
+            <date>20110509</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>MX</country>
+            <doc-number>2012012940</doc-number>
+            <kind>A</kind>
+            <date>20130321</date>
+          </document-id>
+          <application-date>
+            <date>20110509</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>RU</country>
+            <doc-number>2012152643</doc-number>
+            <kind>A</kind>
+            <date>20140620</date>
+          </document-id>
+          <application-date>
+            <date>20110509</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>RU</country>
+            <doc-number>2564060</doc-number>
+            <kind>C2</kind>
+            <date>20150927</date>
+          </document-id>
+          <application-date>
+            <date>20110509</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2798445</doc-number>
+            <kind>A1</kind>
+            <date>20111110</date>
+          </document-id>
+          <application-date>
+            <date>20110509</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>102970873</doc-number>
+            <kind>A</kind>
+            <date>20130313</date>
+          </document-id>
+          <application-date>
+            <date>20110509</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2566340</doc-number>
+            <kind>A1</kind>
+            <date>20130313</date>
+          </document-id>
+          <application-date>
+            <date>20110509</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2936987</doc-number>
+            <kind>A1</kind>
+            <date>20151028</date>
+          </document-id>
+          <application-date>
+            <date>20110509</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>NZ</country>
+            <doc-number>603252</doc-number>
+            <kind>A</kind>
+            <date>20141128</date>
+          </document-id>
+          <application-date>
+            <date>20110509</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257397</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150528</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>9066524</doc-number>
+            <kind>B2</kind>
+            <date>20150630</date>
+          </document-id>
+          <application-date>
+            <date>20140721</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2011138052</doc-number>
+            <kind>A1</kind>
+            <date>20111110</date>
+          </document-id>
+          <application-date>
+            <date>20110509</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>8820534</doc-number>
+            <kind>B2</kind>
+            <date>20140902</date>
+          </document-id>
+          <application-date>
+            <date>20110509</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Method and system for processing of meat trim products, where trim products are supplied as a sequence of collections of trim (COTs), each collection of trim (COT) comprising a plurality of trim products, whereby: <ul id="ula-00001-en" list-style="none"><li>a fat/meat relationship for a collection of trim (COT) is measured;</li><li>a collection of trim (COT) is transferred to a selected station by a separator, controlled by a controller; and whereby</li><li>a batch is completed at a selected station on the basis of data for said fat/meat relationship, said batch comprising one or more collections of trim (COTs) and fulfilling a predetermined criterion regarding a total fat/meat relationship.</li></ul></p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCES TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application is a continuation of patent application Ser. No. 14/336,049 filed on Jul. 21, 2014, which application is a continuation of patent application Ser. No. 13/696,192 filed on Jan. 9, 2013, which application is the national stage application of PCT application number PCT/EP2011/002299 filed on May 9, 2011, which application claims the benefit of priority to Danish patent application number PA 2010 00406 filed on May 7, 2010. The entire disclosures thereof are incorporated herein by reference.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">The invention relates to a method and a system for processing of meat trim products, which trim products are supplied from a meat processing operation involving cutting up and/or trimming, etc. of meat within the food industry. The method and the system according to the invention may also be referred to as a trim grading method and a trim grading system, respectively.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00003-en" num="0003">Within the food industry it is well-known that a trimming of meat products is performed in connection with the meat processing.</p>
+      <p id="p-00004-en" num="0004">When a meat product is trimmed the fat is removed from it and the result is <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>(a) a primary cut and</li><li>(b) some fat and trim products.</li></ul></li></ul></p>
+      <p id="p-00005-en" num="0007">The “fat” product is essentially fat only whereas “trim” product is any combination of fat and meat. Trim is the result when for example the operator during the process of cutting off the fat is cutting a little too deep and removes some meat together with the fat, e.g. for example when a first cut removes some of the fat, but reveals that more fat needs to be removed, which requires a second cut, which in many cases inevitably results in that some meat is cut off as well.</p>
+      <p id="p-00006-en" num="0008">It is noted that during the meat processing also secondary cuts are produced as well as other small pieces of meat.</p>
+      <p id="p-00007-en" num="0009">For the purpose of this patent application the pieces of fat/meat produced by the trimming process, secondary cuts and any other pieces of meat that are not primary cuts will be referred to as “trim”, “trim products”, etc. This also means that the term “collection of trim (COT)” used later on also designates a collection of pieces, where the pieces can be what is traditionally referred to as trim or trim products, but where the collection also includes pieces such as secondary cuts, other pieces of meat that is not primary cuts, etc.</p>
+      <p id="p-00008-en" num="0010">The trim is normally classified in categories according to the meat content in percentage. In general it is assessed on line by the operator and the trim is sorted correspondingly. Most often the trim products are sorted in only a limited number of groups, for example 1 to 4 groups. The fat products are handled separately.</p>
+      <p id="p-00009-en" num="0011">The trim products can be used for a plurality of various purposes, e.g. mincemeat, etc., which requires a further processing of the trim products.</p>
+      <p id="p-00010-en" num="0012">When the trim is used in the further processing it is desirable and in most cases necessary to know the fat percentage to a higher degree of accuracy than obtained by the manual assessment. In many cases it is even necessary to adjust the fat percentage to a specified number in order to use the product for various purposes and applications.</p>
+      <p id="p-00011-en" num="0013">WO 2009/102457 A1 discloses methods and systems for sorting meat trim portions by employing quantitative lean point analysis and one or more sorting steps. The document discloses embodiments adapted to make lean point determinations, to compare the determinations to one or more sorting parameters, and to direct meat trim portions to one of a plurality of containers based on the comparison. Meat trim portions from each container are subsequently processed into ground meat. Portions of meat trim, which are obtained from one or more fabrication tables, are identified by one or more of meat trim type, e.g. chick, shank, sirloin, and information associated with lean point (estimated lean point, for example). Portions of meat trim are then preferably presorted into a plurality of containers and the lean point of portions of meat trim originating from a particular presorting container is determined using a lean point analysis system by means of for example X-ray analysis. After performing lean point analysis, the meat trim portions are then sorted into a plurality of combination bins, based on one or both of the determined lean point analysis and a previously identified meat type, identified in connection with the presorting.</p>
+      <p id="p-00012-en" num="0014">WO 03/046533 A2 relates to an apparatus and a process for determining the relative proportions by mass of two or more differing substances contained in a sample comprising a combination of the two or more differing substances, where the sample comprises animal flesh and where the differing substances contained in the sample comprise, respectively, meat and fat. The apparatus and a process utilize an X-ray radiation technique for calculating the relative proportions by mass of the two or more differing substances, which may be meat and fat. According to a particular embodiment the proportions of meat and fat have been determined for each of a plurality of sample pieces of meat and have been fed to a computer. The sample pieces of meat are transported by a conveyor belt to a series of mechanisms for displacing the samples into a series of grading bins, where the aim of the system is to end up with as close to a target fat/lean ratio as possible in each of the bins.</p>
+      <p id="p-00013-en" num="0015">Thus, the prior art according to WO 03/046533 A2 concerns the handling of sample pieces of meat, whereas the present invention is related to the processing of trim products that are produced in connection with meat processing in general as explained above, and in particular to the processing of collections of trims (COTs) that are being produced in connection with the meat processing.</p>
+      <p id="p-00014-en" num="0016">Thus, it is an object of the present invention to present a method and a system for handling trim products resulting from the meat processing.</p>
+      <p id="p-00015-en" num="0017">In particular, it is an object of the present invention to present a method and a system, which provides a higher degree of accuracy as regards the fat percentage categorization of the trim products, i.e. the fat/meat relationship.</p>
+      <p id="p-00016-en" num="0018">Further, it is an object of the invention to present such a method and such a system, which facilitates a higher degree of automated handling of the trim products.</p>
+      <p id="p-00017-en" num="0019">Thus, it is also an object to provide batches of trim products, which facilitate an improved quality of the end products.</p>
+      <p id="p-00018-en" num="0020">These and other objects are achieved by the invention as explained in further detail in the following.</p>
+      <heading id="h-00004-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00019-en" num="0021">The invention relates to a method of processing of meat trim products where trim products are supplied as a sequence of collections of trim (COTs), each collection of trim (COT) comprising a plurality of trim products, whereby <ul id="ul-00003-en" list-style="none"><li><ul id="ul-00004-en" list-style="none"><li>a fat/meat relationship for a collection of trim (COT) is measured,</li><li>a collection of trim (COT) is transferred to a selected station by a separator, controlled by a controller, and whereby</li><li>a batch is completed at a selected station on the basis of data for said fat/meat relationship, said batch comprising one or more collections of trim (COTs) and fulfilling a predetermined criterion regarding a total fat/meat relationship.</li></ul></li></ul></p>
+      <p id="p-00020-en" num="0025">Further, the invention relates to a system for processing of meat trim products, wherein trim products are supplied to the system in a sequence of collections of trim (COTs), each collection of trim (COT) comprising a plurality of trim products, said system comprising <ul id="ul-00005-en" list-style="none"><li><ul id="ul-00006-en" list-style="none"><li>a trim parameter measuring apparatus (TPMA) designed for measuring the fat/meat relationship for a collection of trim (COT),</li><li>a separator for transferring a collection of trim (COT) to a selected station, and</li><li>a controller for controlling the separator to complete a batch at a selected station, based on input from said trim parameter measuring apparatus (TPMA), said batch comprising one or more collections of trim (COTs) and fulfilling a predetermined criterion regarding a total fat/meat relationship.</li></ul></li></ul></p>
+      <p id="p-00021-en" num="0029">It is noted that in connection with the present invention it will be understood that the fat/meat relationship for each of a plurality of collections of trim (COTs) is determined or measured as the collections of trim are supplied in sequence. Thereafter, the collections of trim (COTs) are transferred to a selected station, based on the fat/meat relationship for each of the available collections of trim (COTs), based on the data for the collections of trim (COTs) that have already been transferred to each of the available stations (e.g. the total fat/meat relationship for the already accumulated collections of trim (COTs) at each of the stations and possibly also the total weight), and based on the predetermined criterion that has to be fulfilled regarding the total fat/meat relationship. It will be understood that the controller will operate in accordance herewith.</p>
+      <p id="p-00022-en" num="0030">Further, it is noted that a batch is completed and can be e.g. removed, when the collections of trim (COTs), possibly only one, that have been transferred to a station, fulfil(s) the predetermined criterion regarding a total fat/meat relationship (with the relevant tolerances). The predetermined criterion regarding a total fat/meat relationship can e.g. be determined to have been reached by the controller only, since in many instances the controller will operate in order to reach the desired result by accumulating collections of trim (COTs), which only in the specific combination will fulfil the predetermined criterion, but in other instances the controller may operate in such a manner that the accumulated collections of trim (COTs) at any time or at any specific time (e.g. after for example at least two, three, etc. collections of trim (COTs) have been supplied to a station) fulfil the predetermined criterion. In such instances the batch can be said to be completed when it fulfils the predetermined criterion and when it is actually e.g. removed from the station for further handling. It is apparent that in such cases the controller will need to receive confirmation that the batch is now “completed” and that the building up of a new batch is started. An example of such a case will be explained in further detail in the detailed part of the description. Thus, it will be understood that the term “completed” includes both of the above-mentioned understandings.</p>
+      <p id="p-00023-en" num="0031">By this method and/or this system it is achieved that trim products can be provided for further processing with a higher quality as regards the fat percentage than it has otherwise been possible when using the hitherto available manual methods and systems. Further, it is also made possible to achieve a higher degree of consistency as regards the accuracy and/or margins of the fat percentages of the provided batches of trim products. These advantages also ensure that a higher economic outcome can be achieved and that the quality of end products made by means of such batches of trim products is enhanced. Furthermore, the higher degree of automation involved in the process also provides for an enhanced cost-efficiency.</p>
+      <p id="p-00024-en" num="0032">Preferably, weight may be determined for the supplied collections of trim (COTs) by e.g. weighing means and the weight data may be supplied as input to the controller for controlling the separator.</p>
+      <p id="p-00025-en" num="0033">Preferably, the collections of trim (COTs) may be supplied with approximately the same weight.</p>
+      <p id="p-00026-en" num="0034">Hereby, the efficiency of the method and the system can be enhanced, when the individual COTs do not differ significantly from each other, since it is made easier for the controller to find suitable COTs to create a desired batch, e.g. since the number of available COTs with an expected weight and with various fat percentages will be relatively high.</p>
+      <p id="p-00027-en" num="0035">According to further advantageous embodiments, said weighing means may be integrated with the trim parameter measuring apparatus (TPMA) or with the separator or the weighing means may alternatively be independent.</p>
+      <p id="p-00028-en" num="0036">Hereby, a high degree of flexibility is achieved as regards the design and adaptation of the system in general.</p>
+      <p id="p-00029-en" num="0037">In accordance with a further preferable embodiment, the batch that is completed at a selected station, may further fulfill a predetermined criterion regarding the total weight of the batch.</p>
+      <p id="p-00030-en" num="0038">Hereby, the added advantage is achieved that the batches can also be created with a desired accuracy as regards the weight, e.g. that the completed weight lies within a predetermined interval, that the weight fulfils a minimum criterion and/or other weight requirements and/or options, which also add to the overall optimization and efficiency.</p>
+      <p id="p-00031-en" num="0039">According to a particular preferable embodiment, batches that are completed at at least two different stations, may fulfill different criteria as regards the total fat/meat relationship and/or the total weight.</p>
+      <p id="p-00032-en" num="0040">Hereby, it is achieved that it is made easier to use the COT's that are available for the batching, for example when COTs can be used for building up batches having two or more different target fat percentages whereby e.g. the efficiency of the system is increased and the use of the material, e.g. the trim products, is optimized.</p>
+      <p id="p-00033-en" num="0041">According to a further advantageous embodiment, said batch may be completed at said selected station to fulfill said predetermined criterion regarding a total fat/meat relationship, whereby said predetermined criterion regarding a total fat/meat relationship comprises that the meat percentage of collections of trim (COTs) transferred to the selected station exceeds a minimum value at any time during the completion of the batch.</p>
+      <p id="p-00034-en" num="0042">Hereby it is achieved that the output at the station will at any given time from a “zero-time” have a meat content that is above a guaranteed percentage.</p>
+      <p id="p-00035-en" num="0043">Thus, it is also achieved that the operator or operators at the e.g. packing process can simply take material from the station, i.e. the position, whereto the COTs are delivered by the separator, and pack it in boxes or the like of more or less random size and allocate them to a lot of material, comprising one or more pallet(s) or the like, and at the same time ensure that the lot will contain the specified meat percentage.</p>
+      <p id="p-00036-en" num="0044">Thus, it is also achieved that a batch can be provided at any given time, if desired, while still fulfilling the predefined criterion.</p>
+      <p id="p-00037-en" num="0045">It will be understood that a resetting of the “zero-time” is performed, when a specific lot or batch has been completed, e.g. when the total weight of a lot has been obtained, and all material, e.g. all transferred COTs have been removed from the station and allocated to the lot, whereafter the system initiates a subsequent job, e.g. the building up of a new lot with the guaranteed meat percentage.</p>
+      <p id="p-00038-en" num="0046">According to a still further advantageous embodiment, said batch may be completed at said selected station to fulfill said predetermined criterion regarding a total fat/meat relationship, whereby said predetermined criterion regarding a total fat/meat relationship is fulfilled at a specific point in time, determined by the controller.</p>
+      <p id="p-00039-en" num="0047">Preferably, the fat/meat relationship for a collection of trim (COT) may be measured by said trim parameter measuring apparatus (TPMA) by a radiation measurement, preferably using X-ray radiation and detecting means for performing said measurements, in particular in the form of a dual energy system.</p>
+      <p id="p-00040-en" num="0048">Hereby, it is achieved that the measurements can be performed in a reliable and efficient manner. It is mentioned, though, that other measuring and/or detecting means and principles may be used as well.</p>
+      <p id="p-00041-en" num="0049">Advantageously, the sequence and/or the positions of said supplied collections of trim (COTs) may be detected and/or registered, which data may be supplied to the controller.</p>
+      <p id="p-00042-en" num="0050">Hereby, the measured data may be allocated to the individual COTs and the control of the separator to create the desired batches may be implemented in an advantageous manner,</p>
+      <p id="p-00043-en" num="0051">Advantageously, additional products, e.g. meat and/or fat products may be added at a station or at a subsequent processing step to complete a batch in order to fulfill said predetermined criterion regarding a total fat/meat relationship.</p>
+      <p id="p-00044-en" num="0052">Hereby, the efficiency of the method and the system may be increased since e.g. a batch may be completed relatively quickly, e.g. because it will not be necessary to wait for a longer period of time for a particular COT having certain characteristics.</p>
+      <p id="p-00045-en" num="0053">In accordance with particular aspects of the invention, said collections of trim (COTs) may be supplied either manually or automatically from a trim source such as a trim table, a flow-line or stream-line table and/or any other trim producing source.</p>
+      <p id="p-00046-en" num="0054">It will thus be understood that a high degree of flexibility as regards the sources of the trim products and COTs are achieved.</p>
+      <p id="p-00047-en" num="0055">In accordance with further aspects of the invention, measured and/or calculated data, e.g. data relating to the fat/meat relationship for one or more collections of trim (COTs) and/or relating to one or more collections of trim (COTs) required for a batch, may be provided as a feedback.</p>
+      <p id="p-00048-en" num="0056">Hereby, a number of advantages may be achieved, including that the controller may use the data for optimizing the processing of the meat products and in particular the building up and completion of the batches of COTs.</p>
+      <p id="p-00049-en" num="0057">According to further embodiments of the invention, said measured and/or calculated data, in particular data relating to the fat/meat relationship for one or more collections of trim (COTs), may be fed to an operator, who has produced said one or more collections of trim (COTs)</p>
+      <p id="p-00050-en" num="0058">Hereby, a number of advantages may be achieved. For example, the fat percentage measurements may be fed back to the individual operators in order to provide guidance and/or training to the operator or operators regarding the trimming process, e.g. as regards whether the operator cuts off more meat than normally and/or necessary, etc. and furthermore the measurements may be used for other purposes, such as general planning, etc.</p>
+      <p id="p-00051-en" num="0059">According to still further embodiments of the invention, said measured and/or calculated data may be fed to the trim source, which supplies collections of trim (COTs).</p>
+      <p id="p-00052-en" num="0060">The information that is fed back may be fed to the e.g. trim table system, the flow-line or stream-line table and/or any other trim producing source, for example to the control unit for such a trim source system in order to provide input to the control unit of the system.</p>
+      <p id="p-00053-en" num="0061">In this connection it is noted that such feedback to the control unit of the system or the operator(s) as also mentioned above may also relate to specific requirements of the system according to the invention, for example in situations where the fat/meat grade system requires a number of COT's having an e.g. higher fat percentage in order to complete one or more batches, and where the source system thus can be controlled to deliver such a number of COTs, if possible.</p>
+      <p id="p-00054-en" num="0062">Other analogous situations may occur, where the control system of the fat/meat grade system can cooperate with a control system of a source system and vice versa. In this manner added advantages can be achieved, since the efficiency of the fat/meat grade system as well as the efficiency of the source system as such can be increased. Thus, the fat/meat grade system according to the invention and a source system can be seen as a cooperating system.</p>
+      <p id="p-00055-en" num="0063">According to a further aspect of the invention, a batch completed at a station may comprise a plurality of sub-batches.</p>
+      <p id="p-00056-en" num="0064">Hereby the advantage is achieved that the sub-batches each can be packed independently so they are easier to handle and e.g. faster to freeze. The batch can e.g. be collected on a pallet of boxes each containing one or more sub-batches.</p>
+      <p id="p-00057-en" num="0065">In this regard it is mentioned that particular advantages can be achieved in connection with the above-mentioned embodiment, according to which a batch may be completed at a selected station to fulfill a total fat/meat relationship, whereby the meat percentage of collections of trim (COTs) exceeds a minimum value at any time during the completion of the batch, and where the operator or operators at the e.g. packing process can simply take material from the station, i.e. the position, whereto the COTs are delivered by the separator, and pack it in boxes or the like of more or less random size.</p>
+      <p id="p-00058-en" num="0066">Preferably, the system may comprise means for conveying said supplied sequence of collections of trim (COTs) to and/or within the system, for example in the form of conveyor belts or the like.</p>
+      <p id="p-00059-en" num="0067">Preferably, the system may comprise means for transporting completed batches to further processing, packaging, boxing, labeling, etc., said means for transporting comprising for example conveyor belts or the like.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">THE FIGURES</heading>
+      <p id="p-00060-en" num="0068">The invention will be explained in further detail below with reference to the figures of which</p>
+      <p id="p-00061-en" num="0069">
+        <figref>FIGS. 1</figref>
+        <i>a</i>-<i>c </i>show different embodiments of a system according to the invention, shown in a schematic manner, and</p>
+      <p id="p-00062-en" num="0070">
+        <figref>FIGS. 2</figref>
+        <i>a</i>-<i>b </i>show embodiments of a system according to the invention in further detail.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00063-en" num="0071">Different embodiments of a system <b>1</b> according to the invention are shown in <figref>FIGS. 1</figref><i>a </i>to <b>1</b><i>c </i>in a schematic manner, which embodiments will be described in the following. The system, which is generally designated <b>1</b>, comprises an apparatus <b>10</b>, which in general is a trim parameter measuring apparatus, also referred to as a TPMA, which is designed for measuring the fat/meat relationship for meat, meat pieces, etc., and in this connection in particular for measuring the fat/meat relationship for a collection of trim (COT), that is supplied to the apparatus <b>10</b>. The TPMA <b>10</b> may be a machine with a conveyor belt supplying the products, e.g. the collections of trim (COTs), which machine or apparatus <b>10</b> measures the fat/meat relationship by means of X-rays when the products are going through it. It is preferably a dual energy system, meaning a system using X-ray radiations of two frequencies, where the attenuation of the radiations, e.g. the two frequencies when passing the products are measured and detected, whereafter the characteristics, e.g. the fat/meat relationship of the product can be determined. However, also X-ray radiation systems with a single energy/frequency can be used for this purpose, for example when the height/thickness of the products are even or when the products are formed to have a substantially uniform thickness, cf. for example the technique disclosed in WO 2005/090964.</p>
+      <p id="p-00064-en" num="0072">Furthermore, the system <b>1</b> comprises an apparatus <b>20</b> for separating the products after they have passed the TPMA <b>10</b>. Such a separator or separator like unit <b>20</b>, which will be described in further detail later on, may comprise e.g. a belt conveyor with diverter arms hinged alongside one or both sides. The diverter arms can turn across the conveyor belt in an angle to guide the products, e.g. COT's off the belt into bins, tubs, containers or the like (in general referred to as bins), which are placed e.g. at stations alongside the conveyor. Other means of diverting or moving the products may be used.</p>
+      <p id="p-00065-en" num="0073">The trim products are in sequence fed to the TPMA <b>10</b>, which trim products are supplied in quantities of approximately the same weight. This can be anything practical, e.g. in the range of 2 to 10 kg. However, other ranges may be used. Further, the quantities may differ from each other to a larger extent. Such a quantity is as also mentioned above referred to as a “collection of trim” (COT).</p>
+      <p id="p-00066-en" num="0074">In <figref>FIGS. 1</figref><i>a </i>to <b>1</b><i>c </i>it is shown that the COTs can be supplied from different sources <b>31</b>, <b>32</b> and <b>33</b>. It will be understood that the COTs can be supplied from only one specific source or from two and more sources and that the three sources shown in <figref>FIGS. 1</figref><i>a </i>to <b>1</b><i>c </i>are for illustrative purposes only.</p>
+      <p id="p-00067-en" num="0075">Such sources from which collections of trim (COTs) are supplied may be any trim table <b>31</b>, where the operators put the trim into tubs, bins or the like. As mentioned above, the trim products may be assessed on line by the operator and the trim may be sorted correspondingly, where most often the trim products are sorted in only a limited number of groups, for example 1 to 4 groups. From such tubs the products are manually or automatically moved to the trim grading system <b>1</b> in COTs of suitable sizes.</p>
+      <p id="p-00068-en" num="0076">The source may be a flow-line or a stream-line table <b>32</b>, where the COTs are conveyed from the operators in suitable sizes and guided directly to the trim grading system. Examples of flow-line or a stream-line tables are disclosed in for example WO 01/91565, WO 03/077662 and WO 2009/098171.</p>
+      <p id="p-00069-en" num="0077">Further, other sources <b>33</b> may be a source of trim products, where the trim products are delivered in a more or less continuous stream or flow. In such cases the flow can be directed to a worker/operator, who performs the task of creating collections of trim COTs of suitable sizes that are led manually, automatically or semi-automatically to the TPMA <b>10</b> in the system <b>1</b>. Further, the operator may assess the trim products and sort the products correspondingly as mentioned above, where most often the trim products are sorted in only a limited number of groups, before the thus created COTs are led to the TPMA <b>10</b>. In these situations, where the worker/operator performs the task of sorting trim products as a primary function, the operator may be especially trained and/or experienced and may perform the task in a more sophisticated and specialized manner, e.g. by categorizing the products in more categories than normally, etc.</p>
+      <p id="p-00070-en" num="0078">Further, any combination of the above sources <b>31</b>, <b>32</b> and <b>33</b> may apply.</p>
+      <p id="p-00071-en" num="0079">Further, the system <b>1</b> comprises a controller or control unit for controlling the separator <b>20</b> to complete a batch at a selected station, based on input from the trim parameter measuring apparatus (TPMA) <b>10</b>, where the batch comprises one or more collections of trim (COTs) and fulfils a predetermined criterion regarding a total fat/meat relationship. Thus, the control unit controls for example the diverter arms of the separator <b>20</b> such that the planned output is reached.</p>
+      <p id="p-00072-en" num="0080">As shown in <figref>FIG. 1</figref><i>c </i>the controller can be an independent controller <b>50</b>, connected by communication lines <b>55</b> to the parts of the system <b>1</b>, the control unit can be a controller <b>52</b> that is part of the TPMA <b>10</b> and/or the control unit can be a controller <b>51</b> that is part of the separator <b>20</b>. Furthermore, the controller can be a part of a weighing machine, e.g. a weighing machine that will be explained with reference to <figref>FIG. 1</figref><i>b. </i></p>
+      <p id="p-00073-en" num="0081">As mentioned, the system comprises means for determining the weight of the products, e.g. weighing means, means for estimating, measuring, calculating, etc. the weight based on various measuring principles, as it will be apparent to a skilled person.</p>
+      <p id="p-00074-en" num="0082">As shown in <figref>FIG. 1</figref><i>b </i>the weight of the COTs can be determined by the TPMA <b>10</b>, indicated at <b>40</b>, or a separate weight determining means or weighing apparatus <b>41</b>, <b>42</b> can be used, for example a conveyor belt based weighing machine that can optionally be put in before (<b>42</b>) or after (<b>41</b>) the TPMA <b>10</b>.</p>
+      <p id="p-00075-en" num="0083">Furthermore, the system <b>1</b> may comprise transport or conveying means <b>60</b> for delivering the completed batches for further processing, packaging, freezing, etc.</p>
+      <p id="p-00076-en" num="0084">In general, the system <b>1</b> is operated in the following manner:</p>
+      <p id="p-00077-en" num="0085">Trim products, which as mentioned above are supplied in collections of trim (COTs), are in sequence fed to the TPMA <b>10</b> and the separator like unit <b>20</b>. The TPMA <b>10</b> measures the fat/meat relationship of the COT's by means of e.g. X-rays when the products are going through it. Either the TPMA <b>10</b> or the optional weighing machine <b>41</b>, <b>42</b> determines the weight of the COTs one by one.</p>
+      <p id="p-00078-en" num="0086">The separator <b>20</b>, controlled by the controller <b>50</b>, <b>51</b> and/or <b>52</b>, performs a batching of the supplied COTs by guiding the COTs off the belt into bins, tubs, containers or the like (in general referred to as bins), which are placed at stations alongside the separator <b>20</b>.</p>
+      <p id="p-00079-en" num="0087">The content in a bin is referred to as a batch when it is ready to be removed and fed to the next process.</p>
+      <p id="p-00080-en" num="0088">The control unit <b>50</b>, <b>51</b> and/or <b>52</b> controls the separator <b>20</b>, e.g. the diverter arms of the separator such that the planned output is reached. The control of such a separator <b>20</b> can be performed in various manners, which will be apparent to a skilled person within the field of batching, cf. for example GB 2 116 732, EP 781 172, WO 01/07324, WO 01/27567, WO 03/069285 and related prior art documents describing various batching techniques within the food industry.</p>
+      <p id="p-00081-en" num="0089">An example of an embodiment of the system <b>1</b> according to the invention, wherein a separator <b>20</b> is shown in further detail, is illustrated in <figref>FIG. 2</figref><i>a</i>. As described above, the system <b>1</b> comprises a trim parameter measuring apparatus TPMA <b>10</b>, which receives schematically shown collections of trim COTs <b>2</b> from a source <b>30</b>, where the COTs <b>2</b> are delivered by a conveyor belt <b>4</b>. As shown the weight of the individual COT's may be determined by a separate weighing machine <b>42</b>, but may instead be determined by the TPMA <b>10</b> as explained above. After the fat/meat relationship, e.g. the fat percentage has been determined by the TPMA <b>10</b>, the COT's are transported further on by a conveyor belt <b>6</b> forming part of the separator <b>20</b>. The separator has a number of separator arms <b>22</b>, diverter wings or the like, by means of which the COTs can be diverted to a selected station, <b>24</b> as described above and as further exemplified below, where the COTs are collected in bins, tubs, containers or the like.</p>
+      <p id="p-00082-en" num="0090">In <figref>FIG. 2</figref><i>a </i>it is shown that for each station <b>24</b> a separator arm <b>22</b>, diverter wing or the like is placed, but it will be understood that a station <b>24</b> may comprise two or more positions, meaning that two or more separator arms <b>22</b> may divert COT's to a single station <b>24</b>, for example in cases where relatively large batches are being made at one or more of the stations <b>24</b>.</p>
+      <p id="p-00083-en" num="0091">Further, a conveyor belt <b>61</b> or the like is illustrated for the purpose of transporting completed batches to further processing, which may include e.g. packaging, boxing, labeling, freezing, shipping, etc.</p>
+      <p id="p-00084-en" num="0092">The controller is shown as a separate control unit <b>50</b> in this example, which control unit <b>50</b> is connected by lines, wires or channels <b>55</b> to the units in the system for receiving measured or determined data and for controlling the separator <b>20</b>, e.g. the separator or diverter wings <b>22</b>.</p>
+      <p id="p-00085-en" num="0093">Furthermore, it should be mentioned that the system <b>1</b> is designed for e.g. registering the sequence and/or the position of the COT's, which data are combined with the measured and/or determined data regarding the individual COT weight data and the fat/meat relationship, which is necessary in order to perform the batching to achieve batches with the desired target data. Thus, means such as detectors for detecting passing COT's, means for controlling and/or registering, detecting, etc. position and/or speed of conveyor belts etc. may be comprised in the system, which also will be apparent to a person skilled within the art of batching and food industry in general.</p>
+      <p id="p-00086-en" num="0094">Further, as shown in <figref>FIG. 2</figref><i>a</i>, a feedback <b>58</b> from the controller <b>50</b> to the source <b>30</b> of the trim products may be present, the significance of which will be explained below.</p>
+      <p id="p-00087-en" num="0095">
+        <figref>FIG. 2</figref>
+        <i>b </i>shows an embodiment essentially corresponding to the embodiment shown in <figref>FIG. 2</figref><i>a</i>, but comprising six stations <b>24</b><i>a</i>-<b>24</b><i>f </i>and illustrating that a batch can comprise sub-batches. Further, the feature of providing batches that can be removed e.g. at any time, e.g. batches that at any time fulfill the predefined criterion, will be explained below with reference to <figref>FIG. 2</figref><i>b. </i></p>
+      <p id="p-00088-en" num="0096">The output of the method and the system according to the invention can for example be in the following form:</p>
+      <p id="p-00089-en" num="0097">A. Relatively Small Batches.</p>
+      <p id="p-00090-en" num="0098">These are in general made of one or a few COTs <b>2</b>. In general they are created by guiding together COTs <b>2</b> of approximately the same fat percentage so that the final batch contain a certain weight (minimum weight or a target weight plus minus a tolerance) with a fat percentage within a pre-determinant range (or below/above a certain number).</p>
+      <p id="p-00091-en" num="0099">It may in this case be necessary to run another job in parallel to this job, simply to utilize all COTs, as only relatively few COTs will be useable for a job as this.</p>
+      <p id="p-00092-en" num="0100">B. Relatively Large Batches.</p>
+      <p id="p-00093-en" num="0101">These are made of several COTs <b>2</b>. Such batches are in general created by guiding together COT's <b>2</b> of different fat percentage in a controlled manner so a pre-determinant final fat percentage (within relatively narrow limits) is obtained. The batch weight can also be controlled to meet a certain final batch weight within controlled tolerances (or below/above a certain number). If the supplied COTs cannot be mixed/batched together to obtain the target fat percentage the process is halted before the final batch weight is obtained and either meat or fat is added to reach the final percentage. Such operation is supported by the system according to the invention.</p>
+      <p id="p-00094-en" num="0102">To utilize the COTs <b>2</b> in the best way—i.e. to have a choice for the COTs—it is an advantage to build up several batches in parallel and even better if these are to be terminated with different fat percentages.</p>
+      <p id="p-00095-en" num="0103">C. Relatively Large Batches Packed in Sub-Batches.</p>
+      <p id="p-00096-en" num="0104">This is in general as B, but the batch is divided into several sub-batches. This has the advantage compared to B that the sub-batches each can be packed independently so they are easier to handle and e.g. faster to freeze.</p>
+      <p id="p-00097-en" num="0105">The batch can e.g. be collected on a pallet of boxes each containing one or more sub-batches. Such an example is shown in <figref>FIG. 2</figref><i>b</i>, where at the station <b>24</b><i>c </i>it is illustrated that the COTs are packed in boxes <b>63</b>, which are placed or collected on a pallet <b>62</b>.</p>
+      <p id="p-00098-en" num="0106">D. Average Meat/Fat Relationship Maintained.</p>
+      <p id="p-00099-en" num="0107">A further embodiment which may be of particular importance when dealing with relatively large batches, cf. e.g. embodiment C as described above, involves the feature that at one or more, possibly all separator positions or stations <b>24</b>, the output is so arranged that the meat content of the COTs at any given time from a “zero-time” is above a guaranteed percentage.</p>
+      <p id="p-00100-en" num="0108">If for example a system is considered where a total of six separator positions or stations, e.g. <b>24</b><i>a</i>, <b>24</b><i>b</i>, <b>24</b><i>c</i>, <b>24</b><i>d</i>, <b>24</b><i>e </i>and <b>24</b><i>f </i>as shown in <figref>FIG. 2</figref><i>b </i>are operated according to this feature, the stations <b>24</b><i>a</i>, <b>24</b><i>b </i>and <b>24</b><i>c </i>may for example be set to a meat percentage of minimum 94% and the stations <b>24</b><i>d</i>, <b>24</b><i>e </i>and <b>24</b><i>f </i>may for example be set to a meat percentage of minimum 85%.</p>
+      <p id="p-00101-en" num="0109">When a collection of trim COT arrives to the measuring equipment, e.g. TPMA <b>10</b>, the controller or control unit guides it to one of the six positions, such that the meat content at that position is kept just above the chosen percentage.</p>
+      <p id="p-00102-en" num="0110">In this way the operators at the e.g. packing process can just take material from a separator position or station, e.g. <b>24</b><i>a</i>-<b>24</b><i>f</i>, and pack it into boxes of more or less random size and allocated them to a lot of material, where a lot can be one or several pallet(s), and at the same time obtain that such a lot will contain the meat percentage specified. This is shown for the station <b>24</b><i>c</i>, where the material, i.e. COTs are packed into boxes <b>62</b>, which are placed on a pallet <b>62</b>. As mentioned above, a lot can comprise one or more pallets <b>62</b>.</p>
+      <p id="p-00103-en" num="0111">When a lot is almost finished, the operator(s) there must <ul id="ul-00007-en" list-style="none"><li><ul id="ul-00008-en" list-style="none"><li>(1) stop the guidance of material to that particular separator position or station,</li><li>(2) pack the remaining material (COTs) at the separator position or station in question into boxes and allocate them to the lot in question and</li><li>(3) reset the separator position or station so it starts from scratch again, e.g. perform an operation that indicates to the controller or control unit that the “zero-time” for the separator position or station in question is reset.</li></ul></li></ul></p>
+      <p id="p-00104-en" num="0115">Further, it is noted that the lot (or batch) can be finished at any given time from the “zero-time” since the predefined criterion, i.e. that the meat percentage is above a guaranteed percentage, is fulfilled.</p>
+      <p id="p-00105-en" num="0116">E. A Feedback Signal to the Operator.</p>
+      <p id="p-00106-en" num="0117">For information and/or guidance purposes feedback information can be arranged concerning the fat percentage of each COT <b>2</b> to the operators of a specific source <b>30</b>, <b>31</b>, <b>32</b>, <b>33</b>. Such information can be arranged in various ways to suit the purpose (average percentage over shorter or longer periods, tendencies etc). Such a feedback may for example facilitate the above-mentioned embodiment D, where an average meat/fat relationship is maintained at each station, and where the requirements for material of a certain meat/fat relationship can be fed back to e.g. the operators trimming the meat in order for the system to meet the requirements in question.</p>
+      <p id="p-00107-en" num="0118">Further, feedback to e.g. the operators processing and/or trimming the meat may in addition to or instead of instruction purposes serve for training purposes.</p>
+      <p id="p-00108-en" num="0119">Furthermore, it is mentioned that the feedback may also or instead be fed to the source system itself, e.g. a control unit of the source system, where it may be used e.g. as a control input for e.g. optimizing the efficiency of the source system. Further, such a feedback signal may also serve as a control input to the source system in order to make the source system deliver e.g. COTs of a particular characteristic to the fat/meat grader system <b>1</b>, as also exemplified above, which will improve the efficiency of the fat/meat grade system <b>1</b>. Other such examples of a cooperation taking place between the two systems are possible, whereby a particular advantageous symbiotic effect will be achieved. For example, in cases where the source system performs a processing of meat that in addition to primary cuts, fat products, trim in its normally used sense also results in secondary cuts, the source system can be controlled by the fat/meat grader system <b>1</b> to deliver such secondary cuts in COTs in for example a situation, where the fat/meat grader system <b>1</b> needs COTs having a low fat percentage in order to complete a batch to a specified target fat percentage or to maintain an average meat/fat relationship. Other similar scenarios are possible.</p>
+      <p id="p-00109-en" num="0120">Further, it is noted that the feedback may be used for establishing traceability between the batches that are being made by the system <b>1</b> and the meat products that are being processed by the source system. The meat products processed by the source system have e.g. identifications for establishing traceability in particular for the primary cuts, but when feedback can be established from the fat/meat grader system <b>1</b> to the source system, traceability can also be provided for the trim products that are being used for the completed batches. Thus, it may in this way be possible to identify for example which animals have been used for producing e.g. a batch of trim products.</p>
+      <p id="p-00110-en" num="0121">A similar effect as regards traceability can be achieved by providing/transmitting information from the source system to the fat/meat grader system <b>1</b>.</p>
+      <p id="p-00111-en" num="0122">Any combination of the above can be arranged.</p>
+      <p id="p-00112-en" num="0123">Furthermore, it is noted that in the industrial application it will be an advantage to e.g. utilize the knowledge of the operator's performance during the batching process. Hence the control unit <b>50</b> (among other things of more or less the same nature) may take into account that a certain operator produces trim with a higher percentage of fat than another one and keeps track of how often this operator supplies a COT <b>2</b>.</p>
+      <p id="p-00113-en" num="0124">Further, it is noted that the method and the system according to the invention has been described above with reference to particular embodiments, but it will be understood that the invention is not limited to the particular examples described above and shown in the drawings, but may be modified in numerous manners within the scope of the invention.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. Method of processing of meat trim products, comprising the steps of:
+<claim-text>supplying trim products as a sequence of collections of trim (COTs), each collection of trim (COT) comprising a plurality of trim products:</claim-text><claim-text>measuring a fat/meat relationship for a collection of trim (COT);</claim-text><claim-text>transferring a collection of trim (COT) to a selected station by a separator, controlled by a controller; and</claim-text><claim-text>completing a batch at a selected station on the basis of data for said fat/meat relationship, said batch comprising one or more collections of trim (COTs) and fulfilling a predetermined criterion regarding a total fat/meat relationship.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. Method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein weight is determined for the supplied collections of trim (COTs) and wherein the weight data is supplied to the controller.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. Method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein collections of trim (COTs) are supplied with approximately the same weight.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. Method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said batch that is completed at a selected station further fulfils a predetermined criterion regarding the total weight of the batch.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. Method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein batches that are completed at at least two different stations fulfill different criteria as regards to the total fat/meat relationship and/or the total weight.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. Method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said batch is completed at said selected station to fulfill said predetermined criterion regarding a total fat/meat relationship, whereby said predetermined criterion regarding a total fat/meat relationship comprises that the meat percentage of collections of trim (COTs) transferred to the selected station exceeds a minimum value at any time during the completion of the batch.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. Method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said predetermined criterion regarding a total fat/meat relationship is fulfilled at a specific point in time, determined by the controller.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. Method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the fat/meat relationship for a collection of trim (COT) is measured by a radiation measurement, preferably using X-ray radiation and detecting means for performing said measurements, in particular in the form of a dual energy system.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. Method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the sequence and/or the positions of said supplied collections of trim (COTs) are detected and/or registered, which data is supplied to the controller.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. Method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein additional meat and/or fat products are added at a station or at a subsequent processing step to complete a batch in order to fulfill said predetermined criterion regarding a total fat/meat relationship.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. Method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said collections of trim (COTs) are supplied either manually or automatically from a trim source such as a trim table, a flow-line or stream-line table and/or any other trim producing source.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. Method according <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein measured and/or calculated data relating to the fat/meat relationship for one or more collections of trim (COTs) and/or relating to one or more collections of trim (COTs) required for a batch is provided as a feedback.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. Method according <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein said measured and/or calculated data, in particular data relating to the fat/meat relationship for one or more collections of trim (COTs), is fed to an operator who has produced said one or more collections of trim (COTs).</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. Method according <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein said measured and/or calculated data is fed to the trim source which supplies collections of trim (COTs).</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. Method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein a batch completed at a station comprises a plurality of sub-batches.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en" independent="true">
+      <claim-text>
+        <b>16</b>. System for processing of meat trim products, wherein trim products are supplied to the system in a sequence of collections of trim (COTs), each collection of trim (COT) comprising a plurality of trim products, said system comprising:
+<claim-text>a trim parameter measuring apparatus (TPMA) designed for measuring the fat/meat relationship for a collection of trim (COT);</claim-text><claim-text>a separator for transferring a collection of trim (COT) to a selected station; and</claim-text><claim-text>a controller for controlling the separator to complete a batch at a selected station based on input from said trim parameter measuring apparatus (TPMA), said batch comprising one or more collections of trim (COTs) and fulfilling a predetermined criterion regarding a total fat/meat relationship.</claim-text></claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. System according to <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the system further comprises weighing means for determining the weight of each collection of trim (COT), and wherein said controller for controlling the separator receives input from said weighing means.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. System according to <claim-ref idref="clm-00017-en">claim 17</claim-ref>, wherein said weighing means are integrated with the t rim parameter measuring apparatus (TPMA) or with the separator or wherein the weighing means are independent.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. System according to <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein said controller is adapted for controlling the separator to complete a batch at a selected station, which batch further fulfils a predetermined criterion regarding the total weight of the batch.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. System according to <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein said controller is adapted for controlling the separator to complete batches at at least two different stations, wherein said batches fulfill different criteria in regards to the total fat/meat relationship and/or the total weight.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. System according to <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein said system is configured for completing said batch at said selected station to fulfill said predetermined criterion regarding a total fat/meat relationship, whereby said predetermined criterion regarding a total fat/meat relationship comprises that the meat percentage of collections of trim (COTs) transferred to the selected station exceeds a minimum value at any time during the completion of the batch.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. System according to <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein said predetermined criterion regarding a total fat/meat relationship is fulfilled at a specific point in time determined by the controller.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>23</b>. System according to <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein said trim parameter measuring apparatus (TPMA) comprises radiation means for measuring the fat/meat relationship for a collection of trim (COT), preferably X-ray radiation and detecting means for performing said measurements; in particular, in the form of a dual energy system.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>24</b>. System according to <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the system comprises means for detecting and/or registering the sequence and/or the positions of said supplied collections of trim (COTs).</claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en">
+      <claim-text>
+        <b>25</b>. System according to <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the system is designed for adding additional products at a station or at a subsequent processing step to complete a batch in order to fulfill said predetermined criterion regarding a total fat/meat relationship.</claim-text>
+    </claim>
+    <claim num="26" id="clm-00026-en">
+      <claim-text>
+        <b>26</b>. System according to <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein said collections of trim (COTs) are supplied either manually or automatically from a trim source such as a trim table, a flow-line or stream-line table and/or any other trim producing source.</claim-text>
+    </claim>
+    <claim num="27" id="clm-00027-en">
+      <claim-text>
+        <b>27</b>. System according to <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein said system is designed for feeding measured and/or calculated data; in particular, data relating to the fat/meat relationship for one or more collections of trim (COTs) and/or relating to one or more collections of trim (COTs) required for a batch as a feedback signal.</claim-text>
+    </claim>
+    <claim num="28" id="clm-00028-en">
+      <claim-text>
+        <b>28</b>. System according to <claim-ref idref="clm-00027-en">claim 27</claim-ref>, wherein said system is designed for feeding said measured and/or calculated data; in particular, data relating to the fat/meat relationship for one or more collections of trim (COTs), to an operator who has produced said one or more collections of trim (COTs).</claim-text>
+    </claim>
+    <claim num="29" id="clm-00029-en">
+      <claim-text>
+        <b>29</b>. System according to <claim-ref idref="clm-00027-en">claim 27</claim-ref>, wherein said system is designed for feeding said measured and/or calculated data to the trim source which supplies trim products.</claim-text>
+    </claim>
+    <claim num="30" id="clm-00030-en">
+      <claim-text>
+        <b>30</b>. System according to <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein said system is designed in order to produce a batch that is completed at a station as a plurality of sub-batches.</claim-text>
+    </claim>
+    <claim num="31" id="clm-00031-en">
+      <claim-text>
+        <b>31</b>. System according to <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein said system comprises means for conveying said supplied sequence of collections of trim (COTs) to and/or within the system in the form of conveyor belts.</claim-text>
+    </claim>
+    <claim num="32" id="clm-00032-en">
+      <claim-text>
+        <b>32</b>. System according to <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein said system comprises means for transporting completed batches to further processing, packaging, boxing or labeling, said means for transporting comprising for example conveyor belts. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257397A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257397A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257397A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257397A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257397A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257397A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257397A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257397A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257397A1_00005.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257397A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257397A1.PDF" type="pdf" size="514737" pages="12" />
+</lexisnexis-patent-document>
