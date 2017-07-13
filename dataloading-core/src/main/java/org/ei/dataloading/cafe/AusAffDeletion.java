@@ -34,6 +34,11 @@ public class AusAffDeletion {
 	static String username = "ap_correction1";
 	static String password = "ei3it";
 	static String deletionTable = "cafe_weekly_deletion";
+	static String action = "delete";
+	static int recsPerEsbulk;
+	static String esDomain = "search-evcafe5-ucqg6c7jnb4qbvppj2nee4muwi.us-east-1.es.amazonaws.com";
+	
+	
 
 	AusAffESIndex esIndexObj = null;
 	
@@ -52,7 +57,7 @@ public class AusAffDeletion {
 
 	public static void main(String[] args)
 	{
-		if(args.length >5)
+		if(args.length >8)
 		{
 			if(args[0] !=null)
 			{
@@ -82,6 +87,29 @@ public class AusAffDeletion {
 				deletionTable = args[5];
 				System.out.println("Temp table: " + deletionTable);
 			}
+			if(args[6] !=null)
+			{
+				action = args[6];
+			}
+			if(args[7] !=null)
+			{
+				try
+				{
+					recsPerEsbulk = Integer.parseInt(args[7]);
+
+					System.out.println("ES Documents per Bulk: " + recsPerEsbulk);
+				}
+				catch(NumberFormatException ex)
+				{
+					recsPerEsbulk = 10;
+				}
+			}
+			if(args[8] !=null)
+			{
+				esDomain = args[8];
+
+				System.out.println("ES Domain name: " + esDomain);
+			}
 
 		}
 		else
@@ -94,7 +122,7 @@ public class AusAffDeletion {
 		{
 			AusAffDeletion c = new AusAffDeletion();
 			
-			c.esIndexObj = new AusAffESIndex();
+			c.esIndexObj = new AusAffESIndex(recsPerEsbulk, esDomain, action);
 			
 			c.con = c.getConnection(url, driver, username, password);
 
@@ -126,12 +154,14 @@ public class AusAffDeletion {
 		String query = null;
 
 		String profileId= "";
+		String status;
 
 		try
 		{
 			if(doc_type !=null && doc_type.equalsIgnoreCase("apr"))
 			{
-				lookupTable = "cmb_au_lookup";
+				lookupTable = "cmb_au_lookup";   //prod
+				//lookupTable = "hh_test_au_lookup"; // for testing
 				lookupTable_columnName = "AUTHOR_ID";
 				
 				profileTable = "author_profile";
@@ -167,16 +197,19 @@ public class AusAffDeletion {
 
 			while(rs.next())
 			{
-				if(rs.getString(0) !=null)
+				if(rs.getString(1) !=null)
 				{
-					profileId = rs.getString(0);
+					profileId = rs.getString(1);
+					status = rs.getString(2);
+					if(status.equalsIgnoreCase("matched"))
+						status="$"+status+"$";
 					if(id_status_List.containsKey(profileId))
 					{
-						id_status_List.put(profileId, id_status_List.get(profileId) + "," + rs.getString(1));
+						id_status_List.put(profileId, id_status_List.get(profileId) + "," + status);
 					}
 					else
 					{
-						id_status_List.put(profileId, rs.getString(1));
+						id_status_List.put(profileId, status);
 					}
 				}
 			}
@@ -226,9 +259,9 @@ public class AusAffDeletion {
 	{	
 		for(String key: id_status_List.keySet())
 		{
-			if(id_status_List.get(key) !=null && !(id_status_List.get(key).contains("matched")) && id_status_List.get(key).contains("deleted"))
+			if(id_status_List.get(key) !=null && !(id_status_List.get(key).contains("$matched$")) && id_status_List.get(key).contains("deleted"))
 			{
-				id_List.add(key);
+				id_List.add(key);		
 			}
 			else
 			{
@@ -236,7 +269,7 @@ public class AusAffDeletion {
 			}
 		}
 
-		System.out.println("Total " + doc_type + " Ids to be deleted" + id_List.size());
+		System.out.println("Total " + doc_type + " Ids to be deleted: " + id_List.size());
 
 	}
 
@@ -414,7 +447,7 @@ public class AusAffDeletion {
 			con.commit();
 
 
-			System.out.println("Total Keys updated in " + profileTable + " :- " + count);
+			System.out.println("Total Keys updated in " + profileTable + " : " + count);
 
 		}
 		catch(SQLException ex)

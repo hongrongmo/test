@@ -460,12 +460,12 @@ public void parseESIndexJSONResponse(String esResponseString)
 			if(status != null && (status == 200 || status == 201))
 				esIndexed_docs_list.add(_id);
 			else
-				System.out.print("doc: " + _id + " with status: " + status + " and result: " + result + " failed to index to ES!!!!");
+				System.out.print("doc: " + _id + " with status: " + status + " and result: " + result + " failed to index/delete to/from ES!!!!");
 			
 			count ++;
 		}
 		
-		System.out.println("Total indexed count: " + count);
+		System.out.println("Total indexed/deleted count: " + count);
 		
 	}
 	catch (org.json.simple.parser.ParseException e) 
