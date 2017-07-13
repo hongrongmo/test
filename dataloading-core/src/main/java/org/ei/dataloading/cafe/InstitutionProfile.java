@@ -180,6 +180,7 @@ public class InstitutionProfile
         }
         catch(Exception e)
         {
+        	e.printStackTrace();
             throw new Exception(e);
         }       
     }
@@ -239,6 +240,13 @@ public class InstitutionProfile
 						String affiliationID = institutionProfile.getAttributeValue("affiliation-id",noNamespace);
 						record.put("AFFID",affiliationID);
 						//System.out.println("affiliationID= "+affiliationID);
+						String parentID = institutionProfile.getAttributeValue("parent",noNamespace);
+						//System.out.println("parentID="+parentID);
+						if(parentID!=null)
+						{
+							record.put("PARENTID",parentID);
+						}
+						
 						if(institutionProfile.getChild("status",noNamespace)!=null)
 						{
 							String status = institutionProfile.getChildText("status",noNamespace);
@@ -284,6 +292,13 @@ public class InstitutionProfile
 							//System.out.println("preferred-name= "+preferredName);
 							//System.out.println("preferred-name= "+dictionary.mapEntity(preferredName));
 						}
+						
+						if(institutionProfile.getChild("parent-preferred-name",noNamespace)!=null)
+						{
+							String parentPreferredName = institutionProfile.getChildText("parent-preferred-name",noNamespace);
+							record.put("PARENTPREFEREDNAME", dictionary.mapEntity(parentPreferredName));						
+						}
+						
 						
 						if(institutionProfile.getChild("sort-name",noNamespace)!=null)
 						{
@@ -523,6 +538,20 @@ public class InstitutionProfile
 			recordBuf.append(FIELDDELIM);
 			
 			recordBuf.append(loadNumber);
+			
+			recordBuf.append(FIELDDELIM);
+			
+			if(record.get("PARENTID")!=null)
+			{
+				recordBuf.append((String)record.get("PARENTID"));				
+			}
+			
+			recordBuf.append(FIELDDELIM);
+			
+			if(record.get("PARENTPREFEREDNAME")!=null)
+			{
+				recordBuf.append((String)record.get("PARENTPREFEREDNAME"));				
+			}
 		}
 		out.write(recordBuf.toString()+"\n");
 	}

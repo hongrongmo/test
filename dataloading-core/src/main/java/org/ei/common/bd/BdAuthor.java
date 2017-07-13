@@ -9,6 +9,7 @@ package org.ei.common.bd;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
 import org.ei.common.Constants;
 
 //import org.ei.data.bd.loadtime.BdParser;
@@ -118,11 +119,26 @@ public class BdAuthor {
     public String getSearchValue() {
 
         if ((this.surname != null) && (this.givenName != null)) {
-            return (this.surname.concat(" ").concat(this.givenName));
+            return (addSpecialMarkup(this.surname).concat(" ").concat(addSpecialMarkup(this.givenName)));
         } else if (this.indexedName != null) {
-            return this.indexedName;
+            return addSpecialMarkup(this.indexedName);
         }
         return null;
+    }
+    
+    //add special markup to dash by hmo at 6/2/3017
+    private String addSpecialMarkup(String input)
+    {
+    	String output="";
+    	if(input!=null)
+    	{
+    		output = input.replaceAll("-", " qqdashqq ");
+    	}
+    	else
+    	{
+    		output = null;
+    	}
+    	return output;
     }
 
     /**

@@ -1,6 +1,6 @@
 package org.ei.dataloading.cafe;
-import java.sql.*;
 
+import java.sql.*;
 import java.util.*;
 import java.io.*;
 import java.util.regex.*;
@@ -261,7 +261,7 @@ public class AuthorProfileCorrection
 	                
 	                if(bucketName==null || bucketName.length()==0)
 	                {	                		   	                	
-	                    c.readFile(filename,outFile,affOutFile);               
+	                    c.readFile(path+"/"+filename,outFile,affOutFile);               
 	                }
 	                //read from s3 bucket
 	                else if (bucketName !=null && bucketName.length() >0)
@@ -285,7 +285,12 @@ public class AuthorProfileCorrection
 	                int tempTableCount = au.getTempTableCount();
 	 
 	                System.out.println(tempTableCount+" records was loaded into the temp table");
-	                	                
+	                
+	                p = r.exec("mv "+outFileName+" "+path);
+	                p = r.exec("mv "+affOutFileName+" "+path);
+	                
+	                t = p.waitFor();
+	                
 	                endTime = System.currentTimeMillis();
 	                System.out.println("time for loading temp table "+(endTime-midTime)/1000.0+" seconds");
 	                midTime = endTime;
@@ -466,6 +471,7 @@ public class AuthorProfileCorrection
                     System.in.read();
                     Thread.currentThread().sleep(1000);
                 }
+                
                 pstmt = con.prepareCall("{ call update_au_profile_temp_table(?,?)}");
                 pstmt.setInt(1,updateNumber);
                 pstmt.setString(2,fileName);
@@ -529,6 +535,7 @@ public class AuthorProfileCorrection
         }
         catch(Exception e)
         {
+        	System.out.println("File that cause Exception:: "+fileName);
             e.printStackTrace();
         }
         finally

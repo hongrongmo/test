@@ -54,9 +54,11 @@ public class C84Combiner extends Combiner {
             System.out.println("Processing year " + yearIndex + "...");
             c = new C84Combiner(new CombinedXMLWriter(recsPerbatch, yearIndex, "c84", environment));
             c.writeCombinedByYear(url, driver, username, password, yearIndex);
-        } else {
-            c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
-        }
+        } else if (loadNumber == 1) {
+            c.writeCombinedByTable(url, driver, username, password);
+	    } else {
+	        c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
+	    }
 
     }
 
@@ -74,7 +76,7 @@ public class C84Combiner extends Combiner {
     			
     				stmt = con.createStatement();
     				System.out.println("Running the query...");
-    				String sqlQuery = "select * from " + Combiner.TABLENAME +" where database='" + Combiner.CURRENTDB + "'";
+    				String sqlQuery = "select * from " + Combiner.TABLENAME;
     				System.out.println(sqlQuery);
     				rs = stmt.executeQuery(sqlQuery);
     				
@@ -299,9 +301,18 @@ public class C84Combiner extends Combiner {
                     rec.put(EVCombinedRec.LANGUAGE, prepareMulti(la));
                 }
 
+                //change for book project by hmo at 5/23/2017
                 String docType = rs.getString("dt");
                 if (docType == null) {
                     docType = "";
+                }
+                else if (docType.equalsIgnoreCase("mr"))
+                {
+                	docType = "bk";
+                }
+                else if (docType.equalsIgnoreCase("mc"))
+                {
+                	docType = "ch";
                 }
 
                 if (mhsh != null || rec.containsKey(EVCombinedRec.CONTROLLED_TERMS)) {
