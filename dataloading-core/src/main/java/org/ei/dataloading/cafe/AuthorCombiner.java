@@ -407,8 +407,8 @@ public class AuthorCombiner {
 			else if(!(action.isEmpty()) && action.equalsIgnoreCase("update"))
 			{
 				updateNumber=loadNumber;
-				/*query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + 
-						" where STATUS='matched' and dbase='cpx')";*/
+				query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + 
+						" where STATUS='matched' and dbase='cpx')";
 
 
 				// for testing
