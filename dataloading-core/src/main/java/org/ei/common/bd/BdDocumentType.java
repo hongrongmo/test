@@ -29,6 +29,8 @@ public class BdDocumentType
     public static final String PATENT_CODE = "PA";
     public static final String ARTICLE_IN_PRESS = "IP";
     public static final String IN_PROCESS = "GI";
+    public static final String BOOK_CODE = "BR";
+    public static final String CHAPTER_CODE = "CH";
 
     static
     {
@@ -49,6 +51,10 @@ public class BdDocumentType
       bdDocType.put("le",JOURNAL_ARTICLE_CODE);
       bdDocType.put("mc",MONOGRAPH_CHAPTER_CODE);
       bdDocType.put("mr",MONOGRAPH_REVIEW_CODE);
+      //added for book project by hmo at 5/16/2017
+      //bdDocType.put("mc",CHAPTER_CODE);
+      //bdDocType.put("mr",BOOK_CODE);
+      //bdDocType.put("bk",BOOK_CODE);
       bdDocType.put("no",JOURNAL_ARTICLE_CODE);
       bdDocType.put("pa",JOURNAL_ARTICLE_CODE);
       bdDocType.put("pr",JOURNAL_ARTICLE_CODE);

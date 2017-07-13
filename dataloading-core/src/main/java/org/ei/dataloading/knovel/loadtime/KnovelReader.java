@@ -458,8 +458,20 @@ public class KnovelReader
 	
 		if(root.getName().equals("entry"))
 		{
-			output_record = getRecord(root,filename);	
-			outputKnovelRecord(output_record,out,lastModify);
+			String database = "knc";
+			output_record = getRecord(root,filename);
+			if(output_record != null)
+			{
+				if(output_record.get("KNC_DATABASE")!=null && ((String)output_record.get("KNC_DATABASE")).equalsIgnoreCase("knc"))
+				{
+					outputKnovelRecord(output_record,out,lastModify,"knc");
+				}
+				
+				if(output_record.get("KNA_DATABASE")!=null && ((String)output_record.get("KNA_DATABASE")).equalsIgnoreCase("kna"))
+				{
+					outputKnovelRecord(output_record,out,lastModify,"kna");
+				}
+			}
 		}
 		else if(root.getName().equals("deleted-entry"))
 		{
@@ -544,17 +556,28 @@ public class KnovelReader
 		
 	}
 
-	private void outputKnovelRecord(HashMap singleRecord, PrintWriter out, String lastModify)
+	private void outputKnovelRecord(HashMap singleRecord, PrintWriter out, String lastModify,String database)
 	{
 		StringBuffer outputBuffer = new StringBuffer();
 		try
 		{
 			// M_ID
-			outputBuffer.append(singleRecord.get("MID"));
+			if(database!=null && database.equalsIgnoreCase("knc"))
+			{
+				outputBuffer.append(singleRecord.get("MID"));
+			}
+			else if (database!=null && database.equalsIgnoreCase("kna"))
+			{
+				outputBuffer.append(singleRecord.get("KNA_MID"));
+			}
+			else
+			{
+				System.out.println("no database found");
+			}
 			outputBuffer.append(DELIM);
 			
 			// DATABASE
-			outputBuffer.append("knc");
+			outputBuffer.append(database);
 			outputBuffer.append(DELIM);
 
 			// FULLTEXT_LINK
@@ -791,7 +814,13 @@ public class KnovelReader
 			outputBuffer.append(lastModify);
 			outputBuffer.append(DELIM);
 			String outString = outputBuffer.toString().replaceAll("\n","");
-			out.println(outString);
+			
+			//only output record when database is knc or kna
+			if(database!=null && (database.equalsIgnoreCase("knc") || database.equalsIgnoreCase("kna")))
+			{
+				out.println(outString);
+				//System.out.println(outString);
+			}
 		}
 		catch(Exception e)
 		{
@@ -821,6 +850,33 @@ public class KnovelReader
 				record = new HashMap();
 
 				record.put("MID","knc_" + new GUID().toString());
+				
+				//added for kna record by hmo at 5/11/2017
+				record.put("KNA_MID","kna_" + new GUID().toString());
+				//record.put("DATABASE","knc");
+				
+				if(rec.getChild("audience",dctermsNamespace) != null)
+				{
+					List audiences = rec.getChildren("audience",dctermsNamespace);
+					for(int i=0;i<audiences.size();i++)
+					{
+						Element audience = (Element)audiences.get(i);
+						String audienceContent = audience.getTextTrim();
+						
+						if(audienceContent!=null && audienceContent.equalsIgnoreCase("academic"))
+						{
+							//System.out.println("KNA_DATABASE");
+							record.put("KNA_DATABASE","kna");
+						}
+						if(audienceContent!=null && audienceContent.equalsIgnoreCase("corporate"))
+						{
+							//System.out.println("KNC_DATABASE");
+							record.put("KNC_DATABASE","knc");
+						}
+					}
+					
+				}
+				
 				if(rec.getChildren("link") != null)
 				{
 					List links = rec.getChildren("link",noNamespace);
@@ -931,6 +987,8 @@ public class KnovelReader
 					List subjects = rec.getChildren("subject",dcNamespace);
 					getSubjects(subjects,record);
 				}
+				
+				
 				
 				if(rec.getChild("accessRights",dctermsNamespace) != null)
 				{

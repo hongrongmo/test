@@ -58,6 +58,13 @@ public class IBFCombiner
                                 yearIndex);
             }
         }
+        else if (loadNumber ==1)
+        {
+            c.writeCombinedByTable(url,
+                                   driver,
+                                   username,
+                                   password);                              
+        }
         else if (loadNumber > 3000 || loadNumber < 1000)
         {
             c.writeCombinedByWeekNumber(url,
@@ -65,7 +72,7 @@ public class IBFCombiner
                                         username,
                                         password,
                                         loadNumber);
-        }
+        }     
         else
         {
             c.writeCombinedByYear(url,
@@ -133,7 +140,7 @@ public class IBFCombiner
     			
     				stmt = con.createStatement();
     				System.out.println("Running the query...");
-    				String sqlQuery = "select * from " + Combiner.TABLENAME +" where database='" + Combiner.CURRENTDB + "'";
+    				String sqlQuery = "select * from " + Combiner.TABLENAME;
     				System.out.println(sqlQuery);
     				rs = stmt.executeQuery(sqlQuery);
     				
@@ -745,11 +752,15 @@ public class IBFCombiner
         }
         else if(newdocType.equals("40"))
         {
-            list.add("MC");
+        	//change for book project by hmo at 5/18/2017
+            //list.add("MC");
+        	list.add("CH");
         }
         else if(newdocType.equals("30"))
         {
-            list.add("MR");
+        	//change for book project by hmo at 5/18/2017
+            //list.add("MR");
+        	list.add("BK");
         }
         else if(newdocType.equals("12"))
         {

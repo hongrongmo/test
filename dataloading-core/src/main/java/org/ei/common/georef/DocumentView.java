@@ -281,6 +281,7 @@ public abstract class DocumentView {
         // New Doctype is shown as combination of GeoRef Doctypes and Ei Doctype codes in '()' i.e. Serial (JA),
         // Conference document (CA)
         // addDocumentValue(Keys.DOC_TYPE, new DocumentTypeDecorator(createColumnValueField("DOCUMENT_TYPE")));
+       
         addDocumentValue(Keys.DOC_TYPE, getDocumentTypes());
 
         addDocumentValue(Keys.CATEGORY, new CategoryDecorator(createColumnValueField("CATEGORY_CODE")));
@@ -383,6 +384,7 @@ public abstract class DocumentView {
      * split on the field value, therefore turning simple concatenated strings into multiple values
      */
     public void addDocumentValue(Key key, DocumentField field, ElementData data) {
+    	
         if (isIncluded(key)) {
             String fieldvalue = field.getValue();
             if (fieldvalue != null) {
@@ -572,15 +574,21 @@ public abstract class DocumentView {
         if (isIncluded(Keys.DOC_TYPE)) {
             String doctype = createColumnValueField("DOCUMENT_TYPE").getValue();
             String bibcode = createColumnValueField("BIBLIOGRAPHIC_LEVEL_CODE").getValue();
+           
             if ((doctype != null) && (bibcode != null)) {
                 String mappingcode = doctype.concat(Constants.AUDELIMITER).concat(bibcode);
                 if (mappingcode != null) {
+                	
                     mappingcode = new DocumentTypeMappingDecorator(mappingcode).getValue();
+                    
                 }
 
                 String dts = (new DocumentTypeDecorator(createColumnValueField("DOCUMENT_TYPE"))).getValue();
-                String[] dtArray = dts.split(Constants.AUDELIMITER);
+                
+                String[] dtArray = dts.split(Constants.AUDELIMITER);              
+                
                 String[] mapcodeArray = mappingcode.split(Constants.AUDELIMITER);
+                
                 if (dtArray.length == mapcodeArray.length) {
                     List<String> decoratedvalues = new ArrayList<String>();
                     for (int x = 0; x < dtArray.length; x++) {
@@ -590,6 +598,7 @@ public abstract class DocumentView {
                 }
             }
         }
+        
         return strvalue;
     }
 
@@ -1009,7 +1018,7 @@ public abstract class DocumentView {
             String[] mapcodes = strvalue.split(Constants.AUDELIMITER);
             if ((mapcodes != null) && (mapcodes.length == 2)) {
                 String doctypes = mapcodes[0];
-                String bibcode = mapcodes[1];
+                String bibcode = mapcodes[1];          
                 // doctypes are repaeatable but have NO delimieter
                 // so split the doctype string into an array of single characters
                 if (doctypes != null) {
@@ -1041,14 +1050,19 @@ public abstract class DocumentView {
             Map<String, String> mappings = new HashMap<String, String>();
 
             mappings.put("SA", "JA");
-            mappings.put("BA", "CA");
+            //channge for book project by hmo at 5/17/2017
+            //mappings.put("BA", "CA");
+            mappings.put("BA", "BK");
+            mappings.put("BC", "BK");
             mappings.put("RA", "RC");
             mappings.put("CA", "CA");
             mappings.put("MA", "MP");
             mappings.put("TA", "DS");
 
             mappings.put("SM", "MR");
-            mappings.put("BM", "MR");
+            //change for book project by hmo at 5/17/2017
+            //mappings.put("BM", "MR");
+            mappings.put("BM", "BK");
             mappings.put("RM", "RR");
             mappings.put("CM", "CP");
             mappings.put("MM", "MP");

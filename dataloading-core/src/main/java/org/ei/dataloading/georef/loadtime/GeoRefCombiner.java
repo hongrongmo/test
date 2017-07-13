@@ -1,6 +1,7 @@
 package org.ei.dataloading.georef.loadtime;
 
 import java.io.*;
+
 import java.sql.Clob;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -49,68 +50,75 @@ public static void main(String args[])
 		  System.out.println("not enough parameters, need 9 parameters to run");
 		  System.exit(1);
 	  }
-  String driver = null;
-  String url  = null;
-  String username = null;
-  String password = null;
-  url = args[0];
-  driver  = args[1];
-  username  = args[2];
-  password  = args[3];
-  int loadNumber = 0;
-  int recsPerbatch = Integer.parseInt(args[5]);
-  String operation = args[6];
-  tablename = args[7];
-  String environment = args[8].toLowerCase();
+	  String driver = null;
+	  String url  = null;
+	  String username = null;
+	  String password = null;
+	  url = args[0];
+	  driver  = args[1];
+	  username  = args[2];
+	  password  = args[3];
+	  int loadNumber = 0;
+	  int recsPerbatch = Integer.parseInt(args[5]);
+	  String operation = args[6];
+	  tablename = args[7];
+	  String environment = args[8].toLowerCase();
+	
+	  try {
+	    loadNumber = Integer.parseInt(args[4]);
+	  }
+	  catch(NumberFormatException e) {
+	    loadNumber = 0;
+	  }
 
-  try {
-    loadNumber = Integer.parseInt(args[4]);
-  }
-  catch(NumberFormatException e) {
-    loadNumber = 0;
-  }
-
-  Combiner.TABLENAME = tablename;
-
-  CombinedWriter writer = new CombinedXMLWriter(recsPerbatch,
-                                                loadNumber,
-                                                databaseIndexName, environment);
-  writer.setOperation(operation);
-
-  GeoRefCombiner c = new GeoRefCombiner(writer);
-  if(loadNumber > 100000)
-  {
-    c.writeCombinedByWeekNumber(url,
-                                driver,
-                                username,
-                                password,
-                                loadNumber);
-  }
-  // extract the whole thing
-  else if(loadNumber == 0)
-  {
-	  int endYear = Integer.parseInt(c.getYear());
-
-    for(int yearIndex = 1918; yearIndex <= endYear+1; yearIndex++)
-    {
-  	System.out.println("Processing year " + yearIndex + "...");
-      // create  a new writer so we can see the loadNumber/yearNumber in the filename
-      c = new GeoRefCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,databaseIndexName, environment));
-      c.writeCombinedByYear(url,
-                          driver,
-                          username,
-                          password,
-                          yearIndex);
-    }
-  }
-  else
-  {
-    c.writeCombinedByYear(url,
-                          driver,
-                          username,
-                          password,
-                          loadNumber);
-  }
+	  Combiner.TABLENAME = tablename;
+	
+	  CombinedWriter writer = new CombinedXMLWriter(recsPerbatch,
+	                                                loadNumber,
+	                                                databaseIndexName, environment);
+	  writer.setOperation(operation);
+	
+	  GeoRefCombiner c = new GeoRefCombiner(writer);
+	  if(loadNumber > 100000)
+	  {
+	    c.writeCombinedByWeekNumber(url,
+	                                driver,
+	                                username,
+	                                password,
+	                                loadNumber);
+	  }
+	  // extract the whole thing
+	  else if(loadNumber == 1)
+	  {
+		  c.writeCombinedByTable( url,
+					                  driver,
+					                  username,
+					                  password);
+	  }
+	  else if(loadNumber == 0)
+	  {
+		  int endYear = Integer.parseInt(c.getYear());
+	
+	    for(int yearIndex = 1918; yearIndex <= endYear+1; yearIndex++)
+	    {
+	  	System.out.println("Processing year " + yearIndex + "...");
+	      // create  a new writer so we can see the loadNumber/yearNumber in the filename
+	      c = new GeoRefCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,databaseIndexName, environment));
+	      c.writeCombinedByYear(url,
+	                          driver,
+	                          username,
+	                          password,
+	                          yearIndex);
+	    }
+	  }
+	  else
+	  {
+	    c.writeCombinedByYear(url,
+	                          driver,
+	                          username,
+	                          password,
+	                          loadNumber);
+	  }
 }
 
 	private String getYear()
@@ -162,7 +170,7 @@ throws Exception
 
 		stmt = con.createStatement();
 		System.out.println("Running the query...");
-		String sqlQuery = "select * from " + Combiner.TABLENAME +" where database='" + Combiner.CURRENTDB + "'";
+		String sqlQuery = "select * from " + Combiner.TABLENAME;
 		System.out.println(sqlQuery);
 		rs = stmt.executeQuery(sqlQuery);
 
@@ -491,9 +499,7 @@ public void writeRecs(ResultSet rs)
 
 				// DT
 
-
-				
-
+					
 				if(dtStrings != null && dtStrings.equals("In Process"))
 				{
 					rec.putIfNotNull(EVCombinedRec.DOCTYPE, "GI");
@@ -503,14 +509,16 @@ public void writeRecs(ResultSet rs)
 
 				  // Get EV system DOC_TYPE codes for indexing and append them to (or use in favor of ?) the GeoRef values
 				  String mappingcode = runtimeDocview.createColumnValueField("DOCUMENT_TYPE").getValue().concat(AUDELIMITER).concat(runtimeDocview.createColumnValueField("BIBLIOGRAPHIC_LEVEL_CODE").getValue());
-
+				  
 				  if(mappingcode != null)
 				  {
 					// DocumentTypeMappingDecorator takes <DOCTYPE>AUDELIMITER<BIBCODE> String as field argument
 					mappingcode = runtimeDocview.new DocumentTypeMappingDecorator(mappingcode).getValue();
 					// DO NOT CONCAY GEOPREF DOCTYPES OR ELSE THEY WILL SHOW UP IN NAVIGATOR TOO
 					dtStrings = mappingcode; // dtStrings.concat(AUDELIMITER).concat(mappingcode);
+					
 				  }
+				  //System.out.println("**** "+rs.getString("ID_NUMBER")+" dtStrings2="+dtStrings.replaceAll(AUDELIMITER, "*"));
 				  rec.putIfNotNull(EVCombinedRec.DOCTYPE, dtStrings.split(AUDELIMITER));
 				}
 

@@ -354,6 +354,10 @@ public class BdCorrection
                 {
                     bdc.processLookupIndex(bdc.getLookupData("aip"),bdc.getLookupData("aipBackup"));
                 }
+               // else if(action.equalsIgnoreCase("cafedelete"))
+               //{
+               //    bdc.processLookupIndex(new HashMap(),bdc.getLookupData("backup"));
+               // }
                 
                 midTime = endTime;
                 endTime = System.currentTimeMillis();
@@ -503,70 +507,7 @@ public class BdCorrection
 			  con.setAutoCommit(true);
 			 
 			  //insert as new if author id is not in the cafe_au_lookup table.
-			  stmt.executeUpdate("insert into cafe_af_lookup select * from cafe_af_lookup_temp where institute_id not in(select institute_id from cafe_af_lookup)");
-			  
-			  /*
-			  //find the record which is not in author_profile table
-			  rs = stmt.executeQuery("select * from cafe_au_lookup_temp where author_id not in (select author_id from author_profile)");
-			  Hashtable authorID = new Hashtable();
-			  StringBuffer puiQuery = new StringBuffer();
-			  while (rs.next())
-	          {
-				  String aid = rs.getString("author_id");
-				  String pui = rs.getString("pui");
-				  authorID.put(aid, pui);
-				  puiQuery.append("'"+pui+"',");
-	          }
-			  if(puiQuery.length()>0)
-			  {
-				  puiQuery.substring(0,puiQuery.length()-1);
-			  
-				  //getAuthor object from cafe_master table
-				  rs = stmt.executeQuery("select author,author_1,affiliation,affiliation_1 from cafe_master where pui in ("+puiQuery+")");
-				  List authorList  = new ArrayList();
-				  while (rs.next())
-				  {
-					 String author = rs.getString("author");
-					 String author_1 = rs.getString("author_1");
-					 String affiliation = rs.getString("affiliation");
-					 String affiliation_1 = rs.getString("affiliation_1");
-					 if(author!=null && author_1!=null)
-					 {
-						 author = author+author_1;
-					 }
-					 if(affiliation!=null && affiliation_1!=null)
-					 {
-						 affiliation = affiliation+affiliation_1;
-					 }
-					 if(author!=null)
-					 {		             
-						 List authors = (new BdAuthors(author)).getAuthors();
-						 BdAuthor authorl = null;
-						 for(int i=0;i<authors.size();i++)
-						 {
-							 authorl = (BdAuthor)authors.get(i);
-							 String id = authorl.getAuid();
-							 if(authorID.containsKey(id))
-							 {
-								 if (affiliation != null) 
-								 {
-									List affs = (new BdAffiliations(affiliation)).getAffiliations();
-									for(int j=0;j<affs.size();j++)
-									{
-										BdAffiliation aff = (BdAffiliation)affs.get(j);
-									}
-								 }
-							 }
-							
-						 }
-					 }
-					 
-					
-
-		                   
-				  }
-			  }
-			  */
+			  stmt.executeUpdate("insert into cafe_af_lookup select * from cafe_af_lookup_temp where institute_id not in(select institute_id from cafe_af_lookup)");			  			
 			  
           }
           catch(Exception e)
@@ -1128,6 +1069,25 @@ public class BdCorrection
 	                System.out.println("time for delete_bd_reference_table "+(endTime-midTime)/1000.0+" seconds");
 	                System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
                 }
+            }
+            else if(action != null && action.equalsIgnoreCase("cafedelete"))
+            {
+                if(test)
+                {
+                    System.out.println("begin to execute stored procedure delete_cafe_master_table");
+                    System.out.println("press enter to continue");
+                    System.in.read();
+                    Thread.currentThread().sleep(1000);
+                }
+                pstmt = con.prepareCall("{ call delete_bcafe_master_table(?)}");
+                pstmt.setInt(1,updateNumber);              
+                pstmt.executeUpdate();
+                
+                midTime = endTime;
+                endTime = System.currentTimeMillis();
+                System.out.println("time for delete_cafe_master_table "+(endTime-midTime)/1000.0+" seconds");
+                System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+              
             }
             else
             {

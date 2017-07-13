@@ -206,7 +206,16 @@ public class NewDataTesting
 		else  if(action.equals("allfastmid"))
 		{
 			test.getALLCPXMIDFromFast(database);
-		}		
+		}
+		else  if(action.equals("inspecbook"))
+		{
+			test.getMIDFromFastINSBOOK();
+		}
+		else  if(action.equals("remove"))
+		{
+			test.removeInvalidChar(updateNumber);
+		}
+		
 		else
 		{
 			test.getData(database);
@@ -1254,6 +1263,32 @@ public class NewDataTesting
 			e.printStackTrace();
 		}
 	}
+	
+	private void removeInvalidChar(String filename)
+	{
+		try{
+
+			BufferedReader in = new BufferedReader(new FileReader(new File(filename)));
+			FileWriter out = new FileWriter(filename+".out");
+			String line=null;
+			DiskMap readMap = new DiskMap();
+			
+			while((line=in.readLine())!=null)
+			{
+				char[] ch=line.toCharArray();
+				for(int i=0;i<ch.length;i++)
+				{
+					
+				}
+				
+			}
+			
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
 
 	private void getWeeklyCount(String weekNumber)
 	{
@@ -1674,6 +1709,116 @@ public class NewDataTesting
 			System.out.println(loadNumber+"\t\t"+count+"\t"+loadNumberCountFromFast);
 		}
 
+	}
+	
+	private void getMIDFromFastINSBOOK()
+	{
+
+		Statement stmt = null;
+		ResultSet rs = null;
+		Connection con = null;
+		FileWriter out = null;
+		try
+		{
+			out = new FileWriter("INSPEC_BOOK.out");
+			con = getConnection(this.URL,this.driver,this.username,this.password);			
+			
+			stmt = con.createStatement();
+			
+			int k = 0;			
+
+			FastClient client = new FastClient();
+			client.setBaseURL("http://evazure.trafficmanager.net:15100");
+			client.setResultView("ei");
+			client.setOffSet(0);
+			client.setPageSize(60000);
+			client.setQueryString("(DT:\"MR\") AND (((db:ins)))");
+			client.setDoCatCount(true);
+			client.setDoNavigators(true);
+			client.setPrimarySort("ausort");
+			client.setPrimarySortDirection("+");
+			client.search();
+
+			List l = client.getDocIDs();
+			int count =client.getHitCount();
+			
+			if(count<1)
+			{
+			  System.out.println("0 records found");
+		    }
+			else
+			{
+				System.out.println(count+" records found");
+			}
+
+			StringBuffer sb=new StringBuffer();
+			
+			for(int i=0;i<l.size();i++)
+			{
+				String[] docID = (String[])l.get(i);
+				String m_id = docID[0];
+				String sqlQuery = "select m_id, nrtype from ins_master where m_id='"+m_id+"'";
+				//System.out.println("QUERY= "+sqlQuery);
+				rs = stmt.executeQuery(sqlQuery);
+				while (rs.next())
+				{
+					String nrtype = rs.getString("nrtype");
+					if(!nrtype.equalsIgnoreCase("30"))
+					{
+						System.out.println(m_id+"\t"+ nrtype);
+						out.write(m_id+"\t"+ nrtype+"\n");
+					}
+					out.flush();					
+				}
+			
+
+			}
+				
+			out.flush();
+			out.close();
+
+		}
+		catch(Exception e)
+		{
+			try{
+			if(out!=null)
+				out.close();
+			}
+			catch(Exception e1)
+			{
+				e1.printStackTrace();
+			}
+			e.printStackTrace();
+		}
+		finally {
+
+			if (rs != null) {
+				try {
+					rs.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}	
+
+			if (stmt != null) {
+				try {
+					stmt.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			if (con != null) {
+				try {
+					con.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+
+		}
 	}
 
 	private int getMIDCountFromFast(String mid,String database)

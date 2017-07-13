@@ -61,6 +61,14 @@ public class CBNBCombiner extends Combiner
                                     yearIndex);
             }
         }
+        else if(loadNumber == 1)
+        {          
+                c.writeCombinedByTable(url,
+                                    driver,
+                                    username,
+                                    password);
+           
+        }
         else
         {
                 c.writeCombinedByYear(url,
@@ -92,7 +100,7 @@ public class CBNBCombiner extends Combiner
     			
     				stmt = con.createStatement();
     				System.out.println("Running the query...");
-    				String sqlQuery = "select * from " + Combiner.TABLENAME +" where database='" + Combiner.CURRENTDB + "'";
+    				String sqlQuery = "select * from " + Combiner.TABLENAME;
     				System.out.println(sqlQuery);
     				rs = stmt.executeQuery(sqlQuery);
     				
@@ -198,11 +206,15 @@ public class CBNBCombiner extends Combiner
 
             if (validYear(rs.getString("pyr")))
             {
-
+            	//added for book project by hmo at 5/17/2017
                 String docType = rs.getString("doc");
                 if (docType == null)
                 {
                     docType = "";
+                }
+                else if(docType!=null && docType.equalsIgnoreCase("Book"))
+                {
+                	docType = "bk";
                 }
 
                 rec.put(EVCombinedRec.DOCTYPE, docType);
