@@ -58,9 +58,7 @@ public class AusAffESIndexMultiThreads extends Thread{
 	private String PATH = "/cafe/_bulk";
 	private String ENDPOINT = ENDPOINT_ROOT + PATH;
 
-	private final int REQUEST_TIMEOUT = 100 * 1000;		//Sets the amount of time to wait (in milliseconds) for the request to complete before giving up and timing out
-
-
+	
 
 	private int recsPerbulk = 10;
 	private String action;
@@ -319,13 +317,17 @@ public class AusAffESIndexMultiThreads extends Thread{
 	public void ProcessBulk()
 	{
 
-		Request<?> request = generateRequest();
+		if(bulkIndexContents.length() >0)
+		{
+			Request<?> request = generateRequest();
 
-		// Send the request to the server
-		sendRequest(request);   
+			// Send the request to the server
+			sendRequest(request);   
 
-		// Shutdown client, moved to AmazonHttpClientService
-		//end();
+			// Shutdown client, moved to AmazonHttpClientService
+			//end();
+		}
+		
 
 	}
 

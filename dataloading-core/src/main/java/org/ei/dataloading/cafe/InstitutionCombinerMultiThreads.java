@@ -840,7 +840,7 @@ public class InstitutionCombinerMultiThreads {
 
 					//added 05/10/2017 to update status = "indexed" for the docs that successfully indexed to ES
 					UpdateProfileTableESStatus profileESUpdate = new UpdateProfileTableESStatus(doc_type,username, password,loadNumber,tableToBeTruncated,url,esIndexedIdsSqlldrFileName);
-					profileESUpdate.writeIndexexRecs(esIndexed_docs_list);
+					profileESUpdate.writeIndexedRecs(esIndexed_docs_list);
 
 				}
 
