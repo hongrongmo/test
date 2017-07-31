@@ -61,8 +61,6 @@ public class AusAffESIndex {
 	private String PATH = "/cafe/_bulk";
 	private String ENDPOINT = ENDPOINT_ROOT + PATH;
 	
-	private final int REQUEST_TIMEOUT = 100 * 1000;		//Sets the amount of time to wait (in milliseconds) for the request to complete before giving up and timing out
-
 	
 	private int recsPerbulk = 10;
 	private String action;
@@ -136,6 +134,7 @@ public class AusAffESIndex {
 		{
 			AmazonHttpClientService.getInstance().end();
 			
+			System.out.println("Total # of records in indexed/deleted list: " + esIndexed_docs_list.size());
 			// uncomment when initialize and create HTTP client in this class instead of AmazonHttpClientService
 			/*if(client !=null)
 			{
@@ -214,38 +213,45 @@ public class AusAffESIndex {
 	public void ProcessBulk()
 	{
 		
-		Request<?> request = generateRequest();
+		// send request ONLY if there is contents to index/delete
+		
+		if(bulkIndexContents.length() >0)
+		{
+			Request<?> request = generateRequest();
 
-		// Perform Signature Version 4 signing
-		//performSigningSteps(request);    // used when having iam role for ES accesspolicy, but not in use for IP range access policy
+			// Perform Signature Version 4 signing
+			//performSigningSteps(request);    // used when having iam role for ES accesspolicy, but not in use for IP range access policy
 
-		
-		// only for debugging
-		/*midTime = endTime;
-        endTime = System.currentTimeMillis();
-		
-		System.out.println("*****************");
-		System.out.println("Time before sending ES index request "+(endTime-midTime)/1000.0+" seconds");
-        System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
-		System.out.println("*****************");*/
+			
+			// only for debugging
+			/*midTime = endTime;
+	        endTime = System.currentTimeMillis();
+			
+			System.out.println("*****************");
+			System.out.println("Time before sending ES index request "+(endTime-midTime)/1000.0+" seconds");
+	        System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+			System.out.println("*****************");*/
 
-		// Send the request to the server
-		sendRequest(request);   
-		
-		
-		/*midTime = endTime;
-        endTime = System.currentTimeMillis();
-		
-		System.out.println("*****************");
-		System.out.println("Time after sending ES index request "+(endTime-midTime)/1000.0+" seconds");
-        System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
-		System.out.println("*****************");*/
+			// Send the request to the server
+			sendRequest(request);   
+			
+			
+			/*midTime = endTime;
+	        endTime = System.currentTimeMillis();
+			
+			System.out.println("*****************");
+			System.out.println("Time after sending ES index request "+(endTime-midTime)/1000.0+" seconds");
+	        System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+			System.out.println("*****************");*/
 
-		
-		
-		// Shutdown client, Uncomment when initialize and create HTTP client in this class instead of AmazonHttpClientService
-		//end();
+			
+			
+			// Shutdown client, Uncomment when initialize and create HTTP client in this class instead of AmazonHttpClientService
+			//end();
 
+		}
+		
+		
 	}
 	public static void main(String[] args) {
 
@@ -458,11 +464,14 @@ public void parseESIndexJSONResponse(String esResponseString)
 			String result = (String)index.get("result");
 			Long status = (Long)index.get("status");
 			if(status != null && (status == 200 || status == 201))
+			{
 				esIndexed_docs_list.add(_id);
+				count ++;
+			}
+				
 			else
 				System.out.print("doc: " + _id + " with status: " + status + " and result: " + result + " failed to index/delete to/from ES!!!!");
-			
-			count ++;
+	
 		}
 		
 		System.out.println("Total indexed/deleted count: " + count);
