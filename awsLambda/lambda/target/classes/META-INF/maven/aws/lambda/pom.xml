@@ -119,11 +119,11 @@
  			 <version>1.0.0</version>
  			 <type>jar</type>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
 			<version>2.4</version>
-		</dependency>
+		</dependency> -->
 		
 		<!-- HH: 01/31/2017 added to compile receiveamazonsqs  from nyc-dataloading to test vtw multi-thread-->
 	<dependency>
