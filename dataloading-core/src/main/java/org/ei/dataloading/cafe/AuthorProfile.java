@@ -14,6 +14,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
+import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Enumeration;
 import java.util.List;
@@ -46,6 +47,7 @@ public class AuthorProfile
 	private SAXBuilder builder;
 	public static final char FIELDDELIM = '\t';
 	private DataLoadDictionary dictionary = new DataLoadDictionary();
+	private static HashSet affIDSet = new HashSet();
 	
 			
 	public static void main(String args[]) throws Exception
@@ -695,13 +697,19 @@ public class AuthorProfile
 	
 	private void outputAffiliation(List ip_docs, FileWriter out) throws Exception
 	{
+		String affid = null;
 		for(int i=0;i<ip_docs.size();i++)
 		{
 			StringBuffer affBuffer = new StringBuffer();
 			Element ip_doc =(Element) ip_docs.get(i);
 			if(ip_doc.getAttributeValue("id")!=null)
 			{
-				affBuffer.append(ip_doc.getAttributeValue("id"));
+				affid = ip_doc.getAttributeValue("id");
+				affBuffer.append(affid);
+			}
+			else
+			{
+				affid = null;
 			}
 			affBuffer.append(FIELDDELIM);
 			if(ip_doc.getChildText("afnameid")!=null)
@@ -802,7 +810,17 @@ public class AuthorProfile
 			}
 			affBuffer.append(FIELDDELIM);
 			affBuffer.append(loadNumber);
-			out.write(affBuffer.toString()+"\n");
+			if(affid!=null && !affIDSet.contains(affid))
+			{
+				affIDSet.add(affid);
+				out.write(affBuffer.toString()+"\n");
+				//System.out.println("affid "+affid+" loaded");
+			}
+			//else
+			//{
+			//	System.out.println("affid "+affid+" not loaded");
+			//}
+			
 		}
 	}
 	
