@@ -244,7 +244,7 @@ public class AuthorCombiner {
 			
 			//added 05/10/2017 to update status = "indexed" for the docs that successfully indexed to ES
 			UpdateProfileTableESStatus profileESUpdate = new UpdateProfileTableESStatus(doc_type,username,password,loadNumber,tableToBeTruncated,url,esIndexedIdsSqlldrFileName);
-			profileESUpdate.writeIndexexRecs(esIndex.getESIndexedDocsList());
+			profileESUpdate.writeIndexedRecs(esIndex.getESIndexedDocsList());
 
 		}
 		catch(Exception e)
@@ -445,6 +445,10 @@ public class AuthorCombiner {
 				//06/08/2017 re-index AU profile to include new extra fields (i.e. updateepoch, ..)
 				
 				//query = "select * from " +  tableName + " where authorid in (select AUID from db_cafe.HH_APR_ES_IDS)" ;
+				
+				//7/12/2017 index 4 authors temp in ES to test Cafe deletion and ES deletion accordingly if status='deleted'
+				//query = "select * from author_profile where authorid in ('57192112172','7004484927','57188837552','55964027700','7006016504')" ;
+				
 				
 						
 						
