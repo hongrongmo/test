@@ -27,16 +27,30 @@ import java.util.zip.ZipOutputStream;
  */
 public class ZipDonwloadedFiles {
 
+	static String downloadDir;
+	static String zipfileName;
 	public static void main(String[] args) throws Exception 
 	{
 		
-		zipDownloads(201713,"111");
+		if(args.length >2)
+		{
+			downloadDir = args[0];
+			zipfileName = args[1];
+		}
+		else
+		{
+			System.out.println("not enough parameters!");
+			System.exit(1);
+		}
+		System.out.println("Starting zip files in downloadDir:  " + downloadDir);
+		zipDownloads(201713,downloadDir,zipfileName);
 	}
 	
-	public static void zipDownloads(int loadnumber, String downloadDirName) throws Exception
+	public static void zipDownloads(int loadnumber, String downloadDirName, String zipfileName) throws Exception
 	{
 		int zipFileID = 1;
 		int curRecNum = 0;
+		int sequence = Integer.parseInt(zipfileName);
 
 		System.out.println("Zip downloaded files");
 
@@ -73,7 +87,7 @@ public class ZipDonwloadedFiles {
 		// create zip files if any files were downloaded, otherwise no zip file should be created
 		if(xmlFiles.length >0)
 		{	
-			String zipFileName = zipsDir + "/916.zip";
+			String zipFileName = zipsDir + "/" + sequence + ".zip";
 			ZipOutputStream outZip = new ZipOutputStream(new FileOutputStream(zipFileName));
 
 			for(int i=0; i<xmlFiles.length; i++)
@@ -85,8 +99,9 @@ public class ZipDonwloadedFiles {
 					outZip.close();
 
 					zipFileID++;
+					sequence++;
 
-					zipFileName = zipsDir + "/917.zip";
+					zipFileName = zipsDir + "/" + sequence + ".zip";
 					outZip = new ZipOutputStream(new FileOutputStream(zipFileName));	
 				}
 				FileInputStream in = new FileInputStream(downDir + "/" + xmlFiles[i]);

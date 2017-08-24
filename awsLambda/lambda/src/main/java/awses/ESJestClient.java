@@ -44,6 +44,8 @@ import io.searchbox.core.SearchResult;
  */
 public class ESJestClient {
 
+	// HH 08/01/2017 Temp commented out because it complains when run "Maven->build" @ line 57, uncomment when needed
+	/*
 	private static final String SERVICE = "es";
 	private static final String REGION = "us-east-1";
 	
@@ -84,11 +86,11 @@ public class ESJestClient {
 			}
 			
 		};
-		/*factory.setHttpClientConfig(new HttpClientConfig
+		factory.setHttpClientConfig(new HttpClientConfig
 				.Builder("http://search-evcafeauaf-v6tfjfyfj26rtoneh233lzzqtq.us-east-1.es.amazonaws.com:80")
 				.multiThreaded(true)
 				.build()
-				);*/
+				);
 		
 		factory.setHttpClientConfig(new HttpClientConfig
 				.Builder("http://search-evcafe-prod-h7xqbezrvqkb5ult6o4sn6nsae.us-east-1.es.amazonaws.com:80")
@@ -212,5 +214,5 @@ public class ESJestClient {
 		     return kSigning;
 		}
 		
-
+*/
 }

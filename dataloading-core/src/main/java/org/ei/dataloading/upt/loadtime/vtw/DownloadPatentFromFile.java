@@ -202,10 +202,10 @@ public class DownloadPatentFromFile {
 						patentID = fields[0];
 						signedAssetUrl = fields[1];
 						
-						if(fields[3] !=null && fields[3].contains("content/pat"))
-							generation = fields[3].substring(fields[3].lastIndexOf("/")+1, fields[3].length());
-						else if(fields[4] !=null && fields[4].contains("content/pat"))
-						generation = fields[4].substring(fields[4].lastIndexOf("/")+1, fields[4].length());
+						if(fields[2] !=null && fields[2].contains("content/pat"))
+							generation = fields[2].substring(fields[2].lastIndexOf("/")+1, fields[2].length());
+						else if(fields[3] !=null && fields[3].contains("content/pat"))
+						generation = fields[3].substring(fields[3].lastIndexOf("/")+1, fields[3].length());
 						else
 							System.out.println("something wrong!!!");
 					}

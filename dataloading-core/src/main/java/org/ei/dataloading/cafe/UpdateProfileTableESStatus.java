@@ -41,6 +41,8 @@ public class UpdateProfileTableESStatus {
 
 
 	PrintWriter out;
+	File outDir;
+	String outFileName;
 
 	public UpdateProfileTableESStatus()
 	{
@@ -58,7 +60,7 @@ public class UpdateProfileTableESStatus {
 
 		System.out.println("username= " + username);
 		System.out.println("table to be truncated: " + tableToBeTruncated);
-		
+
 
 		init();
 	}
@@ -70,7 +72,7 @@ public class UpdateProfileTableESStatus {
 
 			//05/10/2017 create dir to write indexed ES ID's (M_ID) to .out file to load to a temp table
 			String currDir = System.getProperty("user.dir");
-			File outDir = new File(currDir+"/esout");
+			outDir = new File(currDir+"/es_indexed");
 			if(!(outDir.exists()))
 			{
 				outDir.mkdir();
@@ -82,7 +84,7 @@ public class UpdateProfileTableESStatus {
 		}
 
 	}
-	public void writeIndexexRecs(List<String> esDocIds)
+	public void writeIndexedRecs(List<String> esDocIds)
 	{
 		PrintWriter out = null;
 		try
@@ -93,24 +95,16 @@ public class UpdateProfileTableESStatus {
 			Date date = dateFormat.parse(dateFormat.format(new Date()));
 			Long epoch = date.getTime();
 
-			String fileName =doc_type+"_esindexed_"+epoch+"_"+loadNumber + ".txt";
+			outFileName =outDir + "/" + doc_type+"_esindexed_"+epoch+"_"+loadNumber + ".txt";
 
 			if (esDocIds.size() >0)
 			{
-				out = new PrintWriter(new FileWriter(fileName));
+				out = new PrintWriter(new FileWriter(outFileName));
 				for(int i=0; i<esDocIds.size();i++)
 				{
 					out.println(esDocIds.get(i));
 				}
 			}
-
-			/**********delete all data from temp table *************/
-
-			System.out.println("about to truncate table "+tableToBeTruncated);
-			cleanUp();
-
-			updateAuthorProfileStatus(fileName);
-
 		}
 
 		catch (ParseException e) 
@@ -136,11 +130,23 @@ public class UpdateProfileTableESStatus {
 				ex.printStackTrace();
 			}
 		}
+		
+		updateIndexedRecsStatus();
 
 	}
 
 
+	public void updateIndexedRecsStatus()
+	{
+		/**********delete all data from temp table *************/
 
+		System.out.println("about to truncate table "+tableToBeTruncated);
+		cleanUp();
+
+		updateAuthorProfileStatus(outFileName);
+	}
+	
+	
 	public static void main(String[] args) 
 	{
 
@@ -268,7 +274,7 @@ public class UpdateProfileTableESStatus {
 
 				stmt = con.prepareCall("{ call UPDATE_AUAF_MASTER_ESSTATUS(?,?)}");
 				stmt.setString(1,doc_type);
-				stmt.setString(1, profileTableName);
+				stmt.setString(2, profileTableName);
 				stmt.executeUpdate();
 
 			}
