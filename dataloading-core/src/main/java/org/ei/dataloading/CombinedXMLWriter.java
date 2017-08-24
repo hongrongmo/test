@@ -843,16 +843,25 @@ public class CombinedXMLWriter
         out.println("       <GRANTAGENCY><![CDATA[" + notNull(multiFormat(rec.getStrings(EVCombinedRec.GRANTAGENCY))) + "]]></GRANTAGENCY>");		//GAG
         
         //SPARE FIELDS
-        out.println("       <EV_SPARE1><![CDATA[]]></EV_SPARE1>");	
-        out.println("       <EV_SPARE2><![CDATA[]]></EV_SPARE2>");
+        //SOURCEBIBTEXT
+        out.println("       <EV_SPARE1><![CDATA["+ notNull(rec.getString(EVCombinedRec.SOURCEBIBTEXT)) +"]]></EV_SPARE1>");	
+
+        //GRANTTEXT
+        out.println("       <EV_SPARE2><![CDATA["+ notNull(rec.getString(EVCombinedRec.GRANTTEXT))+ " QstemQ " + notNull(getStems(rec.getString(EVCombinedRec.GRANTTEXT))) +"]]></EV_SPARE2>");
+                        
         out.println("       <EV_SPARE3><![CDATA[]]></EV_SPARE3>");
+        
         out.println("       <EV_SPARE4><![CDATA[]]></EV_SPARE4>");
+        
         out.println("       <EV_SPARE5><![CDATA[]]></EV_SPARE5>");
-        out.println("       <EV_SPARE6><![CDATA[]]></EV_SPARE6>");
-        out.println("       <EV_SPARE7><![CDATA[]]></EV_SPARE7>");
-        out.println("       <EV_SPARE8><![CDATA[]]></EV_SPARE8>");
-        out.println("       <EV_SPARE9><![CDATA[]]></EV_SPARE9>");
-        out.println("       <EV_SPARE10><![CDATA[]]></EV_SPARE10>");
+        
+        out.println("       <EV_SPARE6><![CDATA[QQDelQQ TEST6 QQDelQQ]]></EV_SPARE6>");
+        
+        //STANDARDID and STANDARDDESIGNATION
+        out.println("       <EV_SPARE7><![CDATA[QQDelQQ " + notNull(rec.getString(EVCombinedRec.STANDARDID)) + " QQDelQQ "+ notNull(rec.getString(EVCombinedRec.STANDARDDESIGNATION)) +" QQDelQQ]]></EV_SPARE7>");
+        out.println("       <EV_SPARE8><![CDATA[QQDelQQ TEST8 QQDelQQ]]></EV_SPARE8>");
+        out.println("       <EV_SPARE9><![CDATA[QQDelQQ TEST9 QQDelQQ]]></EV_SPARE9>");
+        out.println("       <EV_SPARE10><![CDATA[QQDelQQ TEST10 QQDelQQ]]></EV_SPARE10>");
         
         out.println("   </ROW>");
         ++curRecNum;
