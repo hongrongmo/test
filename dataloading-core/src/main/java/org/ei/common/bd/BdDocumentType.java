@@ -31,6 +31,8 @@ public class BdDocumentType
     public static final String IN_PROCESS = "GI";
     public static final String BOOK_CODE = "BR";
     public static final String CHAPTER_CODE = "CH";
+    public static final String STANDARD_CODE = "ST"; //added for standard code by hmo on 7/17/2017
+    public static final String ERRATUM_CODE = "ER"; //added for standard code by hmo on 7/27/2017
 
     static
     {
@@ -46,7 +48,9 @@ public class BdDocumentType
       bdDocType.put("di",DISSERTATION_CODE);
       bdDocType.put("ds",DISSERTATION_CODE);
       bdDocType.put("ed",JOURNAL_ARTICLE_CODE);
-      bdDocType.put("er",JOURNAL_ARTICLE_CODE);
+      //bdDocType.put("er",JOURNAL_ARTICLE_CODE);
+      //change for erratum project by hmo at 7/27/2017
+      bdDocType.put("er",ERRATUM_CODE);      
       bdDocType.put("ip",JOURNAL_ARTICLE_CODE);
       bdDocType.put("le",JOURNAL_ARTICLE_CODE);
       bdDocType.put("mc",MONOGRAPH_CHAPTER_CODE);
@@ -66,6 +70,7 @@ public class BdDocumentType
       bdDocType.put("pa",PATENT_CODE);
       bdDocType.put("ip",ARTICLE_IN_PRESS);
       bdDocType.put("gi",IN_PROCESS);
+      bdDocType.put("st",STANDARD_CODE);//added by hmo on 07/17/2017
   }
 
     public static String getDocType(String doctype, boolean confCode)
