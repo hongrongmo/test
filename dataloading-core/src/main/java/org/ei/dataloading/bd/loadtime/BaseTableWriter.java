@@ -173,6 +173,47 @@ public class BaseTableWriter
 	    recordBuf.append(getPui());
 	    recordBuf.append(FIELDDELIM);
 	    recordBuf.append("PUI");
+	    recordBuf.append(FIELDDELIM);
+	    if(record.get("RELATEDPUI")!=null)
+		{
+	    	recordBuf.append(record.get("RELATEDPUI"));
+		}
+	    recordBuf.append(FIELDDELIM);
+	    if(record.get("PUISECONDARY")!=null)
+		{
+	    	recordBuf.append(record.get("PUISECONDARY"));
+		}
+	    recordBuf.append(FIELDDELIM);
+	    if(record.get("GRANTTEXT")!=null)
+		{
+	    	recordBuf.append(record.get("GRANTTEXT"));
+		}
+	    recordBuf.append(FIELDDELIM);
+	    if(record.get("NORMSTANDARDID")!=null)
+		{
+	    	recordBuf.append(record.get("NORMSTANDARDID"));
+		}
+	    recordBuf.append(FIELDDELIM);
+	    if(record.get("STANDARDDESIGNATION")!=null)
+		{
+	    	recordBuf.append(record.get("STANDARDDESIGNATION"));
+		}
+	    recordBuf.append(FIELDDELIM);
+	    if(record.get("STANDARDID")!=null)
+		{
+	    	recordBuf.append(record.get("STANDARDID"));
+		}
+	    recordBuf.append(FIELDDELIM);
+	    if(record.get("SOURCEBIBTEXT")!=null)
+		{
+	    	recordBuf.append(record.get("SOURCEBIBTEXT"));
+		}
+	   
+	    
+	    
+	    
+	    
+	    
 	    //*/
 	    
 	    if(getAccessionNumber()!=null && getAccessionNumber().length()>0)
