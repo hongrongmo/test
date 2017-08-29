@@ -151,12 +151,12 @@ public class EVCombinedRec {
 	public static final String NUMERICALINDEXUNIT = "148";
 	//*  
 	//public static final String AMOUNT_OF_SUBSTANCE_MINIMUM = "146"; 
-	public static final String AMOUNT_OF_SUBSTANCE_RANGES = "147";
-	public static final String AMOUNT_OF_SUBSTANCE_TEXT = "148";
+	public static final String AMOUNT_OF_SUBSTANCE_RANGES = "149";
+	public static final String AMOUNT_OF_SUBSTANCE_TEXT = "150";
 	//amount of substance
 	//public static final String ELECTRIC_CURRENT_MINIMUM = "149"; 
-	public static final String ELECTRIC_CURRENT_RANGES = "150";
-	public static final String ELECTRIC_CURRENT_TEXT = "151";
+	public static final String ELECTRIC_CURRENT_RANGES = "151";
+	public static final String ELECTRIC_CURRENT_TEXT = "152";
 	//electric current
 	//public static final String LUMINOUS_INTENSITY_MINIMUM = "152"; 
 	public static final String LUMINOUS_EFFICIENCY_RANGES = "153";
@@ -489,6 +489,13 @@ public class EVCombinedRec {
 	
 	public static final String GRANTID = "366";
 	public static final String GRANTAGENCY = "367";
+	
+	// added by hmo on 2017-7-19
+	public static final String SOURCEBIBTEXT = "368";
+	public static final String STANDARDID = "369";
+	public static final String STANDARDDESIGNATION = "370";
+	public static final String NORMSTANDARDID = "371";
+	public static final String GRANTTEXT = "372";
 
 	 //*/
 

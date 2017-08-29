@@ -1,6 +1,7 @@
 package org.ei.util;
 
 import java.sql.Connection;
+
 import java.sql.DriverManager;
 import java.io.*;
 import java.sql.Clob;
@@ -26,7 +27,6 @@ import javax.xml.transform.dom.*;
 import org.ei.dataloading.inspec.loadtime.*;
 import org.ei.dataloading.cafe.*;
 import org.ei.domain.*;
-
 import org.ei.query.base.*;
 import org.elasticsearch.action.get.GetResponse;
 import org.elasticsearch.client.Client;
@@ -49,6 +49,7 @@ import io.searchbox.core.SearchResult.Hit;
 import org.ei.dataloading.bd.loadtime.XmlCombiner;
 import org.ei.dataloading.CombinedXMLWriter;
 import org.ei.common.bd.*;
+import org.ei.common.*;
 
 
 public class NewDataTesting
@@ -207,13 +208,21 @@ public class NewDataTesting
 		{
 			test.getALLCPXMIDFromFast(database);
 		}
-		else  if(action.equals("inspecbook"))
+		else  if(action.equals("cpxIP"))
 		{
-			test.getMIDFromFastINSBOOK();
+			test.getMIDFromFastCPXIP();
 		}
 		else  if(action.equals("remove"))
 		{
 			test.removeInvalidChar(updateNumber);
+		}
+		else  if(action.equals("fastQuery"))
+		{
+			test.getMIDFromFastQuery("dt:mc");
+		}
+		else  if(action.equals("checkCoor"))
+		{
+			test.checkGrfCoordinates();
 		}
 		
 		else
@@ -1711,7 +1720,9 @@ public class NewDataTesting
 
 	}
 	
-	private void getMIDFromFastINSBOOK()
+	
+	
+	private void getMIDFromFastQuery(String query)
 	{
 
 		Statement stmt = null;
@@ -1720,19 +1731,14 @@ public class NewDataTesting
 		FileWriter out = null;
 		try
 		{
-			out = new FileWriter("INSPEC_BOOK.out");
-			con = getConnection(this.URL,this.driver,this.username,this.password);			
-			
-			stmt = con.createStatement();
-			
-			int k = 0;			
+			out = new FileWriter("midFromFast.out");	
 
 			FastClient client = new FastClient();
 			client.setBaseURL("http://evazure.trafficmanager.net:15100");
 			client.setResultView("ei");
 			client.setOffSet(0);
 			client.setPageSize(60000);
-			client.setQueryString("(DT:\"MR\") AND (((db:ins)))");
+			client.setQueryString("(DT:\"MC\") AND (((db:grf)))");
 			client.setDoCatCount(true);
 			client.setDoNavigators(true);
 			client.setPrimarySort("ausort");
@@ -1757,16 +1763,88 @@ public class NewDataTesting
 			{
 				String[] docID = (String[])l.get(i);
 				String m_id = docID[0];
-				String sqlQuery = "select m_id, nrtype from ins_master where m_id='"+m_id+"'";
+				System.out.println(m_id);
+				
+				out.write(m_id);					
+				out.flush();					
+			}
+				
+			out.flush();
+			out.close();
+
+		}
+		catch(Exception e)
+		{
+			try{
+			if(out!=null)
+				out.close();
+			}
+			catch(Exception e1)
+			{
+				e1.printStackTrace();
+			}
+			e.printStackTrace();
+		}
+		
+	}
+	
+	private void getMIDFromFastCPXIP()
+	{
+
+		Statement stmt = null;
+		ResultSet rs = null;
+		Connection con = null;
+		FileWriter out = null;
+		try
+		{
+			out = new FileWriter("CPX_IP.out");
+			con = getConnection(this.URL,this.driver,this.username,this.password);			
+			
+			stmt = con.createStatement();
+			
+			int k = 0;			
+
+			FastClient client = new FastClient();
+			client.setBaseURL("http://evazure.trafficmanager.net:15100");
+			client.setResultView("ei");
+			client.setOffSet(0);
+			client.setPageSize(60000);
+			client.setQueryString("(DT:\"IP\") AND (((db:cpx)))");
+			client.setDoCatCount(true);
+			client.setDoNavigators(true);
+			client.setPrimarySort("ausort");
+			client.setPrimarySortDirection("+");
+			client.search();
+
+			List l = client.getDocIDs();
+			int count =client.getHitCount();
+			
+			if(count<1)
+			{
+			  System.out.println("0 records found");
+		    }
+			else
+			{
+				System.out.println(count+" records found");
+			}
+
+			StringBuffer sb=new StringBuffer();
+			
+			for(int i=0;i<l.size();i++)
+			{
+				String[] docID = (String[])l.get(i);
+				String m_id = docID[0];
+				System.out.println(m_id);
+				String sqlQuery = "select m_id, cittype from bd_master where database='cpx' and m_id='"+m_id+"'";
 				//System.out.println("QUERY= "+sqlQuery);
 				rs = stmt.executeQuery(sqlQuery);
 				while (rs.next())
 				{
-					String nrtype = rs.getString("nrtype");
-					if(!nrtype.equalsIgnoreCase("30"))
+					String cittype = rs.getString("cittype");
+					if(!cittype.equalsIgnoreCase("ip"))
 					{
-						System.out.println(m_id+"\t"+ nrtype);
-						out.write(m_id+"\t"+ nrtype+"\n");
+						System.out.println(m_id+"\t"+ cittype);
+						out.write(m_id+"\t"+ cittype+"\n");
 					}
 					out.flush();					
 				}
@@ -3114,7 +3192,150 @@ public class NewDataTesting
     {
         BdPage pages = new BdPage(v);
         return pages.getStartPage();
-    }	 
+    }
+	
+	private void checkGrfCoordinates()
+	{
+		Statement stmt = null;
+		ResultSet rs = null;
+		Connection con = null;
+		String sqlQuery = null;
+		
+		try
+		{
+
+			con = getConnection(this.URL,this.driver,this.username,this.password);
+			stmt = con.createStatement();
+			
+			sqlQuery="select m_id,COORDINATES from georef_master where COORDINATES is not null";
+			rs = stmt.executeQuery(sqlQuery);
+			
+			int k = 0;
+			
+			while (rs.next())
+			{
+				String strcoordinates = rs.getString("COORDINATES");
+				String m_id = rs.getString("m_id");
+				if(strcoordinates != null)
+				{				  
+				  String[] termcoordinate = strcoordinates.split(Constants.AUDELIMITER);
+				  List geoterms = new ArrayList();
+				  for(int j = 0; j < termcoordinate.length; j++)
+				  {
+					String[] termcoordinates = termcoordinate[j].split(Constants.IDDELIMITER);
+					if(termcoordinates.length == 1)
+					{
+						String[] termcoordinates_tmp = new String[2];
+						termcoordinates_tmp[0] = j + "";
+						termcoordinates_tmp[1] = termcoordinates[0];
+						termcoordinates = termcoordinates_tmp;
+			
+					}
+					if(termcoordinates.length == 2)
+					{
+					  if(!termcoordinates[0].matches("\\d+"))
+					  {
+						  geoterms.add(termcoordinates[0]);
+					  }
+					  String[] coords = parseCoordinates(termcoordinates[1],m_id);
+					  if(coords != null &&  coords.length>4)
+					  {
+						 
+						  
+						  if(coords[4].indexOf("-") == -1 && coords[3].indexOf("-") != -1)
+						  {
+							//secondBoxCoords = parseCoordinates(termcoordinates[1]);
+							//System.out.println(secondBoxCoords[1] + "," + secondBoxCoords[2] + "," + secondBoxCoords[3] + "," + secondBoxCoords[4]);
+							coords[3] = "180";
+							//recSecondBox = new EVCombinedRec();
+						  }				
+				  		}//if
+					}//if
+				  }//for
+				  
+				}//if
+			}//while
+		}//try
+		catch (Exception e) 
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	private String[] parseCoordinates(String cs,String m_id) throws Exception
+	{
+		    cs = cs.replaceAll("[^a-zA-Z0-9]", "");
+			String coordString = cs.trim().replaceAll("([NEWS])","-$1");
+
+			String[] coords = coordString.split("-");
+			
+			if(coords.length>1) 
+			{ 
+				if(coords[1]!=null && coords[1].length()>0 && !coords[1].substring(0,1).equals("N") && !coords[1].substring(0,1).equals("S"))
+				{
+					 System.out.println("cord1="+coords[1].substring(0,1)+" m_id="+m_id) ;
+				}
+			}
+			else
+			{
+				System.out.println("coords= "+cs+" m_id="+m_id);
+			}
+			
+			if(coords.length>2) 
+			{ 
+				if(coords[2]!=null && coords[1].length()>0 && !coords[2].substring(0,1).equalsIgnoreCase("N") && !coords[2].substring(0,1).equalsIgnoreCase("S"))
+				{
+					 System.out.println("cord2="+coords[2].substring(0,1)+" m_id="+m_id) ;
+				}
+			}
+			else
+			{
+				System.out.println("coords= "+cs+" m_id="+m_id);
+			}
+			
+			if(coords.length>3) 
+			{  
+				if(coords[3]!=null && coords[1].length()>0 && !coords[3].substring(0,1).equalsIgnoreCase("W") && !coords[3].substring(0,1).equalsIgnoreCase("E"))
+				{
+					 System.out.println("cord3="+coords[3].substring(0,1)+" m_id="+m_id) ;
+				}
+			}
+			else
+			{
+				System.out.println("coords= "+cs+" m_id="+m_id);
+			}
+			
+			if(coords.length>4) 
+			{
+				if(coords[4]!=null && coords[1].length()>0 && !coords[4].substring(0,1).equalsIgnoreCase("W") && !coords[4].substring(0,1).equalsIgnoreCase("E"))
+				{
+					 System.out.println("cord4="+coords[4].substring(0,1)+" m_id="+m_id) ;
+				}
+			}
+			else
+			{
+				System.out.println("coords= "+cs+" m_id="+m_id);
+			}
+			
+			for(int i=1;i< coords.length;i++)
+			{
+				if(coords[i]!=null && coords[i].length() < 7)
+				{
+					int padCount = 8 - coords[i].length();
+					for(int p=0;p < padCount;p++)
+						coords[i] += "0";
+				}
+
+				coords[i] = coords[i].replaceAll("[NE]","+").substring(0,coords[i].length()-4).replaceAll("\\+","");
+				coords[i] = coords[i].replaceAll("[WS]","-");
+				if(coords[i].substring(0,1).indexOf("-") != -1)
+					coords[i] = coords[i].replaceAll("^(-)0{1,2}(.*?)","$1$2");
+				else
+					coords[i] = coords[i].replaceAll("^0{1,2}(.*?)","$1");
+			}
+
+			return coords;
+	}
 
 	protected Connection getConnection(String connectionURL,
 		                               String driver,

@@ -332,6 +332,31 @@ public class BdParser
 								String  pui = itemidElement.getTextTrim();
 								record.put("SEC",pui);
 							}
+							else if (itemid_idtype != null && itemid_idtype.equalsIgnoreCase("PUISECONDARY"))
+							{
+								String  puisecondary = itemidElement.getTextTrim();							
+								record.put("PUISECONDARY",puisecondary);
+								System.out.println("PUISECONDARY="+puisecondary);
+							}
+							else if (itemid_idtype != null && itemid_idtype.equals("NORMSTANDARDID"))
+							{
+								String  normstandardid = itemidElement.getTextTrim();
+								record.put("NORMSTANDARDID",normstandardid);
+							}
+							else if (itemid_idtype != null && itemid_idtype.equals("STANDARDDESIGNATION"))
+							{
+								String  standarddesignation = itemidElement.getTextTrim();
+								record.put("STANDARDDESIGNATION",standarddesignation);
+							}
+							else if (itemid_idtype != null && itemid_idtype.equals("STANDARDID"))
+							{
+								String  standardid = itemidElement.getTextTrim();
+								record.put("STANDARDID",standardid);
+							}
+							
+							
+							
+							
 						}
 
 						//head
@@ -393,6 +418,31 @@ public class BdParser
 									record.put("AUTHORKEYWORD",authorKeywordBuffer.toString());
 								}
 							}//citinfo
+							
+							//related-item
+							Element relatedItem = head.getChild("related-item",noNamespace);
+							if(relatedItem!=null)
+							{
+								List relatePUIs = relatedItem.getChildren("itemid",noNamespace);
+								if(relatePUIs != null)
+								{
+									String relatedPUIContent="";
+									for(int i=0;i<relatePUIs.size();i++)
+									{
+										Element relatedPUI = (Element)relatePUIs.get(i);
+										if(relatedPUIContent.length()>0)
+										{
+											relatedPUIContent = relatedPUIContent+","+relatedPUI.getTextTrim();
+										}
+										else
+										{
+											relatedPUIContent = relatedPUI.getTextTrim();
+										}
+										
+									}
+									record.put("RELATEDPUI",relatedPUIContent);
+								}
+							}
 
 							//citation title
 							Element cittitle = head.getChild("citation-title",noNamespace);
@@ -969,10 +1019,16 @@ public class BdParser
 									if(i<grantgroup.size()-1)
 									{
 										grantBuffer.append(Constants.AUDELIMITER);
-									}
-									
+									}									
 								}
 								record.put("GRANTLIST",grantBuffer.toString());
+								
+								//added by hmo on 7/17/2017
+								if(grantlist.getChild("grant-text",noNamespace)!=null)
+								{
+									String grantText =  grantlist.getChildText("grant-text",noNamespace);
+									record.put("GRANTTEXT",grantText);
+								}
 							}
 
 
@@ -2674,6 +2730,15 @@ public class BdParser
 			{
 				//System.out.println("IN additionalSrcinfo");
 				setAdditionalSrcinfo(record,additionalSrcinfo);
+			}
+			
+			//bib-text
+			
+			if(source.getChild("bib-text",noNamespace) != null)
+			{
+				String bibtext = source.getChildText("bib-text",noNamespace);				
+				record.put("SOURCEBIBTEXT",bibtext);
+				System.out.println("SOURCEBIBTEXT="+bibtext);
 			}
 		}
 	}
