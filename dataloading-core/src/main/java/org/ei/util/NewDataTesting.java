@@ -218,7 +218,7 @@ public class NewDataTesting
 		}
 		else  if(action.equals("fastQuery"))
 		{
-			test.getMIDFromFastQuery("dt:mc");
+			test.getMIDFromFastQuery(updateNumber);
 		}
 		else  if(action.equals("checkCoor"))
 		{
@@ -1732,13 +1732,13 @@ public class NewDataTesting
 		try
 		{
 			out = new FileWriter("midFromFast.out");	
-
+			System.out.println("Query= "+query);
 			FastClient client = new FastClient();
-			client.setBaseURL("http://evazure.trafficmanager.net:15100");
+			client.setBaseURL("http://evprod08.cloudapp.net:15100");
 			client.setResultView("ei");
 			client.setOffSet(0);
 			client.setPageSize(60000);
-			client.setQueryString("(DT:\"MC\") AND (((db:grf)))");
+			client.setQueryString(query);
 			client.setDoCatCount(true);
 			client.setDoNavigators(true);
 			client.setPrimarySort("ausort");
@@ -1765,7 +1765,7 @@ public class NewDataTesting
 				String m_id = docID[0];
 				System.out.println(m_id);
 				
-				out.write(m_id);					
+				out.write(m_id+"\n");					
 				out.flush();					
 			}
 				
