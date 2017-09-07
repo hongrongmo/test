@@ -52,6 +52,8 @@ import java.util.zip.ZipOutputStream;
 
 
 
+
+
 import org.ei.common.georef.DocumentView.MultiValueLookupValueDecorator;
 import org.ei.dataloading.awss3.AmazonS3Service;
 import org.ei.dataloading.upt.loadtime.vtw.ArchiveVTWPatentAsset;
@@ -80,6 +82,9 @@ public class CafeDownloadFileFromS3AllTypes {
 	static String ani_DeletionTempTable = "cafe_weekly_deletion";
 	static String deletionSqlldrFileName = "cafeANIDeletionFileLoader.sh";
 	static int numOfThreads = 1;
+	
+	static int recsPerEsbulk;
+	static String esDomain = "search-evcafe-prod-h7xqbezrvqkb5ult6o4sn6nsae.us-east-1.es.amazonaws.com";
 
 
 	static int curRecNum = 0;
@@ -162,7 +167,7 @@ public class CafeDownloadFileFromS3AllTypes {
 			}
 		}
 
-		if(args.length >12)
+		if(args.length >14)
 		{
 			// # of downloaded cafe key files to include in one zip file for later process/convert
 			if(args[6] !=null)
@@ -217,6 +222,26 @@ public class CafeDownloadFileFromS3AllTypes {
 					System.out.println("did not find numOfThreads or numOfThreads has wrong format!!!");
 					System.exit(1);
 				}
+			}
+			if(args[13] !=null)
+			{
+				Pattern pattern = Pattern.compile("^\\d*$");
+				Matcher match = pattern.matcher(args[13]);
+				if(match.find())
+				{
+					recsPerEsbulk = Integer.parseInt(args[13]);
+					System.out.println("RecordsPerBulk:  " + recsPerEsbulk);
+				}
+				else
+				{
+					System.out.println("recsPerEsbulk has wrong format!!!");
+					System.exit(1);
+				}
+			}
+			if(args[14] !=null)
+			{
+				esDomain = args[14];
+				System.out.println("ES Domain: " + esDomain);
 			}
 		}
 
@@ -1069,8 +1094,7 @@ public class CafeDownloadFileFromS3AllTypes {
 		int curRec = 0; 
 		int status = 0;
 
-		String type;
-
+		
 		System.out.println("Total Keys to be deleted: " + keys_to_be_deleted.size());
 
 		if(doc_type.equalsIgnoreCase("ipr"))
@@ -1079,8 +1103,6 @@ public class CafeDownloadFileFromS3AllTypes {
 			backupTable = "institute_profile_deleted";
 			columnName = "AFFID";
 
-			type = "affiliation";
-
 		}
 
 		else if(doc_type.equalsIgnoreCase("apr"))
@@ -1088,8 +1110,6 @@ public class CafeDownloadFileFromS3AllTypes {
 			profileTable = "author_profile";
 			backupTable = "author_profile_deleted";
 			columnName = "AUTHORID";
-
-			type = "author";
 
 		}
 
@@ -1113,8 +1133,8 @@ public class CafeDownloadFileFromS3AllTypes {
 					{
 						//delete from ES
 						//AuAfESIndex esIndexObj = new AuAfESIndex(doc_type);
-						AusAffESIndex esIndexObj = new AusAffESIndex();
-						status = esIndexObj.createBulkDelete(type, keys_MID_to_be_deleted);
+						AusAffESIndex esIndexObj = new AusAffESIndex(recsPerEsbulk, esDomain, "delete");
+						status = esIndexObj.createBulkDelete(doc_type, keys_MID_to_be_deleted);
 
 						//delete from DB
 						if(status!=0 && (status == 200 || status == 201 || status == 404))
@@ -1146,8 +1166,9 @@ public class CafeDownloadFileFromS3AllTypes {
 			{
 				//delete from ES
 				//AuAfESIndex esIndexObj = new AuAfESIndex(doc_type);
-				AusAffESIndex esIndexObj = new AusAffESIndex();
-				status = esIndexObj.createBulkDelete(type, keys_MID_to_be_deleted);
+				AusAffESIndex esIndexObj = new AusAffESIndex(recsPerEsbulk, esDomain, "delete");
+				status = esIndexObj.createBulkDelete(doc_type, keys_MID_to_be_deleted);
+				esIndexObj.end();
 
 
 				//delete from DB
