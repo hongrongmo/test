@@ -202,19 +202,19 @@ public class DownloadPatentFromFile {
 						patentID = fields[0];
 						signedAssetUrl = fields[1];
 						
-						if(fields[2] !=null && fields[2].contains("content/pat"))
-							generation = fields[2].substring(fields[2].lastIndexOf("/")+1, fields[2].length());
-						else if(fields[3] !=null && fields[3].contains("content/pat"))
-						generation = fields[3].substring(fields[3].lastIndexOf("/")+1, fields[3].length());
+						if(fields[4] !=null && fields[4].contains("content/pat"))
+							generation = fields[4].substring(fields[4].lastIndexOf("/")+1, fields[4].length());
+						/*else if(fields[3] !=null && fields[3].contains("content/pat"))
+						generation = fields[3].substring(fields[3].lastIndexOf("/")+1, fields[3].length());*/  // that was used for backword when out file format was diff
 						else
 							System.out.println("something wrong!!!");
 					}
 					
 					// 06/07/2017 NYC team confirmed to download all patents with generation >10, after Bart recent email to check with EV to confirm this
-					
+					// i set condition to >10 when run backword process, but from now on and forward i need to make >=10 or i may take generation condition away
 					if(patentID !=null &&
 							(patentID.substring(0, 2).equalsIgnoreCase("US") ||	patentID.substring(0, 2).equalsIgnoreCase("EP"))
-							&& Integer.parseInt(generation) >10)
+							&& Integer.parseInt(generation) >=10)
 					
 						
 					{
