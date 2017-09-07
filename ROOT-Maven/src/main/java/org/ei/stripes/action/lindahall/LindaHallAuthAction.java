@@ -1,6 +1,7 @@
 package org.ei.stripes.action.lindahall;
 
 import java.util.List;
+
 import java.util.Map;
 
 import net.sourceforge.stripes.action.DefaultHandler;
