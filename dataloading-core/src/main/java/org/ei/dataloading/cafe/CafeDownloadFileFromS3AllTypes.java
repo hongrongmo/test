@@ -36,24 +36,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import org.ei.common.georef.DocumentView.MultiValueLookupValueDecorator;
 import org.ei.dataloading.awss3.AmazonS3Service;
 import org.ei.dataloading.upt.loadtime.vtw.ArchiveVTWPatentAsset;
