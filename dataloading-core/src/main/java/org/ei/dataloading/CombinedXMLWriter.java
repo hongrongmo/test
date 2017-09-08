@@ -847,8 +847,8 @@ public class CombinedXMLWriter
         out.println("       <EV_SPARE1><![CDATA[]]></EV_SPARE1>");	//tempotary block out SOURCEBIBTEXT
         //out.println("       <EV_SPARE1><![CDATA["+ notNull(rec.getString(EVCombinedRec.SOURCEBIBTEXT)) +"]]></EV_SPARE1>");
         //GRANTTEXT
-        out.println("       <EV_SPARE2><![CDATA[]]></EV_SPARE2>"); //tempotary block out GRANTTEXT
-        //out.println("       <EV_SPARE2><![CDATA["+ notNull(rec.getString(EVCombinedRec.GRANTTEXT))+ " QstemQ " + notNull(getStems(rec.getString(EVCombinedRec.GRANTTEXT))) +"]]></EV_SPARE2>");                
+        //out.println("       <EV_SPARE2><![CDATA[]]></EV_SPARE2>"); //tempotary block out GRANTTEXT
+        out.println("       <EV_SPARE2><![CDATA["+ notNull(rec.getString(EVCombinedRec.GRANTTEXT))+ " QstemQ " + notNull(getStems(rec.getString(EVCombinedRec.GRANTTEXT))) +"]]></EV_SPARE2>");                
         
         out.println("       <EV_SPARE3><![CDATA[]]></EV_SPARE3>");
         
