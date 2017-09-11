@@ -7,8 +7,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Hashtable;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * 
@@ -24,7 +26,26 @@ import java.util.Map;
  *  		- check distinct status for all authors associated to every PUI in weekly_deleted table
  *  				- if all distinct status is "deleted", then delete the entry from ES
  *  				- if distinct status contains at least "matched", do not delete any thing from ES
- *  				- if all distinct status does not contain any "matched", then delete the profile from ES 
+ *  				- if all distinct status does not contain any "matched", then delete the profile from ES
+ *  
+ *   @Date: 09/08/2017
+ *   @Description: as per Team discussion for BD cpx deletion, to make things easier instead of get pui to check thier au/af id by comapring cpx_deleted.cafe_pui and lookup 
+ *   table PUI to get authors, instead
+ *   	- whenever there is BD cpx deletion, mark "status" of AU/AF ids in lookups to "cpx_deleted"
+ *   	- get the list of AU/AF ids with status="cpx-deleted" and check distinct status for each similar as cafe ANI deletion
+ *   			- if all distinct status is "cpx_deleted", then delete entry from ES
+ *   			- if distinct status contains at leas one "matched", do not delete anything from ES
+ *   			- if all disctint status does not contain any "matched", then delete the entry from ES
+ *   	- in all cases need to update status "cpx_deleted" back to "unmatched" in lookup tables for those specific AU/AF ID
+ *   	- problem we may face if BD deletion records count >1000, that update stmt will fail if we explicitly specify PUIS in sql statement
+ *   		- solution 1, either create two tables, one for PUI and one for AU/AF ID and that would require we write them first to out file then sqlldr to load them to these two tables
+ *   		 which will be performance issue
+ *   		- Solution 2, is the 1st solution that was to get PUI of BD by comparing cpx_deleted_pui with lookup.pui, but because cpx_deleted table is huge and no index
+ *   			that also is a performance issue
+ *   
+ *    	- Solution to these two cases is to create a cpx_deleted_temp table during CPX deletion SP to add PUI of BD records into cpx_deleted_temp
+ *    	- 
+ *    
  */
 public class AusAffDeletion {
 
@@ -35,13 +56,14 @@ public class AusAffDeletion {
 	static String password = "ei3it";
 	static String deletionTable = "cafe_weekly_deletion";
 	static String action = "delete";
+	static String source = "cafe";		// either cafe or bd
 	static int recsPerEsbulk;
 	static String esDomain = "search-evcafe5-ucqg6c7jnb4qbvppj2nee4muwi.us-east-1.es.amazonaws.com";
-	
-	
+
+
 
 	AusAffESIndex esIndexObj = null;
-	
+
 	Connection con = null;
 	String lookupTable = null;
 	String lookupTable_columnName = null;
@@ -49,6 +71,7 @@ public class AusAffDeletion {
 	String profileColumnName;
 
 	Map<String,String> id_status_List = new Hashtable<String,String>();
+	Map<String,String> id_pui_List = new Hashtable<String,String>(); // for BD deletion holding PUI, AU/AFID for later updating lookup tables' status
 	List<String> id_List = new ArrayList<String>();
 	List<String> Id_deletion_list;
 	List<String> MID_deletion_list;
@@ -57,7 +80,7 @@ public class AusAffDeletion {
 
 	public static void main(String[] args)
 	{
-		if(args.length >8)
+		if(args.length >9)
 		{
 			if(args[0] !=null)
 			{
@@ -110,6 +133,11 @@ public class AusAffDeletion {
 
 				System.out.println("ES Domain name: " + esDomain);
 			}
+			if(args[9] !=null)
+			{
+				source = args[9];
+				System.out.println("Deletion Source: " + source);
+			}
 
 		}
 		else
@@ -121,12 +149,13 @@ public class AusAffDeletion {
 		try
 		{
 			AusAffDeletion c = new AusAffDeletion();
-			
+
 			c.esIndexObj = new AusAffESIndex(recsPerEsbulk, esDomain, action);
-			
+
 			c.con = c.getConnection(url, driver, username, password);
 
-			c.getProfilesToBeDeleted();
+			c.getCafeProfilesToBeDeleted();
+
 			if(c.id_status_List.size() >0)
 			{
 				c.getProfileIdsToDelete();
@@ -146,8 +175,41 @@ public class AusAffDeletion {
 
 	}
 
+	public AusAffDeletion()
+	{
+		if(doc_type !=null && doc_type.equalsIgnoreCase("apr"))
+		{
+			lookupTable = "cmb_au_lookup";   //prod
+			//lookupTable = "hh_test_au_lookup"; // for testing
+			lookupTable_columnName = "AUTHOR_ID";
 
-	public void getProfilesToBeDeleted()
+			profileTable = "author_profile";
+			profileColumnName = "AUTHORID";
+
+		}
+
+		else if (doc_type !=null && doc_type.equalsIgnoreCase("ipr"))
+		{
+			lookupTable = "cmb_af_lookup";
+			lookupTable_columnName = "INSTITUTE_ID";
+
+			profileTable = "institute_profile";
+			profileColumnName = "AFFID";
+		}
+
+
+		else
+		{
+			System.out.println("Invalid doc type!!! Re-try with apr or ipr");
+			System.exit(1);
+		}
+	}
+
+
+
+	// if deletion source is Cafe
+
+	public void getCafeProfilesToBeDeleted()
 	{
 		Statement stmt = null;
 		ResultSet rs = null;
@@ -158,32 +220,7 @@ public class AusAffDeletion {
 
 		try
 		{
-			if(doc_type !=null && doc_type.equalsIgnoreCase("apr"))
-			{
-				lookupTable = "cmb_au_lookup";   //prod
-				//lookupTable = "hh_test_au_lookup"; // for testing
-				lookupTable_columnName = "AUTHOR_ID";
-				
-				profileTable = "author_profile";
-				profileColumnName = "AUTHORID";
-				
-			}
 
-			else if (doc_type !=null && doc_type.equalsIgnoreCase("ipr"))
-			{
-				lookupTable = "cmb_af_lookup";
-				lookupTable_columnName = "INSTITUTE_ID";
-				
-				profileTable = "institute_profile";
-				profileColumnName = "AFFID";
-			}
-
-
-			else
-			{
-				System.out.println("Invalid doc type!!! Re-try with apr or ipr");
-				System.exit(1);
-			}
 
 			stmt = con.createStatement();
 			System.out.println("Running the query...");
@@ -255,13 +292,17 @@ public class AusAffDeletion {
 
 	}
 
+
+
 	public void getProfileIdsToDelete()
 	{	
+		String pui;
+
 		for(String key: id_status_List.keySet())
 		{
 			if(id_status_List.get(key) !=null && !(id_status_List.get(key).contains("$matched$")) && id_status_List.get(key).contains("deleted"))
 			{
-				id_List.add(key);		
+				id_List.add(key);
 			}
 			else
 			{
@@ -310,9 +351,12 @@ public class AusAffDeletion {
 					MID_deletion_list.clear();
 				}
 
+
 				if(profileIds.length() >0)
 					profileIds.append(",");			
 				profileIds.append("'" + id_List.get(i) + "'");
+
+				curRec ++;
 			}
 
 			//get M_ID list from DB for ES deletion & then delete from DB
@@ -328,7 +372,15 @@ public class AusAffDeletion {
 				if(status!=0 && (status == 200 || status == 201 || status == 404))
 				{
 					updateProfileEsStatus(profileIds.toString());  // temp comment during testing, NEED TO UNCOMMENT WHEN MOVE TO PROD
-					DbBulkDelete();                                // temp comment during testing, NEED TO UNCOMMENT WHEN MOVE TO PROD
+
+					if(source !=null && source.equalsIgnoreCase("cafe"))
+						DbBulkDelete();                                // temp comment during testing, NEED TO UNCOMMENT WHEN MOVE TO PROD
+					else
+					{
+						System.out.println("Source is : " + source + " so only update lookup status");
+						updateLookupStatus();
+					}
+
 				}
 				else
 				{
@@ -428,7 +480,7 @@ public class AusAffDeletion {
 
 	public void updateProfileEsStatus(String profileIds)
 	{
-		
+
 		Statement stmt= null;
 		ResultSet rs = null;
 		String query = "";
@@ -436,7 +488,7 @@ public class AusAffDeletion {
 
 		try
 		{
-			
+
 			//1. updates "es_status" column to "null" in profile table that matched a deleted Cafe ANI PUI record, where profile distinct status in lkup is deleted  
 			query = "update " + profileTable + " set es_status=null where " + profileColumnName + " in (" +profileIds + ")";
 
@@ -488,10 +540,10 @@ public class AusAffDeletion {
 		}
 
 	}
-	
+
 	public void DbBulkDelete()
 	{
-		
+
 		Statement stmt = null;
 		ResultSet rs = null;
 		String query = "";
@@ -550,6 +602,106 @@ public class AusAffDeletion {
 		}
 
 	}
+
+	// when source is BD, only update lookup status for deleted AU/AF from ES from "cpx_deleted" back to "unmatched"
+	public void updateLookupStatus()
+	{
+		Statement stmt = null;
+		ResultSet rs = null;
+		String query = "";
+
+		StringBuffer profileIds = new StringBuffer();
+		
+		int curRec = 0;
+		int count = 0;
+
+
+
+		try
+		{
+			//2. update records's status match BD Abstract PUI in lookup tables from "cpx_deleted" to default "unmatched"
+
+			stmt = con.createStatement();
+
+			if(id_List.size() >0)
+			{
+				for(int i=0; i<id_List.size();i++)
+				{
+					if(curRec >999)
+					{
+						query = "update " + lookupTable + " set status='unmatched' where pui in (select pui from " + deletionTable + ") and " + lookupTable_columnName + " in (" 
+								+ profileIds + ")";
+						System.out.println("Running query...." + query);
+						count = stmt.executeUpdate(query);
+						con.commit();
+
+						System.out.println("Total Profiles' Status updated in : " + lookupTable + " :- " + count);
+
+						profileIds = new StringBuffer();
+						curRec = 0;
+					}
+
+
+					if(profileIds.length() >0)
+						profileIds.append(",");
+					profileIds.append("'" + id_List.get(i) + "'");
+
+					curRec ++;
+
+				}
+
+				query = "update " + lookupTable + " set status='unmatched' where pui in (select pui from " + deletionTable + ") and " + lookupTable_columnName + " in (" 
+						+ profileIds + ")";
+				System.out.println("Running query...." + query);
+				count = stmt.executeUpdate(query);
+				con.commit();
+
+				System.out.println("Total profiles' Status updated in : " + lookupTable + " :- " + count);
+
+			}
+
+
+		}
+		catch(SQLException ex)
+		{
+			System.out.println("Error to update status in lookup table: " + lookupTable + " error message: " + ex.getMessage());
+			ex.printStackTrace();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+
+			if (rs != null)
+			{
+				try
+				{
+					rs.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+
+			if (stmt != null)
+			{
+				try
+				{
+					stmt.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+		}
+
+	}
+
+
 	private Connection getConnection(String connectionURL,
 			String driver,
 			String username,
