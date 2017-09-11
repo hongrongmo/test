@@ -990,10 +990,6 @@ public class CafeDownloadFileFromS3AllTypes {
 			stmt = con.createStatement();
 			stmt.executeUpdate("truncate table " + tableToBeTruncated);
 			System.out.println("truncate temp table " + tableToBeTruncated);
-			
-			stmt.executeUpdate("truncate table " + ani_DeletionTempTable);
-			System.out.println("truncate cafe weekly deletion table " + ani_DeletionTempTable);
-			
 		}
 		catch(Exception e)
 		{
