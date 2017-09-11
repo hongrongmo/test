@@ -296,7 +296,6 @@ public class AusAffDeletion {
 
 	public void getProfileIdsToDelete()
 	{	
-		String pui;
 
 		for(String key: id_status_List.keySet())
 		{
