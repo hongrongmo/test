@@ -389,8 +389,8 @@ public class CombinedXMLWriter
         out.println("       <EDITOR><![CDATA[" + notNull(Entity.prepareString(formatAuthors(rec.getStrings(EVCombinedRec.EDITOR))))+"]]></EDITOR>");
         out.println("       <EDITORAFFILIATION><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.EDITOR_AFFILIATION)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.EDITOR_AFFILIATION))))) + "]]></EDITORAFFILIATION>");
         out.println("       <TRANSLATOR><![CDATA[" + notNull(Entity.prepareString(formatAuthors(rec.getStrings(EVCombinedRec.TRANSLATOR)))) + "]]></TRANSLATOR>");
-        out.println("       <CONTROLLEDTERMS><![CDATA[" + notNull(Entity.prepareString(multiFormat(addIndex(rec.getStrings(EVCombinedRec.CONTROLLED_TERMS),"CONTROLLEDTERMS")))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CONTROLLED_TERMS))))) + "]]></CONTROLLEDTERMS>");
-        out.println("       <UNCONTROLLEDTERMS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.UNCONTROLLED_TERMS)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.UNCONTROLLED_TERMS))))) + "]]></UNCONTROLLEDTERMS>");
+        out.println("       <CONTROLLEDTERMS><![CDATA[" + notNull(removeSpecialTag(Entity.prepareString(multiFormat(addIndex(rec.getStrings(EVCombinedRec.CONTROLLED_TERMS),"CONTROLLEDTERMS"))))) + " QstemQ " + notNull(getStems(removeSpecialTag(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CONTROLLED_TERMS)))))) + "]]></CONTROLLEDTERMS>");
+        out.println("       <UNCONTROLLEDTERMS><![CDATA[" + notNull(removeSpecialTag(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.UNCONTROLLED_TERMS))))) + " QstemQ " + notNull(getStems(removeSpecialTag(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.UNCONTROLLED_TERMS)))))) + "]]></UNCONTROLLEDTERMS>");
         out.println("       <ISSN><![CDATA[" + notNull(Entity.prepareString(multiFormat(prepareISSN(rec.getStrings(EVCombinedRec.ISSN))))) + "]]></ISSN>");
         out.println("       <ISSNOFTRANSLATION><![CDATA[" + notNull(Entity.prepareString(multiFormat(prepareISSN(rec.getStrings(EVCombinedRec.ISSN_OF_TRANSLATION))))) + "]]></ISSNOFTRANSLATION>");
         out.println("       <CODEN><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CODEN)))) + "]]></CODEN>");
@@ -398,7 +398,7 @@ public class CombinedXMLWriter
         out.println("       <ISBN><![CDATA[" + notNull(Entity.prepareString(multiFormat(prepareISBN(rec.getStrings(EVCombinedRec.ISBN))))) + "]]></ISBN>");
         out.println("       <SERIALTITLE><![CDATA[" + notNull(Entity.prepareString(notNull(multiFormat(addIndex(rec.getStrings(EVCombinedRec.SERIAL_TITLE),"SERIALTITLE")))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SERIAL_TITLE)))))) + "]]></SERIALTITLE>");
         out.println("       <SERIALTITLETRANSLATION><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SERIAL_TITLE_TRANSLATION)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SERIAL_TITLE_TRANSLATION))))) + "]]></SERIALTITLETRANSLATION>");
-        out.println("       <MAINHEADING><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MAIN_HEADING)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MAIN_HEADING))))) + "]]></MAINHEADING>");
+        out.println("       <MAINHEADING><![CDATA[" + notNull(removeSpecialTag(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MAIN_HEADING))))) + " QstemQ " + notNull(getStems(removeSpecialTag(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MAIN_HEADING)))))) + "]]></MAINHEADING>");
         out.println("       <SUBHEADING><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.SUB_HEADING))) + "]]></SUBHEADING>");
         out.println("       <PUBLISHERNAME><![CDATA[" + notNull(Entity.prepareString(multiFormat(addIndex(rec.getStrings(EVCombinedRec.PUBLISHER_NAME),"PUBLISHERNAME")))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PUBLISHER_NAME))))) + "]]></PUBLISHERNAME>");
         out.println("       <TREATMENTCODE>" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TREATMENT_CODE)))) + "</TREATMENTCODE>");
@@ -498,7 +498,7 @@ public class CombinedXMLWriter
         }
         
         out.println("       <SECONDARYSRCTITLE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.SECONDARY_SRC_TITLE))) + " QstemQ " + notNull(getStems(Entity.prepareString(rec.getString(EVCombinedRec.SECONDARY_SRC_TITLE)))) + "]]></SECONDARYSRCTITLE>");
-        out.println("       <MAINTERM><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.MAIN_TERM))) + " QstemQ " + notNull(getStems(Entity.prepareString(rec.getString(EVCombinedRec.MAIN_TERM)))) + "]]></MAINTERM>");
+        out.println("       <MAINTERM><![CDATA[" + notNull((Entity.prepareString(rec.getString(EVCombinedRec.MAIN_TERM)))) + " QstemQ " + notNull(getStems((Entity.prepareString(rec.getString(EVCombinedRec.MAIN_TERM))))) + "]]></MAINTERM>");
         out.println("       <ABBRVSRCTITLE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.ABBRV_SRC_TITLE))) + " QstemQ " + notNull(getStems(Entity.prepareString(rec.getString(EVCombinedRec.ABBRV_SRC_TITLE)))) + "]]></ABBRVSRCTITLE>");
         out.println("       <NOROLETERMS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.NOROLE_TERMS)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.NOROLE_TERMS))))) + "]]></NOROLETERMS>");
         out.println("       <REAGENTTERMS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.REAGENT_TERMS)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.REAGENT_TERMS))))) + "]]></REAGENTTERMS>");
@@ -844,24 +844,41 @@ public class CombinedXMLWriter
         
         //SPARE FIELDS
         //SOURCEBIBTEXT
-        out.println("       <EV_SPARE1><![CDATA["+ notNull(rec.getString(EVCombinedRec.SOURCEBIBTEXT)) +"]]></EV_SPARE1>");	
-
+        out.println("       <EV_SPARE1><![CDATA[]]></EV_SPARE1>");	//tempotary block out SOURCEBIBTEXT
+        //out.println("       <EV_SPARE1><![CDATA["+ notNull(rec.getString(EVCombinedRec.SOURCEBIBTEXT)) +"]]></EV_SPARE1>");
         //GRANTTEXT
-        out.println("       <EV_SPARE2><![CDATA["+ notNull(rec.getString(EVCombinedRec.GRANTTEXT))+ " QstemQ " + notNull(getStems(rec.getString(EVCombinedRec.GRANTTEXT))) +"]]></EV_SPARE2>");
-                        
+        //out.println("       <EV_SPARE2><![CDATA[]]></EV_SPARE2>"); //tempotary block out GRANTTEXT
+        out.println("       <EV_SPARE2><![CDATA["+ notNull(rec.getString(EVCombinedRec.GRANTTEXT))+ " QstemQ " + notNull(getStems(rec.getString(EVCombinedRec.GRANTTEXT))) +"]]></EV_SPARE2>");                
+        
         out.println("       <EV_SPARE3><![CDATA[]]></EV_SPARE3>");
         
         out.println("       <EV_SPARE4><![CDATA[]]></EV_SPARE4>");
         
         out.println("       <EV_SPARE5><![CDATA[]]></EV_SPARE5>");
         
-        out.println("       <EV_SPARE6><![CDATA[QQDelQQ TEST6 QQDelQQ]]></EV_SPARE6>");
+        out.println("       <EV_SPARE6><![CDATA[]]></EV_SPARE6>");
         
         //STANDARDID and STANDARDDESIGNATION
-        out.println("       <EV_SPARE7><![CDATA[QQDelQQ " + notNull(rec.getString(EVCombinedRec.STANDARDID)) + " QQDelQQ "+ notNull(rec.getString(EVCombinedRec.STANDARDDESIGNATION)) +" QQDelQQ]]></EV_SPARE7>");
-        out.println("       <EV_SPARE8><![CDATA[QQDelQQ TEST8 QQDelQQ]]></EV_SPARE8>");
-        out.println("       <EV_SPARE9><![CDATA[QQDelQQ TEST9 QQDelQQ]]></EV_SPARE9>");
-        out.println("       <EV_SPARE10><![CDATA[QQDelQQ TEST10 QQDelQQ]]></EV_SPARE10>");
+        if(rec.getString(EVCombinedRec.STANDARDID)==null && rec.getString(EVCombinedRec.STANDARDDESIGNATION)==null)
+        {
+        	out.println("       <EV_SPARE7><![CDATA[]]></EV_SPARE7>");
+        }
+        else if(rec.getString(EVCombinedRec.STANDARDID)!=null && rec.getString(EVCombinedRec.STANDARDDESIGNATION)!=null)
+        {
+        	out.println("       <EV_SPARE7><![CDATA[QQDelQQ " + notNull(rec.getString(EVCombinedRec.STANDARDID)) + " QQDelQQ "+ notNull(rec.getString(EVCombinedRec.STANDARDDESIGNATION)) +" QQDelQQ]]></EV_SPARE7>");     
+        }
+        else if(rec.getString(EVCombinedRec.STANDARDID)!=null)
+        {
+        	out.println("       <EV_SPARE7><![CDATA[" + notNull(rec.getString(EVCombinedRec.STANDARDID)) + "]]></EV_SPARE7>");
+        }
+        else if(rec.getString(EVCombinedRec.STANDARDDESIGNATION)!=null)
+        {
+        	out.println("       <EV_SPARE7><![CDATA[" + notNull(rec.getString(EVCombinedRec.STANDARDDESIGNATION)) + "]]></EV_SPARE7>");
+        }
+        
+        out.println("       <EV_SPARE8><![CDATA[]]></EV_SPARE8>");
+        out.println("       <EV_SPARE9><![CDATA[]]></EV_SPARE9>");
+        out.println("       <EV_SPARE10><![CDATA[]]></EV_SPARE10>");
         
         out.println("   </ROW>");
         ++curRecNum;
@@ -1246,6 +1263,28 @@ public class CombinedXMLWriter
         //System.out.println("RECORD= "+finishedString);
         return finishedString;
     }
+    
+    private String removeSpecialTag(String s)
+    {
+		if (s == null)
+		{     return null;
+		}
+		
+		s = s.trim();
+		
+		s = perl.substitute("s/<sub>//g", s);
+		s = perl.substitute("s/<\\/sub>//g", s);
+		s = perl.substitute("s/<sup>//g", s);
+		s = perl.substitute("s/<\\/sup>//g", s);
+		s = perl.substitute("s/<inf>//g", s);
+		s = perl.substitute("s/<\\/inf>//g", s);
+		s = perl.substitute("s/<\\//QPLUSQ/g", s);
+		s = perl.substitute("s/\\[0-9].[0-9]/$1DQD$2/g", s);
+		s = perl.substitute("s/-/QMINUSQ/g",s); 
+		s = perl.substitute("s/\\//QSLASHQ/g",s);
+		   
+		return s;
+    }
 
     private String checkForAuthor(String s, EVCombinedRec rec)
     {
@@ -1265,7 +1304,7 @@ public class CombinedXMLWriter
         }
 
         s = s.trim();
-
+       
         s = perl.substitute("s/\\\\/ /g", s);
         s = perl.substitute("s#/# #g", s);
         s = perl.substitute("s#\\$# #g", s);
@@ -1291,7 +1330,7 @@ public class CombinedXMLWriter
         s = perl.substitute("s/-/ /g", s);
         s = perl.substitute("s/\"/ /g", s);
         s = perl.substitute("s/'/ /g", s);
-        s = perl.substitute("s/\\`/ /g", s);
+        s = perl.substitute("s/\\`/ /g", s);      
         s = perl.substitute("s/</ /g", s);
         s = perl.substitute("s/>/ /g", s);
         s = perl.substitute("s/\\^/ /g", s);
