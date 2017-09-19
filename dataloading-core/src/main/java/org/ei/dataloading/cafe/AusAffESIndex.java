@@ -406,6 +406,7 @@ public class AusAffESIndex {
 		
 		// delete
 		ProcessBulk();
+		end();
 		return getStatusCode();
 
 	}

@@ -40,10 +40,10 @@ import java.util.Set;
  *   	- problem we may face if BD deletion records count >1000, that update stmt will fail if we explicitly specify PUIS in sql statement
  *   		- solution 1, either create two tables, one for PUI and one for AU/AF ID and that would require we write them first to out file then sqlldr to load them to these two tables
  *   		 which will be performance issue
- *   		- Solution 2, is the 1st solution that was to get PUI of BD by comparing cpx_deleted_pui with lookup.pui, but because cpx_deleted table is huge and no index
+ *   		- Solution 2, is the 1st solution that was to get PUI of BD by comparing cpx_deleted.cafe_pui with lookup.pui, but because cpx_deleted table is huge and no index
  *   			that also is a performance issue
  *   
- *    	- Solution to these two cases is to create a cpx_deleted_temp table during CPX deletion SP to add PUI of BD records into cpx_deleted_temp
+ *    	- Solution to these two cases is to create a BD_AIP_WEEKLY_DELETION table during CPX deletion SP to add PUI of BD records into BD_AIP_WEEKLY_DELETION
  *    	- 
  *    
  */
@@ -224,8 +224,18 @@ public class AusAffDeletion {
 
 			stmt = con.createStatement();
 			System.out.println("Running the query...");
+			
+			if(source.equalsIgnoreCase("cafe"))
 			query = "select " + lookupTable_columnName + ", status from " + lookupTable + " where pui in (select pui from " + deletionTable + ") " +
 					"group by " + lookupTable_columnName + ",status order by " + lookupTable_columnName;
+
+			else if(source.equalsIgnoreCase("bd"))
+				query = "select " + lookupTable_columnName + ", status from " + lookupTable + " where pui in (select pui from " + deletionTable + ") " +
+						"and status='cpx_deleted' group by " + lookupTable_columnName + ",status order by " + lookupTable_columnName;
+			
+			else
+				System.out.println("invalid Source!!!, Re-try with source 'cafe' or 'bd'");
+			
 
 			System.out.println(query);
 			stmt = con.createStatement();

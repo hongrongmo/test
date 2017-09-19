@@ -314,8 +314,13 @@ public class InstitutionCombiner{
 			System.out.println("Running the query...");
 			if(!(action.isEmpty()) && action.equalsIgnoreCase("new"))
 			{
-				query = "select * from " +  tableName + " where loadnumber=" + loadNumber + " and affid in (select INSTITUTE_ID from " + metadataTableName + 
+				/*query = "select * from " +  tableName + " where loadnumber=" + loadNumber + " and affid in (select INSTITUTE_ID from " + metadataTableName + 
+						" where STATUS='matched' and dbase='cpx') and PARENTID is null";*/			//used for intial/pre-release ES index, till loadnumber: 2017307
+				
+				query = "select * from " +  tableName + " where ES_STATUS is null and affid in (select INSTITUTE_ID from " + metadataTableName + 
 						" where STATUS='matched' and dbase='cpx') and PARENTID is null";
+				
+				
 
 				System.out.println(query);
 
@@ -347,8 +352,13 @@ public class InstitutionCombiner{
 			{
 				updateNumber=loadNumber;
 				
-				query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and affid in (select INSTITUTE_ID from " + metadataTableName + 
+				/*query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and affid in (select INSTITUTE_ID from " + metadataTableName + 
+						" where STATUS='matched' and dbase='cpx') and PARENTID is null";*/		//used for intial/pre-release ES index, till updatenumber: 2017326
+				
+				query = "select * from " +  tableName + " where ES_STATUS is null and affid in (select INSTITUTE_ID from " + metadataTableName + 
 						" where STATUS='matched' and dbase='cpx') and PARENTID is null";
+				
+				
 
 				
 				//for testing

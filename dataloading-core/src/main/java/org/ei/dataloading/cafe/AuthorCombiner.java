@@ -372,7 +372,10 @@ public class AuthorCombiner {
 			System.out.println("Running the query...");
 			if(!(action.isEmpty()) && action.equalsIgnoreCase("new"))
 			{
-				query = "select * from " +  tableName + " where loadnumber=" + loadNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + 
+				/*query = "select * from " +  tableName + " where loadnumber=" + loadNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + 
+						" where STATUS='matched' and dbase='cpx')";*/   // used for intial/pre-release ES index, till loadnumber: 2017261
+				
+				query = "select * from " +  tableName + " where ES_STATUS is null and authorid in (select AUTHOR_ID from " + metadataTableName + 
 						" where STATUS='matched' and dbase='cpx')";
 
 
@@ -407,8 +410,13 @@ public class AuthorCombiner {
 			else if(!(action.isEmpty()) && action.equalsIgnoreCase("update"))
 			{
 				updateNumber=loadNumber;
-				query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + 
+				/*query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + 
+						" where STATUS='matched' and dbase='cpx')";*/      // used for intial/pre-release ES index, till updatenumber: 2017366
+				
+				query = "select * from " +  tableName + " where ES_STATUS is null and authorid in (select AUTHOR_ID from " + metadataTableName + 
 						" where STATUS='matched' and dbase='cpx')";
+				
+				
 
 
 				// for testing
