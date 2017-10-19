@@ -32,7 +32,7 @@ import java.util.Set;
  *   @Description: as per Team discussion for BD cpx deletion, to make things easier instead of get pui to check thier au/af id by comapring cpx_deleted.cafe_pui and lookup 
  *   table PUI to get authors, instead
  *   	- whenever there is BD cpx deletion, mark "status" of AU/AF ids in lookups to "cpx_deleted"
- *   	- get the list of AU/AF ids with status="cpx-deleted" and check distinct status for each similar as cafe ANI deletion
+ *   	- get the list of AU/AF ids with status="deleted" and check distinct status for each similar as cafe ANI deletion
  *   			- if all distinct status is "cpx_deleted", then delete entry from ES
  *   			- if distinct status contains at leas one "matched", do not delete anything from ES
  *   			- if all disctint status does not contain any "matched", then delete the entry from ES
@@ -231,7 +231,7 @@ public class AusAffDeletion {
 
 			else if(source.equalsIgnoreCase("bd"))
 				query = "select " + lookupTable_columnName + ", status from " + lookupTable + " where pui in (select pui from " + deletionTable + ") " +
-						"and status='cpx_deleted' group by " + lookupTable_columnName + ",status order by " + lookupTable_columnName;
+						"group by " + lookupTable_columnName + ",status order by " + lookupTable_columnName;
 			
 			else
 				System.out.println("invalid Source!!!, Re-try with source 'cafe' or 'bd'");
