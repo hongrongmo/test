@@ -147,7 +147,7 @@ public class InitiateVtwThreads {
 			 */
 
 			raw_Dir_Names = new ArrayList<String>();
-			ArchiveVTWPatentAsset obj = null;
+			 
 
 			// create & start Threads
 
@@ -158,8 +158,10 @@ public class InitiateVtwThreads {
 
 				System.out.println("Thread" + i + " epoch: " + epoch);
 
-				raw_Dir_Names.add(Long.toString(epoch));
-				
+				if(type !=null && type.equalsIgnoreCase("forward"))
+					raw_Dir_Names.add(Long.toString(epoch));
+				else if(type !=null && type.equalsIgnoreCase("backfill"))
+					raw_Dir_Names.add("back_" + Long.toString(epoch));
 				ArchiveVTWPatentAsset thread = new ArchiveVTWPatentAsset(numberOfRuns,queueName,sqlldrFileName,
 						loadNumber,recsPerZipFile,recsPerSingleConnection,type,
 						epoch,"Thread" + i, latch);
@@ -168,7 +170,7 @@ public class InitiateVtwThreads {
 				// to get unique epoch timestamp which used for naming raw_dir
 				Thread.sleep(1000);
 				
-				obj = thread;
+				//obj = thread;
 
 			}
 			
@@ -183,9 +185,11 @@ public class InitiateVtwThreads {
 			
 			System.out.println("all " + numOfThreads + " complete, start to zip downloaded files");
 			
+			ArchiveVTWPatentAsset obj = new ArchiveVTWPatentAsset(loadNumber, recsPerZipFile);
+			
 			for(int j=0;j<raw_Dir_Names.size();j++)
 			{
-				obj.zipDownloads(loadNumber, raw_Dir_Names.get(j));
+				obj.zipDownloads(loadNumber, raw_Dir_Names.get(j),type);
 			}
 			
 

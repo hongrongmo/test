@@ -108,13 +108,14 @@ public class VTWAssetAPI {
 	}
 
 
-	public synchronized String init(String downloadDir_name,String thread_name, String type)
+	public synchronized String[] init(String downloadDir_name,String thread_name, String type)
 	{
 		DateFormat dateFormat = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");		 
 		Date date = new Date();
 
 		File downloadDir = null;
 
+		String[] downloadDirNames = new String[2];
 
 		try
 		{
@@ -130,6 +131,17 @@ public class VTWAssetAPI {
 				downloadDir.mkdir();
 			}
 
+			//Added 10/02/2017 to hold WO forwardflow files separate from US/EUP files
+			File wo_downloadDir = new File(System.getProperty("user.dir") + "/raw_data/" + type + "_wo_" + downloadDir_name);
+			if(!(wo_downloadDir.exists()))
+			{
+				wo_downloadDir.mkdir();
+			}
+			
+			//Added 10/02/2017 for supporting download of WO in separate dir
+			downloadDirNames[0] = downloadDir.getAbsolutePath();
+			downloadDirNames[1] = wo_downloadDir.getAbsolutePath();
+			
 			//responseHandler = new MyHttpResponseHandler<String>();
 
 			// create Apache HttpClient
@@ -164,7 +176,8 @@ public class VTWAssetAPI {
 			ex.printStackTrace();
 		}
 
-		return downloadDir.getAbsolutePath();
+		//return downloadDir.getAbsolutePath();
+		return downloadDirNames;
 	}
 
 	//loop through paten ids, download patent wither with AssetAPI Url or Pre-signed URL
@@ -176,7 +189,7 @@ public class VTWAssetAPI {
 		String threadName = thread_name;
 		ResponseHandler<String[]> responseHandler = null;
 
-		String downloadDir = init(downloadDirName,thread_name, type);
+		String[] downloadDir = init(downloadDirName,thread_name, type);
 
 		if(patentIds.size() >0)
 		{
@@ -350,6 +363,7 @@ public class VTWAssetAPI {
 
 		private String patentId = "";
 		private String downloadDir = null;
+		private String wo_downloadDir = null;
 		private String threadName = null;
 		
 		public MyHttpResponseHandler()
@@ -357,10 +371,11 @@ public class VTWAssetAPI {
 
 		}
 
-		public MyHttpResponseHandler(String patent_id, String downloadDirName, String thread_name)
+		public MyHttpResponseHandler(String patent_id, String[] downloadDirName, String thread_name)
 		{
 			patentId = patent_id;
-			downloadDir = downloadDirName;
+			downloadDir = downloadDirName[0];
+			wo_downloadDir = downloadDirName[1];
 			threadName = thread_name;
 		}
 
@@ -391,7 +406,10 @@ public class VTWAssetAPI {
 
 				if(responseCode ==200)
 				{
-					out = new FileOutputStream(new File(downloadDir + "/" + patentId + ".xml"));
+					if(patentId.substring(0, 2).equalsIgnoreCase("wo"))
+						out = new FileOutputStream(new File(wo_downloadDir + "/" + patentId + ".xml"));
+					else
+						out = new FileOutputStream(new File(downloadDir + "/" + patentId + ".xml"));
 
 					/**
 					 * This class is used to wrap a stream that includes an encoded ByteOrderMark as its first bytes. 
