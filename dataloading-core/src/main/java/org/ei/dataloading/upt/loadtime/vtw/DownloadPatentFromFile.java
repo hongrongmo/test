@@ -167,7 +167,7 @@ public class DownloadPatentFromFile {
 
 				//Zip downloaded files (each in it's corresponding dir)
 
-				archivePatent.zipDownloads(loadNumber, Long.toString(epoch));  // temp comment out for downloading backword records generation>10, uncomment Back after finish
+				archivePatent.zipDownloads(loadNumber, Long.toString(epoch),type);  // temp comment out for downloading backword records generation>10, uncomment Back after finish
 
 
 				midTime = endTime;
