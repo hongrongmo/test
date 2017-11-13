@@ -335,7 +335,8 @@ public class IBFCombiner
                 rec.put(rec.SERIAL_TITLE,
                         rs.getString("fjt"));
             }
-            else if (rs.getString("ojt") != null) rec.put(rec.SERIAL_TITLE,
+            else if (rs.getString("ojt") != null) 
+            	rec.put(rec.SERIAL_TITLE,
                     rs.getString("ojt"));
 
             if (rs.getString("fttj") != null)

@@ -656,11 +656,29 @@ throws Exception
 
                         String ct = null;
                         if(sourceType!=null && sourceType.equalsIgnoreCase("b") &&
-                           (docType.equalsIgnoreCase("bk") || docType.equalsIgnoreCase("ch") || docType.equalsIgnoreCase("mr") || docType.equalsIgnoreCase("mc")))
+                           (docType.equalsIgnoreCase("bk") || docType.equalsIgnoreCase("ch") || docType.equalsIgnoreCase("mr") || docType.equalsIgnoreCase("mc") ||
+                        	docType.equalsIgnoreCase("ed") || docType.equalsIgnoreCase("sh") || docType.equalsIgnoreCase("le") || docType.equalsIgnoreCase("no")))
+                        	
                         {
                         	if(docType.equalsIgnoreCase("ch") || docType.equalsIgnoreCase("mc"))
                         	{
                         		rec.put(EVCombinedRec.DOCTYPE,"ch");
+                        	}
+                        	else if(docType.equalsIgnoreCase("ed") )
+                        	{
+                        		rec.put(EVCombinedRec.DOCTYPE,"ed");
+                        	}
+                        	else if(docType.equalsIgnoreCase("sh") )
+                        	{
+                        		rec.put(EVCombinedRec.DOCTYPE,"sh");
+                        	}
+                        	else if(docType.equalsIgnoreCase("le") )
+                        	{
+                        		rec.put(EVCombinedRec.DOCTYPE,"le");
+                        	}
+                        	else if(docType.equalsIgnoreCase("no") )
+                        	{
+                        		rec.put(EVCombinedRec.DOCTYPE,"no");
                         	}
                         	else
                         	{
@@ -684,6 +702,12 @@ throws Exception
                         }
                         rec.put(EVCombinedRec.DOCTYPE, docType);
                     }
+                    
+                    //overwrite the doctype with "ST" when standardid is available
+                    if(isCpx && sourceType!=null && sourceType.equalsIgnoreCase("b") && rs.getString("STANDARDID") != null)
+            		{
+                    	 rec.put(EVCombinedRec.DOCTYPE, "ST");
+            		}
 
                     if (rs.getString("CLASSIFICATIONCODE") != null &&
                             !rs.getString("DATABASE").equalsIgnoreCase("elt"))
@@ -1014,6 +1038,7 @@ throws Exception
                     if(rs.getString("STANDARDDESIGNATION") != null)
                     {
                         rec.put(EVCombinedRec.STANDARDDESIGNATION, formatStandardCodes(rs.getString("STANDARDDESIGNATION")));
+                    	//rec.put(EVCombinedRec.STANDARDDESIGNATION, prepareStandardDesignation(rs.getString("STANDARDDESIGNATION")));
                         
                     }
                     
@@ -1107,6 +1132,16 @@ throws Exception
             e.printStackTrace();
          }
         }
+    }
+    
+    private String prepareStandardDesignation(String input)
+    {
+    	String output = null;
+    	if(input!=null)
+    	{
+    		//not sure what to do yet
+    	}
+    	return output;
     }
     
     private List getCafeAffID(String pui,Connection con)
@@ -1484,6 +1519,10 @@ throws Exception
         	r = c.replaceAll("\\.","DQD"); //use DQD for dot(.)
         	r = r.replaceAll("-","QMINUSQ"); //use QMINUSQ for minus sign
         	r = r.replaceAll("\\/","QSLASHQ"); //use QSLASHQ for slash(/)
+        	r = r.replaceAll(" ","QSPACEQ"); //use QSPACEQ for space
+        	r = r.replaceAll(",","QCOMMAQ"); //use QCOMMAQ for comma
+        	r = r.replaceAll(":","QCOLONQ"); //use QCOLONQ for colon
+        	r = r.replaceAll(";","QSEMICOLONQ"); //use QSEMICOLONQ for semicolon
         }
 
         return r; 

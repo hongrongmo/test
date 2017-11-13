@@ -356,6 +356,10 @@ public class FastClient {
     public void setBaseURL(String bURL) {
         this.baseURL = bURL;
     }
+    
+    public String getBaseURL() {
+        return this.baseURL;
+    }
 
     public void setPrimarySort(String psort) {
         this.primarySort = psort;
@@ -401,6 +405,7 @@ public class FastClient {
 		        try
 		        {
 		            String url = buildSearchURL();
+		            //System.out.println("URL="+url);
 		            urlConnection = new URL(url);
 		            in = new BufferedReader(new InputStreamReader(urlConnection.openStream()));
 		            read(in);

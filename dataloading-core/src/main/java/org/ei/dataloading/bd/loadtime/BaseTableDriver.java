@@ -406,10 +406,10 @@ public class BaseTableDriver
         	{
         		r = new RecordReader(loadNumber,databaseName);
         	}
-        	
+        	int recordCount = 0;
             while(xmlReader!=null)
             {
-            	
+            	recordCount++;
                 Hashtable h = r.readRecord(xmlReader);
             
                 if (h != null)
@@ -435,6 +435,7 @@ public class BaseTableDriver
                   break;
                 }
             }
+            System.out.println("total " + (recordCount-1) +" records found");
             out.flush();
         }
         catch(Exception e)
@@ -493,6 +494,7 @@ public class BaseTableDriver
             r.setCafeS3Loc(s3FileLoc);   //HH 04/05/2016
             boolean start = false;
            
+           
             while((line=xmlReader.readLine())!=null)
             {
             	
@@ -508,6 +510,7 @@ public class BaseTableDriver
                 if(line.indexOf("<item>")>-1)
                 {
                     start = true;
+                    
                     sBuffer = new StringBuffer();
                     sBuffer.append(line);
                     if(document_eid!=null)
@@ -523,7 +526,7 @@ public class BaseTableDriver
                 }
 
                 if(!start)
-                {
+                {               	
                     if(sBuffer!=null && sBuffer.length()>0)
                     {
                     	try{
@@ -537,8 +540,8 @@ public class BaseTableDriver
                     		System.out.println(sBuffer.toString());
                     		e.printStackTrace();
                     	}
-	                        sBuffer = new StringBuffer();
-                    }
+	                    sBuffer = new StringBuffer();
+                    }//if
 
                   //pre frank request, block certain issns just for cpx and pch 8/3/2015 by hmo
                   //pre frank request, block certain issns just for geo  2/6/2017 by hmo
@@ -570,18 +573,18 @@ public class BaseTableDriver
 	                    		continue;
 							}
                 		}
-                    	
+                    	                    	
                         return r.getRecordTable();
-                    }
+                    }//if
                    
-                }
+                }//if             
                
             }
             
-
+            
             return null;
         }
-       
+        
     }
     
     private boolean checkBlockedIssn(List blockedIssnList, Hashtable ht)
