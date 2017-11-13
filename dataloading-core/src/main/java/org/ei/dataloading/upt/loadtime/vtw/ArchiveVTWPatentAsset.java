@@ -133,6 +133,14 @@ public class ArchiveVTWPatentAsset implements Runnable{
 	{
 
 	}
+	
+	public ArchiveVTWPatentAsset(int loadnum, int numOfRecsPerZip)
+	{
+		loadNumber = loadnum;
+		recsPerZipFile = numOfRecsPerZip;
+	}
+
+	
 
 	public ArchiveVTWPatentAsset(int numOfRuns, String qName, String sqlldr_fileName, int loadnum, int numOfRecsPerZip, int numOfRecsPerCon, String msgType, 
 			long rawDir, String thread_name, CountDownLatch latch)
@@ -252,6 +260,9 @@ public class ArchiveVTWPatentAsset implements Runnable{
 			else
 			{
 				System.out.println("PatentIds List is Empty, nothing to download");
+				latch.countDown();		/*Added 10/02/2017 countdown for other threads that had no any messages readed bc Queue was empty, 
+										so it can continue to next step, otherwise will have deadlock here forever never goes to zipDownloads,
+										that's why download dir "forward_log" dir were still there */
 			}
 		}
 		catch(InterruptedException e)
@@ -670,12 +681,14 @@ public class ArchiveVTWPatentAsset implements Runnable{
 	 * @throws Exception
 	 * hierarchy of downloaded VTW XML files (CurrDir -> loadnumberDir -> PatentID -> xml file) (i.e. /data/loading/ipdd -> 201639 -> EP2042829B1 -> AU2010281317A1.xml)
 	 **/
-	public synchronized void zipDownloads(int loadnumber, String downloadDirName) throws Exception
+	public synchronized void zipDownloads(int loadnumber, String downloadDirName, String msgType) throws Exception
 	{
 		int zipFileID = 1;
 		int curRecNum = 0;
+		
+		File downDir=null;
 
-		System.out.println(threadName + ": Zip downloaded files for downloadDir: " + downloadDirName);
+		System.out.println("Zip downloaded files for downloadDir: " + downloadDirName);
 
 		// read latest zipfilename from zipFileNames file as the start point for Sequence generation
 		readZipFileNameFromFile(loadNumber);
@@ -696,14 +709,23 @@ public class ArchiveVTWPatentAsset implements Runnable{
 		}
 
 		//zipsDir = new File(zipsDir+"/" +loadnumber);  // for organizing downloades based on loadnumber
-		zipsDir = new File(zipsDir+"/tmp");
+		if(msgType !=null && msgType.equalsIgnoreCase("forward"))
+			zipsDir = new File(zipsDir+"/tmp");
+		else if (msgType !=null && msgType.equalsIgnoreCase("backfill"))
+			zipsDir = new File(zipsDir+"/back_tmp");
 		if(!(zipsDir.exists()))
 		{
 			zipsDir.mkdir();
 		}
 
 
-		File downDir = new File(currDir + "/raw_data/" + type + "_" + downloadDirName);
+		//File downDir = new File(currDir + "/raw_data/" + type + "_" + downloadDirName);  // original
+		
+		//Added 10/02/2017 to handle backfill and forward WO
+		if(msgType !=null && msgType.equalsIgnoreCase("forward"))
+			downDir = new File(currDir + "/raw_data/" + type + "_" + downloadDirName);
+		else if (msgType !=null && msgType.equalsIgnoreCase("backfill"))
+				downDir = new File(currDir + "/raw_data/" + type + "_wo_" + downloadDirName);
 
 		String[] xmlFiles = downDir.list();  
 		File[] xmlFilesToDelete = downDir.listFiles();
