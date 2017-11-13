@@ -33,6 +33,10 @@ public class BdDocumentType
     public static final String CHAPTER_CODE = "CH";
     public static final String STANDARD_CODE = "ST"; //added for standard code by hmo on 7/17/2017
     public static final String ERRATUM_CODE = "ER"; //added for standard code by hmo on 7/27/2017
+    public static final String EDITORIAL_CODE = "ED"; //added for standard code by hmo on 9/13/2017
+    public static final String LETTER_CODE = "LE"; //added for standard code by hmo on 9/13/2017
+    public static final String NOTE_CODE = "NO"; //added for standard code by hmo on 9/13/2017
+    public static final String SHORT_SURVEY_CODE = "SH"; //added for standard code by hmo on 9/13/2017
 
     static
     {

@@ -355,7 +355,6 @@ public class C84Combiner extends Combiner {
 
                 if (rs.getString("pe") != null) {
                     rec.put(EVCombinedRec.AUTHOR_AFFILIATION, rs.getString("pe"));
-
                 }
 
                 if (rs.getString("pu") != null) {

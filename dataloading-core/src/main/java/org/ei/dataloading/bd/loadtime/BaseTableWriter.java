@@ -25,6 +25,7 @@ public class BaseTableWriter
 	public static final char FIELDDELIM = '\t';
 	private String accessNumber;
 	private String pui;
+	private String doi;
 	private String loadnumber;
 	private String updatenumber;
 	private String mid;
@@ -72,15 +73,21 @@ public class BaseTableWriter
 		setRefcount("");
 		setLoadnumber("");
 		setUpdatenumber("");
+		
+		
+		
 		while (bdData.hasNext())
-		{		
-		    BaseTableRecord column = (BaseTableRecord)bdData.next();
-			String thisColumnName = (String)column.getName();
+		{
+			BaseTableRecord column=null;
+			Integer columnLength = null;
+			String thisColumnName = null;
+		    column = (BaseTableRecord)bdData.next();
+			thisColumnName = (String)column.getName();
 			if(record == null)
 			{
 				System.out.println("Record was null");
 			}
-			Integer columnLength = null;
+			
 			String valueString = null;
 			columnLength =(Integer) column.getColumnLength();
 			bdColumnsSize.put(thisColumnName,columnLength);
@@ -101,6 +108,11 @@ public class BaseTableWriter
 							if(thisColumnName.equals("PUI"))
 							{
 								setPui(valueString);
+							}
+							
+							if(thisColumnName.equals("DOI"))
+							{
+								setDOI(valueString);
 							}
 
 							if(thisColumnName.equals("M_ID"))
@@ -186,7 +198,13 @@ public class BaseTableWriter
 	    recordBuf.append(FIELDDELIM);
 	    if(record.get("GRANTTEXT")!=null)
 		{
-	    	recordBuf.append(record.get("GRANTTEXT"));
+	    	int columnSize = 3980;
+	    	String granttext= checkColumnWidth(columnSize,
+					   "GRANTTEXT",
+					   (String)record.get("GRANTTEXT"));
+	    	
+	    	recordBuf.append(granttext);
+	    		    	
 		}
 	    recordBuf.append(FIELDDELIM);
 	    if(record.get("NORMSTANDARDID")!=null)
@@ -209,7 +227,18 @@ public class BaseTableWriter
 	    	recordBuf.append(record.get("SOURCEBIBTEXT"));
 		}
 	   
-	    
+	    recordBuf.append(FIELDDELIM);
+	    if(record.get("RELATEDDOI")!=null)
+		{
+	    	recordBuf.append(record.get("RELATEDDOI"));
+	    	//System.out.println("RELATEDDOI"+record.get("RELATEDDOI"));
+		}
+	    recordBuf.append(FIELDDELIM);
+	    if(record.get("RELATEDPII")!=null)
+		{
+	    	recordBuf.append(record.get("RELATEDPII"));
+	    	//System.out.println("RELATEDPII"+record.get("RELATEDPII"));
+		}
 	    
 	    
 	    
@@ -223,6 +252,10 @@ public class BaseTableWriter
 	    else
 	    {
 	    	nullAccessumberRecord.add(getPui());
+	    	System.out.println("****************************************");
+	    	System.out.println("DATA PROBLEM");
+	    	System.out.println("ACCESSNUMBER="+getAccessionNumber()+" PUI="+getPui()+" DOI="+getDOI());
+	    	System.out.println("****************************************");
 	    }
 
 
@@ -658,6 +691,16 @@ public class BaseTableWriter
 	private void setPui(String pui)
 	{
 		this.pui = pui;
+	}
+	
+	private String getDOI()
+	{
+		return this.doi;
+	}
+
+	private void setDOI(String doi)
+	{
+		this.doi = doi;
 	}
 	
 	private String getLoadnumber()

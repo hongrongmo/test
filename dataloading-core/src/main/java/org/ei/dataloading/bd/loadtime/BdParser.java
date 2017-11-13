@@ -423,6 +423,18 @@ public class BdParser
 							Element relatedItem = head.getChild("related-item",noNamespace);
 							if(relatedItem!=null)
 							{
+								if(relatedItem.getChild("doi",ceNamespace)!=null)
+								{
+									Element rdoi = (Element)relatedItem.getChild("doi",ceNamespace);
+									record.put("RELATEDDOI",rdoi.getTextTrim());																
+								}
+								
+								if(relatedItem.getChild("pii",ceNamespace)!=null)
+								{
+									Element rpii = (Element)relatedItem.getChild("pii",ceNamespace);
+									record.put("RELATEDPII",rpii.getTextTrim());																
+								}
+							
 								List relatePUIs = relatedItem.getChildren("itemid",noNamespace);
 								if(relatePUIs != null)
 								{
@@ -2737,8 +2749,7 @@ public class BdParser
 			if(source.getChild("bib-text",noNamespace) != null)
 			{
 				String bibtext = source.getChildText("bib-text",noNamespace);				
-				record.put("SOURCEBIBTEXT",bibtext);
-				System.out.println("SOURCEBIBTEXT="+bibtext);
+				record.put("SOURCEBIBTEXT",bibtext);			
 			}
 		}
 	}
