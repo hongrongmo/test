@@ -435,7 +435,7 @@ public class BaseTableDriver
                   break;
                 }
             }
-            System.out.println("total " + (recordCount-1) +" records found");
+            //System.out.println("total " + (recordCount-1) +" records found");
             out.flush();
         }
         catch(Exception e)
