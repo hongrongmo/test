@@ -1444,7 +1444,9 @@ public class BdCorrection
             }
             catch(Exception e)
             {
-                System.out.println("term1= "+term1);
+            	outputList.add(term1);
+                System.out.println("Problem with lookup index= "+term1);
+                System.out.println("This term will be deleted from lookupindex"
                 e.printStackTrace();
             }
             Thread.currentThread().sleep(100);
