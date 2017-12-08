@@ -126,7 +126,7 @@ public class BdAuthor {
         return null;
     }
     
-    //add special markup to dash by hmo at 6/2/3017
+    //add special markup to dash by hmo at 6/2/2017
     private String addSpecialMarkup(String input)
     {
     	String output="";

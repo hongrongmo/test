@@ -1,7 +1,6 @@
 package org.ei.util;
 
 import java.sql.Connection;
-
 import java.sql.DriverManager;
 import java.io.*;
 import java.sql.Clob;
@@ -216,6 +215,10 @@ public class NewDataTesting
 		{
 			test.removeInvalidChar(updateNumber);
 		}
+		else  if(action.equals("fastQueryDR"))
+		{
+			test.getMIDFromFastQuery_DR(updateNumber);
+		}
 		else  if(action.equals("fastQuery"))
 		{
 			test.getMIDFromFastQuery(updateNumber);
@@ -224,13 +227,423 @@ public class NewDataTesting
 		{
 			test.checkGrfCoordinates();
 		}
-		
+		else  if(action.equals("allFastCount"))
+		{
+			test.getAllFastCount(updateNumber);
+		}
+		else  if(action.equals("checkFastDr_PROD"))
+		{
+			test.checkMidDR_PROD(updateNumber,database);
+		}
+		else  if(action.equals("doFastExtract"))
+		{
+			test.doFastExtract(updateNumber,database);
+		}
+		else  if(action.equals("compareDRwithPROD"))
+		{
+			test.compareMidDRPROD(updateNumber,database);
+		}
+		else  if(action.equals("allCpxIP_DR"))
+		{
+			test.getAllMIDFromFastCPXIP_DR();
+		}
+		else  if(action.equals("allCpxIP_PROD"))
+		{
+			test.getAllMIDFromFastCPXIP_PROD();
+		}
 		else
 		{
 			test.getData(database);
 		}
 		endTime = System.currentTimeMillis();
 		System.out.println("total Time used "+(endTime-startTime)/1000.0+" seconds");
+
+	}
+	
+	 private void doFastExtract(String updateNumber,String dbname) throws Exception
+	    {
+	        CombinedXMLWriter writer = new CombinedXMLWriter(50000,
+	                                                      Integer.parseInt(updateNumber),
+	                                                      dbname,
+	                                                      "dev");
+	        Connection con = null;
+	        Statement stmt = null;
+	        ResultSet rs = null;
+	        try
+	        {
+	        	con = getConnection(this.URL,this.driver,this.username,this.password);
+	            stmt = con.createStatement();
+	            System.out.println("updatenumber= "+updateNumber+" dbname= "+dbname);
+                System.out.println("Running the query...");
+                writer.setOperation("add");
+                XmlCombiner c = new XmlCombiner(writer);
+                String sqlQuery = null;
+                if(dbname.equals("cpx"))
+                {
+                	if(!updateNumber.equals("1"))
+                	{
+                		sqlQuery="select a.CHEMICALTERM,a.SPECIESTERM,a.REGIONALTERM,a.DATABASE,a.CITATIONLANGUAGE,a.CITATIONTITLE,a.CITTYPE,a.ABSTRACTDATA,a.PII,a.PUI,a.COPYRIGHT,a.M_ID,a.accessnumber,a.datesort,a.author,a.author_1,a.AFFILIATION,a.AFFILIATION_1,a.CORRESPONDENCEAFFILIATION,a.CODEN,a.ISSUE,a.CLASSIFICATIONCODE,a.CLASSIFICATIONDESC,a.CONTROLLEDTERM,a.UNCONTROLLEDTERM,a.MAINHEADING,a.TREATMENTCODE,a.LOADNUMBER,a.SOURCETYPE,a.SOURCECOUNTRY,a.SOURCEID,a.SOURCETITLE,a.SOURCETITLEABBREV,a.ISSUETITLE,a.ISSN,a.EISSN,a.ISBN,a.VOLUME,a.PAGE,a.PAGECOUNT,a.ARTICLENUMBER, substr(a.PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,a.PUBLICATIONDATE,a.EDITORS,a.PUBLISHERNAME,a.PUBLISHERADDRESS,a.PUBLISHERELECTRONICADDRESS,a.REPORTNUMBER,a.CONFNAME, a.CONFCATNUMBER,a.CONFCODE,a.CONFLOCATION,a.CONFDATE,a.CONFSPONSORS,a.CONFERENCEPARTNUMBER, a.CONFERENCEPAGERANGE, a.CONFERENCEPAGECOUNT, a.CONFERENCEEDITOR, a.CONFERENCEORGANIZATION,a.CONFERENCEEDITORADDRESS,a.TRANSLATEDSOURCETITLE,a.VOLUMETITLE,a.DOI,a.ASSIG,a.CASREGISTRYNUMBER,a.APILT,a.APILT1,a.APICT,a.APICT1,a.APIAMS,a.SEQ_NUM,a.GRANTLIST,b.author as cafe_author,b.author_1 as cafe_author1,b.affiliation as cafe_affiliation,b.affiliation_1 as cafe_affiliation1,b.CORRESPONDENCEAFFILIATION as CAFE_CORRESPONDENCEAFFILIATION,null as authorid,null as affid,a.SOURCEBIBTEXT,a.STANDARDID,a.STANDARDDESIGNATION,a.NORMSTANDARDID,a.GRANTTEXT from bd_master_orig a left outer join cafe_master b on a.pui = b.pui where a.database='cpx' and a.updateNumber='"+updateNumber+"'";
+                	}
+                	else
+                	{
+                		sqlQuery="select a.CHEMICALTERM,a.SPECIESTERM,a.REGIONALTERM,a.DATABASE,a.CITATIONLANGUAGE,a.CITATIONTITLE,a.CITTYPE,a.ABSTRACTDATA,a.PII,a.PUI,a.COPYRIGHT,a.M_ID,a.accessnumber,a.datesort,a.author,a.author_1,a.AFFILIATION,a.AFFILIATION_1,a.CORRESPONDENCEAFFILIATION,a.CODEN,a.ISSUE,a.CLASSIFICATIONCODE,a.CLASSIFICATIONDESC,a.CONTROLLEDTERM,a.UNCONTROLLEDTERM,a.MAINHEADING,a.TREATMENTCODE,a.LOADNUMBER,a.SOURCETYPE,a.SOURCECOUNTRY,a.SOURCEID,a.SOURCETITLE,a.SOURCETITLEABBREV,a.ISSUETITLE,a.ISSN,a.EISSN,a.ISBN,a.VOLUME,a.PAGE,a.PAGECOUNT,a.ARTICLENUMBER, substr(a.PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,a.PUBLICATIONDATE,a.EDITORS,a.PUBLISHERNAME,a.PUBLISHERADDRESS,a.PUBLISHERELECTRONICADDRESS,a.REPORTNUMBER,a.CONFNAME, a.CONFCATNUMBER,a.CONFCODE,a.CONFLOCATION,a.CONFDATE,a.CONFSPONSORS,a.CONFERENCEPARTNUMBER, a.CONFERENCEPAGERANGE, a.CONFERENCEPAGECOUNT, a.CONFERENCEEDITOR, a.CONFERENCEORGANIZATION,a.CONFERENCEEDITORADDRESS,a.TRANSLATEDSOURCETITLE,a.VOLUMETITLE,a.DOI,a.ASSIG,a.CASREGISTRYNUMBER,a.APILT,a.APILT1,a.APICT,a.APICT1,a.APIAMS,a.SEQ_NUM,a.GRANTLIST,b.author as cafe_author,b.author_1 as cafe_author1,b.affiliation as cafe_affiliation,b.affiliation_1 as cafe_affiliation1,b.CORRESPONDENCEAFFILIATION as CAFE_CORRESPONDENCEAFFILIATION,null as authorid,null as affid,a.SOURCEBIBTEXT,a.STANDARDID,a.STANDARDDESIGNATION,a.NORMSTANDARDID,a.GRANTTEXT from bd_master_orig a left outer join cafe_master b on a.pui = b.pui where a.database='cpx'";
+                		//sqlQuery="select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CLASSIFICATIONDESC,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER, substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,APILT,APILT1,APICT,APICT1,APIAMS,SEQ_NUM,GRANTLIST,null as cafe_author,null as cafe_author1,null as cafe_affiliation,null as cafe_affiliation1,null as CAFE_CORRESPONDENCEAFFILIATION,null as authorid,null as affid ,SOURCEBIBTEXT,STANDARDID,STANDARDDESIGNATION,NORMSTANDARDID,GRANTTEXT from cafe_master where pui in (select pui from hmo_cafemaster_minus_aulookup)";
+                	}
+                }
+                else
+                {
+                	sqlQuery = "select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CLASSIFICATIONDESC,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER, substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,APILT,APILT1,APICT,APICT1,APIAMS,SEQ_NUM,GRANTLIST,null as cafe_author,b.null as cafe_author1,null as cafe_affiliation,null as cafe_affiliation1,null as CAFE_CORRESPONDENCEAFFILIATION,null as authorid,null as affid,SOURCEBIBTEXT,STANDARDID,STANDARDDESIGNATION,NORMSTANDARDID,GRANTTEXT from bd_master_orig where database='"+dbname+"' and updateNumber='"+updateNumber+"'";
+                }
+                System.out.println("SQLQUERY= "+sqlQuery);
+                rs = stmt.executeQuery(sqlQuery);                
+                c.writeRecs(rs,con);
+	            
+	           
+	            writer.end();
+	            writer.flush();
+	        }
+	        finally
+	        {
+
+	            if (rs != null)
+	            {
+	                try
+	                {
+	                    rs.close();
+	                }
+	                catch (Exception e)
+	                {
+	                    e.printStackTrace();
+	                }
+	            }
+
+	            if (stmt != null)
+	            {
+	                try
+	                {
+	                    stmt.close();
+	                }
+	                catch (Exception e)
+	                {
+	                    e.printStackTrace();
+	                }
+	            }
+	        }
+	    }
+
+	
+	public void getAllFastCount(String filename)
+	{
+		FileWriter out = null;
+		BufferedReader in = null;
+		try{
+			String database="cpx";
+			in = new BufferedReader(new FileReader(new File(filename)));
+			String weekNumber=null;
+		
+			out = new FileWriter("FastCountBYLoadnumber.out");
+						         
+			while((weekNumber=in.readLine())!=null)
+			{
+				String fastCount = getFastCount(database,weekNumber);
+				out.write(weekNumber+"\t"+fastCount+"\n");
+			}
+			out.close();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if (in != null) {
+				try {
+					in.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+
+			if (out != null) {
+				try {
+					out.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			
+		}
+		
+	}
+	
+	
+	
+	private void compareMidDRPROD(String query,String database)
+	{
+		FileWriter out = null;
+		try
+		{
+			String searchQuery = query.replaceAll("_", " ");
+			String dr_url = "http://evdr09.cloudapp.net:15100"; //DR
+			String prod_url = "http://evprod14.cloudapp.net:15100"; //Production
+			//out = new FileWriter("DR_"+loadnumber+".txt");
+			List listFronDR = getALLCPXMIDFromFastBYSeachQuery(query,dr_url);
+			out = new FileWriter("PROD_"+query+".txt");
+			//List listFronDR = getALLCPXMIDFromFastBYSeachQuery(query,prod_url);
+			long startTime = System.currentTimeMillis();
+			if(listFronDR!=null && listFronDR.size()>0)
+			{
+				for(int i=0;i<listFronDR.size();i++)
+				{
+					System.out.print(i+",");
+					if(i%1000==0)
+					{
+						long midTime = System.currentTimeMillis();
+						System.out.println("time used "+(midTime-startTime));
+						startTime = midTime;
+					}
+					String mid = (String)listFronDR.get(i);
+					if(!checkMIDFromFast(mid,prod_url))
+					{
+						System.out.println(mid);
+						out.write(mid+"\n");
+					}
+				}
+			}
+			out.flush();
+			out.close();
+			
+		}
+		catch(Exception e)
+		{
+			try{
+			if(out!=null)
+				out.close();
+			}
+			catch(Exception e1)
+			{
+				e1.printStackTrace();
+			}
+			e.printStackTrace();
+		}
+	}
+	
+	private void checkMidDR_PROD(String loadnumber,String database)
+	{
+		FileWriter out = null;
+		try
+		{
+			
+			String dr_url = "http://evdr09.cloudapp.net:15100"; //DR
+			String prod_url = "http://evazure.trafficmanager.net:15100"; //Production
+			//out = new FileWriter("DR_"+loadnumber+".txt");
+			//List listFronDR = getALLCPXMIDFromFastBYLOADNUMBER(loadnumber,dr_url);
+			out = new FileWriter("PROD_"+loadnumber+".txt");
+			List listFronDR = getALLCPXMIDFromFastBYLOADNUMBER(loadnumber,prod_url);
+			
+			if(listFronDR!=null && listFronDR.size()>0)
+			{
+				for(int i=0;i<listFronDR.size();i++)
+				{
+					String mid = (String)listFronDR.get(i);
+					//if(!checkMIDFromFast(mid,loadnumber,prod_url))
+					{
+						out.write(mid+"\n");
+					}
+				}
+			}
+			out.flush();
+			out.close();
+			
+		}
+		catch(Exception e)
+		{
+			try{
+			if(out!=null)
+				out.close();
+			}
+			catch(Exception e1)
+			{
+				e1.printStackTrace();
+			}
+			e.printStackTrace();
+		}
+	}
+	
+	private boolean checkMIDFromFast(String mid, String URL)
+	{
+		int count= 0;
+		try
+		{						
+			FastClient client = new FastClient();
+			//client.setBaseURL("http://evprod08.cloudapp.net:15100");
+			client.setBaseURL(URL);
+			client.setResultView("ei");
+			client.setOffSet(0);
+			client.setPageSize(500000);
+			client.setQueryString(mid);
+			client.setDoCatCount(true);
+			client.setDoNavigators(true);
+			client.setPrimarySort("ausort");
+			client.setPrimarySortDirection("+");
+			client.search();
+			List l = client.getDocIDs();
+			count =client.getHitCount();
+			//System.out.println(mid+"\t"+count);
+			
+
+		}
+		catch(Exception e)
+		{		
+			e.printStackTrace();
+		}
+		if(count<1)
+		{
+			return false;
+	    }
+		else
+		{
+			return true;
+		}
+		
+
+	}
+	
+	private List getALLCPXMIDFromFastBYSeachQuery(String query, String URL)
+	{
+
+		FileWriter out = null;
+		List<String> resultList = new ArrayList<String>();
+		try
+		{
+			//out = new FileWriter(loadnumber+".txt");
+							
+			FastClient client = new FastClient();
+			//client.setBaseURL("http://evprod08.cloudapp.net:15100");
+			client.setBaseURL(URL);
+			client.setResultView("ei");
+			client.setOffSet(0);
+			client.setPageSize(500000);
+			client.setQueryString(query.replaceAll("_", " and "));
+			client.setDoCatCount(true);
+			client.setDoNavigators(true);
+			client.setPrimarySort("ausort");
+			client.setPrimarySortDirection("+");
+			client.search();
+
+			List l = client.getDocIDs();
+			int count =client.getHitCount();
+
+			if(count<1)
+			{
+			  System.out.println("No records found in fast");
+			  //System.out.println("DATABASE="+database+" LOADNUMBER= "+loadnumber);
+		    }
+			else
+			{
+				System.out.println("COUNT="+count);
+			}
+
+			StringBuffer sb=new StringBuffer();
+			
+			for(int i=0;i<l.size();i++)
+			{
+				String[] docID = (String[])l.get(i);				
+				
+				//System.out.println("docID="+docID[0]);
+				resultList.add(docID[0]);
+				//out.write(docID[0]+"\n");
+				//Thread.sleep(5);
+				//out.flush();
+				
+			}		
+			//out.flush();
+			//out.close();
+
+		}
+		catch(Exception e)
+		{
+			try{
+			if(out!=null)
+				out.close();
+			}
+			catch(Exception e1)
+			{
+				e1.printStackTrace();
+			}
+			e.printStackTrace();
+		}
+		return resultList;
+
+	}
+	
+	private List getALLCPXMIDFromFastBYLOADNUMBER(String loadnumber, String URL)
+	{
+
+		FileWriter out = null;
+		List<String> resultList = new ArrayList<String>();
+		try
+		{
+			//out = new FileWriter(loadnumber+".txt");
+							
+			FastClient client = new FastClient();
+			//client.setBaseURL("http://evprod08.cloudapp.net:15100");
+			client.setBaseURL(URL);
+			client.setResultView("ei");
+			client.setOffSet(0);
+			client.setPageSize(500000);
+			client.setQueryString("db:"+database+" and wk:"+loadnumber);
+			client.setDoCatCount(true);
+			client.setDoNavigators(true);
+			client.setPrimarySort("ausort");
+			client.setPrimarySortDirection("+");
+			client.search();
+
+			List l = client.getDocIDs();
+			int count =client.getHitCount();
+
+			if(count<1)
+			{
+			  System.out.println("No records found in fast");
+			  System.out.println("DATABASE="+database+" LOADNUMBER= "+loadnumber);
+		    }
+			else
+			{
+				System.out.println("COUNT="+count);
+			}
+
+			StringBuffer sb=new StringBuffer();
+			
+			for(int i=0;i<l.size();i++)
+			{
+				String[] docID = (String[])l.get(i);				
+				
+				//System.out.println("docID="+docID[0]);
+				resultList.add(docID[0]);
+				//out.write(docID[0]+"\n");
+				//Thread.sleep(5);
+				//out.flush();
+				
+			}		
+			//out.flush();
+			//out.close();
+
+		}
+		catch(Exception e)
+		{
+			try{
+			if(out!=null)
+				out.close();
+			}
+			catch(Exception e1)
+			{
+				e1.printStackTrace();
+			}
+			e.printStackTrace();
+		}
+		return resultList;
 
 	}
 	
@@ -1492,7 +1905,8 @@ public class NewDataTesting
 			String[] credentials = {"CPX","CHM","GEO","INS","CBN","GRF","NTIS","ELT","UPA","PCH","EPT","EUP"};
 
 			String[] dbName = database.substring(0,3).split(";");
-			FastSearchControl.BASE_URL = "http://ei-main-p2.nda.fastsearch.net:15100";
+			//FastSearchControl.BASE_URL = "http://evdr09.cloudapp.net:15100"; //DR
+			FastSearchControl.BASE_URL = "http://evazure.trafficmanager.net:15100"; //Production
 			//System.out.println("database= "+database);
 
 			//int intDbMask = 1;
@@ -1729,16 +2143,91 @@ public class NewDataTesting
 		ResultSet rs = null;
 		Connection con = null;
 		FileWriter out = null;
+		String searchQuery = query.replaceAll("_", " and ");
 		try
 		{
-			out = new FileWriter("midFromFast.out");	
+			out = new FileWriter("midFromFast_PROD.out");	
 			System.out.println("Query= "+query);
 			FastClient client = new FastClient();
-			client.setBaseURL("http://evprod08.cloudapp.net:15100");
+			client.setBaseURL("http://evprod14.cloudapp.net:15100");//PROD
+			//client.setBaseURL("http://evprod08.cloudapp.net:15100");//DEV server
+			//client.setBaseURL("http://evdr09.cloudapp.net:15100"); //DR			
 			client.setResultView("ei");
 			client.setOffSet(0);
-			client.setPageSize(60000);
-			client.setQueryString(query);
+			client.setPageSize(260000);
+			client.setQueryString(searchQuery);
+			client.setDoCatCount(true);
+			client.setDoNavigators(true);
+			client.setPrimarySort("ausort");
+			client.setPrimarySortDirection("+");
+			client.search();
+			
+			
+
+			List l = client.getDocIDs();
+			int count =client.getHitCount();
+			Thread.sleep(10000);
+			
+			if(count<1)
+			{
+			  System.out.println("0 records found");
+		    }
+			else
+			{
+				System.out.println(count+" records found");
+				System.out.println("SIZE= "+l.size());
+			}
+
+			StringBuffer sb=new StringBuffer();
+			
+			for(int i=0;i<l.size();i++)
+			{
+				String[] docID = (String[])l.get(i);
+				String m_id = docID[0];
+				//System.out.println(m_id);
+				
+				out.write(m_id+"\n");					
+				out.flush();					
+			}
+				
+			out.flush();
+			out.close();
+
+		}
+		catch(Exception e)
+		{
+			try{
+			if(out!=null)
+				out.close();
+			}
+			catch(Exception e1)
+			{
+				e1.printStackTrace();
+			}
+			e.printStackTrace();
+		}
+		
+	}
+	
+	private void getMIDFromFastQuery_DR(String query)
+	{
+
+		Statement stmt = null;
+		ResultSet rs = null;
+		Connection con = null;
+		FileWriter out = null;
+		String searchQuery = query.replaceAll("_", " and ");
+		try
+		{
+			out = new FileWriter("midFromFast_DR.out");	
+			System.out.println("Query= "+searchQuery);
+			FastClient client = new FastClient();
+			//client.setBaseURL("http://evprod08.cloudapp.net:15100");DEV server
+			client.setBaseURL("http://evdr09.cloudapp.net:15100"); //DR				
+			client.setResultView("ei");
+			client.setOffSet(0);
+			client.setPageSize(200000);
+			client.setQueryString(searchQuery);
 			client.setDoCatCount(true);
 			client.setDoNavigators(true);
 			client.setPrimarySort("ausort");
@@ -1834,8 +2323,8 @@ public class NewDataTesting
 			{
 				String[] docID = (String[])l.get(i);
 				String m_id = docID[0];
-				System.out.println(m_id);
-				String sqlQuery = "select m_id, cittype from bd_master where database='cpx' and m_id='"+m_id+"'";
+				//System.out.println(m_id);
+				String sqlQuery = "select m_id, cittype from bd_master where  m_id='"+m_id+"'";
 				//System.out.println("QUERY= "+sqlQuery);
 				rs = stmt.executeQuery(sqlQuery);
 				while (rs.next())
@@ -1843,11 +2332,12 @@ public class NewDataTesting
 					String cittype = rs.getString("cittype");
 					if(!cittype.equalsIgnoreCase("ip"))
 					{
-						System.out.println(m_id+"\t"+ cittype);
+						//System.out.println(m_id+"\t| "+ cittype);
 						out.write(m_id+"\t"+ cittype+"\n");
 					}
 					out.flush();					
 				}
+				rs = null;
 			
 
 			}
@@ -1896,6 +2386,129 @@ public class NewDataTesting
 				}
 			}
 
+		}
+	}
+	
+	private void getAllMIDFromFastCPXIP_PROD()
+	{
+	
+		FileWriter out = null;
+		try
+		{
+			out = new FileWriter("CPX_IP_PROD.out");
+		
+			int k = 0;			
+
+			FastClient client = new FastClient();
+			client.setBaseURL("http://evazure.trafficmanager.net:15100");
+			client.setResultView("ei");
+			client.setOffSet(0);
+			client.setPageSize(260000);
+			client.setQueryString("(DT:\"IP\") AND (((db:cpx)))");
+			client.setDoCatCount(true);
+			client.setDoNavigators(true);
+			client.setPrimarySort("ausort");
+			client.setPrimarySortDirection("+");
+			client.search();
+
+			List l = client.getDocIDs();
+			int count =client.getHitCount();
+			
+			if(count<1)
+			{
+			  System.out.println("0 records found");
+		    }
+			else
+			{
+				System.out.println(count+" records found");
+			}
+
+			StringBuffer sb=new StringBuffer();
+			
+			for(int i=0;i<l.size();i++)
+			{
+				String[] docID = (String[])l.get(i);
+				String m_id = docID[0];				
+				out.write(m_id+"\n");
+			}
+				
+			out.flush();
+			out.close();
+
+		}
+		catch(Exception e)
+		{
+			try{
+			if(out!=null)
+				out.close();
+			}
+			catch(Exception e1)
+			{
+				e1.printStackTrace();
+			}
+			e.printStackTrace();
+		}
+	}
+	
+	private void getAllMIDFromFastCPXIP_DR()
+	{
+	
+		FileWriter out = null;
+		try
+		{
+			out = new FileWriter("CPX_IP_DR.out");
+			
+			
+			int k = 0;			
+
+			FastClient client = new FastClient();
+			client.setBaseURL("http://evdr09.cloudapp.net:15100");
+			client.setResultView("ei");
+			client.setOffSet(0);
+			client.setPageSize(260000);
+			client.setQueryString("(DT:\"IP\") AND (((db:cpx)))");
+			client.setDoCatCount(true);
+			client.setDoNavigators(true);
+			client.setPrimarySort("ausort");
+			client.setPrimarySortDirection("+");
+			client.search();
+
+			List l = client.getDocIDs();
+			int count =client.getHitCount();
+			
+			if(count<1)
+			{
+			  System.out.println("0 records found");
+		    }
+			else
+			{
+				System.out.println(count+" records found");
+			}
+
+			StringBuffer sb=new StringBuffer();
+			
+			for(int i=0;i<l.size();i++)
+			{
+				String[] docID = (String[])l.get(i);
+				String m_id = docID[0];				
+				out.write(m_id+"\n");
+			}
+				
+			out.flush();
+			out.close();
+
+		}
+		catch(Exception e)
+		{
+			try{
+			if(out!=null)
+				out.close();
+			}
+			catch(Exception e1)
+			{
+				e1.printStackTrace();
+			}
+			e.printStackTrace();
 		}
 	}
 

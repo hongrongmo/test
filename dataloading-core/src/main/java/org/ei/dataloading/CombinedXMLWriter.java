@@ -844,41 +844,43 @@ public class CombinedXMLWriter
         
         //SPARE FIELDS
         //SOURCEBIBTEXT
-        out.println("       <EV_SPARE1><![CDATA[]]></EV_SPARE1>");	//tempotary block out SOURCEBIBTEXT
-        //out.println("       <EV_SPARE1><![CDATA["+ notNull(rec.getString(EVCombinedRec.SOURCEBIBTEXT)) +"]]></EV_SPARE1>");
-        //GRANTTEXT
-        //out.println("       <EV_SPARE2><![CDATA[]]></EV_SPARE2>"); //tempotary block out GRANTTEXT
-        out.println("       <EV_SPARE2><![CDATA["+ notNull(rec.getString(EVCombinedRec.GRANTTEXT))+ " QstemQ " + notNull(getStems(rec.getString(EVCombinedRec.GRANTTEXT))) +"]]></EV_SPARE2>");                
+        //out.println("       <EV_SPARE1><![CDATA[]]></EV_SPARE1>");	//tempotary block out SOURCEBIBTEXT
+        out.println("       <EV_SPARE1><![CDATA["+ notNull(rec.getString(EVCombinedRec.SOURCEBIBTEXT)) +"]]></EV_SPARE1>");//SPA1
+       
+        out.println("       <EV_SPARE2><![CDATA[]]></EV_SPARE2>"); //move GRANTTEXT to spa9 to avoid all search  //SPA2
+        //out.println("       <EV_SPARE2><![CDATA["+ notNull(rec.getString(EVCombinedRec.GRANTTEXT))+ " QstemQ " + notNull(getStems(rec.getString(EVCombinedRec.GRANTTEXT))) +"]]></EV_SPARE2>");                
         
-        out.println("       <EV_SPARE3><![CDATA[]]></EV_SPARE3>");
+        out.println("       <EV_SPARE3><![CDATA[]]></EV_SPARE3>");//SPA3
         
-        out.println("       <EV_SPARE4><![CDATA[]]></EV_SPARE4>");
+        out.println("       <EV_SPARE4><![CDATA[]]></EV_SPARE4>");//SPA4
         
-        out.println("       <EV_SPARE5><![CDATA[]]></EV_SPARE5>");
+        out.println("       <EV_SPARE5><![CDATA[]]></EV_SPARE5>");//SPA5
         
-        out.println("       <EV_SPARE6><![CDATA[]]></EV_SPARE6>");
+        out.println("       <EV_SPARE6><![CDATA[]]></EV_SPARE6>");//SPA6
         
-        //STANDARDID and STANDARDDESIGNATION
-        if(rec.getString(EVCombinedRec.STANDARDID)==null && rec.getString(EVCombinedRec.STANDARDDESIGNATION)==null)
+        //STANDARDID
+        if(rec.getString(EVCombinedRec.STANDARDID)==null)
         {
         	out.println("       <EV_SPARE7><![CDATA[]]></EV_SPARE7>");
         }
-        else if(rec.getString(EVCombinedRec.STANDARDID)!=null && rec.getString(EVCombinedRec.STANDARDDESIGNATION)!=null)
+        else      
         {
-        	out.println("       <EV_SPARE7><![CDATA[QQDelQQ " + notNull(rec.getString(EVCombinedRec.STANDARDID)) + " QQDelQQ "+ notNull(rec.getString(EVCombinedRec.STANDARDDESIGNATION)) +" QQDelQQ]]></EV_SPARE7>");     
-        }
-        else if(rec.getString(EVCombinedRec.STANDARDID)!=null)
+        	out.println("       <EV_SPARE7><![CDATA[" + notNull(rec.getString(EVCombinedRec.STANDARDID)) + "]]></EV_SPARE7>");//SPA7
+        }       
+        
+        //STANDARDDESIGNATION
+        if(rec.getString(EVCombinedRec.STANDARDDESIGNATION)==null)
         {
-        	out.println("       <EV_SPARE7><![CDATA[" + notNull(rec.getString(EVCombinedRec.STANDARDID)) + "]]></EV_SPARE7>");
-        }
-        else if(rec.getString(EVCombinedRec.STANDARDDESIGNATION)!=null)
+        	out.println("       <EV_SPARE8><![CDATA[]]></EV_SPARE8>");
+        }      
+        else
         {
-        	out.println("       <EV_SPARE7><![CDATA[" + notNull(rec.getString(EVCombinedRec.STANDARDDESIGNATION)) + "]]></EV_SPARE7>");
+        	out.println("       <EV_SPARE8><![CDATA[" + notNull(rec.getString(EVCombinedRec.STANDARDDESIGNATION)) + "]]></EV_SPARE8>");//SPA8
         }
         
-        out.println("       <EV_SPARE8><![CDATA[]]></EV_SPARE8>");
-        out.println("       <EV_SPARE9><![CDATA[]]></EV_SPARE9>");
-        out.println("       <EV_SPARE10><![CDATA[]]></EV_SPARE10>");
+        //GRANTTEXT
+        out.println("       <EV_SPARE9><![CDATA["+ notNull(rec.getString(EVCombinedRec.GRANTTEXT))+ " QstemQ " + notNull(getStems(rec.getString(EVCombinedRec.GRANTTEXT))) +"]]></EV_SPARE9>");//SPA9
+        out.println("       <EV_SPARE10><![CDATA[]]></EV_SPARE10>");//SPA0
         
         out.println("   </ROW>");
         ++curRecNum;

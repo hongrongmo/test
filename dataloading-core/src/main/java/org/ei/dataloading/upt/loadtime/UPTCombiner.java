@@ -169,7 +169,7 @@ public class UPTCombiner extends CombinerTimestamp {
     			
     				stmt = con.createStatement();
     				System.out.println("Running the query...");
-    				String sqlQuery = "select * from " + Combiner.TABLENAME +" where database='" + Combiner.CURRENTDB + "'";
+    				String sqlQuery = "select * from " + Combiner.TABLENAME;
     				System.out.println(sqlQuery);
     				rs = stmt.executeQuery(sqlQuery);
     				
@@ -1706,7 +1706,7 @@ public class UPTCombiner extends CombinerTimestamp {
         c.username=username;
         c.password=password;
         try {
-            if (timestamp==0 && (loadNumber > 3000 || loadNumber < 1000))
+            if (timestamp==0 && (loadNumber > 3000 || loadNumber < 1000) && loadNumber>1)
             {
                 System.out.println("Processing loadnumber " + loadNumber + "...");
                 c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
@@ -1715,6 +1715,11 @@ public class UPTCombiner extends CombinerTimestamp {
             {
                 System.out.println("Processing timestamp " + timestamp + "...");
                 c.writeCombinedByTimestamp(url, driver, username, password, timestamp);
+            }
+            else if(loadNumber==1)
+            {
+                System.out.println("Processing timestamp " + timestamp + "...");
+                c.writeCombinedByTable(url, driver, username, password);
             }
             else if(loadNumber == 0 && timestamp < 0)
             {

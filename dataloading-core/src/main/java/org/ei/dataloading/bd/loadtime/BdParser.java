@@ -1,7 +1,6 @@
 package org.ei.dataloading.bd.loadtime;
 
 import java.io.*;
-
 import java.util.*;
 
 import org.jdom2.*;                  //// replace svn jdom with recent jdom2
@@ -21,6 +20,8 @@ import org.ei.dataloading.*;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+//import javax.swing.text.html.parser.Element;
 
 public class BdParser
 {
@@ -363,6 +364,7 @@ public class BdParser
 						Element head = bibrecord.getChild("head",noNamespace);
 						if(head != null)
 						{
+							String docType=null;
 							Element citinfo = head.getChild("citation-info",noNamespace);
 							if(citinfo != null)
 							{
@@ -389,6 +391,7 @@ public class BdParser
 									if(type != null)
 									{
 										String cititype=type.getValue();
+										docType = cititype;
 										record.put("CITTYPE",cititype);
 									}
 								}
@@ -423,6 +426,18 @@ public class BdParser
 							Element relatedItem = head.getChild("related-item",noNamespace);
 							if(relatedItem!=null)
 							{
+								if(relatedItem.getChild("doi",ceNamespace)!=null)
+								{
+									Element rdoi = (Element)relatedItem.getChild("doi",ceNamespace);
+									record.put("RELATEDDOI",rdoi.getTextTrim());																
+								}
+								
+								if(relatedItem.getChild("pii",ceNamespace)!=null)
+								{
+									Element rpii = (Element)relatedItem.getChild("pii",ceNamespace);
+									record.put("RELATEDPII",rpii.getTextTrim());																
+								}
+							
 								List relatePUIs = relatedItem.getChildren("itemid",noNamespace);
 								if(relatePUIs != null)
 								{
@@ -494,49 +509,65 @@ public class BdParser
 							
 							if(abstracts!= null && abstracts.getChild("abstract",noNamespace)!=null)
 							{
-								String abstractCopyRight=null;
-								Element abstractData = abstracts.getChild("abstract",noNamespace);
-								if(	abstractData.getChild("publishercopyright",noNamespace)!=null)
+								
+								List abstractDatas = abstracts.getChildren("abstract",noNamespace);
+								for(int f=0; f<abstractDatas.size();f++)
 								{
-									
-								 	abstractCopyRight= dictionary.mapEntity(abstractData.getChildTextTrim("publishercopyright",noNamespace));
-									//System.out.println("COPYRIGHT="+ abstractCopyRight);
-								}
-
-								// abstract data
-
-								if(abstractData.getAttributeValue("original") != null)
-								{
-									//System.out.println("ABSTRACT_original "+abstractData.getAttributeValue("original"));
-									record.put("ABSTRACTORIGINAL", abstractData.getAttributeValue("original"));
-								}
-
-								if(abstractData.getAttributeValue("perspective") != null)
-								{
-									//System.out.println("ABSTRACTPERSPECTIVE "+abstractData.getAttributeValue("perspective"));
-									record.put("ABSTRACTPERSPECTIVE", abstractData.getAttributeValue("perspective"));
-								}
-
-								if(abstractData.getChildTextTrim("para",ceNamespace) != null)
-								{
-									
-									String abstractString = dictionary.mapEntity(getMixData(abstractData.getChild("para",ceNamespace).getContent()));									
-									//System.out.println(this.databaseName+"  ::about to replace ::"+abstractString);
-									if(this.databaseName.equalsIgnoreCase("elt"))
+									String abstractCopyRight=null;
+									String abstractPerspective=null;
+									Element abstractData = (Element)abstractDatas.get(f);
+									if(	abstractData.getChild("publishercopyright",noNamespace)!=null)
+									{							
+									 	abstractCopyRight= dictionary.mapEntity(abstractData.getChildTextTrim("publishercopyright",noNamespace));
+										//System.out.println("COPYRIGHT="+ abstractCopyRight);
+									}
+	
+									// abstract data
+	
+									if(abstractData.getAttributeValue("original") != null)
 									{
-										abstractString = abstractString.replaceAll("<inf>", "<sub>");
-										abstractString = abstractString.replaceAll("</inf>", "</sub>");
-
+										//System.out.println("ABSTRACT_original "+abstractData.getAttributeValue("original"));
+										record.put("ABSTRACTORIGINAL", abstractData.getAttributeValue("original"));
+									}
+	
+									if(abstractData.getAttributeValue("perspective") != null)
+									{
+										//System.out.println("ABSTRACTPERSPECTIVE "+abstractData.getAttributeValue("perspective"));
+										abstractPerspective = abstractData.getAttributeValue("perspective");
+										record.put("ABSTRACTPERSPECTIVE", abstractPerspective);
+									}
+	
+									//if(abstractData.getChildTextTrim("para",ceNamespace) != null)
+									if(abstractData.getChildren("para",ceNamespace) != null)
+									{
+										
+										//String abstractString = dictionary.mapEntity(getMixData(abstractData.getChild("para",ceNamespace).getContent()));															
+										String abstractString = dictionary.mapEntity(getAbstractMixData(abstractData.getChildren("para",ceNamespace)));
+										//System.out.println("ABSTRACT="+ abstractString);
+										if(this.databaseName.equalsIgnoreCase("elt"))
+										{
+											abstractString = abstractString.replaceAll("<inf>", "<sub>");
+											abstractString = abstractString.replaceAll("</inf>", "</sub>");											
+										}
+	
+										if(abstractCopyRight!=null)
+										{
+											abstractString = abstractString+" "+abstractCopyRight;
+										}
+										
+										//abstractString = abstractString.replaceAll("&#55349;&#56476;","&#119964;");//need to fix this bug later hmo@10/26/2016
+										if(docType!=null && docType.equals("st") && abstractPerspective!=null && abstractPerspective.equalsIgnoreCase("EDITED"))
+										{
+											record.put("ABSTRACTDATA", abstractString);
+											break;
+										}
+										else 
+										{
+											record.put("ABSTRACTDATA", abstractString);
+										}
 										
 									}
-
-									if(abstractCopyRight!=null)
-									{
-										abstractString = abstractString+" "+abstractCopyRight;
-									}
 									
-									//abstractString = abstractString.replaceAll("&#55349;&#56476;","&#119964;");//need to fix this bug later hmo@10/26/2016
-									record.put("ABSTRACTDATA", abstractString);
 								}
 
 							}
@@ -2737,8 +2768,7 @@ public class BdParser
 			if(source.getChild("bib-text",noNamespace) != null)
 			{
 				String bibtext = source.getChildText("bib-text",noNamespace);				
-				record.put("SOURCEBIBTEXT",bibtext);
-				System.out.println("SOURCEBIBTEXT="+bibtext);
+				record.put("SOURCEBIBTEXT",bibtext);			
 			}
 		}
 	}
@@ -4231,6 +4261,17 @@ public class BdParser
 			}
 		}
 
+	}
+	
+	private String getAbstractMixData(List l)
+	{
+		StringBuffer result = new StringBuffer();
+		for(int i=0;i<l.size();i++)
+		{
+			Element abstractPara = (Element)l.get(i);
+			result.append(getMixData(abstractPara.getContent())+"<br/>");
+		}
+		return result.toString();
 	}
 
 	private  String getMixData(List l)
