@@ -1104,6 +1104,8 @@ public class CafeDownloadFileFromS3AllTypes {
 		try
 		{
 			con = getConnection(url,driver,username,password);
+			AusAffESIndex esIndexObj = new AusAffESIndex(recsPerEsbulk, esDomain, "delete");
+			
 			for(String key: keys_to_be_deleted.keySet())
 			{
 				if(curRec>999)
@@ -1115,7 +1117,7 @@ public class CafeDownloadFileFromS3AllTypes {
 					{
 						//delete from ES
 						//AuAfESIndex esIndexObj = new AuAfESIndex(doc_type);
-						AusAffESIndex esIndexObj = new AusAffESIndex(recsPerEsbulk, esDomain, "delete");
+						//AusAffESIndex esIndexObj = new AusAffESIndex(recsPerEsbulk, esDomain, "delete"); // moved to outside for loop
 						status = esIndexObj.createBulkDelete(doc_type, keys_MID_to_be_deleted);
 
 						//delete from DB
@@ -1148,7 +1150,7 @@ public class CafeDownloadFileFromS3AllTypes {
 			{
 				//delete from ES
 				//AuAfESIndex esIndexObj = new AuAfESIndex(doc_type);
-				AusAffESIndex esIndexObj = new AusAffESIndex(recsPerEsbulk, esDomain, "delete");
+				//AusAffESIndex esIndexObj = new AusAffESIndex(recsPerEsbulk, esDomain, "delete");  // moved to outside for loop
 				status = esIndexObj.createBulkDelete(doc_type, keys_MID_to_be_deleted);
 				esIndexObj.end();
 

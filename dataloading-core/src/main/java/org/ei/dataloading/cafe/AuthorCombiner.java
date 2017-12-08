@@ -243,7 +243,7 @@ public class AuthorCombiner {
 			
 			
 			//added 05/10/2017 to update status = "indexed" for the docs that successfully indexed to ES
-			UpdateProfileTableESStatus profileESUpdate = new UpdateProfileTableESStatus(doc_type,username,password,loadNumber,tableToBeTruncated,url,esIndexedIdsSqlldrFileName);
+			UpdateProfileTableESStatus profileESUpdate = new UpdateProfileTableESStatus(doc_type, action,username,password,loadNumber,tableToBeTruncated,url,esIndexedIdsSqlldrFileName);
 			profileESUpdate.writeIndexedRecs(esIndex.getESIndexedDocsList());
 
 		}

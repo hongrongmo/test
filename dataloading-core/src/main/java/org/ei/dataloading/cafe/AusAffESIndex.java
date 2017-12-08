@@ -406,7 +406,7 @@ public class AusAffESIndex {
 		
 		// delete
 		ProcessBulk();
-		end();
+		//end();   commented on 11/29/2017 bc it is already valled from calling calss not here, otherwise cause "ScheduledThreadPoolExecutor" exception
 		return getStatusCode();
 
 	}
@@ -464,7 +464,7 @@ public void parseESIndexJSONResponse(String esResponseString)
 			String _id = (String)index.get("_id");
 			String result = (String)index.get("result");
 			Long status = (Long)index.get("status");
-			if(status != null && (status == 200 || status == 201))
+			if(status != null && (status == 200 || status == 201 || status == 404))
 			{
 				esIndexed_docs_list.add(_id);
 				count ++;
