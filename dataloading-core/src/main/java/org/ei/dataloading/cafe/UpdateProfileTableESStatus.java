@@ -35,6 +35,7 @@ public class UpdateProfileTableESStatus {
 
 
 	String doc_type;
+	String action;
 	int loadNumber;
 	String tableToBeTruncated = null;
 	String sqlldrFileName = null;
@@ -48,9 +49,10 @@ public class UpdateProfileTableESStatus {
 	{
 
 	}
-	public UpdateProfileTableESStatus(String doctype,String userName, String pswd, int load_number, String tempTableName, String conUrl, String sqlldrFile)
+	public UpdateProfileTableESStatus(String doctype,String actn, String userName, String pswd, int load_number, String tempTableName, String conUrl, String sqlldrFile)
 	{
 		doc_type = doctype;
+		action = actn;
 		username = userName;
 		password = pswd;
 		loadNumber = load_number;
@@ -272,9 +274,10 @@ public class UpdateProfileTableESStatus {
 			{
 				System.out.println("begin to execute stored procedure UPDATE_AUAF_MASTER_ESSTATUS");
 
-				stmt = con.prepareCall("{ call UPDATE_AUAF_MASTER_ESSTATUS(?,?)}");
+				stmt = con.prepareCall("{ call UPDATE_AUAF_MASTER_ESSTATUS(?,?,?)}");
 				stmt.setString(1,doc_type);
 				stmt.setString(2, profileTableName);
+				stmt.setString(3, action);
 				stmt.executeUpdate();
 
 			}

@@ -309,7 +309,7 @@ public class AusAffDeletion {
 
 		for(String key: id_status_List.keySet())
 		{
-			if(id_status_List.get(key) !=null && !(id_status_List.get(key).contains("$matched$")) && id_status_List.get(key).contains("deleted"))
+			if(key !=null && !(id_status_List.get(key).contains("$matched$")))
 			{
 				id_List.add(key);
 			}
@@ -638,8 +638,12 @@ public class AusAffDeletion {
 				{
 					if(curRec >999)
 					{
-						query = "update " + lookupTable + " set status='unmatched' where pui in (select pui from " + deletionTable + ") and " + lookupTable_columnName + " in (" 
-								+ profileIds + ")";
+						/*query = "update " + lookupTable + " set status='unmatched' where pui in (select pui from " + deletionTable + ") and " + lookupTable_columnName + " in (" 
+								+ profileIds + ")";*/
+						
+						// 12/08/2017 update lookup based on PUI only; does not matter the auid/affid
+						query = "update " + lookupTable + " set status='unmatched' where pui in (select pui from " + deletionTable + ")";
+						
 						System.out.println("Running query...." + query);
 						count = stmt.executeUpdate(query);
 						con.commit();
@@ -659,8 +663,7 @@ public class AusAffDeletion {
 
 				}
 
-				query = "update " + lookupTable + " set status='unmatched' where pui in (select pui from " + deletionTable + ") and " + lookupTable_columnName + " in (" 
-						+ profileIds + ")";
+				query = "update " + lookupTable + " set status='unmatched' where pui in (select pui from " + deletionTable + ")";
 				System.out.println("Running query...." + query);
 				count = stmt.executeUpdate(query);
 				con.commit();
