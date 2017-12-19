@@ -57,7 +57,7 @@ public class NewDataTesting
 	//public static String URL="jdbc:oracle:thin:@127.0.0.1:5523:EIA";
 	public static String URL="jdbc:oracle:thin:@eid.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eid";
 	public static String driver="oracle.jdbc.driver.OracleDriver";
-	public static String username="ap_ev_search";
+	public static String username="ap_correction";
 	public static String username1="ba_s300";
 	public static String password="ei3it";
 	public static String password1="ei7it";
@@ -163,7 +163,7 @@ public class NewDataTesting
 		{
 			test.getWeeklyCount(updateNumber);
 		}
-		else  if(action.equals("checkmid"))
+		else  if(action.equals("checkFastCOunt"))
 		{
 			test.getMIDFromFast(updateNumber);
 		}
@@ -1455,7 +1455,7 @@ public class NewDataTesting
 						
 					}
 					
-					out.write("<COLUMN NAME=\"EVLINK\"><![CDATA[https://www.engineeringvillage.com/share/document.url?mid="+m_id+"&database=cpx&view=detailed]]></COLUMN>\n");
+					//out.write("<COLUMN NAME=\"EVLINK\"><![CDATA[https://www.engineeringvillage.com/share/document.url?mid="+m_id+"&database=cpx&view=detailed]]></COLUMN>\n");
 					out.write("</ROW>\n");
 				}
 				out.write("</RESULTS>\n");
@@ -2571,12 +2571,12 @@ public class NewDataTesting
 		Connection con = null;
 		FileWriter out = null;
 		try
-		{
-			out = new FileWriter("Georef_GI.out");
+		{			
 			con = getConnection(this.URL,this.driver,this.username,this.password);
 			//String sqlQuery = "select id_number,m_id from georef_master where load_number='"+load_number+"' and document_type='GI'";
 			//String sqlQuery = "select m_id,id_number from georef_master_orig where id_number in (select id_number from georef_master_delete)";
-			String sqlQuery = "select id_number,m_id from georef_master where document_type='GI'";
+			//String sqlQuery = "select id_number,m_id from georef_master where document_type='GI'";
+			String sqlQuery = "select INSTITUTE_NAME,dbase from aflookup_with_bracket order by dbase";
 			stmt = con.createStatement();
 
 			System.out.println("QUERY= "+sqlQuery);
@@ -2585,8 +2585,8 @@ public class NewDataTesting
 			while (rs.next())
 			{
 				//Thread.currentThread().sleep(250);
-				String accessnumber = rs.getString("id_number");
-				String m_id = rs.getString("m_id");
+				String instituteName = rs.getString("INSTITUTE_NAME");
+				String database = rs.getString("dbase");
 
 
 				//in = new BufferedReader(new FileReader("test.txt"));
@@ -2595,7 +2595,7 @@ public class NewDataTesting
 				client.setResultView("ei");
 				client.setOffSet(0);
 				client.setPageSize(50000);
-				client.setQueryString("(AN:\""+accessnumber+"\") AND (((db:grf)))");
+				client.setQueryString("(af:\""+instituteName+"\") AND (((db:"+database+")))");
 				//client.setQueryString("(ALL:\""+m_id+"\") and db:grf and dt:gi and wk:"+load_number);
 				client.setDoCatCount(true);
 				client.setDoNavigators(true);
@@ -2608,35 +2608,16 @@ public class NewDataTesting
 
 				if(count<1)
 				{
-				  System.out.println("missing record MID= "+m_id+" accessnumber="+accessnumber);
+				  System.out.println(instituteName);
 			    }
+				else
+				{
+					System.out.println("***KEEP="+instituteName);
+				}
 
 				StringBuffer sb=new StringBuffer();
-				
-				for(int i=0;i<l.size();i++)
-				{
-					String[] docID = (String[])l.get(i);
-					//System.out.println("m_id="+m_id+" docID="+docID[0]+" id_number="+accessnumber);
-					if(!m_id.equals(docID[0]))
-					{
-						System.out.println("m_id="+m_id+" docID="+docID[0]+" id_number="+accessnumber);
-						out.write(docID[0]+"\t"+m_id+"\t"+accessnumber+"\n");
-					}
-					out.flush();
-					/*
-					else
-					{
-						System.out.println("id_number "+accessnumber+" has the same m_id");
-					}
-					*/
-				}
-				
-
 			}
-			//getAccessnumber(sb.toString());
-			//System.out.println(sb.toString());
-			out.flush();
-			out.close();
+			
 
 		}
 		catch(Exception e)

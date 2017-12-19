@@ -336,5 +336,55 @@ public class EMail {
         session.getProperties().list(printWriter);
         return sw.toString();
     }
+    
+    public static void main(String args[]) throws Exception
+    {
+    	String host = "email-smtp.us-east-1.amazonaws.com";
+    	String username = "AKIAISNCJA3QM32ZUFYA";
+        String Password = "AnYW09dHySrs6LT4Q7uf6LohcZuXFoSN++Mzi3MRllLu";
+        //String from = "eiemailalert@elsevier.com";
+        String from = args[0];
+        String toAddress = "h.mo@elsevier.com";
+        String filename = "C:/Users/hp/Desktop/Write.txt";
+        // Get system properties
+        Properties props = System.getProperties();
+        props.put("mail.smtp.port", 25);
+        props.put("mail.smtp.host", host);
+        props.put("mail.smtp.auth", "true");
+        props.put("mail.smtp.starttls.enable", "true");
+        Session session = Session.getInstance(props, null);
+
+        MimeMessage message = new MimeMessage(session);
+
+        message.setFrom(new InternetAddress(from));
+
+        message.setRecipients(Message.RecipientType.TO, toAddress);
+
+        message.setSubject("JavaMail Attachment");
+
+        BodyPart messageBodyPart = new MimeBodyPart();
+
+        messageBodyPart.setText("Here's the file");
+
+
+
+        message.setContent("Here is test message", "text/plain");
+
+        try {
+            Transport tr = session.getTransport("smtp");
+            tr.connect(host, username, Password);
+            tr.sendMessage(message, message.getAllRecipients());
+            System.out.println("Mail Sent Successfully");
+            tr.close();
+
+        } catch (Exception sfe) {
+
+            System.out.println(sfe);
+        }
+       finally
+       {
+    	   System.exit(1);;
+       }
+    }
 
 }
