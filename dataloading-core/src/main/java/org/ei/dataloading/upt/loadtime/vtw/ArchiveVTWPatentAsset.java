@@ -305,6 +305,8 @@ public class ArchiveVTWPatentAsset implements Runnable{
 
 	public void SQSCreationAndSetting() throws JMSException, InterruptedException
 	{
+		String accountID = "790640479873";   // Prod US/EUP 
+		
 
 		/*
 		 * The ProfileCredentialsProvider will return your [default]
@@ -313,8 +315,8 @@ public class ArchiveVTWPatentAsset implements Runnable{
 		 */
 		AWSCredentialsProvider credentials = null;
 		try {
-			//credentials = new EnvironmentVariableCredentialsProvider();   // for localhost
-			credentials = new InstanceProfileCredentialsProvider();        // for dataloading EC2
+			credentials = new EnvironmentVariableCredentialsProvider();   // for localhost
+			//credentials = new InstanceProfileCredentialsProvider();        // for dataloading EC2
 		} catch (Exception e) {
 			throw new AmazonClientException(
 					"Cannot load the credentials from the credential profiles file. " +
@@ -328,6 +330,15 @@ public class ArchiveVTWPatentAsset implements Runnable{
 			sqs = new AmazonSQSClient(credentials);
 			Region euWest2 = Region.getRegion(Regions.EU_WEST_1);
 			sqs.setRegion(euWest2);
+			
+			if(type !=null && type.equalsIgnoreCase("forward"))
+			{
+				accountID = "790640479873";
+			}
+			else if (type !=null && type.equalsIgnoreCase("backfill"))
+			{
+				accountID = "461549540087";
+			}
 
 
 
@@ -337,7 +348,7 @@ public class ArchiveVTWPatentAsset implements Runnable{
 			System.out.println("===========================================\n");
 
 			GetQueueUrlRequest request = new GetQueueUrlRequest().withQueueName(queueName)
-					.withQueueOwnerAWSAccountId("790640479873");
+					.withQueueOwnerAWSAccountId(accountID);
 
 			GetQueueUrlResult result = sqs.getQueueUrl(request);
 
@@ -461,8 +472,14 @@ public class ArchiveVTWPatentAsset implements Runnable{
 									
 									// 06/07/2017 NYC team confirmed to download all patents with generation >10, after Bart recent email to check with EV to confirm this
 									//PROD US & EP
-									if((obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("US") || 
-											obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("EP")))   
+									/*if((obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("US") || 
+											obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("EP")))*/   
+										
+										//12/13/2017 Added WO (backfil and forward) flow to be ready for Jan,2018 WO release
+										if((obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("US") || 
+												obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("EP")||
+												obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("WO")))   
+											
 										
 										
 										patentIds.put(obj.getMessageField("patentid"), "");
@@ -480,6 +497,7 @@ public class ArchiveVTWPatentAsset implements Runnable{
 										//signed Asset URL's Expiration Date
 										if(obj.getMessageField("urlExpirationDate") !=null)
 										{
+											System.out.println("Expires= " + obj.getMessageField("urlExpirationDate"));
 											signedUrlExpiration = Long.parseLong(obj.getMessageField("urlExpirationDate"));
 											//recordBuf.append(convertMillisecondsToFormattedDate(obj.getMessageField("urlExpirationDate"))); // human readable format
 											recordBuf.append(signedUrlExpiration);
@@ -690,6 +708,10 @@ public class ArchiveVTWPatentAsset implements Runnable{
 
 		System.out.println("Zip downloaded files for downloadDir: " + downloadDirName);
 
+		try
+		{
+			
+		
 		// read latest zipfilename from zipFileNames file as the start point for Sequence generation
 		readZipFileNameFromFile(loadNumber);
 
@@ -723,9 +745,9 @@ public class ArchiveVTWPatentAsset implements Runnable{
 		
 		//Added 10/02/2017 to handle backfill and forward WO
 		if(msgType !=null && msgType.equalsIgnoreCase("forward"))
-			downDir = new File(currDir + "/raw_data/" + type + "_" + downloadDirName);
+			downDir = new File(currDir + "/raw_data/" + msgType + "_" + downloadDirName);
 		else if (msgType !=null && msgType.equalsIgnoreCase("backfill"))
-				downDir = new File(currDir + "/raw_data/" + type + "_wo_" + downloadDirName);
+				downDir = new File(currDir + "/raw_data/" + msgType + "_wo_" + downloadDirName);
 
 		String[] xmlFiles = downDir.list();  
 		File[] xmlFilesToDelete = downDir.listFiles();
@@ -768,6 +790,12 @@ public class ArchiveVTWPatentAsset implements Runnable{
 
 			outZip.close();
 			downDir.delete();
+		}
+		}
+		catch(Exception e)
+		{
+			System.out.println("An Exception occured in ZipDownloades!!!");
+			System.out.println("Reason: " + e.getMessage());
 		}
 
 

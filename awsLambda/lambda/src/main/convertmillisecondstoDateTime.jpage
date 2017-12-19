@@ -125,3 +125,7 @@ subListSize
 
 ## 0
 
+
+String patentId="WO0123520A1.xml";
+String sbustr= patentId.substring(0,2);
+sbustr

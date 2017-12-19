@@ -47,7 +47,7 @@ public class InitiateVtwThreads {
 	static int loadNumber = 0;
 	static int recsPerZipFile = 2000;
 	static int recsPerSingleConnection = 2000;
-	static String type = "forward";
+	static String type = "forward";			// either forward or backfill
 
 
 	// epoch name list for individual dir for each thread in "raw_data" to zip
