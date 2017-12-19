@@ -1,4 +1,3 @@
-package mail;
 
 import java.util.Properties;
 
