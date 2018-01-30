@@ -315,8 +315,8 @@ public class ArchiveVTWPatentAsset implements Runnable{
 		 */
 		AWSCredentialsProvider credentials = null;
 		try {
-			credentials = new EnvironmentVariableCredentialsProvider();   // for localhost
-			//credentials = new InstanceProfileCredentialsProvider();        // for dataloading EC2
+			//credentials = new EnvironmentVariableCredentialsProvider();   // for localhost
+			credentials = new InstanceProfileCredentialsProvider();        // for dataloading EC2
 		} catch (Exception e) {
 			throw new AmazonClientException(
 					"Cannot load the credentials from the credential profiles file. " +
@@ -337,7 +337,7 @@ public class ArchiveVTWPatentAsset implements Runnable{
 			}
 			else if (type !=null && type.equalsIgnoreCase("backfill"))
 			{
-				accountID = "461549540087";
+				accountID = "461549540087";   // comment this out when move to backfill prod bc Bart confirmed it will be same acctID as Prod
 			}
 
 
@@ -561,7 +561,7 @@ public class ArchiveVTWPatentAsset implements Runnable{
 										recordBuf.append(msgSentDateFormat.format(new Date(Long.parseLong(msgAttributes.get("SentTimestamp")))).toString());
 										
 										// for debugging print the message ApproximateReceiveCount
-										System.out.println("Message receive count: " + msgAttributes.get("ApproximateReceiveCount"));
+										//System.out.println("Message receive count: " + msgAttributes.get("ApproximateReceiveCount"));
 									}
 									// write the message to out file
 									out.println(recordBuf.toString().trim());
