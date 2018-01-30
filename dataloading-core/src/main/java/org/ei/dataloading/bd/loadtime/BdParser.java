@@ -3680,7 +3680,7 @@ public class BdParser
 
 		//end of affiliation
 
-		// begin authors
+		//begin authors
 		for (int e = 0; e< authorlist.size(); e++)
 		{
 	        Element agroupelement =(Element) authorlist.get(e);
