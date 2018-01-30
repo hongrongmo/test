@@ -1,5 +1,6 @@
 package org.ei.dataloading.upt.loadtime.vtw;
 
+import java.io.File;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -52,8 +53,8 @@ public class InitiateVtwThreads {
 
 	// epoch name list for individual dir for each thread in "raw_data" to zip
 	static List<String> raw_Dir_Names;
-	
-	
+
+
 	public static void main(String[] args) throws Exception {
 
 		if(args.length >3)
@@ -139,6 +140,10 @@ public class InitiateVtwThreads {
 			long epoch;
 
 			CountDownLatch latch = new CountDownLatch(numOfThreads);
+			
+			String currDir = System.getProperty("user.dir");
+			File downDir = null;
+			String[] xmlFiles;
 
 
 			/*
@@ -147,7 +152,7 @@ public class InitiateVtwThreads {
 			 */
 
 			raw_Dir_Names = new ArrayList<String>();
-			 
+
 
 			// create & start Threads
 
@@ -158,10 +163,8 @@ public class InitiateVtwThreads {
 
 				System.out.println("Thread" + i + " epoch: " + epoch);
 
-				if(type !=null && type.equalsIgnoreCase("forward"))
-					raw_Dir_Names.add(Long.toString(epoch));
-				else if(type !=null && type.equalsIgnoreCase("backfill"))
-					raw_Dir_Names.add("back_" + Long.toString(epoch));
+				raw_Dir_Names.add(Long.toString(epoch));
+
 				ArchiveVTWPatentAsset thread = new ArchiveVTWPatentAsset(numberOfRuns,queueName,sqlldrFileName,
 						loadNumber,recsPerZipFile,recsPerSingleConnection,type,
 						epoch,"Thread" + i, latch);
@@ -169,29 +172,41 @@ public class InitiateVtwThreads {
 
 				// to get unique epoch timestamp which used for naming raw_dir
 				Thread.sleep(1000);
-				
+
 				//obj = thread;
 
 			}
-			
-			
+
+
 			// wait after all threads finish downloading
 			latch.await();
 			System.out.println("In Main thread after completion of " + numOfThreads + " threads");
 			System.out.println("FINISHED................." + new Date().getTime());
-			
-			
+
+
 			//Zip downloaded files (each in it's corresponding dir)
-			
+
 			System.out.println("all " + numOfThreads + " complete, start to zip downloaded files");
-			
+
 			ArchiveVTWPatentAsset obj = new ArchiveVTWPatentAsset(loadNumber, recsPerZipFile);
-			
+
 			for(int j=0;j<raw_Dir_Names.size();j++)
 			{
-				obj.zipDownloads(loadNumber, raw_Dir_Names.get(j),type);
+				//HH 01/30/2018 added to resolve nullpointer exception due to empty directories
+				downDir = new File(currDir + "/raw_data/" + type + "_" + raw_Dir_Names.get(j));
+				xmlFiles = downDir.list(); 
+				if(xmlFiles.length >0)
+				{
+					obj.zipDownloads(loadNumber, raw_Dir_Names.get(j),type);
+				}
+				
+				else
+				{
+					System.out.println("Download dir: " + downDir.getAbsolutePath() + " is Empty so nothing to zip");
+				}
+				
 			}
-			
+
 
 		}
 
