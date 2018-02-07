@@ -50,7 +50,8 @@ https://vtw.elsevier.com/asset/pat/<VTW patent id>?type=MAIN&fmt=application/xml
  */
 public class VTWAssetAPI {
 
-	//private static final String HOST = "acc.vtw.elsevier.com";   // VTW UAT env
+	//private static final String HOST = "acc.vtw.elsevier.com";   // VTW UAT env (old)
+	//private static final String HOST = "uatnp.vtw-np.elsevier.com"; // VTW UAT env
 	private static final String HOST = "vtw.elsevier.com";     // VTW Prod
 	private static final String ENDPOINT_ROOT = "https://" + HOST;
 

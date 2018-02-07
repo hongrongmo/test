@@ -87,7 +87,7 @@ public class ArchiveVTWPatentAsset implements Runnable{
 	private final static Logger logger = Logger.getLogger(ArchiveVTWPatentAsset.class);
 
 	private int numberOfRuns = 0;
-	private String queueName = "acc-contributor-event-queue-EV";
+	private String queueName = "uatnp.vtw-np.elsevier.com";
 	private String sqlldrFileName = null;
 	static int loadNumber = 0;
 	int recsPerZipFile = 2000;
@@ -307,6 +307,8 @@ public class ArchiveVTWPatentAsset implements Runnable{
 	{
 		String accountID = "790640479873";   // Prod US/EUP 
 		
+		//String accountID = "461549540087";   // UAT Forward & Backfill WO
+		
 
 		/*
 		 * The ProfileCredentialsProvider will return your [default]
@@ -331,15 +333,6 @@ public class ArchiveVTWPatentAsset implements Runnable{
 			Region euWest2 = Region.getRegion(Regions.EU_WEST_1);
 			sqs.setRegion(euWest2);
 			
-			if(type !=null && type.equalsIgnoreCase("forward"))
-			{
-				accountID = "790640479873";
-			}
-			else if (type !=null && type.equalsIgnoreCase("backfill"))
-			{
-				accountID = "461549540087";   // comment this out when move to backfill prod bc Bart confirmed it will be same acctID as Prod
-			}
-
 
 
 			// AMazonSQS queue
