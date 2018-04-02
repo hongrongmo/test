@@ -190,7 +190,7 @@ public class ArchiveVTWPatentAsset implements Runnable{
 
 
 					//Zip downloaded files (each in it's corresponding dir)
-					zipDownloads(loadNumber, Long.toString(epoch));
+					zipDownloads(loadNumber, Long.toString(epoch),type);
 
 
 					midTime = endTime;
@@ -272,6 +272,9 @@ public class ArchiveVTWPatentAsset implements Runnable{
 				sqs.setRegion(euWest2);
 
 
+				//String accountID="790640479873";		// UAT testing forward, but seems no longer exist
+				//02/01/2018 use same new acctID of backfill as account ID "790640479873" seems no longer exists
+				String accountID = "461549540087";		// UAT backfill 
 
 				// AMazonSQS queue
 				System.out.println("===========================================");
@@ -279,7 +282,7 @@ public class ArchiveVTWPatentAsset implements Runnable{
 				System.out.println("===========================================\n");
 
 				GetQueueUrlRequest request = new GetQueueUrlRequest().withQueueName(queueName)
-						.withQueueOwnerAWSAccountId("790640479873");
+						.withQueueOwnerAWSAccountId(accountID);
 
 				GetQueueUrlResult result = sqs.getQueueUrl(request);
 
@@ -591,7 +594,7 @@ public class ArchiveVTWPatentAsset implements Runnable{
 		 * @throws Exception
 		 * hierarchy of downloaded VTW XML files (CurrDir -> loadnumberDir -> PatentID -> xml file) (i.e. /data/loading/ipdd -> 201639 -> EP2042829B1 -> AU2010281317A1.xml)
 		 **/
-		public synchronized void zipDownloads(int loadnumber, String downloadDirName) throws Exception
+		public synchronized void zipDownloads(int loadnumber, String downloadDirName, String msgType) throws Exception
 		{
 			int zipFileID = 1;
 			int curRecNum = 0;
@@ -624,11 +627,6 @@ public class ArchiveVTWPatentAsset implements Runnable{
 				zipsDir.mkdir();
 			}
 
-			zipsDir = new File(zipsDir+"/" +loadnumber);
-			if(!(zipsDir.exists()))
-			{
-				zipsDir.mkdir();
-			}
 
 
 			File downDir = new File(currDir + "/raw_data/"+downloadDirName);
@@ -699,6 +697,27 @@ public class ArchiveVTWPatentAsset implements Runnable{
 					}
 
 
+					
+
+					// 02/01/2018 Separate the forward "WO" zip files from Forward "US/EUP" zip files
+					
+					if(msgType !=null && msgType.equalsIgnoreCase("forward"))
+					{
+						if(prefix.equalsIgnoreCase("wo"))
+							zipsDir = new File(zipsDir+"/wo_forward_tmp");
+						else
+							zipsDir = new File(zipsDir+"/tmp");
+					}
+						
+					else if (msgType !=null && msgType.equalsIgnoreCase("backfill"))
+						zipsDir = new File(zipsDir+"/back_tmp");
+					if(!(zipsDir.exists()))
+					{
+						zipsDir.mkdir();
+					}
+					
+					
+					
 
 
 					//String zipFileName = zipsDir + "/" + epoch + "_" + zipFileID + ".zip";
@@ -734,7 +753,7 @@ public class ArchiveVTWPatentAsset implements Runnable{
 						++curRecNum;
 					}
 					outZip.close();
-					//downDir.delete();
+					downDir.delete();
 				}
 
 			}
