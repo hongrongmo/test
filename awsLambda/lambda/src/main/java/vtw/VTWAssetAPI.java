@@ -53,8 +53,8 @@ https://vtw.elsevier.com/asset/pat/<VTW patent id>?type=MAIN&fmt=application/xml
  */
 public class VTWAssetAPI {
 
-	//private static final String HOST = "acc.vtw.elsevier.com";   // VTW UAT Testing  
-	private static final String HOST = "vtw.elsevier.com";     // VTW Prod
+	private static final String HOST = "acc.vtw.elsevier.com";   // VTW UAT Testing  
+	//private static final String HOST = "vtw.elsevier.com";     // VTW Prod
 	
 	private static final String ENDPOINT_ROOT = "https://" + HOST;
 
@@ -65,8 +65,8 @@ public class VTWAssetAPI {
 
 
 	private static final String username = "engineering-village";
-	//private static final String password = "elCome29347";		//for testing queue, UAT
-	private static final String password = "evVtw!23";		// for PROD
+	private static final String password = "elCome29347";		//for testing queue, UAT
+	//private static final String password = "evVtw!23";		// for PROD
 
 	private static final int REQUEST_CONNECTION_TIMEOUT = 100 * 1000;		//100 seconds
 	private static final int SOCKET_TIMEOUT = 1000 * 1000;
