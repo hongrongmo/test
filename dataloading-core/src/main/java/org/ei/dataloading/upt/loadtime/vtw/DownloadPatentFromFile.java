@@ -167,7 +167,8 @@ public class DownloadPatentFromFile {
 
 				//Zip downloaded files (each in it's corresponding dir)
 
-				archivePatent.zipDownloads(loadNumber, Long.toString(epoch),type);  // temp comment out for downloading backword records generation>10, uncomment Back after finish
+				//02/22/2018 temp comment out for WO backfill/forward, uncomment for US/EUP
+				//archivePatent.zipDownloads(loadNumber, Long.toString(epoch),type);  // temp comment out for downloading backword records generation>10, uncomment Back after finish
 
 
 				midTime = endTime;
@@ -200,7 +201,7 @@ public class DownloadPatentFromFile {
 					if(fields.length >2)
 					{
 						patentID = fields[0];
-						signedAssetUrl = fields[1];
+						signedAssetUrl = fields[2];
 						
 						if(fields[4] !=null && fields[4].contains("content/pat"))
 							generation = fields[4].substring(fields[4].lastIndexOf("/")+1, fields[4].length());
@@ -212,10 +213,16 @@ public class DownloadPatentFromFile {
 					
 					// 06/07/2017 NYC team confirmed to download all patents with generation >10, after Bart recent email to check with EV to confirm this
 					// i set condition to >10 when run backword process, but from now on and forward i need to make >=10 or i may take generation condition away
+					/*if(patentID !=null &&
+							(patentID.substring(0, 2).equalsIgnoreCase("US") ||	patentID.substring(0, 2).equalsIgnoreCase("EP"))
+							&& Integer.parseInt(generation) >=10)*/
+					
+					
+					
+					// 02/22/2018 download Prod WO backfil 1st bulk of 02/21/2018 no limit to generation, imply download all
 					if(patentID !=null &&
 							(patentID.substring(0, 2).equalsIgnoreCase("US") ||	patentID.substring(0, 2).equalsIgnoreCase("EP"))
-							&& Integer.parseInt(generation) >=10)
-					
+							||	patentID.substring(0, 2).equalsIgnoreCase("WO"))
 						
 					{
 						patentIds.put(patentID, signedAssetUrl);
