@@ -29,13 +29,15 @@ public class ZipDonwloadedFiles {
 
 	static String downloadDir;
 	static String zipfileName;
+	static String type;		// (forward, backfill)
 	public static void main(String[] args) throws Exception 
 	{
 		
-		if(args.length >1)
+		if(args.length >2)
 		{
 			downloadDir = args[0];
 			zipfileName = args[1];
+			type = args[2];
 		}
 		else
 		{
@@ -43,10 +45,10 @@ public class ZipDonwloadedFiles {
 			System.exit(1);
 		}
 		System.out.println("Starting zip files in downloadDir:  " + downloadDir);
-		zipDownloads(201713,downloadDir,zipfileName);
+		zipDownloads(201713,downloadDir,zipfileName,type);
 	}
 	
-	public static void zipDownloads(int loadnumber, String downloadDirName, String zipfileName) throws Exception
+	public static void zipDownloads(int loadnumber, String downloadDirName, String zipfileName, String type) throws Exception
 	{
 		int zipFileID = 1;
 		int curRecNum = 0;
@@ -70,7 +72,10 @@ public class ZipDonwloadedFiles {
 		}
 
 		//zipsDir = new File(zipsDir+"/" +loadnumber);  // for organizing downloades based on loadnumber
-		zipsDir = new File(zipsDir+"/tmp");
+		if(type !=null && type.equalsIgnoreCase("forward"))
+			zipsDir = new File(zipsDir+"/tmp");
+		else if(type !=null && type.equalsIgnoreCase("backfill"))
+			zipsDir = new File(zipsDir+"/back_tmp");
 		if(!(zipsDir.exists()))
 		{
 			zipsDir.mkdir();
@@ -93,7 +98,7 @@ public class ZipDonwloadedFiles {
 			for(int i=0; i<xmlFiles.length; i++)
 			{
 				// limit each single zip file to hold recsPerZipfile, otherwise split to multiple zip files
-				if(curRecNum >= 2000)
+				if(curRecNum >= 20000)
 				{
 					curRecNum = 0;
 					outZip.close();
@@ -120,7 +125,7 @@ public class ZipDonwloadedFiles {
 			}
 
 			outZip.close();
-			downDir.delete();
+			downDir.delete();  
 		}
 
 
