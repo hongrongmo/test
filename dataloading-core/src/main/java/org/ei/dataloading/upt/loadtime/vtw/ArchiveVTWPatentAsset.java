@@ -134,10 +134,11 @@ public class ArchiveVTWPatentAsset implements Runnable{
 
 	}
 	
-	public ArchiveVTWPatentAsset(int loadnum, int numOfRecsPerZip)
+	public ArchiveVTWPatentAsset(int loadnum, int numOfRecsPerZip, String msgType)
 	{
 		loadNumber = loadnum;
 		recsPerZipFile = numOfRecsPerZip;
+		type = msgType;
 	}
 
 	
@@ -305,10 +306,9 @@ public class ArchiveVTWPatentAsset implements Runnable{
 
 	public void SQSCreationAndSetting() throws JMSException, InterruptedException
 	{
-		String accountID = "790640479873";   // Prod US/EUP 
+		String accountID = "790640479873";   // Prod US/EUP/WO 
 		
 		//String accountID = "461549540087";   // UAT Forward & Backfill WO
-		
 
 		/*
 		 * The ProfileCredentialsProvider will return your [default]
@@ -490,7 +490,7 @@ public class ArchiveVTWPatentAsset implements Runnable{
 										//signed Asset URL's Expiration Date
 										if(obj.getMessageField("urlExpirationDate") !=null)
 										{
-											System.out.println("Expires= " + obj.getMessageField("urlExpirationDate"));
+											//System.out.println("Expires= " + obj.getMessageField("urlExpirationDate"));
 											signedUrlExpiration = Long.parseLong(obj.getMessageField("urlExpirationDate"));
 											//recordBuf.append(convertMillisecondsToFormattedDate(obj.getMessageField("urlExpirationDate"))); // human readable format
 											recordBuf.append(signedUrlExpiration);
@@ -806,6 +806,8 @@ public class ArchiveVTWPatentAsset implements Runnable{
 	{
 		volatile AtomicInteger sequenceLoadNum = new AtomicInteger(getRecentZipFileName());
 		volatile AtomicInteger sequenceID = new AtomicInteger(getRecentZipFileName());
+		
+		
 		public synchronized int nextloadNum()
 		{
 			int nextVal = sequenceLoadNum.incrementAndGet();
