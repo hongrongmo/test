@@ -166,7 +166,7 @@ public class InitiateVtwThreads {
 					+ " complete, start to zip downloaded files");
 
 			ArchiveVTWPatentAsset obj = new ArchiveVTWPatentAsset(loadNumber,
-					recsPerZipFile);
+					recsPerZipFile, type);
 
 			for (int j = 0; j < raw_Dir_Names.size(); j++) {
 				if (!(raw_Dir_Names.get(j).isEmpty())
@@ -174,18 +174,30 @@ public class InitiateVtwThreads {
 				{
 					// HH 01/30/2018 added to resolve null pointer exception due
 					// to empty directories
-					downDir = new File(currDir + "/raw_data/" + type + "_"
-							+ raw_Dir_Names.get(j));
+					
+					if(type!=null && type.equalsIgnoreCase("forward"))
+					{
+						downDir = new File(currDir + "/raw_data/" + type + "_"
+								+ raw_Dir_Names.get(j));
+					}
+					else if(type!=null && type.equalsIgnoreCase("backfill"))
+					{
+						downDir = new File(currDir + "/raw_data/" + type + "_wo_"
+								+ raw_Dir_Names.get(j));
+					}
+					
 
 					xmlFiles = downDir.list();
-					if (xmlFiles.length > 0) {
+					if (xmlFiles !=null && xmlFiles.length > 0) {
 						obj.zipDownloads(loadNumber, raw_Dir_Names.get(j), type);
 					}
 
 					else {
 						System.out.println("Download dir: "
 								+ downDir.getAbsolutePath()
-								+ " is Empty so nothing to zip");
+								+ " is Empty so nothing to zip, delete the dir");
+						
+						downDir.delete();
 					}
 				}
 
