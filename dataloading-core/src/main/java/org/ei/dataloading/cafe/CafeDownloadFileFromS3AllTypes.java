@@ -25,7 +25,9 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
@@ -36,6 +38,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
+
 import org.ei.common.georef.DocumentView.MultiValueLookupValueDecorator;
 import org.ei.dataloading.awss3.AmazonS3Service;
 import org.ei.dataloading.upt.loadtime.vtw.ArchiveVTWPatentAsset;
@@ -57,6 +60,7 @@ public class CafeDownloadFileFromS3AllTypes {
 	//static String action;
 	static String doc_type;
 	static String archive_date;
+	static Boolean isArchive_date_range = true;
 	static int recsPerZipFile;
 	static String tableToBeTruncated = "cafe_inventory_temp";
 	static String sqlldrFileName = "cafeInventoryFileLoader.sh";
@@ -98,9 +102,14 @@ public class CafeDownloadFileFromS3AllTypes {
 	private HashMap<String,String> keys_to_be_deleted = new HashMap<String,String>();
 	private List<String> keys_MID_to_be_deleted = new ArrayList<String>();
 
-
+	
 	public static final char FIELDDELIM = '\t';
 
+	
+	//04/17/2018 added for accumulating archive_dates instead of single value for each iteration
+	StringBuffer archiveDateList = new StringBuffer();
+	
+	
 
 	public static void main(String[] args)
 	{
@@ -149,7 +158,7 @@ public class CafeDownloadFileFromS3AllTypes {
 			}
 		}
 
-		if(args.length >14)
+		if(args.length >15)
 		{
 			// # of downloaded cafe key files to include in one zip file for later process/convert
 			if(args[6] !=null)
@@ -224,6 +233,12 @@ public class CafeDownloadFileFromS3AllTypes {
 			{
 				esDomain = args[14];
 				System.out.println("ES Domain: " + esDomain);
+			}
+			
+			if(args[15] !=null)
+			{
+				// if archive_date range is true, get keys list fit within the date range that starts from archive_date till one day before today
+				isArchive_date_range = Boolean.valueOf(args[15]);
 			}
 		}
 
@@ -356,6 +371,10 @@ public class CafeDownloadFileFromS3AllTypes {
 			System.out.println("Output Filename "+filename);
 
 
+			
+			// if archive_date_range is on, get date list start from archive_date till one day before current day to reduce file download from cafe s3
+			if(isArchive_date_range)
+				getArchiveDates_List();
 
 		} 
 		catch(IOException ex)
@@ -388,6 +407,58 @@ public class CafeDownloadFileFromS3AllTypes {
 		}
 
 	}
+	
+/* 04/17/2018
+ * @Description: reduce cafe downloading files by accumulating archive_dates instead of daiy bases download
+ * reason is cafe keep sending very frequent updates for same records i.e. send update for 
+ * record 123 today, then another one tomorrow and again in 2 days so we download and process the 
+ * record 3 times, if we accumulate these 3 times and download the file only once
+ * and so process the record only once. since cafe s3 bucket will be having latest version anyway
+*/
+	public void getArchiveDates_List()
+	{
+		
+		SimpleDateFormat format = new SimpleDateFormat("MMM-dd-yy");
+		
+		try
+		{
+			
+			//Start Date
+			Date start_date = format.parse(archive_date);
+			Calendar calStart = new GregorianCalendar();
+			calStart.setTime(start_date);
+			
+			
+			// END date
+			final Calendar calEnd = Calendar.getInstance();
+			calEnd.add(Calendar.DATE, -1);
+			System.out.println("ENd date: " + calEnd.get(Calendar.DATE));
+			
+			
+			while(calStart.before(calEnd))
+			{
+				if(archiveDateList.length() >0)
+				{
+					archiveDateList.append(",");
+				}
+				archiveDateList.append("'"+ format.format(calStart.getTime()).toUpperCase() + "'");
+				calStart.add(Calendar.DATE, 1);  //increment cal by one day
+			}
+
+		}
+		catch(ParseException ex)
+		{
+			System.out.println("Invalid date format, re-try with format MON-DD-YY");
+			System.exit(1);
+		}
+		catch(Exception ex)
+		{
+			System.out.println("something else went wrong for archive_dates accumulation!!!!");
+			ex.printStackTrace();
+		}
+	}
+	
+	
 	public void getCafeInv_FilesInfo() throws Exception
 	{
 		Statement stmt = null;
@@ -398,7 +469,17 @@ public class CafeDownloadFileFromS3AllTypes {
 		{
 			stmt = con.createStatement();
 
-			String cafeInventory_list = "select key,epoch from CAFE_INVENTORY where doc_type='" + doc_type + "' and key in "+
+			String cafeInventory_list;
+			
+			
+			//HH added 04/17/2018 for accumulating archive_dates to reduce # of files to download from cafe s3 bucket
+			if (isArchive_date_range)
+				
+				cafeInventory_list = "select key,epoch from CAFE_INVENTORY where doc_type='" + doc_type + "' and key in "+
+						"(select distinct key from sns_archive where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'MON-DD-RR') in (" + archiveDateList + "))";
+
+			else
+				cafeInventory_list = "select key,epoch from CAFE_INVENTORY where doc_type='" + doc_type + "' and key in "+
 					"(select distinct key from sns_archive where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'MON-DD-RR')='" + archive_date + "')";
 
 			rs = stmt.executeQuery(cafeInventory_list);
@@ -447,15 +528,28 @@ public class CafeDownloadFileFromS3AllTypes {
 		try
 		{
 			stmt = con.createStatement();
-			String snsArchive_UniqueRecentEpoch_List = "SELECT t.KEY,t.EPOCH,t.PUI,t.ACTION,t.BUCKET,t.DOC_TYPE,TO_CHAR(t.ARCHIVE_DATE ,'YYYY-MM-DD HH24:MI:SS') ARCHIVE_DATE FROM("+
+			String snsArchive_UniqueRecentEpoch_List;
+			
+			if(isArchive_date_range)
+			
+			snsArchive_UniqueRecentEpoch_List = "SELECT t.KEY,t.EPOCH,t.PUI,t.ACTION,t.BUCKET,t.DOC_TYPE,TO_CHAR(t.ARCHIVE_DATE ,'YYYY-MM-DD HH24:MI:SS') ARCHIVE_DATE FROM("+
 					"SELECT key,max(to_number(epoch)) AS epoch "+
-					"FROM sns_archive where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'MON-DD-RR')='" + archive_date + "' "+
+					"FROM sns_archive where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'MON-DD-RR') in (" + archiveDateList + ") "+
 					"GROUP BY key) x "+
 					"JOIN sns_archive t ON x.key =t.key "+
 					"AND x.epoch = t.epoch "+
-					"where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'MON-DD-RR')='" + archive_date + "' ";
+					"where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'MON-DD-RR') in (" + archiveDateList + ") ";
 			//"order by x.key"; commented out for performance 05/08/2017
 
+			else
+				snsArchive_UniqueRecentEpoch_List = "SELECT t.KEY,t.EPOCH,t.PUI,t.ACTION,t.BUCKET,t.DOC_TYPE,TO_CHAR(t.ARCHIVE_DATE ,'YYYY-MM-DD HH24:MI:SS') ARCHIVE_DATE FROM("+
+						"SELECT key,max(to_number(epoch)) AS epoch "+
+						"FROM sns_archive where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'MON-DD-RR')='" + archive_date + "' "+
+						"GROUP BY key) x "+
+						"JOIN sns_archive t ON x.key =t.key "+
+						"AND x.epoch = t.epoch "+
+						"where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'MON-DD-RR')='" + archive_date + "' ";
+			
 
 			System.out.println("execute query: " + snsArchive_UniqueRecentEpoch_List);
 			rs = stmt.executeQuery(snsArchive_UniqueRecentEpoch_List);
