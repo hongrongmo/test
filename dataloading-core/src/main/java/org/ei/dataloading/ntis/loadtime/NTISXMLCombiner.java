@@ -292,7 +292,7 @@ public class NTISXMLCombiner
             rec.put(EVCombinedRec.VOLUME, getVolume(rs.getString("VI")));
             rec.put(EVCombinedRec.ISSUE, getIssue(rs.getString("VI")));
             rec.put(EVCombinedRec.STARTPAGE, getStartPage(rs.getString("XP")));
-            rec.put(EVCombinedRec.DOCTYPE, rs.getString("TN"));
+            //rec.put(EVCombinedRec.DOCTYPE, rs.getString("TN"));
             rec.put(EVCombinedRec.AVAILABILITY, getAvailability(rs.getString("AV"),
                     											rs.getString("PR")));
 
@@ -1177,6 +1177,7 @@ public class NTISXMLCombiner
             {
                 s = stripAnon(s);
                 s = s.trim();
+                s = s.replaceAll("-", " qqdashqq ");
                 list.add(s);
             }
         }
