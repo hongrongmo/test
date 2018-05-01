@@ -81,6 +81,9 @@ public class BdNumericalIndexingReader {
             username = args[6];
             password = args[7];
             action = args[3];
+            System.out.println("DATABASE URL= "+url);
+            System.out.println("DATABASE USERNAME= "+username);
+            System.out.println("DATABASE PASSWORD= "+password);
         }
         else
         {
@@ -172,6 +175,7 @@ public class BdNumericalIndexingReader {
 				if(pui != null)
 				{
 					mid = getMID(pui);
+					
 					if(mid==null)
 						mid="";
 				}
@@ -356,7 +360,7 @@ public class BdNumericalIndexingReader {
 	{
 		Statement stmt = null;
         ResultSet rs = null;
-        String mid= null;
+        String mid= "";
         String sqlQuery = null;
         Connection con = null;
         try{
@@ -364,19 +368,18 @@ public class BdNumericalIndexingReader {
 	        {
 	        	con = getConnection(this.url,this.driver,this.username,this.password);
 	            stmt = con.createStatement();
-	            sqlQuery = "select m_id from bd_master_orig where database='cpx' and pui='"+pui+"'";
-				//System.out.println("Running the query...");
+	            //sqlQuery = "select m_id from bd_master_orig where database='cpx' and pui='"+pui+"'";
+	            sqlQuery = "select m_id from bd_master_orig where pui='"+pui+"'";
+				//System.out.println("Running the query..."+sqlQuery);
 				rs = stmt.executeQuery(sqlQuery);
 				while (rs.next())
 				{
-				    if(rs.getString("M_ID") != null)
+					
+				    if(rs.getString("M_ID") != null && rs.getString("M_ID").indexOf("cpx")>-1)
 				    {
 				        mid=rs.getString("M_ID");
-				    }
-				    else
-				    {
-				    	mid="";
-				    }
+				        //System.out.println("M_ID="+mid);
+				    }				    
 				}
 	            
 	        }

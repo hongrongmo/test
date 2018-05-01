@@ -253,6 +253,14 @@ public class BdParser
 						{
 							record.put("DATESORT", yearvalue.toString());
 						}
+						
+						Element status = processinfo.getChild("status",aitNamespace);
+						String stage = status.getAttributeValue("stage");
+						if(stage!=null && stage.length() > 0 )
+						{
+							record.put("STAGE", stage);
+						}
+						
 					}
 
 
@@ -337,7 +345,7 @@ public class BdParser
 							{
 								String  puisecondary = itemidElement.getTextTrim();							
 								record.put("PUISECONDARY",puisecondary);
-								System.out.println("PUISECONDARY="+puisecondary);
+								//System.out.println("PUISECONDARY="+puisecondary);
 							}
 							else if (itemid_idtype != null && itemid_idtype.equals("NORMSTANDARDID"))
 							{
@@ -353,10 +361,7 @@ public class BdParser
 							{
 								String  standardid = itemidElement.getTextTrim();
 								record.put("STANDARDID",standardid);
-							}
-							
-							
-							
+							}						
 							
 						}
 
@@ -391,8 +396,16 @@ public class BdParser
 									if(type != null)
 									{
 										String cititype=type.getValue();
-										docType = cititype;
-										record.put("CITTYPE",cititype);
+										if(record.get("STAGE")!=null && ((String)record.get("STAGE")).equals("S200"))
+										{
+											docType="ip";
+										}
+										else
+										{
+											docType = cititype;
+										}
+										record.put("CITTYPE",docType);
+										//System.out.println("DOCTYPE= "+docType+" STAGE="+record.get("STAGE"));
 									}
 								}
 
