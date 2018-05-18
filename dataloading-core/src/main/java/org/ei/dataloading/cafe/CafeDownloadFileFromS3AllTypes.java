@@ -71,6 +71,7 @@ public class CafeDownloadFileFromS3AllTypes {
 	
 	static int recsPerEsbulk;
 	static String esDomain = "search-evcafe-prod-h7xqbezrvqkb5ult6o4sn6nsae.us-east-1.es.amazonaws.com";
+	static String esIndexName;		// added 05/10/2018 as ES 6.2 and up split types in separate indices
 
 
 	static int curRecNum = 0;
@@ -83,6 +84,11 @@ public class CafeDownloadFileFromS3AllTypes {
 	private AmazonS3 s3Client;
 
 	private long epoch;
+	
+	// for naming zip files with both start and end dates
+	private String archive_date_end;
+	
+	
 
 	// for parsing archive_date
 	SimpleDateFormat archiveDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -139,6 +145,12 @@ public class CafeDownloadFileFromS3AllTypes {
 			{
 				doc_type = args[4];
 				System.out.println("doc_Type: " +  doc_type);
+				
+				// added 05/10/2018 as ES 6.2 and up split types in separate indices
+				if(doc_type.toLowerCase().trim().equalsIgnoreCase("apr"))
+					esIndexName = "author";
+				else if(doc_type.toLowerCase().trim().equalsIgnoreCase("ipr"))
+					esIndexName = "affiliation";
 			}
 
 			if(args[5] !=null)
@@ -341,14 +353,20 @@ public class CafeDownloadFileFromS3AllTypes {
 			// connect to AmazonS3
 			s3Client = AmazonS3Service.getInstance().getAmazonS3Service();
 
+			
+			// if archive_date_range is on, get date list start from archive_date till one day before current day to reduce file download from cafe s3
+			if(isArchive_date_range)
+				getArchiveDates_List();
+						
+						
 			// get time in epoch formate to be able to distingush which file to send to converting, in case there are multiple files to convert
 			DateFormat dateFormat = new SimpleDateFormat("E, MM/dd/yyyy-hh:mm:ss a");
 			Date date = dateFormat.parse(dateFormat.format(new Date()));
 			epoch = date.getTime();
 
-			//05/02/2016 create dir to download s3 files into xml for later zip and convert
+			//05/02/2016 create dir to download s3 files into xml for later zip and convert, on 04/18/2018 add archive_date range in filename
 
-			S3dir=new File(doc_type+"_s3Files_"+epoch+"_"+archive_date);
+			S3dir=new File(doc_type+"_s3Files_"+epoch+"_"+archive_date+"-"+archive_date_end);
 			if(!S3dir.exists())
 			{
 				S3dir.mkdir();
@@ -361,7 +379,7 @@ public class CafeDownloadFileFromS3AllTypes {
 			 * with sns_archive.epoch > cafe_inventory.epoch
 			 * this file is later used to update cafe_archive table
 			 */
-			String filename = doc_type + "_cafe_inventory_" + epoch + "_" + archive_date + ".out";
+			String filename = doc_type + "_cafe_inventory_" + epoch + "_" + archive_date + "_" + archive_date_end + ".out";
 			try {
 				out = new PrintWriter(new FileWriter(filename));
 			} catch (IOException e) {
@@ -369,12 +387,6 @@ public class CafeDownloadFileFromS3AllTypes {
 			}
 
 			System.out.println("Output Filename "+filename);
-
-
-			
-			// if archive_date_range is on, get date list start from archive_date till one day before current day to reduce file download from cafe s3
-			if(isArchive_date_range)
-				getArchiveDates_List();
 
 		} 
 		catch(IOException ex)
@@ -419,6 +431,7 @@ public class CafeDownloadFileFromS3AllTypes {
 	{
 		
 		SimpleDateFormat format = new SimpleDateFormat("MMM-dd-yy");
+		SimpleDateFormat endDateFormat = new SimpleDateFormat("MMM-dd");
 		
 		try
 		{
@@ -432,7 +445,6 @@ public class CafeDownloadFileFromS3AllTypes {
 			// END date
 			final Calendar calEnd = Calendar.getInstance();
 			calEnd.add(Calendar.DATE, -1);
-			System.out.println("ENd date: " + calEnd.get(Calendar.DATE));
 			
 			
 			while(calStart.before(calEnd))
@@ -444,6 +456,10 @@ public class CafeDownloadFileFromS3AllTypes {
 				archiveDateList.append("'"+ format.format(calStart.getTime()).toUpperCase() + "'");
 				calStart.add(Calendar.DATE, 1);  //increment cal by one day
 			}
+			
+			archive_date_end = endDateFormat.format(calEnd.getTime()).toUpperCase();
+			System.out.println("ENd date: " + archive_date_end);
+			
 
 		}
 		catch(ParseException ex)
@@ -1005,7 +1021,7 @@ public class CafeDownloadFileFromS3AllTypes {
 	public void updateCafeInventory()
 	{
 		// update cafe_invetory table by replacing matching keys, with their most recent epoch, or add new keys info
-		String dataFile = doc_type + "_cafe_inventory_" + epoch + "_" + archive_date + ".out";
+		String dataFile = doc_type + "_cafe_inventory_" + epoch + "_" + archive_date + "_" + archive_date_end + ".out";
 		CallableStatement stmt = null;
 
 		try
@@ -1198,7 +1214,7 @@ public class CafeDownloadFileFromS3AllTypes {
 		try
 		{
 			con = getConnection(url,driver,username,password);
-			AusAffESIndex esIndexObj = new AusAffESIndex(recsPerEsbulk, esDomain, "delete");
+			AusAffESIndex esIndexObj = new AusAffESIndex(recsPerEsbulk, esDomain, "delete", esIndexName);
 			
 			for(String key: keys_to_be_deleted.keySet())
 			{
@@ -1518,7 +1534,7 @@ public class CafeDownloadFileFromS3AllTypes {
 	private void deleteANIData()
 	{
 		PrintWriter ani_del_out = null;
-		String fileName = doc_type + "_deletion_" + epoch + "_" + archive_date + ".out";
+		String fileName = doc_type + "_deletion_" + epoch + "_" + archive_date + "_" + archive_date_end + ".out";
 
 		try {
 

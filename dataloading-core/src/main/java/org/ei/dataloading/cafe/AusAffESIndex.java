@@ -51,19 +51,21 @@ public class AusAffESIndex {
 	private final String REGION = "us-east-1";
 	
 	//private String HOST = "search-evcafe-prod-h7xqbezrvqkb5ult6o4sn6nsae.us-east-1.es.amazonaws.com";  // for dataloading Ec2 (ES 2.3 no longer exist)
-	  private String HOST = "search-evcafe5-ucqg6c7jnb4qbvppj2nee4muwi.us-east-1.es.amazonaws.com";
+	// private String HOST = "search-evcafe5-ucqg6c7jnb4qbvppj2nee4muwi.us-east-1.es.amazonaws.com";
+	 private String HOST = "vpc-ev-cafe-cert-j6hoqgea5hcjdqphkjw3xzknqy.us-east-1.es.amazonaws.com";		//Added 05/10/18 ES CERT V 6.2 
 	
 	//private String HOST = "localhost:8060";    // for Prod from localhost ES V 2.3
 	//private String HOST = "localhost:8040";    // for Prod from localhost ES V 5.1
 	//private final String HOST = "search-evcafeauaf-v6tfjfyfj26rtoneh233lzzqtq.us-east-1.es.amazonaws.com";  // for testing
 	//private String HOST = "localhost:8050";    // evauaf cluster using tunnel, localhost
 	private String ENDPOINT_ROOT = "http://" + HOST;
-	private String PATH = "/cafe/_bulk";
+	private String PATH = "/cafe/_bulk";		//PROD up to before ES V 6.2
 	private String ENDPOINT = ENDPOINT_ROOT + PATH;
 	
 	
 	private int recsPerbulk = 10;
 	private String action;
+	private String index_name;		// either author or affiliation
 	private int curRecNum = 1;
 
 	private int status = 0;
@@ -90,14 +92,17 @@ public class AusAffESIndex {
 		
 	}
 	
-	public AusAffESIndex(int bulkSize, String esDomain, String esAction)
+	public AusAffESIndex(int bulkSize, String esDomain, String esAction, String indexName)
 	{
 		recsPerbulk = bulkSize;
 		action = esAction;
+		index_name = indexName;		// Added 05/10/2018 as ES 6 and up does not combine diff types in one index
+		
 		
 		HOST = esDomain;
 		ENDPOINT_ROOT = "http://" + HOST;
-		PATH = "/cafe/_bulk";
+		//PATH = "/cafe/_bulk";   // PROD up to before ES V 6.2
+		PATH = "/" + index_name + "/_bulk";		// Added 05/10/2018 due to ES V 6.2 split diff types to diff indices
 		ENDPOINT = ENDPOINT_ROOT + PATH;
 		
 		midTime = System.currentTimeMillis();
