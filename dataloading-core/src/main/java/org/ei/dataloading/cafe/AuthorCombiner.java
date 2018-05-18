@@ -57,6 +57,7 @@ public class AuthorCombiner {
 	static String password = "ei3it";
 	static int loadNumber = 0;
 	static String tableName = "author_profile";
+	static String auDocCount_tableName = "author_doc_count";		// added 05/10/2018 to fetch ab doc_count of AU in ES
 	static String metadataTableName = "hh_au_metadata";
 	static String action = "new";
 	int updateNumber;
@@ -65,6 +66,7 @@ public class AuthorCombiner {
 	private static String tableToBeTruncated = "APR_ES_INDEXED";
 	private static String esIndexedIdsSqlldrFileName = "aprESIndexedIdsFileLoader.sh";
 	static String esIndexType = "direct";
+	static String esIndexName = "author";		// added 05/10/2018 as ES 6.2 and up split types in separate indices
 
 	static int ESdirSeq_ID = 1;
 
@@ -102,7 +104,7 @@ public class AuthorCombiner {
 
 	public static void main(String args[])
 	{
-		if(args.length >13)
+		if(args.length >15)
 		{
 			if(args[0] !=null)
 			{
@@ -119,7 +121,7 @@ public class AuthorCombiner {
 			if(args[3] !=null)
 			{
 				username = args[3];
-				
+
 				System.out.println("Schema: " + username);
 			}
 			if(args[4] !=null)
@@ -193,6 +195,24 @@ public class AuthorCombiner {
 				}
 			}
 
+			if(args[14] !=null)
+			{
+				auDocCount_tableName = args[14];
+				System.out.println("Doc Count table for Author: " + auDocCount_tableName);
+			}
+			if(args[15] !=null)
+			{
+				esIndexName = args[15].toLowerCase().trim();
+				if(esIndexName.equalsIgnoreCase("author"))
+
+					System.out.println("ES Index Name: " + esIndexName);
+				else
+				{
+					System.out.println("Invalid ES Index Name for Author Index, re-try with ESIndexName author");
+					System.exit(1);
+				}
+			}
+
 
 		}
 		else
@@ -216,7 +236,7 @@ public class AuthorCombiner {
 			writer.init(ESdirSeq_ID);
 			//s3upload = new AuAfESIndex(doc_type);  for ES index using Jest
 
-			esIndex = new AusAffESIndex(recsPerEsbulk, esDomain, action);
+			esIndex = new AusAffESIndex(recsPerEsbulk, esDomain, action, esIndexName);
 
 
 			AuthorCombiner c = new AuthorCombiner();
@@ -240,8 +260,8 @@ public class AuthorCombiner {
 				c.writeCombinedByWeekNumber();
 			}
 
-			
-			
+
+
 			//added 05/10/2017 to update status = "indexed" for the docs that successfully indexed to ES
 			UpdateProfileTableESStatus profileESUpdate = new UpdateProfileTableESStatus(doc_type, action,username,password,loadNumber,tableToBeTruncated,url,esIndexedIdsSqlldrFileName);
 			profileESUpdate.writeIndexedRecs(esIndex.getESIndexedDocsList());
@@ -268,8 +288,13 @@ public class AuthorCombiner {
 
 			if(!(action.isEmpty()) && (action.equalsIgnoreCase("new") || action.equalsIgnoreCase("update")))
 			{
-				query = "select * from " +  tableName + " where authorid in (select AUTHOR_ID from " + metadataTableName + 
+				query = "select select a.M_ID,EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AUTHORID,a.STATUS,a.DATE_CREATED,DATE_REVISED,a.INITIALS,INDEXEDNAME,a.SURENAME,a.GIVENNAME,a.NAME_VARIANT,"+
+						"a.CLASSIFICATION_SUBJABBR,a.CLASSIFICATION_ASJC,a.PUBLICATION_RANGE,a.JORNAL_HISTORY_TYPE,a.JOURNALS,a.CURRENT_AFF_ID,a.CURRENT_AFF_TYPE,a.CURRENT_AFF_RELATIONSHIP,"+
+						"a.PARENT_AFF_ID,a.PARENT_AFF_TYPE,a.PARENT_AFF_RELATIONSHIP,a.HISTORY_AFFILIATIONID,a.LOADNUMBER,a.DATABASE,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,"+
+						"a.UPDATENUMBER,a.E_ADDRESS,a.ORCID,a.SOURCE_TITLE,a.ES_STATUS, b.DOC_COUNT as DOC_COUNT from " +  tableName + 
+						" a left outer join " + auDocCount_tableName + " b on a.AUTHORID = b.AUTHOR_ID where a.authorid in (select AUTHOR_ID from " + metadataTableName + 
 						" where STATUS='matched' and dbase='cpx')";
+				
 				System.out.println("query");
 
 				stmt.setFetchSize(200);
@@ -312,7 +337,7 @@ public class AuthorCombiner {
 
 				System.out.println("Got records... from table: " + tableName);
 				getDeletionList(rs);
-				
+
 				esIndex.createBulkDelete(doc_type, auId_deletion_list);
 			}
 
@@ -374,13 +399,16 @@ public class AuthorCombiner {
 			{
 				/*query = "select * from " +  tableName + " where loadnumber=" + loadNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + 
 						" where STATUS='matched' and dbase='cpx')";*/   // used for intial/pre-release ES index, till loadnumber: 2017261
-				
-				query = "select * from " +  tableName + " where ES_STATUS is null and authorid in (select AUTHOR_ID from " + metadataTableName + 
-						" where STATUS='matched' and dbase='cpx')";
+
+				query = "select a.M_ID,EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AUTHORID,a.STATUS,a.DATE_CREATED,DATE_REVISED,a.INITIALS,INDEXEDNAME,a.SURENAME,a.GIVENNAME,a.NAME_VARIANT,"+
+						"a.CLASSIFICATION_SUBJABBR,a.CLASSIFICATION_ASJC,a.PUBLICATION_RANGE,a.JORNAL_HISTORY_TYPE,a.JOURNALS,a.CURRENT_AFF_ID,a.CURRENT_AFF_TYPE,a.CURRENT_AFF_RELATIONSHIP,"+
+						"a.PARENT_AFF_ID,a.PARENT_AFF_TYPE,a.PARENT_AFF_RELATIONSHIP,a.HISTORY_AFFILIATIONID,a.LOADNUMBER,a.DATABASE,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,"+
+						"a.UPDATENUMBER,a.E_ADDRESS,a.ORCID,a.SOURCE_TITLE,a.ES_STATUS, b.DOC_COUNT as DOC_COUNT from " +  tableName + " a left outer join " + auDocCount_tableName + " b on a.AUTHORID = b.AUTHOR_ID"+
+						"where a.ES_STATUS is null and a.authorid in (select AUTHOR_ID from " + metadataTableName +	" where STATUS='matched' and dbase='cpx')";
 
 
 				System.out.println(query);
-				
+
 				stmt.setFetchSize(200);
 				rs = stmt.executeQuery(query);
 
@@ -412,54 +440,30 @@ public class AuthorCombiner {
 				updateNumber=loadNumber;
 				/*query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + 
 						" where STATUS='matched' and dbase='cpx')";*/      // used for intial/pre-release ES index, till updatenumber: 2017366
-				
-				query = "select * from " +  tableName + " where ES_STATUS is null and authorid in (select AUTHOR_ID from " + metadataTableName + 
-						" where STATUS='matched' and dbase='cpx')";
-				
-				
 
+				//Prod
+				/*query = "select * from " +  tableName + " where ES_STATUS is null and authorid in (select AUTHOR_ID from " + metadataTableName + 
+						" where STATUS='matched' and dbase='cpx')";*/
 
-				// for testing
+				//HH added 05/07/2018 explicitly add all author_profile columns to join with au doc counts table for ES index as per TM request
 
-				/*query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx') "+
-				" and AUTHORID in ('7003368787' , '56274927700', '55341202700', '55184666600', '35314476100', '7006070058' , '55770916500',"
-				+ "'33967479000', '56912187400', '15751442200')";*/
-
-
-				/*query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx') "+
-						" and AUTHORID = '35610162600'";*/
-
-				/*query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx') "+
-						" and rownum<2";
+				/*query = "select a.M_ID,EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AUTHORID,a.STATUS,a.DATE_CREATED,DATE_REVISED,a.INITIALS,INDEXEDNAME,a.SURENAME,a.GIVENNAME,a.NAME_VARIANT,"+
+				"a.CLASSIFICATION_SUBJABBR,a.CLASSIFICATION_ASJC,a.PUBLICATION_RANGE,a.JORNAL_HISTORY_TYPE,a.JOURNALS,a.CURRENT_AFF_ID,a.CURRENT_AFF_TYPE,a.CURRENT_AFF_RELATIONSHIP,"+
+				"a.PARENT_AFF_ID,a.PARENT_AFF_TYPE,a.PARENT_AFF_RELATIONSHIP,a.HISTORY_AFFILIATIONID,a.LOADNUMBER,a.DATABASE,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,"+
+				"a.UPDATENUMBER,a.E_ADDRESS,a.ORCID,a.SOURCE_TITLE,a.ES_STATUS, b.DOC_COUNT as DOC_COUNT  from " +  tableName + " a left outer join " + auDocCount_tableName + " b on a.AUTHORID = b.AUTHOR_ID "+
+				"where ES_STATUS is null and authorid in (select AUTHOR_ID from " + metadataTableName + " where STATUS='matched' and dbase='cpx')";
 				 */
 
-				// 02/22/2017 to test author with chinees name ( made up chinees name to test)
 
-				/*query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx') "+
-				" and AUTHORID = '6603802631'";*/
+				//Testing
 
-
-				// 04/03/2017 to test why history_display_name in ES not showing as expected as in DB tables "Author_AFF"
-
-				/*query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx') "+
-						" and AUTHORID = '55820750800'";*/
+				query = "select a.M_ID,EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AUTHORID,a.STATUS,a.DATE_CREATED,DATE_REVISED,a.INITIALS,INDEXEDNAME,a.SURENAME,a.GIVENNAME,a.NAME_VARIANT,"+
+						"a.CLASSIFICATION_SUBJABBR,a.CLASSIFICATION_ASJC,a.PUBLICATION_RANGE,a.JORNAL_HISTORY_TYPE,a.JOURNALS,a.CURRENT_AFF_ID,a.CURRENT_AFF_TYPE,a.CURRENT_AFF_RELATIONSHIP,"+
+						"a.PARENT_AFF_ID,a.PARENT_AFF_TYPE,a.PARENT_AFF_RELATIONSHIP,a.HISTORY_AFFILIATIONID,a.LOADNUMBER,a.DATABASE,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,"+
+						"a.UPDATENUMBER,a.E_ADDRESS,a.ORCID,a.SOURCE_TITLE,a.ES_STATUS, b.DOC_COUNT as DOC_COUNT  from " +  tableName + " a left outer join " + auDocCount_tableName + " b on a.AUTHORID = b.AUTHOR_ID "+
+						"where a.ES_STATUS='indexed' and a.authorid in (select AUTHOR_ID from " + metadataTableName + " where STATUS='matched' and dbase='cpx') and rownum<501";
 
 
-				// 04/04/2017, only index AU profile that has BD CPX abstract records in fast DEV for Dayton to test EV App
-
-				/*query =  "select * from " +  tableName + "  where AUTHORID in (select author_id from ap_correction1.Cafe_au_lookup where pui "
-						+ " in (select pui from ap_correction1.AUTHOR_MID)) and rownum<2";*/
-
-				//06/08/2017 re-index AU profile to include new extra fields (i.e. updateepoch, ..)
-				
-				//query = "select * from " +  tableName + " where authorid in (select AUID from db_cafe.HH_APR_ES_IDS)" ;
-				
-				//7/12/2017 index 4 authors temp in ES to test Cafe deletion and ES deletion accordingly if status='deleted'
-				//query = "select * from author_profile where authorid in ('57192112172','7004484927','57188837552','55964027700','7006016504')" ;
-				
-				
-						
-						
 
 				System.out.println(query);
 
@@ -582,7 +586,7 @@ public class AuthorCombiner {
 
 					// UPDATEEPOCH (place holder for future filling with SQS epoch)
 					rec.put(AuAfCombinedRec.UPDATEEPOCH, "");
-					
+
 					//LOADNUMBER
 					if(rs.getString("LOADNUMBER") !=null)
 					{
@@ -885,6 +889,12 @@ public class AuthorCombiner {
 
 					//CURRENT DEPT AFFILIATION COUNTRY
 					rec.put(AuAfCombinedRec.CURRENT_DEPT_AFFILIATION_COUNTRY, auaf.getCurrentDeptAffiliation_Country());
+
+					//Added 05/07/2018: DOC_COUNT 
+					if(rs.getString("DOC_COUNT") !=null)
+					{
+						rec.put(AuAfCombinedRec.DOC_COUNT,Integer.toString(rs.getInt("DOC_COUNT")));
+					}
 				}
 
 				/*if (rec_count >= 100)

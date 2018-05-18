@@ -59,6 +59,7 @@ public class AusAffDeletion {
 	static String source = "cafe";		// either cafe or bd
 	static int recsPerEsbulk;
 	static String esDomain = "search-evcafe5-ucqg6c7jnb4qbvppj2nee4muwi.us-east-1.es.amazonaws.com";
+	static String esIndexName;		// added 05/10/2018 as ES 6.2 and up split types in separate indices
 
 
 
@@ -85,6 +86,11 @@ public class AusAffDeletion {
 			if(args[0] !=null)
 			{
 				doc_type = args[0];
+				
+				if(doc_type.toLowerCase().trim().equalsIgnoreCase("apr"))
+					esIndexName = "author";
+				else if(doc_type.toLowerCase().trim().equalsIgnoreCase("ipr"))
+					esIndexName = "affiliation";
 			}
 
 			if(args[1] !=null)
@@ -150,7 +156,7 @@ public class AusAffDeletion {
 		{
 			AusAffDeletion c = new AusAffDeletion();
 
-			c.esIndexObj = new AusAffESIndex(recsPerEsbulk, esDomain, action);
+			c.esIndexObj = new AusAffESIndex(recsPerEsbulk, esDomain, action, esIndexName);
 
 			c.con = c.getConnection(url, driver, username, password);
 
