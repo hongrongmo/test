@@ -1,0 +1,20 @@
+###########################################################################
+# This file is used for overriding the properties coming from the dynamo DB,
+# Add properties into this file if you really want to override the properties
+# from dynamo DB
+###########################################################################
+release.version=release-10202014v1
+#CSAS_BASE_URL=http://idc311-services.elsevier.com
+#SSO_CORE_REDIRECT_URL=http://idc311-acw.elsevier.com/SSOCore/?return=
+ipc.lucene.index.dir=/Users/robbinrs/evdata/ipc
+ecla.lucene.index.dir=/Users/robbinrs/evdata/ecla
+uspto.lucene.index.dir=/Users/robbinrs/evdata/uspto
+APP_DOMAIN=localhost.engineeringvillage.com:8443
+SERVERLOCATION=localhost.engineeringvillage.com:8080
+data.url=http://localhost.engineeringvillage.com:8080
+citedby.url=http://localhost.engineeringvillage.com:8080/citedby/servlet/CitedByService
+log.url=http://localhost.engineeringvillage.com:8080/logservice/servlet/LogServer
+auth.url=http://localhost.engineeringvillage.com:8080/sessionservice/servlet/SessionService
+PRODUCT_SPECIFIC_LINKS=<img src=\"http://localhost.engineeringvillage.com:8080/static/images/EV-logo.gif\"></img>
+fast.docview.base.url=http://localhost.engineeringvillage.com:8080/docview
+HTTPS_PORT=8443

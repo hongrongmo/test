@@ -6,12 +6,16 @@ import java.io.*;
 import java.sql.Clob;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.PreparedStatement;
 import java.sql.ResultSetMetaData;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.net.*;
 import java.util.regex.*;
+import java.util.Map.Entry;
 
 import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -27,6 +31,7 @@ import org.ei.dataloading.inspec.loadtime.*;
 import org.ei.dataloading.cafe.*;
 import org.ei.domain.*;
 import org.ei.query.base.*;
+import org.ei.dataloading.cafe.*;
 import org.elasticsearch.action.get.GetResponse;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.node.Node;
@@ -38,18 +43,74 @@ import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
 
 import io.searchbox.client.JestClient;
+import io.searchbox.client.JestResult;
 import io.searchbox.client.JestClientFactory;
 import io.searchbox.client.config.HttpClientConfig;
 import io.searchbox.core.Index;
 import io.searchbox.core.Search;
 import io.searchbox.core.SearchResult;
+//import io.searchbox.core.QueryBuilder;
 import io.searchbox.core.SearchResult.Hit; 
 
+import org.ei.dataloading.DataLoadDictionary;
 import org.ei.dataloading.bd.loadtime.XmlCombiner;
 import org.ei.dataloading.CombinedXMLWriter;
 import org.ei.common.bd.*;
 import org.ei.common.*;
+import org.ei.dataloading.awss3.AmazonS3Service;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+
+import com.amazonaws.AmazonClientException;
+import com.amazonaws.AmazonServiceException;
+import com.amazonaws.auth.profile.ProfileCredentialsProvider;
+import com.amazonaws.services.s3.AmazonS3;
+import com.amazonaws.services.s3.AmazonS3Client;
+import com.amazonaws.services.s3.model.GetObjectRequest;
+import com.amazonaws.services.s3.model.S3Object;
+import com.amazonaws.services.s3.model.ObjectMetadata;
+import com.amazonaws.services.s3.model.PutObjectResult;
+import com.amazonaws.services.s3.model.PutObjectRequest;
+import com.amazonaws.services.sqs.AmazonSQS;
+import com.amazonaws.services.sqs.AmazonSQSClientBuilder;
+import com.amazonaws.services.sqs.model.AmazonSQSException;
+import com.amazonaws.services.sqs.model.CreateQueueRequest;
+import com.amazonaws.services.sqs.model.ListQueuesResult;
+import com.amazonaws.auth.AWSCredentialsProvider;
+import com.amazonaws.auth.InstanceProfileCredentialsProvider;
+import com.amazonaws.services.sqs.AmazonSQSClient;
+import com.amazonaws.services.sqs.model.DeleteMessageRequest;
+import com.amazonaws.services.sqs.model.DeleteQueueRequest;
+import com.amazonaws.services.sqs.model.Message;
+import com.amazonaws.services.sqs.model.ReceiveMessageRequest;
+import com.amazonaws.services.sqs.model.SendMessageRequest;
+
+import java.io.IOException;
+import java.util.Collections;
+
+import org.elasticsearch.action.index.IndexResponse;
+import org.elasticsearch.client.Client;
+import org.elasticsearch.client.transport.TransportClient;
+import org.elasticsearch.common.settings.Settings;
+import org.elasticsearch.common.transport.InetSocketTransportAddress;
+import org.elasticsearch.node.Node;
+import org.elasticsearch.node.NodeBuilder;
+import org.elasticsearch.search.SearchHit;
+import org.elasticsearch.action.search.SearchResponse;
+import org.elasticsearch.index.query.QueryBuilders;
+import org.elasticsearch.index.query.QueryBuilders.*;
+import org.apache.http.client.HttpClient;
+import org.apache.http.impl.client.CloseableHttpClient;
+
+import javax.json.*;
 
 public class NewDataTesting
 {
@@ -57,7 +118,7 @@ public class NewDataTesting
 	//public static String URL="jdbc:oracle:thin:@127.0.0.1:5523:EIA";
 	public static String URL="jdbc:oracle:thin:@eid.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eid";
 	public static String driver="oracle.jdbc.driver.OracleDriver";
-	public static String username="ap_correction";
+	public static String username="ap_correction1";
 	public static String username1="ba_s300";
 	public static String password="ei3it";
 	public static String password1="ei7it";
@@ -173,7 +234,11 @@ public class NewDataTesting
 		}
 		else  if(action.equals("testElasticSearch"))
 		{
-			test.testElasticSearch();
+			test.testBuildElasticSearch();
+		}
+		else  if(action.equals("testSearchElasticSearch"))
+		{
+			test.testSearchElasticSearch();
 		}
 		else  if(action.equals("inspecNIParsing"))
 		{
@@ -251,9 +316,46 @@ public class NewDataTesting
 		{
 			test.getAllMIDFromFastCPXIP_PROD();
 		}
+		else  if(action.equals("getS3"))
+		{
+			test.testGetAWSS3(updateNumber);
+		}
+		else  if(action.equals("putS3"))
+		{
+			test.testPutAWSS3(updateNumber);
+		}
+		else  if(action.equals("addSqs"))
+		{
+			test.testAddSqs();
+		}
+		else  if(action.equals("listSqs"))
+		{
+			test.testListSqs();
+		}		
+		else  if(action.equals("getSqs"))
+		{
+			test.testGetSqs(updateNumber);
+		}
+		else  if(action.equals("runSqs"))
+		{
+			test.fullTestRunSQS();
+		}		
+		else  if(action.equals("getSqsMessage"))
+		{
+			test.getSqsMessage(updateNumber);
+		}
+		else  if(action.equals("testBuildAuthorESDoc"))
+		{
+			test.testBuildAuthorESDoc(updateNumber);
+		}
+		else  if(action.equals("readJson"))
+		{
+			test.parseJsonObject(updateNumber);
+		}
 		else
 		{
-			test.getData(database);
+			System.out.println("we dont know your input "+action);
+			System.exit(1);
 		}
 		endTime = System.currentTimeMillis();
 		System.out.println("total Time used "+(endTime-startTime)/1000.0+" seconds");
@@ -1534,17 +1636,779 @@ public class NewDataTesting
 		
 	}
 	
-	private void testElasticSearch() throws Exception
+	private void testBuildAuthorESDoc(String loadnumber) throws Exception
+	{
+		// doc_type should be "apr"
+		Connection con = null;
+		String doc_type="apr";
+		String esIndexType = "file";
+		int ESdirSeq_ID = 1;
+		int loadNumber = Integer.parseInt(loadnumber);
+		int fileSize =500;
+		WriteEsDocToFile outputFile = new WriteEsDocToFile(fileSize);
+		CombinedAuAfJSON writer = new CombinedAuAfJSON(doc_type,loadNumber,outputFile,esIndexType);
+		writer.init(ESdirSeq_ID);
+		
+		con = getConnection(this.URL,this.driver,this.username,this.password);
+
+		String esDir = writer.getEsDirName();
+		if(loadNumber ==1)
+		{
+			writeCombinedByTable(con,writer);
+		}
+		else
+		{
+			writeCombinedByWeekNumber(con,writer,loadNumber);
+		}
+		
+	}
+	
+	public void parseJsonObject(String filename)
+	{
+		BufferedReader in = null;
+		try{
+			in = new BufferedReader(new FileReader(new File(filename)));
+		    JsonReader rdr = Json.createReader(in); 
+		 
+		    //JsonObject obj = rdr.readObject();
+		    //JsonArray results = obj.getJsonArray("evrecords");
+		    JsonArray results = rdr.readArray();
+		    for (JsonObject result : results.getValuesAs(JsonObject.class)) {
+		    	System.out.print(result.getString("pui")+"\t");		          
+		    	System.out.println(result.getString("doi", ""));		          
+		    }
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	public void writeCombinedByTable(Connection con, CombinedAuAfJSON writer) throws Exception
+	{
+		Statement stmt = null;
+		ResultSet rs = null;
+		String query=null;
+	}
+	
+	
+	public void writeCombinedByWeekNumber(Connection con, CombinedAuAfJSON writer, int loadNumber) throws Exception
+	{
+		action = "new";
+		Statement stmt = null;
+		ResultSet rs = null;
+
+		String query=null;
+
+		try
+		{
+			stmt = con.createStatement();
+			System.out.println("Running the query...");
+			
+			if(!(action.isEmpty()) && action.equalsIgnoreCase("new"))
+			{
+				/*query = "select * from " +  tableName + " where loadnumber=" + loadNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + 
+						" where STATUS='matched' and dbase='cpx')";*/   // used for intial/pre-release ES index, till loadnumber: 2017261
+				
+				query = "select * from db_cafe.AUTHOR_PROFILE where ES_STATUS is null and authorid in (select AUTHOR_ID from db_cafe.cmb_au_lookup where STATUS='matched' and dbase='cpx' and loadnumber="+loadNumber+")";
+
+
+				System.out.println(query);
+				
+				stmt.setFetchSize(200);
+				rs = stmt.executeQuery(query);			
+				writeRecs(rs,writer,con);
+
+				//esIndex.ProcessBulk();
+				//esIndex.end();
+				
+				System.out.println("Wrote records.");
+			}
+			else if(!(action.isEmpty()) && action.equalsIgnoreCase("update"))
+			{
+				updateNumber=String.valueOf(loadNumber);
+				/*query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + 
+						" where STATUS='matched' and dbase='cpx')";*/      // used for intial/pre-release ES index, till updatenumber: 2017366
+				
+				query = "select * from db_cafe." +  tableName + " where ES_STATUS is null and authorid in (select AUTHOR_ID from cmb_au_lookup  where STATUS='matched' and dbase='cpx')";
+				
+
+				System.out.println(query);
+
+				stmt.setFetchSize(200);
+				rs = stmt.executeQuery(query);
+
+				System.out.println("Got records... from table: " + tableName);
+
+				//writeRecs(rs,writer);
+		
+				//esIndex.ProcessBulk();
+				//esIndex.end();
+
+				System.out.println("Wrote records.");
+
+			}
+
+			else if(!(action.isEmpty()) && action.equalsIgnoreCase("delete"))
+			{
+				// need to check with Hongrong
+
+				updateNumber=String.valueOf(loadNumber);
+				query = "select M_ID from db_cafe." +  tableName + " where updatenumber=" + updateNumber; 
+
+				System.out.println(query);
+
+				stmt.setFetchSize(200);
+				rs = stmt.executeQuery(query);
+
+				System.out.println("Got records... from table: " + tableName);
+				//getDeletionList(rs,writer);
+
+				//esIndex.createBulkDelete(doc_type, auId_deletion_list);
+
+			}
+
+
+		}
+
+		finally
+		{
+			if(rs !=null)
+			{
+				try
+				{
+					rs.close();
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+
+			if(stmt !=null)
+			{
+				try
+				{
+					stmt.close();
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+
+			if(con !=null)
+			{
+				try
+				{
+					con.close();
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+		}
+
+	}
+	
+	public void writeRecs(ResultSet rs, CombinedAuAfJSON writer, Connection con) throws Exception
+	{
+		int count =0, rec_count = 1;
+		String currentdept_affid= null;
+		String email="";
+		String doc_type="apr";
+		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+		while (rs.next())
+		{
+			try
+			{
+
+				AuAfCombinedRec rec = new AuAfCombinedRec();
+				AuAffiliation auaf = new AuAffiliation();
+
+				String date= dateFormat.format(new Date());
+
+				if(doc_type !=null && doc_type.equalsIgnoreCase("apr"))
+				{
+
+
+					//M_ID
+					rec.put(AuAfCombinedRec.DOCID, rs.getString("M_ID"));
+
+					// UPDATEEPOCH (place holder for future filling with SQS epoch)
+					rec.put(AuAfCombinedRec.UPDATEEPOCH, "");
+					
+					//LOADNUMBER
+					if(rs.getString("LOADNUMBER") !=null)
+					{
+						rec.put(AuAfCombinedRec.LOAD_NUMBER, Integer.toString(rs.getInt("LOADNUMBER")));
+					}
+
+					//UPDATENUMBER
+					if(rs.getString("UPDATENUMBER") !=null)
+					{
+						rec.put(AuAfCombinedRec.UPDATE_NUMBER, Integer.toString(rs.getInt("UPDATENUMBER")));
+					}
+
+
+					//EID
+					if(rs.getString("EID") !=null)
+					{
+						rec.put(AuAfCombinedRec.EID, rs.getString("EID"));
+					}
+
+					//DOC_TYPE
+					if(doc_type !=null)
+					{
+						rec.put(AuAfCombinedRec.DOC_TYPE, doc_type);
+					}
+
+					//STATUS
+					if(rs.getString("STATUS") !=null)
+					{
+						rec.put(AuAfCombinedRec.STATUS, rs.getString("STATUS"));
+					}
+
+					//TIMESTAMP in DB, in ES called "LOADDATE"
+					if(rs.getString("TIMESTAMP") !=null)
+					{
+						//rec.put(AuAfCombinedRec.TIMESTAMP, timeStampFormat(rs.getString("TIMESTAMP")));
+						rec.put(AuAfCombinedRec.LOADDATE, rs.getString("TIMESTAMP"));
+					}
+
+					//INDEXDATE in DB, in ES called "ITEMTRANSACTIONID"
+					if(rs.getString("INDEXED_DATE") !=null)
+					{
+						rec.put(AuAfCombinedRec.ITEMTRANSACTIONID, rs.getString("INDEXED_DATE"));
+					}
+
+					// EPOCH in DB, in ES called "INDEXEDDATE"
+					if(rs.getString("EPOCH") !=null)
+					{
+						rec.put(AuAfCombinedRec.INDEXEDDATE, rs.getString("EPOCH"));
+					}
+
+					// ES Index Data (Current DateTime)
+					rec.put(AuAfCombinedRec.ESINDEXTIME, date);
+
+					//AUTHORID
+					if(rs.getString("AUTHORID") !=null)
+					{
+						rec.put(AuAfCombinedRec.AUID, rs.getString("AUTHORID"));
+					}
+
+					//ORCID, comment for now bc it is not in author_profile table yet
+					if(rs.getString("ORCID") !=null)
+					{
+						rec.put(AuAfCombinedRec.ORCID, rs.getString("ORCID"));
+					}
+
+					//PREFERRED_INI
+					if(rs.getString("INITIALS") !=null)
+					{
+						rec.put(AuAfCombinedRec.PREFERRED_INI, DataLoadDictionary.mapEntity(rs.getString("INITIALS")));
+					}
+
+					//PREFERRED_FIRST
+					if(rs.getString("GIVENNAME") !=null)
+					{
+						rec.put(AuAfCombinedRec.PREFERRED_FIRST, DataLoadDictionary.mapEntity(rs.getString("GIVENNAME")));
+					}
+
+					//PREFERRED_LAST
+					if(rs.getString("SURENAME") !=null)
+					{
+						rec.put(AuAfCombinedRec.PREFERRED_LAST, DataLoadDictionary.mapEntity(rs.getString("SURENAME")));
+					}
+
+					//NAME_VARAINT (INITIALS, First, Last)
+					if(rs.getString("NAME_VARIANT") !=null)
+					{
+						prepareNameVariant(rs.getString("NAME_VARIANT"),rec);
+					}
+
+
+					//SUBJABBR
+					if(rs.getString("CLASSIFICATION_SUBJABBR") !=null)
+					{
+						rec.put(AuAfCombinedRec.CLASSIFICATION_SUBJABBR, rs.getString("CLASSIFICATION_SUBJABBR"));
+
+						//SUBJECT_CLUSETR
+						prepareSubjabbr(rs.getString("CLASSIFICATION_SUBJABBR"),rec);
+					}
+
+					//PUBLICATION_RANGE
+					if(rs.getString("PUBLICATION_RANGE") !=null)
+					{
+						String[] ranges = rs.getString("PUBLICATION_RANGE").split("-");
+						if(ranges[0] !=null)
+						{
+							rec.put(AuAfCombinedRec.PUBLICATION_RANGE_FIRST, ranges[0]);
+						}
+						if(ranges[1] !=null)
+						{
+							rec.put(AuAfCombinedRec.PUBLICATION_RANGE_LAST, ranges[1]);
+						}
+					}
+
+					//SOURCE_TITLE
+
+					String sourceTitles = getStringFromClob(rs.getClob("SOURCE_TITLE"));
+
+					if(sourceTitles !=null)
+					{
+						rec.put(AuAfCombinedRec.SOURCE_TITLE, sourceTitles);
+					}
+
+					//ISSN
+					String journals = getStringFromClob(rs.getClob("JOURNALS"));	
+					if(journals !=null)
+					{
+						prepareISSN(journals,rec);
+					}
+
+					if(rs.getString("E_ADDRESS") !=null)
+					{
+						String []e_mail = rs.getString("E_ADDRESS").split(Constants.IDDELIMITER);
+						if(e_mail.length >1)
+						{
+							email = e_mail[1];
+						}
+
+						rec.put(AuAfCombinedRec.EMAIL_ADDRESS, email);
+					}
+
+					//CURRENT_AFFILIATION_ID
+					if(rs.getString("CURRENT_AFF_ID") !=null)
+					{
+						if(rs.getString("CURRENT_AFF_TYPE") !=null && rs.getString("CURRENT_AFF_TYPE").equalsIgnoreCase("parent"))
+						{
+							auaf.setAffiliationId(rs.getString("CURRENT_AFF_ID"));
+						}
+						else
+						{
+							currentdept_affid = rs.getString("CURRENT_AFF_ID");
+						}
+
+					}
+					//CURRENT_PARENT_AFFILIATION_ID
+					if(rs.getString("PARENT_AFF_TYPE") !=null && rs.getString("PARENT_AFF_ID") !=null)
+					{
+						if(rs.getString("PARENT_AFF_TYPE").trim().equalsIgnoreCase("parent"))
+						{
+							auaf.setAffiliationId(rs.getString("PARENT_AFF_ID"));
+						}
+					}
+
+					//Current PARENT AFFILIATION INFO
+					if(!(auaf.getAffiliationId().isEmpty()))
+					{
+						prepareCurrentAffiliation(auaf.getAffiliationId(), currentdept_affid,auaf,con);
+					}
+
+					String history_affiliationIds = getStringFromClob(rs.getClob("HISTORY_AFFILIATIONID"));
+					/*
+					if(history_affiliationIds !=null)
+					{					
+						prepareHistoryAffiliationIds(history_affiliationIds);
+
+						if(affiliation_historyIds_List.size() >0)
+						{	
+							prepareHistoryAffiliation();						
+						}
+					}
+					*/
+
+					//CITY
+					auaf.setAffiliationCity();
+
+					//COUNTRY
+					auaf.setAffiliationCountry();
+
+					//Parents AFFILIATION ID
+					auaf.setParentAffiliationsId();
+
+
+					//CURRENT PARENT AFFILIATION_ID
+					rec.put(AuAfCombinedRec.AFID, auaf.getAffiliationId());
+
+					//CURRENT PARENT DISPLAY_NAME
+					rec.put(AuAfCombinedRec.DISPLAY_NAME, auaf.getAffiliationDisplayName());
+
+					//CURRENT PARENT DISPLAY_CITY
+					rec.put(AuAfCombinedRec.DISPLAY_CITY, auaf.getAffiliationDisplayCity());
+
+					//CURRENT PARENT DISPLAY_COUNTRY
+					rec.put(AuAfCombinedRec.DISPLAY_COUNTRY, auaf.getAffiliationDisplayCountry());
+
+					//CURRENT PARENT SORT_NAME
+					rec.put(AuAfCombinedRec.AFFILIATION_SORT_NAME, auaf.getAffiliationSortName());
+
+					//PARENT AFFILIATION HISTORY_ID
+					rec.put(AuAfCombinedRec.AFFILIATION_HISTORY_ID, auaf.getHistoryAffid());
+
+					// PARENT AFFILIATION HISTORY_DISPLAY_NAME
+					rec.put(AuAfCombinedRec.HISTORY_DISPLAY_NAME, auaf.getHistoryDisplayName());
+
+					// PARENT AFFILIATION HISTORY_CITY
+					rec.put(AuAfCombinedRec.HISTORY_CITY, auaf.getHistoryCity());
+
+					// PARENT AFFILIATION HISTORY_COUNTRY
+					rec.put(AuAfCombinedRec.HISTORY_COUNTRY, auaf.getHistoryCountry());
+
+					//CURRENT_AND_HISTORY PARENT PREFERRED_NAME
+					rec.put(AuAfCombinedRec.AFFILIATION_PREFERRED_NAME, auaf.getParentAffiliationsPreferredName());
+
+					//CURRENT_AND_HOSTORY PARENT NAME_VARIANT
+					rec.put(AuAfCombinedRec.AFFILIATION_VARIANT_NAME, auaf.getParentAffiliationsNameVariant());
+
+					//CURRENT_AND_HISTORY PARENT NAMEID
+					rec.put(AuAfCombinedRec.NAME_ID, auaf.getAffiliationNameId());
+
+					//CURRENT DEPT AFFILIATION_ID
+					rec.put(AuAfCombinedRec.CURRENT_DEPT_AFFILIATION_ID, auaf.getCurrentDeptAffiliation_Id());
+
+					//CURRENT DEPT AFFILIATION DISPLAY_NAME
+					rec.put(AuAfCombinedRec.CURRENT_DEPT_AFFILIATION_DISPLAY_NAME, DataLoadDictionary.mapEntity(auaf.getCurrentDeptAffiliation_DisplayName()));
+
+					//CURRENT DEPT AFFILIATION CITY
+					rec.put(AuAfCombinedRec.CURRENT_DEPT_AFFILIATIOIN_CITY, auaf.getCurrentDeptAffiliation_City());
+
+					//CURRENT DEPT AFFILIATION COUNTRY
+					rec.put(AuAfCombinedRec.CURRENT_DEPT_AFFILIATION_COUNTRY, auaf.getCurrentDeptAffiliation_Country());
+				}
+
+				writer.writeAuRec(rec);		
+				auaf=null;
+				count ++;
+				//rec_count++;
+
+
+			}
+			catch (SQLException e) 
+			{
+				System.out.println("Error Occurred reading from ResultSet for DOCID: " + rs.getString("M_ID") + " ... " + e.getMessage());
+				e.printStackTrace();
+			}
+		}
+
+		System.out.println("Total records count: " +  count);
+	}
+	
+	public void prepareISSN(String journals, AuAfCombinedRec rec)
+	{
+		String [] author_Journals = null;
+		String author_Journal = null;
+		String [] singleJournal = null;
+
+		StringBuffer sourceTitles = new StringBuffer();
+		StringBuffer issn = new StringBuffer();
+		String mapped_issn = "";
+		LinkedHashSet<String> issn_list = new LinkedHashSet<String>();
+
+
+		author_Journals = journals.split(Constants.AUDELIMITER);
+		for(int i=0; i<author_Journals.length; i++)
+		{
+			author_Journal = author_Journals[i].trim();
+			if(author_Journal !=null && !(author_Journal.isEmpty()))
+			{
+				singleJournal = author_Journal.split(Constants.IDDELIMITER);
+
+				if(singleJournal.length>3 && singleJournal[3] !=null)
+				{
+					mapped_issn = DataLoadDictionary.mapEntity(singleJournal[3]);
+					if(!(issn_list.contains(mapped_issn)))
+					{
+						issn_list.add(mapped_issn);
+					}
+				}
+
+			}
+		}
+
+		// Combine unique list of Issn
+		for(String issn_str: issn_list)
+		{
+			issn.append(issn_str);
+			issn.append(Constants.IDDELIMITER);
+		}
+
+		rec.put(AuAfCombinedRec.ISSN, issn.toString());
+
+		//clearout stringbuffers
+		issn.delete(0, issn.length());
+
+		//clear out the issn List
+		issn_list.clear();
+	}  
+	//SUBJABBR LIST
+		public void prepareSubjabbr(String classification_Subjabbr, AuAfCombinedRec rec)
+		{
+			StringBuffer subjabbrCode = new StringBuffer();
+			String[]  single_subjabbr;
+
+			String [] subjabbrs = classification_Subjabbr.split(Constants.AUDELIMITER);
+			for(int i=0; i<subjabbrs.length; i++)
+			{
+				single_subjabbr = subjabbrs[i].split(Constants.IDDELIMITER);
+
+				if(single_subjabbr !=null && single_subjabbr.length>1)
+				{
+					subjabbrCode.append(single_subjabbr[1]);
+					if(i< subjabbrs.length -1)
+						subjabbrCode.append(Constants.IDDELIMITER);
+				}
+
+			}
+
+			rec.put(AuAfCombinedRec.SUBJECT_CLUSTER, subjabbrCode.toString());
+			// clearout subjabbr
+			subjabbrCode.delete(0, subjabbrCode.length());
+
+		}
+	
+	public void prepareNameVariant(String name_variant, AuAfCombinedRec rec)
+	{
+		String[] name_variants = null;
+		String singleName_Variant = "";
+
+		String [] singleVarainat;
+
+		// add to the record
+		StringBuffer variantNameInit = new StringBuffer();
+		StringBuffer variantNameFirst = new StringBuffer();
+		StringBuffer variantNameLast = new StringBuffer();
+
+
+		name_variants = name_variant.split(Constants.AUDELIMITER);
+
+		for(int i=0;i<name_variants.length;i++)
+		{
+			singleName_Variant = name_variants[i].trim();
+			if(singleName_Variant !=null && !(singleName_Variant.isEmpty()))
+			{
+				singleVarainat = singleName_Variant.split(Constants.IDDELIMITER);
+
+				if(singleVarainat.length>0 && singleVarainat[0] != null)
+				{
+					variantNameInit.append(DataLoadDictionary.mapEntity(singleVarainat[0]));
+				}
+				if(singleVarainat.length>2 && singleVarainat[2] != null)
+				{
+					variantNameLast.append(DataLoadDictionary.mapEntity(singleVarainat[2]));
+				}
+				if(singleVarainat.length>3 && singleVarainat[3] !=null)
+				{
+					variantNameFirst.append(DataLoadDictionary.mapEntity(singleVarainat[3]));
+				}
+				if(i<name_variants.length -1)
+				{
+					variantNameInit.append(Constants.IDDELIMITER);
+					variantNameLast.append(Constants.IDDELIMITER);
+					variantNameFirst.append(Constants.IDDELIMITER);
+				}
+			}
+		}
+
+		rec.put(AuAfCombinedRec.VARIANT_INI, variantNameInit.toString());
+		rec.put(AuAfCombinedRec.VARIANT_FIRST, variantNameFirst.toString());
+		rec.put(AuAfCombinedRec.VARIANT_LAST, variantNameLast.toString());
+
+		//clearout all stringbuffers
+		variantNameInit.delete(0, variantNameInit.length());
+		variantNameFirst.delete(0,variantNameFirst.length());
+		variantNameLast.delete(0, variantNameLast.length());
+
+	}
+	
+	private String getStringFromClob(Clob clob)
+	{
+		String str = null;
+		try
+		{
+			if(clob !=null)
+			{
+				str = clob.getSubString(1, (int) clob.length());
+			}
+		}
+		catch(SQLException ex)
+		{
+			ex.printStackTrace();
+		}
+		return str;
+	}
+
+	private void prepareCurrentAffiliation(String parentAffId, String current_deptId,AuAffiliation auaf,Connection con)
+	{
+		Statement stmt = null;
+		ResultSet rs = null;
+		ResultSet rsDept = null;
+		//Connection con=null;
+		try
+		{
+			//con = getConnection(this.URL,this.driver,this.username,this.password);
+			stmt = con.createStatement();
+			String query = "select * from db_cafe.AUTHOR_AFF where AFFID='" + parentAffId + "'";
+			rs = stmt.executeQuery(query);
+
+			while(rs.next())
+			{
+				//PREFERRED_NAME
+				if(rs.getString("PREFERED_NAME") !=null)
+				{
+					auaf.setAffiliationPreferredName(DataLoadDictionary.mapEntity(rs.getString("PREFERED_NAME")));
+				}
+
+				//NAME_VARIANT
+				String affNameVariants = getStringFromClob(rs.getClob("NAME_VARIANT"));
+
+				if(affNameVariants !=null)
+				{
+					auaf.setParentAffiliationsNameVariant(DataLoadDictionary.mapEntity(affNameVariants));
+				}
+
+				// DISPLAY_NAME
+				if(rs.getString("AFDISPNAME") !=null)
+				{
+					auaf.setAffiliationDisplayName(DataLoadDictionary.mapEntity(rs.getString("AFDISPNAME")));
+				}
+
+				//DISPLAY_CITY
+				if(rs.getString("CITY") !=null)
+				{
+					auaf.setAffiliationDisplayCity(rs.getString("CITY"));
+				}
+
+				//DISPLAY_CITY_GROUP
+				if(rs.getString("CITYGROUP") != null)
+				{
+					auaf.setAffiliationDisplayCity(rs.getString("CITYGROUP"));
+				}
+
+				//DISPLAY_COUNTRY
+				if(rs.getString("COUNTRY") !=null)
+				{
+					auaf.setAffiliationDisplayCountry(rs.getString("COUNTRY"));
+				}
+
+				//CURRENT NAMEID
+				if(rs.getString("AFNAMEID") !=null)
+				{
+					auaf.setAffiliationNameId(DataLoadDictionary.mapEntity(rs.getString("AFNAMEID")));
+
+				}
+
+				//CURRENT PARENT SORTNAME
+				if(rs.getString("SORTED_NAME") !=null)
+				{
+					auaf.setAffiliationSortName(DataLoadDictionary.mapEntity(rs.getString("SORTED_NAME")));
+				}
+
+			}
+
+			//Current DepartmentID, ONLY FOR DISPLAY			
+
+			//dept id
+			if(current_deptId !=null)
+			{
+				query = "select AFDISPNAME,CITY,COUNTRY from db_cafe.AUTHOR_AFF where AFFID='" + current_deptId + "'";
+				rsDept = stmt.executeQuery(query);
+
+				auaf.setCurrentDeptAffiliation_Id(current_deptId);
+				while(rsDept.next())
+				{
+					if(rsDept.getString("AFDISPNAME") !=null)
+					{
+						auaf.setCurrentDeptAffiliation_DisplayName(DataLoadDictionary.mapEntity(rsDept.getString("AFDISPNAME")));
+					}
+					if(rsDept.getString("CITY") !=null)
+					{
+						auaf.setCurrentDeptAffiliation_City(rsDept.getString("CITY"));
+					}
+					if(rsDept.getString("COUNTRY") !=null)
+					{
+						auaf.setCurrentDeptAffiliation_Country(rsDept.getString("COUNTRY"));
+					}
+				}
+			}
+
+		}
+		catch(SQLException ex)
+		{
+			System.out.println("Error Occurred reading from Author_Aff for Parent affid: " + parentAffId + " ... " + ex.getMessage());
+			ex.printStackTrace();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if(con!=null)
+			{
+				try
+				{
+					con.close();
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+			if(rs!=null)
+			{
+				try
+				{
+					rs.close();
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+			if(rsDept !=null)
+			{
+				try
+				{
+					rsDept.close();
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+
+			if(stmt !=null)
+			{
+				try
+				{
+					stmt.close();
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+
+		}	
+	}
+
+	
+	private void testBuildElasticSearch() throws Exception
 	{
 		// Construct a new Jest Client via factory
-				JestClientFactory factory = new JestClientFactory();
-				factory.setHttpClientConfig(new HttpClientConfig
-						.Builder("http://search-evcafeauaf-v6tfjfyfj26rtoneh233lzzqtq.us-east-1.es.amazonaws.com:80")
-						.multiThreaded(true)
-						.build()
-						);
-				
-				JestClient client = factory.getObject();
+		String endpoint = "http://search-movies-f2awrxb6jrgl3zpgr4dkn352t4.us-east-2.es.amazonaws.com:80";
+		//String endpoint = "http://search-evcafeauaf-v6tfjfyfj26rtoneh233lzzqtq.us-east-1.es.amazonaws.com:80";
+		JestClientFactory factory = new JestClientFactory();
+		factory.setHttpClientConfig(new HttpClientConfig
+				.Builder(endpoint)
+				.multiThreaded(true)
+				.build()
+				);
+		
+		JestClient client = factory.getObject();
 				
 				String esDocument = "{\n\"docproperties\":\n"+
 						"{\n"+
@@ -1625,12 +2489,14 @@ public class NewDataTesting
 		"}";
 
 				
-				Index index = new Index.Builder(esDocument).index("cafe").type("author").id("aut_M22aaa18f155dfa29a2bM7f9b10178163171").build();
-				client.execute(index);
+		Index index = new Index.Builder(esDocument).index("cafe").type("author").id("aut_M22aaa18f155dfa29a2bM7f9b10178163171").build();
+		client.execute(index);
 			
 	}
 	
-	 protected void exampleSearch(JestClient client) throws Exception { 
+	
+	 private void testSearchElasticSearch() throws Exception { 
+		 /*
 	        String query = "{\n" 
 	                + "    \"query\": {\n" 
 	                + "        \"filtered\" : {\n" 
@@ -1642,16 +2508,31 @@ public class NewDataTesting
 	                + "        }\n" 
 	                + "    }\n" 
 	                + "}"; 
-	        Search.Builder searchBuilder = new Search.Builder(query).addIndex("jug").addType("talk"); 
-	        io.searchbox.core.SearchResult result = client.execute(searchBuilder.build()); 
-	        /*
-	        List<Hit<Talk, Void>> hits = result.getHits(Talk.class); 
-	        log.info("Retrieved result " + result.getJsonString()); 
-	        for (Hit<Talk, Void> hit: hits) { 
-	            Talk talk = hit.source; 
-	            log.info(talk.getTitle()); 
-	        }
-	        */ 
+	      */
+		 String query = "{\n" 
+	                + "    \"query\": {\n" 
+	                + "    \"match_all\": {}\n "   
+	                + "    }\n" 
+	                + "}"; 		
+			 String endpoint = "http://search-movies-f2awrxb6jrgl3zpgr4dkn352t4.us-east-2.es.amazonaws.com:80";
+			//String endpoint = "http://search-evcafeauaf-v6tfjfyfj26rtoneh233lzzqtq.us-east-1.es.amazonaws.com:80";
+			JestClientFactory factory = new JestClientFactory();
+			factory.setHttpClientConfig(new HttpClientConfig
+					.Builder(endpoint)
+					.multiThreaded(true)
+					.build()
+					);
+			
+			JestClient client = factory.getObject();
+	        Search.Builder searchBuilder = new Search.Builder(query).addIndex("cafe").addType("author"); 
+			//Search.Builder searchBuilder = new Search.Builder(query).setIndex("cafe").setType("author");
+	        //io.searchbox.core.SearchResult result = client.execute(searchBuilder.build()); 
+	        JestResult result = client.execute(searchBuilder.build());
+	        System.out.println(result);
+	        
+	        String jsonResultString = result.getJsonString();
+	        System.out.println("search result is " + jsonResultString);
+	       
 	    } 
 	
 	private void getCPCDescription(String filename)
@@ -1697,12 +2578,8 @@ public class NewDataTesting
 			
 			while((line=in.readLine())!=null)
 			{
-				char[] ch=line.toCharArray();
-				for(int i=0;i<ch.length;i++)
-				{
-					
-				}
-				
+				line= removeLineInvalidCharacters(line);
+				out.write(line+"\n");
 			}
 			
 		}
@@ -1710,6 +2587,38 @@ public class NewDataTesting
 		{
 			e.printStackTrace();
 		}
+	}
+	
+	private String removeLineInvalidCharacters(String text)
+	{
+		if (null == text || text.isEmpty()) {
+		    return text;
+		}
+		final int len = text.length();
+		char current = 0;
+		int codePoint = 0;
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < len; i++) {
+		    current = text.charAt(i);
+		    boolean surrogate = false;
+		    if (Character.isHighSurrogate(current)
+		            && i + 1 < len && Character.isLowSurrogate(text.charAt(i + 1))) {
+		        surrogate = true;
+		        codePoint = text.codePointAt(i++);
+		    } else {
+		        codePoint = current;
+		    }
+		    if ((codePoint == 0x9) || (codePoint == 0xA) || (codePoint == 0xD)
+		            || ((codePoint >= 0x20) && (codePoint <= 0xD7FF))
+		            || ((codePoint >= 0xE000) && (codePoint <= 0xFFFD))
+		            || ((codePoint >= 0x10000) && (codePoint <= 0x10FFFF))) {
+		        sb.append(current);
+		        if (surrogate) {
+		            sb.append(text.charAt(i));
+		        }
+		    }
+		}
+		return sb.toString();
 	}
 
 	private void getWeeklyCount(String weekNumber)
@@ -2147,50 +3056,53 @@ public class NewDataTesting
 		try
 		{
 			out = new FileWriter("midFromFast_PROD.out");	
-			System.out.println("Query= "+query);
-			FastClient client = new FastClient();
-			client.setBaseURL("http://evprod14.cloudapp.net:15100");//PROD
-			//client.setBaseURL("http://evprod08.cloudapp.net:15100");//DEV server
-			//client.setBaseURL("http://evdr09.cloudapp.net:15100"); //DR			
-			client.setResultView("ei");
-			client.setOffSet(0);
-			client.setPageSize(260000);
-			client.setQueryString(searchQuery);
-			client.setDoCatCount(true);
-			client.setDoNavigators(true);
-			client.setPrimarySort("ausort");
-			client.setPrimarySortDirection("+");
-			client.search();
-			
-			
-
-			List l = client.getDocIDs();
-			int count =client.getHitCount();
-			Thread.sleep(10000);
-			
-			if(count<1)
+			for(int j=1700;j<2019;j++)
 			{
-			  System.out.println("0 records found");
-		    }
-			else
-			{
-				System.out.println(count+" records found");
-				System.out.println("SIZE= "+l.size());
-			}
-
-			StringBuffer sb=new StringBuffer();
-			
-			for(int i=0;i<l.size();i++)
-			{
-				String[] docID = (String[])l.get(i);
-				String m_id = docID[0];
-				//System.out.println(m_id);
+				System.out.println("Query= "+query);
+				FastClient client = new FastClient();
+				client.setBaseURL("http://evprod14.cloudapp.net:15100");//PROD
+				//client.setBaseURL("http://evprod08.cloudapp.net:15100");//DEV server
+				//client.setBaseURL("http://evdr09.cloudapp.net:15100"); //DR			
+				client.setResultView("ei");
+				client.setOffSet(0);
+				client.setPageSize(260000);
+				client.setQueryString(searchQuery+" and yr:"+j);
+				client.setDoCatCount(true);
+				client.setDoNavigators(true);
+				client.setPrimarySort("ausort");
+				client.setPrimarySortDirection("+");
+				client.search();
 				
-				out.write(m_id+"\n");					
-				out.flush();					
-			}
 				
-			out.flush();
+	
+				List l = client.getDocIDs();
+				int count =client.getHitCount();
+				Thread.sleep(100);
+				
+				if(count<1)
+				{
+				  System.out.println("0 records found");
+			    }
+				else
+				{
+					System.out.println(count+" records found");
+					System.out.println("SIZE= "+l.size());
+				}
+	
+				StringBuffer sb=new StringBuffer();
+				
+				for(int i=0;i<l.size();i++)
+				{
+					String[] docID = (String[])l.get(i);
+					String m_id = docID[0];
+					//System.out.println(m_id);
+					
+					out.write(m_id+"\n");					
+					out.flush();					
+				}
+					
+				out.flush();
+			}
 			out.close();
 
 		}
@@ -3930,6 +4842,310 @@ public class NewDataTesting
 
 			return coords;
 	}
+	
+	private void fullTestRunSQS()
+	{
+		 AmazonSQS sqs = AmazonSQSClientBuilder.defaultClient();
+
+        System.out.println("===============================================");
+        System.out.println("Getting Started with Amazon SQS standard Queues");
+        System.out.println("===============================================\n");
+
+        try {
+            // Create a queue
+            System.out.println("Creating a new SQS queue called MyQueue.\n");
+            CreateQueueRequest createQueueRequest = new CreateQueueRequest("MyQueue");
+            String myQueueUrl = sqs.createQueue(createQueueRequest).getQueueUrl();
+            
+            // List queues
+            System.out.println("Listing all queues in your account.\n");
+            System.in.read();
+            for (String queueUrl : sqs.listQueues().getQueueUrls()) {
+                System.out.println("  QueueUrl: " + queueUrl);
+            }
+            System.out.println();
+            
+            // Send a message
+            System.out.println("Sending a message to MyQueue.\n");
+            System.in.read();
+            sqs.sendMessage(new SendMessageRequest(myQueueUrl, "This is my message text."));
+           
+            // Receive messages
+            System.out.println("Receiving messages from MyQueue.\n");
+            System.in.read();
+            ReceiveMessageRequest receiveMessageRequest = new ReceiveMessageRequest(myQueueUrl);
+            List<Message> messages = sqs.receiveMessage(receiveMessageRequest).getMessages();
+            for (Message message : messages) {
+                System.out.println("  Message");
+                System.out.println("    MessageId:     " + message.getMessageId());
+                System.out.println("    ReceiptHandle: " + message.getReceiptHandle());
+                System.out.println("    MD5OfBody:     " + message.getMD5OfBody());
+                System.out.println("    Body:          " + message.getBody());
+                for (Entry<String, String> entry : message.getAttributes().entrySet()) {
+                    System.out.println("  Attribute");
+                    System.out.println("    Name:  " + entry.getKey());
+                    System.out.println("    Value: " + entry.getValue());
+                }
+            }
+            System.out.println();
+
+            // Delete a message
+            System.out.println("Deleting a message.\n");
+            System.in.read();
+            String messageReceiptHandle = messages.get(0).getReceiptHandle();
+            sqs.deleteMessage(new DeleteMessageRequest(myQueueUrl, messageReceiptHandle));
+
+            // Delete a queue
+            System.out.println("Deleting the test queue.\n");
+            System.in.read();
+            sqs.deleteQueue(new DeleteQueueRequest(myQueueUrl));
+        } catch (AmazonServiceException ase) {
+            System.out.println("Caught an AmazonServiceException, which means your request made it " +
+                    "to Amazon SQS, but was rejected with an error response for some reason.");
+            System.out.println("Error Message:    " + ase.getMessage());
+            System.out.println("HTTP Status Code: " + ase.getStatusCode());
+            System.out.println("AWS Error Code:   " + ase.getErrorCode());
+            System.out.println("Error Type:       " + ase.getErrorType());
+            System.out.println("Request ID:       " + ase.getRequestId());
+        } catch (AmazonClientException ace) {
+            System.out.println("Caught an AmazonClientException, which means the client encountered " +
+                    "a serious internal problem while trying to communicate with Amazon SQS, such as not " +
+                    "being able to access the network.");
+            System.out.println("Error Message: " + ace.getMessage());
+        }catch (Exception e) {
+            System.out.println("Caught an unexpected Exception");
+            System.out.println("Error Message: " + e.getMessage());
+        }	 	 
+	}
+	
+	private void getSqsMessage(String myQueueUrl)
+	{
+		AmazonSQS sqs = AmazonSQSClientBuilder.defaultClient();
+		try{
+			ReceiveMessageRequest receiveMessageRequest = new ReceiveMessageRequest(myQueueUrl);
+	        List<Message> messages = sqs.receiveMessage(receiveMessageRequest).getMessages();
+	        for (Message message : messages) {
+	            System.out.println("  Message");
+	            System.out.println("    MessageId:     " + message.getMessageId());
+	           // System.out.println("    ReceiptHandle: " + message.getReceiptHandle());
+	            //System.out.println("    MD5OfBody:     " + message.getMD5OfBody());
+	            System.out.println("    Body:          " + message.getBody());
+	            for (Entry<String, String> entry : message.getAttributes().entrySet()) {
+	                System.out.println("  Attribute");
+	                System.out.println("    Name:  " + entry.getKey());
+	                System.out.println("    Value: " + entry.getValue());
+	            }
+	        }
+		}catch(Exception e){
+			System.out.println("Caught an unexpected Exception");
+            System.out.println("Error Message: " + e.getMessage());
+		}
+	}
+	
+	private void testGetSqs(String QUEUE_NAME)
+	{
+		AmazonSQS sqs = AmazonSQSClientBuilder.defaultClient();
+		String queue_url = sqs.getQueueUrl(QUEUE_NAME).getQueueUrl();
+		System.out.println("queue_url= "+queue_url);
+	}
+	
+	private void testListSqs()
+	{
+		/*
+		 * The ProfileCredentialsProvider will return your [default]
+		 * credential profile by reading from the credentials file located at
+		 * (~/.aws/credentials).
+		 */
+		AWSCredentialsProvider credentials = null;
+		try {
+			//credentials = new EnvironmentVariableCredentialsProvider();   // for localhost
+			credentials = new InstanceProfileCredentialsProvider();        // for dataloading EC2
+		} catch (Exception e) {
+			throw new AmazonClientException(
+					"Cannot load the credentials from the credential profiles file. " +
+							"Please make sure that your credentials file is at the correct " +
+							"location (~/.aws/credentials), and is in valid format.",
+							e);
+		}
+
+		
+
+		AmazonSQS	sqs = new AmazonSQSClient(credentials);
+		//Region euWest2 = Region.getRegion(Regions.EU_WEST_1);
+		//sqs.setRegion(euWest2);
+		//AmazonSQS sqs = AmazonSQSClientBuilder.defaultClient();
+		ListQueuesResult lq_result = sqs.listQueues();
+		System.out.println("Your SQS Queue URLs:");
+		for (String url : lq_result.getQueueUrls()) {
+		    System.out.println(url);
+		}
+	}
+	
+	private void testAddSqs()
+	{
+		String QUEUE_NAME = "myFirstQuery";
+		AmazonSQS sqs = AmazonSQSClientBuilder.defaultClient();
+		CreateQueueRequest create_request = new CreateQueueRequest(QUEUE_NAME)
+		        .addAttributesEntry("DelaySeconds", "60")
+		        .addAttributesEntry("MessageRetentionPeriod", "86400");
+
+		try {
+		    sqs.createQueue(create_request);
+		} catch (AmazonSQSException e) {
+		    if (!e.getErrorCode().equals("QueueAlreadyExists")) {
+		        throw e;
+		    }
+		}
+	}
+	
+	private void testPutAWSS3(String key_name)
+	{
+		//AmazonS3 s3Client = new AmazonS3Client(new ProfileCredentialsProvider());
+		AmazonS3 s3Client;
+		S3Object object;
+		try {
+			s3Client = AmazonS3Service.getInstance().getAmazonS3Service();
+			//object = s3Client.getObject( new GetObjectRequest("hmoroger", "midFromFast_DR.out"));
+			String file_path = "./"+key_name;
+			ObjectMetadata md;
+			byte[] bytes;
+			bytes = file_path.getBytes();
+			md = new ObjectMetadata();
+			md.setContentType("text/xml");
+			//md.setContentLength(bytes.length);
+			System.out.println("total length " + bytes.length); 
+			PutObjectResult response = s3Client.putObject(new PutObjectRequest("hmoroger", key_name, new File(file_path)));	
+			System.out.println("Key: " + key_name + " successfully uploaded to S3, Etag: " + response.getETag());
+	        }catch(Exception e){
+	        	System.out.println("Other Error Message: " + e.getMessage());
+	        }
+	}
+	
+	private void testGetAWSS3(String key)
+	{
+		//AmazonS3 s3Client = new AmazonS3Client(new ProfileCredentialsProvider());
+		AmazonS3 s3Client;
+		S3Object object;
+		try {
+			s3Client = AmazonS3Service.getInstance().getAmazonS3Service();
+			//object = s3Client.getObject( new GetObjectRequest("hmoroger", "midFromFast_DR.out"));
+			object = s3Client.getObject( new GetObjectRequest("hmoroger", key));
+			InputStream objectData = object.getObjectContent();
+			 System.out.println("Content-Type: "  + 
+					 object.getObjectMetadata().getContentType());
+	         //displayTextInputStream(object.getObjectContent());
+			 saveContentToFile(object.getObjectContent(),key);
+	         
+			// Process the objectData stream.
+			objectData.close();
+		 } catch (AmazonServiceException ase) {
+	            System.out.println("Caught an AmazonServiceException, which" +
+	            		" means your request made it " +
+	                    "to Amazon S3, but was rejected with an error response" +
+	                    " for some reason.");
+	            System.out.println("Error Message:    " + ase.getMessage());
+	            System.out.println("HTTP Status Code: " + ase.getStatusCode());
+	            System.out.println("AWS Error Code:   " + ase.getErrorCode());
+	            System.out.println("Error Type:       " + ase.getErrorType());
+	            System.out.println("Request ID:       " + ase.getRequestId());
+	        } catch (AmazonClientException ace) {
+	            System.out.println("Caught an AmazonClientException, which means"+
+	            		" the client encountered " +
+	                    "an internal error while trying to " +
+	                    "communicate with S3, " +
+	                    "such as not being able to access the network.");
+	            System.out.println("Error Message: " + ace.getMessage());
+	        }catch(Exception ioe)
+	        {
+	        	System.out.println("Other Error Message: " + ioe.getMessage());
+	        }
+	}
+	
+	public static void saveContentToFile (InputStream objectData, String key) throws IOException
+	{
+		BufferedReader breader = null;
+		PrintWriter out = null;
+		try
+		{
+			breader = new BufferedReader(new InputStreamReader(objectData));
+			breader = new BufferedReader(new InputStreamReader(new ByteArrayInputStream(breader.readLine().replaceAll("><", ">\n<").getBytes())));
+
+			//File file = new File(s3Dir.getName()+"/"+key+".xml");
+			File file = new File("./testS3/"+key);
+
+			if (!file.exists()) 
+			{
+				System.out.println("Downloaded: "+file.getName());
+
+			}
+			else
+			{
+				System.out.println("file:" +  file.getName() + "already exist");
+			}
+
+			String line = null;
+			out = new PrintWriter(new BufferedWriter(new FileWriter(file.getAbsolutePath(),true)));
+			while ((line = breader.readLine()) !=null)
+			{
+				out.println(line);
+
+			}
+
+		}
+		catch (IOException e) {
+
+			e.printStackTrace();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+
+		finally
+		{
+			try
+			{
+				if(breader !=null)
+				{
+					breader.close();
+				}
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+
+
+			try
+			{
+				if(out !=null)
+				{
+					out.flush();
+					out.close();
+				}
+			}
+			catch(Exception ex)
+			{
+				ex.printStackTrace();
+			}
+		}
+
+	}
+	
+	private static void displayTextInputStream(InputStream input)
+	throws IOException {
+		// Read one text line at a time and display.
+	    BufferedReader reader = new BufferedReader(new 
+	    		InputStreamReader(input));
+	    while (true) {
+	        String line = reader.readLine();
+	        if (line == null) break;
+	
+	        System.out.println("    " + line);
+	    }
+	    System.out.println();
+	}
+	
 
 	protected Connection getConnection(String connectionURL,
 		                               String driver,

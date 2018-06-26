@@ -86,7 +86,7 @@ public class EptCombiner extends Combiner {
     			
     				stmt = con.createStatement();
     				System.out.println("Running the query...");
-    				String sqlQuery = "select * from " + Combiner.TABLENAME +" where database='" + Combiner.CURRENTDB + "'";
+    				String sqlQuery = "select * from " + Combiner.TABLENAME;
     				System.out.println(sqlQuery);
     				rs = stmt.executeQuery(sqlQuery);
     				
@@ -723,6 +723,10 @@ public class EptCombiner extends Combiner {
         {
              System.out.println("AccessNumber=" + args[9]);
              c.writeSingleTestRecord(url, driver, username, password, args[9]);
+        }
+        else if(loadNumber ==1)
+        {           
+             c.writeCombinedByTable(url, driver, username, password);
         }
         else if (loadNumber > 3000 || loadNumber < 1000) {
             c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
