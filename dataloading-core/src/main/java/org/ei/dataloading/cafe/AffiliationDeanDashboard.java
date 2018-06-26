@@ -2,6 +2,7 @@ package org.ei.dataloading.cafe;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -9,6 +10,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
@@ -20,6 +22,7 @@ import javax.json.JsonBuilderFactory;
 import javax.json.JsonObject;
 
 import javax.json.stream.JsonGenerator;
+
 import org.ei.common.Constants;
 
 
@@ -51,20 +54,20 @@ public class AffiliationDeanDashboard
 	static int loadNumber = 0;
 	static String tableName = "institute_profile";
 	static String afDocCount_tableName = "affiliation_doc_count";  
-
+	
 	private Connection con;
 	PrintWriter out = null;
-
+	
 	Map<String,Object> config;   //JsonBuilder config
 	JsonBuilderFactory factory; //JsonBuilder Factory
 	Gson gson;
-
+	
 	public AffiliationDeanDashboard()
 	{
 		init();
 	}
-
-
+	
+	
 	public static void main(String[] args) 
 	{
 		if(args.length >2)
@@ -78,7 +81,7 @@ public class AffiliationDeanDashboard
 					System.exit(1);
 				}
 				System.out.println("doc_type: " + doc_type);
-
+				
 				if(args[1] !=null)
 				{
 					tableName = args[1];
@@ -129,34 +132,35 @@ public class AffiliationDeanDashboard
 			System.out.println("Not Enough Parameters");
 			System.exit(1);
 		}
-
+		
 		AffiliationDeanDashboard afDeanDashboard = new AffiliationDeanDashboard();
 		afDeanDashboard.getDocCount();
 		afDeanDashboard.end();
 
 	}
-
+	
 	private void init()
 	{
 		String currDir = System.getProperty("user.dir");
 		File file;
-
+		
 		try
 		{
 			currDir = currDir + "/deandashboard";
 			file =new File (currDir);
 			if(!file.exists())
 				file.mkdir();
-			file = new File(currDir + "/af_DeanDashboard2.txt");
+			file = new File(currDir + "/affiliations-test.json");
 			out = new PrintWriter(new FileWriter(file));
-			out.write("[\t");
-
+			out.println("{");
+			out.println("\t\"affiliations\":[");
+			
 			config = new HashMap<String,Object>();
 			config.put(JsonGenerator.PRETTY_PRINTING, true);
 			factory = Json.createBuilderFactory(config);
-
+			
 			gson = new GsonBuilder().setPrettyPrinting().create();
-
+			
 		}
 		catch(FileNotFoundException ex)
 		{
@@ -167,15 +171,17 @@ public class AffiliationDeanDashboard
 			e.printStackTrace();
 		}
 	}
-
+	
 	private void end()
 	{
 		try
 		{
 			if(out !=null)
 			{
+				
 				out.write("]");
-
+				out.println("}");
+				
 				out.flush();
 				out.close();
 			}
@@ -192,15 +198,15 @@ public class AffiliationDeanDashboard
 		Statement stmt = null;
 		ResultSet rs = null;
 		String query;
-
+		
 		try
 		{
 			con = getConnection(url, driver, username, password);
 			stmt = con.createStatement();
 			System.out.println("Running the query...");
-
+			
 			query = "select a.affid,a.PREFERED_NAME,a.NAME_VARIANT,b.doc_count from " + tableName + " a, " + afDocCount_tableName + " b "+
-					"where a.es_status='indexed' and a.quality>=99 and a.affid=b.affid and b.doc_count>=1000" +
+					"where a.es_status='indexed' and a.quality>=99 and a.affid=b.INSTITUTE_ID and b.doc_count>=100" +
 					"order by b.doc_count desc";
 			System.out.println(query);
 			rs = stmt.executeQuery(query);
@@ -218,41 +224,43 @@ public class AffiliationDeanDashboard
 			e.printStackTrace();
 		}
 	}
-
+	
 	@SuppressWarnings("unchecked")
 	public void writeRecs(ResultSet rs) throws SQLException
 	{
 		int count = 0;
-
+		
 		AuAfCombinedRec rec;
-
+		
 		try
 		{
 			while(rs.next())
 			{
 				rec = new AuAfCombinedRec();
-
-				//AFFID
-				if(rs.getString("AFFID") !=null)
-				{
-					rec.put("AFID", rs.getString("AFFID"));
-				}
-				// Doc_count
-				rec.put("DOC_COUNT", Integer.toString(rs.getInt("DOC_COUNT")));
-
+				
 				//Name_variant
 				if(rs.getString("NAME_VARIANT") !=null)
 				{
-					rec.put("name_variant", rs.getString("NAME_VARIANT"));
+					rec.put("varName", rs.getString("NAME_VARIANT"));
+				}
+				//AFFID
+				if(rs.getString("AFFID") !=null)
+				{
+					rec.put("affilId", rs.getString("AFFID"));
 				}
 				//Prefered_name
 				if(rs.getString("PREFERED_NAME")!=null)
 				{
-					rec.put("prefered_name", rs.getString("PREFERED_NAME"));
-				}
+					rec.put("affilName", rs.getString("PREFERED_NAME"));
+				}	
+				// Doc_count
+				rec.put("docCount", Integer.toString(rs.getInt("DOC_COUNT")));
+				
+				
+				
 				count ++;
 				writeAfRec(rec);
-
+				
 			}
 			System.out.println("Total count of AF Profiles for Dean Dashboard: " + count);
 		}
@@ -266,37 +274,37 @@ public class AffiliationDeanDashboard
 		{	
 			e.printStackTrace();
 		}
-
+		
 	}
 	public void writeAfRec(AuAfCombinedRec rec) throws Exception
 	{
-
+		
 		JsonObject esDocument = factory.createObjectBuilder()
-				.add("afid",notNull(rec.getString("AFID")))
-				.add("Prefered_name", notNull(rec.getString("prefered_name")))
-				.add("Variant_name",prepareMultiValues(notNull(rec.getString("name_variant"))))
-				.add("doc_count",notNull(rec.getString("DOC_COUNT")))
+						.add("varName",prepareMultiValues(notNull(rec.getString("varName"))))
+						.add("affilId",notNull(rec.getString("affilId")))
+						.add("affilName", notNull(rec.getString("affilName")))	
+						.add("docCount",notNull(rec.getString("docCount")))
 				.build();
-
-		out.write(esDocument + ",");
-
+		
+		out.write(esDocument.toString() + ",");
+		
 	}
-
+	
 	private String notNull(String s)
-	{
-		String r = null;
+    {
+        String r = null;
 
-		if (s == null)
-		{
-			r = "";
-		}
-		else
-		{
-			r = s;
-		}
+        if (s == null)
+        {
+            r = "";
+        }
+        else
+        {
+            r = s;
+        }
 
-		return r;
-	}
+        return r;
+    }
 	private  JsonArray prepareMultiValues(String str)
 	{
 		JsonArrayBuilder builder = factory.createArrayBuilder();
@@ -310,8 +318,8 @@ public class AffiliationDeanDashboard
 		}	
 		return builder.build();
 	}
-
-
+	
+	
 	private Connection getConnection(String connectionURL,
 			String driver,
 			String username,
@@ -324,5 +332,6 @@ public class AffiliationDeanDashboard
 				password);
 		return con;
 	}
+
 
 }

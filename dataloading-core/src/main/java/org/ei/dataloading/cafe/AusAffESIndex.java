@@ -50,15 +50,9 @@ public class AusAffESIndex {
 	private final String SERVICE_NAME = "es";
 	private final String REGION = "us-east-1";
 	
-	//private String HOST = "search-evcafe-prod-h7xqbezrvqkb5ult6o4sn6nsae.us-east-1.es.amazonaws.com";  // for dataloading Ec2 (ES 2.3 no longer exist)
-	// private String HOST = "search-evcafe5-ucqg6c7jnb4qbvppj2nee4muwi.us-east-1.es.amazonaws.com";
-	 private String HOST = "vpc-ev-cafe-cert-j6hoqgea5hcjdqphkjw3xzknqy.us-east-1.es.amazonaws.com";		//Added 05/10/18 ES CERT V 6.2 
 	
-	//private String HOST = "localhost:8060";    // for Prod from localhost ES V 2.3
-	//private String HOST = "localhost:8040";    // for Prod from localhost ES V 5.1
-	//private final String HOST = "search-evcafeauaf-v6tfjfyfj26rtoneh233lzzqtq.us-east-1.es.amazonaws.com";  // for testing
-	//private String HOST = "localhost:8050";    // evauaf cluster using tunnel, localhost
-	private String ENDPOINT_ROOT = "http://" + HOST;
+	private String HOST = "vpc-ev-cafe-cert-j6hoqgea5hcjdqphkjw3xzknqy.us-east-1.es.amazonaws.com";		//Added 05/10/18 ES CERT V 6.2 
+	private String ENDPOINT_ROOT = "http://" + HOST;				// change to https when move to PROD
 	private String PATH = "/cafe/_bulk";		//PROD up to before ES V 6.2
 	private String ENDPOINT = ENDPOINT_ROOT + PATH;
 	
@@ -100,7 +94,7 @@ public class AusAffESIndex {
 		
 		
 		HOST = esDomain;
-		ENDPOINT_ROOT = "http://" + HOST;
+		ENDPOINT_ROOT = "http://" + HOST;		// change to https when move to PROD
 		//PATH = "/cafe/_bulk";   // PROD up to before ES V 6.2
 		PATH = "/" + index_name + "/_bulk";		// Added 05/10/2018 due to ES V 6.2 split diff types to diff indices
 		ENDPOINT = ENDPOINT_ROOT + PATH;
@@ -187,20 +181,6 @@ public class AusAffESIndex {
 	/// Send the request to the ES server
 	private void sendRequest(Request<?> request) 
 	{
-		// moved to init
-		
-		 /*ExecutionContext context = new ExecutionContext(true);
-
-	       ClientConfiguration clientConfiguration = new ClientConfiguration();
-	       clientConfiguration.setConnectionTimeout(ClientConfiguration.DEFAULT_CONNECTION_TIMEOUT);
-	       clientConfiguration.setConnectionMaxIdleMillis(ClientConfiguration.DEFAULT_CONNECTION_MAX_IDLE_MILLIS);
-	       clientConfiguration.setSocketTimeout(100*1000);
-	       clientConfiguration.setRequestTimeout(REQUEST_TIMEOUT);		// sets Request timeout to to "60" seconds 
-	       client = new AmazonHttpClient(clientConfiguration);
-
-	       MyHttpResponseHandler<Void> responseHandler = new MyHttpResponseHandler<Void>();
-	       MyErrorHandler errorHandler = new MyErrorHandler();*/
-
 	       try
 	       {
 	    	   Response<Void> response = client.execute(request, responseHandler, errorHandler, context);
@@ -227,29 +207,8 @@ public class AusAffESIndex {
 			// Perform Signature Version 4 signing
 			//performSigningSteps(request);    // used when having iam role for ES accesspolicy, but not in use for IP range access policy
 
-			
-			// only for debugging
-			/*midTime = endTime;
-	        endTime = System.currentTimeMillis();
-			
-			System.out.println("*****************");
-			System.out.println("Time before sending ES index request "+(endTime-midTime)/1000.0+" seconds");
-	        System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
-			System.out.println("*****************");*/
-
 			// Send the request to the server
 			sendRequest(request);   
-			
-			
-			/*midTime = endTime;
-	        endTime = System.currentTimeMillis();
-			
-			System.out.println("*****************");
-			System.out.println("Time after sending ES index request "+(endTime-midTime)/1000.0+" seconds");
-	        System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
-			System.out.println("*****************");*/
-
-			
 			
 			// Shutdown client, Uncomment when initialize and create HTTP client in this class instead of AmazonHttpClientService
 			//end();
@@ -334,7 +293,7 @@ public class AusAffESIndex {
 			
 			System.out.println(response.getStatusText());
 			System.out.println(response.getStatusCode());
-			//System.out.println(ase.getErrorMessage());
+			System.out.println(ase.getErrorMessage());
 			//System.out.println(ase.getRawResponseContent());
 			System.out.println(ase.getErrorCode());
 			
@@ -342,6 +301,8 @@ public class AusAffESIndex {
 			logger.error(ase.getRawResponseContent());
 			
 			
+			//06/25/2018 Re-try Re-process bulk again (re-build http request & re-send)
+			ProcessBulk();
 			return ase;
 		}
 

@@ -46,6 +46,9 @@ public class DownloadloadFileFromS3 {
 
 	static List<String> keysList = new ArrayList<String>();
 
+	static AmazonS3 s3Client = null;
+	static String currDir;
+
 	public DownloadloadFileFromS3()
 	{
 
@@ -57,48 +60,20 @@ public class DownloadloadFileFromS3 {
 		this.key = key;
 	}
 
-	// Added 07/13/2017 "init()" to download Cafe ANI files/records that contains "SecondaryPUI" for Hongrong to capture this tag and load to new column in BD "SecondaryPUI"
 	public static void init()
 	{
-		InputStream s3objectData = null;
-		S3Object s3object = null;
-
-
 		try
 		{
-			AmazonS3 s3Client = AmazonS3Service.getInstance().getAmazonS3Service();
-
-
-
-			for(String key: keysList)
-			{
-				s3object = s3Client.getObject(new GetObjectRequest (bucketName, key));
-				s3objectData = s3object.getObjectContent();
-				//parseS3File(objectData);  // for single file testing
-
-				if(s3objectData !=null)
-				{
-					saveContentToFile(s3objectData, key);
-				}
-			}
-		
-
-		}
-		catch(IOException ex)
-		{
-			ex.printStackTrace();
-		}
-
-		catch(AmazonServiceException ase)
-		{
-			System.out.println("Caught an AmazonServiceException, which " +"means your request made it " +
-					"to Amazon S3, but was rejected with an error response" +
-					" for some reason.");
-			System.out.println("Error Message:    " + ase.getMessage());
-			System.out.println("HTTP Status Code: " + ase.getStatusCode());
-			System.out.println("AWS Error Code:   " + ase.getErrorCode());
-			System.out.println("Error Type:       " + ase.getErrorType());
-			System.out.println("Request ID:       " + ase.getRequestId());
+			currDir = System.getProperty("user.dir");
+			File file =new File (currDir);
+			if(!file.exists())
+				file.mkdir();
+			currDir = currDir + "/cafe_ani_files";
+			file =new File (currDir);
+			if(!file.exists())
+				file.mkdir();
+			
+			s3Client = AmazonS3Service.getInstance().getAmazonS3Service();
 		}
 		catch(AmazonClientException ace)
 		{
@@ -109,22 +84,66 @@ public class DownloadloadFileFromS3 {
 					"such as not being able to access the network.");
 			System.out.println("Error Message: " + ace.getMessage());
 		}
-		
-		finally
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+
+	}
+	// Added 07/13/2017 "init()" to download Cafe ANI files/records that contains "SecondaryPUI" for Hongrong to capture this tag and load to new column in BD "SecondaryPUI"
+	public static void getKey()
+	{
+		InputStream s3objectData = null;
+		S3Object s3object = null;
+
+
+		for(String key: keysList)
 		{
 			try
 			{
+				s3object = s3Client.getObject(new GetObjectRequest (bucketName, key));
+				s3objectData = s3object.getObjectContent();
+				//parseS3File(objectData);  // for single file testing
+
 				if(s3objectData !=null)
 				{
-					s3objectData.close();
+					saveContentToFile(s3objectData, key);
 				}
 			}
-			catch(Exception e)
+
+			catch(IOException ex)
 			{
-				e.printStackTrace();
+				ex.printStackTrace();
+			}
+
+			catch(AmazonServiceException ase)
+			{
+				System.out.println("Caught an AmazonServiceException, which " +"means your request made it " +
+						"to Amazon S3, but was rejected with an error response" +
+						" for some reason.");
+				System.out.println("Error Message:    " + ase.getMessage());
+				System.out.println("HTTP Status Code: " + ase.getStatusCode());
+				System.out.println("AWS Error Code:   " + ase.getErrorCode());
+				System.out.println("Error Type:       " + ase.getErrorType());
+				System.out.println("Request ID:       " + ase.getRequestId());
+			}
+
+
+			finally
+			{
+				try
+				{
+					if(s3objectData !=null)
+					{
+						s3objectData.close();
+					}
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
+				}
 			}
 		}
-
 	}
 	public static void getFileFromS3(String s3BucketName, String fileKey) throws AmazonClientException,AmazonServiceException, InterruptedException
 	{	
@@ -203,7 +222,11 @@ public class DownloadloadFileFromS3 {
 			breader = new BufferedReader(new InputStreamReader(new ByteArrayInputStream(breader.readLine().replaceAll("><", ">\n<").getBytes())));
 
 			//File file = new File(s3Dir.getName()+"/"+key+".xml");
-			File file = new File("/ebs_scratch/Hanan_AUAF/EVCAFE_SQS/cafe_pui_wzSecondaryPUI/"+key+".xml");
+			//File file = new File("/ebs_scratch/Hanan_AUAF/EVCAFE_SQS/cafe_pui_wzSecondaryPUI/"+key+".xml");
+
+			
+
+			File file = new File(currDir + "/" + key + ".xml");
 
 			if (!file.exists()) 
 			{
@@ -322,6 +345,7 @@ public class DownloadloadFileFromS3 {
 		try
 		{
 			init();
+			getKey();
 		}
 		catch(Exception e)
 		{
