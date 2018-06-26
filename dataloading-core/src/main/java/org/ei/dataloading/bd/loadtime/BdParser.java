@@ -9,6 +9,7 @@ import org.jdom2.output.*;
 import org.ei.util.GUID;
 import org.apache.oro.text.perl.*;
 import org.apache.oro.text.regex.*;
+import org.xml.sax.InputSource;
 
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
@@ -17,6 +18,7 @@ import java.util.zip.ZipInputStream;
 import org.ei.common.Constants;
 import org.ei.common.bd.*;
 import org.ei.dataloading.*;
+
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -160,6 +162,9 @@ public class BdParser
 
 	public void parseRecord(Reader r) throws Exception
 	{
+		//InputSource is = new InputSource(r);
+		//is.setEncoding("UTF-8");
+		//this.doc = builder.build(is);
 		this.doc = builder.build(r);
 		doc.setBaseURI(".");
 		Element cpxRoot = doc.getRootElement();
@@ -197,26 +202,26 @@ public class BdParser
 			setPui("");
 			if(cpxRoot != null)
 			{
-				
+				//System.out.println("NAME= "+cpxRoot.getName());
 				String namespaceURI = cpxRoot.getNamespace().getURI();
 				if(namespaceURI!=null && namespaceURI.length()>0)
 				{
 					noNamespace = Namespace.getNamespace("","http://www.elsevier.com/xml/ani/ani");
 				}
-				
-				
-				
+								
 				Element item = cpxRoot.getChild("item",noNamespace);
 
 				if(item!= null)
-				{
-
+				{					
 					String eid = item.getChildText("document-id",xoeNamespace);	
 					if(eid!=null)
 					{
 						record.put("EID",eid);
 					}
 					//System.out.println("EID1="+eid);
+					
+					Element fundingList = cpxRoot.getChild("funding-list",xocsNamespace);					
+					
 					Element indexeddate = item.getChild("indexeddate",xocsNamespace);
 					if(indexeddate !=null)
 					{
@@ -396,16 +401,21 @@ public class BdParser
 									if(type != null)
 									{
 										String cititype=type.getValue();
+										
+										/******Use this for new AIP LOGIC*/
+										/* block for BD comfirmation
 										if(record.get("STAGE")!=null && ((String)record.get("STAGE")).equals("S200"))
 										{
 											docType="ip";
 										}
-										else
+										else										
 										{
+										*/										 
 											docType = cititype;
-										}
+										//}
+										
 										record.put("CITTYPE",docType);
-										//System.out.println("DOCTYPE= "+docType+" STAGE="+record.get("STAGE"));
+										//System.out.println("STAGE="+record.get("STAGE")+"TYPE= "+cititype+"DOCTYPE= "+docType);
 									}
 								}
 
@@ -1037,8 +1047,77 @@ public class BdParser
 							//GRANTLIST
 							Element grantlist = (Element) head.getChild("grantlist",noNamespace);
 							StringBuffer grantBuffer = new StringBuffer();
+							String fundingText = null;
+							if(fundingList !=null)
+							{
+								List fundinggroup = fundingList.getChildren("funding",xocsNamespace);
+								for (int i = 0; i < fundinggroup.size(); i++)
+								{
+									Element funding =(Element) fundinggroup.get(i);
+									if(funding.getChildText("funding-id",xocsNamespace)!=null)
+									{									
+										grantBuffer.append(funding.getChildText("funding-id",xocsNamespace));
+									}
+									
+									grantBuffer.append(Constants.IDDELIMITER);
+									
+									if(funding.getChildText("funding-agency-acronym",xocsNamespace)!=null)
+									{
+										grantBuffer.append(dictionary.mapEntity(funding.getChildText("funding-agency-acronym",xocsNamespace)));
+									}
+									
+									grantBuffer.append(Constants.IDDELIMITER);
+									
+									if(funding.getChildText("funding-agency",xocsNamespace)!=null)
+									{
+										grantBuffer.append(dictionary.mapEntity(funding.getChildText("funding-agency",xocsNamespace)));
+									}
+									
+									grantBuffer.append(Constants.IDDELIMITER);
+									
+									if(funding.getChildText("funding-agency-id",xocsNamespace)!=null)
+									{
+										grantBuffer.append(dictionary.mapEntity(funding.getChildText("funding-agency-id",xocsNamespace)));
+									}
+									
+									grantBuffer.append(Constants.IDDELIMITER);
+									
+									if(funding.getChildText("funding-agency-country",xocsNamespace)!=null)
+									{
+										grantBuffer.append(dictionary.mapEntity(funding.getChildText("funding-agency-country",xocsNamespace)));
+									}
+									
+									grantBuffer.append(Constants.IDDELIMITER);
+									
+									if(funding.getChildText("funding-agency-matched-string",xocsNamespace)!=null)
+									{
+										grantBuffer.append(dictionary.mapEntity(funding.getChildText("funding-agency-country",xocsNamespace)));
+									}
+									
+									
+									if(i<fundinggroup.size()-1)
+									{
+										grantBuffer.append(Constants.AUDELIMITER);
+									}	
+								}
+								
+								if(grantBuffer.length()>0)
+								{
+									record.put("GRANTLIST",grantBuffer.toString());
+									//System.out.println(eid+" get funding from funding-list");
+								}
+																
+								if(fundingList.getChild("funding-text",xocsNamespace)!=null)
+								{
+									fundingText =  fundingList.getChildText("funding-text",xocsNamespace);
+									//System.out.println("GRANTtext="+fundingText);
+									record.put("GRANTTEXT",fundingText);
+									//System.out.println(eid+" get fundingText from funding-list");
+								}
+								
+							}
 							
-							if(grantlist!=null)
+							if(grantlist!=null && grantBuffer.length()==0)
 							{
 								List grantgroup = grantlist.getChildren("grant",noNamespace);
 								for (int i = 0; i < grantgroup.size(); i++)
@@ -1065,14 +1144,20 @@ public class BdParser
 										grantBuffer.append(Constants.AUDELIMITER);
 									}									
 								}
-								record.put("GRANTLIST",grantBuffer.toString());
+								if(grantBuffer.length()>0)
+								{
+									record.put("GRANTLIST",grantBuffer.toString());
+									//System.out.println(eid+" get funding from grantlist");
+								}
 								
 								//added by hmo on 7/17/2017
-								if(grantlist.getChild("grant-text",noNamespace)!=null)
+								if(fundingText==null && grantlist.getChild("grant-text",noNamespace)!=null)
 								{
 									String grantText =  grantlist.getChildText("grant-text",noNamespace);
 									record.put("GRANTTEXT",grantText);
+									//System.out.println(eid+" get fundingText from grantlist");
 								}
+								
 							}
 
 

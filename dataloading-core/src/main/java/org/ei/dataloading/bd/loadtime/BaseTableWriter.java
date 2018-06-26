@@ -761,6 +761,10 @@ public class BaseTableWriter
 				{
 					data = data.substring(0,cutOffPosition);
 				}
+				if(data.length()>columnWidth)
+				{
+					data = data.substring(0,columnWidth);
+				}
 
 			}
 		}

@@ -2578,12 +2578,8 @@ public class NewDataTesting
 			
 			while((line=in.readLine())!=null)
 			{
-				char[] ch=line.toCharArray();
-				for(int i=0;i<ch.length;i++)
-				{
-					
-				}
-				
+				line= removeLineInvalidCharacters(line);
+				out.write(line+"\n");
 			}
 			
 		}
@@ -2591,6 +2587,38 @@ public class NewDataTesting
 		{
 			e.printStackTrace();
 		}
+	}
+	
+	private String removeLineInvalidCharacters(String text)
+	{
+		if (null == text || text.isEmpty()) {
+		    return text;
+		}
+		final int len = text.length();
+		char current = 0;
+		int codePoint = 0;
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < len; i++) {
+		    current = text.charAt(i);
+		    boolean surrogate = false;
+		    if (Character.isHighSurrogate(current)
+		            && i + 1 < len && Character.isLowSurrogate(text.charAt(i + 1))) {
+		        surrogate = true;
+		        codePoint = text.codePointAt(i++);
+		    } else {
+		        codePoint = current;
+		    }
+		    if ((codePoint == 0x9) || (codePoint == 0xA) || (codePoint == 0xD)
+		            || ((codePoint >= 0x20) && (codePoint <= 0xD7FF))
+		            || ((codePoint >= 0xE000) && (codePoint <= 0xFFFD))
+		            || ((codePoint >= 0x10000) && (codePoint <= 0x10FFFF))) {
+		        sb.append(current);
+		        if (surrogate) {
+		            sb.append(text.charAt(i));
+		        }
+		    }
+		}
+		return sb.toString();
 	}
 
 	private void getWeeklyCount(String weekNumber)
@@ -3028,50 +3056,53 @@ public class NewDataTesting
 		try
 		{
 			out = new FileWriter("midFromFast_PROD.out");	
-			System.out.println("Query= "+query);
-			FastClient client = new FastClient();
-			client.setBaseURL("http://evprod14.cloudapp.net:15100");//PROD
-			//client.setBaseURL("http://evprod08.cloudapp.net:15100");//DEV server
-			//client.setBaseURL("http://evdr09.cloudapp.net:15100"); //DR			
-			client.setResultView("ei");
-			client.setOffSet(0);
-			client.setPageSize(260000);
-			client.setQueryString(searchQuery);
-			client.setDoCatCount(true);
-			client.setDoNavigators(true);
-			client.setPrimarySort("ausort");
-			client.setPrimarySortDirection("+");
-			client.search();
-			
-			
-
-			List l = client.getDocIDs();
-			int count =client.getHitCount();
-			Thread.sleep(10000);
-			
-			if(count<1)
+			for(int j=1700;j<2019;j++)
 			{
-			  System.out.println("0 records found");
-		    }
-			else
-			{
-				System.out.println(count+" records found");
-				System.out.println("SIZE= "+l.size());
-			}
-
-			StringBuffer sb=new StringBuffer();
-			
-			for(int i=0;i<l.size();i++)
-			{
-				String[] docID = (String[])l.get(i);
-				String m_id = docID[0];
-				//System.out.println(m_id);
+				System.out.println("Query= "+query);
+				FastClient client = new FastClient();
+				client.setBaseURL("http://evprod14.cloudapp.net:15100");//PROD
+				//client.setBaseURL("http://evprod08.cloudapp.net:15100");//DEV server
+				//client.setBaseURL("http://evdr09.cloudapp.net:15100"); //DR			
+				client.setResultView("ei");
+				client.setOffSet(0);
+				client.setPageSize(260000);
+				client.setQueryString(searchQuery+" and yr:"+j);
+				client.setDoCatCount(true);
+				client.setDoNavigators(true);
+				client.setPrimarySort("ausort");
+				client.setPrimarySortDirection("+");
+				client.search();
 				
-				out.write(m_id+"\n");					
-				out.flush();					
-			}
 				
-			out.flush();
+	
+				List l = client.getDocIDs();
+				int count =client.getHitCount();
+				Thread.sleep(100);
+				
+				if(count<1)
+				{
+				  System.out.println("0 records found");
+			    }
+				else
+				{
+					System.out.println(count+" records found");
+					System.out.println("SIZE= "+l.size());
+				}
+	
+				StringBuffer sb=new StringBuffer();
+				
+				for(int i=0;i<l.size();i++)
+				{
+					String[] docID = (String[])l.get(i);
+					String m_id = docID[0];
+					//System.out.println(m_id);
+					
+					out.write(m_id+"\n");					
+					out.flush();					
+				}
+					
+				out.flush();
+			}
 			out.close();
 
 		}

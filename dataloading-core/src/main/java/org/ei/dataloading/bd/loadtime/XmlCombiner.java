@@ -372,8 +372,24 @@ throws Exception
                 		rec.put(EVCombinedRec.AFFILIATIONID, affids);
                 	}
                 	
+                	//move this block of code to here to include Affiliation ID while BD affiliation is null
+                	if(rs.getString("affid")==null && rs.getString("CAFE_AFFILIATION")!=null)
+                    {
+                    	String cafeAffString = rs.getString("CAFE_AFFILIATION");
+                    	if(rs.getString("CAFE_AFFILIATION1")!=null)
+                    	{
+                    		cafeAffString = cafeAffString+rs.getString("CAFE_AFFILIATION1");
+                    	}
+           
+                    	BdAffiliations caff = new BdAffiliations(cafeAffString);
+                    	caff.getSearchValue();     
+                    	
+                    	rec.put(EVCombinedRec.AFFILIATIONID, caff.getAffiliationId());
+                    	rec.put(EVCombinedRec.DEPARTMENTID,  caff.getDepartmentId());
+                    	
+                    }
+                	//end of the block
                 	
-
                     if(rs.getString("AUTHOR") != null)
                     {
                         String authorString = rs.getString("AUTHOR");
@@ -396,6 +412,7 @@ throws Exception
 	                        rec.put(EVCombinedRec.AUTHORID, cafe_aid);
                         }
                         String affiliation = null;
+                        
                         if (rs.getString("AFFILIATION") != null)
                         {
                             affiliation = rs.getString("AFFILIATION");
@@ -404,6 +421,8 @@ throws Exception
                                 affiliation = affiliation+rs.getString("AFFILIATION_1");
                             }
                             
+                            /* 
+                             * move these section to outside block to allow index AFFILIATIONID while bd affiliation is null
                             if(rs.getString("affid")==null && rs.getString("CAFE_AFFILIATION")!=null)
                             {
                             	String cafeAffString = rs.getString("CAFE_AFFILIATION");
@@ -418,6 +437,7 @@ throws Exception
                             	rec.put(EVCombinedRec.DEPARTMENTID,  caff.getDepartmentId());
                             	
                             }
+                            */
                             BdAffiliations aff = new BdAffiliations(affiliation);
                             rec.put(EVCombinedRec.AUTHOR_AFFILIATION,  aff.getSearchValue());
                             rec.put(EVCombinedRec.AFFILIATION_LOCATION,  aff.getLocationsSearchValue());
@@ -1058,6 +1078,7 @@ throws Exception
                     	if(rs.getString("eid") != null)
                     	{
                     		rec.put(EVCombinedRec.EID, rs.getString("eid"));
+                    		//System.out.println("EID= "+rs.getString("eid"));
                     	}
                     }
                     catch(Exception e)
@@ -1282,8 +1303,9 @@ throws Exception
     		{
     			if(grantA[i]!=null)
     			{
-    				String[] grantS = grantA[i].split(Constants.IDDELIMITER);
-    				if(grantS.length==3)
+    				String[] grantS = grantA[i].split(Constants.IDDELIMITER,-1);
+    				//System.out.println("GrantList "+grantS.length);
+    				if(grantS.length>1)
     				{
    				
     					if(grantS[0]!=null)
@@ -1291,8 +1313,7 @@ throws Exception
     						grantidBuffer.append(grantS[0]);
     						grantidBuffer.append(Constants.AUDELIMITER);
     					}
-    					
-    					
+    					   					
     					if(grantS[1]!=null)
     					{
     						grantidBuffer.append(grantS[1]);
@@ -1300,10 +1321,11 @@ throws Exception
     					}
     					
     				}
-    				else
-        			{
-        				System.out.println("GrantList has wrong format");
-        			}
+    				else if(grantS.length>0)
+    				{
+    					grantidBuffer.append(grantS[0]);
+    					grantidBuffer.append(Constants.AUDELIMITER);
+    				}   				
     			}
     			
     			
@@ -1325,8 +1347,8 @@ throws Exception
     		{
     			if(grantA[i]!=null)
     			{
-    				String[] grantS = grantA[i].split(Constants.IDDELIMITER);
-    				if(grantS.length==3)
+    				String[] grantS = grantA[i].split(Constants.IDDELIMITER,-1);
+    				if(grantS.length>2)
     				{
    				
     					if(grantS[2]!=null)
@@ -1336,8 +1358,14 @@ throws Exception
     					}
     					  					
     				}
-    				else
+    				else if(grantS.length>1)
         			{
+    					System.out.println("GRANT-1 "+grantS[1]+" ** "+grantS[0]);
+        				System.out.println("GrantList has wrong format");
+        			}
+    				else if(grantS.length>0)
+        			{
+    					System.out.println("GRANT-0 "+grantS[0]);
         				System.out.println("GrantList has wrong format");
         			}
     			}
@@ -2134,7 +2162,7 @@ throws Exception
             
             //change by hmo at 4/6/2017 for author/affiliation project
             String sqlQuery = "select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CLASSIFICATIONDESC,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER, substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME,CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER,CONFERENCEPAGERANGE,CONFERENCEPAGECOUNT,CONFERENCEEDITOR,CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,APILT,APILT1,APICT,APICT1,APIAMS,SEQ_NUM,GRANTLIST,null as cafe_author,null as cafe_author1,null as cafe_affiliation, null as cafe_affiliation1,null as CAFE_CORRESPONDENCEAFFILIATION,null as authorid,null as affid ,SOURCEBIBTEXT,STANDARDID,STANDARDDESIGNATION,NORMSTANDARDID,GRANTTEXT from " + Combiner.TABLENAME +" where LOADNUMBER='" + weekNumber + "' AND loadnumber != 0 and database='" + Combiner.CURRENTDB + "'";
-    		String sqlCpxQuery = "select a.CHEMICALTERM,a.SPECIESTERM,a.REGIONALTERM,a.DATABASE,a.CITATIONLANGUAGE,a.CITATIONTITLE,a.CITTYPE,a.ABSTRACTDATA,a.PII,a.PUI,a.COPYRIGHT,a.M_ID,a.accessnumber,a.datesort,a.author,a.author_1,a.AFFILIATION,a.AFFILIATION_1,a.CORRESPONDENCEAFFILIATION,a.CODEN,a.ISSUE,a.CLASSIFICATIONCODE,a.CLASSIFICATIONDESC,a.CONTROLLEDTERM,a.UNCONTROLLEDTERM,a.MAINHEADING,a.TREATMENTCODE,a.LOADNUMBER,a.SOURCETYPE,a.SOURCECOUNTRY,a.SOURCEID,a.SOURCETITLE,a.SOURCETITLEABBREV,a.ISSUETITLE,a.ISSN,a.EISSN,a.ISBN,a.VOLUME,a.PAGE,a.PAGECOUNT,a.ARTICLENUMBER, substr(a.PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,a.PUBLICATIONDATE,a.EDITORS,a.PUBLISHERNAME,a.PUBLISHERADDRESS,a.PUBLISHERELECTRONICADDRESS,a.REPORTNUMBER,a.CONFNAME, a.CONFCATNUMBER,a.CONFCODE,a.CONFLOCATION,a.CONFDATE,a.CONFSPONSORS,a.CONFERENCEPARTNUMBER, a.CONFERENCEPAGERANGE, a.CONFERENCEPAGECOUNT, a.CONFERENCEEDITOR, a.CONFERENCEORGANIZATION,a.CONFERENCEEDITORADDRESS,a.TRANSLATEDSOURCETITLE,a.VOLUMETITLE,a.DOI,a.ASSIG,a.CASREGISTRYNUMBER,a.APILT,a.APILT1,a.APICT,a.APICT1,a.APIAMS,a.SEQ_NUM,a.GRANTLIST,b.author as cafe_author,b.author_1 as cafe_author1,b.affiliation as cafe_affiliation,b.affiliation_1 as cafe_affiliation1,b.CORRESPONDENCEAFFILIATION as CAFE_CORRESPONDENCEAFFILIATION,null as authorid,null as affid,a.SOURCEBIBTEXT,a.STANDARDID,a.STANDARDDESIGNATION,a.NORMSTANDARDID,a.GRANTTEXT from " + Combiner.TABLENAME + " a left outer join cafe_master b on a.cafe_pui = b.pui where a.LOADNUMBER=" + weekNumber + " AND a.database='cpx' and a.loadnumber != 0";
+    		String sqlCpxQuery = "select a.CHEMICALTERM,a.SPECIESTERM,a.REGIONALTERM,a.DATABASE,a.CITATIONLANGUAGE,a.CITATIONTITLE,a.CITTYPE,a.ABSTRACTDATA,a.PII,a.PUI,a.COPYRIGHT,a.M_ID,a.accessnumber,a.datesort,a.author,a.author_1,a.AFFILIATION,a.AFFILIATION_1,a.CORRESPONDENCEAFFILIATION,a.CODEN,a.ISSUE,a.CLASSIFICATIONCODE,a.CLASSIFICATIONDESC,a.CONTROLLEDTERM,a.UNCONTROLLEDTERM,a.MAINHEADING,a.TREATMENTCODE,a.LOADNUMBER,a.SOURCETYPE,a.SOURCECOUNTRY,a.SOURCEID,a.SOURCETITLE,a.SOURCETITLEABBREV,a.ISSUETITLE,a.ISSN,a.EISSN,a.ISBN,a.VOLUME,a.PAGE,a.PAGECOUNT,a.ARTICLENUMBER, substr(a.PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,a.PUBLICATIONDATE,a.EDITORS,a.PUBLISHERNAME,a.PUBLISHERADDRESS,a.PUBLISHERELECTRONICADDRESS,a.REPORTNUMBER,a.CONFNAME, a.CONFCATNUMBER,a.CONFCODE,a.CONFLOCATION,a.CONFDATE,a.CONFSPONSORS,a.CONFERENCEPARTNUMBER, a.CONFERENCEPAGERANGE, a.CONFERENCEPAGECOUNT, a.CONFERENCEEDITOR, a.CONFERENCEORGANIZATION,a.CONFERENCEEDITORADDRESS,a.TRANSLATEDSOURCETITLE,a.VOLUMETITLE,a.DOI,a.ASSIG,a.CASREGISTRYNUMBER,a.APILT,a.APILT1,a.APICT,a.APICT1,a.APIAMS,a.SEQ_NUM,a.GRANTLIST,b.author as cafe_author,b.author_1 as cafe_author1,b.affiliation as cafe_affiliation,b.affiliation_1 as cafe_affiliation1,b.CORRESPONDENCEAFFILIATION as CAFE_CORRESPONDENCEAFFILIATION,null as authorid,null as affid,a.SOURCEBIBTEXT,a.STANDARDID,a.STANDARDDESIGNATION,a.NORMSTANDARDID,a.GRANTTEXT,a.EID from " + Combiner.TABLENAME + " a left outer join cafe_master b on a.cafe_pui = b.pui where a.LOADNUMBER=" + weekNumber + " AND a.database='cpx' and a.loadnumber != 0";
     		
     		System.out.println("DATABASE="+Combiner.CURRENTDB);
     		if((Combiner.CURRENTDB).equalsIgnoreCase("cpx"))
