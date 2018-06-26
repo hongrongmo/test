@@ -449,6 +449,7 @@ org\ei\dataloading\bd\loadtime\BaseTableDriver.class
 org\ei\parser\base\OrderedNear.class
 org\ei\books\library\Visitable.class
 org\ei\dataloading\cbnb\loadtime\ExtractPubCbn.class
+org\ei\util\BuildBDDataInJsonFormat.class
 org\ei\data\upt\runtime\NonPatentRef.class
 org\ei\common\CountryFormatter.class
 org\ei\gui\PagingComponents.class
@@ -824,6 +825,7 @@ org\ei\dataloading\inspec\loadtime\InsNumericalIndexMapping.class
 org\ei\dataloading\Combiner.class
 org\ei\fulldoc\APSGateway$APSJournal.class
 org\ei\bulletins\Bulletin.class
+org\ei\util\ConvertFastToJson.class
 org\ei\dataloading\upt\loadtime\UPTRefCntUpdateExtract.class
 org\ei\domain\Classification.class
 org\ei\dataloading\upt\loadtime\SaxBaseHandler$XmlFileFilter.class
@@ -880,6 +882,7 @@ org\ei\dataloading\awss3\UploadFileToS3.class
 org\ei\books\BookQuery.class
 org\ei\dataloading\encompasspat\stn\PRI.class
 org\ei\thesaurus\ThesaurusRecordBroker$RecIDScore.class
+org\ei\util\CheckMail.class
 org\ei\domain\bundles\BundleBroker.class
 org\ei\dataloading\xmlDataLoading\Publicationdate.class
 org\ei\fulldoc\SDGateway.class
