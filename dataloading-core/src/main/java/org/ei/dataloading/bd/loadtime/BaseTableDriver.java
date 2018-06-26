@@ -27,7 +27,8 @@ public class BaseTableDriver
     private int loadNumber;
     private String databaseName;
     private String action;
-    private static String startRootElement ="<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><!DOCTYPE bibdataset SYSTEM \"ani512.dtd\"><bibdataset xmlns:ce=\"http://www.elsevier.com/xml/common/dtd\" xmlns:xoe=\"http://www.elsevier.com/xml/xoe/dtd\" xmlns:ait=\"http://www.elsevier.com/xml/ait/dtd\">";
+    private static String startRootElement ="<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><bibdataset xmlns:xocs=\"http://www.elsevier.com/xml/xocs/dtd\" xmlns:ce=\"http://www.elsevier.com/xml/common/dtd\" xmlns:xoe=\"http://www.elsevier.com/xml/xoe/dtd\" xmlns:ait=\"http://www.elsevier.com/xml/ait/dtd\">";
+    //private static String startRootElement ="<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><!DOCTYPE bibdataset SYSTEM \"ani512.dtd\"><bibdataset xmlns:ce=\"http://www.elsevier.com/xml/common/dtd\" xmlns:xoe=\"http://www.elsevier.com/xml/xoe/dtd\" xmlns:ait=\"http://www.elsevier.com/xml/ait/dtd\">";
     //private static String startRootElement ="<?xml version=\"1.0\" encoding=\"UTF-8\"?><bibdataset xsi:schemaLocation=\"http://www.elsevier.com/xml/ani/ani http://www.elsevier.com/xml/ani/ani512.xsd\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:ait=\"http://www.elsevier.com/xml/ani/ait\" xmlns:ce=\"http://www.elsevier.com/xml/ani/common\" xmlns=\"http://www.elsevier.com/xml/ani/ani\">";
     private static String endRootElement   ="</bibdataset>";
     private static Connection con;
@@ -56,7 +57,7 @@ public class BaseTableDriver
             System.out.println("please enter three parameters as \" weeknumber filename databaseName action url driver username password\"");
             System.exit(1);
         }
-
+        
         loadN = Integer.parseInt(args[0]);
 
         infile = args[1];
@@ -488,11 +489,22 @@ public class BaseTableDriver
             String document_eid = null;
             r = new BdParser();
             StringBuffer sBuffer = new StringBuffer();
-            r.setWeekNumber(Integer.toString(loadNumber));
+            StringBuffer fundBuffer = new StringBuffer();
+            
+            //added on 6/8/2018 for limiting loadnumber to six digits
+            String loadnumber = Integer.toString(loadNumber);
+            //System.out.println("loadnumber="+loadnumber);
+            if(loadnumber.length()>0)
+            {
+            	loadnumber = loadnumber.substring(0,6);
+            }
+            //System.out.println("loadnumber1="+loadnumber);
+            r.setWeekNumber(loadnumber);
             r.setDatabaseName(databaseName);
             //r.setAction(action);
             r.setCafeS3Loc(s3FileLoc);   //HH 04/05/2016
             boolean start = false;
+            boolean fundingStart = false;
            
            
             while((line=xmlReader.readLine())!=null)
@@ -502,9 +514,25 @@ public class BaseTableDriver
             	{
             		document_eid = line;                     	
             	}
+            	
+            	if(line.indexOf("<xocs:funding-list")>-1)
+            	{
+            		fundingStart = true;              		
+            	}
+            	
+            	if(fundingStart)
+                {
+            		fundBuffer.append(line);
+                }           	            	
+            	                              
+                if(line.indexOf("</xocs:funding-list>")>-1)
+             	{
+             		fundingStart = false;              		
+             	}
+                
                 if(start)
                 {
-                    sBuffer.append(line);
+                	sBuffer.append(line);
                 }
 
                 if(line.indexOf("<item>")>-1)
@@ -517,6 +545,7 @@ public class BaseTableDriver
                     {
                     	sBuffer.append(document_eid);                   	
                     }
+                   
                 }
 
                 if(line.indexOf("</item>")>-1)
@@ -531,13 +560,19 @@ public class BaseTableDriver
                     {
                     	try{
 	                        sBuffer.insert(0,startRootElement);
+	                        
+	                        if(fundBuffer.length()>0)
+	                        {
+	                        	sBuffer.append(fundBuffer.toString());
+	                        }
+	                        
 	                        sBuffer.append(endRootElement);
-	                        //System.out.println(sBuffer.toString());
+	                        //System.out.println("CONTENT="+sBuffer.toString());
 	                        r.parseRecord(new StringReader(sBuffer.toString()));
                     	}
                     	catch(Exception e)
                     	{
-                    		System.out.println(sBuffer.toString());
+                    		System.out.println("ERROR="+sBuffer.toString());
                     		e.printStackTrace();
                     	}
 	                    sBuffer = new StringBuffer();
