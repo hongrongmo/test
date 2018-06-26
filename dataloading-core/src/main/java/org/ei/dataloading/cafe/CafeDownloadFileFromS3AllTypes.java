@@ -147,10 +147,10 @@ public class CafeDownloadFileFromS3AllTypes {
 				System.out.println("doc_Type: " +  doc_type);
 				
 				// added 05/10/2018 as ES 6.2 and up split types in separate indices
-				if(doc_type.toLowerCase().trim().equalsIgnoreCase("apr"))
+				/*if(doc_type.toLowerCase().trim().equalsIgnoreCase("apr"))
 					esIndexName = "author";
 				else if(doc_type.toLowerCase().trim().equalsIgnoreCase("ipr"))
-					esIndexName = "affiliation";
+					esIndexName = "affiliation";*/
 			}
 
 			if(args[5] !=null)
@@ -170,7 +170,7 @@ public class CafeDownloadFileFromS3AllTypes {
 			}
 		}
 
-		if(args.length >15)
+		if(args.length >16)
 		{
 			// # of downloaded cafe key files to include in one zip file for later process/convert
 			if(args[6] !=null)
@@ -251,6 +251,19 @@ public class CafeDownloadFileFromS3AllTypes {
 			{
 				// if archive_date range is true, get keys list fit within the date range that starts from archive_date till one day before today
 				isArchive_date_range = Boolean.valueOf(args[15]);
+			}
+			//Added 06/14/2018 for specifying indexname as per ES 6.2
+			if(args[16] !=null)
+			{
+				esIndexName = args[16];
+				if(esIndexName.equalsIgnoreCase("author") || esIndexName.equalsIgnoreCase("affiliation") || esIndexName.equalsIgnoreCase("cafe"))
+
+					System.out.println("ES Index Name: " + esIndexName);
+				else
+				{
+					System.out.println("Invalid ES Index Name for AU/AF profile deletion from ES, re-try with ESIndexName cafe");
+					System.exit(1);
+				}
 			}
 		}
 

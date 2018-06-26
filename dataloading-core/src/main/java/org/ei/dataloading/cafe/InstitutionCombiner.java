@@ -176,7 +176,7 @@ public class InstitutionCombiner{
 			if(args[15] !=null)
 			{
 				esIndexName = args[15].toLowerCase().trim();
-				if(esIndexName.equalsIgnoreCase("affiliation"))
+				if(esIndexName.equalsIgnoreCase("affiliation") || esIndexName.equalsIgnoreCase("cafe"))
 
 					System.out.println("ES Index Name: " + esIndexName);
 				else
@@ -251,7 +251,7 @@ public class InstitutionCombiner{
 			stmt = con.createStatement();
 			System.out.println("Running the query...");
 			/*String query = "select * from " +  tableName + " where affid in (select INSTITUTE_ID from " + metadataTableName + 
-					" where STATUS='matched' and dbase='cpx') and PARENTID is null";*/
+					" where STATUS='matched') and PARENTID is null";*/
 
 
 			//PROD
@@ -259,8 +259,8 @@ public class InstitutionCombiner{
 			//HH added 05/07/2018 explicitly add all author_profile columns to join with au doc counts table for ES index as per TM request
 			String query = "select a.M_ID,a.EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AFFID,a.STATUS,a.DATE_CREATED,a.DATE_REVISED,a.PREFERED_NAME,a.SORT_NAME,a.NAME_VARIANT,a.ADDRESS_PART,a.CITY,a.STATE,a.POSTAL_CODE,"+
 					"a.COUNTRY,a.CERTAINTY_SCORES,a.LOADNUMBER,a.DATABASE,a.QUALITY,a.UPDATENUMBER,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,a.ES_STATUS,a.PARENTID,a.PARENT_PREFERED_NAME, b.DOC_COUNT as DOC_COUNT "+
-					"from " +  tableName + "a left outer join " + afDocCount_tableName + " b on a.AFFID = b.AFFID where "+
-					"a.affid in (select INSTITUTE_ID from " + metadataTableName + " where STATUS='matched' and dbase='cpx') and a.PARENTID is null";
+					"from " +  tableName + "a left outer join " + afDocCount_tableName + " b on a.AFFID = b.INSTITUTE_ID where "+
+					"a.affid in (select INSTITUTE_ID from " + metadataTableName + " where STATUS='matched') and a.PARENTID is null";
 
 
 			System.out.println("query");
@@ -345,17 +345,15 @@ public class InstitutionCombiner{
 			System.out.println("Running the query...");
 			if(!(action.isEmpty()) && action.equalsIgnoreCase("new"))
 			{
-				/*query = "select * from " +  tableName + " where loadnumber=" + loadNumber + " and affid in (select INSTITUTE_ID from " + metadataTableName + 
-						" where STATUS='matched' and dbase='cpx') and PARENTID is null";*/			//used for intial/pre-release ES index, till loadnumber: 2017307
 				//PROD
 				/*query = "select * from " +  tableName + " where ES_STATUS is null and affid in (select INSTITUTE_ID from " + metadataTableName + 
-						" where STATUS='matched' and dbase='cpx') and PARENTID is null";*/
+						" where STATUS='matched') and PARENTID is null";*/
 
 				//HH added 05/07/2018 explicitly add all author_profile columns to join with au doc counts table for ES index as per TM request
 				query = "select a.M_ID,a.EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AFFID,a.STATUS,a.DATE_CREATED,a.DATE_REVISED,a.PREFERED_NAME,a.SORT_NAME,a.NAME_VARIANT,a.ADDRESS_PART,a.CITY,a.STATE,a.POSTAL_CODE,"+
 						"a.COUNTRY,a.CERTAINTY_SCORES,a.LOADNUMBER,a.DATABASE,a.QUALITY,a.UPDATENUMBER,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,a.ES_STATUS,a.PARENTID,a.PARENT_PREFERED_NAME, b.DOC_COUNT as DOC_COUNT from "
-						+ tableName + "a left outer join " + afDocCount_tableName + " b on a.AFFID = b.AFFID where a.ES_STATUS is null and "+
-						"a.affid in (select INSTITUTE_ID from " + metadataTableName + " where STATUS='matched' and dbase='cpx') and a.PARENTID is null";
+						+ tableName + "a left outer join " + afDocCount_tableName + " b on a.AFFID = b.INSTITUTE_ID where a.ES_STATUS is null and "+
+						"a.affid in (select INSTITUTE_ID from " + metadataTableName + " where STATUS='matched') and a.PARENTID is null";
 
 
 				System.out.println(query);
@@ -389,27 +387,31 @@ public class InstitutionCombiner{
 				updateNumber=loadNumber;
 
 				//PROD
-				/*query = "select * from " +  tableName + " where ES_STATUS is null and affid in (select INSTITUTE_ID from " + metadataTableName + 
-						" where STATUS='matched' and dbase='cpx') and PARENTID is null";
-				 */
+				/*	query = "select * from " +  tableName + " where ES_STATUS is null and affid in (select INSTITUTE_ID from " + metadataTableName + 
+						" where STATUS='matched') and PARENTID is null";*/
+
 
 
 				//HH added 05/07/2018 explicitly add all author_profile columns to join with au doc counts table for ES index as per TM request
-				/*query = "select select a.M_ID,a.EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AFFID,a.STATUS,a.DATE_CREATED,a.DATE_REVISED,a.PREFERED_NAME,a.SORT_NAME,a.NAME_VARIANT,a.ADDRESS_PART,a.CITY,a.STATE,a.POSTAL_CODE,"+
-						"a.COUNTRY,a.CERTAINTY_SCORES,a.LOADNUMBER,a.DATABASE,a.QUALITY,a.UPDATENUMBER,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,a.ES_STATUS,a.PARENTID,a.PARENT_PREFERED_NAME, b.DOC_COUNT as DOC_COUNT from "+
-						tableName + " a left outer join " + afDocCount_tableName + " b on a.AFFID = b.AFFID where ES_STATUS is null and "+
-						"affid in (select INSTITUTE_ID from " + metadataTableName + " where STATUS='matched' and dbase='cpx') and PARENTID is null";
-*/
-
-
-				//Testing
 				query = "select a.M_ID,a.EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AFFID,a.STATUS,a.DATE_CREATED,a.DATE_REVISED,a.PREFERED_NAME,a.SORT_NAME,a.NAME_VARIANT,a.ADDRESS_PART,a.CITY,a.STATE,a.POSTAL_CODE,"+
 						"a.COUNTRY,a.CERTAINTY_SCORES,a.LOADNUMBER,a.DATABASE,a.QUALITY,a.UPDATENUMBER,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,a.ES_STATUS,a.PARENTID,a.PARENT_PREFERED_NAME, b.DOC_COUNT as DOC_COUNT from "+
-						tableName + " a left outer join " + afDocCount_tableName + " b on a.AFFID = b.AFFID where a.ES_STATUS is null and "+
-						"a.affid in (select INSTITUTE_ID from " + metadataTableName + " where STATUS='matched' and dbase='cpx') and a.PARENTID is null and rownum<401";
+						tableName + " a left outer join " + afDocCount_tableName + " b on a.AFFID = b.INSTITUTE_ID where a.ES_STATUS is null and "+
+						"a.affid in (select INSTITUTE_ID from " + metadataTableName + " where STATUS='matched') and a.PARENTID is null";
 
-				
-				
+
+				// for IPR Re-index with doc_count using loadnumber
+				/*query = "select a.M_ID,a.EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AFFID,a.STATUS,a.DATE_CREATED,a.DATE_REVISED,a.PREFERED_NAME,a.SORT_NAME,a.NAME_VARIANT,a.ADDRESS_PART,a.CITY,a.STATE,a.POSTAL_CODE,"+
+						"a.COUNTRY,a.CERTAINTY_SCORES,a.LOADNUMBER,a.DATABASE,a.QUALITY,a.UPDATENUMBER,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,a.ES_STATUS,a.PARENTID,a.PARENT_PREFERED_NAME, b.DOC_COUNT as DOC_COUNT from "+
+						tableName + " a left outer join " + afDocCount_tableName + " b on a.AFFID = b.INSTITUTE_ID where a.updatenumber = " + updateNumber + " and "+
+						"a.affid in (select INSTITUTE_ID from " + metadataTableName + " where STATUS='matched') and a.PARENTID is null";
+*/
+
+				//Testing
+				/*query = "select a.M_ID,a.EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AFFID,a.STATUS,a.DATE_CREATED,a.DATE_REVISED,a.PREFERED_NAME,a.SORT_NAME,a.NAME_VARIANT,a.ADDRESS_PART,a.CITY,a.STATE,a.POSTAL_CODE,"+
+						"a.COUNTRY,a.CERTAINTY_SCORES,a.LOADNUMBER,a.DATABASE,a.QUALITY,a.UPDATENUMBER,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,a.ES_STATUS,a.PARENTID,a.PARENT_PREFERED_NAME, b.DOC_COUNT as DOC_COUNT from "+
+						tableName + " a left outer join " + afDocCount_tableName + " b on a.AFFID = b.INSTITUTE_ID where a.affid in " +
+						"(select INSTITUTE_ID from " + metadataTableName + " where STATUS='matched') and a.PARENTID is null and a.quality>=100 and rownum<5";
+				 */
 
 				System.out.println(query);
 

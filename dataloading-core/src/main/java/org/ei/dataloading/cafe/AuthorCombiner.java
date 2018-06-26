@@ -203,7 +203,7 @@ public class AuthorCombiner {
 			if(args[15] !=null)
 			{
 				esIndexName = args[15].toLowerCase().trim();
-				if(esIndexName.equalsIgnoreCase("author"))
+				if(esIndexName.equalsIgnoreCase("author") || esIndexName.equalsIgnoreCase("cafe"))
 
 					System.out.println("ES Index Name: " + esIndexName);
 				else
@@ -288,13 +288,16 @@ public class AuthorCombiner {
 
 			if(!(action.isEmpty()) && (action.equalsIgnoreCase("new") || action.equalsIgnoreCase("update")))
 			{
+				/*query = "select * from " +  tableName + " where authorid in (select AUTHOR_ID from " + metadataTableName + 
+						" where STATUS='matched')";*/
+
 				query = "select select a.M_ID,EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AUTHORID,a.STATUS,a.DATE_CREATED,DATE_REVISED,a.INITIALS,INDEXEDNAME,a.SURENAME,a.GIVENNAME,a.NAME_VARIANT,"+
 						"a.CLASSIFICATION_SUBJABBR,a.CLASSIFICATION_ASJC,a.PUBLICATION_RANGE,a.JORNAL_HISTORY_TYPE,a.JOURNALS,a.CURRENT_AFF_ID,a.CURRENT_AFF_TYPE,a.CURRENT_AFF_RELATIONSHIP,"+
 						"a.PARENT_AFF_ID,a.PARENT_AFF_TYPE,a.PARENT_AFF_RELATIONSHIP,a.HISTORY_AFFILIATIONID,a.LOADNUMBER,a.DATABASE,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,"+
 						"a.UPDATENUMBER,a.E_ADDRESS,a.ORCID,a.SOURCE_TITLE,a.ES_STATUS, b.DOC_COUNT as DOC_COUNT from " +  tableName + 
 						" a left outer join " + auDocCount_tableName + " b on a.AUTHORID = b.AUTHOR_ID where a.authorid in (select AUTHOR_ID from " + metadataTableName + 
-						" where STATUS='matched' and dbase='cpx')";
-				
+						" where STATUS='matched')";
+
 				System.out.println("query");
 
 				stmt.setFetchSize(200);
@@ -400,12 +403,15 @@ public class AuthorCombiner {
 				/*query = "select * from " +  tableName + " where loadnumber=" + loadNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + 
 						" where STATUS='matched' and dbase='cpx')";*/   // used for intial/pre-release ES index, till loadnumber: 2017261
 
+				/*query = "select * from " +  tableName + " where ES_STATUS is null and authorid in (select AUTHOR_ID from " + metadataTableName + 
+						" where STATUS='matched')";*/
+
 				query = "select a.M_ID,EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AUTHORID,a.STATUS,a.DATE_CREATED,DATE_REVISED,a.INITIALS,INDEXEDNAME,a.SURENAME,a.GIVENNAME,a.NAME_VARIANT,"+
 						"a.CLASSIFICATION_SUBJABBR,a.CLASSIFICATION_ASJC,a.PUBLICATION_RANGE,a.JORNAL_HISTORY_TYPE,a.JOURNALS,a.CURRENT_AFF_ID,a.CURRENT_AFF_TYPE,a.CURRENT_AFF_RELATIONSHIP,"+
 						"a.PARENT_AFF_ID,a.PARENT_AFF_TYPE,a.PARENT_AFF_RELATIONSHIP,a.HISTORY_AFFILIATIONID,a.LOADNUMBER,a.DATABASE,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,"+
 						"a.UPDATENUMBER,a.E_ADDRESS,a.ORCID,a.SOURCE_TITLE,a.ES_STATUS, b.DOC_COUNT as DOC_COUNT from " +  tableName + " a left outer join " + auDocCount_tableName + " b on a.AUTHORID = b.AUTHOR_ID"+
-						"where a.ES_STATUS is null and a.authorid in (select AUTHOR_ID from " + metadataTableName +	" where STATUS='matched' and dbase='cpx')";
-
+						"where a.ES_STATUS is null and a.authorid in (select AUTHOR_ID from " + metadataTableName +	" where STATUS='matched')";
+				 
 
 				System.out.println(query);
 
@@ -438,32 +444,37 @@ public class AuthorCombiner {
 			else if(!(action.isEmpty()) && action.equalsIgnoreCase("update"))
 			{
 				updateNumber=loadNumber;
-				/*query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + 
-						" where STATUS='matched' and dbase='cpx')";*/      // used for intial/pre-release ES index, till updatenumber: 2017366
 
 				//Prod
 				/*query = "select * from " +  tableName + " where ES_STATUS is null and authorid in (select AUTHOR_ID from " + metadataTableName + 
-						" where STATUS='matched' and dbase='cpx')";*/
+						" where STATUS='matched')";*/
 
 				//HH added 05/07/2018 explicitly add all author_profile columns to join with au doc counts table for ES index as per TM request
 
-				/*query = "select a.M_ID,EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AUTHORID,a.STATUS,a.DATE_CREATED,DATE_REVISED,a.INITIALS,INDEXEDNAME,a.SURENAME,a.GIVENNAME,a.NAME_VARIANT,"+
-				"a.CLASSIFICATION_SUBJABBR,a.CLASSIFICATION_ASJC,a.PUBLICATION_RANGE,a.JORNAL_HISTORY_TYPE,a.JOURNALS,a.CURRENT_AFF_ID,a.CURRENT_AFF_TYPE,a.CURRENT_AFF_RELATIONSHIP,"+
-				"a.PARENT_AFF_ID,a.PARENT_AFF_TYPE,a.PARENT_AFF_RELATIONSHIP,a.HISTORY_AFFILIATIONID,a.LOADNUMBER,a.DATABASE,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,"+
-				"a.UPDATENUMBER,a.E_ADDRESS,a.ORCID,a.SOURCE_TITLE,a.ES_STATUS, b.DOC_COUNT as DOC_COUNT  from " +  tableName + " a left outer join " + auDocCount_tableName + " b on a.AUTHORID = b.AUTHOR_ID "+
-				"where ES_STATUS is null and authorid in (select AUTHOR_ID from " + metadataTableName + " where STATUS='matched' and dbase='cpx')";
-				 */
-
-
-				//Testing
-
+			/*	query = "select a.M_ID,EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AUTHORID,a.STATUS,a.DATE_CREATED,DATE_REVISED,a.INITIALS,INDEXEDNAME,a.SURENAME,a.GIVENNAME,a.NAME_VARIANT,"+
+						"a.CLASSIFICATION_SUBJABBR,a.CLASSIFICATION_ASJC,a.PUBLICATION_RANGE,a.JORNAL_HISTORY_TYPE,a.JOURNALS,a.CURRENT_AFF_ID,a.CURRENT_AFF_TYPE,a.CURRENT_AFF_RELATIONSHIP,"+
+						"a.PARENT_AFF_ID,a.PARENT_AFF_TYPE,a.PARENT_AFF_RELATIONSHIP,a.HISTORY_AFFILIATIONID,a.LOADNUMBER,a.DATABASE,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,"+
+						"a.UPDATENUMBER,a.E_ADDRESS,a.ORCID,a.SOURCE_TITLE,a.ES_STATUS, b.DOC_COUNT as DOC_COUNT  from " +  tableName + " a left outer join " + auDocCount_tableName + " b on a.AUTHORID = b.AUTHOR_ID "+
+						"where ES_STATUS is null and authorid in (select AUTHOR_ID from " + metadataTableName + " where STATUS='matched')";
+*/
+				
+				// for APR Re-index with doc_count using loadnumber
 				query = "select a.M_ID,EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AUTHORID,a.STATUS,a.DATE_CREATED,DATE_REVISED,a.INITIALS,INDEXEDNAME,a.SURENAME,a.GIVENNAME,a.NAME_VARIANT,"+
 						"a.CLASSIFICATION_SUBJABBR,a.CLASSIFICATION_ASJC,a.PUBLICATION_RANGE,a.JORNAL_HISTORY_TYPE,a.JOURNALS,a.CURRENT_AFF_ID,a.CURRENT_AFF_TYPE,a.CURRENT_AFF_RELATIONSHIP,"+
 						"a.PARENT_AFF_ID,a.PARENT_AFF_TYPE,a.PARENT_AFF_RELATIONSHIP,a.HISTORY_AFFILIATIONID,a.LOADNUMBER,a.DATABASE,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,"+
 						"a.UPDATENUMBER,a.E_ADDRESS,a.ORCID,a.SOURCE_TITLE,a.ES_STATUS, b.DOC_COUNT as DOC_COUNT  from " +  tableName + " a left outer join " + auDocCount_tableName + " b on a.AUTHORID = b.AUTHOR_ID "+
-						"where a.ES_STATUS='indexed' and a.authorid in (select AUTHOR_ID from " + metadataTableName + " where STATUS='matched' and dbase='cpx') and rownum<501";
+						"where a.updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where STATUS='matched')";
 
 
+
+				//Testing
+
+				/*query = "select a.M_ID,EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AUTHORID,a.STATUS,a.DATE_CREATED,DATE_REVISED,a.INITIALS,INDEXEDNAME,a.SURENAME,a.GIVENNAME,a.NAME_VARIANT,"+
+						"a.CLASSIFICATION_SUBJABBR,a.CLASSIFICATION_ASJC,a.PUBLICATION_RANGE,a.JORNAL_HISTORY_TYPE,a.JOURNALS,a.CURRENT_AFF_ID,a.CURRENT_AFF_TYPE,a.CURRENT_AFF_RELATIONSHIP,"+
+						"a.PARENT_AFF_ID,a.PARENT_AFF_TYPE,a.PARENT_AFF_RELATIONSHIP,a.HISTORY_AFFILIATIONID,a.LOADNUMBER,a.DATABASE,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,"+
+						"a.UPDATENUMBER,a.E_ADDRESS,a.ORCID,a.SOURCE_TITLE,a.ES_STATUS, b.DOC_COUNT as DOC_COUNT  from " +  tableName + " a left outer join " + auDocCount_tableName + " b on a.AUTHORID = b.AUTHOR_ID "+
+						"where a.ES_STATUS='indexed' and a.authorid in (select AUTHOR_ID from " + metadataTableName + " where STATUS='matched') and rownum<401";
+				 */
 
 				System.out.println(query);
 
@@ -776,50 +787,12 @@ public class AuthorCombiner {
 					String history_affiliationIds = getStringFromClob(rs.getClob("HISTORY_AFFILIATIONID"));
 					if(history_affiliationIds !=null)
 					{
-
-						/*midTime = endTime;
-		                endTime = System.currentTimeMillis();
-
-						System.out.println("*****************");
-						System.out.println("time before preparing HistoryIds "+(endTime-midTime)/1000.0+" seconds");
-			            System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
-						System.out.println("*****************");*/
-
 						// get AffiliationHistory unique Parent IDS
 						prepareHistoryAffiliationIds(history_affiliationIds);
-
-						/*midTime = endTime;
-		                endTime = System.currentTimeMillis();
-
-						System.out.println("*****************");
-						System.out.println("time after preparing HistoryIds "+(endTime-midTime)/1000.0+" seconds");
-			            System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
-						System.out.println("*****************");*/
-
-
 						if(affiliation_historyIds_List.size() >0)
-						{
-
-							// only for debugging
-							/*midTime = endTime;
-			                endTime = System.currentTimeMillis();
-
-							System.out.println("*****************");
-							System.out.println("time before preparing HistoryDetails "+(endTime-midTime)/1000.0+" seconds");
-				            System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
-							System.out.println("*****************");*/
-
+						{	
 							//prepareHistoryAffiliation(con);
 							prepareHistoryAffiliation();
-
-							/*midTime = endTime;
-			                endTime = System.currentTimeMillis();
-
-							System.out.println("*****************");
-							System.out.println("time after preparing HistoryDetails "+(endTime-midTime)/1000.0+" seconds");
-				            System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
-							System.out.println("*****************");*/
-
 						}
 					}
 
