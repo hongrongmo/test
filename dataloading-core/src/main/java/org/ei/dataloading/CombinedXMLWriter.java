@@ -541,7 +541,7 @@ public class CombinedXMLWriter
         out.println("       <DMASK><![CDATA[" + getMask(rec) + "]]></DMASK>");
         out.println("       <DOI><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.DOI)))) + hasDOI(rec) + "]]></DOI>");
         out.println("       <SCOPUSID><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.SCOPUSID))) + "]]></SCOPUSID>");
-        out.println("       <AFFILIATIONID><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.AFFILIATIONID))) + "]]></AFFILIATIONID>");
+        out.println("       <AFFILIATIONID><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.AFFILIATIONID)))) + "]]></AFFILIATIONID>");
         out.println("       <LAT_NW><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LAT_NW))) + "]]></LAT_NW>");
         out.println("       <LNG_NW><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LNG_NW))) + "]]></LNG_NW>");
         out.println("       <LAT_NE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LAT_NE))) + "]]></LAT_NE>");
@@ -880,7 +880,8 @@ public class CombinedXMLWriter
         
         //GRANTTEXT
         out.println("       <EV_SPARE9><![CDATA["+ notNull(rec.getString(EVCombinedRec.GRANTTEXT))+ " QstemQ " + notNull(getStems(rec.getString(EVCombinedRec.GRANTTEXT))) +"]]></EV_SPARE9>");//SPA9
-        out.println("       <EV_SPARE10><![CDATA[]]></EV_SPARE10>");//SPA0
+        out.println("       <EV_SPARE10><![CDATA[" + notNull(multiFormat(rec.getStrings(EVCombinedRec.GRANTID))) +" "+ notNull(multiFormat(rec.getStrings(EVCombinedRec.GRANTAGENCY))) + " "+
+        			notNull(rec.getString(EVCombinedRec.GRANTTEXT))+ " QstemQ " + notNull(getStems(rec.getString(EVCombinedRec.GRANTTEXT))) +"]]></EV_SPARE10>");//SPA0
         
         out.println("   </ROW>");
         ++curRecNum;
@@ -1280,10 +1281,10 @@ public class CombinedXMLWriter
 		s = perl.substitute("s/<\\/sup>//g", s);
 		s = perl.substitute("s/<inf>//g", s);
 		s = perl.substitute("s/<\\/inf>//g", s);
-		s = perl.substitute("s/<\\//QPLUSQ/g", s);
-		s = perl.substitute("s/\\[0-9].[0-9]/$1DQD$2/g", s);
-		s = perl.substitute("s/-/QMINUSQ/g",s); 
-		s = perl.substitute("s/\\//QSLASHQ/g",s);
+		//s = perl.substitute("s/<\\//QPLUSQ/g", s);
+		//s = perl.substitute("s/\\[0-9].[0-9]/$1DQD$2/g", s);
+		//s = perl.substitute("s/-/QMINUSQ/g",s); 
+		//s = perl.substitute("s/\\//QSLASHQ/g",s);
 		   
 		return s;
     }

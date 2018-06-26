@@ -198,7 +198,7 @@ public class BaseTableWriter
 	    recordBuf.append(FIELDDELIM);
 	    if(record.get("GRANTTEXT")!=null)
 		{
-	    	int columnSize = 3950;
+	    	int columnSize = 3900;
 	    	String granttext= checkColumnWidth(columnSize,
 					   "GRANTTEXT",
 					   (String)record.get("GRANTTEXT"));
@@ -760,6 +760,10 @@ public class BaseTableWriter
 				if(cutOffPosition>0)
 				{
 					data = data.substring(0,cutOffPosition);
+				}
+				if(data.length()>columnWidth)
+				{
+					data = data.substring(0,columnWidth);
 				}
 
 			}

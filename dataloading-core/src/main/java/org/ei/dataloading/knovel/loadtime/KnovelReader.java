@@ -34,7 +34,11 @@ public class KnovelReader
 	public static final char IDDELIMITER = (char)31;
 	public static final char DELIM = '\t';
 	public static final char AUDELIMITER = (char) 30;
-
+	private int chapterCount = 0;
+	private int bookCount = 0;
+	private int totalChapterCount = 0;
+	private int totalExceptionCount = 0;
+	private String lastModify = null;
 	/*
 	 * If there is field delimiter that is 2 or more values for one field eg, A;B;C,
 	 * use 'AUDELIMITER' between A, B and C
@@ -52,6 +56,7 @@ public class KnovelReader
     private String path;
     PrintWriter out;
     PrintWriter outDelete;
+    PrintWriter out_chapter;
 	static String loadNumber;
 	static String filename;
 	static String xmlFileName;
@@ -163,7 +168,7 @@ public class KnovelReader
 		while(fileIterator.hasNext())
 		{
 			String name = (String)fileIterator.next();
-			String lastModify = (String)fileMap.get(name);
+			this.lastModify = (String)fileMap.get(name);
 			
 			try
 			{
@@ -211,7 +216,7 @@ public class KnovelReader
 		while(fileIterator.hasNext())
 		{
 			String name = (String)fileIterator.next();
-			String lastModify = (String)fileMap.get(name);
+			this.lastModify = (String)fileMap.get(name);
 
 			try
 			{
@@ -436,6 +441,11 @@ public class KnovelReader
 				out = new PrintWriter(new FileWriter("out"+File.separator+database+"_"+outFile+"_master_"+loadNumber+".out"), true);
 			}
 			
+			if(out_chapter==null)
+			{
+				out_chapter = new PrintWriter(new FileWriter("out"+File.separator+database+"_"+outFile+"_master_"+loadNumber+"_chapter.out"), true);
+			}
+			
 			if(outDelete==null)
 			{
 				outDelete = new PrintWriter(new FileWriter("out"+File.separator+database+"_"+outFile+"_Delete_"+loadNumber+".out"), true);
@@ -458,6 +468,9 @@ public class KnovelReader
 	
 		if(root.getName().equals("entry"))
 		{
+			//System.out.println("****************"+bookCount + "-" + chapterCount + " - "+filename+" **********************");
+			chapterCount = 0;
+			//System.out.println( ++bookCount + "-" + chapterCount + "-" + totalChapterCount + ": FILENAME="+filename);
 			String database = "knc";
 			output_record = getRecord(root,filename);
 			if(output_record != null)
@@ -811,8 +824,39 @@ public class KnovelReader
 			outputBuffer.append(DELIM);
 			
 			// LAST MODIFY
-			outputBuffer.append(lastModify);
+			outputBuffer.append(this.lastModify);
 			outputBuffer.append(DELIM);
+			
+			//************ added for chapter infomation at 03/16/2018 ***********
+			/*
+			// parenteisbn
+			outputBuffer.append((String)singleRecord.get("PARENTEISBN"));
+			outputBuffer.append(DELIM);
+			
+			//parentisbn
+			outputBuffer.append((String)singleRecord.get("PARENTISBN"));
+			outputBuffer.append(DELIM);
+			
+			//sourcename
+			outputBuffer.append((String)singleRecord.get("SOURCENAME"));
+			outputBuffer.append(DELIM);
+			
+			//pagerange
+			outputBuffer.append((String)singleRecord.get("PAGERANGE"));
+			outputBuffer.append(DELIM);
+			
+			//coverage
+			outputBuffer.append((String)singleRecord.get("COVERAGE"));
+			outputBuffer.append(DELIM);
+			
+			//parentfilename
+			outputBuffer.append((String)singleRecord.get("PARENTFILENAME"));
+			outputBuffer.append(DELIM);
+			
+			//parenttilename
+			outputBuffer.append((String)singleRecord.get("PARENTTITLENAME"));
+			outputBuffer.append(DELIM);
+			*/
 			String outString = outputBuffer.toString().replaceAll("\n","");
 			
 			//only output record when database is knc or kna
@@ -975,10 +1019,25 @@ public class KnovelReader
 					record.put("ISSUEDATE", rec.getChildText("issued",dctermsNamespace));
 				}
 				
-				if(rec.getChild("abstract",dctermsNamespace) != null)
+				if(rec.getChild("abstract",dctermsNamespace) != null && rec.getChildText("abstract",dctermsNamespace).length()>0)
 				{
 					//System.out.println("ABSTRACT "+rec.getChildText("abstract",dctermsNamespace));
 					record.put("ABSTRACT", DataLoadDictionary.mapEntity(rec.getChildText("abstract",dctermsNamespace).replaceAll("\n","<br/>").replaceAll("\t"," ")));
+				}
+				else
+				{
+					//System.out.println("NO ABSTRACT ");
+					if(rec.getChild("content",noNamespace) != null)
+					{
+						
+						String fullText = rec.getChildText("content",noNamespace);
+						if(fullText!=null)
+						{
+							fullText = fullText.replaceAll("\n","<br/>");
+						}
+						//System.out.println("FULLTEXT="+fullText);
+						record.put("ABSTRACT", DataLoadDictionary.mapEntity(fullText));
+					}
 				}
 				
 				
@@ -998,8 +1057,31 @@ public class KnovelReader
 				
 				if(rec.getChild("isPartOf",dctermsNamespace) != null)
 				{
-					//System.out.println("PARENTID "+rec.getChildText("isPartOf",dctermsNamespace));
-					record.put("PARENTID", rec.getChildText("isPartOf",dctermsNamespace));
+					List isPartOfList = rec.getChildren("isPartOf",dctermsNamespace);
+					for(int i=0;i<isPartOfList.size();i++)
+					{
+						Element isPartOf = (Element)isPartOfList.get(i);
+						String isPartOfText = isPartOf.getTextTrim();
+						
+						if(isPartOfText != null && isPartOfText.indexOf("KNOVEL_CID")>0)
+						{
+							//System.out.println("PARENTID "+isPartOfText.replaceAll("urn:KNOVEL_CID:",""));
+							record.put("PARENTID", isPartOfText.replaceAll("urn:KNOVEL_CID:",""));
+						}
+						
+						if (isPartOfText != null && isPartOfText.indexOf(":EISBN:")>0)
+						{
+							//System.out.println("PARENTEISBN "+isPartOfText.replaceAll("urn:EISBN:", ""));
+							record.put("PARENTEISBN", isPartOfText.replaceAll("urn:EISBN:", ""));
+						}
+						
+						if (isPartOfText != null && isPartOfText.indexOf(":ISBN:")>0)
+						{
+							//System.out.println("PARENTISBN "+isPartOfText.replaceAll("urn:ISBN:", ""));
+							record.put("PARENTISBN", isPartOfText.replaceAll("urn:ISBN:", ""));
+						}
+					}
+					
 				}
 				
 				if(rec.getChildren("bibliographicCitation",dctermsNamespace) != null)
@@ -1008,6 +1090,7 @@ public class KnovelReader
 					getBibliographicCitation(bibliographicCitations,record);
 				}
 				
+				/*
 				if(rec.getChild("content",noNamespace) != null)
 				{
 					
@@ -1018,6 +1101,30 @@ public class KnovelReader
 					}
 					//System.out.println("FULLTEXT="+fullText);
 					record.put("FULLTEXT", DataLoadDictionary.mapEntity(fullText));
+				}
+				*/
+				
+
+				if(rec.getChild("sourceFileName",knovelNamespace) != null)
+				{
+					Element sourceFileName = rec.getChild("sourceFileName",knovelNamespace);
+					String sourceFileNameText = rec.getChildText("sourceFileName",knovelNamespace);
+					String pageRange = sourceFileName.getAttributeValue("pagerange");
+					if(sourceFileNameText!=null)
+					{
+						record.put("SOURCENAME", DataLoadDictionary.mapEntity(sourceFileNameText));
+					}
+					
+					if(pageRange!=null)
+					{
+						record.put("PAGERANGE", pageRange);
+					}
+				}
+				
+				if(rec.getChild("coverage",dcNamespace) != null)
+				{
+					List coverage = rec.getChildren("coverage",dcNamespace);
+					record.put("COVERAGE",getCoverage(coverage));
 				}
 			}
 					
@@ -1030,7 +1137,27 @@ public class KnovelReader
 		}
 		return record;
 	}
-		
+	
+	private String getCoverage(List coverages) throws Exception
+	{
+		StringBuffer coveragebuffer = new StringBuffer();
+	
+		for(int i=0;i<coverages.size();i++)
+		{
+			Element coverage = (Element)coverages.get(i);
+			String coverageText = coverage.getTextTrim();
+			if(coverageText!=null)
+			{
+				coveragebuffer.append(coverageText);
+				if(i<coverages.size()-1)
+				{
+					coveragebuffer.append(AUDELIMITER);
+				}
+			}
+		}
+		return coveragebuffer.toString();
+	}
+	
 	private void getBibliographicCitation(Element bibliographicCitations,HashMap record) throws Exception
 	{
 		if(bibliographicCitations!=null)
@@ -1245,7 +1372,18 @@ public class KnovelReader
 				}
 				else
 				getFullTextToc(href,record);
-			}		
+			}	
+			else if(rel !=null && rel.equals("parent"))
+			{
+				if(href!=null)
+				{
+					record.put("PARENTFILENAME",href);
+				}
+				if(link.getTextTrim()!=null)
+				{
+					record.put("PARENTTITLENAME",link.getTextTrim());
+				}
+			}	
 		}	
 	}
 	
@@ -1259,7 +1397,7 @@ public class KnovelReader
 		return output;
 	}
 	
-	private void getTOC(Element root,StringBuffer tocBuffer)
+	private void getTOC(Element root,StringBuffer tocBuffer) throws Exception
 	{
 		if(root!=null)
 		{
@@ -1290,6 +1428,8 @@ public class KnovelReader
 					if(tocFilename!=null)
 					{
 						tocBuffer.append(tocFilename);
+						//************ added for chapter infomation at 03/16/2018 ***********
+						//processChapter(tocFilename);
 					}
 					tocBuffer.append(IDDELIMITER);
 					
@@ -1308,13 +1448,64 @@ public class KnovelReader
 					tocBuffer.append(IDDELIMITER);    					
 				}
 				tocBuffer.append(AUDELIMITER); 
+				/*
 				if(link.getChildren("link")!=null)
 				{
 					getTOC(link,tocBuffer);
 				}
-				
+				*/
 			}
 		}
+	}
+	
+	private void processChapter(String fileName) throws Exception
+	{
+		BufferedReader in = null;
+	    Document chapterDoc=null;
+	    StringBuffer chapterBuffer = new StringBuffer();
+        try
+        {
+           
+            if(fileName!=null)
+            {
+            	
+            	if(this.path!=null && this.path.length()>0)
+            	{
+            		in = new BufferedReader(new FileReader(this.path+"/"+fileName));
+            	}
+            	else
+            	{
+            		in = new BufferedReader(new FileReader(fileName));
+            	}
+                //System.out.println(bookCount+" - "+ ++chapterCount + " - "+(++totalChapterCount)+": FILENAME="+fileName);
+                SAXBuilder builder = new SAXBuilder();
+        		builder.setExpandEntities(false);
+        		chapterDoc = builder.build(in);
+        		Element root = chapterDoc.getRootElement();
+        		if(root!=null)
+        		{
+        			HashMap chapter_output_record = getRecord(root,fileName);
+        			chapter_output_record.put("documentType", "Chapter");
+        			if(chapter_output_record != null)
+        			{
+        				if(chapter_output_record.get("KNC_DATABASE")!=null && ((String)chapter_output_record.get("KNC_DATABASE")).equalsIgnoreCase("knc"))
+        				{
+        					outputKnovelRecord(chapter_output_record,this.out_chapter,null,"knc");
+        				}
+        				
+        				if(chapter_output_record.get("KNA_DATABASE")!=null && ((String)chapter_output_record.get("KNA_DATABASE")).equalsIgnoreCase("kna"))
+        				{
+        					outputKnovelRecord(chapter_output_record,this.out_chapter,null,"kna");
+        				}
+        			}     			
+        		}
+            }
+        }
+        catch(Exception e)
+        {
+        	System.out.println("Exception: "+bookCount+" - "+chapterCount + "-" + (++totalExceptionCount) + ": FILENAME="+fileName);
+        	e.printStackTrace();
+        }
 	}
 	
 	private void getFullTextToc(String href,HashMap record) throws Exception
@@ -1353,6 +1544,7 @@ public class KnovelReader
         }        
         catch(Exception e)
         {
+        	System.out.println("Exception on file "+filename);
         	e.printStackTrace();
         }
         finally

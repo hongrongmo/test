@@ -1,0 +1,25 @@
+##
+## Eduserv Athens Agent (v3.6) configuration file
+##
+## For support, please contact the
+## Eduserv Athens DSP Helpdesk - dsp@athensams.net
+##
+
+#
+# Authority Server list
+#
+AuthorityServer as1.athensams.net 5055
+AuthorityServer as0.athensams.net 5055
+AuthorityServer as2.athensams.net 5055
+AuthorityServer as3.athensams.net 5055
+
+# Balances Authority Servers
+BalanceServers
+
+#
+# Client certificate file
+#
+# Note: for C Agent, use a .pem certificate
+#       for Java Agent, use a .jks certificate
+#
+CertificateFile ELS_EV.jks

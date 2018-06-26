@@ -242,6 +242,7 @@ import org.ei.util.StringUtil;
 	          {
 	                EVCombinedRec rec = new EVCombinedRec();
 	                accessNumber = rs.getString("ACCESSNUMBER");
+	                String parentID = rs.getString("PARENTID");
 	                if (rs.getString("PUBLISH_DATE")!=null)
 	                {		                		                    
 	                    //M_ID
@@ -251,8 +252,9 @@ import org.ei.util.StringUtil;
 	                    rec.put(EVCombinedRec.DATABASE, rs.getString("DATABASE"));
 	                    
 	                    //ACCESSNUMBER
-	                    rec.put(EVCombinedRec.ACCESSION_NUMBER,
-	                            rs.getString("ACCESSNUMBER"));
+	                    
+	                    rec.put(EVCombinedRec.ACCESSION_NUMBER, rs.getString("ACCESSNUMBER"));
+	                    
 	                    
 	                    //DOC_TYPE
 	                    if(rs.getString("DOC_TYPE")!=null)
@@ -262,6 +264,10 @@ import org.ei.util.StringUtil;
 	                    	if(docType.equalsIgnoreCase("book"))
 	                    	{
 	                    		docType = "bk";
+	                    	}
+	                    	else if(docType.equalsIgnoreCase("chapter"))
+	                    	{
+	                    		docType = "ch";
 	                    	}
 	                    	rec.put(EVCombinedRec.DOCTYPE,docType);
 	                    }
@@ -330,10 +336,10 @@ import org.ei.util.StringUtil;
                         //PARENTID
                         if (rs.getString("PARENTID") != null)
 	                    {
-                        	String parentID = rs.getString("PARENTID");
-                        	parentID = parentID.substring(parentID.lastIndexOf(":")+1);
+                        	parentID = rs.getString("PARENTID");
+                        	//parentID = parentID.substring(parentID.lastIndexOf(":")+1);
                         	//System.out.println("parentID="+parentID);
-	                        rec.put(EVCombinedRec.ISSN, parentID);
+	                        rec.put(EVCombinedRec.PARENT_ID, parentID);
 	                    }
                         
 	                    //JOURNAL_NAME
