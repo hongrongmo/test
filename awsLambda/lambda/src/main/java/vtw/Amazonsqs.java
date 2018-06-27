@@ -95,10 +95,23 @@ public class Amazonsqs {
 
 			// PROD Queue: prod-contributor-event-queue-EV
 			// UAT Queue:  acc-contributor-event-queue-EV
+			//Recent UAT QUEUE 12/11/2017: arn:aws:sqs:eu-west-1:461549540087:acc-backfill-queue-EV
 			
+			String queueName = "acc-backfill-queue-EV";  //UAT BO Backfill
+			//String queueName = "acc-contributor-event-queue-EV";    //UAT BO/US/EUP Forward
+			String accountID = "461549540087";
+			
+			
+			//String queueName = "prod-backfill-queue-EV";				// WO Prod Qeueue
+			//String accountID = "790640479873";
+			
+	
 			// UAT Backfill Queueu for WO: acc-backfill-queue-EV
-			GetQueueUrlRequest request = new GetQueueUrlRequest().withQueueName("prod-contributor-event-queue-EV")
-					.withQueueOwnerAWSAccountId("790640479873");
+			/*GetQueueUrlRequest request = new GetQueueUrlRequest().withQueueName("prod-contributor-event-queue-EV")
+					.withQueueOwnerAWSAccountId("790640479873");*/
+			
+			GetQueueUrlRequest request = new GetQueueUrlRequest().withQueueName(queueName)
+					.withQueueOwnerAWSAccountId(accountID);
 
 			
 			GetQueueUrlResult result = sqs.getQueueUrl(request);

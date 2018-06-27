@@ -46,6 +46,12 @@ import java.util.Set;
  *    	- Solution to these two cases is to create a BD_AIP_WEEKLY_DELETION table during CPX deletion SP to add PUI of BD records into BD_AIP_WEEKLY_DELETION
  *    	- 
  *    
+ *    -- on Friday 05/25/2018 after discussion with Frank, the old logic used for determing which AU/AF ids to delete from ES was wrong as it was not 
+ *    getting all diff status for the AU/AF ID bc it is based on PUI mapping that only gets one single instance of the AU/AF ID that matched that specific PUI
+ *    and not all other PUI's having same AU/AF ID. the new logic is simple not to worry about diff status for AU/AFID, make oracle finds AU/AF IDS
+ *    that does not have any instance of "matched" status, and so that means this list is the ones with all status (unmatched/deleted) and so can be deleted from ES
+ *    
+ *    
  */
 public class AusAffDeletion {
 
@@ -59,6 +65,7 @@ public class AusAffDeletion {
 	static String source = "cafe";		// either cafe or bd
 	static int recsPerEsbulk;
 	static String esDomain = "search-evcafe5-ucqg6c7jnb4qbvppj2nee4muwi.us-east-1.es.amazonaws.com";
+	static String esIndexName;		// added 05/10/2018 as ES 6.2 and up split types in separate indices
 
 
 
@@ -70,7 +77,8 @@ public class AusAffDeletion {
 	String profileTable;
 	String profileColumnName;
 
-	Map<String,String> id_status_List = new Hashtable<String,String>();
+	//Map<String,String> id_status_List = new Hashtable<String,String>(); // 05/25/2018 comment out, it is for old logic for getting ID & all it's diff status,
+	ArrayList<String> id_status_List = new ArrayList<String>();				// 05/25/2018 for new logic
 	Map<String,String> id_pui_List = new Hashtable<String,String>(); // for BD deletion holding PUI, AU/AFID for later updating lookup tables' status
 	List<String> id_List = new ArrayList<String>();
 	List<String> Id_deletion_list;
@@ -80,11 +88,18 @@ public class AusAffDeletion {
 
 	public static void main(String[] args)
 	{
-		if(args.length >9)
+		if(args.length >10)
 		{
 			if(args[0] !=null)
 			{
 				doc_type = args[0];
+				
+				// added 05/10/2018 as ES 6.2 and up split types in separate indices
+				
+				/*if(doc_type.toLowerCase().trim().equalsIgnoreCase("apr"))
+					esIndexName = "author";
+				else if(doc_type.toLowerCase().trim().equalsIgnoreCase("ipr"))
+					esIndexName = "affiliation";*/
 			}
 
 			if(args[1] !=null)
@@ -138,6 +153,18 @@ public class AusAffDeletion {
 				source = args[9];
 				System.out.println("Deletion Source: " + source);
 			}
+			if(args[10] !=null)
+			{
+				esIndexName = args[10];
+				if(esIndexName.equalsIgnoreCase("author") || esIndexName.equalsIgnoreCase("affiliation") || esIndexName.equalsIgnoreCase("cafe"))
+
+					System.out.println("ES Index Name: " + esIndexName);
+				else
+				{
+					System.out.println("Invalid ES Index Name for AU/AF profile deletion from ES, re-try with ESIndexName cafe");
+					System.exit(1);
+				}
+			}
 
 		}
 		else
@@ -150,7 +177,7 @@ public class AusAffDeletion {
 		{
 			AusAffDeletion c = new AusAffDeletion();
 
-			c.esIndexObj = new AusAffESIndex(recsPerEsbulk, esDomain, action);
+			c.esIndexObj = new AusAffESIndex(recsPerEsbulk, esDomain, action, esIndexName);
 
 			c.con = c.getConnection(url, driver, username, password);
 
@@ -225,13 +252,18 @@ public class AusAffDeletion {
 			stmt = con.createStatement();
 			System.out.println("Running the query...");
 			
-			if(source.equalsIgnoreCase("cafe"))
-			query = "select " + lookupTable_columnName + ", status from " + lookupTable + " where pui in (select pui from " + deletionTable + ") " +
+			if(source.equalsIgnoreCase("cafe") || source.equalsIgnoreCase("bd"))
+				
+				//05/25/2018 this stmt has bug as it only select one instance of each AUID/AFID and so does not get all diff status for this ID
+			/*query = "select " + lookupTable_columnName + ", status from " + lookupTable + " where pui in (select pui from " + deletionTable + ") " +
 					"group by " + lookupTable_columnName + ",status order by " + lookupTable_columnName;
-
-			else if(source.equalsIgnoreCase("bd"))
-				query = "select " + lookupTable_columnName + ", status from " + lookupTable + " where pui in (select pui from " + deletionTable + ") " +
-						"group by " + lookupTable_columnName + ",status order by " + lookupTable_columnName;
+*/
+			
+			//05/25/2018after discussion with Frank, we modify the logic to only get the inclusive ID list to be deleted without checking diff status
+				query = "select " + lookupTable_columnName + " from " + lookupTable+ " where " + lookupTable_columnName + " in (select " + 
+						lookupTable_columnName + " from " + lookupTable + " where pui in (select pui from " + deletionTable + ")) " +
+						"minus select " + lookupTable_columnName + " from " + lookupTable + " where " + lookupTable_columnName + " in (select " + 
+						lookupTable_columnName + " from " + lookupTable + " where pui in (select pui from " + deletionTable + ")) and status ='matched'";
 			
 			else
 				System.out.println("invalid Source!!!, Re-try with source 'cafe' or 'bd'");
@@ -244,7 +276,8 @@ public class AusAffDeletion {
 
 			while(rs.next())
 			{
-				if(rs.getString(1) !=null)
+				// 05/25/2018 used for old logic that has bug, which was to get distinct status for all instances of ID to check if at least "1" instace with matched status so do nothing
+				/*if(rs.getString(1) !=null)
 				{
 					profileId = rs.getString(1);
 					status = rs.getString(2);
@@ -258,6 +291,12 @@ public class AusAffDeletion {
 					{
 						id_status_List.put(profileId, status);
 					}
+				}*/
+				
+				//05/25/2018 with New logic Frank suggested that only gets inclusive list of IDS to be deleted (IDs with all status unmatched/deleted)
+				if(rs.getString(1) !=null)
+				{
+					id_status_List.add(rs.getString(1));
 				}
 			}
 
@@ -304,12 +343,14 @@ public class AusAffDeletion {
 
 
 
-	public void getProfileIdsToDelete()
+	// 05/25/2018 used for the old logic
+	
+/*	public void getProfileIdsToDelete()
 	{	
 
 		for(String key: id_status_List.keySet())
 		{
-			if(id_status_List.get(key) !=null && !(id_status_List.get(key).contains("$matched$")) && id_status_List.get(key).contains("deleted"))
+			if(key !=null && !(id_status_List.get(key).contains("$matched$")))
 			{
 				id_List.add(key);
 			}
@@ -321,9 +362,22 @@ public class AusAffDeletion {
 
 		System.out.println("Total " + doc_type + " Ids to be deleted: " + id_List.size());
 
+	}*/
+
+
+	//05 25/2018 for the new logic 
+	public void getProfileIdsToDelete()
+	{	
+
+		for(int i=0;i<id_status_List.size();i++)
+		{	
+			id_List.add(id_status_List.get(i));	
+		}
+
+		System.out.println("Total " + doc_type + " Ids to be deleted: " + id_List.size());
+
 	}
-
-
+	
 	public boolean deleteProfile()
 	{
 		StringBuffer profileIds = new StringBuffer();
@@ -638,8 +692,12 @@ public class AusAffDeletion {
 				{
 					if(curRec >999)
 					{
-						query = "update " + lookupTable + " set status='unmatched' where pui in (select pui from " + deletionTable + ") and " + lookupTable_columnName + " in (" 
-								+ profileIds + ")";
+						/*query = "update " + lookupTable + " set status='unmatched' where pui in (select pui from " + deletionTable + ") and " + lookupTable_columnName + " in (" 
+								+ profileIds + ")";*/
+						
+						// 12/08/2017 update lookup based on PUI only; does not matter the auid/affid
+						query = "update " + lookupTable + " set status='unmatched' where pui in (select pui from " + deletionTable + ")";
+						
 						System.out.println("Running query...." + query);
 						count = stmt.executeUpdate(query);
 						con.commit();
@@ -659,8 +717,7 @@ public class AusAffDeletion {
 
 				}
 
-				query = "update " + lookupTable + " set status='unmatched' where pui in (select pui from " + deletionTable + ") and " + lookupTable_columnName + " in (" 
-						+ profileIds + ")";
+				query = "update " + lookupTable + " set status='unmatched' where pui in (select pui from " + deletionTable + ")";
 				System.out.println("Running query...." + query);
 				count = stmt.executeUpdate(query);
 				con.commit();

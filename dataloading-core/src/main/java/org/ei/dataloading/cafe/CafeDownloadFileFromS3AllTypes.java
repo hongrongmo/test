@@ -25,7 +25,9 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
@@ -36,6 +38,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
+
 import org.ei.common.georef.DocumentView.MultiValueLookupValueDecorator;
 import org.ei.dataloading.awss3.AmazonS3Service;
 import org.ei.dataloading.upt.loadtime.vtw.ArchiveVTWPatentAsset;
@@ -57,6 +60,7 @@ public class CafeDownloadFileFromS3AllTypes {
 	//static String action;
 	static String doc_type;
 	static String archive_date;
+	static Boolean isArchive_date_range = true;
 	static int recsPerZipFile;
 	static String tableToBeTruncated = "cafe_inventory_temp";
 	static String sqlldrFileName = "cafeInventoryFileLoader.sh";
@@ -67,6 +71,7 @@ public class CafeDownloadFileFromS3AllTypes {
 	
 	static int recsPerEsbulk;
 	static String esDomain = "search-evcafe-prod-h7xqbezrvqkb5ult6o4sn6nsae.us-east-1.es.amazonaws.com";
+	static String esIndexName;		// added 05/10/2018 as ES 6.2 and up split types in separate indices
 
 
 	static int curRecNum = 0;
@@ -79,6 +84,11 @@ public class CafeDownloadFileFromS3AllTypes {
 	private AmazonS3 s3Client;
 
 	private long epoch;
+	
+	// for naming zip files with both start and end dates
+	private String archive_date_end;
+	
+	
 
 	// for parsing archive_date
 	SimpleDateFormat archiveDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -98,9 +108,14 @@ public class CafeDownloadFileFromS3AllTypes {
 	private HashMap<String,String> keys_to_be_deleted = new HashMap<String,String>();
 	private List<String> keys_MID_to_be_deleted = new ArrayList<String>();
 
-
+	
 	public static final char FIELDDELIM = '\t';
 
+	
+	//04/17/2018 added for accumulating archive_dates instead of single value for each iteration
+	StringBuffer archiveDateList = new StringBuffer();
+	
+	
 
 	public static void main(String[] args)
 	{
@@ -130,6 +145,12 @@ public class CafeDownloadFileFromS3AllTypes {
 			{
 				doc_type = args[4];
 				System.out.println("doc_Type: " +  doc_type);
+				
+				// added 05/10/2018 as ES 6.2 and up split types in separate indices
+				/*if(doc_type.toLowerCase().trim().equalsIgnoreCase("apr"))
+					esIndexName = "author";
+				else if(doc_type.toLowerCase().trim().equalsIgnoreCase("ipr"))
+					esIndexName = "affiliation";*/
 			}
 
 			if(args[5] !=null)
@@ -149,7 +170,7 @@ public class CafeDownloadFileFromS3AllTypes {
 			}
 		}
 
-		if(args.length >14)
+		if(args.length >16)
 		{
 			// # of downloaded cafe key files to include in one zip file for later process/convert
 			if(args[6] !=null)
@@ -224,6 +245,25 @@ public class CafeDownloadFileFromS3AllTypes {
 			{
 				esDomain = args[14];
 				System.out.println("ES Domain: " + esDomain);
+			}
+			
+			if(args[15] !=null)
+			{
+				// if archive_date range is true, get keys list fit within the date range that starts from archive_date till one day before today
+				isArchive_date_range = Boolean.valueOf(args[15]);
+			}
+			//Added 06/14/2018 for specifying indexname as per ES 6.2
+			if(args[16] !=null)
+			{
+				esIndexName = args[16];
+				if(esIndexName.equalsIgnoreCase("author") || esIndexName.equalsIgnoreCase("affiliation") || esIndexName.equalsIgnoreCase("cafe"))
+
+					System.out.println("ES Index Name: " + esIndexName);
+				else
+				{
+					System.out.println("Invalid ES Index Name for AU/AF profile deletion from ES, re-try with ESIndexName cafe");
+					System.exit(1);
+				}
 			}
 		}
 
@@ -326,14 +366,20 @@ public class CafeDownloadFileFromS3AllTypes {
 			// connect to AmazonS3
 			s3Client = AmazonS3Service.getInstance().getAmazonS3Service();
 
+			
+			// if archive_date_range is on, get date list start from archive_date till one day before current day to reduce file download from cafe s3
+			if(isArchive_date_range)
+				getArchiveDates_List();
+						
+						
 			// get time in epoch formate to be able to distingush which file to send to converting, in case there are multiple files to convert
 			DateFormat dateFormat = new SimpleDateFormat("E, MM/dd/yyyy-hh:mm:ss a");
 			Date date = dateFormat.parse(dateFormat.format(new Date()));
 			epoch = date.getTime();
 
-			//05/02/2016 create dir to download s3 files into xml for later zip and convert
+			//05/02/2016 create dir to download s3 files into xml for later zip and convert, on 04/18/2018 add archive_date range in filename
 
-			S3dir=new File(doc_type+"_s3Files_"+epoch+"_"+archive_date);
+			S3dir=new File(doc_type+"_s3Files_"+epoch+"_"+archive_date+"-"+archive_date_end);
 			if(!S3dir.exists())
 			{
 				S3dir.mkdir();
@@ -346,7 +392,7 @@ public class CafeDownloadFileFromS3AllTypes {
 			 * with sns_archive.epoch > cafe_inventory.epoch
 			 * this file is later used to update cafe_archive table
 			 */
-			String filename = doc_type + "_cafe_inventory_" + epoch + "_" + archive_date + ".out";
+			String filename = doc_type + "_cafe_inventory_" + epoch + "_" + archive_date + "_" + archive_date_end + ".out";
 			try {
 				out = new PrintWriter(new FileWriter(filename));
 			} catch (IOException e) {
@@ -354,8 +400,6 @@ public class CafeDownloadFileFromS3AllTypes {
 			}
 
 			System.out.println("Output Filename "+filename);
-
-
 
 		} 
 		catch(IOException ex)
@@ -388,6 +432,62 @@ public class CafeDownloadFileFromS3AllTypes {
 		}
 
 	}
+	
+/* 04/17/2018
+ * @Description: reduce cafe downloading files by accumulating archive_dates instead of daiy bases download
+ * reason is cafe keep sending very frequent updates for same records i.e. send update for 
+ * record 123 today, then another one tomorrow and again in 2 days so we download and process the 
+ * record 3 times, if we accumulate these 3 times and download the file only once
+ * and so process the record only once. since cafe s3 bucket will be having latest version anyway
+*/
+	public void getArchiveDates_List()
+	{
+		
+		SimpleDateFormat format = new SimpleDateFormat("MMM-dd-yy");
+		SimpleDateFormat endDateFormat = new SimpleDateFormat("MMM-dd");
+		
+		try
+		{
+			
+			//Start Date
+			Date start_date = format.parse(archive_date);
+			Calendar calStart = new GregorianCalendar();
+			calStart.setTime(start_date);
+			
+			
+			// END date
+			final Calendar calEnd = Calendar.getInstance();
+			calEnd.add(Calendar.DATE, -1);
+			
+			
+			while(calStart.before(calEnd))
+			{
+				if(archiveDateList.length() >0)
+				{
+					archiveDateList.append(",");
+				}
+				archiveDateList.append("'"+ format.format(calStart.getTime()).toUpperCase() + "'");
+				calStart.add(Calendar.DATE, 1);  //increment cal by one day
+			}
+			
+			archive_date_end = endDateFormat.format(calEnd.getTime()).toUpperCase();
+			System.out.println("ENd date: " + archive_date_end);
+			
+
+		}
+		catch(ParseException ex)
+		{
+			System.out.println("Invalid date format, re-try with format MON-DD-YY");
+			System.exit(1);
+		}
+		catch(Exception ex)
+		{
+			System.out.println("something else went wrong for archive_dates accumulation!!!!");
+			ex.printStackTrace();
+		}
+	}
+	
+	
 	public void getCafeInv_FilesInfo() throws Exception
 	{
 		Statement stmt = null;
@@ -398,7 +498,17 @@ public class CafeDownloadFileFromS3AllTypes {
 		{
 			stmt = con.createStatement();
 
-			String cafeInventory_list = "select key,epoch from CAFE_INVENTORY where doc_type='" + doc_type + "' and key in "+
+			String cafeInventory_list;
+			
+			
+			//HH added 04/17/2018 for accumulating archive_dates to reduce # of files to download from cafe s3 bucket
+			if (isArchive_date_range)
+				
+				cafeInventory_list = "select key,epoch from CAFE_INVENTORY where doc_type='" + doc_type + "' and key in "+
+						"(select distinct key from sns_archive where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'MON-DD-RR') in (" + archiveDateList + "))";
+
+			else
+				cafeInventory_list = "select key,epoch from CAFE_INVENTORY where doc_type='" + doc_type + "' and key in "+
 					"(select distinct key from sns_archive where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'MON-DD-RR')='" + archive_date + "')";
 
 			rs = stmt.executeQuery(cafeInventory_list);
@@ -447,15 +557,28 @@ public class CafeDownloadFileFromS3AllTypes {
 		try
 		{
 			stmt = con.createStatement();
-			String snsArchive_UniqueRecentEpoch_List = "SELECT t.KEY,t.EPOCH,t.PUI,t.ACTION,t.BUCKET,t.DOC_TYPE,TO_CHAR(t.ARCHIVE_DATE ,'YYYY-MM-DD HH24:MI:SS') ARCHIVE_DATE FROM("+
+			String snsArchive_UniqueRecentEpoch_List;
+			
+			if(isArchive_date_range)
+			
+			snsArchive_UniqueRecentEpoch_List = "SELECT t.KEY,t.EPOCH,t.PUI,t.ACTION,t.BUCKET,t.DOC_TYPE,TO_CHAR(t.ARCHIVE_DATE ,'YYYY-MM-DD HH24:MI:SS') ARCHIVE_DATE FROM("+
 					"SELECT key,max(to_number(epoch)) AS epoch "+
-					"FROM sns_archive where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'MON-DD-RR')='" + archive_date + "' "+
+					"FROM sns_archive where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'MON-DD-RR') in (" + archiveDateList + ") "+
 					"GROUP BY key) x "+
 					"JOIN sns_archive t ON x.key =t.key "+
 					"AND x.epoch = t.epoch "+
-					"where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'MON-DD-RR')='" + archive_date + "' ";
+					"where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'MON-DD-RR') in (" + archiveDateList + ") ";
 			//"order by x.key"; commented out for performance 05/08/2017
 
+			else
+				snsArchive_UniqueRecentEpoch_List = "SELECT t.KEY,t.EPOCH,t.PUI,t.ACTION,t.BUCKET,t.DOC_TYPE,TO_CHAR(t.ARCHIVE_DATE ,'YYYY-MM-DD HH24:MI:SS') ARCHIVE_DATE FROM("+
+						"SELECT key,max(to_number(epoch)) AS epoch "+
+						"FROM sns_archive where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'MON-DD-RR')='" + archive_date + "' "+
+						"GROUP BY key) x "+
+						"JOIN sns_archive t ON x.key =t.key "+
+						"AND x.epoch = t.epoch "+
+						"where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'MON-DD-RR')='" + archive_date + "' ";
+			
 
 			System.out.println("execute query: " + snsArchive_UniqueRecentEpoch_List);
 			rs = stmt.executeQuery(snsArchive_UniqueRecentEpoch_List);
@@ -911,7 +1034,7 @@ public class CafeDownloadFileFromS3AllTypes {
 	public void updateCafeInventory()
 	{
 		// update cafe_invetory table by replacing matching keys, with their most recent epoch, or add new keys info
-		String dataFile = doc_type + "_cafe_inventory_" + epoch + "_" + archive_date + ".out";
+		String dataFile = doc_type + "_cafe_inventory_" + epoch + "_" + archive_date + "_" + archive_date_end + ".out";
 		CallableStatement stmt = null;
 
 		try
@@ -1104,6 +1227,8 @@ public class CafeDownloadFileFromS3AllTypes {
 		try
 		{
 			con = getConnection(url,driver,username,password);
+			AusAffESIndex esIndexObj = new AusAffESIndex(recsPerEsbulk, esDomain, "delete", esIndexName);
+			
 			for(String key: keys_to_be_deleted.keySet())
 			{
 				if(curRec>999)
@@ -1115,7 +1240,7 @@ public class CafeDownloadFileFromS3AllTypes {
 					{
 						//delete from ES
 						//AuAfESIndex esIndexObj = new AuAfESIndex(doc_type);
-						AusAffESIndex esIndexObj = new AusAffESIndex(recsPerEsbulk, esDomain, "delete");
+						//AusAffESIndex esIndexObj = new AusAffESIndex(recsPerEsbulk, esDomain, "delete"); // moved to outside for loop
 						status = esIndexObj.createBulkDelete(doc_type, keys_MID_to_be_deleted);
 
 						//delete from DB
@@ -1148,7 +1273,7 @@ public class CafeDownloadFileFromS3AllTypes {
 			{
 				//delete from ES
 				//AuAfESIndex esIndexObj = new AuAfESIndex(doc_type);
-				AusAffESIndex esIndexObj = new AusAffESIndex(recsPerEsbulk, esDomain, "delete");
+				//AusAffESIndex esIndexObj = new AusAffESIndex(recsPerEsbulk, esDomain, "delete");  // moved to outside for loop
 				status = esIndexObj.createBulkDelete(doc_type, keys_MID_to_be_deleted);
 				esIndexObj.end();
 
@@ -1422,7 +1547,7 @@ public class CafeDownloadFileFromS3AllTypes {
 	private void deleteANIData()
 	{
 		PrintWriter ani_del_out = null;
-		String fileName = doc_type + "_deletion_" + epoch + "_" + archive_date + ".out";
+		String fileName = doc_type + "_deletion_" + epoch + "_" + archive_date + "_" + archive_date_end + ".out";
 
 		try {
 

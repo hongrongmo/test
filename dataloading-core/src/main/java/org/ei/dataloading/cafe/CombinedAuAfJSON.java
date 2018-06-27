@@ -166,6 +166,7 @@ public class CombinedAuAfJSON {
 										.add("country",notNull(rec.getString(AuAfCombinedRec.COUNTRY)))
 										.add("quality",notNull(rec.getString(AuAfCombinedRec.QUALITY)))
 										.add("certscore",prepareComposit_field(notNull(rec.getString(AuAfCombinedRec.CERTAINITY_SCORES))))
+										.add("doc_count",notNull(rec.getString(AuAfCombinedRec.DOC_COUNT)))
 								)
 				.build();
 				
@@ -250,6 +251,7 @@ public class CombinedAuAfJSON {
 																						.add("dept_city", notNull(rec.getString(AuAfCombinedRec.CURRENT_DEPT_AFFILIATIOIN_CITY)))
 																						.add("dept_country", notNull(rec.getString(AuAfCombinedRec.CURRENT_DEPT_AFFILIATION_COUNTRY)))
 																)
+														.add("doc_count",notNull(rec.getString(AuAfCombinedRec.DOC_COUNT)))
 										)
 						.build();
 		

@@ -75,6 +75,8 @@ public class AuAfCombinedRec {
 		public static final String PARENT_PREFERED_NAME = "54";
 		// aftype will always set to "parent" because all indexed Affiliations are only parent ones
 		public static final String AFTYPE = "55";
+		//added 05/07/2018 for both author & affiliation for holding abstract docs count published by author/affiliation
+		public static final String DOC_COUNT = "56";
 		
 
 		

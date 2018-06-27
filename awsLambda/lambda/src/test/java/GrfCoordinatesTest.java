@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-import org.ei.common.Constants;
+/*import org.ei.common.Constants;*/
 
 
 /*
@@ -12,8 +12,10 @@ import org.ei.common.Constants;
 public class GrfCoordinatesTest {
 
 	
-	public static final String AUDELIMITER = Constants.AUDELIMITER;
-	public static final String IDDELIMITER = Constants.IDDELIMITER;
+	public static final String AUDELIMITER = new String(new char[] {30});
+	public static final String IDDELIMITER = new String(new char[] {31});
+	/*public static final String AUDELIMITER = Constants.AUDELIMITER;
+	public static final String IDDELIMITER = Constants.IDDELIMITER;*/
 	
 	
 	public static void main(String[] args) {

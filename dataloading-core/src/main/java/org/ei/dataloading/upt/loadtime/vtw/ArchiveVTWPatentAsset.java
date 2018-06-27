@@ -87,7 +87,7 @@ public class ArchiveVTWPatentAsset implements Runnable{
 	private final static Logger logger = Logger.getLogger(ArchiveVTWPatentAsset.class);
 
 	private int numberOfRuns = 0;
-	private String queueName = "acc-contributor-event-queue-EV";
+	private String queueName = "uatnp.vtw-np.elsevier.com";
 	private String sqlldrFileName = null;
 	static int loadNumber = 0;
 	int recsPerZipFile = 2000;
@@ -134,10 +134,11 @@ public class ArchiveVTWPatentAsset implements Runnable{
 
 	}
 	
-	public ArchiveVTWPatentAsset(int loadnum, int numOfRecsPerZip)
+	public ArchiveVTWPatentAsset(int loadnum, int numOfRecsPerZip, String msgType)
 	{
 		loadNumber = loadnum;
 		recsPerZipFile = numOfRecsPerZip;
+		type = msgType;
 	}
 
 	
@@ -305,6 +306,9 @@ public class ArchiveVTWPatentAsset implements Runnable{
 
 	public void SQSCreationAndSetting() throws JMSException, InterruptedException
 	{
+		String accountID = "790640479873";   // Prod US/EUP/WO 
+		
+		//String accountID = "461549540087";   // UAT Forward & Backfill WO
 
 		/*
 		 * The ProfileCredentialsProvider will return your [default]
@@ -328,7 +332,7 @@ public class ArchiveVTWPatentAsset implements Runnable{
 			sqs = new AmazonSQSClient(credentials);
 			Region euWest2 = Region.getRegion(Regions.EU_WEST_1);
 			sqs.setRegion(euWest2);
-
+			
 
 
 			// AMazonSQS queue
@@ -337,7 +341,7 @@ public class ArchiveVTWPatentAsset implements Runnable{
 			System.out.println("===========================================\n");
 
 			GetQueueUrlRequest request = new GetQueueUrlRequest().withQueueName(queueName)
-					.withQueueOwnerAWSAccountId("790640479873");
+					.withQueueOwnerAWSAccountId(accountID);
 
 			GetQueueUrlResult result = sqs.getQueueUrl(request);
 
@@ -461,8 +465,14 @@ public class ArchiveVTWPatentAsset implements Runnable{
 									
 									// 06/07/2017 NYC team confirmed to download all patents with generation >10, after Bart recent email to check with EV to confirm this
 									//PROD US & EP
-									if((obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("US") || 
-											obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("EP")))   
+									/*if((obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("US") || 
+											obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("EP")))*/   
+										
+										//12/13/2017 Added WO (backfil and forward) flow to be ready for Jan,2018 WO release
+										if((obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("US") || 
+												obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("EP")||
+												obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("WO")))   
+											
 										
 										
 										patentIds.put(obj.getMessageField("patentid"), "");
@@ -480,6 +490,7 @@ public class ArchiveVTWPatentAsset implements Runnable{
 										//signed Asset URL's Expiration Date
 										if(obj.getMessageField("urlExpirationDate") !=null)
 										{
+											//System.out.println("Expires= " + obj.getMessageField("urlExpirationDate"));
 											signedUrlExpiration = Long.parseLong(obj.getMessageField("urlExpirationDate"));
 											//recordBuf.append(convertMillisecondsToFormattedDate(obj.getMessageField("urlExpirationDate"))); // human readable format
 											recordBuf.append(signedUrlExpiration);
@@ -543,7 +554,7 @@ public class ArchiveVTWPatentAsset implements Runnable{
 										recordBuf.append(msgSentDateFormat.format(new Date(Long.parseLong(msgAttributes.get("SentTimestamp")))).toString());
 										
 										// for debugging print the message ApproximateReceiveCount
-										System.out.println("Message receive count: " + msgAttributes.get("ApproximateReceiveCount"));
+										//System.out.println("Message receive count: " + msgAttributes.get("ApproximateReceiveCount"));
 									}
 									// write the message to out file
 									out.println(recordBuf.toString().trim());
@@ -690,6 +701,10 @@ public class ArchiveVTWPatentAsset implements Runnable{
 
 		System.out.println("Zip downloaded files for downloadDir: " + downloadDirName);
 
+		try
+		{
+			
+		
 		// read latest zipfilename from zipFileNames file as the start point for Sequence generation
 		readZipFileNameFromFile(loadNumber);
 
@@ -723,9 +738,9 @@ public class ArchiveVTWPatentAsset implements Runnable{
 		
 		//Added 10/02/2017 to handle backfill and forward WO
 		if(msgType !=null && msgType.equalsIgnoreCase("forward"))
-			downDir = new File(currDir + "/raw_data/" + type + "_" + downloadDirName);
+			downDir = new File(currDir + "/raw_data/" + msgType + "_" + downloadDirName);
 		else if (msgType !=null && msgType.equalsIgnoreCase("backfill"))
-				downDir = new File(currDir + "/raw_data/" + type + "_wo_" + downloadDirName);
+				downDir = new File(currDir + "/raw_data/" + msgType + "_wo_" + downloadDirName);
 
 		String[] xmlFiles = downDir.list();  
 		File[] xmlFilesToDelete = downDir.listFiles();
@@ -769,6 +784,12 @@ public class ArchiveVTWPatentAsset implements Runnable{
 			outZip.close();
 			downDir.delete();
 		}
+		}
+		catch(Exception e)
+		{
+			System.out.println("An Exception occured in ZipDownloades!!!");
+			System.out.println("Reason: " + e.getMessage());
+		}
 
 
 	}
@@ -785,6 +806,8 @@ public class ArchiveVTWPatentAsset implements Runnable{
 	{
 		volatile AtomicInteger sequenceLoadNum = new AtomicInteger(getRecentZipFileName());
 		volatile AtomicInteger sequenceID = new AtomicInteger(getRecentZipFileName());
+		
+		
 		public synchronized int nextloadNum()
 		{
 			int nextVal = sequenceLoadNum.incrementAndGet();
