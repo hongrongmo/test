@@ -1,0 +1,350 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.ei.dataloading</groupId>
+  <artifactId>dataloading-core</artifactId>
+  <!-- <version>0.0.1-SNAPSHOT</version> -->
+  <version>3.0.0</version>
+  <packaging>jar</packaging>
+
+  <name>dataloading-core</name>
+  <url>http://maven.apache.org</url>
+
+
+<dependencies>
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk</artifactId>
+			<!-- <version>1.7.8.1</version> -->  <!-- OLD for ES related HTTPClient  -->
+			<version>1.11.23</version>
+		</dependency>
+		<!-- HH 08/09/2016 worked for RDS 11g, no longer valid to 12c -->
+		<!-- <dependency>
+			<groupId>oracle</groupId>
+			<artifactId>ojdbc14</artifactId>
+			<version>10.2.0.3.0</version>
+		</dependency> -->
+		<!-- HH 08/09/2016: Added for 12c RDS -->
+		<dependency>
+    		<groupId>com.oracle</groupId>
+   	 		<artifactId>ojdbc6</artifactId>
+    		<version>11.2.0.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		<dependency>
+			<groupId>lucene</groupId>
+			<artifactId>lucene</artifactId>
+			<version>1.4.3</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>3.2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-pool</groupId>
+			<artifactId>commons-pool</artifactId>
+			<version>1.6</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-validator</groupId>
+			<artifactId>commons-validator</artifactId>
+			<version>1.4.0</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.6</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-httpclient</groupId>
+			<artifactId>commons-httpclient</artifactId>
+			<version>3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-annotations</artifactId>
+			<version>3.5.6-Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-commons-annotations</artifactId>
+			<version>3.3.0.ga</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>ejb3-persistence</artifactId>
+			<version>1.0.2.GA</version>
+		</dependency>
+		<dependency>
+			<groupId>oro</groupId>
+			<artifactId>oro</artifactId>
+			<version>2.0.8</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jdom</groupId>
+			<artifactId>jdom2</artifactId>
+			<version>2.0.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.wink</groupId>
+			<artifactId>wink-client</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.wink</groupId>
+			<artifactId>wink-common</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.wink</groupId>
+			<artifactId>wink-json4j</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.3.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-javamail_1.4_spec</artifactId>
+			<version>1.7.1</version>
+		</dependency>
+		<dependency>
+			<groupId>saxon</groupId>
+			<artifactId>saxon</artifactId>
+			<version>6.5.2</version>
+		</dependency>
+		<dependency>
+			<groupId>saxpath</groupId>
+			<artifactId>saxpath</artifactId>
+			<version>1.0-FCS</version>
+		</dependency>
+		<dependency>
+			<groupId>xerces</groupId>
+			<artifactId>xercesImpl</artifactId>
+			<version>2.9.1</version>
+		</dependency>
+		<!-- HH: for Patent zip file header issue  08/04/2015-->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-compress</artifactId>
+			<version>1.9</version>
+		</dependency>
+		<!-- HH: for Amazon SQS for CAFE' Feed 01/15/2016 -->
+		<dependency>
+  			<groupId>com.amazonaws</groupId>
+ 			 <artifactId>amazon-sqs-java-messaging-lib</artifactId>
+ 			 <version>1.0.0</version>
+ 			 <type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.4</version>
+		</dependency>
+		
+		<!-- HH 04/18/2016 for Managing Amazon SQS Messages with Amazon S3 to archive large sqs messages to S3-->
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>amazon-sqs-java-extended-client-lib</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk-sqs</artifactId>
+			<!-- <version>1.10.72</version> -->
+			<!-- HH: 09/26/2016 AMazon sqs -->
+    		<version>1.11.23</version>
+		</dependency>
+		<dependency>
+    		<groupId>junit</groupId>
+    		<artifactId>junit</artifactId>
+    		<version>4.11</version>
+    		<scope>test</scope>
+  		</dependency>
+  		<dependency>
+     		 <groupId>org.mockito</groupId>
+      		<artifactId>mockito-core</artifactId>
+      		<version>1.10.19</version>
+      		<scope>test</scope>
+   		 </dependency>
+   		 
+   		<!--  added for elasticsearch 06/06/2016--> 
+		<dependency>
+    		<groupId>org.elasticsearch</groupId>
+    		<artifactId>elasticsearch</artifactId>
+    		<version>0.20.5</version>
+		</dependency>
+  
+		 <dependency>
+    		<groupId>vc.inreach.aws</groupId>
+    		<artifactId>aws-signing-request-interceptor</artifactId>
+    		<version>0.0.13</version>
+		</dependency>
+
+			<!-- HH 07/26/2016 for Amazon ES JEST HTTP REST Client -->
+		<dependency>
+  			<groupId>io.searchbox</groupId>
+  			<artifactId>jest</artifactId>
+  			<version>2.0.0</version>
+		</dependency>
+		
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.4.1</version>
+		</dependency>
+
+				
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.5.6</version>
+		</dependency>
+
+		<!-- END HH 07/26/2016 -->
+		
+		<!-- HH 08/09/2016 for JsonBuilder -->
+		
+		<dependency>
+    		<groupId>javax.json</groupId>
+   			 <artifactId>javax.json-api</artifactId>
+    		<version>1.0</version>
+		</dependency>
+		<dependency>
+    		<groupId>org.glassfish</groupId>
+    		<artifactId>javax.json</artifactId>
+    		<version>1.0.4</version>
+		</dependency>
+		
+		<!-- HH 09/19/2016 for Parsing VTW JSON SQS Message -->
+		
+		<dependency>
+    		<groupId>com.googlecode.json-simple</groupId>
+    		<artifactId>json-simple</artifactId>
+    		<version>1.1.1</version>
+		</dependency>
+		
+		<!-- HH: 02/18/2016 for Amazon Lambda -->
+		 <dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk-lambda</artifactId>
+			<version>1.10.21</version>
+		</dependency>
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-lambda-java-core</artifactId>
+			<version>1.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-lambda-java-events</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+ 			<artifactId>aws-lambda-java-log4j</artifactId>
+  			<version>1.0.0</version>
+  		 </dependency>
+  		 
+  		 <!-- HH 10/12/2016 added for VTW to skip Byte Order Marker "BOM" from Patent XML file -->
+		<dependency>
+    		<groupId>commons-io</groupId>
+    		<artifactId>commons-io</artifactId>
+    		<version>2.4</version>
+		</dependency>
+		
+		<!-- HH END -->
+		 <dependency>
+        <groupId>javax.mail</groupId>
+        <artifactId>mail</artifactId>
+        <version>1.4</version>
+    </dependency>
+<!-- 
+    <dependency>
+        <groupId>javax.activation</groupId>
+        <artifactId>activation</artifactId>
+        <version>1.0.2</version>
+    </dependency>
+ --> 		  
+		
+	</dependencies>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+
+	<build>
+		<finalName>eilib</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<!--  HH 01/18/2015 -->
+			<plugin>
+    		<groupId>org.apache.maven.plugins</groupId>
+    		<artifactId>maven-antrun-plugin</artifactId>
+    		<version>1.1</version>
+   			 <executions>
+       		 <execution>
+            <phase>test</phase>
+            <goals>
+                <goal>run</goal>
+            </goals>
+            <configuration>
+                <tasks>
+                    <echo>Using env.test.properties</echo>
+                    <copy file="src/main/java/org/ei/dataloading/georef/loadtime/GeobaseToGeorefTerms.txt" tofile="${basedir}/target/classes/org/ei/data/georef/loadtime/GeobaseToGeorefTerms.txt"/>
+                    <copy file="src/main/java/org/ei/data/georef/runtime/GeoRefCoodinates.txt" tofile="${basedir}/target/classes/org/ei/data/georef/runtime/GeoRefCoodinates.txt"/>
+                    <copy file="src/main/java/org/ei/dataloading/georef/loadtime/EVROWSET.dtd" tofile="${basedir}/target/classes/org/ei/data/georef/loadtime/EVROWSET.dtd"/>
+                    </tasks>
+                </configuration>
+            </execution>
+        </executions>
+    </plugin>
+    <!-- END -->
+    
+    <!-- HH 07/28/2016 for Lambda Package creating, it emebeds all jara dependencies in eielib.jar file -->
+     <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>2.3</version>
+        <configuration>
+          <createDependencyReducedPom>false</createDependencyReducedPom>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin> 
+      <!-- END -->
+      
+		</plugins>
+	</build>
+</project>
