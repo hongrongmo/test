@@ -46,6 +46,7 @@ public class InstitutionCombiner{
 	static String password = "ei3it";
 	static int loadNumber = 0;
 	static String tableName = "institute_profile";
+	static String afDocCount_tableName = "affiliation_doc_count";   // added 05/10/2018 to fetch ab doc_count of AU in ES
 	static String metadataTableName = "hh_af_metadata";
 	static String action = "new";
 	static int recsPerEsbulk;
@@ -53,6 +54,8 @@ public class InstitutionCombiner{
 	private static String tableToBeTruncated = "IPR_ES_INDEXED";
 	private static String esIndexedIdsSqlldrFileName = "iprESIndexedIdsFileLoader.sh";
 	static String esIndexType = "direct";
+	static String esIndexName = "affiliation";		// added 05/10/2018 as ES 6.2 and up split types in separate indices
+
 
 	// get CurrentData and Time for ESIndexTime
 	DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
@@ -67,8 +70,8 @@ public class InstitutionCombiner{
 	static AusAffESIndex esIndex;
 
 	Connection con = null;
-	
-	
+
+
 	private static long startTime = System.currentTimeMillis();
 	private static long endTime = System.currentTimeMillis();
 	private static long midTime = System.currentTimeMillis();
@@ -76,7 +79,7 @@ public class InstitutionCombiner{
 
 	public static void main(String args[])
 	{
-		if(args.length >13)
+		if(args.length >15)
 		{
 			if(args[0] !=null)
 			{
@@ -93,7 +96,7 @@ public class InstitutionCombiner{
 			if(args[3] !=null)
 			{
 				username = args[3];
-				
+
 				System.out.println("Schema: " + username);
 			}
 			if(args[4] !=null)
@@ -130,7 +133,7 @@ public class InstitutionCombiner{
 				try
 				{
 					recsPerEsbulk = Integer.parseInt(args[9]);
-					
+
 					System.out.println("ES Documents per Bulk: " + recsPerEsbulk);
 				}
 				catch(NumberFormatException ex)
@@ -141,7 +144,7 @@ public class InstitutionCombiner{
 			if(args[10] !=null)
 			{
 				esDomain = args[10];
-				
+
 				System.out.println("ES Domain name: " + esDomain);
 			}
 			if(args[11] !=null)
@@ -165,6 +168,23 @@ public class InstitutionCombiner{
 					System.exit(1);
 				}
 			}
+			if(args[14] !=null)
+			{
+				afDocCount_tableName = args[14];
+				System.out.println("Doc Count table for Affiliation: " + afDocCount_tableName);
+			}
+			if(args[15] !=null)
+			{
+				esIndexName = args[15].toLowerCase().trim();
+				if(esIndexName.equalsIgnoreCase("affiliation") || esIndexName.equalsIgnoreCase("cafe"))
+
+					System.out.println("ES Index Name: " + esIndexName);
+				else
+				{
+					System.out.println("Invalid ES Index Name for Affiliation Index, re-try with ESIndexName affiliation");
+					System.exit(1);
+				}
+			}
 
 
 		}
@@ -178,7 +198,7 @@ public class InstitutionCombiner{
 		{
 			// doc_type should be "ipr"
 			if(doc_type !=null && doc_type.equalsIgnoreCase("ipr"))
-			System.out.println("Start ES Extract for Doc_type: " + doc_type);
+				System.out.println("Start ES Extract for Doc_type: " + doc_type);
 			else
 			{
 				System.out.println("Invalid document type!!, please re-run with document type ipr");
@@ -188,7 +208,7 @@ public class InstitutionCombiner{
 			writer.init(1);
 
 			//s3upload = new AuAfESIndex(doc_type);
-			esIndex = new AusAffESIndex(recsPerEsbulk, esDomain, action);
+			esIndex = new AusAffESIndex(recsPerEsbulk, esDomain, action,esIndexName);
 
 			InstitutionCombiner c = new InstitutionCombiner();
 			c.con = c.getConnection(url,driver,username,password);
@@ -210,7 +230,7 @@ public class InstitutionCombiner{
 
 
 			//added 05/10/2017 to update status = "indexed" for the docs that successfully indexed to ES
-			UpdateProfileTableESStatus profileESUpdate = new UpdateProfileTableESStatus(doc_type,username, password,loadNumber,tableToBeTruncated,url,esIndexedIdsSqlldrFileName);
+			UpdateProfileTableESStatus profileESUpdate = new UpdateProfileTableESStatus(doc_type,action, username, password,loadNumber,tableToBeTruncated,url,esIndexedIdsSqlldrFileName);
 			profileESUpdate.writeIndexedRecs(esIndex.getESIndexedDocsList());
 		}
 		catch(Exception e)
@@ -230,33 +250,44 @@ public class InstitutionCombiner{
 		{
 			stmt = con.createStatement();
 			System.out.println("Running the query...");
-			String query = "select * from " +  tableName + " where affid in (select INSTITUTE_ID from " + metadataTableName + 
-					" where STATUS='matched' and dbase='cpx') and PARENTID is null";
+			/*String query = "select * from " +  tableName + " where affid in (select INSTITUTE_ID from " + metadataTableName + 
+					" where STATUS='matched') and PARENTID is null";*/
+
+
+			//PROD
+
+			//HH added 05/07/2018 explicitly add all author_profile columns to join with au doc counts table for ES index as per TM request
+			String query = "select a.M_ID,a.EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AFFID,a.STATUS,a.DATE_CREATED,a.DATE_REVISED,a.PREFERED_NAME,a.SORT_NAME,a.NAME_VARIANT,a.ADDRESS_PART,a.CITY,a.STATE,a.POSTAL_CODE,"+
+					"a.COUNTRY,a.CERTAINTY_SCORES,a.LOADNUMBER,a.DATABASE,a.QUALITY,a.UPDATENUMBER,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,a.ES_STATUS,a.PARENTID,a.PARENT_PREFERED_NAME, b.DOC_COUNT as DOC_COUNT "+
+					"from " +  tableName + "a left outer join " + afDocCount_tableName + " b on a.AFFID = b.INSTITUTE_ID where "+
+					"a.affid in (select INSTITUTE_ID from " + metadataTableName + " where STATUS='matched') and a.PARENTID is null";
+
+
 			System.out.println("query");
 
 			stmt.setFetchSize(200);
 			rs = stmt.executeQuery(query);
 
 			System.out.println("Got records... from table: " + tableName);
-			
+
 			midTime = endTime;
 			endTime = System.currentTimeMillis();
 			System.out.println("time for get records from table "+(endTime-midTime)/1000.0+" seconds");
 			System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
-			
-			
+
+
 			writeRecs(rs,con);
-			
+
 			esIndex.ProcessBulk();
 			esIndex.end();
-			
+
 			System.out.println("Wrote records.");
-			
+
 			midTime = endTime;
 			endTime = System.currentTimeMillis();
 			System.out.println("time for run ES extract & index "+(endTime-midTime)/1000.0+" seconds");
 			System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
-			
+
 		}
 
 		finally
@@ -314,13 +345,16 @@ public class InstitutionCombiner{
 			System.out.println("Running the query...");
 			if(!(action.isEmpty()) && action.equalsIgnoreCase("new"))
 			{
-				/*query = "select * from " +  tableName + " where loadnumber=" + loadNumber + " and affid in (select INSTITUTE_ID from " + metadataTableName + 
-						" where STATUS='matched' and dbase='cpx') and PARENTID is null";*/			//used for intial/pre-release ES index, till loadnumber: 2017307
-				
-				query = "select * from " +  tableName + " where ES_STATUS is null and affid in (select INSTITUTE_ID from " + metadataTableName + 
-						" where STATUS='matched' and dbase='cpx') and PARENTID is null";
-				
-				
+				//PROD
+				/*query = "select * from " +  tableName + " where ES_STATUS is null and affid in (select INSTITUTE_ID from " + metadataTableName + 
+						" where STATUS='matched') and PARENTID is null";*/
+
+				//HH added 05/07/2018 explicitly add all author_profile columns to join with au doc counts table for ES index as per TM request
+				query = "select a.M_ID,a.EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AFFID,a.STATUS,a.DATE_CREATED,a.DATE_REVISED,a.PREFERED_NAME,a.SORT_NAME,a.NAME_VARIANT,a.ADDRESS_PART,a.CITY,a.STATE,a.POSTAL_CODE,"+
+						"a.COUNTRY,a.CERTAINTY_SCORES,a.LOADNUMBER,a.DATABASE,a.QUALITY,a.UPDATENUMBER,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,a.ES_STATUS,a.PARENTID,a.PARENT_PREFERED_NAME, b.DOC_COUNT as DOC_COUNT from "
+						+ tableName + "a left outer join " + afDocCount_tableName + " b on a.AFFID = b.INSTITUTE_ID where a.ES_STATUS is null and "+
+						"a.affid in (select INSTITUTE_ID from " + metadataTableName + " where STATUS='matched') and a.PARENTID is null";
+
 
 				System.out.println(query);
 
@@ -335,42 +369,50 @@ public class InstitutionCombiner{
 				System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
 
 				writeRecs(rs,con);
-				
+
 				esIndex.ProcessBulk();
 				esIndex.end();
-				
-				
+
+
 				System.out.println("Wrote records.");
-				
+
 				midTime = endTime;
 				endTime = System.currentTimeMillis();
 				System.out.println("time for run ES extract & index "+(endTime-midTime)/1000.0+" seconds");
 				System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
-				
+
 			}
 			else if(!(action.isEmpty()) && action.equalsIgnoreCase("update"))
 			{
 				updateNumber=loadNumber;
-				
-				/*query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and affid in (select INSTITUTE_ID from " + metadataTableName + 
-						" where STATUS='matched' and dbase='cpx') and PARENTID is null";*/		//used for intial/pre-release ES index, till updatenumber: 2017326
-				
-				query = "select * from " +  tableName + " where ES_STATUS is null and affid in (select INSTITUTE_ID from " + metadataTableName + 
-						" where STATUS='matched' and dbase='cpx') and PARENTID is null";
-				
-				
 
-				
-				//for testing
-				//query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and affid in (select INSTITUTE_ID from " + metadataTableName + " where dbase='cpx') and rownum<2";
+				//PROD
+				/*	query = "select * from " +  tableName + " where ES_STATUS is null and affid in (select INSTITUTE_ID from " + metadataTableName + 
+						" where STATUS='matched') and PARENTID is null";*/
 
-				// 04/04/2017, only index AU profile that has BD CPX abstract records in fast DEV for Dayton to test EV App
-				
-			/*	query =  "select * from " +  tableName + "  where AFFID in (select INSTITUTE_ID from ap_correction1.Cafe_af_lookup where pui "
-						+ " in (select pui from ap_correction1.AUTHOR_MID))";*/
-				
-				
-				
+
+
+				//HH added 05/07/2018 explicitly add all author_profile columns to join with au doc counts table for ES index as per TM request
+				query = "select a.M_ID,a.EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AFFID,a.STATUS,a.DATE_CREATED,a.DATE_REVISED,a.PREFERED_NAME,a.SORT_NAME,a.NAME_VARIANT,a.ADDRESS_PART,a.CITY,a.STATE,a.POSTAL_CODE,"+
+						"a.COUNTRY,a.CERTAINTY_SCORES,a.LOADNUMBER,a.DATABASE,a.QUALITY,a.UPDATENUMBER,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,a.ES_STATUS,a.PARENTID,a.PARENT_PREFERED_NAME, b.DOC_COUNT as DOC_COUNT from "+
+						tableName + " a left outer join " + afDocCount_tableName + " b on a.AFFID = b.INSTITUTE_ID where a.ES_STATUS is null and "+
+						"a.affid in (select INSTITUTE_ID from " + metadataTableName + " where STATUS='matched') and a.PARENTID is null";
+
+
+				// for IPR Re-index with doc_count using loadnumber
+				/*query = "select a.M_ID,a.EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AFFID,a.STATUS,a.DATE_CREATED,a.DATE_REVISED,a.PREFERED_NAME,a.SORT_NAME,a.NAME_VARIANT,a.ADDRESS_PART,a.CITY,a.STATE,a.POSTAL_CODE,"+
+						"a.COUNTRY,a.CERTAINTY_SCORES,a.LOADNUMBER,a.DATABASE,a.QUALITY,a.UPDATENUMBER,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,a.ES_STATUS,a.PARENTID,a.PARENT_PREFERED_NAME, b.DOC_COUNT as DOC_COUNT from "+
+						tableName + " a left outer join " + afDocCount_tableName + " b on a.AFFID = b.INSTITUTE_ID where a.updatenumber = " + updateNumber + " and "+
+						"a.affid in (select INSTITUTE_ID from " + metadataTableName + " where STATUS='matched') and a.PARENTID is null";
+*/
+
+				//Testing
+				/*query = "select a.M_ID,a.EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AFFID,a.STATUS,a.DATE_CREATED,a.DATE_REVISED,a.PREFERED_NAME,a.SORT_NAME,a.NAME_VARIANT,a.ADDRESS_PART,a.CITY,a.STATE,a.POSTAL_CODE,"+
+						"a.COUNTRY,a.CERTAINTY_SCORES,a.LOADNUMBER,a.DATABASE,a.QUALITY,a.UPDATENUMBER,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,a.ES_STATUS,a.PARENTID,a.PARENT_PREFERED_NAME, b.DOC_COUNT as DOC_COUNT from "+
+						tableName + " a left outer join " + afDocCount_tableName + " b on a.AFFID = b.INSTITUTE_ID where a.affid in " +
+						"(select INSTITUTE_ID from " + metadataTableName + " where STATUS='matched') and a.PARENTID is null and a.quality>=100 and rownum<5";
+				 */
+
 				System.out.println(query);
 
 				stmt.setFetchSize(200);
@@ -385,11 +427,11 @@ public class InstitutionCombiner{
 
 
 				writeRecs(rs,con);
-				
+
 				esIndex.ProcessBulk();
 				esIndex.end();
-				
-				
+
+
 				System.out.println("Wrote records.");
 
 				midTime = endTime;
@@ -413,7 +455,7 @@ public class InstitutionCombiner{
 
 				System.out.println("Got records... from table: " + tableName);
 				getDeletionList(rs);
-				
+
 				//deletion part moved to CafeDownloadFileFromS3AllTypes
 				esIndex.createBulkDelete(doc_type, affId_deletion_list);
 
@@ -486,7 +528,7 @@ public class InstitutionCombiner{
 
 					// UPDATEEPOCH (place holder for future filling with SQS epoch)
 					rec.put(AuAfCombinedRec.UPDATEEPOCH, "");
-					
+
 					//LOADNUMBER
 					if(rs.getString("LOADNUMBER") !=null)
 					{
@@ -497,7 +539,7 @@ public class InstitutionCombiner{
 					{
 						rec.put(AuAfCombinedRec.UPDATE_NUMBER, Integer.toString(rs.getInt("UPDATENUMBER")));
 					}
-					
+
 					//EID
 					if(rs.getString("EID") !=null)
 					{
@@ -544,7 +586,7 @@ public class InstitutionCombiner{
 						rec.put(AuAfCombinedRec.AFID, rs.getString("AFFID"));
 						//System.out.println("AFFID from AuAfCombinedRec: " + rec.getString(AuAfCombinedRec.AFFILIATION_ID));
 					}
-					
+
 					//PARENTID (always set to "0") bc only Parent Institutions indexed to ES, set to non-Zero for child/departments
 					if(rs.getString("PARENTID") !=null)
 					{
@@ -562,7 +604,7 @@ public class InstitutionCombiner{
 					{
 						rec.put(AuAfCombinedRec.AFFILIATION_PREFERRED_NAME, DataLoadDictionary.mapEntity(rs.getString("PREFERED_NAME")));
 					}
-					
+
 					//PREFPARNAME
 					if(rs.getString("PARENT_PREFERED_NAME") !=null)
 					{
@@ -623,6 +665,11 @@ public class InstitutionCombiner{
 					if(rs.getString("CERTAINTY_SCORES") !=null)
 					{
 						rec.put(AuAfCombinedRec.CERTAINITY_SCORES, rs.getString("CERTAINTY_SCORES"));
+					}
+					//Added 05/07/2018: DOC_COUNT 
+					if(rs.getString("DOC_COUNT") !=null)
+					{
+						rec.put(AuAfCombinedRec.DOC_COUNT,Integer.toString(rs.getInt("DOC_COUNT")));
 					}
 				}
 
@@ -727,8 +774,8 @@ public class InstitutionCombiner{
 
 		return time_stamp.toString();
 	}
-	
-	
+
+
 	private String getStringFromClob(Clob clob)
 	{
 		String str = null;
@@ -745,7 +792,7 @@ public class InstitutionCombiner{
 		}
 		return str;
 	}
-	
+
 	private Connection getConnection(String connectionURL,
 			String driver,
 			String username,

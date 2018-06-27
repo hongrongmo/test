@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <ant antfile="C:\NYC_dataload_split\EngineeringVillage\ROOT-Maven/../engvillage/build.xml">
+    <target name="war"/>
+  </ant>
+</target>
+</project>
