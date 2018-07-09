@@ -25,7 +25,7 @@ public class AmazonHttpClientService
 	private AmazonHttpClient client;
 
 	private static int SOCK_TIMEOUT = 500 * 1000;  // 500 minutes timeout
-	private static final int REQUEST_TIMEOUT = 180 * 1000;		//Sets the amount of time to wait (in milliseconds) for the request to complete before giving up and timing out
+	private static final int REQUEST_TIMEOUT = 100 * 1000;		//Sets the amount of time to wait (in milliseconds) for the request to complete before giving up and timing out
 
 
 	private static ClientConfiguration clientConfiguration;
@@ -46,7 +46,7 @@ public class AmazonHttpClientService
 				clientConfiguration.setConnectionTimeout(ClientConfiguration.DEFAULT_CONNECTION_TIMEOUT);
 				clientConfiguration.setConnectionMaxIdleMillis(ClientConfiguration.DEFAULT_CONNECTION_MAX_IDLE_MILLIS);
 				clientConfiguration.setSocketTimeout(SOCK_TIMEOUT);
-				clientConfiguration.setRequestTimeout(REQUEST_TIMEOUT);		// sets Request timeout to to "180" seconds 
+				clientConfiguration.setRequestTimeout(REQUEST_TIMEOUT);		// sets Request timeout to to "100" seconds 
 				clientConfiguration.setMaxConnections(ClientConfiguration.DEFAULT_MAX_CONNECTIONS);
 				clientConfiguration.setMaxErrorRetry(6);
 
