@@ -473,7 +473,7 @@ public class AuthorCombiner {
 						"a.CLASSIFICATION_SUBJABBR,a.CLASSIFICATION_ASJC,a.PUBLICATION_RANGE,a.JORNAL_HISTORY_TYPE,a.JOURNALS,a.CURRENT_AFF_ID,a.CURRENT_AFF_TYPE,a.CURRENT_AFF_RELATIONSHIP,"+
 						"a.PARENT_AFF_ID,a.PARENT_AFF_TYPE,a.PARENT_AFF_RELATIONSHIP,a.HISTORY_AFFILIATIONID,a.LOADNUMBER,a.DATABASE,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,"+
 						"a.UPDATENUMBER,a.E_ADDRESS,a.ORCID,a.SOURCE_TITLE,a.ES_STATUS, b.DOC_COUNT as DOC_COUNT  from " +  tableName + " a left outer join " + auDocCount_tableName + " b on a.AUTHORID = b.AUTHOR_ID "+
-						"where a.ES_STATUS='indexed' and a.authorid in (select AUTHOR_ID from " + metadataTableName + " where STATUS='matched') and rownum<401";
+						"where a.ES_STATUS='indexed' and a.authorid in (select AUTHOR_ID from " + metadataTableName + " where STATUS='matched') and a.authorid='7005519063'";
 				 */
 
 				System.out.println(query);
