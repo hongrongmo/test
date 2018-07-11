@@ -52,6 +52,17 @@ import java.util.Set;
  *    that does not have any instance of "matched" status, and so that means this list is the ones with all status (unmatched/deleted) and so can be deleted from ES
  *    
  *    
+ *    on Jul 10, 2018 this calss was modified to find deleted lookupindex similar as BD's cpx deleted lookupindex with some diff
+ *    there was unknown bug that we did not check for deleted lookupindex for lookups, profile tables & ES index update
+ *    test case: suppose ANI record of PUI1 had (auid1, auid2), but with ANI correction this PUI only now has "auid1" and no longer has "auid2"
+ *    if this was the only ANI/PUI1 for this "auid2" then this auid2 will no longer be in cmb_au/af_lookup table, though it will be missed from
+ *    updating ES accordingly if this ID was indexed in ES before, it will keep there and there is no match for it in BD's CPX abstract 
+ *    so after discussion with NYC team we cam up a solution that we need to 1st compare cafe prod lookup tables with temp table (prod minus temp)
+ *    to locate thos IDS and for resulted ids check distinct "status" if at least one is "match" do nothing, if all "unmatched/deleted"
+ *    delete from ES & update profile tables's es_status to "null"
+ *    "so this step should be executed right after Cafe ANI lookup loading to temp tables & before updating cafe prod lookup tables"
+ *    
+ *    
  */
 public class AusAffDeletion {
 
@@ -77,8 +88,8 @@ public class AusAffDeletion {
 	String profileTable;
 	String profileColumnName;
 
-	//Map<String,String> id_status_List = new Hashtable<String,String>(); // 05/25/2018 comment out, it is for old logic for getting ID & all it's diff status,
-	ArrayList<String> id_status_List = new ArrayList<String>();				// 05/25/2018 for new logic
+	Map<String,String> id_status_List = new Hashtable<String,String>(); // 05/25/2018 comment out, it is for old logic for getting ID & all it's diff status,
+	//07/10/2018 uncomment for source "lookup" that compar prod & tenp lookups to find ids that no longer exist in new lookups/temp
 	Map<String,String> id_pui_List = new Hashtable<String,String>(); // for BD deletion holding PUI, AU/AFID for later updating lookup tables' status
 	List<String> id_List = new ArrayList<String>();
 	List<String> Id_deletion_list;
@@ -93,9 +104,9 @@ public class AusAffDeletion {
 			if(args[0] !=null)
 			{
 				doc_type = args[0];
-				
+
 				// added 05/10/2018 as ES 6.2 and up split types in separate indices
-				
+
 				/*if(doc_type.toLowerCase().trim().equalsIgnoreCase("apr"))
 					esIndexName = "author";
 				else if(doc_type.toLowerCase().trim().equalsIgnoreCase("ipr"))
@@ -183,9 +194,11 @@ public class AusAffDeletion {
 
 			c.getCafeProfilesToBeDeleted();
 
-			if(c.id_status_List.size() >0)
-			{
+			if(c.id_status_List.size() >0 && source.equalsIgnoreCase("lookup"))
 				c.getProfileIdsToDelete();
+			
+			if(c.id_List.size() >0) 
+			{
 				c.deleteProfile();
 			}
 			else
@@ -250,57 +263,79 @@ public class AusAffDeletion {
 
 
 			stmt = con.createStatement();
+			stmt.setFetchSize(200);
 			System.out.println("Running the query...");
-			
+
 			if(source.equalsIgnoreCase("cafe") || source.equalsIgnoreCase("bd"))
-				
+			{
 				//05/25/2018 this stmt has bug as it only select one instance of each AUID/AFID and so does not get all diff status for this ID
-			/*query = "select " + lookupTable_columnName + ", status from " + lookupTable + " where pui in (select pui from " + deletionTable + ") " +
-					"group by " + lookupTable_columnName + ",status order by " + lookupTable_columnName;
-*/
-			
-			//05/25/2018after discussion with Frank, we modify the logic to only get the inclusive ID list to be deleted without checking diff status
+				/*query = "select " + lookupTable_columnName + ", status from " + lookupTable + " where pui in (select pui from " + deletionTable + ") " +
+						"group by " + lookupTable_columnName + ",status order by " + lookupTable_columnName;
+				 */
+
+				//05/25/2018after discussion with Frank, we modify the logic to only get the inclusive ID list to be deleted without checking diff status
 				query = "select " + lookupTable_columnName + " from " + lookupTable+ " where " + lookupTable_columnName + " in (select " + 
 						lookupTable_columnName + " from " + lookupTable + " where pui in (select pui from " + deletionTable + ")) " +
 						"minus select " + lookupTable_columnName + " from " + lookupTable + " where " + lookupTable_columnName + " in (select " + 
 						lookupTable_columnName + " from " + lookupTable + " where pui in (select pui from " + deletionTable + ")) and status ='matched'";
-			
+
+				System.out.println(query);
+				rs = stmt.executeQuery(query);
+				while(rs.next())
+				{
+					//05/25/2018 with New logic Frank suggested that only gets inclusive list of IDS to be deleted (IDs with all status unmatched/deleted)
+					if(rs.getString(1) !=null)
+					{
+						id_List.add(rs.getString(1));
+					}
+				}
+				System.out.println("Total " + doc_type + " Ids to be deleted: " + id_List.size());
+
+
+			}
+			/*
+			 * on 07/10/2018 uncommented old logic to be used for bug fix of locating auid/affid that were in Prod lookup tables but not in Temp lookup tables to delete from ES & db 
+			 * if it has only one match ANI record that is not in temp lookup table 
+			 */
+			else if(source.equalsIgnoreCase("lookup"))
+			{
+				query = "select " + lookupTable_columnName + ",status from " + lookupTable + " where author_id in " + 
+						"(select " + lookupTable_columnName + " from " +
+						"(select author_id,pui from " + lookupTable + " where pui in (select pui from " + deletionTable + ")" +
+						"minus " +
+						"select " + lookupTable_columnName + ",pui from " + deletionTable + "))" + 
+						" and pui not in (select pui from " + deletionTable + ") order by author_id";
+
+				System.out.println(query);
+				rs = stmt.executeQuery(query);
+				while(rs.next())
+				{
+					/* 05/25/2018 used for old logic that has bug, which was to get distinct status for all instances of ID to 
+					 * check if at least "1" instace with matched status so do nothing
+					 */
+
+					if(rs.getString(1) !=null)
+					{
+						profileId = rs.getString(1);
+						status = rs.getString(2);
+						if(status.equalsIgnoreCase("matched"))
+							status="$"+status+"$";
+						if(id_status_List.containsKey(profileId))
+						{
+							id_status_List.put(profileId, id_status_List.get(profileId) + "," + status);
+						}
+						else
+						{
+							id_status_List.put(profileId, status);
+						}
+					}
+				}
+				System.out.println("Total profile ids were in prod lookup table and not in temp lookup table: " + id_status_List.size());
+				
+			}
 			else
 				System.out.println("invalid Source!!!, Re-try with source 'cafe' or 'bd'");
-			
 
-			System.out.println(query);
-			stmt = con.createStatement();
-			stmt.setFetchSize(200);
-			rs = stmt.executeQuery(query);
-
-			while(rs.next())
-			{
-				// 05/25/2018 used for old logic that has bug, which was to get distinct status for all instances of ID to check if at least "1" instace with matched status so do nothing
-				/*if(rs.getString(1) !=null)
-				{
-					profileId = rs.getString(1);
-					status = rs.getString(2);
-					if(status.equalsIgnoreCase("matched"))
-						status="$"+status+"$";
-					if(id_status_List.containsKey(profileId))
-					{
-						id_status_List.put(profileId, id_status_List.get(profileId) + "," + status);
-					}
-					else
-					{
-						id_status_List.put(profileId, status);
-					}
-				}*/
-				
-				//05/25/2018 with New logic Frank suggested that only gets inclusive list of IDS to be deleted (IDs with all status unmatched/deleted)
-				if(rs.getString(1) !=null)
-				{
-					id_status_List.add(rs.getString(1));
-				}
-			}
-
-			System.out.println("Total Records matched weekly_deletion table: " + id_status_List.size());
 
 		}
 		catch(SQLException ex)
@@ -343,9 +378,9 @@ public class AusAffDeletion {
 
 
 
-	// 05/25/2018 used for the old logic
-	
-/*	public void getProfileIdsToDelete()
+	// 05/25/2018 used for the old logic, on 07/10/2018 uncomment to use ONLY for the new source of "lookup"
+
+	public void getProfileIdsToDelete()
 	{	
 
 		for(String key: id_status_List.keySet())
@@ -354,19 +389,20 @@ public class AusAffDeletion {
 			{
 				id_List.add(key);
 			}
-			else
+			// uncomment only for debugging
+			/*else
 			{
 				System.out.println("ID: " + key + " contains at least one 'matched' status, do nothing!");
-			}
+			}*/
 		}
 
-		System.out.println("Total " + doc_type + " Ids to be deleted: " + id_List.size());
+		System.out.println("Total " + doc_type + " Ids to be deleted from ES: " + id_List.size());
 
-	}*/
+	}
 
 
 	//05 25/2018 for the new logic 
-	public void getProfileIdsToDelete()
+	/*public void getProfileIdsToDelete()
 	{	
 
 		for(int i=0;i<id_status_List.size();i++)
@@ -377,7 +413,7 @@ public class AusAffDeletion {
 		System.out.println("Total " + doc_type + " Ids to be deleted: " + id_List.size());
 
 	}
-	
+	 */
 	public boolean deleteProfile()
 	{
 		StringBuffer profileIds = new StringBuffer();
@@ -438,7 +474,7 @@ public class AusAffDeletion {
 
 					if(source !=null && source.equalsIgnoreCase("cafe"))
 						DbBulkDelete();                                // temp comment during testing, NEED TO UNCOMMENT WHEN MOVE TO PROD
-					else
+					else if(source !=null && source.equalsIgnoreCase("bd"))
 					{
 						System.out.println("Source is : " + source + " so only update lookup status");
 						updateLookupStatus();
@@ -674,7 +710,7 @@ public class AusAffDeletion {
 		String query = "";
 
 		StringBuffer profileIds = new StringBuffer();
-		
+
 		int curRec = 0;
 		int count = 0;
 
@@ -694,10 +730,10 @@ public class AusAffDeletion {
 					{
 						/*query = "update " + lookupTable + " set status='unmatched' where pui in (select pui from " + deletionTable + ") and " + lookupTable_columnName + " in (" 
 								+ profileIds + ")";*/
-						
+
 						// 12/08/2017 update lookup based on PUI only; does not matter the auid/affid
 						query = "update " + lookupTable + " set status='unmatched' where pui in (select pui from " + deletionTable + ")";
-						
+
 						System.out.println("Running query...." + query);
 						count = stmt.executeUpdate(query);
 						con.commit();
