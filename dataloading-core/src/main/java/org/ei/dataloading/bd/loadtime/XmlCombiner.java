@@ -1554,6 +1554,8 @@ throws Exception
         	r = r.replaceAll(",","QCOMMAQ"); //use QCOMMAQ for comma
         	r = r.replaceAll(":","QCOLONQ"); //use QCOLONQ for colon
         	r = r.replaceAll(";","QSEMICOLONQ"); //use QSEMICOLONQ for semicolon
+        	r = r.replaceAll("\\(","QOPENINGBRACKETQ"); //opening parenthesis
+        	r = r.replaceAll("\\)","QCLOSINGBRACKETQ"); //closing parenthesis
         }
 
         return r; 
