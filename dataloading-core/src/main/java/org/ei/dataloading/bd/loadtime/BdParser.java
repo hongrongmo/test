@@ -409,10 +409,11 @@ public class BdParser
 											docType="ip";
 										}
 										else										
-										{
-										*/										 
+										{																			 
 											docType = cititype;
-										//}
+										}
+										*/
+										docType = cititype;
 										
 										record.put("CITTYPE",docType);
 										//System.out.println("STAGE="+record.get("STAGE")+"TYPE= "+cititype+"DOCTYPE= "+docType);
@@ -499,6 +500,17 @@ public class BdParser
 										cittext.append(Constants.IDDELIMITER);
 										if(cittextelm.getContent()!=null)
 										{
+											/*
+											if(this.accessNumber.equals("20180604775737"))
+											{
+												System.out.println("1 "+cittextelm.getDescendants());
+												System.out.println("2 "+cittextelm.getContent());
+												System.out.println("3 "+cittextelm.getValue());
+												System.out.println("4 "+cittextelm.getText());
+												System.out.println("5 "+dictionary.mapEntity(getMixData(cittextelm.getDescendants())));
+												System.out.println("6 "+dictionary.mapEntity(getMixData(cittextelm.getContent())));
+											}
+											*/
 											cittext.append(dictionary.mapEntity(getMixData(cittextelm.getContent())));
 										}
 										cittext.append(Constants.IDDELIMITER);
@@ -4372,15 +4384,16 @@ public class BdParser
 		return result.toString();
 	}
 
-	private  String getMixData(List l)
+	private String getMixData(List l)
 	{
 		StringBuffer b = new StringBuffer();
 		StringBuffer result = getMixData(l,b);
 		return result.toString();
     }
 
-    private  StringBuffer getMixData(List l, StringBuffer b)
+    private StringBuffer getMixData(List l, StringBuffer b)
     {
+    	
         Iterator it = l.iterator();
 
         while(it.hasNext())
@@ -4390,18 +4403,18 @@ public class BdParser
             if(o instanceof Text )
             {
 
-				String text=((Text)o).getTextTrim();
+				String text=((Text)o).getText();
 
-				//System.out.println("text::"+text);
+				//System.out.println("text1::"+text);
 
 				text= perl.substitute("s/&/&amp;/g",text);
 				text= perl.substitute("s/</&lt;/g",text);
 				text= perl.substitute("s/>/&gt;/g",text);
 				text= perl.substitute("s/\n//g",text);
 				text= perl.substitute("s/\r//g",text);
-				text= perl.substitute("s/\t//g",text);
-
+				text= perl.substitute("s/\t//g",text);				
 				b.append(text);
+				//System.out.println("text2::"+text);
 
             }
             else if(o instanceof EntityRef)
@@ -4429,7 +4442,7 @@ public class BdParser
                 b.append("</").append(e.getName()).append(">");
             }
         }
-
+		
         return b;
     }
 
@@ -4440,5 +4453,69 @@ public class BdParser
 		inabstract=false;
 		return b;
 	}
+    
+    private StringBuffer getMixData(Iterator it, StringBuffer b)
+    {
+        
+        while(it.hasNext())
+        {
+            Object o = it.next();
+
+            if(o instanceof Text )
+            {
+
+				//String text=((Text)o).getTextTrim();
+				String text=((Text)o).getText();
+
+				System.out.println("text3::"+text);
+
+				text= perl.substitute("s/&/&amp;/g",text);
+				text= perl.substitute("s/</&lt;/g",text);
+				text= perl.substitute("s/>/&gt;/g",text);
+				text= perl.substitute("s/\n//g",text);
+				text= perl.substitute("s/\r//g",text);
+				text= perl.substitute("s/\t//g",text);
+
+				System.out.println("text4::"+text);
+				b.append(text);
+
+            }
+            else if(o instanceof EntityRef)
+            {
+  				if(inabstract)
+  						entity.add(((EntityRef)o).getName());
+
+                  b.append("&").append(((EntityRef)o).getName()).append(";");
+            }
+            else if(o instanceof Element)
+            {
+                Element e = (Element)o;
+                b.append("<").append(e.getName());
+                List ats = e.getAttributes();
+                if(!ats.isEmpty())
+                {	Iterator at = ats.iterator();
+					while(at.hasNext())
+        			{
+						Attribute a = (Attribute)at.next();
+					   	b.append(" ").append(a.getName()).append("=\"").append(a.getValue()).append("\"");
+					}
+				}
+                b.append(">");
+                getMixData(e.getDescendants(), b);
+                b.append("</").append(e.getName()).append(">");
+            }
+        }
+		
+        return b;
+    }
+    
+    private String getMixData(Iterator l)
+	{
+		StringBuffer b = new StringBuffer();
+		StringBuffer result = getMixData(l,b);
+		return result.toString();
+    }
+    
+    
 
 }
