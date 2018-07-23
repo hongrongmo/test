@@ -14,3 +14,10 @@ sub
 double size = 42/4;
 long sub = (long) size;
 sub
+
+String st = "1234,12";
+String[] splitedStr = st.split(",");
+int len = splitedStr.length;
+len
+if(splitedStr[1] !=null || splitedStr[1].isEmpty())
+	System.out.println(splitedStr[0]);
