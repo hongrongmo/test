@@ -22,6 +22,12 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 
+/**
+ * 
+ * @author TELEBH
+ * @Description: intila non-complete of creating Affiliations DeanDashboard, 
+ * already done by Class "GsonAffExample.java
+ */
 
 public class AffiliationDeanDashBoard {
 

@@ -199,13 +199,19 @@ public class GsonAffExample
 			stmt = con.createStatement();
 			System.out.println("Running the query...");
 
+			//Prod
 			/*query = "select count(*) from " + tableName + " a, " + afDocCount_tableName + " b where a.es_status='indexed' " +
 					"and a.quality>=99 and a.affid=b.INSTITUTE_ID and b.doc_count>=1000";
 
 		*/
-			query = "select a.affid,a.PREFERED_NAME,a.NAME_VARIANT,b.doc_count from " + tableName + " a, " + afDocCount_tableName + " b "+
-					"where a.es_status='indexed' and a.quality>=99 and a.affid=b.INSTITUTE_ID and b.doc_count>=1000 and rownum<7 " +
+		/*	query = "select a.affid,a.PREFERED_NAME,a.NAME_VARIANT,b.doc_count from " + tableName + " a, " + afDocCount_tableName + " b "+
+					"where a.es_status='indexed' and a.quality>=99 and a.affid=b.AFFID and b.doc_count>=1000 " +
+					"order by b.doc_count desc";*/
+			
+			query = "select a.affid,a.PREFERED_NAME,a.NAME_VARIANT,b.doc_count from " + tableName + " a left outer join " + afDocCount_tableName + " b "+
+					"on a.affid=b.AFFID where a.quality>=99 and b.doc_count>=1000 " +
 					"order by b.doc_count desc";
+			
 			System.out.println(query);
 			rs = stmt.executeQuery(query);
 			con = getConnection(url, driver, username, password);
