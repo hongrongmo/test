@@ -100,8 +100,8 @@ public class FetchMidFromFast {
             client.setPrimarySortDirection("+");
             client.search();
 
-            
-            
+            int hit_count = client.getHitCount();
+            System.out.println("HitCount: " + hit_count);
             List<String[]> l = client.getDocIDs();
             for (int i = 0; i < l.size(); i++) {
                 String[] docID = (String[]) l.get(i);
@@ -109,6 +109,8 @@ public class FetchMidFromFast {
                 			//out.write("\r");
                 
             }
+            
+           
 
            
         } finally {
