@@ -20,7 +20,8 @@ import java.util.List;
  * 		2. compare count temp tables above with Prod count tables (both ways: temp minus prod union prod minus temp) with this comparsion will get
  * 			new/update counts in temp than prod and what was in prod and no longer in temp (deleted)
  * 		4. for ids list, update profile tables (author_profile, institute_profile) set "es_status" column to null
- * 		5. continue regular weekly AU/AF ES index
+ * 		5. for those ids that were in prod and not in temp count table (deleted) need to delete from ES
+ * 		6. continue regular weekly AU/AF ES index
  */
 public class CafeDocCountUpdate 
 {
@@ -32,15 +33,28 @@ public class CafeDocCountUpdate
 	static String doc_type;
 	static String temp_table;
 	static String count_table;
+	static String action = "delete";
+	static int recsPerEsbulk;
+	static String esDomain = "search-evcafe5-ucqg6c7jnb4qbvppj2nee4muwi.us-east-1.es.amazonaws.com";
+	static String esIndexName;		// added 05/10/2018 as ES 6.2 and up split types in separate indices
+	
 
 
 	static String[] tables;		// make sure temp table first then prod table
-
+	static String profileTable;
+	
+	AusAffESIndex esIndexObj = null;
+	
 	String tableName;
 	String column_name;
 	Connection con;
 	Statement stmt;
 	ResultSet rs;
+	List<String> profileid_List = new ArrayList<String>();
+	List<String> deleted_Profileid_List = new ArrayList<String>();
+	List<String> MID_deletion_list;
+	
+	
 
 	public static void main(String[] args) 
 	{
@@ -59,6 +73,11 @@ public class CafeDocCountUpdate
 		{
 			temp_table = args[1];
 			System.out.println("counts temp table: " + temp_table);
+			if(!(temp_table.toLowerCase().contains("temp")))
+			{
+				System.out.println("Invalid counts temp table!");
+				System.exit(1);
+			}
 		}
 		if(args[2] != null)
 		{
@@ -66,7 +85,7 @@ public class CafeDocCountUpdate
 			System.out.println("counts table: " + count_table);
 		}
 
-		if(args.length >6)
+		if(args.length >10)
 		{
 			if(args[3] != null)
 			{
@@ -87,6 +106,45 @@ public class CafeDocCountUpdate
 				password = args[6];
 				System.out.println("password= " + password);
 			}
+			
+			if(args[7] !=null)
+			{
+				action = args[7];
+				System.out.println("ES Action: " + action);
+			}
+			if(args[8] !=null)
+			{
+				try
+				{
+					recsPerEsbulk = Integer.parseInt(args[8]);
+
+					System.out.println("ES Documents per Bulk: " + recsPerEsbulk);
+				}
+				catch(NumberFormatException ex)
+				{
+					recsPerEsbulk = 10;
+				}
+			}
+			if(args[9] !=null)
+			{
+				esDomain = args[9];
+
+				System.out.println("ES Domain name: " + esDomain);
+			}
+			
+			if(args[10] !=null)
+			{
+				esIndexName = args[10];
+				if(esIndexName.equalsIgnoreCase("author") || esIndexName.equalsIgnoreCase("affiliation") || esIndexName.equalsIgnoreCase("cafe"))
+
+					System.out.println("ES Index Name: " + esIndexName);
+				else
+				{
+					System.out.println("Invalid ES Index Name for AU/AF profile deletion from ES, re-try with ESIndexName cafe");
+					System.exit(1);
+				}
+			}
+
 		}
 		else
 		{
@@ -95,8 +153,18 @@ public class CafeDocCountUpdate
 		}
 
 		CafeDocCountUpdate obj = new CafeDocCountUpdate();
+		obj.esIndexObj = new AusAffESIndex(recsPerEsbulk, esDomain, action, esIndexName);
+		
+		
 		obj.init();
 		obj.getProfileIds();
+		
+		// delete ids that were in Prod and not in temp from ES
+		if(obj.deleted_Profileid_List.size() >0)
+		obj.deleteProfile();
+				
+		// update es_status of affected profile ids to null to be re-indexed to ES with new count
+		obj.updateProfileESStatus(obj.profileid_List);
 
 	}
 
@@ -104,12 +172,12 @@ public class CafeDocCountUpdate
 	{
 		if(doc_type.equalsIgnoreCase("apr"))
 		{
-			column_name = "AUTHOR_ID";
+			column_name = "AUTHORID";
 			tableName = "author_profile";
 		}
 		else if(doc_type.equalsIgnoreCase("ipr"))
 		{
-			column_name = "INSTITUTE_ID";
+			column_name = "AFFID";
 			tableName = "institute_profile";
 		}
 
@@ -118,7 +186,7 @@ public class CafeDocCountUpdate
 	public void getProfileIds()
 	{
 		String query;
-		List<String> profileid_List = new ArrayList<String>();
+		String[] id_count_pair = new String[2];
 
 		try
 		{
@@ -149,12 +217,16 @@ public class CafeDocCountUpdate
 				{
 					if(rs.getString("ID_COUNT").indexOf(",") > -1)
 					{
-						profileid_List.add(rs.getString("ID_COUNT").split(",")[0]);
+						id_count_pair = rs.getString("ID_COUNT").split(",");
+						if(id_count_pair.length == 1)
+							deleted_Profileid_List.add(id_count_pair[0]);
+						profileid_List.add(id_count_pair[0]);
 					}
 				}
 			}
 
-			System.out.println("Total IDS with updated/deleted count:  " + profileid_List.size());
+			System.out.println("Total IDS without doc_count count: " + deleted_Profileid_List.size());
+			System.out.println("Total IDS with updated count:  " + profileid_List.size());
 
 		}
 		catch(SQLException ex)
@@ -193,10 +265,126 @@ public class CafeDocCountUpdate
 				}
 			}
 		}
-		// update es_status of affected profile ids to null to be re-indexed to ES with new count
-		updateProfileESStatus(profileid_List);
 
 	}
+	
+	public void getMidToBeDeleted(String profileIds)
+	{
+		Statement stmt = null;
+		ResultSet rs = null;
+		String query = null;
+		MID_deletion_list =  new ArrayList<String>();
+
+		try
+		{
+
+
+			System.out.println("Running the query...");
+
+			query = "select M_ID from " + tableName + " where " + column_name + " in (" + profileIds + " )";
+
+			//System.out.println(query);
+			stmt = con.createStatement();
+			stmt.setFetchSize(200);
+
+			rs = stmt.executeQuery(query);
+
+			while(rs.next())
+			{
+				MID_deletion_list.add(rs.getString("M_ID"));
+			}
+
+		}
+
+		catch(SQLException ex)
+		{
+			System.out.println(ex.getMessage());
+			ex.printStackTrace();
+		}
+		catch(Exception e)
+		{
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+		finally
+		{
+			if(rs !=null)
+			{
+				try
+				{
+					rs.close();
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+			if(stmt !=null)
+			{
+				try
+				{
+					stmt.close();
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+
+	public boolean deleteProfile()
+	{
+		StringBuffer profileIds = new StringBuffer();
+		int curRec = 0;
+		int status;
+
+		try
+		{
+			for(int i=0;i<deleted_Profileid_List.size();i++)
+			{
+				if(curRec>999)
+				{
+					//get M_ID list from DB for ES deletion & then delete from DB
+					getMidToBeDeleted(profileIds.toString());
+
+					if(MID_deletion_list.size() >0)
+					{
+						// delete from ES	
+						status = esIndexObj.createBulkDelete(doc_type, MID_deletion_list);
+					}
+
+					curRec = 0;
+					profileIds = new StringBuffer();
+					MID_deletion_list.clear();
+				}
+
+
+				if(profileIds.length() >0)
+					profileIds.append(",");			
+				profileIds.append("'" + deleted_Profileid_List.get(i) + "'");
+
+				curRec ++;
+			}
+
+			//get M_ID list from DB for ES deletion & then delete from DB
+			getMidToBeDeleted(profileIds.toString());
+
+			if(MID_deletion_list.size() >0)
+			{
+				// delete from ES
+				status = esIndexObj.createBulkDelete(doc_type, MID_deletion_list);
+			}
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error: " + e.getMessage());
+			e.printStackTrace();
+		}
+		return true;
+
+	}
+
 
 	public void updateProfileESStatus(List<String> ids)
 	{
@@ -226,8 +414,8 @@ public class CafeDocCountUpdate
 					try
 					{
 
-						sql = "update " + tableName + "set es_status = null where authorid in ( " + keys + ")";
-						System.out.println("Query: " + sql);
+						sql = "update " + tableName + " set es_status = null where authorid in ( " + keys + ")";
+						//System.out.println("Query: " + sql);
 						stmt = con.prepareStatement(sql);
 						result = stmt.executeUpdate();
 						System.out.println("updated batch of " + result + " " + doc_type + " profiles");
@@ -253,7 +441,7 @@ public class CafeDocCountUpdate
 
 				// update what is left of all ids to update es_status
 				sql = "update " + tableName + " set es_status = null where authorid in ( " + keys + ")";
-				System.out.println("Query: " + sql);
+				//System.out.println("Query: " + sql);
 				stmt = con.prepareStatement(sql);
 				result = stmt.executeUpdate();
 				System.out.println("updated batch of " + result + " " + doc_type + " profiles");
