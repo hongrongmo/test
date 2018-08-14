@@ -444,6 +444,9 @@ public class VTWAssetAPI {
 		/*patentIds.put("EP2831534A4", "");
 		patentIds.put("EP2670359B1", "");*/
 		
+		patentIds.put("WO2011149034A1", "");
+		
+		
 		
 		patentIds.put("US20090280091A1", "");
 		patentIds.put("US20130241553A1", "");
