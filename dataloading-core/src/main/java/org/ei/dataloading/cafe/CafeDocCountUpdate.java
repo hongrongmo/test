@@ -414,7 +414,7 @@ public class CafeDocCountUpdate
 					try
 					{
 
-						sql = "update " + tableName + " set es_status = null where authorid in ( " + keys + ")";
+						sql = "update " + tableName + " set es_status = null where " + column_name + " in ( " + keys + ")";
 						//System.out.println("Query: " + sql);
 						stmt = con.prepareStatement(sql);
 						result = stmt.executeUpdate();
@@ -440,7 +440,7 @@ public class CafeDocCountUpdate
 			{
 
 				// update what is left of all ids to update es_status
-				sql = "update " + tableName + " set es_status = null where authorid in ( " + keys + ")";
+				sql = "update " + tableName + " set es_status = null where " + column_name + " in ( " + keys + ")";
 				//System.out.println("Query: " + sql);
 				stmt = con.prepareStatement(sql);
 				result = stmt.executeUpdate();
