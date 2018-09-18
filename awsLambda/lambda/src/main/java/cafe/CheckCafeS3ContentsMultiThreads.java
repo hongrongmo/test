@@ -7,16 +7,21 @@ package cafe;
  * i just copied it over to awsLambda workspace to test check cafe ANI content in S3 bucket
  * on the "FLY" for checking files contains grant funding/openAccess with Multithreading 
  * as Girish suggested during meeting in NYC office 08/22/2018
+ * 
+ * filtering criteria provided by Hongrong as per today Tuesday 08/28/2018, week#: 201836]
+ * 
+ * If the grant funding information is from meta data, we should check element “(<xocs:funding>)”. 
+ * If the grant funding information is from old way, we should check element “<grantlist”.
+
  */
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.util.ArrayList;
@@ -32,16 +37,11 @@ import awslambda.AmazonS3Service;
 
 
 
-
-
-
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.model.GetObjectRequest;
 import com.amazonaws.services.s3.model.S3Object;
-import com.amazonaws.services.s3.transfer.Download;
-import com.amazonaws.services.s3.transfer.TransferManager;
 
 
 public class CheckCafeS3ContentsMultiThreads{
@@ -208,321 +208,344 @@ public class CheckCafeS3ContentsMultiThreads{
 	public void startDownloadThreads()
 	{
 		PrintWriter grantFunding = null, openAccess=null;
-		try
+		//try
+		//{
+		try 
 		{
 			grantFunding = new PrintWriter(System.getProperty("user.dir") + "/funding.txt");
 			openAccess = new PrintWriter(System.getProperty("user.dir") + "/oa.txt");
+		} 
+		catch (FileNotFoundException e1) 
+		{
+			e1.printStackTrace();
+		}
 
-			// download files from s3 bucket using thread (s)
-			if(keysList.size() >0)
+
+		// download files from s3 bucket using thread (s)
+		if(keysList.size() >0)
+		{
+			double listSize = keysList.size()/numOfThreads;
+			int subListSize = (int)listSize;
+			int start = 0;
+			int last = (subListSize -1);
+			CountDownLatch latch = new CountDownLatch(numOfThreads);
+
+
+			System.out.println("list size to download: " + keysList.size());
+
+			System.out.println("STARTING................." + new Date().getTime());
+
+			if(numOfThreads ==1)
+				last = subListSize -1;
+
+			for(int i=0;i<numOfThreads;i++)
 			{
-				double listSize = keysList.size()/numOfThreads;
-				int subListSize = (int)listSize;
-				int start = 0;
-				int last = (subListSize -1);
-				CountDownLatch latch = new CountDownLatch(numOfThreads);
 
-
-				System.out.println("list size to download: " + keysList.size());
-
-				System.out.println("STARTING................." + new Date().getTime());
-
-				if(numOfThreads ==1)
-					last = subListSize -1;
-
-				for(int i=0;i<numOfThreads;i++)
-				{
-
-					/*CheckCafeGrantAndOA obj = new CheckCafeGrantAndOA(bucketName,s3Client);
+				/*CheckCafeGrantAndOA obj = new CheckCafeGrantAndOA(bucketName,s3Client);
 					CheckS3FilesConetntsAndDownload thread = new CheckS3FilesConetntsAndDownload("Thread " + i,latch, start,last,obj);
-					 */
-					CheckS3FilesConetntsAndDownload thread = new CheckS3FilesConetntsAndDownload("Thread " + i,latch, start,last,bucketName,s3Client,
-							grantFunding,openAccess);
-					thread.start();
+				 */
+				CheckS3FilesConetntsAndDownload thread = new CheckS3FilesConetntsAndDownload("Thread " + i,latch, start,last,bucketName,s3Client,
+						grantFunding,openAccess);
+				thread.start();
 
-					//this ONLY if # of threads #2
-					if(numOfThreads >=2)
-					{
-						synchronized (thread) {
-							start = last + 1;
-							if(i<(numOfThreads-2))
-								last = start + (subListSize -1);
-							else
-								last = keysList.size() -1;
-
-							System.out.println("***********************");	
-						}
-					}
-
-				}
-
-				latch.await();
-
-				System.out.println("In Main thread after completion of " + numOfThreads + " threads");
-				System.out.println("FINISHED................." + new Date().getTime());
-			}
-		}
-		catch(Exception e)
-		{
-			e.printStackTrace();
-		}
-		finally
-		{
-			try
-			{
-				if(grantFunding !=null)
+				//this ONLY if # of threads #2
+				if(numOfThreads >=2)
 				{
-					grantFunding.flush();
-					grantFunding.close();
+					synchronized (thread) {
+						start = last + 1;
+						if(i<(numOfThreads-2))
+							last = start + (subListSize -1);
+						else
+							last = keysList.size() -1;
+
+						System.out.println("***********************");	
+					}
 				}
-			}
-			
-			catch(Exception e)
-			{
-				System.out.println("Problem closing grantFunding filewriter!!");
-				e.printStackTrace();
-			}
-		
-		try
-		{
-			if(openAccess !=null)
-			{
-				openAccess.flush();
-				openAccess.close();
+
 			}
 
-		}
-		catch(Exception e)
-		{
-			System.out.println("Problem closing openAccess filewriter!!");
-			e.printStackTrace();
-		}
-	}
-}
-
-
-class CheckS3FilesConetntsAndDownload implements Runnable
-{
-	private Thread th;
-	private String threadName = null;
-	private CountDownLatch latch;
-
-	int startIndex;
-	int lastIndex;
-
-	String bucketName;
-
-	PrintWriter grantFunding, openAccess;
-	String currDir, fundigDir, oaDir;
-
-	S3Object object;
-	InputStream objectData;
-	AmazonS3 s3Client;
-
-	public CheckS3FilesConetntsAndDownload (String name, CountDownLatch latch, int start, int last, String bucket, AmazonS3 s3Client,
-			PrintWriter grantFunding, PrintWriter openAccess)
-	{
-		threadName = name;
-		this.latch = latch;
-
-
-		startIndex = start;
-		lastIndex = last;
-
-		bucketName = bucket;
-
-		this.grantFunding = grantFunding;
-		this.openAccess = openAccess;
-
-		if(startIndex <-1 || lastIndex <-1)
-		{
-			System.out.println("invalid startIndex: " + startIndex + " or lastIndex: " + lastIndex + "!! exit...");
-			System.exit(1);
-		}
-
-		try
-		{
-			String currDir = System.getProperty("user.dir");
-			File file =new File (currDir);
-			if(!file.exists())
-				file.mkdir();
-			fundigDir = currDir + "/funding";
-			file =new File (fundigDir);
-			if(!file.exists())
-				file.mkdir();
-
-
-			oaDir = currDir + "/openAccess";
-			file =new File (oaDir);
-			if(!file.exists())
-				file.mkdir();
-
-
-
-			this.s3Client = s3Client;
-
-		}
-		catch(Exception e)
-		{
-			e.printStackTrace();
-		}
-
-	}
-
-
-	public void start()
-	{
-		if(th ==null)
-		{
 			try 
 			{
-				th = new Thread(this, threadName);
-				th.start();
+				latch.await();
+				System.out.println("In Main thread after completion of " + numOfThreads + " threads");
+				System.out.println("FINISHED................." + new Date().getTime());
 			} 
-			catch(Exception e)
+			catch (InterruptedException e) 
 			{
+
 				e.printStackTrace();
 			}
-		}
-	}
 
-
-	@Override
-	public void run() 
-	{	
-		try
-		{
-			for(int i=startIndex;i<=lastIndex;i++)
-			{
-				object = s3Client.getObject(new GetObjectRequest (bucketName, keysList.get(i)));
-				if(object !=null)
-				{
-					objectData = object.getObjectContent();
-
-					String fileContents = IOUtils.toString(objectData);
-					// only parse ANI S3 files contains Funding Info or OpenAccess, skip any other files
-
-					if(fileContents.contains("<xocs:funding-list") || fileContents.contains("<grantlist") ||
-							fileContents.contains("<xocs:open-access>"))
-					{	
-						// only 1 thread can write to files
-						synchronized(this)
-						{
-							if(fileContents.contains("<xocs:open-access>"))
-							{
-								openAccess.println(keysList.get(i));
-								currDir = oaDir;
-							}
-
-
-							if(fileContents.contains("<xocs:funding-list") || fileContents.contains("<grantlist"))
-							{
-								grantFunding.println(keysList.get(i));
-								currDir = fundigDir;
-
-							}
-							saveContentToFile(fileContents,currDir,keysList.get(i));
-
-						}
-
-					}
-					else
-					{
-						System.out.println("File: " + keysList.get(i) +" does not contain grant/openaccess info");
-					}
-
-				}
-				else
-				{
-					System.out.println("Key: " + key + " Not exist in specified bucket: " +  bucketName);
-				}
-
-			}
-
-			latch.countDown();
-
-		}
-
-		catch(IOException ex)
-		{
-			ex.printStackTrace();
-		}
-		catch(AmazonServiceException ase)
-		{
-			System.out.println("Caught an AmazonServiceException, which " +"means your request made it " +
-					"to Amazon S3, but was rejected with an error response" +
-					" for some reason.");
-			System.out.println("Error Message:    " + ase.getMessage());
-			System.out.println("HTTP Status Code: " + ase.getStatusCode());
-			System.out.println("AWS Error Code:   " + ase.getErrorCode());
-			System.out.println("Error Type:       " + ase.getErrorType());
-			System.out.println("Request ID:       " + ase.getRequestId());
-		}
-		catch(AmazonClientException ace)
-		{
-			System.out.println("Caught an AmazonClientException, which " +
-					"means the client encountered " +
-					"an internal error while trying to " +
-					"communicate with S3, " +
-					"such as not being able to access the network.");
-			System.out.println("Error Message: " + ace.getMessage());
-		} 
-		catch (Exception e) 
-		{
-
-			e.printStackTrace();
-		}
-
-
-		finally
-		{
-			if(objectData !=null)
+			finally
 			{
 				try
 				{
-					objectData.close();
+					if(grantFunding !=null)
+					{
+						System.out.println("Closing the Funding file");
+						grantFunding.flush();
+						grantFunding.close();
+					}
 				}
-				catch(IOException ioex)
+
+				catch(Exception e)
 				{
-					ioex.printStackTrace();
+					System.out.println("Problem closing grantFunding filewriter!!");
+					e.printStackTrace();
 				}
-			}
-		}
-	}
 
-	public void saveContentToFile (String objectData, String dir, String fileName) throws IOException
-	{
-		PrintWriter out = null;
-		try
-		{
-			// check contents & download the file
-			File file = new File(dir + "/" + fileName+".xml");
-			out = new PrintWriter(new BufferedWriter(new FileWriter(file.getAbsolutePath(),false)));
-			out.println(objectData.replaceAll("><", ">\n<"));
-		}
-
-		catch(Exception e)
-		{
-			System.out.println("Fialed to save contents of file" + filename);
-			System.out.println("Reason: " + e.getMessage());
-			e.printStackTrace();
-		}
-		finally
-		{
-			try
-			{
-				if(out !=null)
+				try
 				{
-					out.flush();
-					out.close();
+					if(openAccess !=null)
+					{
+						System.out.println("Closing the OA file");
+						openAccess.flush();
+						openAccess.close();
+					}
+
+				}
+				catch(Exception e)
+				{
+					System.out.println("Problem closing openAccess filewriter!!");
+					e.printStackTrace();
+				}
+			}
+		}
+
+	}
+		class CheckS3FilesConetntsAndDownload implements Runnable
+		{
+			private Thread th;
+			private String threadName = null;
+			private CountDownLatch latch;
+
+			int startIndex;
+			int lastIndex;
+
+			String bucketName;
+
+			PrintWriter grantFunding, openAccess;
+			String currDir, fundigDir, oaDir;
+
+			S3Object object = null;
+			InputStream objectData = null;
+			AmazonS3 s3Client = null;
+
+			public CheckS3FilesConetntsAndDownload (String name, CountDownLatch latch, int start, int last, String bucket, AmazonS3 s3Client,
+					PrintWriter grantFunding, PrintWriter openAccess)
+			{
+				threadName = name;
+				this.latch = latch;
+
+
+				startIndex = start;
+				lastIndex = last;
+
+				bucketName = bucket;
+
+				this.grantFunding = grantFunding;
+				this.openAccess = openAccess;
+
+				if(startIndex <-1 || lastIndex <-1)
+				{
+					System.out.println("invalid startIndex: " + startIndex + " or lastIndex: " + lastIndex + "!! exit...");
+					System.exit(1);
+				}
+
+				try
+				{
+					String currDir = System.getProperty("user.dir");
+					File file =new File (currDir);
+					if(!file.exists())
+						file.mkdir();
+					fundigDir = currDir + "/funding";
+					file =new File (fundigDir);
+					if(!file.exists())
+						file.mkdir();
+
+
+					oaDir = currDir + "/openAccess";
+					file =new File (oaDir);
+					if(!file.exists())
+						file.mkdir();
+
+
+
+					this.s3Client = s3Client;
+
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+
+			}
+
+
+			public void start()
+			{
+				if(th ==null)
+				{
+					try 
+					{
+						th = new Thread(this, threadName);
+						th.start();
+					} 
+					catch(Exception e)
+					{
+						e.printStackTrace();
+					}
 				}
 			}
 
-			catch(Exception ioex)
-			{
-				ioex.printStackTrace();
-			}
-		}
-	}
 
-}}
+			@Override
+			public void run() 
+			{	
+				String key = null;
+
+				for(int i=startIndex;i<=lastIndex;i++)
+				{
+					try
+					{
+						key = keysList.get(i);
+						object = s3Client.getObject(new GetObjectRequest (bucketName, keysList.get(i)));
+						if(object !=null)
+						{
+							objectData = object.getObjectContent();
+
+							String fileContents = IOUtils.toString(objectData);
+							// only parse ANI S3 files contains Funding Info or OpenAccess, skip any other files
+
+							if(fileContents.contains("<xocs:funding>") || fileContents.contains("<grantlist") ||
+									fileContents.contains("<xocs:open-access>"))
+							{	
+								// only 1 thread can write to files
+								synchronized(this)
+								{
+									if(fileContents.contains("<xocs:open-access>"))
+									{
+										openAccess.println(keysList.get(i));
+										currDir = oaDir;
+									}
+
+
+									if(fileContents.contains("<xocs:funding>") || fileContents.contains("<grantlist"))
+									{
+										grantFunding.println(keysList.get(i));
+										currDir = fundigDir;
+
+									}
+									saveContentToFile(fileContents,currDir,keysList.get(i));
+
+								}
+
+							}
+							else
+							{
+								//only for debugging
+								//System.out.println("File: " + keysList.get(i) +" does not contain grant/openaccess info threadName: " + threadName);
+							}
+
+						}
+						else
+						{
+
+							System.out.println("Key: " + key + " Not exist in specified bucket: " +  bucketName);
+						}
+
+					}
+					catch(IOException ex)
+					{
+						ex.printStackTrace();
+					}
+					catch(AmazonServiceException ase)
+					{
+						System.out.println("Caught an AmazonServiceException, which " +"means your request made it " +
+								"to Amazon S3, but was rejected with an error response" +
+								" for some reason.");
+						System.out.println("Error Message:    " + ase.getMessage());
+						System.out.println("HTTP Status Code: " + ase.getStatusCode());
+						System.out.println("AWS Error Code:   " + ase.getErrorCode());
+						System.out.println("Error Type:       " + ase.getErrorType());
+						System.out.println("Request ID:       " + ase.getRequestId());
+
+						System.out.println("Key:    " + key + " , thread: " + threadName);
+
+					}
+					catch(AmazonClientException ace)
+					{
+						System.out.println("Caught an AmazonClientException, which " +
+								"means the client encountered " +
+								"an internal error while trying to " +
+								"communicate with S3, " +
+								"such as not being able to access the network.");
+						System.out.println("Error Message: " + ace.getMessage());
+						System.out.println("Key:    " + key + " , thread: " + threadName);
+
+					} 
+					catch (Exception e) 
+					{
+						System.out.println("Thread: " + threadName + " having issue!!!!");
+						System.out.println("Error Message: " + e.getMessage());
+						e.printStackTrace();
+					}
+
+
+					finally
+					{
+						if(objectData !=null)
+						{
+							try
+							{
+								objectData.close();
+							}
+							catch(IOException ioex)
+							{
+								ioex.printStackTrace();
+							}
+						}
+					}
+					
+				}
+
+				latch.countDown();
+
+			}
+
+			public void saveContentToFile (String objectData, String dir, String fileName) throws IOException
+			{
+				PrintWriter out = null;
+				try
+				{
+					// check contents & download the file
+					File file = new File(dir + "/" + fileName+".xml");
+					out = new PrintWriter(new BufferedWriter(new FileWriter(file.getAbsolutePath(),false)));
+					out.println(objectData.replaceAll("><", ">\n<"));
+				}
+
+				catch(Exception e)
+				{
+					System.out.println("Fialed to save contents of file" + filename);
+					System.out.println("Reason: " + e.getMessage());
+					e.printStackTrace();
+				}
+				finally
+				{
+					try
+					{
+						if(out !=null)
+						{
+							out.flush();
+							out.close();
+						}
+					}
+
+					catch(Exception ioex)
+					{
+						ioex.printStackTrace();
+					}
+				}
+			}
+
+		}}

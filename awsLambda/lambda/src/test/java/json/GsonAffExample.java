@@ -1,19 +1,12 @@
 package json;
 import org.codehaus.jackson.map.ObjectMapper;
 
-import com.fasterxml.jackson.databind.SerializationFeature;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonObject;
-
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.io.StringWriter;
-import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -26,18 +19,13 @@ import java.util.Map;
 import java.util.regex.Pattern;
 
 import javax.json.Json;
-import javax.json.JsonArray;
-import javax.json.JsonArrayBuilder;
 import javax.json.JsonBuilderFactory;
-import javax.json.JsonWriter;
-import javax.json.stream.JsonGenerator;
-
-import org.ei.common.Constants;
-import org.ei.dataloading.cafe.AuAfCombinedRec;
 
 
 public class GsonAffExample
 {
+	public static final String IDDELIMITER = new String(new char[] {31});
+	
 	static String doc_type;
 	static String url = "jdbc:oracle:thin:@localhost:1521:eid";    //for localhost
 	static String driver = "oracle.jdbc.driver.OracleDriver";
@@ -326,7 +314,7 @@ public class GsonAffExample
 
 		if(str !=null && !(str.isEmpty()))
 		{
-			String[] values = str.split(Constants.IDDELIMITER);
+			String[] values = str.split(IDDELIMITER);
 			for(int i=0;i<values.length;i++)
 			{
 				valuesList.add(values[i]);

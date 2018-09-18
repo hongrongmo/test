@@ -34,8 +34,6 @@ import org.ei.dataloading.DataLoadDictionary;
  */
 public class InstitutionCombiner{
 
-
-
 	public String[] AfCombinedRecKeys = {AuAfCombinedRec.DOCID, AuAfCombinedRec.EID, AuAfCombinedRec.STATUS, AuAfCombinedRec.AFID, 
 			AuAfCombinedRec.AFFILIATION_PREFERRED_NAME, AuAfCombinedRec.AFFILIATION_SORT_NAME, AuAfCombinedRec.AFFILIATION_VARIANT_NAME, 
 			AuAfCombinedRec.ADDRESS, AuAfCombinedRec.CITY, AuAfCombinedRec.STATE, AuAfCombinedRec.ZIP, AuAfCombinedRec.COUNTRY};
@@ -393,18 +391,18 @@ public class InstitutionCombiner{
 
 
 				//HH added 05/07/2018 explicitly add all author_profile columns to join with au doc counts table for ES index as per TM request
-				query = "select a.M_ID,a.EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AFFID,a.STATUS,a.DATE_CREATED,a.DATE_REVISED,a.PREFERED_NAME,a.SORT_NAME,a.NAME_VARIANT,a.ADDRESS_PART,a.CITY,a.STATE,a.POSTAL_CODE,"+
+				/*query = "select a.M_ID,a.EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AFFID,a.STATUS,a.DATE_CREATED,a.DATE_REVISED,a.PREFERED_NAME,a.SORT_NAME,a.NAME_VARIANT,a.ADDRESS_PART,a.CITY,a.STATE,a.POSTAL_CODE,"+
 						"a.COUNTRY,a.CERTAINTY_SCORES,a.LOADNUMBER,a.DATABASE,a.QUALITY,a.UPDATENUMBER,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,a.ES_STATUS,a.PARENTID,a.PARENT_PREFERED_NAME, b.DOC_COUNT as DOC_COUNT from "+
 						tableName + " a left outer join " + afDocCount_tableName + " b on a.AFFID = b.AFFID where a.ES_STATUS is null and "+
 						"a.affid in (select INSTITUTE_ID from " + metadataTableName + " where STATUS='matched') and a.PARENTID is null";
-
+*/
 
 				// for IPR Re-index with doc_count using loadnumber
-				/*query = "select a.M_ID,a.EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AFFID,a.STATUS,a.DATE_CREATED,a.DATE_REVISED,a.PREFERED_NAME,a.SORT_NAME,a.NAME_VARIANT,a.ADDRESS_PART,a.CITY,a.STATE,a.POSTAL_CODE,"+
+				query = "select a.M_ID,a.EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AFFID,a.STATUS,a.DATE_CREATED,a.DATE_REVISED,a.PREFERED_NAME,a.SORT_NAME,a.NAME_VARIANT,a.ADDRESS_PART,a.CITY,a.STATE,a.POSTAL_CODE,"+
 						"a.COUNTRY,a.CERTAINTY_SCORES,a.LOADNUMBER,a.DATABASE,a.QUALITY,a.UPDATENUMBER,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,a.ES_STATUS,a.PARENTID,a.PARENT_PREFERED_NAME, b.DOC_COUNT as DOC_COUNT from "+
 						tableName + " a left outer join " + afDocCount_tableName + " b on a.AFFID = b.AFFID where a.updatenumber = " + updateNumber + " and "+
 						"a.affid in (select INSTITUTE_ID from " + metadataTableName + " where STATUS='matched') and a.PARENTID is null";
-*/
+
 
 				//Testing
 				/*query = "select a.M_ID,a.EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AFFID,a.STATUS,a.DATE_CREATED,a.DATE_REVISED,a.PREFERED_NAME,a.SORT_NAME,a.NAME_VARIANT,a.ADDRESS_PART,a.CITY,a.STATE,a.POSTAL_CODE,"+
