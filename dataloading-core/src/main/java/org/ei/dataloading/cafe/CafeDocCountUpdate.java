@@ -1,5 +1,9 @@
 package org.ei.dataloading.cafe;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -34,17 +38,18 @@ public class CafeDocCountUpdate
 	static String temp_table;
 	static String count_table;
 	static String action = "delete";
+	static String sqlldrFileName = "doccountupdate.sh";
 	static int recsPerEsbulk;
 	static String esDomain = "search-evcafe5-ucqg6c7jnb4qbvppj2nee4muwi.us-east-1.es.amazonaws.com";
 	static String esIndexName;		// added 05/10/2018 as ES 6.2 and up split types in separate indices
-	
+
 
 
 	static String[] tables;		// make sure temp table first then prod table
 	static String profileTable;
-	
+
 	AusAffESIndex esIndexObj = null;
-	
+
 	String tableName;
 	String column_name;
 	Connection con;
@@ -53,8 +58,11 @@ public class CafeDocCountUpdate
 	List<String> profileid_List = new ArrayList<String>();
 	List<String> deleted_Profileid_List = new ArrayList<String>();
 	List<String> MID_deletion_list;
-	
-	
+
+	String docCountFileName;
+	PrintWriter out;
+	String updateddocCount_tempTable;
+
 
 	public static void main(String[] args) 
 	{
@@ -106,7 +114,7 @@ public class CafeDocCountUpdate
 				password = args[6];
 				System.out.println("password= " + password);
 			}
-			
+
 			if(args[7] !=null)
 			{
 				action = args[7];
@@ -114,9 +122,14 @@ public class CafeDocCountUpdate
 			}
 			if(args[8] !=null)
 			{
+				sqlldrFileName = args[8];
+				System.out.println("using sqlloaderfile " + sqlldrFileName);
+			}
+			if(args[9] !=null)
+			{
 				try
 				{
-					recsPerEsbulk = Integer.parseInt(args[8]);
+					recsPerEsbulk = Integer.parseInt(args[9]);
 
 					System.out.println("ES Documents per Bulk: " + recsPerEsbulk);
 				}
@@ -125,16 +138,16 @@ public class CafeDocCountUpdate
 					recsPerEsbulk = 10;
 				}
 			}
-			if(args[9] !=null)
+			if(args[10] !=null)
 			{
-				esDomain = args[9];
+				esDomain = args[10];
 
 				System.out.println("ES Domain name: " + esDomain);
 			}
-			
-			if(args[10] !=null)
+
+			if(args[11] !=null)
 			{
-				esIndexName = args[10];
+				esIndexName = args[11];
 				if(esIndexName.equalsIgnoreCase("author") || esIndexName.equalsIgnoreCase("affiliation") || esIndexName.equalsIgnoreCase("cafe"))
 
 					System.out.println("ES Index Name: " + esIndexName);
@@ -154,15 +167,15 @@ public class CafeDocCountUpdate
 
 		CafeDocCountUpdate obj = new CafeDocCountUpdate();
 		obj.esIndexObj = new AusAffESIndex(recsPerEsbulk, esDomain, action, esIndexName);
-		
-		
+
+
 		obj.init();
 		obj.getProfileIds();
-		
+
 		// delete ids that were in Prod and not in temp from ES
 		if(obj.deleted_Profileid_List.size() >0)
-		obj.deleteProfile();
-				
+			obj.deleteProfile();
+
 		// update es_status of affected profile ids to null to be re-indexed to ES with new count
 		obj.updateProfileESStatus(obj.profileid_List);
 
@@ -170,15 +183,36 @@ public class CafeDocCountUpdate
 
 	public void init()
 	{
+
 		if(doc_type.equalsIgnoreCase("apr"))
 		{
 			column_name = "AUTHORID";
 			tableName = "author_profile";
+			updateddocCount_tempTable = "UPDATED_AUTHOR_COUNT";
+			docCountFileName = "aprUpdatedDocCount.out";
 		}
 		else if(doc_type.equalsIgnoreCase("ipr"))
 		{
 			column_name = "AFFID";
 			tableName = "institute_profile";
+			updateddocCount_tempTable = "UPDATED_INSTITUTE_COUNT";
+			docCountFileName = "iprUpdatedDocCount.out";
+		}
+
+		//create outfile to hold off AUIDS/AFIDS with changed doc_count in order to update profile table's es_status to "null"
+		try
+		{
+			out = new PrintWriter(new File(docCountFileName));
+		}
+		catch(FileNotFoundException ex)
+		{
+			System.out.println("Failed to create profile Ids doc_count out file!!!!");
+			System.out.println("Reason: " + ex.getMessage());
+			ex.printStackTrace();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
 		}
 
 	}
@@ -190,14 +224,14 @@ public class CafeDocCountUpdate
 
 		try
 		{
-			
+
 			// ONLY for testing
 			/*query = "select * from (select " + column_name + "||','||doc_count as id_count from " + temp_table + " minus " +
 					"select " + column_name + "||','||doc_count as id_count from " + count_table + " union all " +
 					"select " + column_name + "||',' as id_count from " + count_table + " where " + column_name + 
 					" not in (select " + column_name + " from " + temp_table + ")) where rownum<7";
-			*/
-			
+			 */
+
 			query = "select " + column_name + "||','||doc_count as id_count from " + temp_table + " minus " +
 					"select " + column_name + "||','||doc_count as id_count from " + count_table + " union all " +
 					"select " + column_name + "||',' as id_count from " + count_table + " where " + column_name + 
@@ -221,6 +255,7 @@ public class CafeDocCountUpdate
 						if(id_count_pair.length == 1)
 							deleted_Profileid_List.add(id_count_pair[0]);
 						profileid_List.add(id_count_pair[0]);
+						out.println(id_count_pair[0]);
 					}
 				}
 			}
@@ -264,10 +299,22 @@ public class CafeDocCountUpdate
 					e.printStackTrace();
 				}
 			}
+			if(out != null)
+			{
+				try
+				{
+					out.flush();
+					out.close();
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
 		}
 
 	}
-	
+
 	public void getMidToBeDeleted(String profileIds)
 	{
 		Statement stmt = null;
@@ -388,101 +435,127 @@ public class CafeDocCountUpdate
 
 	public void updateProfileESStatus(List<String> ids)
 	{
-		StringBuffer keys = new StringBuffer();
 		PreparedStatement stmt = null;
 		String sql;
 
-		int count =0;
 		int result;
 
-		if(con != null)
+		try
 		{
 
+			/* using for loop caused "ORA-01000: maximum open cursors exceeded" wnen # of APR records to update was 6k+ so have to load to 
+						table instead
 
-			for(int i=0; i<ids.size();i++)
+			 */
+			/************** load data into temp table ****************/
+			System.out.println("about to load updated Doc_Count's IDS to temp table");
+
+			Runtime r = Runtime.getRuntime();
+			Process p = r.exec("./"+ sqlldrFileName + " " + docCountFileName);
+			int t = p.waitFor();
+
+			//the value 0 indicates normal termination.
+			System.out.println(doc_type + "Sqlldr process complete with exit status: " + t);
+
+			int tempTableCount = getTempTableCount(updateddocCount_tempTable);
+			System.out.println(tempTableCount+" records was loaded into the " + updateddocCount_tempTable + "  table");
+
+
+			sql = "update " + tableName + " set es_status = null where " + column_name + " in (select column_name from updateddocCount_tempTable)";
+			System.out.println("Query: " + sql);
+			if(con != null)
 			{
-				if(count<999)
-				{
-					if(keys.length() >0)
-						keys.append(",");
-					keys.append("'" + ids.get(i) + "'");
-					count ++;
-				}
-				else
-				{
-
-					try
-					{
-
-						sql = "update " + tableName + " set es_status = null where " + column_name + " in ( " + keys + ")";
-						//System.out.println("Query: " + sql);
-						stmt = con.prepareStatement(sql);
-						result = stmt.executeUpdate();
-						System.out.println("updated batch of " + result + " " + doc_type + " profiles");
-						count = 0;
-						keys.delete(0, keys.length());
-
-					}
-					catch(SQLException ex)
-					{
-						System.out.println("Error updating profile's es_status!! " + ex.getMessage());
-						ex.printStackTrace();
-					}
-					catch(Exception e)
-					{
-						System.out.println("Error updating profile's es_status!! " + e.getMessage());
-						e.printStackTrace();
-					}
-				}
-			}
-
-			try
-			{
-
-				// update what is left of all ids to update es_status
-				sql = "update " + tableName + " set es_status = null where " + column_name + " in ( " + keys + ")";
-				//System.out.println("Query: " + sql);
 				stmt = con.prepareStatement(sql);
 				result = stmt.executeUpdate();
+				con.commit();
 				System.out.println("updated batch of " + result + " " + doc_type + " profiles");
 			}
-			catch(SQLException ex)
-			{
-				System.out.println("Error updating profile's es_status!! " + ex.getMessage());
-				ex.printStackTrace();
-			}
-			catch(Exception e)
-			{
-				System.out.println("Error updating profile's es_status!! " + e.getMessage());
-				e.printStackTrace();
-			}
+		}
+		catch(SQLException ex)
+		{
+			System.out.println("Error updating profile's es_status!! " + ex.getMessage());
+			ex.printStackTrace();
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error updating profile's es_status!! " + e.getMessage());
+			e.printStackTrace();
+		}
 
-			finally
+		finally
+		{
+			if(stmt !=null)
 			{
-				if(stmt !=null)
+				try
 				{
-					try
-					{
-						stmt.close();
-					}
-					catch(Exception e)
-					{
-						e.printStackTrace();
-					}
+					stmt.close();
 				}
-				if(con != null)
+				catch(Exception e)
 				{
-					try
-					{
-						con.close();
-					}
-					catch(Exception e)
-					{
-						e.printStackTrace();
-					}
+					e.printStackTrace();
+				}
+			}
+			if(con != null)
+			{
+				try
+				{
+					con.close();
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
 				}
 			}
 		}
+	}
+
+	private int getTempTableCount(String tempTable)
+	{
+		Statement stmt = null;
+		ResultSet rs = null;
+		int count = 0;
+
+		try
+		{
+			stmt = con.createStatement();
+
+			rs = stmt.executeQuery("select count(*) count from " + tempTable + "");
+			if(rs.next())
+			{
+				count = rs.getInt("count");
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if(rs !=null)
+			{
+				try
+				{
+					rs.close();
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+			if(stmt !=null)
+			{
+				try
+				{
+					stmt.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+		}
+
+		return count;
 
 	}
 

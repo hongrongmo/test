@@ -391,11 +391,14 @@ public class ArchiveVTWPatentRefeed implements Runnable{
 								{
 									recordBuf.append(obj.getMessageField("patentid"));
 
-									// only download Patent of type EP/US
+									// on Monday 08/20/2018, start to download "CN, JP and KR" in addition to Patent of type EP/US/WO
 
 									if(obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("US") || 
 											obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("EP") ||
-											obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("WO"))
+											obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("WO")||
+											obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("CN")||
+											obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("JP")||
+											obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("KR"))
 										patentIds.put(obj.getMessageField("patentid"), "");
 
 									else

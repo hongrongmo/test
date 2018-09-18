@@ -53,7 +53,8 @@ https://vtw.elsevier.com/asset/pat/<VTW patent id>?type=MAIN&fmt=application/xml
  */
 public class VTWAssetAPI {
 
-	private static final String HOST = "acc.vtw.elsevier.com";   // VTW UAT Testing  
+	//private static final String HOST = "acc.vtw.elsevier.com";   // VTW UAT Testing  that seems to be changed when testing CN,JP,KR in UAT
+	private static final String HOST = "uatnp.vtw-np.elsevier.com";
 	//private static final String HOST = "vtw.elsevier.com";     // VTW Prod
 	
 	private static final String ENDPOINT_ROOT = "https://" + HOST;
