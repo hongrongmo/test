@@ -221,6 +221,36 @@ public class BdParser
 					//System.out.println("EID1="+eid);
 					
 					Element fundingList = cpxRoot.getChild("funding-list",xocsNamespace);					
+					Element openAccess = cpxRoot.getChild("open-access",xocsNamespace);
+					
+					if(openAccess!=null)
+					{
+						
+						if(openAccess.getChild("oa-access-effective-date",xocsNamespace)!=null)
+						{
+							String oaAcessEffectiveDate = openAccess.getChildText("oa-access-effective-date",xocsNamespace);
+							record.put("OAACCESSDATE",oaAcessEffectiveDate);
+							//System.out.println("oaAcessEffectiveDate="+oaAcessEffectiveDate);
+						}
+						
+						if(openAccess.getChild("oa-user-license",xocsNamespace)!=null)
+						{
+							String oaUserLicense = openAccess.getChildText("oa-user-license",xocsNamespace);
+							record.put("OAUSERLICENSE",oaUserLicense);
+							//System.out.println("oaUserLicense="+oaUserLicense);
+						}
+						
+						if(openAccess.getChild("oa-article-status",xocsNamespace)!=null)
+						{
+							Element oaArticleStatus = openAccess.getChild("oa-article-status",xocsNamespace);
+							String isOpenAccess = oaArticleStatus.getAttributeValue("is-open-access");
+							record.put("ISOPENACESS",isOpenAccess);
+							//System.out.println("isOpenAccess="+isOpenAccess);
+						}
+						
+					}
+					
+					
 					
 					Element indexeddate = item.getChild("indexeddate",xocsNamespace);
 					if(indexeddate !=null)
@@ -511,7 +541,8 @@ public class BdParser
 												System.out.println("6 "+dictionary.mapEntity(getMixData(cittextelm.getContent())));
 											}
 											*/
-											cittext.append(dictionary.mapEntity(getMixData(cittextelm.getContent())));
+											//cittext.append(dictionary.mapEntity(getMixData(cittextelm.getContent())));
+											cittext.append(getMixData(cittextelm.getContent()));
 										}
 										cittext.append(Constants.IDDELIMITER);
 										if(cittextelm.getAttribute("original")!=null)
@@ -1361,9 +1392,12 @@ public class BdParser
 							if(refTitletextElement!=null)
 							{
 								String  refTitletext = refTitletextElement.getTextTrim();
+								//System.out.println("REFTITLE="+refTitletext);
 								if(	refTitletext!=null)
 								{
-									referenceTitleBuffer.append(dictionary.mapEntity(refTitletext));
+									//change to deal with non-roman characters @08/10/2018
+									//referenceTitleBuffer.append(dictionary.mapEntity(refTitletext));
+									referenceTitleBuffer.append(refTitletext);
 								}
 								if(j<refTitletextList.size()-1)
 								{
@@ -1401,7 +1435,9 @@ public class BdParser
 					if(	refSourceTitle !=null)
 					{
 						String  refSourceTitleText = refSourceTitle.getTextTrim();
-						referenceSourcetitle.put(referenceID,dictionary.mapEntity(refSourceTitleText));
+						//change to deal with non-roman characters @08/10/2018
+						//referenceSourcetitle.put(referenceID,dictionary.mapEntity(refSourceTitleText));
+						referenceSourcetitle.put(referenceID,refSourceTitleText);
 					}
 
 					//ref-publicationyear
@@ -1475,8 +1511,14 @@ public class BdParser
 					{
 
 						String  refTextValue = refText.getTextTrim();
-						referenceText.put(referenceID,dictionary.mapEntity(refTextValue));
-						//System.out.println("refTextValue::"+refTextValue);
+						//System.out.println("refTextValue1::"+refTextValue);
+						//change to deal with non-roman characters @08/10/2018
+						//referenceText.put(referenceID,dictionary.mapEntity(refTextValue));
+						referenceText.put(referenceID,trimStringToLength(refTextValue,3000));
+						if(refTextValue.length()>3000)
+						{
+							System.out.println("record "+getAccessNumber()+" ref-text oversize::"+refTextValue.length());
+						}
 					}
 
 					//refd-itemidlist
@@ -1498,8 +1540,14 @@ public class BdParser
 					if(refFullText!=null)
 					{
 						String  refFullTextValue = refFullText.getTextTrim();
-						referenceText.put(referenceID,dictionary.mapEntity(refFullTextValue));
-						//System.out.println("ref-fulltext::"+refFullTextValue);
+						//System.out.println("ref-fulltext1::"+refFullTextValue);
+						//change to deal with non-roman characters @08/10/2018
+						//referenceText.put(referenceID,dictionary.mapEntity(refFullTextValue));
+						referenceFullText.put(referenceID,trimStringToLength(refFullTextValue,3000));
+						if(refFullTextValue.length()>3000)
+						{
+							System.out.println("record "+getAccessNumber()+" ref-fulltext oversize::"+refFullTextValue.length());
+						}
 					}
 
 					//refd-itemcitation
@@ -1575,7 +1623,9 @@ public class BdParser
 						if(refdItemcitation.getChild("sourcetitle",noNamespace)!=null)
 						{
 							Element sourcetitle = (Element)refdItemcitation.getChild("sourcetitle",noNamespace);
-							referenceItemcitationSourcetitle.put(referenceID,dictionary.mapEntity(sourcetitle.getTextTrim()));
+							//change to deal with non-roman characters @08/10/2018
+							//referenceItemcitationSourcetitle.put(referenceID,dictionary.mapEntity(sourcetitle.getTextTrim()));
+							referenceItemcitationSourcetitle.put(referenceID,sourcetitle.getTextTrim());
 							//System.out.println("REFERENCE CITATION SOURCETITLE "+sourcetitle.getTextTrim());
 						}
 
@@ -1583,7 +1633,9 @@ public class BdParser
 						if(refdItemcitation.getChild("sourcetitle-abbrev",noNamespace)!=null)
 						{
 							Element sourcetitleAbbrev = (Element)refdItemcitation.getChild("sourcetitle-abbrev",noNamespace);
-							referenceItemcitationSourcetitle_abbrev.put(referenceID,dictionary.mapEntity(sourcetitleAbbrev.getTextTrim()));
+							//change to deal with non-roman characters @08/10/2018
+							//referenceItemcitationSourcetitle_abbrev.put(referenceID,dictionary.mapEntity(sourcetitleAbbrev.getTextTrim()));
+							referenceItemcitationSourcetitle_abbrev.put(referenceID,sourcetitleAbbrev.getTextTrim());
 							//System.out.println("REFERENCE CITATION SOURCETITLE ABBREV "+sourcetitleAbbrev.getTextTrim());
 						}
 
@@ -1716,7 +1768,9 @@ public class BdParser
 						Element citationRefText = (Element) refdItemcitation.getChild("ref-text",noNamespace);
 						if(citationRefText!=null)
 						{
-							referenceItemcitationRefText.put(referenceID,dictionary.mapEntity(citationRefText.getTextTrim()));
+							//change to deal with non-roman characters @08/10/2018
+							//referenceItemcitationRefText.put(referenceID,dictionary.mapEntity(citationRefText.getTextTrim()));
+							referenceItemcitationRefText.put(referenceID,citationRefText.getTextTrim());
 							//System.out.println("REFERENCE CITATION REF-TEXT::"+citationRefText.getTextTrim());
 						}
 
@@ -4514,6 +4568,22 @@ public class BdParser
 		StringBuffer b = new StringBuffer();
 		StringBuffer result = getMixData(l,b);
 		return result.toString();
+    }
+    
+    private String trimStringToLength(String inputString,int StringSize)
+    {
+    	String outputString="";
+    	if(inputString!=null && inputString.length()>StringSize)
+    	{
+    		outputString = inputString.substring(0,StringSize);
+    		outputString = outputString.substring(0,outputString.lastIndexOf(" "));
+    	}
+    	else
+    	{
+    		return inputString;
+    	}
+    	
+    	return outputString;
     }
     
     
