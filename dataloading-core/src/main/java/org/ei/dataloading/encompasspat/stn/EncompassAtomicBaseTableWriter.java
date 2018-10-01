@@ -11,6 +11,7 @@ import java.util.*;
 
 import org.apache.oro.text.perl.Perl5Util;
 import org.ei.common.CVSTermBuilder;
+
 import java.sql.*;
 import java.util.*;
 
@@ -63,7 +64,7 @@ public class EncompassAtomicBaseTableWriter {
 			}
 
 			if (sbValue != null) {
-				sVal = sbValue.toString();
+				sVal = checkInvChar(sbValue.toString());				
 			}
 			else {
 				sVal = fixField(fieldName);
@@ -74,37 +75,37 @@ public class EncompassAtomicBaseTableWriter {
 				accessnumber=sVal;
 			}
 
-			if(fieldName.equals("CT") && sVal.length()>3999)
+			if(fieldName.equals("CT") && sVal.length()>3950)
+			{				
+				sVal = trimExtraLength(sVal);
+			}
+			
+			if(fieldName.equals("DS") && sVal.length()>3950)
 			{
 				sVal = trimExtraLength(sVal);
 			}
 			
-			if(fieldName.equals("DS") && sVal.length()>3999)
+			if(fieldName.equals("ALC") && sVal.length()>3950)
 			{
 				sVal = trimExtraLength(sVal);
 			}
 			
-			if(fieldName.equals("ALC") && sVal.length()>3999)
+			if(fieldName.equals("APC") && sVal.length()>3950)
 			{
 				sVal = trimExtraLength(sVal);
 			}
 			
-			if(fieldName.equals("APC") && sVal.length()>3999)
+			if(fieldName.equals("AMS") && sVal.length()>3950)
 			{
 				sVal = trimExtraLength(sVal);
 			}
 			
-			if(fieldName.equals("AMS") && sVal.length()>3999)
+			if(fieldName.equals("AT") && sVal.length()>3950)
 			{
 				sVal = trimExtraLength(sVal);
 			}
 			
-			if(fieldName.equals("AT") && sVal.length()>3999)
-			{
-				sVal = trimExtraLength(sVal);
-			}
-			
-			if(fieldName.equals("UT") && sVal.length()>3999)
+			if(fieldName.equals("UT") && sVal.length()>3950)
 			{
 				sVal = trimExtraLength(sVal);
 			}
@@ -134,6 +135,7 @@ public class EncompassAtomicBaseTableWriter {
 			if (perl.match("/\\s{2,}/i", result)) {
 				result = perl.substitute("s/\\s{2,}/" + sp + "/ig", result);
 			}
+						
 			result = result.trim().concat("\t");
 
 			out.write(result);
@@ -144,22 +146,46 @@ public class EncompassAtomicBaseTableWriter {
 
 			if (sbValue != null && sbValue.length() > 0) {
 				StringBuffer terms = addTerms(sbValue);
-				String termsString = terms.toString();
-				if(termsString.length()>3999)
+				String termsString = terms.toString();				
+				
+				if(termsString.length()>3950)
 				{
 					 System.out.println("CT field is oversize "+termsString.length()+" for accessnumber "+accessnumber);
 					 termsString = trimExtraLength(termsString);
 				}
+								
 				out.write(termsString);
+				
 			}
 		}
 		out.write("\n");
 	}
+	
+	public String checkInvChar(String line) {
+
+		StringBuffer buffer = new StringBuffer();
+		char[] sChar = line.toCharArray();
+		int i = 0;
+		for (int j = 0; j < sChar.length; j++) {
+			i = (int) sChar[j];
+			if (i <32 || i>126) {
+				if(i!=9)
+				System.out.println("INVCHAR="+i+" found");
+			}
+			else
+			{
+				buffer.append(sChar[j]);
+			}
+		}
+
+		return buffer.toString();
+	} 
+	
 
 	private String trimExtraLength(String input)
 	{
 
-		input = input.substring(0,3990);
+		input = input.substring(0,3950);
 		int cutOffPosition = input.lastIndexOf(";");
 
 
