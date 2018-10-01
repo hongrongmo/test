@@ -9,16 +9,21 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.StringTokenizer;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.ei.common.bd.*;
 import org.ei.common.Constants;
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
+
 import javax.json.Json;
 import javax.json.JsonArray;
 import javax.json.JsonObject;
 import javax.json.JsonArrayBuilder;
 import javax.json.JsonObjectBuilder;
+
 import com.google.gson.JsonParser;
 import com.google.gson.JsonElement;
 import com.google.gson.GsonBuilder;
@@ -61,10 +66,10 @@ public class BuildBDDataInJsonFormat
 		{
 			bjson.loadnumber = Integer.parseInt(args[0]);
 		}
-		bjson.getDataFromBDMASTER(bjson.loadnumber,database);
+		bjson.getDataFromDatabase(bjson.loadnumber,database);
 	}
 	
-	private void getDataFromBDMASTER(int loadnumber,String dbname) throws Exception
+	private void getDataFromDatabase(int loadnumber,String dbname) throws Exception
     {      
         Connection con = null;
         Statement stmt = null;
@@ -83,21 +88,50 @@ public class BuildBDDataInJsonFormat
             System.out.println("loadnumber= "+loadnumber+" dbname= "+dbname);
             System.out.println("Running the query...");
             String sqlQuery = null;
-           
-        	if(loadnumber!=1)
-        	{
-        		sqlQuery="select DOI,PII,PUI,ISSN,EISSN,ISBN,CITTYPE,ARTICLENUMBER,PAGE,PAGECOUNT,VOLUME,ISSUE,PUBLICATIONYEAR,CITATIONTITLE,ABSTRACTDATA,AUTHOR,AUTHOR_1,DATABASE FROM BD_MASTER WHERE LOADNUMBER="+loadnumber+" and DATABASE='"+dbname+"'";
-        	}
-        	else
-        	{
-        		sqlQuery="select DOI,PII,PUI,ISSN,EISSN,ISBN,CITTYPE,ARTICLENUMBER,PAGE,PAGECOUNT,VOLUME,ISSUE,PUBLICATIONYEAR,CITATIONTITLE,ABSTRACTDATA,AUTHOR,AUTHOR_1,DATABASE FROM BD_MASTER WHERE DATABASE='"+dbname+"'";
-        		
-        	}
+            
+            if(dbname.equalsIgnoreCase("cpx"))
+            {
+	        	if(loadnumber!=1)
+	        	{
+	        		sqlQuery="select DOI,PII,PUI,ISSN,EISSN,ISBN,CITTYPE,ARTICLENUMBER,PAGE,PAGECOUNT,VOLUME,ISSUE,PUBLICATIONYEAR,CITATIONTITLE,ABSTRACTDATA,AUTHOR,AUTHOR_1,DATABASE FROM BD_MASTER WHERE LOADNUMBER="+loadnumber+" and DATABASE='"+dbname+"'";
+	        	}
+	        	else
+	        	{
+	        		sqlQuery="select DOI,PII,PUI,ISSN,EISSN,ISBN,CITTYPE,ARTICLENUMBER,PAGE,PAGECOUNT,VOLUME,ISSUE,PUBLICATIONYEAR,CITATIONTITLE,ABSTRACTDATA,AUTHOR,AUTHOR_1,DATABASE FROM BD_MASTER WHERE DATABASE='"+dbname+"'";
+	        		
+	        	}
+            }
+            else if(dbname.equalsIgnoreCase("ins"))
+            {
+            	if(loadnumber!=1)
+	        	{
+	        		sqlQuery="select pdoi DOI,anum as PII,'' as PUI,psn ISSN, npsn EISSN,sbn ISBN,nrtype CITTYPE,'' as ARTICLENUMBER,pipn PAGE,'' as PAGECOUNT,pvol VOLUME,piss ISSUE,pyr PUBLICATIONYEAR,ti CITATIONTITLE,ab ABSTRACTDATA,aus AUTHOR,aus2 AUTHOR_1,'INS' DATABASE,sspdate,fdate,cdate,su FROM INS_MASTER WHERE LOAD_NUMBER="+loadnumber;
+	        	}
+	        	else
+	        	{
+	        		sqlQuery="select pdoi DOI,anum as PII,'' as PUI,psn ISSN, npsn EISSN,sbn ISBN,nrtype CITTYPE,'' as ARTICLENUMBER,pipn PAGE,'' as PAGECOUNT,pvol VOLUME,piss ISSUE,pyr PUBLICATIONYEAR,ti CITATIONTITLE,ab ABSTRACTDATA,aus AUTHOR,aus2 AUTHOR_1,'INS' DATABASEsspdate,fdate,cdate,su FROM INS_MASTER";
+	        		
+	        	}
+            }
+            else if(dbname.equalsIgnoreCase("ibf"))
+            {
+            	if(loadnumber!=1)
+	        	{
+	        		sqlQuery="select DOI DOI,anum as PII,'' as PUI,'' as ISSN, '' as EISSN,'' as ISBN,rtype CITTYPE,'' as ARTICLENUMBER,ipn PAGE,'' as PAGECOUNT,vol VOLUME,iss ISSUE,pyr PUBLICATIONYEAR,ti CITATIONTITLE,ab ABSTRACTDATA,aus AUTHOR,'' as AUTHOR_1,'IBF' DATABASE,su,oinfo FROM IBF_MASTER WHERE LOAD_NUMBER="+loadnumber;
+	        	}
+	        	else
+	        	{
+	        		sqlQuery="select DOI DOI,anum as PII,'' as PUI,'' as ISSN, '' as EISSN,'' as ISBN,rtype CITTYPE,'' as ARTICLENUMBER,ipn PAGE,'' as PAGECOUNT,vol VOLUME,iss ISSUE,pyr PUBLICATIONYEAR,ti CITATIONTITLE,ab ABSTRACTDATA,aus AUTHOR,'' as AUTHOR_1,'IBF' DATABASE,su,oinfo FROM IBF_MASTER";
+	        		
+	        	}
+            }
+            
             //out.write("{\"evrecords\":[\n");
         	
         	builder = Json.createArrayBuilder();
         	
             System.out.println("SQLQUERY= "+sqlQuery);
+            System.out.println("database="+database);
             rs = stmt.executeQuery(sqlQuery);
             while (rs.next())
     		{
@@ -128,79 +162,251 @@ public class BuildBDDataInJsonFormat
     				{
     					dataMap.put("DOI", doi.trim());
     				}
+    				else
+    				{
+    					dataMap.put("DOI", "");
+    				}
     				if(pii!=null)
     				{
     					dataMap.put("PII", pii.trim());
     				}
+    				else
+    				{
+    					dataMap.put("PII", "");
+    				}
+    				
     				if(pui!=null)
     				{
     					dataMap.put("PUI", pui.trim());
     				}
+    				else
+    				{
+    					dataMap.put("PUI", "");
+    				}
+    				
     				if(issn!=null)
     				{
     					dataMap.put("ISSN", issn);
     				}
-    				if(isbn!=null)
+    				else
     				{
-    					dataMap.put("ISBN", getISBN(isbn));
+    					dataMap.put("ISSN", "");
     				}
+    				
+    				
+    				
+    				if(isbn!=null)
+    				{   					
+    					if(database.equalsIgnoreCase("INS"))
+    					{
+    						//System.out.println("ISBN1="+isbn+" accessnumber="+pii);
+    						dataMap.put("ISBN", isbn);
+    					}
+    					else
+    					{
+    						dataMap.put("ISBN", getISBN(isbn));
+    					}
+    				}
+    				else
+    				{
+    					dataMap.put("ISBN", "");
+    				}
+    				
     				if(eissn!=null)
     				{
-    					dataMap.put("EISSN", eissn);
-    				}  				
+    					if(!database.equalsIgnoreCase("INS"))
+    					{
+    						dataMap.put("EISSN", eissn);
+    					}
+    				} 
+    				else
+    				{
+    					dataMap.put("EISSN", "");
+    				}
+    				
     				if(cittype!=null)
     				{
     					dataMap.put("CITTYPE", cittype.trim());
     				}
+    				else
+    				{
+    					dataMap.put("CITTYPE", "");
+    				}
+    				
     				if(articlenumber!=null)
     				{
     					dataMap.put("ARTICLENUMBER", articlenumber.trim());
     				}
+    				else
+    				{
+    					dataMap.put("ARTICLENUMBER", "");
+    				}
+    				
     				if(page!=null)
     				{
-    					dataMap.put("FIRSTPAGE", getFirstPage(page));
+    					if(database.equalsIgnoreCase("INS")||database.equalsIgnoreCase("IBF"))
+    					{
+    						dataMap.put("FIRSTPAGE", getINSFirstPage(page));
+    						dataMap.put("PAGECOUNT", getINSLastPage(page));
+    					}
+    					else
+    					{
+    						dataMap.put("FIRSTPAGE", getBDFirstPage(page));
+    					}
     				}
+    				else
+    				{
+    					dataMap.put("FIRSTPAGE", "");
+    				}
+    				
     				if(pagecount!=null)
     				{
     					dataMap.put("PAGECOUNT", getPageCount(pagecount));
     				}
+    				//else
+    				//{
+    				//	dataMap.put("PAGECOUNT", "");
+    				//}
+    				
     				if(volume!=null)
     				{
     					//dataMap.put("VOLUME", getFirstNumber(volume));
     					dataMap.put("VOLUME", volume);
     				}
+    				else
+    				{
+    					dataMap.put("VOLUME", "");
+    				}
+    				
     				if(issue!=null)
     				{
     					//dataMap.put("issue", getFirstNumber(issue));
     					dataMap.put("ISSUE", issue);
     				}
-    				
-    				if(publicationyear!=null && publicationyear.length()>3)
+    				else
     				{
-    					dataMap.put("PUBLICATIONYEAR", publicationyear.substring(0,4));
+    					dataMap.put("ISSUE", "");
+    				}
+    				
+    				if(database.equalsIgnoreCase("INS"))
+					{
+						String strYear = "";
+						if(publicationyear != null && validYear(getPubYear(publicationyear)))
+			            {
+			                strYear=getPubYear(publicationyear);
+			            }
+			            else if (rs.getString("sspdate") != null && validYear(getPubYear(rs.getString("sspdate"))))
+			            {
+			                strYear=getPubYear(rs.getString("sspdate"));
+			            }
+			            else if (rs.getString("fdate") != null && validYear(getPubYear(rs.getString("fdate"))))
+			            {
+			                strYear=getPubYear(rs.getString("fdate"));
+			            }
+			            else if (rs.getString("cdate") != null && validYear(getPubYear(rs.getString("cdate"))))
+			            {
+			                strYear=getPubYear(rs.getString("cdate"));
+			            }
+			            else if (rs.getString("su") != null && validYear(getPubYear(rs.getString("su"))))
+			            {
+
+			                strYear=getPubYear(rs.getString("su"));
+			            }
+						if(validYear(strYear))
+						{
+							dataMap.put("PUBLICATIONYEAR",strYear);
+						}
+						else
+						{
+							System.out.println("Invalid INS year "+strYear);
+						}
+					}
+    				else if(database.equalsIgnoreCase("IBF"))
+    				{
+    					String strYear = "";
+						if(publicationyear != null && validYear(getPubYear(publicationyear)))
+			            {
+			                strYear=getPubYear(publicationyear);
+			            }
+						else if (rs.getString("su") != null && validYear(getPubYear(rs.getString("su"))))
+			            {
+
+			                strYear=getPubYear(rs.getString("su"));
+			            }
+						
+						if(validYear(strYear))
+						{
+							dataMap.put("PUBLICATIONYEAR",strYear);
+						}
+						else
+						{
+							System.out.println("Invalid IBF year "+strYear);
+						}
+    				}
+    				else if(publicationyear!=null && publicationyear.length()>3)
+    				{	    					    				
+	    				dataMap.put("PUBLICATIONYEAR", publicationyear.substring(0,4));	    			
     				}
     				else
     				{
     					System.out.println("Invalid year "+publicationyear);
     				}
+    				
     				if(citationtitle!=null)
     				{
-    					dataMap.put("CITATIONTITLE", getTitle(citationtitle));
+    					if(database.equalsIgnoreCase("ins") || database.equalsIgnoreCase("ibf"))
+    					{
+    						dataMap.put("CITATIONTITLE", citationtitle);
+    					}
+    					else
+    					{
+    						dataMap.put("CITATIONTITLE", getTitle(citationtitle));
+    					}
     				}
+    				else
+    				{
+    					dataMap.put("CITATIONTITLE", "");
+    				}
+    				
     				if(abstractdata!=null)
     				{
     					dataMap.put("ABSTRACT", abstractdata);
     					
     				}
+    				else
+    				{
+    					dataMap.put("ABSTRACT", "");
+    				}
     				
     				if(author!=null)
     				{   					
-                         if(rs.getString("AUTHOR_1") !=null)
-                         {
-                             author=author+rs.getString("AUTHOR_1");
-                         }
-    					dataMap.put("AUTHORSURENAME", getFirstAuthorSureName(author));
-    					dataMap.put("AUTHORGIVENNAME", getFirstAuthorGivenName(author));
+						if(rs.getString("AUTHOR_1") !=null)
+						{
+							author=author+rs.getString("AUTHOR_1");
+						}
+						if(database.equalsIgnoreCase("INS"))
+						{
+							dataMap.put("AUTHOR",getInsAuthor(author));
+							//System.out.println("AUTHOR="+getInsAuthor(author));
+							dataMap.put("AUTHORSURENAME", getInsFirstAuthorSureName(author));
+							//System.out.println("AUTHORSURENAME="+ getInsFirstAuthorSureName(author));
+	    					dataMap.put("AUTHORGIVENNAME", getInsFirstAuthorGivenName(author));
+	    					//System.out.println("AUTHORGIVENNAME"+ getInsFirstAuthorGivenName(author));
+						}
+						else
+						{
+	    					dataMap.put("AUTHORSURENAME", getFirstAuthorSureName(author));
+	    					dataMap.put("AUTHORGIVENNAME", getFirstAuthorGivenName(author));
+						}
+    				}
+    				else
+    				{
+    					dataMap.put("AUTHOR","");
+						//System.out.println("AUTHOR="+getInsAuthor(author));
+						dataMap.put("AUTHORSURENAME", "");
+						//System.out.println("AUTHORSURENAME="+ getInsFirstAuthorSureName(author));
+    					dataMap.put("AUTHORGIVENNAME", "");
+    					//System.out.println("AUTHORGIVENNAME"+ getInsFirstAuthorGivenName(author));
     				}
     				
     				if(database!=null)
@@ -261,15 +467,145 @@ public class BuildBDDataInJsonFormat
         }
     }
 	
+	private boolean validYear(String year)
+    {
+
+        return year.matches("[1-2][0-9][0-9][0-9]");
+    }
+	
+	private String getPubYear(String y)
+    {
+
+        String year = "";
+        String regularExpression = "((19\\d|20\\d)\\d)\\w?";
+        Pattern p = Pattern.compile(regularExpression);
+        Matcher m = p.matcher(y);
+        if (m.find())
+        {
+            year = m.group(1).trim();
+        }
+
+        return year;
+    }
+	
 	private String getStringFromClob(Clob clob) throws Exception
     {
-        String temp = null;
+        String temp = "";
         if (clob != null)
         {
             temp = clob.getSubString(1, (int) clob.length());
         }
 
         return temp;
+    }
+	
+	public  String getInsAuthor(String aString)
+	        throws Exception
+    {
+
+        StringBuffer bf = new StringBuffer();
+        StringTokenizer st = new StringTokenizer(aString, Constants.AUDELIMITER);
+        String s;
+
+        while (st.hasMoreTokens())
+        {
+            s = st.nextToken().trim();
+            if(s.length() > 0)
+            {
+                if(s.indexOf(Constants.IDDELIMITER) > -1)
+                {
+                     int i = s.indexOf(Constants.IDDELIMITER);
+                      s = s.substring(0,i);
+                }
+                s = s.trim();
+
+                bf.append(s+";");
+            }
+
+        }
+
+        return bf.toString();
+
+    }
+	
+	public  String getInsFirstAuthorSureName(String aString)
+	        throws Exception
+    {
+		String lastName = "";
+        StringTokenizer st = new StringTokenizer(aString, Constants.AUDELIMITER);
+        String s;
+
+        while (st.hasMoreTokens())
+        {
+            s = st.nextToken().trim();
+            if(s.length() > 0)
+            {
+                if(s.indexOf(Constants.IDDELIMITER) > -1)
+                {
+                     int i = s.indexOf(Constants.IDDELIMITER);
+                      s = s.substring(0,i);
+                }
+                s = s.trim();
+
+                if(s.indexOf(",")>0)
+                {
+                	lastName=s.substring(0,s.indexOf(","));
+                	
+                }
+                else if(s.indexOf(" ")>0)
+                {
+                	lastName=s.substring(s.lastIndexOf(" ")+1);
+                }
+                else
+                {
+                	lastName = s;
+                }
+                break;
+            }
+
+        }
+
+        return lastName.trim();
+    }
+	
+	public  String getInsFirstAuthorGivenName(String aString)
+	        throws Exception
+    {
+		String givenName = "";
+        StringTokenizer st = new StringTokenizer(aString, Constants.AUDELIMITER);
+        String s;
+
+        while (st.hasMoreTokens())
+        {
+            s = st.nextToken().trim();
+            if(s.length() > 0)
+            {
+                if(s.indexOf(Constants.IDDELIMITER) > -1)
+                {
+                     int i = s.indexOf(Constants.IDDELIMITER);
+                      s = s.substring(0,i);
+                }
+                s = s.trim();
+
+                if(s.indexOf(",")>0)
+                {
+                	givenName=s.substring(s.indexOf(",")+1);
+                	
+                }
+                else if(s.indexOf(" ")>0)
+                {
+                	givenName=s.substring(0,s.indexOf(" "));
+                }
+                else
+                {
+                	givenName = s;
+                }
+                break;
+            }
+
+        }
+
+        return givenName.trim();
     }
 	
 	public String getFirstAuthorSureName(String bdAuthor)
@@ -280,7 +616,7 @@ public class BuildBDDataInJsonFormat
             List ausArray = aus.getAuthors(); 
             return ((BdAuthor)ausArray.get(0)).getSurname();
         }
-        return null;
+        return "";
     }
 	
 	public String getFirstAuthorGivenName(String bdAuthor)
@@ -291,7 +627,7 @@ public class BuildBDDataInJsonFormat
             List ausArray = aus.getAuthors();         
             return ((BdAuthor)ausArray.get(0)).getGivenName();
         }
-        return null;
+        return "";
     }
 	
 	private String getFirstNumber(String v)
@@ -361,25 +697,46 @@ public class BuildBDDataInJsonFormat
 	{
 		//System.out.println("issue "+ dataMap.get("ISSUE"));
 		//System.out.println("firstpage "+ dataMap.get("FIRSTPAGE"));
-		//System.out.println("pagecount "+ dataMap.get("PAGECOUNT"));
+		//System.out.println("pui="+dataMap.get("PUI")+" citationtitle "+ dataMap.get("CITATIONTITLE"));
+		String piiLabel = "";
+		String lastPage = "";
+		if(database.equalsIgnoreCase("ins") || database.equalsIgnoreCase("ibf"))
+		{
+			piiLabel = "accessionnumber";
+			if(database.equalsIgnoreCase("ibf"))
+			{
+				lastPage = "lastpage";
+			}
+			else
+			{
+				lastPage = "pagecount";
+			}
+		}
+		else
+		{
+			piiLabel = "pii";
+			lastPage = "lastpage";
+		}
+		
 		JsonObject evJson = Json.createObjectBuilder()
                 .add("pui", dataMap.get("PUI"))
-                .add("doi", dataMap.get("DOI")==null?"":dataMap.get("DOI"))
-                .add("pii", dataMap.get("PII")==null?"":dataMap.get("PII"))              
+                .add("doi", dataMap.get("DOI")==null?"":dataMap.get("DOI"))           
+                .add(piiLabel, dataMap.get("PII")==null?"":dataMap.get("PII"))              
                 .add("issn", dataMap.get("ISSN")==null?"":dataMap.get("ISSN"))
                 .add("eissn", dataMap.get("EISSN")==null?"":dataMap.get("EISSN"))
                 .add("isbn", dataMap.get("ISBN")==null?"":dataMap.get("ISBN"))                
                 .add("doctype", dataMap.get("CITTYPE")==null?"":dataMap.get("CITTYPE"))
                 .add("articlenumber", dataMap.get("ARTICLENUMBER")==null?"":dataMap.get("ARTICLENUMBER"))
                 .add("firstpage", dataMap.get("FIRSTPAGE")==null?"":dataMap.get("FIRSTPAGE"))
-                .add("lastpage", dataMap.get("PAGECOUNT")==null?"":dataMap.get("PAGECOUNT"))
+                .add(lastPage, dataMap.get("PAGECOUNT")==null?"":dataMap.get("PAGECOUNT"))
                 .add("volume", dataMap.get("VOLUME")==null?"":dataMap.get("VOLUME"))              
                 .add("issue", dataMap.get("ISSUE")==null?"":dataMap.get("ISSUE"))
                 .add("publicationyear", dataMap.get("PUBLICATIONYEAR")==null?"":dataMap.get("PUBLICATIONYEAR"))
                 .add("citationtitle", dataMap.get("CITATIONTITLE")==null?"":dataMap.get("CITATIONTITLE"))                
                 .add("abstract", dataMap.get("ABSTRACT")==null?"":dataMap.get("ABSTRACT"))
                 .add("firstauthorsurename", dataMap.get("AUTHORSURENAME")==null?"":dataMap.get("AUTHORSURENAME"))
-                .add("firstauthorgivenname", dataMap.get("AUTHORGIVENNAME")==null?"":dataMap.get("AUTHORGIVENNAME"))               
+                .add("firstauthorgivenname", dataMap.get("AUTHORGIVENNAME")==null?"":dataMap.get("AUTHORGIVENNAME")) 
+                .add("author", dataMap.get("AUTHOR")==null?"":dataMap.get("AUTHOR"))
                 .add("database", dataMap.get("DATABASE")==null?"":dataMap.get("DATABASE"))                          
                 .build();
          
@@ -387,11 +744,55 @@ public class BuildBDDataInJsonFormat
 		return evJson;
 	}
 	
-	private String getFirstPage(String v)
+	private String getBDFirstPage(String v)
     {
         BdPage pages = new BdPage(v);
         return pages.getStartPage();
     }
+	
+	private String getINSFirstPage(String v)
+    {
+
+        MatchResult mResult = null;
+        if (v == null)
+        {
+            return "";
+        }
+
+        if (perl.match("/[A-Z]?[0-9][0-9]*/", v))
+        {
+            mResult = perl.getMatch();
+        }
+        else
+        {
+            return "";
+        }
+
+        return mResult.toString();
+    }
+	
+	private String getINSLastPage(String v)
+    {
+
+        String mResult = null;
+        if (v == null)
+        {
+            return "";
+        }
+
+        if (v.indexOf("-")>0)
+        {
+            mResult = v.substring(v.indexOf("-")+1);
+            //System.out.println("page="+v+" lastPage="+mResult);
+        }
+        else
+        {
+            return "";
+        }
+
+        return mResult.toString();
+    }
+
 	
 	private String getISBN(String isbnString) throws Exception
     {
@@ -421,6 +822,7 @@ public class BuildBDDataInJsonFormat
 	        {
 	            BdCitationTitle ct = new BdCitationTitle(citationTitle);
 	            List ctList = ct.getCitationTitle();
+	            List tctList = ct.getTranslatedCitationTitle();
 
 	            for(int i=0;i<ctList.size();i++)
 	            {
@@ -429,8 +831,17 @@ public class BuildBDDataInJsonFormat
 	                if(ctObject.getTitle() !=null)
 	                {
 	                    list.add(ctObject.getTitle());
-	                }
+	                }	               
+	            }
+	            
+	            for(int i=0;i<tctList.size();i++)
+	            {
+	                BdCitationTitle tctObject = (BdCitationTitle)tctList.get(i);
 
+	                if(tctObject.getTitle() !=null)
+	                {
+	                    list.add(tctObject.getTitle());
+	                }	                
 	            }
 	        }
 
