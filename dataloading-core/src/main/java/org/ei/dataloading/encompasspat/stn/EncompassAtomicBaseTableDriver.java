@@ -106,10 +106,10 @@ public class EncompassAtomicBaseTableDriver {
 			if ((line != null) && checkInvChar(line)) {
 				break;
 			}
-			if ((line != null) && (line.substring(0, 2).equals(EncompassAtomicBaseTableDriver.STOPCHAR))) {
+			if ((line != null) && line.length()>1 && (line.substring(0, 2).equals(EncompassAtomicBaseTableDriver.STOPCHAR))) {
 				break;
 			}
-			if ((line != null) && (!line.equals("CTA")) && (line.substring(0, 2).trim().equals(""))) {
+			if ((line != null) && (!line.equals("CTA")) && line.length()>1 && (line.substring(0, 2).trim().equals(""))) {
 				state = "continueField";
 			} else if (isNewField(line)) {
 				state = "beginField";
@@ -118,7 +118,7 @@ public class EncompassAtomicBaseTableDriver {
 				counter++;
 
 				if (line.length() < 2) {
-					System.out.println(line);
+					System.out.println("****ERROR***"+line);
 				} else {
 					// remove spaces at the end of str
 					fieldName = getNewField(line);
@@ -166,6 +166,13 @@ public class EncompassAtomicBaseTableDriver {
 			if (perl.match("/^\\s{5,}/i", tagVal)) {
 				tagVal = tagVal.substring(5);
 			}
+			
+			//remove tab characters
+			if(tagVal.indexOf("\t")>-1){
+				System.out.println("found tab");
+				tagVal = tagVal.replaceAll("\t", " ");
+			}
+			
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
