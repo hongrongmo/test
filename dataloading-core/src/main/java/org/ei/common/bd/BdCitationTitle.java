@@ -109,6 +109,10 @@ public class BdCitationTitle
 						ct.setTitle(singleCtObject[1]);
 						ct.setOriginal(singleCtObject[2]);
 						ct.setLanguage(singleCtObject[3]);
+						//System.out.println("ID="+singleCtObject[0]);
+						//System.out.println("title="+singleCtObject[1]);
+						//System.out.println("original="+singleCtObject[2]);
+						//System.out.println("language="+singleCtObject[3]);
 
 						if(singleCtObject[3].equalsIgnoreCase("eng")||singleCtObject[3].equalsIgnoreCase("en") )
 						{
