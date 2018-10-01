@@ -606,8 +606,11 @@ public class UPTCombiner extends CombinerTimestamp {
 
                         rec.put(EVCombinedRec.ASSISTANT_EXAMINER, aes);
                     }
+                    System.out.println("AC="+authCode+"**");
                     if (authCode.equalsIgnoreCase("us"))
                         rec.put(EVCombinedRec.DATABASE, "upa");
+                    else if(authCode.equalsIgnoreCase("wo"))
+                    	rec.put(EVCombinedRec.DATABASE, "wop");
                     else
                         rec.put(EVCombinedRec.DATABASE, "eup");
 
