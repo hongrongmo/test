@@ -227,6 +227,8 @@ public class BaseTableWriter
 	    	recordBuf.append(record.get("SOURCEBIBTEXT"));
 		}
 	   
+	    
+	    /*	    
 	    recordBuf.append(FIELDDELIM);
 	    if(record.get("RELATEDDOI")!=null)
 		{
@@ -239,8 +241,27 @@ public class BaseTableWriter
 	    	recordBuf.append(record.get("RELATEDPII"));
 	    	//System.out.println("RELATEDPII"+record.get("RELATEDPII"));
 		}
+		*/
 	    
-	    
+	    //following fields added for open access status at 09/05/2018
+	    recordBuf.append(FIELDDELIM);
+	    if(record.get("OAACCESSDATE")!=null)
+		{
+	    	recordBuf.append(record.get("OAACCESSDATE"));
+	    	//System.out.println("OAACCESSDATE"+record.get("OAACCESSDATE"));
+		}
+	    recordBuf.append(FIELDDELIM);
+	    if(record.get("OAUSERLICENSE")!=null)
+		{
+	    	recordBuf.append(record.get("OAUSERLICENSE"));
+	    	//System.out.println("OAUSERLICENSE"+record.get("OAUSERLICENSE"));
+		}
+	    recordBuf.append(FIELDDELIM);
+	    if(record.get("ISOPENACESS")!=null)
+		{
+	    	recordBuf.append(record.get("ISOPENACESS"));
+	    	//System.out.println("ISOPENACESS"+record.get("ISOPENACESS"));
+		}
 	    
 	    
 	    //*/
