@@ -52,7 +52,7 @@ public class BaseTableDriver
     {
         int loadN=0;
         long startTime = System.currentTimeMillis();
-        if(args.length<8)
+        if(args.length<3)
         {
             System.out.println("please enter three parameters as \" weeknumber filename databaseName action url driver username password\"");
             System.exit(1);
@@ -505,7 +505,7 @@ public class BaseTableDriver
             r.setCafeS3Loc(s3FileLoc);   //HH 04/05/2016
             boolean start = false;
             boolean fundingStart = false;
-           
+            boolean openaccessStart = false;
            
             while((line=xmlReader.readLine())!=null)
             {
@@ -528,6 +528,21 @@ public class BaseTableDriver
                 if(line.indexOf("</xocs:funding-list>")>-1)
              	{
              		fundingStart = false;              		
+             	}
+                
+                if(line.indexOf("<xocs:open-access")>-1)
+            	{
+            		openaccessStart = true;              		
+            	}
+            	
+            	if(openaccessStart)
+                {
+            		fundBuffer.append(line);
+                }           	            	
+            	                              
+                if(line.indexOf("</xocs:open-access>")>-1)
+             	{
+                	openaccessStart = false;              		
              	}
                 
                 if(start)
