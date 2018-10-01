@@ -15,9 +15,6 @@ import javax.json.Json;
 import javax.json.JsonBuilderFactory;
 import javax.json.stream.JsonGenerator;
 
-import org.ei.dataloading.cafe.AffiliationDeanDashboard;
-import org.ei.dataloading.cafe.AuAfCombinedRec;
-
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
