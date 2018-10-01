@@ -137,13 +137,13 @@ public class KnovelReader
 	
 	//HH 03/22/2016 for knovel correction by getting files from S3 bucket
 	
-		public KnovelReader(String updateNumber,String database,String filename, String bucketName, String key)
-		{
-			this.loadNumber = updateNumber;
-			this.bucketName = bucketName;
-			this.key = key;
-			init(database,filename);
-		}
+	public KnovelReader(String updateNumber,String database,String filename, String bucketName, String key)
+	{
+		this.loadNumber = updateNumber;
+		this.bucketName = bucketName;
+		this.key = key;
+		init(database,filename);
+	}
 		
 	 
 	public void readGroupFile(String path, String filename) throws Exception
@@ -1387,6 +1387,54 @@ public class KnovelReader
 		}	
 	}
 	
+	private void getChapterLinkElement(Element root,HashMap record,StringBuffer tocBuffer) throws Exception
+	{
+		List links = root.getChildren("link");		
+		for(int i=0;i<links.size();i++)
+		{
+			Element link = (Element)links.get(i);
+			String href = link.getAttributeValue("href");
+			System.out.println("href= "+href);
+			String rel = link.getAttributeValue("rel");
+			System.out.println("rel= "+rel);
+			String title = link.getAttributeValue("title");
+			System.out.println("title= "+title);
+			String text = link.getTextTrim();
+			System.out.println("text= "+text);
+			
+			if(rel==null)
+			{
+				if(href!=null)
+				{
+					record.put("FULLTEXTLINK",href);
+				}
+			}
+			else if(rel !=null && rel.equals("subsection"))
+			{
+				//getFullTextToc(href,record);
+				if(bucketName !=null && bucketName.length() >0)
+				{
+					//HH 03/21/2016 get fulltoc from S3 bucket
+					getFullTextTocFromS3(href,record);
+				}
+				else
+					getFullTextToc(href,record);
+			}	
+			else if(rel !=null && rel.equals("parent"))
+			{
+				if(href!=null)
+				{
+					record.put("PARENTFILENAME",href);
+				}
+				if(link.getTextTrim()!=null)
+				{
+					record.put("PARENTTITLENAME",link.getTextTrim());
+				}
+			}
+			
+		}	
+	}
+	
 	private String getContent(String input)
 	{
 		String output = "";
@@ -1415,6 +1463,7 @@ public class KnovelReader
 				//System.out.println("TOCSOURCEFILENAME="+sourceFileName);
 				String pageRange = link.getAttributeValue("sourceFilePageRange",knovelNamespace);
 				//System.out.println("PAGERANGE="+pageRange);
+				String text = link.getTextTrim();
 				if(rel!=null && rel.equals("subsection"))
 				{
 					//toc title        				
@@ -1448,12 +1497,99 @@ public class KnovelReader
 					tocBuffer.append(IDDELIMITER);    					
 				}
 				tocBuffer.append(AUDELIMITER); 
-				/*
-				if(link.getChildren("link")!=null)
+				
+				if(link.getChild("link")!=null && link.getChild("link").getAttributeValue("title")==null)
 				{
+					System.out.println("TEXT="+text);
 					getTOC(link,tocBuffer);
 				}
-				*/
+				
+			}
+		}
+	}
+	
+	private void getChapterTOC(Element root,StringBuffer tocBuffer) throws Exception
+	{
+		if(root!=null)
+		{
+			List links=root.getChildren("link",noNamespace);
+			for(int i=0;i<links.size();i++)
+			{
+				Element link = (Element)links.get(i);
+				String tocFilename = link.getAttributeValue("href");
+				//System.out.println("SUBSECTIONFILENAME="+tocFilename);
+				String rel = link.getAttributeValue("rel");
+				//System.out.println("TOCREL="+rel);
+				String title = link.getAttributeValue("title");
+				//System.out.println("TOCTITLE="+title);
+				String sourceFileName = link.getAttributeValue("sourceFileName",knovelNamespace);
+				//System.out.println("TOCSOURCEFILENAME="+sourceFileName);
+				String pageRange = link.getAttributeValue("sourceFilePageRange",knovelNamespace);
+				//System.out.println("PAGERANGE="+pageRange);
+				String text = link.getTextTrim();
+				if(rel!=null && rel.equals("subsection"))
+				{
+					//toc title        				
+					if(title!=null)
+					{
+						tocBuffer.append(title);
+					}
+					else if(text!=null)
+					{
+						tocBuffer.append(text);
+					}
+					tocBuffer.append(IDDELIMITER);
+					
+					//subsection filename
+					if(tocFilename!=null)
+					{
+						BufferedReader in = null;
+															
+						if(this.path!=null && this.path.length()>0)
+						{
+							
+							in = new BufferedReader(new InputStreamReader(new FileInputStream(this.path+"/"+tocFilename)));
+						}
+						else
+						{
+							
+							in = new BufferedReader(new InputStreamReader(new FileInputStream(tocFilename)));
+						}
+						
+						tocBuffer.append(tocFilename);
+						SAXBuilder builder = new SAXBuilder();
+		        		builder.setExpandEntities(false);
+		        		Document chapterDoc = builder.build(in);
+		        		Element croot = chapterDoc.getRootElement();
+		        		if(croot!=null)
+		        		{
+		        			getChapterTOC(croot,tocBuffer);
+		        		}
+					}
+					tocBuffer.append(IDDELIMITER);
+					
+					//subsection pdf filename
+					if(sourceFileName!=null)
+					{
+						tocBuffer.append(sourceFileName);
+					}
+					tocBuffer.append(IDDELIMITER);
+					
+					//subsection pagerange
+					if(pageRange!=null)
+					{
+						tocBuffer.append(pageRange);
+					}
+					tocBuffer.append(IDDELIMITER);    					
+				}
+				tocBuffer.append(AUDELIMITER); 
+				
+				if(link.getChild("link")!=null && link.getChild("link").getAttributeValue("title")==null)
+				{
+					System.out.println("TEXT="+text);
+					getChapterTOC(link,tocBuffer);
+				}
+				
 			}
 		}
 	}
@@ -1485,6 +1621,11 @@ public class KnovelReader
         		if(root!=null)
         		{
         			HashMap chapter_output_record = getRecord(root,fileName);
+        			StringBuffer chapterTocs = new StringBuffer();         			
+        			//getChapterLinkElement(root,chapter_output_record,chapterTocs);
+        			getChapterTOC(root,chapterTocs);
+        			System.out.println("Chapter=== "+chapterTocs.toString());
+        			chapter_output_record.put("FULLTEXTTOC", chapterTocs.toString());
         			chapter_output_record.put("documentType", "Chapter");
         			if(chapter_output_record != null)
         			{
@@ -1505,6 +1646,10 @@ public class KnovelReader
         {
         	System.out.println("Exception: "+bookCount+" - "+chapterCount + "-" + (++totalExceptionCount) + ": FILENAME="+fileName);
         	e.printStackTrace();
+        }
+        finally
+        {
+        	System.out.println("================================");
         }
 	}
 	
