@@ -377,11 +377,13 @@ public class CombinedXMLWriter
         out.println("       <DATESORT>" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.DATESORT))) + "</DATESORT>");
         out.println("       <PUBYEAR>" + rec.getString(EVCombinedRec.PUB_YEAR) + "</PUBYEAR>");
         out.println("       <ACCESSIONNUMBER>" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.ACCESSION_NUMBER))) + "</ACCESSIONNUMBER>");
-        out.println("       <AUTHOR><![CDATA[" + notNull(Entity.prepareString(formatAuthors(addIndex(rec.getStrings(EVCombinedRec.AUTHOR),"AUTHOR")))) + "]]></AUTHOR>");
+        //out.println("       <AUTHOR><![CDATA[" + notNull(Entity.prepareString(formatAuthors(addIndex(rec.getStrings(EVCombinedRec.AUTHOR),"AUTHOR")))) + "]]></AUTHOR>"); //added QstemQ portion to search both with qqdashqq and without it
+        out.println("       <AUTHOR><![CDATA[" + notNull(Entity.prepareString(formatAuthors(addIndex(rec.getStrings(EVCombinedRec.AUTHOR),"AUTHOR")))) + " QstemQ " + notNull(multiFormat(rec.getStrings(EVCombinedRec.AUTHOR))) + "]]></AUTHOR>");
         out.println("       <AUTHORID><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.AUTHORID)))) + "]]></AUTHORID>");
         out.println("       <AUTHORAFFILIATION><![CDATA[" + notNull(Entity.prepareString(multiFormat(addIndex(rec.getStrings(EVCombinedRec.AUTHOR_AFFILIATION),"AUTHORAFFILIATION")))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.AUTHOR_AFFILIATION))))) + "]]></AUTHORAFFILIATION>");
         out.println("       <AFFILIATIONLOCATION><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.AFFILIATION_LOCATION)))) + "]]></AFFILIATIONLOCATION>");
         out.println("       <TITLE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TITLE)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TITLE))))) + "]]></TITLE>");
+        //out.println("       <TRANSLATEDTITLE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TRANSLATED_TITLE)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TRANSLATED_TITLE))))) + "]]></TRANSLATEDTITLE>");
         out.println("       <TRANSLATEDTITLE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TRANSLATED_TITLE)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TRANSLATED_TITLE))))) + "]]></TRANSLATEDTITLE>");
         out.println("       <VOLUMETITLE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.VOLUME_TITLE)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.VOLUME_TITLE))))) + "]]></VOLUMETITLE>");
         out.println("       <ABSTRACT><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.ABSTRACT))) + " QstemQ " + notNull(getStems(Entity.prepareString(rec.getString(EVCombinedRec.ABSTRACT)))) + "]]></ABSTRACT>");
@@ -847,8 +849,16 @@ public class CombinedXMLWriter
         //out.println("       <EV_SPARE1><![CDATA[]]></EV_SPARE1>");	//tempotary block out SOURCEBIBTEXT
         out.println("       <EV_SPARE1><![CDATA["+ notNull(rec.getString(EVCombinedRec.SOURCEBIBTEXT)) +"]]></EV_SPARE1>");//SPA1
        
-        out.println("       <EV_SPARE2><![CDATA[]]></EV_SPARE2>"); //move GRANTTEXT to spa9 to avoid all search  //SPA2
-        //out.println("       <EV_SPARE2><![CDATA["+ notNull(rec.getString(EVCombinedRec.GRANTTEXT))+ " QstemQ " + notNull(getStems(rec.getString(EVCombinedRec.GRANTTEXT))) +"]]></EV_SPARE2>");                
+        //move standardid to here to get all search
+        //STANDARDID
+        if(rec.getString(EVCombinedRec.STANDARDID)==null)
+        {
+        	out.println("       <EV_SPARE2><![CDATA[]]></EV_SPARE2>");
+        }
+        else      
+        {
+        	out.println("       <EV_SPARE2><![CDATA[" + notNull(formatStandardCodes(rec.getString(EVCombinedRec.STANDARDID))) + "QstemQ " +notNull(getStems(formatStandardCodes(rec.getString(EVCombinedRec.STANDARDID)))) +"]]></EV_SPARE2>");//SPA2
+        }                     
         
         out.println("       <EV_SPARE3><![CDATA[]]></EV_SPARE3>");//SPA3
         
@@ -858,16 +868,21 @@ public class CombinedXMLWriter
         
         out.println("       <EV_SPARE6><![CDATA[]]></EV_SPARE6>");//SPA6
         
-        //STANDARDID
+        //move standardid to SPA2 to get search "all"
+        //temporary add standardid to spa7, will remove it after all tests are done
+        out.println("       <EV_SPARE7><![CDATA[]]></EV_SPARE7>");//SPA7
+        
+        /*
+        //remove SPA7 after new standardid release at 08/29/2018
         if(rec.getString(EVCombinedRec.STANDARDID)==null)
         {
         	out.println("       <EV_SPARE7><![CDATA[]]></EV_SPARE7>");
         }
         else      
         {
-        	out.println("       <EV_SPARE7><![CDATA[" + notNull(rec.getString(EVCombinedRec.STANDARDID)) + "]]></EV_SPARE7>");//SPA7
-        }       
-        
+        	out.println("       <EV_SPARE7><![CDATA[" + notNull(formatStandardCodes(rec.getString(EVCombinedRec.STANDARDID))) + "]]></EV_SPARE7>");//SPA7
+        }
+        */
         //STANDARDDESIGNATION
         if(rec.getString(EVCombinedRec.STANDARDDESIGNATION)==null)
         {
@@ -875,7 +890,7 @@ public class CombinedXMLWriter
         }      
         else
         {
-        	out.println("       <EV_SPARE8><![CDATA[" + notNull(rec.getString(EVCombinedRec.STANDARDDESIGNATION)) + "]]></EV_SPARE8>");//SPA8
+        	out.println("       <EV_SPARE8><![CDATA[" + notNull(formatStandardCodes(rec.getString(EVCombinedRec.STANDARDDESIGNATION))) + "]]></EV_SPARE8>");//SPA8
         }
         
         //GRANTTEXT
@@ -974,6 +989,45 @@ public class CombinedXMLWriter
         }
 
         return rn;
+    }
+    
+    private String formatStandardCodes(String c)
+    {
+    	//System.out.println("INPUT="+c);
+		String r = "";
+        if (c == null)
+        {
+            return null;
+        }
+        else
+        {
+        	r = c.replaceAll("\\.","|DQD|"); //use DQD for dot(.)
+        	r = r.replaceAll("-","|QMINUSQ|"); //use QMINUSQ for minus sign
+        	r = r.replaceAll("\\/","|QSLASHQ|"); //use QSLASHQ for slash(/)
+        	r = r.replaceAll(" ","|QSPACEQ|"); //use QSPACEQ for space
+        	r = r.replaceAll(",","|QCOMMAQ|"); //use QCOMMAQ for comma
+        	r = r.replaceAll(":","|QCOLONQ|"); //use QCOLONQ for colon
+        	r = r.replaceAll(";","|QSEMICOLONQ|"); //use QSEMICOLONQ for semicolon
+        	r = r.replaceAll("\\(","|QOPENINGBRACKETQ|"); //opening parenthesis
+        	r = r.replaceAll("\\)","|QCLOSINGBRACKETQ|"); //closing parenthesis
+        	r = r.replaceAll("&","|QANDQ|"); //& sign
+        }
+        String[] ra = r.split("\\|",-1);
+        StringBuffer rBuffer = new StringBuffer();
+        String term = "";
+        for(int i=0;i<ra.length;i++)
+        {
+        	if(ra[i]!=null && ra[i].length()>0)
+        	{
+	        	term = term+ra[i];
+	        	rBuffer.append(term + " QQDELQQ ");
+        	}
+        }
+        
+        rBuffer.append(c+" QQDELQQ ");
+        //System.out.println("OUTPUT="+rBuffer.toString());
+        return rBuffer.toString(); 
+
     }
 
     private String[] prepareISSN(String[] issns)
