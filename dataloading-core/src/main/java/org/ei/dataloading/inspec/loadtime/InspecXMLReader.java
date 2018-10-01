@@ -108,7 +108,7 @@ public class InspecXMLReader extends FilterReader
 			Element controlGroup = article.getChild("contg");
 			//AN Number
 			record.put("ANUM",new StringBuffer(controlGroup.getChild("accn").getTextTrim()));
-			System.out.println("ANUM='"+controlGroup.getChild("accn").getTextTrim()+"'");
+			//System.out.println("ANUM='"+controlGroup.getChild("accn").getTextTrim()+"'");
 			//**VB:new Year and Issue No.
 			if(controlGroup.getChild("tapiss")!=null)
 				getSU(controlGroup.getChild("tapiss"));
@@ -1061,7 +1061,7 @@ public class InspecXMLReader extends FilterReader
 	        if(m.getChild("orgid") != null)
 	        {
 	        	oneAffiliation.append(m.getChild("orgid").getTextTrim());
-	        	System.out.println("orgid='"+m.getChild("orgid").getTextTrim()+"'");
+	        	//System.out.println("orgid='"+m.getChild("orgid").getTextTrim()+"'");
 	        }
 
 	        if(affmulti1.length() > 0 )
