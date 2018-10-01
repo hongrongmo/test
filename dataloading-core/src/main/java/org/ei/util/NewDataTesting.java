@@ -272,9 +272,9 @@ public class NewDataTesting
 		{
 			test.getALLCPXMIDFromFast(database);
 		}
-		else  if(action.equals("cpxIP"))
+		else  if(action.equals("cpxMID"))
 		{
-			test.getMIDFromFastCPXIP();
+			test.checkFASTFORMID(updateNumber);
 		}
 		else  if(action.equals("remove"))
 		{
@@ -283,6 +283,10 @@ public class NewDataTesting
 		else  if(action.equals("fastQueryDR"))
 		{
 			test.getMIDFromFastQuery_DR(updateNumber);
+		}
+		else  if(action.equals("fastQueryDEV"))
+		{
+			test.getMIDFromFastQuery_DEV(updateNumber);
 		}
 		else  if(action.equals("fastQuery"))
 		{
@@ -3056,17 +3060,17 @@ public class NewDataTesting
 		try
 		{
 			out = new FileWriter("midFromFast_PROD.out");	
-			for(int j=1700;j<2019;j++)
+			for(int j=201817;j<201838;j++)
 			{
 				System.out.println("Query= "+query);
 				FastClient client = new FastClient();
-				client.setBaseURL("http://evprod14.cloudapp.net:15100");//PROD
+				client.setBaseURL("http://evdr09.cloudapp.net:15100");//PROD
 				//client.setBaseURL("http://evprod08.cloudapp.net:15100");//DEV server
 				//client.setBaseURL("http://evdr09.cloudapp.net:15100"); //DR			
 				client.setResultView("ei");
 				client.setOffSet(0);
 				client.setPageSize(260000);
-				client.setQueryString(searchQuery+" and yr:"+j);
+				client.setQueryString(searchQuery+" and wk:"+j);
 				client.setDoCatCount(true);
 				client.setDoNavigators(true);
 				client.setPrimarySort("ausort");
@@ -3189,28 +3193,25 @@ public class NewDataTesting
 		
 	}
 	
-	private void getMIDFromFastCPXIP()
+	private void getMIDFromFastQuery_DEV(String query)
 	{
 
 		Statement stmt = null;
 		ResultSet rs = null;
 		Connection con = null;
 		FileWriter out = null;
+		String searchQuery = query.replaceAll("_", " and ");
 		try
 		{
-			out = new FileWriter("CPX_IP.out");
-			con = getConnection(this.URL,this.driver,this.username,this.password);			
-			
-			stmt = con.createStatement();
-			
-			int k = 0;			
-
+			out = new FileWriter("midFromFast_DEV.out");	
+			System.out.println("Query= "+searchQuery);
 			FastClient client = new FastClient();
-			client.setBaseURL("http://evazure.trafficmanager.net:15100");
+			//client.setBaseURL("http://evprod08.cloudapp.net:15100");DEV server
+			client.setBaseURL("http://evprod08.cloudapp.net:15100"); //DEV				
 			client.setResultView("ei");
 			client.setOffSet(0);
-			client.setPageSize(60000);
-			client.setQueryString("(DT:\"IP\") AND (((db:cpx)))");
+			client.setPageSize(200000);
+			client.setQueryString(searchQuery);
 			client.setDoCatCount(true);
 			client.setDoNavigators(true);
 			client.setPrimarySort("ausort");
@@ -3235,24 +3236,77 @@ public class NewDataTesting
 			{
 				String[] docID = (String[])l.get(i);
 				String m_id = docID[0];
-				//System.out.println(m_id);
-				String sqlQuery = "select m_id, cittype from bd_master where  m_id='"+m_id+"'";
-				//System.out.println("QUERY= "+sqlQuery);
-				rs = stmt.executeQuery(sqlQuery);
-				while (rs.next())
-				{
-					String cittype = rs.getString("cittype");
-					if(!cittype.equalsIgnoreCase("ip"))
-					{
-						//System.out.println(m_id+"\t| "+ cittype);
-						out.write(m_id+"\t"+ cittype+"\n");
-					}
-					out.flush();					
-				}
-				rs = null;
-			
-
+				System.out.println(m_id);
+				
+				out.write(m_id+"\n");					
+				out.flush();					
 			}
+				
+			out.flush();
+			out.close();
+
+		}
+		catch(Exception e)
+		{
+			try{
+			if(out!=null)
+				out.close();
+			}
+			catch(Exception e1)
+			{
+				e1.printStackTrace();
+			}
+			e.printStackTrace();
+		}
+		
+	}
+	
+	private void checkFASTFORMID(String tableName)
+	{
+
+		Statement stmt = null;
+		ResultSet rs = null;
+		Connection con = null;
+		FileWriter out = null;
+		try
+		{
+			out = new FileWriter("CHECK_EPT_IN_FAST.out");
+			con = getConnection(this.URL,this.driver,this.username,this.password);			
+			String sqlQuery="select m_id from "+tableName;
+			System.out.println("QUERY= "+sqlQuery);
+			stmt = con.createStatement();
+			rs = stmt.executeQuery(sqlQuery);
+			
+			
+			int k = 0;			
+			while (rs.next())
+			{
+				String m_id = rs.getString("m_id");
+				FastClient client = new FastClient();
+				client.setBaseURL("http://evazure.trafficmanager.net:15100");
+				client.setResultView("ei");
+				client.setOffSet(0);
+				client.setPageSize(60000);
+				client.setQueryString(m_id);
+				client.setDoCatCount(true);
+				client.setDoNavigators(true);
+				client.setPrimarySort("ausort");
+				client.setPrimarySortDirection("+");
+				client.search();
+	
+				List l = client.getDocIDs();
+				int count =client.getHitCount();
+				
+				if(count<1)
+				{
+				  System.out.println("0 records found for "+m_id);
+			    }
+				else
+				{
+					out.write(m_id+"\n");
+					System.out.println(count+" records found for"+m_id);
+				}
+			}		
 				
 			out.flush();
 			out.close();
