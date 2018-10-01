@@ -53,7 +53,8 @@ https://vtw.elsevier.com/asset/pat/<VTW patent id>?type=MAIN&fmt=application/xml
  */
 public class VTWAssetAPI {
 
-	private static final String HOST = "acc.vtw.elsevier.com";   // VTW UAT Testing  
+	//private static final String HOST = "acc.vtw.elsevier.com";   // VTW UAT Testing  that seems to be changed when testing CN,JP,KR in UAT
+	private static final String HOST = "uatnp.vtw-np.elsevier.com";
 	//private static final String HOST = "vtw.elsevier.com";     // VTW Prod
 	
 	private static final String ENDPOINT_ROOT = "https://" + HOST;
@@ -443,6 +444,9 @@ public class VTWAssetAPI {
 		//patentIds.put("AU2010281317A1", "http://dev-ucs-content-store-eu-west.s3.amazonaws.com/content/pat%3AAU2010281317A1/MAIN/application/xml/02d84460608e91d8510f8725fe109b7a/AU2010281317A1.xml?AWSAccessKeyId=AKIAIKW4U6PKMIE3KSLQ&Expires=1471522524&Signature=u1zyiRsWNXf5DlgT5d7zR9iadlY%3D");
 		/*patentIds.put("EP2831534A4", "");
 		patentIds.put("EP2670359B1", "");*/
+		
+		patentIds.put("WO2011149034A1", "");
+		
 		
 		
 		patentIds.put("US20090280091A1", "");
