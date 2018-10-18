@@ -86,9 +86,8 @@ public class UPTRefCntUpdateExtract
       * Writes the updates for all patent cit_cnt
       */
     public void writeCitedByExtract(String dir)
-
     {
-        String sql = "SELECT 'update upt_master set cit_cnt = '||COUNT(DISTINCT prt_mid)||',  where m_id = '''||cit_mid||''';'  FROM where patent_refs GROUP BY cit_mid";
+        String sql = "SELECT 'update upt_master set cit_cnt = '||COUNT(DISTINCT prt_mid)||',  where m_id = '''||cit_mid||''';'  FROM patent_refs GROUP BY cit_mid";
         writeExtract(dir,sql,true);
     }
 
