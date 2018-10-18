@@ -869,8 +869,8 @@ public class CombinedXMLWriter
         out.println("       <EV_SPARE6><![CDATA[]]></EV_SPARE6>");//SPA6
         
         //move standardid to SPA2 to get search "all"
-        //temporary add standardid to spa7, will remove it after all tests are done
-        out.println("       <EV_SPARE7><![CDATA[]]></EV_SPARE7>");//SPA7
+        //use for ISOPENACESS
+        out.println("       <EV_SPARE7><![CDATA["+ notNull(rec.getString(EVCombinedRec.ISOPENACESS)) +"]]></EV_SPARE7>");//SPA7
         
         /*
         //remove SPA7 after new standardid release at 08/29/2018
