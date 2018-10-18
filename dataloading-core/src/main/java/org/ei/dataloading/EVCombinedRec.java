@@ -496,6 +496,8 @@ public class EVCombinedRec {
 	public static final String STANDARDDESIGNATION = "370";
 	public static final String NORMSTANDARDID = "371";
 	public static final String GRANTTEXT = "372";
+	public static final String ISOPENACESS = "373";
+	
 
 	 //*/
 
