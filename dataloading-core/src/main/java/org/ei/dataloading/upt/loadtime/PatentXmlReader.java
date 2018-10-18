@@ -413,7 +413,7 @@ public class PatentXmlReader
 		this.abstractData = patentRoot.getChild("abstract");
 		output_record = getRecord(patentRoot);
 		patentNumber = (String)output_record.get("PR_DOCID_DOC_NUMBER");
-		System.out.println("Patent Number:"+ patentNumber);
+		//System.out.println("Patent Number:"+ patentNumber);
 		patentCountry = (String)output_record.get("PR_DOCID_COUNTRY");
 		String patentKind = (String)output_record.get("PR_DOCID_KIND");
 		if(!checkAvailable(patentNumber,patentCountry,patentKind))
@@ -1894,12 +1894,15 @@ public class PatentXmlReader
 
 
 						// CIT_PN
+						
+						//String old_cit_pn = cit_pn;
 						if(cit_pn != null)
 						{
 							cit_pn = pnNormalization(cit_pn,cit_ki);
 							out.print(cit_pn);
 						}
-
+						//if(!old_cit_pn.equals(cit_pn))
+							//System.out.println("normal CIT_PN="+cit_pn+" OLD_CIT_PN"+old_cit_pn);
 						out.print(DELIM);
 
 						// CIT_CY
@@ -1916,6 +1919,7 @@ public class PatentXmlReader
 							cit_mid  = getCitMID(cit_pn,cit_cy);
 							if(cit_mid != null)
 							{
+								//System.out.println("CIT_MID="+cit_mid[0]);
 								out.print(cit_mid[1]);
 							}
 						}
