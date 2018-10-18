@@ -1137,7 +1137,7 @@ public class BdParser
 										grantBuffer.append(dictionary.mapEntity(funding.getChildText("funding-agency-country",xocsNamespace)));
 									}
 									
-									
+									 
 									if(i<fundinggroup.size()-1)
 									{
 										grantBuffer.append(Constants.AUDELIMITER);
