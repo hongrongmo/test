@@ -143,7 +143,7 @@ public class BaseTableRecord
 	public static final BaseTableRecord GRANTLIST = new BaseTableRecord("GRANTLIST", new Integer(4000), "cpx");
 	public static final BaseTableRecord EID = new BaseTableRecord("EID", new Integer(32), "cpx");
 	public static final BaseTableRecord UPDATERESOURCE= new BaseTableRecord("UPDATERESOURCE", new Integer(4000), "cpx");   //HH 04/05/2016 for Cafe
-	//public static final BaseTableRecord DEDUPKEY= new BaseTableRecord("DEDUPKEY", new Integer(128), "cpx");   //HMO 1/30/2017
+	public static final BaseTableRecord ISOPENACESS= new BaseTableRecord("ISOPENACESS", new Integer(10), "cpx");   //HMO added 10/15/2017
 	
 	public static final BaseTableRecord REFERENCE= new BaseTableRecord("REFERENCE", new Integer(500000), "cpx");
 	public static final BaseTableRecord REFERENCETITLE= new BaseTableRecord("REFERENCETITLE", new Integer(4000), "cpx");
