@@ -2,17 +2,19 @@ package org.ei.dataloading.inspec.loadtime;
 
 import java.io.*;
 import java.util.*;
+
+//import javax.lang.model.element.Element;
+
 import org.jdom2.*;
 import org.jdom2.input.*;
 import org.jdom2.output.*;
 import org.ei.common.*;
-
 import org.apache.oro.text.perl.*;
 import org.apache.oro.text.regex.*;
 
 public class InspecXMLReader extends FilterReader
 {
-	private Hashtable record = null;
+	private Hashtable<String,StringBuffer> record = null;
 	private List articles = null;
 	private Document doc = null;
 	private Iterator rec =null;
@@ -85,7 +87,7 @@ public class InspecXMLReader extends FilterReader
 			//for backfile data there is an article type="backfile"
 
 			//if type="current" or type is not provided
-			record.put(ARTICLETYPE, CURRENT_DATA);
+			record.put(ARTICLETYPE, new StringBuffer(CURRENT_DATA));
 
 			/* removed based on frank request on 6/4/2014
 			//if type="backfile" - record extract is not processed
@@ -305,116 +307,133 @@ public class InspecXMLReader extends FilterReader
 						Element cite = (Element)it.next();
 
 						//Accessnumber
-						citS.append("ACCESSION_NUMBER::");
+						//citS.append("ACCESSION_NUMBER::"); //0
 						if(cite.getChild("brfinacc")!=null)
 						{
 							citS.append(cite.getChild("brfinacc").getTextTrim());
+							//System.out.println("ACCESSUUMBER="+cite.getChild("brfinacc").getTextTrim());
 						}
-
+						
 						citS.append(Constants.IDDELIMITER);
 
 						//DOI
-						citS.append("DOI::");
+						//citS.append("DOI::"); //1
 						if(cite.getChild("brfdoi")!=null)
 						{
 							citS.append(cite.getChild("brfdoi").getTextTrim());
+							//System.out.println("DOI="+cite.getChild("brfdoi").getTextTrim());
 						}
-
+						
 						citS.append(Constants.IDDELIMITER);
 
 						//Citation Type
-						citS.append("CITATION_TYPE::");
+						//citS.append("CITATION_TYPE::"); //2
 						if(cite.getAttributeValue("type")!=null)
 						{
 							citS.append(cite.getAttributeValue("type"));
+							//System.out.println("Citation Type="+cite.getAttributeValue("type"));
 						}
+						
 						citS.append(Constants.IDDELIMITER);
 
 						// Citation Label
-						citS.append("CITATION_LABEL::");
+						//citS.append("CITATION_LABEL::"); //3
 						if(cite.getChild("brflab")!=null)
 						{
 							citS.append(cite.getChild("brflab").getTextTrim());
+							//System.out.println("CITATION_LABEL="+cite.getChild("brflab").getTextTrim());
 						}
-
+						
 						citS.append(Constants.IDDELIMITER);
 
 						// Citation Author
-						citS.append("AUTHOR::");
+						//citS.append("AUTHOR::"); //4
 						Element authorGroup = cite.getChild("brfaug");
 						if(authorGroup!=null)
 						{
-
+							//citS.append(getName(authorGroup));
 							List nameList = authorGroup.getChildren("pname");
 							citS.append(getPname(nameList));
+							
+							//System.out.println("Citation Author="+getPname(nameList));
 						}
-
+						
 						citS.append(Constants.IDDELIMITER);
 
 						// Citation Year
-						citS.append("YEAR::");
+						//citS.append("YEAR::"); //5
 						if(cite.getChild("brfyr")!=null)
 						{
 							citS.append(cite.getChild("brfyr").getTextTrim());
+							//System.out.println("CITATION_YEAR="+cite.getChild("brfyr").getTextTrim());
 						}
-
+						
 						citS.append(Constants.IDDELIMITER);
 
 						// Journal title
-						citS.append("JOURNAL_TITLE::");
+						//citS.append("JOURNAL_TITLE::"); //6
 						if(cite.getChild("brfjrti")!=null)
 						{
 							citS.append(cite.getChild("brfjrti").getTextTrim());
+							//System.out.println("Journal title="+cite.getChild("brfjrti").getTextTrim());
 						}
-
+						
 						citS.append(Constants.IDDELIMITER);
 
 
 						// Abbreviated journal title
-						citS.append("ABBR_TITLE::");
+						//citS.append("ABBR_TITLE::"); //7
 						if(cite.getChild("brfajt")!=null)
 						{
 							citS.append(cite.getChild("brfajt").getTextTrim());
+							//System.out.println("Abbreviated journal title="+cite.getChild("brfajt").getTextTrim());
 						}
-
+						
 						citS.append(Constants.IDDELIMITER);
 
 
 						// ISSN
-						citS.append("ISSN::");
+						//citS.append("ISSN::"); //8
 						if(cite.getChild("brfissn")!=null)
 						{
 							citS.append(cite.getChild("brfissn").getTextTrim());
+							//System.out.println("ISSN="+cite.getChild("brfissn").getTextTrim());
 						}
-
+						
 						citS.append(Constants.IDDELIMITER);
 
 
 						// Volume and issue data group
-						citS.append("VOLUME_ISSUE::");
+						//citS.append("VOLUME_ISSUE::"); //9
 						if(cite.getChild("brfvid")!=null)
 						{
 							Element viGroup=cite.getChild("brfvid");
 							if(viGroup.getChild("voliss")!=null)
 							{
 								citS.append(viGroup.getChild("voliss").getTextTrim());
+								//System.out.println("VOLUME_ISSUE="+viGroup.getChild("voliss").getTextTrim());
 							}
+							
 							citS.append(Constants.GROUPDELIMITER);
 							if(viGroup.getChild("vol")!=null)
 							{
 								citS.append(viGroup.getChild("vol").getTextTrim());
+								//System.out.println("VOLUME="+viGroup.getChild("vol").getTextTrim());
 							}
+							
 							citS.append(Constants.GROUPDELIMITER);
 							if(viGroup.getChild("ino")!=null)
 							{
 								citS.append(viGroup.getChild("ino").getTextTrim());
+								//System.out.println("INO="+viGroup.getChild("ino").getTextTrim());
 							}
+							
 						}
 
 						citS.append(Constants.IDDELIMITER);
 
 						// Publication date
-						citS.append("PUBLICATION_DATE::");
+						//citS.append("PUBLICATION_DATE::"); //10
 						if(cite.getChild("brfpdt")!=null)
 						{
 							Element pdGroup=cite.getChild("brfpdt");
@@ -462,133 +481,128 @@ public class InspecXMLReader extends FilterReader
 
 
 						// First Page
-						citS.append("FIRST_PAGE::");
+						//citS.append("FIRST_PAGE::"); //11
 						if(cite.getChild("brffp")!=null)
 						{
 							citS.append(cite.getChild("brffp").getTextTrim());
+							//System.out.println("FIRST_PAGE="+cite.getChild("brffp").getTextTrim());
 						}
-
+						
 						citS.append(Constants.IDDELIMITER);
 
 
 						// Page
-						citS.append("PAGE::");
+						//citS.append("PAGE::"); //12
 						if(cite.getChild("brfpp")!=null)
 						{
 							citS.append(cite.getChild("brfpp").getTextTrim());
+							//System.out.println("PAGE="+cite.getChild("brfpp").getTextTrim());
 						}
-
+						
 						citS.append(Constants.IDDELIMITER);
 
 
 
 						// Raw text
-						citS.append("RAW::");
+						//citS.append("RAW::"); //13
 						if(cite.getChild("brfraw")!=null)
 						{
-							String rawString = cite.getChild("brfraw").getTextTrim();
+							String rawString = getMixData(cite.getChild("brfraw").getContent(),new StringBuffer()).toString();							
 							if(rawString.indexOf("\n")>-1)
 							{
 								rawString = rawString.replaceAll("\n"," ");
 							}
 							citS.append(rawString);
+							//System.out.println("Raw text="+cite.getChild("brfraw").getTextTrim());
 						}
-
+						
 						citS.append(Constants.IDDELIMITER);
 
-
-						// Collaboration
-						citS.append("COLLABORATION::");
-						if(cite.getChild("collab")!=null)
-						{
-							citS.append(cite.getChild("collab").getTextTrim());
-						}
-
-						citS.append(Constants.IDDELIMITER);
-
-						// Et al
-						citS.append("ETAL::");
-						if(cite.getChild("etal")!=null)
-						{
-							citS.append(cite.getChild("etal").getTextTrim());
-						}
-
-						citS.append(Constants.IDDELIMITER);
-
-
+						
 						//Title
-						citS.append("TITLE::");
+						//citS.append("TITLE::"); //14
 						if(cite.getChild("brfti")!=null)
 						{
 							citS.append(cite.getChild("brfti").getTextTrim());
+							//System.out.println("Title="+cite.getChild("brfti").getTextTrim());
 						}
-
+						
 						citS.append(Constants.IDDELIMITER);
 
 
 
 						//Publication  Title
-						citS.append("PUBLCATION_TITLE::");
+						//citS.append("PUBLCATION_TITLE::"); //15
 						if(cite.getChild("brfpubti")!=null)
 						{
 							citS.append(cite.getChild("brfpubti").getTextTrim());
+							//System.out.println("Publication  Title="+cite.getChild("brfpubti").getTextTrim());
 						}
-
+						
 						citS.append(Constants.IDDELIMITER);
 
 
 						//Abbreviated journal title
-						citS.append("ABBR_JOURNAL_TITLE::");
+						//citS.append("ABBR_JOURNAL_TITLE::"); //16
 						if(cite.getChild("brfajt")!=null)
 						{
 							citS.append(cite.getChild("brfajt").getTextTrim());
+							//System.out.println("Abbreviated journal title="+cite.getChild("brfajt").getTextTrim());
 						}
-
+						
 						citS.append(Constants.IDDELIMITER);
 
 
 						//Publisher
-						citS.append("PUBLISHER::");
+						//citS.append("PUBLISHER::"); //17
 						if(cite.getChild("brfpnm")!=null)
 						{
 							citS.append(cite.getChild("brfpnm").getTextTrim());
+							//System.out.println("Publisher="+cite.getChild("brfpnm").getTextTrim());
 						}
-
+						
 						citS.append(Constants.IDDELIMITER);
 
 
 
 						//Series title
-						citS.append("SERIES_TITLE::");
+						//citS.append("SERIES_TITLE::"); //18
 						if(cite.getChild("brfser")!=null)
 						{
 							citS.append(cite.getChild("brfser").getTextTrim());
+							//System.out.println("Series title="+cite.getChild("brfser").getTextTrim());
 						}
-
+						
 						citS.append(Constants.IDDELIMITER);
 
 
 						//Editor group
 
-						citS.append("EDITOR::");
+						//citS.append("EDITOR::"); //19
 						if(cite.getChild("brfedg")!=null)
 						{
 							Element editorGroup = cite.getChild("brfedg");
 							List editorList = null;
+							String editor = "";
+							String etal = "";
 							if(editorGroup.getChildren("pname")!=null)
 							{
 								editorList = editorGroup.getChildren("pname");
-								citS.append(getPname(editorList));
+								editor = getPname(editorList);
+								
 							}
 							else if(editorGroup.getChildren("collab")!=null)
 							{
 								editorList = editorGroup.getChildren("collab");
-								citS.append(getCollab(editorList));
+								editor = getCollab(editorList);								
 							}
-							else if(editorGroup.getChild("etal")!=null)
+							
+							if(editorGroup.getChild("etal")!=null)
 							{
-								citS.append(cite.getChild("etal").getTextTrim());
+								etal = editorGroup.getChild("etal").getTextTrim();
+								
 							}
+							citS.append(editor+Constants.GROUPDELIMITER+etal);
 
 						}
 
@@ -596,101 +610,205 @@ public class InspecXMLReader extends FilterReader
 
 
 						//Issuing Organisation
-						citS.append("ISSUE_ORGANIZATION::");
+						//citS.append("ISSUE_ORGANIZATION::"); //20
 						if(cite.getChild("brfisorg")!=null)
 						{
 							Element issuingOrg = cite.getChild("brfisorg");
+							String orgName = "";
+							String orgCountry = "";
 							if(issuingOrg.getChild("orgn")!=null)
 							{
-								citS.append(issuingOrg.getChild("orgn").getTextTrim());
+								orgName = issuingOrg.getChild("orgn").getTextTrim();
 							}
-							else if(issuingOrg.getChild("cntry")!=null)
+							
+							if(issuingOrg.getChild("cntry")!=null)
 							{
-								citS.append(issuingOrg.getChild("cntry").getTextTrim());
+								orgCountry=issuingOrg.getChild("cntry").getTextTrim();								
 							}
+							citS.append(orgName+Constants.GROUPDELIMITER+orgCountry);
 						}
 
 						citS.append(Constants.IDDELIMITER);
 
 
 						//Place of publication
-						citS.append("PUBLICATION_PLACE::");
+						//citS.append("PUBLICATION_PLACE::"); //21
 						if(cite.getChild("brfloc")!=null)
 						{
 							citS.append(cite.getChild("brfloc").getTextTrim());
+							//System.out.println("Place of publication="+cite.getChild("brfloc").getTextTrim());
 						}
-
+						
 						citS.append(Constants.IDDELIMITER);
 
 						//Country
-						citS.append("COUNTRY::");
+						//citS.append("COUNTRY::"); //22 // no data to test **************************
 						if(cite.getChild("brfcny")!=null)
 						{
 							citS.append(cite.getChild("brfcny").getTextTrim());
+							//System.out.println("Country="+cite.getChild("brfcny").getTextTrim());
 						}
+						
 						citS.append(Constants.IDDELIMITER);
 
 						//ISBN
-						citS.append("ISBN::");
+						//citS.append("ISBN::"); //23 //no data to test *********************
 						if(cite.getChild("brfisbn")!=null)
 						{
 							citS.append(cite.getChild("brfisbn").getTextTrim());
+							//System.out.println("ISBN="+cite.getChild("brfisbn").getTextTrim());
 						}
+						
 						citS.append(Constants.IDDELIMITER);
 
 
 						//Conference group
-						citS.append("CONFERENCE::");
+						//citS.append("CONFERENCE::"); //24 //very complicated element //need more time to research ****************
 						if(cite.getChild("brfcng")!=null)
 						{
-							citS.append(cite.getChild("brfcng").getTextTrim());
+							Element confgroup = cite.getChild("brfcng");
+							String conferenceTitle ="";
+							String conferenceDates ="";
+							String location="";
+							String country="";
+							String conferenceSponsorsGroup="";
+
+							if(confgroup.getChild("ct")!=null)
+							{
+								conferenceTitle=getMixData(confgroup.getChild("ct").getContent(),new StringBuffer()).toString();
+							}
+							
+							if(confgroup.getChild("cndt")!=null)
+							{
+								Element date = confgroup.getChild("cndt");
+								StringBuffer dateBuffer = new StringBuffer();
+								if(date.getChild("odate")!=null)
+								{
+									dateBuffer.append(getMixData(date.getChild("odate").getContent(),new StringBuffer()));
+								}								
+								else if(date.getChild("sdate")!=null)
+								{
+									dateBuffer.append(getDate(date.getChild("sdate")));
+								}							
+								else if(date.getChild("edate")!=null)
+								{
+									dateBuffer.append(getDate(date.getChild("edate")));
+								}	
+								conferenceDates = dateBuffer.toString();
+							}
+							
+							if(confgroup.getChild("loc")!=null)
+							{
+								location=getMixData(confgroup.getChild("loc").getContent(),new StringBuffer()).toString();
+							}
+							if(confgroup.getChild("cntry")!=null)
+							{								
+								country=getMixData(confgroup.getChild("cntry").getContent(),new StringBuffer()).toString();
+							}
+							if(confgroup.getChild("cnsg")!=null)
+							{
+								List organisations=confgroup.getChildren("orgn");
+								StringBuffer organisationNameBuffer=new StringBuffer();
+								for (int k = 0; k < organisations.size(); k++)
+								{
+									   Element organisation = (Element) organisations.get(k);
+									   organisationNameBuffer.append(getMixData(organisation.getContent(),new StringBuffer()));
+									   if(k < (organisations.size()-1))
+									   {
+										   organisationNameBuffer.append(", ");
+									   }
+								}	
+								conferenceSponsorsGroup = organisationNameBuffer.toString();
+							}
+													
+							//System.out.println("Conference group="+cite.getChild("brfcng").getTextTrim());
+							citS.append(conferenceTitle.trim()+Constants.GROUPDELIMITER+conferenceDates+Constants.GROUPDELIMITER+location+Constants.GROUPDELIMITER+country+Constants.GROUPDELIMITER+conferenceSponsorsGroup);
 						}
+						
 						citS.append(Constants.IDDELIMITER);
 
 
 						//Report number
-						citS.append("REPORT_NUMBER::");
+						//citS.append("REPORT_NUMBER::"); //25 //no test data ****************************
 						if(cite.getChild("brfrepno")!=null)
 						{
 							citS.append(cite.getChild("brfrepno").getTextTrim());
+							//System.out.println("Report number="+cite.getChild("brfrepno").getTextTrim());
 						}
+						
 						citS.append(Constants.IDDELIMITER);
 
 
 						//Standard number
-						citS.append("STANDARD_NUMBER::");
-						if(cite.getChild("brfstdno")!=null)
+						//citS.append("STANDARD_NUMBER::"); //26 //no test data ********************
+						if(cite.getChild("brfstdno")!=null) 
 						{
 							citS.append(cite.getChild("brfstdno").getTextTrim());
+							//System.out.println("Standard number="+cite.getChild("brfstdno").getTextTrim());
 						}
+						
 						citS.append(Constants.IDDELIMITER);
 
 						//Patent details group
-						citS.append("PATENT_DETAIL::");
-						if(cite.getChild("brfstdno")!=null)
-						{
-							citS.append(cite.getChild("brfstdno").getTextTrim());
-						}
-						citS.append(Constants.IDDELIMITER);
-
-						//Patent data
-						citS.append("PATENT_DATA::");
+						//citS.append("PATENT_DETAIL::"); //27 //no test data***********************						
+						
 						if(cite.getChild("brfpat")!=null)
 						{
-							citS.append(cite.getChild("brfpat").getTextTrim());
+							Element patentData = cite.getChild("brfpat");
+							String patentNumber = "";
+							String patentCountry = "";
+							String dateSubmitted = "";
+							String patentAssigneeGroup = "";
+							if(patentData.getChild("patno")!=null)
+							{
+								patentNumber=patentData.getChild("patno").getTextTrim();
+							}
+							if(patentData.getChild("cntry")!=null)
+							{
+								patentCountry=patentData.getChild("cntry").getTextTrim();
+							}
+							if(patentData.getChild("subdt")!=null)
+							{
+								dateSubmitted=patentData.getChild("subdt").getTextTrim();
+							}
+							if(patentData.getChild("assg")!=null)
+							{
+								patentAssigneeGroup=getFields(patentData.getChild("assg")).toString();
+								patentAssigneeGroup=patentAssigneeGroup.replace(Constants.AUDELIMITER, Constants.GROUPDELIMITER);
+							}
+							
+							citS.append(patentCountry+Constants.GROUPDELIMITER+patentNumber);
+							//System.out.println("Patent data="+patentCountry+Constants.GROUPDELIMITER+patentNumber);
 						}
+						
 						citS.append(Constants.IDDELIMITER);
 
 						// Date
-						citS.append("DATE::");
-						if(cite.getChild("brfdate")!=null)
+						//citS.append("DATE::"); //28
+						if(cite.getChild("brfdate")!=null) //no test data *********************
 						{
-							citS.append(cite.getChild("brfdate").getTextTrim());
+							Element date = cite.getChild("brfdate");
+							StringBuffer dateBuffer = new StringBuffer();
+							if(date.getChild("odate")!=null)
+							{
+								dateBuffer.append(getMixData(date.getChild("odate").getContent(),new StringBuffer()));
+							}								
+							else if(date.getChild("sdate")!=null)
+							{
+								dateBuffer.append(getDate(date.getChild("sdate")));
+							}							
+							else if(date.getChild("edate")!=null)
+							{
+								dateBuffer.append(getDate(date.getChild("edate")));
+							}	
+							citS.append(dateBuffer.toString());
+							//System.out.println("DATE="+cite.getChild("brfdate").getTextTrim());
 						}
+						
 						citS.append(Constants.IDDELIMITER);
 
 						// LINK
-						citS.append("LINK::");
+						//citS.append("LINK::"); //29
 						if(cite.getChild("brflink")!=null)
 						{
 							Element link=cite.getChild("brflink");
@@ -705,12 +823,13 @@ public class InspecXMLReader extends FilterReader
 						citS.append(Constants.IDDELIMITER);
 
 						// NOTES
-						citS.append("NOTES::");
+						//citS.append("NOTES::"); //30
 						if(cite.getChild("brfnotes")!=null)
 						{
 							citS.append(cite.getChild("brfnotes").getTextTrim());
+							//System.out.println("NOTES="+cite.getChild("brfnotes").getTextTrim());
 						}
-
+						
 						citS.append(Constants.AUDELIMITER);
 
 					}
@@ -718,6 +837,7 @@ public class InspecXMLReader extends FilterReader
 					{
 						citS.deleteCharAt(citS.length()-1);
 					}
+					//System.out.println("*************************************************************");
 				}
 
 
@@ -756,12 +876,7 @@ public class InspecXMLReader extends FilterReader
 			while(nameIt.hasNext())
 			{
 				Element nameEl = (Element)nameIt.next();
-				if(nameEl.getAttribute("id")!=null)
-				{
-				  citS.append(nameEl.getAttribute("id").getValue());
-				}
-				citS.append("|");
-
+				
 				if(nameEl.getChild("snm")!=null)
 				{
 					citS.append(getMixData(nameEl.getChild("snm").getContent(),new StringBuffer()));
@@ -779,6 +894,12 @@ public class InspecXMLReader extends FilterReader
 				  citS.append(nameEl.getChild("sfix").getTextTrim());
 			   }
 			   citS.append("|");
+			   
+			   if(nameEl.getAttribute("id")!=null)
+				{
+				  citS.append(nameEl.getAttribute("id").getValue());
+				}
+				citS.append("|");
 
 			   if(nameEl.getChildren("fnm") != null)
 			   {
@@ -810,7 +931,31 @@ public class InspecXMLReader extends FilterReader
 		return citS.toString();
 
 	}
+	
+	/*
+	private String getDate(Element e)
+	{
+		StringBuffer dateB = new StringBuffer();
+		if(e.getChild("mo")!=null)
+		{
+			dateB.append(e.getChild("mo").getTextTrim());
+			dateB.append("-");
+		}
 
+		if(e.getChild("day")!=null)
+		{
+			dateB.append(e.getChild("day").getTextTrim());
+			dateB.append("-");
+		}
+		
+		if(e.getChild("yr")!=null)
+		{
+			dateB.append(e.getChild("yr").getTextTrim());		
+		}
+		return dateB.toString();
+	}
+	*/
+	
     private  StringBuffer getMixData(List l, StringBuffer b)
     {
         Iterator it = l.iterator();
