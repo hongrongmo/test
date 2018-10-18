@@ -333,15 +333,17 @@ public class InspecBaseTableDriver
     private void writeRecs(InspecXMLReader r) throws Exception
     {
 
-        Hashtable record = null;
+        Hashtable<String,StringBuffer> record = null;
         while((record = r.getRecord())!=null )
         {
             if(exitNumber != 0 && counter > exitNumber)
             {
                 break;
             }
-            if (record.get(InspecXMLReader.ARTICLETYPE).equals(InspecXMLReader.CURRENT_DATA))
-            {
+            String articletype = record.get(InspecXMLReader.ARTICLETYPE).toString();
+           
+            if (articletype.equals(InspecXMLReader.CURRENT_DATA))
+            {           	
                 record.put("LOAD_NUMBER", new StringBuffer(Integer.toString(this.loadNumber)));
                 record.put("M_ID", new StringBuffer("inspec_"+(new GUID()).toString()));
                 baseWriter.writeRec(record);
