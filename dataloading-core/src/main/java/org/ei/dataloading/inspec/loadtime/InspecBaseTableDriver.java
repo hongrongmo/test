@@ -157,7 +157,7 @@ public class InspecBaseTableDriver
         BufferedReader in = null;
         ZipInputStream zin=null;
         ZipEntry entry=null;
-
+        
         try
         {
 
@@ -179,8 +179,7 @@ public class InspecBaseTableDriver
 
 
                         if(type.equalsIgnoreCase("XML"))
-                        {
-
+                        {                        	
                             writeRecs(new InspecXMLReader(in));
                         }
                         else

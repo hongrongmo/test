@@ -48,6 +48,7 @@ public class INSCorrection
     static String lookupTable="deleted_lookupIndex";
     static String backupTable="ins_temp_backup";
     static String numericalTable="ins_master_numerical_temp";
+    static String citationTable="ins_master_citation_temp";
     static String sqlldrFileName="InspecSqlLoaderFile.sh";
 
     String [] ipccode = null;
@@ -143,7 +144,7 @@ public class INSCorrection
             if(args[1]!=null)
             {
                 tableToBeTruncated = args[1];
-                System.out.println("args[1] tableToBeTruncated= "+fileToBeLoaded);
+                System.out.println("args[1] tableToBeTruncated= "+tableToBeTruncated);
             }
 
             if(args[2]!=null)
@@ -231,7 +232,9 @@ public class INSCorrection
                 }
 
                 InspecBaseTableDriver c = new InspecBaseTableDriver(updateNumber);
-                c.writeBaseTableFile(fileToBeLoaded,"XML");
+                //c.writeBaseTableFile(fileToBeLoaded,"XML");
+                
+                c.writeBaseTableFile(fileToBeLoaded);
                 String dataFile=fileToBeLoaded+".out";
                 List dataFileList = new ArrayList();
                 int i=0;
@@ -757,6 +760,17 @@ public class INSCorrection
                 pstmt = con.prepareCall("{ call update_ins_numerical_table(?)}");
                 pstmt.setInt(1,updateNumber);
                 pstmt.executeUpdate();
+                
+                if(test)
+                {
+                    System.out.println("begin to execute stored procedure UPDATE_INS_CITATION_TABLE");
+                    System.out.println("press enter to continue");
+                    System.in.read();
+                    Thread.currentThread().sleep(1000);
+                }
+                pstmt = con.prepareCall("{ call UPDATE_INS_CITATION_TABLE(?)}");
+                pstmt.setInt(1,updateNumber);
+                pstmt.executeUpdate();
             }
             else if(action != null && action.equalsIgnoreCase("ins"))
             {
@@ -926,6 +940,12 @@ public class INSCorrection
                 {
                     this.numericalTable=tableName[i];
                     System.out.println("truncate numerical temp table "+this.numericalTable);
+                }
+                
+                if(i==4)
+                {
+                    this.citationTable=tableName[i];
+                    System.out.println("truncate citation temp table "+this.citationTable);
                 }
 
                 stmt.executeUpdate("truncate table "+tableName[i]);
