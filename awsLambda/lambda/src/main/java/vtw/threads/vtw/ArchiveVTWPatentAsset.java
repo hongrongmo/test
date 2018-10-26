@@ -641,14 +641,16 @@ public class ArchiveVTWPatentAsset implements Runnable{
 
 			public boolean accept(File dir, String name) {
 
-				return (name.toLowerCase().startsWith("us") || name.toLowerCase().startsWith("ep"));
+				return (name.toLowerCase().startsWith("us") || name.toLowerCase().startsWith("ep") || name.toLowerCase().startsWith("wo"));
 			}
 		});
 
-		System.out.println("Total US/EP downloaded: " + files.length);
+		System.out.println("Total US/EP/WO downloaded: " + files.length);
 		allFilesList.add(files);
 
-		files = downDir.list(new FilenameFilter() {
+		
+		// move WO to US & UP because it will be realeased & processed the same
+/*		files = downDir.list(new FilenameFilter() {
 
 
 			public boolean accept(File dir, String name) {
@@ -658,7 +660,7 @@ public class ArchiveVTWPatentAsset implements Runnable{
 		});
 
 		System.out.println("Total WO FIles downloaded: " + files.length);
-		allFilesList.add(files);
+		allFilesList.add(files);*/
 
 		//Monday 08/20/2018 add 3 more Patents CN, JP and KR
 
@@ -709,7 +711,8 @@ public class ArchiveVTWPatentAsset implements Runnable{
 			// create zip files if any files were downloaded, otherwise no zip file should be created
 			if(xmlFiles.length >0)
 			{
-				if(xmlFiles[0].toLowerCase().startsWith("wo"))
+				// before release forward WO to be processed with US/EUP
+				/*if(xmlFiles[0].toLowerCase().startsWith("wo"))
 				{
 					prefix="WO";
 
@@ -722,8 +725,8 @@ public class ArchiveVTWPatentAsset implements Runnable{
 						}
 					});
 
-				}
-				else if(xmlFiles[0].toLowerCase().startsWith("cn"))
+				}*/
+				if(xmlFiles[0].toLowerCase().startsWith("cn"))
 				{
 					prefix="CN";
 
@@ -765,16 +768,16 @@ public class ArchiveVTWPatentAsset implements Runnable{
 					});
 
 				}
-				else if((xmlFiles[0].toLowerCase().startsWith("us")) || (xmlFiles[0].toLowerCase().startsWith("ep")))
+				else if((xmlFiles[0].toLowerCase().startsWith("us")) || (xmlFiles[0].toLowerCase().startsWith("ep")) || (xmlFiles[0].toLowerCase().startsWith("wo")))
 				{
-					prefix="US/EP";
+					prefix="US/EP/WO";
 
 					xmlFilesToDelete = downDir.listFiles(new FilenameFilter() {
 
 
 						public boolean accept(File dir, String name) {
 
-							return (name.toLowerCase().startsWith("us") || name.toLowerCase().startsWith("ep"));
+							return (name.toLowerCase().startsWith("us") || name.toLowerCase().startsWith("ep") || name.toLowerCase().startsWith("wo"));
 						}
 					});
 				}
@@ -786,9 +789,10 @@ public class ArchiveVTWPatentAsset implements Runnable{
 
 				if(msgType !=null && msgType.equalsIgnoreCase("forward"))
 				{
-					if(prefix.equalsIgnoreCase("wo"))
-						zipsDir = new File(zipsDir+"/wo_forward_tmp");
-					else if (prefix.equalsIgnoreCase("cn"))
+					// before release of WO forward to be processed with US/EUP
+					/*if(prefix.equalsIgnoreCase("wo"))
+						zipsDir = new File(zipsDir+"/wo_forward_tmp");*/
+					if (prefix.equalsIgnoreCase("cn"))
 						zipsDir = new File(zipsDir + "/cn_forward_tmp");
 					else if (prefix.equalsIgnoreCase("jp"))
 						zipsDir = new File(zipsDir + "/jp_forward_tmp");
