@@ -463,9 +463,9 @@ public class AuthorCombiner {
 						"a.CLASSIFICATION_SUBJABBR,a.CLASSIFICATION_ASJC,a.PUBLICATION_RANGE,a.JORNAL_HISTORY_TYPE,a.JOURNALS,a.CURRENT_AFF_ID,a.CURRENT_AFF_TYPE,a.CURRENT_AFF_RELATIONSHIP,"+
 						"a.PARENT_AFF_ID,a.PARENT_AFF_TYPE,a.PARENT_AFF_RELATIONSHIP,a.HISTORY_AFFILIATIONID,a.LOADNUMBER,a.DATABASE,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,"+
 						"a.UPDATENUMBER,a.E_ADDRESS,a.ORCID,a.SOURCE_TITLE,a.ES_STATUS, b.DOC_COUNT as DOC_COUNT  from " +  tableName + " a left outer join " + auDocCount_tableName + " b on a.AUTHORID = b.AUTHORID "+
-						"where a.updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where STATUS='matched')";
-*/
+						"where a.updatenumber=" + updateNumber + " and a.authorid in (select AUTHOR_ID from " + metadataTableName + " where STATUS='matched')";
 
+*/
 
 				//Testing
 

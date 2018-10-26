@@ -6,7 +6,8 @@ public class InitiatVtwThreads
 {
 
 	private static int numberOfRuns=0;
-	private static String queueName = "acc-contributor-event-queue-EV";
+	//private static String queueName = "acc-contributor-event-queue-EV";   // 1st UAT queue
+	private static String queueName = "uatnp.vtw-np.elsevier.com";
 	private static String sqlldrFileName = null;
 	static int loadNumber = 0;
 	static int recsPerZipFile = 20000;
