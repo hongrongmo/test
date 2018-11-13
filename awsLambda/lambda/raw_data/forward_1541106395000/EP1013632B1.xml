@@ -1,0 +1,1239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2015 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20150602" file="EP1013632B1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-changed="20130927" time-changed="014452">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Grant" publ-desc="Granted patent">
+      <document-id>
+        <country>EP</country>
+        <doc-number>1013632</doc-number>
+        <kind>B1</kind>
+        <date>20030903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>99300990</doc-number>
+        <kind>A</kind>
+        <date>19990210</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20090312">
+      <priority-claim sequence="1" kind="national">
+        <country>IN</country>
+        <doc-number>3826DEL1998</doc-number>
+        <kind>A</kind>
+        <date>19981224</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>IN</country>
+        <doc-number>DE382698</doc-number>
+        <kind>A</kind>
+        <date>19981224</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>DE382698</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>IN1998DE03826</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20090312">
+      <gazette-reference>
+        <date>20030903</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20000628</date>
+      </unexamined-printed-without-grant>
+      <printed-with-grant>
+        <date>20030903</date>
+      </printed-with-grant>
+      <publication-of-grant-date>
+        <date>20030903</date>
+      </publication-of-grant-date>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20090312">
+      <request-for-examination>
+        <date>20001227</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classification-ipc date-changed="20130707">
+      <main-classification>
+        <text> 7C 07C  67/08   A</text>
+        <edition>7</edition>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>67</main-group>
+        <subgroup>08</subgroup>
+        <qualifying-character>A</qualifying-character>
+      </main-classification>
+      <further-classification sequence="1">
+        <text> 7C 07C  69/14   B</text>
+        <edition>7</edition>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>69</main-group>
+        <subgroup>14</subgroup>
+        <qualifying-character>B</qualifying-character>
+      </further-classification>
+      <further-classification sequence="2">
+        <text> 7B 01J  21/00   B</text>
+        <edition>7</edition>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>21</main-group>
+        <subgroup>00</subgroup>
+        <qualifying-character>B</qualifying-character>
+      </further-classification>
+      <further-classification sequence="3">
+        <text> 7B 01J  39/10   B</text>
+        <edition>7</edition>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>39</main-group>
+        <subgroup>10</subgroup>
+        <qualifying-character>B</qualifying-character>
+      </further-classification>
+    </classification-ipc>
+    <classifications-ipcr date-changed="20130707">
+      <classification-ipcr sequence="1">
+        <text>B01J  21/16        20060101AFI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>21</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>B01J  37/30        20060101A N20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>37</main-group>
+        <subgroup>30</subgroup>
+        <classification-value>N</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C07B  61/00        20060101ALI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>B</subclass>
+        <main-group>61</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C07C  67/08        20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>67</main-group>
+        <subgroup>08</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>C07C  69/14        20060101ALI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>69</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>C07C  69/157       20060101ALI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>69</main-group>
+        <subgroup>157</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20130707">
+      <classification-cpc sequence="1">
+        <text>C07C  67/08        20130101  I20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>67</main-group>
+        <subgroup>08</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B01J  21/16        20130101  A20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>21</main-group>
+        <subgroup>16</subgroup>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>B01J  37/30        20130101  A20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>37</main-group>
+        <subgroup>30</subgroup>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <classifications-ecla date-changed="20130707">
+      <classification-ecla sequence="1" classification-scheme="EC" country="EP">
+        <text>C07C 67/08</text>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>67</main-group>
+        <subgroup>08</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="1" classification-scheme="ICO" country="EP">
+        <text>L01J 21:16</text>
+        <section>L</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>21</main-group>
+        <subgroup>16</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="2" classification-scheme="ICO" country="EP">
+        <text>L01J 37:30</text>
+        <section>L</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>37</main-group>
+        <subgroup>30</subgroup>
+      </classification-ecla>
+    </classifications-ecla>
+    <number-of-claims calculated="yes">7</number-of-claims>
+    <invention-title id="title_ger" date-changed="20070505" lang="ger" format="original">Verfahren zur Herstellung von Estern</invention-title>
+    <invention-title id="title_eng" date-changed="20070505" lang="eng" format="original">Process for production of esters</invention-title>
+    <invention-title id="title_fre" date-changed="20070505" lang="fre" format="original">Procédé de production d'esters</invention-title>
+    <references-cited date-changed="20070505">
+      <patent-citations name="patcit" date-changed="20070505" />
+      <non-patent-citations name="nplcit" date-changed="20070505" />
+      <citation>
+        <patcit num="1" dnum="EP-A- 0 031 252">
+          <document-id>
+            <country>EP</country>
+            <doc-number>31252</doc-number>
+            <kind>A1</kind>
+            <date>19810701</date>
+          </document-id>
+          <application-date>
+            <date>19801219</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="DE-A- 4 405 876">
+          <document-id>
+            <country>DE</country>
+            <doc-number>4405876</doc-number>
+            <kind>A1</kind>
+            <date>19951005</date>
+          </document-id>
+          <application-date>
+            <date>19940223</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <nplcit num="1">
+          <text>NAGARAJU, N. ET AL: "A comparison of catalytic activity of zeolites with some Lewis acids in esterification reaction" INDIAN J. CHEM. TECHNOL. (1996), 3(5), 253-255 CODEN: ICHTEU;ISSN: 0971-457X, XP002103380</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-0030327774&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="2">
+          <text>DATABASE WPI Section Ch, Week 8901 Derwent Publications Ltd., London, GB; Class E17, AN 89-003136 XP002103381 &amp; JP 63 280042 A (MITSUI TOATSU CHEM INC) , 17 November 1988</text>
+        </nplcit>
+      </citation>
+      <citation>
+        <nplcit num="3">
+          <text>DATABASE WPI Section Ch, Week 9433 Derwent Publications Ltd., London, GB; Class A21, AN 94-269393 XP002103382 &amp; JP 06 199739 A (SEKISUI CHEM IND CO LTD) , 19 July 1994</text>
+        </nplcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20061019">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>COUNCIL OF SCIENTIFIC AND  INDUSTRIAL RESEARCH </orgname>
+            <address>
+              <address-1>Rafi Marg</address-1>
+              <city>New Delhi 100 001</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>Choudary, Boyapati Manoranjan </name>
+            <address>
+              <address-1>Indian Inst. of Chemical Tech.,  Hyderabad -500007</address-1>
+              <city>Andhra Pradesh</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>Bhaskar, Veldurthy </name>
+            <address>
+              <address-1>Indian Inst. of Chemical Tech.,  Hyderabad -500007</address-1>
+              <city>Andhra Pradesh</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>Kantam, Mannepalli Lakshmi </name>
+            <address>
+              <address-1>Indian Inst. of Chemical Tech.,  Hyderabad -500007</address-1>
+              <city>Andhra Pradesh</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4">
+          <addressbook lang="eng">
+            <name>Rao, Kottapalli Koteswara </name>
+            <address>
+              <address-1>Indian Inst. of Chemical Tech.,  Hyderabad -500007</address-1>
+              <city>Andhra Pradesh</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5">
+          <addressbook lang="eng">
+            <name>Raghavan, Kondapuram Vijaya </name>
+            <address>
+              <address-1>Indian Inst. of Chemical Tech.,  Hyderabad -500007</address-1>
+              <city>Andhra Pradesh</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Jacob, Reuben Ellis </name>
+            <address>
+              <address-1>Edward Evans Barker,  Clifford's Inn,  Fetter Lane</address-1>
+              <city>London EC4A 1BZ</city>
+              <country>GB</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20061019">
+      <designation-epc>
+        <contracting-states>
+          <country>DE</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>IT</country>
+        </contracting-states>
+      </designation-epc>
+    </designation-of-states>
+    <patent-family date-changed="20100928">
+      <main-family family-id="1638878">
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>69910962</doc-number>
+            <kind>T2</kind>
+            <date>20040722</date>
+          </document-id>
+          <application-date>
+            <date>19990210</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20010016666</doc-number>
+            <kind>A1</kind>
+            <date>20010823</date>
+          </document-id>
+          <application-date>
+            <date>19990212</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1013632</doc-number>
+            <kind>B1</kind>
+            <date>20030903</date>
+          </document-id>
+          <application-date>
+            <date>19990210</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>69910962</doc-number>
+            <kind>D1</kind>
+            <date>20031009</date>
+          </document-id>
+          <application-date>
+            <date>19990210</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>3826DEL1998</doc-number>
+            <kind>A</kind>
+            <date>19990327</date>
+          </document-id>
+          <application-date>
+            <date>19981224</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>4488544</doc-number>
+            <kind>B2</kind>
+            <date>20100623</date>
+          </document-id>
+          <application-date>
+            <date>19990310</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1013632</doc-number>
+            <kind>A1</kind>
+            <date>20000628</date>
+          </document-id>
+          <application-date>
+            <date>19990210</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2000191591</doc-number>
+            <kind>A</kind>
+            <date>20000711</date>
+          </document-id>
+          <application-date>
+            <date>19990310</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>6472555</doc-number>
+            <kind>B2</kind>
+            <date>20021029</date>
+          </document-id>
+          <application-date>
+            <date>19990212</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="1423775">
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>69910962</doc-number>
+            <kind>D1</kind>
+            <date>20031009</date>
+          </document-id>
+          <application-date>
+            <date>19990210</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>69910962</doc-number>
+            <kind>T2</kind>
+            <date>20040722</date>
+          </document-id>
+          <application-date>
+            <date>19990210</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1013632</doc-number>
+            <kind>B1</kind>
+            <date>20030903</date>
+          </document-id>
+          <application-date>
+            <date>19990210</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>6472555</doc-number>
+            <kind>B2</kind>
+            <date>20021029</date>
+          </document-id>
+          <application-date>
+            <date>19990212</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20010016666</doc-number>
+            <kind>A1</kind>
+            <date>20010823</date>
+          </document-id>
+          <application-date>
+            <date>19990212</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>4488544</doc-number>
+            <kind>B2</kind>
+            <date>20100623</date>
+          </document-id>
+          <application-date>
+            <date>19990310</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1013632</doc-number>
+            <kind>A1</kind>
+            <date>20000628</date>
+          </document-id>
+          <application-date>
+            <date>19990210</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2000191591</doc-number>
+            <kind>A</kind>
+            <date>20000711</date>
+          </document-id>
+          <application-date>
+            <date>19990310</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>3826DEL1998</doc-number>
+            <kind>A</kind>
+            <date>19990327</date>
+          </document-id>
+          <application-date>
+            <date>19981224</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20120309" lang="eng" format="equivalent" country="EP" doc-number="1013632" kind="A1">
+    <p>The present invention relates to a process for the preparation of esters from alcohols using acetic acid as acetylating agent and clays as catalysts, which comprises the preparation of esters in a single step from the reaction of aliphatic, acyclic, cyclic, heterocyclic, alpha , beta  -unsaturated and aromatic alcohols with carbon atoms in the range of C1 to C10 with acetic acid in a molar ratio of 1:3 to 11 using reusable natural montmorillonite/ metal ion-exchanged clay catalysts in the solvent medium of aliphatic, aromatic, or chlorinated hydrocarbons at 30-140 DEG C for a period in the range of 0.02 to 3.0 hrs, and recovering the corresponding esters by simple work-up procedure.</p>
+  </abstract>
+  <legal-data date-changed="20140618">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20000628</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1013632A1</docdb-publication-number>
+      <docdb-application-id>17399184</docdb-application-id>
+      <corresponding-kind>A1</corresponding-kind>
+      <legal-designated-states>
+        <country>AT</country>
+        <country>BE</country>
+        <country>CH</country>
+        <country>CY</country>
+        <country>LI</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20000628</date>
+      </publication-date>
+      <event-code-1>AX</event-code-1>
+      <effect>+</effect>
+      <legal-description>EXTENSION OR VALIDATION OF THE EUROPEAN PATENT TO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1013632A1</docdb-publication-number>
+      <docdb-application-id>17399184</docdb-application-id>
+      <free-text-description>AL;LT;LV;MK;RO;SI</free-text-description>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20010228</date>
+      </publication-date>
+      <event-code-1>17P</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXAMINATION FILED</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1013632A1</docdb-publication-number>
+      <docdb-application-id>17399184</docdb-application-id>
+      <effective-date>
+        <date>20001227</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="4">
+      <publication-date>
+        <date>20010307</date>
+      </publication-date>
+      <event-code-1>AKX</event-code-1>
+      <effect>+</effect>
+      <legal-description>PAYMENT OF DESIGNATION FEES</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1013632A1</docdb-publication-number>
+      <docdb-application-id>17399184</docdb-application-id>
+      <free-text-description>AT BE CH CY LI</free-text-description>
+    </legal-event>
+    <legal-event sequence="5">
+      <publication-date>
+        <date>20010314</date>
+      </publication-date>
+      <event-code-1>RBV</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES (CORRECTION):</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1013632A1</docdb-publication-number>
+      <docdb-application-id>17399184</docdb-application-id>
+      <legal-designated-states>
+        <country>DE</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>IT</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="6">
+      <publication-date>
+        <date>20020710</date>
+      </publication-date>
+      <event-code-1>17Q</event-code-1>
+      <effect>+</effect>
+      <legal-description>FIRST EXAMINATION REPORT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1013632A1</docdb-publication-number>
+      <docdb-application-id>17399184</docdb-application-id>
+      <effective-date>
+        <date>20020528</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="7">
+      <publication-date>
+        <date>20030903</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1013632A1</docdb-publication-number>
+      <docdb-application-id>17399184</docdb-application-id>
+      <corresponding-kind>B1</corresponding-kind>
+      <legal-designated-states>
+        <country>DE</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>IT</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="8">
+      <publication-date>
+        <date>20030903</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1013632A1</docdb-publication-number>
+      <docdb-application-id>17399184</docdb-application-id>
+      <designated-state-authority>
+        <country>GB</country>
+      </designated-state-authority>
+      <designated-state-event-code>FG4D</designated-state-event-code>
+      <designated-state-description>EUROPEAN PATENT GRANTED</designated-state-description>
+    </legal-event>
+    <legal-event sequence="9">
+      <publication-date>
+        <date>20031009</date>
+      </publication-date>
+      <event-code-1>REF</event-code-1>
+      <legal-description>CORRESPONDS TO:</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1013632A1</docdb-publication-number>
+      <docdb-application-id>17399184</docdb-application-id>
+      <corresponding-publication-number>69910962</corresponding-publication-number>
+      <corresponding-authority>
+        <country>DE</country>
+      </corresponding-authority>
+      <corresponding-publication-date>
+        <date>20031009</date>
+      </corresponding-publication-date>
+      <corresponding-kind>P</corresponding-kind>
+    </legal-event>
+    <legal-event sequence="10">
+      <publication-date>
+        <date>20040625</date>
+      </publication-date>
+      <event-code-1>ET</event-code-1>
+      <effect>+</effect>
+      <legal-description>FR: TRANSLATION FILED</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1013632A1</docdb-publication-number>
+      <docdb-application-id>17399184</docdb-application-id>
+    </legal-event>
+    <legal-event sequence="11">
+      <publication-date>
+        <date>20040825</date>
+      </publication-date>
+      <event-code-1>26N</event-code-1>
+      <effect>+</effect>
+      <legal-description>NO OPPOSITION FILED</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1013632A1</docdb-publication-number>
+      <docdb-application-id>17399184</docdb-application-id>
+      <effective-date>
+        <date>20040604</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="12">
+      <publication-date>
+        <date>20110531</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1013632A1</docdb-publication-number>
+      <docdb-application-id>17399184</docdb-application-id>
+      <designated-state-authority>
+        <country>FR</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20110317</date>
+      </payment-date>
+      <fee-payment-year>13</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="13">
+      <publication-date>
+        <date>20110531</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1013632A1</docdb-publication-number>
+      <docdb-application-id>17399184</docdb-application-id>
+      <designated-state-authority>
+        <country>IT</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20110314</date>
+      </payment-date>
+      <fee-payment-year>13</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="14">
+      <publication-date>
+        <date>20110729</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1013632A1</docdb-publication-number>
+      <docdb-application-id>17399184</docdb-application-id>
+      <designated-state-authority>
+        <country>GB</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20110330</date>
+      </payment-date>
+      <fee-payment-year>13</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="15">
+      <publication-date>
+        <date>20120531</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1013632A1</docdb-publication-number>
+      <docdb-application-id>17399184</docdb-application-id>
+      <designated-state-authority>
+        <country>DE</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20110506</date>
+      </payment-date>
+      <fee-payment-year>13</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="16">
+      <publication-date>
+        <date>20121024</date>
+      </publication-date>
+      <event-code-1>GBPC</event-code-1>
+      <effect>-</effect>
+      <legal-description>GB: EUROPEAN PATENT CEASED THROUGH NON-PAYMENT OF RENEWAL FEE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1013632A1</docdb-publication-number>
+      <docdb-application-id>17399184</docdb-application-id>
+      <effective-date>
+        <date>20120210</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="17">
+      <publication-date>
+        <date>20121123</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1013632A1</docdb-publication-number>
+      <docdb-application-id>17399184</docdb-application-id>
+      <designated-state-authority>
+        <country>FR</country>
+      </designated-state-authority>
+      <designated-state-event-code>ST</designated-state-event-code>
+      <designated-state-description>NOTIFICATION OF LAPSE</designated-state-description>
+      <effective-date>
+        <date>20121031</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="18">
+      <publication-date>
+        <date>20121130</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1013632A1</docdb-publication-number>
+      <docdb-application-id>17399184</docdb-application-id>
+      <designated-state-authority>
+        <country>IT</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES</free-text-description>
+      <effective-date>
+        <date>20120210</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="19">
+      <publication-date>
+        <date>20121213</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1013632A1</docdb-publication-number>
+      <docdb-application-id>17399184</docdb-application-id>
+      <designated-state-authority>
+        <country>DE</country>
+      </designated-state-authority>
+      <designated-state-event-code>R119</designated-state-event-code>
+      <designated-state-description>APPLICATION DEEMED WITHDRAWN, OR IP RIGHT LAPSED, DUE TO NON-PAYMENT OF RENEWAL FEE</designated-state-description>
+      <corresponding-publication-number>69910962</corresponding-publication-number>
+      <corresponding-authority>
+        <country>DE</country>
+      </corresponding-authority>
+      <effective-date>
+        <date>20120901</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="20">
+      <publication-date>
+        <date>20130131</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1013632A1</docdb-publication-number>
+      <docdb-application-id>17399184</docdb-application-id>
+      <designated-state-authority>
+        <country>FR</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES</free-text-description>
+      <effective-date>
+        <date>20120229</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="21">
+      <publication-date>
+        <date>20130131</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1013632A1</docdb-publication-number>
+      <docdb-application-id>17399184</docdb-application-id>
+      <designated-state-authority>
+        <country>GB</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES</free-text-description>
+      <effective-date>
+        <date>20120210</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="22">
+      <publication-date>
+        <date>20130628</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1013632A1</docdb-publication-number>
+      <docdb-application-id>17399184</docdb-application-id>
+      <designated-state-authority>
+        <country>DE</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES</free-text-description>
+      <effective-date>
+        <date>20120901</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20070505">
+    <p id="p-00001-en">The present invention relates to a process for the production of esters from alcohols using acetic acid as the acetylating agent and clays as catalysts.</p>
+    <p id="p-00002-en">This invention particularly relates to an ecofriendly process for the production of esters from aromatic, aliphatic, α,β-unsaturated, cyclic and heterocyclic alcohols in the range of C<sub>1</sub> to C<sub>10</sub> using acetic acid as the acetylating reagent and clays as catalysts dispensing the use of expensive acetic anhydride as a reagent and corrosive and toxic sulfuric acid, sulfonic acids or expensive resins as catalysts. This process totally eliminates the disposal of salts formed consequent to the neutralisation of H<sub>2</sub>SO<sub>4</sub> or sulfonic acids and the use of expensive acetic anhydride.</p>
+    <p id="p-00003-en">Organic esters belong to a very important class of chemicals having applications as intermediates in the synthesis of fine chemicals, drugs, plasticizers, perfumes, food preservatives, cosmetics, pharmaceuticals, as solvents and chiral auxiliaries. In industry, the esterifications are generally carried out in the presence of hazardous, toxic and corrosive sulfuric acid and its derivatives or expensive ion exchange resins. To optimise the yields of ester formation from equimolar amounts of alcohols and carboxylic acids, 2-15 molar equivalents of the condensing agents such as sulfuric acid, tosylchloride, triofluoroacetic anhydride, polyphosphate ester, dicyclohexyl cabodiimide, graphite etc., are generally employed. Heterogeneous acidic and superacid catalysts have proved to be useful in some reactions because of their activity, selectivity, reusability, non-corrosivity and virtual absence of effiuent treatment which is associated with the homogeneous catalysts.</p>
+    <p id="p-00004-en">Reference may be made to a patent CS 254, 048 (Cl. C07C 69 / 14), 15 Nov 1988, wherein the esterification of BuOH with AcOH at reflux temperature of 79 to 80°C in the presence of H<sub>2</sub>SO<sub>4</sub> catalyst, resulted in butylacetate with 89-90% yield. Reference may be made to a patent CN 1,068,520 ( Cl . B 01 J 23/10 ), 03 Feb 1993, wherein the isopentyl alcohol esterification with AcOH at ≥140 °C and 100-142 hrs resulted in isopentyl acetate with H<sub>2</sub>SO<sub>4</sub> treated pulverised rare earth compounds as catalysts. The drawbacks in the above processes are longer reaction time, higher reaction temperatures and the use of corrosive sulphuric acid which requires the waste disposal consequent to the neutralisation with bases after the completion of the reaction.</p>
+    <p id="p-00005-en">The solid acids, solid super acids and cation exchange resins are very effective catalysts for the esterification process. Reference may be made to a patent, US 3,590,073 (Cl. 260-476 R ; C07 C), 29 Jun 1971, wherein the esterification of tert-BuOH with AcOH, was carried out by passing through a column of Amberlyst - 15 (the sufuric acid treated cation exchange resin ) at the rate of 0. 5ml/min at ambient temperature to give 25% tert-butyl acetate. Reference may be made to an European patent , EP 66.059 (Cl. C07 C69/14 ), 08 Dec. 1982, wherein the alcohols with 2-5 carbon atoms react with acetic acid in verticle reactor to give corresponding esters in presence of strongly acid ion exchangers as catalysts. Reference may be made to a patent Rom. Ro 72,739 (Cl. C07 C 69/14 ) 27 Jul 1981, wherein the esterification of β-phenyl ethyl alcohol with AcOH to give an ester in presence of cation exchanger. The drawbacks in the above processes are the use of expensive resins as catalysts, applicable to 1-5 carbon atoms consisting substrates, higher reaction temperatures and lower conversions with poor yields.</p>
+    <p id="p-00006-en">Reference may be made to another communication in <i>Synthesis</i>, <b>1978</b> (12) 929-30, wherein the esterification of primary and secondary alcohols with acetic acid was performed in the presence of Nafion-H for 4 hrs, resulting in moderate yields (40-60%). The drawbacks in the above processes are the moderate yields and the use of expensive resin catalyst. Reference may be made to a communication in <i>J.Org. Chem</i>., <b>1996</b>, 61, 4560, wherein the esterification of alcohols with carboxylic acids in the presence of p-nitrobezoic anhydride and acylation of alcohols with acid anhydrides using scandium trifluromethane sulfonate (triflate) catalyst resulting &lt;1 to &gt;95% isolated yields in 0.5 to 5 h. The drawbacks in the above processes are the use of synthetic triflate catalyst and acetic anhydride as an acetylating agent. Reference may be made to another paper in <i>Chem. Comm</i><b>1996</b>, 2625 wherein various alcohols were acetylated in the presence of acetic anhydride (acetylating agent) and trimethylsilyl-trifluoromethanesulfonate (triflate) as catalyst. The yields obtained were 55 to 100% in 0.007 to 2h. The drawbacks in the above processes are the use of synthetic triflate catalyst, acetic anhydride as acetylating agent and lower yields. The last reference may be made to a communication in <i>Ind. Eng. Chem. Res</i>. <b>1994</b>, 33, 2198, wherein the production of phenethyl acetate and cyclohexyl acetate were performed using a variety of solid acid catalysts such as Amberlyst-15, Filtrol-24, sulfonated zirconia, DTPA/silica and DTPA/carbon and acetic acid as the acylating agent However, with Amberlyst-15 takes 5 h for 95.5% conversion of phenethyl alcohol while DTPA takes 3 h for a conversion of 100%. The drawbacks in the above process are the use of an expensive resins as catalysts and longer reaction time.</p>
+    <p id="p-00007-en">Obviously different approaches have been employed both on laboratory and commercial scale to prepare esters, and the traditional homogeneous catalysed reactions are being less favoured owing to the problems of separation and reuse. The present trend is to develop solid acids from cheaply available sources, and especially of clays.</p>
+    <p id="p-00008-en">In the prior art, DE 44 05 876A discloses a process for the preparation of esters from alcohols and acetic acid in the presence of calcium bentonite, but does not disclose the molar ratio of the reagents as set out in claim 1 hereto. Furthermore the journal reference "Indian Journal of Chemical Technology 1996, 3 (5) 253 - 255 discloses the process for the preparation of acetylated isoamile alcohol in the presence of various zeolite catalysts, there is no disclosure of the process of claim 1 however.</p>
+    <p id="p-00009-en">The main object of the present invention is to provide a process for the production of esters from alcohols using acetic acid as the acetylating agent and clays as catalysts which obviates the drawbacks as detailed above.</p>
+    <p id="p-00010-en">Another object of the present invention is the use of non-corrosive and cheaply available heterogeneous solid acid catalysts for easy adaptability in a continuous process.</p>
+    <p id="p-00011-en">Still another object of the present invention is to provide the process which is applicable to various substrates of aliphatic, acyclic, cyclic, heterocyclic, α,β-unsaturated and aromatic alcohols such as octanol, decanol, 2-octanol, amylalcohol, isoamylalcohol, 2-pentanol, cinnamyl alcohol, benzyl alcohol, trans-2-hexene-1-ol, cyclohexanol, cyclopentanol, 1-phenyl ethanol, p-methoxy-1-phenyl ethanol, p-methyl-1-phenyl ethanol and furfuryl alcohol.</p>
+    <p id="p-00012-en">Still another object of the present invention is to provide a process which takes place at lower reaction temperatures.</p>
+    <p id="p-00013-en">Yet another object of the present invention is to provide the process in short reaction time intervals.</p>
+    <p id="p-00014-en">Accordingly, the present invention provides a process for the production of esters from alcohols using acetic acid as the acetylating agent and clays as catalysts which comprises the preparation of esters in a single step from the reaction of aliphatic, acyclic, cyclic, heterocyclic, α,β-unsaturated and aromatic alcohols having carbon atoms in the range of C<sub>1</sub> to C<sub>10</sub> with acetic acid in the molar ratios of 1:3 to 11 using reusable natural montmorillonite/ metal ion exchanged clay catalysts such as Fe<sup>3+</sup>, Cu<sup>2+</sup>, Zn<sup>2+</sup>, Al<sup>3+</sup>, Ce<sup>3+</sup> or Zr<sup>4+</sup> - montmorillonites in the solvent medium of aliphatic, aromatic, or chlorinated hydrocarbons or without a solvent for at least at 30-140° C for a period in the range of 0.02 to 3.0 hrs. and recovering the corresponding esters by simple work-up procedure.</p>
+    <p id="p-00015-en">In an embodiment, the catalysts were selected from naturally available clays or metal ion exchange clays such as Fe<sup>3+</sup>, Cu<sup>2+</sup>, Zn<sup>2+</sup>, Al<sup>3+</sup>, Ce<sup>3+</sup> or Zr<sup>4+</sup> - montmorillonites.</p>
+    <p id="p-00016-en">In another embodiment, alcohols with carbon atoms in the range of 1-10 may be used and selected from octanol, decanol, 2-octanol, amylalcohol, isoamylalcohol, 2-pentanol, cinnamyl alcohol, benzyl alcohol, trans-2-hexene-1-ol, cyclohexanol, cyclopentanol, 1-phenyl ethanol, p-methoxy-1-phenyl ethanol, p-methyl-1-phenyl ethanol and furfuryl alcohol.</p>
+    <p id="p-00017-en">In still another embodiment, the solvents used for the reactions may be selected from aromatic hydrocarbons such as dichloroethane, acetic acid, chlorobenzene and toluene.</p>
+    <p id="p-00018-en">Is still another embodiment, the recovery of the corresponding esters was carried out by separating the catalyst through filtration, the excess acetic acid was neutralised by treating with saturated NaHCO<sub>3</sub> solution and removing the aromatic hydrocarbons by concentration in rotavapor.</p>
+    <p id="p-00019-en">Preferably, the present process for the preparation of esters from alcohols using acetic acid as acetylating agent and clays/modified clays as catalysts in solvent/without solvent medium ( in the presence or absence of a solvent) at 30°C for a period of 0.02 to 2.5h, and recovering the corresponding esters by easy work-up. The clay catalysts used may be selected from metal ion-exchanged montmorillonites/natural montmorillonite clays.</p>
+    <p id="p-00020-en">One of the major advantages involved in the present invention is use of abundantly available montmorillonite from nature as a catalyst for the acetylation of various alcohols with acetic acid (acetylating agent), preferably, without any further purification as shown in (example 1b) for the first time. The activity of the natural montmorillonite is comparable with the Cu<sup>2+</sup>-montmorillonite (Cu<sup>2+</sup>-exchanged K10 montmorillonite), which is synthesised from commercial K10 montmorillonite (acid treated montmorillonite - Fluka). K10 montmorillonite as such will lead to too many side products [ethers, olefins(dehydrated product), polymerised products, alkylation on the aromatic solvents used in the reaction] instead of giving the corresponding ester with the alcohol and acetic acid due to its higher acidic strength. Exchange of K10 montmorillonite with metal ions changes the acidic strength of the catalyst which was found to be suitable for the exclusive formation of the desired ester. In industries, the esterifications were generally carried out in presence of the sulfuric acid and resins (ion-exchange) catalysts. The resins are expensive and they loose the activity gradually. In some cases the removal separation of the catalyst from the product become more problematic due to their rigidity, whereas the cheaply available clay, the natural montmorillonite, overcomes the above problems with consistent activity for several cycles.</p>
+    <p id="p-00021-en">Metal ion-exchanged montmorillonite clay catalysts were prepared as described in example 1 and employed them in the esterification of alcohols with Acetic acid (acetylating agent ) as described in examples 2 to 21.</p>
+    <p id="p-00022-en">The following examples are given by way of illustration of the present invention and therefore should not be construed to limit the scope of the present invention.</p>
+    <heading>
+      <b>
+        <u>Example 1</u>
+      </b>
+    </heading>
+    <heading>Catalyst preparation</heading>
+    <p id="p-00023-en">
+      <ol>
+        <li>
+          <i>a</i>) <i>Cu<sup>2+</sup></i> - <i>exchanged montmorillonite :</i> 80 g of K10-montmorillonite was added to a 1 lt. aqueous solution of CuCl<sub>2</sub> (1.0 M) under stirring. Stirring was maintained for 16-30 hrs in order to saturate the exchange capacity of K10 montmorillonite. The clay suspension was centrifuged and the supernatant solution was discarded. Washing cycles were repeated until disappearance of Cl<sup>-</sup> ions from the discarded water The clay was dried overnight in an oven at 120 °C and finely ground in a mortar.</li>
+        <li>b) <i>Natural montmorillonite :</i> The clay (natural montmorillonite, obtained from M/ S Neelakanth chemical works, Jodhpur, India) was dried at 120 °C for 24 hrs and was used.</li>
+      </ol>
+    </p>
+    <heading>
+      <b>Example 2</b>
+    </heading>
+    <p id="p-00024-en">A solution of benzyl alcohol (5mmol, 0.54g) and acetic acid (50mmol, 3g) was treated at reflux temperature of 116°C in a two necked round bottom flask (50ml) in presence of Cu<sup>2-</sup>- montmorillonite clay (0.1g) catalyst. After completion of the reaction ( followed by TLC). 10ml of ethyl acetate was added to the reaction mixture and the catalyst was filtered The filtrate was treated with saturated NaHCO<sub>3</sub> solution (3x10 cm<sup>3</sup> ) followed by water wash (2x10 cm<sup>3</sup> ). The resulting solution was dried upon anhydrous sodium sulfate and pure product (0.73g ) was obtained after evaporation of the solvent on rotavapor.</p>
+    <heading>
+      <b>Example 3</b>
+    </heading>
+    <p id="p-00025-en">A solution of benzyl alcohol (5mmol, 0.54g) and acetic acid (50mmol, 3g) was treated at reflux temperature of 116°C in a two necked round bottom flask (50ml) in presence of natural montmorillonite clay (0.1g) catalyst After completion of the reaction ( followed through TLC), 10ml of ethyl acetate was added to the reaction mixture and the catalyst was filtered. The filtrate was treated with saturated NaHCO<sub>3</sub> solution (3x10 cm<sup>3</sup> ) followed by water wash (2x10 cm<sup>3</sup> ). The resulting solution was dried upon anhydrous sodium sulfate and pure product (0.74 g) was obtained after evaporation of the solvent on rotavapor.</p>
+    <heading>
+      <b>Example 4</b>
+    </heading>
+    <p id="p-00026-en">A solution of trans-2-hexen-1-ol (2mmol, 0.2 g) in dichloroethane (5 cm<sup>3</sup>) was treated with acetic acid (6 mmol, 0.36 g) at reflux temperature of 80°C in a two necked round bottom flask (50ml) in presence of Cu<sup>2+</sup>- montmorillonite clay ( 0.1g ) catalyst. After completion of the reaction ( followed by TLC), the catalyst was filtered and the filtrate was treated with saturated NaHCO<sub>3</sub> solution (2x5 cm<sup>3</sup> ) followed by water wash (2x10 cm<sup>3</sup> ). The resulting solution was dried upon anhydrous sodium sulfate and pure product ( 0.275 g ) was obtained after evaporation of the solvent on rotavapor.</p>
+    <heading>
+      <b>Example 5</b>
+    </heading>
+    <p id="p-00027-en">A solution of trans-2-hexen-1-ol (5mmol, 0.5 g) and acetic acid (50mmol, 3g) was treated at reflux temperature of 116°C in a two necked round bottom flask (50ml) in presence of natural montmorillonite clay (0.1g) catalyst. After completion of the reaction ( followed by TLC), 10ml of ethyl acetate was added to the reaction mixture and the catalyst was filtered The filtrate was treated with saturated NaHCO<sub>3</sub> solution (3x10 cm<sup>3</sup> ) followed by water wash (2x10 cm<sup>3</sup> ). The resulting solution was dried upon anhydrous sodium sulfate and pure product (0.69 g ) was obtained after evaporation of the solvent on rotavapor.</p>
+    <heading>
+      <b>Example 6</b>
+    </heading>
+    <p id="p-00028-en">A solution of octanol (2 mmol, 0.26 g) in toluene (5 cm<sup>3</sup> ) was treated with acetic acid (6 mmol, 0.36 g) at reflux temperature of 110° C in a two necked round bottom flask (50ml) in presence of Cu<sup>2+</sup>- montmorillonite clay ( 0.1g ) catalyst. After completion of the reaction ( followed through TLC), the catalyst was filtered and the filtrate was treated with saturated NaHCO<sub>3</sub> solution (2x5 cm<sup>3</sup> ) followed by water wash (2x10 cm<sup>3</sup> ). The resulting solution was dried upon anhydrous sodium sulfate and pure product ( 0. 34 g) was obtained after evaporation of the solvent on rotavapor.</p>
+    <heading>
+      <b>Example 7</b>
+    </heading>
+    <p id="p-00029-en">A solution of octanol (5mmol, 0.65g) and acetic acid (50mmol, 3g) was treated at reflux temperature of 116°C in a two necked round bottom flask (50ml) in presence of natural montmorillonite clay (0.1g) catalyst. After completion of the reaction ( followed by TLC), 10ml of ethyl acetate was added to the reaction mixture and the catalyst was filtered. The filtrate was treated with saturated NaHCO<sub>3</sub> solution (3x10 cm<sup>3</sup> ) followed by water wash (2x10 cm<sup>3</sup> ). The resulting solution was dried upon anhydrous sodium sulfate and pure product (0.845 g) was obtained after evaporation of the solvent on rotavapor</p>
+    <heading>
+      <b>Example 8</b>
+    </heading>
+    <p id="p-00030-en">A solution of decanol (2 mmol, 0.32 g) in toluene (5 cm<sup>3</sup> ) was treated with acetic acid (6 mmol, 0.36 g) at reflux temperature of 110° C in a two necked round bottom flask (50ml) in presence of Cu<sup>2+</sup>- montmorillonite clay ( 0.1g ) catalyst. After completion of the reaction ( followed by TLC), the catalyst was filtered and the filtrate was treated with saturated NaHCO<sub>3</sub> solution (2x5 cm<sup>3</sup> ) followed by water wash (2x10 cm<sup>3</sup> ). The resulting solution was dried upon anhydrous sodium sulfate and pure product ( 0.4 g) was obtained after evaporation of the solvent on rotavapor.</p>
+    <heading>
+      <b>Example 9</b>
+    </heading>
+    <p id="p-00031-en">A solution of decanol (5mmol, 0.79g) and acetic acid (50mmol, 3g) was treated at reflux temperature of 116°C in a two necked round bottom flask (50ml) in presence of natural montmorillonite clay (0.1 g catalyst. After completion of the reaction ( followed by TLC), 10ml of ethyl acetate was added to the reaction mixture and the catalyst was filtered. The filtrate was treated with saturated NaHCO<sub>3</sub> solution (3x10 cm<sup>3</sup> ) followed by water wash (2x10 cm<sup>3</sup>). The resulting solution was dried upon anhydrous sodium sulfate and pure product (0.98 g) was obtained after evaporation of the solvent on rotavapor.</p>
+    <heading>
+      <b>Example 10</b>
+    </heading>
+    <p id="p-00032-en">A solution of 2-octanol (5mmol, 0.65g) and acetic acid (50mmol, 3g) was treated at reflux temperature of 116°C in a two necked round bottom flask (50ml) in presence of natural montmorillonite clay (0.1g) catalyst. After completion of the reaction ( followed by TLC), 10ml of ethyl acetate was added to the reaction mixture and the catalyst was filtered. The filtrate was treated with saturated NaHCO<sub>3</sub> solution (3x10 cm<sup>3</sup> ) followed by water wash (2x10 cm<sup>3</sup>). The resulting solution was dried upon anhydrous sodium sulfate and pure product (0.84 g) was obtained after evaporation of the solvent on rotavapor</p>
+    <heading>
+      <b>Example 11</b>
+    </heading>
+    <p id="p-00033-en">A solution of amyl alcohol (5mmol, 0.44g) and acetic acid (50mmol, 3g) was treated at reflux temperature of 116°C in a two necked round bottom flask (50ml) in presence of natural montmorillonite clay (0.1g) catalyst. After completion of the reaction ( followed by gas chromatography), 10ml of ethyl acetate was added to the reaction mixture and the catalyst was filtered. The filtrate was treated with saturated NaHCO<sub>3</sub> solution (3x10 cm<sup>3</sup> ) followed by water wash (2x10 cm<sup>3</sup> ). The resulting solution was dried upon anhydrous sodium sulfate and pure product (0.647 g) was obtained after evaporation of the solvent on rotavapor</p>
+    <heading>
+      <b>Example 12</b>
+    </heading>
+    <p id="p-00034-en">A solution of isoamyl alcohol (5mmol, 0.44g) and acetic acid (50mmol, 3g) was treated at reflux temperature of 116°C in a two necked round bottom flask (50ml) in presence of natural montmorillonite clay (0.1g) catalyst. After completion of the reaction ( followed by gas chromatography), 10ml of ethyl acetate was added to the reaction mixture and the catalyst was filtered. The filtrate was treated with saturated NaHCO<sub>3</sub> solution (3x10 cm<sup>3</sup> ) followed by water wash (2x10 cm<sup>3</sup>). The resulting solution was dried upon anhydrous sodium sulfate and pure product (0.64 g) was obtained after evaporation of the solvent on rotavapor.</p>
+    <heading>
+      <b>Example 13</b>
+    </heading>
+    <p id="p-00035-en">A solution of 2-pentanol (5mmol, 0.44g) and acetic acid (50mmol, 3g) was treated at reflux temperature of 116°C in a two necked round bottom flask (50ml) in presence of natural montmorillonite clay (0.1g) catalyst. After completion of the reaction ( followed by gas chromatography), 10ml of ethyl acetate was added to the reaction mixture and the catalyst was filtered. The filtrate was treated with saturated NaHCO<sub>3</sub> solution (3x10 cm<sup>3</sup> ) followed by water wash (2x10 cm<sup>3</sup> ). The resulting solution was dried upon anhydrous sodium sulfate and pure product (0.5 g) was obtained after evaporation of the solvent on rotavapor.</p>
+    <heading>
+      <b>Example 14</b>
+    </heading>
+    <p id="p-00036-en">A solution of cinnamyl alcohol (5mmol, 0.67g) and acetic acid (50mmol, 3g) was treated at reflux temperature of 116°C in a two necked round bottom flask (50ml) in presence of natural montmorillonite clay (0.1g) catalyst. After completion of the reaction ( followed by TLC ), 10ml of ethyl acetate was added to the reaction mixture and the catalyst was filtered. The filtrate was treated with saturated NaHCO<sub>3</sub> solution (3x10 cm<sup>3</sup> ) followed by water wash (2x10 cm<sup>3</sup>). The resulting solution was dried over anhydrous sodium sulfate and pure product( 0.87 g) was obtained after evaporation of the solvent on rotavapor.</p>
+    <heading>
+      <b>Example 15</b>
+    </heading>
+    <p id="p-00037-en">A solution of cyclohexanol (5mmol, 0.50g) and acetic acid (50mmol, 3g) was treated at reflux temperature of 116°C in a two necked round bottom flask (50ml) in presence of natural montmorillonite clay (0.1g) catalyst. After completion of the reaction ( followed by TLC), 10ml of ethyl acetate was added to the reaction mixture and the catalyst was filtered. The filtrate was treated with saturated NaHCO<sub>3</sub> solution (3x10 cm<sup>3</sup> ) followed by water wash (2x10 cm<sup>3</sup> ). The resulting solution was dried over anhydrous sodium sulfate and pure product ( 0.69 g ) was obtained after evaporation of the solvent on rotavapor</p>
+    <heading>
+      <b>Example 16</b>
+    </heading>
+    <p id="p-00038-en">A solution of cyclopentanol (5mmol, 0.43 g) and acetic acid (50mmol, 3g) was treated at reflux temperature of 116°C in a two necked round bottom flask (50ml) in presence of natural montmorillonite clay (0.1g) catalyst. After completion of the reaction ( followed by TLC), 10ml of ethyl acetate was added to the reaction mixture and the catalyst was filtered. The filtrate was treated with saturated NaHCO<sub>3</sub> solution (3x10 cm<sup>3</sup> ) followed by water wash (2x10 cm<sup>3</sup> ). The resulting solution was dried over anhydrous sodium sulfate and pure product (0.63 g) was obtained after evaporation of the solvent on rotavapor.</p>
+    <heading>
+      <b>Example 17</b>
+    </heading>
+    <p id="p-00039-en">A solution of 1-phenyl ethanol[α-methylbenzyl alcohol] (2mmol, 0.24 g) in chloro benzene (5 cm<sup>3</sup> ) was treated with acetic acid (6 mmol, 0.36 g) at reflux temperature of 130°C in a two necked round bottom flask (50ml) in presence of natural montmorillonite clay (0.1g) catalyst. After completion of the reaction ( followed by TLC), the catalyst was filtered and the filtrate was treated with saturated NaHCO<sub>3</sub> solution (2x5 cm<sup>3</sup> ) followed by water wash (2x10 cm<sup>3</sup>). The resulting solution was dried over anhydrous sodium sulfate and pure product (0.310 g) was obtained after evaporation of the solvent on rotavapor.</p>
+    <heading>
+      <b>Example 18</b>
+    </heading>
+    <p id="p-00040-en">A solution of p-methoxy-1-phenyl ethanol (2mmol, 0.304 g) in chloro benzene (5 cm<sup>3</sup>) was treated with acetic acid (6 mmol, 0.36 g) at reflux temperature of 130°C in a two necked round bottom flask (50ml) in presence of natural montmorillonite clay (0.1g) catalyst. After completion of the reaction ( followed by TLC), the catalyst was filtered and the filtrate was treated with saturated NaHCO<sub>3</sub> solution (2x5 cm<sup>3</sup> ) followed by water wash (2x10 cm<sup>3</sup> ). The resulting solution was dried over anhydrous sodium sulfate and pure product (0.350 g ) was obtained after evaporation of the solvent on rotavapor.</p>
+    <heading>
+      <b>Example 19</b>
+    </heading>
+    <p id="p-00041-en">A solution of p-methyl-1-phenyl ethanol (2mmol, 0.272 g) in toluene (5 cm<sup>3</sup> ) was treated with acetic acid (6 mmol, 0.36 g) at reflux temperature of 110°C in a two necked round bottom flask (50ml) in presence of natural montmorillonite clay (0.1g) catalyst. After completion of the reaction ( followed by TLC), the catalyst was filtered and the filtrate was treated with saturated NaHCO<sub>3</sub> solution (2x5 cm<sup>3</sup> ) followed by water wash (2x10 cm<sup>3</sup> ). The resulting solution was dried over anhydrous sodium sulfate and pure product (0.34 g ) was obtained after evaporation of the solvent on rotavapor.</p>
+    <heading>
+      <b>Example 20</b>
+    </heading>
+    <p id="p-00042-en">A solution of p-methyl-1-phenyl ethanol (5mmol, 0.68 g) and acetic acid (50mmol, 3g) was treated at reflux temperature of 116°C in a two necked round bottom flask (50ml) in presence of natural montmoriilonite clay (0.1g) catalyst. After completion of the reaction (followed by TLC), 10ml of ethyl acetate was added to the reaction mixture and the catalyst was filtered. The filtrate was treated with saturated NaHCO<sub>3</sub> solution(3x10 cm<sup>3</sup> ) followed by water wash (2x10 cm<sup>3</sup> ). The resulting solution was dried over anhydrous sodium sulfate and pure product ((0.87 g ) was obtained after evaporation of the solvent on rotavapor.</p>
+    <heading>
+      <b>Example 21</b>
+    </heading>
+    <p id="p-00043-en">A solution of furfuryl alcohol (5mmol, 0.49 g) and acetic acid(50mmol, 3g) was treated at reflux temperature of 116°C in a two necked round bottom flask (50ml) in presence of natural montmorillonite clay(0.1g) catalyst. After completion of the reaction ( followed by TLC), 10ml of ethyl acetate was added to the reaction mixture and the catalyst was filtered. The filtrate was treated with saturated NaHCO<sub>3</sub> solution(3x10 cm<sup>3</sup> ) followed by water wash (2x10 cm<sup>3</sup> ). The resulting solution was dried over anhydrous sodium sulfate and the solvent evaporated on rotavapor to get the crude product (0.686 g) was purified through column chromatography to get the pure product (0.4 g ).<tables><table><title>Esterification of alcohols using acetic acid as acetylating agent</title><tgroup cols="9"><thead><row><entry>Example</entry><entry>Alcohol (Substrate)</entry><entry>Ratio<sup>a</sup></entry><entry>Catalyst</entry><entry>Solvent</entry><entry><u>Temp</u> (°C)</entry><entry><u>Time</u> (hrs)</entry><entry>Product (s)</entry><entry><u>Yields</u><sup>b</sup> (%)</entry></row></thead><tbody><row><entry>2</entry><entry>Benzyl alcohol</entry><entry>1:10</entry><entry>1a</entry><entry>No solvent</entry><entry>116</entry><entry>0.5</entry><entry>Benzyi acetate</entry><entry>97<sup>c</sup></entry></row><row><entry>3</entry><entry>Benzyl alcohol</entry><entry>1:10</entry><entry>1b</entry><entry>No solvent</entry><entry>116</entry><entry>0.5</entry><entry>Benzyl acetate</entry><entry>98<sup>c</sup></entry></row><row><entry>4</entry><entry>trans-2-bexene-1-ol</entry><entry>1:3</entry><entry>1a</entry><entry>Dichloro ethane</entry><entry>30</entry><entry>0.15</entry><entry>trans-2-hexenyl acetate</entry><entry>97<sup>c</sup></entry></row><row><entry>5</entry><entry>trans-2-hexene-1-ol</entry><entry>1:10</entry><entry>1b</entry><entry>No solvent</entry><entry>116</entry><entry>0.15</entry><entry>trans-2-hexenyl acetate</entry><entry>98<sup>c</sup></entry></row><row><entry>6</entry><entry>Octanol</entry><entry>1:3</entry><entry>1a</entry><entry>Toluene</entry><entry>110</entry><entry>2.5</entry><entry>Octyl acctate</entry><entry>98<sup>c</sup></entry></row><row><entry>7</entry><entry>Octanol</entry><entry>1:10</entry><entry>1b</entry><entry>No solvent</entry><entry>116</entry><entry>1.0</entry><entry>Ocryl acetate</entry><entry>98<sup>c</sup></entry></row><row><entry>8</entry><entry>Decanol</entry><entry>1:3</entry><entry>1a</entry><entry>Toluene</entry><entry>110</entry><entry>2.5</entry><entry>Decyl acetate</entry><entry>98<sup>c</sup></entry></row><row><entry>9</entry><entry>Decanol</entry><entry>1:10</entry><entry>1b</entry><entry>No solvent</entry><entry>116</entry><entry>1.0</entry><entry>Decyl acctate</entry><entry>98<sup>c</sup></entry></row><row><entry>10</entry><entry>2-Octanol</entry><entry>1:10</entry><entry>1b</entry><entry>No solvent</entry><entry>116</entry><entry>1.5</entry><entry>2-Octyl acetate</entry><entry>96<sup>c</sup></entry></row><row><entry>11</entry><entry>Amyl alcohol</entry><entry>1:10</entry><entry>1b</entry><entry>No solvent</entry><entry>116</entry><entry>2.5</entry><entry>Amyl acetate</entry><entry>99<sup>c</sup><sup>,</sup><sup>d</sup></entry></row><row><entry>12</entry><entry>Isoamyl alcohol</entry><entry>1:10</entry><entry>1b</entry><entry>No solvent</entry><entry>116</entry><entry>2.5</entry><entry>Isoamyl acetate</entry><entry>99<sup>c</sup><sup>,</sup><sup>d</sup></entry></row><row><entry>13</entry><entry>2-Pentanol</entry><entry>1:10</entry><entry>1b</entry><entry>No solvent</entry><entry>116</entry><entry>2.5</entry><entry>2-Pentyl acetate</entry><entry>77<sup>c</sup><sup>,</sup><sup>d</sup></entry></row><row><entry>14</entry><entry>Cinnamyl alcohol</entry><entry>1:10</entry><entry>1b</entry><entry>No solvent</entry><entry>116</entry><entry>0.2</entry><entry>Cinnamyl acetate</entry><entry>98<sup>c</sup></entry></row><row><entry>15</entry><entry>Cyclohexanol</entry><entry>1:10</entry><entry>1b</entry><entry>No solvent</entry><entry>116</entry><entry>0.5</entry><entry>Cyclohexyl acetate</entry><entry>97<sup>c</sup></entry></row><row><entry>16</entry><entry>Cyclopentanol</entry><entry>1:10</entry><entry>1b</entry><entry>No</entry><entry>116</entry><entry>1.0</entry><entry>Cyclopentyl</entry><entry>98<sup>c</sup></entry></row><row><entry /><entry /><entry /><entry /><entry>solvent</entry><entry /><entry /><entry>acetate</entry></row><row><entry>17</entry><entry>1-Phenyl ethanol</entry><entry>1:3</entry><entry>1b</entry><entry>Chloro</entry><entry>130</entry><entry>0.15</entry><entry>1-Phenyl</entry><entry>98<sup>c</sup></entry></row><row><entry /><entry /><entry /><entry /><entry>benzene</entry><entry /><entry /><entry>ethyl</entry></row><row><entry /><entry /><entry /><entry /><entry /><entry /><entry /><entry>acetate</entry></row><row><entry>18</entry><entry>p-Methoxy-1-phenyl</entry><entry>1:3</entry><entry>1b</entry><entry>Chloro</entry><entry>130</entry><entry>0.15</entry><entry>p-Meo-1-</entry><entry>90<sup>c</sup></entry></row><row><entry /><entry>ethanol</entry><entry /><entry /><entry>benzene</entry><entry /><entry /><entry>phenyl</entry></row><row><entry /><entry /><entry /><entry /><entry /><entry /><entry /><entry>ethyl</entry></row><row><entry /><entry /><entry /><entry /><entry /><entry /><entry /><entry>acetate</entry></row><row><entry>19</entry><entry>p-Methyl-1-phenyl</entry><entry>1:3</entry><entry>1b</entry><entry>Toluene</entry><entry>110</entry><entry>0.15</entry><entry>p-Methyl-1-</entry><entry>95<sup>c</sup></entry></row><row><entry /><entry>ethanol</entry><entry /><entry /><entry /><entry /><entry /><entry>phenyl</entry></row><row><entry /><entry /><entry /><entry /><entry /><entry /><entry /><entry>ethyl</entry></row><row><entry /><entry /><entry /><entry /><entry /><entry /><entry /><entry>acetic</entry></row><row><entry>20</entry><entry>p-Methyl-1-phenyl</entry><entry>1:10</entry><entry>1b</entry><entry>No</entry><entry>116</entry><entry>0.15</entry><entry>p-Methyl-1-</entry><entry>98<sup>c</sup></entry></row><row><entry /><entry>ethanol</entry><entry /><entry /><entry>solvent</entry><entry /><entry /><entry>phenyl</entry></row><row><entry /><entry /><entry /><entry /><entry /><entry /><entry /><entry>ethyl</entry></row><row><entry /><entry /><entry /><entry /><entry /><entry /><entry /><entry>acetate</entry></row><row><entry>21</entry><entry>Furfuryl alcohol</entry><entry>1:10</entry><entry>1b</entry><entry>No</entry><entry>116</entry><entry>0.25</entry><entry>Furfuryl</entry><entry>65<sup>c</sup></entry></row><row><entry /><entry /><entry /><entry /><entry>solvent</entry><entry /><entry /><entry>acetate</entry><entry>1a : catalyst, which is described in write-up as Example 1a</entry><entry>1b : catalyst, which is described in write-up as Example 1b<i>a</i> : alcohol : acetic acid molar ratio.<i>b</i> : based on <sup>1</sup>H NMR.<i>c</i> : isolated yields.<i>d :</i> based on G.C analysis.</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00044-en">It was found that natural montmorillonite is an efficient catalyst for the exclusive formation of esters from various alcohols in the presence of acetic acid and its activity is comparable with Cu <sup>2+</sup> - exchanged K10 montmorillonite (examples 2 to 9 ).</p>
+    <heading>
+      <b>The main advantages of the present invention are:</b>
+    </heading>
+    <p id="p-00045-en">
+      <ol>
+        <li>1. The present process completely eliminates the use of expensive acetic anhydride as acetylating agent.</li>
+        <li>2. Acetic acid is used as the acetylating agent in place of the acetic anhydride for the acetylation of various substrates (aliphatic, aromatic, α,β-unsaturated, cyclic and heterocyclic alcohols) for the first time.</li>
+        <li>3. Clays have been used as catalysts in place of hazardous and corrosive H<sub>2</sub>SO<sub>4</sub> and expensive resins for the acetylation of various alcohols for the first time.</li>
+        <li>4. An ecofriendly process for the production of esters was developed.</li>
+        <li>5. The selectivity and yields obtained in this process are excellent.</li>
+        <li>6. The reactions are simple with shorter reaction time and simple workup procedure.</li>
+        <li>7. The support of the catalyst is cheap and abundantly available in nature.</li>
+        <li>8. The present process envisage no disposal problem as the catalyst can be used for several cycles. The catalyst was subjected to four cycles which displayed consistent activity.</li>
+        <li>9. The present process is environmentally safe since there is no effluent disposable problem.</li>
+      </ol>
+    </p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20070505">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>A process for the preparation of esters from alcohols using acetic acid as acetylating agent and clays as catalysts, which comprises the preparation of esters in a single step from the reaction of aliphatic, acyclic, cyclic, heterocyclic, α,β-unsaturated and aromatic alcohols with carbon atoms in the range of C<sub>1</sub> to C<sub>10</sub> with acetic acid in a molar ratio of 1:3 to 11 using reusable natural montmorrillonite <b>or</b> metal ion-exchanged clay catalysts in the solvent medium of aliphatic, aromatic, organic or chlorinated hydrocarbons or using the acetic acid as solvent at 30-140°C for a period in the range of 0.02 to 3.0 hrs, and recovering the corresponding esters by simple work-up procedure.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>A process as claimed in claim 1, wherein the clay catalyst used is metal-ion exchanged montmorillonite or natural montmorillonite clay.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>A process as claimed in claim 1, wherein metals ion exchanged may be selected from Fe<sup>3+</sup>, Cu<sup>2+</sup>, Zn<sup>2+</sup>, Al<sup>3+</sup>, Ce<sup>3+</sup> or Zr<sup>4+</sup>.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>A process as claimed in claim 1, wherein the alcohols used is selected from aromatic, aliphatic, α,β,-unsaturated cyclic and heterocyclic alcohols, octanol, decanol, 2-octanol, amylalcohol, isoamylalcohol, 2-pentanol, cinnamyl alcohol, benzylo alcohol, trans-2-hexene-1-ol, cyclohexanol, cyclopentanol, 1-phenyl ethanol, p-methoxy-1-phenyl ethanol, p-methyl-1-phenyl ethanol and furfuryl alcohol.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>A process as claimed in claim 1, wherein the solvent used is an aromatic hydrocarbon.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>A process as claimed in claim 1, wherein the solvent is selected from dichloroethane, toluene, chlorobenzene or acetic acid.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>A process as claimed in claim 1, wherein the recovery of esters is carried out by separating the catalyst through filtration and the excess acetic acid is neutralised by treatment with NaHCO<sub>3</sub> solution and removing the solvent by concentration in rotavapor.</claim-text>
+    </claim>
+  </claims>
+  <claims id="claims_fre" lang="fre" format="original" date-changed="20070505">
+    <claim num="1" id="clm-00001-fr">
+      <claim-text>Un procédé de préparation d'esters à partir d'alcools, en utilisant de l'acide acétique en tant qu'agent d'acétylation et des argiles en tant que catalyseurs, et qui permet de préparer des esters en une seule opération, grâce à la réaction d'alcools aliphatiques, acycliques, cycliques, hétérocycliques, alpha-bêta non-saturés et aromatiques, avec des atomes de carbone dans la plage de C<sub>1</sub> à C<sub>10</sub>, et avec de l'acide acétique sous un rapport molaire allant de 1:3 à 11, en utilisant comme catalyseurs de l'argile naturelle montmorillonite ou de l'argile à échange ionique métallique. Dans le milieu solvant d'hydrocarbures aliphatiques, aromatiques, organiques ou chlorés, ou en utilisant de l'acide acétique comme solvant à une température comprise entre 30 et 140°C pendant une période de 0,02 à 3,0 h, et avec récupération des esters correspondants par une simple procédure d'élaboration.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-fr">
+      <claim-text>Un procédé, comme celui qui est présenté à l'affirmation 1, où l'argile employé comme catalyseur est une argile de montmorillonite à échange ionique métallique ou une argile montmorillonite naturelle.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-fr">
+      <claim-text>Un procédé, comme celui qui est présenté à l'affirmation 1, et durant lequel les échanges avec des ions métalliques peuvent être sélectionnés à partir de la liste suivante : Fe<sup>3+</sup>, Cu<sup>2+</sup>, Zn<sup>2+</sup>, Al<sup>3+</sup>, Ce<sup>3+</sup> ou Zr<sup>4+</sup>.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-fr">
+      <claim-text>Un procédé, comme celui qui est présenté à l'affirmation 1, où les alcools utilisés sont sélectionnés dans la liste suivante : aromatiques, aliphatiques, alpha-bêta non-saturés, cycliques et hétérocycliques, octanol, décanol, 2-octanol, alcool amylique, alcool iso-amylique, 2-pentanol, alcool cinnamylique, alcool benzylique, trans-2-hexene-1-ol, cyclohexanol, cyclopentanol, éthanol de 1-phényle, éthanol de p-méthoxy-1-phényle, éthanol de p-méthyle-1-phényle et alcool furfurylique.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-fr">
+      <claim-text>Un procédé, comme celui qui est présenté à l'affirmation 1, où le solvant utilisé est un hydrocarbure aromatique.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-fr">
+      <claim-text>Un procédé, comme celui qui est présenté à l'affirmation 1, où le solvant sélectionné est pris dans la liste suivante : dichloroéthane, toluène, chlorobenzène ou acide acétique.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-fr">
+      <claim-text>Un procédé, comme celui qui est présenté à l'affirmation 1, où la récupération des esters s'effectue en séparant le catalyseur par filtrage et en neutralisant l'excédent d'acide acétique par traitement avec une solution de NaHCO<sub>3</sub> et en éliminant le solvant par concentration dans un rotavapor.</claim-text>
+    </claim>
+  </claims>
+  <claims id="claims_ger" lang="ger" format="original" date-changed="20070505">
+    <claim num="1" id="clm-00001-de">
+      <claim-text>Verfahren zur Herstellung von Estern aus Alkoholen unter Verwendung von Essigsäure als Acetylierungsmittel und Tonen als Katalysatoren, umfassend die Herstellung von Estern in einem einzelnen Schritt aus der Reaktion von aliphatischen, acyclischen, cyclischen, heterocyclischen, α,β-ungesättigten und aromatischen Alkoholen mit Kohlenstoffatomen im Bereich von C<sub>1</sub> bis C<sub>10</sub> mit Essigsäure in einem Molverhältnis von 1:3 bis 11 mittels Katalysatoren aus wiederverwendbarem natürlichem Montmorillonit oder Metallionen-ausgetauschtem Ton in dem Lösungsmittelmedium aus aliphatischen, aromatischen, organischen oder chlorierten Kohlenwasserstoffen oder unter Verwendung der Essigsäure als Lösungsmittel bei 30 - 140 °C für eine Zeitdauer im Bereich von 0,02 bis 3 h und Wiedergewinnung der entsprechenden Ester durch ein einfaches Aufarbeitungsverfahren.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-de">
+      <claim-text>Verfahren nach Anspruch 1, worin der verwendete Tonkatalysator Metallionen-ausgetauschter Montmorillonitoder natürlicher Montmorillonitton ist.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-de">
+      <claim-text>Verfahren nach Anspruch 1, worin ionenausgetauschte Metalle aus Fe<sup>3+</sup>, Cu<sup>2+</sup>, Zn<sup>2+</sup>, Al<sup>3+</sup>, Ce<sup>3+</sup> oder Zr<sup>4+</sup> ausgewählt werden können.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-de">
+      <claim-text>Verfahren nach Anspruch 1, worin die verwendeten Alkohole aus aromatischen, aliphatischen, α,β-ungesättigten cyclischen und heterocyclischen Alkoholen, Octanol, Decanol, 2-Octanol, Amylalkohol, Isoamylalkohol, 2-Pentanol, Cinnamylalkohol, Benzylalkohol, trans-2-Hexen-1-ol, Cyclohexanol, Cylcopentanol, 1-Phenylethanol, p-Methoxy-1-phenylethanol, p-Methyl-1-phenylethanol und Furfurylalkohol ausgewählt sind.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-de">
+      <claim-text>Verfahren nach Anspruch 1, worin das verwendete Lösungsmittel ein aromatischer Kohlenwasserstoff ist.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-de">
+      <claim-text>Verfahren nach Anspruch 1, worin das Lösungsmittel aus Dichlorethan, Toluen, Chlorbenzen oder Essigsäure ausgewählt ist.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-de">
+      <claim-text>Verfahren nach Anspruch 1, worin die Wiedergewinnung von Estern durch Trennung des Katalysators durch Filtration durchgeführt und die überschüssige Essigsäure durch Behandlung mit NaHCO<sub>3</sub>-Lösung neutralisiert und das Lösungsmittel durch Konzentration am Rotavapor entfernt wird.</claim-text>
+    </claim>
+  </claims>
+  <image file="EP1013632B1.PDF" type="pdf" size="171311" pages="10" />
+</lexisnexis-patent-document>
