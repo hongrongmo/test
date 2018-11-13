@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160929" file="JP2016173747A.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20160929" time-inserted="101347" date-changed="20160929" time-changed="234604">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Unexamined patent application">
+      <document-id id="126886918">
+        <country>JP</country>
+        <doc-number>2016173747</doc-number>
+        <kind>A</kind>
+        <date>20160929</date>
+      </document-id>
+      <document-id data-format="original">
+        <country>JP</country>
+        <doc-number>2016173747</doc-number>
+        <kind>A</kind>
+        <date>20160929</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id id="80049706">
+        <country>JP</country>
+        <doc-number>2015053667</doc-number>
+        <date>20150317</date>
+      </document-id>
+      <document-id data-format="original">
+        <country>JP</country>
+        <doc-number>2015053667</doc-number>
+        <date>20150317</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>jpn</language-of-filing>
+    <language-of-publication>jpn</language-of-publication>
+    <classifications-ipcr date-changed="20160929">
+      <classification-ipcr sequence="1">
+        <text>G06K  19/077       20060101AFI20160902BHJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>G</section>
+        <class>06</class>
+        <subclass>K</subclass>
+        <main-group>19</main-group>
+        <subgroup>077</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160902</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>H01Q   1/38        20060101ALI20160902BHJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>01</class>
+        <subclass>Q</subclass>
+        <main-group>1</main-group>
+        <subgroup>38</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160902</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>H01Q  15/14        20060101ALI20160902BHJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>01</class>
+        <subclass>Q</subclass>
+        <main-group>15</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160902</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classification-national date-changed="20160929">
+      <country>JP</country>
+      <main-classification>
+        <text>G 06K 19/077 .248</text>
+        <section>G</section>
+        <class>06</class>
+        <subclass>K</subclass>
+        <main-group>19</main-group>
+        <subgroup>077</subgroup>
+        <code>248</code>
+      </main-classification>
+      <further-classification sequence="1">
+        <text>G 06K 19/077 .200</text>
+        <section>G</section>
+        <class>06</class>
+        <subclass>K</subclass>
+        <main-group>19</main-group>
+        <subgroup>077</subgroup>
+        <code>200</code>
+      </further-classification>
+      <further-classification sequence="2">
+        <text>G 06K 19/077 .144</text>
+        <section>G</section>
+        <class>06</class>
+        <subclass>K</subclass>
+        <main-group>19</main-group>
+        <subgroup>077</subgroup>
+        <code>144</code>
+      </further-classification>
+      <further-classification sequence="3">
+        <text>H 01Q 1/38</text>
+        <section>H</section>
+        <class>01</class>
+        <subclass>Q</subclass>
+        <main-group>1</main-group>
+        <subgroup>38</subgroup>
+      </further-classification>
+      <further-classification sequence="4">
+        <text>H 01Q 15/14 Z</text>
+        <section>H</section>
+        <class>01</class>
+        <subclass>Q</subclass>
+        <main-group>15</main-group>
+        <subgroup>14</subgroup>
+        <code>Z</code>
+      </further-classification>
+    </classification-national>
+    <classifications-f-term date-changed="20160929">
+      <classification-f-term sequence="1">
+        <text>5J020/AA03</text>
+        <theme>5J020</theme>
+        <viewpoint>AA</viewpoint>
+        <figure>03</figure>
+      </classification-f-term>
+      <classification-f-term sequence="2">
+        <text>5J020/BA01</text>
+        <theme>5J020</theme>
+        <viewpoint>BA</viewpoint>
+        <figure>01</figure>
+      </classification-f-term>
+      <classification-f-term sequence="3">
+        <text>5J020/BD03</text>
+        <theme>5J020</theme>
+        <viewpoint>BD</viewpoint>
+        <figure>03</figure>
+      </classification-f-term>
+      <classification-f-term sequence="4">
+        <text>5J046/AA03</text>
+        <theme>5J046</theme>
+        <viewpoint>AA</viewpoint>
+        <figure>03</figure>
+      </classification-f-term>
+      <classification-f-term sequence="5">
+        <text>5J046/AB07</text>
+        <theme>5J046</theme>
+        <viewpoint>AB</viewpoint>
+        <figure>07</figure>
+      </classification-f-term>
+      <classification-f-term sequence="6">
+        <text>5J046/PA07</text>
+        <theme>5J046</theme>
+        <viewpoint>PA</viewpoint>
+        <figure>07</figure>
+      </classification-f-term>
+    </classifications-f-term>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20160929" lang="eng" format="machine translation">RFID tag, communication system, and electromagnetic control sheet </invention-title>
+    <invention-title id="title_jpn" date-changed="20160929" lang="jpn" format="original">ＲＦＩＤタグ、通信システム、及び電磁波制御シート</invention-title>
+    <references-cited date-changed="20160929">
+      <patent-citations name="patcit" date-changed="20160929" />
+      <citation srep-phase="1">
+        <patcit num="1" dnum="JP5543795" dnum-type="publication number">
+          <document-id>
+            <country>JP</country>
+            <doc-number>5543795</doc-number>
+            <kind>B2</kind>
+            <date>20140709</date>
+          </document-id>
+          <document-id data-format="original">
+            <country>JP</country>
+            <doc-number>5543795</doc-number>
+          </document-id>
+          <application-date>
+            <date>20100201</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20160929">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="jpn">
+            <orgname>株式会社リコー</orgname>
+            <registered-number>000006747</registered-number>
+            <issuing-office>Japan</issuing-office>
+            <address>
+              <address-1>東京都大田区中馬込１丁目３番６号</address-1>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant sequence="2" app-type="applicant">
+          <addressbook lang="jpn">
+            <orgname>国立大学法人山口大学</orgname>
+            <registered-number>304020177</registered-number>
+            <issuing-office>Japan</issuing-office>
+            <address>
+              <address-1>山口県山口市吉田１６７７－１</address-1>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="jpn">
+            <name>福田  浩章</name>
+            <address>
+              <address-1>東京都大田区中馬込１丁目３番６号  株式会社リコー内</address-1>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="jpn">
+            <name>真田  篤志</name>
+            <address>
+              <address-1>山口県山口市吉田１６７７番地１  国立大学法人山口大学内</address-1>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="representative">
+          <addressbook lang="jpn">
+            <name>立石  篤司</name>
+            <registered-number>100102901</registered-number>
+            <issuing-office>Japan</issuing-office>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <patent-family date-changed="20160929">
+      <main-family family-id="185990664">
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2016173747</doc-number>
+            <kind>A</kind>
+            <date>20160929</date>
+          </document-id>
+          <application-date>
+            <date>20150317</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="185990663">
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2016173747</doc-number>
+            <kind>A</kind>
+            <date>20160929</date>
+          </document-id>
+          <application-date>
+            <date>20150317</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20160929" lang="eng" format="machine translation">
+    <p>PROBLEM TO BE SOLVED: high dielectric or conductive material in contact with or close to suppress the reduction of the time of communication resistance, low-cost and can also provide a RFID tag. <br />SOLUTION: the RFID tag 100, first conductive layer 10a as an intermediate layer 1 of the stack 10 and including, an antenna 20 and provided on the laminated body, and the antenna 20 and connected to the IC chip 30, is provided, the first conductive layer 10a 1, including a structure having a constricted part. In this case, the high dielectric or conductive material in contact with or close to suppress the reduction of the resistance at the time of communication, and low-cost can also provide a RFID tag. <br />Selected drawing: fig. 2 <br /></p>
+  </abstract>
+  <abstract id="abstr_jpn" date-changed="20160929" lang="jpn" format="original">
+    <p>【課題】  導電体や高誘電体に接触もしくは近接したときの通信性の低下を抑制でき、かつ薄型化と低コスト化を両立できるＲＦＩＤタグを提供すること。<br />【解決手段】  ＲＦＩＤタグ１００は、第１の導電層１０ａを中間層として含む積層体１０と、積層体上に設けられたアンテナ２０と、該アンテナ２０と接続されたＩＣチップ３０と、を備え、第１の導電層１０ａは、括れ部を有する構造を含む。この場合、導電体や高誘電体に接触もしくは近接したときの通信性の低下を抑制でき、かつ薄型化と低コスト化を両立できるＲＦＩＤタグを提供すること。<br />【選択図】図２</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="machine translation" date-changed="20160929">
+    <technical-field>
+      <p num="0001">   The present invention, RFID tag, communication system, and electromagnetic control of a dwelling and, more specifically, RFID tag and IC chip having an antenna, the RFID tag communications system, and to control the electromagnetic wave control sheet. <br /></p>
+    </technical-field>
+    <background-art>
+      <p num="0002">   In recent years, development of RFID tags are elaborated. <br /></p>
+      <p num="0003">   For example, in the patent document 1, high dielectric or conductive body in contact or close when the RFID tag capable of suppressing degradation of communication is disclosed. <br /></p>
+    </background-art>
+    <disclosure>
+      <tech-problem>
+        <p num="0004">
+  However, in Patent Document 1, the RFID tag is disclosed, both thin and low cost. </p>
+      </tech-problem>
+      <tech-solution>
+        <p num="0005">
+  The present invention, including a first conductive layer as an intermediate layer and a laminated body, the laminated body and an antenna, the antenna connected to the IC chip and, is provided, and one of the conductive layer, at least one part having a structure including a RFID tag 1. </p>
+      </tech-solution>
+      <advantageous-effects>
+        <p num="0006">
+  According to the present invention, the high conductive or dielectric in contact or approach can suppress the deterioration of the communication, and low-cost can be made thin. </p>
+      </advantageous-effects>
+    </disclosure>
+    <description-of-drawings>
+      <p num="0007">The fig. 1 (A), the plane of one embodiment of the RFID tag and perspective view, fig. 1 (B) is, the RFID tag of the YZ cross section. Figs. 2 (A) - 2 (D) are, respectively, a concrete example of axially symmetric structure with constriction 2 (1-its 4 thereof) drawing showing. The figs. 3 (A) and 3 (B), respectively, axially symmetric structure with constriction 2 for explaining the configuration of figure Tr (1 and its 2 thereof). The figs. 4 (A) and 4 (B), respectively, in the axial direction X, Y-axis direction with a phase difference in the case of an axially symmetrical structure with 2 Tr inadequatly propagating waves in the plane of the drawing showing the dispersion characteristics. The figs. 5 (A) and 5 (B), respectively, in the axial direction X, Y axis direction when the phase difference is given as known in the field of axial symmetry inadequatly Tr with 2 to show the distribution diagram. RFID tag IC chip in the actually measured value of impedance from antenna side (its 1) indicating the Smith chart. RFID tag IC chip in the actually measured value of impedance from antenna side (its 2) indicating the Smith chart. The shaft has a symmetric structure with 2 inadequatly Tr of propagating waves in the surface of the laminated structure, showing the diagram (1 thereof). The shaft has a symmetric structure with 2 inadequatly Tr of propagating waves in the surface of the laminated structure, showing the diagram (2 thereof). The schematic diagram showing a method of measuring the distance communication. The thickness of the first spacer layer 1 of a graph showing the relationship between the ratio d and communication. A graph showing a relationship of a triangle and the ratio of the size (height) of the axially symmetric structure with 2 communication inadequatly Tr. The fig. 13 (A), a deformation example RFID tag plane perspective view, fig. 13 (B) is a, sectional diagram of the RFID tag deformation example YZ. The fig. 14 (A), a plurality of periodic array of axially symmetric structure with constriction 2 including a conductive layer on the plane of the drawing in which an electromagnetic control sheet radioscopic, fig. 13 (B) is a, cross-sectional view of the electromagnetic control sheet YZ. The fig. 15 (A), a single axially symmetrical structure with constriction 2 including the electromagnetic control sheet of conductive layer shows a top perspective, fig. 15 (B) is a, sectional view of the electromagnetic control sheet. The figs. 16 (A) and 16 (B), axially symmetric structure with constriction 2, respectively, for explaining another example of Fig. Figs. 17 (A) - 17 (C) is, respectively, axially symmetric structure with constriction 1 for explaining other embodiment. The figs. 18 (A) and 18 (B), axially symmetric structure with constriction 2, respectively, for explaining another example of the drawing in which, fig. 18 (C) is, axially symmetric structure with constriction 1 for explaining another example of Fig. The fig. 19 (A), axially symmetric structure with constriction 1 for explaining another example of the diagram, the fig. 19 (B), the structure of the embodiment with inadequatly nonaxissymmetric diagram for explaining, the fig. 19 (C), with 2 axially symmetrical inadequatly for explaining another example of the structure of Fig. The figs. 20 (A) and 20 (B), a plurality of periodic array of axially symmetric structure with constriction 2 for explaining another example of Fig. The figs. 21 (A) and 21 (B), respectively, for explaining a conventional RFID tags. </p>
+    </description-of-drawings>
+    <description-of-embodiments>
+      <p num="0008">   Below, an embodiment of the present invention is explained based on to figs. 1-12. In the fig. 1 (A), the plane of the RFID tag 100 of one embodiment is shown in a perspective view. In the fig. 1 (B), RFID tag 100 YZ of the sectional view is shown. <br /></p>
+      <p num="0009">   The RFID tag 100, for example, as shown in figs. 1 (A) and 1 (B), the second conductive layer 10a as an intermediate layer 1 of the stack 10 and including, provided on the laminated body 10 and an antenna 20, the antenna 20 and which is connected to the IC chip 30, are provided. In this case, the RFID tag 100, in which the passive tag, an active tag mounting. <br /></p>
+      <p num="0010">   In the following, the laminating direction of the laminated body 10 and a Z axis direction by using an appropriate XYZ3 dimensional orthogonal coordinate system is described. In this case, the antenna 20, IC chip 30, of a laminated body 10 is arranged on the + Z side. <br /></p>
+      <p num="0011">   The IC chip 30, a unique ID number is stored. This ID number, using the RW device (a reader/writer) can be read. <br /></p>
+      <p num="0012">   As the antenna 20, as shown in fig. 1 (A) and the other meandering section includes, RFID tag used in normal communication antenna (loop antenna, patch antenna, dipole, spiral antenna, helical antenna, such antenna slit) can be used. <br /></p>
+      <p num="0013">   The laminated body 10, in addition to the first conductive layer 10a 1, conductive layer 10a of the first 1-Z as arranged on the side of the ground layer and the second conductive layer 10b 2,1 and 2 of the first and the second conductive layer 10a, 10b disposed between the first spacer layer 10c composed of dielectric and 1,1 and a second conductive layer 10a of the antenna 20 composed of a dielectric disposed between the first spacer layer 10d and 2. <br /></p>
+      <p num="0014">   Each conductive layer of material as the (conductive material), gold, platinum, silver, nickel, chromium, aluminum, copper, zinc, lead, tungsten, or can be a metal such as iron, and the metal powder resin, conductive carbon black is mixed with the mixture resin, or a conductive resin film or the like can be used. The metal or the like, or may also be a foil-like, plate-like, sheet-like, film or the l Alternatively on a synthetic resin film, the film thickness of the thin metal layer, for example 600 Å which may have formed. The base material such as a metal foil or a film, a cloth can be used. Furthermore, the metal particle-based conductive ink (for example less than the resistivity 10Ω / μmsquare) 1 or 2 of the first spacer layer 10c of the first spacer layer 10d can be applied. <br /></p>
+      <p num="0015">   As the material of each of the spacer layer, for example, PET (Polyethylene Terephthalate resin) such as dielectric material is suitable. Also, as the actual material of a relatively transparent spacer layer (least inside can be seen) is used. The other, or only a low dielectric constant, air containing a foaming material, sponge, urethane, fiber or the like is preferable. Furthermore, as the organic material, for example rubber, thermoplastic elastomer, plastic, wood, paper material, such as a polymeric organic material such as a porous body. As the rubber, in addition to natural rubber, isoprene rubber, butadiene rubber, styrene-butadiene rubber, ethylene-propylene rubber, ethylene-propylene-diene rubber (EPDM rubber), ethylene-vinyl acetate rubber, butyl rubber, halogenated butyl rubber, chloroprene rubber, nitrile rubber, acrylic rubber, ethylene acrylic rubber, epichlorohydrin rubber, fluorine rubber, urethane rubber, silicone rubber, chlorinated polyethylene rubber, hydrogenated nitrile rubber (HNBR), such as a synthetic rubber, or derivative thereof, or as modified by these various modified examples of the processing. These rubber is, used alone or in addition, a plurality of the blend can be used. As the thermoplastic elastomer, such as chlorinated polyethylene, a chlorine-based, for example, ethylene copolymer, acrylic, ethylene acrylic copolymer, urethane-based, ester-based, silicone-based, styrene, amide-based, olefin-based thermoplastic elastomer or the like, and derivatives thereof. Furthermore, as the various plastic, for example polyethylene, polypropylene, AS resin, ABS resin, polystyrene, polyvinyl chloride, polyvinylidene chloride, etc., chlorine-based resin; poly vinyl acetate, ethylene-vinyl acetate copolymer, fluorinated resin, silicone resin, acrylic resin, nylon, polycarbonate, polyethylene terephthalate, alkyd resin, unsaturated polyester, polysulfone, polyimide resin, urethane resin, phenol resin, urea resin, such as epoxy resin or thermoplastic resin, a thermosetting resin and derivatives thereof, or recycling the copolymer resin or the like can be cited. It is one or more materials, composite, can be modified to be used. It is desirable that the foam. Typically, the dielectric material is a low-density, foamed resin, polystyrene resin, or the l As the thermoplastic elastomer, such as chlorinated polyethylene, a chlorine-based, for example, ethylene copolymer, acrylic, ethylene acrylic copolymer, urethane-based, ester-based, silicone-based, styrene, amide-based, olefin-based thermoplastic elastomer or the like, and derivatives thereof. It is one or more materials, composite, can be modified to be used. It is desirable that the foam. Typically, the dielectric material is a low-density, foamed resin, polystyrene resin, or the l In addition to the above, the paper material such as corrugated cardboard, wood, glass, glass fiber, earth-based material or the like can be used. The IC tag wirelessly or adhesive material layer of a base material and a material of the spacer. <br /></p>
+      <p num="0016">   Each spacer layer is, as described above, which does not substantially contain a magnetic material is constituted by a material, can be realized at a low cost. <br /></p>
+      <p num="0017">   1 of the first conductive layer 10a, as shown in fig. 1 (A), a plurality of unit structures (11), for example) 2 along the plane XY is a 2 dimensional dimensional periodic sequence in a periodic sequence. Each unit structure, or other unit and is insulated from the surrounding structure. In this case, the periodic array of a plurality of unit structures, which are arranged in a zigzag pattern, such as for example a matrix arrangement of another cycle sequence. <br /></p>
+      <p num="0018">   Each unit structure, and a constricted portion, the constricted portion is connected through a, the distance in the axial direction Y from the constricted part in the axial direction X and a pair of wide and includes a tapered portion. In other words, the pair of tapered portions, each end of which is connected via a constriction (connected). Each unit structure, can be integrally molded, the plurality of parts are formed separately, are joined. <br /></p>
+      <p num="0019">   The constricted portion, in the direction of X-axis, Y-axis direction in at least one of which may have a certain width is, in the direction of X-axis, Y-axis direction at least one width of approximately 0. In other words, the inadequatly, planar shape (a shape as viewed from the side +Z) is, surface shape (refer fig. 3 (A)), beam shape, point of any shape. The planar shape of the constricted part parallel to the axis X in the case that the dot shape or linear shape, substantially, the pair of tapered section, the tip section is directly connected to each other. In this case, the "inadequatly part", meaning the interface of a pair of tapered section and it can be considered. <br /></p>
+      <p num="0020">   In this case, the shape of the constricted part, for example, rectangular (shape) and which is, or can be of other shapes. <br /></p>
+      <p num="0021">   The pair of tapered portions, the positional relationship in the axis direction Y with the constricted part. Furthermore, the pair of tapered section, and has a size Homomorphism, mutually orthogonal axis passing inadequatly (X axis) and an axis (Y-axis) with respect to each other (symmetrical) symmetrically arranged on the shaft. Therefore, in the following, is referred to as "inadequatly axially symmetric structure with 2" and a unit structure. <br /></p>
+      <p num="0022">   Each tapered part in axial symmetry with constriction 2 of planar shape (a shape as viewed from the side +Z) includes, for example, trapezoidal (e.g. a trapezoid), triangular (e.g. equilateral triangles, equilateral, etc.), fan, or a part of the drop-shaped (figs. 2 (A) - 2 (D)). Furthermore, figs. 2 (A) - 2 (D) is, the tapered portion of each side surface (tapered surface), and there is a flat, curved surface. Furthermore, for example, as in a drop-like shape shown in fig. 2 (D), the maximum width portion of the tapered portion of the other part of the coupling. <br /></p>
+      <p num="0023">   The second conductive layer 10a in manufacturing the 1 of, for example, 1 or 2 of the first spacer 10c, 10d second stuck on a sheet of conductive film 1 by notches in a plurality of axially symmetric structure with constriction 2 can be formed, molded inadequatly advance axially symmetric structure 1 or 2 with 2 of the first spacer layer 10c, 10d on first plurality can be formed by sticking, axially symmetric structure with constriction 2 formed in each part, each part 1 or 2 of the first spacer layer 10c, 10d of the first stick on each axially symmetric structure with constriction 2 can be formed. In this way, the first conductive layer 10a having a plurality of axially symmetric structure 1 inadequatly with 2, can be easily manufactured. <br /></p>
+      <p num="0024">   In this case, the unit structure having a constricted part (for example, axially symmetric structure with constriction 2) is, in the axial direction X or Y-axis direction on the inside of the structure in a plane has a propagation wave propagation. In other words, the unit structure having a constricted part, by periodic structure, in a zone on the brillouin number space having a spatial harmonic. Among these, the phase speed becomes faster than the speed region 2nηf, wave propagation of electromagnetic waves from the outside in the plane of the coupling. This means that, in a propagation wave on the surface, which can be radiated to the o <br /></p>
+      <p num="0025">   The RFID tag 100 by, on the second axial symmetry with constriction 2 2 through a spacer layer 10d of the antenna 20 are arranged, in a plane axially symmetric structure with constriction 2 from the antenna 20 and a propagation wave electromagnetic radiation can be coupled. In this way, the axially symmetric structure with constriction 2, the gain of the antenna 20 is reinforced (reinforcing) (operation gain). <br /></p>
+      <p num="0026">   In this case, the conductive body or RFID tag 100 or high dielectric in contact regardless of the approach, IC chip 30 is coupled to the antenna 20 from external electromagnetic waves can supply of electricity, or the information from the IC chip 30 mounted on the electromagnetic radiation (transmission). <br /></p>
+      <p num="0027">   Furthermore, the radio wave antenna 20 of a specific frequency corresponding to the resonance layer in a size corresponding to a determined wavelength, if that is normally used, regardless of the types. <br /></p>
+      <p num="0028">   In fig. 3 (A), the shape of each tapered portion of the triangle configuration of axially symmetric structure with 2 inadequatly Tr is shown, on the fig. 3 (B), axially symmetric structure with 2 inadequatly Tr (1 for convenience in this case two) of first conductive layer 10b 1 2 on the first spacer layer 10c is disposed via a LS YZ cross-sectional drawing of a laminated structure is shown. <br /></p>
+      <p num="0029">   Figs. 4 (A), 4 (B) is, respectively, in the axial direction X, Y axis direction when the phase difference is given with 2 within the plane of axial symmetry inadequatly Tr shown dispersion characteristics of wave propagation. Moreover, the "phase difference in the axial direction X", within the plane of axial symmetry with 2 inadequatly propagation wave which passes in the axial direction X (propagating) Tr when, before passing into the plane of the phase shift of the wave propagation. The "phase difference of the Y-axis direction", within the plane of axial symmetry with 2 inadequatly propagation wave which passes in the axial direction Y (propagating) Tr when, before passing into the plane of the phase shift of the wave propagation. Figs. 4 (A), 4 (B), the axis of abscissa, ka / π. However, the "k" wave vector 2π / λ (λ is the wavelength of the wave propagation in the plane) ;, "a" is axially symmetric structure with constriction 2 2 Tr and a unit structure in the axial direction X or Y dimensional periodic array structure showing the repetition period of the axial direction. <br /></p>
+      <p num="0030">   In this case, in an axial symmetrical structure with 2 inadequatly Tr, as one example, as shown in fig. 3 (A), the height of the taper part h = 25.0 mm, a width in the axial direction X of the constricted part a = 1.55 mm, b = 2.0 mm and the width in the direction of the axis Y of the constricted part, and c = 1.225 mm and an interval around the tapered part. Furthermore, the thickness of the first spacer layer 10c 1 d = 0.364 mm, ratio 3.37 and dielectric constant. In this condition from the measurement result, X-axis direction, the Y-axis direction, in 915MHz, ϕ12 propagation mode having the radiation area. That is, the frequency of the RFID tag 100 by using as communication 915MHz, Tr in axial symmetry with constriction 2 from the outside surface of the radiation propagation wave can be most efficiently. <br /></p>
+      <p num="0031">   Furthermore, figs. 4 (A), 4 (B) in, the effective radiation area of the left side of the broken line, that is, in a surface radiation of wave propagation in a relatively good effect can be obtained. In this way, X-axis direction, a Y axis direction is imparted to each phase difference, which is preferably smaller than the phase difference. <br /></p>
+      <p num="0032">   In figs. 5 (A) and 5 (B), respectively, in the axial direction X of the known field distribution when the phase difference is given and, Y-axis direction in the case of known phase difference is given by calculating the number of image field distribution is shown by shading. From this calculation result, the direction of the X axis, Y axis direction even if the phase difference is given, the electromagnetic wave propagating in the plane (plane propagation wave) having the same mode. <br /></p>
+      <p num="0033">   In fig. 6, RFID tag 100 from the IC chip 30 in the antenna structure 20 to the measured value of impedance is shown by Smith chart. <br /></p>
+      <p num="0034">   In other words, the fig. 6, an axial symmetry of the equilateral triangle with 2 inadequatly TRr h and the height of the tapered portion, and an impedance of this h when the measured value of the parameter is shown. The result of the measurement, the impedance, known relatively near the IC chip 30 is made of the matching region. In this case, the first spacer 10c 1, and PET film (refer fig. 3 (B)) are of a thickness d = 0.364 mm. <br /></p>
+      <p num="0035">   Furthermore, the size of the axially symmetric structure with 2 inadequatly Tr, that is, the size of the tapered part (the height h of the tapered part) by changing the resonant frequency of the axially symmetric structure with constriction 2 is changed, Tr, Tr becomes larger with constriction 2 axially symmetrical structure, it is known that the resonance frequency becomes lower. <br /></p>
+      <p num="0036">   Furthermore, in fig. 7, LS in the laminated structure, the thickness d (mm) 1 of the first spacer layer 10c RFID tag 100 when changing from the IC chip 30 of the antenna 20 side in view of a measured value of impedance is shown by Smith chart. The thickness of the first spacer layer 10c and 1 becomes thicker, the resonance frequency of the axially symmetric structure with 2 inadequatly known Tr becomes high. In this case, h = 26.0 mm a <br /></p>
+      <p num="0037">   In this way, the thickness of the first spacer layer 10c 1, axially symmetric structure with constriction 2 by adjusting the size of Tr, IC chip 30 and impedance matching of the antenna 20 can be adjusted. <br /></p>
+      <p num="0038">   In fig. 8, fig. 3 (B) in a laminated structure shown in axial symmetry LS inadequatly Tr with 2 passing characteristics of wave propagation in the surface is shown. <br /></p>
+      <p num="0039">   And a result, in the fig. 8, fig. 3 (A) is shown in an axial symmetry of the equilateral triangle with 2 inadequatly Tr h and the height of the tapered portion, and when this frequency characteristics of the parameter h is shown. From fig. 8, axially symmetric structure with constriction 2, the larger the size of Tr, the passage area of the propagating waves in shifting the low frequency side is known. In this case, d = 0.364 mm a <br /></p>
+      <p num="0040">   In fig. 9, fig. 3 (B) in a laminated structure shown in LS, the first spacer layer 10c 1 of thickness d (mm) when in the plane of axial symmetry with 2 Tr inadequatly propagation wave pass characteristic is shown. In this case, the height of the triangle is set to h 25.5 mm. In this case, the thickness d (mm) 1 of the first spacer layer 10c becomes thicker, the pass band of wave propagation within the high frequency side. <br /></p>
+      <p num="0041">   Figs. 8,9 from, the magnitude of axial symmetry with 2 inadequatly Tr, 1 second by changing the thickness of the spacer 10c, RFID tag 100 it is known that the operating characteristics of which can be adjusted. <br /></p>
+      <p num="0042">   In fig. 10, communication method for measuring distance is shown schematically. Here, as one example, an RFID tag 100 on the metal surface while cataplasm, RFID tag 100 and RW device while changing the distance L which is the maximum distance which can communicate the communication distance search (measurement). <br /></p>
+      <p num="0043">   In fig. 11, in the state shown in fig. 10, axially symmetric structure with constriction 2 Tr of the equilateral triangle and a constant height h (mm) of the tapered part of the case, the first spacer layer 10c 1 of thickness d (mm) and communication is shown by a graph of the relationship between the ratio. The horizontal axis of the fig. 11 d (mm), the ratio (%) of the vertical axis. The communication ratio, based on the measured communication distance, (measured communication distance/in a free space communication distance) ×100 (%) is calculated. For example, RFID tag 100 even in the state where the metal surface cataplasm, irrespective of the value of d is realized by 30% or more of the communication ratio, d = 1.064 mm in, communication ratio of 72%. In either case, an improved communication state is known. <br /></p>
+      <p num="0044">   In fig. 12, in the state shown in fig. 10,1 d (mm) of the thickness of the first spacer layer 10c as in the case of a fixed, axially symmetrical structure 2 of the tapered section of the equilateral triangle and the ratio of the height h (mm) communication is shown by graph relation. The horizontal axis of the fig. 12 h (mm), the ratio (%) of the vertical axis. In this case, is set to be d = 0.464 mm as an example. For example, RFID tag 100 even in the state where the metal surface cataplasm, h, irrespective of the value of the ratio is realized by 15% or more, with h = 26 mm, communication ratio of 33%. In either case, an improved communication state is known. <br /></p>
+      <p num="0045">   The RFID tag 100 used for communications with the frequency, which is not particularly limited, a range of more than 300MHz 300GHz contg., or any one of a plurality of frequency can be selected. In this range of more 300MHz 300GHz, UHF band (300MHz-3GHz), SHF band (3GHz-30GHz) and EHF band (30GHz-300GHz) is included. <br /></p>
+      <p num="0046">   The RFID tag 100, at least part of the outer surface is preferably coated with a dielectric material. The dielectric material, may have a magnetic. As the material of the dielectric coating, for example a hard and soft and imparting flexibility to the case and the case cover is considered. As the inorganic material and various kinds of hard plastic, wood, or the like can be considered. Such a resin can be obtained by blending an inorganic material. As the soft cover, various kinds of synthetic rubber and thermoplastic elastomer can be used. To impart rigidity and can be made of a hard material, the material used for imparting flexibility and is made of a soft cover. As the material, dielectric material or other inorganic material as illustrative material, paper, wood-based, earth-based, glass-based, it is possible to use a ceramic-based material. These material or packing material, optionally a crosslinking is performed. The adhesive or may have adhesive property. The foam material can be used. The first spacer layer 10c as coating material of 1 or 2 of the first spacer layer 10d of material can be used as it is as the material acidamide. A combination of polymer and glass fiber or other composite material is used. Suitable materials are selected for the particular environmental resistance, durability, impact resistance, insulation property, coating. <br /></p>
+      <p num="0047">   Incidentally, conventional, RFID tag, for example slip, certificate, card, a label or the like (referred to as the slip and below) mounted on, is used as an information transmission medium. <br /></p>
+      <p num="0048">   This slip is, presently, work instructions, request, order, delivery slip, card table, slip, such as physical camber, logistics, distribution, inventory management, such as are utilized in process control. <br /></p>
+      <p num="0049">   However, RFID tag is incorporated as in the prior art, or to a slip cataplasm, RFID tag interfering with the communication of the communication member (for example, a high dielectric constant and a conductive member or members) can not be attached. <br /></p>
+      <p num="0050">   The actual manufacturing industry, transportation industry, vending industry, such as in the rental business, RFID tags are used to the environment in which the communication interrupting members is very large, the RFID tag contg. communication interference member is mounted on the object, the object to be controlled to an extremely large needs. <br /></p>
+      <p num="0051">   Therefore, the RFID tag 100 of this embodiment, the communication interference member in close proximity to, or can be used by mounting, its range is greatly widened, and very high utility. <br /></p>
+      <p num="0052">   Specifically, conductive material or container made of a material having a high dielectric constant, made of conductive material or a material having a high dielectric constant communication interference member consisting of a product including a jamming member, intermediate product, component, carrier, pallet, vehicles, forklift, container, bag, the bag, case, boxes, conductive box, measuring instruments, equipment, heavy equipment, furniture, fixtures, machine, equipment, member, fire extinguisher, gas cylinder, cylinder, tank, vehicle, transport, loading machine, pipe, metal pipe or the like, an RFID tag 100 IC tag, signboards, slip, certificate, or even directly attached to the card label, and wireless communication can be performed. By the ohysical management, inventory control, distribution control, information such as target in product management is widened, and a frequency corresponding to the frequency of international ~~~ RFID, import and easy control of the case. <br /></p>
+      <p num="0053">   The RFID tag 100 of this embodiment described above, the intermediate layer and the laminated body 10 including a first conductive layer 10a as 1, and the antenna 20 provided on the laminated body, and the antenna 20 and connected to the IC chip 30, is provided, the first conductive layer 10a 1, having a structure including inadequatly part. <br /></p>
+      <p num="0054">   In this case, the electromagnetic wave from the outside surface of the second conductive layer 10a by 1 in which the radiation propagating wave excitation of the gain of the antenna 20 (operation gain) is increased. <br /></p>
+      <p num="0055">   Therefore, the thickness of the thin layer (the first spacer layer 10c of example 1) and on the opposite side of the antenna 20 (object to the mounting surface side) of the first conductive layer 10a in the laminated body of 10 to 1, or even in contact or in close proximity to the conductive body of high dielectric material, capable of suppressing a decrease in communication. Moreover, the first conductive layer 10a 1, is easy to manufacture. <br /></p>
+      <p num="0056">   As a result, the RFID tag 100, or in contact with the conductive body when approaching the high dielectric or lowering of communication can be suppressed, and low-cost can be made thin. <br /></p>
+      <p num="0057">   Furthermore, the structure having inadequatly, connected through a constriction, the constriction section separated from the tapered portion including a pair of wide and therefore, can improve the radiation propagating waves in the plane, for stably suppressing the deterioration in communication. <br /></p>
+      <p num="0058">   Furthermore, the two tapered part 2, and since the Homomorphism size, surface-wave radiation in propagation can be improved. <br /></p>
+      <p num="0059">   Furthermore, the two tapered part 2, passing through the axis (X-axis) inadequatly part is disposed at the axially symmetrical, radiation of wave propagation in the plane can be further improved. <br /></p>
+      <p num="0060">   Furthermore, the two tapered part 2, which passes through the constriction, and is orthogonal to the axis (X-axis) axis (Y-axis) are arranged symmetrically with respect to axis, in the plane of radiation propagating waves can be further improved. <br /></p>
+      <p num="0061">   Furthermore, the structure having plural inadequatly, the plurality of structure, are arranged periodically, the radiation propagating waves in a plane between the synergistic effect can be obtained. <br /></p>
+      <p num="0062">   Furthermore, the structure having a plurality of constricted part, are in a staggered arrangement. In this case, first conductive layer 10a inadequatly part 1 has a structure in which can be arranged at a high density, the density of radiation propagating waves in the surface can be increased. <br /></p>
+      <p num="0063">   Furthermore, the laminated body 10, and a second conductive layer 10a of the antenna 20 1 which is disposed between the first spacer layer 10d and 2, second conductive layer 10a of 1 to 2 second spacer layer 10d and disposed on the opposite side of the first spacer layer 10c and 1,. <br /></p>
+      <p num="0064">   In this case, the antenna 20 and between the first conductive layer 1, and a second conductive layer 1 and the insulation between the object can be stably. <br /></p>
+      <p num="0065">   Furthermore, the laminated body 10,1 1 of the first spacer layer 10c and the first conductive layer 10a disposed on a side opposite to the first conductive layer 10b includes 2, first conductive layer 10b of the magnitude of 2, first conductive layer 10a is larger than 1. <br /></p>
+      <p num="0066">   In this case, the installation position of the RFID tag 100 or influence from the environment can be reduced. <br /></p>
+      <p num="0067">   Furthermore, the first spacer layer 10c, 10d 1 and 2, a first of the at least one of which, when made of polyethylene terephthalate or foam, can be made thin and light in weight. <br /></p>
+      <p num="0068">   Furthermore, the first and second spacer layer 10d 2 2 of at least one of a conductive layer 10b when the adhesive or adhesive, antenna 20, IC chip 30 attached to the laminated body 10 or, RFID tag 100 pastings to an object can be easily performed. <br /></p>
+      <p num="0069">   Also, at least part of the outer surface of the RFID tag 100 (film) is coated with a dielectric material when, the influence of spurious electromagnetic or from the outside, by decreasing the influence from the ambient environment, the improvement effect communication can be further improved. <br /></p>
+      <p num="0070">   Also, at least part of the outer surface of the RFID tag 100 is coated with a dielectric material when, durability, weather resistance, impact resistance, such as printing characteristics can be imparted. <br /></p>
+      <p num="0071">   Furthermore, RFID tag 100 alone, or the IC tag and IC chip and antenna and including in combination an electromagnetic control sheet, high dielectric material or product containing a conductive material, an intermediate product, component, container, carrier, moving means or the like, slip, certificate, card, such as label information transmission medium directly attached, and IC chip by radio communication can be performed. <br /></p>
+      <p num="0072">   Furthermore, in the above embodiment, the first conductive layer 10a 1, axially symmetric structure with constriction 2 and a unit structure has a 2 dimensional periodic structure, but is not limited to this. For example, the RFID tag 200 is shown as an example of the deformation of figs. 13 (A) - 13 (B) the, first conductive layer 1,2 may have only one axially symmetric structure 1. Moreover, the first conductive layer 1,2 arranged in an axial symmetry of the 1-dimensional periodic 1 may have a dimensional periodic structure. Furthermore, the axially symmetric structure 2 is not necessarily a periodic sequence. Even in either case, the axially symmetric structure with constriction 2, or other inadequatly around an axial symmetry and insulated with 2. <br /></p>
+      <p num="0073">   Furthermore, as shown in figs. 14 (A) and 14 (B), an RFID tag 100 of the laminate 10 electromagnetic control can also be used as a seat. Furthermore, the electromagnetic control sheet, as shown in figs. 15 (A) and 15 (B), the second conductive layer 2 of the shaft 1 is a symmetrical structure 1 may have only one. <br /></p>
+      <p num="0074">   Such a laminate 10 comprising the electromagnetic control sheet, overlapped IC tag on the market only by radio, does not depend on the kind of the adherend in communication can be improved. Furthermore, an IC chip IC tag and electromagnetic control sheet of radio wave signal communication between conductor wiring, connection, without using a process such as soldering, impedance adjustment is performed, or communication is adjusting the resonance frequency. <br /></p>
+      <p num="0075">   Furthermore, the RFID tag or electromagnetic control sheet, a second conductive layer 10b 2 does not have a good. Even in this case, the embodiment and a similar effect can be obtained. However, the first conductive layer 10b 2, in contact with the conductive body at the time of manufacturing a situation can be previously set up, to ensure a stable operation under this condition at a point which is a constituent member can be useful. <br /></p>
+      <p num="0076">   Furthermore, the spacer layer, and a second conductive layer 10a of the antenna 20 or between 1,1 and 2 between the first and the second conductive layer 10b of good insulating if, for example, a recess, an opening, a notch or the like is formed. <br /></p>
+      <p num="0077">   Moreover, the first conductive layer 1 in the constricted part structure comprising, in the embodiment, the example is not limited to, properly, can be changed. Or less even in a structure including a constricted part illustrated in, the embodiment, structure including a deformation example inadequatly slightly inferior than for the same effect is obtained. <br /></p>
+      <p num="0078">   For example, the tapered portion of the side surface (tapered surface) of the axially symmetric structure inadequatly with 2, as shown in figs. 16 (A) and 16 (B), a curved surface (curved in plan view). <br /></p>
+      <p num="0079">   Furthermore, for example, figs. 17 (A) - 17 (C) as shown in, the structure including a constricted part, axially symmetric structure 1 can be the only with respect to the axis 1. In fig. 17 (A), the pair of tapered portions, rhomboid · Homomorphism. In fig. 17 (B), the pair of tapered portions, different large Homomorphism · (different size). In fig. 17 (C), a pair of tapered surfaces of each tapered section is not symmetrical with respect to the shaft. <br /></p>
+      <p num="0080">   Furthermore, for example, figs. 18 (A) - 18 (C) as shown in, the structure including a constricted part, a pair of tapered part is directly coupled. In fig. 18 (A) of the axially symmetric structure with constriction 2, inadequatly part of surface-shaped (in plan view a linear). In fig. 18 (B) of the axially symmetric structure with constriction 2, a narrow part is linear (point-like in a plan view). In fig. 18 (C) of the axially symmetric structure with constriction 1, a narrow part is planar (in plan view a linear). <br /></p>
+      <p num="0081">   Furthermore, for example, as shown in fig. 19 (A), a pair of tapered portion is deformed axially symmetric structure with constriction 1. Furthermore, as shown in fig. 19 (B), a pair of tapered part with a profiled inadequatly nonaxissymmetric structure. Furthermore, as shown in fig. 19 (C), each pair of the tapered surface of the tapered part 2 are substantially parallel to an axial symmetry. In other words, each of the taper angle of the tapered portion, and can be appropriately changed within a range in which the reverse taper. <br /></p>
+      <p num="0082">   Furthermore, the arrangement of a plurality of the axially symmetric structure with constriction 2, for example, as shown in fig. 20 (A), axially symmetric structure with constriction 2 at periodic horizontally so as to alternately can be arranged, as shown in fig. 20 (B) axially symmetric structure with 2 inadequatly periodic array in a matrix. Furthermore, the arrangement of fig. 20 (A), compared with the arrangement of fig. 20 (B) can be arranged at a high density. In this way, the arrangement of axially symmetrical structure with constriction 2, periodically, preferably of a regular, not at a regularly. <br /></p>
+      <p num="0083">   Moreover, the first conductive layer 1, including at least one necked part if it has a structure 1, first conductive layer 1 in the peripheral portion of a structure including a constricted part, which, is not required. <br /></p>
+      <p num="0084">   RFID tag 100 of the embodiment, the RFID tag 100 and the reading and writing of information by radio communication with at least one device for containing and RW (communication device), it is also possible to construct a radio communication system. In this case, an accurate transfer of information to a wireless communication system can be realized. Furthermore, the wireless communication system, the information read out communication device includes a management device. <br /></p>
+      <p num="0085">   For example, an RFID tag 100 at a number of bonding a metal article, their (while a certain interval) successively flows on a conveyor, at an arbitrary place their gate part by an antenna, or traceability control distribution management (delivery control), such as a wireless communication system can be constructed. <br /></p>
+      <p num="0086">   The RFID tag 100 as information which can be transmitted by, not only the product ID, history information, not only mention information, work instructions, request, delivery slip, can also include such ordering, inventory management data of the management cost or example yield is improved, and a productivity is enhanced, such as reduction or cost can be expected. <br /></p>
+      <p num="0087">   In the following, the embodiments of this present invention to explain why the inventor. <br /></p>
+      <p num="0088">   In recent years, interest in the RFID (Radio Frequency Identification) tag. The RFID tag, wireless IC tag of a kind, in general, a chip LSI (Large Scale Integrated circuit), and their external antenna is molded from resin or the l <br /></p>
+      <p num="0089">   The RFID tag size (outer diameter), various, coin size, such as an IC card size of from 0.3 mm diameter 20-30mm (sesame size). Furthermore, the non-loaded and loaded type battery and battery, the former is active tags, passive tags and the latter is called. <br /></p>
+      <p num="0090">   The LSI chip built into the RFID tag, antenna, a transmitting/receiving part, and a control part. In the memory, a unique identification code (unique ID) is stored, that this unique RFID tag reader/writer ID (below, simply and reader/writer described) is read. This unique RFID tag reader/writer by reading the ID, RFID tag (below, simply and antenna described) via a wireless communication (radio communication). In the radio communication, and electromagnetic induction system wave system. <br /></p>
+      <p num="0091">   In general, the RFID tag and stuck on the metal, characteristic is greatly changed.  For example, in the case of an electromagnetic induction type RFID tag, and enter the flux, eddy current flows through the metal, so as to cancel the flux acting on it. As a result, the communication range (the communication area) is greatly reduced, and in the worst case, communication is impossible. In this case, the position of the RFID tag cataplasm metal and a fixed distance away from, the influence of the metal is reduced. <br /></p>
+      <p num="0092">   Furthermore, in the case of the RFID tag of the radio system, a radio wave is reflected by the metal surface of the multi-pass phenomenon occurs, the information of the RFID tag becomes unstable, due to the influence of the metal surface, RFID tag antennas for power conversion efficiency becomes worse, and electromagnetic induction system causing deterioration of updating in the same distance. <br /></p>
+      <p num="0093">   Also in this case a certain distance from the RFID tag of a metal more cataplasm by separating, from the influence of the metal. <br /></p>
+      <p num="0094">   In the case of the merchandise or product, are made of a metal material is large.  Therefore, RFID tag attached to metal, and that the corresponding metal, are already on the market. <br /></p>
+      <p num="0095">   The RFID tag corresponding to metal, or its antenna (RFID tag antenna) is separated a sufficient distance from the metal, or, so as to hold the RFID tag on the RF absorbing material and between the metal, metal. <br /></p>
+      <p num="0096">   In fig. 21 (A), shows the RFID tag is a sectional diagram corresponding to the configuration of the conventional metal 1000 is shown. The RFID tag corresponding metal 1000 shown in the drawing, the metal reflecting plate 101, the spacer part 102, substrate material sections 103 and PET104 are laminated in this order. RFID tags are mounted on the substrate material sections 103 and, LSI chip 111 is substantially in the center thereof, (RFID tag antenna) antenna 112 are provided on both side surfaces thereof. <br /> The RFID tag, LSI chip 111 and antenna 112.  In the LSI chip 111, control unit, and memory or the like is integrated on the receiving part.  The antenna 112, a dipole antenna is often used. <br /></p>
+      <p num="0097">   The metal reflecting plate 101, an adhesive (not shown) through the metal thin plates (plate) is attached, is reflected by the metal reflecting RF. <br /> The spacer section 102, a dielectric or styrofoam, plastic or the like, RFID tag corresponding to metal and metal 100 is mounted on the substrate material portion 103 of the antenna 112 for maintaining a fixed distance, and, a material having a function of absorbing material and by RF is also used. <br /></p>
+      <p num="0098">   A conventional metal is constituted of the above 1000 RFID tag in the corresponding, spacer 102 since it is required to increase the thickness of, RFID tag 100 corresponding to the thickness of the metal main body becomes very large, difficult to handle, use is also limited. <br /></p>
+      <p num="0099">   Incidentally, the impedance of the antenna surface that is arranged in the vicinity of, its high surface impedance impedance by the energy incident on the surface is reflected in the same phase, it is known to improve the performance of the antenna. <br /></p>
+      <p num="0100">   As a sheet-like structure having a high surface impedance EBG (Electromagnetic <br /> BandGap) has a structure, and IC chip between this sheet-like structure that is placed on a sheet-like structure, of a sheet-like structure and IC chip of the reflection frequency and phase to match the antenna conductor method is also proposed (for example, refer to patent document 1). <br /></p>
+      <p num="0101">   In the patent document 1, as shown in fig. 21 (B), the sheet-like structure, the unit structure 5 comprises EBG structure 3, a top electrode 11 and the structure of the unit 10, and a ground electrode 12, and a top electrode 11 and the ground electrode 12 and a via 13, top electrode 11 and the ground electrode 12 and a dielectric sandwiched in between, disposed within the dielectric and stray capacitor electrode 15. <br /></p>
+      <p num="0102">   However, the device described in Patent Document 1 in a sheet-like structure of the antenna, in order for forming viae step of the manufacturing process itself becomes complicated, it is difficult to manufacture at a low cost. <br /></p>
+      <p num="0103">   Therefore, the invention, in order to deal with the above problem, in the embodiment, an example of modification to the inventor. <br /></p>
+    </description-of-embodiments>
+    <reference-signs-list>
+      <p num="0104">   10... laminate, 20... antenna, 30... IC chip, 100... RFID tag. <br /></p>
+    </reference-signs-list>
+    <citation-list>
+      <patent-literature>
+        <p num="0105">
+          <patcit num="1"><text>The patent publication Number 5543795 </text></patcit>
+        </p>
+      </patent-literature>
+    </citation-list>
+  </description>
+  <description id="descr_jpn" lang="jpn" format="original" date-changed="20160929">
+    <technical-field>
+      <p num="0001">   本発明は、ＲＦＩＤタグ、通信システム、及び電磁波制御シートに係り、更に詳しくは、アンテナとＩＣチップを備えるＲＦＩＤタグ、該ＲＦＩＤタグを備える通信システム、及び電磁波を制御する電磁波制御シートに関する。 </p>
+    </technical-field>
+    <background-art>
+      <p num="0002">   近年、ＲＦＩＤタグの開発が盛んに行われている。 </p>
+      <p num="0003">   例えば、特許文献１には、導電体や高誘電体に接触もしくは近接したときの通信性の低下を抑制できるＲＦＩＤタグが開示されている。 </p>
+    </background-art>
+    <disclosure>
+      <tech-problem>
+        <p num="0004">
+  しかしながら、特許文献１に開示されているＲＦＩＤタグでは、薄型化と低コスト化を両立するのは困難であった。
+</p>
+      </tech-problem>
+      <tech-solution>
+        <p num="0005">
+  本発明は、一の導電層を中間層として含む積層体と、前記積層体上に設けられたアンテナと、前記アンテナに接続されたＩＣチップと、を備え、前記一の導電層は、括れ部を含む構造を少なくとも１つ有するＲＦＩＤタグである。
+</p>
+      </tech-solution>
+      <advantageous-effects>
+        <p num="0006">
+  本発明によれば、導電体や高誘電体に接触もしくは近接したときの通信性の低下を抑制でき、かつ薄型化と低コスト化を両立できる。
+</p>
+      </advantageous-effects>
+    </disclosure>
+    <description-of-drawings>
+      <p num="0007">図１（Ａ）は、一実施形態のＲＦＩＤタグの平面透視図であり、図１（Ｂ）は、該ＲＦＩＤタグのＹＺ断面図である。図２（Ａ）～図２（Ｄ）は、それぞれ括れ付き２軸対称構造の具体例（その１～その４）を示す図である。図３（Ａ）及び図３（Ｂ）は、それぞれ括れ付き２軸対称構造Ｔｒの構成について説明するための図（その１及びその２）である。図４（Ａ）及び図４（Ｂ）は、それぞれＸ軸方向、Ｙ軸方向に位相差を付与した場合における括れ付き２軸対称構造Ｔｒの面内伝播波の分散特性を示す図である。図５（Ａ）及び図５（Ｂ）は、それぞれＸ軸方向、Ｙ軸方向に既知の位相差を付与した場合における括れ付き２軸対称構造Ｔｒの電界分布を示す図である。ＲＦＩＤタグにおけるＩＣチップからアンテナ側を見たインピーダンスの実測値を示すスミスチャート（その１）である。ＲＦＩＤタグにおけるＩＣチップからアンテナ側を見たインピーダンスの実測値を示すスミスチャート（その２）である。括れ付き２軸対称構造Ｔｒを有する積層構造体の面内伝播波の通過特性を示す図（その１）である。括れ付き２軸対称構造Ｔｒを有する積層構造体の面内伝播波の通過特性を示す図（その２）である。通信距離の測定方法を示す概略図である。第１のスペーサ層の厚さｄと通信比率の関係を示すグラフである。括れ付き２軸対称構造Ｔｒの三角形の大きさ（高さ）と通信比率の関係を示すグラフである。図１３（Ａ）は、変形例のＲＦＩＤタグの平面透視図であり、図１３（Ｂ）は、変形例のＲＦＩＤタグのＹＺ断面図である。図１４（Ａ）は、複数の括れ付き２軸対称構造が周期配列された導電層を含む電磁波制御シートの平面透視図であり、図１３（Ｂ）は、該電磁波制御シートのＹＺ断面図である。図１５（Ａ）は、単一の括れ付き２軸対称構造を導電層に含む電磁波制御シートの平面透視図であり、図１５（Ｂ）は、該電磁波制御シートの断面図である。図１６（Ａ）及び図１６（Ｂ）は、それぞれ括れ付き２軸対称構造の他の例を説明するための図である。図１７（Ａ）～図１７（Ｃ）は、それぞれ括れ付き１軸対称構造の具体例を説明するための図である。図１８（Ａ）及び図１８（Ｂ）は、それぞれ括れ付き２軸対称構造の他の例を説明するための図であり、図１８（Ｃ）は、括れ付き１軸対称構造の他の例を説明するための図である。図１９（Ａ）は、括れ付き１軸対称構造の他の例を説明するための図であり、図１９（Ｂ）は、括れ付き非軸対称構造の具体例を説明するための図であり、図１９（Ｃ）は、括れ付き２軸対称構造の他の例を説明するための図である。図２０（Ａ）及び図２０（Ｂ）は、複数の括れ付き２軸対称構造の周期配列の他の例を説明するための図である。図２１（Ａ）及び図２１（Ｂ）は、それぞれ従来のＲＦＩＤタグについて説明するための図である。</p>
+    </description-of-drawings>
+    <description-of-embodiments>
+      <p num="0008">   以下、本発明の一実施形態を図１～図１２に基づいて説明する。図１（Ａ）には、一実施形態のＲＦＩＤタグ１００の平面透視図が示されている。図１（Ｂ）には、ＲＦＩＤタグ１００のＹＺ断面図が示されている。 </p>
+      <p num="0009">   ＲＦＩＤタグ１００は、一例として、図１（Ａ）及び図１（Ｂ）に示されるように、第１の導電層１０ａを中間層として含む積層体１０と、該積層体１０上に設けられたアンテナ２０と、該アンテナ２０に接続されたＩＣチップ３０と、を備えている。ここでは、ＲＦＩＤタグ１００は、パッシブ型タグであるが、電池を搭載したアクティブ型タグであっても良い。 </p>
+      <p num="0010">   以下では、積層体１０の積層方向をＺ軸方向とするＸＹＺ３次元直交座標系を適宜用いて説明する。ここでは、アンテナ２０、ＩＣチップ３０は、積層体１０の＋Ｚ側に配置されている。 </p>
+      <p num="0011">   ＩＣチップ３０には、ユニークなＩＤ番号が格納されている。このＩＤ番号は、ＲＷ装置（リーダライタ装置）を用いて読み出すことができる。 </p>
+      <p num="0012">   アンテナ２０としては、図１（Ａ）に示されるような蛇行部を含むものの他、通常ＲＦＩＤタグで使用される通信用のアンテナ（ループアンテナ、パッチアンテナ、ダイポールアンテナ、スパイラルアンテナ、ヘリカルアンテナ、スリットアンテナなど）でもよい。 </p>
+      <p num="0013">   積層体１０は、第１の導電層１０ａに加えて、該第１の導電層１０ａの－Ｚ側に配置されたグランド層としての第２の導電層１０ｂと、第１及び第２の導電層１０ａ、１０ｂ間に配置された誘電体からなる第１のスペーサ層１０ｃと、第１の導電層１０ａとアンテナ２０との間に配置された誘電体からなる第２のスペーサ層１０ｄとを含む。 </p>
+      <p num="0014">   各導電層の材料（導電性材料）としては、金、白金、銀、ニッケル、クロム、アルミニウム、銅、亜鉛、鉛、タングステン、鉄などの金属であってもよく、樹脂に上記金属の粉末、導電性カーボンブラックの混入された樹脂混合物、あるいは導電性樹脂のフィルム等であってもよい。上記金属等を、箔状、板状、シート状、フィルム状等に加工されたものであってもよい。あるいはまた合成樹脂性フィルム上に、膜厚たとえば６００Åの金属薄層が形成された構成を有してもよい。金属箔をフィルムもしくはクロスなどの基材に転写したものでもよい。また、金属粒子系の導電インク（たとえば抵抗率１０Ω／□以下）を第１のスペーサ層１０ｃや第２のスペーサ層１０ｄに塗布してもよい。 </p>
+      <p num="0015">   各スペーサ層の材料としては、例えば、ＰＥＴ（Polyethylene Terephthalate樹脂）などの誘電体材料が適している。また、実際のスペーサ層の材料としては比較的透明なもの（少なくとも内部を透視しうるもの）を用いる場合もある。その他、できるだけ誘電率の低い樹脂や、空気分を含む発泡材、スポンジ、ウレタン、繊維などが好ましい。さらに、有機材料としては、たとえばゴム、熱可塑性エラストマー、各種プラスチック、木材、紙材、などの高分子有機材料等の多孔質体が挙げられる。前記ゴムとしては、天然ゴムのほか、イソプレンゴム、ブタジエンゴム、スチレン－ブタジエンゴム、エチレン－プロピレンゴム、エチレン－プロピレン－ジエンゴム（ＥＰＤＭゴム）、エチレン－酢酸ビニル系ゴム、ブチルゴム、ハロゲン化ブチルゴム、クロロプレンゴム、ニトリルゴム、アクリルゴム、エチレンアクリル系ゴム、エピクロロヒドリンゴム、フッ素ゴム、ウレタンゴム、シリコンゴム、塩素化ポリエチレンゴム、水素添加ニトリルゴム（ＨＮＢＲ）などの合成ゴム単独、それらの誘導体、もしくはこれらを各種変性処理にて改質したものなどが挙げられる。これらのゴムは、単独で使用するほか、複数をブレンドして用いることができる。熱可塑性エラストマーとしては、たとえば塩素化ポリエチレンのような塩素系、エチレン系共重合体、アクリル系、エチレンアクリル共重合体系、ウレタン系、エステル系、シリコーン系、スチレン系、アミド系、オレフィン系などの各種熱可塑性エラストマーおよびそれらの誘導体が挙げられる。さらに、各種プラスチックとしては、たとえばポリエチレン、ポリプロピレン、ＡＳ樹脂、ＡＢＳ樹脂、ポリスチレン、ポリ塩化ビニル、ポリ塩化ビニリデン等の塩素系樹脂；ポリ酢酸ビニル、エチレン－酢酸ビニル共重合体、フッ素樹脂、シリコーン樹脂、アクリル系樹脂、ナイロン、ポリカーボネート、ポリエチレンテレフタレート、アルキド樹脂、不飽和ポリエステル、ポリスルホン、ポリイミド樹脂、ウレタン系樹脂、フェノール樹脂、尿素樹脂、エポキシ樹脂などの熱可塑性樹脂または熱硬化性樹脂およびこれらの誘導体、さらには共重合体やリサイクル樹脂等が挙げられる。以上の材料をそのままか、複合化、変性化して用いることができる。発泡することが好ましい。典型的な低密度の誘電体材料は、発泡スチロール樹脂などの発泡樹脂である。熱可塑性エラストマーとしては、たとえば塩素化ポリエチレンのような塩素系、エチレン系共重合体、アクリル系、エチレンアクリル共重合体系、ウレタン系、エステル系、シリコーン系、スチレン系、アミド系、オレフィン系などの各種熱可塑性エラストマーおよびそれらの誘導体が挙げられる。以上の材料をそのままか、複合化、変性化して用いることができる。発泡することが好ましい。典型的な低密度の誘電体材料は、発泡スチロール樹脂などの発泡樹脂である。以上の他に、ダンボールなどの紙材、木材、ガラス、ガラス繊維、土系材料なども使用可能である。また無線ＩＣタグの基材や粘着材層をスペーサーの材料とすることも可能である。 </p>
+      <p num="0016">   各スペーサ層は、以上のように磁性材料を実質的に含まない材料で構成されることで、安価で実現可能である。 </p>
+      <p num="0017">   第１の導電層１０ａは、図１（Ａ）に示されるように、複数（例えば１１個）の単位構造がＸＹ平面に沿って２次元に周期配列された２次元周期配列構造を有している。各単位構造は、他の単位構造や周囲と絶縁されている。ここでは、複数の単位構造の周期配列は、千鳥配列であるが、例えばマトリクス配列等の他の周期配列であっても良い。 </p>
+      <p num="0018">   各単位構造は、括れ部と、該括れ部を介して接続され、該括れ部からＹ軸方向に離れるほどＸ軸方向に幅広となる一対のテーパ部とを含んでいる。すなわち、一対のテーパ部は、先端同士が括れ部を介して結合している（接続されている）。各単位構造は、一体成形されても良いし、複数の部分が別体で成形された後、接合されても良い。 </p>
+      <p num="0019">   括れ部は、Ｘ軸方向、Ｙ軸方向の少なくとも一方にある程度の幅を有していても良いし、Ｘ軸方向、Ｙ軸方向の少なくとも一方の幅が略０であっても良い。すなわち、括れ部は、平面形状（＋Ｚ側から見た形状）が、面形状（図３（Ａ）参照）、線形状、点形状のいずれであっても良い。括れ部の平面形状がＸ軸に平行な線形状や点形状である場合には、実質的に、一対のテーパ部は、先端部同士が直接結合されている。この場合には、「括れ部」は、一対のテーパ部の界面を意味すると考えて良い。 </p>
+      <p num="0020">   ここでは、括れ部の形状は、一例として、矩形（面形状）とされているが、他の形状であっても良い。 </p>
+      <p num="0021">   一対のテーパ部は、括れ部をＹ軸方向に挟む位置関係にある。また、一対のテーパ部は、同形かつ同大であり、括れ部を通る互いに直交する一軸（Ｘ軸）及び他軸（Ｙ軸）それぞれに関して軸対称（線対称）に配置されている。そこで、以下では、単位構造を「括れ付き２軸対称構造」とも呼ぶ。 </p>
+      <p num="0022">   括れ付き２軸対称構造における各テーパ部の平面形状（＋Ｚ側から見た形状）としては、一例として、台形（例えば等脚台形）、三角形（例えば正三角形、二等辺三角形等）、扇形、滴形の一部などが挙げられる（図２（Ａ）～図２（Ｄ））。なお、図２（Ａ）～図２（Ｄ）では、各テーパ部の側面（テーパ面）は、平面となっているが、曲面であっても良い。また、例えば、図２（Ｄ）に示される滴形のように、テーパ部の最大幅箇所に他の部分が結合していても良い。 </p>
+      <p num="0023">   第１の導電層１０ａの作製に際しては、例えば、第１又は第２のスペーサ１０ｃ、１０ｄ上に貼り付けられる１枚の導電膜に切り欠き加工を施すことで括れ付き２軸対称構造を複数形成しても良いし、予め成形加工された括れ付き２軸対称構造を第１又は第２のスペーサ層１０ｃ、１０ｄ上に複数貼り付けることで形成しても良いし、括れ付き２軸対称構造をパーツ毎に成形加工し、各パーツを第１又は第２のスペーサ層１０ｃ、１０ｄ上に貼り付けることで各括れ付き２軸対称構造を形成しても良い。このように、括れ付き２軸対称構造を複数有する第１の導電層１０ａは、容易に作製可能である。 </p>
+      <p num="0024">   ここで、括れ部を有する単位構造（例えば括れ付き２軸対称構造）は、構造内部をＸ軸方向もしくはＹ軸方向に伝播する面内伝播波を有している。すなわち、括れ部を有する単位構造は、構造の周期性により、波数空間上のブリルアンゾーン中に空間高調波を持つ。これらのうち、位相速度が光速よりも速くなる速波領域では、外部からの電磁波が面内伝播波に結合することができる。このことは、励起された面内伝播波を、外部に放射させることが可能であることを意味する。 </p>
+      <p num="0025">   ＲＦＩＤタグ１００では、括れ付き２軸対称構造上に第２のスペーサ層１０ｄを介してアンテナ２０が配置されているため、括れ付き２軸対称構造から面内伝播波を放射させてアンテナ２０と電磁的に結合させることができる。このように、括れ付き２軸対称構造は、アンテナ２０のゲイン（動作利得）を補強（増強）する機能を有する。 </p>
+      <p num="0026">   この場合、ＲＦＩＤタグ１００を導電体や高誘電体に接触もしくは近接させても、アンテナ２０に結合したＩＣチップ３０が外部電磁波からの給電を受けることが可能になり、もしくはＩＣチップ３０からの情報を電磁波に乗せて放射（送信）することが可能になる。 </p>
+      <p num="0027">   なお、アンテナ２０の共振層は特定周波数の電波に対応する波長に応じたサイズで決まり、通常用いられているものであれば、種類は問わない。 </p>
+      <p num="0028">   図３（Ａ）には、各テーパ部の形状が正三角形の括れ付き２軸対称構造Ｔｒの構成が示され、図３（Ｂ）には、括れ付き２軸対称構造Ｔｒ（ここでは便宜上１つ）が第２の導電層１０ｂ上に第１のスペーサ層１０ｃを介して配置された積層構造体ＬＳのＹＺ断面図が示されている。 </p>
+      <p num="0029">   図４（Ａ）、図４（Ｂ）には、それぞれＸ軸方向、Ｙ軸方向の位相差を付与した場合の括れ付き２軸対称構造Ｔｒの面内伝播波の分散特性が示さている。なお、「Ｘ軸方向の位相差」は、面内伝播波が括れ付き２軸対称構造ＴｒをＸ軸方向に通過（伝播）したときの、通過前後での該面内伝播波の位相のずれを意味する。「Ｙ軸方向の位相差」は、面内伝播波が括れ付き２軸対称構造ＴｒをＹ軸方向に通過（伝播）したときの、通過前後での該面内伝播波の位相のずれを意味する。図４（Ａ）、図４（Ｂ）の横軸は、ｋａ／πである。ただし、「ｋ」は波数ベクトル２π／λ（λは面内伝播波の波長）を示し、「ａ」は括れ付き２軸対称構造Ｔｒを単位構造とする２次元周期配列構造におけるＸ軸方向もしくはＹ軸方向の繰り返し周期を示す。 </p>
+      <p num="0030">   ここでは、括れ付き２軸対称構造Ｔｒにおいて、一例として、図３（Ａ）に示されるように、テーパ部の高さをｈ＝２５．０ｍｍ、括れ部のＸ軸方向の幅をａ＝１．５５ｍｍ、括れ部のＹ軸方向の幅をｂ＝２．０ｍｍ、テーパ部と周囲との間隔をｃ＝１．２２５ｍｍとしている。また、第１のスペーサ層１０ｃの厚さをｄ＝０．３６４ｍｍ、比誘電率を３．３７としている。この条件での測定結果から、Ｘ軸方向、Ｙ軸方向ともに、９１５ＭＨｚにおいて、放射域に伝播モードを持つことがわかった。すなわち、ＲＦＩＤタグ１００の通信周波数として９１５ＭＨｚを用いることにより、括れ付き２軸対称構造Ｔｒから面内伝播波を外部に最も効率良く放射させることができる。 </p>
+      <p num="0031">   なお、図４（Ａ）、図４（Ｂ）において、破線よりも左側の領域が有効放射域、すなわち面内伝播波の放射効果が比較的良好に得られる領域である。このことから、Ｘ軸方向、Ｙ軸方向それぞれに付与する位相差は、ある位相差よりも小さくすることが好ましいことがわかる。 </p>
+      <p num="0032">   図５（Ａ）及び図５（Ｂ）には、それぞれＸ軸方向に既知の位相差を付与した場合の電界分布と、Ｙ軸方向に既知の位相差を付与した場合の電界分布の計算結果が濃淡画像で示されている。この計算結果から、Ｘ軸方向、Ｙ軸方向のいずれに位相差を付与しても、面内を伝播する電磁波（面内伝播波）は同じモードを持つことが分かる。 </p>
+      <p num="0033">   図６には、ＲＦＩＤタグ１００におけるＩＣチップ３０からアンテナ構造２０側を見たインピーダンスの実測値がスミスチャートで示されている。 </p>
+      <p num="0034">   すなわち、図６は、括れ付き２軸対称構造ＴＲｒの正三角形のテーパ部の高さをｈとし、このｈをパラメータとしたときのインピーダンスの実測値が示されている。測定結果から、インピーダンスは、比較的ＩＣチップ３０の整合領域に近くなっていることがわかる。ここでは、第１のスペーサ１０ｃは、厚さｄ＝０．３６４ｍｍのＰＥＴフィルムとされている（図３（Ｂ）参照）。 </p>
+      <p num="0035">   また、括れ付き２軸対称構造Ｔｒの大きさ、すなわちテーパ部の大きさ（テーパ部の高さｈ）を変化させることで括れ付き２軸対称構造Ｔｒの共振周波数が変化し、括れ付き２軸対称構造Ｔｒが大きくなるほど、共振周波数が低くなることがわかる。 </p>
+      <p num="0036">   また、図７には、積層構造体ＬＳにおいて、第１のスペーサ層１０ｃの厚さｄ（ｍｍ）を変えたときのＲＦＩＤタグ１００におけるＩＣチップ３０からアンテナ２０側を見たインピーダンスの実測値がスミスチャートで示されている。第１のスペーサ層１０ｃの厚さが厚くなると、括れ付き２軸対称構造Ｔｒの共振周波数は高くなることがわかる。ここでは、ｈ＝２６．０ｍｍとされている。 </p>
+      <p num="0037">   このことから、第１のスペーサ層１０ｃの厚さ、括れ付き２軸対称構造Ｔｒの大きさを調整することで、ＩＣチップ３０とアンテナ２０のインピーダンス整合を調整することができる。 </p>
+      <p num="0038">   図８には、図３（Ｂ）に示される積層構造体ＬＳにおける括れ付き２軸対称構造Ｔｒにおける面内伝播波の通過特性が示されている。 </p>
+      <p num="0039">   詳述すると、図８には、図３（Ａ）に示される括れ付き２軸対称構造Ｔｒの正三角形のテーパ部の高さをｈとし、このｈをパラメータとしたときの周波数特性が示されている。図８から、括れ付き２軸対称構造Ｔｒの大きさが大きくなるほど、面内伝播波の通過域は低周波数側にシフトすることがわかる。ここでは、ｄ＝０．３６４ｍｍとされている。 </p>
+      <p num="0040">   図９には、図３（Ｂ）に示される積層構造体ＬＳにおいて、第１のスペーサ層１０ｃの厚さｄ（ｍｍ）を変えたときの括れ付き２軸対称構造Ｔｒの面内伝播波の通過特性が示されている。ここでは、正三角形の高さｈは２５．５ｍｍに設定されている。この場合は、第１のスペーサ層１０ｃの厚さｄ（ｍｍ）が厚くなるほど、面内伝播波の通過域は高周波数側にシフトすることがわかる。 </p>
+      <p num="0041">   図８、図９より、括れ付き２軸対称構造Ｔｒの大きさ、第１のスペーサ１０ｃの厚さを変えることで、ＲＦＩＤタグ１００の動作特性を調整可能なことがわかる。 </p>
+      <p num="0042">   図１０には、通信距離の測定方法が概略的に示されている。ここでは、一例として、金属面にＲＦＩＤタグ１００を貼付した状態で、ＲＦＩＤタグ１００とＲＷ装置との距離Ｌを変えながら通信可能な最大距離である通信距離を探索（測定）する。 </p>
+      <p num="0043">   図１１には、図１０に示される状態で、括れ付き２軸対称構造Ｔｒの正三角形のテーパ部の高さｈ（ｍｍ）を一定とした場合の、第１のスペーサ層１０ｃの厚さｄ（ｍｍ）と通信比率の関係がグラフで示されている。図１１の横軸はｄ（ｍｍ）、縦軸は通信比率（％）である。通信比率は、測定した通信距離に基づいて、（測定した通信距離／自由空間での通信距離）×１００（％）で算出されている。ＲＦＩＤタグ１００を例えば金属面に貼付した状態でも、ｄの値によらず３０％以上の通信比率を実現しており、ｄ＝１．０６４ｍｍで、通信比率が７２％であった。いずれの場合も、通信状態が改善されていることがわかる。 </p>
+      <p num="0044">   図１２には、図１０に示される状態で、第１のスペーサ層１０ｃの厚さｄ（ｍｍ）を一定として場合の、２軸対称構造の正三角形のテーパ部の高さｈ（ｍｍ）と通信比率の関係がグラフで示されている。図１２の横軸はｈ（ｍｍ）、縦軸は通信比率（％）である。ここでは、一例としてｄ＝０．４６４ｍｍに設定されている。ＲＦＩＤタグ１００を例えば金属面に貼付した状態でも、ｈの値によらず１５％以上の通信比率を実現しており、ｈ＝２６ｍｍで、通信比率が３３％であった。いずれの場合も、通信状態が改善されていることがわかる。 </p>
+      <p num="0045">   ＲＦＩＤタグ１００の通信に用いられる周波数は、特に限定されるものではないが、３００ＭＨｚ以上３００ＧＨｚ以下の範囲を含み、任意の単数または複数の周波数を選択することができる。この３００ＭＨｚ以上３００ＧＨｚ以下の範囲には、ＵＨＦ帯（３００ＭＨｚ～３ＧＨｚ）、ＳＨＦ帯（３ＧＨｚ～３０ＧＨｚ）およびＥＨＦ帯（３０ＧＨｚ～３００ＧＨｚ）が含まれる。 </p>
+      <p num="0046">   ＲＦＩＤタグ１００は、外表面の少なくとも一部を誘電材料で被覆することが好ましい。この誘電材料は、磁性を有していてもよい。被覆するための誘電材料としては、たとえばハードカバーとする場合と柔軟性を付与するソフトカバーとする場合が考えられる。ハードカバーとしては前述の各種プラスチック及び無機材料、木材等が考えられる。樹脂に無機材料等を配合したものでよい。ソフトカバーとしては、前述の熱可塑性エラストマー及び各種合成ゴムを使用する事ができる。剛性を付与できる材料を用いるのがハードカバーとなり、柔軟性を付与できる材料を用いるのがソフトカバーとなる。材料としては、誘電体材料として例示した材料やその他無機材料、紙系、木材系、土系、ガラス系、セラミックス系材料を使用することができる。これらの材料に充填材を配合したり、架橋を施したりすることは任意である。また粘着性や接着性も有していてもよい。発泡材料を用いることもできる。被覆材料としては第１のスペーサ層１０ｃや第２のスペーサ層１０ｄの材料として挙げた材料をそのまま使うことができる。ポリマーとガラス繊維との組み合わせやその他複合材料が用いられることが多い。とくに耐環境性、耐久性、耐衝撃性、絶縁性を付与するために適当な材料が選定されて、被覆加工される。 </p>
+      <p num="0047">   ところで、従来、ＲＦＩＤタグは、例えば伝票、証明書、カード、ラベル等（以下では伝票類と呼ぶ）などに装着することで、情報伝達媒体として利用されている。 </p>
+      <p num="0048">   このような伝票類は、現在も、作業指示書、依頼書、発注書、納入伝票、札表、伝票、カンバンなどとして物流、ロジスティックス、流通、在庫管理、工程管理などで活用されている。 </p>
+      <p num="0049">   しかしながら、従来のようにＲＦＩＤタグが組み込まれ、または貼付された伝票類を、ＲＦＩＤタグの通信を妨害する通信妨害部材（例えば導電部材や高誘電率部材）に取り付けることができなかった。 </p>
+      <p num="0050">   実際の製造業、運輸業、販売業、レンタル業などでは、ＲＦＩＤタグが使用される環境に通信妨害部材が非常に多く、また通信妨害部材を含む対象物にＲＦＩＤタグを装着し、該対象物を管理したいというニーズも非常に多い。 </p>
+      <p num="0051">   そこで、本実施形態のＲＦＩＤタグ１００は、このような通信妨害部材に近接させ、もしくは装着して使用することができるため、その活用範囲が格段に広がり、非常にユーティリティの高いものとなる。 </p>
+      <p num="0052">   具体的には、導電材料や高誘電率材料からなる容器、導電材料からなる通信妨害部材や高誘電率材料からなる通信妨害部材を含む製品、中間製品、部品、運搬具、パレット、車、フォークリフト、コンテナ、鞄、包袋、ケース、通い箱、導電性箱、測定器、装置、重機、什器、備品、機械、機器、部材、消火器、ガスボンベ、ボンベ、タンク、乗物、輸送機、搭載機、配管、金属管などに、ＲＦＩＤタグ１００をＩＣタグ、カンバン、伝票、証明書、カードまたはラベルとして直接貼り付けても、無線通信を行うことが可能となる。これにより物流管理、在庫管理、流通管理、情報管理などでの対象製品が拡がり、しかもＲＦＩＤ周波数の国際周波数に対応することで、輸出入の場合の管理も容易となる。 </p>
+      <p num="0053">   以上説明した本実施形態のＲＦＩＤタグ１００は、第１の導電層１０ａを中間層として含む積層体１０と、積層体上に設けられたアンテナ２０と、該アンテナ２０と接続されたＩＣチップ３０と、を備え、第１の導電層１０ａは、括れ部を有する構造を含む。 </p>
+      <p num="0054">   この場合、外部からの電磁波により第１の導電層１０ａの面内伝播波が励起され放射されることでアンテナ２０のゲイン（動作利得）が増強される。 </p>
+      <p num="0055">   このため、積層体１０における第１の導電層１０ａに対してアンテナ２０と反対側（対象物への装着面側）の層（例えば第１のスペーサ層１０ｃ）の厚さを薄くして、導電体や高誘電体に接触もしくは近接させても、通信性の低下を抑制できる。また、第１の導電層１０ａは、製造が容易である。 </p>
+      <p num="0056">   結果として、ＲＦＩＤタグ１００によれば、導電体や高誘電体に接触もしくは近接したときの通信性の低下を抑制でき、かつ薄型化と低コスト化を両立できる。 </p>
+      <p num="0057">   また、括れ部を有する構造は、括れ部を介して接続され、該括れ部から離れるほど幅広となる一対のテーパ部を含むため、面内伝播波の放射性を向上でき、通信性の低下を安定して抑制できる。 </p>
+      <p num="0058">   また、２つのテーパ部は、同形かつ同大であるため、面内伝播波の放射性を良好にすることができる。 </p>
+      <p num="0059">   また、２つのテーパ部は、括れ部を通る一軸（Ｘ軸）に関して軸対称に配置されているため、面内伝播波の放射性を一層良好にすることができる。 </p>
+      <p num="0060">   また、２つのテーパ部は、括れ部を通り、一軸（Ｘ軸）に直交する他軸（Ｙ軸）に関して軸対称に配置されているため、面内伝播波の放射性をより一層良好にすることができる。 </p>
+      <p num="0061">   また、括れ部を有する構造は複数あり、複数の構造は、周期的に配置されているため、構造間で面内伝播波の放射の相乗効果を得ることができる。 </p>
+      <p num="0062">   また、括れ部を有する複数の構造は、千鳥配列されている。この場合、第１の導電層１０ａにおいて括れ部を有する構造を高密度に配置することができ、面内伝播波の放射密度を高くすることができる。 </p>
+      <p num="0063">   また、積層体１０は、第１の導電層１０ａとアンテナ２０との間に配置された第２のスペーサ層１０ｄと、第１の導電層１０ａに対して第２のスペーサ層１０ｄとは反対側に配置された第１のスペーサ層１０ｃと、を含む。 </p>
+      <p num="0064">   この場合、アンテナ２０と第１の導電層との間、及び第１の導電層と対象物との間を安定して絶縁することができる。 </p>
+      <p num="0065">   また、積層体１０は、第１のスペーサ層１０ｃに対して第１の導電層１０ａとは反対側に配置された第２の導電層１０ｂを含み、第２の導電層１０ｂの大きさは、第１の導電層１０ａの大きさ以上である。 </p>
+      <p num="0066">   この場合、ＲＦＩＤタグ１００の設置位置や環境からの影響を小さくすることができる。 </p>
+      <p num="0067">   また、第１及び第２のスペーサ層１０ｃ、１０ｄの少なくとも一方が、ポリエチレンテレフタレートや発泡体からなる場合、軽量化と薄型化を図ることができる。 </p>
+      <p num="0068">   また、第２のスペーサ層１０ｄ及び第２の導電層１０ｂの少なくとも一方が粘着性または接着性を有する場合、アンテナ２０、ＩＣチップ３０の積層体１０への取り付けや、ＲＦＩＤタグ１００の対象物への貼り付けを容易に行うことができる。 </p>
+      <p num="0069">   また、ＲＦＩＤタグ１００の外表面の少なくとも一部が誘電材料（誘電体膜）で被覆されている場合、外部からの不要電磁波の影響や、周辺環境からの影響を小さくし、通信改善効果をさらに向上させることができる。 </p>
+      <p num="0070">   また、ＲＦＩＤタグ１００の外表面の少なくとも一部が誘電材料で被覆されている場合、耐久性、耐侯性、耐衝撃性、印刷特性などを付与することができる。 </p>
+      <p num="0071">   また、ＲＦＩＤタグ１００単独で、あるいはＩＣチップ及びアンテナを含むＩＣタグと電磁波制御シートとを組み合わせて、導電体や高誘電体を含む製品、中間製品、部品、容器、運搬具、移動手段等に対して、伝票、証明書、カード、ラベル等の情報伝達媒体として直接貼り付けても、無線でＩＣチップと通信を行うことができる。 </p>
+      <p num="0072">   なお、上記実施形態では、第１の導電層１０ａは、括れ付き２軸対称構造を単位構造とする２次元周期構造を有しているが、これに限られない。例えば、図１３（Ａ）～図１３（Ｂ）に示される変形例のＲＦＩＤタグ２００のように、第１の導電層は、２軸対称構造を１つのみ有していても良い。また、第１の導電層は、２軸対称構造が１次元に周期配列された１次元周期構造を有していても良い。なお、２軸対称構造は必ずしも周期配列されていなくても良い。いずれの場合であっても、括れ付き２軸対称構造は、その周囲や他の括れ付き２軸対称構造と絶縁されることが必要である。 </p>
+      <p num="0073">   また、図１４（Ａ）及び図１４（Ｂ）に示されるように、ＲＦＩＤタグ１００の積層体１０を電磁波制御シートとして使用することも可能である。なお、電磁波制御シートは、図１５（Ａ）及び図１５（Ｂ）に示されるように、第１の導電層が２軸対称構造を１つのみ有していても良い。 </p>
+      <p num="0074">   このような積層体１０から成る電磁波制御シートは、市販の無線ＩＣタグを重ね合わせるだけで、被着物の種類に依存しないで通信改善が達成できる。また、電磁波制御シートと無線ＩＣタグのＩＣチップとの間の電波信号のやりとりに導線配線、結線、ハンダ等の工程を用いることなく、インピーダンス調整を行い、共振周波数調整や通信改善が実現できる。 </p>
+      <p num="0075">   なお、ＲＦＩＤタグや電磁波制御シートは、第２の導電層１０ｂを有していなくても良い。この場合でも、上記実施形態と同様の効果が得られる。ただし、第２の導電層１０ｂは、製造時において導電体に接触させた状況を予め設定しておくことができ、この状況下での安定動作を保証できる点で有用な構成部材である。 </p>
+      <p num="0076">   また、スペーサ層は、アンテナ２０と第１の導電層１０ａとの間や、第１及び第２の導電層１０ｂ間を絶縁できれば良く、例えば凹部、開口部、切り欠き部等が形成されていても良い。 </p>
+      <p num="0077">   また、第１の導電層における括れ部を含む構造は、上記実施形態、変形例で説明したものに限定されず、適宜、変更可能である。以下に例示する括れ部を含む構造でも、上記実施形態、変形例の括れ部を含む構造よりも若干程度は劣るものの同様の効果が得られる。 </p>
+      <p num="0078">   例えば、括れ付き２軸対称構造のテーパ部の側面（テーパ面）は、図１６（Ａ）及び図１６（Ｂ）に示されるように、曲面（平面視で曲線）であっても良い。 </p>
+      <p num="0079">   また、例えば、図１７（Ａ）～１７（Ｃ）に示されるように、括れ部を含む構造は、１軸に関してのみ対象な１軸対称構造であっても良い。図１７（Ａ）では、一対のテーパ部は、同形・同大である。図１７（Ｂ）では、一対のテーパ部は、同形・異大（異なるサイズ）である。図１７（Ｃ）では、各テーパ部の一対のテーパ面が軸対称でない。 </p>
+      <p num="0080">   また、例えば、図１８（Ａ）～図１８（Ｃ）に示されるように、括れ部を含む構造は、一対のテーパ部が直接結合していても良い。図１８（Ａ）の括れ付き２軸対称構造では、括れ部が面状（平面視で線状）である。図１８（Ｂ）の括れ付き２軸対称構造では、括れ部が線状（平面視で点状）である。図１８（Ｃ）の括れ付き１軸対称構造では、括れ部が面状（平面視で線状）である。 </p>
+      <p num="0081">   また、例えば、図１９（Ａ）に示されるように、一対テーパ部が異形の括れ付き１軸対称構造であっても良い。また、図１９（Ｂ）に示されるように、一対のテーパ部が異形の括れ付き非軸対称構造であっても良い。また、図１９（Ｃ）に示されるように、各テーパ部の一対のテーパ面が略平行な２軸対称構造であっても良い。すなわち、各テーパ部のテーパ角は、逆テーパとならない範囲で適宜変更可能である。 </p>
+      <p num="0082">   また、複数の括れ付き２軸対称構造の配列は、例えば、図２０（Ａ）に示されるように、括れ付き２軸対称構造を縦横で互い違いになるように周期配列しても良いし、図２０（Ｂ）に示されるように括れ付き２軸対称構造をマトリクス状に周期配列しても良い。なお、図２０（Ａ）の配列の方が、図２０（Ｂ）の配列に比べて高密度配置が可能である。このように、括れ付き２軸対称構造の配列は、周期的、規則的であることが好ましいが、規則的でなくても良い。 </p>
+      <p num="0083">   なお、第１の導電層は、括れ部を含む構造を少なくとも１つ有していれば良く、第１の導電層における括れ部を含む構造の周囲の部分は、あっても、なくても良い。 </p>
+      <p num="0084">   上記実施形態のＲＦＩＤタグ１００と該ＲＦＩＤタグ１００に対して無線通信により情報の読み出し及び書き込みの少なくとも一方を行うＲＷ装置（通信装置）とを含んで、無線通信システムを構築することもできる。この場合、情報の正確な授受が可能な無線通信システムを実現することができる。さらに、この無線通信システムは、通信装置で読み出された情報を管理する管理装置を含んで構成することもできる。 </p>
+      <p num="0085">   例えば、多数の金属製物品にＲＦＩＤタグ１００を貼り付け、それらを順次（一定間隔を開けながら）コンベア上を流し、それらを任意の場所に設置されたアンテナゲート部にて、物流管理（入出庫管理）やトレーサビリティ管理などを行う無線通信システムを構築することができる。 </p>
+      <p num="0086">   ＲＦＩＤタグ１００によって伝達可能な情報としては、製品ＩＤだけでなく、履歴情報、特記情報のみならず、作業指示書、依頼書、納入伝票、発注書なども含むことができ、たとえば在庫管理やコスト管理のデータとすることで歩留まり向上やコスト低減といった生産性を向上することも期待できる。 </p>
+      <p num="0087">   以下に、本発明の発明者が上記実施形態を発案するに至った経緯を説明する。 </p>
+      <p num="0088">   近年、ＲＦＩＤ（Radio Frequency Identification）タグに対する関心が高まっている。ＲＦＩＤタグは、無線ＩＣタグの一種であり、一般に、ＬＳＩ(Large Scale Integrated circuit)チップ、アンテナ及びそれらをモールドする外部樹脂などから構成されている。 </p>
+      <p num="0089">   ＲＦＩＤタグのサイズ（外径）は、０．３ｍｍ（ゴマ粒サイズ）から直径２０～３０ｍｍのコインサイズ、ＩＣカードサイズなど様々である。また、電池搭載型と電池非搭載型があり、前者はアクティブ型タグ、後者はパッシブ型タグと呼ばれる。 </p>
+      <p num="0090">   ＲＦＩＤタグに内蔵されるＬＳＩチップは、アンテナ、送受信部、制御部及びメモリを備える。メモリには、固有の識別コード（ユニークＩＤ）が記憶されており、このユニークＩＤがＲＦＩＤタグ用リーダライタ（以下、単にリーダライタと記載）によって読み出される。このリーダライタによるＲＦＩＤタグのユニークＩＤの読み出しは、ＲＦＩＤタグ用アンテナ（以下、単にアンテナと記載）を介して無線通信（無線交信）により行われる。この無線交信には、電波方式と電磁誘導方式がある。 </p>
+      <p num="0091">   一般に、ＲＦＩＤタグは金属に貼付すると、特性が大きく変化する。 例えば、電磁誘導方式のＲＦＩＤタグの場合は、磁束が金属に入ると渦電流が流れ、それが磁束を打ち消すように作用する。この結果、交信距離（交信エリア）が大幅に短くなり、最悪の場合には交信不能となる。この場合、ＲＦＩＤタグの貼付位置を金属から一定距離以上離すようにすると、金属からの影響は少なくなる。</p>
+      <p num="0092">   また、電波方式のＲＦＩＤタグの場合には、金属面で電波が反射してマルチパス現象が発生し、ＲＦＩＤタグの情報の読み取りが不安定になり、金属面の影響により、ＲＦＩＤタグのアンテナの電力変換効率が悪くなる為、電磁誘導方式と同様に更新距離の劣化を生じる。 </p>
+      <p num="0093">   この場合もＲＦＩＤタグの貼付位置を金属から一定距離以上離すようにすることにより、金属からの影響を軽減させることができるようになる。 </p>
+      <p num="0094">   商品や製品の場合、金属性の材料で作られているものも多い。 このため、金属に貼付可能な金属対応ＲＦＩＤタグというものがあり、既に商品化されている。 </p>
+      <p num="0095">   金属対応ＲＦＩＤタグは、そのアンテナ（ＲＦＩＤタグアンテナ）が金属から十分な距離だけ離れるようにするか、または、ＲＦＩＤタグと金属との間にＲＦ吸収材料を挟むようにして、金属に貼付される。 </p>
+      <p num="0096">   図２１（Ａ）には、従来の金属対応ＲＦＩＤタグ１０００の構成が示す断面図で示されている。同図に示す金属対応ＲＦＩＤタグ１０００は、金属反射板１０１、スペーサ部１０２、基板材部１０３及びＰＥＴ１０４が順に積層された構成になっている。基板材部１０３にはＲＦＩＤタグが実装されおり、その略中央にＬＳＩチップ１１１が、その両側面にはアンテナ（ＲＦＩＤタグアンテナ）１１２が設けられている。<br /> ＲＦＩＤタグは、ＬＳＩチップ１１１とアンテナ１１２から構成される。 ＬＳＩチップ１１１には、制御部、送受信部及びメモリ等が集積されている。 アンテナ１１２は、ダイポール型アンテナが用いられることが多い。 </p>
+      <p num="0097">   金属反射板１０１は、接着剤（不図示）を介して金属に貼付される薄い板（プレート）であり、該金属で反射されるＲＦを反射する。<br /> スペーサ部１０２は、誘電体や発砲スチロール、プラスチック等から成り、金属対応ＲＦＩＤタグ１００が貼付される金属と基板材部１０３に実装されるアンテナ１１２との距離を一定以上に保つためのものであり、ＲＦ吸収材としの機能を有する材料も使用される。 </p>
+      <p num="0098">   以上のように構成される従来の金属対応ＲＦＩＤタグ１０００においては、スペーサ部１０２の厚みを大きくする必要があるため、金属対応ＲＦＩＤタグ１００本体の厚みが非常に大きくなり、取り扱いにくく、用途も限定されている。 </p>
+      <p num="0099">   ところで、表面インピーダンスの高いものをアンテナ近傍に配置することができれば、その高い表面インピーダンスによりインピーダンス面に入射したエネルギーが同相反射され、アンテナ性能を向上させることが知られている。 </p>
+      <p num="0100">   高い表面インピーダンスを有するシート状構造体としてＥＢＧ（Electromagnetic<br /> BandGap）構造があり、このシート状構造体とＩＣチップとの間の整合をとるものをシート状構造体の上に置き、シート状構造体の同相反射周波数でアンテナ導体とＩＣチップとの整合を図る方法も提案されている（例えば、特許文献１参照）。 </p>
+      <p num="0101">   特許文献１では、図２１（Ｂ）に示されるように、シート状構造体は、ＥＢＧ構造体３の単位構造５からなり、単位構造１０はトップ電極１１と、グランド電極１２と、トップ電極１１とグランド電極１２とを接続するビア１３と、トップ電極１１とグランド電極１２との間に挟まれた誘電体と、誘電体内に配置された浮遊キャパシタ電極１５とで構成されている。 </p>
+      <p num="0102">   しかし、特許文献１に記載のアンテナ装置のシート状構造体においては、ビアを形成する工程が含まれるため製造工程自体が複雑になり、安価に作製することが困難であった。 </p>
+      <p num="0103">   そこで、発明者は、以上の問題に対処すべく、上記実施形態、変形例を発案するに至った。 </p>
+    </description-of-embodiments>
+    <reference-signs-list>
+      <p num="0104">   １０…積層体、２０…アンテナ、３０…ＩＣチップ、１００…ＲＦＩＤタグ。 </p>
+    </reference-signs-list>
+    <citation-list>
+      <patent-literature>
+        <p num="0105">
+          <patcit num="1"><text>特許第５５４３７９５号公報</text></patcit>
+        </p>
+      </patent-literature>
+    </citation-list>
+  </description>
+  <claims id="claims_eng" lang="eng" format="machine translation" date-changed="20160929">
+    <claim num="1">
+      <claim-text>
+  The first conductive layer and the intermediate layer as a laminated body including, <br />
+  An antenna and provided on the laminated body, <br />
+  The IC chip and which is connected to an antenna, comprising, <br />
+  One of the conductive layer, and at least one RFID tag contg. inadequatly structure having a part 1. </claim-text>
+    </claim>
+    <claim num="2">
+      <claim-text>
+  The structure is, connected via the constricted, and the constricted part away from the tapered portion toward a pair of claim 1 includes a RFID tag and described. </claim-text>
+    </claim>
+    <claim num="3">
+      <claim-text>
+  The pair of the tapered part, and is characterized in that the rhomboid Homomorphism and an RFID tag, described in the claim 2. </claim-text>
+    </claim>
+    <claim num="4">
+      <claim-text>
+  The pair of tapered portions, the constriction is arranged symmetrically with respect to axis passing through the shaft and is characterized in that the RFID tag described in claim 3. </claim-text>
+    </claim>
+    <claim num="5">
+      <claim-text>
+  The pair of the tapered part, which passes through the constriction, and is orthogonal to the axis of the shaft are arranged symmetrically and described in claim 4 is characterized by a RFID tag o </claim-text>
+    </claim>
+    <claim num="6">
+      <claim-text>
+  The shape of each of the pair of tapered section, and a trapezoidal or triangular in claim 2-5 RFID tag described in any one of an item. </claim-text>
+    </claim>
+    <claim num="7">
+      <claim-text>
+  The shape of each of the pair of tapered portions, characterized in that a part of the drop type and any one of the claim 2-5 RFID tag, described in the claim. </claim-text>
+    </claim>
+    <claim num="8">
+      <claim-text>
+  The shape of each of the pair of tapered section, and a fan in either of the described in claim 2-5 RFID tag of an item. </claim-text>
+    </claim>
+    <claim num="9">
+      <claim-text>
+  One of the conductive layer, and the structure is characterized by having a plurality of either claim 1-8 RFID tag of an item. </claim-text>
+    </claim>
+    <claim num="10">
+      <claim-text>
+  The plurality of the structure, regularly arranged on the RFID tag and described in claim 9. </claim-text>
+    </claim>
+    <claim num="11">
+      <claim-text>
+  The laminate has, <br />
+  The conductive layer is disposed between the antenna and the insulating layer, and, <br />
+  One of the conductive layer and the insulating layer is arranged on the opposite side and another insulating layer, and which includes a RFID tag as described in either of claims 1-10. </claim-text>
+    </claim>
+    <claim num="12">
+      <claim-text>
+  The laminate has, with respect to the another one of the insulating layer and the conductive layer disposed on a side opposite to the other conductive layer, <br />
+  The size of the other conductive layer, a conductive layer of the size of the one or more RFID tag and described in claim 11. </claim-text>
+    </claim>
+    <claim num="13">
+      <claim-text>
+  The other conductive layer, adhesive or adhesive is characterized by having an RFID tag and described in claim 12. </claim-text>
+    </claim>
+    <claim num="14">
+      <claim-text>
+  At least one of the one and the another insulating layer, adhesive or adhesive and which is characterized by having an item of claim 11-13 RFID tag of the one described. </claim-text>
+    </claim>
+    <claim num="15">
+      <claim-text>
+  At least one of the one and the another insulating layer, polyethylene terephthalate and comprises an item of claim 11-14 RFID tag of the one described. </claim-text>
+    </claim>
+    <claim num="16">
+      <claim-text>
+  At least one of the one and the another insulating layer, and a foamed body described in either of claims 11-14 RFID tag of an item. </claim-text>
+    </claim>
+    <claim num="17">
+      <claim-text>
+  The RFID tags of at least part of the outer surface is coated with a dielectric material and is characterized in that an item of claim 1-16 RFID tag of the one described. </claim-text>
+    </claim>
+    <claim num="18">
+      <claim-text>
+  An item of either claim 1-17 RFID tag and described, <br />
+  The RFID tag is read and write by radio communication, and at least one communication device, a communication system is provided. </claim-text>
+    </claim>
+    <claim num="19">
+      <claim-text>
+  The communication device to the information read by the control device further includes a communication system of claim 18 and described. </claim-text>
+    </claim>
+    <claim num="20">
+      <claim-text>
+  And the first conductive layer, <br />
+  The conductive layer disposed on both sides of the two individually and insulating layer 2, is provided, <br />
+  The first conductive layer, at least one structure having inadequatly part 1 and includes an electromagnetic control sheet. </claim-text>
+    </claim>
+  </claims>
+  <claims id="claims_jpn" lang="jpn" format="original" date-changed="20160929">
+    <claim num="1">
+      <claim-text>
+  一の導電層を中間層として含む積層体と、<br />
+  前記積層体上に設けられたアンテナと、<br />
+  前記アンテナに接続されたＩＣチップと、を備え、<br />
+  前記一の導電層は、括れ部を含む構造を少なくとも１つ有するＲＦＩＤタグ。
+</claim-text>
+    </claim>
+    <claim num="2">
+      <claim-text>
+  前記構造は、前記括れ部を介して接続され、前記括れ部から離れるほど幅広となる一対のテーパ部を含むことを特徴とする請求項１に記載のＲＦＩＤタグ。
+</claim-text>
+    </claim>
+    <claim num="3">
+      <claim-text>
+  前記一対のテーパ部は、同形かつ同大であることを特徴とする請求項２に記載のＲＦＩＤタグ。
+</claim-text>
+    </claim>
+    <claim num="4">
+      <claim-text>
+  前記一対のテーパ部は、前記括れ部を通る一軸に関して軸対称に配置されていることを特徴とする請求項３に記載のＲＦＩＤタグ。
+</claim-text>
+    </claim>
+    <claim num="5">
+      <claim-text>
+  前記一対のテーパ部は、前記括れ部を通り、前記一軸に直交する他軸に関して軸対称に配置されていることを特徴とする請求項４に記載のＲＦＩＤタグ。
+</claim-text>
+    </claim>
+    <claim num="6">
+      <claim-text>
+  前記一対のテーパ部それぞれの形状は、三角形又は台形であることを特徴とする請求項２～５のいずれか一項に記載のＲＦＩＤタグ。
+</claim-text>
+    </claim>
+    <claim num="7">
+      <claim-text>
+  前記一対のテーパ部それぞれの形状は、滴形の一部であることを特徴とする請求項２～５のいずれか一項に記載のＲＦＩＤタグ。
+</claim-text>
+    </claim>
+    <claim num="8">
+      <claim-text>
+  前記一対のテーパ部それぞれの形状は、扇形であることを特徴とする請求項２～５のいずれか一項に記載のＲＦＩＤタグ。
+</claim-text>
+    </claim>
+    <claim num="9">
+      <claim-text>
+  前記一の導電層は、前記構造を複数有することを特徴とする請求項１～８のいずれか一項に記載のＲＦＩＤタグ。
+</claim-text>
+    </claim>
+    <claim num="10">
+      <claim-text>
+  前記複数の構造は、規則的に配列されていることを特徴とする請求項９に記載のＲＦＩＤタグ。
+</claim-text>
+    </claim>
+    <claim num="11">
+      <claim-text>
+  前記積層体は、<br />
+  前記一の導電層と前記アンテナとの間に配置された一の絶縁層と、<br />
+  前記一の導電層に対して前記一の絶縁層とは反対側に配置された別の絶縁層と、を含むことを特徴とする請求項１～１０のいずれか記載のＲＦＩＤタグ。
+</claim-text>
+    </claim>
+    <claim num="12">
+      <claim-text>
+  前記積層体は、前記別の絶縁層に対して前記一の導電層とは反対側に配置された別の導電層を含み、<br />
+  前記別の導電層の大きさは、前記一の導電層の大きさ以上であることを特徴とする請求項１１に記載のＲＦＩＤタグ。
+</claim-text>
+    </claim>
+    <claim num="13">
+      <claim-text>
+  前記別の導電層は、粘着性又は接着性を有していることを特徴とする請求項１２に記載のＲＦＩＤタグ。
+</claim-text>
+    </claim>
+    <claim num="14">
+      <claim-text>
+  前記一及び別の絶縁層の少なくとも一方は、粘着性又は接着性を有していることを特徴とする請求項１１～１３のいずれか一項に記載のＲＦＩＤタグ。
+</claim-text>
+    </claim>
+    <claim num="15">
+      <claim-text>
+  前記一及び別の絶縁層の少なくとも一方は、ポリエチレンテレフタレートからなることを特徴とする請求項１１～１４のいずれか一項に記載のＲＦＩＤタグ。
+</claim-text>
+    </claim>
+    <claim num="16">
+      <claim-text>
+  前記一及び別の絶縁層の少なくとも一方は、発泡体からなることを特徴とする請求項１１～１４のいずれか一項に記載のＲＦＩＤタグ。
+</claim-text>
+    </claim>
+    <claim num="17">
+      <claim-text>
+  当該ＲＦＩＤタグの外表面の少なくとも一部が誘電材料で被覆されていることを特徴とする請求項１～１６のいずれか一項に記載のＲＦＩＤタグ。
+</claim-text>
+    </claim>
+    <claim num="18">
+      <claim-text>
+  請求項１～１７のいずれか一項に記載のＲＦＩＤタグと、<br />
+  前記ＲＦＩＤタグに対して無線通信により情報の読み出し及び書き込みの少なくとも一方を行う通信装置と、を備える通信システム。
+</claim-text>
+    </claim>
+    <claim num="19">
+      <claim-text>
+  前記通信装置で読み出された前記情報を管理する管理装置を更に備えることを特徴とする請求項１８に記載の通信システム。
+</claim-text>
+    </claim>
+    <claim num="20">
+      <claim-text>
+  一の導電層と、<br />
+  前記一の導電層の両側に個別に配置された２つの絶縁層と、を備え、<br />
+  前記一の導電層は、括れ部を有する構造を少なくとも１つ含むことを特徴とする電磁波制御シート。
+</claim-text>
+    </claim>
+  </claims>
+  <drawings format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="JP2016173747A_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="2016173747.tif" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="JP2016173747A_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="2016173747.tif" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="JP2016173747A_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="2016173747.tif" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="JP2016173747A_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="2016173747.tif" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="JP2016173747A_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="2016173747.tif" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="JP2016173747A_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="2016173747.tif" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="JP2016173747A_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="2016173747.tif" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="JP2016173747A_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="2016173747.tif" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="JP2016173747A_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="2016173747.tif" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="JP2016173747A_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="2016173747.tif" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="JP2016173747A_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="2016173747.tif" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="JP2016173747A_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="2016173747.tif" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="JP2016173747A_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="2016173747.tif" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="JP2016173747A_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="2016173747.tif" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="JP2016173747A_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="2016173747.tif" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="JP2016173747A_00016.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="2016173747.tif" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="JP2016173747A_00017.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="2016173747.tif" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="JP2016173747A_00018.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="2016173747.tif" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="JP2016173747A_00019.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="2016173747.tif" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="JP2016173747A_00020.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="2016173747.tif" />
+    </figure>
+    <figure num="21">
+      <img he="N/A" wi="N/A" file="JP2016173747A_00021.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="2016173747.tif" />
+    </figure>
+    <figure num="22">
+      <img he="N/A" wi="N/A" file="JP2016173747A_00022.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="2016173747.tif" />
+    </figure>
+    <figure num="23">
+      <img he="N/A" wi="N/A" file="JP2016173747A_00023.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="2016173747.tif" />
+    </figure>
+  </drawings>
+  <image file="JP2016173747A.PDF" type="pdf" size="384123" pages="20" />
+</lexisnexis-patent-document>

@@ -18,6 +18,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.zip.ZipEntry;
@@ -71,15 +72,22 @@ public class ArchiveVTWPatentAsset implements Runnable{
 	private final static Logger logger = Logger.getLogger(ArchiveVTWPatentRefeed.class);
 
 	private static int numberOfRuns=0;
-	private static String queueName = "acc-contributor-event-queue-EV";
+	private static String queueName = "acc-contributor-event-queue-EV";		// old one "acc-contributor-event-queue-EV";
 	private static String sqlldrFileName = null;
 	static int loadNumber = 0;
 	static int recsPerZipFile = 20000;
 	static int recsPerSingleConnection = 1000;
 	static String type = "forward";
+	long epoch;
 
+	private CountDownLatch latch;
+	
 	String threadName;
 	Thread th;
+	
+	// epoch name list for individual dir for each thread in "raw_data" to zip to fix issue that unzip -tq raise soem errors for some zip files
+	LinkedHashMap<String, Long> raw_Dir_Names = new LinkedHashMap<String,Long>();;
+
 
 	DateFormat dateFormat,msgSentDateFormat;
 	private String filename;
@@ -114,9 +122,16 @@ public class ArchiveVTWPatentAsset implements Runnable{
 	{
 
 	}
+	public ArchiveVTWPatentAsset (int loadnum, int numOfRecsPerZip, String msgType)
+	{
+		loadNumber = loadnum;
+		recsPerZipFile = numOfRecsPerZip;
+		type = msgType;
+	}
+	
 
 	public ArchiveVTWPatentAsset(int numOfRuns, String qName, String sqlldr_fileName, int loadnum, int numOfRecsPerZip, int numOfRecsPerCon, String msgType,
-			String thread_name)
+			long rawDir, String thread_name, CountDownLatch latch)
 	{
 
 		numberOfRuns = numOfRuns;
@@ -126,8 +141,12 @@ public class ArchiveVTWPatentAsset implements Runnable{
 		recsPerZipFile = numOfRecsPerZip;
 		recsPerSingleConnection = numOfRecsPerCon;
 		type = msgType;
+		epoch = rawDir;
 		threadName = thread_name;
 		System.out.println("Creating Thread: " + threadName);
+		
+		this.latch = latch;
+		raw_Dir_Names.put(thread_name, rawDir);
 	}
 
 
@@ -149,7 +168,7 @@ public class ArchiveVTWPatentAsset implements Runnable{
 		{
 			midTime = System.currentTimeMillis();
 			endTime = System.currentTimeMillis();
-			System.out.println("Time for finish reading input parameter & ES initialization "+(endTime-startTime)/1000.0+" seconds");
+			System.out.println("Time for finish reading input parameter & initialization "+(endTime-startTime)/1000.0+" seconds");
 			System.out.println("total Time used "+(endTime-startTime)/1000.0+" seconds");
 
 
@@ -169,17 +188,20 @@ public class ArchiveVTWPatentAsset implements Runnable{
 				long wo_epoch = dateFormat.parse(dateFormat.format(new Date())).getTime();  // for WO
 
 
-				//VTWSearchAPI vtwSearchAPI = new VTWSearchAPI(loadNumber, archiveVtwPatentRefeed.getRecentZipFileName());
-				//VTWSearchAPI vtwSearchAPI = new VTWSearchAPI(archiveVtwPatentRefeed.getRecentZipFileName());
-
+				
 				midTime = endTime;
 				endTime = System.currentTimeMillis();
 				System.out.println("time before downloading files "+(endTime-midTime)/1000.0+" seconds");
 				System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
 
 
-				VTWAssetAPI vtwAssetAPI = new VTWAssetAPI(Long.toString(epoch),recsPerSingleConnection);
-				vtwAssetAPI.downloadPatent(patentIds,type);
+				/*VTWAssetAPI vtwAssetAPI = new VTWAssetAPI(Long.toString(epoch),recsPerSingleConnection);
+				vtwAssetAPI.downloadPatent(patentIds,type);*/
+				
+				VTWAssetAPI vtwAssetAPI = new VTWAssetAPI(Long.toString(raw_Dir_Names.get(th.getName())),recsPerSingleConnection, th.getName());
+				vtwAssetAPI.downloadPatent(patentIds, vtwAssetAPI.getInstance(), Long.toString(raw_Dir_Names.get(th.getName())), th.getName(), type);
+				
+				
 
 
 				midTime = endTime;
@@ -188,16 +210,19 @@ public class ArchiveVTWPatentAsset implements Runnable{
 				System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
 
 
+				//HH 10/31/2018 move to initVtwThreads to be same as Prod
 
-				//Zip downloaded files (each in it's corresponding dir)
-				zipDownloads(loadNumber, Long.toString(epoch),type);
+				/*//Zip downloaded files (each in it's corresponding dir)
+				zipDownloads(loadNumber, Long.toString(epoch),type);*/
 
 
 				midTime = endTime;
 				endTime = System.currentTimeMillis();
 				System.out.println("time after zip downloaded files "+(endTime-midTime)/1000.0+" seconds");
 				System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
-
+				
+				latch.countDown();
+				System.out.println("latch value now: " + latch);
 			}
 			else
 			{

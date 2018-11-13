@@ -332,7 +332,7 @@ public class AuthorCombiner {
 				// need to check with Hongrong
 
 				query = "select M_ID from " +  tableName;
-
+				
 				System.out.println(query);
 
 				stmt.setFetchSize(200);
@@ -512,7 +512,7 @@ public class AuthorCombiner {
 
 				updateNumber=loadNumber;
 				query = "select M_ID from " +  tableName + " where updatenumber=" + updateNumber; 
-
+				
 				System.out.println(query);
 
 				stmt.setFetchSize(200);
