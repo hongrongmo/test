@@ -1011,6 +1011,7 @@ public class CombinedXMLWriter
         	r = r.replaceAll("\\(","|QOPENINGBRACKETQ|"); //opening parenthesis
         	r = r.replaceAll("\\)","|QCLOSINGBRACKETQ|"); //closing parenthesis
         	r = r.replaceAll("&","|QANDQ|"); //& sign
+        	r = r.replaceAll("_","|QUNDERLINEQ|"); //use QUNDERLINEQ for underline sign
         }
         String[] ra = r.split("\\|",-1);
         StringBuffer rBuffer = new StringBuffer();
