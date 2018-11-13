@@ -611,8 +611,10 @@ public class UPTCombiner extends CombinerTimestamp {
                         rec.put(EVCombinedRec.DATABASE, "upa");
                     else if(authCode.equalsIgnoreCase("wo"))
                     	rec.put(EVCombinedRec.DATABASE, "wop");
+                    else if(authCode.equalsIgnoreCase("ep"))
+                    	rec.put(EVCombinedRec.DATABASE, "eup");
                     else
-                        rec.put(EVCombinedRec.DATABASE, "eup");
+                        rec.put(EVCombinedRec.DATABASE, authCode+"p");
 
                     if (rs.getString("ds") != null)
                         rec.put(EVCombinedRec.DESIGNATED_STATES, removeDupDS(convert2Array(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ds")))))));
@@ -1487,13 +1489,22 @@ public class UPTCombiner extends CombinerTimestamp {
     }
     public String[] convert2Array(String sVal) {
 
-        List values = new ArrayList();
-
-        perl.split(values, "/" + DELIM + "/", sVal);
-
-        String[] arrVals = (String[]) values.toArray(new String[1]);
-
-        arrVals[0] = replaceNull(arrVals[0]);
+    	String[] arrVals = null;
+    	if(sVal!=null)
+    	{
+	        List values = new ArrayList();
+	
+	        perl.split(values, "/" + DELIM + "/", sVal);
+	
+	        arrVals = (String[]) values.toArray(new String[1]);
+	
+	        arrVals[0] = replaceNull(arrVals[0]);
+    	}
+    	else
+    	{
+    		arrVals = new String[1];
+    		arrVals[0] = "";
+    	}
 
         return arrVals;
     }
