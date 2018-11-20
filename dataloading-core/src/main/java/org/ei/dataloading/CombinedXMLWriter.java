@@ -1167,14 +1167,18 @@ public class CombinedXMLWriter
                 for(int i=0; i<s.length; i++)
                 {
                 	String ss = s[i];
-                	String aid = "";
-                	String oo = "";
+                	String aid = " ";
+                	String oo = " ";
       
                 	if(ss!=null && ss.indexOf(Constants.GROUPDELIMITER)>-1)
                 	{
                 		int dd = ss.indexOf(Constants.GROUPDELIMITER);
                 		aid = ss.substring(0,dd);
                 		oo = ss.substring(dd+1);
+                		if(oo==null)
+                		{
+                			System.out.println("oo is null"+ ss);
+                		}
                 		
                 	}
                 	else
@@ -1186,6 +1190,10 @@ public class CombinedXMLWriter
                     if(oo!=null && getDatabase()!=null && getDatabase().length()>=3)
                     {
                         indexWriter.println(Entity.prepareString(oo).toUpperCase().trim() + "\t" + getDatabase().substring(0,3) + "\t" + aid +"\t" + getPui()+"\t" + getLoadnumber());
+                    }
+                    else
+                    {
+                    	System.out.println("*******something wrong with this record "+ oo + "\t" + getDatabase().substring(0,3) + "\t" + aid +"\t" + getPui()+"\t" + getLoadnumber());
                     }
                     
                     o[i] = oo;
