@@ -47,6 +47,9 @@ import org.apache.log4j.Logger;
 	2. Call asset API to download the latest main xml (by embedding Patent ID from #1 in the url)
 https://vtw.elsevier.com/asset/pat/<VTW patent id>?type=MAIN&fmt=application/xml
 
+	* on Thursday 10/18/2018 modify this class to combine WO forward flow files to be in same zip file with US/EUP isnce we are going to release
+	* WO forward for NOV 7th release.
+
  */
 public class VTWAssetAPI {
 

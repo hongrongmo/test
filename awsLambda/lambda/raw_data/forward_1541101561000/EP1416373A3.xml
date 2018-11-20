@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2015 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20150603" file="EP1416373A3.xml" produced-by="LexisNexis-Univentio" lang="eng" date-changed="20080410" time-changed="121255">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Separate publication of the search report">
+      <document-id>
+        <country>EP</country>
+        <doc-number>1416373</doc-number>
+        <kind>A3</kind>
+        <date>20050105</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>03024591</doc-number>
+        <kind>A</kind>
+        <date>20031028</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20090316">
+      <priority-claim sequence="1" kind="national">
+        <country>IN</country>
+        <doc-number>1098DEL2002</doc-number>
+        <kind>A</kind>
+        <date>20021031</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>de10982002</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>IN2002DE01098</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20090316">
+      <gazette-reference>
+        <date>20050105</date>
+      </gazette-reference>
+      <supplemental-srep-reference>
+        <date>20050105</date>
+      </supplemental-srep-reference>
+      <unexamined-printed-without-grant>
+        <date>20040506</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20090316">
+      <first-examination-report-despatched>
+        <date>20050105</date>
+      </first-examination-report-despatched>
+    </dates-rights-effective>
+    <classification-ipc date-changed="20121207">
+      <main-classification>
+        <text> 7G 06F   7/06   A</text>
+        <edition>7</edition>
+        <section>G</section>
+        <class>06</class>
+        <subclass>F</subclass>
+        <main-group>7</main-group>
+        <subgroup>06</subgroup>
+        <qualifying-character>A</qualifying-character>
+      </main-classification>
+    </classification-ipc>
+    <classifications-ipcr date-changed="20121207">
+      <classification-ipcr sequence="1">
+        <text>G06F   5/06        20060101C I20070721RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>C</classification-level>
+        <section>G</section>
+        <class>06</class>
+        <subclass>F</subclass>
+        <main-group>5</main-group>
+        <subgroup>06</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20070721</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>G06F   5/10        20060101A I20070721RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>G</section>
+        <class>06</class>
+        <subclass>F</subclass>
+        <main-group>5</main-group>
+        <subgroup>10</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20070721</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>G06F   7/06        20060101C I20051110RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>C</classification-level>
+        <section>G</section>
+        <class>06</class>
+        <subclass>F</subclass>
+        <main-group>7</main-group>
+        <subgroup>06</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051110</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>G06F   7/06        20060101A I20051110RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>G</section>
+        <class>06</class>
+        <subclass>F</subclass>
+        <main-group>7</main-group>
+        <subgroup>06</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051110</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>G11C   8/00        20060101C I20051110RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>C</classification-level>
+        <section>G</section>
+        <class>11</class>
+        <subclass>C</subclass>
+        <main-group>8</main-group>
+        <subgroup>00</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051110</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>G11C   8/00        20060101A I20051110RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>G</section>
+        <class>11</class>
+        <subclass>C</subclass>
+        <main-group>8</main-group>
+        <subgroup>00</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051110</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20121207">
+      <classification-cpc sequence="1">
+        <text>G06F   5/10        20130101  I20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>06</class>
+        <subclass>F</subclass>
+        <main-group>5</main-group>
+        <subgroup>10</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <classifications-ecla date-changed="20121207">
+      <classification-ecla sequence="1" classification-scheme="EC" country="EP">
+        <text>G06F  5/10</text>
+        <section>G</section>
+        <class>06</class>
+        <subclass>F</subclass>
+        <main-group>5</main-group>
+        <subgroup>10</subgroup>
+      </classification-ecla>
+    </classifications-ecla>
+    <invention-title id="title_ger" date-changed="20070504" lang="ger" format="original">Verfahren und Vorrichtung zur Reduzierung der Zugriffszeit in synchronen FIFOs ohne Latenzkosten</invention-title>
+    <invention-title id="title_eng" date-changed="20070504" lang="eng" format="original">Method and apparatus to reduce access time in synchronous fifos with zero latency overhead</invention-title>
+    <invention-title id="title_fre" date-changed="20070504" lang="fre" format="original">Dispositif et procédé pour réduire le temps d'accès dans des FIFOs synchrones à surcharge de temps d'attente zero</invention-title>
+    <references-cited date-changed="20071101">
+      <patent-citations name="patcit" date-changed="20071101" />
+      <citation srep-phase="0">
+        <patcit num="1" dnum="5416749">
+          <document-id>
+            <country>US</country>
+            <doc-number>5416749</doc-number>
+            <kind>A</kind>
+            <date>19950516</date>
+          </document-id>
+          <application-date>
+            <date>19931210</date>
+          </application-date>
+        </patcit>
+        <category>X</category>
+      </citation>
+      <citation srep-phase="0">
+        <patcit num="2" dnum="5901100">
+          <document-id>
+            <country>US</country>
+            <doc-number>5901100</doc-number>
+            <kind>A</kind>
+            <date>19990504</date>
+          </document-id>
+          <application-date>
+            <date>19970401</date>
+          </application-date>
+        </patcit>
+        <category>Y</category>
+      </citation>
+      <citation srep-phase="0">
+        <patcit num="3" dnum="6067267">
+          <document-id>
+            <country>US</country>
+            <doc-number>6067267</doc-number>
+            <kind>A</kind>
+            <date>20000523</date>
+          </document-id>
+          <application-date>
+            <date>19980812</date>
+          </application-date>
+        </patcit>
+        <category>X</category>
+        <category>D</category>
+      </citation>
+      <citation srep-phase="0">
+        <patcit num="4" dnum="5388074">
+          <document-id>
+            <country>US</country>
+            <doc-number>5388074</doc-number>
+            <kind>A</kind>
+            <date>19950207</date>
+          </document-id>
+          <application-date>
+            <date>19921217</date>
+          </application-date>
+        </patcit>
+        <category>Y</category>
+        <category>D</category>
+      </citation>
+    </references-cited>
+    <parties date-changed="20061018">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>STMicroelectronics Pvt. Ltd </orgname>
+            <address>
+              <address-1>Plot No. 2 &amp; 3, Sector 16A,  Institutional Area</address-1>
+              <city>Noida 201 301,  Uttar Pradesh</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>Chakravarthy, Kalyana </name>
+            <address>
+              <address-1>Flat No. 7, AIIMS Apartments,  Mayun Kunj</address-1>
+              <city>Noida Road,  110096 Delhi</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>Verma, Jayesh </name>
+            <address>
+              <address-1>304/III, Kirti Apartments,  Mayun Vihar Phase-I</address-1>
+              <city>110091 Delhi</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Cerbaro, Elena et al</name>
+            <address>
+              <address-1>c/o Studio Torta S.r.l. Via Viotti, 9</address-1>
+              <city>10121 Torino</city>
+              <country>IT</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20061018">
+      <designation-epc>
+        <contracting-states>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LU</country>
+          <country>MC</country>
+          <country>NL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>AL</country>
+          <country>LT</country>
+          <country>LV</country>
+          <country>MK</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <patent-family date-changed="20100928">
+      <main-family family-id="643852">
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>1098DEL2002</doc-number>
+            <kind>A</kind>
+            <date>20030201</date>
+          </document-id>
+          <application-date>
+            <date>20021031</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20040160845</doc-number>
+            <kind>A1</kind>
+            <date>20040819</date>
+          </document-id>
+          <application-date>
+            <date>20031030</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1416373</doc-number>
+            <kind>A3</kind>
+            <date>20050105</date>
+          </document-id>
+          <application-date>
+            <date>20031028</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1416373</doc-number>
+            <kind>A2</kind>
+            <date>20040506</date>
+          </document-id>
+          <application-date>
+            <date>20031028</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="277886">
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>1098DEL2002</doc-number>
+            <kind>A</kind>
+            <date>20030201</date>
+          </document-id>
+          <application-date>
+            <date>20021031</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20040160845</doc-number>
+            <kind>A1</kind>
+            <date>20040819</date>
+          </document-id>
+          <application-date>
+            <date>20031030</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1416373</doc-number>
+            <kind>A3</kind>
+            <date>20050105</date>
+          </document-id>
+          <application-date>
+            <date>20031028</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1416373</doc-number>
+            <kind>A2</kind>
+            <date>20040506</date>
+          </document-id>
+          <application-date>
+            <date>20031028</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20070504" lang="eng" format="original">
+    <p>The method and apparatus reduce access time in synchronous FIFOs with zero latency overheads. A FIFO buffer comprises FIFO means (301) storing 'n' data words, each 'm' bits wide, having an 'm' bit wide data input terminal. Furthermore, the FIFO buffer includes read data set selection means (303) connected to the data output terminals of the FIFO means and having two data output terminals providing simultaneous access to a selected storage location at an odd address and an even address. Odd read pointer generating means (304) provide the selection input to the data selection means (303) for selecting data at an odd read address of the read data selection means, while even read pointer generating means (305) provide the input for selecting data at an even read address. Multiplexing means (306) coupled to each of the two data output terminals of the read data set selection means select one of its outputs as the final output of the FIFO. State controlling means (310) coupled to the multiplexing means (306) control the selection of the final output and the selection input to the read data set selection means for selecting an odd read address and an even read address.</p>
+  </abstract>
+  <legal-data date-changed="20140618">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20040506</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1416373A2</docdb-publication-number>
+      <docdb-application-id>270167</docdb-application-id>
+      <corresponding-kind>A2</corresponding-kind>
+      <legal-designated-states>
+        <country>AT</country>
+        <country>BE</country>
+        <country>BG</country>
+        <country>CH</country>
+        <country>CY</country>
+        <country>CZ</country>
+        <country>DE</country>
+        <country>DK</country>
+        <country>EE</country>
+        <country>ES</country>
+        <country>FI</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>GR</country>
+        <country>HU</country>
+        <country>IE</country>
+        <country>IT</country>
+        <country>LI</country>
+        <country>LU</country>
+        <country>MC</country>
+        <country>NL</country>
+        <country>PT</country>
+        <country>RO</country>
+        <country>SE</country>
+        <country>SI</country>
+        <country>SK</country>
+        <country>TR</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20040506</date>
+      </publication-date>
+      <event-code-1>AX</event-code-1>
+      <effect>+</effect>
+      <legal-description>EXTENSION OR VALIDATION OF THE EUROPEAN PATENT TO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1416373A2</docdb-publication-number>
+      <docdb-application-id>270167</docdb-application-id>
+      <countries-concerned>
+        <country>AL</country>
+        <country>LT</country>
+        <country>LV</country>
+        <country>MK</country>
+      </countries-concerned>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20050105</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1416373A2</docdb-publication-number>
+      <docdb-application-id>270167</docdb-application-id>
+      <corresponding-kind>A3</corresponding-kind>
+      <legal-designated-states>
+        <country>AT</country>
+        <country>BE</country>
+        <country>BG</country>
+        <country>CH</country>
+        <country>CY</country>
+        <country>CZ</country>
+        <country>DE</country>
+        <country>DK</country>
+        <country>EE</country>
+        <country>ES</country>
+        <country>FI</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>GR</country>
+        <country>HU</country>
+        <country>IE</country>
+        <country>IT</country>
+        <country>LI</country>
+        <country>LU</country>
+        <country>MC</country>
+        <country>NL</country>
+        <country>PT</country>
+        <country>RO</country>
+        <country>SE</country>
+        <country>SI</country>
+        <country>SK</country>
+        <country>TR</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="4">
+      <publication-date>
+        <date>20050105</date>
+      </publication-date>
+      <event-code-1>AX</event-code-1>
+      <effect>+</effect>
+      <legal-description>EXTENSION OR VALIDATION OF THE EUROPEAN PATENT TO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1416373A2</docdb-publication-number>
+      <docdb-application-id>270167</docdb-application-id>
+      <countries-concerned>
+        <country>AL</country>
+        <country>LT</country>
+        <country>LV</country>
+        <country>MK</country>
+      </countries-concerned>
+    </legal-event>
+    <legal-event sequence="5">
+      <publication-date>
+        <date>20050824</date>
+      </publication-date>
+      <event-code-1>17P</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXAMINATION FILED</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1416373A2</docdb-publication-number>
+      <docdb-application-id>270167</docdb-application-id>
+      <effective-date>
+        <date>20050630</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="6">
+      <publication-date>
+        <date>20050921</date>
+      </publication-date>
+      <event-code-1>AKX</event-code-1>
+      <effect>+</effect>
+      <legal-description>PAYMENT OF DESIGNATION FEES</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1416373A2</docdb-publication-number>
+      <docdb-application-id>270167</docdb-application-id>
+      <legal-designated-states>
+        <country>DE</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>IT</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="7">
+      <publication-date>
+        <date>20061025</date>
+      </publication-date>
+      <event-code-1>18D</event-code-1>
+      <effect>-</effect>
+      <legal-description>DEEMED TO BE WITHDRAWN</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1416373A2</docdb-publication-number>
+      <docdb-application-id>270167</docdb-application-id>
+      <effective-date>
+        <date>20060510</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <drawings format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP1416373A3_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP1416373A3_00002.PNG" alt="thumbnail image" img-content="drawing" img-format="png" />
+    </figure>
+  </drawings>
+  <image file="EP1416373A3.PDF" type="pdf" size="68530" pages="3" />
+</lexisnexis-patent-document>

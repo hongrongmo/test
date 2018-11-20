@@ -33,10 +33,10 @@ public class TestHTTPClientIssue {
 		TestHTTPClientIssue test = new TestHTTPClientIssue();
 		try {
 			
-			VTWAssetAPI api = new VTWAssetAPI(args[0], Integer.parseInt(args[1]));
+			VTWAssetAPI api = new VTWAssetAPI(args[0], Integer.parseInt(args[1]), null);
 			//patentIds.put("AU2010281317A1", "http://dev-ucs-content-store-eu-west.s3.amazonaws.com/content/pat%3AAU2010281317A1/MAIN/application/xml/02d84460608e91d8510f8725fe109b7a/AU2010281317A1.xml?AWSAccessKeyId=AKIAIKW4U6PKMIE3KSLQ&Expires=1471522524&Signature=u1zyiRsWNXf5DlgT5d7zR9iadlY%3D");
 			patentIds.put("US7368003B2", "");
-			api.downloadPatent(patentIds, "forward");
+			api.downloadPatent(patentIds, client, "forward", null, null);
 		} 
 		catch (Exception e) {
 			// TODO Auto-generated catch block

@@ -17,7 +17,6 @@ import java.util.Map;
 import org.apache.commons.io.ByteOrderMark;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.input.BOMInputStream;
-import org.apache.http.HttpRequest;
 import org.apache.http.HttpResponse;
 import org.apache.http.auth.AuthScope;
 import org.apache.http.auth.UsernamePasswordCredentials;
@@ -112,19 +111,85 @@ public class VTWAssetAPI {
 	}
 
 	
-	public VTWAssetAPI(String dirName, int recsPerConn)
+	public VTWAssetAPI(String dirName, int recsPerConn, String thread_name)
 	{
-
-		downloadDirName = dirName;
 		recsPerSingleConnection = recsPerConn;
 		
-		createHttpConn();
-		
-		System.out.println("Download Dir Name: " +  downloadDirName + " recordsPerConn: " +  recsPerSingleConnection);
 	}
 
+	public synchronized String[] init(String downloadDir_name,String thread_name, String type)
+	{
+		DateFormat dateFormat = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");		 
+		Date date = new Date();
+
+		File downloadDir = null;
+
+		String[] downloadDirNames = new String[2];
+
+		try
+		{
+			downloadDir = new File(System.getProperty("user.dir") + "/raw_data");
+			if(!downloadDir.exists())
+			{
+				downloadDir.mkdir();
+			}
+
+			downloadDir = new File(downloadDir.getAbsolutePath() + "/" + type + "_" + downloadDir_name);
+			if(!(downloadDir.exists()))
+			{
+				downloadDir.mkdir();
+			}
+
+			//Added 10/02/2017 to hold WO forwardflow files separate from US/EUP files
+			File wo_downloadDir = new File(System.getProperty("user.dir") + "/raw_data/" + type + "_wo_" + downloadDir_name);
+			if(!(wo_downloadDir.exists()))
+			{
+				wo_downloadDir.mkdir();
+			}
+			
+			//Added 10/02/2017 for supporting download of WO in separate dir
+			downloadDirNames[0] = downloadDir.getAbsolutePath();
+			downloadDirNames[1] = wo_downloadDir.getAbsolutePath();
+			
+			//responseHandler = new MyHttpResponseHandler<String>();
+
+			// create Apache HttpClient
+			//client = getInstance();
+
+			requestConfig = RequestConfig.custom().setSocketTimeout(SOCKET_TIMEOUT)
+					.setConnectionRequestTimeout(REQUEST_CONNECTION_TIMEOUT).build();
+
+			// save list of PatentIDS that failed to download to a file for later re-download
+			String currDir = System.getProperty("user.dir");
+
+			String root= currDir+"/failed";
+			File failDir = new File (root);
+			if(!failDir.exists())
+			{
+				failDir.mkdir();
+			}
+
+			String filename = failDir+"/" + thread_name + "failed_ids"+dateFormat.format(date)+".txt";
+
+			try {
+				out = new PrintWriter(new FileWriter(filename));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+
+			System.out.println("Failed Output Filename "+filename);
+
+		}
+		catch(Exception ex)
+		{
+			ex.printStackTrace();
+		}
+
+		//return downloadDir.getAbsolutePath();
+		return downloadDirNames;
+	}
 	
-	public void createHttpConn()
+	public CloseableHttpClient getInstance() throws Exception
 	{
 		try
 		{
@@ -147,62 +212,138 @@ public class VTWAssetAPI {
 		{
 			ex.printStackTrace();
 		}
+		return client;
 
 	}
-	//loop through paten ids, download patent wither with AssetAPI Url or Pre-signed URL
-
-	public void downloadPatent(Map<String,String> patentIds, String type)
+	
+	private static void end(CloseableHttpClient client, String thread_name)
 	{
-
-		String out = "";
-		HttpGet req = null;
-		
-		
-		// create downloadDir
-		
-		downloadDir = new File(System.getProperty("user.dir") + "/raw_data/" + type + "_" + downloadDirName);  
-		if(!(downloadDir.exists()))
+		try
 		{
-			downloadDir.mkdir();
-		}
-		
-		
-		
-		// create HttpClient connection
-		
-		//createHttpConn();
-		
-		if(patentIds.size() >0)
-		{
-			for(String id: patentIds.keySet())
+			if(out !=null)
 			{
-				patentId = id;
-				
-				if(patentIds.get(id) !=null && !(patentIds.get(id).isEmpty()))
-				{
-					Url = patentIds.get(id);
-					signedAssetUrl_count ++;
-				}
-				else
-				{
-
-					Url = ENDPOINT_ROOT + PATH + id + "?type=" + TYPE + "&fmt=" + FORMAT;
-				}
-				
-				
-				req = generateRequest(id,Url);
-				if(req !=null)
-				{
-					out = sendRequest(req);
-					System.out.println("Output is: " +  out);
-				}
+				out.close();
 			}
 		}
-		
-		// close HttpClient connection
-		end();
+		catch(Exception ex)
+		{
+			ex.printStackTrace();
+		}
 
-		
+		try
+		{
+			if(client !=null)
+			{
+				System.out.println("close HttpClient Connection for Thread: " + thread_name);
+				client.close();
+				System.out.println("HttpClient Connection was successfully closed!");
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+
+	}
+	
+	//loop through paten ids, download patent wither with AssetAPI Url or Pre-signed URL
+
+	public void downloadPatent(Map<String,String> patentIds, CloseableHttpClient client, String downloadDirName, String thread_name, String type)
+	{
+
+		String[] response = new String[2];
+		String threadName = thread_name;
+		ResponseHandler<String[]> responseHandler = null;
+
+		String[] downloadDir = init(downloadDirName,thread_name, type);
+
+		if(patentIds.size() >0)
+		{
+			System.out.println("Total PatentIds List: " + patentIds.size());
+			for(String key: patentIds.keySet())
+			{
+				if(!(key.isEmpty()))
+				{
+					synchronized(VTWAssetAPI.class)
+					{
+						responseHandler = new MyHttpResponseHandler<String[]>(key, downloadDir, thread_name);
+
+						//patentId = key;
+					}
+
+					try
+					{
+						if(patentIds.get(key) !=null && !(patentIds.get(key).isEmpty()))
+						{
+							Url = patentIds.get(key);
+							signedAssetUrl_count ++;
+						}
+						else
+						{
+
+							Url = ENDPOINT_ROOT + PATH + key + "?type=" + TYPE + "&fmt=" + FORMAT;
+						}
+
+
+						// Generate the request
+						HttpGet request = generateRequest(key, Url);
+
+						// Send the request to the server
+						if(request !=null)
+						{
+							// retry download two times in case it is failed the 1st time
+							for(int i=1;i<=2;i++)
+							{
+								// send the request
+								response = sendRequest(request, client, responseHandler);
+								if(response[0] !=null)
+								{
+									if(Integer.parseInt(response[0]) ==200)
+									break;
+									
+									else if(Integer.parseInt(response[0]) !=200 && i<2)
+									{
+										System.out.println("download response code " + response[0]  + " is not 200, re-try download:" +  key);
+										Thread.sleep(500);
+									}
+									else
+									{
+										System.out.println("download response code " + response[0]  + " is not 200, so skip this file:" +  key);
+										out.println(key);
+									}
+
+								}
+								
+							}
+
+							//Thread.sleep(50);
+						}
+
+					}
+					catch(Exception e)
+					{
+						e.printStackTrace();
+					}	
+				}
+			}
+
+			System.out.println("Total PatentIds with SignedAssetURL: " +  signedAssetUrl_count);
+
+		}
+
+		try
+		{
+			// close the connection
+			end(client, threadName);
+
+		}
+		catch(Exception e)
+		{
+			logger.error("Failed to close http connection!");
+			logger.error("Reason: " + e.getMessage());
+			e.printStackTrace();
+		}
+
 	}
 
 	public HttpGet generateRequest(String patentId, String Url)
@@ -228,167 +369,179 @@ public class VTWAssetAPI {
 	}
 	
 	
-	public String sendRequest(HttpGet request)
-	{
-		String output = "";
-		
-		
-		try
-		{
-			output = client.execute(request,responseHandler);
-		}
-		catch(ClientProtocolException ex)
-		{
-			ex.printStackTrace();
-		} catch (IOException e) 
-		{
+	/// Send the request to the server
+	private static String[] sendRequest(HttpGet request, CloseableHttpClient client, ResponseHandler<String[]> responseHandler) {
+
+		String response[] = new String[2];
+
+		try {
+
+			// using ResponseHandler class below
+			response = client.execute(request,responseHandler);
+			//System.out.println("Response is:  " +  response);
+
+
+		} catch (ClientProtocolException e) {
+			logger.error("clientProtocolException happened!");
+			logger.error("Error message: " + e.getMessage());
+			logger.error("Cause: " + e.getCause());
+			e.printStackTrace();
+		} catch (IOException e) {
+			logger.error("IOException happened!");
+			logger.error("Error message: " + e.getMessage());
+			logger.error("Cause: " + e.getCause());
+			e.printStackTrace();
 			e.printStackTrace();
 		}
 		catch(Exception e)
 		{
+			System.out.println("exception: " + e.getMessage());
 			e.printStackTrace();
 		}
-		return output;
+
+		return response;
 	}
 	
 
 
 	// for AssetMetadata Request Handler
-	public static class MyHttpResponseHandler<T> implements ResponseHandler<String> {
+	// for AssetMetadata Request Handler
+		public static class MyHttpResponseHandler<T> implements ResponseHandler<String[]> {
 
-
-		public String handleResponse(HttpResponse response)
-		{
-
-			InputStream responseStream = null;
-			int responseCode;
-			String responseErrorMessage = null;
+			private String patentId = "";
+			private String downloadDir = null;
+			private String wo_downloadDir = null;
+			private String threadName = null;
 			
-			String ResponseResult = "";
-			
-			BOMInputStream  bomStream = null;
-			OutputStream out = null;
-
-			
-			try
+			public MyHttpResponseHandler()
 			{
-				responseStream = response.getEntity().getContent();
-				responseCode = response.getStatusLine().getStatusCode();
-
-				System.out.println("download Respons Code for PatnetID: " + patentId + " is :" + responseCode);
-				ResponseResult = Integer.toString(responseCode);
-
-
-				if(responseCode ==200)
-				{
-					out = new FileOutputStream(new File(downloadDir + "/" + patentId + ".xml"));
-					
-					/**
-					 * This class is used to wrap a stream that includes an encoded ByteOrderMark as its first bytes. 
-					 * This class detects these bytes and, if required, can automatically skip them and return the subsequent byte as the first byte in the stream. 
-					 */
-					//BOMInputStream  bomStream = new BOMInputStream(responseStream,false);
-					bomStream = new BOMInputStream(responseStream,false,
-							ByteOrderMark.UTF_8, ByteOrderMark.UTF_16BE,
-							ByteOrderMark.UTF_16LE, ByteOrderMark.UTF_32BE, ByteOrderMark.UTF_32LE);
-
-					ByteOrderMark bom = bomStream.getBOM();
-					//String charSet = bom.getCharsetName();
-
-					
-					// this what was raising NullPointerException
-					
-				/*	if(bomStream.hasBOM())
-					{
-						System.out.println("BOM value is : " + charSet);						
-					}
-					else if (bomStream.hasBOM(ByteOrderMark.UTF_16BE)) {
-						System.out.println("BOM value is : " + charSet);						
-					}
-					else if (bomStream.hasBOM(ByteOrderMark.UTF_16LE)) {						
-						System.out.println("BOM value is : " + charSet);						
-					} 
-					else if (bomStream.hasBOM(ByteOrderMark.UTF_32BE)) {						
-						System.out.println("BOM value is : " + charSet);						
-					} 
-					else if (bomStream.hasBOM(ByteOrderMark.UTF_32LE)) {						
-						System.out.println("BOM value is : " + charSet);						
-					} */
-
-					IOUtils.copy(bomStream, out);
-
-
-
-				}
-				else
-				{
-					//System.out.println("download response code " + responseCode  + " is not 200, so skip this file:" +  patentId);
-					responseErrorMessage = IOUtils.toString(response.getEntity().getContent());
-					System.out.println("Response Message: " + responseErrorMessage);
-					//ResponseResult[1] = responseErrorMessage;
-				}
 
 			}
 
-			catch(ClientProtocolException e)
+			public MyHttpResponseHandler(String patent_id, String[] downloadDirName, String thread_name)
 			{
-				e.printStackTrace();
-			}
-			catch(IOException e)
-			{
-				e.printStackTrace();
+				patentId = patent_id;
+				downloadDir = downloadDirName[0];
+				wo_downloadDir = downloadDirName[1];
+				threadName = thread_name;
 			}
 
-
-			finally
+			@Override
+			public String[] handleResponse(HttpResponse response)
 			{
-				if(responseStream !=null)
+
+				InputStream responseStream = null;
+				int responseCode;
+				String responseErrorMessage = null;
+
+				String[] ResponseResult = new String[2];
+
+				BOMInputStream  bomStream = null;
+				OutputStream out = null;
+
+				/*synchronized (VTWAssetAPI.class)
+				{*/
+
+				try
 				{
-					try
+					responseStream = response.getEntity().getContent();
+					responseCode = response.getStatusLine().getStatusCode();
+
+					System.out.println(threadName + " :download Respons Code for PatnetID: " + patentId + " is :" + responseCode);
+					ResponseResult[0] = Integer.toString(responseCode);
+
+
+					if(responseCode ==200)
 					{
-						responseStream.close();
+						if(patentId.substring(0, 2).equalsIgnoreCase("wo"))
+							out = new FileOutputStream(new File(wo_downloadDir + "/" + patentId + ".xml"));
+						else
+							out = new FileOutputStream(new File(downloadDir + "/" + patentId + ".xml"));
+
+						/**
+						 * This class is used to wrap a stream that includes an encoded ByteOrderMark as its first bytes. 
+						 * This class detects these bytes and, if required, can automatically skip them and return the subsequent byte as the first byte in the stream. 
+						 */
+						//BOMInputStream  bomStream = new BOMInputStream(responseStream,false);
+						bomStream = new BOMInputStream(responseStream,false,
+								ByteOrderMark.UTF_8, ByteOrderMark.UTF_16BE,
+								ByteOrderMark.UTF_16LE, ByteOrderMark.UTF_32BE, ByteOrderMark.UTF_32LE);
+
+						IOUtils.copy(bomStream, out);
+
 					}
-					catch(IOException ex)
+					else
 					{
-						logger.error("Failed to close inputstream");
-						ex.printStackTrace();
+						//System.out.println("download response code " + responseCode  + " is not 200, so skip this file:" +  patentId);
+						responseErrorMessage = IOUtils.toString(response.getEntity().getContent());
+						System.out.println("Response Message: " + responseErrorMessage);
+						ResponseResult[1] = responseErrorMessage;
 					}
 
 				}
 
-				if(bomStream !=null)
+				catch(ClientProtocolException e)
 				{
-					try
+					e.printStackTrace();
+				}
+				catch(IOException e)
+				{
+					e.printStackTrace();
+				}
+
+
+				finally
+				{
+					if(responseStream !=null)
 					{
-						bomStream.close();
+						try
+						{
+							responseStream.close();
+						}
+						catch(IOException ex)
+						{
+							logger.error("Failed to close inputstream");
+							ex.printStackTrace();
+						}
+
 					}
-					catch(IOException ex)
+
+					if(bomStream !=null)
 					{
-						logger.error("Failed to close inputstream");
-						ex.printStackTrace();
+						try
+						{
+							bomStream.close();
+						}
+						catch(IOException ex)
+						{
+							logger.error("Failed to close inputstream");
+							ex.printStackTrace();
+						}
+
+					}
+					if(out !=null)
+					{
+						try
+						{
+							out.flush();
+							out.close();
+						}
+						catch(IOException ex)
+						{
+							System.out.println("Failed to close outputstream");
+							ex.printStackTrace();
+						}
+
 					}
 
 				}
-				if(out !=null)
-				{
-					try
-					{
-						out.flush();
-						out.close();
-					}
-					catch(IOException ex)
-					{
-						System.out.println("Failed to close outputstream");
-						ex.printStackTrace();
-					}
+				//}
 
-				}
+				return  ResponseResult;
 
 			}
-			return  ResponseResult;
-
 		}
-	}
+
 
 
 	private synchronized void end()
@@ -427,7 +580,7 @@ public class VTWAssetAPI {
 	{
 		CredentialsProvider credsProvider = null;
 		
-		VTWAssetAPI api = new VTWAssetAPI(args[0], Integer.parseInt(args[1]));
+		VTWAssetAPI api = new VTWAssetAPI(args[0], Integer.parseInt(args[1]),"thread1");
 		
 		credsProvider = new BasicCredentialsProvider();
 		credsProvider.setCredentials(new AuthScope(HOST, 443), 
@@ -473,7 +626,8 @@ public class VTWAssetAPI {
 		
 		
 		
-		api.downloadPatent(patentIds,"forward");
+		// for testing need to change a lottle bit to work as before
+		//api.downloadPatent(patentIds,"forward");
 	}
 	
 	
