@@ -1,0 +1,1525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2015 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20150505" file="CN101484147A.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20090806" time-inserted="055519" date-changed="20130401" time-changed="025256">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Unexamined application for a patent for invention">
+      <document-id>
+        <country>CN</country>
+        <doc-number>101484147</doc-number>
+        <kind>A</kind>
+        <date>20090715</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>CN</country>
+        <doc-number>200680055284</doc-number>
+        <kind>A</kind>
+        <date>20060921</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>chi</language-of-publication>
+    <priority-claims date-changed="20090806">
+      <priority-claim sequence="1" kind="national">
+        <country>IN</country>
+        <doc-number>1465CHE2006</doc-number>
+        <kind>A</kind>
+        <date>20060818</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>IN</country>
+        <doc-number>CH14652006</doc-number>
+        <kind>A</kind>
+        <date>20060818</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>1465/CHE/2006</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>IN2006CH01465</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20091226">
+      <gazette-reference>
+        <date>20090715</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20090715</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <kind-of-official-gazette>25-28</kind-of-official-gazette>
+    <classifications-ipcr date-changed="20121209">
+      <classification-ipcr sequence="1">
+        <text>A61K   9/28        20060101AFI20090724BHCN        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>28</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20090724</date>
+        </action-date>
+        <generating-office>
+          <country>CN</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20121209">
+      <classification-cpc sequence="1">
+        <text>A61K   9/5026      20130101  I20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>5026</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61K   9/5078      20130101  I20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>5078</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <classifications-ecla date-changed="20121209">
+      <classification-ecla sequence="1" classification-scheme="EC" country="EP">
+        <text>A61K  9/50K2</text>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>50</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">K  </additional-subgroup>
+          <additional-subgroup sequence="2">2  </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+      <classification-ecla sequence="2" classification-scheme="EC" country="EP">
+        <text>A61K  9/50H6B</text>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>50</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">H  </additional-subgroup>
+          <additional-subgroup sequence="2">6  </additional-subgroup>
+          <additional-subgroup sequence="3">B  </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+    </classifications-ecla>
+    <number-of-claims calculated="yes">16</number-of-claims>
+    <invention-title id="title_xml_chi" date-changed="20140308" lang="chi" format="original">对于具有水中良好溶解性的活性成分具有受控的活性成分释放性的药物组合物</invention-title>
+    <invention-title id="title_eng" date-changed="20140308" lang="eng" format="original">Pharmaceutical composition with controlled active ingredient delivery for active ingredients with good solubility in water</invention-title>
+    <parties date-changed="20091226">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="chi">
+            <orgname>赢创罗姆有限责任公司</orgname>
+            <address>
+              <address-1>德国达姆施塔特</address-1>
+            </address>
+          </addressbook>
+          <addressbook lang="eng">
+            <orgname>EVONIK ROEHM GMBH</orgname>
+            <address>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant sequence="1" app-type="applicant" data-format="original">
+          <addressbook lang="chi">
+            <orgname>赢创罗姆有限责任公司</orgname>
+            <address>
+              <address-1>德国达姆施塔特</address-1>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant sequence="1" app-type="applicant" data-format="docdb">
+          <addressbook lang="eng">
+            <orgname>EVONIK ROEHM GMBH</orgname>
+            <address>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant sequence="1" app-type="applicant" data-format="docdba">
+          <addressbook lang="eng">
+            <orgname>EVONIK ROEHM GMBH</orgname>
+            <address>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="chi">
+            <name>H－U·彼得赖特</name>
+          </addressbook>
+          <addressbook lang="eng">
+            <name>RAVISHANKAR HEMA</name>
+            <address>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="chi">
+            <name>H·拉维尚卡尔</name>
+          </addressbook>
+          <addressbook lang="eng">
+            <name>BODINGE SHRADDA</name>
+            <address>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="chi">
+            <name>S·博格</name>
+          </addressbook>
+        </inventor>
+        <inventor sequence="1" data-format="original">
+          <addressbook lang="chi">
+            <name>H－U·彼得赖特</name>
+          </addressbook>
+        </inventor>
+        <inventor sequence="1" data-format="docdb">
+          <addressbook lang="eng">
+            <name>HEMA RAVISHANKAR</name>
+            <address>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="1" data-format="docdba">
+          <addressbook lang="eng">
+            <name>RAVISHANKAR HEMA</name>
+            <address>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" data-format="original">
+          <addressbook lang="chi">
+            <name>H·拉维尚卡尔</name>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" data-format="docdba">
+          <addressbook lang="eng">
+            <name>BODINGE SHRADDA</name>
+            <address>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" data-format="docdb">
+          <addressbook lang="eng">
+            <name>SHRADDA BODINGE</name>
+            <address>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" data-format="original">
+          <addressbook lang="chi">
+            <name>S·博格</name>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="chi">
+            <name>中国国际贸易促进委员会专利商标事务所 (邓毅)</name>
+          </addressbook>
+        </agent>
+        <agent sequence="1" rep-type="attorney" data-format="original">
+          <addressbook lang="chi">
+            <name>中国国际贸易促进委员会专利商标事务所 (邓毅)</name>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>EP06066583</doc-number>
+        <date>20060921</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2008/019712</doc-number>
+        <date>20080221</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150130">
+      <main-family family-id="110495110">
+        <family-member>
+          <document-id>
+            <country>IL</country>
+            <doc-number>195407</doc-number>
+            <kind>A</kind>
+            <date>20130530</date>
+          </document-id>
+          <application-date>
+            <date>20081120</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>5661281</doc-number>
+            <kind>B2</kind>
+            <date>20150128</date>
+          </document-id>
+          <application-date>
+            <date>20060921</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2008019712</doc-number>
+            <kind>A1</kind>
+            <date>20080221</date>
+          </document-id>
+          <application-date>
+            <date>20060921</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>101484147</doc-number>
+            <kind>A</kind>
+            <date>20090715</date>
+          </document-id>
+          <application-date>
+            <date>20060921</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>MX</country>
+            <doc-number>2009001597</doc-number>
+            <kind>A</kind>
+            <date>20090223</date>
+          </document-id>
+          <application-date>
+            <date>20090212</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>8465769</doc-number>
+            <kind>B2</kind>
+            <date>20130618</date>
+          </document-id>
+          <application-date>
+            <date>20070403</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20080044470</doc-number>
+            <kind>A1</kind>
+            <date>20080221</date>
+          </document-id>
+          <application-date>
+            <date>20070403</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2051704</doc-number>
+            <kind>A1</kind>
+            <date>20090429</date>
+          </document-id>
+          <application-date>
+            <date>20060921</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>875CHENP2009</doc-number>
+            <kind>A</kind>
+            <date>20090529</date>
+          </document-id>
+          <application-date>
+            <date>20090216</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IL</country>
+            <doc-number>195407</doc-number>
+            <kind>D0</kind>
+            <date>20090803</date>
+          </document-id>
+          <application-date>
+            <date>20081120</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2010501015</doc-number>
+            <kind>A</kind>
+            <date>20100114</date>
+          </document-id>
+          <application-date>
+            <date>20060921</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>BR</country>
+            <doc-number>PI0621996</doc-number>
+            <kind>A2</kind>
+            <date>20111227</date>
+          </document-id>
+          <application-date>
+            <date>20060921</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AT</country>
+            <doc-number>553754</doc-number>
+            <kind>T</kind>
+            <date>20120515</date>
+          </document-id>
+          <application-date>
+            <date>20060921</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2661561</doc-number>
+            <kind>C</kind>
+            <date>20131224</date>
+          </document-id>
+          <application-date>
+            <date>20060921</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2661561</doc-number>
+            <kind>A1</kind>
+            <date>20080221</date>
+          </document-id>
+          <application-date>
+            <date>20060921</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020090042922</doc-number>
+            <kind>A</kind>
+            <date>20090504</date>
+          </document-id>
+          <application-date>
+            <date>20090217</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>1465CHE2006</doc-number>
+            <kind>A</kind>
+            <date>20080222</date>
+          </document-id>
+          <application-date>
+            <date>20060818</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2051704</doc-number>
+            <kind>B1</kind>
+            <date>20120418</date>
+          </document-id>
+          <application-date>
+            <date>20060921</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>ES</country>
+            <doc-number>2385498</doc-number>
+            <kind>T3</kind>
+            <date>20120725</date>
+          </document-id>
+          <application-date>
+            <date>20060921</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020140019038</doc-number>
+            <kind>A</kind>
+            <date>20140213</date>
+          </document-id>
+          <application-date>
+            <date>20060921</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="110494852">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2008019712</doc-number>
+            <kind>A1</kind>
+            <date>20080221</date>
+          </document-id>
+          <application-date>
+            <date>20060921</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IL</country>
+            <doc-number>195407</doc-number>
+            <kind>A</kind>
+            <date>20130530</date>
+          </document-id>
+          <application-date>
+            <date>20081120</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>101484147</doc-number>
+            <kind>A</kind>
+            <date>20090715</date>
+          </document-id>
+          <application-date>
+            <date>20060921</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>MX</country>
+            <doc-number>2009001597</doc-number>
+            <kind>A</kind>
+            <date>20090223</date>
+          </document-id>
+          <application-date>
+            <date>20090212</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>8465769</doc-number>
+            <kind>B2</kind>
+            <date>20130618</date>
+          </document-id>
+          <application-date>
+            <date>20070403</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>5661281</doc-number>
+            <kind>B2</kind>
+            <date>20150128</date>
+          </document-id>
+          <application-date>
+            <date>20060921</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20080044470</doc-number>
+            <kind>A1</kind>
+            <date>20080221</date>
+          </document-id>
+          <application-date>
+            <date>20070403</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2051704</doc-number>
+            <kind>A1</kind>
+            <date>20090429</date>
+          </document-id>
+          <application-date>
+            <date>20060921</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>875CHENP2009</doc-number>
+            <kind>A</kind>
+            <date>20090529</date>
+          </document-id>
+          <application-date>
+            <date>20090216</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IL</country>
+            <doc-number>195407</doc-number>
+            <kind>D0</kind>
+            <date>20090803</date>
+          </document-id>
+          <application-date>
+            <date>20081120</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>BR</country>
+            <doc-number>PI0621996</doc-number>
+            <kind>A2</kind>
+            <date>20111227</date>
+          </document-id>
+          <application-date>
+            <date>20060921</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AT</country>
+            <doc-number>553754</doc-number>
+            <kind>T</kind>
+            <date>20120515</date>
+          </document-id>
+          <application-date>
+            <date>20060921</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>SI</country>
+            <doc-number>2051704</doc-number>
+            <kind>T1</kind>
+            <date>20120831</date>
+          </document-id>
+          <application-date>
+            <date>20060921</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2661561</doc-number>
+            <kind>C</kind>
+            <date>20131224</date>
+          </document-id>
+          <application-date>
+            <date>20060921</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2661561</doc-number>
+            <kind>A1</kind>
+            <date>20080221</date>
+          </document-id>
+          <application-date>
+            <date>20060921</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020090042922</doc-number>
+            <kind>A</kind>
+            <date>20090504</date>
+          </document-id>
+          <application-date>
+            <date>20090217</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>1465CHE2006</doc-number>
+            <kind>A</kind>
+            <date>20080222</date>
+          </document-id>
+          <application-date>
+            <date>20060818</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2010501015</doc-number>
+            <kind>A</kind>
+            <date>20100114</date>
+          </document-id>
+          <application-date>
+            <date>20060921</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2051704</doc-number>
+            <kind>B1</kind>
+            <date>20120418</date>
+          </document-id>
+          <application-date>
+            <date>20060921</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>ES</country>
+            <doc-number>2385498</doc-number>
+            <kind>T3</kind>
+            <date>20120725</date>
+          </document-id>
+          <application-date>
+            <date>20060921</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020140019038</doc-number>
+            <kind>A</kind>
+            <date>20140213</date>
+          </document-id>
+          <application-date>
+            <date>20060921</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_xml_chi" date-changed="20140308" lang="chi" format="original">
+    <p num="0">本发明涉及一种药物制剂，其含有a)含有活性成分和有机酸和/或有机酸的盐的核；b)包裹核的包衣，其含有由具有不超过15重量％的阳离子或阴离子基团的(甲基)丙烯酸酯共聚物组成的聚合物组分，并且其含有至少60重量％的如后所述的(甲基)丙烯酸酯共聚物，即该共聚物由93至98重量％丙烯酸或甲基丙烯酸的C<sub>1</sub>至C<sub>4</sub>－烷基酯和7至2重量％在烷基残基中具有季铵基团的(甲基)丙烯酸酯单体的经自由基聚合的单元组成，其特征在于，活性成分具有20℃下至少10g/l的水溶性和所述包衣含有平均粒径在1至50μm范围内的二氧化硅颗粒。</p>
+  </abstract>
+  <abstract id="abstr_eng" date-changed="20140308" lang="eng" format="original">
+    <p>The patent refers to the field of 'pharmaceutical preparations'. The invention relates to a pharmaceutical preparation comprising a) a core with an active ingredient and with an organic acid and/or with the salt of an organic acid; b) a coating which surrounds the core and which comprises content of polymer composed of (meth)acrylate copolymers having no more than 15% by weight of cationic or anionic groups, and which comprises at least 60% by weight of a (meth)acrylate copolymer which is composed of free-radical-polymerized units of from 93 to 98% by weight of C1-C4-alkyl esters of acrylic or methacrylic acid and from 7 to 2% by weight of (meth)acrylate monomers having a quaternary ammonium group in the alkyl radical, characterized in that the water-solubility of the active ingredient is at least 10 g/l at 20 DEG C and the coating comprises silicon dioxide particles whose average particle size is in the range from 1 to 50 mm.</p>
+  </abstract>
+  <legal-data date-changed="20140618">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20090715</date>
+      </publication-date>
+      <event-code-1>C06</event-code-1>
+      <effect>+</effect>
+      <legal-description>PUBLICATION</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> CN   101484147A</docdb-publication-number>
+      <docdb-application-id>57954539</docdb-application-id>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20090909</date>
+      </publication-date>
+      <event-code-1>C10</event-code-1>
+      <legal-description>REQUEST OF EXAMINATION AS TO SUBSTANCE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> CN   101484147A</docdb-publication-number>
+      <docdb-application-id>57954539</docdb-application-id>
+    </legal-event>
+  </legal-data>
+  <description id="descr_xml_chi" lang="chi" format="original" date-changed="20140111">
+    <technical-field>
+      <p id="p-00001-zh" num="0001">发明领域 		</p>
+      <p id="p-00002-zh" num="0002">本发明涉及对于具有水中良好溶解性的活性成分具有受控的活性 		<br />成分释放性的药物组合物领域。 		</p>
+    </technical-field>
+    <background-art>
+      <p id="p-00003-zh" num="0003">背景技术 	</p>
+      <p id="p-00004-zh" num="0004">EP-A0463877记载了具有延缓的活性成分释放性的药物组合物， 		<br />其由含有药物活性成分的核和单层的包衣膜组成，所述的包衣膜含有 		<br />拒水的盐和不溶于水的由丙烯酸乙酯、甲基丙烯酸甲酯和甲基丙烯酰 		<br />氧乙基三甲基氯化铵形成的共聚物。所述拒水的盐可以是例如Ca-或 		<br />Mg-硬脂酸盐。得到了S形释放曲线。 		</p>
+      <p id="p-00005-zh" num="0005">EP-A0225085、EP-A0122077和EP-A0123470记载了有机酸在药剂 		<br />核中的应用，在所述的药剂核上设置由有机溶液制成的不同的包衣。 		<br />得到基本上S形的释放特性。EP-A0436370记载了具有延缓的活性成 		<br />分释放性的药物组合物，其由含有药物活性成分和无机酸的核与外包 		<br />衣膜组成，所述包衣膜通过含水喷涂施加上并且是一种由丙烯酸乙酯、 		<br />甲基丙烯酸甲酯和甲基丙烯酰氧乙基三甲基氯化铵形成的共聚物。其 		<br />中，同样得到了S形的释放曲线。 		</p>
+      <p id="p-00006-zh" num="0006">EP1117387B1记载了类似于EP-A0436370的体系。 		</p>
+      <p id="p-00007-zh" num="0007">基本的区别在于使用盐形式的有机酸，由此特别能够有利地影响 		<br />迟滞阶段的持续时间以及S形释放曲线的斜率。作为可能的加工助剂 		<br />提及的，特别是经研磨的硅酸和成孔剂。 		</p>
+    </background-art>
+    <disclosure>
+      <p id="p-00008-zh" num="0008">发明任务 		</p>
+      <p id="p-00009-zh" num="0009">对于许多药物剂型或活性成分而言，有治疗意义的是S形释放特 		<br />性，其具有延缓的活性成分释放性的起始阶段(迟滞阶段)、随后的 		<br />主释放阶段(脉冲阶段(Pulse-Phase))和释尽阶段(Auslaufphase)。 		<br />通常，在迟滞阶段内应进行尽可能低的活性成分释放性，在随后的脉 		<br />冲阶段内应进行尽可能快的活性成分释放性。该目的部分地通过 		<br />EP-A0436370和EP1117387B1的技术教导来实现。在EP1117387B1中 		<br />首先以乙酸钠获得良好的结果。但是存在着不断的改善需求。本发明 		<br />任务在于，进一步改进由EP-A0436370和EP1117387B1公开的具有S 		<br />形活性成分释放性的药物制剂，以更接近上述目的。 		</p>
+      <p id="p-00010-zh" num="0010">该任务通过含有如下成分的药物制剂来解决： 		</p>
+      <p id="p-00011-zh" num="0011">a)含有活性成分和有机酸和/或有机酸的盐的核 		</p>
+      <p id="p-00012-zh" num="0012">b)包裹核的包衣，其含有由具有不超过15重量％的阳离子或阴 		<br />离子基团的(甲基)丙烯酸酯共聚物组成的聚合物组分，并且其含有 		<br />至少60重量％的如后所述的(甲基)丙烯酸酯共聚物，即该共聚物由 		<br />93至98重量％丙烯酸或甲基丙烯酸的C<sub>1</sub>至C<sub>4</sub>-烷基酯和7至2重量％ 		<br />在烷基残基中具有季铵基团的(甲基)丙烯酸酯单体的经自由基聚合 		<br />的单元组成， 		</p>
+      <p id="p-00013-zh" num="0013">其特征在于， 		</p>
+      <p id="p-00014-zh" num="0014">所述活性成分具有20℃下至少10g/l的水溶性和所述包衣含有平 		<br />均粒径在1至50μm范围内的二氧化硅颗粒。 		</p>
+      <p id="p-00015-zh" num="0015">发明详述 		</p>
+      <p id="p-00016-zh" num="0016">核(a) 		</p>
+      <p id="p-00017-zh" num="0017">在最简情形下，核可以只是由活性成分和有机酸和/或有机酸的盐 		<br />组成，通常其还含有载体如球丸(Nonpareill)，和药物助剂如高分 		<br />散的硅酸或聚乙烯吡咯烷酮(PVP)。 		</p>
+      <p id="p-00018-zh" num="0018">核(a)可以例如由以下组成： 		</p>
+      <p id="p-00019-zh" num="0019">·以核重量计，其量为97.5至2.5、优选80至5重量％的活性 		<br />成分 		</p>
+      <p id="p-00020-zh" num="0020">·以核重量计，其量为2.5至97.5重量、优选5至80、特别是 		<br />10至50重量％的有机酸和/或有机酸的一种或多种盐 		</p>
+      <p id="p-00021-zh" num="0021">·任选地，以核重量计，其量为0-95、优选10至50重量％的药 		<br />物助剂 		</p>
+      <p id="p-00022-zh" num="0022">·任选地，具有占核重量的份额为0至95、优选10至50重量％ 		<br />的载体。 		</p>
+      <p id="p-00023-zh" num="0023">所述的核可以例如通过直接压制、挤出和随后的圆粒化 		<br />(Ausrundung)、潮湿或干燥的造粒或者直接的制丸(例如在盘上) 		<br />或者通过将粉末粘结(粉末层覆)到不含活性成分的球粒(球丸)或 		<br />含活性成分的颗粒上而制得。 		</p>
+      <p id="p-00024-zh" num="0024">除了活性成分之外还含有的药物助剂可以是例如粘结剂如纤维素 		<br />和它们的衍生物、聚乙烯吡咯烷酮(PVP)、明胶、(甲基)丙烯酸酯、 		<br />淀粉和它们的衍生物或糖。 		</p>
+      <p id="p-00025-zh" num="0025">核可以是均匀的或者具有层状结构，其中，活性成分优选存在于 		<br />较外的层中。特别优选使有机酸和/或有机酸的盐构成核的较外层。 		</p>
+      <p id="p-00026-zh" num="0026">有机酸 		</p>
+      <p id="p-00027-zh" num="0027">所用的有机酸必须是毒理学无危险的且可用于药剂中。优选的类 		<br />型取决于特定的配制剂。优选所述有机酸是例如柠檬酸、富马酸、蚁 		<br />酸、琥珀酸、醋酸、马来酸、酒石酸、戊二酸或乳酸。 		</p>
+      <p id="p-00028-zh" num="0028">特别适于本发明目的的是琥珀酸。原则上，柠檬酸同样是合适的， 		<br />但是在经缓冲的大致符合生理学比例的介质中，并没有获得如采用丁 		<br />二酸盐的陡峭的释放曲线。醋酸会偶然地导致稳定性问题，这可能在 		<br />药剂的存放过程中出现。在使用琥珀酸时这种问题迄今还未有公开。 		</p>
+      <p id="p-00029-zh" num="0029">酸的类型控制着活性成分释放曲线的斜率，特别是对于S形释放 		<br />曲线。 		</p>
+      <p id="p-00030-zh" num="0030">在本发明的配制剂中，有机酸可以优选作为核的较外层存在，并 		<br />通过粘结剂连结。它们可以通过由溶液的喷涂或者通过粉末状施涂同 		<br />时添加粘结剂溶液而施加上。 		</p>
+      <p id="p-00031-zh" num="0031">但是在具体情况中以下的方案也是完全合理的，即其中将活性成 		<br />分以与有机酸混合的形式施涂或者在活性成分层和盐层之间施涂一个 		<br />隔离层。有机酸也可以最后被施涂到核上，从而使其构成较外层。 		</p>
+      <p id="p-00032-zh" num="0032">有机酸占核重量的份额可以是2.5重量％至97.5重量％、优选5 		<br />至80重量％、特别是10-50重量％。 		</p>
+      <p id="p-00033-zh" num="0033">有机酸的盐： 		</p>
+      <p id="p-00034-zh" num="0034">相对于有机酸，优选的是有机酸的盐。在大多数情况下，与有机 		<br />酸相比，当使用盐形式的有机酸时观察到在迟滞阶段时的较小活性成 		<br />分释放性和随后的较快速的活性成分释放性。 		</p>
+      <p id="p-00035-zh" num="0035">所用的有机酸的盐必须是毒理学无危险的并且可用于药剂中。优 		<br />选的是碱金属盐(铵、锂、钠、钾)。优选的类型取决于特定的配制 		<br />剂；但是除了本发明的功能性之外也要顾及到离子的药物学作用。优 		<br />选的是有机弱酸的盐，如琥珀酸、柠檬酸、富马酸、蚁酸、醋酸、马 		<br />来酸、酒石酸、戊二酸或乳酸。 		</p>
+      <p id="p-00036-zh" num="0036">特别适于本发明目的的是丁二酸钠。原则上，柠檬酸钠同样是合 		<br />适的，但是在经缓冲的大致符合生理学比例的介质中，并没有获得如 		<br />采用丁二酸钠的陡峭的释放特性。醋酸钠会偶然地导致稳定性问题， 		<br />这可能在药剂的存放过程中出现。在使用丁二酸钠时这种问题迄今还 		<br />未有公开。 		</p>
+      <p id="p-00037-zh" num="0037">酸的类型控制着活性成分释放曲线的斜率，特别是对于S形释放 		<br />曲线。 		</p>
+      <p id="p-00038-zh" num="0038">在本发明的配制剂中，所述的盐能够作为核的较外层存在，并通 		<br />过粘结剂连结。它们可以通过由溶液的喷涂或者通过粉末状施涂同时 		<br />添加粘结剂溶液而施加上。 		</p>
+      <p id="p-00039-zh" num="0039">但是在具体情况中以下的方案也是完全合理的，即其中将活性成 		<br />分以与盐混合的形式施涂或者在活性成分层和盐层之间施涂一个隔离 		<br />层。所述的有机酸的盐也可以最后被施涂到核上，从而使其构成较外 		<br />层。 		</p>
+      <p id="p-00040-zh" num="0040">有机酸的盐占核重量的份额可以是2.5重量％至97.5重量％、优选 		<br />5至80重量％、特别是10-50重量％。 		</p>
+      <p id="p-00041-zh" num="0041">包衣b) 		</p>
+      <p id="p-00042-zh" num="0042">包衣b)由一种或多种(甲基)丙烯酸酯共聚物、SiO<sub>2</sub>颗粒以及 		<br />任选地常规药物助剂组成，所述常规药物助剂例如软化剂、色素、润 		<br />湿剂、隔离剂等。较外的包衣优选直接地包裹核，而在核与包衣膜之 		<br />间不存在其他的层。 		</p>
+      <p id="p-00043-zh" num="0043">包衣的聚合物组分与所含的SiO<sub>2</sub>-颗粒和任选地含有的其他助剂 		<br />如软化剂一起成膜并构成贯通的<img id="img-00001-zh" file="a200680055284d00091.tif" wi="175" he="20" img-content="drawing" img-format="tif" />包衣或包衣膜。所 		<br />述包衣或包衣膜以其整体与存在于核内的有机酸和/或它们的盐一起 		<br />控制活性成分释放。 		</p>
+      <p id="p-00044-zh" num="0044">包衣b)的聚合物组分 		</p>
+      <p id="p-00045-zh" num="0045">包衣b)的聚合物组分含有至少60重量％、优选85至95重量％的 		<br />一种或任选地多种的由经自由基聚合的单体单元构成的(甲基)丙烯 		<br />酸酯共聚物，所述单体单元有93至98重量％由丙烯酸或甲基丙烯酸的 		<br />C<sub>1</sub>至C<sub>4</sub>-烷基酯组成且有7至2重量％由在烷基残基中具有季铵基团的 		<br />(甲基)丙烯酸酯单体组成(<img id="img-00002-zh" file="a200680055284d00092.tif" wi="107" he="16" img-content="drawing" img-format="tif" /> RS型)。任选地，包衣的聚 		<br />合物组分也可以100％由前述的聚合物类型组成。 		</p>
+      <p id="p-00046-zh" num="0046">包衣的聚合物份额可以优选为以核重量计的10至200、优选20 		<br />至100重量％。 		</p>
+      <p id="p-00047-zh" num="0047">以包衣计的包衣的聚合物份额应为至少50重量％。所述包衣可以 		<br />任选地只是由所述的(甲基)丙烯酸酯共聚物和SiO<sub>2</sub>组分组成。但通 		<br />常，包衣除了SiO<sub>2</sub>组分之外还含有其他的药物学上常规的添加剂，如 		<br />软化剂或色素。 		</p>
+      <p id="p-00048-zh" num="0048">本发明的原理基于的是核的关键成分与包衣的关键成分之间设想 		<br />的相互作用。 		</p>
+      <p id="p-00049-zh" num="0049">令人惊奇的是，本发明的作用只会出现于如后所述的活性成分上， 		<br />即该活性成分具有至少10g/l、优选至少30g/l、更优选至少100g/l 		<br />的水溶性。为确保这种相互作用，应使所述的(甲基)丙烯酸酯共聚 		<br />物有至少50重量％参与包衣的结构，从而实现所期望的相互作用。这 		<br />种(甲基)丙烯酸酯共聚物是商业通用的并且长久以来用于缓释性的 		<br />包衣。它们实际上是不溶于水的。它们可以单独地或者与其他(甲基) 		<br />丙烯酸酯共聚物混合地使用。 		</p>
+      <p id="p-00050-zh" num="0050">为实现本发明的S形活性成分释放特性，包衣b)的聚合物组分 		<br />应有至少60、优选至少85重量％或100重量％由所述的共聚物类型 		<br />(<img id="img-00003-zh" file="a200680055284d00101.tif" wi="108" he="19" img-content="drawing" img-format="tif" />RS-型)组成。 		</p>
+      <p id="p-00051-zh" num="0051">优选的丙烯酸或甲基丙烯酸的C<sub>1</sub>至C<sub>4</sub>-烷基酯是丙烯酸甲酯、丙 		<br />烯酸乙酯、丙烯酸丁酯、甲基丙烯酸丁酯和甲基丙烯酸甲酯。 		</p>
+      <p id="p-00052-zh" num="0052">作为具有季铵基团的(甲基)丙烯酸酯单体特别优选是2-甲基丙 		<br />烯酰氧乙基三甲基氯化铵。 		</p>
+      <p id="p-00053-zh" num="0053">相应的共聚物可以例如由50-70重量％的甲基丙烯酸甲酯、20-40 		<br />重量％的丙烯酸乙酯和7-2重量％的甲基丙烯酰氧乙基三甲基氯化铵构 		<br />成。 		</p>
+      <p id="p-00054-zh" num="0054">优选的共聚物含有65重量％的甲基丙烯酸甲酯、30重量％的丙烯 		<br />酸乙酯和5重量％的2-甲基丙烯酰氧乙基三甲基氯化铵(<img id="img-00004-zh" file="a200680055284d00102.tif" wi="108" he="17" img-content="drawing" img-format="tif" />RS)。 		</p>
+      <p id="p-00055-zh" num="0055">(甲基)丙烯酸酯共聚物的混合物 		</p>
+      <p id="p-00056-zh" num="0056">包衣的聚合物组分也可以作为(甲基)丙烯酸酯共聚物的混合物 		<br />的形式存在。另外用于混合物的(甲基)丙烯酸酯共聚物应具有不超 		<br />过15重量％的阳离子或阴离子基团。若含有超过15重量％的阳离子或 		<br />阴离子基团，即烷基残基中的碱性基团或酸基团，则组分的彼此间的 		<br />相互作用会不期望地或者以几乎不可预见的方式受到影响。 		</p>
+      <p id="p-00057-zh" num="0057">在混合物的情形中，由经自由基聚合的单体单元构成的(甲基) 		<br />丙烯酸酯共聚物的份额为至少60、优选85至95重量％，每种情况下 		<br />都是以核重量计，且所述单体单元有93至98重量％由丙烯酸或甲基丙 		<br />烯酸的C<sub>1</sub>至C<sub>4</sub>-烷基酯组成且有7至2重量％由在烷基残基中具有季铵 		<br />基团的(甲基)丙烯酸酯单体组成(<img id="img-00005-zh" file="a200680055284d00111.tif" wi="108" he="17" img-content="drawing" img-format="tif" /> RS型)。混入的聚合 		<br />物的份额为不超过40重量％、优选5-15重量％，其中经混合的聚合物 		<br />的份额总和为100重量％。 		</p>
+      <p id="p-00058-zh" num="0058">对于混合物而言适合的(甲基)丙烯酸酯共聚物可以例如由经自 		<br />由基聚合的单体单元组成，且所述单体单元由85至小于93重量％的丙 		<br />烯酸或甲基丙烯酸的C<sub>1</sub>至C<sub>4</sub>-烷基酯和超过7至15重量％的在烷基残 		<br />基中具有季铵基团的(甲基)丙烯酸酯单体构成。这种(甲基)丙烯 		<br />酸酯共聚物是商业通用的并长久以来用于缓释性的包衣(<img id="img-00006-zh" file="a200680055284d00112.tif" wi="108" he="16" img-content="drawing" img-format="tif" />RL型)。混合物中的份额可以是不超过40重量％、优选5至15重量％。 		</p>
+      <p id="p-00059-zh" num="0059">对于混合物而言具体的合适的共聚物含有例如60重量％的甲基丙 		<br />烯酸甲酯、30重量％的丙烯酸乙酯和10重量％的2-甲基丙烯酰氧乙基 		<br />三甲基氯化铵(<img id="img-00007-zh" file="a200680055284d00113.tif" wi="107" he="16" img-content="drawing" img-format="tif" /> RL)。 		</p>
+      <p id="p-00060-zh" num="0060">对于混合物而言另一合适的(甲基)丙烯酸酯共聚物有95至100、 		<br />特别是超过95至100重量％由丙烯酸或甲基丙烯酸的C<sub>1</sub>至C<sub>4</sub>-烷基酯 		<br />组成和有不超过5重量％或0至5、特别是0至小于5重量％由丙烯酸 		<br />或甲基丙烯酸组成。这种(甲基)丙烯酸酯共聚物是商业通用的 		<br />(<img id="img-00008-zh" file="a200680055284d00114.tif" wi="108" he="16" img-content="drawing" img-format="tif" /> NE型)。 		</p>
+      <p id="p-00061-zh" num="0061">较外的包衣膜b)的(甲基)丙烯酸酯共聚物组分可以例如是由 		<br />以下组成的混合物： 		</p>
+      <p id="p-00062-zh" num="0062">60至99、优选85至95重量％的(甲基)丙烯酸酯共聚物，且其 		<br />有93至98重量％由丙烯酸或甲基丙烯酸的C<sub>1</sub>至C<sub>4</sub>-烷基酯组成和有2 		<br />至7重量％由在烷基残基中具有季铵基团的(甲基)丙烯酸酯单体组成， 		<br />和 		</p>
+      <p id="p-00063-zh" num="0063">1-40、优选5至15重量％的(甲基)丙烯酸酯共聚物，且其有85 		<br />至小于93重量％由丙烯酸或甲基丙烯酸的C<sub>1</sub>至C<sub>4</sub>-烷基酯构成和有超 		<br />过7至15重量％由在烷基残基中具有季铵基团的(甲基)丙烯酸酯单 		<br />体构成。 		</p>
+      <p id="p-00064-zh" num="0064">优选的丙烯酸或甲基丙烯酸的C<sub>1</sub>至C<sub>4</sub>-烷基酯是丙烯酸甲酯、丙 		<br />烯酸乙酯、丙烯酸丁酯、甲基丙烯酸丁酯和甲基丙烯酸甲酯。 		</p>
+      <p id="p-00065-zh" num="0065">作为具有季铵基团的(甲基)丙烯酸酯单体，特别优选2-甲基丙 		<br />烯酰氧乙基三甲基氯化铵。 		</p>
+      <p id="p-00066-zh" num="0066">(甲基)丙烯酸酯共聚物一般的制备过程 		</p>
+      <p id="p-00067-zh" num="0067">(甲基)丙烯酸酯共聚物可以本身已知的方式通过自由基的本体 		<br />聚合、溶液聚合、珠状聚合或乳液聚合而得到。它们可以例如作为经 		<br />挤出的颗粒、经研磨的粉末、作为溶液或分散液的形式而存在。 		</p>
+      <p id="p-00068-zh" num="0068">包衣 		</p>
+      <p id="p-00069-zh" num="0069">聚合物的施涂取决于核的大小和表面，取决于活性成分的溶解性 		<br />和取决于所追求的释放曲线。包衣的聚合物份额以核重量计可以是10 		<br />至200、优选15至100重量％。 		</p>
+      <p id="p-00070-zh" num="0070">所述包衣可以施涂为多层的或作为混合物施涂。聚合物的混合物 		<br />允许了调整释放曲线第二阶段内的特定的斜率。包衣中季铵基团的含 		<br />量调节渗透性并因此调节溶解的物质的扩散速率(McGinity，Ed.， 		<br />Aqueous Polymeric Coatings for Pharmaceutica lDosage Forms， 		<br />Marcel Dekker，Inc.，第4章，第208-216页)。亲水的季铵基团 		<br />的份额越高，则释放速率越快。对于释放曲线的第二阶段内的活性成 		<br />分释放性，如此地得到额外的控制途径。 		</p>
+      <p id="p-00071-zh" num="0071">额外的较外层 		</p>
+      <p id="p-00072-zh" num="0072">可以额外地用含有5-60重量％的甲基丙烯酸残基的(甲基)丙烯 		<br />酸酯共聚物包覆本发明的制剂。以此方式可以在制剂上设置耐受胃液 		<br />但是溶于肠液的包壳。 		</p>
+      <p id="p-00073-zh" num="0073">此外合适的是由40至60重量％的甲基丙烯酸和60至40重量％的 		<br />甲基丙烯酸甲酯或60至40重量％的丙烯酸乙酯构成的阴离子的(甲基) 		<br />丙烯酸酯共聚物(<img id="img-00009-zh" file="a200680055284d00121.tif" wi="108" he="16" img-content="drawing" img-format="tif" /> L或<img id="img-00010-zh" file="a200680055284d00122.tif" wi="108" he="16" img-content="drawing" img-format="tif" /> L 100-55型)。 		</p>
+      <p id="p-00074-zh" num="0074">
+        <img id="img-00011-zh" file="a200680055284d00123.tif" wi="109" he="17" img-content="drawing" img-format="tif" /> L是一种由50重量％的甲基丙烯酸甲酯和50重量％的 		<br />甲基丙烯酸构成的共聚物。 		</p>
+      <p id="p-00075-zh" num="0075">
+        <img id="img-00012-zh" file="a200680055284d00131.tif" wi="109" he="16" img-content="drawing" img-format="tif" /> L 100-55是一种由50重量％的丙烯酸乙酯和50重量％ 		<br />的甲基丙烯酸构成的共聚物。<img id="img-00013-zh" file="a200680055284d00132.tif" wi="107" he="16" img-content="drawing" img-format="tif" /> L 30D-55是含有30重量％ 		<br />的<img id="img-00014-zh" file="a200680055284d00133.tif" wi="109" he="16" img-content="drawing" img-format="tif" /> L 100-55的分散液。 		</p>
+      <p id="p-00076-zh" num="0076">同样合适的是由20至40重量％的甲基丙烯酸和80至60重量％的 		<br />甲基丙烯酸甲酯构成的阴离子的(甲基)丙烯酸酯共聚物(<img id="img-00015-zh" file="a200680055284d00134.tif" wi="107" he="16" img-content="drawing" img-format="tif" />S型)。 		</p>
+      <p id="p-00077-zh" num="0077">特别好的合适的是由10至30重量％的甲基丙烯酸甲酯、50至70 		<br />重量％的丙烯酸甲酯和5至15、优选8至12重量％的甲基丙烯酸组成 		<br />的(甲基)丙烯酸酯共聚物(<img id="img-00016-zh" file="a200680055284d00135.tif" wi="107" he="16" img-content="drawing" img-format="tif" /> FS型)。 		</p>
+      <p id="p-00078-zh" num="0078">
+        <img id="img-00017-zh" file="a200680055284d00136.tif" wi="109" he="16" img-content="drawing" img-format="tif" /> FS是一种由25重量％的甲基丙烯酸甲酯、65重量％的 		<br />丙烯酸甲酯和10重量％的甲基丙烯酸构成的共聚物。<img id="img-00018-zh" file="a200680055284d00137.tif" wi="107" he="20" img-content="drawing" img-format="tif" /> FS 30 		<br />D是含有30重量％的<img id="img-00019-zh" file="a200680055284d00138.tif" wi="108" he="16" img-content="drawing" img-format="tif" /> FS的分散液。 		</p>
+      <p id="p-00079-zh" num="0079">此外，适于本发明目的的是由如下组成的共聚物(参见 		<br />WO2003/072087)： 		</p>
+      <p id="p-00080-zh" num="0080">20至34重量％的甲基丙烯酸和/或丙烯酸， 		</p>
+      <p id="p-00081-zh" num="0081">20至69重量％的丙烯酸甲酯和 		</p>
+      <p id="p-00082-zh" num="0082">0至40重量％的丙烯酸乙酯和/或任选地 		</p>
+      <p id="p-00083-zh" num="0083">0至10重量％的其他乙烯基可共聚合的单体， 		</p>
+      <p id="p-00084-zh" num="0084">前提是，所述共聚物的根据ISO 11357-2，3.3.3点的玻璃化转变 		<br />温度为最高60℃。该(甲基)丙烯酸酯共聚物由于其良好的断裂伸长 		<br />性而特别适于将丸剂压制成片剂。 		</p>
+      <p id="p-00085-zh" num="0085">所述共聚物特别由以下的经自由基聚合的单元组成： 		</p>
+      <p id="p-00086-zh" num="0086">20至34、优选25至33、特别优选28至32重量％的甲基丙烯酸 		<br />或丙烯酸，优选是甲基丙烯酸， 		</p>
+      <p id="p-00087-zh" num="0087">20至69、优选35至65、特别优选35至55重量％的丙烯酸甲酯 		<br />和任选地 		</p>
+      <p id="p-00088-zh" num="0088">0至40、优选5至35、特别优选15至35重量％的丙烯酸乙酯， 		</p>
+      <p id="p-00089-zh" num="0089">前提是，所述共聚物的玻璃化转变温度(在残余单体含量(REMO) 		<br />为小于100ppm、加热率10℃/min、氮气氛下且在无添加软化剂的情况 		<br />下测量)根据ISO 11357-2，3.3.3点(T<sub>mg</sub>)，为最高60、优选40至 		<br />60、特别优选45至55℃。 		</p>
+      <p id="p-00090-zh" num="0090">所述共聚物优选基本上由至仅由单体甲基丙烯酸、丙烯酸甲酯和 		<br />丙烯酸乙酯按上述用量份额组成。 		</p>
+      <p id="p-00091-zh" num="0091">但是，可以不导致基本性能受到损害地，另外含有少量的在0至 		<br />10、例如1至5重量％范围内的其他乙烯基可共聚的单体，例如甲基丙 		<br />烯酸甲酯、甲基丙烯酸丁酯、丙烯酸丁酯或甲基丙烯酸羟乙酯。 		</p>
+      <p id="p-00092-zh" num="0092">为调整特定的释放曲线或释放位点，也可以使用所述共聚物的混 		<br />合物。 		</p>
+      <p id="p-00093-zh" num="0093">在此，对于玻璃化转变温度特别理解为是根据ISO 11357-2，3.3.3 		<br />点的中点温度T<sub>mg</sub>。在残余单体含量(REMO)为小于100ppm、加热率 		<br />10℃/min和氮气氛下且在无添加软化剂的情况下进行测量。 		</p>
+      <p id="p-00094-zh" num="0094">所述共聚物以本身已知的方式通过自由基的本体聚合、溶液聚合、 		<br />珠状聚合或乳液聚合得到。它们必须在加工之前通过合适的研磨、干 		<br />燥或喷雾工艺而达到本发明的粒径范围内。 		</p>
+      <p id="p-00095-zh" num="0095">这可通过简单地破碎经挤出和冷却的颗粒条或热切(Hei β 		<br />abschlag)而进行。 		</p>
+      <p id="p-00096-zh" num="0096">特别的，在与其他粉末或液体混合时，可以有利地使用粉末。合 		<br />适的制备粉末的设备是技术人员熟悉的例如射流式磨机、棒磨机、分 		<br />室磨机(<img id="img-00020-zh" file="a200680055284d0014105818qietu.tif" wi="156" he="27" img-content="drawing" img-format="tif" />)。任选地，可以引入相应的筛分步骤。用于 		<br />工业大批量的合适的研磨机是例如对流磨(Gegenstrahlmühle) 		<br />(Multi Nr.4200)，它们例如以约6bar的压力工作。 		</p>
+      <p id="p-00097-zh" num="0097">此外，适于本发明目的的是由以下组成的共聚物(参见 		<br />WO2004/096185)： 		</p>
+      <p id="p-00098-zh" num="0098">20至33重量％的甲基丙烯酸和/或丙烯酸， 		</p>
+      <p id="p-00099-zh" num="0099">5至30重量％的丙烯酸甲酯和 		</p>
+      <p id="p-00100-zh" num="0100">20至40重量％的丙烯酸乙酯和 		</p>
+      <p id="p-00101-zh" num="0101">大于10至30重量％的甲基丙烯酸丁酯和 		</p>
+      <p id="p-00102-zh" num="0102">任选地 		</p>
+      <p id="p-00103-zh" num="0103">0至10重量％的其他乙烯基可共聚的单体，且其中单体份额的总 		<br />和为100重量％， 		</p>
+      <p id="p-00104-zh" num="0104">前提是，共聚物的玻璃化转变温度(glass transition 		<br />temperature)根据ISO 11357-2，3.3.3点(中点温度T<sub>mg</sub>)，为55 		<br />至70℃。这种类型的共聚物由于其良好的机械性能而特别适于将丸剂 		<br />压制成片剂。 		</p>
+      <p id="p-00105-zh" num="0105">上述共聚物特别由以下的经自由基聚合的单元组成： 		</p>
+      <p id="p-00106-zh" num="0106">20至33、优选25至32、特别优选28至31重量％的甲基丙烯酸 		<br />或丙烯酸，优选是甲基丙烯酸， 		</p>
+      <p id="p-00107-zh" num="0107">5至30、优选10至28、特别优选15至25重量％的丙烯酸甲酯， 		</p>
+      <p id="p-00108-zh" num="0108">20至40、优选25至35、特别优选28至32重量％的丙烯酸乙酯， 		<br />以及 		</p>
+      <p id="p-00109-zh" num="0109">大于10至30、优选15至25、特别优选18至22重量％的甲基丙 		<br />烯酸丁酯， 		</p>
+      <p id="p-00110-zh" num="0110">其中，选择单体的组成，使得共聚物的玻璃化转变温度为55至 		<br />70℃、优选59至66、特别优选60至65℃。 		</p>
+      <p id="p-00111-zh" num="0111">为调整特定的释放曲线或释放位点，也可以使用所述共聚物的混 		<br />合物。 		</p>
+      <p id="p-00112-zh" num="0112">在此，对于玻璃化转变温度特别理解为是根据ISO 11357-2，3.3.3 		<br />点的中点温度T<sub>mg</sub>。在残余单体含量(REMO)为小于100ppm、加热率 		<br />10℃/min和氮气氛下且在无添加软化剂的情况下进行测量。 		</p>
+      <p id="p-00113-zh" num="0113">所述共聚物优选基本上至仅只地，有90、95或99至100重量％ 		<br />由单体甲基丙烯酸、丙烯酸甲酯、丙烯酸乙酯和甲基丙烯酸丁酯在上 		<br />述用量范围内组成。 		</p>
+      <p id="p-00114-zh" num="0114">但是，可以不必导致基本性能受到损害地，另外含有少量的在0 		<br />至10、例如1至5重量％范围内的其他乙烯基可共聚的单体，例如甲 		<br />基丙烯酸甲酯、丙烯酸丁酯、甲基丙烯酸羟乙酯、乙烯基吡咯烷酮、 		<br />乙烯基丙二酸、苯乙烯、乙烯醇、乙酸乙烯酯和/或它们的衍生物。 		</p>
+      <p id="p-00115-zh" num="0115">二氧化硅颗粒 		</p>
+      <p id="p-00116-zh" num="0116">包裹着核的包衣含有具有平均粒径在1至50μm范围内的二氧化硅 		<br />颗粒。存在于包衣中的二氧化硅颗粒也担负着作为抗粘附剂的功能。 		<br />在根据要求地将这种颗粒用于包衣中时，本发明的作用，特别是脉冲 		<br />阶段的缩短会自行调节到小于4小时。当使用其他平均粒径的SiO<sub>2</sub>颗 		<br />粒时或者当只是使用其他隔离剂，如滑石或甘油单硬脂酸酯(GMS)时， 		<br />似乎不会令人惊奇地出现本发明的有益效果(参见实施例)。 		</p>
+      <p id="p-00117-zh" num="0117">所述包衣含有具有平均粒径d50(可例如借助于激光衍射根据ISO 		<br />13320-1测得)在1至50、优选1至30、特别优选1至10μm范围内 		<br />的二氧化硅颗粒(SiO<sub>2</sub>-颗粒)。利用经沉淀和研磨的，例如根据溶胶 		<br />-凝胶法制得的SiO<sub>2</sub>获得最好的结果。根据德国药典，DAB1999，该 		<br />类型二氧化硅也称为Silicii dioxidium praecipitatum。优选的是 		<br />具有突出的药物品质或在纯度上符合DAB 1999要求的药物品质的天然 		<br />产品或二氧化硅颗粒。 		</p>
+      <p id="p-00118-zh" num="0118">不适于本发明目的的是Aerosil<img id="img-00021-zh" file="a200680055284d0016105924qietu.tif" wi="17" he="18" img-content="drawing" img-format="tif" />型的高分散的SiO<sub>2</sub>，其借助于燃 		<br />烧法制得并主要具有低于100nm范围内的平均粒径。但是后者可以非 		<br />重要地例如作为助剂用于核的配制中。 		</p>
+      <p id="p-00119-zh" num="0119">优选的二氧化硅颗粒的用量是5至50、特别优选10至40且特别 		<br />是10至30重量％的SiO<sub>2</sub>，以包衣中的(甲基)丙烯酸酯共聚物的干重 		<br />量计。 		</p>
+      <p id="p-00120-zh" num="0120">其他的药物常规助剂 		</p>
+      <p id="p-00121-zh" num="0121">核和/或包衣可以含有其他的药物常规助剂。 		</p>
+      <p id="p-00122-zh" num="0122">其他添加剂首先用作加工助剂并应保证可靠且可再现的制备方法 		<br />以及良好的长期存储稳定性。它们能够影响包衣的可渗透性，这任选 		<br />地可以被用作额外的控制参数。 		</p>
+      <p id="p-00123-zh" num="0123">核可以例如通过直接压制、挤出和随后的圆粒化、潮湿或干燥的 		<br />造粒或者直接的制丸(例如在盘上)或者通过将粉末粘结(粉末层覆) 		<br />到不含活性成分的球粒(球丸)或含活性成分的颗粒上而制得。除了 		<br />活性成分之外还含有的药物助剂可以是例如粘结剂如纤维素和它们的 		<br />衍生物、聚乙烯吡咯烷酮(PVP)、明胶、(甲基)丙烯酸酯、淀粉和 		<br />它们的衍生物或糖。 		</p>
+      <p id="p-00124-zh" num="0124">-软化剂： 		</p>
+      <p id="p-00125-zh" num="0125">软化剂可以特别地被包含于包衣中或者包衣的(甲基)丙烯酸酯 		<br />共聚物中。适合作为软化剂的物质一般具有100至20000的分子量且 		<br />在分子内含有一个或多个亲水基团，例如羟基基团、酯基团或铵基团。 		<br />通常其涉及在室温下是液态的酯：柠檬酸酯、邻苯二甲酸酯、癸二酸 		<br />酯或蓖麻油。合适的软化剂的实例是柠檬酸烷基酯，例如柠檬酸三乙 		<br />基酯，甘油酯，邻苯二甲酸烷基酯，癸二酸烷基酯，蔗糖酯，山梨聚 		<br />糖酯，癸二酸二乙酯，癸二酸二丁酯和聚乙二醇4000至20000。优选 		<br />的软化剂是柠檬酸三乙酯和乙酰柠檬酸三乙酯。 		</p>
+      <p id="p-00126-zh" num="0126">可以例如以包衣的聚合物或任选地多种聚合物计5至25重量％的 		<br />量含有软化剂。 		</p>
+      <p id="p-00127-zh" num="0127">-抗粘附剂： 		</p>
+      <p id="p-00128-zh" num="0128">存在于包衣中的二氧化硅颗粒也承担着作为抗粘附剂的功能。因 		<br />此，一般地且优选地，不需要和不含有其他的抗粘附剂。但是也不排 		<br />除可以额外使用其他的抗粘附剂。 		</p>
+      <p id="p-00129-zh" num="0129">可以将一般具有亲脂性的这些物质添加到喷雾悬浮液中去并避免 		<br />除了本发明所含的SiO<sub>2</sub>之外，在成膜期间核的团聚。可以使用例如滑 		<br />石或非离子的乳化剂如甘油单硬脂酸酯，其具有HLB值在3至8之间。 		<br />用量可以在以聚合物计的1至100重量％之间。但总是要注意，不出 		<br />现本发明所追求的释放曲线的损害。 		</p>
+      <p id="p-00130-zh" num="0130">-其他助剂 		</p>
+      <p id="p-00131-zh" num="0131">作为其他的药物常规助剂可以以本身已知的方式添加例如稳定 		<br />剂、着色剂、抗氧化剂、润湿剂、成孔剂、色素、光亮剂等。 		</p>
+      <p id="p-00132-zh" num="0132">膜包衣的施涂： 		</p>
+      <p id="p-00133-zh" num="0133">施涂方法借助于由有机溶液的喷涂，或者含水分散液通过熔融或 		<br />通过直接粉末施涂而进行。在此，对于该实施过程而言重要的是，形 		<br />成均匀无孔的包衣。 		</p>
+      <p id="p-00134-zh" num="0134">根据现有技术的施涂方法参见例如Bauer，Lehmann，Osterwald， 		<br />Rothgang，“<img id="img-00022-zh" file="a200680055284d0018105956qietu.tif" wi="123" he="30" img-content="drawing" img-format="tif" /> Arzneiformen”Wissenschftliche 		<br />Verlagsgesellschaft mbH Stuttgart，第七章，第165-196页。 		</p>
+      <p id="p-00135-zh" num="0135">对于应用而言，在药典中列举了相关性能，所要求的测试和说明。 		</p>
+      <p id="p-00136-zh" num="0136">详细内容参阅通行的教科书，例如： 		</p>
+      <p id="p-00137-zh" num="0137">-Voigt，R.(1984)：Lehrbuch der pharmazeutischen 		<br />Technologie；Verlag ChemieWeinheim-Beerfield Beach/Florida 		<br />-Basel. 		</p>
+      <p id="p-00138-zh" num="0138">-Sucker，H.，Fuchs，P.，Speiser，P.：Pharmazeutische 		<br />Technologie，Georg Thieme Verlag Stuttgart(1991)，特别是第 		<br />15和16章，第626-642页。 		</p>
+      <p id="p-00139-zh" num="0139">-Gennaro，A.，R.(Editor)，Remington’s Pharmaceutical 		<br />Sciences，Mack Publishing Co.，Easton Pennsylvania(1985)，第 		<br />88章，第1567-1573页。 		</p>
+      <p id="p-00140-zh" num="0140">-List，P.H.(1982)：Arzneiformenlehre，Wissenschaftliche 		<br />Verlagsgesellschaft mbH，Stuttgart. 		</p>
+      <p id="p-00141-zh" num="0141">活性成分(生物活性物质)： 		</p>
+      <p id="p-00142-zh" num="0142">本发明适合于具有在20℃下至少10g/l，优选至少30g/l，特别 		<br />优选至少50g/l，极其优选至少100g/l、200g/l、300g/l或400g/l 		<br />的水溶性的活性成分(根据标准方法的教导的水溶性，例如 		<br />Pharmeuropa-Technical Guide for the Elaborat ion of Monographs， 		<br />第3版(1999)，第IV章，附录IV，在强烈振荡下lmin，15min并在 		<br />20℃下保持于经纯化的水中(unter heftigem Schütteln fürlmin， 		<br />15 min stehen lassen bei 20℃ in gereinigtem Wasser))。对 		<br />于具有较小水溶性的活性成分，如茶碱，在其他情形下根据要求的配 		<br />制剂中似乎不会令人惊奇地出现本发明的有益作用。 		</p>
+      <p id="p-00143-zh" num="0143">在本发明意义中所用的药物是规定用在人体或动物体上或其内 		<br />的，用以 		</p>
+      <p id="p-00144-zh" num="0144">1.治愈、缓解、预防或鉴别疾病、病症(Leiden)、躯体损 		<br />伤或疾病引起的痛苦。 		</p>
+      <p id="p-00145-zh" num="0145">2.鉴别躯体的情况、状态或机能或者精神状态。 		</p>
+      <p id="p-00146-zh" num="0146">3.代替从人体或动物体产生的活性成分或体液。 		</p>
+      <p id="p-00147-zh" num="0147">4.抵抗、消除病原体、寄生虫或体外物质，或者使它们无害， 		<br />或者 		</p>
+      <p id="p-00148-zh" num="0148">5.影响躯体的情况、状态或机能或者精神状态。 		</p>
+      <p id="p-00149-zh" num="0149">常用的药物参阅参考书，例如Roten Liste或Merck Index。 		</p>
+      <p id="p-00150-zh" num="0150">根据本发明，可以采用在上述定义的意义内满足所期望的治疗作 		<br />用且具有足够的热稳定性的所有活性成分。 		</p>
+      <p id="p-00151-zh" num="0151">药物制剂可以例如含有任选地以药物学上所用的水溶性盐形式 		<br />的、具有20℃下水溶性为至少10g/l的一种或多种以下活性成分： 		</p>
+      <p id="p-00152-zh" num="0152">醋丁洛尔、阿米替林、阿立哌唑(Aripiprazol)、阿替洛尔、阿 		<br />托品、倍他洛尔、比索洛尔、Bupavacaine、Buproprion、仲丁比妥、 		<br />卡替洛尔、卡维地洛、头孢唑林、头孢噻肟、Chlorphenaramine、氯 		<br />丙嗪、克林霉素、可待因、地尔硫、二巯丙醇、苯海拉明、多巴胺、 		<br />多西拉敏、度洛西汀、Flexainid、氟西汀、氟奋乃静、氟西泮、庆 		<br />大霉素、肼屈嗪、氢化可的松、氢醌、莨菪碱、异烟肼、异丙肾上腺 		<br />素、卡那霉素、Labetolol、赖诺普利、美替洛尔、美西律、吗啡、纳 		<br />多洛尔、新霉素、去甲肾上腺素、去甲替林、昂丹司琼、氧烯洛尔、 		<br />羟甲唑啉、羟吗啡酮、帕罗西汀、喷布洛尔、去氧肾上腺素、吲哚洛 		<br />尔、泼尼松龙、伯氨喹、普萘洛尔、吡咯卡因、索他洛尔、磺胺嘧啶、 		<br />他莫昔芬、特布他林、噻吗洛尔、曲马朵、曲唑酮、三氟丙嗪、金霉 		<br />素、筒箭毒碱、文拉法辛和/或维拉帕米。优选，特别是药物学上所用 		<br />的水溶性盐形式的这些活性成分。 		</p>
+      <p id="p-00153-zh" num="0153">特别优选的用于本发明目的的活性成分是：去氧肾上腺素盐酸盐 		<br />和特布他林硫酸盐。 		</p>
+      <p id="p-00154-zh" num="0154">
+        <u>给药形式和其他方案</u>
+      </p>
+      <p id="p-00155-zh" num="0155">原则上，可以直接通过口服给药而使用所述的药物剂型。但是， 		<br />优选对于多粒剂型(多单元型制剂(Multi Unit Dosage Form))接 		<br />着进行其他的加工步骤： 		</p>
+      <p id="p-00156-zh" num="0156">根据本发明制得的、经包衣的药物剂型可以作为单剂量 		<br />(Einzeldosen)填装于明胶胶囊和囊包(药囊(Sachets))中或者 		<br />填装于具有计量装置的合适的多剂量(Mehrdosen-)容器中。以固体 		<br />形式或悬浮于液体中的形式摄入。 		</p>
+      <p id="p-00157-zh" num="0157">通过压制，由微粒(任选地在混入其他助剂之后)得到在摄入之 		<br />后分解并释放出缓释的亚单位的片剂。同样，在聚乙二醇或脂质中植 		<br />入团聚体以制备栓剂或阴道药物剂型也是可行的。 		</p>
+      <p id="p-00158-zh" num="0158">较外的包衣可以另外地再与现有技术中的其他包衣结合或用其包 		<br />覆。在这种特殊情况下，较外的包衣b)不是最外的包衣。适于此的 		<br />特别是(甲基)丙烯酸酯共聚物，其含有10至60重量％的甲基丙烯 		<br />酸残基并且其余由例如甲基丙烯酸甲酯和/或丙烯酸乙酯构成 		<br />(<img id="img-00023-zh" file="a200680055284d00201.tif" wi="108" he="16" img-content="drawing" img-format="tif" /> L或S型)。以此方式，与本发明的配制剂相结合地， 		<br />可以额外实现隔绝气味的性能或配制剂，以有针对地在结肠中释放。 		</p>
+      <p id="p-00159-zh" num="0159">用途 		</p>
+      <p id="p-00160-zh" num="0160">本发明的药物制剂或药物组合物可以用于制备用于在20℃下水溶 		<br />性为至少10g/l的活性成分的药物制剂或药物组合物或药物剂型，其 		<br />中，所述药物剂型具有有着迟滞阶段、脉冲阶段和释尽阶段的S形活 		<br />性成分释放特性，特征在于，根据欧洲药典在具有100Upm的桨法装置 		<br />(<img id="img-00024-zh" file="a200680055284d0020110329qietu.tif" wi="131" he="22" img-content="drawing" img-format="tif" />)中在pH为6.8的缓冲液中，在迟滞阶段期间活性成 		<br />分释放率为约10％和随后在脉冲阶段内的活性成分释放率为在小于4 		<br />小时内约进一步的80％。 		</p>
+      <p id="p-00161-zh" num="0161">根据USP的活性成分释放性参见特别是US P28-NF23，General 		<br />Chapter&lt;711&gt;，Dissolution，Apparatus 2(Paddle)，Method&lt;724&gt; 		<br />“Delayed Release(Enteric Coated)Articles-General General 		<br />Drug Release Standard”，Method B(100Upm，37℃)，但是根据 		<br />欧洲药典采用pH为6.8的缓冲液。 		</p>
+      <p id="p-00162-zh" num="0162">S形活性成分释放特性对于技术人员而言长久以来即公开于例如 		<br />EP-A 0463877、EP1117387B1和EP-A 0436370。 		</p>
+      <p id="p-00163-zh" num="0163">药物剂型 		</p>
+      <p id="p-00164-zh" num="0164">本发明的制剂适于以公知的方式制备药物剂型。可以例如以丸剂 		<br />形式得到所述制剂，其可以借助于药物学常规的助剂和以本身已知的 		<br />方式加工成多粒的药物剂型，特别是含丸剂的片剂、微片剂、胶囊、 		<br />药囊或可重构粉剂(<img id="img-00025-zh" file="a200680055284d0021110423qietu.tif" wi="155" he="26" img-content="drawing" img-format="tif" />)。 		</p>
+      <p id="p-00165-zh" num="0165">所述制剂可以优选从丸剂形式压制成例如片剂。 		</p>
+      <p id="p-00166-zh" num="0166">所述制剂可以例如特别也以丸剂或微片剂形式存在，其填装入明 		<br />胶胶囊中或者被其所包覆。 		</p>
+    </disclosure>
+    <mode-for-invention>
+      <p id="p-00167-zh" num="0167">实施例 		</p>
+      <p id="p-00168-zh" num="0168">
+        <u>所用的共聚物</u>
+      </p>
+      <p id="p-00169-zh" num="0169">
+        <u>共聚物1：</u>
+      </p>
+      <p id="p-00170-zh" num="0170">65重量％的甲基丙烯酸甲酯、30重量％的丙烯酸乙酯和5重量％ 		<br />的2-甲基丙烯酰氧乙基三甲基氯化铵(<img id="img-00026-zh" file="a200680055284d00211.tif" wi="109" he="16" img-content="drawing" img-format="tif" /> RS)。 		</p>
+      <p id="p-00171-zh" num="0171">
+        <u>共聚物2：</u>
+      </p>
+      <p id="p-00172-zh" num="0172">60重量％的甲基丙烯酸甲酯、30重量％的丙烯酸乙酯和10重量 		<br />％的2-甲基丙烯酰氧乙基三甲基氯化铵(<img id="img-00027-zh" file="a200680055284d00212.tif" wi="108" he="16" img-content="drawing" img-format="tif" /> RL)。 		</p>
+      <p id="p-00173-zh" num="0173">表1中的说明基于的是干物质。 		</p>
+      <p id="p-00174-zh" num="0174">
+        <u>活性成分的水溶性：</u>
+      </p>
+      <p id="p-00175-zh" num="0175">根据Pharmeuropa-Technical Guide for the Elaboration of 		<br />Monographs，第3版(1999)，第IV章，附录IV，在振荡15min情 		<br />况下，但是在20℃下。 		</p>
+      <p id="p-00176-zh" num="0176">茶碱：水溶性＝8.4g/l，20℃下 		</p>
+      <p id="p-00177-zh" num="0177">去氧肾上腺素盐酸盐：水溶性＝500g/l，20℃下 		</p>
+      <p id="p-00178-zh" num="0178">特布他林硫酸盐：水溶性＝500g/l，20℃下 		</p>
+      <p id="p-00179-zh" num="0179">
+        <img id="img-00028-zh" file="a200680055284d00231.tif" wi="665" he="1063" img-content="drawing" img-format="tif" />
+      </p>
+      <p id="p-00180-zh" num="0180">
+        <u>表2</u>：根据USP以[％]表示的在经缓冲的介质中活性成分的释放性 		</p>
+      <p id="p-00181-zh" num="0181">表2：根据USP以[％]表示的在经缓冲的介质中活性成分的释放性 		</p>
+      <p id="p-00182-zh" num="0182">实施例       1      2     3      4      5      6      7       8       9       10 		</p>
+      <p id="p-00183-zh" num="0183">时间，小时(h) 		</p>
+      <p id="p-00184-zh" num="0184">0           0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0      0.0     0.0 		</p>
+      <p id="p-00185-zh" num="0185">0.5                                            1.0    1.1    1.1 		</p>
+      <p id="p-00186-zh" num="0186">1           0.0    0.0    0.0    0.0           1.6    1.8    1.8 		</p>
+      <p id="p-00187-zh" num="0187">2           0.0    0.5    0.0    0.0    0.2    3.0    3.1    2.5      0.0     0.0 		</p>
+      <p id="p-00188-zh" num="0188">3           0.0    0.5    0.5    0.9                  9.7             0.2     0.5 		</p>
+      <p id="p-00189-zh" num="0189">3.5         3.6    2.2    7.2    3.3                                  0.8     7.2 		</p>
+      <p id="p-00190-zh" num="0190">4           7.3    12.0   28.1   6.3           10.1   17.4   11.7     14.3    32.3 		</p>
+      <p id="p-00191-zh" num="0191">4.5         11.2          52.2   8.9                                  25.1    58.1 		</p>
+      <p id="p-00192-zh" num="0192">5           17.0   60.2   68.5   3.8    14.0                 4        2.9     72.7 		</p>
+      <p id="p-00193-zh" num="0193">5.5         79.2                                                      55.7    83.0 		</p>
+      <p id="p-00194-zh" num="0194">6           52.7   87.3   84.1   11.7   39.0   37.9   51.8   42.8     65.1    89.1 		</p>
+      <p id="p-00195-zh" num="0195">7           78.6   93.6   91.2   34.9   68.2                          82.3    95.8 		</p>
+      <p id="p-00196-zh" num="0196">8           89.7   96.0   94.3   61.6   85.7   64.8   81.2   71.7     89.1 		</p>
+      <p id="p-00197-zh" num="0197">9           94.9   98.2   96.3   78.8   93.5                          92.8 		</p>
+      <p id="p-00198-zh" num="0198">10                               89.6          83.8   94.4   84.3 		</p>
+      <p id="p-00199-zh" num="0199">11                               95.0 		</p>
+      <p id="p-00200-zh" num="0200">12                               97.8          91.8   95.6   93.7 		</p>
+      <p id="p-00201-zh" num="0201">Lag[h]＇    4.0    4.0    3.5    6.0    4.5    4.0    3.5    4.0       4.03.5 		</p>
+      <p id="p-00202-zh" num="0202">Pulse[h]" 3.5    2.5    3.5    4.0    4.5    8.0    6.5    7.0      4.52.5 		</p>
+      <p id="p-00203-zh" num="0203">实施例1-3，10＝根据本发明的；实施例4至9＝对比实施例 		</p>
+      <p id="p-00204-zh" num="0204">
+        <u>*＝Lag[h]</u>：以小时说明迟滞阶段的时间，其中有最多至10％的活 		<br />性成分被释放 		</p>
+      <p id="p-00205-zh" num="0205">
+        <u>**＝Pulse[h]</u>：以小时说明脉冲阶段的时间，其中约有进一步的 		<br />80％的活性成分被释放。在本发明的实施例1，2，3和10中，脉冲阶段 		<br />缩短至小于4小时。 		</p>
+    </mode-for-invention>
+  </description>
+  <description id="descr_eng" lang="eng" format="machine translation" date-changed="20140111">
+    <technical-field>
+      <p id="p-00001-en" num="0001">Invention field </p>
+      <p id="p-00002-en" num="0002">The invention relates to to the good solubility in water with controlled of the active ingredient of a pharmaceutical composition active ingredient delivery field. </p>
+    </technical-field>
+    <background-art>
+      <p id="p-00003-en" num="0003">Background Art </p>
+      <p id="p-00004-en" num="0004">EP-A0463877 with delaying the release of the active ingredient of the pharmaceutical composition, the pharmaceutical active ingredient-containing core and of a single-layer coating film, the coating film contains a water-salt and water-insoluble by ethyl acrylate, methyl methacrylate and methacrylic acyloxy trimethyl ammonium chloride copolymer formed. The state can be, for example, salts of Ca-or mg-stearate. S-shaped release curve of the. </p>
+      <p id="p-00005-en" num="0005">EP-A0225085, EP-A0122077 and EP-A0123470 recorded in the organic acid in the application of nuclear medicine, the kernel in the organic solution is made of the different coating. Basically get S-shaped release properties. EP-A0436370 with delaying the release of the active ingredient of the pharmaceutical composition, the pharmaceutical active ingredient-containing nuclear mineral acid and coated with a coating film, the coating film by an aqueous spray applied and is a ethyl acrylate, methyl methacrylate and methacrylic acyloxy trimethyl ammonium chloride copolymer formed. Wherein the same S-shaped release curve. </p>
+      <p id="p-00006-en" num="0006">EP1117387B1 EP-A0436370 similar to a record of the system. </p>
+      <p id="p-00007-en" num="0007">Basic distinction lies in that the use of the organic acid salt form, in particular by this hysteresis stage can be advantageously affect the duration of the slope of the curve and S-shaped release. Mentioned as a possible of the processing additive, in particular by grinding of silicic acid and pore-forming agent. </p>
+    </background-art>
+    <disclosure>
+      <p id="p-00008-en" num="0008">Invention the task </p>
+      <p id="p-00009-en" num="0009">For many pharmaceutical preparation or active ingredient, is of therapeutic significance S-shaped release properties, having a delay of the initial stage of active ingredient delivery (hysteresis stage), the main release phase subsequently (pulse stage (Pulse-Phase)) and releases stage (Auslaufphase). Usually, the hysteresis stage should be carried out of the active ingredient delivery as low as possible, in the subsequent pulse stage as soon as possible should be to release the active ingredient. This purpose is partially through EP-A0436370 and EP1117387B1 to realize the technical teaching. In EP1117387B1 at first in the result of the sodium acetate to obtain good. However, there is a demand for improvements. The task of this invention is that, by the further improvement of EP-A0436370 and EP1117387B1 discloses S-shaped active ingredient release pharmaceutical preparation, in order to more close to the above-mentioned purpose. </p>
+      <p id="p-00010-en" num="0010">The pharmaceutical preparation containing the following components of the solution to: </p>
+      <p id="p-00011-en" num="0011">A) containing the active ingredients and organic acid and/or an organic acid salt nuclear </p>
+      <p id="p-00012-en" num="0012">B) wrapping the nuclear coating, which contains a is not more than 15 weight % of the cation or anion group of the (meth) acrylate copolymer of the polymer component, and it contains at least 60% of the weight of the if, states (meth) acrylate copolymer, the copolymer is composed of 93 to 98 weight % of the acrylic acid or methacrylic acid C <sub>1</sub> to C <sub>4</sub>-alkyl ester and 7 to 2 weight % in the alkyl residue with quaternary ammonium groups in the (meth) acrylic acid ester monomer by free-radical polymerization of the unit, </p>
+      <p id="p-00013-en" num="0013">Characterized in that </p>
+      <p id="p-00014-en" num="0014">The active ingredient has the 20 at least under [...] 10 g/l water-soluble and the coating having an average particle size of 1 to 50 the silica particles in the range of   m. </p>
+      <p id="p-00015-en" num="0015">Invention details </p>
+      <p id="p-00016-en" num="0016">Nuclear (a) </p>
+      <p id="p-00017-en" num="0017">In the simplest cases, nuclear may just by the active ingredient and organic acid and/or organic acid salt, usually its also contains carrier (Nonpareill) such as pellets, and pharmaceutical compounding chemicals such as highly-dispersed silicic acid or polyvinyl pyrrolidone (PVP). </p>
+      <p id="p-00018-en" num="0018">Nuclear (a) can, for example, consists in the following: </p>
+      <p id="p-00019-en" num="0019">With nuclear · weight, an amount to 97.5 to 2.5, preferably 80 to 5% by weight of the active ingredient </p>
+      <p id="p-00020-en" num="0020">With nuclear · weight, an amount is 2.5 to 97.5 weight, preferably 5 to 80, in particular 10 to 50 weight % of the organic acid and/or of one or more of the organic acid salt </p>
+      <p id="p-00021-en" num="0021">· Optionally, to nuclear weight, an amount for 0-95, preferably 10 to 50 weight % of the pharmaceutical agent </p>
+      <p id="p-00022-en" num="0022">· Optionally, the share of the weight occupies the nucleus 0 to 95, preferably 10 to 50 weight % of the carrier. </p>
+      <p id="p-00023-en" num="0023">The nuclear can be for example by direct pressing, extrusion and subsequent round granulation (Ausrundung), wet or dry granulation or direct pill (for example on the plate) or by bonding the powder (powder layers) of the nodules containing no active ingredient (ball) or active ingredient prepared by the particles. </p>
+      <p id="p-00024-en" num="0024">In addition to containing the active ingredient of the pharmaceutical agent can be, for example, adhesive such as cellulose and their derivatives, polyvinylpyrrolidone (PVP), gelatin, (meth) acrylic ester, starch and their derivatives or sugar. </p>
+      <p id="p-00025-en" num="0025">Nuclear can be uniform or have a layered structure, wherein the active ingredient preferably is present in the outer layer. Particularly preferred to make the organic acid and/or organic acid nucleation salty construction more outer layer. </p>
+      <p id="p-00026-en" num="0026">Organic acid </p>
+      <p id="p-00027-en" num="0027">The used organic acid must be toxicologists no danger of in and can be used for medicine. Preferred-type depending on the particular formulation. Preferably, the organic acid exists is, for example, citric acid, fumaric acid, formic acid, succinic acid, acetic acid, maleic acid, tartaric acid, glutaric acid or lactic acid. </p>
+      <p id="p-00028-en" num="0028">Especially suitable for the purpose of this invention is succinic acid. In principle, citric acid is also suitable, however, in the field of physiology roughly accord with the proportion of in the medium, did not obtain if the succinates of the release of the steep curve. Acetic acid will be adventitiously lead to stability problems, this may be in the agent of a storing process. Succinic acid in use this kind of problems so far is also not yet open. </p>
+      <p id="p-00029-en" num="0029">Acid type of active ingredient release control of the slope of the curve, in particular for S-shaped release curve. </p>
+      <p id="p-00030-en" num="0030">In the formulations of the present invention, the organic acid can be preferably used as a core of the presence of the outer layer, and is connected by adhesive. They can be sprayed by the solution or by adding an adhesive powder applied at the same time exerting the solution. </p>
+      <p id="p-00031-en" num="0031">However, in specific cases the following programme also is entirely reasonable, wherein the active ingredient is in the form of mix with organic acid or of applying the active layer applied between layer and a separation layer. Organic acid also can be finally is applied to a core, so as to make it form a relatively outer layer. </p>
+      <p id="p-00032-en" num="0032">occupies the nucleus share of the weight of the organic acid can be 2.5 weight % to 97.5% by weight, preferably 5 to 80 weight %, especially 10-50 weight %. </p>
+      <p id="p-00033-en" num="0033">Organic acid salt: </p>
+      <p id="p-00034-en" num="0034">With respect to the organic acid, preferably an organic acid salt. In most cases, compared with organic acid, when using salt forms of organic acid of the the hysteresis observed is relatively small stage of active ingredient release and subsequent rapid release of the active ingredient. </p>
+      <p id="p-00035-en" num="0035">The salt of organic acid used must be toxicologists no dangerous and can be used in medicine. Preferred is an alkali metal salt (ammonium, lithium, sodium, potassium). Preferred types depend on the specific formulation; however, in addition to the functionality of the invention but also to take into account the role of the ion pharmacology. Preferably organic weak acid salt, such as succinic acid, citric acid, fumaric acid, formic acid, acetic acid, maleic acid, tartaric acid, glutaric acid or lactic acid. </p>
+      <p id="p-00036-en" num="0036">Especially suitable for the purpose of this invention is the sodium of succinic acid. In principle, the sodium citrate is also suitable, however, in the field of physiology roughly accord with the proportion of in the medium, did not obtain if the d b of the release of the steep characteristic. Sodium acetate will be adventitiously lead to stability problems, this may be in the agent of a storing process. Sodium succinate in use this kind of problems so far is also not yet open. </p>
+      <p id="p-00037-en" num="0037">Acid type of active ingredient release control of the slope of the curve, in particular for S-shaped release curve. </p>
+      <p id="p-00038-en" num="0038">In the formulations of the present invention, the salt can be used as there is the outer layer of the core, and is connected by adhesive. They can be sprayed by the solution or by adding an adhesive powder applied at the same time exerting the solution. </p>
+      <p id="p-00039-en" num="0039">However, in specific cases the following programme also is entirely reasonable, that is, wherein the active ingredient is mixed with the salt form of the active layer or of applying and salt applied between a spacer layer. The organic acid salt can also be finally is applied to a core, so as to make it form a relatively outer layer. </p>
+      <p id="p-00040-en" num="0040">Organic acid salt of the share of nuclear weight can be accounted for is 2.5 weight % to 97.5% by weight, preferably 5 to 80 weight %, especially 10-50 weight %. </p>
+      <p id="p-00041-en" num="0041">Coating b) </p>
+      <p id="p-00042-en" num="0042">Coating b) is comprised of one or more (meth) acrylic ester copolymer, SiO <sub>2</sub> particles and optionally conventional pharmaceutical compounding chemicals, the conventional pharmaceutical compounding chemicals such as softening agent, pigment, wetting agent, such as release agent. The outer coating preferably is directly to nuclear, and in nuclear and coating film does not exist between the other layers. </p>
+      <p id="p-00043-en" num="0043">With the polymer component of the coating containing the SiO <sub>2</sub>-particles and optionally contain other auxiliary, such as softeners together and formed into a film through <img id="img-00001-en" file="a200680055284d00091.tif" wi="175" he="20" img-content="drawing" img-format="tif" />Coating or coating film. The coating or coating film to the whole of the existing in the nucleus of the organic acid and/or their salt a release control the active ingredient. </p>
+      <p id="p-00044-en" num="0044">Coating b) polymer component </p>
+      <p id="p-00045-en" num="0045">Coating b) polymer component contains at least 60% by weight, preferably 85 to 95 weight % of one or optionally a plurality of funded a free radical polymerization of the monomeric unit of the (meth) acrylic ester copolymer, the monomer unit has 93 to 98 weight % of the acrylic acid or methacrylic acid C <sub>1</sub> to C <sub>4</sub>-alkyl and has a 7 to 2% by weight of the alkyl residue with quaternary ammonium groups in the (meth) acrylic ester monomer composition( <img id="img-00002-en" file="a200680055284d00092.tif" wi="107" he="16" img-content="drawing" img-format="tif" /> RS-type). Optionally, polymer components of the coating can also be 100% a by the polymer type. </p>
+      <p id="p-00046-en" num="0046">The polymer of the coating can be preferably to share of nuclear weight of 10 to 200, preferably 20 to 100 weight %. </p>
+      <p id="p-00047-en" num="0047">The polymer of the coating to share coating idea should be at least 50 weight %. The coating may optionally only is formed by the (meth) acrylate copolymer and SiO <sub>2</sub> component. But usually, in addition to coating SiO <sub>2</sub> components also contain other pharmacologically conventional additives, such as softeners or pigment. </p>
+      <p id="p-00048-en" num="0048">The principle of this invention is based on the nuclear of the key component of the key components of the coating between the interaction of the envisaged. </p>
+      <p id="p-00049-en" num="0049">Surprisingly, the function of this invention will only appear in if, states on the active ingredient, that is, the active ingredient has at least 10 g/l, preferably at least 30 g/l, more preferably at least 100 g/l water-soluble. In order to ensure that this interaction, should enable the (meth) acrylate copolymer with at least 50 weight % in the structure of the coating, so as to achieve the desired interaction. This kind of (meth) acrylate copolymer is a commercial universal and has long been used for slow-releasing coating. They are in fact not water-soluble. They can be individually or with other (meth) acrylic ester copolymer mixed to use. </p>
+      <p id="p-00050-en" num="0050">In order to realize the S-shaped active ingredient release property, coating b) polymer component should be at least 60, preferably at least 85 weight % or 100% by weight of the copolymer-type( <img id="img-00003-en" file="a200680055284d00101.tif" wi="108" he="19" img-content="drawing" img-format="tif" />RS-type) composition. </p>
+      <p id="p-00051-en" num="0051">The preferred acrylic acid or methacrylic acid C <sub>1</sub> to C <sub>4</sub>-alkyl ester is methyl acrylate, ethyl acrylate, butyl acrylate, butyl methacrylate and methyl methacrylate. </p>
+      <p id="p-00052-en" num="0052">As a quaternary ammonium group of the (meth) acrylate monomer is particularly preferred is 2-methyl propylene methoxyethyl trimethyl ammonium chloride. </p>
+      <p id="p-00053-en" num="0053">The corresponding copolymer can be for example by 50-70 weight % of methyl methacrylate, 20-40 weight % of ethyl acrylate and 7-2 weight % of methacrylic methoxyethyl trimethyl ammonium chloride form. </p>
+      <p id="p-00054-en" num="0054">The preferred copolymer contains the 65 weight % of methyl methacrylate, 30% by weight of ethyl acrylate and 5% of the weight of the 2-methyl propylene methoxyethyl trimethyl ammonium chloride( <img id="img-00004-en" file="a200680055284d00102.tif" wi="108" he="17" img-content="drawing" img-format="tif" />RS). </p>
+      <p id="p-00055-en" num="0055">(Meth) acrylic ester copolymer of a mixture of </p>
+      <p id="p-00056-en" num="0056">Polymer components of the coating can also be used as (meth) acrylic ester copolymers exist in the form of a mixture. For mixtures of the (meth) acrylic ester copolymer should have no more than 15% of the weight of the cationic or anionic group. If it contains more than 15% of the weight of the cationic or anionic group, in the alkyl residue of the alkaline group or acid groups, then the component of the interaction between each other will not expect to or almost not affected predictable manner. </p>
+      <p id="p-00057-en" num="0057">In the case of the mixture, by free radical polymerization of monomer units of a (meth) acrylate copolymer is at least 60, preferably 85 to 95 weight %, each kind of circumstances by weight with nuclear, and the monomer unit has 93 to 98 weight % of the acrylic acid or methacrylic acid C <sub>1</sub> to C <sub>4</sub>-alkyl and has a 7 to 2% by weight of the alkyl residue with quaternary ammonium groups in the (meth) acrylic ester monomer composition( <img id="img-00005-en" file="a200680055284d00111.tif" wi="108" he="17" img-content="drawing" img-format="tif" /> RS-type). The share of the amount of the polymer is not more than 40 weight %, preferably 5-15 weight %, wherein the mixed polymer the share of the total of 100 weight %. </p>
+      <p id="p-00058-en" num="0058">The purposes for the mixture of suitable (meth) acrylate copolymer can, for example, by free-radical polymerization of the monomer unit, and the monomer unit is composed of 85 to less than 93 weight % of the acrylic acid or methacrylic acid C <sub>1</sub> to C <sub>4</sub>-alkyl ester and more than 7 to 15% by weight of the alkyl residue with quaternary ammonium groups in the (meth) acrylic ester monomer. This kind of (meth) acrylate copolymer is a commercial universal and for long sustained release coating( <img id="img-00006-en" file="a200680055284d00112.tif" wi="108" he="16" img-content="drawing" img-format="tif" />RL-type). Can be in the proportion of the mixture is not more than 40 weight %, preferably 5 to 15 weight %. </p>
+      <p id="p-00059-en" num="0059">For the purposes of specific suitable mixture of copolymer containing, for example, 60 weight % of methyl methacrylate, 30% by weight of ethyl acrylate and 10% of the weight of the 2-methyl propylene methoxyethyl trimethyl ammonium chloride( <img id="img-00007-en" file="a200680055284d00113.tif" wi="107" he="16" img-content="drawing" img-format="tif" /> RL). </p>
+      <p id="p-00060-en" num="0060">For the purposes of a suitable mixture of the other (meth) acrylate copolymer to have 95 to 100, especially more than 95 to 100 weight % of the acrylic acid or methacrylic acid C <sub>1</sub> to C <sub>4</sub>-alkyl ester composition and with not more than 5 weight % or 0 to 5, particularly 0 to less than 5 weight % of the acrylic acid or methacrylic acid. This kind of (meth) acrylate copolymer is a commercial universal( <img id="img-00008-en" file="a200680055284d00114.tif" wi="108" he="16" img-content="drawing" img-format="tif" /> NE-type). </p>
+      <p id="p-00061-en" num="0061">The outer coating film b) of the (meth) acrylic ester copolymer component may be, for example, a mixture of the following composition: </p>
+      <p id="p-00062-en" num="0062">60 to 99, preferably 85 to 95% of the weight of the (meth) acrylate copolymer, and a 93 to 98 weight % of the acrylic acid or methacrylic acid C <sub>1</sub> to C <sub>4</sub>-alkyl ester composition and with a 2 to 7% by weight of the alkyl residue with quaternary ammonium groups in the (meth) acrylic ester monomer composition, and </p>
+      <p id="p-00063-en" num="0063">1-40, preferably 5 to 15% of the weight of the (meth) acrylate copolymer, and a 85 to less than 93% by weight of acrylic acid or methacrylic acid C <sub>1</sub> to C <sub>4</sub>-alkyl ester composition and more than 7 to 15% by weight of the alkyl residue with quaternary ammonium groups in the (meth) acrylic ester monomer. </p>
+      <p id="p-00064-en" num="0064">The preferred acrylic acid or methacrylic acid C <sub>1</sub> to C <sub>4</sub>-alkyl ester is methyl acrylate, ethyl acrylate, butyl acrylate, butyl methacrylate and methyl methacrylate. </p>
+      <p id="p-00065-en" num="0065">As a quaternary ammonium group of the (meth) acrylic ester monomer, particularly preferred 2-methyl propylene methoxyethyl trimethyl ammonium chloride. </p>
+      <p id="p-00066-en" num="0066">(Meth) acrylic ester copolymer general process for the preparation of </p>
+      <p id="p-00067-en" num="0067">(Meth) acrylate copolymer can be a manner known per se by free radical bulk polymerization, solution polymerization, pearls obtained by polymerization or emulsion polymerization. They can, for example, as extruded particles, milled powder, as a solution or dispersion are in the form of. </p>
+      <p id="p-00068-en" num="0068">Coating </p>
+      <p id="p-00069-en" num="0069">Polymer depends on the application of nuclear size and surface, depends on the solubility of the active ingredient and depends on the pursuit of the release curve. The polymer of the coating with nuclear can be share by weight is 10 to 200, preferably 15 to 100 weight %. </p>
+      <p id="p-00070-en" num="0070">The coating can be applied to multi-layer or as a mixture is applied. A mixture of polymers allows the adjustment of the release curve of the 2nd stage specific slope. The content of the quaternary ammonium group in the coating regulating permeability and thereby adjusting diffusion rate of dissolved substances (McGinity, Ed. ,   Pharmaceutica Aqueous   Forms   Coatings   lDosage   for   Polymeric, Marcel   Dekker, Inc. , Paragraph 4 Chapter, section 208-216 page). Hydrophilic of the higher the share of the quaternary ammonium group, the faster the release rate. The release curve of the 2nd stage of the release of active ingredients, so additional control means. </p>
+      <p id="p-00071-en" num="0071">Additional relatively outer layer </p>
+      <p id="p-00072-en" num="0072">Can be used for additional 5-60 weight % methacrylic acid residues of the (meth) acrylate copolymer-coated preparation of this invention. In this way, it is possible to tolerate in preparation is arranged on the jacket of the gastric juice but soluble in intestinal fluid. </p>
+      <p id="p-00073-en" num="0073">In addition suitable is composed of 40 to 60 weight % of the methyl acrylic acid and 60 to 40 weight % of methyl methacrylate or 60 to 40 weight % of the anion of the acrylic acid ethyl ester of a (meth) acrylic ester copolymer( <img id="img-00009-en" file="a200680055284d00121.tif" wi="108" he="16" img-content="drawing" img-format="tif" /> L or <img id="img-00010-en" file="a200680055284d00122.tif" wi="108" he="16" img-content="drawing" img-format="tif" />  L   100-55-type). </p>
+      <p id="p-00074-en" num="0074">
+        <img id="img-00011-en" file="a200680055284d00123.tif" wi="109" he="17" img-content="drawing" img-format="tif" /> L is a 50 weight % of methyl methacrylate and 50 wt % of the copolymer of methacrylic acid. </p>
+      <p id="p-00075-en" num="0075">
+        <img id="img-00012-en" file="a200680055284d00131.tif" wi="109" he="16" img-content="drawing" img-format="tif" />  L   100-55 is a 50% by weight of ethyl acrylate and 50 weight % of a copolymer of a methacrylate. <img id="img-00013-en" file="a200680055284d00132.tif" wi="107" he="16" img-content="drawing" img-format="tif" />  L   30D-55 that contains 30% of the weight of the <img id="img-00014-en" file="a200680055284d00133.tif" wi="109" he="16" img-content="drawing" img-format="tif" />  L   100-55 dispersion. </p>
+      <p id="p-00076-en" num="0076">Likewise suitable is composed of a 20 to 40 weight % of the methyl acrylic acid and 80 to 60 weight % of methyl methacrylate to form anion of the (meth) acrylic ester copolymer( <img id="img-00015-en" file="a200680055284d00134.tif" wi="107" he="16" img-content="drawing" img-format="tif" />S-type). </p>
+      <p id="p-00077-en" num="0077">Particularly good proper is composed of 10 to 30 weight % of methyl methacrylate, 50 to 70 weight % of the methyl acrylate and 5 to 15, preferably 8 to 12 weight % of the methyl acrylate (meth) acrylic ester copolymer( <img id="img-00016-en" file="a200680055284d00135.tif" wi="107" he="16" img-content="drawing" img-format="tif" /> FS-type). </p>
+      <p id="p-00078-en" num="0078">
+        <img id="img-00017-en" file="a200680055284d00136.tif" wi="109" he="16" img-content="drawing" img-format="tif" />A   FS 25 weight % of methyl methacrylate, 65 weight % acrylic acid methyl ester and 10 weight % of the copolymer of methacrylic acid. <img id="img-00018-en" file="a200680055284d00137.tif" wi="107" he="20" img-content="drawing" img-format="tif" />  FS   30D that contains 30% of the weight of the <img id="img-00019-en" file="a200680055284d00138.tif" wi="108" he="16" img-content="drawing" img-format="tif" />Dispersion of   FS. </p>
+      <p id="p-00079-en" num="0079">Furthermore, suitable for the purpose of this invention the composition of the copolymer is formed by the following (refer to WO2003/072087): </p>
+      <p id="p-00080-en" num="0080">20 to 34 weight % of the methyl acrylic acid and/or acrylic acid, </p>
+      <p id="p-00081-en" num="0081">20 to 69 weight % acrylic acid methyl ester and </p>
+      <p id="p-00082-en" num="0082">0 to 40 weight % of ethyl acrylate and/or an optionally </p>
+      <p id="p-00083-en" num="0083">0 to 10 weight % of other vinyl can be co-polymerization of the monomer, </p>
+      <p id="p-00084-en" num="0084">On the premise that, according to ISO of said copolymer   11357-2, 3 . 3.3 point of the highest glass transition temperature of the 60 [...]. The (meth) acrylic ester copolymer because of its good breaking elongation and is especially suitable for the pill pressed into tablets. </p>
+      <p id="p-00085-en" num="0085">By the following special said copolymer by free radical polymerization of the unit: </p>
+      <p id="p-00086-en" num="0086">20 to 34, preferably 25 to 33, particularly preferably 28 to 32 weight % of the methyl acrylic acid or acrylic acid, is preferably a methyl acrylic acid, </p>
+      <p id="p-00087-en" num="0087">20 to 69, preferably 35 to 65, particularly preferably 35 to 55 weight % acrylic acid methyl ester and optionally </p>
+      <p id="p-00088-en" num="0088">0 to 40, preferably 5 to 35, particularly preferably 15 to 35 weight % of the acrylic acid ethyl ester, </p>
+      <p id="p-00089-en" num="0089">On the premise that, the glass transition temperature of the copolymer (the residual monomer content (REMO) is less than 100 PPM, heating 10 the [...] /min, nitrogen atmosphere and in the absence of added measure of the softening agent) according to ISO   11357-2, 3 . 3.3 point (T <sub>mg</sub>), as the highest 60, preferably 40 to 60, particularly preferably 45 to 55 the [...]. </p>
+      <p id="p-00090-en" num="0090">The copolymer is preferably substantially from only by the monomer methyl acrylic acid, methyl acrylate and ethyl acrylate which according to the above-mentioned consumption share. </p>
+      <p id="p-00091-en" num="0091">However, can not damage caused to basic, in addition, containing a small amount of in 0 to 10, for example 1 to 5 within the range of % of the weight of other vinyl copolymerizable monomer, such as methyl methacrylate, butyl methacrylate, butyl acrylate or methyl hea. </p>
+      <p id="p-00092-en" num="0092">To adjust the particular release curve or release site, can also be used a mixture of the copolymer. </p>
+      <p id="p-00093-en" num="0093">In this, the glass transition temperature according to ISO the special understood as   11357-2, 3 . 3.3 point the midpoint temperature T <sub>mg</sub>. The residual monomer content is less than (REMO) 100 PPM, heating the 10 [...] /min and nitrogen atmosphere without adding and the carries out the measurement of the softening agent. </p>
+      <p id="p-00094-en" num="0094">The copolymer a manner known per se by free radical bulk polymerization, solution polymerization, bead polymerization or emulsion polymerization. They must be before machining by suitable grinding, drying or spraying process and in the particle size range of the present invention. </p>
+      <p id="p-00095-en" num="0095">This can be by simply crushing by extrusion and cooling of hot or granule strip, (  βabschlag Hei). </p>
+      <p id="p-00096-en" num="0096">Special, and when mixing other powder or liquid, powder can advantageously be used. Preparing a powder of appropriate technical personnel familiar with the equipment is such as a jet mill, rod mill, compartment mill( <img id="img-00020-en" file="a200680055284d0014105818qietu.tif" wi="156" he="27" img-content="drawing" img-format="tif" />). Optionally, can be introduced in the corresponding screening step. For industrial large quantities of appropriate grinder is, for example, convection grinding (Gegenstrahlmühle) (  Nr. 4200 Multi), they for example by about 6bar the work pressure. </p>
+      <p id="p-00097-en" num="0097">Furthermore, suitable for the purpose of this invention is composed of the following copolymer (refer to WO2004/096185): </p>
+      <p id="p-00098-en" num="0098">20 to 33 weight % of the methyl acrylic acid and/or acrylic acid, </p>
+      <p id="p-00099-en" num="0099">5 to 30 weight % of the acrylic acid methyl ester and </p>
+      <p id="p-00100-en" num="0100">20 to 40 weight % of the acrylic acid ethyl ester </p>
+      <p id="p-00101-en" num="0101">More than 10 to 30 weight % of the methyl acrylic acid ding Zhihe</p>
+      <p id="p-00102-en" num="0102">Optionally </p>
+      <p id="p-00103-en" num="0103">0 to 10 weight % of other vinyl copolymerizable monomer, the sum of the monomer wherein the share to 100 weight %, </p>
+      <p id="p-00104-en" num="0104">On the premise that, the glass transition temperature of the copolymer (glass   transitiontemperature) according to ISO   11357-2, 3 . 3.3 point (midpoint temperature T <sub>mg</sub>), is 55 to 70 the [...]. This type of copolymer because of its good mechanical properties and is particularly suitable for the pill pressed into tablets. </p>
+      <p id="p-00105-en" num="0105">Especially by the following of the above-mentioned copolymer by free-radical polymerization of the unit: </p>
+      <p id="p-00106-en" num="0106">20 to 33, preferably 25 to 32, particularly preferably 28 to 31 weight % of the methyl acrylic acid or acrylic acid, is preferably a methyl acrylic acid, </p>
+      <p id="p-00107-en" num="0107">5 to 30, preferably 10 to 28, particularly preferably 15 to 25 weight % of the acrylic acid methyl ester, </p>
+      <p id="p-00108-en" num="0108">20 to 40, preferably 25 to 35, particularly preferably 28 to 32 weight % of ethyl acrylate, and </p>
+      <p id="p-00109-en" num="0109">More than 10 to 30, preferably 15 to 25, particularly preferably 18 to 22 weight % of the methyl acrylic acid n-butyl, </p>
+      <p id="p-00110-en" num="0110">Wherein the composition of the selected monomer, the copolymer a glass transition temperature of 55 to 70 the [...] , preferably 59 to 66, particularly preferably 60 to 65 the [...]. </p>
+      <p id="p-00111-en" num="0111">To adjust the particular release curve or release site, can also be used a mixture of the copolymer. </p>
+      <p id="p-00112-en" num="0112">In this, the glass transition temperature according to ISO the special understood as   11357-2, 3 . 3.3 point the midpoint temperature T <sub>mg</sub>. The residual monomer content is less than (REMO) 100 PPM, heating the 10 [...] /min and nitrogen atmosphere without adding and the carries out the measurement of the softening agent. </p>
+      <p id="p-00113-en" num="0113">The copolymer is preferably substantially to only to, a 90, 95 or 99 to 100 weight % of the monomer methyl acrylic acid, methyl acrylate, ethyl acrylate and butyl methacrylate in the above-mentioned dosage range. </p>
+      <p id="p-00114-en" num="0114">However, can not damage caused to basic, in addition, containing a small amount of in 0 to 10, for example 1 to 5 within the range of % of the weight of other vinyl copolymerizable monomer, such as methyl methacrylate, butyl acrylate, methyl hydroxyethyl acrylate, vinyl pyrrolidone, vinyl malonic acid, styrene, vinyl alcohol, vinyl acetate and/or their derivatives. </p>
+      <p id="p-00115-en" num="0115">Silica particles </p>
+      <p id="p-00116-en" num="0116">Nuclear wrapped containing the coating having an average particle size of 1 to 50 the silica particles in the range of   m. Silica particles present in the coating in as to assume also the function of the anti-adhesive. According to the demand in the this kind of particles is used for coating, the function of this invention, in particular the shortening of the pulse stage will be self-regulating to less than 4 hours. When an average particle size of the use of other SiO <sub>2</sub> particles or when the only use of other release agent, such as talc or mono stearate is (GMS), would not seem to be a surprisingly beneficial effect of the invention (refer to the embodiment). </p>
+      <p id="p-00117-en" num="0117">Said coating having an average particle size containing d50 (may be, for example, by means of laser diffraction according to ISO13320-1 measured) in the 1 to 50, preferably 1 to 30, particularly preferably 1 to 10 the silica particles in the range of   m (SiO <sub>2</sub>-particle). The precipitate and grinding, for example according to the sol-gel method SiO <sub>2</sub> obtain the best results. According to German pharmacopeia, DAB1999, the type of silicon dioxide is also called Silicii   praecipitatum   dioxidium. Is preferably provided with the outstanding pharmaceutical quality or the purity DAB   1999 pharmaceutical quality of the natural product or silica particles. </p>
+      <p id="p-00118-en" num="0118">Not suitable for the purpose of this invention is the Aerosil <img id="img-00021-en" file="a200680055284d0016105924qietu.tif" wi="17" he="18" img-content="drawing" img-format="tif" />-shaped high dispersing SiO <sub>2</sub>, by means of burning the same with and mainly to less than 100 nm of the average particle size within the range. However, the latter can be used as auxiliary agents such as non-important for preparation of the core. </p>
+      <p id="p-00119-en" num="0119">Preferably the amount of the silica particles is 5 to 50, particularly preferably 10 to 40, particularly 10 to 30% of the weight of SiO <sub>2</sub>, to the coating of (meth) acrylic ester copolymer dry weight gauge. </p>
+      <p id="p-00120-en" num="0120">Other drug conventional adjuvant </p>
+      <p id="p-00121-en" num="0121">Nuclear and/or coating can contain other pharmaceutical conventional adjuvant. </p>
+      <p id="p-00122-en" num="0122">Other additives should be first used as a processing aid and of ensuring the reliable and reproducible method for the preparation of long-term storage stability and good. They can influence the permeability of the coating, this optionally can be used as the additional control parameter. </p>
+      <p id="p-00123-en" num="0123">Nuclear can be for example by direct pressing, extrusion and subsequent round granulation, wet or dry granulation or direct pill (for example on the plate) or by bonding the powder (powder layers) of the nodules containing no active ingredient (ball) or active ingredient prepared by the particles. In addition to containing the active ingredient of the pharmaceutical agent can be, for example, adhesive such as cellulose and their derivatives, polyvinylpyrrolidone (PVP), gelatin, (meth) acrylic ester, starch and their derivatives or sugar. </p>
+      <p id="p-00124-en" num="0124">-Softener: </p>
+      <p id="p-00125-en" num="0125">Softeners can be specifically is comprised in the coating or coating of the (meth) acrylic ester in the copolymer. Suitable substances generally have as a softener 100 to 20000 and in the molecular weight of the molecule containing one or more of hydrophilic groups, for example hydroxyl groups, ester groups or ammonium group. Usually it relates to ester is a liquid at room temperature: citrate esters, phthalic acid esters, sebate or castor oil. Suitable softeners examples of alkyl ester is citric acid, such as citric acid triethyl ester, glyceride, phthalic acid alkyl ester, decanedioic acid alkyl ester, sucrose ester, yamanashi gathers the sugar ester , sebacic acid diethyl ester , dibutyl sebacate and polyethylene glycol 4000 to 20000. Preferred softening agent is acetyl triethyl citrate citric acid triethyl ester. </p>
+      <p id="p-00126-en" num="0126">For example, in the polymer of the coating can be or optionally more polymer meter 5 to 25 weight % containing the amount of the softening agent. </p>
+      <p id="p-00127-en" num="0127">-Anti-adhesion agent: </p>
+      <p id="p-00128-en" num="0128">In silica particles in the coating as an anti-adhesive to assume also the function of the. Therefore, general and preferably, does not need and contains no other anti-adherent. However, it is also not exclude the possibility of additional use of other anti-adherent. </p>
+      <p id="p-00129-en" num="0129">Generally has a lipophilic can be added to these substances in spray suspension and to avoid of the invention, in addition to the containing SiO <sub>2</sub> outside, nuclear the agglomeration of the film-forming period. Can use such as talc or non-ionic emulsifier such as mono stearate, having a HLB value in the 3 to 8 between. The polymer can be in the amount of 1 to 100 between weight %. However, always necessary to pay attention to, the present invention does not occur the release of the damage of the curve. </p>
+      <p id="p-00130-en" num="0130">-Other auxiliary agent </p>
+      <p id="p-00131-en" num="0131">As other drugs to conventional additive can be added a manner known per se, for example, stabilizer, colorant, antioxidant, wetting agent, pore-forming agent, pigment, brightener, and the like. </p>
+      <p id="p-00132-en" num="0132">Film coating application: </p>
+      <p id="p-00133-en" num="0133">By means of methods of applying the coating of the organic solution, or by melt aqueous dispersion or by direct powder is applied and carry on. In this, for the purposes of the implementation of the process is important, the coating is uniform and has no hole is formed. </p>
+      <p id="p-00134-en" num="0134">According to the prior art method of applying refer to, for example, Bauer, Lehmann, Osterwald, Rothgang, " <img id="img-00022-en" file="a200680055284d0018105956qietu.tif" wi="123" he="30" img-content="drawing" img-format="tif" />  Arzneiformen "   Stuttgart   mbH WissenschftlicheVerlagsgesellschaft, Chapter 7th, paragraph 165-196 page. </p>
+      <p id="p-00135-en" num="0135">The purposes of the application, listed in the Pharmacopoeia the related performance, the required test and annotations. </p>
+      <p id="p-00136-en" num="0136">Textbook of a detailed content refer to, for example: </p>
+      <p id="p-00137-en" num="0137">-Voigt, R. (1984):   pharmazeutischenTechnologie Lehrbuch   der;   Beach/Florida-Basel   ChemieWeinheim-Beerfield Verlag. </p>
+      <p id="p-00138-en" num="0138">-Sucker, H. , Fuchs, P. , Speiser, P. : PharmazeutischeTechnologie, Georg   Thieme   Verlag   Stuttgart (1991), in particular paragraph 15 and 16 Chapter, section 626-642 page. </p>
+      <p id="p-00139-en" num="0139">-Gennaro, A. , R. (Editor), Remington '   PharmaceuticalSciences s,   Co Mack   Publishing. , Easton   Pennsylvania (1985), section 88 Chapter, section 1567-1573 page. </p>
+      <p id="p-00140-en" num="0140">-List, P.H. (1982): Arzneiformenlehre,   mbH WissenschaftlicheVerlagsgesellschaft, Stuttgart. </p>
+      <p id="p-00141-en" num="0141">Active ingredient (biological active substance): </p>
+      <p id="p-00142-en" num="0142">The invention is suitable for the the 20 at least under [...] 10 g/l, preferably at least 30 g/l, particularly preferably at least 50 g/l, extremely preferably at least 100 g/l, 200 g/l, 300 g/l or 400 g/l water-soluble active ingredient (according to the standard method of the training of a water-soluble, such as Pharmeuropa-Technical   Guide   for   the   Elaborat   ion   of   Monographs, paragraph 3 Edition (1999), section IV Chapter, appendix IV, in strongly oscillating lower lmin, 15 min and in the 20 the [...] lower in the purified water (unter   heftigem   Schütteln   fürlmin, 15   min   stehen   lassen   bei   20 the   gereinigtem   in   Wasser [...])). For having relatively small water-soluble active ingredient, such as theophylline, in other cases in the formulations according to the requirements will not be seem to be a surprisingly beneficial effect of the present invention. </p>
+      <p id="p-00143-en" num="0143">In the present invention used in the significance of the medicine is required in the human or animal body or, in order to </p>
+      <p id="p-00144-en" num="0144">1. Cure, alleviate, prevent or for identifying disease, disorders (Leiden), body pain caused by injury or disease. </p>
+      <p id="p-00145-en" num="0145">2. The body of identification, state or function or mental state. </p>
+      <p id="p-00146-en" num="0146">3. The human or animal body to produce the active ingredient or body fluid. </p>
+      <p id="p-00147-en" num="0147">4. Resistance, eliminate pathogen, parasite or in vitro material, or make them harmless, or </p>
+      <p id="p-00148-en" num="0148">5. The body of the affected, state or function or mental state. </p>
+      <p id="p-00149-en" num="0149">Commonly used drug refer to reference books,   Index Roten   Liste or the Merck, for example. </p>
+      <p id="p-00150-en" num="0150">According to the present invention, can be made within the meaning of the above definition of the treatment of meet the desired function and has sufficient thermal stability of all of the active ingredient. </p>
+      <p id="p-00151-en" num="0151">Containing, for example, pharmaceutical preparations may be pharmacologically optionally in the form of a water-soluble salt, with 20 the water-soluble under [...] is at least 10 g/l of one or more of the following active ingredients: </p>
+      <p id="p-00152-en" num="0152">Acebutolol, amitriptylin, abilify (Aripiprazol), atenolol, atropine, times he lothair, bisolol, Bupavacaine, Buproprion, secbutabarbital, card for Luo river , carvedilol, Cefazolin, [...] , Chlorphenaramine, chlorpromazine, clindamycin, codeine, diltiazem, [...] propanol, diphenhydramine, dopamine, multiple west pulls sensitively , duloxetine, Flexainid, fluxetine, the fluorine exerts is static , chlordiazepoxide, gentamicin, Hydralazine, hydrocortisone sodium succinate, hydroquinone, hyoscyamine, retozide, isopropyl adrenergic, Kanamycin, Labetolol, lisinopril, uS for Luo river , west US law , morphine, nadolol, neomycin, norepinephrine, goes to the armor for the forest , the use of ondansetron, oxygen alkene Luo river , oxymetazoline, hydroxy morphine alkone , paroxetine, spurts Blower , phenylephrine, pindolol, prednisolone, [...] , propranolol, pyrrocaine, cable he lothair, sdz, tamoxifen, terbutaline, timolol, tramadol, trazodone, [...] , aureomycin, tube curarine , vanlafaxine and/or verapamile. Preferably, pharmaceutically, in particular the water-soluble salt forms of the active ingredients. </p>
+      <p id="p-00153-en" num="0153">Particularly preferred for the purpose of this invention the active ingredient is: phenylephrine hydrochloride and TEB he forest sulfate. </p>
+      <p id="p-00154-en" num="0154">
+        <u>Administration forms and other programmes</u>
+      </p>
+      <p id="p-00155-en" num="0155">In principle, can be used directly by the oral administration of the pharmaceutical dosage form. However, preferably to precious dosage form (multi-type preparation (  Form   Dosage   Unit Multi)) then to carry out other processing steps: </p>
+      <p id="p-00156-en" num="0156">The manufactured according to the invention, the pharmaceutical dosage form of the coating can be used as a single dose (Einzeldosen) is filled into the gelatin capsule (capsule (Sachets)) and the inflating is in having metering device or the appropriate multi-dose (Mehrdosen-) in the container. Or in solid form in the form of suspended in a liquid intake. </p>
+      <p id="p-00157-en" num="0157">By pressing, by the particle (optionally after the mix in other assistant) to decompose and release of the intake after the tablets sustained release sub-units. Similarly, in the polyethylene glycol or lipid implanted in the vaginal suppository or preparing agglomerated quantity of the pharmaceutical dosage form is also feasible. </p>
+      <p id="p-00158-en" num="0158">The outer coating can be in addition to the other in the prior art for combining or coated with the same coating. In this kind of special circumstances, the outer coating b) is not the most outer coating. Suitable for this purpose, in particular of the (meth) acrylic ester copolymer, which contains 10 to 60 weight % of the methyl acrylic acid residues and the other is made of, for example, methyl methacrylate and/or acrylic acid ethyl ester to form( <img id="img-00023-en" file="a200680055284d00201.tif" wi="108" he="16" img-content="drawing" img-format="tif" /> L or S-type). In this way, with the formulation of this invention-phase combine alone, the smell can be additional realize performance or formulation, in order to have to release in the colon. </p>
+      <p id="p-00159-en" num="0159">Use </p>
+      <p id="p-00160-en" num="0160">The pharmaceutical preparation of the invention can be used for preparing or pharmaceutical compositions used for the 20 the water-soluble under [...] is at least 10 g/l the pharmaceutical preparation of the active ingredient or pharmaceutical composition or pharmaceutical dosage form, wherein the pharmaceutical dosage form having a hysteresis stage, the stage pulse stage and releases S-shaped active ingredient release property, is characterized in that, in accordance with the European Pharmacopoeia 100Upm oar law device of( <img id="img-00024-en" file="a200680055284d0020110329qietu.tif" wi="131" he="22" img-content="drawing" img-format="tif" />) In a pH 6.8 buffer, of the active ingredient during the hysteresis stage release rate is about 10% in the pulse and the subsequent stage in the release rate of the active ingredient is less than 4 hours of further about 80%. </p>
+      <p id="p-00161-en" num="0161">According to USP active ingredient delivery refer to in particular the US   P28-NF23, GeneralChapter &lt;711&gt;, Dissolution, Apparatus   2 (Paddle), Method &lt;724&gt;"Delayed   Release (Enteric   Coated)   Standard   Release   GeneralDrug Articles-General",   B Method (100Upm, 37 °C), however, according to the European Pharmacopoeia the to pH 6.8 buffer. </p>
+      <p id="p-00162-en" num="0162">S-shaped active ingredient release characteristic for technical personnel, for example, that the public long EP-A   0463877, EP1117387B1 and EP-A   0436370. </p>
+      <p id="p-00163-en" num="0163">Pharmaceutical dosage forms </p>
+      <p id="p-00164-en" num="0164">The preparation of this invention is adapted to the well-known manner of manufacture of a pharmaceutical dosage form. Pill form can be for example, in the preparation, it can be with the aid of conventional compounding chemicals and pharmacology a manner known per se a pharmaceutical dosage form for processing, in particular tablets containing pill, micro tablet , capsule, or powder can be reconstructed( <img id="img-00025-en" file="a200680055284d0021110423qietu.tif" wi="155" he="26" img-content="drawing" img-format="tif" />). </p>
+      <p id="p-00165-en" num="0165">Preferably the formulations may be pressed into from the pill form such as tablet. </p>
+      <p id="p-00166-en" num="0166">The formulation can, for example, the special also exists to pill or micro tablet , in its filled into a gelatin capsule or is coated by the same. </p>
+    </disclosure>
+    <mode-for-invention>
+      <p id="p-00167-en" num="0167">Embodiment </p>
+      <p id="p-00168-en" num="0168">
+        <u>The copolymer for</u>
+      </p>
+      <p id="p-00169-en" num="0169">
+        <u>Copolymer 1 :</u>
+      </p>
+      <p id="p-00170-en" num="0170">65 weight % of methyl methacrylate, 30% by weight of ethyl acrylate and 5% of the weight of the 2-methyl propylene methoxyethyl trimethyl ammonium chloride( <img id="img-00026-en" file="a200680055284d00211.tif" wi="109" he="16" img-content="drawing" img-format="tif" /> RS). </p>
+      <p id="p-00171-en" num="0171">
+        <u>Copolymer 2 :</u>
+      </p>
+      <p id="p-00172-en" num="0172">60 weight % of methyl methacrylate, 30% by weight of ethyl acrylate and 10% of the weight of the 2-methyl propylene methoxyethyl trimethyl ammonium chloride( <img id="img-00027-en" file="a200680055284d00212.tif" wi="108" he="16" img-content="drawing" img-format="tif" /> RL). </p>
+      <p id="p-00173-en" num="0173">Table 1 is based on a description in the dry material. </p>
+      <p id="p-00174-en" num="0174">
+        <u>Water-soluble active ingredient:</u>
+      </p>
+      <p id="p-00175-en" num="0175"> Elaboration according to   the   for   Guide   ofMonographs Pharmeuropa-Technical, paragraph 3 Edition (1999), Chapter section IV, appendix IV, the oscillation 15 min circumstances, however, in the 20 under [...]. </p>
+      <p id="p-00176-en" num="0176">Theophylline: water-soluble = 8.4 g/l, under 20 °C </p>
+      <p id="p-00177-en" num="0177">Phenylephrine hydrochloride: water-soluble = 500 g/l, under 20 °C </p>
+      <p id="p-00178-en" num="0178">TEB he forest sulfate : water-soluble = 500 g/l, under 20 °C </p>
+      <p id="p-00179-en" num="0179">
+        <img id="img-00028-en" file="a200680055284d00231.tif" wi="665" he="1063" img-content="drawing" img-format="tif" />
+      </p>
+      <p id="p-00180-en" num="0180">
+        <u>Table 2 :</u> in accordance with USP [%] expressed by the buffer medium of the in release of the active ingredient </p>
+      <p id="p-00181-en" num="0181">Table 2:in accordance with USP [%] expressed by the buffer medium of the in release of the active ingredient </p>
+      <p id="p-00182-en" num="0182">Embodiment   1     2     3     4     5     6     7     8     9     10 </p>
+      <p id="p-00183-en" num="0183">Time, hours (h) </p>
+      <p id="p-00184-en" num="0184">0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0     0.0 </p>
+      <p id="p-00185-en" num="0185">0.5     1.0     1.1     1.1 </p>
+      <p id="p-00186-en" num="0186">1     0.0     0.0     0.0     0.0     1.6     1.8     1.8 </p>
+      <p id="p-00187-en" num="0187">2     0.0     0.5     0.0     0.0     0.2     3.0     3.1     2.5     0.0     0.0 </p>
+      <p id="p-00188-en" num="0188">3     0.0     0.5     0.5     0.9     9.7     0.2     0.5 </p>
+      <p id="p-00189-en" num="0189">3.5     3.6     2.2     7.2     3.3     0.8     7.2 </p>
+      <p id="p-00190-en" num="0190">4     7.3     12.0     28.1     6.3     10.1     17.4     11.7     14.3     32.3 </p>
+      <p id="p-00191-en" num="0191">4.5     11.2     52.2     8.9     25.1     58.1 </p>
+      <p id="p-00192-en" num="0192">5     17.0     60.2     68.5     3.8     14.0     4     2.9     72.7 </p>
+      <p id="p-00193-en" num="0193">5.5     79.2     55.7     83.0 </p>
+      <p id="p-00194-en" num="0194">6     52.7     87.3     84.1     11.7     39.0     37.9     51.8     42.8     65.1     89.1 </p>
+      <p id="p-00195-en" num="0195">7     78.6     93.6     91.2     34.9     68.2     82.3     95.8 </p>
+      <p id="p-00196-en" num="0196">8     89.7     96.0     94.3     61.6     85.7     64.8     81.2     71.7     89.1 </p>
+      <p id="p-00197-en" num="0197">9     94.9     98.2     96.3     78.8     93.5     92.8 </p>
+      <p id="p-00198-en" num="0198">10     89.6     83.8     94.4     84.3 </p>
+      <p id="p-00199-en" num="0199">11     95.0 </p>
+      <p id="p-00200-en" num="0200">12     97.8     91.8     95.6     93.7 </p>
+      <p id="p-00201-en" num="0201">Lag[h]'   4.0     4.0     3.5     6.0     4.5     4.0     3.5     4.0     4.03.5 </p>
+      <p id="p-00202-en" num="0202">Pulse[h]"   3.5     2.5     3.5     4.0     4.5     8.0     6.5     7.0     4.52.5 </p>
+      <p id="p-00203-en" num="0203">Embodiment 1-3, 10 = according to this invention; embodiment 4 to 9 = comparatives embodiment </p>
+      <p id="p-00204-en" num="0204">
+        <u>* = Lag[h]:</u> in hours note hysteresis stage of the time, wherein the most up to 10% active ingredient released </p>
+      <p id="p-00205-en" num="0205">
+        <u>**= Pulse[h]:</u> in hours by the time of the pulse stage, some further 80% of the active ingredient is released. In the embodiment of the invention is 1, 2, 3 and 10 in, pulse stage shortened to less than 4 hours. </p>
+    </mode-for-invention>
+  </description>
+  <claims id="claims_01_xml_chi" lang="chi" format="original" date-changed="20140111">
+    <claim num="1">
+      <claim-text>1、药物制剂，其含有
+			</claim-text>
+      <claim-text>a)含有活性成分和有机酸和/或有机酸的盐的核
+			</claim-text>
+      <claim-text>b)包裹核的包衣，其含有由具有不超过15重量％的阳离子或阴
+			<br />离子基团的(甲基)丙烯酸酯共聚物组成的聚合物组分，并且其含有
+			<br />至少60重量％的如后所述的(甲基)丙烯酸酯共聚物，即该共聚物由
+			<br />93至98重量％丙烯酸或甲基丙烯酸的C<sub>1</sub>至C<sub>4</sub>-烷基酯和7至2重量％
+			<br />在烷基残基中具有季铵基团的(甲基)丙烯酸酯单体的经自由基聚合
+			<br />的单元组成，
+			</claim-text>
+      <claim-text>其特征在于，
+			</claim-text>
+      <claim-text>所述活性成分具有20℃下至少10g/l的水溶性和所述包衣含有平
+			<br />均粒径在1至50μm范围内的二氧化硅颗粒。
+			</claim-text>
+    </claim>
+    <claim num="2">
+      <claim-text>2、如权利要求1所述的制剂，其特征在于，包衣的聚合物组分
+			<br />是由以下组成的混合物：
+			</claim-text>
+      <claim-text>60至99重量％的(甲基)丙烯酸酯共聚物，且其的93至98重量
+			<br />％由丙烯酸或甲基丙烯酸的C<sub>1</sub>至C<sub>4</sub>-烷基酯构成和其的7至2重量％由
+			<br />在烷基残基中具有季铵基团的(甲基)丙烯酸酯单体构成，和
+			</claim-text>
+      <claim-text>1-40重量％的(甲基)丙烯酸酯共聚物，且其的85至小于93重
+			<br />量％由丙烯酸或甲基丙烯酸的C<sub>1</sub>至C<sub>4</sub>-烷基酯构成和其的超过7至15
+			<br />重量％由在烷基残基中具有季铵基团的(甲基)丙烯酸酯单体构成。
+			</claim-text>
+    </claim>
+    <claim num="3">
+      <claim-text>3、如权利要求1所述的制剂，其特征在于，包衣b)的聚合物
+			<br />组分是由以下组成的混合物：
+			</claim-text>
+      <claim-text>60至99重量％的(甲基)丙烯酸酯共聚物，且其的93至98重量
+			<br />％由丙烯酸或甲基丙烯酸的C<sub>1</sub>至C<sub>4</sub>-烷基酯组成和其的7至2重量％由
+			<br />在烷基残基中具有季铵基团的(甲基)丙烯酸酯单体组成，和
+			</claim-text>
+      <claim-text>1-40重量％的(甲基)丙烯酸酯共聚物，且其有95至100重量％
+			<br />由丙烯酸或甲基丙烯酸的C<sub>1</sub>至C<sub>4</sub>-烷基酯和有0至5重量％由丙烯酸或
+			<br />甲基丙烯酸构成。
+			</claim-text>
+    </claim>
+    <claim num="4">
+      <claim-text>4、如权利要求1至3中一项或多项所述的制剂，其特征在于，
+			<br />在(甲基)丙烯酸酯共聚物中含有甲基丙烯酰氧乙基三甲基氯化铵作
+			<br />为在烷基残基中具有季铵基团的(甲基)丙烯酸酯单体。
+			</claim-text>
+    </claim>
+    <claim num="5">
+      <claim-text>5、如权利要求1至4中一项或多项所述的制剂，其特征在于，
+			<br />所述的核和/或包衣含有其他的药物常规助剂。
+			</claim-text>
+    </claim>
+    <claim num="6">
+      <claim-text>6、如权利要求1至5中一项或多项所述的制剂，其特征在于，
+			<br />包衣的聚合物份额以核重量计为10至200重量％。
+			</claim-text>
+    </claim>
+    <claim num="7">
+      <claim-text>7、如权利要求1至5中一项或多项所述的制剂，其特征在于，
+			<br />包衣的聚合物份额与所含有的SiO<sub>2</sub>的份额一起，以包衣计，总共占10
+			<br />至100重量％。
+			</claim-text>
+    </claim>
+    <claim num="8">
+      <claim-text>8、如权利要求1至7中一项或多项所述的制剂，其特征在于，
+			<br />作为有机酸和/或作为有机酸的盐，使用柠檬酸、富马酸、蚁酸、醋酸、
+			<br />马来酸、琥珀酸、酒石酸、戊二酸或乳酸或者它们的铵盐、锂盐、钠
+			<br />盐或钾盐或者所述物质的混合物。
+			</claim-text>
+    </claim>
+    <claim num="9">
+      <claim-text>9、如权利要求1至8中一项或多项所述的制剂，其特征在于，
+			<br />所述二氧化硅颗粒指的是沉淀二氧化硅。
+			</claim-text>
+    </claim>
+    <claim num="10">
+      <claim-text>10、如权利要求1至9中一项或多项所述的制剂，其特征在于，
+			<br />含有以包衣中所含的(甲基)丙烯酸酯共聚物计5至50重量％的二氧
+			<br />化硅颗粒。
+			</claim-text>
+    </claim>
+    <claim num="11">
+      <claim-text>11、如权利要求1至10中一项或多项所述的制剂，其特征在于，
+			<br />将其压制成片剂。
+			</claim-text>
+    </claim>
+    <claim num="12">
+      <claim-text>12、如权利要求1至10中一项或多项所述的制剂，其特征在于，
+			<br />其被明胶胶囊所包覆。
+			</claim-text>
+    </claim>
+    <claim num="13">
+      <claim-text>13、如权利要求1至12中一项或多项所述的制剂，其特征在于，
+			<br />有机酸和/或有机酸的盐形成核的外层。
+			</claim-text>
+    </claim>
+    <claim num="14">
+      <claim-text>14、如权利要求1至13中一项或多项所述的制剂，其特征在于，
+			<br />将其额外地用含有10-60重量％的甲基丙烯酸残基的(甲基)丙烯酸
+			<br />酯共聚物包覆。
+			</claim-text>
+    </claim>
+    <claim num="15">
+      <claim-text>15、如权利要求1至14中一项或多项所述的制剂，其特征在于，
+			<br />含有任选地以药物学上所用的水溶性盐的形式的一种或多种以下活性
+			<br />成分：醋丁洛尔、阿米替林、阿立哌唑、阿替洛尔、阿托品、倍他洛
+			<br />尔、比索洛尔、Bupavacaine、Buproprion、仲丁比妥、卡替洛尔、卡
+			<br />维地洛、头孢唑林、头孢噻肟、Chlorphenaramine、氯丙嗪、克林霉
+			<br />素、可待因、地尔硫、二巯丙醇、苯海拉明、多巴胺、多西拉敏、度
+			<br />洛西汀、Flexainid、氟西汀、氟奋乃静、氟西泮、庆大霉素、肼屈
+			<br />嗪、氢化可的松、氢醌、莨菪碱、异烟肼、异丙肾上腺素、卡那霉素、
+			<br />Labetolol、赖诺普利、美替洛尔、美西律、吗啡、纳多洛尔、新霉素、
+			<br />去甲肾上腺素、去甲替林、昂丹司琼、氧烯洛尔、羟甲唑啉、羟吗啡
+			<br />酮、帕罗西汀、喷布洛尔、去氧肾上腺素、吲哚洛尔、泼尼松龙、伯
+			<br />氨喹、普萘洛尔、吡咯卡因、索他洛尔、磺胺嘧啶、他莫昔芬、特布
+			<br />他林、噻吗洛尔、曲马朵、曲唑酮、三氟丙嗪、金霉素、筒箭毒碱、
+			<br />文拉法辛和/或维拉帕米。
+			</claim-text>
+    </claim>
+    <claim num="16">
+      <claim-text>16、如权利要求1至15中一项或多项所述的药物制剂的用途，用
+			<br />于制备用于在20℃下水溶性为至少10g/l的活性成分的药物剂型，其
+			<br />中，所述药物剂型具有有着迟滞阶段、脉冲阶段和释尽阶段的S形活
+			<br />性成分释放特性，其特征在于，根据欧洲药典在具有100Upm的桨法装
+			<br />置中在pH为6.8的缓冲液中，在迟滞阶段期间活性成分释放率为约
+			<br />10％和随后在脉冲阶段内的活性成分释放率为在小于4小时内约进一
+			<br />步的80％。
+			</claim-text>
+    </claim>
+  </claims>
+  <claims id="claims_eng" lang="eng" format="machine translation" date-changed="20140111">
+    <claim num="1">
+      <claim-text>1, pharmaceutical preparation, comprising </claim-text>
+      <claim-text>A) containing the active ingredients and organic acid and/or an organic acid salt nuclear </claim-text>
+      <claim-text>B) wrapping the nuclear coating, which contains a is not more than 15 weight % of the cation or anion group of the (meth) acrylate copolymer of the polymer component, and it contains at least 60% of the weight of the if, states (meth) acrylate copolymer, the copolymer is composed of 93 to 98 weight % of the acrylic acid or methacrylic acid C <sub>1</sub> to C <sub>4</sub>-alkyl ester and 7 to 2 weight % in the alkyl residue with quaternary ammonium groups in the (meth) acrylic acid ester monomer by free-radical polymerization of the unit, </claim-text>
+      <claim-text>Characterized in that </claim-text>
+      <claim-text>The active ingredient has the 20 at least under [...] 10 g/l water-soluble and the coating having an average particle size of 1 to 50 the silica particles in the range of   m. </claim-text>
+    </claim>
+    <claim num="2">
+      <claim-text>2, preparation according to Claim 1, characterized in that the coating of the polymer component is a mixture of the following composition: </claim-text>
+      <claim-text>60 to 99% of the weight of the (meth) acrylate copolymer, and its of 93 to 98 weight % of the acrylic acid or methacrylic acid C <sub>1</sub> to C <sub>4</sub>-alkyl ester and the same a 7 to 2% by weight of the alkyl residue with quaternary ammonium groups in the (meth) acrylic ester monomer, and </claim-text>
+      <claim-text>1-40% of the weight of the (meth) acrylate copolymer, and its of the 85 to less than 93% by weight of acrylic acid or methacrylic acid C <sub>1</sub> to C <sub>4</sub>-alkyl ester composition and its more than 7 to 15% by weight of the alkyl residue with quaternary ammonium groups in the (meth) acrylic ester monomer. </claim-text>
+    </claim>
+    <claim num="3">
+      <claim-text>3, preparation according to Claim 1, characterized in that coating b) polymer component of the mixture is composed of the following: </claim-text>
+      <claim-text>60 to 99% of the weight of the (meth) acrylate copolymer, and its of 93 to 98 weight % of the acrylic acid or methacrylic acid C <sub>1</sub> to C <sub>4</sub>-composition and the same alkyl 7 to 2% by weight of the alkyl residue with quaternary ammonium groups in the (meth) acrylic ester monomer composition, and </claim-text>
+      <claim-text>1-40% of the weight of the (meth) acrylate copolymer, and a 95 to 100 weight % of the acrylic acid or methacrylic acid C <sub>1</sub> to C <sub>4</sub>-alkyl ester and 0 to 5% by weight of an acrylic acid or methacrylic acid. </claim-text>
+    </claim>
+    <claim num="4">
+      <claim-text>4, to 3 of one or more said preparation according to Claim 1, characterized in that the (meth) acrylic ester copolymer contains methacryloxyl methoxyethyl trimethyl ammonium chloride as the alkyl residue with quaternary ammonium groups in the (meth) acrylate monomer. </claim-text>
+    </claim>
+    <claim num="5">
+      <claim-text>5, to 4 of one or more said preparation according to Claim 1, characterized in that the nuclear and/or coating of other drugs containing a conventional adjuvant. </claim-text>
+    </claim>
+    <claim num="6">
+      <claim-text>6, to 5 of one or more said preparation according to Claim 1, characterized in that the polymer of the coating in order to share of nuclear weight is 10 to 200 weight %. </claim-text>
+    </claim>
+    <claim num="7">
+      <claim-text>7, to 5 of one or more said preparation according to Claim 1, characterized in that the polymer of the coating containing the share SiO <sub>2</sub> together share of the, to coating meter, for a total of 10 to 100 weight %. </claim-text>
+    </claim>
+    <claim num="8">
+      <claim-text>8, to 7 of one or more said preparation according to Claim 1, characterized in that as the organic acid and/or as an organic acid salt, the use of citric acid, fumaric acid, formic acid, acetic acid, maleic acid, succinic acid, tartaric acid, glutaric acid or lactic acid, or their ammonium salt, lithium salt, sodium salt or potassium salt or the mixture of substances. </claim-text>
+    </claim>
+    <claim num="9">
+      <claim-text>9, to 8 of one or more said preparation according to Claim 1, characterized in that the silica particles is precipitated silica. </claim-text>
+    </claim>
+    <claim num="10">
+      <claim-text>10, to 9 of one or more said preparation according to Claim 1, characterized in that contained in the coating containing the (meth) acrylic ester copolymer meter 5 to 50% of the weight of silica particles. </claim-text>
+    </claim>
+    <claim num="11">
+      <claim-text>11, to 10 of one or more said preparation according to Claim 1, characterized in that it is compressed into a tablet. </claim-text>
+    </claim>
+    <claim num="12">
+      <claim-text>12, to 10 of one or more said preparation according to Claim 1, characterized in that it is coated by a gelatin capsule. </claim-text>
+    </claim>
+    <claim num="13">
+      <claim-text>13, to 12 of one or more said preparation according to Claim 1, characterized in that the organic acid and/or an organic acid salt of the outer layer of the causes. </claim-text>
+    </claim>
+    <claim num="14">
+      <claim-text>14, to 13 of one or more said preparation according to Claim 1, characterized in that the containing additional 10-60 weight % methacrylic acid residues of the (meth) acrylate copolymer coating. </claim-text>
+    </claim>
+    <claim num="15">
+      <claim-text>15, to 14 of one or more said preparation according to Claim 1, characterized in that pharmaceutically containing optionally in the form of a water soluble salt of one or more of the following active ingredient: acebutolol, amitriptylin, abilify, atenolol, atropine, times he lothair, bisolol, Bupavacaine, Buproprion, secbutabarbital, card for Luo river , carvedilol, Cefazolin, [...] , Chlorphenaramine, chlorpromazine, clindamycin, codeine, diltiazem, [...] propanol, diphenhydramine, dopamine, multiple west pulls sensitively , duloxetine, Flexainid, fluxetine, the fluorine exerts is static , chlordiazepoxide, gentamicin, Hydralazine, hydrocortisone sodium succinate, hydroquinone, hyoscyamine, retozide, isopropyl adrenergic, Kanamycin, Labetolol, lisinopril, uS for Luo river , west US law , morphine, nadolol, neomycin, norepinephrine, goes to the armor for the forest , the use of ondansetron, oxygen alkene Luo river , oxymetazoline, hydroxy morphine alkone , paroxetine, spurts Blower , phenylephrine, pindolol, prednisolone, [...] , propranolol, pyrrocaine, cable he lothair, sdz, tamoxifen, terbutaline, timolol, tramadol, trazodone, [...] , aureomycin, tube curarine , vanlafaxine and/or verapamile. </claim-text>
+    </claim>
+    <claim num="16">
+      <claim-text>16, to 15 one or more in the use of the pharmaceutical preparation according to Claim 1, used for the manufacture of medicaments for the 20 under [...] water-soluble to at least 10 g/l of the pharmaceutical dosage form of the active ingredient, wherein said pharmaceutical dosage form having a hysteresis stage, the stage pulse stage and releases S-shaped active ingredient release property, characterized in that in accordance with the European Pharmacopoeia 100Upm oar law device of the in the pH 6.8 buffer, of the active ingredient during the hysteresis stage release rate is about 10% in the pulse and the subsequent stage in the release rate of the active ingredient is less than 4 hours of further about 80%. </claim-text>
+    </claim>
+  </claims>
+  <drawings>
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="CN101484147A_00001.PNG" alt="image" img-content="undefined" img-format="png" original="A200680055284D00091.TIF" inline="yes" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="CN101484147A_00002.PNG" alt="image" img-content="undefined" img-format="png" original="A200680055284D00092.TIF" inline="yes" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="CN101484147A_00003.PNG" alt="image" img-content="undefined" img-format="png" original="A200680055284D00101.TIF" inline="yes" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="CN101484147A_00004.PNG" alt="image" img-content="undefined" img-format="png" original="A200680055284D00102.TIF" inline="yes" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="CN101484147A_00005.PNG" alt="image" img-content="undefined" img-format="png" original="A200680055284D00111.TIF" inline="yes" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="CN101484147A_00006.PNG" alt="image" img-content="undefined" img-format="png" original="A200680055284D00112.TIF" inline="yes" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="CN101484147A_00007.PNG" alt="image" img-content="undefined" img-format="png" original="A200680055284D00113.TIF" inline="yes" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="CN101484147A_00008.PNG" alt="image" img-content="undefined" img-format="png" original="A200680055284D00114.TIF" inline="yes" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="CN101484147A_00009.PNG" alt="image" img-content="undefined" img-format="png" original="A200680055284D00121.TIF" inline="yes" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="CN101484147A_00010.PNG" alt="image" img-content="undefined" img-format="png" original="A200680055284D00122.TIF" inline="yes" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="CN101484147A_00011.PNG" alt="image" img-content="undefined" img-format="png" original="A200680055284D00123.TIF" inline="yes" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="CN101484147A_00012.PNG" alt="image" img-content="undefined" img-format="png" original="A200680055284D00131.TIF" inline="yes" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="CN101484147A_00013.PNG" alt="image" img-content="undefined" img-format="png" original="A200680055284D00132.TIF" inline="yes" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="CN101484147A_00014.PNG" alt="image" img-content="undefined" img-format="png" original="A200680055284D00133.TIF" inline="yes" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="CN101484147A_00015.PNG" alt="image" img-content="undefined" img-format="png" original="A200680055284D00134.TIF" inline="yes" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="CN101484147A_00016.PNG" alt="image" img-content="undefined" img-format="png" original="A200680055284D00135.TIF" inline="yes" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="CN101484147A_00017.PNG" alt="image" img-content="undefined" img-format="png" original="A200680055284D00136.TIF" inline="yes" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="CN101484147A_00018.PNG" alt="image" img-content="undefined" img-format="png" original="A200680055284D00137.TIF" inline="yes" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="CN101484147A_00019.PNG" alt="image" img-content="undefined" img-format="png" original="A200680055284D00138.TIF" inline="yes" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="CN101484147A_00020.PNG" alt="image" img-content="undefined" img-format="png" original="A200680055284D0014105818QIETU.TIF" inline="yes" />
+    </figure>
+    <figure num="21">
+      <img he="N/A" wi="N/A" file="CN101484147A_00021.PNG" alt="image" img-content="undefined" img-format="png" original="A200680055284D0016105924QIETU.TIF" inline="yes" />
+    </figure>
+    <figure num="22">
+      <img he="N/A" wi="N/A" file="CN101484147A_00022.PNG" alt="image" img-content="undefined" img-format="png" original="A200680055284D0018105956QIETU.TIF" inline="yes" />
+    </figure>
+    <figure num="23">
+      <img he="N/A" wi="N/A" file="CN101484147A_00023.PNG" alt="image" img-content="undefined" img-format="png" original="A200680055284D00201.TIF" inline="yes" />
+    </figure>
+    <figure num="24">
+      <img he="N/A" wi="N/A" file="CN101484147A_00024.PNG" alt="image" img-content="undefined" img-format="png" original="A200680055284D0020110329QIETU.TIF" inline="yes" />
+    </figure>
+    <figure num="25">
+      <img he="N/A" wi="N/A" file="CN101484147A_00025.PNG" alt="image" img-content="undefined" img-format="png" original="A200680055284D0021110423QIETU.TIF" inline="yes" />
+    </figure>
+    <figure num="26">
+      <img he="N/A" wi="N/A" file="CN101484147A_00026.PNG" alt="image" img-content="undefined" img-format="png" original="A200680055284D00211.TIF" inline="yes" />
+    </figure>
+    <figure num="27">
+      <img he="N/A" wi="N/A" file="CN101484147A_00027.PNG" alt="image" img-content="undefined" img-format="png" original="A200680055284D00212.TIF" inline="yes" />
+    </figure>
+    <figure num="28">
+      <img he="N/A" wi="N/A" file="CN101484147A_00028.PNG" alt="image" img-content="undefined" img-format="png" original="A200680055284D00231.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="CN101484147A.PDF" type="pdf" size="821450" pages="24" />
+</lexisnexis-patent-document>

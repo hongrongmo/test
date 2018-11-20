@@ -1,0 +1,2028 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2015 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20150603" file="EP1086377B1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20080206" time-inserted="085403" date-changed="20110623" time-changed="041945">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Grant" publ-desc="Granted patent">
+      <document-id>
+        <country>EP</country>
+        <doc-number>1086377</doc-number>
+        <kind>B1</kind>
+        <date>20080206</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>99930078</doc-number>
+        <kind>A</kind>
+        <date>19990607</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20090313">
+      <priority-claim sequence="1" kind="national">
+        <country>IN</country>
+        <doc-number>1239CHE1998</doc-number>
+        <kind>A</kind>
+        <date>19980609</date>
+      </priority-claim>
+      <priority-claim sequence="2" kind="national">
+        <country>SE</country>
+        <doc-number>9802573</doc-number>
+        <kind>A</kind>
+        <date>19980717</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>SE1999000979</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>MA123998</doc-number>
+      </priority-claim>
+      <priority-claim sequence="3" data-format="original">
+        <doc-number>9802573</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>IN1998CH01239</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>WO1999SE00979</doc-number>
+      </priority-claim>
+      <priority-claim sequence="3" data-format="epodoc">
+        <doc-number>SE19980002573</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20100610">
+      <gazette-reference>
+        <date>20080206</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20010328</date>
+      </unexamined-printed-without-grant>
+      <printed-with-grant>
+        <date>20080206</date>
+      </printed-with-grant>
+      <publication-of-grant-date>
+        <date>20080206</date>
+      </publication-of-grant-date>
+      <intention-to-grant-date>
+        <date>20070921</date>
+      </intention-to-grant-date>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20100610">
+      <request-for-examination>
+        <date>20010109</date>
+      </request-for-examination>
+      <first-examination-report-despatched>
+        <date>20031106</date>
+      </first-examination-report-despatched>
+    </dates-rights-effective>
+    <term-of-grant>
+      <lapse-of-patent>
+        <country>AT</country>
+        <date>20080206</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>BE</country>
+        <date>20080206</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>CY</country>
+        <date>20080206</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>DK</country>
+        <date>20080206</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>FI</country>
+        <date>20080206</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>GR</country>
+        <date>20080507</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>IE</country>
+        <date>20080609</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>LU</country>
+        <date>20080607</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>MC</country>
+        <date>20080630</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>NL</country>
+        <date>20080206</date>
+      </lapse-of-patent>
+      <lapse-of-patent>
+        <country>PT</country>
+        <date>20080707</date>
+      </lapse-of-patent>
+    </term-of-grant>
+    <classifications-ipcr date-changed="20121207">
+      <classification-ipcr sequence="1">
+        <text>G01N  33/569       20060101CFI19991220BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>C</classification-level>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>33</main-group>
+        <subgroup>569</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>19991220</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>G01N  33/569       20060101AFI19991220BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>33</main-group>
+        <subgroup>569</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>19991220</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C07K  14/005       20060101CLI19991220BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>C</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>14</main-group>
+        <subgroup>005</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>19991220</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C07K  14/01        20060101ALI19991220BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>14</main-group>
+        <subgroup>01</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>19991220</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>C07K  14/195       20060101CLI19991220BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>C</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>14</main-group>
+        <subgroup>195</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>19991220</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>C07K  14/35        20060101ALI19991220BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>14</main-group>
+        <subgroup>35</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>19991220</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="7">
+        <text>C12N  15/09        20060101CLI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>C</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>15</main-group>
+        <subgroup>09</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="8">
+        <text>C12N  15/09        20060101ALI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>15</main-group>
+        <subgroup>09</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="9">
+        <text>C12Q   1/48        20060101CLI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>C</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>1</main-group>
+        <subgroup>48</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="10">
+        <text>C12Q   1/48        20060101ALI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>1</main-group>
+        <subgroup>48</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="11">
+        <text>G01N  33/15        20060101CLI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>C</classification-level>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>33</main-group>
+        <subgroup>15</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="12">
+        <text>G01N  33/15        20060101ALI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>33</main-group>
+        <subgroup>15</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="13">
+        <text>G01N  33/50        20060101CLI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>C</classification-level>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>33</main-group>
+        <subgroup>50</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="14">
+        <text>G01N  33/50        20060101ALI20051220RMJP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>33</main-group>
+        <subgroup>50</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051220</date>
+        </action-date>
+        <generating-office>
+          <country>JP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="15">
+        <text>G01N  33/68        20060101C I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>C</classification-level>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>33</main-group>
+        <subgroup>68</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="16">
+        <text>G01N  33/68        20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>33</main-group>
+        <subgroup>68</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20121207">
+      <classification-cpc sequence="1">
+        <text>G01N  33/6875      20130101  I20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>33</main-group>
+        <subgroup>6875</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>G01N2500/20        20130101  A20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>2500</main-group>
+        <subgroup>20</subgroup>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <classifications-ecla date-changed="20121207">
+      <classification-ecla sequence="1" classification-scheme="EC" country="EP">
+        <text>G01N 33/68H</text>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>33</main-group>
+        <subgroup>68</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">H  </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+      <classification-ecla sequence="1" classification-scheme="ICO" country="EP">
+        <text>S01N500:20</text>
+        <section>S</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>500</main-group>
+        <subgroup>20</subgroup>
+      </classification-ecla>
+    </classifications-ecla>
+    <number-of-claims calculated="yes">6</number-of-claims>
+    <invention-title id="title_ger" date-changed="20080206" lang="ger" format="original">VERFAHREN ZUM IDENTIFIZIEREN VON LIGANDEN DER RNA-POLYMERASE SIGMA 70 UNTEREINHEIT</invention-title>
+    <invention-title id="title_eng" date-changed="20080206" lang="eng" format="original">A METHOD OF IDENTIFYING LIGANDS TO RNA POLYMERASE SIGMA 70 SUBUNIT</invention-title>
+    <invention-title id="title_fre" date-changed="20080206" lang="fre" format="original">PROCEDE D'IDENTIFICATION DE LIGANDS DE LA SOUS-UNITE SIGMA (70) DE L'ARN POLYMERASE</invention-title>
+    <references-cited date-changed="20080206">
+      <patent-citations name="patcit" date-changed="20080206" />
+      <non-patent-citations name="nplcit" date-changed="20080206" />
+      <citation>
+        <patcit num="1" dnum="WO-A1-96/25170">
+          <document-id>
+            <country>WO</country>
+            <doc-number>9625170</doc-number>
+            <kind>A1</kind>
+            <date>19960822</date>
+          </document-id>
+          <application-date>
+            <date>19960201</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="WO-A1-96/38478">
+          <document-id>
+            <country>WO</country>
+            <doc-number>9638478</doc-number>
+            <kind>A1</kind>
+            <date>19961205</date>
+          </document-id>
+          <application-date>
+            <date>19960312</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <nplcit num="1">
+          <text>Database Medline, accession no. 93106978, Orsini G et al: "The Asia Gene of Bacteriophage T4 Codes for the Anti-Sigma 70 Protein"; &amp; J. Bacteriol. 1993 Jan, 175(1), 85-93</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-0027529824&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20080206">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>AstraZeneca AB</orgname>
+            <address>
+              <city>151 85 Södertälje</city>
+              <country>SE</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>BALGANESH, Tanjore, AstraZeneca, R&amp;D Bangalore</name>
+            <address>
+              <address-1>Sadashivnagar, P.O. Box 8013</address-1>
+              <city>Bangalore 560 080</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>RAMACHANDRAN, Vasanthi, AstraZeneca, R&amp;D Bangalore</name>
+            <address>
+              <address-1>Sadashivnagar, P.O. Box 8013</address-1>
+              <city>Bangalore 560 080</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>SHARMA, Umender, AstraZeneca, R&amp;D Bangalore</name>
+            <address>
+              <address-1>Sadashivnagar, P.O. Box 8013</address-1>
+              <city>Bangalore 560 080</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <designation-of-states date-changed="20110623">
+      <designation-epc>
+        <contracting-states>
+          <country>AT</country>
+          <country>BE</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>IE</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LU</country>
+          <country>MC</country>
+          <country>NL</country>
+          <country>PT</country>
+          <country>SE</country>
+        </contracting-states>
+        <extension-states>
+          <country>LT</country>
+          <country>LV</country>
+          <country>MK</country>
+          <country>RO</country>
+          <country>SI</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>SE99000979</doc-number>
+        <date>19990607</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>9964866</doc-number>
+        <date>19991216</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20100510">
+      <main-family family-id="1593320">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1086377</doc-number>
+            <kind>B1</kind>
+            <date>20080206</date>
+          </document-id>
+          <application-date>
+            <date>19990607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1086377</doc-number>
+            <kind>A1</kind>
+            <date>20010328</date>
+          </document-id>
+          <application-date>
+            <date>19990607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>9964866</doc-number>
+            <kind>A1</kind>
+            <date>19991216</date>
+          </document-id>
+          <application-date>
+            <date>19990607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>4668799</doc-number>
+            <kind>A</kind>
+            <date>19991230</date>
+          </document-id>
+          <application-date>
+            <date>19990607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>747969</doc-number>
+            <kind>B2</kind>
+            <date>20020530</date>
+          </document-id>
+          <application-date>
+            <date>19990607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>NZ</country>
+            <doc-number>508182</doc-number>
+            <kind>A</kind>
+            <date>20020726</date>
+          </document-id>
+          <application-date>
+            <date>19990607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2330246</doc-number>
+            <kind>A1</kind>
+            <date>19991216</date>
+          </document-id>
+          <application-date>
+            <date>19990607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AT</country>
+            <doc-number>385573</doc-number>
+            <kind>T</kind>
+            <date>20080215</date>
+          </document-id>
+          <application-date>
+            <date>19990607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>69938103</doc-number>
+            <kind>D1</kind>
+            <date>20080320</date>
+          </document-id>
+          <application-date>
+            <date>19990607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>ES</country>
+            <doc-number>2299250</doc-number>
+            <kind>T3</kind>
+            <date>20080516</date>
+          </document-id>
+          <application-date>
+            <date>19990607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>69938103</doc-number>
+            <kind>T2</kind>
+            <date>20090129</date>
+          </document-id>
+          <application-date>
+            <date>19990607</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="1378280">
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>69938103</doc-number>
+            <kind>D1</kind>
+            <date>20080320</date>
+          </document-id>
+          <application-date>
+            <date>19990607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2002517758</doc-number>
+            <kind>A</kind>
+            <date>20020618</date>
+          </document-id>
+          <application-date>
+            <date>19990607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>4668799</doc-number>
+            <kind>A</kind>
+            <date>19991230</date>
+          </document-id>
+          <application-date>
+            <date>19990607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1086377</doc-number>
+            <kind>B1</kind>
+            <date>20080206</date>
+          </document-id>
+          <application-date>
+            <date>19990607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AT</country>
+            <doc-number>385573</doc-number>
+            <kind>T</kind>
+            <date>20080215</date>
+          </document-id>
+          <application-date>
+            <date>19990607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>223118</doc-number>
+            <kind>A1</kind>
+            <date>20081121</date>
+          </document-id>
+          <application-date>
+            <date>19980609</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>9964866</doc-number>
+            <kind>A1</kind>
+            <date>19991216</date>
+          </document-id>
+          <application-date>
+            <date>19990607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>747969</doc-number>
+            <kind>B2</kind>
+            <date>20020530</date>
+          </document-id>
+          <application-date>
+            <date>19990607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>NZ</country>
+            <doc-number>508182</doc-number>
+            <kind>A</kind>
+            <date>20020726</date>
+          </document-id>
+          <application-date>
+            <date>19990607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>SE</country>
+            <doc-number>9802573</doc-number>
+            <kind>D0</kind>
+            <date>19980717</date>
+          </document-id>
+          <application-date>
+            <date>19980717</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2330246</doc-number>
+            <kind>A1</kind>
+            <date>19991216</date>
+          </document-id>
+          <application-date>
+            <date>19990607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>ES</country>
+            <doc-number>2299250</doc-number>
+            <kind>T3</kind>
+            <date>20080516</date>
+          </document-id>
+          <application-date>
+            <date>19990607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>69938103</doc-number>
+            <kind>T2</kind>
+            <date>20090129</date>
+          </document-id>
+          <application-date>
+            <date>19990607</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>1239CHE1998</doc-number>
+            <kind>A</kind>
+            <date>20050304</date>
+          </document-id>
+          <application-date>
+            <date>19980609</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1086377</doc-number>
+            <kind>A1</kind>
+            <date>20010328</date>
+          </document-id>
+          <application-date>
+            <date>19990607</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20100601" lang="eng" format="equivalent" country="WO" doc-number="9964866" kind="A1">
+    <p>A method of identifying a ligand of a bacterial sigma&lt;70&gt; subunit which comprises contacting the sigma&lt;70&gt; subunit or a portion thereof comprising the anti-sigma binding region, with a test compound and a fusion protein of an anti-sigma&lt;70&gt; factor of bacteriophage T4, and determining whether the test compound binds competitively with the anti-sigma&lt;70&gt; factor to the sigma&lt;70&gt; subunit or portion thereof.</p>
+  </abstract>
+  <legal-data date-changed="20140618">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20010328</date>
+      </publication-date>
+      <event-code-1>17P</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXAMINATION FILED</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <effective-date>
+        <date>20010109</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20010328</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <corresponding-kind>A1</corresponding-kind>
+      <legal-designated-states>
+        <country>AT</country>
+        <country>BE</country>
+        <country>CH</country>
+        <country>CY</country>
+        <country>DE</country>
+        <country>DK</country>
+        <country>ES</country>
+        <country>FI</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>GR</country>
+        <country>IE</country>
+        <country>IT</country>
+        <country>LI</country>
+        <country>LU</country>
+        <country>MC</country>
+        <country>NL</country>
+        <country>PT</country>
+        <country>SE</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20010328</date>
+      </publication-date>
+      <event-code-1>AX</event-code-1>
+      <effect>+</effect>
+      <legal-description>EXTENSION OR VALIDATION OF THE EUROPEAN PATENT TO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <free-text-description>LT PAYMENT 20010109;LV PAYMENT 20010109;MK PAYMENT 20010109;RO PAYMENT 20010109;SI PAYMENT 20010109</free-text-description>
+    </legal-event>
+    <legal-event sequence="4">
+      <publication-date>
+        <date>20040107</date>
+      </publication-date>
+      <event-code-1>17Q</event-code-1>
+      <effect>+</effect>
+      <legal-description>FIRST EXAMINATION REPORT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <effective-date>
+        <date>20031106</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="5">
+      <publication-date>
+        <date>20080206</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <corresponding-kind>B1</corresponding-kind>
+      <legal-designated-states>
+        <country>AT</country>
+        <country>BE</country>
+        <country>CH</country>
+        <country>CY</country>
+        <country>DE</country>
+        <country>DK</country>
+        <country>ES</country>
+        <country>FI</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>GR</country>
+        <country>IE</country>
+        <country>IT</country>
+        <country>LI</country>
+        <country>LU</country>
+        <country>MC</country>
+        <country>NL</country>
+        <country>PT</country>
+        <country>SE</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="6">
+      <publication-date>
+        <date>20080206</date>
+      </publication-date>
+      <event-code-1>AX</event-code-1>
+      <effect>+</effect>
+      <legal-description>EXTENSION OR VALIDATION OF THE EUROPEAN PATENT TO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <countries-concerned>
+        <country>LT</country>
+        <country>LV</country>
+        <country>MK</country>
+        <country>RO</country>
+        <country>SI</country>
+      </countries-concerned>
+    </legal-event>
+    <legal-event sequence="7">
+      <publication-date>
+        <date>20080206</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>GB</country>
+      </designated-state-authority>
+      <designated-state-event-code>FG4D</designated-state-event-code>
+      <designated-state-description>EUROPEAN PATENT GRANTED</designated-state-description>
+    </legal-event>
+    <legal-event sequence="8">
+      <publication-date>
+        <date>20080229</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>CH</country>
+      </designated-state-authority>
+      <designated-state-event-code>EP</designated-state-event-code>
+      <designated-state-description>ENTRY IN THE NATIONAL PHASE</designated-state-description>
+    </legal-event>
+    <legal-event sequence="9">
+      <publication-date>
+        <date>20080319</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>IE</country>
+      </designated-state-authority>
+      <designated-state-event-code>FG4D</designated-state-event-code>
+      <designated-state-description>EUROPEAN PATENTS GRANTED DESIGNATING IRELAND</designated-state-description>
+    </legal-event>
+    <legal-event sequence="10">
+      <publication-date>
+        <date>20080320</date>
+      </publication-date>
+      <event-code-1>REF</event-code-1>
+      <legal-description>CORRESPONDS TO:</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <corresponding-publication-number>69938103</corresponding-publication-number>
+      <corresponding-authority>
+        <country>DE</country>
+      </corresponding-authority>
+      <corresponding-publication-date>
+        <date>20080320</date>
+      </corresponding-publication-date>
+      <corresponding-kind>P</corresponding-kind>
+    </legal-event>
+    <legal-event sequence="11">
+      <publication-date>
+        <date>20080401</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>SE</country>
+      </designated-state-authority>
+      <designated-state-event-code>TRGR</designated-state-event-code>
+      <designated-state-description>TRANSLATION OF GRANTED EP PATENT</designated-state-description>
+    </legal-event>
+    <legal-event sequence="12">
+      <publication-date>
+        <date>20080516</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>ES</country>
+      </designated-state-authority>
+      <designated-state-event-code>FG2A</designated-state-event-code>
+      <designated-state-description>DEFINITIVE PROTECTION</designated-state-description>
+      <corresponding-publication-number>2299250</corresponding-publication-number>
+      <corresponding-kind>T3</corresponding-kind>
+    </legal-event>
+    <legal-event sequence="13">
+      <publication-date>
+        <date>20080731</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>FI</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20080206</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="14">
+      <publication-date>
+        <date>20080731</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>ES</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20080612</date>
+      </payment-date>
+      <fee-payment-year>10</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="15">
+      <publication-date>
+        <date>20080801</date>
+      </publication-date>
+      <event-code-1>NLV1</event-code-1>
+      <effect>-</effect>
+      <legal-description>NL: LAPSED OR ANNULLED DUE TO FAILURE TO FULFILL THE REQUIREMENTS OF ART. 29P AND 29M OF THE PATENTS ACT; NO LEGAL EFFECT FROM</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+    </legal-event>
+    <legal-event sequence="16">
+      <publication-date>
+        <date>20080829</date>
+      </publication-date>
+      <event-code-1>ET</event-code-1>
+      <effect>+</effect>
+      <legal-description>FR: TRANSLATION FILED</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+    </legal-event>
+    <legal-event sequence="17">
+      <publication-date>
+        <date>20080829</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>AT</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20080206</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="18">
+      <publication-date>
+        <date>20080930</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>BE</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20080206</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="19">
+      <publication-date>
+        <date>20081031</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>DK</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20080206</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="20">
+      <publication-date>
+        <date>20081031</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>NL</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20080206</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="21">
+      <publication-date>
+        <date>20081031</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>PT</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20080707</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="22">
+      <publication-date>
+        <date>20081031</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>DE</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20080630</date>
+      </payment-date>
+      <fee-payment-year>10</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="23">
+      <publication-date>
+        <date>20081031</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>SE</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20080609</date>
+      </payment-date>
+      <fee-payment-year>10</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="24">
+      <publication-date>
+        <date>20081128</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>IT</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20080628</date>
+      </payment-date>
+      <fee-payment-year>10</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="25">
+      <publication-date>
+        <date>20081231</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>GB</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20080506</date>
+      </payment-date>
+      <fee-payment-year>10</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="26">
+      <publication-date>
+        <date>20090114</date>
+      </publication-date>
+      <event-code-1>26N</event-code-1>
+      <effect>+</effect>
+      <legal-description>NO OPPOSITION FILED</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <effective-date>
+        <date>20081107</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="27">
+      <publication-date>
+        <date>20090130</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>MC</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES</free-text-description>
+      <effective-date>
+        <date>20080630</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="28">
+      <publication-date>
+        <date>20090430</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>IE</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES</free-text-description>
+      <effective-date>
+        <date>20080609</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="29">
+      <publication-date>
+        <date>20090731</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>CY</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20080206</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="30">
+      <publication-date>
+        <date>20091030</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>CH</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20090430</date>
+      </payment-date>
+      <fee-payment-year>11</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="31">
+      <publication-date>
+        <date>20100224</date>
+      </publication-date>
+      <event-code-1>GBPC</event-code-1>
+      <effect>-</effect>
+      <legal-description>GB: EUROPEAN PATENT CEASED THROUGH NON-PAYMENT OF RENEWAL FEE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <effective-date>
+        <date>20090607</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="32">
+      <publication-date>
+        <date>20100326</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>FR</country>
+      </designated-state-authority>
+      <designated-state-event-code>ST</designated-state-event-code>
+      <designated-state-description>NOTIFICATION OF LAPSE</designated-state-description>
+      <effective-date>
+        <date>20100226</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="33">
+      <publication-date>
+        <date>20100430</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>FR</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES</free-text-description>
+      <effective-date>
+        <date>20090630</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="34">
+      <publication-date>
+        <date>20100430</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>FR</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20080424</date>
+      </payment-date>
+      <fee-payment-year>10</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="35">
+      <publication-date>
+        <date>20100531</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>GB</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES</free-text-description>
+      <effective-date>
+        <date>20090607</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="36">
+      <publication-date>
+        <date>20100630</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>DE</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES</free-text-description>
+      <effective-date>
+        <date>20100101</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="37">
+      <publication-date>
+        <date>20100630</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>LU</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES</free-text-description>
+      <effective-date>
+        <date>20080607</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="38">
+      <publication-date>
+        <date>20100826</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>ES</country>
+      </designated-state-authority>
+      <designated-state-event-code>FD2A</designated-state-event-code>
+      <designated-state-description>ANNOUNCEMENT OF LAPSE IN SPAIN</designated-state-description>
+      <effective-date>
+        <date>20090608</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="39">
+      <publication-date>
+        <date>20101029</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>ES</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES</free-text-description>
+      <effective-date>
+        <date>20090608</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="40">
+      <publication-date>
+        <date>20101029</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>GR</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF FAILURE TO SUBMIT A TRANSLATION OF THE DESCRIPTION OR TO PAY THE FEE WITHIN THE PRESCRIBED TIME-LIMIT</free-text-description>
+      <effective-date>
+        <date>20080507</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="41">
+      <publication-date>
+        <date>20110131</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>CH</country>
+      </designated-state-authority>
+      <designated-state-event-code>PL</designated-state-event-code>
+      <designated-state-description>PATENT CEASED</designated-state-description>
+    </legal-event>
+    <legal-event sequence="42">
+      <publication-date>
+        <date>20110331</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>IT</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES</free-text-description>
+      <effective-date>
+        <date>20090607</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="43">
+      <publication-date>
+        <date>20110429</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>CH</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES</free-text-description>
+      <effective-date>
+        <date>20100630</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="44">
+      <publication-date>
+        <date>20110429</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>LI</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES</free-text-description>
+      <effective-date>
+        <date>20100630</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="45">
+      <publication-date>
+        <date>20110531</date>
+      </publication-date>
+      <event-code-1>PG25</event-code-1>
+      <effect>-</effect>
+      <legal-description>LAPSED IN A CONTRACTING STATE ANNOUNCED VIA POSTGRANT INFORM. FROM NAT. OFFICE TO EPO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1086377A1</docdb-publication-number>
+      <docdb-application-id>160917</docdb-application-id>
+      <designated-state-authority>
+        <country>SE</country>
+      </designated-state-authority>
+      <free-text-description>LAPSE BECAUSE OF NON-PAYMENT OF DUE FEES</free-text-description>
+      <effective-date>
+        <date>20090608</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20080206">
+    <heading id="h-00001-en">TECHNICAL FIELD</heading>
+    <p id="p-00001-en" num="0001">The present invention relates to a method of identifying a ligand, in particular an inhibitor, of a bacterial RNA polymerase sigma subunit.</p>
+    <heading id="h-00002-en">BACKGROUND ART</heading>
+    <heading id="h-00003-en">
+      <i>Sigma subunits of RNA polymerase</i>
+    </heading>
+    <p id="p-00002-en" num="0002">Transcription of genes to the corresponding RNA molecules is a complex process which is catalyzed by DNA dependent RNA polymerase, and involves many different protein factors. In eubacteria, the core RNA polymerase is composed of α, β, and β' subunits in the ratio 2:1:1. To direct RNA polymerase to promoters of specific genes to be transcribed, bacteria produce a variety of proteins, known as sigma (σ) factors, which interact with RNA polymerase to form an active holoenzyme. The resulting complexes are able to recognize and attach to selected nucleotide sequences in promoters.</p>
+    <p id="p-00003-en" num="0003">Physical measurements have shown that the sigma subunit induces conformational transition upon binding to core RNA polymerase. Binding of the sigma subunit to the core enzyme increases the binding constant of the core enzyme for DNA by several orders of magnitude (<nplcit id="ncit-00001" npl-type="s"><text>Chamberlin, M.J. (1974) Ann. Rev. Biochem. 43, 721</text></nplcit>-).</p>
+    <p id="p-00004-en" num="0004">Bacterial sigma factors do not have any homology with eukaryotic transcription factors, and are consequently a potential target for antibacterial compounds.</p>
+    <p id="p-00005-en" num="0005">Mutations in the sigma subunit, effecting its association and ability to confer DNA sequence specificity to the enzyme, are known to be lethal to the cell.</p>
+    <p id="p-00006-en" num="0006">Characterization of sigma subunits, identified and sequenced from various organisms, allows them to be classified into three groups. The Group I sigma has also been referred to the sigma<sup>70</sup> class, or the "house keeping" sigma group (for a review see <nplcit id="ncit-00002" npl-type="s"><text>Lonetto et al. (1992) J. Bacteriol. 174, 3843-3849</text></nplcit>). Sigma subunits belonging to this group recognize similar promoter sequences in the cell. These properties are reflected in certain regions of the proteins which are highly conserved between species.</p>
+    <p id="p-00007-en" num="0007">Another important feature of sigma-dependent transcription is that the sigma subunit dissociates from the core enzyme during elongation of mRNA. Consequently, molecules which stabilize the interaction of the sigma subunit with the core enzyme would also be capable of inactivating transcription.</p>
+    <heading id="h-00004-en">
+      <i>Mycobacterium tuberculosis</i>
+    </heading>
+    <p id="p-00008-en" num="0008">
+      <i>Mycobacterium tuberculosis</i> is a major pulmonary pathogen which is characterized by its very slow growth rate. As a pathogen it gains access to the alveolar macrophages where it multiplies within the phagosome, finally lysing the cells and being disseminated through the blood stream, not only to other areas of the lung, but also to extrapulmonary tissues.</p>
+    <p id="p-00009-en" num="0009">The pathogen thus multiplies in at least two entirely different environments, involving the utilization of different nutrients and a variety of possible host factors. A successful infection would thus involve the coordinated expression of new sets of genes, transcribed by RNA polymerases associating with different sigma factors. This opens the possibility of targeting not only the sigma<sup>70</sup> subunits of <i>M. tuberculosis,</i> but also other sigma subunits specific for the different stages of infection and dissemination.</p>
+    <p id="p-00010-en" num="0010">The cloning and expression of <i>Mycobacterium tuberculosis sigA</i> and <i>sigB</i> genes are disclosed in the <patcit id="pcit-00001" dnum="wo9638478a"><text>International Patent Application WO 96/38478</text></patcit> (Astra AB).</p>
+    <heading id="h-00005-en">
+      <i>Anti-sigma factors</i>
+    </heading>
+    <p id="p-00011-en" num="0011">Anti-sigma (Asi) proteins are known in the art. Lysates of bacteriophage T<sub>2</sub> (<nplcit id="ncit-00003" npl-type="s"><text>Khesin et al. (1972) Mol. Gen. Genet 119, 299</text></nplcit>) or phage T<sub>4</sub> (<nplcit id="ncit-00004" npl-type="s"><text>Bogdanova et al. (1970) Mol. Biol. 4, 435</text></nplcit>; <nplcit id="ncit-00005" npl-type="s"><text>Stevens, A. (1972) Proc. Natl. Acad. Sci. U.S.A. 69, 603</text></nplcit>) have been reported to inhibit transcription of bacterial genes.</p>
+    <p id="p-00012-en" num="0012">It has been established that the T<sub>4</sub>-dependent anti-sigma<sup>70</sup> activity is borne by a 10 kDa protein (<nplcit id="ncit-00006" npl-type="b"><text>Stevens, A. In: RNA Polymerase p. 617-627 (Eds. R. Losick &amp; M. Chamberlin) Cold Spring Harbor Laboratory, Cold Spring Harbor, N.Y., 1976</text></nplcit>). A 10 kDa protein was shown to co-purify with RNA polymerase from T<sub>4</sub> infected <i>E. coli</i> cells and is detached together with sigma<sup>70</sup> from the core enzyme on phosphocellulose columns.</p>
+    <p id="p-00013-en" num="0013">A gene called <i>asiA,</i> coding for the 10 kDa anti-sigma<sup>70</sup> factor of bacteriophage T<sub>4</sub>, has been identified by <nplcit id="ncit-00007" npl-type="s"><text>Orsini et al. (1993) J. Bacteriol. 175, 85-93</text></nplcit>. The open reading frame encoded a 90 amino acid protein with the deduced sequence MNKNIDTVRE IITVASILIK FSREDIVENR ANFIAFLNEI GVTHEGRKLN QNSFRKIVSE LTQEDKKTLI DEFNEGFEGV YRYLEMYTNK (SEQ ID NO: 5). The <i>asiA</i>-encoded protein (hereafter also referred to as "AsiA") was overproduced in a phage T<sub>7</sub> expression system and partially purified. It showed a strong inhibitory activity towards sigma<sup>70</sup>-directed transcription by <i>E. coli</i> RNA polymerase holoenzyme. The nucleotide sequence of gene <i>asiA</i> has been deposited in the GenBank data base under accession no. M99441.</p>
+    <p id="p-00014-en" num="0014">Examples of proteins regulating the sigma subunit of RNA polymerase are known also from other systems. An example is the <i>S. typhimurium</i> flagellar regulation system, which is a complex system controlled by a set of over 50 genes grouped into 13 flagellar operons. Late operon expression is positively regulated by the <i>fliA</i> gene coding for the sigma factor FliA (<nplcit id="ncit-00008" npl-type="s"><text>Suzuki et al. (1978) J. Bacteriol. 133, 904</text></nplcit>; <nplcit id="ncit-00009" npl-type="s"><text>Suzuki et al. (1981) J. Bacteriol. 145, 1036</text></nplcit>). On the other hand, the late operons are negatively regulated by the <i>flgM</i> gene. A 7.8 kDa protein has been identified as the <i>flgM</i> gene product and purified (<nplcit id="ncit-00010" npl-type="s"><text>Ohnishi et al. (1992) Mol. Microbiol. 6, 3149-3157</text></nplcit>). This FlgM protein was identified as an anti-sigma factor since it was capable to bind the FliA protein and disturbed its ability to form a complex with the RNA polymerase core enzyme.</p>
+    <p id="p-00015-en" num="0015">Similarly, in <i>B. subtilis</i> gene expression, the sigma<sup>F</sup> factor has been shown to be regulated by a 14 kDa anti-sigma factor encoded by the <i>spoIIAB</i> gene (<nplcit id="ncit-00011" npl-type="s"><text>Duncan &amp; Losick (1993) Proc. Natl. Acad. Sci. U.S.A. 90, 2325-2329</text></nplcit>), while the sigma<sup>B</sup> factor is regulated by a 16 kDa anti-sigma factor encoded by the <i>rsbW</i> gene (<nplcit id="ncit-00012" npl-type="s"><text>Benson &amp; Haldenwang (1993) Proc. Natl. Acad. Sci. U.S.A. 90, 2330-2334</text></nplcit>).</p>
+    <p id="p-00016-en" num="0016">The nucleotide sequences of the genes <i>flgM, spoIIAB</i> and <i>rsbW</i> are available in the GenBank data base (Accession Nos.: FLGMST.PRO for <i>flgM,</i> SPOIIAB.PRO for <i>spoIIAB,</i> M34995.PRO for <i>rsbW</i>). The sequences do not show any gross similarity with the <i>asiA</i> sequence disclosed by Orsini et al.</p>
+    <p id="p-00017-en" num="0017">
+      <patcit id="pcit-00002" dnum="wo9625170a">
+        <text>WO 96/25170</text>
+      </patcit> discloses methods for treating diseases caused by bacterial pathogens by administering the T<sub>4</sub> AsiA protein, which protein is shown to inhibit the RNA polymerase activity of <i>Bacillus subtilis</i> and <i>Mycobacterium smegmatis.</i></p>
+    <heading id="h-00006-en">DISCLOSURE OF THE INVENTION</heading>
+    <p id="p-00018-en" num="0018">In accordance with the present invention, there is provided a method of identifying a ligand of a bacterial sigma<sup>70</sup> subunit which comprises contacting the sigma<sup>70</sup> subunit or a portion thereof comprising the anti-sigma binding region, with a test compound and a GST-AsiA fusion protein produced in a yeast expression system and determining whether the test compound binds competitively with the anti-sigma<sup>70</sup> factor to the sigma<sup>70</sup> subunit or portion thereof.</p>
+    <p id="p-00019-en" num="0019">Preferably, the method comprises: <ol><li>(i) immobilizing the sigma<sup>70</sup> subunit or portion thereof on a matrix or solid support;</li><li>(ii) adding the test compound and the fusion protein;</li><li>(iii) adding a first antibody against the fusion protein;</li><li>(iv) adding a labeled second antibody against the first antibody; and</li><li>(v) determining the amount of second antibody bound to the (first antibody - fusion protein - sigma<sup>70</sup> subunit or portion thereof) complex formed on the matrix or solid support.</li></ol></p>
+    <p id="p-00020-en" num="0020">The invention provides an <i>in vitro</i> method or assay for screening peptide libraries or chemical libraries for compounds (ligands) which mimic the anti-sigma<sup>70</sup> factor and which thereby have the capability of inhibiting the interaction of core RNA polymerase and sigma<sup>70</sup> subunits. Such inhibitor compounds are potentially useful in the treatment of bacterial infections.</p>
+    <p id="p-00021-en" num="0021">The capability of the identified ligands to inhibit the interaction between a bacterial core RNA polymerase and a sigma<sup>70</sup> subunit can be tested by known methods, in particular by a RNA polymerase assay, such as that disclosed in Orsini et al <i>(supra)</i>, wherein transcription of a DNA template, such as calf thymus DNA, T<sub>4</sub> DNA or poly(dA-dT), is measured by the incorporation of a labeled RNA precursor such as [5-<sup>3</sup>H]UTP</p>
+    <p id="p-00022-en" num="0022">In the method or assay according to the invention, the sigma<sup>70</sup> subunit or portion thereof is preferably obtained from <i>Escherichia coli</i> (particularly the C-terminal 99 amino acids of the sigma<sup>70</sup> subunit containing the anti-sigma binding region) or <i>Salmonella typhimurium.</i></p>
+    <p id="p-00023-en" num="0023">In the fusion protein, the anti-sigma<sup>70</sup> factor of bacteriophage T<sub>4</sub> will preferably have an amino acid sequence as shown in SEQ ID NO: 1 or SEQ ID NO: 2. The fusion protein comprises glutathione-S-transferase (GST-AsiA) as the marker gene protein product.</p>
+    <heading id="h-00007-en">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+    <p id="p-00024-en" num="0024">
+      <ul id="ul-00001-en" list-style="none">
+        <li>Fig. 1: Map of plasmid vector pARC 8112.</li>
+        <li>Fig. 2: Map of plasmid vector pARC 8100.</li>
+        <li>Fig. 3: Map of plasmid vector pARC 8115.</li>
+        <li>Fig. 4: Map of plasmid vector pARC 8101.</li>
+        <li>Fig. 5: Map of plasmid vector pARC 8114.</li>
+        <li>Fig. 6: Map of plasmid vector pARC 8105.</li>
+        <li>Fig. 7: Map of plasmid vector pARC 8180.</li>
+        <li>Fig. 8: Activity of GST-AsiA protein on sigma<sup>70</sup>-dependent transcription. Assay: 0.5 µg <i>E. coli</i> core polymerase, 2.5 µg sigma<sup>70</sup> protein, 1.0 µg T<sub>4</sub> DNA and NTPs. Varying concentrations of GST-Asi was preincubated with sigma protein before addition to the reaction mixture. <sup>3</sup>H-UTP specific activity was 2800 - 3000 cpm/nmole.</li>
+      </ul>
+    </p>
+    <heading id="h-00008-en">EXAMPLES</heading>
+    <p id="p-00025-en" num="0025">Throughout this description the terms "standard protocols" and "standard procedures", when used in the context of molecular cloning techniques, are to be understood as protocols and procedures found in an ordinary laboratory manual such as: <nplcit id="ncit-00013" npl-type="b"><text>Current Protocols in Molecular Biology, editors F. Ausubel et al., John Wiley and Sons, Inc. 1994</text></nplcit>, or <nplcit id="ncit-00014" npl-type="b"><text>Sambrook, J., Fritsch, E.F. and Maniatis, T., Molecular Cloning: A laboratory manual, 2nd Ed., Cold Spring Harbor Laboratory Press, Cold Spring Harbor, NY 1989</text></nplcit>.</p>
+    <heading id="h-00009-en">EXAMPLE 1: Cloning, expression and purification of <i>E. coli</i> sigma<sup>70</sup></heading>
+    <p id="p-00026-en" num="0026">PCR primers corresponding to the 5'- and 3'-ends of the coding sequences of <i>E. coli</i> sigma were designed with the 5'-sequence including a site for the restriction enzyme <i>Eco</i>RI and the 3'-sequence including a site for the restriction enzyme <i>Sal</i>I. The PCR amplified DNA fragment was restricted with the above mentioned restriction enzymes and cloned into the <i>Eco</i>RI<i>-Sal</i>I sites of the expression vector pTrc99a (<nplcit id="ncit-00015" npl-type="s"><text>Amann et al. (1988) Gene 69, 301</text></nplcit>), whereafter the ligation mix was transformed into <i>E. coli</i> DH5α. Transformants harboring the recombinant plasmid with the expected restriction profile were identified.</p>
+    <p id="p-00027-en" num="0027">
+      <i>E. coli</i> DH5α cells harboring the recombinant plasmid, labeled pARC 8112 (<b>Fig. 1</b>), were grown at +37°C in LB till an OD (600 nm) of 0.4 and induced with 1 mM IPTG. More than 50% of the 90 kDa sigma<sup>70</sup> protein was found as inclusion bodies as had been reported earlier (Borukhov &amp; Goldfarb (1993) Protein expression and purification 4, 503). The overexpressed sigma<sup>70</sup> was purified and renatured following standard protocols.</p>
+    <p id="p-00028-en" num="0028">The activity of the purified sigma<sup>70</sup> protein was confirmed by its ability to support transcription mediated by <i>E. coli</i> RNA polymerase core enzyme. <i>E. coli</i> RNA polymerase core and holoenzyme forms were purified following the protocol of <nplcit id="ncit-00016" npl-type="s"><text>Burgess and Jendriask (1975) Biochemistry 14, 4634-4638</text></nplcit>. Polymerase activity using T<sub>4</sub> DNA as template was assayed as described by <nplcit id="ncit-00017" npl-type="s"><text>Orsini et al. (1993) J. Bacteriol. 175, 85-93</text></nplcit>.</p>
+    <heading id="h-00010-en">EXAMPLE 2: Cloning, expression and purification of <i>Salmonella typhimurium</i> sigma<sup>70</sup></heading>
+    <p id="p-00029-en" num="0029">The coding sequence of the sigma<sup>70</sup> of <i>S. typhimurium</i> was amplified using the forward primer shown as SEQ ID NO: 3 and the reverse primer shown as SEQ ID NO: 4. The forward primer includes the site for the restriction enzyme <i>Eco</i>RI, while the reverse primer includes the sequence encoding the stop codon and a site for the restriction enzyme <i>Sal</i>I<i>. S. typhimurium</i> DNA was used as template and the amplified fragment digested with appropriate enzymes. This fragment was then ligated to <i>Eco</i>RI - <i>Sal</i>I digested pTrc 99A (<nplcit id="ncit-00018" npl-type="s"><text>Amann et al. (1988) Gene 69, 301</text></nplcit>) and transformed into <i>E. coli</i> DH5α to obtain the recombinant plasmid pARC 8118. Plasmid DNA of pARC 8118 was digested with <i>Eco</i>RI - <i>Hind</i>III and the released 2.3 kb DNA fragment encompassing the entire coding sequence of <i>S. typhimurium</i> sigma<sup>70</sup> was cloned into the <i>Eco</i>RI - <i>Hind</i>III digested pRSET B (<nplcit id="ncit-00019" npl-type="s"><text>Kroll et al. (1993) DNA and Cell Biol. 12, 441</text></nplcit>) vector which has not only the T<sub>7</sub> promoter but also sequences encoding a his tag which is now fused at the C-terminus of <i>S. typhimurium</i> sigma<sup>70</sup>. The recombinant plasmid encoding the <i>S. typhimurium</i> sigma<sup>70</sup> fused to a His tag was labeled pARC 8133.</p>
+    <p id="p-00030-en" num="0030">Plasmid DNA of pARC 8133 was then used to transform the expression host <i>E. coli</i> BL21(DE3) and transformants obtained at +37°C. Cells harboring pARC 8133 were grown in LB at +37°C till an OD of 0.4 at 600 nm and induced with 1 mM IPTG for 4 hours. The cells were pelleted, suspended in buffer and sonicated, according to standard methods. The lysed cells were clarified by centrifugation at 45,000 rpm for 60 min at +4°C and the clarified supernatant was loaded directly on Ni-agarose (Pharmacia) and washed with 50 mM imidazole. The bound protein was eluted with 200 mM imidazole and dialysed overnight at +4°C against 50 mM Tris-Cl, pH 7.5. The eluate was concentrated using Amicon cone filters to 1/10 volume. The concentrated protein was cleaved with enterokinase, used at a ratio of 1:50 of the enzyme, at +25°C for 14 hours. The cleaved mixture was passed through a Ni<sup>2+</sup> agarose column and the unbound material collected. The cleaved protein was analyzed for homogeneity by SDS-PAGE.</p>
+    <heading id="h-00011-en">EXAMPLE 3: Toxicity of the anti-sigma protein</heading>
+    <heading id="h-00012-en">
+      <i>3.1. Cloning of the asiA gene</i>
+    </heading>
+    <p id="p-00031-en" num="0031">The coding sequence for the <i>asiA</i> gene (Orsini et al., <i>supra</i>) was amplified from the genomic DNA of bacteriophage T<sub>4</sub> by PCR using the forward primer shown as SEQ ID NO: 5 and the reverse primer designated shown as SEQ ID NO: 6.</p>
+    <p id="p-00032-en" num="0032">The 5'-primer included the sequence of the restriction enzyme <i>Nco</i>I while the 3'-primer included the sequence for the restriction enzyme <i>Bam</i>HI. The coding sequence was amplified by PCR following standard protocols and the amplified fragment ligated to <i>Nco</i>I <i>- Bam</i>HI restricted pBR329 and transformed into competent cells <i>E. coli</i> DH5α. Recombinants were selected at +37°C as chloramphenicol sensitive, ampicillin resistant transformants. One of the transformants having the desired restriction pattern was labeled pARC 8100 (<b>Fig. 2</b>).</p>
+    <p id="p-00033-en" num="0033">The inclusion of the sequence encoding <i>Nco</i>I resulted in the change of the second amino acid from asparagine to glycine (SEQ ID NO: 2). The nucleotide sequence of the <i>asiA</i> gene cloned in pARC 8100 was verified by double stranded sequencing and found to be identical to the <i>asiA</i> sequence as disclosed by Orsini et al., except for the expected change of codon for the second amino acid as a result of the PCR cloning protocol used.</p>
+    <heading id="h-00013-en">
+      <i>3.2. In vivo toxicity of asiA product in E. coli</i>
+    </heading>
+    <heading id="h-00014-en">(A)</heading>
+    <p id="p-00034-en" num="0034">The <i>Nco</i>I <i>- Bam</i>HI DNA fragment from pARC 8100 was ligated to pET 8c Km (<nplcit id="ncit-00020" npl-type="s"><text>Umender K. Sharma et al., J. Bact., 177, 6745 (1996</text></nplcit>)) and kanamycin resistant transformants with <i>E. coli</i> DH5α were selected at +37°C. One of the transformants harboring a plasmid with the expected restriction enzyme profile was labeled pARC 8115 (<b>Fig. 3</b>). pARC 8115 plasmid DNA was then used to transform the expression host <i>E. coli</i> BL21(DE3) (Studier et al., <i>supra</i>) and transformants selected both at +37°C and at +30°C. However, no viable transformants could be obtained at either of the temperatures. The leaky expression from the T<sub>7</sub> promoter in pET 8c being much higher than from pET 11d(Km) (Studier et al., <i>supra</i>), the toxicity of the <i>asiA</i> product could explain the non-transformability.</p>
+    <p id="p-00035-en" num="0035">Transformants could however be obtained using <i>E. coli</i> BL21(DE3)/pLysS as host, in which the leaky expression is additionally repressed by the T<sub>7</sub> lysozyme expressed from pLysS.</p>
+    <heading id="h-00015-en">(B)</heading>
+    <p id="p-00036-en" num="0036">The <i>Nco</i>I <i>- Bam</i>HI 284 bp DNA fragment was obtained from pARC 8100 and ligated to the <i>Nco</i>I <i>- Bam</i>HI sites of pET 11d Km (<nplcit id="ncit-00021" npl-type="s"><text>Umender K. Sharma et al., J. Bact., 177, 6745 (1996</text></nplcit>)) and transformed into <i>E. coli</i> DH5α. Transformants were selected for kanamycin resistance. Plasmid preparations from individual transformants were digested with restriction enzymes and the correct transformant that released the 284 bp fragment after <i>Nco</i>I <i>- Bam</i>HI digest was labeled pARC 8101 (<b>Fig. 4</b>). The transformants were selected at +37°C and appeared normal.</p>
+    <p id="p-00037-en" num="0037">pARC 8101 DNA was then used to transform the expression host <i>E. coli</i> BL26(DE3). BL26 is a lac Iq isogenic strain of BL21 (Studier et al., <i>supra</i>). Transformants selected for kanamycin both at +37°C and at +30°C.<br /> The transformants obtained at +37°C were morphologically sick and non-viable indicating the acute toxicity of the leaky expression of the <i>asiA</i> gene. In contrast, healthy colonies could be obtained when transformants were selected at +30°C where the leaky expression from the T<sub>7</sub> promoter can be expected to be negligible.</p>
+    <p id="p-00038-en" num="0038">BL26(DE3)/pLysS colonies were healthy both at +37°C and +30°C, indicating that the tight regulation of expression in this strain made the <i>asiA</i> gene non-toxic to the host. Transformants obtained from DH5α were also healthy both at +37°C and +30°C, indicating that the gene when transformed into a non-expression host was non-toxic.</p>
+    <heading id="h-00016-en">(C)</heading>
+    <p id="p-00039-en" num="0039">The <i>asiA</i> gene was excised from pARC 8101 as a <i>Xba</i>I <i>- Bam</i>HI DNA fragment to include the sequence for the ribosome binding site and ligated to the low copy vector, <i>Xba</i>I <i>- Bam</i>HI cleaved pWKS129 (Wang &amp; Kushner (1991) Gene 100, 195) and the ligation mix transformed to <i>E. coli</i> DH5α. Recombinant plasmid harboring the <i>asiA</i> gene was identified by restriction profile and labeled pARC 8114 (<b>Fig. 5</b>).</p>
+    <p id="p-00040-en" num="0040">This plasmid DNA when transformed into <i>E. coli</i> BL21(DE3) gave viable transformants both at +37°C and +30°C, since the low copy number of the plasmid reduced the level of the AsiA protein expressed through leaky expression.</p>
+    <heading id="h-00017-en">EXAMPLE 4: Glutathione-S-transferase - Anti-sigma fusion protein</heading>
+    <heading id="h-00018-en">
+      <i>4.1. Cloning of fusion protein in E. coli</i>
+    </heading>
+    <p id="p-00041-en" num="0041">The coding sequence for the <i>asiA</i> gene was excised as an <i>Nco</i>I <i>- BamHI</i> fragment from pARC 8100 and ligated to <i>Nco</i>I <i>- BamHI</i> cleaved pARC 0499. The plasmid pARC 0499 has a <i>Nco</i>I site in frame with the glutathione-S-transferase encoding sequence, enabling fusion of the N-terminus of <i>asiA</i> sequences. The ligation mix was transformed into <i>E. coli</i> DH5α and transformants selected at +37°C and +30°C. Viable colonies were obtained at both temperatures indicating the N-terminal fusion reduces the toxicity of the protein. The recombinant plasmid obtained with the sequences encoding GST-AsiA was labeled pARC 8105 (<b>Fig. 6</b>).</p>
+    <p id="p-00042-en" num="0042">The GST-AsiA fusion protein was purified as follows: <i>E. coli</i> DH5α harboring pARC 8105 was grown in LB till an OD at 600 nm of 0.6 at +37°C followed by the addition of 1 mM IPTG and allowing growth for a further period of 2 hours.<br /> The cells were then centrifuged at 5000 rpm for 10 minutes. The pelleted cells were suspended in Buffer A (phosphate buffered saline (PBS) pH 7.5, 5 µg/ml aprotinin, 5 µg/ml leupeptin) and sonicated. The sonicate was clarified at 45,000 rpm for 10 minutes at +4°C and the supernatant passed through a Glutathione-Sepharose 4B column previously equilibrated with PBS. The column was washed with 5 bed volumes of 1 M urea once followed by washing with PBS (10 bed volumes). The bound protein was eluted with 10 mM glutathione and the eluate dialysed overnight against buffer containing 50 mM Tris(hydroxymethyl)aminomethane hydrochloride (Tris HCl), pH 7.5. The dialysed protein was then concentrated to 1/10 vol using Amicon cone filters. The concentrated protein was then treated with 1:50 ratio of Factor Xa protease in a buffer containing 50 mM Tris HCl, pH 7.5, 100 mM NaCl, 1 mM CaCl<sub>2</sub> at +25°C for 4 hours. The digested eluate was then passed through a Glutathione-Sepharose column and the unbound fraction collected and analyzed for the purity of the AsiA protein by SDS-PAGE.</p>
+    <heading id="h-00019-en">
+      <i>4.2. Cloning of fusion protein in yeast</i>
+    </heading>
+    <p id="p-00043-en" num="0043">The expression and purification of the GST-AsiA fusion protein in <i>E</i>. <i>coli</i> did not allow large scale production because of the inherent toxicity of the fusion protein. To obtain large quantities of the AsiA protein, the possibility of expressing the GST-AsiA fusion protein in a yeast host was investigated. As the <i>Saccharomyces</i> species do not have a sigma<sup>70</sup> homologue, the AsiA protein was expected not to have toxicity effects on the transcription apparatus of the host and thus for initial experiments a <i>Saccharomyces cerevisiae</i> expression system was chosen.</p>
+    <p id="p-00044-en" num="0044">The gene encoding the GST-AsiA fusion protein on the plasmid pARC 8105 was amplified using the forward primer shown as SEQ ID NO: 7 and the reverse primer shown as SEQ ID NO: 8. The amplified 1.0 kb fragment was restricted with <i>Bgl</i>II and <i>Hind</i>III which are the sites introduced by the primer sequence at the 5'-and 3'-ends of the amplified PCR fragment. The <i>Bgl</i>II - <i>Hind</i>III restricted fragment was ligated into the <i>Bgl</i>II- <i>Hind</i>III restricted <i>Saccharomyces cerevisiae</i> cloning vector pSW6 (<nplcit id="ncit-00022" npl-type="s"><text>Pascall et al. (1991) J. Mol. Endocrinol. 6, 63-70</text></nplcit>). The ligation mixture was transformed into the <i>Saccharomyces cerevisiae</i> host CGY1585 and transformants selected on leucine (3 µg/ml).</p>
+    <p id="p-00045-en" num="0045">Individual transformants from both reaction mixtures were screened for the presence of plasmid with the expected restriction profile. The recombinant plasmid obtained with the vector PSW6 was labeled pARC 8180 (<b>Fig. 7</b>).<i>S. cerevisiae</i> CGY 1585 strain harbouring pARC 8180 were grown using standard procedures and lysed by passing the concentrated cell suspension through a French Press. The lysate was then centrifuged at 10,000 rpm and the supernatant applied to a Glutathione-Sepharose column (Pharmacia) and the fusion protein purified following standard protocols.</p>
+    <p id="p-00046-en" num="0046">The purified GST-AsiA fusion protein was cleaved with Factor Xa as recommended and the AsiA protein separated. The yield of the purified AsiA protein was 500 µg/l. The activity of the GST-AsiA protein, expressed and purified from <i>Saccharomyces,</i> was compared to that obtained from <i>E. coli</i> and found to be identical in its ability to inhibit sigma<sup>70</sup> mediated transcription of T<sub>4</sub> template (<b>Fig. 8</b>). AsiA protein purified from GST-AsiA after Factor Xa cleavage also inhibited <i>E. coli</i> sigma<sup>70</sup> dependent transcription.</p>
+    <p id="p-00047-en" num="0047">The ability to overexpress and purify large quantities of the AsiA protein in <i>Saccharomyces</i> without toxicity problems for the host also indicates that the AsiA protein does not have a corresponding sigma<sup>70</sup> homologue in this species. As the <i>Saccharomyces</i> RNA polymerase is similar to that of higher eukaryotes it also substantiates the fact that the AsiA protein is toxic only to the prokaryotic transcription apparatus.</p>
+    <p id="p-00048-en" num="0048">In order to test the feasibility of expressing AsiA in alternative yeast expression systems, <i>Pichia pastoris</i> expression system was chosen. The gene encoding GST-AsiA was amplified by PCR from pARC 8105 and cloned into pPIC9K (Invitrogen).<ul id="ul-00002-en" list-style="none" compact="compact"><li>5' primer (asi34) - TA TAC GTA TCC CCT ATA CTA GGT TAT TGG</li><li>3' primer (asi35) - T TGC GGC CGC TTA TTT GTT CGT ATA CAT</li></ul><tables id="tables-00001-en" num="0001"><table frame="none"><tgroup cols="3" colsep="0" rowsep="0"><colspec colnum="1" colname="col1" colwidth="43mm" /><colspec colnum="2" colname="col2" colwidth="37mm" /><colspec colnum="3" colname="col3" colwidth="12mm" /><tbody><row><entry>PCR conditions used were:</entry><entry>melting temperature</entry><entry>94 °C</entry></row><row><entry /><entry>annealing temperature</entry><entry>50 °C</entry></row><row><entry /><entry>extension temperature</entry><entry>72 °C</entry></row></tbody></tgroup></table></tables> and 30 cycles were performed.</p>
+    <p id="p-00049-en" num="0049">1Kb PCR product was cloned as SnaBI-NotI fragment into pPIC9K (pARC 8274). <i>Pichia pastoris</i> transformants of pARC 8274 were selected based on G 418 resistance. Expression studies indicated that GST-AsiA was secreted into the culture supernatant. GST-AsiA purified from the culture supernatant was found to inhibit <i>in vitro</i> transcription as efficiently as that of either <i>E. coli</i> or the <i>Saccharomyces</i> GST-AsiA.</p>
+    <p id="p-00050-en" num="0050">This indicates that it is feasible to produce recombinant GST-AsiA in a yeast expression system.</p>
+    <heading id="h-00020-en">EXAMPLE 5: <i>In vitro</i> AsiA-sigma<sup>70</sup> interaction assays</heading>
+    <heading id="h-00021-en">
+      <i>5.1. RNA polymerase assay</i>
+    </heading>
+    <p id="p-00051-en" num="0051">The <i>E. coli</i> RNA polymerase assay was standardized following the protocol of <nplcit id="ncit-00023" npl-type="s"><text>Orsini et al. (J. Bacteriol. 175, 85-93, 1993</text></nplcit>) using T<sub>4</sub> phage DNA as template to quantify sigma<sup>70</sup> dependent transcription. <i>E. coli</i> RNA polymerase core enzyme was purified following the protocol of <nplcit id="ncit-00024" npl-type="s"><text>Burgess and Jendriask (1975) Biochemistry 14, 4634-4638</text></nplcit>.</p>
+    <heading id="h-00022-en">
+      <i>5.2. Inhibition of E. coli transcription by AsiA protein</i>
+    </heading>
+    <p id="p-00052-en" num="0052">Increasing concentrations of AsiA protein expressed in <i>S. cerevisiae</i> was added to the reaction mixture and the transcription mediated by the <i>E. coli</i> RNA polymerase quantified. The results showed that increasing concentrations of AsiA protein completely inhibited transcription mediated by <i>E. coli</i> sigma<sup>70</sup>.</p>
+    <heading id="h-00023-en">
+      <i>5.3. Inhibition of E. coli transcription by GST-AsiA fusion protein</i>
+    </heading>
+    <p id="p-00053-en" num="0053">The GST-AsiA fusion protein was purified from <i>S. cerevisiae</i> as described in Section 5.2 and used at different concentrations in the <i>E</i>. <i>coli</i> sigma<sup>70</sup> mediated RNA polymerase transcription assay, using phage T<sub>4</sub> DNA as template. The GST-AsiA fusion protein inhibited &gt;80% the sigma<sup>70</sup> mediated transcription when the core enzyme was reconstituted with 2.5 µg of sigma<sup>70</sup> protein.</p>
+    <heading id="h-00024-en">
+      <i>5.4. Reactivation of E. coli sigma<sup>70</sup> mediated transcription</i>
+    </heading>
+    <p id="p-00054-en" num="0054">Increasing concentrations of <i>E. coli</i> sigma<sup>70</sup> protein were added to the reaction mixture containing 0.1 µg of AsiA. As shown in Table 1, addition of sigma<sup>70</sup> protein could reactivate transcription mediated by <i>E. coli</i> RNA polymerase. This reversal of inhibition demonstrates the specific interaction of the AsiA protein with sigma<sup>70</sup>.<tables id="tables-00002-en" num="0002"><table frame="all"><title>TABLE 1</title><tgroup cols="3"><colspec colnum="1" colname="col1" colwidth="102mm" /><colspec colnum="2" colname="col2" colwidth="25mm" /><colspec colnum="3" colname="col3" colwidth="39mm" /><thead><row><entry morerows="1" valign="top" /><entry align="center" valign="top"><i>E. coli</i> sigma<sup>70</sup></entry><entry align="center" valign="top"><i>S. typhimurium</i> sigma<sup>70</sup></entry></row><row><entry namest="col2" nameend="col3" align="left" valign="top">[<sup>3</sup>H]UTP <i>(nmol)</i></entry></row></thead><tbody><row><entry><i>E. coli</i> RNA polymerase</entry><entry>2.1</entry><entry>2.3</entry></row><row><entry><i>E. coli</i> RNA polymerase + 0.1 µg AsiA</entry><entry>0.57</entry><entry>0.34</entry></row><row><entry><i>E. coli</i> RNA polymerase + 0.1 µg AsiA + 4 µg sigma<sup>70</sup></entry><entry>2.3</entry><entry>3.0</entry></row><row><entry><i>E</i>. <i>coli</i> RNA polymerase + 0.1 µg AsiA + 4 µg sigma<sup>70</sup> (AsiA preincubated)</entry><entry>0.68</entry><entry>0.98</entry></row></tbody></tgroup></table></tables></p>
+    <heading id="h-00025-en">
+      <i>5.5. Effect of Salmonella typhimurium sigma</i>
+      <sup>70</sup>
+      <i>on E. coli transcription</i>
+    </heading>
+    <p id="p-00055-en" num="0055">As described in Section 5.1, the <i>E</i>. <i>coli</i> RNA polymerase activity assay was standardized with purified enzyme and phage T<sub>4</sub> DNA as template. The RNA polymerase could be &gt;80% inhibited by 0.07 µg of purified AsiA protein.</p>
+    <p id="p-00056-en" num="0056">To a reaction mixture containing the <i>E. coli</i> RNA polymerase, T<sub>4</sub> DNA and 0.1 µg of AsiA, increasing concentrations of purified <i>Salmonella typhimurium</i> sigma<sup>70</sup> was added and the RNA polymerase activity quantified. As shown in Table 1, addition of 4 µg of <i>S</i>. <i>typhimurium</i> sigma<sup>70</sup> could restore the activity of the RNA polymerase.</p>
+    <heading id="h-00026-en">
+      <i>5.6. Preincubation of sigma</i>
+      <sup>70</sup>
+      <i>with AsiA</i>
+    </heading>
+    <p id="p-00057-en" num="0057">To a reaction mixture containing <i>E. coli</i> RNA polymerase and T<sub>4</sub> DNA template there was added 0.1 µg AsiA and 4 µg <i>E. coli</i> or <i>S. typhimurium</i> sigma<sup>70</sup>, preincubated at +37°C for 10 min with 0.1 µg of AsiA. As shown in Table 1, preincubation of the sigma<sup>70</sup> with AsiA abolished the ability of the sigma<sup>70</sup>, from both <i>E. coli</i> and <i>S. typhimurium,</i> to activate <i>E. coli</i> RNA polymerase.</p>
+    <heading id="h-00027-en">EXAMPLE 6: Competitive ELISA for quantification of AsiA-sigma<sup>70</sup> interaction</heading>
+    <heading id="h-00028-en">
+      <i>Screening assays</i>
+    </heading>
+    <p id="p-00058-en" num="0058">The above principles provide a basis for a method of identification of oligonucleotide sequences encoding peptides, which may be either related or unrelated to the AsiA peptide, and which could efficiently bind to sigma<sup>70</sup> subunits from <i>E. coli, S. typhimurium</i> and/or other housekeeping or virulence-associated sigma subunits of bacterial pathogens.</p>
+    <p id="p-00059-en" num="0059">The identification of such peptide structures would enable the further identification, by known methods, of peptoids, peptidomimetics and organic molecules which can be tested in transcription assays for inhibition of sigma<sup>70</sup> dependent transcription.</p>
+    <p id="p-00060-en" num="0060">Truncated sigma<sup>70</sup> (C-terminal 99 amino acids) which has been shown to be the anti-sigma binding region of sigma<sup>70</sup> of <i>E</i>. <i>coli</i> (<nplcit id="ncit-00025" npl-type="s"><text>Severinova et al., J. Mol. Biol. (1996) 263 (5), pp 637-647</text></nplcit>) was cloned and expressed in a His tag expression vector resulting in a (His)<sub>5</sub>-tagged protein product.</p>
+    <p id="p-00061-en" num="0061">A solution of the protein product (200 pmoles/ml) in a pH 7.5 buffer comprising Tris HCl (10 mM) and sodium chloride (50 mM) was prepared and 200 µl of solution were added per well of a nickel-coated microtitre plate, followed by incubation at room temperature for a period of two hours. The microtitre plate was then washed 5 times with the buffer solution and then incubated at 37°C for one hour with a solution of bovine serum albumin (3% w/v) in the above buffer. After washing 5 times with phosphate buffered saline (PBS) with "Tween" 20 (polyoxyethylene (20) sorbitan monolaurate, 0.5% v/v), the GST-AsiA fusion protein prepared as described in <i>Example 4.1.</i> above (100 ng) was added together with a defined amount of a putative inhibitor of truncated sigma<sup>70</sup> protein (corallopyronin, myxopyronin or ripostatin) and incubated at 37°C for one hour. Further washing (5 times) with PBS-"Tween" 20 was carried out and then anti-GST antibodies (1:2000) raised in rabbits were added to the wells, with incubation at 37°C for one hour. The previous washing step was repeated and thereafter anti-rabbit IgG-horse radish peroxidase (HRP) conjugate (1:2000) was added and incubated at 37°C for one hour. A final wash with PBS-"Tween" 20 was carried out, before adding the HRP enzyme substrate, tetramethyl benzidene/ H<sub>2</sub>O<sub>2</sub>. The enzymic reaction (resulting in the development of colour) was stopped after a suitable period of time by the addition of 6N H<sub>2</sub>SO<sub>4</sub> and the microtitre plate was "read" in a spectrophotometer using light of wavelength (λ) 450 nm. The results obtained are shown in Table 2 following. <tables id="tables-00003-en" num="0003"><table frame="all"><title>TABLE 2</title><tgroup cols="2"><colspec colnum="1" colname="col1" colwidth="57mm" /><colspec colnum="2" colname="col2" colwidth="49mm" /><thead><row><entry valign="top">Test</entry><entry valign="top">% Binding to truncated sigma<sup>70</sup></entry></row></thead><tbody><row><entry>GST-AsiA (500 ng/ml)</entry><entry align="char" char="." charoff="11">100</entry></row><row><entry>GST-AsiA + AsiA (7 µg/ml)</entry><entry align="char" char="." charoff="11">12</entry></row><row><entry>GST-AsiA + corallopyronin (30 µg/ml)</entry><entry align="char" char="." charoff="11">69</entry></row><row><entry>GST-AsiA + myxopyronin (30 µg/ml)</entry><entry align="char" char="." charoff="11">56</entry></row><row><entry>GST-AsiA + ripostatin (1 µg/ml)</entry><entry align="char" char="." charoff="11">100</entry></row><row><entry>GST-AsiA + ripostatin (10 µg/ml)</entry><entry align="char" char="." charoff="11">55</entry></row><row><entry>GST-AsiA + ripostatin (100 µg/ml)</entry><entry align="char" char="." charoff="11">1.5</entry></row></tbody></tgroup></table></tables></p>
+    <heading id="h-00029-en">SEQUENCE LISTING</heading>
+    <p id="p-00062-en" num="0062">
+      <ul id="ul-00003-en" list-style="none">
+        <li>&lt;110&gt; ASTRA AKTIEBOLAG</li>
+        <li>&lt;120&gt; RNA Polymerase Assay</li>
+        <li>&lt;130&gt; R 1765</li>
+        <li>&lt;140&gt;<br /> &lt;141&gt;</li>
+        <li>&lt;160&gt; 8</li>
+        <li>&lt;170&gt; PatentIn Ver. 2.0</li>
+        <li>&lt;210&gt; 1<br /> &lt;211&gt; 90<br /> &lt;212&gt; PRT<br /> &lt;213&gt; Bacteriophage T4</li>
+        <li>&lt;400&gt; 1 <img id="img-00001-en" file="imgb0001.tif" wi="152" he="90" img-content="dna" img-format="tif" /></li>
+        <li>&lt;210&gt; 2<br /> &lt;211&gt; 90<br /> &lt;212&gt; PRT<br /> &lt;213&gt; Bacteriophage T4</li>
+        <li>&lt;400&gt; 2 <img id="img-00002-en" file="imgb0002.tif" wi="153" he="13" img-content="dna" img-format="tif" /><img id="img-00003-en" file="imgb0003.tif" wi="155" he="76" img-content="dna" img-format="tif" /></li>
+        <li>&lt;210&gt; 3<br /> &lt;211&gt; 27<br /> &lt;212&gt; DNA<br /> &lt;213&gt; Artificial Sequence</li>
+        <li>&lt;220&gt;<br /> &lt;223&gt; Description of Artificial Sequence: PCR primer</li>
+        <li>&lt;400&gt; 3<br /> atggaattca acccgcagtc acagctg    27</li>
+        <li>&lt;210&gt; 4<br /> &lt;211&gt; 27<br /> &lt;212&gt; DNA<br /> &lt;213&gt; Artificial Sequence</li>
+        <li>&lt;220&gt;<br /> &lt;223&gt; Description of Artificial Sequence: PCR primer</li>
+        <li>&lt;400&gt; 4<br /> tgagtcgact taatcgtcga ggaagct    27</li>
+        <li>&lt;210&gt; 5<br /> &lt;211&gt; 25<br /> &lt;212&gt; DNA<br /> &lt;213&gt; Artificial Sequence</li>
+        <li>&lt;220&gt;<br /> &lt;223&gt; Description of Artificial Sequence: PCR primer</li>
+        <li>&lt;400&gt; 5<br />ggccatgggc aataaaaaca ttgat    25</li>
+        <li>&lt;210&gt; 6<br /> &lt;211&gt; 26<br /> &lt;212&gt; DNA<br /> &lt;213&gt; Artificial Sequence</li>
+        <li>&lt;220&gt;<br /> &lt;223&gt; Description of Artificial Sequence: PCR primer</li>
+        <li>&lt;400&gt; 6<br /> ggggatcctt atttgttcgt atacat    26</li>
+        <li>&lt;210&gt; 7<br /> &lt;211&gt; 30<br /> &lt;212&gt; DNA<br /> &lt;213&gt; Artificial Sequence</li>
+        <li>&lt;220&gt;<br /> &lt;223&gt; Description of Artificial Sequence: PCR primer</li>
+        <li>&lt;400&gt; 7<br /> gaaagatctc atatgtcccc tatactaggt    30</li>
+        <li>&lt;210&gt; 8<br /> &lt;211&gt; 29<br /> &lt;212&gt; DNA<br /> &lt;213&gt; Artificial Sequence</li>
+        <li>&lt;220&gt;<br /> &lt;223&gt; Description of Artificial Sequence: PCR primer</li>
+        <li>&lt;400&gt; 8<br /> ctaagctttt atttgttcgt atacatctc    29</li>
+      </ul>
+    </p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20080206">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>A method of identifying a ligand of a bacterial sigma70 subunit which comprises contacting the sigma70 subunit or a portion thereof comprising the anti-sigma binding region, with a test compound and a GST-AsiA fusion protein produced in a yeast expression system, and determining whether the test compound binds competitively with the anti-sigma70 factor to the sigma70 subunit or portion thereof.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>A method according to claim 1, which comprises:
+(i) immobilizing the sigma70 subunit or portion thereof on a matrix or solid support.(ii) adding the test compound and the fusion protein;(iii) adding a first antibody against the fusion protein;(iv) adding a labeled second antibody against the first antibody; and(v) determining the amount of second antibody bound to the (first antibody - fusion protein - sigma70 subunit or portion thereof) complex formed on the matrix or solid support.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>A method according to claim 1 or claim 2, wherein the sigma70 subunit or portion thereof is obtained from Escherichia coli or Salmonella typhimurium.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>A method according to any one of the preceding claims, wherein the AsiA protein has an amino acid sequence as shown in SEQ ID NO: 1 or SEQ ID NO: 2.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>A method according to any one of the preceding claims wherein the ligand is an inhibitor of a bacterial sigma70 subunit.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>A method according to any one of the previous claims, wherein the fusion protein is produced in a Saccharomyces cerevisiae or Pichia pastoris expression system.</claim-text>
+    </claim>
+  </claims>
+  <claims id="claims_fre" lang="fre" format="original" date-changed="20080206">
+    <claim num="1" id="clm-00001-fr">
+      <claim-text>Procédé d'identification d'un ligand d'une sous-unité sigma70 bactérienne qui consiste à mettre en contact la sous-unité sigma70 ou une partie de celle-ci comprenant la région de liaison anti-sigma, avec un composé à l'essai et une protéine de fusion GST-AsiA produite dans un système d'expression chez la levure et à déterminer si le composé à l'essai entre en compétition avec le facteur anti-sigma70 pour la liaison à la sous-unité sigma70 ou à une partie de celle-ci.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-fr">
+      <claim-text>Procédé selon la revendication 1, qui consiste à :
+(i) immobiliser la sous-unité sigma70 ou une partie de celle-ci sur une matrice ou un support solide ;(ii) ajouter le composé à l'essai et la protéine de fusion ;(iii) ajouter un premier anticorps dirigé contre la protéine de fusion ;(iv) ajouter un deuxième anticorps marqué dirigé contre le premier anticorps ; et(v) déterminer la quantité de deuxième anticorps lié au complexe (premier anticorps-protéine de fusion-sous-unité sigma70 ou une partie de celle-ci) formé sur la matrice ou le support solide.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-fr">
+      <claim-text>Procédé selon la revendication 1 ou la revendication 2, selon lequel la sous-unité sigma70 ou une partie de celle-ci est obtenue à partir d'Escherichia coli ou de Salmonella typhimurium.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-fr">
+      <claim-text>Procédé selon l'une quelconque des revendications précédentes, selon lequel la protéine AsiA possède une séquence d'acides aminés telle que représentée par SEQ ID NO : 1 ou SEQ ID NO : 2.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-fr">
+      <claim-text>Procédé selon l'une quelconque des revendications précédentes, selon lequel le ligand est un inhibiteur d'une sous-unité sigma70 bactérienne.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-fr">
+      <claim-text>Procédé selon l'une quelconque des revendications précédentes, selon lequel la protéine de fusion est produite dans un système d'expression chez Saccharomyces cerevisiae ou Pichia pastoris.</claim-text>
+    </claim>
+  </claims>
+  <claims id="claims_ger" lang="ger" format="original" date-changed="20080206">
+    <claim num="1" id="clm-00001-de">
+      <claim-text>Verfahren zur Identifizierung eines Liganden einer bakteriellen sigma70-Untereinheit, wobei man in dem Verfahren die sigma70-Untereinheit oder einen den Anti-sigma-Bindungsbereich umfassenden Teil davon mit einer Testverbindung sowie einem in einem Hefe-Expressionssystem produzierten GST-AsiA-Fusionsprotein in Kontakt bringt und bestimmt, ob die Testverbindung mit dem Anti-sigma70-Faktor um die Bindung an die sigma70-Untereinheit oder den Teil davon konkurriert.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-de">
+      <claim-text>Verfahren nach Anspruch 1, bei dem man:
+(i) die sigma70-Untereinheit oder den Teil davon an einer Matrix oder einem festen Träger immobilisiert,(ii) die Testverbindung und das Fusionsprotein zugibt,(iii) einen ersten Antikörper gegen das Fusionsprotein zugibt,(iv) einen markierten zweiten Antikörper gegen den ersten Antikörper zugibt und(v) die Menge an an dem auf der Matrix bzw. dem festen Träger gebildeten Komplex (erster Antikörper - Fusionsprotein - sigma70-Untereinheit oder Teil davon) gebundenem zweiten Antikörper bestimmt.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-de">
+      <claim-text>Verfahren nach Anspruch 1 oder Anspruch 2, wobei die sigma70-Untereinheit oder der Teil davon aus Escherichia coli oder Salmonella typhimurium gewonnen wird.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-de">
+      <claim-text>Verfahren nach einem der vorhergehenden Ansprüche, wobei das AsiA-Protein eine wie in SEQ ID NO: 1 oder SEQ ID NO: 2 dargestellte Aminosäuresequenz aufweist.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-de">
+      <claim-text>Verfahren nach einem der vorhergehenden Ansprüche, wobei es sich bei dem Liganden um einen Inhibitor einer bakteriellen sigma70-Untereinheit handelt.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-de">
+      <claim-text>Verfahren nach einem der obigen Ansprüche, wobei das Fusionsprotein in einem Saccharomyces-cerevisiae- oder Pichia-pastoris-Expressionssystem produziert wird.</claim-text>
+    </claim>
+  </claims>
+  <drawings>
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP1086377B1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP1086377B1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP1086377B1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="EP1086377B1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="EP1086377B1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="EP1086377B1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="EP1086377B1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="EP1086377B1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="EP1086377B1_00009.PNG" alt="image" img-content="undefined" img-format="png" inline="yes" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="EP1086377B1_00010.PNG" alt="image" img-content="undefined" img-format="png" inline="yes" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="EP1086377B1_00011.PNG" alt="image" img-content="undefined" img-format="png" inline="yes" />
+    </figure>
+  </drawings>
+</lexisnexis-patent-document>

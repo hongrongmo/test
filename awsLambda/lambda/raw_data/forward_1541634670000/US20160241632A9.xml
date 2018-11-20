@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160818" file="US20160241632A9.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20160818" time-inserted="085905" date-changed="20160818" time-changed="230719">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent application (corrected publication)">
+      <document-id id="126196671">
+        <country>US</country>
+        <doc-number>20160241632</doc-number>
+        <kind>A9</kind>
+        <date>20160818</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id id="41378159">
+        <country>US</country>
+        <doc-number>14326221</doc-number>
+        <date>20140708</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20160818">
+      <unexamined-printed-without-grant>
+        <date>20160818</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20160818">
+      <classification-ipcr sequence="1">
+        <text>H04L  29/08        20060101AFI20160818BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>04</class>
+        <subclass>L</subclass>
+        <main-group>29</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160818</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20160818">
+      <classification-cpc sequence="1">
+        <text>H04L  67/10        20130101 FI20160818BHUS        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>04</class>
+        <subclass>L</subclass>
+        <main-group>67</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160818</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20160818" lang="eng" format="original">STATE CHANGE ALERTS MECHANISM</invention-title>
+    <related-documents date-changed="20160818">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13725422</doc-number>
+              <date>20121221</date>
+            </document-id>
+            <parent-status>ABANDONED</parent-status>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14003262</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>12615136</doc-number>
+              <date>20091109</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>8473572</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13725422</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>09624192</doc-number>
+              <date>20000724</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>7624172</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>12615136</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>60195989</doc-number>
+          <date>20000407</date>
+        </document-id>
+      </provisional-application>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>60189974</doc-number>
+          <date>20000317</date>
+        </document-id>
+      </provisional-application>
+      <related-publication>
+        <document-id>
+          <country>US</country>
+          <doc-number>20140344365</doc-number>
+          <date>20141120</date>
+        </document-id>
+      </related-publication>
+    </related-documents>
+    <parties date-changed="20160818">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Facebook, Inc.</orgname>
+            <address>
+              <city>Menlo Park</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Austin-Lane</last-name>
+            <first-name>Christopher Emery</first-name>
+            <address>
+              <city>Takoma Park</city>
+              <state>MD</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20160818">
+      <main-family family-id="168724144">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20160241632</doc-number>
+            <kind>A9</kind>
+            <date>20160818</date>
+          </document-id>
+          <application-date>
+            <date>20140708</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20140344365</doc-number>
+            <kind>A1</kind>
+            <date>20141120</date>
+          </document-id>
+          <application-date>
+            <date>20140708</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="168724143">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20160241632</doc-number>
+            <kind>A9</kind>
+            <date>20160818</date>
+          </document-id>
+          <application-date>
+            <date>20140708</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20140344365</doc-number>
+            <kind>A1</kind>
+            <date>20141120</date>
+          </document-id>
+          <application-date>
+            <date>20140708</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20160818" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A communications system including one or more alert gates and an alert controller. Each alert gate is configured to detect a different type of alert feed corresponding to a particular kind of alert. The alert controller is connected to the alert gates and operable to receive detected alerts from the alert gates and to deliver the detected alerts to a user of the communications system.</p>
+  </abstract>
+  <legal-data date-changed="20150320">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150209</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2014344365A1</docdb-publication-number>
+      <docdb-application-id>423835582</docdb-application-id>
+      <new-owner>AOL INC., VIRGINIA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:AOL LLC;REEL/FRAME:034922/0796</free-text-description>
+      <effective-date>
+        <date>20091204</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20150209</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2014344365A1</docdb-publication-number>
+      <docdb-application-id>423835582</docdb-application-id>
+      <new-owner>AOL LLC, VIRGINIA</new-owner>
+      <free-text-description>CHANGE OF NAME;ASSIGNOR:AMERICA ONLINE, INC.;REEL/FRAME:034925/0085</free-text-description>
+      <effective-date>
+        <date>20060403</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20150209</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2014344365A1</docdb-publication-number>
+      <docdb-application-id>423835582</docdb-application-id>
+      <new-owner>AMERICA ONLINE, INC., VIRGINIA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:AUSTIN-LANE, CHRISTOPHER EMERY;REEL/FRAME:034922/0717</free-text-description>
+      <effective-date>
+        <date>20000725</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="4">
+      <publication-date>
+        <date>20150209</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2014344365A1</docdb-publication-number>
+      <docdb-application-id>423835582</docdb-application-id>
+      <new-owner>FACEBOOK, INC., CALIFORNIA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:AOL INC.;REEL/FRAME:034925/0115</free-text-description>
+      <effective-date>
+        <date>20120614</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20160818">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application is a continuation of U.S. application Ser. No. 13/725,422 filed on Dec. 21, 2012, which is a continuation of U.S. application Ser. No. 12/615,136 filed on Nov. 9, 2009, which is now U.S. Pat. No. 8,473,572, which is a continuation of U.S. application Ser. No. 09/624,192, filed on Jul. 24, 2000, which is now U.S. Pat. No. 7,624,172, which claims the benefit of U.S. Provisional Application No. 60/195,989 filed on Apr. 7, 2000. Each of the aforementioned applications and patents is hereby incorporated by reference in its entirety.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00002-en" num="0002">The present invention relates generally to delivering information to a client. More particularly, the present invention relates to alerting a client of a state change within an online service.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND</heading>
+      <p id="p-00003-en" num="0003">Online service providers are constantly offering new services and upgrading existing services to enhance their subscribers online experience. Subscribers have virtually on-demand access to news, weather, financial, sports, and entertainment services as well as the ability to transmit electronic messages and to participate in online discussion groups. For example, subscribers of online service providers such as America Online or CompuServe may view and retrieve information on a wide variety of topics from servers located throughout the world. A server may be maintained by the service provider or by a third party provider who makes information and services available through the network of computers that make up the online service.</p>
+      <p id="p-00004-en" num="0004">The proliferation of electronic mail (email) as a means of communication has facilitated the efforts of online service providers to develop and offer additional services to improve subscribers access to information. For example, a subscriber to America Online may register for a service that tracks stock ticker symbols designated by the subscriber and delivers a daily report directly to the subscriber by email at the end of each trading day. The daily report includes daily closing quote data, index quotes, a market news summary, news associated with the company identified by the ticker symbol, and relevant content links.</p>
+      <p id="p-00005-en" num="0005">America Online offers a service that delivers information to a registered subscriber according to the subscribers profile. By setting up a subscriber profile specifying certain categories and/or search words, a registered subscriber can receive a daily newsletter containing articles that pertain to the subscribers profile. A subscriber can also receive a daily listing of Internet or online sites (links) related to the subscribers profiles and can register to receive reminder emails before holidays and/or other special occasions.</p>
+      <p id="p-00006-en" num="0006">America Online also has provided subscribers with the ability to send and receive instant messages. Instant messages are private online conversations between two or more people who have subscribed to the instant messaging service and have installed the necessary software. Because such online conversations take place virtually in real time, instant messaging can provide immediate access to desired information. Instant messaging is fast becoming a preferred means of communicating among online subscribers.</p>
+      <heading id="h-00004-en" level="1">SUMMARY</heading>
+      <p id="p-00007-en" num="0007">In one general aspect, a communications system includes one or more alert gates and an alert controller. Each alert gate is configured to detect a different type of alert feed corresponding to a particular type of alert. The alert controller is connected to the alert gates and operable to receive detected alerts from the alert gates and to deliver the detected alerts to a user of the communications system.</p>
+      <p id="p-00008-en" num="0008">The alert controller may be configured to maintain a record of alert types registered for by the user of the communications system. The user may be a subscriber of an instant messaging system. The alert controller may deliver one or more detected alerts to the subscriber through the instant messaging system.</p>
+      <p id="p-00009-en" num="0009">The user also may be a subscriber of an online service provider, and the alert controller may deliver one or more detected alerts to the subscriber through the online service provider. The alert controller may be connected to an instant messaging controller through a routing gateway.</p>
+      <p id="p-00010-en" num="0010">The instant messaging controller and the alert controller may be assigned to the user of the communications system according to a hashing technique. Implementations may include multiple alert controllers.</p>
+      <p id="p-00011-en" num="0011">At least one of the alert gates may detect an alert feed from a remote server by sending a status inquiry to the remote server. The remote server may be a mail server, a stock server, a third party server, a weather server and a news server, and/or a calendar server.</p>
+      <p id="p-00012-en" num="0012">Implementations also may include an alert controller network having multiple alert controllers including the alert controller. The alert controller may be configured to communicate with all alert controllers in the alert controller network.</p>
+      <p id="p-00013-en" num="0013">At least one type of alert feed may contain information related to a group, and the alert controller may be dedicated to receiving information related to certain members of the group. The group may be a group of users, a group of stocks, a group of third parties, and/or a group of cities.</p>
+      <p id="p-00014-en" num="0014">In another general aspect, a user of a communications system is alerted by detecting, at an alert gate, an alert feed corresponding to an alert indicative of a change in state at a remote server; receiving, at an alert controller, detected alerts from the alert gate; and delivering a detected alert to a user of the communications system when the user has indicated a desire to receive the alert.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 1</figref> is a block diagram of a communications system.</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIGS. 2-6</figref> are expansions of aspects of the block diagram of <figref>FIG. 1</figref>.</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 7</figref> is a flow chart of a communications method.</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIGS. 8-14</figref> are illustrations of different graphical user interfaces.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DESCRIPTION</heading>
+      <p id="p-00019-en" num="0019">For illustrative purposes, <figref>FIGS. 1-6</figref> describe a communications system for implementing techniques for alerting a client of a state change within an online service. For brevity, several elements in the figures described below are represented as monolithic entities. However, as would be understood by one skilled in the art, these elements each may include numerous interconnected computers and components designed to perform a set of specified operations and/or dedicated to a particular geographical region.</p>
+      <p id="p-00020-en" num="0020">Referring to <figref>FIG. 1</figref>, a communications system <b>100</b> is capable of delivering and exchanging data between a client system <b>105</b> and a host system <b>110</b> through a communications link <b>115</b>. The client system <b>105</b> typically includes one or more client devices <b>120</b> and/or client controllers <b>125</b>. For example, the client system <b>105</b> may include one or more general-purpose computers (e.g., personal computers), one or more special-purpose computers (e.g., devices specifically programmed to communicate with each other and/or the host system <b>110</b>), or a combination of one or more general-purpose computers and one or more special-purpose computers. The client system <b>105</b> may be arranged to operate within or in concert with one or more other systems, such as for example, one or more LANs (“Local Area Networks”) and/or one or more WANs (“Wide Area Networks”).</p>
+      <p id="p-00021-en" num="0021">The client device <b>120</b> is generally capable of executing instructions under the command of a client controller <b>125</b>. The client device <b>120</b> is connected to the client controller <b>125</b> by a wired or wireless data pathway <b>130</b> capable of delivering data.</p>
+      <p id="p-00022-en" num="0022">The client device <b>120</b> and client controller <b>125</b> each typically includes one or more hardware components and/or software components. An example of a client device <b>120</b> is a general-purpose computer (e.g., a personal computer) capable of responding to and executing instructions in a defined manner. Other examples include a special-purpose computer, a workstation, a server, a device, a component, other equipment or some combination thereof capable of responding to and executing instructions. An example of client controller <b>125</b> is a software application loaded on the client device <b>120</b> for commanding and directing communications enabled by the client device <b>120</b>. Other examples include a program, a piece of code, an instruction, a device, a computer, a computer system, or a combination thereof, for independently or collectively instructing the client device <b>120</b> to interact and operate as described herein. The client controller <b>125</b> may be embodied permanently or temporarily in any type of machine, component, equipment, storage medium, or propagated signal capable of providing instructions to the client device <b>120</b>.</p>
+      <p id="p-00023-en" num="0023">The communications link <b>115</b> typically includes a delivery network <b>160</b> making a direct or indirect communication between the client system <b>105</b> and the host system <b>110</b>, irrespective of physical separation. Examples of a delivery network <b>160</b> include the Internet, the World Wide Web, WANs, LANs, analog or digital wired and wireless telephone networks (e.g. PSTN, ISDN, or xDSL), radio, television, cable, satellite, and/ or any other delivery mechanism for carrying data. The communications link <b>115</b> may include communication pathways <b>150</b>, <b>155</b> that enables communications through the one or more delivery networks <b>160</b> described above. Each of the communication pathways <b>150</b>, <b>155</b> may include, for example, a wired, wireless, cable or satellite communication pathway.</p>
+      <p id="p-00024-en" num="0024">The host system <b>110</b> includes a host device <b>135</b> capable of executing instructions under the command and direction of a host controller <b>140</b>. The host device <b>135</b> is connected to the host controller <b>140</b> by a wired or wireless data pathway <b>145</b> capable of carrying and delivering data.</p>
+      <p id="p-00025-en" num="0025">The host system <b>110</b> typically includes one or more host devices <b>135</b> and/or host controllers <b>140</b>. For example, the host system <b>110</b> may include one or more general-purpose computers (e.g., personal computers), one or more special-purpose computers (e.g., devices specifically programmed to communicate with each other and/or the client system <b>105</b>), or a combination of one or more general-purpose computers and one or more special-purpose computers. The host system <b>110</b> may be arranged to operate within or in concert with one or more other systems, such as, for example, one or more LANs (“Local Area Networks”) and/or one or more WANs (“Wide Area Networks”).</p>
+      <p id="p-00026-en" num="0026">The host device <b>135</b> and host controller <b>140</b> each typically includes one or more hardware components and/or software components. An example of a host device <b>135</b> is a general-purpose computer (e.g., a personal computer) capable of responding to and executing instructions in a defined manner. Other examples include a special-purpose computer, a workstation, a server, a device, a component, other equipment or some combination thereof capable of responding to and executing instructions. An example of host controller <b>140</b> is a software application loaded on the host device <b>135</b> for commanding and directing communications enabled by the host device <b>135</b>. Other examples include a program, a piece of code, an instruction, a device, a computer, a computer system, or a combination thereof, for independently or collectively instructing the host device <b>135</b> to interact and operate as described herein. The host controller <b>140</b> may be embodied permanently or temporarily in any type of machine, component, equipment, storage medium, or propagated signal capable of providing instructions to the host device <b>135</b>.</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 2</figref> illustrates a communication system <b>200</b> including a client system <b>205</b> communicating with a host system <b>210</b> through a communications link <b>215</b>. Client system <b>205</b> typically includes one or more client devices <b>220</b> and one or more client controllers <b>225</b> for controlling the client devices <b>220</b>. Host system <b>210</b> typically includes one or more host devices <b>235</b> and one or more host controllers <b>240</b> for controlling the host devices <b>235</b>. The communications link <b>215</b> may include communication pathways <b>250</b>, <b>255</b> enabling communications through the one or more delivery networks <b>260</b>.</p>
+      <p id="p-00028-en" num="0028">Examples of each element within the communication system of <figref>FIG. 2</figref> are broadly described above with respect to <figref>FIG. 1</figref>. In particular, the host system <b>210</b> and communications link <b>215</b> typically have attributes comparable to those described with respect to host system <b>110</b> and communications link <b>115</b> of <figref>FIG. 1</figref>. Likewise, the client system <b>205</b> of <figref>FIG. 2</figref> typically has attributes comparable to and illustrates one possible embodiment of the client system <b>105</b> of <figref>FIG. 1</figref>.</p>
+      <p id="p-00029-en" num="0029">The client device <b>220</b> typically includes a general purpose computer <b>270</b> having an internal or external storage <b>272</b> for storing data and programs such as an operating system <b>274</b> (e.g., DOS, Windows™, Windows 95™, Windows 98™, Windows 2000™, Windows NT™, OS/2, or Linux) and one or more application programs. Examples of application programs include authoring applications <b>276</b> (e.g., word processing, database programs, spreadsheet programs, or graphics programs) capable of generating documents or other electronic content; client applications <b>278</b> (e.g., AOL client, CompuServe client, AIM client, AOL TV client, or ISP client) capable of communicating with other computer users, accessing various computer resources, and viewing, creating, or otherwise manipulating electronic content; and browser applications <b>280</b> (e.g., Netscape's Navigator or Microsoft's Internet Explorer) capable of rendering standard Internet content.</p>
+      <p id="p-00030-en" num="0030">The general-purpose computer <b>270</b> also includes a central processing unit <b>282</b> (CPU) for executing instructions in response to commands from the client controller <b>225</b>. In one implementation, the client controller <b>225</b> includes one or more of the application programs installed on-the internal or external storage <b>272</b> of the general-purpose computer <b>270</b>. In another implementation, the client controller <b>225</b> includes application programs externally stored in and performed by one or more device(s) external to the general-purpose computer <b>270</b>.</p>
+      <p id="p-00031-en" num="0031">The general-purpose computer typically will include a communication device <b>284</b> for sending and receiving data. One example of the communication device <b>284</b> is a modem. Other examples include a transceiver, a set-top box, a communication card, a satellite dish, an antenna, or another network adapter capable of transmitting and receiving data over the communications link <b>215</b> through a wired or wireless data pathway <b>250</b>. The general-purpose computer <b>270</b> also may include a TV (“television”) tuner <b>286</b> for receiving television programming in the form of broadcast, satellite, and/or cable TV signals. As a result, the client device <b>220</b> can selectively and/or simultaneously display network content received by communications device <b>284</b> and television programming content received by the TV tuner <b>286</b>.</p>
+      <p id="p-00032-en" num="0032">The general-purpose computer <b>270</b> typically will include an input/output interface <b>288</b> for wired or wireless connection to various peripheral devices <b>290</b>. Examples of peripheral devices <b>290</b> include, but are not limited to, a mouse <b>291</b>, a mobile phone <b>292</b>, a personal digital assistant <b>293</b> (PDA), a keyboard <b>294</b>, a display monitor <b>295</b> with or without a touch screen input, and/or a TV remote control <b>296</b> for receiving information from and rendering information to subscribers.</p>
+      <p id="p-00033-en" num="0033">Although <figref>FIG. 2</figref> illustrates devices such as a mobile telephone <b>292</b>, a PDA <b>293</b>, and a TV remote control <b>296</b> as being peripheral with respect to the general-purpose computer <b>270</b>, in another implementation, such devices may themselves include the functionality of the general-purpose computer <b>270</b> and operate as the client device <b>220</b>. For example, the mobile phone <b>292</b> or the PDA <b>293</b> may include computing and networking capabilities and function as a client device <b>220</b> by accessing the delivery network <b>260</b> and communicating with the host system <b>210</b>. Furthermore, the client system <b>205</b> may include one, some or all of the components and devices described above.</p>
+      <p id="p-00034-en" num="0034">Referring to <figref>FIG. 3</figref>, a communications system <b>300</b> is capable of delivering and exchanging information between a client system <b>305</b> and a host system <b>310</b> through a communication link <b>315</b>. Client system <b>305</b> typically includes one or more client devices <b>320</b> and one or more client controllers <b>325</b> for controlling the client devices <b>320</b>. Host system <b>310</b> typically includes one or more host devices <b>335</b> and one or more host controllers <b>340</b> for controlling the host devices <b>335</b>. The communications link <b>315</b> may include communication pathways <b>350</b>, <b>355</b> enabling communications through the one or more delivery networks <b>360</b>.</p>
+      <p id="p-00035-en" num="0035">Examples of each element within the communication system of <figref>FIG. 3</figref> are broadly described above with respect to <figref>FIGS. 1 and 2</figref>. In particular, the client system <b>305</b> and the communications link <b>315</b> typically have attributes comparable to those described with respect to client systems <b>105</b> and <b>205</b> and communications links <b>115</b> and <b>215</b> of <figref>FIGS. 1 and 2</figref>. Likewise, the host system <b>310</b> of <figref>FIG. 3</figref> may have attributes comparable to and illustrates one possible embodiment of the host systems <b>110</b> and <b>210</b> shown in <figref>FIGS. 1 and 2</figref>, respectively.</p>
+      <p id="p-00036-en" num="0036">The host system <b>310</b> includes a host device <b>335</b> and a host controller <b>340</b>. The host controller <b>340</b> is generally capable of transmitting instructions to any or all of the elements of the host device <b>335</b>. For example, in one implementation, the host controller <b>340</b> includes one or more software applications loaded on the host device <b>335</b>. However, in other implementations, as described above, the host controller <b>340</b> may include any of several other programs, machines, and devices operating independently or collectively to control the host device <b>335</b>.</p>
+      <p id="p-00037-en" num="0037">The host device <b>335</b> includes a login server <b>370</b> for enabling access by subscribers and routing communications between the client system <b>305</b> and other elements of the host device <b>335</b>. The host device <b>335</b> also includes various host complexes such as the depicted OSP (“Online Service Provider”) host complex <b>380</b> and IM (“Instant Messaging”) host complex <b>390</b>. To enable access to these host complexes by subscribers, the client system <b>305</b> includes communication software, for example, an OSP client application and an IM client application. The OSP and IM communication software applications are designed to facilitate the subscriber's interactions with the respective services and, in particular, may provide access to all the services available within the respective host complexes.</p>
+      <p id="p-00038-en" num="0038">Typically, the OSP host complex <b>380</b> supports different services, such as email, discussion groups, chat, news services, and Internet access. The OSP host complex <b>380</b> is generally designed with an architecture that enables the machines within the OSP host complex <b>380</b> to communicate with each other and employs certain protocols (i.e., standards, formats, conventions, rules, and structures) to transfer data. The OSP host complex <b>380</b> ordinarily employs one or more OSP protocols and custom dialing engines to enable access by selected client applications. The OSP host complex <b>380</b> may define one or more specific protocols for each service based on a common, underlying proprietary protocol.</p>
+      <p id="p-00039-en" num="0039">The IM host complex <b>390</b> is generally independent of the OSP host complex <b>380</b>, and supports instant messaging services irrespective of a subscriber's network or Internet access. Thus, the IM host complex <b>390</b> allows subscribers to send and receive instant messages, whether or not they have access to any particular ISP. The IM host complex <b>390</b> may support associated services, such as administrative matters, advertising, directory services, chat, and interest groups related to the instant messaging. The IM host complex <b>390</b> has an architecture that enables all of the machines within the IM host complex to communicate with each other. To transfer data, the IM host complex <b>390</b> employs one or more standard or exclusive IM protocols.</p>
+      <p id="p-00040-en" num="0040">The host device <b>335</b> may include one or more gateways that connect and therefore link complexes, such as the OSP host complex gateway <b>385</b> and the IM host complex gateway <b>395</b>. The OSP host complex gateway <b>385</b> and the IM host complex <b>395</b> gateway may directly or indirectly link the OSP host complex <b>380</b> with the IM host complex <b>390</b> through a wired or wireless pathway. Ordinarily, when used to facilitate a link between complexes, the OSP host complex gateway <b>385</b> and the IM host complex gateway <b>395</b> are privy to information regarding the protocol type anticipated by a destination complex, which enables any necessary protocol conversion to be performed incident to the transfer of data from one complex to another. For instance, the OSP host complex <b>380</b> and IM host complex <b>390</b> generally use different protocols such that transferring data between the complexes requires protocol conversion by or at the request of the OSP host complex gateway <b>385</b> and/or the IM host complex gateway <b>395</b>.</p>
+      <p id="p-00041-en" num="0041">Referring to <figref>FIG. 4</figref>, a communications system <b>400</b> is capable of delivering and exchanging information between a client system <b>405</b> and a host system <b>410</b> through a communication link <b>415</b>. Client system <b>405</b> typically includes one or more client devices <b>420</b> and one or more client controllers <b>425</b> for controlling the client devices <b>420</b>. Host system <b>410</b> typically includes one or more host devices <b>435</b> and one or more host controllers <b>440</b> for controlling the host devices <b>435</b>. The communications link <b>415</b> may include communication pathways <b>450</b>, <b>455</b> enabling communications through the one or more delivery networks <b>460</b>. As shown, the client system <b>405</b> may access the Internet <b>465</b> through the host system <b>410</b>.</p>
+      <p id="p-00042-en" num="0042">Examples of each element within the communication system of <figref>FIG. 4</figref> are broadly described above with respect to <figref>FIGS. 1-3</figref>. In particular, the client system <b>405</b> and the communications link <b>415</b> typically have attributes comparable to those described with respect to client systems <b>105</b>, <b>205</b>, and <b>305</b> and communications links <b>115</b>, <b>215</b>, and <b>315</b> of <figref>FIGS. 1-3</figref>. Likewise, the host system <b>410</b> of <figref>FIG. 4</figref> may have attributes comparable to and illustrates one possible embodiment of the host systems <b>110</b>, <b>210</b>, and <b>310</b> shown in <figref>FIGS. 1-3</figref>, respectively. However, <figref>FIG. 4</figref> describes an aspect of the host system <b>410</b>, focusing primarily on one particular implementation of OSP host complex <b>480</b>. For purposes of communicating with an OSP host complex <b>480</b>, the delivery network <b>460</b> is generally a telephone network.</p>
+      <p id="p-00043-en" num="0043">The client system <b>405</b> includes a client device <b>420</b> and a client controller <b>425</b>. The client controller <b>425</b> is generally capable of establishing a connection to the host system <b>410</b>, including the OSP host complex <b>480</b>, the IM host complex <b>490</b> and/or the Internet <b>465</b>. In one implementation, the client controller <b>425</b> includes an OSP application for communicating with servers in the OSP host complex <b>480</b> using exclusive OSP protocols. The client controller <b>425</b> also may include applications, such as an IM client application, and/or an Internet browser application, for communicating with the IM host complex <b>490</b> and the Internet <b>465</b>.</p>
+      <p id="p-00044-en" num="0044">The host system <b>410</b> includes a host device <b>435</b> and a host controller <b>440</b>. The host controller <b>440</b> is generally capable of transmitting instructions to any or all, of the elements of the host device <b>435</b>. For example, in one implementation, the host controller <b>440</b> includes one or more software applications loaded on one or more elements of the host device <b>435</b>. However, in other implementations, as described above, the host controller <b>440</b> may include any of several other programs, machines, and devices operating independently or collectively to control the host device <b>435</b>.</p>
+      <p id="p-00045-en" num="0045">The host system <b>410</b> includes a login server <b>470</b> capable of enabling communications with and authorizing access by client systems <b>405</b> to various elements of the host system <b>410</b>, including an OSP host complex <b>480</b> and an IM host complex <b>490</b>. The login server <b>470</b> may implement one or more authorization procedures to enable simultaneous access to the OSP host complex <b>480</b> and the IM host complex <b>490</b>. The OSP host complex <b>480</b> and the IM host complex <b>490</b> are connected through one or more OSP host complex gateways <b>485</b> and one or more IM host complex gateways <b>495</b>. Each OSP host complex gateway <b>485</b> and IM host complex gateway <b>495</b> may perform any protocol conversions necessary to enable communication between the OSP host complex <b>480</b>, the IM host complex <b>490</b>, and the Internet <b>465</b>.</p>
+      <p id="p-00046-en" num="0046">The OSP host complex <b>480</b> supports a set of services from one or more servers located internal to and external from the OSP host complex <b>480</b>. Servers external to the OSP host complex <b>480</b> generally may be viewed as existing on the Internet <b>465</b>. Servers internal to the OSP complex <b>480</b> may be arranged in one or more configurations. For example, servers may be arranged in large centralized clusters known as farms <b>4802</b> or in localized clusters known as pods <b>4804</b>.</p>
+      <p id="p-00047-en" num="0047">Farms <b>4802</b> are groups of servers located at centralized locations within the OSP host complex <b>480</b>. Farms <b>4802</b> generally are dedicated to providing particular functionality and services to subscribers and clients from a centralized location, regardless of the location of the subscriber or client. Farms <b>4802</b> are particularly useful for providing services that depend upon other processes and services for information, such as, for example, chat, email, instant messaging, news, newsgroups, search, stock updates, and weather. Thus, farms <b>4802</b> tend to rely on connections with external resources such as the Internet <b>465</b> and/or other servers within the OSP host complex <b>480</b>.</p>
+      <p id="p-00048-en" num="0048">To reduce the time delays and congestion inherent in centralized processing, some services offered by the OSP host complex <b>480</b> are provided from localized servers, generally known as pods <b>4804</b>. Each pod <b>4804</b> includes one or more interrelated servers capable of operating together to provide one or more services offered by the OSP host complex <b>480</b> in a geographically localized manner, the servers within a pod <b>4804</b> generally operating independently rather than relying on resources external to the pod <b>4804</b> to operate. A pod <b>4804</b> may cache content received from external sources, such as farms <b>4802</b> or the Internet <b>465</b>, making frequently requested information readily available to local subscribers served by the pod <b>4804</b>. In this way, pods <b>4804</b> are particularly useful in providing services that are independent of other processes and servers such as, for example, routing, keywords, and downloading certain software and graphical interface updates with reduced processing time and congestion. The determination of which servers and processes are located in the pod <b>4804</b> is made by the OSP according to load distribution, frequency of requests, demographics, and other factors.</p>
+      <p id="p-00049-en" num="0049">In addition to farms <b>4802</b> and pods <b>4804</b>, the implementation of <figref>FIG. 4</figref> also includes one or more non-podded servers <b>4806</b>. In general, the non-podded server <b>4806</b> may be dedicated to performing a particular service that relies on other processes and services for information and may be directly or indirectly connected to resources outside of the OSP host complex <b>480</b>, such as the Internet <b>465</b> and the IM host complex <b>490</b>, through an OSP gateway <b>4808</b>. In the event that subscriber usage of the particular service is relatively high, the non-podded server <b>4806</b> may be included in a farm.</p>
+      <p id="p-00050-en" num="0050">In the implementation of <figref>FIG. 4</figref>, a pod <b>4810</b>, shown in more detail, includes a routing processor <b>4812</b>. In a packet-based implementation, the client system <b>405</b> may generate information requests, convert the requests into data packets, sequence the data packets, perform error checking and other packet-switching techniques, and transmit the data packets to the routing processor <b>4812</b>. Upon receiving data packets from the client system <b>405</b>, the routing processor <b>4812</b> may directly or indirectly route the data packets to a specified destination within or outside of the OSP host complex <b>480</b>. In general, the routing processor <b>4812</b> will examine an address field of a data request, use a mapping table to determine the appropriate destination for the data request, and direct the data request to the appropriate destination.</p>
+      <p id="p-00051-en" num="0051">For example, in the event that a data request from the client system <b>405</b> can be satisfied locally, the routing processor <b>4812</b> may direct the data request to a local server <b>4814</b> in the pod <b>4810</b>. In the event that the data request cannot be satisfied locally, the routing processor <b>4812</b> may direct the data request internally to one or more farms <b>4802</b>, one or more other pods <b>4804</b>, or one or more non-podded servers <b>4806</b> in the OSP host complex <b>480</b>, or may direct the data request externally to the Internet <b>465</b> or the IM host complex <b>490</b> through an OSP/pod gateway <b>4816</b>.</p>
+      <p id="p-00052-en" num="0052">The routing processor <b>4812</b> also may direct data requests and/or otherwise facilitate communication between the client system <b>405</b> and the Internet <b>465</b>. In one implementation, the client system <b>405</b> uses an OSP client application to convert standard Internet content and protocols into OSP protocols and vice versa. For example, when a browser application transmits a request in standard Internet protocol, the OSP client application can intercept the request, convert the request into an OSP protocol and send the converted request to the routing processor <b>4812</b> in the OSP host complex <b>480</b>. The routing processor <b>4812</b> recognizes the Internet <b>465</b> as the destination and routes the data packets to an IP (“Internet Protocol”) tunnel <b>4818</b>. The IP tunnel <b>4818</b> converts the data from the OSP protocol back into standard Internet protocol and transmits the data to the Internet <b>465</b>. The IP tunnel <b>4818</b> also converts the data received from the Internet in the standard Internet protocol back into the OSP protocol and sends the data to the routing processor <b>4812</b> for delivery back to the client system <b>405</b>. At the client system <b>405</b>, the OSP client application converts the data in the OSP protocol back into standard Internet content for communication with the browser application.</p>
+      <p id="p-00053-en" num="0053">The IP tunnel <b>4818</b> may act as a buffer between the client system <b>405</b> and the Internet <b>465</b>, and may implement content filtering and time saving techniques. For example, the IP tunnel <b>4818</b> can check parental controls settings of the client system <b>405</b> and request and transmit content from the Internet <b>465</b> according to the parental control settings. In addition, the IP tunnel <b>4818</b> may include a number a caches for storing frequently accessed information. If requested data is determined to be stored in the caches, the IP tunnel <b>4818</b> may send the information to the client system <b>405</b> from the caches and avoid the need to access the Internet <b>465</b>.</p>
+      <p id="p-00054-en" num="0054">In another implementation, the client system <b>405</b> may use standard Internet protocols and formatting to access the pod <b>4810</b> and the Internet <b>465</b>. For example, the subscriber can use an OSP TV client application having an embedded browser application installed on the client system <b>405</b> to generate a request in standard Internet protocol, such as HTTP (“HyperText Transport Protocol”). In a packet-based implementation, data packets may be encapsulated inside a standard Internet tunneling protocol, such as, for example, UDP (“User Datagram Protocol”) and routed to a web tunnel <b>4820</b>. The web tunnel <b>4820</b> may be a L2TP (“Layer Two Tunneling Protocol”) tunnel capable of establishing a point-to-point protocol (PPP) session with the client system <b>405</b>. The web tunnel <b>4820</b> provides a gateway to the routing processor <b>4812</b> within the pod <b>4810</b>, the Internet <b>465</b>, and a web proxy <b>4822</b>.</p>
+      <p id="p-00055-en" num="0055">The web proxy <b>4822</b> can look up subscriber information from the IP address of the client system <b>405</b> to determine the subscriber's parental controls settings and other demographic information. In this way, the web proxy <b>4822</b> can tailor the subscriber's content and user interfaces. The web proxy <b>4822</b> can also perform caching functions to store certain URLs (“Uniform Resource Locators”) and other electronic content so that the web proxy <b>4822</b> can locally deliver information to the client system <b>405</b> and avoid the need to access the Internet <b>465</b> in the event that data requested by the client system <b>405</b> has been cached.</p>
+      <p id="p-00056-en" num="0056">Referring to <figref>FIG. 5</figref>, a communications system <b>500</b> is capable of delivering and exchanging information between a client system <b>505</b> and a host system <b>510</b> through a communication link <b>515</b>. Client system <b>505</b> typically includes one or more client devices <b>520</b> and one or more client controllers <b>525</b> for controlling the client devices <b>520</b>. Host system <b>510</b> typically includes one or more host devices <b>535</b> and one or more host controllers <b>540</b> for controlling the host devices <b>535</b>. The communications link <b>515</b> may include communication pathways <b>550</b>, <b>555</b> enabling communications through the one or more delivery networks <b>560</b>. As shown, the client system <b>505</b> may access the Internet <b>565</b> through the host system <b>510</b>.</p>
+      <p id="p-00057-en" num="0057">Examples of each element within the communication system of <figref>FIG. 5</figref> are broadly described above with respect to <figref>FIGS. 1-4</figref>. In particular, the client system <b>505</b> and the communications link <b>515</b> typically have attributes comparable to those described with respect to client systems <b>105</b>, <b>205</b>, <b>305</b>, and <b>405</b> and communications links <b>115</b>, <b>215</b>, <b>315</b>, and <b>415</b> of <figref>FIGS. 1-4</figref>. Likewise, the host system <b>510</b> of <figref>FIG. 5</figref> may have attributes comparable to and illustrates one possible embodiment of the host systems <b>110</b>, <b>210</b>, <b>310</b>, and <b>410</b> shown in <figref>FIGS. 1-4</figref>, respectively. However, <figref>FIG. 5</figref> describes an aspect of the host system <b>510</b>, focusing primarily on one particular implementation of IM host complex <b>590</b>. For purposes of communicating with the IM host complex <b>590</b>, the delivery network <b>560</b> is generally a telephone network.</p>
+      <p id="p-00058-en" num="0058">The client system <b>505</b> includes a client device <b>520</b> and a client controller <b>525</b>. The client controller <b>525</b> is generally capable of establishing a connection to the host system <b>510</b>, including the OSP host complex <b>580</b>, the IM host complex <b>590</b> and/or the Internet <b>565</b>. In one implementation, the client controller <b>525</b> includes an IM application for communicating with servers in the IM host complex <b>590</b> utilizing exclusive IM protocols. The client controller <b>525</b> also may include applications, such as an OSP client application, and/or an Internet browser application for communicating with the OSP host complex <b>580</b> and the</p>
+      <p id="p-00059-en" num="0059">Internet <b>565</b>, respectively.</p>
+      <p id="p-00060-en" num="0060">The host system <b>510</b> includes a host device <b>535</b> and a host controller <b>540</b>. The host controller <b>540</b> is generally capable of transmitting instructions to any or all of the elements of the host device <b>535</b>. For example, in one implementation, the host controller <b>540</b> includes one or more software applications loaded on one or more elements of the host device <b>535</b>. However, in other implementations, as described above, the host controller <b>540</b> may include any of several other programs, machines, and devices operating independently or collectively to control the host device <b>535</b>.</p>
+      <p id="p-00061-en" num="0061">The host System <b>510</b> includes a login server <b>570</b> capable of enabling communications with and authorizing access by client systems <b>505</b> to various elements of the host system <b>510</b>, including an OSP host complex <b>580</b> and an IM host complex <b>590</b>. The login server <b>570</b> may implement one or more authorization procedures to enable simultaneous access to the OSP host complex <b>580</b> and the IM host complex <b>590</b>. The OSP host complex <b>580</b> and the IM host complex <b>590</b> are connected through one or more OSP host complex gateways <b>585</b> and one or more IM host complex gateways <b>595</b>. Each OSP host complex gateway <b>585</b> and IM host complex gateway <b>595</b> may perform any protocol conversions necessary to enable communication between the OSP host complex <b>580</b>, the IM host complex <b>590</b>, and the Internet <b>565</b>.</p>
+      <p id="p-00062-en" num="0062">To access the IM host complex <b>590</b> to begin an instant messaging session, the client system <b>505</b> establishes a connection to the login server <b>570</b>. The login server <b>570</b> typically determines whether the particular subscriber is authorized to access the IM host complex <b>590</b> by verifying a subscriber identification and password. If the subscriber is authorized to access the IM host complex <b>590</b>, the login server <b>570</b> employs a hashing technique on the subscriber's screen name to identify a particular IM server <b>5902</b> for use during the subscriber's session. The login server <b>570</b> provides the client system <b>505</b> with the IP address of the particular IM server <b>5902</b>, gives the client system <b>505</b> an encrypted key (i.e., a cookie), and breaks the connection. The client system <b>505</b> then uses the IP address to establish a connection to the particular IM server <b>5902</b> through the communications link <b>515</b>, and obtains access to that IM server <b>5902</b> using the encrypted key. Typically, the client system <b>505</b> will be equipped with a Winsock API (“Application Programming Interface”) that enables the client system <b>505</b> to establish an open TCP connection to the IM server <b>5902</b>.</p>
+      <p id="p-00063-en" num="0063">Once a connection to the IM server <b>5902</b> has been established, the client system <b>505</b> may directly or indirectly transmit data to and access content from the IM server <b>5902</b> and one or more associated domain servers <b>5904</b>. The IM server <b>5902</b> supports the fundamental instant messaging services and the domain servers <b>5904</b> may support associated services, such as, for example, administrative matters, directory services, chat and interest groups. In general, the-purpose of the domain servers <b>5904</b> is to lighten the load placed on the IM server <b>5902</b> by assuming responsibility for some of the services within the IM host complex <b>590</b>. By accessing the IM server <b>5902</b> and/or the domain server <b>5904</b>, a subscriber can use the IM client application to view whether particular subscribers (“buddies”) are online, exchange instant messages with particular subscribers, participate in group chat rooms, trade files such as pictures, invitations or documents, find other subscribers with similar interests, get customized news and stock quotes, and search the Web.</p>
+      <p id="p-00064-en" num="0064">In the implementation of <figref>FIG. 5</figref>, the IM server <b>5902</b> is directly or indirectly connected to a routing gateway <b>5906</b>. The routing gateway <b>5906</b> facilitates the connection between the IM server <b>5902</b> and one or more alert multiplexors <b>5908</b>, for example, by serving as a link minimization tool or hub to connect several IM servers to several alert multiplexors. In general, an alert multiplexor <b>5908</b> maintains a record of alerts and subscribers registered to receive the alerts.</p>
+      <p id="p-00065-en" num="0065">Once the client system <b>505</b> is connected to the alert multiplexor <b>5908</b>, a subscriber can register for and/or receive one or more types of alerts. The connection pathway between the client system <b>505</b> and the alert multiplexor <b>5908</b> is determined by employing another hashing technique at the IM server <b>5902</b> to identify the particular alert multiplexor <b>5908</b> to be used for the subscriber's session. Once the particular multiplexor <b>5908</b> has been identified, the IM server <b>5902</b> provides the client system <b>505</b> with the IP address of the particular alert multiplexor <b>5908</b> and gives the client system <b>505</b> an encrypted key (i.e., a cookie). The client system <b>505</b> then uses the IP address to connect to the particular alert multiplexor <b>5908</b> through the communication link <b>515</b> and obtains access to the alert multiplexor <b>5908</b> using the encrypted key.</p>
+      <p id="p-00066-en" num="0066">The alert multiplexor <b>5908</b> is connected to an alert gate <b>5910</b> that, like the IM host complex gateway <b>595</b>, is capable of performing the necessary protocol conversions to form a bridge to the OSP host complex <b>580</b>. The alert gate <b>5910</b> is the interface between the IM host complex <b>590</b> and the physical servers, such as servers in the OSP host complex <b>580</b>, where state changes are occurring. In general, the information regarding state changes will be gathered and used by the IM host complex <b>590</b>. However, the alert multiplexor <b>5908</b> also may communicate with the OSP host complex <b>580</b> through the IM gateway <b>595</b>, for example, to provide the servers and subscribers of the OSP host complex <b>580</b> with certain information gathered from the alert gate <b>5910</b>.</p>
+      <p id="p-00067-en" num="0067">The alert gate <b>5910</b> can detect an alert feed corresponding to a particular type of alert. The alert gate <b>5910</b> may include a piece of code (alert receive code) capable of interacting with another piece of code (alert broadcast code) on the physical server where a state change occurs. In general, the alert receive code installed on the alert gate <b>5910</b> instructs the alert broadcast code installed on the physical server to send an alert feed to the alert gate <b>5910</b> upon the occurrence of a particular state change. Upon detecting an alert feed, the alert gate <b>5910</b> contacts the alert multiplexor <b>5908</b>, which in turn, informs the client system <b>505</b> of the detected alert feed.</p>
+      <p id="p-00068-en" num="0068">In the implementation of <figref>FIG. 5</figref>, the IM host complex <b>590</b> also includes a subscriber profile server <b>5912</b> connected to a database <b>5914</b> for storing large amounts of subscriber profile data. The subscriber profile server <b>5912</b> may be used to enter, retrieve, edit, manipulate, or otherwise process subscriber profile data. In one implementation, a subscriber's profile data includes, for example, the subscriber's buddy list, alert preferences, designated stocks, identified interests, and geographic location. The subscriber may enter, edit and/or delete profile data using an installed IM client application on the client system <b>505</b> to interact with the subscriber profile server <b>5912</b>.</p>
+      <p id="p-00069-en" num="0069">Because the subscriber's data is stored in the IM host complex <b>590</b>, the subscriber does not have to reenter or update such information in the event that the subscriber accesses the IM host complex <b>590</b> using new or a different client system <b>505</b>. Accordingly, when a subscriber accesses the IM host complex <b>590</b>, the IM server <b>5902</b> can instruct the subscriber profile server <b>5912</b> to retrieve the subscriber's profile data from the database <b>5914</b> and to provide, for example, the subscriber's buddy list to the IM server <b>5902</b> and the subscriber's alert preferences to the alert multiplexor <b>5908</b>. The subscriber profile server <b>5912</b> also may communicate with other servers in the OSP host complex <b>590</b> to share subscriber profile data with other services. Alternatively, user profile data may be saved locally on the client device <b>505</b>.</p>
+      <p id="p-00070-en" num="0070">Referring to <figref>FIG. 6</figref>, a communications system <b>600</b> is capable of delivering and exchanging information between a client system <b>605</b> and a host system <b>610</b> through a communication link <b>615</b>. Client system <b>605</b> typically includes one or more client devices <b>620</b> and one or more client controllers <b>625</b> for controlling the client devices <b>620</b>. Host system <b>610</b> typically includes one or more host devices <b>635</b> and one or more host controllers <b>640</b> for controlling the host devices <b>635</b>. The communications link <b>615</b> may include communication pathways <b>650</b>, <b>655</b> enabling communications through the one or more delivery networks <b>660</b>.</p>
+      <p id="p-00071-en" num="0071">Examples of each element within the communication system of <figref>FIG. 6</figref> are broadly described above with respect to <figref>FIGS. 1-5</figref>. In particular, the client system <b>605</b> and the communications link <b>615</b> typically have attributes comparable to those described with respect to client systems <b>105</b>, <b>205</b>, <b>305</b>, <b>405</b> and <b>505</b> and communications links <b>115</b>, <b>215</b>, <b>315</b>, <b>415</b> and <b>515</b> of <figref>FIGS. 1-5</figref>. Likewise, the host system <b>610</b> of <figref>FIG. 6</figref> may have attributes comparable to and illustrates one possible embodiment of the host systems <b>110</b>, <b>210</b>, <b>310</b>, <b>410</b> and <b>510</b> shown in <figref>FIGS. 1-5</figref>, respectively. However, <figref>FIG. 6</figref> describes an aspect of the host system <b>610</b>, focusing primarily on one particular implementation of IM host complex <b>690</b>. For purposes of communicating with the IM host complex <b>690</b>, the delivery network <b>660</b> is generally a telephone network.</p>
+      <p id="p-00072-en" num="0072">The client system <b>605</b> includes a client device <b>620</b> and a client controller <b>625</b>. The client controller <b>625</b> is generally capable of establishing a connection to the host system <b>610</b>, including the IM host complex <b>690</b>. In one implementation, the client controller <b>625</b> includes an IM application for communicating with servers in the IM host complex <b>690</b> utilizing exclusive IM protocols.</p>
+      <p id="p-00073-en" num="0073">The host system <b>610</b> includes a host device <b>635</b> and a host controller <b>640</b>. The host controller <b>640</b> is generally capable of transmitting instructions to any or all of the elements of the host device <b>635</b>. For example, in one implementation, the host controller <b>640</b> includes one or more software applications loaded on one or more elements of the host device <b>635</b>. However, in other implementations, as described above, the host controller <b>640</b> may include any of several other programs, machines, and devices operating independently or collectively to control the host device <b>635</b>.</p>
+      <p id="p-00074-en" num="0074">The host system <b>610</b> includes a login server <b>670</b> capable of enabling communications with and authorizing access by client systems <b>605</b> to various elements of the host system <b>610</b>, including the IM host complex <b>690</b>. The IM host complex <b>690</b> includes an IM server network <b>6902</b> and an alert multiplexor network <b>6908</b>. The IM server network <b>6902</b> is an interconnected network of IM servers and the alert multiplexor network <b>6908</b> is an interconnected network of alert multiplexors. Each IM server and each alert multiplexor can directly or indirectly communicate and exchange information with all of the IM servers in the IM server network <b>6902</b> and all of the alert multiplexors in the alert multiplexor network <b>6908</b>. Each of the alert multiplexors in the alert multiplexor network <b>6908</b> is connected to several alert gates <b>6910</b> that receive different types of alerts. In the implementation of <figref>FIG. 6</figref>, the IM server network <b>6902</b> and the alert multiplexor network <b>6908</b> are interconnected by a routing gateway <b>6906</b> that serves as a common hub to reduce the number of connections.</p>
+      <p id="p-00075-en" num="0075">A subscriber typically will be assigned to one IM server in the IM server network <b>6902</b> and to one alert multiplexor in the alert multiplexor network <b>6908</b> during a session based on one or more hashing techniques. However, the IM servers and the alert multiplexors are capable of storing subscriber information and other electronic content that may be accessed by the other IM servers and alert multiplexors. In one implementation, for example, each IM server in the IM server network <b>6902</b> may be dedicated to serving a particular set of registered subscribers. Because all of the IM servers can communicate with each other, all subscribers can communicate with each other through instant messaging. In another implementation, each alert multiplexor in the alert multiplexor network <b>6908</b> may be dedicated to storing information about a particular set or subset of alerts. Because all of the alert multiplexors can communicate with each other, all registered subscribers can receive all types of alerts. This networking arrangement enables the load to be distributed among the various servers in the IM host complex <b>690</b> while still enabling a subscriber to communicate, share information, or otherwise interact with other subscribers and servers in the IM host complex <b>690</b>.</p>
+      <p id="p-00076-en" num="0076">Referring to <figref>FIG. 7</figref>, a client device <b>702</b>, an alert multiplexor <b>704</b>, a profile server <b>706</b>, and an alert gate <b>708</b> interact according to a procedure <b>700</b> to deliver an alert message to a subscriber. The procedure <b>700</b> may be implemented by any type of hardware, software, device, computer, computer system, equipment, component, program, application, code, storage medium, or propagated signal.</p>
+      <p id="p-00077-en" num="0077">Initially, a subscriber may use the client device <b>702</b> to connect to the alert multiplexor <b>704</b> (step <b>710</b>). Typically, the client device <b>702</b> will include an installed IM client application and will be equipped with a Winsock API that enables the client device <b>702</b> to establish an open TCP connection to the alert multiplexor <b>704</b>. It also may be necessary to perform one or more hashing techniques to identify the alert multiplexor <b>704</b> to be used for the subscriber's session.</p>
+      <p id="p-00078-en" num="0078">Once a connection to the alert multiplexor <b>704</b> has been established, a subscriber may use the client device <b>702</b> to send an alert registration to the alert multiplexor <b>704</b>,(step <b>715</b>). The alert registration may inform the alert multiplexor <b>704</b> that the subscriber desires to enable the alert capabilities of the alert multiplexor <b>704</b>. The alert multiplexor <b>704</b>, in turn, may receive the alert registration from the client device <b>702</b> (step <b>720</b>) and enable the alert capabilities such as, for example, stock alerts, mail alerts, weather alerts, calendar alerts, news alerts, third party alerts, or any other comparable type of alert.</p>
+      <p id="p-00079-en" num="0079">A subscriber may also use the client device <b>702</b> to generate a subscriber record that includes the particular types of alerts desired by the subscriber and other alert preferences. The alert preferences may include the conditions for tripping the alerts, the timing of the alerts, and/or the presentation method of the alerts. In general, alert messages may take the form of an instant message, an icon, a pop-up window, and/or an audio alarm that appears during a subscriber's IM session. A subscriber also may choose to receive offline notification of alerts, so that the subscriber may be informed of certain changes in state even when the subscriber is not running the IM client application. For example, a subscriber may set up alert preferences to request notification, for example, by telephone, email, or pager.</p>
+      <p id="p-00080-en" num="0080">In one implementation, an IM client application installed on a client device <b>702</b> may generate a URL based on the subscriber record. The URL may specify, for example, the protocol, the site name, and a path that corresponds to the alert preferences. The client device <b>702</b> may use a browser application, such as, for example, an embedded HTTP engine in the IM client application, to navigate to the URL to directly or indirectly retrieve data corresponding to particular types of alerts.</p>
+      <p id="p-00081-en" num="0081">Typically, a subscriber will generate a subscriber record during an initial session by interacting with UIs (“User Interfaces”) presented on the client device <b>702</b>. The subscriber record may be stored locally on the client device <b>702</b> so that the subscriber does not have to reenter the alert preferences for subsequent sessions unless, of course, the subscriber is using a different client device or desires to change alert preferences. Additionally, the subscriber record may be persistently stored in a centralized database in the host system.</p>
+      <p id="p-00082-en" num="0082">In the event that the subscriber record is stored in a database in the host system, the alert multiplexor <b>704</b> may request the subscriber record from the profile server <b>706</b> (step <b>725</b>). The profile server <b>706</b> may receive the request for the subscriber record (step <b>730</b>), retrieve the subscriber record from the database (step <b>735</b>), and send the subscriber record to the alert multiplexor <b>704</b> (step <b>740</b>).</p>
+      <p id="p-00083-en" num="0083">The alert multiplexor <b>704</b> receives the subscriber record from the profile server <b>706</b> (step <b>745</b>) and then communicates with the alert gate <b>708</b>. In one implementation, the alert multiplexor <b>704</b> may send an alert request to the alert gate <b>708</b> based on the subscriber record (step <b>750</b>). Namely, the alert multiplexor <b>704</b> may instruct the alert gate <b>708</b> to start searching for alert feeds corresponding to any alerts designated in the subscriber record and/or to send alert notifications when an alert feed corresponding to any alerts designated in the subscriber record is detected. The alert gate <b>708</b> receives the alert request from the alert multiplexor <b>704</b> (step <b>755</b>) and, in response, searches for and detects alert feeds (step <b>760</b>).</p>
+      <p id="p-00084-en" num="0084">In another implementation, the alert gate <b>708</b> continuously searches for a particular type of alert feed. The alert gate <b>708</b> may be loaded with a software program or piece of code that instructs the alert gate <b>708</b> to detect a particular alert feed from a remote server, such as, for example, a remote server in an OSP complex or the Internet. The alert feed may correspond to one subscriber or a group of subscribers depending upon load distribution. Typically, the remote server will be loaded with a software program or piece of code that instructs the server to broadcast an alert feed based on some triggering event to one or more specified alert gates. The broadcast of the alert feed may be a continuous or periodic broadcast of the state, may be a broadcast in response to a change in state, or may be a broadcast in response to a status inquiry (e.g., polling). As used herein, state refers to any condition of being that may be represented by the remote server. A change in state can be any updated condition of being and may be internal or external to the remote sever.</p>
+      <p id="p-00085-en" num="0085">Upon detecting the alert feed (step <b>760</b>), the alert gate <b>708</b> may send an alert notification to the alert multiplexor <b>704</b> (step <b>765</b>). The alert notification will inform the alert multiplexor <b>704</b> of the alert feed, the condition that triggered the alert feed, and/or the need to contact a particular subscriber. In one implementation, the alert gate <b>708</b> may send an alert notification to an alert multiplexor <b>704</b> that is associated with a particular subscriber during a session. This is typically the case for alerts relating to personalized information such as, for example, mail alerts and calendar alerts. In another implementation, the alert gate <b>708</b> may send an alert notification to an alert multiplexor <b>704</b> that that is associated with a particular type of alert. This is generally the case for alerts relating to information of interest to a large number of subscribers, such as, for example, stock alerts, weather alerts, news alerts, and third party alerts.</p>
+      <p id="p-00086-en" num="0086">Typically, the alert multiplexor <b>704</b> will be loaded with a software program or piece of code for instructing the alert multiplexor <b>704</b> to receive and/or retrieve messages from the alert gate <b>708</b>. The alert multiplexor <b>704</b> may be set to continuously or periodically receive and/or retrieve messages the alert gate <b>708</b>. The alert multiplexor <b>704</b> may receive the alert notification from the alert gate <b>708</b> (step <b>770</b>), and may then determine whether the alert notification corresponds to an alert of interest to a registered subscriber. In the event that a subscriber has requested notification about the particular alert feed, the alert multiplexor <b>704</b> sends an alert message to the client device <b>702</b> of the registered subscriber (step <b>775</b>). If the subscriber has requested offline notification about the particular alert, the alert multiplexor <b>704</b> may send an alert message to the appropriate offline device of the subscriber. The alert message may contain information about the alert feed and/or the condition that triggered the alert feed. The alert multiplexor <b>704</b> alone or in conjunction with other servers may perform sorting, prioritizing, or other types of organizational processing on the alert messages so that the client device <b>702</b> is notified in an optimal fashion.</p>
+      <p id="p-00087-en" num="0087">The client device <b>702</b> receives the alert message from the alert multiplexor <b>704</b> (step <b>780</b>), and then responds to the alert message (step <b>785</b>). For example, the subscriber may use the client device <b>702</b> to generate a response appropriate to the particular alert feed or triggering condition. Alternatively, the client device <b>702</b> may respond automatically to particular alert feeds and/or triggering conditions in a defined manner.</p>
+      <p id="p-00088-en" num="0088">A stock alert is one example of an alert message that may be requested by a subscriber. <figref>FIGS. 8-10</figref> illustrate several different UIs that may be used to set a subscriber's stock alert preferences by selecting certain options of and inputting information into the fields of the UIs.</p>
+      <p id="p-00089-en" num="0089">Referring to <figref>FIG. 8</figref>, a UI <b>800</b> may include a ticker symbol field <b>805</b> for entering the ticker symbol of one or more stocks to track and an index field <b>810</b> for selecting one or more stock indexes to track. The UI also may include a refresh field <b>815</b> for designating the interval at which the stock data is updated. The UI <b>800</b> may further include a stock alert button <b>820</b> for setting and editing stock alert preferences.</p>
+      <p id="p-00090-en" num="0090">Referring to <figref>FIG. 9</figref>, a UI <b>900</b> may include an enabled field <b>905</b> for enabling a stock alert for a particular stock and a stock selection field <b>910</b> for selecting a particular stock to trip a stock alert message. The UI <b>900</b> also may include a notification field <b>915</b> for selecting the conditions that trip the stock alert. Typically, a stock alert will be tripped based on price and/or volume, such as, for example, when the price exceeds a certain level, is below a certain level, is above the 52 week high, is below 52 week low, or is above or below a previous close by a certain amount, or when the volume of trading is above or below a certain amount. The UI <b>900</b> also may include an alert presentation field <b>920</b> for selecting the manner in which an alert message is presented to a subscriber, for example, by showing an alert notification window and/or playing a sound.</p>
+      <p id="p-00091-en" num="0091">Referring to <figref>FIG. 10</figref>, a UI <b>1000</b> may include a display field <b>1005</b> for showing whether a stock alert has been tripped, the ticker symbol of the stock, and the conditions that trip the stock alert. The UI <b>1000</b> also may include an alert selection field <b>1010</b> for selecting which of the stock alerts to display. The UI <b>1000</b> may include an add button <b>1015</b>, an edit button <b>1020</b>, and a remove button <b>1025</b> for adding, editing and removing certain stock alerts and may include a reset button <b>1030</b> for resetting a stock alert that has been tripped. The UI <b>1000</b> also may include a day selection field <b>1035</b> and time selection field <b>1040</b> for selecting when to run the stock alerts, for example, only on certain days and/or only at certain times during the day.</p>
+      <p id="p-00092-en" num="0092">Referring to <figref>FIG. 11</figref>, a UI <b>1100</b> illustrates a stock alert message that may be presented to a subscriber. The stock alert message may be any type of instant message, pop-up window, icon and/or audible alarm capable of getting a subscriber's attention. The stock alert message may include an information field <b>1105</b> containing information such as the last price, the dollar change, the percent change, the high, the low, the open, the previous close, the <b>52</b> week high, the <b>52</b> week low, and/or the trading volume. The UI <b>1100</b> also may include an edit button <b>1110</b> for editing the presentation of the alert, a chart button <b>1115</b> for displaying a stock performance chart, and a more information button <b>1120</b> for linking to OSP or Internet websites that provide more detailed information about the particular stock, financial advice, and/or contact information for online or offline stock brokers.</p>
+      <p id="p-00093-en" num="0093">As the stock market fluctuates, a stock alert server, for example, in an OSP host complex or the Internet, broadcasts a stock alert feed to indicate the changing stock prices. The stock alert feed may correspond to one stock, a group of stocks, or all stocks depending upon load distribution. A stock alert gate detects the stock alert feed and then, alone or in conjunction with one or more alert multiplexors, sorts and sends alert notifications to an alert multiplexor network. Each alert multiplexor in the alert multiplexor network may be dedicated to stock alerts for a certain set of stock ticker symbols and for a certain set of registered subscribers. By communicating with each other, all of the alert multiplexors in the alert multiplexor network have access to information including the complete set of subscribers registered to receive stock alerts, the selected stocks of each registered subscriber, the alert multiplexor and the IM server dedicated to each subscriber during a session, and the alert multiplexors dedicated to the selected stocks. Based on this information, the alert multiplexor network can send, deliver, retrieve, and/or receive stock alert notifications corresponding to all of the stocks selected by all of the registered subscribers and may command the IM client application of each registered subscriber to display an appropriate stock alert message.</p>
+      <p id="p-00094-en" num="0094">A mail alert is another example of an alert message that may be requested by a subscriber. <figref>FIGS. 12 and 13</figref> illustrate different UIs that may be used to set a subscriber's mail alert preferences by selecting certain options and inputting information into the fields of the UIs.</p>
+      <p id="p-00095-en" num="0095">Referring to <figref>FIG. 12</figref>, a UI <b>1200</b> may include an alert notification field <b>1205</b> for setting and editing certain mail alert preferences including the manner in which an alert message is presented to a subscriber, for example, by showing an alert notification window and/or playing a sound. The UI <b>1200</b> also may include an email address display field <b>1210</b> for showing the email addresses that trip a mail alert. The UI <b>1200</b> may include an add mail box button <b>1215</b>, an edit button <b>1220</b>, and a remove button <b>1225</b> for adding, editing and removing email addresses that trip a mail alert.</p>
+      <p id="p-00096-en" num="0096">Referring to <figref>FIG. 13</figref>, a UI <b>1300</b> may include a type field <b>1305</b> for entering the type of email account, e.g., a POP3 mail account, and an email address field <b>1310</b> for entering the type and address of an email account that trips a mail alert. The UI <b>1300</b> also may include a password field <b>1315</b> for entering the password to the email account, a server name field <b>1320</b> for entering the name of the server for the email account, a program field <b>1325</b> for entering the program used to access the email account, and a time field <b>1330</b> for entering the interval at which the email account is checked.</p>
+      <p id="p-00097-en" num="0097">Referring to <figref>FIG. 14</figref>, a UI <b>1400</b> illustrates a mail alert message that may be presented to a subscriber. The mail alert message may be any type of instant message, pop-up window, icon and/or audible alarm capable of getting a subscriber's attention. The mail alert message may include an information field <b>1405</b> containing information such as one or more email addresses, whether each of the email address contains unread email, and when the email address was last checked for unread email.</p>
+      <p id="p-00098-en" num="0098">As email messages are received, a mail alert server, for example, in an OSP host complex or the Internet, broadcasts a mail alert feed to indicate changing mail status. The mail alert feed may correspond to one subscriber, a group of subscribers, or all subscribers depending upon load distribution. The mail alert feed is sent to a mail gateway that performs any necessary protocol conversion and then directs the mail alert feed to a mail alert gate.</p>
+      <p id="p-00099-en" num="0099">The mail alert gate detects the mail alert feed and then, alone or in conjunction with one or more alert multiplexors, sorts and sends mail alert notifications to an alert multiplexor network. Each alert multiplexor in the alert multiplexor network may be dedicated to receiving mail alert notifications for a certain set of registered subscribers. Upon receiving a mail alert notification, the alert multiplexor examines whether the mail alert notification corresponds to any of its subscribers. In the event that the alert notification is for one of its subscribers, the alert multiplexor commands the IM client application running on the subscriber's client device to indicate that the subscriber has unread email. Once notified, the subscriber may use the client device to read the email message, typically with an email client application.</p>
+      <p id="p-00100-en" num="0100">Email messages are received and/or stored by a mail server alone or in cooperation with a mail repository. The mail server and mail repository may be part of an OSP host complex or any type of server capable of receiving and/or storing email whether internal or external to the OSP host complex. Email messages may be received and stored from any type of email account including, but not limited to an OSP based email account, an ISP based email account, a Web-based email account, and a POP3 email account.</p>
+      <p id="p-00101-en" num="0101">A third party alert is another example of alert message that may be requested by a subscriber. A third party is broadly understood to include any individual or business entity that provides goods or services. In general, a subscriber may register to receive alerts from one or more third parties that provide a certain category of services. In one implementation, the OSP queries subscribers as to whether they would like to receive various categories of third party alerts. For example, the OSP may partner with various suppliers of computer merchandise and may query subscribers as to whether they would like to receive alerts from any or all third parties that supply computer merchandise. In another implementation, a subscriber may register to receive an alert message at a third party's web site. Once a subscriber has registered to receive the alert, the third party directly or indirectly sends to the subscriber an alert including, for example, a promotional advertisement, a coupon, a notification that an order is done and/or a service is complete, and a message regarding confirmation, cancellation, and/or rescheduling of an appointment.</p>
+      <p id="p-00102-en" num="0102">A weather alert is another example of an alert message that may be requested by a subscriber. In one implementation, a subscriber may register to receive an alert message that o informs the subscriber of a weather forecast and/or adverse weather conditions in a particular geographic region.</p>
+      <p id="p-00103-en" num="0103">A calendar alert is another example of an alert message that may be requested by a subscriber. In general, a subscriber may register to receive an alert message that informs the subscriber of important dates, holidays and/or other special occasions. A calendar alert may be provided to a subscriber in any manner as described herein.</p>
+      <p id="p-00104-en" num="0104">A news alert is another example of an alert message that may be requested by a subscriber. In one implementation, a subscriber may register to receive an alert message that informs the subscriber of selected news items or a listing of Internet or online sites (links) related to selected news items. A news alert may be provided to a subscriber in any manner as described herein.</p>
+      <p id="p-00105-en" num="0105">Other embodiments are within the scope of the following claims.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20160818">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method comprising:
+<claim-text>detecting an alert associated with a client application;</claim-text><claim-text>determining that a user has requested to receive alert notifications when the client application is not running;</claim-text><claim-text>determining, using at least one processor, that a client device associated with the user is not running the client application; and</claim-text><claim-text>sending, to the client device, an alert notification associated with the detected alert.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising receiving an alert registration associated with the user and the client application.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, further comprising updating a user profile associated with the user based on the received alert registration.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method of <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein the alert registration comprises one or more alert notification preferences.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising receiving data representative of the alert from a remote server.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the alert comprises one of a third party alert, a weather alert, a calendar alert, or a news alert.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the client application comprises a messaging application.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the client device comprises a mobile device.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en" independent="true">
+      <claim-text>
+        <b>9</b>. A method comprising:
+<claim-text>detecting an alert associated with a user;</claim-text><claim-text>determining that the user has requested to receive alert notifications when a client application is not running on a client device associated with the user;</claim-text><claim-text>determining, using at least one processor, that the client device is not running the client application; and</claim-text><claim-text>sending, to the client device, an alert notification associated with the detected alert.</claim-text></claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein sending, to the client device, an alert notification associated with the detected alert further comprises sending the alert notification to a telephone number associated with the user.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method of <claim-ref idref="clm-00010-en">claim 10</claim-ref>, further comprising:
+<claim-text>receiving a request from the user to receive alert notifications via the telephone number; and</claim-text><claim-text>updating a profile of the user to associate the telephone number with the user.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein sending, to the client device, an alert notification associated with the detected alert further comprises sending the alert notification to an email address associated with the user.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, further comprising:
+<claim-text>receiving a request from the user to receive alert notifications via the email address; and</claim-text><claim-text>updating a profile of the user to associate the email address with the user.</claim-text></claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, further comprising receiving an alert registration representing a request to receive a particular type of alert and comprising one or more conditions for tripping the particular type of alert.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, further comprising monitoring an alert feed in accordance with the received alert registration.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en" independent="true">
+      <claim-text>
+        <b>16</b>. A system comprising:
+<claim-text>at least one processor; and</claim-text><claim-text>at least one non-transitory computer readable storage medium storing instructions thereon that, when executed by the at least one processor, cause the system to:</claim-text><claim-text>detect an alert associated with a client application;</claim-text><claim-text>determine that a user has requested to receive alert notifications when the client application is not running;</claim-text><claim-text>determine that a client device associated with the user is not running the client application; and</claim-text><claim-text>send, to the client device, an alert notification associated with the detected alert.</claim-text></claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The system of <claim-ref idref="clm-00016-en">claim 16</claim-ref>, further comprising instructions that, when executed by the at least one processor, cause the system to:
+<claim-text>receive an alert registration associated with the user and the client application; and</claim-text><claim-text>maintain a user profile associated with the user comprising the received alert registration.</claim-text></claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The system of <claim-ref idref="clm-00017-en">claim 17</claim-ref>, further comprising instructions that, when executed by the at least one processor, cause the system to update the user profile associated with the user based on the received alert registration.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The system of <claim-ref idref="clm-00018-en">claim 18</claim-ref>, further comprising instructions that, when executed by the at least one processor, cause the system to send the alert notification to a telephone number associated with the user.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The system of <claim-ref idref="clm-00018-en">claim 18</claim-ref>, further comprising instructions that, when executed by the at least one processor, cause the system to send the alert notification to an email address associated with the user.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20160241632A9_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20160241632A9-20160818-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20160241632A9_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20160241632A9-20160818-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20160241632A9_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20160241632A9-20160818-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20160241632A9_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20160241632A9-20160818-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20160241632A9_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20160241632A9-20160818-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20160241632A9_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20160241632A9-20160818-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20160241632A9_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20160241632A9-20160818-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20160241632A9_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20160241632A9-20160818-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20160241632A9_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20160241632A9-20160818-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20160241632A9_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20160241632A9-20160818-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20160241632A9_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20160241632A9-20160818-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20160241632A9_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20160241632A9-20160818-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20160241632A9_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20160241632A9-20160818-D00012.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20160241632A9_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20160241632A9-20160818-D00013.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20160241632A9_00015.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20160241632A9-20160818-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20160241632A9.PDF" type="pdf" size="1916603" pages="24" />
+</lexisnexis-patent-document>

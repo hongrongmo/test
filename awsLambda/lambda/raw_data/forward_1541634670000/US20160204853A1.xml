@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160714" file="US20160204853A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20160714" time-inserted="093520" date-changed="20160714" time-changed="093521">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent application (publication)">
+      <document-id id="125722354">
+        <country>US</country>
+        <doc-number>20160204853</doc-number>
+        <kind>A1</kind>
+        <date>20160714</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id id="79127389">
+        <country>US</country>
+        <doc-number>14961555</doc-number>
+        <date>20151207</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20160714">
+      <unexamined-printed-without-grant>
+        <date>20160714</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20160714">
+      <classification-ipcr sequence="1">
+        <text>H04B   7/185       20060101AFI20160714BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>7</main-group>
+        <subgroup>185</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160714</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20160714">
+      <classification-cpc sequence="1">
+        <text>H04B   7/18584     20130101 FI20160714BHUS        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>7</main-group>
+        <subgroup>18584</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160714</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">2</number-of-claims>
+    <invention-title id="title_eng" date-changed="20160714" lang="eng" format="original">SYSTEM AND METHOD FOR SATELLITE ROUTING OF DATA</invention-title>
+    <related-documents date-changed="20160714">
+      <continuation-in-part>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14713590</doc-number>
+              <date>20150515</date>
+            </document-id>
+            <parent-status>PENDING</parent-status>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14009615</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation-in-part>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61993758</doc-number>
+          <date>20140515</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20160714">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>LEOSAT, LLC</orgname>
+            <address>
+              <city>Pompano Beach</city>
+              <state>FL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Anders</last-name>
+            <first-name>Cliff</first-name>
+            <address>
+              <city>Pompano Beach</city>
+              <state>FL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Chin</last-name>
+            <first-name>Seacol</first-name>
+            <address>
+              <city>Sugar Land</city>
+              <state>TX</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20160714">
+      <main-family family-id="184428423">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20160204853</doc-number>
+            <kind>A1</kind>
+            <date>20160714</date>
+          </document-id>
+          <application-date>
+            <date>20151207</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="184428418">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20160204853</doc-number>
+            <kind>A1</kind>
+            <date>20160714</date>
+          </document-id>
+          <application-date>
+            <date>20151207</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20160714" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">We disclose herein a system and method for routing data between satellites in orbit and clients located on earth. The system provides high-throughput method for moving data on and off of satellites. The satellites have onboard processors to manage the network and dynamically switch between gateway and client based modes.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20160714">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCES TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application is related to application U.S. patent application Ser. No. 14/713,590, filed on May 15, 2015, which claims benefit of priority to U.S. Provisional Application Ser. No. 61/993,758, filed May 15, 2014, which are hereby incorporated by reference herein in their entirety.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">The present invention is generally directed toward a system for providing high speed network connections globally. More particularly, it discloses a method for routing data between satellites and the ground based networks.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00003-en" num="0003">LeoSat has come to this market with the specific goal of applying new and emerging technologies to the Satellite Data Market. We are a forward-looking company with an engineering history of developing and providing data/voice communication in harsh environments.</p>
+      <p id="p-00004-en" num="0004">We strongly believe that it is time for a market shift in satellite data communications. Technology developments and demands have lined up to facilitate a major shift in how satellite data is viewed and delivered. While the market has many long-established companies, there is a tendency as in most long time operators, to continue to look at the market with the way “things have always been done.” Both existing and potential new customers to this market are being driven by the ever expanding growth in the need to stay connected to the Internet with high-performance connections everywhere. Many customers are being held back by the current offerings which miss on both price and performance. Cruise ships cannot begin to keep up with their passenger's demand of always on high-speed Internet services. Oil exploration and production need much faster data transport than is available today. The developing world needs cost effective high-performance networks for telemedicine and distance learning. Widely dispersed countries like Indonesia, Canada, parts of China, Africa, South America and the Soviet Union need cost effective high-speed networks to help these areas develop. When disaster strikes such as earthquakes, hurricanes or a tsunami rescue and relief efforts need to be able quickly establish solid communications and data networks. Finally, there is a demand for a worldwide truly secure data network solution. Current operators providing 1-2 Mbs (even 12 Mbs in limited cases) at high costs are not up to the challenges of these demands. Most require 7-9 foot dishes for marginally high speed access. These antennas must be set in concrete to maintain focus on a satellite some 22,500 miles out in space. Even then the performance of these systems is poor. Twelve (12) megabits on such as a system performs like 0.5 megabits on a normal network. This is not nearly enough for the demands. The equipment is expensive, large and the data performs poorly. The cost of the data is still very high and in the quantities needed, simply not available.</p>
+      <p id="p-00005-en" num="0005">How we See the Market Today</p>
+      <p id="p-00006-en" num="0006">We see the satellite data markets as being ill-served today. There are some new advances in satellite services being offered, but they are just incremental improvements over the past generations of offerings. Many of the same major problems with the older systems, still exist in the new offerings. Additionally, these problems are going to have even more negative effects in the future.</p>
+      <p id="p-00007-en" num="0007">Problems with the Current Systems</p>
+      <p id="p-00008-en" num="0008">Latency</p>
+      <p id="p-00009-en" num="0009">Latency (delay) is partly a factor of physics and partly a factor of design. It is not just a problem with having a delay in telephone calls transmitted over the links; it is a problem with data transfers, applications and even web browsing. It is a problem that will continue to cause increasing frustration with the use of such connections for access to the Internet. The backbone and the connection speeds on the Internet are all increasing at exponential rates. As more devices and people are connected, more speed, efficiency and bandwidth are required. Websites and other such portals are optimized to serve as many clients as possible, as efficiently as possible. Administrators make tradeoffs in their methods of identifying efficiency models for their servers. When a client connects to a website and makes a request, a data socket is established. The server services these sockets in pools. If a particular client is taking more than XX ms to respond, the server will terminate that connection and hope the client comes back with a better connection. The servers simply can't wait on slow connections and stay efficient. The “delay timeout” settings have been lowered and will continue to be lowered as statistically the connection speeds increase. Another cause of dropped connections is a client that requires a lot of retransmission of the data packets. Again, the server will identify these connections and drop them, hoping the client will return with a better connection. To put this in the specifics of the GEO Satellite serviced client, a connection with a round trip delay of 500 ms will see increasing performance degradation in the future. Latency has a terrible performance impact on any TCP/IP network.</p>
+      <p id="p-00010-en" num="0010">Performance</p>
+      <p id="p-00011-en" num="0011">Latency drives performance on a data network. TCP/IP is the transport for today's data networks, and due to the methods used in this transport latency or delay (for the purposes of this discussion the terms are interchangeable) are major factors in actual performance. When a service provider sells a client a megabit rate, the actual throughput on that bandwidth will be significantly impacted by the satellite system being used. Most satellites providing the services today are in a GEO orbit level. This level is approximately 36,000 Km (22,500 miles) above the earth. There are some new systems coming on line that are in MEO orbit which is approximately 8,500 Km (5,200 miles). However, as you can see in attachment “A”, neither system will provide for the systems necessary to keep up in the coming years. For reference a GEO system promising 50 Mbs bandwidth will actually only provide 1 Mbs of actual throughput when using a TCP/IP connection. The type connection all Internet browsing uses today.</p>
+      <p id="p-00012-en" num="0000">RTT 10 ms=&gt;TCP throughput=52428000 bps=52 Mbps <br /> RTT 20 ms=&gt;TCP throughput=26214000 bps=26 Mbps <br /> RTT 50 ms=&gt;TCP throughput=10485600 bps=10 Mbps <br /> RTT 100 ms=&gt;TCP throughput=5242800 bps=5.2 Mbps MEO Best Performance <br /> RTT 150 ms=&gt;TCP throughput=3495200 bps=4.3 Mbps <br /> RTT 200 ms=&gt;TCP throughput=2621400 bps=2.5 Mbps <br /> RTT 300 ms=&gt;TCP throughput=1747600 bps=1.7 Mbps <br /> RTT 500 ms=&gt;TCP throughput=1048560 bps=1 Mbps GEO Best Performance </p>
+      <p id="p-00013-en" num="0012">There are WAN accelerators (such as Riverbed Steelhead) that use caching and sliding frame sizes to help improve the throughput, but they can't change the physics of the time it takes the radio signal to traverse the distances.</p>
+      <p id="p-00014-en" num="0013">Coverage</p>
+      <p id="p-00015-en" num="0014">There is not a system today that can provide the same level of high speed Internet connections throughout the world. There are both GEO and MEO systems that provide coverage for locations to approximately 35-45° North or South of the equator. The further from the equator one travels the slower the speed will become and the quality of the connection will suffer as well. While some operators in the market place are claiming “worldwide coverage”, the fine print reads that the system will revert to lower frequency bands (very slow speed) in and/or low bandwidth connections farther reaches of their system coverage areas. No system today provides the same high speed data worldwide.</p>
+      <p id="p-00016-en" num="0015">Mechanical Dishes</p>
+      <p id="p-00017-en" num="0016">For clients that move e.g. maritime, vehicles, Airplanes tracking dishes (or very expensive and power hungry phased array antennas) must be used to keep the dishes pointed to the satellite for service. The dishes require 3 axis stabilized platforms that are continuously operating motors and gears or belts, to keep the beam accurately pointed at its servicing satellite. Therefore, there are numerous moving parts that are subject to wear and failure over the life of the system. Such systems require significant preventative maintenance checks and part replacements. This requires vendor visits to just about anywhere in the world to replace a belt, motor or BUC, that has failed while in service. This drives costs, operational outages and therefore loss revenues. It increases costs to the operator and causes increased costs to the clients as well. These solutions have proven difficult to maintain to a level that complies with SLA's.</p>
+      <p id="p-00018-en" num="0017">Client Station Costs</p>
+      <p id="p-00019-en" num="0018">The current satellite client station costs for high capacity users are substantial ($100K+). The cost of installing, maintaining and changing the client stations is a significant factor in the total cost of operation of the satellite Internet data. If a MEO or LEO system is used, the client station requires at least two tracking dishes and for redundancy a third should be installed.</p>
+      <p id="p-00020-en" num="0019">The problems with the prior art indicate that there is a need for a new communication system for providing global network access. We disclose herein a system and method for transmitting data that employs new the satellite payloads, new data treatment methods, new data routing methods and new client terminals, and new technologies that significantly change the paradigm of what can be delivered and at what cost.</p>
+      <heading id="h-00004-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00021-en" num="0020">We looked at this market and decided a new approach was timely. New technologies can be brought to the market, the demand is going nowhere but up and the entrenched players have huge invested interest to not obsolete themselves too rapidly.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00022-en" num="0021">Further advantages of the invention will become apparent by reference to the detailed description of preferred embodiments when considered in conjunction with the drawings:</p>
+      <p id="p-00023-en" num="0022">
+        <figref>FIG. 1</figref> illustrates the LEOSAT satellite configuration of a 64 low earth orbit satellite system.</p>
+      <p id="p-00024-en" num="0023">
+        <figref>FIG. 2</figref> illustrates satellite orbital areas of LEO (Low Earth Orbit), MEO (Medium Earth Orbit), and GEO (Geosynchronous Earth Orbit).</p>
+      <p id="p-00025-en" num="0024">
+        <figref>FIG. 3</figref> illustrates a bent pipe architecture.</p>
+      <p id="p-00026-en" num="0025">
+        <figref>FIG. 4</figref> illustrates a grid of fixed spot beams for a constellation of MEO satellites.</p>
+      <p id="p-00027-en" num="0026">
+        <figref>FIG. 5</figref> illustrates a constellation of satellites with spot beams in equatorial orbit.</p>
+      <p id="p-00028-en" num="0027">
+        <figref>FIG. 6</figref> illustrates a fixed spot beam from a satellite.</p>
+      <p id="p-00029-en" num="0028">
+        <figref>FIG. 7</figref> illustrates a constellation of LEO satellites.</p>
+      <p id="p-00030-en" num="0029">
+        <figref>FIG. 8</figref> illustrates a map showing multiple connections and frequencies available to a ship from land-based connections.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00031-en" num="0030">The following detailed description is presented to enable any person skilled in the art to make and use the invention. For purposes of explanation, specific details are set forth to provide a thorough understanding of the present invention. However, it will be apparent to one skilled in the art that these specific details are not required to practice the invention. Descriptions of specific applications are provided only as representative examples. Various modifications to the preferred embodiments will be readily apparent to one skilled in the art, and the general principles defined herein may be applied to other embodiments and applications without departing from the scope of the invention. The present invention is not intended to be limited to the embodiments shown, but is to be accorded the widest possible scope consistent with the principles and features disclosed herein.</p>
+      <p id="p-00032-en" num="0031">We built the disclosed system from the ground up, instead of from the satellite down. This meant we attacked the issues with the client stations first. Considerations were size, profile, redundancy, flexibility, reliability and cost. In a first embodiment, we specially designed a client station antenna for large users as described herein: <ul id="ul-00001-en" list-style="none"><li>Size: 40 inches×40 inches×4 inches (L×W×H)×2 (one transmit and one receive)</li><li>Profile: Mounts flat on flat surface with 4 inch wind profile</li><li>Redundancy: Two independent systems that work in parallel with both active at all times.     <ul id="ul-00002-en" list-style="none"><li>Each has the ability to engage multiple satellites simultaneously.</li><li>Either one can provide the full bandwidth purchased.</li></ul></li><li>Flexibility: Supports multiple data protocols and coding schemes. Such as TCP/IP and DBV-x. Ability to track multiple satellites at the same time.</li><li>Reliability: No motors, belts, gears or even BUC's. Simply no moving parts.</li><li>Cost: &lt;$50K</li><li>Capacity: Up to 2 Gbs per beam. Multiple beams available.</li></ul></p>
+      <p id="p-00033-en" num="0041">The antenna provides significant advantages over other client station antennas, in that it has a high capacity, and is significantly less expensive than arrays or other antennas that are typically used. Furthermore, it has a low wind provide and can engage multiple satellites simultaneously. The antennas are two independent systems that work in parallel to provide redundancy.</p>
+      <p id="p-00034-en" num="0042">We then attacked the issues with performance and cost per megabit. The system is designed with the following specifications, but it should be appreciated that this is just one working embodiment, and that variations and alternatives are within the scope of this disclosure.</p>
+      <p id="p-00035-en" num="0043">Latency</p>
+      <p id="p-00036-en" num="0044">Understanding that latency is the biggest factor in performance (other than raw bandwidth) we designed the system with a latency factor of &lt;50 ms. This provides for a level of performance that will not only exceed today's requirements, but also be in line to perform well with the Internet and systems for many years into the future. Low latency is achieved by using a low orbit of 1000 miles instead of 22,000 miles typically used by other MEO or GEO communication satellites.</p>
+      <p id="p-00037-en" num="0045">Performance</p>
+      <p id="p-00038-en" num="0046">Having addressed the latency issue, our system will outperform a GEO system by a factor of 50 to 1. It will outperform a MEO System by a factor of 10 to 1. This is directly related to costs as well. The performance difference means that a customer would have to contract for a high multiple of bandwidth from one of the other systems to receive the same user experience of a much lower bandwidth rate from our system. One other significant difference in our system and the current systems is that our service offers synchronous bandwidth. Our upload speeds are the same as our download speeds. This will make a huge difference in the ability of the clients to maintain servers, email and video across these connections. This will also be a welcome benefit to mobile operators such as Cruise lines with their administrative data needs and oil field exploration with their collected data uploads and real time video monitoring of remote areas.</p>
+      <p id="p-00039-en" num="0047">In summary, LeoSat will be the first company to offer a unique combination of lowest latency, actually usable high speeds at very attractive prices and truly global reach. The ability of the satellite to off load the entire capacity of the maximum client links via the ISL's is extremely important as it goes to flexibility, avoiding satellite saturation and being able to use remote gateways to serve difficult areas.</p>
+      <p id="p-00040-en" num="0048">Pricing</p>
+      <p id="p-00041-en" num="0049">We have designed the system to allow our purchase of our core bandwidth from strategically located locations where there is heavy competition by large Internet backbone providers. Using the competition between the backbone providers we will have access to the lowest pricing in the market.</p>
+      <p id="p-00042-en" num="0050">The flexibility we built into our design allows for our being able to have our core locations compete even with each other for the lowest cost of Internet backbone. Our pricing to the clients will be based upon a bandwidth committed information rate (CIR) with no monthly usage caps or other added costs. Therefore, continuous use will not be a problem. Bandwidth usage will be monitored and recorded with usage statistics available at any time. If a client is hitting its maximum bandwidth level, additional bandwidth can be increased as needed to meet demand. We will even offer programs where the bandwidth can be adjusted on a schedule of high season and low season. It should be appreciated that our design does not require our “adding a transponder” or any other such ceilings. Our design is delivery by software settings in the client that can be changed remotely. No additional equipment and no site visit required.</p>
+      <p id="p-00043-en" num="0051">Coverage</p>
+      <p id="p-00044-en" num="0052">The coverage will truly be worldwide. We will be able to deliver the same quality and quantity of bandwidth to any client regardless of their location. Such large covered is accomplished by using 64 satellites in overlapping orbit patterns that are able to communicate with each other. In one embodiment, the pattern of orbits of satellites can be described as a duel rosetta to ensure overlapping coverage.</p>
+      <p id="p-00045-en" num="0053">No Mechanical Dishes</p>
+      <p id="p-00046-en" num="0054">As described earlier our client antennas have no moving parts and no parts to change. If one fails there is already a redundant one running that can deliver the complete bandwidth. Additionally in the event of a failure a change out is extremely simple. There is no real “pointing” of the antenna, just detach and replace.</p>
+      <p id="p-00047-en" num="0055">Client Station Costs</p>
+      <p id="p-00048-en" num="0056">We have targeted our highest bandwidth client station to cost less than $40 k with full redundancy. Other portable and small client stations without redundancy are expected to cost approximately $20 K. These costs are significantly lower than other satellite communication providers.</p>
+      <p id="p-00049-en" num="0057">Redundancy</p>
+      <p id="p-00050-en" num="0058">The new system is fully redundant. The antennas are redundant, the radios and all supporting equipment is installed with redundancy in place.</p>
+      <p id="p-00051-en" num="0059">Meeting Client Requirements</p>
+      <p id="p-00052-en" num="0060">The client experience with the new system will be very much like their experience with Internet usage in terrestrial networks. The performance will be on par with telecom provided connections to offices. “Always on” connections.</p>
+      <heading id="h-00007-en" level="2">System Comparison</heading>
+      <p id="p-00053-en" num="0061" />
+      <p id="p-00054-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="70pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Operation Aspects</entry>
+                  <entry>GEO</entry>
+                  <entry>MEO</entry>
+                  <entry>IT Centricity</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="right" />
+              <colspec colname="3" colwidth="35pt" align="left" />
+              <colspec colname="4" colwidth="21pt" align="right" />
+              <colspec colname="5" colwidth="21pt" align="left" />
+              <colspec colname="6" colwidth="21pt" align="right" />
+              <colspec colname="7" colwidth="28pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>Latency</entry>
+                  <entry>500 </entry>
+                  <entry>ms</entry>
+                  <entry>130 </entry>
+                  <entry>ms</entry>
+                  <entry>50 </entry>
+                  <entry>ms</entry>
+                </row>
+                <row>
+                  <entry>IP Performance @</entry>
+                  <entry>1 </entry>
+                  <entry>Mbs</entry>
+                  <entry>1.7 </entry>
+                  <entry>Mbs</entry>
+                  <entry>37 </entry>
+                  <entry>Mbs</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="70pt" align="left" />
+              <colspec colname="3" colwidth="42pt" align="left" />
+              <colspec colname="4" colwidth="49pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>50 Mbs</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Pricing</entry>
+                  <entry>$750+ per </entry>
+                  <entry>$800+ per</entry>
+                  <entry>$800 per </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hz/Mbs</entry>
+                  <entry>Hz/Mbs</entry>
+                  <entry>Hz/Mbs (est.)</entry>
+                </row>
+                <row>
+                  <entry>Coverage</entry>
+                  <entry>35° to 45° of</entry>
+                  <entry>35° to 45° of</entry>
+                  <entry>Worldwide</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>equator</entry>
+                  <entry>equator</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Mechanical Dish</entry>
+                  <entry>1 or 2</entry>
+                  <entry>2 minimum</entry>
+                  <entry>None</entry>
+                </row>
+                <row>
+                  <entry>Client Station Cost</entry>
+                  <entry>$150,000+</entry>
+                  <entry>$450,000+</entry>
+                  <entry>&lt;$50,000</entry>
+                </row>
+                <row>
+                  <entry>Redundancy</entry>
+                  <entry>Fall back to Ku</entry>
+                  <entry>Not fully</entry>
+                  <entry>Fully redundant</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>band</entry>
+                  <entry>redundant</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Sold by</entry>
+                  <entry>Bandwidth +</entry>
+                  <entry>Bandwidth +</entry>
+                  <entry>Bandwidth </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Caps</entry>
+                  <entry>Caps</entry>
+                  <entry>no caps</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00055-en" num="0062">The comparison chart fails to capture some of the benefits of the currently described system over the current systems. The ability of the clients to enjoy an always on connection and equal upload speeds should not go un-noticed. The performance differences are not just important today, but will become increasingly important in the future as everything speeds up. Current systems with a significant latency issue is a growing problem that will only become worst with time.</p>
+      <p id="p-00056-en" num="0063">It should be appreciated that the disclosed invention can have many different applications, including, but not limited to, the following: <ul id="ul-00003-en" list-style="none"><li><ul id="ul-00004-en" list-style="none"><li>1) Maritime, including but not limited to Cruise Lines, commercial shipping, Ferries and possible military contracts.</li><li>2) Oil Exploration and production. Both on-shore and off-shore.</li><li>3) Island Nations—Schools, telemedicine, remote location government services and feed for ground internet providers.</li><li>4) Extreme Northern and Southern regions that lack a business case for fiber and are not served by current satellite solutions.</li><li>5) All clients that currently use satellite, but need symmetric or high rate “up” bandwidth. News media and any organization that produces large data in remote places.</li><li>6) All clients where real time remote operation or monitoring of equipment in remote locations is necessary.</li><li>7) Emergency response teams worldwide. A complete client station that will have the ability to deliver a true high speed backbone network anywhere in the world. The client station will weigh less than 200 lbs and will require less than 800 watts of power. Both phone and data services will be established over a common link.</li><li>8) Business clients that require the most secure commercial network connectivity in the world.</li><li>9) Island nations seeking high speed backbone connectivity for their services.</li></ul></li></ul></p>
+      <p id="p-00057-en" num="0073">It should also be appreciated that the disclosed invention provides the following advantages over the prior art: <ul id="ul-00005-en" list-style="none"><li><ul id="ul-00006-en" list-style="none"><li>1) The system uses the high speed and large bandwidth of the Ka band to a LEO system. KA band is high frequency which is more susceptible to moisture.</li><li>2) Networking a constellation of satellites together with high throughput data capabilities using low latency routing techniques.</li><li>3) Due to system design we will be able to place ground stations in the most beneficial economical locations for wholesale Internet bandwidth purchases, for example at internet backbones.</li><li>4) Significantly reducing latency and thereby significantly increasing bandwidth performance.</li><li>5) Introducing a new client station design that will address many of the problems with the existing client stations. (e.g. Size, maintenance, moving parts, power requirements)</li><li>6) The first and only true worldwide total wideband high throughput commercial satellite system deployed.</li><li>7) The most secure encrypted client to encrypted client non-military data network in the world. Because the system employs the use of protocol independent transport (Multiprotocol Label Switching (MPLS)), it can securely transmit multiple data feeds without compromising security.</li><li>8) The first high bandwidth many in the far north/south and middle of the ocean will see. Bandwidth up to 1.2 Gbs.</li><li>9) Any client station can also be a gateway.</li><li>10) First MPLS network in space.</li></ul></li></ul></p>
+      <p id="p-00058-en" num="0084">The Technical Details</p>
+      <p id="p-00059-en" num="0085">Satellite Routing</p>
+      <p id="p-00060-en" num="0086">
+        <figref>FIG. 3</figref> illustrates the “Bent Pipe” architecture used in the vast majority of all satellite deployments of the prior art. This is where the satellite is nothing more from a routing perspective than a relay. The data is sent to the satellite from the client, only to be retransmitted back down to a gateway attached to the Internet or private network. There has been little to no processing as far as routing is concerned on the satellites.</p>
+      <p id="p-00061-en" num="0087">Recently there have been some deployments of what the satellite industry terms a “mesh” network. This enables client stations on the same satellite to send data directly to each other. This was accomplished with the routing devices being placed at the client stations and still using the satellite as a relay. However, there is no facilitation for clients not on the same satellite.</p>
+      <p id="p-00062-en" num="0088">The only other routing that is currently taking place on commercial satellites is being done on the Iridium system. The Iridium system is very much like a cellular phone system, just in the sky. It routes cellular phone calls from the user's handset to the nearest gateway via Inter-Satellite Links (ISL's). It also routes very small data using the same methodology. The Iridium system is limited to routing their data (calls) in the same methods that cellular calls are routed on land based systems.</p>
+      <p id="p-00063-en" num="0089">Other prior known methods don't actually transmit at advertised rates. For example, O3B claims that it transmits 84 Gbs but really only transmits at 19.2 Gbs because the data is not really being routed.</p>
+      <p id="p-00064-en" num="0090">Some of the newest and most advanced deployments of satellite systems suffer from the inability of moving their customers data off their satellites. The case in point is O3B. While they claim throughput of 84 Gbs on their 8 satellite constellation, they actually only have a maximum throughput of 19.2 Gbs. The O3B satellites each have 10 customer beams and 2 gateway beams. While the customer beams could max out at 10×1.2 Gbs=12 Gbs each satellite, they can only get 2×1.2 Gbs=2.4 Gbs of that to their gateways. So the real throughput is only 2.4 Gbs per satellite. Or stated another way, a maximum of 2.4 Gbs available per ⅛<sup>th </sup>of the earth. It is important to note that O3B is not alone in claiming the sum of their client beams as their satellite “throughput”. Much to our dismay it is widely done in the industry.</p>
+      <p id="p-00065-en" num="0091">We recognized during the design phase of their new system that a new approach to data movement on and off satellites was necessary because the prior art methods were unable to achieve the high-throughput required.</p>
+      <p id="p-00066-en" num="0092">The method disclosed herein takes a different approach with each satellite having the same number of client facing beams, but incorporating four (4) Inter-Satellite Links (ISL's) per satellite and implementing a fully managed intelligent meshed network between the satellites, gateways and clients. Prior art satellites do not have any real processing capabilities. Incorporating such processing abilities adds significant power requirements, weights, and other constraints, but is done to maximize performance of the network. The four (4) ISL's would be one to the satellite in front, one to the rear, one to the left and one to the right. The ISL's would preferably utilize a higher frequency providing for larger bandwidth transfers between the satellites. In a preferred embodiment, that link between satellites (which are about 1500 to 1600 miles apart) is a 40 GHz link.</p>
+      <p id="p-00067-en" num="0093">One unique aspect of our system (see <figref>FIGS. 1 &amp; 7</figref>) is that each of our client beams can be configured dynamically as a client and/or gateway through software. Prior art systems were incapable of switching dynamically between gateway and client mode where the satellite meets the earth network. As a result, the system can allocate resources as needed to reduce any bottlenecks to earth. The gateways can be activated and deactivated as demand dictates.</p>
+      <p id="p-00068-en" num="0094">In one embodiment, MPLS is used as the data transport protocol. By using MPLS we are able to create end-to-end circuits across any of our links. MPLS also allows the network to support circuit-based clients and packet-switching clients on the same network at the same time. So a bank, for example, can have a separate private network with its branches and ATMs instead of using the internet. At this time MPLS would appear to be a good candidate for the transport logic, however other transport protocols may also be used.</p>
+      <p id="p-00069-en" num="0095">The processors on board the satellite are used to help manage the network. In a preferred embodiment, the network will be rules-based on a “cost scoring” method. The cost scoring can be weighted by latency, bandwidth costs at gateways, regional restrictions, hop counts and any number of other factors. Network management will normally be automatic, however it can be temporarily modified by network operators to work around issues or problems. The networking will have a “failsafe” mechanism that would allow all tables to be reset or cleared in the event of a malfunction. Copies of the tables would be routinely backed up to the gateways and on the satellites themselves.</p>
+      <p id="p-00070-en" num="0096">While we recognize that there is concern with having critical processing taking place on the satellites, we are incorporating several failsafe techniques into the design to insure our control of the processing.</p>
+      <p id="p-00071-en" num="0097">This system provides the dynamic flexibility of data transport that has come to be expected of professionally managed networks. With the ability to guarantee bandwidth, performance and security, this satellite network will set a new standard in how data is transported and handled by a satellite network. The enormous flexibility will enable operations to develop feature sets attractive to the client's needs for years to come, while also keeping costs well under control.</p>
+      <heading id="h-00008-en" level="1">Examples of Usage</heading>
+      <p id="p-00072-en" num="0098">If an oil exploration company in the Gulf of Mexico wants to institute new real time measurements and controls on their rig operations and monitor/control them from Houston, we can provide this with direct rig to headquarters links. Completely secure, no gateway needed.</p>
+      <p id="p-00073-en" num="0099">If cruise operators would like to go to cloud management of their fleets and hotel services, we can not only network them all together into a high performance cloud, but also provide peering services with all parties. Completely secure, no gateway needed.</p>
+      <p id="p-00074-en" num="0100">If an international bank wants completely secure connections to certain other bank operations around the world, we can provide that. Completely secure, no gateway needed.</p>
+      <p id="p-00075-en" num="0101">If an Island nation wants to link their remote islands for government services, telemedicine, communications, schools and even video, we can supply that connectivity at a very reasonable cost.</p>
+      <p id="p-00076-en" num="0102">The Internet on Cruise Ships is at best, slow and at worst, unusable. While there are several competing solutions “on the horizon,” only one appears to be a viable candidate to bring the systems to a performance level that will meet today's and tomorrow's demand. Explained with some detail below is how each announced system will strive to address the requirements. Also explained is what can be done to make the most of today's options and what is coming to a cruise ship that will finally meet the demands.</p>
+      <p id="p-00077-en" num="0103">First, let's set some standards and expectations. Cruise ships are concentrated connections, and a group of cruise ships will overload a bandwidth that is not dedicated. You simply cannot put several cruise ships on a shared bandwidth link and expect the performance to be acceptable. The Bahamas/Caribbean areas of cruising only spread across two time zones and ship schedules are very close to the same on each ship. There is usually a 6 PM first seating and an 8:30 PM second seating for dinner. Shows and other planned activities on ships are also very much in line across the ships. Even port times are close. What this creates is peak time for Internet usage that is relatively consistent across ships in the region. All of this also influences Internet usage by the crew and the administration, as their activities are driven by the identical schedules. So there is a high concentration of users on a ship and then have multiples of high concentrations of users across ships, with a concentrated use during identical time periods. Everyone cruising in the region is pretty much on the same schedule of activities. It helps to understand this customer environment when designing a network to properly handle the network traffic that will be generated. It also helps to understand it, when choosing a solution and provider(s).</p>
+      <p id="p-00078-en" num="0104">Based upon modeling of the traffic using a resort type user base, the projections below are made:</p>
+      <p id="p-00079-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="left" />
+              <colspec colname="2" colwidth="77pt" align="center" />
+              <colspec colname="3" colwidth="49pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Growth/</entry>
+                </row>
+                <row>
+                  <entry>Ship Size</entry>
+                  <entry>Counts</entry>
+                  <entry>Now</entry>
+                  <entry>year</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="left" />
+              <colspec colname="2" colwidth="77pt" align="center" />
+              <colspec colname="3" colwidth="21pt" align="right" />
+              <colspec colname="4" colwidth="28pt" align="left" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>1) Small Ship</entry>
+                  <entry>2000-2600 passengers,</entry>
+                  <entry>75 </entry>
+                  <entry>Mbs</entry>
+                  <entry>15%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>650 Crew, admin traffic</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>2) Medium Ship</entry>
+                  <entry>2601-3200 passengers,</entry>
+                  <entry>100 </entry>
+                  <entry>Mbs</entry>
+                  <entry>15%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>850 Crew, admin traffic</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>3) Medium Large</entry>
+                  <entry>3201-4000 passengers,</entry>
+                  <entry>150 </entry>
+                  <entry>Mbs</entry>
+                  <entry>15%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>1100 crew, admin traffic</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>4) Large Ship</entry>
+                  <entry>4001-5000 passengers,</entry>
+                  <entry>225 </entry>
+                  <entry>Mbs</entry>
+                  <entry>15%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>1400 crew, admin traffic</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00080-en" num="0105">Second, let's look at the options to fulfilling the Internet demands described above (see <figref>FIG. 2</figref>).</p>
+      <p id="p-00081-en" num="0106">GEO Satellite</p>
+      <p id="p-00082-en" num="0107">This has been the answer to the cruise and maritime industry for a long time. The satellites being in an orbit that is synchronous with Earth's rotation causes the satellites to essentially remain over the same place on earth (see <figref>FIG. 2</figref>). They utilize a combination of wide beams and “spot” beams to send their signals to earth stations that are locked on the satellite's position. The recent use of “spot” beams from GEO satellites is a bit of a misnomer. A “spot beam” from 22,500 miles away is a pretty big spot. Usually 1000's of miles in size. The frequencies used on these satellites are C band, Ku band and more recently Ka band. While C band has the best propagation, as it is not affected by rain/snow or other weather, the bandwidth available is small resulting in connections with less than 1 Mbs of throughput. The Ku band suffers in very heavy weather conditions and has a lot of noise/interference around its bands. While a total of one GHz of bandwidth can be stitched together in this frequency, its normal applications have throughputs in the 4 to 8 Mbs range. The Ka band is very susceptible to heavy rain, snow or even heavy cloud cover. However, the bandwidth and performance are very high with throughputs exceeding 1 Gbs under optimal conditions. Unfortunately, a GEO solution is not the best orbit for overcoming the shortcomings of the Ka high frequency. There are some physics that come into play with higher frequencies. It takes significantly more amplification of Ka (due to its higher “loss over free air”) to make it to the ground stations with an acceptable signal level. When you add to this the need to have higher link margins to overcome the loss by rain, snow or clouds the amplification levels become quite significant. And with all amplifications comes more noise and distortion. While there are several mitigation techniques to help these transmissions, all require extra power and result in lower than optimal performance. So to sum up, the Ka obstacles in a GEO environment, the distance of 22,500 miles causes spot beams to be spread much larger dissipating signal energy, and clouds or other types of moisture in the air absorb some of the signal energy and reflect some as well. Therefore, it requires quite high amplification of the signal for an acceptable link margin, and high amplification causes signal distortion. This all results in a less than optimal performance of the Ka band.</p>
+      <p id="p-00083-en" num="0108">All GEO systems that are in operation or announced are in the bent-pipe architecture (see <figref>FIG. 3</figref>). The bent-pipe and high altitude combine to make very large delays or latency in the data network. Generally, the latency on a GEO system is between 500 and 600 ms. This has a negative impact on network performance, and, while some mitigation techniques have been successfully deployed, the physics still remain, and this issue will become more pronounced as the Internet data and usage continue to mature.</p>
+      <p id="p-00084-en" num="0109">Satellite Systems in GEO serving the Cruise Market</p>
+      <p id="p-00085-en" num="0110">Global Xpress</p>
+      <p id="p-00086-en" num="0111">Inmarsat is currently launching its new Ka HTS named GLOBAL XPRESS. It promises bandwidth of 50 Mbs/5 Mbs over most of the earth excluding the Polar Regions. It is using 89 spot beams (72 concurrently) from each satellite of which there are three. (See <figref>FIG. 4</figref>) Each of these spot beams has 40 MHz of bandwidth available. While the satellites also have six steerable beams, these are intended for coverage under temporary circumstances such as natural disasters. GLOBAL XPRESS is using a “Bent Pipe Architecture” and couples the Ka with a fall back C band service. Since the Ka band is using fixed spot beams with frequency and polarization separation patterns to avoid self-interference, a mobile client will require equipment that has the ability to automatically change polarizations as necessitated by its movement. The data rates offered by this service are not sufficient to handle cruise ship traffic loads going forward (50 Mbs/5 Mbs). It is important to understand that the 40 MHz of the spot beam is going to be shared with all other clients in the same spot beam. So the 50 Mbs/5 Mbs is a shared data rate and CIR's would be significantly lower.</p>
+      <p id="p-00087-en" num="0112">MEO Satellites</p>
+      <p id="p-00088-en" num="0113">O3b has started launching satellites that will eventually make up an initial constellation of eight satellites arranged in an equatorial orbit (see <figref>FIG. 5</figref>). These satellites will be located at an altitude of 5,009 miles above the earth and equipped with Ka band radios using spot beam antennas. Their advertisements and collaterals describe their satellites as having 12 steerable spot beams with 2 used as their gateway beams. The marketing materials go on to state that each beam has a maximum bandwidth configuration of 1.2 Gbs. The 10 remaining client spot beams each have a coverage diameter of approximately 700 miles (see <figref>FIG. 6</figref>). While the 10 spot beams×1.2 Gbs would result in 12 Gbs of client data available, that does not accurately reflect the useable bandwidth. The two gateway spot beams of 1.2 Gbs each (2×1.2 Gbs=2.4 Gbs) would limit the maximum throughput that could be provided to the clients at any given time. Since O3b uses a “bent pipe” (see <figref>FIG. 3</figref>) architecture, which is to say there are no “inter-satellite” communications, there is no other way to get the client data off the satellite. Their Internet source gateway must also be within the “view” of the satellite in the region. Therefore, the 2.4 Gbs limitation would be for all clients within the 45° slice of the world that the individual satellite is covering at the time.</p>
+      <p id="p-00089-en" num="0114">O3b's use of Ka is a better fit than the GEO's use of the technology, but still not optimal. While the distance is only ¼th the distance of the GEO, the rest of the issues remain.</p>
+      <p id="p-00090-en" num="0115">The latency or delay on an MEO orbit system (see <figref>FIG. 2</figref>) is much better than the GEO, but still around 150 ms. For a reference, when network engineers are optimizing their networks for VoIP traffic, the rule of thumb is that the maximum delay must be below 150 ms for it not to be heard by the users. Latency or inter-packet delay will have detrimental effects on any network. Simply stated, the lower the latency, the better the network will perform.</p>
+      <p id="p-00091-en" num="0116">MEO based satellite systems require at least two client stations per client location. The client stations on cruise ships must be four axis stabilized antennas with one waiting to pick up the new satellite on the horizon, while the other is connected to the servicing satellite. This allows for the second client station to “make” a connection prior to the first station “breaking” its connection. It would be advisable to have a third client station on standby, in the event of failure of either of the other two, since service would not be able to remain continuous with just one working. The antennas recommended by O3b are either a 1.2 m or a 2.2 m dish. It is expected that the larger ships with the greater bandwidth requirements would need the 2.2 m.</p>
+      <p id="p-00092-en" num="0117">To adequately address the cruise market, O3b would have to redesign their satellites or add 28 more satellites to their constellation. O3b signed a contract to provide Royal Caribbean “Oasis of the Seas” with a 250 Mbs data connection. If they were to lower that commitment to 150 Mbs for the remaining ships, they would have to stop after 15 ships as this would exhaust their 2.4 Gbs of maximum throughput on their satellite, limited by the gateway links. During the season, there are approximately 76 cruise ships in the Bahamas/Caribbean on any given day. The way their orbits are set up, it is impossible to add more satellites to only a single area, but instead the entire constellation would have to be expanded to a point where there could be six satellites covering the area at a time to meet the demand. Even then this would only accommodate the ships and no other clients in that 45° of the world. This would obviously not be practical.</p>
+      <p id="p-00093-en" num="0118">LEO Satellites—(LeoSat)</p>
+      <p id="p-00094-en" num="0119">Iridium is the only operational LEO constellation that supports data at this time. But, their data is low bandwidth intended for messaging or possibly email. However, LeoSat is developing a system that will start service in approximately 35-38 months. It is being designed as a new generation of satellite networking. It will be used for comparison purposes here, as there is not currently a LEO system in operation that could meet the requirements of Cruise Ships. As with each of the systems, a LEO has some advantages and some challenges. With the satellites, less than 1100 miles above earth (see <figref>FIG. 2</figref>), the delays and radio power requirements are significantly more favorable for a LEO system. However, with such a short distance to earth the satellites have much smaller coverage areas. The Leo Sat system spot beams will be less than 450 miles in diameter, and it will take over 60 satellites to cover the world (see <figref>FIG. 7</figref>). Since the satellites have a much narrower view of earth, it is impossible to place a gateway in every location necessary to feed the satellites in a bent pipe architecture. Therefore, LeoSat will use Inter-Satellite Links (ISL's) that connect the satellites together in a communications network. Each satellite can exchange data with the satellite on either side, in front or back. This is in addition to its gateway links when it is over a gateway area. The LeoSat satellites are configured somewhat similarly to the O3b satellites, but with some significant modifications. The antennas are of a new design that do not require any moving parts. Each antenna can generate three electronically steerable beams, each with a Ka bandwidth of 1.2 Gbs. There are eight antennas on each satellite, and any beam can be a gateway or a client beam. This provides for any combination of the 24 beams between gateways and clients. The entire bandwidth of all beams can be transported off the satellite either via the gateway beams or the ISL's as necessary. There is full onboard routing on each satellite. There will be multiple satellites over a given area at a time providing for ample beams when there is a density of clients such as all the cruise ships in the Bahamas/Caribbean during the season. Each can have its own (not shared) bandwidth. The beams use coordinated frequency and polarization options across satellites to prevent self-interference.</p>
+      <p id="p-00095-en" num="0120">The client stations for LeoSat's system utilize a new form factor for antennas that are flat panels measuring 50 in×50 in. There would be a set of four antennas. This configuration provides for redundancy and multiple satellite tracking at the same time. Each panel weighs approximately 22 lbs and can be pedestal or flat mounted. Connectivity to the equipment rack in the ship's data center can be via fiber or gigabit wired Ethernet. Power requirements are under 40 watts. There are no moving parts and therefore, no maintenance beyond periodic surface cleaning and connection maintenance.</p>
+      <p id="p-00096-en" num="0121">The LeoSat system will be able to provide a ship up to 600 Mbs synchronous bandwidth with latency under 50 ms and have global coverage. The bandwidth on the satellite network is transported using a layer 2.5 of the OSI model (MPLS) so any form of encapsulation can be delivered natively. The network being completely open transport, allows for just about any technology to run in its native form across the network links. This greatly simplifies integration of different platforms for onboard services.</p>
+      <p id="p-00097-en" num="0122">Terrestrial Based Networks</p>
+      <p id="p-00098-en" num="0123">Even when the best satellite-based systems are in place and operating well, the use of terrestrial based systems in concert will be the most advantageous and efficient architecture with which to address this market. The terrestrial based systems (see <figref>FIG. 8</figref>) are always going to have a cost advantage. They will also be able to increase their performance at a better rate than the satellite offerings. There is no latency issues with terrestrial based system, and there are three systems in the market.</p>
+      <p id="p-00099-en" num="0124">MTN-BATS</p>
+      <p id="p-00100-en" num="0125">The BATS system is primarily a port based system for providing ships high bandwidth in ports and for a few miles of the approach of the port. The system consists of two small domed dish antennas that use the same type tracking mechanics as the satellite tracking dishes to focus on a port installed base station. While the system has a good throughput in port, it is very limited in range from the port. The typical range experienced is 20-25 miles before the connection starts dropping and throughput drops off.</p>
+      <p id="p-00101-en" num="0126">The use of motorized dishes in domed pods is quite familiar to cruise lines, as well as the maintenance and repairs. Such systems just have too many moving parts, belts, motors and gears. There is wear, and very little wear can be tolerated by the systems before problems arise.</p>
+      <p id="p-00102-en" num="0127">There is not much new or inventive about the BATS system, and it suffers from only having a single frequency band of operation. This will present significant problems in many ports with high noise levels. While some noise cancellation is possible, there are many times when the noise is just too great, and an alternate frequency is necessary.</p>
+      <p id="p-00103-en" num="0128">Additionally, this system being limited to a single frequency usage at a time, will require ships to use a shared bandwidth connection with all other ships in the area using the same system. The ships are a concentrated connection and they should not be placed on contention based links which will be required by this system. Ships should not be “fighting each other for the same bandwidth”.</p>
+      <p id="p-00104-en" num="0129">True Path</p>
+      <p id="p-00105-en" num="0130">This system was originally designed to service aircraft while in flight with Wi-Fi based, data services from towers on the ground. After a patent dispute between several parties, some of the principals decided to look for other applications. It reports data rates of 50 Mbs at distances of up to 60 miles. However, this is under optimal conditions and would be very difficult to maintain over large expanses such as the routes in the Caribbean. This is due to the limited ability of placement of towers and facilities meeting their network requirements.</p>
+      <p id="p-00106-en" num="0131">The system is more advanced than the previously mentioned BATS system, in that it uses phased arrays for its antenna systems. However, it is a much more complicated system to operate and the number of base stations and their critical placement for the proper functioning of the system would push costs quite high. This system uses similar methods as the next system in dealing with noisy environments or interference. However, it is also limited to a single frequency band which will limit its performance in many of the noisy locations. Especially, if the ISM bands are used. The lack of the ability to be frequency and polarization agile when dealing with the major ports of the world is a major drawback. Further the use of only a single frequency band and single radio per base station means all ships in an area will be sharing the same bandwidth of the base station. Cruise ships are already very concentrated and should never be put in a contention based network environment.</p>
+      <p id="p-00107-en" num="0132">IT Centricity</p>
+      <p id="p-00108-en" num="0133">IT Centricity's system seems the most advanced and has addressed many of the issues the other systems have not yet moved on. It has frequency and polarization agility that is automated for use anywhere in the world. The system has several levels of redundancy to ensure operational uptime. IT Centricity's system has the following characteristics:</p>
+      <p id="p-00109-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="147pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Distance/Reach</entry>
+                  <entry>Typical up to 60 miles from shore. </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(With enough base</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>station height, up to 100 miles)</entry>
+                </row>
+                <row>
+                  <entry>Redundancy</entry>
+                  <entry>Includes six combinations of frequencies, </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>polarizations and channels.</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>This means each ship gets its own </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>non-contention</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>dedicated bandwidth.</entry>
+                </row>
+                <row>
+                  <entry>Interference</entry>
+                  <entry>Automated system selects best-performing </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>available combination anywhere</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>in the world. Beam forming</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>methods using null beams for cancellation.</entry>
+                </row>
+                <row>
+                  <entry>Regulatory </entry>
+                  <entry>Automatically adjusts or turns on and off </entry>
+                </row>
+                <row>
+                  <entry>Compliance</entry>
+                  <entry>radios/amplifiers based on GPS location </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>and regulatory requirements.</entry>
+                </row>
+                <row>
+                  <entry>Congested Ports</entry>
+                  <entry>Automatically assigned individual </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>combination providing a</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>dedicated link(s). A major differentiator.</entry>
+                </row>
+                <row>
+                  <entry>Install Difficulty</entry>
+                  <entry>Requires 1.5 days of good weather for </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>system to be completed.</entry>
+                </row>
+                <row>
+                  <entry>Maintenance</entry>
+                  <entry>Leased system with all service and </entry>
+                </row>
+                <row>
+                  <entry>Fees</entry>
+                  <entry>parts the responsibility</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>of ITC. No moving parts.</entry>
+                </row>
+                <row>
+                  <entry>Available</entry>
+                  <entry>Multiples of 20 Mbs.</entry>
+                </row>
+                <row>
+                  <entry>bandwidth</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Routing</entry>
+                  <entry>Flexibility, VPN, redirection, DNS </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>based return access.</entry>
+                </row>
+                <row>
+                  <entry>Extra Features</entry>
+                  <entry>Full detailed usage reporting, phone s</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ervices available, turnkey, service</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>classes, redundancy and spare parts on</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>each ship, auto-switcher, combiner for data.</entry>
+                </row>
+                <row>
+                  <entry>System Monitoring</entry>
+                  <entry>System is monitored in real </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>time from central NOC.</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Proactive performance intervention </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>when necessary. Full remote access with</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>immediate change deployments.</entry>
+                </row>
+                <row>
+                  <entry>Performance</entry>
+                  <entry>Up to 108 Mbs with 5-8 ms latency. </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Bandwidth is provided using multiple</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>links assigned by a centralized system. The</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>central system has a view of all</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ships in the area and ships that will be arriving</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>in the area. Bandwidth, frequencies,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>polarizations and channels are determined </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>by ship reporting signal readings and the central</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>system allocating resources. This keeps ships</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>from competing for or having to share</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>links.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00110-en" num="0134">The system provides for consistent performance and coverage based upon the ship's tracks. The system can accurately forecast coverage on a current sailing based upon previous sailings and the current track. This includes when the ship approaches a non-coverage area, and how long it will be before the ships are back in coverage. This information is readily available on the ship and can be displayed on the “sign-on” or “log-on” page. Based on historical itinerary tracks, ships are in coverage areas 68-72% of the time.</p>
+      <p id="p-00111-en" num="0135">Summary (table)</p>
+      <heading id="h-00009-en" level="2">GEO Satellites (Geosynchronous Earth Orbit, see FIG. <b>2</b>)</heading>
+      <p id="p-00112-en" num="0136">PRO's: 1) Wide coverage area. <ul id="ul-00007-en" list-style="none"><li><ul id="ul-00008-en" list-style="none"><li>2) C band, Ku band and Ka band offerings</li><li>3) The most reliable performance with C band.</li><li>4) Most widely available.</li></ul></li></ul></p>
+      <p id="p-00113-en" num="0140">CON'S: 1) High amplification required, hurts performance. <ul id="ul-00009-en" list-style="none"><li><ul id="ul-00010-en" list-style="none"><li>2) Latency of 500-600 ms causes poor data performance</li><li>3) Most difficult for Ka due to link budget requirements and client stations</li><li>4) Interference in ports from noise</li></ul></li></ul></p>
+      <heading id="h-00010-en" level="2">MEO's (Medium Earth Orbit, see FIG. <b>2</b>)</heading>
+      <p id="p-00114-en" num="0144">PRO's: 1) Improved performance through lower latency at 150 ms <ul id="ul-00011-en" list-style="none"><li><ul id="ul-00012-en" list-style="none"><li>2) Better orbit for Ka band</li><li>3) High throughput to select clients 1.2 Gbs</li><li>4) Well suited for telecom back haul</li></ul></li></ul></p>
+      <p id="p-00115-en" num="0148">CON's: 1) Serious limit of throughput on satellite <ul id="ul-00013-en" list-style="none"><li><ul id="ul-00014-en" list-style="none"><li>2) Expensive to expand capacity</li><li>3) Does not have world-wide coverage</li><li>4) Requires expensive tracking client stations with very active moving parts</li></ul></li></ul></p>
+      <heading id="h-00011-en" level="2">LEO (Low-Earth Orbit, see FIG. <b>2</b>)</heading>
+      <p id="p-00116-en" num="0152">PRO's: 1) Best performance with very low latency at under 50 ms <ul id="ul-00015-en" list-style="none"><li><ul id="ul-00016-en" list-style="none"><li>2) Best orbit for Ka band due to the ability to deliver high link budget, overcoming rain fade.</li><li>3) True high-throughput worldwide solution</li><li>4) Low cost, low maintenance client stations. No moving parts</li><li>5) Redundancy designed into the constellation</li></ul></li></ul></p>
+      <p id="p-00117-en" num="0157">CON's: 1) 36 months away</p>
+      <heading id="h-00012-en" level="2">Terrestrial Base System (IT Centricity)</heading>
+      <p id="p-00118-en" num="0158">PRO's: 1) Lowest latency under 10 ms <ul id="ul-00017-en" list-style="none"><li><ul id="ul-00018-en" list-style="none"><li>2) Automated multiple frequencies and options</li><li>3) Good throughput with up to 100 Mbs</li><li>4) No cost to cruise lines for system</li><li>5) Ability to be aggregated with satellite services</li></ul></li></ul></p>
+      <p id="p-00119-en" num="0163">CON's: 1) Coverage limited to 60-100 miles from shore <ul id="ul-00019-en" list-style="none"><li><ul id="ul-00020-en" list-style="none"><li>2) Requires a satellite system to make complete solution</li><li>3) Some locations will have better performance due to source availability</li></ul></li></ul></p>
+      <p id="p-00120-en" num="0166">Internet access for cruise ships is currently a need and will continue down the path of being more and more a necessity. It needs to be as robust and as available as it is in resorts today. After all, that is where the competition is. The difficulties of obtaining robust Internet on a cruise ship is of little concern to the passenger. They just want their digital life to continue as normal while on their vacation. This means always on and being able to download and upload at will. And while this will be challenging for the industry, solutions are on the way and some here today.</p>
+      <p id="p-00121-en" num="0167">A hybrid system will be best to meet the demand and needs. Using a satellite-based system is the only way to get the ubiquitous coverage necessary, but costs and performance will direct the cruise line to the use of the terrestrial provider in concert with the satellite system.</p>
+      <p id="p-00122-en" num="0168">The cost of the terrestrial system will always be less than the cost of satellite bandwidth. So not to use it where it is available would seem to leave a valuable cost effective tool out of the tool box for addressing the needs. The terrestrial system must play nice with the satellite system and the switching that occurs between the systems must be invisible. The bandwidths should be aggregated to improve overall performance and take some of the load off the satellite system when available. Today's usage includes a good bit of data traveling up as pictures and other posts are sent regularly from phones, tablets, and laptops. Interactive games also require significant up speeds.</p>
+      <p id="p-00123-en" num="0169">Cruise ships are a very concentrated client and as described herein, schedules of use are somewhat aligned. This does not lend itself to the use of a non-dedicated bandwidth from a supplier. Using a shared bandwidth model from a provider would not be a good choice.</p>
+      <p id="p-00124-en" num="0170">While each system should be measured individually for contractual compliance, the aggregated bandwidth should be used to meet the ships many requirements. Some activities can be planned so as to improve the chances that they occur during the augmented periods, and this will help with overall performance. Large file uploads are going to work best on a fully synchronous terrestrial based connection. If those uploads occur to the same or a group of locations, this can be routed appropriately by the system.</p>
+      <p id="p-00125-en" num="0171">It would also be best to manage the crew access time to coincide with periods where there is the added bandwidth of the terrestrial system to cover the load. This will assist in keeping the crew usage from contention with the passenger usage.</p>
+      <p id="p-00126-en" num="0172">For a ship to send everything over their satellite connection and not have an alternative or augmentation would seem to be a system that will have periods of contested performance and some outages. Satellites are good and getting better, but no one offers five nines guarantees on satellite services today. The terrestrial link is an additional less-expensive bandwidth in good times and a backup system in bad times. Either way a tool that is necessary in the toolbox to address the solution.</p>
+      <p id="p-00127-en" num="0173">The terms “comprising,” “including,” and “having,” as used in the claims and specification herein, shall be considered as indicating an open group that may include other elements not specified. The terms “a,” “an,” and the singular forms of words shall be taken to include the plural form of the same words, such that the terms mean that one or more of something is provided. The term “one” or “single” may be used to indicate that one and only one of something is intended. Similarly, other specific integer values, such as “two,” may be used when a specific number of things is intended. The terms “preferably,” “preferred,” “prefer,” “optionally,” “may,” and similar terms are used to indicate that an item, condition or step being referred to is an optional (not required) feature of the invention.</p>
+      <p id="p-00128-en" num="0174">The invention has been described with reference to various specific and preferred embodiments and techniques. However, it should be understood that many variations and modifications may be made while remaining within the spirit and scope of the invention. It will be apparent to one of ordinary skill in the art that methods, devices, device elements, materials, procedures and techniques other than those specifically described herein can be applied to the practice of the invention as broadly disclosed herein without resort to undue experimentation. All art-known functional equivalents of methods, devices, device elements, materials, procedures and techniques described herein are intended to be encompassed by this invention. Whenever a range is disclosed, all subranges and individual values are intended to be encompassed. This invention is not to be limited by the embodiments disclosed, including any shown in the drawings or exemplified in the specification, which are given by way of example and not of limitation.</p>
+      <p id="p-00129-en" num="0175">While the invention has been described with respect to a limited number of embodiments, those skilled in the art, having benefit of this disclosure, will appreciate that other embodiments can be devised which do not depart from the scope of the invention as disclosed herein. Accordingly, the scope of the invention should be limited only by the attached claims.</p>
+      <p id="p-00130-en" num="0176">All references throughout this application, for example patent documents including issued or granted patents or equivalents, patent application publications, and non-patent literature documents or other source material, are hereby incorporated by reference herein in their entireties, as though individually incorporated by reference, to the extent each reference is at least partially not inconsistent with the disclosure in the present application (for example, a reference that is partially inconsistent is incorporated by reference except for the partially inconsistent portion of the reference).</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>We claim:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20160714">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A system for routing data between ground-based networks and satellites as shown and described herein.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The system of <claim-ref idref="clm-00001-en">claim 1</claim-ref> further comprising synchronous bandwidth.</claim-text>
+    </claim>
+  </claims>
+</lexisnexis-patent-document>

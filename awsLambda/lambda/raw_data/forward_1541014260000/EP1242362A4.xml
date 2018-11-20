@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2015 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20150602" file="EP1242362A4.xml" produced-by="LexisNexis-Univentio" lang="eng" date-changed="20120522" time-changed="132126">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Supplementary search report">
+      <document-id>
+        <country>EP</country>
+        <doc-number>1242362</doc-number>
+        <kind>A4</kind>
+        <date>20030709</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>00979865</doc-number>
+        <kind>A</kind>
+        <date>20001214</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20090313">
+      <priority-claim sequence="1" kind="national">
+        <country>IN</country>
+        <doc-number>1545DEL1999</doc-number>
+        <kind>A</kind>
+        <date>19991217</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>IB</country>
+        <doc-number>0001870</doc-number>
+        <kind>W</kind>
+        <date>20001214</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>IN</country>
+        <doc-number>DE154599</doc-number>
+        <kind>A</kind>
+        <date>19991217</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>IB0001870</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>DE154599</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>WO2000IB01870</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>IN1999DE01545</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20090313">
+      <supplemental-srep-reference>
+        <date>20030709</date>
+      </supplemental-srep-reference>
+    </dates-of-public-availability>
+    <classification-ipc date-changed="20121207">
+      <main-classification>
+        <text> 7C 07C 213/06   A</text>
+        <edition>7</edition>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>213</main-group>
+        <subgroup>06</subgroup>
+        <qualifying-character>A</qualifying-character>
+      </main-classification>
+      <further-classification sequence="1">
+        <text> 7C 07C 217/48   B</text>
+        <edition>7</edition>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>217</main-group>
+        <subgroup>48</subgroup>
+        <qualifying-character>B</qualifying-character>
+      </further-classification>
+    </classification-ipc>
+    <classifications-ipcr date-changed="20121207">
+      <classification-ipcr sequence="1">
+        <text>C07C 213/06        20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>213</main-group>
+        <subgroup>06</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C07C 217/48        20060101A N20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>217</main-group>
+        <subgroup>48</subgroup>
+        <classification-value>N</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20121207">
+      <classification-cpc sequence="1">
+        <text>C07C 213/06        20130101  I20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>213</main-group>
+        <subgroup>06</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <classifications-ecla date-changed="20121207">
+      <classification-ecla sequence="1" classification-scheme="EC" country="EP">
+        <text>C07C213/06</text>
+        <section>C</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>213</main-group>
+        <subgroup>06</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="1" classification-scheme="ICO" country="EP">
+        <text>M07C217:48</text>
+        <section>M</section>
+        <class>07</class>
+        <subclass>C</subclass>
+        <main-group>217</main-group>
+        <subgroup>48</subgroup>
+      </classification-ecla>
+    </classifications-ecla>
+    <invention-title id="title_ger" date-changed="20090313" lang="ger" format="original">VERFAHREN ZUR HERSTELLUNG VON FLUOXETINHYDROCHLORID</invention-title>
+    <invention-title id="title_eng" date-changed="20090313" lang="eng" format="original">PROCESS FOR THE PREPARATION OF FLUOXETINE HYDROCHLORIDE</invention-title>
+    <invention-title id="title_fre" date-changed="20090313" lang="fre" format="original">PROCEDE DE PREPARATION D'HYDROCHLORURE DE FLUOXETINE</invention-title>
+    <parties date-changed="20090313">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>RANBAXY LABORATORIES, LTD.</orgname>
+            <address>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant sequence="1" app-type="applicant" data-format="docdb">
+          <addressbook lang="eng">
+            <orgname>RANBAXY LAB LTD</orgname>
+            <address>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant sequence="1" app-type="applicant" data-format="docdba">
+          <addressbook lang="eng">
+            <orgname>RANBAXY LABORATORIES, LTD.</orgname>
+            <address>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>KUMAR, NARESH</name>
+            <address>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>VIJAYARAGHAVAN, BAKTHAVATHSALAN</name>
+            <address>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>RAMANA, KINTALI, VENKATA</name>
+            <address>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4">
+          <addressbook lang="eng">
+            <name>SATHYANARAYANA, SWARGAM</name>
+            <address>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="1" data-format="docdb">
+          <addressbook lang="eng">
+            <name>KUMAR NARESH</name>
+            <address>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="1" data-format="docdba">
+          <addressbook lang="eng">
+            <name>KUMAR, NARESH</name>
+            <address>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" data-format="docdba">
+          <addressbook lang="eng">
+            <name>VIJAYARAGHAVAN, BAKTHAVATHSALAN</name>
+            <address>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" data-format="docdb">
+          <addressbook lang="eng">
+            <name>VIJAYARAGHAVAN BAKTHAVATHSALAN</name>
+            <address>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" data-format="docdb">
+          <addressbook lang="eng">
+            <name>RAMANA KINTALI VENKATA</name>
+            <address>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" data-format="docdba">
+          <addressbook lang="eng">
+            <name>RAMANA, KINTALI, VENKATA</name>
+            <address>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" data-format="docdba">
+          <addressbook lang="eng">
+            <name>SATHYANARAYANA, SWARGAM</name>
+            <address>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" data-format="docdb">
+          <addressbook lang="eng">
+            <name>SATHYANARAYANA SWARGAM</name>
+            <address>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <designation-of-states date-changed="20090313">
+      <designation-epc>
+        <contracting-states>
+          <country>AT</country>
+          <country>BE</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>IE</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LU</country>
+          <country>MC</country>
+          <country>NL</country>
+          <country>PT</country>
+          <country>SE</country>
+          <country>TR</country>
+        </contracting-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>IB00001870</doc-number>
+        <date>20001214</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>0144166</doc-number>
+        <date>20010621</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20100928">
+      <main-family family-id="1304954">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20030050508</doc-number>
+            <kind>A1</kind>
+            <date>20030313</date>
+          </document-id>
+          <application-date>
+            <date>20020809</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1242362</doc-number>
+            <kind>A4</kind>
+            <date>20030709</date>
+          </document-id>
+          <application-date>
+            <date>20001214</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1242362</doc-number>
+            <kind>A1</kind>
+            <date>20020925</date>
+          </document-id>
+          <application-date>
+            <date>20001214</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>0144166</doc-number>
+            <kind>A1</kind>
+            <date>20010621</date>
+          </document-id>
+          <application-date>
+            <date>20001214</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>1724201</doc-number>
+            <kind>A</kind>
+            <date>20010625</date>
+          </document-id>
+          <application-date>
+            <date>20001214</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>1545DEL1999</doc-number>
+            <kind>A</kind>
+            <date>20000603</date>
+          </document-id>
+          <application-date>
+            <date>19991217</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>6677485</doc-number>
+            <kind>B2</kind>
+            <date>20040113</date>
+          </document-id>
+          <application-date>
+            <date>20020809</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="970328">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>0144166</doc-number>
+            <kind>A1</kind>
+            <date>20010621</date>
+          </document-id>
+          <application-date>
+            <date>20001214</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1242362</doc-number>
+            <kind>A1</kind>
+            <date>20020925</date>
+          </document-id>
+          <application-date>
+            <date>20001214</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1242362</doc-number>
+            <kind>A4</kind>
+            <date>20030709</date>
+          </document-id>
+          <application-date>
+            <date>20001214</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>6677485</doc-number>
+            <kind>B2</kind>
+            <date>20040113</date>
+          </document-id>
+          <application-date>
+            <date>20020809</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>1724201</doc-number>
+            <kind>A</kind>
+            <date>20010625</date>
+          </document-id>
+          <application-date>
+            <date>20001214</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>1545DEL1999</doc-number>
+            <kind>A</kind>
+            <date>20000603</date>
+          </document-id>
+          <application-date>
+            <date>19991217</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20030050508</doc-number>
+            <kind>A1</kind>
+            <date>20030313</date>
+          </document-id>
+          <application-date>
+            <date>20020809</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20120522" lang="eng" format="equivalent" country="US" doc-number="6677485" kind="B2">
+    <p>An improved and industrially advantageous process for the preparation of the antidepressant fluoxetine and its pharmaceutically acceptable salts, preferably hydrochloride.</p>
+  </abstract>
+  <legal-data date-changed="20140618">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20020925</date>
+      </publication-date>
+      <event-code-1>17P</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXAMINATION FILED</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1242362A1</docdb-publication-number>
+      <docdb-application-id>15793718</docdb-application-id>
+      <effective-date>
+        <date>20020717</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20020925</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1242362A1</docdb-publication-number>
+      <docdb-application-id>15793718</docdb-application-id>
+      <corresponding-kind>A1</corresponding-kind>
+      <legal-designated-states>
+        <country>AT</country>
+        <country>BE</country>
+        <country>CH</country>
+        <country>CY</country>
+        <country>DE</country>
+        <country>DK</country>
+        <country>ES</country>
+        <country>FI</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>GR</country>
+        <country>IE</country>
+        <country>IT</country>
+        <country>LI</country>
+        <country>LU</country>
+        <country>MC</country>
+        <country>NL</country>
+        <country>PT</country>
+        <country>SE</country>
+        <country>TR</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20020925</date>
+      </publication-date>
+      <event-code-1>AX</event-code-1>
+      <effect>+</effect>
+      <legal-description>EXTENSION OR VALIDATION OF THE EUROPEAN PATENT TO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1242362A1</docdb-publication-number>
+      <docdb-application-id>15793718</docdb-application-id>
+      <free-text-description>AL;LT;LV;MK;RO;SI</free-text-description>
+    </legal-event>
+    <legal-event sequence="4">
+      <publication-date>
+        <date>20030709</date>
+      </publication-date>
+      <event-code-1>A4</event-code-1>
+      <effect>+</effect>
+      <legal-description>SUPPLEMENTARY SEARCH REPORT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1242362A1</docdb-publication-number>
+      <docdb-application-id>15793718</docdb-application-id>
+      <effective-date>
+        <date>20030528</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="5">
+      <publication-date>
+        <date>20030709</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1242362A1</docdb-publication-number>
+      <docdb-application-id>15793718</docdb-application-id>
+      <ipc>7C 07C 213/06   A</ipc>
+    </legal-event>
+    <legal-event sequence="6">
+      <publication-date>
+        <date>20030709</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1242362A1</docdb-publication-number>
+      <docdb-application-id>15793718</docdb-application-id>
+      <ipc>7C 07C 217/48   B</ipc>
+    </legal-event>
+    <legal-event sequence="7">
+      <publication-date>
+        <date>20050817</date>
+      </publication-date>
+      <event-code-1>17Q</event-code-1>
+      <effect>+</effect>
+      <legal-description>FIRST EXAMINATION REPORT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1242362A1</docdb-publication-number>
+      <docdb-application-id>15793718</docdb-application-id>
+      <effective-date>
+        <date>20050704</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="8">
+      <publication-date>
+        <date>20060524</date>
+      </publication-date>
+      <event-code-1>18D</event-code-1>
+      <effect>-</effect>
+      <legal-description>DEEMED TO BE WITHDRAWN</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     1242362A1</docdb-publication-number>
+      <docdb-application-id>15793718</docdb-application-id>
+      <effective-date>
+        <date>20051115</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <image file="WO0144166A1.PDF" type="pdf" size="174971" pages="12" />
+</lexisnexis-patent-document>

@@ -1,0 +1,1274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160219" file="WO2006038222A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-changed="20160219" time-changed="060302">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Published application with search report">
+      <document-id id="3565005">
+        <country>WO</country>
+        <doc-number>2006038222</doc-number>
+        <kind>A1</kind>
+        <date>20060413</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="application">
+      <document-id>
+        <country>WO</country>
+        <doc-number>IN05000232</doc-number>
+        <date>20050706</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151027">
+      <priority-claim sequence="1" kind="national">
+        <country>IN</country>
+        <doc-number>MUM7412004</doc-number>
+        <kind>A</kind>
+        <date>20040709</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>IN</country>
+        <doc-number>741MU2004</doc-number>
+        <kind>A</kind>
+        <date>20040709</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>741/MUM/2004</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>IN2004MU00741</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20090409">
+      <examined-printed-without-grant>
+        <date>20060413</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151027">
+      <classification-ipcr sequence="1">
+        <text>C07D 495/04        20060101AFI20060413BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>495</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20060413</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151027">
+      <classification-cpc sequence="1">
+        <text>C07D 495/04        20130101 FI20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>495</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <classifications-ecla date-changed="20151027">
+      <classification-ecla sequence="1" classification-scheme="EC" country="EP">
+        <text>C07D495/04</text>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>495</main-group>
+        <subgroup>04</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="1" classification-scheme="ICO" country="EP">
+        <text>M07D495:04+335B+333B</text>
+        <section>M</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>495</main-group>
+        <subgroup>04</subgroup>
+        <examiner-edition>+335B+333B</examiner-edition>
+      </classification-ecla>
+      <classification-ecla sequence="2" classification-scheme="ICO" country="EP">
+        <text>M07D495:04</text>
+        <section>M</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>495</main-group>
+        <subgroup>04</subgroup>
+      </classification-ecla>
+    </classifications-ecla>
+    <number-of-claims calculated="yes">4</number-of-claims>
+    <invention-title id="title_eng" date-changed="20100929" lang="eng" format="original">AN IMPROVED PROCESS FOR THE PREPARATION OF 5,6 -DIHYDRO -4H-4(S)-ETHYLAMINO-6(S)-METHYLTHIENO[2,3-b] THIOPYRAN-2-SULFONAMIDE- 7,7 -DIOXIDE AND ITS SALT</invention-title>
+    <invention-title id="title_fre" date-changed="20100929" lang="fre" format="original">PROCEDE AMELIORE POUR LA PREPARATION DU 5,6-DIHYDRO-4H-4(S)-ETHYLAMINO-6(S)-METHYLTHIENO[2,3-b]THIOPYRANE-2-SULFONAMIDE-7,7-DIOXYDE ET DE SON SEL</invention-title>
+    <references-cited date-changed="20160219">
+      <patent-citations name="patcit" date-changed="20151027" />
+      <non-patent-citations name="nplcit" date-changed="20151027" />
+      <forward-citations name="fwdcit" date-changed="20160219" />
+      <citation>
+        <patcit num="1" dnum="US4797413A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4797413</doc-number>
+            <kind>A</kind>
+            <name>BALDWIN JOHN J [US], et al</name>
+            <date>19890110</date>
+          </document-id>
+          <application-date>
+            <date>19870626</date>
+          </application-date>
+        </patcit>
+        <category>Y</category>
+        <category>D</category>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US5688968A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5688968</doc-number>
+            <kind>A</kind>
+            <name>BLACKLOCK THOMAS J [US], et al</name>
+            <date>19971118</date>
+          </document-id>
+          <application-date>
+            <date>19950106</date>
+          </application-date>
+        </patcit>
+        <category>Y</category>
+        <category>D</category>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US5157129A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5157129</doc-number>
+            <kind>A</kind>
+            <name>BLACKLOCK THOMAS J [US], et al</name>
+            <date>19921020</date>
+          </document-id>
+          <application-date>
+            <date>19900418</date>
+          </application-date>
+        </patcit>
+        <category>Y</category>
+        <category>D</category>
+      </citation>
+      <citation>
+        <nplcit num="1">
+          <text>THOMAS S M ET AL:  "In-process tests for synthesis of dorzolamide hydrochloride" ANALYTICAL CHEMISTRY, AMERICAN CHEMICAL SOCIETY. COLUMBUS, US, vol. 2, no. 5-6, 1997, pages 432-439, XP002903039 ISSN: 0003-2700</text>
+        </nplcit>
+        <category>A</category>
+      </citation>
+      <citation>
+        <fwdcit num="1">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2006078731</doc-number>
+            <kind>A2</kind>
+            <date>20060727</date>
+          </document-id>
+          <application-date>
+            <date>20060118</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="2">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2006078731</doc-number>
+            <kind>A3</kind>
+            <date>20080313</date>
+          </document-id>
+          <application-date>
+            <date>20060118</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20070303">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="all-except-us">
+          <addressbook lang="eng">
+            <orgname>FDC LTD</orgname>
+            <address>
+              <address-1>B-8, MIDC Industrial Estate, Waluj 431 136, Maharashtra</address-1>
+              <country>IN</country>
+            </address>
+          </addressbook>
+          <nationality>
+            <country>IN</country>
+          </nationality>
+          <residence>
+            <country>IN</country>
+          </residence>
+        </applicant>
+        <applicant sequence="2" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>CHANDAVARKAR, Anand, Mohan</orgname>
+            <address>
+              <address-1>B-8, MIDC Industrial Estate, Waluj 431 136, Maharashtra</address-1>
+              <country>IN</country>
+            </address>
+          </addressbook>
+          <nationality>
+            <country>IN</country>
+          </nationality>
+          <residence>
+            <country>IN</country>
+          </residence>
+        </applicant>
+        <applicant sequence="3" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>BAPAT, Rajaram, Uday</orgname>
+            <address>
+              <address-1>B-8, MIDC Industrial Estate, Waluj 431 136, Maharashtra</address-1>
+              <country>IN</country>
+            </address>
+          </addressbook>
+          <nationality>
+            <country>IN</country>
+          </nationality>
+          <residence>
+            <country>IN</country>
+          </residence>
+        </applicant>
+        <applicant sequence="4" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>BADE, Anand, Atul</orgname>
+            <address>
+              <address-1>B-8, MIDC Industrial Estate, Waluj 431 136, Maharashtra</address-1>
+              <country>IN</country>
+            </address>
+          </addressbook>
+          <nationality>
+            <country>IN</country>
+          </nationality>
+          <residence>
+            <country>IN</country>
+          </residence>
+        </applicant>
+        <applicant sequence="5" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>CHAVAN, Anand, Pandurang</orgname>
+            <address>
+              <address-1>B-8, MIDC Industrial Estate, Waluj 431 136, Maharashtra</address-1>
+              <country>IN</country>
+            </address>
+          </addressbook>
+          <nationality>
+            <country>IN</country>
+          </nationality>
+          <residence>
+            <country>IN</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <name>CHANDAVARKAR, Anand, Mohan</name>
+            <address>
+              <address-1>B-8, MIDC Industrial Estate, Waluj 431 136, Maharashtra</address-1>
+              <country>IN</country>
+            </address>
+          </addressbook>
+          <nationality>
+            <country>IN</country>
+          </nationality>
+          <residence>
+            <country>IN</country>
+          </residence>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <name>BAPAT, Rajaram, Uday</name>
+            <address>
+              <address-1>B-8, MIDC Industrial Estate, Waluj 431 136, Maharashtra</address-1>
+              <country>IN</country>
+            </address>
+          </addressbook>
+          <nationality>
+            <country>IN</country>
+          </nationality>
+          <residence>
+            <country>IN</country>
+          </residence>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <name>BADE, Anand, Atul</name>
+            <address>
+              <address-1>B-8, MIDC Industrial Estate, Waluj 431 136, Maharashtra</address-1>
+              <country>IN</country>
+            </address>
+          </addressbook>
+          <nationality>
+            <country>IN</country>
+          </nationality>
+          <residence>
+            <country>IN</country>
+          </residence>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <name>CHAVAN, Anand, Pandurang</name>
+            <address>
+              <address-1>B-8, MIDC Industrial Estate, Waluj 431 136, Maharashtra</address-1>
+              <country>IN</country>
+            </address>
+          </addressbook>
+          <nationality>
+            <country>IN</country>
+          </nationality>
+          <residence>
+            <country>IN</country>
+          </residence>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>LAKSHMIKUMARAN, Varadachari et al.</name>
+            <address>
+              <address-1>B-6/10, Safdarjung Enclave, New Delhi 110 029</address-1>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20070303">
+      <designation-pct>
+        <regional>
+          <region>
+            <country>EP</country>
+          </region>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>NL</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>TR</country>
+        </regional>
+        <regional>
+          <region>
+            <country>EA</country>
+          </region>
+          <country>AM</country>
+          <country>AZ</country>
+          <country>BY</country>
+          <country>KG</country>
+          <country>KZ</country>
+          <country>MD</country>
+          <country>RU</country>
+          <country>TJ</country>
+          <country>TM</country>
+        </regional>
+        <regional>
+          <region>
+            <country>AP</country>
+          </region>
+          <country>BW</country>
+          <country>GH</country>
+          <country>GM</country>
+          <country>KE</country>
+          <country>LS</country>
+          <country>MW</country>
+          <country>MZ</country>
+          <country>NA</country>
+          <country>SD</country>
+          <country>SL</country>
+          <country>SZ</country>
+          <country>TZ</country>
+          <country>UG</country>
+          <country>ZM</country>
+          <country>ZW</country>
+        </regional>
+        <regional>
+          <region>
+            <country>OA</country>
+          </region>
+          <country>BF</country>
+          <country>BJ</country>
+          <country>CF</country>
+          <country>CG</country>
+          <country>CI</country>
+          <country>CM</country>
+          <country>GA</country>
+          <country>GN</country>
+          <country>GQ</country>
+          <country>GW</country>
+          <country>ML</country>
+          <country>MR</country>
+          <country>NE</country>
+          <country>SN</country>
+          <country>TD</country>
+          <country>TG</country>
+        </regional>
+        <national>
+          <country>AE</country>
+          <country>AG</country>
+          <country>AL</country>
+          <country>AM</country>
+          <country>AT</country>
+          <country>AU</country>
+          <country>AZ</country>
+          <country>BA</country>
+          <country>BB</country>
+          <country>BG</country>
+          <country>BR</country>
+          <country>BW</country>
+          <country>BY</country>
+          <country>BZ</country>
+          <country>CA</country>
+          <country>CH</country>
+          <country>CN</country>
+          <country>CO</country>
+          <country>CR</country>
+          <country>CU</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>DM</country>
+          <country>DZ</country>
+          <country>EC</country>
+          <country>EE</country>
+          <country>EG</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>GB</country>
+          <country>GD</country>
+          <country>GE</country>
+          <country>GH</country>
+          <country>GM</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>ID</country>
+          <country>IL</country>
+          <country>IN</country>
+          <country>IS</country>
+          <country>JP</country>
+          <country>KE</country>
+          <country>KG</country>
+          <country>KM</country>
+          <country>KP</country>
+          <country>KR</country>
+          <country>KZ</country>
+          <country>LC</country>
+          <country>LK</country>
+          <country>LR</country>
+          <country>LS</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MA</country>
+          <country>MD</country>
+          <country>MG</country>
+          <country>MK</country>
+          <country>MN</country>
+          <country>MW</country>
+          <country>MX</country>
+          <country>MZ</country>
+          <country>NA</country>
+          <country>NG</country>
+          <country>NI</country>
+          <country>NO</country>
+          <country>NZ</country>
+          <country>OM</country>
+          <country>PG</country>
+          <country>PH</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RU</country>
+          <country>SC</country>
+          <country>SD</country>
+          <country>SE</country>
+          <country>SG</country>
+          <country>SK</country>
+          <country>SL</country>
+          <country>SM</country>
+          <country>SY</country>
+          <country>TJ</country>
+          <country>TM</country>
+          <country>TN</country>
+          <country>TR</country>
+          <country>TT</country>
+          <country>TZ</country>
+          <country>UA</country>
+          <country>UG</country>
+          <country>US</country>
+          <country>UZ</country>
+          <country>VC</country>
+          <country>VN</country>
+          <country>YU</country>
+          <country>ZA</country>
+          <country>ZM</country>
+          <country>ZW</country>
+        </national>
+      </designation-pct>
+    </designation-of-states>
+    <patent-family date-changed="20151027">
+      <main-family family-id="174321189">
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2005290855</doc-number>
+            <kind>B2</kind>
+            <date>20100819</date>
+          </document-id>
+          <application-date>
+            <date>20050706</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>MX</country>
+            <doc-number>PA06015274</doc-number>
+            <kind>A</kind>
+            <date>20070927</date>
+          </document-id>
+          <application-date>
+            <date>20050706</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AT</country>
+            <doc-number>380190</doc-number>
+            <kind>T</kind>
+            <date>20071215</date>
+          </document-id>
+          <application-date>
+            <date>20050706</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1765828</doc-number>
+            <kind>A1</kind>
+            <date>20070328</date>
+          </document-id>
+          <application-date>
+            <date>20050706</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1765828</doc-number>
+            <kind>B1</kind>
+            <date>20071205</date>
+          </document-id>
+          <application-date>
+            <date>20050706</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>ZA</country>
+            <doc-number>200609816</doc-number>
+            <kind>A</kind>
+            <date>20080827</date>
+          </document-id>
+          <application-date>
+            <date>20061130</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2005290855</doc-number>
+            <kind>A1</kind>
+            <date>20060413</date>
+          </document-id>
+          <application-date>
+            <date>20050706</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>602005003672</doc-number>
+            <kind>D1</kind>
+            <date>20080117</date>
+          </document-id>
+          <application-date>
+            <date>20050706</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>602005003672</doc-number>
+            <kind>T2</kind>
+            <date>20081120</date>
+          </document-id>
+          <application-date>
+            <date>20050706</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2006038222</doc-number>
+            <kind>A1</kind>
+            <date>20060413</date>
+          </document-id>
+          <application-date>
+            <date>20050706</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="174342737">
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2005290855</doc-number>
+            <kind>B2</kind>
+            <date>20100819</date>
+          </document-id>
+          <application-date>
+            <date>20050706</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>MX</country>
+            <doc-number>PA06015274</doc-number>
+            <kind>A</kind>
+            <date>20070927</date>
+          </document-id>
+          <application-date>
+            <date>20050706</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AT</country>
+            <doc-number>380190</doc-number>
+            <kind>T</kind>
+            <date>20071215</date>
+          </document-id>
+          <application-date>
+            <date>20050706</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1765828</doc-number>
+            <kind>A1</kind>
+            <date>20070328</date>
+          </document-id>
+          <application-date>
+            <date>20050706</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>1765828</doc-number>
+            <kind>B1</kind>
+            <date>20071205</date>
+          </document-id>
+          <application-date>
+            <date>20050706</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>ZA</country>
+            <doc-number>200609816</doc-number>
+            <kind>A</kind>
+            <date>20080827</date>
+          </document-id>
+          <application-date>
+            <date>20061130</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2005290855</doc-number>
+            <kind>A1</kind>
+            <date>20060413</date>
+          </document-id>
+          <application-date>
+            <date>20050706</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>602005003672</doc-number>
+            <kind>D1</kind>
+            <date>20080117</date>
+          </document-id>
+          <application-date>
+            <date>20050706</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>602005003672</doc-number>
+            <kind>T2</kind>
+            <date>20081120</date>
+          </document-id>
+          <application-date>
+            <date>20050706</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2006038222</doc-number>
+            <kind>A1</kind>
+            <date>20060413</date>
+          </document-id>
+          <application-date>
+            <date>20050706</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20100929" lang="eng" format="original">
+    <p>The present invention relates to resolution of (cis, trans) 5,6 -dihydro -4H-4-ethylamino-6-methylthieno[2,3-b] thiopyran-2-sulfonamide-7,7 -dioxide using dibenzoyl -L- tartaric acid monohydrate or di-p-toluoyl-L-tarrtaric acid monohydrate as a chiral resolving agent in presence of methanol to obtain hemitartarate salt, purifying it to obtain hemitartarate salt of 5,6-dihydro-4 H-4 (S) -ethyl amino-6(S) methylthieno [2,3-b] thiopyran-2-sulfonamide - 7,7 -dioxide with de of &gt;99% , Chemical purity &gt;99.5% with cis isomer content of &lt;0.1 % and further converting into its pharmaceutically acceptable salts, preferably hydrochloride salt.</p>
+  </abstract>
+  <abstract id="abstr_fre" date-changed="20100929" lang="fre" format="original">
+    <p>La présente invention concerne le dédoublement du (cis, trans)-5,6-dihydro-4H-4-éthylamino-6-méthylthiéno[2,3-b]thiopyrane-2-sulfonamide-7,7-dioxyde, en utilisant de l’acide dibenzoyl-L-tartrique monohydraté ou de l’acide di-p-toluoyl-L-tartrique monohydraté comme agent de dédoublement chiral, en présence de méthanol afin d’obtenir le sel hémitartrate. On purifie ensuite ledit sel afin d’obtenir le sel hémitartrate du 5,6-dihydro-4H-4(S) -éthylamino-6(S)-méthylthiéno[2,3-b]thiopyrane-2-sulfonamide-7,7-dioxyde à plus de 99 %, d’une pureté chimique &gt; 99,5 % avec une teneur en isomère cis &lt; 0,1 %, puis on le convertit en ses sels de qualité pharmaceutique, de préférence l’hydrochlorure.</p>
+  </abstract>
+  <legal-data date-changed="20140622">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20060413</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED STATES</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> WO  2006038222A1</docdb-publication-number>
+      <docdb-application-id>24367362</docdb-application-id>
+      <corresponding-kind>A1</corresponding-kind>
+      <legal-designated-states>
+        <country>AE</country>
+        <country>AG</country>
+        <country>AL</country>
+        <country>AM</country>
+        <country>AT</country>
+        <country>AU</country>
+        <country>AZ</country>
+        <country>BA</country>
+        <country>BB</country>
+        <country>BG</country>
+        <country>BR</country>
+        <country>BW</country>
+        <country>BY</country>
+        <country>BZ</country>
+        <country>CA</country>
+        <country>CH</country>
+        <country>CN</country>
+        <country>CO</country>
+        <country>CR</country>
+        <country>CU</country>
+        <country>CZ</country>
+        <country>DE</country>
+        <country>DK</country>
+        <country>DM</country>
+        <country>DZ</country>
+        <country>EC</country>
+        <country>EE</country>
+        <country>EG</country>
+        <country>ES</country>
+        <country>FI</country>
+        <country>GB</country>
+        <country>GD</country>
+        <country>GE</country>
+        <country>GH</country>
+        <country>GM</country>
+        <country>HR</country>
+        <country>HU</country>
+        <country>ID</country>
+        <country>IL</country>
+        <country>IN</country>
+        <country>IS</country>
+        <country>JP</country>
+        <country>KE</country>
+        <country>KG</country>
+        <country>KM</country>
+        <country>KP</country>
+        <country>KR</country>
+        <country>KZ</country>
+        <country>LC</country>
+        <country>LK</country>
+        <country>LR</country>
+        <country>LS</country>
+        <country>LT</country>
+        <country>LU</country>
+        <country>LV</country>
+        <country>MA</country>
+        <country>MD</country>
+        <country>MG</country>
+        <country>MK</country>
+        <country>MN</country>
+        <country>MW</country>
+        <country>MX</country>
+        <country>MZ</country>
+        <country>NA</country>
+        <country>NG</country>
+        <country>NI</country>
+        <country>NO</country>
+        <country>NZ</country>
+        <country>OM</country>
+        <country>PG</country>
+        <country>PH</country>
+        <country>PL</country>
+        <country>PT</country>
+        <country>RO</country>
+        <country>RU</country>
+        <country>SC</country>
+        <country>SD</country>
+        <country>SE</country>
+        <country>SG</country>
+        <country>SK</country>
+        <country>SL</country>
+        <country>SM</country>
+        <country>SY</country>
+        <country>TJ</country>
+        <country>TM</country>
+        <country>TN</country>
+        <country>TR</country>
+        <country>TT</country>
+        <country>TZ</country>
+        <country>UA</country>
+        <country>UG</country>
+        <country>US</country>
+        <country>UZ</country>
+        <country>VC</country>
+        <country>VN</country>
+        <country>YU</country>
+        <country>ZA</country>
+        <country>ZM</country>
+        <country>ZW</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20060413</date>
+      </publication-date>
+      <event-code-1>AL</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED COUNTRIES FOR REGIONAL PATENTS</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> WO  2006038222A1</docdb-publication-number>
+      <docdb-application-id>24367362</docdb-application-id>
+      <corresponding-kind>A1</corresponding-kind>
+      <legal-designated-states>
+        <country>GM</country>
+        <country>KE</country>
+        <country>LS</country>
+        <country>MW</country>
+        <country>MZ</country>
+        <country>NA</country>
+        <country>SD</country>
+        <country>SL</country>
+        <country>SZ</country>
+        <country>TZ</country>
+        <country>UG</country>
+        <country>ZM</country>
+        <country>ZW</country>
+        <country>AM</country>
+        <country>AZ</country>
+        <country>BY</country>
+        <country>KG</country>
+        <country>KZ</country>
+        <country>MD</country>
+        <country>RU</country>
+        <country>TJ</country>
+        <country>TM</country>
+        <country>AT</country>
+        <country>BE</country>
+        <country>BG</country>
+        <country>CH</country>
+        <country>CY</country>
+        <country>CZ</country>
+        <country>DE</country>
+        <country>DK</country>
+        <country>EE</country>
+        <country>ES</country>
+        <country>FI</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>GR</country>
+        <country>HU</country>
+        <country>IE</country>
+        <country>IS</country>
+        <country>IT</country>
+        <country>LT</country>
+        <country>LU</country>
+        <country>LV</country>
+        <country>MC</country>
+        <country>NL</country>
+        <country>PL</country>
+        <country>PT</country>
+        <country>RO</country>
+        <country>SE</country>
+        <country>SI</country>
+        <country>SK</country>
+        <country>TR</country>
+        <country>BF</country>
+        <country>BJ</country>
+        <country>CF</country>
+        <country>CG</country>
+        <country>CI</country>
+        <country>CM</country>
+        <country>GA</country>
+        <country>GN</country>
+        <country>GQ</country>
+        <country>GW</country>
+        <country>ML</country>
+        <country>MR</country>
+        <country>NE</country>
+        <country>SN</country>
+        <country>TD</country>
+        <country>TG</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20060706</date>
+      </publication-date>
+      <event-code-1>DPE1</event-code-1>
+      <legal-description>REQUEST FOR PRELIMINARY EXAMINATION FILED AFTER EXPIRATION OF 19TH MONTH FROM PRIORITY DATE (PCT APPLICATION FILED FROM 20040101)</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> WO  2006038222A1</docdb-publication-number>
+      <docdb-application-id>24367362</docdb-application-id>
+    </legal-event>
+    <legal-event sequence="4">
+      <publication-date>
+        <date>20060927</date>
+      </publication-date>
+      <event-code-1>121</event-code-1>
+      <legal-description>EP: THE EPO HAS BEEN INFORMED BY WIPO THAT EP WAS DESIGNATED IN THIS APPLICATION</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> WO  2006038222A1</docdb-publication-number>
+      <docdb-application-id>24367362</docdb-application-id>
+    </legal-event>
+    <legal-event sequence="5">
+      <publication-date>
+        <date>20061130</date>
+      </publication-date>
+      <event-code-1>WWE</event-code-1>
+      <effect>+</effect>
+      <legal-description>WIPO INFORMATION: ENTRY INTO NATIONAL PHASE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> WO  2006038222A1</docdb-publication-number>
+      <docdb-application-id>24367362</docdb-application-id>
+      <corresponding-publication-number>200609816</corresponding-publication-number>
+      <corresponding-authority>
+        <country>ZA</country>
+      </corresponding-authority>
+    </legal-event>
+    <legal-event sequence="6">
+      <publication-date>
+        <date>20061201</date>
+      </publication-date>
+      <event-code-1>WWE</event-code-1>
+      <effect>+</effect>
+      <legal-description>WIPO INFORMATION: ENTRY INTO NATIONAL PHASE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> WO  2006038222A1</docdb-publication-number>
+      <docdb-application-id>24367362</docdb-application-id>
+      <corresponding-publication-number>2005290855</corresponding-publication-number>
+      <corresponding-authority>
+        <country>AU</country>
+      </corresponding-authority>
+    </legal-event>
+    <legal-event sequence="7">
+      <publication-date>
+        <date>20061205</date>
+      </publication-date>
+      <event-code-1>WWE</event-code-1>
+      <effect>+</effect>
+      <legal-description>WIPO INFORMATION: ENTRY INTO NATIONAL PHASE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> WO  2006038222A1</docdb-publication-number>
+      <docdb-application-id>24367362</docdb-application-id>
+      <corresponding-publication-number>2570415</corresponding-publication-number>
+      <corresponding-authority>
+        <country>CA</country>
+      </corresponding-authority>
+    </legal-event>
+    <legal-event sequence="8">
+      <publication-date>
+        <date>20061220</date>
+      </publication-date>
+      <event-code-1>WWE</event-code-1>
+      <effect>+</effect>
+      <legal-description>WIPO INFORMATION: ENTRY INTO NATIONAL PHASE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> WO  2006038222A1</docdb-publication-number>
+      <docdb-application-id>24367362</docdb-application-id>
+      <corresponding-publication-number>PA/a/2006/015274</corresponding-publication-number>
+      <corresponding-authority>
+        <country>MX</country>
+      </corresponding-authority>
+    </legal-event>
+    <legal-event sequence="9">
+      <publication-date>
+        <date>20061222</date>
+      </publication-date>
+      <event-code-1>WWE</event-code-1>
+      <effect>+</effect>
+      <legal-description>WIPO INFORMATION: ENTRY INTO NATIONAL PHASE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> WO  2006038222A1</docdb-publication-number>
+      <docdb-application-id>24367362</docdb-application-id>
+      <corresponding-publication-number>2005816357</corresponding-publication-number>
+      <corresponding-authority>
+        <country>EP</country>
+      </corresponding-authority>
+    </legal-event>
+    <legal-event sequence="10">
+      <publication-date>
+        <date>20070104</date>
+      </publication-date>
+      <event-code-1>ENP</event-code-1>
+      <legal-description>ENTRY INTO THE NATIONAL PHASE IN:</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> WO  2006038222A1</docdb-publication-number>
+      <docdb-application-id>24367362</docdb-application-id>
+      <corresponding-publication-number>2005290855</corresponding-publication-number>
+      <corresponding-authority>
+        <country>AU</country>
+      </corresponding-authority>
+      <corresponding-publication-date>
+        <date>20050706</date>
+      </corresponding-publication-date>
+      <corresponding-kind>A</corresponding-kind>
+    </legal-event>
+    <legal-event sequence="11">
+      <publication-date>
+        <date>20070104</date>
+      </publication-date>
+      <event-code-1>WWP</event-code-1>
+      <effect>+</effect>
+      <legal-description>WIPO INFORMATION: PUBLISHED IN NATIONAL OFFICE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> WO  2006038222A1</docdb-publication-number>
+      <docdb-application-id>24367362</docdb-application-id>
+      <corresponding-publication-number>2005290855</corresponding-publication-number>
+      <corresponding-authority>
+        <country>AU</country>
+      </corresponding-authority>
+    </legal-event>
+    <legal-event sequence="12">
+      <publication-date>
+        <date>20070110</date>
+      </publication-date>
+      <event-code-1>NENP</event-code-1>
+      <legal-description>NON-ENTRY INTO THE NATIONAL PHASE IN:</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> WO  2006038222A1</docdb-publication-number>
+      <docdb-application-id>24367362</docdb-application-id>
+      <designated-state-authority>
+        <country>DE</country>
+      </designated-state-authority>
+    </legal-event>
+    <legal-event sequence="13">
+      <publication-date>
+        <date>20070110</date>
+      </publication-date>
+      <event-code-1>WWW</event-code-1>
+      <effect>-</effect>
+      <legal-description>WIPO INFORMATION: WITHDRAWN IN NATIONAL OFFICE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> WO  2006038222A1</docdb-publication-number>
+      <docdb-application-id>24367362</docdb-application-id>
+      <corresponding-authority>
+        <country>DE</country>
+      </corresponding-authority>
+    </legal-event>
+    <legal-event sequence="14">
+      <publication-date>
+        <date>20070328</date>
+      </publication-date>
+      <event-code-1>WWP</event-code-1>
+      <effect>+</effect>
+      <legal-description>WIPO INFORMATION: PUBLISHED IN NATIONAL OFFICE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> WO  2006038222A1</docdb-publication-number>
+      <docdb-application-id>24367362</docdb-application-id>
+      <corresponding-publication-number>2005816357</corresponding-publication-number>
+      <corresponding-authority>
+        <country>EP</country>
+      </corresponding-authority>
+    </legal-event>
+    <legal-event sequence="15">
+      <publication-date>
+        <date>20071205</date>
+      </publication-date>
+      <event-code-1>WWG</event-code-1>
+      <effect>+</effect>
+      <legal-description>WIPO INFORMATION: GRANT IN NATIONAL OFFICE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> WO  2006038222A1</docdb-publication-number>
+      <docdb-application-id>24367362</docdb-application-id>
+      <corresponding-publication-number>2005816357</corresponding-publication-number>
+      <corresponding-authority>
+        <country>EP</country>
+      </corresponding-authority>
+    </legal-event>
+    <legal-event sequence="16">
+      <publication-date>
+        <date>20081014</date>
+      </publication-date>
+      <event-code-1>WWE</event-code-1>
+      <effect>+</effect>
+      <legal-description>WIPO INFORMATION: ENTRY INTO NATIONAL PHASE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> WO  2006038222A1</docdb-publication-number>
+      <docdb-application-id>24367362</docdb-application-id>
+      <corresponding-publication-number>11571825</corresponding-publication-number>
+      <corresponding-authority>
+        <country>US</country>
+      </corresponding-authority>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20070815">
+    <p>[0001]    An Improved Process For The Preparation of 5,6 -dihydro -4H-4(S)-ethylamino-6 (S)- methylthieno [2,3-b] thiopyran-2-suIfonamide - 7,7 -dioxide and its salts.</p>
+    <p>[0002]    Technical Field This invention relates to an improved process for the preparation of 5,6 -dihydro</p>
+    <p>[0003]    -4H-4(S)-ethylamino-6 (S)- methylthieno [2,3-b] thiopyran-2-sulfonamide - 7,7 - dioxide with a high chemical and optical purity comprising resolution of (cis, trans ) 5,6 -dihydro -4H-4-ethylamino-6-methylthieno [2,3-b] thiopyran-2-sulfonamide - 7,7 - dioxide using di-O-benzoyl -L-tartaric acid monohydrate or di-O-toluoyl -L-tartaric acid monohydrate as chiral resolving agent.</p>
+    <p>[0004]    Background and Prior Art of the Invention</p>
+    <p>[0005]    Increase in intraocular pressure is one of the causes of eye disease known as glaucoma. If not treated in time high intraocular pressure may result in loss of vision.</p>
+    <p> Among the latest therapeutic agents used in the treatment of glaucoma are topically active carbonic anhydrase inhibitors. They target the desired ophthalmic tissue hence have very less side effects as compared to their systemic counterparts, which inhibit carbonic anhydrase throughout the entire body.</p>
+    <p>[0006]    5,6 - dihydro - 4H -4(S) - ethylamino - 6 - (S)- methylthieno [ 2,3-b ] thiopyran - 2 -sulfonamide - 7,7 -dioxide is used in the treatment of elevated intraocular pressure, especially when accompanied by pathological damage such as the disease known as glaucoma.</p>
+    <p>[0007]    Among the leading topically active carbonic anhydrase inhibitors is a hydrochloride salt of 5,6-dihydro-4H-4(S)-ethylamino-6(S)-methylthieno[2,3-b] thiopyran-2-sulfonamide-7,7 -dioxide generically known as Dorzolamide hydrochloride (I) originally described in US patent no. 4,797,413.</p>
+    <p>&lt;emi id="3.1"&gt;</p>
+    <p>[0008]    (I)</p>
+    <p>[0009]    US Patent nos. 5688968, 5441722 and 5157129 describe improved processes for preparing (I). Dorzolamide HCl (I) contains two chiral centers and can exist in four</p>
+    <p>[0010]    . diastereoisomeric forms.</p>
+    <p>[0011]    The US patent no. 4,797, 413 describes a process to prepare racemic version of (I) and a process for resolution of trans-5,6-dihydro-4H-4-ethylamino-6.- methylthienol[2,3-b]thiopyran-2-sufonamide-7,7-dioxide.</p>
+    <p> The prior art resolution process, wherein trans 5,6-dihydro-4H-4-ethylamino-6- methylthieno [2,3-b] thiopyran - 2-sulfonamide-7,7-dioxide is resolved employing two chiral resolving agents viz. di-p-toluoyl -D-tartaric acid monohydrate and di-p-toluoyl - L-Tartaric acid monohydrate in a solvent media n-propanol .The required (S, S) diastereoisomer is isolated from mother liquor after separating unwanted diastereoisomer in a two stage resolution process</p>
+    <p>[0012]    The overall process for resolution described in the prior art is tedious and not &lt;-&gt; favourable for scale up. The use of unnatural tartaric acid derivative which is expensive adds to the cost of the process.</p>
+    <p> Further there is no mention about the chemical purity of compound (I) obtained. &lt;-&gt; The surprising result of the present invention is achieved by obtaining the required diasterioisomer 5-6, dihydro-4H-4(S) - ethylamino-6 (S)- methyl thieno[2,3-b] thiopyran - 2 -sulphonamide-7,7-dioxide having high optical and chemical purity only by using either dibenzoyl-L-tartaric acid or di-p-toluoyl-L-tartaric acid as a chiral resolving agent in presence of an organic solvent preferably methanol as a solvent, starting from (cis, trans) 5-6, dihydro-4H-4 - ethylamino-6 methyl thieno[2,3-b] thiopyran - 2 -sulphonamide-7,7-dioxide in one stage resolution process.</p>
+    <p> So far 5-6, dihydro-4H-4(S) - ethylamino-6(S)- methyl thieno[2,3-b] thiopyran - 2 -sulphonamide- 7,7-dioxide has not been obtained by resolving ( cis,trans) 5-6, dihydro-4H-4 - ethylamino-6 methyl thieiio[2,3-b] thiopyran - 2 -sulphonamide-7,7-dioxide using single chiral resolving agent The process of the present invention also enables selective separation of hemihydrate salt of (s,s) -trans isomer of high purity as an intermediate for obtaining the final product (s,s) dorzolamide and its pharmaceutically acceptable salts..</p>
+    <p> Thus, process of the present invention used for resolution is novel and inventive over the prior art process.</p>
+    <p>[0013]    Objects of the Invention</p>
+    <p>[0014]    An object of the present invention is to prepare 5,6 -dihydro -4H-4(S)- ethylamino-6 (S)- methylthieno[2,3-b] thiopyran-2-sulfonamide - 7,7 -dioxide by resolution of (cis, trans)5,6 -dihydro -4H-4 ethylamino-6-methylthieno[2,3-b] thiopyran-2-sulfonamide - 7,7 -dioxide using dibenzoyl-L-tartaric acid or di-p-toluoyl- L-tarrtaric acid as a chiral resolving agent and an organic solvent preferably methyl alcohol as solvent.</p>
+    <p>[0015]    Another object of the present invention is to provide a compound 5, 6-dihydro- 4H-4(S)-ethylamino-6(S)-methylthieno[2,3-b]thiopyran-2-sulfonamide-7,7-dioxide having high chemical and optical purity.</p>
+    <p>[0016]    Still another object of the present invention is to provide 5,6 -dihydro -4H-4(S)</p>
+    <p>- ethylamino-6 (S)methylthieno[2,3-b] thiopyran-2-sulfonamide - 7,7 -dioxide having 5,6 -dihydro-4H-4(R)-ethylamino-6(R)methylthieno[2,3-b]thiopyran-2-sulfonamide- 7,7-dioxide isomer content of less than 0.5 %w/w.</p>
+    <p>[0017]    Yet another object of the present invention is to provide 5,6 -dihydro -4H-4(S)- ethylamino-6 (S) methylthieno[2,3-b] thiopyran-2-sulfonamide- 7,7 -dioxide thus obtained having cis isomer content of less than 0.1% w/w, total impurities at a level of less than 0.3 % w/w and purity of more than 99.5 % by HPLC.</p>
+    <p> Still yet another object of the present invention is to provide a process for resolution which is simple, economical starting from (cis, trans) 5, 6-dihydro -4H-4- ethylamino-6- methylthieno[2,3-b] thiopyran-2-sulfonamide - 7,7 -dioxide.</p>
+    <p>[0018]    Summary of the Invention This invention relates to an improved process for the preparation of 5,6 -dihydro</p>
+    <p>[0019]    -4H-4(S)-ethylamino-6 (S)- methylthieno[2,3-b] thiopyran-2-sulfonamide - 7,7 -dioxide with a high chemical and optical purity comprising resolution of (cis, trans ) 5,6 - dihydro -4H-4-ethylamino-6-methylthieno[2,3-b] thiopyran-2-sulfonamide-7,7-dioxide by treating with either di -O-benzoyl -L-tartaric acid monohydrate or di-O-toluoyl -L- tartaric acid monohydrate chiral resolving agents in an organic solvent, preferably methanol to obtain an intermediate hemitartarate salt, which on further purification yielded (s,s)</p>
+    <p> Dorzolamide free base, converting to its hydrochloride by treating with isopropanol-hydrochloride followed by crystallization from isopropanol.</p>
+    <p>[0020]    Detailed description of the present invention &lt;"&gt; In accordance with the object, the present invention provides an improved process for the preparation of 5,6-dihydro-4H-4(S)-ethylamino - 6(S) methylthieno [2,3 -b] thiopyran-2-sulfonamide-7,7-dioxide hydrochloride comprising steps of :</p>
+    <p> a) contacting(cis,trans)5,6-dihydro-4H-4-ethylamino-6-methylthieno[2,3-b] thiopyran-2-sulfonamide-7,7-dioxide with di-O-substituted-L-tartaric acid in an organic solvent, b) obtaining intermediate hemitartarate salt of formula( rVj</p>
+    <p>[0021]     &lt;emi id="5.1"&gt;</p>
+    <p>[0022]    IV c) Refluxing hemitartarate salt of step b) With methanol to obtain purified hemitartarate salt treating the purified hemitartarate salt of step (c) with ethylacetate and aqueous alkali bicarbonate solution, separating ethylacetate and aqueous layer, d) Extracting the aqueous layer of step (d) with ethylacetate, separating the ethylacetate layer, e) combining ethylacetate layers of step (d) and (e), washing with water, collecting water washed ethylacetate layer to obtain 5,6-dihydro-4H-4(S)-ethylamino-6(S) methylthieno [2,3-b] thiopyran-2-sulfonamide-7,7-dioxide, f)</p>
+    <p> adjusting the pH between 1.0 to 2.0 of ethylacetate layer with isopropanol- hydrochloric acid solution,and g) separating the precipitated solid and crystallizing the solid from isopropanol. An embodiment of the process uses an organic solvent methanol in step a).</p>
+    <p>[0023]    Another embodiment of the process wherein chiral resolving agent di-O- substituted L-tartaric acid used is selected from a group consisting of di-O-benzoyl-L- tartaric acid monohydrate and di-0-p-toluoyl-L-tartaric acid monohydrate.</p>
+    <p>[0024]    Still another embodiment of the process wherein di-O-substituted-L-tartaric acid used is preferably di-O-benzoyl-L-tartaric acid monohydrate .</p>
+    <p>[0025]    Yet another embodiment of the process uses aqueous alkali carbonate solution selected from the group consisting of aqueous potassium carbonate and aqueous sodium carbonate solution.,</p>
+    <p> preferably aqueous sodium carbonate solution</p>
+    <p>[0026]    _ The novel resolution process of this invention used to resolve (cis, trans)5,6 - dihydro -4H-4 -ethylamino-6-methylthieno[2,3-b] thiopyran-2-sulfonamide - 7,7 - dioxide into required 5,6 -dihydro -4H-4(S)-ethylamino-6 (S)-methylthieno[2,3-b] thiopyran-2-sulfonamide - 7,7 -dioxide as depicted below:</p>
+    <p> Schemel</p>
+    <p>[0027]    Methanol</p>
+    <p>[0028]     &lt;emi id="7.1"&gt;</p>
+    <p>[0029]    R=C6H5CO-</p>
+    <p>[0030]    R= P-CH3C6H4CO</p>
+    <p>[0031]     &lt;emi id="7.2"&gt;</p>
+    <p>[0032]    IV V</p>
+    <p>[0033]    Several solvents namely methanol, ethanol,isopropanol,t-butanol, water or its mixture were used for resolution.The best possible resolution is achieved using a combination of chiral resolving agent di-0-behzoyl-L-tartaric acid and methanol as the solvent.</p>
+    <p>[0034]    A resolution process of this invention comprises reacting (cis,trans)5,6 -dihydro -4H-4 -ethylamino-6-methylthieno[2,3-b] thiopyran-2-sulfonamide - 7,7 -dioxide with dibenzoyl -L tartaric acid monohydrate or di-p- toluoyl-L tartaric acid monohydrate in methanol as solvent.</p>
+    <p> The resulting solution is filtered and stirred to obtain hemitartarate salt of 5,6 -dihydro -4H-4(S)-ethylamino-6 (S)- methylthieno[2,3-b] thiopyran-2-sulfonamide - 7,7 -dioxide with de of &gt; 95 %.The salt on purification -yields pure hemitartarate salt having de of &gt;99% and Chemical purity &gt;99.5% with cis isomer content of &lt;0.1 %.</p>
+    <p> The purification of hemitartarate salt is advantageously carried out in a soxhlet type apparatus.</p>
+    <p>[0035]    The5,6-dih.ydro-4H-4(S)-ethylamino-6(S)methylthieno [2,3 -b] thiopyran-2- 5 sulfonamide - 7,7 -dioxide obtained from purified hemitartarate is further converted into its pharmaceutically acceptable salts, preferably hydrochloride salt.</p>
+    <p>[0036]    The features of the present invention will become more apparent from the following description of the inventive concept and the description of the preferred embodiments and. appended claims. io EXAMPLES</p>
+    <p>[0037]    Example 1: A solution of Dibenzoyl - L- tartaric acid (16.30gms) in of methanol (35ml) &amp;(cis,trans)5,6-dihydro-4H-4-ethylamino-6-methylthieno[2,3-b]thiopyran-2- sulfonamide - 7,7 -dioxide (14 gms) in methanol (125 ml) were stirred at 25[deg.]C to 30&lt;0&gt;C till a clear solution was obtained.</p>
+    <p> The clear solution was further stirred for 24 hours,</p>
+    <p>[0038]    15 separated solid was filtered off ,dried and recrystallized from methanol (? 100 ml). The recrystallized material was treated twice with methanol (-150 ml) in a soxhlet apparatus. The purified material so obtained was further treated with a mixture of ethyl acetate(35 ml) and 2 % sodium carbonate solution(35 ml).The layers were separated ,the aqueous layer was again extracted with ethyl acetate(20 ml) and the combined</p>
+    <p>[0039]    20. organic extracts were washed with water (20 ml).</p>
+    <p> The pH of the washed organic extract was adjusted between 1.0 to 2.0with IPA/HC1 separated the solid by filtration to obtain- ethylacetate filtrate and solid dried to yield 2.4 gms of (s,s) dorzolamide hydrochloride salt The hydrochloride salt obtained (2.4 gms) was recrystallized from IPA(15 ml) to give 2.4 gms of 5,6 -dihydro-4H-4(S)-ethylamino-6(S)-</p>
+    <p>[0040]    25 methylthieno [2,3 -b] -thiopyran-2-sulfonamide -7,7 -dioxide hydrochloride. The ethylacetate filtrate was kept aside for recovery of (cis, trans ) 5,6 -dihydro -4H-4- ethylamino-6-meth&gt;^lthieno[2,3-b] thiopyran-2-sulfonamide - 7,7 -dioxide.</p>
+    <p>[0041]    Example 2: Recovery of the (cis, trans) 5,6 -dihydro-4H-4-ethylamino- methylthieno[2,3-b] thiopyran-2-sulfonamide - 7,7 -dioxide from the Ethyl Acetate 0 filtrate.</p>
+    <p> The ethylacetate filtrate of example 1 was washed with 2 % sodium carbonate solution till pH of around 8 was attained. The layers were separated and aqueous layer extracted with ethyl acetate. The ethyl acetate extracts were combined and washed with water. The washed ethyl acetate layer was concentrated to around 15 % of original volume to yield 4.6 gms. of (cis,trans) 5,6 -dihydro -4H-4-ethylamino-6- methylthieno[2,3-b] th.iopyran-2-sulfonamide - 7,7 -dioxide, which was further resolved using the same process of example 1 to obtain (s,s) dorzolamide and its salt.</p>
+    <p>[0042]    Main advantages of the Invention:</p>
+    <p>[0043]    1) Process uses only naturally occurring chiral resolving agent.</p>
+    <p>[0044]    2) Process is simple and economical. </p>
+    <p>[0045]    References a. US 5011942 b. US 4797413</p>
+    <p>[0046]    C. US 5157129 d. US 5441722 e. US 5574176 f. US 4968814</p>
+    <p>[0047]    g- US 5760249 h.</p>
+    <p> US 467711 5 i. US 5688968 j- JOC 1993, 58, 1672-1679 k. JOC 1991 , 56 , 763-769</p>
+    <p>[0048]    1. JOC 1993, 58, 2880-2888.</p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20070815">
+    <claim num="1">
+      <claim-text>1. An improved process for the preparation of 5,6-dihydro-4H-4(S)-ethylamino- 6(S) methylthieno [2,3-b] thiopyran-2-sulfonamide-7,7-dioxide hydrochloride comprising steps of : a. Contacting (cis, trans) 5,6-dihydro-4H-4-ethylamino-6-methylthieno [2,3-b] thiopyran-2-sulfonamide-7,7-dioxide with di-O-substituted-L-tartaric acid in an organic solvent, b. Obtaining intermediate hemitartarate salt of formula IV, 
+</claim-text>
+    </claim>
+    <claim num="2">
+      <claim-text>&lt;emi id="11.1"&gt;   STDC0004IV  STDC0846c. Refluxing hemitartarate salt of step (b) with methanol to obtain purified hemitartarate salt, d. Treating the purified hemitartarate salt of step (c) with ethylacetate and aqueous alkali bicarbonate solution, separating ethylacetate and aqueous layer, e. Extracting the aqueous layer of step (d) with ethylacetate, separating the ethylacetate layer, f. Combining ethylacetate layers of step (d) and (e), washing with water, collecting water washed ethylacetate layer to obtain 5,6-dihydro-4H-4(S)- ethylamino - 6(S) methylthieno [2,3-b] thiopyran-2-sulfonamide-7,7- dioxide, g. Adjusting the pH between 1.0 to 2.0 of ethylacetate layer with isopropanol- hydrochloric acid solution,and h. Separating the precipitated solid and crystallizing from isopropanol. 2. A process of claim 1, wherein in step (a) the organic solvent used is methanol. 3.STDC0212 A process of claim 1, wherein in step (a) di-O-substituted L-tartaric acid used is selected from a group consisting of di-O-benzoyl-L-tartaric acid monohydrate and di-O- p-toluoyl-L-tartaric acid monohydrate. 
+</claim-text>
+    </claim>
+    <claim num="3">
+      <claim-text>4. A process of claim 3, -wherein the di-O-substituted-L-tartaric acid used is preferably di-O-benzoyl-L-tartaric acid monohydrate. 5. A process of claim 1, wherein in step (d) aqueous alkali carbonate solution is selected from the group consisting of aqueous potassium carbonate and aqueous sodium carbonate solution. 
+</claim-text>
+    </claim>
+    <claim num="4">
+      <claim-text>6. A process of claim 5, wherein the preferred alkali carbonate solution is aqueous sodium carbonate solution. 7. An improved process for the preparation of 5,6-dihydro-4H-4(S)-ethylamino- 6(S) methylthieno [2,3 -b] thiopyran-2-sulfonamide-7,7-dioxide hydrochloride as herein substantially described with reference to examples.</claim-text>
+    </claim>
+  </claims>
+  <image file="WO2006038222A1.PDF" type="pdf" size="295149" pages="15" />
+</lexisnexis-patent-document>
