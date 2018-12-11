@@ -114,9 +114,11 @@ public class UPTRefCntUpdateExtract
 
     {
         //String sql = "SELECT 'update upt_master set cit_cnt = nvl(cit_cnt,0) +'||COUNT(DISTINCT prt_mid)||', md = sysdate where m_id = '''||cit_mid||''';'  FROM patent_refs WHERE cit_mid IS NOT NULL AND load_number = "+loadNumber+" GROUP BY cit_mid";
-        String sql = "SELECT 'update upt_master set cit_cnt ='||COUNT(DISTINCT prt_mid)||', md = sysdate, update_number ="+loadNumber+" where m_id = '''||cit_mid||''';'  FROM patent_refs WHERE cit_mid IS NOT NULL AND   cit_mid in (select distinct cit_mid from patent_refs where load_number = "+loadNumber+" and cit_mid is not null) and (load_number is null or load_number <="+loadNumber+") GROUP BY cit_mid";
-
-        writeExtract(dir,sql,true);
+        //String sql = "SELECT 'update upt_master set cit_cnt ='||COUNT(DISTINCT prt_mid)||', md = sysdate, update_number ="+loadNumber+" where m_id = '''||cit_mid||''';'  FROM patent_refs WHERE cit_mid IS NOT NULL AND   cit_mid in (select distinct cit_mid from patent_refs where load_number = "+loadNumber+" and cit_mid is not null) and (load_number is null or load_number <="+loadNumber+") GROUP BY cit_mid";
+    	//String sql = "SELECT 'update upt_master set cit_cnt ='||COUNT(prt_mid)||', md = sysdate, update_number ="+loadNumber+" where m_id = '''||cit_mid||''';'  FROM patent_refs WHERE cit_mid IS NOT NULL AND   cit_mid in (select distinct cit_mid from patent_refs where load_number = "+loadNumber+" and cit_mid is not null) and (load_number is null or load_number <="+loadNumber+") GROUP BY cit_mid";
+    	String sql = "SELECT 'update upt_master set cit_cnt ='||COUNT(DISTINCT prt_mid)||', md = sysdate, update_number ="+loadNumber+" where m_id = '''||cit_mid||''';'  FROM patent_refs WHERE cit_mid IS NOT NULL AND   cit_mid in (select distinct cit_mid from patent_refs where load_number = "+loadNumber+" and cit_mid is not null) GROUP BY cit_mid";
+    	System.out.println("Citation count Query="+sql);
+    	writeExtract(dir,sql,true);
     }
 
     public void writeNonPatRefExtract(String dir,String loadNumber)

@@ -222,7 +222,7 @@ public class UPTCombiner extends CombinerTimestamp {
         try {
 
             stmt = con.createStatement();
-            String query="SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number,seq_num,CLASSIFICATION_CPC FROM "+Combiner.TABLENAME+" WHERE  update_number="+timestamp;
+            String query="SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number,seq_num,CLASSIFICATION_CPC FROM "+Combiner.TABLENAME+" WHERE  update_number="+timestamp+" and load_number!="+timestamp;
             System.out.println("Running the query..."+query);
 
             rs = stmt.executeQuery(query);
@@ -345,472 +345,479 @@ public class UPTCombiner extends CombinerTimestamp {
         try {
 
             while (rs.next()) {
-
-                ++i;
-
-                mid = rs.getString("m_id");
-
-                EVCombinedRec rec = new EVCombinedRec();
-
-                /*
-                if (Combiner.EXITNUMBER != 0 && i > Combiner.EXITNUMBER) {
-                    break;
-                }
-                */
-                if (validYear(rs.getString("py"))) {
-
-                    if (rs.getClob("ab") != null) {
-
-                        String abs = getStringFromClob(rs.getClob("ab"));
-
-                        if (!abs.equalsIgnoreCase("QQ")) {
-                            rec.put(EVCombinedRec.ABSTRACT, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(abs))));
-                        }
-                    }
-
-                    if (rs.getClob("oab") != null) {
-
-                        String oab = getStringFromClob(rs.getClob("oab"));
-
-                        if (!oab.equalsIgnoreCase("QQ")) {
-                            rec.put(EVCombinedRec.OTHER_ABSTRACT, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(oab))));
-                        }
-                    }
-
-                    if (rs.getString("m_id") != null)
-                        rec.put(EVCombinedRec.DOCID, rs.getString("m_id"));
-
-                    if (rs.getString("seq_num") != null)
-                        rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
-
-                    String patentNumber = Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("pn"))));
-
-                    String kindCode = Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("kc"))));
-
-                    String authCode = Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ac"))));
-
-                    if (authCode != null)
-                        rec.put(EVCombinedRec.AUTHORITY_CODE, authCode);
-
-                    if (patentNumber != null) {
-                        rec.put(EVCombinedRec.PATENT_NUMBER, formatPN(patentNumber, kindCode, authCode));
-                    }
-
-                    if (kindCode != null)
-                        rec.put(EVCombinedRec.PATENT_KIND, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(kindCode))));
-
-                    if (rs.getString("kd") != null)
-                        rec.put(EVCombinedRec.KIND_DESCR, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("kd")))));
-
-                    if (rs.getString("ti") != null)
-                        rec.put(EVCombinedRec.TITLE, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ti")))));
-
-                    if (rs.getString("inv") != null) {
-
-                        if (rs.getString("asg") != null) {
-
-                            List lstAsg = convertString2List(rs.getString("asg"));
-                            List lstInv = convertString2List(rs.getString("inv"));
-
-                            if (authCode.equals(EP_CY) && lstInv.size() > 0 && lstAsg.size() > 0) {
-                                lstInv = AssigneeFilter.filterInventors(lstAsg, lstInv, false);
-                            }
-
-                            String[] arrVals = (String[]) lstInv.toArray(new String[1]);
-
-                            arrVals[0] = replaceNull(arrVals[0]);
-
-                            for (int j = 0; j < arrVals.length; j++) {
-                                arrVals[j] = formatAuthor(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(arrVals[j]))));
-                            }
-
-                            if (arrVals != null)
-                                rec.put(EVCombinedRec.AUTHOR, arrVals);
-
-                        }
-                        else {
-
-                            rec.put(EVCombinedRec.AUTHOR, convert2Array(formatAuthor(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("inv")))))));
-                        }
-                    }
-
-                    if (rs.getString("asg") != null) {
-
-                        if (rs.getString("inv") != null) {
-
-                            List lstAsg = convertString2List(rs.getString("asg"));
-                            List lstInv = convertString2List(rs.getString("inv"));
-
-                            if (authCode.equals(US_CY) && lstInv.size() > 0 && lstAsg.size() > 0) {
-                                lstAsg = AssigneeFilter.filterInventors(lstInv, lstAsg, true);
-                            }
-
-                            String[] arrVals = (String[]) lstAsg.toArray(new String[1]);
-
-                            arrVals[0] = replaceNull(arrVals[0]);
-
-                            for (int j = 0; j < arrVals.length; j++) {
-                                arrVals[j] = Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(arrVals[j])));
-
-                            }
-
-                            if (arrVals != null)
-                                rec.put(EVCombinedRec.AUTHOR_AFFILIATION, arrVals);
-                        }
-                        else {
-                            rec.put(EVCombinedRec.AUTHOR_AFFILIATION, convert2Array(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("asg"))))));
-                        }
-                    }
-
-                    if (rs.getString("fd") != null)
-                        rec.put(EVCombinedRec.PATENT_FILING_DATE, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(formatDate(rs.getString("fd"))))));
-
-                    if (rs.getString("py") != null)
-                        rec.put(EVCombinedRec.PUB_YEAR, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("py")))));
-
-                    if (rs.getString("pd") != null) {
-
-                        rec.put(EVCombinedRec.PATENTISSUEDATE, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(formatDate(rs.getString("pd"))))));
-
-                        boolean isApp = isApplication(kindCode);
-
-                        if (isApp) {
-                            rec.put(EVCombinedRec.PATENTAPPDATE, formatDate(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("pd"))))));
-                        }
-                    }
-
-                    //String appCtry = Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("aic"))));
-
-
-                    /*
-                    if (appCtry != null)
-                        rec.put(EVCombinedRec.APPLICATION_COUNTRY, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(appCtry))));
-                    */
-                    String app_country = null;
-
-                    if(rs.getString("aic") != null)
-                    {
-                        app_country = rs.getString("aic");
-
-                        List app_countryList = new ArrayList();
-
-                        String[] values = null;
-                        values = app_country.split(AUDELIMITER);
-                        for(int x = 0 ; x < values.length; x++)
-                        {
-                            app_countryList.add(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(values[x]))));
-                        }
-
-                        if(!app_countryList.isEmpty())
-                        {
-                            rec.putIfNotNull(EVCombinedRec.APPLICATION_COUNTRY, (String[]) app_countryList.toArray(new String[]{}));
-                        }
-                    }
-
-
-
-                    if (rs.getString("ain") != null) {
-                        List pubNums = formatPN(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ain")))), app_country);
-
-                        List lstAppNums = new ArrayList();
-
-                        if (rs.getString("dan") != null) {
-                            lstAppNums.add(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("dan")))));
-                        }
-                        if (rs.getString("dun") != null) {
-                            lstAppNums.add(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("dun")))));
-                        }
-
-                        lstAppNums.addAll(pubNums);
-
-                        String arrAppNums[] = null;
-
-                        arrAppNums = (String[]) lstAppNums.toArray(new String[1]);
-                        arrAppNums[0] = replaceNull(arrAppNums[0]);
-
-                        rec.put(EVCombinedRec.APPLICATION_NUMBER, arrAppNums);
-                    }
-                    else {
-
-                        List lstAppNums = new ArrayList();
-
-                        if (rs.getString("dan") != null) {
-                            lstAppNums.add(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("dan")))));
-                        }
-                        if (rs.getString("dun") != null) {
-                            lstAppNums.add(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("dun")))));
-                        }
-
-                        String arrAppNums[] = null;
-
-                        arrAppNums = (String[]) lstAppNums.toArray(new String[1]);
-                        arrAppNums[0] = replaceNull(arrAppNums[0]);
-
-                        rec.put(EVCombinedRec.APPLICATION_NUMBER, arrAppNums);
-                    }
-
-                    if (rs.getString("aid") != null)
-                        rec.put(EVCombinedRec.PATENTAPPDATE, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(formatDate(rs.getString("aid"))))));
-                    else {
-
-                        boolean isApp = isApplication(kindCode);
-
-                        if (rs.getString("xpb_dt") != null) {
-                            if (!isApp) {
-                                rec.put(EVCombinedRec.PATENTAPPDATE, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(formatDate(rs.getString("xpb_dt"))))));
-                            }
-                        }
-                    }
-
-                    if (rs.getString("pi") != null) {
-                        rec.put(EVCombinedRec.PRIORITY_NUMBER, getPriorityNumber(replaceNull(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("pi")))))));
-                        rec.put(EVCombinedRec.PRIORITY_DATE, getPriorityDate(replaceNull(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("pi")))))));
-                        rec.put(EVCombinedRec.PRIORITY_KIND, getPriorityKind(replaceNull(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("pi")))))));
-                        rec.put(EVCombinedRec.PRIORITY_COUNTRY, getPriorityCountry(replaceNull(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("pi")))))));
-                    }
-
-                    rec.put(EVCombinedRec.DEDUPKEY, getDedupKey());
-
-                    if (rs.getString("aty") != null) {
-                        String atys[] = convert2Array(rs.getString("aty"));
-
-                        atys[0] = replaceNull(atys[0]);
-
-                        for (int j = 0; j < atys.length; j++) {
-                            atys[j] = formatAuthor(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(atys[j]))));
-                        }
-
-                        rec.put(EVCombinedRec.ATTORNEY_NAME, atys);
-                    }
-                    if (rs.getString("pe") != null) {
-
-                        String pes[] = convert2Array(rs.getString("pe"));
-
-                        pes[0] = replaceNull(pes[0]);
-
-                        for (int j = 0; j < pes.length; j++) {
-                            pes[j] = formatAuthor(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(pes[j]))));
-                        }
-
-                        rec.put(EVCombinedRec.PRIMARY_EXAMINER, pes);
-                    }
-                    if (rs.getString("ae") != null) {
-
-                        String aes[] = convert2Array(rs.getString("ae"));
-
-                        aes[0] = replaceNull(aes[0]);
-
-                        for (int j = 0; j < aes.length; j++) {
-                            aes[j] = formatAuthor(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(aes[j]))));
-                        }
-
-                        rec.put(EVCombinedRec.ASSISTANT_EXAMINER, aes);
-                    }
-                   
-                    if (authCode.equalsIgnoreCase("us"))
-                        rec.put(EVCombinedRec.DATABASE, "upa");
-                    else if(authCode.equalsIgnoreCase("wo"))
-                    	rec.put(EVCombinedRec.DATABASE, "wop");
-                    else
-                        rec.put(EVCombinedRec.DATABASE, "eup");
-
-                    if (rs.getString("ds") != null)
-                        rec.put(EVCombinedRec.DESIGNATED_STATES, removeDupDS(convert2Array(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ds")))))));
-
-                    List lstEclaCodes = new ArrayList();
-                    List lstFecCodes = new ArrayList();
-
-                    if (rs.getString("ecl") != null)
-                        lstEclaCodes = convertString2List(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ecl")))));
-
-                    if (rs.getString("fec") != null)
-                        lstFecCodes = convertString2List(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("fec")))));
-
-                    lstEclaCodes.addAll(lstFecCodes);
-
-                    String eclaVals[] = (String[]) lstEclaCodes.toArray(new String[1]);
-
-                    eclaVals = eclaNormalize(eclaVals);
-
-                    rec.put(EVCombinedRec.ECLA_CODES, removeSpaces(eclaVals));
-
-                    if (rs.getString("ecc") != null)
-                        rec.put(EVCombinedRec.ECLA_CLASSES, removeSpaces(convert2Array(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ecc")))))));
-
-                    if (rs.getString("esc") != null)
-                        rec.put(EVCombinedRec.ECLA_SUB_CLASSES, removeSpaces(convert2Array(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("esc")))))));
-
-                    List arrIpcCodes = new ArrayList();
-                    List arrFicCodes = new ArrayList();
-                    List arrIpc8Codes = new ArrayList();
-
-                    if (rs.getString("ipc8") != null) {
-
-                        StringBuffer sbrIPC8 = new StringBuffer(rs.getString("ipc8"));
-
-                        if (rs.getString("ipc8_2") != null) {
-                           sbrIPC8.append(rs.getString("ipc8_2"));
-                        }
-
-                        arrIpc8Codes = IPC8Classification.build(sbrIPC8.toString());
-                        arrIpc8Codes = normalizeIpc8Codes(arrIpc8Codes);
-                    }
-                    else
-                    {
-
-                        if (rs.getString("ipc") != null) {
-                            arrIpcCodes = convertString2List(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ipc")))));
-                            String subs[] = convert2Array(rs.getString("isc"));
-                            arrIpcCodes = normalizeIpcCodes(arrIpcCodes, subs);
-                        }
-
-                        if (rs.getString("fic") != null) {
-                            arrFicCodes = convertString2List(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("fic")))));
-                            String subs[] = convert2Array(rs.getString("isc"));
-                            arrFicCodes = normalizeIpcCodes(arrFicCodes, subs);
-                        }
-                    }
-                    arrIpcCodes.addAll(arrIpc8Codes);
-                    arrIpcCodes.addAll(arrFicCodes);
-
-                    String[] ipcValues = (String[]) arrIpcCodes.toArray(new String[1]);
-
-                    ipcValues[0] = replaceNull(ipcValues[0]);
-
-                    rec.put(EVCombinedRec.INT_PATENT_CLASSIFICATION, removeSpaces(ipcValues));
-
-                    if (rs.getString("icc") != null)
-                        rec.put(EVCombinedRec.INT_PATENT_CLASSES, removeSpaces(convert2Array(replaceNull(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("icc"))))))));
-
-                    if (rs.getString("isc") != null)
-                        rec.put(EVCombinedRec.INT_PATENT_SUB_CLASSES, removeSpaces(convert2Array(replaceNull(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("isc"))))))));
-
-                    List lstUspToCodes = new ArrayList();
-                    List lstUspToClassCodes = new ArrayList();
-                    List lstUspToSubCodes = new ArrayList();
-
-                    if (rs.getString("ucl") != null)
-                        lstUspToCodes = normalizeUSCodes(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ucl")))));
-
-                    if (rs.getString("ucc") != null)
-                        lstUspToClassCodes = normalizeUSClass(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ucc")))));
-
-                    if (rs.getString("usc") != null)
-                        lstUspToSubCodes = convertString2List(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("usc")))));
-
-                    String usptoCodes[] = (String[]) lstUspToCodes.toArray(new String[1]);
-                    String usptoClassCodes[] = (String[]) lstUspToClassCodes.toArray(new String[1]);
-                    String usptoSubCodes[] = (String[]) lstUspToSubCodes.toArray(new String[1]);
-
-                    usptoCodes[0] = replaceNull(usptoCodes[0]);
-                    usptoClassCodes[0] = replaceNull(usptoClassCodes[0]);
-                    usptoSubCodes[0] = replaceNull(usptoSubCodes[0]);
-
-                    rec.put(EVCombinedRec.USPTOCODE, removeSpaces(usptoCodes));
-                    rec.put(EVCombinedRec.USPTOCLASS, removeSpaces(usptoClassCodes));
-                    rec.put(EVCombinedRec.USPTOSUBCLASS, removeSpaces(usptoSubCodes));
-
-                    if (rs.getString("load_number") != null)
-                        rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("load_number"));
-
-                    if (rs.getString("dt") != null && rs.getString("kc") !=null)
-                        rec.put(EVCombinedRec.DOCTYPE, formatDocType(rs.getString("dt"),rs.getString("kc")));
-
-                    if (rs.getString("la") != null)
-                        rec.put(EVCombinedRec.LANGUAGE, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("la")))));
-
-                    if (rs.getString("cit_cnt") != null)
-                        rec.put(EVCombinedRec.PCITED, rs.getString("cit_cnt"));
-
-                    if (rs.getString("inv_ctry") != null) {
-                        rec.put(EVCombinedRec.COUNTRY, getCountry(convert2Array(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("inv_ctry")))))));
-                    }
-                    else {
-                        if (rs.getString("asg_ctry") != null) {
-                            rec.put(EVCombinedRec.COUNTRY, getCountry(convert2Array(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("asg_ctry")))))));
-
-                        }
-                    }
-
-                    List titles = new ArrayList();
-
-                    if (rs.getString("fre_ti") != null)
-                        titles.add(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("fre_ti")))));
-                    if (rs.getString("ger_ti") != null)
-                        titles.add(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ger_ti")))));
-                    if (rs.getString("ltn_ti") != null)
-                        titles.add(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ltn_ti")))));
-
-                    String[] tiVals = (String[]) titles.toArray(new String[1]);
-
-                    tiVals[0] = replaceNull(tiVals[0]);
-
-                    rec.put(EVCombinedRec.TRANSLATED_TITLE, tiVals);
-
-                    String[] patentIds = getReferences(con, mid);
-
-                    rec.put(EVCombinedRec.PCITEDINDEX, patentIds);
-
-
-                    List usclNames = new ArrayList();
-                    List eclaNames = new ArrayList();
-                    List ipcNames = new ArrayList();
-
-                    hashtable.clear();
-
-                    if (rs.getString("ucl") != null)
-                        usclNames = getUSCLClassName(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ucl")))));
-
-                    if (rs.getString("ecl") != null)
-                        eclaNames = getECLAClassName(removeSpaces(eclaVals));
-
-                    if (rs.getString("ipc") != null || rs.getString("ipc8") != null)
-                        ipcNames = getIPCClassName(removeSpaces(ipcValues));
-
-                    List allNames = new ArrayList();
-
-                    if(!hashtable.isEmpty()){
-                        Enumeration e = hashtable.elements();
-                         while( e.hasMoreElements() ){
-                             allNames.add(e.nextElement());
-                         }
-                    }
-
-                    //List arrCpcCodes = new ArrayList();
-                    String[] cpcValues = null;
-                    if (rs.getString("CLASSIFICATION_CPC") != null) {
-
-                        String sbrCPC = rs.getString("CLASSIFICATION_CPC");
-                        cpcValues = sbrCPC.split(Constants.IDDELIMITER);
-                        //arrCpcCodes = IPC8Classification.build(sbrCPC);
-                        //arrCpcCodes = normalizeIpc8Codes(arrCpcCodes);
-                    }
-                   
-                    //arrCpcCodes.addAll(arrCpcCodes);
-                   
-                    //String[] cpcValues = (String[]) arrCpcCodes.toArray(new String[1]);
-                    //System.out.println("CPC1="+cpcValues[0]);
-                    //cpcValues[0] = replaceNull(cpcValues[0]);
-                    if(cpcValues!=null)
-                    {
-                    	rec.put(EVCombinedRec.CPCCLASS, removeSpaces(cpcValues));
-                    }
-                    //System.out.println("SIZE="+cpcValues.length);
-                    String arrNames[] = null;
-
-                    arrNames = (String[]) allNames.toArray(new String[1]);
-                    arrNames[0] = replaceNull(arrNames[0]);
-
-                    rec.put(EVCombinedRec.NOTES, arrNames);
-                    //System.out.println("NOTES="+arrNames[0]);
-
-                    writer.writeRec(rec);
-
-                }
+            	try {
+	                ++i;
+	
+	                mid = rs.getString("m_id");
+	
+	                EVCombinedRec rec = new EVCombinedRec();
+	
+	                /*
+	                if (Combiner.EXITNUMBER != 0 && i > Combiner.EXITNUMBER) {
+	                    break;
+	                }
+	                */
+	                if (validYear(rs.getString("py"))) {
+	
+	                    if (rs.getClob("ab") != null) {
+	
+	                        String abs = getStringFromClob(rs.getClob("ab"));
+	
+	                        if (!abs.equalsIgnoreCase("QQ")) {
+	                            rec.put(EVCombinedRec.ABSTRACT, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(abs))));
+	                        }
+	                    }
+	
+	                    if (rs.getClob("oab") != null) {
+	
+	                        String oab = getStringFromClob(rs.getClob("oab"));
+	
+	                        if (!oab.equalsIgnoreCase("QQ")) {
+	                            rec.put(EVCombinedRec.OTHER_ABSTRACT, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(oab))));
+	                        }
+	                    }
+	
+	                    if (rs.getString("m_id") != null)
+	                        rec.put(EVCombinedRec.DOCID, rs.getString("m_id"));
+	
+	                    if (rs.getString("seq_num") != null)
+	                        rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
+	
+	                    String patentNumber = Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("pn"))));
+	
+	                    String kindCode = Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("kc"))));
+	
+	                    String authCode = Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ac"))));
+	
+	                    if (authCode != null)
+	                        rec.put(EVCombinedRec.AUTHORITY_CODE, authCode);
+	
+	                    if (patentNumber != null) {
+	                        rec.put(EVCombinedRec.PATENT_NUMBER, formatPN(patentNumber, kindCode, authCode));
+	                    }
+	
+	                    if (kindCode != null)
+	                        rec.put(EVCombinedRec.PATENT_KIND, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(kindCode))));
+	
+	                    if (rs.getString("kd") != null)
+	                        rec.put(EVCombinedRec.KIND_DESCR, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("kd")))));
+	
+	                    if (rs.getString("ti") != null)
+	                        rec.put(EVCombinedRec.TITLE, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ti")))));
+	
+	                    if (rs.getString("inv") != null) {
+	
+	                        if (rs.getString("asg") != null) {
+	
+	                            List lstAsg = convertString2List(rs.getString("asg"));
+	                            List lstInv = convertString2List(rs.getString("inv"));
+	
+	                            if (authCode.equals(EP_CY) && lstInv.size() > 0 && lstAsg.size() > 0) {
+	                                lstInv = AssigneeFilter.filterInventors(lstAsg, lstInv, false);
+	                            }
+	
+	                            String[] arrVals = (String[]) lstInv.toArray(new String[1]);
+	
+	                            arrVals[0] = replaceNull(arrVals[0]);
+	
+	                            for (int j = 0; j < arrVals.length; j++) {
+	                                arrVals[j] = formatAuthor(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(arrVals[j]))));
+	                            }
+	
+	                            if (arrVals != null)
+	                                rec.put(EVCombinedRec.AUTHOR, arrVals);
+	
+	                        }
+	                        else {
+	
+	                            rec.put(EVCombinedRec.AUTHOR, convert2Array(formatAuthor(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("inv")))))));
+	                        }
+	                    }
+	
+	                    if (rs.getString("asg") != null) {
+	
+	                        if (rs.getString("inv") != null) {
+	
+	                            List lstAsg = convertString2List(rs.getString("asg"));
+	                            List lstInv = convertString2List(rs.getString("inv"));
+	
+	                            if (authCode.equals(US_CY) && lstInv.size() > 0 && lstAsg.size() > 0) {
+	                                lstAsg = AssigneeFilter.filterInventors(lstInv, lstAsg, true);
+	                            }
+	
+	                            String[] arrVals = (String[]) lstAsg.toArray(new String[1]);
+	
+	                            arrVals[0] = replaceNull(arrVals[0]);
+	
+	                            for (int j = 0; j < arrVals.length; j++) {
+	                                arrVals[j] = Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(arrVals[j])));
+	
+	                            }
+	
+	                            if (arrVals != null)
+	                                rec.put(EVCombinedRec.AUTHOR_AFFILIATION, arrVals);
+	                        }
+	                        else {
+	                            rec.put(EVCombinedRec.AUTHOR_AFFILIATION, convert2Array(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("asg"))))));
+	                        }
+	                    }
+	
+	                    if (rs.getString("fd") != null)
+	                        rec.put(EVCombinedRec.PATENT_FILING_DATE, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(formatDate(rs.getString("fd"))))));
+	
+	                    if (rs.getString("py") != null)
+	                        rec.put(EVCombinedRec.PUB_YEAR, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("py")))));
+	
+	                    if (rs.getString("pd") != null) {
+	
+	                        rec.put(EVCombinedRec.PATENTISSUEDATE, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(formatDate(rs.getString("pd"))))));
+	
+	                        boolean isApp = isApplication(kindCode);
+	
+	                        if (isApp) {
+	                            rec.put(EVCombinedRec.PATENTAPPDATE, formatDate(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("pd"))))));
+	                        }
+	                    }
+	
+	                    //String appCtry = Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("aic"))));
+	
+	
+	                    /*
+	                    if (appCtry != null)
+	                        rec.put(EVCombinedRec.APPLICATION_COUNTRY, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(appCtry))));
+	                    */
+	                    String app_country = null;
+	
+	                    if(rs.getString("aic") != null)
+	                    {
+	                        app_country = rs.getString("aic");
+	
+	                        List app_countryList = new ArrayList();
+	
+	                        String[] values = null;
+	                        values = app_country.split(AUDELIMITER);
+	                        for(int x = 0 ; x < values.length; x++)
+	                        {
+	                            app_countryList.add(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(values[x]))));
+	                        }
+	
+	                        if(!app_countryList.isEmpty())
+	                        {
+	                            rec.putIfNotNull(EVCombinedRec.APPLICATION_COUNTRY, (String[]) app_countryList.toArray(new String[]{}));
+	                        }
+	                    }
+	
+	
+	
+	                    if (rs.getString("ain") != null) {
+	                        List pubNums = formatPN(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ain")))), app_country);
+	
+	                        List lstAppNums = new ArrayList();
+	
+	                        if (rs.getString("dan") != null) {
+	                            lstAppNums.add(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("dan")))));
+	                        }
+	                        if (rs.getString("dun") != null) {
+	                            lstAppNums.add(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("dun")))));
+	                        }
+	
+	                        lstAppNums.addAll(pubNums);
+	
+	                        String arrAppNums[] = null;
+	
+	                        arrAppNums = (String[]) lstAppNums.toArray(new String[1]);
+	                        arrAppNums[0] = replaceNull(arrAppNums[0]);
+	
+	                        rec.put(EVCombinedRec.APPLICATION_NUMBER, arrAppNums);
+	                    }
+	                    else {
+	
+	                        List lstAppNums = new ArrayList();
+	
+	                        if (rs.getString("dan") != null) {
+	                            lstAppNums.add(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("dan")))));
+	                        }
+	                        if (rs.getString("dun") != null) {
+	                            lstAppNums.add(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("dun")))));
+	                        }
+	
+	                        String arrAppNums[] = null;
+	
+	                        arrAppNums = (String[]) lstAppNums.toArray(new String[1]);
+	                        arrAppNums[0] = replaceNull(arrAppNums[0]);
+	
+	                        rec.put(EVCombinedRec.APPLICATION_NUMBER, arrAppNums);
+	                    }
+	
+	                    if (rs.getString("aid") != null)
+	                        rec.put(EVCombinedRec.PATENTAPPDATE, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(formatDate(rs.getString("aid"))))));
+	                    else {
+	
+	                        boolean isApp = isApplication(kindCode);
+	
+	                        if (rs.getString("xpb_dt") != null) {
+	                            if (!isApp) {
+	                                rec.put(EVCombinedRec.PATENTAPPDATE, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(formatDate(rs.getString("xpb_dt"))))));
+	                            }
+	                        }
+	                    }
+	
+	                    if (rs.getString("pi") != null) {
+	                        rec.put(EVCombinedRec.PRIORITY_NUMBER, getPriorityNumber(replaceNull(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("pi")))))));
+	                        rec.put(EVCombinedRec.PRIORITY_DATE, getPriorityDate(replaceNull(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("pi")))))));
+	                        rec.put(EVCombinedRec.PRIORITY_KIND, getPriorityKind(replaceNull(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("pi")))))));
+	                        rec.put(EVCombinedRec.PRIORITY_COUNTRY, getPriorityCountry(replaceNull(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("pi")))))));
+	                    }
+	
+	                    rec.put(EVCombinedRec.DEDUPKEY, getDedupKey());
+	
+	                    if (rs.getString("aty") != null) {
+	                        String atys[] = convert2Array(rs.getString("aty"));
+	
+	                        atys[0] = replaceNull(atys[0]);
+	
+	                        for (int j = 0; j < atys.length; j++) {
+	                            atys[j] = formatAuthor(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(atys[j]))));
+	                        }
+	
+	                        rec.put(EVCombinedRec.ATTORNEY_NAME, atys);
+	                    }
+	                    if (rs.getString("pe") != null) {
+	
+	                        String pes[] = convert2Array(rs.getString("pe"));
+	
+	                        pes[0] = replaceNull(pes[0]);
+	
+	                        for (int j = 0; j < pes.length; j++) {
+	                            pes[j] = formatAuthor(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(pes[j]))));
+	                        }
+	
+	                        rec.put(EVCombinedRec.PRIMARY_EXAMINER, pes);
+	                    }
+	                    if (rs.getString("ae") != null) {
+	
+	                        String aes[] = convert2Array(rs.getString("ae"));
+	
+	                        aes[0] = replaceNull(aes[0]);
+	
+	                        for (int j = 0; j < aes.length; j++) {
+	                            aes[j] = formatAuthor(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(aes[j]))));
+	                        }
+	
+	                        rec.put(EVCombinedRec.ASSISTANT_EXAMINER, aes);
+	                    }
+	                   
+	                    if (authCode.equalsIgnoreCase("us"))
+	                        rec.put(EVCombinedRec.DATABASE, "upa");
+	                    else if(authCode.equalsIgnoreCase("wo"))
+	                    	rec.put(EVCombinedRec.DATABASE, "wop");
+	                    else if(authCode.equalsIgnoreCase("ep"))
+	                    	rec.put(EVCombinedRec.DATABASE, "eup");
+	                    else
+	                        rec.put(EVCombinedRec.DATABASE, authCode+"p");
+	
+	                    if (rs.getString("ds") != null)
+	                        rec.put(EVCombinedRec.DESIGNATED_STATES, removeDupDS(convert2Array(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ds")))))));
+	
+	                    List lstEclaCodes = new ArrayList();
+	                    List lstFecCodes = new ArrayList();
+	
+	                    if (rs.getString("ecl") != null)
+	                        lstEclaCodes = convertString2List(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ecl")))));
+	
+	                    if (rs.getString("fec") != null)
+	                        lstFecCodes = convertString2List(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("fec")))));
+	
+	                    lstEclaCodes.addAll(lstFecCodes);
+	
+	                    String eclaVals[] = (String[]) lstEclaCodes.toArray(new String[1]);
+	
+	                    eclaVals = eclaNormalize(eclaVals);
+	
+	                    rec.put(EVCombinedRec.ECLA_CODES, removeSpaces(eclaVals));
+	
+	                    if (rs.getString("ecc") != null)
+	                        rec.put(EVCombinedRec.ECLA_CLASSES, removeSpaces(convert2Array(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ecc")))))));
+	
+	                    if (rs.getString("esc") != null)
+	                        rec.put(EVCombinedRec.ECLA_SUB_CLASSES, removeSpaces(convert2Array(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("esc")))))));
+	
+	                    List arrIpcCodes = new ArrayList();
+	                    List arrFicCodes = new ArrayList();
+	                    List arrIpc8Codes = new ArrayList();
+	
+	                    if (rs.getString("ipc8") != null) {
+	
+	                        StringBuffer sbrIPC8 = new StringBuffer(rs.getString("ipc8"));
+	
+	                        if (rs.getString("ipc8_2") != null) {
+	                           sbrIPC8.append(rs.getString("ipc8_2"));
+	                        }
+	
+	                        arrIpc8Codes = IPC8Classification.build(sbrIPC8.toString());
+	                        arrIpc8Codes = normalizeIpc8Codes(arrIpc8Codes);
+	                    }
+	                    else
+	                    {
+	
+	                        if (rs.getString("ipc") != null) {
+	                            arrIpcCodes = convertString2List(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ipc")))));
+	                            String subs[] = convert2Array(rs.getString("isc"));
+	                            arrIpcCodes = normalizeIpcCodes(arrIpcCodes, subs);
+	                        }
+	
+	                        if (rs.getString("fic") != null) {
+	                            arrFicCodes = convertString2List(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("fic")))));
+	                            String subs[] = convert2Array(rs.getString("isc"));
+	                            arrFicCodes = normalizeIpcCodes(arrFicCodes, subs);
+	                        }
+	                    }
+	                    arrIpcCodes.addAll(arrIpc8Codes);
+	                    arrIpcCodes.addAll(arrFicCodes);
+	
+	                    String[] ipcValues = (String[]) arrIpcCodes.toArray(new String[1]);
+	
+	                    ipcValues[0] = replaceNull(ipcValues[0]);
+	
+	                    rec.put(EVCombinedRec.INT_PATENT_CLASSIFICATION, removeSpaces(ipcValues));
+	
+	                    if (rs.getString("icc") != null)
+	                        rec.put(EVCombinedRec.INT_PATENT_CLASSES, removeSpaces(convert2Array(replaceNull(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("icc"))))))));
+	
+	                    if (rs.getString("isc") != null)
+	                        rec.put(EVCombinedRec.INT_PATENT_SUB_CLASSES, removeSpaces(convert2Array(replaceNull(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("isc"))))))));
+	
+	                    List lstUspToCodes = new ArrayList();
+	                    List lstUspToClassCodes = new ArrayList();
+	                    List lstUspToSubCodes = new ArrayList();
+	
+	                    if (rs.getString("ucl") != null)
+	                        lstUspToCodes = normalizeUSCodes(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ucl")))));
+	
+	                    if (rs.getString("ucc") != null)
+	                        lstUspToClassCodes = normalizeUSClass(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ucc")))));
+	
+	                    if (rs.getString("usc") != null)
+	                        lstUspToSubCodes = convertString2List(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("usc")))));
+	
+	                    String usptoCodes[] = (String[]) lstUspToCodes.toArray(new String[1]);
+	                    String usptoClassCodes[] = (String[]) lstUspToClassCodes.toArray(new String[1]);
+	                    String usptoSubCodes[] = (String[]) lstUspToSubCodes.toArray(new String[1]);
+	
+	                    usptoCodes[0] = replaceNull(usptoCodes[0]);
+	                    usptoClassCodes[0] = replaceNull(usptoClassCodes[0]);
+	                    usptoSubCodes[0] = replaceNull(usptoSubCodes[0]);
+	
+	                    rec.put(EVCombinedRec.USPTOCODE, removeSpaces(usptoCodes));
+	                    rec.put(EVCombinedRec.USPTOCLASS, removeSpaces(usptoClassCodes));
+	                    rec.put(EVCombinedRec.USPTOSUBCLASS, removeSpaces(usptoSubCodes));
+	
+	                    if (rs.getString("load_number") != null)
+	                        rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("load_number"));
+	
+	                    if (rs.getString("dt") != null && rs.getString("kc") !=null)
+	                        rec.put(EVCombinedRec.DOCTYPE, formatDocType(rs.getString("dt"),rs.getString("kc")));
+	
+	                    if (rs.getString("la") != null)
+	                        rec.put(EVCombinedRec.LANGUAGE, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("la")))));
+	
+	                    if (rs.getString("cit_cnt") != null)
+	                        rec.put(EVCombinedRec.PCITED, rs.getString("cit_cnt"));
+	
+	                    if (rs.getString("inv_ctry") != null) {
+	                        rec.put(EVCombinedRec.COUNTRY, getCountry(convert2Array(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("inv_ctry")))))));
+	                    }
+	                    else {
+	                        if (rs.getString("asg_ctry") != null) {
+	                            rec.put(EVCombinedRec.COUNTRY, getCountry(convert2Array(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("asg_ctry")))))));
+	
+	                        }
+	                    }
+	
+	                    List titles = new ArrayList();
+	
+	                    if (rs.getString("fre_ti") != null)
+	                        titles.add(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("fre_ti")))));
+	                    if (rs.getString("ger_ti") != null)
+	                        titles.add(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ger_ti")))));
+	                    if (rs.getString("ltn_ti") != null)
+	                        titles.add(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ltn_ti")))));
+	
+	                    String[] tiVals = (String[]) titles.toArray(new String[1]);
+	
+	                    tiVals[0] = replaceNull(tiVals[0]);
+	
+	                    rec.put(EVCombinedRec.TRANSLATED_TITLE, tiVals);
+	
+	                    String[] patentIds = getReferences(con, mid);
+	
+	                    rec.put(EVCombinedRec.PCITEDINDEX, patentIds);
+	
+	
+	                    List usclNames = new ArrayList();
+	                    List eclaNames = new ArrayList();
+	                    List ipcNames = new ArrayList();
+	
+	                    hashtable.clear();
+	
+	                    if (rs.getString("ucl") != null)
+	                        usclNames = getUSCLClassName(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ucl")))));
+	
+	                    if (rs.getString("ecl") != null)
+	                        eclaNames = getECLAClassName(removeSpaces(eclaVals));
+	
+	                    if (rs.getString("ipc") != null || rs.getString("ipc8") != null && ipcValues!=null)
+	                        ipcNames = getIPCClassName(removeSpaces(ipcValues));
+	
+	                    List allNames = new ArrayList();
+	
+	                    if(!hashtable.isEmpty()){
+	                        Enumeration e = hashtable.elements();
+	                         while( e.hasMoreElements() ){
+	                             allNames.add(e.nextElement());
+	                         }
+	                    }
+	
+	                    //List arrCpcCodes = new ArrayList();
+	                    String[] cpcValues = null;
+	                    if (rs.getString("CLASSIFICATION_CPC") != null) {
+	
+	                        String sbrCPC = rs.getString("CLASSIFICATION_CPC");
+	                        cpcValues = sbrCPC.split(Constants.IDDELIMITER);
+	                        //arrCpcCodes = IPC8Classification.build(sbrCPC);
+	                        //arrCpcCodes = normalizeIpc8Codes(arrCpcCodes);
+	                    }
+	                   
+	                    //arrCpcCodes.addAll(arrCpcCodes);
+	                   
+	                    //String[] cpcValues = (String[]) arrCpcCodes.toArray(new String[1]);
+	                    //System.out.println("CPC1="+cpcValues[0]);
+	                    //cpcValues[0] = replaceNull(cpcValues[0]);
+	                    if(cpcValues!=null)
+	                    {
+	                    	rec.put(EVCombinedRec.CPCCLASS, removeSpaces(cpcValues));
+	                    }
+	                    //System.out.println("SIZE="+cpcValues.length);
+	                    String arrNames[] = null;
+	
+	                    arrNames = (String[]) allNames.toArray(new String[1]);
+	                    arrNames[0] = replaceNull(arrNames[0]);
+	
+	                    rec.put(EVCombinedRec.NOTES, arrNames);
+	                    //System.out.println("NOTES="+arrNames[0]);
+	
+	                    writer.writeRec(rec);
+	
+	                }
+				}
+				catch (Exception ex) {
+				      System.out.println("MID=" + mid);
+				      ex.printStackTrace();
+				
+				}
             }
         }
-        catch (Exception ex) {
-            System.out.println("MID=" + mid);
+        catch (Exception ex) {            
             ex.printStackTrace();
 
         }
@@ -974,7 +981,7 @@ public class UPTCombiner extends CombinerTimestamp {
 		String s = ipc.get(code);
 		s = Entity.replaceLatinChars(s);
 		// System.out.println("Code="+code+" name= "+s);
-		if (s == null) {
+		if (s == null && code!=null) {
 			s = getDescriptionFromLookupIndex(code);
 		}
 		return s;
@@ -986,6 +993,10 @@ public class UPTCombiner extends CombinerTimestamp {
 	        Statement stmt = null;
 	        ResultSet rset = null;
 	        String description = null;
+	        if(code.indexOf("'")>0)
+	        {
+	        	code = code.replaceAll("'", "");
+	        }
 	        String sql = "select description from CMB_IPC_LOOKUP WHERE replace(ipccode,'SLASH','')='" + code + "'";
 	        int rows = 0;
 
@@ -1487,13 +1498,22 @@ public class UPTCombiner extends CombinerTimestamp {
     }
     public String[] convert2Array(String sVal) {
 
-        List values = new ArrayList();
-
-        perl.split(values, "/" + DELIM + "/", sVal);
-
-        String[] arrVals = (String[]) values.toArray(new String[1]);
-
-        arrVals[0] = replaceNull(arrVals[0]);
+    	String[] arrVals = null;
+    	if(sVal!=null)
+    	{
+	        List values = new ArrayList();
+	
+	        perl.split(values, "/" + DELIM + "/", sVal);
+	
+	        arrVals = (String[]) values.toArray(new String[1]);
+	
+	        arrVals[0] = replaceNull(arrVals[0]);
+    	}
+    	else
+    	{
+    		arrVals = new String[1];
+    		arrVals[0] = "";
+    	}
 
         return arrVals;
     }

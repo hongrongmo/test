@@ -22,6 +22,7 @@ import java.util.function.ToLongFunction;
 import java.util.zip.ZipEntry;
 
 
+
 /*import java.util.zip.ZipFile;*/    //original
 import org.apache.commons.compress.archivers.zip.*;   //HH 08/04/2015 to fix issue of Patent zip file's headers 
 import org.apache.oro.text.perl.Perl5Util;
@@ -42,6 +43,7 @@ public class PatentXmlReader
 	private Perl5Util perl = new Perl5Util();
 	private HashMap dupMap = new HashMap();
 	private InventorComp INVENTORS_COMP = new InventorComp();
+	private int clobSize = 8999990;
 	//public static final char IDDELIMITER = (char)31;
 	//public static final char Constants.GROUPDELIMITER = (char) 30;
 	//public static final char IDDELIMITER = Constants.IDDELIMITER;
@@ -1004,7 +1006,7 @@ public class PatentXmlReader
 
 				if(name.length()>0)
 				{
-					out.print(substituteChars(name.toString()));
+					out.print(trimStringToLength(substituteChars(name.toString()),3900));
 				}
 				out.print(DELIM);
 				//System.out.println("INV="+substituteChars(name.toString()));
@@ -1013,21 +1015,23 @@ public class PatentXmlReader
 				if(address.length()>0)
 				{
 					String addressString = address.toString();
-					if(addressString.length()>3999)
+					//System.out.println("ORIG_INV_ADDR="+substituteChars(addressString));
+					if(addressString.length()>3500)
 					{
-						addressString = addressString.substring(0,addressString.lastIndexOf(Constants.AUDELIMITER,3999));
-						//System.out.println("INV_ADDR Field too long for record "+ac+" "+patentNumber);
-
+						addressString = trimStringToLength(addressString,3500);
+						//addressString = addressString.substring(0,addressString.lastIndexOf(Constants.AUDELIMITER,3990));
+						System.out.println("INV_ADDR Field too long for record "+ac+" "+patentNumber);
+						//System.out.println("INV_ADDR="+substituteChars(addressString));
 					}
 					out.print(substituteChars(addressString));
-					//System.out.println("INV_ADDR="+substituteChars(addressString));
+					
 				}
 				out.print(DELIM);
 
 			// INV_CTRY
 				if(country.length()>0)
-				{
-					out.print(substituteChars(country.toString()));
+				{					
+					out.print(trimStringToLength(substituteChars(country.toString()),3500));
 					//System.out.println("INV_CTRY="+substituteChars(country.toString()));
 				}
 				out.print(DELIM);
@@ -1448,7 +1452,14 @@ public class PatentXmlReader
 			// AB
 			if(singleRecord.get("ABSTRACT_DATA")!=null)
 			{
-				out.print(substituteChars((String)singleRecord.get("ABSTRACT_DATA")));
+				String abString = (String)singleRecord.get("ABSTRACT_DATA");
+				if(abString.length()>clobSize)
+				{
+					System.out.println("Size of abstract of patent number "+patentNumber+" is "+abString.length());
+					abString=trimStringToLength(abString,clobSize);
+					
+				}
+				out.print(substituteChars(abString));
 				//System.out.println("AB="+substituteChars((String)singleRecord.get("ABSTRACT_DATA")));
 			}
 			else
@@ -1676,7 +1687,15 @@ public class PatentXmlReader
 			
 			if(singleRecord.get("CLAIMS")!=null)
 			{
-				out.print(substituteChars((String)singleRecord.get("CLAIMS")));
+				String claimString = (String)singleRecord.get("CLAIMS");
+				if(claimString.length()>clobSize)
+				{
+					System.out.println("Size of claim of patent number "+patentNumber+" is "+claimString.length());
+					claimString=trimStringToLength(claimString,clobSize);
+					
+				}
+				out.print(substituteChars(claimString));
+				//out.print(substituteChars((String)singleRecord.get("CLAIMS")));
 				//System.out.println("CLAIMS= "+substituteChars((String)singleRecord.get("CLAIMS")));
 			}
 			
@@ -1686,8 +1705,16 @@ public class PatentXmlReader
 			
 			if(singleRecord.get("DRAWINGS")!=null)
 			{
-				String drawing = (String)singleRecord.get("DRAWINGS");				
-				out.print(drawing);
+				String drawing = (String)singleRecord.get("DRAWINGS");	
+				
+				if(drawing.length()>clobSize)
+				{
+					System.out.println("Size of drawing of patent number "+patentNumber+" is "+drawing.length());
+					drawing=trimStringToLength(drawing,clobSize);
+					
+				}
+				out.print(substituteChars(drawing));
+				//out.print(drawing);
 				
 				//System.out.println("DRAWINGS= "+(String)singleRecord.get("DRAWINGS"));
 			}
@@ -1708,7 +1735,16 @@ public class PatentXmlReader
 			
 			if(singleRecord.get("DESCRIPTION")!=null)
 			{
-				out.print(substituteChars((String)singleRecord.get("DESCRIPTION")));
+				String description = (String)singleRecord.get("DESCRIPTION");	
+				
+				if(description.length()>clobSize)
+				{
+					System.out.println("Size of description of patent number "+patentNumber+" is "+description.length());
+					description=trimStringToLength(description,clobSize);
+					
+				}
+				out.print(substituteChars(description));
+				//out.print(substituteChars((String)singleRecord.get("DESCRIPTION")));
 				//System.out.println("DESCRIPTION= "+substituteChars((String)singleRecord.get("DESCRIPTION")));
 			}
 						
@@ -1733,6 +1769,18 @@ public class PatentXmlReader
 			System.out.println("zip file name is "+filename);
 			e.printStackTrace();
 		}
+	}
+	
+	private String trimStringToLength(String inputString,int StringSize)
+	{		
+		if(inputString!=null && inputString.length()>StringSize)
+		{
+			inputString = inputString.substring(0,StringSize);
+			inputString = inputString.substring(0,inputString.lastIndexOf(" "));
+		}
+		
+		
+		return inputString;
 	}
 
 	class InventorComp implements Comparator
@@ -1897,8 +1945,8 @@ public class PatentXmlReader
 						
 						//String old_cit_pn = cit_pn;
 						if(cit_pn != null)
-						{
-							cit_pn = pnNormalization(cit_pn,cit_ki);
+						{													
+							cit_pn = pnNormalization(cit_pn,cit_ki);							
 							out.print(cit_pn);
 						}
 						//if(!old_cit_pn.equals(cit_pn))
@@ -2206,7 +2254,12 @@ public class PatentXmlReader
 							record.put("PR_DOCID_COUNTRY",pr_country);
 
 							String pr_doc_number = pr_document_id.getChildTextTrim("doc-number"); //OK
-							pr_doc_number = pnNormalization(pr_doc_number, kind);
+							
+							//keep the leading zero for WO database @11/7/2018
+							if(!pr_country.equalsIgnoreCase("WO"))
+							{
+								pr_doc_number = pnNormalization(pr_doc_number, kind);
+							}
 							//System.out.println("pr_doc-number= "+pr_doc_number);
 							patentNumber = pr_doc_number;
 							record.put("PR_DOCID_DOC_NUMBER",pr_doc_number);

@@ -771,6 +771,7 @@ public class INSCorrection
                 pstmt = con.prepareCall("{ call UPDATE_INS_CITATION_TABLE(?)}");
                 pstmt.setInt(1,updateNumber);
                 pstmt.executeUpdate();
+                
             }
             else if(action != null && action.equalsIgnoreCase("ins"))
             {
