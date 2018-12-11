@@ -410,9 +410,11 @@ public class VTWAssetAPI {
 
 				if(responseCode ==200)
 				{
-					if(patentId.substring(0, 2).equalsIgnoreCase("wo"))
+					
+					//HH Monday 11/26/2018 commented out WO forward separation bc WO forward is now released and need to combined with US & EUP weekly process
+					/*if(patentId.substring(0, 2).equalsIgnoreCase("wo"))
 						out = new FileOutputStream(new File(wo_downloadDir + "/" + patentId + ".xml"));
-					else
+					else*/
 						out = new FileOutputStream(new File(downloadDir + "/" + patentId + ".xml"));
 
 					/**
