@@ -413,6 +413,7 @@ public class PatentXmlReader
 		Element patentRoot = doc.getRootElement();
 		this.bibliographic_data = patentRoot.getChild("bibliographic-data");
 		this.abstractData = patentRoot.getChild("abstract");
+		
 		output_record = getRecord(patentRoot);
 		patentNumber = (String)output_record.get("PR_DOCID_DOC_NUMBER");
 		//System.out.println("Patent Number:"+ patentNumber);
@@ -430,6 +431,26 @@ public class PatentXmlReader
 			outputPatentRef(output_record,updatePatentsRefOut);
 			outputNonPatentRef(output_record,updateNonPatentsRefOut);
 		}
+	}
+	
+	private String getAbstract(List abstractGroup)
+	{
+		StringBuffer abstractBuffer = new StringBuffer();
+		
+		for(int j=0;j<abstractGroup.size();j++)
+		{
+			Element abstractData = (Element)abstractGroup.get(j);
+			if(abstractData != null)
+			{
+				abstractBuffer.append(abstractData.getTextTrim());
+			}
+			
+			if(j>0)
+			{
+				
+			}
+		}
+		return abstractBuffer.toString();
 	}
 
 	private boolean enoughData(HashMap singleRecord)
@@ -2159,36 +2180,79 @@ public class PatentXmlReader
 
 				//	abstract Group Elements
 
-
-				Element abstractData  = rec.getChild("abstract");
-				
-
-				if(abstractData !=null)
+				if(rec.getChild("abstract")!=null)
 				{
-					// abstract data
-
-					if(abstractData.getAttributeValue("lang") != null)
+					List abstractGroup = rec.getChildren("abstract");
+					for(int j=0;j<abstractGroup.size();j++)
 					{
-						//System.out.println("ABSTRACT_LANG "+abstractData.getAttributeValue("lang"));
-						record.put("ABSTRACT_LANG", abstractData.getAttributeValue("lang"));
-					}
+						Element abstractData = (Element)abstractGroup.get(j);										
 
-					if(abstractData.getAttributeValue("format") != null)
-					{
-						//System.out.println("ABSTRACT_FORMAT "+abstractData.getAttributeValue("format"));
-						record.put("ABSTRACT_FORMAT", abstractData.getAttributeValue("format"));
-					}
-
-					if(abstractData.getAttributeValue("id") != null)
-					{
-						//System.out.println("ABSTRACT_ID "+abstractData.getAttributeValue("id"));
-						record.put("ABSTRACT_ID", abstractData.getAttributeValue("id"));
-					}
-
-					if(abstractData.getChildTextTrim("p") != null)
-					{
-						StringBuffer abstractBuf = getMixData(abstractData.getContent(),new StringBuffer());
-						record.put("ABSTRACT_DATA", abstractBuf.toString().trim());
+						if(abstractData !=null)
+						{
+							// abstract data
+		
+							if(abstractData.getAttributeValue("lang") != null)
+							{
+								//System.out.println("ABSTRACT_LANG "+abstractData.getAttributeValue("lang"));
+								String abstractLang = "";
+								if(record.get("ABSTRACT_LANG")!=null)
+								{
+									abstractLang=record.get("ABSTRACT_LANG")+","+abstractData.getAttributeValue("lang");
+								}
+								else
+								{
+									abstractLang=abstractData.getAttributeValue("lang");
+								}
+								record.put("ABSTRACT_LANG", abstractLang);
+							}
+		
+							if(abstractData.getAttributeValue("format") != null)
+							{
+								//System.out.println("ABSTRACT_FORMAT "+abstractData.getAttributeValue("format"));
+								String abstractFormat = "";
+								if(record.get("ABSTRACT_FORMAT")!=null)
+								{
+									abstractFormat=record.get("ABSTRACT_FORMAT")+","+abstractData.getAttributeValue("format");
+								}
+								else
+								{
+									abstractFormat=abstractData.getAttributeValue("format");
+								}
+								record.put("ABSTRACT_FORMAT", abstractFormat);
+							}
+		
+							if(abstractData.getAttributeValue("id") != null)
+							{
+								//System.out.println("ABSTRACT_ID "+abstractData.getAttributeValue("id"));
+								String abstractId = "";
+								if(record.get("ABSTRACT_ID")!=null)
+								{
+									abstractId=record.get("ABSTRACT_ID")+","+abstractData.getAttributeValue("id");
+								}
+								else
+								{
+									abstractId=abstractData.getAttributeValue("id");
+								}
+								record.put("ABSTRACT_ID", abstractId);
+							}
+		
+							if(abstractData.getChildTextTrim("p") != null)
+							{
+								StringBuffer abstractBuf = getMixData(abstractData.getContent(),new StringBuffer());
+								String abstractString = abstractBuf.toString().trim();
+								if(record.get("ABSTRACT_DATA")!=null)
+								{
+									abstractString=record.get("ABSTRACT_DATA")+abstractString;
+								}
+								/*
+								if(j>0)
+								{
+									System.out.println(record.get("MID")+" 2nd ABSTRACTDATA="+abstractString);
+								}
+								*/
+								record.put("ABSTRACT_DATA", abstractString);
+							}
+						}
 					}
 				}
 				
