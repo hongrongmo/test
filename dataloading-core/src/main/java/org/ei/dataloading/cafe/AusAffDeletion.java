@@ -275,7 +275,7 @@ public class AusAffDeletion {
 
 				//05/25/2018after discussion with Frank, we modify the logic to only get the inclusive ID list to be deleted without checking diff status
 				query = "select " + lookupTable_columnName + " from " + lookupTable+ " where " + lookupTable_columnName + " in (select " + 
-						lookupTable_columnName + " from " + lookupTable + " where pui in (select pui from " + deletionTable + ")) " +
+						lookupTable_columnName + " from " + lookupTable + " where pui in (select pui from " + deletionTable + " )) " +
 						"minus select " + lookupTable_columnName + " from " + lookupTable + " where " + lookupTable_columnName + " in (select " + 
 						lookupTable_columnName + " from " + lookupTable + " where pui in (select pui from " + deletionTable + ")) and status ='matched'";
 
