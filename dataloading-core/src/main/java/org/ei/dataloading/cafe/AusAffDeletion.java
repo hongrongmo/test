@@ -299,12 +299,12 @@ public class AusAffDeletion {
 			 */
 			else if(source.equalsIgnoreCase("lookup"))
 			{
-				query = "select " + lookupTable_columnName + ",status from " + lookupTable + " where author_id in " + 
+				query = "select " + lookupTable_columnName + ",status from " + lookupTable + " where " + lookupTable_columnName + "  in " + 
 						"(select " + lookupTable_columnName + " from " +
-						"(select author_id,pui from " + lookupTable + " where pui in (select pui from " + deletionTable + ")" +
-						"minus " +
+						"(select " + lookupTable_columnName + " ,pui from " + lookupTable + " where pui in (select pui from " + deletionTable + ")" +
+						" minus " +
 						"select " + lookupTable_columnName + ",pui from " + deletionTable + "))" + 
-						" and pui not in (select pui from " + deletionTable + ") order by author_id";
+						" and pui not in (select pui from " + deletionTable + ") order by " + lookupTable_columnName;
 
 				System.out.println(query);
 				rs = stmt.executeQuery(query);
