@@ -4632,7 +4632,7 @@ public class NewDataTesting
 		String[] dbName = database.split(";");
 		//FastSearchControl.BASE_URL = "http://ei-stage.nda.fastsearch.net:15100";
 		FastSearchControl.BASE_URL = "http://evazure.trafficmanager.net:15100";
-
+		String tableName="hmo_patent_ref_WO_count2";
 		//int intDbMask = databaseConfig.getMask(dbName);
 		int intDbMask = 1;		
 		String searchField="ALL";
@@ -4640,7 +4640,7 @@ public class NewDataTesting
 		try
 		{
 			con = getConnection(this.URL,this.driver,"ap_correction1",this.password);
-			String sqlQuery = "select cit_pn from hmo_patent_ref_WO_count where load_number="+loadnumber;
+			String sqlQuery = "select cit_pn from "+tableName+" where load_number="+loadnumber;
 			stmt = con.createStatement();
 			updateStmt = con.createStatement();
 			System.out.println("QUERY= "+sqlQuery);
@@ -4672,7 +4672,7 @@ public class NewDataTesting
 				
 				if(count > 0)
 				{
-					String updateQuery = "update hmo_patent_ref_WO_count set FAST_CIT_CNT="+count+ "where CIT_PN='"+cit_pn+"'";
+					String updateQuery = "update "+tableName+" set FAST_CIT_CNT="+count+ "where CIT_PN='"+cit_pn+"'";
 					updateStmt.addBatch(updateQuery);
 					if(i==1000)
 					{
