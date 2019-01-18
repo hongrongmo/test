@@ -63,6 +63,7 @@ public class CombinedXMLWriter
     private String database;
     private String pui;
     private String loadnumber;
+    private String accessnumber;
 
     public String getDatabase() {
         return database;
@@ -89,6 +90,14 @@ public class CombinedXMLWriter
     
     public String getPui() {
         return pui;
+    }
+    
+    public void setAccessnumber(String accessnumber) {
+        this.accessnumber = accessnumber;
+    }
+    
+    public String getAccessnumber() {
+        return accessnumber;
     }
 
     public boolean getIsOpen() {
@@ -365,6 +374,7 @@ public class CombinedXMLWriter
 
         setDatabase(rec.getString(EVCombinedRec.DATABASE));
         setPui(rec.getString(EVCombinedRec.PUI));
+        setAccessnumber(rec.getString(EVCombinedRec.ACCESSION_NUMBER));
         setLoadnumber(rec.getString(EVCombinedRec.LOAD_NUMBER));
         this.eid = rec.getString(EVCombinedRec.DOCID);
         begin();
@@ -535,8 +545,9 @@ public class CombinedXMLWriter
         out.println("       <USPTOSUBCLASS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.USPTOSUBCLASS)))) + "]]></USPTOSUBCLASS>");
         out.println("       <USPTOCODE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.USPTOCODE)))) + "]]></USPTOCODE>");
         out.println("       <PATENTKIND><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PATENT_KIND)))) + "]]></PATENTKIND>");
-        out.println("       <KINDDESCRIPTION><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.KIND_DESCR)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.KIND_DESCR))))) + "]]></KINDDESCRIPTION>");
-        out.println("       <AUTHORITYCODE><![CDATA[" + notNull(Entity.prepareString(addIndex(rec.getString(EVCombinedRec.AUTHORITY_CODE),"AUTHORITYCODE"))) + "]]></AUTHORITYCODE>");
+        out.println("       <KINDDESCRIPTION><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.KIND_DESCR)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.KIND_DESCR))))) + "]]></KINDDESCRIPTION>");        
+        //out.println("       <AUTHORITYCODE><![CDATA[" + notNull(Entity.prepareString(addIndex(rec.getString(EVCombinedRec.AUTHORITY_CODE),"AUTHORITYCODE"))) + "]]></AUTHORITYCODE>");
+        out.println("       <AUTHORITYCODE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.AUTHORITY_CODE))) + "]]></AUTHORITYCODE>");
         out.println("       <PCITED><![CDATA[" + hasPcited(rec.getString(EVCombinedRec.PCITED)) + "]]></PCITED>");
         out.println("       <PCITEDINDEX><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PCITEDINDEX)))) + "]]></PCITEDINDEX>");
         out.println("       <PREFINDEX><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PREFINDEX)))) + "]]></PREFINDEX>");
@@ -1189,15 +1200,25 @@ public class CombinedXMLWriter
                
                     if(oo!=null && getDatabase()!=null && getDatabase().length()>=3)
                     {
-                        indexWriter.println(Entity.prepareString(oo).toUpperCase().trim() + "\t" + getDatabase().substring(0,3) + "\t" + aid +"\t" + getPui()+"\t" + getLoadnumber());
+                    	indexWriter.println(Entity.prepareString(oo).toUpperCase().trim() + "\t" + getDatabase().substring(0,3) + "\t" + aid +"\t" + getPui()+"\t" + getLoadnumber());
+                        //use accessnumber to replace pui 11/28/2018
+                    	//indexWriter.println(Entity.prepareString(oo).toUpperCase().trim() + "\t" + getDatabase().substring(0,3) + "\t" + aid +"\t" + getAccessnumber()+"\t" + getLoadnumber());
                     }
                     else
                     {
-                    	System.out.println("*******something wrong with this record "+ oo + "\t" + getDatabase().substring(0,3) + "\t" + aid +"\t" + getPui()+"\t" + getLoadnumber());
+                    	indexWriter.println("" + "\t" + getDatabase().substring(0,3) + "\t" + aid +"\t" + getPui()+"\t" + getLoadnumber());
+                    	//System.out.println("*******something wrong with this record "+ oo + "\t" + getDatabase().substring(0,3) + "\t" + aid +"\t" + getPui()+"\t" + getLoadnumber()+" key="+key);
+                    	//use accessnumber to replace pui 11/28/2018
+                    	//System.out.println("*******something wrong with this record "+ oo + "\t" + getDatabase().substring(0,3) + "\t" + aid +"\t" + getAccessnumber()+"\t" + getLoadnumber());
                     }
-                    
+                    indexWriter.flush();
                     o[i] = oo;
                 }
+            }
+            else
+            {
+            	indexWriter.println("" + "\t" + getDatabase().substring(0,3) + "\t"+ ""  +"\t" + getPui()+"\t" + getLoadnumber());
+            	//System.out.println("******* "+key+" field with this record is empty "+ " " + "\t" + getDatabase().substring(0,3) + "\t" + " " +"\t" + getPui()+"\t" + getLoadnumber());
             }
 
         }
