@@ -22,7 +22,7 @@ public class NewDataTesting
 	//public static String URL="jdbc:oracle:thin:@127.0.0.1:5523:EIA";
 	public static String URL="jdbc:oracle:thin:@eid.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eid";
 	public static String driver="oracle.jdbc.driver.OracleDriver";
-	public static String username="ap_ev_search";
+	public static String username="ap_correction1";
 	public static String username1="ba_s300";
 	public static String password="ei3it";
 	public static String password1="ei7it";
@@ -129,6 +129,10 @@ public class NewDataTesting
 		else  if(action.equals("getAccessnumber"))
 		{
 			test.getMIDFromFast();
+		}
+		else  if(action.equals("getCITCOUNT"))
+		{
+			test.getCITCountFromFast();
 		}
 		else
 		{
@@ -461,6 +465,70 @@ public class NewDataTesting
 			System.out.println(loadNumber+"\t\t"+count+"\t"+loadNumberCountFromFast);
 		}
 
+	}
+	
+	private void getCITCountFromFast()
+	{
+		List outputList = new ArrayList();
+		DatabaseConfig databaseConfig = null;
+		String[] credentials = new String[]{"WOP","EUP","UPA"};
+		String[] dbName = database.split(";");
+		//FastSearchControl.BASE_URL = "http://ei-stage.nda.fastsearch.net:15100";
+		FastSearchControl.BASE_URL = "http://evazure.trafficmanager.net:15100";
+
+		//int intDbMask = databaseConfig.getMask(dbName);
+		int intDbMask = 1;
+
+		String term1 = mid;
+		String searchField="ALL";
+
+		try
+		{
+			con = getConnection(this.URL,this.driver,this.username,this.password);
+			String sqlQuery = "select cit_pn from hmo_patent_ref_WO_count";
+			stmt = con.createStatement();
+
+			System.out.println("QUERY= "+sqlQuery);
+			rs = stmt.executeQuery(sqlQuery);
+			int k = 0;
+			while (rs.next())
+			{
+				Thread.currentThread().sleep(25);
+				int cit_pn = rs.getString("cit_pn");
+				
+				databaseConfig = DatabaseConfig.getInstance(DriverConfig.getDriverTable());
+				SearchControl sc = new FastSearchControl();
+				//int oc = Integer.parseInt((String)inputMap.get(term1));
+				org.ei.domain.Query queryObject = new org.ei.domain.Query(databaseConfig, credentials);
+				queryObject.setDataBase(intDbMask);
+	
+				String searchID = (new GUID()).toString();
+				queryObject.setID(searchID);
+				queryObject.setSearchType(org.ei.domain.Query.TYPE_QUICK);
+	
+				//queryObject.setSearchPhrase("{"+term1+"}",searchField,"","","","","","");
+				queryObject.setSearchQueryWriter(new FastQueryWriter());
+				queryObject.compile();
+				queryObject.setSearchQuery("(pci:"+term1+") and ((db:WOP) or (db:EUP) or (db:UPA)");
+				//System.out.println("DISPLAYQUERY= "+queryObject.getDisplayQuery()+" PhysicalQuery= "+queryObject.getPhysicalQuery()+" SEARCHQUERY= "+queryObject.getSearchQuery());
+	
+				String sessionId = null;
+				int pagesize = 25;
+				SearchResult result = sc.openSearch(queryObject,sessionId,pagesize,false);
+				int c = result.getHitCount();
+				if(c > 0)
+				{
+					System.out.println(cit_pn+"   "+c);
+				}
+			}
+		}
+		catch(Exception e)
+		{
+			System.out.println("term1= "+term1);
+			e.printStackTrace();
+		}
+
+		
 	}
 
 	private int getMIDCountFromFast(String mid,String database)
