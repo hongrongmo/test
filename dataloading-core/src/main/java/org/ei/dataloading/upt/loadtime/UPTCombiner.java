@@ -633,7 +633,15 @@ public class UPTCombiner extends CombinerTimestamp {
 	                    String eclaVals[] = (String[]) lstEclaCodes.toArray(new String[1]);
 	
 	                    eclaVals = eclaNormalize(eclaVals);
+	                    
+	                    String[] cpcValues = null;
+	                    if (rs.getString("CLASSIFICATION_CPC") != null) {
 	
+	                        String sbrCPC = rs.getString("CLASSIFICATION_CPC");
+	                        cpcValues = sbrCPC.split(Constants.IDDELIMITER);	                     
+	                    }
+	                    eclaVals = removeDupCode(eclaVals,cpcValues);
+	                    
 	                    rec.put(EVCombinedRec.ECLA_CODES, removeSpaces(eclaVals));
 	
 	                    if (rs.getString("ecc") != null)
@@ -779,14 +787,7 @@ public class UPTCombiner extends CombinerTimestamp {
 	                    }
 	
 	                    //List arrCpcCodes = new ArrayList();
-	                    String[] cpcValues = null;
-	                    if (rs.getString("CLASSIFICATION_CPC") != null) {
-	
-	                        String sbrCPC = rs.getString("CLASSIFICATION_CPC");
-	                        cpcValues = sbrCPC.split(Constants.IDDELIMITER);
-	                        //arrCpcCodes = IPC8Classification.build(sbrCPC);
-	                        //arrCpcCodes = normalizeIpc8Codes(arrCpcCodes);
-	                    }
+	                  
 	                   
 	                    //arrCpcCodes.addAll(arrCpcCodes);
 	                   
@@ -860,6 +861,41 @@ public class UPTCombiner extends CombinerTimestamp {
         }
 
         return newCodes;
+    }
+    
+    private String[] removeDupCode(String[] ecla,String[] cpc)
+    {
+    	List outputCodes = new ArrayList();
+    	if(ecla == null || ecla.length==0)
+    	{
+    		return cpc;
+    	}
+    	else if(cpc == null || cpc.length==0)
+    	{
+    		return ecla;
+    	}
+    	else
+    	{    		
+    		for(int i=0;i<ecla.length;i++)
+    		{
+    			String eclaCode = ecla[i];
+    			if(!outputCodes.contains(eclaCode))
+    			{
+    				outputCodes.add(eclaCode);
+    			}  			
+    		}
+    		
+    		for(int j=0;j<cpc.length;j++)
+			{
+				String cpcCode = cpc[j];
+				if(!outputCodes.contains(cpcCode))
+    			{
+    				outputCodes.add(cpcCode);
+    			}
+			}
+    	}
+    	String[] arr = new String[outputCodes.size()];
+    	return (String[])outputCodes.toArray(arr);
     }
 
     public List normalizeIpc8Codes(List codes) {

@@ -356,6 +356,10 @@ public class NewDataTesting
 		{
 			test.parseJsonObject(updateNumber);
 		}
+		else  if(action.equals("getCITCOUNT"))
+		{
+			test.getCITCountFromFast(updateNumber);
+		}
 		else
 		{
 			System.out.println("we dont know your input "+action);
@@ -4615,6 +4619,78 @@ public class NewDataTesting
 
 	 return columnNameList;
 
+	}
+	private void getCITCountFromFast(String loadnumber)
+	{
+		Statement stmt = null;
+		Statement updateStmt = null;
+		ResultSet rs = null;
+		Connection con = null;		
+		List outputList = new ArrayList();
+		DatabaseConfig databaseConfig = null;
+		String[] credentials = new String[]{"WOP","EUP","UPA"};
+		String[] dbName = database.split(";");
+		//FastSearchControl.BASE_URL = "http://ei-stage.nda.fastsearch.net:15100";
+		FastSearchControl.BASE_URL = "http://evazure.trafficmanager.net:15100";
+
+		//int intDbMask = databaseConfig.getMask(dbName);
+		int intDbMask = 1;		
+		String searchField="ALL";
+
+		try
+		{
+			con = getConnection(this.URL,this.driver,"ap_correction1",this.password);
+			String sqlQuery = "select cit_pn from hmo_patent_ref_WO_count where load_number="+loadnumber;
+			stmt = con.createStatement();
+			updateStmt = con.createStatement();
+			System.out.println("QUERY= "+sqlQuery);
+			rs = stmt.executeQuery(sqlQuery);
+			int i = 0;
+			while (rs.next())
+			{
+				//Thread.currentThread().sleep(10);
+				String cit_pn = rs.getString("cit_pn");
+				
+				FastClient client = new FastClient();
+				client.setBaseURL("http://evazure.trafficmanager.net:15100");//PROD
+				//client.setBaseURL("http://evprod08.cloudapp.net:15100");//DEV server
+				//client.setBaseURL("http://evdr09.cloudapp.net:15100"); //DR			
+				client.setResultView("ei");
+				client.setOffSet(0);
+				client.setPageSize(5);
+				client.setQueryString("pci:WO"+cit_pn);
+				client.setDoCatCount(true);
+				//client.setDoNavigators(true);
+				//client.setPrimarySort("ausort");
+				client.setPrimarySortDirection("+");
+				client.search();
+				
+				
+	
+				List l = client.getDocIDs();
+				int count =client.getHitCount();
+				
+				if(count > 0)
+				{
+					String updateQuery = "update hmo_patent_ref_WO_count set FAST_CIT_CNT="+count+ "where CIT_PN='"+cit_pn+"'";
+					updateStmt.addBatch(updateQuery);
+					if(i==1000)
+					{
+						updateStmt.executeBatch();
+						i=0;
+					} 
+					i++;
+					System.out.println(cit_pn+"   "+count);
+				}
+			}
+			updateStmt.executeBatch();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+
+		
 	}
 
 	private List getNTISColumnName(){
