@@ -8,7 +8,7 @@ package org.ei.common.bd;
 import java.util.*;
 //import org.ei.data.bd.loadtime.*;
 import org.ei.common.Constants;
-import org.ei.data.bd.*;
+import org.ei.dataloading.bd.loadtime.*;
 import org.ei.common.CountryFormatter;
 /**
  * @author solovyevat

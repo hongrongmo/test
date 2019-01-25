@@ -18,10 +18,12 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.auth.InstanceProfileCredentialsProvider;
 /*import com.amazonaws.auth.ClasspathPropertiesFileCredentialsProvider;
 import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;*/
 import com.amazonaws.regions.Region;
 import com.amazonaws.regions.Regions;
+import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.sns.*;
 import com.amazonaws.services.sns.model.PublishRequest;
 import com.amazonaws.services.sns.model.PublishResult;
@@ -658,7 +660,8 @@ public class DataLoadingErrorCheck {
 	{
 		//AmazonSNSClient snsClient = new AmazonSNSClient(new ClasspathPropertiesFileCredentialsProvider("AwsCredentials.properties"));
 
-		BasicAWSCredentials awsCreds = new BasicAWSCredentials("AKIAJ6F62FH2H7AKJVRQ", "6IQ5TG1abov49mq3V7sQodRXOCXSxMqhVq3/GViQ");
+		//BasicAWSCredentials awsCreds = new BasicAWSCredentials("AKIAJ6F62FH2H7AKJVRQ", "6IQ5TG1abov49mq3V7sQodRXOCXSxMqhVq3/GViQ");
+		InstanceProfileCredentialsProvider awsCreds = new InstanceProfileCredentialsProvider(); 
 
 		AmazonSNSClient snsClient = new AmazonSNSClient(awsCreds);
 		snsClient.setRegion(Region.getRegion(Regions.US_EAST_1));

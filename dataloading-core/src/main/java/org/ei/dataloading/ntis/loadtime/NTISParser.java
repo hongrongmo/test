@@ -16,7 +16,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.ei.data.ntis.runtime.*;
 import org.ei.common.Constants;
-import org.ei.data.bd.*;
+import org.ei.dataloading.bd.loadtime.*;
 
 public class NTISParser
 {

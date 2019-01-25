@@ -20,7 +20,6 @@ import org.ei.dataloading.bd.loadtime.BdNumericalIndexMapping;
 //import org.ei.dataloading.CombinedXMLWriter;
 import org.ei.dataloading.*;
 //import org.ei.dataloading.bd.loadtime.*;
-import org.ei.dataloading.georef.*;
 import org.ei.dataloading.georef.loadtime.*;
 import org.ei.common.bd.*;
 import org.ei.common.*;
