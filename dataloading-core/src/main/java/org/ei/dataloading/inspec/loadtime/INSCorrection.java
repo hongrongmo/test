@@ -11,7 +11,6 @@ import java.util.*;
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
 import org.ei.dataloading.*;
-import org.ei.dataloading.bd.*;
 import org.ei.dataloading.bd.loadtime.*;
 import org.ei.domain.*;
 import org.ei.query.base.*;
