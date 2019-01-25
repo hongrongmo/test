@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-import org.ei.domain.FastClient;
+import org.ei.domain.*;
 
 /**
  * 

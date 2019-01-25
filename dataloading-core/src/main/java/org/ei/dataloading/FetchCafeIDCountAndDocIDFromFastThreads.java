@@ -14,7 +14,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
-import org.ei.domain.FastClient;
+import org.ei.domain.*;
 
 /**
  * 
