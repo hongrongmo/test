@@ -1,0 +1,967 @@
+<!--
+
+*******************************************************************************
+*******************************************************************************
+
+
+	DTD Name:-                      Inspec_XML.dtd
+	========                        ==============
+
+	Author:-                        IEE
+	======                          ===
+
+	Date:-                          13 June 2002
+	====                            ============
+
+	Version:-                       1.00
+	=======                         ====
+
+	Function:-
+	========
+
+	This DTD is used for delivering Inspec Database records to customers.
+
+	The possible record types (which are not used in the DTD) are:-
+
+	Code    Record type
+	****    ***********
+	 10     Dissertation
+	 11     Report
+	 12     Report Section
+	 21     Journal Paper
+	 22     Journal Paper (Original Abstracted)
+	 23     Journal Paper (Translation Abstracted)
+	 30     Book
+	 40     Book Chapter
+	 50     Conference Proceedings
+	 51     Conference Proceedings in Journal
+	 52     Conference Proceedings in Journal (Original Abstracted)
+	 53     Conference Proceedings in Journal (Translation Abstracted)
+	 60     Conference Paper
+	 61     Conference Paper in Journal
+	 62     Conference Paper in Journal (Original Abstracted)
+	 63     Conference Paper in Journal (Translation Abstracted)
+	 80     Patent
+
+
+
+*******************************************************************************
+*******************************************************************************
+
+
+	N.B. Inspec requires to be able to float any accent over or under a
+	****    specified character.
+
+
+
+		i   - Italic
+		b   - Bold
+		u   - Underline
+		sup - Superior           
+		sub - Inferior           
+
+*******************************************************************************
+*******************************************************************************
+
+	    Description of links between elements with attributes
+	    *****************************************************
+
+	Reference       Linked to       Identifier      Description
+	tag (RID)       tag (ID)
+	===============================================================
+
+	<PNAME>         <FAFF>          "AFn"           Author/editor 
+							affiliations
+
+At present, there is only one affiliation, but this may change. Any or all
+authors may be linked to the affiliation.
+
+
+*******************************************************************************
+*******************************************************************************
+**                                                                           **
+**                           END OF COMMENTS, ETC.                           **
+**                                                                           **
+*******************************************************************************
+*******************************************************************************
+
+
+*******************************************************************************
+
+		      PUBLIC ENTITY DECLARATION SECTION
+		      *********************************
+
+*******************************************************************************
+
+
+-->
+
+
+<!--                                                                        -->
+<!--                        Inspec Entity Set                               -->
+<!--                        *****************                               -->
+<!--                                                             	    -->
+<!--                                                              	    -->
+<!ENTITY Aacute   "Aacute">     	<!-- A acute                        -->
+<!ENTITY Acirc    "Acirc">     		<!-- A circumflex                   -->
+<!ENTITY Agrave   "Agrave">     	<!-- A grave                        -->
+<!ENTITY Atilde   "Atilde">     	<!-- A tilde                        -->
+<!ENTITY Auml     "Auml">     		<!-- A dieresis or umlaut           -->
+<!ENTITY Ccedil   "Ccedil">     	<!-- C cedilla                      -->
+<!ENTITY Eacute   "Eacute">     	<!-- E acute                        -->
+<!ENTITY Ecirc    "Ecirc">     		<!-- E circumflex                   -->
+<!ENTITY Egrave   "Egrave">     	<!-- E grave                        -->
+<!ENTITY Euml     "Euml">     		<!-- E dieresis or umlaut           -->
+<!ENTITY Iacute   "Iacute">     	<!-- I acute                        -->
+<!ENTITY Icirc    "Icirc">     		<!-- I circumflex                   -->
+<!ENTITY Igrave   "Igrave">     	<!-- I grave                        -->
+<!ENTITY Iuml     "Iuml">     		<!-- I dieresis or umlaut           -->
+<!ENTITY Ntilde   "Ntilde">     	<!-- N tilde                        -->
+<!ENTITY Oacute   "Oacute">     	<!-- O acute                        -->
+<!ENTITY Ocirc    "Ocirc">     		<!-- O circumflex                   -->
+<!ENTITY Ograve   "Ograve">     	<!-- O grave                        -->
+<!ENTITY Otilde   "Otilde">     	<!-- O tilde                        -->
+<!ENTITY Ouml     "Ouml">     		<!-- O dieresis or umlaut           -->
+<!ENTITY Uacute   "Uacute">     	<!-- U acute                        -->
+<!ENTITY Ucirc    "Ucirc">     		<!-- U circumflex                   -->
+<!ENTITY Ugrave   "Ugrave">     	<!-- U grave                        -->
+<!ENTITY Uuml     "Uuml">     		<!-- U dieresis or umlaut           -->
+<!ENTITY Yacute   "Yacute">     	<!-- Y acute                        -->
+<!ENTITY aacute   "aacute">     	<!-- a acute                        -->
+<!ENTITY acirc    "acirc">     		<!-- a circumflex                   -->
+<!ENTITY agrave   "agrave">     	<!-- a grave                        -->
+<!ENTITY atilde   "atilde">     	<!-- a tilde                        -->
+<!ENTITY auml     "auml">     		<!-- a dieresis or umlaut           -->
+<!ENTITY eacute   "eacute">     	<!-- e acute                        -->
+<!ENTITY ecirc    "ecirc">     		<!-- e circumflex                   -->
+<!ENTITY egrave   "egrave">     	<!-- e grave                        -->
+<!ENTITY euml     "euml">     		<!-- e dieresis or umlaut           -->
+<!ENTITY iacute   "iacute">     	<!-- a acute                        -->
+<!ENTITY icirc    "icirc">     		<!-- a circumflex                   -->
+<!ENTITY igrave   "igrave">     	<!-- a grave                        -->
+<!ENTITY iuml     "iuml">     		<!-- a dieresis or umlaut           -->
+<!ENTITY oacute   "oacute">     	<!-- o acute                        -->
+<!ENTITY ocirc    "ocirc">     		<!-- o circumflex                   -->
+<!ENTITY ograve   "ograve">     	<!-- o grave                        -->
+<!ENTITY otilde   "otilde">     	<!-- o tilde                        -->
+<!ENTITY ouml     "ouml">     		<!-- o dieresis or umlaut           -->
+<!ENTITY uacute   "uacute">     	<!-- u acute                        -->
+<!ENTITY ucirc    "ucirc">     		<!-- u circumflex                   -->
+<!ENTITY ugrave   "ugrave">     	<!-- u grave                        -->
+<!ENTITY uuml     "uuml">     		<!-- u dieresis or umlaut           -->
+<!ENTITY yacute   "yacute">     	<!-- y acute                        -->
+<!ENTITY yuml     "yuml">     		<!-- y dieresis or umlaut           -->
+<!ENTITY acute    "acute">     		<!-- ACUTE                          -->
+<!ENTITY aelig    "aelig">     		<!-- ae diphthong                   -->
+<!ENTITY AElig    "AElig">     		<!-- AE DIPHTHONG                   -->
+<!ENTITY Afr      "Afr">     		<!-- G/A                            -->
+<!ENTITY aleph    "aleph">     		<!-- ALEPH                          -->
+<!ENTITY alpha    "alpha">     		<!-- alpha                          -->
+<!ENTITY amp      "amp">     		<!-- &                              -->
+<!ENTITY and      "and">     		<!-- Logical AND (V-PROD)           -->
+<!ENTITY ang      "ang">     		<!-- ANGLE                          -->
+<!ENTITY ang90    "ang90">     		<!-- RIGHT ANGLE                    -->
+<!ENTITY ap       "ap">     		<!-- APX=/2                         -->
+<!ENTITY aring    "aring">     		<!-- angstrom a                     -->
+<!ENTITY Aring    "Aring">     		<!-- ANGSTROM A                     -->
+<!ENTITY Ascr     "Ascr">     		<!-- SCRIPT A                       -->
+<!ENTITY becaus   "becaus">     	<!-- BECAUSE                        -->
+<!ENTITY bepsi    "bepsi">		<!-- SUCH THAT                      -->
+<!ENTITY beta     "beta">		<!-- beta                           -->
+<!ENTITY Bfr      "Bfr">		<!-- G/B                            -->
+<!ENTITY breve    "breve">		<!-- BREVE                          -->
+<!ENTITY Bscr     "Bscr">		<!-- SCRIPT B                       -->
+<!ENTITY bumpe    "bumpe">		<!-- APX=/5                         -->
+<!ENTITY cap      "cap">		<!-- INTERSECTION                   -->
+<!ENTITY capped   "capped">		<!-- CAPPED                         -->
+<!ENTITY caron    "caron">		<!-- CZ/V                           -->
+<!ENTITY ccedil   "ccedil">		<!-- c-cedilla                      -->
+<!ENTITY cedil    "cedil">		<!-- CEDILLA                        -->
+<!ENTITY Cfr      "Cfr">		<!-- G/C                            -->
+<!ENTITY chi      "chi">		<!-- chi                            -->
+<!ENTITY circ     "circ">		<!-- C/FLEX                         -->
+<!ENTITY cong     "cong">		<!-- CONGRUENT                      -->
+<!ENTITY conint   "conint">		<!-- CON. INTGL                     -->
+<!ENTITY Conint   "Conint">		<!-- D.CON.INTGL                    -->
+<!ENTITY Copf     "Copf">		<!-- Copf                           -->
+<!ENTITY copy     "copy">		<!-- COPYRIGHT                      -->
+<!ENTITY Cscr     "Cscr">		<!-- SCRIPT C                       -->
+<!ENTITY cup      "cup">		<!-- UNION                          -->
+<!ENTITY dagger   "dagger">		<!-- DAGGER                         -->
+<!ENTITY Dagger   "Dagger">		<!-- DBL DAGGER                     -->
+<!ENTITY darr     "darr">		<!-- ARROW DOWN                     -->
+<!ENTITY Dashv    "Dashv">		<!-- ENCODEDBY                      -->
+<!ENTITY dashv    "dashv">		<!-- IMPLIED                        -->
+<!ENTITY dasia    "dasia">		<!-- DASIA                          -->
+<!ENTITY deg      "deg">		<!-- DEGREES                        -->
+<!ENTITY delta    "delta">		<!-- delta                          -->
+<!ENTITY Delta    "Delta">		<!-- DELTA                          -->
+<!ENTITY Dfr      "Dfr">		<!-- G/D                            -->
+<!ENTITY diam     "diam">		<!-- DIAMOP                         -->
+<!ENTITY diams    "diams">		<!-- DIAMOP                         -->
+<!ENTITY die      "die">		<!-- Diarasis                       -->
+<!ENTITY divide   "divide">		<!-- DIVIDE                         -->
+<!ENTITY dot      "dot">		<!-- OVER.                          -->
+<!ENTITY Dscr     "Dscr">		<!-- SCRIPT D                       -->
+<!ENTITY dstrok   "dstrok">		<!-- slashed d                      -->
+<!ENTITY Dstrok   "Dstrok">		<!-- SLASHED D                      -->
+<!ENTITY eDot     "eDot">		<!-- APX=/4                         -->
+<!ENTITY Efr      "Efr">		<!-- G/E                            -->
+<!ENTITY epsi     "epsi">		<!-- epsilon'                       -->
+<!ENTITY epsiv    "epsiv">		<!-- epsilon                        -->
+<!ENTITY equiv    "equiv">		<!-- IDENT                          -->
+<!ENTITY Escr     "Escr">		<!-- SCRIPT E                       -->
+<!ENTITY esdot    "esdot">		<!-- APPCH LIM                      -->
+<!ENTITY eta      "eta">		<!-- eta                            -->
+<!ENTITY euro     "euro">		<!-- Euro                           -->
+<!ENTITY exist    "exist">		<!-- EXISTS                         -->
+<!ENTITY female   "female">		<!-- FEMALE                         -->
+<!ENTITY Ffr      "Ffr">		<!-- G/F                            -->
+<!ENTITY forall   "forall">          	<!-- FOR ALL                        -->
+<!ENTITY frac1116 "frac1116">          	<!-- 11/16                          -->
+<!ENTITY frac116  "frac116">          	<!-- 1/16                           -->
+<!ENTITY frac12   "frac12">          	<!-- 1/2                            -->
+<!ENTITY frac1316 "frac1316">          	<!-- 13/16                          -->
+<!ENTITY frac14   "frac14">          	<!-- 1/4                            -->
+<!ENTITY frac1516 "frac1516">          	<!-- 15/16                          -->
+<!ENTITY frac18   "frac18">          	<!-- 1/8                            -->
+<!ENTITY frac316  "frac316">          	<!-- 3/16                           -->
+<!ENTITY frac34   "frac34">          	<!-- 3/4                            -->
+<!ENTITY frac38   "frac38">          	<!-- 3/8                            -->
+<!ENTITY frac516  "frac516">          	<!-- 5/16                           -->
+<!ENTITY frac58   "frac58">          	<!-- 5/8                            -->
+<!ENTITY frac716  "frac716">          	<!-- 7/16                           -->
+<!ENTITY frac78   "frac78">          	<!-- 7/8                            -->
+<!ENTITY frac916  "frac916">          	<!-- 9/16                           -->
+<!ENTITY Fscr     "Fscr">          	<!-- SCRIPT F                       -->
+<!ENTITY gamma    "gamma">          	<!-- gamma                          -->
+<!ENTITY Gamma    "Gamma">		<!-- GAMMA                          -->
+<!ENTITY ges      "ges">		<!--  greater than OR=              -->
+<!ENTITY Gfr      "Gfr">		<!-- G/G                            -->
+<!ENTITY grave    "grave">		<!-- GRAVE                          -->
+<!ENTITY Gscr     "Gscr">		<!-- SCRIPT G                       -->
+<!ENTITY gsim     "gsim">		<!--  greater than /EQUIV           -->
+<!ENTITY gt       "gt">			<!--  greater than                  -->
+<!ENTITY Gt       "Gt">			<!-- MUCH greater than              -->
+<!ENTITY harr     "harr">		<!-- INTERCH                        -->
+<!ENTITY hArr     "hArr">		<!-- DBL^LR                         -->
+<!ENTITY hellip   "hellip">		<!-- ...                            -->
+<!ENTITY herma    "herma">		<!-- HERMAPHRODITE                  -->
+<!ENTITY Hfr      "Hfr">		<!-- G/H                            -->
+<!ENTITY Hscr     "Hscr">		<!-- SCRIPT H                       -->
+<!ENTITY iexcl    "iexcl">		<!-- SPANISH !                      -->
+<!ENTITY Ifr      "Ifr">		<!-- G/I                            -->
+<!ENTITY imped    "imped">		<!-- SLASHED Z                      -->
+<!ENTITY infin    "infin">		<!-- INFINITY                       -->
+<!ENTITY inodot   "inodot">		<!-- dotless i                      -->
+<!ENTITY int      "int">		<!-- INTGL                          -->
+<!ENTITY iota     "iota">		<!-- iota                           -->
+<!ENTITY iquest   "iquest">		<!-- SPANISH ?                      -->
+<!ENTITY Iscr     "Iscr">		<!-- SCRIPT I                       -->
+<!ENTITY isin     "isin">		<!-- ELEMENT                        -->
+<!ENTITY Jfr      "Jfr">		<!-- G/J                            -->
+<!ENTITY Jscr     "Jscr">		<!-- SCRIPT J                       -->
+<!ENTITY kappa    "kappa">		<!-- kappa                          -->
+<!ENTITY Kfr      "Kfr">		<!-- G/K                            -->
+<!ENTITY Kscr     "Kscr">		<!-- SCRIPT K                       -->
+<!ENTITY lambda   "lambda">		<!-- lambda                         -->
+<!ENTITY Lambda   "Lambda">		<!-- LAMBDA                         -->
+<!ENTITY lang     "lang">		<!-- OPEN ANG. BRACK                -->
+<!ENTITY larr     "larr">		<!-- L^                             -->
+<!ENTITY lArr     "lArr">		<!-- DBL^L                          -->
+<!ENTITY lceil    "lceil">		<!-- UBNDO                          -->
+<!ENTITY ldquo    "ldquo">		<!-- OPEN"                          -->
+<!ENTITY ldr      "ldr">		<!-- LDR.                           -->
+<!ENTITY les      "les">		<!--  less than OR=                 -->
+<!ENTITY lfloor   "lfloor">		<!-- LBNDO                          -->
+<!ENTITY Lfr      "Lfr">		<!-- G/L                            -->
+<!ENTITY lowbar   "lowbar">		<!-- _                              -->
+<!ENTITY lrarr2   "lrarr2">		<!-- ^^TOPL                         -->
+<!ENTITY lrhar2   "lrhar2">		<!-- HALF^^TOPL                     -->
+<!ENTITY lscr     "lscr">		<!-- SCRIPT l                       -->
+<!ENTITY Lscr     "Lscr">		<!-- SCRIPT L                       -->
+<!ENTITY lsim     "lsim">		<!--  less than /EQUIV              -->
+<!ENTITY lstrok   "lstrok">		<!-- slashed l                      -->
+<!ENTITY Lstrok   "Lstrok">		<!-- SLASHED L                      -->
+<!ENTITY lt       "lt">			<!--  less than                     -->
+<!ENTITY Lt       "Lt">			<!-- MUCH less than                 -->
+<!ENTITY macr     "macr">		<!-- ~                              -->
+<!ENTITY male     "male">		<!-- MALE                           -->
+<!ENTITY mdash    "mdash">		<!-- EM-                            -->
+<!ENTITY Mfr      "Mfr">		<!-- G/M                            -->
+<!ENTITY middot   "middot">		<!-- CENTRE.                        -->
+<!ENTITY minus    "minus">		<!-- MINUS                          -->
+<!ENTITY mnplus   "mnplus">		<!-- -OR+                           -->
+<!ENTITY Mscr     "Mscr">		<!-- SCRIPT M                       -->
+<!ENTITY mu       "mu">			<!-- mu                             -->
+<!ENTITY nabla    "nabla">		<!-- NABLA                          -->
+<!ENTITY ndash    "ndash">		<!-- EN-                            -->
+<!ENTITY ndashv   "ndashv">		<!-- NIMPLIED                       -->
+<!ENTITY ne       "ne">			<!-- NOT=                           -->
+<!ENTITY nearr    "nearr">		<!-- NE^                            -->
+<!ENTITY nexist   "nexist">		<!-- N-EXISTS                       -->
+<!ENTITY Nfr      "Nfr">		<!-- G/N                            -->
+<!ENTITY ngt      "ngt">		<!-- NOT greater than               -->
+<!ENTITY nland    "nland">     		<!-- ANGLE OVER (N-ary logical AND) -->
+<!ENTITY nlt      "nlt">		<!-- NOT less than                  -->
+<!ENTITY Nopf     "Nopf">		<!-- Nopf                           -->
+<!ENTITY not      "not">		<!-- NOT                            -->
+<!ENTITY notin    "notin">		<!-- N-ELEMENT                      -->
+<!ENTITY npar     "npar">		<!-- NOT //EL                       -->
+<!ENTITY Nscr     "Nscr">		<!-- SCRIPT N                       -->
+<!ENTITY nsub     "nsub">		<!-- N-CONTAINED                    -->
+<!ENTITY nsube    "nsube">		<!-- NSUBE                          -->
+<!ENTITY nsup     "nsup">		<!-- N-CONTAINS                     -->
+<!ENTITY nsupe    "nsupe">		<!-- NSUPE                          -->
+<!ENTITY nthroot  "nthroot">		<!-- NTH.ROOT                       -->
+<!ENTITY ntilde   "ntilde">		<!-- n-tilde                        -->
+<!ENTITY nu       "nu">			<!-- nu                             -->
+<!ENTITY nvdash   "nvdash">		<!-- NIMPLIES                       -->
+<!ENTITY nwarr    "nwarr">		<!-- NW^                            -->
+<!ENTITY oarr     "oarr">		<!-- OVER^                          -->
+<!ENTITY odot     "odot">		<!-- CIRCLED .                      -->
+<!ENTITY oelig    "oelig">		<!-- oe diphthong                   -->
+<!ENTITY OElig    "OElig">		<!-- OE DIPHTHONG                   -->
+<!ENTITY Ofr      "Ofr">		<!-- G/O                            -->
+<!ENTITY ogr      "ogr">		<!-- omicron                        -->
+<!ENTITY omega    "omega">		<!-- omega                          -->
+<!ENTITY Omega    "Omega">		<!-- OMEGA                          -->
+<!ENTITY ogr      "ogr">		<!-- omicron                        -->
+<!ENTITY omicron  "omicron">		<!-- omicron                        -->
+<!ENTITY ominus   "ominus">		<!-- CIRCLED -                      -->
+<!ENTITY oplus    "oplus">		<!-- CIRCLED +                      -->
+<!ENTITY or       "or">			<!-- VEL                            -->
+<!ENTITY Oscr     "Oscr">		<!-- SCRIPT O                       -->
+<!ENTITY oslash   "oslash">		<!-- slashed o                      -->
+<!ENTITY Oslash   "Oslash">		<!-- SLASHED O                      -->
+<!ENTITY otimes   "otimes">		<!-- CIRCLED X                      -->
+<!ENTITY par      "par">		<!-- //EL                           -->
+<!ENTITY para     "para">		<!-- PARA SYMB                      -->
+<!ENTITY part     "part">		<!-- pdelta                         -->
+<!ENTITY perp     "perp">		<!-- PERP TO                        -->
+<!ENTITY Pfr      "Pfr">		<!-- G/P                            -->
+<!ENTITY phi      "phi">		<!-- phi                            -->
+<!ENTITY Phi      "Phi">		<!-- PHI                            -->
+<!ENTITY pi       "pi">			<!-- pi                             -->
+<!ENTITY Pi       "Pi">			<!-- PI                             -->
+<!ENTITY planck   "planck">		<!-- slashed h                      -->
+<!ENTITY plusmn   "plusmn">		<!-- +OR-                           -->
+<!ENTITY pound    "pound">		<!-- #                              -->
+<!ENTITY prop     "prop">		<!-- VARIES AS                      -->
+<!ENTITY Pscr     "Pscr">		<!-- SCRIPT P                       -->
+<!ENTITY psi      "psi">		<!-- psi                            -->
+<!ENTITY Psi      "Psi">		<!-- PSI                            -->
+<!ENTITY psila    "psila">		<!-- PSILA                          -->
+<!ENTITY Qfr      "Qfr">		<!-- G/Q                            -->
+<!ENTITY Qopf     "Qopf">		<!-- Qopf                           -->
+<!ENTITY Qscr     "Qscr">		<!-- SCRIPT Q                       -->
+<!ENTITY radic    "radic">		<!-- ROOT                           -->
+<!ENTITY rang     "rang">		<!-- CLOSE ANG. BRACK               -->
+<!ENTITY rarr     "rarr">		<!-- R^                             -->
+<!ENTITY rArr     "rArr">		<!-- DBL^R                          -->
+<!ENTITY rceil    "rceil">		<!-- UBNDC                          -->
+<!ENTITY rdquo    "rdquo">		<!-- CLOSE"                         -->
+<!ENTITY reg      "reg">		<!-- REGISTER                       -->
+<!ENTITY rfloor   "rfloor">		<!-- LBNDC                          -->
+<!ENTITY Rfr      "Rfr">		<!-- G/R                            -->
+<!ENTITY rho      "rho">		<!-- rho                            -->
+<!ENTITY ring     "ring">		<!-- ANGSTROM                       -->
+<!ENTITY rlarr2   "rlarr2">		<!-- ^^TOPR                         -->
+<!ENTITY rlhar2   "rlhar2">		<!-- HALF^^TOPR                     -->
+<!ENTITY Ropf     "Ropf">		<!-- Ropf                           -->
+<!ENTITY Rscr     "Rscr">		<!-- SCRIPT R                       -->
+<!ENTITY Sfr      "Sfr">		<!-- G/S                            -->
+<!ENTITY sigma    "sigma">		<!-- sigma                          -->
+<!ENTITY Sigma    "Sigma">		<!-- SIGMA                          -->
+<!ENTITY sigmav   "sigmav">		<!-- S/SIGMA                        -->
+<!ENTITY sime     "sime">		<!-- APX=/3                         -->
+<!ENTITY slashz   "slashz">		<!-- slashed z                      -->
+<!ENTITY sqsub    "sqsub">		<!-- SQSUB                          -->
+<!ENTITY sqsup    "sqsup">		<!-- SQSUP                          -->
+<!ENTITY square   "square">		<!-- SQUARE OP                      -->
+<!ENTITY Sscr     "Sscr">		<!-- SCRIPT S                       -->
+<!ENTITY sub      "sub">		<!-- IMPLIED BY                     -->
+<!ENTITY subdot   "subdot">		<!-- INCLUDED                       -->
+<!ENTITY sube     "sube">		<!-- CONTAINED                      -->
+<!ENTITY subne    "subne">		<!-- SUBNE                          -->
+<!ENTITY sup      "sup">		<!-- IMPLIES/1                      -->
+<!ENTITY supdot   "supdot">		<!-- INCLUDES                       -->
+<!ENTITY supe     "supe">		<!-- CONTAINS                       -->
+<!ENTITY supne    "supne">		<!-- SUPNE                          -->
+<!ENTITY szlig    "szlig">		<!-- german dbl s                   -->
+<!ENTITY tau      "tau">		<!-- tau                            -->
+<!ENTITY Tfr      "Tfr">		<!-- G/T                            -->
+<!ENTITY there4   "there4">		<!-- THEREFORE                      -->
+<!ENTITY Theta    "Theta">		<!-- THETA                          -->
+<!ENTITY thetas   "thetas">		<!-- theta                          -->
+<!ENTITY thetav   "thetav">		<!-- curly theta                    -->
+<!ENTITY thorn    "thorn">		<!-- thorn                          -->
+<!ENTITY THORN    "THORN">		<!-- THORN                          -->
+<!ENTITY tilde    "tilde">		<!-- TILDE                          -->
+<!ENTITY times    "times">		<!-- MULT                           -->
+<!ENTITY trade    "trade">		<!-- TRADE                          -->
+<!ENTITY Tscr     "Tscr">		<!-- SCRIPT T                       -->
+<!ENTITY uarr     "uarr">		<!-- ^                              -->
+<!ENTITY udarr    "udarr">		<!-- VERT DBL ARROWS L UP           -->
+<!ENTITY udot     "udot">		<!-- UNDERDOT                       -->
+<!ENTITY Ufr      "Ufr">		<!-- G/U                            -->
+<!ENTITY uml      "uml">		<!-- OVER..                         -->
+<!ENTITY upsi     "upsi">		<!-- upsilon                        -->
+<!ENTITY Upsi     "Upsi">		<!-- UPSILON                        -->
+<!ENTITY Uscr     "Uscr">		<!-- SCRIPT U                       -->
+<!ENTITY utilde   "utilde">		<!-- UNDER TILDE                    -->
+<!ENTITY vDash    "vDash">		<!-- ENCODES                        -->
+<!ENTITY vdash    "vdash">		<!-- IMPLIES                        -->
+<!ENTITY Vfr      "Vfr">		<!-- G/V                            -->
+<!ENTITY Vscr     "Vscr">		<!-- SCRIPT V                       -->
+<!ENTITY Wfr      "Wfr">		<!-- G/W                            -->
+<!ENTITY Wscr     "Wscr">		<!-- SCRIPT W                       -->
+<!ENTITY Xfr      "Xfr">		<!-- G/X                            -->
+<!ENTITY xi       "xi">			<!-- xi                             -->
+<!ENTITY Xi       "Xi">			<!-- XI                             -->
+<!ENTITY Xscr     "Xscr">		<!-- SCRIPT X                       -->
+<!ENTITY xutri    "xutri">		<!-- TRIANGLE                       -->
+<!ENTITY Yfr      "Yfr">		<!-- G/Y                            -->
+<!ENTITY Yscr     "Yscr">		<!-- SCRIPT Y                       -->
+<!ENTITY zeta     "zeta">		<!-- zeta                           -->
+<!ENTITY Zfr      "Zfr">		<!-- G/Z                       	    -->
+<!ENTITY Zopf     "Zopf">		<!-- Zopf                           -->
+<!ENTITY Zscr     "Zscr">		<!-- SCRIPT Z               	    -->
+
+<!--************************************************************************-->
+
+<!--************************************************************************-->
+<!--                                                                        -->
+<!--                   Entity Naming Conventions                            -->
+<!--                   *************************                            -->
+<!--
+		   Prefix = where used:
+
+     p.   = in paragraphs (also in phrases if .ph suffix)
+     s.   = in sections (i.e., among paragraphs)
+     i.   = where allowed by inclusion exceptions
+     m.   = content model or declared content
+     a.   = attribute definition
+     NONE = specific use defined in models
+
+	       Suffix = allowed content:
+
+     .ph  = elements whose content is %m.ph;
+     .d   = elements whose content has same model as defaults
+     NONE = individually defined elements
+
+-->
+
+
+
+<!-- ********************************************************************** -->
+
+<!--                                                                        -->
+<!--                    Specialized Elements                                -->
+<!--                    ********************                                -->
+
+<!ENTITY % p.em.ph "b|i|u|sup|sub"             ><!--emphasis 		    -->
+
+<!--************************************************************************-->
+
+
+<!--                                                                        -->
+<!--                    Models                                              -->
+<!--                    ******                                              -->
+		    
+<!ENTITY % m.date  "(day?, mo?, yr)"           ><!--date components         -->
+<!ENTITY % m.name  "(snm, init?, sfix?)"       ><!--Name elements           -->
+<!ENTITY % m.ph    "(#PCDATA|%p.em.ph;)*"      ><!--phrase model            -->
+
+
+
+					     
+<!--************************************************************************-->
+
+
+<!ENTITY % inspec "inspec"><!--document type generic identifier             -->
+
+
+<!--************************************************************************-->
+
+
+<!--                                                                        -->
+<!--                   Main Element Definitions                             -->
+<!--                   ************************                             -->
+<!--                                                                        -->
+
+<!--                                                                        -->
+<!--       ELEMENTS        MIN             CONTENT (EXCEPTIONS)             -->
+<!--                                                                        -->
+<!ELEMENT  inspec                   (article)+                                >
+
+<!--************************************************************************-->
+<!--                            Control Group                               -->
+<!--************************************************************************-->
+
+<!ENTITY % m.contg                    "(accn,
+					tapiss,
+					crt?,
+					ming,
+					abng?,
+					rtypg,
+					amndt?)"                              > 
+
+<!--************************************************************************-->
+<!--                            Record type  Group                          -->
+<!--************************************************************************-->
+
+<!ENTITY % m.rtypg                    "(rtyp,
+					newrt,
+					rtng)"                                > 
+
+<!--************************************************************************-->
+<!--                            Bibliographic Group                         -->
+<!--************************************************************************-->
+
+<!ENTITY % m.bibg                      "(ti,
+					 aug?,
+					 jrefg?,
+					 bookg?,
+					 rptg?,
+					 dssg?,
+					 patg?,
+					 cng?,
+					 abs?,
+					 norefs?,
+					 lng?,                              
+					amndg?)"			      >
+
+<!--************************************************************************-->
+<!--                       Journal Reference - Original                     -->
+<!--************************************************************************-->
+					
+<!ENTITY % m.jrog                     "(jin,
+					jt?,
+					ajt?,
+					vid?,
+					pgn?,
+					pdt?,
+					pnm?,
+					cntry,
+					cdn?,
+					issn?,
+					sici?,
+					cccc?,
+					uncmed?,
+					docnum?,
+					doi?,
+					url?,
+					dcurl?)"                              >
+
+<!--************************************************************************-->
+<!--                       Journal Reference - Translation                  -->
+<!--************************************************************************-->
+					
+<!ENTITY % m.jrtg                     "(jin,
+					jt?,
+					ajt?,
+					vid?,
+					pgn?,
+					pdt?,
+					pnm?,
+					cntry?,
+					cdn?,
+					issn?,
+					sici?,
+					cccc?,
+					uncmed?,
+					docnum?,
+					doi?,
+					url?,
+					dcurl?)"                              >
+
+<!--************************************************************************-->
+<!--                     "Translated from" Data Group                       -->
+<!--************************************************************************-->
+					
+<!ENTITY % m.trtag                    "(jin?,
+					jt?,
+					ajt?,
+					vid?,
+					pgn?,
+					pdt?,
+					cntry,
+					cdn?,
+					issn?,
+					sici?)"                               >
+
+<!--************************************************************************-->
+<!--                       "Translated in" Data Group                       -->
+<!--************************************************************************-->
+					
+<!ENTITY % m.troag                    "(jin?,
+					jt?,
+					ajt?,
+					vid?,
+					pgn?,
+					pdt?,
+					cntry?,
+					cdn?,
+					issn?,
+					sici?)"                               >
+
+<!--************************************************************************-->
+<!--                            Publication Group                           -->
+<!--************************************************************************-->
+					
+<!ENTITY % m.pubg                     "(pdt?,
+					pnm?,
+					loc?,
+					cntry,
+					isbn?,
+					cccc?,
+					pp?,
+					uncmed?,
+					avail?,
+					prc?,
+					docnum?,
+					doi?,
+					url?,
+					dcurl?)"                              >
+
+<!--************************************************************************-->
+<!--                                 Report Group                           -->
+<!--************************************************************************-->
+					
+<!ENTITY % m.repg                     "(pubti?,
+					editg?,
+					issorg,
+					repno?,
+					usgchno?,
+					contno?,
+					pgn?,
+					pug?)"                                >
+
+<!--************************************************************************-->
+<!--                            Dissertation Group                          -->
+<!--************************************************************************-->
+					
+<!ENTITY % m.dissg                    "(subdt?,
+					issorg,
+					pug?)"                                >
+
+<!--************************************************************************-->
+<!--                               Patent Group                             -->
+<!--************************************************************************-->
+					
+
+<!ENTITY % m.patg                     "(pdg?,
+					opag?,
+					pdt?,
+					cntry,
+					pp?)"                                 >
+
+<!--************************************************************************-->
+<!--                         Patent Detail Group                            -->
+<!--************************************************************************-->
+					
+<!ENTITY % m.pdg                      "(patno?,
+					cntry?,
+					subdt?,
+					assg?)"				      >
+
+<!--************************************************************************-->
+<!--                         Original Patent Application Group              -->
+<!--************************************************************************-->
+
+<!ENTITY % m.opag                     "(patno?,
+					cntry?,
+					prdt?)"				      >
+
+<!--************************************************************************-->
+<!--                           Conference Group                             -->
+<!--************************************************************************-->
+					
+<!ENTITY % m.cng                      "(ct?,
+					cndt?,
+					loc?,
+					cntry?,
+					cnsg?)"                               >
+
+<!--************************************************************************-->
+<!--                            Indexing Group                              -->
+<!--************************************************************************-->
+					
+<!ENTITY % m.indg                     "(cindg,
+					ucindg?,
+					tcg?,
+					ccg,
+					ndig?,
+					cig?,
+					aoig?)"                               >
+
+
+<!--************************************************************************-->
+<!--************************************************************************-->
+<!--                                                                        -->
+<!--                        Head element for Article                        -->
+<!--                        ************************                        -->
+<!--                                                                        -->
+<!--************************************************************************-->
+<!--************************************************************************-->
+
+
+<!--************************************************************************-->
+<!--                              Article                                   -->
+<!--                              *******                                   -->
+<!--************************************************************************-->
+
+<!ELEMENT  article              (contg,
+				    bibliog,
+				    indexg)     ><!--Article    	    -->
+
+					     
+<!--************************************************************************-->
+<!--************************************************************************-->
+<!--                   Element list (in alphabetic sequence)                -->
+<!--************************************************************************-->
+<!--************************************************************************-->
+
+
+<!ELEMENT  abng                 (abno)*       >    <!--Abstract number group-->
+<!ELEMENT  abno                 (#PCDATA)     >    <!--Abstract number      -->
+<!ELEMENT  abs                  (#PCDATA|
+				   %p.em.ph;)*>    <!--Abstract             -->
+<!ELEMENT  accn                 (#PCDATA)     >    <!--Accession number     -->
+<!ELEMENT  aff                  (#PCDATA|
+				   %p.em.ph;)*>    <!--Affiliation          -->
+<!ELEMENT  ajt                  (#PCDATA|
+				   %p.em.ph;)*>    <!--Abbreviated Title    -->
+<!ELEMENT  amndt                (sdate?,
+				      odate)  >    <!--Amendment date       -->
+<!ELEMENT  amndg                (comm?,
+				      ref?)   >    <!--Amendment group      -->
+<!ELEMENT  aoi                  (#PCDATA|
+				   %p.em.ph;)*>    <!--Astronom. index data -->
+<!ELEMENT  aoig                 (aoi)+        >    <!--Astronom. index group-->
+<!ELEMENT  assg                 (assignee)+   >    <!--Patent assignee grp. -->
+<!ELEMENT  assignee             (#PCDATA|
+				   %p.em.ph;)*>    <!--Patent assignee      -->
+<!ELEMENT  aug                  ((pname)+,
+				      faff*)  >    <!--Name Group           -->
+<!ELEMENT  avail                (#PCDATA|
+				   %p.em.ph;)*>    <!--Availability         -->
+
+<!ELEMENT  bibliog              (%m.bibg;)    >    <!--Bibliographic group  -->
+<!ELEMENT  bookg                (pubti?,
+				      part?,
+				      editg?,
+				      trg?,
+				      pgn?,
+				      pug?)   >    <!--Book group           -->
+
+<!ELEMENT  cc                   (code, cct)   >    <!--Class. code and text -->
+<!ELEMENT  cccc                 (#PCDATA|
+				   %p.em.ph;)*>    <!--Copyright CCC        -->
+<!ELEMENT  ccg                  (cc)+         >    <!--Class. code group    -->
+<!ELEMENT  cct                  (#PCDATA|
+				   %p.em.ph;)*>    <!--Classification text  -->
+<!ELEMENT  cdn                  (#PCDATA)     >    <!--CODEN                -->
+<!ELEMENT  chemg                (cterm)+      >    <!--Chem. index term grp.-->
+<!ELEMENT  cig                  (chemg)+      >    <!--Chem. Indexing group -->
+<!ELEMENT  cindg                (term)+       >    <!--Controlled index     -->
+<!ELEMENT  cndt                 (sdate?,
+				      edate?,
+				      odate)  >    <!--Conference dates     -->
+<!ELEMENT  cng                  (%m.cng;)     >    <!--Conference group     -->
+<!ELEMENT  cnsg                 (orgn)+       >    <!--Conf. sponsors group -->
+<!ELEMENT  cntry                (#PCDATA|
+				   %p.em.ph;)*>    <!--Country              -->
+<!ELEMENT  code                 (#PCDATA)     >    <!--Classification code  -->
+<!ELEMENT  comm                 (#PCDATA|
+				   %p.em.ph;)*>    <!--Amendment comment    -->
+<!ELEMENT  contg                (%m.contg;)   >    <!--Control group        -->
+<!ELEMENT  contno               (#PCDATA)     >    <!--Contract number      -->
+<!ELEMENT  crn                  (#PCDATA|
+				   %p.em.ph;)*>    <!--Copyright name       -->
+<!ELEMENT  crt                  (yr,crn*)     >    <!--Copyright            -->
+<!ELEMENT  ct                   (#PCDATA|
+				   %p.em.ph;)*>    <!--Conference title     -->
+<!ELEMENT  cterm                (item,
+				      role)   >    <!--Chem. ind.-item/role -->
+
+<!--ELEMENT  (day|mo|yr)          (#PCDATA)--><!--day, month, year       -->
+<!ELEMENT  day             	(#PCDATA)     >    <!-- day                 -->
+<!ELEMENT  mo             	(#PCDATA)     >    <!-- month               -->
+<!ELEMENT  yr             	(#PCDATA)     >    <!-- year                -->
+<!ELEMENT  dcurl                (#PCDATA)     >    <!--Doc. collection URL  -->
+<!ELEMENT  docnum               (#PCDATA)     >    <!--Document number      -->
+<!ELEMENT  doi                  (#PCDATA)     >    <!--Digital Obj. Id (DOI)-->
+<!ELEMENT  dssg                 (%m.dissg;)   >    <!--Dissertation group   -->
+
+<!--ELEMENT (e1|e2|e3|e4|e5|e6|e7|e8|e9|sup|sub)           (#PCDATA|%p.em.ph;)*     -->
+
+<!ELEMENT b             	(#PCDATA|
+				   %p.em.ph;)*>    <!-- Italic 		    -->
+<!ELEMENT i             	(#PCDATA|
+				   %p.em.ph;)*>    <!-- Bold                -->
+<!ELEMENT u             	(#PCDATA|
+				   %p.em.ph;)*>    <!-- Underline           -->
+<!ELEMENT sup             	(#PCDATA|
+				   %p.em.ph;)*>	   <!-- Superscript         -->
+<!ELEMENT sub             	(#PCDATA|
+				   %p.em.ph;)*>	   <!-- Subscript           -->
+<!ELEMENT  edate                (%m.date;)    >	   <!--End 'sorting' date   -->
+<!ELEMENT  editg                ((pname)+,
+				      faff*)  >    <!--Editor group         -->
+
+<!ELEMENT  faff                 (aff?,
+				     cntry?)  >    <!--Full affiliation     -->
+
+<!ELEMENT  indexg               (%m.indg;)    >    <!--Index group          -->
+<!ELEMENT  init                 (#PCDATA|
+				   %p.em.ph;)*>    <!--Initials             -->
+<!ELEMENT  ino                  (#PCDATA)     >    <!--Issue number         -->
+<!ELEMENT  isbn                 (#PCDATA)     >    <!--ISBN                 -->
+<!ELEMENT  iss                  (#PCDATA)     >    <!--Issue number         -->
+<!ELEMENT  issn                 (#PCDATA)     >    <!--ISSN                 -->
+<!ELEMENT  issorg               (orgn, 
+				     cntry?)  >    <!--Issuing organisation -->
+<!ELEMENT  item                 (#PCDATA|
+				   %p.em.ph;)*>    <!--Chem. Indexing item  -->
+
+<!ELEMENT  jin                  (#PCDATA)     >    <!--Journal Id. No.      -->
+<!ELEMENT  jrefg                ((jrog|jrtg),
+			          (troag|trtag)?)> <!--Journal ref. group   -->
+<!ELEMENT  jrog                 (%m.jrog;)    >    <!--Journal ref. - orig. -->
+<!ELEMENT  jrtg                 (%m.jrtg;)    >    <!--Journal ref. - trans -->
+<!ELEMENT  jt                   (#PCDATA|
+				   %p.em.ph;)*>    <!--Journal title        -->
+
+<!ELEMENT  lan                  (#PCDATA|
+				   %p.em.ph;)*>    <!--Language             -->
+<!ELEMENT  lng                  (lan)+        >    <!--Language group       -->
+<!ELEMENT  loc                  (#PCDATA|
+				   %p.em.ph;)*>    <!--Place of Publication -->
+
+<!ELEMENT  min                  (#PCDATA)     >    <!--Material Ident. no.  -->
+<!ELEMENT  min2                 (#PCDATA)     >    <!--Y2k MIN		    -->
+<!ELEMENT  ming                 (min, min2)   >    <!--MIN group	    -->
+
+<!ELEMENT  ndi                  (quan, 
+				      value1, 
+				      value2?, 
+				      unit)   >    <!--Num. index data      -->
+<!ELEMENT  ndig                 (ndi)+        >    <!--Num. data index group-->
+<!ELEMENT  newrt                (#PCDATA)     >    <!--New record type      -->
+<!ELEMENT  norefs               (#PCDATA)     >    <!--No. of references    -->
+
+<!ELEMENT  odate                (#PCDATA|
+				   %p.em.ph;)*>    <!--Original date        -->
+<!ELEMENT  opag                 (%m.opag;)    >    <!--Orig.patent appl.grp.-->
+<!ELEMENT  orgn                 (#PCDATA|
+				   %p.em.ph;)*>    <!--Organisation name    -->
+
+<!ELEMENT  part                 (#PCDATA)     >    <!--Part number          -->
+<!ELEMENT  patg                 (%m.patg;)    >    <!--Patent group         -->
+<!ELEMENT  patno                (#PCDATA)     >    <!--Patent number        -->
+<!ELEMENT  pdg                  (%m.pdg;)     >    <!--Patent details grp.  -->
+<!ELEMENT  pdt                  (sdate?, 
+				      edate?,
+				      odate)  >    <!--Publication date     -->
+<!ELEMENT  pgn                  (#PCDATA)     >    <!--Pagination           -->
+<!ELEMENT  pp                   (#PCDATA)     >    <!--Page nos             -->
+<!ELEMENT  pname                (%m.name;)    >    <!--Name details         -->
+<!ELEMENT  pnm                  (#PCDATA|
+				   %p.em.ph;)*>    <!--Publisher's Name     -->
+<!ELEMENT  prc                  (#PCDATA)     >    <!--Price                -->
+<!ELEMENT  prdt                 (sdate?, 
+				      odate)  >    <!--Patent priority date -->
+<!ELEMENT  pubti                (#PCDATA|
+				   %p.em.ph;)*>    <!--Publication Title    -->
+<!ELEMENT  pug                  (%m.pubg;)    >    <!--Publication group    -->
+
+<!ELEMENT  quan                 (#PCDATA|
+				   %p.em.ph;)*>    <!--Num. index quantity  -->
+
+<!ELEMENT  ref                  (#PCDATA|
+				   %p.em.ph;)*>    <!--Amendment reference  -->
+<!ELEMENT  repno                (#PCDATA)     >    <!--Report number        -->
+<!ELEMENT  role                 (#PCDATA|
+				   %p.em.ph;)*>    <!--Chem. Indexing role  -->
+<!ELEMENT  rptg                 (%m.repg;)    >    <!--Report group         -->
+<!ELEMENT  rtname               (#PCDATA|
+				   %p.em.ph;)*>    <!--Record type title    -->
+<!ELEMENT  rtng                 (rtname)+     >    <!--Rec. type title grp. -->
+<!ELEMENT  rtyp                 (#PCDATA)     >    <!--Record type          -->
+<!ELEMENT  rtypg                (%m.rtypg;)   >    <!--Record type group    -->
+
+<!ELEMENT  sdate                (%m.date;)    >    <!--Start 'sorting' date -->
+<!ELEMENT  sfix                 (#PCDATA|
+				   %p.em.ph;)*>    <!--Suffix               -->
+<!ELEMENT  sici                 (#PCDATA|
+				   %p.em.ph;)*>    <!--SICI number          -->
+<!ELEMENT  snm                  (#PCDATA|
+				   %p.em.ph;)*>    <!--Surname              -->
+<!ELEMENT  subdt                (sdate?, 
+				      odate)  >    <!--Date submitted       -->
+
+<!ELEMENT  tapiss               (yr,iss)      >    <!--Tape Service issue   -->
+<!ELEMENT  tc                   (#PCDATA|
+				   %p.em.ph;)*>    <!--Treatment code       -->
+<!ELEMENT  tcg                  (tc)+         >    <!--Treatment codes grp. -->
+<!ELEMENT  term                 (#PCDATA|
+				   %p.em.ph;)*>    <!--Index term           -->
+<!ELEMENT  ti                   (#PCDATA|
+				   %p.em.ph;)*>    <!--Article title        -->
+<!ELEMENT  trg                  (pname)+      >   <!--Translator            -->
+<!ELEMENT  troag                (%m.troag;)   >   <!--"Trans. in" data      -->
+<!ELEMENT  trtag                (%m.trtag;)   >   <!--"Trans. from" data    -->
+
+<!ELEMENT  ucindg               (term)+       >   <!--Uncontrolled index grp-->
+<!ELEMENT  uncmed               (#PCDATA|
+				   %p.em.ph;)*>   <!--Unconvential medium   -->
+<!ELEMENT  unit                 (#PCDATA|
+				   %p.em.ph;)*>   <!--Numerical index unit  -->
+<!ELEMENT  url                  (#PCDATA)     >   <!--URL                   -->
+<!ELEMENT  usgchno              (#PCDATA)     >   <!--US gov.clear. hse. no.-->
+
+<!ELEMENT  value1               (#PCDATA|
+				   %p.em.ph;)*>   <!--Num. index value 1    -->
+<!ELEMENT  value2               (#PCDATA|
+				   %p.em.ph;)*>   <!--Num. index value 2    -->
+<!ELEMENT  vid                  (voliss?,
+				      vol?,
+				      ino?)   >   <!--Vol. and issue        -->
+<!ELEMENT  vol                  (#PCDATA)     >   <!--Volume                -->
+<!ELEMENT  voliss               (#PCDATA|
+				   %p.em.ph;)*>   <!--Original vol. and iss.-->
+
+					     
+<!--************************************************************************-->
+<!--                         End of element list                            -->
+<!--************************************************************************-->
+
+
+
+					     
+<!--************************************************************************-->
+<!--************************************************************************-->
+<!--                            Attribute list                              -->
+<!--************************************************************************-->
+<!--************************************************************************-->
+
+<!--                                                                        -->
+<!--       ELEMENT      ATTRIBUTE       VALUE           DEFAULT             -->
+<!--       *******      *********       *****           *******             -->
+
+<!ATTLIST  faff         rid             ID              #REQUIRED             >
+<!ATTLIST  pname        id              IDREF           #IMPLIED              >
+<!ATTLIST  code         type            CDATA           #IMPLIED              >
+					     
+<!--************************************************************************-->
+<!--                         End of attribute list                          -->
+<!--************************************************************************-->
+
+
+<!--************************************************************************-->
+<!--************************************************************************-->
+<!--                         END OF Inspec_XML.dtd                          -->
+<!--************************************************************************-->
+<!--************************************************************************-->
