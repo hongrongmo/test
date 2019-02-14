@@ -118,9 +118,9 @@ public class NewDataTesting
 	//public static String URL="jdbc:oracle:thin:@127.0.0.1:5523:EIA";
 	public static String URL="jdbc:oracle:thin:@eid.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eid";
 	public static String driver="oracle.jdbc.driver.OracleDriver";
-	public static String username="ap_correction1";
+	public static String username="db_cafe";
 	public static String username1="ba_s300";
-	public static String password="ei3it";
+	public static String password="Ev360Park";
 	public static String password1="ei7it";
     public static String tableName="bd_master";
     public static String tableName1="bd_master_jupiter";
@@ -360,6 +360,14 @@ public class NewDataTesting
 		{
 			test.getCITCountFromFast(updateNumber);
 		}
+		else  if(action.equals("getAUTHORCOUNT"))
+		{
+			test.getAuthorCountFromFast(updateNumber);
+		}
+		else  if(action.equals("getAFCOUNT"))
+		{
+			test.getAFCountFromFast(updateNumber);
+		}		
 		else
 		{
 			System.out.println("we dont know your input "+action);
@@ -371,7 +379,7 @@ public class NewDataTesting
 	}
 	
 	 private void doFastExtract(String updateNumber,String dbname) throws Exception
-	    {
+	 {
 	        CombinedXMLWriter writer = new CombinedXMLWriter(50000,
 	                                                      Integer.parseInt(updateNumber),
 	                                                      dbname,
@@ -4681,6 +4689,152 @@ public class NewDataTesting
 					} 
 					i++;
 					System.out.println(cit_pn+"   "+count);
+				}
+			}
+			updateStmt.executeBatch();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+
+		
+	}
+	
+	private void getAuthorCountFromFast(String tableName)
+	{
+		Statement stmt = null;
+		Statement updateStmt = null;
+		ResultSet rs = null;
+		Connection con = null;		
+		List outputList = new ArrayList();
+		DatabaseConfig databaseConfig = null;
+		String[] credentials = new String[]{"CPX"};
+		String[] dbName = database.split(";");
+		//FastSearchControl.BASE_URL = "http://ei-stage.nda.fastsearch.net:15100";
+		FastSearchControl.BASE_URL = "http://evazure.trafficmanager.net:15100";
+		//String tableName="hmo_author_count";
+		//int intDbMask = databaseConfig.getMask(dbName);
+		int intDbMask = 1;		
+		String searchField="ALL";
+
+		try
+		{
+			con = getConnection(this.URL,this.driver,"DB_CAFE",this.password);
+			String sqlQuery = "select authorid from "+tableName;
+			stmt = con.createStatement();
+			updateStmt = con.createStatement();
+			System.out.println("QUERY= "+sqlQuery);
+			rs = stmt.executeQuery(sqlQuery);
+			int i = 0;
+			while (rs.next())
+			{
+				//Thread.currentThread().sleep(10);
+				String authorid = rs.getString("authorid");
+				
+				FastClient client = new FastClient();
+				client.setBaseURL("http://evazure.trafficmanager.net:15100");//PROD
+				//client.setBaseURL("http://evprod08.cloudapp.net:15100");//DEV server
+				//client.setBaseURL("http://evdr09.cloudapp.net:15100"); //DR			
+				client.setResultView("ei");
+				client.setOffSet(0);
+				client.setPageSize(5);
+				client.setQueryString("auid:"+authorid);
+				client.setDoCatCount(true);
+				//client.setDoNavigators(true);
+				//client.setPrimarySort("ausort");
+				client.setPrimarySortDirection("+");
+				client.search();
+				
+				
+	
+				List l = client.getDocIDs();
+				int count =client.getHitCount();
+				
+				if(count > 0)
+				{
+					String updateQuery = "update "+tableName+" set fast_count="+count+ "where authorid='"+authorid+"'";
+					updateStmt.addBatch(updateQuery);
+					if(i==100)
+					{
+						updateStmt.executeBatch();
+						i=0;
+					} 
+					i++;
+					System.out.println(authorid+"   "+count);
+				}
+			}
+			updateStmt.executeBatch();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+
+		
+	}
+	
+	private void getAFCountFromFast(String tableName)
+	{
+		Statement stmt = null;
+		Statement updateStmt = null;
+		ResultSet rs = null;
+		Connection con = null;		
+		List outputList = new ArrayList();
+		DatabaseConfig databaseConfig = null;
+		String[] credentials = new String[]{"CPX"};
+		String[] dbName = database.split(";");
+		//FastSearchControl.BASE_URL = "http://ei-stage.nda.fastsearch.net:15100";
+		FastSearchControl.BASE_URL = "http://evazure.trafficmanager.net:15100";
+		//String tableName="hmo_author_count";
+		//int intDbMask = databaseConfig.getMask(dbName);
+		int intDbMask = 1;		
+		String searchField="ALL";
+
+		try
+		{
+			con = getConnection(this.URL,this.driver,"DB_CAFE",this.password);
+			String sqlQuery = "select affid from "+tableName;
+			stmt = con.createStatement();
+			updateStmt = con.createStatement();
+			System.out.println("QUERY= "+sqlQuery);
+			rs = stmt.executeQuery(sqlQuery);
+			int i = 0;
+			while (rs.next())
+			{
+				//Thread.currentThread().sleep(10);
+				String authorid = rs.getString("affid");
+				
+				FastClient client = new FastClient();
+				client.setBaseURL("http://evazure.trafficmanager.net:15100");//PROD
+				//client.setBaseURL("http://evprod08.cloudapp.net:15100");//DEV server
+				//client.setBaseURL("http://evdr09.cloudapp.net:15100"); //DR			
+				client.setResultView("ei");
+				client.setOffSet(0);
+				client.setPageSize(5);
+				client.setQueryString("afid:"+authorid);
+				client.setDoCatCount(true);
+				//client.setDoNavigators(true);
+				//client.setPrimarySort("ausort");
+				client.setPrimarySortDirection("+");
+				client.search();
+				
+				
+	
+				List l = client.getDocIDs();
+				int count =client.getHitCount();
+				
+				if(count > 0)
+				{
+					String updateQuery = "update "+tableName+" set fast_count="+count+ "where affid='"+authorid+"'";
+					updateStmt.addBatch(updateQuery);
+					if(i==100)
+					{
+						updateStmt.executeBatch();
+						i=0;
+					} 
+					i++;
+					System.out.println(authorid+"   "+count);
 				}
 			}
 			updateStmt.executeBatch();

@@ -433,7 +433,7 @@ public class BdParser
 										String cititype=type.getValue();
 										
 										/******Use this for new AIP LOGIC*/
-										/* block for BD comfirmation
+										///* block for BD comfirmation
 										if(record.get("STAGE")!=null && ((String)record.get("STAGE")).equals("S200"))
 										{
 											docType="ip";
@@ -442,8 +442,8 @@ public class BdParser
 										{																			 
 											docType = cititype;
 										}
-										*/
-										docType = cititype;
+										//*/
+										//docType = cititype;
 										
 										record.put("CITTYPE",docType);
 										//System.out.println("STAGE="+record.get("STAGE")+"TYPE= "+cititype+"DOCTYPE= "+docType);
@@ -1090,7 +1090,7 @@ public class BdParser
 							//GRANTLIST
 							Element grantlist = (Element) head.getChild("grantlist",noNamespace);
 							StringBuffer grantBuffer = new StringBuffer();
-							String fundingText = null;
+							//String fundingText = null;
 							if(fundingList !=null)
 							{
 								List fundinggroup = fundingList.getChildren("funding",xocsNamespace);
@@ -1151,9 +1151,19 @@ public class BdParser
 																
 								if(fundingList.getChild("funding-text",xocsNamespace)!=null)
 								{
-									fundingText =  fundingList.getChildText("funding-text",xocsNamespace);
-									//System.out.println("GRANTtext="+fundingText);
-									record.put("GRANTTEXT",fundingText);
+									List fundingTextList =  fundingList.getChildren("funding-text",xocsNamespace);
+									StringBuffer fundingTextBuffer = new StringBuffer();
+									for (int j = 0; j < fundingTextList.size(); j++)
+									{
+										Element fundingText =(Element) fundingTextList.get(j);
+										fundingTextBuffer.append(fundingText.getTextTrim());
+										if(j<fundingTextList.size()-1)
+										{
+											fundingTextBuffer.append(Constants.AUDELIMITER);
+										}
+									}
+									//System.out.println("GRANTtext from funding="+fundingTextBuffer.toString());
+									record.put("GRANTTEXT",fundingTextBuffer.toString());
 									//System.out.println(eid+" get fundingText from funding-list");
 								}
 								
@@ -1193,7 +1203,8 @@ public class BdParser
 								}
 								
 								//added by hmo on 7/17/2017
-								if(fundingText==null && grantlist.getChild("grant-text",noNamespace)!=null)
+								//modify by hmo on 02/08/2019
+								if(record.get("GRANTTEXT")==null && grantlist.getChild("grant-text",noNamespace)!=null)
 								{
 									String grantText =  grantlist.getChildText("grant-text",noNamespace);
 									record.put("GRANTTEXT",grantText);
