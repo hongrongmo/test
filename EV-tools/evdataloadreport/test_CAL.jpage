@@ -1,0 +1,8 @@
+java.util.Calendar cal = java.util.Calendar.getInstance();
+int i=cal.getFirstDayOfWeek();  
+int j =cal.get(java.util.Calendar.DAY_OF_WEEK);
+int k = cal.get(java.util.Calendar.DAY_OF_WEEK) - cal.getFirstDayOfWeek();
+cal.DATE
+
+
+java.util.Calendar cal2 = new java.util.GregorianCalendar();java.util.Date trial = new java.util.Date();cal2.setTime(trial);int yearweek = cal2.get(java.util.Calendar.WEEK_OF_YEAR);java.util.Calendar cal3 = java.util.Calendar.getInstance();cal3.add(java.util.Calendar.YEAR,-1);int i = cal3.get(java.util.Calendar.DAY_OF_WEEK) - cal3.getFirstDayOfWeek();cal3.add(java.util.Calendar.DATE,-i+1);java.util.Date start = cal3.getTime();start

@@ -15,7 +15,6 @@ import java.util.HashSet;
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
 import org.ei.dataloading.*;
-import org.ei.dataloading.georef.*;
 import org.ei.dataloading.georef.loadtime.*;
 import org.ei.common.bd.*;
 import org.ei.common.*;
