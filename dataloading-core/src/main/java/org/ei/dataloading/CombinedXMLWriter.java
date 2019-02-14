@@ -1027,9 +1027,9 @@ public class CombinedXMLWriter
         	r = r.replaceAll(",","|QCOMMAQ|"); //use QCOMMAQ for comma
         	r = r.replaceAll(":","|QCOLONQ|"); //use QCOLONQ for colon
         	r = r.replaceAll(";","|QSEMICOLONQ|"); //use QSEMICOLONQ for semicolon
-        	r = r.replaceAll("\\(","|QOPENINGBRACKETQ|"); //opening parenthesis
+        	r = r.replaceAll("\\(","|QOPENINGBRACKETQ|"); //use QOPENINGBRACKETQ opening parenthesis
         	r = r.replaceAll("\\)","|QCLOSINGBRACKETQ|"); //closing parenthesis
-        	r = r.replaceAll("&","|QANDQ|"); //& sign
+        	r = r.replaceAll("&","|QANDQ|"); //use QANDQ for & sign
         	r = r.replaceAll("_","|QUNDERLINEQ|"); //use QUNDERLINEQ for underline sign
         	r = r.replaceAll("\\+","|QPLUSQ|"); //use QPLUSQ for plus sign (added on 2/11/2019 by hmo)
         	r = r.replaceAll("~","|QTILDEQ|"); //use QTILDEQ for ~ sign (added on 2/12/2019 by hmo)
