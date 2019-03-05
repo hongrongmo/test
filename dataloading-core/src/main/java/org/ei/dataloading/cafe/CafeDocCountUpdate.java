@@ -451,7 +451,7 @@ public class CafeDocCountUpdate
 			System.out.println("about to load updated Doc_Count's IDS to temp table");
 
 			Runtime r = Runtime.getRuntime();
-			Process p = r.exec("./"+ sqlldrFileName + " " + docCountFileName);
+			Process p = r.exec(sqlldrFileName + " " + docCountFileName);
 			int t = p.waitFor();
 
 			//the value 0 indicates normal termination.
@@ -461,7 +461,7 @@ public class CafeDocCountUpdate
 			System.out.println(tempTableCount+" records was loaded into the " + updateddocCount_tempTable + "  table");
 
 
-			sql = "update " + tableName + " set es_status = null where " + column_name + " in (select column_name from updateddocCount_tempTable)";
+			sql = "update " + tableName + " set es_status = null where " + column_name + " in (select " + column_name + " from " + updateddocCount_tempTable + ")";
 			System.out.println("Query: " + sql);
 			if(con != null)
 			{

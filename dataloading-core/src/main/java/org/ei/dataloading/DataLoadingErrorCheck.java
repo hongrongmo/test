@@ -17,6 +17,8 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.ei.domain.ISearchForm;
+
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.auth.InstanceProfileCredentialsProvider;
 /*import com.amazonaws.auth.ClasspathPropertiesFileCredentialsProvider;
@@ -131,7 +133,7 @@ public class DataLoadingErrorCheck {
 			if(args[7] !=null)
 			{
 				username = args[7];
-				//System.out.println("Schema: " + username);
+				System.out.println("Schema: " + username);
 			}
 			if(args[8] !=null)
 			{
@@ -401,6 +403,7 @@ public class DataLoadingErrorCheck {
 			query = "select count(*) count from "+ tempTableMapping() + " where updatenumber="+updateNumber;
 		}
 
+		System.out.println("Running query: " + query);
 		try
 		{
 			con = getConnection(url,driver,username,password);
@@ -651,8 +654,9 @@ public class DataLoadingErrorCheck {
     	} */
 
 		CheckReturnValueForShell();
-
-		sendAwsSNS(errors.toString());
+		
+		if(!(errors.toString().isEmpty()))
+			sendAwsSNS(errors.toString());
 	}
 
 
@@ -660,8 +664,8 @@ public class DataLoadingErrorCheck {
 	{
 		//AmazonSNSClient snsClient = new AmazonSNSClient(new ClasspathPropertiesFileCredentialsProvider("AwsCredentials.properties"));
 
-		//BasicAWSCredentials awsCreds = new BasicAWSCredentials("AKIAJ6F62FH2H7AKJVRQ", "6IQ5TG1abov49mq3V7sQodRXOCXSxMqhVq3/GViQ");
-		InstanceProfileCredentialsProvider awsCreds = new InstanceProfileCredentialsProvider(); 
+		
+		InstanceProfileCredentialsProvider awsCreds = new InstanceProfileCredentialsProvider();    // for EC2
 
 		AmazonSNSClient snsClient = new AmazonSNSClient(awsCreds);
 		snsClient.setRegion(Region.getRegion(Regions.US_EAST_1));

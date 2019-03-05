@@ -66,14 +66,14 @@ public class FetchCafeIDCountFromFastThreads
 			doc_type = args[0];
 			if(doc_type.equalsIgnoreCase("apr"))
 			{
-				tableName = "HH_AUID_to_delete";
+				tableName = "author_count";
 				columnName = "authorid";
 				esField = "auid";
 			}
 
 			else if(doc_type.equalsIgnoreCase("ipr"))
 			{
-				tableName = "HH_AFID_to_delete";
+				tableName = "institute_count";
 				columnName = "affid";
 				esField = "afid";
 			}
@@ -172,8 +172,16 @@ public class FetchCafeIDCountFromFastThreads
 	{
 		Statement stmt = null;
 		ResultSet rs = null;
+		String query = null;
 
-		String query = "select " + columnName + " from " + tableName;
+		//HH 02/23/2019 Added since we started to oull auid doc_count from fast so to get most recent version of all cpx afid, get from lkup because institute_count still has the old version
+		if(doc_type !=null && doc_type.equalsIgnoreCase("ipr"))
+			query = "select distinct institute_id from cmb_af_lookup where status='matched'";
+		else if(doc_type !=null && doc_type.equalsIgnoreCase("apr"))
+			query = "select " + columnName + " from " + tableName;
+		
+		System.out.println("Running queery: " + query);
+		
 		try
 		{
 			con = getConnection(url, driver, username, password);
