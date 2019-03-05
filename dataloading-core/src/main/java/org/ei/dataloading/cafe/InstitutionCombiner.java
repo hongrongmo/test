@@ -255,13 +255,24 @@ public class InstitutionCombiner{
 			//PROD
 
 			//HH added 05/07/2018 explicitly add all author_profile columns to join with au doc counts table for ES index as per TM request
+			/*
+			 * String query =
+			 * "select a.M_ID,a.EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AFFID,a.STATUS,a.DATE_CREATED,a.DATE_REVISED,a.PREFERED_NAME,a.SORT_NAME,a.NAME_VARIANT,a.ADDRESS_PART,a.CITY,a.STATE,a.POSTAL_CODE,"
+			 * +
+			 * "a.COUNTRY,a.CERTAINTY_SCORES,a.LOADNUMBER,a.DATABASE,a.QUALITY,a.UPDATENUMBER,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,a.ES_STATUS,a.PARENTID,a.PARENT_PREFERED_NAME, b.DOC_COUNT as DOC_COUNT "
+			 * + "from " + tableName + "a left outer join " + afDocCount_tableName +
+			 * " b on a.AFFID = b.AFFID where "+ "a.affid in (select INSTITUTE_ID from " +
+			 * metadataTableName + " where STATUS='matched') and a.PARENTID is null";
+			 */
+			
+			//HH added 02/05/2019 re-index all AF to ES using doc_count from fast instead of metadata/looku tables to resolve doc_count discrepancy problem
 			String query = "select a.M_ID,a.EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AFFID,a.STATUS,a.DATE_CREATED,a.DATE_REVISED,a.PREFERED_NAME,a.SORT_NAME,a.NAME_VARIANT,a.ADDRESS_PART,a.CITY,a.STATE,a.POSTAL_CODE,"+
 					"a.COUNTRY,a.CERTAINTY_SCORES,a.LOADNUMBER,a.DATABASE,a.QUALITY,a.UPDATENUMBER,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,a.ES_STATUS,a.PARENTID,a.PARENT_PREFERED_NAME, b.DOC_COUNT as DOC_COUNT "+
-					"from " +  tableName + "a left outer join " + afDocCount_tableName + " b on a.AFFID = b.AFFID where "+
-					"a.affid in (select INSTITUTE_ID from " + metadataTableName + " where STATUS='matched') and a.PARENTID is null";
+					"from " +  tableName + " a, " + afDocCount_tableName + " b where a.AFFID = b.AFFID and a.PARENTID is null and b.DOC_COUNT>0";
 
+			
 
-			System.out.println("query");
+			System.out.println(query);
 
 			stmt.setFetchSize(200);
 			rs = stmt.executeQuery(query);
@@ -348,11 +359,24 @@ public class InstitutionCombiner{
 						" where STATUS='matched') and PARENTID is null";*/
 
 				//HH added 05/07/2018 explicitly add all author_profile columns to join with au doc counts table for ES index as per TM request
+				/*
+				 * query =
+				 * "select a.M_ID,a.EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AFFID,a.STATUS,a.DATE_CREATED,a.DATE_REVISED,a.PREFERED_NAME,a.SORT_NAME,a.NAME_VARIANT,a.ADDRESS_PART,a.CITY,a.STATE,a.POSTAL_CODE,"
+				 * +
+				 * "a.COUNTRY,a.CERTAINTY_SCORES,a.LOADNUMBER,a.DATABASE,a.QUALITY,a.UPDATENUMBER,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,a.ES_STATUS,a.PARENTID,a.PARENT_PREFERED_NAME, b.DOC_COUNT as DOC_COUNT from "
+				 * + tableName + "a left outer join " + afDocCount_tableName +
+				 * " b on a.AFFID = b.AFFID where a.ES_STATUS is null and "+
+				 * "a.affid in (select INSTITUTE_ID from " + metadataTableName +
+				 * " where STATUS='matched') and a.PARENTID is null";
+				 */
+				
+				//HH added 02/05/2019 re-index all AF to ES using doc_count from fast instead of metadata/lookup tables to resolve doc_count discrepancy problem
+				
 				query = "select a.M_ID,a.EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AFFID,a.STATUS,a.DATE_CREATED,a.DATE_REVISED,a.PREFERED_NAME,a.SORT_NAME,a.NAME_VARIANT,a.ADDRESS_PART,a.CITY,a.STATE,a.POSTAL_CODE,"+
 						"a.COUNTRY,a.CERTAINTY_SCORES,a.LOADNUMBER,a.DATABASE,a.QUALITY,a.UPDATENUMBER,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,a.ES_STATUS,a.PARENTID,a.PARENT_PREFERED_NAME, b.DOC_COUNT as DOC_COUNT from "
-						+ tableName + "a left outer join " + afDocCount_tableName + " b on a.AFFID = b.AFFID where a.ES_STATUS is null and "+
-						"a.affid in (select INSTITUTE_ID from " + metadataTableName + " where STATUS='matched') and a.PARENTID is null";
+						+ tableName + " a, " + afDocCount_tableName + " b where a.ES_STATUS is null and a.PARENTID is null and a.AFFID = b.AFFID and b.DOC_COUNT>0";
 
+				
 
 				System.out.println(query);
 
@@ -390,13 +414,28 @@ public class InstitutionCombiner{
 
 
 
+				// Weekly AF ES index
+				
 				//HH added 05/07/2018 explicitly add all author_profile columns to join with au doc counts table for ES index as per TM request
+				/*
+				 * query =
+				 * "select a.M_ID,a.EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AFFID,a.STATUS,a.DATE_CREATED,a.DATE_REVISED,a.PREFERED_NAME,a.SORT_NAME,a.NAME_VARIANT,a.ADDRESS_PART,a.CITY,a.STATE,a.POSTAL_CODE,"
+				 * +
+				 * "a.COUNTRY,a.CERTAINTY_SCORES,a.LOADNUMBER,a.DATABASE,a.QUALITY,a.UPDATENUMBER,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,a.ES_STATUS,a.PARENTID,a.PARENT_PREFERED_NAME, b.DOC_COUNT as DOC_COUNT from "
+				 * + tableName + " a left outer join " + afDocCount_tableName +
+				 * " b on a.AFFID = b.AFFID where a.ES_STATUS is null and "+
+				 * "a.affid in (select INSTITUTE_ID from " + metadataTableName +
+				 * " where STATUS='matched') and a.PARENTID is null";
+				 */
+
+				//HH added 02/05/2019 re-index all AF to ES using loadnumber,doc_count from fast instead of metadata/lookup tables to resolve doc_count discrepancy problem
+				
 				query = "select a.M_ID,a.EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AFFID,a.STATUS,a.DATE_CREATED,a.DATE_REVISED,a.PREFERED_NAME,a.SORT_NAME,a.NAME_VARIANT,a.ADDRESS_PART,a.CITY,a.STATE,a.POSTAL_CODE,"+
 						"a.COUNTRY,a.CERTAINTY_SCORES,a.LOADNUMBER,a.DATABASE,a.QUALITY,a.UPDATENUMBER,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,a.ES_STATUS,a.PARENTID,a.PARENT_PREFERED_NAME, b.DOC_COUNT as DOC_COUNT from "+
-						tableName + " a left outer join " + afDocCount_tableName + " b on a.AFFID = b.AFFID where a.ES_STATUS is null and "+
-						"a.affid in (select INSTITUTE_ID from " + metadataTableName + " where STATUS='matched') and a.PARENTID is null";
+						tableName + " a, " + afDocCount_tableName + " b where a.ES_STATUS is null and a.PARENTID is null and a.AFFID = b.AFFID and b.DOC_COUNT>0";
 
-
+				
+				
 				// for IPR Re-index with doc_count using loadnumber
 		/*		query = "select a.M_ID,a.EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AFFID,a.STATUS,a.DATE_CREATED,a.DATE_REVISED,a.PREFERED_NAME,a.SORT_NAME,a.NAME_VARIANT,a.ADDRESS_PART,a.CITY,a.STATE,a.POSTAL_CODE,"+
 						"a.COUNTRY,a.CERTAINTY_SCORES,a.LOADNUMBER,a.DATABASE,a.QUALITY,a.UPDATENUMBER,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,a.ES_STATUS,a.PARENTID,a.PARENT_PREFERED_NAME, b.DOC_COUNT as DOC_COUNT from "+
@@ -404,6 +443,8 @@ public class InstitutionCombiner{
 						"a.affid in (select INSTITUTE_ID from " + metadataTableName + " where STATUS='matched') and a.PARENTID is null";
 
 */
+				
+				
 				//Testing
 				/*query = "select a.M_ID,a.EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AFFID,a.STATUS,a.DATE_CREATED,a.DATE_REVISED,a.PREFERED_NAME,a.SORT_NAME,a.NAME_VARIANT,a.ADDRESS_PART,a.CITY,a.STATE,a.POSTAL_CODE,"+
 						"a.COUNTRY,a.CERTAINTY_SCORES,a.LOADNUMBER,a.DATABASE,a.QUALITY,a.UPDATENUMBER,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,a.ES_STATUS,a.PARENTID,a.PARENT_PREFERED_NAME, b.DOC_COUNT as DOC_COUNT from "+

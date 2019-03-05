@@ -291,14 +291,27 @@ public class AuthorCombiner {
 				/*query = "select * from " +  tableName + " where authorid in (select AUTHOR_ID from " + metadataTableName + 
 						" where STATUS='matched')";*/
 
-				query = "select select a.M_ID,EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AUTHORID,a.STATUS,a.DATE_CREATED,DATE_REVISED,a.INITIALS,INDEXEDNAME,a.SURENAME,a.GIVENNAME,a.NAME_VARIANT,"+
+				/*
+				 * query =
+				 * "select select a.M_ID,EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AUTHORID,a.STATUS,a.DATE_CREATED,DATE_REVISED,a.INITIALS,INDEXEDNAME,a.SURENAME,a.GIVENNAME,a.NAME_VARIANT,"
+				 * +
+				 * "a.CLASSIFICATION_SUBJABBR,a.CLASSIFICATION_ASJC,a.PUBLICATION_RANGE,a.JORNAL_HISTORY_TYPE,a.JOURNALS,a.CURRENT_AFF_ID,a.CURRENT_AFF_TYPE,a.CURRENT_AFF_RELATIONSHIP,"+
+				 * "a.PARENT_AFF_ID,a.PARENT_AFF_TYPE,a.PARENT_AFF_RELATIONSHIP,a.HISTORY_AFFILIATIONID,a.LOADNUMBER,a.DATABASE,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,"+
+				 * "a.UPDATENUMBER,a.E_ADDRESS,a.ORCID,a.SOURCE_TITLE,a.ES_STATUS, b.DOC_COUNT as DOC_COUNT from "
+				 * + tableName + " a left outer join " + auDocCount_tableName +
+				 * " b on a.AUTHORID = b.AUTHORID where a.authorid in (select AUTHOR_ID from " +
+				 * metadataTableName + " where STATUS='matched')";
+				 */
+				
+				
+				//HH added 02/05/2019 re-index all AF to ES using doc_count from fast instead of metadata/looku tables to resolve doc_count discrepancy problem
+				query = "select a.M_ID,EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AUTHORID,a.STATUS,a.DATE_CREATED,DATE_REVISED,a.INITIALS,INDEXEDNAME,a.SURENAME,a.GIVENNAME,a.NAME_VARIANT,"+
 						"a.CLASSIFICATION_SUBJABBR,a.CLASSIFICATION_ASJC,a.PUBLICATION_RANGE,a.JORNAL_HISTORY_TYPE,a.JOURNALS,a.CURRENT_AFF_ID,a.CURRENT_AFF_TYPE,a.CURRENT_AFF_RELATIONSHIP,"+
 						"a.PARENT_AFF_ID,a.PARENT_AFF_TYPE,a.PARENT_AFF_RELATIONSHIP,a.HISTORY_AFFILIATIONID,a.LOADNUMBER,a.DATABASE,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,"+
 						"a.UPDATENUMBER,a.E_ADDRESS,a.ORCID,a.SOURCE_TITLE,a.ES_STATUS, b.DOC_COUNT as DOC_COUNT from " +  tableName + 
-						" a left outer join " + auDocCount_tableName + " b on a.AUTHORID = b.AUTHORID where a.authorid in (select AUTHOR_ID from " + metadataTableName + 
-						" where STATUS='matched')";
+						" a, " + auDocCount_tableName + " b where a.AUTHORID = b.AUTHORID and b.DOC_COUNT>0";
 
-				System.out.println("query");
+				System.out.println(query);
 
 				stmt.setFetchSize(200);
 				rs = stmt.executeQuery(query);
@@ -406,11 +419,27 @@ public class AuthorCombiner {
 				/*query = "select * from " +  tableName + " where ES_STATUS is null and authorid in (select AUTHOR_ID from " + metadataTableName + 
 						" where STATUS='matched')";*/
 
+				/*
+				 * query =
+				 * "select a.M_ID,EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AUTHORID,a.STATUS,a.DATE_CREATED,DATE_REVISED,a.INITIALS,INDEXEDNAME,a.SURENAME,a.GIVENNAME,a.NAME_VARIANT,"
+				 * +
+				 * "a.CLASSIFICATION_SUBJABBR,a.CLASSIFICATION_ASJC,a.PUBLICATION_RANGE,a.JORNAL_HISTORY_TYPE,a.JOURNALS,a.CURRENT_AFF_ID,a.CURRENT_AFF_TYPE,a.CURRENT_AFF_RELATIONSHIP,"+
+				 * "a.PARENT_AFF_ID,a.PARENT_AFF_TYPE,a.PARENT_AFF_RELATIONSHIP,a.HISTORY_AFFILIATIONID,a.LOADNUMBER,a.DATABASE,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,"+
+				 * "a.UPDATENUMBER,a.E_ADDRESS,a.ORCID,a.SOURCE_TITLE,a.ES_STATUS, b.DOC_COUNT as DOC_COUNT from "
+				 * + tableName + " a left outer join " + auDocCount_tableName +
+				 * " b on a.AUTHORID = b.AUTHORID"+
+				 * "where a.ES_STATUS is null and a.authorid in (select AUTHOR_ID from " +
+				 * metadataTableName + " where STATUS='matched')";
+				 */
+				//HH added 02/05/2019 re-index all AF to ES using doc_count from fast instead of metadata/looku tables to resolve doc_count discrepancy problem
+				
 				query = "select a.M_ID,EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AUTHORID,a.STATUS,a.DATE_CREATED,DATE_REVISED,a.INITIALS,INDEXEDNAME,a.SURENAME,a.GIVENNAME,a.NAME_VARIANT,"+
 						"a.CLASSIFICATION_SUBJABBR,a.CLASSIFICATION_ASJC,a.PUBLICATION_RANGE,a.JORNAL_HISTORY_TYPE,a.JOURNALS,a.CURRENT_AFF_ID,a.CURRENT_AFF_TYPE,a.CURRENT_AFF_RELATIONSHIP,"+
 						"a.PARENT_AFF_ID,a.PARENT_AFF_TYPE,a.PARENT_AFF_RELATIONSHIP,a.HISTORY_AFFILIATIONID,a.LOADNUMBER,a.DATABASE,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,"+
-						"a.UPDATENUMBER,a.E_ADDRESS,a.ORCID,a.SOURCE_TITLE,a.ES_STATUS, b.DOC_COUNT as DOC_COUNT from " +  tableName + " a left outer join " + auDocCount_tableName + " b on a.AUTHORID = b.AUTHORID"+
-						"where a.ES_STATUS is null and a.authorid in (select AUTHOR_ID from " + metadataTableName +	" where STATUS='matched')";
+						"a.UPDATENUMBER,a.E_ADDRESS,a.ORCID,a.SOURCE_TITLE,a.ES_STATUS, b.DOC_COUNT as DOC_COUNT from " +  tableName + 
+						" a, " + auDocCount_tableName + " b where a.ES_STATUS is null and a.AUTHORID = b.AUTHORID and b.DOC_COUNT>0";
+						
+				
 				 
 
 				System.out.println(query);
@@ -451,12 +480,45 @@ public class AuthorCombiner {
 
 				//HH added 05/07/2018 explicitly add all author_profile columns to join with au doc counts table for ES index as per TM request
 
+				/*
+				 * query =
+				 * "select a.M_ID,EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AUTHORID,a.STATUS,a.DATE_CREATED,DATE_REVISED,a.INITIALS,INDEXEDNAME,a.SURENAME,a.GIVENNAME,a.NAME_VARIANT,"
+				 * +
+				 * "a.CLASSIFICATION_SUBJABBR,a.CLASSIFICATION_ASJC,a.PUBLICATION_RANGE,a.JORNAL_HISTORY_TYPE,a.JOURNALS,a.CURRENT_AFF_ID,a.CURRENT_AFF_TYPE,a.CURRENT_AFF_RELATIONSHIP,"+
+				 * "a.PARENT_AFF_ID,a.PARENT_AFF_TYPE,a.PARENT_AFF_RELATIONSHIP,a.HISTORY_AFFILIATIONID,a.LOADNUMBER,a.DATABASE,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,"+
+				 * "a.UPDATENUMBER,a.E_ADDRESS,a.ORCID,a.SOURCE_TITLE,a.ES_STATUS, b.DOC_COUNT as DOC_COUNT  from "
+				 * + tableName + " a left outer join " + auDocCount_tableName +
+				 * " b on a.AUTHORID = b.AUTHORID "+
+				 * "where a.ES_STATUS is null and a.authorid in (select AUTHOR_ID from " +
+				 * metadataTableName + " where STATUS='matched')";
+				 * 
+				 */
+				
+	//HH added 02/05/2019 re-index all AF to ES using loadnumber, doc_count from fast instead of metadata/lookup tables to resolve doc_count discrepancy problem 
+				
 				query = "select a.M_ID,EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AUTHORID,a.STATUS,a.DATE_CREATED,DATE_REVISED,a.INITIALS,INDEXEDNAME,a.SURENAME,a.GIVENNAME,a.NAME_VARIANT,"+
 						"a.CLASSIFICATION_SUBJABBR,a.CLASSIFICATION_ASJC,a.PUBLICATION_RANGE,a.JORNAL_HISTORY_TYPE,a.JOURNALS,a.CURRENT_AFF_ID,a.CURRENT_AFF_TYPE,a.CURRENT_AFF_RELATIONSHIP,"+
 						"a.PARENT_AFF_ID,a.PARENT_AFF_TYPE,a.PARENT_AFF_RELATIONSHIP,a.HISTORY_AFFILIATIONID,a.LOADNUMBER,a.DATABASE,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,"+
-						"a.UPDATENUMBER,a.E_ADDRESS,a.ORCID,a.SOURCE_TITLE,a.ES_STATUS, b.DOC_COUNT as DOC_COUNT  from " +  tableName + " a left outer join " + auDocCount_tableName + " b on a.AUTHORID = b.AUTHORID "+
-						"where a.ES_STATUS is null and a.authorid in (select AUTHOR_ID from " + metadataTableName + " where STATUS='matched')";
+						"a.UPDATENUMBER,a.E_ADDRESS,a.ORCID,a.SOURCE_TITLE,a.ES_STATUS, b.DOC_COUNT as DOC_COUNT  from " +
+						tableName + " a, " + auDocCount_tableName + " b where a.ES_STATUS is null and a.AUTHORID = b.AUTHORID and b.DOC_COUNT>0";
 
+				
+				
+				// weekly AU index
+				/*
+				 * query =
+				 * "select a.M_ID,EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AUTHORID,a.STATUS,a.DATE_CREATED,DATE_REVISED,a.INITIALS,INDEXEDNAME,a.SURENAME,a.GIVENNAME,a.NAME_VARIANT,"
+				 * +
+				 * "a.CLASSIFICATION_SUBJABBR,a.CLASSIFICATION_ASJC,a.PUBLICATION_RANGE,a.JORNAL_HISTORY_TYPE,a.JOURNALS,a.CURRENT_AFF_ID,a.CURRENT_AFF_TYPE,a.CURRENT_AFF_RELATIONSHIP,"+
+				 * "a.PARENT_AFF_ID,a.PARENT_AFF_TYPE,a.PARENT_AFF_RELATIONSHIP,a.HISTORY_AFFILIATIONID,a.LOADNUMBER,a.DATABASE,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,"+
+				 * "a.UPDATENUMBER,a.E_ADDRESS,a.ORCID,a.SOURCE_TITLE,a.ES_STATUS, b.DOC_COUNT as DOC_COUNT  from "
+				 * + tableName + " a left outer join " + auDocCount_tableName +
+				 * " b on a.AUTHORID = b.AUTHORID "+
+				 * "where a.ES_STATUS is null and a.authorid in (select AUTHOR_ID from " +
+				 * metadataTableName + " where STATUS='matched')";
+				 */
+				
+				
 				
 				// for APR Re-index with doc_count using loadnumber
 				/*query = "select a.M_ID,EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AUTHORID,a.STATUS,a.DATE_CREATED,DATE_REVISED,a.INITIALS,INDEXEDNAME,a.SURENAME,a.GIVENNAME,a.NAME_VARIANT,"+
@@ -466,7 +528,7 @@ public class AuthorCombiner {
 						"where a.updatenumber=" + updateNumber + " and a.authorid in (select AUTHOR_ID from " + metadataTableName + " where STATUS='matched')";
 
 */
-
+				
 				//Testing
 
 				/*query = "select a.M_ID,EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AUTHORID,a.STATUS,a.DATE_CREATED,DATE_REVISED,a.INITIALS,INDEXEDNAME,a.SURENAME,a.GIVENNAME,a.NAME_VARIANT,"+
