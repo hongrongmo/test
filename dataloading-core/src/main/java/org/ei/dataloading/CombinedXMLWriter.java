@@ -347,6 +347,10 @@ public class CombinedXMLWriter
     public void writeIndexOnly(EVCombinedRec rec)throws Exception
     {
         begin();
+        setDatabase(rec.getString(EVCombinedRec.DATABASE));
+        setPui(rec.getString(EVCombinedRec.PUI));
+        setAccessnumber(rec.getString(EVCombinedRec.ACCESSION_NUMBER));
+        setLoadnumber(rec.getString(EVCombinedRec.LOAD_NUMBER));
         addIndex(rec.getStrings(EVCombinedRec.AUTHOR),"AUTHOR"); //AUTHOR
         if(rec.getStrings(EVCombinedRec.AUTHOR_AFFILIATION)!=null && (rec.getStrings(EVCombinedRec.AUTHOR_AFFILIATION))[0]!=null)
         {
@@ -910,7 +914,7 @@ public class CombinedXMLWriter
         //out.println("       <EV_SPARE9><![CDATA["+ notNull(rec.getString(EVCombinedRec.GRANTTEXT))+ " QstemQ " + notNull(getStems(rec.getString(EVCombinedRec.GRANTTEXT))) +"]]></EV_SPARE9>");//SPA9
         out.println("       <EV_SPARE9><![CDATA[]]></EV_SPARE9>");//SPA9
         out.println("       <EV_SPARE10><![CDATA[" + notNull(multiFormat(rec.getStrings(EVCombinedRec.GRANTID))) +" "+ notNull(multiFormat(rec.getStrings(EVCombinedRec.GRANTAGENCY))) + " "+
-        			notNull(rec.getString(EVCombinedRec.GRANTTEXT))+ " QstemQ " + notNull(getStems(rec.getString(EVCombinedRec.GRANTTEXT))) +"]]></EV_SPARE10>");//SPA0
+        			notNull(multiFormat(rec.getStrings(EVCombinedRec.GRANTTEXT)))+ " QstemQ " + notNull(getStems(multiFormat(rec.getStrings(EVCombinedRec.GRANTTEXT)))) +"]]></EV_SPARE10>");//SPA0
         
         out.println("   </ROW>");
         ++curRecNum;
@@ -1015,17 +1019,41 @@ public class CombinedXMLWriter
         }
         else
         {
-        	r = c.replaceAll("\\.","|DQD|"); //use DQD for dot(.)
+        	r = c.replaceAll("\\|","|QPIPEQ|"); //use QPIPEQ for | sign (added on 2/12/2019 by hmo)
+        	r = r.replaceAll("\\.","|DQD|"); //use DQD for dot(.)
         	r = r.replaceAll("-","|QMINUSQ|"); //use QMINUSQ for minus sign
-        	r = r.replaceAll("\\/","|QSLASHQ|"); //use QSLASHQ for slash(/)
+        	r = r.replaceAll("/","|QSLASHQ|"); //use QSLASHQ for slash(/)
         	r = r.replaceAll(" ","|QSPACEQ|"); //use QSPACEQ for space
         	r = r.replaceAll(",","|QCOMMAQ|"); //use QCOMMAQ for comma
         	r = r.replaceAll(":","|QCOLONQ|"); //use QCOLONQ for colon
         	r = r.replaceAll(";","|QSEMICOLONQ|"); //use QSEMICOLONQ for semicolon
-        	r = r.replaceAll("\\(","|QOPENINGBRACKETQ|"); //opening parenthesis
+        	r = r.replaceAll("\\(","|QOPENINGBRACKETQ|"); //use QOPENINGBRACKETQ opening parenthesis
         	r = r.replaceAll("\\)","|QCLOSINGBRACKETQ|"); //closing parenthesis
-        	r = r.replaceAll("&","|QANDQ|"); //& sign
+        	r = r.replaceAll("&","|QANDQ|"); //use QANDQ for & sign
         	r = r.replaceAll("_","|QUNDERLINEQ|"); //use QUNDERLINEQ for underline sign
+        	r = r.replaceAll("\\+","|QPLUSQ|"); //use QPLUSQ for plus sign (added on 2/11/2019 by hmo)
+        	r = r.replaceAll("~","|QTILDEQ|"); //use QTILDEQ for ~ sign (added on 2/12/2019 by hmo)
+        	r = r.replaceAll("`","|QACUTEQ|"); //use QACUTEQ for ` sign (added on 2/12/2019 by hmo)
+        	r = r.replaceAll("!","|QEXCLAMATIONQ|"); //use QEXCLAMATIONQ for ! sign (added on 2/12/2019 by hmo)
+        	r = r.replaceAll("@","|QATQ|"); //use QATQ for @ sign (added on 2/12/2019 by hmo)
+        	r = r.replaceAll("#","|QNUMBERQ|"); //use QNUMBERQ for # sign (added on 2/12/2019 by hmo)
+        	r = r.replaceAll("\\$","|QDOLLARQ|"); //use QDOLLARQ for $ sign (added on 2/12/2019 by hmo)
+        	r = r.replaceAll("%","|QPERCENTQ|"); //use QPERCENTQ for % sign (added on 2/12/2019 by hmo)
+        	r = r.replaceAll("\\^","|QCARETQ|"); //use QCARETQ for ^ sign (added on 2/12/2019 by hmo)
+        	r = r.replaceAll("\\*","|QASTERISKQ|"); //use QASTERISKQ for * sign (added on 2/12/2019 by hmo)
+        	r = r.replaceAll("=","|QEQUALQ|"); //use QEQUALQ for = sign (added on 2/12/2019 by hmo)
+        	r = r.replaceAll("\\{","|QOPENBRACEQ|"); //use QOPENBRACEQ for { sign (added on 2/12/2019 by hmo)
+        	r = r.replaceAll("\\}","|QCLOSEBRACEQ|"); //use QCLOSEBRACEQ for } sign (added on 2/12/2019 by hmo)
+        	r = r.replaceAll("\\[","|QOPENSQUAREBRACKETQ|"); //use QOPENSQUAREBRACETQ for [ sign (added on 2/12/2019 by hmo)
+        	r = r.replaceAll("\\]","|QCLOSESQUAREBRACKETQ|"); //use QCLOSESQUAREBRACKETQ for ] sign (added on 2/12/2019 by hmo)       	
+        	r = r.replaceAll("\\\\","|QBACKSLASHQ|"); //use QBACKSLASHQ for \ sign (added on 2/12/2019 by hmo)
+        	r = r.replaceAll("\"","|QQUOTEQ|"); //use QQUOTEQ for " sign (added on 2/12/2019 by hmo)
+        	r = r.replaceAll("'","|QSINGLEQUOTEQ|"); //use QSINGLEQUOTEQ for ' sign (added on 2/12/2019 by hmo)
+        	r = r.replaceAll("\\<","|QOPENANGLEBRACKETQ|"); //use QOPENANGLEBRACKETQ for < sign (added on 2/12/2019 by hmo)
+        	r = r.replaceAll("\\>","|QCLOSEANGLEBRACKETQ|"); //use QCLOSEANGLEBRACKETQ for > sign (added on 2/12/2019 by hmo)
+        	r = r.replaceAll("\\?","|QQUESTIONMARKQ|"); //use QQUESTIONMARKQ for ? sign (added on 2/12/2019 by hmo)
+        	
+        	
         }
         String[] ra = r.split("\\|",-1);
         StringBuffer rBuffer = new StringBuffer();
@@ -1169,7 +1197,7 @@ public class CombinedXMLWriter
        }
     }
 
-    private String[] addIndex(String s[], String key)
+    public String[] addIndex(String s[], String key)
     {
     	String[] o = null;
         try
@@ -1203,16 +1231,17 @@ public class CombinedXMLWriter
                
                     if(oo!=null && getDatabase()!=null && getDatabase().length()>=3)
                     {
-                    	indexWriter.println(Entity.prepareString(oo).toUpperCase().trim() + "\t" + getDatabase().substring(0,3) + "\t" + aid +"\t" + getPui()+"\t" + getLoadnumber());
+                    	indexWriter.println(Entity.prepareString(oo).toUpperCase().trim() + "\t" + getDatabase().substring(0,3) + "\t" + aid +"\t" + getPui()+"\t" + getLoadnumber()+"\t"+getAccessnumber());
                         //use accessnumber to replace pui 11/28/2018
                     	//indexWriter.println(Entity.prepareString(oo).toUpperCase().trim() + "\t" + getDatabase().substring(0,3) + "\t" + aid +"\t" + getAccessnumber()+"\t" + getLoadnumber());
+                    	//System.out.println("******* 1 ********"+ oo + "\t" + getDatabase().substring(0,3) + "\t" + aid +"\t" + getPui()+"\t" + getLoadnumber());
                     }
                     else
                     {
-                    	indexWriter.println("" + "\t" + getDatabase().substring(0,3) + "\t" + aid +"\t" + getPui()+"\t" + getLoadnumber());
+                    	indexWriter.println(" " + "\t" + getDatabase().substring(0,3) + "\t" + aid +"\t" + getPui()+"\t" + getLoadnumber()+"\t"+getAccessnumber());
                     	//System.out.println("*******something wrong with this record "+ oo + "\t" + getDatabase().substring(0,3) + "\t" + aid +"\t" + getPui()+"\t" + getLoadnumber()+" key="+key);
                     	//use accessnumber to replace pui 11/28/2018
-                    	//System.out.println("*******something wrong with this record "+ oo + "\t" + getDatabase().substring(0,3) + "\t" + aid +"\t" + getAccessnumber()+"\t" + getLoadnumber());
+                    	//System.out.println("******* 2 something wrong with this record "+ oo + "\t" + getDatabase().substring(0,3) + "\t" + aid +"\t" + getAccessnumber()+"\t" + getLoadnumber());
                     }
                     indexWriter.flush();
                     o[i] = oo;
@@ -1220,8 +1249,8 @@ public class CombinedXMLWriter
             }
             else
             {
-            	indexWriter.println("" + "\t" + getDatabase().substring(0,3) + "\t"+ ""  +"\t" + getPui()+"\t" + getLoadnumber());
-            	//System.out.println("******* "+key+" field with this record is empty "+ " " + "\t" + getDatabase().substring(0,3) + "\t" + " " +"\t" + getPui()+"\t" + getLoadnumber());
+            	indexWriter.println(" " + "\t" + getDatabase().substring(0,3) + "\t"+ "0"  +"\t" + getPui()+"\t" + getLoadnumber()+"\t"+getAccessnumber());
+            	//System.out.println("******* 3  "+key+" field with this record is empty "+ " " + "\t" + getDatabase().substring(0,3) + "\t" + " " +"\t" + getPui()+"\t" + getLoadnumber());
             }
 
         }
@@ -1245,7 +1274,7 @@ public class CombinedXMLWriter
         return s;
     }
 
-    private String addIndex(String s, String key)
+    public String addIndex(String s, String key)
     {
         s = cleanup(s);
         String sarray[] = {s};
