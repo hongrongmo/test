@@ -399,7 +399,6 @@ public class CheckCafeS3ContentsMultiThreads{
 			}
 
 
-			@Override
 			public void run() 
 			{	
 				String key = null;
