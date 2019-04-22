@@ -16,33 +16,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -73,7 +46,7 @@ import org.xml.sax.SAXException;
 
 import com.amazonaws.ClientConfiguration;
 
-import sun.awt.image.ByteArrayImageSource;
+//import sun.awt.image.ByteArrayImageSource;
 
 /**
  * 
