@@ -3,8 +3,10 @@ package vtw;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -63,6 +65,7 @@ public class Amazonsqs {
 	
 	public static void main(String[] args) throws Exception {
 
+		PrintWriter outWriter = null;
 		/*
 		 * The ProfileCredentialsProvider will return your [default]
 		 * credential profile by reading from the credentials file located at
@@ -84,8 +87,9 @@ public class Amazonsqs {
 		}
 
 		sqs = new AmazonSQSClient(credentials);
-		Region euWest2 = Region.getRegion(Regions.EU_WEST_1);
-		sqs.setRegion(euWest2);
+		Region euWest2 = Region.getRegion(Regions.EU_WEST_1);    // for VTW
+		Region usEast1 = Region.getRegion(Regions.US_EAST_1);	// for cafe
+		sqs.setRegion(usEast1);
 
 		System.out.println("===========================================");
 		System.out.println("Getting Started with Amazon SQS");
@@ -93,6 +97,8 @@ public class Amazonsqs {
 
 		try {
 
+			File out = new File ("ev_cafe_after_initial_refeed.txt");
+			outWriter = new PrintWriter(out);
 			// PROD Queue: prod-contributor-event-queue-EV
 			// UAT Queue:  acc-contributor-event-queue-EV
 			// UAT BO Backfill: "acc-backfill-queue-EV";  
@@ -106,9 +112,21 @@ public class Amazonsqs {
 			//String accountID = "461549540087";
 			
 			
-			String queueName = "prod-backfill-queue-EV";				// WO Prod Qeueue
-			String accountID = "790640479873";
+			/*
+			 * String queueName = "prod-backfill-queue-EV"; // WO Prod Qeueue String
+			 * accountID = "790640479873";
+			 */
 			
+			
+			// HH 03/25/2019 Added to get the new cafe subscription messages for APR/IPR new SNS topics
+			/*"arn:aws:sns:us-east-1:814132467461:SCContentIPRFeedTopic-prod",
+            "arn:aws:sns:us-east-1:814132467461:SCContentAPRFeedTopic-prod"*/
+			
+			
+			String queueName = "EVCafeIprRefeed";
+			String accountID = "230521890328";
+			
+		
 	
 			// UAT Backfill Queueu for WO: acc-backfill-queue-EV
 			/*GetQueueUrlRequest request = new GetQueueUrlRequest().withQueueName("prod-contributor-event-queue-EV")
@@ -153,16 +171,17 @@ public class Amazonsqs {
 
 
 			//while(true)
-			for(int i = 0; i<2;i++)
+			for(int i = 0; i<9000;i++)
 			{				
 
 				ReceiveMessageResult receiveMessageResult = sqs.receiveMessage(receiveMessageRequest);
 
 
 				List<Message> messages = receiveMessageResult.getMessages();
-				System.out.println("MessagesList size: " + messages.size());
+				//System.out.println("MessagesList size: " + messages.size());
 
 
+				int flag = 0; 		// added 03/25/2019 to identify cafe subscription message for the 2 new sns topics for IPR & APR
 				if(messages.size() >0)
 				{
 					for(Message message:messages)
@@ -181,19 +200,29 @@ public class Amazonsqs {
 
 							// change message visibility timeout
 							ChangeMessageVisibilityRequest msgVisibilityReq = new ChangeMessageVisibilityRequest(myQueueUrl, msgReciptHandle, 1200);
-							System.out.println("Message VisibilityTimeOut: " + msgVisibilityReq.getVisibilityTimeout());
+							//System.out.println("Message VisibilityTimeOut: " + msgVisibilityReq.getVisibilityTimeout());
 							
 							//System.out.println("SQS Message: " +  messageBody);
 
 							//parse SQS Message Fields& determine whether it is sent to "E-Village" message
-							System.out.println("Message Body: " +  messageBody);
-							for(String key: msgAttributes.keySet())
+							//System.out.println("Message Body: " +  messageBody);
+							outWriter.write(messageBody + "\n");
+							if(messageBody.contains("\\\"prefix\\\""))
 							{
-								System.out.println("key: " + key + " , value: " +  msgAttributes.get(key));
+								System.out.println(messageBody);
+								deleteMessage(msgReciptHandle);
 							}
+									
+							
+							// only for debugging, uncomment when needed
+							/*
+							 * for(String key: msgAttributes.keySet()) { System.out.println("key: " + key +
+							 * " , value: " + msgAttributes.get(key)); }
+							 */
 
 							// delete the message
-							//deleteMessage(msgReciptHandle);
+							
+								//deleteMessage(msgReciptHandle);
 						}
 					}
 				}
@@ -224,17 +253,33 @@ public class Amazonsqs {
 					"being able to access the network.");
 			System.out.println("Error Message: " + ace.getMessage());
 		}
+		finally
+		{
+			if(outWriter !=null)
+			{
+				try
+				{
+					outWriter.flush();
+					outWriter.close();
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+		}
 	}
 
 	private static void deleteMessage(String messageHandle)
 	{
 		if(messageHandle !=null && messageHandle.length() >0)
 		{
-			System.out.println("Deleting a message: " + messageHandle);
+			//System.out.println("Deleting a message: " + messageHandle);
 			DeleteMessageRequest deleteRequest = new DeleteMessageRequest(myQueueUrl, messageHandle);
 			sqs.deleteMessage(deleteRequest);
 		}
 	}
+	
 
 
 }
