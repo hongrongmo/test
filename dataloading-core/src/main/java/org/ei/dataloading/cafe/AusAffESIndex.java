@@ -332,7 +332,7 @@ public class AusAffESIndex {
 		curRecNum ++;
 	}
 
-	// Bulk delete
+	// Bulk delete by doc id "_id"
 	public int createBulkDelete(String doc_type, List<String>docIds)
 	{
 		

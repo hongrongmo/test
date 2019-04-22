@@ -72,6 +72,8 @@ public class DownloadloadFileFromS3 {
 			file =new File (currDir);
 			if(!file.exists())
 				file.mkdir();
+			else
+				System.out.println("Dir already exist");
 			
 			s3Client = AmazonS3Service.getInstance().getAmazonS3Service();
 		}
