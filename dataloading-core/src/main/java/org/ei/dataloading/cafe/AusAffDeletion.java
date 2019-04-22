@@ -77,6 +77,7 @@ public class AusAffDeletion {
 	static int recsPerEsbulk;
 	static String esDomain = "search-evcafe5-ucqg6c7jnb4qbvppj2nee4muwi.us-east-1.es.amazonaws.com";
 	static String esIndexName;		// added 05/10/2018 as ES 6.2 and up split types in separate indices
+	static String cafePuiMasterTable = "cafe_pui_list_master";		// added 03/29/2019
 
 
 
@@ -99,7 +100,7 @@ public class AusAffDeletion {
 
 	public static void main(String[] args)
 	{
-		if(args.length >10)
+		if(args.length >11)
 		{
 			if(args[0] !=null)
 			{
@@ -175,6 +176,12 @@ public class AusAffDeletion {
 					System.out.println("Invalid ES Index Name for AU/AF profile deletion from ES, re-try with ESIndexName cafe");
 					System.exit(1);
 				}
+			}
+			
+			if(args[11] !=null)
+			{
+				cafePuiMasterTable = args[11];
+				System.out.println("Cafe Pui List table: " + cafePuiMasterTable);
 			}
 
 		}
@@ -274,10 +281,45 @@ public class AusAffDeletion {
 				 */
 
 				//05/25/2018after discussion with Frank, we modify the logic to only get the inclusive ID list to be deleted without checking diff status
-				query = "select " + lookupTable_columnName + " from " + lookupTable+ " where " + lookupTable_columnName + " in (select " + 
-						lookupTable_columnName + " from " + lookupTable + " where pui in (select pui from " + deletionTable + " )) " +
-						"minus select " + lookupTable_columnName + " from " + lookupTable + " where " + lookupTable_columnName + " in (select " + 
-						lookupTable_columnName + " from " + lookupTable + " where pui in (select pui from " + deletionTable + ")) and status ='matched'";
+				//03/29/2019 comment Current Prod logic, uncomment after testing new logic below
+				
+				/*
+				 * query = "select " + lookupTable_columnName + " from " + lookupTable+
+				 * " where " + lookupTable_columnName + " in (select " + lookupTable_columnName
+				 * + " from " + lookupTable + " where pui in (select pui from " + deletionTable
+				 * + " )) " + "minus select " + lookupTable_columnName + " from " + lookupTable
+				 * + " where " + lookupTable_columnName + " in (select " +
+				 * lookupTable_columnName + " from " + lookupTable +
+				 * " where pui in (select pui from " + deletionTable +
+				 * ")) and status ='matched'";
+				 */
+				
+				//Added 03/29/2019 new logic provided by Hongrong of matching based on cafe pui or all secondary puis using cafe_pui_list_master plus original deletion table
+				
+				/*
+				 * query = "select " + lookupTable_columnName + " from " + lookupTable+
+				 * " where " + lookupTable_columnName + " in (select " + lookupTable_columnName
+				 * + " from " + lookupTable + " where pui in (select puisecondary from "+
+				 * cafePuiMasterTable + " where pui in(select a.pui from " + cafePuiMasterTable
+				 * + " a, " + deletionTable + " b where a.puisecondary=b.pui))) " +
+				 * "minus select " + lookupTable_columnName + " from " + lookupTable + " where "
+				 * + lookupTable_columnName + " in (select " + lookupTable_columnName + " from "
+				 * + lookupTable + " where pui in (select puisecondary from "+
+				 * cafePuiMasterTable + " where pui in(select a.pui from "+ cafePuiMasterTable +
+				 * " a, " + deletionTable + " b where a.puisecondary=b.pui)))" +
+				 * " and status ='matched'";
+				 */
+				
+				//Added 04/17/2019 new logic without first query is more optimized than with it as per testing
+				
+				query = "select " + lookupTable_columnName + " from " + lookupTable + " where pui in (select puisecondary from "+ cafePuiMasterTable +
+						" where pui in(select a.pui from " + cafePuiMasterTable + " a, " + deletionTable + " b where a.puisecondary=b.pui)) " +
+						"minus select " + lookupTable_columnName + " from " + lookupTable + " where pui in (select puisecondary from "+ cafePuiMasterTable + 
+						" where pui in(select a.pui from "+ cafePuiMasterTable + " a, " + deletionTable + " b where a.puisecondary=b.pui))" +
+						" and status ='matched'";
+				
+				
+				
 
 				System.out.println(query);
 				rs = stmt.executeQuery(query);
@@ -299,12 +341,44 @@ public class AusAffDeletion {
 			 */
 			else if(source.equalsIgnoreCase("lookup"))
 			{
+				//03/29/2019 comment Current Prod logic, uncomment after testing new logic below
+				
+				/*
+				 * query = "select " + lookupTable_columnName + ",status from " + lookupTable +
+				 * " where " + lookupTable_columnName + "  in " + "(select " +
+				 * lookupTable_columnName + " from " + "(select " + lookupTable_columnName +
+				 * " ,pui from " + lookupTable + " where pui in (select pui from " +
+				 * deletionTable + ")" + " minus " + "select " + lookupTable_columnName +
+				 * ",pui from " + deletionTable + "))" + " and pui not in (select pui from " +
+				 * deletionTable + ") order by " + lookupTable_columnName;
+				 */
+				
+				//Added 03/29/2019 new logic provided by Hongrong of matching based on cafe pui or all secondary puis using cafe_pui_list_master plus original deletion table
+				
+				/*
+				 * query = "select " + lookupTable_columnName + ",status from " + lookupTable +
+				 * " where " + lookupTable_columnName + "  in " + "(select " +
+				 * lookupTable_columnName + " from " + "(select " + lookupTable_columnName +
+				 * " from " + lookupTable + " where pui in (select puisecondary from "+
+				 * cafePuiMasterTable + " where pui in(select a.pui from " + cafePuiMasterTable
+				 * + " a, " + deletionTable + " b where a.puisecondary=b.pui))" + " minus " +
+				 * "select " + lookupTable_columnName + " from " + deletionTable +
+				 * ")) and pui not in " + "((select puisecondary from "+ cafePuiMasterTable
+				 * +" where pui in(select a.pui from " + cafePuiMasterTable + " a, " +
+				 * deletionTable + " b where a.puisecondary=b.pui))) order by  "+
+				 * lookupTable_columnName;
+				 */
+				
+				//Added 04/17/2019 new logic without first query is more optimized than with it
+				
 				query = "select " + lookupTable_columnName + ",status from " + lookupTable + " where " + lookupTable_columnName + "  in " + 
-						"(select " + lookupTable_columnName + " from " +
-						"(select " + lookupTable_columnName + " ,pui from " + lookupTable + " where pui in (select pui from " + deletionTable + ")" +
+						"(select " + lookupTable_columnName + " from " + lookupTable + " where pui in (select puisecondary from "+ cafePuiMasterTable + 
+						" where pui in(select a.pui from " + cafePuiMasterTable + " a, " + deletionTable + " b where a.puisecondary=b.pui)" +
 						" minus " +
-						"select " + lookupTable_columnName + ",pui from " + deletionTable + "))" + 
-						" and pui not in (select pui from " + deletionTable + ") order by " + lookupTable_columnName;
+						"select " + lookupTable_columnName + " from " + deletionTable + ")) and pui not in " +
+						"((select puisecondary from "+ cafePuiMasterTable +" where pui in(select a.pui from " + cafePuiMasterTable + " a, " + 
+						deletionTable + " b where a.puisecondary=b.pui))) order by  "+ lookupTable_columnName;
+				
 
 				System.out.println(query);
 				rs = stmt.executeQuery(query);
@@ -651,8 +725,12 @@ public class AusAffDeletion {
 		try
 		{
 			//2. delete records match cafe ANI PUI from lookup tables
-			query = "delete from " + lookupTable + " where pui in (select pui from " + deletionTable + ")" ;
-
+			//query = "delete from " + lookupTable + " where pui in (select pui from " + deletionTable + ")" ;
+			
+			//Added 03/29/2019 new logic provided by Hongrong of matching based on cafe pui or all secondary puis using cafe_pui_list_master plus original deletion table
+			query = "delete from " + lookupTable + " where pui in (select puisecondary from "+ cafePuiMasterTable + 
+					" where pui in(select a.pui from " + cafePuiMasterTable + " a, " + deletionTable + " b where a.puisecondary=b.pui))" ;
+			
 			System.out.println("Running query...." + query);
 
 			stmt = con.createStatement();
@@ -732,7 +810,13 @@ public class AusAffDeletion {
 								+ profileIds + ")";*/
 
 						// 12/08/2017 update lookup based on PUI only; does not matter the auid/affid
-						query = "update " + lookupTable + " set status='unmatched' where pui in (select pui from " + deletionTable + ")";
+						//query = "update " + lookupTable + " set status='unmatched' where pui in (select pui from " + deletionTable + ")";
+						
+						//Added 03/29/2019 new logic provided by Hongrong of matching based on cafe pui or all secondary puis using cafe_pui_list_master plus original deletion table
+						query = "update " + lookupTable + " set status='unmatched' where pui in (select puisecondary from "+ cafePuiMasterTable +
+								" where pui in(select a.pui from " + cafePuiMasterTable + " a, " + deletionTable + " b where a.puisecondary=b.pui))";
+						
+						
 
 						System.out.println("Running query...." + query);
 						count = stmt.executeUpdate(query);
@@ -753,7 +837,13 @@ public class AusAffDeletion {
 
 				}
 
-				query = "update " + lookupTable + " set status='unmatched' where pui in (select pui from " + deletionTable + ")";
+				//query = "update " + lookupTable + " set status='unmatched' where pui in (select pui from " + deletionTable + ")";
+				
+				//Added 03/29/2019 new logic provided by Hongrong of matching based on cafe pui or all secondary puis using cafe_pui_list_master plus original deletion table
+				query = "update " + lookupTable + " set status='unmatched' where pui in (select puisecondary from "+ cafePuiMasterTable +
+						" where pui in(select a.pui from " + cafePuiMasterTable + " a, " + deletionTable + " b where a.puisecondary=b.pui))";
+				
+				
 				System.out.println("Running query...." + query);
 				count = stmt.executeUpdate(query);
 				con.commit();
