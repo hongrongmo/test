@@ -17,17 +17,6 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerConfigurationException;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.TransformerFactoryConfigurationError;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
-
 import org.apache.commons.io.ByteOrderMark;
 import org.apache.commons.io.input.BOMInputStream;
 import org.apache.http.Header;
@@ -37,10 +26,6 @@ import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.util.EntityUtils;
-import org.w3c.dom.Document;
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
-
 import com.amazonaws.util.IOUtils;
 
 import vtw.DigestAuthentication.PatentHttpResponseHandler;
@@ -74,7 +59,7 @@ public class xmlFileContent {
 			sendRequest(request);
 
 		}
-		catch (SAXException e) {
+		/*catch (SAXException e) {
 
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -87,6 +72,11 @@ public class xmlFileContent {
 		}
 		catch (TransformerException e) {
 			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+		
+		catch(Exception e)
+		{
 			e.printStackTrace();
 		}
 
