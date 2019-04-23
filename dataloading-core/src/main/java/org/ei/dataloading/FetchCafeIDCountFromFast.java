@@ -52,7 +52,7 @@ public class FetchCafeIDCountFromFast {
 			doc_type = args[0];
 			if(doc_type.equalsIgnoreCase("apr"))
 			{
-				tableName = "HH_AUID_to_delete";
+				tableName = "author_count";
 				columnName = "authorid";
 				esField = "auid";
 			}

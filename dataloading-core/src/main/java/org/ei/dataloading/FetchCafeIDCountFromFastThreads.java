@@ -176,7 +176,9 @@ public class FetchCafeIDCountFromFastThreads
 
 		//HH 02/23/2019 Added since we started to oull auid doc_count from fast so to get most recent version of all cpx afid, get from lkup because institute_count still has the old version
 		if(doc_type !=null && doc_type.equalsIgnoreCase("ipr"))
-			query = "select distinct institute_id from cmb_af_lookup where status='matched'";
+			//query = "select distinct institute_id from cmb_af_lookup where status='matched'";   //lookup table missing some records with updated status, so use following query for more secur
+			// added 04/23/2019 for robust match
+			query = "select distinct INSTITUTE_ID from cmb_af_lookup where pui in (select cafe_pui from db_xml.bd_master where database='cpx')";
 		else if(doc_type !=null && doc_type.equalsIgnoreCase("apr"))
 			query = "select " + columnName + " from " + tableName;
 		
