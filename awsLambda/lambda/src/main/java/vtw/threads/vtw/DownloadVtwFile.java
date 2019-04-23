@@ -16,10 +16,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-
 import org.apache.commons.httpclient.params.HttpMethodParams;
 import org.apache.commons.io.ByteOrderMark;
 import org.apache.commons.io.IOUtils;
@@ -40,10 +36,6 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.apache.log4j.Logger;
 import org.apache.wink.common.model.wadl.HTTPMethods;
-import org.w3c.dom.Document;
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
-
 import com.amazonaws.ClientConfiguration;
 
 //import sun.awt.image.ByteArrayImageSource;
