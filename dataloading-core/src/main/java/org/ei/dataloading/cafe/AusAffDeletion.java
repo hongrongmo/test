@@ -355,29 +355,35 @@ public class AusAffDeletion {
 				
 				//Added 03/29/2019 new logic provided by Hongrong of matching based on cafe pui or all secondary puis using cafe_pui_list_master plus original deletion table
 				
+				
+				  query = "select " + lookupTable_columnName + ",status from " + lookupTable +
+				  " where " + lookupTable_columnName + "  in " + "(select " +
+				  lookupTable_columnName + " from " + "(select " + lookupTable_columnName +
+				  " from " + lookupTable + " where pui in (select puisecondary from "+
+				  cafePuiMasterTable + " where pui in(select a.pui from " + cafePuiMasterTable
+				  + " a, " + deletionTable + " b where a.puisecondary=b.pui))" + " minus " +
+				  "select " + lookupTable_columnName + " from " + deletionTable +
+				  ")) and pui not in " + "((select puisecondary from "+ cafePuiMasterTable
+				  +" where pui in(select a.pui from " + cafePuiMasterTable + " a, " +
+				  deletionTable + " b where a.puisecondary=b.pui))) order by  "+
+				  lookupTable_columnName;
+				 
+				
+				//Added 04/17/2019 new logic without first query is more optimized than with it
+				
 				/*
 				 * query = "select " + lookupTable_columnName + ",status from " + lookupTable +
 				 * " where " + lookupTable_columnName + "  in " + "(select " +
-				 * lookupTable_columnName + " from " + "(select " + lookupTable_columnName +
-				 * " from " + lookupTable + " where pui in (select puisecondary from "+
-				 * cafePuiMasterTable + " where pui in(select a.pui from " + cafePuiMasterTable
-				 * + " a, " + deletionTable + " b where a.puisecondary=b.pui))" + " minus " +
-				 * "select " + lookupTable_columnName + " from " + deletionTable +
-				 * ")) and pui not in " + "((select puisecondary from "+ cafePuiMasterTable
+				 * lookupTable_columnName + " from " + lookupTable +
+				 * " where pui in (select puisecondary from "+ cafePuiMasterTable +
+				 * " where pui in(select a.pui from " + cafePuiMasterTable + " a, " +
+				 * deletionTable + " b where a.puisecondary=b.pui))" + " minus " + "select " +
+				 * lookupTable_columnName + " from " + deletionTable + ")) and pui not in " +
+				 * "((select puisecondary from "+ cafePuiMasterTable
 				 * +" where pui in(select a.pui from " + cafePuiMasterTable + " a, " +
 				 * deletionTable + " b where a.puisecondary=b.pui))) order by  "+
 				 * lookupTable_columnName;
 				 */
-				
-				//Added 04/17/2019 new logic without first query is more optimized than with it
-				
-				query = "select " + lookupTable_columnName + ",status from " + lookupTable + " where " + lookupTable_columnName + "  in " + 
-						"(select " + lookupTable_columnName + " from " + lookupTable + " where pui in (select puisecondary from "+ cafePuiMasterTable + 
-						" where pui in(select a.pui from " + cafePuiMasterTable + " a, " + deletionTable + " b where a.puisecondary=b.pui)" +
-						" minus " +
-						"select " + lookupTable_columnName + " from " + deletionTable + ")) and pui not in " +
-						"((select puisecondary from "+ cafePuiMasterTable +" where pui in(select a.pui from " + cafePuiMasterTable + " a, " + 
-						deletionTable + " b where a.puisecondary=b.pui))) order by  "+ lookupTable_columnName;
 				
 
 				System.out.println(query);
