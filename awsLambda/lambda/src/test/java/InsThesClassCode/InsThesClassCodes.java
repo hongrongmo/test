@@ -22,7 +22,6 @@ import org.jdom2.JDOMException;
 
 
 import org.jdom2.input.SAXBuilder;
-import org.xml.sax.SAXException;
 
 public class InsThesClassCodes {
 
