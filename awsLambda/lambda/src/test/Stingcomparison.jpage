@@ -21,3 +21,13 @@ int len = splitedStr.length;
 len
 if(splitedStr[1] !=null || splitedStr[1].isEmpty())
 	System.out.println(splitedStr[0]);
+
+
+String number= "01200";
+String number2 = number.replaceFirst("^0+","");
+number2
+
+int x=11;
+int y=x/2;
+y
+

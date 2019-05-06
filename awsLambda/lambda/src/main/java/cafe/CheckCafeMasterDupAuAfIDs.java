@@ -10,7 +10,9 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-//import org.ei.common.Constants;  // not working at jar build
+import org.ei.common.bd.BdAffiliations;
+
+import org.ei.common.Constants;  // not working at jar build
 
 
 /*
@@ -35,10 +37,6 @@ This record has 2 instances of 7601458357 in the auid field. I believe each inst
  */
 public class CheckCafeMasterDupAuAfIDs 
 {
-	public static final String AUDELIMITER = new String(new char[] {30});
-	public static final String IDDELIMITER = new String(new char[] {31});
-	public static final String GROUPDELIMITER = new String(new char[] {29});
-
 	
 	static String doc_type = "apr";
 
@@ -101,7 +99,7 @@ public class CheckCafeMasterDupAuAfIDs
 				//query = "select m_id,author||' ' || author_1 as author from cafe_master where rownum<700";
 				query = "select m_id,author,author_1 from cafe_master";
 			else if (doc_type.equalsIgnoreCase("ipr"))
-				query = "select m_id,affiliation,affiliation_1 as affiliation from cafe_master and rownum<11";
+				query = "select m_id,affiliation,affiliation_1 as affiliation from cafe_master'";
 			
 			System.out.println("Query: " + query);
 			
@@ -115,11 +113,14 @@ public class CheckCafeMasterDupAuAfIDs
 				if(rs.getString(2) != null && !(rs.getString(2).isBlank()))
 					dbValue.append(rs.getString(2));
 				if(rs.getString(3) !=null && !(rs.getString(3).isBlank()))
-					dbValue.append(AUDELIMITER).append(rs.getString(3));
+					dbValue.append(Constants.AUDELIMITER).append(rs.getString(3));
 				
 				if(dbValue.length() >0)
 				{
-					obj.getProfileIds(dbValue.toString());
+					if(doc_type.equalsIgnoreCase("apr"))
+							obj.getProfileIds(dbValue.toString());
+					else if(doc_type.equalsIgnoreCase("ipr"))
+						obj.getAffiliationProfileIds(dbValue.toString());
 					if(obj.idFrequencyList.size() >0)
 					{
 						max = Collections.max(obj.idFrequencyList.values());
@@ -206,12 +207,12 @@ public class CheckCafeMasterDupAuAfIDs
 	{
 		String auid = null;
 		idFrequencyList.clear();
-		 String [] authors = dbColumnValue.split(AUDELIMITER, -1);
+		 String [] authors = dbColumnValue.split(Constants.AUDELIMITER, -1);
 		 for(int i=0; i< authors.length; i++)
 		 {
 			 if(!(authors[i].trim().isBlank()))
 			 {
-				 String [] auelements = authors[i].trim().split(IDDELIMITER);
+				 String [] auelements = authors[i].trim().split(Constants.IDDELIMITER);
 				 
 				 if(auelements.length > 0)
 				 {
@@ -233,6 +234,33 @@ public class CheckCafeMasterDupAuAfIDs
 		 }
 		 
 	}
+	
+	protected void getAffiliationProfileIds(String dbColumnValue)
+	{
+
+		String[] afid = null;
+		idFrequencyList.clear();
+
+			if(!(dbColumnValue.trim().isBlank()))
+			{
+				BdAffiliations caff = new BdAffiliations(dbColumnValue);
+				caff.getSearchValue();    
+				afid = caff.getAffiliationId();
+
+				for(int j=0;j<afid.length;j++)
+				{
+					if(idFrequencyList.containsKey(afid[j]))
+					{
+						idFrequencyList.put(afid[j], idFrequencyList.get(afid[j]) + 1);
+					}
+					else
+						idFrequencyList.put(afid[j],1);
+				}
+
+			}
+
+	}
+		 
 	
 	
 	protected static Connection getConnection(String connectionURL, String driver, String username, String password) throws Exception
