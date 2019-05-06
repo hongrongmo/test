@@ -34,23 +34,6 @@ import org.apache.http.impl.client.HttpClients;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import vtw.DigestAuthentication;
 import awses.TestESSign.MyErrorHandler;
 import awses.TestESSign.MyHttpResponseHandler;

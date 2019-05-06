@@ -1,4 +1,6 @@
 import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 
@@ -19,6 +21,7 @@ public class ReadFile {
 			
 			String fileContent = scan.next();
 			System.out.println("File Content: " + fileContent);
+			
 		}
 		catch(Exception e)
 		{
