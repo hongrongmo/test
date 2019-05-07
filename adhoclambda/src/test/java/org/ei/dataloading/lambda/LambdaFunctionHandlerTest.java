@@ -1,6 +1,4 @@
-package com.engineeringvillage.dataloading.lambda;
-
-import static org.mockito.Mockito.when;
+package org.ei.dataloading.lambda;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,19 +11,15 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
-import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.events.S3Event;
-import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.event.S3EventNotification.S3BucketEntity;
 import com.amazonaws.services.s3.event.S3EventNotification.S3Entity;
 import com.amazonaws.services.s3.event.S3EventNotification.S3EventNotificationRecord;
 import com.amazonaws.services.s3.event.S3EventNotification.S3ObjectEntity;
 import com.amazonaws.services.s3.model.GetObjectRequest;
-import com.amazonaws.services.s3.model.ObjectMetadata;
-import com.amazonaws.services.s3.model.S3Object;
 
 /**
  * A simple test harness for locally invoking your Lambda function handler.
@@ -34,11 +28,6 @@ import com.amazonaws.services.s3.model.S3Object;
 public class LambdaFunctionHandlerTest {
 
     private S3Event event;
-
-    @Mock
-    private AmazonS3 s3Client;
-    @Mock
-    private S3Object s3Object;
 
     @Captor
     private ArgumentCaptor<GetObjectRequest> getObjectRequest;

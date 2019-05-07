@@ -1,4 +1,4 @@
-package com.engineeringvillage.dataloading.lambda;
+package org.ei.dataloading.lambda;
 
 import com.amazonaws.services.lambda.runtime.ClientContext;
 import com.amazonaws.services.lambda.runtime.CognitoIdentity;
