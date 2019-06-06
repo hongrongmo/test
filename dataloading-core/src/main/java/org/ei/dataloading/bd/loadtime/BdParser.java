@@ -40,6 +40,7 @@ public class BdParser
 	private String accessNumber;
 	private String pui;
 	private String databaseName = "cpx";
+	private String updatenumber;
 	private String s3FileLoc = "";   //HH 04/05/2016 for Cafe
 	private DataLoadDictionary dictionary = new DataLoadDictionary();
 
@@ -116,6 +117,16 @@ public class BdParser
 	public String getWeekNumber()
 	{
 		return this.weekNumber;
+	}
+	
+	public void setUpdateNumber(String updatenumber)
+	{
+		this.updatenumber = updatenumber;
+	}
+
+	public String getUpdateNumber()
+	{
+		return this.updatenumber;
 	}
 
 	public void setDatabaseName(String databaseName)
@@ -339,6 +350,7 @@ public class BdParser
 							record.put("PII",pii.getTextTrim());
 						}
 						List itemidList = itemidlist.getChildren("itemid",noNamespace);
+						String  puisecondary="|";
 						for(int i=0;i<itemidList.size();i++)
 						{
 							Element itemidElement = (Element)itemidList.get(i);
@@ -377,8 +389,8 @@ public class BdParser
 								record.put("SEC",pui);
 							}
 							else if (itemid_idtype != null && itemid_idtype.equalsIgnoreCase("PUISECONDARY"))
-							{
-								String  puisecondary = itemidElement.getTextTrim();							
+							{								
+								puisecondary = puisecondary+itemidElement.getTextTrim()+"|";							
 								record.put("PUISECONDARY",puisecondary);
 								//System.out.println("PUISECONDARY="+puisecondary);
 							}
@@ -472,7 +484,7 @@ public class BdParser
 										}
 									}
 
-									record.put("AUTHORKEYWORD",authorKeywordBuffer.toString());
+									record.put("AUTHORKEYWORD",authorKeywordBuffer.toString().replaceAll(">\\s+<", "><"));
 								}
 							}//citinfo
 							
@@ -541,8 +553,8 @@ public class BdParser
 												System.out.println("6 "+dictionary.mapEntity(getMixData(cittextelm.getContent())));
 											}
 											*/
-											//cittext.append(dictionary.mapEntity(getMixData(cittextelm.getContent())));
-											cittext.append(getMixData(cittextelm.getContent()));
+											cittext.append(dictionary.mapEntity(getMixData(cittextelm.getContent())));
+											//cittext.append(getMixData(cittextelm.getContent()));
 										}
 										cittext.append(Constants.IDDELIMITER);
 										if(cittextelm.getAttribute("original")!=null)
@@ -567,7 +579,7 @@ public class BdParser
 
 									}
 
-									record.put("CITATIONTITLE",citation);
+									record.put("CITATIONTITLE",citation.replaceAll(">\\s+<", "><"));
 								}
 							}
 
@@ -624,12 +636,12 @@ public class BdParser
 										//abstractString = abstractString.replaceAll("&#55349;&#56476;","&#119964;");//need to fix this bug later hmo@10/26/2016
 										if(docType!=null && docType.equals("st") && abstractPerspective!=null && abstractPerspective.equalsIgnoreCase("EDITED"))
 										{
-											record.put("ABSTRACTDATA", abstractString);
+											record.put("ABSTRACTDATA", abstractString.replaceAll(">\\s+<", "><"));
 											break;
 										}
 										else 
 										{
-											record.put("ABSTRACTDATA", abstractString);
+											record.put("ABSTRACTDATA", abstractString.replaceAll(">\\s+<", "><"));
 										}
 										
 									}
@@ -1231,10 +1243,7 @@ public class BdParser
 								}
 							}
 
-						}
-
-						//weekNumber
-						//record.put("LOADNUMBER",weekNumber);
+						}						
 
 						// only for elt database conversion
 						record.put("DATABASE",databaseName.trim());
@@ -1242,6 +1251,9 @@ public class BdParser
 						//HH 04/05/2016 for Cafe
 						record.put("UPDATERESOURCE", s3FileLoc);
 					}
+					
+					//UpdateNumber
+					record.put("UPDATENUMBER",this.updatenumber);					
 
 					if(item.getChild("loadnumber", noNamespace) != null)
 					{

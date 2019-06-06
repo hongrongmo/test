@@ -66,7 +66,7 @@ public class BaseTableRecord
    	public static final BaseTableRecord PAGECOUNT= new BaseTableRecord("PAGECOUNT", new Integer(32), "cpx");
    	public static final BaseTableRecord ARTICLENUMBER  = new BaseTableRecord("ARTICLENUMBER", new Integer(64), "cpx");
    	public static final BaseTableRecord PUBLICATIONYEAR= new BaseTableRecord("PUBLICATIONYEAR", new Integer(9), "cpx");
-   	public static final BaseTableRecord PUBLICATIONDATE= new BaseTableRecord("PUBLICATIONDATE", new Integer(32), "cpx");
+   	public static final BaseTableRecord PUBLICATIONDATE= new BaseTableRecord("PUBLICATIONDATE", new Integer(256), "cpx");
    	public static final BaseTableRecord EDITORS = new BaseTableRecord("EDITORS", new Integer(4000), "cpx");
    	public static final BaseTableRecord PUBLISHERNAME  = new BaseTableRecord("PUBLISHERNAME", new Integer(2400), "cpx");
    	public static final BaseTableRecord PUBLISHERADDRESS = new BaseTableRecord("PUBLISHERADDRESS", new Integer(3200), "cpx");
@@ -140,8 +140,9 @@ public class BaseTableRecord
 	public static final BaseTableRecord APIAT = new BaseTableRecord("APIAT", new Integer(4000), "elt");
 	public static final BaseTableRecord SEQ_NUM = new BaseTableRecord("SEQ_NUM", new Integer(4000), "elt");
 	public static final BaseTableRecord SOURCEWEBSITE = new BaseTableRecord("SOURCEWEBSITE", new Integer(1000), "cpx");
-	public static final BaseTableRecord GRANTLIST = new BaseTableRecord("GRANTLIST", new Integer(4000), "cpx");
+	public static final BaseTableRecord GRANTLIST = new BaseTableRecord("GRANTLIST", new Integer(3900), "cpx");
 	public static final BaseTableRecord EID = new BaseTableRecord("EID", new Integer(32), "cpx");
+	public static final BaseTableRecord UPDATENUMBER = new BaseTableRecord("UPDATENUMBER", new Integer(10000), "cpx");
 	public static final BaseTableRecord UPDATERESOURCE= new BaseTableRecord("UPDATERESOURCE", new Integer(4000), "cpx");   //HH 04/05/2016 for Cafe
 	public static final BaseTableRecord ISOPENACESS= new BaseTableRecord("ISOPENACESS", new Integer(10), "cpx");   //HMO added 10/15/2017
 	
@@ -182,7 +183,7 @@ public class BaseTableRecord
 	static
 	{
 	    bdTableColumns.add(M_ID);
-	    bdTableColumns.add(ACCESSNUMBER);
+	    bdTableColumns.add(ACCESSNUMBER);	    	    
 	    bdTableColumns.add(DATESORT);
 	    bdTableColumns.add(AUTHOR);
 	    bdTableColumns.add(AUTHOR_1);
@@ -236,7 +237,7 @@ public class BaseTableRecord
 	    bdTableColumns.add(CONTRIBUTORAFFILIATION);
 	    bdTableColumns.add(COPYRIGHT);
 	    bdTableColumns.add(DOI);
-	    bdTableColumns.add(PII);
+	    bdTableColumns.add(PII); 
 	    bdTableColumns.add(PUI);
 	    bdTableColumns.add(ABSTRACTORIGINAL);
 	    bdTableColumns.add(ABSTRACTPERSPECTIVE);
@@ -287,7 +288,8 @@ public class BaseTableRecord
 	    bdTableColumns.add(SOURCEWEBSITE);
 	    bdTableColumns.add(GRANTLIST);
 	    bdTableColumns.add(EID);
-	    bdTableColumns.add(UPDATERESOURCE);	  //HH 04/05/2016 for cafe
+	    bdTableColumns.add(UPDATENUMBER);
+	    bdTableColumns.add(UPDATERESOURCE);	  //HH 04/05/2016 for cafe	   
 	    //bdTableColumns.add(DEDUPKEY);	  //HMO 01/30/2017
 	    
 

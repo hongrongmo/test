@@ -17,7 +17,10 @@ public class BaseTableWriter
 
 	private PrintWriter out;
 	private PrintWriter referenceOut;
-
+	private PrintWriter puiOut;
+	private PrintWriter samePuiPuisecondaryOut;
+	private PrintWriter oversizeFieldOut;
+	
 	private boolean open = false;
 
 	private LinkedHashSet bdColumns = BaseTableRecord.getBdColumns();
@@ -29,6 +32,7 @@ public class BaseTableWriter
 	private String loadnumber;
 	private String updatenumber;
 	private String mid;
+	private String database;
 	private int refCount;
 	private List nullAccessumberRecord=new ArrayList();
 
@@ -57,6 +61,15 @@ public class BaseTableWriter
 		referenceOut = new PrintWriter(new FileWriter(path+"Reference_"+name));
 		System.out.println("Output Filename "+filename);
 		System.out.println("Reference Output Filename "+path+"Reference_"+name);
+		
+		puiOut = new PrintWriter(new FileWriter(path+"Pui_"+name));
+		System.out.println("Output Filename "+filename);
+		System.out.println("Reference Output Filename "+path+"Reference_"+name);
+		System.out.println("PUI Output Filename "+path+"Pui_"+name);
+		
+		samePuiPuisecondaryOut = new PrintWriter(new FileWriter(path+"SamePui_PuiSecondary_"+name));
+		
+		oversizeFieldOut = new PrintWriter(new FileWriter(path+"OverSizeField_"+name));
 		open = true;
 	}
 
@@ -105,9 +118,10 @@ public class BaseTableWriter
 								setAccessionNumber(valueString);
 							}
 							
-							if(thisColumnName.equals("PUI"))
+							//if(thisColumnName.equals("PUI"))
+							if(getPui().equals("") && record.get("PUI")!=null)
 							{
-								setPui(valueString);
+								setPui((String)record.get("PUI"));
 							}
 							
 							if(thisColumnName.equals("DOI"))
@@ -130,9 +144,15 @@ public class BaseTableWriter
 								setLoadnumber(valueString);
 							}
 							
-							if(thisColumnName.equals("UPDATENUMBER"))
+							//if(thisColumnName.equals("UPDATENUMBER"))
+							if(getUpdatenumber().equals("") && record.get("UPDATENUMBER")!=null)
 							{
-								setUpdatenumber(valueString);
+								setUpdatenumber((String)record.get("UPDATENUMBER"));							
+							}						
+							
+							if(thisColumnName.equals("DATABASE"))
+							{
+								setDatabase(valueString);
 							}
 
 						}
@@ -194,7 +214,13 @@ public class BaseTableWriter
 	    if(record.get("PUISECONDARY")!=null)
 		{
 	    	recordBuf.append(record.get("PUISECONDARY"));
+	    	outputPuiSecondary((String)record.get("PUISECONDARY"),getPui(),getAccessionNumber(),getLoadnumber());
+	    	//System.out.println("PUISECONDARY2="+record.get("PUISECONDARY"));
 		}
+	    else
+	    {
+	    	puiOut.println(getPui()+"\t"+getPui()+"\t"+getAccessionNumber()+"\t"+getLoadnumber());
+	    }
 	    recordBuf.append(FIELDDELIM);
 	    if(record.get("GRANTTEXT")!=null)
 		{
@@ -202,7 +228,7 @@ public class BaseTableWriter
 	    	String granttext= checkColumnWidth(columnSize,
 					   "GRANTTEXT",
 					   (String)record.get("GRANTTEXT"));
-	    	
+	    	//System.out.println("granttext length="+granttext.length()+" codelength="+lengthCodepoints(granttext));
 	    	recordBuf.append(granttext);
 	    		    	
 		}
@@ -282,6 +308,33 @@ public class BaseTableWriter
 
 	}
 
+	private void outputPuiSecondary(String puiSecondary, String pui, String accessnumber,String updatenumber)  throws Exception
+	{
+		
+		if(puiSecondary!=null)
+		{
+			String[] puiSecondaryA = puiSecondary.split("\\|",-1);
+			for(int i=0;i<puiSecondaryA.length;i++)
+			{
+				if(puiSecondaryA[i].length()>0)
+				{
+					if(!pui.equals(puiSecondaryA[i]))
+					{
+						puiOut.println(pui+"\t"+puiSecondaryA[i]+"\t"+accessnumber+"\t"+updatenumber);
+					}
+					else
+					{
+						samePuiPuisecondaryOut.println(pui);
+					}
+				}
+			}
+			puiOut.println(pui+"\t"+pui+"\t"+accessnumber+"\t"+updatenumber);
+		}
+		
+		puiOut.flush();
+		samePuiPuisecondaryOut.flush();
+	}
+	
 	private void outputReference(Hashtable reference,String accessNumber,String mid, int refcount, String pui, String loadnumber, String updatenumber) throws Exception
 	{
 	   if(reference != null)
@@ -749,6 +802,16 @@ public class BaseTableWriter
 		this.updatenumber = updatenumber;
 	}
 	
+	private String getDatabase()
+	{
+		return this.database;
+	}
+
+	private void setDatabase(String database)
+	{
+		this.database = database;
+	}
+	
 	private String removeUnwantCharacter(String input)
 	{
 		String output=input;
@@ -769,10 +832,21 @@ public class BaseTableWriter
 		
 		if(columnWidth > 0  && data!= null)
 		{
-			if(data.length()>columnWidth)
+			//if(data.length()>columnWidth)
+			if(data.getBytes().length>columnWidth) 
 			{
-				System.out.println("Problem:  record "+getAccessionNumber()+"'s data for column "+columnName+" is too big. data length is "+data.length());
-				data = data.substring(0,columnWidth);
+				//System.out.println("1="+data);
+				//System.out.println("normal length="+data.length()+" byteslength="+data.getBytes().length);
+				System.out.println("Problem: "+getDatabase()+" record "+getAccessionNumber()+"'s data for column "+columnName+" is too big. data length is "+data.length());
+				//added to output oversize data for later use by hmo at 5/10/2019				
+				this.oversizeFieldOut.println(getAccessionNumber()+"\t"+getPui()+"\t"+columnName+"\t"+getUpdatenumber()+"\t"+getDatabase()+"\t"+this.filename+"\t"+data);
+				
+				//trim off data string by bytes array length
+				byte[] result = new byte[columnWidth];
+				System.arraycopy(data.getBytes(), 0, result, 0, columnWidth);
+				data = new String(result);
+				
+				//data = substring(data,0,columnWidth);
 				cutOffPosition = data.lastIndexOf(Constants.AUDELIMITER);
 				if(cutOffPosition<data.lastIndexOf(Constants.IDDELIMITER))
 				{
@@ -780,18 +854,46 @@ public class BaseTableWriter
 				}
 				if(cutOffPosition>0)
 				{
-					data = data.substring(0,cutOffPosition);
+					data = substring(data,0,cutOffPosition);
 				}
-				if(data.length()>columnWidth)
+				if(lengthCodepoints(data)>columnWidth)
 				{
-					data = data.substring(0,columnWidth);
+					data = substring(data,0,columnWidth);
 				}
+				//System.out.println(columnName+" DATA2_LENGTH="+data.length()+" "+data.getBytes().length);
+				//System.out.println("DATA2="+data);
+				//System.out.println("2="+data);
 
 			}
 		}
+		this.oversizeFieldOut.flush();
 		return data;
 	}
 
+	private int lengthCodepoints(String s)
+	{
+	  return s.codePointCount(0, s.length());
+	}
+
+	private int getRealIndex(String data,int index) 
+	{		  
+		return data.offsetByCodePoints(0, index);		
+	}
+	
+	public String substring(String data, int startIndex, int endIndex)
+	{
+		  int codePointStartIndex = getRealIndex(data,startIndex);
+		  int codePointEndIndex = getRealIndex(data,endIndex);
+		  String newData = data.substring(codePointStartIndex, codePointEndIndex);
+		  return newData;
+	}
+	
+	private String substringCodepoint(String s, int startCodepoint, int numCodepoints)
+	{
+	  int startIndex = s.offsetByCodePoints(0, startCodepoint);
+	  int endIndex = s.offsetByCodePoints(startIndex, numCodepoints);
+	  return s.substring(startIndex, endIndex);
+	}
 
 	public void end()
 			throws Exception
@@ -800,6 +902,9 @@ public class BaseTableWriter
 		{
 			out.close();
 			referenceOut.close();
+			puiOut.close();
+			samePuiPuisecondaryOut.close();
+			oversizeFieldOut.close();
 			open = false;
 		}
 	}

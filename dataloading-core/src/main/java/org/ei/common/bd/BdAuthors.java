@@ -113,6 +113,10 @@ public class BdAuthors
 						auidValue.add(authorids[i]);
 					}
 				}
+				
+				/*
+				 * remove this to avoid unwant characters by hmo on 5/8/2019
+				 *
 				if(aid!=null)
 				{
 					searchValue.add(aid+Constants.GROUPDELIMITER+nextau.getSearchValue());
@@ -121,7 +125,8 @@ public class BdAuthors
 				{
 					searchValue.add(nextau.getSearchValue());
 				}
-				
+				*/
+				searchValue.add(nextau.getSearchValue());
 				
 			}
 			if(auidValue.size()>0)
