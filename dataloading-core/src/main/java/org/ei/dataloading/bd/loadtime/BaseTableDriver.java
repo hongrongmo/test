@@ -490,9 +490,11 @@ public class BaseTableDriver
             r = new BdParser();
             StringBuffer sBuffer = new StringBuffer();
             StringBuffer fundBuffer = new StringBuffer();
-            
+           
             //added on 6/8/2018 for limiting loadnumber to six digits
             String loadnumber = Integer.toString(loadNumber);
+            //added for getting updatenumber by hmo on 5/15/2019
+            r.setUpdateNumber(loadnumber);
             //System.out.println("loadnumber="+loadnumber);
             if(loadnumber.length()>0)
             {

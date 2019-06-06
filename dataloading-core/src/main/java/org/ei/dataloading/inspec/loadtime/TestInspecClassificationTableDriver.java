@@ -30,8 +30,8 @@ import org.xml.sax.SAXException;
 
 //import org.ei.data.inspec.loadtime.InspecClassificationTableDriver.TRecord;
 import org.ei.thesaurus.cpx.*;
-import org.jsoup.Jsoup;
-import org.jsoup.parser.Parser;
+//import org.jsoup.Jsoup;
+//import org.jsoup.parser.Parser;
 
 /**
  * @author TELEBH

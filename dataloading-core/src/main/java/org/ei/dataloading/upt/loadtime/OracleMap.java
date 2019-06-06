@@ -33,7 +33,7 @@ public class OracleMap {
             Class.forName("oracle.jdbc.driver.OracleDriver").newInstance();
             System.out.println("URL="+URL+" UserName="+" Password="+Password);
             con = DriverManager.getConnection(URL, UserName, Password);
-            String sql = "select m_id,pn,kc,load_number from upt_master where patentid(ac,pn) = ?";
+            String sql = "select m_id,pn,kc,load_number from upt_master where patentid(ac,pn) = ? order by kc";
             stmt = con.prepareStatement(sql);
             System.out.println("Got Connection>>>>");
         }
@@ -91,6 +91,7 @@ public class OracleMap {
 		try
 		{
 		   stmt.setString(1, key);
+		   //stmt run this query "select m_id,pn,kc,load_number from upt_master where patentid(ac,pn) = ?";
 		   stmt.execute();
 		   rs = stmt.getResultSet();
 		   while(rs.next())
@@ -100,7 +101,7 @@ public class OracleMap {
 				mid_kc[1] = rs.getString("kc");
 				if(kindPref.equals(mid_kc))
 				{
-					//System.out.println("got mid"+mid_kc);
+					System.out.println("got mid"+mid_kc+" kindPref="+kindPref+" mid_kc[0]="+mid_kc[0]+" mid_kc[1]="+mid_kc[1]);
 					break;
 				}
 		   }
