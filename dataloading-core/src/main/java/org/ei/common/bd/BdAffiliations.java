@@ -109,7 +109,10 @@ public class BdAffiliations
 	
 	public String[] getAffiliationId()
 	{
-		return (String[]) this.affiliationIds.toArray(new String[1]);
+		//System.out.println("ORIGINAL= "+this.affiliationIds.toString());
+    	HashSet uniqueAffID = new HashSet(this.affiliationIds);
+    	//System.out.println("UNIQUE= "+uniqueAffID.toString());
+    	return  (String[]) uniqueAffID.toArray(new String[0]);		
 	}
 	
 	private void setDepartmentId(List departmentIds)
@@ -119,7 +122,9 @@ public class BdAffiliations
 	
 	public String[] getDepartmentId()
 	{
-		return (String[]) this.departmentIds.toArray(new String[1]);
+		HashSet uniqueDeptID = new HashSet(this.departmentIds);
+		return  (String[]) uniqueDeptID.toArray(new String[0]);	
+		//return (String[]) this.departmentIds.toArray(new String[1]);
 	}
 
 	public List getAffiliations()

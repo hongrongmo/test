@@ -41,6 +41,7 @@ import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
+import org.ei.xml.Entity;
 
 import io.searchbox.client.JestClient;
 import io.searchbox.client.JestResult;
@@ -51,6 +52,10 @@ import io.searchbox.core.Search;
 import io.searchbox.core.SearchResult;
 //import io.searchbox.core.QueryBuilder;
 import io.searchbox.core.SearchResult.Hit; 
+import com.google.gson.JsonParser;
+//import com.google.gson.JsonObject;
+import com.google.gson.JsonElement;
+import com.fasterxml.jackson.databind.JsonNode;
 
 import org.ei.dataloading.DataLoadDictionary;
 import org.ei.dataloading.bd.loadtime.XmlCombiner;
@@ -94,7 +99,6 @@ import com.amazonaws.services.sqs.model.ReceiveMessageRequest;
 import com.amazonaws.services.sqs.model.SendMessageRequest;
 
 import java.io.IOException;
-import java.util.Collections;
 
 import org.elasticsearch.action.index.IndexResponse;
 import org.elasticsearch.client.Client;
@@ -118,10 +122,10 @@ public class NewDataTesting
 	//public static String URL="jdbc:oracle:thin:@127.0.0.1:5523:EIA";
 	public static String URL="jdbc:oracle:thin:@eid.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eid";
 	public static String driver="oracle.jdbc.driver.OracleDriver";
-	public static String username="db_cafe";
-	public static String username1="ba_s300";
-	public static String password="Ev360Park";
-	public static String password1="ei7it";
+	public static String username="ap_ev_search";
+	public static String username1="ap_ev_search";
+	public static String password="ei3it";
+	public static String password1="ei3it";
     public static String tableName="bd_master";
     public static String tableName1="bd_master_jupiter";
     public static String database="cpx";
@@ -200,7 +204,11 @@ public class NewDataTesting
 			System.out.println("please enter org.ei.util.NewDataTesting databse username password tablename updatenumber");
 		}
 
-		if(action.equals("fast"))
+		if(action.contentEquals("checkSize"))
+		{
+			test.checkColumnSize();
+		}
+		else if(action.equals("fast"))
 		{
 			test.checkFast(test.tableName,test.tableName1);
 		}
@@ -367,6 +375,14 @@ public class NewDataTesting
 		else  if(action.equals("getAFCOUNT"))
 		{
 			test.getAFCountFromFast(updateNumber);
+		}
+		else  if(action.equals("getallcodes"))
+		{
+			test.getAllCodes();
+		}
+		else  if(action.equals("getallIndexes"))
+		{
+			test.getAllIndexes(updateNumber);
 		}		
 		else
 		{
@@ -2530,7 +2546,7 @@ public class NewDataTesting
 	                + "    \"match_all\": {}\n "   
 	                + "    }\n" 
 	                + "}"; 		
-			 String endpoint = "http://search-movies-f2awrxb6jrgl3zpgr4dkn352t4.us-east-2.es.amazonaws.com:80";
+			 String endpoint = "http://search-author-5qvbvgnktqru5apydu24nu3jmm.us-east-1.es.amazonaws.com";
 			//String endpoint = "http://search-evcafeauaf-v6tfjfyfj26rtoneh233lzzqtq.us-east-1.es.amazonaws.com:80";
 			JestClientFactory factory = new JestClientFactory();
 			factory.setHttpClientConfig(new HttpClientConfig
@@ -2540,14 +2556,87 @@ public class NewDataTesting
 					);
 			
 			JestClient client = factory.getObject();
-	        Search.Builder searchBuilder = new Search.Builder(query).addIndex("cafe").addType("author"); 
-			//Search.Builder searchBuilder = new Search.Builder(query).setIndex("cafe").setType("author");
+	        //Search.Builder searchBuilder = new Search.Builder(query).addIndex("cafe").addType("author"); 
+			Search.Builder searchBuilder = new Search.Builder(query).addIndex("author").addType("author");
 	        //io.searchbox.core.SearchResult result = client.execute(searchBuilder.build()); 
-	        JestResult result = client.execute(searchBuilder.build());
-	        System.out.println(result);
+	        JestResult jsonResult = client.execute(searchBuilder.build());
+	        //System.out.println(jsonResult.getSourceAsString());
+	        com.google.gson.JsonObject jsonResultObject = jsonResult.getJsonObject();
+	        if(jsonResultObject!=null)
+	        {
+	        	//String[] jKeys = jsonResult.getKeys();
+	        	//List<String> jList = jsonResult.getSourceAsStringList();
+	        	//for(int i=0;i<jKeys.length;i++)
+	        	String jString =jsonResult.getJsonString();
+	        	System.out.println(jString);
+	        	/*
+	        	for(int i=0;i<jList.size();i++)
+	        	{
+	        		System.out.println(jList.get(i));
+	        	}
+	        	*/
+		        com.google.gson.JsonArray indexArray = null;
+		        if(jsonResultObject.get("audoc")!=null)
+		        {
+		        	indexArray = jsonResultObject.get("audoc").getAsJsonArray();
+		        }
+		        else if(indexArray==null && jsonResultObject.get("_index")!=null)
+		        {
+		        	indexArray = jsonResultObject.get("_index").getAsJsonArray();
+		        }
+		        else if(indexArray==null && jsonResultObject.get("_source")!=null)
+		        {
+		        	indexArray = jsonResultObject.get("_source").getAsJsonArray();
+		        }
+		        else if(indexArray==null && jsonResultObject.get("_type")!=null)
+		        {
+		        	indexArray = jsonResultObject.get("_type").getAsJsonArray();
+		        }
+		        else if(indexArray==null && jsonResultObject.get("_id")!=null)
+		        {
+		        	indexArray = jsonResultObject.get("_id").getAsJsonArray();
+		        }
+		        else
+		        {
+		        	System.out.println("nothing found");
+		        	return;
+		        }
+		        
+		        for (int i=0;i<indexArray.size();i++) {
+		        	JsonElement a = indexArray.get(i);
+		        	
+		            //String type = a.get(0).getAsString();
+		          
+			    	System.out.println(a.getAsString());		          
+			    	//System.out.println(result.getString("loadnumber", ""));		          
+			    }
+	        }
+	        else
+	        {
+	        	System.out.println("jsonResultObject is null");
+	        }
 	        
-	        String jsonResultString = result.getJsonString();
-	        System.out.println("search result is " + jsonResultString);
+	        /*
+	        List resultList = jsonResult.getSourceAsStringList();
+	        for(int i=0;i<resultList.size();i++)
+	        {
+	        	System.out.println(i+" = "+resultList.get(i));
+	        }
+	        
+	        javax.json.JsonObject jsonResultObject = jsonResult.getJsonObject();
+	        
+	        JsonObject jsonResultObject = (JsonObject) new JsonParser().parse(jsonResult.getJsonString());
+	        JsonReader rdr = jsonResultObject.createReader(); 
+			 
+		    //JsonObject obj = rdr.readObject();
+		    //JsonArray results = obj.getJsonArray("evrecords");
+		    JsonArray results = rdr.readArray();
+		    for (JsonObject result : results.getValuesAs(JsonObject.class)) {
+		    	System.out.print(result.getString("_id")+"\t");		          
+		    	System.out.println(result.getString("loadnumber", ""));		          
+		    }
+	        */
+	        //System.out.println("search result is " + jsonResultString);
 	       
 	    } 
 	
@@ -2562,7 +2651,7 @@ public class NewDataTesting
 			while((line=in.readLine())!=null)
 			{
 				//System.out.println("LINE1 = "+line);
-				readMap.openRead("ecla", false);
+				readMap.openRead("cpc", false);
 				if(line.length()>4)
 				{				
 					line = line.substring(0,4).trim()+line.substring(4).trim();					
@@ -2572,7 +2661,11 @@ public class NewDataTesting
 			    if(val==null || val.equals("null") || val.length()<5) 
 			    {
 			    	System.out.println("CODE= "+line);
-			    }	
+			    }
+			    else
+			    {
+			    	System.out.println("CODE= "+line+" description= "+val);
+			    }
 			    readMap.close();
 			}
 			
@@ -2636,7 +2729,309 @@ public class NewDataTesting
 		}
 		return sb.toString();
 	}
+	
+	private void getAllIndexes(String index) throws Exception
+	{
+		FileWriter out = null;
+		String key = null;
+		String value = null;
+		//private IndexReader reader;
+				
+		try
+		{
+			/*
+			if (!inMemory) 
+			{
+			    this.reader = IndexReader.open(dir);
+			} else {
+			    this.reader = IndexReader.open(new RAMDirectory(dir));
+			}
+			*/
+			System.out.println("INDEX="+index);
+			DiskMap readMap = new DiskMap();
+			readMap.openRead(index, false);
+			HashMap hm = readMap.getAllDocs();
+			System.out.println("INDEX SIZE="+hm.size());
+			/*
+			HashMap hm = new HashMap(); 
+		    
+	    	TermDocs td = reader.termDocs();
+	    	while (td.next()) {
+	            int docIndex = td.doc();
+	            Document doc = reader.document(docIndex);
+	            info = doc.get("VALUE");
+	            key = doc.get("KEY");
+	            System.out.println(docIndex+"\t"+key+"\t"+info+"\n");
+	        }
+	        */
+			Iterator<String> itr=hm.keySet().iterator();
+			while(itr.hasNext())
+			{  
+				key = itr.next();
+				value = (String)hm.get(key);
+				
+				out = new FileWriter("cpc_codes_with_description.txt");
+				out.write(key+"\t"+value+"\n");
+				out.flush();
+				
+			}
+			readMap.close();
+			if(out!=null)
+			out.close();
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if(out != null) 
+			{
+				try 
+				{
+					out.close();
+				}
+				catch (Exception e) 
+				{
+					e.printStackTrace();
+				}
+			}
+			
+		}
+	}
+	
+	private void getAllCodes()
+	{
+		Statement stmt = null;
+		ResultSet rs = null;
+		Connection con = null;
+		FileWriter out = null;
+		FileWriter out1 = null;
+		String sqlQuery = "select CLASSIFICATION_CPC,fec,ecl,ecc,esc from upt_master";
+		try
+		{
 
+			con = getConnection(this.URL,this.driver,this.username,this.password);
+			stmt = con.createStatement();
+			LinkedHashSet<String> al=new LinkedHashSet<String>();  
+			
+			rs = stmt.executeQuery(sqlQuery);
+			while (rs.next())
+			{
+				String fec = rs.getString("fec");
+				if(fec!=null)
+				{
+					String[] fecValues = fec.split(Constants.AUDELIMITER);
+					//String[] fecValues = removeSpaces(convert2Array(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("fec"))))));
+					for(int i=0;i<fecValues.length;i++)
+					{
+						al.add(fecValues[i]);  
+					}
+				}
+				
+				String ecl = rs.getString("ecl");
+				if(ecl!=null)
+				{
+					String[] eclValues = ecl.split(Constants.AUDELIMITER);
+					//String[] eclValues = removeSpaces(convert2Array(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ecl"))))));
+					for(int i=0;i<eclValues.length;i++)
+					{
+						al.add(eclValues[i]);  
+					}
+				}
+				
+				String ecc = rs.getString("ecc");
+				if(ecc!=null)
+				{
+					String[] eccValues = ecc.split(Constants.AUDELIMITER);
+					//String[] eccValues = removeSpaces(convert2Array(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ecc"))))));
+					for(int i=0;i<eccValues.length;i++)
+					{
+						al.add(eccValues[i]);  
+					}
+				}
+				
+				String esc = rs.getString("esc");				
+				if(esc!=null)
+				{
+					String[] escValues = esc.split(Constants.AUDELIMITER);
+					//String[] escValues = removeSpaces(convert2Array(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("esc"))))));
+					for(int i=0;i<escValues.length;i++)
+					{
+						al.add(escValues[i]);  
+					}
+				}
+				
+				String cpc = rs.getString("CLASSIFICATION_CPC");
+				if(cpc!=null)
+				{
+					String[] cpcValues = cpc.split(Constants.IDDELIMITER);
+					for(int i=0;i<cpcValues.length;i++)
+					{
+						al.add(cpcValues[i]);  
+					}
+				}
+			  
+			}
+			
+			Iterator<String> itr=al.iterator();  
+			
+			out = new FileWriter("cpc_codes_with_description.txt");
+			out1 = new FileWriter("cpc_codes_without_description.txt");
+			String term = null;
+			DiskMap readMap = new DiskMap();
+						
+			while(itr.hasNext())
+			{  
+				term = itr.next();
+				readMap.openRead("cpc", false);	
+				String val = readMap.get(term);
+				readMap.close();
+				if(val!=null)
+				{
+					out.write(itr.next()+"\t"+val+"\n");  
+					
+				}
+				else 
+				{
+					readMap.openRead("ecla", false);	
+					String val1 = readMap.get(term);
+					readMap.close();
+					if(val!=null)
+					{
+						out.write(itr.next()+"\t"+val1+"\n");  
+					}
+					else
+					{
+						out1.write(itr.next()+"\n");
+					}
+					
+				}
+				out.flush();
+				out1.flush();
+			}  
+			
+			
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if(out != null) {
+				try {
+					out.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			if(out1 != null) {
+				try {
+					out1.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			if (rs != null) {
+				try {
+					rs.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+
+			if (stmt != null) {
+				try {
+					stmt.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			if (con != null) {
+				try {
+					con.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+						
+		}
+		
+	}
+
+	public String replaceNull(String sVal) {
+
+        if (sVal == null)
+            sVal = "";
+
+        return sVal;
+    }
+	
+	public String replaceAmpersand(String sVal) 
+	{
+		Perl5Util perl = new Perl5Util();
+        if (sVal == null)
+            return "";
+
+        if (perl.match("/&amp;/i", sVal)) {
+            sVal = perl.substitute("s/&amp;/&/ig", sVal);
+        }
+
+        return sVal;
+    }
+	 public String[] removeSpaces(String[] arrCodes) 
+	 {
+		Perl5Util perl = new Perl5Util();
+		
+        for (int i = 0; i < arrCodes.length; i++) {
+            String code = arrCodes[i];
+            code = perl.substitute("s/\\s+//", code);
+            /*
+            if (perl.match("/\\/\\//", code))
+                code = perl.substitute("s/\\/\\//\\//", code);
+        
+            if (perl.match("/\\./", code))
+                code = perl.substitute("s/\\./PERIOD/ig", code);
+
+            if (perl.match("/\\//", code))
+                code = perl.substitute("s/\\//SLASH/ig", code);
+			*/
+            arrCodes[i] = code;
+        }
+
+	    return arrCodes;
+	 }
+	 
+	 public String[] convert2Array(String sVal) 
+	 {
+		 	Perl5Util perl = new Perl5Util();
+		 	char DELIM = (char) 30;
+	    	String[] arrVals = null;
+	    	if(sVal!=null)
+	    	{
+		        List values = new ArrayList();
+		
+		        perl.split(values, "/" + DELIM + "/", sVal);
+		
+		        arrVals = (String[]) values.toArray(new String[1]);
+		
+		        arrVals[0] = replaceNull(arrVals[0]);
+	    	}
+	    	else
+	    	{
+	    		arrVals = new String[1];
+	    		arrVals[0] = "";
+	    	}
+
+	        return arrVals;
+	    }
+	 
 	private void getWeeklyCount(String weekNumber)
 	{
 		System.out.println("***************** Record Count for Week "+weekNumber+" ******************");
@@ -2988,19 +3383,58 @@ public class NewDataTesting
 	{
 		//Hashtable loadnumberFromDatabase = new Hashtable();
 		//loadnumberFromDatabase.put("201402","100");
-
+		
+		FileWriter out = null;
 		List detailRecordFromDatabase = getDetailRecordFromDatabase(database,updateNumber);
-
-
-		for(int i=0;i<detailRecordFromDatabase.size();i++)
+			
+		try
 		{
-			String mid = (String)detailRecordFromDatabase.get(i);
-			String count = "0";
-			int midCount=getMIDCountFromFast(mid,database);
-			if(midCount<1)
+			out = new FileWriter("midFromFast_DR.out");
+			for(int i=0;i<detailRecordFromDatabase.size();i++)
 			{
-       			System.out.println(mid);
+				String mid = (String)detailRecordFromDatabase.get(i);
+				int count = 0;	
+				String searchQuery="db:grf all:"+mid;
+				//System.out.println("Query= "+searchQuery);
+				FastClient client = new FastClient();
+				//client.setBaseURL("http://evprod08.cloudapp.net:15100");DEV server
+				client.setBaseURL("http://evdr09.cloudapp.net:15100"); //DR				
+				client.setResultView("ei");
+				client.setOffSet(0);
+				client.setPageSize(300000);
+				client.setQueryString(searchQuery);
+				client.setDoCatCount(true);
+				client.setDoNavigators(true);
+				client.setPrimarySort("ausort");
+				client.setPrimarySortDirection("+");
+				client.search();
+	
+				List l = client.getDocIDs();
+				 count =client.getHitCount();
+				
+				if(count>0)
+				{
+					out.write(mid+"\n");
+				}		
+					
+				out.flush();
+				
+	
 			}
+			out.flush();
+			out.close();
+		}
+		catch(Exception e)
+		{
+			try{
+			if(out!=null)
+				out.close();
+			}
+			catch(Exception e1)
+			{
+				e1.printStackTrace();
+			}
+			e.printStackTrace();
 		}
 
 	}
@@ -3011,14 +3445,15 @@ public class NewDataTesting
 		ResultSet rs = null;
 		Connection con = null;
 		String sqlQuery = null;
-		List  midList = new ArrayList();
+		List  midList = new ArrayList();		
 
 		try
 		{
 
 			con = getConnection(this.URL,this.driver,this.username,this.password);
 			stmt = con.createStatement();
-			sqlQuery="select m_id from "+username+"."+tableName+" where database='"+database+"' and loadnumber='"+loadnumber+"'";
+			//sqlQuery="select m_id from "+username+"."+tableName+" where database='"+database+"' and loadnumber='"+loadnumber+"'";
+			sqlQuery="select m_id from ap_correction1.georef_master_GI_extra";
 			System.out.println("QUERY= "+sqlQuery);
 			rs = stmt.executeQuery(sqlQuery);
 			int k = 0;
@@ -3068,6 +3503,7 @@ public class NewDataTesting
 		ResultSet rs = null;
 		Connection con = null;
 		FileWriter out = null;
+		query = "spa7:a* or spa7:b* or spa7:c* or spa7:d* or spa7:e* or spa7:f* or spa7:g* or spa7:h* or spa7:i* or spa7:j* or spa7:k* or spa7:l* or spa7:m* or spa7:n* or spa7:o* or spa7:p* or spa7:q* or spa7:r* or spa7:s* or spa7:t* or spa7:u* or spa7:v* or spa7:w* or spa7:x* or spa7:y* or spa7:z* or spa7:0* or spa7:1* or spa7:2* or spa7:3* or spa7:4* or spa7:5* or spa7:6* or spa7:7* or spa7:8* or spa7:9*";
 		String searchQuery = query.replaceAll("_", " and ");
 		try
 		{
@@ -3145,6 +3581,7 @@ public class NewDataTesting
 		Connection con = null;
 		FileWriter out = null;
 		String searchQuery = query.replaceAll("_", " and ");
+		
 		try
 		{
 			out = new FileWriter("midFromFast_DR.out");	
@@ -3154,7 +3591,7 @@ public class NewDataTesting
 			client.setBaseURL("http://evdr09.cloudapp.net:15100"); //DR				
 			client.setResultView("ei");
 			client.setOffSet(0);
-			client.setPageSize(200000);
+			client.setPageSize(300000);
 			client.setQueryString(searchQuery);
 			client.setDoCatCount(true);
 			client.setDoNavigators(true);
@@ -3165,11 +3602,7 @@ public class NewDataTesting
 			List l = client.getDocIDs();
 			int count =client.getHitCount();
 			
-			if(count<1)
-			{
-			  System.out.println("0 records found");
-		    }
-			else
+			if(count>0)
 			{
 				System.out.println(count+" records found");
 			}
@@ -3540,6 +3973,37 @@ public class NewDataTesting
 
 		return 0;
 	}
+	
+	private void checkColumnSize()
+	{
+		BufferedReader in=null;
+		String line=null;
+		try
+		{
+			in = new BufferedReader(new FileReader("test.txt"));
+			while((line=in.readLine())!=null)
+			{
+				String[] cArray = line.split("\t");
+				for(int i=0;i<cArray.length;i++)
+				{
+					System.out.println(cArray[i].length()+" "+cArray[i].getBytes().length+" "+cArray[i]);
+				}
+			}
+			
+		}
+		catch(Exception e)
+		{
+			try{
+			if(in!=null)
+				in.close();
+			}
+			catch(Exception e1)
+			{
+				e1.printStackTrace();
+			}
+			e.printStackTrace();
+		}
+	}
 
 	private void getMIDFromFast(String load_number)
 	{
@@ -3575,6 +4039,7 @@ public class NewDataTesting
 				client.setPageSize(50000);
 				client.setQueryString("(af:\""+instituteName+"\") AND (((db:"+database+")))");
 				//client.setQueryString("(ALL:\""+m_id+"\") and db:grf and dt:gi and wk:"+load_number);
+				
 				client.setDoCatCount(true);
 				client.setDoNavigators(true);
 				client.setPrimarySort("ausort");
@@ -3619,14 +4084,16 @@ public class NewDataTesting
 		FileWriter out = null;
 		try
 		{
-			out = new FileWriter("delete.txt");
+			out = new FileWriter("unitsearch.txt");
 							
 			FastClient client = new FastClient();
-			client.setBaseURL("http://evprod08.cloudapp.net:15100");
+			//client.setBaseURL("http://evprod08.cloudapp.net:15100");
+			client.setBaseURL("http://evazure.trafficmanager.net:15100");
 			client.setResultView("ei");
 			client.setOffSet(0);
 			client.setPageSize(50000);
-			client.setQueryString("db:"+database);
+			//client.setQueryString("db:"+database);
+			client.setQueryString("fastloadunit:1557416848624_cpx_add_1-0001");
 			client.setDoCatCount(true);
 			client.setDoNavigators(true);
 			client.setPrimarySort("ausort");
@@ -4640,7 +5107,7 @@ public class NewDataTesting
 		String[] dbName = database.split(";");
 		//FastSearchControl.BASE_URL = "http://ei-stage.nda.fastsearch.net:15100";
 		FastSearchControl.BASE_URL = "http://evazure.trafficmanager.net:15100";
-		String tableName="hmo_patent_ref_WO_count2";
+		String tableName="hmoPatCitCnt";
 		//int intDbMask = databaseConfig.getMask(dbName);
 		int intDbMask = 1;		
 		String searchField="ALL";
@@ -4648,7 +5115,7 @@ public class NewDataTesting
 		try
 		{
 			con = getConnection(this.URL,this.driver,"ap_correction1",this.password);
-			String sqlQuery = "select cit_pn from "+tableName+" where load_number="+loadnumber;
+			String sqlQuery = "select CIT_MID,CIT_PN,CIT_AC,CIT_KC from "+tableName+" where MASTER_CIT_CNT!=COUNT";
 			stmt = con.createStatement();
 			updateStmt = con.createStatement();
 			System.out.println("QUERY= "+sqlQuery);
@@ -4657,8 +5124,10 @@ public class NewDataTesting
 			while (rs.next())
 			{
 				//Thread.currentThread().sleep(10);
-				String cit_pn = rs.getString("cit_pn");
-				
+				String mid = rs.getString("CIT_MID");
+				String pn  = rs.getString("CIT_PN");
+				String ac  = rs.getString("CIT_AC");
+				String kc  = rs.getString("CIT_KC");
 				FastClient client = new FastClient();
 				client.setBaseURL("http://evazure.trafficmanager.net:15100");//PROD
 				//client.setBaseURL("http://evprod08.cloudapp.net:15100");//DEV server
@@ -4666,7 +5135,7 @@ public class NewDataTesting
 				client.setResultView("ei");
 				client.setOffSet(0);
 				client.setPageSize(5);
-				client.setQueryString("pci:WO"+cit_pn);
+				client.setQueryString("pci:"+ac+pn);
 				client.setDoCatCount(true);
 				//client.setDoNavigators(true);
 				//client.setPrimarySort("ausort");
@@ -4680,7 +5149,7 @@ public class NewDataTesting
 				
 				if(count > 0)
 				{
-					String updateQuery = "update "+tableName+" set FAST_CIT_CNT="+count+ "where CIT_PN='"+cit_pn+"'";
+					String updateQuery = "update "+tableName+" set FAST_CIT_CNT="+count+ "where CIT_MID='"+mid+"'";
 					updateStmt.addBatch(updateQuery);
 					if(i==1000)
 					{
@@ -4688,7 +5157,7 @@ public class NewDataTesting
 						i=0;
 					} 
 					i++;
-					System.out.println(cit_pn+"   "+count);
+					System.out.println(mid+"   "+count);
 				}
 			}
 			updateStmt.executeBatch();

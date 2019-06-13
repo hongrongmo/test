@@ -11,6 +11,7 @@ import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.index.TermDocs;
 import org.apache.lucene.store.RAMDirectory;
+import java.util.*;
 
 public class DiskMap {
     private final static Logger log4j = Logger.getLogger(DiskMap.class);
@@ -36,6 +37,42 @@ public class DiskMap {
         System.out.println(val);
         readMap.close();
     }
+    
+    public HashMap getAllDocs() throws Exception
+    {
+    	String info = null;
+    	String key = null;
+    	HashMap hm = new HashMap(); 
+    
+    	//TermDocs td = reader.termDocs();
+    	//TermEnum td = reader.terms();
+    	
+    	for (int i=0; i<reader.maxDoc(); i++) 
+    	{
+    	    if (reader.isDeleted(i))
+    	        continue;
+
+    	    org.apache.lucene.document.Document doc = reader.document(i);
+    	    String docId = doc.get("docId");
+    	    Field[] fields =doc.getFields("KEY");
+    	    System.out.println("field size = "+fields.length);
+    	    for (int j=0;j<fields.length;j++)
+    	    {
+    	    	System.out.println((String)fields[j].name());
+    	    }
+    	    // do something with docId here...
+    	    //}
+    	    //while (td.next()) {
+            //int docIndex = td.doc();
+            //Document doc = reader.document(docIndex);
+            info = doc.get("VALUE");
+            key = doc.get("KEY");
+            hm.put(key,info);
+            System.out.println(i+"\t"+docId+"\t"+key+"\t"+info+"\n");
+        }
+    	
+    	return hm;
+    }
 
     //12/24/2014 from eijava
     public Document document(int i) throws Exception
@@ -56,13 +93,13 @@ public class DiskMap {
     //
     
     public void openRead(String dir, boolean inMemory) throws IOException  {
-        log4j.info("dir" + dir);
+        //log4j.info("dir" + dir);
         if (!inMemory) {
             this.reader = IndexReader.open(dir);
         } else {
             this.reader = IndexReader.open(new RAMDirectory(dir));
         }
-        log4j.info("this.reader.directory().toString()" + this.reader.directory().toString());
+        //log4j.info("this.reader.directory().toString()" + this.reader.directory().toString());
     }
 
     public void openWrite(String dir) throws IOException  {
