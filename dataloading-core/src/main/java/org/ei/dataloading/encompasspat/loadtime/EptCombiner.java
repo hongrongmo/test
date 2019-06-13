@@ -31,15 +31,18 @@ public class EptCombiner extends Combiner {
         try {
 
             stmt = con.createStatement();
-
+            String sqlQuery=null;
             if(year == 9999)
             {
-                rs = stmt.executeQuery("select dn,m_id,pat_in,ti,aj,ap,ad,ac,pn, substr(load_number,1,4) as py,pc,ic,cs,cc,la,lt,ab,ct,cr,ut,ey,crn,load_number,ll,dt,ds,seq_num from ept_master where py = '19' or py is null");
+            	sqlQuery="select dn,m_id,pat_in,ti,aj,ap,ad,ac,pn, substr(load_number,1,4) as py,pc,ic,cs,cc,la,lt,ab,ct,cr,ut,ey,crn,load_number,ll,dt,ds,seq_num from ept_master where py = '19' or py is null";              
             }
             else
             {
-                rs = stmt.executeQuery("select dn,m_id,pat_in,ti,aj,ap,ad,ac,pn,py,pc,ic,cs,cc,la,lt,ab,ct,cr,ut,ey,crn,load_number,ll,dt,ds,seq_num from ept_master where py = '" + year + "'");
+            	sqlQuery="select dn,m_id,pat_in,ti,aj,ap,ad,ac,pn,py,pc,ic,cs,cc,la,lt,ab,ct,cr,ut,ey,crn,load_number,ll,dt,ds,seq_num from ept_master where py = '" + year + "'";
+               
             }
+            System.out.println("QUERY= "+sqlQuery);
+            rs = stmt.executeQuery(sqlQuery);
             writeRecs(rs);
 
             this.writer.end();
@@ -710,7 +713,7 @@ public class EptCombiner extends Combiner {
                                 password,
                                 yearIndex);
             }
-            int yearIndex = 9999;
+            int yearIndex=9999;
             System.out.println("Processing year " + yearIndex + "...");
             c = new EptCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,"ept", environment));
             c.writeCombinedByYear(url,
@@ -719,13 +722,14 @@ public class EptCombiner extends Combiner {
                             password,
                             yearIndex);
         }
-        else if(loadNumber ==1 && args.length>9)
+        else if(loadNumber==1 && args.length>9)
         {
              System.out.println("AccessNumber=" + args[9]);
              c.writeSingleTestRecord(url, driver, username, password, args[9]);
         }
-        else if(loadNumber ==1)
-        {           
+        else if(loadNumber==1)
+        { 
+        	System.out.println("extracting the whole table");
              c.writeCombinedByTable(url, driver, username, password);
         }
         else if (loadNumber > 3000 || loadNumber < 1000) {

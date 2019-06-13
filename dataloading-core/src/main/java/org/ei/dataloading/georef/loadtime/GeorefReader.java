@@ -186,7 +186,8 @@ public class GeorefReader {
 
             // PERSON_ANALYTIC,ALTERNATE_AUTHOR,AUTHOR_EMAIL
             if (article.getChild("A11") != null) {
-                record.put("A11", concatSubElements(article, "A11", 1));
+                //record.put("A11", concatSubElements(article, "A11", 1));
+            	record.put("A11", checkColumnWidth(3500,"PERSON_ANALYTIC",concatSubElements(article, "A11", 1).toString()));
                 record.put("AUTH_EMAIL", getAuthorEmail(article));
 
                 Element title = article.getChild("A11");
@@ -468,7 +469,7 @@ public class GeorefReader {
 
             // AFFILIATION, SECONDARY
             if (article.getChild("Z37") != null) {
-                record.put("Z37", getSecondAff(article, "Z37"));
+                record.put("Z37", checkColumnWidth(3500,"AFFILIATION_SECONDARY",getSecondAff(article, "Z37").toString()));
             }
 
             // SOURCE NOTE
@@ -499,8 +500,10 @@ public class GeorefReader {
 
             // INDEX TERMS,UNCONTROLLED_TERMS
             if (article.getChild("Z50") != null) {
-                record.put("INDEX_TERMS", getIndexTerms(article));
-                record.put("UNCONTROLLED_TERMS", getUncontrolledTerms(article));
+                //record.put("INDEX_TERMS", getIndexTerms(article));
+            	record.put("INDEX_TERMS", checkColumnWidth(3500,"INDEX_TERMS",getIndexTerms(article).toString()));
+                //record.put("UNCONTROLLED_TERMS", getUncontrolledTerms(article));
+                record.put("UNCONTROLLED_TERMS", checkColumnWidth(3500,"UNCONTROLLED_TERMS",getUncontrolledTerms(article).toString()));
             }
 
             // RESEARCH PROGRAM
@@ -690,6 +693,45 @@ public class GeorefReader {
         }
 
     }
+    
+    private String checkColumnWidth(int columnWidth,
+			String columnName,
+			String data) throws Exception
+	{
+		int cutOffPosition = 0;
+		
+		if(columnWidth > 0  && data!= null)
+		{
+			//if(data.length()>columnWidth)
+			if(data.length()>columnWidth) 
+			{
+			//System.out.println("1="+data);
+			//System.out.println("normal length="+data.length()+" codelength="+lengthCodepoints(data));
+			//System.out.println("Problem: "+getDatabase()+" record "+getAccessionNumber()+"'s data for column "+columnName+" is too big. data length is "+data.length());
+			//added to output oversize data for later use by hmo at 5/10/2019				
+			//this.oversizeFieldOut.println(getAccessionNumber()+"\t"+getPui()+"\t"+columnName+"\t"+getUpdatenumber()+"\t"+getDatabase()+"\t"+this.filename+"\t"+data);
+			
+			data = data.substring(0,columnWidth);
+			cutOffPosition = data.lastIndexOf(this.AUDELIMITER);
+			if(cutOffPosition<data.lastIndexOf(this.IDDELIMITER))
+			{
+				cutOffPosition = data.lastIndexOf(this.IDDELIMITER);
+			}
+			if(cutOffPosition>0)
+			{
+				data = data.substring(0,cutOffPosition);
+			}
+			if(data.length()>columnWidth)
+			{
+				data = data.substring(0,columnWidth);
+			}
+			//System.out.println("2="+data);
+			
+			}
+		}
+		//this.oversizeFieldOut.flush();
+		return data;
+	}
 
     public StringBuffer getSecondAff(Element e, String elemName) {
         StringBuffer field = new StringBuffer();
