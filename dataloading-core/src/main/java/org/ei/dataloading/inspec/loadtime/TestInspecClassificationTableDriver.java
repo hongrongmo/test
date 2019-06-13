@@ -159,35 +159,35 @@ public class TestInspecClassificationTableDriver {
                         {
                             //record.setClassStatus(((Concept) cNode).getTextContent().trim());  // when JDK order at the end in build path
                         	
-                        	record.setClassStatus(cNode.getTextContent().trim());
+                        	record.setClassStatus(((Concept) cNode).getTextContent().trim());
                         }
 
 
                         if(nodeName.equalsIgnoreCase(CLASS_CODE))
                         {
-                            record.setSingleClassCodes(cNode.getTextContent().trim());
+                            record.setSingleClassCodes(((Concept) cNode).getTextContent().trim());
 
                         }
 
                         if(nodeName.equalsIgnoreCase(CLASS_LEVEL))
                         {
-                            record.setClassLevel(cNode.getTextContent().trim());
+                            record.setClassLevel(((Concept) cNode).getTextContent().trim());
                         }
 
                         if(nodeName.equalsIgnoreCase(CLASS_TITLE))
                         {
                         	
-                            record.setClassTitle(cNode.getTextContent().trim());
+                            record.setClassTitle(((Concept) cNode).getTextContent().trim());
                         }
 
                         if(nodeName.equalsIgnoreCase(SCOPE_NOTES))
                         {
-                            record.setClassScopeNotes(cNode.getTextContent().trim());
+                            record.setClassScopeNotes(((Concept) cNode).getTextContent().trim());
                         }
 
                         if(nodeName.equalsIgnoreCase(SEE_ALSO_CROSS_REF))
                         {
-                            record.setClassSeeAlsoRef(cNode.getTextContent().trim().replaceAll(";", ","));
+                            record.setClassSeeAlsoRef(((Concept) cNode).getTextContent().trim().replaceAll(";", ","));
 
                         }
 
@@ -195,7 +195,7 @@ public class TestInspecClassificationTableDriver {
                         if(nodeName.equalsIgnoreCase(SEE_CROSS_REF))
                         {
 
-                            record.setClassSeeRef(cNode.getTextContent().trim());
+                            record.setClassSeeRef(((Concept) cNode).getTextContent().trim());
                         }
 
 
@@ -529,7 +529,7 @@ public class TestInspecClassificationTableDriver {
                         {
                             if(cNode.item(j).getNodeType()==Node.ELEMENT_NODE)
                             {
-                                mainTermStringBuffer.append(cNode.item(j).getTextContent().trim());
+                                mainTermStringBuffer.append(((Concept) cNode.item(j)).getTextContent().trim());
 
                                 if(j<cNode.getLength()-1){
                                     mainTermStringBuffer.append(", ");
@@ -542,7 +542,7 @@ public class TestInspecClassificationTableDriver {
 
                 else
                 {
-                 mainTermStringBuffer.append(tNode.item(k).getTextContent());  //H 03-07-2014 Original
+                 mainTermStringBuffer.append(((Concept) tNode.item(k)).getTextContent());  //H 03-07-2014 Original
 
                 }
 

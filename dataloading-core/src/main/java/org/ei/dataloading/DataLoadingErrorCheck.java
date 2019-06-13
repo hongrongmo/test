@@ -133,7 +133,7 @@ public class DataLoadingErrorCheck {
 			if(args[7] !=null)
 			{
 				username = args[7];
-				System.out.println("Schema: " + username);
+				//System.out.println("Schema: " + username);
 			}
 			if(args[8] !=null)
 			{
@@ -745,14 +745,15 @@ public class DataLoadingErrorCheck {
 
 		if(operation !=null && database !=null && (operation.equalsIgnoreCase("update") || operation.equalsIgnoreCase("delete")))
 		{
-			if(database.equalsIgnoreCase("cpx") && doctype!=null && (doctype.equalsIgnoreCase("s300") || doctype.equalsIgnoreCase("cpxnew")))
+			if(database.equalsIgnoreCase("cpx") && doctype!=null && (doctype.equalsIgnoreCase("s300") || doctype.equalsIgnoreCase("cpxnew") || doctype.equalsIgnoreCase("cpxdel")
+					|| doctype.contentEquals("cpxupd")))
 			{
 				tableName = "BD_AIP_TEMP";
 			}
-			else if(database.equalsIgnoreCase("cpx") && doctype!=null && !(doctype.equalsIgnoreCase("s300")))
-			{
-				tableName = "BD_CORRECTION_TEMP";
-			}
+			/*
+			 * else if(database.equalsIgnoreCase("cpx") && doctype!=null &&
+			 * !(doctype.equalsIgnoreCase("s300"))) { tableName = "BD_CORRECTION_TEMP"; }
+			 */
 			else if(database.equalsIgnoreCase("geo"))
 			{
 				tableName = "GEO_CORRECTION_TEMP";
