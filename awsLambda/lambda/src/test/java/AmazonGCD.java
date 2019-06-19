@@ -26,9 +26,10 @@ public class AmazonGCD
 
 public static void main(String[] args)
 {
-	int num=5;
+	int num=2;
 	//int[] arr = {2,4,6,8,20};		//2
-	int[] arr = {2,7,9,10,20};
+	//int[] arr = {2,7,9,10,20};      //2
+	int [] arr = {24,54};
 
 	AmazonGCD obj = new AmazonGCD();
 	int gcd = obj.findGCD(arr,num);
