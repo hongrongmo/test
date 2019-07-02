@@ -250,6 +250,10 @@ public class DataLoadingErrorCheck {
 					otherErrors.put("records with null accessnumber", count);
 				}	
 
+				/**** to avoid confusion of SNS messages, the records with blocked issn/e-issn should not be considered as error, so skip this part, uncomment when needed
+					Commented on Tuesday 07/02/2019, WK [ 201928]
+				*****/
+				/*
 				// check records blocked for issn/e-issn block to append 
 				if(line !=null && line.contains("block record") && line.contains("for issn"))
 				{
@@ -277,6 +281,7 @@ public class DataLoadingErrorCheck {
 						otherErrors.put("Records blocked for E-ISSN", 1);
 					}
 				}
+				*/
 				
 				// reset for next iteration, so no accumulation
 				
