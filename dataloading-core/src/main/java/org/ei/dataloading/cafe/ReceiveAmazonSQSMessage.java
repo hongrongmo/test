@@ -229,7 +229,13 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 				{
 					String fieldKey = tokens.nextToken();
 					
-					getFieldsKeys(fieldKey);
+					if(!(fieldKey.contains("SubscriptionConfirmation")))
+						getFieldsKeys(fieldKey);
+					else
+					{
+						System.out.println("It is a subscription Message, Skip it");
+						break;
+					}
 				}
 			}
 			
@@ -237,7 +243,7 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 			
 			bucketName = getMessageField("bucket");
 			cpxdbCollection = checkCpxDBCollection();
-			if(bucketName.length() >0 && bucketName.contains("ani") && cpxdbCollection)
+			if(bucketName !=null && bucketName.length() >0 && bucketName.contains("ani") && cpxdbCollection)
 			{
 				/*for(String key : messageFieldKeys.keySet())
 				{
@@ -292,7 +298,7 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 			if(token !=null)
 			{
 				key_Value = formateString(token.nextToken());
-				if(key_Value !=null)
+				if(key_Value !=null && !(key_Value.contains("SubscriptionConfirmation")))
 				{
 						if(key_Value.contains("entries"))
 						{

@@ -40,6 +40,9 @@ import org.ei.xml.Entity;
  * @Description: Cafe Author Profile with embeded Author Affiliation part in the Author profile
  * Only CPX AU profiles to be indexed in ES 
  * by comparing author-id with ANI metadata tables.
+ * 
+ * Friday 07/26/2019, wk: [201931] due restricted Mapping type removal in ES 6.7, I have to modify all classes taking off the combined/multi type mapping index "cafe" and replace it
+ * with the 2 new indices "author" , "affiliation"
  */
 public class AuthorCombiner {
 
@@ -203,7 +206,7 @@ public class AuthorCombiner {
 			if(args[15] !=null)
 			{
 				esIndexName = args[15].toLowerCase().trim();
-				if(esIndexName.equalsIgnoreCase("author") || esIndexName.equalsIgnoreCase("cafe"))
+				if(esIndexName.equalsIgnoreCase("author"))
 
 					System.out.println("ES Index Name: " + esIndexName);
 				else

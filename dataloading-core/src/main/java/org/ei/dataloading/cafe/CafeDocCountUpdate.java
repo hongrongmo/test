@@ -26,6 +26,9 @@ import java.util.List;
  * 		4. for ids list, update profile tables (author_profile, institute_profile) set "es_status" column to null
  * 		5. for those ids that were in prod and not in temp count table (deleted) need to delete from ES
  * 		6. continue regular weekly AU/AF ES index
+ * 
+ * Friday 07/26/2019, wk: [201931] due restricted Mapping type removal in ES 6.7, I have to modify all classes taking off the combined/multi type mapping index "cafe" and replace it
+ * with the 2 new indices "author" , "affiliation"
  */
 public class CafeDocCountUpdate 
 {
@@ -148,12 +151,12 @@ public class CafeDocCountUpdate
 			if(args[11] !=null)
 			{
 				esIndexName = args[11];
-				if(esIndexName.equalsIgnoreCase("author") || esIndexName.equalsIgnoreCase("affiliation") || esIndexName.equalsIgnoreCase("cafe"))
+				if(esIndexName.equalsIgnoreCase("author") || esIndexName.equalsIgnoreCase("affiliation"))
 
 					System.out.println("ES Index Name: " + esIndexName);
 				else
 				{
-					System.out.println("Invalid ES Index Name for AU/AF profile deletion from ES, re-try with ESIndexName cafe");
+					System.out.println("Invalid ES Index Name for AU/AF profile deletion from ES, re-try with ESIndexName author/affiliation");
 					System.exit(1);
 				}
 			}

@@ -45,6 +45,11 @@ import com.amazonaws.http.IdleConnectionReaper;
 import com.amazonaws.services.waf.model.HTTPRequest;
 import com.amazonaws.util.IOUtils;
 
+/*
+ * @telebh: Friday 07/26/2019, wk: [201931] due restricted Mapping type removal in ES 6.7, I have to modify all classes taking off the combined/multi type mapping index "cafe" and replace it
+ * with the 2 new indices "author" , "affiliation" 
+ */
+
 public class AusAffESIndex {
 
 	private final String SERVICE_NAME = "es";
@@ -324,7 +329,10 @@ public class AusAffESIndex {
 			curRecNum = 1;
 		}
 
-		bulkIndexContents.append("{ \"index\" : { \"_type\" : \""+ doc_type + "\", \"_id\" : \"" + doc_id + "\" } }");
+		
+		//bulkIndexContents.append("{ \"index\" : { \"_type\" : \""+ doc_type + "\", \"_id\" : \"" + doc_id + "\" } }"); //till es 6.0
+		
+		bulkIndexContents.append("{ \"index\" : { \"_id\" : \"" + doc_id + "\" } }");
 		bulkIndexContents.append("\n");
 		bulkIndexContents.append(profile_content.toString());
 		bulkIndexContents.append("\n");
@@ -337,18 +345,16 @@ public class AusAffESIndex {
 	{
 		
 		bulkIndexContents = new StringBuffer();
-		String document_type = null;
 		
-		if(doc_type !=null && doc_type.equalsIgnoreCase("apr"))
-		{
-			document_type="author";
-		}
-		else if(doc_type !=null && doc_type.equalsIgnoreCase("ipr"))
-		{
-			document_type="affiliation";
-		}
-		else
-			System.out.println("Invalid document type!!!");
+		// HH commented 07/26/2019 used for ES6.0 when had one index, multi doc_type (author, affiliation)
+		/*
+		 * String document_type = null;
+		 * 
+		 * if(doc_type !=null && doc_type.equalsIgnoreCase("apr")) {
+		 * document_type="author"; } else if(doc_type !=null &&
+		 * doc_type.equalsIgnoreCase("ipr")) { document_type="affiliation"; } else
+		 * System.out.println("Invalid document type!!!");
+		 */
 
 		for(int i=0;i<docIds.size();i++)
 		{
@@ -363,7 +369,8 @@ public class AusAffESIndex {
 			}
 			
 			
-			bulkIndexContents.append("{ \"delete\" : { \"_type\" : \"" + document_type + "\", \"_id\" : \"" + docIds.get(i) + "\" } }");
+			//bulkIndexContents.append("{ \"delete\" : { \"_type\" : \"" + document_type + "\", \"_id\" : \"" + docIds.get(i) + "\" } }");  // till es 6.0
+			bulkIndexContents.append("{ \"delete\" : { \"_id\" : \"" + docIds.get(i) + "\" } }");
 			bulkIndexContents.append("\n");
 			
 			curRecNum++;
