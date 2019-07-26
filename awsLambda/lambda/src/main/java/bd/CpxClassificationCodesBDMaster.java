@@ -1,5 +1,9 @@
 package bd;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.Connection;
@@ -23,26 +27,34 @@ import org.ei.common.Constants;
  */
 public class CpxClassificationCodesBDMaster 
 {
+	static String filename = null;
 	static String url = "jdbc:oracle:thin:@localhost:1521:eid";    //for localhost
 	static String driver = "oracle.jdbc.driver.OracleDriver";
 	static String username = "db_xml";
 	static String passwd = "xyz";
 	
+	Set<String> invalidCcSet = new HashSet<String>();
+	
 	public static void main(String[] args) 
 	{
-		if(args.length >3)
+		if(args.length >4)
 		{
 			if(args[0] != null)
-				url = args[0];
+			{
+				filename = args[0];
+				System.out.println("Bad Class codes filename: " + filename);
+			}	
+			if(args[1] != null) 
+				url = args[1];
 			System.out.println("URL:" + url);
-			if(args[1] !=null)
-				driver = args[1];
 			if(args[2] !=null)
-				username = args[2];
-			System.out.println("username: " + username);
+				driver = args[2];
 			if(args[3] !=null)
-				passwd = args[3];
-			System.out.println("passwd: " + passwd);
+				username = args[3];
+			System.out.println("username: " + username);
+			if(args[4] !=null)
+				passwd = args[4];
+			//System.out.println("passwd: " + passwd);
 			
 		}
 		else
@@ -51,9 +63,47 @@ public class CpxClassificationCodesBDMaster
 			System.exit(1);
 		}
 		CpxClassificationCodesBDMaster obj = new CpxClassificationCodesBDMaster();
+		
+		// load invalid classcodes
+		obj.loadInvalidClassCodes(filename);
 		obj.getClassificationCodes();
 	}
 	
+	public void loadInvalidClassCodes(String filename)
+	{
+		String code = null;
+		
+		try
+		{
+			File invalidCcsFile = new File(filename);
+			if(invalidCcsFile.exists())
+			{
+				BufferedReader reader = new BufferedReader(new FileReader(invalidCcsFile));
+				while((code  = reader.readLine()) !=null)
+				{
+					invalidCcSet.add(code);
+				}
+			}
+			else
+			{
+				System.out.println("File: " + invalidCcsFile + " not exist");
+			}
+			
+		}
+		
+		catch(FileNotFoundException ex)
+		{
+			System.out.println("File:" + filename + " not exist!!!");
+			System.out.println(ex.getMessage());
+			ex.printStackTrace();
+		}
+		catch(Exception e)
+		{
+			System.out.println("Exception happened! ");
+			System.out.println("Error: " + e.getMessage());
+			e.printStackTrace();
+		}
+	}
 	
 	public void getClassificationCodes()
 	{
@@ -63,12 +113,14 @@ public class CpxClassificationCodesBDMaster
 		Set<String> class_codes = new TreeSet<String>();
 		
 		String [] classificationCodes = null;
-		FileWriter out = null;
+		FileWriter out = null, invalidCcMid_out = null;
 		
-		String query = "select CLASSIFICATIONCODE from bd_master where database='cpx'";
+		String query = "select CLASSIFICATIONCODE,M_ID from bd_master where database='cpx'";
 		try
 		{
 			out = new FileWriter("cpx_master_class_codes.txt");
+			invalidCcMid_out = new FileWriter("invalid_cc_cpx_records");
+			
 			System.out.println("runnig query...." + query);
 			con = getconnection(url, driver, username, passwd);
 			stmt = con.createStatement();
@@ -87,6 +139,11 @@ public class CpxClassificationCodesBDMaster
 							class_codes.add(classificationCodes[i].trim());
 							//System.out.println(classificationCodes[i]);
 							
+							// check if it is invalid classcode & if so get its M_ID
+							if(invalidCcSet.contains(classificationCodes[i].trim()))
+							{
+								invalidCcMid_out.write(rs.getString(2) + "\n");
+							}
 						}
 					}
 					
@@ -106,6 +163,20 @@ public class CpxClassificationCodesBDMaster
 		}
 		finally
 		{
+			try
+			{
+				if(invalidCcMid_out !=null)
+				{
+					invalidCcMid_out.flush();
+					invalidCcMid_out.close();
+				}
+				
+			}
+			catch(IOException ex)
+			{
+				ex.printStackTrace();
+			}
+			
 			try
 			{
 				if(out !=null)
