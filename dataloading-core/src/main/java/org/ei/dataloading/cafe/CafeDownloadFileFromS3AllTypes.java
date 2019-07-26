@@ -5,6 +5,10 @@ import io.searchbox.core.BulkResult;
 import io.searchbox.core.Delete;
 import io.searchbox.core.BulkResult.BulkResultItem;*/
 
+/*
+ * @telebh: Friday 07/26/2019, wk: [201931] due restricted Mapping type removal in ES 6.7, I have to modify all classes taking off the combined/multi type mapping index "cafe" and replace it
+ * with the 2 new indices "author" , "affiliation" 
+ */
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -145,12 +149,6 @@ public class CafeDownloadFileFromS3AllTypes {
 			{
 				doc_type = args[4];
 				System.out.println("doc_Type: " +  doc_type);
-				
-				// added 05/10/2018 as ES 6.2 and up split types in separate indices
-				/*if(doc_type.toLowerCase().trim().equalsIgnoreCase("apr"))
-					esIndexName = "author";
-				else if(doc_type.toLowerCase().trim().equalsIgnoreCase("ipr"))
-					esIndexName = "affiliation";*/
 			}
 
 			if(args[5] !=null)
@@ -261,7 +259,7 @@ public class CafeDownloadFileFromS3AllTypes {
 					System.out.println("ES Index Name: " + esIndexName);
 				else
 				{
-					System.out.println("Invalid ES Index Name for AU/AF profile deletion from ES, re-try with ESIndexName cafe");
+					System.out.println("Invalid ES Index Name for AU/AF profile deletion from ES, re-try with ESIndexName author/affiliation");
 					System.exit(1);
 				}
 			}
