@@ -63,6 +63,8 @@ import java.util.Set;
  *    "so this step should be executed right after Cafe ANI lookup loading to temp tables & before updating cafe prod lookup tables"
  *    
  *    
+ *    Friday 07/26/2019, wk: [201931] due restricted Mapping type removal in ES 6.7, I have to modify all classes taking off the combined/multi type mapping index "cafe" and replace it
+ * with the 2 new indices "author" , "affiliation"
  */
 public class AusAffDeletion {
 
@@ -168,12 +170,12 @@ public class AusAffDeletion {
 			if(args[10] !=null)
 			{
 				esIndexName = args[10];
-				if(esIndexName.equalsIgnoreCase("author") || esIndexName.equalsIgnoreCase("affiliation") || esIndexName.equalsIgnoreCase("cafe"))
+				if(esIndexName.equalsIgnoreCase("author") || esIndexName.equalsIgnoreCase("affiliation"))
 
 					System.out.println("ES Index Name: " + esIndexName);
 				else
 				{
-					System.out.println("Invalid ES Index Name for AU/AF profile deletion from ES, re-try with ESIndexName cafe");
+					System.out.println("Invalid ES Index Name for AU/AF profile deletion from ES, re-try with ESIndexName author/affiliation");
 					System.exit(1);
 				}
 			}
