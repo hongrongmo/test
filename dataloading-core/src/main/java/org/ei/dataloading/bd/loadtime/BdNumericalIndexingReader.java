@@ -83,14 +83,14 @@ public class BdNumericalIndexingReader {
             action = args[3];
             System.out.println("DATABASE URL= "+url);
             System.out.println("DATABASE USERNAME= "+username);
-            System.out.println("DATABASE PASSWORD= "+password);
+            //System.out.println("DATABASE PASSWORD= "+password);
         }
         else
         {
             System.out.println("USING DEFAULT DATABASE SETTING");
             System.out.println("DATABASE URL= "+url);
             System.out.println("DATABASE USERNAME= "+username);
-            System.out.println("DATABASE PASSWORD= "+password);
+            //System.out.println("DATABASE PASSWORD= "+password);
         }
         BdNumericalIndexingReader c;
 

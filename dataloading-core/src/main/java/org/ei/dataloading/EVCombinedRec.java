@@ -498,6 +498,9 @@ public class EVCombinedRec {
 	public static final String GRANTTEXT = "372";
 	public static final String ISOPENACESS = "373";
 	
+	// added by hmo on 2019-08-28
+	public static final String UPDATE_NUMBER = "374";
+	public static final String ORG_ID= "375";
 
 	 //*/
 

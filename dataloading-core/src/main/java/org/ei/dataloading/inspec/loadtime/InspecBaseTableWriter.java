@@ -61,7 +61,14 @@ public class InspecBaseTableWriter
 	public void begin() throws Exception
 	{
 		++filenumber;
-		out = new PrintWriter(new FileWriter(filename+"."+filenumber));
+		
+		String name = this.filename;
+		int pathSeperator = filename.lastIndexOf("/");
+		System.out.println("pathSeperator "+pathSeperator);
+		
+		name=name.substring(pathSeperator+1);
+		System.out.println("INS output file name "+name);
+		out = new PrintWriter(new FileWriter(name+"."+filenumber));
 		//out = new PrintWriter(new FileWriter(filename));
 		open = true;
 		curRecNum = 0;
@@ -169,7 +176,14 @@ public class InspecBaseTableWriter
 	{
 		if(citationOut==null)
 		{
-			citationOut = new PrintWriter(new FileWriter("Citation_"+this.filename+"."+filenumber+".out")); 
+			String name = this.filename;
+			int pathSeperator = filename.lastIndexOf("/");
+			System.out.println("pathSeperator "+pathSeperator);
+			
+			name="Citation_"+filename.substring(pathSeperator+1)+"."+filenumber+".out";
+			System.out.println("Citation output file name "+name);
+			//citationOut = new PrintWriter(new FileWriter("Citation_"+this.filename+"."+filenumber+".out")); 
+			citationOut = new PrintWriter(new FileWriter(name)); 
 			System.out.println("create citation file");
 		}
 		String[] citationRecords = valueS.split(Constants.AUDELIMITER, -1);
@@ -214,13 +228,21 @@ public class InspecBaseTableWriter
 					outputBuffer.append("\t");
 					
 					String author = subItems[4];
-					if(author!=null)
+					if(author!=null && author.length()>0)
 					{
 						//to Make the same format with inspec author
 						author=author.replace("|", Constants.IDDELIMITER);
 						author=author.replace(Constants.GROUPDELIMITER, Constants.AUDELIMITER);		
 						outputBuffer.append(author);
 					}
+					/*
+					else
+					{
+						System.out.println("record "+accessNumber+" author is null");
+						//outputBuffer.append(null);
+					}
+					*/
+					
 					outputBuffer.append("\t");
 					
 					String citationYear = subItems[5];
@@ -446,7 +468,13 @@ public class InspecBaseTableWriter
 	{
 		if(numericalIndexOut==null)
 		{
-			numericalIndexOut = new PrintWriter(new FileWriter("Numerical_"+this.filename+"."+filenumber+".out")); 
+			String name = this.filename;
+			int pathSeperator = filename.lastIndexOf("/");
+			System.out.println("pathSeperator "+pathSeperator);			
+			name = "Numerical_"+name.substring(pathSeperator+1)+"."+filenumber+".out";
+			//numericalIndexOut = new PrintWriter(new FileWriter("Numerical_"+name+"."+filenumber+".out")); 
+			System.out.println("numerical output file name "+name);
+			numericalIndexOut = new PrintWriter(new FileWriter(name));
 			System.out.println("create data file");
 		}
 		String[] numericalIndexRecords = valueS.split(Constants.AUDELIMITER);

@@ -230,8 +230,8 @@ public class DataLoadDictionary
 	    entityMap.put("&upsih;", "&#978;");
 	    entityMap.put("&straightphi;", "&#981;");
 	    entityMap.put("&piv;", "&#982;"); 
-	    entityMap.put("&Gammad;", "&#988;");//GREEK LETTER DIGAMMA (F) Ϝ
-	    entityMap.put("&gammad;", "&#989;");//GREEK SMALL LETTER DIGAMMA (f) ϝ
+	    entityMap.put("&Gammad;", "&#988;");//GREEK LETTER DIGAMMA (F) Ïœ
+	    entityMap.put("&gammad;", "&#989;");//GREEK SMALL LETTER DIGAMMA (f) Ï�
 
 	  	    
 	    entityMap.put("&IOcy;","&#1025;");	//CyrilliccapitalIO,likecapitalEumlaut
@@ -760,15 +760,15 @@ public class DataLoadDictionary
     					case 981 :sb.append("&straightphi;");break; 	//GREEK PHI SYMBOL (cursive)
     					case 982 :sb.append("&piv;");break; 	//greek pi symbol
     					case 983 :sb.append("&#x03D7");break; //GREEK KAI SYMBOL
-    					case 986 :sb.append("&#x03DA");break; //GREEK LETTER STIGMA Ϛ
-    					case 987 :sb.append("&#x03DB");break; //GREEK SMALL LETTER STIGMA ϛ
-    					case 988 :sb.append("&Gammad;");break; //GREEK LETTER DIGAMMA (F) Ϝ
-    					case 989 :sb.append("&gammad;");break; //GREEK SMALL LETTER DIGAMMA (f) ϝ
+    					case 986 :sb.append("&#x03DA");break; //GREEK LETTER STIGMA Ïš
+    					case 987 :sb.append("&#x03DB");break; //GREEK SMALL LETTER STIGMA Ï›
+    					case 988 :sb.append("&Gammad;");break; //GREEK LETTER DIGAMMA (F) Ïœ
+    					case 989 :sb.append("&gammad;");break; //GREEK SMALL LETTER DIGAMMA (f) Ï�
     					
-    					case 990 :sb.append("&#x03DE");break; //GGREEK LETTER KOPPA Ϟ
-    					case 991 :sb.append("&#x03DF");break; //GREEK SMALL LETTER KOPPA ϟ
-    					case 992 :sb.append("&#x03E0");break; //GREEK LETTER SAMPI Ϡ
-    					case 993 :sb.append("&#x03E1");break; //GREEK SMALL LETTER SAMPI ϡ
+    					case 990 :sb.append("&#x03DE");break; //GGREEK LETTER KOPPA Ïž
+    					case 991 :sb.append("&#x03DF");break; //GREEK SMALL LETTER KOPPA ÏŸ
+    					case 992 :sb.append("&#x03E0");break; //GREEK LETTER SAMPI Ï 
+    					case 993 :sb.append("&#x03E1");break; //GREEK SMALL LETTER SAMPI Ï¡
     					
     					//New Cyrillic (Russian) Alphabetic Entities in HTML 5
     					
@@ -886,8 +886,10 @@ public class DataLoadDictionary
     					case 8216 :sb.append("&lsquo;");break; 	//left single quotation
     					case 8217 :sb.append("&rsquo;");break; 	//right single quotation
     					case 8218 :sb.append("&sbquo;");break; 	//single low 9 quation mark
-    					case 8220 :sb.append("&ldquo;");break; 	//left double quotation
-    					case 8221 :sb.append("&rdquo;");break; 	//right double quotation
+    					case 8220 :sb.append("\"");break; 	//left double quotation
+    					case 8221 :sb.append("\"");break; 	//right double quotation changed on 7/23/2019 by hmo based on EVOPS 822
+    					//case 8220 :sb.append("&ldquo;");break; 	//left double quotation
+    					//case 8221 :sb.append("&rdquo;");break; 	//right double quotation
     					case 8222 :sb.append("&bdquo;");break; 	//Double low-9 quotation mark
     					case 8224 :sb.append("&dagger;");break; //Dagger
     					case 8225 :sb.append("&Dagger;");break; //Double Dagger

@@ -7,6 +7,7 @@ import java.sql.Statement;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.HashSet;
+import java.util.HashMap;
 import java.util.StringTokenizer;
 import java.util.ArrayList;
 import java.util.regex.*;
@@ -188,11 +189,11 @@ public class INSPECCombiner
 
             if(year == 2999)
             {
-                rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate, sspdate, aaff, afc, ab, anum, pubti, su, pyr, nrtype, pdoi, cdate, cedate, aoi, aus, aus2, rnum, pnum, cpat, ciorg, iorg, pas, chi, pvoliss, pvol, piss, pipn, cloc, cls, pcdn, scdn, cvs, eaff, eds, pfjt, sfjt, fls, pajt, sajt, la, matid, ndi, pspdate, pepdate, popdate, sopdate, ppub, rtype, sbn, sorg, psn, ssn, tc, pubti, ti, trs, trmc, aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc from "+Combiner.TABLENAME+" where pyr='0294' or pyr='0994' or pyr='1101' or pyr='20007' or pyr='Dec.' or pyr='July' or pyr is null");
+                rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate, sspdate, aaff, afc, ab, anum, pubti, su, pyr, nrtype, pdoi, cdate, cedate, aoi, aus, aus2, rnum, pnum, cpat, ciorg, iorg, pas, chi, pvoliss, pvol, piss, pipn, cloc, cls, pcdn, scdn, cvs, eaff, eds, pfjt, sfjt, fls, pajt, sajt, la, matid, ndi, pspdate, pepdate, popdate, sopdate, ppub, rtype, sbn, sorg, psn, ssn, tc, pubti, ti, trs, trmc, aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+" where pyr='0294' or pyr='0994' or pyr='1101' or pyr='20007' or pyr='Dec.' or pyr='July' or pyr is null");
             }
             else
             {
-                rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate, sspdate, aaff, afc, ab, anum, pubti, su, pyr, nrtype, pdoi, cdate, cedate, aoi, aus, aus2, rnum, pnum, cpat, ciorg, iorg, pas, chi, pvoliss, pvol, piss, pipn, cloc, cls, pcdn, scdn, cvs, eaff, eds, pfjt, sfjt, fls, pajt, sajt, la, matid, ndi, pspdate, pepdate, popdate, sopdate, ppub, rtype, sbn, sorg, psn, ssn, tc, pubti, ti, trs, trmc, aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc from "+Combiner.TABLENAME+" where pyr ='"+ year +"'");
+                rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate, sspdate, aaff, afc, ab, anum, pubti, su, pyr, nrtype, pdoi, cdate, cedate, aoi, aus, aus2, rnum, pnum, cpat, ciorg, iorg, pas, chi, pvoliss, pvol, piss, pipn, cloc, cls, pcdn, scdn, cvs, eaff, eds, pfjt, sfjt, fls, pajt, sajt, la, matid, ndi, pspdate, pepdate, popdate, sopdate, ppub, rtype, sbn, sorg, psn, ssn, tc, pubti, ti, trs, trmc, aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+" where pyr ='"+ year +"'");
             }
             writeRecs(rs,con);
             System.out.println("Wrote records.");
@@ -325,6 +326,7 @@ public class INSPECCombiner
 
             String abString = getStringFromClob(rs.getClob("ab"));
             String mid = rs.getString("M_ID");
+            //System.out.println("MID= "+mid);
             String accessnumber = rs.getString("anum");
             String strYear ="";
             if(rs.getString("pyr") != null && validYear(getPubYear(rs.getString("pyr"))))
@@ -377,7 +379,8 @@ public class INSPECCombiner
 
                     if(rs.getString("aaffmulti1") != null)
                     {
-                        aaff = new StringBuffer(rs.getString("aaffmulti1"));
+                    	aaff.append(Constants.AUDELIMITER);
+                        aaff.append(rs.getString("aaffmulti1"));
 
                         if (rs.getString("aaffmulti2") != null)
                         {
@@ -385,7 +388,15 @@ public class INSPECCombiner
                         }
                     }
 
-                    rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareAuthor(aaff.toString()));
+                    //rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareAuthor(aaff.toString()));
+                    rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareAffiliation(aaff.toString()));
+                  //added by hmo on 2019/09/11
+                   // rec.put(EVCombinedRec.AFFILIATIONID, prepareAffiliationID(aaff.toString()));
+                   // rec.put(EVCombinedRec.ORG_ID, prepareAffiliationORGID(aaff.toString()));
+                    rec.put(EVCombinedRec.AFFILIATIONID, prepareAffiliationORGID(aaff.toString()));
+                    rec.put(EVCombinedRec.ORG_ID, prepareAffiliationID(aaff.toString()));
+                    rec.put(EVCombinedRec.AFFILIATION_LOCATION, prepareAffiliationLocation(aaff.toString()));
+                    
                 }
 
                 if(rs.getString("afc") != null)
@@ -394,7 +405,8 @@ public class INSPECCombiner
                     if (countryFormatted != null)
                     {
                         rec.put(EVCombinedRec.COUNTRY, countryFormatted);
-                        rec.put(EVCombinedRec.AFFILIATION_LOCATION, countryFormatted);
+                        if(rec.get(EVCombinedRec.AFFILIATION_LOCATION)==null)
+                        	rec.put(EVCombinedRec.AFFILIATION_LOCATION, countryFormatted);
                     }
                 }
 
@@ -428,7 +440,13 @@ public class INSPECCombiner
                         }
                     }
 
-                    rec.put(EVCombinedRec.EDITOR_AFFILIATION, prepareAuthor(eaff.toString()));
+                    //rec.put(EVCombinedRec.EDITOR_AFFILIATION, prepareAuthor(eaff.toString()));
+                    rec.put(EVCombinedRec.EDITOR_AFFILIATION, prepareAffiliation(eaff.toString()));
+                    
+                    //added by hmo on 2019/09/11
+                    rec.put(EVCombinedRec.AFFILIATIONID, prepareAffiliationID(eaff.toString()));
+                    rec.put(EVCombinedRec.ORG_ID, prepareAffiliationORGID(eaff.toString()));
+                    
                 }
 
                 if(rs.getString("trs") != null)
@@ -706,7 +724,8 @@ public class INSPECCombiner
                         !rec.containsKey(EVCombinedRec.COUNTRY))
                     {
                         rec.put(EVCombinedRec.COUNTRY, countryFormatted);
-                        rec.put(EVCombinedRec.AFFILIATION_LOCATION, countryFormatted);
+                        if(rec.get(EVCombinedRec.AFFILIATION_LOCATION)==null)
+                        	rec.put(EVCombinedRec.AFFILIATION_LOCATION, countryFormatted);
                     }
                 }
 
@@ -722,6 +741,10 @@ public class INSPECCombiner
 
                 rec.put(EVCombinedRec.DATABASE, "ins");
                 rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("LOAD_NUMBER"));
+                if(rs.getString("UPDATENUMBER")!=null)
+                {
+                	rec.put(EVCombinedRec.UPDATE_NUMBER, rs.getString("UPDATENUMBER"));
+                }
 
                 if(validYear(strYear))
                 {
@@ -924,7 +947,222 @@ public class INSPECCombiner
         return (String[])list.toArray(new String[1]);
 
     }
+    
+    public  ArrayList prepareAllAffiliation(String aString)
+            throws Exception
+    {
 
+        ArrayList list = new ArrayList();
+        //.out.println("1= "+aString);
+        String[] st = aString.split(Constants.AUDELIMITER,-1);
+        String s;
+        HashMap  afMap = new HashMap();
+        
+        for (int i=0;i<st.length;i++)
+        {
+            s = st[i];
+            //System.out.println("2= "+s);
+            if(s!=null && s.length() > 0)
+            {
+            	String[] a;
+                if(s.indexOf(Constants.IDDELIMITER) > -1)
+                {
+                	a = s.split(Constants.IDDELIMITER,-1); 
+                	//System.out.println("3-1= "+a[0]);
+                	
+                } 
+                else
+                {
+                	 a = new String[1];
+                	 a[0]=s;
+                	 //System.out.println("3-2= "+a[0]);
+                }
+               
+                list.add(a);           
+            }
+            
+        }
+        return list;
+    }
+    
+    public  String[] prepareAffiliation(String aString)
+            throws Exception
+    {
+
+        ArrayList list = new ArrayList();
+        ArrayList allAff = prepareAllAffiliation(aString);
+        String[] sAff;
+        String s;
+
+        for (int i=0;i<allAff.size();i++)
+        {
+            sAff = (String[])allAff.get(i);
+            if(sAff!=null && sAff.length>0)
+            {
+            	String aff=null;
+          	   	String org=null;
+          	   	String dept=null;
+          	   	StringBuffer affBuffer = new StringBuffer();
+          	   	for(int j=0;j<sAff.length;j++)
+          	   	{
+          	   		String ss = sAff[j];
+          	   		if(j==0 && !list.contains(ss))
+          	   		{
+          	   			list.add(ss);
+          	   			//System.out.println("AFF "+i+" "+j+" "+sAff[j]);          	   			
+          	   		}
+          	   		
+          	   		if(j==3)
+          	   		{
+          	   			org = sAff[j];
+          	   		}
+          	   		
+	          	   	if(j==4)
+	      	   		{
+	      	   			dept = sAff[j];
+	      	   		}
+          	   	
+          	   	
+	          	   	if(org!=null && dept!=null)
+	          	   	{
+	          	   		ss = dept+", "+org;
+	          	   		if(!list.contains(ss))
+	          	   			list.add(ss);
+	          	   	}
+	          	   	else if(org!=null)
+	          	   	{
+	          	   		ss = org;
+	          	   		if(!list.contains(ss))
+	          	   			list.add(ss);
+	          	   	}  
+	          	   	else if(dept!=null)
+	          	   	{
+	          	   		ss = dept;
+	          	   		if(!list.contains(ss))
+	          	   			list.add(ss);
+	          	   	}  
+          	   	}
+          	                
+            }
+        }
+        
+        /*
+        for(int k=0;k<list.size();k++) {
+        	System.out.println("AFFILIATION "+(String)list.get(k));
+        }
+		*/
+        return (String[])list.toArray(new String[1]);
+    }
+        
+    private	String[] prepareAffiliationLocation(String aString)
+            throws Exception
+    {
+
+        ArrayList list = new ArrayList();
+        ArrayList allAff = prepareAllAffiliation(aString);
+        String[] sAff;
+        String s;
+
+        for (int i=0;i<allAff.size();i++)
+        {
+            sAff = (String[])allAff.get(i);
+            if(sAff!=null && sAff.length>0)
+            {
+               for(int j=0;j<sAff.length;j++)
+               {
+            	   if(j==2 || j==5 || j==6 || j==7 || j==8)
+            	   {
+	            	   //System.out.println("AFFiliATIONLOCATION "+i+" "+j+" "+sAff[j]);
+	            	   list.add(sAff[j]);
+            	   }
+               }
+
+               
+            }
+
+        }
+
+        return (String[])list.toArray(new String[1]);
+
+    }
+    
+    private	String[] prepareAffiliationID(String aString)
+            throws Exception
+    {
+
+        ArrayList list = new ArrayList();
+        ArrayList allAff = prepareAllAffiliation(aString);
+        String[] sAff;
+        String s;
+
+        for (int i=0;i<allAff.size();i++)
+        {
+            sAff = (String[])allAff.get(i);
+            if(sAff!=null && sAff.length>0)
+            {
+               for(int j=0;j<sAff.length;j++)
+               {
+            	   if(j==1)
+            	   {
+	            	   
+            		   String afid = sAff[j];
+            		   if(!list.contains(afid)) {
+            			   list.add(afid);
+            		   }
+	            	   if(afid.indexOf(".")>-1)
+	            	   {
+	            		   afid = afid.replaceAll("\\.", "DQD");
+	            		   if(!list.contains(afid)) {
+	            			   list.add(afid);
+	            		   }
+	            	   }
+            	   }
+               }
+               
+            }
+
+        }
+
+        return (String[])list.toArray(new String[1]);
+
+    }
+        
+
+        
+    public  String[] prepareAffiliationORGID(String aString)
+            throws Exception
+    {
+
+        ArrayList list = new ArrayList();
+        ArrayList allAff = prepareAllAffiliation(aString);
+        String[] sAff;
+        String s;
+
+        for (int i=0;i<allAff.size();i++)
+        {
+            sAff = (String[])allAff.get(i);
+            if(sAff!=null && sAff.length>0)
+            {
+               for(int j=0;j<sAff.length;j++)
+               {
+            	   if(j==9)
+            	   {
+	            	   //System.out.println("ORGID "+i+" "+j+" "+sAff[j]);
+	            	   list.add(sAff[j]);
+            	   }
+               }
+
+               
+            }
+
+        }
+
+
+        return (String[])list.toArray(new String[1]);
+
+    }
+
+  
    public  String[] prepareAuthor(String aString)
         throws Exception
     {
@@ -953,6 +1191,7 @@ public class INSPECCombiner
         return (String[])list.toArray(new String[1]);
 
     }
+    
 
     public String[] prepareIndexterms(String aString)
         throws Exception
@@ -1226,19 +1465,19 @@ public class INSPECCombiner
         //  rs = stmt.executeQuery("select m_id, aaff, su, ab, anum, aoi, aus, aus2,pyr, rnum, pnum, cpat, ciorg, iorg, pas, cdate, cedate, doi, nrtype, doit, chi, voliss, ipn, cloc, cls, cn, cnt, cvs, eaff, eds, fjt, fls, fttj, la, matid, ndi, pdate, pub, rtype, sbn, sorg, sn, snt, tc, tdate, thlp, ti, trs, trmc, LOAD_NUMBER from "+Combiner.TABLENAME+ " where LOAD_NUMBER = "+loadN);
             if (loadN == 3001)
             {
-                sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc, aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc from "+Combiner.TABLENAME+ " where pyr is null and load_number < 200537";
+                sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc, aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+ " where pyr is null and load_number < 200537";
             }
             else if (loadN == 3002)
             {
-                sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn,  LOAD_NUMBER, seq_num, ipc from "+Combiner.TABLENAME+ " where pyr like '194%'or pyr like '195%' or (pyr like '196%' and pyr != '1969')";
+                sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn,  LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+ " where pyr like '194%'or pyr like '195%' or (pyr like '196%' and pyr != '1969')";
             }
             else if(loadN ==8413583)
             {
-                sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc from "+Combiner.TABLENAME+ " where Anum = '"+loadN+"'";
+                sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+ " where Anum = '"+loadN+"'";
             }
             else
             {
-                sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc from "+Combiner.TABLENAME+ " where LOAD_NUMBER = "+loadN;
+                sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+ " where LOAD_NUMBER = "+loadN;
             }
             //System.out.println("Inspect sqlQuery= "+sqlQuery);
             rs = stmt.executeQuery(sqlQuery);

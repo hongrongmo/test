@@ -3,6 +3,7 @@ package org.ei.util;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.io.*;
+import java.sql.CallableStatement;
 import java.sql.Clob;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -383,7 +384,11 @@ public class NewDataTesting
 		else  if(action.equals("getallIndexes"))
 		{
 			test.getAllIndexes(updateNumber);
-		}		
+		}
+		else  if(action.equals("checkChar"))
+		{
+			test.checkCharacter();
+		}	
 		else
 		{
 			System.out.println("we dont know your input "+action);
@@ -780,6 +785,64 @@ public class NewDataTesting
 		return resultList;
 
 	}
+	
+	/*
+	private void runStoredProcedure(String name,int updateNumber)
+    {
+		Statement stmt = null;
+		ResultSet rs = null;
+		Connection con = null;
+		String sqlQuery = null;
+		
+		HashMap mappingMap = new HashMap();
+    	long midTime = System.currentTimeMillis();
+        CallableStatement pstmt = null;
+        boolean blnResult = false;
+        try
+        {
+        	con = getConnection(this.URL,this.driver,this.username,this.password);
+			stmt = con.createStatement();                   
+            stmt = con.prepareCall("{ call update_aip_backup_table(?,?)}");
+            //stmt.setString(1,updateNumber);
+            //stmt.setString(2,database);
+            stmt.executeUpdate();
+            
+        }
+        catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if (rs != null) {
+				try {
+					rs.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+
+			if (stmt != null) {
+				try {
+					stmt.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			
+			if (con != null) {
+				try {
+					con.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}
+    }
+	*/
 	
 	public HashMap testMapping()
 	{
@@ -2800,6 +2863,110 @@ public class NewDataTesting
 		}
 	}
 	
+	private void checkCharacter()
+	{
+		Statement stmt = null;
+		ResultSet rs = null;
+		Connection con = null;
+		FileWriter out = null;
+		FileWriter out1 = null;
+		String sqlQuery = "select granttext from bd_master where accessnumber='20192607122436'";
+		try
+		{
+
+			con = getConnection(this.URL,this.driver,this.username,this.password);
+			stmt = con.createStatement();
+			LinkedHashSet<String> al=new LinkedHashSet<String>();  
+			StringBuffer buffer = new StringBuffer();
+			rs = stmt.executeQuery(sqlQuery);
+			while (rs.next())
+			{
+				String grant = rs.getString("granttext");
+				char[] arrChars = grant.toCharArray();
+
+		        int i = 0;
+
+		        for (int j = 0; j < arrChars.length; j++) 
+		        {
+		            i = (int) arrChars[j];
+
+		            if (i >= 1 && i <= 126) {
+
+		                buffer.append(arrChars[j]);
+
+		            } else {
+		            	if('“'==arrChars[j] || '”'==arrChars[j])
+		            	{
+		            		System.out.println("found "+i+" and translated to "+"\"");
+		            	}
+		            	else if(i==8221 || i==8220)
+		            	{
+		            		System.out.println("found2 "+i+" and translated to "+"\"");
+		            	}
+		            	
+		            	
+		            	buffer.append("***"+arrChars[j]+"***\n");
+		            	buffer.append("*** "+i+" ***");
+		            }
+		        }
+		        System.out.println(buffer.toString());
+			}
+			
+			
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if(out != null) {
+				try {
+					out.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			if(out1 != null) {
+				try {
+					out1.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			if (rs != null) {
+				try {
+					rs.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+
+			if (stmt != null) {
+				try {
+					stmt.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			if (con != null) {
+				try {
+					con.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+						
+		}
+		
+	}
+			
+	
 	private void getAllCodes()
 	{
 		Statement stmt = null;
@@ -3504,7 +3671,7 @@ public class NewDataTesting
 		Connection con = null;
 		FileWriter out = null;
 		query = "spa7:a* or spa7:b* or spa7:c* or spa7:d* or spa7:e* or spa7:f* or spa7:g* or spa7:h* or spa7:i* or spa7:j* or spa7:k* or spa7:l* or spa7:m* or spa7:n* or spa7:o* or spa7:p* or spa7:q* or spa7:r* or spa7:s* or spa7:t* or spa7:u* or spa7:v* or spa7:w* or spa7:x* or spa7:y* or spa7:z* or spa7:0* or spa7:1* or spa7:2* or spa7:3* or spa7:4* or spa7:5* or spa7:6* or spa7:7* or spa7:8* or spa7:9*";
-		String searchQuery = query.replaceAll("_", " and ");
+		String searchQuery = query.replaceAll("__", " and ");
 		try
 		{
 			out = new FileWriter("midFromFast_PROD.out");	
@@ -3580,7 +3747,7 @@ public class NewDataTesting
 		ResultSet rs = null;
 		Connection con = null;
 		FileWriter out = null;
-		String searchQuery = query.replaceAll("_", " and ");
+		String searchQuery = query.replaceAll("__", " and ");
 		
 		try
 		{
