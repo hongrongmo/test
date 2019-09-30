@@ -174,7 +174,7 @@ public class InstitutionCombiner{
 			if(args[15] !=null)
 			{
 				esIndexName = args[15].toLowerCase().trim();
-				if(esIndexName.equalsIgnoreCase("affiliation2") || esIndexName.equalsIgnoreCase("cafe"))
+				if(esIndexName.equalsIgnoreCase("affiliation") || esIndexName.equalsIgnoreCase("cafe"))
 
 					System.out.println("ES Index Name: " + esIndexName);
 				else
