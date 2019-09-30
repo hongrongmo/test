@@ -39,7 +39,8 @@ public static final String AUDELIMITER = Constants.AUDELIMITER;
 public static final String IDDELIMITER = Constants.IDDELIMITER;
 public String[] EVCombinedRecKeys = {EVCombinedRec.DATABASE, EVCombinedRec.AUTHOR, EVCombinedRec.EDITOR, EVCombinedRec.AUTHOR_AFFILIATION, EVCombinedRec.COUNTRY, EVCombinedRec.AFFILIATION_LOCATION, EVCombinedRec.LANGUAGE, EVCombinedRec.DOCTYPE, EVCombinedRec.ABSTRACT, EVCombinedRec.ISSN, EVCombinedRec.ISBN, EVCombinedRec.PUBLISHER_NAME, EVCombinedRec.INT_PATENT_CLASSIFICATION, EVCombinedRec.CONTROLLED_TERMS, EVCombinedRec.UNCONTROLLED_TERMS, EVCombinedRec.AVAILABILITY, EVCombinedRec.PUB_YEAR, EVCombinedRec.TITLE, EVCombinedRec.TRANSLATED_TITLE, EVCombinedRec.MONOGRAPH_TITLE, EVCombinedRec.SERIAL_TITLE, EVCombinedRec.CONFERENCE_LOCATION, EVCombinedRec.REPORTNUMBER, EVCombinedRec.CLASSIFICATION_CODE, EVCombinedRec.DEDUPKEY, EVCombinedRec.STARTPAGE, EVCombinedRec.CODEN, EVCombinedRec.CONFERENCE_NAME, EVCombinedRec.MEETING_DATE, EVCombinedRec.LOAD_NUMBER, EVCombinedRec.VOLUME, EVCombinedRec.ISSUE, EVCombinedRec.ACCESSION_NUMBER, EVCombinedRec.DOI, EVCombinedRec.PUB_SORT};
 Perl5Util perl = new Perl5Util();
-
+private GRFDataDictionary dictionary = GRFDataDictionary.getInstance();
+private Map<String,String> categoryMap = dictionary.getCategories();
 private static String tablename;
 //private static final Database GRF_DATABASE = new GRFDatabase();
 private static String databaseIndexName = "grf";
@@ -509,7 +510,16 @@ public void writeRecs(ResultSet rs)
 				{
 
 				  // Get EV system DOC_TYPE codes for indexing and append them to (or use in favor of ?) the GeoRef values
-				  String mappingcode = runtimeDocview.createColumnValueField("DOCUMENT_TYPE").getValue().concat(AUDELIMITER).concat(runtimeDocview.createColumnValueField("BIBLIOGRAPHIC_LEVEL_CODE").getValue());
+				  //modified by hmo at 20190904 to deal with null value of "BIBLIOGRAPHIC_LEVEL_CODE" column
+				  String mappingcode = null;
+				  if(runtimeDocview.createColumnValueField("DOCUMENT_TYPE").getValue()!=null && runtimeDocview.createColumnValueField("BIBLIOGRAPHIC_LEVEL_CODE").getValue()!=null)
+				  {
+					  mappingcode = runtimeDocview.createColumnValueField("DOCUMENT_TYPE").getValue().concat(AUDELIMITER).concat(runtimeDocview.createColumnValueField("BIBLIOGRAPHIC_LEVEL_CODE").getValue());
+				  }
+				  else if(runtimeDocview.createColumnValueField("DOCUMENT_TYPE").getValue()!=null)
+				  {
+					  mappingcode = runtimeDocview.createColumnValueField("DOCUMENT_TYPE").getValue();
+				  }
 				  
 				  if(mappingcode != null)
 				  {
@@ -668,7 +678,7 @@ public void writeRecs(ResultSet rs)
 				// CL
 				if(rs.getString("CATEGORY_CODE") != null)
 				{
-				  rec.put(EVCombinedRec.CLASSIFICATION_CODE,(rs.getString("CATEGORY_CODE")).split(AUDELIMITER));
+				  rec.put(EVCombinedRec.CLASSIFICATION_CODE,getCategoryCodes((rs.getString("CATEGORY_CODE")).split(AUDELIMITER)));
 				}
 				if(rs.getString("seq_num") != null)
 				{
@@ -719,6 +729,10 @@ public void writeRecs(ResultSet rs)
 
 				}
 				rec.putIfNotNull(EVCombinedRec.LOAD_NUMBER, rs.getString("LOAD_NUMBER"));
+				
+				//added by hmo on 2019/09/04 for adding updatenumber to Fast search
+				rec.putIfNotNull(EVCombinedRec.UPDATE_NUMBER, rs.getString("UPDATENUMBER"));
+				
 				rec.putIfNotNull(EVCombinedRec.VOLUME, getFirstNumber(rs.getString("VOLUME_ID")));
 				rec.putIfNotNull(EVCombinedRec.ISSUE, getFirstNumber(rs.getString("ISSUE_ID")));
 				rec.putIfNotNull(EVCombinedRec.ACCESSION_NUMBER,rs.getString("ID_NUMBER"));
@@ -820,6 +834,38 @@ public void writeRecs(ResultSet rs)
   {
     e.printStackTrace();
   }
+}
+
+private String[] getCategoryCodes(String[] in)
+{
+	if(in!=null)
+	{
+		String[] out = new String[in.length*3];
+		int j=0;
+		for(int i=0;i<in.length;i++)
+		{
+			out[j]=in[i];
+			j=j+1;
+			String categoryText = categoryMap.get(in[i]);
+			if(categoryText!=null)
+			{
+				if( categoryText.indexOf("(")>0)
+				{
+					categoryText=categoryText.substring(0,categoryText.indexOf("(")-1);
+				}
+				out[j]=categoryText.trim();
+				j=j+1;
+				out[j]=categoryText.trim()+" (category)";
+				j=j+1;
+			}
+		}
+		return out;
+		
+	}
+	else
+	{
+		return null;
+	}
 }
 
 private String[] parseMeridianData(String column)

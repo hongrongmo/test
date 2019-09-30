@@ -21,39 +21,52 @@ import org.ei.common.Constants;
  */
 public class BdAuthor {
 
-    private String auid;
-    private String authorId;
-    private String sec;
-    private String initials;
-    private String indexedName;
-    private String degrees;
-    private String surname;
-    private String givenName;
-    private String suffix;
-    private String nametext;
-    private String eAddress;
-    private String prefnameInitials;
-    private String prefnameIndexedname;
-    private String prefnameDegrees;
-    private String prefnameSurname;
-    private String prefnameGivenname;
-    private String affidStr;
+    private String auid;  //0
+    private String authorId;//1
+    private String sec;//2
+    private String indexedName;//3
+    private String initials;//4       
+    private String surname;//6
+    private String degrees;//5
+    private String givenName;//7
+    private String suffix;//8
+    private String nametext;//9
+    private String eAddress;//10
+    private String prefnameInitials;//11
+    private String prefnameIndexedname;//12
+    private String prefnameDegrees;//13
+    private String prefnameSurname;//14
+    private String prefnameGivenname;//15
+    private String affidStr;//16
+    private String alias;//17
+    private String altname;//18
+    
     private ArrayList<Integer> affid = new ArrayList<Integer>();
 
     public BdAuthor() {
 
     }
 
-    public BdAuthor(String bdData, ArrayList<?> elements) {
+    public BdAuthor(String bdData, ArrayList<?> elements) {   	
         if (bdData != null && bdData.trim().length() > 0) {
             String[] auelements = bdData.split(Constants.IDDELIMITER, -1);
             for (int i = 0; i < elements.size(); i++) {
                 String auField = (String) elements.get(i);
+                
                 if (i == auelements.length) {
                     break;
                 }
-                // System.out.println("auField= "+auField+" I= "+i+" auelements "+auelements.length+" elements= "+elements.size()+" value= "+auelements[i]);
-
+                /*
+                if(auField.contentEquals("alias")) {
+                	if(bdData.indexOf("Fisher")>0) {
+                		//System.out.println("AUTHOR STRING= "+bdData);             
+                		//System.out.println("auField= "+auField+" I= "+i+" auelements "+auelements.length+" elements= "+elements.size()+" value= "+auelements[i]);
+                		for(int j=0;j<auelements.length;j++) {
+                			System.out.println(j+" content= "+auelements[j]);
+                		}
+                	}
+                }
+                 */
                 if (auField.equals("auid")) {
                     if (auelements[i] != null && !auelements[i].trim().equals("")) {
                         this.setAuid(auelements[i]);
@@ -93,6 +106,11 @@ public class BdAuthor {
                     if (auelements[i] != null && !auelements[i].trim().equals("")) {
                         this.setEaddress(auelements[i]);
                     }
+                }else if (auField.equals("alias")) {
+                    if (auelements[i] != null && !auelements[i].trim().equals("")) {
+                        this.setAlias(auelements[i]);
+                        //System.out.println("ALIAS= "+auelements[i]);
+                    }
                 }
 
             }
@@ -117,12 +135,22 @@ public class BdAuthor {
     }
 
     public String getSearchValue() {
-
-        if ((this.surname != null) && (this.givenName != null)) {
+    	   	
+    	if ((this.surname != null) && (this.givenName != null)) {
             return (addSpecialMarkup(this.surname).concat(" ").concat(addSpecialMarkup(this.givenName)));
         } else if (this.indexedName != null) {
             return addSpecialMarkup(this.indexedName);
         }
+        return null;
+    }
+    
+    public String getSearchValueWithAlias() {
+    	
+    	// add alias for search by hmo at 7/16/2019
+    	if ((this.surname != null) && (this.givenName != null) && (this.alias != null)) {
+    		//System.out.println("ALIAS= "+this.alias);
+             return (addSpecialMarkup(this.surname).concat(" ").concat(addSpecialMarkup(this.givenName)).concat(" ").concat(addSpecialMarkup(this.alias)));
+    	} 
         return null;
     }
     
@@ -443,6 +471,36 @@ public class BdAuthor {
      */
     public void setSurname(String surname) {
         this.surname = surname;
+    }
+
+    /**
+     * @return Returns the Alias.
+     */
+    public String getAlias() {
+        return alias;
+    }
+
+    /**
+     * @param AltName
+     * The AltName to set.
+     */
+    public void setAltName(String altname) {
+        this.altname = altname;
+    }
+    
+    /**
+     * @return Returns the AltName.
+     */
+    public String getAltName() {
+        return altname;
+    }
+
+    /**
+     * @param Alias
+     * The Alias to set.
+     */
+    public void setAlias(String alias) {
+        this.alias = alias;
     }
 
     public int compare(Object o1, Object o2) {

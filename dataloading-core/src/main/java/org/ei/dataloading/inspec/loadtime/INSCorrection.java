@@ -271,8 +271,16 @@ public class INSCorrection
                 for(int j=0;j<dataFileList.size();j++)
                 {
                     String dFile = (String)dataFileList.get(j);
-                    Process p = r.exec("./"+sqlldrFileName+" "+dFile);
-                    System.out.println("Loading File "+dFile);
+                    String name = dFile;
+                    if(dFile.indexOf("/")>-1)
+                    {	                    
+	        			int pathSeperator = name.lastIndexOf("/");        			
+	        			name=name.substring(pathSeperator+1);
+                    }
+        			
+        			
+                    Process p = r.exec("./"+sqlldrFileName+" "+name);
+                    System.out.println("Loading File "+name);
                     int t = p.waitFor();
                     //break;
                 }
@@ -554,7 +562,7 @@ public class INSCorrection
                 System.out.println("Running the query...");
                 writer.setOperation("add");
                 INSPECCombiner c = new INSPECCombiner(writer);
-				sqlQuery = "select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc from ins_master_orig where updatenumber='"+updateNumber+"'";
+				sqlQuery = "select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from ins_master_orig where updatenumber='"+updateNumber+"'";
                 System.out.println("updateQuery= "+	sqlQuery);
                 rs = stmt.executeQuery(sqlQuery);
 
@@ -580,12 +588,12 @@ public class INSCorrection
                 INSPECCombiner c = new INSPECCombiner(writer);
                 if(updateNumber==0)
                 {
-                	rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc  from ins_master_orig where m_id in (select distinct mid from ins_master_numerical where mid is not null)");
+                	rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber  from ins_master_orig where m_id in (select distinct mid from ins_master_numerical where mid is not null)");
                 	
                 }
                 else
                 {
-                	rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc  from ins_master_orig where m_id in (select distinct mid from ins_master_numerical where mid is not null and loadnumber='"+updateNumber+"')");
+                	rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber  from ins_master_orig where m_id in (select distinct mid from ins_master_numerical where mid is not null and loadnumber='"+updateNumber+"')");
                 }
                 c.writeRecs(rs,con);
             }

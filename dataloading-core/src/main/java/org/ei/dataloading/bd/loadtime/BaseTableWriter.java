@@ -224,7 +224,7 @@ public class BaseTableWriter
 	    recordBuf.append(FIELDDELIM);
 	    if(record.get("GRANTTEXT")!=null)
 		{
-	    	int columnSize = 3900;
+	    	int columnSize = 3990;
 	    	String granttext= checkColumnWidth(columnSize,
 					   "GRANTTEXT",
 					   (String)record.get("GRANTTEXT"));
@@ -373,6 +373,7 @@ public class BaseTableWriter
 			 Hashtable REFERENCEITEMCITATIONCODEN = (Hashtable)reference.get("REFERENCEITEMCITATIONCODEN");
 			 Hashtable REFERENCEITEMCITATIONID = (Hashtable)reference.get("REFERENCEITEMCITATIONID");
 			 Hashtable REFITEMCITATIONAFFILIATION = (Hashtable)reference.get("REFITEMCITATIONAFFILIATION");
+			 Hashtable REFERENCESOURCETEXT = (Hashtable)reference.get("REFERENCESOURCETEXT");
 
 			 StringBuffer recordBuf = null;
 			 //String referenceID = "0";
@@ -697,6 +698,17 @@ public class BaseTableWriter
 					  									(String)REFITEMCITATIONAFFILIATION.get(referenceID)));
 					  //System.out.println("---RECORD= "+recordBuf.toString());
 				  }
+				  
+				  /* Source text is used for internal use only based on jira EVOPS-716
+				  recordBuf.append(FIELDDELIM);	
+				  
+				  if(REFERENCESOURCETEXT != null && REFERENCESOURCETEXT.get(referenceID)!=null)
+				  {
+					  //System.out.println("---REFERENCEITEMCITATIONAFFILIATION="+(String)REFITEMCITATIONAFFILIATION.get(referenceID));
+					  recordBuf.append((String)REFERENCESOURCETEXT.get(referenceID));
+					  //System.out.println("---RECORD= "+recordBuf.toString());
+				  }
+				  */
 				  
 				  if(accessNumber!=null && accessNumber.length()>0)
 				  {

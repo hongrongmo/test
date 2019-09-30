@@ -1129,19 +1129,19 @@ public class InspecXMLReader extends FilterReader
 	        	oneAffiliation.append(m.getAttribute("rid").getValue());
 	        }
 	        oneAffiliation.append(Constants.IDDELIMITER);
-	        if(m.getChild("cntry")!=null)
-	        {
-	        	getMixData(m.getChild("cntry").getContent(),country);
-
-	        	if(j == 0)
-	        	{
-	        		record.put(keyprfx+"FC",country);
-
-	        	}
-	        	//add country to AAFFMULTI, EAFFMULTI fields
-
-	        	oneAffiliation.append(country);
-		    }
+			if(m.getChild("cntry")!=null)
+			{
+				getMixData(m.getChild("cntry").getContent(),country);
+			
+				if(j == 0)
+				{
+					record.put(keyprfx+"FC",country);
+			
+				}
+				//add country to AAFFMULTI, EAFFMULTI fields
+			
+				oneAffiliation.append(country);
+			}
 
 	        // add new xml elements to aff.
 	        //orgn
@@ -1161,22 +1161,22 @@ public class InspecXMLReader extends FilterReader
 	        //addressline - could be multy
 	        oneAffiliation.append(Constants.IDDELIMITER);
 
-	        if(m.getChildren("addline") != null)
-	        {
-	        	List l = m.getChildren("addline");
-	        	StringBuffer addline = new StringBuffer();
-	        	for (int i = 0 ; i < l.size(); i++)
-	        	{
-	        		Element el = (Element) l.get(i);
-	        		addline.append(el.getTextTrim());
-	        		if(i < (l.size()-1))
-	        		{
-	        			addline.append(", ");
-	        		}
-
-	        	}
-	        	oneAffiliation.append(addline);
-	        }
+			if(m.getChildren("addline") != null)
+			{
+				List l = m.getChildren("addline");
+				StringBuffer addline = new StringBuffer();
+				for (int i = 0 ; i < l.size(); i++)
+				{
+					Element el = (Element) l.get(i);
+					addline.append(el.getTextTrim());
+					if(i < (l.size()-1))
+					{
+						addline.append(", ");
+					}
+			
+				}
+				oneAffiliation.append(addline);
+			}
 
 	        oneAffiliation.append(Constants.IDDELIMITER);
 	        //city

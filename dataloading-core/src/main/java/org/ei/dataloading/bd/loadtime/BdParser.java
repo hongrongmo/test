@@ -1168,7 +1168,7 @@ public class BdParser
 									for (int j = 0; j < fundingTextList.size(); j++)
 									{
 										Element fundingText =(Element) fundingTextList.get(j);
-										fundingTextBuffer.append(fundingText.getTextTrim());
+										fundingTextBuffer.append(dictionary.mapEntity(fundingText.getTextTrim()));
 										if(j<fundingTextList.size()-1)
 										{
 											fundingTextBuffer.append(Constants.AUDELIMITER);
@@ -1219,7 +1219,7 @@ public class BdParser
 								if(record.get("GRANTTEXT")==null && grantlist.getChild("grant-text",noNamespace)!=null)
 								{
 									String grantText =  grantlist.getChildText("grant-text",noNamespace);
-									record.put("GRANTTEXT",grantText);
+									record.put("GRANTTEXT",dictionary.mapEntity(grantText));
 									//System.out.println(eid+" get fundingText from grantlist");
 								}
 								
@@ -1383,6 +1383,7 @@ public class BdParser
 		Hashtable referenceItemcitationWebsite = new Hashtable();
 		Hashtable referenceItemcitationEAddress = new Hashtable();
 		Hashtable referenceItemcitationRefText = new Hashtable();
+		Hashtable referenceSourceText = new Hashtable();
 
 
 		if(referenceGroup != null && referenceGroup.size()>0)
@@ -1536,8 +1537,8 @@ public class BdParser
 						//System.out.println("refTextValue1::"+refTextValue);
 						//change to deal with non-roman characters @08/10/2018
 						//referenceText.put(referenceID,dictionary.mapEntity(refTextValue));
-						referenceText.put(referenceID,trimStringToLength(refTextValue,3000));
-						if(refTextValue.length()>3000)
+						referenceText.put(referenceID,trimStringToLength(refTextValue,3950));
+						if(refTextValue.length()>3950)
 						{
 							System.out.println("record "+getAccessNumber()+" ref-text oversize::"+refTextValue.length());
 						}
@@ -1565,13 +1566,15 @@ public class BdParser
 						//System.out.println("ref-fulltext1::"+refFullTextValue);
 						//change to deal with non-roman characters @08/10/2018
 						//referenceText.put(referenceID,dictionary.mapEntity(refFullTextValue));
-						referenceFullText.put(referenceID,trimStringToLength(refFullTextValue,3000));
-						if(refFullTextValue.length()>3000)
+						referenceFullText.put(referenceID,trimStringToLength(refFullTextValue,3950));
+						if(refFullTextValue.length()>3950)
 						{
 							System.out.println("record "+getAccessNumber()+" ref-fulltext oversize::"+refFullTextValue.length());
 						}
 					}
-
+					
+					
+					
 					//refd-itemcitation
 					Element refdItemcitation = (Element) reference.getChild("refd-itemcitation",noNamespace);
 					if(refdItemcitation!=null)
@@ -1797,6 +1800,13 @@ public class BdParser
 						}
 
 					}//refd-itemcitation
+					
+					//sourceText
+					Element sourceText = (Element) reference.getChild("source-text",ceNamespace);
+					if(sourceText!=null)
+					{
+						referenceSourceText.put(referenceID,sourceText.getTextTrim());
+					}
 
 				}
 
@@ -1996,6 +2006,10 @@ public class BdParser
 			reference.put("REFERENCEITEMCITATIONID",referenceItemcitationID);
 		}
 		
+		if(referenceSourceText!=null && referenceSourceText.size()>0)
+		{
+			reference.put("REFERENCESOURCETEXT",referenceSourceText);
+		}
 		
 
 		if(reference.size()>0)
@@ -3998,6 +4012,24 @@ public class BdParser
 		    {
 		        aus.setEaddress(eaddress.getTextTrim());
 		    }
+		    
+		    // Author alias
+		    Element alias = author.getChild("alias", ceNamespace);
+		    if(alias != null)
+		    {
+		        aus.setAlias(alias.getTextTrim());
+		        //System.out.println("ALIAS1= "+alias.getTextTrim());
+		    }
+		    
+		    // Author alt-name
+		    Element altName = author.getChild("alt-name", ceNamespace);
+		    if(altName != null)
+		    {
+		        aus.setAltName(dictionary.mapEntity(altName.getTextTrim()));
+		        //System.out.println(this.accessNumber+" altName1= "+altName.getTextTrim());
+		    }
+		    
+	
 
 		    ausmap.addCpxaus(aus);
 		}
@@ -4202,6 +4234,18 @@ public class BdParser
 						bufauthor.append(aAuthor.getAuthorId());
 					}
 					bufauthor.append(Constants.IDDELIMITER);
+					if(aAuthor.getAlias() != null)
+					{
+						bufauthor.append(aAuthor.getAlias());
+						//System.out.println("ALIAS3= "+aAuthor.getAlias());
+					}
+					bufauthor.append(Constants.IDDELIMITER);
+					if(aAuthor.getAltName() != null)
+					{
+						bufauthor.append(aAuthor.getAltName());
+						//System.out.println("AltName3= "+aAuthor.getAltName());
+					}
+					bufauthor.append(Constants.IDDELIMITER);
 					
 					bufauthor.append((Constants.AUDELIMITER));
 				}
@@ -4314,6 +4358,24 @@ public class BdParser
 					bufauthor.append(aAuthor.getEaddress());
 				}
 				bufauthor.append(Constants.IDDELIMITER);
+				if(aAuthor.getAuthorId() != null)
+				{
+					bufauthor.append(aAuthor.getAuthorId());
+				}
+				bufauthor.append(Constants.IDDELIMITER);
+				if(aAuthor.getAlias() != null)
+				{
+					bufauthor.append(aAuthor.getAlias());
+					//System.out.println("ALIAS2= "+aAuthor.getAlias());
+				}
+				bufauthor.append(Constants.IDDELIMITER);
+				if(aAuthor.getAltName() != null)
+				{
+					bufauthor.append(aAuthor.getAltName());
+					//System.out.println("getAltName2= "+aAuthor.getAltName());
+				}
+				bufauthor.append(Constants.IDDELIMITER);
+				
 				bufauthor.append((Constants.AUDELIMITER));
 			}
 		}
@@ -4481,6 +4543,7 @@ public class BdParser
 
 				String text=((Text)o).getText();
 
+			
 				//System.out.println("text1::"+text);
 
 				text= perl.substitute("s/&/&amp;/g",text);
@@ -4488,7 +4551,9 @@ public class BdParser
 				text= perl.substitute("s/>/&gt;/g",text);
 				text= perl.substitute("s/\n//g",text);
 				text= perl.substitute("s/\r//g",text);
-				text= perl.substitute("s/\t//g",text);				
+				text= perl.substitute("s/\t//g",text);	
+				text= perl.substitute("s/”/\"/g",text);	
+				text= perl.substitute("s/“/\"/g",text);
 				b.append(text);
 				//System.out.println("text2::"+text);
 

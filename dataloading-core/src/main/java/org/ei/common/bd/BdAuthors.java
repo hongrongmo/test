@@ -18,22 +18,25 @@ public class BdAuthors
 
     static
     {
-        auElements.add("sec");
-        auElements.add("auid");
-        auElements.add("affidStr");
-        auElements.add("indexedName");
-        auElements.add("initials");
-        auElements.add("surname");
-        auElements.add("degrees");
-        auElements.add("givenName");
-        auElements.add("suffix");
-        auElements.add("nametext");
-        auElements.add("prefnameInitials");
-        auElements.add("prefnameDegrees");
-        auElements.add("prefnameSurname");
-        auElements.add("prefnameGivenname");
-        auElements.add("affid");
-        auElements.add("eAddress");
+        auElements.add("sec"); //0
+        auElements.add("auid");//1
+        auElements.add("affidStr");//2
+        auElements.add("indexedName");//3
+        auElements.add("initials");//4
+        auElements.add("surname");//5
+        auElements.add("degrees");//6
+        auElements.add("givenName");//7
+        auElements.add("suffix");//8
+        auElements.add("nametext");//9
+        auElements.add("prefnameInitials");//10
+        auElements.add("prefnameDegrees");//11
+        auElements.add("prefnameSurname");//12
+        auElements.add("prefnameGivenname");//13
+        auElements.add("affid");//14
+        auElements.add("eAddress");//15
+        auElements.add("authorID");//16
+        auElements.add("alias");//17
+        auElements.add("altname");//18
     }
 
     public BdAuthors()
@@ -51,6 +54,7 @@ public class BdAuthors
 
     public BdAuthors(String bdAuthors)
     {
+    	//System.out.println("**** AUTHOR *****");
         elements = auElements;
 	    bdAuthorsMap = new LinkedHashMap();
 	    parseData(bdAuthors);
@@ -138,6 +142,29 @@ public class BdAuthors
 
 		return (String[]) searchValue.toArray(new String[1]);
 	}
+	
+	public String[] getSearchValueWithAlias()
+	{
+
+		ArrayList searchValue = new ArrayList();
+		
+		if (bdAuthorsMap != null && bdAuthorsMap.size() > 0)
+		{
+			Iterator auenum = bdAuthorsMap.keySet().iterator();
+			while (auenum.hasNext())
+			{
+				String aid = null;
+				String orcid = null;
+				BdAuthor nextau = (BdAuthor) auenum.next();													
+				searchValue.add(nextau.getSearchValueWithAlias());
+				
+			}			
+
+		}
+
+		return (String[]) searchValue.toArray(new String[1]);
+	}
+	
 	
 	public List getAuID()
 	{

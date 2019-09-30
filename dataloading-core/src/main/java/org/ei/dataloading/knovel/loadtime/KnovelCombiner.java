@@ -180,7 +180,7 @@ import org.ei.util.StringUtil;
 		
 			stmt = con.createStatement();
 			System.out.println("Running the query...");
-			String sqlQuery = "select ACCESSNUMBER,DOC_TYPE,DOI,PII,OAI,ISBN,EISBN,LANGUAGE,TITLE,AUTHOR,AFFILIATION,M_ID,PUBLISHER,DOC_FORMAT,substr(PUBLISH_DATE,1,4) PUBLISH_DATE,PARENTID,JOURNAL_NAME,JOURNAL_SUBNAME,VOLUME,ISSUE,ABSTRACT,SUBJECT,TABLE_OF_CONTENT,LOADNUMBER,COPYRIGHT,DATABASE from "+tablename+" where doc_type!='journal-article'";
+			String sqlQuery = "select ACCESSNUMBER,DOC_TYPE,DOI,PII,OAI,ISBN,EISBN,LANGUAGE,TITLE,AUTHOR,AFFILIATION,M_ID,PUBLISHER,DOC_FORMAT,substr(PUBLISH_DATE,1,4) PUBLISH_DATE,PARENTID,JOURNAL_NAME,JOURNAL_SUBNAME,VOLUME,ISSUE,ABSTRACT,SUBJECT,TABLE_OF_CONTENT,LOADNUMBER,COPYRIGHT,DATABASE from "+tablename+" where doc_type!='journal-article' and database='" + Combiner.CURRENTDB + "'";
 							   
 			System.out.println(sqlQuery);
 			rs = stmt.executeQuery(sqlQuery);
