@@ -330,9 +330,8 @@ public class AusAffESIndex {
 		}
 
 		
-		//bulkIndexContents.append("{ \"index\" : { \"_type\" : \""+ doc_type + "\", \"_id\" : \"" + doc_id + "\" } }"); //till es 6.0
-		
-		bulkIndexContents.append("{ \"index\" : { \"_id\" : \"" + doc_id + "\" } }");
+		bulkIndexContents.append("{ \"index\" : { \"_type\" : \""+ index_name + "\", \"_id\" : \"" + doc_id + "\" } }");
+		//bulkIndexContents.append("{ \"index\" : { \"_type\" : \""+ doc_type + "\", \"_id\" : \"" + doc_id + "\" } }"); 
 		bulkIndexContents.append("\n");
 		bulkIndexContents.append(profile_content.toString());
 		bulkIndexContents.append("\n");
@@ -346,15 +345,7 @@ public class AusAffESIndex {
 		
 		bulkIndexContents = new StringBuffer();
 		
-		// HH commented 07/26/2019 used for ES6.0 when had one index, multi doc_type (author, affiliation)
-		/*
-		 * String document_type = null;
-		 * 
-		 * if(doc_type !=null && doc_type.equalsIgnoreCase("apr")) {
-		 * document_type="author"; } else if(doc_type !=null &&
-		 * doc_type.equalsIgnoreCase("ipr")) { document_type="affiliation"; } else
-		 * System.out.println("Invalid document type!!!");
-		 */
+		// HH commented 07/26/2019 used for ES6.0 when had one index, multi doc_type (author, affiliation)		 
 
 		for(int i=0;i<docIds.size();i++)
 		{
@@ -369,8 +360,8 @@ public class AusAffESIndex {
 			}
 			
 			
-			//bulkIndexContents.append("{ \"delete\" : { \"_type\" : \"" + document_type + "\", \"_id\" : \"" + docIds.get(i) + "\" } }");  // till es 6.0
-			bulkIndexContents.append("{ \"delete\" : { \"_id\" : \"" + docIds.get(i) + "\" } }");
+			bulkIndexContents.append("{ \"delete\" : { \"_type\" : \"" + index_name + "\", \"_id\" : \"" + docIds.get(i) + "\" } }");
+			//bulkIndexContents.append("{ \"delete\" : { \"_type\" : \"" + document_type + "\", \"_id\" : \"" + docIds.get(i) + "\" } }");
 			bulkIndexContents.append("\n");
 			
 			curRecNum++;
