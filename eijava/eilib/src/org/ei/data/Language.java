@@ -70,7 +70,7 @@ public class Language
 		iso639_language.put("KO","Korean");
 		iso639_language.put("KS","Kashmiri");
 		iso639_language.put("KU","Kurdish");
-		iso639_language.put("KY","Kirghiz");
+		iso639_language.put("KY","Kyrgz; Kirghiz");
 		iso639_language.put("LA","Latin");
 		iso639_language.put("LN","Lingala");
 		iso639_language.put("LO","Laothian");
@@ -101,7 +101,7 @@ public class Language
 		iso639_language.put("QU","Quechua");
 		iso639_language.put("RM","Rhaeto-Romance");
 		iso639_language.put("RN","Kirundi");
-		iso639_language.put("RO","Romanian");
+		iso639_language.put("RO","Romanian; Moldalvian; Moldovan");
 		iso639_language.put("RU","Russian");
 		iso639_language.put("RW","Kinyarwanda");
 		iso639_language.put("SA","Sanskrit");
@@ -193,7 +193,7 @@ public class Language
 		iso639_language.put("MAP","Polyglot");
 		iso639_language.put("POR","Portuguese");
 		iso639_language.put("PUS","Pushto");
-		iso639_language.put("RUM","Romanian");
+		iso639_language.put("RUM","Romanian; Moldalvian; Moldovan");
 		iso639_language.put("RUS","Russian");
 		iso639_language.put("GLA","Scottish Gaelic");
 		iso639_language.put("SCC","Serbian");
@@ -209,6 +209,10 @@ public class Language
 		iso639_language.put("URD","Urdu");
 		iso639_language.put("UZB","Uzbek");
 		iso639_language.put("VIE","Vietnamese");
+		iso639_language.put("KAZ","Kazakh");
+		iso639_language.put("KIR","Kyrgz; Kirghiz");
+		iso639_language.put("TGK","Tajik");
+		iso639_language.put("WEL","Welsh");
 
 		//Language code for OpsbankII four digits
 		iso639_language.put("AFRK","Afrikaans");
@@ -258,7 +262,7 @@ public class Language
 		iso639_language.put("POLY","Polyglot");
 		iso639_language.put("PORT","Portuguese");
 		iso639_language.put("PUSH","Pushto");
-		iso639_language.put("RUMA","Romanian");
+		iso639_language.put("RUMA","Romanian; Moldalvian; Moldovan");
 		iso639_language.put("RUSS","Russian");
 		iso639_language.put("SCOT","Scottish Gaelic");
 		iso639_language.put("SERB","Serbian");
