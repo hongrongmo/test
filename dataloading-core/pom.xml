@@ -282,12 +282,32 @@
         <version>1.0.2</version>
     </dependency>
  --> 		  
+ <!-- HH added 03/22/2019 for INS Thes Class codes retaining HTML entities in xml file -->
+		
+		<!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
+	<dependency>
+   		 <groupId>org.jsoup</groupId>
+    	 <artifactId>jsoup</artifactId>
+    	 <version>1.8.3</version>
+	</dependency>
+		
+		<!-- HH added 04/30/2019 to resolve XML parser issues -->
+		<dependency>
+    		<groupId>javax.xml.parsers</groupId>
+    		<artifactId>jaxp-api</artifactId>
+    		<version>1.4.5</version>
+		</dependency>
+
 		
 	</dependencies>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<!-- HH added 03/24/2019 for resolving comilation error after migration to openjdk11 -->
+		 <maven.compiler.source>1.6</maven.compiler.source>
+    	<maven.compiler.target>1.6</maven.compiler.target>
+    
 	</properties>
 
 	<build>
