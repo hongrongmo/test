@@ -4552,8 +4552,8 @@ public class BdParser
 				text= perl.substitute("s/\n//g",text);
 				text= perl.substitute("s/\r//g",text);
 				text= perl.substitute("s/\t//g",text);	
-				text= perl.substitute("s/”/\"/g",text);	
-				text= perl.substitute("s/“/\"/g",text);
+				text= perl.substitute("s/ï¿½/\"/g",text);	
+				text= perl.substitute("s/ï¿½/\"/g",text);
 				b.append(text);
 				//System.out.println("text2::"+text);
 

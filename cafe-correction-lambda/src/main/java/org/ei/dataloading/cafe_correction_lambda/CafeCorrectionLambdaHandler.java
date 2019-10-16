@@ -43,6 +43,7 @@ public class CafeCorrectionLambdaHandler implements RequestHandler<SNSEvent,Stri
 	private String archive_date;
 	private boolean isZipFileExist;
 	private String corrArchiveDateFileName;
+	private String dayOfWeek;
 	
 	protected void init()
 	{
@@ -63,6 +64,9 @@ public class CafeCorrectionLambdaHandler implements RequestHandler<SNSEvent,Stri
 			throw new NullPointerException("cafe correction Lambda cmd is not set");
 		
 		this.cmd = envCmd; 
+		
+		Date currDate = new Date();
+		
 	}
 	
 	public String handleRequest(SNSEvent event, Context context)

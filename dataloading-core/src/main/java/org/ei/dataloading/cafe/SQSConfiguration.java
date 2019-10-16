@@ -12,6 +12,11 @@ import com.amazonaws.regions.Region;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.s3.AmazonS3;
 
+/**
+ * 
+ * @author TELEBH
+ *
+ */
 public class SQSConfiguration {
 
 	public static final String DEFAULT_QUEUE_NAME = "EVCAFE";
