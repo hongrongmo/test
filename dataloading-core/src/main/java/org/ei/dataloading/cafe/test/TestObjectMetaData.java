@@ -7,6 +7,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+/**
+ * 
+ * @author TELEBH
+ *
+ */
 
 
 public class TestObjectMetaData {

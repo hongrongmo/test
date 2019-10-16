@@ -5,6 +5,11 @@ import java.util.StringTokenizer;
 
 import org.apache.oro.text.perl.Perl5Util;
 
+/**
+ * 
+ * @author TELEBH
+ *
+ */
 public class SQSMsgParsingTest {
 
 	private Perl5Util perl = new Perl5Util();

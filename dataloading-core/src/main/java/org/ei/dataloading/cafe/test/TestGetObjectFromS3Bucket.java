@@ -17,6 +17,11 @@ import com.amazonaws.services.s3.model.ObjectListing;
 import com.amazonaws.services.s3.model.S3Object;
 import com.amazonaws.services.s3.model.S3ObjectSummary;
 
+/**
+ * 
+ * @author TELEBH
+ *
+ */
 // Test download Object from S3 bucket using InputStream
 public class TestGetObjectFromS3Bucket {
 	
