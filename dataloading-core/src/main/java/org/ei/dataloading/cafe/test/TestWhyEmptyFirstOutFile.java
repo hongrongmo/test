@@ -33,6 +33,7 @@ import com.amazonaws.services.sqs.model.ReceiveMessageResult;
 public class TestWhyEmptyFirstOutFile {
 
 	/**
+	 * @author TELEBH
 	 * An example class to demonstrate the behavior of CLIENT_ACKNOWLEDGE mode for received messages. 
 	 *
 	 * First, a session, a message producer, and a message consumer are created. Then, two messages are sent. Next, two messages

@@ -25,6 +25,11 @@ import com.amazonaws.services.s3.model.S3ObjectSummary;
 import com.amazonaws.services.s3.transfer.Download;
 import com.amazonaws.services.s3.transfer.TransferManager;
 
+/**
+ * 
+ * @author TELEBH
+ *
+ */
 public class TestGetANIFileFromCafeS3Bucket {
 
 	static String bucketName = "sc-ani-xml-prod";
