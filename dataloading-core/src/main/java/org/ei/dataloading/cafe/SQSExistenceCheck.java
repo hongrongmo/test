@@ -14,6 +14,7 @@ import com.amazon.sqs.javamessaging.SQSConnection;
 import com.amazonaws.services.sqs.model.Message;
 
 /**
+ * @author TELEBH
  * A utility function to check the queue exists and create it if needed.For most
  * use cases this will usually be done by an administrator before the application
  * is run.

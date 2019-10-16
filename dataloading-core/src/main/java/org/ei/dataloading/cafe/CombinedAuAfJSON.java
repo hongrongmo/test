@@ -21,6 +21,11 @@ import org.ei.dataloading.cafe.WriteEsDocToFile;
 
 import javax.json.*;
 
+/**
+ * 
+ * @author TELEBH
+ *
+ */
 
 public class CombinedAuAfJSON {
 

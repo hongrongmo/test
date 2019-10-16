@@ -72,11 +72,11 @@
 			<artifactId>commons-httpclient</artifactId>
 			<version>3.1</version>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-annotations</artifactId>
 			<version>3.5.6-Final</version>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-commons-annotations</artifactId>
@@ -92,11 +92,11 @@
 			<artifactId>oro</artifactId>
 			<version>2.0.8</version>
 		</dependency>
-		<!-- <dependency>
+		<dependency>
 			<groupId>org.jdom</groupId>
 			<artifactId>jdom2</artifactId>
 			<version>2.0.5</version>
-		</dependency> -->
+		</dependency>
 		<dependency>
 			<groupId>org.apache.wink</groupId>
 			<artifactId>wink-client</artifactId>
@@ -132,11 +132,21 @@
 			<artifactId>saxpath</artifactId>
 			<version>1.0-FCS</version>
 		</dependency>
+		<!-- HH excluded xml-apis on Fri 10/04/2019 to resolve confusion @ compile time for 2 classes in diff jars -->
 		<dependency>
 			<groupId>xerces</groupId>
 			<artifactId>xercesImpl</artifactId>
 			<version>2.9.1</version>
+			<exclusions>
+			<exclusion>
+			<groupId>xml-apis</groupId>
+			<artifactId>xml-apis</artifactId>
+			</exclusion>
+			</exclusions>
 		</dependency>
+
+		
+		
 		<!-- HH: for Patent zip file header issue  08/04/2015-->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
@@ -210,11 +220,11 @@
 		</dependency>
 
 				
-		<dependency>
+	<!-- 	<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>1.5.6</version>
-		</dependency>
+		</dependency> -->
 
 		<!-- END HH 07/26/2016 -->
 		
@@ -292,12 +302,21 @@
 	</dependency>
 		
 		<!-- HH added 04/30/2019 to resolve XML parser issues -->
-		<dependency>
+		<!-- <dependency>
     		<groupId>javax.xml.parsers</groupId>
     		<artifactId>jaxp-api</artifactId>
     		<version>1.4.5</version>
-		</dependency>
+		</dependency> -->
 
+		
+
+	<dependency>
+	<groupId>org.apache.kafka</groupId>
+	<artifactId>kafka-clients</artifactId>
+	<version>2.3.0</version>
+</dependency>
+	
+	
 		
 	</dependencies>
 
@@ -360,6 +379,19 @@
             <goals>
               <goal>shade</goal>
             </goals>
+            
+             <!-- <configuration>
+                        <filters>
+                            <filter>
+                                <artifact>xerces:xerces</artifact>
+                                <excludes>
+                                    <exclude>org.w3c.dom/**</exclude>
+                                    <exclude>org.xml.sax/**</exclude>
+                                </excludes>
+                            </filter>
+                        </filters>
+                    </configuration> -->
+                    
           </execution>
         </executions>
       </plugin> 

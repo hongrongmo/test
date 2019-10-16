@@ -25,6 +25,11 @@ import com.amazonaws.services.sqs.model.Message;
 import com.amazonaws.services.sqs.model.ReceiveMessageRequest;
 import com.amazonaws.services.sqs.model.ReceiveMessageResult;
 
+/**
+ * 
+ * @author TELEBH
+ *
+ */
 public class SyncMultiMessageReceiverClient {
 
 	/**

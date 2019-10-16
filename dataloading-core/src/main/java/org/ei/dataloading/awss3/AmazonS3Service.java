@@ -1,5 +1,9 @@
 package org.ei.dataloading.awss3;
 
+/**
+ * @author: telebh
+ * @Description: create awsS3 service instance
+ */
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
