@@ -3,10 +3,7 @@ package org.ei.dataloading.cafe;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
+import java.util.*;
 
 import org.ei.util.db.DbConnection;
 
@@ -42,10 +39,11 @@ public class CheckErpZeroResultsAlert {
 	private ResultSet rs = null;
 			
 	Map<Integer,HashSet<Integer>> instAndAffIds = new TreeMap<>();		// sort INSTIDS
+	Map<Integer,Institution> institutions = new TreeMap<>();
 	
 	public void getAffIds()
 	{
-		String query = "select INSTITUTION_ID,AFFILIATION_ID from HH_DEANDASHBOARD_2019 where INSTITUTION_ID in (" + MASSACHUSETTS_INST_TECH + "," + STANFORD_UNIV + "," 
+		String query = "select INSTITUTION_ID,INSTITUTION_NAME,AFFILIATION_ID from HH_DEANDASHBOARD_2019 where INSTITUTION_ID in (" + MASSACHUSETTS_INST_TECH + "," + STANFORD_UNIV + ","
 				+ MICHIGAN_STATE_UNIV + "," + HARVARD_UNIV + "," + PRINCETON_UNIV + "," + OHIO_STATE_UNIV + "," + CAMBRIDGE_UNIV + ")";
 		try 
 		{
@@ -54,12 +52,28 @@ public class CheckErpZeroResultsAlert {
 			stmt = con.createStatement();
 			rs = stmt.executeQuery(query);
 			
-			int key;
+			int key,value;
+			String subKey;
 			
 			while(rs.next())
 			{
 				key = rs.getInt("INSTITUTION_ID");
-				if(instAndAffIds.containsKey(key))
+				subKey = rs.getString("INSTITUTION_NAME");
+				value = rs.getInt("AFFILIATION_ID");
+
+				if(institutions.containsKey(key))
+				{
+					institutions.get(key).setAffIds(value);
+				}
+				else
+				{
+					Institution inst = new Institution();
+					inst.setInstId(key);
+					inst.setInstName(subKey);
+					inst.setAffIds(value);
+					institutions.put(key,inst);
+				}
+				/*if(instAndAffIds.containsKey(key))
 				{
 					instAndAffIds.get(key).add(rs.getInt("AFFILIATION_ID"));
 				}
@@ -68,10 +82,11 @@ public class CheckErpZeroResultsAlert {
 					HashSet<Integer> value = new HashSet<>();
 					value.add(rs.getInt("AFFILIATION_ID"));
 					instAndAffIds.put(key, value);
-				}
+				}*/
 			}
-			
-			System.out.println(instAndAffIds);
+
+			//System.out.println(institutions);  // only for debugging
+			//System.out.println(instAndAffIds);
 			
 		} 
 		catch (Exception e) 
@@ -118,7 +133,25 @@ public class CheckErpZeroResultsAlert {
 		{
 			con = DbConnection.getConnection(connectionURL, driver, userName, password);
 			stmt = con.createStatement();
-			
+
+			for(Map.Entry<Integer, Institution> entry: institutions.entrySet())
+			{
+				List<Integer> values = entry.getValue().getAffIds();
+				String affIdsQuery = buildAffiliationIdsSubQuery(values);
+
+				query = "select count(*) as doc_count from db_xml.bd_master where updatenumber='" + updateNumber + "' and database='cpx' and pui in "
+						+ "(select puisecondary from cafe_pui_list_master where pui in (select pui from cafe_master where " + affIdsQuery + "))";
+
+				rs = stmt.executeQuery(query);
+				while(rs.next())
+				{
+					docCount = rs.getInt("doc_count");
+					System.out.println("\nINSTID: " + entry.getKey() + ", INSTName: " + entry.getValue().getInstName() + " has " + docCount + " docs for Email Alerts this week: " + updateNumber);
+				}
+			}
+
+
+			/*
 			for(Map.Entry<Integer, HashSet<Integer>> entry: instAndAffIds.entrySet())
 			{
 				HashSet<Integer> values = entry.getValue();
@@ -134,6 +167,8 @@ public class CheckErpZeroResultsAlert {
 					System.out.println("INSTID: " + entry.getKey() + "has " + docCount + " docs for Email Alerts this week");
 				}
 			}
+
+			 */
 		}
 		catch(Exception e)
 		{
@@ -172,8 +207,25 @@ public class CheckErpZeroResultsAlert {
 			
 		}
 	}
-	
-	
+
+
+	// build AffiliationIds subQuery
+	private String buildAffiliationIdsSubQuery(List<Integer> values)
+	{
+
+		StringBuilder affIdsBuilder = new StringBuilder();
+		for(Integer affId: values)
+		{
+			if(affIdsBuilder.length() >0)
+				affIdsBuilder.append("or ");
+			affIdsBuilder.append("affiliation like '%" + affId + "%' ");
+		}
+
+		//System.out.println("concatenated AffiliatonIDS Query: " + affIdsBuilder.toString());
+		return affIdsBuilder.toString();
+	}
+
+
 	// build AffiliationIds subQuery
 	private String buildAffiliationIdsSubQuery(HashSet<Integer> values)
 	{
@@ -243,3 +295,36 @@ public class CheckErpZeroResultsAlert {
 	}
 
 }
+
+class Institution
+{
+	int instId;
+	String instName;
+	List<Integer> affIds = new ArrayList<>();
+
+	public int getInstId() {
+		return instId;
+	}
+
+	public void setInstId(int instId) {
+		this.instId = instId;
+	}
+
+	public String getInstName() {
+		return instName;
+	}
+
+	public void setInstName(String instName) {
+		this.instName = instName;
+	}
+
+	public List<Integer> getAffIds() {
+		return affIds;
+	}
+
+	public void setAffIds(Integer affid) {
+		this.affIds.add(affid);
+	}
+
+}
+
