@@ -1,9 +1,14 @@
 package org.ei.dataloading;
 
 /**
+ * @author TELEBH
  * Sample of Query to pass
  * Query: "(st:""Proquest Dissertation And Theses Database"" AND db:""cpx"")"
  * NumOfCount: 3000
+ * 
+ * Sample of Query to pass #2:
+ * Query: (((all:composite)) AND (((NTER:1873.24) OR (NTER:[1873.240000001;])))) AND (yr:[1884;2020]) AND (((db:cpx OR db:c84)) for Rec Count 3000
+ * NumOfCount: 2257
  */
 import java.io.BufferedReader;
 import java.io.File;

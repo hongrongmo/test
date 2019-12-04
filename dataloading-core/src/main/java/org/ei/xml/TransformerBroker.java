@@ -1,7 +1,13 @@
 package org.ei.xml;
 
-import java.util.Hashtable;
+/**
+ * HH commented out on Fri 10/04/2019 due to compilation error depends on adding maven dependency for saxon which cause other issue with dup import
+for classes as java.xml.sax, checked and found this class not in use by any of fataloading-core classes
+*/
 
+
+import java.util.Hashtable;
+/*
 import javax.xml.transform.Templates;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerConfigurationException;
@@ -78,3 +84,6 @@ public final class TransformerBroker
         return templates.newTransformer();
     }
 }
+
+*/
+
