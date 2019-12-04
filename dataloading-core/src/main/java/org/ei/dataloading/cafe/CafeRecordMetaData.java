@@ -6,6 +6,11 @@ import java.util.Map;
 
 import org.ei.dataloading.bd.loadtime.BaseTableRecord;
 
+/**
+ * 
+ * @author TELEBH
+ *
+ */
 public class CafeRecordMetaData {
 	
 	String key;

@@ -42,7 +42,7 @@ import com.amazonaws.services.sqs.model.SendMessageRequest;
 
 /*
  * Create amazon SQS and pull messages. since it is text messages, so print its contents
- * Author: HT
+ * Author: TELEBH
  * Date: 01/28/2016
  */
 public class AmazonSqs {

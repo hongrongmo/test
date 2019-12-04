@@ -46,7 +46,7 @@ import com.amazonaws.services.waf.model.HTTPRequest;
 import com.amazonaws.util.IOUtils;
 
 /*
- * @telebh: Friday 07/26/2019, wk: [201931] due restricted Mapping type removal in ES 6.7, I have to modify all classes taking off the combined/multi type mapping index "cafe" and replace it
+ * @author: TELEBH: Friday 07/26/2019, wk: [201931] due restricted Mapping type removal in ES 6.7, I have to modify all classes taking off the combined/multi type mapping index "cafe" and replace it
  * with the 2 new indices "author" , "affiliation" 
  */
 

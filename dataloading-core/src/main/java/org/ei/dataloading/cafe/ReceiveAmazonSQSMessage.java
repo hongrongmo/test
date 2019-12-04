@@ -67,7 +67,7 @@ import org.ei.dataloading.upt.loadtime.vtw.VTWSearchAPI;
  * - Author Profile
  * - Affiliation Profile
  * 
- *  AU: Hteleb
+ *  AU: TELEBH
  */
 public class ReceiveAmazonSQSMessage implements MessageListener {
 
