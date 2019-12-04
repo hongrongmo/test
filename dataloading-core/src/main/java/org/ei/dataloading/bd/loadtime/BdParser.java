@@ -76,6 +76,14 @@ public class BdParser
 		descriptorsTypeTable.put("CTC","TREATMENTCODE");
 		descriptorsTypeTable.put("CFL","UNCONTROLLEDTERM");//CPX
 		descriptorsTypeTable.put("CLU","UNCONTROLLEDTERM");//CPX
+		
+		descriptorsTypeTable.put("CBE","CBETERM");//CBNB
+		descriptorsTypeTable.put("CBB","CBBTERM");//CBNB
+		descriptorsTypeTable.put("CBC","CBCTERM");//CBNB
+		descriptorsTypeTable.put("CNC","CNCTERM");//CBNB
+		descriptorsTypeTable.put("CBA","CBATERM");//CBNB
+		
+			
 	}
 
 	public BdParser()
@@ -307,6 +315,14 @@ public class BdParser
 							record.put("STAGE", stage);
 						}
 						
+						Element dateDelivery = processinfo.getChild("date-delivered",aitNamespace);
+						if(dateDelivery!=null) {
+							String dateDeliveryYear = dateDelivery.getAttributeValue("year");
+							String dateDeliveryMonth = dateDelivery.getAttributeValue("month");
+							String dateDeliveryDay = dateDelivery.getAttributeValue("day");
+							record.put("DELIVERYDATE", dateDeliveryDay+" "+dateDeliveryMonth+" "+dateDeliveryYear);
+						}
+						
 					}
 
 
@@ -362,6 +378,7 @@ public class BdParser
 									itemid_idtype.equals("API")||
 									itemid_idtype.equals("SNBOOK")||
 									itemid_idtype.equals("APILIT")||
+									itemid_idtype.equals("CBNB")||
 									itemid_idtype.equals("CHEM")))
 							{
 								String  itemid = itemidElement.getTextTrim();
@@ -369,12 +386,13 @@ public class BdParser
 								//System.out.println("ACCESSNUMBER= "+itemid);
 								
 								//pre frank request, add book record as cpx database by hmo at 11/10/2016
-								if((!database.equals("cpx") && !itemid_idtype.equals("CPX")) || ((database.equals("cpx") || database.equals("pch")) && (itemid_idtype.equals("CPX") || itemid_idtype.equals("SNBOOK"))))
+								if((!database.equals("cpx") && !itemid_idtype.equals("CPX")) || itemid_idtype.equals("CBNB")|| ((database.equals("cpx") || database.equals("pch")) && (itemid_idtype.equals("CPX") || itemid_idtype.equals("SNBOOK"))))
 								{
 									record.put("ACCESSNUMBER",itemid);
 									setAccessNumber(itemid);
 									//System.out.println("DATABSE="+database+" ACCESSNUMBER= "+itemid);
 								}
+								
 								
 							}
 							else if (itemid_idtype != null && itemid_idtype.equals("PUI"))
@@ -527,6 +545,7 @@ public class BdParser
 
 							//citation title
 							Element cittitle = head.getChild("citation-title",noNamespace);
+							StringBuffer cbnbForeignTitle = new StringBuffer();
 							if(cittitle != null)
 							{
 								List cittextlst = cittitle.getChildren("titletext",noNamespace);
@@ -542,17 +561,7 @@ public class BdParser
 										cittext.append(Constants.IDDELIMITER);
 										if(cittextelm.getContent()!=null)
 										{
-											/*
-											if(this.accessNumber.equals("20180604775737"))
-											{
-												System.out.println("1 "+cittextelm.getDescendants());
-												System.out.println("2 "+cittextelm.getContent());
-												System.out.println("3 "+cittextelm.getValue());
-												System.out.println("4 "+cittextelm.getText());
-												System.out.println("5 "+dictionary.mapEntity(getMixData(cittextelm.getDescendants())));
-												System.out.println("6 "+dictionary.mapEntity(getMixData(cittextelm.getContent())));
-											}
-											*/
+											
 											cittext.append(dictionary.mapEntity(getMixData(cittextelm.getContent())));
 											//cittext.append(getMixData(cittextelm.getContent()));
 										}
@@ -564,6 +573,16 @@ public class BdParser
 										cittext.append(Constants.IDDELIMITER);
 										if(cittextelm.getAttribute("lang",xmlNamespace)!=null)
 										{
+											//System.out.println("LANG="+cittextelm.getAttributeValue("lang",xmlNamespace));
+											if(cittextelm.getAttributeValue("lang",xmlNamespace).equals("SPA"))
+											{
+												if(cbnbForeignTitle.length()>0)
+												{
+													cbnbForeignTitle.append(";");
+												}
+												cbnbForeignTitle.append(dictionary.mapEntity(getMixData(cittextelm.getContent())));
+												
+											}
 											cittext.append(cittextelm.getAttributeValue("lang",xmlNamespace));
 										}
 										if(i<cittextlst.size()-1)
@@ -578,7 +597,12 @@ public class BdParser
 										citation = citation.replaceAll("</inf>", "</sub>");
 
 									}
-
+									
+									if(cbnbForeignTitle.length()>0)
+									{
+										System.out.println("****************CBNBFOREIGNTITLE="+cbnbForeignTitle.toString());
+										record.put("CBNBFOREIGNTITLE",cbnbForeignTitle.toString());
+									}
 									record.put("CITATIONTITLE",citation.replaceAll(">\\s+<", "><"));
 								}
 							}
@@ -1262,6 +1286,7 @@ public class BdParser
 					else
 					{
 						record.put("LOADNUMBER",weekNumber);
+						//System.out.println("LOADNUMBER="+weekNumber);
 					}
 
                    //record.put("LOADNUMBER", item.getChildText("load-number", noNamespace));
@@ -1414,7 +1439,7 @@ public class BdParser
 							Element refTitletextElement = (Element)refTitletextList.get(j);
 							if(refTitletextElement!=null)
 							{
-								String  refTitletext = refTitletextElement.getTextTrim();
+								String  refTitletext = dictionary.mapEntity(getMixData(refTitletextElement.getContent()));
 								//System.out.println("REFTITLE="+refTitletext);
 								if(	refTitletext!=null)
 								{
@@ -1457,7 +1482,7 @@ public class BdParser
 					Element refSourceTitle = (Element) refInfo.getChild("ref-sourcetitle",noNamespace);
 					if(	refSourceTitle !=null)
 					{
-						String  refSourceTitleText = refSourceTitle.getTextTrim();
+						String  refSourceTitleText = dictionary.mapEntity(getMixData(refSourceTitle.getContent()));
 						//change to deal with non-roman characters @08/10/2018
 						//referenceSourcetitle.put(referenceID,dictionary.mapEntity(refSourceTitleText));
 						referenceSourcetitle.put(referenceID,refSourceTitleText);
@@ -1533,10 +1558,10 @@ public class BdParser
 					if(refText!=null)
 					{
 
-						String  refTextValue = refText.getTextTrim();
-						//System.out.println("refTextValue1::"+refTextValue);
+						String  refTextValue = dictionary.mapEntity(getMixData(refText.getContent()));
+						
 						//change to deal with non-roman characters @08/10/2018
-						//referenceText.put(referenceID,dictionary.mapEntity(refTextValue));
+						
 						referenceText.put(referenceID,trimStringToLength(refTextValue,3950));
 						if(refTextValue.length()>3950)
 						{
@@ -2878,6 +2903,7 @@ public class BdParser
 				if(publicationdateDateText!=null)
 				{
 					record.put("PUBLICATIONDATE",dictionary.mapEntity(publicationdateDateText));
+					record.put("PUBLICATIONDATEDATETEXT",dictionary.mapEntity(publicationdateDateText));
 				}
 				else
 				{
@@ -4433,12 +4459,33 @@ public class BdParser
 							}
 							mhBuffer.append(mainterm);
 						}
+						//System.out.print("*** "+descriptorsType+" "+mhBuffer.toString());
 						if(descriptorsType.equals("SPC") && mhBuffer.length()>4000)
 						{
 							term1 = mhBuffer.substring(0,4000);
 							term2 = mhBuffer.substring(4000);
 							record.put("SPECIESTERM",term1);
 							record.put("SPECIESTERM2",term2);
+						}
+						else if (descriptorsType.equals("CBE")&& mhBuffer.length()>0)
+						{							
+							record.put("CBETERM",mhBuffer.toString().replaceAll(Constants.AUDELIMITER,";"));							
+						}
+						else if (descriptorsType.equals("CBB")&& mhBuffer.length()>0)
+						{				
+							record.put("CBBTERM",mhBuffer.toString().replaceAll(Constants.AUDELIMITER,";"));							
+						}
+						else if (descriptorsType.equals("CBC")&& mhBuffer.length()>0)
+						{
+							record.put("CBCTERM",mhBuffer.toString().replaceAll(Constants.AUDELIMITER,";"));							
+						}
+						else if (descriptorsType.equals("CNC")&& mhBuffer.length()>0)
+						{
+							record.put("CNCTERM",mhBuffer.toString().replaceAll(Constants.AUDELIMITER,";"));							
+						}
+						else if (descriptorsType.equals("CBA")&& mhBuffer.length()>0)
+						{
+							record.put("CBATERM",mhBuffer.toString().replaceAll(Constants.AUDELIMITER,";"));							
 						}
 						else
 						{
@@ -4505,6 +4552,70 @@ public class BdParser
 						}
 					}
 					record.put("CLASSIFICATIONCODE",clBuffer.toString());
+				}
+				else if(classificationType != null && getDatabaseName().equals("cbn"))
+				{
+					List classificationList = classifications.getChildren("classification",noNamespace);
+					StringBuffer cltBuffer = new StringBuffer();
+					for(int j=0;j<classificationList.size();j++)
+					{
+						Element classification = (Element)classificationList.get(j);
+						String cl = classification.getTextTrim();
+						String clc = classification.getChildTextTrim("classification-code",noNamespace);
+						String clt = classification.getChildTextTrim("classification-description",noNamespace);
+						//System.out.println(classificationType+" "+clc+" "+clt);
+						if(clBuffer.length()>0)
+						{
+							clBuffer.append(Constants.AUDELIMITER);
+						}
+
+						if((cl!=null && cl.length()>0) && (clc!=null && clc.length()>0))
+						{
+							clBuffer.append(cl+Constants.AUDELIMITER+clc);
+						}
+						else if(cl!=null && cl.length()>0)
+						{
+							clBuffer.append(cl);
+						}
+						else if(clc!=null && clc.length()>0)
+						{
+							clBuffer.append(clc);
+						}
+						
+						if(cltBuffer.length()>0)
+						{
+							cltBuffer.append(Constants.AUDELIMITER);
+						}
+
+						if((cl!=null && cl.length()>0) && (clt!=null && clt.length()>0))
+						{
+							cltBuffer.append(cl+Constants.AUDELIMITER+clt);
+						}						
+						else if(clt!=null && clt.length()>0)
+						{
+							cltBuffer.append(clt);
+						}
+					}
+					if(classificationType.equals("CBNBSCOPE") && cltBuffer.length()>0)
+					{
+						record.put("CBNBSCOPECLASSIFICATIONDESC",cltBuffer.toString().replaceAll(Constants.AUDELIMITER,";"));
+					}
+					else if(classificationType.equals("CBNBSECTOR") && cltBuffer.length()>0)
+					{
+						record.put("CBNBSECTORCLASSIFICATIONCODE",clBuffer.toString().replaceAll(Constants.AUDELIMITER,";"));
+						record.put("CBNBSECTORCLASSIFICATIONDESC",cltBuffer.toString().replaceAll(Constants.AUDELIMITER,";"));
+					} 
+					else if(classificationType.equals("CBNBSIC") && cltBuffer.length()>0)
+					{
+						record.put("CBNBSICCLASSIFICATIONCODE",clBuffer.toString().replaceAll(Constants.AUDELIMITER,";"));
+						record.put("CBNBSICCLASSIFICATIONDESC",cltBuffer.toString().replaceAll(Constants.AUDELIMITER,";"));
+					} 
+					else if(classificationType.equals("CBNBGEO") && cltBuffer.length()>0)
+					{
+						record.put("CBNBGEOCLASSIFICATIONCODE",clBuffer.toString().replaceAll(Constants.AUDELIMITER,";"));
+						record.put("CBNBGEOCLASSIFICATIONDESC",cltBuffer.toString().replaceAll(Constants.AUDELIMITER,";"));
+					} 
+					
 				}
 			}
 		}
@@ -4608,7 +4719,7 @@ public class BdParser
 				//String text=((Text)o).getTextTrim();
 				String text=((Text)o).getText();
 
-				System.out.println("text3::"+text);
+				//System.out.println("text3::"+text);
 
 				text= perl.substitute("s/&/&amp;/g",text);
 				text= perl.substitute("s/</&lt;/g",text);
@@ -4617,7 +4728,7 @@ public class BdParser
 				text= perl.substitute("s/\r//g",text);
 				text= perl.substitute("s/\t//g",text);
 
-				System.out.println("text4::"+text);
+				//System.out.println("text4::"+text);
 				b.append(text);
 
             }
