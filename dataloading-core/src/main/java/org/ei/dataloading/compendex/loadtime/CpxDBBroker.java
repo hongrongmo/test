@@ -19,7 +19,7 @@ import java.util.Properties;
 
 //import oracle.jdbc.driver.OracleResultSet;  // works for ojdbc14.jar (for 11g RDS)
 
-import oracle.sql.CLOB;
+//import oracle.sql.CLOB;
 
 public class CpxDBBroker {
     private String key;
@@ -205,8 +205,9 @@ public class CpxDBBroker {
 
                     if (field.equals("AB")) {
                        //CLOB ab = ((OracleResultSet) rec).getCLOB(field);  //HH: 08/09/2016 works for ojdbc14 (11g RDS)
-                    	 CLOB ab = (CLOB) ((ResultSet) rec).getClob(field);  //HH: 08/09/2016 added to work for ojdbc6 (12c RDS)
-
+                    	// CLOB ab = (CLOB) ((ResultSet) rec).getClob(field);  //HH: 08/09/2016 added to work for ojdbc6 (12c RDS)
+                    	String ab=rec.getString(field);
+                    	/*
                         if (ab == null || !(ab.getSubString(1, (int) ab.length()).equals(correctionValue))) {
                             if (correctionValue.length() > 0) {
                                 strLog.append("Old:" + field + "|" + ab.getSubString(1, (int) ab.length()) + "\n");
@@ -218,6 +219,7 @@ public class CpxDBBroker {
                                 updatedFields.append(field + ",");
                             }
                         }
+                        */
                     } else if (!field.equals("M_ID")) {
                         String recValue = rec.getString(field);
                         if ((recValue == null || (!recValue.replaceAll("; ", ";").equals(correctionValue.replaceAll("; ", ";"))))) {
@@ -297,9 +299,11 @@ public class CpxDBBroker {
             if (field != null) {
                 if (field.equals("AB")) {
                     //CLOB ab = ((OracleResultSet) rec).getCLOB(field);   //HH: 08/09/2016 works for ojdbc14 (11g RDS)
-                    CLOB ab = (CLOB) ((ResultSet) rec).getClob(field);	//HH: 08/09/2016 added to work for ojdbc6 (12c RDS)
-
-                    if (ab == null || !(ab.getSubString(1, (int) ab.length()).equals(abStr))) {
+                    //CLOB ab = (CLOB) ((ResultSet) rec).getClob(field);	//HH: 08/09/2016 added to work for ojdbc6 (12c RDS)
+                	String ab = rec.getString(field);
+                	
+                    //if (ab == null || !(ab.getSubString(1, (int) ab.length()).equals(abStr))) {
+                	if (ab == null || !(ab.substring(1, (int) ab.length()).equals(abStr))) {
                         updated = true;
                         break;
                     }
@@ -336,7 +340,7 @@ public class CpxDBBroker {
         }
 
     }
-
+/*
     private static CLOB getCLOB(String strData, Connection conn) throws SQLException {
         CLOB tempClob = null;
         try {
@@ -344,7 +348,7 @@ public class CpxDBBroker {
             // If the temporary CLOB has not yet been created, create new
             tempClob = CLOB.createTemporary(conn, true, CLOB.DURATION_SESSION);
 
-            /* Open the temporary CLOB in readwrite mode to enable writing this does not seem to work using JDBC defaultConnection */
+            // Open the temporary CLOB in readwrite mode to enable writing this does not seem to work using JDBC defaultConnection 
             tempClob.open(CLOB.MODE_READWRITE);
             // Get the output stream to write
             Writer tempClobWriter = tempClob.getCharacterOutputStream();
@@ -367,4 +371,5 @@ public class CpxDBBroker {
         }
         return tempClob;
     }
+    */
 }

@@ -21,5 +21,8 @@ public abstract class CombinedWriter
 
 	public abstract void setOperation(String op)
 	throws Exception;
+	
+	public abstract void setEndpoint(String op)
+			throws Exception;
 
 }
