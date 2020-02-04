@@ -20,7 +20,7 @@ import org.ei.common.bd.*;
 import org.ei.common.*;
 import org.ei.util.GUID;
 import org.ei.util.StringUtil;
-
+import org.ei.util.kafka.*;
 
 
 	public class KnovelCombiner 
@@ -230,7 +230,7 @@ import org.ei.util.StringUtil;
 	        EVCombinedRec[] recArray = null;
 	      
 	        String accessNumber = "";
-
+	        KafkaService kafka = new KafkaService();
 	        while (rs.next())
 	        {
 	          ++i;
@@ -404,13 +404,32 @@ import org.ei.util.StringUtil;
 	                
 	            recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
 	            this.writer.writeRec(recArray);
+	            /**********************************************************/
+    	        //following code used to test kafka by hmo@2020/02/3
+    	        //this.writer.writeRec(recArray,kafka);
+    	        /*********************************************************/
+    	        this.writer.writeRec(recArray,kafka);
+    	        if(i%5==0)
+    	        {
+    	        	//System.out.println("flushing at "+i);
+    	        	kafka.flush();
+    	        }
+    	        
 	          }
-	          catch(Exception e)
+	        
+	         catch(Exception e)
 	         {
 	            System.out.println("**** ERROR Found on access number "+accessNumber+" *****");
 	            e.printStackTrace();
 	         }
 	        }
+	        if(kafka!=null)
+           	try {
+           		 kafka.close();
+           	 }
+        	 catch (Exception e) {
+        		 e.printStackTrace();
+        	 }      		
 	    }
 	    
 	    public String[] prepareAuthor(String bdAuthor)

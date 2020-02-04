@@ -13,11 +13,7 @@ import java.util.HashSet;
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
 import org.ei.dataloading.bd.loadtime.BdNumericalIndexMapping;
-//import org.ei.dataloading.CombinerTimestamp;
-//import org.ei.dataloading.CombinedWriter;
-//import org.ei.dataloading.EVCombinedRec;
-//import org.ei.dataloading.Combiner;
-//import org.ei.dataloading.CombinedXMLWriter;
+import org.ei.util.kafka.*;
 import org.ei.dataloading.*;
 //import org.ei.dataloading.bd.loadtime.*;
 import org.ei.dataloading.georef.loadtime.*;
@@ -342,7 +338,9 @@ public void writeCombinedByTableHook(Connection con) throws Exception
         boolean isCpx = false;
         String accessNumber = "";
         String pui = "";
-
+        KafkaService kafka = new KafkaService();
+    	//kafka.getParameterFromPropertiesFile("config.properties");
+        
         while (rs.next())
         {
           ++i;
@@ -444,23 +442,7 @@ public void writeCombinedByTableHook(Connection con) throws Exception
                                 affiliation = affiliation+rs.getString("AFFILIATION_1");
                             }
                             
-                            /* 
-                             * move these section to outside block to allow index AFFILIATIONID while bd affiliation is null
-                            if(rs.getString("affid")==null && rs.getString("CAFE_AFFILIATION")!=null)
-                            {
-                            	String cafeAffString = rs.getString("CAFE_AFFILIATION");
-                            	if(rs.getString("CAFE_AFFILIATION1")!=null)
-                            	{
-                            		cafeAffString = cafeAffString+rs.getString("CAFE_AFFILIATION1");
-                            	}
-                   
-                            	BdAffiliations caff = new BdAffiliations(cafeAffString);
-                            	caff.getSearchValue();                           	                       
-                            	rec.put(EVCombinedRec.AFFILIATIONID, caff.getAffiliationId());
-                            	rec.put(EVCombinedRec.DEPARTMENTID,  caff.getDepartmentId());
-                            	
-                            }
-                            */
+                         
                             BdAffiliations aff = new BdAffiliations(affiliation);
                             rec.put(EVCombinedRec.AUTHOR_AFFILIATION,  aff.getSearchValue());
                             rec.put(EVCombinedRec.AFFILIATION_LOCATION,  aff.getLocationsSearchValue());
@@ -517,7 +499,7 @@ public void writeCombinedByTableHook(Connection con) throws Exception
                     }
 
                     if (rs.getString("CITATIONTITLE") != null)
-                    {
+                    {                   
                        rec.put(EVCombinedRec.TRANSLATED_TITLE, prepareTranslatedCitationTitle(rs.getString("CITATIONTITLE")));
                     }
 
@@ -690,6 +672,14 @@ public void writeCombinedByTableHook(Connection con) throws Exception
 
                     String docType = rs.getString("CITTYPE");
                     String sourceType = rs.getString("SOURCETYPE");
+                    
+                    //added by hmo at 1/15/2020 based on EVOPS-884
+                    //System.out.println("SOURCETYPE= "+sourceType);
+                    if(sourceType!=null)
+                    {
+                    	 rec.put(EVCombinedRec.SOURCE_TYPE, sourceType);
+                    }
+                    
                     if(docType != null)
                     {
                         boolean confCodeFlag = false;
@@ -1189,19 +1179,28 @@ public void writeCombinedByTableHook(Connection con) throws Exception
            
             recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
             this.writer.writeRec(recArray);
+          
             
             /**********************************************************/
-            //following code used to test kafka by hmo@2019/09/22
-            //this.writer.writeRec(recArray,"kafka");
+            //following code used to test kafka by hmo@2020/01/30
+            //this.writer.writeRec(recArray,kafka);
             /*********************************************************/
+            this.writer.writeRec(recArray,kafka);
+            if(i%5==0)
+            {
+            	//System.out.println("flushing at "+i);
+            	kafka.flush();
+            }
             
-          }
-          catch(Exception e)
+         }
+         catch(Exception e)
          {
             System.out.println("**** ERROR Found on access number "+accessNumber+" *****");
             e.printStackTrace();
          }
         }
+        if(kafka!=null)
+        	kafka.close();
     }
     
     private String prepareStandardDesignation(String input)

@@ -31,6 +31,7 @@ import java.text.DateFormat;
 import org.ei.dataloading.*;
 import org.ei.common.*;
 import org.ei.common.georef.*;
+import org.ei.util.kafka.*;
 
 public class GeoRefCombiner
 extends Combiner
@@ -332,37 +333,28 @@ public void writeCombinedByYearHook(Connection con,
 public void writeRecs(ResultSet rs)
                         throws Exception
 {
-  try
-  {
-    DocumentView runtimeDocview = new CitationView();
-    runtimeDocview.setResultSet(rs);
-    EVCombinedRec recSecondBox = null;
-	  EVCombinedRec[] recArray = null;
-    int i = 1;
-    while (rs.next())
-    {
-		  try{
-        String firstGUID = "";
-        int numCoords = 1;
-        int coordCount = 0;
-        /*
-        String sts = rs.getString("COORDINATES");
-        if(sts == null)
-        {
-        	numCoords = 1;
-		  }
-		  else
-		  {
-        	String[] tc = sts.split(GRFDocBuilder.AUDELIMITER);
-        	numCoords = tc.length;
-	  	  }
-	  	  */
-	  	  //System.out.println("NUMCOORDS: " + numCoords);
-	  	  Vector recVector = new Vector();
-        for(int currentCoord = 0; currentCoord < numCoords; currentCoord++)
-        {
-              String[] coords = null;
-              String[] secondBoxCoords= null;
+	KafkaService kafka = new KafkaService();
+	try
+	{
+	    DocumentView runtimeDocview = new CitationView();
+	    runtimeDocview.setResultSet(rs);
+	    EVCombinedRec recSecondBox = null;
+		EVCombinedRec[] recArray = null;
+		
+		
+	    int i = 1;
+	    while (rs.next())
+	    {
+		try{
+	        String firstGUID = "";
+	        int numCoords = 1;
+	        int coordCount = 0;
+	       
+		  	Vector recVector = new Vector();
+	        for(int currentCoord = 0; currentCoord < numCoords; currentCoord++)
+	        {
+	        	String[] coords = null;
+	        	String[] secondBoxCoords= null;
 			    coordCount++;
 				EVCombinedRec rec = new EVCombinedRec();
 
@@ -371,13 +363,7 @@ public void writeRecs(ResultSet rs)
 				// AUS
 				String aString = rs.getString("PERSON_ANALYTIC");
 				if(aString != null)
-				{
-				  // DO NOT USE - alternate spellings
-				  /* String altAuthor = rs.getString("ALTERNATE_AUTHOR");
-				  if(altAuthor != null)
-				  {
-					aString = aString.concat(AUDELIMITER).concat(altAuthor);
-				  } */
+				{				  
 				  rec.put(EVCombinedRec.AUTHOR, aString.split(AUDELIMITER));
 				}
 
@@ -649,14 +635,7 @@ public void writeRecs(ResultSet rs)
 				{
 				  rec.putIfNotNull(EVCombinedRec.AVAILABILITY, rs.getString("AVAILABILITY").split(AUDELIMITER));
 				}
-
-				// Meridian data in Patent Navigators
-				/*rec.putIfNotNull(EVCombinedRec.INT_PATENT_CLASSIFICATION, parseMeridianData(rs.getString("LAND")));
-				rec.putIfNotNull(EVCombinedRec.ECLA_CODES, parseMeridianData(rs.getString("WATER")));
-				rec.putIfNotNull(EVCombinedRec.USPTOCODE, parseMeridianData(rs.getString("OIL")));
-				rec.putIfNotNull(EVCombinedRec.PATENT_KIND, parseMeridianData(rs.getString("CITIES"))); */
-
-
+				
 				rec.putIfNotNull(EVCombinedRec.PUB_YEAR, runtimeDocview.getYear());
 				rec.putIfNotNull(EVCombinedRec.TITLE, runtimeDocview.getTitle());
 				rec.putIfNotNull(EVCombinedRec.TRANSLATED_TITLE, runtimeDocview.getTranslatedTitle());
@@ -808,20 +787,31 @@ public void writeRecs(ResultSet rs)
 						recSecondBox.put(EVCombinedRec.LNG_SW, secondBoxCoords[4]);
 						recSecondBox.putIfNotNull(EVCombinedRec.DOCID, firstGUID + "_" + (coordCount));
 				  		recVector.add(recSecondBox);
+						}
+					  }
+	
 					}
-				  }
-
-				}
-				catch(Exception e)
-				{
-				  System.out.println("MID1 = " + rs.getString("M_ID"));
-				  e.printStackTrace();
-				}
-				i++;
-		} // for
-
-		recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
-		this.writer.writeRec(recArray);
+					catch(Exception e)
+					{
+					  System.out.println("MID1 = " + rs.getString("M_ID"));
+					  e.printStackTrace();
+					}
+					
+			} // for
+	        i++;
+			recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
+			this.writer.writeRec(recArray);
+			 /**********************************************************/
+	        //following code used to test kafka by hmo@2020/01/30
+	        //this.writer.writeRec(recArray,kafka);
+	        /*********************************************************/
+	        this.writer.writeRec(recArray,kafka);
+	        if(i%5==0)
+	        {
+	        	//System.out.println("flushing at "+i);
+	        	kafka.flush();
+	        }
+	        
 		}
 		catch(Exception e)
 		{
@@ -833,6 +823,11 @@ public void writeRecs(ResultSet rs)
   catch(Exception e)
   {
     e.printStackTrace();
+  }
+  finally
+  {
+	  if(kafka!=null)
+      	kafka.close();
   }
 }
 
@@ -1039,8 +1034,8 @@ private class LocalErrorHandler implements ErrorHandler {
   }
 
   private void printInfo(SAXParseException e) {
-    System.out.println("   Public ID: " + e.getPublicId());
-    System.out.println("   System ID: " + e.getSystemId());
+    //System.out.println("   Public ID: " + e.getPublicId());
+    //System.out.println("   System ID: " + e.getSystemId());
     System.out.println("   Line number: " + e.getLineNumber());
     System.out.println("   Column number: " + e.getColumnNumber());
     System.out.println("   Message: " + e.getMessage());

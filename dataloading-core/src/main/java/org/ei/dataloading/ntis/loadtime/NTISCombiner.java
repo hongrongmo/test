@@ -22,6 +22,7 @@ import org.ei.dataloading.EVCombinedRec;
 import org.ei.util.GUID;
 import org.ei.common.ntis.*;
 import org.ei.common.*;
+import org.ei.util.kafka.*;
 
 public class NTISCombiner
 	extends Combiner
@@ -283,7 +284,7 @@ public class NTISCombiner
     	throws Exception
     {
         int i = 0;
-
+        KafkaService kafka = new KafkaService();
         while (rs.next())
         {
 
@@ -385,6 +386,17 @@ public class NTISCombiner
 				rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
 			}
             this.writer.writeRec(rec);
+           
+            /**********************************************************/
+	        //following code used to test kafka by hmo@2020/02/3
+	        //this.writer.writeRec(recArray,kafka);
+	        /*********************************************************/
+	        this.writer.writeRec(rec,kafka);
+	        if(i%5==0)
+	        {
+	        	//System.out.println("flushing at "+i);
+	        	kafka.flush();
+	        }
         }
     }
 

@@ -289,7 +289,13 @@ public class BaseTableWriter
 	    	//System.out.println("ISOPENACESS"+record.get("ISOPENACESS"));
 		}
 	    
-	    
+	    recordBuf.append(FIELDDELIM);
+	    //added on 20200122 by hongrong for ani5.15
+	    if(record.get("CSXTERM")!=null)
+		{
+	    	recordBuf.append(record.get("CSXTERM"));
+	    	//System.out.println("ISOPENACESS"+record.get("ISOPENACESS"));
+		}
 	    //*/
 	    
 	    if(getAccessionNumber()!=null && getAccessionNumber().length()>0)

@@ -76,6 +76,7 @@ public class BdParser
 		descriptorsTypeTable.put("CTC","TREATMENTCODE");
 		descriptorsTypeTable.put("CFL","UNCONTROLLEDTERM");//CPX
 		descriptorsTypeTable.put("CLU","UNCONTROLLEDTERM");//CPX
+		descriptorsTypeTable.put("CSX","CSXTERM");//CPX //external Compendex Standards classification terms
 		
 		descriptorsTypeTable.put("CBE","CBETERM");//CBNB
 		descriptorsTypeTable.put("CBB","CBBTERM");//CBNB
@@ -600,7 +601,7 @@ public class BdParser
 									
 									if(cbnbForeignTitle.length()>0)
 									{
-										System.out.println("****************CBNBFOREIGNTITLE="+cbnbForeignTitle.toString());
+										//System.out.println("****************CBNBFOREIGNTITLE="+cbnbForeignTitle.toString());
 										record.put("CBNBFOREIGNTITLE",cbnbForeignTitle.toString());
 									}
 									record.put("CITATIONTITLE",citation.replaceAll(">\\s+<", "><"));
@@ -1120,8 +1121,10 @@ public class BdParser
 							parseSourceElement(source,record,bibrecord);
 
 							//CORRESPONDENCE
-							Element correspondence = (Element) head.getChild("correspondence",noNamespace);
-							parseCorrespondenceElement(correspondence,record);
+							//Element correspondence = (Element) head.getChild("correspondence",noNamespace);
+							//change to get multiple correspondence
+							List correspondences = head.getChildren("correspondence",noNamespace);
+							parseCorrespondenceElement(correspondences,record);
 							
 							//GRANTLIST
 							Element grantlist = (Element) head.getChild("grantlist",noNamespace);
@@ -2545,44 +2548,62 @@ public class BdParser
 		}
 	}
 
-	private void parseCorrespondenceElement(Element correspondence,Hashtable record) throws Exception
+	private void parseCorrespondenceElement(List correspondences,Hashtable record) throws Exception
 	{
-		if(correspondence != null)
+		
+		for(int j=0;j<correspondences.size();j++)
 		{
-			Element person = (Element) correspondence.getChild("person",noNamespace);
-			Element affiliation = (Element) correspondence.getChild("affiliation",noNamespace);
-			Element eAddress = (Element) correspondence.getChild("e-address",ceNamespace);
-			String personName = getPersonalName(0,person);
-			String affString =  getAffiliation(affiliation);
-			String eAddressType = null;
-			String eAddressString = null;
-			if(	eAddress != null)
-			{
-				eAddressType = eAddress.getAttributeValue("type");
-				eAddressString = eAddress.getText();
-			}
+			Element correspondence = (Element)correspondences.get(j);
 
-			if(eAddressType == null)
+			if(correspondence != null)
 			{
-				eAddressType = "email";
-			}
-			if(eAddressString != null)
-			{
-				eAddressString = eAddressType+Constants.IDDELIMITER+eAddressString;
-				record.put("CORRESPONDENCEEADDRESS",eAddressString);
-				record.put("CORRESPONDENCEEADDRESS",eAddressString);
-			}
-
-			if(personName!=null)
-			{
-				//System.out.println("personName "+personName);
-				record.put("CORRESPONDENCENAME",personName);
-			}
-
-			if(affString!=null)
-			{
-				//System.out.println("CORRESPONDENCEAFFILIATION "+affString);
-				record.put("CORRESPONDENCEAFFILIATION",affString);
+				Element person = (Element) correspondence.getChild("person",noNamespace);
+				Element affiliation = (Element) correspondence.getChild("affiliation",noNamespace);
+				Element eAddress = (Element) correspondence.getChild("e-address",ceNamespace);
+				String personName = getPersonalName(0,person);
+				String affString =  getAffiliation(affiliation);
+				String eAddressType = null;
+				String eAddressString = null;
+				if(	eAddress != null)
+				{
+					eAddressType = eAddress.getAttributeValue("type");
+					eAddressString = eAddress.getText();
+				}
+	
+				if(eAddressType == null)
+				{
+					eAddressType = "email";
+				}
+				if(eAddressString != null)
+				{
+					eAddressString = eAddressType+Constants.IDDELIMITER+eAddressString;
+					if(record.get("CORRESPONDENCEEADDRESS")!=null)
+					{
+						eAddressString=record.get("CORRESPONDENCEEADDRESS")+Constants.AUDELIMITER+eAddressString;
+					}
+					//record.put("CORRESPONDENCEEADDRESS",eAddressString);
+					record.put("CORRESPONDENCEEADDRESS",eAddressString);
+				}
+	
+				if(personName!=null)
+				{
+					//System.out.println("personName "+personName);
+					if(record.get("CORRESPONDENCENAME")!=null)
+					{
+						personName=record.get("CORRESPONDENCENAME")+Constants.AUDELIMITER+personName;
+					}
+					record.put("CORRESPONDENCENAME",personName);
+				}
+	
+				if(affString!=null)
+				{
+					//System.out.println("CORRESPONDENCEAFFILIATION "+affString);
+					if(record.get("CORRESPONDENCEAFFILIATION")!=null)
+					{
+						affString=record.get("CORRESPONDENCEAFFILIATION")+Constants.AUDELIMITER+affString;
+					}
+					record.put("CORRESPONDENCEAFFILIATION",affString);
+				}
 			}
 		}
 	}
@@ -4486,6 +4507,11 @@ public class BdParser
 						else if (descriptorsType.equals("CBA")&& mhBuffer.length()>0)
 						{
 							record.put("CBATERM",mhBuffer.toString().replaceAll(Constants.AUDELIMITER,";"));							
+						}
+						else if (descriptorsType.equals("CSX")&& mhBuffer.length()>0)
+						{
+							System.out.println("CSXTERM="+mhBuffer.toString());
+							record.put("CSXTERM",mhBuffer.toString().replaceAll(Constants.AUDELIMITER,";"));							
 						}
 						else
 						{

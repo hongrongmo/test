@@ -501,6 +501,9 @@ public class EVCombinedRec {
 	// added by hmo on 2019-08-28
 	public static final String UPDATE_NUMBER = "374";
 	public static final String ORG_ID= "375";
+	
+	// added by hmo on 2020-01-15
+	public static final String SOURCE_TYPE = "376";
 
 	 //*/
 
