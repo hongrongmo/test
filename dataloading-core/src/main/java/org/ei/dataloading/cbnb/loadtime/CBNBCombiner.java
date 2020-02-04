@@ -154,7 +154,7 @@ public class CBNBCombiner extends Combiner
 
             stmt = con.createStatement();
             System.out.println("Running the query...");
-            rs = stmt.executeQuery("select m_id, abn, doc, sco, fjl, isn, cdn, lan, ibn, src, scc,sct, ebt, cin, vol, iss, pag, reg, cym, sic, gic, gid, atl, otl, abs, edn, SUBSTR(pbn,1,4) pyr,pbn,avl, pbr, load_number, seq_num from " + Combiner.TABLENAME +" where substr(pbn,1,4) ='"+ year +"'");
+            rs = stmt.executeQuery("select m_id, abn, doc, sco, fjl, isn, cdn, lan, ibn, src, scc,sct, ebt, cin, vol, iss, pag, reg, cym, sic, gic, gid, atl, otl, abs, edn, SUBSTR(pbn,1,4) pyr1, pyr,pbn,avl, pbr, load_number, seq_num from " + Combiner.TABLENAME +" where substr(pbn,1,4) ='"+ year +"'");
 
             System.out.println("Got records ...");
             writeRecs(rs);
@@ -206,7 +206,7 @@ public class CBNBCombiner extends Combiner
             String abString = getStringFromClob(rs.getClob("abs"));
             try 
             {
-	            if (validYear(rs.getString("pyr")))
+	            if (validYear(rs.getString("pyr")) || validYear(rs.getString("pyr1")))
 	            {            	
 	            	
 	            	//added for book project by hmo at 5/17/2017
@@ -257,9 +257,13 @@ public class CBNBCombiner extends Combiner
 	                    rec.put(EVCombinedRec.ISBN, rs.getString("ibn"));
 	                }
 	
-	                if (rs.getString("pyr") != null)
+	                if (rs.getString("pyr") != null && validYear(rs.getString("pyr")) )
 	                {
 	                    rec.put(EVCombinedRec.PUB_YEAR, rs.getString("pyr"));
+	                }
+	                else if(rs.getString("pyr1") != null && validYear(rs.getString("pyr1")) )
+	                {
+	                    rec.put(EVCombinedRec.PUB_YEAR, rs.getString("pyr1"));
 	                }
 	
 	                // add companies to INT_PATENT_CLASSIFICATION , facet
@@ -377,7 +381,7 @@ public class CBNBCombiner extends Combiner
 	            }
 	            else
 	            {
-	            	System.out.println("YEAR for record "+rs.getString("abn")+" is not good");
+	            	System.out.println(rs.getString("pyr")+" YEAR for record "+rs.getString("abn")+" is not good");
 	            }
             }
             catch(Exception e)
@@ -529,7 +533,7 @@ public class CBNBCombiner extends Combiner
         {
             return false;
         }
-
+        
         return perl.match("/[1-9][0-9][0-9][0-9]/", year);
     }
 
@@ -553,7 +557,7 @@ public class CBNBCombiner extends Combiner
         {
 
             stmt = con.createStatement();
-            rs = stmt.executeQuery("select m_id, abn, doc, sco, fjl, isn, cdn, lan, ibn, src, scc,sct, ebt, cin, vol, iss, pag, reg, cym, sic, gic, gid, atl, otl, abs, edn, SUBSTR(pbn,1,4) pyr,pbn,avl,pbr,seq_num,load_number from " + Combiner.TABLENAME + " where load_number ='" + weekNumber + "'");
+            rs = stmt.executeQuery("select m_id, abn, doc, sco, fjl, isn, cdn, lan, ibn, src, scc,sct, ebt, cin, vol, iss, pag, reg, cym, sic, gic, gid, atl, otl, abs, edn, SUBSTR(pbn,1,4) pyr1, pyr,pbn,avl,pbr,seq_num,load_number from " + Combiner.TABLENAME + " where load_number ='" + weekNumber + "'");
             writeRecs(rs);
             this.writer.end();
             this.writer.flush();
