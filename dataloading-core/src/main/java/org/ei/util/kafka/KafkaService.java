@@ -16,7 +16,7 @@ import org.ei.util.kafka.IKafkaConstants;
 import org.ei.util.kafka.ConsumerCreator;
 import org.ei.util.kafka.ProducerCreator;
 
-public class KafkaTest {
+public class KafkaService {
 	public String KAFKA_BROKERS="localhost:9092";
 	public String TOPIC_NAME="EV";
 	public Integer MESSAGE_COUNT=1000;
@@ -26,9 +26,20 @@ public class KafkaTest {
     public String OFFSET_RESET_LATEST="latest";
     public String OFFSET_RESET_EARLIER="earliest";
     public Integer MAX_POLL_RECORDS=1;
+    Producer<String, String> producer=null;
 	
+    public KafkaService() {
+    	getParameterFromPropertiesFile("config.properties");	
+    	producer  = ProducerCreator.createProducer(this.KAFKA_BROKERS);
+    }
+    
+    public Producer<String, String> getProducer()
+    {
+    	Producer<String, String> producer  = ProducerCreator.createProducer(this.KAFKA_BROKERS);
+    	return producer;
+    }
     public static void main(String[] args) {
-    	KafkaTest kTest= new KafkaTest();
+    	KafkaService kTest= new KafkaService();
     	kTest.getParameterFromPropertiesFile("config.properties");
     	if(args!=null && args[0].equals("producer"))
     	{
@@ -107,8 +118,6 @@ public class KafkaTest {
 	        this.KAFKA_BROKERS=prop.getProperty("KAFKA_BROKERS");
 	        this.TOPIC_NAME=prop.getProperty("TOPIC_NAME");
 	        // get the property value and print it out
-	        System.out.println("KAFKA_BROKERS="+this.KAFKA_BROKERS);
-	        System.out.println("TOPIC_NAME="+this.TOPIC_NAME);
 	      
 	
 	    } catch (IOException ex) {
@@ -116,13 +125,20 @@ public class KafkaTest {
 	    }
     }
     
+    //public void runProducer(String recordString, String key, Producer<String, String> producer) {
     public void runProducer(String recordString, String key) {
-        Producer<String, String> producer = ProducerCreator.createProducer(this.KAFKA_BROKERS);
-    
+        //Producer<String, String> producer = ProducerCreator.createProducer(this.KAFKA_BROKERS);
+    	
+    	if(this.producer==null)
+    	{
+    		System.out.println("producer is null");
+    		this.producer = ProducerCreator.createProducer(this.KAFKA_BROKERS);
+    	}
+    	
         	ProducerRecord<String, String> record = new ProducerRecord<String, String>(this.TOPIC_NAME,key, recordString);
         	try {
-                RecordMetadata metadata = producer.send(record).get();             
-                System.out.println("Record sent with key " + key + " to partition " + metadata.partition() + " with offset " + metadata.offset());
+                RecordMetadata metadata = this.producer.send(record).get();             
+                //System.out.println("Record sent with key " + key + " to partition " + metadata.partition() + " with offset " + metadata.offset());
             }
             catch (ExecutionException e) {
                 System.out.println("Error in sending record");
@@ -132,7 +148,17 @@ public class KafkaTest {
                 System.out.println("Error in sending record");
                 System.out.println(e);
             }
-        	producer.flush();
-            producer.close();
+        	//this.producer.flush();
+            //producer.close();
         }
+    public void flush()
+    {
+    	this.producer.flush();
+    }
+    
+    public void close() {
+    	if(this.producer!=null)
+    		producer.close();
+    }
+    
 }
