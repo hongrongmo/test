@@ -222,13 +222,13 @@ public class CBNBBaseTableWriter
                 		{
                 			value = "Book";
                 		}
-                		System.out.println("SourceType="+value);
+                		//System.out.println("SourceType="+value);
                 		//valueS = perl.substitute("s/\\t/     /g", value);
                 	}
                 	else if(xmlprops.getProperty(bf).trim().equals("CITATIONLANGUAGE"))
                 	{
                 		value = Language.getIso639Language(value);               		
-                		System.out.println("CITATIONLANGUAGE="+value);                	
+                		//System.out.println("CITATIONLANGUAGE="+value);                	
                 	}
                 	else if(xmlprops.getProperty(bf).trim().equals("PUBLICATIONDATE"))
                 	{
@@ -240,7 +240,7 @@ public class CBNBBaseTableWriter
 	                		String year=dateArray[2];
 	                		value = year+reverseMonth(month)+fixDay(day);   
                 		}
-                		System.out.println("PUBLICATIONDATE="+value);                	
+                		//System.out.println("PUBLICATIONDATE="+value);                	
                 	}
                 	
                 	

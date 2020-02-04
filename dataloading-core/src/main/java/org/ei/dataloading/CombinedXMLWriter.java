@@ -8,7 +8,9 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.StringTokenizer;
+import java.util.Arrays;
 
+import org.apache.kafka.clients.producer.Producer;
 import org.apache.oro.text.perl.Perl5Util;
 import org.ei.query.base.PorterStemmer;
 import org.ei.xml.Entity;
@@ -34,6 +36,7 @@ import com.google.gson.Gson;
 
 import org.ei.common.*;
 import org.ei.util.kafka.*;
+import org.apache.kafka.clients.producer.*;
 
 public class CombinedXMLWriter
     extends CombinedWriter
@@ -340,6 +343,8 @@ public class CombinedXMLWriter
     public void writeRec(EVCombinedRec[] rec)
     throws Exception
     {
+    	
+    	
         if(rec.length >1)
         {
             for(int i=0; i<rec.length; i++)
@@ -364,6 +369,42 @@ public class CombinedXMLWriter
             setDatabase(rec[0].getString(EVCombinedRec.DATABASE));
             writeRec(rec[0]);
         }
+              
+    }
+    
+    public void writeRec(EVCombinedRec[] rec,KafkaService kafka)
+    		throws Exception
+    {
+    	
+    	
+        if(rec.length >1)
+        {
+            for(int i=0; i<rec.length; i++)
+            {
+                if(i>0)
+                    this.isChild = true;
+
+                if(rec[i].getString(EVCombinedRec.DATABASE)!=null)
+                {
+                    setDatabase(rec[i].getString(EVCombinedRec.DATABASE));
+                }
+                else
+                {
+                    setDatabase("bd");
+                }
+               // writeRec(rec[i]);
+                writeRec(rec[i],kafka);
+            }
+            this.isChild = false;
+        }
+        else if(rec.length >0)
+        {
+            setDatabase(rec[0].getString(EVCombinedRec.DATABASE));
+           // writeRec(rec[0]);
+            writeRec(rec[0],kafka);
+        }
+        //kafka.close();
+        
     }
 
     public void writeIndexOnly(EVCombinedRec rec)throws Exception
@@ -867,7 +908,7 @@ public class CombinedXMLWriter
         
         //added for georef at 03/16/2016
         //TITLE_OF_COLLECTION
-        out.println("       <TITLEOFCOLLECTION><![CDATA[" +notNull(Entity.prepareString(rec.getString(EVCombinedRec.TITLE_OF_COLLECTION))) + " QstemQ " +  notNull(getStems(Entity.prepareString(rec.getString(EVCombinedRec.TITLE_OF_COLLECTION)))) + "]]></TITLEOFCOLLECTION>");									//TIC
+        out.println("       <TITLEOFCOLLECTION><![CDATA[" +notNull(Entity.prepareString(rec.getString(EVCombinedRec.TITLE_OF_COLLECTION))) + " QstemQ " +  notNull(getStems(Entity.prepareString(rec.getString(EVCombinedRec.TITLE_OF_COLLECTION)))) + "]]></OFCOLLECTION>");									//TIC
         
         //UNIVERSITY
         out.println("       <UNIVERSITY><![CDATA[" +notNull(Entity.prepareString(rec.getString(EVCombinedRec.UNIVERSITY)))+ " QstemQ " + notNull(getStems(Entity.prepareString(rec.getString(EVCombinedRec.UNIVERSITY)))) + "]]></UNIVERSITY>");														//UNI
@@ -923,17 +964,7 @@ public class CombinedXMLWriter
         //use for ISOPENACESS
         out.println("       <EV_SPARE7><![CDATA["+ notNull(rec.getString(EVCombinedRec.ISOPENACESS)) +"]]></EV_SPARE7>");//SPA7
         
-        /*
-        //remove SPA7 after new standardid release at 08/29/2018
-        if(rec.getString(EVCombinedRec.STANDARDID)==null)
-        {
-        	out.println("       <EV_SPARE7><![CDATA[]]></EV_SPARE7>");
-        }
-        else      
-        {
-        	out.println("       <EV_SPARE7><![CDATA[" + notNull(formatStandardCodes(rec.getString(EVCombinedRec.STANDARDID))) + "]]></EV_SPARE7>");//SPA7
-        }
-        */
+        
         //STANDARDDESIGNATION
         if(rec.getString(EVCombinedRec.STANDARDDESIGNATION)==null)
         {
@@ -945,7 +976,7 @@ public class CombinedXMLWriter
         }
         
         //GRANTTEXT
-        //out.println("       <EV_SPARE9><![CDATA["+ notNull(rec.getString(EVCombinedRec.GRANTTEXT))+ " QstemQ " + notNull(getStems(rec.getString(EVCombinedRec.GRANTTEXT))) +"]]></EV_SPARE9>");//SPA9
+      
         out.println("       <EV_SPARE9><![CDATA[]]></EV_SPARE9>");//SPA9
         out.println("       <EV_SPARE10><![CDATA[" + notNull(multiFormat(rec.getStrings(EVCombinedRec.GRANTID))) +" "+ notNull(multiFormat(rec.getStrings(EVCombinedRec.GRANTAGENCY))) + " "+
         			notNull(multiFormat(rec.getStrings(EVCombinedRec.GRANTTEXT)))+ " QstemQ " + notNull(getStems(multiFormat(rec.getStrings(EVCombinedRec.GRANTTEXT)))) +"]]></EV_SPARE10>");//SPA0
@@ -954,12 +985,13 @@ public class CombinedXMLWriter
         ++curRecNum;
         
         //following code used to test kafka by hmo@2019/09/23
-        //writeRec(rec,"kafka");
+        //writeRec(rec,"kafka"); //Old format with array
+        //writeRec1(rec,"kafka");
         
         end();
     }
     
-    public void writeRec(EVCombinedRec rec, String endpoint)
+    public void writeRec(EVCombinedRec rec, KafkaService kafka)
             throws Exception
         {
     		StringBuffer recordBuffer = new StringBuffer();
@@ -975,1567 +1007,1829 @@ public class CombinedXMLWriter
             
             String eid = rec.getString(EVCombinedRec.DOCID);
             
-            
-            
-            
-            //evObject.add("Content",recordBuffer.toString());
-            
             JSONObject  elementObject = new JSONObject();
             JSONObject  contentObject = new JSONObject();
             JSONArray  	elementArrayObject = new JSONArray();;
             JSONArray 	elementJsonArray = new JSONArray();
             JSONArray 	contentJsonArray = new JSONArray();
            
+           
+            contentObject.put("EIDOCID".toLowerCase(),eid);
+        
+            if(rec.getString(EVCombinedRec.PUI)!=null && rec.getString(EVCombinedRec.PUI).length()>0)
+            {
+            	contentObject.put("PUI".toLowerCase(),rec.getString(EVCombinedRec.PUI));
+            }
             
-            //recordBuffer.append("   <ROW> \n");
-                 
-            //recordBuffer.append("       <EIDOCID>" + eid + "</EIDOCID>\n");
+            if(rec.getString(EVCombinedRec.PARENT_ID)!=null && rec.getString(EVCombinedRec.PARENT_ID).length()>0)
+            {            	
+            	contentObject.put("PARENTID".toLowerCase(),rec.getString(EVCombinedRec.PARENT_ID));
+            }
+         
+            if(rec.getString(EVCombinedRec.DEDUPKEY)!=null && rec.getString(EVCombinedRec.DEDUPKEY).length()>0)
+            {	            
+            	contentObject.put("DEDUPKEY".toLowerCase(),rec.getString(EVCombinedRec.DEDUPKEY));
+            }
             
-            contentObject.put("EIDOCID",eid);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <PARENTID>" +  rec.getString(EVCombinedRec.PARENT_ID) + "</PARENTID>\n");
-            contentObject = new JSONObject();
-            contentObject.put("PARENTID",notNull(rec.getString(EVCombinedRec.PARENT_ID)));
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <DEDUPKEY>" + rec.getString(EVCombinedRec.DEDUPKEY) + "</DEDUPKEY>\n");
-            contentObject = new JSONObject();
-            contentObject.put("DEDUPKEY",notNull(rec.getString(EVCombinedRec.DEDUPKEY)));
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <DATABASE>" + rec.getString(EVCombinedRec.DATABASE) + "</DATABASE>\n");
-            contentObject = new JSONObject();
-            contentObject.put("DATABASE",rec.getString(EVCombinedRec.DATABASE));
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <LOADNUMBER>" + loadnumber + "</LOADNUMBER>\n");
-            contentObject = new JSONObject();
-            contentObject.put("LOADNUMBER",loadnumber);
-            contentJsonArray.add(contentObject);
-            //added for future use only, should be removed for regular database loading
-            //recordBuffer.append("       <UPDATENUMBER>" + rec.getString(EVCombinedRec.UPDATE_NUMBER) + "</UPDATENUMBER>\n");
-            contentObject = new JSONObject();
-            contentObject.put("UPDATENUMBER",notNull(rec.getString(EVCombinedRec.UPDATE_NUMBER)));
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <DATESORT>" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.DATESORT))) + "</DATESORT>\n");
-            contentObject = new JSONObject();
-            contentObject.put("DATESORT",notNull(rec.getString(EVCombinedRec.DATESORT)));           
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <PUBYEAR>" + rec.getString(EVCombinedRec.PUB_YEAR) + "</PUBYEAR>");
-            contentObject = new JSONObject();          
-            contentObject.put("PUBYEAR",rec.getString(EVCombinedRec.PUB_YEAR));           
-            contentJsonArray.add(contentObject);
-           // recordBuffer.append("       <ACCESSIONNUMBER>" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.ACCESSION_NUMBER))) + "</ACCESSIONNUMBER>\n");
-            contentObject = new JSONObject();          
-            contentObject.put("ACCESSIONNUMBER",rec.getString(EVCombinedRec.ACCESSION_NUMBER));
-            contentJsonArray.add(contentObject);           
-            //recordBuffer.append("       <AUTHOR><![CDATA[" + notNull(Entity.prepareString(formatAuthors(addIndex(rec.getStrings(EVCombinedRec.AUTHOR),"AUTHOR")))) + "]]></AUTHOR>"); //added QstemQ portion to search both with qqdashqq and without it
-            //recordBuffer.append("       <AUTHOR><![CDATA[" + notNull(Entity.prepareString(formatAuthors(addIndex(rec.getStrings(EVCombinedRec.AUTHOR),"AUTHOR")))) + " QstemQ " + notNull(multiFormat(rec.getStrings(EVCombinedRec.AUTHOR))) + "]]></AUTHOR>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.AUTHOR),"AUTHOR");          
-            contentObject.put("AUTHOR",elementArrayObject);
-            contentJsonArray.add(contentObject);          
-            //recordBuffer.append("       <AUTHORID><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.AUTHORID)))) + "]]></AUTHORID>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.AUTHORID),"AUTHORID");          
-            contentObject.put("AUTHORID",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <AUTHORAFFILIATION><![CDATA[" + notNull(Entity.prepareString(multiFormat(addIndex(rec.getStrings(EVCombinedRec.),"AUTHORAFFILIATION")))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.AUTHOR_AFFILIATION))))) + "]]></AUTHORAFFILIATION>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.AUTHOR_AFFILIATION),"AUTHORAFFILIATION");          
-            contentObject.put("AUTHORAFFILIATION",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <AFFILIATIONLOCATION><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.AFFILIATION_LOCATION)))) + "]]></AFFILIATIONLOCATION>");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.AFFILIATION_LOCATION),"AFFILIATIONLOCATION");          
-            contentObject.put("AFFILIATIONLOCATION",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //out.println("       <TRANSLATEDTITLE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TRANSLATED_TITLE)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TRANSLATED_TITLE))))) + "]]></TRANSLATEDTITLE>");
-            //recordBuffer.append("       <TITLE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TITLE)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TITLE))))) + "]]></TITLE>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.TITLE),"TITLE");          
-            contentObject.put("TITLE",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <TRANSLATEDTITLE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TRANSLATED_TITLE)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TRANSLATED_TITLE))))) + "]]></TRANSLATEDTITLE>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.TRANSLATED_TITLE),"TRANSLATEDTITLE");          
-            contentObject.put("TRANSLATEDTITLE",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <VOLUMETITLE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.VOLUME_TITLE)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.VOLUME_TITLE))))) + "]]></VOLUMETITLE>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.VOLUME_TITLE),"VOLUMETITLE");          
-            contentObject.put("VOLUMETITLE",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <ABSTRACT><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.ABSTRACT))) + " QstemQ " + notNull(getStems(Entity.prepareString(rec.getString(EVCombinedRec.ABSTRACT)))) + "]]></ABSTRACT>\n");
-            contentObject = new JSONObject();
-            contentObject.put("ABSTRACT",rec.getString(EVCombinedRec.ABSTRACT));
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <OTHERABSTRACT><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.OTHER_ABSTRACT))) + " QstemQ " + notNull(getStems(Entity.prepareString(rec.getString(EVCombinedRec.OTHER_ABSTRACT)))) + "]]></OTHERABSTRACT>\n");
-            contentObject = new JSONObject();
-            contentObject.put("OTHERABSTRACT",notNull(rec.getString(EVCombinedRec.OTHER_ABSTRACT)));
-            contentJsonArray.add(contentObject);            
-            //recordBuffer.append("       <EDITOR><![CDATA[" + notNull(Entity.prepareString(formatAuthors(rec.getStrings(EVCombinedRec.EDITOR))))+"]]></EDITOR>");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.EDITOR),"EDITOR");          
-            contentObject.put("EDITOR",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <EDITORAFFILIATION><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.EDITOR_AFFILIATION)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.EDITOR_AFFILIATION))))) + "]]></EDITORAFFILIATION>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.EDITOR_AFFILIATION),"EDITORAFFILIATION");          
-            contentObject.put("EDITORAFFILIATION",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <TRANSLATOR><![CDATA[" + notNull(Entity.prepareString(formatAuthors(rec.getStrings(EVCombinedRec.TRANSLATOR)))) + "]]></TRANSLATOR>");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.TRANSLATOR),"TRANSLATOR");          
-            contentObject.put("TRANSLATOR",elementArrayObject);
-            contentJsonArray.add(contentObject);           
-            //recordBuffer.append("       <CONTROLLEDTERMS><![CDATA[" + notNull(removeSpecialTag(Entity.prepareString(multiFormat(addIndex(rec.getStrings(EVCombinedRec.CONTROLLED_TERMS),"CONTROLLEDTERMS"))))) + " QstemQ " + notNull(getStems(removeSpecialTag(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CONTROLLED_TERMS)))))) + "]]></CONTROLLEDTERMS>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.CONTROLLED_TERMS),"CONTROLLEDTERMS");          
-            contentObject.put("CONTROLLEDTERMS",elementArrayObject);
-            contentJsonArray.add(contentObject);            
-            //recordBuffer.append("       <UNCONTROLLEDTERMS><![CDATA[" + notNull(removeSpecialTag(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.UNCONTROLLED_TERMS))))) + " QstemQ " + notNull(getStems(removeSpecialTag(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.UNCONTROLLED_TERMS)))))) + "]]></UNCONTROLLEDTERMS>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.UNCONTROLLED_TERMS),"UNCONTROLLEDTERMS");          
-            contentObject.put("UNCONTROLLEDTERMS",elementArrayObject);
-            contentJsonArray.add(contentObject);            
-            //recordBuffer.append("       <ISSN><![CDATA[" + notNull(Entity.prepareString(multiFormat(prepareISSN(rec.getStrings(EVCombinedRec.ISSN))))) + "]]></ISSN>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ISSN),"ISSN");          
-            contentObject.put("ISSN",elementArrayObject);
-            contentJsonArray.add(contentObject);           
-            //recordBuffer.append("       <CODEN><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CODEN)))) + "]]></CODEN>\n");            
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.CODEN),"CODEN");          
-            contentObject.put("CODEN",elementArrayObject);                     
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <CODENOFTRANSLATION><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CODEN_OF_TRANSLATION)))) + "]]></CODENOFTRANSLATION>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.CODEN_OF_TRANSLATION),"CODENOFTRANSLATION");          
-            contentObject.put("CODENOFTRANSLATION",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <ISBN><![CDATA[" + notNull(Entity.prepareString(multiFormat(prepareISBN(rec.getStrings(EVCombinedRec.ISBN))))) + "]]></ISBN>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ISBN),"ISBN");          
-            contentObject.put("ISBN",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <SERIALTITLE><![CDATA[" + notNull(Entity.prepareString(notNull(multiFormat(addIndex(rec.getStrings(EVCombinedRec.SERIAL_TITLE),"SERIALTITLE")))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SERIAL_TITLE)))))) + "]]></SERIALTITLE>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SERIAL_TITLE),"SERIALTITLE");          
-            contentObject.put("SERIALTITLE",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <SERIALTITLETRANSLATION><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SERIAL_TITLE_TRANSLATION)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SERIAL_TITLE_TRANSLATION))))) + "]]></SERIALTITLETRANSLATION>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SERIAL_TITLE_TRANSLATION),"SERIALTITLETRANSLATION");          
-            contentObject.put("SERIALTITLETRANSLATION",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <MAINHEADING><![CDATA[" + notNull(removeSpecialTag(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MAIN_HEADING))))) + " QstemQ " + notNull(getStems(removeSpecialTag(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MAIN_HEADING)))))) + "]]></MAINHEADING>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MAIN_HEADING),"MAINHEADING");          
-            contentObject.put("MAINHEADING",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <SUBHEADING><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.SUB_HEADING))) + "]]></SUBHEADING>\n");
-            contentObject = new JSONObject();
-            contentObject.put("SUBHEADING",rec.getString(EVCombinedRec.SUB_HEADING));
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <PUBLISHERNAME><![CDATA[" + notNull(Entity.prepareString(multiFormat(addIndex(rec.getStrings(EVCombinedRec.PUBLISHER_NAME),"PUBLISHERNAME")))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PUBLISHER_NAME))))) + "]]></PUBLISHERNAME>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.PUBLISHER_NAME),"PUBLISHERNAME");          
-            contentObject.put("PUBLISHERNAME",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <TREATMENTCODE>" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TREATMENT_CODE)))) + "</TREATMENTCODE>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.TREATMENT_CODE),"TREATMENTCODE");          
-            contentObject.put("TREATMENTCODE",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <LANGUAGE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.LANGUAGE)))) + "]]></LANGUAGE>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.LANGUAGE),"LANGUAGE");          
-            contentObject.put("LANGUAGE",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <RECTYPE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.DOCTYPE)))) + "]]></RECTYPE>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.DOCTYPE),"RECTYPE");          
-            contentObject.put("RECTYPE",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <CLASSIFICATIONCODE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CLASSIFICATION_CODE)))) + "]]></CLASSIFICATIONCODE>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.CLASSIFICATION_CODE),"CLASSIFICATIONCODE");          
-            contentObject.put("CLASSIFICATIONCODE",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <CONFERENCECODE>" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.CONFERENCE_CODE))) + "</CONFERENCECODE>\n");                     
-            contentObject = new JSONObject();
-            contentObject.put("CONFERENCECODE",notNull(rec.getString(EVCombinedRec.CONFERENCE_CODE)));
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <CONFERENCENAME><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.CONFERENCE_NAME))) + " QstemQ " + notNull(getStems(Entity.prepareString(rec.getString(EVCombinedRec.CONFERENCE_NAME)))) + "]]></CONFERENCENAME>\n");                    
-            contentObject = new JSONObject();
-            contentObject.put("CONFERENCENAME",notNull(rec.getString(EVCombinedRec.CONFERENCE_NAME)));
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <CONFERENCELOCATION><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.CONFERENCE_LOCATION))) + " QstemQ " + notNull(getStems(Entity.prepareString(rec.getString(EVCombinedRec.CONFERENCE_LOCATION)))) + "]]></CONFERENCELOCATION>\n");
-            contentObject = new JSONObject();
-            contentObject.put("CONFERENCELOCATION",notNull(rec.getString(EVCombinedRec.CONFERENCE_LOCATION)));
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <MEETINGDATE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.MEETING_DATE))) + "]]></MEETINGDATE>\n");
-            contentObject = new JSONObject();
-            contentObject.put("MEETINGDATE",notNull(rec.getString(EVCombinedRec.MEETING_DATE)));
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <SPONSORNAME><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SPONSOR_NAME)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SPONSOR_NAME))))) + "]]></SPONSORNAME>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SPONSOR_NAME),"SPONSORNAME");          
-            contentObject.put("SPONSORNAME",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <MONOGRAPHTITLE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MONOGRAPH_TITLE)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MONOGRAPH_TITLE))))) + "]]></MONOGRAPHTITLE>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SPONSOR_NAME),"MONOGRAPHTITLE");          
-            contentObject.put("MONOGRAPHTITLE",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <DISCIPLINE>" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.DISCIPLINE)))) + "</DISCIPLINE>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.DISCIPLINE),"DISCIPLINE");          
-            contentObject.put("DISCIPLINE",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <MATERIALNUMBER><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MATERIAL_NUMBER)))) + "]]></MATERIALNUMBER>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MATERIAL_NUMBER),"MATERIALNUMBER");          
-            contentObject.put("MATERIALNUMBER",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <NUMERICALINDEXING><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.NUMERICAL_INDEXING)))) + "]]></NUMERICALINDEXING>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.NUMERICAL_INDEXING),"NUMERICALINDEXING");          
-            contentObject.put("NUMERICALINDEXING",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <CHEMICALINDEXING><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CHEMICAL_INDEXING)))) + "]]></CHEMICALINDEXING>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.CHEMICAL_INDEXING),"CHEMICALINDEXING");          
-            contentObject.put("CHEMICALINDEXING",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <ASTRONOMICALINDEXING><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ASTRONOMICAL_INDEXING)))) + "]]></ASTRONOMICALINDEXING>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ASTRONOMICAL_INDEXING),"ASTRONOMICALINDEXING");          
-            contentObject.put("ASTRONOMICALINDEXING",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <REPORTNUMBER><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.REPORTNUMBER)))) + "]]></REPORTNUMBER>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.REPORTNUMBER),"REPORTNUMBER");          
-            contentObject.put("REPORTNUMBER",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <ORDERNUMBER><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ORDERNUMBER)))) + "]]></ORDERNUMBER>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ORDERNUMBER),"ORDERNUMBER");          
-            contentObject.put("ORDERNUMBER",elementArrayObject);
-            contentJsonArray.add(contentObject);           
-            //recordBuffer.append("       <COUNTRY><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.COUNTRY)))) + "]]></COUNTRY>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.COUNTRY),"COUNTRY");          
-            contentObject.put("COUNTRY",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <VOLUME><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.VOLUME))) + "]]></VOLUME>\n");
-            contentObject = new JSONObject();
-            contentObject.put("VOLUME",notNull(rec.getString(EVCombinedRec.VOLUME)));
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <ISSUE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.ISSUE))) + "]]></ISSUE>\n");
-            contentObject = new JSONObject();
-            contentObject.put("ISSUE",notNull(rec.getString(EVCombinedRec.ISSUE)));
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <STARTPAGE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.STARTPAGE))) + "]]></STARTPAGE>\n");
-            contentObject = new JSONObject();
-            contentObject.put("STARTPAGE",notNull(rec.getString(EVCombinedRec.STARTPAGE)));
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <PAGE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.PAGE))) + "]]></PAGE>\n");
-            contentObject = new JSONObject();
-            contentObject.put("PAGE",notNull(rec.getString(EVCombinedRec.PAGE)));
-            contentJsonArray.add(contentObject);
-            /*
-            if(rec.getString(EVCombinedRec.AVAILABILITY)!=null)
+            contentObject.put(("database").toLowerCase(),rec.getString(EVCombinedRec.DATABASE));
+
+            contentObject.put("LOADNUMBER".toLowerCase(),loadnumber);
+
+            if(rec.getString(EVCombinedRec.UPDATE_NUMBER)!=null && rec.getString(EVCombinedRec.UPDATE_NUMBER).length()>0)
             {
-            	recordBuffer.append("		<AVAILABILITY><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.AVAILABILITY))) + " QstemQ " + notNull(getStems(Entity.prepareString(rec.getString(EVCombinedRec.AVAILABILITY)))) + "]]></AVAILABILITY>\n");
+            	contentObject.put("UPDATENUMBER".toLowerCase(),rec.getString(EVCombinedRec.UPDATE_NUMBER));
             }
-            else
+
+            if(rec.getString(EVCombinedRec.DATESORT)!=null && rec.getString(EVCombinedRec.DATESORT).length()>0)
             {
-            	recordBuffer.append("		<AVAILABILITY><![CDATA[]]></AVAILABILITY>\n");
+            	contentObject.put("DATESORT".toLowerCase(),rec.getString(EVCombinedRec.DATESORT));
             }
-            */
-            contentObject = new JSONObject();
-            contentObject.put("AVAILABILITY",rec.getString(EVCombinedRec.AVAILABILITY));
-            contentJsonArray.add(contentObject);
-            /*
-            if(rec.getStrings(EVCombinedRec.NOTES)!=null)
+
+            if(rec.getString(EVCombinedRec.PUB_YEAR)!=null && rec.getString(EVCombinedRec.PUB_YEAR).length()>0)
             {
-            	recordBuffer.append("       <NOTES><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.NOTES)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.NOTES))))) + "]]></NOTES>\n");
+            	contentObject.put("PUBYEAR".toLowerCase(),rec.getString(EVCombinedRec.PUB_YEAR));
             }
-            else
-            {
-            	recordBuffer.append("       <NOTES><![CDATA[]]></NOTES>\n");
-            }
-            */
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.NOTES),"NOTES");          
-            contentObject.put("NOTES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <PATENTAPPDATE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PATENTAPPDATE)))) + "]]></PATENTAPPDATE>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.PATENTAPPDATE),"PATENTAPPDATE");          
-            contentObject.put("PATENTAPPDATE",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <PATENTISSUEDATE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PATENTISSUEDATE)))) + "]]></PATENTISSUEDATE>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.PATENTISSUEDATE),"PATENTISSUEDATE");          
-            contentObject.put("PATENTISSUEDATE",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <COMPANIES><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.COMPANIES)))) + "]]></COMPANIES>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.COMPANIES),"COMPANIES");          
-            contentObject.put("COMPANIES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <CASREGISTRYNUMBER><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CASREGISTRYNUMBER)))) + "]]></CASREGISTRYNUMBER>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.CASREGISTRYNUMBER),"CASREGISTRYNUMBER");          
-            contentObject.put("CASREGISTRYNUMBER",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            /*
-            if(rec.getStrings(EVCombinedRec.BUSINESSTERMS)!=null)
-            {
-            	recordBuffer.append("       <BUSINESSTERMS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.BUSINESSTERMS)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.BUSINESSTERMS))))) + "]]></BUSINESSTERMS>\n");
-            }
-            else
-            {
-            	recordBuffer.append("       <BUSINESSTERMS><![CDATA[]]></BUSINESSTERMS>\n");
-            }
-            */
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.BUSINESSTERMS),"BUSINESSTERMS");          
-            contentObject.put("BUSINESSTERMS",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            /*
-            if(rec.getStrings(EVCombinedRec.CHEMICALTERMS)!=null)
-            {
-            	recordBuffer.append("       <CHEMICALTERMS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CHEMICALTERMS)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CHEMICALTERMS))))) + "]]></CHEMICALTERMS>\n");
-            }
-            else
-            {
-            	recordBuffer.append("       <CHEMICALTERMS><![CDATA[]]></CHEMICALTERMS>\n");
-            }
-            */
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.CHEMICALTERMS),"CHEMICALTERMS");          
-            contentObject.put("CHEMICALTERMS",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <CHEMAC><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CHEMICALACRONYMS)))) + "]]></CHEMAC>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.CHEMICALACRONYMS),"CHEMAC");          
-            contentObject.put("CHEMAC",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <SIC><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PATENT_NUMBER)))) + "]]></SIC>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.PATENT_NUMBER),"SIC");          
-            contentObject.put("SIC",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <INDUSTRIALCODES><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.INDUSTRIALCODES)))) + "]]></INDUSTRIALCODES>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.INDUSTRIALCODES),"INDUSTRIALCODES");          
-            contentObject.put("INDUSTRIALCODES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <INDUSTRIALSECTORS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.INDUSTRIALSECTORS)))) + "]]></INDUSTRIALSECTORS>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.INDUSTRIALSECTORS),"INDUSTRIALSECTORS");          
-            contentObject.put("INDUSTRIALSECTORS",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <SCOPE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SCOPE)))) + "]]></SCOPE>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SCOPE),"SCOPE");          
-            contentObject.put("SCOPE",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <AGENCY><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.AGENCY)))) + "]]></AGENCY>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.AGENCY),"AGENCY");          
-            contentObject.put("AGENCY",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <DERWENTACCESSIONNUMBER><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.DERWENT_ACCESSION_NUMBER)))) + "]]></DERWENTACCESSIONNUMBER>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.DERWENT_ACCESSION_NUMBER),"DERWENTACCESSIONNUMBER");          
-            contentObject.put("DERWENTACCESSIONNUMBER",elementArrayObject);
-            contentJsonArray.add(contentObject);
+                   
+            contentObject.put("ACCESSIONNUMBER".toLowerCase(),rec.getString(EVCombinedRec.ACCESSION_NUMBER));
             
-            //recordBuffer.append("       <APPLICATIONNUMBER><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.APPLICATION_NUMBER)))) + "]]></APPLICATIONNUMBER>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.APPLICATION_NUMBER),"APPLICATIONNUMBER");          
-            contentObject.put("APPLICATIONNUMBER",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <APPLICATIONCOUNTRY><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.APPLICATION_COUNTRY))))+ "]]></APPLICATIONCOUNTRY>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.APPLICATION_COUNTRY),"APPLICATIONCOUNTRY");          
-            contentObject.put("APPLICATIONCOUNTRY",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <INTPATENTCLASSIFICATION><![CDATA[" + notNull(Entity.prepareString(multiFormat(addIpcIndex(rec.getString(EVCombinedRec.INT_PATENT_CLASSIFICATION),"INTERNATONALPATENTCLASSIFICATION")))) + "]]></INTPATENTCLASSIFICATION>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.INT_PATENT_CLASSIFICATION),"INTPATENTCLASSIFICATION");          
-            contentObject.put("INTPATENTCLASSIFICATION",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            /*
-            if(rec.getStrings(EVCombinedRec.LINKED_TERMS)!=null)
+            String[] author=reverseSigns(rec.getStrings(EVCombinedRec.AUTHOR));
+            if(author!=null && author.length>0 && author[0]!=null && author[0].length()>0)
             {
-            	recordBuffer.append("       <LINKEDTERMS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.LINKED_TERMS)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.LINKED_TERMS))))) + "]]></LINKEDTERMS>\n");
+            	elementArrayObject = formJsonArray(author,"AUTHOR");          
+            	contentObject.put("AUTHOR".toLowerCase(),elementArrayObject);
             }
-            else
-            {
-            	recordBuffer.append("       <LINKEDTERMS><![CDATA[]]></LINKEDTERMS>\n");
-            }
-            */
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.LINKED_TERMS),"LINKEDTERMS");          
-            contentObject.put("LINKEDTERMS",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <ENTRYYEAR><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.ENTRY_YEAR))) + "]]></ENTRYYEAR>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ENTRY_YEAR),"ENTRYYEAR");          
-            contentObject.put("ENTRYYEAR",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <PRIORITYNUMBER><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PRIORITY_NUMBER)))) + "]]></PRIORITYNUMBER>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.PRIORITY_NUMBER),"PRIORITYNUMBER");          
-            contentObject.put("PRIORITYNUMBER",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <PRIORITYDATE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PRIORITY_DATE)))) + "]]></PRIORITYDATE>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.PRIORITY_DATE),"PRIORITYDATE");          
-            contentObject.put("PRIORITYDATE",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <PRIORITYCOUNTRY><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PRIORITY_COUNTRY))))+ "]]></PRIORITYCOUNTRY>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.PRIORITY_COUNTRY),"PRIORITYCOUNTRY");          
-            contentObject.put("PRIORITYCOUNTRY",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            /*
-            if(rec.getStrings(EVCombinedRec.SOURCE)!=null)
-            {
-            	recordBuffer.append("       <SOURCE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SOURCE)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SOURCE))))) + "]]></SOURCE>\n");
-            }
-            else
-            {
-            	recordBuffer.append("       <SOURCE><![CDATA[]]></SOURCE>\n");
-            }
-            */
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SOURCE),"SOURCE");          
-            contentObject.put("SOURCE",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <SECONDARYSRCTITLE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.SECONDARY_SRC_TITLE))) + " QstemQ " + notNull(getStems(Entity.prepareString(rec.getString(EVCombinedRec.SECONDARY_SRC_TITLE)))) + "]]></SECONDARYSRCTITLE>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SECONDARY_SRC_TITLE),"SECONDARYSRCTITLE");          
-            contentObject.put("SECONDARYSRCTITLE",elementArrayObject);
-            contentJsonArray.add(contentObject);           
-            //recordBuffer.append("       <MAINTERM><![CDATA[" + notNull((Entity.prepareString(rec.getString(EVCombinedRec.MAIN_TERM)))) + " QstemQ " + notNull(getStems((Entity.prepareString(rec.getString(EVCombinedRec.MAIN_TERM))))) + "]]></MAINTERM>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MAIN_TERM),"MAINTERM");          
-            contentObject.put("MAINTERM",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <ABBRVSRCTITLE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.ABBRV_SRC_TITLE))) + " QstemQ " + notNull(getStems(Entity.prepareString(rec.getString(EVCombinedRec.ABBRV_SRC_TITLE)))) + "]]></ABBRVSRCTITLE>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ABBRV_SRC_TITLE),"ABBRVSRCTITLE");          
-            contentObject.put("ABBRVSRCTITLE",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <NOROLETERMS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.NOROLE_TERMS)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.NOROLE_TERMS))))) + "]]></NOROLETERMS>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.NOROLE_TERMS),"NOROLETERMS");          
-            contentObject.put("NOROLETERMS",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <REAGENTTERMS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.REAGENT_TERMS)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.REAGENT_TERMS))))) + "]]></REAGENTTERMS>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.REAGENT_TERMS),"REAGENTTERMS");          
-            contentObject.put("REAGENTTERMS",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <PRODUCTTERMS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PRODUCT_TERMS)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PRODUCT_TERMS))))) + "]]></PRODUCTTERMS>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.PRODUCT_TERMS),"PRODUCTTERMS");          
-            contentObject.put("PRODUCTTERMS",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <MAJORNOROLETERMS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MAJORNOROLE_TERMS)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MAJORNOROLE_TERMS))))) + "]]></MAJORNOROLETERMS>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MAJORNOROLE_TERMS),"MAJORNOROLETERMS");          
-            contentObject.put("MAJORNOROLETERMS",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <MAJORREAGENTTERMS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MAJORREAGENT_TERMS)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MAJORREAGENT_TERMS))))) + "]]></MAJORREAGENTTERMS>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MAJORREAGENT_TERMS),"MAJORREAGENTTERMS");          
-            contentObject.put("MAJORREAGENTTERMS",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <MAJORPRODUCTTERMS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MAJORPRODUCT_TERMS)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MAJORPRODUCT_TERMS))))) + "]]></MAJORPRODUCTTERMS>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MAJORPRODUCT_TERMS),"MAJORPRODUCTTERMS");          
-            contentObject.put("MAJORPRODUCTTERMS",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <CONFERENCEAFFILIATIONS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CONFERENCEAFFILIATIONS)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CONFERENCEAFFILIATIONS))))) + "]]></CONFERENCEAFFILIATIONS>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.CONFERENCEAFFILIATIONS),"CONFERENCEAFFILIATIONS");          
-            contentObject.put("CONFERENCEAFFILIATIONS",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <CONFERENCEEDITORS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CONFERENCEEDITORS)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CONFERENCEEDITORS))))) + "]]></CONFERENCEEDITORS>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.CONFERENCEEDITORS),"CONFERENCEEDITORS");          
-            contentObject.put("CONFERENCEEDITORS",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <CONFERENCESTARTDATE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.CONFERENCESTARTDATE))) + "]]></CONFERENCESTARTDATE>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.CONFERENCESTARTDATE),"CONFERENCESTARTDATE");          
-            contentObject.put("CONFERENCESTARTDATE",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <CONFERENCEENDDATE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.CONFERENCEENDDATE))) + "]]></CONFERENCEENDDATE>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.CONFERENCEENDDATE),"CONFERENCEENDDATE");          
-            contentObject.put("CONFERENCEENDDATE",elementArrayObject);
-            contentJsonArray.add(contentObject);
             
-            //recordBuffer.append("       <CONFERENCEVENUESITE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.CONFERENCEVENUESITE))) + " QstemQ " + notNull(getStems(Entity.prepareString(rec.getString(EVCombinedRec.CONFERENCEVENUESITE)))) + "]]></CONFERENCEVENUESITE>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.CONFERENCEVENUESITE),"CONFERENCEVENUESITE");          
-            contentObject.put("CONFERENCEVENUESITE",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <CONFERENCECITY><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.CONFERENCECITY))) + " QstemQ " + notNull(getStems(Entity.prepareString(rec.getString(EVCombinedRec.CONFERENCECITY)))) + "]]></CONFERENCECITY>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.CONFERENCECITY),"CONFERENCECITY");          
-            contentObject.put("CONFERENCECITY",elementArrayObject);
-            contentJsonArray.add(contentObject);          
-            //recordBuffer.append("       <CONFERENCECOUNTRYCODE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.CONFERENCECOUNTRYCODE))) + "]]></CONFERENCECOUNTRYCODE>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.CONFERENCECOUNTRYCODE),"CONFERENCECOUNTRYCODE");          
-            contentObject.put("CONFERENCECOUNTRYCODE",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <CONFERENCEPAGERANGE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.CONFERENCEPAGERANGE))) + "]]></CONFERENCEPAGERANGE>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.CONFERENCEPAGERANGE),"CONFERENCEPAGERANGE");          
-            contentObject.put("CONFERENCEPAGERANGE",elementArrayObject);
-            contentJsonArray.add(contentObject);          
-            //recordBuffer.append("       <CONFERENCENUMBERPAGES><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.CONFERENCENUMBERPAGES))) + "]]></CONFERENCENUMBERPAGES>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.CONFERENCENUMBERPAGES),"CONFERENCENUMBERPAGES");          
-            contentObject.put("CONFERENCENUMBERPAGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <CONFERENCEPARTNUMBER><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.CONFERENCEPARTNUMBER))) + "]]></CONFERENCEPARTNUMBER>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.CONFERENCEPARTNUMBER),"CONFERENCEPARTNUMBER");          
-            contentObject.put("CONFERENCEPARTNUMBER",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <DESIGNATEDSTATES><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.DESIGNATED_STATES)))) + "]]></DESIGNATEDSTATES>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.DESIGNATED_STATES),"DESIGNATEDSTATES");          
-            contentObject.put("DESIGNATEDSTATES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <STNCONFERENCE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.STN_CONFERENCE))) + " QstemQ " + notNull(getStems(Entity.prepareString(rec.getString(EVCombinedRec.STN_CONFERENCE)))) + "]]></STNCONFERENCE>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.STN_CONFERENCE),"STNCONFERENCE");          
-            contentObject.put("STNCONFERENCE",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <STNSECONDARYCONFERENCE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.STN_SECONDARY_CONFERENCE))) + " QstemQ " + notNull(getStems(Entity.prepareString(rec.getString(EVCombinedRec.STN_SECONDARY_CONFERENCE)))) + "]]></STNSECONDARYCONFERENCE>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.STN_SECONDARY_CONFERENCE),"STNSECONDARYCONFERENCE");          
-            contentObject.put("STNSECONDARYCONFERENCE",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <FILINGDATE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PATENT_FILING_DATE)))) + "]]></FILINGDATE>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.PATENT_FILING_DATE),"FILINGDATE");          
-            contentObject.put("FILINGDATE",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <PRIORITYKIND><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PRIORITY_KIND)))) + "]]></PRIORITYKIND>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.PRIORITY_KIND),"PRIORITYKIND");          
-            contentObject.put("PRIORITYKIND",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <ECLACODE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ECLA_CODES)))) +"]]></ECLACODE>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ECLA_CODES),"ECLACODE");          
-            contentObject.put("ECLACODE",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <ATTORNEYNAME><![CDATA[" + notNull(Entity.prepareString(formatAuthors(rec.getStrings(EVCombinedRec.ATTORNEY_NAME)))) + "]]></ATTORNEYNAME>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ATTORNEY_NAME),"ATTORNEYNAME");          
-            contentObject.put("ATTORNEYNAME",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <PRIMARYEXAMINER><![CDATA[" + notNull(Entity.prepareString(formatAuthors(rec.getStrings(EVCombinedRec.PRIMARY_EXAMINER)))) + "]]></PRIMARYEXAMINER>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.PRIMARY_EXAMINER),"PRIMARYEXAMINER");          
-            contentObject.put("PRIMARYEXAMINER",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <ASSISTANTEXAMINER><![CDATA[" + notNull(Entity.prepareString(formatAuthors(rec.getStrings(EVCombinedRec.ASSISTANT_EXAMINER)))) + "]]></ASSISTANTEXAMINER>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ASSISTANT_EXAMINER),"ASSISTANTEXAMINER");          
-            contentObject.put("ASSISTANTEXAMINER",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <IPCCLASS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.INT_PATENT_CLASSES)))) + "]]></IPCCLASS>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.INT_PATENT_CLASSES),"IPCCLASS");          
-            contentObject.put("IPCCLASS",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <IPCSUBCLASS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.INT_PATENT_SUB_CLASSES)))) + "]]></IPCSUBCLASS>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.INT_PATENT_SUB_CLASSES),"IPCCLASS");          
-            contentObject.put("IPCCLASS",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <ECLACLASS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ECLA_CLASSES)))) + "]]></ECLACLASS>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ECLA_CLASSES),"ECLACLASS");          
-            contentObject.put("ECLACLASS",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <ECLASUBCLASS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ECLA_SUB_CLASSES)))) + "]]></ECLASUBCLASS>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ECLA_SUB_CLASSES),"ECLASUBCLASS");          
-            contentObject.put("ECLASUBCLASS",elementArrayObject);
-            contentJsonArray.add(contentObject);           
-            //recordBuffer.append("       <USPTOCLASS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.USPTOCLASS)))) + "]]></USPTOCLASS>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.USPTOCLASS),"USPTOCLASS");          
-            contentObject.put("USPTOCLASS",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <USPTOSUBCLASS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.USPTOSUBCLASS)))) + "]]></USPTOSUBCLASS>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.USPTOSUBCLASS),"USPTOSUBCLASS");          
-            contentObject.put("USPTOSUBCLASS",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <USPTOCODE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.USPTOCODE)))) + "]]></USPTOCODE>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.USPTOCODE),"USPTOCODE");          
-            contentObject.put("USPTOCODE",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <PATENTKIND><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PATENT_KIND)))) + "]]></PATENTKIND>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.PATENT_KIND),"PATENTKIND");          
-            contentObject.put("PATENTKIND",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <KINDDESCRIPTION><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.KIND_DESCR)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.KIND_DESCR))))) + "]]></KINDDESCRIPTION>\n");        
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.KIND_DESCR),"KINDDESCRIPTION");          
-            contentObject.put("KINDDESCRIPTION",elementArrayObject);
-            contentJsonArray.add(contentObject);            
-            //recordBuffer.append("       <AUTHORITYCODE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.AUTHORITY_CODE))) + "]]></AUTHORITYCODE>\n");
-            contentObject = new JSONObject();
-            contentObject.put("AUTHORITYCODE",notNull(rec.getString(EVCombinedRec.AUTHORITY_CODE)));
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <PCITED><![CDATA[" + hasPcited(rec.getString(EVCombinedRec.PCITED)) + "]]></PCITED>\n");         
-            contentObject = new JSONObject();
-            contentObject.put("PCITED",notNull(rec.getString(EVCombinedRec.PCITED)));
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <PCITEDINDEX><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PCITEDINDEX)))) + "]]></PCITEDINDEX>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.PCITEDINDEX),"PCITEDINDEX");          
-            contentObject.put("PCITEDINDEX",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <PREFINDEX><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PREFINDEX)))) + "]]></PREFINDEX>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.PREFINDEX),"PREFINDEX");          
-            contentObject.put("PREFINDEX",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <DMASK><![CDATA[" + getMask(rec) + "]]></DMASK>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.DMASK),"DMASK");          
-            contentObject.put("DMASK",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <DOI><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.DOI)))) + hasDOI(rec) + "]]></DOI>\n");         
-            contentObject = new JSONObject();
-            contentObject.put("DOI",notNull(rec.getString(EVCombinedRec.DOI)));
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <SCOPUSID><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.SCOPUSID))) + "]]></SCOPUSID>\n");   
-            contentObject = new JSONObject();
-            contentObject.put("SCOPUSID",notNull(rec.getString(EVCombinedRec.SCOPUSID)));
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <AFFILIATIONID><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.AFFILIATIONID)))) + "]]></AFFILIATIONID>\n");
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.AFFILIATIONID),"AFFILIATIONID");          
-            contentObject.put("AFFILIATIONID",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <LAT_NW><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LAT_NW))) + "]]></LAT_NW>\n");       
-            contentObject = new JSONObject();
-            contentObject.put("LAT_NW",notNull(rec.getString(EVCombinedRec.LAT_NW)));
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <LNG_NW><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LNG_NW))) + "]]></LNG_NW>\n");        
-            contentObject = new JSONObject();
-            contentObject.put("LNG_NW",notNull(rec.getString(EVCombinedRec.LNG_NW)));
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <LAT_NE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LAT_NE))) + "]]></LAT_NE>\n");         
-            contentObject = new JSONObject();
-            contentObject.put("LAT_NE",notNull(rec.getString(EVCombinedRec.LAT_NE)));
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <LNG_NE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LNG_NE))) + "]]></LNG_NE>\n");        
-            contentObject = new JSONObject();
-            contentObject.put("LNG_NE",notNull(rec.getString(EVCombinedRec.LNG_NE)));
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <LAT_SW><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LAT_SW))) + "]]></LAT_SW>\n");         
-            contentObject = new JSONObject();
-            contentObject.put("LAT_SW",notNull(rec.getString(EVCombinedRec.LAT_SW)));
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <LNG_SW><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LNG_SW))) + "]]></LNG_SW>\n");       
-            contentObject = new JSONObject();
-            contentObject.put("LNG_SW",notNull(rec.getString(EVCombinedRec.LNG_SW)));
-            contentJsonArray.add(contentObject);           
-            //recordBuffer.append("       <LAT_SE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LAT_SE))) + "]]></LAT_SE>\n");                
-            contentObject = new JSONObject();
-            contentObject.put("LAT_SE",notNull(rec.getString(EVCombinedRec.LAT_SE)));
-            contentJsonArray.add(contentObject);
-            contentObject = new JSONObject();
-            recordBuffer.append("       <LNG_SE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LNG_SE))) + "]]></LNG_SE>\n");                
-            contentObject.put("LNG_SE",notNull(rec.getString(EVCombinedRec.LNG_SE)));
-            contentJsonArray.add(contentObject);
- //         recordBuffer.append("       <CPCCLASS><![CDATA[]]></CPCCLASS>\n");
+            String[] authorID=rec.getStrings(EVCombinedRec.AUTHORID);
+            if(authorID!=null && authorID.length>0 && authorID[0]!=null && authorID[0].length()>0)
+            {
+            	elementArrayObject = formJsonArray(authorID,"AUTHORID");          
+            	contentObject.put("AUTHORID".toLowerCase(),elementArrayObject);
+            }
+
+            String[] authorAffiliation=rec.getStrings(EVCombinedRec.AUTHOR_AFFILIATION);
+            if(authorAffiliation!=null && authorAffiliation.length>0 && authorAffiliation[0]!=null && authorAffiliation[0].length()>0)
+            {
+            	elementArrayObject = formJsonArray(authorAffiliation,"AUTHORAFFILIATION");          
+            	contentObject.put("AUTHORAFFILIATION".toLowerCase(),elementArrayObject);
+            }
             
-//          recordBuffer.append("       <CPCCLASS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CPCCLASS)))) + "]]></CPCCLASS>");
-            //recordBuffer.append("       <TABLEOFCONTENT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TABLE_OF_CONTENT)))) + "]]></TABLEOFCONTENT>\n");										//TOC
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.TABLE_OF_CONTENT),"TABLEOFCONTENT");          
-            contentObject.put("TABLEOFCONTENT",elementArrayObject);
-            contentJsonArray.add(contentObject);
+            String[] affiliationLocations=rec.getStrings(EVCombinedRec.AFFILIATION_LOCATION);
+            if(affiliationLocations!=null && affiliationLocations.length>0 && affiliationLocations[0]!=null && affiliationLocations[0].trim().length()>0)
+            {
+            	elementArrayObject = formJsonArray(affiliationLocations,"AFFILIATIONLOCATION");          
+            	contentObject.put("AFFILIATIONLOCATION".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getString(EVCombinedRec.TITLE)!=null && rec.getString(EVCombinedRec.TITLE).length()>0)
+            {   
+            	contentObject.put("TITLE".toLowerCase(),rec.getString(EVCombinedRec.TITLE));
+            }
+            
+            String[] translatedTitles = rec.getStrings(EVCombinedRec.TRANSLATED_TITLE);
+            if(translatedTitles!=null && translatedTitles.length>0 && translatedTitles[0]!=null && translatedTitles[0].length()>0)
+            {           	
+            	elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.TRANSLATED_TITLE),"TRANSLATEDTITLE");          
+            	contentObject.put("TRANSLATEDTITLE".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] volumeTitle=rec.getStrings(EVCombinedRec.VOLUME_TITLE);
+            if(volumeTitle!=null && volumeTitle.length>0 && volumeTitle[0]!=null && volumeTitle[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(volumeTitle,"VOLUMETITLE");          
+	            contentObject.put("VOLUMETITLE".toLowerCase(),elementArrayObject);
+            }
+          
+            if(rec.getString(EVCombinedRec.ABSTRACT)!=null && rec.getString(EVCombinedRec.ABSTRACT).trim().length()>0)
+            {
+	            contentObject.put("ABSTRACT".toLowerCase(),rec.getString(EVCombinedRec.ABSTRACT));
+            }
+           
+            if(rec.getString(EVCombinedRec.OTHER_ABSTRACT)!=null && rec.getString(EVCombinedRec.OTHER_ABSTRACT).trim().length()>0)
+            {
+            	contentObject.put("OTHERABSTRACT".toLowerCase(),rec.getString(EVCombinedRec.OTHER_ABSTRACT));           	    
+            }
+           
+            String[] editor=reverseSigns(rec.getStrings(EVCombinedRec.EDITOR));
+            if(editor!=null && editor.length>0 && editor[0]!=null && editor[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(editor,"EDITOR");          
+	            contentObject.put("EDITOR".toLowerCase(),elementArrayObject);	            
+            }
+            
+            String[] editorAffiliation=rec.getStrings(EVCombinedRec.EDITOR_AFFILIATION);
+            if(editorAffiliation!=null && editorAffiliation.length>0 && editorAffiliation[0]!=null && editorAffiliation[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(editorAffiliation,"EDITORAFFILIATION");          
+	            contentObject.put("EDITORAFFILIATION".toLowerCase(),elementArrayObject);
+            }
+ 
+            String[] translator=reverseSigns(rec.getStrings(EVCombinedRec.TRANSLATOR));
+            if(translator!=null && translator.length>0 && translator[0]!=null && translator[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(translator,"TRANSLATOR");          
+	            contentObject.put("TRANSLATOR".toLowerCase(),elementArrayObject);
+            }            
+            
+            String[] controlledTerms=rec.getStrings(EVCombinedRec.CONTROLLED_TERMS);
+            if(controlledTerms!=null && controlledTerms.length>0 && controlledTerms[0]!=null && controlledTerms[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.CONTROLLED_TERMS),"CONTROLLEDTERMS");          
+	            contentObject.put("CONTROLLEDTERMS".toLowerCase(),elementArrayObject);         
+            }
+            
+            String[] uncontrolledTerms=rec.getStrings(EVCombinedRec.UNCONTROLLED_TERMS);
+            if(uncontrolledTerms!=null && uncontrolledTerms.length>0 && uncontrolledTerms[0]!=null && uncontrolledTerms[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(uncontrolledTerms,"UNCONTROLLEDTERMS");          
+	            contentObject.put("UNCONTROLLEDTERMS".toLowerCase(),elementArrayObject);   
+            }
+
+            String[] issn=rec.getStrings(EVCombinedRec.ISSN);
+            if(issn!=null && issn.length>0 && issn[0]!=null && issn[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(issn,"ISSN");          
+	            contentObject.put("ISSN".toLowerCase(),elementArrayObject);
+            }
+
+            String coden=rec.getString(EVCombinedRec.CODEN);
+            if(coden!=null && coden.length()>0)
+            {
+	            //elementArrayObject = formJsonArray(coden,"CODEN");          
+	            contentObject.put("CODEN".toLowerCase(),coden);                     
+            }
+
+            String[] codenOfTranslation=rec.getStrings(EVCombinedRec.CODEN_OF_TRANSLATION);
+            if(codenOfTranslation!=null && codenOfTranslation.length>0 && codenOfTranslation[0]!=null && codenOfTranslation[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(codenOfTranslation,"CODENOFTRANSLATION");          
+	            contentObject.put("CODENOFTRANSLATION".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] isbn=rec.getStrings(EVCombinedRec.ISBN);
+            if(isbn!=null && isbn.length>0 && isbn[0]!=null && isbn[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(isbn,"ISBN");          
+	            contentObject.put("ISBN".toLowerCase(),elementArrayObject);
+            }
+
+            String[] serialTitle=rec.getStrings(EVCombinedRec.SERIAL_TITLE);
+            if(serialTitle!=null && serialTitle.length>0 && serialTitle[0]!=null && serialTitle[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(serialTitle,"SERIALTITLE");          
+	            contentObject.put("SERIALTITLE".toLowerCase(),elementArrayObject);
+            }
+
+            String[] serialTitleTranslation=rec.getStrings(EVCombinedRec.SERIAL_TITLE_TRANSLATION);
+            if(serialTitleTranslation!=null && serialTitleTranslation.length>0 && serialTitleTranslation[0]!=null && serialTitleTranslation[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(serialTitleTranslation,"SERIALTITLETRANSLATION");          
+	            contentObject.put("SERIALTITLETRANSLATION".toLowerCase(),elementArrayObject);
+            }
+
+            String[] mainHeading=rec.getStrings(EVCombinedRec.MAIN_HEADING);
+            if(mainHeading!=null && mainHeading.length>0 && mainHeading[0]!=null && mainHeading[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(mainHeading,"MAINHEADING");          
+	            contentObject.put("MAINHEADING".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getString(EVCombinedRec.SUB_HEADING)!=null && rec.getString(EVCombinedRec.SUB_HEADING).length()>0)
+            {
+	            contentObject.put("SUBHEADING".toLowerCase(),rec.getString(EVCombinedRec.SUB_HEADING));
+            }
+
+            String[] publisherName=rec.getStrings(EVCombinedRec.PUBLISHER_NAME);
+            if(publisherName!=null && publisherName.length>0 && publisherName[0]!=null && publisherName[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(publisherName,"PUBLISHERNAME");          
+	            contentObject.put("PUBLISHERNAME".toLowerCase(),elementArrayObject);
+            }
+
+            String[] treatmentCode=rec.getStrings(EVCombinedRec.TREATMENT_CODE);
+            if(treatmentCode!=null && treatmentCode.length>0 && treatmentCode[0]!=null && treatmentCode[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(treatmentCode,"TREATMENTCODE");          
+	            contentObject.put("TREATMENTCODE".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] language=rec.getStrings(EVCombinedRec.LANGUAGE);
+            if(language!=null && language.length>0 && language[0]!=null && language[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(language,"LANGUAGE");          
+	            contentObject.put("LANGUAGE".toLowerCase(),elementArrayObject);
+            }
+
+            if(rec.getString(EVCombinedRec.DOCTYPE)!=null && rec.getString(EVCombinedRec.DOCTYPE).length()>0)
+            {      
+	            contentObject.put("RECTYPE".toLowerCase(),rec.getString(EVCombinedRec.DOCTYPE));
+            }
+            
+            String[] classificationCode=rec.getStrings(EVCombinedRec.CLASSIFICATION_CODE);
+            if(classificationCode!=null && classificationCode.length>0 && classificationCode[0]!=null && classificationCode[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(classificationCode),"CLASSIFICATIONCODE");          
+	            contentObject.put("CLASSIFICATIONCODE".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getString(EVCombinedRec.CONFERENCE_CODE)!=null && rec.getString(EVCombinedRec.CONFERENCE_CODE).length()>0)
+            {
+	            contentObject.put("CONFERENCECODE".toLowerCase(),notNull(rec.getString(EVCombinedRec.CONFERENCE_CODE)));
+            }
+            
+            if(rec.getString(EVCombinedRec.CONFERENCE_NAME)!=null && rec.getString(EVCombinedRec.CONFERENCE_NAME).length()>0)
+            {
+	            contentObject.put("CONFERENCENAME".toLowerCase(),notNull(rec.getString(EVCombinedRec.CONFERENCE_NAME)));
+            }
+            
+            if(rec.getString(EVCombinedRec.CONFERENCE_LOCATION)!=null && rec.getString(EVCombinedRec.CONFERENCE_LOCATION).length()>0)
+            {
+	            contentObject.put("CONFERENCELOCATION".toLowerCase(),notNull(rec.getString(EVCombinedRec.CONFERENCE_LOCATION)));
+            }            
+            
+            if(rec.getString(EVCombinedRec.MEETING_DATE)!=null && rec.getString(EVCombinedRec.MEETING_DATE).length()>0)
+            {
+	            contentObject.put("MEETINGDATE".toLowerCase(),notNull(rec.getString(EVCombinedRec.MEETING_DATE)));
+            }
+
+            String[] sponsorName=rec.getStrings(EVCombinedRec.SPONSOR_NAME);
+            if(sponsorName!=null && sponsorName.length>0 && sponsorName[0]!=null && sponsorName[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(sponsorName,"SPONSORNAME");          
+	            contentObject.put("SPONSORNAME".toLowerCase(),elementArrayObject);
+            }
+           
+            String[] monoGraphTitle=rec.getStrings(EVCombinedRec.MONOGRAPH_TITLE);
+            if(monoGraphTitle!=null && monoGraphTitle.length>0 && monoGraphTitle[0]!=null && monoGraphTitle[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(monoGraphTitle,"MONOGRAPHTITLE");          
+	            contentObject.put("MONOGRAPHTITLE".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] discipline=rec.getStrings(EVCombinedRec.DISCIPLINE);
+            if(discipline!=null && discipline.length>0 && discipline[0]!=null && discipline[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(discipline,"DISCIPLINE");          
+	            contentObject.put("DISCIPLINE".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] materialNumber=rec.getStrings(EVCombinedRec.MATERIAL_NUMBER);
+            if(materialNumber!=null && materialNumber.length>0 && materialNumber[0]!=null && materialNumber[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(materialNumber,"MATERIALNUMBER");          
+	            contentObject.put("MATERIALNUMBER".toLowerCase(),elementArrayObject);
+            }
+
+            String[] numericalIndexing=rec.getStrings(EVCombinedRec.NUMERICAL_INDEXING);
+            if(numericalIndexing!=null && numericalIndexing.length>0 && numericalIndexing[0]!=null && numericalIndexing[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(numericalIndexing,"NUMERICALINDEXING");          
+	            contentObject.put("NUMERICALINDEXING".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] chemicalIndexing=rec.getStrings(EVCombinedRec.CHEMICAL_INDEXING);
+            if(chemicalIndexing!=null && chemicalIndexing.length>0 && chemicalIndexing[0]!=null && chemicalIndexing[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(chemicalIndexing,"CHEMICALINDEXING");          
+	            contentObject.put("CHEMICALINDEXING".toLowerCase(),elementArrayObject);
+            }
+
+            String[] astronomicalIndexing=rec.getStrings(EVCombinedRec.ASTRONOMICAL_INDEXING);
+            if(astronomicalIndexing!=null && astronomicalIndexing.length>0 && astronomicalIndexing[0]!=null && astronomicalIndexing[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(astronomicalIndexing,"ASTRONOMICALINDEXING");          
+	            contentObject.put("ASTRONOMICALINDEXING".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] reportNumber=rec.getStrings(EVCombinedRec.REPORTNUMBER);
+            if(reportNumber!=null && reportNumber.length>0 && reportNumber[0]!=null && reportNumber[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(reportNumber,"REPORTNUMBER");          
+	            contentObject.put("REPORTNUMBER".toLowerCase(),elementArrayObject);
+            }
+
+            String[] ordernumber=rec.getStrings(EVCombinedRec.ORDERNUMBER);
+            if(ordernumber!=null && ordernumber.length>0 && ordernumber[0]!=null && ordernumber[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(ordernumber,"ORDERNUMBER");          
+	            contentObject.put("ORDERNUMBER".toLowerCase(),elementArrayObject);     
+            }
+            
+            String[] countries=rec.getStrings(EVCombinedRec.COUNTRY);
+            if(countries!=null && countries.length>0 && countries[0]!=null && countries[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(countries,"COUNTRY");          
+	            contentObject.put("COUNTRY".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getString(EVCombinedRec.VOLUME)!=null && rec.getString(EVCombinedRec.VOLUME).length()>0)
+            {
+	            contentObject.put("VOLUME".toLowerCase(),notNull(rec.getString(EVCombinedRec.VOLUME)));
+            }
+            
+            if(rec.getString(EVCombinedRec.ISSUE)!=null && rec.getString(EVCombinedRec.ISSUE).length()>0)
+            {
+	            contentObject.put("ISSUE".toLowerCase(),notNull(rec.getString(EVCombinedRec.ISSUE)));
+            }
+            
+            if(rec.getString(EVCombinedRec.STARTPAGE)!=null && rec.getString(EVCombinedRec.STARTPAGE).length()>0)
+            {
+	            contentObject.put("STARTPAGE".toLowerCase(),notNull(rec.getString(EVCombinedRec.STARTPAGE)));
+            }
+            
+            if(rec.getString(EVCombinedRec.PAGE)!=null && rec.getString(EVCombinedRec.PAGE).length()>0)
+            {
+	            contentObject.put("PAGE".toLowerCase(),notNull(rec.getString(EVCombinedRec.PAGE)));
+            }
+            
+            if(rec.getString(EVCombinedRec.AVAILABILITY)!=null && rec.getString(EVCombinedRec.AVAILABILITY).length()>0)
+            {
+	            contentObject.put("AVAILABILITY".toLowerCase(),rec.getString(EVCombinedRec.AVAILABILITY));
+            }
+            
+            String[] notes=rec.getStrings(EVCombinedRec.NOTES);
+            if(notes!=null && notes.length>0 && notes[0]!=null && notes[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(notes,"NOTES");          
+	            contentObject.put("NOTES".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] patentAppDate=rec.getStrings(EVCombinedRec.PATENTAPPDATE);
+            if(patentAppDate!=null && patentAppDate.length>0 && patentAppDate[0]!=null && patentAppDate[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(patentAppDate,"PATENTAPPDATE");          
+	            contentObject.put("PATENTAPPDATE".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] patentIssueDate=rec.getStrings(EVCombinedRec.PATENTISSUEDATE);
+            if(patentIssueDate!=null && patentIssueDate.length>0 && patentIssueDate[0]!=null && patentIssueDate[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(patentIssueDate,"PATENTISSUEDATE");          
+	            contentObject.put("PATENTISSUEDATE".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] companies=rec.getStrings(EVCombinedRec.COMPANIES);
+            if(companies!=null && companies.length>0 && companies[0]!=null && companies[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(companies,"COMPANIES");          
+	            contentObject.put("COMPANIES".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] casRegistryNumber=rec.getStrings(EVCombinedRec.CASREGISTRYNUMBER);
+            if(casRegistryNumber!=null && casRegistryNumber.length>0 && casRegistryNumber[0]!=null && casRegistryNumber[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(casRegistryNumber,"CASREGISTRYNUMBER");          
+	            contentObject.put("CASREGISTRYNUMBER".toLowerCase(),elementArrayObject);
+            }
+           
+            String[] businessTerms=rec.getStrings(EVCombinedRec.BUSINESSTERMS);
+            if(businessTerms!=null && businessTerms.length>0 && businessTerms[0]!=null && businessTerms[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(businessTerms,"BUSINESSTERMS");          
+	            contentObject.put("BUSINESSTERMS".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] chemicalTerms=rec.getStrings(EVCombinedRec.CHEMICALTERMS);
+            if(chemicalTerms!=null && chemicalTerms.length>0 && chemicalTerms[0]!=null && chemicalTerms[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(chemicalTerms,"CHEMICALTERMS");          
+	            contentObject.put("CHEMICALTERMS".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] chemicalAcronyms=rec.getStrings(EVCombinedRec.CHEMICALACRONYMS);
+            if(chemicalAcronyms!=null && chemicalAcronyms.length>0 && chemicalAcronyms[0]!=null && chemicalAcronyms[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(chemicalAcronyms,"CHEMAC");          
+	            contentObject.put("CHEMAC".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] patentNumber=rec.getStrings(EVCombinedRec.PATENT_NUMBER);
+            if(patentNumber!=null && patentNumber.length>0 && patentNumber[0]!=null && patentNumber[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(patentNumber,"SIC");          
+	            contentObject.put("SIC".toLowerCase(),elementArrayObject);
+            }
+
+            String[] industrialcodes=rec.getStrings(EVCombinedRec.INDUSTRIALCODES);
+            if(industrialcodes!=null && industrialcodes.length>0 && industrialcodes[0]!=null && industrialcodes[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(industrialcodes,"INDUSTRIALCODES");          
+	            contentObject.put("INDUSTRIALCODES".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] industrialsectors=rec.getStrings(EVCombinedRec.INDUSTRIALSECTORS);
+            if(industrialsectors!=null && industrialsectors.length>0 && industrialsectors[0]!=null && industrialsectors[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(industrialsectors,"INDUSTRIALSECTORS");          
+	            contentObject.put("INDUSTRIALSECTORS".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] scope=rec.getStrings(EVCombinedRec.SCOPE);
+            if(scope!=null && scope.length>0 && scope[0]!=null && scope[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(scope,"SCOPE");          
+	            contentObject.put("SCOPE".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] agency=rec.getStrings(EVCombinedRec.AGENCY);
+            if(agency!=null && agency.length>0 && agency[0]!=null && agency[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(agency,"AGENCY");          
+	            contentObject.put("AGENCY".toLowerCase(),elementArrayObject);
+	            contentJsonArray.add(contentObject);
+            }
+            
+            String[] derwentAccessionNumber=rec.getStrings(EVCombinedRec.DERWENT_ACCESSION_NUMBER); 
+            if(derwentAccessionNumber!=null && derwentAccessionNumber.length>0 && derwentAccessionNumber[0]!=null && derwentAccessionNumber[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(derwentAccessionNumber,"DERWENTACCESSIONNUMBER");          
+	            contentObject.put("DERWENTACCESSIONNUMBER".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] applicationNumber=rec.getStrings(EVCombinedRec.APPLICATION_NUMBER);
+            if(applicationNumber!=null && applicationNumber.length>0 && applicationNumber[0]!=null && applicationNumber[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(applicationNumber,"APPLICATIONNUMBER");          
+	            contentObject.put("APPLICATIONNUMBER".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] applicationCountry=rec.getStrings(EVCombinedRec.APPLICATION_COUNTRY);
+            if(applicationCountry!=null && applicationCountry.length>0 && applicationCountry[0]!=null && applicationCountry[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(applicationCountry,"APPLICATIONCOUNTRY");          
+	            contentObject.put("APPLICATIONCOUNTRY".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] intPatentClassification=addIpcIndex(rec.getString(EVCombinedRec.INT_PATENT_CLASSIFICATION),"INTERNATONALPATENTCLASSIFICATION");
+            if(intPatentClassification!=null && intPatentClassification.length>0 && intPatentClassification[0]!=null && intPatentClassification[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(intPatentClassification),"INTPATENTCLASSIFICATION");          
+	            contentObject.put("INTPATENTCLASSIFICATION".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] linkedTerms=stripChar29(rec.getStrings(EVCombinedRec.LINKED_TERMS));
+            if(linkedTerms!=null && linkedTerms.length>0 && linkedTerms[0]!=null && linkedTerms[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(linkedTerms,"LINKEDTERMS");          
+	            contentObject.put("LINKEDTERMS".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] entryYear=rec.getStrings(EVCombinedRec.ENTRY_YEAR);
+            if(entryYear!=null && entryYear.length>0 && entryYear[0]!=null && entryYear[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(entryYear,"ENTRYYEAR");          
+	            contentObject.put("ENTRYYEAR".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] priorityNumber=rec.getStrings(EVCombinedRec.PRIORITY_NUMBER);
+            if(priorityNumber!=null && priorityNumber.length>0 && priorityNumber[0]!=null && priorityNumber[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(priorityNumber,"PRIORITYNUMBER");          
+	            contentObject.put("PRIORITYNUMBER".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] priorityDate=rec.getStrings(EVCombinedRec.PRIORITY_DATE);
+            if(priorityDate!=null && priorityDate.length>0 && priorityDate[0]!=null && priorityDate[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(priorityDate,"PRIORITYDATE");          
+	            contentObject.put("PRIORITYDATE".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] priorityCountry=rec.getStrings(EVCombinedRec.PRIORITY_COUNTRY);
+            if(priorityCountry!=null && priorityCountry.length>0 && priorityCountry[0]!=null && priorityCountry[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(priorityCountry,"PRIORITYCOUNTRY");          
+	            contentObject.put("PRIORITYCOUNTRY".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] source=rec.getStrings(EVCombinedRec.SOURCE);
+            if(source!=null && source.length>0 && source[0]!=null && source[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(source,"SOURCE");          
+	            contentObject.put("SOURCE".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] secondarySrcTitle=rec.getStrings(EVCombinedRec.SECONDARY_SRC_TITLE);   
+            if(secondarySrcTitle!=null && secondarySrcTitle.length>0 && secondarySrcTitle[0]!=null && secondarySrcTitle[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(secondarySrcTitle,"SECONDARYSRCTITLE");          
+	            contentObject.put("SECONDARYSRCTITLE".toLowerCase(),elementArrayObject); 
+            }
+
+            String[] mainTerm=rec.getStrings(EVCombinedRec.MAIN_TERM);
+            if(mainTerm!=null && mainTerm.length>0 && mainTerm[0]!=null && mainTerm[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(mainTerm,"MAINTERM");          
+	            contentObject.put("MAINTERM".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] abbrvSrcTitle=rec.getStrings(EVCombinedRec.ABBRV_SRC_TITLE);
+            if(abbrvSrcTitle!=null && abbrvSrcTitle.length>0 && abbrvSrcTitle[0]!=null && abbrvSrcTitle[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(abbrvSrcTitle,"ABBRVSRCTITLE");          
+	            contentObject.put("ABBRVSRCTITLE".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] noroleTerms=rec.getStrings(EVCombinedRec.NOROLE_TERMS);
+            if(noroleTerms!=null && noroleTerms.length>0 && noroleTerms[0]!=null && noroleTerms[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(noroleTerms,"NOROLETERMS");          
+	            contentObject.put("NOROLETERMS".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] reagentTerms=rec.getStrings(EVCombinedRec.REAGENT_TERMS);
+            if(reagentTerms!=null && reagentTerms.length>0 && reagentTerms[0]!=null && reagentTerms[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(reagentTerms,"REAGENTTERMS");          
+	            contentObject.put("REAGENTTERMS".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] productTerms=rec.getStrings(EVCombinedRec.PRODUCT_TERMS);
+            if(productTerms!=null && productTerms.length>0 && productTerms[0]!=null && productTerms[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(productTerms,"PRODUCTTERMS");          
+	            contentObject.put("PRODUCTTERMS".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] majorNoRoleTerms=rec.getStrings(EVCombinedRec.MAJORNOROLE_TERMS);
+            if(majorNoRoleTerms!=null && majorNoRoleTerms.length>0 && majorNoRoleTerms[0]!=null && majorNoRoleTerms[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(majorNoRoleTerms,"MAJORNOROLETERMS");          
+	            contentObject.put("MAJORNOROLETERMS".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] majorReagentTerms=rec.getStrings(EVCombinedRec.MAJORREAGENT_TERMS);
+            if(majorReagentTerms!=null && majorReagentTerms.length>0 && majorReagentTerms[0]!=null && majorReagentTerms[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(majorReagentTerms,"MAJORREAGENTTERMS");          
+	            contentObject.put("MAJORREAGENTTERMS".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] majorProductTerm=rec.getStrings(EVCombinedRec.MAJORPRODUCT_TERMS);
+            if(majorProductTerm!=null && majorProductTerm.length>0 && majorProductTerm[0]!=null && majorProductTerm[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(majorProductTerm,"MAJORPRODUCTTERMS");          
+	            contentObject.put("MAJORPRODUCTTERMS".toLowerCase(),elementArrayObject);
+	            //contentJsonArray.add(contentObject);
+            }
+            
+            String[] conferenceAffiliations=rec.getStrings(EVCombinedRec.CONFERENCEAFFILIATIONS);
+            if(conferenceAffiliations!=null && conferenceAffiliations.length>0 && conferenceAffiliations[0]!=null && conferenceAffiliations[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(conferenceAffiliations,"CONFERENCEAFFILIATIONS");          
+	            contentObject.put("CONFERENCEAFFILIATIONS".toLowerCase(),elementArrayObject);
+	            //contentJsonArray.add(contentObject);
+            }
+            
+            String[] conferenceeditors=reverseSigns(rec.getStrings(EVCombinedRec.CONFERENCEEDITORS));
+            if(conferenceeditors!=null && conferenceeditors.length>0 && conferenceeditors[0]!=null && conferenceeditors[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(conferenceeditors,"CONFERENCEEDITORS");          
+	            contentObject.put("CONFERENCEEDITORS".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] conferenceStartDate=rec.getStrings(EVCombinedRec.CONFERENCESTARTDATE);
+            if(conferenceStartDate!=null && conferenceStartDate.length>0 && conferenceStartDate[0]!=null && conferenceStartDate[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(conferenceStartDate,"CONFERENCESTARTDATE");          
+	            contentObject.put("CONFERENCESTARTDATE".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] conferenceEndDate=rec.getStrings(EVCombinedRec.CONFERENCEENDDATE);
+            if(conferenceEndDate!=null && conferenceEndDate.length>0 && conferenceEndDate[0]!=null && conferenceEndDate[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(conferenceEndDate,"CONFERENCEENDDATE");          
+	            contentObject.put("CONFERENCEENDDATE".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] conferencevenusite=rec.getStrings(EVCombinedRec.CONFERENCEVENUESITE);
+            if(conferencevenusite!=null && conferencevenusite.length>0 && conferencevenusite[0]!=null && conferencevenusite[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(conferencevenusite,"CONFERENCEVENUESITE");          
+	            contentObject.put("CONFERENCEVENUESITE".toLowerCase(),elementArrayObject);
+            }
+             
+            String[] conferenceCity=rec.getStrings(EVCombinedRec.CONFERENCECITY);
+            if(conferenceCity!=null && conferenceCity.length>0 && conferenceCity[0]!=null && conferenceCity[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(conferenceCity,"CONFERENCECITY");          
+	            contentObject.put("CONFERENCECITY".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] conferenceCountryCode=rec.getStrings(EVCombinedRec.CONFERENCECOUNTRYCODE);
+            if(conferenceCountryCode!=null && conferenceCountryCode.length>0 && conferenceCountryCode[0]!=null && conferenceCountryCode[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(conferenceCountryCode,"CONFERENCECOUNTRYCODE");          
+	            contentObject.put("CONFERENCECOUNTRYCODE".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] conferencePageRange=rec.getStrings(EVCombinedRec.CONFERENCEPAGERANGE);
+            if(conferencePageRange!=null && conferencePageRange.length>0 && conferencePageRange[0]!=null && conferencePageRange[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(conferencePageRange,"CONFERENCEPAGERANGE");          
+	            contentObject.put("CONFERENCEPAGERANGE".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] conferenceNumberPages=rec.getStrings(EVCombinedRec.CONFERENCENUMBERPAGES);
+            if(conferenceNumberPages!=null && conferenceNumberPages.length>0 && conferenceNumberPages[0]!=null && conferenceNumberPages[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(conferenceNumberPages,"CONFERENCENUMBERPAGES");          
+	            contentObject.put("CONFERENCENUMBERPAGES".toLowerCase(),elementArrayObject);
+            }
+
+            String[] conferencePartNumber=rec.getStrings(EVCombinedRec.CONFERENCEPARTNUMBER);
+            if(conferencePartNumber!=null && conferencePartNumber.length>0 && conferencePartNumber[0]!=null && conferencePartNumber[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(conferencePartNumber,"CONFERENCEPARTNUMBER");          
+	            contentObject.put("CONFERENCEPARTNUMBER".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] designatedStates=rec.getStrings(EVCombinedRec.DESIGNATED_STATES);
+            if(designatedStates!=null && designatedStates.length>0 && designatedStates[0]!=null && designatedStates[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(designatedStates,"DESIGNATEDSTATES");          
+	            contentObject.put("DESIGNATEDSTATES".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] stnConference=rec.getStrings(EVCombinedRec.STN_CONFERENCE);
+            if(stnConference!=null && stnConference.length>0 && stnConference[0]!=null && stnConference[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(stnConference,"STNCONFERENCE");          
+	            contentObject.put("STNCONFERENCE".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] stnSecondaryConference=rec.getStrings(EVCombinedRec.STN_SECONDARY_CONFERENCE);
+            if(stnSecondaryConference!=null && stnSecondaryConference.length>0 && stnSecondaryConference[0]!=null && stnSecondaryConference[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(stnSecondaryConference,"STNSECONDARYCONFERENCE");          
+	            contentObject.put("STNSECONDARYCONFERENCE".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] patentFilingDate=rec.getStrings(EVCombinedRec.PATENT_FILING_DATE);
+            if(patentFilingDate!=null && patentFilingDate.length>0 && patentFilingDate[0]!=null && patentFilingDate[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(patentFilingDate,"FILINGDATE");          
+	            contentObject.put("FILINGDATE".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] priorityKind=rec.getStrings(EVCombinedRec.PRIORITY_KIND);
+            if(priorityKind!=null && priorityKind.length>0 && priorityKind[0]!=null && priorityKind[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(priorityKind,"PRIORITYKIND");          
+	            contentObject.put("PRIORITYKIND".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] eclaCode=rec.getStrings(EVCombinedRec.ECLA_CODES);
+            if(eclaCode!=null && eclaCode.length>0 && eclaCode[0]!=null && eclaCode[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(eclaCode,"ECLACODE");          
+	            contentObject.put("ECLACODE".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] attorneyName=rec.getStrings(EVCombinedRec.ATTORNEY_NAME);
+            if(attorneyName!=null && attorneyName.length>0 && attorneyName[0]!=null && attorneyName[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(attorneyName,"ATTORNEYNAME");          
+	            contentObject.put("ATTORNEYNAME".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] primaryExaminer=rec.getStrings(EVCombinedRec.PRIMARY_EXAMINER);
+            if(primaryExaminer!=null && primaryExaminer.length>0 && primaryExaminer[0]!=null && primaryExaminer[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(primaryExaminer,"PRIMARYEXAMINER");          
+	            contentObject.put("PRIMARYEXAMINER".toLowerCase(),elementArrayObject);
+            }
+
+            String[] assistantExaminer=rec.getStrings(EVCombinedRec.ASSISTANT_EXAMINER);
+            if(assistantExaminer!=null && assistantExaminer.length>0 && assistantExaminer[0]!=null && assistantExaminer[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(assistantExaminer,"ASSISTANTEXAMINER");          
+	            contentObject.put("ASSISTANTEXAMINER".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] intpatentclasses=rec.getStrings(EVCombinedRec.INT_PATENT_CLASSES);
+            if(intpatentclasses!=null && intpatentclasses.length>0 && intpatentclasses[0]!=null && intpatentclasses[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(intpatentclasses,"IPCCLASS");          
+	            contentObject.put("IPCCLASS".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] intpatentsubclasses=rec.getStrings(EVCombinedRec.INT_PATENT_SUB_CLASSES);
+            if(intpatentsubclasses!=null && intpatentsubclasses.length>0 && intpatentsubclasses[0]!=null && intpatentsubclasses[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(intpatentsubclasses,"IPCCLASS");          
+	            contentObject.put("IPCCLASS".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] eclaclasses=rec.getStrings(EVCombinedRec.ECLA_CLASSES);
+            if(eclaclasses!=null && eclaclasses.length>0 && eclaclasses[0]!=null && eclaclasses[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(eclaclasses,"ECLACLASS");          
+	            contentObject.put("ECLACLASS".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] eclassubclasses=rec.getStrings(EVCombinedRec.ECLA_SUB_CLASSES);
+            if(eclassubclasses!=null && eclassubclasses.length>0 && eclassubclasses[0]!=null && eclassubclasses[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(eclassubclasses,"ECLASUBCLASS");          
+	            contentObject.put("ECLASUBCLASS".toLowerCase(),elementArrayObject);
+            }
+                                
+            String[] usptoclass=rec.getStrings(EVCombinedRec.USPTOCLASS);
+            if(usptoclass!=null && usptoclass.length>0 && usptoclass[0]!=null && usptoclass[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(usptoclass,"USPTOCLASS");          
+	            contentObject.put("USPTOCLASS".toLowerCase(),elementArrayObject);
+            }
+
+            String[] usptosubclass=rec.getStrings(EVCombinedRec.USPTOSUBCLASS);
+            if(usptosubclass!=null && usptosubclass.length>0 && usptosubclass[0]!=null && usptosubclass[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(usptosubclass,"USPTOSUBCLASS");          
+	            contentObject.put("USPTOSUBCLASS".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] usptocode=rec.getStrings(EVCombinedRec.USPTOCODE);
+            if(usptocode!=null && usptocode.length>0 && usptocode[0]!=null && usptocode[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(usptocode,"USPTOCODE");          
+	            contentObject.put("USPTOCODE".toLowerCase(),elementArrayObject);
+            }
+
+            String[] patentkind=rec.getStrings(EVCombinedRec.PATENT_KIND);
+            if(patentkind!=null && patentkind.length>0 && patentkind[0]!=null && patentkind[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(patentkind,"PATENTKIND");          
+	            contentObject.put("PATENTKIND".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] kinddescr=rec.getStrings(EVCombinedRec.KIND_DESCR);
+            if(kinddescr!=null && kinddescr.length>0 && kinddescr[0]!=null && kinddescr[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(kinddescr,"KINDDESCRIPTION");          
+	            contentObject.put("KINDDESCRIPTION".toLowerCase(),elementArrayObject);
+            }
+
+            if(rec.getString(EVCombinedRec.AUTHORITY_CODE)!=null && rec.getString(EVCombinedRec.AUTHORITY_CODE).length()>0)
+            {
+	            contentObject.put("AUTHORITYCODE".toLowerCase(),notNull(rec.getString(EVCombinedRec.AUTHORITY_CODE)));
+            }
+            
+            if(rec.getString(EVCombinedRec.PCITED)!=null && rec.getString(EVCombinedRec.PCITED).length()>0)
+            {
+	            contentObject.put("PCITED".toLowerCase(),notNull(rec.getString(EVCombinedRec.PCITED)));
+            }
+
+            String[] pcitedindex=rec.getStrings(EVCombinedRec.PCITEDINDEX);
+            if(pcitedindex!=null && pcitedindex.length>0 && pcitedindex[0]!=null && pcitedindex[0].length()>0)
+            {                   
+	            elementArrayObject = formJsonArray(pcitedindex,"PCITEDINDEX");          
+	            contentObject.put("PCITEDINDEX".toLowerCase(),elementArrayObject);
+            }
+
+            String[] prefindex=rec.getStrings(EVCombinedRec.PREFINDEX);
+            if(prefindex!=null && prefindex.length>0 && prefindex[0]!=null && prefindex[0].length()>0)
+			{
+	            elementArrayObject = formJsonArray(prefindex,"PREFINDEX");          
+	            contentObject.put("PREFINDEX".toLowerCase(),elementArrayObject);
+			}
+           
+            if(rec.getString(EVCombinedRec.DMASK)!=null && rec.getString(EVCombinedRec.DMASK).length()>0)
+            {
+	            //elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.DMASK),"DMASK");          
+	            contentObject.put("DMASK".toLowerCase(),rec.getString(EVCombinedRec.DMASK));
+            }
+            
+            if(rec.getString(EVCombinedRec.DOI)!=null && rec.getString(EVCombinedRec.DOI).length()>0)
+            {
+	            contentObject.put("DOI".toLowerCase(),notNull(rec.getString(EVCombinedRec.DOI)));
+            }
+
+            if(rec.getString(EVCombinedRec.SCOPUSID)!=null && rec.getString(EVCombinedRec.SCOPUSID).length()>0)
+            {
+	            contentObject.put("SCOPUSID".toLowerCase(),notNull(rec.getString(EVCombinedRec.SCOPUSID)));
+            }
+            
+            String[] affiliationid=rec.getStrings(EVCombinedRec.AFFILIATIONID);
+            if(affiliationid!=null && affiliationid.length>0 && affiliationid[0]!=null && affiliationid[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(affiliationid,"AFFILIATIONID");          
+	            contentObject.put("AFFILIATIONID".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getString(EVCombinedRec.LAT_NW)!=null && rec.getString(EVCombinedRec.LAT_NW).length()>0)
+            {
+	            contentObject.put("LAT_NW".toLowerCase(),notNull(rec.getString(EVCombinedRec.LAT_NW)));
+            }
+            
+            if(rec.getString(EVCombinedRec.LNG_NW)!=null && rec.getString(EVCombinedRec.LNG_NW).length()>0)
+            {
+	            contentObject.put("LNG_NW".toLowerCase(),notNull(rec.getString(EVCombinedRec.LNG_NW)));
+            }
+            
+            if(rec.getString(EVCombinedRec.LAT_NE)!=null && rec.getString(EVCombinedRec.LAT_NE).length()>0)
+            {
+	            contentObject.put("LAT_NE".toLowerCase(),notNull(rec.getString(EVCombinedRec.LAT_NE)));
+            }
+            
+            if(rec.getString(EVCombinedRec.LNG_NE)!=null && rec.getString(EVCombinedRec.LNG_NE).length()>0)
+            {
+	            contentObject.put("LNG_NE".toLowerCase(),notNull(rec.getString(EVCombinedRec.LNG_NE)));
+            }
+            
+            if(rec.getString(EVCombinedRec.LAT_SW)!=null && rec.getString(EVCombinedRec.LAT_SW).length()>0)
+            {
+	            contentObject.put("LAT_SW".toLowerCase(),notNull(rec.getString(EVCombinedRec.LAT_SW)));
+            }
+            
+            if(rec.getString(EVCombinedRec.LNG_SW)!=null && rec.getString(EVCombinedRec.LNG_SW).length()>0)
+            {
+	            contentObject.put("LNG_SW".toLowerCase(),notNull(rec.getString(EVCombinedRec.LNG_SW)));
+            }
+            
+            if(rec.getString(EVCombinedRec.LAT_SE)!=null && rec.getString(EVCombinedRec.LAT_SE).length()>0)
+            {
+	            contentObject.put("LAT_SE".toLowerCase(),notNull(rec.getString(EVCombinedRec.LAT_SE)));
+            }
+                         
+            if(rec.getString(EVCombinedRec.LNG_SE)!=null && rec.getString(EVCombinedRec.LNG_SE).length()>0)
+            {
+	            contentObject.put("LNG_SE".toLowerCase(),notNull(rec.getString(EVCombinedRec.LNG_SE)));
+            }
+            
+            String[] tableofcontent=rec.getStrings(EVCombinedRec.TABLE_OF_CONTENT);
+            if(tableofcontent!=null && tableofcontent.length>0 && tableofcontent[0]!=null && tableofcontent[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(tableofcontent,"TABLEOFCONTENT");          
+	            contentObject.put("TABLEOFCONTENT".toLowerCase(),elementArrayObject);
+            }
+            
             //************************************************ added for numericalIndex ******************************************************//
             
-            
-            //amount of substance
-            //recordBuffer.append("       <AMOUNTOFSUBSTANCE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.AMOUNT_OF_SUBSTANCE_RANGES)) + "]]></AMOUNTOFSUBSTANCE_RANGES>\n"); 											//NASR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.AMOUNT_OF_SUBSTANCE_RANGES),"AMOUNTOFSUBSTANCE_RANGES");          
-            contentObject.put("AMOUNTOFSUBSTANCE_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <AMOUNTOFSUBSTANCE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.AMOUNT_OF_SUBSTANCE_TEXT)))) + "]]></AMOUNTOFSUBSTANCE_TEXT>\n");				//NAST
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.AMOUNT_OF_SUBSTANCE_TEXT),"AMOUNTOFSUBSTANCE_TEXT");          
-            contentObject.put("AMOUNTOFSUBSTANCE_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //electric current
-            //recordBuffer.append("       <ELECTRICCURRENT_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ELECTRIC_CURRENT_RANGES)) + "]]></ELECTRICCURRENT_RANGES>\n");													//NECR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ELECTRIC_CURRENT_RANGES),"ELECTRICCURRENT_RANGES");          
-            contentObject.put("ELECTRICCURRENT_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <ELECTRICCURRENT_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ELECTRIC_CURRENT_TEXT)))) + "]]></ELECTRICCURRENT_TEXT>\n");						//NECT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ELECTRIC_CURRENT_TEXT),"ELECTRICCURRENT_TEXT");          
-            contentObject.put("ELECTRICCURRENT_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //mass
-            //recordBuffer.append("       <MASS_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.MASS_RANGES)) + "]]></MASS_RANGES>\n");																						//NMAR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MASS_RANGES),"MASS_RANGES");          
-            contentObject.put("MASS_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <MASS_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MASS_TEXT)))) + "]]></MASS_TEXT>\n");														//NMAT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MASS_TEXT),"MASS_TEXT");          
-            contentObject.put("MASS_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //temperature
-            //recordBuffer.append("       <TEMPERATURE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.TEMPERATURE_RANGES)) + "]]></TEMPERATURE_RANGES>\n");																//NTER
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.TEMPERATURE_RANGES),"TEMPERATURE_RANGES");          
-            contentObject.put("TEMPERATURE_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <TEMPERATURE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TEMPERATURE_TEXT)))) + "]]></TEMPERATURE_TEXT>\n");									//NTET
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.TEMPERATURE_TEXT),"TEMPERATURE_TEXT");          
-            contentObject.put("TEMPERATURE_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //time
-            //recordBuffer.append("       <TIME_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.TIME_RANGES)) + "]]></TIME_RANGES>\n");																						//NTIR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.TIME_RANGES),"TIME_RANGES");          
-            contentObject.put("TIME_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <TIME_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TIME_TEXT)))) + "]]></TIME_TEXT>\n");														//NTIT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.TIME_TEXT),"TIME_TEXT");          
-            contentObject.put("TIME_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //size
-            //recordBuffer.append("       <SIZE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.SIZE_RANGES)) + "]]></SIZE_RANGES>\n");																						//NSIR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SIZE_RANGES),"SIZE_RANGES");          
-            contentObject.put("SIZE_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <SIZE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SIZE_TEXT)))) + "]]></SIZE_TEXT>\n");														//NSIT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SIZE_TEXT),"SIZE_TEXT");          
-            contentObject.put("SIZE_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //electrical conductance
-            //recordBuffer.append("       <ELECTRICALCONDUCTANCE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ELECTRICAL_CONDUCTANCE_RANGES)) + "]]></ELECTRICALCONDUCTANCE_RANGES>\n");									//NEDR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ELECTRICAL_CONDUCTANCE_RANGES),"ELECTRICALCONDUCTANCE_RANGES");          
-            contentObject.put("ELECTRICALCONDUCTANCE_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <ELECTRICALCONDUCTANCE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ELECTRICAL_CONDUCTANCE_TEXT)))) + "]]></ELECTRICALCONDUCTANCE_TEXT>\n");	//NEDT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ELECTRICAL_CONDUCTANCE_TEXT),"ELECTRICALCONDUCTANCE_TEXT");          
-            contentObject.put("ELECTRICALCONDUCTANCE_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //electrical conductivity
-            //recordBuffer.append("       <ELECTRICALCONDUCTIVITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ELECTRICAL_CONDUCTIVITY_RANGES)) + "]]></ELECTRICALCONDUCTIVITY_RANGES>\n");								//NETR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ELECTRICAL_CONDUCTIVITY_RANGES),"ELECTRICALCONDUCTIVITY_RANGES");          
-            contentObject.put("ELECTRICALCONDUCTIVITY_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <ELECTRICALCONDUCTIVITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ELECTRICAL_CONDUCTIVITY_TEXT)))) + "]]></ELECTRICALCONDUCTIVITY_TEXT>\n");//NETT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ELECTRICAL_CONDUCTIVITY_TEXT),"ELECTRICALCONDUCTIVITY_TEXT");          
-            contentObject.put("ELECTRICALCONDUCTIVITY_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //voltage
-            //recordBuffer.append("       <VOLTAGE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.VOLTAGE_RANGES)) + "]]></VOLTAGE_RANGES>\n");																			//NVOR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.VOLTAGE_RANGES),"VOLTAGE_RANGES");          
-            contentObject.put("VOLTAGE_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <VOLTAGE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.VOLTAGE_TEXT)))) + "]]></VOLTAGE_TEXT>\n");												//NVOT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.VOLTAGE_TEXT),"VOLTAGE_TEXT");          
-            contentObject.put("VOLTAGE_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //electric field strength
-            //recordBuffer.append("       <ELECTRICFIELDSTRENGTH_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ELECTRIC_FIELD_STRENGTH_RANGES)) + "]]></ELECTRICFIELDSTRENGTH_RANGES>\n");								//NEFR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ELECTRIC_FIELD_STRENGTH_RANGES),"ELECTRICFIELDSTRENGTH_RANGES");          
-            contentObject.put("ELECTRICFIELDSTRENGTH_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <ELECTRICFIELDSTRENGTH_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ELECTRIC_FIELD_STRENGTH_TEXT)))) + "]]></ELECTRICFIELDSTRENGTH_TEXT>\n");	//NEFT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ELECTRIC_FIELD_STRENGTH_TEXT),"ELECTRICFIELDSTRENGTH_TEXT");          
-            contentObject.put("ELECTRICFIELDSTRENGTH_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //current density
-            //recordBuffer.append("       <CURRENTDENSITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.CURRENT_DENSITY_RANGES)) + "]]></CURRENTDENSITY_RANGES>\n");														//NCDR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.CURRENT_DENSITY_RANGES),"CURRENTDENSITY_RANGES");          
-            contentObject.put("CURRENTDENSITY_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <CURRENTDENSITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CURRENT_DENSITY_TEXT)))) + "]]></CURRENTDENSITY_TEXT>\n");						//NCDT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.CURRENT_DENSITY_TEXT),"CURRENTDENSITY_TEXT");          
-            contentObject.put("CURRENTDENSITY_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //energy
-            //recordBuffer.append("       <ENERGY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ENERGY_RANGES)) + "]]></ENERGY_RANGES>\n");																				//NENR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ENERGY_RANGES),"ENERGY_RANGES");          
-            contentObject.put("ENERGY_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <ENERGY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ENERGY_TEXT)))) + "]]></ENERGY_TEXT>\n");													//NENT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ENERGY_TEXT),"ENERGY_TEXT");          
-            contentObject.put("ENERGY_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //electrical resistance
-            //recordBuffer.append("       <ELECTRICALRESISTANCE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ELECTRICAL_RESISTANCE_RANGES)) + "]]></ELECTRICALRESISTANCE_RANGES>\n");									//NERR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ELECTRICAL_RESISTANCE_RANGES),"ELECTRICALRESISTANCE_RANGES");          
-            contentObject.put("ELECTRICALRESISTANCE_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <ELECTRICALRESISTANCE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ELECTRICAL_RESISTANCE_TEXT)))) + "]]></ELECTRICALRESISTANCE_TEXT>\n");		//NERT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ELECTRICAL_RESISTANCE_TEXT),"ELECTRICALRESISTANCE_TEXT");          
-            contentObject.put("ELECTRICALRESISTANCE_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //electrical resistivity
-            //recordBuffer.append("       <ELECTRICALRESISTIVITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ELECTRICAL_RESISTIVITY_RANGES)) + "]]></ELECTRICALRESISTIVITY_RANGES>\n");									//NESR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ELECTRICAL_RESISTIVITY_RANGES),"ELECTRICALRESISTIVITY_RANGES");          
-            contentObject.put("ELECTRICALRESISTIVITY_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <ELECTRICALRESISTIVITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ELECTRICAL_RESISTIVITY_TEXT)))) + "]]></ELECTRICALRESISTIVITY_TEXT>\n");	//NEST
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ELECTRICAL_RESISTIVITY_TEXT),"ELECTRICALRESISTIVITY_TEXT");          
-            contentObject.put("ELECTRICALRESISTIVITY_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //electron volt energy
-            //recordBuffer.append("       <ELECTRONVOLTENERGY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ELECTRON_VOLT_RANGES)) + "]]></ELECTRONVOLTENERGY_RANGES>\n");												//NEVR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ELECTRON_VOLT_RANGES),"ELECTRONVOLTENERGY_RANGES");          
-            contentObject.put("ELECTRONVOLTENERGY_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <ELECTRONVOLTENERGY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ELECTRON_VOLT_TEXT)))) + "]]></ELECTRONVOLTENERGY_TEXT>\n");					//NEVT	
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ELECTRON_VOLT_TEXT),"ELECTRONVOLTENERGY_TEXT");          
-            contentObject.put("ELECTRONVOLTENERGY_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //capacitance
-            //recordBuffer.append("       <CAPACITANCE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.CAPACITANCE_RANGES)) + "]]></CAPACITANCE_RANGES>\n");																//NCAR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.CAPACITANCE_RANGES),"CAPACITANCE_RANGES");          
-            contentObject.put("CAPACITANCE_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <CAPACITANCE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CAPACITANCE_TEXT)))) + "]]></CAPACITANCE_TEXT>\n");									//NCAT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.CAPACITANCE_TEXT),"CAPACITANCE_TEXT");          
-            contentObject.put("CAPACITANCE_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //frequency	
-            //recordBuffer.append("       <FREQUENCY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.FREQUENCY_RANGES)) + "]]></FREQUENCY_RANGES>\n");																		//NFRR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.FREQUENCY_RANGES),"FREQUENCY_RANGES");          
-            contentObject.put("FREQUENCY_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <FREQUENCY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.FREQUENCY_TEXT)))) + "]]></FREQUENCY_TEXT>\n");										//NFRT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.FREQUENCY_TEXT),"FREQUENCY_TEXT");          
-            contentObject.put("FREQUENCY_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //power
-            //recordBuffer.append("       <POWER_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.POWER_RANGES)) + "]]></POWER_RANGES>\n");																					//NPOR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.POWER_RANGES),"POWER_RANGES");          
-            contentObject.put("POWER_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <POWER_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.POWER_TEXT)))) + "]]></POWER_TEXT>\n");													//NPOT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.POWER_TEXT),"POWER_TEXT");          
-            contentObject.put("POWER_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //apparent power 
-            //recordBuffer.append("       <APPARENTPOWER_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.APPARENT_POWER_RANGES)) + "]]></APPARENTPOWER_RANGES>\n");															//NAPR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.APPARENT_POWER_RANGES),"APPARENTPOWER_RANGES");          
-            contentObject.put("APPARENTPOWER_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <APPARENTPOWER_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.APPARENT_POWER_TEXT)))) + "]]></APPARENTPOWER_TEXT>\n");							//NAPT							
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.APPARENT_POWER_TEXT),"APPARENTPOWER_TEXT");          
-            contentObject.put("APPARENTPOWER_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //percentage
-            //recordBuffer.append("       <PERCENTAGE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.PERCENTAGE_RANGES)) + "]]></PERCENTAGE_RANGES>\n");																	//NPCR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.PERCENTAGE_RANGES),"PERCENTAGE_RANGES");          
-            contentObject.put("PERCENTAGE_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <PERCENTAGE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PERCENTAGE_TEXT)))) + "]]></PERCENTAGE_TEXT>\n");										//NPCT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.PERCENTAGE_TEXT),"PERCENTAGE_TEXT");          
-            contentObject.put("PERCENTAGE_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //magnetic flux density
-            //recordBuffer.append("       <MAGNETICFLUXDENSITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.MAGNETIC_FLUX_DENSITY_RANGES)) + "]]></MAGNETICFLUXDENSITY_RANGES>\n");										//NMDR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MAGNETIC_FLUX_DENSITY_RANGES),"MAGNETICFLUXDENSITY_RANGES");          
-            contentObject.put("MAGNETICFLUXDENSITY_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <MAGNETICFLUXDENSITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MAGNETIC_FLUX_DENSITY_TEXT)))) + "]]></MAGNETICFLUXDENSITY_TEXT>\n");		//NMDT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MAGNETIC_FLUX_DENSITY_TEXT),"MAGNETICFLUXDENSITY_TEXT");          
-            contentObject.put("MAGNETICFLUXDENSITY_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //inductance
-            //recordBuffer.append("       <INDUCTANCE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.INDUCTANCE_RANGES)) + "]]></INDUCTANCE_RANGES>\n");																	//NINR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.INDUCTANCE_RANGES),"INDUCTANCE_RANGES");          
-            contentObject.put("INDUCTANCE_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <INDUCTANCE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.INDUCTANCE_TEXT)))) + "]]></INDUCTANCE_TEXT>\n");										//NINT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.INDUCTANCE_TEXT),"INDUCTANCE_TEXT");          
-            contentObject.put("INDUCTANCE_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //volume charge density
-            //recordBuffer.append("       <VOLUMECHARGEDENSITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.VOLUME_CHARGE_DENSITY_RANGES)) + "]]></VOLUMECHARGEDENSITY_RANGES>\n");										//NVCR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.VOLUME_CHARGE_DENSITY_RANGES),"VOLUMECHARGEDENSITY_RANGES");          
-            contentObject.put("VOLUMECHARGEDENSITY_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <VOLUMECHARGEDENSITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.VOLUME_CHARGE_DENSITY_TEXT)))) + "]]></VOLUMECHARGEDENSITY_TEXT>\n");		//NVCT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.VOLUME_CHARGE_DENSITY_TEXT),"VOLUMECHARGEDENSITY_TEXT");          
-            contentObject.put("VOLUMECHARGEDENSITY_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //surface charge density
-            //recordBuffer.append("       <SURFACECHARGEDENSITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.SURFACE_CHARGE_DENSITY_RANGES)) + "]]></SURFACECHARGEDENSITY_RANGES>\n");									//NSCR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SURFACE_CHARGE_DENSITY_RANGES),"SURFACECHARGEDENSITY_RANGES");          
-            contentObject.put("SURFACECHARGEDENSITY_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <SURFACECHARGEDENSITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SURFACE_CHARGE_DENSITY_TEXT)))) + "]]></SURFACECHARGEDENSITY_TEXT>\n");		//NSCT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SURFACE_CHARGE_DENSITY_TEXT),"SURFACECHARGEDENSITY_TEXT");          
-            contentObject.put("SURFACECHARGEDENSITY_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //decibel
-            //recordBuffer.append("       <DECIBEL_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.DECIBEL_RANGES)) + "]]></DECIBEL_RANGES>\n");																			//NDER
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.DECIBEL_RANGES),"DECIBEL_RANGES");          
-            contentObject.put("DECIBEL_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <DECIBEL_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.DECIBEL_TEXT)))) + "]]></DECIBEL_TEXT>\n");												//NDET
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.DECIBEL_TEXT),"DECIBEL_TEXT");          
-            contentObject.put("DECIBEL_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //luminous flux
-            //recordBuffer.append("       <LUMINOUSFLUX_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.LUMINOUS_FLUX_RANGES)) + "]]></LUMINOUSFLUX_RANGES>\n");															//NLFR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.LUMINOUS_FLUX_RANGES),"LUMINOUSFLUX_RANGES");          
-            contentObject.put("LUMINOUSFLUX_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <LUMINOUSFLUX_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.LUMINOUS_FLUX_TEXT)))) + "]]></LUMINOUSFLUX_TEXT>\n");								//NLFT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.LUMINOUS_FLUX_TEXT),"LUMINOUSFLUX_TEXT");          
-            contentObject.put("LUMINOUSFLUX_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //illuminance
-            //recordBuffer.append("       <ILLUMINANCE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ILLUMINANCE_RANGES)) + "]]></ILLUMINANCE_RANGES>\n");																//NILR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ILLUMINANCE_RANGES),"ILLUMINANCE_RANGES");          
-            contentObject.put("ILLUMINANCE_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <ILLUMINANCE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ILLUMINANCE_TEXT)))) + "]]></ILLUMINANCE_TEXT>\n");									//NILT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ILLUMINANCE_TEXT),"ILLUMINANCE_TEXT");          
-            contentObject.put("ILLUMINANCE_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //bit rate
-            //recordBuffer.append("       <BITRATE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.BIT_RATE_RANGES)) + "]]></BITRATE_RANGES>\n");																			//NBIR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.BIT_RATE_RANGES),"BITRATE_RANGES");          
-            contentObject.put("BITRATE_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <BITRATE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.BIT_RATE_TEXT)))) + "]]></BITRATE_TEXT>\n");												//NBIT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.BIT_RATE_TEXT),"BITRATE_TEXT");          
-            contentObject.put("BITRATE_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //mass density
-            //recordBuffer.append("       <MASSDENSITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.MASS_DENSITY_RANGES)) + "]]></MASSDENSITY_RANGES>\n");																//NMSR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MASS_DENSITY_RANGES),"MASSDENSITY_RANGES");          
-            contentObject.put("MASSDENSITY_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <MASSDENSITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MASS_DENSITY_TEXT)))) + "]]></MASSDENSITY_TEXT>\n");									//NMST
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MASS_DENSITY_TEXT),"MASSDENSITY_TEXT");          
-            contentObject.put("MASSDENSITY_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //mass flow rate
-            //recordBuffer.append("       <MASSFLOWRATE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.MASS_FLOW_RATE_RANGES)) + "]]></MASSFLOWRATE_RANGES>\n");																	//NMRR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MASS_FLOW_RATE_RANGES),"MASSFLOWRATE_RANGES");          
-            contentObject.put("MASSFLOWRATE_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <MASSFLOWRATE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MASS_FLOW_RATE_TEXT)))) + "]]></MASSFLOWRATE_TEXT>\n");								//NMRT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MASS_FLOW_RATE_TEXT),"MASSFLOWRATE_TEXT");          
-            contentObject.put("MASSFLOWRATE_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //force
-            //recordBuffer.append("       <FORCE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.FORCE_RANGES)) + "]]></FORCE_RANGES>\n");																					//NFOR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.FORCE_RANGES),"FORCE_RANGES");          
-            contentObject.put("FORCE_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <FORCE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.FORCE_TEXT)))) + "]]></FORCE_TEXT>\n");													//NFOT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.FORCE_TEXT),"FORCE_TEXT");          
-            contentObject.put("FORCE_TEXT",elementArrayObject);
-            
-            //torque
-            //recordBuffer.append("       <TORQUE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.TORQUE_RANGES)) + "]]></TORQUE_RANGES>\n");																				//NTOR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.TORQUE_RANGES),"TORQUE_RANGES");          
-            contentObject.put("TORQUE_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <TORQUE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TORQUE_TEXT)))) + "]]></TORQUE_TEXT>\n");													//NTOT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.TORQUE_TEXT),"TORQUE_TEXT");          
-            contentObject.put("TORQUE_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //pressure
-            //recordBuffer.append("       <PRESSURE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.PRESSURE_RANGES)) + "]]></PRESSURE_RANGES>\n");																			//NPRR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.PRESSURE_RANGES),"PRESSURE_RANGES");          
-            contentObject.put("PRESSURE_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <PRESSURE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PRESSURE_TEXT)))) + "]]></PRESSURE_TEXT>\n");											//NPRT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.PRESSURE_TEXT),"PRESSURE_TEXT");          
-            contentObject.put("PRESSURE_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //area
-            //recordBuffer.append("       <AREA_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.AREA_RANGES)) + "]]></AREA_RANGES>\n");																						//NARR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.AREA_RANGES),"AREA_RANGES");          
-            contentObject.put("AREA_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <AREA_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.AREA_TEXT)))) + "]]></AREA_TEXT>\n");														//NART
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.AREA_TEXT),"AREA_TEXT");          
-            contentObject.put("AREA_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //volume
-            //recordBuffer.append("       <VOLUME_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.VOLUME_RANGES)) + "]]></VOLUME_RANGES>\n");																				//NVLR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.VOLUME_RANGES),"VOLUME_RANGES");          
-            contentObject.put("VOLUME_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <VOLUME_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.VOLUME_TEXT)))) + "]]></VOLUME_TEXT>\n");													//NVLT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.VOLUME_TEXT),"VOLUME_TEXT");          
-            contentObject.put("VOLUME_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //velocity
-            //recordBuffer.append("       <VELOCITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.VELOCITY_RANGES)) + "]]></VELOCITY_RANGES>\n");																			//NVER
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.VELOCITY_RANGES),"VELOCITY_RANGES");          
-            contentObject.put("VELOCITY_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <VELOCITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.VELOCITY_TEXT)))) + "]]></VELOCITY_TEXT>\n");											//NVET
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.VELOCITY_TEXT),"VELOCITY_TEXT");          
-            contentObject.put("VELOCITY_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //acceleration
-            //recordBuffer.append("       <ACCELERATION_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ACCELERATION_RANGES)) + "]]></ACCELERATION_RANGES>\n");																//NACR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ACCELERATION_RANGES),"ACCELERATION_RANGES");          
-            contentObject.put("ACCELERATION_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <ACCELERATION_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ACCELERATION_TEXT)))) + "]]></ACCELERATION_TEXT>\n");								//NACT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ACCELERATION_TEXT),"ACCELERATION_TEXT");          
-            contentObject.put("ACCELERATION_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //angular velocity
-            //recordBuffer.append("       <ANGULARVELOCITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ANGULAR_VELOCITY_RANGES)) + "]]></ANGULARVELOCITY_RANGES>\n");													//NAVR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ANGULAR_VELOCITY_RANGES),"ANGULARVELOCITY_RANGES");          
-            contentObject.put("ANGULARVELOCITY_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <ANGULARVELOCITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ANGULAR_VELOCITY_TEXT)))) + "]]></ANGULARVELOCITY_TEXT>\n");						//NAVT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ANGULAR_VELOCITY_TEXT),"ANGULARVELOCITY_TEXT");          
-            contentObject.put("ANGULARVELOCITY_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //rotational speed 	
-            //recordBuffer.append("       <ROTATIONALSPEED_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ROTATIONAL_SPEED_RANGES)) + "]]></ROTATIONALSPEED_RANGES>\n");													//NRSR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ROTATIONAL_SPEED_RANGES),"ROTATIONALSPEED_RANGES");          
-            contentObject.put("ROTATIONALSPEED_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <ROTATIONALSPEED_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ROTATIONAL_SPEED_TEXT)))) + "]]></ROTATIONALSPEED_TEXT>\n");						//NRST
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ROTATIONAL_SPEED_TEXT),"ROTATIONALSPEED_TEXT");          
-            contentObject.put("ROTATIONALSPEED_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //age mass
-            //recordBuffer.append("       <AGE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.AGE_RANGES)) + "]]></AGE_RANGES>\n");																						//NAGR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.AGE_RANGES),"AGE_RANGES");          
-            contentObject.put("AGE_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <AGE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.AGE_TEXT)))) + "]]></AGE_TEXT>\n");															//NAGT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.AGE_TEXT),"AGE_TEXT");          
-            contentObject.put("AGE_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //molar mass
-            //recordBuffer.append("       <MOLARMASS_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.MOLAR_MASS_RANGES)) + "]]></MOLARMASS_RANGES>\n");																		//NMMR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MOLAR_MASS_RANGES),"MOLARMASS_RANGES");          
-            contentObject.put("MOLARMASS_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <MOLARMASS_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MOLAR_MASS_TEXT)))) + "]]></MOLARMASS_TEXT>\n");										//NMMT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MOLAR_MASS_TEXT),"MOLARMASS_TEXT");          
-            contentObject.put("MOLARMASS_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //molality
-            //recordBuffer.append("       <MOLALITYOFSUBSTANCE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.MOLALITY_OF_SUBSTANCE_RANGES)) + "]]></MOLALITYOFSUBSTANCE_RANGES>\n");										//NMOR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MOLALITY_OF_SUBSTANCE_RANGES),"MOLALITYOFSUBSTANCE_RANGES");          
-            contentObject.put("MOLALITYOFSUBSTANCE_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <MOLALITYOFSUBSTANCE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MOLALITY_OF_SUBSTANCE_TEXT)))) + "]]></MOLALITYOFSUBSTANCE_TEXT>\n");		//NMOT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MOLALITY_OF_SUBSTANCE_TEXT),"MOLALITYOFSUBSTANCE_TEXT");          
-            contentObject.put("MOLALITYOFSUBSTANCE_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //radioactivity
-            //recordBuffer.append("       <RADIOACTIVITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.RADIOACTIVITY_RANGES)) + "]]></RADIOACTIVITY_RANGES>\n");															//NRAR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.RADIOACTIVITY_RANGES),"RADIOACTIVITY_RANGES");          
-            contentObject.put("RADIOACTIVITY_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <RADIOACTIVITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.RADIOACTIVITY_TEXT)))) + "]]></RADIOACTIVITY_TEXT>\n");							//NRAT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.RADIOACTIVITY_TEXT),"RADIOACTIVITY_TEXT");          
-            contentObject.put("RADIOACTIVITY_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //absorbed dose
-            //recordBuffer.append("       <ABSORBEDDOSE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ABSORBED_DOSE_RANGES)) + "]]></ABSORBEDDOSE_RANGES>\n");															//NABR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ABSORBED_DOSE_RANGES),"ABSORBEDDOSE_RANGES");          
-            contentObject.put("ABSORBEDDOSE_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <ABSORBEDDOSE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ABSORBED_DOSE_TEXT)))) + "]]></ABSORBEDDOSE_TEXT>\n");								//NABT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ABSORBED_DOSE_TEXT),"ABSORBEDDOSE_TEXT");          
-            contentObject.put("ABSORBEDDOSE_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //radiation exposure
-            //recordBuffer.append("       <RADIATIONEXPOSURE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.RADIATION_EXPOSURE_RANGES)) + "]]></RADIATIONEXPOSURE_RANGES>\n");												//NRER
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.RADIATION_EXPOSURE_RANGES),"RADIATIONEXPOSURE_RANGES");          
-            contentObject.put("RADIATIONEXPOSURE_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <RADIATIONEXPOSURE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.RADIATION_EXPOSURE_TEXT)))) + "]]></RADIATIONEXPOSURE_TEXT>\n");				//NRET
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.RADIATION_EXPOSURE_TEXT),"RADIATIONEXPOSURE_TEXT");          
-            contentObject.put("RADIATIONEXPOSURE_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //Luminance
-            //recordBuffer.append("       <LUMINANCE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.LUMINANCE_RANGES)) + "]]></LUMINANCE_RANGES>\n");																		//NLUR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.LUMINANCE_RANGES),"LUMINANCE_RANGES");          
-            contentObject.put("LUMINANCE_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <LUMINANCE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.LUMINANCE_TEXT)))) + "]]></LUMINANCE_TEXT>\n");										//NLUT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.LUMINANCE_TEXT),"LUMINANCE_TEXT");          
-            contentObject.put("LUMINANCE_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //Magnetic field strengt
-            //recordBuffer.append("       <MAGNETICFIELDSTRENGTH_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.MAGNETIC_FIELD_STRENGTH_RANGES)) + "]]></MAGNETICFIELDSTRENGTH_RANGES>\n");								//NFSR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MAGNETIC_FIELD_STRENGTH_RANGES),"MAGNETICFIELDSTRENGTH_RANGES");          
-            contentObject.put("MAGNETICFIELDSTRENGTH_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <MAGNETICFIELDSTRENGTH_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MAGNETIC_FIELD_STRENGTH_TEXT)))) + "]]></MAGNETICFIELDSTRENGTH_TEXT>\n");	//NFST
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MAGNETIC_FIELD_STRENGTH_TEXT),"MAGNETICFIELDSTRENGTH_TEXT");          
-            contentObject.put("MAGNETICFIELDSTRENGTH_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //Spectral_Efficiency
-            //recordBuffer.append("       <SPECTRALEFFICIENCY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.SPECTRAL_EFFICIENCY_RANGES)) + "]]></SPECTRALEFFICIENCY_RANGES>\n");											//NSER
-            
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SPECTRAL_EFFICIENCY_RANGES),"SPECTRALEFFICIENCY_RANGES");          
-            contentObject.put("SPECTRALEFFICIENCY_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <SPECTRALEFFICIENCY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SPECTRAL_EFFICIENCY_TEXT)))) + "]]></SPECTRALEFFICIENCY_TEXT>\n");			//NSET
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SPECTRAL_EFFICIENCY_TEXT),"SPECTRALEFFICIENCY_TEXT");          
-            contentObject.put("SPECTRALEFFICIENCY_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //Surface_Power_Density
-            //recordBuffer.append("       <SURFACEPOWERDENSITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.SURFACE_POWER_DENSITY_RANGES)) + "]]></SURFACEPOWERDENSITY_RANGES>\n");										//NSPR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SURFACE_POWER_DENSITY_RANGES),"SURFACEPOWERDENSITY_RANGES");          
-            contentObject.put("SURFACEPOWERDENSITY_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <SURFACEPOWERDENSITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SURFACE_POWER_DENSITY_TEXT)))) + "]]></SURFACEPOWERDENSITY_TEXT>\n");		//NSPT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SURFACE_POWER_DENSITY_TEXT),"SURFACEPOWERDENSITY_TEXT");          
-            contentObject.put("SURFACEPOWERDENSITY_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //thermal conductivity
-            //recordBuffer.append("       <THERMALCONDUCTIVITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.THERMAL_CONDUCTIVITY_RANGES)) + "]]></THERMALCONDUCTIVITY_RANGES>\n");										//NTCR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.THERMAL_CONDUCTIVITY_RANGES),"THERMALCONDUCTIVITY_RANGES");          
-            contentObject.put("THERMALCONDUCTIVITY_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <THERMALCONDUCTIVITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.THERMAL_CONDUCTIVITY_TEXT)))) + "]]></THERMALCONDUCTIVITY_TEXT>\n");			//NTCT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.THERMAL_CONDUCTIVITY_TEXT),"THERMALCONDUCTIVITY_TEXT");          
-            contentObject.put("THERMALCONDUCTIVITY_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //new added on 4/11/2016
-            //Decibel isotropic
-            //recordBuffer.append("       <DECIBELISOTROPIC_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.DECIBEL_ISOTROPIC_RANGES)) + "]]></DECIBELISOTROPIC_RANGES>\n");												//NDIR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.DECIBEL_ISOTROPIC_RANGES),"DECIBELISOTROPIC_RANGES");          
-            contentObject.put("DECIBELISOTROPIC_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <DECIBELISOTROPIC_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.DECIBEL_ISOTROPIC_TEXT)))) + "]]></DECIBELISOTROPIC_TEXT>\n");					//NDIT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.DECIBEL_ISOTROPIC_TEXT),"DECIBELISOTROPIC_TEXT");          
-            contentObject.put("DECIBELISOTROPIC_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //Decibel milliwatts
-            //recordBuffer.append("       <DECIBELMILLIWATTS_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.DECIBEL_MILLIWATTS_RANGES)) + "]]></DECIBELMILLIWATTS_RANGES>\n");												//NDMR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.DECIBEL_MILLIWATTS_RANGES),"DECIBELMILLIWATTS_RANGES");          
-            contentObject.put("DECIBELMILLIWATTS_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <DECIBELMILLIWATTS_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.DECIBEL_MILLIWATTS_TEXT)))) + "]]></DECIBELMILLIWATTS_TEXT>\n");				//NDMT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.DECIBEL_MILLIWATTS_TEXT),"DECIBELMILLIWATTS_TEXT");          
-            contentObject.put("DECIBELMILLIWATTS_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //Equivalent Dose
-            //recordBuffer.append("       <EQUIVALENTDOSE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.EQUIVALENT_DOSE_RANGES)) + "]]></EQUIVALENTDOSE_RANGES>\n");														//NEQR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.EQUIVALENT_DOSE_RANGES),"EQUIVALENTDOSE_RANGES");          
-            contentObject.put("EQUIVALENTDOSE_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <EQUIVALENTDOSE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.EQUIVALENT_DOSE_TEXT)))) + "]]></EQUIVALENTDOSE_TEXT>\n");						//NEQT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.EQUIVALENT_DOSE_TEXT),"EQUIVALENTDOSE_TEXT");          
-            contentObject.put("EQUIVALENTDOSE_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //Molar concentration
-            //recordBuffer.append("       <MOLARCONCENTRATION_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.MOLAR_CONCENTRATION_RANGES)) + "]]></MOLARCONCENTRATION_RANGES>\n");											//NMCR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MOLAR_CONCENTRATION_RANGES),"MOLARCONCENTRATION_RANGES");          
-            contentObject.put("MOLARCONCENTRATION_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <MOLARCONCENTRATION_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MOLAR_CONCENTRATION_TEXT)))) + "]]></MOLARCONCENTRATION_TEXT>\n");			//NMCT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MOLAR_CONCENTRATION_TEXT),"MOLARCONCENTRATION_TEXT");          
-            contentObject.put("MOLARCONCENTRATION_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //Linear Density
-            //recordBuffer.append("       <LINEARDENSITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.LINEAR_DENSITY_RANGES)) + "]]></LINEARDENSITY_RANGES>\n");															//NLDR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.LINEAR_DENSITY_RANGES),"LINEARDENSITY_RANGES");          
-            contentObject.put("LINEARDENSITY_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.println("       <LINEARDENSITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.LINEAR_DENSITY_TEXT)))) + "]]></LINEARDENSITY_TEXT>\n");							//NLDT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.LINEAR_DENSITY_TEXT),"LINEARDENSITY_TEXT");          
-            contentObject.put("LINEARDENSITY_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //luminous efficiency
-            //recordBuffer.append("       <LUMINOUSEFFICIENCY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.LUMINOUS_EFFICIENCY_RANGES)) + "]]></LUMINOUSEFFICIENCY_RANGES>\n");											//NLYR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.LUMINOUS_EFFICIENCY_RANGES),"LUMINOUSEFFICIENCY_RANGES");          
-            contentObject.put("LUMINOUSEFFICIENCY_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <LUMINOUSEFFICIENCY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.LUMINOUS_EFFICIENCY_TEXT)))) + "]]></LUMINOUSEFFICIENCY_TEXT>\n");			//NLYT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.LUMINOUS_EFFICIENCY_TEXT),"LUMINOUSEFFICIENCY_TEXT");          
-            contentObject.put("LUMINOUSEFFICIENCY_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //luminous efficacy
-            //recordBuffer.append("       <LUMINOUSEFFICACY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.LUMINOUS_EFFICACY_RANGES)) + "]]></LUMINOUSEFFICACY_RANGES>\n");												//NLER
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.LUMINOUS_EFFICACY_RANGES),"LUMINOUSEFFICACY_RANGES");          
-            contentObject.put("LUMINOUSEFFICACY_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <LUMINOUSEFFICACY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.LUMINOUS_EFFICACY_TEXT)))) + "]]></LUMINOUSEFFICACY_TEXT>\n");					//NLET
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.LUMINOUS_EFFICACY_TEXT),"LUMINOUSEFFICACY_TEXT");          
-            contentObject.put("LUMINOUSEFFICACY_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //Specific Energy
-            //recordBuffer.append("       <SPECIFICENERGY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.SPECIFIC_ENERGY_RANGES)) + "]]></SPECIFICENERGY_RANGES>\n");														//NSFR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SPECIFIC_ENERGY_RANGES),"SPECIFICENERGY_RANGES");          
-            contentObject.put("SPECIFICENERGY_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <SPECIFICENERGY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SPECIFIC_ENERGY_TEXT)))) + "]]></SPECIFICENERGY_TEXT>\n");						//NSFT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SPECIFIC_ENERGY_TEXT),"SPECIFICENERGY_TEXT");          
-            contentObject.put("SPECIFICENERGY_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //Specific Surface area
-            //recordBuffer.append("       <SPECIFICSURFACEAREA_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.SPECIFIC_SURFACE_AREA_RANGES)) + "]]></SPECIFICSURFACEAREA_RANGES>\n");										//NSSR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SPECIFIC_SURFACE_AREA_RANGES),"SPECIFICSURFACEAREA_RANGES");          
-            contentObject.put("SPECIFICSURFACEAREA_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <SPECIFICSURFACEAREA_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SPECIFIC_SURFACE_AREA_TEXT)))) + "]]></SPECIFICSURFACEAREA_TEXT>\n");		//NSST
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SPECIFIC_SURFACE_AREA_TEXT),"SPECIFICSURFACEAREA_TEXT");          
-            contentObject.put("SPECIFICSURFACEAREA_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //Specific Volume
-            //recordBuffer.append("       <SPECIFICVOLUME_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.SPECIFIC_VOLUME_RANGES)) + "]]></SPECIFICVOLUME_RANGES>\n");														//NSVR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SPECIFIC_VOLUME_RANGES),"SPECIFICVOLUME_RANGES");          
-            contentObject.put("SPECIFICVOLUME_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <SPECIFICVOLUME_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SPECIFIC_VOLUME_TEXT)))) + "]]></SPECIFICVOLUME_TEXT>\n");						//NSVT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SPECIFIC_VOLUME_TEXT),"SPECIFICVOLUME_TEXT");          
-            contentObject.put("SPECIFICVOLUME_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //Surface Tension
-            //recordBuffer.append("       <SURFACETENSION_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.SURFACE_TENSION_RANGES)) + "]]></SURFACETENSION_RANGES>\n");														//NSTR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SURFACE_TENSION_RANGES),"SURFACETENSION_RANGES");          
-            contentObject.put("SURFACETENSION_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <SURFACETENSION_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SURFACE_TENSION_TEXT)))) + "]]></SURFACETENSION_TEXT>\n");						//NSTT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SPECIFIC_VOLUME_TEXT),"SURFACETENSION_TEXT");          
-            contentObject.put("SURFACETENSION_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //Surface Density
-            //recordBuffer.append("       <SURFACEDENSITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.SURFACE_DENSITY_RANGES)) + "]]></SURFACEDENSITY_RANGES>\n");														//NSDR
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SURFACE_DENSITY_RANGES),"SURFACEDENSITY_RANGES");          
-            contentObject.put("SURFACEDENSITY_RANGES",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <SURFACEDENSITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SURFACE_DENSITY_TEXT)))) + "]]></SURFACEDENSITY_TEXT>\n");						//NSDT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SURFACE_DENSITY_TEXT),"SURFACEDENSITY_TEXT");          
-            contentObject.put("SURFACEDENSITY_TEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);           
-            //recordBuffer.append("       <NUMERICAL_UNITS><![CDATA[" + notNull(multiFormat(rec.getStrings(EVCombinedRec.NUMERICALUNITS)))+ "]]></NUMERICAL_UNITS>\n");																//NUU
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.NUMERICALUNITS),"NUMERICAL_UNITS");          
-            contentObject.put("NUMERICAL_UNITS",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //EID
-            //recordBuffer.append("       <EID><![CDATA[" + notNull(rec.getString(EVCombinedRec.EID)) + "]]></EID>\n");	        																									//EID
-            contentObject = new JSONObject();
-            contentObject.put("EID",notNull(rec.getString(EVCombinedRec.EID)));
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <DEPARTMENTID><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.DEPARTMENTID)))) + "]]></DEPARTMENTID>\n");												//DTID
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.DEPARTMENTID),"DEPARTMENTID");          
-            contentObject.put("DEPARTMENTID",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //added for georef at 03/16/2016
-            //TITLE_OF_COLLECTION
-            //recordBuffer.append("       <TITLEOFCOLLECTION><![CDATA[" +notNull(Entity.prepareString(rec.getString(EVCombinedRec.TITLE_OF_COLLECTION))) + " QstemQ " +  notNull(getStems(Entity.prepareString(rec.getString(EVCombinedRec.TITLE_OF_COLLECTION)))) + "]]></TITLEOFCOLLECTION>\n");									//TIC
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.TITLE_OF_COLLECTION),"TITLEOFCOLLECTION");          
-            contentObject.put("TITLEOFCOLLECTION",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //UNIVERSITY
-            //recordBuffer.append("       <UNIVERSITY><![CDATA[" +notNull(Entity.prepareString(rec.getString(EVCombinedRec.UNIVERSITY)))+ " QstemQ " + notNull(getStems(Entity.prepareString(rec.getString(EVCombinedRec.UNIVERSITY)))) + "]]></UNIVERSITY>\n");														//UNI
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.UNIVERSITY),"UNIVERSITY");          
-            contentObject.put("UNIVERSITY",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //TYPE_OF_DEGREE
-            //recordBuffer.append("       <TYPEOFDEGREE><![CDATA[" + notNull(rec.getString(EVCombinedRec.TYPE_OF_DEGREE)) + "]]></TYPEOFDEGREE>\n");																				//TOD
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.TYPE_OF_DEGREE),"TYPEOFDEGREE");          
-            contentObject.put("TYPEOFDEGREE",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //ANNOTATION
-            //recordBuffer.append("       <ANNOTATION><![CDATA[" + notNull(multiFormat(rec.getStrings(EVCombinedRec.ANNOTATION))) + " QstemQ " + notNull(getStems(Entity.prepareString(rec.getString(EVCombinedRec.ANNOTATION)))) + "]]></ANNOTATION>\n");																			//ANN
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ANNOTATION),"ANNOTATION");          
-            contentObject.put("ANNOTATION",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //MAP_SCALE
-            //recordBuffer.append("       <MAPSCALE><![CDATA[" + notNull(multiFormat(rec.getStrings(EVCombinedRec.MAP_SCALE))) + "]]></MAPSCALE>\n");																				//MPS
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MAP_SCALE),"MAPSCALE");          
-            contentObject.put("MAPSCALE",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //MAP_TYPE
-            //recordBuffer.append("       <MAPTYPE><![CDATA[" + notNull(multiFormat(rec.getStrings(EVCombinedRec.MAP_TYPE))) + "]]></MAPTYPE>\n");																					//MPT
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MAP_TYPE),"MAPTYPE");          
-            contentObject.put("MAPTYPE",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //SOURCE_NOTE
-            //recordBuffer.append("       <SOURCENOTE><![CDATA[" + notNull(rec.getString(EVCombinedRec.SOURCE_NOTE)) + " QstemQ " + notNull(getStems(Entity.prepareString(rec.getString(EVCombinedRec.SOURCE_NOTE))))+ "]]></SOURCENOTE>\n");																						//SNO
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SOURCE_NOTE),"SOURCENOTE");          
-            contentObject.put("SOURCENOTE",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //GRANTID
-            //recordBuffer.append("       <GRANTID><![CDATA[" + notNull(multiFormat(rec.getStrings(EVCombinedRec.GRANTID))) + "]]></GRANTID>\n");																					//GID
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.GRANTID),"GRANTID");          
-            contentObject.put("GRANTID",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //GRANTAGENCY
-            //recordBuffer.append("       <GRANTAGENCY><![CDATA[" + notNull(multiFormat(rec.getStrings(EVCombinedRec.GRANTAGENCY))) + "]]></GRANTAGENCY>\n");		//GAG
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.GRANTAGENCY),"GRANTAGENCY");          
-            contentObject.put("GRANTAGENCY",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //SPARE FIELDS
-            //SOURCEBIBTEXT
-            //recordBuffer.append("       <EV_SPARE1><![CDATA[]]></EV_SPARE1>");	//tempotary block out SOURCEBIBTEXT
-            //recordBuffer.append("       <EV_SPARE1><![CDATA["+ notNull(rec.getString(EVCombinedRec.SOURCEBIBTEXT)) +"]]></EV_SPARE1>\n");//SPA1
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SOURCEBIBTEXT),"SOURCEBIBTEXT");          
-            contentObject.put("SOURCEBIBTEXT",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //move standardid to here to get all search
-            //STANDARDID
-            /*
-            if(rec.getString(EVCombinedRec.STANDARDID)==null)
+        
+            if(rec.getStrings(EVCombinedRec.AMOUNT_OF_SUBSTANCE_RANGES)!=null)
             {
-            	recordBuffer.append("       <EV_SPARE2><![CDATA[]]></EV_SPARE2>\n");
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.AMOUNT_OF_SUBSTANCE_RANGES),"AMOUNTOFSUBSTANCE_RANGES");          
+	            contentObject.put("AMOUNTOFSUBSTANCE_RANGES".toLowerCase(),elementArrayObject);	           
             }
-            else      
+                       
+            if(rec.getStrings(EVCombinedRec.AMOUNT_OF_SUBSTANCE_TEXT)!=null)
             {
-            	recordBuffer.append("       <EV_SPARE2><![CDATA[" + notNull(formatStandardCodes(rec.getString(EVCombinedRec.STANDARDID))) + "QstemQ " +notNull(getStems(formatStandardCodes(rec.getString(EVCombinedRec.STANDARDID)))) +"]]></EV_SPARE2>\n");//SPA2
-            }  
-            */                   
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.STANDARDID),"STANDARDID");          
-            contentObject.put("STANDARDID",elementArrayObject);
-            contentJsonArray.add(contentObject);
-            //recordBuffer.append("       <EV_SPARE3><![CDATA[]]></EV_SPARE3>");//SPA3
-            //added by hmo on 2019/09/11 for inspec orgid
-            //recordBuffer.append("       <EV_SPARE3><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ORG_ID)))) + "]]></EV_SPARE3>\n");//SPA3
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ORG_ID),"ORG_ID");          
-            contentObject.put("ORG_ID",elementArrayObject);
-            contentJsonArray.add(contentObject);
-           
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ISOPENACESS),"ISOPENACESS");          
-            contentObject.put("ISOPENACESS",elementArrayObject);
-            contentJsonArray.add(contentObject);
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.AMOUNT_OF_SUBSTANCE_TEXT)),"AMOUNTOFSUBSTANCE_TEXT");          
+	            contentObject.put("AMOUNTOFSUBSTANCE_TEXT".toLowerCase(),elementArrayObject);
+            }
+                      
+            if(rec.getStrings(EVCombinedRec.ELECTRIC_CURRENT_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ELECTRIC_CURRENT_RANGES),"ELECTRICCURRENT_RANGES");          
+	            contentObject.put("ELECTRICCURRENT_RANGES".toLowerCase(),elementArrayObject);
+            }
+                      
+            if(rec.getStrings(EVCombinedRec.ELECTRIC_CURRENT_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.ELECTRIC_CURRENT_TEXT)),"ELECTRICCURRENT_TEXT");          
+	            contentObject.put("ELECTRICCURRENT_TEXT".toLowerCase(),elementArrayObject);
+            }
             
-            contentObject = new JSONObject();
-            elementArrayObject = formJsonArray(combine(rec.getStrings(EVCombinedRec.GRANTID),rec.getStrings(EVCombinedRec.GRANTAGENCY),rec.getStrings(EVCombinedRec.GRANTTEXT)),"GRANT");          
-            contentObject.put("GRANT",elementArrayObject);
-            contentJsonArray.add(contentObject);
+            if(rec.getStrings(EVCombinedRec.MASS_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MASS_RANGES),"MASS_RANGES");          
+	            contentObject.put("MASS_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.MASS_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.MASS_TEXT)),"MASS_TEXT");          
+	            contentObject.put("MASS_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.TEMPERATURE_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.TEMPERATURE_RANGES),"TEMPERATURE_RANGES");          
+	            contentObject.put("TEMPERATURE_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.TEMPERATURE_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.TEMPERATURE_TEXT)),"TEMPERATURE_TEXT");          
+	            contentObject.put("TEMPERATURE_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.TIME_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.TIME_RANGES),"TIME_RANGES");          
+	            contentObject.put("TIME_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.TIME_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.TIME_TEXT)),"TIME_TEXT");          
+	            contentObject.put("TIME_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.SIZE_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SIZE_RANGES),"SIZE_RANGES");          
+	            contentObject.put("SIZE_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.SIZE_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.SIZE_TEXT)),"SIZE_TEXT");          
+	            contentObject.put("SIZE_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.ELECTRICAL_CONDUCTANCE_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ELECTRICAL_CONDUCTANCE_RANGES),"ELECTRICALCONDUCTANCE_RANGES");          
+	            contentObject.put("ELECTRICALCONDUCTANCE_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.ELECTRICAL_CONDUCTANCE_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.ELECTRICAL_CONDUCTANCE_TEXT)),"ELECTRICALCONDUCTANCE_TEXT");          
+	            contentObject.put("ELECTRICALCONDUCTANCE_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.ELECTRICAL_CONDUCTIVITY_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ELECTRICAL_CONDUCTIVITY_RANGES),"ELECTRICALCONDUCTIVITY_RANGES");          
+	            contentObject.put("ELECTRICALCONDUCTIVITY_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.ELECTRICAL_CONDUCTIVITY_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.ELECTRICAL_CONDUCTIVITY_TEXT)),"ELECTRICALCONDUCTIVITY_TEXT");          
+	            contentObject.put("ELECTRICALCONDUCTIVITY_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.VOLTAGE_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.VOLTAGE_RANGES),"VOLTAGE_RANGES");          
+	            contentObject.put("VOLTAGE_	RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.VOLTAGE_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.VOLTAGE_TEXT)),"VOLTAGE_TEXT");          
+	            contentObject.put("VOLTAGE_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.ELECTRIC_FIELD_STRENGTH_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ELECTRIC_FIELD_STRENGTH_RANGES),"ELECTRICFIELDSTRENGTH_RANGES");          
+	            contentObject.put("ELECTRICFIELDSTRENGTH_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.ELECTRIC_FIELD_STRENGTH_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.ELECTRIC_FIELD_STRENGTH_TEXT)),"ELECTRICFIELDSTRENGTH_TEXT");          
+	            contentObject.put("ELECTRICFIELDSTRENGTH_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.CURRENT_DENSITY_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.CURRENT_DENSITY_RANGES),"CURRENTDENSITY_RANGES");          
+	            contentObject.put("CURRENTDENSITY_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.CURRENT_DENSITY_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.CURRENT_DENSITY_TEXT)),"CURRENTDENSITY_TEXT");          
+	            contentObject.put("CURRENTDENSITY_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.ENERGY_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ENERGY_RANGES),"ENERGY_RANGES");          
+	            contentObject.put("ENERGY_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.ENERGY_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.ENERGY_TEXT)),"ENERGY_TEXT");          
+	            contentObject.put("ENERGY_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.ELECTRICAL_RESISTANCE_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ELECTRICAL_RESISTANCE_RANGES),"ELECTRICALRESISTANCE_RANGES");          
+	            contentObject.put("ELECTRICALRESISTANCE_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.ELECTRICAL_RESISTANCE_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.ELECTRICAL_RESISTANCE_TEXT)),"ELECTRICALRESISTANCE_TEXT");          
+	            contentObject.put("ELECTRICALRESISTANCE_TEXT".toLowerCase(),elementArrayObject);	            
+            }
+            
+            if(rec.getStrings(EVCombinedRec.ELECTRICAL_RESISTIVITY_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ELECTRICAL_RESISTIVITY_RANGES),"ELECTRICALRESISTIVITY_RANGES");          
+	            contentObject.put("ELECTRICALRESISTIVITY_RANGES".toLowerCase(),elementArrayObject);
+            }
+                     
+            if(rec.getStrings(EVCombinedRec.ELECTRICAL_RESISTIVITY_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.ELECTRICAL_RESISTIVITY_TEXT)),"ELECTRICALRESISTIVITY_TEXT");          
+	            contentObject.put("ELECTRICALRESISTIVITY_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.ELECTRON_VOLT_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ELECTRON_VOLT_RANGES),"ELECTRONVOLTENERGY_RANGES");          
+	            contentObject.put("ELECTRONVOLTENERGY_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.ELECTRON_VOLT_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.ELECTRON_VOLT_TEXT)),"ELECTRONVOLTENERGY_TEXT");          
+	            contentObject.put("ELECTRONVOLTENERGY_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.CAPACITANCE_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.CAPACITANCE_RANGES),"CAPACITANCE_RANGES");          
+	            contentObject.put("CAPACITANCE_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.CAPACITANCE_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.CAPACITANCE_TEXT)),"CAPACITANCE_TEXT");          
+	            contentObject.put("CAPACITANCE_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.FREQUENCY_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.FREQUENCY_RANGES),"FREQUENCY_RANGES");          
+	            contentObject.put("FREQUENCY_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.FREQUENCY_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.FREQUENCY_TEXT)),"FREQUENCY_TEXT");          
+	            contentObject.put("FREQUENCY_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.POWER_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.POWER_RANGES),"POWER_RANGES");          
+	            contentObject.put("POWER_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.POWER_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.POWER_TEXT)),"POWER_TEXT");          
+	            contentObject.put("POWER_TEXT".toLowerCase(),elementArrayObject);
+            }
+
+            if(rec.getStrings(EVCombinedRec.APPARENT_POWER_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.APPARENT_POWER_RANGES)),"APPARENTPOWER_RANGES");          
+	            contentObject.put("APPARENTPOWER_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.APPARENT_POWER_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.APPARENT_POWER_TEXT)),"APPARENTPOWER_TEXT");          
+	            contentObject.put("APPARENTPOWER_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.PERCENTAGE_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.PERCENTAGE_RANGES)),"PERCENTAGE_RANGES");          
+	            contentObject.put("PERCENTAGE_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.PERCENTAGE_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.PERCENTAGE_TEXT)),"PERCENTAGE_TEXT");          
+	            contentObject.put("PERCENTAGE_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.MAGNETIC_FLUX_DENSITY_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MAGNETIC_FLUX_DENSITY_RANGES),"MAGNETICFLUXDENSITY_RANGES");          
+	            contentObject.put("MAGNETICFLUXDENSITY_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.MAGNETIC_FLUX_DENSITY_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.MAGNETIC_FLUX_DENSITY_TEXT)),"MAGNETICFLUXDENSITY_TEXT");          
+	            contentObject.put("MAGNETICFLUXDENSITY_TEXT".toLowerCase(),elementArrayObject);
+            }
+                      
+            if(rec.getStrings(EVCombinedRec.INDUCTANCE_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.INDUCTANCE_RANGES),"INDUCTANCE_RANGES");          
+	            contentObject.put("INDUCTANCE_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.INDUCTANCE_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.INDUCTANCE_TEXT)),"INDUCTANCE_TEXT");          
+	            contentObject.put("INDUCTANCE_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.VOLUME_CHARGE_DENSITY_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.VOLUME_CHARGE_DENSITY_RANGES),"VOLUMECHARGEDENSITY_RANGES");          
+	            contentObject.put("VOLUMECHARGEDENSITY_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.VOLUME_CHARGE_DENSITY_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.VOLUME_CHARGE_DENSITY_TEXT)),"VOLUMECHARGEDENSITY_TEXT");          
+	            contentObject.put("VOLUMECHARGEDENSITY_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.SURFACE_CHARGE_DENSITY_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SURFACE_CHARGE_DENSITY_RANGES),"SURFACECHARGEDENSITY_RANGES");          
+	            contentObject.put("SURFACECHARGEDENSITY_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.SURFACE_CHARGE_DENSITY_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.SURFACE_CHARGE_DENSITY_TEXT)),"SURFACECHARGEDENSITY_TEXT");          
+	            contentObject.put("SURFACECHARGEDENSITY_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.DECIBEL_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.DECIBEL_RANGES),"DECIBEL_RANGES");          
+	            contentObject.put("DECIBEL_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.DECIBEL_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.DECIBEL_TEXT)),"DECIBEL_TEXT");          
+	            contentObject.put("DECIBEL_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.LUMINOUS_FLUX_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.LUMINOUS_FLUX_RANGES),"LUMINOUSFLUX_RANGES");          
+	            contentObject.put("LUMINOUSFLUX_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.LUMINOUS_FLUX_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.LUMINOUS_FLUX_TEXT)),"LUMINOUSFLUX_TEXT");          
+	            contentObject.put("LUMINOUSFLUX_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.ILLUMINANCE_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ILLUMINANCE_RANGES),"ILLUMINANCE_RANGES");          
+	            contentObject.put("ILLUMINANCE_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.ILLUMINANCE_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.ILLUMINANCE_TEXT)),"ILLUMINANCE_TEXT");          
+	            contentObject.put("ILLUMINANCE_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.BIT_RATE_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.BIT_RATE_RANGES),"BITRATE_RANGES");          
+	            contentObject.put("BITRATE_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.BIT_RATE_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.BIT_RATE_TEXT)),"BITRATE_TEXT");          
+	            contentObject.put("BITRATE_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.MASS_DENSITY_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MASS_DENSITY_RANGES),"MASSDENSITY_RANGES");          
+	            contentObject.put("MASSDENSITY_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.MASS_DENSITY_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.MASS_DENSITY_TEXT)),"MASSDENSITY_TEXT");          
+	            contentObject.put("MASSDENSITY_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.MASS_FLOW_RATE_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MASS_FLOW_RATE_RANGES),"MASSFLOWRATE_RANGES");          
+	            contentObject.put("MASSFLOWRATE_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.MASS_FLOW_RATE_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.MASS_FLOW_RATE_TEXT)),"MASSFLOWRATE_TEXT");          
+	            contentObject.put("MASSFLOWRATE_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.FORCE_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.FORCE_RANGES),"FORCE_RANGES");          
+	            contentObject.put("FORCE_RANGES".toLowerCase(),elementArrayObject);
+            }
+
+            if(rec.getStrings(EVCombinedRec.FORCE_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.FORCE_TEXT)),"FORCE_TEXT");          
+	            contentObject.put("FORCE_TEXT".toLowerCase(),elementArrayObject);
+            }
+        
+            if(rec.getStrings(EVCombinedRec.TORQUE_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.TORQUE_RANGES),"TORQUE_RANGES");          
+	            contentObject.put("TORQUE_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.TORQUE_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.TORQUE_TEXT)),"TORQUE_TEXT");          
+	            contentObject.put("TORQUE_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.PRESSURE_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.PRESSURE_RANGES),"PRESSURE_RANGES");          
+	            contentObject.put("PRESSURE_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.PRESSURE_TEXT)!=null)
+			{
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.PRESSURE_TEXT)),"PRESSURE_TEXT");          
+	            contentObject.put("PRESSURE_TEXT".toLowerCase(),elementArrayObject);
+			}
+			
+            if(rec.getStrings(EVCombinedRec.AREA_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.AREA_RANGES),"AREA_RANGES");          
+	            contentObject.put("AREA_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.AREA_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.AREA_TEXT)),"AREA_TEXT");          
+	            contentObject.put("AREA_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.VOLUME_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.VOLUME_RANGES),"VOLUME_RANGES");          
+	            contentObject.put("VOLUME_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.VOLUME_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.VOLUME_TEXT)),"VOLUME_TEXT");          
+	            contentObject.put("VOLUME_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.VELOCITY_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.VELOCITY_RANGES),"VELOCITY_RANGES");          
+	            contentObject.put("VELOCITY_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.VELOCITY_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.VELOCITY_TEXT)),"VELOCITY_TEXT");          
+	            contentObject.put("VELOCITY_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.ACCELERATION_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ACCELERATION_RANGES),"ACCELERATION_RANGES");          
+	            contentObject.put("ACCELERATION_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.ACCELERATION_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.ACCELERATION_TEXT)),"ACCELERATION_TEXT");          
+	            contentObject.put("ACCELERATION_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.ANGULAR_VELOCITY_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ANGULAR_VELOCITY_RANGES),"ANGULARVELOCITY_RANGES");          
+	            contentObject.put("ANGULARVELOCITY_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+
+            if(rec.getStrings(EVCombinedRec.ANGULAR_VELOCITY_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.ANGULAR_VELOCITY_TEXT)),"ANGULARVELOCITY_TEXT");          
+	            contentObject.put("ANGULARVELOCITY_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.ROTATIONAL_SPEED_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ROTATIONAL_SPEED_RANGES),"ROTATIONALSPEED_RANGES");          
+	            contentObject.put("ROTATIONALSPEED_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.ROTATIONAL_SPEED_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.ROTATIONAL_SPEED_TEXT)),"ROTATIONALSPEED_TEXT");          
+	            contentObject.put("ROTATIONALSPEED_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.AGE_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.AGE_RANGES),"AGE_RANGES");          
+	            contentObject.put("AGE_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.AGE_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.AGE_TEXT)),"AGE_TEXT");          
+	            contentObject.put("AGE_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.MOLAR_MASS_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MOLAR_MASS_RANGES),"MOLARMASS_RANGES");          
+	            contentObject.put("MOLARMASS_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.MOLAR_MASS_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.MOLAR_MASS_TEXT)),"MOLARMASS_TEXT");          
+	            contentObject.put("MOLARMASS_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.MOLALITY_OF_SUBSTANCE_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MOLALITY_OF_SUBSTANCE_RANGES),"MOLALITYOFSUBSTANCE_RANGES");          
+	            contentObject.put("MOLALITYOFSUBSTANCE_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.MOLALITY_OF_SUBSTANCE_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.MOLALITY_OF_SUBSTANCE_TEXT)),"MOLALITYOFSUBSTANCE_TEXT");          
+	            contentObject.put("MOLALITYOFSUBSTANCE_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.RADIOACTIVITY_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.RADIOACTIVITY_RANGES),"RADIOACTIVITY_RANGES");          
+	            contentObject.put("RADIOACTIVITY_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.RADIOACTIVITY_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.RADIOACTIVITY_TEXT)),"RADIOACTIVITY_TEXT");          
+	            contentObject.put("RADIOACTIVITY_TEXT".toLowerCase(),elementArrayObject);
+            }
+
+            if(rec.getStrings(EVCombinedRec.ABSORBED_DOSE_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ABSORBED_DOSE_RANGES),"ABSORBEDDOSE_RANGES");          
+	            contentObject.put("ABSORBEDDOSE_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.ABSORBED_DOSE_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.ABSORBED_DOSE_TEXT)),"ABSORBEDDOSE_TEXT");          
+	            contentObject.put("ABSORBEDDOSE_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.RADIATION_EXPOSURE_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.RADIATION_EXPOSURE_RANGES),"RADIATIONEXPOSURE_RANGES");          
+	            contentObject.put("RADIATIONEXPOSURE_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.RADIATION_EXPOSURE_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.RADIATION_EXPOSURE_TEXT)),"RADIATIONEXPOSURE_TEXT");          
+	            contentObject.put("RADIATIONEXPOSURE_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.LUMINANCE_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.LUMINANCE_RANGES),"LUMINANCE_RANGES");          
+	            contentObject.put("LUMINANCE_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.LUMINANCE_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.LUMINANCE_TEXT)),"LUMINANCE_TEXT");          
+	            contentObject.put("LUMINANCE_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.MAGNETIC_FIELD_STRENGTH_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MAGNETIC_FIELD_STRENGTH_RANGES),"MAGNETICFIELDSTRENGTH_RANGES");          
+	            contentObject.put("MAGNETICFIELDSTRENGTH_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.MAGNETIC_FIELD_STRENGTH_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.MAGNETIC_FIELD_STRENGTH_TEXT)),"MAGNETICFIELDSTRENGTH_TEXT");          
+	            contentObject.put("MAGNETICFIELDSTRENGTH_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.SPECTRAL_EFFICIENCY_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SPECTRAL_EFFICIENCY_RANGES),"SPECTRALEFFICIENCY_RANGES");          
+	            contentObject.put("SPECTRALEFFICIENCY_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.SPECTRAL_EFFICIENCY_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.SPECTRAL_EFFICIENCY_TEXT)),"SPECTRALEFFICIENCY_TEXT");          
+	            contentObject.put("SPECTRALEFFICIENCY_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.SURFACE_POWER_DENSITY_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SURFACE_POWER_DENSITY_RANGES),"SURFACEPOWERDENSITY_RANGES");          
+	            contentObject.put("SURFACEPOWERDENSITY_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.SURFACE_POWER_DENSITY_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.SURFACE_POWER_DENSITY_TEXT)),"SURFACEPOWERDENSITY_TEXT");          
+	            contentObject.put("SURFACEPOWERDENSITY_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.THERMAL_CONDUCTIVITY_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.THERMAL_CONDUCTIVITY_RANGES)),"THERMALCONDUCTIVITY_RANGES");          
+	            contentObject.put("THERMALCONDUCTIVITY_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.THERMAL_CONDUCTIVITY_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.THERMAL_CONDUCTIVITY_TEXT)),"THERMALCONDUCTIVITY_TEXT");          
+	            contentObject.put("THERMALCONDUCTIVITY_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.DECIBEL_ISOTROPIC_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.DECIBEL_ISOTROPIC_RANGES),"DECIBELISOTROPIC_RANGES");          
+	            contentObject.put("DECIBELISOTROPIC_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.DECIBEL_ISOTROPIC_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.DECIBEL_ISOTROPIC_TEXT)),"DECIBELISOTROPIC_TEXT");          
+	            contentObject.put("DECIBELISOTROPIC_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+
+            if(rec.getStrings(EVCombinedRec.DECIBEL_MILLIWATTS_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.DECIBEL_MILLIWATTS_RANGES),"DECIBELMILLIWATTS_RANGES");          
+	            contentObject.put("DECIBELMILLIWATTS_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.DECIBEL_MILLIWATTS_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.DECIBEL_MILLIWATTS_TEXT)),"DECIBELMILLIWATTS_TEXT");          
+	            contentObject.put("DECIBELMILLIWATTS_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.EQUIVALENT_DOSE_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.EQUIVALENT_DOSE_RANGES)),"EQUIVALENTDOSE_RANGES");          
+	            contentObject.put("EQUIVALENTDOSE_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.EQUIVALENT_DOSE_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.EQUIVALENT_DOSE_TEXT)),"EQUIVALENTDOSE_TEXT");          
+	            contentObject.put("EQUIVALENTDOSE_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.MOLAR_CONCENTRATION_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MOLAR_CONCENTRATION_RANGES),"MOLARCONCENTRATION_RANGES");          
+	            contentObject.put("MOLARCONCENTRATION_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.MOLAR_CONCENTRATION_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.MOLAR_CONCENTRATION_TEXT)),"MOLARCONCENTRATION_TEXT");          
+	            contentObject.put("MOLARCONCENTRATION_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.LINEAR_DENSITY_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.LINEAR_DENSITY_RANGES),"LINEARDENSITY_RANGES");          
+	            contentObject.put("LINEARDENSITY_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.LINEAR_DENSITY_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.LINEAR_DENSITY_TEXT)),"LINEARDENSITY_TEXT");          
+	            contentObject.put("LINEARDENSITY_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.LUMINOUS_EFFICIENCY_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.LUMINOUS_EFFICIENCY_RANGES),"LUMINOUSEFFICIENCY_RANGES");          
+	            contentObject.put("LUMINOUSEFFICIENCY_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.LUMINOUS_EFFICIENCY_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.LUMINOUS_EFFICIENCY_TEXT)),"LUMINOUSEFFICIENCY_TEXT");          
+	            contentObject.put("LUMINOUSEFFICIENCY_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.LUMINOUS_EFFICACY_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.LUMINOUS_EFFICACY_RANGES),"LUMINOUSEFFICACY_RANGES");          
+	            contentObject.put("LUMINOUSEFFICACY_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.LUMINOUS_EFFICACY_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.LUMINOUS_EFFICACY_TEXT)),"LUMINOUSEFFICACY_TEXT");          
+	            contentObject.put("LUMINOUSEFFICACY_TEXT".toLowerCase(),elementArrayObject);
+            }
+
+            if(rec.getStrings(EVCombinedRec.SPECIFIC_ENERGY_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SPECIFIC_ENERGY_RANGES),"SPECIFICENERGY_RANGES");          
+	            contentObject.put("SPECIFICENERGY_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.SPECIFIC_ENERGY_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.SPECIFIC_ENERGY_TEXT)),"SPECIFICENERGY_TEXT");          
+	            contentObject.put("SPECIFICENERGY_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.SPECIFIC_SURFACE_AREA_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SPECIFIC_SURFACE_AREA_RANGES),"SPECIFICSURFACEAREA_RANGES");          
+	            contentObject.put("SPECIFICSURFACEAREA_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.SPECIFIC_SURFACE_AREA_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.SPECIFIC_SURFACE_AREA_TEXT)),"SPECIFICSURFACEAREA_TEXT");          
+	            contentObject.put("SPECIFICSURFACEAREA_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.SPECIFIC_VOLUME_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SPECIFIC_VOLUME_RANGES),"SPECIFICVOLUME_RANGES");          
+	            contentObject.put("SPECIFICVOLUME_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.SPECIFIC_VOLUME_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.SPECIFIC_VOLUME_TEXT)),"SPECIFICVOLUME_TEXT");          
+	            contentObject.put("SPECIFICVOLUME_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.SURFACE_TENSION_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SURFACE_TENSION_RANGES),"SURFACETENSION_RANGES");          
+	            contentObject.put("SURFACETENSION_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.SPECIFIC_VOLUME_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.SPECIFIC_VOLUME_TEXT)),"SURFACETENSION_TEXT");          
+	            contentObject.put("SURFACETENSION_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.SURFACE_DENSITY_RANGES)!=null)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.SURFACE_DENSITY_RANGES),"SURFACEDENSITY_RANGES");          
+	            contentObject.put("SURFACEDENSITY_RANGES".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getStrings(EVCombinedRec.SURFACE_DENSITY_TEXT)!=null)
+            {
+	            elementArrayObject = formJsonArray(reverseSigns(rec.getStrings(EVCombinedRec.SURFACE_DENSITY_TEXT)),"SURFACEDENSITY_TEXT");          
+	            contentObject.put("SURFACEDENSITY_TEXT".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] numericalUnits = rec.getStrings(EVCombinedRec.NUMERICALUNITS);
+            if(numericalUnits!=null && numericalUnits.length>0)
+            {
+	            elementArrayObject = formJsonArray(numericalUnits,"NUMERICAL_UNITS");          
+	            contentObject.put("NUMERICAL_UNITS".toLowerCase(),elementArrayObject);
+            }
+            
+            if(rec.getString(EVCombinedRec.EID)!=null && rec.getString(EVCombinedRec.EID).length()>0)
+            {
+	            contentObject.put("EID".toLowerCase(),notNull(rec.getString(EVCombinedRec.EID)));
+            }
+
+            String[] departmentID=rec.getStrings(EVCombinedRec.DEPARTMENTID);
+            if(departmentID!=null && departmentID.length>0 && departmentID[0]!=null && departmentID[0].trim().length()>0)
+            {
+            	//System.out.println("departmentID="+departmentID[0]);
+	            elementArrayObject = formJsonArray(departmentID,"DEPARTMENTID");          
+	            contentObject.put("DEPARTMENTID".toLowerCase(),elementArrayObject);
+            }
+
+            String[] titleOfCollection=rec.getStrings(EVCombinedRec.TITLE_OF_COLLECTION);
+            if(titleOfCollection!=null && titleOfCollection.length>0)
+            {
+	            elementArrayObject = formJsonArray(titleOfCollection,"TITLEOFCOLLECTION");          
+	            contentObject.put("TITLEOFCOLLECTION".toLowerCase(),elementArrayObject);
+            }
+
+            String[]university=rec.getStrings(EVCombinedRec.UNIVERSITY);
+            if(university!=null && university.length>0)
+            {
+	            elementArrayObject = formJsonArray(university,"UNIVERSITY");          
+	            contentObject.put("UNIVERSITY".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] typeOfDegree=rec.getStrings(EVCombinedRec.TYPE_OF_DEGREE);
+            if(typeOfDegree!=null && typeOfDegree.length>0)
+            {
+	            elementArrayObject = formJsonArray(typeOfDegree,"TYPEOFDEGREE");          
+	            contentObject.put("TYPEOFDEGREE".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] annotation=rec.getStrings(EVCombinedRec.ANNOTATION);
+            if(annotation!=null && annotation.length>0)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.ANNOTATION),"ANNOTATION");          
+	            contentObject.put("ANNOTATION".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] mapScale=rec.getStrings(EVCombinedRec.MAP_SCALE);
+            if(mapScale!=null && mapScale.length>0)
+            {
+	            elementArrayObject = formJsonArray(mapScale,"MAPSCALE");          
+	            contentObject.put("MAPSCALE".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] mapType=rec.getStrings(EVCombinedRec.MAP_TYPE);
+            if(mapType!=null && mapType.length>0)
+            {
+	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.MAP_TYPE),"MAPTYPE");          
+	            contentObject.put("MAPTYPE".toLowerCase(),elementArrayObject);
+            }
+
+            String[] sourceNote=rec.getStrings(EVCombinedRec.SOURCE_NOTE);
+            if(sourceNote!=null && sourceNote.length>0)
+            {
+	            elementArrayObject = formJsonArray(sourceNote,"SOURCENOTE");          
+	            contentObject.put("SOURCENOTE".toLowerCase(),elementArrayObject);
+            }
+            
+            String[] grantIDs=rec.getStrings(EVCombinedRec.GRANTID);           
+            if(grantIDs!=null && grantIDs.length>0 && grantIDs[0]!=null && grantIDs[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(grantIDs,"GRANTID");          
+	            contentObject.put("GRANTID".toLowerCase(),elementArrayObject);
+            }
+                      
+            
+            String[] grantAgency=rec.getStrings(EVCombinedRec.GRANTAGENCY);
+            if(grantAgency!=null && grantAgency.length>0 && grantAgency[0]!=null && grantAgency[0].length()>0)
+            {
+	            elementArrayObject = formJsonArray(grantAgency,"GRANTAGENCY");          
+	            contentObject.put("GRANTAGENCY".toLowerCase(),elementArrayObject);
+	            //contentJsonArray.add(contentObject);
+            }
           
-            JSONArray evArray = new JSONArray();
-            JSONObject dataSourceObject = new JSONObject();
-            dataSourceObject.put("DataSource","EV");
-            JSONObject actionObject = new JSONObject();
-            actionObject.put("Action","Update");
-            JSONObject uniqueIDObject = new JSONObject();
-            uniqueIDObject.put("UniqueID",eid);
-            JSONObject evContent = new JSONObject();
-            evContent.put("CONTENT",contentJsonArray);
-            evArray.add(dataSourceObject);
-            evArray.add(actionObject);
-            evArray.add(uniqueIDObject);   
-            evArray.add(evContent);
-            JSONObject evObject = new JSONObject();
-            evObject.put("EV_DOCUMENT",evArray);
+            String[] sourceBibText=rec.getStrings(EVCombinedRec.SOURCEBIBTEXT);
+            if(sourceBibText!=null && sourceBibText.length>0)
+            {           	
+	            elementArrayObject = formJsonArray(sourceBibText,"SOURCEBIBTEXT");          
+	            contentObject.put("SOURCEBIBTEXT".toLowerCase(),elementArrayObject);
+            }
             
-            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+            String standardID=rec.getString(EVCombinedRec.STANDARDID);
+            if(standardID!=null && standardID.length()>0)
+            {		          
+	            contentObject.put("STANDARDID".toLowerCase(),rec.getString(EVCombinedRec.STANDARDID));
+            }
+          
+            String[] orgID=rec.getStrings(EVCombinedRec.ORG_ID);
+            if(orgID!=null && orgID.length>0)
+            {
+	            elementArrayObject = formJsonArray(orgID,"ORG_ID");          
+	            contentObject.put("ORG_ID".toLowerCase(),elementArrayObject);
+            }
+           
+            
+            if(rec.getString(EVCombinedRec.ISOPENACESS)!=null && rec.getString(EVCombinedRec.ISOPENACESS).length()>0)
+            {	                
+	            contentObject.put("ISOPENACESS".toLowerCase(),rec.getString(EVCombinedRec.ISOPENACESS));	          
+            }
+ 
+            String[] grantText=rec.getStrings(EVCombinedRec.GRANTTEXT); 
+            if((grantIDs!=null && grantIDs.length>0 && grantIDs[0]!=null && grantIDs[0].length()>0) || 
+            		(grantAgency!=null && grantAgency.length>0 && grantAgency[0]!=null && grantAgency[0].length()>0) || 
+            		(grantText!=null && grantText.length>0 && grantText[0]!=null && grantText[0].length()>0) ||
+            		(combine(grantIDs,grantAgency,grantText).length>0 && combine(grantIDs,grantAgency,grantText)[0]!=null && combine(grantIDs,grantAgency,grantText)[0].length()>0))
+            {
+	            elementArrayObject = formJsonArray(combine(grantIDs,grantAgency,grantText),"GRANT");          
+	            contentObject.put("GRANT".toLowerCase(),elementArrayObject);	          
+            }
+
+            //STANDARDDESIGNATION
+            if(rec.getString(EVCombinedRec.STANDARDDESIGNATION)!=null && rec.getString(EVCombinedRec.STANDARDDESIGNATION).length()>0)
+            {           	     
+ 	            contentObject.put("STANDARDDESIGNATION".toLowerCase(),rec.getString(EVCombinedRec.STANDARDDESIGNATION));       
+            }
+            
+            //System.out.println("SOURCETYPE2="+rec.getString(EVCombinedRec.SOURCE_TYPE));
+            if(rec.getString(EVCombinedRec.SOURCE_TYPE)!=null && rec.getString(EVCombinedRec.SOURCE_TYPE).length()>0)
+            {          	
+ 	            contentObject.put("SOURCETYPE".toLowerCase(),rec.getString(EVCombinedRec.SOURCE_TYPE));       
+            }                           
+            
+            //output pretty format        
+            //Gson gson = new GsonBuilder().disableHtmlEscaping().setPrettyPrinting().create();
+            
+            //output regular format
+            Gson gson = new GsonBuilder().disableHtmlEscaping().create();
+            
         	JsonParser jp = new JsonParser();
         	//JsonElement je = jp.parse(evo.build().toString());
-        	JsonElement je = jp.parse(evObject.toString());
-        	String prettyJsonString = gson.toJson(je);
-        	KafkaTest kafka = new KafkaTest();
-        	kafka.getParameterFromPropertiesFile("config.properties");
-            //KafkaTest kafka = new KafkaTest(getEndpoint());
-            //kafka.runProducer(jBuffer.toString(),eid);
+        	JsonElement je = jp.parse(contentObject.toString());
+        	String prettyJsonString = "\""+eid+"\":"+gson.toJson(je);       	
             kafka.runProducer(prettyJsonString,eid);
           
         }
-
+    
+    private String[] stripChar29(String[] input)
+    {
+    	String[] output=null;
+    	if(input!=null)
+    	{
+    		output=new String[input.length];
+    		for(int i=0;i<input.length;i++)
+    		{
+    			if(input[i]!=null)
+    			{				
+    				output[i]=input[i].replaceAll(Constants.GROUPDELIMITER, "");
+    			}
+    		}
+    	}
+    	return output;
+    }
+    
+    
+    private String[] reverseSigns(String[] input)
+    {
+    	String[] output=null;
+    	
+    	if(input!=null)
+    	{
+    		output=new String[input.length];
+    		int j=0;
+    		for(int i=0;i<input.length;i++)
+    		{
+    			if(input[i]!=null && input[i].trim().length()>0)
+    			{
+    				//System.out.println("BEFORE="+input[i]);
+    				output[j]=input[i].replaceAll("minus","-").replaceAll("plus","+").replaceAll("DQD", ".").replaceAll(" qqdashqq ", "-").replaceAll("SLASH", "/");
+    				//System.out.println("AFTER="+output[j]);
+    				j++;
+    			}
+    		}
+    	}
+    	return output;
+    }
+               
     private String[] combine(String[] arr1,String[] arr2, String[] arr3) {
     	int arr1Length = 0;
     	int arr2Length = 0;
     	int arr3Length = 0;
     	
-    	if(arr1 !=null)
+    	if(arr1 !=null && arr1.length>0 && arr1[0]!=null && arr1[0].length()>0)
     	{
     		arr1Length = arr1.length;
     	}
     	
-    	if(arr2 !=null)
+    	if(arr2 !=null && arr2.length>0 && arr2[0]!=null && arr2[0].length()>0)
     	{
     		arr2Length = arr2.length;
     	}
     	
-    	if(arr3 !=null)
+    	if(arr3 !=null && arr3.length>0 && arr3[0]!=null && arr3[0].length()>0)
     	{
     		arr3Length = arr3.length;
     	}
         
         String[] result = new String[arr1Length + arr2Length + arr3Length];
-        if(arr1 !=null) {
+        if(arr1 !=null && arr1.length>0 && arr1[0]!=null && arr1[0].length()>0) {
         	System.arraycopy(arr1, 0, result, 0, arr1Length);
         }
         
-        if(arr2 !=null) {
+        if(arr2 !=null && arr2.length>0 && arr2[0]!=null && arr2[0].length()>0) {
         	System.arraycopy(arr2, 0, result, arr1Length, arr2Length);
         }
         
-        if(arr3 !=null) {
+        if(arr3 !=null && arr3.length>0 && arr3[0]!=null && arr3[0].length()>0) {
         	System.arraycopy(arr3, 0, result, arr1Length+arr2Length, arr3Length);
         }
         return result;
@@ -3120,16 +3414,17 @@ public class CombinedXMLWriter
     private JSONArray formJsonArray (String[] arrays, String arrayName)
     {
     	JSONArray jArray = new JSONArray();
+    	ArrayList <String> arrayList = new ArrayList<String>();
     	if(arrays!=null) {
 	    	for(int i=0;i<arrays.length;i++)
 	    	{
 	    		String arrayElement = arrays[i];
-	    		if(arrayElement!=null) {
-	    			arrayElement = cleaner.stripBadChars(arrayElement);	 	    		
+	    		if(arrayElement!=null && arrayElement.trim().length()>0 && !arrayList.contains(arrayElement)) {
+	    			//arrayElement = cleaner.stripBadChars(arrayElement);	
+	    			arrayList.add(arrayElement);
 	    			jArray.add(arrayElement);
 	    		}
 	    	}
-	    	return jArray;
     	}
     	return jArray;
     }

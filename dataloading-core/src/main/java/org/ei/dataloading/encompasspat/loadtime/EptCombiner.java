@@ -12,7 +12,7 @@ import org.apache.oro.text.regex.MatchResult;
 import org.ei.dataloading.*;
 import org.ei.util.StringUtil;
 import org.ei.common.*;
-
+import org.ei.util.kafka.*;
 
 
 
@@ -252,7 +252,7 @@ public class EptCombiner extends Combiner {
         int i = 0;
         CVSTermBuilder termBuilder = new CVSTermBuilder();
 
-
+        KafkaService kafka = new KafkaService();
         while (rs.next()) {
             ++i;
             QualifierFacet qfacet = new QualifierFacet();
@@ -377,9 +377,27 @@ public class EptCombiner extends Combiner {
                 rec.put(rec.DESIGNATED_STATES, prepareMulti(rs.getString("ds")));
 
                 this.writer.writeRec(rec);
+                /**********************************************************/
+    	        //following code used to test kafka by hmo@2020/01/30
+    	        //this.writer.writeRec(recArray,kafka);
+    	        /*********************************************************/
+    	        writer.writeRec(rec,kafka);
+    	        if(i%5==0)
+    	        {
+    	        	//System.out.println("flushing at "+i);
+    	        	kafka.flush();
+    	        }
             }
 
         }
+        if(kafka!=null)
+       	 try {
+       		 kafka.close();
+       	 }
+    	 catch (Exception e) {
+    		 e.printStackTrace();
+    	 }
+   		
     }
 
     //this method is fixing US application numbers
