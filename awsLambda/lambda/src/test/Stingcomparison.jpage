@@ -37,6 +37,59 @@ x
 
 //xor operator
 
-int x = 0;
+int x = 0;
 int y=0;
-x^y
+x^y		//0
+
+int x = 1;
+int y=1;
+x^y		//0
+
+
+int x = 0;
+int y=1;
+x^y		//1
+
+
+
+//bitwise AND
+
+boolean x = true;
+boolean y = false;
+x&y
+
+
+boolean x = false;
+boolean y = false;
+x&y
+
+
+boolean x = true;
+boolean y = true;
+x&y
+
+
+//bitwise OR
+
+boolean x = true;
+boolean y = false;
+x|y
+
+
+int age=40;
+int salary=8000;
+if(age>30 & age <=40 & salary>7000)
+	System.out.println("Yes" + salary);
+else if(age>=40 & salary>=7500)
+	System.out.println("Else");
+else
+	System.out.println("NO");
+	
+
+
+java.lang.String str="loadnum=2020041";
+int day = Integer.parseInt(str.substring(str.length()-1,str.length()));
+day
+
+
+
