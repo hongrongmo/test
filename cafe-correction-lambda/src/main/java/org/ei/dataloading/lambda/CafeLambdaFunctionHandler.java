@@ -86,7 +86,7 @@ public class CafeLambdaFunctionHandler implements RequestHandler<SNSEvent, Strin
 			context.getLogger().log("ssh session created.");
 			
 	        java.util.Properties config = new java.util.Properties();
-	        //config.put("StrictHostKeyChecking", "no");  //bypass authenticity of
+	        config.put("StrictHostKeyChecking", "yes");  //bypass authenticity of
 	        session.setConfig(config);
 	    	// ssh connect
 	        session.connect();
