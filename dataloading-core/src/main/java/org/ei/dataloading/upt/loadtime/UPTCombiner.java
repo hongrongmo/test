@@ -26,7 +26,7 @@ import org.ei.common.Constants;
 import org.ei.common.Country;
 import org.ei.domain.ClassNodeManager;
 import org.ei.domain.Database;
-
+import org.ei.util.kafka.*;
 
 /**
  * @author KFokuo
@@ -341,7 +341,8 @@ public class UPTCombiner extends CombinerTimestamp {
 
         int i = 0;
         String mid = null;
-
+        KafkaService kafka = new KafkaService();
+        
         try {
 
             while (rs.next()) {
@@ -811,6 +812,17 @@ public class UPTCombiner extends CombinerTimestamp {
 	                    //System.out.println("NOTES="+arrNames[0]);
 	
 	                    writer.writeRec(rec);
+	                    
+	                    /**********************************************************/
+	        	        //following code used to test kafka by hmo@2020/01/30
+	        	        //this.writer.writeRec(recArray,kafka);
+	        	        /*********************************************************/
+	        	        writer.writeRec(rec,kafka);
+	        	        if(i%5==0)
+	        	        {
+	        	        	//System.out.println("flushing at "+i);
+	        	        	kafka.flush();
+	        	        }
 	
 	                }
 				}
@@ -834,7 +846,14 @@ public class UPTCombiner extends CombinerTimestamp {
                     e.printStackTrace();
                 }
             }
-        }
+             if(kafka!=null)
+            	 try {
+            		 kafka.close();
+            	 }
+             	 catch (Exception e) {
+             		 e.printStackTrace();
+             	 }
+        	}
     } //writeRecs
 
     public String[] eclaNormalize(String[] eclas) {
