@@ -24,6 +24,7 @@ import org.ei.common.inspec.*;
 import org.ei.dataloading.EVCombinedRec;
 import org.ei.dataloading.XMLWriterCommon;
 import org.ei.dataloading.bd.loadtime.BdNumericalIndexMapping;
+import org.ei.util.kafka.*;
 
 
 public class INSPECCombiner
@@ -318,7 +319,8 @@ public class INSPECCombiner
             throws Exception
     {
         int i = 0;
-
+        KafkaService kafka = new KafkaService();
+        
         while(rs.next())
         {
             EVCombinedRec rec = new EVCombinedRec();
@@ -764,8 +766,22 @@ public class INSPECCombiner
                 rec.put(EVCombinedRec.ACCESSION_NUMBER, rs.getString("ANUM"));
 
                 writer.writeRec(rec);
+                
+                /**********************************************************/
+                //following code used to test kafka by hmo@2020/01/30
+                //this.writer.writeRec(recArray,kafka);
+                /*********************************************************/
+                writer.writeRec(rec,kafka);
+                if(i%5==0)
+                {
+                	//System.out.println("flushing at "+i);
+                	kafka.flush();
+                }
             }
 
+        }
+        if(kafka!=null) {
+        	kafka.close();
         }
     }
     

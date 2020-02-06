@@ -114,8 +114,16 @@ import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.index.query.QueryBuilders.*;
 import org.apache.http.client.HttpClient;
 import org.apache.http.impl.client.CloseableHttpClient;
+import org.json.JSONObject;
+import org.json.XML;
+//import org.json.JSONArray;
+//import org.json.XML;
 
 import javax.json.*;
+import com.google.gson.JsonParser;
+import com.google.gson.JsonElement;
+import com.google.gson.GsonBuilder;
+import com.google.gson.Gson;
 
 public class NewDataTesting
 {
@@ -233,7 +241,7 @@ public class NewDataTesting
 		{
 			test.getWeeklyCount(updateNumber);
 		}
-		else  if(action.equals("checkFastCOunt"))
+		else  if(action.equals("checkFastCount"))
 		{
 			test.getMIDFromFast(updateNumber);
 		}
@@ -388,7 +396,11 @@ public class NewDataTesting
 		else  if(action.equals("checkChar"))
 		{
 			test.checkCharacter();
-		}	
+		}
+		else  if(action.equals("xmltojson"))
+		{
+			test.xmlToJson(updateNumber);
+		}
 		else
 		{
 			System.out.println("we dont know your input "+action);
@@ -397,6 +409,65 @@ public class NewDataTesting
 		endTime = System.currentTimeMillis();
 		System.out.println("total Time used "+(endTime-startTime)/1000.0+" seconds");
 
+	}
+	
+	
+	public void xmlToJson(String filename) {
+		
+		//String xml_data = "<student><name>Neeraj Mishra</name><age>22</age></student>";
+		BufferedReader in = null;
+		String line=null;
+		try{
+			String database="cpx";
+			in = new BufferedReader(new FileReader(new File(filename)));
+			StringBuffer xmlbuffer = new StringBuffer();
+						         
+			while((line=in.readLine())!=null)
+			{
+				if(line.indexOf("QQDelQQ")>0)
+				{
+					line = line.replaceAll("\\[QQDelQQ ", "\\[");
+					line = line.replaceAll(" QQDelQQ", ";");									
+				}
+				
+				if(line.indexOf("QstemQ")>0)
+				{
+					//System.out.println("line1="+line);
+					//line = line.replaceAll("QstemQ\\w.\\]","");
+						
+					line = line.substring(0,line.indexOf("QstemQ"))+line.substring(line.indexOf("]]><"));
+					line = line.replaceAll(" QstemQ ", "");
+					//System.out.println("line2="+line);
+				}
+				xmlbuffer.append(line);
+				
+			}
+			//converting xml to json
+			JSONObject obj = XML.toJSONObject(xmlbuffer.toString());
+			Gson gson = new GsonBuilder().setPrettyPrinting().create();
+	        JsonParser jp = new JsonParser();
+	        	//JsonElement je = jp.parse(evo.build().toString());
+	        JsonElement je = jp.parse(obj.toString());
+	        String prettyJsonString = gson.toJson(je);
+			System.out.println(prettyJsonString);
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if (in != null) {
+				try {
+					in.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		
+		
 	}
 	
 	 private void doFastExtract(String updateNumber,String dbname) throws Exception
