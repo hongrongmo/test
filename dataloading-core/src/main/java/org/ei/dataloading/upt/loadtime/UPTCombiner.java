@@ -341,7 +341,8 @@ public class UPTCombiner extends CombinerTimestamp {
 
         int i = 0;
         String mid = null;
-        KafkaService kafka = new KafkaService();
+        KafkaService kafka=null;
+        //kafka = new KafkaService();
         
         try {
 
@@ -816,13 +817,15 @@ public class UPTCombiner extends CombinerTimestamp {
 	                    /**********************************************************/
 	        	        //following code used to test kafka by hmo@2020/01/30
 	        	        //this.writer.writeRec(recArray,kafka);
-	        	        /*********************************************************/
+	        	        /**********************************************************/
+	                    /*
 	        	        writer.writeRec(rec,kafka);
 	        	        if(i%5==0)
 	        	        {
 	        	        	//System.out.println("flushing at "+i);
 	        	        	kafka.flush();
 	        	        }
+	        	        */
 	
 	                }
 				}

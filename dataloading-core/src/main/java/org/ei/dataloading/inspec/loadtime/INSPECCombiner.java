@@ -319,7 +319,8 @@ public class INSPECCombiner
             throws Exception
     {
         int i = 0;
-        KafkaService kafka = new KafkaService();
+        KafkaService kafka = null;
+        //kafka = new KafkaService();
         
         while(rs.next())
         {
@@ -770,13 +771,15 @@ public class INSPECCombiner
                 /**********************************************************/
                 //following code used to test kafka by hmo@2020/01/30
                 //this.writer.writeRec(recArray,kafka);
-                /*********************************************************/
+                /**********************************************************/
+                /*
                 writer.writeRec(rec,kafka);
                 if(i%5==0)
                 {
                 	//System.out.println("flushing at "+i);
                 	kafka.flush();
                 }
+                */
             }
 
         }

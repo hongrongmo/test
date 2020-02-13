@@ -230,7 +230,8 @@ import org.ei.util.kafka.*;
 	        EVCombinedRec[] recArray = null;
 	      
 	        String accessNumber = "";
-	        KafkaService kafka = new KafkaService();
+	        KafkaService kafka = null;
+	        //kafka = new KafkaService();
 	        while (rs.next())
 	        {
 	          ++i;
@@ -407,13 +408,15 @@ import org.ei.util.kafka.*;
 	            /**********************************************************/
     	        //following code used to test kafka by hmo@2020/02/3
     	        //this.writer.writeRec(recArray,kafka);
-    	        /*********************************************************/
+    	        /**********************************************************/
+	            /*
     	        this.writer.writeRec(recArray,kafka);
     	        if(i%5==0)
     	        {
     	        	//System.out.println("flushing at "+i);
     	        	kafka.flush();
     	        }
+    	        */
     	        
 	          }
 	        

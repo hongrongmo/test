@@ -294,7 +294,7 @@ public class BaseTableWriter
 	    if(record.get("CSXTERM")!=null)
 		{
 	    	recordBuf.append(record.get("CSXTERM"));
-	    	//System.out.println("ISOPENACESS"+record.get("ISOPENACESS"));
+	    	System.out.println("CSXTERM"+record.get("CSXTERM"));
 		}
 	    //*/
 	    

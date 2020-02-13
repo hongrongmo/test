@@ -284,7 +284,8 @@ public class NTISCombiner
     	throws Exception
     {
         int i = 0;
-        KafkaService kafka = new KafkaService();
+        KafkaService kafka=null;
+        //kafka = new KafkaService();
         while (rs.next())
         {
 
@@ -390,13 +391,15 @@ public class NTISCombiner
             /**********************************************************/
 	        //following code used to test kafka by hmo@2020/02/3
 	        //this.writer.writeRec(recArray,kafka);
-	        /*********************************************************/
+	        /**********************************************************/
+            /*
 	        this.writer.writeRec(rec,kafka);
 	        if(i%5==0)
 	        {
 	        	//System.out.println("flushing at "+i);
 	        	kafka.flush();
 	        }
+	        */
         }
     }
 

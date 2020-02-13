@@ -908,7 +908,7 @@ public class CombinedXMLWriter
         
         //added for georef at 03/16/2016
         //TITLE_OF_COLLECTION
-        out.println("       <TITLEOFCOLLECTION><![CDATA[" +notNull(Entity.prepareString(rec.getString(EVCombinedRec.TITLE_OF_COLLECTION))) + " QstemQ " +  notNull(getStems(Entity.prepareString(rec.getString(EVCombinedRec.TITLE_OF_COLLECTION)))) + "]]></OFCOLLECTION>");									//TIC
+        out.println("       <TITLEOFCOLLECTION><![CDATA[" +notNull(Entity.prepareString(rec.getString(EVCombinedRec.TITLE_OF_COLLECTION))) + " QstemQ " +  notNull(getStems(Entity.prepareString(rec.getString(EVCombinedRec.TITLE_OF_COLLECTION)))) + "]]></TITLEOFCOLLECTION>");									//TIC
         
         //UNIVERSITY
         out.println("       <UNIVERSITY><![CDATA[" +notNull(Entity.prepareString(rec.getString(EVCombinedRec.UNIVERSITY)))+ " QstemQ " + notNull(getStems(Entity.prepareString(rec.getString(EVCombinedRec.UNIVERSITY)))) + "]]></UNIVERSITY>");														//UNI
@@ -1801,7 +1801,7 @@ public class CombinedXMLWriter
             
             if(rec.getString(EVCombinedRec.DOI)!=null && rec.getString(EVCombinedRec.DOI).length()>0)
             {
-	            contentObject.put("DOI".toLowerCase(),notNull(rec.getString(EVCombinedRec.DOI)));
+	            contentObject.put("DOI".toLowerCase(),rec.getString(EVCombinedRec.DOI).replaceAll(" ",""));
             }
 
             if(rec.getString(EVCombinedRec.SCOPUSID)!=null && rec.getString(EVCombinedRec.SCOPUSID).length()>0)
@@ -2755,8 +2755,9 @@ public class CombinedXMLWriter
         	JsonParser jp = new JsonParser();
         	//JsonElement je = jp.parse(evo.build().toString());
         	JsonElement je = jp.parse(contentObject.toString());
-        	String prettyJsonString = "\""+eid+"\":"+gson.toJson(je);       	
-            kafka.runProducer(prettyJsonString,eid);
+        	//String prettyJsonString = "\""+eid+"\":"+gson.toJson(je);   
+        	String prettyJsonString = gson.toJson(je);  
+            kafka.runProducer(prettyJsonString,"\""+eid+"\"");
           
         }
     

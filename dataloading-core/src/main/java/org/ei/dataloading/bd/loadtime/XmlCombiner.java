@@ -338,7 +338,8 @@ public void writeCombinedByTableHook(Connection con) throws Exception
         boolean isCpx = false;
         String accessNumber = "";
         String pui = "";
-        KafkaService kafka = new KafkaService();
+        KafkaService kafka = null;
+        kafka = new KafkaService();
     	//kafka.getParameterFromPropertiesFile("config.properties");
         
         while (rs.next())
@@ -1185,13 +1186,15 @@ public void writeCombinedByTableHook(Connection con) throws Exception
             //following code used to test kafka by hmo@2020/01/30
             //this.writer.writeRec(recArray,kafka);
             /*********************************************************/
+            
+            ///*
             this.writer.writeRec(recArray,kafka);
-            if(i%5==0)
+            //if(i%5==0)
             {
             	//System.out.println("flushing at "+i);
             	kafka.flush();
             }
-            
+            //*/
          }
          catch(Exception e)
          {
@@ -1200,7 +1203,9 @@ public void writeCombinedByTableHook(Connection con) throws Exception
          }
         }
         if(kafka!=null)
+        {
         	kafka.close();
+        }
     }
     
     private String prepareStandardDesignation(String input)
