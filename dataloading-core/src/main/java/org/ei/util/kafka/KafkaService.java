@@ -135,22 +135,24 @@ public class KafkaService {
     		this.producer = ProducerCreator.createProducer(this.KAFKA_BROKERS);
     	}
     	
-        	ProducerRecord<String, String> record = new ProducerRecord<String, String>(this.TOPIC_NAME,key, recordString);
-        	try {
-                RecordMetadata metadata = this.producer.send(record).get();             
-                //System.out.println("Record sent with key " + key + " to partition " + metadata.partition() + " with offset " + metadata.offset());
-            }
-            catch (ExecutionException e) {
-                System.out.println("Error in sending record");
-                System.out.println(e);
-            }
-            catch (InterruptedException e) {
-                System.out.println("Error in sending record");
-                System.out.println(e);
-            }
-        	//this.producer.flush();
-            //producer.close();
-        }
+		ProducerRecord<String, String> record = new ProducerRecord<String, String>(this.TOPIC_NAME,key, recordString);
+		//ProducerRecord<String, String> record = new ProducerRecord<String, String>(this.TOPIC_NAME, recordString);
+		try {
+		    RecordMetadata metadata = this.producer.send(record).get();             
+		    //System.out.println("Record sent with key " + key + " to partition " + metadata.partition() + " with offset " + metadata.offset());
+		}
+		catch (ExecutionException e) {
+		    System.out.println("Error in sending record");
+		    System.out.println(e);
+		}
+		catch (InterruptedException e) {
+		    System.out.println("Error in sending record");
+		    System.out.println(e);
+		}
+		//this.producer.flush();
+		//producer.close();
+    }
+    
     public void flush()
     {
     	this.producer.flush();

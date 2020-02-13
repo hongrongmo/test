@@ -333,7 +333,8 @@ public void writeCombinedByYearHook(Connection con,
 public void writeRecs(ResultSet rs)
                         throws Exception
 {
-	KafkaService kafka = new KafkaService();
+	KafkaService kafka=null;
+	//kafka = new KafkaService();
 	try
 	{
 	    DocumentView runtimeDocview = new CitationView();
@@ -804,13 +805,15 @@ public void writeRecs(ResultSet rs)
 			 /**********************************************************/
 	        //following code used to test kafka by hmo@2020/01/30
 	        //this.writer.writeRec(recArray,kafka);
-	        /*********************************************************/
+	        /***********************************************************/
+			/*
 	        this.writer.writeRec(recArray,kafka);
 	        if(i%5==0)
 	        {
 	        	//System.out.println("flushing at "+i);
 	        	kafka.flush();
 	        }
+	        */
 	        
 		}
 		catch(Exception e)
