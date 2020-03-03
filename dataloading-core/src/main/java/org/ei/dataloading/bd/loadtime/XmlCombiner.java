@@ -230,6 +230,7 @@ public class XmlCombiner
             System.out.println("Wrote records.");
             this.writer.end();
             this.writer.flush();
+           
 
         }
         finally
@@ -331,6 +332,7 @@ public void writeCombinedByTableHook(Connection con) throws Exception
         throws Exception
     {
         int i = 0;
+        int problemRecordCount = 0;
         EVCombinedRec recSecondBox = null;
         EVCombinedRec[] recArray = null;
         boolean isGeoBase = false;
@@ -338,875 +340,906 @@ public void writeCombinedByTableHook(Connection con) throws Exception
         boolean isCpx = false;
         String accessNumber = "";
         String pui = "";
-        KafkaService kafka = null;
-        kafka = new KafkaService();
+        KafkaService kafka = new KafkaService();;
+        Thread thread = null;
+
     	//kafka.getParameterFromPropertiesFile("config.properties");
+        try
+        {
+	        while (rs.next())
+	        {
+	          ++i;
+	          String firstGUID = "";        
+	          int numCoords = 1;
+	          int coordCount = 0;
+	          if(rs.getString("DATABASE") != null)
+	          {
+	              if(rs.getString("DATABASE").equals("geo"))
+	              {
+	                    isGeoBase = true;
+	              }
+	              if(rs.getString("DATABASE").equals("chm"))
+	              {
+	                    isChimica = true;
+	              }
+	              if(rs.getString("DATABASE").equals("cpx"))
+	              {
+	                  isCpx = true;
+	              }
+	          }
+	          //System.out.println("ACCESSNUMBER= "+rs.getString("ACCESSNUMBER"));
+	
+	          Vector recVector = new Vector();
+	          try
+	          {
+	              for(int currentCoord = 0; currentCoord < numCoords; currentCoord++)
+	              {
+	                String[] coords = null;
+	                String[] secondBoxCoords= null;
+	                EVCombinedRec rec = new EVCombinedRec();
+	                pui = rs.getString("PUI");
+	                puiGlobal = pui;
+	                
+	                if (validYear(rs.getString("PUBLICATIONYEAR")))
+	                {
+	                	if(isCpx && rs.getString("authorid")!=null)
+	                	{
+	                		String authorid = rs.getString("authorid");
+	                		String[] aid = authorid.split(",");
+	                		rec.put(EVCombinedRec.AUTHORID, aid);
+	                	}
+	                	
+	                	if(isCpx && rs.getString("affid")!=null)
+	                	{
+	                		String affid = rs.getString("affid");
+	                		String[] affids = affid.split(",");
+	                		rec.put(EVCombinedRec.AFFILIATIONID, affids);
+	                	}
+	                	
+	                	//move this block of code to here to include Affiliation ID while BD affiliation is null
+	                	if(rs.getString("affid")==null && rs.getString("CAFE_AFFILIATION")!=null)
+	                    {
+	                    	String cafeAffString = rs.getString("CAFE_AFFILIATION");
+	                    	if(rs.getString("CAFE_AFFILIATION1")!=null)
+	                    	{
+	                    		cafeAffString = cafeAffString+rs.getString("CAFE_AFFILIATION1");
+	                    	}
+	           
+	                    	BdAffiliations caff = new BdAffiliations(cafeAffString);
+	                    	caff.getSearchValue();     
+	                    	
+	                    	rec.put(EVCombinedRec.AFFILIATIONID, caff.getAffiliationId());
+	                    	rec.put(EVCombinedRec.DEPARTMENTID,  caff.getDepartmentId());
+	                    	
+	                    }
+	                	//end of the block
+	                	
+	                    if(rs.getString("AUTHOR") != null)
+	                    {
+	                        String authorString = rs.getString("AUTHOR");
+	                        if(rs.getString("AUTHOR_1") !=null)
+	                        {
+	                            authorString=authorString+rs.getString("AUTHOR_1");
+	                        }
+	                        
+	                        rec.put(EVCombinedRec.AUTHOR, prepareBdAuthor(authorString));
+	                        //use this to deal with author alias
+	                        rec.put(EVCombinedRec.TRANSLATOR, prepareBdAuthorWithAlias(authorString));
+	                        
+	                        if(rs.getString("authorid")==null && rs.getString("cafe_author")!=null)
+	                        {
+	                        	String cafeAuthorString = rs.getString("cafe_author");
+	                        	if(rs.getString("cafe_author1")!=null)
+	                        	{
+	                        		cafeAuthorString = cafeAuthorString+rs.getString("cafe_author1");
+	                        	}
+	                        	String[] cafeAuthor = prepareBdAuthor(cafeAuthorString);
+		                        String[] cafe_aid = getAuID();	                        
+		                        rec.put(EVCombinedRec.AUTHORID, cafe_aid);
+	                        }
+	                        String affiliation = null;
+	                        
+	                        if (rs.getString("AFFILIATION") != null)
+	                        {
+	                            affiliation = rs.getString("AFFILIATION");
+	                            if(rs.getString("AFFILIATION_1")!=null)
+	                            {
+	                                affiliation = affiliation+rs.getString("AFFILIATION_1");
+	                            }
+	                            
+	                         
+	                            BdAffiliations aff = new BdAffiliations(affiliation);
+	                            rec.put(EVCombinedRec.AUTHOR_AFFILIATION,  aff.getSearchValue());
+	                            rec.put(EVCombinedRec.AFFILIATION_LOCATION,  aff.getLocationsSearchValue());
+	                            rec.put(EVCombinedRec.COUNTRY,  aff.getCountriesSearchValue());
+	                          
+	                        }
+	                        else if(rs.getString("AFFILIATION_1")!=null)
+	                        {
+	                            affiliation = rs.getString("AFFILIATION_1");
+	                            BdAffiliations aff = new BdAffiliations(affiliation);
+	                            rec.put(EVCombinedRec.AUTHOR_AFFILIATION,  aff.getSearchValue());
+	                            rec.put(EVCombinedRec.AFFILIATION_LOCATION,  aff.getLocationsSearchValue());
+	                            rec.put(EVCombinedRec.COUNTRY,  aff.getCountriesSearchValue());
+	                            rec.put(EVCombinedRec.AFFILIATIONID,  aff.getAffiliationId());
+	                            rec.put(EVCombinedRec.DEPARTMENTID,  aff.getDepartmentId());
+	                            if(rs.getString("affid")==null && rs.getString("CAFE_AFFILIATION1")!=null)
+	                            {
+	                            	String cafeAffString = rs.getString("CAFE_AFFILIATION1");                           	
+	                            	BdAffiliations caff = new BdAffiliations(cafeAffString);
+	                            	caff.getSearchValue();   
+	                            	rec.put(EVCombinedRec.AFFILIATIONID,  caff.getAffiliationId());
+	                            	rec.put(EVCombinedRec.DEPARTMENTID,  caff.getDepartmentId());
+	                            }
+	
+	                        }
+	                        else if(rs.getString("CORRESPONDENCEAFFILIATION") != null)
+	                        {
+	                            affiliation = rs.getString("CORRESPONDENCEAFFILIATION");
+	                            BdCorrespAffiliations aff = new BdCorrespAffiliations(affiliation);
+	                            rec.put(EVCombinedRec.AUTHOR_AFFILIATION,  aff.getSearchValue());
+	                            rec.put(EVCombinedRec.AFFILIATION_LOCATION,  aff.getLocationsSearchValue());
+	                            rec.put(EVCombinedRec.COUNTRY,  aff.getCountriesSearchValue());
+	                            rec.put(EVCombinedRec.AFFILIATIONID,  aff.getAffiliationId());
+	                            rec.put(EVCombinedRec.DEPARTMENTID,  aff.getDepartmentId());
+	                            if(rs.getString("CAFE_CORRESPONDENCEAFFILIATION")!=null)
+	                            {
+	                            	String cafeAffString = rs.getString("CAFE_CORRESPONDENCEAFFILIATION");                           	
+	                            	BdAffiliations caff = new BdAffiliations(cafeAffString);
+	                            	caff.getSearchValue();   
+	                            	rec.put(EVCombinedRec.AFFILIATIONID,  caff.getAffiliationId());
+	                            	rec.put(EVCombinedRec.DEPARTMENTID,  caff.getDepartmentId());
+	                            }
+	                        }
+	                    }
+	
+	                    if (rs.getString("EDITORS") != null)
+	                    {
+	                        rec.put(EVCombinedRec.EDITOR, prepareEditor(rs.getString("EDITORS")));
+	                    }
+	
+	                    if (rs.getString("CITATIONTITLE") != null)
+	                    {
+	                       rec.put(EVCombinedRec.TITLE, prepareCitationTitle(rs.getString("CITATIONTITLE")));
+	                    }
+	
+	                    if (rs.getString("CITATIONTITLE") != null)
+	                    {                   
+	                       rec.put(EVCombinedRec.TRANSLATED_TITLE, prepareTranslatedCitationTitle(rs.getString("CITATIONTITLE")));
+	                    }
+	
+	                    //****put translated source title into SERIAL_TITLE_TRANSLATION instead of TRANSLATED_TITLE by hongrong based on Frank request at 8/14/2014
+	                    if (rs.getString("TRANSLATEDSOURCETITLE") != null)
+	                    {
+	                        rec.put(EVCombinedRec.SERIAL_TITLE_TRANSLATION, prepareMulti(rs.getString("TRANSLATEDSOURCETITLE")));
+	                    }
+	
+	                    if (rs.getString("VOLUMETITLE") != null)
+	                    {
+	                        rec.put(EVCombinedRec.VOLUME_TITLE, rs.getString("VOLUMETITLE"));
+	                    }
+	
+	                    String abString = getStringFromClob(rs.getClob("ABSTRACTDATA"));
+	                    if (abString != null)
+	                    {
+	                        rec.put(EVCombinedRec.ABSTRACT, abString);
+	                    }
+	
+	
+	                    if(!isChimica)
+	                    {
+	                        if (rs.getString("CONTROLLEDTERM") != null)
+	                        {
+	                            rec.put(EVCombinedRec.CONTROLLED_TERMS, prepareMulti(rs.getString("CONTROLLEDTERM")));
+	                        }
+	                    }
+	                    else
+	                    {
+	                        if (rs.getString("CHEMICALTERM") != null)
+	                        {
+	                            rec.put(EVCombinedRec.CONTROLLED_TERMS, prepareMulti(rs.getString("CHEMICALTERM")));
+	                        }
+	                    }
+	
+	
+	                    if (rs.getString("UNCONTROLLEDTERM") != null)
+	                    {
+	                        rec.put(EVCombinedRec.UNCONTROLLED_TERMS, prepareMulti(rs.getString("UNCONTROLLEDTERM")));
+	                    }
+	                    else if(rs.getString("SPECIESTERM") != null)
+	                    {
+	                         rec.put(EVCombinedRec.UNCONTROLLED_TERMS, prepareMulti(rs.getString("SPECIESTERM")));
+	                    }
+	
+	                    if (rs.getString("REGIONALTERM") != null)
+	                    {
+	                         String regionalterm = rs.getString("REGIONALTERM");
+	                         String[] geobasemaintermsrgi = regionalterm.split(Constants.AUDELIMITER);
+	                         rec.put(EVCombinedRec.CHEMICALTERMS, prepareMulti(regionalterm));
+	                         List navigatorterms = null;
+	                         if(isGeoBase)
+	                         {
+	                             navigatorterms = new ArrayList();
+	                             GeobaseToGeorefMap lookup = GeobaseToGeorefMap.getInstance();
+	
+	                             for(int j = 0; j < geobasemaintermsrgi.length; j++)
+	                             {
+	                                 String georefterm = lookup.lookupGeobaseTerm(geobasemaintermsrgi[j]);
+	                                 if(georefterm != null)
+	                                 {
+	                                     navigatorterms.add(georefterm);
+	
+	                                     GeoRefBoxMap coordLookup = GeoRefBoxMap.getInstance();
+	                                     String coordString = coordLookup.lookupGeoRefTermCoordinates(georefterm.trim());
+	                                     if(coordString != null)
+	                                     {
+	                                       coords = parseCoordinates(coordString);
+	
+	                                       if(coords != null &&  coords[4].indexOf("-") == -1 && coords[3].indexOf("-") != -1)
+	                                       {
+	                                         coords[3] = "180";
+	                                       }
+	                                       if(j == currentCoord)
+	                                       {
+	                                         rec.put(EVCombinedRec.LAT_SE, coords[1]);
+	                                         rec.put(EVCombinedRec.LAT_NW, coords[2]);
+	                                         rec.put(EVCombinedRec.LNG_SE, coords[3]);
+	                                         rec.put(EVCombinedRec.LNG_NW, coords[4]);
+	                                         rec.put(EVCombinedRec.LAT_NE, coords[2]);
+	                                         rec.put(EVCombinedRec.LNG_NE, coords[3]);
+	                                         rec.put(EVCombinedRec.LAT_SW, coords[1]);
+	                                         rec.put(EVCombinedRec.LNG_SW, coords[4]);
+	                                       }
+	                                     }
+	                                 }
+	                             }
+	                         }
+	                         if(navigatorterms !=null && !navigatorterms.isEmpty())
+	                         {
+	                            rec.putIfNotNull(EVCombinedRec.INT_PATENT_CLASSIFICATION, (String[])navigatorterms.toArray(new String[]{}));
+	                         }
+	                    }
+	
+	                    if(!isChimica && rs.getString("CHEMICALTERM") != null)
+	                    {
+	                        rec.put(EVCombinedRec.CHEMICALTERMS, prepareMulti(rs.getString("CHEMICALTERM")));
+	                    }
+	
+	
+	                    String[] issnArray = null;
+	                    if (rs.getString("ISSN") != null && rs.getString("EISSN") != null)
+	                    {
+	                        issnArray = new String[2];
+	                        issnArray[0] = rs.getString("ISSN");
+	                        issnArray[1] = rs.getString("EISSN");
+	                    }
+	                    else if (rs.getString("EISSN") != null)
+	                    {
+	                        issnArray = new String[1];
+	                        issnArray[0] = rs.getString("EISSN");
+	                    }
+	                    else if(rs.getString("ISSN") != null)
+	                    {
+	                        issnArray = new String[1];
+	                        issnArray[0] = rs.getString("ISSN");
+	                    }
+	
+	                    if(issnArray != null)
+	                    {
+	                        rec.put(EVCombinedRec.ISSN, issnArray);
+	                    }
+	
+	                    if (rs.getString("CODEN") != null)
+	                    {
+	                        rec.put(EVCombinedRec.CODEN, BdCoden.convert(rs.getString("CODEN")));
+	                    }
+	
+	                    String isbnString = rs.getString("ISBN");
+	                    if (isbnString!= null)
+	                    {
+	                        rec.put(EVCombinedRec.ISBN, prepareISBN(isbnString));
+	                    }
+	
+	                    String st = rs.getString("SOURCETITLE");
+	                    String sta = rs.getString("SOURCETITLEABBREV");
+	                    if (st == null)
+	                    {
+	                        st = sta;
+	                    }
+	
+	                    if (st != null)
+	                    {
+	                        rec.put(EVCombinedRec.SERIAL_TITLE, st);
+	                    }
+	
+	                    if(sta != null)
+	                    {
+	                         rec.put(EVCombinedRec.ABBRV_SRC_TITLE, sta);
+	                    }
+	
+	                    if (rs.getString("PUBLISHERNAME") != null)
+	                    {
+	                        rec.put(EVCombinedRec.PUBLISHER_NAME, preparePublisherName(rs.getString("PUBLISHERNAME")));
+	                    }
+	
+	                    if (rs.getString("TREATMENTCODE") != null)
+	                    {
+	                        rec.put(EVCombinedRec.TREATMENT_CODE,
+	                                prepareMulti(getTreatmentCode(rs.getString("TREATMENTCODE"))));
+	                    }
+	
+	                    String la = rs.getString("CITATIONLANGUAGE");
+	
+	                    if (la != null)
+	                    {
+	                        rec.put(EVCombinedRec.LANGUAGE,prepareLanguage(la));
+	                    }
+	
+	                    String docType = rs.getString("CITTYPE");
+	                    String sourceType = rs.getString("SOURCETYPE");
+	                    
+	                    //added by hmo at 1/15/2020 based on EVOPS-884
+	                    //System.out.println("SOURCETYPE= "+sourceType);
+	                    if(sourceType!=null)
+	                    {
+	                    	 rec.put(EVCombinedRec.SOURCE_TYPE, sourceType);
+	                    }
+	                    
+	                    if(docType != null)
+	                    {
+	                        boolean confCodeFlag = false;
+	                        if(rs.getString("CONFCODE") != null)
+	                        {
+	                            confCodeFlag = true;
+	                        }
+	
+	                        String ct = null;
+	                        if(sourceType!=null && sourceType.equalsIgnoreCase("b") &&
+	                           (docType.equalsIgnoreCase("bk") || docType.equalsIgnoreCase("ch") || docType.equalsIgnoreCase("mr") || docType.equalsIgnoreCase("mc") ||
+	                        	docType.equalsIgnoreCase("ed") || docType.equalsIgnoreCase("sh") || docType.equalsIgnoreCase("le") || docType.equalsIgnoreCase("no")))
+	                        	
+	                        {
+	                        	if(docType.equalsIgnoreCase("ch") || docType.equalsIgnoreCase("mc"))
+	                        	{
+	                        		rec.put(EVCombinedRec.DOCTYPE,"ch");
+	                        	}
+	                        	else if(docType.equalsIgnoreCase("ed") )
+	                        	{
+	                        		rec.put(EVCombinedRec.DOCTYPE,"ed");
+	                        	}
+	                        	else if(docType.equalsIgnoreCase("sh") )
+	                        	{
+	                        		rec.put(EVCombinedRec.DOCTYPE,"sh");
+	                        	}
+	                        	else if(docType.equalsIgnoreCase("le") )
+	                        	{
+	                        		rec.put(EVCombinedRec.DOCTYPE,"le");
+	                        	}
+	                        	else if(docType.equalsIgnoreCase("no") )
+	                        	{
+	                        		rec.put(EVCombinedRec.DOCTYPE,"no");
+	                        	}
+	                        	else
+	                        	{
+	                        		rec.put(EVCombinedRec.DOCTYPE,"bk");
+	                        	}
+	                        }
+	                        else if((ct = getCitationType(docType,confCodeFlag)) != null)
+	                        {
+	                            if((isCpx)&&((rs.getString("MAINHEADING") != null)|| rec.containsKey(EVCombinedRec.CONTROLLED_TERMS)))
+	                            {
+	                                ct = ct + " CORE";
+	                            }
+	                            rec.put(EVCombinedRec.DOCTYPE,ct);
+	                        }
+	                    }
+	                    else if(isCpx)
+	                    {
+	                        docType = "";
+	                        if ((rs.getString("MAINHEADING") != null)|| rec.containsKey(EVCombinedRec.CONTROLLED_TERMS)){
+	                            docType = docType + " CORE";
+	                        }
+	                        rec.put(EVCombinedRec.DOCTYPE, docType);
+	                    }
+	                    
+	                    //overwrite the doctype with "ST" when standardid is available
+	                    if(isCpx && sourceType!=null && sourceType.equalsIgnoreCase("b") && rs.getString("STANDARDID") != null)
+	            		{
+	                    	 rec.put(EVCombinedRec.DOCTYPE, "ST");
+	            		}
+	
+	                    if (rs.getString("CLASSIFICATIONCODE") != null &&
+	                            !rs.getString("DATABASE").equalsIgnoreCase("elt"))
+	                    {
+	                        rec.put(EVCombinedRec.CLASSIFICATION_CODE,
+	                                prepareMulti(formatClassCodes(rs.getString("CLASSIFICATIONCODE"))));
+	                    }
+	                    if (rs.getString("CLASSIFICATIONDESC") != null &&
+	                            rs.getString("DATABASE").equalsIgnoreCase("elt"))
+	                    {
+	                        rec.put(EVCombinedRec.CLASSIFICATION_CODE,
+	                                prepareMulti(rs.getString("CLASSIFICATIONDESC")));
+	                    }
+	                    if (rs.getString("CONFCODE") != null)
+	                    {
+	                        rec.put(EVCombinedRec.CONFERENCE_CODE, rs.getString("CONFCODE"));
+	                    }
+	
+	                    if (rs.getString("CONFNAME") != null)
+	                    {
+	                        rec.put(EVCombinedRec.CONFERENCE_NAME, rs.getString("CONFNAME"));
+	                    }
+	
+	                    String cl = rs.getString("CONFLOCATION");
+	
+	                    if (cl !=null && cl.length() > 2)
+	                    {
+	                        rec.put(EVCombinedRec.CONFERENCE_LOCATION,prepareConfLocation(cl) );
+	                    }
+	
+	                    if (rs.getString("CONFDATE") != null)
+	                    {
+	                        rec.put(EVCombinedRec.MEETING_DATE, rs.getString("CONFDATE"));
+	                    }
+	
+	                    if (rs.getString("CONFSPONSORS") != null)
+	                    {
+	                        rec.put(EVCombinedRec.SPONSOR_NAME, prepareMulti(rs.getString("CONFSPONSORS")));
+	                    }
+	
+	                    if (rs.getString("CONFERENCEORGANIZATION") != null)
+	                    {
+	                        rec.put(EVCombinedRec.CONFERENCEAFFILIATIONS, prepareMulti(rs.getString("CONFERENCEORGANIZATION")));
+	                    }
+	
+	                    if (rs.getString("CONFERENCEEDITOR") != null)
+	                    {
+	                        rec.put(EVCombinedRec.CONFERENCEEDITORS, prepareEditor(rs.getString("CONFERENCEEDITOR")));
+	                    }
+	
+	                    if (rs.getString("CONFERENCEPARTNUMBER") != null)
+	                    {
+	                        rec.put(EVCombinedRec.CONFERENCEPARTNUMBER,rs.getString("CONFERENCEPARTNUMBER"));
+	                    }
+	
+	                    if (rs.getString("CONFERENCEPAGERANGE") != null)
+	                    {
+	                        rec.put(EVCombinedRec.CONFERENCEPAGERANGE,rs.getString("CONFERENCEPAGERANGE"));
+	                    }
+	
+	                    if (rs.getString("CONFERENCEPAGECOUNT") != null)
+	                    {
+	                        rec.put(EVCombinedRec.CONFERENCENUMBERPAGES,rs.getString("CONFERENCEPAGECOUNT"));
+	                    }
+	
+	                    if (rs.getString("ISSUETITLE") != null)
+	                    {
+	                        rec.put(EVCombinedRec.MONOGRAPH_TITLE, rs.getString("ISSUETITLE"));
+	                    }
+	
+	                    rec.put(EVCombinedRec.DOCID, rs.getString("M_ID"));
+	
+	                    rec.put(EVCombinedRec.DATABASE, rs.getString("DATABASE"));
+	                    
+	                    //only output the first six digits of the loadnumber  by hmo@8/23/2017
+	                    if(rs.getString("LOADNUMBER").length()>=6)
+	                    {
+	                    	rec.put(EVCombinedRec.LOAD_NUMBER, (rs.getString("LOADNUMBER")).substring(0,6));
+	                    }
+	                    else
+	                    {
+	                    	rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("LOADNUMBER"));
+	                    }
+	                    
+	                    if(rs.getString("UPDATENUMBER") !=null)
+	                    {
+	                    	rec.put(EVCombinedRec.UPDATE_NUMBER, rs.getString("UPDATENUMBER"));
+	                    }
+	
+	                    if (rs.getString("PUBLICATIONYEAR") != null && rs.getString("PUBLICATIONYEAR").length()>3)
+	                    {
+	                        rec.put(EVCombinedRec.PUB_YEAR, rs.getString("PUBLICATIONYEAR").substring(0,4));
+	                        //System.out.println("YEAR="+rs.getString("PUBLICATIONYEAR").substring(0,4));
+	                    }
+	
+	                    rec.put(EVCombinedRec.DEDUPKEY,
+	                            getDedupKey(rec.get(EVCombinedRec.ISSN),
+	                                        rec.get(EVCombinedRec.CODEN),
+	                                        rs.getString("VOLUME"),
+	                                        rs.getString("ISSUE"),
+	                                        getPage(rs.getString("PAGE"), rs.getString("ARTICLENUMBER"))));
+	
+	                    rec.put(EVCombinedRec.VOLUME, rs.getString("VOLUME"));
+	                    rec.put(EVCombinedRec.ISSUE, rs.getString("ISSUE"));
+	                    //rec.put(EVCombinedRec.STARTPAGE, getFirstPage(getPage(rs.getString("PAGE"), rs.getString("ARTICLENUMBER"), rs.getString("ISSN"))));
+	                    rec.put(EVCombinedRec.STARTPAGE, getPage(getFirstPage(rs.getString("PAGE")),rs.getString("ARTICLENUMBER")));
+	                    accessNumber = rs.getString("ACCESSNUMBER");
+	
+	                    rec.put(EVCombinedRec.ACCESSION_NUMBER,
+	                            rs.getString("ACCESSNUMBER"));
+	
+	                    if (rs.getString("REPORTNUMBER") != null)
+	                    {
+	                        rec.put(EVCombinedRec.REPORTNUMBER,rs.getString("REPORTNUMBER"));
+	                    }
+	
+	                    if(rs.getString("DOI")!=null)
+	                    {
+	                        rec.put(EVCombinedRec.DOI,rs.getString("DOI"));
+	                    }
+	
+	                    if(rs.getString("COPYRIGHT") != null)
+	                    {
+	                        rec.put(EVCombinedRec.COPYRIGHT,rs.getString("COPYRIGHT"));
+	                    }
+	
+	                    if(rs.getString("PII") != null)
+	                    {
+	                        rec.put(EVCombinedRec.PII,rs.getString("PII"));
+	                    }
+	
+	                    if(rs.getString("PUI") != null)
+	                    {
+	                    	pui = rs.getString("PUI");
+	                    	//System.out.println("PUI="+pui);
+	                        rec.put(EVCombinedRec.PUI,rs.getString("PUI"));
+	                    }
+	
+	                    if (rs.getString("ASSIG") != null)
+	                    {
+	                        rec.put(EVCombinedRec.COMPANIES, prepareMulti(rs.getString("ASSIG")));
+	                    }
+	
+	                    if (rs.getString("CASREGISTRYNUMBER") != null && rs.getString("DATABASE") != null)
+	                    {
+	                        rec.put(EVCombinedRec.CASREGISTRYNUMBER, prepareCASRegistry(rs.getString("CASREGISTRYNUMBER"), rs.getString("DATABASE")));
+	                    }
+	
+	                    if (rs.getString("DATABASE").equals("cpx"))
+	                    {
+	                        rec.put(EVCombinedRec.DATESORT, prepareDateSort(rs.getString("DATESORT"),rs.getString("PUBLICATIONYEAR")));
+	                    }
+	
+	                    if (rs.getString("SEQ_NUM") != null)
+	                    {
+	                        rec.put(EVCombinedRec.PARENT_ID, rs.getString("SEQ_NUM"));
+	                    }
+	
+	                    rec.put(EVCombinedRec.PUB_SORT, Integer.toString(i));
+	
+	                    if(currentCoord == 0)
+	                    {
+	                        firstGUID = rs.getString("M_ID");
+	                    }
+	                    if(numCoords == 1)
+	                    {
+	                        rec.putIfNotNull(EVCombinedRec.DOCID, firstGUID);
+	                    }
+	                    else
+	                    {
+	                        if(!isGeoBase || (isGeoBase && rec.get(EVCombinedRec.LAT_SE) != null))
+	                        {
+	                            coordCount++;
+	                        }
+	
+	                        if(coordCount == 0)
+	                        {
+	                            coordCount++;
+	                        }
+	
+	                        rec.putIfNotNull(EVCombinedRec.DOCID, firstGUID + "_" + (coordCount));
+	                    }
+	                    CVTerms cvterms = null;
+	                    String apict = replaceNull(rs.getString("apict"));
+	                    String apict1 = replaceNull(rs.getString("apict1"));
+	
+	                    if(apict != null && !apict.trim().equals(""))
+	                    {
+	                        if(apict1 != null &&
+	                                !apict1.trim().equals(""))
+	                        {
+	                            apict = apict.concat(apict1);
+	                        }
+	                        cvterms = new CVTerms(apict);
+	                        cvterms.parse();
+	
+	                    }
+	
+	                    if (rs.getString("MAINHEADING") != null &&
+	                            !rs.getString("DATABASE").equalsIgnoreCase("elt"))
+	                    {
+	                        rec.put(EVCombinedRec.MAIN_HEADING, prepareMulti(rs.getString("MAINHEADING")));
+	                    }
+	
+	
+	                    if(cvterms != null)
+	                    {
+	                        QualifierFacet qfacet = new QualifierFacet();
+	
+	                        String[] cvt = getCvs(cvterms.getCvt());
+	
+	                        if(cvt != null)
+	                        {
+	
+	                            rec.put(EVCombinedRec.CONTROLLED_TERMS, cvt);
+	                        }
+	
+	                        String[] cvtm = getCvs(cvterms.getCvm());
+	
+	                        if(cvtm != null &&
+	                                rs.getString("DATABASE").equalsIgnoreCase("elt"))
+	                        {
+	                             rec.put(EVCombinedRec.MAIN_HEADING, cvtm);
+	                             //this field is added to generate navigators for Major terms
+	                             rec.put(rec.ECLA_CODES, cvtm);
+	                        }
+	
+	                        String[] norole = getCvs(cvterms.getCvn());
+	
+	                        if(norole != null)
+	                        {
+	                             qfacet.setNorole(norole.toString());
+	                             rec.put(EVCombinedRec.NOROLE_TERMS, norole);
+	                        }
+	
+	                        String[] reagent = getCvs(cvterms.getCva());
+	
+	                        if(reagent != null)
+	                        {
+	                            qfacet.setReagent(reagent.toString());
+	                            rec.put(EVCombinedRec.REAGENT_TERMS, reagent);
+	                        }
+	
+	                        String[] product = getCvs(cvterms.getCvp());
+	
+	                        if(product != null)
+	                        {
+	                            qfacet.setProduct(product.toString());
+	                            rec.put(EVCombinedRec.PRODUCT_TERMS, product);
+	                        }
+	
+	                        String[] mnorole = getCvs(cvterms.getCvmn());
+	
+	                        if(mnorole != null)
+	                        {
+	                            qfacet.setNorole(mnorole.toString());
+	                            rec.put(EVCombinedRec.MAJORNOROLE_TERMS, mnorole);
+	                        }
+	
+	                        String[] mreagent = getCvs(cvterms.getCvma());
+	
+	                        if(mreagent != null)
+	                        {
+	                            qfacet.setReagent(mreagent.toString());
+	                            rec.put(EVCombinedRec.MAJORREAGENT_TERMS, mreagent);
+	                        }
+	
+	                        String[] mproduct = getCvs(cvterms.getCvmp());
+	
+	                        if(mproduct != null)
+	                        {
+	                            qfacet.setProduct(mproduct.toString());
+	                            rec.put(EVCombinedRec.MAJORPRODUCT_TERMS, mproduct);
+	                        }
+	                        rec.put(rec.USPTOCODE, prepareMulti(qfacet.getValue()));
+	                    }
+	
+	                    CVTerms ltterms = null;
+	                    String apilt = replaceNull(rs.getString("apilt"));
+	                    String apilt1 = replaceNull(rs.getString("apilt1"));
+	
+	                    if(apilt != null && !apilt.trim().equals(""))
+	                    {
+	                        if(apilt1 != null &&
+	                                !apilt1.trim().equals(""))
+	                        {
+	                            apilt = apilt.concat(apilt1);
+	                        }
+	                        ltterms = new CVTerms(apilt);
+	                        ltterms.parse();
+	                    }
+	
+	                    if(ltterms != null)
+	                    {
+	                        String ltstr = ltterms.getCvexpandstr();
+	
+	                        if(ltstr != null)
+	                        {
+	                            rec.put(EVCombinedRec.LINKED_TERMS, prepareELTCV(ltstr));
+	                        }
+	                    }
+	
+	                    if(rs.getString("apiams") != null)
+	                    {
+	                        rec.put(EVCombinedRec.MAIN_TERM, prepareMulti(rs.getString("apiams")));
+	                    }
+	                    
+	                    //REMOVE FOR FAST CHANGE
+	                    
+	                    if(rs.getString("GRANTLIST") != null)
+	                    {
+	                        rec.put(EVCombinedRec.GRANTID, prepareMulti(getGrantID(rs.getString("GRANTLIST"))));
+	                        rec.put(EVCombinedRec.GRANTAGENCY, prepareMulti(getGrantAgency(rs.getString("GRANTLIST"))));
+	                    }
+	                    
+	                    if(rs.getString("GRANTTEXT") != null)
+	                    {
+	                        rec.put(EVCombinedRec.GRANTTEXT, prepareMulti(rs.getString("GRANTTEXT")));                       
+	                    }
+	                    
+	                    //new business rule from EVOPS-554 at1/25/2018
+	                    
+	                    if(rs.getString("SOURCEBIBTEXT") != null && rs.getString("CITTYPE").equalsIgnoreCase("st") && 
+	                    		sourceType!=null && sourceType.equalsIgnoreCase("b"))
+	                    {      
+	                        rec.put(EVCombinedRec.SOURCEBIBTEXT, getStatus(rs.getString("SOURCEBIBTEXT")));                       
+	                    }
+	                    
+	                    if(rs.getString("STANDARDID") != null)
+	                    {
+	                        rec.put(EVCombinedRec.STANDARDID, rs.getString("STANDARDID"));
+	                        
+	                    }
+	                    
+	                    if(rs.getString("STANDARDDESIGNATION") != null)
+	                    {
+	                       // rec.put(EVCombinedRec.STANDARDDESIGNATION, formatStandardCodes(rs.getString("STANDARDDESIGNATION")));
+	                        rec.put(EVCombinedRec.STANDARDDESIGNATION, rs.getString("STANDARDDESIGNATION"));
+	                        //rec.put(EVCombinedRec.STANDARDDESIGNATION, prepareStandardDesignation(rs.getString("STANDARDDESIGNATION")));
+	                        
+	                    }
+	                    
+	                    if(rs.getString("NORMSTANDARDID") != null)
+	                    {
+	                        rec.put(EVCombinedRec.NORMSTANDARDID, rs.getString("NORMSTANDARDID"));
+	                        //rec.put(EVCombinedRec.NORMSTANDARDID, formatStandardCodes(rs.getString("NORMSTANDARDID")));
+	                    }
+	                    
+	                    //ISOPENACESS
+	                    //blocked ISOPENACESS 10/24/2018
+	                    
+	                    if(rs.getString("ISOPENACESS") != null)
+	                    {
+	                        rec.put(EVCombinedRec.ISOPENACESS, rs.getString("ISOPENACESS"));                        
+	                    }
+	                    else
+	                    {
+	                    	 rec.put(EVCombinedRec.ISOPENACESS, "0");
+	                    }
+	                                                      
+	                    //due to bd_master table structure change, we have to handle the missed column exception
+	                    try
+	                    {
+	                    	if(rs.getString("eid") != null)
+	                    	{
+	                    		rec.put(EVCombinedRec.EID, rs.getString("eid"));
+	                    		//System.out.println("EID= "+rs.getString("eid"));
+	                    	}
+	                    }
+	                    catch(Exception e)
+	                    {
+	                    	//System.out.println("missing eid column");
+	                    	//do nothing
+	                    }
+	                    
+	                    
+	                   //*
+	                   // * use for numerical index
+	                    if(pui!=null && pui.length()>0 && isCpx)
+	                    {
+	                    	populateNumericalIndex(pui,rec,con);                 
+	                    }
+	                   // */
+	                    
+	                    try
+	                    {
+	                      if(!isGeoBase || (isGeoBase && rec.get(EVCombinedRec.LAT_SE) != null))
+	                      {
+	                          //coordCount++;
+	                          recVector.add(rec);
+	                          if(recSecondBox != null)
+	                          {
+	
+	                            if(secondBoxCoords != null)
+	                            {
+	                                coordCount++;
+	                                for(int b = 0; b < EVCombinedRecKeys.length; b++)
+	                                {
+	                                    Object recTemp = rec.get(EVCombinedRecKeys[b]);
+	                                    if(recTemp != null)
+	                                    {
+	                                        recSecondBox.put(EVCombinedRecKeys[b],rec.get(EVCombinedRecKeys[b]));
+	                                    }
+	                                }
+	                                secondBoxCoords[4] = "-180";
+	                                recSecondBox.put(EVCombinedRec.LAT_SE, secondBoxCoords[1]);
+	                                recSecondBox.put(EVCombinedRec.LAT_NW, secondBoxCoords[2]);
+	                                recSecondBox.put(EVCombinedRec.LNG_SE, secondBoxCoords[3]);
+	                                recSecondBox.put(EVCombinedRec.LNG_NW, secondBoxCoords[4]);
+	                                recSecondBox.put(EVCombinedRec.LAT_NE, secondBoxCoords[2]);
+	                                recSecondBox.put(EVCombinedRec.LNG_NE, secondBoxCoords[3]);
+	                                recSecondBox.put(EVCombinedRec.LAT_SW, secondBoxCoords[1]);
+	                                recSecondBox.put(EVCombinedRec.LNG_SW, secondBoxCoords[4]);
+	                                if(coordCount == 0)
+	                                {
+	                                    coordCount++;
+	                                }
+	                                recSecondBox.putIfNotNull(EVCombinedRec.DOCID, firstGUID + "_" + (coordCount));
+	                                recVector.add(recSecondBox);
+	                            }
+	                          }
+	                      }
+	                      else
+	                      {
+	                          recVector.add(rec);
+	                      }
+	                    }
+	                    catch(Exception e)
+	                    {
+	                      e.printStackTrace();
+	                    }
+	                }
+	
+	            }
+	           
+	            recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
+	            //this.writer.writeRec(recArray);
+	          
+	            
+	            /**********************************************************/
+	            //following code used to test kafka by hmo@2020/01/30
+	            //this.writer.writeRec(recArray,kafka);
+	            /*********************************************************/
+	            
+	            ///*
+	            MessageSender sendMessage= new MessageSender(recArray,kafka,this.writer);
+	            thread = new Thread(sendMessage);
+	            thread.start();
+	            //this.writer.writeRec(recArray,kafka);
+	            /*
+	            if(i%5==0)
+	            {
+	            	//System.out.println("flushing at "+i);
+	            	kafka.flush();
+	            }
+	            */
+	         }
+	         catch(Exception e)
+	         {
+	            System.out.println("**** ERROR Found on access number "+accessNumber+" *****");
+	            e.printStackTrace();
+	            problemRecordCount++;
+	         }
+	        }
+	        
+	    	System.out.println("Total record is "+ i);
+	    	System.out.println(problemRecordCount + " of them has parsing problem");
+        }
+        catch(Exception e)
+        {
+        	e.printStackTrace();
+        }
+        finally
+        {
         
-        while (rs.next())
-        {
-          ++i;
-          String firstGUID = "";        
-          int numCoords = 1;
-          int coordCount = 0;
-          if(rs.getString("DATABASE") != null)
-          {
-              if(rs.getString("DATABASE").equals("geo"))
-              {
-                    isGeoBase = true;
-              }
-              if(rs.getString("DATABASE").equals("chm"))
-              {
-                    isChimica = true;
-              }
-              if(rs.getString("DATABASE").equals("cpx"))
-              {
-                  isCpx = true;
-              }
-          }
-          //System.out.println("ACCESSNUMBER= "+rs.getString("ACCESSNUMBER"));
-
-          Vector recVector = new Vector();
-          try
-          {
-              for(int currentCoord = 0; currentCoord < numCoords; currentCoord++)
-              {
-                String[] coords = null;
-                String[] secondBoxCoords= null;
-                EVCombinedRec rec = new EVCombinedRec();
-                pui = rs.getString("PUI");
-                puiGlobal = pui;
-                
-                if (validYear(rs.getString("PUBLICATIONYEAR")))
-                {
-                	if(isCpx && rs.getString("authorid")!=null)
-                	{
-                		String authorid = rs.getString("authorid");
-                		String[] aid = authorid.split(",");
-                		rec.put(EVCombinedRec.AUTHORID, aid);
-                	}
-                	
-                	if(isCpx && rs.getString("affid")!=null)
-                	{
-                		String affid = rs.getString("affid");
-                		String[] affids = affid.split(",");
-                		rec.put(EVCombinedRec.AFFILIATIONID, affids);
-                	}
-                	
-                	//move this block of code to here to include Affiliation ID while BD affiliation is null
-                	if(rs.getString("affid")==null && rs.getString("CAFE_AFFILIATION")!=null)
-                    {
-                    	String cafeAffString = rs.getString("CAFE_AFFILIATION");
-                    	if(rs.getString("CAFE_AFFILIATION1")!=null)
-                    	{
-                    		cafeAffString = cafeAffString+rs.getString("CAFE_AFFILIATION1");
-                    	}
-           
-                    	BdAffiliations caff = new BdAffiliations(cafeAffString);
-                    	caff.getSearchValue();     
-                    	
-                    	rec.put(EVCombinedRec.AFFILIATIONID, caff.getAffiliationId());
-                    	rec.put(EVCombinedRec.DEPARTMENTID,  caff.getDepartmentId());
-                    	
-                    }
-                	//end of the block
-                	
-                    if(rs.getString("AUTHOR") != null)
-                    {
-                        String authorString = rs.getString("AUTHOR");
-                        if(rs.getString("AUTHOR_1") !=null)
-                        {
-                            authorString=authorString+rs.getString("AUTHOR_1");
-                        }
-                        
-                        rec.put(EVCombinedRec.AUTHOR, prepareBdAuthor(authorString));
-                        //use this to deal with author alias
-                        rec.put(EVCombinedRec.TRANSLATOR, prepareBdAuthorWithAlias(authorString));
-                        
-                        if(rs.getString("authorid")==null && rs.getString("cafe_author")!=null)
-                        {
-                        	String cafeAuthorString = rs.getString("cafe_author");
-                        	if(rs.getString("cafe_author1")!=null)
-                        	{
-                        		cafeAuthorString = cafeAuthorString+rs.getString("cafe_author1");
-                        	}
-                        	String[] cafeAuthor = prepareBdAuthor(cafeAuthorString);
-	                        String[] cafe_aid = getAuID();	                        
-	                        rec.put(EVCombinedRec.AUTHORID, cafe_aid);
-                        }
-                        String affiliation = null;
-                        
-                        if (rs.getString("AFFILIATION") != null)
-                        {
-                            affiliation = rs.getString("AFFILIATION");
-                            if(rs.getString("AFFILIATION_1")!=null)
-                            {
-                                affiliation = affiliation+rs.getString("AFFILIATION_1");
-                            }
-                            
-                         
-                            BdAffiliations aff = new BdAffiliations(affiliation);
-                            rec.put(EVCombinedRec.AUTHOR_AFFILIATION,  aff.getSearchValue());
-                            rec.put(EVCombinedRec.AFFILIATION_LOCATION,  aff.getLocationsSearchValue());
-                            rec.put(EVCombinedRec.COUNTRY,  aff.getCountriesSearchValue());
-                          
-                        }
-                        else if(rs.getString("AFFILIATION_1")!=null)
-                        {
-                            affiliation = rs.getString("AFFILIATION_1");
-                            BdAffiliations aff = new BdAffiliations(affiliation);
-                            rec.put(EVCombinedRec.AUTHOR_AFFILIATION,  aff.getSearchValue());
-                            rec.put(EVCombinedRec.AFFILIATION_LOCATION,  aff.getLocationsSearchValue());
-                            rec.put(EVCombinedRec.COUNTRY,  aff.getCountriesSearchValue());
-                            rec.put(EVCombinedRec.AFFILIATIONID,  aff.getAffiliationId());
-                            rec.put(EVCombinedRec.DEPARTMENTID,  aff.getDepartmentId());
-                            if(rs.getString("affid")==null && rs.getString("CAFE_AFFILIATION1")!=null)
-                            {
-                            	String cafeAffString = rs.getString("CAFE_AFFILIATION1");                           	
-                            	BdAffiliations caff = new BdAffiliations(cafeAffString);
-                            	caff.getSearchValue();   
-                            	rec.put(EVCombinedRec.AFFILIATIONID,  caff.getAffiliationId());
-                            	rec.put(EVCombinedRec.DEPARTMENTID,  caff.getDepartmentId());
-                            }
-
-                        }
-                        else if(rs.getString("CORRESPONDENCEAFFILIATION") != null)
-                        {
-                            affiliation = rs.getString("CORRESPONDENCEAFFILIATION");
-                            BdCorrespAffiliations aff = new BdCorrespAffiliations(affiliation);
-                            rec.put(EVCombinedRec.AUTHOR_AFFILIATION,  aff.getSearchValue());
-                            rec.put(EVCombinedRec.AFFILIATION_LOCATION,  aff.getLocationsSearchValue());
-                            rec.put(EVCombinedRec.COUNTRY,  aff.getCountriesSearchValue());
-                            rec.put(EVCombinedRec.AFFILIATIONID,  aff.getAffiliationId());
-                            rec.put(EVCombinedRec.DEPARTMENTID,  aff.getDepartmentId());
-                            if(rs.getString("CAFE_CORRESPONDENCEAFFILIATION")!=null)
-                            {
-                            	String cafeAffString = rs.getString("CAFE_CORRESPONDENCEAFFILIATION");                           	
-                            	BdAffiliations caff = new BdAffiliations(cafeAffString);
-                            	caff.getSearchValue();   
-                            	rec.put(EVCombinedRec.AFFILIATIONID,  caff.getAffiliationId());
-                            	rec.put(EVCombinedRec.DEPARTMENTID,  caff.getDepartmentId());
-                            }
-                        }
-                    }
-
-                    if (rs.getString("EDITORS") != null)
-                    {
-                        rec.put(EVCombinedRec.EDITOR, prepareEditor(rs.getString("EDITORS")));
-                    }
-
-                    if (rs.getString("CITATIONTITLE") != null)
-                    {
-                       rec.put(EVCombinedRec.TITLE, prepareCitationTitle(rs.getString("CITATIONTITLE")));
-                    }
-
-                    if (rs.getString("CITATIONTITLE") != null)
-                    {                   
-                       rec.put(EVCombinedRec.TRANSLATED_TITLE, prepareTranslatedCitationTitle(rs.getString("CITATIONTITLE")));
-                    }
-
-                    //****put translated source title into SERIAL_TITLE_TRANSLATION instead of TRANSLATED_TITLE by hongrong based on Frank request at 8/14/2014
-                    if (rs.getString("TRANSLATEDSOURCETITLE") != null)
-                    {
-                        rec.put(EVCombinedRec.SERIAL_TITLE_TRANSLATION, prepareMulti(rs.getString("TRANSLATEDSOURCETITLE")));
-                    }
-
-                    if (rs.getString("VOLUMETITLE") != null)
-                    {
-                        rec.put(EVCombinedRec.VOLUME_TITLE, rs.getString("VOLUMETITLE"));
-                    }
-
-                    String abString = getStringFromClob(rs.getClob("ABSTRACTDATA"));
-                    if (abString != null)
-                    {
-                        rec.put(EVCombinedRec.ABSTRACT, abString);
-                    }
-
-
-                    if(!isChimica)
-                    {
-                        if (rs.getString("CONTROLLEDTERM") != null)
-                        {
-                            rec.put(EVCombinedRec.CONTROLLED_TERMS, prepareMulti(rs.getString("CONTROLLEDTERM")));
-                        }
-                    }
-                    else
-                    {
-                        if (rs.getString("CHEMICALTERM") != null)
-                        {
-                            rec.put(EVCombinedRec.CONTROLLED_TERMS, prepareMulti(rs.getString("CHEMICALTERM")));
-                        }
-                    }
-
-
-                    if (rs.getString("UNCONTROLLEDTERM") != null)
-                    {
-                        rec.put(EVCombinedRec.UNCONTROLLED_TERMS, prepareMulti(rs.getString("UNCONTROLLEDTERM")));
-                    }
-                    else if(rs.getString("SPECIESTERM") != null)
-                    {
-                         rec.put(EVCombinedRec.UNCONTROLLED_TERMS, prepareMulti(rs.getString("SPECIESTERM")));
-                    }
-
-                    if (rs.getString("REGIONALTERM") != null)
-                    {
-                         String regionalterm = rs.getString("REGIONALTERM");
-                         String[] geobasemaintermsrgi = regionalterm.split(Constants.AUDELIMITER);
-                         rec.put(EVCombinedRec.CHEMICALTERMS, prepareMulti(regionalterm));
-                         List navigatorterms = null;
-                         if(isGeoBase)
-                         {
-                             navigatorterms = new ArrayList();
-                             GeobaseToGeorefMap lookup = GeobaseToGeorefMap.getInstance();
-
-                             for(int j = 0; j < geobasemaintermsrgi.length; j++)
-                             {
-                                 String georefterm = lookup.lookupGeobaseTerm(geobasemaintermsrgi[j]);
-                                 if(georefterm != null)
-                                 {
-                                     navigatorterms.add(georefterm);
-
-                                     GeoRefBoxMap coordLookup = GeoRefBoxMap.getInstance();
-                                     String coordString = coordLookup.lookupGeoRefTermCoordinates(georefterm.trim());
-                                     if(coordString != null)
-                                     {
-                                       coords = parseCoordinates(coordString);
-
-                                       if(coords != null &&  coords[4].indexOf("-") == -1 && coords[3].indexOf("-") != -1)
-                                       {
-                                         coords[3] = "180";
-                                       }
-                                       if(j == currentCoord)
-                                       {
-                                         rec.put(EVCombinedRec.LAT_SE, coords[1]);
-                                         rec.put(EVCombinedRec.LAT_NW, coords[2]);
-                                         rec.put(EVCombinedRec.LNG_SE, coords[3]);
-                                         rec.put(EVCombinedRec.LNG_NW, coords[4]);
-                                         rec.put(EVCombinedRec.LAT_NE, coords[2]);
-                                         rec.put(EVCombinedRec.LNG_NE, coords[3]);
-                                         rec.put(EVCombinedRec.LAT_SW, coords[1]);
-                                         rec.put(EVCombinedRec.LNG_SW, coords[4]);
-                                       }
-                                     }
-                                 }
-                             }
-                         }
-                         if(navigatorterms !=null && !navigatorterms.isEmpty())
-                         {
-                            rec.putIfNotNull(EVCombinedRec.INT_PATENT_CLASSIFICATION, (String[])navigatorterms.toArray(new String[]{}));
-                         }
-                    }
-
-                    if(!isChimica && rs.getString("CHEMICALTERM") != null)
-                    {
-                        rec.put(EVCombinedRec.CHEMICALTERMS, prepareMulti(rs.getString("CHEMICALTERM")));
-                    }
-
-
-                    String[] issnArray = null;
-                    if (rs.getString("ISSN") != null && rs.getString("EISSN") != null)
-                    {
-                        issnArray = new String[2];
-                        issnArray[0] = rs.getString("ISSN");
-                        issnArray[1] = rs.getString("EISSN");
-                    }
-                    else if (rs.getString("EISSN") != null)
-                    {
-                        issnArray = new String[1];
-                        issnArray[0] = rs.getString("EISSN");
-                    }
-                    else if(rs.getString("ISSN") != null)
-                    {
-                        issnArray = new String[1];
-                        issnArray[0] = rs.getString("ISSN");
-                    }
-
-                    if(issnArray != null)
-                    {
-                        rec.put(EVCombinedRec.ISSN, issnArray);
-                    }
-
-                    if (rs.getString("CODEN") != null)
-                    {
-                        rec.put(EVCombinedRec.CODEN, BdCoden.convert(rs.getString("CODEN")));
-                    }
-
-                    String isbnString = rs.getString("ISBN");
-                    if (isbnString!= null)
-                    {
-                        rec.put(EVCombinedRec.ISBN, prepareISBN(isbnString));
-                    }
-
-                    String st = rs.getString("SOURCETITLE");
-                    String sta = rs.getString("SOURCETITLEABBREV");
-                    if (st == null)
-                    {
-                        st = sta;
-                    }
-
-                    if (st != null)
-                    {
-                        rec.put(EVCombinedRec.SERIAL_TITLE, st);
-                    }
-
-                    if(sta != null)
-                    {
-                         rec.put(EVCombinedRec.ABBRV_SRC_TITLE, sta);
-                    }
-
-                    if (rs.getString("PUBLISHERNAME") != null)
-                    {
-                        rec.put(EVCombinedRec.PUBLISHER_NAME, preparePublisherName(rs.getString("PUBLISHERNAME")));
-                    }
-
-                    if (rs.getString("TREATMENTCODE") != null)
-                    {
-                        rec.put(EVCombinedRec.TREATMENT_CODE,
-                                prepareMulti(getTreatmentCode(rs.getString("TREATMENTCODE"))));
-                    }
-
-                    String la = rs.getString("CITATIONLANGUAGE");
-
-                    if (la != null)
-                    {
-                        rec.put(EVCombinedRec.LANGUAGE,prepareLanguage(la));
-                    }
-
-                    String docType = rs.getString("CITTYPE");
-                    String sourceType = rs.getString("SOURCETYPE");
-                    
-                    //added by hmo at 1/15/2020 based on EVOPS-884
-                    //System.out.println("SOURCETYPE= "+sourceType);
-                    if(sourceType!=null)
-                    {
-                    	 rec.put(EVCombinedRec.SOURCE_TYPE, sourceType);
-                    }
-                    
-                    if(docType != null)
-                    {
-                        boolean confCodeFlag = false;
-                        if(rs.getString("CONFCODE") != null)
-                        {
-                            confCodeFlag = true;
-                        }
-
-                        String ct = null;
-                        if(sourceType!=null && sourceType.equalsIgnoreCase("b") &&
-                           (docType.equalsIgnoreCase("bk") || docType.equalsIgnoreCase("ch") || docType.equalsIgnoreCase("mr") || docType.equalsIgnoreCase("mc") ||
-                        	docType.equalsIgnoreCase("ed") || docType.equalsIgnoreCase("sh") || docType.equalsIgnoreCase("le") || docType.equalsIgnoreCase("no")))
-                        	
-                        {
-                        	if(docType.equalsIgnoreCase("ch") || docType.equalsIgnoreCase("mc"))
-                        	{
-                        		rec.put(EVCombinedRec.DOCTYPE,"ch");
-                        	}
-                        	else if(docType.equalsIgnoreCase("ed") )
-                        	{
-                        		rec.put(EVCombinedRec.DOCTYPE,"ed");
-                        	}
-                        	else if(docType.equalsIgnoreCase("sh") )
-                        	{
-                        		rec.put(EVCombinedRec.DOCTYPE,"sh");
-                        	}
-                        	else if(docType.equalsIgnoreCase("le") )
-                        	{
-                        		rec.put(EVCombinedRec.DOCTYPE,"le");
-                        	}
-                        	else if(docType.equalsIgnoreCase("no") )
-                        	{
-                        		rec.put(EVCombinedRec.DOCTYPE,"no");
-                        	}
-                        	else
-                        	{
-                        		rec.put(EVCombinedRec.DOCTYPE,"bk");
-                        	}
-                        }
-                        else if((ct = getCitationType(docType,confCodeFlag)) != null)
-                        {
-                            if((isCpx)&&((rs.getString("MAINHEADING") != null)|| rec.containsKey(EVCombinedRec.CONTROLLED_TERMS)))
-                            {
-                                ct = ct + " CORE";
-                            }
-                            rec.put(EVCombinedRec.DOCTYPE,ct);
-                        }
-                    }
-                    else if(isCpx)
-                    {
-                        docType = "";
-                        if ((rs.getString("MAINHEADING") != null)|| rec.containsKey(EVCombinedRec.CONTROLLED_TERMS)){
-                            docType = docType + " CORE";
-                        }
-                        rec.put(EVCombinedRec.DOCTYPE, docType);
-                    }
-                    
-                    //overwrite the doctype with "ST" when standardid is available
-                    if(isCpx && sourceType!=null && sourceType.equalsIgnoreCase("b") && rs.getString("STANDARDID") != null)
-            		{
-                    	 rec.put(EVCombinedRec.DOCTYPE, "ST");
-            		}
-
-                    if (rs.getString("CLASSIFICATIONCODE") != null &&
-                            !rs.getString("DATABASE").equalsIgnoreCase("elt"))
-                    {
-                        rec.put(EVCombinedRec.CLASSIFICATION_CODE,
-                                prepareMulti(formatClassCodes(rs.getString("CLASSIFICATIONCODE"))));
-                    }
-                    if (rs.getString("CLASSIFICATIONDESC") != null &&
-                            rs.getString("DATABASE").equalsIgnoreCase("elt"))
-                    {
-                        rec.put(EVCombinedRec.CLASSIFICATION_CODE,
-                                prepareMulti(rs.getString("CLASSIFICATIONDESC")));
-                    }
-                    if (rs.getString("CONFCODE") != null)
-                    {
-                        rec.put(EVCombinedRec.CONFERENCE_CODE, rs.getString("CONFCODE"));
-                    }
-
-                    if (rs.getString("CONFNAME") != null)
-                    {
-                        rec.put(EVCombinedRec.CONFERENCE_NAME, rs.getString("CONFNAME"));
-                    }
-
-                    String cl = rs.getString("CONFLOCATION");
-
-                    if (cl !=null && cl.length() > 2)
-                    {
-                        rec.put(EVCombinedRec.CONFERENCE_LOCATION,prepareConfLocation(cl) );
-                    }
-
-                    if (rs.getString("CONFDATE") != null)
-                    {
-                        rec.put(EVCombinedRec.MEETING_DATE, rs.getString("CONFDATE"));
-                    }
-
-                    if (rs.getString("CONFSPONSORS") != null)
-                    {
-                        rec.put(EVCombinedRec.SPONSOR_NAME, prepareMulti(rs.getString("CONFSPONSORS")));
-                    }
-
-                    if (rs.getString("CONFERENCEORGANIZATION") != null)
-                    {
-                        rec.put(EVCombinedRec.CONFERENCEAFFILIATIONS, prepareMulti(rs.getString("CONFERENCEORGANIZATION")));
-                    }
-
-                    if (rs.getString("CONFERENCEEDITOR") != null)
-                    {
-                        rec.put(EVCombinedRec.CONFERENCEEDITORS, prepareEditor(rs.getString("CONFERENCEEDITOR")));
-                    }
-
-                    if (rs.getString("CONFERENCEPARTNUMBER") != null)
-                    {
-                        rec.put(EVCombinedRec.CONFERENCEPARTNUMBER,rs.getString("CONFERENCEPARTNUMBER"));
-                    }
-
-                    if (rs.getString("CONFERENCEPAGERANGE") != null)
-                    {
-                        rec.put(EVCombinedRec.CONFERENCEPAGERANGE,rs.getString("CONFERENCEPAGERANGE"));
-                    }
-
-                    if (rs.getString("CONFERENCEPAGECOUNT") != null)
-                    {
-                        rec.put(EVCombinedRec.CONFERENCENUMBERPAGES,rs.getString("CONFERENCEPAGECOUNT"));
-                    }
-
-                    if (rs.getString("ISSUETITLE") != null)
-                    {
-                        rec.put(EVCombinedRec.MONOGRAPH_TITLE, rs.getString("ISSUETITLE"));
-                    }
-
-                    rec.put(EVCombinedRec.DOCID, rs.getString("M_ID"));
-
-                    rec.put(EVCombinedRec.DATABASE, rs.getString("DATABASE"));
-                    
-                    //only output the first six digits of the loadnumber  by hmo@8/23/2017
-                    if(rs.getString("LOADNUMBER").length()>=6)
-                    {
-                    	rec.put(EVCombinedRec.LOAD_NUMBER, (rs.getString("LOADNUMBER")).substring(0,6));
-                    }
-                    else
-                    {
-                    	rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("LOADNUMBER"));
-                    }
-                    
-                    if(rs.getString("UPDATENUMBER") !=null)
-                    {
-                    	rec.put(EVCombinedRec.UPDATE_NUMBER, rs.getString("UPDATENUMBER"));
-                    }
-
-                    if (rs.getString("PUBLICATIONYEAR") != null && rs.getString("PUBLICATIONYEAR").length()>3)
-                    {
-                        rec.put(EVCombinedRec.PUB_YEAR, rs.getString("PUBLICATIONYEAR").substring(0,4));
-                        //System.out.println("YEAR="+rs.getString("PUBLICATIONYEAR").substring(0,4));
-                    }
-
-                    rec.put(EVCombinedRec.DEDUPKEY,
-                            getDedupKey(rec.get(EVCombinedRec.ISSN),
-                                        rec.get(EVCombinedRec.CODEN),
-                                        rs.getString("VOLUME"),
-                                        rs.getString("ISSUE"),
-                                        getPage(rs.getString("PAGE"), rs.getString("ARTICLENUMBER"))));
-
-                    rec.put(EVCombinedRec.VOLUME, rs.getString("VOLUME"));
-                    rec.put(EVCombinedRec.ISSUE, rs.getString("ISSUE"));
-                    //rec.put(EVCombinedRec.STARTPAGE, getFirstPage(getPage(rs.getString("PAGE"), rs.getString("ARTICLENUMBER"), rs.getString("ISSN"))));
-                    rec.put(EVCombinedRec.STARTPAGE, getPage(getFirstPage(rs.getString("PAGE")),rs.getString("ARTICLENUMBER")));
-                    accessNumber = rs.getString("ACCESSNUMBER");
-
-                    rec.put(EVCombinedRec.ACCESSION_NUMBER,
-                            rs.getString("ACCESSNUMBER"));
-
-                    if (rs.getString("REPORTNUMBER") != null)
-                    {
-                        rec.put(EVCombinedRec.REPORTNUMBER,rs.getString("REPORTNUMBER"));
-                    }
-
-                    if(rs.getString("DOI")!=null)
-                    {
-                        rec.put(EVCombinedRec.DOI,rs.getString("DOI"));
-                    }
-
-                    if(rs.getString("COPYRIGHT") != null)
-                    {
-                        rec.put(EVCombinedRec.COPYRIGHT,rs.getString("COPYRIGHT"));
-                    }
-
-                    if(rs.getString("PII") != null)
-                    {
-                        rec.put(EVCombinedRec.PII,rs.getString("PII"));
-                    }
-
-                    if(rs.getString("PUI") != null)
-                    {
-                    	pui = rs.getString("PUI");
-                    	//System.out.println("PUI="+pui);
-                        rec.put(EVCombinedRec.PUI,rs.getString("PUI"));
-                    }
-
-                    if (rs.getString("ASSIG") != null)
-                    {
-                        rec.put(EVCombinedRec.COMPANIES, prepareMulti(rs.getString("ASSIG")));
-                    }
-
-                    if (rs.getString("CASREGISTRYNUMBER") != null && rs.getString("DATABASE") != null)
-                    {
-                        rec.put(EVCombinedRec.CASREGISTRYNUMBER, prepareCASRegistry(rs.getString("CASREGISTRYNUMBER"), rs.getString("DATABASE")));
-                    }
-
-                    if (rs.getString("DATABASE").equals("cpx"))
-                    {
-                        rec.put(EVCombinedRec.DATESORT, prepareDateSort(rs.getString("DATESORT"),rs.getString("PUBLICATIONYEAR")));
-                    }
-
-                    if (rs.getString("SEQ_NUM") != null)
-                    {
-                        rec.put(EVCombinedRec.PARENT_ID, rs.getString("SEQ_NUM"));
-                    }
-
-                    rec.put(EVCombinedRec.PUB_SORT, Integer.toString(i));
-
-                    if(currentCoord == 0)
-                    {
-                        firstGUID = rs.getString("M_ID");
-                    }
-                    if(numCoords == 1)
-                    {
-                        rec.putIfNotNull(EVCombinedRec.DOCID, firstGUID);
-                    }
-                    else
-                    {
-                        if(!isGeoBase || (isGeoBase && rec.get(EVCombinedRec.LAT_SE) != null))
-                        {
-                            coordCount++;
-                        }
-
-                        if(coordCount == 0)
-                        {
-                            coordCount++;
-                        }
-
-                        rec.putIfNotNull(EVCombinedRec.DOCID, firstGUID + "_" + (coordCount));
-                    }
-                    CVTerms cvterms = null;
-                    String apict = replaceNull(rs.getString("apict"));
-                    String apict1 = replaceNull(rs.getString("apict1"));
-
-                    if(apict != null && !apict.trim().equals(""))
-                    {
-                        if(apict1 != null &&
-                                !apict1.trim().equals(""))
-                        {
-                            apict = apict.concat(apict1);
-                        }
-                        cvterms = new CVTerms(apict);
-                        cvterms.parse();
-
-                    }
-
-                    if (rs.getString("MAINHEADING") != null &&
-                            !rs.getString("DATABASE").equalsIgnoreCase("elt"))
-                    {
-                        rec.put(EVCombinedRec.MAIN_HEADING, prepareMulti(rs.getString("MAINHEADING")));
-                    }
-
-
-                    if(cvterms != null)
-                    {
-                        QualifierFacet qfacet = new QualifierFacet();
-
-                        String[] cvt = getCvs(cvterms.getCvt());
-
-                        if(cvt != null)
-                        {
-
-                            rec.put(EVCombinedRec.CONTROLLED_TERMS, cvt);
-                        }
-
-                        String[] cvtm = getCvs(cvterms.getCvm());
-
-                        if(cvtm != null &&
-                                rs.getString("DATABASE").equalsIgnoreCase("elt"))
-                        {
-                             rec.put(EVCombinedRec.MAIN_HEADING, cvtm);
-                             //this field is added to generate navigators for Major terms
-                             rec.put(rec.ECLA_CODES, cvtm);
-                        }
-
-                        String[] norole = getCvs(cvterms.getCvn());
-
-                        if(norole != null)
-                        {
-                             qfacet.setNorole(norole.toString());
-                             rec.put(EVCombinedRec.NOROLE_TERMS, norole);
-                        }
-
-                        String[] reagent = getCvs(cvterms.getCva());
-
-                        if(reagent != null)
-                        {
-                            qfacet.setReagent(reagent.toString());
-                            rec.put(EVCombinedRec.REAGENT_TERMS, reagent);
-                        }
-
-                        String[] product = getCvs(cvterms.getCvp());
-
-                        if(product != null)
-                        {
-                            qfacet.setProduct(product.toString());
-                            rec.put(EVCombinedRec.PRODUCT_TERMS, product);
-                        }
-
-                        String[] mnorole = getCvs(cvterms.getCvmn());
-
-                        if(mnorole != null)
-                        {
-                            qfacet.setNorole(mnorole.toString());
-                            rec.put(EVCombinedRec.MAJORNOROLE_TERMS, mnorole);
-                        }
-
-                        String[] mreagent = getCvs(cvterms.getCvma());
-
-                        if(mreagent != null)
-                        {
-                            qfacet.setReagent(mreagent.toString());
-                            rec.put(EVCombinedRec.MAJORREAGENT_TERMS, mreagent);
-                        }
-
-                        String[] mproduct = getCvs(cvterms.getCvmp());
-
-                        if(mproduct != null)
-                        {
-                            qfacet.setProduct(mproduct.toString());
-                            rec.put(EVCombinedRec.MAJORPRODUCT_TERMS, mproduct);
-                        }
-                        rec.put(rec.USPTOCODE, prepareMulti(qfacet.getValue()));
-                    }
-
-                    CVTerms ltterms = null;
-                    String apilt = replaceNull(rs.getString("apilt"));
-                    String apilt1 = replaceNull(rs.getString("apilt1"));
-
-                    if(apilt != null && !apilt.trim().equals(""))
-                    {
-                        if(apilt1 != null &&
-                                !apilt1.trim().equals(""))
-                        {
-                            apilt = apilt.concat(apilt1);
-                        }
-                        ltterms = new CVTerms(apilt);
-                        ltterms.parse();
-                    }
-
-                    if(ltterms != null)
-                    {
-                        String ltstr = ltterms.getCvexpandstr();
-
-                        if(ltstr != null)
-                        {
-                            rec.put(EVCombinedRec.LINKED_TERMS, prepareELTCV(ltstr));
-                        }
-                    }
-
-                    if(rs.getString("apiams") != null)
-                    {
-                        rec.put(EVCombinedRec.MAIN_TERM, prepareMulti(rs.getString("apiams")));
-                    }
-                    
-                    //REMOVE FOR FAST CHANGE
-                    
-                    if(rs.getString("GRANTLIST") != null)
-                    {
-                        rec.put(EVCombinedRec.GRANTID, prepareMulti(getGrantID(rs.getString("GRANTLIST"))));
-                        rec.put(EVCombinedRec.GRANTAGENCY, prepareMulti(getGrantAgency(rs.getString("GRANTLIST"))));
-                    }
-                    
-                    if(rs.getString("GRANTTEXT") != null)
-                    {
-                        rec.put(EVCombinedRec.GRANTTEXT, prepareMulti(rs.getString("GRANTTEXT")));                       
-                    }
-                    
-                    //new business rule from EVOPS-554 at1/25/2018
-                    
-                    if(rs.getString("SOURCEBIBTEXT") != null && rs.getString("CITTYPE").equalsIgnoreCase("st") && 
-                    		sourceType!=null && sourceType.equalsIgnoreCase("b"))
-                    {      
-                        rec.put(EVCombinedRec.SOURCEBIBTEXT, getStatus(rs.getString("SOURCEBIBTEXT")));                       
-                    }
-                    
-                    if(rs.getString("STANDARDID") != null)
-                    {
-                        rec.put(EVCombinedRec.STANDARDID, rs.getString("STANDARDID"));
-                        
-                    }
-                    
-                    if(rs.getString("STANDARDDESIGNATION") != null)
-                    {
-                       // rec.put(EVCombinedRec.STANDARDDESIGNATION, formatStandardCodes(rs.getString("STANDARDDESIGNATION")));
-                        rec.put(EVCombinedRec.STANDARDDESIGNATION, rs.getString("STANDARDDESIGNATION"));
-                        //rec.put(EVCombinedRec.STANDARDDESIGNATION, prepareStandardDesignation(rs.getString("STANDARDDESIGNATION")));
-                        
-                    }
-                    
-                    if(rs.getString("NORMSTANDARDID") != null)
-                    {
-                        rec.put(EVCombinedRec.NORMSTANDARDID, rs.getString("NORMSTANDARDID"));
-                        //rec.put(EVCombinedRec.NORMSTANDARDID, formatStandardCodes(rs.getString("NORMSTANDARDID")));
-                    }
-                    
-                    //ISOPENACESS
-                    //blocked ISOPENACESS 10/24/2018
-                    
-                    if(rs.getString("ISOPENACESS") != null)
-                    {
-                        rec.put(EVCombinedRec.ISOPENACESS, rs.getString("ISOPENACESS"));                        
-                    }
-                    else
-                    {
-                    	 rec.put(EVCombinedRec.ISOPENACESS, "0");
-                    }
-                                                      
-                    //due to bd_master table structure change, we have to handle the missed column exception
-                    try
-                    {
-                    	if(rs.getString("eid") != null)
-                    	{
-                    		rec.put(EVCombinedRec.EID, rs.getString("eid"));
-                    		//System.out.println("EID= "+rs.getString("eid"));
-                    	}
-                    }
-                    catch(Exception e)
-                    {
-                    	//System.out.println("missing eid column");
-                    	//do nothing
-                    }
-                    
-                    
-                   //*
-                   // * use for numerical index
-                    if(pui!=null && pui.length()>0 && isCpx)
-                    {
-                    	populateNumericalIndex(pui,rec,con);                 
-                    }
-                   // */
-                    
-                    try
-                    {
-                      if(!isGeoBase || (isGeoBase && rec.get(EVCombinedRec.LAT_SE) != null))
-                      {
-                          //coordCount++;
-                          recVector.add(rec);
-                          if(recSecondBox != null)
-                          {
-
-                            if(secondBoxCoords != null)
-                            {
-                                coordCount++;
-                                for(int b = 0; b < EVCombinedRecKeys.length; b++)
-                                {
-                                    Object recTemp = rec.get(EVCombinedRecKeys[b]);
-                                    if(recTemp != null)
-                                    {
-                                        recSecondBox.put(EVCombinedRecKeys[b],rec.get(EVCombinedRecKeys[b]));
-                                    }
-                                }
-                                secondBoxCoords[4] = "-180";
-                                recSecondBox.put(EVCombinedRec.LAT_SE, secondBoxCoords[1]);
-                                recSecondBox.put(EVCombinedRec.LAT_NW, secondBoxCoords[2]);
-                                recSecondBox.put(EVCombinedRec.LNG_SE, secondBoxCoords[3]);
-                                recSecondBox.put(EVCombinedRec.LNG_NW, secondBoxCoords[4]);
-                                recSecondBox.put(EVCombinedRec.LAT_NE, secondBoxCoords[2]);
-                                recSecondBox.put(EVCombinedRec.LNG_NE, secondBoxCoords[3]);
-                                recSecondBox.put(EVCombinedRec.LAT_SW, secondBoxCoords[1]);
-                                recSecondBox.put(EVCombinedRec.LNG_SW, secondBoxCoords[4]);
-                                if(coordCount == 0)
-                                {
-                                    coordCount++;
-                                }
-                                recSecondBox.putIfNotNull(EVCombinedRec.DOCID, firstGUID + "_" + (coordCount));
-                                recVector.add(recSecondBox);
-                            }
-                          }
-                      }
-                      else
-                      {
-                          recVector.add(rec);
-                      }
-                    }
-                    catch(Exception e)
-                    {
-                      e.printStackTrace();
-                    }
-                }
-
-            }
-           
-            recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
-            this.writer.writeRec(recArray);
-          
-            
-            /**********************************************************/
-            //following code used to test kafka by hmo@2020/01/30
-            //this.writer.writeRec(recArray,kafka);
-            /*********************************************************/
-            
-            ///*
-            this.writer.writeRec(recArray,kafka);
-            //if(i%5==0)
-            {
-            	//System.out.println("flushing at "+i);
-            	kafka.flush();
-            }
-            //*/
-         }
-         catch(Exception e)
-         {
-            System.out.println("**** ERROR Found on access number "+accessNumber+" *****");
-            e.printStackTrace();
-         }
+	        if(kafka!=null)
+	        { 
+	        	int k=0;
+	        	if(thread !=null)
+	        	{
+		        	while(thread.isAlive())
+		        	{
+		        		System.out.println("sleep "+k);
+		        		Thread.sleep(1000);
+		        	}
+	        	}
+	        	kafka.close();
+	        }
         }
-        if(kafka!=null)
-        {
-        	kafka.close();
-        }
+        
     }
+    
+  
     
     private String prepareStandardDesignation(String input)
     {
@@ -2290,7 +2323,7 @@ public void writeCombinedByTableHook(Connection con) throws Exception
         }
 
     }
-    
-  
 
 }
+
+

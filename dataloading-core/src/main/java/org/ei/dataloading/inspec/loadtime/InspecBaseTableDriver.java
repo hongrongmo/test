@@ -319,7 +319,7 @@ public class InspecBaseTableDriver
 
                 if (record.containsKey("PDATE"))
                 {
-                    record.put("LOAD_NUMBER", new StringBuffer(Integer.toString(this.loadNumber)));
+                    record.put("LOAD_NUMBER", new StringBuffer(Integer.toString(this.loadNumber).substring(0,6)));//only take first 6 digits change by hmo @2020/02/27
                     record.put("M_ID", new StringBuffer("inspec_"+(new GUID()).toString()));
                     baseWriter.writeRec(record);
                     counter++;
@@ -343,7 +343,7 @@ public class InspecBaseTableDriver
            
             if (articletype.equals(InspecXMLReader.CURRENT_DATA))
             {           	
-                record.put("LOAD_NUMBER", new StringBuffer(Integer.toString(this.loadNumber)));
+                record.put("LOAD_NUMBER", new StringBuffer(Integer.toString(this.loadNumber).substring(0,6)));//only take first 6 digits change by hmo @2020/02/27
                 record.put("M_ID", new StringBuffer("inspec_"+(new GUID()).toString()));
                 baseWriter.writeRec(record);
                 counter++;

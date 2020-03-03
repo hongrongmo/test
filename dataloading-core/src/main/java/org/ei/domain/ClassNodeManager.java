@@ -106,10 +106,12 @@ public class ClassNodeManager {
         String s = ipc.get(code);
         s = Entity.replaceLatinChars(s);
         // System.out.println("Code="+code+" name= "+s);
+        /*
         if (s == null && this.lookupFlag == 2) {
             GetPIDDescription pid = new GetPIDDescription();
             s = pid.getDescriptionFromLookupIndex(code);
         }
+        */
         return s;
     }
 

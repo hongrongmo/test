@@ -4,6 +4,8 @@ package org.ei.util.kafka;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.ExecutionException;
 import org.apache.kafka.clients.consumer.Consumer;
@@ -26,11 +28,14 @@ public class KafkaService {
     public String OFFSET_RESET_LATEST="latest";
     public String OFFSET_RESET_EARLIER="earliest";
     public Integer MAX_POLL_RECORDS=1;
+    public HashMap<String,String> problemRecords;
     Producer<String, String> producer=null;
 	
     public KafkaService() {
     	getParameterFromPropertiesFile("config.properties");	
     	producer  = ProducerCreator.createProducer(this.KAFKA_BROKERS);
+    	System.out.println("create Kafka Prodcuer");
+    	problemRecords = new HashMap<String,String>();
     }
     
     public Producer<String, String> getProducer()
@@ -126,7 +131,8 @@ public class KafkaService {
     }
     
     //public void runProducer(String recordString, String key, Producer<String, String> producer) {
-    public void runProducer(String recordString, String key) {
+    public void runProducer(String recordString, String key,Boolean reSending) throws Exception
+    {
         //Producer<String, String> producer = ProducerCreator.createProducer(this.KAFKA_BROKERS);
     	
     	if(this.producer==null)
@@ -136,18 +142,19 @@ public class KafkaService {
     	}
     	
 		ProducerRecord<String, String> record = new ProducerRecord<String, String>(this.TOPIC_NAME,key, recordString);
-		//ProducerRecord<String, String> record = new ProducerRecord<String, String>(this.TOPIC_NAME, recordString);
+		
 		try {
 		    RecordMetadata metadata = this.producer.send(record).get();             
 		    //System.out.println("Record sent with key " + key + " to partition " + metadata.partition() + " with offset " + metadata.offset());
-		}
-		catch (ExecutionException e) {
-		    System.out.println("Error in sending record");
-		    System.out.println(e);
-		}
-		catch (InterruptedException e) {
-		    System.out.println("Error in sending record");
-		    System.out.println(e);
+		}		
+		catch(Exception e)
+		{
+			if(!reSending)
+			{
+				problemRecords.put(key, recordString);
+			}
+			System.out.println("Exception in sending record;"+key);			
+			//throw new Exception("found new exception for record "+key);
 		}
 		//this.producer.flush();
 		//producer.close();
@@ -159,8 +166,35 @@ public class KafkaService {
     }
     
     public void close() {
+    	reSendProblemRecords();
     	if(this.producer!=null)
     		producer.close();
+    }
+    
+    private void reSendProblemRecords()
+    {
+    	if(problemRecords !=null && problemRecords.size()>0)
+    	{
+    		System.out.println("\n**** PROBLEM FOUND, Resending "+problemRecords.size()+" records ****\n");
+    		for (Map.Entry me : problemRecords.entrySet()) 
+    		{
+    			try
+    			{
+	    			System.out.println("\nSending problem record; Key:: "+me.getKey() + " & Value:: " + me.getValue());
+	    			runProducer((String)me.getKey(),(String)me.getValue(),true);
+	    			this.producer.flush();
+    			}
+    			catch(Exception e)
+    			{
+    				System.out.println(e);
+    			}
+    	        
+    	    }
+    	}
+    	else
+    	{
+    		System.out.println("No Error Found");
+    	}
     }
     
 }

@@ -456,7 +456,7 @@ public class CombinedXMLWriter
         out.println("       <PARENTID>" +  rec.getString(EVCombinedRec.PARENT_ID) + "</PARENTID>");
         out.println("       <DEDUPKEY>" + rec.getString(EVCombinedRec.DEDUPKEY) + "</DEDUPKEY>");
         out.println("       <DATABASE>" + rec.getString(EVCombinedRec.DATABASE) + "</DATABASE>");
-        out.println("       <LOADNUMBER>" + loadnumber + "</LOADNUMBER>");
+        out.println("       <LOADNUMBER>" + loadnumber.substring(0,6) + "</LOADNUMBER>");
         
         //added for future use only, should be removed for regular database loading
         out.println("       <UPDATENUMBER>" + rec.getString(EVCombinedRec.UPDATE_NUMBER) + "</UPDATENUMBER>");
@@ -983,11 +983,7 @@ public class CombinedXMLWriter
         
         out.println("   </ROW>");
         ++curRecNum;
-        
-        //following code used to test kafka by hmo@2019/09/23
-        //writeRec(rec,"kafka"); //Old format with array
-        //writeRec1(rec,"kafka");
-        
+              
         end();
     }
     
@@ -1055,7 +1051,7 @@ public class CombinedXMLWriter
             String[] author=reverseSigns(rec.getStrings(EVCombinedRec.AUTHOR));
             if(author!=null && author.length>0 && author[0]!=null && author[0].length()>0)
             {
-            	elementArrayObject = formJsonArray(author,"AUTHOR");          
+            	elementArrayObject = formJsonArray(removeExtraSpace(author),"AUTHOR");          
             	contentObject.put("AUTHOR".toLowerCase(),elementArrayObject);
             }
             
@@ -1069,33 +1065,33 @@ public class CombinedXMLWriter
             String[] authorAffiliation=rec.getStrings(EVCombinedRec.AUTHOR_AFFILIATION);
             if(authorAffiliation!=null && authorAffiliation.length>0 && authorAffiliation[0]!=null && authorAffiliation[0].length()>0)
             {
-            	elementArrayObject = formJsonArray(authorAffiliation,"AUTHORAFFILIATION");          
+            	elementArrayObject = formJsonArray(removeExtraSpace(authorAffiliation),"AUTHORAFFILIATION");          
             	contentObject.put("AUTHORAFFILIATION".toLowerCase(),elementArrayObject);
             }
             
             String[] affiliationLocations=rec.getStrings(EVCombinedRec.AFFILIATION_LOCATION);
             if(affiliationLocations!=null && affiliationLocations.length>0 && affiliationLocations[0]!=null && affiliationLocations[0].trim().length()>0)
             {
-            	elementArrayObject = formJsonArray(affiliationLocations,"AFFILIATIONLOCATION");          
+            	elementArrayObject = formJsonArray(removeExtraSpace(affiliationLocations),"AFFILIATIONLOCATION");          
             	contentObject.put("AFFILIATIONLOCATION".toLowerCase(),elementArrayObject);
             }
             
             if(rec.getString(EVCombinedRec.TITLE)!=null && rec.getString(EVCombinedRec.TITLE).length()>0)
             {   
-            	contentObject.put("TITLE".toLowerCase(),rec.getString(EVCombinedRec.TITLE));
+            	contentObject.put("TITLE".toLowerCase(),removeExtraSpace(rec.getString(EVCombinedRec.TITLE)));
             }
             
             String[] translatedTitles = rec.getStrings(EVCombinedRec.TRANSLATED_TITLE);
             if(translatedTitles!=null && translatedTitles.length>0 && translatedTitles[0]!=null && translatedTitles[0].length()>0)
             {           	
-            	elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.TRANSLATED_TITLE),"TRANSLATEDTITLE");          
+            	elementArrayObject = formJsonArray(removeExtraSpace(translatedTitles),"TRANSLATEDTITLE");          
             	contentObject.put("TRANSLATEDTITLE".toLowerCase(),elementArrayObject);
             }
             
             String[] volumeTitle=rec.getStrings(EVCombinedRec.VOLUME_TITLE);
             if(volumeTitle!=null && volumeTitle.length>0 && volumeTitle[0]!=null && volumeTitle[0].length()>0)
             {
-	            elementArrayObject = formJsonArray(volumeTitle,"VOLUMETITLE");          
+	            elementArrayObject = formJsonArray(removeExtraSpace(volumeTitle),"VOLUMETITLE");          
 	            contentObject.put("VOLUMETITLE".toLowerCase(),elementArrayObject);
             }
           
@@ -1112,35 +1108,35 @@ public class CombinedXMLWriter
             String[] editor=reverseSigns(rec.getStrings(EVCombinedRec.EDITOR));
             if(editor!=null && editor.length>0 && editor[0]!=null && editor[0].length()>0)
             {
-	            elementArrayObject = formJsonArray(editor,"EDITOR");          
+	            elementArrayObject = formJsonArray(removeExtraSpace(editor),"EDITOR");          
 	            contentObject.put("EDITOR".toLowerCase(),elementArrayObject);	            
             }
             
             String[] editorAffiliation=rec.getStrings(EVCombinedRec.EDITOR_AFFILIATION);
             if(editorAffiliation!=null && editorAffiliation.length>0 && editorAffiliation[0]!=null && editorAffiliation[0].length()>0)
             {
-	            elementArrayObject = formJsonArray(editorAffiliation,"EDITORAFFILIATION");          
+	            elementArrayObject = formJsonArray(removeExtraSpace(editorAffiliation),"EDITORAFFILIATION");          
 	            contentObject.put("EDITORAFFILIATION".toLowerCase(),elementArrayObject);
             }
  
             String[] translator=reverseSigns(rec.getStrings(EVCombinedRec.TRANSLATOR));
             if(translator!=null && translator.length>0 && translator[0]!=null && translator[0].length()>0)
             {
-	            elementArrayObject = formJsonArray(translator,"TRANSLATOR");          
+	            elementArrayObject = formJsonArray(removeExtraSpace(translator),"TRANSLATOR");          
 	            contentObject.put("TRANSLATOR".toLowerCase(),elementArrayObject);
             }            
             
             String[] controlledTerms=rec.getStrings(EVCombinedRec.CONTROLLED_TERMS);
             if(controlledTerms!=null && controlledTerms.length>0 && controlledTerms[0]!=null && controlledTerms[0].length()>0)
             {
-	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.CONTROLLED_TERMS),"CONTROLLEDTERMS");          
+	            elementArrayObject = formJsonArray(removeExtraSpace(controlledTerms),"CONTROLLEDTERMS");          
 	            contentObject.put("CONTROLLEDTERMS".toLowerCase(),elementArrayObject);         
             }
             
             String[] uncontrolledTerms=rec.getStrings(EVCombinedRec.UNCONTROLLED_TERMS);
             if(uncontrolledTerms!=null && uncontrolledTerms.length>0 && uncontrolledTerms[0]!=null && uncontrolledTerms[0].length()>0)
             {
-	            elementArrayObject = formJsonArray(uncontrolledTerms,"UNCONTROLLEDTERMS");          
+	            elementArrayObject = formJsonArray(removeExtraSpace(uncontrolledTerms),"UNCONTROLLEDTERMS");          
 	            contentObject.put("UNCONTROLLEDTERMS".toLowerCase(),elementArrayObject);   
             }
 
@@ -1175,33 +1171,33 @@ public class CombinedXMLWriter
             String[] serialTitle=rec.getStrings(EVCombinedRec.SERIAL_TITLE);
             if(serialTitle!=null && serialTitle.length>0 && serialTitle[0]!=null && serialTitle[0].length()>0)
             {
-	            elementArrayObject = formJsonArray(serialTitle,"SERIALTITLE");          
+	            elementArrayObject = formJsonArray(removeExtraSpace(serialTitle),"SERIALTITLE");          
 	            contentObject.put("SERIALTITLE".toLowerCase(),elementArrayObject);
             }
 
             String[] serialTitleTranslation=rec.getStrings(EVCombinedRec.SERIAL_TITLE_TRANSLATION);
             if(serialTitleTranslation!=null && serialTitleTranslation.length>0 && serialTitleTranslation[0]!=null && serialTitleTranslation[0].length()>0)
             {
-	            elementArrayObject = formJsonArray(serialTitleTranslation,"SERIALTITLETRANSLATION");          
+	            elementArrayObject = formJsonArray(removeExtraSpace(serialTitleTranslation),"SERIALTITLETRANSLATION");          
 	            contentObject.put("SERIALTITLETRANSLATION".toLowerCase(),elementArrayObject);
             }
 
             String[] mainHeading=rec.getStrings(EVCombinedRec.MAIN_HEADING);
             if(mainHeading!=null && mainHeading.length>0 && mainHeading[0]!=null && mainHeading[0].length()>0)
             {
-	            elementArrayObject = formJsonArray(mainHeading,"MAINHEADING");          
+	            elementArrayObject = formJsonArray(removeExtraSpace(mainHeading),"MAINHEADING");          
 	            contentObject.put("MAINHEADING".toLowerCase(),elementArrayObject);
             }
             
             if(rec.getString(EVCombinedRec.SUB_HEADING)!=null && rec.getString(EVCombinedRec.SUB_HEADING).length()>0)
             {
-	            contentObject.put("SUBHEADING".toLowerCase(),rec.getString(EVCombinedRec.SUB_HEADING));
+	            contentObject.put("SUBHEADING".toLowerCase(),removeExtraSpace(rec.getString(EVCombinedRec.SUB_HEADING)));
             }
 
             String[] publisherName=rec.getStrings(EVCombinedRec.PUBLISHER_NAME);
             if(publisherName!=null && publisherName.length>0 && publisherName[0]!=null && publisherName[0].length()>0)
             {
-	            elementArrayObject = formJsonArray(publisherName,"PUBLISHERNAME");          
+	            elementArrayObject = formJsonArray(removeExtraSpace(publisherName),"PUBLISHERNAME");          
 	            contentObject.put("PUBLISHERNAME".toLowerCase(),elementArrayObject);
             }
 
@@ -1215,7 +1211,7 @@ public class CombinedXMLWriter
             String[] language=rec.getStrings(EVCombinedRec.LANGUAGE);
             if(language!=null && language.length>0 && language[0]!=null && language[0].length()>0)
             {
-	            elementArrayObject = formJsonArray(language,"LANGUAGE");          
+	            elementArrayObject = formJsonArray(removeExtraSpace(language),"LANGUAGE");          
 	            contentObject.put("LANGUAGE".toLowerCase(),elementArrayObject);
             }
 
@@ -1238,12 +1234,12 @@ public class CombinedXMLWriter
             
             if(rec.getString(EVCombinedRec.CONFERENCE_NAME)!=null && rec.getString(EVCombinedRec.CONFERENCE_NAME).length()>0)
             {
-	            contentObject.put("CONFERENCENAME".toLowerCase(),notNull(rec.getString(EVCombinedRec.CONFERENCE_NAME)));
+	            contentObject.put("CONFERENCENAME".toLowerCase(),removeExtraSpace(rec.getString(EVCombinedRec.CONFERENCE_NAME)));
             }
             
             if(rec.getString(EVCombinedRec.CONFERENCE_LOCATION)!=null && rec.getString(EVCombinedRec.CONFERENCE_LOCATION).length()>0)
             {
-	            contentObject.put("CONFERENCELOCATION".toLowerCase(),notNull(rec.getString(EVCombinedRec.CONFERENCE_LOCATION)));
+	            contentObject.put("CONFERENCELOCATION".toLowerCase(),removeExtraSpace(rec.getString(EVCombinedRec.CONFERENCE_LOCATION)));
             }            
             
             if(rec.getString(EVCombinedRec.MEETING_DATE)!=null && rec.getString(EVCombinedRec.MEETING_DATE).length()>0)
@@ -1254,14 +1250,14 @@ public class CombinedXMLWriter
             String[] sponsorName=rec.getStrings(EVCombinedRec.SPONSOR_NAME);
             if(sponsorName!=null && sponsorName.length>0 && sponsorName[0]!=null && sponsorName[0].length()>0)
             {
-	            elementArrayObject = formJsonArray(sponsorName,"SPONSORNAME");          
+	            elementArrayObject = formJsonArray(removeExtraSpace(sponsorName),"SPONSORNAME");          
 	            contentObject.put("SPONSORNAME".toLowerCase(),elementArrayObject);
             }
            
             String[] monoGraphTitle=rec.getStrings(EVCombinedRec.MONOGRAPH_TITLE);
             if(monoGraphTitle!=null && monoGraphTitle.length>0 && monoGraphTitle[0]!=null && monoGraphTitle[0].length()>0)
             {
-	            elementArrayObject = formJsonArray(monoGraphTitle,"MONOGRAPHTITLE");          
+	            elementArrayObject = formJsonArray(removeExtraSpace(monoGraphTitle),"MONOGRAPHTITLE");          
 	            contentObject.put("MONOGRAPHTITLE".toLowerCase(),elementArrayObject);
             }
             
@@ -1289,14 +1285,14 @@ public class CombinedXMLWriter
             String[] chemicalIndexing=rec.getStrings(EVCombinedRec.CHEMICAL_INDEXING);
             if(chemicalIndexing!=null && chemicalIndexing.length>0 && chemicalIndexing[0]!=null && chemicalIndexing[0].length()>0)
             {
-	            elementArrayObject = formJsonArray(chemicalIndexing,"CHEMICALINDEXING");          
+	            elementArrayObject = formJsonArray(removeExtraSpace(chemicalIndexing),"CHEMICALINDEXING");          
 	            contentObject.put("CHEMICALINDEXING".toLowerCase(),elementArrayObject);
             }
 
             String[] astronomicalIndexing=rec.getStrings(EVCombinedRec.ASTRONOMICAL_INDEXING);
             if(astronomicalIndexing!=null && astronomicalIndexing.length>0 && astronomicalIndexing[0]!=null && astronomicalIndexing[0].length()>0)
             {
-	            elementArrayObject = formJsonArray(astronomicalIndexing,"ASTRONOMICALINDEXING");          
+	            elementArrayObject = formJsonArray(removeExtraSpace(astronomicalIndexing),"ASTRONOMICALINDEXING");          
 	            contentObject.put("ASTRONOMICALINDEXING".toLowerCase(),elementArrayObject);
             }
             
@@ -1317,7 +1313,7 @@ public class CombinedXMLWriter
             String[] countries=rec.getStrings(EVCombinedRec.COUNTRY);
             if(countries!=null && countries.length>0 && countries[0]!=null && countries[0].length()>0)
             {
-	            elementArrayObject = formJsonArray(countries,"COUNTRY");          
+	            elementArrayObject = formJsonArray(removeExtraSpace(countries),"COUNTRY");          
 	            contentObject.put("COUNTRY".toLowerCase(),elementArrayObject);
             }
             
@@ -1370,7 +1366,7 @@ public class CombinedXMLWriter
             String[] companies=rec.getStrings(EVCombinedRec.COMPANIES);
             if(companies!=null && companies.length>0 && companies[0]!=null && companies[0].length()>0)
             {
-	            elementArrayObject = formJsonArray(companies,"COMPANIES");          
+	            elementArrayObject = formJsonArray(removeExtraSpace(companies),"COMPANIES");          
 	            contentObject.put("COMPANIES".toLowerCase(),elementArrayObject);
             }
             
@@ -1384,21 +1380,21 @@ public class CombinedXMLWriter
             String[] businessTerms=rec.getStrings(EVCombinedRec.BUSINESSTERMS);
             if(businessTerms!=null && businessTerms.length>0 && businessTerms[0]!=null && businessTerms[0].length()>0)
             {
-	            elementArrayObject = formJsonArray(businessTerms,"BUSINESSTERMS");          
+	            elementArrayObject = formJsonArray(removeExtraSpace(businessTerms),"BUSINESSTERMS");          
 	            contentObject.put("BUSINESSTERMS".toLowerCase(),elementArrayObject);
             }
             
             String[] chemicalTerms=rec.getStrings(EVCombinedRec.CHEMICALTERMS);
             if(chemicalTerms!=null && chemicalTerms.length>0 && chemicalTerms[0]!=null && chemicalTerms[0].length()>0)
             {
-	            elementArrayObject = formJsonArray(chemicalTerms,"CHEMICALTERMS");          
+	            elementArrayObject = formJsonArray(removeExtraSpace(chemicalTerms),"CHEMICALTERMS");          
 	            contentObject.put("CHEMICALTERMS".toLowerCase(),elementArrayObject);
             }
             
             String[] chemicalAcronyms=rec.getStrings(EVCombinedRec.CHEMICALACRONYMS);
             if(chemicalAcronyms!=null && chemicalAcronyms.length>0 && chemicalAcronyms[0]!=null && chemicalAcronyms[0].length()>0)
             {
-	            elementArrayObject = formJsonArray(chemicalAcronyms,"CHEMAC");          
+	            elementArrayObject = formJsonArray(removeExtraSpace(chemicalAcronyms),"CHEMAC");          
 	            contentObject.put("CHEMAC".toLowerCase(),elementArrayObject);
             }
             
@@ -1455,7 +1451,7 @@ public class CombinedXMLWriter
             String[] applicationCountry=rec.getStrings(EVCombinedRec.APPLICATION_COUNTRY);
             if(applicationCountry!=null && applicationCountry.length>0 && applicationCountry[0]!=null && applicationCountry[0].length()>0)
             {
-	            elementArrayObject = formJsonArray(applicationCountry,"APPLICATIONCOUNTRY");          
+	            elementArrayObject = formJsonArray(removeExtraSpace(applicationCountry),"APPLICATIONCOUNTRY");          
 	            contentObject.put("APPLICATIONCOUNTRY".toLowerCase(),elementArrayObject);
             }
             
@@ -1469,7 +1465,7 @@ public class CombinedXMLWriter
             String[] linkedTerms=stripChar29(rec.getStrings(EVCombinedRec.LINKED_TERMS));
             if(linkedTerms!=null && linkedTerms.length>0 && linkedTerms[0]!=null && linkedTerms[0].length()>0)
             {
-	            elementArrayObject = formJsonArray(linkedTerms,"LINKEDTERMS");          
+	            elementArrayObject = formJsonArray(removeExtraSpace(linkedTerms),"LINKEDTERMS");          
 	            contentObject.put("LINKEDTERMS".toLowerCase(),elementArrayObject);
             }
             
@@ -1504,28 +1500,28 @@ public class CombinedXMLWriter
             String[] source=rec.getStrings(EVCombinedRec.SOURCE);
             if(source!=null && source.length>0 && source[0]!=null && source[0].length()>0)
             {
-	            elementArrayObject = formJsonArray(source,"SOURCE");          
+	            elementArrayObject = formJsonArray(removeExtraSpace(source),"SOURCE");          
 	            contentObject.put("SOURCE".toLowerCase(),elementArrayObject);
             }
             
             String[] secondarySrcTitle=rec.getStrings(EVCombinedRec.SECONDARY_SRC_TITLE);   
             if(secondarySrcTitle!=null && secondarySrcTitle.length>0 && secondarySrcTitle[0]!=null && secondarySrcTitle[0].length()>0)
             {
-	            elementArrayObject = formJsonArray(secondarySrcTitle,"SECONDARYSRCTITLE");          
+	            elementArrayObject = formJsonArray(removeExtraSpace(secondarySrcTitle),"SECONDARYSRCTITLE");          
 	            contentObject.put("SECONDARYSRCTITLE".toLowerCase(),elementArrayObject); 
             }
 
             String[] mainTerm=rec.getStrings(EVCombinedRec.MAIN_TERM);
             if(mainTerm!=null && mainTerm.length>0 && mainTerm[0]!=null && mainTerm[0].length()>0)
             {
-	            elementArrayObject = formJsonArray(mainTerm,"MAINTERM");          
+	            elementArrayObject = formJsonArray(removeExtraSpace(mainTerm),"MAINTERM");          
 	            contentObject.put("MAINTERM".toLowerCase(),elementArrayObject);
             }
             
             String[] abbrvSrcTitle=rec.getStrings(EVCombinedRec.ABBRV_SRC_TITLE);
             if(abbrvSrcTitle!=null && abbrvSrcTitle.length>0 && abbrvSrcTitle[0]!=null && abbrvSrcTitle[0].length()>0)
             {
-	            elementArrayObject = formJsonArray(abbrvSrcTitle,"ABBRVSRCTITLE");          
+	            elementArrayObject = formJsonArray(removeExtraSpace(abbrvSrcTitle),"ABBRVSRCTITLE");          
 	            contentObject.put("ABBRVSRCTITLE".toLowerCase(),elementArrayObject);
             }
             
@@ -1546,7 +1542,7 @@ public class CombinedXMLWriter
             String[] productTerms=rec.getStrings(EVCombinedRec.PRODUCT_TERMS);
             if(productTerms!=null && productTerms.length>0 && productTerms[0]!=null && productTerms[0].length()>0)
             {
-	            elementArrayObject = formJsonArray(productTerms,"PRODUCTTERMS");          
+	            elementArrayObject = formJsonArray(removeExtraSpace(productTerms),"PRODUCTTERMS");          
 	            contentObject.put("PRODUCTTERMS".toLowerCase(),elementArrayObject);
             }
             
@@ -1575,7 +1571,7 @@ public class CombinedXMLWriter
             String[] conferenceAffiliations=rec.getStrings(EVCombinedRec.CONFERENCEAFFILIATIONS);
             if(conferenceAffiliations!=null && conferenceAffiliations.length>0 && conferenceAffiliations[0]!=null && conferenceAffiliations[0].length()>0)
             {
-	            elementArrayObject = formJsonArray(conferenceAffiliations,"CONFERENCEAFFILIATIONS");          
+	            elementArrayObject = formJsonArray(removeExtraSpace(conferenceAffiliations),"CONFERENCEAFFILIATIONS");          
 	            contentObject.put("CONFERENCEAFFILIATIONS".toLowerCase(),elementArrayObject);
 	            //contentJsonArray.add(contentObject);
             }
@@ -1583,7 +1579,7 @@ public class CombinedXMLWriter
             String[] conferenceeditors=reverseSigns(rec.getStrings(EVCombinedRec.CONFERENCEEDITORS));
             if(conferenceeditors!=null && conferenceeditors.length>0 && conferenceeditors[0]!=null && conferenceeditors[0].length()>0)
             {
-	            elementArrayObject = formJsonArray(conferenceeditors,"CONFERENCEEDITORS");          
+	            elementArrayObject = formJsonArray(removeExtraSpace(conferenceeditors),"CONFERENCEEDITORS");          
 	            contentObject.put("CONFERENCEEDITORS".toLowerCase(),elementArrayObject);
             }
             
@@ -2755,11 +2751,85 @@ public class CombinedXMLWriter
         	JsonParser jp = new JsonParser();
         	//JsonElement je = jp.parse(evo.build().toString());
         	JsonElement je = jp.parse(contentObject.toString());
-        	//String prettyJsonString = "\""+eid+"\":"+gson.toJson(je);   
+        	 
         	String prettyJsonString = gson.toJson(je);  
-            kafka.runProducer(prettyJsonString,"\""+eid+"\"");
+        	//Send it to kafka server
+            kafka.runProducer(prettyJsonString,"\""+eid+"\"",false);
+        	//print it out as file
+        	//outputAsJsonFile(prettyJsonString,eid,getDatabase(),getLoadnumber());
           
         }
+    
+    private String[] removeExtraSpace(String[] input)
+    {
+    	String[] outputArray=new String[input.length];
+    	for(int i=0;i<input.length;i++)
+    	{
+    		outputArray[i]=removeExtraSpace(input[i]);   		
+    	}
+    	return outputArray;
+    }
+    
+    private String removeExtraSpace(String input)
+    {
+    	String output="";
+    	if(input!=null)
+    	{
+    		output=input.trim().replaceAll("\\s{2,}", " ");
+    	}
+    	return output;
+    }
+    
+    private void outputAsJsonFile(String content,String id, String database,String loadnumber) throws Exception
+    {
+    	if(database.equals("upa") || database.equalsIgnoreCase("wop") || database.equalsIgnoreCase("eup"))
+    	{
+    		database="upt";
+    	}
+    	File file=new File("json");
+    	if(!file.exists())
+        {
+            file.mkdir();
+        }
+    	
+    	file=new File("json/"+database);
+    	if(!file.exists())
+        {
+            file.mkdir();
+        }
+    	
+    	file=new File("json/"+database+"/"+loadnumber);
+        if(!file.exists())
+        {
+            file.mkdir();
+        }
+        
+        file=new File("json/"+database+"/"+loadnumber+"/tmp");
+        if(!file.exists())
+        {
+            file.mkdir();
+        }
+        
+        String filename = file.getPath() + "/"+id+".json"; 
+        File f = new File(filename);
+        //System.out.println("filename="+filename);
+        if(!f.exists())
+        {
+            f.createNewFile();
+        }
+        PrintWriter output = new PrintWriter(new FileWriter(f));
+        output.println(content);
+        output.close();
+        curRecNum++;
+        if (curRecNum > recsPerbatch)
+        {
+            System.out.print(".");
+            curRecNum = 0;
+            zipBatchJsonFile();
+            this.batchID++;
+        }
+        
+    }
     
     private String[] stripChar29(String[] input)
     {
@@ -3503,6 +3573,7 @@ public class CombinedXMLWriter
         String ZipFilename = this.batchPath + "/EIDATA/" + Long.toString(time) + "_"+ databaseID + "_" + this.operation + "_" + this.numberID + "-" + formatter.format(this.batchID) + ".zip";
         writeLog( formatTimeStamp(System.currentTimeMillis()) + "adding " + gzFiles.length + " files to zipfile " + ZipFilename);
         String ControlFile = this.batchPath + "/PROD/" + Long.toString(time) + "_"+ databaseID + "_" + this.operation + "_" + this.numberID + "-" + formatter.format(this.batchID) + ".ctl";
+        //System.out.println("controlFile="+ControlFile);
         writeLog(formatTimeStamp(System.currentTimeMillis()) + "creating control file " + ControlFile);
         long timediff = time - this.starttime;
         writeLog(formatTimeStamp(System.currentTimeMillis()) + "batch processed in " + timediff + " milliseconds");
@@ -3527,6 +3598,48 @@ public class CombinedXMLWriter
         }
         outZIP.close();
         tmpDir.delete();
+    }
+    
+    public void zipBatchJsonFile()
+    throws Exception
+    {
+    	long starttime = System.currentTimeMillis();
+    	String database = getDatabase();
+    	if(database.equalsIgnoreCase("upa") || database.equalsIgnoreCase("eup") || database.equalsIgnoreCase("wop"))
+    	{
+    		database="upt";
+    	}
+    	String path="json/"+database+"/"+getLoadnumber();
+        File tmpDir = new File(path+"/tmp");
+        //String tmpDir = new File(f.getAbsolutePath());
+        String[] gzFiles = tmpDir.list();
+        //File[] gzFilestoDelete = tmpDir.listFiles();
+        byte[] buf = new byte[1024];
+        
+        String ZipFilename =  path+"/"+Long.toString(starttime) + "_"+ databaseID + "_" + this.operation + "_" + this.numberID + "-" + formatter.format(this.batchID) + ".zip";
+       
+        //long timediff = time - this.starttime;
+       
+        ZipOutputStream outZIP = new ZipOutputStream(new FileOutputStream(ZipFilename));
+        for (int i=0; i<gzFiles.length; i++)
+        {
+        	File file = new File(tmpDir+"/"+gzFiles[i]);
+        	//System.out.println("FILENAME="+gzFiles[i]);
+            FileInputStream in = new FileInputStream(tmpDir+"/"+gzFiles[i]);
+            outZIP.putNextEntry(new ZipEntry(tmpDir+"/"+gzFiles[i]));
+            int len;
+            while ((len = in.read(buf)) > 0) {
+                outZIP.write(buf, 0, len);
+            }
+            outZIP.closeEntry();
+            in.close();
+            file.delete();
+            
+        }
+        outZIP.close();
+        tmpDir.delete();
+        long endtime = System.currentTimeMillis();
+        System.out.println("Time for Zipping="+(endtime-starttime));
     }
 
     public void end()
@@ -3554,6 +3667,7 @@ public class CombinedXMLWriter
             {
                 curRecNum = 0;
                 zipBatch();
+                zipBatchJsonFile();
             }
         }
         catch(Exception e)
@@ -3612,11 +3726,9 @@ public class CombinedXMLWriter
     public static void main(String args[]) throws Exception
     {
     	CombinedXMLWriter c = new CombinedXMLWriter(1,1,"cpx");
-    	String testString = "check[comma";
-    	System.out.println("before= "+testString+" after="+c.cleanup(testString));
-    	System.out.println("before= check,comma after="+c.cleanup("check,comma"));
-    	System.out.println("before= check}comma after="+c.cleanup("check}comma"));
-    	
+    	String testString = "  check   comma  space ";
+    	System.out.println("before= "+testString+" after="+c.removeExtraSpace(testString));
+   	
     }
     
     public String prettyPrintJSON(String unformattedJsonString) {

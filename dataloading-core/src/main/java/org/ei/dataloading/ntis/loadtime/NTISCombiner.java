@@ -23,6 +23,7 @@ import org.ei.util.GUID;
 import org.ei.common.ntis.*;
 import org.ei.common.*;
 import org.ei.util.kafka.*;
+import org.ei.dataloading.MessageSender;
 
 public class NTISCombiner
 	extends Combiner
@@ -284,123 +285,150 @@ public class NTISCombiner
     	throws Exception
     {
         int i = 0;
-        KafkaService kafka=null;
-        //kafka = new KafkaService();
-        while (rs.next())
+        KafkaService kafka = new KafkaService();
+        Thread thread = new Thread();
+        try
         {
-
-            EVCombinedRec rec = new EVCombinedRec();
-            ++i;
-            
-            String aut = NTISAuthor.formatAuthors(rs.getString("PA1"),
-                    							  rs.getString("PA2"),
-                    							  rs.getString("PA3"),
-                    							  rs.getString("PA4"),
-                    							  rs.getString("PA5"),
-                    							  rs.getString("HN"));
-
-            if (aut != null)
-            {
-                rec.put(EVCombinedRec.AUTHOR, prepareAuthor(aut));
-            }
-
-            String affil = formatAffil(rs.getString("SO"));
-            if (affil != null )
-            {
-                rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareMulti(affil));
-            }
-
-            rec.put(EVCombinedRec.TITLE, formatTitle(rs.getString("TI")));
-            rec.put(EVCombinedRec.ABSTRACT, formatAbstract(rs.getString("AB")));
-
-            String cv = formatDelimiter(formatCV(rs.getString("DES")));
-            if (cv != null)
-            {
-                rec.put(EVCombinedRec.CONTROLLED_TERMS,
-                        prepareMulti(cv));
-            }
-
-            String uncontrolled = formatDelimiter(formatFL(rs.getString("IDE")));
-            if (uncontrolled != null)
-            {
-                rec.put(EVCombinedRec.UNCONTROLLED_TERMS,
-                        prepareMulti(uncontrolled));
-            }
-
-            String report = formatDelimiter(formatReportNumbers(rs.getString("RN")));
-            if (report != null)
-            {
-                rec.put(EVCombinedRec.REPORTNUMBER, prepareMulti(report));
-            }
-
-            String order = formatDelimiter(formatOrderNumbers(rs.getString("CT"),
-                    											 rs.getString("PN")));
-            if (order != null)
-            {
-                rec.put(EVCombinedRec.ORDERNUMBER, prepareMulti(order));
-            }
-
-            String country = getCountry(rs.getString("SO"), rs.getString("IC"));
-            if (country != null)
-            {
-                rec.put(EVCombinedRec.COUNTRY, prepareMulti(country));
-                rec.put(EVCombinedRec.AFFILIATION_LOCATION,prepareMulti(country));
-            }
-
-            String classcodes = formatDelimiter(formatClassCodes(rs.getString("CAT")));
-            if (classcodes != null)
-            {
-                rec.put(EVCombinedRec.CLASSIFICATION_CODE,
-                        prepareMulti(XMLWriterCommon.formatClassCodes(classcodes)));
-            }
-
-            rec.put(EVCombinedRec.VOLUME, getVolume(rs.getString("VI")));
-            rec.put(EVCombinedRec.ISSUE, getIssue(rs.getString("VI")));
-            rec.put(EVCombinedRec.STARTPAGE, getStartPage(rs.getString("XP")));
-            rec.put(EVCombinedRec.DOCTYPE, rs.getString("TN"));
-            rec.put(EVCombinedRec.AVAILABILITY, getAvailability(rs.getString("AV"),
-                    											rs.getString("PR")));
-
-            rec.put(EVCombinedRec.NOTES, formatNotes(rs.getString("SU")));
-            rec.put(EVCombinedRec.PATENTAPPDATE, getPatentAppDate(rs.getString("RD")));
-            rec.put(EVCombinedRec.PATENTISSUEDATE, getPatentIssueDate(rs.getString("RD")));
-            rec.put(EVCombinedRec.DEDUPKEY, new GUID().toString());
-            rec.put(EVCombinedRec.LANGUAGE,
-                    prepareMulti(getLanguage(rs.getString("IC"),
-                            				 rs.getString("SU"))));
-            rec.put(EVCombinedRec.DOCID, rs.getString("M_ID"));
-            rec.put(EVCombinedRec.DATABASE, "ntis");
-            rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("LOAD_NUMBER"));
-            rec.put(EVCombinedRec.PUB_YEAR, getPubYear(rs.getString("RD"),
-                    								   rs.getString("LOAD_NUMBER")));
-            String agency = getAgency(rs.getString("MAA1"),
-									  rs.getString("MAA2"));
-            if (agency != null)
-            {
-                rec.put(EVCombinedRec.AGENCY, prepareMulti(agency));
-            }
-            rec.put(EVCombinedRec.ACCESSION_NUMBER,
-                    formatAccessionNumber(rs.getString("AN")));
-
-			if(rs.getString("seq_num") != null)
-			{
-				rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
-			}
-            this.writer.writeRec(rec);
-           
-            /**********************************************************/
-	        //following code used to test kafka by hmo@2020/02/3
-	        //this.writer.writeRec(recArray,kafka);
-	        /**********************************************************/
-            /*
-	        this.writer.writeRec(rec,kafka);
-	        if(i%5==0)
+	        while (rs.next())
 	        {
-	        	//System.out.println("flushing at "+i);
-	        	kafka.flush();
+	
+	            EVCombinedRec rec = new EVCombinedRec();
+	            ++i;
+	            
+	            String aut = NTISAuthor.formatAuthors(rs.getString("PA1"),
+	                    							  rs.getString("PA2"),
+	                    							  rs.getString("PA3"),
+	                    							  rs.getString("PA4"),
+	                    							  rs.getString("PA5"),
+	                    							  rs.getString("HN"));
+	
+	            if (aut != null)
+	            {
+	                rec.put(EVCombinedRec.AUTHOR, prepareAuthor(aut));
+	            }
+	
+	            String affil = formatAffil(rs.getString("SO"));
+	            if (affil != null )
+	            {
+	                rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareMulti(affil));
+	            }
+	
+	            rec.put(EVCombinedRec.TITLE, formatTitle(rs.getString("TI")));
+	            rec.put(EVCombinedRec.ABSTRACT, formatAbstract(rs.getString("AB")));
+	
+	            String cv = formatDelimiter(formatCV(rs.getString("DES")));
+	            if (cv != null)
+	            {
+	                rec.put(EVCombinedRec.CONTROLLED_TERMS,
+	                        prepareMulti(cv));
+	            }
+	
+	            String uncontrolled = formatDelimiter(formatFL(rs.getString("IDE")));
+	            if (uncontrolled != null)
+	            {
+	                rec.put(EVCombinedRec.UNCONTROLLED_TERMS,
+	                        prepareMulti(uncontrolled));
+	            }
+	
+	            String report = formatDelimiter(formatReportNumbers(rs.getString("RN")));
+	            if (report != null)
+	            {
+	                rec.put(EVCombinedRec.REPORTNUMBER, prepareMulti(report));
+	            }
+	
+	            String order = formatDelimiter(formatOrderNumbers(rs.getString("CT"),
+	                    											 rs.getString("PN")));
+	            if (order != null)
+	            {
+	                rec.put(EVCombinedRec.ORDERNUMBER, prepareMulti(order));
+	            }
+	
+	            String country = getCountry(rs.getString("SO"), rs.getString("IC"));
+	            if (country != null)
+	            {
+	                rec.put(EVCombinedRec.COUNTRY, prepareMulti(country));
+	                rec.put(EVCombinedRec.AFFILIATION_LOCATION,prepareMulti(country));
+	            }
+	
+	            String classcodes = formatDelimiter(formatClassCodes(rs.getString("CAT")));
+	            if (classcodes != null)
+	            {
+	                rec.put(EVCombinedRec.CLASSIFICATION_CODE,
+	                        prepareMulti(XMLWriterCommon.formatClassCodes(classcodes)));
+	            }
+	
+	            rec.put(EVCombinedRec.VOLUME, getVolume(rs.getString("VI")));
+	            rec.put(EVCombinedRec.ISSUE, getIssue(rs.getString("VI")));
+	            rec.put(EVCombinedRec.STARTPAGE, getStartPage(rs.getString("XP")));
+	            rec.put(EVCombinedRec.DOCTYPE, rs.getString("TN"));
+	            rec.put(EVCombinedRec.AVAILABILITY, getAvailability(rs.getString("AV"),
+	                    											rs.getString("PR")));
+	
+	            rec.put(EVCombinedRec.NOTES, formatNotes(rs.getString("SU")));
+	            rec.put(EVCombinedRec.PATENTAPPDATE, getPatentAppDate(rs.getString("RD")));
+	            rec.put(EVCombinedRec.PATENTISSUEDATE, getPatentIssueDate(rs.getString("RD")));
+	            rec.put(EVCombinedRec.DEDUPKEY, new GUID().toString());
+	            rec.put(EVCombinedRec.LANGUAGE,
+	                    prepareMulti(getLanguage(rs.getString("IC"),
+	                            				 rs.getString("SU"))));
+	            rec.put(EVCombinedRec.DOCID, rs.getString("M_ID"));
+	            rec.put(EVCombinedRec.DATABASE, "ntis");
+	            rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("LOAD_NUMBER"));
+	            rec.put(EVCombinedRec.PUB_YEAR, getPubYear(rs.getString("RD"),
+	                    								   rs.getString("LOAD_NUMBER")));
+	            String agency = getAgency(rs.getString("MAA1"),
+										  rs.getString("MAA2"));
+	            if (agency != null)
+	            {
+	                rec.put(EVCombinedRec.AGENCY, prepareMulti(agency));
+	            }
+	            rec.put(EVCombinedRec.ACCESSION_NUMBER,
+	                    formatAccessionNumber(rs.getString("AN")));
+	
+				if(rs.getString("seq_num") != null)
+				{
+					rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
+				}
+	            //this.writer.writeRec(rec);
+	           
+	            /**********************************************************/
+		        //following code used to test kafka by hmo@2020/02/3
+		        //this.writer.writeRec(recArray,kafka);
+		        /**********************************************************/
+	            /*
+		        this.writer.writeRec(rec,kafka);
+		        if(i%5==0)
+		        {
+		        	//System.out.println("flushing at "+i);
+		        	kafka.flush();
+		        }
+		        */
+				//use thread to run kafka message
+				 MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
+		         thread = new Thread(sendMessage);
+		         thread.start();
 	        }
-	        */
         }
+        finally
+        {
+        
+	        if(kafka!=null)
+	        { 
+	        	int k=0;
+	        	if(thread!=null)
+	        	{
+		        	while(thread.isAlive())
+		        	{
+		        		System.out.println("sleep "+k);
+		        		Thread.sleep(1000);
+		        	}
+	        	}
+	        	kafka.close();
+	        }
+	        System.out.println("Total "+i+" records");
+        }
+	        
+        
     }
 
     private String formatOrderNumbers(String num1,
