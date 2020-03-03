@@ -24,6 +24,7 @@ import org.ei.common.inspec.*;
 import org.ei.dataloading.EVCombinedRec;
 import org.ei.dataloading.XMLWriterCommon;
 import org.ei.dataloading.bd.loadtime.BdNumericalIndexMapping;
+import org.ei.dataloading.MessageSender;
 import org.ei.util.kafka.*;
 
 
@@ -319,473 +320,491 @@ public class INSPECCombiner
             throws Exception
     {
         int i = 0;
-        KafkaService kafka = null;
-        //kafka = new KafkaService();
-        
-        while(rs.next())
-        {
-            EVCombinedRec rec = new EVCombinedRec();
-            ++i;
-
-            String abString = getStringFromClob(rs.getClob("ab"));
-            String mid = rs.getString("M_ID");
-            //System.out.println("MID= "+mid);
-            String accessnumber = rs.getString("anum");
-            String strYear ="";
-            if(rs.getString("pyr") != null && validYear(getPubYear(rs.getString("pyr"))))
-            {
-                strYear=getPubYear(rs.getString("pyr"));
-            }
-            else if (rs.getString("sspdate") != null && validYear(getPubYear(rs.getString("sspdate"))))
-            {
-                strYear=getPubYear(rs.getString("sspdate"));
-            }
-            else if (rs.getString("fdate") != null && validYear(getPubYear(rs.getString("fdate"))))
-            {
-                strYear=getPubYear(rs.getString("fdate"));
-            }
-            else if (rs.getString("cdate") != null && validYear(getPubYear(rs.getString("cdate"))))
-            {
-                strYear=getPubYear(rs.getString("cdate"));
-            }
-            else if (rs.getString("su") != null && validYear(getPubYear(rs.getString("su"))))
-            {
-
-                strYear=getPubYear(rs.getString("su"));
-            }
-
-            if (validYear(strYear))
-            {
-                if((rs.getString("aus") != null) || (rs.getString("aus2") != null))
-                {
-                    StringBuffer aus = new StringBuffer();
-                    if(rs.getString("aus") != null)
-                    {
-                        aus.append(rs.getString("aus"));
-                    }
-                    if(rs.getString("aus2") != null)
-                    {
-                        aus.append(rs.getString("aus2"));
-                    }
-
-                    rec.put(EVCombinedRec.AUTHOR,prepareAuthor(aus.toString()));
-                }
-                else if(rs.getString("eds") != null)
-                {
-                    rec.put(EVCombinedRec.EDITOR, prepareAuthor(rs.getString("eds")));
-                }
-
-
-                if(rs.getString("aaff") != null)
-                {
-                    StringBuffer aaff = new StringBuffer(rs.getString("aaff"));
-
-                    if(rs.getString("aaffmulti1") != null)
-                    {
-                    	aaff.append(Constants.AUDELIMITER);
-                        aaff.append(rs.getString("aaffmulti1"));
-
-                        if (rs.getString("aaffmulti2") != null)
-                        {
-                            aaff.append(rs.getString("aaffmulti2"));
-                        }
-                    }
-
-                    //rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareAuthor(aaff.toString()));
-                    rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareAffiliation(aaff.toString()));
-                  //added by hmo on 2019/09/11
-                   // rec.put(EVCombinedRec.AFFILIATIONID, prepareAffiliationID(aaff.toString()));
-                   // rec.put(EVCombinedRec.ORG_ID, prepareAffiliationORGID(aaff.toString()));
-                    rec.put(EVCombinedRec.AFFILIATIONID, prepareAffiliationORGID(aaff.toString()));
-                    rec.put(EVCombinedRec.ORG_ID, prepareAffiliationID(aaff.toString()));
-                    rec.put(EVCombinedRec.AFFILIATION_LOCATION, prepareAffiliationLocation(aaff.toString()));
-                    
-                }
-
-                if(rs.getString("afc") != null)
-                {
-                    String countryFormatted = Country.formatCountry(rs.getString("afc"));
-                    if (countryFormatted != null)
-                    {
-                        rec.put(EVCombinedRec.COUNTRY, countryFormatted);
-                        if(rec.get(EVCombinedRec.AFFILIATION_LOCATION)==null)
-                        	rec.put(EVCombinedRec.AFFILIATION_LOCATION, countryFormatted);
-                    }
-                }
-
-                if(rs.getString("pdoi") != null)
-                {
-                    rec.put(EVCombinedRec.DOI, rs.getString("pdoi"));
-                }
-
-
-                if(rs.getString("ti") != null)
-                {
-                    rec.put(EVCombinedRec.TITLE, rs.getString("ti"));
-                }
-
-                if(abString != null && abString.length() > 10)
-                {
-                    rec.put(EVCombinedRec.ABSTRACT, abString);
-                }
-
-                if(rs.getString("eaff") != null)
-                {
-                    StringBuffer eaff = new StringBuffer(rs.getString("eaff"));
-
-                    if(rs.getString("eaffmulti1") != null)
-                    {
-                        eaff = new StringBuffer(rs.getString("eaffmulti1"));
-
-                        if (rs.getString("eaffmulti2") != null)
-                        {
-                            eaff.append(rs.getString("eaffmulti2"));
-                        }
-                    }
-
-                    //rec.put(EVCombinedRec.EDITOR_AFFILIATION, prepareAuthor(eaff.toString()));
-                    rec.put(EVCombinedRec.EDITOR_AFFILIATION, prepareAffiliation(eaff.toString()));
-                    
-                    //added by hmo on 2019/09/11
-                    rec.put(EVCombinedRec.AFFILIATIONID, prepareAffiliationID(eaff.toString()));
-                    rec.put(EVCombinedRec.ORG_ID, prepareAffiliationORGID(eaff.toString()));
-                    
-                }
-
-                if(rs.getString("trs") != null)
-                {
-                    rec.put(EVCombinedRec.TRANSLATOR, prepareMulti(rs.getString("trs")));
-                }
-
-                if(rs.getString("cvs") != null)
-                {
-                    rec.put(EVCombinedRec.CONTROLLED_TERMS, prepareMulti(rs.getString("cvs")));
-                }
-
-                if(rs.getString("fls") != null)
-                {
-                    rec.put(EVCombinedRec.UNCONTROLLED_TERMS, prepareMulti(rs.getString("fls")));
-                }
-
-                if(rs.getString("psn") != null)
-                {
-                    //06/07 if npsn is not null, it contains print and online issn,
-                    // if npsn is not available, use "psn"
-                    if (rs.getString("npsn") != null)
-                    {
-                        rec.put(EVCombinedRec.ISSN, getISSN(rs.getString("npsn")));
-                    }
-                    else
-                    {
-                        rec.put(EVCombinedRec.ISSN, rs.getString("psn"));
-                    }
-                }
-
-                if(rs.getString("ssn") != null)
-                {
-                    //06/07 if npsn is not null, it contains print and online issn,
-                    // if npsn is not available, use "psn"
-                    if (rs.getString("nssn") != null)
-                    {
-                        rec.put(EVCombinedRec.ISSN_OF_TRANSLATION,getISSN(rs.getString("nssn")));
-                    }
-                    else
-                    {
-                        rec.put(EVCombinedRec.ISSN_OF_TRANSLATION, rs.getString("ssn"));
-                    }
-                }
-
-
-                if(rs.getString("sfjt") != null)
-                {
-                    rec.put(EVCombinedRec.SERIAL_TITLE_TRANSLATION, rs.getString("sfjt"));
-                }
-
-                if(rs.getString("pcdn") != null)
-                {
-                    rec.put(EVCombinedRec.CODEN, rs.getString("pcdn"));
-                }
-
-                if(rs.getString("scdn") != null)
-                {
-                    rec.put(EVCombinedRec.CODEN_OF_TRANSLATION, rs.getString("scdn"));
-                }
-
-                if(rs.getString("sbn") != null)
-                {
-                    rec.put(EVCombinedRec.ISBN, rs.getString("sbn"));
-                }
-
-                if(rs.getString("pubti") != null)
-                {
-                    rec.put(rec.MONOGRAPH_TITLE,
-                            rs.getString("pubti"));
-                    rec.put(EVCombinedRec.SERIAL_TITLE, rs.getString("pubti"));
-                }
-
-                if(rs.getString("pfjt") != null)
-                {
-                    rec.put(EVCombinedRec.SERIAL_TITLE, rs.getString("pfjt"));
-                }
-
-                if(rs.getString("pajt") != null|| rs.getString("sajt") != null)
-                {
-                    StringBuffer buf = new StringBuffer();
-                    if(rs.getString("pajt") != null)
-                    {
-                        buf.append(rs.getString("pajt"));
-                    }
-                    if(rs.getString("sajt") != null)
-                    {
-                        buf.append("; ").append(rs.getString("sajt"));
-                    }
-                    rec.put(EVCombinedRec.SOURCE,buf.toString());
-                }
-
-
-                if(rs.getString("ppub") != null)
-                {
-                    rec.put(EVCombinedRec.PUBLISHER_NAME, rs.getString("ppub"));
-                }
-
-                if(rs.getString("trmc") != null)
-                {
-                    rec.put(EVCombinedRec.TREATMENT_CODE,
-                            prepareMulti(getTreatmentCode(rs.getString("trmc"))));
-                }
-
-                if(rs.getString("la") != null)
-                {
-                    rec.put(EVCombinedRec.LANGUAGE,
-                            prepareMulti(rs.getString("la")));
-                }
-
-                if(rs.getString("nrtype") != null)
-                {
-                    rec.put(EVCombinedRec.DOCTYPE, getDocType(rs.getString("nrtype")));
-                }
-
-                if(rs.getString("cls") != null)
-                {
-                    rec.put(EVCombinedRec.CLASSIFICATION_CODE, prepareMulti(XMLWriterCommon.formatClassCodes(rs.getString("cls"))));
-
-                }
-
-                if(rs.getString("tc") != null)
-                {
-                        rec.put(EVCombinedRec.CONFERENCE_NAME,
-                                rs.getString("tc"));
-                }
-                else
-                {
-                    String thlp = null;
-                    if(rs.getString("pfjt") != null)
-                    {
-                         thlp = rs.getString("pfjt");
-                    }
-                    else if(rs.getString("pubti") != null)
-                    {
-                        thlp = rs.getString("pubti");
-
-                    }
-
-                    String rt1 = rec.get(EVCombinedRec.DOCTYPE);
-
-                    if(rt1 != null)
-                    {
-                        if(rt1.startsWith("CA") &&
-                           thlp != null)
-                        {
-                            rec.put(EVCombinedRec.CONFERENCE_NAME,
-                                    thlp);
-                        }
-                        else if(rt1.startsWith("CP") &&
-                                rec.get(EVCombinedRec.TITLE) != null)
-                        {
-                            rec.put(EVCombinedRec.CONFERENCE_NAME,
-                                    rec.get(EVCombinedRec.TITLE));
-                        }
-                    }
-                }
-
-
-                if(rs.getString("cloc") != null)
-                {
-                    rec.put(EVCombinedRec.CONFERENCE_LOCATION,
-                            rs.getString("cloc"));
-                }
-
-                if(rs.getString("cdate") != null|| rs.getString("cedate") != null)
-                {
-                    StringBuffer buf = new StringBuffer();
-                    if(rs.getString("cdate") != null)
-                    {
-                        buf.append(rs.getString("cdate"));
-                    }
-                    if(rs.getString("cedate") != null)
-                    {
-                        buf.append("; ").append(rs.getString("cedate"));
-                    }
-                    rec.put(EVCombinedRec.MEETING_DATE,buf.toString());
-                }
-
-                if(rs.getString("sorg") != null)
-                {
-                    rec.put(EVCombinedRec.SPONSOR_NAME,
-                            prepareMulti(rs.getString("sorg")));
-                }
-
-                if(rs.getString("cls") != null)
-                {
-                    rec.put(EVCombinedRec.DISCIPLINE, prepareMulti(getDiscipline(rs.getString("cls"))));
-                }
-
-                if(rs.getString("matid") != null)
-                {
-                    rec.put(EVCombinedRec.MATERIAL_NUMBER,prepareMulti(rs.getString("matid")));
-                }
-
-                if(rs.getString("ndi") != null)
-                {
-                    rec.put(EVCombinedRec.NUMERICAL_INDEXING,prepareIndexterms(rs.getString("ndi")));
-                    processNumericalIndex(rec,mid,accessnumber,rs.getString("ndi"),con);
-                }
-
-                if(rs.getString("chi") != null)
-                {
-                    rec.put(EVCombinedRec.CHEMICAL_INDEXING,prepareIndexterms(rs.getString("chi")));
-                }
-
-                if(rs.getString("aoi") != null)
-                {
-                    rec.put(EVCombinedRec.ASTRONOMICAL_INDEXING,prepareMulti(rs.getString("aoi")));
-                }
-
-                if(rs.getString("rnum") !=null)
-                {
-                    rec.put(rec.REPORTNUMBER,
-                    rs.getString("rnum"));
-                }
-
-                //Patent Info
-                if(rs.getString("pnum") !=null)
-                {
-                    rec.put(rec.PATENT_NUMBER,
-                    rs.getString("pnum"));
-                }
-
-                //replacing AUTHOR_AFFILIATION for Patent Assignee
-                if(rs.getString("pas") != null)
-                {
-                    rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareMulti(rs.getString("pas")));
-                }
-
-                if(rs.getString("fdate") != null)
-                {
-                    rec.put(rec.PATENT_FILING_DATE,
-                            rs.getString("fdate"));
-                }
-
-                if(rs.getString("opan") != null)
-                {
-                    rec.put(rec.APPLICATION_NUMBER,
-                            rs.getString("opan"));
-                }
-
-                if(rs.getString("copa") != null)
-                {
-                    String countryFormatted = Country.formatCountry(rs.getString("copa"));
-                    if (countryFormatted != null)
-                    {
-                        rec.put(EVCombinedRec.APPLICATION_COUNTRY, countryFormatted);
-                    }
-                }
-
-                if(rs.getString("ppdate") != null)
-                {
-                    rec.put(rec.PRIORITY_DATE,
-                            rs.getString("ppdate"));
-                }
-
-                // replacing COUNTRY with Country of Patent
-                if(rs.getString("cpat") != null)
-                {
-                    String countryFormatted = Country.formatCountry(rs.getString("cpat"));
-                    if (countryFormatted != null)
-                    {
-                        rec.put(EVCombinedRec.COUNTRY, countryFormatted);
-                    }
-                }
-
-                if(rs.getString("iorg") != null)
-                {
-                    rec.put(rec.NOTES,
-                            prepareMulti(rs.getString("iorg")));
-
-                    String countryFormatted = Country.formatCountry(rs.getString("ciorg"));
-                    if (countryFormatted != null &&
-                        !rec.containsKey(EVCombinedRec.COUNTRY))
-                    {
-                        rec.put(EVCombinedRec.COUNTRY, countryFormatted);
-                        if(rec.get(EVCombinedRec.AFFILIATION_LOCATION)==null)
-                        	rec.put(EVCombinedRec.AFFILIATION_LOCATION, countryFormatted);
-                    }
-                }
-
-                if(rs.getString("ipc")!=null)
-                {
-                    String ipcString = rs.getString("ipc");
-                    ipcString = perl.substitute("s/\\//SLASH/g", ipcString);
-                    rec.put(EVCombinedRec.INT_PATENT_CLASSIFICATION, ipcString);
-                }
-
-                rec.put(EVCombinedRec.DOCID, rs.getString("M_ID"));
-                rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
-
-                rec.put(EVCombinedRec.DATABASE, "ins");
-                rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("LOAD_NUMBER"));
-                if(rs.getString("UPDATENUMBER")!=null)
-                {
-                	rec.put(EVCombinedRec.UPDATE_NUMBER, rs.getString("UPDATENUMBER"));
-                }
-
-                if(validYear(strYear))
-                {
-                    rec.put(EVCombinedRec.PUB_YEAR,strYear);
-                }
-
-                rec.put(EVCombinedRec.DEDUPKEY,
-                        getDedupKey(rec.get(EVCombinedRec.ISSN),
-                                    rec.get(EVCombinedRec.CODEN),
-                                    rs.getString("pvol"),
-                                    rs.getString("piss"),
-                                    rs.getString("pipn")));
-
-                rec.put(EVCombinedRec.VOLUME, rs.getString("pvol"));
-                rec.put(EVCombinedRec.ISSUE, rs.getString("piss"));
-                rec.put(EVCombinedRec.STARTPAGE, getFirstPage(rs.getString("pipn")));
-                rec.put(EVCombinedRec.ACCESSION_NUMBER, rs.getString("ANUM"));
-
-                writer.writeRec(rec);
-                
-                /**********************************************************/
-                //following code used to test kafka by hmo@2020/01/30
-                //this.writer.writeRec(recArray,kafka);
-                /**********************************************************/
-                /*
-                writer.writeRec(rec,kafka);
-                if(i%5==0)
-                {
-                	//System.out.println("flushing at "+i);
-                	kafka.flush();
-                }
-                */
-            }
-
-        }
-        if(kafka!=null) {
-        	kafka.close();
-        }
+        KafkaService kafka = new KafkaService();
+        Thread thread =null;
+       try
+       {
+	        while(rs.next())
+	        {
+	            EVCombinedRec rec = new EVCombinedRec();
+	            ++i;
+	
+	            String abString = getStringFromClob(rs.getClob("ab"));
+	            String mid = rs.getString("M_ID");
+	            //System.out.println("MID= "+mid);
+	            String accessnumber = rs.getString("anum");
+	            String strYear ="";
+	            if(rs.getString("pyr") != null && validYear(getPubYear(rs.getString("pyr"))))
+	            {
+	                strYear=getPubYear(rs.getString("pyr"));
+	            }
+	            else if (rs.getString("sspdate") != null && validYear(getPubYear(rs.getString("sspdate"))))
+	            {
+	                strYear=getPubYear(rs.getString("sspdate"));
+	            }
+	            else if (rs.getString("fdate") != null && validYear(getPubYear(rs.getString("fdate"))))
+	            {
+	                strYear=getPubYear(rs.getString("fdate"));
+	            }
+	            else if (rs.getString("cdate") != null && validYear(getPubYear(rs.getString("cdate"))))
+	            {
+	                strYear=getPubYear(rs.getString("cdate"));
+	            }
+	            else if (rs.getString("su") != null && validYear(getPubYear(rs.getString("su"))))
+	            {
+	
+	                strYear=getPubYear(rs.getString("su"));
+	            }
+	
+	            if (validYear(strYear))
+	            {
+	                if((rs.getString("aus") != null) || (rs.getString("aus2") != null))
+	                {
+	                    StringBuffer aus = new StringBuffer();
+	                    if(rs.getString("aus") != null)
+	                    {
+	                        aus.append(rs.getString("aus"));
+	                    }
+	                    if(rs.getString("aus2") != null)
+	                    {
+	                        aus.append(rs.getString("aus2"));
+	                    }
+	
+	                    rec.put(EVCombinedRec.AUTHOR,prepareAuthor(aus.toString()));
+	                }
+	                else if(rs.getString("eds") != null)
+	                {
+	                    rec.put(EVCombinedRec.EDITOR, prepareAuthor(rs.getString("eds")));
+	                }
+	
+	
+	                if(rs.getString("aaff") != null)
+	                {
+	                    StringBuffer aaff = new StringBuffer(rs.getString("aaff"));
+	
+	                    if(rs.getString("aaffmulti1") != null)
+	                    {
+	                    	aaff.append(Constants.AUDELIMITER);
+	                        aaff.append(rs.getString("aaffmulti1"));
+	
+	                        if (rs.getString("aaffmulti2") != null)
+	                        {
+	                            aaff.append(rs.getString("aaffmulti2"));
+	                        }
+	                    }
+	
+	                    //rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareAuthor(aaff.toString()));
+	                    rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareAffiliation(aaff.toString()));
+	                  //added by hmo on 2019/09/11
+	                   // rec.put(EVCombinedRec.AFFILIATIONID, prepareAffiliationID(aaff.toString()));
+	                   // rec.put(EVCombinedRec.ORG_ID, prepareAffiliationORGID(aaff.toString()));
+	                    rec.put(EVCombinedRec.AFFILIATIONID, prepareAffiliationORGID(aaff.toString()));
+	                    rec.put(EVCombinedRec.ORG_ID, prepareAffiliationID(aaff.toString()));
+	                    rec.put(EVCombinedRec.AFFILIATION_LOCATION, prepareAffiliationLocation(aaff.toString()));
+	                    
+	                }
+	
+	                if(rs.getString("afc") != null)
+	                {
+	                    String countryFormatted = Country.formatCountry(rs.getString("afc"));
+	                    if (countryFormatted != null)
+	                    {
+	                        rec.put(EVCombinedRec.COUNTRY, countryFormatted);
+	                        if(rec.get(EVCombinedRec.AFFILIATION_LOCATION)==null)
+	                        	rec.put(EVCombinedRec.AFFILIATION_LOCATION, countryFormatted);
+	                    }
+	                }
+	
+	                if(rs.getString("pdoi") != null)
+	                {
+	                    rec.put(EVCombinedRec.DOI, rs.getString("pdoi"));
+	                }
+	
+	
+	                if(rs.getString("ti") != null)
+	                {
+	                    rec.put(EVCombinedRec.TITLE, rs.getString("ti"));
+	                }
+	
+	                if(abString != null && abString.length() > 10)
+	                {
+	                    rec.put(EVCombinedRec.ABSTRACT, abString);
+	                }
+	
+	                if(rs.getString("eaff") != null)
+	                {
+	                    StringBuffer eaff = new StringBuffer(rs.getString("eaff"));
+	
+	                    if(rs.getString("eaffmulti1") != null)
+	                    {
+	                        eaff = new StringBuffer(rs.getString("eaffmulti1"));
+	
+	                        if (rs.getString("eaffmulti2") != null)
+	                        {
+	                            eaff.append(rs.getString("eaffmulti2"));
+	                        }
+	                    }
+	
+	                    //rec.put(EVCombinedRec.EDITOR_AFFILIATION, prepareAuthor(eaff.toString()));
+	                    rec.put(EVCombinedRec.EDITOR_AFFILIATION, prepareAffiliation(eaff.toString()));
+	                    
+	                    //added by hmo on 2019/09/11
+	                    rec.put(EVCombinedRec.AFFILIATIONID, prepareAffiliationID(eaff.toString()));
+	                    rec.put(EVCombinedRec.ORG_ID, prepareAffiliationORGID(eaff.toString()));
+	                    
+	                }
+	
+	                if(rs.getString("trs") != null)
+	                {
+	                    rec.put(EVCombinedRec.TRANSLATOR, prepareMulti(rs.getString("trs")));
+	                }
+	
+	                if(rs.getString("cvs") != null)
+	                {
+	                    rec.put(EVCombinedRec.CONTROLLED_TERMS, prepareMulti(rs.getString("cvs")));
+	                }
+	
+	                if(rs.getString("fls") != null)
+	                {
+	                    rec.put(EVCombinedRec.UNCONTROLLED_TERMS, prepareMulti(rs.getString("fls")));
+	                }
+	
+	                if(rs.getString("psn") != null)
+	                {
+	                    //06/07 if npsn is not null, it contains print and online issn,
+	                    // if npsn is not available, use "psn"
+	                    if (rs.getString("npsn") != null)
+	                    {
+	                        rec.put(EVCombinedRec.ISSN, getISSN(rs.getString("npsn")));
+	                    }
+	                    else
+	                    {
+	                        rec.put(EVCombinedRec.ISSN, rs.getString("psn"));
+	                    }
+	                }
+	
+	                if(rs.getString("ssn") != null)
+	                {
+	                    //06/07 if npsn is not null, it contains print and online issn,
+	                    // if npsn is not available, use "psn"
+	                    if (rs.getString("nssn") != null)
+	                    {
+	                        rec.put(EVCombinedRec.ISSN_OF_TRANSLATION,getISSN(rs.getString("nssn")));
+	                    }
+	                    else
+	                    {
+	                        rec.put(EVCombinedRec.ISSN_OF_TRANSLATION, rs.getString("ssn"));
+	                    }
+	                }
+	
+	
+	                if(rs.getString("sfjt") != null)
+	                {
+	                    rec.put(EVCombinedRec.SERIAL_TITLE_TRANSLATION, rs.getString("sfjt"));
+	                }
+	
+	                if(rs.getString("pcdn") != null)
+	                {
+	                    rec.put(EVCombinedRec.CODEN, rs.getString("pcdn"));
+	                }
+	
+	                if(rs.getString("scdn") != null)
+	                {
+	                    rec.put(EVCombinedRec.CODEN_OF_TRANSLATION, rs.getString("scdn"));
+	                }
+	
+	                if(rs.getString("sbn") != null)
+	                {
+	                    rec.put(EVCombinedRec.ISBN, rs.getString("sbn"));
+	                }
+	
+	                if(rs.getString("pubti") != null)
+	                {
+	                    rec.put(rec.MONOGRAPH_TITLE,
+	                            rs.getString("pubti"));
+	                    rec.put(EVCombinedRec.SERIAL_TITLE, rs.getString("pubti"));
+	                }
+	
+	                if(rs.getString("pfjt") != null)
+	                {
+	                    rec.put(EVCombinedRec.SERIAL_TITLE, rs.getString("pfjt"));
+	                }
+	
+	                if(rs.getString("pajt") != null|| rs.getString("sajt") != null)
+	                {
+	                    StringBuffer buf = new StringBuffer();
+	                    if(rs.getString("pajt") != null)
+	                    {
+	                        buf.append(rs.getString("pajt"));
+	                    }
+	                    if(rs.getString("sajt") != null)
+	                    {
+	                        buf.append("; ").append(rs.getString("sajt"));
+	                    }
+	                    rec.put(EVCombinedRec.SOURCE,buf.toString());
+	                }
+	
+	
+	                if(rs.getString("ppub") != null)
+	                {
+	                    rec.put(EVCombinedRec.PUBLISHER_NAME, rs.getString("ppub"));
+	                }
+	
+	                if(rs.getString("trmc") != null)
+	                {
+	                    rec.put(EVCombinedRec.TREATMENT_CODE,
+	                            prepareMulti(getTreatmentCode(rs.getString("trmc"))));
+	                }
+	
+	                if(rs.getString("la") != null)
+	                {
+	                    rec.put(EVCombinedRec.LANGUAGE,
+	                            prepareMulti(rs.getString("la")));
+	                }
+	
+	                if(rs.getString("nrtype") != null)
+	                {
+	                    rec.put(EVCombinedRec.DOCTYPE, getDocType(rs.getString("nrtype")));
+	                }
+	
+	                if(rs.getString("cls") != null)
+	                {
+	                    rec.put(EVCombinedRec.CLASSIFICATION_CODE, prepareMulti(XMLWriterCommon.formatClassCodes(rs.getString("cls"))));
+	
+	                }
+	
+	                if(rs.getString("tc") != null)
+	                {
+	                        rec.put(EVCombinedRec.CONFERENCE_NAME,
+	                                rs.getString("tc"));
+	                }
+	                else
+	                {
+	                    String thlp = null;
+	                    if(rs.getString("pfjt") != null)
+	                    {
+	                         thlp = rs.getString("pfjt");
+	                    }
+	                    else if(rs.getString("pubti") != null)
+	                    {
+	                        thlp = rs.getString("pubti");
+	
+	                    }
+	
+	                    String rt1 = rec.get(EVCombinedRec.DOCTYPE);
+	
+	                    if(rt1 != null)
+	                    {
+	                        if(rt1.startsWith("CA") &&
+	                           thlp != null)
+	                        {
+	                            rec.put(EVCombinedRec.CONFERENCE_NAME,
+	                                    thlp);
+	                        }
+	                        else if(rt1.startsWith("CP") &&
+	                                rec.get(EVCombinedRec.TITLE) != null)
+	                        {
+	                            rec.put(EVCombinedRec.CONFERENCE_NAME,
+	                                    rec.get(EVCombinedRec.TITLE));
+	                        }
+	                    }
+	                }
+	
+	
+	                if(rs.getString("cloc") != null)
+	                {
+	                    rec.put(EVCombinedRec.CONFERENCE_LOCATION,
+	                            rs.getString("cloc"));
+	                }
+	
+	                if(rs.getString("cdate") != null|| rs.getString("cedate") != null)
+	                {
+	                    StringBuffer buf = new StringBuffer();
+	                    if(rs.getString("cdate") != null)
+	                    {
+	                        buf.append(rs.getString("cdate"));
+	                    }
+	                    if(rs.getString("cedate") != null)
+	                    {
+	                        buf.append("; ").append(rs.getString("cedate"));
+	                    }
+	                    rec.put(EVCombinedRec.MEETING_DATE,buf.toString());
+	                }
+	
+	                if(rs.getString("sorg") != null)
+	                {
+	                    rec.put(EVCombinedRec.SPONSOR_NAME,
+	                            prepareMulti(rs.getString("sorg")));
+	                }
+	
+	                if(rs.getString("cls") != null)
+	                {
+	                    rec.put(EVCombinedRec.DISCIPLINE, prepareMulti(getDiscipline(rs.getString("cls"))));
+	                }
+	
+	                if(rs.getString("matid") != null)
+	                {
+	                    rec.put(EVCombinedRec.MATERIAL_NUMBER,prepareMulti(rs.getString("matid")));
+	                }
+	
+	                if(rs.getString("ndi") != null)
+	                {
+	                    rec.put(EVCombinedRec.NUMERICAL_INDEXING,prepareIndexterms(rs.getString("ndi")));
+	                    processNumericalIndex(rec,mid,accessnumber,rs.getString("ndi"),con);
+	                }
+	
+	                if(rs.getString("chi") != null)
+	                {
+	                    rec.put(EVCombinedRec.CHEMICAL_INDEXING,prepareIndexterms(rs.getString("chi")));
+	                }
+	
+	                if(rs.getString("aoi") != null)
+	                {
+	                    rec.put(EVCombinedRec.ASTRONOMICAL_INDEXING,prepareMulti(rs.getString("aoi")));
+	                }
+	
+	                if(rs.getString("rnum") !=null)
+	                {
+	                    rec.put(rec.REPORTNUMBER,
+	                    rs.getString("rnum"));
+	                }
+	
+	                //Patent Info
+	                if(rs.getString("pnum") !=null)
+	                {
+	                    rec.put(rec.PATENT_NUMBER,
+	                    rs.getString("pnum"));
+	                }
+	
+	                //replacing AUTHOR_AFFILIATION for Patent Assignee
+	                if(rs.getString("pas") != null)
+	                {
+	                    rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareMulti(rs.getString("pas")));
+	                }
+	
+	                if(rs.getString("fdate") != null)
+	                {
+	                    rec.put(rec.PATENT_FILING_DATE,
+	                            rs.getString("fdate"));
+	                }
+	
+	                if(rs.getString("opan") != null)
+	                {
+	                    rec.put(rec.APPLICATION_NUMBER,
+	                            rs.getString("opan"));
+	                }
+	
+	                if(rs.getString("copa") != null)
+	                {
+	                    String countryFormatted = Country.formatCountry(rs.getString("copa"));
+	                    if (countryFormatted != null)
+	                    {
+	                        rec.put(EVCombinedRec.APPLICATION_COUNTRY, countryFormatted);
+	                    }
+	                }
+	
+	                if(rs.getString("ppdate") != null)
+	                {
+	                    rec.put(rec.PRIORITY_DATE,
+	                            rs.getString("ppdate"));
+	                }
+	
+	                // replacing COUNTRY with Country of Patent
+	                if(rs.getString("cpat") != null)
+	                {
+	                    String countryFormatted = Country.formatCountry(rs.getString("cpat"));
+	                    if (countryFormatted != null)
+	                    {
+	                        rec.put(EVCombinedRec.COUNTRY, countryFormatted);
+	                    }
+	                }
+	
+	                if(rs.getString("iorg") != null)
+	                {
+	                    rec.put(rec.NOTES,
+	                            prepareMulti(rs.getString("iorg")));
+	
+	                    String countryFormatted = Country.formatCountry(rs.getString("ciorg"));
+	                    if (countryFormatted != null &&
+	                        !rec.containsKey(EVCombinedRec.COUNTRY))
+	                    {
+	                        rec.put(EVCombinedRec.COUNTRY, countryFormatted);
+	                        if(rec.get(EVCombinedRec.AFFILIATION_LOCATION)==null)
+	                        	rec.put(EVCombinedRec.AFFILIATION_LOCATION, countryFormatted);
+	                    }
+	                }
+	
+	                if(rs.getString("ipc")!=null)
+	                {
+	                    String ipcString = rs.getString("ipc");
+	                    ipcString = perl.substitute("s/\\//SLASH/g", ipcString);
+	                    rec.put(EVCombinedRec.INT_PATENT_CLASSIFICATION, ipcString);
+	                }
+	
+	                rec.put(EVCombinedRec.DOCID, rs.getString("M_ID"));
+	                rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
+	
+	                rec.put(EVCombinedRec.DATABASE, "ins");
+	                rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("LOAD_NUMBER"));
+	                if(rs.getString("UPDATENUMBER")!=null)
+	                {
+	                	rec.put(EVCombinedRec.UPDATE_NUMBER, rs.getString("UPDATENUMBER"));
+	                }
+	
+	                if(validYear(strYear))
+	                {
+	                    rec.put(EVCombinedRec.PUB_YEAR,strYear);
+	                }
+	
+	                rec.put(EVCombinedRec.DEDUPKEY,
+	                        getDedupKey(rec.get(EVCombinedRec.ISSN),
+	                                    rec.get(EVCombinedRec.CODEN),
+	                                    rs.getString("pvol"),
+	                                    rs.getString("piss"),
+	                                    rs.getString("pipn")));
+	
+	                rec.put(EVCombinedRec.VOLUME, rs.getString("pvol"));
+	                rec.put(EVCombinedRec.ISSUE, rs.getString("piss"));
+	                rec.put(EVCombinedRec.STARTPAGE, getFirstPage(rs.getString("pipn")));
+	                rec.put(EVCombinedRec.ACCESSION_NUMBER, rs.getString("ANUM"));
+	
+	                //writer.writeRec(rec);
+	                
+	                /**********************************************************/
+	                //following code used to test kafka by hmo@2020/01/30
+	                //this.writer.writeRec(recArray,kafka);
+	                /**********************************************************/
+	                /*
+	                writer.writeRec(rec,kafka);
+	                if(i%5==0)
+	                {
+	                	//System.out.println("flushing at "+i);
+	                	kafka.flush();
+	                }
+	                */
+	                MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
+		            thread = new Thread(sendMessage);
+		            thread.start();
+	            }
+	
+	        }
+       }
+       finally
+       {
+	        if(kafka!=null)
+	        { 
+	        	int k=0;
+	        	if(thread !=null)
+	        	{
+		        	while(thread.isAlive())
+		        	{
+		        		System.out.println("sleep "+k);
+		        		Thread.sleep(1000);
+		        	}
+	        	}
+	        	kafka.close();
+	        }
+       }
     }
     
     private void processNumericalIndex(EVCombinedRec rec, String mid, String accessnumber, String niString,Connection con) throws Exception

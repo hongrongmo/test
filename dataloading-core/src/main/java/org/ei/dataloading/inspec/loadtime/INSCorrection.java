@@ -7,7 +7,6 @@ package org.ei.dataloading.inspec.loadtime;
 
 import java.sql.*;
 import java.util.*;
-
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
 import org.ei.dataloading.*;
@@ -15,12 +14,10 @@ import org.ei.dataloading.bd.loadtime.*;
 import org.ei.domain.*;
 import org.ei.query.base.*;
 import org.ei.connectionpool.*;
-
 import java.text.*;
 import java.io.*;
 import java.lang.Process;
 import java.util.regex.*;
-
 import org.ei.util.GUID;
 import org.ei.common.*;
 

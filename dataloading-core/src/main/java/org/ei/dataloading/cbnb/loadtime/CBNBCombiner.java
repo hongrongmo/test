@@ -10,6 +10,7 @@ import org.ei.common.*;
 import org.ei.util.GUID;
 import org.ei.dataloading.*;
 import org.ei.util.kafka.*;
+import org.ei.dataloading.MessageSender;
 
 public class CBNBCombiner extends Combiner
 {
@@ -195,211 +196,242 @@ public class CBNBCombiner extends Combiner
     private void writeRecs(ResultSet rs) throws Exception
     {
         int i = 0;
-        KafkaService kafka = null;
-        //kafka = new KafkaService();
-        while (rs.next())
+        KafkaService kafka = new KafkaService();
+        Thread thread =null;
+        try
         {
-
-            EVCombinedRec rec = new EVCombinedRec();
-            ++i;
-
-
-            String abString = getStringFromClob(rs.getClob("abs"));
-            try 
-            {
-	            if (validYear(rs.getString("pyr")) || validYear(rs.getString("pyr1")))
-	            {            	
-	            	
-	            	//added for book project by hmo at 5/17/2017
-	                String docType = rs.getString("doc");
-	                if (docType == null)
-	                {
-	                    docType = "";
-	                }
-	                else if(docType!=null && docType.equalsIgnoreCase("Book"))
-	                {
-	                	docType = "bk";
-	                }
+	        while (rs.next())
+	        {
 	
-	                rec.put(EVCombinedRec.DOCTYPE, docType);
-	
-	                if (rs.getString("sco") != null)
-	                {
-	                    rec.put(EVCombinedRec.SCOPE, rs.getString("sco"));
-	                }
-	
-	                if (rs.getString("fjl") != null)
-	                {
-	                    rec.put(EVCombinedRec.SERIAL_TITLE, rs.getString("fjl"));
-	                }
-	
-	                if (rs.getString("isn") != null)
-	                {
-	                    rec.put(EVCombinedRec.ISSN, rs.getString("isn"));
-	                }
-	
-	                if (rs.getString("cdn") != null)
-	                {
-	                    rec.put(EVCombinedRec.CODEN, rs.getString("cdn"));
-	                }
-	
-	                if (abString != null && !abString.equals("No abstract available"))
-	                {
-	                    rec.put(EVCombinedRec.ABSTRACT, abString);
-	                }
-	
-	                if (rs.getString("lan") != null)
-	                {
-	                    rec.put(EVCombinedRec.LANGUAGE, prepareMulti(rs.getString("lan")));
-	                }
-	
-	                if (rs.getString("ibn") != null)
-	                {
-	                    rec.put(EVCombinedRec.ISBN, rs.getString("ibn"));
-	                }
-	
-	                if (rs.getString("pyr") != null && validYear(rs.getString("pyr")) )
-	                {
-	                    rec.put(EVCombinedRec.PUB_YEAR, rs.getString("pyr"));
-	                }
-	                else if(rs.getString("pyr1") != null && validYear(rs.getString("pyr1")) )
-	                {
-	                    rec.put(EVCombinedRec.PUB_YEAR, rs.getString("pyr1"));
-	                }
-	
-	                // add companies to INT_PATENT_CLASSIFICATION , facet
-	                if (rs.getString("src") != null)
-	                {
-	                    rec.put(EVCombinedRec.COMPANIES, prepareMulti(rs.getString("src")));
-	                    rec.put(EVCombinedRec.INT_PATENT_CLASSIFICATION, prepareMulti(rs.getString("src")));
-	                }
-	
-	                if(rs.getString("sct") != null)
-	                {
-	                    rec.put(EVCombinedRec.COUNTRY, prepareMulti(rs.getString("sct"),Constants.CO));
-	                }
+	            EVCombinedRec rec = new EVCombinedRec();
+	            ++i;
 	
 	
-	                if(rs.getString("scc") != null)
-	                {
-	                    rec.put(EVCombinedRec.DESIGNATED_STATES, prepareMulti(rs.getString("scc")));
-	                }
-	
-	                if (rs.getString("ebt") != null)
-	                {
-	                    rec.put(EVCombinedRec.BUSINESSTERMS, prepareMulti(rs.getString("ebt")));
-	                    rec.put(EVCombinedRec.CONTROLLED_TERMS, prepareMulti(rs.getString("ebt")));
-	                }
-	
-	                // Standard Industrial Code added to class codes field and facet
-	                if (rs.getString("cin") != null)
-	                {
-	                    rec.put(EVCombinedRec.CHEMICALTERMS, prepareMulti(rs.getString("cin")));
-	                    rec.put(EVCombinedRec.ECLA_CODES, prepareMulti(rs.getString("cin")));
-	                }
-	
-	                if (rs.getString("reg") != null)
-	                {
-	                    rec.put(EVCombinedRec.CASREGISTRYNUMBER, prepareMulti(rs.getString("reg")));
-	                }
-	
-	                if (rs.getString("cym") != null)
-	                {
-	                    rec.put(EVCombinedRec.CHEMICALACRONYMS, prepareMulti(rs.getString("cym")));
-	                }
-	
-	                // Standard Industrial Code added to patent kind field and facet
-	                if (rs.getString("sic") != null)
-	                {
-	                    rec.put(EVCombinedRec.PATENT_KIND, prepareMulti(rs.getString("sic")));
-	                }
-	
-	                // Industrial Sector Code added to patent kind field and facet
-	                if (rs.getString("gic") != null)
-	                {
-	                    rec.put(EVCombinedRec.CLASSIFICATION_CODE, prepareMulti(rs.getString("gic")));
-	                }
-	
-	                // add gid to facets
-	                if (rs.getString("gid") != null)
-	                {
-	                    rec.put(EVCombinedRec.INDUSTRIALSECTORS, prepareMulti(rs.getString("gid")));
-	                    rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareMulti(rs.getString("gid")));
-	                }
-	
-	
-	                if (rs.getString("atl") != null)
-	                {
-	                    rec.put(EVCombinedRec.TITLE, rs.getString("atl"));
-	                }
-	
-	                if (rs.getString("otl") != null)
-	                {
-	                    rec.put(EVCombinedRec.TRANSLATED_TITLE, rs.getString("otl"));
-	                }
-	
-	                if (rs.getString("avl") != null)
-	                {
-	                    rec.put(EVCombinedRec.AVAILABILITY, rs.getString("avl"));
-	                }
-	
-	                if (rs.getString("seq_num") != null)
-	                {
-	                    rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
-	                }
-	
-	                rec.put(EVCombinedRec.DOCID, rs.getString("M_ID"));
-	                rec.put(EVCombinedRec.DATABASE, "cbn");
-	                rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("LOAD_NUMBER"));
-	                rec.put(EVCombinedRec.DEDUPKEY,
-	                        getDedupKey(rec.get(EVCombinedRec.ISSN),
-	                                    rec.get(EVCombinedRec.CODEN),
-	                                    rs.getString("vol"),
-	                                    rs.getString("iss"),
-	                                    rs.getString("pag")));
-	
-	                rec.put(EVCombinedRec.VOLUME, getFirstNumber(rs.getString("vol")));
-	                rec.put(EVCombinedRec.ISSUE, getFirstNumber(rs.getString("iss")));
-	                rec.put(EVCombinedRec.STARTPAGE, getFirstNumber(rs.getString("pag")));
-	                rec.put(EVCombinedRec.ACCESSION_NUMBER, rs.getString("abn"));
-	
-	                if(rs.getString("pbr") != null)
-	                {
-	                    rec.put(EVCombinedRec.PUBLISHER_NAME, prepareMulti(rs.getString("pbr")));
-	                }
-	               // rec.put(EVCombinedRec.PUB_SORT, rs.getString("pbn"));
-	                this.writer.writeRec(rec);
-	                /**********************************************************/
-	    	        //following code used to test kafka by hmo@2020/02/3
-	    	        //this.writer.writeRec(recArray,kafka);
-	    	        /**********************************************************/
-	                /*
-	    	        this.writer.writeRec(rec,kafka);
-	    	        if(i%5==0)
-	    	        {
-	    	        	//System.out.println("flushing at "+i);
-	    	        	kafka.flush();
-	    	        }
-	    	        */
-	            }
-	            else
+	            String abString = getStringFromClob(rs.getClob("abs"));
+	            try 
 	            {
-	            	System.out.println(rs.getString("pyr")+" YEAR for record "+rs.getString("abn")+" is not good");
+		            if (validYear(rs.getString("pyr")) || validYear(rs.getString("pyr1")))
+		            {            	
+		            	
+		            	//added for book project by hmo at 5/17/2017
+		                String docType = rs.getString("doc");
+		                if (docType == null)
+		                {
+		                    docType = "";
+		                }
+		                else if(docType!=null && docType.equalsIgnoreCase("Book"))
+		                {
+		                	docType = "bk";
+		                }
+		
+		                rec.put(EVCombinedRec.DOCTYPE, docType);
+		
+		                if (rs.getString("sco") != null)
+		                {
+		                    rec.put(EVCombinedRec.SCOPE, rs.getString("sco"));
+		                }
+		
+		                if (rs.getString("fjl") != null)
+		                {
+		                    rec.put(EVCombinedRec.SERIAL_TITLE, rs.getString("fjl"));
+		                }
+		
+		                if (rs.getString("isn") != null)
+		                {
+		                    rec.put(EVCombinedRec.ISSN, rs.getString("isn"));
+		                }
+		
+		                if (rs.getString("cdn") != null)
+		                {
+		                    rec.put(EVCombinedRec.CODEN, rs.getString("cdn"));
+		                }
+		
+		                if (abString != null && !abString.equals("No abstract available"))
+		                {
+		                    rec.put(EVCombinedRec.ABSTRACT, abString);
+		                }
+		
+		                if (rs.getString("lan") != null)
+		                {
+		                    rec.put(EVCombinedRec.LANGUAGE, prepareMulti(rs.getString("lan")));
+		                }
+		
+		                if (rs.getString("ibn") != null)
+		                {
+		                    rec.put(EVCombinedRec.ISBN, rs.getString("ibn"));
+		                }
+		
+		                if (rs.getString("pyr") != null && validYear(rs.getString("pyr")) )
+		                {
+		                    rec.put(EVCombinedRec.PUB_YEAR, rs.getString("pyr"));
+		                }
+		                else if(rs.getString("pyr1") != null && validYear(rs.getString("pyr1")) )
+		                {
+		                    rec.put(EVCombinedRec.PUB_YEAR, rs.getString("pyr1"));
+		                }
+		
+		                // add companies to INT_PATENT_CLASSIFICATION , facet
+		                if (rs.getString("src") != null)
+		                {
+		                    rec.put(EVCombinedRec.COMPANIES, prepareMulti(rs.getString("src")));
+		                    rec.put(EVCombinedRec.INT_PATENT_CLASSIFICATION, prepareMulti(rs.getString("src")));
+		                }
+		
+		                if(rs.getString("sct") != null)
+		                {
+		                    rec.put(EVCombinedRec.COUNTRY, prepareMulti(rs.getString("sct"),Constants.CO));
+		                }
+		
+		
+		                if(rs.getString("scc") != null)
+		                {
+		                    rec.put(EVCombinedRec.DESIGNATED_STATES, prepareMulti(rs.getString("scc")));
+		                }
+		
+		                if (rs.getString("ebt") != null)
+		                {
+		                    rec.put(EVCombinedRec.BUSINESSTERMS, prepareMulti(rs.getString("ebt")));
+		                    rec.put(EVCombinedRec.CONTROLLED_TERMS, prepareMulti(rs.getString("ebt")));
+		                }
+		
+		                // Standard Industrial Code added to class codes field and facet
+		                if (rs.getString("cin") != null)
+		                {
+		                    rec.put(EVCombinedRec.CHEMICALTERMS, prepareMulti(rs.getString("cin")));
+		                    rec.put(EVCombinedRec.ECLA_CODES, prepareMulti(rs.getString("cin")));
+		                }
+		
+		                if (rs.getString("reg") != null)
+		                {
+		                    rec.put(EVCombinedRec.CASREGISTRYNUMBER, prepareMulti(rs.getString("reg")));
+		                }
+		
+		                if (rs.getString("cym") != null)
+		                {
+		                    rec.put(EVCombinedRec.CHEMICALACRONYMS, prepareMulti(rs.getString("cym")));
+		                }
+		
+		                // Standard Industrial Code added to patent kind field and facet
+		                if (rs.getString("sic") != null)
+		                {
+		                    rec.put(EVCombinedRec.PATENT_KIND, prepareMulti(rs.getString("sic")));
+		                }
+		
+		                // Industrial Sector Code added to patent kind field and facet
+		                if (rs.getString("gic") != null)
+		                {
+		                    rec.put(EVCombinedRec.CLASSIFICATION_CODE, prepareMulti(rs.getString("gic")));
+		                }
+		
+		                // add gid to facets
+		                if (rs.getString("gid") != null)
+		                {
+		                    rec.put(EVCombinedRec.INDUSTRIALSECTORS, prepareMulti(rs.getString("gid")));
+		                    rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareMulti(rs.getString("gid")));
+		                }
+		
+		
+		                if (rs.getString("atl") != null)
+		                {
+		                    rec.put(EVCombinedRec.TITLE, rs.getString("atl"));
+		                }
+		
+		                if (rs.getString("otl") != null)
+		                {
+		                    rec.put(EVCombinedRec.TRANSLATED_TITLE, rs.getString("otl"));
+		                }
+		
+		                if (rs.getString("avl") != null)
+		                {
+		                    rec.put(EVCombinedRec.AVAILABILITY, rs.getString("avl"));
+		                }
+		
+		                if (rs.getString("seq_num") != null)
+		                {
+		                    rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
+		                }
+		
+		                rec.put(EVCombinedRec.DOCID, rs.getString("M_ID"));
+		                rec.put(EVCombinedRec.DATABASE, "cbn");
+		                rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("LOAD_NUMBER"));
+		                rec.put(EVCombinedRec.DEDUPKEY,
+		                        getDedupKey(rec.get(EVCombinedRec.ISSN),
+		                                    rec.get(EVCombinedRec.CODEN),
+		                                    rs.getString("vol"),
+		                                    rs.getString("iss"),
+		                                    rs.getString("pag")));
+		
+		                rec.put(EVCombinedRec.VOLUME, getFirstNumber(rs.getString("vol")));
+		                rec.put(EVCombinedRec.ISSUE, getFirstNumber(rs.getString("iss")));
+		                rec.put(EVCombinedRec.STARTPAGE, getFirstNumber(rs.getString("pag")));
+		                rec.put(EVCombinedRec.ACCESSION_NUMBER, rs.getString("abn"));
+		
+		                if(rs.getString("pbr") != null)
+		                {
+		                    rec.put(EVCombinedRec.PUBLISHER_NAME, prepareMulti(rs.getString("pbr")));
+		                }
+		               // rec.put(EVCombinedRec.PUB_SORT, rs.getString("pbn"));
+		               // this.writer.writeRec(rec);
+		                /**********************************************************/
+		    	        //following code used to test kafka by hmo@2020/02/3
+		    	        //this.writer.writeRec(recArray,kafka);
+		    	        /**********************************************************/
+		                /*
+		    	        this.writer.writeRec(rec,kafka);
+		    	        if(i%5==0)
+		    	        {
+		    	        	//System.out.println("flushing at "+i);
+		    	        	kafka.flush();
+		    	        }
+		    	        */
+		                //use thread to send kafka message 
+		                MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
+			            thread = new Thread(sendMessage);
+			            thread.start();
+		            }
+		            else
+		            {
+		            	System.out.println(rs.getString("pyr")+" YEAR for record "+rs.getString("abn")+" is not good");
+		            }
 	            }
-            }
-            catch(Exception e)
-            {
-            	e.printStackTrace();
-            }
- 
+	            catch(IllegalStateException ei)
+	            {
+	            	System.out.println("reach here before thread is done");
+	            	kafka = new KafkaService();
+	            	this.writer.writeRec(rec,kafka);
+	            }
+	            catch(Exception e)
+	            {
+	            	System.out.println("why am I here");
+	            	e.printStackTrace();
+	            }
+	 
+	        }
         }
-        if(kafka!=null)
-       	try {
-       		 kafka.close();
-       	 }
-    	 catch (Exception e) {
-    		 e.printStackTrace();
-    	 }   		
+        finally
+        {
+	        if(kafka!=null)
+	        {
+		       	try 
+		       	{	       			       	
+		        	int k=0;
+		        	if(thread!=null)
+		        	{
+			        	while(thread.isAlive())
+			        	{
+			        		System.out.println("sleep "+k);
+			        		Thread.sleep(1000);
+			        	}
+		        	}
+		        	kafka.close();       		
+		       		
+		       	 }
+		    	 catch (Exception e) {
+		    		 e.printStackTrace();
+		    	 } 
+	        }
+	        System.out.println("Total "+i+" records");
+        }
     }
 
     private String[] prepareAuthor(String aString) throws Exception

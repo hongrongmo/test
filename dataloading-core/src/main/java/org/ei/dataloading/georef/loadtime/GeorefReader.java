@@ -539,7 +539,7 @@ public class GeorefReader {
 
             for (int i = 0; i < elementNames.length; i++) {
                 if (elementNames[i].equals("DOI")) {
-                    out.write("" + loadNumber + "|");
+                    out.write("" + loadNumber.substring(0,6) + "|"); //only output 6 digits loadnumber @2020/02/27
                 }
 
                 if (record.get(elementNames[i]) != null) {

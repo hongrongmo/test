@@ -32,6 +32,7 @@ import org.ei.dataloading.*;
 import org.ei.common.*;
 import org.ei.common.georef.*;
 import org.ei.util.kafka.*;
+import org.ei.dataloading.MessageSender;
 
 public class GeoRefCombiner
 extends Combiner
@@ -333,8 +334,8 @@ public void writeCombinedByYearHook(Connection con,
 public void writeRecs(ResultSet rs)
                         throws Exception
 {
-	KafkaService kafka=null;
-	//kafka = new KafkaService();
+	KafkaService kafka = new KafkaService();
+	Thread thread =null;
 	try
 	{
 	    DocumentView runtimeDocview = new CitationView();
@@ -801,7 +802,7 @@ public void writeRecs(ResultSet rs)
 			} // for
 	        i++;
 			recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
-			this.writer.writeRec(recArray);
+			//this.writer.writeRec(recArray);
 			 /**********************************************************/
 	        //following code used to test kafka by hmo@2020/01/30
 	        //this.writer.writeRec(recArray,kafka);
@@ -814,6 +815,10 @@ public void writeRecs(ResultSet rs)
 	        	kafka.flush();
 	        }
 	        */
+			//use thread to run kafka message
+			 MessageSender sendMessage= new MessageSender(recArray,kafka,this.writer);
+	         thread = new Thread(sendMessage);
+	         thread.start();
 	        
 		}
 		catch(Exception e)
@@ -830,7 +835,25 @@ public void writeRecs(ResultSet rs)
   finally
   {
 	  if(kafka!=null)
-      	kafka.close();
+      {
+	       	try 
+	       	{	       			       	
+	        	int k=0;
+	        	if(thread !=null)
+	        	{
+		        	while(thread.isAlive())
+		        	{
+		        		System.out.println("sleep "+k);
+		        		Thread.sleep(1000);
+		        	}
+	        	}
+	        	kafka.close();       		
+	       		
+	       	 }
+	    	 catch (Exception e) {
+	    		 e.printStackTrace();
+	    	 } 
+      }
   }
 }
 

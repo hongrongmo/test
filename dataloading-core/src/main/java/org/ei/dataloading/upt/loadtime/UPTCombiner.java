@@ -13,6 +13,7 @@ import org.ei.dataloading.CombinedXMLWriter;
 import org.ei.dataloading.CombinerTimestamp;
 import org.ei.dataloading.Combiner;
 import org.ei.dataloading.EVCombinedRec;
+import org.ei.dataloading.MessageSender;
 import org.ei.util.GUID;
 import org.ei.xml.Entity;
 import org.ei.data.upt.runtime.*;
@@ -51,7 +52,8 @@ public class UPTCombiner extends CombinerTimestamp {
     Hashtable hashtable = new Hashtable();
     private static final Database UPTDatabase = new UPTDatabase();
 	private String ipcdir;
-	DiskMap ipc;
+	//DiskMap ipc;
+	Hashtable ipc;
 
     //HH 01/28/2015 to use same ClassNodemanager without change
     static ApplicationProperties applicationProperties;
@@ -81,13 +83,16 @@ public class UPTCombiner extends CombinerTimestamp {
 
         try {
             nodeManager = ClassNodeManager.getInstance();
-			ipc = new DiskMap();
+			//ipc = new DiskMap();
+            //ipc = getAllDescriptionFromLookupIndex();
+            /*
 			this.ipcdir = applicationProperties.getProperty(ApplicationProperties.IPC_LUCENE_INDEX_DIR);
 			if (this.ipcdir == null) {
 					     throw new Exception("IPC directory for lucene index is NOT defined!");
         	}
 			System.out.println("Opening IPC index at: '" + this.ipcdir + "'");
 	    	ipc.openRead(this.ipcdir, false);
+	    	*/
         }
         catch (Exception e) {
             // TODO Auto-generated catch block
@@ -150,6 +155,7 @@ public class UPTCombiner extends CombinerTimestamp {
                     e.printStackTrace();
                 }
             }
+            /*
 			if(this.ipc!=null)
 			{
 				try{
@@ -159,6 +165,7 @@ public class UPTCombiner extends CombinerTimestamp {
 					e.printStackTrace();
 				}
 			}
+			*/
             if (nodeManager != null)
                 nodeManager.close();
         }
@@ -262,6 +269,7 @@ public class UPTCombiner extends CombinerTimestamp {
                     e.printStackTrace();
                 }
             }
+            /*
 			if(this.ipc!=null)
 			{
 				try{
@@ -271,6 +279,7 @@ public class UPTCombiner extends CombinerTimestamp {
 					e.printStackTrace();
 				}
 			}
+			*/
             if (nodeManager != null)
                 nodeManager.close();
         }
@@ -323,6 +332,7 @@ public class UPTCombiner extends CombinerTimestamp {
                     e.printStackTrace();
                 }
             }
+            /*
 			if(this.ipc!=null)
 			{
 				try{
@@ -332,6 +342,7 @@ public class UPTCombiner extends CombinerTimestamp {
 					e.printStackTrace();
 				}
 			}
+			*/
             if (nodeManager != null)
                 nodeManager.close();
         }
@@ -341,13 +352,16 @@ public class UPTCombiner extends CombinerTimestamp {
 
         int i = 0;
         String mid = null;
-        KafkaService kafka=null;
-        //kafka = new KafkaService();
+        Thread thread=null;
+        KafkaService kafka = new KafkaService();
         
-        try {
+        try 
+        {
 
-            while (rs.next()) {
-            	try {
+            while (rs.next()) 
+            {
+            	try 
+            	{
 	                ++i;
 	
 	                mid = rs.getString("m_id");
@@ -792,18 +806,16 @@ public class UPTCombiner extends CombinerTimestamp {
 	                    }
 	
 	                    //List arrCpcCodes = new ArrayList();
-	                  
-	                   
-	                    //arrCpcCodes.addAll(arrCpcCodes);
-	                   
+	                    //arrCpcCodes.addAll(arrCpcCodes);	                   
 	                    //String[] cpcValues = (String[]) arrCpcCodes.toArray(new String[1]);
 	                    //System.out.println("CPC1="+cpcValues[0]);
 	                    //cpcValues[0] = replaceNull(cpcValues[0]);
+	                    
 	                    if(cpcValues!=null)
 	                    {
 	                    	rec.put(EVCombinedRec.CPCCLASS, removeSpaces(cpcValues));
 	                    }
-	                    //System.out.println("SIZE="+cpcValues.length);
+	                    
 	                    String arrNames[] = null;
 	
 	                    arrNames = (String[]) allNames.toArray(new String[1]);
@@ -812,7 +824,7 @@ public class UPTCombiner extends CombinerTimestamp {
 	                    rec.put(EVCombinedRec.NOTES, arrNames);
 	                    //System.out.println("NOTES="+arrNames[0]);
 	
-	                    writer.writeRec(rec);
+	                    //writer.writeRec(rec);
 	                    
 	                    /**********************************************************/
 	        	        //following code used to test kafka by hmo@2020/01/30
@@ -826,6 +838,10 @@ public class UPTCombiner extends CombinerTimestamp {
 	        	        	kafka.flush();
 	        	        }
 	        	        */
+	                    //use thread to run kafka message
+	                    MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
+	       	         	thread = new Thread(sendMessage);
+	       	         	thread.start();
 	
 	                }
 				}
@@ -840,23 +856,40 @@ public class UPTCombiner extends CombinerTimestamp {
             ex.printStackTrace();
 
         }
-        finally {
-             if (rs != null) {
-                try {
-                    rs.close();
-                }
-                catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-             if(kafka!=null)
-            	 try {
-            		 kafka.close();
-            	 }
-             	 catch (Exception e) {
-             		 e.printStackTrace();
-             	 }
-        	}
+        finally 
+        {
+			if (rs != null) 
+			{
+			    try {
+			        rs.close();
+			    }
+			    catch (Exception e) {
+			        e.printStackTrace();
+			    }
+			}
+            if(kafka!=null)
+ 	        {
+ 		       	try 
+ 		       	{	       			       	
+ 		        	int k=0;
+ 		        	if(thread !=null)
+ 		        	{
+	 		        	while(thread.isAlive())
+	 		        	{
+	 		        		System.out.println("sleep "+k);
+	 		        		Thread.sleep(1000);
+	 		        	}
+ 		        	}
+ 		        	kafka.close();       		
+ 		       		
+ 		       	 }
+ 		    	 catch (Exception e) 
+ 		       	 {
+ 		    		 e.printStackTrace();
+ 		    	 } 
+ 	        }
+            System.out.println("Total "+i+" records");
+        }
     } //writeRecs
 
     public String[] eclaNormalize(String[] eclas) {
@@ -1039,11 +1072,17 @@ public class UPTCombiner extends CombinerTimestamp {
 
 	public synchronized String seekIPC(String code) throws Exception
 	{
-		String s = ipc.get(code);
+		//String s = ipc.get(code);
+		String s = nodeManager.seekIPC(code);
 		s = Entity.replaceLatinChars(s);
 		// System.out.println("Code="+code+" name= "+s);
+		/*
 		if (s == null && code!=null) {
 			s = getDescriptionFromLookupIndex(code);
+		}
+		*/
+		if (s == null && code!=null) {
+			s = (String)ipc.get(code);
 		}
 		return s;
     }
@@ -1100,6 +1139,60 @@ public class UPTCombiner extends CombinerTimestamp {
 	        }
 
 	        return description;
+    }
+	
+	public Hashtable getAllDescriptionFromLookupIndex() throws Exception
+	{
+	        Connection conn = null;
+	        Statement stmt = null;
+	        ResultSet rset = null;
+	        String description = null;
+	        String ipcCode = null;
+	        Hashtable ipcDescription = new Hashtable();
+	        String sql = "select replace(ipccode,'SLASH','') ipccode,description from CMB_IPC_LOOKUP";
+	        int rows = 0;
+
+	        try {
+
+	            conn = getConnection(url, driver, username, password);
+	            stmt = conn.createStatement();
+	            rset = stmt.executeQuery(sql);
+	            while (rset.next()) {
+	            	ipcCode = rset.getString("ipccode");
+	                description = rset.getString("description");
+	                ipcDescription.put(ipcCode, description);
+	            }
+
+	        } catch (Exception e) {
+	            e.printStackTrace();
+	            throw new Exception(e);
+	        } finally {
+	            if (rset != null) {
+	                try {
+	                    rset.close();
+	                } catch (Exception se) {
+	                    se.printStackTrace();
+	                }
+	            }
+
+	            if (stmt != null) {
+	                try {
+	                    stmt.close();
+	                } catch (Exception se) {
+	                    se.printStackTrace();
+	                }
+	            }
+
+	            if (conn != null) {
+	                try {
+	                    conn.close();
+	                } catch (Exception e1) {
+	                     e1.printStackTrace();
+	                }
+	            }
+	        }
+
+	        return ipcDescription;
     }
 
     public List getIPCClassName(String[] lstCodes) throws Exception {
@@ -1795,6 +1888,7 @@ public class UPTCombiner extends CombinerTimestamp {
         c.username=username;
         c.password=password;
         try {
+        	c.ipc = c.getAllDescriptionFromLookupIndex();
             if (timestamp==0 && (loadNumber > 3000 || loadNumber < 1000) && loadNumber>1)
             {
                 System.out.println("Processing loadnumber " + loadNumber + "...");

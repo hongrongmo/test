@@ -13,6 +13,7 @@ import org.ei.dataloading.*;
 import org.ei.util.StringUtil;
 import org.ei.common.*;
 import org.ei.util.kafka.*;
+import org.ei.dataloading.MessageSender;
 
 
 
@@ -252,154 +253,179 @@ public class EptCombiner extends Combiner {
         int i = 0;
         CVSTermBuilder termBuilder = new CVSTermBuilder();
 
-        KafkaService kafka=null;
-       //kafka = new KafkaService();
-        while (rs.next()) {
-            ++i;
-            QualifierFacet qfacet = new QualifierFacet();
-            EVCombinedRec rec = new EVCombinedRec();
-            if (validYear(rs.getString("py"))) {
-
-                String abs = replaceNull(getStringFromClob(rs.getClob("ab")));
-                String lt = replaceNull(getStringFromClob(rs.getClob("lt")));
-
-                String accessionNumber = rs.getString("dn");
-
-                rec.put(rec.DOCID, rs.getString("m_id"));
-                //rec.put(rec.PARENT_ID, rs.getString("seq_num"));
-                rec.put(rec.DEDUPKEY, accessionNumber);
-                rec.put(rec.ACCESSION_NUMBER, accessionNumber);
-                rec.put(rec.AUTHOR, prepareMulti(StringUtil.replaceNonAscii(replaceNull(rs.getString("pat_in")))));
-                rec.put(rec.DATABASE, "ept");
-                rec.put(rec.TITLE, StringUtil.replaceNonAscii(replaceNull(rs.getString("ti"))));
-
-                String derwentAccession = rs.getString("aj");
-
-                rec.put(rec.DERWENT_ACCESSION_NUMBER, derwentAccession);
-                String ll = replaceNull(rs.getString("ll"));
-
-                rec.put(rec.APPLICATION_NUMBER, prepareMulti(StringUtil.replaceNonAscii(getApplicationNumber(replaceNull(ll)))));
-                rec.put(rec.APPLICATION_COUNTRY, prepareMulti(StringUtil.replaceNonAscii(getApplicationCountry(replaceNull(ll)))));
-                rec.put(rec.PATENTAPPDATE, prepareMulti(StringUtil.replaceNonAscii(getApplicationDate(replaceNull(ll)))));
-
-                rec.put(rec.PATENT_NUMBER, formatPn(rs.getString("pn"), rs.getString("pc")));
-                rec.put(rec.PUB_YEAR, rs.getString("py"));
-                rec.put(rec.AUTHORITY_CODE, rs.getString("pc"));
-
-                //this field is used to generate ipc navigator for EPT database when ept is only one db in application
-                //when it is combined with some other db - use navigator - rec.INT_PATENT_CLASSIFICATION
-                rec.put(rec.PATENT_KIND, prepareMulti(termBuilder.removeBar(replaceNull(rs.getString("ic")))));
-
-                rec.put(rec.INT_PATENT_CLASSIFICATION, prepareMulti(termBuilder.removeBar(replaceNull(rs.getString("ic"))), Constants.IPC));
-
-                rec.put(rec.AUTHOR_AFFILIATION, prepareMulti(StringUtil.replaceNonAscii(replaceNull(rs.getString("cs")))));
-                rec.put(rec.CLASSIFICATION_CODE, prepareMulti(XMLWriterCommon.formatClassCodes(rs.getString("cc"))));
-                rec.put(rec.LANGUAGE, prepareMulti(rs.getString("la"), Constants.LA));
-                lt = StringUtil.replaceNonAscii(replaceNull(lt));
-
-                rec.put(rec.LINKED_TERMS, prepareMultiLinkedTerm(termBuilder.formatCT(lt)));
-                rec.put(rec.ABSTRACT, StringUtil.replaceNonAscii(replaceNull(abs)));
-
-                String ct = replaceNull(rs.getString("ct"));
-
-                String cv = termBuilder.getNonMajorTerms(ct);
-                String mh = termBuilder.getMajorTerms(ct);
-                StringBuffer cvsBuffer = new StringBuffer();
-
-                String expandedMajorTerms = termBuilder.expandMajorTerms(mh);
-                String expandedMH = termBuilder.getMajorTerms(expandedMajorTerms);
-                String expandedCV1 = termBuilder.expandNonMajorTerms(cv);
-                String expandedCV2 = termBuilder.getNonMajorTerms(expandedMajorTerms);
-
-                if (!expandedCV2.equals(""))
-                    cvsBuffer.append(expandedCV1).append(";").append(expandedCV2);
-                else
-                    cvsBuffer.append(expandedCV1);
-
-                String parsedCV = StringUtil.replaceNonAscii(termBuilder.formatCT(cvsBuffer.toString()));
-
-                rec.put(rec.CONTROLLED_TERMS, prepareMulti(termBuilder.getStandardTerms(parsedCV), Constants.CVS));
-
-                String parsedMH = StringUtil.replaceNonAscii(termBuilder.formatCT(expandedMH));
-
-                rec.put(rec.MAIN_HEADING, prepareMulti(StringUtil.replaceNonAscii(termBuilder.removeRoleTerms(parsedMH)), Constants.CVS));
-                //this field is added to generate navigators for Major terms
-                rec.put(rec.ECLA_CODES, prepareMulti(StringUtil.replaceNonAscii(termBuilder.removeRoleTerms(parsedMH)), Constants.CVS));
-
-                String norole = StringUtil.replaceNonAscii(replaceNull(termBuilder.getNoRoleTerms(parsedCV)));
-
-                qfacet.setNorole(norole);
-                rec.put(rec.NOROLE_TERMS, prepareMulti(norole));
-
-                String reagent = StringUtil.replaceNonAscii(replaceNull(termBuilder.getReagentTerms(parsedCV)));
-
-                qfacet.setReagent(reagent);
-                rec.put(rec.REAGENT_TERMS, prepareMulti(reagent));
-
-                String product = StringUtil.replaceNonAscii(replaceNull(termBuilder.getProductTerms(parsedCV)));
-                qfacet.setProduct(product);
-                rec.put(rec.PRODUCT_TERMS, prepareMulti(product));
-
-                String mnorole =  StringUtil.replaceNonAscii(replaceNull(termBuilder.getMajorNoRoleTerms(parsedMH)));
-                qfacet.setNorole(mnorole);
-                rec.put(rec.MAJORNOROLE_TERMS, prepareMulti(mnorole));
-
-                String mreagent =  StringUtil.replaceNonAscii(replaceNull(termBuilder.getMajorReagentTerms(parsedMH)));
-                qfacet.setReagent(mreagent);
-                rec.put(rec.MAJORREAGENT_TERMS, prepareMulti(mreagent));
-
-                String mproduct =  StringUtil.replaceNonAscii(replaceNull(termBuilder.getMajorProductTerms(parsedMH)));
-                qfacet.setProduct(mproduct);
-                rec.put(rec.MAJORPRODUCT_TERMS, prepareMulti(mproduct));
-
-               // rec.put(rec.UNCONTROLLED_TERMS, prepareMulti(qfacet.getValue()));
-               //11/29/07 TS by new specs q facet mapped to uspto code navigator field
-                rec.put(rec.USPTOCODE, prepareMulti(qfacet.getValue()));
-
-
-                // added Free language field
-                rec.put(rec.UNCONTROLLED_TERMS, prepareMulti(termBuilder.formatCT(StringUtil.replaceNonAscii(replaceNull(rs.getString("ut"))))));
-                rec.put(rec.CASREGISTRYNUMBER, prepareMulti(rs.getString("crn")));
-
-                rec.put(rec.ENTRY_YEAR, rs.getString("ey"));
-
-                rec.put(rec.PRIORITY_NUMBER, prepareMulti(StringUtil.replaceNonAscii(rs.getString("ap"))));
-                rec.put(rec.PRIORITY_COUNTRY, prepareMulti(StringUtil.replaceNonAscii(rs.getString("ac"))));
-                rec.put(rec.PRIORITY_DATE, prepareMulti(StringUtil.replaceNonAscii(rs.getString("ad"))));
-
-                rec.put(rec.LOAD_NUMBER, rs.getString("load_number"));
-                // ad us_patents and us_apps to doctypes - only for us - make it multyfields
-                // and remove it if not usp combines display
-
-                rec.put(rec.DOCTYPE, prepareMulti(formatDt(rs.getString("dt"),
-                                                           rs.getString("pc"),
-                                                           rs.getString("pn"))));
-
-                rec.put(rec.DESIGNATED_STATES, prepareMulti(rs.getString("ds")));
-
-                this.writer.writeRec(rec);
-                /**********************************************************/
-    	        //following code used to test kafka by hmo@2020/01/30
-    	        //this.writer.writeRec(recArray,kafka);
-    	        /*********************************************************/
-                /*
-    	        writer.writeRec(rec,kafka);
-    	        if(i%5==0)
-    	        {
-    	        	//System.out.println("flushing at "+i);
-    	        	kafka.flush();
-    	        }
-    	        */
-            }
-
+        KafkaService kafka = new KafkaService();
+        Thread thread = null;
+        try
+        {
+	        while (rs.next()) {
+	            ++i;
+	            QualifierFacet qfacet = new QualifierFacet();
+	            EVCombinedRec rec = new EVCombinedRec();
+	            if (validYear(rs.getString("py"))) {
+	
+	                String abs = replaceNull(getStringFromClob(rs.getClob("ab")));
+	                String lt = replaceNull(getStringFromClob(rs.getClob("lt")));
+	
+	                String accessionNumber = rs.getString("dn");
+	
+	                rec.put(rec.DOCID, rs.getString("m_id"));
+	                //rec.put(rec.PARENT_ID, rs.getString("seq_num"));
+	                rec.put(rec.DEDUPKEY, accessionNumber);
+	                rec.put(rec.ACCESSION_NUMBER, accessionNumber);
+	                rec.put(rec.AUTHOR, prepareMulti(StringUtil.replaceNonAscii(replaceNull(rs.getString("pat_in")))));
+	                rec.put(rec.DATABASE, "ept");
+	                rec.put(rec.TITLE, StringUtil.replaceNonAscii(replaceNull(rs.getString("ti"))));
+	
+	                String derwentAccession = rs.getString("aj");
+	
+	                rec.put(rec.DERWENT_ACCESSION_NUMBER, derwentAccession);
+	                String ll = replaceNull(rs.getString("ll"));
+	
+	                rec.put(rec.APPLICATION_NUMBER, prepareMulti(StringUtil.replaceNonAscii(getApplicationNumber(replaceNull(ll)))));
+	                rec.put(rec.APPLICATION_COUNTRY, prepareMulti(StringUtil.replaceNonAscii(getApplicationCountry(replaceNull(ll)))));
+	                rec.put(rec.PATENTAPPDATE, prepareMulti(StringUtil.replaceNonAscii(getApplicationDate(replaceNull(ll)))));
+	
+	                rec.put(rec.PATENT_NUMBER, formatPn(rs.getString("pn"), rs.getString("pc")));
+	                rec.put(rec.PUB_YEAR, rs.getString("py"));
+	                rec.put(rec.AUTHORITY_CODE, rs.getString("pc"));
+	
+	                //this field is used to generate ipc navigator for EPT database when ept is only one db in application
+	                //when it is combined with some other db - use navigator - rec.INT_PATENT_CLASSIFICATION
+	                rec.put(rec.PATENT_KIND, prepareMulti(termBuilder.removeBar(replaceNull(rs.getString("ic")))));
+	
+	                rec.put(rec.INT_PATENT_CLASSIFICATION, prepareMulti(termBuilder.removeBar(replaceNull(rs.getString("ic"))), Constants.IPC));
+	
+	                rec.put(rec.AUTHOR_AFFILIATION, prepareMulti(StringUtil.replaceNonAscii(replaceNull(rs.getString("cs")))));
+	                rec.put(rec.CLASSIFICATION_CODE, prepareMulti(XMLWriterCommon.formatClassCodes(rs.getString("cc"))));
+	                rec.put(rec.LANGUAGE, prepareMulti(rs.getString("la"), Constants.LA));
+	                lt = StringUtil.replaceNonAscii(replaceNull(lt));
+	
+	                rec.put(rec.LINKED_TERMS, prepareMultiLinkedTerm(termBuilder.formatCT(lt)));
+	                rec.put(rec.ABSTRACT, StringUtil.replaceNonAscii(replaceNull(abs)));
+	
+	                String ct = replaceNull(rs.getString("ct"));
+	
+	                String cv = termBuilder.getNonMajorTerms(ct);
+	                String mh = termBuilder.getMajorTerms(ct);
+	                StringBuffer cvsBuffer = new StringBuffer();
+	
+	                String expandedMajorTerms = termBuilder.expandMajorTerms(mh);
+	                String expandedMH = termBuilder.getMajorTerms(expandedMajorTerms);
+	                String expandedCV1 = termBuilder.expandNonMajorTerms(cv);
+	                String expandedCV2 = termBuilder.getNonMajorTerms(expandedMajorTerms);
+	
+	                if (!expandedCV2.equals(""))
+	                    cvsBuffer.append(expandedCV1).append(";").append(expandedCV2);
+	                else
+	                    cvsBuffer.append(expandedCV1);
+	
+	                String parsedCV = StringUtil.replaceNonAscii(termBuilder.formatCT(cvsBuffer.toString()));
+	
+	                rec.put(rec.CONTROLLED_TERMS, prepareMulti(termBuilder.getStandardTerms(parsedCV), Constants.CVS));
+	
+	                String parsedMH = StringUtil.replaceNonAscii(termBuilder.formatCT(expandedMH));
+	
+	                rec.put(rec.MAIN_HEADING, prepareMulti(StringUtil.replaceNonAscii(termBuilder.removeRoleTerms(parsedMH)), Constants.CVS));
+	                //this field is added to generate navigators for Major terms
+	                rec.put(rec.ECLA_CODES, prepareMulti(StringUtil.replaceNonAscii(termBuilder.removeRoleTerms(parsedMH)), Constants.CVS));
+	
+	                String norole = StringUtil.replaceNonAscii(replaceNull(termBuilder.getNoRoleTerms(parsedCV)));
+	
+	                qfacet.setNorole(norole);
+	                rec.put(rec.NOROLE_TERMS, prepareMulti(norole));
+	
+	                String reagent = StringUtil.replaceNonAscii(replaceNull(termBuilder.getReagentTerms(parsedCV)));
+	
+	                qfacet.setReagent(reagent);
+	                rec.put(rec.REAGENT_TERMS, prepareMulti(reagent));
+	
+	                String product = StringUtil.replaceNonAscii(replaceNull(termBuilder.getProductTerms(parsedCV)));
+	                qfacet.setProduct(product);
+	                rec.put(rec.PRODUCT_TERMS, prepareMulti(product));
+	
+	                String mnorole =  StringUtil.replaceNonAscii(replaceNull(termBuilder.getMajorNoRoleTerms(parsedMH)));
+	                qfacet.setNorole(mnorole);
+	                rec.put(rec.MAJORNOROLE_TERMS, prepareMulti(mnorole));
+	
+	                String mreagent =  StringUtil.replaceNonAscii(replaceNull(termBuilder.getMajorReagentTerms(parsedMH)));
+	                qfacet.setReagent(mreagent);
+	                rec.put(rec.MAJORREAGENT_TERMS, prepareMulti(mreagent));
+	
+	                String mproduct =  StringUtil.replaceNonAscii(replaceNull(termBuilder.getMajorProductTerms(parsedMH)));
+	                qfacet.setProduct(mproduct);
+	                rec.put(rec.MAJORPRODUCT_TERMS, prepareMulti(mproduct));
+	
+	               // rec.put(rec.UNCONTROLLED_TERMS, prepareMulti(qfacet.getValue()));
+	               //11/29/07 TS by new specs q facet mapped to uspto code navigator field
+	                rec.put(rec.USPTOCODE, prepareMulti(qfacet.getValue()));
+	
+	
+	                // added Free language field
+	                rec.put(rec.UNCONTROLLED_TERMS, prepareMulti(termBuilder.formatCT(StringUtil.replaceNonAscii(replaceNull(rs.getString("ut"))))));
+	                rec.put(rec.CASREGISTRYNUMBER, prepareMulti(rs.getString("crn")));
+	
+	                rec.put(rec.ENTRY_YEAR, rs.getString("ey"));
+	
+	                rec.put(rec.PRIORITY_NUMBER, prepareMulti(StringUtil.replaceNonAscii(rs.getString("ap"))));
+	                rec.put(rec.PRIORITY_COUNTRY, prepareMulti(StringUtil.replaceNonAscii(rs.getString("ac"))));
+	                rec.put(rec.PRIORITY_DATE, prepareMulti(StringUtil.replaceNonAscii(rs.getString("ad"))));
+	
+	                rec.put(rec.LOAD_NUMBER, rs.getString("load_number"));
+	                // ad us_patents and us_apps to doctypes - only for us - make it multyfields
+	                // and remove it if not usp combines display
+	
+	                rec.put(rec.DOCTYPE, prepareMulti(formatDt(rs.getString("dt"),
+	                                                           rs.getString("pc"),
+	                                                           rs.getString("pn"))));
+	
+	                rec.put(rec.DESIGNATED_STATES, prepareMulti(rs.getString("ds")));
+	
+	                //this.writer.writeRec(rec);
+	                /**********************************************************/
+	    	        //following code used to test kafka by hmo@2020/01/30
+	    	        //this.writer.writeRec(recArray,kafka);
+	    	        /*********************************************************/
+	                /*
+	    	        writer.writeRec(rec,kafka);
+	    	        if(i%5==0)
+	    	        {
+	    	        	//System.out.println("flushing at "+i);
+	    	        	kafka.flush();
+	    	        }
+	    	        */
+	                //use thread to send kafka message
+	                MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
+		            thread = new Thread(sendMessage, "Thread 1");
+		            thread.start();
+	            }
+	
+	        }
         }
-        if(kafka!=null)
-       	 try {
-       		 kafka.close();
-       	 }
-    	 catch (Exception e) {
-    		 e.printStackTrace();
-    	 }
+        finally
+        {
+       
+        	if(kafka!=null)
+  	        {
+  		       	try 
+  		       	{	       			       	
+  		        	int k=0;
+  		        	if(thread !=null)
+  		        	{
+	  		        	while(thread.isAlive())
+	  		        	{
+	  		        		System.out.println("sleep "+k);
+	  		        		Thread.sleep(1000);
+	  		        	}
+  		        	}
+  		        	kafka.close();       		
+  		       		
+  		       	 }
+  		    	 catch (Exception e) {
+  		    		 e.printStackTrace();
+  		    	 } 
+  	        }
+        	System.out.println("Total "+i+" records");
+        }
    		
     }
 

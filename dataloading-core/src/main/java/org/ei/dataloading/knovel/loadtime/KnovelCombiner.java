@@ -21,6 +21,7 @@ import org.ei.common.*;
 import org.ei.util.GUID;
 import org.ei.util.StringUtil;
 import org.ei.util.kafka.*;
+import org.ei.dataloading.MessageSender;
 
 
 	public class KnovelCombiner 
@@ -230,209 +231,225 @@ import org.ei.util.kafka.*;
 	        EVCombinedRec[] recArray = null;
 	      
 	        String accessNumber = "";
-	        KafkaService kafka = null;
-	        //kafka = new KafkaService();
-	        while (rs.next())
+	        Thread thread = null;
+	        KafkaService kafka = new KafkaService();
+	        try
 	        {
-	          ++i;
-	          String firstGUID = "";	      
-
-	          Vector recVector = new Vector();
-	          try
-	          {
-	                EVCombinedRec rec = new EVCombinedRec();
-	                accessNumber = rs.getString("ACCESSNUMBER");
-	                String parentID = rs.getString("PARENTID");
-	                if (rs.getString("PUBLISH_DATE")!=null)
-	                {		                		                    
-	                    //M_ID
-	                    rec.put(EVCombinedRec.DOCID, rs.getString("M_ID"));
-	                    
-	                    //DATABASE
-	                    rec.put(EVCombinedRec.DATABASE, rs.getString("DATABASE"));
-	                    
-	                    //ACCESSNUMBER
-	                    
-	                    rec.put(EVCombinedRec.ACCESSION_NUMBER, rs.getString("ACCESSNUMBER"));
-	                    
-	                    
-	                    //DOC_TYPE
-	                    if(rs.getString("DOC_TYPE")!=null)
-	                    {
-	                    	//added for book project by hmo at 5/17/2017
-	                    	String docType = rs.getString("DOC_TYPE");
-	                    	if(docType.equalsIgnoreCase("book"))
-	                    	{
-	                    		docType = "bk";
-	                    	}
-	                    	else if(docType.equalsIgnoreCase("chapter"))
-	                    	{
-	                    		docType = "ch";
-	                    	}
-	                    	rec.put(EVCombinedRec.DOCTYPE,docType);
-	                    }
-	                    
-	                    //DOI
-	                    if(rs.getString("DOI")!=null)
-	                    {
-	                        rec.put(EVCombinedRec.DOI,rs.getString("DOI"));
-	                    }
-	                    
-	                    //PII
-	                    if(rs.getString("PII") != null)
-	                    {
-	                        rec.put(EVCombinedRec.PII,rs.getString("PII"));
-	                    }
-
-	                    //PUI
-	                    if(rs.getString("OAI") != null)
-	                    {
-	                        rec.put(EVCombinedRec.PUI,rs.getString("OAI"));
-	                    }
-	                    
-	                    //ISBN	
-	                    String[] isbn = new String[2];
-	                    isbn[0] = rs.getString("ISBN");
-	                    isbn[1] = rs.getString("EISBN");
-	                    if (rs.getString("ISBN")!= null)
-	                    {
-	                        rec.put(EVCombinedRec.ISBN, isbn);
-	                    }
-	                    
-	                    //LANGUAGE
-	                    String la = rs.getString("LANGUAGE");
-	                    if (la != null)
-	                    {
-	                        rec.put(EVCombinedRec.LANGUAGE,Language.getIso639Language(la));
-	                    }
-	                    
-	                    //TITLE
-	                    if (rs.getString("TITLE") != null)
-	                    {
-	                       rec.put(EVCombinedRec.TITLE, rs.getString("TITLE"));
-	                    }
-	                    
-	                    //AUTHOR
-	                    if(rs.getString("AUTHOR") != null && rs.getString("AUTHOR").trim().length()>0)
-	                    {
-	                        String authorString = rs.getString("AUTHOR");	             	                       
-	                        rec.put(EVCombinedRec.AUTHOR, prepareAuthor(authorString));
-	                    }
-	                    
-	                    //AFFILIATION
-                        String affiliation = null;
-                        if (rs.getString("AFFILIATION") != null && rs.getString("AFFILIATION").trim().length()>0)
-                        {
-                            affiliation = rs.getString("AFFILIATION");                            
-                            rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareAuthor(affiliation));
-                        }	                   
-	                  
-	                    //PUBLISHER
-                        if (rs.getString("PUBLISHER") != null)
-	                    {
-	                        rec.put(EVCombinedRec.PUBLISHER_NAME, rs.getString("PUBLISHER"));
-	                    }
-                        
-                        //PARENTID
-                        if (rs.getString("PARENTID") != null)
-	                    {
-                        	parentID = rs.getString("PARENTID");
-                        	//parentID = parentID.substring(parentID.lastIndexOf(":")+1);
-                        	//System.out.println("parentID="+parentID);
-	                        rec.put(EVCombinedRec.PARENT_ID, parentID);
-	                    }
-                        
-	                    //JOURNAL_NAME
-	                    if (rs.getString("JOURNAL_NAME") != null)
-	                    {
-	                    	//System.out.println("JOURNAL_NAME="+rs.getString("JOURNAL_NAME"));
-	                        rec.put(EVCombinedRec.SERIAL_TITLE, rs.getString("JOURNAL_NAME"));
-	                    }
-
-	                    //JOURNAL_SUBNAME
-	                    if (rs.getString("JOURNAL_SUBNAME") != null)
-	                    {
-	                    	//System.out.println("JOURNAL_SUBNAME="+rs.getString("JOURNAL_SUBNAME"));
-	                        rec.put(EVCombinedRec.SECONDARY_SRC_TITLE, rs.getString("JOURNAL_SUBNAME"));
-	                    }
-	                    
-	                    //VOLUME
-	                    rec.put(EVCombinedRec.VOLUME, rs.getString("VOLUME"));
-	                    //System.out.println("VOLUME= "+rs.getString("VOLUME"));
-	                 
-	                    //ISSUE
-	                    rec.put(EVCombinedRec.ISSUE, rs.getString("ISSUE"));
-	                    //System.out.println("ISSUE= "+rs.getString("ISSUE"));
-	                    
-	                    //ABSTRACT
-	                    String abString = getStringFromClob(rs.getClob("ABSTRACT"));
-	                    if (abString != null)
-	                    {
-	                        rec.put(EVCombinedRec.ABSTRACT, abString);
-	                    }
-
-	                    //SUBJECT
-	                    if (rs.getString("SUBJECT") != null)
-	                    {
-	                        rec.put(EVCombinedRec.CONTROLLED_TERMS, prepareSubject(rs.getString("SUBJECT")));
-	                    }
-	                    
-	                    //TABLE_OF_CONTENT
-	                    if (rs.getString("TABLE_OF_CONTENT") != null)
-	                    {
-	                        rec.put(EVCombinedRec.TABLE_OF_CONTENT, prepareTableOfContent(getStringFromClob(rs.getClob("TABLE_OF_CONTENT"))));
-	                    }
-	                   
-	                    rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("LOADNUMBER"));
-
-	                    if (rs.getString("PUBLISH_DATE") != null)
-	                    {
-	                        rec.put(EVCombinedRec.PUB_YEAR, rs.getString("PUBLISH_DATE"));
-	                    }
-	                   	                  
-	                    if(rs.getString("COPYRIGHT") != null)
-	                    {
-	                        rec.put(EVCombinedRec.COPYRIGHT,rs.getString("COPYRIGHT"));
-	                    }
-	                    recVector.add(rec);	                  	                 	                     	                	                
-	            }
-	            else
-	            {
-	            	System.out.println("Problem with publication_date, accessnumber="+accessNumber);
-	            }
-	               
-	            
-	                
-	            recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
-	            this.writer.writeRec(recArray);
-	            /**********************************************************/
-    	        //following code used to test kafka by hmo@2020/02/3
-    	        //this.writer.writeRec(recArray,kafka);
-    	        /**********************************************************/
-	            /*
-    	        this.writer.writeRec(recArray,kafka);
-    	        if(i%5==0)
-    	        {
-    	        	//System.out.println("flushing at "+i);
-    	        	kafka.flush();
-    	        }
-    	        */
-    	        
-	          }
-	        
-	         catch(Exception e)
-	         {
-	            System.out.println("**** ERROR Found on access number "+accessNumber+" *****");
-	            e.printStackTrace();
-	         }
+		        while (rs.next())
+		        {
+		          ++i;
+		          String firstGUID = "";	      
+	
+		          Vector recVector = new Vector();
+		          try
+		          {
+		                EVCombinedRec rec = new EVCombinedRec();
+		                accessNumber = rs.getString("ACCESSNUMBER");
+		                String parentID = rs.getString("PARENTID");
+		                if (rs.getString("PUBLISH_DATE")!=null)
+		                {		                		                    
+		                    //M_ID
+		                    rec.put(EVCombinedRec.DOCID, rs.getString("M_ID"));
+		                    
+		                    //DATABASE
+		                    rec.put(EVCombinedRec.DATABASE, rs.getString("DATABASE"));
+		                    
+		                    //ACCESSNUMBER
+		                    
+		                    rec.put(EVCombinedRec.ACCESSION_NUMBER, rs.getString("ACCESSNUMBER"));
+		                    
+		                    
+		                    //DOC_TYPE
+		                    if(rs.getString("DOC_TYPE")!=null)
+		                    {
+		                    	//added for book project by hmo at 5/17/2017
+		                    	String docType = rs.getString("DOC_TYPE");
+		                    	if(docType.equalsIgnoreCase("book"))
+		                    	{
+		                    		docType = "bk";
+		                    	}
+		                    	else if(docType.equalsIgnoreCase("chapter"))
+		                    	{
+		                    		docType = "ch";
+		                    	}
+		                    	rec.put(EVCombinedRec.DOCTYPE,docType);
+		                    }
+		                    
+		                    //DOI
+		                    if(rs.getString("DOI")!=null)
+		                    {
+		                        rec.put(EVCombinedRec.DOI,rs.getString("DOI"));
+		                    }
+		                    
+		                    //PII
+		                    if(rs.getString("PII") != null)
+		                    {
+		                        rec.put(EVCombinedRec.PII,rs.getString("PII"));
+		                    }
+	
+		                    //PUI
+		                    if(rs.getString("OAI") != null)
+		                    {
+		                        rec.put(EVCombinedRec.PUI,rs.getString("OAI"));
+		                    }
+		                    
+		                    //ISBN	
+		                    String[] isbn = new String[2];
+		                    isbn[0] = rs.getString("ISBN");
+		                    isbn[1] = rs.getString("EISBN");
+		                    if (rs.getString("ISBN")!= null)
+		                    {
+		                        rec.put(EVCombinedRec.ISBN, isbn);
+		                    }
+		                    
+		                    //LANGUAGE
+		                    String la = rs.getString("LANGUAGE");
+		                    if (la != null)
+		                    {
+		                        rec.put(EVCombinedRec.LANGUAGE,Language.getIso639Language(la));
+		                    }
+		                    
+		                    //TITLE
+		                    if (rs.getString("TITLE") != null)
+		                    {
+		                       rec.put(EVCombinedRec.TITLE, rs.getString("TITLE"));
+		                    }
+		                    
+		                    //AUTHOR
+		                    if(rs.getString("AUTHOR") != null && rs.getString("AUTHOR").trim().length()>0)
+		                    {
+		                        String authorString = rs.getString("AUTHOR");	             	                       
+		                        rec.put(EVCombinedRec.AUTHOR, prepareAuthor(authorString));
+		                    }
+		                    
+		                    //AFFILIATION
+	                        String affiliation = null;
+	                        if (rs.getString("AFFILIATION") != null && rs.getString("AFFILIATION").trim().length()>0)
+	                        {
+	                            affiliation = rs.getString("AFFILIATION");                            
+	                            rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareAuthor(affiliation));
+	                        }	                   
+		                  
+		                    //PUBLISHER
+	                        if (rs.getString("PUBLISHER") != null)
+		                    {
+		                        rec.put(EVCombinedRec.PUBLISHER_NAME, rs.getString("PUBLISHER"));
+		                    }
+	                        
+	                        //PARENTID
+	                        if (rs.getString("PARENTID") != null)
+		                    {
+	                        	parentID = rs.getString("PARENTID");
+	                        	//parentID = parentID.substring(parentID.lastIndexOf(":")+1);
+	                        	//System.out.println("parentID="+parentID);
+		                        rec.put(EVCombinedRec.PARENT_ID, parentID);
+		                    }
+	                        
+		                    //JOURNAL_NAME
+		                    if (rs.getString("JOURNAL_NAME") != null)
+		                    {
+		                    	//System.out.println("JOURNAL_NAME="+rs.getString("JOURNAL_NAME"));
+		                        rec.put(EVCombinedRec.SERIAL_TITLE, rs.getString("JOURNAL_NAME"));
+		                    }
+	
+		                    //JOURNAL_SUBNAME
+		                    if (rs.getString("JOURNAL_SUBNAME") != null)
+		                    {
+		                    	//System.out.println("JOURNAL_SUBNAME="+rs.getString("JOURNAL_SUBNAME"));
+		                        rec.put(EVCombinedRec.SECONDARY_SRC_TITLE, rs.getString("JOURNAL_SUBNAME"));
+		                    }
+		                    
+		                    //VOLUME
+		                    rec.put(EVCombinedRec.VOLUME, rs.getString("VOLUME"));
+		                    //System.out.println("VOLUME= "+rs.getString("VOLUME"));
+		                 
+		                    //ISSUE
+		                    rec.put(EVCombinedRec.ISSUE, rs.getString("ISSUE"));
+		                    //System.out.println("ISSUE= "+rs.getString("ISSUE"));
+		                    
+		                    //ABSTRACT
+		                    String abString = getStringFromClob(rs.getClob("ABSTRACT"));
+		                    if (abString != null)
+		                    {
+		                        rec.put(EVCombinedRec.ABSTRACT, abString);
+		                    }
+	
+		                    //SUBJECT
+		                    if (rs.getString("SUBJECT") != null)
+		                    {
+		                        rec.put(EVCombinedRec.CONTROLLED_TERMS, prepareSubject(rs.getString("SUBJECT")));
+		                    }
+		                    
+		                    //TABLE_OF_CONTENT
+		                    if (rs.getString("TABLE_OF_CONTENT") != null)
+		                    {
+		                        rec.put(EVCombinedRec.TABLE_OF_CONTENT, prepareTableOfContent(getStringFromClob(rs.getClob("TABLE_OF_CONTENT"))));
+		                    }
+		                   
+		                    rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("LOADNUMBER"));
+	
+		                    if (rs.getString("PUBLISH_DATE") != null)
+		                    {
+		                        rec.put(EVCombinedRec.PUB_YEAR, rs.getString("PUBLISH_DATE"));
+		                    }
+		                   	                  
+		                    if(rs.getString("COPYRIGHT") != null)
+		                    {
+		                        rec.put(EVCombinedRec.COPYRIGHT,rs.getString("COPYRIGHT"));
+		                    }
+		                    recVector.add(rec);	                  	                 	                     	                	                
+		            }
+		            else
+		            {
+		            	System.out.println("Problem with publication_date, accessnumber="+accessNumber);
+		            }
+		               
+		            
+		                
+		            recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
+		            //this.writer.writeRec(recArray);
+		            /**********************************************************/
+	    	        //following code used to test kafka by hmo@2020/02/3
+	    	        //this.writer.writeRec(recArray,kafka);
+	    	        /**********************************************************/
+		            /*
+	    	        this.writer.writeRec(recArray,kafka);
+	    	        if(i%5==0)
+	    	        {
+	    	        	//System.out.println("flushing at "+i);
+	    	        	kafka.flush();
+	    	        }
+	    	        */
+		            //use thread to send kafka message
+		            MessageSender sendMessage= new MessageSender(recArray,kafka,this.writer);
+			        thread = new Thread(sendMessage);
+			        thread.start();
+	    	        
+		          }
+		        
+		         catch(Exception e)
+		         {
+		            System.out.println("**** ERROR Found on access number "+accessNumber+" *****");
+		            e.printStackTrace();
+		         }
+		        }
 	        }
-	        if(kafka!=null)
-           	try {
-           		 kafka.close();
-           	 }
-        	 catch (Exception e) {
-        		 e.printStackTrace();
-        	 }      		
+	        finally
+	        {
+	        	if(kafka!=null)
+	 	        { 
+	 	        	int k=0;
+	 	        	if(thread !=null)
+	 	        	{
+	 		        	while(thread.isAlive())
+	 		        	{
+	 		        		System.out.println("sleep "+k);
+	 		        		Thread.sleep(1000);
+	 		        	}
+	 	        	}
+	 	        	kafka.close();
+	 	        } 
+	        }
 	    }
 	    
 	    public String[] prepareAuthor(String bdAuthor)
