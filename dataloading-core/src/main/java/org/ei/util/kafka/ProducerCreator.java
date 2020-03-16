@@ -16,7 +16,7 @@ public class ProducerCreator {
         public static KafkaProducer<String, String> createProducer(String kafka_brokers) {
             // props = new Properties();
         	String kafkaBroker=null;
-        	try (InputStream input = new FileInputStream("config.properties")) {
+        	try (InputStream input = new FileInputStream("/data/loading/shared/config.properties")) {
 
                 Properties prop = new Properties();
 
@@ -42,8 +42,8 @@ public class ProducerCreator {
             props.put(ProducerConfig.COMPRESSION_TYPE_CONFIG, "snappy");
             props.put(ProducerConfig.LINGER_MS_CONFIG, "20");
             props.put(ProducerConfig.BATCH_SIZE_CONFIG, Integer.toString(32*1024));
-            props.put("max.block.ms", 10000);
-            props.put("request.timeout.ms", 10000);
+            //props.put("max.block.ms", 30000);
+            //props.put("request.timeout.ms", 30000);
             //return new KafkaProducer<Long,String>(props);
             return new KafkaProducer<String,String>(props);
         }

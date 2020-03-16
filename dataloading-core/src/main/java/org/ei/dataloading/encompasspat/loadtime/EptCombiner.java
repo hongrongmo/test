@@ -252,15 +252,21 @@ public class EptCombiner extends Combiner {
 
         int i = 0;
         CVSTermBuilder termBuilder = new CVSTermBuilder();
-
         KafkaService kafka = new KafkaService();
+        long processTime = System.currentTimeMillis();
+    	int totalCount = rs.getMetaData().getColumnCount();   
         Thread thread = null;
+        
         try
         {
-	        while (rs.next()) {
+	        while (rs.next()) 
+	        {
 	            ++i;
-	            QualifierFacet qfacet = new QualifierFacet();
 	            EVCombinedRec rec = new EVCombinedRec();
+	            String processInfo = processTime+"-"+totalCount+'-'+i+"-ept-"+rs.getString("LOAD_NUMBER")+"-NO_UPDATENUMBER";
+            	rec.put(EVCombinedRec.PROCESS_INFO, processInfo);
+	            QualifierFacet qfacet = new QualifierFacet();
+	            
 	            if (validYear(rs.getString("py"))) {
 	
 	                String abs = replaceNull(getStringFromClob(rs.getClob("ab")));
@@ -380,30 +386,26 @@ public class EptCombiner extends Combiner {
 	
 	                rec.put(rec.DESIGNATED_STATES, prepareMulti(rs.getString("ds")));
 	
-	                //this.writer.writeRec(rec);
+	                this.writer.writeRec(rec);
 	                /**********************************************************/
 	    	        //following code used to test kafka by hmo@2020/01/30
 	    	        //this.writer.writeRec(recArray,kafka);
 	    	        /*********************************************************/
 	                /*
-	    	        writer.writeRec(rec,kafka);
-	    	        if(i%5==0)
-	    	        {
-	    	        	//System.out.println("flushing at "+i);
-	    	        	kafka.flush();
-	    	        }
-	    	        */
+	    	        //writer.writeRec(rec,kafka);
+	    	        
 	                //use thread to send kafka message
 	                MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
 		            thread = new Thread(sendMessage, "Thread 1");
 		            thread.start();
+		            */
 	            }
 	
 	        }
         }
         finally
         {
-       
+        	System.out.println("Total "+i+" records");
         	if(kafka!=null)
   	        {
   		       	try 

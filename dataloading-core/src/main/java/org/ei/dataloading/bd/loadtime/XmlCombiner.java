@@ -14,6 +14,7 @@ import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
 import org.ei.dataloading.bd.loadtime.BdNumericalIndexMapping;
 import org.ei.util.kafka.*;
+import org.json.simple.JSONObject;
 import org.ei.dataloading.*;
 //import org.ei.dataloading.bd.loadtime.*;
 import org.ei.dataloading.georef.loadtime.*;
@@ -21,7 +22,9 @@ import org.ei.common.bd.*;
 import org.ei.common.*;
 import org.ei.util.GUID;
 import org.ei.util.StringUtil;
-
+import org.json.simple.JSONObject;
+import java.util.concurrent.ExecutorService; 
+import java.util.concurrent.Executors; 
 import java.text.*;
 //import java.math.*;
 
@@ -340,18 +343,22 @@ public void writeCombinedByTableHook(Connection con) throws Exception
         boolean isCpx = false;
         String accessNumber = "";
         String pui = "";
-        KafkaService kafka = new KafkaService();;
-        Thread thread = null;
+        KafkaService kafka = new KafkaService();
+        Thread thread = null; 
+        long processTime = System.currentTimeMillis();
+        //int MAX_THREAD = 50; 
+        //ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD);  
+        
 
-    	//kafka.getParameterFromPropertiesFile("config.properties");
         try
         {
+        	int totalCount = rs.getMetaData().getColumnCount();       	
 	        while (rs.next())
 	        {
 	          ++i;
 	          String firstGUID = "";        
 	          int numCoords = 1;
-	          int coordCount = 0;
+	          int coordCount = 0;        
 	          if(rs.getString("DATABASE") != null)
 	          {
 	              if(rs.getString("DATABASE").equals("geo"))
@@ -382,6 +389,10 @@ public void writeCombinedByTableHook(Connection con) throws Exception
 	                
 	                if (validYear(rs.getString("PUBLICATIONYEAR")))
 	                {
+	                	String processInfo = processTime+"-"+totalCount+'-'+i+'-'+rs.getString("DATABASE")+'-'+rs.getString("LOADNUMBER")+'-'+rs.getString("UPDATENUMBER");
+	                	rec.put(EVCombinedRec.PROCESS_INFO, processInfo);	          
+	                	
+	                	
 	                	if(isCpx && rs.getString("authorid")!=null)
 	                	{
 	                		String authorid = rs.getString("authorid");
@@ -1183,7 +1194,7 @@ public void writeCombinedByTableHook(Connection con) throws Exception
 	            }
 	           
 	            recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
-	            //this.writer.writeRec(recArray);
+	            this.writer.writeRec(recArray);
 	          
 	            
 	            /**********************************************************/
@@ -1191,17 +1202,12 @@ public void writeCombinedByTableHook(Connection con) throws Exception
 	            //this.writer.writeRec(recArray,kafka);
 	            /*********************************************************/
 	            
-	            ///*
+	            /*
 	            MessageSender sendMessage= new MessageSender(recArray,kafka,this.writer);
+	            //pool.execute(sendMessage); 
 	            thread = new Thread(sendMessage);
 	            thread.start();
 	            //this.writer.writeRec(recArray,kafka);
-	            /*
-	            if(i%5==0)
-	            {
-	            	//System.out.println("flushing at "+i);
-	            	kafka.flush();
-	            }
 	            */
 	         }
 	         catch(Exception e)
@@ -1231,9 +1237,16 @@ public void writeCombinedByTableHook(Connection con) throws Exception
 		        	{
 		        		System.out.println("sleep "+k);
 		        		Thread.sleep(1000);
+		        		k++;
+		        		if(k>10)
+		        		{
+		        			System.out.println("record "+accessNumber+" didn't send to Kafka server");
+		        			thread.stop();
+		        		}
 		        	}
 	        	}
 	        	kafka.close();
+	        
 	        }
         }
         

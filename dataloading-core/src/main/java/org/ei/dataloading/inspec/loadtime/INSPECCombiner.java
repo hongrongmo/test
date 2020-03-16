@@ -322,8 +322,10 @@ public class INSPECCombiner
         int i = 0;
         KafkaService kafka = new KafkaService();
         Thread thread =null;
+        long processTime = System.currentTimeMillis();
        try
        {
+    	   int totalCount = rs.getMetaData().getColumnCount();   
 	        while(rs.next())
 	        {
 	            EVCombinedRec rec = new EVCombinedRec();
@@ -358,6 +360,8 @@ public class INSPECCombiner
 	
 	            if (validYear(strYear))
 	            {
+	            	String processInfo = processTime+"-"+totalCount+'-'+i+"-ins-"+rs.getString("LOAD_NUMBER")+'-'+rs.getString("UPDATENUMBER");
+                	rec.put(EVCombinedRec.PROCESS_INFO, processInfo);
 	                if((rs.getString("aus") != null) || (rs.getString("aus2") != null))
 	                {
 	                    StringBuffer aus = new StringBuffer();
@@ -768,29 +772,26 @@ public class INSPECCombiner
 	                rec.put(EVCombinedRec.STARTPAGE, getFirstPage(rs.getString("pipn")));
 	                rec.put(EVCombinedRec.ACCESSION_NUMBER, rs.getString("ANUM"));
 	
-	                //writer.writeRec(rec);
+	                writer.writeRec(rec);
 	                
 	                /**********************************************************/
 	                //following code used to test kafka by hmo@2020/01/30
 	                //this.writer.writeRec(recArray,kafka);
 	                /**********************************************************/
 	                /*
-	                writer.writeRec(rec,kafka);
-	                if(i%5==0)
-	                {
-	                	//System.out.println("flushing at "+i);
-	                	kafka.flush();
-	                }
-	                */
+	                //writer.writeRec(rec,kafka);
+	               
 	                MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
 		            thread = new Thread(sendMessage);
 		            thread.start();
+		            */
 	            }
 	
 	        }
        }
        finally
        {
+    	    System.out.println("Total "+i+" records");
 	        if(kafka!=null)
 	        { 
 	        	int k=0;

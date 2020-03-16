@@ -354,6 +354,8 @@ public class UPTCombiner extends CombinerTimestamp {
         String mid = null;
         Thread thread=null;
         KafkaService kafka = new KafkaService();
+        long processTime = System.currentTimeMillis();
+    	int totalCount = rs.getMetaData().getColumnCount();  
         
         try 
         {
@@ -367,6 +369,8 @@ public class UPTCombiner extends CombinerTimestamp {
 	                mid = rs.getString("m_id");
 	
 	                EVCombinedRec rec = new EVCombinedRec();
+	                String processInfo = processTime+"-"+totalCount+'-'+i+"-upt-"+rs.getString("LOAD_NUMBER")+'-'+rs.getString("UPDATE_NUMBER");
+	            	rec.put(EVCombinedRec.PROCESS_INFO, processInfo);
 	
 	                /*
 	                if (Combiner.EXITNUMBER != 0 && i > Combiner.EXITNUMBER) {
@@ -824,7 +828,7 @@ public class UPTCombiner extends CombinerTimestamp {
 	                    rec.put(EVCombinedRec.NOTES, arrNames);
 	                    //System.out.println("NOTES="+arrNames[0]);
 	
-	                    //writer.writeRec(rec);
+	                    writer.writeRec(rec);
 	                    
 	                    /**********************************************************/
 	        	        //following code used to test kafka by hmo@2020/01/30
@@ -832,16 +836,12 @@ public class UPTCombiner extends CombinerTimestamp {
 	        	        /**********************************************************/
 	                    /*
 	        	        writer.writeRec(rec,kafka);
-	        	        if(i%5==0)
-	        	        {
-	        	        	//System.out.println("flushing at "+i);
-	        	        	kafka.flush();
-	        	        }
-	        	        */
+	        	       
 	                    //use thread to run kafka message
 	                    MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
 	       	         	thread = new Thread(sendMessage);
 	       	         	thread.start();
+	       	         	*/
 	
 	                }
 				}

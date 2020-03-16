@@ -504,6 +504,9 @@ public class EVCombinedRec {
 	
 	// added by hmo on 2020-01-15
 	public static final String SOURCE_TYPE = "376";
+	
+	// added by hmo on 2020-03-03
+	public static final String PROCESS_INFO = "377";
 
 	 //*/
 
