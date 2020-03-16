@@ -228,11 +228,13 @@ import org.ei.dataloading.MessageSender;
 	    {
 	        int i = 0;
 	        EVCombinedRec recSecondBox = null;
-	        EVCombinedRec[] recArray = null;
-	      
+	        EVCombinedRec[] recArray = null;	      
 	        String accessNumber = "";
 	        Thread thread = null;
 	        KafkaService kafka = new KafkaService();
+	        long processTime = System.currentTimeMillis();
+	    	int totalCount = rs.getMetaData().getColumnCount();  
+	    	
 	        try
 	        {
 		        while (rs.next())
@@ -241,9 +243,14 @@ import org.ei.dataloading.MessageSender;
 		          String firstGUID = "";	      
 	
 		          Vector recVector = new Vector();
+		          
+	              
 		          try
 		          {
-		                EVCombinedRec rec = new EVCombinedRec();
+		        	  EVCombinedRec rec = new EVCombinedRec();
+		        	  String processInfo = processTime+"-"+totalCount+'-'+i+"-"+rs.getString("DATABASE")+"-"+rs.getString("LOADNUMBER")+"-NO_UPDATENUMBER";
+		              rec.put(EVCombinedRec.PROCESS_INFO, processInfo);
+		                
 		                accessNumber = rs.getString("ACCESSNUMBER");
 		                String parentID = rs.getString("PARENTID");
 		                if (rs.getString("PUBLISH_DATE")!=null)
@@ -407,23 +414,19 @@ import org.ei.dataloading.MessageSender;
 		            
 		                
 		            recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
-		            //this.writer.writeRec(recArray);
+		            this.writer.writeRec(recArray);
 		            /**********************************************************/
 	    	        //following code used to test kafka by hmo@2020/02/3
 	    	        //this.writer.writeRec(recArray,kafka);
 	    	        /**********************************************************/
 		            /*
-	    	        this.writer.writeRec(recArray,kafka);
-	    	        if(i%5==0)
-	    	        {
-	    	        	//System.out.println("flushing at "+i);
-	    	        	kafka.flush();
-	    	        }
-	    	        */
+	    	        //this.writer.writeRec(recArray,kafka);
+	    	       
 		            //use thread to send kafka message
 		            MessageSender sendMessage= new MessageSender(recArray,kafka,this.writer);
 			        thread = new Thread(sendMessage);
 			        thread.start();
+			        */
 	    	        
 		          }
 		        
@@ -436,6 +439,7 @@ import org.ei.dataloading.MessageSender;
 	        }
 	        finally
 	        {
+	        	System.out.println("Total "+i+" records");
 	        	if(kafka!=null)
 	 	        { 
 	 	        	int k=0;

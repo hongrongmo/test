@@ -1028,8 +1028,15 @@ public class CombinedXMLWriter
             }
             
             contentObject.put(("database").toLowerCase(),rec.getString(EVCombinedRec.DATABASE));
-
-            contentObject.put("LOADNUMBER".toLowerCase(),loadnumber);
+            
+            if(loadnumber.length()>6)
+            {
+            	contentObject.put("LOADNUMBER".toLowerCase(),loadnumber.substring(0,6));
+            }
+            else
+            {
+            	contentObject.put("LOADNUMBER".toLowerCase(),loadnumber);
+            }
 
             if(rec.getString(EVCombinedRec.UPDATE_NUMBER)!=null && rec.getString(EVCombinedRec.UPDATE_NUMBER).length()>0)
             {
@@ -1789,11 +1796,10 @@ public class CombinedXMLWriter
 	            contentObject.put("PREFINDEX".toLowerCase(),elementArrayObject);
 			}
            
-            if(rec.getString(EVCombinedRec.DMASK)!=null && rec.getString(EVCombinedRec.DMASK).length()>0)
-            {
-	            //elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.DMASK),"DMASK");          
-	            contentObject.put("DMASK".toLowerCase(),rec.getString(EVCombinedRec.DMASK));
-            }
+            
+            //elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.DMASK),"DMASK");          
+            contentObject.put("DMASK".toLowerCase(),getMask(rec));
+            
             
             if(rec.getString(EVCombinedRec.DOI)!=null && rec.getString(EVCombinedRec.DOI).length()>0)
             {
@@ -2736,12 +2742,17 @@ public class CombinedXMLWriter
  	            contentObject.put("STANDARDDESIGNATION".toLowerCase(),rec.getString(EVCombinedRec.STANDARDDESIGNATION));       
             }
             
-            //System.out.println("SOURCETYPE2="+rec.getString(EVCombinedRec.SOURCE_TYPE));
+            //SOURCE TYPE
             if(rec.getString(EVCombinedRec.SOURCE_TYPE)!=null && rec.getString(EVCombinedRec.SOURCE_TYPE).length()>0)
             {          	
  	            contentObject.put("SOURCETYPE".toLowerCase(),rec.getString(EVCombinedRec.SOURCE_TYPE));       
             }                           
             
+          //SOURCE TYPE
+            if(rec.getString(EVCombinedRec.PROCESS_INFO)!=null && rec.getString(EVCombinedRec.PROCESS_INFO).length()>0)
+            {          	
+ 	            contentObject.put("PROCESSINFO".toLowerCase(),rec.getString(EVCombinedRec.PROCESS_INFO));       
+            }  
             //output pretty format        
             //Gson gson = new GsonBuilder().disableHtmlEscaping().setPrettyPrinting().create();
             
@@ -3667,7 +3678,7 @@ public class CombinedXMLWriter
             {
                 curRecNum = 0;
                 zipBatch();
-                zipBatchJsonFile();
+                //zipBatchJsonFile();
             }
         }
         catch(Exception e)

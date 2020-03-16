@@ -336,6 +336,9 @@ public void writeRecs(ResultSet rs)
 {
 	KafkaService kafka = new KafkaService();
 	Thread thread =null;
+	long processTime = System.currentTimeMillis();
+	int totalCount = rs.getMetaData().getColumnCount(); 
+	int i = 1;
 	try
 	{
 	    DocumentView runtimeDocview = new CitationView();
@@ -344,7 +347,7 @@ public void writeRecs(ResultSet rs)
 		EVCombinedRec[] recArray = null;
 		
 		
-	    int i = 1;
+	   
 	    while (rs.next())
 	    {
 		try{
@@ -355,10 +358,13 @@ public void writeRecs(ResultSet rs)
 		  	Vector recVector = new Vector();
 	        for(int currentCoord = 0; currentCoord < numCoords; currentCoord++)
 	        {
+	        	EVCombinedRec rec = new EVCombinedRec();
+	        	String processInfo = processTime+"-"+totalCount+'-'+i+"-grf-"+rs.getString("LOAD_NUMBER")+'-'+rs.getString("UPDATENUMBER");
+            	rec.put(EVCombinedRec.PROCESS_INFO, processInfo);
 	        	String[] coords = null;
 	        	String[] secondBoxCoords= null;
 			    coordCount++;
-				EVCombinedRec rec = new EVCombinedRec();
+				
 
 				rec.putIfNotNull(EVCombinedRec.DATABASE, databaseIndexName);
 
@@ -802,23 +808,19 @@ public void writeRecs(ResultSet rs)
 			} // for
 	        i++;
 			recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
-			//this.writer.writeRec(recArray);
+			this.writer.writeRec(recArray);
 			 /**********************************************************/
 	        //following code used to test kafka by hmo@2020/01/30
 	        //this.writer.writeRec(recArray,kafka);
 	        /***********************************************************/
 			/*
-	        this.writer.writeRec(recArray,kafka);
-	        if(i%5==0)
-	        {
-	        	//System.out.println("flushing at "+i);
-	        	kafka.flush();
-	        }
-	        */
+	        //this.writer.writeRec(recArray,kafka);
+	       
 			//use thread to run kafka message
 			 MessageSender sendMessage= new MessageSender(recArray,kafka,this.writer);
 	         thread = new Thread(sendMessage);
 	         thread.start();
+	         */
 	        
 		}
 		catch(Exception e)
@@ -834,6 +836,7 @@ public void writeRecs(ResultSet rs)
   }
   finally
   {
+	  System.out.println("Total "+i+" records");
 	  if(kafka!=null)
       {
 	       	try 

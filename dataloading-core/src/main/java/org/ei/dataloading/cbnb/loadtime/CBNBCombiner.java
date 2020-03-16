@@ -198,6 +198,9 @@ public class CBNBCombiner extends Combiner
         int i = 0;
         KafkaService kafka = new KafkaService();
         Thread thread =null;
+        long processTime = System.currentTimeMillis();
+    	int totalCount = rs.getMetaData().getColumnCount();  
+    	
         try
         {
 	        while (rs.next())
@@ -210,6 +213,8 @@ public class CBNBCombiner extends Combiner
 	            String abString = getStringFromClob(rs.getClob("abs"));
 	            try 
 	            {
+	            	String processInfo = processTime+"-"+totalCount+'-'+i+"-cbnb-"+rs.getString("LOAD_NUMBER")+"-NO_UPDATENUMBER";
+		            rec.put(EVCombinedRec.PROCESS_INFO, processInfo);
 		            if (validYear(rs.getString("pyr")) || validYear(rs.getString("pyr1")))
 		            {            	
 		            	
@@ -369,25 +374,21 @@ public class CBNBCombiner extends Combiner
 		                if(rs.getString("pbr") != null)
 		                {
 		                    rec.put(EVCombinedRec.PUBLISHER_NAME, prepareMulti(rs.getString("pbr")));
-		                }
-		               // rec.put(EVCombinedRec.PUB_SORT, rs.getString("pbn"));
-		               // this.writer.writeRec(rec);
+		                }		      
+		                
+		                this.writer.writeRec(rec); //this is used for FAST extraction
+		                
 		                /**********************************************************/
 		    	        //following code used to test kafka by hmo@2020/02/3
 		    	        //this.writer.writeRec(recArray,kafka);
 		    	        /**********************************************************/
 		                /*
-		    	        this.writer.writeRec(rec,kafka);
-		    	        if(i%5==0)
-		    	        {
-		    	        	//System.out.println("flushing at "+i);
-		    	        	kafka.flush();
-		    	        }
-		    	        */
+		    	        //this.writer.writeRec(rec,kafka);		    	        
 		                //use thread to send kafka message 
 		                MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
 			            thread = new Thread(sendMessage);
 			            thread.start();
+			            */
 		            }
 		            else
 		            {
@@ -410,6 +411,7 @@ public class CBNBCombiner extends Combiner
         }
         finally
         {
+        	System.out.println("Total "+i+" records");
 	        if(kafka!=null)
 	        {
 		       	try 

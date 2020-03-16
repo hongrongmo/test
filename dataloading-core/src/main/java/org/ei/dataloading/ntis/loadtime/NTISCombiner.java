@@ -287,6 +287,9 @@ public class NTISCombiner
         int i = 0;
         KafkaService kafka = new KafkaService();
         Thread thread = new Thread();
+        long processTime = System.currentTimeMillis();
+    	int totalCount = rs.getMetaData().getColumnCount();  
+    	
         try
         {
 	        while (rs.next())
@@ -294,7 +297,8 @@ public class NTISCombiner
 	
 	            EVCombinedRec rec = new EVCombinedRec();
 	            ++i;
-	            
+	            String processInfo = processTime+"-"+totalCount+'-'+i+"-ntis-"+rs.getString("LOAD_NUMBER")+"-NO_UPDATENUMBER";
+	            rec.put(EVCombinedRec.PROCESS_INFO, processInfo);
 	            String aut = NTISAuthor.formatAuthors(rs.getString("PA1"),
 	                    							  rs.getString("PA2"),
 	                    							  rs.getString("PA3"),
@@ -389,29 +393,25 @@ public class NTISCombiner
 				{
 					rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
 				}
-	            //this.writer.writeRec(rec);
+	            this.writer.writeRec(rec);
 	           
 	            /**********************************************************/
 		        //following code used to test kafka by hmo@2020/02/3
 		        //this.writer.writeRec(recArray,kafka);
 		        /**********************************************************/
 	            /*
-		        this.writer.writeRec(rec,kafka);
-		        if(i%5==0)
-		        {
-		        	//System.out.println("flushing at "+i);
-		        	kafka.flush();
-		        }
-		        */
+		        //this.writer.writeRec(rec,kafka);
+		       
 				//use thread to run kafka message
 				 MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
 		         thread = new Thread(sendMessage);
 		         thread.start();
+		         */
 	        }
         }
         finally
         {
-        
+        	System.out.println("Total "+i+" records");
 	        if(kafka!=null)
 	        { 
 	        	int k=0;

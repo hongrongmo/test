@@ -32,7 +32,7 @@ public class KafkaService {
     Producer<String, String> producer=null;
 	
     public KafkaService() {
-    	getParameterFromPropertiesFile("config.properties");	
+    	getParameterFromPropertiesFile("/data/loading/shared/config.properties");	
     	producer  = ProducerCreator.createProducer(this.KAFKA_BROKERS);
     	System.out.println("create Kafka Prodcuer");
     	problemRecords = new HashMap<String,String>();
@@ -153,7 +153,8 @@ public class KafkaService {
 			{
 				problemRecords.put(key, recordString);
 			}
-			System.out.println("Exception in sending record;"+key);			
+			System.out.println("Exception in sending record;"+key);
+			e.printStackTrace();
 			//throw new Exception("found new exception for record "+key);
 		}
 		//this.producer.flush();
@@ -167,8 +168,8 @@ public class KafkaService {
     
     public void close() {
     	reSendProblemRecords();
-    	if(this.producer!=null)
-    		producer.close();
+    	//if(this.producer!=null)
+    		//producer.close();
     }
     
     private void reSendProblemRecords()
