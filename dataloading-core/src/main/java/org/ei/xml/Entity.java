@@ -3,6 +3,7 @@ package org.ei.xml;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.io.StringWriter;
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Properties;
@@ -10,13 +11,16 @@ import java.util.Properties;
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
 import org.apache.oro.text.regex.PatternMatcherInput;
+import org.apache.commons.text.StringEscapeUtils;
 
 public class Entity {
     private static Properties etable = new Properties();
     private static Properties isotable = new Properties();
     private static Properties utftable = new Properties();
     private static Perl5Util perl = new Perl5Util();
-
+    private static final int MIN_ESCAPE = 2;
+    private static final int MAX_ESCAPE = 7;
+    
     public static void main(String args[]) {
         try {
             String test = "?? b c d E ?";
@@ -38,13 +42,7 @@ public class Entity {
                 in = new BufferedReader(new FileReader(fileNameArray[i]));
                 int j = 1;
                 while ((line = in.readLine()) != null) {
-                    findEntity(line, outputFile);
-                    // int intLine = Integer.parseInt(line.substring(2,line.length()-1));
-                    // System.out.println("intLine= "+intLine+" hexLine= "+Integer.toHexString(intLine));
-                    // outputFile.write("<tr><td width=25>"+j+"</td><td>"+line+"</td>");
-                    // outputFile.write("<td>&#x"+Integer.toHexString(intLine)+";</td></tr>");
-                    // outputFile.write("\n");
-                    // j++;
+                    findEntity(line, outputFile);                   
                 }
 
                 outputFile.flush();
@@ -53,6 +51,101 @@ public class Entity {
             System.out.println("exception= " + e);
         }
 
+    }
+    
+    public static String unescapeHtml(final String input) 
+    {
+        StringWriter writer = null;
+        int len = input.length();
+        int i = 1;
+        int st = 0;
+        while (true) 
+        {
+            // look for '&'
+            while (i < len && input.charAt(i-1) != '&')
+                i++;
+            if (i >= len)
+                break;
+
+            // found '&', look for ';'
+            int j = i;
+            while (j < len && j < i + MAX_ESCAPE + 1 && input.charAt(j) != ';')
+                j++;
+            if (j == len || j < i + MIN_ESCAPE || j == i + MAX_ESCAPE + 1) {
+                i++;
+                continue;
+            }
+
+            // found entity number escape 
+            if (input.charAt(i) == '#') 
+            {
+                // numeric escape
+                int k = i + 1;
+                int radix = 10;
+
+                final char firstChar = input.charAt(k);
+                if (firstChar == 'x' || firstChar == 'X') 
+                {
+                    k++;
+                    radix = 16;
+                }
+
+                try {
+                    int entityValue = Integer.parseInt(input.substring(k, j), radix);
+                    
+                    /*
+                    if(entityValue==8239) //change NARROW NO-BREAK SPACE to space
+                    {
+                    	entityValue=0;
+                    }
+                    */
+                    
+                    if (writer == null) 
+                        writer = new StringWriter(input.length());
+                    writer.append(input.substring(st, i - 1));
+
+                    if (entityValue > 0xFFFF) {                   
+                        final char[] chrs = Character.toChars(entityValue);
+                        writer.write(chrs[0]);
+                        writer.write(chrs[1]);
+                    } else {                   
+                        writer.write(entityValue);
+                    }
+
+                } catch (NumberFormatException ex) { 
+                    i++;
+                    continue;
+                }
+            }
+            else 
+            {
+                // entity named escape
+               
+            	CharSequence value = StringEscapeUtils.unescapeHtml4("&"+input.substring(i, j)+";");           	
+                if (value == null) 
+                {
+                    i++;
+                    continue;
+                }
+
+                if (writer == null) 
+                    writer = new StringWriter(input.length());
+                writer.append(input.substring(st, i - 1));
+
+                writer.append(value);
+            }
+
+            // skip escape
+            st = j + 1;
+            i = st;
+        }
+
+        if (writer != null) 
+        {
+            writer.append(input.substring(st, len));
+            return writer.toString();
+        }
+        return input;
     }
 
     public static void findEntity(String inputString, FileWriter outputFile) {
@@ -201,15 +294,7 @@ public class Entity {
                 match1 = match.toLowerCase();
             } else {
                 match1 = match;
-            }
-
-            /*
-            // for testing by hongrong
-            if (match1.indexOf("0x1e") > -1) {
-                System.out.println(match1);
-            }
-            // end of test
-			*/
+            }          
             
             String newValue = etable.getProperty(match1);
 
@@ -224,33 +309,7 @@ public class Entity {
             pbuf.append(newValue);
             pbuf.append("/g");
             s = matcher.substitute(pbuf.toString(), s);
-        }
-        
-        //for testing non-roman indexing at 08/31/2018
-        /*
-        if (s.matches("[\\p{L}&&[^\\p{IsLatin}]]")) {
-        	System.out.println("MATCH1="+input); 
-        }
-        
-        StringBuffer output = new StringBuffer();
-        for(int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i);
-            int ch = (int) c;
-            if(ch < 0 || ch > 10000) // Is not ascii
-            {
-            	output.append(c+" ");
-            	System.out.println("NON-ASCII_CHARACTER="+c+" char#="+ch);
-            }
-            else
-            {
-            	output.append(c);
-            }
-            	
-         }
-         s = output.toString();
-         System.out.println("full string="+s);
-         */
-          //end of test
+        }            
 
         return s;
     }

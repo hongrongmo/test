@@ -45,7 +45,7 @@ public class KafkaService {
     }
     public static void main(String[] args) {
     	KafkaService kTest= new KafkaService();
-    	kTest.getParameterFromPropertiesFile("config.properties");
+    	kTest.getParameterFromPropertiesFile("/data/loading/shared/config.properties");
     	if(args!=null && args[0].equals("producer"))
     	{
     		kTest.runProducer();
