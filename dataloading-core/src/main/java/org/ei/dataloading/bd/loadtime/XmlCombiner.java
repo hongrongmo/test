@@ -1194,7 +1194,7 @@ public void writeCombinedByTableHook(Connection con) throws Exception
 	            }
 	           
 	            recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
-	            this.writer.writeRec(recArray);
+	            //this.writer.writeRec(recArray);
 	          
 	            
 	            /**********************************************************/
@@ -1202,13 +1202,13 @@ public void writeCombinedByTableHook(Connection con) throws Exception
 	            //this.writer.writeRec(recArray,kafka);
 	            /*********************************************************/
 	            
-	            /*
+	            
 	            MessageSender sendMessage= new MessageSender(recArray,kafka,this.writer);
 	            //pool.execute(sendMessage); 
 	            thread = new Thread(sendMessage);
 	            thread.start();
 	            //this.writer.writeRec(recArray,kafka);
-	            */
+	            
 	         }
 	         catch(Exception e)
 	         {

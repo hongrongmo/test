@@ -12,6 +12,8 @@ import org.ei.dataloading.*;
 import org.ei.xml.*;
 import org.ei.dataloading.*;
 import org.ei.common.*;
+import org.ei.util.kafka.*;
+import org.ei.dataloading.MessageSender;
 
 public class IBFCombiner
     extends Combiner
@@ -232,268 +234,309 @@ public class IBFCombiner
             throws Exception
     {
         int i = 0;
-
-        while (rs.next())
+        KafkaService kafka = new KafkaService();
+        Thread thread =null;
+        long processTime = System.currentTimeMillis();
+    	int totalCount = rs.getMetaData().getColumnCount();  
+    	
+        try
         {
-            EVCombinedRec rec = new EVCombinedRec();
-            ++i;
-
-            rec.put(rec.DOCID, rs.getString("M_ID"));
-            rec.put(rec.DATABASE, "ibf");
-            rec.put(rec.LOAD_NUMBER, rs.getString("LOAD_NUMBER"));
-
-            rec.put(rec.ACCESSION_NUMBER, rs.getString("ANUM"));
-
-            String abString = getStringFromClob(rs.getClob("ab"));
-
-            if (rs.getString("rtype") != null)
-            {
-                rec.put(rec.DOCTYPE,
-                        getDocType(rs.getString("rtype")));
-            }
-
-            if (rs.getString("aus") != null)
-            {
-                rec.put(rec.AUTHOR, prepareAuthor(rs.getString("aus")));
-            }
-            else if (rs.getString("eds") != null)
-            {
-                rec.put(rec.EDITOR, prepareAuthor(rs.getString("eds")));
-            }
-
-            if (rs.getString("ti") != null)
-            {
-                rec.put(rec.TITLE, rs.getString("ti"));
-            }
-
-            if (rs.getString("oinfo") != null)
-            {
-
-                abString = abString + rs.getString("oinfo").substring(rs.getString("oinfo").indexOf("<ABS>"));
-
-            }
-
-            if (abString != null && abString.length() > 10)
-            {
-                rec.put(rec.ABSTRACT, abString);
-            }
-
-            if (rs.getString("pyr") != null)
-            {
-                rec.put(rec.PUB_YEAR, getPubYear(rs.getString("pyr")));
-            }
-            else
-            {
-               rec.put(rec.PUB_YEAR, getPubYear(rs.getString("su").substring(0, 4)));
-            }
-
-            //Indexing Terms
-            if (rs.getString("cvs") != null || rs.getString("ocvs") != null)
-            {
-                StringBuffer cvs = new StringBuffer();
-                if (rs.getString("cvs") != null)
-                {
-                    cvs.append(rs.getString("cvs"));
-                }
-                if (rs.getString("ocvs") != null)
-                {
-                    cvs.append("; ").append(getOrigCVS(rs.getString("ocvs")));
-                }
-
-                rec.put(rec.CONTROLLED_TERMS,
-                        prepareMulti(cvs.toString()));
-            }
-
-            if (rs.getString("fls") != null)
-            {
-                rec.put(rec.UNCONTROLLED_TERMS,
-                        prepareMulti(rs.getString("fls")));
-            }
-
-            if (rs.getString("cls") != null)
-            {
-                rec.put(rec.CLASSIFICATION_CODE,
-                        prepareMulti(XMLWriterCommon.formatClassCodes(rs.getString("cls"))));
-            }
-
-            if (rs.getString("ocls") != null)
-            {
-                rec.put(rec.INDUSTRIALCODES,
-                        prepareMulti(getOrigCLS(rs.getString("ocls"))));
-            }
-
-            String dis = getDiscipline(rs.getString("cls"));
-
-            if (dis != null)
-            {
-                rec.put(rec.DISCIPLINE, prepareMulti(dis));
-            }
-
-            //Source Info
-            if (rs.getString("fjt") != null)
-            {
-                rec.put(rec.SERIAL_TITLE,
-                        rs.getString("fjt"));
-            }
-            else if (rs.getString("ojt") != null) 
-            	rec.put(rec.SERIAL_TITLE,
-                    rs.getString("ojt"));
-
-            if (rs.getString("fttj") != null)
-            {
-                rec.put(rec.SERIAL_TITLE_TRANSLATION,
-                        rs.getString("fttj"));
-
-            }
-            else if (rs.getString("ottj") != null)
-            {
-                rec.put(rec.SERIAL_TITLE_TRANSLATION,
-                        rs.getString("ottj"));
-
-            }
-
-            rec.put(rec.VOLUME, rs.getString("vol"));
-            rec.put(rec.ISSUE, rs.getString("iss"));
-            rec.put(rec.STARTPAGE, getFirstPage(rs.getString("ipn")));
-
-            if (rs.getString("source") != null || rs.getString("tsource") != null)
-            {
-                StringBuffer src = new StringBuffer();
-                if (rs.getString("source") != null)
-                {
-                    src.append(getAdditionalSources(rs.getString("source")));
-                }
-                if (rs.getString("tsource") != null)
-                {
-                    src.append("; ").append(getAdditionalSources(rs.getString("tsource")));
-                }
-                rec.put(rec.SOURCE,
-                        prepareMulti(src.toString()));
-
-            }
-
-            if (rs.getString("la") != null)
-            {
-                rec.put(rec.LANGUAGE,
-                        prepareMulti(rs.getString("la")));
-            }
-            if (rs.getString("thlp") != null)
-            {
-                rec.put(rec.MONOGRAPH_TITLE,
-                        rs.getString("thlp"));
-            }
-
-            if (rs.getString("pub") != null)
-            {
-                rec.put(rec.PUBLISHER_NAME,
-                        rs.getString("pub"));
-            }
-
-            //Conference Info
-            if (rs.getString("tc") != null)
-            {
-                rec.put(rec.CONFERENCE_NAME,
-                        rs.getString("tc"));
-            }
-
-            //Put ccnf in country also ??
-            if (rs.getString("cloc") != null || rs.getString("ccnf") != null)
-            {
-                StringBuffer buf = new StringBuffer();
-                if (rs.getString("cloc") != null)
-                    buf.append(rs.getString("cloc"));
-                if (rs.getString("ccnf") != null)
-                    buf.append(" ").append(rs.getString("ccnf"));
-
-                rec.put(rec.CONFERENCE_LOCATION,
-                            buf.toString());
-            }
-
-            if (rs.getString("cdate") != null || rs.getString("cedate") != null)
-            {
-                StringBuffer buf = new StringBuffer();
-                if (rs.getString("cdate") != null)
-                {
-                    buf.append(rs.getString("cdate"));
-                }
-                if (rs.getString("cedate") != null)
-                {
-                    buf.append("; ").append(rs.getString("cedate"));
-                }
-                rec.put(rec.MEETING_DATE, buf.toString());
-
-            }
-            if (rs.getString("sorg") != null)
-            {
-                rec.put(rec.SPONSOR_NAME,
-                        rs.getString("sorg"));
-            }
-
-            if (rs.getString("rnum") != null)
-            {
-                rec.put(rec.REPORTNUMBER,
-                        rs.getString("rnum"));
-            }
-
-            //Patent Info
-            if (rs.getString("pnum") != null)
-            {
-                rec.put(rec.PATENT_NUMBER,
-                        rs.getString("pnum"));
-            }
-
-            // COMPANIES ?
-            if(rs.getString("pas") != null)
-            {
-                rec.put(rec.AUTHOR_AFFILIATION, prepareMulti(rs.getString("pas")));
-            }
-
-            // new added ?
-            if(rs.getString("fdate") != null)
-            {
-                rec.put(rec.PATENT_FILING_DATE,
-                        rs.getString("fdate"));
-            }
-
-            if(rs.getString("cpat") != null)
-            {
-                String countryFormatted = Country.formatCountry(rs.getString("cpat"));
-                if (countryFormatted != null)
-                {
-                    rec.put(EVCombinedRec.COUNTRY, countryFormatted);
-                }
-            }
-
-            // AFF_LOC ?
-            // use cpub for country ??
-            if(rs.getString("iorg") != null)
-            {
-                rec.put(rec.NOTES,
-                        prepareMulti(rs.getString("iorg")));
-
-                String countryFormatted = Country.formatCountry(rs.getString("ciorg"));
-                if (countryFormatted != null &&
-                    !rec.containsKey(EVCombinedRec.COUNTRY))
-                {
-                    rec.put(EVCombinedRec.COUNTRY, countryFormatted);
-                    rec.put(EVCombinedRec.AFFILIATION_LOCATION, countryFormatted);
-                }
-            }
-
-            rec.put(rec.DEDUPKEY,
-                    getDedupKey(rec.get(rec.ISSN),
-                            rec.get(rec.CODEN),
-                            rs.getString("vol"),
-                            rs.getString("iss"),
-                            rs.getString("ipn")));
-
-            if(rs.getString("seq_num") != null)
-            {
-                rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
-            }
-
-            writer.writeRec(rec);
-
+	        while (rs.next())
+	        {
+	            EVCombinedRec rec = new EVCombinedRec();
+	            ++i;
+	
+	            rec.put(rec.DOCID, rs.getString("M_ID"));
+	            rec.put(rec.DATABASE, "ibf");
+	            rec.put(rec.LOAD_NUMBER, rs.getString("LOAD_NUMBER"));
+	
+	            rec.put(rec.ACCESSION_NUMBER, rs.getString("ANUM"));
+	
+	            String abString = getStringFromClob(rs.getClob("ab"));
+	
+	            if (rs.getString("rtype") != null)
+	            {
+	                rec.put(rec.DOCTYPE,
+	                        getDocType(rs.getString("rtype")));
+	            }
+	
+	            if (rs.getString("aus") != null)
+	            {
+	                rec.put(rec.AUTHOR, prepareAuthor(rs.getString("aus")));
+	            }
+	            else if (rs.getString("eds") != null)
+	            {
+	                rec.put(rec.EDITOR, prepareAuthor(rs.getString("eds")));
+	            }
+	
+	            if (rs.getString("ti") != null)
+	            {
+	                rec.put(rec.TITLE, rs.getString("ti"));
+	            }
+	
+	            if (rs.getString("oinfo") != null)
+	            {
+	
+	                abString = abString + rs.getString("oinfo").substring(rs.getString("oinfo").indexOf("<ABS>"));
+	
+	            }
+	
+	            if (abString != null && abString.length() > 10)
+	            {
+	                rec.put(rec.ABSTRACT, abString);
+	            }
+	
+	            if (rs.getString("pyr") != null)
+	            {
+	                rec.put(rec.PUB_YEAR, getPubYear(rs.getString("pyr")));
+	            }
+	            else
+	            {
+	               rec.put(rec.PUB_YEAR, getPubYear(rs.getString("su").substring(0, 4)));
+	            }
+	
+	            //Indexing Terms
+	            if (rs.getString("cvs") != null || rs.getString("ocvs") != null)
+	            {
+	                StringBuffer cvs = new StringBuffer();
+	                if (rs.getString("cvs") != null)
+	                {
+	                    cvs.append(rs.getString("cvs"));
+	                }
+	                if (rs.getString("ocvs") != null)
+	                {
+	                    cvs.append("; ").append(getOrigCVS(rs.getString("ocvs")));
+	                }
+	
+	                rec.put(rec.CONTROLLED_TERMS,
+	                        prepareMulti(cvs.toString()));
+	            }
+	
+	            if (rs.getString("fls") != null)
+	            {
+	                rec.put(rec.UNCONTROLLED_TERMS,
+	                        prepareMulti(rs.getString("fls")));
+	            }
+	
+	            if (rs.getString("cls") != null)
+	            {
+	                rec.put(rec.CLASSIFICATION_CODE,
+	                        prepareMulti(XMLWriterCommon.formatClassCodes(rs.getString("cls"))));
+	            }
+	
+	            if (rs.getString("ocls") != null)
+	            {
+	                rec.put(rec.INDUSTRIALCODES,
+	                        prepareMulti(getOrigCLS(rs.getString("ocls"))));
+	            }
+	
+	            String dis = getDiscipline(rs.getString("cls"));
+	
+	            if (dis != null)
+	            {
+	                rec.put(rec.DISCIPLINE, prepareMulti(dis));
+	            }
+	
+	            //Source Info
+	            if (rs.getString("fjt") != null)
+	            {
+	                rec.put(rec.SERIAL_TITLE,
+	                        rs.getString("fjt"));
+	            }
+	            else if (rs.getString("ojt") != null) 
+	            	rec.put(rec.SERIAL_TITLE,
+	                    rs.getString("ojt"));
+	
+	            if (rs.getString("fttj") != null)
+	            {
+	                rec.put(rec.SERIAL_TITLE_TRANSLATION,
+	                        rs.getString("fttj"));
+	
+	            }
+	            else if (rs.getString("ottj") != null)
+	            {
+	                rec.put(rec.SERIAL_TITLE_TRANSLATION,
+	                        rs.getString("ottj"));
+	
+	            }
+	
+	            rec.put(rec.VOLUME, rs.getString("vol"));
+	            rec.put(rec.ISSUE, rs.getString("iss"));
+	            rec.put(rec.STARTPAGE, getFirstPage(rs.getString("ipn")));
+	
+	            if (rs.getString("source") != null || rs.getString("tsource") != null)
+	            {
+	                StringBuffer src = new StringBuffer();
+	                if (rs.getString("source") != null)
+	                {
+	                    src.append(getAdditionalSources(rs.getString("source")));
+	                }
+	                if (rs.getString("tsource") != null)
+	                {
+	                    src.append("; ").append(getAdditionalSources(rs.getString("tsource")));
+	                }
+	                rec.put(rec.SOURCE,
+	                        prepareMulti(src.toString()));
+	
+	            }
+	
+	            if (rs.getString("la") != null)
+	            {
+	                rec.put(rec.LANGUAGE,
+	                        prepareMulti(rs.getString("la")));
+	            }
+	            if (rs.getString("thlp") != null)
+	            {
+	                rec.put(rec.MONOGRAPH_TITLE,
+	                        rs.getString("thlp"));
+	            }
+	
+	            if (rs.getString("pub") != null)
+	            {
+	                rec.put(rec.PUBLISHER_NAME,
+	                        rs.getString("pub"));
+	            }
+	
+	            //Conference Info
+	            if (rs.getString("tc") != null)
+	            {
+	                rec.put(rec.CONFERENCE_NAME,
+	                        rs.getString("tc"));
+	            }
+	
+	            //Put ccnf in country also ??
+	            if (rs.getString("cloc") != null || rs.getString("ccnf") != null)
+	            {
+	                StringBuffer buf = new StringBuffer();
+	                if (rs.getString("cloc") != null)
+	                    buf.append(rs.getString("cloc"));
+	                if (rs.getString("ccnf") != null)
+	                    buf.append(" ").append(rs.getString("ccnf"));
+	
+	                rec.put(rec.CONFERENCE_LOCATION,
+	                            buf.toString());
+	            }
+	
+	            if (rs.getString("cdate") != null || rs.getString("cedate") != null)
+	            {
+	                StringBuffer buf = new StringBuffer();
+	                if (rs.getString("cdate") != null)
+	                {
+	                    buf.append(rs.getString("cdate"));
+	                }
+	                if (rs.getString("cedate") != null)
+	                {
+	                    buf.append("; ").append(rs.getString("cedate"));
+	                }
+	                rec.put(rec.MEETING_DATE, buf.toString());
+	
+	            }
+	            if (rs.getString("sorg") != null)
+	            {
+	                rec.put(rec.SPONSOR_NAME,
+	                        rs.getString("sorg"));
+	            }
+	
+	            if (rs.getString("rnum") != null)
+	            {
+	                rec.put(rec.REPORTNUMBER,
+	                        rs.getString("rnum"));
+	            }
+	
+	            //Patent Info
+	            if (rs.getString("pnum") != null)
+	            {
+	                rec.put(rec.PATENT_NUMBER,
+	                        rs.getString("pnum"));
+	            }
+	
+	            // COMPANIES ?
+	            if(rs.getString("pas") != null)
+	            {
+	                rec.put(rec.AUTHOR_AFFILIATION, prepareMulti(rs.getString("pas")));
+	            }
+	
+	            // new added ?
+	            if(rs.getString("fdate") != null)
+	            {
+	                rec.put(rec.PATENT_FILING_DATE,
+	                        rs.getString("fdate"));
+	            }
+	
+	            if(rs.getString("cpat") != null)
+	            {
+	                String countryFormatted = Country.formatCountry(rs.getString("cpat"));
+	                if (countryFormatted != null)
+	                {
+	                    rec.put(EVCombinedRec.COUNTRY, countryFormatted);
+	                }
+	            }
+	
+	            // AFF_LOC ?
+	            // use cpub for country ??
+	            if(rs.getString("iorg") != null)
+	            {
+	                rec.put(rec.NOTES,
+	                        prepareMulti(rs.getString("iorg")));
+	
+	                String countryFormatted = Country.formatCountry(rs.getString("ciorg"));
+	                if (countryFormatted != null &&
+	                    !rec.containsKey(EVCombinedRec.COUNTRY))
+	                {
+	                    rec.put(EVCombinedRec.COUNTRY, countryFormatted);
+	                    rec.put(EVCombinedRec.AFFILIATION_LOCATION, countryFormatted);
+	                }
+	            }
+	
+	            rec.put(rec.DEDUPKEY,
+	                    getDedupKey(rec.get(rec.ISSN),
+	                            rec.get(rec.CODEN),
+	                            rs.getString("vol"),
+	                            rs.getString("iss"),
+	                            rs.getString("ipn")));
+	
+	            if(rs.getString("seq_num") != null)
+	            {
+	                rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
+	            }
+	
+	            //writer.writeRec(rec);
+	            /**********************************************************/
+    	        //following code used to test kafka by hmo@2020/03/24
+    	        //this.writer.writeRec(recArray,kafka);
+    	        /**********************************************************/
+                
+    	        //this.writer.writeRec(rec,kafka);		    	        
+                //use thread to send kafka message 
+                MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
+	            thread = new Thread(sendMessage);
+	            thread.start();
+	
+	        }
+        }
+        finally
+        {      	
+	        if(kafka!=null)
+	        {
+		       	try 
+		       	{	       			       	
+		        	int k=0;
+		        	if(thread!=null)
+		        	{
+			        	while(thread.isAlive())
+			        	{
+			        		System.out.println("sleep "+k);
+			        		Thread.sleep(1000);
+			        	}
+		        	}
+		        	kafka.close();       		
+		       		
+		       	 }
+		    	 catch (Exception e) {
+		    		 e.printStackTrace();
+		    	 } 
+	        }
+	        System.out.println("Total "+i+" records");
         }
     }
 
