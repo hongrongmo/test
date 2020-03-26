@@ -828,20 +828,20 @@ public class UPTCombiner extends CombinerTimestamp {
 	                    rec.put(EVCombinedRec.NOTES, arrNames);
 	                    //System.out.println("NOTES="+arrNames[0]);
 	
-	                    writer.writeRec(rec);
+	                    //writer.writeRec(rec);
 	                    
 	                    /**********************************************************/
 	        	        //following code used to test kafka by hmo@2020/01/30
 	        	        //this.writer.writeRec(recArray,kafka);
 	        	        /**********************************************************/
-	                    /*
-	        	        writer.writeRec(rec,kafka);
+	                    
+	        	        //writer.writeRec(rec,kafka);
 	        	       
 	                    //use thread to run kafka message
 	                    MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
 	       	         	thread = new Thread(sendMessage);
 	       	         	thread.start();
-	       	         	*/
+	       	         	
 	
 	                }
 				}

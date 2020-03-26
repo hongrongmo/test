@@ -455,8 +455,8 @@ public class CombinedXMLWriter
         out.println("       <EIDOCID>" + this.eid + "</EIDOCID>");
         out.println("       <PARENTID>" +  rec.getString(EVCombinedRec.PARENT_ID) + "</PARENTID>");
         out.println("       <DEDUPKEY>" + rec.getString(EVCombinedRec.DEDUPKEY) + "</DEDUPKEY>");
-        out.println("       <DATABASE>" + rec.getString(EVCombinedRec.DATABASE) + "</DATABASE>");
-        out.println("       <LOADNUMBER>" + loadnumber.substring(0,6) + "</LOADNUMBER>");
+        out.println("       <DATABASE>" + rec.getString(EVCombinedRec.DATABASE) + "</DATABASE>");      
+        out.println("       <LOADNUMBER>" + loadnumber+ "</LOADNUMBER>");
         
         //added for future use only, should be removed for regular database loading
         out.println("       <UPDATENUMBER>" + rec.getString(EVCombinedRec.UPDATE_NUMBER) + "</UPDATENUMBER>");
@@ -1104,7 +1104,7 @@ public class CombinedXMLWriter
           
             if(rec.getString(EVCombinedRec.ABSTRACT)!=null && rec.getString(EVCombinedRec.ABSTRACT).trim().length()>0)
             {
-	            contentObject.put("ABSTRACT".toLowerCase(),rec.getString(EVCombinedRec.ABSTRACT));
+	            contentObject.put("ABSTRACT".toLowerCase(),removeExtraSpace(rec.getString(EVCombinedRec.ABSTRACT)));
             }
            
             if(rec.getString(EVCombinedRec.OTHER_ABSTRACT)!=null && rec.getString(EVCombinedRec.OTHER_ABSTRACT).trim().length()>0)
@@ -2786,7 +2786,7 @@ public class CombinedXMLWriter
     	String output="";
     	if(input!=null)
     	{
-    		output=input.trim().replaceAll("\\s{2,}", " ");
+    		output=Entity.unescapeHtml(input.trim().replaceAll("\\s{2,}", " "));
     	}
     	return output;
     }
