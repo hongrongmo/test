@@ -207,7 +207,10 @@ public class CafeCorrectionLambdaHandler implements RequestHandler<SNSEvent,Stri
 			Calendar cal = Calendar.getInstance();
 			dayOfWeek = cal.get(Calendar.DAY_OF_WEEK);
 			
-			//added 01/28/2020, wk [202006] to use current weeknumber instead and day of the week as updatenumber
+			//added 01/28/2020, wk [202006] to use current weeknumber instead and day of the week as updatenumber, ithappen that when run correction on Sunday still getting current week
+			// though it has to be next week's weeknumber (i.e. when pass week from shell script on Sunday still 202013, and day of week 1, so it is loaded as 2020131, though that
+			// should passed already, it has to be 2020141, and so will use week of calendar and add 1 to it instead of reading from shell script
+			loadnumber =  Integer.toString(cal.get(Calendar.WEEK_OF_YEAR) + 1);
 			newUpdateNum = loadnumber + Integer.toString(dayOfWeek);
 			
 			//newUpdateNum = tempUpdateNum + Integer.toString(dayOfWeek);
