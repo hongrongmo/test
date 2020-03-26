@@ -386,19 +386,19 @@ public class EptCombiner extends Combiner {
 	
 	                rec.put(rec.DESIGNATED_STATES, prepareMulti(rs.getString("ds")));
 	
-	                this.writer.writeRec(rec);
+	                //this.writer.writeRec(rec);
 	                /**********************************************************/
 	    	        //following code used to test kafka by hmo@2020/01/30
 	    	        //this.writer.writeRec(recArray,kafka);
 	    	        /*********************************************************/
-	                /*
+	                
 	    	        //writer.writeRec(rec,kafka);
 	    	        
 	                //use thread to send kafka message
 	                MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
 		            thread = new Thread(sendMessage, "Thread 1");
 		            thread.start();
-		            */
+		            
 	            }
 	
 	        }

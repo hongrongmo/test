@@ -772,19 +772,19 @@ public class INSPECCombiner
 	                rec.put(EVCombinedRec.STARTPAGE, getFirstPage(rs.getString("pipn")));
 	                rec.put(EVCombinedRec.ACCESSION_NUMBER, rs.getString("ANUM"));
 	
-	                writer.writeRec(rec);
+	                //writer.writeRec(rec);
 	                
 	                /**********************************************************/
 	                //following code used to test kafka by hmo@2020/01/30
 	                //this.writer.writeRec(recArray,kafka);
 	                /**********************************************************/
-	                /*
+	                
 	                //writer.writeRec(rec,kafka);
 	               
 	                MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
 		            thread = new Thread(sendMessage);
 		            thread.start();
-		            */
+		            
 	            }
 	
 	        }
