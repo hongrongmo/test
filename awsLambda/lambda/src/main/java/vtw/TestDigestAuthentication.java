@@ -33,7 +33,7 @@ public class TestDigestAuthentication {
 	        CredentialsProvider credsProvider = new BasicCredentialsProvider();
 	        credsProvider.setCredentials(
 	                new AuthScope("acc.vtw.elsevier.com", 443),
-	                new UsernamePasswordCredentials("engineering-village", "elCome29347"));
+	                new UsernamePasswordCredentials("engineering-village", "PWD"));
 	        CloseableHttpClient httpclient = HttpClients.custom()
 	                .setDefaultCredentialsProvider(credsProvider)
 	                .build();

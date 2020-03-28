@@ -72,8 +72,6 @@ public class TestReceiveAmazonSQSMessage implements MessageListener {
 	//Create the connection factory using providedcredentials
 			// this factory creates can talk to the queues in "us-east-1" region
 
-			//BasicAWSCredentials awsCreds = new BasicAWSCredentials("AKIAJ6F62FH2H7AKJVRQ", "6IQ5TG1abov49mq3V7sQodRXOCXSxMqhVq3/GViQ");
-
 			SQSConnectionFactory connectionFactory = SQSConnectionFactory.builder().
 					withRegion(Region.getRegion(Regions.US_EAST_1)).
 					withAWSCredentialsProvider(new EnvironmentVariableCredentialsProvider()).build();
