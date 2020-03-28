@@ -1,0 +1,400 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Newstar app server EC2",
+  "Parameters": {
+    "KeyPair": {
+      "Type": "String",
+      "Description": "The EC2 Key Pair to allow SSH access to the instances. The keypair must already exist in EC2.",
+      "Default": "non-Prod"
+    },
+    "VpcId": {
+      "Description": "VpcId of your existing Virtual Private Cloud (VPC)",
+      "Type": "String",
+      "Default": "vpc-90df1ff1"
+    },
+    "Subnet": {
+      "Default": "subnet-c7f030a6",
+      "Description": "The VPC subnet you want to create the EC2 instance in.",
+      "Type": "String"
+    },
+    "DBName": {
+      "Description": "The JDBC connection name of the database you want to use.",
+      "Type": "String",
+      "MinLength": "1",
+      "Default": "EID"
+    },
+    "AMI": {
+      "Default": "ami-876532ee",
+      "Description": "AMI ID",
+      "Type": "String"
+    },
+    "Environment": {
+      "Type": "String",
+      "MinLength": "1",
+      "Description": "Options: prod,cert,dev",
+      "Default": "prod"
+    },
+    "ExphomeSnapshot": {
+      "Type": "String",
+      "Description": "Snapshot to use for /export/home EBS volume"
+    },
+    "InstanceType": {
+      "Description": "Type of EC2 instance to launch.",
+      "Type": "String",
+      "AllowedValues": [
+        "t1.micro",
+        "m1.small",
+        "m1.medium",
+        "m3.small",
+        "m3.medium",
+        "m3.large",
+        "m3.xlarge",
+        "m3.2xlarge"
+      ],
+      "Default": "m3.large"
+    }
+  },
+  "Mappings": {
+    "SubnetConfig": {
+      "VPC": {
+        "CIDR": "10.178.160.0/20",
+        "ID": "vpc-90df1ff1"
+      },
+      "public": {
+        "CIDIR": [
+          "10.178.168/0/24",
+          "10.178.166.0/24"
+        ],
+        "SUBNET": [
+          "subnet-4ef1312f",
+          "subnet-c7f030a6"
+        ],
+        "AZ": [
+          "us-east-1c",
+          "us-east-1a"
+        ]
+      },
+      "na": {
+        "CIDIR": [
+          "10.178.161.0/25"
+        ],
+        "SUBNET": [
+          "subnet-c6f131a7"
+        ],
+        "AZ": [
+          "us-east-1a"
+        ]
+      },
+      "ucd": {
+        "CIDIR": [
+          "10.178.169.0/24",
+          "10.178.167.0/24"
+        ],
+        "SUBNET": [
+          "subnet-d2f232b3",
+          "subnet-29f23248"
+        ],
+        "AZ": [
+          "us-east-1c",
+          "us-east-1a"
+        ]
+      },
+      "prod": {
+        "CIDIR": [
+          "10.178.165.0/24",
+          "10.178.163.0/24"
+        ],
+        "SUBNET": [
+          "subnet-aef232cf",
+          "subnet-04f23265"
+        ],
+        "AZ": [
+          "us-east-1c",
+          "us-east-1a"
+        ]
+      }
+    }
+  },
+  "Resources": {
+    "NewstarExphome": {
+      "Type": "AWS::EC2::Volume",
+      "Properties": {
+        "AvailabilityZone": "us-east-1a",
+        "SnapshotId": {
+          "Ref": "ExphomeSnapshot"
+        }
+      }
+    },
+    "Newstar": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "NetworkInterfaces": [
+          {
+            "Description": "Public interface",
+            "AssociatePublicIpAddress": "true",
+            "DeviceIndex": "0",
+            "GroupSet": [
+              "sg-96d759f3",
+              "sg-6a47a80f",
+              "sg-6548f80a"
+            ],
+            "SubnetId": {
+              "Ref": "Subnet"
+            }
+          }
+        ],
+        "ImageId": {
+          "Ref": "AMI"
+        },
+        "InstanceType": {
+          "Ref": "InstanceType"
+        },
+        "KeyName": {
+          "Ref": "KeyPair"
+        },
+        "AvailabilityZone": "us-east-1a",
+        "Volumes": [
+          {
+            "VolumeId": {
+              "Ref": "NewstarExphome"
+            },
+            "Device": "/dev/xvdi"
+          }
+        ],
+        "IamInstanceProfile": "NewstarRole",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "Newstar"
+          },
+          {
+            "Key": "Vpc",
+            "Value": {
+              "Fn::FindInMap": [
+                "SubnetConfig",
+                "VPC",
+                "ID"
+              ]
+            }
+          },
+          {
+            "Key": "Environment",
+            "Value": {
+              "Ref": "Environment"
+            }
+          }
+        ],
+        "UserData": {
+          "Fn::Base64": {
+            "Fn::Join": [
+              "\n",
+              [
+                "#!/bin/bash",
+                {
+                  "Fn::Join": [
+                    "=",
+                    [
+                      "ENV",
+                      {
+                        "Ref": "Environment"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "=",
+                    [
+                      "DBNAME",
+                      {
+                        "Ref": "DBName"
+                      }
+                    ]
+                  ]
+                },
+                "yum -y install puppet",
+                "yum-config-manager --enable epel",
+                "yum -y install binutils compat-libstdc++ elfutils-libelf elfutils-libelf-devel",
+                "yum -y install glibc glibc-common glibc-devel  gcc  gcc-c++ libaio-devel libaio libgcc",
+                "yum -y install libstdc++ libstdc++-devel make sysstat unixODBC unixODBC-devel",
+                "yum -y install ftp lftp git git-svn svn",
+                "mkdir -p /var/els/tmp",
+                "groupadd -g 501 dba",
+                "#useradd -u 500 -g 501 -d /home/oracle -s /bin/bash oracle",
+                "#chage -I -1 -E -1 -M 99999 -m 0 oracle",
+                "mkdir -p /opt/oracle",
+                "#chown oracle:dba /opt/oracle",
+                "chmod 755 /opt/oracle",
+                "echo '/dev/xvdi        /export       ext4    defaults        0   0' >>/etc/fstab ",
+                "mkdir /export",
+                "mount /export",
+                "ln -s /export/home/eptuser/data /data",
+                "chmod 755 /export",
+                "groupadd -g 32351 eptuser",
+                "useradd -u 32351 -g 32351 -d /export/home/eptuser -s /bin/bash eptuser",
+                "chage -I -1 -E -1 -M 99999 -m 0 eptuser",
+                "chown eptuser:eptuser /export/home/eptuser",
+                "cat >/var/els/tmp/.s3cfg<<EOF",
+                "access_key = $ACCESS_KEY",
+                "secret_key = $SECRET_KEY",
+                "use_https = True",
+                "EOF",
+                "#/usr/bin/s3cmd -c /var/els/tmp/.s3cfg get s3://els-day-ops/installs/lin64-11.2.0.3.tar.gz /opt/oracle",
+                "export AWS_DEFAULT_REGION=us-east-1",
+                "/usr/bin/aws s3 cp s3://els-day-ops/installs/lin64-11.2.0.3.tar.gz /opt/oracle",
+                "/bin/tar -C /opt/oracle -zxvf /opt/oracle/lin64-11.2.0.3.tar.gz",
+                "rm -f /opt/oracle/lin64-11.2.0.3.tar.gz",
+                "cat>>/export/home/eptuser/.bash_profile<<EOF",
+                "# .bash_profile",
+                "# Get the aliases and functions",
+                "if [ -f ~/.bashrc ]; then",
+                ". ~/.bashrc",
+                "fi",
+                "# User specific environment and startup programs",
+                "ORACLE_SID=eid",
+                "export ORACLE_HOME=/opt/oracle/lin64-11.2.0.3",
+                "export TNS_ADMIN=/opt/oracle/lin64-11.2.0.3/network/admin",
+                "#PATH=$PATH:$HOME/bin",
+                "PATH=$PATH:$HOME/bin:/opt/oracle/lin64-11.2.0.3/bin",
+                "export PATH",
+                "umask 0007",
+                "export EDITOR=vim",
+                "EOF",
+                "cat>>/export/home/eptuser/.bashrc<<EOF",
+                "# .bashrc",
+                "# Source global definitions",
+                "if [ -f /etc/bashrc ]; then",
+                ". /etc/bashrc",
+                "fi",
+                "# User specific aliases and functions",
+                "#umask 077",
+                "umask 022",
+                "ORACLE_SID=eid",
+                "export ORACLE_HOME=/opt/oracle/lin64-11.2.0.3",
+                "export TNS_ADMIN=/opt/oracle/lin64-11.2.0.3/network/admin",
+                "PATH=$PATH:$HOME/bin:/opt/oracle/lin64-11.2.0.3/bin",
+                "export PATH",
+                "export AWS_DEFAULT_REGION=us-east-1",
+                "EOF",
+                "cat>>/home/ec2-user/.bash_profile<<EOF",
+                "# .bash_profile",
+                "# Get the aliases and functions",
+                "if [ -f ~/.bashrc ]; then",
+                ". ~/.bashrc",
+                "fi",
+                "# User specific environment and startup programs",
+                "ORACLE_SID=eid",
+                "export ORACLE_HOME=/opt/oracle/lin64-11.2.0.3",
+                "export TNS_ADMIN=/opt/oracle/lin64-11.2.0.3/network/admin",
+                "#PATH=$PATH:$HOME/bin",
+                "PATH=$PATH:$HOME/bin:/opt/oracle/lin64-11.2.0.3/bin",
+                "export PATH",
+                "umask 0007",
+                "export EDITOR=vim",
+                "EOF",
+                "cat>>/home/ec2-user/.bashrc<<EOF",
+                "# .bashrc",
+                "# Source global definitions",
+                "if [ -f /etc/bashrc ]; then",
+                ". /etc/bashrc",
+                "fi",
+                "# User specific aliases and functions",
+                "umask 077",
+                "ORACLE_SID=eid",
+                "export ORACLE_HOME=/opt/oracle/lin64-11.2.0.3",
+                "export TNS_ADMIN=/opt/oracle/lin64-11.2.0.3/network/admin",
+                "PATH=$PATH:$HOME/bin:/opt/oracle/lin64-11.2.0.3/bin",
+                "export PATH",
+                "EOF",
+                "#/usr/bin/s3cmd -c /var/els/tmp/.s3cfg sync s3://els-day-ops/puppet /var/els",
+                "#AWS_DEFAULT_REGION variable is set above, so this will work.",
+                "/usr/bin/aws s3 sync s3://els-day-ops/puppet /var/els",
+                "chown -R ec2-user:ec2-user /var/els",
+                "cat>/opt/oracle/tnsnames.ora<<EOF",
+                "DREIB=",
+                "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=dreib.cmdvszxph9cf.us-east-1.rds.amazonaws.com)(PORT=1521))(CONNECT_DATA=(SID=dreib)))",
+                "\n",
+                "EIA=",
+                "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=eia.cmdvszxph9cf.us-east-1.rds.amazonaws.com)(PORT=1521))(CONNECT_DATA=(SID=eia)))",
+                "\n",
+                "EIB=",
+                "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=eib.cmdvszxph9cf.us-east-1.rds.amazonaws.com)(PORT=1521))(CONNECT_DATA=(SID=eib)))",
+                "\n",
+                "EID=",
+                "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=eid.cmdvszxph9cf.us-east-1.rds.amazonaws.com)(PORT=1521))(CONNECT_DATA=(SID=eid)))",
+                "EOF",
+                "chown -R oracle:dba /opt/oracle/",
+                "chmod 644 /opt/oracle/tnsnames.ora",
+                "chmod 644 /opt/oracle/lin64-11.2.0.3/sqlplus/admin/glogin.sql",
+                "echo 'ZONE=America/New_York' >/etc/sysconfig/clock",
+                "sudo ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime",
+                "#Start Tomcat as eptuser",
+                "su - eptuser /export/home/eptuser/apache-tomcat-7.0.29/bin/startup.sh",
+                "#Enable cron for eptuser and set up schecduled jobs",
+                "echo eptuser >>/etc/cron.allow",
+                "cat >>/var/spool/cron/eptuser <<EPTCTAB",
+                "#Sync EV bulletins data to AWS S3 buckets",
+                "00,15,30,45 * * * * /export/home/eptuser/sync-bulletins_to_s3.sh >/tmp/.sync-bulletins_to_s3.log 2>&1",
+                "EPTCTAB",
+                "chown eptuser:eptuser /var/spool/cron/eptuser",
+                "touch /tmp/.ec2-ready"
+              ]
+            ]
+          }
+        }
+      }
+    }
+  },
+  "Outputs": {
+    "WebsiteURL": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "http://",
+            {
+              "Fn::GetAtt": [
+                "Newstar",
+                "PrivateDnsName"
+              ]
+            }
+          ]
+        ]
+      },
+      "Description": "URL for newly created EC2 Instance"
+    },
+    "InstanceId": {
+      "Description": "InstanceId of the newly created EC2 instance",
+      "Value": {
+        "Ref": "Newstar"
+      }
+    },
+    "AZ": {
+      "Description": "Availability Zone of the newly created EC2 instance",
+      "Value": {
+        "Fn::GetAtt": [
+          "Newstar",
+          "AvailabilityZone"
+        ]
+      }
+    },
+    "PrivateIP": {
+      "Description": "Private IP address of the newly created EC2 instance",
+      "Value": {
+        "Fn::GetAtt": [
+          "Newstar",
+          "PrivateIp"
+        ]
+      }
+    },
+    "PrivateDNS": {
+      "Description": "Private DNSName of the newly created EC2 instance",
+      "Value": {
+        "Fn::GetAtt": [
+          "Newstar",
+          "PrivateDnsName"
+        ]
+      }
+    }
+  }
+}

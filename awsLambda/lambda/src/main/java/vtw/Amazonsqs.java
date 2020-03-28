@@ -76,6 +76,7 @@ public class Amazonsqs {
 		try {
 			credentials = new EnvironmentVariableCredentialsProvider();   // works good for VTW queues
 			
+			
 		} catch (Exception e) {
 			throw new AmazonClientException(
 					"Cannot load the credentials from the credential profiles file. " +

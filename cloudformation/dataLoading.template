@@ -1,0 +1,401 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "EV data loading node EC2",
+  "Mappings": {
+    "SubnetConfig": {
+      "VPC": {
+        "CIDR": "10.178.160.0/20",
+        "ID": "vpc-90df1ff1"
+      },
+      "na": {
+        "AZ": [
+          "us-east-1a"
+        ],
+        "CIDIR": [
+          "10.178.161.0/25"
+        ],
+        "SUBNET": [
+          "subnet-c6f131a7"
+        ]
+      },
+      "prod": {
+        "AZ": [
+          "us-east-1c",
+          "us-east-1a"
+        ],
+        "CIDIR": [
+          "10.178.165.0/24",
+          "10.178.163.0/24"
+        ],
+        "SUBNET": [
+          "subnet-aef232cf",
+          "subnet-04f23265"
+        ]
+      },
+      "public": {
+        "AZ": [
+          "us-east-1c",
+          "us-east-1a"
+        ],
+        "CIDIR": [
+          "10.178.168/0/24",
+          "10.178.166.0/24"
+        ],
+        "SUBNET": [
+          "subnet-4ef1312f",
+          "subnet-c7f030a6"
+        ]
+      },
+      "ucd": {
+        "AZ": [
+          "us-east-1c",
+          "us-east-1a"
+        ],
+        "CIDIR": [
+          "10.178.169.0/24",
+          "10.178.167.0/24"
+        ],
+        "SUBNET": [
+          "subnet-d2f232b3",
+          "subnet-29f23248"
+        ]
+      }
+    }
+  },
+  "Outputs": {
+    "AZ": {
+      "Description": "Availability Zone of the newly created EC2 instance",
+      "Value": {
+        "Fn::GetAtt": [
+          "DataLoading",
+          "AvailabilityZone"
+        ]
+      }
+    },
+    "InstanceId": {
+      "Description": "InstanceId of the newly created EC2 instance",
+      "Value": {
+        "Ref": "DataLoading"
+      }
+    },
+    "PrivateDNS": {
+      "Description": "Private DNSName of the newly created EC2 instance",
+      "Value": {
+        "Fn::GetAtt": [
+          "DataLoading",
+          "PrivateDnsName"
+        ]
+      }
+    },
+    "PrivateIP": {
+      "Description": "Private IP address of the newly created EC2 instance",
+      "Value": {
+        "Fn::GetAtt": [
+          "DataLoading",
+          "PrivateIp"
+        ]
+      }
+    },
+    "WebsiteURL": {
+      "Description": "URL for newly created EC2 Instance",
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "http://",
+            {
+              "Fn::GetAtt": [
+                "DataLoading",
+                "PrivateDnsName"
+              ]
+            }
+          ]
+        ]
+      }
+    }
+  },
+  "Parameters": {
+    "AMI": {
+      "Default": "ami-876532ee",
+      "Description": "AMI ID to use",
+      "Type": "String"
+    },
+    "DBName": {
+      "Default": "EID",
+      "Description": "The JDBC connection name of the database you want to use.",
+      "MinLength": "1",
+      "Type": "String"
+    },
+    "DataSnapshot": {
+      "Description": "Snapshot to use for EBS volume mounted as /data",
+      "Type": "String"
+    },
+    "Environment": {
+      "Default": "prod",
+      "Description": "Options: prod,cert,dev",
+      "MinLength": "1",
+      "Type": "String"
+    },
+    "InstanceType": {
+      "AllowedValues": [
+        "t1.micro",
+        "m1.small",
+        "m1.medium",
+        "m1.large",
+        "m1.xlarge",
+        "m2.xlarge",
+        "m2.2xlarge",
+        "m2.4xlarge",
+        "m3.xlarge"
+      ],
+      "Default": "m3.xlarge",
+      "Description": "Type of EC2 instance to launch. To handle the largest EV processing jobs, m3.xlarge is recommended.",
+      "Type": "String"
+    },
+    "KeyPair": {
+      "Default": "non-Prod",
+      "Description": "The EC2 Key Pair to allow SSH access to the instances. The keypair must already exist in EC2.",
+      "Type": "String"
+    },
+    "Role": {
+      "Default": "EVDataLoadingRole",
+      "Description": "IAM Role to use with stack",
+      "Type": "String"
+    },
+    "Subnet": {
+      "Default": "subnet-04f23265",
+      "Description": "The VPC subnet you want to create the EC2 instance in.",
+      "Type": "String"
+    },
+    "VpcId": {
+      "Default": "vpc-90df1ff1",
+      "Description": "VpcId of your existing Virtual Private Cloud (VPC)",
+      "Type": "String"
+    }
+  },
+  "Resources": {
+    "DataLoading": {
+      "Properties": {
+        "AvailabilityZone": "us-east-1a",
+        "Volumes": [
+          {
+            "VolumeId": {
+              "Ref": "EVdataprocessvol"
+            },
+            "Device": "/dev/xvdh"
+          }
+        ],
+        "IamInstanceProfile": "EVDataLoadingRole",
+        "ImageId": {
+          "Ref": "AMI"
+        },
+        "InstanceType": {
+          "Ref": "InstanceType"
+        },
+        "KeyName": {
+          "Ref": "KeyPair"
+        },
+        "SecurityGroupIds": [
+          "sg-b04cfcdf",
+          "sg-6a47a80f",
+          "sg-7b4dfd14",
+          "sg-6548f80a",
+          "sg-e6f34289"
+        ],
+        "SubnetId": {
+          "Ref": "Subnet"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "DataLoading"
+          },
+          {
+            "Key": "Vpc",
+            "Value": {
+              "Fn::FindInMap": [
+                "SubnetConfig",
+                "VPC",
+                "ID"
+              ]
+            }
+          },
+          {
+            "Key": "Environment",
+            "Value": {
+              "Ref": "Environment"
+            }
+          }
+        ],
+        "UserData": {
+          "Fn::Base64": {
+            "Fn::Join": [
+              "\n",
+              [
+                "#!/bin/bash",
+                "export AWS_DEFAULT_REGION=us-east-1",
+                "yum -y install puppet",
+                "yum-config-manager --enable epel",
+                "yum -y install binutils compat-libstdc++ elfutils-libelf elfutils-libelf-devel",
+                "yum -y install glibc glibc-common glibc-devel  gcc  gcc-c++ libaio-devel libaio libgcc",
+                "yum -y install libstdc++ libstdc++-devel make sysstat unixODBC unixODBC-devel",
+                "yum -y install lftp git git-svn svn unix2dos python-paramiko.noarch python-scp.noarch python-pip java-1.7.0-openjdk.x86_64",
+                "yum -y update --security",
+                "mkdir -p /var/els/tmp",
+                "groupadd -g 501 dba",
+                "useradd -u 500 -g 501 -d /home/oracle -s /bin/bash oracle",
+                "mkdir -p /opt/oracle",
+                "# temp comment out to make ec2-user sqlplus: chown oracle:dba /opt/oracle",
+                "chmod 755 /opt/oracle",
+                "# mount attached volume to /data directory",
+                "mkdir /data",
+                "echo '/dev/xvdh   /data       ext4    defaults        0   0' >> /etc/fstab",
+                "#mount -t ext3 -o noatime /dev/xvdh /data",
+                "mount /data",
+                "chmod 755 /data",
+                "export AWS_DEFAULT_REGION=us-east-1",
+                "/usr/bin/aws s3 cp s3://els-day-ops/installs/lin64-11.2.0.3.tar.gz /opt/oracle",
+                "/bin/tar -C /opt/oracle -zxvf /opt/oracle/lin64-11.2.0.3.tar.gz",
+                "rm -f /opt/oracle/lin64-11.2.0.3.tar.gz",
+                "cat>>/home/oracle/.bash_profile<<EOF",
+                "# .bash_profile",
+                "# Get the aliases and functions",
+                "if [ -f ~/.bashrc ]; then",
+                ". ~/.bashrc",
+                "fi",
+                "# User specific environment and startup programs",
+                "ORACLE_SID=eid",
+                "export ORACLE_HOME=/opt/oracle/lin64-11.2.0.3",
+                "export TNS_ADMIN=/opt/oracle/lin64-11.2.0.3/network/admin",
+                "PATH=$PATH:$HOME/bin:/opt/oracle/lin64-11.2.0.3/bin",
+                "export PATH",
+                "umask 0007",
+                "export EDITOR=vim",
+                "EOF",
+                "cat>>/home/oracle/.bashrc<<EOF",
+                "# .bashrc",
+                "# Source global definitions",
+                "if [ -f /etc/bashrc ]; then",
+                ". /etc/bashrc",
+                "fi",
+                "# User specific aliases and functions",
+                "umask 022",
+                "ORACLE_SID=eid",
+                "export ORACLE_HOME=/opt/oracle/lin64-11.2.0.3",
+                "export TNS_ADMIN=/opt/oracle/lin64-11.2.0.3/network/admin",
+                "PATH=$PATH:$HOME/bin:/opt/oracle/lin64-11.2.0.3/bin:/data/loading/bin",
+                "export PATH",
+                "EOF",
+                "echo ec2-user >> /etc/cron.allow",
+                "cat >> /var/spool/cron/ec2-user << ECTAB",
+                "#Snapshot all EBS volumes attached to the current instance",
+                "55 4 * * * /bin/sync;/data/cron/snapbyinstance.py >/tmp/.snapbyinstance.log 2>&1",
+                "#Download new weekly data files from vendors",
+                "30 8 * * * /data/loading/get_datafiles.sh >/tmp/.get_datafiles.log 2>&1",
+                "0 11,21 * * * /data/loading/get_datafiles.sh >/tmp/.get_datafiles.log 2>&1",
+                "#New download script that fills in /data/incoming directories",
+                "30 10,12,14,18 * * * /data/loading/get_datafiles-fs_queue.sh >/tmp/.get_datafiles-fs_queue.log 2>&1",
+                "#35 9 * * * /data/loading//get_ipdd_patents.sh >/tmp/.get_ipdd_patents.log 2>&1",
+                "#Daily Snapshot for Newstar EC2",
+                "55 23 * * * /data/cron/snapbyinstance.py i-8e88d959 >/tmp/.snapbyinstance-newstar.log 2>&1",
+                "30 * * * * /usr/bin/aws s3 sync /data/archive/ s3://ev-data/archive",
+                "#Sunday - Remove excess snapshots (for all instances/volumes), based on fixed policy:",
+                "00 06 * * 0 /data/cron/trim_snapshots.py >/tmp/.trim_snapshots.log 2>&1",
+                "#Sync raw Encompass Pat data from s3://els-newstar/ to s3://ev-data/archive/EPT/",
+                "00,30 * * * * /usr/bin/aws s3 sync s3://els-newstar/ s3://ev-data/archive/EPT/ >/tmp/raw_ept-sync.log 2>&1",
+                "#Load browse index (lookup table) data at the end of each week (Friday)",
+                "00 15 * * 5 /data/loading/lookups/scripts/lookups_main.sh >/tmp/.weekly_lookups.log 2>&1",
+                "ECTAB",
+                "cat>>/home/ec2-user/.bash_profile<<EOF",
+                "#.bash_profile",
+                "#Get the aliases and functions",
+                "if [ -f ~/.bashrc ]; then",
+                " . ~/.bashrc",
+                "fi",
+                "# User specific environment and startup programs",
+                "ORACLE_SID=eid",
+                "export ORACLE_HOME=/opt/oracle/lin64-11.2.0.3",
+                "export TNS_ADMIN=/opt/oracle/lin64-11.2.0.3/network/admin",
+                "export AWS_DEFAULT_REGION=us-east-1",
+                "export PATH=$PATH:$HOME/bin:/opt/oracle/lin64-11.2.0.3/bin:/data/loading/bin",
+                "export CDPATH=.:/data:/data/archive",
+                "umask 0007",
+                "export EDITOR=vim",
+                "#Data loading environment variables",
+                "export ORACLE_DRIVER=oracle.jdbc.driver.OracleDriver",
+                "#export FAST_URL=http://ei-main.nda.fastsearch.net:15100",
+                "export FAST_URL=http://evprod14.cloudapp.net:15100",
+                "export RDS_ENDPOINT=cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521",
+                "EOF",
+                "#Set path w/ embedded current load number value",
+                "echo -n 'PS1=\"[$'>>/home/ec2-user/.bash_profile",
+                "echo '(/data/loading/bin/loadnumber)]\\u@\\h:\\w\\$\"'>>/home/ec2-user/.bash_profile",
+                "cat>>/home/ec2-user/.bashrc<<EOF",
+                "# Source global definitions",
+                "if [ -f /etc/bashrc ]; then",
+                ". /etc/bashrc",
+                "fi",
+                "# User specific aliases and functions",
+                "umask 077",
+                "alias lookupswkly='(pushd /data/loading/lookups/scripts && ./lookups_main.sh && popd)'",
+                "alias bulletinswk='(pushd /data/loading/bulletins && ./bulletins_wk_all.sh && popd)'",
+                "alias bulletinsmo='(pushd /data/loading/bulletins && ./bulletins_mo_all.sh && popd)'",
+                "alias loadcheck='sqlplus ba_loading@eia @/data/loading/SQL/loadcheck.sql'",
+                "alias aws_qa='sqlplus ba_loading@eid @/data/loading/SQL/aws_qa.sql'",
+                "ORACLE_SID=eid",
+                "export ORACLE_HOME=/opt/oracle/lin64-11.2.0.3",
+                "export TNS_ADMIN=/opt/oracle/lin64-11.2.0.3/network/admin",
+                "PATH=$PATH:$HOME/bin:/opt/oracle/lin64-11.2.0.3/bin",
+                "export PATH",
+                "EOF",
+                "#Copy Puppet files from S3. No Puppet modules are used in this template.",
+                "/usr/bin/aws s3 sync s3://els-day-ops/puppet /var/els",
+                "chown -R ec2-user:ec2-user /var/els",
+                "#Create tnsnames.ora with RDS endpoint definitions",
+                "cat>/opt/oracle/tnsnames.ora<<EOF",
+                "EIA=",
+                "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=eia.cmdvszxph9cf.us-east-1.rds.amazonaws.com)(PORT=1521))(CONNECT_DATA=(SID=eia)))",
+                "\n",
+                "EIB=",
+                "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=eib.cmdvszxph9cf.us-east-1.rds.amazonaws.com)(PORT=1521))(CONNECT_DATA=(SID=eib)))",
+                "\n",
+                "EID=",
+                "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=eid.cmdvszxph9cf.us-east-1.rds.amazonaws.com)(PORT=1521))(CONNECT_DATA=(SID=eid)))",
+                "EOF",
+                "#Create sqlplus login script",
+                "cat >/opt/oracle/lin64-11.2.0.3/sqlplus/admin/glogin.sql<<GLOGIN",
+                "column global_name new_value gname",
+                "set termout off",
+                "select lower(user) || '@' ||",
+                "case when instr(global_name,'.')>1",
+                "then substr(global_name,1,instr(global_name,'.')-1)",
+                "else global_name end",
+                "global_name from global_name;",
+                "set termout on",
+                "set sqlprompt '&gname> '",
+                "GLOGIN",
+                "chown -R oracle:dba /opt/oracle/",
+                "chmod 644 /opt/oracle/tnsnames.ora",
+                "chmod 644 /opt/oracle/lin64-11.2.0.3/sqlplus/admin/glogin.sql",
+                "#Set system time zone",
+                "echo 'ZONE=America/New_York' >/etc/sysconfig/clock",
+                "sudo ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime",
+                "touch /tmp/.ec2isready"
+              ]
+            ]
+          }
+        }
+      },
+      "Type": "AWS::EC2::Instance"
+    },
+    "EVdataprocessvol": {
+      "Properties": {
+        "AvailabilityZone": "us-east-1a",
+        "SnapshotId": {
+          "Ref": "DataSnapshot"
+        }
+      },
+      "Type": "AWS::EC2::Volume"
+    }
+  }
+}
