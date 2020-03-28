@@ -76,8 +76,6 @@ public class Amazonsqs {
 		try {
 			credentials = new EnvironmentVariableCredentialsProvider();   // works good for VTW queues
 			
-			//credentials = new BasicAWSCredentials("AKIAICULEC5YYPQORVWA", "WSuwqPhsuKbp51hvjTSA+4emlI25PlHIQJ+CnZGH");   // for get permissions over vtw queues
-			
 		} catch (Exception e) {
 			throw new AmazonClientException(
 					"Cannot load the credentials from the credential profiles file. " +
