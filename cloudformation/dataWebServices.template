@@ -1,0 +1,444 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Create instances for EV in a VPC",
+  "Parameters": {
+    "KeyPair": {
+      "Type": "String",
+      "Description": "The EC2 Key Pair to allow SSH access to the instances. The keypair must already exist in EC2.",
+      "Default": "non-Prod"
+    },
+    "MaxASGSize": {
+      "Description": "The total number of instances allowed for the auto scaling group",
+      "Type": "String",
+      "Default": "6"
+    },
+    "MinASGSize": {
+      "Description": "The minimum nuber of instances allowed for the auto scaling group",
+      "Type": "String",
+      "Default": "2"
+    },
+    "ProductTag": {
+        "Default": "EVDataWebServices",
+        "Description": "Enter the Product Tag for this account (e.g., gsmobile, epmmns, fcmobile...)",
+        "Type": "String"
+    },
+
+    "ArtifactName": {
+      "Default": "EvDataWebServices.war",
+      "Description" : "The name of the war file to install on the instance",
+      "Type": "String"
+    },
+
+    "Role": {
+        "Default": "Tomcat",
+        "Description": "Enter the Role (e.g. web, Apache, Tomcat, IIS)",
+        "Type": "String"
+    },
+    "ScalingUp": {
+      "Description": "The nuber of instances to scale up by",
+      "Type": "String",
+      "Default": "2"
+    },
+    "S3RoleProfile": {
+        "Description": "Enter the S3 Role Profile created for the account to use",
+        "Type": "String",
+        "Default": "S3-Role-S3Role-KDO91W0UO1LS"
+    },
+    "ScalingDown": {
+      "Description": "The nuber of instances to scale down by",
+      "Type": "String",
+      "Default": "1"
+    },
+    "DBName": {
+       "Description": "The JDBC connection name of the database you want to use",
+       "Type": "String",
+       "MinLength": "1",
+        "AllowedValues" : ["prod-db.engineeringvillage.com:1521:eia","eib.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eib"], 
+       "Default" : "eib.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eib"
+    },
+    "AMI": {
+      "Default": "ami-7e448516",
+      "Description": "AMI ID to use",
+      "Type": "String"
+    },
+    "SNSTopic" : {
+       "Description": "The SNS topic ARN to send alerts",
+       "Type": "String",
+       "Default": "arn:aws:sns:us-east-1:230521890328:AWSAlerts-Prod"
+    },
+    "PuppetMasterDNSName": {
+        "Default": "puppet.elsst.com",
+        "Description": "Enter the Puppet Master server DNS name",
+        "Type": "String"
+    },
+    "CPUHighAlarm":{
+       "Description" : "The threshold for high CPU",
+       "Default": "85",
+       "Type": "String"
+    },
+    "Environment": {
+      "Type": "String",
+      "MinLength": "1",
+      "Description": "Options: int,dev,cert,cert3,load,prod,release",
+      "AllowedValues": [
+        "int",
+        "dev",
+        "cert",
+        "cert3",
+        "load",
+        "prod",
+        "release"
+      ],
+      "Default": "dev"
+    },
+    "InstanceType": {
+      "Description": "Type of EC2 instance to launch",
+      "Type": "String",
+      "AllowedValues": [
+        "t1.micro",
+        "m1.small",
+        "m3.medium",
+        "m3.large",
+        "m3.xlarge",
+        "m3.2xlarge"
+      ],
+      "Default": "m3.large"
+    }
+  },
+  "Mappings": {
+    "SubnetConfig": {
+      "VPC": {"CIDR": "10.178.160.0/20", "ID": "vpc-90df1ff1" },
+      "public": {"CIDIR": ["10.178.168/0/24", "10.178.166.0/24"], "SUBNET": ["subnet-c7f030a6", "subnet-4ef1312f"], "AZ": ["us-east-1c", "us-east-1a"] },
+      "na": {"CIDIR": ["10.178.161.0/25"],"SUBNET": ["subnet-c6f131a7"], "AZ": ["us-east-1a"]},
+      "dev": {"CIDIR": ["10.178.161.128/25"],"SUBNET": ["subnet-87f131e6"], "AZ": ["us-east-1c"] },
+      "int": {"CIDIR": ["10.178.169.0/24","10.178.167.0/24"],"SUBNET": ["subnet-d2f232b3","subnet-29f23248"],"AZ": ["us-east-1c", "us-east-1a"]},
+      "load": {"CIDIR": ["10.178.169.0/24","10.178.167.0/24"],"SUBNET": ["subnet-d2f232b3","subnet-29f23248"],"AZ": ["us-east-1c", "us-east-1a"]},
+      "cert": {"CIDIR": ["10.178.169.0/24","10.178.167.0/24"],"SUBNET": ["subnet-d2f232b3","subnet-29f23248"],"AZ": ["us-east-1c", "us-east-1a"]},
+      "cert3": {"CIDIR": ["10.178.169.0/24","10.178.167.0/24"],"SUBNET": ["subnet-d2f232b3","subnet-29f23248"],"AZ": ["us-east-1c", "us-east-1a"]},
+      "ucd": {"CIDIR": ["10.178.169.0/24","10.178.167.0/24"],"SUBNET": ["subnet-d2f232b3","subnet-29f23248"],"AZ": ["us-east-1c", "us-east-1a"]},
+      "prod": {"CIDIR": ["10.178.165.0/24","10.178.163.0/24"],"SUBNET": ["subnet-aef232cf","subnet-04f23265"],"AZ": ["us-east-1c", "us-east-1a"] },
+      "release": {"CIDIR": ["10.178.165.0/24","10.178.163.0/24"],"SUBNET": ["subnet-aef232cf","subnet-04f23265"], "AZ": ["us-east-1c", "us-east-1a"] } },
+      "Region2AZ": {"us-east-1": {"AZ": ["us-east-1a","us-east-1c" ] } }
+  },
+  "Conditions": {
+        "UseProd" : {
+          "Fn::Equals": [
+            { "Ref" : "Environment" }, "prod"
+          ]
+        },
+        "DoNotUseProd" : {
+          "Fn::Not" : [
+            {
+              "Fn::Equals": [
+                { "Ref": "Environment" }, "prod"
+              ]
+            }
+          ]
+        }
+  },
+  "Resources": {
+    "CPUAlarmHigh": {
+        "Type": "AWS::CloudWatch::Alarm",
+        "Properties": {
+            "AlarmDescription": "Send Notification if CPU > 85% for 10 minutes",
+            "MetricName": "CPUUtilization",
+            "Namespace": "AWS/EC2",
+            "Statistic": "Average",
+            "Period": "300",
+            "EvaluationPeriods": "2",
+            "Threshold": { "Ref" : "CPUHighAlarm" },
+            "AlarmActions": [ { "Ref": "SNSTopic" } ],
+            "Dimensions": [
+                {
+                    "Name": "AutoScalingGroupName",
+                    "Value": { "Ref": "WebServiceAutoscaleGroup" }
+                }
+            ],
+            "ComparisonOperator": "GreaterThanThreshold"
+        }
+    },
+    "ScaleUpPolicy" : {
+       "Type" : "AWS::AutoScaling::ScalingPolicy",
+       "Properties" : {
+          "AdjustmentType" : "ChangeInCapacity",
+          "AutoScalingGroupName" : { "Ref" : "WebServiceAutoscaleGroup" },
+          "Cooldown" : "1",
+          "ScalingAdjustment" : { "Ref": "ScalingUp" }
+       }
+    },
+    "ScaleDownPolicy" : {
+       "Type" : "AWS::AutoScaling::ScalingPolicy",
+       "Properties" : {
+          "AdjustmentType" : "ChangeInCapacity",
+          "AutoScalingGroupName" : { "Ref" : "WebServiceAutoscaleGroup" },
+          "Cooldown" : "1",
+          "ScalingAdjustment" : { "Ref": "ScalingDown" }
+       }
+    },
+    "WebServiceAutoscaleGroup": {
+      "Type": "AWS::AutoScaling::AutoScalingGroup",
+       "UpdatePolicy" : {
+          "AutoScalingRollingUpdate" : {
+             "MaxBatchSize" : "2",
+             "MinInstancesInService" : "2",
+             "PauseTime" : "PT5M5S"
+          }
+        },
+      "Properties": {
+        "Cooldown": "120",
+        "DesiredCapacity": {
+          "Ref": "MinASGSize"
+        },
+        "AvailabilityZones": {
+          "Fn::FindInMap" : [
+            "SubnetConfig",
+            {
+              "Ref": "Environment"
+            },
+            "AZ"
+          ]
+        },
+        "VPCZoneIdentifier": {
+          "Fn::FindInMap": [
+            "SubnetConfig",
+            {
+              "Ref": "Environment"
+            },
+            "SUBNET"
+          ]
+        },
+        "HealthCheckGracePeriod": "300",
+        "HealthCheckType": "EC2",
+        "LaunchConfigurationName": {
+          "Ref": "WebServiceAutoScaleLaunchConfiguration"
+        },
+        "LoadBalancerNames": [
+          { "Ref": "ElasticLoadBalancer" }
+        ],
+        "MaxSize": { "Ref": "MaxASGSize" },
+        "MinSize": { "Ref": "MinASGSize" },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": {
+              "Fn::Join": [
+                "-",
+                [
+                  { "Ref": "ProductTag" },
+                  { "Ref": "Environment" }
+                ]
+              ]
+            },
+            "PropagateAtLaunch": "true"
+          },
+          {
+            "Key": "Environment",
+            "Value": {
+              "Ref": "Environment"
+            },
+            "PropagateAtLaunch": "true"
+          },
+          {
+            "Key": "StackName",
+            "Value": {
+              "Ref": "AWS::StackName"
+            },
+            "PropagateAtLaunch": "true"
+          }
+        ]
+      }
+    },
+    "WebServiceAutoScaleLaunchConfiguration": {
+      "Type": "AWS::AutoScaling::LaunchConfiguration",
+      "Metadata": {
+                "AWS::CloudFormation::Init": {
+                    "config": {
+                        "commands": {
+                            "hostname_set": {
+                                "command": {
+                                    "Fn::Join": [
+                                        " ; ",
+                                        [
+                                            "INSTANCE_ID=`/usr/bin/curl -s http://169.254.169.254/latest/meta-data/instance-id`",
+                                            "/bin/echo $INSTANCE_ID > /var/log/hostname-in-user-data.log",
+                                            "/bin/touch /etc/hostname",
+                                            "/bin/echo $INSTANCE_ID > /etc/hostname",
+                                            "/bin/hostname -F /etc/hostname",
+                                            "echo 127.0.0.1 localhost $INSTANCE_ID > /etc/hosts"
+                                        ]
+                                    ]
+                                }
+                            }
+                        },
+                        "packages": {
+                            "rubygems": {
+                                "json": []
+                            },
+                            "yum": {
+                                "gcc": [],
+                                "make": [],
+                                "ruby-devel": [],
+                                "rubygems": []
+                            }
+                        },
+                        "services": {
+                            "sysvinit": {}
+                        }
+                    }
+                },
+                "Puppet": {
+                    "environment": { "Ref": "Environment" },
+                    "product": { "Ref": "ProductTag" },
+                    "role": {
+                        "Fn::Join": [
+                            "",
+                            [
+                                { "Ref": "ProductTag" },
+                                "_",
+                                { "Ref": "Role" },
+                                "backend_",
+                                { "Ref": "Environment" }
+                            ]
+                        ]
+                    }
+                }
+            },
+      "Properties": {
+        "ImageId": { "Ref": "AMI" },
+        "InstanceType": { "Ref": "InstanceType" },
+        "KeyName": { "Ref": "KeyPair" },
+        "IamInstanceProfile": { "Ref": "S3Role" },
+        "SecurityGroups": [ "sg-6a47a80f", "sg-b04cfcdf" ],
+        "UserData": {
+          "Fn::Base64": {
+            "Fn::Join": [
+              "",
+              [
+                "#!/bin/bash -v\n",
+                "/opt/aws/bin/cfn-init -s ",
+                { "Ref": "AWS::StackId" },
+                " -r WebServiceAutoScaleLaunchConfiguration ",
+                " --region ",
+                { "Ref": "AWS::Region" },
+                "\n",
+                {"Fn::Join": ["=",["ENV",{"Ref": "Environment"} ] ] },
+                "\n",
+                { "Fn::Join": ["=", [ "APPNAME", { "Ref": "ArtifactName" } ] ] },
+                "\n",
+                { "Fn::Join": [ "=", [ "DBNAME", { "Ref": "DBName" } ] ] },
+                "\n",
+                { "Fn::If" : [ "UseProd", { "Fn::Join": ["=", [ "BUCKETNAME", "els-agrm-prod" ] ] },
+                { "Fn::Join": [ "=", [ "BUCKETNAME", "els-agrm-buildartifacts" ] ] } ] },
+                "\n",
+                "exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1\n",
+                "mkdir -p /var/els/scripts /var/els/puppet\n",
+                "mkdir -p /var/els/app/EvDataWebServices\n",
+                "mkdir -p /els/data /els/log /els/scripts\n",
+                "chown -R tomcat:ec2-user /els\n",
+                "chmod -R 755 /els\n",
+                "chown -R ec2-user:ec2-user /var/els\n",
+                "chmod -R 755 /var/els\n",
+                "/usr/bin/aws s3 cp s3://evwebapp/evweb_content.tar.gz /home/ec2-user\n",
+                "/usr/bin/aws s3 sync s3://els-day-ops/puppet2/ /var/els/puppet/\n",
+                "/usr/bin/aws s3 cp s3://$BUCKETNAME/apps/engvillage/$ENV/$APPNAME /var/els/app/EvDataWebServices\n",
+                "/usr/bin/aws s3 cp s3://$BUCKETNAME/config/EvDataWebServices_001.xml /var/els/app\n",
+                "cd /els/data; tar xzvf /home/ec2-user/evweb_content.tar.gz --strip=2; rm -f /home/ec2-user/evweb_content.tar.gz; chown -R ec2-user:ec2-user /els\n",
+                "cat>/var/els/puppet/manifests/site.pp<<EOF\n",
+                "node default {\n",
+                "class {'tomcat':\n",
+                "  version => '7.0.23'\n",
+                "}\n",
+                "class {'tct':\n",
+                "  environment => $ENV,\n",
+                "  dbName => '$DBNAME',\n",
+                "  dbUser => 'NA',\n",
+                "  dbPass => 'NA'\n",
+                "}\n",
+                "tct::install { \"EvDataWebServices\":\n",
+                "   path => '/var/els/app/EvDataWebServices_001.xml',\n",
+                "   environment => $ENV\n",
+                "}\n",
+                "}\n",
+                "EOF\n",
+        "/usr/bin/puppet apply --modulepath /var/els/puppet/modules /var/els/puppet/manifests/site.pp\n"
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "ElasticLoadBalancer": {
+            "Type": "AWS::ElasticLoadBalancing::LoadBalancer",
+            "Properties": {
+                "SecurityGroups": [
+                    "sg-fc47a899"
+                ],
+                "Tags": [
+                    {
+                        "Key": "Environment",
+                        "Value": { "Ref": "Environment" }
+                    },
+                    {
+                        "Key": "Name",
+                        "Value": { "Fn::Join": ["-", [ "Dataservices", { "Ref": "Environment" }, "lb"] ] }
+                    }
+                ],
+                "Subnets": { "Fn::FindInMap": [ "SubnetConfig", { "Ref": "Environment" }, "SUBNET" ] },
+                "LoadBalancerName": { "Fn::Join": ["-", [ "Dataservices", { "Ref": "Environment" }, "lb"] ] },
+                "Scheme": "internal",
+                "CrossZone": "true",
+                "Listeners": [{
+                    "LoadBalancerPort": "80",
+                    "InstancePort": "25835",
+                    "Protocol": "HTTP"
+                }],
+                "HealthCheck": {
+                    "Target": {
+                        "Fn::Join": ["", ["TCP:", "25835"]]
+                    },
+                    "HealthyThreshold": "10",
+                    "UnhealthyThreshold": "2",
+                    "Interval": "6",
+                    "Timeout": "3"
+                },
+                "ConnectionDrainingPolicy": {
+                    "Enabled": "true",
+                    "Timeout": "180"
+                }
+            }
+        },
+        "myDNSRecord" : {
+            "Type" : "AWS::Route53::RecordSet",
+            "Properties" : {
+                "HostedZoneName" : "engineeringvillage.com.",
+                "Comment" : "CNAME for data services service",
+                "Name" : { "Fn::If" : [ "UseProd", "services.engineeringvillage.com.",
+                               { "Fn::Join": ["-", [ {"Ref": "Environment" }, "services.engineeringvillage.com." ] ] } ] },
+                "Type" : "CNAME",
+                "TTL" : "900",
+                "ResourceRecords" : [ {"Fn::GetAtt":["ElasticLoadBalancer", "DNSName" ]} ]
+            }
+        },
+    "S3Role": {
+        "Properties": {
+            "Path": "/",
+            "Roles": [ { "Ref": "S3RoleProfile" } ]
+        },
+        "Type": "AWS::IAM::InstanceProfile"
+    }
+  },
+  "Outputs": {
+      "InternalELB": {
+          "Description": "URL of the newly created internal ELB",
+          "Value": {
+              "Fn::GetAtt": ["ElasticLoadBalancer", "DNSName"]
+          }
+      },
+      "URL": {
+          "Description": "The URL for data services server",
+          "Value": {
+            "Fn::Join": [ "", [ "http://", { "Ref": "myDNSRecord" } ] ]
+          }
+      }
+  }
+}

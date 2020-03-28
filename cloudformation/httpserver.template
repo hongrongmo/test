@@ -1,0 +1,496 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Template to create an environment with an ELB, ASG and 1 EC2 instance",
+    "Parameters": {
+        "KeyPair": {
+            "Type": "String",
+            "Description": "The EC2 Key Pair to allow SSH access to the instances. The keypair must already exist in EC2.",
+            "Default": "non-Prod"
+        },
+        "MaxASGSize": {
+            "Description": "The total number of instances allowed for the auto scaling group",
+            "Type": "String",
+            "Default": "2"
+        },
+        "MinASGSize": {
+            "Description": "The minimum nuber of instances allowed for the auto scaling group",
+            "Type": "String",
+            "Default": "2"
+        },
+        "PrivateSubnets": {
+            "Default": "subnet-04f23265,subnet-aef232cf",
+            "Description": "The private Subnet IDs where the instances, defaults are us-east-1",
+            "Type": "CommaDelimitedList"
+        },
+        "PublicSubnets": {
+            "Description": "The list of public Subnet IDs, defaults are us-east-1 ",
+            "Type": "CommaDelimitedList",
+			"Default": "subnet-c7f030a6,subnet-4ef1312f"			
+        },
+        "VpcId" : {
+            "Type" : "String",
+            "Description" : "VpcId of your existing Virtual Private Cloud (VPC)",
+            "Default" : "vpc-90df1ff1"
+        },
+        "AMI": {
+            "Default": "ami-1f140876",
+            "Description": "AMI ID to use",
+            "Type": "String"
+        },
+        "BillingID": {
+            "Default": "EngineeringVillage",
+            "Description": "Enter the Billing ID Tag for this account",
+            "Type": "String"
+        },
+        "OwnerTag": {
+            "Default": "EngineeringVillage",
+            "Description": "Enter the Owner Tag for this account",
+            "Type": "String"
+        },
+        "ProductTag": {
+            "Default": "EV",
+            "Description": "Enter the Product Tag for this account (e.g., gsmobile, epmmns, fcmobile...)",
+            "Type": "String"
+        },
+        "AZ1Index": {
+            "ConstraintDescription": "Must be an integer between 0 and 4 inclusive",
+            "Default": 0,
+            "Description": "First Availability Zone index",
+            "MaxValue": 4,
+            "MinValue": 0,
+            "Type": "Number"
+         },
+        "AZ2Index": {
+            "ConstraintDescription": "Must be an integer between 0 and 4 inclusive",
+            "Default": 2,
+            "Description": "Second Availability Zone index",
+            "MaxValue": 4,
+            "MinValue": 0,
+            "Type": "Number"
+		},
+       "AZ3Index": {
+            "ConstraintDescription": "Must be an integer between 0 and 4 inclusive",
+            "Description": "Third Availability Zone index, enter NONE if no third AZ. We typically don't have 3 AZs in our VPCs",
+            "Type": "String",
+            "Default": "NONE"
+        },
+        "PuppetMasterDNSName": {
+            "Default": "puppet.elsst.com",
+            "Description": "Enter the Puppet Master server DNS name",
+            "Type": "String"
+        },
+        "ELBSecurityGroupId": {
+            "Description": "Security group Id for the ELB Security Group previously created (format: sg-xxxxxxxx)",
+            "Type": "String",
+			"Default": "sg-f75bbf92"		
+        },		
+        "ServerSecurityGroupId": {
+            "Description": "Security group Id for the Web or App Server Security Group previously created (format: sg-xxxxxxxx)",
+            "Type": "String",
+			"Default": "sg-b04cfcdf"		
+        },
+        "InstancePort": {
+            "Default": 80,
+            "Description": "Enter the instance port for the ELB",
+            "Type": "Number"		
+        },
+        "InstancePortHTTPS": {
+            "Default": 443,
+            "Description": "Enter the instance port for the ELB",
+            "Type": "Number"		
+        },
+        "Role": {
+            "Default": "Apache",
+            "Description": "Enter the Role (e.g. web, Apache, Tomcat, IIS)",
+            "Type": "String"
+        },
+        "Environment": {
+            "Type": "String",
+            "MinLength": "1",
+            "Description": "Options: int,dev,cert,load,prod,release",
+            "AllowedValues": [
+                "int",
+                "dev",
+                "cert",
+                "load",
+                "prod",
+                "release"
+            ],
+            "Default": "prod"
+        },
+        "S3RoleProfile": {
+            "Description": "Enter the S3 Role Profile created for the account to use, enter NONE if no S3 Role created",
+            "Type": "String",
+            "Default": "NONE"		
+		},
+        "InstanceType": {
+            "Description": "Type of EC2 instance to launch",
+            "Type": "String",
+            "AllowedValues": [
+                "t1.micro",
+                "m1.small",
+                "m3.medium",
+                "m3.large",
+                "m3.xlarge",
+                "m2.xlarge",
+                "m2.2xlarge",
+                "m2.4xlarge"
+            ],
+            "Default": "t1.micro"
+        }
+    },
+    "Conditions": {
+        "AZ2Condition": {
+            "Fn::Equals": [
+                { "Ref": "AZ3Index" }, "NONE"
+            ]
+        },
+        "AZ3Condition": {
+            "Fn::Not": [
+                {
+                    "Fn::Equals": [ 
+                        { "Ref": "AZ3Index" }, "NONE"
+                    ]
+                }
+            ]
+        },
+        "S3RoleCondition": {
+            "Fn::Not": [
+                {
+                    "Fn::Equals": [
+                        { "Ref": "S3RoleProfile" }, "NONE"
+                    ]
+                }
+            ]
+        },
+        "NoS3RoleCondition": {
+            "Fn::Equals": [
+                { "Ref": "S3RoleProfile" }, "NONE"
+            ]
+        }
+    },
+    "Resources": {
+        "PublicELB": {
+            "Type": "AWS::ElasticLoadBalancing::LoadBalancer",
+            "Properties": {
+                "SecurityGroups": [
+                    { "Ref": "ELBSecurityGroupId" }
+                ],
+                "CrossZone": "true",
+                "Subnets": { "Ref": "PublicSubnets" },
+                "Listeners": [
+                    {
+                        "LoadBalancerPort": "80",
+                        "InstancePort": { "Ref": "InstancePort" },
+                        "Protocol": "HTTP"
+                    },
+                    {
+                        "LoadBalancerPort": "443",
+                        "InstancePort": { "Ref": "InstancePortHTTPS" },
+                        "Protocol": "HTTPS",
+                        "InstanceProtocol": "HTTPS",
+                        "SSLCertificateId": "arn:aws:iam::230521890328:server-certificate/engineeringvillage.com3"
+                    }
+                ],
+                "HealthCheck": {
+                    "Target": {
+                        "Fn::Join": [
+                            "", [ "TCP:", { "Ref": "InstancePort" } ]
+                        ]
+                    },
+                    "HealthyThreshold": "10",
+                    "UnhealthyThreshold": "2",
+                    "Interval": "6",
+                    "Timeout": "2"
+                }
+            }
+        },
+        "WebServiceAutoscaleGroup": {
+            "Type": "AWS::AutoScaling::AutoScalingGroup",
+            "Condition": "AZ2Condition",
+            "Properties": {
+                "AvailabilityZones": [
+                    { "Fn::Select": [ { "Ref": "AZ1Index" }, { "Fn::GetAZs": "" } ] },
+                    { "Fn::Select": [ { "Ref": "AZ2Index" }, { "Fn::GetAZs": "" } ] }
+                ],
+                "Cooldown": "300",
+                "VPCZoneIdentifier": { "Ref": "PrivateSubnets" },
+                "DesiredCapacity": { "Ref": "MinASGSize" },
+                "LaunchConfigurationName": {
+                    "Fn::If": [
+                        "S3RoleCondition",
+                        { "Ref": "LCLaunchConfigS3Role" },
+                        { "Ref": "LCLaunchConfigNoS3Role" }
+                    ]
+                },
+                "LoadBalancerNames": [ { "Ref": "PublicELB" } ],
+                "MaxSize": { "Ref": "MaxASGSize" },
+                "MinSize": { "Ref": "MinASGSize" },
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": {
+                            "Fn::Join": [ "-", [ "httpd", { "Ref": "Environment" } ] ]
+                        },
+                        "PropagateAtLaunch": "true"
+                    },
+                    {
+                        "Key": "Environment",
+                        "Value": { "Ref": "Environment" },
+                        "PropagateAtLaunch": "true"
+                    },
+                    {
+                        "Key": "StackName",
+                        "Value": { "Ref": "AWS::StackName" },
+                        "PropagateAtLaunch": "true"
+                    }
+                ]
+            }
+        },
+        "LCLaunchConfigS3Role": {
+            "Type": "AWS::AutoScaling::LaunchConfiguration",
+            "Condition": "S3RoleCondition",
+            "Metadata": {
+                "AWS::CloudFormation::Init": {
+                    "config": {
+                        "commands": {
+                            "hostname_set": {
+                                "command": {
+                                    "Fn::Join": [
+                                        " ; ",
+                                        [
+                                            "INSTANCE_ID=`/usr/bin/curl -s http://169.254.169.254/latest/meta-data/instance-id`",
+                                            "/bin/echo $INSTANCE_ID > /var/log/hostname-in-user-data.log",
+                                            "/bin/touch /etc/hostname",
+                                            "/bin/echo $INSTANCE_ID > /etc/hostname",
+                                            "/bin/hostname -F /etc/hostname",
+                                            "echo 127.0.0.1 localhost $INSTANCE_ID > /etc/hosts"
+                                        ]
+                                    ]
+                                }
+                            }
+                        },
+                        "packages": {
+                            "rubygems": {
+                                "json": []
+                            },
+                            "yum": {
+                                "gcc": [],
+                                "make": [],
+                                "aws-cli": [],
+                                "ruby-devel": [],
+                                "rubygems": []
+                            }
+                        },
+                        "services": {
+                            "sysvinit": {}
+                        }
+                    }
+                },
+                "Puppet": {
+                    "environment": { "Ref": "Environment" },
+                    "product": { "Ref": "ProductTag" },
+                    "role": {
+                        "Fn::Join": [
+                            "",
+                            [
+                                { "Ref": "ProductTag" },
+                                "_",
+                                { "Ref": "Role" },
+                                "backend_",
+                                { "Ref": "Environment" }
+                            ]
+                        ]
+                    }
+                }
+            },
+            "Properties": {
+                "ImageId": { "Ref": "AMI" },
+                "InstanceType": { "Ref": "InstanceType" },
+                "KeyName": { "Ref": "KeyPair" },
+                "SecurityGroups": [ { "Ref": "ServerSecurityGroupId" } ],
+                "IamInstanceProfile": { "Ref": "S3Role" },
+                "UserData": {
+                    "Fn::Base64": {
+                        "Fn::Join": [
+                            "",
+                            [
+                                "#!/bin/bash -v\n",
+                                "/opt/aws/bin/cfn-init -s ",
+                                { "Ref": "AWS::StackId" },
+                                " -r WebServiceAutoScaleLaunchConfiguration ",
+                                " --region ",
+                                { "Ref": "AWS::Region" },
+                                "\n",
+                                {
+                                    "Fn::Join": [
+                                        "=",
+                                        [ "ENV", { "Ref": "Environment" } ]
+                                    ]
+                                },
+                                "\n",
+                                "yum -y install httpd\n",
+                                "touch /var/www/html/index.html\n",
+                                "chmod 644 /var/www/html/index.html\n",
+                                "mkdir -p /etc/httpd/conf.d\n",
+                                "cat > /etc/httpd/conf.d/ev.conf<<EOF\n",
+                                "<VirtualHost *:80>\n",
+                                "ServerName www.egineeringvillage2.org\n",
+                                "ServerAlias www.egineeringvillage2.com\n",
+                                "ServerAlias www.egineeringvillage.org\n",
+                                "ServerAlias www.papervillage2.com\n",
+                                "ServerAlias www.paperchem.com\n",
+                                "ServerAlias www.chemvillage.org\n",
+                                "DocumentRoot \"/var/www/html\"\n",
+                                "RedirectMatch 301 .* http://www.engineeringvillage.com\n",
+                                "</VirtualHost>\n",
+                                "<VirtualHost *:80>\n",
+                                "ServerName xml.egineeringvillage2.org\n",
+                                "DocumentRoot \"/var/www/html\"\n",
+                                "RedirectMatch 301 .* http://xml.engineeringvillage.com\n",
+                                "</VirtualHost>\n",
+                                "<VirtualHost *:80>\n",
+                                "ServerName rss.egineeringvillage2.org\n",
+                                "DocumentRoot \"/var/www/html\"\n",
+                                "RedirectMatch 301 .* http://rss.engineeringvillage.com\n",
+                                "</VirtualHost>\n",
+                                "EOF\n",
+                                "sed --in-place '\/ec2-user\/d' /etc/shadow\n",
+                                "echo 'ec2-user:!!:16169:0:99999:14:::' >> /etc/shadow\n",
+                                "service httpd restart\n"
+                            ]
+                        ]
+                    }
+                }
+            }
+        },
+        "LCLaunchConfigNoS3Role": {
+            "Type": "AWS::AutoScaling::LaunchConfiguration",
+            "Condition": "NoS3RoleCondition",
+            "Metadata": {
+                "AWS::CloudFormation::Init": {
+                    "config": {
+                        "commands": {
+                            "hostname_set": {
+                                "command": {
+                                    "Fn::Join": [
+                                        " ; ",
+                                        [
+                                            "INSTANCE_ID=`/usr/bin/curl -s http://169.254.169.254/latest/meta-data/instance-id`",
+                                            "/bin/echo $INSTANCE_ID > /var/log/hostname-in-user-data.log",
+                                            "/bin/touch /etc/hostname",
+                                            "/bin/echo $INSTANCE_ID > /etc/hostname",
+                                            "/bin/hostname -F /etc/hostname",
+                                            "echo 127.0.0.1 localhost $INSTANCE_ID > /etc/hosts"
+                                        ]
+                                    ]
+                                }
+                            }
+                        },
+                        "packages": {
+                            "rubygems": {
+                                "json": []
+                            },
+                            "yum": {
+                                "gcc": [],
+                                "make": [],
+                                "aws-cli": [],
+                                "ruby-devel": [],
+                                "rubygems": []
+                            }
+                        },
+                        "services": {
+                            "sysvinit": {}
+                        }
+                    }
+                },
+                "Puppet": {
+                    "environment": { "Ref": "Environment" },
+                    "product": { "Ref": "ProductTag" },
+                    "role": {
+                        "Fn::Join": [
+                            "",
+                            [
+                                { "Ref": "ProductTag" },
+                                "_",
+                                { "Ref": "Role" },
+                                "backend_",
+                                { "Ref": "Environment" }
+                            ]
+                        ]
+                    }
+                }
+            },
+            "Properties": {
+                "ImageId": { "Ref": "AMI" },
+                "InstanceType": { "Ref": "InstanceType" },
+                "KeyName": { "Ref": "KeyPair" },
+                "SecurityGroups": [ { "Ref": "ServerSecurityGroupId" } ],
+                "UserData": {
+                    "Fn::Base64": {
+                        "Fn::Join": [
+                            "",
+                            [
+                                "#!/bin/bash -v\n",
+                                "/opt/aws/bin/cfn-init -s ",
+                                { "Ref": "AWS::StackId" },
+                                " -r WebServiceAutoScaleLaunchConfiguration ",
+                                " --region ",
+                                { "Ref": "AWS::Region" },
+                                "\n",
+                                {
+                                    "Fn::Join": [
+                                        "=",
+                                        [ "ENV", { "Ref": "Environment" } ]
+                                    ]
+                                },
+                                "\n",
+                                "yum -y install httpd\n",
+                                "touch /var/www/html/index.html\n",
+                                "chmod 644 /var/www/html/index.html\n",
+                                "mkdir -p /etc/httpd/conf.d\n",
+                                "cat > /etc/httpd/conf.d/ev.conf<<EOF\n",
+                                "<VirtualHost *:80>\n",
+                                "ServerName www.egineeringvillage2.org\n",
+                                "ServerAlias www.egineeringvillage2.com\n",
+                                "ServerAlias www.egineeringvillage.org\n",
+                                "ServerAlias www.papervillage2.com\n",
+                                "ServerAlias www.paperchem.com\n",
+                                "ServerAlias www.chemvillage.org\n",
+                                "DocumentRoot \"/var/www/html\"\n",
+                                "RedirectMatch 301 .* http://www.engineeringvillage.com\n",
+                                "</VirtualHost>\n",
+                                "<VirtualHost *:80>\n",
+                                "ServerName xml.egineeringvillage2.org\n",
+                                "DocumentRoot \"/var/www/html\"\n",
+                                "RedirectMatch 301 .* http://xml.engineeringvillage.com\n",
+                                "</VirtualHost>\n",
+                                "<VirtualHost *:80>\n",
+                                "ServerName rss.egineeringvillage2.org\n",
+                                "DocumentRoot \"/var/www/html\"\n",
+                                "RedirectMatch 301 .* http://rss.engineeringvillage.com\n",
+                                "</VirtualHost>\n",
+                                "EOF\n",
+                                "sed --in-place '\/ec2-user\/d' /etc/shadow\n",
+                                "echo 'ec2-user:!!:16169:0:99999:14:::' >> /etc/shadow\n",
+                                "service httpd restart\n"
+                            ]
+                        ]
+                    }
+                }
+            }
+        },
+        "S3Role": {
+            "Condition": "S3RoleCondition",
+            "Properties": {
+                "Path": "/",
+                "Roles": [
+                    {
+                        "Ref": "S3RoleProfile"
+                    }
+                ]
+            },
+            "Type": "AWS::IAM::InstanceProfile"
+        }
+    }
+}
