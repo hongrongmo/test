@@ -1,6 +1,0 @@
-1) Go to Java bin directory on command prompt
-2) Run the following command to generate the source code:
-wsimport http://cdc315-services.elsevier.com/PCSASSvc/CSApplicationService_V10/WEB-INF/wsdl/v10_1/service_v10_1.wsdl -keep -s C:\eng_village\new_location\ANE_Services\src
-3) Source code will be generated under ANE_Service project. Refresh the project in eclipse and new code will be available to build the jar
-
-Note: currently WSDL path is the test server path. before final release the code needs to be generated from production WSDL URL. 
