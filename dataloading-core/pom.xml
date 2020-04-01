@@ -26,15 +26,22 @@
 			<version>10.2.0.3.0</version>
 		</dependency> -->
 		<!-- HH 08/09/2016: Added for 12c RDS -->
-		
+		<!-- HH commented on 03/30/2020 worked well till oracle 19c but does not support extended string type -->
+	<!--
 		<dependency>
     		<groupId>com.oracle</groupId>
    	 		<artifactId>ojdbc6</artifactId>
     		<version>11.2.0.3</version>
 		</dependency>
-		
+		-->
+	<!--HH added 03/30/3030 to support oracle 19c extended string type -->
+	<dependency>
+		<groupId>com.oracle.database.jdbc</groupId>
+		<artifactId>ojdbc8</artifactId>
+		<version>19.3.0.0</version>
+	</dependency>
 
-		<dependency>
+	<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.11</version>
