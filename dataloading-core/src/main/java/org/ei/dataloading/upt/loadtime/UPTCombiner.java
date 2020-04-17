@@ -107,8 +107,9 @@ public class UPTCombiner extends CombinerTimestamp {
         ResultSet rs = null;
 
         try {
-            stmt = con.createStatement();
-
+            stmt = con.createStatement(          
+            	    ResultSet.TYPE_SCROLL_INSENSITIVE, 
+            	    ResultSet.CONCUR_READ_ONLY);
             //Prod
             String query="SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number,seq_num,CLASSIFICATION_CPC,UPDATE_NUMBER FROM "+Combiner.TABLENAME+" WHERE  LOAD_NUMBER = " + week;
             
@@ -179,7 +180,10 @@ public class UPTCombiner extends CombinerTimestamp {
     			try
     			{
     			
-    				stmt = con.createStatement();
+    				 stmt = con.createStatement(          
+    		            	    ResultSet.TYPE_SCROLL_INSENSITIVE, 
+    		            	    ResultSet.CONCUR_READ_ONLY);
+    				 
     				System.out.println("Running the query...");
     				String sqlQuery = "select * from " + Combiner.TABLENAME;
     				System.out.println(sqlQuery);
@@ -228,7 +232,10 @@ public class UPTCombiner extends CombinerTimestamp {
 
         try {
 
-            stmt = con.createStatement();
+        	 stmt = con.createStatement(          
+             	    ResultSet.TYPE_SCROLL_INSENSITIVE, 
+             	    ResultSet.CONCUR_READ_ONLY);
+        	 
             String query="SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number,seq_num,CLASSIFICATION_CPC,UPDATE_NUMBER FROM "+Combiner.TABLENAME+" WHERE  update_number="+timestamp+" and load_number!="+timestamp;
             System.out.println("Running the query..."+query);
 
@@ -291,7 +298,10 @@ public class UPTCombiner extends CombinerTimestamp {
 
         try {
 
-            stmt = con.createStatement();
+        	 stmt = con.createStatement(          
+             	    ResultSet.TYPE_SCROLL_INSENSITIVE, 
+             	    ResultSet.CONCUR_READ_ONLY);
+        	 
             String query="SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number,seq_num,CLASSIFICATION_CPC,UPDATE_NUMBER FROM " + Combiner.TABLENAME + " WHERE  PY = '" + year + "'";
             System.out.println("Running the query..."+query);
             rs = stmt.executeQuery(query);
@@ -355,11 +365,15 @@ public class UPTCombiner extends CombinerTimestamp {
         Thread thread=null;
         KafkaService kafka = new KafkaService();
         long processTime = System.currentTimeMillis();
-    	int totalCount = rs.getMetaData().getColumnCount();  
+    	//int totalCount = rs.getMetaData().getColumnCount();  
         
         try 
         {
-
+        	
+    	    rs.last();
+    	    int totalCount  = rs.getRow();
+    	    rs.beforeFirst();
+        	
             while (rs.next()) 
             {
             	try 

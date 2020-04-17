@@ -32,7 +32,7 @@ public class KafkaService {
     Producer<String, String> producer=null;
 	
     public KafkaService() {
-    	getParameterFromPropertiesFile("/data/loading/shared/config.properties");	
+    	getParameterFromPropertiesFile("./lib/config.properties");	
     	producer  = ProducerCreator.createProducer(this.KAFKA_BROKERS);
     	System.out.println("create Kafka Prodcuer");
     	problemRecords = new HashMap<String,String>();
@@ -45,7 +45,7 @@ public class KafkaService {
     }
     public static void main(String[] args) {
     	KafkaService kTest= new KafkaService();
-    	kTest.getParameterFromPropertiesFile("/data/loading/shared/config.properties");
+    	kTest.getParameterFromPropertiesFile("./lib/config.properties");
     	if(args!=null && args[0].equals("producer"))
     	{
     		kTest.runProducer();

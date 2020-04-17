@@ -680,20 +680,39 @@ public class BdParser
 							List authorgroup = head.getChildren("author-group",noNamespace);
 							BdAuthors ausmap = new BdAuthors();
 							BdAffiliations affmap = new BdAffiliations();
+							BdAuthors collaborationMap = new BdAuthors();
+							BdAffiliations collaborationAffMap = new BdAffiliations();
 							this.affid = 0;
 							for (int e=0 ; e < authorgroup.size() ; e++)
 							{
-								setAuthorAndAffs( ausmap,
+								Element agroup= (Element)authorgroup.get(e);
+								if(agroup.getChild("collaboration",noNamespace)!=null)
+								{
+									setCollaborationAndAffs( collaborationMap,
+															 collaborationAffMap,
+															 (Element) authorgroup.get(e));
+								}
+								else
+								{
+									setAuthorAndAffs( ausmap,
 													affmap,
 													(Element) authorgroup.get(e));
+								}
 							}
 							StringBuffer secondAuGroup = new StringBuffer();
+							StringBuffer secondAffGroup = new StringBuffer();
+							//System.out.println("COLLABORATION Size="+authorgroup.size());
+							//System.out.println("collaborationMap Size="+collaborationMap.getSearchValue().length);
+							//System.out.println("collaborationAffMap Size="+collaborationAffMap.getSearchValue().length);
+							//System.out.println("COLLABORATION="+auToStringBuffer(collaborationMap, secondAuGroup));
+							record.put("COLLABORATION", auToStringBuffer(collaborationMap, secondAuGroup));	
+							record.put("COLLABORATION_AFF", auffToStringBuffer(collaborationAffMap, secondAffGroup));
 							record.put("AUTHOR", auToStringBuffer(ausmap, secondAuGroup));
 							if(secondAuGroup.length() > 0)
 							{
 								record.put("AUTHOR_1",secondAuGroup.toString());
 							}
-							StringBuffer secondAffGroup = new StringBuffer();
+							
 
 							record.put("AFFILIATION", auffToStringBuffer(affmap, secondAffGroup).toString());
 
@@ -3079,6 +3098,75 @@ public class BdParser
 		}
 		return ContributorBuffer.toString();
 	}
+	
+	private String getPersonalNames(List collaborationList)
+	{
+		StringBuffer collaborationBuffer = new StringBuffer();
+		for(int i=0;i<collaborationList.size();i++)
+		{
+			Element collaboration = (Element)collaborationList.get(i);
+			collaborationBuffer.append(getPersonalName(i,collaboration));
+			collaborationBuffer.append(Constants.IDDELIMITER);
+		}
+		return collaborationBuffer.toString();
+	}
+	
+	private String getCollaboration(int e,List collaborationList)
+	{
+		StringBuffer collaborationBuffer = new StringBuffer();
+		for(int i=0;i<collaborationList.size();i++)
+		{
+			Element collaboration = (Element)collaborationList.get(i);
+			String 	collaborationSeq = collaboration.getAttributeValue("seq");
+			String  collaborationAuid= collaboration.getAttributeValue("auid");
+			String  collaborationType= collaboration.getChildText("indexed-name");
+			String  collaborationTextString= collaboration.getChildText("text");
+			String  collaborationString = getPersonalNames(collaboration.getChildren("member-name"));
+			String  eaddress = collaboration.getChildTextTrim("e-address",ceNamespace);
+			collaborationBuffer.append(e);
+			collaborationBuffer.append(Constants.IDDELIMITER);
+			if(collaborationSeq!=null)
+			{
+				collaborationBuffer.append(collaborationSeq);
+			}
+			else
+			{
+				collaborationBuffer.append(i);
+			}
+			collaborationBuffer.append(Constants.IDDELIMITER);
+			if(collaborationAuid!=null)
+			{
+				collaborationBuffer.append(collaborationAuid);
+			}
+			collaborationBuffer.append(Constants.IDDELIMITER);
+			if(collaborationType!=null)
+			{
+				collaborationBuffer.append(collaborationType);
+			}
+			collaborationBuffer.append(Constants.IDDELIMITER);
+			if(collaborationTextString!=null)
+			{				
+				collaborationBuffer.append(collaborationTextString);
+			}
+			collaborationBuffer.append(Constants.IDDELIMITER);
+			if(collaborationString!=null)
+			{
+				collaborationBuffer.append(collaborationString);
+			}
+			collaborationBuffer.append(Constants.IDDELIMITER);
+			if(eaddress!=null)
+			{
+				collaborationBuffer.append(eaddress);
+			}
+			if(i<collaborationList.size()-1)
+			{
+				collaborationBuffer.append((Constants.AUDELIMITER));
+			}
+
+		}
+		return collaborationBuffer.toString();
+	}
+
 
 	private void setContributorgroup(Hashtable record,List contributorgroupList) throws Exception
 	{
@@ -3099,7 +3187,7 @@ public class BdParser
 			}
 			else if(collaborationList!=null)
 			{
-				contributeString = getContributor(e,collaborationList);
+				contributeString = getCollaboration(e,collaborationList);
 			}
 			if(contributeString!=null)
 			{
@@ -3810,6 +3898,290 @@ public class BdParser
 		return monthString;
 
 	}
+	
+	private void setCollaborationAndAffs(BdAuthors ausmap,
+			  BdAffiliations affs,
+			  Element aelement)
+	{
+		Element collaboration = aelement.getChild("collaboration",noNamespace);	
+		List authorlist = collaboration.getChildren("member-name",noNamespace);	
+		
+		//affiliations
+		
+		Element affiliation =(Element) aelement.getChild("affiliation",noNamespace);
+		
+		if(affiliation != null)
+		{
+			BdAffiliation aff = new BdAffiliation();
+			aff.setAffCountry(affiliation.getAttributeValue("country"));
+			Element addresspart =(Element) affiliation.getChild("address-part",noNamespace);
+			if(addresspart != null)
+			{
+				aff.setAffAddressPart(dictionary.mapEntity(getMixData(addresspart.getContent())));
+			}
+			
+			Element citygroup = (Element) affiliation.getChild("city-group",noNamespace);
+			if(citygroup != null)
+			{
+				aff.setAffCityGroup(dictionary.mapEntity(getMixData(citygroup.getContent())));
+			}
+			
+			Element city = (Element) affiliation.getChild("city",noNamespace);
+			if(city != null)
+			{
+				aff.setAffCity(dictionary.mapEntity(getMixData(city.getContent())));
+			}
+			
+			Element state = (Element) affiliation.getChild("state",noNamespace);
+			if(state != null)
+			{
+				aff.setAffState(dictionary.mapEntity(state.getText()));
+			}
+			
+			List postalcode = affiliation.getChildren("postal-code",noNamespace);
+			StringBuffer zipbuf = new StringBuffer();
+			for (int i = 0; i<postalcode.size(); i++)
+			{
+				Element elmpostalcode = (Element)postalcode.get(i);
+				if(postalcode != null)
+				{
+					Attribute zip = elmpostalcode.getAttribute("zip");
+					if(zip != null)
+					{
+					  zipbuf.append((String) zip.getValue());
+					
+					  if(i < postalcode.size()-1)
+					  {
+					      zipbuf.append(", ");
+					  }
+					  //System.out.println("ZIP1="+zipbuf.toString());
+					}
+					
+					String zipvalue=elmpostalcode.getTextTrim();
+					if(zipvalue!=null)
+					{			        	
+						zipbuf.append(dictionary.mapEntity(zipvalue));
+						 if(i < postalcode.size()-1)
+					   {
+					          zipbuf.append(", ");
+					   }
+						 //System.out.println("ZIP2="+zipbuf.toString());
+					}
+				}
+			}
+			
+			if(zipbuf.length() > 0)
+			{			
+				aff.setAffPostalCode(dictionary.mapEntity(dictionary.mapEntity(zipbuf.toString())));
+			}
+			
+			Element text = (Element) affiliation.getChild("text",ceNamespace);
+			if(text != null)
+			{
+				aff.setAffText(dictionary.mapEntity(getMixData(text.getContent())));
+			}
+			
+			// organization  - mulity element
+			List organization = affiliation.getChildren("organization",noNamespace);
+			for (int i = 0; i < organization.size(); i++)
+			{
+				Element oe = (Element) organization.get(i);
+				aff.addAffOrganization(dictionary.mapEntity(getMixData(oe.getContent())));
+				//System.out.println("AffOrganization="+oe.getText());
+			}
+			
+			this.affid = this.affid+1;
+			aff.setAffid(this.affid);
+			
+			if(affiliation.getAttributeValue("afid")!=null)
+			{
+				aff.setAffiliationId(affiliation.getAttributeValue("afid"));
+			}
+			
+			if(affiliation.getAttributeValue("dptid")!=null)
+			{
+				aff.setAffDepartmentId(affiliation.getAttributeValue("dptid"));
+			}
+			
+			affs.addAff(aff);
+		}
+		
+		//end of affiliation
+		
+		//begin authors
+		for (int e = 0; e< authorlist.size(); e++)
+		{
+			Element agroupelement =(Element) authorlist.get(e);
+			
+			BdAuthor aus = new BdAuthor();
+			Element author = (Element) authorlist.get(e);
+			List atr = author.getAttributes();
+			Attribute sec = collaboration.getAttribute("seq");
+			aus.setAffid(this.affid);
+			
+			if(sec != null)
+			{
+				String secstr = (String) sec.getValue();
+				aus.setSec(secstr);
+			}
+			else
+			{
+				aus.setSec(Integer.toString(e));
+			}
+			
+			if(e==0)
+			{
+				Element indexedName = collaboration.getChild("indexed-name",ceNamespace );
+				if(indexedName != null)
+				{
+					aus.setSurname(dictionary.mapEntity(getMixData(indexedName.getContent())));
+				}
+				
+				Element textName = collaboration.getChild("text",ceNamespace );
+				if(textName != null)
+				{
+					aus.setGivenName(dictionary.mapEntity(getMixData(textName.getContent())));
+				}
+			}
+			else
+			{	
+				Attribute auid = author.getAttribute("orcid");
+				Attribute authorid = author.getAttribute("auid");
+				StringBuffer authoridBuffer = new StringBuffer();
+				if(auid != null || authorid!=null)
+				{
+					if(auid != null)
+					{
+						String auidstr = (String) auid.getValue();
+						authoridBuffer.append(auidstr);
+					}
+									
+					if(authorid!=null)
+					{
+						String authoridstr = (String)authorid.getValue();
+						authoridBuffer.append(","+authoridstr);
+					}						
+				}
+			
+				if(authoridBuffer.length()>0)
+				{
+					aus.setAuid(authoridBuffer.toString());
+				//System.out.println("AUTHORID="+authoridBuffer.toString());
+				}
+				
+				
+				
+				Element initials = author.getChild("initials",ceNamespace );			
+				
+				if(initials != null)
+				{
+					aus.setInitials(dictionary.mapEntity(initials.getText()));
+				}
+				
+				Element degrees = author.getChild("degrees", ceNamespace);
+				if(degrees != null)
+				{
+					aus.setDegrees(dictionary.mapEntity(degrees.getText()));
+				
+				}
+			
+				Element surname = author.getChild("surname", ceNamespace);
+				
+				if(surname != null)
+				{
+					//System.out.println("surname="+surname.getText());
+					aus.setSurname(dictionary.mapEntity(getMixData(surname.getContent())));
+				}
+				
+				Element givenName = author.getChild("given-name", ceNamespace);
+							
+				if(givenName != null)
+				{
+					//System.out.println("given-name="+givenName.getText());
+					aus.setGivenName(dictionary.mapEntity(getMixData(givenName.getContent())));
+				}
+				
+				Element suffix = author.getChild("suffix",ceNamespace);
+				if(suffix != null)
+				{
+					aus.setSuffix(dictionary.mapEntity(suffix.getText()));
+				}
+				
+				Element nametext= author.getChild("text", ceNamespace);
+				if(nametext != null)
+				{
+					aus.setNametext(dictionary.mapEntity(getMixData(nametext.getContent())));
+				}
+				
+				Element prefferedName= author.getChild("preffered-name", ceNamespace);
+				
+				// prefferedName block
+			
+				if(prefferedName != null)
+				{
+					Element prefferedNameInitials = prefferedName.getChild("initials",ceNamespace);
+					if(prefferedNameInitials != null)
+					{
+						aus.setPrefnameInitials(dictionary.mapEntity(getMixData(prefferedNameInitials.getContent())));
+					}
+					
+					Element prefferedNameIndexedname = prefferedName.getChild("indexed_name",ceNamespace);
+					if(prefferedNameIndexedname != null)
+					{
+					
+						aus.setPrefnameIndexedname(dictionary.mapEntity(getMixData(prefferedNameIndexedname.getContent())));
+					}
+					
+					Element prefferedNameDegrees = prefferedName.getChild("degree", ceNamespace);
+					if(prefferedNameDegrees != null)
+					{
+						aus.setPrefnameDegrees(dictionary.mapEntity(prefferedNameDegrees.getText()));
+					}
+					
+					Element prefferedNameSurname = prefferedName.getChild("surname", ceNamespace);
+					if(prefferedNameSurname != null)
+					{
+						aus.setPrefnameSurname(dictionary.mapEntity(getMixData(prefferedNameSurname.getContent())));
+					}
+					Element prefferedNameGivenname = prefferedName.getChild("given-name", ceNamespace);
+					
+					if(prefferedNameGivenname != null)
+					{
+						aus.setPrefnameGivenname(dictionary.mapEntity(getMixData(prefferedNameGivenname.getContent())));
+					}
+				}
+				// end of prefferedName block
+				
+				Element eaddress = author.getChild("e-address", ceNamespace);
+				if(eaddress != null)
+				{
+					aus.setEaddress(eaddress.getTextTrim());
+				}
+				
+				// Author alias
+				Element alias = author.getChild("alias", ceNamespace);
+				if(alias != null)
+				{
+					aus.setAlias(alias.getTextTrim());
+					//System.out.println("ALIAS1= "+alias.getTextTrim());
+				}
+				
+				// Author alt-name
+				Element altName = author.getChild("alt-name", ceNamespace);
+				if(altName != null)
+				{
+					aus.setAltName(dictionary.mapEntity(altName.getTextTrim()));
+					//System.out.println(this.accessNumber+" altName1= "+altName.getTextTrim());
+				}
+				
+				if(aus!=null) {
+					ausmap.addCpxaus(aus);
+				}
+			}
+		}		
+	}
+
+	
 	private void setAuthorAndAffs(BdAuthors ausmap,
 								  BdAffiliations affs,
 								  Element aelement)
@@ -3820,11 +4192,12 @@ public class BdParser
 		{
 			authorlist = aelement.getChildren("contributor",noNamespace);
 		}
+		/*
 		if(authorlist==null || authorlist.size()==0)
 		{
 			authorlist = aelement.getChildren("collaboration",noNamespace);
 		}
-
+		*/
 
 		//affiliations
 
@@ -4082,6 +4455,8 @@ public class BdParser
 		}
 
 	}
+	
+	
 
 	private String auffToStringBuffer(BdAffiliations aufflist,
 		        					  StringBuffer secondAffGroup)
@@ -4102,6 +4477,7 @@ public class BdParser
 				bufaffiliations.append(Constants.IDDELIMITER);
 				if(aAffiliation.getAffOrganization() != null)
 				{
+					//System.out.println("Organization="+aAffiliation.getAffOrganization());
 					bufaffiliations.append(aAffiliation.getAffOrganization());
 				}
 				bufaffiliations.append(Constants.IDDELIMITER);
@@ -4353,6 +4729,7 @@ public class BdParser
 				if(aAuthor.getSurname() != null)
 				{
 					bufauthor.append(aAuthor.getSurname());
+					//System.out.println("SURENAME="+aAuthor.getSurname());
 				}
 				bufauthor.append(Constants.IDDELIMITER);
 				if(aAuthor.getDegrees() != null)
@@ -4363,6 +4740,7 @@ public class BdParser
 				if(aAuthor.getGivenName() != null)
 				{
 					bufauthor.append(aAuthor.getGivenName());
+					//System.out.println("GivenName="+aAuthor.getGivenName());
 				}
 				bufauthor.append(Constants.IDDELIMITER);
 				if(aAuthor.getSuffix() != null)

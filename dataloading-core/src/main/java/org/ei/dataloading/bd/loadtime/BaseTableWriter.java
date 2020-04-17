@@ -296,6 +296,23 @@ public class BaseTableWriter
 	    	recordBuf.append(record.get("CSXTERM"));
 	    	System.out.println("CSXTERM"+record.get("CSXTERM"));
 		}
+	    
+	    recordBuf.append(FIELDDELIM);
+	    //added on 20200406 by hongrong for ani5.15
+	    if(record.get("COLLABORATION")!=null && ((String)record.get("COLLABORATION")).length()>0)
+		{
+	    	recordBuf.append(record.get("COLLABORATION"));
+	    	System.out.println("COLLABORATION term"+record.get("COLLABORATION"));
+		}
+	    	    
+	    recordBuf.append(FIELDDELIM);
+	    //added on 20200406 by hongrong for ani5.15
+	    if(record.get("COLLABORATION_AFF")!=null && ((String)record.get("COLLABORATION_AFF")).length()>0)
+		{
+	    	recordBuf.append(record.get("COLLABORATION_AFF"));
+	    	System.out.println("COLLABORATION AFF term"+record.get("COLLABORATION_AFF"));
+		}
+	    
 	    //*/
 	    
 	    if(getAccessionNumber()!=null && getAccessionNumber().length()>0)
