@@ -1,8 +1,0 @@
--Dcatalina.base="C:\dev\apache-tomcat-7.0.23" 
--Dcatalina.home="C:\dev\apache-tomcat-7.0.23" 
--Dwtp.deploy="C:\dev\apache-tomcat-7.0.23\wtpwebapps" 
--Djava.endorsed.dirs="C:\dev\apache-tomcat-7.0.23\endorsed" 
--XX:+CMSClassUnloadingEnabled 
--XX:MaxPermSize=128m 
--Dorg.apache.catalina.session.StandardSession.ACTIVITY_CHECK=true
--Denv.runlevel=local

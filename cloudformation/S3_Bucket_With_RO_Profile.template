@@ -1,0 +1,195 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "AWS CloudFormation Sample Template S3_Bucket_With_Tags: Sample template showing how to create a publicly accessible S3 bucket that has tags. **WARNING** This template creates an S3 bucket. You will be billed for the AWS resources used if you create a stack from this template.",
+    "Outputs": {
+        "S3RoleInstanceProfileName": {
+            "Description": "Name of the Instance Profile associated to the IAM Role for bucket access",
+            "Value": {
+                "Ref": "S3RoleInstanceProfile"
+            }
+        },
+        "S3RoleName": {
+            "Description": "Name of the IAM Role name for bucket access",
+            "Value": {
+                "Ref": "S3Role"
+            }
+        }
+    },
+     "Parameters": {
+        "S3List": {
+            "Description": "S3 Buckets list created in the stateful stack",
+            "Type": "CommaDelimitedList",
+            "Default": "els-day-ops,emetrics,InnodataNewstar"
+        }
+    },
+    "Resources": {
+        "S3Role": {
+            "Properties": {
+                "AssumeRolePolicyDocument": {
+                    "Statement": [
+                        {
+                            "Action": [
+                                "sts:AssumeRole"
+                            ],
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": [
+                                    "ec2.amazonaws.com"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                "Path": "/",
+                "Policies": [
+                    {
+                        "PolicyDocument": {
+                            "Statement": [
+                                {
+                                    "Action": [
+                                        "s3:ListBucket"
+                                    ],
+                                    "Effect": "Allow",
+                                    "Resource": "*"
+                                },
+                                {
+                                    "Action": [
+                                        "s3:GetBucketAcl",
+                                        "s3:GetBucketLocation",
+                                        "s3:GetBucketNotification",
+                                        "s3:GetBucketPolicy",
+                                        "s3:GetBucketRequestPayment",
+                                        "s3:GetBucketVersioning",
+                                        "s3:GetObject",
+                                        "s3:GetObjectAcl",
+                                        "s3:GetObjectVersion",
+                                        "s3:GetObjectVersionAcl",
+                                        "s3:ListBucket",
+                                        "s3:ListBucketMultipartUploads",
+                                        "s3:ListBucketVersions",
+                                        "s3:ListMultipartUploadParts"
+                                    ],
+                                    "Effect": "Allow",
+                                    "Resource": [
+                                        {
+                                            "Fn::Join": [
+                                                "",
+                                                [
+                                                    "arn:aws:s3:::",
+                                                    {
+                                                        "Fn::Select": [
+                                                            "0",
+                                                            {
+                                                                "Ref": "S3List"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            ]
+                                        },
+                                        {
+                                            "Fn::Join": [
+                                                "",
+                                                [
+                                                    "arn:aws:s3:::",
+                                                    {
+                                                        "Fn::Select": [
+                                                            "0",
+                                                            {
+                                                                "Ref": "S3List"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "/*"
+                                                ]
+                                            ]
+                                        },
+                                        {
+                                            "Fn::Join": [
+                                                "",
+                                                [
+                                                    "arn:aws:s3:::",
+                                                    {
+                                                        "Fn::Select": [
+                                                            "1",
+                                                            {
+                                                                "Ref": "S3List"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            ]
+                                        },
+                                        {
+                                            "Fn::Join": [
+                                                "",
+                                                [
+                                                    "arn:aws:s3:::",
+                                                    {
+                                                        "Fn::Select": [
+                                                            "1",
+                                                            {
+                                                                "Ref": "S3List"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "/*"
+                                                ]
+                                            ]
+                                        },
+                                                                                {
+                                            "Fn::Join": [
+                                                "",
+                                                [
+                                                    "arn:aws:s3:::",
+                                                    {
+                                                        "Fn::Select": [
+                                                            "2",
+                                                            {
+                                                                "Ref": "S3List"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            ]
+                                        },
+                                        {
+                                            "Fn::Join": [
+                                                "",
+                                                [
+                                                    "arn:aws:s3:::",
+                                                    {
+                                                        "Fn::Select": [
+                                                            "2",
+                                                            {
+                                                                "Ref": "S3List"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "/*"
+                                                ]
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "PolicyName": "S3_Read_Only"
+                    }
+                ]
+            },
+            "Type": "AWS::IAM::Role"
+        },
+        "S3RoleInstanceProfile": {
+            "Properties": {
+                "Path": "/",
+                "Roles": [
+                    {
+                        "Ref": "S3Role"
+                    }
+                ]
+            },
+            "Type": "AWS::IAM::InstanceProfile"
+        }
+    }
+}

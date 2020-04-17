@@ -91,7 +91,7 @@ public class AuAfESIndex {
 			factory = new JestClientFactory();
 			/*factory.setHttpClientConfig(new HttpClientConfig
 					.Builder("http://search-evcafeauaf-v6tfjfyfj26rtoneh233lzzqtq.us-east-1.es.amazonaws.com:80")
-			.defaultCredentials("f.huang@elsevier.com", "Awsqwe!26")
+			.defaultCredentials("f.huang@elsevier.com", "PWD")
 			.connTimeout(10000)
 			.multiThreaded(true)
 			.build()
@@ -99,7 +99,7 @@ public class AuAfESIndex {
 
 			factory.setHttpClientConfig(new HttpClientConfig
 					.Builder("search-evcafe-prod-h7xqbezrvqkb5ult6o4sn6nsae.us-east-1.es.amazonaws.com:80")
-			.defaultCredentials("f.huang@elsevier.com", "Awsqwe!26")
+			.defaultCredentials("f.huang@elsevier.com", "PWD")
 			.connTimeout(10000)
 			.multiThreaded(true)
 			.build()

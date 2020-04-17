@@ -91,5 +91,22 @@ else
 int day = Integer.parseInt(str.substring(str.length()-1,str.length()));
 day
 
+java.io.StringWriter wr = new java.io.StringWriter();
+wr.write(8210);   // wrote as "‒"
+wr
+
+java.io.StringWriter wr2 = new java.io.StringWriter();
+wr2.write("B ");
+wr2.write(8210);
+wr2.write("site-ordered ");
+wr2.write(203);
+wr2.write("Co-based double perovskites Sr");   // wrote as "‒"
+wr2
+
+
+
+
+
+
 
 

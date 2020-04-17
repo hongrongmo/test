@@ -1,0 +1,170 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Create single Windows Server 2008 R2 instance for EV in VPC",
+  "Parameters": {
+    "KeyPair": {
+      "Type": "String",
+      "Description": "The EC2 Key Pair to allow SSH access to the instances. The keypair must already exist in EC2.",
+      "Default": "non-Prod"
+    },
+	 "VpcId" : {
+      "Type" : "String",
+      "Default": "vpc-90df1ff1",
+      "Description" : "VpcId of your existing Virtual Private Cloud (VPC)"
+          },
+	"Subnet": {
+      "Default": "subnet-4ef1312f",
+      "Description": "The VPC subnet you want to create the EC2 instance in.",
+      "Type": "String"
+    },
+
+    "AMI": {
+      "Default": "ami-39663150",
+      "Description": "AMI ID to use-same as secondary Windows EC2",
+      "Type": "String"
+    },
+    "Environment": {
+      "Type": "String",
+      "MinLength": "1",
+      "Description": "Options: prod,public",
+      "Default": "prod"
+    },
+    "InstanceType": {
+      "Description": "Type of EC2 instance to launch. It should be m1.large",
+      "Type": "String",
+      "AllowedValues": [
+        "t1.micro",
+        "m1.small",
+        "m1.medium",
+        "m1.large",
+        "m1.xlarge",
+        "m2.xlarge",
+        "m2.2xlarge",
+        "m2.4xlarge",
+        "m3.xlarge"
+      ],
+      "Default": "t1.micro"
+    }
+  },
+  "Mappings": {
+    "SubnetConfig": {
+      "VPC": {
+        "CIDR": "10.178.160.0/20",
+        "ID": "vpc-90df1ff1"
+      },
+      "public": {
+        "CIDIR": [
+          "10.178.168/0/24",
+          "10.178.166.0/24"
+        ],
+        "SUBNET": [
+		"subnet-4ef1312f",
+        "subnet-c7f030a6"
+        ],
+        "AZ": ["us-east-1c" , "us-east-1a"]
+      },
+      "na": {
+        "CIDIR": [
+          "10.178.161.0/25"
+        ],
+        "SUBNET": [
+          "subnet-c6f131a7"
+        ],
+        "AZ": ["us-east-1a"]
+      },
+      "ucd": {
+        "CIDIR": [
+          "10.178.169.0/24",
+          "10.178.167.0/24"
+        ],
+        "SUBNET": [
+          "subnet-d2f232b3",
+          "subnet-29f23248"
+        ],
+         "AZ": ["us-east-1c", "us-east-1a"]
+      },
+      "prod": {
+        "CIDIR": [
+          "10.178.165.0/24",
+          "10.178.163.0/24"
+        ],
+        "SUBNET": ["subnet-aef232cf", "subnet-04f23265"],
+        "AZ": ["us-east-1c", "us-east-1a"]
+      }
+   }
+  },
+
+  "Resources": {
+   "bkupRDPWorkstVol": {
+   "Type":"AWS::EC2::Volume",
+   "Properties" : {
+       "AvailabilityZone": {"Fn::GetAtt": ["WindEC2Test","AvailabilityZone"]},
+      "SnapshotId" : "snap-c76ebe00"
+   }
+},
+
+    "WindEC2Test": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+	  "ImageId": { "Ref": "AMI"},
+	  "InstanceType": { "Ref": "InstanceType"},
+	  "KeyName": { "Ref": "KeyPair"},
+	  "NetworkInterfaces" : [ 
+		{
+			"AssociatePublicIpAddress" : "true",
+			"Description" : "Network Interface for WindEC2Test in VPC",
+			"DeviceIndex" : "0",
+			"GroupSet" : [ "sg-9067daff", "sg-6a47a80f", "sg-6548f80a" ],
+			"SubnetId" : "subnet-4ef1312f"
+		}
+		],
+		
+	 "AvailabilityZone": "us-east-1c",
+	  "Tags" : [
+		  { "Key" : "Name", "Value" : "WindowsEC2_Test" },
+          { "Key" : "Vpc", "Value" : { "Fn::FindInMap": [ "SubnetConfig", "VPC", "ID" ] } },
+          { "Key" : "Environment", "Value" : {"Ref": "Environment" } }
+        ]
+      }
+    } ,
+	
+ "dataMountPoint" : {
+   "Type" : "AWS::EC2::VolumeAttachment",
+   "Properties" : {
+      "InstanceId" : { "Ref" : "WindEC2Test" },
+      "VolumeId"  : { "Ref" : "bkupRDPWorkstVol" },
+      "Device" : "/dev/xvdh"
+   }
+}
+	
+},	
+  "Outputs" : {
+    "WebsiteURL" : {
+      "Value" : { "Fn::Join" : ["", ["http://", { "Fn::GetAtt" : [ "WindEC2Test", "PublicDnsName" ]}]] },
+      "Description" : "URL for newly created EC2 Instance"
+    },
+	 "InstanceId" : {
+      "Description" : "InstanceId of the newly created EC2 instance",
+      "Value" : { "Ref" : "WindEC2Test" }
+    },
+    "AZ" : {
+      "Description" : "Availability Zone of the newly created EC2 instance",
+      "Value" : { "Fn::GetAtt" : [ "WindEC2Test", "AvailabilityZone" ] }
+    },
+    "PrivateIP" : {
+      "Description" : "Private IP address of the newly created EC2 instance",
+      "Value" : { "Fn::GetAtt" : [ "WindEC2Test", "PrivateIp" ] }
+    },
+
+    "PrivateDNS" : {
+      "Description" : "Private DNSName of the newly created EC2 instance",
+      "Value" : { "Fn::GetAtt" : [ "WindEC2Test", "PrivateDnsName" ] }
+    },
+	
+	 "PublicDNS" : {
+      "Description" : "Private DNSName of the newly created EC2 instance",
+      "Value" : { "Fn::GetAtt" : [ "WindEC2Test", "PublicDnsName" ] }
+    }
+	
+  }    
+}
