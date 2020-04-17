@@ -1,6 +1,0 @@
--- Run against DB_ACCESS schema
-alter table ORDER_DATA add (
-  "AE_ACCOUNT_NUMBER" VARCHAR2(10),
-  "AE_ACCOUNT_NAME" VARCHAR2(128 BYTE), 
-    "AE_DEPT_NAME" VARCHAR2(128 BYTE)
-  )

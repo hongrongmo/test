@@ -1,0 +1,450 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Create instances for EV in a VPC",
+  "Parameters": {
+    "KeyPair": {
+      "Type": "String",
+      "Description": "The EC2 Key Pair to allow SSH access to the instances. The keypair must already exist in EC2.",
+      "Default": "non-Prod"
+    },
+    "MaxASGSize": {
+      "Description": "The total number of instances allowed for the auto scaling group",
+      "Type": "String",
+      "Default": "8"
+    },
+    "MinASGSize": {
+      "Description": "The minimum nuber of instances allowed for the auto scaling group",
+      "Type": "String",
+      "Default": "1"
+    },
+    "ScalingUp": {
+      "Description": "The nuber of instances to scale up by",
+      "Type": "String",
+      "Default": "2"
+    },
+    "ScalingDown": {
+      "Description": "The nuber of instances to scale down by",
+      "Type": "String",
+      "Default": "1"
+    },
+    "DBName": {
+       "Description": "The JDBC connection name of the database you want to use",
+       "Type": "String",
+       "MinLength": "1",
+       "Default" : "prod-db.engineeringvillage.com:1521:eia"
+    },
+    "AMI": {
+      "Default": "ami-9490b2fc",
+      "Description": "AMI ID to use",
+      "Type": "String"
+    },
+    "SNSTopic" : {
+       "Description": "The SNS topic ARN to send alerts",
+       "Type": "String",
+       "Default": "arn:aws:sns:us-east-1:230521890328:AWSAlerts-Prod"
+    },
+    "CPUHighAlarm":{
+       "Description" : "The threshold for high CPU",
+       "Default": "85",
+       "Type": "String"
+    },
+    "DynatraceEnabled": {
+        "Description": "Should Dynatrace be enabled on this instance, typically only produciton should be true",
+        "Default": "false",
+        "Type": "String",
+        "AllowedValues": [
+            "true",
+            "false"
+        ]
+    },
+    "DynatraceProfile": {
+        "Description": "Dynatrace profile name, set to NONE unless you've set DynatraceEnabled to true",
+        "Type": "String",
+        "Default": "NONE"
+    },
+    "ELB": {
+      "Description": "ELB to use",
+      "Type": "String",
+      "Default": "evWeb-prod"
+    },
+    "Environment": {
+      "Type": "String",
+      "MinLength": "1",
+      "Description": "Options: int,dev,cert,load,prod,release",
+      "AllowedValues": [
+        "int",
+        "dev",
+        "cert",
+        "load",
+        "prod",
+        "release"
+      ],
+      "Default": "dev"
+    },
+    "InstanceType": {
+      "Description": "Type of EC2 instance to launch",
+      "Type": "String",
+      "AllowedValues": [
+        "t2.medium",
+        "t2.small",
+        "t2.micro",
+        "m3.medium",
+        "m3.large",
+        "m3.xlarge",
+        "m3.2xlarge"
+      ],
+      "Default": "m3.large"
+    }
+  },
+  "Mappings": {
+    "SubnetConfig": {
+      "VPC": {
+        "CIDR": "10.178.160.0/20",
+        "ID": "vpc-90df1ff1"
+      },
+      "public": {
+        "CIDIR": [
+          "10.178.168/0/24",
+          "10.178.166.0/24"
+        ],
+        "SUBNET": [
+          "subnet-c7f030a6",
+          "subnet-4ef1312f"
+        ],
+        "AZ": ["us-east-1c", "us-east-1a"]
+      },
+      "na": {
+        "CIDIR": [
+          "10.178.161.0/25"
+        ],
+        "SUBNET": [
+          "subnet-c6f131a7"
+        ],
+        "AZ": ["us-east-1a"]
+      },
+      "dev": {
+        "CIDIR": [
+          "10.178.161.128/25"
+        ],
+        "SUBNET": [
+          "subnet-87f131e6"
+        ],
+        "AZ": ["us-east-1c"]
+      },
+      "int": {
+        "CIDIR": [
+          "10.178.169.0/24",
+          "10.178.167.0/24"
+        ],
+        "SUBNET": [
+          "subnet-d2f232b3",
+          "subnet-29f23248"
+        ],
+        "AZ": ["us-east-1c", "us-east-1a"]
+      },
+      "load": {
+        "CIDIR": [
+          "10.178.169.0/24",
+          "10.178.167.0/24"
+        ],
+        "SUBNET": [
+          "subnet-d2f232b3",
+          "subnet-29f23248"
+        ],
+        "AZ": ["us-east-1c", "us-east-1a"]
+      },
+      "cert": {
+        "CIDIR": [
+          "10.178.169.0/24",
+          "10.178.167.0/24"
+        ],
+        "SUBNET": [
+          "subnet-d2f232b3",
+          "subnet-29f23248"
+        ],
+        "AZ": ["us-east-1c", "us-east-1a"]
+      },
+      "ucd": {
+        "CIDIR": [
+          "10.178.169.0/24",
+          "10.178.167.0/24"
+        ],
+        "SUBNET": [
+          "subnet-d2f232b3",
+          "subnet-29f23248"
+        ],
+        "AZ": ["us-east-1c", "us-east-1a"]
+      },
+      "prod": {
+        "CIDIR": [
+          "10.178.165.0/24",
+          "10.178.163.0/24"
+        ],
+        "SUBNET": [
+          "subnet-aef232cf",
+          "subnet-04f23265"
+        ],
+        "AZ": ["us-east-1c", "us-east-1a"]
+      },
+      "release": {
+        "CIDIR": [
+          "10.178.165.0/24",
+          "10.178.163.0/24"
+        ],
+        "SUBNET": [
+          "subnet-aef232cf",
+          "subnet-04f23265"
+        ],
+        "AZ": ["us-east-1c", "us-east-1a"]
+      }
+    },
+    "Region2AZ": {
+      "us-east-1": {
+        "AZ": [
+          "us-east-1a",
+          "us-east-1c"
+        ]
+      }
+    }
+  },
+  "Resources": {
+    "CPUAlarmHigh": {
+        "Type": "AWS::CloudWatch::Alarm",
+        "Properties": {
+            "AlarmDescription": "Send Notification if CPU > 85% for 10 minutes",
+            "MetricName": "CPUUtilization",
+            "Namespace": "AWS/EC2",
+            "Statistic": "Average",
+            "Period": "300",
+            "EvaluationPeriods": "2",
+            "Threshold": { "Ref" : "CPUHighAlarm" },
+            "AlarmActions": [ { "Ref": "SNSTopic" } ],
+            "Dimensions": [
+                {
+                    "Name": "AutoScalingGroupName",
+                    "Value": { "Ref": "WebServiceAutoscaleGroup" }
+                }
+            ],
+            "ComparisonOperator": "GreaterThanThreshold"
+        }
+    },
+    "ScaleUpPolicy" : {
+       "Type" : "AWS::AutoScaling::ScalingPolicy",
+       "Properties" : {
+          "AdjustmentType" : "ChangeInCapacity",
+          "AutoScalingGroupName" : { "Ref" : "WebServiceAutoscaleGroup" },
+          "Cooldown" : "1",
+          "ScalingAdjustment" : { "Ref": "ScalingUp" }
+       }
+    },
+    "ScaleDownPolicy" : {
+       "Type" : "AWS::AutoScaling::ScalingPolicy",
+       "Properties" : {
+          "AdjustmentType" : "ChangeInCapacity",
+          "AutoScalingGroupName" : { "Ref" : "WebServiceAutoscaleGroup" },
+          "Cooldown" : "1",
+          "ScalingAdjustment" : { "Ref": "ScalingDown" }
+       }
+    },
+    "WebServiceAutoscaleGroup": {
+      "Type": "AWS::AutoScaling::AutoScalingGroup",
+       "UpdatePolicy" : {
+          "AutoScalingRollingUpdate" : {
+             "MaxBatchSize" : "2",
+             "MinInstancesInService" : "1",
+             "PauseTime" : "PT7M5S"
+          }
+        },
+      "Properties": {
+        "Cooldown": "300",
+        "DesiredCapacity": {
+          "Ref": "MinASGSize"
+        },
+        "AvailabilityZones": {
+          "Fn::FindInMap" : [
+            "SubnetConfig",
+            {
+              "Ref": "Environment"
+            },
+            "AZ"
+          ]
+        },
+        "VPCZoneIdentifier": {
+          "Fn::FindInMap": [
+            "SubnetConfig",
+            {
+              "Ref": "Environment"
+            },
+            "SUBNET"
+          ]
+        },
+        "HealthCheckGracePeriod": "300",
+        "HealthCheckType": "EC2",
+        "LaunchConfigurationName": {
+          "Ref": "WebServiceAutoScaleLaunchConfiguration"
+        },
+        "LoadBalancerNames": [
+          {
+            "Ref": "ELB"
+          }
+        ],
+        "MaxSize": {
+          "Ref": "MaxASGSize"
+        },
+        "MinSize": {
+          "Ref": "MinASGSize"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": {
+              "Fn::Join": [
+                "-",
+                [
+                  "EV",
+                  {
+                    "Ref": "Environment"
+                  }
+                ]
+              ]
+            },
+            "PropagateAtLaunch": "true"
+          },
+          {
+            "Key": "Environment",
+            "Value": {
+              "Ref": "Environment"
+            },
+            "PropagateAtLaunch": "true"
+          },
+          {
+            "Key": "StackName",
+            "Value": {
+              "Ref": "AWS::StackName"
+            },
+            "PropagateAtLaunch": "true"
+          }
+        ]
+      }
+    },
+    "WebServiceAutoScaleLaunchConfiguration": {
+      "Type": "AWS::AutoScaling::LaunchConfiguration",
+      "Properties": {
+        "ImageId": {
+          "Ref": "AMI"
+        },
+        "InstanceType": {
+          "Ref": "InstanceType"
+        },
+        "IamInstanceProfile": { "Ref": "S3Role" },
+        "KeyName": {
+          "Ref": "KeyPair"
+        },
+        "SecurityGroups": [ "sg-6a47a80f", "sg-b04cfcdf" ],
+        "BlockDeviceMappings" : [
+          { "DeviceName" : "/dev/sdb", "VirtualName": "ephemeral0" }
+        ],
+        "UserData": {
+          "Fn::Base64": {
+            "Fn::Join": [
+              "\n",
+              [
+                "#!/bin/bash",
+                { "Fn::Join": ["=",["ENV",{"Ref": "Environment"}]] },
+                { "Fn::Join": [ "=", [ "DBNAME", { "Ref": "DBName" } ] ] },
+                { "Fn::Join": [ "=", [ "DT_ENABLED", { "Ref": "DynatraceEnabled" } ] ] },
+                { "Fn::Join": [ "=", [ "DT_PROFILE", { "Ref": "DynatraceProfile" } ] ] },
+                "exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1",
+                "date",
+                "yum -y update --security",
+                "yum -y update awc-cli aws-cfn-bootstrap",
+                "umount /media/ephemeral0",
+                "mkdir /els",
+                "echo \"/dev/sdb /els ext3 defaults 1 2\" >> /etc/fstab",
+                "mount /els",
+                "mkdir -p /var/els/app/EVWeb /var/els/app/engvillage /var/els/app/logservice",
+                "mkdir /els/data /els/log /els/scripts",
+                "chown -R tomcat:ec2-user /els",
+                "chmod -R 755 /els",
+                "/usr/bin/aws s3 cp s3://evwebapp/evweb_content.tar.gz /home/ec2-user",
+                "/usr/bin/aws s3 sync s3://els-day-ops/puppet2/ /var/els/puppet/",
+                "/usr/bin/aws s3 cp s3://els-agrm-buildartifacts/apps/engvillage/$ENV/ROOT.war /var/els/app/EVWeb",
+                "/usr/bin/aws s3 cp s3://els-day-ops/config/EVWeb_001.xml /var/els/app",
+                "/usr/bin/aws s3 cp s3://els-agrm-buildartifacts/apps/engvillage/$ENV/engvillage.war /var/els/app/engvillage",
+                "/usr/bin/aws s3 cp s3://els-day-ops/config/EVengvillage_001.xml /var/els/app",
+                "/usr/bin/aws s3 cp s3://els-agrm-buildartifacts/apps/engvillage/$ENV/logservice.war /var/els/app/logservice",
+                "/usr/bin/aws s3 cp s3://els-day-ops/config/EVlogservice_001.xml /var/els/app",
+                "cd /els/data; tar xzvf /home/ec2-user/evweb_content.tar.gz --strip=2; rm -f /home/ec2-user/evweb_content.tar.gz; chown -R ec2-user:ec2-user /els",
+                "cat>/var/els/puppet/manifests/site.pp<<EOF",
+                "node default {",
+                "include dynatrace",
+                "class {'tomcat':",
+                "  version => '7.0.42'",
+                "}",
+                "class {'tct':",
+                "  environment => $ENV,",
+                "  dbName => '$DBNAME',",
+                "  dbUser => 'NA',",
+                "  dbPass => 'NA',",
+                "  dt_enabled => $DT_ENABLED,",
+                "  dt_profile => $DT_PROFILE",
+                "}",
+                "tct::install { \"engvillage\":",
+                "   path => '/var/els/app/EVengvillage_001.xml',",
+                "   environment => $ENV",
+                "}",
+                "tct::install { \"logservice\":",
+                "   path => '/var/els/app/EVlogservice_001.xml',",
+                "   environment => $ENV",
+                "}",
+                "tct::install { \"EVWeb\":",
+                "   path => '/var/els/app/EVWeb_001.xml',",
+                "   environment => $ENV",
+                "}",
+                "}",
+                "EOF",
+                "chown -R ec2-user:ec2-user /var/els",
+                "/usr/bin/puppet apply --modulepath /var/els/puppet/modules /var/els/puppet/manifests/site.pp",
+                "#Modify tcControl.sh scripts to use Java 8 and start Tomcat instances.",
+                "chown -R tomcat:tomcat /opt/apache-tomcat-7.0.42/instances",
+                "for script in `ls /opt/tomcat/instances/*/tcControl.sh`; do sed --in-place -e 's$/usr/java/jdk1.7.0_17$/usr/local/java/jdk-8$g' ${script} && ${script} start;done",
+                "cat > /els/scripts/cleanPatents.pl << SCRIPT",
+                "#!/usr/bin/perl",
+                "@files = </opt/tomcat/instances/EVWeb_001/temp/pat*.tif>;",
+                " foreach $listitem ( @files )",
+                " {",
+                "    if (! -d $listitem )",
+                "    {",
+                "      my $age = -M $listitem;",
+                "      if($age > .02) {",
+                "      unlink $listitem;",
+                "    }",
+                "  }",
+                "}",
+                "SCRIPT",
+                "chmod 775 /els/scripts/cleanPatents.pl",
+                "chown tomcat:ec2-user /els/scripts/cleanPatents.pl",
+                "echo tomcat >> /etc/cron.allow",
+                "cat >> /var/spool/cron/tomcat << CTAB",
+                "0,15,30,45 * * * * /els/scripts/cleanPatents.pl",
+                "# Remove RSS cache directories > 1 week old",
+                "0 6 * * * /usr/bin/find /opt/tomcat/instances/EVWeb*/bin/cache/ -type d -ctime +7 -print -exec rm -rf {} \\; >/tmp/.rss-clear.log 2>&1",
+                "# Remove log files > 1 week old",
+                "0 6 * * * /usr/bin/find /opt/tomcat/instances/*/logs/ -type f -ctime +7 -print -exec rm -f {} \\; >/tmp/.remove-old-logs.log 2>&1",
+                "CTAB",
+                "date"
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "S3Role": {
+        "Properties": {
+            "Path": "/",
+            "Roles": [ "S3-Role-S3Role-KDO91W0UO1LS" ]
+        },
+        "Type": "AWS::IAM::InstanceProfile"
+    }
+  }
+}

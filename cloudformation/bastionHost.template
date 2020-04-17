@@ -1,0 +1,111 @@
+{
+  "AWSTemplateFormatVersion" : "2010-09-09",
+
+  "Description" : "Creates a bastion host to allow SSH access to the hosts in the private subnet",
+
+  "Parameters" : {
+
+    "KeyPair" : {
+      "Type" : "String",
+      "Description" : "The EC2 Key Pair to allow SSH access to the instances. The keypair must already exist in EC2.",
+      "Default" : "Prod"
+    },
+
+    "VpcId" : {
+      "Type" : "String",
+      "Description" : "VpcId of your existing Virtual Private Cloud (VPC)",
+      "Default" : "vpc-90df1ff1"
+    },
+
+    "BastionInstanceType" : {
+      "Description" : "Bastion Host EC2 instance type",
+      "Type" : "String",
+      "Default" : "m1.small",
+      "AllowedValues" : [
+        "t1.micro",
+        "m1.small",
+        "m1.medium",
+        "m1.large",
+        "m1.xlarge",
+        "m2.xlarge",
+        "m2.2xlarge",
+        "m2.4xlarge",
+        "m3.xlarge",
+        "m3.2xlarge",
+        "c1.medium",
+        "c1.xlarge",
+        "cc1.4xlarge",
+        "cc2.8xlarge",
+        "cg1.4xlarge"
+      ],
+      "ConstraintDescription" : "must be a valid EC2 instance type."
+    }
+
+  },
+
+  "Mappings" : {
+    "AWSInstanceType2Arch" : {
+      "t1.micro"    : { "Arch" : "64" },
+      "m1.small"    : { "Arch" : "64" },
+      "m1.medium"   : { "Arch" : "64" },
+      "m1.large"    : { "Arch" : "64" },
+      "m1.xlarge"   : { "Arch" : "64" },
+      "m2.xlarge"   : { "Arch" : "64" },
+      "m2.2xlarge"  : { "Arch" : "64" },
+      "m2.4xlarge"  : { "Arch" : "64" },
+      "m3.xlarge"   : { "Arch" : "64" },
+      "m3.2xlarge"  : { "Arch" : "64" },
+      "c1.medium"   : { "Arch" : "64" },
+      "c1.xlarge"   : { "Arch" : "64" },
+      "cc1.4xlarge" : { "Arch" : "64Cluster" },
+      "cc2.8xlarge" : { "Arch" : "64Cluster" },
+      "cg1.4xlarge" : { "Arch" : "64GPU" }
+    },
+
+    "AWSRegionArch2AMI" : {
+      "us-east-1" : { "32" : "ami-9b86fef2", "64" : "ami-9b86fef2", "64Cluster" : "NOT YET SUPPORTED", "64GPU" : "NOT YET SUPPORTED" }
+    },
+
+    "SubnetConfig" : {
+      "VPC"     : { "CIDR" : "10.178.160.0/20" },
+      "Public1"  : { "CIDR" : "10.178.168.0/24", "ID" : "subnet-4ef1312f" },
+      "Public2"  : { "CIDR" : "10.178.166.0/24", "ID" : "subnet-c7f030a6" },
+      "PrivateA1" : { "CIDR" : "10.178.163.0/24", "ID" : "subnet-04f23265" },
+      "PrivateA2" : { "CIDR" : "10.178.161.0/25", "ID" : "subnet-c6f131a7" },
+      "PrivateA3" : { "CIDR" : "10.178.167.0/24", "ID" : "subnet-29f23248" },
+      "PrivateC1" : { "CIDR" : "10.178.169.0/24", "ID" : "subnet-d2f232b3" },
+      "PrivateC2" : { "CIDR" : "10.178.161.128/25", "ID" : "subnet-90df1ff1" },
+      "PrivateC3" : { "CIDR" : "10.178.165.0/24", "ID" : "subnet-aef232cf" }
+    }
+  },
+
+  "Resources" : {
+
+      "BastionIPAddress" : {
+      "Type" : "AWS::EC2::EIP",
+      "Properties" : {
+        "Domain" : "vpc",
+        "InstanceId" : { "Ref" : "BastionHost" }
+      }
+    },
+
+    "BastionHost" : {
+      "Type" : "AWS::EC2::Instance",
+      "Properties" : {
+        "InstanceType" : { "Ref" : "BastionInstanceType" },
+        "KeyName"  : { "Ref" : "KeyPair" },
+        "SubnetId" : { "Fn::FindInMap" : [ "SubnetConfig", "Public1", "ID" ] },
+        "ImageId"  : {
+          "Fn::FindInMap" : [
+            "AWSRegionArch2AMI", { "Ref" : "AWS::Region" }, { "Fn::FindInMap" : [ "AWSInstanceType2Arch", { "Ref" : "BastionInstanceType" }, "Arch" ] }
+          ]
+        },
+        "SecurityGroupIds" : [ "sg-6548f80a" ],
+        "Tags" : [
+          { "Key" : "Name", "Value" : "BastionHost" },
+          { "Key" : "Environment", "Value" : "prod" }
+        ]
+      }
+    }
+  }
+}

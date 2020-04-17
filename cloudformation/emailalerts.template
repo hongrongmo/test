@@ -1,0 +1,405 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "EBS-backed EV Email Alerts EC2 instance in VPC - no autoscaling,no ELB",
+    "Parameters": {
+        "AMI": {
+            "Default": "ami-876532ee",
+            "Description": "AMI ID to use-same as EV dev-cert",
+            "Type": "String"
+        },
+        "DBName": {
+            "Default": "EIA",
+            "Description": "The JDBC connection name of the database you want to use. Frank-note-we may point it to another DB",
+            "MinLength": "1",
+            "Type": "String"
+        },
+        "Environment": {
+            "Default": "prod",
+            "Description": "Options: prod",
+            "MinLength": "1",
+            "Type": "String"
+        },
+        "InstanceType": {
+            "AllowedValues": [
+                "t1.micro",
+                "m1.small",
+                "m1.medium",
+                "m1.large",
+                "m1.xlarge",
+                "m2.xlarge",
+                "m2.2xlarge",
+                "m2.4xlarge",
+                "m3.xlarge"
+            ],
+            "Default": "t1.micro",
+            "Description": "Type of EC2 instance to launch. Using t1.micro for alerts",
+            "Type": "String"
+        },
+        "KeyPair": {
+            "Default": "Prod",
+            "Description": "The EC2 Key Pair to allow SSH access to the instances. The keypair must already exist in EC2.",
+            "Type": "String"
+        },
+        "Subnet": {
+            "Default": "subnet-aef232cf",
+            "Description": "The VPC subnet you want to create the EC2 instance in. Note- 10.178.165.0/24 ? PROD (us-east-1c)was from Marc VPC private subnet list which has subnet-id subnet-aef232cf",
+            "Type": "String"
+        },
+        "VpcId": {
+            "Default": "vpc-90df1ff1",
+            "Description": "VpcId of your existing Virtual Private Cloud (VPC). Note- we leave the value of VpcId emplty and type in vpc-90df1ff1 during stack creation because of the syntax issue.",
+            "Type": "String"
+        }
+    },
+    "Mappings": {
+        "SubnetConfig": {
+            "VPC": {
+                "CIDR": "10.178.160.0/20",
+                "ID": "vpc-90df1ff1"
+            },
+            "na": {
+                "AZ": [
+                    "us-east-1a"
+                ],
+                "CIDIR": [
+                    "10.178.161.0/25"
+                ],
+                "SUBNET": [
+                    "subnet-c6f131a7"
+                ]
+            },
+            "prod": {
+                "AZ": [
+                    "us-east-1c",
+                    "us-east-1a"
+                ],
+                "CIDIR": [
+                    "10.178.165.0/24",
+                    "10.178.163.0/24"
+                ],
+                "SUBNET": "subnet-aef232cf"
+            },
+            "public": {
+                "AZ": [
+                    "us-east-1c",
+                    "us-east-1a"
+                ],
+                "CIDIR": [
+                    "10.178.168/0/24",
+                    "10.178.166.0/24"
+                ],
+                "SUBNET": [
+                    "subnet-4ef1312f",
+                    "subnet-c7f030a6"
+                ]
+            },
+            "ucd": {
+                "AZ": [
+                    "us-east-1c",
+                    "us-east-1a"
+                ],
+                "CIDIR": [
+                    "10.178.169.0/24",
+                    "10.178.167.0/24"
+                ],
+                "SUBNET": [
+                    "subnet-d2f232b3",
+                    "subnet-29f23248"
+                ]
+            }
+        }
+    },
+    "Resources": {
+        "EVAlerts": {
+            "Properties": {
+                "AvailabilityZone": "us-east-1c",
+                "ImageId": {
+                    "Ref": "AMI"
+                },
+                "InstanceType": {
+                    "Ref": "InstanceType"
+                },
+                "KeyName": {
+                    "Ref": "KeyPair"
+                },
+                "SecurityGroupIds": [
+                    "sg-6a47a80f",
+                    "sg-b04cfcdf"
+                ],
+                "SubnetId": {
+                    "Fn::FindInMap": [
+                        "SubnetConfig",
+                        {
+                            "Ref": "Environment"
+                        },
+                        "SUBNET"
+                    ]
+                },
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "EVAlerts"
+                    },
+                    {
+                        "Key": "Vpc",
+                        "Value": {
+                            "Fn::FindInMap": [
+                                "SubnetConfig",
+                                "VPC",
+                                "ID"
+                            ]
+                        }
+                    },
+                    {
+                        "Key": "Environment",
+                        "Value": {
+                            "Ref": "Environment"
+                        }
+                    }
+                ],
+                "UserData": {
+                    "Fn::Base64": {
+                        "Fn::Join": [
+                            "\n",
+                            [
+                                "#!/bin/bash",
+                                {
+                                    "Fn::Join": [
+                                        "=",
+                                        [
+                                            "ACCESS_KEY",
+                                            {
+                                                "Ref": "WebServiceUserKey"
+                                            }
+                                        ]
+                                    ]
+                                },
+                                {
+                                    "Fn::Join": [
+                                        "=",
+                                        [
+                                            "SECRET_KEY",
+                                            {
+                                                "Fn::GetAtt": [
+                                                    "WebServiceUserKey",
+                                                    "SecretAccessKey"
+                                                ]
+                                            }
+                                        ]
+                                    ]
+                                },
+                                {
+                                    "Fn::Join": [
+                                        "=",
+                                        [
+                                            "ENV",
+                                            {
+                                                "Ref": "Environment"
+                                            }
+                                        ]
+                                    ]
+                                },
+                                {
+                                    "Fn::Join": [
+                                        "=",
+                                        [
+                                            "DBNAME",
+                                            {
+                                                "Ref": "DBName"
+                                            }
+                                        ]
+                                    ]
+                                },
+                                "yum -y install puppet aws-cli",
+                                "yum-config-manager --enable epel",
+                                "yum -y install binutils compat-lib stdc++ elfutils-libelf elfutils-lib elf-devel",
+                                "yum -y install glibc glibc-common glibc-devel gcc gcc-c++ libaio-devel libaio libgcc",
+                                "yum -y install libstdc++ libstdc++-devel makesys statunix ODBCunix ODBC-devel",
+                                "mkdir -p /var/els/tmp",
+                                "cat > /var/els/tmp/.s3cfg <<EOF",
+                                "access_key=$ACCESS_KEY",
+                                "secret_key=$SECRET_KEY",
+                                "use_https=True",
+                                "EOF",
+                                "groupadd -g 101 dba",
+                                "useradd -u 32350 -g 101 -d /home/oracle -s /bin/bash oracle",
+                                "mkdir -p /opt/oracle",
+                                "chown oracle:dba /opt/oracle",
+                                "chmod 755 /opt/oracle",
+                                "echo usage>>/etc/cron.allow",
+                                "cd /etc",
+                                "mkdir /data",
+				"/usr/bin/s3cmd -c /var/els/tmp/.s3cfg get s3://ev-ops/emailalerts.zip /tmp",
+				"unzip -d /data /tmp/emailalerts.zip",
+                                "chown -R ec2-user:ec2-user /data",
+                                "chmod 755 /data",
+                                "cat > /var/els/tmp/.s3cfg <<EOF",
+                                "access_key=$ACCESS_KEY",
+                                "secret_key=$SECRET_KEY",
+                                "use_https=True",
+                                "EOF",
+                                "/usr/bin/s3cmd -c /var/els/tmp/.s3cfg get s3://els-day-ops/installs/lin64-11.2.0.3.tar.gz /opt/oracle",
+                                "cd /opt/oracle;tar xzvf lin64-11.2.0.3.tar.gz;rm-f /opt/oracle/lin64-11.2.0.3.tar.gz",
+                                "cat >> /home/oracle/.bash_profile << EOF",
+                                "#.bash_profile",
+                                "#Get the aliases and functions",
+                                "if [ -f ~/.bashrc ];then",
+                                ". ~/.bashrc",
+                                "fi",
+                                "#User specific environment and startup programs",
+                                "ORACLE_SID=eid",
+                                "export ORACLE_HOME=/opt/oracle/lin64-11.2.0.3",
+                                "export TNS_ADMIN=/opt/oracle/lin64-11.2.0.3/network/admin",
+                                "#PATH=$PATH:$HOME/bin",
+                                "PATH=$PATH:$HOME/bin:${ORACLE_HOME}/bin",
+                                "export PATH",
+                                "#umask 0007",
+                                "export EDITOR=vim",
+                                "EOF",
+                                "cat >> /home/oracle/.bashrc << EOF",
+                                "#.bashrc",
+                                "#Source global definitions",
+                                "if [ -f /etc/bashrc ]",
+				"then",
+                                ". /etc/bashrc",
+                                "fi",
+                                "#User specific aliases and functions",
+                                "#umask 077",
+                                "umask 022",
+                                "ORACLE_SID=eid",
+                                "export ORACLE_HOME=/opt/oracle/lin64-11.2.0.3",
+                                "export TNS_ADMIN=/opt/oracle/lin64-11.2.0.3/network/admin",
+                                "PATH=$PATH:$HOME/bin:${ORACLE_HOME}/bin",
+                                "export PATH",
+                                "EOF",
+                                "cat >> /home/usage/.bash_profile << EOF",
+                                "#.bash_profile",
+                                "#Get the aliases and functions",
+                                "if [ -f ~/.bashrc ]",
+				"then",
+                                ". ~/.bashrc",
+                                "fi",
+                                "#User specific environment and startup programs",
+                                "ORACLE_SID=eid",
+                                "export ORACLE_HOME=/opt/oracle/lin64-11.2.0.3",
+                                "export TNS_ADMIN=/opt/oracle/lin64-11.2.0.3/network/admin",
+                                "#PATH=$PATH:$HOME/bin",
+                                "PATH=$PATH:$HOME/bin:${ORACLE_HOME}/bin",
+                                "export PATH",
+                                "#umask 0007",
+                                "export EDITOR=vim",
+                                "EOF",
+                                "cat >> /home/usage/.bashrc << EOF",
+                                "#Source global definitions",
+                                "if [ -f /etc/bashrc ]",
+				"then",
+                                ". /etc/bashrc",
+                                "fi",
+                                "#User specific aliases and functions",
+                                "#umask 077",
+                                "umask 022",
+                                "ORACLE_SID=eid",
+                                "export ORACLE_HOME=/opt/oracle/lin64-11.2.0.3",
+                                "export TNS_ADMIN=/opt/oracle/lin64-11.2.0.3/network/admin",
+                                "PATH=$PATH:$HOME/bin:${ORACLE_HOME}/bin",
+                                "export PATH",
+                                "EOF",
+                                "/usr/bin/s3cmd -c /var/els/tmp/.s3cfg sync s3://els-day-ops/puppet /var/els",
+                                "chown -R ec2-user:ec2-user /var/els",
+                                "cat > /opt/oracle/tnsnames.ora <<EOF",
+                                "EID=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=eid.cmdvszxph9cf.us-east-1.rds.amazonaws.com)(PORT=1521))(CONNECT_DATA=(SID=eid)))",
+                                "EOF",
+                                "chown oracle:dba /opt/oracle/tnsnames.ora",
+                                "chmod 644 /opt/oracle/tnsnames.ora",
+				"s3cmd -c /var/els/tmp/.s3cfg cp s3://ev-ops/emailalerts.zip /tmp",
+				"mkdir /data",
+				"unzip -d /data /tmp/emailalerts.zip && rm /tmp/emailalerts.zip",
+				"chown -R ec2-user:ec2-user /data"
+                            ]
+                        ]
+                    }
+                }
+            },
+            "Type": "AWS::EC2::Instance"
+        },
+        "WebServiceUser": {
+            "Properties": {
+                "Groups": [
+                    "ELS-Standard-IAM-Group-S3Users-1V2Z3CNSFG6UZ"
+                ],
+                "Path": "/"
+            },
+            "Type": "AWS::IAM::User"
+        },
+        "WebServiceUserKey": {
+            "Properties": {
+                "Serial": 1,
+                "UserName": {
+                    "Ref": "WebServiceUser"
+                }
+            },
+            "Type": "AWS::IAM::AccessKey"
+        }
+    },
+    "Outputs": {
+        "InstanceId": {
+            "Description": "Instance Id of the newly created EC2 instance",
+            "Value": {
+                "Ref": "EVAlerts"
+            }
+        },
+        "PrivateDNS": {
+            "Description": "Private DNS Name of the newly created EC2 instance",
+            "Value": {
+                "Fn::GetAtt": [
+                    "EVAlerts",
+                    "PrivateDnsName"
+                ]
+            }
+        },
+        "PrivateIP": {
+            "Description": "Private IP address of the newly created EC2 instance",
+            "Value": {
+                "Fn::GetAtt": [
+                    "EVAlerts",
+                    "PrivateIp"
+                ]
+            }
+        },
+        "PublicDNS": {
+            "Description": "Public DNS Name of the newly created EC2 instance",
+            "Value": {
+                "Fn::GetAtt": [
+                    "EVAlerts",
+                    "PublicDnsName"
+                ]
+            }
+        },
+        "WebsiteURL": {
+            "Description": "URL for newly created EC2 Instance",
+            "Value": {
+                "Fn::Join": [
+                    "",
+                    [
+                        "http://",
+                        {
+                            "Fn::GetAtt": [
+                                "EVAlerts",
+                                "PrivateDnsName"
+                            ]
+                        }
+                    ]
+                ]
+            }
+        },
+        "AZ": {
+            "Description": "Availability Zone of the newly created EC2 instance",
+            "Value": {
+                "Fn::GetAtt": [
+                    "EVAlerts",
+                    "AvailabilityZone"
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,480 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Parameters": {
+    "Environment": {
+      "Type": "String",
+      "MinLength": "1",
+      "Description": "Options: int,dev,cert,load,prod,release",
+      "AllowedValues": [
+        "int",
+        "dev",
+        "cert",
+        "load",
+        "prod",
+        "release"
+      ],
+      "Default": "prod"
+    },
+    "VpcId" : {
+      "Type" : "String",
+      "Description" : "VpcId of your existing Virtual Private Cloud (VPC)",
+      "Default" : "vpc-90df1ff1"
+    },
+    "DBIdentifier" : 
+	{
+	  "Type" : "String",
+      "Description" : "DB instance identifier. This is the unique key that identifies a DB instance. Stored as a lowercase string",
+      "Default" : "eia"
+	},
+    "Subnets" : {
+      "Type" : "CommaDelimitedList",
+      "Description" : "The list of SubnetIds, for at least two Availability Zones in the region in your Virtual Private Cloud (VPC)",
+      "Default" : "subnet-aef232cf,subnet-04f23265"
+    },
+    "BillingID": {
+        "Default": "NA",
+        "Description": "Enter the Billing ID Tag for this account",
+        "Type": "String"
+    },
+    "OwnerTag": {
+      "Default": "EVTeam",
+      "Description": "Enter the Owner Tag for this account",
+      "Type": "String"
+    },
+    "ProductTag": {
+      "Default": "EVProd",
+      "Description": "Enter the Product Tag for this account (e.g., gsmobile, epmmns, fcmobile...)",
+      "Type": "String"
+    },
+    "Role": {
+      "Default": "DBServer",
+      "Description": "Enter the Role (e.g. web, Apache, Tomcat, IIS, DBServer)",
+      "Type": "String"
+    },
+    "DBSize" : {
+      "Description" : "Size in GB for the database if using Iops must be at least 1200GB",
+      "Type" : "String",
+      "Default" : "1200"
+    },
+    "MultiAZ": {
+      "AllowedValues": [
+          "true",
+          "false"
+      ],
+      "ConstraintDescription": "must be either true or false.",
+      "Default": "true",
+      "Description": "Create a multi-AZ Oracle Amazon RDS database instance",
+      "Type": "String"
+    },
+    "DBName" : {
+      "Description" : "The Name of the Database",
+      "Type" : "String",
+      "Default" : "EIA"
+    },
+    "BackupRetention" : {
+      "Description" : "The number of days to keep backups for",
+      "Type" : "String",
+      "Default" : "7"
+    },
+    "MasterUser" : {
+      "AllowedPattern": "[a-zA-Z][a-zA-Z0-9]*",
+      "ConstraintDescription": "must begin with a letter and contain only alphanumeric characters.",
+      "Description": "The RDS Database username",
+      "MaxLength": "16",
+      "MinLength": "6",
+      "NoEcho": "true",
+      "Type": "String"
+    },
+    "DBSnapshotName" : {
+      "Description" : "Name of Snapshot to use to Restore Database",
+      "Type" : "String",
+      "Default" : "eid-2-9-2014"
+    },
+    "MasterPassWord" : {
+      "AllowedPattern": "[a-zA-Z0-9]*",
+      "ConstraintDescription": "must contain only alphanumeric characters.",
+      "Description": "The RDS database admin account password",
+      "MaxLength": "41",
+      "MinLength": "8",
+      "NoEcho": "true",
+      "Type": "String"
+    },
+    "DBInstanceClass": {
+      "Default": "db.m3.xlarge",
+      "Description" : "The database instance type",
+      "Type": "String",
+      "AllowedValues" : [ "db.m1.small", "db.m1.large", "db.m1.xlarge", "db.m2.xlarge", "db.m2.2xlarge", "db.m2.4xlarge" , "db.m3.xlarge" ],
+      "ConstraintDescription" : "must select a valid database instance type."
+    },
+    "AlarmTopic1": {
+     "Type" : "String",
+      "Description": "SNS topic to notify if there are operational issues",
+      "Default": "arn:aws:sns:us-east-1:230521890328:Frank"
+      },
+    "AlarmTopic2": {
+         "Type" : "String",
+          "Description": "SNS topic to notify if there are operational issues",
+          "Default": "arn:aws:sns:us-east-1:230521890328:FrankCell"
+      },
+    "AlarmTopic3": {
+     "Type" : "String",
+      "Description": "SNS topic to notify if there are operational issues",
+      "Default": "arn:aws:sns:us-east-1:230521890328:HananEmail"
+      },
+     "AlarmTopic4": {
+     "Type" : "String",
+      "Description": "SNS topic to notify if there are operational issues",
+      "Default": "arn:aws:sns:us-east-1:230521890328:Hanan"
+      },
+     "AlarmTopic5": {
+           "Type" : "String",
+            "Description": "SNS topic to notify if there are operational issues",
+            "Default": "arn:aws:sns:us-east-1:230521890328:TMCell"
+      }
+	  
+  },
+  "Mappings" : {
+    "InstanceTypeMap" : {
+      "db.m1.small" : {
+        "CPULimit" : "60",
+        "FreeStorageSpaceLimit" : "1024",
+        "ReadIOPSLimit" : "100",
+        "WriteIOPSLimit" : "100"
+      },
+      "db.m1.large" : {
+        "CPULimit" : "60",
+        "FreeStorageSpaceLimit" : "1024",
+        "ReadIOPSLimit" : "100",
+        "WriteIOPSLimit" : "100"
+      },
+      "db.m1.xlarge" : {
+        "CPULimit" : "60",
+        "FreeStorageSpaceLimit" : "1024",
+        "ReadIOPSLimit" : "100",
+        "WriteIOPSLimit" : "100"
+      },
+      "db.m2.xlarge" : {
+        "CPULimit" : "60",
+        "FreeStorageSpaceLimit" : "1024",
+        "ReadIOPSLimit" : "100",
+        "WriteIOPSLimit" : "100"
+      },
+      "db.m2.2xlarge" : {
+        "CPULimit" : "60",
+        "FreeStorageSpaceLimit" : "1024",
+        "ReadIOPSLimit" : "100",
+        "WriteIOPSLimit" : "100"
+      },
+      "db.m2.4xlarge" : {
+        "CPULimit" : "60",
+        "FreeStorageSpaceLimit" : "1024",
+        "ReadIOPSLimit" : "100",
+        "WriteIOPSLimit" : "100"
+      },
+	  "db.m3.xlarge" : {
+        "CPULimit" : "95",
+        "FreeStorageSpaceLimit" : "50000000000",
+        "ReadIOPSLimit" : "4000",
+        "WriteIOPSLimit" : "1000",
+		"ReadLatencyLimit" : "2",
+		"WriteLatencyLimit": "4",
+		"FreeableMemoryLimit": "500000000",
+		"DBConnectionLimit": "800",
+		"ReadThroughputLimit" : "200000000",
+		"WriteThroughputLimit" : "100000000",
+		"SwapUsageLimit" : "5000000000"
+      }
+    }
+  },
+  "Resources": {
+   "EIADBSubnetGroup" : {
+      "Type" : "AWS::RDS::DBSubnetGroup",
+      "Properties" : {
+        "DBSubnetGroupDescription" : "Subnets available for the EIA RDS DB Instance",
+        "SubnetIds" : { "Ref" : "Subnets" }
+      }
+    },
+    "eiardsInstance": {
+      "Type": "AWS::RDS::DBInstance",
+	  "DeletionPolicy" : "Snapshot",
+      "Properties": {
+	    "DBInstanceIdentifier" : { "Ref" : "DBIdentifier" },
+        "AutoMinorVersionUpgrade": "true",
+        "DBInstanceClass": { "Ref" : "DBInstanceClass" },
+		"Iops": "4000",
+        "Port": "1521",
+        "AllocatedStorage": { "Ref" : "DBSize" },
+        "BackupRetentionPeriod": { "Ref" : "BackupRetention" },
+        "DBName": { "Ref" : "DBName" },
+        "Engine": "oracle-ee",
+        "EngineVersion": "11.2.0.2.v7",
+        "LicenseModel": "bring-your-own-license",
+		"DBSnapshotIdentifier" : { "Ref" : "DBSnapshotName" },
+        "MasterUsername": { "Ref" : "MasterUser" },
+        "MasterUserPassword": { "Ref" : "MasterPassWord" },
+        "PreferredBackupWindow": "10:13-10:43",
+        "PreferredMaintenanceWindow": "tue:03:34-tue:04:04",
+	    "MultiAZ": { "Ref": "MultiAZ" },
+        "VPCSecurityGroups": [ "sg-6a47a80f" , "sg-7b4dfd14" ],
+        "DBSubnetGroupName": { "Ref": "EIADBSubnetGroup" },
+        "Tags": [
+		{ "Key": "workload-type", "Value": { "Ref" : "Environment" } },
+          { "Key": "Environment", "Value": { "Ref" : "Environment" } },
+          { "Key": "Role", "Value": { "Ref" : "Role" } },
+          { "Key" : "Owner", "Value": { "Ref": "OwnerTag" } },
+          { "Key" : "VPC", "Value": { "Ref": "VpcId" } },
+          { "Key" : "BillingID", "Value": { "Ref": "BillingID" } },
+          { "Key" : "Product", "Value": { "Ref": "ProductTag" } }
+        ]
+      }
+    },
+    "FreeStorageSpace": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+	   "AlarmName": "EiaRdsServerFreeSpace",
+        "ActionsEnabled": "true",
+        "AlarmDescription": { "Fn::Join" : [ "", ["Alarm if ", { "Ref" : "DBName" }, " FreeStorageSpace <= ", { "Fn::FindInMap" : [ "InstanceTypeMap", { "Ref" : "DBInstanceClass" }, "FreeStorageSpaceLimit" ]}, " for 5 minutes" ]]},
+        "ComparisonOperator": "LessThanOrEqualToThreshold",
+        "EvaluationPeriods": "1",
+        "MetricName": "FreeStorageSpace",
+        "Namespace": "AWS/RDS",
+        "Period": "300",
+        "Statistic": "Average",
+		"Unit" : "Bytes",
+        "Threshold": { "Fn::FindInMap" : [ "InstanceTypeMap", { "Ref" : "DBInstanceClass" }, "FreeStorageSpaceLimit" ]},
+        "AlarmActions": [ { "Ref": "AlarmTopic1" } , { "Ref": "AlarmTopic3" }, { "Ref": "AlarmTopic4" }],
+        "Dimensions": [
+          {
+            "Name": "DBInstanceIdentifier",
+            "Value": { "Ref": "eiardsInstance" }
+          }
+        ]
+      }
+    },
+    "CPUAlarmHigh": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+		"AlarmName": "EiaRDSCPU",
+        "AlarmDescription": { "Fn::Join" : [ "", ["Alarm if ", { "Ref" : "DBName" }, " CPUUtilization >= ", { "Fn::FindInMap" : [ "InstanceTypeMap", { "Ref" : "DBInstanceClass" }, "CPULimit" ]}, "% for 15 minutes" ]]},
+        "Namespace": "AWS/RDS",
+        "MetricName": "CPUUtilization",
+        "Statistic": "Average",
+		"Unit" : "Percent",
+        "Period": "300",
+        "Threshold": { "Fn::FindInMap" : [ "InstanceTypeMap", { "Ref" : "DBInstanceClass" }, "CPULimit" ]},
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "EvaluationPeriods": "3",
+        "AlarmActions": [ { "Ref": "AlarmTopic1" } , { "Ref": "AlarmTopic3" } , { "Ref": "AlarmTopic4" } ],
+        "Dimensions": [{
+            "Name": "DBInstanceIdentifier",
+            "Value": { "Ref": "eiardsInstance" }
+        }]
+      }
+    },
+    "ReadIOPSHigh": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+		"AlarmName": "EiaRDSReadIops",
+       "AlarmDescription": { "Fn::Join" : [ "", ["Alarm if ", { "Ref" : "DBName" }, " ReadIOPs >= ", { "Fn::FindInMap" : [ "InstanceTypeMap", { "Ref" : "DBInstanceClass" }, "ReadIOPSLimit" ]}, " for 25 minutes" ]]},
+        "ActionsEnabled": "true",
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "EvaluationPeriods": "5",
+        "MetricName": "ReadIOPS",
+        "Namespace": "AWS/RDS",
+        "Period": "300",
+        "Statistic": "Average",
+		"Unit" : "Count/Second",
+        "Threshold": { "Fn::FindInMap" : [ "InstanceTypeMap", { "Ref" : "DBInstanceClass" }, "ReadIOPSLimit" ]},
+        "AlarmActions": [ { "Ref": "AlarmTopic1" } , { "Ref": "AlarmTopic3" } , { "Ref": "AlarmTopic4" } ],
+        "Dimensions": [
+          {
+            "Name": "DBInstanceIdentifier",
+            "Value": { "Ref": "eiardsInstance" }
+          }
+        ]
+      }
+    },
+    "WriteIOPSHigh": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+		"AlarmName": "EiaRDSWriteIops",
+        "AlarmDescription": { "Fn::Join" : [ "", ["Alarm if ", { "Ref" : "DBName" }, " WriteIOPs >= ", { "Fn::FindInMap" : [ "InstanceTypeMap", { "Ref" : "DBInstanceClass" }, "WriteIOPSLimit" ]}, " for 25 minutes" ]]},
+        "Namespace": "AWS/RDS",
+        "MetricName": "WriteIOPS",
+        "Statistic": "Average",
+		"Unit" : "Count/Second",
+        "Period": "300",
+        "Threshold": { "Fn::FindInMap" : [ "InstanceTypeMap", { "Ref" : "DBInstanceClass" }, "WriteIOPSLimit" ]},
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "EvaluationPeriods": "5",
+        "AlarmActions": [ { "Ref": "AlarmTopic1" }, { "Ref": "AlarmTopic3" } , { "Ref": "AlarmTopic4" } ],
+        "Dimensions": [{
+            "Name": "DBInstanceIdentifier",
+            "Value": { "Ref": "eiardsInstance" }
+        }]
+      }
+    },
+
+	 "ReadLatencyHigh": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+	    "AlarmName": "EiaRDSReadLatency",
+        "AlarmDescription": { "Fn::Join" : [ "", ["Alarm if ", { "Ref" : "DBName" }, " ReadLatency >= ", { "Fn::FindInMap" : [ "InstanceTypeMap", { "Ref" : "DBInstanceClass" }, "ReadLatencyLimit" ]}, " for 15 minutes" ]]},
+        "Namespace": "AWS/RDS",
+        "MetricName": "ReadLatency",
+        "Statistic": "Average",
+		"Unit": "Seconds",
+        "Period": "300",
+        "Threshold": { "Fn::FindInMap" : [ "InstanceTypeMap", { "Ref" : "DBInstanceClass" }, "ReadLatencyLimit" ]},
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "EvaluationPeriods": "3",
+        "AlarmActions": [ { "Ref": "AlarmTopic1" } , { "Ref": "AlarmTopic3" } , { "Ref": "AlarmTopic4" } ],
+        "Dimensions": [{
+            "Name": "DBInstanceIdentifier",
+            "Value": { "Ref": "eiardsInstance" }
+        }]
+      }
+    },
+
+	"WriteLatencyHigh": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+	  "AlarmName": "EiaRDSWriteLatency",
+        "AlarmDescription": { "Fn::Join" : [ "", ["Alarm if ", { "Ref" : "DBName" }, " WriteLatency >= ", { "Fn::FindInMap" : [ "InstanceTypeMap", { "Ref" : "DBInstanceClass" }, "WriteLatencyLimit" ]}, " for 15 minutes" ]]},
+        "Namespace": "AWS/RDS",
+        "MetricName": "WriteLatency",
+        "Statistic": "Average",
+		"Unit": "Seconds",
+        "Period": "300",
+        "Threshold": { "Fn::FindInMap" : [ "InstanceTypeMap", { "Ref" : "DBInstanceClass" }, "WriteLatencyLimit" ]},
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "EvaluationPeriods": "3",
+        "AlarmActions": [ { "Ref": "AlarmTopic1" } ,{ "Ref": "AlarmTopic3" } , { "Ref": "AlarmTopic4" } ],
+        "Dimensions": [{
+            "Name": "DBInstanceIdentifier",
+            "Value": { "Ref": "eiardsInstance" }
+        }]
+      }
+    },
+
+	"FreeMemoryLimit": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+	  "AlarmName": "EiaRDSFreeMemory",
+        "AlarmDescription": { "Fn::Join" : [ "", ["Alarm if ", { "Ref" : "DBName" }, " FreeableMemory <= ", { "Fn::FindInMap" : [ "InstanceTypeMap", { "Ref" : "DBInstanceClass" }, "FreeableMemoryLimit" ]}, " for 10 minutes" ]]},
+        "Namespace": "AWS/RDS",
+        "MetricName": "FreeableMemory",
+        "Statistic": "Average",
+		"Unit": "Bytes",
+        "Period": "300",
+        "Threshold": { "Fn::FindInMap" : [ "InstanceTypeMap", { "Ref" : "DBInstanceClass" }, "FreeableMemoryLimit" ]},
+        "ComparisonOperator": "LessThanOrEqualToThreshold",
+        "EvaluationPeriods": "2",
+        "AlarmActions": [ { "Ref": "AlarmTopic1"} , { "Ref": "AlarmTopic3" } , { "Ref": "AlarmTopic4" } ],
+        "Dimensions": [{
+            "Name": "DBInstanceIdentifier",
+            "Value": { "Ref": "eiardsInstance" }
+        }]
+      }
+    },
+
+	
+	"DataBaseConnectionLimit": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+	  "AlarmName": "EiaRDSDBConnection",
+        "AlarmDescription": { "Fn::Join" : [ "", ["Alarm if ", { "Ref" : "DBName" }, " DatabaseConnections >= ", { "Fn::FindInMap" : [ "InstanceTypeMap", { "Ref" : "DBInstanceClass" }, "DBConnectionLimit" ]}, " for 5 minutes" ]]},
+        "Namespace": "AWS/RDS",
+        "MetricName": "DatabaseConnections",
+        "Statistic": "Average",
+		"Unit": "Count",
+        "Period": "300",
+        "Threshold": { "Fn::FindInMap" : [ "InstanceTypeMap", { "Ref" : "DBInstanceClass" }, "DBConnectionLimit" ]},
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "EvaluationPeriods": "1",
+        "AlarmActions": [ { "Ref": "AlarmTopic1" } , { "Ref": "AlarmTopic2" } , { "Ref": "AlarmTopic3" }, { "Ref": "AlarmTopic4" }, { "Ref": "AlarmTopic5" } ],
+        "Dimensions": [{
+            "Name": "DBInstanceIdentifier",
+            "Value": { "Ref": "eiardsInstance" }
+        }]
+      }
+    },
+	
+	"ReadThroughPutHigh": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+	  "AlarmName": "EiaRDSReadThroughput",
+        "AlarmDescription": { "Fn::Join" : [ "", ["Alarm if ", { "Ref" : "DBName" }, " ReadThroughput >= ", { "Fn::FindInMap" : [ "InstanceTypeMap", { "Ref" : "DBInstanceClass" }, "ReadThroughputLimit" ]}, " for 25 minutes" ]]},
+        "Namespace": "AWS/RDS",
+        "MetricName": "ReadThroughput",
+        "Statistic": "Average",
+		"Unit": "Bytes/Second",
+        "Period": "300",
+        "Threshold": { "Fn::FindInMap" : [ "InstanceTypeMap", { "Ref" : "DBInstanceClass" }, "ReadThroughputLimit" ]},
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "EvaluationPeriods": "5",
+        "AlarmActions": [ { "Ref": "AlarmTopic1" } , { "Ref": "AlarmTopic3" } , { "Ref": "AlarmTopic4" } ],
+        "Dimensions": [{
+            "Name": "DBInstanceIdentifier",
+            "Value": { "Ref": "eiardsInstance" }
+        }]
+      }
+    },
+	
+  "WriteThroughPutHigh": 
+  {
+        "Type": "AWS::CloudWatch::Alarm",
+        "Properties": 
+        {
+  	  "AlarmName": "EiaRDSWriteThroughput",
+          "AlarmDescription": { "Fn::Join" : [ "", ["Alarm if ", { "Ref" : "DBName" }, " WriteThroughput >= ", { "Fn::FindInMap" : [ "InstanceTypeMap", { "Ref" : "DBInstanceClass" }, "WriteThroughputLimit" ]}, " for 25 minutes" ]]},
+          "Namespace": "AWS/RDS",
+          "MetricName": "WriteThroughput",
+          "Statistic": "Average",
+		  "Unit": "Bytes/Second",
+          "Period": "300",
+          "Threshold": { "Fn::FindInMap" : [ "InstanceTypeMap", { "Ref" : "DBInstanceClass" }, "WriteThroughputLimit" ]},
+          "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+          "EvaluationPeriods": "5",
+          "AlarmActions": [ { "Ref": "AlarmTopic1" } , { "Ref": "AlarmTopic3" } , { "Ref": "AlarmTopic4" } ],
+          "Dimensions": [{
+              "Name": "DBInstanceIdentifier",
+              "Value": { "Ref": "eiardsInstance" }
+          		}]
+        }
+    },
+	  "SwapUsageHigh": 
+  {
+        "Type": "AWS::CloudWatch::Alarm",
+        "Properties": 
+        {
+  	  "AlarmName": "EiaRDSSwapUsage",
+          "AlarmDescription": { "Fn::Join" : [ "", ["Alarm if ", { "Ref" : "DBName" }, " SwapUsage >= ", { "Fn::FindInMap" : [ "InstanceTypeMap", { "Ref" : "DBInstanceClass" }, "SwapUsageLimit" ]}, " for 10 minutes" ]]},
+          "Namespace": "AWS/RDS",
+          "MetricName": "SwapUsage",
+          "Statistic": "Average",
+		  "Unit": "Bytes/Second",
+          "Period": "300",
+          "Threshold": { "Fn::FindInMap" : [ "InstanceTypeMap", { "Ref" : "DBInstanceClass" }, "SwapUsageLimit" ]},
+          "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+          "EvaluationPeriods": "2",
+          "AlarmActions": [ { "Ref": "AlarmTopic1" } , { "Ref": "AlarmTopic3" } , { "Ref": "AlarmTopic4" } ],
+          "Dimensions": [{
+              "Name": "DBInstanceIdentifier",
+              "Value": { "Ref": "eiardsInstance" }
+          		}]
+        }
+    }
+    },
+  "Outputs" : {
+    "DBAddress" : {
+      "Description" : "Address of database endpoint",
+      "Value" : { "Fn::GetAtt": [ "eiardsInstance", "Endpoint.Address" ] } 
+    },
+    "DBPort" : {
+      "Description" : "Database endpoint port number",
+      "Value" : { "Fn::GetAtt": [ "eiardsInstance", "Endpoint.Port" ] }
+    }
+  },
+  "Description": "Oracle Prod EIA RDS"
+}
