@@ -3,6 +3,7 @@ package org.ei.dataloading.knovel.loadtime;
 import java.sql.Clob;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -120,7 +121,7 @@ import org.ei.dataloading.MessageSender;
 	        try
 	        {
 
-	            stmt = con.createStatement();
+	        	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 	            System.out.println("Running the query...");
 	            String sqlQuery ="";
 	            if(Combiner.CURRENTDB.equalsIgnoreCase("kno")&&(year==9999))
@@ -170,7 +171,24 @@ import org.ei.dataloading.MessageSender;
 	            }
 	        }
 	    }
-	    
+	 
+    public static int getResultSetSize(ResultSet resultSet)
+    {
+    	    int size = -1;
+    	    try
+    	    {
+    	        resultSet.last();
+    	        size = resultSet.getRow();
+    	        resultSet.beforeFirst();
+    	    }
+    	    catch(SQLException e)
+    	    {
+    	        return size;
+    	    }
+
+    	    return size;
+    }
+    
 	public void writeCombinedByTableHook(Connection con)
 	throws Exception
 	{
@@ -179,7 +197,7 @@ import org.ei.dataloading.MessageSender;
 		try
 		{
 		
-			stmt = con.createStatement();
+			stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 			System.out.println("Running the query...");
 			String sqlQuery = "select ACCESSNUMBER,DOC_TYPE,DOI,PII,OAI,ISBN,EISBN,LANGUAGE,TITLE,AUTHOR,AFFILIATION,M_ID,PUBLISHER,DOC_FORMAT,substr(PUBLISH_DATE,1,4) PUBLISH_DATE,PARENTID,JOURNAL_NAME,JOURNAL_SUBNAME,VOLUME,ISSUE,ABSTRACT,SUBJECT,TABLE_OF_CONTENT,LOADNUMBER,COPYRIGHT,DATABASE from "+tablename+" where doc_type!='journal-article' and database='" + Combiner.CURRENTDB + "'";
 							   
@@ -233,7 +251,7 @@ import org.ei.dataloading.MessageSender;
 	        Thread thread = null;
 	        KafkaService kafka = new KafkaService();
 	        long processTime = System.currentTimeMillis();
-	    	int totalCount = rs.getMetaData().getColumnCount();  
+	    	int totalCount = getResultSetSize(rs);  
 	    	
 	        try
 	        {
@@ -547,7 +565,7 @@ import org.ei.dataloading.MessageSender;
 	            try
 	            {
 
-	                stmt = con.createStatement();
+	            	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 	                rs = stmt.executeQuery("select ACCESSNUMBER,DOC_TYPE,DOI,PII,OAI,ISBN,EISBN,LANGUAGE,TITLE,AUTHOR,AFFILIATION,M_ID,PUBLISHER,DOC_FORMAT,substr(PUBLISH_DATE,1,4) PUBLISH_DATE,PARENTID,JOURNAL_NAME,JOURNAL_SUBNAME,VOLUME,ISSUE,ABSTRACT,SUBJECT,TABLE_OF_CONTENT,LOADNUMBER,COPYRIGHT from "+tablename+" where loadnumber != 0 and loadnumber < 100000000 and doc_type!='journal-article' and database='" + Combiner.CURRENTDB + "'");
 	                writeRecs(rs);
 	                this.writer.end();
@@ -592,7 +610,7 @@ import org.ei.dataloading.MessageSender;
 
 	        try
 	        {
-	            stmt = con.createStatement();
+	        	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 	            String sqlString = "select ACCESSNUMBER,DOC_TYPE,DOI,PII,OAI,ISBN,EISBN,LANGUAGE,TITLE,AUTHOR,AFFILIATION,M_ID,PUBLISHER,DOC_FORMAT,substr(PUBLISH_DATE,1,4) PUBLISH_DATE,PARENTID,JOURNAL_NAME,JOURNAL_SUBNAME,VOLUME,ISSUE,ABSTRACT,SUBJECT,TABLE_OF_CONTENT,LOADNUMBER,COPYRIGHT,DATABASE from "+tablename+"  where  LOADNUMBER='" + weekNumber + "' AND loadnumber != 0 and loadnumber < 100000000 and doc_type!='journal-article' and database='" + Combiner.CURRENTDB + "'";
 	            System.out.println("SQL="+sqlString);
 	            rs = stmt.executeQuery(sqlString);

@@ -3,6 +3,7 @@ package org.ei.dataloading.ntis.loadtime;
 import java.io.ByteArrayInputStream;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Enumeration;
@@ -130,7 +131,7 @@ public class NTISCombiner
     			try
     			{
     			
-    				stmt = con.createStatement();
+    				stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
     				System.out.println("Running the query...");
     				String sqlQuery = "select * from " + Combiner.TABLENAME +" where database='" + Combiner.CURRENTDB + "'";
     				System.out.println(sqlQuery);
@@ -183,7 +184,7 @@ public class NTISCombiner
         try
         {
 
-            stmt = con.createStatement();
+        	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             System.out.println("Running the query...");
             String q ="";
             if(year==1)
@@ -241,7 +242,7 @@ public class NTISCombiner
 		try
 		{
 		
-			stmt = con.createStatement();
+			stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 			System.out.println("Running the query...");
 			String q = "select LOAD_NUMBER,M_ID,AN,TI,TN,PN,AB,IC,SU,DES,IDE,SO,PA1,PA2,PA2,PA3,PA4,PA5,RD,RN,CAT,VI,XP,AV,MAA1,MAA2,CT,PR,HN,seq_num from " + Combiner.TABLENAME;
 			rs = stmt.executeQuery(q);
@@ -281,17 +282,34 @@ public class NTISCombiner
 		}
 	}
 
+    public static int getResultSetSize(ResultSet resultSet)
+    {
+    	    int size = -1;
+    	    try
+    	    {
+    	        resultSet.last();
+    	        size = resultSet.getRow();
+    	        resultSet.beforeFirst();
+    	    }
+    	    catch(SQLException e)
+    	    {
+    	        return size;
+    	    }
+
+    	    return size;
+    }
+    
     private void writeRecs(ResultSet rs)
     	throws Exception
     {
         int i = 0;
         KafkaService kafka = new KafkaService();
         Thread thread = new Thread();
-        long processTime = System.currentTimeMillis();
-    	int totalCount = rs.getMetaData().getColumnCount();  
+        long processTime = System.currentTimeMillis();   	 
     	
         try
         {
+        	int totalCount = getResultSetSize(rs); 
 	        while (rs.next())
 	        {
 	
@@ -1252,7 +1270,7 @@ public class NTISCombiner
         try
         {
 
-            stmt = con.createStatement();
+        	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             rs = stmt.executeQuery("select LOAD_NUMBER,M_ID,AN,TI,TN,PN,AB,IC,SU,DES,IDE,SO,PA1,PA2,PA2,PA3,PA4,PA5,RD,RN,CAT,VI,XP,AV,MAA1,MAA2,CT,PR,HN,seq_num from " + tablename + " where load_number =" + weekNumber);
             writeRecs(rs);
             this.writer.end();

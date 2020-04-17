@@ -4,6 +4,7 @@ import java.io.ByteArrayInputStream;
 import java.sql.Clob;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
@@ -76,7 +77,7 @@ public class C84Combiner extends Combiner {
 		try
 		{
 		
-			stmt = con.createStatement();
+			stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 			System.out.println("Running the query...");
 			String sqlQuery = "select * from " + Combiner.TABLENAME;
 			System.out.println(sqlQuery);
@@ -126,7 +127,7 @@ public class C84Combiner extends Combiner {
         ResultSet rs = null;
         try {
 
-            stmt = con.createStatement();
+        	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             System.out.println("Running the query...");
             if (year == 9999) {
                 rs = stmt
@@ -164,16 +165,33 @@ public class C84Combiner extends Combiner {
         }
     }
 
+    public static int getResultSetSize(ResultSet resultSet)
+    {
+    	    int size = -1;
+    	    try
+    	    {
+    	        resultSet.last();
+    	        size = resultSet.getRow();
+    	        resultSet.beforeFirst();
+    	    }
+    	    catch(SQLException e)
+    	    {
+    	        return size;
+    	    }
+
+    	    return size;
+    }
+    
     private void writeRecs(ResultSet rs) throws Exception 
     {     
         int i = 0;
         KafkaService kafka = new KafkaService();
         Thread thread =null;
-        long processTime = System.currentTimeMillis();
-    	int totalCount = rs.getMetaData().getColumnCount();  
+        long processTime = System.currentTimeMillis();   	 
     	
         try
         {
+        	int totalCount = getResultSetSize(rs);
 	        while (rs.next()) 
 	        {
 	            EVCombinedRec rec = new EVCombinedRec();
@@ -615,7 +633,7 @@ public class C84Combiner extends Combiner {
 
         try {
 
-            stmt = con.createStatement();
+        	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 
             rs = stmt
                 .executeQuery("select ay, ac , ey, pe, pm, ad, pd, pu, ab, m_id, vo, iss, xp,af, ex, an, aus, bn, cal, cc, cf, cls, cn, cvs, dt, ed, ef, fls, id, la, lf, mc, me, mh, ms, mt, mv, my, m2, pn, se, sh, sn, sp, st, ti, tt, tr, vt, do, SUBSTR(yr,1,4) yr, load_number, seq_num from "

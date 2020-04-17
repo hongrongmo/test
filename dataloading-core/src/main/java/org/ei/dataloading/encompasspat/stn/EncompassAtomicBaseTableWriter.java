@@ -175,7 +175,7 @@ public class EncompassAtomicBaseTableWriter {
 			}
 			else
 			{
-				System.out.println(j+" "+buffer.toString());
+				//System.out.println(j+" "+buffer.toString());
 				buffer.append(sChar[j]);
 			}
 		}

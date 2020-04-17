@@ -18,7 +18,7 @@ public class ConsumerCreator {
         String kafkaBroker=null;
         String topicName = null;
         System.out.println("getting config file");
-    	try (InputStream input = new FileInputStream("/data/loading/shared/config.properties")) 
+    	try (InputStream input = new FileInputStream("./lib/config.properties")) 
     	{
     		
             Properties prop = new Properties();

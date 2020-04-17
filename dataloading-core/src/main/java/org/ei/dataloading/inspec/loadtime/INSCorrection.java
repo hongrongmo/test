@@ -552,7 +552,7 @@ public class INSCorrection
         ResultSet rs = null;
         try
         {
-            stmt = con.createStatement();
+        	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 			String sqlQuery = null;
             if(action.equalsIgnoreCase("update") || action.equalsIgnoreCase("extractupdate") || action.equalsIgnoreCase("ins") )
             {

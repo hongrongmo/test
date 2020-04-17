@@ -172,7 +172,8 @@ throws Exception
 	try
 	{
 
-		stmt = con.createStatement();
+		stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+		
 		System.out.println("Running the query...");
 		String sqlQuery = "select * from " + Combiner.TABLENAME;
 		System.out.println(sqlQuery);
@@ -337,7 +338,7 @@ public void writeRecs(ResultSet rs)
 	KafkaService kafka = new KafkaService();
 	Thread thread =null;
 	long processTime = System.currentTimeMillis();
-	int totalCount = rs.getMetaData().getColumnCount(); 
+	
 	int i = 1;
 	try
 	{
@@ -345,7 +346,7 @@ public void writeRecs(ResultSet rs)
 	    runtimeDocview.setResultSet(rs);
 	    EVCombinedRec recSecondBox = null;
 		EVCombinedRec[] recArray = null;
-		
+		int totalCount = getResultSetSize(rs); 
 		
 	   
 	    while (rs.next())

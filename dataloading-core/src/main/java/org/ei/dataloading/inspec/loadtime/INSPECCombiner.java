@@ -3,6 +3,7 @@ package org.ei.dataloading.inspec.loadtime;
 import java.sql.Clob;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -133,7 +134,7 @@ public class INSPECCombiner
     			try
     			{
     			
-    				stmt = con.createStatement();
+    				stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
     				System.out.println("Running the query...");
     				String sqlQuery = "select * from " + Combiner.TABLENAME;
     				System.out.println(sqlQuery);
@@ -186,7 +187,7 @@ public class INSPECCombiner
         try
         {
 
-            stmt = con.createStatement();
+        	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             System.out.println("Doing year:"+year);
 
             if(year == 2999)
@@ -315,6 +316,22 @@ public class INSPECCombiner
         return mResult.toString();
     }
 
+    public static int getResultSetSize(ResultSet resultSet)
+    {
+    	    int size = -1;
+    	    try
+    	    {
+    	        resultSet.last();
+    	        size = resultSet.getRow();
+    	        resultSet.beforeFirst();
+    	    }
+    	    catch(SQLException e)
+    	    {
+    	        return size;
+    	    }
+
+    	    return size;
+    }
 
     void writeRecs(ResultSet rs,Connection con)
             throws Exception
@@ -325,7 +342,7 @@ public class INSPECCombiner
         long processTime = System.currentTimeMillis();
        try
        {
-    	   int totalCount = rs.getMetaData().getColumnCount();   
+    	    int totalCount = getResultSetSize(rs);   
 	        while(rs.next())
 	        {
 	            EVCombinedRec rec = new EVCombinedRec();
@@ -820,7 +837,7 @@ public class INSPECCombiner
     	{
     		if(accessnumber!=null && accessnumber.length()>0)
     		{
-	    		stmt = con.createStatement();
+    			stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 	    		//System.out.println("Running the Numerical query...");
 	    		String sqlQuery = "select * from INS_MASTER_NUMERICAL where ACCESSNUMBER='"+accessnumber+"' order by unit";
 	    		//System.out.println(sqlQuery);
@@ -1498,7 +1515,7 @@ public class INSPECCombiner
         try
         {
 
-            stmt = con.createStatement();
+        	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             String sqlQuery = "";
         //  System.out.println("Running the query...");
         //  rs = stmt.executeQuery("select m_id, aaff, su, ab, anum, aoi, aus, aus2,pyr, rnum, pnum, cpat, ciorg, iorg, pas, cdate, cedate, doi, nrtype, doit, chi, voliss, ipn, cloc, cls, cn, cnt, cvs, eaff, eds, fjt, fls, fttj, la, matid, ndi, pdate, pub, rtype, sbn, sorg, sn, snt, tc, tdate, thlp, ti, trs, trmc, LOAD_NUMBER from "+Combiner.TABLENAME+ " where LOAD_NUMBER = "+loadN);
