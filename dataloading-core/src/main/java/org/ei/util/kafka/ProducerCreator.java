@@ -16,7 +16,7 @@ public class ProducerCreator {
         public static KafkaProducer<String, String> createProducer(String kafka_brokers) {
             // props = new Properties();
         	String kafkaBroker=null;
-        	try (InputStream input = new FileInputStream("/data/loading/shared/config.properties")) {
+        	try (InputStream input = new FileInputStream("./lib/config.properties")) {
 
                 Properties prop = new Properties();
 

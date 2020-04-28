@@ -100,7 +100,7 @@ public class CBNBCombiner extends Combiner
     			try
     			{
     			
-    				stmt = con.createStatement();
+    				stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
     				System.out.println("Running the query...");
     				String sqlQuery = "select * from " + Combiner.TABLENAME;
     				System.out.println(sqlQuery);
@@ -153,7 +153,7 @@ public class CBNBCombiner extends Combiner
         try
         {
 
-            stmt = con.createStatement();
+        	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             System.out.println("Running the query...");
             rs = stmt.executeQuery("select m_id, abn, doc, sco, fjl, isn, cdn, lan, ibn, src, scc,sct, ebt, cin, vol, iss, pag, reg, cym, sic, gic, gid, atl, otl, abs, edn, SUBSTR(pbn,1,4) pyr1, pyr,pbn,avl, pbr, load_number, seq_num from " + Combiner.TABLENAME +" where substr(pbn,1,4) ='"+ year +"'");
 
@@ -192,17 +192,35 @@ public class CBNBCombiner extends Combiner
             }
         }
     }
+    
+    public static int getResultSetSize(ResultSet resultSet)
+    {
+    	    int size = -1;
+    	    try
+    	    {
+    	        resultSet.last();
+    	        size = resultSet.getRow();
+    	        resultSet.beforeFirst();
+    	    }
+    	    catch(SQLException e)
+    	    {
+    	        return size;
+    	    }
 
+    	    return size;
+    }
+    
     private void writeRecs(ResultSet rs) throws Exception
     {
         int i = 0;
         KafkaService kafka = new KafkaService();
         Thread thread =null;
         long processTime = System.currentTimeMillis();
-    	int totalCount = rs.getMetaData().getColumnCount();  
+    	
     	
         try
         {
+        	int totalCount = getResultSetSize(rs); 
 	        while (rs.next())
 	        {
 	
@@ -592,7 +610,7 @@ public class CBNBCombiner extends Combiner
         try
         {
 
-            stmt = con.createStatement();
+        	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             rs = stmt.executeQuery("select m_id, abn, doc, sco, fjl, isn, cdn, lan, ibn, src, scc,sct, ebt, cin, vol, iss, pag, reg, cym, sic, gic, gid, atl, otl, abs, edn, SUBSTR(pbn,1,4) pyr1, pyr,pbn,avl,pbr,seq_num,load_number from " + Combiner.TABLENAME + " where load_number ='" + weekNumber + "'");
             writeRecs(rs);
             this.writer.end();

@@ -3,6 +3,7 @@ package org.ei.dataloading.bd.loadtime;
 import java.sql.Clob;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -167,7 +168,7 @@ public class XmlCombiner
         try
         {
 
-            stmt = con.createStatement();
+        	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             System.out.println("Running the query...");
             if(Combiner.CURRENTDB.equalsIgnoreCase("chm")&&(year==9999))
             {
@@ -272,7 +273,7 @@ public void writeCombinedByTableHook(Connection con) throws Exception
 	try
 	{
 	
-		stmt = con.createStatement();
+		stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 		System.out.println("Running the query...");
 		//String sqlQuery = "select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER, substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,APICT, APICT1,APILT, APILT1,CLASSIFICATIONDESC,APIAMS,SEQ_NUM from " + Combiner.TABLENAME +" where database='" + Combiner.CURRENTDB + "'";
 		String sqlQuery = "select UPDATENUMBER,CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CLASSIFICATIONDESC,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER, substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,APILT,APILT1,APICT,APICT1,APIAMS,SEQ_NUM,GRANTLIST,null as cafe_author,null as cafe_author1,null as cafe_affiliation, null as cafe_affiliation1,null as CAFE_CORRESPONDENCEAFFILIATION,null as authorid,null as affid,SOURCEBIBTEXT,STANDARDID,STANDARDDESIGNATION,NORMSTANDARDID,GRANTTEXT,ISOPENACESS,eid from " + Combiner.TABLENAME +" where database='" + Combiner.CURRENTDB + "'";
@@ -330,7 +331,23 @@ public void writeCombinedByTableHook(Connection con) throws Exception
 	}
 }
 
-
+	public static int getResultSetSize(ResultSet resultSet)
+	{
+		    int size = -1;
+		    try
+		    {
+		        resultSet.last();
+		        size = resultSet.getRow();
+		        resultSet.beforeFirst();
+		    }
+		    catch(SQLException e)
+		    {
+		        return size;
+		    }
+	
+		    return size;
+	}
+	
     public void writeRecs(ResultSet rs, Connection con)
         throws Exception
     {
@@ -352,7 +369,7 @@ public void writeCombinedByTableHook(Connection con) throws Exception
 
         try
         {
-        	int totalCount = rs.getMetaData().getColumnCount();       	
+        	int totalCount = getResultSetSize(rs);        	
 	        while (rs.next())
 	        {
 	          ++i;
@@ -737,19 +754,23 @@ public void writeCombinedByTableHook(Connection con) throws Exception
 	                        }
 	                        else if((ct = getCitationType(docType,confCodeFlag)) != null)
 	                        {
+	                        	/* remove CORE pre T.M. instruction on 4/14/2020
 	                            if((isCpx)&&((rs.getString("MAINHEADING") != null)|| rec.containsKey(EVCombinedRec.CONTROLLED_TERMS)))
 	                            {
 	                                ct = ct + " CORE";
 	                            }
+	                            */
 	                            rec.put(EVCombinedRec.DOCTYPE,ct);
 	                        }
 	                    }
 	                    else if(isCpx)
 	                    {
+	                    	/* remove CORE pre T.M. instruction on 4/14/2020
 	                        docType = "";
 	                        if ((rs.getString("MAINHEADING") != null)|| rec.containsKey(EVCombinedRec.CONTROLLED_TERMS)){
 	                            docType = docType + " CORE";
 	                        }
+	                        */
 	                        rec.put(EVCombinedRec.DOCTYPE, docType);
 	                    }
 	                    
@@ -1272,7 +1293,7 @@ public void writeCombinedByTableHook(Connection con) throws Exception
     	
     	try
     	{   		
-	    		stmt = con.createStatement();
+    			stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 	    		//System.out.println("Running the Numerical query...");
 	    		String sqlQuery = "select institute_id from CAFE_AF_LOOKUP where PUI='"+pui+"'";
 	    		//System.out.println(sqlQuery);
@@ -1327,7 +1348,7 @@ public void writeCombinedByTableHook(Connection con) throws Exception
     	try
     	{
     		
-	    		stmt = con.createStatement();
+    			stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 	    		//System.out.println("Running the Numerical query...");
 	    		String sqlQuery = "select author_id from CAFE_AU_LOOKUP where PUI='"+pui+"'";
 	    		//System.out.println(sqlQuery);
@@ -1489,7 +1510,7 @@ public void writeCombinedByTableHook(Connection con) throws Exception
     	{
     		if(pui!=null && pui.length()>0)
     		{
-	    		stmt = con.createStatement();
+    			stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 	    		//System.out.println("Running the Numerical query...");
 	    		String sqlQuery = "select * from BD_MASTER_NUMERICAL where PUI='"+pui+"' order by unit";
 	    		//System.out.println(sqlQuery);
@@ -2172,7 +2193,7 @@ public void writeCombinedByTableHook(Connection con) throws Exception
             try
             {
 
-                stmt = con.createStatement();
+            	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
                 
                 rs = stmt.executeQuery("select UPDATENUMBER,CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,CLASSIFICATIONDESC,APIAMS,SEQ_NUM from " + Combiner.TABLENAME + " where loadnumber != 0 and loadnumber < 100000000 and database='" + Combiner.CURRENTDB + "'");
                 writeRecs(rs,con);
@@ -2270,8 +2291,8 @@ public void writeCombinedByTableHook(Connection con) throws Exception
         ResultSet rs = null;
 
         try
-        {
-            stmt = con.createStatement();
+        {           
+            stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             //String sqlString = "select * from " + Combiner.TABLENAME + " where  LOADNUMBER='" + weekNumber + "' AND loadnumber != 0 and loadnumber < 100000000 and database='" + Combiner.CURRENTDB + "'";
             
             //change by hmo at 4/6/2017 for author/affiliation project

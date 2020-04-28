@@ -4,6 +4,7 @@ import java.io.ByteArrayInputStream;
 import java.sql.Clob;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.*;
 
@@ -31,7 +32,7 @@ public class EptCombiner extends Combiner {
 
         try {
 
-            stmt = con.createStatement();
+        	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             String sqlQuery=null;
             if(year == 9999)
             {
@@ -88,7 +89,7 @@ public class EptCombiner extends Combiner {
     			try
     			{
     			
-    				stmt = con.createStatement();
+    				stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
     				System.out.println("Running the query...");
     				String sqlQuery = "select * from " + Combiner.TABLENAME;
     				System.out.println(sqlQuery);
@@ -138,7 +139,7 @@ public class EptCombiner extends Combiner {
 
         try {
 
-            stmt = con.createStatement();
+        	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             rs = stmt.executeQuery("select dn,m_id,pat_in,ti,aj,ap,ad,ac,pn,py,pc,ic,cs,cc,la,lt,ab,ct,cr,ut,ey,crn,load_number,ll,dt,ds,seq_num from ept_master where load_number = " + week);
             writeRecs(rs);
             this.writer.end();
@@ -174,7 +175,23 @@ public class EptCombiner extends Combiner {
         }
     }
 
+    public static int getResultSetSize(ResultSet resultSet)
+    {
+    	    int size = -1;
+    	    try
+    	    {
+    	        resultSet.last();
+    	        size = resultSet.getRow();
+    	        resultSet.beforeFirst();
+    	    }
+    	    catch(SQLException e)
+    	    {
+    	        return size;
+    	    }
 
+    	    return size;
+    }
+    
     public void writeSingleTestRecord(String connectionURL,
                                       String driver,
                                       String username,
@@ -200,7 +217,7 @@ public class EptCombiner extends Combiner {
                                 username,
                                 password);
 
-            stmt = con.createStatement();
+            stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             String sqlString = "select dn,m_id,pat_in,ti,aj,ap,ad,ac,pn,py,pc,ic,cs,cc,la,lt,ab,ct,cr,ut,ey,crn,load_number,ll,dt,ds from ept_master where DN = '" + accessNumber + "'";
             System.out.println("SQLString "+sqlString);
             rs = stmt.executeQuery(sqlString);
@@ -253,12 +270,12 @@ public class EptCombiner extends Combiner {
         int i = 0;
         CVSTermBuilder termBuilder = new CVSTermBuilder();
         KafkaService kafka = new KafkaService();
-        long processTime = System.currentTimeMillis();
-    	int totalCount = rs.getMetaData().getColumnCount();   
+        long processTime = System.currentTimeMillis();   	
         Thread thread = null;
         
         try
         {
+        	int totalCount = getResultSetSize(rs); 
 	        while (rs.next()) 
 	        {
 	            ++i;
