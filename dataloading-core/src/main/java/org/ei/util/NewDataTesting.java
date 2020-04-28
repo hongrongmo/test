@@ -16,6 +16,8 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.net.*;
 import java.util.regex.*;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipFile;
 import java.util.Map.Entry;
 
 import javax.xml.XMLConstants;
@@ -65,16 +67,6 @@ import org.ei.common.bd.*;
 import org.ei.common.*;
 import org.ei.dataloading.awss3.AmazonS3Service;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.auth.profile.ProfileCredentialsProvider;
@@ -99,8 +91,6 @@ import com.amazonaws.services.sqs.model.Message;
 import com.amazonaws.services.sqs.model.ReceiveMessageRequest;
 import com.amazonaws.services.sqs.model.SendMessageRequest;
 
-import java.io.IOException;
-
 import org.elasticsearch.action.index.IndexResponse;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.client.transport.TransportClient;
@@ -124,6 +114,7 @@ import com.google.gson.JsonParser;
 import com.google.gson.JsonElement;
 import com.google.gson.GsonBuilder;
 import com.google.gson.Gson;
+import org.ei.util.kafka.*;
 
 public class NewDataTesting
 {
@@ -217,6 +208,11 @@ public class NewDataTesting
 		{
 			test.checkColumnSize();
 		}
+		else if(action.equals("deleteElasticRecord"))
+		{
+			System.out.println("sending records to Kaska for deleting");
+			test.deleteESRecord(database);
+		}
 		else if(action.equals("fast"))
 		{
 			test.checkFast(test.tableName,test.tableName1);
@@ -229,6 +225,10 @@ public class NewDataTesting
 		{
 			test.checkDetailRecord(database,updateNumber);
 		}
+		//else if(action.equals("getcount"))
+		//{
+		//	test.getCountFromFast(updateNumber,database);
+		//}		
 		else if(action.equals("invalidYearData"))
 		{
 			test.getInvalidYearData(database);
@@ -541,6 +541,68 @@ public class NewDataTesting
 	        }
 	    }
 
+	 private void deleteESRecord(String infile) throws Exception
+	 {
+		KafkaService kafka = new KafkaService();
+		BufferedReader deleteFileStream;
+		List deleteList = new ArrayList();
+		String eid=null;
+        try
+        {
+        	 if(infile.toLowerCase().endsWith(".zip"))
+             {
+                 System.out.println("IS ZIP FILE");
+                 ZipFile zipFile = new ZipFile(infile);
+                 Enumeration entries = zipFile.entries();
+                 while (entries.hasMoreElements())
+                 {
+                     ZipEntry entry = (ZipEntry)entries.nextElement();
+                     deleteFileStream = new BufferedReader(new InputStreamReader(zipFile.getInputStream(entry), "UTF-8"));
+                     while((eid=deleteFileStream.readLine())!=null)
+                     {                   	 
+                         if(eid != null)
+                         {
+                        	 System.out.println("EID="+eid);
+                             kafka.runProducer("{}","\""+eid+"\"",false);
+                            
+                         }
+                     }
+                 }
+             }
+             else if(infile.toLowerCase().endsWith(".txt"))
+             {
+                 System.out.println("IS TEXT FILE");
+                 //in = new BufferedReader(new FileReader(infile));//new InputStreamReader(is, "UTF-8"));
+                 File file = new File(infile);
+                 deleteFileStream = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-8"));
+                 while((eid=deleteFileStream.readLine())!=null)
+                 {                   	 
+                     if(eid != null)
+                     {
+                    	 System.out.println("EID="+eid);
+                         kafka.runProducer("{}","\""+eid+"\"",false);
+                        
+                     }
+                 }
+             }        
+           
+        }
+        finally
+        {
+        	try
+        	{
+		        if(kafka!=null)
+		        { 	        		        
+		        	kafka.close();        
+		        }
+        	}
+        	catch(Exception e)
+            {
+            	e.printStackTrace();
+            }
+          
+        }
+    }
 	
 	public void getAllFastCount(String filename)
 	{
@@ -588,7 +650,42 @@ public class NewDataTesting
 		
 	}
 	
-	
+	 private void sendDeleteToKafka(List rs)
+    {
+    	KafkaService kafka = new KafkaService();
+    	try
+    	{
+	    	String eid="";
+	    	for (int i=0;i<rs.size();i++)
+            {
+	    		eid=(String)rs.get(i);
+                if(eid != null)
+                {                   
+                    kafka.runProducer("{}","\""+eid+"\"",false);
+                    System.out.println("EID="+eid);
+                }
+            }
+	    	
+    	}
+    	catch(Exception e)
+        {
+        	e.printStackTrace();
+        }
+        finally
+        {
+        	try
+        	{
+		        if(kafka!=null)
+		        { 	        		        
+		        	kafka.close();        
+		        }
+        	}
+        	catch(Exception e)
+            {
+            	e.printStackTrace();
+            }
+        }      
+    }
 	
 	private void compareMidDRPROD(String query,String database)
 	{
@@ -2565,7 +2662,8 @@ public class NewDataTesting
 	private void testBuildElasticSearch() throws Exception
 	{
 		// Construct a new Jest Client via factory
-		String endpoint = "http://search-movies-f2awrxb6jrgl3zpgr4dkn352t4.us-east-2.es.amazonaws.com:80";
+		String endpoint = "https://shared-search-es-kibana.dev.scopussearch.net/app/kibana#/discover?_g=()&_a=(columns:!(_source),index:'60f577f0-47f9-11ea-a219-45f91d04cdd7',interval:auto,query:(language:lucene,query:'loadNumber:202010'),sort:!(_score,desc))"; 
+				
 		//String endpoint = "http://search-evcafeauaf-v6tfjfyfj26rtoneh233lzzqtq.us-east-1.es.amazonaws.com:80";
 		JestClientFactory factory = new JestClientFactory();
 		factory.setHttpClientConfig(new HttpClientConfig
@@ -3726,7 +3824,7 @@ public class NewDataTesting
 			{
 				count = (String)loadnumberFromDatabase.get(loadNumber);
 			}
-			String loadNumberCountFromFast=getCountFromFast(loadNumber,database);
+			int loadNumberCountFromFast=getCountFromFast(loadNumber,database);
 			System.out.println(loadNumber+"\t\t"+count+"\t"+loadNumberCountFromFast);
 		}
 
@@ -4161,14 +4259,14 @@ public class NewDataTesting
 		}
 	}
 
-	private int getMIDCountFromFast(String mid,String database)
+	private int getCountFromFast(String mid,String database)
 	{
 		List outputList = new ArrayList();
 		DatabaseConfig databaseConfig = null;
-		String[] credentials = new String[]{"CPX","INS","EPT","EUP","UPA"};
+		String[] credentials = new String[]{"CPX","INS","EPT","EUP","UPA","GRF","CBN","NTIS","WOP","KNC","KNA"};
 		String[] dbName = database.split(";");
 		//FastSearchControl.BASE_URL = "http://ei-stage.nda.fastsearch.net:15100";
-		FastSearchControl.BASE_URL = "http://ei-main.nda.fastsearch.net:15100";
+		FastSearchControl.BASE_URL = "http://evazure.trafficmanager.net:15100";
 
 		//int intDbMask = databaseConfig.getMask(dbName);
 		int intDbMask = 1;
@@ -4191,13 +4289,14 @@ public class NewDataTesting
 			queryObject.setSearchPhrase("{"+term1+"}",searchField,"","","","","","");
 			queryObject.setSearchQueryWriter(new FastQueryWriter());
 			queryObject.compile();
-			queryObject.setSearchQuery("(all:"+term1+") and (db:"+database+")");
+			queryObject.setSearchQuery("(wk:"+term1+") and (db:"+database+")");
 			//System.out.println("DISPLAYQUERY= "+queryObject.getDisplayQuery()+" PhysicalQuery= "+queryObject.getPhysicalQuery()+" SEARCHQUERY= "+queryObject.getSearchQuery());
 
 			String sessionId = null;
 			int pagesize = 25;
 			org.ei.domain.SearchResult result = sc.openSearch(queryObject,sessionId,pagesize,false);
 			int c = result.getHitCount();
+			//System.out.println(term1+"\t"+c);
 			if(c > 0)
 				return c;
 			else
@@ -4467,7 +4566,7 @@ public class NewDataTesting
 		//return "0";
 	}
 
-	private String getCountFromFast(String loadNumber,String database)
+	private String getLNCountFromFast(String loadNumber,String database)
 	{
 		List outputList = new ArrayList();
 		DatabaseConfig databaseConfig = null;
@@ -4533,7 +4632,18 @@ public class NewDataTesting
 			con = getConnection(this.URL,this.driver,this.username,this.password);
 			stmt = con.createStatement();
 			//sqlQuery="select count(*) count,loadnumber from "+username+"."+tableName+" where database='"+database+"' group by loadnumber";
-			sqlQuery="select count(*) count,load_number from upt_master  group by load_number";
+			if(database.equals("upt"))
+			{
+				sqlQuery="select count(*) count,load_number from upt_master  group by load_number";
+			}
+			else if(database.equals("grf"))
+			{
+				sqlQuery="select count(*) count,load_number from georef_master  group by load_number";
+			}
+			else if(database.equals("cpx"))
+			{
+				sqlQuery="select count(*) count,load_number from bd_master where database='cpx' group by load_number";
+			}
 			//sqlQuery="select count(*) count,loadnumber from "+username+"."+tableName+" where database='"+database+"' group by loadnumber";
 			//sqlQuery="select count(*) count,load_number from ept_master group by load_number";
 			//sqlQuery="select count(*) count,loadnumber from bd_master where database='geo' group by loadnumber";

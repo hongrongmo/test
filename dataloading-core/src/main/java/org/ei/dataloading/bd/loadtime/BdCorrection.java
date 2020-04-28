@@ -26,7 +26,7 @@ import java.text.*;
 import java.io.*;
 import java.lang.Process;
 import java.util.regex.*;
-
+import org.ei.util.kafka.*;
 import org.ei.util.GUID;
 import org.ei.xml.Entity;
 
@@ -152,6 +152,7 @@ public class BdCorrection
             if(args[0]!=null)
             {
                 fileToBeLoaded = args[0];
+                System.out.println("file to be processed= "+fileToBeLoaded);
             }
 
             if(args[1]!=null)
@@ -188,6 +189,7 @@ public class BdCorrection
             if(args[2]!=null)
             {
                 database = args[2];
+                System.out.println("database= "+database);
             }
 
             if(args[3]!=null && args[3].length()>0)
@@ -197,6 +199,7 @@ public class BdCorrection
                 if (matcher.find())
                 {
                     updateNumber = Integer.parseInt(args[3]);
+                    System.out.println("updateNumber= "+updateNumber);
                 }
                 else
                 {
@@ -208,6 +211,7 @@ public class BdCorrection
             if(args[4]!=null)
             {
                 action = args[4];
+                System.out.println("action= "+action);
             }
             else
             {
@@ -218,6 +222,7 @@ public class BdCorrection
             if(args[5]!=null)
             {
                 FastSearchControl.BASE_URL = args[5];
+                System.out.println("FAST URL= "+FastSearchControl.BASE_URL);
             }
             else
             {
@@ -826,7 +831,7 @@ public class BdCorrection
         ResultSet rs = null;
         try
         {
-            stmt = con.createStatement();
+        	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             if(action.equalsIgnoreCase("update") || action.equalsIgnoreCase("extractupdate") || action.equalsIgnoreCase("aip") )
             {
                 System.out.println("Running the query...");
@@ -861,7 +866,7 @@ public class BdCorrection
                 }
                 else
                 {
-                	String sqlQuery = "select UPDATENUMBER,CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CLASSIFICATIONDESC,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER, substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,APILT,APILT1,APICT,APICT1,APIAMS,SEQ_NUM,GRANTLIST,null as cafe_author,null as cafe_author1,null as cafe_affiliation,null as cafe_affiliation1,null as CAFE_CORRESPONDENCEAFFILIATION,null as authorid,null as affid,SOURCEBIBTEXT,STANDARDID,STANDARDDESIGNATION,NORMSTANDARDID,GRANTTEXT from bd_master_orig where database='"+dbname+"' and updateNumber='"+updateNumber+"'";
+                	String sqlQuery = "select UPDATENUMBER,CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CLASSIFICATIONDESC,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER, substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,APILT,APILT1,APICT,APICT1,APIAMS,SEQ_NUM,GRANTLIST,null as cafe_author,null as cafe_author1,null as cafe_affiliation,null as cafe_affiliation1,null as CAFE_CORRESPONDENCEAFFILIATION,null as authorid,null as affid,SOURCEBIBTEXT,STANDARDID,STANDARDDESIGNATION,NORMSTANDARDID,GRANTTEXT,ISOPENACESS from bd_master_orig where database='"+dbname+"' and updateNumber='"+updateNumber+"'";
                     System.out.println("sqlQuery="+sqlQuery);
                 	rs = stmt.executeQuery(sqlQuery);
                 }
@@ -975,7 +980,8 @@ public class BdCorrection
             else if(action.equalsIgnoreCase("delete") || action.equalsIgnoreCase("extractdelete"))
             {
                 writer.setOperation("delete");
-                //System.out.println("select m_id from bd_master_orig where database='"+dbname+"' and updateNumber='"+updateNumber+"' and accessnumber in (select 'D'||accessnumber from "+tempTable+")");
+                String deleteString = "select m_id from bd_master_orig where database='"+dbname+"' and updateNumber='"+updateNumber+"' and accessnumber in (select 'D'||accessnumber from "+tempTable+")";
+                System.out.println("Deleting SQL String="+deleteString);
                 String countString = "select count(*) count from bd_master_orig where database='"+dbname+"' and updateNumber='"+updateNumber+"' and accessnumber in (select 'D'||accessnumber from "+tempTable+")";
                 rs = stmt.executeQuery(countString);
                 int deleteSize=0;
@@ -987,10 +993,12 @@ public class BdCorrection
                     }
                 }
                 if(deleteSize>0)
-                {
-	                rs = stmt.executeQuery("select m_id from bd_master_orig where database='"+dbname+"' and updateNumber='"+updateNumber+"' and accessnumber in (select 'D'||accessnumber from "+tempTable+")");
-	                creatDeleteFile(rs,dbname,updateNumber);
+                {                		               
+                	rs = stmt.executeQuery(deleteString);
+	                List deleteRecords = creatDeleteFile(rs,dbname,updateNumber);
+	                sendDeleteToKafka(deleteRecords);
 	                writer.zipBatch();
+	                
                 }
                 else
                 {
@@ -1028,10 +1036,47 @@ public class BdCorrection
             }
         }
     }
-
-    private void creatDeleteFile(ResultSet rs,String database,int updateNumber)
+    
+    private void sendDeleteToKafka(List rs)
     {
+    	KafkaService kafka = new KafkaService();
+    	try
+    	{
+	    	String eid="";
+	    	for (int i=0;i<rs.size();i++)
+            {
+	    		eid=(String)rs.get(i);
+                if(eid != null)
+                {                   
+                    kafka.runProducer("{}","\""+eid+"\"",false);
+                    System.out.println("EID="+eid);
+                }
+            }
+	    	
+    	}
+    	catch(Exception e)
+        {
+        	e.printStackTrace();
+        }
+        finally
+        {
+        	try
+        	{
+		        if(kafka!=null)
+		        { 	        		        
+		        	kafka.close();        
+		        }
+        	}
+        	catch(Exception e)
+            {
+            	e.printStackTrace();
+            }
+        }      
+    }
 
+    private List creatDeleteFile(ResultSet rs,String database,int updateNumber)
+    {
+    	List outputList=new ArrayList();
         String batchidFormat = "0000";
         String batchID = "0001";
         String numberID = "0000";
@@ -1071,9 +1116,11 @@ public class BdCorrection
             out = new FileWriter(file);
             while (rs.next())
             {
-                if(rs.getString("M_ID") != null)
+            	String mid=rs.getString("M_ID");
+                if(mid != null)
                 {
-                    out.write(rs.getString("M_ID")+"\n");
+                	outputList.add(mid);
+                    out.write(mid+"\n");
                 }
             }
             out.flush();
@@ -1109,6 +1156,7 @@ public class BdCorrection
             }
 
         }
+        return outputList;
 
     }
 
