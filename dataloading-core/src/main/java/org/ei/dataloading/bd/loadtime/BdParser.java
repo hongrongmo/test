@@ -701,10 +701,7 @@ public class BdParser
 							}
 							StringBuffer secondAuGroup = new StringBuffer();
 							StringBuffer secondAffGroup = new StringBuffer();
-							//System.out.println("COLLABORATION Size="+authorgroup.size());
-							//System.out.println("collaborationMap Size="+collaborationMap.getSearchValue().length);
-							//System.out.println("collaborationAffMap Size="+collaborationAffMap.getSearchValue().length);
-							System.out.println("COLLABORATION="+auToStringBuffer(collaborationMap));
+							
 							record.put("COLLABORATION", auToStringBuffer(collaborationMap));	
 							record.put("COLLABORATION_AFF", auffToStringBuffer(collaborationAffMap, secondAffGroup));
 							record.put("AUTHOR", auToStringBuffer(ausmap, secondAuGroup));
