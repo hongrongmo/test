@@ -9,6 +9,12 @@ package org.ei.dataloading;
  * Sample of Query to pass #2:
  * Query: (((all:composite)) AND (((NTER:1873.24) OR (NTER:[1873.240000001;])))) AND (yr:[1884;2020]) AND (((db:cpx OR db:c84)) for Rec Count 3000
  * NumOfCount: 2257
+ * 
+ * sample query for all AFID in STID for Email alerts of ESP
+ * 
+ * "((afid:60022195 OR afid:60006320 OR afid:60024592 OR afid:60002243 OR afid:60014228 OR afid:60022717 OR afid:60003561 OR afid:60015009 OR afid:60100145 OR afid:60097091)) AND (wk:201944) AND (((db:cpx OR db:c84)) OR ((db:c84))) "
+200
+
  */
 import java.io.BufferedReader;
 import java.io.File;
