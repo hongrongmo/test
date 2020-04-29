@@ -294,7 +294,7 @@ public class BaseTableWriter
 	    if(record.get("CSXTERM")!=null)
 		{
 	    	recordBuf.append(record.get("CSXTERM"));
-	    	System.out.println("CSXTERM"+record.get("CSXTERM"));
+	    	//System.out.println("CSXTERM"+record.get("CSXTERM"));
 		}
 	    
 	    recordBuf.append(FIELDDELIM);
@@ -302,7 +302,7 @@ public class BaseTableWriter
 	    if(record.get("COLLABORATION")!=null && ((String)record.get("COLLABORATION")).length()>0)
 		{
 	    	recordBuf.append(record.get("COLLABORATION"));
-	    	System.out.println("COLLABORATION term"+record.get("COLLABORATION"));
+	    	//System.out.println("COLLABORATION term"+record.get("COLLABORATION"));
 		}
 	    	    
 	    recordBuf.append(FIELDDELIM);
@@ -310,7 +310,7 @@ public class BaseTableWriter
 	    if(record.get("COLLABORATION_AFF")!=null && ((String)record.get("COLLABORATION_AFF")).length()>0)
 		{
 	    	recordBuf.append(record.get("COLLABORATION_AFF"));
-	    	System.out.println("COLLABORATION AFF term"+record.get("COLLABORATION_AFF"));
+	    	//System.out.println("COLLABORATION AFF term"+record.get("COLLABORATION_AFF"));
 		}
 	    
 	    //*/
