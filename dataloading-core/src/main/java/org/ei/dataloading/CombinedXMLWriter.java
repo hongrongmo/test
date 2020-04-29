@@ -1222,9 +1222,12 @@ public class CombinedXMLWriter
 	            contentObject.put("LANGUAGE".toLowerCase(),elementArrayObject);
             }
 
-            if(rec.getString(EVCombinedRec.DOCTYPE)!=null && rec.getString(EVCombinedRec.DOCTYPE).length()>0)
-            {      
-	            contentObject.put("RECTYPE".toLowerCase(),rec.getString(EVCombinedRec.DOCTYPE));
+            String[] rectype=rec.getStrings(EVCombinedRec.DOCTYPE);
+            if(rec.getString(EVCombinedRec.DOCTYPE)!=null && rectype.length>0 && rectype[0]!=null && rectype[0].length()>0)
+            {
+            	elementArrayObject = formJsonArray(removeExtraSpace(rectype),"RECTYPE");          
+ 	            contentObject.put("RECTYPE".toLowerCase(),elementArrayObject);
+	            //contentObject.put("RECTYPE".toLowerCase(),rec.getString(EVCombinedRec.DOCTYPE));
             }
             
             String[] classificationCode=rec.getStrings(EVCombinedRec.CLASSIFICATION_CODE);
@@ -2684,7 +2687,7 @@ public class CombinedXMLWriter
             }
             
             String[] grantIDs=rec.getStrings(EVCombinedRec.GRANTID);           
-            if(grantIDs!=null && grantIDs.length>0 && grantIDs[0]!=null && grantIDs[0].length()>0)
+            if(grantIDs!=null && grantIDs.length>0 && grantIDs[0]!=null)
             {
 	            elementArrayObject = formJsonArray(grantIDs,"GRANTID");          
 	            contentObject.put("GRANTID".toLowerCase(),elementArrayObject);
