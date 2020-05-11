@@ -269,13 +269,185 @@ public class CombinedAuAfJSON {
 		
 		else if(esIndexType !=null && esIndexType.equalsIgnoreCase("file"))
 			docWrite.createBulkIndexFile("author", this.docid, esDocument);
+		
+	}
 	
+	
+	public void writeAuRecTest(AuAfCombinedRec rec) throws Exception
+	{
+		this.docid = rec.getString(AuAfCombinedRec.DOCID);
+		// take off Entity.prepareString, as we need to extract AU/AF content to ES exact same as in DB, then EV web need to use same mapping to do search
+				
+		
+		JsonObject esDocument;
+		
+		  JsonObjectBuilder authorDocument = factory.createObjectBuilder();
+		  JsonObjectBuilder docproperties = factory.createObjectBuilder();
+		  JsonObjectBuilder audoc = factory.createObjectBuilder();
+		  JsonObjectBuilder authorName = factory.createObjectBuilder();
+		  JsonObjectBuilder variantName = factory.createObjectBuilder();
+		  JsonObjectBuilder preferedName = factory.createObjectBuilder();
+		  JsonObjectBuilder authorAffiliation = factory.createObjectBuilder();
+		  JsonObjectBuilder current = factory.createObjectBuilder();
+		  JsonObjectBuilder history = factory.createObjectBuilder();
+		  JsonObjectBuilder affName = factory.createObjectBuilder();
+		  
+		  if(rec.getString(AuAfCombinedRec.DOC_TYPE) !=null)
+			  docproperties.add("doc_type",notNull(rec.getString(AuAfCombinedRec.DOC_TYPE)));
+		  if(rec.getString(AuAfCombinedRec.STATUS) !=null) 
+			  docproperties.add("status", notNull(rec.getString(AuAfCombinedRec.STATUS)));
+		  if(rec.getString(AuAfCombinedRec.UPDATEEPOCH) !=null && !(rec.getString(AuAfCombinedRec.UPDATEEPOCH).isEmpty()))
+			  docproperties.add("updateepoch", notNull(rec.getString(AuAfCombinedRec.UPDATEEPOCH)));
+		  
+		  if(rec.getString(AuAfCombinedRec.LOADDATE) != null)
+			  docproperties.add("loaddate", notNull(rec.getString(AuAfCombinedRec.LOADDATE)));
+		  if(rec.getString(AuAfCombinedRec.ITEMTRANSACTIONID) != null)
+			  docproperties.add("itemtransactionid", replaceDot(notNull(rec.getString(AuAfCombinedRec.ITEMTRANSACTIONID))));
+		  if(rec.getString(AuAfCombinedRec.INDEXEDDATE) != null)
+			  docproperties.add("indexeddate", notNull(rec.getString(AuAfCombinedRec.INDEXEDDATE)));
+		  if(rec.getString(AuAfCombinedRec.ESINDEXTIME) != null)
+			  docproperties.add("esindextime",replaceDot(notNull(rec.getString(AuAfCombinedRec.ESINDEXTIME))));
+		  if(rec.getString(AuAfCombinedRec.LOAD_NUMBER) != null)
+			  docproperties.add("loadnumber", notNull(rec.getString(AuAfCombinedRec.LOAD_NUMBER)));
+		  if(rec.getString(AuAfCombinedRec.UPDATE_NUMBER) != null)
+			  docproperties.add("updatenumber", notNull(rec.getString(AuAfCombinedRec.UPDATE_NUMBER)));
+		  
+		  JsonObject temp = docproperties.build();
+		  if(!(temp.isEmpty()))
+				  //authorDocument.add("docproperties", docproperties);
+			  authorDocument.add("docproperties", temp);
+		  
+		  temp = null;
+		  
+		  if(rec.getString(AuAfCombinedRec.DOCID) != null)
+			  audoc.add("doc_id",notNull(rec.getString(AuAfCombinedRec.DOCID)));
+		  if(rec.getString(AuAfCombinedRec.EID) != null)
+			  audoc.add("eid",notNull(rec.getString(AuAfCombinedRec.EID)));
+		  if(rec.getString(AuAfCombinedRec.AUID) != null)
+			  audoc.add("auid",notNull(rec.getString(AuAfCombinedRec.AUID)));
+		  if(rec.getString(AuAfCombinedRec.ORCID) != null)
+			  audoc.add("orcid",notNull(rec.getString(AuAfCombinedRec.ORCID)));
+		  if(rec.getString(AuAfCombinedRec.VARIANT_FIRST) != null && !(rec.getString(AuAfCombinedRec.VARIANT_FIRST).isEmpty()))
+			  variantName.add("variant_first",prepareMultiValues(notNull(rec.getString(AuAfCombinedRec.VARIANT_FIRST))));
+		  if(rec.getString(AuAfCombinedRec.VARIANT_INI) != null && !(rec.getString(AuAfCombinedRec.VARIANT_INI).isEmpty()))
+			  variantName.add("variant_ini",prepareMultiValues(notNull(rec.getString(AuAfCombinedRec.VARIANT_INI)))) ;
+		  if(rec.getString(AuAfCombinedRec.VARIANT_LAST) != null && !(rec.getString(AuAfCombinedRec.VARIANT_LAST).isEmpty()))
+			  variantName.add("variant_last",prepareMultiValues(notNull(rec.getString(AuAfCombinedRec.VARIANT_LAST))));
+		  
+		  temp = variantName.build();
+		  if(!(temp.isEmpty()))
+			  authorName.add("variant_name", temp);
+		  temp = null;
+		  
+		  if(rec.getString(AuAfCombinedRec.PREFERRED_FIRST) != null && !(rec.getString(AuAfCombinedRec.PREFERRED_FIRST).isEmpty()))
+			  preferedName.add("preferred_first",notNull(rec.getString(AuAfCombinedRec.PREFERRED_FIRST)));
+		  if(rec.getString(AuAfCombinedRec.PREFERRED_INI) != null && !(rec.getString(AuAfCombinedRec.PREFERRED_INI).isEmpty()))
+			  preferedName.add("preferred_ini", notNull(rec.getString(AuAfCombinedRec.PREFERRED_INI)));
+		  if(rec.getString(AuAfCombinedRec.PREFERRED_LAST) != null && !(rec.getString(AuAfCombinedRec.PREFERRED_LAST).isEmpty()))
+			  preferedName.add("preferred_last", notNull(rec.getString(AuAfCombinedRec.PREFERRED_LAST))); 
+		  
+		  temp = preferedName.build();
+		  if(!(temp.isEmpty()))
+			  authorName.add("preferred_name", temp);
+		 
+		  
+		 temp = authorName.build();
+		  if(!(temp.isEmpty()))
+			  audoc.add("author_name", temp);
+
+		  if(rec.getString(AuAfCombinedRec.CLASSIFICATION_SUBJABBR) != null && !(rec.getString(AuAfCombinedRec.CLASSIFICATION_SUBJABBR).isEmpty()))
+			  audoc.add("subjabbr",prepareComposit_field(notNull(rec.getString(AuAfCombinedRec.CLASSIFICATION_SUBJABBR))));
+		  if(rec.getString(AuAfCombinedRec.SUBJECT_CLUSTER) != null && !(rec.getString(AuAfCombinedRec.SUBJECT_CLUSTER).isEmpty()))
+			  audoc.add("subjclus",prepareMultiValues(notNull(rec.getString(AuAfCombinedRec.SUBJECT_CLUSTER))));
+		  if(rec.getString(AuAfCombinedRec.PUBLICATION_RANGE_FIRST) != null && !(rec.getString(AuAfCombinedRec.PUBLICATION_RANGE_FIRST).isEmpty()))
+			  audoc.add("pubrangefirst",notNull(rec.getString(AuAfCombinedRec.PUBLICATION_RANGE_FIRST)));
+		  if(rec.getString(AuAfCombinedRec.PUBLICATION_RANGE_LAST) != null && !(rec.getString(AuAfCombinedRec.PUBLICATION_RANGE_LAST).isEmpty()))
+			  audoc.add("pubrangelast",notNull(rec.getString(AuAfCombinedRec.PUBLICATION_RANGE_LAST)));
+		  if(rec.getString(AuAfCombinedRec.SOURCE_TITLE) != null && !(rec.getString(AuAfCombinedRec.SOURCE_TITLE).isEmpty()))
+			  audoc.add("srctitle",prepareMultiValues(notNull(rec.getString(AuAfCombinedRec.SOURCE_TITLE))));
+		  if(rec.getString(AuAfCombinedRec.ISSN) != null && !(rec.getString(AuAfCombinedRec.ISSN).isEmpty()))
+			  audoc.add("issn",prepareMultiValues(notNull(rec.getString(AuAfCombinedRec.ISSN))));
+		  if(rec.getString(AuAfCombinedRec.EMAIL_ADDRESS) != null && !(rec.getString(AuAfCombinedRec.EMAIL_ADDRESS).isEmpty()))
+			  audoc.add("email",notNull(rec.getString(AuAfCombinedRec.EMAIL_ADDRESS)));
+		  
+		  
+		  if(rec.getString(AuAfCombinedRec.AFID) != null && !(rec.getString(AuAfCombinedRec.AFID).isEmpty()))
+			  current.add("afid",notNull(rec.getString(AuAfCombinedRec.AFID)));
+		  if(rec.getString(AuAfCombinedRec.DISPLAY_NAME) != null && !(rec.getString(AuAfCombinedRec.DISPLAY_NAME).isEmpty()))
+			  current.add("display_name",notNull(rec.getString(AuAfCombinedRec.DISPLAY_NAME)));
+		  if(rec.getString(AuAfCombinedRec.DISPLAY_CITY) != null && !(rec.getString(AuAfCombinedRec.DISPLAY_CITY).isEmpty()))
+			  current.add("display_city",notNull(rec.getString(AuAfCombinedRec.DISPLAY_CITY)));
+		  if(rec.getString(AuAfCombinedRec.DISPLAY_COUNTRY) != null && !(rec.getString(AuAfCombinedRec.DISPLAY_COUNTRY).isEmpty()))
+			  current.add("display_country",notNull(rec.getString(AuAfCombinedRec.DISPLAY_COUNTRY)));
+		  if(rec.getString(AuAfCombinedRec.AFFILIATION_SORT_NAME) != null && !(rec.getString(AuAfCombinedRec.AFFILIATION_SORT_NAME).isEmpty()))
+			  current.add("sortname",notNull(rec.getString(AuAfCombinedRec.AFFILIATION_SORT_NAME)));
+		  
+		  temp = current.build();
+		  if(!(temp.isEmpty()))
+		  {
+			  authorAffiliation.add("current", temp);
+		  }
+		  
+		  
+		  if(rec.getString(AuAfCombinedRec.AFFILIATION_HISTORY_ID) != null && !(rec.getString(AuAfCombinedRec.AFFILIATION_HISTORY_ID).isEmpty()))
+			  history.add("afhistid",prepareMultiValues(notNull(rec.getString(AuAfCombinedRec.AFFILIATION_HISTORY_ID))));
+		  if(rec.getString(AuAfCombinedRec.HISTORY_DISPLAY_NAME) != null && !(rec.getString(AuAfCombinedRec.HISTORY_DISPLAY_NAME).isEmpty()))
+			  history.add("history_display_name",prepareMultiValues(notNull(rec.getString(AuAfCombinedRec.HISTORY_DISPLAY_NAME))));
+		  if(rec.getString(AuAfCombinedRec.HISTORY_CITY) != null && !(rec.getString(AuAfCombinedRec.HISTORY_CITY).isEmpty()))
+			  history.add("history_city",prepareMultiValues(notNull(rec.getString(AuAfCombinedRec.HISTORY_CITY)))); 
+		  if(rec.getString(AuAfCombinedRec.HISTORY_COUNTRY) != null && !(rec.getString(AuAfCombinedRec.HISTORY_COUNTRY).isEmpty()))
+			  history.add("history_country",prepareMultiValues(notNull(rec.getString(AuAfCombinedRec.HISTORY_COUNTRY))));
+		  
+		  temp = history.build();
+		  if(!(temp.isEmpty()))
+			  authorAffiliation.add("history", temp);
+		  
+		  if(rec.getString(AuAfCombinedRec.AFFILIATION_PREFERRED_NAME) != null && !(rec.getString(AuAfCombinedRec.AFFILIATION_PREFERRED_NAME).isEmpty()))
+			  affName.add("affilprefname",prepareMultiValues(notNull(rec.getString(AuAfCombinedRec.AFFILIATION_PREFERRED_NAME))));
+		  if(rec.getString(AuAfCombinedRec.AFFILIATION_VARIANT_NAME) != null && !(rec.getString(AuAfCombinedRec.AFFILIATION_VARIANT_NAME).isEmpty()))
+			  affName.add("affilnamevar",prepareMultiValues(notNull(rec.getString(AuAfCombinedRec.AFFILIATION_VARIANT_NAME))));
+		  
+		  temp = affName.build();
+		  if(!(temp.isEmpty()))
+			  authorAffiliation.add("affiliation_name", temp);
+		  
+		  if(rec.getString(AuAfCombinedRec.NAME_ID) != null && !(rec.getString(AuAfCombinedRec.NAME_ID).isEmpty()))
+			  authorAffiliation.add("nameid",prepareMultiValues(notNull(rec.getString(AuAfCombinedRec.NAME_ID))));
+		  if(rec.getString(AuAfCombinedRec.CURRENT_DEPT_AFFILIATION_ID) != null && !(rec.getString(AuAfCombinedRec.CURRENT_DEPT_AFFILIATION_ID).isEmpty()))
+			  authorAffiliation.add("deptid",notNull(rec.getString(AuAfCombinedRec.CURRENT_DEPT_AFFILIATION_ID)));
+		  if(rec.getString(AuAfCombinedRec.CURRENT_DEPT_AFFILIATION_DISPLAY_NAME) != null && !(rec.getString(AuAfCombinedRec.CURRENT_DEPT_AFFILIATION_DISPLAY_NAME).isEmpty()))
+			  authorAffiliation.add("dept_display_name",notNull(rec.getString(AuAfCombinedRec.CURRENT_DEPT_AFFILIATION_DISPLAY_NAME)));
+		  
+		  if(rec.getString(AuAfCombinedRec.CURRENT_DEPT_AFFILIATIOIN_CITY) != null && !(rec.getString(AuAfCombinedRec.CURRENT_DEPT_AFFILIATIOIN_CITY).isEmpty()))
+			  authorAffiliation.add("dept_city",notNull(rec.getString(AuAfCombinedRec.CURRENT_DEPT_AFFILIATIOIN_CITY)));
+		  if(rec.getString(AuAfCombinedRec.CURRENT_DEPT_AFFILIATION_COUNTRY) != null && !(rec.getString(AuAfCombinedRec.CURRENT_DEPT_AFFILIATION_COUNTRY).isEmpty()))
+			  authorAffiliation.add("dept_country",notNull(rec.getString(AuAfCombinedRec.CURRENT_DEPT_AFFILIATION_COUNTRY)));
+		  
+		  temp = authorAffiliation.build();
+		  if(!(temp.isEmpty()))
+			  audoc.add("author_affiliations", temp);
+		  
+		  if(rec.getString(AuAfCombinedRec.DOC_COUNT) != null && !(rec.getString(AuAfCombinedRec.DOC_COUNT).isEmpty()))
+			  audoc.add("doc_count",notNull(rec.getString(AuAfCombinedRec.DOC_COUNT)));
+		  
+		  temp = audoc.build();
+		  if(!(temp.isEmpty()))
+			  authorDocument.add("audoc", temp);
+		  
+		
+		  esDocument = authorDocument.build();
+		  
+		  if(esIndexType !=null && esIndexType.equalsIgnoreCase("direct"))
+		  AuthorCombiner.esIndex.createBulkIndex("author", this.docid, esDocument);
+		  
+		  else if(esIndexType !=null && esIndexType.equalsIgnoreCase("file"))
+		  docWrite.createBulkIndexFile("author", this.docid, esDocument);
+		 
 			
 		
 		
 		
 	}
-	
 	
 	private String notNull(String s)
     {
