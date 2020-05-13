@@ -192,6 +192,7 @@ public class C84Combiner extends Combiner {
         try
         {
         	int totalCount = getResultSetSize(rs);
+        	  
 	        while (rs.next()) 
 	        {
 	            EVCombinedRec rec = new EVCombinedRec();
@@ -202,7 +203,9 @@ public class C84Combiner extends Combiner {
 	            }
 	
 	            String abString = getStringFromClob(rs.getClob("ab"));
-	
+	            String processInfo = processTime+"-"+totalCount+'-'+i+"-C84-"+rs.getString("LOAD_NUMBER")+'-'+"";
+	        	rec.put(EVCombinedRec.PROCESS_INFO, processInfo);	 
+	        	
 	            if (validYear(rs.getString("yr"), rs.getString("LOAD_NUMBER"))) {
 	
 	                if (rs.getString("aus") != null) {
@@ -342,11 +345,14 @@ public class C84Combiner extends Combiner {
 	                {
 	                	docType = "ch";
 	                }
-	
+	                
+	                /*
+	                remove core from document type pre T.M. request at 4/20/2020 by hmo
+	                 
 	                if (mhsh != null || rec.containsKey(EVCombinedRec.CONTROLLED_TERMS)) {
 	                    docType = docType + " CORE";
 	                }
-	
+	                 */
 	                rec.put(EVCombinedRec.DOCTYPE, docType);
 	
 	                if (rs.getString("cls") != null) {

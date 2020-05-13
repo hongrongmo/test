@@ -364,8 +364,7 @@ public class UPTCombiner extends CombinerTimestamp {
         String mid = null;
         Thread thread=null;
         KafkaService kafka = new KafkaService();
-        long processTime = System.currentTimeMillis();
-    	//int totalCount = rs.getMetaData().getColumnCount();  
+        long processTime = System.currentTimeMillis();   	 
         
         try 
         {
