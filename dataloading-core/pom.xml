@@ -43,6 +43,23 @@
 	-->
 
 	<dependency>
+            <groupId>javax.transaction</groupId>
+            <artifactId>jta</artifactId>
+            <version>1.1</version>
+		</dependency>
+		<dependency>
+    		<groupId>org.apache.commons</groupId>
+    		<artifactId>commons-text</artifactId>
+    		<version>1.4</version>
+		</dependency>
+           <dependency>
+                 <groupId>com.amazonaws</groupId>
+                 <artifactId>aws-java-sdk</artifactId>
+                 <!-- <version>1.7.8.1</version> -->  <!-- OLD for ES related HTTPClient  -->
+                 <version>1.11.23</version>
+           </dependency>  
+                    
+		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.11</version>
@@ -333,13 +350,6 @@
 	<version>2.3.0</version>
 </dependency>
 
-	<!-- escaping HTML Entities -->
-	<dependency>
-		<groupId>org.apache.commons</groupId>
-		<artifactId>commons-text</artifactId>
-		<version>1.8</version>
-	</dependency>
-	
 	<!-- escaping HTML Entities -->
 	<dependency>
 		<groupId>org.apache.commons</groupId>

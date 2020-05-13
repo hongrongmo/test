@@ -91,49 +91,49 @@ public class Entity {
                 }
 
                 try {
-                    int entityValue = Integer.parseInt(input.substring(k, j), radix);
-                    
-                    /*
-                    if(entityValue==8239) //change NARROW NO-BREAK SPACE to space
-                    {
-                    	entityValue=0;
-                    }
-                    */
-                    
-                    if (writer == null) 
-                        writer = new StringWriter(input.length());
-                    writer.append(input.substring(st, i - 1));
-
-                    if (entityValue > 0xFFFF) {                   
-                        final char[] chrs = Character.toChars(entityValue);
-                        writer.write(chrs[0]);
-                        writer.write(chrs[1]);
-                    } else {                   
-                        writer.write(entityValue);
-                    }
-
-                } catch (NumberFormatException ex) { 
-                    i++;
-                    continue;
-                }
-            }
-            else 
-            {
-                // entity named escape
-               
-            	CharSequence value = StringEscapeUtils.unescapeHtml4("&"+input.substring(i, j)+";");           	
-                if (value == null) 
-                {
-                    i++;
-                    continue;
-                }
-
-                if (writer == null) 
-                    writer = new StringWriter(input.length());
-                writer.append(input.substring(st, i - 1));
-
-                writer.append(value);
-            }
+	                    int entityValue = Integer.parseInt(input.substring(k, j), radix);
+	                    
+	                    /*
+	                    if(entityValue==8239) //change NARROW NO-BREAK SPACE to space
+	                    {
+	                    	entityValue=0;
+	                    }
+	                    */
+	                    
+	                    if (writer == null) 
+	                        writer = new StringWriter(input.length());
+	                   	writer.append(input.substring(st, i - 1));
+	
+	                    if (entityValue > 0xFFFF) {                   
+	                        final char[] chrs = Character.toChars(entityValue);
+	                        writer.write(chrs[0]);
+	                        writer.write(chrs[1]);
+	                    } else {                   
+	                        writer.write(entityValue);
+	                    }
+	
+	                } catch (NumberFormatException ex) { 
+	                    i++;
+	                    continue;
+	                }
+	            }
+	            else 
+	            {
+	                // entity named escape
+	               
+	            	CharSequence value = StringEscapeUtils.unescapeHtml4("&"+input.substring(i, j)+";");           	
+	                if (value == null) 
+	                {
+	                    i++;
+	                    continue;
+	                }
+	
+	                if (writer == null) 
+	                    writer = new StringWriter(input.length());
+	                writer.append(input.substring(st, i - 1));
+	
+	                writer.append(value);
+	            }
 
             // skip escape
             st = j + 1;
@@ -207,7 +207,8 @@ public class Entity {
         if (s == null) {
             return null;
         }
-
+        
+        
         Perl5Util matcher = new Perl5Util();
         PatternMatcherInput input = new PatternMatcherInput(s);
 
@@ -249,6 +250,7 @@ public class Entity {
             s = matcher.substitute(pbuf.toString(), s);
 
         }
+        
 
         return s;
 
@@ -296,7 +298,9 @@ public class Entity {
                 match1 = match;
             }          
             
-            String newValue = etable.getProperty(match1);
+            //block this line for Elastic Search
+            String newValue = match1; //use this line for elastic search
+            //String newValue = etable.getProperty(match1); //use this line for FAST
 
             if (newValue == null) {
                 newValue = "";

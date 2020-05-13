@@ -54,7 +54,6 @@ public class BdAuthors
 
     public BdAuthors(String bdAuthors)
     {
-    	//System.out.println("**** AUTHOR *****");
         elements = auElements;
 	    bdAuthorsMap = new LinkedHashMap();
 	    parseData(bdAuthors);
@@ -200,7 +199,7 @@ public class BdAuthors
 	        cpxausmap.put(cpxaus,cpxaus);
 	    }
 	    else
-	    {
+	    {	    	
 	        BdAuthor aus = (BdAuthor)cpxausmap.get(cpxaus);
 	        ArrayList arrid = (ArrayList) cpxaus.getAffid();
 	        Integer  tmp = (Integer) arrid.get(0);

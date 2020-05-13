@@ -701,11 +701,8 @@ public class BdParser
 							}
 							StringBuffer secondAuGroup = new StringBuffer();
 							StringBuffer secondAffGroup = new StringBuffer();
-							//System.out.println("COLLABORATION Size="+authorgroup.size());
-							//System.out.println("collaborationMap Size="+collaborationMap.getSearchValue().length);
-							//System.out.println("collaborationAffMap Size="+collaborationAffMap.getSearchValue().length);
-							//System.out.println("COLLABORATION="+auToStringBuffer(collaborationMap, secondAuGroup));
-							record.put("COLLABORATION", auToStringBuffer(collaborationMap, secondAuGroup));	
+							
+							record.put("COLLABORATION", auToStringBuffer(collaborationMap));	
 							record.put("COLLABORATION_AFF", auffToStringBuffer(collaborationAffMap, secondAffGroup));
 							record.put("AUTHOR", auToStringBuffer(ausmap, secondAuGroup));
 							if(secondAuGroup.length() > 0)
@@ -1584,7 +1581,8 @@ public class BdParser
 						
 						//change to deal with non-roman characters @08/10/2018
 						
-						referenceText.put(referenceID,trimStringToLength(refTextValue,3950));
+						//referenceText.put(referenceID,trimStringToLength(refTextValue,3950));
+						referenceText.put(referenceID,refTextValue);
 						if(refTextValue.length()>3950)
 						{
 							System.out.println("record "+getAccessNumber()+" ref-text oversize::"+refTextValue.length());
@@ -1613,7 +1611,8 @@ public class BdParser
 						//System.out.println("ref-fulltext1::"+refFullTextValue);
 						//change to deal with non-roman characters @08/10/2018
 						//referenceText.put(referenceID,dictionary.mapEntity(refFullTextValue));
-						referenceFullText.put(referenceID,trimStringToLength(refFullTextValue,3950));
+						//referenceFullText.put(referenceID,trimStringToLength(refFullTextValue,3950));
+						referenceFullText.put(referenceID,refFullTextValue);
 						if(refFullTextValue.length()>3950)
 						{
 							System.out.println("record "+getAccessNumber()+" ref-fulltext oversize::"+refFullTextValue.length());
@@ -3106,7 +3105,7 @@ public class BdParser
 		{
 			Element collaboration = (Element)collaborationList.get(i);
 			collaborationBuffer.append(getPersonalName(i,collaboration));
-			collaborationBuffer.append(Constants.IDDELIMITER);
+			collaborationBuffer.append(Constants.AUDELIMITER);
 		}
 		return collaborationBuffer.toString();
 	}
@@ -3124,7 +3123,7 @@ public class BdParser
 			String  collaborationString = getPersonalNames(collaboration.getChildren("member-name"));
 			String  eaddress = collaboration.getChildTextTrim("e-address",ceNamespace);
 			collaborationBuffer.append(e);
-			collaborationBuffer.append(Constants.IDDELIMITER);
+			collaborationBuffer.append(Constants.AUDELIMITER);
 			if(collaborationSeq!=null)
 			{
 				collaborationBuffer.append(collaborationSeq);
@@ -3133,27 +3132,27 @@ public class BdParser
 			{
 				collaborationBuffer.append(i);
 			}
-			collaborationBuffer.append(Constants.IDDELIMITER);
+			collaborationBuffer.append(Constants.AUDELIMITER);
 			if(collaborationAuid!=null)
 			{
 				collaborationBuffer.append(collaborationAuid);
 			}
-			collaborationBuffer.append(Constants.IDDELIMITER);
+			collaborationBuffer.append(Constants.AUDELIMITER);
 			if(collaborationType!=null)
 			{
 				collaborationBuffer.append(collaborationType);
 			}
-			collaborationBuffer.append(Constants.IDDELIMITER);
+			collaborationBuffer.append(Constants.AUDELIMITER);
 			if(collaborationTextString!=null)
 			{				
 				collaborationBuffer.append(collaborationTextString);
 			}
-			collaborationBuffer.append(Constants.IDDELIMITER);
+			collaborationBuffer.append(Constants.AUDELIMITER);
 			if(collaborationString!=null)
 			{
 				collaborationBuffer.append(collaborationString);
 			}
-			collaborationBuffer.append(Constants.IDDELIMITER);
+			collaborationBuffer.append(Constants.AUDELIMITER);
 			if(eaddress!=null)
 			{
 				collaborationBuffer.append(eaddress);
@@ -3899,7 +3898,7 @@ public class BdParser
 
 	}
 	
-	private void setCollaborationAndAffs(BdAuthors ausmap,
+	private void setCollaborationAndAffs(BdAuthors collaborationMap,
 			  BdAffiliations affs,
 			  Element aelement)
 	{
@@ -4016,7 +4015,7 @@ public class BdParser
 			BdAuthor aus = new BdAuthor();
 			Element author = (Element) authorlist.get(e);
 			List atr = author.getAttributes();
-			Attribute sec = collaboration.getAttribute("seq");
+			Attribute sec = author.getAttribute("seq");
 			aus.setAffid(this.affid);
 			
 			if(sec != null)
@@ -4062,11 +4061,15 @@ public class BdParser
 						authoridBuffer.append(","+authoridstr);
 					}						
 				}
+				else
+				{
+					authoridBuffer.append(e);
+				}
 			
 				if(authoridBuffer.length()>0)
 				{
 					aus.setAuid(authoridBuffer.toString());
-				//System.out.println("AUTHORID="+authoridBuffer.toString());
+					//System.out.println("AUTHORID="+authoridBuffer.toString());
 				}
 				
 				
@@ -4174,8 +4177,10 @@ public class BdParser
 					//System.out.println(this.accessNumber+" altName1= "+altName.getTextTrim());
 				}
 				
+				
 				if(aus!=null) {
-					ausmap.addCpxaus(aus);
+					//System.out.println("SEARCH NAME="+aus.getSearchValue());
+					collaborationMap.addCpxaus(aus);
 				}
 			}
 		}		
@@ -4569,6 +4574,7 @@ public class BdParser
 			if (auslist != null && auslist.getCpxaus() != null)
 			{
 				Iterator itr = auslist.getCpxaus().keySet().iterator();
+				int i=0;
 				while(itr.hasNext())
 				{
 					BdAuthor aAuthor =(BdAuthor) itr.next();
@@ -4669,8 +4675,9 @@ public class BdParser
 						//System.out.println("AltName3= "+aAuthor.getAltName());
 					}
 					bufauthor.append(Constants.IDDELIMITER);
-					
+					//System.out.println("AUTHOR BUFFER"+i+"="+bufauthor.toString());
 					bufauthor.append((Constants.AUDELIMITER));
+					i++;
 				}
 			}
 
@@ -4695,8 +4702,11 @@ public class BdParser
 	{
 		StringBuffer bufauthor = new StringBuffer();
 		StringBuffer returnbuf = new StringBuffer();
+		//System.out.println("AUTHOR="+auslist.getSearchValue().toString());
+		
 		if (auslist != null && auslist.getCpxaus() != null)
 		{
+			
 			Iterator itr = auslist.getCpxaus().keySet().iterator();
 			while(itr.hasNext())
 			{
