@@ -134,8 +134,15 @@ public class CombinedAuAfJSON {
 	{
 		return this.ESdir.getAbsolutePath();
 	}
-	// Institution Profile
-	public void writeAfRec(AuAfCombinedRec rec) throws Exception
+	
+	/**
+	 * Institution Profile
+	 * this was the original version of constructing esdocument, but this included fields even that does not have value, i.e. empty variant[], and this caused these record still shows even when search for "isexist",
+	 * these records should of been exludeded from result  hit if field not exist, fix for this done in 2nd version of writeAuRec below
+	 * to resolve the issue of isexist in ES Search, so those records with no variant_name.first wont in result hit
+	 */
+	
+	public void writeAfRecOld(AuAfCombinedRec rec) throws Exception
 	{
 		this.docid = rec.getString(AuAfCombinedRec.DOCID);
 		// take off Entity.prepareString, as we need to extract AU/AF content to ES exact same as in DB, then EV web need to use same mapping to do search
@@ -188,8 +195,116 @@ public class CombinedAuAfJSON {
 		
 	}
 	
-	//Author Profile
-	public void writeAuRec(AuAfCombinedRec rec) throws Exception
+	
+	/**
+	 *  Institution Profile
+	 * HH: Author Profile, updated 05/12/2020 to exclude fields having no value from being added to ES Doc, i.e. in previous version if empty field like: variant[], still sent to ES, but in this version it wont even show in ES DOC
+	 * to resolve the issue of isexist in ES Search, so those records with no variant_name.first wont in result hit
+	 */
+	
+	public void writeAfRec(AuAfCombinedRec rec) throws Exception
+	{
+		this.docid = rec.getString(AuAfCombinedRec.DOCID);
+		// take off Entity.prepareString, as we need to extract AU/AF content to ES exact same as in DB, then EV web need to use same mapping to do search
+		
+		// if having special characters in ES it need to search for exact special character, so
+		
+		JsonObject esDocument;
+		
+		  JsonObjectBuilder AffDocument = factory.createObjectBuilder();
+		  JsonObjectBuilder docproperties = factory.createObjectBuilder();
+		  JsonObjectBuilder afdoc = factory.createObjectBuilder();
+		  JsonObjectBuilder affiliationName = factory.createObjectBuilder();
+		  
+		  
+		  if(rec.getString(AuAfCombinedRec.DOC_TYPE) !=null)
+			  docproperties.add("doc_type",notNull(rec.getString(AuAfCombinedRec.DOC_TYPE)));
+		  
+		if(rec.getString(AuAfCombinedRec.STATUS) != null)
+			docproperties.add("status",notNull(rec.getString(AuAfCombinedRec.STATUS)));
+		if(rec.getString(AuAfCombinedRec.UPDATEEPOCH) != null)
+			docproperties.add("updateepoch",notNull(rec.getString(AuAfCombinedRec.UPDATEEPOCH)));
+		if(rec.getString(AuAfCombinedRec.LOADDATE) != null)
+			docproperties.add("loaddate",notNull(rec.getString(AuAfCombinedRec.LOADDATE)));
+		if(rec.getString(AuAfCombinedRec.ITEMTRANSACTIONID) != null)
+			docproperties.add("itemtransactionid",replaceDot(notNull(rec.getString(AuAfCombinedRec.ITEMTRANSACTIONID))));
+		if(rec.getString(AuAfCombinedRec.INDEXEDDATE) != null)
+			docproperties.add("indexeddate",notNull(rec.getString(AuAfCombinedRec.INDEXEDDATE)));
+		if(rec.getString(AuAfCombinedRec.ESINDEXTIME) !=null)
+			docproperties.add("esindextime", replaceDot(notNull(rec.getString(AuAfCombinedRec.ESINDEXTIME))));
+		if(rec.getString(AuAfCombinedRec.LOAD_NUMBER) != null)
+			docproperties.add("loadnumber",notNull(rec.getString(AuAfCombinedRec.LOAD_NUMBER)));
+		if(rec.getString(AuAfCombinedRec.UPDATE_NUMBER) != null)
+			docproperties.add("updatenumber",notNull(rec.getString(AuAfCombinedRec.UPDATE_NUMBER)));
+						
+		 JsonObject temp = docproperties.build();
+		  if(!(temp.isEmpty()))
+				  //authorDocument.add("docproperties", docproperties);
+			  AffDocument.add("docproperties", temp);
+		  
+		  if(rec.getString(AuAfCombinedRec.DOCID) != null)
+			  afdoc.add("doc_id",notNull(rec.getString(AuAfCombinedRec.DOCID)));
+		  if(rec.getString(AuAfCombinedRec.EID) != null)
+			  afdoc.add("eid",notNull(rec.getString(AuAfCombinedRec.EID)));
+		  if(rec.getString(AuAfCombinedRec.AFID) != null)
+			  afdoc.add("afid",notNull(rec.getString(AuAfCombinedRec.AFID)));
+		  if(rec.getString(AuAfCombinedRec.PARAFID) != null)
+			  afdoc.add("parafid",notNull(rec.getString(AuAfCombinedRec.PARAFID)));
+		  if(rec.getString(AuAfCombinedRec.AFTYPE) != null)
+			  afdoc.add("aftype", notNull(rec.getString(AuAfCombinedRec.AFTYPE)));
+		  if(rec.getString(AuAfCombinedRec.AFFILIATION_SORT_NAME) != null)
+			  afdoc.add("sortname",notNull(rec.getString(AuAfCombinedRec.AFFILIATION_SORT_NAME)));
+		  
+		  if(rec.getString(AuAfCombinedRec.AFFILIATION_PREFERRED_NAME) != null)
+			  affiliationName.add("preferred", notNull(rec.getString(AuAfCombinedRec.AFFILIATION_PREFERRED_NAME)));
+		  if(rec.getString(AuAfCombinedRec.AFFILIATION_VARIANT_NAME) != null)
+			  affiliationName.add("variant",prepareMultiValues(notNull(rec.getString(AuAfCombinedRec.AFFILIATION_VARIANT_NAME))));
+		  
+		  temp = affiliationName.build();
+		  if(!(temp.isEmpty()))
+			  afdoc.add("affiliation_name", temp);
+		  
+		  if(rec.getString(AuAfCombinedRec.ADDRESS) != null)
+			  afdoc.add("address", notNull(rec.getString(AuAfCombinedRec.ADDRESS)));
+		  
+		  if(rec.getString(AuAfCombinedRec.CITY) != null)
+			  afdoc.add("city",notNull(rec.getString(AuAfCombinedRec.CITY)));
+		  if(rec.getString(AuAfCombinedRec.STATE) != null)
+			  afdoc.add("state",notNull(rec.getString(AuAfCombinedRec.STATE)));
+		  if(rec.getString(AuAfCombinedRec.ZIP) != null)
+			  afdoc.add("zip",notNull(rec.getString(AuAfCombinedRec.ZIP)));
+		  if(rec.getString(AuAfCombinedRec.COUNTRY) != null)
+			  afdoc.add("country",notNull(rec.getString(AuAfCombinedRec.COUNTRY)));
+		  if(rec.getString(AuAfCombinedRec.QUALITY) != null)
+			  afdoc.add("quality",notNull(rec.getString(AuAfCombinedRec.QUALITY)));
+		  if(rec.getString(AuAfCombinedRec.CERTAINITY_SCORES) != null)
+			  afdoc.add("certscore",prepareComposit_field(notNull(rec.getString(AuAfCombinedRec.CERTAINITY_SCORES))));
+		  if(rec.getString(AuAfCombinedRec.DOC_COUNT) != null)
+			  afdoc.add("doc_count",notNull(rec.getString(AuAfCombinedRec.DOC_COUNT)));
+							
+		 temp = afdoc.build();
+		 if(!(temp.isEmpty()))
+			 AffDocument.add("afdoc", temp);
+
+		 esDocument = AffDocument.build();
+		 
+		if(esIndexType !=null && esIndexType.equalsIgnoreCase("direct"))
+			InstitutionCombiner.esIndex.createBulkIndex("affiliation", this.docid, esDocument);
+		else if(esIndexType !=null && esIndexType.equalsIgnoreCase("file"))
+			docWrite.createBulkIndexFile("affiliation", this.docid, esDocument);
+			
+		
+	}
+	
+	
+	/**
+	 * Author Profile
+	 * this was the original version of constructing esdocument, but this included fields even that does not have value, i.e. empty variant_ini[], and this caused these record still shows even when search for "isexist",
+	 * these records should of been exludeded from result  hit if field not exist, fix for this done in 2nd version of writeAuRec below
+	 * to resolve the issue of isexist in ES Search, so those records with no variant_name.first wont in result hit
+	 */
+	
+	public void writeAuRecOld(AuAfCombinedRec rec) throws Exception
 	{
 		this.docid = rec.getString(AuAfCombinedRec.DOCID);
 		// take off Entity.prepareString, as we need to extract AU/AF content to ES exact same as in DB, then EV web need to use same mapping to do search
@@ -273,7 +388,13 @@ public class CombinedAuAfJSON {
 	}
 	
 	
-	public void writeAuRecTest(AuAfCombinedRec rec) throws Exception
+	/**
+	 *  Author Profile
+	 * HH: Author Profile, updated 05/12/2020 to exclude fields having no value from being added to ES Doc, i.e. in previous version if empty field like: variant_name.first [], still sent to ES, but in this version it wont even show in ES DOC
+	 * to resolve the issue of isexist in ES Search, so those records with no variant_name.first wont in result hit
+	 */
+
+	public void writeAuRec(AuAfCombinedRec rec) throws Exception
 	{
 		this.docid = rec.getString(AuAfCombinedRec.DOCID);
 		// take off Entity.prepareString, as we need to extract AU/AF content to ES exact same as in DB, then EV web need to use same mapping to do search
