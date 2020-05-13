@@ -235,8 +235,11 @@ public void run()
 		for(int i=startIndex; i<=lastIndex;i++)
 		{
 
-			fastQuery = fastField + ":" + FetchHitCountFromFast.idList.get(i) + " AND db:\"" + database + "\"";
-			//ystem.out.println("fastQuery: " + fastQuery);   // only for debugging
+			//fastQuery = fastField + ":" + FetchHitCountFromFast.idList.get(i) + " AND db:\"" + database + "\"";  // loadnumber query
+			//fastQuery = fastField + ":" + FetchHitCountFromFast.idList.get(i) + " AND db:\"" + database + "\" AND dt:\"ij\"";  // loadnumber and doc-type query
+			fastQuery = fastField + ":" + FetchHitCountFromFast.idList.get(i) + " AND db:\"" + database + "\" AND dt:\"pa\" AND yr:1999";  // loadnumber and doc-type and year query
+					
+			//System.out.println("fastQuery: " + fastQuery);   // only for debugging
 			fastClient.setQueryString(fastQuery);
 			fastClient.getBaseURL();
 			fastClient.search();

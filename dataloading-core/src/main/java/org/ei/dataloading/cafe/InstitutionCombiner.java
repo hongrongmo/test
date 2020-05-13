@@ -23,6 +23,7 @@ import org.ei.dataloading.CombinedWriter;
 import org.ei.dataloading.Combiner;
 import org.ei.dataloading.CombinerTimestamp;
 import org.ei.dataloading.DataLoadDictionary;
+import java.time.Instant;
 
 /**
  * 
@@ -408,12 +409,7 @@ public class InstitutionCombiner{
 			{
 				updateNumber=loadNumber;
 
-				//PROD
-				/*	query = "select * from " +  tableName + " where ES_STATUS is null and affid in (select INSTITUTE_ID from " + metadataTableName + 
-						" where STATUS='matched') and PARENTID is null";*/
-
-
-
+			
 				// Weekly AF ES index
 				
 				//HH added 05/07/2018 explicitly add all author_profile columns to join with au doc counts table for ES index as per TM request
@@ -428,12 +424,15 @@ public class InstitutionCombiner{
 				 * " where STATUS='matched') and a.PARENTID is null";
 				 */
 
+				//PROD
 				//HH added 02/05/2019 re-index all AF to ES using loadnumber,doc_count from fast instead of metadata/lookup tables to resolve doc_count discrepancy problem
 				
-				query = "select a.M_ID,a.EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AFFID,a.STATUS,a.DATE_CREATED,a.DATE_REVISED,a.PREFERED_NAME,a.SORT_NAME,a.NAME_VARIANT,a.ADDRESS_PART,a.CITY,a.STATE,a.POSTAL_CODE,"+
-						"a.COUNTRY,a.CERTAINTY_SCORES,a.LOADNUMBER,a.DATABASE,a.QUALITY,a.UPDATENUMBER,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,a.ES_STATUS,a.PARENTID,a.PARENT_PREFERED_NAME, b.DOC_COUNT as DOC_COUNT from "+
-						tableName + " a, " + afDocCount_tableName + " b where a.ES_STATUS is null and a.PARENTID is null and a.AFFID = b.AFFID and b.DOC_COUNT>0";
-
+				
+				  query =
+				  "select a.M_ID,a.EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AFFID,a.STATUS,a.DATE_CREATED,a.DATE_REVISED,a.PREFERED_NAME,a.SORT_NAME,a.NAME_VARIANT,a.ADDRESS_PART,a.CITY,a.STATE,a.POSTAL_CODE," +
+				  "a.COUNTRY,a.CERTAINTY_SCORES,a.LOADNUMBER,a.DATABASE,a.QUALITY,a.UPDATENUMBER,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,a.ES_STATUS,a.PARENTID,a.PARENT_PREFERED_NAME, b.DOC_COUNT as DOC_COUNT from "
+				  + tableName + " a, " + afDocCount_tableName +" b where a.ES_STATUS is null and a.PARENTID is null and a.AFFID = b.AFFID and b.DOC_COUNT>0";
+				 
 				
 				
 				// for IPR Re-index with doc_count using loadnumber
@@ -446,10 +445,16 @@ public class InstitutionCombiner{
 				
 				
 				//Testing
-				/*query = "select a.M_ID,a.EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AFFID,a.STATUS,a.DATE_CREATED,a.DATE_REVISED,a.PREFERED_NAME,a.SORT_NAME,a.NAME_VARIANT,a.ADDRESS_PART,a.CITY,a.STATE,a.POSTAL_CODE,"+
-						"a.COUNTRY,a.CERTAINTY_SCORES,a.LOADNUMBER,a.DATABASE,a.QUALITY,a.UPDATENUMBER,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,a.ES_STATUS,a.PARENTID,a.PARENT_PREFERED_NAME, b.DOC_COUNT as DOC_COUNT from "+
-						tableName + " a left outer join " + afDocCount_tableName + " b on a.AFFID = b.AFFID where a.affid in " +
-						"(select INSTITUTE_ID from " + metadataTableName + " where STATUS='matched') and a.PARENTID is null and a.quality>=100 and rownum<5";
+				/*
+				 * query =
+				 * "select a.M_ID,a.EID,a.TIMESTAMP,a.EPOCH,a.INDEXED_DATE,a.AFFID,a.STATUS,a.DATE_CREATED,a.DATE_REVISED,a.PREFERED_NAME,a.SORT_NAME,a.NAME_VARIANT,a.ADDRESS_PART,a.CITY,a.STATE,a.POSTAL_CODE,"
+				 * +
+				 * "a.COUNTRY,a.CERTAINTY_SCORES,a.LOADNUMBER,a.DATABASE,a.QUALITY,a.UPDATENUMBER,a.UPDATECODESTAMP,a.UPDATERESOURCE,a.UPDATETIMESTAMP,a.ES_STATUS,a.PARENTID,a.PARENT_PREFERED_NAME, b.DOC_COUNT as DOC_COUNT from "
+				 * + tableName + " a left outer join " + afDocCount_tableName +
+				 * " b on a.AFFID = b.AFFID where a.affid in " + "(select INSTITUTE_ID from " +
+				 * metadataTableName +
+				 * " where STATUS='matched') and a.PARENTID is null and a.quality>=100 and a.affid='60091909'"
+				 * ;
 				 */
 
 				System.out.println(query);
@@ -566,7 +571,7 @@ public class InstitutionCombiner{
 					rec.put(AuAfCombinedRec.DOCID, rs.getString("M_ID"));
 
 					// UPDATEEPOCH (place holder for future filling with SQS epoch)
-					rec.put(AuAfCombinedRec.UPDATEEPOCH, "");
+					rec.put(AuAfCombinedRec.UPDATEEPOCH, Long.toString(Instant.now().toEpochMilli()));
 
 					//LOADNUMBER
 					if(rs.getString("LOADNUMBER") !=null)
@@ -712,7 +717,9 @@ public class InstitutionCombiner{
 					}
 				}
 
+				//writer.writeAfRec(rec);   //OLD, renamed to writeAuRecOld, stopped using start from 05/12/2020 bc it sends empty fields (i.e. name_viriuant.first[]
 				writer.writeAfRec(rec);
+				
 
 				count ++;
 
