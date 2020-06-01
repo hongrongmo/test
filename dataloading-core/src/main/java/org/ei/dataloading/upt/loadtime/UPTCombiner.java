@@ -358,7 +358,8 @@ public class UPTCombiner extends CombinerTimestamp {
         }
     }
 
-    public void writeRecs(ResultSet rs, Connection con) throws Exception {
+    public void writeRecs(ResultSet rs, Connection con) throws Exception 
+    {
 
         int i = 0;
         String mid = null;
@@ -372,7 +373,8 @@ public class UPTCombiner extends CombinerTimestamp {
     	    rs.last();
     	    int totalCount  = rs.getRow();
     	    rs.beforeFirst();
-        	
+    	    System.out.println("epoch="+processTime+" database=UPT totalCount="+totalCount);
+    	    
             while (rs.next()) 
             {
             	try 

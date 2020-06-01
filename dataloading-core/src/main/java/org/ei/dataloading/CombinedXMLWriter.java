@@ -1056,28 +1056,29 @@ public class CombinedXMLWriter
             contentObject.put("ACCESSIONNUMBER".toLowerCase(),rec.getString(EVCombinedRec.ACCESSION_NUMBER));
             
             String[] author=reverseSigns(rec.getStrings(EVCombinedRec.AUTHOR));
-            if(author!=null && author.length>0 && author[0]!=null && author[0].length()>0)
+            if(author!=null && author.length>0 && author[0]!=null)
             {
             	elementArrayObject = formJsonArray(removeExtraSpace(author),"AUTHOR");          
             	contentObject.put("AUTHOR".toLowerCase(),elementArrayObject);
             }
             
             String[] authorID=rec.getStrings(EVCombinedRec.AUTHORID);
-            if(authorID!=null && authorID.length>0 && authorID[0]!=null && authorID[0].length()>0)
+            //System.out.println("AUTHORID="+Arrays.toString(authorID));
+            if(authorID!=null && authorID.length>0 && authorID[0]!=null)
             {
             	elementArrayObject = formJsonArray(authorID,"AUTHORID");          
             	contentObject.put("AUTHORID".toLowerCase(),elementArrayObject);
             }
 
             String[] authorAffiliation=rec.getStrings(EVCombinedRec.AUTHOR_AFFILIATION);
-            if(authorAffiliation!=null && authorAffiliation.length>0 && authorAffiliation[0]!=null && authorAffiliation[0].length()>0)
+            if(authorAffiliation!=null && authorAffiliation.length>0 && authorAffiliation[0]!=null)
             {
             	elementArrayObject = formJsonArray(removeExtraSpace(authorAffiliation),"AUTHORAFFILIATION");          
             	contentObject.put("AUTHORAFFILIATION".toLowerCase(),elementArrayObject);
             }
             
             String[] affiliationLocations=rec.getStrings(EVCombinedRec.AFFILIATION_LOCATION);
-            if(affiliationLocations!=null && affiliationLocations.length>0 && affiliationLocations[0]!=null && affiliationLocations[0].trim().length()>0)
+            if(affiliationLocations!=null && affiliationLocations.length>0 && affiliationLocations[0]!=null)
             {
             	elementArrayObject = formJsonArray(removeExtraSpace(affiliationLocations),"AFFILIATIONLOCATION");          
             	contentObject.put("AFFILIATIONLOCATION".toLowerCase(),elementArrayObject);
@@ -1089,14 +1090,14 @@ public class CombinedXMLWriter
             }
             
             String[] translatedTitles = rec.getStrings(EVCombinedRec.TRANSLATED_TITLE);
-            if(translatedTitles!=null && translatedTitles.length>0 && translatedTitles[0]!=null && translatedTitles[0].length()>0)
+            if(translatedTitles!=null && translatedTitles.length>0 && translatedTitles[0]!=null)
             {           	
             	elementArrayObject = formJsonArray(removeExtraSpace(translatedTitles),"TRANSLATEDTITLE");          
             	contentObject.put("TRANSLATEDTITLE".toLowerCase(),elementArrayObject);
             }
             
             String[] volumeTitle=rec.getStrings(EVCombinedRec.VOLUME_TITLE);
-            if(volumeTitle!=null && volumeTitle.length>0 && volumeTitle[0]!=null && volumeTitle[0].length()>0)
+            if(volumeTitle!=null && volumeTitle.length>0 && volumeTitle[0]!=null)
             {
 	            elementArrayObject = formJsonArray(removeExtraSpace(volumeTitle),"VOLUMETITLE");          
 	            contentObject.put("VOLUMETITLE".toLowerCase(),elementArrayObject);
@@ -1113,28 +1114,28 @@ public class CombinedXMLWriter
             }
            
             String[] editor=reverseSigns(rec.getStrings(EVCombinedRec.EDITOR));
-            if(editor!=null && editor.length>0 && editor[0]!=null && editor[0].length()>0)
+            if(editor!=null && editor.length>0 && editor[0]!=null)
             {
 	            elementArrayObject = formJsonArray(removeExtraSpace(editor),"EDITOR");          
 	            contentObject.put("EDITOR".toLowerCase(),elementArrayObject);	            
             }
             
             String[] editorAffiliation=rec.getStrings(EVCombinedRec.EDITOR_AFFILIATION);
-            if(editorAffiliation!=null && editorAffiliation.length>0 && editorAffiliation[0]!=null && editorAffiliation[0].length()>0)
+            if(editorAffiliation!=null && editorAffiliation.length>0 && editorAffiliation[0]!=null )
             {
 	            elementArrayObject = formJsonArray(removeExtraSpace(editorAffiliation),"EDITORAFFILIATION");          
 	            contentObject.put("EDITORAFFILIATION".toLowerCase(),elementArrayObject);
             }
  
             String[] translator=reverseSigns(rec.getStrings(EVCombinedRec.TRANSLATOR));
-            if(translator!=null && translator.length>0 && translator[0]!=null && translator[0].length()>0)
+            if(translator!=null && translator.length>0 && translator[0]!=null )
             {
 	            elementArrayObject = formJsonArray(removeExtraSpace(translator),"TRANSLATOR");          
 	            contentObject.put("TRANSLATOR".toLowerCase(),elementArrayObject);
             }            
             
             String[] controlledTerms=rec.getStrings(EVCombinedRec.CONTROLLED_TERMS);
-            if(controlledTerms!=null && controlledTerms.length>0 && controlledTerms[0]!=null && controlledTerms[0].length()>0)
+            if(controlledTerms!=null && controlledTerms.length>0 && controlledTerms[0]!=null)
             {
 	            elementArrayObject = formJsonArray(removeExtraSpace(controlledTerms),"CONTROLLEDTERMS");          
 	            contentObject.put("CONTROLLEDTERMS".toLowerCase(),elementArrayObject);         
@@ -1147,8 +1148,8 @@ public class CombinedXMLWriter
 	            contentObject.put("UNCONTROLLEDTERMS".toLowerCase(),elementArrayObject);   
             }
 
-            String[] issn=rec.getStrings(EVCombinedRec.ISSN);
-            if(issn!=null && issn.length>0 && issn[0]!=null && issn[0].length()>0)
+            String[] issn=prepareISSN(rec.getStrings(EVCombinedRec.ISSN));
+            if(issn!=null && issn.length>0 && issn[0]!=null)
             {
 	            elementArrayObject = formJsonArray(issn,"ISSN");          
 	            contentObject.put("ISSN".toLowerCase(),elementArrayObject);
@@ -1162,35 +1163,35 @@ public class CombinedXMLWriter
             }
 
             String[] codenOfTranslation=rec.getStrings(EVCombinedRec.CODEN_OF_TRANSLATION);
-            if(codenOfTranslation!=null && codenOfTranslation.length>0 && codenOfTranslation[0]!=null && codenOfTranslation[0].length()>0)
+            if(codenOfTranslation!=null && codenOfTranslation.length>0 && codenOfTranslation[0]!=null)
             {
 	            elementArrayObject = formJsonArray(codenOfTranslation,"CODENOFTRANSLATION");          
 	            contentObject.put("CODENOFTRANSLATION".toLowerCase(),elementArrayObject);
             }
             
-            String[] isbn=rec.getStrings(EVCombinedRec.ISBN);
-            if(isbn!=null && isbn.length>0 && isbn[0]!=null && isbn[0].length()>0)
+            String[] isbn=prepareISBNForES(rec.getStrings(EVCombinedRec.ISBN));
+            if(isbn!=null && isbn.length>0 && isbn[0]!=null)
             {
 	            elementArrayObject = formJsonArray(isbn,"ISBN");          
 	            contentObject.put("ISBN".toLowerCase(),elementArrayObject);
             }
 
             String[] serialTitle=rec.getStrings(EVCombinedRec.SERIAL_TITLE);
-            if(serialTitle!=null && serialTitle.length>0 && serialTitle[0]!=null && serialTitle[0].length()>0)
+            if(serialTitle!=null && serialTitle.length>0 && serialTitle[0]!=null)
             {
 	            elementArrayObject = formJsonArray(removeExtraSpace(serialTitle),"SERIALTITLE");          
 	            contentObject.put("SERIALTITLE".toLowerCase(),elementArrayObject);
             }
 
             String[] serialTitleTranslation=rec.getStrings(EVCombinedRec.SERIAL_TITLE_TRANSLATION);
-            if(serialTitleTranslation!=null && serialTitleTranslation.length>0 && serialTitleTranslation[0]!=null && serialTitleTranslation[0].length()>0)
+            if(serialTitleTranslation!=null && serialTitleTranslation.length>0 && serialTitleTranslation[0]!=null)
             {
 	            elementArrayObject = formJsonArray(removeExtraSpace(serialTitleTranslation),"SERIALTITLETRANSLATION");          
 	            contentObject.put("SERIALTITLETRANSLATION".toLowerCase(),elementArrayObject);
             }
 
             String[] mainHeading=rec.getStrings(EVCombinedRec.MAIN_HEADING);
-            if(mainHeading!=null && mainHeading.length>0 && mainHeading[0]!=null && mainHeading[0].length()>0)
+            if(mainHeading!=null && mainHeading.length>0 && mainHeading[0]!=null)
             {
 	            elementArrayObject = formJsonArray(removeExtraSpace(mainHeading),"MAINHEADING");          
 	            contentObject.put("MAINHEADING".toLowerCase(),elementArrayObject);
@@ -1202,28 +1203,28 @@ public class CombinedXMLWriter
             }
 
             String[] publisherName=rec.getStrings(EVCombinedRec.PUBLISHER_NAME);
-            if(publisherName!=null && publisherName.length>0 && publisherName[0]!=null && publisherName[0].length()>0)
+            if(publisherName!=null && publisherName.length>0 && publisherName[0]!=null)
             {
 	            elementArrayObject = formJsonArray(removeExtraSpace(publisherName),"PUBLISHERNAME");          
 	            contentObject.put("PUBLISHERNAME".toLowerCase(),elementArrayObject);
             }
 
             String[] treatmentCode=rec.getStrings(EVCombinedRec.TREATMENT_CODE);
-            if(treatmentCode!=null && treatmentCode.length>0 && treatmentCode[0]!=null && treatmentCode[0].length()>0)
+            if(treatmentCode!=null && treatmentCode.length>0 && treatmentCode[0]!=null)
             {
 	            elementArrayObject = formJsonArray(treatmentCode,"TREATMENTCODE");          
 	            contentObject.put("TREATMENTCODE".toLowerCase(),elementArrayObject);
             }
             
             String[] language=rec.getStrings(EVCombinedRec.LANGUAGE);
-            if(language!=null && language.length>0 && language[0]!=null && language[0].length()>0)
+            if(language!=null && language.length>0 && language[0]!=null)
             {
 	            elementArrayObject = formJsonArray(removeExtraSpace(language),"LANGUAGE");          
 	            contentObject.put("LANGUAGE".toLowerCase(),elementArrayObject);
             }
 
             String[] rectype=rec.getStrings(EVCombinedRec.DOCTYPE);
-            if(rec.getString(EVCombinedRec.DOCTYPE)!=null && rectype.length>0 && rectype[0]!=null && rectype[0].length()>0)
+            if(rec.getString(EVCombinedRec.DOCTYPE)!=null && rectype.length>0 && rectype[0]!=null)
             {
             	elementArrayObject = formJsonArray(removeExtraSpace(rectype),"RECTYPE");          
  	            contentObject.put("RECTYPE".toLowerCase(),elementArrayObject);
@@ -1231,10 +1232,22 @@ public class CombinedXMLWriter
             }
             
             String[] classificationCode=rec.getStrings(EVCombinedRec.CLASSIFICATION_CODE);
-            if(classificationCode!=null && classificationCode.length>0 && classificationCode[0]!=null && classificationCode[0].length()>0)
+            if(classificationCode!=null && classificationCode.length>0 && classificationCode[0]!=null)
             {
-	            elementArrayObject = formJsonArray(reverseSigns(classificationCode),"CLASSIFICATIONCODE");          
-	            contentObject.put("CLASSIFICATIONCODE".toLowerCase(),elementArrayObject);
+	            
+	            String database=rec.getString(EVCombinedRec.DATABASE);
+	            //System.out.println("DATABASE="+database);
+	            if(database.equalsIgnoreCase("grf"))
+	            {
+	            	//elementArrayObject = formJsonArray(removeCategorySign(reverseSigns(classificationCode)),"CLASSIFICATIONCODE");
+	            	elementArrayObject = formJsonArray(reverseSigns(classificationCode),"CLASSIFICATIONCODE");
+	            	contentObject.put("CATEGORY".toLowerCase(),elementArrayObject);
+	            }
+	            else
+	            {
+	            	elementArrayObject = formJsonArray(reverseSigns(classificationCode),"CLASSIFICATIONCODE");
+	            	contentObject.put("CLASSIFICATIONCODE".toLowerCase(),elementArrayObject);
+	            }
             }
             
             if(rec.getString(EVCombinedRec.CONFERENCE_CODE)!=null && rec.getString(EVCombinedRec.CONFERENCE_CODE).length()>0)
@@ -1258,70 +1271,70 @@ public class CombinedXMLWriter
             }
 
             String[] sponsorName=rec.getStrings(EVCombinedRec.SPONSOR_NAME);
-            if(sponsorName!=null && sponsorName.length>0 && sponsorName[0]!=null && sponsorName[0].length()>0)
+            if(sponsorName!=null && sponsorName.length>0 && sponsorName[0]!=null)
             {
 	            elementArrayObject = formJsonArray(removeExtraSpace(sponsorName),"SPONSORNAME");          
 	            contentObject.put("SPONSORNAME".toLowerCase(),elementArrayObject);
             }
            
             String[] monoGraphTitle=rec.getStrings(EVCombinedRec.MONOGRAPH_TITLE);
-            if(monoGraphTitle!=null && monoGraphTitle.length>0 && monoGraphTitle[0]!=null && monoGraphTitle[0].length()>0)
+            if(monoGraphTitle!=null && monoGraphTitle.length>0 && monoGraphTitle[0]!=null)
             {
 	            elementArrayObject = formJsonArray(removeExtraSpace(monoGraphTitle),"MONOGRAPHTITLE");          
 	            contentObject.put("MONOGRAPHTITLE".toLowerCase(),elementArrayObject);
             }
             
             String[] discipline=rec.getStrings(EVCombinedRec.DISCIPLINE);
-            if(discipline!=null && discipline.length>0 && discipline[0]!=null && discipline[0].length()>0)
+            if(discipline!=null && discipline.length>0 && discipline[0]!=null)
             {
 	            elementArrayObject = formJsonArray(discipline,"DISCIPLINE");          
 	            contentObject.put("DISCIPLINE".toLowerCase(),elementArrayObject);
             }
             
             String[] materialNumber=rec.getStrings(EVCombinedRec.MATERIAL_NUMBER);
-            if(materialNumber!=null && materialNumber.length>0 && materialNumber[0]!=null && materialNumber[0].length()>0)
+            if(materialNumber!=null && materialNumber.length>0 && materialNumber[0]!=null)
             {
 	            elementArrayObject = formJsonArray(materialNumber,"MATERIALNUMBER");          
 	            contentObject.put("MATERIALNUMBER".toLowerCase(),elementArrayObject);
             }
 
             String[] numericalIndexing=rec.getStrings(EVCombinedRec.NUMERICAL_INDEXING);
-            if(numericalIndexing!=null && numericalIndexing.length>0 && numericalIndexing[0]!=null && numericalIndexing[0].length()>0)
+            if(numericalIndexing!=null && numericalIndexing.length>0 && numericalIndexing[0]!=null)
             {
 	            elementArrayObject = formJsonArray(numericalIndexing,"NUMERICALINDEXING");          
 	            contentObject.put("NUMERICALINDEXING".toLowerCase(),elementArrayObject);
             }
             
             String[] chemicalIndexing=rec.getStrings(EVCombinedRec.CHEMICAL_INDEXING);
-            if(chemicalIndexing!=null && chemicalIndexing.length>0 && chemicalIndexing[0]!=null && chemicalIndexing[0].length()>0)
+            if(chemicalIndexing!=null && chemicalIndexing.length>0 && chemicalIndexing[0]!=null)
             {
 	            elementArrayObject = formJsonArray(removeExtraSpace(chemicalIndexing),"CHEMICALINDEXING");          
 	            contentObject.put("CHEMICALINDEXING".toLowerCase(),elementArrayObject);
             }
 
             String[] astronomicalIndexing=rec.getStrings(EVCombinedRec.ASTRONOMICAL_INDEXING);
-            if(astronomicalIndexing!=null && astronomicalIndexing.length>0 && astronomicalIndexing[0]!=null && astronomicalIndexing[0].length()>0)
+            if(astronomicalIndexing!=null && astronomicalIndexing.length>0 && astronomicalIndexing[0]!=null)
             {
 	            elementArrayObject = formJsonArray(removeExtraSpace(astronomicalIndexing),"ASTRONOMICALINDEXING");          
 	            contentObject.put("ASTRONOMICALINDEXING".toLowerCase(),elementArrayObject);
             }
             
             String[] reportNumber=rec.getStrings(EVCombinedRec.REPORTNUMBER);
-            if(reportNumber!=null && reportNumber.length>0 && reportNumber[0]!=null && reportNumber[0].length()>0)
+            if(reportNumber!=null && reportNumber.length>0 && reportNumber[0]!=null)
             {
 	            elementArrayObject = formJsonArray(reportNumber,"REPORTNUMBER");          
 	            contentObject.put("REPORTNUMBER".toLowerCase(),elementArrayObject);
             }
 
             String[] ordernumber=rec.getStrings(EVCombinedRec.ORDERNUMBER);
-            if(ordernumber!=null && ordernumber.length>0 && ordernumber[0]!=null && ordernumber[0].length()>0)
+            if(ordernumber!=null && ordernumber.length>0 && ordernumber[0]!=null)
             {
 	            elementArrayObject = formJsonArray(ordernumber,"ORDERNUMBER");          
 	            contentObject.put("ORDERNUMBER".toLowerCase(),elementArrayObject);     
             }
             
             String[] countries=rec.getStrings(EVCombinedRec.COUNTRY);
-            if(countries!=null && countries.length>0 && countries[0]!=null && countries[0].length()>0)
+            if(countries!=null && countries.length>0 && countries[0]!=null )
             {
 	            elementArrayObject = formJsonArray(removeExtraSpace(countries),"COUNTRY");          
 	            contentObject.put("COUNTRY".toLowerCase(),elementArrayObject);
@@ -1353,91 +1366,91 @@ public class CombinedXMLWriter
             }
             
             String[] notes=rec.getStrings(EVCombinedRec.NOTES);
-            if(notes!=null && notes.length>0 && notes[0]!=null && notes[0].length()>0)
+            if(notes!=null && notes.length>0 && notes[0]!=null)
             {
 	            elementArrayObject = formJsonArray(notes,"NOTES");          
 	            contentObject.put("NOTES".toLowerCase(),elementArrayObject);
             }
             
             String[] patentAppDate=rec.getStrings(EVCombinedRec.PATENTAPPDATE);
-            if(patentAppDate!=null && patentAppDate.length>0 && patentAppDate[0]!=null && patentAppDate[0].length()>0)
+            if(patentAppDate!=null && patentAppDate.length>0 && patentAppDate[0]!=null)
             {
 	            elementArrayObject = formJsonArray(patentAppDate,"PATENTAPPDATE");          
 	            contentObject.put("PATENTAPPDATE".toLowerCase(),elementArrayObject);
             }
             
             String[] patentIssueDate=rec.getStrings(EVCombinedRec.PATENTISSUEDATE);
-            if(patentIssueDate!=null && patentIssueDate.length>0 && patentIssueDate[0]!=null && patentIssueDate[0].length()>0)
+            if(patentIssueDate!=null && patentIssueDate.length>0 && patentIssueDate[0]!=null)
             {
 	            elementArrayObject = formJsonArray(patentIssueDate,"PATENTISSUEDATE");          
 	            contentObject.put("PATENTISSUEDATE".toLowerCase(),elementArrayObject);
             }
             
             String[] companies=rec.getStrings(EVCombinedRec.COMPANIES);
-            if(companies!=null && companies.length>0 && companies[0]!=null && companies[0].length()>0)
+            if(companies!=null && companies.length>0 && companies[0]!=null)
             {
 	            elementArrayObject = formJsonArray(removeExtraSpace(companies),"COMPANIES");          
 	            contentObject.put("COMPANIES".toLowerCase(),elementArrayObject);
             }
             
             String[] casRegistryNumber=rec.getStrings(EVCombinedRec.CASREGISTRYNUMBER);
-            if(casRegistryNumber!=null && casRegistryNumber.length>0 && casRegistryNumber[0]!=null && casRegistryNumber[0].length()>0)
+            if(casRegistryNumber!=null && casRegistryNumber.length>0 && casRegistryNumber[0]!=null)
             {
 	            elementArrayObject = formJsonArray(casRegistryNumber,"CASREGISTRYNUMBER");          
 	            contentObject.put("CASREGISTRYNUMBER".toLowerCase(),elementArrayObject);
             }
            
             String[] businessTerms=rec.getStrings(EVCombinedRec.BUSINESSTERMS);
-            if(businessTerms!=null && businessTerms.length>0 && businessTerms[0]!=null && businessTerms[0].length()>0)
+            if(businessTerms!=null && businessTerms.length>0 && businessTerms[0]!=null )
             {
 	            elementArrayObject = formJsonArray(removeExtraSpace(businessTerms),"BUSINESSTERMS");          
 	            contentObject.put("BUSINESSTERMS".toLowerCase(),elementArrayObject);
             }
             
             String[] chemicalTerms=rec.getStrings(EVCombinedRec.CHEMICALTERMS);
-            if(chemicalTerms!=null && chemicalTerms.length>0 && chemicalTerms[0]!=null && chemicalTerms[0].length()>0)
+            if(chemicalTerms!=null && chemicalTerms.length>0 && chemicalTerms[0]!=null )
             {
 	            elementArrayObject = formJsonArray(removeExtraSpace(chemicalTerms),"CHEMICALTERMS");          
 	            contentObject.put("CHEMICALTERMS".toLowerCase(),elementArrayObject);
             }
             
             String[] chemicalAcronyms=rec.getStrings(EVCombinedRec.CHEMICALACRONYMS);
-            if(chemicalAcronyms!=null && chemicalAcronyms.length>0 && chemicalAcronyms[0]!=null && chemicalAcronyms[0].length()>0)
+            if(chemicalAcronyms!=null && chemicalAcronyms.length>0 && chemicalAcronyms[0]!=null )
             {
 	            elementArrayObject = formJsonArray(removeExtraSpace(chemicalAcronyms),"CHEMAC");          
 	            contentObject.put("CHEMAC".toLowerCase(),elementArrayObject);
             }
             
             String[] patentNumber=rec.getStrings(EVCombinedRec.PATENT_NUMBER);
-            if(patentNumber!=null && patentNumber.length>0 && patentNumber[0]!=null && patentNumber[0].length()>0)
+            if(patentNumber!=null && patentNumber.length>0 && patentNumber[0]!=null)
             {
 	            elementArrayObject = formJsonArray(patentNumber,"SIC");          
 	            contentObject.put("SIC".toLowerCase(),elementArrayObject);
             }
 
             String[] industrialcodes=rec.getStrings(EVCombinedRec.INDUSTRIALCODES);
-            if(industrialcodes!=null && industrialcodes.length>0 && industrialcodes[0]!=null && industrialcodes[0].length()>0)
+            if(industrialcodes!=null && industrialcodes.length>0 && industrialcodes[0]!=null)
             {
 	            elementArrayObject = formJsonArray(industrialcodes,"INDUSTRIALCODES");          
 	            contentObject.put("INDUSTRIALCODES".toLowerCase(),elementArrayObject);
             }
             
             String[] industrialsectors=rec.getStrings(EVCombinedRec.INDUSTRIALSECTORS);
-            if(industrialsectors!=null && industrialsectors.length>0 && industrialsectors[0]!=null && industrialsectors[0].length()>0)
+            if(industrialsectors!=null && industrialsectors.length>0 && industrialsectors[0]!=null)
             {
 	            elementArrayObject = formJsonArray(industrialsectors,"INDUSTRIALSECTORS");          
 	            contentObject.put("INDUSTRIALSECTORS".toLowerCase(),elementArrayObject);
             }
             
             String[] scope=rec.getStrings(EVCombinedRec.SCOPE);
-            if(scope!=null && scope.length>0 && scope[0]!=null && scope[0].length()>0)
+            if(scope!=null && scope.length>0 && scope[0]!=null)
             {
 	            elementArrayObject = formJsonArray(scope,"SCOPE");          
 	            contentObject.put("SCOPE".toLowerCase(),elementArrayObject);
             }
             
             String[] agency=rec.getStrings(EVCombinedRec.AGENCY);
-            if(agency!=null && agency.length>0 && agency[0]!=null && agency[0].length()>0)
+            if(agency!=null && agency.length>0 && agency[0]!=null)
             {
 	            elementArrayObject = formJsonArray(agency,"AGENCY");          
 	            contentObject.put("AGENCY".toLowerCase(),elementArrayObject);
@@ -1445,63 +1458,63 @@ public class CombinedXMLWriter
             }
             
             String[] derwentAccessionNumber=rec.getStrings(EVCombinedRec.DERWENT_ACCESSION_NUMBER); 
-            if(derwentAccessionNumber!=null && derwentAccessionNumber.length>0 && derwentAccessionNumber[0]!=null && derwentAccessionNumber[0].length()>0)
+            if(derwentAccessionNumber!=null && derwentAccessionNumber.length>0 && derwentAccessionNumber[0]!=null)
             {
 	            elementArrayObject = formJsonArray(derwentAccessionNumber,"DERWENTACCESSIONNUMBER");          
 	            contentObject.put("DERWENTACCESSIONNUMBER".toLowerCase(),elementArrayObject);
             }
             
             String[] applicationNumber=rec.getStrings(EVCombinedRec.APPLICATION_NUMBER);
-            if(applicationNumber!=null && applicationNumber.length>0 && applicationNumber[0]!=null && applicationNumber[0].length()>0)
+            if(applicationNumber!=null && applicationNumber.length>0 && applicationNumber[0]!=null)
             {
 	            elementArrayObject = formJsonArray(applicationNumber,"APPLICATIONNUMBER");          
 	            contentObject.put("APPLICATIONNUMBER".toLowerCase(),elementArrayObject);
             }
             
             String[] applicationCountry=rec.getStrings(EVCombinedRec.APPLICATION_COUNTRY);
-            if(applicationCountry!=null && applicationCountry.length>0 && applicationCountry[0]!=null && applicationCountry[0].length()>0)
+            if(applicationCountry!=null && applicationCountry.length>0 && applicationCountry[0]!=null)
             {
 	            elementArrayObject = formJsonArray(removeExtraSpace(applicationCountry),"APPLICATIONCOUNTRY");          
 	            contentObject.put("APPLICATIONCOUNTRY".toLowerCase(),elementArrayObject);
             }
             
             String[] intPatentClassification=addIpcIndex(rec.getString(EVCombinedRec.INT_PATENT_CLASSIFICATION),"INTERNATONALPATENTCLASSIFICATION");
-            if(intPatentClassification!=null && intPatentClassification.length>0 && intPatentClassification[0]!=null && intPatentClassification[0].length()>0)
+            if(intPatentClassification!=null && intPatentClassification.length>0 && intPatentClassification[0]!=null)
             {
 	            elementArrayObject = formJsonArray(reverseSigns(intPatentClassification),"INTPATENTCLASSIFICATION");          
 	            contentObject.put("INTPATENTCLASSIFICATION".toLowerCase(),elementArrayObject);
             }
             
             String[] linkedTerms=stripChar29(rec.getStrings(EVCombinedRec.LINKED_TERMS));
-            if(linkedTerms!=null && linkedTerms.length>0 && linkedTerms[0]!=null && linkedTerms[0].length()>0)
+            if(linkedTerms!=null && linkedTerms.length>0 && linkedTerms[0]!=null)
             {
 	            elementArrayObject = formJsonArray(removeExtraSpace(linkedTerms),"LINKEDTERMS");          
 	            contentObject.put("LINKEDTERMS".toLowerCase(),elementArrayObject);
             }
             
             String[] entryYear=rec.getStrings(EVCombinedRec.ENTRY_YEAR);
-            if(entryYear!=null && entryYear.length>0 && entryYear[0]!=null && entryYear[0].length()>0)
+            if(entryYear!=null && entryYear.length>0 && entryYear[0]!=null)
             {
 	            elementArrayObject = formJsonArray(entryYear,"ENTRYYEAR");          
 	            contentObject.put("ENTRYYEAR".toLowerCase(),elementArrayObject);
             }
             
             String[] priorityNumber=rec.getStrings(EVCombinedRec.PRIORITY_NUMBER);
-            if(priorityNumber!=null && priorityNumber.length>0 && priorityNumber[0]!=null && priorityNumber[0].length()>0)
+            if(priorityNumber!=null && priorityNumber.length>0 && priorityNumber[0]!=null)
             {
 	            elementArrayObject = formJsonArray(priorityNumber,"PRIORITYNUMBER");          
 	            contentObject.put("PRIORITYNUMBER".toLowerCase(),elementArrayObject);
             }
             
             String[] priorityDate=rec.getStrings(EVCombinedRec.PRIORITY_DATE);
-            if(priorityDate!=null && priorityDate.length>0 && priorityDate[0]!=null && priorityDate[0].length()>0)
+            if(priorityDate!=null && priorityDate.length>0 && priorityDate[0]!=null)
             {
 	            elementArrayObject = formJsonArray(priorityDate,"PRIORITYDATE");          
 	            contentObject.put("PRIORITYDATE".toLowerCase(),elementArrayObject);
             }
             
             String[] priorityCountry=rec.getStrings(EVCombinedRec.PRIORITY_COUNTRY);
-            if(priorityCountry!=null && priorityCountry.length>0 && priorityCountry[0]!=null && priorityCountry[0].length()>0)
+            if(priorityCountry!=null && priorityCountry.length>0 && priorityCountry[0]!=null )
             {
 	            elementArrayObject = formJsonArray(priorityCountry,"PRIORITYCOUNTRY");          
 	            contentObject.put("PRIORITYCOUNTRY".toLowerCase(),elementArrayObject);
@@ -1515,7 +1528,7 @@ public class CombinedXMLWriter
             }
             
             String[] secondarySrcTitle=rec.getStrings(EVCombinedRec.SECONDARY_SRC_TITLE);   
-            if(secondarySrcTitle!=null && secondarySrcTitle.length>0 && secondarySrcTitle[0]!=null && secondarySrcTitle[0].length()>0)
+            if(secondarySrcTitle!=null && secondarySrcTitle.length>0 && secondarySrcTitle[0]!=null)
             {
 	            elementArrayObject = formJsonArray(removeExtraSpace(secondarySrcTitle),"SECONDARYSRCTITLE");          
 	            contentObject.put("SECONDARYSRCTITLE".toLowerCase(),elementArrayObject); 
@@ -1529,49 +1542,49 @@ public class CombinedXMLWriter
             }
             
             String[] abbrvSrcTitle=rec.getStrings(EVCombinedRec.ABBRV_SRC_TITLE);
-            if(abbrvSrcTitle!=null && abbrvSrcTitle.length>0 && abbrvSrcTitle[0]!=null && abbrvSrcTitle[0].length()>0)
+            if(abbrvSrcTitle!=null && abbrvSrcTitle.length>0 && abbrvSrcTitle[0]!=null )
             {
 	            elementArrayObject = formJsonArray(removeExtraSpace(abbrvSrcTitle),"ABBRVSRCTITLE");          
 	            contentObject.put("ABBRVSRCTITLE".toLowerCase(),elementArrayObject);
             }
             
             String[] noroleTerms=rec.getStrings(EVCombinedRec.NOROLE_TERMS);
-            if(noroleTerms!=null && noroleTerms.length>0 && noroleTerms[0]!=null && noroleTerms[0].length()>0)
+            if(noroleTerms!=null && noroleTerms.length>0 && noroleTerms[0]!=null )
             {
 	            elementArrayObject = formJsonArray(noroleTerms,"NOROLETERMS");          
 	            contentObject.put("NOROLETERMS".toLowerCase(),elementArrayObject);
             }
             
             String[] reagentTerms=rec.getStrings(EVCombinedRec.REAGENT_TERMS);
-            if(reagentTerms!=null && reagentTerms.length>0 && reagentTerms[0]!=null && reagentTerms[0].length()>0)
+            if(reagentTerms!=null && reagentTerms.length>0 && reagentTerms[0]!=null )
             {
 	            elementArrayObject = formJsonArray(reagentTerms,"REAGENTTERMS");          
 	            contentObject.put("REAGENTTERMS".toLowerCase(),elementArrayObject);
             }
             
             String[] productTerms=rec.getStrings(EVCombinedRec.PRODUCT_TERMS);
-            if(productTerms!=null && productTerms.length>0 && productTerms[0]!=null && productTerms[0].length()>0)
+            if(productTerms!=null && productTerms.length>0 && productTerms[0]!=null)
             {
 	            elementArrayObject = formJsonArray(removeExtraSpace(productTerms),"PRODUCTTERMS");          
 	            contentObject.put("PRODUCTTERMS".toLowerCase(),elementArrayObject);
             }
             
             String[] majorNoRoleTerms=rec.getStrings(EVCombinedRec.MAJORNOROLE_TERMS);
-            if(majorNoRoleTerms!=null && majorNoRoleTerms.length>0 && majorNoRoleTerms[0]!=null && majorNoRoleTerms[0].length()>0)
+            if(majorNoRoleTerms!=null && majorNoRoleTerms.length>0 && majorNoRoleTerms[0]!=null)
             {
 	            elementArrayObject = formJsonArray(majorNoRoleTerms,"MAJORNOROLETERMS");          
 	            contentObject.put("MAJORNOROLETERMS".toLowerCase(),elementArrayObject);
             }
             
             String[] majorReagentTerms=rec.getStrings(EVCombinedRec.MAJORREAGENT_TERMS);
-            if(majorReagentTerms!=null && majorReagentTerms.length>0 && majorReagentTerms[0]!=null && majorReagentTerms[0].length()>0)
+            if(majorReagentTerms!=null && majorReagentTerms.length>0 && majorReagentTerms[0]!=null)
             {
 	            elementArrayObject = formJsonArray(majorReagentTerms,"MAJORREAGENTTERMS");          
 	            contentObject.put("MAJORREAGENTTERMS".toLowerCase(),elementArrayObject);
             }
             
             String[] majorProductTerm=rec.getStrings(EVCombinedRec.MAJORPRODUCT_TERMS);
-            if(majorProductTerm!=null && majorProductTerm.length>0 && majorProductTerm[0]!=null && majorProductTerm[0].length()>0)
+            if(majorProductTerm!=null && majorProductTerm.length>0 && majorProductTerm[0]!=null)
             {
 	            elementArrayObject = formJsonArray(majorProductTerm,"MAJORPRODUCTTERMS");          
 	            contentObject.put("MAJORPRODUCTTERMS".toLowerCase(),elementArrayObject);
@@ -1579,7 +1592,7 @@ public class CombinedXMLWriter
             }
             
             String[] conferenceAffiliations=rec.getStrings(EVCombinedRec.CONFERENCEAFFILIATIONS);
-            if(conferenceAffiliations!=null && conferenceAffiliations.length>0 && conferenceAffiliations[0]!=null && conferenceAffiliations[0].length()>0)
+            if(conferenceAffiliations!=null && conferenceAffiliations.length>0 && conferenceAffiliations[0]!=null)
             {
 	            elementArrayObject = formJsonArray(removeExtraSpace(conferenceAffiliations),"CONFERENCEAFFILIATIONS");          
 	            contentObject.put("CONFERENCEAFFILIATIONS".toLowerCase(),elementArrayObject);
@@ -1587,189 +1600,189 @@ public class CombinedXMLWriter
             }
             
             String[] conferenceeditors=reverseSigns(rec.getStrings(EVCombinedRec.CONFERENCEEDITORS));
-            if(conferenceeditors!=null && conferenceeditors.length>0 && conferenceeditors[0]!=null && conferenceeditors[0].length()>0)
+            if(conferenceeditors!=null && conferenceeditors.length>0 && conferenceeditors[0]!=null)
             {
 	            elementArrayObject = formJsonArray(removeExtraSpace(conferenceeditors),"CONFERENCEEDITORS");          
 	            contentObject.put("CONFERENCEEDITORS".toLowerCase(),elementArrayObject);
             }
             
             String[] conferenceStartDate=rec.getStrings(EVCombinedRec.CONFERENCESTARTDATE);
-            if(conferenceStartDate!=null && conferenceStartDate.length>0 && conferenceStartDate[0]!=null && conferenceStartDate[0].length()>0)
+            if(conferenceStartDate!=null && conferenceStartDate.length>0 && conferenceStartDate[0]!=null)
             {
 	            elementArrayObject = formJsonArray(conferenceStartDate,"CONFERENCESTARTDATE");          
 	            contentObject.put("CONFERENCESTARTDATE".toLowerCase(),elementArrayObject);
             }
             
             String[] conferenceEndDate=rec.getStrings(EVCombinedRec.CONFERENCEENDDATE);
-            if(conferenceEndDate!=null && conferenceEndDate.length>0 && conferenceEndDate[0]!=null && conferenceEndDate[0].length()>0)
+            if(conferenceEndDate!=null && conferenceEndDate.length>0 && conferenceEndDate[0]!=null)
             {
 	            elementArrayObject = formJsonArray(conferenceEndDate,"CONFERENCEENDDATE");          
 	            contentObject.put("CONFERENCEENDDATE".toLowerCase(),elementArrayObject);
             }
             
             String[] conferencevenusite=rec.getStrings(EVCombinedRec.CONFERENCEVENUESITE);
-            if(conferencevenusite!=null && conferencevenusite.length>0 && conferencevenusite[0]!=null && conferencevenusite[0].length()>0)
+            if(conferencevenusite!=null && conferencevenusite.length>0 && conferencevenusite[0]!=null)
             {
 	            elementArrayObject = formJsonArray(conferencevenusite,"CONFERENCEVENUESITE");          
 	            contentObject.put("CONFERENCEVENUESITE".toLowerCase(),elementArrayObject);
             }
              
             String[] conferenceCity=rec.getStrings(EVCombinedRec.CONFERENCECITY);
-            if(conferenceCity!=null && conferenceCity.length>0 && conferenceCity[0]!=null && conferenceCity[0].length()>0)
+            if(conferenceCity!=null && conferenceCity.length>0 && conferenceCity[0]!=null )
             {
 	            elementArrayObject = formJsonArray(conferenceCity,"CONFERENCECITY");          
 	            contentObject.put("CONFERENCECITY".toLowerCase(),elementArrayObject);
             }
             
             String[] conferenceCountryCode=rec.getStrings(EVCombinedRec.CONFERENCECOUNTRYCODE);
-            if(conferenceCountryCode!=null && conferenceCountryCode.length>0 && conferenceCountryCode[0]!=null && conferenceCountryCode[0].length()>0)
+            if(conferenceCountryCode!=null && conferenceCountryCode.length>0 && conferenceCountryCode[0]!=null)
             {
 	            elementArrayObject = formJsonArray(conferenceCountryCode,"CONFERENCECOUNTRYCODE");          
 	            contentObject.put("CONFERENCECOUNTRYCODE".toLowerCase(),elementArrayObject);
             }
             
             String[] conferencePageRange=rec.getStrings(EVCombinedRec.CONFERENCEPAGERANGE);
-            if(conferencePageRange!=null && conferencePageRange.length>0 && conferencePageRange[0]!=null && conferencePageRange[0].length()>0)
+            if(conferencePageRange!=null && conferencePageRange.length>0 && conferencePageRange[0]!=null)
             {
 	            elementArrayObject = formJsonArray(conferencePageRange,"CONFERENCEPAGERANGE");          
 	            contentObject.put("CONFERENCEPAGERANGE".toLowerCase(),elementArrayObject);
             }
             
             String[] conferenceNumberPages=rec.getStrings(EVCombinedRec.CONFERENCENUMBERPAGES);
-            if(conferenceNumberPages!=null && conferenceNumberPages.length>0 && conferenceNumberPages[0]!=null && conferenceNumberPages[0].length()>0)
+            if(conferenceNumberPages!=null && conferenceNumberPages.length>0 && conferenceNumberPages[0]!=null)
             {
 	            elementArrayObject = formJsonArray(conferenceNumberPages,"CONFERENCENUMBERPAGES");          
 	            contentObject.put("CONFERENCENUMBERPAGES".toLowerCase(),elementArrayObject);
             }
 
             String[] conferencePartNumber=rec.getStrings(EVCombinedRec.CONFERENCEPARTNUMBER);
-            if(conferencePartNumber!=null && conferencePartNumber.length>0 && conferencePartNumber[0]!=null && conferencePartNumber[0].length()>0)
+            if(conferencePartNumber!=null && conferencePartNumber.length>0 && conferencePartNumber[0]!=null)
             {
 	            elementArrayObject = formJsonArray(conferencePartNumber,"CONFERENCEPARTNUMBER");          
 	            contentObject.put("CONFERENCEPARTNUMBER".toLowerCase(),elementArrayObject);
             }
             
             String[] designatedStates=rec.getStrings(EVCombinedRec.DESIGNATED_STATES);
-            if(designatedStates!=null && designatedStates.length>0 && designatedStates[0]!=null && designatedStates[0].length()>0)
+            if(designatedStates!=null && designatedStates.length>0 && designatedStates[0]!=null)
             {
 	            elementArrayObject = formJsonArray(designatedStates,"DESIGNATEDSTATES");          
 	            contentObject.put("DESIGNATEDSTATES".toLowerCase(),elementArrayObject);
             }
             
             String[] stnConference=rec.getStrings(EVCombinedRec.STN_CONFERENCE);
-            if(stnConference!=null && stnConference.length>0 && stnConference[0]!=null && stnConference[0].length()>0)
+            if(stnConference!=null && stnConference.length>0 && stnConference[0]!=null)
             {
 	            elementArrayObject = formJsonArray(stnConference,"STNCONFERENCE");          
 	            contentObject.put("STNCONFERENCE".toLowerCase(),elementArrayObject);
             }
             
             String[] stnSecondaryConference=rec.getStrings(EVCombinedRec.STN_SECONDARY_CONFERENCE);
-            if(stnSecondaryConference!=null && stnSecondaryConference.length>0 && stnSecondaryConference[0]!=null && stnSecondaryConference[0].length()>0)
+            if(stnSecondaryConference!=null && stnSecondaryConference.length>0 && stnSecondaryConference[0]!=null)
             {
 	            elementArrayObject = formJsonArray(stnSecondaryConference,"STNSECONDARYCONFERENCE");          
 	            contentObject.put("STNSECONDARYCONFERENCE".toLowerCase(),elementArrayObject);
             }
             
             String[] patentFilingDate=rec.getStrings(EVCombinedRec.PATENT_FILING_DATE);
-            if(patentFilingDate!=null && patentFilingDate.length>0 && patentFilingDate[0]!=null && patentFilingDate[0].length()>0)
+            if(patentFilingDate!=null && patentFilingDate.length>0 && patentFilingDate[0]!=null)
             {
 	            elementArrayObject = formJsonArray(patentFilingDate,"FILINGDATE");          
 	            contentObject.put("FILINGDATE".toLowerCase(),elementArrayObject);
             }
             
             String[] priorityKind=rec.getStrings(EVCombinedRec.PRIORITY_KIND);
-            if(priorityKind!=null && priorityKind.length>0 && priorityKind[0]!=null && priorityKind[0].length()>0)
+            if(priorityKind!=null && priorityKind.length>0 && priorityKind[0]!=null)
             {
 	            elementArrayObject = formJsonArray(priorityKind,"PRIORITYKIND");          
 	            contentObject.put("PRIORITYKIND".toLowerCase(),elementArrayObject);
             }
             
-            String[] eclaCode=rec.getStrings(EVCombinedRec.ECLA_CODES);
-            if(eclaCode!=null && eclaCode.length>0 && eclaCode[0]!=null && eclaCode[0].length()>0)
+            String[] eclaCode=reverseSigns(rec.getStrings(EVCombinedRec.ECLA_CODES));
+            if(eclaCode!=null && eclaCode.length>0 && eclaCode[0]!=null)
             {
 	            elementArrayObject = formJsonArray(eclaCode,"ECLACODE");          
 	            contentObject.put("ECLACODE".toLowerCase(),elementArrayObject);
             }
             
             String[] attorneyName=rec.getStrings(EVCombinedRec.ATTORNEY_NAME);
-            if(attorneyName!=null && attorneyName.length>0 && attorneyName[0]!=null && attorneyName[0].length()>0)
+            if(attorneyName!=null && attorneyName.length>0 && attorneyName[0]!=null)
             {
 	            elementArrayObject = formJsonArray(attorneyName,"ATTORNEYNAME");          
 	            contentObject.put("ATTORNEYNAME".toLowerCase(),elementArrayObject);
             }
             
             String[] primaryExaminer=rec.getStrings(EVCombinedRec.PRIMARY_EXAMINER);
-            if(primaryExaminer!=null && primaryExaminer.length>0 && primaryExaminer[0]!=null && primaryExaminer[0].length()>0)
+            if(primaryExaminer!=null && primaryExaminer.length>0 && primaryExaminer[0]!=null)
             {
 	            elementArrayObject = formJsonArray(primaryExaminer,"PRIMARYEXAMINER");          
 	            contentObject.put("PRIMARYEXAMINER".toLowerCase(),elementArrayObject);
             }
 
             String[] assistantExaminer=rec.getStrings(EVCombinedRec.ASSISTANT_EXAMINER);
-            if(assistantExaminer!=null && assistantExaminer.length>0 && assistantExaminer[0]!=null && assistantExaminer[0].length()>0)
+            if(assistantExaminer!=null && assistantExaminer.length>0 && assistantExaminer[0]!=null)
             {
 	            elementArrayObject = formJsonArray(assistantExaminer,"ASSISTANTEXAMINER");          
 	            contentObject.put("ASSISTANTEXAMINER".toLowerCase(),elementArrayObject);
             }
             
-            String[] intpatentclasses=rec.getStrings(EVCombinedRec.INT_PATENT_CLASSES);
-            if(intpatentclasses!=null && intpatentclasses.length>0 && intpatentclasses[0]!=null && intpatentclasses[0].length()>0)
+            String[] intpatentclasses=reverseSigns(rec.getStrings(EVCombinedRec.INT_PATENT_CLASSES));
+            if(intpatentclasses!=null && intpatentclasses.length>0 && intpatentclasses[0]!=null)
             {
 	            elementArrayObject = formJsonArray(intpatentclasses,"IPCCLASS");          
 	            contentObject.put("IPCCLASS".toLowerCase(),elementArrayObject);
             }
             
-            String[] intpatentsubclasses=rec.getStrings(EVCombinedRec.INT_PATENT_SUB_CLASSES);
-            if(intpatentsubclasses!=null && intpatentsubclasses.length>0 && intpatentsubclasses[0]!=null && intpatentsubclasses[0].length()>0)
+            String[] intpatentsubclasses=reverseSigns(rec.getStrings(EVCombinedRec.INT_PATENT_SUB_CLASSES));
+            if(intpatentsubclasses!=null && intpatentsubclasses.length>0 && intpatentsubclasses[0]!=null)
             {
 	            elementArrayObject = formJsonArray(intpatentsubclasses,"IPCCLASS");          
 	            contentObject.put("IPCCLASS".toLowerCase(),elementArrayObject);
             }
             
-            String[] eclaclasses=rec.getStrings(EVCombinedRec.ECLA_CLASSES);
-            if(eclaclasses!=null && eclaclasses.length>0 && eclaclasses[0]!=null && eclaclasses[0].length()>0)
+            String[] eclaclasses=reverseSigns(rec.getStrings(EVCombinedRec.ECLA_CLASSES));
+            if(eclaclasses!=null && eclaclasses.length>0 && eclaclasses[0]!=null)
             {
 	            elementArrayObject = formJsonArray(eclaclasses,"ECLACLASS");          
 	            contentObject.put("ECLACLASS".toLowerCase(),elementArrayObject);
             }
             
-            String[] eclassubclasses=rec.getStrings(EVCombinedRec.ECLA_SUB_CLASSES);
-            if(eclassubclasses!=null && eclassubclasses.length>0 && eclassubclasses[0]!=null && eclassubclasses[0].length()>0)
+            String[] eclassubclasses=reverseSigns(rec.getStrings(EVCombinedRec.ECLA_SUB_CLASSES));
+            if(eclassubclasses!=null && eclassubclasses.length>0 && eclassubclasses[0]!=null)
             {
 	            elementArrayObject = formJsonArray(eclassubclasses,"ECLASUBCLASS");          
 	            contentObject.put("ECLASUBCLASS".toLowerCase(),elementArrayObject);
             }
                                 
-            String[] usptoclass=rec.getStrings(EVCombinedRec.USPTOCLASS);
-            if(usptoclass!=null && usptoclass.length>0 && usptoclass[0]!=null && usptoclass[0].length()>0)
+            String[] usptoclass=reverseSigns(rec.getStrings(EVCombinedRec.USPTOCLASS));
+            if(usptoclass!=null && usptoclass.length>0 && usptoclass[0]!=null)
             {
 	            elementArrayObject = formJsonArray(usptoclass,"USPTOCLASS");          
 	            contentObject.put("USPTOCLASS".toLowerCase(),elementArrayObject);
             }
 
-            String[] usptosubclass=rec.getStrings(EVCombinedRec.USPTOSUBCLASS);
-            if(usptosubclass!=null && usptosubclass.length>0 && usptosubclass[0]!=null && usptosubclass[0].length()>0)
+            String[] usptosubclass=reverseSigns(rec.getStrings(EVCombinedRec.USPTOSUBCLASS));
+            if(usptosubclass!=null && usptosubclass.length>0 && usptosubclass[0]!=null)
             {
 	            elementArrayObject = formJsonArray(usptosubclass,"USPTOSUBCLASS");          
 	            contentObject.put("USPTOSUBCLASS".toLowerCase(),elementArrayObject);
             }
             
-            String[] usptocode=rec.getStrings(EVCombinedRec.USPTOCODE);
-            if(usptocode!=null && usptocode.length>0 && usptocode[0]!=null && usptocode[0].length()>0)
+            String[] usptocode=reverseSigns(rec.getStrings(EVCombinedRec.USPTOCODE));
+            if(usptocode!=null && usptocode.length>0 && usptocode[0]!=null)
             {
 	            elementArrayObject = formJsonArray(usptocode,"USPTOCODE");          
 	            contentObject.put("USPTOCODE".toLowerCase(),elementArrayObject);
             }
 
             String[] patentkind=rec.getStrings(EVCombinedRec.PATENT_KIND);
-            if(patentkind!=null && patentkind.length>0 && patentkind[0]!=null && patentkind[0].length()>0)
+            if(patentkind!=null && patentkind.length>0 && patentkind[0]!=null)
             {
 	            elementArrayObject = formJsonArray(patentkind,"PATENTKIND");          
 	            contentObject.put("PATENTKIND".toLowerCase(),elementArrayObject);
             }
             
             String[] kinddescr=rec.getStrings(EVCombinedRec.KIND_DESCR);
-            if(kinddescr!=null && kinddescr.length>0 && kinddescr[0]!=null && kinddescr[0].length()>0)
+            if(kinddescr!=null && kinddescr.length>0 && kinddescr[0]!=null)
             {
 	            elementArrayObject = formJsonArray(kinddescr,"KINDDESCRIPTION");          
 	            contentObject.put("KINDDESCRIPTION".toLowerCase(),elementArrayObject);
@@ -1786,14 +1799,14 @@ public class CombinedXMLWriter
             }
 
             String[] pcitedindex=rec.getStrings(EVCombinedRec.PCITEDINDEX);
-            if(pcitedindex!=null && pcitedindex.length>0 && pcitedindex[0]!=null && pcitedindex[0].length()>0)
+            if(pcitedindex!=null && pcitedindex.length>0 && pcitedindex[0]!=null)
             {                   
 	            elementArrayObject = formJsonArray(pcitedindex,"PCITEDINDEX");          
 	            contentObject.put("PCITEDINDEX".toLowerCase(),elementArrayObject);
             }
 
             String[] prefindex=rec.getStrings(EVCombinedRec.PREFINDEX);
-            if(prefindex!=null && prefindex.length>0 && prefindex[0]!=null && prefindex[0].length()>0)
+            if(prefindex!=null && prefindex.length>0 && prefindex[0]!=null)
 			{
 	            elementArrayObject = formJsonArray(prefindex,"PREFINDEX");          
 	            contentObject.put("PREFINDEX".toLowerCase(),elementArrayObject);
@@ -1815,7 +1828,7 @@ public class CombinedXMLWriter
             }
             
             String[] affiliationid=rec.getStrings(EVCombinedRec.AFFILIATIONID);
-            if(affiliationid!=null && affiliationid.length>0 && affiliationid[0]!=null && affiliationid[0].length()>0)
+            if(affiliationid!=null && affiliationid.length>0 && affiliationid[0]!=null)
             {
 	            elementArrayObject = formJsonArray(affiliationid,"AFFILIATIONID");          
 	            contentObject.put("AFFILIATIONID".toLowerCase(),elementArrayObject);
@@ -1862,7 +1875,7 @@ public class CombinedXMLWriter
             }
             
             String[] tableofcontent=rec.getStrings(EVCombinedRec.TABLE_OF_CONTENT);
-            if(tableofcontent!=null && tableofcontent.length>0 && tableofcontent[0]!=null && tableofcontent[0].length()>0)
+            if(tableofcontent!=null && tableofcontent.length>0 && tableofcontent[0]!=null)
             {
 	            elementArrayObject = formJsonArray(tableofcontent,"TABLEOFCONTENT");          
 	            contentObject.put("TABLEOFCONTENT".toLowerCase(),elementArrayObject);
@@ -2630,7 +2643,7 @@ public class CombinedXMLWriter
             }
 
             String[] departmentID=rec.getStrings(EVCombinedRec.DEPARTMENTID);
-            if(departmentID!=null && departmentID.length>0 && departmentID[0]!=null && departmentID[0].trim().length()>0)
+            if(departmentID!=null && departmentID.length>0 && departmentID[0]!=null)
             {
             	//System.out.println("departmentID="+departmentID[0]);
 	            elementArrayObject = formJsonArray(departmentID,"DEPARTMENTID");          
@@ -2695,7 +2708,7 @@ public class CombinedXMLWriter
                       
             
             String[] grantAgency=rec.getStrings(EVCombinedRec.GRANTAGENCY);
-            if(grantAgency!=null && grantAgency.length>0 && grantAgency[0]!=null && grantAgency[0].length()>0)
+            if(grantAgency!=null && grantAgency.length>0 && grantAgency[0]!=null)
             {
 	            elementArrayObject = formJsonArray(grantAgency,"GRANTAGENCY");          
 	            contentObject.put("GRANTAGENCY".toLowerCase(),elementArrayObject);
@@ -2730,13 +2743,18 @@ public class CombinedXMLWriter
             }
  
             String[] grantText=rec.getStrings(EVCombinedRec.GRANTTEXT); 
-            if((grantIDs!=null && grantIDs.length>0 && grantIDs[0]!=null && grantIDs[0].length()>0) || 
-            		(grantAgency!=null && grantAgency.length>0 && grantAgency[0]!=null && grantAgency[0].length()>0) || 
-            		(grantText!=null && grantText.length>0 && grantText[0]!=null && grantText[0].length()>0) ||
-            		(combine(grantIDs,grantAgency,grantText).length>0 && combine(grantIDs,grantAgency,grantText)[0]!=null && combine(grantIDs,grantAgency,grantText)[0].length()>0))
-            {
-	            elementArrayObject = formJsonArray(combine(grantIDs,grantAgency,grantText),"GRANT");          
-	            contentObject.put("GRANT".toLowerCase(),elementArrayObject);	          
+            //System.out.println("GRANTTEXT="+Arrays.toString(grantText));
+            /*
+            if((grantIDs!=null && grantIDs.length>0 && grantIDs[0]!=null) || 
+            		(grantAgency!=null && grantAgency.length>0 && grantAgency[0]!=null) || 
+            		(grantText!=null && grantText.length>0 && grantText[0]!=null) ||
+            		(combine(grantIDs,grantAgency,grantText).length>0 && combine(grantIDs,grantAgency,grantText)[0]!=null))
+            		*/
+            if(grantText!=null && grantText.length>0 && grantText[0]!=null)
+            {          	
+	            //elementArrayObject = formJsonArray(combine(grantIDs,grantAgency,grantText),"GRANTTEXT");  
+            	elementArrayObject = formJsonArray(removeExtraSpace(grantText),"GRANTTEXT");      
+	            contentObject.put("GRANTTEXT".toLowerCase(),elementArrayObject);	          
             }
 
             //STANDARDDESIGNATION
@@ -2773,6 +2791,23 @@ public class CombinedXMLWriter
         	//outputAsJsonFile(prettyJsonString,eid,getDatabase(),getLoadnumber());
           
         }
+    
+    private String[] removeCategorySign(String[] input)
+    {
+    	String[] output = new String[input.length];
+    	int j=0;
+    	for(int i=0;i<input.length;i++)
+    	{
+    		if(input[i].indexOf("(category)")<0)
+    		{
+    			output[j]=input[i];
+    			j++;
+    		}
+    		
+    	}
+    	return output;
+    }
+    
     
     private String[] removeExtraSpace(String[] input)
     {
@@ -3147,7 +3182,32 @@ public class CombinedXMLWriter
 
         return (String[]) list.toArray(new String[1]);
     }
+    
+    public String[] prepareISBNForES(String[] isbns)
+    {
+        if (isbns == null)
+        {
+            return null;
+        }
 
+        ArrayList list = new ArrayList();
+        for (int i = 0; i < isbns.length; i++)
+        {
+
+            String isbn = isbns[i];
+            if (isbn == null)
+            {
+                break;
+            }
+            list.add(isbn);
+            String isbnWithoutDash = isbn.replaceAll("-","");
+            list.add(isbnWithoutDash);                   
+        }
+
+        return (String[]) list.toArray(new String[1]);
+    }
+
+    
     private String formatSic(String sic)
     {
         if (sic == null)
@@ -3740,7 +3800,8 @@ public class CombinedXMLWriter
     public static void main(String args[]) throws Exception
     {
     	CombinedXMLWriter c = new CombinedXMLWriter(1,1,"cpx");
-    	String testString = "  check   comma  space ";
+    	//String testString = "  check   comma  space ";
+    	String testString = args[0];
     	System.out.println("before= "+testString+" after="+c.removeExtraSpace(testString));
    	
     }

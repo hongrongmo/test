@@ -15,6 +15,7 @@ import org.apache.commons.text.StringEscapeUtils;
 
 public class Entity {
     private static Properties etable = new Properties();
+    private static Properties extraTable = new Properties();
     private static Properties isotable = new Properties();
     private static Properties utftable = new Properties();
     private static Perl5Util perl = new Perl5Util();
@@ -120,13 +121,21 @@ public class Entity {
 	            else 
 	            {
 	                // entity named escape
-	               
-	            	CharSequence value = StringEscapeUtils.unescapeHtml4("&"+input.substring(i, j)+";");           	
+	            	//CharSequence value = StringEscapeUtils.unescapeHtml4("&"+input.substring(i, j)+";"); 
+	            	String originalString = "&"+input.substring(i, j)+";";
+	            	String value = StringEscapeUtils.unescapeHtml4(originalString);
+	            	if(originalString.equals(value))
+	            	{
+	            		value = extraTable.getProperty(originalString);
+	            	}
+	            	
 	                if (value == null) 
-	                {
+	                {                	
 	                    i++;
-	                    continue;
+	                    continue;	                	
 	                }
+	               
+	                	
 	
 	                if (writer == null) 
 	                    writer = new StringWriter(input.length());
@@ -316,6 +325,24 @@ public class Entity {
         }            
 
         return s;
+    }
+    
+    static
+    {
+    	
+    		extraTable.setProperty("&dstrok;","đ");
+    		extraTable.setProperty("&hstrok;","ħ");
+    		extraTable.setProperty("&lstrok;","ł");
+    		extraTable.setProperty("&tstrok;","ŧ");
+    		extraTable.setProperty("&Dstrok;","Đ");
+    		extraTable.setProperty("&Hstrok;","Ħ");
+    		extraTable.setProperty("&Lstrok;","Ł");
+    		extraTable.setProperty("&Tstrok;","Ŧ");
+    		extraTable.setProperty("&Gbreve;","Ğ");
+    		extraTable.setProperty("&Ustrok;","Ŭ");
+    		extraTable.setProperty("&gstrok;","ğ");
+    		extraTable.setProperty("&ustrok;","ŭ");
+    		
     }
 
     static {

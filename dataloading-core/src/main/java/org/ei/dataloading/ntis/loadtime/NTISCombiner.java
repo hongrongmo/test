@@ -60,6 +60,7 @@ public class NTISCombiner
         int recsPerbatch = Integer.parseInt(args[5]);
         String operation = args[6];
         tablename = args[7];
+       
         String environment = args[8].toLowerCase();
 
         Combiner.TABLENAME = tablename;
@@ -310,6 +311,8 @@ public class NTISCombiner
         try
         {
         	int totalCount = getResultSetSize(rs); 
+        	System.out.println("epoch="+processTime+" database=NTIS totalCount="+totalCount);
+        	
 	        while (rs.next())
 	        {
 	

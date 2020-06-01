@@ -34,6 +34,7 @@ public class CBNBCombiner extends Combiner
         tablename = args[7];
         String environment = args[8].toLowerCase();
         Combiner.TABLENAME = tablename;
+       
         System.out.println(Combiner.TABLENAME);
 
         CombinedWriter writer = new CombinedXMLWriter(recsPerbatch, loadNumber, "cbn");
@@ -221,6 +222,8 @@ public class CBNBCombiner extends Combiner
         try
         {
         	int totalCount = getResultSetSize(rs); 
+        	System.out.println("epoch="+processTime+" database=CBNB totalCount="+totalCount);
+        	
 	        while (rs.next())
 	        {
 	
