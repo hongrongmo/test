@@ -983,7 +983,7 @@ public class CombinedXMLWriter
         
         out.println("   </ROW>");
         ++curRecNum;
-              
+               
         end();
     }
     
