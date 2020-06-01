@@ -316,7 +316,7 @@ class FastDocCountThreads implements Runnable
 			}
 			out = new FileWriter(file);
 
-			for(int i=startIndex; i<lastIndex;i++)
+			for(int i=startIndex; i<=lastIndex;i++)
 			{
 
 				fastQuery = "(" + fastField + ":\"" + FetchCafeIDCountFromFastThreads.idList.get(i) + "\")";

@@ -45,7 +45,7 @@ import io.searchbox.core.SearchResult;
 public class ESJestClient {
 
 	// HH 08/01/2017 Temp commented out because it complains when run "Maven->build" @ line 57, uncomment when needed
-	/*
+	
 	private static final String SERVICE = "es";
 	private static final String REGION = "us-east-1";
 	
@@ -214,5 +214,5 @@ public class ESJestClient {
 		     return kSigning;
 		}
 		
-*/
+
 }
