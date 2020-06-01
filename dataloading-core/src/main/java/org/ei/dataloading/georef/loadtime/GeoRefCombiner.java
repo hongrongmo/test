@@ -865,12 +865,12 @@ private String[] getCategoryCodes(String[] in)
 {
 	if(in!=null)
 	{
-		String[] out = new String[in.length*3];
-		int j=0;
+		String[] out = new String[in.length];
+		//int j=0;
 		for(int i=0;i<in.length;i++)
 		{
-			out[j]=in[i];
-			j=j+1;
+			//out[j]=in[i];
+			//j=j+1;
 			String categoryText = categoryMap.get(in[i]);
 			if(categoryText!=null)
 			{
@@ -878,10 +878,10 @@ private String[] getCategoryCodes(String[] in)
 				{
 					categoryText=categoryText.substring(0,categoryText.indexOf("(")-1);
 				}
-				out[j]=categoryText.trim();
-				j=j+1;
-				out[j]=categoryText.trim()+" (category)";
-				j=j+1;
+				out[i]=in[i]+"-"+categoryText.trim();
+				//j=j+1;
+				//out[j]=categoryText.trim()+" (category)";
+				//j=j+1;
 			}
 		}
 		return out;

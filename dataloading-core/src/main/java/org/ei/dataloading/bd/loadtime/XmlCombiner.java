@@ -15,7 +15,7 @@ import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
 import org.ei.dataloading.bd.loadtime.BdNumericalIndexMapping;
 import org.ei.util.kafka.*;
-import org.json.simple.JSONObject;
+//import org.json.simple.JSONObject;
 import org.ei.dataloading.*;
 //import org.ei.dataloading.bd.loadtime.*;
 import org.ei.dataloading.georef.loadtime.*;
@@ -369,7 +369,8 @@ public void writeCombinedByTableHook(Connection con) throws Exception
 
         try
         {
-        	int totalCount = getResultSetSize(rs);        	
+        	int totalCount = getResultSetSize(rs);  
+        	System.out.println("epoch="+processTime+" database="+Combiner.CURRENTDB+" totalCount="+totalCount);
 	        while (rs.next())
 	        {
 	          ++i;
@@ -454,7 +455,8 @@ public void writeCombinedByTableHook(Connection con) throws Exception
 	                        //use this to deal with author alias
 	                        rec.put(EVCombinedRec.TRANSLATOR, prepareBdAuthorWithAlias(authorString));
 	                        
-	                        if(rs.getString("authorid")==null && rs.getString("cafe_author")!=null)
+	                        //if(rs.getString("authorid")==null && rs.getString("cafe_author")!=null)
+	                        if(rs.getString("cafe_author")!=null)
 	                        {
 	                        	String cafeAuthorString = rs.getString("cafe_author");
 	                        	if(rs.getString("cafe_author1")!=null)
@@ -465,6 +467,11 @@ public void writeCombinedByTableHook(Connection con) throws Exception
 		                        String[] cafe_aid = getAuID();	                        
 		                        rec.put(EVCombinedRec.AUTHORID, cafe_aid);
 	                        }
+	                       // else
+	                        //{
+	                        //	System.out.println("No authorid for record "+rs.getString("ACCESSNUMBER"));
+	                        //}
+	                        
 	                        String affiliation = null;
 	                        
 	                        if (rs.getString("AFFILIATION") != null)

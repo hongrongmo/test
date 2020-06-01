@@ -276,6 +276,7 @@ public class EptCombiner extends Combiner {
         try
         {
         	int totalCount = getResultSetSize(rs); 
+        	System.out.println("epoch="+processTime+" database=EPT totalCount="+totalCount);
 	        while (rs.next()) 
 	        {
 	            ++i;

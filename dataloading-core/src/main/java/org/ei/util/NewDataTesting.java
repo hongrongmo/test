@@ -15,6 +15,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.net.*;
+import javax.net.ssl.HttpsURLConnection;
 import java.util.regex.*;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
@@ -90,6 +91,7 @@ import com.amazonaws.services.sqs.model.DeleteQueueRequest;
 import com.amazonaws.services.sqs.model.Message;
 import com.amazonaws.services.sqs.model.ReceiveMessageRequest;
 import com.amazonaws.services.sqs.model.SendMessageRequest;
+import org.apache.commons.text.StringEscapeUtils;
 
 import org.elasticsearch.action.index.IndexResponse;
 import org.elasticsearch.client.Client;
@@ -105,6 +107,7 @@ import org.elasticsearch.index.query.QueryBuilders.*;
 import org.apache.http.client.HttpClient;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.json.JSONObject;
+import org.json.JSONArray;
 import org.json.XML;
 //import org.json.JSONArray;
 //import org.json.XML;
@@ -115,6 +118,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.GsonBuilder;
 import com.google.gson.Gson;
 import org.ei.util.kafka.*;
+
 
 public class NewDataTesting
 {
@@ -208,6 +212,11 @@ public class NewDataTesting
 		{
 			test.checkColumnSize();
 		}
+		else if(action.equals("testES"))
+		{
+			System.out.println("doing testing Elastic Search Index");
+			test.testURL();
+		}		
 		else if(action.equals("deleteElasticRecord"))
 		{
 			System.out.println("sending records to Kaska for deleting");
@@ -397,6 +406,11 @@ public class NewDataTesting
 		{
 			test.checkCharacter();
 		}
+		else  if(action.equals("displayStringCharValue"))
+		{
+			test.checkStringCharacter(updateNumber);
+		}
+		
 		else  if(action.equals("xmltojson"))
 		{
 			test.xmlToJson(updateNumber);
@@ -2662,9 +2676,10 @@ public class NewDataTesting
 	private void testBuildElasticSearch() throws Exception
 	{
 		// Construct a new Jest Client via factory
-		String endpoint = "https://shared-search-es-kibana.dev.scopussearch.net/app/kibana#/discover?_g=()&_a=(columns:!(_source),index:'60f577f0-47f9-11ea-a219-45f91d04cdd7',interval:auto,query:(language:lucene,query:'loadNumber:202010'),sort:!(_score,desc))"; 
+		//String endpoint = "https://shared-search-es-kibana.dev.scopussearch.net/app/kibana#/discover?_g=()&_a=(columns:!(_source),index:'60f577f0-47f9-11ea-a219-45f91d04cdd7',interval:auto,query:(language:lucene,query:'loadNumber:202010'),sort:!(_score,desc))"; 
 				
 		//String endpoint = "http://search-evcafeauaf-v6tfjfyfj26rtoneh233lzzqtq.us-east-1.es.amazonaws.com:80";
+		String endpoint = "https://shared-search-service-api.cert.scopussearch.net/document/v1/query/result";
 		JestClientFactory factory = new JestClientFactory();
 		factory.setHttpClientConfig(new HttpClientConfig
 				.Builder(endpoint)
@@ -2758,6 +2773,83 @@ public class NewDataTesting
 			
 	}
 	
+	private void testURL() throws Exception
+	{
+		// create HTTP Client
+		URL url = new URL ("https://shared-search-service-api.cert.scopussearch.net/document/v1/query/result");
+		//URL url = new URL ("https://www.google.com");
+		//HttpURLConnection con = (HttpURLConnection)url.openConnection();
+		HttpsURLConnection con = (HttpsURLConnection)url.openConnection();
+ 
+		// Set the Request Method
+		con.setRequestMethod("POST");
+		//con.setRequestMethod("GET");
+ 
+		// Set the Request Content-Type Header Parameter
+		con.setRequestProperty("Content-Type", "application/json");
+		// Set the Request Content-Type Header Parameter
+		con.setRequestProperty("x-els-product", "engineering_village");
+				
+		//Set Response Format Type
+		con.setRequestProperty("Accept", "application/json");
+ 
+		//Ensure the Connection Will Be Used to Send Content
+		con.setDoOutput(true);
+		con.connect();
+		//Create the Request Body
+		String jsonInputString = "{\"query\":{\"queryString\":\"stress\"}, \"returnFields\":[\"eidocid\"]}";
+		
+		try
+		{
+			
+			OutputStream os = con.getOutputStream();
+		    byte[] input = jsonInputString.getBytes("utf-8");
+		    os.write(input, 0, input.length);   
+		            
+		
+			BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream())); 
+			
+			StringBuilder response = new StringBuilder();			
+			int responseCode=con.getResponseCode();
+			
+			if(responseCode == HttpsURLConnection.HTTP_OK) 
+			{
+				String responseLine = null;
+				while ((responseLine = br.readLine()) != null) 
+				{
+				    response.append(responseLine.trim());
+				}
+				String json = response.toString();
+				//System.out.println(json);
+				JSONObject result = new JSONObject(json);
+				System.out.println("TOTAL COUNT= "+result.getInt("totalResultsCount"));
+				JSONArray hitsArray = result.getJSONArray("hits");
+				int length = hitsArray.length();
+				//loop to get all json objects from data json array
+				for(int i=0; i<length; i++) 
+				{
+				    JSONObject jObj = hitsArray.getJSONObject(i);
+				    //Toast.makeText(this, jObj.getString("Name"), Toast.LENGTH_LONG).show();
+				    System.out.println("m_id="+jObj.getString("eidocid"));
+
+				} 
+			}
+			else
+			{
+				System.out.println(responseCode);
+			}
+			
+				
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+ 
+	
+	}
+	
 	
 	 private void testSearchElasticSearch() throws Exception { 
 		 /*
@@ -2778,7 +2870,8 @@ public class NewDataTesting
 	                + "    \"match_all\": {}\n "   
 	                + "    }\n" 
 	                + "}"; 		
-			 String endpoint = "http://search-author-5qvbvgnktqru5apydu24nu3jmm.us-east-1.es.amazonaws.com";
+			 //String endpoint = "http://search-author-5qvbvgnktqru5apydu24nu3jmm.us-east-1.es.amazonaws.com";
+			 String endpoint = "https://shared-search-service-api.cert.scopussearch.net/document/v1/query/result";
 			//String endpoint = "http://search-evcafeauaf-v6tfjfyfj26rtoneh233lzzqtq.us-east-1.es.amazonaws.com:80";
 			JestClientFactory factory = new JestClientFactory();
 			factory.setHttpClientConfig(new HttpClientConfig
@@ -2789,7 +2882,8 @@ public class NewDataTesting
 			
 			JestClient client = factory.getObject();
 	        //Search.Builder searchBuilder = new Search.Builder(query).addIndex("cafe").addType("author"); 
-			Search.Builder searchBuilder = new Search.Builder(query).addIndex("author").addType("author");
+			//Search.Builder searchBuilder = new Search.Builder(query).addIndex("author").addType("author");
+			Search.Builder searchBuilder = new Search.Builder(query);
 	        //io.searchbox.core.SearchResult result = client.execute(searchBuilder.build()); 
 	        JestResult jsonResult = client.execute(searchBuilder.build());
 	        //System.out.println(jsonResult.getSourceAsString());
@@ -3133,6 +3227,44 @@ public class NewDataTesting
 						
 		}
 		
+	}
+	
+	private void checkStringCharacter(String input)
+	{
+		DataLoadDictionary dictionary = new DataLoadDictionary();
+		try
+		{
+
+			if(input!=null)
+			{
+				char[] arrChars = input.toCharArray();
+
+		        int i = 0;
+		        System.out.println("original String="+input);
+		        for (int j = 0; j < arrChars.length; j++) 
+		        {
+		            System.out.println("Char("+i+") "+ (int) arrChars[j]);
+
+		            i++;
+		        }
+		        System.out.println("converted html String="+StringEscapeUtils.escapeHtml4(input));
+		        System.out.println("converted java String="+StringEscapeUtils.escapeJava(input));
+		        System.out.println("converted XML String="+StringEscapeUtils.escapeXml11(input));
+		        System.out.println("converted JSON String="+StringEscapeUtils.escapeJson(input));
+		        System.out.println("converted  String="+dictionary.mapEntity(input));
+			}
+			else
+			{
+				System.out.println("input string is empty");
+			}
+			
+			
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+				
 	}
 			
 	
