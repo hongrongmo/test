@@ -252,6 +252,7 @@ import org.ei.dataloading.MessageSender;
 	        KafkaService kafka = new KafkaService();
 	        long processTime = System.currentTimeMillis();
 	    	int totalCount = getResultSetSize(rs);  
+	    	System.out.println("epoch="+processTime+" database="+Combiner.CURRENTDB+" totalCount="+totalCount);
 	    	
 	        try
 	        {

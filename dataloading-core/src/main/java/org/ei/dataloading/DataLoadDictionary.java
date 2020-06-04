@@ -7,6 +7,7 @@
 package org.ei.dataloading;
 import java.util.*;
 import java.util.regex.*;
+import org.apache.commons.text.StringEscapeUtils;
 
 
 /**
@@ -524,6 +525,21 @@ public class DataLoadDictionary
 	    entityMap.put("&rang;", "&#12297;");	//right angle bracket
 
 	}
+	
+	/*
+	public static String mapEntity(String xml)
+	{
+		if(xml == null)
+		{
+			return null;
+		}
+		
+		StringBuffer sb = new StringBuffer();
+		return StringEscapeUtils.escapeHtml4(xml);
+		//return sb.toString();
+	}
+	
+	*/
     	public static String mapEntity(String xml)
     	{
     		if(xml == null)
@@ -694,7 +710,10 @@ public class DataLoadDictionary
     					case 710 :sb.append("&circ;");break; 	//modifier letter circumflex accent
     					case 732 :sb.append("&tilde;");break; 	//small tilde
     					case 768 :sb.append("&grave;");break; 	//combining grave accent
-    					case 769 :sb.append("&acute;");break; 	//combining acute accent
+    					case 769 :
+    						sb.deleteCharAt(sb.length() - 1);
+    						sb.append("&aacute;");
+    						break; 	//combining acute accent
     					case 770 :sb.append("&circ;");break; 	//modifier letter circumflex accent
     					case 771 :sb.append("&tilde;");break; 	//small tilde
     					case 772 :sb.append("&macr;");break; 	//combining macron
@@ -1181,6 +1200,7 @@ public class DataLoadDictionary
     		}
     		return sb.toString();
     	}
+    	
     	
     	// added by hmo to deal with multiple bype characters at 10/27/2016, 
     	static int[]  toCodePointArray(String str) { // 

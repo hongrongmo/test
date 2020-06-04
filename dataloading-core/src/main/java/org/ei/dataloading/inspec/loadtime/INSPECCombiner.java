@@ -54,6 +54,7 @@ public class INSPECCombiner
         int recsPerbatch = Integer.parseInt(args[5]);
         String operation = args[6];
         tablename = args[7];
+       
         String environment = args[8].toLowerCase();
 
         try {
@@ -342,7 +343,8 @@ public class INSPECCombiner
         long processTime = System.currentTimeMillis();
        try
        {
-    	    int totalCount = getResultSetSize(rs);   
+    	    int totalCount = getResultSetSize(rs);  
+    	    System.out.println("epoch="+processTime+" database=INS totalCount="+totalCount);
 	        while(rs.next())
 	        {
 	            EVCombinedRec rec = new EVCombinedRec();
@@ -1535,7 +1537,7 @@ public class INSPECCombiner
             {
                 sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from "+Combiner.TABLENAME+ " where LOAD_NUMBER = "+loadN;
             }
-            //System.out.println("Inspect sqlQuery= "+sqlQuery);
+            System.out.println("Inspect sqlQuery= "+sqlQuery);
             rs = stmt.executeQuery(sqlQuery);
             writeRecs(rs,con);
             System.out.println("Wrote records.");
