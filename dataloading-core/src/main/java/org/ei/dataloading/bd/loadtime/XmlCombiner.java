@@ -1222,7 +1222,7 @@ public void writeCombinedByTableHook(Connection con) throws Exception
 	            }
 	           
 	            recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
-	            //this.writer.writeRec(recArray);
+	            this.writer.writeRec(recArray);//use this line for fast extraction
 	          
 	            
 	            /**********************************************************/
@@ -1230,12 +1230,14 @@ public void writeCombinedByTableHook(Connection con) throws Exception
 	            //this.writer.writeRec(recArray,kafka);
 	            /*********************************************************/
 	            
-	            
+	            /*//use this block of code for sending data to kafka
 	            MessageSender sendMessage= new MessageSender(recArray,kafka,this.writer);
 	            //pool.execute(sendMessage); 
 	            thread = new Thread(sendMessage);
 	            thread.start();
 	            //this.writer.writeRec(recArray,kafka);
+	             */
+	             
 	            
 	         }
 	         catch(Exception e)
@@ -1264,7 +1266,7 @@ public void writeCombinedByTableHook(Connection con) throws Exception
 		        	while(thread.isAlive())
 		        	{
 		        		System.out.println("sleep "+k);
-		        		Thread.sleep(1000);
+		        		Thread.sleep(100);
 		        		k++;
 		        		if(k>10)
 		        		{

@@ -433,7 +433,8 @@ import org.ei.dataloading.MessageSender;
 		            
 		                
 		            recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
-		            //this.writer.writeRec(recArray);
+		            this.writer.writeRec(recArray);//Use this line for FAST extraction
+		            
 		            /**********************************************************/
 	    	        //following code used to test kafka by hmo@2020/02/3
 	    	        //this.writer.writeRec(recArray,kafka);
@@ -442,10 +443,11 @@ import org.ei.dataloading.MessageSender;
 	    	        //this.writer.writeRec(recArray,kafka);
 	    	       
 		            //use thread to send kafka message
+		            /*
 		            MessageSender sendMessage= new MessageSender(recArray,kafka,this.writer);
 			        thread = new Thread(sendMessage);
 			        thread.start();
-			        
+			        */
 	    	        
 		          }
 		        

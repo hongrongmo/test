@@ -414,7 +414,7 @@ public class NTISCombiner
 				{
 					rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
 				}
-	            //this.writer.writeRec(rec);
+	            this.writer.writeRec(rec);//Use this line for FAST extraction
 	           
 	            /**********************************************************/
 		        //following code used to test kafka by hmo@2020/02/3
@@ -422,9 +422,11 @@ public class NTISCombiner
 		        /**********************************************************/	          
 		        //this.writer.writeRec(rec,kafka);		       
 				//use thread to run kafka message
+				/*
 				 MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
 		         thread = new Thread(sendMessage);
 		         thread.start();
+		         */
 		         
 	        }
         }

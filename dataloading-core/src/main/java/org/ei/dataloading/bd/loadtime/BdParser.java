@@ -4100,9 +4100,9 @@ public class BdParser
 							
 				if(givenName != null)
 				{
-					System.out.println("given-name="+givenName.getText());
+					//System.out.println("given-name="+givenName.getText());
 					aus.setGivenName(dictionary.mapEntity(getMixData(givenName.getContent())));
-					System.out.println("given-name1="+dictionary.mapEntity(getMixData(givenName.getContent())));
+					//System.out.println("given-name1="+dictionary.mapEntity(getMixData(givenName.getContent())));
 				}
 				
 				Element suffix = author.getChild("suffix",ceNamespace);
