@@ -48,6 +48,7 @@ public class BdCorrection
     static String password="ei3it";
     static String database;
     static String action;
+    static String m_id;
     static int updateNumber=0;
     static boolean test = false;
     static String tempTable="bd_correction_temp";
@@ -145,6 +146,7 @@ public class BdCorrection
                 System.out.println("Does not have sqlldr file");
                 System.exit(1);
             }
+                                 
         }
 
         if(args.length>6)

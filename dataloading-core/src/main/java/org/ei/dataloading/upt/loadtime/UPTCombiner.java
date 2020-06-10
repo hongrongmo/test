@@ -843,12 +843,13 @@ public class UPTCombiner extends CombinerTimestamp {
 	                    rec.put(EVCombinedRec.NOTES, arrNames);
 	                    //System.out.println("NOTES="+arrNames[0]);
 	
-	                    //writer.writeRec(rec);
+	                    writer.writeRec(rec);//use this line for FAST extraction
 	                    
-	                    /**********************************************************/
+	                    /*//use this block of code to send data to kafka server
+	                    //**********************************************************
 	        	        //following code used to test kafka by hmo@2020/01/30
 	        	        //this.writer.writeRec(recArray,kafka);
-	        	        /**********************************************************/
+	        	        //**********************************************************
 	                    
 	        	        //writer.writeRec(rec,kafka);
 	        	       
@@ -856,6 +857,7 @@ public class UPTCombiner extends CombinerTimestamp {
 	                    MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
 	       	         	thread = new Thread(sendMessage);
 	       	         	thread.start();
+	       	         	*/
 	       	         	
 	
 	                }
@@ -892,7 +894,7 @@ public class UPTCombiner extends CombinerTimestamp {
 	 		        	while(thread.isAlive())
 	 		        	{
 	 		        		System.out.println("sleep "+k);
-	 		        		Thread.sleep(1000);
+	 		        		Thread.sleep(100);
 	 		        	}
  		        	}
  		        	kafka.close();       		
