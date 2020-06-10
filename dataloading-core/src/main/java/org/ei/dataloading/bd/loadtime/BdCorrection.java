@@ -30,6 +30,8 @@ import org.ei.util.kafka.*;
 import org.ei.util.GUID;
 import org.ei.xml.Entity;
 
+import java.util.HashMap;
+
 public class BdCorrection
 {
     Perl5Util perl = new Perl5Util();
@@ -54,8 +56,9 @@ public class BdCorrection
     static String lookupTable="deleted_lookupIndex";
     static String backupTable="bd_temp_backup";
 	static String referenceTable="bd_reference_temp";
-	static String authorLookupTempTable ="cafe_au_lookup";
-	static String affiliationLookupTempTable = "cafe_af_lookup";
+	static String cafePuiListTempTable;				//HH added 06/09/2020
+	static String authorLookupTempTable;
+	static String affiliationLookupTempTable;
     static String sqlldrFileName="correctionFileLoader.sh";
     static String authorLookupIndexSqlldrFileName = "cafe_au_lookupindex.sh";
     static String AffLookupIndexSqlldrFileName = "cafe_af_lookupindex.sh";
@@ -68,6 +71,7 @@ public class BdCorrection
     private static long midTime = System.currentTimeMillis();
     private static List<String> blockedIssnList;
 
+    private static String fileName; 		//HH added 06/09/2020 for showing in exception message of temp tables cleanup
     public static void main(String args[])
         throws Exception
     {
@@ -153,6 +157,7 @@ public class BdCorrection
             {
                 fileToBeLoaded = args[0];
                 System.out.println("file to be processed= "+fileToBeLoaded);
+                fileName = fileToBeLoaded;
             }
 
             if(args[1]!=null)
@@ -184,6 +189,19 @@ public class BdCorrection
 				{
 				        referenceTable=tableName[3];
                 }
+				//HH 06/09/2020
+				if(tableName.length >4)
+				{
+					cafePuiListTempTable = tableName[4];
+				}
+				if(tableName.length >5)
+				{
+					authorLookupTempTable = tableName[5];
+				}
+				if(tableName.length >6)
+				{
+					affiliationLookupTempTable = tableName[6];
+				}
             }
 
             if(args[2]!=null)
@@ -1506,8 +1524,12 @@ public class BdCorrection
 
     private void cleanUp(String tableToBeTruncate)
     {
+    	boolean aipTemp = false;
+    	boolean cafePuiListTemp = false;
+    			
         Statement stmt = null;
         String[] tableName = null;
+        
         if(tableToBeTruncate.indexOf(",")>-1)
         {
             tableName = tableToBeTruncate.split(",",-1);
@@ -1522,56 +1544,82 @@ public class BdCorrection
         {
             stmt = con.createStatement();
 
-            for(int i=0;i<tableName.length;i++)
+            //HH added Tuesday 06/09/2020, Week# [202025] 
+            /*
+             * Temp tables provided in this order from shell script  [bd_aip_temp,deleted_lookupIndex,bd_aip_temp_backup,bd_reference_temp,CAFE_PUI_LIST_TEMP]
+             * to tackle "issue java.sql.SQLException: ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired" happened at the time of cafe correction of week 2020172
+             * causing many of cafe abstract records have been deleted from cafe_master because truncating temp table "bd_reference_temp" failed due to other unknown process was running on same table
+             * that caused table lock and so raised java exception, and so exited cleanup process for rest of tables (i.e. bd_reference_temp, CAFE_PUI_LIST_TEMP), but the rest of parsing process 
+             * still continued
+             * As per Frank recommendation, make bd_reference_temp low priority, if truncation exception happened for bd_aip_temp, CAFE_PUI_LIST_TEMP these will have priority to exit whole process
+             * not even continue parsing, if exception happened for references still can continue rest of correction, in this case have to sort temp tables based on some sort of priority
+             *  In order to keep refrence temp table the last, has to check by table name instead of loop
+             */
+            
+            if(this.tempTable != null && !(this.tempTable.isEmpty()))
             {
-
-                if(i==0)
-                {
-                    this.tempTable=tableName[i];
-                    stmt.executeUpdate("truncate table "+tableName[i]);
-                    System.out.println("truncate temp table "+this.tempTable);
-                }
-
-                if(i==1)
-                {
-                    this.lookupTable=tableName[i];
-                    stmt.executeUpdate("truncate table "+tableName[i]);
-                    System.out.println("truncate lookup table "+this.lookupTable);
-                }
-
-                if(i==2)
-                {
-                    this.backupTable=tableName[i];
-                    stmt.executeUpdate("truncate table "+tableName[i]);
-                    System.out.println("truncate backup table "+this.backupTable);
-                }
-
-				if(i==3 && database.equals("cpx"))
-				{
-					this.referenceTable=tableName[i];
-					stmt.executeUpdate("truncate table "+tableName[i]);
-					System.out.println("truncate reference table "+this.referenceTable);
-                }
-				
-				if(i==4 && database.equals("cpx"))
-				{
-					this.authorLookupTempTable=tableName[i];
-					stmt.executeUpdate("truncate table "+tableName[i]);
-					System.out.println("truncate table "+this.authorLookupTempTable);
-                }
-				
-				if(i==5 && database.equals("cpx"))
-				{
-					this.affiliationLookupTempTable=tableName[i];
-					stmt.executeUpdate("truncate table "+tableName[i]);
-					System.out.println("truncate table "+this.affiliationLookupTempTable);
-                }
+            	System.out.println("About to truncate: " + this.tempTable);
+            	stmt.executeUpdate("truncate table "+this.tempTable);
+                System.out.println(this.tempTable + " truncated");
+                aipTemp = true;
             }
+            if(this.lookupTable != null && !(this.lookupTable.isEmpty()))
+            {
+            	System.out.println("About to truncate: " + this.lookupTable);
+                stmt.executeUpdate("truncate table "+this.lookupTable);
+                System.out.println(this.lookupTable + " truncated");
+            }
+            if(this.backupTable != null && !(this.backupTable.isEmpty()))
+            {
+            	System.out.println("About to truncate: " + this.backupTable);
+                stmt.executeUpdate("truncate table "+this.backupTable);
+                System.out.println(this.backupTable + " truncated");
+            }
+            if(this.cafePuiListTempTable != null && !(this.cafePuiListTempTable.isEmpty()) && database.equals("cpx"))
+            {
+            	System.out.println("About to truncate: " + this.cafePuiListTempTable);
+                stmt.executeUpdate("truncate table "+this.cafePuiListTempTable);
+                System.out.println(this.cafePuiListTempTable + " truncated");
+                cafePuiListTemp = true;
+            }
+            if(this.referenceTable != null && !(this.referenceTable.isEmpty()) && database.equals("cpx"))
+            {
+            	System.out.println("About to truncate: " + this.referenceTable);
+ 			    stmt.executeUpdate("truncate table "+this.referenceTable);
+ 			    System.out.println(this.referenceTable + " truncated");
+            }
+           if(this.authorLookupTempTable != null && !(this.authorLookupTempTable.isEmpty()) && database.equals("cpx"))
+           {
+        	   System.out.println("About to truncate: " + this.authorLookupTempTable);
+			   stmt.executeUpdate("truncate table "+this.authorLookupTempTable);
+			   System.out.println(this.authorLookupTempTable + " truncated");
+           }
+           if(this.affiliationLookupTempTable != null && !(affiliationLookupTempTable.isEmpty()) && database.equals("cpx"))
+           {
+        	   System.out.println("About to truncate: " + this.affiliationLookupTempTable);
+			   stmt.executeUpdate("truncate table "+this.affiliationLookupTempTable);
+			   System.out.println(this.affiliationLookupTempTable + " truncated");
+           }
+           
 
         }
         catch(Exception e)
         {
+        	System.out.println("Exception occurred to truncate a temp table!");
             e.printStackTrace();
+            
+          //HH added 06/09/2020, if exception occured during cleaning-up bd_temp or cafe_pui_list_temp, exit correction process to avoid records deletion as happened for cafe_master
+            if((!aipTemp && this.tempTable != null && !(this.tempTable.isEmpty())) || (!cafePuiListTemp && this.cafePuiListTempTable != null && !(this.cafePuiListTempTable.isEmpty())))
+            {
+            	StringBuffer tempTableName = new StringBuffer();
+            	if(!aipTemp && this.tempTable != null)
+            		tempTableName.append(this.tempTable);
+            	if(!cafePuiListTemp && this.cafePuiListTempTable != null)
+            		tempTableName.append(this.cafePuiListTempTable);
+            	System.out.println("major temp table " + tempTableName.toString()+ " failed to be truncated, exit correction process for this file: " + fileName);
+            	System.exit(1);
+            }
+            
         }
         finally
         {
