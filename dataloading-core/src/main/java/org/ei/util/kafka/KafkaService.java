@@ -181,8 +181,8 @@ public class KafkaService {
     		{
     			try
     			{
-	    			System.out.println("\nSending problem record; Key:: "+me.getKey() + " & Value:: " + me.getValue());
-	    			runProducer((String)me.getKey(),(String)me.getValue(),true);
+	    			System.out.println("\nSending problem record; Key:: "+me.getKey() + " and Value:: " + me.getValue());
+	    			runProducer((String)me.getValue(),(String)me.getKey(),true);
 	    			this.producer.flush();
     			}
     			catch(Exception e)
@@ -194,7 +194,7 @@ public class KafkaService {
     	}
     	else
     	{
-    		System.out.println("No Error Found");
+    		System.out.println("No problem record to resend");
     	}
     }
     

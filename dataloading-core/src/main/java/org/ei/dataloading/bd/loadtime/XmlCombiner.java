@@ -1268,8 +1268,9 @@ public void writeCombinedByTableHook(Connection con) throws Exception
 		        		System.out.println("sleep "+k);
 		        		Thread.sleep(100);
 		        		k++;
-		        		if(k>10)
+		        		if(k>5)
 		        		{
+		        			k=1;
 		        			System.out.println("record "+accessNumber+" didn't send to Kafka server");
 		        			thread.stop();
 		        		}
