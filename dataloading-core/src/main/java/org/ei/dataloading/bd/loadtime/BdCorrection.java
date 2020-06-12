@@ -188,6 +188,19 @@ public class BdCorrection
 				{
 				        referenceTable=tableName[3];
                 }
+				//HH 06/09/2020
+				if(tableName.length >4)
+				{
+					cafePuiListTempTable = tableName[4];
+				}
+				if(tableName.length >5)
+				{
+					authorLookupTempTable = tableName[5];
+				}
+				if(tableName.length >6)
+				{
+					affiliationLookupTempTable = tableName[6];
+				}
             }
 
             if(args[2]!=null)
