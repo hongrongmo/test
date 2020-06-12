@@ -13,6 +13,8 @@ import org.ei.dataloading.awss3.AmazonS3Service;
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.auth.InstanceProfileCredentialsProvider;
+import com.amazonaws.regions.Region;
+import com.amazonaws.regions.Regions;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.model.GetObjectRequest;
@@ -73,6 +75,9 @@ public class GetKnovelFilesFromS3 {
 			//AmazonS3 s3Client = new AmazonS3Client(new PropertiesCredentials(new File("AwsCredentials.properties")));  // for local testing
 			
 			AmazonS3 s3Client = new AmazonS3Client(new InstanceProfileCredentialsProvider());   // for ec2 testing
+			//HH added 06/05/2020 set region to resolve "there is an exception on file group-2020-03.xml" when call knovel script via Lambda func
+			Region usEast1 = Region.getRegion(Regions.US_EAST_1);
+			s3Client.setRegion(usEast1);
 			S3Object object = s3Client.getObject(new GetObjectRequest(bucketName, key+fileName));
 
 
@@ -145,6 +150,7 @@ public class GetKnovelFilesFromS3 {
 
 		catch(IOException ex)
 		{
+			System.out.println("Knovel s3 file download exception: " + ex.getMessage());
 			ex.printStackTrace();
 		}
 		catch(AmazonServiceException ase)
