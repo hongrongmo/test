@@ -48,17 +48,17 @@ public class TableSpaceInfo {
 			case 1: 
 				//url = "jdbc:oracle:thin:@localhost:15210:eia";  // for localhost testing
 				url = "jdbc:oracle:thin:@eia.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eia";
-				dbpassword = "Awseia123";
+				dbpassword = "";
 				break;
 			case 2:
 				//url = "jdbc:oracle:thin:@localhost:15211:eib";  // for localhost
 				url = "jdbc:oracle:thin:@eib.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eib";
-				dbpassword = "Awseib123";
+				dbpassword = "";
 				break;
 			case 3: 
 				url = "jdbc:oracle:thin:@localhost:15212:eid";   // for localhost
 				//url = "jdbc:oracle:thin:@eid.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eid";
-				dbpassword = "Awseid123";
+				dbpassword = "";
 				break;
 			default:
 				//url = "jdbc:oracle:thin:@localhost:15212:eid";   // for localhost

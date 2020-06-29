@@ -24,7 +24,7 @@ public class LoginValidator {
 		//String url = "jdbc:oracle:thin:@localhost:15212:eid";   //works for localhost
 		String driver = "oracle.jdbc.driver.OracleDriver";
 		String dbUserName = "ap_report";
-		String dbPassword = "ei3it";
+		String dbPassword = "";
 		
 		String query = "select * from report_user_profile where username='" +userName+"' and password='"
 				 +password+"'";

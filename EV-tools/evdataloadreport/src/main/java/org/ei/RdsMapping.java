@@ -25,22 +25,22 @@ public class RdsMapping {
 			case 1: 
 				//url = "jdbc:oracle:thin:@localhost:15210:eia";  // for localhost testing
 				url = "jdbc:oracle:thin:@eia.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eia";
-				password = "Awseia123";
+				password = "";
 				break;
 			case 2:
 				//url = "jdbc:oracle:thin:@localhost:15211:eib";  // for localhost
 				url = "jdbc:oracle:thin:@eib.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eib";
-				password = "Awseib123";
+				password = "";
 				break;
 			case 3: 
 				//url = "jdbc:oracle:thin:@localhost:15212:eid";   // for localhost
 				url = "jdbc:oracle:thin:@eid.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eid";
-				password = "Awseid123";
+				password = "";
 				break;
 			default:
 				//url = "jdbc:oracle:thin:@localhost:15212:eid";   // for localhost
 				url = "jdbc:oracle:thin:@eid.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eid";
-				password = "Awseid123";
+				password = "";
 				break;
 		}
 		
@@ -87,16 +87,16 @@ public class RdsMapping {
 		{
 			switch(rds) {
 			case 1:
-				password = "Awseia123";
+				password = "";
 				break;
 			case 2: 
-				password = "Awseib123";
+				password = "";
 				break;
 			case 3:
-				password = "Awseid123";
+				password = "";
 				break;
 			default:
-				password = " Awseid123";
+				password = " ";
 				break;
 			}
 		

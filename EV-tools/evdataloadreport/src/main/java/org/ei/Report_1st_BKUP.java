@@ -61,7 +61,7 @@ public class Report_1st_BKUP {
 		String url = "jdbc:oracle:thin:@eid.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eid";  //for deployment
 		String driver = "oracle.jdbc.driver.OracleDriver";
 		String dbuserName = "ap_correction1";
-		String dbpassword = "ei3it";
+		String dbpassword = "";
 		
 		String query= "select dataset , operation , loadnumber , sourcefilename  , sourcefilecount , MASTERTABLECOUNT , SRC_MASTER_DIFF , ERRORMESSAGECOUNT , "
 				+ "ERRORMESSAGE from dataload_report where loadnumber="+loadNumber + " order by dataset";

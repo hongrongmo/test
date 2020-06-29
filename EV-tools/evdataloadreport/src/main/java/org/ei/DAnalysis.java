@@ -32,7 +32,7 @@ public class DAnalysis extends HttpServlet {
 	String driver = "oracle.jdbc.driver.OracleDriver";
 	//String dbUserName = "ap_correction1";
 	String dbUserName = "ap_report";
-	String dbPassword = "ei3it";
+	String dbPassword = "";
 	
 
 	Connection con;
