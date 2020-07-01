@@ -142,7 +142,8 @@ public class KafkaService {
     	}
     	
 		ProducerRecord<String, String> record = new ProducerRecord<String, String>(this.TOPIC_NAME,key, recordString);
-		
+		//added to test header @6/14/2020
+		//record.headers().add("header_key", ("header_value-").getBytes());
 		try {
 		    RecordMetadata metadata = this.producer.send(record).get();             
 		    //System.out.println("Record sent with key " + key + " to partition " + metadata.partition() + " with offset " + metadata.offset());

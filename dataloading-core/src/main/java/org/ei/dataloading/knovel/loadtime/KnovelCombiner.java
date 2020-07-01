@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Vector;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.Calendar;
 import java.util.Set;
 import java.util.HashSet;
@@ -249,10 +251,13 @@ import org.ei.dataloading.MessageSender;
 	        EVCombinedRec[] recArray = null;	      
 	        String accessNumber = "";
 	        Thread thread = null;
-	        KafkaService kafka = new KafkaService();
+	        KafkaService kafka=null;
+	        kafka = new KafkaService(); //use this line for ES extraction
 	        long processTime = System.currentTimeMillis();
 	    	int totalCount = getResultSetSize(rs);  
 	    	System.out.println("epoch="+processTime+" database="+Combiner.CURRENTDB+" totalCount="+totalCount);
+	    	int MAX_THREAD = 110; 
+	        ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD); //use this line for ES extraction
 	    	
 	        try
 	        {
@@ -433,7 +438,8 @@ import org.ei.dataloading.MessageSender;
 		            
 		                
 		            recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
-		            this.writer.writeRec(recArray);//Use this line for FAST extraction
+		            
+		            //this.writer.writeRec(recArray);//Use this line for FAST extraction
 		            
 		            /**********************************************************/
 	    	        //following code used to test kafka by hmo@2020/02/3
@@ -443,11 +449,12 @@ import org.ei.dataloading.MessageSender;
 	    	        //this.writer.writeRec(recArray,kafka);
 	    	       
 		            //use thread to send kafka message
-		            /*
+		            
 		            MessageSender sendMessage= new MessageSender(recArray,kafka,this.writer);
-			        thread = new Thread(sendMessage);
-			        thread.start();
-			        */
+		            pool.execute(sendMessage);
+			        //thread = new Thread(sendMessage);
+			        //thread.start();
+			        
 	    	        
 		          }
 		        
@@ -463,16 +470,27 @@ import org.ei.dataloading.MessageSender;
 	        	System.out.println("Total "+i+" records");
 	        	if(kafka!=null)
 	 	        { 
-	 	        	int k=0;
-	 	        	if(thread !=null)
-	 	        	{
-	 		        	while(thread.isAlive())
-	 		        	{
-	 		        		System.out.println("sleep "+k);
-	 		        		Thread.sleep(1000);
-	 		        	}
-	 	        	}
-	 	        	kafka.close();
+	        		try 
+	            	{
+	            		pool.shutdown();
+	            	}
+	            	catch(Exception ex) 
+	            	{
+	            		ex.printStackTrace();
+	            	}
+	            	if(kafka!=null)
+	     	        {
+	            		try 
+	                	{
+	            			kafka.close();
+	                	}
+	                	catch(Exception ex) 
+	                	{
+	                		ex.printStackTrace();
+	                	}
+	    	        	
+	    	        
+	    	        }
 	 	        } 
 	        }
 	    }

@@ -3,6 +3,8 @@ package org.ei.dataloading.cbnb.loadtime;
 import java.io.ByteArrayInputStream;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
@@ -214,8 +216,11 @@ public class CBNBCombiner extends Combiner
     private void writeRecs(ResultSet rs) throws Exception
     {
         int i = 0;
-        KafkaService kafka = new KafkaService();
-        Thread thread =null;
+        KafkaService kafka=null;
+        kafka = new KafkaService(); //use it for ES extraction only
+        int MAX_THREAD = 110; 
+        ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD);  
+        //Thread thread =null;
         long processTime = System.currentTimeMillis();
     	
     	
@@ -397,7 +402,7 @@ public class CBNBCombiner extends Combiner
 		                    rec.put(EVCombinedRec.PUBLISHER_NAME, prepareMulti(rs.getString("pbr")));
 		                }		      
 		                
-		                this.writer.writeRec(rec); //this is used for FAST extraction
+		                //this.writer.writeRec(rec); //this is used for FAST extraction
 		                
 		                /**********************************************************/
 		    	        //following code used to test kafka by hmo@2020/02/3
@@ -406,11 +411,13 @@ public class CBNBCombiner extends Combiner
 		                
 		    	        //this.writer.writeRec(rec,kafka);		    	        
 		                //use thread to send kafka message 
-		                /*
+		                
 		                MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
-			            thread = new Thread(sendMessage);
-			            thread.start();
-			            */
+		                pool.execute(sendMessage);
+			            //thread = new Thread(sendMessage);
+			            //thread.start();
+			            
+			            
 			            
 		            }
 		            else
@@ -434,25 +441,27 @@ public class CBNBCombiner extends Combiner
         }
         finally
         {      	
-	        if(kafka!=null)
-	        {
-		       	try 
-		       	{	       			       	
-		        	int k=0;
-		        	if(thread!=null)
-		        	{
-			        	while(thread.isAlive())
-			        	{
-			        		System.out.println("sleep "+k);
-			        		Thread.sleep(1000);
-			        	}
-		        	}
-		        	kafka.close();       		
-		       		
-		       	 }
-		    	 catch (Exception e) {
-		    		 e.printStackTrace();
-		    	 } 
+        	try 
+        	{
+        		pool.shutdown();
+        	}
+        	catch(Exception ex) 
+        	{
+        		ex.printStackTrace();
+        	}
+        	
+        	if(kafka!=null)
+ 	        {
+        		try 
+            	{
+        			kafka.close();
+            	}
+            	catch(Exception ex) 
+            	{
+            		ex.printStackTrace();
+            	}
+	        	
+	        
 	        }
 	        System.out.println("Total "+i+" records");
         }

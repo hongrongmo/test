@@ -7,6 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
@@ -269,9 +271,12 @@ public class EptCombiner extends Combiner {
 
         int i = 0;
         CVSTermBuilder termBuilder = new CVSTermBuilder();
-        KafkaService kafka = new KafkaService();
+        KafkaService kafka=null;
+        kafka = new KafkaService(); //use it for ES extraction only
         long processTime = System.currentTimeMillis();   	
-        Thread thread = null;
+        //Thread thread = null;
+        int MAX_THREAD = 110; 
+        ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD); //use this line for ES extraction
         
         try
         {
@@ -404,7 +409,7 @@ public class EptCombiner extends Combiner {
 	
 	                rec.put(rec.DESIGNATED_STATES, prepareMulti(rs.getString("ds")));
 	
-	                this.writer.writeRec(rec);//use this line for FAST extraction
+	                //this.writer.writeRec(rec);//use this line for FAST extraction
 	                
 	                /**********************************************************/
 	    	        //following code used to test kafka by hmo@2020/01/30
@@ -413,13 +418,14 @@ public class EptCombiner extends Combiner {
 	                
 	    	        //writer.writeRec(rec,kafka);
 	    	        
-	                /*
+	                
 	                //use thread to send kafka message
+	                
 	                MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
-		            thread = new Thread(sendMessage, "Thread 1");
-		            thread.start();
-		            */
-		            
+	                pool.execute(sendMessage); 
+		            //thread = new Thread(sendMessage, "Thread 1");
+		            //thread.start();
+
 	            }
 	
 	        }
@@ -427,26 +433,27 @@ public class EptCombiner extends Combiner {
         finally
         {
         	System.out.println("Total "+i+" records");
+        	try 
+        	{
+        		pool.shutdown();
+        	}
+        	catch(Exception ex) 
+        	{
+        		ex.printStackTrace();
+        	}
         	if(kafka!=null)
-  	        {
-  		       	try 
-  		       	{	       			       	
-  		        	int k=0;
-  		        	if(thread !=null)
-  		        	{
-	  		        	while(thread.isAlive())
-	  		        	{
-	  		        		System.out.println("sleep "+k);
-	  		        		Thread.sleep(1000);
-	  		        	}
-  		        	}
-  		        	kafka.close();       		
-  		       		
-  		       	 }
-  		    	 catch (Exception e) {
-  		    		 e.printStackTrace();
-  		    	 } 
-  	        }
+ 	        {
+        		try 
+            	{
+        			kafka.close();
+            	}
+            	catch(Exception ex) 
+            	{
+            		ex.printStackTrace();
+            	}
+	        	
+	        
+	        }
         	System.out.println("Total "+i+" records");
         }
    		

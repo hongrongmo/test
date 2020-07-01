@@ -22,6 +22,8 @@ import org.ei.common.upt.*;
 
 import java.sql.*;
 import java.util.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import org.ei.common.Constants;
 import org.ei.common.Country;
@@ -82,17 +84,7 @@ public class UPTCombiner extends CombinerTimestamp {
     public void init() {
 
         try {
-            nodeManager = ClassNodeManager.getInstance();
-			//ipc = new DiskMap();
-            //ipc = getAllDescriptionFromLookupIndex();
-            /*
-			this.ipcdir = applicationProperties.getProperty(ApplicationProperties.IPC_LUCENE_INDEX_DIR);
-			if (this.ipcdir == null) {
-					     throw new Exception("IPC directory for lucene index is NOT defined!");
-        	}
-			System.out.println("Opening IPC index at: '" + this.ipcdir + "'");
-	    	ipc.openRead(this.ipcdir, false);
-	    	*/
+            nodeManager = ClassNodeManager.getInstance();			
         }
         catch (Exception e) {
             // TODO Auto-generated catch block
@@ -107,9 +99,8 @@ public class UPTCombiner extends CombinerTimestamp {
         ResultSet rs = null;
 
         try {
-            stmt = con.createStatement(          
-            	    ResultSet.TYPE_SCROLL_INSENSITIVE, 
-            	    ResultSet.CONCUR_READ_ONLY);
+            //stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,  ResultSet.CONCUR_READ_ONLY); //use for ES extraction only
+            stmt = con.createStatement();
             //Prod
             String query="SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number,seq_num,CLASSIFICATION_CPC,UPDATE_NUMBER FROM "+Combiner.TABLENAME+" WHERE  LOAD_NUMBER = " + week;
             
@@ -120,7 +111,7 @@ public class UPTCombiner extends CombinerTimestamp {
             rs = stmt.executeQuery(query);
 
             System.out.println("Got records ...");
-            writeRecs(rs, con);
+            writeRecs(rs, con, week);
             System.out.println("Wrote records.");
 
             this.writer.flush();
@@ -180,17 +171,16 @@ public class UPTCombiner extends CombinerTimestamp {
     			try
     			{
     			
-    				 stmt = con.createStatement(          
-    		            	    ResultSet.TYPE_SCROLL_INSENSITIVE, 
-    		            	    ResultSet.CONCUR_READ_ONLY);
-    				 
+    				//stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+    				stmt = con.createStatement();
+    				
     				System.out.println("Running the query...");
     				String sqlQuery = "select * from " + Combiner.TABLENAME;
     				System.out.println(sqlQuery);
     				rs = stmt.executeQuery(sqlQuery);
     				
     				System.out.println("Got records ...from table::"+Combiner.TABLENAME);
-    				writeRecs(rs,con);
+    				writeRecs(rs,con,1);
     				System.out.println("Wrote records.");
     				this.writer.end();
     				this.writer.flush();
@@ -232,16 +222,15 @@ public class UPTCombiner extends CombinerTimestamp {
 
         try {
 
-        	 stmt = con.createStatement(          
-             	    ResultSet.TYPE_SCROLL_INSENSITIVE, 
-             	    ResultSet.CONCUR_READ_ONLY);
+        	//stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+        	stmt = con.createStatement();
         	 
             String query="SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number,seq_num,CLASSIFICATION_CPC,UPDATE_NUMBER FROM "+Combiner.TABLENAME+" WHERE  update_number="+timestamp+" and load_number!="+timestamp;
             System.out.println("Running the query..."+query);
 
             rs = stmt.executeQuery(query);
             System.out.println("Got records ...");
-            writeRecs(rs, con);
+            writeRecs(rs, con, (int)timestamp);
             System.out.println("Wrote records.");
             this.writer.end();
             this.writer.flush();
@@ -276,17 +265,7 @@ public class UPTCombiner extends CombinerTimestamp {
                     e.printStackTrace();
                 }
             }
-            /*
-			if(this.ipc!=null)
-			{
-				try{
-					this.ipc.close();
-				}
-				 catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-			*/
+           
             if (nodeManager != null)
                 nodeManager.close();
         }
@@ -298,16 +277,15 @@ public class UPTCombiner extends CombinerTimestamp {
 
         try {
 
-        	 stmt = con.createStatement(          
-             	    ResultSet.TYPE_SCROLL_INSENSITIVE, 
-             	    ResultSet.CONCUR_READ_ONLY);
+        	//stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+        	stmt = con.createStatement();
         	 
             String query="SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number,seq_num,CLASSIFICATION_CPC,UPDATE_NUMBER FROM " + Combiner.TABLENAME + " WHERE  PY = '" + year + "'";
             System.out.println("Running the query..."+query);
             rs = stmt.executeQuery(query);
             //rs = stmt.executeQuery("SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number FROM " +Combiner.TABLENAME + " WHERE M_ID in ('upt_9f671b1194ed5ace833362061377553', 'upt_1bd0dd411759e6051dM78e82061377553', 'upt_1bd0dd411759e6051dM7fe42061377553', 'upt_1bd0dd411759e6051dM7c812061377553', 'upt_1bd0dd411759e6051dM7b7c2061377553', 'upt_1bd0dd411759e6051dM7e6c2061377553', 'upt_1bd0dd411759e6051dM79432061377553', 'upt_d70d7a11759deb7a8M77012061377553', 'upt_1bd0dd411759e6051dM7c1e2061377553', 'upt_b5f53a11759e3aa7cM7bd92061377553', 'upt_1bd0dd411759e6051dM790b2061377553', 'upt_1bd0dd411759e6051dM7f372061377553', 'upt_d70d7a11759deb7a8M74082061377553', 'upt_1bd0dd411759e6051dM77dc2061377553', 'upt_1bd0dd411759e6051dM7e082061377553', 'upt_1bd0dd411759e6051dM7e312061377553')");
             System.out.println("Got records ...");
-            writeRecs(rs, con);
+            writeRecs(rs, con, year);
             System.out.println("Wrote records.");
             this.writer.flush();
             this.writer.end();
@@ -357,23 +335,77 @@ public class UPTCombiner extends CombinerTimestamp {
                 nodeManager.close();
         }
     }
+    
+    public static int getResultSetSize(Connection con,int week)
+	{
+		    int size = -1;
+		    Statement stmt = null;
+	        ResultSet rs = null;
+	        String query=null;
 
-    public void writeRecs(ResultSet rs, Connection con) throws Exception 
+	        try 
+	        {
+	        	 stmt = con.createStatement();   
+	        	 if(week==1)
+	        	 {
+	        		query="SELECT count(*) count FROM " + Combiner.TABLENAME;
+	        	 }
+	        	 else if(week>100)
+	        	 {
+	        		 query="SELECT count(*) count FROM " + Combiner.TABLENAME + " WHERE  load_number=" + week; 
+	        	 }
+	             System.out.println("Running the query..."+query);
+	             rs = stmt.executeQuery(query);
+	             while (rs.next()) 
+	             {      	 
+	            	 size = rs.getInt("count");
+	             }
+		    }
+		    catch(SQLException e)
+		    {
+		    	e.printStackTrace();		      
+		    }
+	        finally 
+	        {
+
+	            if (rs != null) {
+	                try {
+	                    rs.close();
+	                }
+	                catch (Exception e) {
+	                    e.printStackTrace();
+	                }
+	            }
+	            if (stmt != null) {
+	                try {
+	                    stmt.close();
+	                }
+	                catch (Exception e) {
+	                    e.printStackTrace();
+	                }
+	            }
+		    return size;
+	        }
+	}
+
+    public void writeRecs(ResultSet rs, Connection con, int week) throws Exception 
     {
 
         int i = 0;
         String mid = null;
-        Thread thread=null;
-        KafkaService kafka = new KafkaService();
-        long processTime = System.currentTimeMillis();   	 
+        //Thread thread=null;
+        KafkaService kafka=null;
+        kafka = new KafkaService(); //use it for ES extraction only
+        int MAX_THREAD = 100; 
+        ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD);  
+        long processTime = System.currentTimeMillis();
+        int totalCount =0;
         
         try 
         {
         	
-    	    rs.last();
-    	    int totalCount  = rs.getRow();
-    	    rs.beforeFirst();
-    	    System.out.println("epoch="+processTime+" database=UPT totalCount="+totalCount);
+        	totalCount = getResultSetSize(con, week);  //used for ES extraction only
+    	    System.out.println("epoch="+processTime+" database=UPT totalCount="+totalCount+" for week of "+week); //used for ES extrasction only
     	    
             while (rs.next()) 
             {
@@ -822,13 +854,7 @@ public class UPTCombiner extends CombinerTimestamp {
 	                         while( e.hasMoreElements() ){
 	                             allNames.add(e.nextElement());
 	                         }
-	                    }
-	
-	                    //List arrCpcCodes = new ArrayList();
-	                    //arrCpcCodes.addAll(arrCpcCodes);	                   
-	                    //String[] cpcValues = (String[]) arrCpcCodes.toArray(new String[1]);
-	                    //System.out.println("CPC1="+cpcValues[0]);
-	                    //cpcValues[0] = replaceNull(cpcValues[0]);
+	                    }                    
 	                    
 	                    if(cpcValues!=null)
 	                    {
@@ -840,12 +866,11 @@ public class UPTCombiner extends CombinerTimestamp {
 	                    arrNames = (String[]) allNames.toArray(new String[1]);
 	                    arrNames[0] = replaceNull(arrNames[0]);
 	
-	                    rec.put(EVCombinedRec.NOTES, arrNames);
-	                    //System.out.println("NOTES="+arrNames[0]);
+	                    rec.put(EVCombinedRec.NOTES, arrNames);	                 
 	
-	                    writer.writeRec(rec);//use this line for FAST extraction
+	                    //writer.writeRec(rec);//use this line for FAST extraction
 	                    
-	                    /*//use this block of code to send data to kafka server
+	                    //use this block of code to send data to kafka server
 	                    //**********************************************************
 	        	        //following code used to test kafka by hmo@2020/01/30
 	        	        //this.writer.writeRec(recArray,kafka);
@@ -854,17 +879,20 @@ public class UPTCombiner extends CombinerTimestamp {
 	        	        //writer.writeRec(rec,kafka);
 	        	       
 	                    //use thread to run kafka message
+	                    
 	                    MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
-	       	         	thread = new Thread(sendMessage);
-	       	         	thread.start();
-	       	         	*/
+	                    pool.execute(sendMessage);
+	       	         	//thread = new Thread(sendMessage);
+	       	         	//thread.start();
+	       	         	
+	       	         	
 	       	         	
 	
 	                }
 				}
-				catch (Exception ex) {
+				catch (Exception e) {
 				      System.out.println("MID=" + mid);
-				      ex.printStackTrace();
+				      e.printStackTrace();
 				
 				}
             }
@@ -884,28 +912,33 @@ public class UPTCombiner extends CombinerTimestamp {
 			        e.printStackTrace();
 			    }
 			}
-            if(kafka!=null)
+			try 
+        	{
+        		pool.shutdown();
+        	}
+        	catch(Exception ex) 
+        	{
+        		ex.printStackTrace();
+        	}
+        	if(kafka!=null)
  	        {
- 		       	try 
- 		       	{	       			       	
- 		        	int k=0;
- 		        	if(thread !=null)
- 		        	{
-	 		        	while(thread.isAlive())
-	 		        	{
-	 		        		System.out.println("sleep "+k);
-	 		        		Thread.sleep(100);
-	 		        	}
- 		        	}
- 		        	kafka.close();       		
- 		       		
- 		       	 }
- 		    	 catch (Exception e) 
- 		       	 {
- 		    		 e.printStackTrace();
- 		    	 } 
- 	        }
-            System.out.println("Total "+i+" records");
+        		try 
+            	{
+        			kafka.close();
+            	}
+            	catch(Exception ex) 
+            	{
+            		ex.printStackTrace();
+            	}
+	        	
+	        
+	        }
+        	System.out.println("total "+i +" records");
+ 		    if(i!=totalCount)
+ 		    {
+ 		    	System.out.println("**Got "+i+" records instead of "+totalCount+" for week of "+week );
+ 		    }
+            
         }
     } //writeRecs
 
