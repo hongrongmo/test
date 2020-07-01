@@ -64,7 +64,7 @@ public class Report {
 		String driver = "oracle.jdbc.driver.OracleDriver";
 		//String dbuserName = "ap_correction1";
 		String dbuserName = "ap_report";
-		String dbpassword = "ei3it";
+		String dbpassword = "";
 		
 		int loadnum = 201547;
 		int totalCount = 0;

@@ -20,7 +20,7 @@ public class EIAOpenedCursorsInfo {
 	String url = null;
 	String driver = "oracle.jdbc.driver.OracleDriver";
 	String dbUserName = "dayton_tm";
-	String dbPassword = "tm1only";
+	String dbPassword = "";
 
 	String operation = null;
 	String sessionName = null;

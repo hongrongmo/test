@@ -96,15 +96,15 @@ public class DataStructureInfo {
 
 			if(schema.toLowerCase().contains("ap_"))
 			{
-				password = "ei3it";
+				password = "";
 			}
 			else if(schema.toLowerCase().contains("ba_s300"))
 			{
-				password = "ei7it";
+				password = "";
 			}
 			else if(schema.toLowerCase().contains("db") || schema.toLowerCase().contains("ba_loading"))
 			{
-				password = "ny5av";
+				password = "";
 			}
 		
 			try
@@ -383,16 +383,16 @@ public class DataStructureInfo {
 		{
 			switch(rds) {
 			case 1:
-				password = "Awseia123";
+				password = "";
 				break;
 			case 2: 
-				password = "Awseib123";
+				password = "";
 				break;
 			case 3:
-				password = "Awseid123";
+				password = "";
 				break;
 			default:
-				password = " Awseid123";
+				password = " ";
 				break;
 			}
 		

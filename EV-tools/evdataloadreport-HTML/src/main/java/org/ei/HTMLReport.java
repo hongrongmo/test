@@ -36,7 +36,7 @@ public class HTMLReport {
 	static String driver = "oracle.jdbc.driver.OracleDriver";
 //	static String username = "ap_correction1";
 	static String username = "ap_report";
-	static String password = "ei3it";
+	static String password = "";
 
 	Connection con;
 	Statement stmt =null;
