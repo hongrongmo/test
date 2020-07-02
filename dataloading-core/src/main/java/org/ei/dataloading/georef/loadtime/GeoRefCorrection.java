@@ -58,7 +58,7 @@ public class GeoRefCorrection
     static String url="jdbc:oracle:thin:@neptune:1521:ei";
     static String driver="oracle.jdbc.driver.OracleDriver";
     static String username="ap_correction";
-    static String password="ei3it";
+    static String password="";
     static String database;
     static String action;
     static int updateNumber=0;

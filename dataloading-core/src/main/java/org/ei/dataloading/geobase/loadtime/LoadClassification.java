@@ -21,7 +21,7 @@ public class LoadClassification {
 
             url = "jdbc:oracle:thin:@206.137.75.51:1521:EI";
             username = "ap_ev_search";
-            password = "ei3it";
+            password = "";
             driver = "oracle.jdbc.driver.OracleDriver";
             database = "geo";
             lookup = "CLS";

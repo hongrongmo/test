@@ -35,7 +35,7 @@ public class CBNBXmlBaseTableDriver
     private static String url = "jdbc:oracle:thin:@eid.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eid";
     private static String driver = "oracle.jdbc.driver.OracleDriver";
     private static String username = "ap_correction1";
-    private static String password = "ei3it";
+    private static String password = "";
     private static List<String> blockedCpxIssnList;
     private static List<String> blockedPchIssnList;
     private static List<String> blockedGeoIssnList;

@@ -20,7 +20,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import javafx.geometry.Side;
 
 import com.itextpdf.text.BaseColor;
 import com.itextpdf.text.Document;

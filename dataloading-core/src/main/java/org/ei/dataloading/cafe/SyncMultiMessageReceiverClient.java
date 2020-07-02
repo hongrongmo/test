@@ -49,7 +49,7 @@ public class SyncMultiMessageReceiverClient {
 	static String url="jdbc:oracle:thin:@localhost:1521:eid";
 	static String driver="oracle.jdbc.driver.OracleDriver";
 	static String username="ap_correction1";
-	static String password="ei3it";
+	static String password="";
 	static String database;
 	static int updateNumber=0;
 	static String sqlldrFileName = null;

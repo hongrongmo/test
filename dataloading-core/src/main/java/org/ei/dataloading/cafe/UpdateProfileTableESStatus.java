@@ -31,7 +31,7 @@ public class UpdateProfileTableESStatus {
 	String connectionURL = "jdbc:oracle:thin:@localhost:1521:eid";   //for localhost
 	String driver = "oracle.jdbc.driver.OracleDriver";
 	String username = "db_cafe";
-	String password = "ny5av";
+	String password = "";
 
 
 	String doc_type;

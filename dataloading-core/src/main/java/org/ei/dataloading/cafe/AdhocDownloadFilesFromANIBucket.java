@@ -57,7 +57,7 @@ public class AdhocDownloadFilesFromANIBucket {
 	static String connectionURL = "jdbc:oracle:thin:@localhost:1521:eid";
     static String driver="oracle.jdbc.driver.OracleDriver";
     static String username="db_xml";
-    static String password="ny5av";
+    static String password="";
 	int count = 0;
     
     private static Connection con = null;

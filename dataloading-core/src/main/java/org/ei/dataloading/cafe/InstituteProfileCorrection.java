@@ -34,7 +34,7 @@ public class InstituteProfileCorrection
 	static String url="jdbc:oracle:thin:@eid.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eid";
 	static String driver="oracle.jdbc.driver.OracleDriver";
 	static String username="ap_correction1";
-	static String password="ei3it";
+	static String password="";
 	static String database;
 	static String action;
 	static String elasticSearchUrl;

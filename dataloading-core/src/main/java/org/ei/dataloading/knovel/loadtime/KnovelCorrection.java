@@ -24,7 +24,7 @@ public class KnovelCorrection {
 	static String url="jdbc:oracle:thin:@jupiter:1521:eidb1";
 	static String driver="oracle.jdbc.driver.OracleDriver";
 	static String username="ap_ev_search";
-	static String password="ei3it";
+	static String password="";
 	static String database;
 	static String action;
 	static int updateNumber=0;

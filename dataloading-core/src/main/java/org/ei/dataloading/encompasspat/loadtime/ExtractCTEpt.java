@@ -18,7 +18,7 @@ import org.ei.util.StringUtil;
 public class ExtractCTEpt {
     private static final String setURL = "jdbc:oracle:thin:@stage.ei.org:1521:apl2";
     private static final String setUserName = "gen_search";
-    private static final String setPassword = "team";
+    private static final String setPassword = "";
     private Perl5Util perl = new Perl5Util();
 
     public void extract(int load_number_begin, int load_number_end, Connection con) throws Exception {

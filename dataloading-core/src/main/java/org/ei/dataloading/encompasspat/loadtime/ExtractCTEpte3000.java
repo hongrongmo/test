@@ -18,11 +18,11 @@ import org.ei.util.StringUtil;
 public class ExtractCTEpte3000 {
     // private static final String setURL = "jdbc:oracle:thin:@stage.ei.org:1521:apl2";
     // private static final String setUserName = "gen_search";
-    // private static final String setPassword = "team";
+    // private static final String setPassword = "";
 
     private static final String setURL = "jdbc:oracle:thin:@e3000.ei.org:1521:apli";
     private static final String setUserName = "encompass";
-    private static final String setPassword = "team";
+    private static final String setPassword = "";
 
     private Perl5Util perl = new Perl5Util();
 

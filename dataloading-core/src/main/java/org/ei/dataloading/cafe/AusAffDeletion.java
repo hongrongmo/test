@@ -72,7 +72,7 @@ public class AusAffDeletion {
 	static String url = "jdbc:oracle:thin:@localhost:1521:eid";    //for localhost
 	static String driver = "oracle.jdbc.driver.OracleDriver";
 	static String username = "ap_correction1";
-	static String password = "ei3it";
+	static String password = "";
 	static String deletionTable = "cafe_weekly_deletion";
 	static String action = "delete";
 	static String source = "cafe";		// either cafe or bd

@@ -43,7 +43,7 @@ public class AuthorProfile
 	private static String url = "jdbc:oracle:thin:@eid.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eid";
 	private static String driver = "oracle.jdbc.driver.OracleDriver";
 	private static String username = "ba_loading";
-	private static String password = "ny5av";
+	private static String password = "";
 	private SAXBuilder builder;
 	public static final char FIELDDELIM = '\t';
 	private DataLoadDictionary dictionary = new DataLoadDictionary();

@@ -84,7 +84,7 @@ public class archiveEVCafeRefeed {
 	private static String url="jdbc:oracle:thin:@localhost:1521:eid";
 	private String driver="oracle.jdbc.driver.OracleDriver";
 	private String username="ap_correction1";
-	private String password="ei3it";
+	private String password="";
 	private static String sqlldrFileName = null;
 
 

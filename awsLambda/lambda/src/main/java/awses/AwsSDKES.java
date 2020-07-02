@@ -80,7 +80,7 @@ public class AwsSDKES{
 	
             
 			
-			String secretKey="6IQ5TG1abov49mq3V7sQodRXOCXSxMqhVq3/GViQ";
+			String secretKey="";
 			String dateStamp = "08-05-2016";
 			String regionName = "us-east-1";
 			String serviceName = "es";

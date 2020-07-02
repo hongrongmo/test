@@ -39,7 +39,7 @@ public class GeobaseCombiner extends Combiner {
         String driver = "oracle.jdbc.driver.OracleDriver";
         String url = "jdbc:oracle:thin:@206.137.75.51:1521:EI";
         String username = "AP_EV_SEARCH";
-        String password = "ei3it";
+        String password = "";
         url = args[0];
         driver = args[1];
         username = args[2];

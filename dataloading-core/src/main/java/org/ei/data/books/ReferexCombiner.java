@@ -38,7 +38,7 @@ public class ReferexCombiner {
 
     private String connectionURL = "jdbc:oracle:thin:@138.12.85.144:1521:EI";
     private String username = "AP_EV_SEARCH";
-    private String password = "ei3it";
+    private String password = "";
     private String driverClassName = "oracle.jdbc.driver.OracleDriver";
 
     private DataSource localDataSource = null;

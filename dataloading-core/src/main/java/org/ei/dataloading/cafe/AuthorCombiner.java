@@ -63,7 +63,7 @@ public class AuthorCombiner {
 	static String url = "jdbc:oracle:thin:@localhost:1521:eid"; // for localhost
 	static String driver = "oracle.jdbc.driver.OracleDriver";
 	static String username = "ap_correction1";
-	static String password = "ei3it";
+	static String password = "";
 	static int loadNumber = 0;
 	static String tableName = "author_profile";
 	static String auDocCount_tableName = "author_doc_count"; // added 05/10/2018 to fetch ab doc_count of AU in ES

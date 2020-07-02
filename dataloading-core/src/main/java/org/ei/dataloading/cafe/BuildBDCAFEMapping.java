@@ -29,7 +29,7 @@ public class BuildBDCAFEMapping
     public static String URL="jdbc:oracle:thin:@eid.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eid";
 	public static String driver="oracle.jdbc.driver.OracleDriver";
 	public static String username="ap_ev_search";
-	public static String password="ei3it";
+	public static String password="";
 	public static String database="bd";
 	public static String loadnumber;
 	public static String action;
