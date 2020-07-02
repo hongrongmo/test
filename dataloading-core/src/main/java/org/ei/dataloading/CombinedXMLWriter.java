@@ -33,6 +33,7 @@ import com.google.gson.JsonParser;
 import com.google.gson.JsonElement;
 import com.google.gson.GsonBuilder;
 import com.google.gson.Gson;
+import org.jsoup.Jsoup;
 
 import org.ei.common.*;
 import org.ei.util.kafka.*;
@@ -2744,12 +2745,7 @@ public class CombinedXMLWriter
  
             String[] grantText=rec.getStrings(EVCombinedRec.GRANTTEXT); 
             //System.out.println("GRANTTEXT="+Arrays.toString(grantText));
-            /*
-            if((grantIDs!=null && grantIDs.length>0 && grantIDs[0]!=null) || 
-            		(grantAgency!=null && grantAgency.length>0 && grantAgency[0]!=null) || 
-            		(grantText!=null && grantText.length>0 && grantText[0]!=null) ||
-            		(combine(grantIDs,grantAgency,grantText).length>0 && combine(grantIDs,grantAgency,grantText)[0]!=null))
-            		*/
+           
             if(grantText!=null && grantText.length>0 && grantText[0]!=null)
             {          	
 	            //elementArrayObject = formJsonArray(combine(grantIDs,grantAgency,grantText),"GRANTTEXT");  
@@ -2823,8 +2819,10 @@ public class CombinedXMLWriter
     {
     	String output="";
     	if(input!=null)
-    	{
+    	{    		
     		output=Entity.unescapeHtml(input.trim().replaceAll("\\s{2,}", " "));
+    		output=removeSpecialTag(output);
+    		
     	}
     	return output;
     }
@@ -3450,17 +3448,8 @@ public class CombinedXMLWriter
 		}
 		
 		s = s.trim();
-		
-		s = perl.substitute("s/<sub>//g", s);
-		s = perl.substitute("s/<\\/sub>//g", s);
-		s = perl.substitute("s/<sup>//g", s);
-		s = perl.substitute("s/<\\/sup>//g", s);
-		s = perl.substitute("s/<inf>//g", s);
-		s = perl.substitute("s/<\\/inf>//g", s);
-		//s = perl.substitute("s/<\\//QPLUSQ/g", s);
-		//s = perl.substitute("s/\\[0-9].[0-9]/$1DQD$2/g", s);
-		//s = perl.substitute("s/-/QMINUSQ/g",s); 
-		//s = perl.substitute("s/\\//QSLASHQ/g",s);
+		s = Jsoup.parse(s).text();
+		//s = perl.substitute("s/<sub>|<\\/sub>|<sup>|<\\/sup>|<inf>|<\\/inf>|<br>|<br\\/>|<i>|<i\\/>|<em>//g", s);		
 		   
 		return s;
     }

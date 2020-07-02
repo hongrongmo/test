@@ -168,7 +168,8 @@ public class XmlCombiner
         try
         {
 
-        	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+        	//stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+        	stmt = con.createStatement();
             System.out.println("Running the query...");
             if(Combiner.CURRENTDB.equalsIgnoreCase("chm")&&(year==9999))
             {
@@ -230,7 +231,7 @@ public class XmlCombiner
             	//rs = stmt.executeQuery("select * from " + Combiner.TABLENAME + " where  PUBLICATIONYEAR='" + year + "' AND loadnumber != 0 and loadnumber < 100000000 and database='" + Combiner.CURRENTDB + "'");
             }
             System.out.println("Got records ...from table::"+Combiner.TABLENAME);
-            writeRecs(rs,con);
+            writeRecs(rs,con, year);
             System.out.println("Wrote records.");
             this.writer.end();
             this.writer.flush();
@@ -273,7 +274,8 @@ public void writeCombinedByTableHook(Connection con) throws Exception
 	try
 	{
 	
-		stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+		//stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+		stmt = con.createStatement();
 		System.out.println("Running the query...");
 		//String sqlQuery = "select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER, substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,APICT, APICT1,APILT, APILT1,CLASSIFICATIONDESC,APIAMS,SEQ_NUM from " + Combiner.TABLENAME +" where database='" + Combiner.CURRENTDB + "'";
 		String sqlQuery = "select UPDATENUMBER,CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CLASSIFICATIONDESC,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER, substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,APILT,APILT1,APICT,APICT1,APIAMS,SEQ_NUM,GRANTLIST,null as cafe_author,null as cafe_author1,null as cafe_affiliation, null as cafe_affiliation1,null as CAFE_CORRESPONDENCEAFFILIATION,null as authorid,null as affid,SOURCEBIBTEXT,STANDARDID,STANDARDDESIGNATION,NORMSTANDARDID,GRANTTEXT,ISOPENACESS,eid from " + Combiner.TABLENAME +" where database='" + Combiner.CURRENTDB + "'";
@@ -296,7 +298,7 @@ public void writeCombinedByTableHook(Connection con) throws Exception
 		}
 		
 		System.out.println("Got records ...from table::"+Combiner.TABLENAME);
-		writeRecs(rs,con);
+		writeRecs(rs,con,1);
 		System.out.println("Wrote records.");
 		this.writer.end();
 		this.writer.flush();
@@ -331,24 +333,59 @@ public void writeCombinedByTableHook(Connection con) throws Exception
 	}
 }
 
-	public static int getResultSetSize(ResultSet resultSet)
-	{
-		    int size = -1;
-		    try
-		    {
-		        resultSet.last();
-		        size = resultSet.getRow();
-		        resultSet.beforeFirst();
-		    }
-		    catch(SQLException e)
-		    {
-		        return size;
-		    }
+public static int getResultSetSize(Connection con,int week)
+{
+	    int size = -1;
+	    Statement stmt = null;
+        ResultSet rs = null;
+        String query=null;
+
+        try 
+        {
+        	 stmt = con.createStatement();   
+        	 if(week==1)
+        	 {
+        		query="SELECT count(*) count FROM " + Combiner.TABLENAME +" where database='"+Combiner.CURRENTDB+"'";
+        	 }
+        	 else if(week>1000)
+        	 {
+        		 query="SELECT count(*) count FROM " + Combiner.TABLENAME + " WHERE  database='"+Combiner.CURRENTDB+"' and loadnumber=" + week; 
+        	 }
+             System.out.println("Running the query..."+query);
+             rs = stmt.executeQuery(query);
+             while (rs.next()) 
+             {
+            	 size = rs.getInt("count");
+             }
+	    }
+	    catch(SQLException e)
+	    {
+	    	e.printStackTrace();		      
+	    }
+        finally 
+        {
+
+            if (rs != null) {
+                try {
+                    rs.close();
+                }
+                catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+            if (stmt != null) {
+                try {
+                    stmt.close();
+                }
+                catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+            return size;
+        }
+}
 	
-		    return size;
-	}
-	
-    public void writeRecs(ResultSet rs, Connection con)
+    public void writeRecs(ResultSet rs, Connection con, int week)
         throws Exception
     {
         int i = 0;
@@ -360,16 +397,17 @@ public void writeCombinedByTableHook(Connection con) throws Exception
         boolean isCpx = false;
         String accessNumber = "";
         String pui = "";
-        KafkaService kafka = new KafkaService();
-        Thread thread = null; 
+        KafkaService kafka=null;
+        kafka = new KafkaService(); //use it for ES extraction
+        //Thread thread = null; 
         long processTime = System.currentTimeMillis();
-        //int MAX_THREAD = 50; 
-        //ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD);  
+        int MAX_THREAD = 110; 
+        ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD);  
         
 
         try
         {
-        	int totalCount = getResultSetSize(rs);  
+        	int totalCount = getResultSetSize(con,week);  
         	System.out.println("epoch="+processTime+" database="+Combiner.CURRENTDB+" totalCount="+totalCount);
 	        while (rs.next())
 	        {
@@ -1222,7 +1260,7 @@ public void writeCombinedByTableHook(Connection con) throws Exception
 	            }
 	           
 	            recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
-	            this.writer.writeRec(recArray);//use this line for fast extraction
+	            //this.writer.writeRec(recArray);//use this line for fast extraction
 	          
 	            
 	            /**********************************************************/
@@ -1230,13 +1268,15 @@ public void writeCombinedByTableHook(Connection con) throws Exception
 	            //this.writer.writeRec(recArray,kafka);
 	            /*********************************************************/
 	            
-	            /*//use this block of code for sending data to kafka
+	            //use this block of code for sending data to kafka
+	            
 	            MessageSender sendMessage= new MessageSender(recArray,kafka,this.writer);
-	            //pool.execute(sendMessage); 
-	            thread = new Thread(sendMessage);
-	            thread.start();
+	            pool.execute(sendMessage); 
+	            //thread = new Thread(sendMessage);
+	            //thread.sleep(1);
+	            //thread.start();            
 	            //this.writer.writeRec(recArray,kafka);
-	             */
+	             
 	             
 	            
 	         }
@@ -1246,9 +1286,16 @@ public void writeCombinedByTableHook(Connection con) throws Exception
 	            e.printStackTrace();
 	            problemRecordCount++;
 	         }
+	        
+	     
 	        }
 	        
-	    	System.out.println("Total record is "+ i);
+	    	//System.out.println("Total record is "+ i);
+	        if(i!=totalCount)
+ 		    {
+ 		    	System.out.println("**Got "+i+" records instead of "+totalCount+" for week of "+week );
+ 		    }
+            
 	    	System.out.println(problemRecordCount + " of them has parsing problem");
         }
         catch(Exception e)
@@ -1257,26 +1304,28 @@ public void writeCombinedByTableHook(Connection con) throws Exception
         }
         finally
         {
-        
-	        if(kafka!=null)
-	        { 
-	        	int k=0;
-	        	if(thread !=null)
+        	if(pool!=null)
+        	{
+	        	try 
 	        	{
-		        	while(thread.isAlive())
-		        	{
-		        		System.out.println("sleep "+k);
-		        		Thread.sleep(100);
-		        		k++;
-		        		if(k>5)
-		        		{
-		        			k=1;
-		        			System.out.println("record "+accessNumber+" didn't send to Kafka server");
-		        			thread.stop();
-		        		}
-		        	}
+	        		pool.shutdown();
 	        	}
-	        	kafka.close();
+	        	catch(Exception ex) 
+	        	{
+	        		ex.printStackTrace();
+	        	}
+        	}
+        	if(kafka!=null)
+ 	        {
+        		try 
+            	{
+        			kafka.close();
+            	}
+            	catch(Exception ex) 
+            	{
+            		ex.printStackTrace();
+            	}
+	        	
 	        
 	        }
         }
@@ -1303,7 +1352,8 @@ public void writeCombinedByTableHook(Connection con) throws Exception
     	
     	try
     	{   		
-    			stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+    			//stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+    			stmt = con.createStatement();
 	    		//System.out.println("Running the Numerical query...");
 	    		String sqlQuery = "select institute_id from CAFE_AF_LOOKUP where PUI='"+pui+"'";
 	    		//System.out.println(sqlQuery);
@@ -1358,7 +1408,8 @@ public void writeCombinedByTableHook(Connection con) throws Exception
     	try
     	{
     		
-    			stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+    			//stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+    			stmt = con.createStatement();
 	    		//System.out.println("Running the Numerical query...");
 	    		String sqlQuery = "select author_id from CAFE_AU_LOOKUP where PUI='"+pui+"'";
 	    		//System.out.println(sqlQuery);
@@ -1520,7 +1571,8 @@ public void writeCombinedByTableHook(Connection con) throws Exception
     	{
     		if(pui!=null && pui.length()>0)
     		{
-    			stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+    			//stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+    			stmt = con.createStatement();
 	    		//System.out.println("Running the Numerical query...");
 	    		String sqlQuery = "select * from BD_MASTER_NUMERICAL where PUI='"+pui+"' order by unit";
 	    		//System.out.println(sqlQuery);
@@ -2203,10 +2255,10 @@ public void writeCombinedByTableHook(Connection con) throws Exception
             try
             {
 
-            	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-                
+            	//stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            	stmt = con.createStatement();
                 rs = stmt.executeQuery("select UPDATENUMBER,CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,CLASSIFICATIONDESC,APIAMS,SEQ_NUM from " + Combiner.TABLENAME + " where loadnumber != 0 and loadnumber < 100000000 and database='" + Combiner.CURRENTDB + "'");
-                writeRecs(rs,con);
+                writeRecs(rs,con, (int)timestamp);
                 this.writer.end();
                 this.writer.flush();
 
@@ -2302,7 +2354,8 @@ public void writeCombinedByTableHook(Connection con) throws Exception
 
         try
         {           
-            stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            //stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            stmt = con.createStatement();
             //String sqlString = "select * from " + Combiner.TABLENAME + " where  LOADNUMBER='" + weekNumber + "' AND loadnumber != 0 and loadnumber < 100000000 and database='" + Combiner.CURRENTDB + "'";
             
             //change by hmo at 4/6/2017 for author/affiliation project
@@ -2333,7 +2386,7 @@ public void writeCombinedByTableHook(Connection con) throws Exception
     			System.exit(1);
     		}
            
-            writeRecs(rs,con);
+            writeRecs(rs,con, weekNumber);
             this.writer.end();
             this.writer.flush();
 

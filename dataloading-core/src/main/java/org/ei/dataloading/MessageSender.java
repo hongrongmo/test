@@ -2,6 +2,7 @@ package org.ei.dataloading;
 
 import org.ei.util.kafka.KafkaService;
 
+
 public class MessageSender implements Runnable {
   EVCombinedRec[] recArray;
   EVCombinedRec rec;
@@ -16,7 +17,10 @@ public class MessageSender implements Runnable {
     this.recArray = recArray;
     this.kafka = kafka;
     this.writer = writer;
-  } KafkaService kafka; CombinedWriter writer; public MessageSender(EVCombinedRec rec, KafkaService kafka, CombinedWriter writer) {
+  } 
+  KafkaService kafka; 
+  CombinedWriter writer; 
+  public MessageSender(EVCombinedRec rec, KafkaService kafka, CombinedWriter writer) {
     this.recArray = null;
     this.rec = null;
     this.kafka = null;
@@ -51,3 +55,4 @@ public class MessageSender implements Runnable {
     } 
   }
 }
+

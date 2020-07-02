@@ -4,6 +4,8 @@ import java.sql.*;
 import java.io.*;
 import java.text.*;
 import java.util.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import org.apache.oro.text.perl.*;
 import org.apache.oro.text.regex.*;
@@ -234,8 +236,12 @@ public class IBFCombiner
             throws Exception
     {
         int i = 0;
-        KafkaService kafka = new KafkaService();
-        Thread thread =null;
+        KafkaService kafka=null;
+        kafka = new KafkaService(); //use this line for ES extraction only
+        //Thread thread =null;
+        int MAX_THREAD = 110; 
+        ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD); //use this line for ES extraction
+        
         long processTime = System.currentTimeMillis();
     	int totalCount = rs.getMetaData().getColumnCount();  
     	
@@ -500,7 +506,8 @@ public class IBFCombiner
 	                rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
 	            }
 	
-	            //writer.writeRec(rec);
+	            writer.writeRec(rec);//use this line for FAST extraction only
+	            
 	            /**********************************************************/
     	        //following code used to test kafka by hmo@2020/03/24
     	        //this.writer.writeRec(recArray,kafka);
@@ -508,33 +515,40 @@ public class IBFCombiner
                 
     	        //this.writer.writeRec(rec,kafka);		    	        
                 //use thread to send kafka message 
+	            
                 MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
-	            thread = new Thread(sendMessage);
-	            thread.start();
+                pool.execute(sendMessage); 
+	            //thread = new Thread(sendMessage);
+	            //thread.start();
+	            
 	
 	        }
         }
         finally
         {      	
-	        if(kafka!=null)
-	        {
-		       	try 
-		       	{	       			       	
-		        	int k=0;
-		        	if(thread!=null)
-		        	{
-			        	while(thread.isAlive())
-			        	{
-			        		System.out.println("sleep "+k);
-			        		Thread.sleep(1000);
-			        	}
-		        	}
-		        	kafka.close();       		
-		       		
-		       	 }
-		    	 catch (Exception e) {
-		    		 e.printStackTrace();
-		    	 } 
+        	if(pool!=null)
+        	{
+	        	try 
+	        	{
+	        		pool.shutdown();
+	        	}
+	        	catch(Exception ex) 
+	        	{
+	        		ex.printStackTrace();
+	        	}
+        	}
+        	if(kafka!=null)
+ 	        {
+        		try 
+            	{
+        			kafka.close();
+            	}
+            	catch(Exception ex) 
+            	{
+            		ex.printStackTrace();
+            	}
+	        	
+	        
 	        }
 	        System.out.println("Total "+i+" records");
         }

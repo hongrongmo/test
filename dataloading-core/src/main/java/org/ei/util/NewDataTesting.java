@@ -324,7 +324,7 @@ public class NewDataTesting
 		}
 		else  if(action.equals("allFastCount"))
 		{
-			test.getAllFastCount(updateNumber);
+			test.getAllFastCount(updateNumber,database);
 		}
 		else  if(action.equals("checkFastDr_PROD"))
 		{
@@ -520,7 +520,7 @@ public class NewDataTesting
                 }
                 System.out.println("SQLQUERY= "+sqlQuery);
                 rs = stmt.executeQuery(sqlQuery);                
-                c.writeRecs(rs,con);
+                c.writeRecs(rs,con, Integer.parseInt(updateNumber));
 	            
 	           
 	            writer.end();
@@ -618,12 +618,12 @@ public class NewDataTesting
         }
     }
 	
-	public void getAllFastCount(String filename)
+	public void getAllFastCount(String filename,String database)
 	{
 		FileWriter out = null;
 		BufferedReader in = null;
 		try{
-			String database="cpx";
+			//String database="ins";
 			in = new BufferedReader(new FileReader(new File(filename)));
 			String weekNumber=null;
 		
@@ -632,7 +632,9 @@ public class NewDataTesting
 			while((weekNumber=in.readLine())!=null)
 			{
 				String fastCount = getFastCount(database,weekNumber);
+				Thread.sleep(1000);
 				out.write(weekNumber+"\t"+fastCount+"\n");
+				out.flush();
 			}
 			out.close();
 		}
@@ -3720,7 +3722,7 @@ public class NewDataTesting
 				queryObject.compile();
 				//queryObject.setSearchQuery("(wk:"+term1+") and (db:grf)");
 				queryObject.setSearchQuery("(wk:"+term1+") and (db:"+database+")");
-				//System.out.println("DISPLAYQUERY= "+queryObject.getDisplayQuery()+" PhysicalQuery= "+queryObject.getPhysicalQuery()+" SEARCHQUERY= "+queryObject.getSearchQuery());
+				System.out.println("DISPLAYQUERY= "+queryObject.getDisplayQuery()+" PhysicalQuery= "+queryObject.getPhysicalQuery()+" SEARCHQUERY= "+queryObject.getSearchQuery());
 
 				String sessionId = null;
 				int pagesize = 25;

@@ -8,6 +8,8 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.regex.*;
 
 //import org.ei.data.*;
@@ -335,9 +337,13 @@ public void writeCombinedByYearHook(Connection con,
 public void writeRecs(ResultSet rs)
                         throws Exception
 {
-	KafkaService kafka = new KafkaService();
-	Thread thread =null;
+	KafkaService kafka=null;
+	kafka = new KafkaService(); //use it for ES extraction
+	//Thread thread =null;
+	int MAX_THREAD = 110; 
+    ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD);  
 	long processTime = System.currentTimeMillis();
+	String accessNumber = null;
 	
 	int i = 1;
 	try
@@ -723,6 +729,7 @@ public void writeRecs(ResultSet rs)
 				
 				rec.putIfNotNull(EVCombinedRec.VOLUME, getFirstNumber(rs.getString("VOLUME_ID")));
 				rec.putIfNotNull(EVCombinedRec.ISSUE, getFirstNumber(rs.getString("ISSUE_ID")));
+				accessNumber=rs.getString("ID_NUMBER");
 				rec.putIfNotNull(EVCombinedRec.ACCESSION_NUMBER,rs.getString("ID_NUMBER"));
 				rec.putIfNotNull(EVCombinedRec.DOI, rs.getString("DOI"));
 
@@ -809,7 +816,7 @@ public void writeRecs(ResultSet rs)
 			} // for
 	        i++;
 			recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
-			this.writer.writeRec(recArray);
+			//this.writer.writeRec(recArray); //use this line for FAST extraction
 			
 			 /**********************************************************/
 	        //following code used to test kafka by hmo@2020/01/30
@@ -817,12 +824,14 @@ public void writeRecs(ResultSet rs)
 	        /***********************************************************/
 			
 	        //this.writer.writeRec(recArray,kafka);
-	        /*
+	        
 			//use thread to run kafka message
+			
 			MessageSender sendMessage= new MessageSender(recArray,kafka,this.writer);
-	        thread = new Thread(sendMessage);
-	        thread.start();
-	        */
+			pool.execute(sendMessage);
+	        //thread = new Thread(sendMessage);
+	        //thread.start();
+	        
 	         
 	        
 		}
@@ -840,26 +849,25 @@ public void writeRecs(ResultSet rs)
   finally
   {
 	  System.out.println("Total "+i+" records");
-	  if(kafka!=null)
-      {
-	       	try 
-	       	{	       			       	
-	        	int k=0;
-	        	if(thread !=null)
-	        	{
-		        	while(thread.isAlive())
-		        	{
-		        		System.out.println("sleep "+k);
-		        		Thread.sleep(1000);
-		        	}
-	        	}
-	        	kafka.close();       		
-	       		
-	       	 }
-	    	 catch (Exception e) {
-	    		 e.printStackTrace();
-	    	 } 
-      }
+	  try 
+	  	{
+	  		pool.shutdown();
+	  	}
+	  	catch(Exception ex) 
+	  	{
+	  		ex.printStackTrace();
+	  	}
+	  	if(kafka!=null)
+        {
+	  		try 
+	      	{
+	  			kafka.close();
+	      	}
+	      	catch(Exception ex) 
+	      	{
+	      		ex.printStackTrace();
+	      	}
+        }
   }
 }
 
