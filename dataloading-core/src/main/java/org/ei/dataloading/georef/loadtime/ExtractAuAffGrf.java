@@ -19,7 +19,7 @@ public class ExtractAuAffGrf {
     public static void main(String[] args) throws Exception {
         Connection con = null;
         ExtractAuAffGrf eaf = new ExtractAuAffGrf();
-        con = getDbCoonection("jdbc:oracle:thin:@neptune.elsevier.com:1521:EI", "AP_EV_SEARCH", "ei3it", "oracle.jdbc.driver.OracleDriver");
+        con = getDbCoonection("jdbc:oracle:thin:@neptune.elsevier.com:1521:EI", "AP_EV_SEARCH", "", "oracle.jdbc.driver.OracleDriver");
         eaf.extract(0, 0, con, "georef");
     }
 

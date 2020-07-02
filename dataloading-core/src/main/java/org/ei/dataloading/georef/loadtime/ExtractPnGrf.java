@@ -20,7 +20,7 @@ public class ExtractPnGrf {
     public static void main(String[] args) throws Exception {
         Connection con = null;
         ExtractPnGrf epn = new ExtractPnGrf();
-        con = getDbCoonection("jdbc:oracle:thin:@neptune.elsevier.com:1521:EI", "AP_EV_SEARCH", "ei3it", "oracle.jdbc.driver.OracleDriver");
+        con = getDbCoonection("jdbc:oracle:thin:@neptune.elsevier.com:1521:EI", "AP_EV_SEARCH", "", "oracle.jdbc.driver.OracleDriver");
         epn.extract(0, 0, con, "georef");
     }
 

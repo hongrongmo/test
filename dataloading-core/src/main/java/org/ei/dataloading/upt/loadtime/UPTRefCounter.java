@@ -28,7 +28,7 @@ public class UPTRefCounter {
     int count = 0;
     private static final String setURL = "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI";
     private static final String setUserName = "ap_pro1";
-    private static final String setPassword = "ei3it";
+    private static final String setPassword = "";
 
     public void generateCounts(String dir) {
 

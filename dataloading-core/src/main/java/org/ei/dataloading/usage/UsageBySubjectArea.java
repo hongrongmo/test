@@ -24,7 +24,7 @@ public class UsageBySubjectArea {
 	static String connectionURL = "jdbc:oracle:thin:@localhost:1523:eia";
 	String driver = "oracle.jdbc.driver.OracleDriver";
 	String username = "db_log";
-	String password = "ny5av";
+	String password = "";
 
 	static String startDate = "";
 	static String endDate = "";

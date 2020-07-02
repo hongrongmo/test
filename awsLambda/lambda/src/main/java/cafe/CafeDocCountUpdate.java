@@ -28,7 +28,7 @@ public class CafeDocCountUpdate
 	static String url = "jdbc:oracle:thin:@localhost:1521:eid";
 	static String driver = "oracle.jdbc.driver.OracleDriver";
 	static String username = "db_cafe";
-	static String password = "ny5av";
+	static String password = "";
 	static String doc_type;
 	static String temp_table;
 	static String count_table;

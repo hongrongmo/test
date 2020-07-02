@@ -35,7 +35,7 @@ public class BuildBDDataInJsonFormat
 	public static String URL="jdbc:oracle:thin:@eid.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eid";
 	public static String driver="oracle.jdbc.driver.OracleDriver";
 	public static String username="ap_correction1";
-	public static String password="ei3it";
+	public static String password="";
     public static String tableName="bd_master";
     public static String database="cpx";
     public static int loadnumber=0;

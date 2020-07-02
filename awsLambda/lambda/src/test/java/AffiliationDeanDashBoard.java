@@ -32,7 +32,7 @@ public class AffiliationDeanDashBoard {
 	static String url = "jdbc:oracle:thin:@localhost:1521:eid";    //for localhost
 	static String driver = "oracle.jdbc.driver.OracleDriver";
 	static String username = "ap_correction1";
-	static String password = "ei3it";
+	static String password = "";
 	static int loadNumber = 0;
 	static String tableName = "institute_profile";
 	static String afDocCount_tableName = "affiliation_doc_count";  

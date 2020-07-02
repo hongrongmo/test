@@ -47,7 +47,7 @@ public class UPTCombiner extends CombinerTimestamp {
     public static  String driver = "oracle.jdbc.driver.OracleDriver";
     public static  String url = "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI";
     public static  String username = "ap_pro1";
-    public static  String password = "ei3it";
+    public static  String password = "";
     public static ClassNodeManager nodeManager = null;
     public static String US_CY = "US";
     public static String EP_CY = "EP";

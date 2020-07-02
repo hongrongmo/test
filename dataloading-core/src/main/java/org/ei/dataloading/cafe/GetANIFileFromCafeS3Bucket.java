@@ -456,7 +456,7 @@ public class GetANIFileFromCafeS3Bucket {
 		String connectionURL = "jdbc:oracle:thin:@localhost:1521:eid";
 		String driver = "oracle.jdbc.driver.OracleDriver";
 		String username = "ap_correction1";
-		String password = "ei3it";
+		String password = "";
 
 
 		File file = new File(key+".xml");
@@ -881,7 +881,7 @@ public class GetANIFileFromCafeS3Bucket {
 		String connectionURL = "jdbc:oracle:thin:@eid.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eid"; 
 		String driver = "oracle.jdbc.driver.OracleDriver";
 		String username = "ap_correction1";
-		String password = "ei3it";
+		String password = "";
 
 
 		reader = new BufferedReader(new InputStreamReader(s3FileContent));

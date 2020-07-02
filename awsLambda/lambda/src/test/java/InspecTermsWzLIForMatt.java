@@ -32,7 +32,7 @@ public class InspecTermsWzLIForMatt
 	static String url = "jdbc:oracle:thin:@localhost:1521:eid";
 	static String driver = "oracle.jdbc.driver.OracleDriver";
 	static String username = "db_inspec";
-	static String password = "Ev360Park";
+	static String password = "";
 	
 	public static void main(String[] args) 
 	{

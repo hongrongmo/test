@@ -15,7 +15,7 @@ public class CheckUTFChar {
 	static String connectionURL = "jdbc:oracle:thin:@localhost:1521:eid";
 	static String driver = "oracle.jdbc.driver.OracleDriver";
 	static String username = "ap_correction";
-	static String password = "ei3it";
+	static String password = "";
 	
 	static String query;
 	static String tableName;

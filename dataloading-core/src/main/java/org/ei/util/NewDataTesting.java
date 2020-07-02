@@ -128,8 +128,8 @@ public class NewDataTesting
 	public static String driver="oracle.jdbc.driver.OracleDriver";
 	public static String username="ap_ev_search";
 	public static String username1="ap_ev_search";
-	public static String password="ei3it";
-	public static String password1="ei3it";
+	public static String password="";
+	public static String password1="";
     public static String tableName="bd_master";
     public static String tableName1="bd_master_jupiter";
     public static String database="cpx";
@@ -3160,7 +3160,7 @@ public class NewDataTesting
 		                buffer.append(arrChars[j]);
 
 		            } else {
-		            	if('“'==arrChars[j] || '”'==arrChars[j])
+		            	if('ï¿½'==arrChars[j] || 'ï¿½'==arrChars[j])
 		            	{
 		            		System.out.println("found "+i+" and translated to "+"\"");
 		            	}

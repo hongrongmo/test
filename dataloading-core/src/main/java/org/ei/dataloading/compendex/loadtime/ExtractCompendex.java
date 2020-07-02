@@ -31,7 +31,7 @@ public class ExtractCompendex
         }
 		//String[] m_ids = null;//{"pch_B9CB8C03148510C6E03408002081DCA4", "pch_B9CB8C03147410C6E03408002081DCA4", "pch_B9CB8C03144810C6E03408002081DCA4"};
 		String[] m_ids = null;//{"cpx_18a992f10a185ae64fM80002061377553","cpx_18a992f10a185ae64fM7f602061377553","cpx_6966265","cpx_6840258","cpx_2549648","cpx_3060720","cpx_30c221115ec27f59fM7e922061377553","cpx_18a992f108afbc18f6M6cf22061377553","cpx_30c221110dfec28c6M7e6e2061377553","cpx_30c221110dfec28c6M7e682061377553","cpx_10385c11116ae314caM7e992061377553","cpx_30c221117c13ee92bM7f3a2061377553","cpx_1e5e2c311a79bdcfe6M7fd42061377553"};
-		Connection con = getDbCoonection("jdbc:oracle:thin:@jupiter.elsevier.com:1521:EIDB1", "AP_PRO1", "ei3it", "oracle.jdbc.driver.OracleDriver");
+		Connection con = getDbCoonection("jdbc:oracle:thin:@jupiter.elsevier.com:1521:EIDB1", "AP_PRO1", "", "oracle.jdbc.driver.OracleDriver");
 		ExtractCompendex epc = new ExtractCompendex();
 
         // set array for select stmt.

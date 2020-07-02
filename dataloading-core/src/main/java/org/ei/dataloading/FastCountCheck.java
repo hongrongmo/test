@@ -30,7 +30,7 @@ public class FastCountCheck {
     static String url = "jdbc:oracle:thin:@localhost:1521:eid";
     static String driver = "oracle.jdbc.driver.OracleDriver";
     static String username = "db_xml";
-    static String password = "ny5av";
+    static String password = "";
     //static String fastUrl = "http://ei-main.nda.fastsearch.net:15100";
     static String fastUrl = "http://evprod14.cloudapp.net:15100";
 

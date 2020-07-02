@@ -45,7 +45,7 @@ public class DataLoadingErrorCheck {
 	static String url="jdbc:oracle:thin:@localhost:1521:eid";
 	static String driver="oracle.jdbc.driver.OracleDriver";
 	static String username="ap_correction";
-	static String password="ei3it";
+	static String password="";
 	static String fileName=null;
 	static String sourceFileName=null;
 	static String operation = null;

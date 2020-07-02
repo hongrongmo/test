@@ -77,7 +77,7 @@ public class KnovelReader
 		
 		String url = "jdbc:oracle:thin:@eid.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eid";
 		String username = "ap_correction1";
-		String password = "ei3it";
+		String password = "";
 		String driver = "oracle.jdbc.driver.OracleDriver";
 		if(args.length>6)
 		{

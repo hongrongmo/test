@@ -199,7 +199,7 @@ public class TestGetANIFileFromCafeS3Bucket {
 		String connectionURL = "jdbc:oracle:thin:@localhost:1521:eid";
 		String driver = "oracle.jdbc.driver.OracleDriver";
 		String username = "ap_correction1";
-		String password = "ei3it";
+		String password = "";
 		
 		
 		reader = new BufferedReader(new InputStreamReader(s3FileContent));

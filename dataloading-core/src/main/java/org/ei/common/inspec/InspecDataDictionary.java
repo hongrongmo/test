@@ -149,7 +149,7 @@ public class InspecDataDictionary
         	{
         		System.out.println("DB conn is local");
         		con = getConnection("jdbc:oracle:thin:@eia.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eia",
-        			"oracle.jdbc.driver.OracleDriver","ap_ev_search","ei3it");    //original
+        			"oracle.jdbc.driver.OracleDriver","ap_ev_search","");    //original
         	}
         	else
         	{

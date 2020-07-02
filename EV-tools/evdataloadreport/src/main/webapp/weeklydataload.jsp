@@ -620,7 +620,7 @@ padding-bottom: 0px;
 						
 						<tr>
 							<td id="weeklydlkey">Check Record Count:</td>
-							<td id="weeklydlvalue">sqlplus ba_loading/ny5av@eid
+							<td id="weeklydlvalue">sqlplus ba_loading/@eid
 							</br>
 							<ul>
 								<li>select count(REF_MID) from PATENT_REFS where load_number = [YYYYWW];</li>
@@ -652,9 +652,9 @@ padding-bottom: 0px;
 						<tr>
 							<td id="weeklydlkey">Check counts:</td>
 							<td id="weeklydlvalue">Open Two Screens: (one for EIB, one for EIA)</br></br>
-							sqlplus ba_loading/ny5av@eib
+							sqlplus ba_loading/@eib
 							</br>
-							sqlplus ba_loading/ny5av@eia
+							sqlplus ba_loading/@eia
 							</br>
 							set head off;
 							</br>

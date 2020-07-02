@@ -22,7 +22,7 @@ public class UpdateGeobaseDoi
 		String connectionURL = "jdbc:oracle:thin:@206.137.75.51:1521:EI";
 		String driver = "oracle.jdbc.driver.OracleDriver";
 		String username = "ap_ev_search";
-		String password = "ei3it";
+		String password = "";
 		try
 		{
 			if(args.length>0)

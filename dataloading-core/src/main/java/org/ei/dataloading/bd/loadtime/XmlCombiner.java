@@ -69,7 +69,7 @@ public class XmlCombiner
         // url=jdbc:oracle:thin:@jupiter.elsevier.com:1521:EIDB1
         // driver = oracle.jdbc.driver.OracleDriver
         // username = ap_ev_search
-        // password = ei3it
+        // password = 
 
         String url = args[0];
         String driver = args[1];

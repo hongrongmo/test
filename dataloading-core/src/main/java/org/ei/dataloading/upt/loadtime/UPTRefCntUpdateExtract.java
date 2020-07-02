@@ -15,7 +15,7 @@ public class UPTRefCntUpdateExtract
 {
     private  String setURL = "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI";
     private  String setUserName = "ap_pro1";
-    private  String setPassword = "ei3it";
+    private  String setPassword = "";
 
 
     public UPTRefCntUpdateExtract(String URL, String userName, String passwd)

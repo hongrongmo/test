@@ -10,7 +10,7 @@ public class OutputFreeLanguage {
     public static String driver = "oracle.jdbc.driver.OracleDriver";
     public static String url = "jdbc:oracle:thin:@206.137.75.51:1521:EI";
     public static String user = "AP_EV_SEARCH";
-    public static String password = "ei3it";
+    public static String password = "";
 
     public static void main(String[] args) throws Exception {
         String format = "";

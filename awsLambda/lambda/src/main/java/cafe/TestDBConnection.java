@@ -11,7 +11,7 @@ public class TestDBConnection {
 	String connectionURL = "jdbc:oracle:thin:@localhost:1521:eid";
 	String driver = "oracle.jdbc.driver.OracleDriver";
 	String username = "db_cafe";
-	String password = "ny5av";
+	String password = "";
 	
 	public static void main(String[] args) {
 	

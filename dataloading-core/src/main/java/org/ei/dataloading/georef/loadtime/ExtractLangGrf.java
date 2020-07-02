@@ -21,7 +21,7 @@ public class ExtractLangGrf {
     public static void main(String[] args) throws Exception {
         Connection con = null;
         ExtractLangGrf ela = new ExtractLangGrf();
-        con = getDbCoonection("jdbc:oracle:thin:@neptune.elsevier.com:1521:EI", "AP_EV_SEARCH", "ei3it", "oracle.jdbc.driver.OracleDriver");
+        con = getDbCoonection("jdbc:oracle:thin:@neptune.elsevier.com:1521:EI", "AP_EV_SEARCH", "", "oracle.jdbc.driver.OracleDriver");
         ela.extract(0, 0, con, "georef");
     }
 

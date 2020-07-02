@@ -8,7 +8,7 @@ public class TagKeeper
 //
 //	private static final String setUserName = "ap_ev_session";
 //
-//	private static final String setPassword = "ei3it";
+//	private static final String setPassword = "";
 
 	public static void main(String args[]) throws Exception 
 	{
