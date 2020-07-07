@@ -710,10 +710,7 @@ public class DataLoadDictionary
     					case 710 :sb.append("&circ;");break; 	//modifier letter circumflex accent
     					case 732 :sb.append("&tilde;");break; 	//small tilde
     					case 768 :sb.append("&grave;");break; 	//combining grave accent
-    					case 769 :
-    						sb.deleteCharAt(sb.length() - 1);
-    						sb.append("&aacute;");
-    						break; 	//combining acute accent
+    					case 769 :sb.append("&aacute;");break; 	//combining acute accent
     					case 770 :sb.append("&circ;");break; 	//modifier letter circumflex accent
     					case 771 :sb.append("&tilde;");break; 	//small tilde
     					case 772 :sb.append("&macr;");break; 	//combining macron

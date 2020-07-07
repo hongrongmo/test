@@ -111,7 +111,7 @@ public class UPTCombiner extends CombinerTimestamp {
             rs = stmt.executeQuery(query);
 
             System.out.println("Got records ...");
-            writeRecs(rs, con, week);
+            writeRecs(rs, con, week,0);
             System.out.println("Wrote records.");
 
             this.writer.flush();
@@ -180,7 +180,7 @@ public class UPTCombiner extends CombinerTimestamp {
     				rs = stmt.executeQuery(sqlQuery);
     				
     				System.out.println("Got records ...from table::"+Combiner.TABLENAME);
-    				writeRecs(rs,con,1);
+    				writeRecs(rs,con,1,0);
     				System.out.println("Wrote records.");
     				this.writer.end();
     				this.writer.flush();
@@ -230,7 +230,7 @@ public class UPTCombiner extends CombinerTimestamp {
 
             rs = stmt.executeQuery(query);
             System.out.println("Got records ...");
-            writeRecs(rs, con, (int)timestamp);
+            writeRecs(rs, con, (int)timestamp,(int)timestamp);
             System.out.println("Wrote records.");
             this.writer.end();
             this.writer.flush();
@@ -285,7 +285,7 @@ public class UPTCombiner extends CombinerTimestamp {
             rs = stmt.executeQuery(query);
             //rs = stmt.executeQuery("SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number FROM " +Combiner.TABLENAME + " WHERE M_ID in ('upt_9f671b1194ed5ace833362061377553', 'upt_1bd0dd411759e6051dM78e82061377553', 'upt_1bd0dd411759e6051dM7fe42061377553', 'upt_1bd0dd411759e6051dM7c812061377553', 'upt_1bd0dd411759e6051dM7b7c2061377553', 'upt_1bd0dd411759e6051dM7e6c2061377553', 'upt_1bd0dd411759e6051dM79432061377553', 'upt_d70d7a11759deb7a8M77012061377553', 'upt_1bd0dd411759e6051dM7c1e2061377553', 'upt_b5f53a11759e3aa7cM7bd92061377553', 'upt_1bd0dd411759e6051dM790b2061377553', 'upt_1bd0dd411759e6051dM7f372061377553', 'upt_d70d7a11759deb7a8M74082061377553', 'upt_1bd0dd411759e6051dM77dc2061377553', 'upt_1bd0dd411759e6051dM7e082061377553', 'upt_1bd0dd411759e6051dM7e312061377553')");
             System.out.println("Got records ...");
-            writeRecs(rs, con, year);
+            writeRecs(rs, con, year,0);
             System.out.println("Wrote records.");
             this.writer.flush();
             this.writer.end();
@@ -336,7 +336,7 @@ public class UPTCombiner extends CombinerTimestamp {
         }
     }
     
-    public static int getResultSetSize(Connection con,int week)
+    public static int getResultSetSize(Connection con,int week, int update_number)
 	{
 		    int size = -1;
 		    Statement stmt = null;
@@ -352,7 +352,14 @@ public class UPTCombiner extends CombinerTimestamp {
 	        	 }
 	        	 else if(week>100)
 	        	 {
-	        		 query="SELECT count(*) count FROM " + Combiner.TABLENAME + " WHERE  load_number=" + week; 
+	        		 if(update_number==0)
+	        		 {
+	        			 query="SELECT count(*) count FROM " + Combiner.TABLENAME + " WHERE  load_number=" + week; 
+	        		 }
+	        		 else
+	        		 {
+	        			 query="SELECT count(*) count FROM " + Combiner.TABLENAME + " WHERE  update_number=" + week +" and load_number!=" + week; 
+	        		 }
 	        	 }
 	             System.out.println("Running the query..."+query);
 	             rs = stmt.executeQuery(query);
@@ -388,23 +395,23 @@ public class UPTCombiner extends CombinerTimestamp {
 	        }
 	}
 
-    public void writeRecs(ResultSet rs, Connection con, int week) throws Exception 
+    public void writeRecs(ResultSet rs, Connection con, int week, int update_number) throws Exception 
     {
 
         int i = 0;
         String mid = null;
         //Thread thread=null;
         KafkaService kafka=null;
-        kafka = new KafkaService(); //use it for ES extraction only
-        int MAX_THREAD = 100; 
-        ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD);  
+        //kafka = new KafkaService(); //use it for ES extraction only
+        //int MAX_THREAD = 100; 
+        //ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD);  
         long processTime = System.currentTimeMillis();
         int totalCount =0;
         
         try 
         {
         	
-        	totalCount = getResultSetSize(con, week);  //used for ES extraction only
+        	totalCount = getResultSetSize(con, week,update_number);  //used for ES extraction only
     	    System.out.println("epoch="+processTime+" database=UPT totalCount="+totalCount+" for week of "+week); //used for ES extrasction only
     	    
             while (rs.next()) 
@@ -868,7 +875,7 @@ public class UPTCombiner extends CombinerTimestamp {
 	
 	                    rec.put(EVCombinedRec.NOTES, arrNames);	                 
 	
-	                    //writer.writeRec(rec);//use this line for FAST extraction
+	                    writer.writeRec(rec);//use this line for FAST extraction
 	                    
 	                    //use this block of code to send data to kafka server
 	                    //**********************************************************
@@ -880,8 +887,8 @@ public class UPTCombiner extends CombinerTimestamp {
 	        	       
 	                    //use thread to run kafka message
 	                    
-	                    MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
-	                    pool.execute(sendMessage);
+	                    //MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
+	                    //pool.execute(sendMessage);
 	       	         	//thread = new Thread(sendMessage);
 	       	         	//thread.start();
 	       	         	
@@ -895,6 +902,7 @@ public class UPTCombiner extends CombinerTimestamp {
 				      e.printStackTrace();
 				
 				}
+            	
             }
         }
         catch (Exception ex) {            
@@ -912,14 +920,21 @@ public class UPTCombiner extends CombinerTimestamp {
 			        e.printStackTrace();
 			    }
 			}
-			try 
-        	{
-        		pool.shutdown();
-        	}
-        	catch(Exception ex) 
-        	{
-        		ex.printStackTrace();
-        	}
+			
+			/*
+			if(pool !=null) 
+			{
+				try 
+	        	{
+	        		pool.shutdown();
+	        	}
+	        	catch(Exception ex) 
+	        	{
+	        		ex.printStackTrace();
+	        	}
+			}
+			*/
+			
         	if(kafka!=null)
  	        {
         		try 

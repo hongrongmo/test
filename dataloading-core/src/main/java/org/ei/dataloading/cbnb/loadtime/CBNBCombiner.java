@@ -217,9 +217,9 @@ public class CBNBCombiner extends Combiner
     {
         int i = 0;
         KafkaService kafka=null;
-        kafka = new KafkaService(); //use it for ES extraction only
-        int MAX_THREAD = 110; 
-        ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD);  
+        //kafka = new KafkaService(); //use it for ES extraction only
+        //int MAX_THREAD = 110; 
+        //ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD);  
         //Thread thread =null;
         long processTime = System.currentTimeMillis();
     	
@@ -402,7 +402,7 @@ public class CBNBCombiner extends Combiner
 		                    rec.put(EVCombinedRec.PUBLISHER_NAME, prepareMulti(rs.getString("pbr")));
 		                }		      
 		                
-		                //this.writer.writeRec(rec); //this is used for FAST extraction
+		                this.writer.writeRec(rec); //this is used for FAST extraction
 		                
 		                /**********************************************************/
 		    	        //following code used to test kafka by hmo@2020/02/3
@@ -410,15 +410,6 @@ public class CBNBCombiner extends Combiner
 		    	        /**********************************************************/
 		                
 		    	        //this.writer.writeRec(rec,kafka);		    	        
-		                //use thread to send kafka message 
-		                
-		                MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
-		                pool.execute(sendMessage);
-			            //thread = new Thread(sendMessage);
-			            //thread.start();
-			            
-			            
-			            
 		            }
 		            else
 		            {
@@ -440,15 +431,7 @@ public class CBNBCombiner extends Combiner
 	        }
         }
         finally
-        {      	
-        	try 
-        	{
-        		pool.shutdown();
-        	}
-        	catch(Exception ex) 
-        	{
-        		ex.printStackTrace();
-        	}
+        { 
         	
         	if(kafka!=null)
  	        {

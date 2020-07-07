@@ -168,9 +168,9 @@ public class KafkaService {
     }
     
     public void close() {
-    	reSendProblemRecords();
-    	//if(this.producer!=null)
-    		//producer.close();
+    	reSendProblemRecords();   	
+    	this.producer.flush();
+    	//this.producer.close();
     }
     
     private void reSendProblemRecords()

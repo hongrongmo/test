@@ -250,14 +250,14 @@ import org.ei.dataloading.MessageSender;
 	        EVCombinedRec recSecondBox = null;
 	        EVCombinedRec[] recArray = null;	      
 	        String accessNumber = "";
-	        Thread thread = null;
+	        //Thread thread = null;
 	        KafkaService kafka=null;
-	        kafka = new KafkaService(); //use this line for ES extraction
+	        //kafka = new KafkaService(); //use this line for ES extraction
 	        long processTime = System.currentTimeMillis();
 	    	int totalCount = getResultSetSize(rs);  
 	    	System.out.println("epoch="+processTime+" database="+Combiner.CURRENTDB+" totalCount="+totalCount);
-	    	int MAX_THREAD = 110; 
-	        ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD); //use this line for ES extraction
+	    	//int MAX_THREAD = 110; 
+	        //ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD); //use this line for ES extraction
 	    	
 	        try
 	        {
@@ -439,7 +439,7 @@ import org.ei.dataloading.MessageSender;
 		                
 		            recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
 		            
-		            //this.writer.writeRec(recArray);//Use this line for FAST extraction
+		            this.writer.writeRec(recArray);//Use this line for FAST extraction
 		            
 		            /**********************************************************/
 	    	        //following code used to test kafka by hmo@2020/02/3
@@ -450,8 +450,8 @@ import org.ei.dataloading.MessageSender;
 	    	       
 		            //use thread to send kafka message
 		            
-		            MessageSender sendMessage= new MessageSender(recArray,kafka,this.writer);
-		            pool.execute(sendMessage);
+		            //MessageSender sendMessage= new MessageSender(recArray,kafka,this.writer);
+		            //pool.execute(sendMessage);
 			        //thread = new Thread(sendMessage);
 			        //thread.start();
 			        
@@ -468,30 +468,26 @@ import org.ei.dataloading.MessageSender;
 	        finally
 	        {
 	        	System.out.println("Total "+i+" records");
-	        	if(kafka!=null)
-	 	        { 
-	        		try 
-	            	{
-	            		pool.shutdown();
-	            	}
-	            	catch(Exception ex) 
-	            	{
-	            		ex.printStackTrace();
-	            	}
-	            	if(kafka!=null)
-	     	        {
-	            		try 
-	                	{
-	            			kafka.close();
-	                	}
-	                	catch(Exception ex) 
-	                	{
-	                		ex.printStackTrace();
-	                	}
-	    	        	
-	    	        
-	    	        }
-	 	        } 
+	        	
+	        	if(i!=totalCount)
+	     	    {
+	     	    	System.out.println("**Got "+i+" records instead of "+totalCount );
+	     	    }
+	        	
+            	if(kafka!=null)
+     	        {
+            		try 
+                	{
+            			kafka.close();
+                	}
+                	catch(Exception ex) 
+                	{
+                		ex.printStackTrace();
+                	}
+    	        	
+    	        
+    	        }
+	 	        
 	        }
 	    }
 	    

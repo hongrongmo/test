@@ -340,16 +340,17 @@ public class INSPECCombiner
             throws Exception
     {
         int i = 0;
+        int totalCount =0;
         KafkaService kafka=null;
-        kafka = new KafkaService(); //use it for ES extraction
+        //kafka = new KafkaService(); //use it for ES extraction
         //Thread thread =null;
         long processTime = System.currentTimeMillis();
-        int MAX_THREAD = 110; 
-        ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD);  
+        //int MAX_THREAD = 110; 
+        //ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD);  
         
         try
         {
-    	    int totalCount = getResultSetSize(rs);  
+    	    totalCount = getResultSetSize(rs);  
     	    System.out.println("epoch="+processTime+" database=INS totalCount="+totalCount);
 	        while(rs.next())
 	        {
@@ -795,7 +796,7 @@ public class INSPECCombiner
 	                rec.put(EVCombinedRec.STARTPAGE, getFirstPage(rs.getString("pipn")));
 	                rec.put(EVCombinedRec.ACCESSION_NUMBER, rs.getString("ANUM"));
 	
-	                //writer.writeRec(rec);//Use this line for FAST extraction
+	                writer.writeRec(rec);//Use this line for FAST extraction
 	                
 	                /**********************************************************/
 	                //following code used to test kafka by hmo@2020/01/30
@@ -804,8 +805,8 @@ public class INSPECCombiner
 	                
 	                //writer.writeRec(rec,kafka);
 	                
-	                MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
-	                pool.execute(sendMessage);
+	                //MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
+	                //pool.execute(sendMessage);
 		            //thread = new Thread(sendMessage);
 		           // thread.start();
 		            
@@ -816,6 +817,11 @@ public class INSPECCombiner
        finally
        {
     	    System.out.println("Total "+i+" records");
+    	    if(i!=totalCount)
+     	    {
+     	    	System.out.println("**Got "+i+" records instead of "+totalCount );
+     	    }
+    	    /*
     	    if(pool!=null)
     	    {
 	    	    try 
@@ -827,6 +833,7 @@ public class INSPECCombiner
 	        		ex.printStackTrace();
 	        	}
     	    }
+    	    */
         	if(kafka!=null)
  	        {
         		try 

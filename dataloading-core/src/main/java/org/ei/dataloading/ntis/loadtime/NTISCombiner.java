@@ -307,15 +307,16 @@ public class NTISCombiner
     {
         int i = 0;
         KafkaService kafka=null;
-        kafka = new KafkaService(); //use it for ES extraction
+        int totalCount =-1;
+        //kafka = new KafkaService(); //use it for ES extraction
         //Thread thread = new Thread();
         long processTime = System.currentTimeMillis();  
-        int MAX_THREAD = 110; 
-        ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD); //use this line for ES extraction
+        //int MAX_THREAD = 110; 
+        //ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD); //use this line for ES extraction
     	
         try
         {
-        	int totalCount = getResultSetSize(rs); 
+        	totalCount = getResultSetSize(rs); 
         	System.out.println("epoch="+processTime+" database=NTIS totalCount="+totalCount);
         	
 	        while (rs.next())
@@ -419,7 +420,7 @@ public class NTISCombiner
 				{
 					rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
 				}
-	            //this.writer.writeRec(rec);//Use this line for FAST extraction
+	            this.writer.writeRec(rec);//Use this line for FAST extraction
 	           
 	            /**********************************************************/
 		        //following code used to test kafka by hmo@2020/02/3
@@ -428,8 +429,8 @@ public class NTISCombiner
 		        //this.writer.writeRec(rec,kafka);		       
 				//use thread to run kafka message
 				
-				 MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
-				 pool.execute(sendMessage); 
+				 //MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
+				// pool.execute(sendMessage); 
 		         //thread = new Thread(sendMessage);
 		         //thread.start();
 		         
@@ -440,6 +441,11 @@ public class NTISCombiner
         finally
         {
         	System.out.println("Total "+i+" records");
+        	if(i!=totalCount)
+     	    {
+     	    	System.out.println("**Got "+i+" records instead of "+totalCount );
+     	    }
+        	/*
         	if(pool!=null)
         	{
 	        	try 
@@ -451,6 +457,7 @@ public class NTISCombiner
 	        		ex.printStackTrace();
 	        	}
         	}
+        	*/
         	
         	if(kafka!=null)
  	        {

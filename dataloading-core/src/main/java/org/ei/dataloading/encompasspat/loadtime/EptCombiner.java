@@ -272,15 +272,16 @@ public class EptCombiner extends Combiner {
         int i = 0;
         CVSTermBuilder termBuilder = new CVSTermBuilder();
         KafkaService kafka=null;
-        kafka = new KafkaService(); //use it for ES extraction only
+        int totalCount =-1;
+        //kafka = new KafkaService(); //use it for ES extraction only
         long processTime = System.currentTimeMillis();   	
         //Thread thread = null;
-        int MAX_THREAD = 110; 
-        ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD); //use this line for ES extraction
+        //int MAX_THREAD = 110; 
+        //ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD); //use this line for ES extraction
         
         try
         {
-        	int totalCount = getResultSetSize(rs); 
+        	totalCount = getResultSetSize(rs); 
         	System.out.println("epoch="+processTime+" database=EPT totalCount="+totalCount);
 	        while (rs.next()) 
 	        {
@@ -409,20 +410,17 @@ public class EptCombiner extends Combiner {
 	
 	                rec.put(rec.DESIGNATED_STATES, prepareMulti(rs.getString("ds")));
 	
-	                //this.writer.writeRec(rec);//use this line for FAST extraction
+	                this.writer.writeRec(rec);//use this line for FAST extraction
 	                
 	                /**********************************************************/
 	    	        //following code used to test kafka by hmo@2020/01/30
 	    	        //this.writer.writeRec(recArray,kafka);
 	    	        /*********************************************************/
 	                
-	    	        //writer.writeRec(rec,kafka);
-	    	        
-	                
-	                //use thread to send kafka message
-	                
-	                MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
-	                pool.execute(sendMessage); 
+	    	        //writer.writeRec(rec,kafka);	    	        	                
+	                //use thread to send kafka message	                
+	                //MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
+	                //pool.execute(sendMessage); 
 		            //thread = new Thread(sendMessage, "Thread 1");
 		            //thread.start();
 
@@ -432,7 +430,8 @@ public class EptCombiner extends Combiner {
         }
         finally
         {
-        	System.out.println("Total "+i+" records");
+        	
+        	/*
         	try 
         	{
         		pool.shutdown();
@@ -441,6 +440,7 @@ public class EptCombiner extends Combiner {
         	{
         		ex.printStackTrace();
         	}
+        	*/
         	if(kafka!=null)
  	        {
         		try 
@@ -455,6 +455,10 @@ public class EptCombiner extends Combiner {
 	        
 	        }
         	System.out.println("Total "+i+" records");
+        	if(i!=totalCount)
+     	    {
+     	    	System.out.println("**Got "+i+" records instead of "+totalCount );
+     	    }
         }
    		
     }

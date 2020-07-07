@@ -237,10 +237,10 @@ public class IBFCombiner
     {
         int i = 0;
         KafkaService kafka=null;
-        kafka = new KafkaService(); //use this line for ES extraction only
+        //kafka = new KafkaService(); //use this line for ES extraction only
         //Thread thread =null;
-        int MAX_THREAD = 110; 
-        ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD); //use this line for ES extraction
+        //int MAX_THREAD = 110; 
+        //ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD); //use this line for ES extraction
         
         long processTime = System.currentTimeMillis();
     	int totalCount = rs.getMetaData().getColumnCount();  
@@ -514,29 +514,12 @@ public class IBFCombiner
     	        /**********************************************************/
                 
     	        //this.writer.writeRec(rec,kafka);		    	        
-                //use thread to send kafka message 
-	            
-                MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
-                pool.execute(sendMessage); 
-	            //thread = new Thread(sendMessage);
-	            //thread.start();
-	            
-	
+  	
 	        }
         }
         finally
-        {      	
-        	if(pool!=null)
-        	{
-	        	try 
-	        	{
-	        		pool.shutdown();
-	        	}
-	        	catch(Exception ex) 
-	        	{
-	        		ex.printStackTrace();
-	        	}
-        	}
+        { 
+        	
         	if(kafka!=null)
  	        {
         		try 

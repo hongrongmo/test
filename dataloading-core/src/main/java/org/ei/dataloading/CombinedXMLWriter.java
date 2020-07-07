@@ -378,12 +378,12 @@ public class CombinedXMLWriter
     {
     	
     	
-        if(rec.length >1)
+        if(rec.length >0)
         {
             for(int i=0; i<rec.length; i++)
             {
-                if(i>0)
-                    this.isChild = true;
+               // if(i>0)
+                   // this.isChild = true;
 
                 if(rec[i].getString(EVCombinedRec.DATABASE)!=null)
                 {
@@ -396,8 +396,9 @@ public class CombinedXMLWriter
                // writeRec(rec[i]);
                 writeRec(rec[i],kafka);
             }
-            this.isChild = false;
+            //this.isChild = false;
         }
+        /*
         else if(rec.length >0)
         {
             setDatabase(rec[0].getString(EVCombinedRec.DATABASE));
@@ -405,6 +406,7 @@ public class CombinedXMLWriter
             writeRec(rec[0],kafka);
         }
         //kafka.close();
+        */      
         
     }
 
@@ -1008,8 +1010,7 @@ public class CombinedXMLWriter
             JSONObject  contentObject = new JSONObject();
             JSONArray  	elementArrayObject = new JSONArray();;
             JSONArray 	elementJsonArray = new JSONArray();
-            JSONArray 	contentJsonArray = new JSONArray();
-           
+            JSONArray 	contentJsonArray = new JSONArray();            
            
             contentObject.put("EIDOCID".toLowerCase(),eid);
         
@@ -2782,7 +2783,14 @@ public class CombinedXMLWriter
         	 
         	String prettyJsonString = gson.toJson(je);  
         	//Send it to kafka server
-            kafka.runProducer(prettyJsonString,"\""+eid+"\"",false);
+        	//System.out.println(contentObject.toString());
+            //kafka.runProducer(prettyJsonString,"\""+eid+"\"",false);
+            
+        	MessageSender sendMessage= new MessageSender(kafka,eid,prettyJsonString);
+            //pool.execute(sendMessage); 
+        	Thread thread = new Thread(sendMessage);
+            //thread.sleep(1);
+            thread.start();  
         	//print it out as file
         	//outputAsJsonFile(prettyJsonString,eid,getDatabase(),getLoadnumber());
           

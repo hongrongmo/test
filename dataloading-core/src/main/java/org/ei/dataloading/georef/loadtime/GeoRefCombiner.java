@@ -338,10 +338,11 @@ public void writeRecs(ResultSet rs)
                         throws Exception
 {
 	KafkaService kafka=null;
-	kafka = new KafkaService(); //use it for ES extraction
+	//kafka = new KafkaService(); //use it for ES extraction
+	int totalCount =-1;
 	//Thread thread =null;
-	int MAX_THREAD = 110; 
-    ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD);  
+	//int MAX_THREAD = 110; 
+    //ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD);  
 	long processTime = System.currentTimeMillis();
 	String accessNumber = null;
 	
@@ -352,7 +353,7 @@ public void writeRecs(ResultSet rs)
 	    runtimeDocview.setResultSet(rs);
 	    EVCombinedRec recSecondBox = null;
 		EVCombinedRec[] recArray = null;
-		int totalCount = getResultSetSize(rs); 
+		totalCount = getResultSetSize(rs); 
 		System.out.println("epoch="+processTime+" database=grf totalCount="+totalCount);
 	   
 	    while (rs.next())
@@ -816,7 +817,7 @@ public void writeRecs(ResultSet rs)
 			} // for
 	        i++;
 			recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
-			//this.writer.writeRec(recArray); //use this line for FAST extraction
+			this.writer.writeRec(recArray); //use this line for FAST extraction
 			
 			 /**********************************************************/
 	        //following code used to test kafka by hmo@2020/01/30
@@ -827,8 +828,8 @@ public void writeRecs(ResultSet rs)
 	        
 			//use thread to run kafka message
 			
-			MessageSender sendMessage= new MessageSender(recArray,kafka,this.writer);
-			pool.execute(sendMessage);
+			//MessageSender sendMessage= new MessageSender(recArray,kafka,this.writer);
+			//pool.execute(sendMessage);
 	        //thread = new Thread(sendMessage);
 	        //thread.start();
 	        
@@ -849,6 +850,11 @@ public void writeRecs(ResultSet rs)
   finally
   {
 	  System.out.println("Total "+i+" records");
+	  if(i!=totalCount)
+	    {
+	    	System.out.println("**Got "+i+" records instead of "+totalCount);
+	    }
+	  /*
 	  try 
 	  	{
 	  		pool.shutdown();
@@ -857,6 +863,7 @@ public void writeRecs(ResultSet rs)
 	  	{
 	  		ex.printStackTrace();
 	  	}
+	  	*/
 	  	if(kafka!=null)
         {
 	  		try 

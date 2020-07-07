@@ -190,8 +190,8 @@ public class C84Combiner extends Combiner {
         KafkaService kafka=null;;
         kafka = new KafkaService(); //use this line for ES extraction only
         //Thread thread =null;
-        int MAX_THREAD = 110; 
-        ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD); //use this line for ES extraction
+        //int MAX_THREAD = 110; 
+        //ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD); //use this line for ES extraction
         long processTime = System.currentTimeMillis();   	 
     	
         try
@@ -447,11 +447,11 @@ public class C84Combiner extends Combiner {
 	    	        //this.writer.writeRec(recArray,kafka);
 	    	        /**********************************************************/
 	                
-	    	        //this.writer.writeRec(rec,kafka);		    	        
+	    	        this.writer.writeRec(rec,kafka);		    	        
 	                //use thread to send kafka message 
 	                
-	                MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
-	                pool.execute(sendMessage);
+	               // MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
+	                //pool.execute(sendMessage);
 		            //thread = new Thread(sendMessage);
 		            //thread.start();
 		            
@@ -460,7 +460,8 @@ public class C84Combiner extends Combiner {
 	        }
         }
         finally
-        {      	
+        { 
+        	/*
         	if(pool!=null)
         	{
 	        	try 
@@ -472,6 +473,7 @@ public class C84Combiner extends Combiner {
 	        		ex.printStackTrace();
 	        	}
         	}
+        	*/
         	if(kafka!=null)
  	        {
         		try 

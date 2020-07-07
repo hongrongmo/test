@@ -6,6 +6,9 @@ import org.ei.util.kafka.KafkaService;
 public class MessageSender implements Runnable {
   EVCombinedRec[] recArray;
   EVCombinedRec rec;
+  KafkaService kafka;
+  String key;
+  String message;
   
   public MessageSender(EVCombinedRec[] recArray, KafkaService kafka, CombinedWriter writer) {
     this.recArray = null;
@@ -18,7 +21,7 @@ public class MessageSender implements Runnable {
     this.kafka = kafka;
     this.writer = writer;
   } 
-  KafkaService kafka; 
+ 
   CombinedWriter writer; 
   public MessageSender(EVCombinedRec rec, KafkaService kafka, CombinedWriter writer) {
     this.recArray = null;
@@ -30,7 +33,28 @@ public class MessageSender implements Runnable {
     this.writer = writer;
   }
 
+  public MessageSender( KafkaService kafka, String key, String message) {
+	  this.kafka = kafka;
+	  this.key=key;
+	  this.message=message;
+  }
   
+  public void run() {
+	  try
+	  {
+		  this.kafka.runProducer(this.message,"\""+this.key+"\"",false);
+	  }
+	  catch (Exception e) 
+	  {	      
+	      e.printStackTrace();
+	  } 
+	  finally
+	  {
+		  this.kafka.flush();
+	  }
+  }
+  
+  /*
   public void run() {
     try {
       if (this.rec != null)
@@ -54,5 +78,6 @@ public class MessageSender implements Runnable {
       e.printStackTrace();
     } 
   }
+  */
 }
 
