@@ -43,7 +43,7 @@ public class DownloadVtwFile {
 	//private static final String HOST = "dev-ucs-content-store-eu-west.s3.amazonaws.com";
 	//private static final String ENDPOINT_ROOT = "http://" + HOST;
 	private static final String ENDPOINT_ROOT = "https://" + HOST;
-	//private static final String PATH = "/content/pat%3AAU2010281317A1/MAIN/application/xml/02d84460608e91d8510f8725fe109b7a/AU2010281317A1.xml?AWSAccessKeyId=AKIAIKW4U6PKMIE3KSLQ&Expires=1471522524&Signature=u1zyiRsWNXf5DlgT5d7zR9iadlY%3D";
+	//private static final String PATH = "/content/pat%3AAU2010281317A1/MAIN/application/xml/02d84460608e91d8510f8725fe109b7a/AU2010281317A1.xml?AWSAccessKeyId=&Expires=1471522524&Signature=u1zyiRsWNXf5DlgT5d7zR9iadlY%3D";
 	private static final String PATH = "/?Action=ReceiveMessage&WaitTimeSeconds=10&MaxNumberOfMessages=5&VisibilityTimeout=15&AttributeName=All";
 	//private static final String ENDPOINT = ENDPOINT_ROOT + PATH;
 	//private static final String ENDPOINT = "http://acc.vtw.elsevier.com/content/pat/EP1412238A1/10";

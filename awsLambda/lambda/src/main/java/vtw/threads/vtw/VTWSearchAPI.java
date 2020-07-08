@@ -48,7 +48,7 @@ public class VTWSearchAPI {
 
 
 	private static final String username = "engineering-village";
-	private static final String password = "elCome29347";
+	private static final String password = "";
 
 	private static final int REQUEST_CONNECTION_TIMEOUT = 100 * 1000;		//100 seconds
 	private static final int SOCKET_TIMEOUT = 100 * 1000;

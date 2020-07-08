@@ -30,7 +30,7 @@ public class HttpClientTest {
 
 	private static final String HOST = "acc.vtw.elsevier.com";
 	private static final String username = "engineering-village";
-	private static final String password = "elCome29347";
+	private static final String password = "";
 	
 
 	

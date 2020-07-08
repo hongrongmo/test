@@ -21,7 +21,7 @@ public class ReadOutlookEmail
 		String protocol = "imaps";
 		String host = "outlook.office365.com";
 		String username = "h.teleb@science.regn.net";
-		String password = "February2012";
+		String password = "";
 		String encryptionType = "tls";
 		String port = "993";  
 		

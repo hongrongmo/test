@@ -60,7 +60,7 @@ public class ArchiveVTWPatentAsset{
 	public static void main(String [] args)
 	{
 		VTWAssetAPI api = new VTWAssetAPI("nullpointer", 1, null);
-		patentIds.put("AU2010281317A1", "http://dev-ucs-content-store-eu-west.s3.amazonaws.com/content/pat%3AAU2010281317A1/MAIN/application/xml/02d84460608e91d8510f8725fe109b7a/AU2010281317A1.xml?AWSAccessKeyId=AKIAIKW4U6PKMIE3KSLQ&Expires=1471522524&Signature=u1zyiRsWNXf5DlgT5d7zR9iadlY%3D");
+		patentIds.put("AU2010281317A1", "http://dev-ucs-content-store-eu-west.s3.amazonaws.com/content/pat%3AAU2010281317A1/MAIN/application/xml/02d84460608e91d8510f8725fe109b7a/AU2010281317A1.xml?Signature=u1zyiRsWNXf5DlgT5d7zR9iadlY%3D");
 		api.downloadPatent(patentIds, null, "forward", null, null);
 	}
 }
