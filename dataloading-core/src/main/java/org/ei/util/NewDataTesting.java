@@ -520,7 +520,7 @@ public class NewDataTesting
                 }
                 System.out.println("SQLQUERY= "+sqlQuery);
                 rs = stmt.executeQuery(sqlQuery);                
-                c.writeRecs(rs,con, Integer.parseInt(updateNumber));
+                c.writeRecs(rs,con, Integer.parseInt(updateNumber),"bd_master","cpx");
 	            
 	           
 	            writer.end();
