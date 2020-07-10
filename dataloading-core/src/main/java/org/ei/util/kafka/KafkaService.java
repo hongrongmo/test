@@ -8,15 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.ExecutionException;
+import java.util.logging.*;
+
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
-//import org.apache.kafka.clients.producer.Producer;
-//import org.apache.kafka.clients.producer.ProducerRecord;
-//import org.apache.kafka.clients.producer.RecordMetadata;
 import org.apache.kafka.clients.producer.*;
-import org.ei.util.kafka.IKafkaConstants;
-import org.ei.util.kafka.ConsumerCreator;
-import org.ei.util.kafka.ProducerCreator;
+import org.ei.util.kafka.*;
+
 
 public class KafkaService {
 	public String KAFKA_BROKERS="localhost:9092";
@@ -30,12 +28,47 @@ public class KafkaService {
     public Integer MAX_POLL_RECORDS=1;
     public HashMap<String,String> problemRecords;
     Producer<String, String> producer=null;
-	
-    public KafkaService() {
-    	getParameterFromPropertiesFile("./lib/config.properties");	
+    Logger logger = Logger.getLogger(KafkaService.class.getName());
+    FileHandler fh; 
+    String propertyFileName;
+    String logFileName;
+    
+    public KafkaService() 
+    {
+    	propertyFileName = "./lib/config.properties";
+    	logFileName = "MyLogFile.log";
+    	init(logFileName,propertyFileName);
+    }
+    
+    public KafkaService(String processInfo) 
+    {
+    	propertyFileName = "./lib/config.properties";
+    	logFileName = processInfo+"_kafka.log";
+    	init(logFileName,propertyFileName);
+    }
+    
+    public KafkaService(String processInfo, String propertyFileName) 
+    {
+    	this.logFileName = processInfo+"_kafka.log";
+    	this.propertyFileName = propertyFileName;
+    	init(logFileName,propertyFileName);
+    }
+    
+    public void init(String logFileName, String propertyFileName)
+    {
+    	getParameterFromPropertiesFile(propertyFileName);	
     	producer  = ProducerCreator.createProducer(this.KAFKA_BROKERS);
     	System.out.println("create Kafka Prodcuer");
-    	problemRecords = new HashMap<String,String>();
+    	try
+    	{
+	    	problemRecords = new HashMap<String,String>();
+	    	fh = new FileHandler(logFileName);  
+	        logger.addHandler(fh);	        
+    	}
+    	catch (Exception e) 
+    	{
+    		 e.printStackTrace();
+    	}
     }
     
     public Producer<String, String> getProducer()
@@ -45,7 +78,7 @@ public class KafkaService {
     }
     public static void main(String[] args) {
     	KafkaService kTest= new KafkaService();
-    	kTest.getParameterFromPropertiesFile("./lib/config.properties");
+    	//kTest.getParameterFromPropertiesFile("./lib/config.properties");
     	if(args!=null && args[0].equals("producer"))
     	{
     		kTest.runProducer();
@@ -131,7 +164,7 @@ public class KafkaService {
     }
     
     //public void runProducer(String recordString, String key, Producer<String, String> producer) {
-    public void runProducer(String recordString, String key,Boolean reSending) throws Exception
+    public void runProducer(String recordString, String key,int reSending) throws Exception
     {
         //Producer<String, String> producer = ProducerCreator.createProducer(this.KAFKA_BROKERS);
     	
@@ -142,24 +175,50 @@ public class KafkaService {
     	}
     	
 		ProducerRecord<String, String> record = new ProducerRecord<String, String>(this.TOPIC_NAME,key, recordString);
-		//added to test header @6/14/2020
-		//record.headers().add("header_key", ("header_value-").getBytes());
+		
 		try {
-		    RecordMetadata metadata = this.producer.send(record).get();             
-		    //System.out.println("Record sent with key " + key + " to partition " + metadata.partition() + " with offset " + metadata.offset());
+		    //RecordMetadata metadata = this.producer.send(record).get();    
+		    this.producer.send(record, new Callback() {
+
+				@Override
+				public void onCompletion(RecordMetadata metadata, Exception exception)
+				{
+					if (exception == null) 
+					{
+						logger.info("Received record "+key+" metadata(" + "Topic: " + metadata.topic() + "\t"
+								+ "Partition: " + metadata.partition() + "\t" + "Offset: " + metadata.offset()+")");
+					} 
+					else 
+					{
+						if(reSending>4)
+						{
+							problemRecords.put(key, recordString);
+						}
+						else
+						{
+							try
+							{
+								runProducer(recordString,key,reSending+1);
+							}
+							catch(Exception e)
+							{
+								e.printStackTrace();
+							}
+						}
+						
+						logger.info("Resend record "+key+ " for "+reSending+1+" times");
+					}
+
+				}
+			});
 		}		
 		catch(Exception e)
-		{
-			if(!reSending)
-			{
-				problemRecords.put(key, recordString);
-			}
-			System.out.println("Exception in sending record;"+key);
-			e.printStackTrace();
-			//throw new Exception("found new exception for record "+key);
+		{	
+			problemRecords.put(key, recordString);
+			logger.info("Exception in sending record; "+key);
+			e.printStackTrace();			
 		}
-		//this.producer.flush();
-		//producer.close();
+		
     }
     
     public void flush()
@@ -183,7 +242,7 @@ public class KafkaService {
     			try
     			{
 	    			System.out.println("\nSending problem record; Key:: "+me.getKey() + " and Value:: " + me.getValue());
-	    			runProducer((String)me.getValue(),(String)me.getKey(),true);
+	    			runProducer((String)me.getValue(),(String)me.getKey(),5);
 	    			this.producer.flush();
     			}
     			catch(Exception e)
