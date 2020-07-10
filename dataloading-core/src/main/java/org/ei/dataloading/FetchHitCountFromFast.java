@@ -33,7 +33,7 @@ static Statement stmt = null;
 static String url = "jdbc:oracle:thin:@localhost:1521:eid";
 static String driver = "oracle.jdbc.driver.OracleDriver";
 static String username = "db_xml";
-static String password = "";
+static String password = "ny5av";
 //static String fastUrl = "http://ei-main.nda.fastsearch.net:15100";
 //static String fastUrl = "http://evprod14.cloudapp.net:15100";		//PROD
 static String fastUrl = "http://evdr09.cloudapp.net:15100";			//DR
@@ -46,7 +46,7 @@ static String doc_type;
 static int numOfThreads = 50;
 static String tableName;
 static String columnName;
-static String fastField;
+static String fastField = "wk";
 static int counter = 0;
 
 BufferedReader in = null;
@@ -57,7 +57,7 @@ static List<String> idList = new LinkedList<String>();
 
 public static void main(String[] args) throws Exception 
 {
-	if(args.length<4)
+	if(args.length<5)
 	{
 		System.out.println("Not ENough Parameters!!!!");
 		System.exit(1);
@@ -84,6 +84,10 @@ public static void main(String[] args) throws Exception
 		if(args[3] != null)
 		{
 			pageRecCount = Integer.parseInt(args[3]);
+		}
+		if(args[4] != null)
+		{
+			fastField = args[4];
 		}
 	}
 	
@@ -116,7 +120,7 @@ public static void main(String[] args) throws Exception
 			client.setPrimarySort("rank");
 			client.setPrimarySortDirection("+");
 
-			FastHitCountThreads thread = new FastHitCountThreads("Thread" + i, latch, start, last, client, doc_type, "wk", database);
+			FastHitCountThreads thread = new FastHitCountThreads("Thread" + i, latch, start, last, client, doc_type, fastField, database);
 			thread.start();
 			
 			// set start & last indexes for later threads
@@ -236,8 +240,8 @@ public void run()
 		{
 
 			//fastQuery = fastField + ":" + FetchHitCountFromFast.idList.get(i) + " AND db:\"" + database + "\"";  // loadnumber query
-			//fastQuery = fastField + ":" + FetchHitCountFromFast.idList.get(i) + " AND db:\"" + database + "\" AND dt:\"ij\"";  // loadnumber and doc-type query
-			fastQuery = fastField + ":" + FetchHitCountFromFast.idList.get(i) + " AND db:\"" + database + "\" AND dt:\"pa\" AND yr:1999";  // loadnumber and doc-type and year query
+			fastQuery = fastField + ":\"" + FetchHitCountFromFast.idList.get(i) + "\" AND db:\"" + database + "\" AND yr:2015";  // loadnumber and doc-type query
+			//fastQuery = fastField + ":" + FetchHitCountFromFast.idList.get(i) + " AND db:\"" + database + "\" AND dt:\"pa\" AND yr:1999";  // loadnumber and doc-type and year query
 					
 			//System.out.println("fastQuery: " + fastQuery);   // only for debugging
 			fastClient.setQueryString(fastQuery);

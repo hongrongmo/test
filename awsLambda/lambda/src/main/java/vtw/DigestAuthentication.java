@@ -87,7 +87,7 @@ public class DigestAuthentication {
 
 
 	private static final String username = "engineering-village";
-	private static final String password = "elCome29347";
+	private static final String password = "";
 
 	private static CloseableHttpClient client;
 	private static ResponseHandler<String> responseHandler;

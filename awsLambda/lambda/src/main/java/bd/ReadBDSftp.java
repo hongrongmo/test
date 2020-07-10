@@ -41,7 +41,7 @@ public class ReadBDSftp
 		
 		String hostName = "sftp-opsbank2.elsevier.com";
 		String userName = "eei";
-		String password = "Eei7240b2C";
+		String password = "";
 		
 		
 		ChannelSftp  sftpchannel = null;

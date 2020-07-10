@@ -17,7 +17,7 @@ public class TestHTTPClientIssue {
 
 	private static final String HOST = "acc.vtw.elsevier.com";
 	private static final String username = "engineering-village";
-	private static final String password = "elCome29347";
+	private static final String password = "";
 	
 	// get the list of Patent-Ids; with their signedAssetURL if any;  to download 
 	private static Map<String,String> patentIds = new LinkedHashMap<String,String>();   // only for testing
@@ -34,7 +34,7 @@ public class TestHTTPClientIssue {
 		try {
 			
 			VTWAssetAPI api = new VTWAssetAPI(args[0], Integer.parseInt(args[1]), null);
-			//patentIds.put("AU2010281317A1", "http://dev-ucs-content-store-eu-west.s3.amazonaws.com/content/pat%3AAU2010281317A1/MAIN/application/xml/02d84460608e91d8510f8725fe109b7a/AU2010281317A1.xml?AWSAccessKeyId=AKIAIKW4U6PKMIE3KSLQ&Expires=1471522524&Signature=u1zyiRsWNXf5DlgT5d7zR9iadlY%3D");
+			//
 			patentIds.put("US7368003B2", "");
 			api.downloadPatent(patentIds, client, "forward", null, null);
 		} 

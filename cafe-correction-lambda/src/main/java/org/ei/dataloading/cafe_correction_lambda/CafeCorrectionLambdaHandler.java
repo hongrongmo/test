@@ -42,9 +42,7 @@ public class CafeCorrectionLambdaHandler implements RequestHandler<SNSEvent,Stri
 	private String doc_type;
 	private String archive_date;
 	private boolean isZipFileExist;
-	private String loadnumber;
 	private String corrArchiveDateFileName;
-	private int dayOfWeek;
 	
 	protected void init()
 	{
@@ -65,9 +63,6 @@ public class CafeCorrectionLambdaHandler implements RequestHandler<SNSEvent,Stri
 			throw new NullPointerException("cafe correction Lambda cmd is not set");
 		
 		this.cmd = envCmd; 
-		
-		Date currDate = new Date();
-		
 	}
 	
 	public String handleRequest(SNSEvent event, Context context)
@@ -84,9 +79,9 @@ public class CafeCorrectionLambdaHandler implements RequestHandler<SNSEvent,Stri
 		archive_date = event.getRecords().get(0).getSNS().getMessageAttributes().get("archive_date").getValue();
 		context.getLogger().log("isZipFileExist : "+ event.getRecords().get(0).getSNS().getMessageAttributes().get("isZipFileExist").getValue());
 		isZipFileExist = Boolean.parseBoolean(event.getRecords().get(0).getSNS().getMessageAttributes().get("isZipFileExist").getValue());
-		loadnumber = event.getRecords().get(0).getSNS().getMessageAttributes().get("loadnumber").getValue();
+		
 		context.getLogger().log("Received SNS topic for doc_type: " + doc_type + ", archive_date: " + archive_date
-				+ ", Checkd if zipfile exist: " + isZipFileExist + " Current Week's loadnumber: " + loadnumber);
+				+ ", Checkd if zipfile exist: " + isZipFileExist);
 		
 		
 		try
@@ -97,8 +92,8 @@ public class CafeCorrectionLambdaHandler implements RequestHandler<SNSEvent,Stri
 			{
 				context.getLogger().log("cmd Sys Variable is " + cmd);
 		     	
-		     	//String command = cmd.substring(0,cmd.indexOf("sh") + 2);
-				context.getLogger().log("Command: " + cmd);
+		     	String command = cmd.substring(0,cmd.indexOf("sh") + 2);
+				context.getLogger().log("Command: " + command);
 				
 				
 				home_dir = cmd.substring(cmd.indexOf('/'), cmd.length());
@@ -192,28 +187,16 @@ public class CafeCorrectionLambdaHandler implements RequestHandler<SNSEvent,Stri
 			String str;
 			if(( str = br.readLine()) !=null)
 			{
-				context.getLogger().log("grep command output: " + str.trim());
+				context.getLogger().log("gerp command output: " + str);
 			}
 			
 			// increase updatenumber by one and update correction script
 
-			str = str.trim();
 			int origUpdateNum = (Integer.parseInt(str.substring(str.indexOf("=")+1,str.trim().length())));
 			int tempUpdateNum = (Integer.parseInt(str.substring(str.indexOf("=")+1,str.trim().length() - 1)));
-			int originUpdateNumeDay = Integer.parseInt(str.substring(str.length()-1,str.length()));
-
-			// check day of the week, if it is 7th then update weeknumber, otherwise increment the day
-			String newUpdateNum;
-			Calendar cal = Calendar.getInstance();
-			dayOfWeek = cal.get(Calendar.DAY_OF_WEEK);
-			
-			//added 01/28/2020, wk [202006] to use current weeknumber instead and day of the week as updatenumber, ithappen that when run correction on Sunday still getting current week
-			// though it has to be next week's weeknumber (i.e. when pass week from shell script on Sunday still 202013, and day of week 1, so it is loaded as 2020131, though that
-			// should passed already, it has to be 2020141, and so will use week of calendar and add 1 to it instead of reading from shell script
-			loadnumber =  Integer.toString(cal.get(Calendar.WEEK_OF_YEAR) + 1);
-			newUpdateNum = loadnumber + Integer.toString(dayOfWeek);
-			
-			//newUpdateNum = tempUpdateNum + Integer.toString(dayOfWeek);
+			tempUpdateNum ++;
+			String newUpdateNum  = tempUpdateNum + "1"; 
+			// append 1 to new loadnum
 			
 			context.getLogger().log("Current updatenum: " + origUpdateNum);	
 			context.getLogger().log("New updatenum to be used: " + newUpdateNum);
@@ -228,19 +211,6 @@ public class CafeCorrectionLambdaHandler implements RequestHandler<SNSEvent,Stri
 			ChannelExec channelExec3 = (ChannelExec)session.openChannel("exec");
 			channelExec3.setCommand("sed -i \"1s/.*/" + archive_date  +" /\" " + home_dir + "/" + corrArchiveDateFileName);
 			channelExec3.connect();
-			
-			
-			// source .bash_profile before running correction in order to capture new update#, otherwise prev update# still cached
-			ChannelExec channelExec4 = (ChannelExec)session.openChannel("exec");
-			channelExec4.setCommand("source ~/.bash_profile");
-			channelExec4.connect();
-			
-			
-			// close all previous channel connections
-			channelExec.disconnect();
-			channelExec2.disconnect();
-			channelExec3.disconnect();
-			channelExec4.disconnect();
 			
 			
 			// set the shell script command to run in the ssh session
@@ -294,7 +264,9 @@ public class CafeCorrectionLambdaHandler implements RequestHandler<SNSEvent,Stri
 			}
 			
 			
-			
+			channelExec.disconnect();
+			channelExec2.disconnect();
+			channelExec3.disconnect();
 			channel.disconnect();
 			session.disconnect();
 			context.getLogger().log("Disconnected from ssh session");
@@ -309,7 +281,6 @@ public class CafeCorrectionLambdaHandler implements RequestHandler<SNSEvent,Stri
 		catch(Exception e)
 		{
 			context.getLogger().log("Exception was thrown in runCommand");
-			context.getLogger().log("Error Message:" + e.getMessage());
 			e.printStackTrace();
 		}
 	}
