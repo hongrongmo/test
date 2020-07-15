@@ -6,6 +6,7 @@ import io.searchbox.core.Delete;
 import io.searchbox.core.BulkResult.BulkResultItem;
 
 import java.io.ByteArrayInputStream;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,6 +17,7 @@ import java.io.StringReader;
 import java.net.*;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Properties;
 
 import javax.json.JsonObject;
 
@@ -66,6 +68,8 @@ import javax.ws.rs.core.Form;
 import javax.ws.rs.core.GenericType; 
 import javax.ws.rs.core.MediaType;  
 */
+
+import org.apache.log4j.PropertyConfigurator;   //HT
 
 public class TestElasticSearchServer {
 
@@ -288,6 +292,8 @@ public class TestElasticSearchServer {
 	   */
 	
 	public static void main(String[] args){
+		String log4jFile = System.getProperty("user.dir") + File.separator + "src" + File.separator + "resources" + File.separator + "log4j.properties";
+		PropertyConfigurator.configure(log4jFile);
 		
 		try{
 			CloseableHttpClient client = HttpClients.createDefault();
@@ -298,18 +304,30 @@ public class TestElasticSearchServer {
 			
 			String responseString = IOUtils.toString(responseStream);
 
-			SAXBuilder builder = new SAXBuilder();
-			builder.setExpandEntities(false);
-			
-			Document doc = builder.build(new StringReader(responseString));
-			Element cpxRoot = doc.getRootElement();
+			//HT added check if response was succcess
+			if(!responseString.contains("503 Service Unavailable"))
+			{
+				SAXBuilder builder = new SAXBuilder();
+				builder.setExpandEntities(false);
+				
+				Document doc = builder.build(new StringReader(responseString));
+				Element cpxRoot = doc.getRootElement();
 
-			List authors = cpxRoot.getChildren("Authors");
-			for(int i=0;i<authors.size();i++){
-				Element author = (Element)authors.get(i);
-				String authorIds = author.getChildText("authorIds");
-				System.out.println("authorIds"+i+" ="+authorIds);
+				List authors = cpxRoot.getChildren("Authors");
+				for(int i=0;i<authors.size();i++){
+					Element author = (Element)authors.get(i);
+					String authorIds = author.getChildText("authorIds");
+					System.out.println("authorIds"+i+" ="+authorIds);
+				}
 			}
+			else
+			{
+				logger.info("Error happened!!!");
+				logger.info(responseString);
+				System.exit(1);
+			}
+			
+			
 			
 			}catch(Exception e)
 			{
