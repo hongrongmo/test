@@ -36,7 +36,7 @@ public class RemoveDuplicates {
 			
 			// list out Only Unique IDS
 			
-			String uniqueMIDS = uniqueList.entrySet().stream().filter(entry -> entry.getValue() ==1).map(entry -> entry.getKey()).collect(Collectors.joining(","));
+			String uniqueMIDS = uniqueList.entrySet().stream().filter(entry -> entry.getValue() ==1).map(entry -> entry.getKey()).collect(Collectors.joining("\n"));
 			System.out.println("Unique Ids: " + uniqueMIDS);
 			
 		} catch (FileNotFoundException e) {

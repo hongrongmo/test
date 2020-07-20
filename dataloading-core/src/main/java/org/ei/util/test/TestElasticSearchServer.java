@@ -292,10 +292,12 @@ public class TestElasticSearchServer {
 	   */
 	
 	public static void main(String[] args){
-		String log4jFile = System.getProperty("user.dir") + File.separator + "src" + File.separator + "resources" + File.separator + "log4j.properties";
-		PropertyConfigurator.configure(log4jFile);
 		
 		try{
+			//HT add logs
+			String log4jFile = System.getProperty("user.dir") + File.separator + "src" + File.separator + "resources" + File.separator + "log4j.properties";
+			PropertyConfigurator.configure(log4jFile); 
+			
 			CloseableHttpClient client = HttpClients.createDefault();
 			HttpGet request = new HttpGet("http://services.elsevier.com/author/content/pui?pui=614055730,614079696,613976355,614031457,614084864,614072023,614077664,614071717,614093150,614101200,614093478,614080607,613976349,614079958,614093493,614105234,614080170,614019470,614019472,614028867,614072064,614078023,614019469,614080492,614076037,614071582,614088553,614080661,613976343,614036198,614038793,614054730,614071748,614084890,614077314,614088588,614105814,614072071,614088597,614095371,614079995,614101387,614095140,614088679,614101074,614062397,614092902,614092860,614103061,614080610,51221027,358519819&suppress=sceid,doi,rank,pui,scopusid,sdeid,pii");
 			request.addHeader("X-ELS-Authentication" , "SDFE");		
