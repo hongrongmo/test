@@ -14,11 +14,16 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.Base64;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.stream.Collectors;
 import java.net.HttpURLConnection;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.apache.log4j.Logger;
 import org.json.simple.JSONArray;
 
 /**
@@ -49,7 +54,7 @@ public class SharedSearchSearch {
 		this.database = database;
 		
 	}
-	public void runESQuery(String value, String query, BufferedWriter bw) {
+	public void runESQuery(String value, String query, BufferedWriter bw, Logger logger) {
 		
 		//String encodedQuery;
 		URL urlObject;
@@ -57,7 +62,7 @@ public class SharedSearchSearch {
 		{
 			//a. encode query
 			//encodedQuery = URLEncoder.encode(query, StandardCharsets.UTF_8);
-			
+			//System.out.println("query: " + query);		// only for debugging
 			
 			
 			urlObject = new URL(url);
@@ -106,6 +111,7 @@ public class SharedSearchSearch {
 		{
 			System.out.println("Exception runing ES Query!!!");
 			System.out.println(e.getMessage());
+			logger.info(query);
 			e.printStackTrace();
 		}
 		
@@ -118,11 +124,27 @@ public class SharedSearchSearch {
 			JSONObject json = (JSONObject) parser.parse(response);
 			Integer hitCount = Integer.parseInt(json.get("totalResultsCount").toString());
 			//System.out.println(value + "\t" + hitCount);   // only for debugging
+			JSONArray hits = (JSONArray) json.get("hits");
 			
 			synchronized(this)
 			{
 				bw.write(value + "\t" + hitCount);
 				bw.newLine();
+				if(!hits.isEmpty())
+				{
+					
+					Iterator<JSONObject> itr = hits.iterator();
+					while(itr.hasNext())
+					{
+						String[] eidoc = itr.next().toString().replaceAll("[\"\\{\\}]+","").split(":");
+						if(eidoc.length >1)
+							
+							bw.write(eidoc[1] +"\n");
+						
+					}
+					
+				}
+
 			}
 		}
 		
@@ -149,9 +171,31 @@ public class SharedSearchSearch {
 		query.put("resultSet", result);
 		
 		return query.toJSONString();
-		
 			
-		}
+		}	
+
+	
+	@SuppressWarnings("unchecked")
+	public String buildESQueryWithMIDReturn(String value, String searchField) {
+		
+		JSONObject query = new JSONObject();
+		
+		JSONObject queryString = new JSONObject();
+		queryString.put("queryString", searchField + ":" + value + " AND database:" + database);
+		queryString.put("defaultOperator", "AND");
+		query.put("query",queryString);
+		
+		JSONArray returnFields = new JSONArray();
+		returnFields.add("eidocid");
+		query.put("returnFields", returnFields);
 		
 
+		JSONObject result = new JSONObject();
+		result.put("skip", 0);
+		result.put("amount", 1000);
+		query.put("resultSet", result);
+		
+		return query.toJSONString();
+			
+		}	
 }

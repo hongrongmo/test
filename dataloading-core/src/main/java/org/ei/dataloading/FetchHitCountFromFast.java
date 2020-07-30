@@ -105,7 +105,8 @@ public static void main(String[] args) throws Exception
 		if(numOfThreads ==1)
 			last = subListSize - 1;
 
-		System.out.println("STARTING............." + new Date().getTime());
+		long startTime = new Date().getTime();
+		System.out.println("STARTING............." + startTime);
 		for(int i=0; i<numOfThreads;i++)
 		{
 
@@ -136,7 +137,9 @@ public static void main(String[] args) throws Exception
 		}
 		latch.await();
 		System.out.println("In Main thread after completion of " + numOfThreads + " threads");
-		System.out.println("FINISHED................." + new Date().getTime());
+		long finishTime = new Date().getTime();
+		System.out.println("FINISHED................." + finishTime);
+		System.out.println("Total Time: " + (finishTime - startTime)/1000);
 	
 		
 	}
@@ -239,9 +242,10 @@ public void run()
 		for(int i=startIndex; i<=lastIndex;i++)
 		{
 
-			//fastQuery = fastField + ":" + FetchHitCountFromFast.idList.get(i) + " AND db:\"" + database + "\"";  // loadnumber query
-			//fastQuery = fastField + ":\"" + FetchHitCountFromFast.idList.get(i) + "\" AND db:\"" + database + "\" AND yr:2003";  // loadnumber and doc-type query
-			fastQuery = fastField + ":" + FetchHitCountFromFast.idList.get(i) + " AND db:\"" + database + "\" AND yr:2003";  // loadnumber and doc-type and year query
+			fastQuery = fastField + ":" + FetchHitCountFromFast.idList.get(i) + " AND db:\"" + database + "\"";  // loadnumber query
+			//fastQuery = fastField + ":\"" + FetchHitCountFromFast.idList.get(i) + "\" AND db:\"" + database + "\" AND yr:2019" + " AND dt:\"ja\"";  // loadnumber and doc-type query
+			//fastQuery = fastField + ":" + FetchHitCountFromFast.idList.get(i) + " AND db:\"" + database + "\" AND yr:2002 AND dt:\"ja\" AND la:\"english\"";    // loadnumber and doc-type and year query
+			
 					
 			//System.out.println("fastQuery: " + fastQuery);   // only for debugging
 			fastClient.setQueryString(fastQuery);

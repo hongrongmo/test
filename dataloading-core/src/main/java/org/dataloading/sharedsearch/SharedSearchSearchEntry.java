@@ -23,6 +23,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.log4j.Logger;
+
 import java.lang.Runtime;
 
 public class SharedSearchSearchEntry {
@@ -40,6 +43,8 @@ public class SharedSearchSearchEntry {
 	static String esAuthorCountTempTable = "es_au_count";
 	static String esAffiliationCountTable = "es_af_count";
 	static String sqlldrFileName;
+	Logger logger;
+	static String midReturn = "none";		//allowed values none or mid
 	
 	private Connection con;
 	String outFileName = "";
@@ -48,7 +53,7 @@ public class SharedSearchSearchEntry {
 	
 	public static void main(String[] args)
 	{
-		if(args.length <9)
+		if(args.length <10)
 		{
 			System.out.println("Not enough arguments!!! Re-try with searchField and db parameters");
 			System.exit(1);
@@ -100,14 +105,20 @@ public class SharedSearchSearchEntry {
 			sqlldrFileName = args[9];
 			System.out.println("sqlldr fileName: " +  sqlldrFileName);
 		}
+		if(args.length > 10)
+		{
+			midReturn = args[10];
+			System.out.println("mid return? " + midReturn);
+		}
 		
-		// startProcess();    //uncomment when run as standalone
+		SharedSearchSearchEntry entry = new SharedSearchSearchEntry();
+		entry.startProcess();    //for standalone processing ONLY
 	}
 	
 	public SharedSearchSearchEntry() {}
 	/* to support calling from other Weekly CPX IDS classes */
 	public SharedSearchSearchEntry(String inFileName, String searchField, String sharedSearchurl, String database, Connection con, 
-			String tableToBeTruncated, String sqlldrFileName)
+			String tableToBeTruncated, String sqlldrFileName, Logger logger, String midReturn)
 	{
 		this.fileName = inFileName;
 		this.searchField = searchField;
@@ -116,6 +127,8 @@ public class SharedSearchSearchEntry {
 		this.con = con;
 		this.tableToBeTruncated = tableToBeTruncated;
 		this.sqlldrFileName = sqlldrFileName;
+		this.logger = logger;
+		this.midReturn = midReturn;
 	}
 	/* starting point, same as main*/
 	public void startProcess() {
@@ -190,13 +203,13 @@ public class SharedSearchSearchEntry {
 			{
 				if(!(line.isEmpty()))
 				{
+					//this.thread.sleep(1000);
 					
-					ConcurrentSharedSearch concurrentSearch = new ConcurrentSharedSearch("thread" + i, line.trim(), searchField, sharedSearch,bw);
+					ConcurrentSharedSearch concurrentSearch = new ConcurrentSharedSearch("thread" + i, line.trim(), searchField, sharedSearch,bw, logger, midReturn);
 					thread = new Thread(concurrentSearch);
 					threads.add(thread);
 					thread.start();
 					
-					//thread.currentThread().sleep(2000l);
 				}
 				i++;
 			}

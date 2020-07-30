@@ -13,6 +13,8 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.ei.common.bd.BdAffiliations;
 import org.ei.common.bd.BdAuthors;
+
+import java.util.HashSet;
 import java.util.List;
 
 import java.sql.DriverManager;
@@ -106,7 +108,7 @@ public class FetchWeeklyAuAfIdsForES {
 			long startTime = System.currentTimeMillis();
 
 			String query = "select pui,author,author_1, affiliation, affiliation_1, loadnumber,updatenumber, count(*) over() total_rows from cafe_master where pui in "
-					+ "(select distinct a.pui from cafe_master a, cafe_pui_list_master b, cpx_weekly_load c where a.pui = b.pui and b.puisecondary = c.pui) and rownum<11";
+					+ "(select distinct a.pui from cafe_master a, cafe_pui_list_master b, cpx_weekly_load c where a.pui = b.pui and b.puisecondary = c.pui)";
 			//con = getConnection(url, driver, username, password);
 			stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 			rs = stmt.executeQuery(query);
@@ -160,7 +162,7 @@ public class FetchWeeklyAuAfIdsForES {
 						authors = authors + rs.getString("AUTHOR_1");
 
 					BdAuthors aus = new BdAuthors(authors);
-					List<String> auIds = aus.getAuids();
+					HashSet<String> auIds = aus.getAuids();
 					if (auIds.size() > 0)
 						for (String auid : auIds)
 							// bwAuid.write(auid + "\t" + rs.getString("LOADNUMBER") + "\t" +
@@ -174,7 +176,7 @@ public class FetchWeeklyAuAfIdsForES {
 						affiliations = affiliations + rs.getString("AFFILIATION_1");
 
 					BdAffiliations aff = new BdAffiliations(affiliations);
-					List<String> afIds = aff.getAfids();
+					HashSet<String> afIds = aff.getAfids();
 					// System.out.println(afIds.size());
 					if (afIds.size() > 0)
 						for (String afId : afIds)

@@ -104,9 +104,9 @@ public class BdAffiliations
 	
 	
 	/* HT added 07/17/2020 to pull AFIDS Only for checking ES for weekly AFID doc_count */
-	public List<String> getAfids()
+	public HashSet<String> getAfids()
 	{
-		ArrayList<String> afIds = new ArrayList<>();
+		HashSet<String> afIds = new LinkedHashSet<>();
 		if (bdAffiliationsMap != null && bdAffiliationsMap.size() > 0)
 		{
 			Iterator<BdAffiliation> affenum = bdAffiliationsMap.keySet().iterator();

@@ -143,10 +143,10 @@ public class BdAuthors
 	}
 	
 	/* HT added 07/17/2020 to pull AUIDS Only for checking ES for weekly auid doc_count, Only Interested in AUIDS, NO OrcIds*/
-	public List<String> getAuids()
+	public HashSet<String> getAuids()
 	{
 
-		ArrayList<String> auIds = new ArrayList<>();
+		HashSet<String> auIds = new LinkedHashSet<>();
 		
 		if (bdAuthorsMap != null && bdAuthorsMap.size() > 0)
 		{
