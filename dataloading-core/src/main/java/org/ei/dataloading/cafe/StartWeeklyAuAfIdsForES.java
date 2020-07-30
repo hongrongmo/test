@@ -4,6 +4,7 @@ import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
+import org.apache.log4j.Logger;
 import org.dataloading.sharedsearch.SharedSearchSearchEntry;
 
 /**
@@ -24,17 +25,19 @@ public class StartWeeklyAuAfIdsForES extends Thread{
 	/* ONLY to know current weeknumber */
 	static int weekNumber;
 	static String sharedSearchurl = "https://shared-search-service-api.cert.scopussearch.net/document/v1/query/result";
-	static String tableToBeTruncated;
-	static String sqlldrFileName;
-	static String searchField;
+	static String[] searchFields;
+	static String[] tempTables;
+	static String[] sqlldrFiles;
 	
 	Connection con;
+	Logger logger = Logger.getLogger(StartWeeklyAuAfIdsForES.class);
+	static String midReturn = "none";
 	
 	static String[] fileNames = null;
 
 	public static void main(String[] args)
 	{
-		if(args.length >8)
+		if(args.length >9)
 		{
 			if(args[0] != null)
 				url = args[0];
@@ -60,18 +63,51 @@ public class StartWeeklyAuAfIdsForES extends Thread{
 			}
 			if(args.length > 6)
 			{
-				tableToBeTruncated = args[6];
-				System.out.println("Tables to be truncated: " + tableToBeTruncated);
+				if(args[6] .contains(","))
+				{
+					tempTables = args[6].split(",");
+					System.out.println("Tables to be truncated: " + args[6]);
+				}
+				else
+				{
+					System.out.println("Incomplete tempTables List, exit");
+					System.exit(1);
+				}
+				
 			}
 			if(args.length >7)
 			{
-				sqlldrFileName = args[7];
-				System.out.println("sqlldr fileName: " +  sqlldrFileName);
+				if(args[7].contains(","))
+				{
+					sqlldrFiles = args[7].split(",");
+					System.out.println("sqlldr fileName: " +  args[7]);
+				}
+				else
+				{
+					System.out.println("Incomplete sqlldrFiles List, exit");
+					System.exit(1);
+				}
+					
 			}
+			
 			if(args.length >8)
 			{
-				searchField = args[8];
-				System.out.println("searchField: " + searchField);
+				if(args[8].contains(","))
+				{
+					searchFields = args[8].split(",");
+					System.out.println("searchField: " + args[8]);
+				}
+				else
+				{
+					System.out.println("Incomplete serchField List, exit");
+					System.exit(1);
+				}
+				
+			}
+			if(args.length >9)
+			{
+				midReturn = args[9];
+				System.out.println("midReturn? " + midReturn);
 			}
 				
 		}
@@ -90,6 +126,7 @@ public class StartWeeklyAuAfIdsForES extends Thread{
 	
 	private void startWeeklyProcess() {
 		
+		/* try with resource, con is a closable object */
 		try (Connection con = getConnection())
 		{
 			FetchWeeklyAuAfIdsForES obj = new FetchWeeklyAuAfIdsForES(con, weekNumber);
@@ -97,8 +134,18 @@ public class StartWeeklyAuAfIdsForES extends Thread{
 			fileNames = obj.init();
 			obj.fetchWeeklyIds();
 			/* Call SharedSearch to check doc_count for identified auids/afids */
-			 SharedSearchSearchEntry entry = new SharedSearchSearchEntry(fileNames[0], searchField, sharedSearchurl, "cpx", con, tableToBeTruncated, sqlldrFileName);
-		 		entry.startProcess();
+			
+			
+			SharedSearchSearchEntry auentry = new SharedSearchSearchEntry(fileNames[0], searchFields[0], sharedSearchurl, "cpx", con, tempTables[0], sqlldrFiles[0], logger, midReturn);
+			auentry.startProcess();
+			
+			System.out.println("Sleep 20 sec before calling sharedSearch for AffId");
+			Thread.sleep(20000);
+		
+			SharedSearchSearchEntry afentry = new SharedSearchSearchEntry(fileNames[1], searchFields[1], sharedSearchurl, "cpx", con, tempTables[1], sqlldrFiles[1], logger, midReturn);
+			afentry.startProcess();
+			
+				 
 		}
 		catch(Exception e)
 		{

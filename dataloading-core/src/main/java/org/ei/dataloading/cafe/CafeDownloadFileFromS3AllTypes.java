@@ -76,6 +76,8 @@ public class CafeDownloadFileFromS3AllTypes {
 	static int recsPerEsbulk;
 	static String esDomain = "search-evcafe-prod-h7xqbezrvqkb5ult6o4sn6nsae.us-east-1.es.amazonaws.com";
 	static String esIndexName;		// added 05/10/2018 as ES 6.2 and up split types in separate indices
+	static String operationType="normal";		//HH added 07/29/2020 to give option of adhoc download of previously processed cafe files
+	
 
 
 	static int curRecNum = 0;
@@ -264,6 +266,11 @@ public class CafeDownloadFileFromS3AllTypes {
 				}
 			}
 		}
+		if(args.length >17)
+		{
+			operationType = args[17];
+			System.out.println("OperationType: " + operationType);
+		}
 
 
 		else
@@ -274,25 +281,72 @@ public class CafeDownloadFileFromS3AllTypes {
 
 
 		CafeDownloadFileFromS3AllTypes downloadFile = new CafeDownloadFileFromS3AllTypes();
+		if(operationType.equalsIgnoreCase("normal"))
+			downloadFile.startProcess();
+		else if(operationType.equalsIgnoreCase("adhoc"))
+			downloadFile.startAdhocProcess();
+		else
+		{
+			System.out.println("Invalid operation type, re-run with option normal/adhoc");
+			System.exit(1);
+		}
 
+		
+	}
+	
+	public void startProcess()
+	{
 		try {
-			downloadFile.init();
-			downloadFile.getCafeInv_FilesInfo();
-			downloadFile.getSnsArch_FilesInfo();
-			downloadFile.end();
+			init();
+			getCafeInv_FilesInfo();
+			getSnsArch_FilesInfo();
+			end();
 
+			downloadFiles();
+			
 
+		} 
+		catch (Exception e) 
+		{
+
+			e.printStackTrace();
+		}
+
+	}
+	public void startAdhocProcess()
+	{
+		try {
+			init();
+			getSnsArch_FilesInfo();
+			end();
+
+			downloadFiles();
+			
+
+		} 
+		catch (Exception e) 
+		{
+
+			e.printStackTrace();
+		}
+
+	}
+	
+	public void downloadFiles()
+	{
+		try {
+			
 			// download files from s3 bucket using thread (s)
-			if(downloadFile.keys_to_be_downloaded.size() >0)
+			if(keys_to_be_downloaded.size() >0)
 			{
-				double listSize = downloadFile.keys_to_be_downloaded.size()/numOfThreads;
+				double listSize = keys_to_be_downloaded.size()/numOfThreads;
 				int subListSize = (int)listSize;
 				int start = 0;
 				int last = (subListSize -1);
 				CountDownLatch latch = new CountDownLatch(numOfThreads);
 				
 				
-				System.out.println("list size to download: " + downloadFile.keys_to_be_downloaded.size());
+				System.out.println("list size to download: " + keys_to_be_downloaded.size());
 				if(numOfThreads ==1)
 					last = subListSize -1;
 				
@@ -300,9 +354,9 @@ public class CafeDownloadFileFromS3AllTypes {
 				System.out.println("STARTING................." + new Date().getTime());
 				for(int i=0;i<numOfThreads;i++)
 				{
-					GetANIFileFromCafeS3Bucket objectFromS3 = new GetANIFileFromCafeS3Bucket(downloadFile.s3Client,database,url,driver,username,password,downloadFile.S3dir);
+					GetANIFileFromCafeS3Bucket objectFromS3 = new GetANIFileFromCafeS3Bucket(s3Client,database,url,driver,username,password,S3dir);
 					
-					s3FileDownload thread = downloadFile.new s3FileDownload("Thread " + i,latch, start,last, objectFromS3);
+					s3FileDownload thread = new s3FileDownload("Thread " + i,latch, start,last, objectFromS3);
 					thread.start();
 					
 					//Thread.sleep(1000);
@@ -311,7 +365,7 @@ public class CafeDownloadFileFromS3AllTypes {
 						if(i<(numOfThreads-2))
 							last = start + (subListSize -1);
 						else
-							last = downloadFile.keys_to_be_downloaded.size() -1;
+							last = keys_to_be_downloaded.size() -1;
 						
 						System.out.println("***********************");	
 					}
@@ -326,24 +380,25 @@ public class CafeDownloadFileFromS3AllTypes {
 
 
 			// zip downloaded cafe keys/files
-			downloadFile.zipDownloads();
+			zipDownloads();
 
 			// update cafe_inventory table
-			downloadFile.updateCafeInventory();  //comment for localhost only, uncomment in prod
+			if(operationType.equalsIgnoreCase("normal"))
+				updateCafeInventory();  //comment for localhost only, uncomment in prod, added condition of OPT 07/29/2020 
 
 			// close connection
-			downloadFile.flush();
+			flush();
 
 			//get the list of keys to be deleted & delete from ES & DB
-			if(downloadFile.keys_to_be_deleted.size() >0)
+			if(keys_to_be_deleted.size() >0)
 			{
 				if(doc_type !=null && (doc_type.equalsIgnoreCase("apr") || doc_type.equalsIgnoreCase("ipr")))
 				{
-					downloadFile.PrepareDeletion();
+					PrepareDeletion();
 				}
 				else if (doc_type !=null && doc_type.equalsIgnoreCase("ani"))
 				{
-					downloadFile.deleteANIData();
+					deleteANIData();
 				}
 			}
 

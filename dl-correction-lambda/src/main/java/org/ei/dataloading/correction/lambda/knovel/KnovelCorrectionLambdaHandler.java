@@ -150,7 +150,7 @@ public class KnovelCorrectionLambdaHandler implements RequestHandler<SNSEvent, S
 	{
 		try
 		{
-			context.getLogger().log("Start running command: " + cmd);
+			//context.getLogger().log("Start running command: " + cmd);
 			File keyFile = new File(KnovelCorrectionLambdaHandler.class.getResource(privateKey).toURI());
 			context.getLogger().log("privateKeyFile: " + keyFile);
 			String privateKeyAbsolutePath = keyFile.getAbsolutePath();
@@ -167,11 +167,12 @@ public class KnovelCorrectionLambdaHandler implements RequestHandler<SNSEvent, S
 			
 			// ssh connect
 			session.connect();
-			context.getLogger().log("ssh session connected, about to run " + cmd);
+			//context.getLogger().log("ssh session connected, about to run " + cmd);
 						
 			
 			// 1. source .bash_profile
 			// source .bash_profile before running correction in order to capture recent week#
+			context.getLogger().log(" about to source ~/.bash_profile");
 			ChannelExec channelExec0 = (ChannelExec)session.openChannel("exec");
 			channelExec0.setCommand("source ~/.bash_profile");
 			channelExec0.connect();
@@ -179,6 +180,7 @@ public class KnovelCorrectionLambdaHandler implements RequestHandler<SNSEvent, S
 			channelExec0.disconnect();
 			
 			// source .bash_profile before running correction in order to capture new update#, otherwise prev update# still cached
+			context.getLogger().log("about to run pwd");
 			ChannelExec channelExec4 = (ChannelExec)session.openChannel("exec");
 			channelExec4.setCommand("pwd");
 			channelExec4.connect();
@@ -189,6 +191,7 @@ public class KnovelCorrectionLambdaHandler implements RequestHandler<SNSEvent, S
 			
 			//2. run Knoel correction command
 			// set the shell script command to run in the ssh session
+			context.getLogger().log("about to run " + cmd);
 			Channel channel = session.openChannel("exec");
 			((ChannelExec)channel).setCommand(cmd);
 			channel.setInputStream(null);
@@ -196,9 +199,9 @@ public class KnovelCorrectionLambdaHandler implements RequestHandler<SNSEvent, S
 			channel.setOutputStream(System.out);
 			InputStream in = channel.getInputStream();
 			channel.connect();
-			context.getLogger().log("ssh shell channel created");
 			
 			// get the command output
+			/*
 			byte[] cmdout = new byte[1024];
 			while(true)
 			{
@@ -216,7 +219,7 @@ public class KnovelCorrectionLambdaHandler implements RequestHandler<SNSEvent, S
 				if(channel.isClosed())
 				{
 					context.getLogger().log("ssh completed with exit status: " + channel.getExitStatus());;
-					break;
+					
 				}
 				try
 				{
@@ -230,7 +233,7 @@ public class KnovelCorrectionLambdaHandler implements RequestHandler<SNSEvent, S
 				
 			}
 			
-			
+			*/
 			
 			channel.disconnect();
 			session.disconnect();
