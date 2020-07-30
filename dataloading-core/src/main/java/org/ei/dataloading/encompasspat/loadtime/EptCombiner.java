@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -23,7 +24,9 @@ import org.ei.dataloading.MessageSender;
 public class EptCombiner extends Combiner {
 
     Perl5Util perl = new Perl5Util();
-
+    private static String propertyFileName;
+	private static int loadNumber = 0;
+	
     public EptCombiner(CombinedWriter writer) {
         super(writer);
     }
@@ -272,8 +275,13 @@ public class EptCombiner extends Combiner {
         int i = 0;
         CVSTermBuilder termBuilder = new CVSTermBuilder();
         KafkaService kafka=null;
-        int totalCount =-1;
-        //kafka = new KafkaService(); //use it for ES extraction only
+        Map<String,String> batchData = new ConcurrentHashMap<String,String>();   
+        Map<String,String> missedData = new ConcurrentHashMap<String,String>();
+        int counter=0;
+        int batchSize = 0;
+        MessageSender sendMessage=null;
+        Thread thread = null;
+        int totalCount =-1;      
         long processTime = System.currentTimeMillis();   	
         //Thread thread = null;
         //int MAX_THREAD = 110; 
@@ -282,6 +290,11 @@ public class EptCombiner extends Combiner {
         try
         {
         	totalCount = getResultSetSize(rs); 
+        	if(this.propertyFileName!=null)
+        	{
+        		kafka = new KafkaService(processTime+"_ept_"+loadNumber, this.propertyFileName);
+        	}
+        	
         	System.out.println("epoch="+processTime+" database=EPT totalCount="+totalCount);
 	        while (rs.next()) 
 	        {
@@ -410,19 +423,39 @@ public class EptCombiner extends Combiner {
 	
 	                rec.put(rec.DESIGNATED_STATES, prepareMulti(rs.getString("ds")));
 	
-	                this.writer.writeRec(rec);//use this line for FAST extraction
+	                if(this.propertyFileName==null)
+	                {
+	                	this.writer.writeRec(rec);//use this line for FAST extraction
+	                }
+	                else
+	                {
 	                
-	                /**********************************************************/
-	    	        //following code used to test kafka by hmo@2020/01/30
-	    	        //this.writer.writeRec(recArray,kafka);
-	    	        /*********************************************************/
+		                /**********************************************************/
+		    	        //following code used to test kafka by hmo@2020/01/30
+		    	        //this.writer.writeRec(recArray,kafka);
+		    	        /*********************************************************/
+		                this.writer.writeRec(rec,kafka, batchData, missedData);
+		                if(counter<batchSize)
+		                {            	
+		                	counter++;
+		                }
+		                else
+		                {        
+		                	 thread = new Thread(sendMessage);
+		                	 sendMessage= new MessageSender(kafka,batchData,missedData);
+		                	 //pool.execute(sendMessage); 
+		                	 thread.start(); 
+		                	 batchData = new ConcurrentHashMap();
+		                	 counter=0;
+		                }
 	                
-	    	        //writer.writeRec(rec,kafka);	    	        	                
-	                //use thread to send kafka message	                
-	                //MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
-	                //pool.execute(sendMessage); 
-		            //thread = new Thread(sendMessage, "Thread 1");
-		            //thread.start();
+		    	        //writer.writeRec(rec,kafka);	    	        	                
+		                //use thread to send kafka message	                
+		                //MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
+		                //pool.execute(sendMessage); 
+			            //thread = new Thread(sendMessage, "Thread 1");
+			            //thread.start();
+	                }
 
 	            }
 	
@@ -430,22 +463,26 @@ public class EptCombiner extends Combiner {
         }
         finally
         {
+        	if(this.propertyFileName!=null)
+        	{
+	        	try
+	        	{
+	        		 thread = new Thread(sendMessage);
+	            	 sendMessage= new MessageSender(kafka,batchData,missedData);
+	            	 //pool.execute(sendMessage); 
+	            	 thread.start(); 
+	        	}
+	        	catch(Exception ex) 
+	        	{
+	        		ex.printStackTrace();
+	        	}  
+        	}
         	
-        	/*
-        	try 
-        	{
-        		pool.shutdown();
-        	}
-        	catch(Exception ex) 
-        	{
-        		ex.printStackTrace();
-        	}
-        	*/
         	if(kafka!=null)
  	        {
         		try 
             	{
-        			kafka.close();
+        			kafka.close(missedData);
             	}
             	catch(Exception ex) 
             	{
@@ -768,11 +805,16 @@ public class EptCombiner extends Combiner {
         String driver = args[1];
         String username = args[2];
         String password = args[3];
-        int loadNumber = Integer.parseInt(args[4]);
+        loadNumber = Integer.parseInt(args[4]);
         int recsPerbatch = Integer.parseInt(args[5]);
         String operation = args[6];
         Combiner.TABLENAME = args[7];
         String environment = args[8].toLowerCase();
+        if (loadNumber!=2 && args.length>9)
+        {
+        	propertyFileName=args[9];
+        	System.out.println("Got properties file "+propertyFileName);
+        }
         System.out.println("Table Name=" + args[7]);
         System.out.println("LoadNumber=" + loadNumber);
         System.out.println("RecsPerBatch=" + recsPerbatch);
@@ -803,7 +845,7 @@ public class EptCombiner extends Combiner {
                             password,
                             yearIndex);
         }
-        else if(loadNumber==1 && args.length>9)
+        else if(loadNumber==2 && args.length>9)
         {
              System.out.println("AccessNumber=" + args[9]);
              c.writeSingleTestRecord(url, driver, username, password, args[9]);
@@ -815,11 +857,13 @@ public class EptCombiner extends Combiner {
         }
         else if (loadNumber > 3000 || loadNumber < 1000) {
             c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
-        }
-        else {
-
+        }      
+        else
+        {
             c.writeCombinedByYear(url, driver, username, password, loadNumber);
         }
+        
+        
 
     }
     //  11/29/07 TS by new specs this method is taken from UPO combiner to sync format

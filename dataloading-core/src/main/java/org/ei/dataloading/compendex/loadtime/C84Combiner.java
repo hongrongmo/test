@@ -7,8 +7,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.Map;
 
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
@@ -26,21 +29,27 @@ import org.ei.dataloading.MessageSender;
 public class C84Combiner extends Combiner {
 
     Perl5Util perl = new Perl5Util();
-
+    private static String propertyFileName;
     private static String tablename;
-
+    private static int loadNumber;
+    
     public static void main(String args[]) throws Exception {
 
         String url = args[0];
         String driver = args[1];
         String username = args[2];
         String password = args[3];
-        int loadNumber = Integer.parseInt(args[4]);
+        loadNumber = Integer.parseInt(args[4]);
         int recsPerbatch = Integer.parseInt(args[5]);
         String operation = args[6];
         tablename = args[7];
         String environment = args[8].toLowerCase();
-
+        if (args.length>9)
+        {
+        	propertyFileName=args[9];
+        	System.out.println("propertyFileName="+propertyFileName);
+        }
+        
         Combiner.TABLENAME = tablename;
         System.out.println(Combiner.TABLENAME);
 
@@ -188,14 +197,24 @@ public class C84Combiner extends Combiner {
     {     
         int i = 0;
         KafkaService kafka=null;;
-        kafka = new KafkaService(); //use this line for ES extraction only
-        //Thread thread =null;
-        //int MAX_THREAD = 110; 
-        //ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD); //use this line for ES extraction
+       
+        ///* use for ES only
+        Thread thread =null;
+        Map<String,String> batchData = new ConcurrentHashMap<String,String>();   
+        Map<String,String> missedData = new ConcurrentHashMap<String,String>();
+        int counter=0;
+        int batchSize = 0;
+        MessageSender sendMessage=null;
+        //*/        
         long processTime = System.currentTimeMillis();   	 
     	
         try
         {
+        	if(this.propertyFileName!=null)
+        	{
+        		kafka = new KafkaService(processTime+"_ibf_"+this.loadNumber, this.propertyFileName); //use it for ES extraction
+        	}
+        	
         	int totalCount = getResultSetSize(rs);
         	  
 	        while (rs.next()) 
@@ -441,44 +460,57 @@ public class C84Combiner extends Combiner {
 	                    rec.put(EVCombinedRec.DOI, rs.getString("do"));
 	                }
 	
-	                //this.writer.writeRec(rec); //use this line for FAST extraction only;
-	                /**********************************************************/
-	    	        //following code used to test kafka by hmo@2020/03/24
-	    	        //this.writer.writeRec(recArray,kafka);
-	    	        /**********************************************************/
-	                
-	    	        this.writer.writeRec(rec,kafka);		    	        
-	                //use thread to send kafka message 
-	                
-	               // MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
-	                //pool.execute(sendMessage);
-		            //thread = new Thread(sendMessage);
-		            //thread.start();
-		            
+	                if(this.propertyFileName==null)
+	                {
+	                	this.writer.writeRec(rec); //use this line for FAST extraction only;
+	                }
+	                else
+	                {
+		                /**********************************************************/
+		    	        //following code used to test kafka by hmo@2020/03/24
+		    	        //this.writer.writeRec(recArray,kafka);
+		    	        /**********************************************************/
+		                
+		    	        //this.writer.writeRec(rec,kafka);		    	        
+		    	        this.writer.writeRec(rec,kafka, batchData, missedData);
+			            if(counter<batchSize)
+			            {            	
+			            	counter++;
+			            }
+			            else
+			            {        
+			            	 thread = new Thread(sendMessage);
+			            	 sendMessage= new MessageSender(kafka,batchData,missedData);		            	 
+			            	 thread.start(); 
+			            	 batchData = new ConcurrentHashMap();
+			            	 counter=0;
+			            }
+	                }
 	
 	            }
 	        }
         }
         finally
         { 
-        	/*
-        	if(pool!=null)
+        	if(this.propertyFileName!=null)
         	{
-	        	try 
+	        	try
 	        	{
-	        		pool.shutdown();
+	        		 thread = new Thread(sendMessage);
+	            	 sendMessage= new MessageSender(kafka,batchData,missedData);            	 
+	            	 thread.start(); 
 	        	}
 	        	catch(Exception ex) 
 	        	{
 	        		ex.printStackTrace();
-	        	}
+	        	}    
         	}
-        	*/
+        	
         	if(kafka!=null)
  	        {
         		try 
             	{
-        			kafka.close();
+        			kafka.close(missedData);
             	}
             	catch(Exception ex) 
             	{

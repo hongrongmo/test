@@ -8,8 +8,10 @@ import java.sql.Statement;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.HashMap;
 import java.util.StringTokenizer;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.ArrayList;
@@ -37,11 +39,20 @@ public class INSPECCombiner
 
     Perl5Util perl = new Perl5Util();
     private static String tablename;
-    //private static final Database INS_DATABASE = new InspecDatabase();
 	private static final String databaseIndexName = "ins";
+	private static String propertyFileName;
+	private static int loadNumber = 0;
+	
     public INSPECCombiner(CombinedWriter writer)
     {
         super(writer);
+    }
+    
+    public INSPECCombiner(CombinedWriter writer, String propertyFileName, int loadNumber)
+    {
+        super(writer);
+        this.propertyFileName=propertyFileName;
+        this.loadNumber=loadNumber;
     }
 
 
@@ -52,12 +63,15 @@ public class INSPECCombiner
         String driver = args[1];
         String username = args[2];
         String password = args[3];
-        int loadNumber = 0;
         int recsPerbatch = Integer.parseInt(args[5]);
         String operation = args[6];
         tablename = args[7];
        
         String environment = args[8].toLowerCase();
+        if(args.length>9)
+        {
+        	propertyFileName=args[9];
+        }
 
         try {
             loadNumber = Integer.parseInt(args[4]);
@@ -339,25 +353,37 @@ public class INSPECCombiner
     void writeRecs(ResultSet rs,Connection con)
             throws Exception
     {
+        
+        KafkaService kafka=null;
+        Map<String,String> batchData = new ConcurrentHashMap<String,String>();   
+        Map<String,String> missedData = new ConcurrentHashMap<String,String>();
+        int counter=0;
+        int batchSize = 0;
+        MessageSender sendMessage=null;
+        Thread thread =null;
         int i = 0;
         int totalCount =0;
-        KafkaService kafka=null;
-        //kafka = new KafkaService(); //use it for ES extraction
-        //Thread thread =null;
         long processTime = System.currentTimeMillis();
         //int MAX_THREAD = 110; 
         //ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD);  
         
         try
         {
-    	    totalCount = getResultSetSize(rs);  
+    	    totalCount = getResultSetSize(rs); 
+    	    if(this.propertyFileName!=null)
+    	    {
+    	    	kafka = new KafkaService(processTime+"_ins_"+loadNumber, this.propertyFileName);
+    	    }
     	    System.out.println("epoch="+processTime+" database=INS totalCount="+totalCount);
 	        while(rs.next())
 	        {
 	            EVCombinedRec rec = new EVCombinedRec();
 	            ++i;
 	            String mid = rs.getString("M_ID");
-	            String abString = getStringFromClob(rs.getClob("ab"));	        
+	            String abString = getStringFromClob(rs.getClob("ab"));	
+	            
+	            System.out.println("ABSTRACT="+abString);
+	            
 	            String accessnumber = rs.getString("anum");
 	            String strYear ="";
 	            if(rs.getString("pyr") != null && validYear(getPubYear(rs.getString("pyr"))))
@@ -796,19 +822,33 @@ public class INSPECCombiner
 	                rec.put(EVCombinedRec.STARTPAGE, getFirstPage(rs.getString("pipn")));
 	                rec.put(EVCombinedRec.ACCESSION_NUMBER, rs.getString("ANUM"));
 	
-	                writer.writeRec(rec);//Use this line for FAST extraction
-	                
-	                /**********************************************************/
-	                //following code used to test kafka by hmo@2020/01/30
-	                //this.writer.writeRec(recArray,kafka);
-	                /**********************************************************/
-	                
-	                //writer.writeRec(rec,kafka);
-	                
-	                //MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
-	                //pool.execute(sendMessage);
-		            //thread = new Thread(sendMessage);
-		           // thread.start();
+	                if(this.propertyFileName==null)
+	                {
+	                	writer.writeRec(rec);//Use this line for FAST extraction
+	                }
+	                else
+	                {
+		                /**********************************************************/
+		                //following code used to test kafka by hmo@2020/01/30
+		                //this.writer.writeRec(recArray,kafka);
+		                /**********************************************************/
+		                
+		                //writer.writeRec(rec,kafka);
+		                
+	                	this.writer.writeRec(rec,kafka, batchData, missedData);
+			            if(counter<batchSize)
+			            {            	
+			            	counter++;
+			            }
+			            else
+			            {        
+			            	 thread = new Thread(sendMessage);
+			            	 sendMessage= new MessageSender(kafka,batchData,missedData);		            	 
+			            	 thread.start(); 
+			            	 batchData = new ConcurrentHashMap();
+			            	 counter=0;
+			            }
+	                }
 		            
 	            }
 	
@@ -821,24 +861,26 @@ public class INSPECCombiner
      	    {
      	    	System.out.println("**Got "+i+" records instead of "+totalCount );
      	    }
-    	    /*
-    	    if(pool!=null)
-    	    {
-	    	    try 
+    	    
+    	    if(this.propertyFileName!=null)
+        	{
+	        	try
 	        	{
-	        		pool.shutdown();
+	        		 thread = new Thread(sendMessage);
+	            	 sendMessage= new MessageSender(kafka,batchData,missedData);            	 
+	            	 thread.start(); 
 	        	}
 	        	catch(Exception ex) 
 	        	{
 	        		ex.printStackTrace();
-	        	}
-    	    }
-    	    */
+	        	}    
+        	}
+    	    
         	if(kafka!=null)
  	        {
         		try 
             	{
-        			kafka.close();
+        			kafka.close(missedData);
             	}
             	catch(Exception ex) 
             	{

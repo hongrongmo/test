@@ -8,7 +8,9 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Vector;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.Calendar;
@@ -38,7 +40,8 @@ import org.ei.dataloading.MessageSender;
 	    private static String currentDb;
 	    private static HashMap issnARFix = new HashMap();
 	    private List auid;
-
+	    private static String propertyFileName = "config.properties";
+	    private static int loadNumber=0;
 
 	    public static void main(String args[])
 	        throws Exception
@@ -47,7 +50,7 @@ import org.ei.dataloading.MessageSender;
 	        String driver = args[1];
 	        String username = args[2];
 	        String password = args[3];
-	        int loadNumber = 0;
+	        loadNumber = 0;
 	        int recsPerbatch = 0;
 	        try {
 	            loadNumber = Integer.parseInt(args[4]);
@@ -64,6 +67,10 @@ import org.ei.dataloading.MessageSender;
 	        String operation = args[6];
 	        tablename = args[7];
 	        String currentDb = args[8].toLowerCase();
+	        if(args.length>9)
+	        {
+	        	propertyFileName=args[9];
+	        }
 	        long timestamp=0;
 
 	        Combiner.TABLENAME = tablename;
@@ -246,13 +253,18 @@ import org.ei.dataloading.MessageSender;
 	    public void writeRecs(ResultSet rs)
 	        throws Exception
 	    {
+	        
+	        KafkaService kafka=null;
+	        Map<String,String> batchData = new ConcurrentHashMap<String,String>();   
+	        Map<String,String> missedData = new ConcurrentHashMap<String,String>();
+	        int counter=0;
+	        int batchSize = 0;
+	        MessageSender sendMessage=null;
+	        Thread thread =null;
 	        int i = 0;
 	        EVCombinedRec recSecondBox = null;
 	        EVCombinedRec[] recArray = null;	      
 	        String accessNumber = "";
-	        //Thread thread = null;
-	        KafkaService kafka=null;
-	        //kafka = new KafkaService(); //use this line for ES extraction
 	        long processTime = System.currentTimeMillis();
 	    	int totalCount = getResultSetSize(rs);  
 	    	System.out.println("epoch="+processTime+" database="+Combiner.CURRENTDB+" totalCount="+totalCount);
@@ -261,6 +273,7 @@ import org.ei.dataloading.MessageSender;
 	    	
 	        try
 	        {
+	        	kafka = new KafkaService(processTime+"_"+Combiner.CURRENTDB+"_"+loadNumber, this.propertyFileName);//use this line for ES extraction
 		        while (rs.next())
 		        {
 		          ++i;
@@ -439,21 +452,29 @@ import org.ei.dataloading.MessageSender;
 		                
 		            recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
 		            
-		            this.writer.writeRec(recArray);//Use this line for FAST extraction
+		            //this.writer.writeRec(recArray);//Use this line for FAST extraction
 		            
 		            /**********************************************************/
 	    	        //following code used to test kafka by hmo@2020/02/3
 	    	        //this.writer.writeRec(recArray,kafka);
-	    	        /**********************************************************/
-		            
+	    	        /**********************************************************/		            
 	    	        //this.writer.writeRec(recArray,kafka);
 	    	       
 		            //use thread to send kafka message
 		            
-		            //MessageSender sendMessage= new MessageSender(recArray,kafka,this.writer);
-		            //pool.execute(sendMessage);
-			        //thread = new Thread(sendMessage);
-			        //thread.start();
+	    	        this.writer.writeRec(rec,kafka, batchData, missedData);
+		            if(counter<batchSize)
+		            {            	
+		            	counter++;
+		            }
+		            else
+		            {        
+		            	 thread = new Thread(sendMessage);
+		            	 sendMessage= new MessageSender(kafka,batchData,missedData);		            	 
+		            	 thread.start(); 
+		            	 batchData = new ConcurrentHashMap<String,String>();
+		            	 counter=0;
+		            }
 			        
 	    	        
 		          }
@@ -474,11 +495,22 @@ import org.ei.dataloading.MessageSender;
 	     	    	System.out.println("**Got "+i+" records instead of "+totalCount );
 	     	    }
 	        	
+	        	try
+	        	{
+	        		 thread = new Thread(sendMessage);
+	            	 sendMessage= new MessageSender(kafka,batchData,missedData);            	 
+	            	 thread.start(); 
+	        	}
+	        	catch(Exception ex) 
+	        	{
+	        		ex.printStackTrace();
+	        	}  
+	        	
             	if(kafka!=null)
      	        {
             		try 
                 	{
-            			kafka.close();
+            			kafka.close(missedData);
                 	}
                 	catch(Exception ex) 
                 	{

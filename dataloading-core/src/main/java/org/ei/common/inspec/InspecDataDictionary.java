@@ -237,7 +237,7 @@ public class InspecDataDictionary
 			//String connectionURL="jdbc:oracle:thin:@127.0.0.1:5521:eid";//use for local machine
 			String driver="oracle.jdbc.driver.OracleDriver";
 			String username="ap_ev_search";
-			String password="";
+			String password="ei3it";
 			System.out.println("connectionURL= "+connectionURL);
 			System.out.println("driver= "+driver);
 			System.out.println("username= "+username);

@@ -62,7 +62,7 @@ import com.google.gson.JsonElement;
 import com.fasterxml.jackson.databind.JsonNode;
 
 import org.ei.dataloading.DataLoadDictionary;
-import org.ei.dataloading.bd.loadtime.XmlCombiner;
+import org.ei.dataloading.bd.loadtime.*;
 import org.ei.dataloading.CombinedXMLWriter;
 import org.ei.common.bd.*;
 import org.ei.common.*;
@@ -219,7 +219,7 @@ public class NewDataTesting
 		}		
 		else if(action.equals("deleteElasticRecord"))
 		{
-			System.out.println("sending records to Kaska for deleting");
+			System.out.println("sending records to Kafka for deleting");
 			test.deleteESRecord(database);
 		}
 		else if(action.equals("fast"))
@@ -577,7 +577,8 @@ public class NewDataTesting
                          if(eid != null)
                          {
                         	 System.out.println("EID="+eid);
-                             kafka.runProducer("{}","\""+eid+"\"",false);
+                             //kafka.runProducer("{}","\""+eid+"\"",0,new HashMap());
+                        	 kafka.runProducer("{}",eid,0,new HashMap());
                             
                          }
                      }
@@ -594,8 +595,8 @@ public class NewDataTesting
                      if(eid != null)
                      {
                     	 System.out.println("EID="+eid);
-                         kafka.runProducer("{}","\""+eid+"\"",false);
-                        
+                         //kafka.runProducer("{}","\""+eid+"\"",0,new HashMap());
+                         kafka.runProducer("{}",eid,0,new HashMap());
                      }
                  }
              }        
@@ -677,7 +678,7 @@ public class NewDataTesting
 	    		eid=(String)rs.get(i);
                 if(eid != null)
                 {                   
-                    kafka.runProducer("{}","\""+eid+"\"",false);
+                    kafka.runProducer("{}","\""+eid+"\"",0,new HashMap());
                     System.out.println("EID="+eid);
                 }
             }
