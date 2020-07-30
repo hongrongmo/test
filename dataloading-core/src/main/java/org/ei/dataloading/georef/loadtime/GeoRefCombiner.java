@@ -852,12 +852,15 @@ public void writeRecs(ResultSet rs)
 		            	counter++;
 		            }
 		            else
-		            {        
+		            { /*       
 		            	 thread = new Thread(sendMessage);
 		            	 sendMessage= new MessageSender(kafka,batchData,missedData);		            	 
 		            	 thread.start(); 
-		            	 batchData = new ConcurrentHashMap();
-		            	 counter=0;
+		            	 */
+		            	 kafka.runBatch(batchData,missedData);
+		            	 batchData = new ConcurrentHashMap<String,String>();
+		            	 counter=0;		
+		            	 
 		            }
 				}
 		        

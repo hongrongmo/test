@@ -1371,21 +1371,18 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
 	            	counter++;
 	            }
 	            else
-	            {        
+	            { 	            	 
+                	 /*
 	            	 thread = new Thread(sendMessage);
-	            	 sendMessage= new MessageSender(kafka,batchData,missedData);
-	            	 //pool.execute(sendMessage); 
+	            	 sendMessage= new MessageSender(kafka,batchData,missedData);	  
 	            	 thread.start(); 
+	            	 */
+                	 kafka.runBatch(batchData,missedData);
 	            	 batchData = new ConcurrentHashMap<String,String>();
 	            	 counter=0;
+	            	 
 	            }
-	            
-	            //this.writer.writeRec(recArray,kafka, batchData);
-	            //sendMessage= new MessageSender(recArray,kafka,this.writer);
-	            //pool.execute(sendMessage); 
-	            //thread = new Thread(sendMessage);
-	            //thread.sleep(1);
-	            //thread.start();            
+	            	              
             }                                    
             
          }
