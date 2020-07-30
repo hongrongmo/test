@@ -42,9 +42,9 @@ public class SharedSearchSearchEntry {
 	static String sqlldrFileName;
 	
 	private Connection con;
-	
+	String outFileName = "";
 	Thread thread;
-	static String outFileName = "es-auid-count.txt";
+	
 	
 	public static void main(String[] args)
 	{
@@ -101,27 +101,53 @@ public class SharedSearchSearchEntry {
 			System.out.println("sqlldr fileName: " +  sqlldrFileName);
 		}
 		
+		// startProcess();    //uncomment when run as standalone
+	}
+	
+	public SharedSearchSearchEntry() {}
+	/* to support calling from other Weekly CPX IDS classes */
+	public SharedSearchSearchEntry(String inFileName, String searchField, String sharedSearchurl, String database, Connection con, 
+			String tableToBeTruncated, String sqlldrFileName)
+	{
+		this.fileName = inFileName;
+		this.searchField = searchField;
+		this.sharedSearchurl = sharedSearchurl;
+		this.database = database;
+		this.con = con;
+		this.tableToBeTruncated = tableToBeTruncated;
+		this.sqlldrFileName = sqlldrFileName;
+	}
+	/* starting point, same as main*/
+	public void startProcess() {
 		
 		SearchFields fields = new SearchFields();
 		searchField = fields.getSearchField(searchField) ;
 		try
 		{
-			SharedSearchSearchEntry entry = new SharedSearchSearchEntry();
-			entry.readDataFromFile(searchField);
+			readDataFromFile(searchField);
+			
+			/* close DB connection when running as standalone */
+			//entry.end();
 		}
 		catch(Exception ex)
 		{
 			System.out.println("File: "+ fileName + " not exist");
 			ex.printStackTrace();
 		}
-		
 	}
-
 	private void init() {
 		
 		try
 		{
-			con = getConnection(url, driver, username, password);
+			if(this.con == null)
+			{
+				this.con = getConnection(url, driver, username, password);
+			}
+			else
+			{
+				System.out.println("Connection already set, so skip initialization....");
+			}
+			
 		}
 		catch(Exception e)
 		{
@@ -129,6 +155,19 @@ public class SharedSearchSearchEntry {
 		}
 		
 		
+	}
+	public void end()
+	{
+		System.out.println("close db connection");
+		try
+		{
+			if(con != null)
+				con.close();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 
 	private void readDataFromFile(String searchField) {
@@ -138,6 +177,9 @@ public class SharedSearchSearchEntry {
 		
 		long startTime = System.currentTimeMillis();
 		long finishTime = System.currentTimeMillis();
+		
+		outFileName = startTime + "_" + searchField + "_es-auid-count.txt";
+		
 		
 		System.out.println("Start.... " + startTime);
 		
@@ -154,7 +196,7 @@ public class SharedSearchSearchEntry {
 					threads.add(thread);
 					thread.start();
 					
-					thread.currentThread().sleep(2000l);
+					//thread.currentThread().sleep(2000l);
 				}
 				i++;
 			}
@@ -228,7 +270,6 @@ public class SharedSearchSearchEntry {
 		{
 			String tableName = tableToBeTruncated;			// just to give it meaningful name in sql stmt
 			
-			con = getConnection(url, driver, username, password);
 			if(con != null)
 			{
 				stmt = con.createStatement();
@@ -236,7 +277,6 @@ public class SharedSearchSearchEntry {
 				if(rs.next())
 					System.out.println("tempTable Count: "+ rs.getInt("count"));
 			}
-			
 		}
 		catch(Exception e)
 		{
@@ -254,15 +294,7 @@ public class SharedSearchSearchEntry {
 			{
 				e.printStackTrace();
 			}
-			try
-			{
-				if(con != null)
-					con.close();
-			}
-			catch(Exception e)
-			{
-				e.printStackTrace();
-			}
+			
 		}
 		
 	}
@@ -271,7 +303,6 @@ public class SharedSearchSearchEntry {
 		Statement stmt = null;
 		try
 		{
-			con = getConnection(url, driver, username, password);
 			if(con != null)
 			{
 				stmt = con.createStatement();
@@ -296,15 +327,6 @@ public class SharedSearchSearchEntry {
 			{
 				if(stmt != null)
 					stmt.close();
-			}
-			catch(Exception e)
-			{
-				e.printStackTrace();
-			}
-			try
-			{
-				if(con != null)
-					con.close();
 			}
 			catch(Exception e)
 			{

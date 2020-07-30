@@ -11,10 +11,10 @@ import org.ei.common.Constants;
 public class BdAuthors
 {
     private TreeMap cpxausmap;
-    private LinkedHashMap bdAuthorsMap ;
+    private LinkedHashMap<BdAuthor,BdAuthor> bdAuthorsMap ;   //HT added Object Type 07/17/2020
     private static ArrayList elements = null;
     private static ArrayList auElements = new ArrayList();
-    private List auid = new ArrayList();
+    private List<String> auid = new ArrayList();   //HT added Object Type 07/17/2020
 
     static
     {
@@ -142,6 +142,40 @@ public class BdAuthors
 		return (String[]) searchValue.toArray(new String[1]);
 	}
 	
+	/* HT added 07/17/2020 to pull AUIDS Only for checking ES for weekly auid doc_count, Only Interested in AUIDS, NO OrcIds*/
+	public List<String> getAuids()
+	{
+
+		ArrayList<String> auIds = new ArrayList<>();
+		
+		if (bdAuthorsMap != null && bdAuthorsMap.size() > 0)
+		{
+			Iterator<BdAuthor> auenum = bdAuthorsMap.keySet().iterator();
+			while (auenum.hasNext())
+			{
+				BdAuthor nextau = (BdAuthor) auenum.next();				
+				
+				if(nextau.getAuid()!=null){
+					
+					String authorid = nextau.getAuid();
+					String[] authorids = null;
+					
+					if(authorid.indexOf(",")>-1)
+					{
+						authorids = authorid.split(",");
+						auIds.add(authorids[1]);
+						
+					}
+					else
+						auIds.add(authorid);
+				}
+			}
+		}
+
+		return auIds;
+	}
+	
+	
 	public String[] getSearchValueWithAlias()
 	{
 
@@ -165,12 +199,12 @@ public class BdAuthors
 	}
 	
 	
-	public List getAuID()
+	public List<String> getAuID()
 	{
 		return this.auid;
 	}
 	
-	public void setAuID(List auidValue)
+	public void setAuID(List<String> auidValue)
 	{
 		this.auid = auidValue;
 	}

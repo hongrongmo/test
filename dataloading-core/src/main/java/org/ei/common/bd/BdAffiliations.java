@@ -13,7 +13,7 @@ public class BdAffiliations
 {
     private TreeMap affmap; // treeMap is used to exlude redundant affiliaitons
     private int affid;
-    private LinkedHashMap bdAffiliationsMap ;
+    private LinkedHashMap<BdAffiliation,BdAffiliation> bdAffiliationsMap ;		//HT added Object Type 07/17/2020
     private static ArrayList elements = null;
     private static ArrayList affElements = new ArrayList();
     private List affiliationIds;
@@ -101,6 +101,30 @@ public class BdAffiliations
 		setDepartmentId(affDepartmentid);
 		return (String[]) affSearch.toArray(new String[1]);
 	}
+	
+	
+	/* HT added 07/17/2020 to pull AFIDS Only for checking ES for weekly AFID doc_count */
+	public List<String> getAfids()
+	{
+		ArrayList<String> afIds = new ArrayList<>();
+		if (bdAffiliationsMap != null && bdAffiliationsMap.size() > 0)
+		{
+			Iterator<BdAffiliation> affenum = bdAffiliationsMap.keySet().iterator();
+			while (affenum.hasNext())
+			{
+				BdAffiliation nextaff= (BdAffiliation) affenum.next();
+				String afid = nextaff.getAffiliationId();
+				if(afid!=null)
+				{
+					afIds.add(afid);
+					
+				}
+				
+			}
+		}
+		return afIds;
+	}
+	
 	
 	private void setAffiliationId(List affiliationIds)
 	{

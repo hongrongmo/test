@@ -240,8 +240,8 @@ public void run()
 		{
 
 			//fastQuery = fastField + ":" + FetchHitCountFromFast.idList.get(i) + " AND db:\"" + database + "\"";  // loadnumber query
-			fastQuery = fastField + ":\"" + FetchHitCountFromFast.idList.get(i) + "\" AND db:\"" + database + "\" AND yr:2015";  // loadnumber and doc-type query
-			//fastQuery = fastField + ":" + FetchHitCountFromFast.idList.get(i) + " AND db:\"" + database + "\" AND dt:\"pa\" AND yr:1999";  // loadnumber and doc-type and year query
+			//fastQuery = fastField + ":\"" + FetchHitCountFromFast.idList.get(i) + "\" AND db:\"" + database + "\" AND yr:2003";  // loadnumber and doc-type query
+			fastQuery = fastField + ":" + FetchHitCountFromFast.idList.get(i) + " AND db:\"" + database + "\" AND yr:2003";  // loadnumber and doc-type and year query
 					
 			//System.out.println("fastQuery: " + fastQuery);   // only for debugging
 			fastClient.setQueryString(fastQuery);
