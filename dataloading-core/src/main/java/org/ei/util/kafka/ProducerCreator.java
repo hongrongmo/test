@@ -40,9 +40,12 @@ public class ProducerCreator {
             props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
             //high throughput producer setting
             props.put(ProducerConfig.COMPRESSION_TYPE_CONFIG, "snappy");
-            props.put(ProducerConfig.LINGER_MS_CONFIG, "20");
-            props.put(ProducerConfig.BATCH_SIZE_CONFIG, Integer.toString(32*1024));
+            props.put(ProducerConfig.LINGER_MS_CONFIG, "50");
+            props.put(ProducerConfig.BATCH_SIZE_CONFIG, 16384 * 4);
             props.put(ProducerConfig.ACKS_CONFIG, "all");
+          //Set the number of retries - retries
+            props.put(ProducerConfig.RETRIES_CONFIG, 3);
+
             //props.put("max.block.ms", 30000);
             //props.put("request.timeout.ms", 30000);
             //return new KafkaProducer<Long,String>(props);
