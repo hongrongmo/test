@@ -7,7 +7,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.StringTokenizer;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -33,11 +36,11 @@ public class NTISCombiner
 {
 
     private static Perl5Util perl = new Perl5Util();
-
     private Perl5Compiler compiler = new Perl5Compiler();
-
     private Perl5Matcher matcher = new Perl5Matcher();
-
+    private static String propertyFileName;
+    private static int loadNumber =0;
+    
     private String[] countries =
     { "France", "Germany", "Netherlands", "Japan", "China", "Russia", "Italy", "Spain", "Canada", "Sweden", "Finland", "United Kingdom", "Australia", "Denmark", "International Organizations", "Antigua and Barbuda", "Afghanistan", "Algeria", "Azerbaijan", "Albania", "Armenia", "Andorra", "Angola", "American Samoa", "Argentina", "Austria", "Anguilla", "Antarctica", "Bahrain", "Barbados", "Botswana", "Bermuda", "Belgium", "Bahamas", "Bangladesh", "Belize", "Bosnia and Herzegovina", "Bolivia",
             "Burma", "Benin", "Belarus", "Solomon Islands", "Brazil", "Bhutan", "Bulgaria", "Brunei Darussalamy", "Burundi", "Cambodia", "Chad", "Sri Lanka", "Congo", "Zaire", "Chile", "Cocos (Keeling) Islands", "Cameroon", "Colombia", "Costa Rica", "Central African Republic", "Cuba", "Cape Verde", "Cyprus", "Czechoslovakia", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "Ireland", "Equatorial Guinea", "Estonia", "El Salvador", "Ethiopia", "Czech Republic",
@@ -58,13 +61,16 @@ public class NTISCombiner
         String driver = args[1];
         String username = args[2];
         String password = args[3];
-        int loadNumber = Integer.parseInt(args[4]);
+        loadNumber = Integer.parseInt(args[4]);
         int recsPerbatch = Integer.parseInt(args[5]);
         String operation = args[6];
         tablename = args[7];
-       
+        
         String environment = args[8].toLowerCase();
-
+        if(args.length>9)
+        {
+        	propertyFileName=args[9];
+        }
         Combiner.TABLENAME = tablename;
         System.out.println(Combiner.TABLENAME);
 
@@ -305,11 +311,15 @@ public class NTISCombiner
     private void writeRecs(ResultSet rs)
     	throws Exception
     {
-        int i = 0;
-        KafkaService kafka=null;
+        int i = 0;        
         int totalCount =-1;
-        //kafka = new KafkaService(); //use it for ES extraction
-        //Thread thread = new Thread();
+        KafkaService kafka=null;
+        Map<String,String> batchData = new ConcurrentHashMap<String,String>();   
+        Map<String,String> missedData = new ConcurrentHashMap<String,String>();
+        int counter=0;
+        int batchSize = 0;
+        MessageSender sendMessage=null;
+        Thread thread = new Thread();
         long processTime = System.currentTimeMillis();  
         //int MAX_THREAD = 110; 
         //ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD); //use this line for ES extraction
@@ -318,6 +328,10 @@ public class NTISCombiner
         {
         	totalCount = getResultSetSize(rs); 
         	System.out.println("epoch="+processTime+" database=NTIS totalCount="+totalCount);
+        	if(this.propertyFileName!=null)
+        	{
+        		kafka = new KafkaService(processTime+"_ntis_"+loadNumber, this.propertyFileName);//use this line for ES extraction
+        	}
         	
 	        while (rs.next())
 	        {
@@ -420,22 +434,35 @@ public class NTISCombiner
 				{
 					rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
 				}
-	            this.writer.writeRec(rec);//Use this line for FAST extraction
-	           
-	            /**********************************************************/
-		        //following code used to test kafka by hmo@2020/02/3
-		        //this.writer.writeRec(recArray,kafka);
-		        /**********************************************************/	          
-		        //this.writer.writeRec(rec,kafka);		       
-				//use thread to run kafka message
 				
-				 //MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
-				// pool.execute(sendMessage); 
-		         //thread = new Thread(sendMessage);
-		         //thread.start();
-		         
-		         
-		         
+				if(this.propertyFileName==null)
+				{
+		            this.writer.writeRec(rec);//Use this line for FAST extraction
+				}
+				else
+				{
+		           
+		            /**********************************************************/
+			        //following code used to test kafka by hmo@2020/02/3
+			        //this.writer.writeRec(recArray,kafka);
+			        /**********************************************************/	          
+			        //this.writer.writeRec(rec,kafka);		       
+					//use thread to run kafka message
+					
+					this.writer.writeRec(rec,kafka, batchData, missedData);
+		            if(counter<batchSize)
+		            {            	
+		            	counter++;
+		            }
+		            else
+		            {        
+		            	 thread = new Thread(sendMessage);
+		            	 sendMessage= new MessageSender(kafka,batchData,missedData);		            	 
+		            	 thread.start(); 
+		            	 batchData = new ConcurrentHashMap();
+		            	 counter=0;
+		            }		
+				}
 	        }
         }
         finally
@@ -445,19 +472,19 @@ public class NTISCombiner
      	    {
      	    	System.out.println("**Got "+i+" records instead of "+totalCount );
      	    }
-        	/*
-        	if(pool!=null)
+        	if(this.propertyFileName!=null)
         	{
-	        	try 
+	        	try
 	        	{
-	        		pool.shutdown();
+	        		 thread = new Thread(sendMessage);
+	            	 sendMessage= new MessageSender(kafka,batchData,missedData);            	 
+	            	 thread.start(); 
 	        	}
 	        	catch(Exception ex) 
 	        	{
 	        		ex.printStackTrace();
-	        	}
+	        	}    
         	}
-        	*/
         	
         	if(kafka!=null)
  	        {

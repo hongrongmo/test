@@ -1,6 +1,9 @@
 package org.ei.dataloading;
 
 import org.ei.util.kafka.KafkaService;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.HashMap;
 
 
 public class MessageSender implements Runnable {
@@ -9,25 +12,19 @@ public class MessageSender implements Runnable {
   KafkaService kafka;
   String key;
   String message;
+  CombinedWriter writer;
+  Map<String,String> batchData = new ConcurrentHashMap<String,String>();   
+  Map<String,String> missedData = new ConcurrentHashMap<String,String>();
   
   public MessageSender(EVCombinedRec[] recArray, KafkaService kafka, CombinedWriter writer) {
-    this.recArray = null;
-    this.rec = null;
-    this.kafka = null;
-    this.writer = null;
-
-    
+    this.rec = null; 
     this.recArray = recArray;
     this.kafka = kafka;
     this.writer = writer;
   } 
  
-  CombinedWriter writer; 
+  
   public MessageSender(EVCombinedRec rec, KafkaService kafka, CombinedWriter writer) {
-    this.recArray = null;
-    this.rec = null;
-    this.kafka = null;
-    this.writer = null;
     this.rec = rec;
     this.kafka = kafka;
     this.writer = writer;
@@ -39,10 +36,17 @@ public class MessageSender implements Runnable {
 	  this.message=message;
   }
   
+  public MessageSender( KafkaService kafka, Map batchData, Map missedData) {
+	  this.kafka = kafka;
+	  this.batchData = batchData;
+	  this.missedData = missedData;
+  } 
+  
   public void run() {
 	  try
 	  {
-		  this.kafka.runProducer(this.message,"\""+this.key+"\"",false);
+		  //this.kafka.runProducer(this.message,"\""+this.key+"\"",0,new HashMap());
+		  this.kafka.runBatch(batchData,missedData);
 	  }
 	  catch (Exception e) 
 	  {	      

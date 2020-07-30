@@ -46,7 +46,8 @@ public class INSCorrection
     static String numericalTable="ins_master_numerical_temp";
     static String citationTable="ins_master_citation_temp";
     static String sqlldrFileName="InspecSqlLoaderFile.sh";
-
+    private static String propertyFileName = "config.properties";
+    private static int updateNumber        = 0;
     String [] ipccode = null;
 
     public static void main(String args[])
@@ -54,7 +55,7 @@ public class INSCorrection
     {
         long startTime = System.currentTimeMillis();
         String fileToBeLoaded   = null;
-        int updateNumber        = 0;
+        
         String input;
         String tableToBeTruncated = "ins_correction_temp,deleted_lookupIndex,ins_temp_backup,numericalTable";
         int iThisChar; // To read individual chars with System.in.read()
@@ -87,6 +88,11 @@ public class INSCorrection
         {
             System.out.println("IO error trying to read your input!");
             System.exit(1);
+        }
+        
+        if(args.length==11)
+        {
+        	propertyFileName=args[12];
         }
 
         if(args.length>10)
@@ -554,18 +560,15 @@ public class INSCorrection
         {
         	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 			String sqlQuery = null;
+			INSPECCombiner c = new INSPECCombiner(writer,this.propertyFileName,this.updateNumber);
             if(action.equalsIgnoreCase("update") || action.equalsIgnoreCase("extractupdate") || action.equalsIgnoreCase("ins") )
             {
                 System.out.println("Running the query...");
-                writer.setOperation("add");
-                INSPECCombiner c = new INSPECCombiner(writer);
+                writer.setOperation("add");               
 				sqlQuery = "select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber from ins_master_orig where updatenumber='"+updateNumber+"'";
                 System.out.println("updateQuery= "+	sqlQuery);
                 rs = stmt.executeQuery(sqlQuery);
-
-                c.writeRecs(rs,con);
-
-                //System.out.println("DoFastExtract: ResultSet size now is :"+rs.getFetchSize());
+                c.writeRecs(rs,con);              
 
             }
             else if(action.equalsIgnoreCase("delete") || action.equalsIgnoreCase("extractdelete"))
@@ -581,8 +584,7 @@ public class INSCorrection
             else if(action.equalsIgnoreCase("extractnumerical"))
             {
                 System.out.println("Running the query...");
-                writer.setOperation("add");
-                INSPECCombiner c = new INSPECCombiner(writer);
+                writer.setOperation("add");              
                 if(updateNumber==0)
                 {
                 	rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc, updatenumber  from ins_master_orig where m_id in (select distinct mid from ins_master_numerical where mid is not null)");

@@ -22,6 +22,7 @@ import org.ei.common.upt.*;
 
 import java.sql.*;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -54,7 +55,7 @@ public class UPTCombiner extends CombinerTimestamp {
     Hashtable hashtable = new Hashtable();
     private static final Database UPTDatabase = new UPTDatabase();
 	private String ipcdir;
-	//DiskMap ipc;
+	private static String propertyFileName = null;
 	Hashtable ipc;
 
     //HH 01/28/2015 to use same ClassNodemanager without change
@@ -400,9 +401,13 @@ public class UPTCombiner extends CombinerTimestamp {
 
         int i = 0;
         String mid = null;
-        //Thread thread=null;
         KafkaService kafka=null;
-        //kafka = new KafkaService(); //use it for ES extraction only
+        Map<String,String> batchData = new ConcurrentHashMap<String,String>();   
+        Map<String,String> missedData = new ConcurrentHashMap<String,String>();
+        int counter=0;
+        int batchSize = 0;
+        MessageSender sendMessage=null;
+        Thread thread = null;
         //int MAX_THREAD = 100; 
         //ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD);  
         long processTime = System.currentTimeMillis();
@@ -413,7 +418,10 @@ public class UPTCombiner extends CombinerTimestamp {
         	
         	totalCount = getResultSetSize(con, week,update_number);  //used for ES extraction only
     	    System.out.println("epoch="+processTime+" database=UPT totalCount="+totalCount+" for week of "+week); //used for ES extrasction only
-    	    
+    	    if(this.propertyFileName!=null)
+    	    {
+    	    	kafka = new KafkaService(processTime+"_upt_"+week, this.propertyFileName); //use it for ES extraction
+    	    }
             while (rs.next()) 
             {
             	try 
@@ -874,23 +882,41 @@ public class UPTCombiner extends CombinerTimestamp {
 	                    arrNames[0] = replaceNull(arrNames[0]);
 	
 	                    rec.put(EVCombinedRec.NOTES, arrNames);	                 
-	
-	                    writer.writeRec(rec);//use this line for FAST extraction
+	                    if(this.propertyFileName==null)
+	                    {
+	                    	writer.writeRec(rec);//use this line for FAST extraction
+	                    }
+	                    else
+	                    {
 	                    
-	                    //use this block of code to send data to kafka server
-	                    //**********************************************************
-	        	        //following code used to test kafka by hmo@2020/01/30
-	        	        //this.writer.writeRec(recArray,kafka);
-	        	        //**********************************************************
-	                    
-	        	        //writer.writeRec(rec,kafka);
-	        	       
-	                    //use thread to run kafka message
-	                    
-	                    //MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
-	                    //pool.execute(sendMessage);
-	       	         	//thread = new Thread(sendMessage);
-	       	         	//thread.start();
+		                    //use this block of code to send data to kafka server
+		                    //**********************************************************
+		        	        //following code used to test kafka by hmo@2020/01/30
+		        	        //this.writer.writeRec(recArray,kafka);
+		        	        //**********************************************************	                    
+		        	        //writer.writeRec(rec,kafka);//use this line for ES extraction
+		        	       
+		                    //use thread to run kafka message
+		                    this.writer.writeRec(rec,kafka, batchData, missedData);
+		                    if(counter<batchSize)
+		                    {            	
+		                    	counter++;
+		                    }
+		                    else
+		                    { 
+		                    	/*
+		                    	 thread = new Thread(sendMessage);
+		                    	 sendMessage= new MessageSender(kafka,batchData,missedData);	                    	 
+		                    	 thread.start(); 
+		                    	 batchData = new ConcurrentHashMap();
+		                    	 counter=0;
+		                    	 */
+		                    	 kafka.runBatch(batchData,missedData);
+		                    	 batchData = new ConcurrentHashMap();
+		                    	 counter=0;
+		                    }
+		                    
+	                    }
 	       	         	
 	       	         	
 	       	         	
@@ -920,20 +946,19 @@ public class UPTCombiner extends CombinerTimestamp {
 			        e.printStackTrace();
 			    }
 			}
-			
-			/*
-			if(pool !=null) 
+			if(this.propertyFileName!=null)
 			{
-				try 
-	        	{
-	        		pool.shutdown();
-	        	}
-	        	catch(Exception ex) 
-	        	{
-	        		ex.printStackTrace();
-	        	}
+				try
+		    	{
+		    		 thread = new Thread(sendMessage);
+		        	 sendMessage= new MessageSender(kafka,batchData,missedData);
+		        	 thread.start(); 
+		    	}
+		    	catch(Exception ex) 
+		    	{
+		    		ex.printStackTrace();
+		    	}  
 			}
-			*/
 			
         	if(kafka!=null)
  	        {
@@ -1934,8 +1959,27 @@ public class UPTCombiner extends CombinerTimestamp {
         String operation = args[6];
         Combiner.TABLENAME = args[7];
         String environment = args[8].toLowerCase();
-        if(args.length==10)
-         timestamp = Long.parseLong(args[9]);
+             
+        if(args.length==11)  
+        {
+        	timestamp = Long.parseLong(args[9]);
+        	propertyFileName=args[10];
+    		System.out.println("propertyFileName="+propertyFileName); 
+        }
+        else if(args.length==10)  
+        {
+        	if(args[9].equals(args[4]))
+        	{
+        		timestamp = Long.parseLong(args[9]);
+        	}
+        	else
+        	{
+        		propertyFileName=args[9];
+        		System.out.println("propertyFileName="+propertyFileName); 
+        	}
+          	
+        }
+              	
 
         System.out.println("Table Name=" + args[7]);
         System.out.println("LoadNumber=" + loadNumber);

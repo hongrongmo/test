@@ -3,8 +3,11 @@ package org.ei.dataloading.cbnb.loadtime;
 import java.io.ByteArrayInputStream;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.Map;
 
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
@@ -22,7 +25,9 @@ public class CBNBCombiner extends Combiner
     private int exitNumber;
 
     private static String tablename;
-
+    private static int loadNumber =0;
+    private static String propertyFileName;
+    
     public static void main(String args[]) throws Exception
     {
 
@@ -30,14 +35,18 @@ public class CBNBCombiner extends Combiner
         String driver = args[1];
         String username = args[2];
         String password = args[3];
-        int loadNumber = Integer.parseInt(args[4]);
+        loadNumber = Integer.parseInt(args[4]);
         int recsPerbatch = Integer.parseInt(args[5]);
         String operation = args[6];
         tablename = args[7];
         String environment = args[8].toLowerCase();
-        Combiner.TABLENAME = tablename;
-       
+        Combiner.TABLENAME = tablename;       
         System.out.println(Combiner.TABLENAME);
+        
+        if(args.length>9)
+        {
+        	propertyFileName=args[9];
+        }
 
         CombinedWriter writer = new CombinedXMLWriter(recsPerbatch, loadNumber, "cbn");
         writer.setOperation(operation);
@@ -217,16 +226,23 @@ public class CBNBCombiner extends Combiner
     {
         int i = 0;
         KafkaService kafka=null;
-        //kafka = new KafkaService(); //use it for ES extraction only
-        //int MAX_THREAD = 110; 
-        //ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD);  
-        //Thread thread =null;
+        Map<String,String> batchData = new ConcurrentHashMap<String,String>();   
+        Map<String,String> missedData = new ConcurrentHashMap<String,String>();
+        int counter=0;
+        int batchSize = 0;
+        MessageSender sendMessage=null;
+        Thread thread =null;
         long processTime = System.currentTimeMillis();
     	
     	
         try
         {
-        	int totalCount = getResultSetSize(rs); 
+        	int totalCount = getResultSetSize(rs);
+        	if(this.propertyFileName!=null)
+        	{
+        		kafka = new KafkaService(processTime+"_CBNB_"+this.loadNumber, this.propertyFileName);
+        	}
+        	
         	System.out.println("epoch="+processTime+" database=CBNB totalCount="+totalCount);
         	
 	        while (rs.next())
@@ -402,26 +418,38 @@ public class CBNBCombiner extends Combiner
 		                    rec.put(EVCombinedRec.PUBLISHER_NAME, prepareMulti(rs.getString("pbr")));
 		                }		      
 		                
-		                this.writer.writeRec(rec); //this is used for FAST extraction
-		                
-		                /**********************************************************/
-		    	        //following code used to test kafka by hmo@2020/02/3
-		    	        //this.writer.writeRec(recArray,kafka);
-		    	        /**********************************************************/
-		                
-		    	        //this.writer.writeRec(rec,kafka);		    	        
+		                if(this.propertyFileName==null)
+		                {
+		                	this.writer.writeRec(rec); //this is used for FAST extraction
+		                }
+		                else
+		                {
+			                /**********************************************************/
+			    	        //following code used to test kafka by hmo@2020/02/3
+			    	        //this.writer.writeRec(recArray,kafka);
+			    	        /**********************************************************/      
+			    	        //this.writer.writeRec(rec,kafka);	
+			                
+			                this.writer.writeRec(rec,kafka, batchData, missedData);
+				            if(counter<batchSize)
+				            {            	
+				            	counter++;
+				            }
+				            else
+				            {        
+				            	 thread = new Thread(sendMessage);
+				            	 sendMessage= new MessageSender(kafka,batchData,missedData);		            	 
+				            	 thread.start(); 
+				            	 batchData = new ConcurrentHashMap();
+				            	 counter=0;
+				            }
+		                }
 		            }
 		            else
 		            {
 		            	System.out.println(rs.getString("pyr")+" YEAR for record "+rs.getString("abn")+" is not good");
 		            }
-	            }
-	            catch(IllegalStateException ei)
-	            {
-	            	System.out.println("reach here before thread is done");
-	            	kafka = new KafkaService();
-	            	this.writer.writeRec(rec,kafka);
-	            }
+	            }           
 	            catch(Exception e)
 	            {
 	            	System.out.println("why am I here");
@@ -432,12 +460,25 @@ public class CBNBCombiner extends Combiner
         }
         finally
         { 
+        	if(this.propertyFileName!=null)
+        	{
+	        	try
+	        	{
+	        		 thread = new Thread(sendMessage);
+	            	 sendMessage= new MessageSender(kafka,batchData,missedData);            	 
+	            	 thread.start(); 
+	        	}
+	        	catch(Exception ex) 
+	        	{
+	        		ex.printStackTrace();
+	        	}    
+        	}
         	
         	if(kafka!=null)
  	        {
         		try 
             	{
-        			kafka.close();
+        			kafka.close(missedData);
             	}
             	catch(Exception ex) 
             	{
