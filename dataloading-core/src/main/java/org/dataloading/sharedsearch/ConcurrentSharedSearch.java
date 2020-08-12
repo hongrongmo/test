@@ -14,6 +14,18 @@ public class ConcurrentSharedSearch implements Runnable{
 	BufferedWriter bw;
 	Logger logger;
 	String midReturn;
+	boolean isFacet;
+	
+	public ConcurrentSharedSearch(String thread, String searchField, SharedSearchSearch sharedSearch, BufferedWriter bw, Logger logger, boolean isFacet) {
+		this.thread = thread;
+		this.searchField = searchField;
+		this.sharedSearch = sharedSearch;
+		this.bw = bw;
+		this.logger = logger;
+		this.isFacet = isFacet;
+		
+	}
+	
 	
 	public ConcurrentSharedSearch(String thread, String value, String searchField, SharedSearchSearch sharedSearch, BufferedWriter bw, Logger logger, String midReturn) {
 		this.thread = thread;
@@ -28,12 +40,14 @@ public class ConcurrentSharedSearch implements Runnable{
 	public void run() {
 		
 		String query = "";
-		if(midReturn.equalsIgnoreCase("none"))
-			query = sharedSearch.buildESQuery(value,searchField);
+		if(isFacet)
+			query = sharedSearch.buildESQueryFacet(value,searchField,"");
+		else if(midReturn.equalsIgnoreCase("none"))
+			query = sharedSearch.buildESQuery(value,searchField);   // for individual auid search
 		else if(midReturn.equalsIgnoreCase("mid"))
 			query = sharedSearch.buildESQueryWithMIDReturn(value,searchField);
 		
-		sharedSearch.runESQuery(value, query, bw, logger);
+		sharedSearch.runESQuery(value, query, bw);
 		
 	}
 

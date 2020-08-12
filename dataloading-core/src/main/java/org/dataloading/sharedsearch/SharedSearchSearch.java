@@ -46,23 +46,30 @@ Response: {  "totalResultsCount" : 24,  "hits" : [ ],  "searchProduct" : "engine
 public class SharedSearchSearch {
 	
 	String database;
-	String url = "https://shared-search-service-api.cert.scopussearch.net/document/v1/query/result";
-	
-	public SharedSearchSearch(String sharedSearchUrl, String database)
+	//String url = "https://shared-search-service-api.cert.scopussearch.net/document/v1/query/result";   //Kong doc search
+	String url = "https://shared-search-service-api.cert.scopussearch.net/sharedsearch/document/facets";	// facet search
+	Logger logger;
+	public SharedSearchSearch(String sharedSearchUrl, String database, Logger logger)
 	{
 		this.url = sharedSearchUrl;
 		this.database = database;
-		
+		this.logger = logger;
 	}
-	public void runESQuery(String value, String query, BufferedWriter bw, Logger logger) {
+
+	
+	
+	public String runESQuery(String value, String query, BufferedWriter bw) {
 		
 		//String encodedQuery;
 		URL urlObject;
+		String result = null;
 		try
 		{
 			//a. encode query
 			//encodedQuery = URLEncoder.encode(query, StandardCharsets.UTF_8);
 			//System.out.println("query: " + query);		// only for debugging
+			
+			long startTime = System.currentTimeMillis();
 			
 			
 			urlObject = new URL(url);
@@ -72,11 +79,14 @@ public class SharedSearchSearch {
 			httpCon.setRequestProperty("x-els-diagnostics", "false");
 			httpCon.setRequestProperty("Content-Type", "application/json");
 			httpCon.setDoOutput(true);
+			logger.info("before outputstreamwriter....");
 			OutputStreamWriter writer = new OutputStreamWriter(httpCon.getOutputStream());
+			logger.info("after outputstreamwriter....");
 			writer.write(query);
 			writer.close();
 			int responseCode = httpCon.getResponseCode();
 			
+			logger.info("responseCode: " + responseCode);
 			// Only read response if connection was successful
 			if(responseCode == HttpURLConnection.HTTP_OK)
 			{
@@ -95,28 +105,86 @@ public class SharedSearchSearch {
 				// close stream
 				in.close();
 				
-				// process response and fetch HitCount from result
-				processResponse(value, response.toString(), bw);
+				long finishTime = System.currentTimeMillis();
+				System.out.println("Time to runQuery: " + (finishTime - startTime));
 				
+				// process response and fetch HitCount from result
+				if(value != null && !(value.isEmpty()))
+					processResponse(value, response.toString(), bw);
+				else
+				{
+					logger.info("ProcessResponse start.....");
+					result = processFacetResponse(response.toString(), bw);
+					logger.info("ProcessResponse finish.....");
+				}
+					
+				
+				finishTime = System.currentTimeMillis() - finishTime;
+				System.out.println("Time to processResponse: " + finishTime);
 			}
 			else
 			{
-				System.out.println("Response Code: " + responseCode);
+				logger.error("Response Code: " + responseCode);
 				byte[] responseContents = httpCon.getInputStream().readAllBytes();
-				System.out.println("sharedsearch response: " + Arrays.toString(responseContents));
-				System.out.println("POST request did not work for ESQuery: " + query);
+				logger.error("sharedsearch response: " + Arrays.toString(responseContents));
+				logger.error("POST request did not work for ESQuery: " + query);
+				result = "";
 			}
 		}
 		catch(Exception e)
 		{
-			System.out.println("Exception runing ES Query!!!");
-			System.out.println(e.getMessage());
-			logger.info(query);
+			logger.error("Exception runing ES Query!!!");
+			logger.error(e.getMessage());
+			logger.error(query);
+			result = "";
 			e.printStackTrace();
+			
+
 		}
+		
+		return result;
+			
 		
 	}
 
+	private String processFacetResponse(String response, BufferedWriter bw) throws ParseException, IOException {
+		String after = "";
+		String count = null;
+
+		if (!(response.toString().isEmpty())) {
+			JSONParser parser = new JSONParser();
+			JSONObject json = (JSONObject) parser.parse(response);
+			JSONArray facetResults = (JSONArray) json.get("facetResults");
+			if (!facetResults.isEmpty()) {
+				@SuppressWarnings("unchecked")
+				ListIterator<JSONObject> facetItr = facetResults.listIterator();
+				if (facetItr != null) {
+					JSONObject att = facetItr.next();
+					after = att.get("after").toString();
+					count = att.get("count").toString();
+
+					if (att.get("facetItems") != null) {
+						JSONArray facetItems = (JSONArray) att.get("facetItems");
+						@SuppressWarnings("unchecked")
+						ListIterator<JSONObject> itr = facetItems.listIterator();
+						while (itr.hasNext()) {
+							JSONObject item = itr.next();
+							if (item.containsKey("count") && item.containsKey("value")) {
+								bw.write(item.get("value") + "\t" + item.get("count"));
+								bw.newLine();
+							}
+						}
+					}
+				}
+
+			}
+			else
+				logger.info("Fetched all IDS, no more scrolls!");
+		}
+		return after;
+
+	}
+	
 	private void processResponse(String value, String response, BufferedWriter bw) throws ParseException, IOException {
 		if(!(response.toString().isEmpty()))
 		{
@@ -133,6 +201,7 @@ public class SharedSearchSearch {
 				if(!hits.isEmpty())
 				{
 					
+					@SuppressWarnings("unchecked")
 					Iterator<JSONObject> itr = hits.iterator();
 					while(itr.hasNext())
 					{
@@ -149,6 +218,67 @@ public class SharedSearchSearch {
 		}
 		
 	}
+	
+	/**
+	 * 
+	 * @param value
+	 * @param searchField
+	 * @return
+	 * 
+	 * {
+    "facets" : [ {
+        "label" : "document count by author", 
+        "facet" : {
+            "fieldName" : "authorId",
+            "type" : "composite",
+            "includeMissing" : true
+        },
+        "resultSet" : {
+            "skip": "9942368000",
+            "amount" : 1000
+        }
+    }]
+}
+
+
+	 */
+	@SuppressWarnings("unchecked")
+	public String buildESQueryFacet(String value, String searchField, String prefix) {
+		
+		JSONObject query = new JSONObject();
+		JSONObject queryString = new JSONObject();
+		JSONArray facets = new JSONArray();
+		JSONObject mainfacet = new JSONObject();
+	
+		
+		queryString.put("queryString", "database:cpx AND authorId:" + prefix + "*");
+		
+		JSONObject facet = new JSONObject();
+		
+		facet.put("fieldName", searchField);
+		facet.put("type", "composite");
+		facet.put("includeMissing", true);
+		
+		JSONObject resultSet = new JSONObject();
+		if(value.equals("0"))
+			resultSet.put("skip", 0);		/*0 has to be numeric otherwise ShApi would return 400 RC*/
+		else
+			resultSet.put("skip",value);
+		resultSet.put("amount", 1000);
+		
+		mainfacet.put("label","document count by author");
+		mainfacet.put("facet",facet);
+		mainfacet.put("resultSet",resultSet);
+
+		facets.add(mainfacet);
+		
+		query.put("query", queryString);
+		query.put("facets",facets);
+		
+		return query.toJSONString();
+	
+			
+		}	
 
 	@SuppressWarnings("unchecked")
 	public String buildESQuery(String value, String searchField) {

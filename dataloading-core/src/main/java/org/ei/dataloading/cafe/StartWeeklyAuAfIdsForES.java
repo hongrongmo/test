@@ -24,7 +24,8 @@ public class StartWeeklyAuAfIdsForES extends Thread{
 	static String password = "";
 	/* ONLY to know current weeknumber */
 	static int weekNumber;
-	static String sharedSearchurl = "https://shared-search-service-api.cert.scopussearch.net/document/v1/query/result";
+	//static String sharedSearchurl = "https://shared-search-service-api.cert.scopussearch.net/document/v1/query/result";		//Kong url
+	static String sharedSearchurl = "https://shared-search-service-api.cert.scopussearch.net/sharedsearch/document/facets";
 	static String[] searchFields;
 	static String[] tempTables;
 	static String[] sqlldrFiles;
