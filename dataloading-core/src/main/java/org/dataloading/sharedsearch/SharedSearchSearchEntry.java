@@ -177,48 +177,58 @@ public class SharedSearchSearchEntry {
 		String after = "0";
 		logger = Logger.getLogger(SharedSearchSearchEntry.class);
 		
-		outFileName = startTime + "_" + searchField + "_es-auid-count.txt";
 		
-		try(BufferedWriter bw = new BufferedWriter(new FileWriter(outFileName)))
+		calculateIDPrefixes();
+		for(String prefix: idPrefixSet)
 		{
-			SharedSearchSearch sharedSearch = new SharedSearchSearch(sharedSearchurl, database, logger);
+			outFileName = startTime + "_" + searchField + "_" + prefix + "_count.txt";
+			try(BufferedWriter bw = new BufferedWriter(new FileWriter(outFileName)))
+			{
+				System.out.println("Start polling IDS with prefix: " + prefix);
+				SharedSearchSearch sharedSearch = new SharedSearchSearch(sharedSearchurl, database, logger);
+				
+				runProcess(after, "-1", sharedSearch, bw, prefix);
+				
+				
+				 System.out.println("quering SharedsSearch for : " + searchField + " are now complete with total# of iterations: " + counter);
+				 bw.flush();
+				 bw.close(); 
+				 
+				 finishTime = System.currentTimeMillis();
+				 System.out.println("Finish.... " + finishTime);
 			
-			runProcess(after, "-1", sharedSearch, bw);
-			
-			
-			 System.out.println("quering SharedsSearch for : " + searchField + " are now complete with total# of iterations: " + counter);
-			 bw.flush();
-			 bw.close(); 
+				 System.out.println("Total Time to fetch all : " + searchField + " " + Long.valueOf((finishTime - startTime)/1000) + " seconds");
 			 
-			 finishTime = System.currentTimeMillis();
-			 System.out.println("Finish.... " + finishTime);
-		
-			 System.out.println("Total Time to fetch all : " + searchField + " " + Long.valueOf((finishTime - startTime)/1000) + " seconds");
-		 
-			 // creating database connection
-			 init();
-			 //cleanup data to temp table
-			 cleanUpTempTables();
-			 loadData();
-		 
-		}
-		catch(IOException ex)
-		{
-			System.out.println("Exception reading from file!!!!");
-			System.out.println(ex.getMessage());
-			ex.printStackTrace();
-		}
-		catch(Exception ex)
-		{
-			System.out.println("Exception to run sharedSearch!!!!");
-			System.out.println(ex.getMessage());
-			ex.printStackTrace();
+				 /*** ONLY TEMP COMMENTED for local testing, NEED TO UNCOMMENT IN PROD **/
+				 
+				 // creating database connection
+				 init();
+				 //cleanup data to temp table
+				 cleanUpTempTables();
+				 loadData();
+				 
+			 
+			}
+			catch(IOException ex)
+			{
+				System.out.println("Exception reading from file!!!!");
+				System.out.println(ex.getMessage());
+				ex.printStackTrace();
+			}
+			catch(Exception ex)
+			{
+				System.out.println("Exception to run sharedSearch!!!!");
+				System.out.println(ex.getMessage());
+				ex.printStackTrace();
+			}
+			/* reset counter*/
+			counter = 0;
 		}
 	}
 	
 	
 	/* iterative call, can be updated for recusrive*/
-	public void runProcess(String after, String prev, SharedSearchSearch sharedSearch, BufferedWriter bw)
+	public void runProcess(String after, String prev, SharedSearchSearch sharedSearch, BufferedWriter bw, String prefix)
 	{
 		/* base case*/
 		/*
@@ -228,25 +238,18 @@ public class SharedSearchSearchEntry {
 				runProcess(after, prev, sharedSearch, bw);
 		 * else return;
 		 */
-		
-		calculateIDPrefixes();
-		
-		for(String prefix: idPrefixSet)
-		{
+
 			while(after != null && !(after.isBlank()))
 			{
 				prev = after;
 				logger.info(++counter);
 				String query = sharedSearch.buildESQueryFacet(after,searchField, prefix);
 				logger.info(query);
-				after = sharedSearch.runESQuery("", query, bw);
+				after = sharedSearch.runESQuery("", query, bw, prefix);
 				logger.info("after: " + after);
 				
 			}
-		}
-		
-		
-		
+
 	}
 	
 	/*calculate prefixes*/
@@ -340,7 +343,7 @@ public class SharedSearchSearchEntry {
 				{
 					//this.thread.sleep(1000);
 					
-					ConcurrentSharedSearch concurrentSearch = new ConcurrentSharedSearch("thread" + i, line.trim(), searchField, sharedSearch,bw, logger, midReturn);
+					ConcurrentSharedSearch concurrentSearch = new ConcurrentSharedSearch("thread" + i, line.trim(), searchField, sharedSearch,bw, logger, midReturn, "");
 					thread = new Thread(concurrentSearch);
 					threads.add(thread);
 					thread.start();

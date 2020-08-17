@@ -15,6 +15,7 @@ public class ConcurrentSharedSearch implements Runnable{
 	Logger logger;
 	String midReturn;
 	boolean isFacet;
+	String prefix = "";
 	
 	public ConcurrentSharedSearch(String thread, String searchField, SharedSearchSearch sharedSearch, BufferedWriter bw, Logger logger, boolean isFacet) {
 		this.thread = thread;
@@ -27,7 +28,7 @@ public class ConcurrentSharedSearch implements Runnable{
 	}
 	
 	
-	public ConcurrentSharedSearch(String thread, String value, String searchField, SharedSearchSearch sharedSearch, BufferedWriter bw, Logger logger, String midReturn) {
+	public ConcurrentSharedSearch(String thread, String value, String searchField, SharedSearchSearch sharedSearch, BufferedWriter bw, Logger logger, String midReturn, String prefix) {
 		this.thread = thread;
 		this.value = value;
 		this.searchField = searchField;
@@ -35,6 +36,7 @@ public class ConcurrentSharedSearch implements Runnable{
 		this.bw = bw;
 		this.logger = logger;
 		this.midReturn = midReturn;
+		this.prefix = prefix;
 	}
 	@Override
 	public void run() {
@@ -47,7 +49,7 @@ public class ConcurrentSharedSearch implements Runnable{
 		else if(midReturn.equalsIgnoreCase("mid"))
 			query = sharedSearch.buildESQueryWithMIDReturn(value,searchField);
 		
-		sharedSearch.runESQuery(value, query, bw);
+		sharedSearch.runESQuery(value, query, bw, prefix);
 		
 	}
 

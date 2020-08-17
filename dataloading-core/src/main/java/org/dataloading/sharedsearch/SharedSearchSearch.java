@@ -58,7 +58,7 @@ public class SharedSearchSearch {
 
 	
 	
-	public String runESQuery(String value, String query, BufferedWriter bw) {
+	public String runESQuery(String value, String query, BufferedWriter bw, String prefix) {
 		
 		//String encodedQuery;
 		URL urlObject;
@@ -114,7 +114,7 @@ public class SharedSearchSearch {
 				else
 				{
 					logger.info("ProcessResponse start.....");
-					result = processFacetResponse(response.toString(), bw);
+					result = processFacetResponse(response.toString(), bw, prefix);
 					logger.info("ProcessResponse finish.....");
 				}
 					
@@ -147,7 +147,7 @@ public class SharedSearchSearch {
 		
 	}
 
-	private String processFacetResponse(String response, BufferedWriter bw) throws ParseException, IOException {
+	private String processFacetResponse(String response, BufferedWriter bw, String prefix) throws ParseException, IOException {
 		String after = "";
 		String count = null;
 
@@ -160,21 +160,30 @@ public class SharedSearchSearch {
 				ListIterator<JSONObject> facetItr = facetResults.listIterator();
 				if (facetItr != null) {
 					JSONObject att = facetItr.next();
-					after = att.get("after").toString();
-					count = att.get("count").toString();
+					if(att != null && att.get("after") != null)
+					{
+						after = att.get("after").toString();
+						count = att.get("count").toString();
 
-					if (att.get("facetItems") != null) {
-						JSONArray facetItems = (JSONArray) att.get("facetItems");
-						@SuppressWarnings("unchecked")
-						ListIterator<JSONObject> itr = facetItems.listIterator();
-						while (itr.hasNext()) {
-							JSONObject item = itr.next();
-							if (item.containsKey("count") && item.containsKey("value")) {
-								bw.write(item.get("value") + "\t" + item.get("count"));
-								bw.newLine();
+						if (att.get("facetItems") != null) {
+							JSONArray facetItems = (JSONArray) att.get("facetItems");
+							@SuppressWarnings("unchecked")
+							ListIterator<JSONObject> itr = facetItems.listIterator();
+							while (itr.hasNext()) {
+								JSONObject item = itr.next();
+								if (item.containsKey("count") && item.containsKey("value")) {
+									/* As per Hawk info, only filter ids start with prefix for having right count*/
+									if(item.get("value").toString().startsWith(prefix))
+									{
+										bw.write(item.get("value") + "\t" + item.get("count"));
+										bw.newLine();
+									}
+									
+								}
 							}
 						}
 					}
+					
 				}
 
 			}
@@ -251,7 +260,7 @@ public class SharedSearchSearch {
 		JSONObject mainfacet = new JSONObject();
 	
 		
-		queryString.put("queryString", "database:cpx AND authorId:" + prefix + "*");
+		queryString.put("queryString", "database:cpx AND " + searchField + ":" + prefix + "*");
 		
 		JSONObject facet = new JSONObject();
 		
