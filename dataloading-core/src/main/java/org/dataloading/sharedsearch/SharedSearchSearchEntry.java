@@ -25,8 +25,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+import org.ei.dataloading.cafe.FetchWeeklyAuAfIdsForES;
 
 import java.lang.Runtime;
+import java.util.Set;
+import java.util.LinkedHashSet;
 
 public class SharedSearchSearchEntry {
 
@@ -45,15 +49,19 @@ public class SharedSearchSearchEntry {
 	static String sqlldrFileName;
 	Logger logger;
 	static String midReturn = "none";		//allowed values none or mid
+	static boolean isFacet = true;
 	
 	private Connection con;
 	String outFileName = "";
 	Thread thread;
 	
+	int counter = 0;
+	Set<String> idPrefixSet;
+	
 	
 	public static void main(String[] args)
 	{
-		if(args.length <10)
+		if(args.length <12)
 		{
 			System.out.println("Not enough arguments!!! Re-try with searchField and db parameters");
 			System.exit(1);
@@ -110,12 +118,37 @@ public class SharedSearchSearchEntry {
 			midReturn = args[10];
 			System.out.println("mid return? " + midReturn);
 		}
-		
+		if(args.length > 11)
+		{
+			if(args[11].matches("[0-1]"))
+			{
+				if(Integer.parseInt(args[11]) == 1)
+					isFacet = true;
+				else
+					isFacet = false;
+			}
+				
+			else
+			{
+				System.out.println("Invalid boolean value for isFacet? re-tru with true or false");
+				System.exit(1);
+			}
+		}
 		SharedSearchSearchEntry entry = new SharedSearchSearchEntry();
-		entry.startProcess();    //for standalone processing ONLY
+		if(isFacet)
+			entry.startFacetProcess();
+		else
+			entry.startProcess();    //for standalone processing ONLY
 	}
 	
-	public SharedSearchSearchEntry() {}
+	public SharedSearchSearchEntry() {
+		
+		// configure log
+		String log4jFile = System.getProperty("user.dir") + File.separator + "src" + File.separator + "resources"
+				+ File.separator + "log4j.properties";
+		PropertyConfigurator.configure(log4jFile);
+
+	}
 	/* to support calling from other Weekly CPX IDS classes */
 	public SharedSearchSearchEntry(String inFileName, String searchField, String sharedSearchurl, String database, Connection con, 
 			String tableToBeTruncated, String sqlldrFileName, Logger logger, String midReturn)
@@ -130,11 +163,116 @@ public class SharedSearchSearchEntry {
 		this.logger = logger;
 		this.midReturn = midReturn;
 	}
+	/*if searching composit Facet*/
+	
+	public void startFacetProcess() {
+		
+		SearchFields fields = new SearchFields();
+		searchField = fields.getSearchField(searchField) ;
+		idPrefixSet = new LinkedHashSet<>();
+		
+		
+		long startTime = System.currentTimeMillis();
+		long finishTime = System.currentTimeMillis();
+		String after = "0";
+		logger = Logger.getLogger(SharedSearchSearchEntry.class);
+		
+		
+		calculateIDPrefixes();
+		for(String prefix: idPrefixSet)
+		{
+			outFileName = startTime + "_" + searchField + "_" + prefix + "_count.txt";
+			try(BufferedWriter bw = new BufferedWriter(new FileWriter(outFileName)))
+			{
+				System.out.println("Start polling IDS with prefix: " + prefix);
+				SharedSearchSearch sharedSearch = new SharedSearchSearch(sharedSearchurl, database, logger);
+				
+				runProcess(after, "-1", sharedSearch, bw, prefix);
+				
+				
+				 System.out.println("quering SharedsSearch for : " + searchField + " are now complete with total# of iterations: " + counter);
+				 bw.flush();
+				 bw.close(); 
+				 
+				 finishTime = System.currentTimeMillis();
+				 System.out.println("Finish.... " + finishTime);
+			
+				 System.out.println("Total Time to fetch all : " + searchField + " " + Long.valueOf((finishTime - startTime)/1000) + " seconds");
+			 
+				 /*** ONLY TEMP COMMENTED for local testing, NEED TO UNCOMMENT IN PROD **/
+				 
+				 // creating database connection
+				 init();
+				 //cleanup data to temp table
+				 cleanUpTempTables();
+				 loadData();
+				 
+			 
+			}
+			catch(IOException ex)
+			{
+				System.out.println("Exception reading from file!!!!");
+				System.out.println(ex.getMessage());
+				ex.printStackTrace();
+			}
+			catch(Exception ex)
+			{
+				System.out.println("Exception to run sharedSearch!!!!");
+				System.out.println(ex.getMessage());
+				ex.printStackTrace();
+			}
+			/* reset counter*/
+			counter = 0;
+		}
+	}
+	
+	
+	/* iterative call, can be updated for recusrive*/
+	public void runProcess(String after, String prev, SharedSearchSearch sharedSearch, BufferedWriter bw, String prefix)
+	{
+		/* base case*/
+		/*
+		 * if(after == null || after.isEmpty() || after.equalsIgnoreCase(prev)) return;
+		 * /*
+		 * if(after != null && !after.isEmpty())
+				runProcess(after, prev, sharedSearch, bw);
+		 * else return;
+		 */
+
+			while(after != null && !(after.isBlank()))
+			{
+				prev = after;
+				logger.info(++counter);
+				String query = sharedSearch.buildESQueryFacet(after,searchField, prefix);
+				logger.info(query);
+				after = sharedSearch.runESQuery("", query, bw, prefix);
+				logger.info("after: " + after);
+				
+			}
+
+	}
+	
+	/*calculate prefixes*/
+	public Set<String> calculateIDPrefixes()
+	{
+		
+		for(int i=0; i<10; i++)
+			for(int j=0; j<10; j++)
+			{
+				String str = i +""+ j;
+				idPrefixSet.add(str);
+			}
+		System.out.println("Id Prefix List Size: " + idPrefixSet.size());
+		return idPrefixSet;
+		
+	}
 	/* starting point, same as main*/
 	public void startProcess() {
 		
 		SearchFields fields = new SearchFields();
 		searchField = fields.getSearchField(searchField) ;
+		logger = Logger.getLogger(SharedSearchSearchEntry.class);
+		
 		try
 		{
 			readDataFromFile(searchField);
@@ -186,7 +324,7 @@ public class SharedSearchSearchEntry {
 	private void readDataFromFile(String searchField) {
 		int i=0;
 		List<Thread> threads = new ArrayList<>();
-		SharedSearchSearch sharedSearch = new SharedSearchSearch(sharedSearchurl, database);
+		SharedSearchSearch sharedSearch = new SharedSearchSearch(sharedSearchurl, database, logger);
 		
 		long startTime = System.currentTimeMillis();
 		long finishTime = System.currentTimeMillis();
@@ -205,7 +343,7 @@ public class SharedSearchSearchEntry {
 				{
 					//this.thread.sleep(1000);
 					
-					ConcurrentSharedSearch concurrentSearch = new ConcurrentSharedSearch("thread" + i, line.trim(), searchField, sharedSearch,bw, logger, midReturn);
+					ConcurrentSharedSearch concurrentSearch = new ConcurrentSharedSearch("thread" + i, line.trim(), searchField, sharedSearch,bw, logger, midReturn, "");
 					thread = new Thread(concurrentSearch);
 					threads.add(thread);
 					thread.start();

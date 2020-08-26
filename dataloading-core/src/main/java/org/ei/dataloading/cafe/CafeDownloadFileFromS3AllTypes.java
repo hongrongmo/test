@@ -564,6 +564,8 @@ public class CafeDownloadFileFromS3AllTypes {
 				cafeInventory_list = "select key,epoch from CAFE_INVENTORY where doc_type='" + doc_type + "' and key in "+
 					"(select distinct key from sns_archive where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'MON-DD-RR')='" + archive_date + "')";
 
+			System.out.println(cafeInventory_list);
+			
 			rs = stmt.executeQuery(cafeInventory_list);
 
 			process_CafeInventory(rs);
