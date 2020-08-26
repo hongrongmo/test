@@ -478,11 +478,14 @@ public class C84Combiner extends Combiner {
 			            	counter++;
 			            }
 			            else
-			            {        
+			            {    
+			            	/*
 			            	 thread = new Thread(sendMessage);
 			            	 sendMessage= new MessageSender(kafka,batchData,missedData);		            	 
 			            	 thread.start(); 
-			            	 batchData = new ConcurrentHashMap();
+			            	 */
+			            	 kafka.runBatch(batchData,missedData);
+			            	 batchData = new ConcurrentHashMap<String,String>();
 			            	 counter=0;
 			            }
 	                }
@@ -496,9 +499,12 @@ public class C84Combiner extends Combiner {
         	{
 	        	try
 	        	{
+	        		 kafka.runBatch(batchData,missedData);
+	        		 /*
 	        		 thread = new Thread(sendMessage);
 	            	 sendMessage= new MessageSender(kafka,batchData,missedData);            	 
 	            	 thread.start(); 
+	            	 */
 	        	}
 	        	catch(Exception ex) 
 	        	{

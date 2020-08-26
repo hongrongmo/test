@@ -1771,15 +1771,47 @@ public class PatentXmlReader
 						
 			out.print(DELIM);
 			
-			//MODIFIED_DATE_OF_PUBLIC
-			
 			if(singleRecord.get("MODIFIED_DATE_OF_PUBLIC")!=null)
 			{
 				out.print((String)singleRecord.get("MODIFIED_DATE_OF_PUBLIC"));
 				//System.out.println("MODIFIED_DATE_OF_PUBLIC= "+(String)singleRecord.get("MODIFIED_DATE_OF_PUBLIC"));
 			}
+			//*/ -- end of VTW project
 			
-			//*/ -- end of VTW project					
+			out.print(DELIM);
+			//DOCDB-STATUS
+			
+			if(singleRecord.get("DOCDB_STATUS")!=null)
+			{
+				out.print((String)singleRecord.get("DOCDB_STATUS"));
+				System.out.println("DOCDB_STATUS1= "+(String)singleRecord.get("DOCDB_STATUS"));
+			}
+			out.print(DELIM);
+			//LEGAL-STATUS
+			
+			if(singleRecord.get("LEGAL_STATUS")!=null)
+			{
+				out.print((String)singleRecord.get("LEGAL_STATUS"));
+				//System.out.println("LEGAL_STATUS1= "+(String)singleRecord.get("LEGAL_STATUS"));
+			}
+			out.print(DELIM);
+			//LEGAL-STATUS-DATE
+			
+			if(singleRecord.get("LEGAL_STATUS_DATE")!=null)
+			{
+				out.print((String)singleRecord.get("LEGAL_STATUS_DATE"));
+				//System.out.println("LEGAL_STATUS_DATE1= "+(String)singleRecord.get("LEGAL_STATUS_DATE"));
+			}
+			out.print(DELIM);
+			//PUBLICATION_GROUP
+			if(singleRecord.get("PUBLICATION_GROUP")!=null)
+			{
+				out.print((String)singleRecord.get("PUBLICATION_GROUP"));
+				//System.out.println("PUBLICATION_GROUP1= "+(String)singleRecord.get("PUBLICATION_GROUP"));
+			}
+			
+					
+			
 			
 			out.print("\n");
 		}
@@ -2148,6 +2180,30 @@ public class PatentXmlReader
 				record = new HashMap();
 
 				record.put("MID","upt_" + new GUID().toString());
+				
+				//following added on 8/5/2020 based on EVOPS-974
+				
+				if(rec.getAttributeValue("docdb-status")!=null)
+				{
+					record.put("DOCDB_STATUS", rec.getAttributeValue("docdb-status"));
+					//System.out.println("DOCDB_STATUS="+rec.getAttributeValue("docdb-status"));
+				}
+				
+				if(rec.getAttributeValue("status")!=null)
+				{
+					record.put("LEGAL_STATUS", rec.getAttributeValue("status"));
+					//System.out.println("LEGAL_STATUS="+rec.getAttributeValue("status"));
+				} 
+				
+				if(rec.getAttributeValue("status-date")!=null)
+				{
+					record.put("LEGAL_STATUS_DATE", rec.getAttributeValue("status-date"));
+					//System.out.println("LEGAL_STATUS_DATE="+rec.getAttributeValue("status-date"));
+					
+				} 
+				
+				//end added
+				
 				if(rec.getAttributeValue("date-produced") != null)
 				{
 					//System.out.println("DATE_PRODUCTED"+rec.getAttributeValue("date-produced"));
@@ -2305,6 +2361,15 @@ public class PatentXmlReader
 					Element publication_reference = bibliographic_data.getChild("publication-reference");
 					if(publication_reference != null)
 					{
+						//added on 8/5/2020 by hmo for EVOPS-974
+
+						if(publication_reference.getAttributeValue("publ-group")!=null)
+						{
+							record.put("PUBLICATION_GROUP", publication_reference.getAttributeValue("publ-group"));
+							//System.out.println("PUBLICATION_GROUP="+ publication_reference.getAttributeValue("publ-group"));
+						}
+						//end added
+						
 						Element pr_document_id = publication_reference.getChild("document-id");
 						if(pr_document_id != null)
 						{

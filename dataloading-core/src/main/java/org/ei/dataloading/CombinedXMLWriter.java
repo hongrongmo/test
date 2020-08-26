@@ -2045,7 +2045,7 @@ public class CombinedXMLWriter
             if(rec.getStrings(EVCombinedRec.VOLTAGE_RANGES)!=null)
             {
 	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.VOLTAGE_RANGES),"VOLTAGE_RANGES");          
-	            contentObject.put("VOLTAGE_	RANGES".toLowerCase(),elementArrayObject);
+	            contentObject.put("VOLTAGE_RANGES".toLowerCase(),elementArrayObject);
             }
             
             if(rec.getStrings(EVCombinedRec.VOLTAGE_TEXT)!=null)
@@ -3558,7 +3558,10 @@ public class CombinedXMLWriter
 		
 		s = s.trim();
 		s = perl.substitute("s/<sup>|<\\/sup>/ /g", s);
-		s = perl.substitute("s/<sub>|<\\/sub>|<inf>|<\\/inf>|<br>|<\\/br>|<br\\/>|<i>|<\\/i>|<em>|<b>|<\\/b>//g", s);			
+		s = perl.substitute("s/<sub>|<\\/sub>|<inf>|<\\/inf>|<br>|<\\/br>|<br\\/>|<i>|<\\/i>|<em>|<b>|<\\/b>|<p>|<\\/p>//g", s);	
+		s = perl.substitute("s/<span.*?>|<\\/span>|<svg:svg.*?>|<\\/svg:svg>|<svg:image.*?\\/>//g", s);  //added on 8/25/2020 to remove <span> tag		
+		
+		//s = perl.substitute("s/\\s+/ /g", s);
 		//s = Jsoup.parse(s).text();			
 		   
 		return s;

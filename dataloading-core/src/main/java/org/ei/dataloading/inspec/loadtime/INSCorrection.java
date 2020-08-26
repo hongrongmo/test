@@ -46,8 +46,8 @@ public class INSCorrection
     static String numericalTable="ins_master_numerical_temp";
     static String citationTable="ins_master_citation_temp";
     static String sqlldrFileName="InspecSqlLoaderFile.sh";
-    private static String propertyFileName = "config.properties";
-    private static int updateNumber        = 0;
+    private static String propertyFileName;
+    private static int updateNumber= 0;
     String [] ipccode = null;
 
     public static void main(String args[])
@@ -90,9 +90,9 @@ public class INSCorrection
             System.exit(1);
         }
         
-        if(args.length==11)
+        if(args.length>11)
         {
-        	propertyFileName=args[12];
+        	propertyFileName=args[11];
         }
 
         if(args.length>10)

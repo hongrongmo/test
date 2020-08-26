@@ -502,7 +502,7 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
     	
         while (rs.next())
         {       
-          ++i;
+          
           String firstGUID = "";        
           int numCoords = 1;
           int coordCount = 0;        
@@ -535,8 +535,9 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
                 
                 if (validYear(rs.getString("PUBLICATIONYEAR")))
                 { 
+                	++i;
                 	totalCount = rs.getInt("TOTALCOUNT");
-                	String processInfo = processTime+"-"+totalCount+'-'+i+'-'+rs.getString("DATABASE")+'-'+rs.getString("LOADNUMBER")+'-'+rs.getString("UPDATENUMBER");
+                	String processInfo = processTime+"-"+totalCount+"-"+i+"-"+rs.getString("DATABASE")+"-"+rs.getString("LOADNUMBER")+"-"+rs.getString("UPDATENUMBER")+"-"+week;
                 	rec.put(EVCombinedRec.PROCESS_INFO, processInfo);	          
                 	
                 	
@@ -1415,9 +1416,12 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
     	{
 	    	try
 	    	{
+	    		 kafka.runBatch(batchData,missedData);
+	    		 /*
 	    		 thread = new Thread(sendMessage);
 	        	 sendMessage= new MessageSender(kafka,batchData,missedData);
 	        	 thread.start(); 
+	        	 */
 	    	}
 	    	catch(Exception ex) 
 	    	{
@@ -1593,27 +1597,53 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
     			{
     				String[] grantS = grantA[i].split(Constants.IDDELIMITER,-1);
     				//System.out.println("GrantList "+grantS.length);
-    				if(grantS.length>1)
+    				if(grantS.length>0)
     				{
-   				
-    					if(grantS[0]!=null)
+    					String grant0=grantS[0];
+    					if(grant0!=null)
     					{
-    						grantidBuffer.append(grantS[0]);
-    						grantidBuffer.append(Constants.AUDELIMITER);
+    						if(grant0.indexOf(";")>-1)
+    						{
+    							String[] grant01 = grant0.split(";");
+    							for(int j=0;j<grant01.length;j++)
+    				    		{
+    								grantidBuffer.append(grant01[j]);
+    	    						grantidBuffer.append(Constants.AUDELIMITER);
+    				    		}
+    				    		
+    						}
+    						else
+    						{
+	    						grantidBuffer.append(grant0);
+	    						grantidBuffer.append(Constants.AUDELIMITER);
+    						}
     					}
-    					   					
-    					if(grantS[1]!=null)
+    				}
+    					
+					if(grantS.length>1)
+					{
+    					String grant1 = grantS[1];
+    					if(grant1!=null)
     					{
-    						grantidBuffer.append(grantS[1]);
-    						grantidBuffer.append(Constants.AUDELIMITER);
+    						if(grant1.indexOf(";")>-1)
+    						{
+    							String[] grant11 = grant1.split(";");
+    							for(int j=0;j<grant11.length;j++)
+    				    		{
+    								grantidBuffer.append(grant11[j]);
+    	    						grantidBuffer.append(Constants.AUDELIMITER);
+    				    		}
+    				    		
+    						}
+    						else
+    						{
+	    						grantidBuffer.append(grant1);
+	    						grantidBuffer.append(Constants.AUDELIMITER);
+    						}
     					}
     					
     				}
-    				else if(grantS.length>0)
-    				{
-    					grantidBuffer.append(grantS[0]);
-    					grantidBuffer.append(Constants.AUDELIMITER);
-    				}   				
+    				 				
     			}
     			
     			

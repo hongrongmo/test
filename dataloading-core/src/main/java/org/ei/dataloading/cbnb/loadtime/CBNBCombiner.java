@@ -467,9 +467,13 @@ public class CBNBCombiner extends Combiner
         	{
 	        	try
 	        	{
+	        		 kafka.runBatch(batchData,missedData);
+	        		/*
 	        		 thread = new Thread(sendMessage);
 	            	 sendMessage= new MessageSender(kafka,batchData,missedData);            	 
 	            	 thread.start(); 
+	            	 */
+	        		
 	        	}
 	        	catch(Exception ex) 
 	        	{

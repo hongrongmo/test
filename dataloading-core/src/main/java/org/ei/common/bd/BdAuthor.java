@@ -70,6 +70,7 @@ public class BdAuthor {
                 if (auField.equals("auid")) {
                     if (auelements[i] != null && !auelements[i].trim().equals("")) {
                         this.setAuid(auelements[i]);
+                        //System.out.println("AUID="+auelements[i]);
                     }
 
                 }
@@ -77,34 +78,41 @@ public class BdAuthor {
                 if (auField.equals("sec")) {
                     if (auelements[i] != null && !auelements[i].trim().equals("")) {
                         this.setSec(auelements[i]);
+                        //System.out.println("SEC="+auelements[i]);
                     }
 
                 }
                 if (auField.equals("surname")) {
                     if (auelements[i] != null && !auelements[i].trim().equals("")) {
                         this.setSurname(auelements[i]);
+                        //System.out.println("SURENAME="+auelements[i]);
                     }
 
                 } else if (auField.equals("givenName")) {
                     if (auelements[i] != null && !auelements[i].trim().equals("")) {
                         this.setGivenName(auelements[i]);
+                        //System.out.println("GIVENNAME="+auelements[i]);
                     }
 
                 } else if (auField.equals("indexedName")) {
                     if (auelements[i] != null && !auelements[i].trim().equals("")) {
                         this.setIndexedName(auelements[i]);
+                        //System.out.println("INDEXEDNAME="+auelements[i]);
                     }
                 } else if (auField.equals("affidStr")) {
                     if (auelements[i] != null && !auelements[i].trim().equals("")) {
                         this.setAffidString(auelements[i]);
+                        //System.out.println("AFFIDSTR="+auelements[i]);
                     }
                 } else if (auField.equals("initials")) {
                     if (auelements[i] != null && !auelements[i].trim().equals("")) {
                         this.setInitials(auelements[i]);
+                        //System.out.println("INITIALS="+auelements[i]);
                     }
                 } else if (auField.equals("eAddress")) {
                     if (auelements[i] != null && !auelements[i].trim().equals("")) {
                         this.setEaddress(auelements[i]);
+                        //System.out.println("EADDRESS="+auelements[i]);
                     }
                 }else if (auField.equals("alias")) {
                     if (auelements[i] != null && !auelements[i].trim().equals("")) {
@@ -134,13 +142,24 @@ public class BdAuthor {
         return au.toString();
     }
 
-    public String getSearchValue() {
-    	   	
-    	if ((this.surname != null) && (this.givenName != null)) {
+    public String getSearchValue() 
+    {    	   	
+    	if ((this.surname != null) && (this.givenName != null)) 
+    	{
             return (addSpecialMarkup(this.surname).concat(" ").concat(addSpecialMarkup(this.givenName)));
-        } else if (this.indexedName != null) {
+        } 
+    	else if (this.indexedName != null) 
+    	{
             return addSpecialMarkup(this.indexedName);
         }
+    	else if (this.surname != null) 
+    	{
+    		return addSpecialMarkup(this.surname);
+    	}
+    	else if (this.givenName != null) 
+    	{
+    		return addSpecialMarkup(this.givenName);
+    	}
         return null;
     }
     

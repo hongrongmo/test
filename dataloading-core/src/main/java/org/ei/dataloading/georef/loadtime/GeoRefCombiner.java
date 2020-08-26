@@ -890,9 +890,12 @@ public void writeRecs(ResultSet rs)
 	  	{
 			try
 		  	{
+				/*
 		  		 thread = new Thread(sendMessage);
 		      	 sendMessage= new MessageSender(kafka,batchData,missedData);            	 
 		      	 thread.start(); 
+		      	 */
+				kafka.runBatch(batchData,missedData);
 		  	}
 		  	catch(Exception ex) 
 		  	{

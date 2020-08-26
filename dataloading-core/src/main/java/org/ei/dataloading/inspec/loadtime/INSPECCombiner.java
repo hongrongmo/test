@@ -372,6 +372,7 @@ public class INSPECCombiner
     	    totalCount = getResultSetSize(rs); 
     	    if(this.propertyFileName!=null)
     	    {
+    	    	System.out.println("propertyFileName="+this.propertyFileName);
     	    	kafka = new KafkaService(processTime+"_ins_"+loadNumber, this.propertyFileName);
     	    }
     	    System.out.println("epoch="+processTime+" database=INS totalCount="+totalCount);
@@ -380,9 +381,7 @@ public class INSPECCombiner
 	            EVCombinedRec rec = new EVCombinedRec();
 	            ++i;
 	            String mid = rs.getString("M_ID");
-	            String abString = getStringFromClob(rs.getClob("ab"));	
-	            
-	            System.out.println("ABSTRACT="+abString);
+	            String abString = getStringFromClob(rs.getClob("ab"));		            	           
 	            
 	            String accessnumber = rs.getString("anum");
 	            String strYear ="";
@@ -869,9 +868,12 @@ public class INSPECCombiner
         	{
 	        	try
 	        	{
+	        		 kafka.runBatch(batchData,missedData);
+	        		 /*
 	        		 thread = new Thread(sendMessage);
 	            	 sendMessage= new MessageSender(kafka,batchData,missedData);            	 
 	            	 thread.start(); 
+	            	 */
 	        	}
 	        	catch(Exception ex) 
 	        	{
@@ -1086,21 +1088,18 @@ public class INSPECCombiner
         for (int i=0;i<st.length;i++)
         {
             s = st[i];
-            //System.out.println("2= "+s);
             if(s!=null && s.length() > 0)
             {
             	String[] a;
                 if(s.indexOf(Constants.IDDELIMITER) > -1)
                 {
                 	a = s.split(Constants.IDDELIMITER,-1); 
-                	//System.out.println("3-1= "+a[0]);
                 	
                 } 
                 else
                 {
                 	 a = new String[1];
                 	 a[0]=s;
-                	 //System.out.println("3-2= "+a[0]);
                 }
                
                 list.add(a);           
@@ -1133,8 +1132,7 @@ public class INSPECCombiner
           	   		String ss = sAff[j];
           	   		if(j==0 && !list.contains(ss))
           	   		{
-          	   			list.add(ss);
-          	   			//System.out.println("AFF "+i+" "+j+" "+sAff[j]);          	   			
+          	   			list.add(ss);          	   			
           	   		}
           	   		
           	   		if(j==3)
@@ -1171,11 +1169,7 @@ public class INSPECCombiner
             }
         }
         
-        /*
-        for(int k=0;k<list.size();k++) {
-        	System.out.println("AFFILIATION "+(String)list.get(k));
-        }
-		*/
+      
         return (String[])list.toArray(new String[1]);
     }
         
@@ -1197,7 +1191,6 @@ public class INSPECCombiner
                {
             	   if(j==2 || j==5 || j==6 || j==7 || j==8)
             	   {
-	            	   //System.out.println("AFFiliATIONLOCATION "+i+" "+j+" "+sAff[j]);
 	            	   list.add(sAff[j]);
             	   }
                }
@@ -1272,7 +1265,6 @@ public class INSPECCombiner
                {
             	   if(j==9)
             	   {
-	            	   //System.out.println("ORGID "+i+" "+j+" "+sAff[j]);
 	            	   list.add(sAff[j]);
             	   }
                }

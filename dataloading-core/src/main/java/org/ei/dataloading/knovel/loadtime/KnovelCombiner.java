@@ -452,33 +452,40 @@ import org.ei.dataloading.MessageSender;
 		                
 		            recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
 		            
-		            //this.writer.writeRec(recArray);//Use this line for FAST extraction
-		            
-		            /**********************************************************/
-	    	        //following code used to test kafka by hmo@2020/02/3
-	    	        //this.writer.writeRec(recArray,kafka);
-	    	        /**********************************************************/		            
-	    	        //this.writer.writeRec(recArray,kafka);
-	    	       
-		            //use thread to send kafka message
-		            
-	    	        this.writer.writeRec(rec,kafka, batchData, missedData);
-		            if(counter<batchSize)
-		            {            	
-		            	counter++;
+		            if(this.propertyFileName==null)
+		            {
+		            	this.writer.writeRec(recArray);//use this line for fast extraction
+		          
 		            }
 		            else
-		            {        
-		            	 thread = new Thread(sendMessage);
-		            	 sendMessage= new MessageSender(kafka,batchData,missedData);		            	 
-		            	 thread.start(); 
-		            	 batchData = new ConcurrentHashMap<String,String>();
-		            	 counter=0;
-		            }
-			        
-	    	        
-		          }
-		        
+		            {
+			            /**********************************************************/
+			            //following code used to test kafka by hmo@2020/01/30
+			            //this.writer.writeRec(recArray,kafka);
+			            /*********************************************************/
+			            
+			            //use this block of code for sending data to kafka
+			            
+			            this.writer.writeRec(recArray,kafka, batchData, missedData);
+			            if(counter<batchSize)
+			            {            	
+			            	counter++;
+			            }
+			            else
+			            { 	            	 
+		                	 /*
+			            	 thread = new Thread(sendMessage);
+			            	 sendMessage= new MessageSender(kafka,batchData,missedData);	  
+			            	 thread.start(); 
+			            	 */
+		                	 kafka.runBatch(batchData,missedData);
+			            	 batchData = new ConcurrentHashMap<String,String>();
+			            	 counter=0;
+			            	 
+			            }
+			            	              
+		            }                     
+		         }
 		         catch(Exception e)
 		         {
 		            System.out.println("**** ERROR Found on access number "+accessNumber+" *****");
@@ -497,9 +504,12 @@ import org.ei.dataloading.MessageSender;
 	        	
 	        	try
 	        	{
+	        		 kafka.runBatch(batchData,missedData);
+	        		 /*
 	        		 thread = new Thread(sendMessage);
 	            	 sendMessage= new MessageSender(kafka,batchData,missedData);            	 
 	            	 thread.start(); 
+	            	 */
 	        	}
 	        	catch(Exception ex) 
 	        	{
