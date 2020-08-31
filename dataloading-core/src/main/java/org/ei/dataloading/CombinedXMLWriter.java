@@ -41,6 +41,7 @@ import org.jsoup.Jsoup;
 
 import org.ei.common.*;
 import org.ei.util.kafka.*;
+import org.apache.commons.text.StringEscapeUtils;
 import org.apache.kafka.clients.producer.*;
 
 public class CombinedXMLWriter
@@ -2901,7 +2902,7 @@ public class CombinedXMLWriter
     	String output="";
     	if(input!=null)
     	{    		
-    		output=Entity.unescapeHtml(input.trim().replaceAll("\\s{2,}", " "));
+    		output=Entity.unescapeHtml(input.trim().replaceAll("\\s{2,}", " ").replaceAll("&les;", "⩽").replaceAll("&ges;", "⩾"));//"&les:" and "&ges;" are not recognize by escape api so w do it manually
     		output=removeSpecialTag(output);
     		
     	}
@@ -3904,7 +3905,8 @@ public class CombinedXMLWriter
     	CombinedXMLWriter c = new CombinedXMLWriter(1,1,"cpx");
     	//String testString = "  check   comma  space ";
     	String testString = args[0];
-    	System.out.println("before= "+testString+" after="+c.removeExtraSpace(testString));
+    	System.out.println("before= "+testString+"\n after="+c.removeExtraSpace(testString));
+    	System.out.println("after2="+StringEscapeUtils.unescapeHtml4(testString));
    	
     }
     

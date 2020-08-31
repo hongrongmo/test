@@ -40,7 +40,7 @@ import org.ei.dataloading.MessageSender;
 	    private static String currentDb;
 	    private static HashMap issnARFix = new HashMap();
 	    private List auid;
-	    private static String propertyFileName = "config.properties";
+	    private static String propertyFileName;
 	    private static int loadNumber=0;
 
 	    public static void main(String args[])
@@ -70,6 +70,7 @@ import org.ei.dataloading.MessageSender;
 	        if(args.length>9)
 	        {
 	        	propertyFileName=args[9];
+	        	System.out.println("propertyFileName="+propertyFileName);
 	        }
 	        long timestamp=0;
 
@@ -119,6 +120,12 @@ import org.ei.dataloading.MessageSender;
 	    public KnovelCombiner(CombinedWriter writer)
 	    {
 	        super(writer);
+	    }
+	    
+	    public KnovelCombiner(CombinedWriter writer, String propertyFileName)
+	    {
+	        super(writer);
+	        this.propertyFileName=propertyFileName;
 	    }
 
 	    public void writeCombinedByYearHook(Connection con,
@@ -273,7 +280,11 @@ import org.ei.dataloading.MessageSender;
 	    	
 	        try
 	        {
-	        	kafka = new KafkaService(processTime+"_"+Combiner.CURRENTDB+"_"+loadNumber, this.propertyFileName);//use this line for ES extraction
+	        	if(this.propertyFileName!=null)
+	        	{
+	        		kafka = new KafkaService(processTime+"_"+Combiner.CURRENTDB+"_"+loadNumber, this.propertyFileName);//use this line for ES extraction
+	        	}
+	        	
 		        while (rs.next())
 		        {
 		          ++i;
@@ -502,19 +513,17 @@ import org.ei.dataloading.MessageSender;
 	     	    	System.out.println("**Got "+i+" records instead of "+totalCount );
 	     	    }
 	        	
-	        	try
+	        	if(this.propertyFileName!=null)
 	        	{
-	        		 kafka.runBatch(batchData,missedData);
-	        		 /*
-	        		 thread = new Thread(sendMessage);
-	            	 sendMessage= new MessageSender(kafka,batchData,missedData);            	 
-	            	 thread.start(); 
-	            	 */
+		        	try
+		        	{
+		        		 kafka.runBatch(batchData,missedData);        		
+		        	}
+		        	catch(Exception ex) 
+		        	{
+		        		ex.printStackTrace();
+		        	}
 	        	}
-	        	catch(Exception ex) 
-	        	{
-	        		ex.printStackTrace();
-	        	}  
 	        	
             	if(kafka!=null)
      	        {
