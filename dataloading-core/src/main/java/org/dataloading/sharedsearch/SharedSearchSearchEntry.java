@@ -18,15 +18,20 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.Statement;
+import java.time.format.DateTimeFormatter;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.ei.dataloading.cafe.FetchWeeklyAuAfIdsForES;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 import java.lang.Runtime;
 import java.util.Set;
@@ -49,7 +54,7 @@ public class SharedSearchSearchEntry {
 	static String sqlldrFileName;
 	Logger logger;
 	static String midReturn = "none";		//allowed values none or mid
-	static boolean isFacet = true;
+	static String facet = null;
 	
 	private Connection con;
 	String outFileName = "";
@@ -61,7 +66,7 @@ public class SharedSearchSearchEntry {
 	
 	public static void main(String[] args)
 	{
-		if(args.length <12)
+		if(args.length <11)
 		{
 			System.out.println("Not enough arguments!!! Re-try with searchField and db parameters");
 			System.exit(1);
@@ -120,25 +125,16 @@ public class SharedSearchSearchEntry {
 		}
 		if(args.length > 11)
 		{
-			if(args[11].matches("[0-1]"))
-			{
-				if(Integer.parseInt(args[11]) == 1)
-					isFacet = true;
-				else
-					isFacet = false;
-			}
-				
-			else
-			{
-				System.out.println("Invalid boolean value for isFacet? re-tru with true or false");
-				System.exit(1);
-			}
+			facet = args[11];		
 		}
 		SharedSearchSearchEntry entry = new SharedSearchSearchEntry();
-		if(isFacet)
+		if(facet != null)
 			entry.startFacetProcess();
 		else
 			entry.startProcess();    //for standalone processing ONLY
+		
+		/* QA query for batchinfo and processInfo*/
+		//entry.startQAProcess();
 	}
 	
 	public SharedSearchSearchEntry() {
@@ -163,9 +159,13 @@ public class SharedSearchSearchEntry {
 		this.logger = logger;
 		this.midReturn = midReturn;
 	}
+	
+	
 	/*if searching composit Facet*/
 	
 	public void startFacetProcess() {
+		
+		String queryString = null;
 		
 		SearchFields fields = new SearchFields();
 		searchField = fields.getSearchField(searchField) ;
@@ -177,8 +177,13 @@ public class SharedSearchSearchEntry {
 		String after = "0";
 		logger = Logger.getLogger(SharedSearchSearchEntry.class);
 		
+		if(facet.equals("1") || facet.equals("0"))
+			calculateIDPrefixes();
+			
+		else
+			idPrefixSet.add("");
 		
-		calculateIDPrefixes();
+		
 		for(String prefix: idPrefixSet)
 		{
 			outFileName = startTime + "_" + searchField + "_" + prefix + "_count.txt";
@@ -187,7 +192,12 @@ public class SharedSearchSearchEntry {
 				System.out.println("Start polling IDS with prefix: " + prefix);
 				SharedSearchSearch sharedSearch = new SharedSearchSearch(sharedSearchurl, database, logger);
 				
-				runProcess(after, "-1", sharedSearch, bw, prefix);
+				if(facet.equals("0") || facet.equals("1"))
+					queryString = "database:" + database + " AND " + searchField + ":" + prefix + "*";
+				else if (facet.contains("-") && facet.toLowerCase().contains("to") && isValidDate(facet))
+					queryString = "database:" + database + " AND updateTime:[" + facet + "]";
+				
+				runProcess(after, sharedSearch, bw, queryString, prefix);
 				
 				
 				 System.out.println("quering SharedsSearch for : " + searchField + " are now complete with total# of iterations: " + counter);
@@ -202,12 +212,25 @@ public class SharedSearchSearchEntry {
 				 /*** ONLY TEMP COMMENTED for local testing, NEED TO UNCOMMENT IN PROD **/
 				 
 				 // creating database connection
-				 init();
-				 //cleanup data to temp table
-				 cleanUpTempTables();
-				 loadData();
+				/*
+				 * init(); //cleanup data to temp table cleanUpTempTables(); loadData(0);
+				 */
 				 
-			 
+				 //Find physical hit count by running search for each individual batchInfo
+				if (facet.contains("-") && facet.toLowerCase().contains("to") && isValidDate(facet)) {
+
+					startTime = System.currentTimeMillis();
+					sharedSearchurl = sharedSearchurl.replace("facets", "result");
+					System.out.println("Now start finding actual result hit count for each individual batchInfo:");
+					fileName = outFileName;
+					readDataFromFile(searchField);
+					finishTime = System.currentTimeMillis();
+
+					System.out.println("Total Time to fetch all : " + searchField + " "
+							+ Long.valueOf((finishTime - startTime) / 1000) + " seconds");
+					loadData(1);
+
+				} 
 			}
 			catch(IOException ex)
 			{
@@ -228,7 +251,7 @@ public class SharedSearchSearchEntry {
 	
 	
 	/* iterative call, can be updated for recusrive*/
-	public void runProcess(String after, String prev, SharedSearchSearch sharedSearch, BufferedWriter bw, String prefix)
+	public void runProcess(String after, SharedSearchSearch sharedSearch, BufferedWriter bw, String queryString, String prefix)
 	{
 		/* base case*/
 		/*
@@ -241,9 +264,9 @@ public class SharedSearchSearchEntry {
 
 			while(after != null && !(after.isBlank()))
 			{
-				prev = after;
 				logger.info(++counter);
-				String query = sharedSearch.buildESQueryFacet(after,searchField, prefix);
+				
+				String query = sharedSearch.buildESQueryFacet(after,searchField, queryString);
 				logger.info(query);
 				after = sharedSearch.runESQuery("", query, bw, prefix);
 				logger.info("after: " + after);
@@ -266,6 +289,9 @@ public class SharedSearchSearchEntry {
 		return idPrefixSet;
 		
 	}
+	
+	
+		
 	/* starting point, same as main*/
 	public void startProcess() {
 		
@@ -285,6 +311,101 @@ public class SharedSearchSearchEntry {
 			System.out.println("File: "+ fileName + " not exist");
 			ex.printStackTrace();
 		}
+	}
+	
+	/* Check data format range for QA */
+	//parse updateTime range for limiting batchinfo to this specified time Range
+		static boolean isValidDate(String input) 
+		{
+			boolean isValid = false;
+
+			if(input.toLowerCase().contains("to"))
+			{
+				String [] dateRanges = input.toLowerCase().split(" ");
+				for(String date: dateRanges)
+				{
+					if(date.contains("-"))
+					{
+						SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+						try {
+							format.parse(input);
+							isValid = true;
+						}
+						catch(ParseException e){
+							isValid = false;
+						}
+					}
+					else if(date.contains("*"))
+						isValid = true;
+					else
+						isValid = false;
+				}
+			}
+			return isValid;
+			
+		}
+
+		
+	/* QA Process*/
+	public void startQAProcess()
+	{
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-mm-dd");
+		SearchFields fields = new SearchFields();
+		searchField = fields.getSearchField(searchField);
+		Date date = new Date();
+		
+		outFileName = df.format(date) + "_QA_count.txt";
+		
+		long startTime = System.currentTimeMillis();
+		
+		if (facet.contains("-") && facet.contains("TO".toLowerCase()) && isValidDate(facet))
+		{
+			try(BufferedWriter bw = new BufferedWriter(new FileWriter(outFileName)))
+			{
+				System.out.println("Start QA process");
+				SharedSearchSearch sharedSearch = new SharedSearchSearch(sharedSearchurl, database, logger);
+				
+				String queryString = "database:" + database + " AND updateTime:[" + facet + "]";
+				
+				runProcess("0", sharedSearch, bw, queryString, "");
+				 System.out.println("quering SharedsSearch for : " + searchField + " are now complete with total# of iterations: " + counter);
+				 bw.flush();
+				 bw.close(); 
+				 
+				 long finishTime = System.currentTimeMillis();
+				 System.out.println("Finish.... " + finishTime);
+				 System.out.println("Total Time to fetch all : " + searchField + " " + Long.valueOf((finishTime - startTime)/1000) + " seconds");
+				 
+				 
+				 //Find physical hit count by running search for each individual batchInfo
+				 startTime = System.currentTimeMillis();
+				 System.out.println("Now start finding actual result hit count for each individual batchInfo:");
+				 readDataFromFile(searchField);
+				 finishTime = System.currentTimeMillis();
+				 
+				 System.out.println("Total Time to fetch all : " + searchField + " " + Long.valueOf((finishTime - startTime)/1000) + " seconds");
+				 
+			 
+			}
+			catch(IOException ex)
+			{
+				System.out.println("Exception reading from file!!!!");
+				System.out.println(ex.getMessage());
+				ex.printStackTrace();
+			}
+			catch(Exception ex)
+			{
+				System.out.println("Exception to run sharedSearch!!!!");
+				System.out.println(ex.getMessage());
+				ex.printStackTrace();
+			}
+		}
+		else
+		{
+			System.out.println("Invalid Facet!! exit the process");
+			System.exit(1);
+		}
+		
 	}
 	private void init() {
 		
@@ -324,12 +445,85 @@ public class SharedSearchSearchEntry {
 	private void readDataFromFile(String searchField) {
 		int i=0;
 		List<Thread> threads = new ArrayList<>();
+		System.out.println("shredsearchurl: " + sharedSearchurl);
 		SharedSearchSearch sharedSearch = new SharedSearchSearch(sharedSearchurl, database, logger);
 		
 		long startTime = System.currentTimeMillis();
 		long finishTime = System.currentTimeMillis();
 		
 		outFileName = startTime + "_" + searchField + "_es-auid-count.txt";
+		
+		
+		System.out.println("Start.... " + startTime);
+		
+		try(BufferedReader br = new BufferedReader(new FileReader(new File(fileName))); BufferedWriter bw = new BufferedWriter(new FileWriter(outFileName)))
+		{
+			String line;
+			while((line = br.readLine()) != null)
+			{
+				if(!(line.isEmpty()))
+				{
+					// ONLY comment temp for troubleshooting, make sure to uncomment in prod
+					
+					String[] lines = line.split("\t");
+					
+					
+					 ConcurrentSharedSearch concurrentSearch =  new ConcurrentSharedSearch("thread" + i, lines[0].trim(), searchField,sharedSearch,bw, logger, midReturn, ""); 
+					 thread = new Thread(concurrentSearch); 
+					 threads.add(thread); 
+					 thread.start();
+					 
+				}
+				i++;
+			}
+			
+			// close writer after all threads are complete
+			for(Thread thread: threads)
+				thread.join();  
+			System.out.println("Total # of threads started: " + threads.size());
+			
+			 if(thread != null && !(thread.isAlive())) 
+			 { 
+				 System.out.println("All Threads quering SharedsSearch for : " + searchField + " are now complete");
+				 bw.flush();
+				 bw.close(); 
+				 
+				 finishTime = System.currentTimeMillis();
+				 System.out.println("Finish.... " + finishTime);
+			 }
+			 System.out.println("Total Time to fetch all : " + searchField + " " + Long.valueOf((finishTime - startTime)/1000) + " seconds");
+			 
+			 // creating database connection
+			 init();
+			 //cleanup data to temp table
+			 cleanUpTempTables();
+			 loadData(0);
+			
+		}
+		catch(IOException ex)
+		{
+			System.out.println("Exception reading from file!!!!");
+			System.out.println(ex.getMessage());
+			ex.printStackTrace();
+		}
+		catch(Exception ex)
+		{
+			System.out.println("Exception to run sharedSearch!!!!");
+			System.out.println(ex.getMessage());
+			ex.printStackTrace();
+		}
+		
+	}
+
+	private void readDataFromDB(String searchField) {
+		int i=0;
+		List<Thread> threads = new ArrayList<>();
+		SharedSearchSearch sharedSearch = new SharedSearchSearch(sharedSearchurl, database, logger);
+		
+		long startTime = System.currentTimeMillis();
+		long finishTime = System.currentTimeMillis();
+		
+		outFileName = startTime + "_" + searchField + "_es_count.txt";
 		
 		
 		System.out.println("Start.... " + startTime);
@@ -372,7 +566,7 @@ public class SharedSearchSearchEntry {
 			 init();
 			 //cleanup data to temp table
 			 cleanUpTempTables();
-			 loadData();
+			 loadData(0);
 			
 		}
 		catch(IOException ex)
@@ -389,14 +583,16 @@ public class SharedSearchSearchEntry {
 		}
 		
 	}
-
+	
 	/* load data to temp tables using sqlldr */
-	private void loadData() {
+	private void loadData(int index) {
 		
+		String[] sqlldrs = sqlldrFileName.split(";");
+	
 		try
 		{
 			Runtime runTime = Runtime.getRuntime();
-			Process process = runTime.exec("./" + sqlldrFileName + " " + outFileName);
+			Process process = runTime.exec("./" + sqlldrs[index] + " " + outFileName);
 			int status = process.waitFor();			// wait till sqlldr is complete
 			System.out.println("Sqlldr completion status: " + status);
 			if(status == 0)

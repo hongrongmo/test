@@ -252,7 +252,7 @@ public class SharedSearchSearch {
 
 	 */
 	@SuppressWarnings("unchecked")
-	public String buildESQueryFacet(String value, String searchField, String prefix) {
+	public String buildESQueryFacet(String value, String searchField, String queryStr) {
 		
 		JSONObject query = new JSONObject();
 		JSONObject queryString = new JSONObject();
@@ -260,7 +260,7 @@ public class SharedSearchSearch {
 		JSONObject mainfacet = new JSONObject();
 	
 		
-		queryString.put("queryString", "database:cpx AND " + searchField + ":" + prefix + "*");
+		queryString.put("queryString", queryStr);
 		
 		JSONObject facet = new JSONObject();
 		

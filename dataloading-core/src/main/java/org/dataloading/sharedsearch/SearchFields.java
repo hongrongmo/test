@@ -30,5 +30,7 @@ public class SearchFields {
 	{
 		searchFields.put("auid", "authorId");
 		searchFields.put("afid","affiliationId");
+		searchFields.put("batchInfo", "batchInfo");
+		searchFields.put("updateTime", "updateTime");
 	}
 }
