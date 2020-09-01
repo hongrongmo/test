@@ -41,6 +41,7 @@ public class KnovelCorrection {
 	private static long midTime = System.currentTimeMillis();
 	private static String filename = "";
 	private static String path="";
+	 private static String propertyFileName;
 	
 	//HH 03/22/2016 bucketname
 	private static String bucketName="";
@@ -133,6 +134,15 @@ public class KnovelCorrection {
 	        	if(args[12] !=null)
 	        	{
 	        		key = args[12];
+	        	}
+	        }
+	        
+	        //added 08/28/2020 by hmo
+	        if(args.length >13)
+	        {
+	        	if(args[13] !=null)
+	        	{
+	        		propertyFileName = args[13];
 	        	}
 	        }
 
@@ -736,7 +746,7 @@ public class KnovelCorrection {
 				{
 					System.out.println("Running the query...");
 					writer.setOperation("add");
-					KnovelCombiner c = new KnovelCombiner(writer);	
+					KnovelCombiner c = new KnovelCombiner(writer,propertyFileName);	
 					if(updateNumber==1)
 					{
 						if(dbname.equalsIgnoreCase("knc") || dbname.equalsIgnoreCase("kna"))

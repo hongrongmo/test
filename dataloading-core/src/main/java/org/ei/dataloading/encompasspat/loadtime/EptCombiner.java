@@ -440,21 +440,17 @@ public class EptCombiner extends Combiner {
 		                	counter++;
 		                }
 		                else
-		                {        
+		                {
+		                	/*
 		                	 thread = new Thread(sendMessage);
 		                	 sendMessage= new MessageSender(kafka,batchData,missedData);
-		                	 //pool.execute(sendMessage); 
 		                	 thread.start(); 
-		                	 batchData = new ConcurrentHashMap();
-		                	 counter=0;
+		                	 */
+		                	 kafka.runBatch(batchData,missedData);
+			            	 batchData = new ConcurrentHashMap<String,String>();
+			            	 counter=0;		
 		                }
-	                
-		    	        //writer.writeRec(rec,kafka);	    	        	                
-		                //use thread to send kafka message	                
-		                //MessageSender sendMessage= new MessageSender(rec,kafka,this.writer);
-		                //pool.execute(sendMessage); 
-			            //thread = new Thread(sendMessage, "Thread 1");
-			            //thread.start();
+	                		    	      
 	                }
 
 	            }
@@ -467,10 +463,12 @@ public class EptCombiner extends Combiner {
         	{
 	        	try
 	        	{
+	        		/*
 	        		 thread = new Thread(sendMessage);
-	            	 sendMessage= new MessageSender(kafka,batchData,missedData);
-	            	 //pool.execute(sendMessage); 
+	            	 sendMessage= new MessageSender(kafka,batchData,missedData);	            	
 	            	 thread.start(); 
+	            	 */
+	        		kafka.runBatch(batchData,missedData);
 	        	}
 	        	catch(Exception ex) 
 	        	{

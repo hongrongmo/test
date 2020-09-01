@@ -455,10 +455,13 @@ public class NTISCombiner
 		            	counter++;
 		            }
 		            else
-		            {        
+		            {   
+		            	/*
 		            	 thread = new Thread(sendMessage);
 		            	 sendMessage= new MessageSender(kafka,batchData,missedData);		            	 
 		            	 thread.start(); 
+		            	 */
+		            	 kafka.runBatch(batchData,missedData);
 		            	 batchData = new ConcurrentHashMap();
 		            	 counter=0;
 		            }		
@@ -476,9 +479,12 @@ public class NTISCombiner
         	{
 	        	try
 	        	{
+	        		 kafka.runBatch(batchData,missedData);
+	        		 /*
 	        		 thread = new Thread(sendMessage);
 	            	 sendMessage= new MessageSender(kafka,batchData,missedData);            	 
 	            	 thread.start(); 
+	            	 */
 	        	}
 	        	catch(Exception ex) 
 	        	{

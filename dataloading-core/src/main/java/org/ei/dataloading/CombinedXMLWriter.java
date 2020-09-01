@@ -41,6 +41,7 @@ import org.jsoup.Jsoup;
 
 import org.ei.common.*;
 import org.ei.util.kafka.*;
+import org.apache.commons.text.StringEscapeUtils;
 import org.apache.kafka.clients.producer.*;
 
 public class CombinedXMLWriter
@@ -2045,7 +2046,7 @@ public class CombinedXMLWriter
             if(rec.getStrings(EVCombinedRec.VOLTAGE_RANGES)!=null)
             {
 	            elementArrayObject = formJsonArray(rec.getStrings(EVCombinedRec.VOLTAGE_RANGES),"VOLTAGE_RANGES");          
-	            contentObject.put("VOLTAGE_	RANGES".toLowerCase(),elementArrayObject);
+	            contentObject.put("VOLTAGE_RANGES".toLowerCase(),elementArrayObject);
             }
             
             if(rec.getStrings(EVCombinedRec.VOLTAGE_TEXT)!=null)
@@ -2901,7 +2902,7 @@ public class CombinedXMLWriter
     	String output="";
     	if(input!=null)
     	{    		
-    		output=Entity.unescapeHtml(input.trim().replaceAll("\\s{2,}", " "));
+    		output=Entity.unescapeHtml(input.trim().replaceAll("\\s{2,}", " ").replaceAll("&les;", "⩽").replaceAll("&ges;", "⩾"));//"&les:" and "&ges;" are not recognize by escape api so w do it manually
     		output=removeSpecialTag(output);
     		
     	}
@@ -3558,7 +3559,10 @@ public class CombinedXMLWriter
 		
 		s = s.trim();
 		s = perl.substitute("s/<sup>|<\\/sup>/ /g", s);
-		s = perl.substitute("s/<sub>|<\\/sub>|<inf>|<\\/inf>|<br>|<\\/br>|<br\\/>|<i>|<\\/i>|<em>|<b>|<\\/b>//g", s);			
+		s = perl.substitute("s/<sub>|<\\/sub>|<inf>|<\\/inf>|<br>|<\\/br>|<br\\/>|<i>|<\\/i>|<em>|<b>|<\\/b>|<p>|<\\/p>//g", s);	
+		s = perl.substitute("s/<span.*?>|<\\/span>|<svg:svg.*?>|<\\/svg:svg>|<svg:image.*?\\/>//g", s);  //added on 8/25/2020 to remove <span> tag		
+		
+		//s = perl.substitute("s/\\s+/ /g", s);
 		//s = Jsoup.parse(s).text();			
 		   
 		return s;
@@ -3901,7 +3905,8 @@ public class CombinedXMLWriter
     	CombinedXMLWriter c = new CombinedXMLWriter(1,1,"cpx");
     	//String testString = "  check   comma  space ";
     	String testString = args[0];
-    	System.out.println("before= "+testString+" after="+c.removeExtraSpace(testString));
+    	System.out.println("before= "+testString+"\n after="+c.removeExtraSpace(testString));
+    	System.out.println("after2="+StringEscapeUtils.unescapeHtml4(testString));
    	
     }
     

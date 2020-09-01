@@ -17,7 +17,6 @@ import org.ei.xml.*;
 import org.ei.dataloading.*;
 import org.ei.common.*;
 import org.ei.util.kafka.*;
-import org.ei.dataloading.MessageSender;
 
 public class IBFCombiner
     extends Combiner
@@ -105,7 +104,7 @@ public class IBFCombiner
         try
         {
 
-            stmt = con.createStatement();
+        	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             System.out.println("Running the YEAR query...");
             rs = stmt.executeQuery("select " + QUERY_FIELDS + " from " + Combiner.TABLENAME + " where seq_num is not null and nvl(pyr,substr(su,1,4)) ='" + year + "'");
             writeRecs(rs);
@@ -150,7 +149,7 @@ public class IBFCombiner
     			try
     			{
     			
-    				stmt = con.createStatement();
+    				stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
     				System.out.println("Running the query...");
     				String sqlQuery = "select * from " + Combiner.TABLENAME;
     				System.out.println(sqlQuery);
@@ -203,7 +202,7 @@ public class IBFCombiner
         try
         {
 
-            stmt = con.createStatement();
+        	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             System.out.println("Running the LOAD NUMBER query...");
             rs = stmt.executeQuery("select " + QUERY_FIELDS + " from " + Combiner.TABLENAME + " where seq_num is not null and LOAD_NUMBER = " + loadN);
             writeRecs(rs);
@@ -239,6 +238,23 @@ public class IBFCombiner
             }
         }
     }
+    
+    public static int getResultSetSize(ResultSet resultSet)
+    {
+    	    int size = -1;
+    	    try
+    	    {
+    	        resultSet.last();
+    	        size = resultSet.getRow();
+    	        resultSet.beforeFirst();
+    	    }
+    	    catch(SQLException e)
+    	    {
+    	        return size;
+    	    }
+
+    	    return size;
+    }
 
     private void writeRecs(ResultSet rs)
             throws Exception
@@ -255,7 +271,7 @@ public class IBFCombiner
         //ExecutorService pool = Executors.newFixedThreadPool(MAX_THREAD); //use this line for ES extraction
        
         long processTime = System.currentTimeMillis();
-    	int totalCount = rs.getMetaData().getColumnCount();  
+    	int totalCount = getResultSetSize(rs);
     	
         try
         {
@@ -269,6 +285,8 @@ public class IBFCombiner
 	            EVCombinedRec rec = new EVCombinedRec();
 	            ++i;
 	
+	            String processInfo = processTime+"-"+totalCount+"-"+i+"-IBF-"+this.loadNumber+"-";
+            	rec.put(EVCombinedRec.PROCESS_INFO, processInfo);	     
 	            rec.put(rec.DOCID, rs.getString("M_ID"));
 	            rec.put(rec.DATABASE, "ibf");
 	            rec.put(rec.LOAD_NUMBER, rs.getString("LOAD_NUMBER"));
@@ -541,11 +559,13 @@ public class IBFCombiner
 		            	counter++;
 		            }
 		            else
-		            {        
+		            {  
+		            	/*
 		            	 thread = new Thread(sendMessage);
 		            	 sendMessage= new MessageSender(kafka,batchData,missedData);
-		            	 //pool.execute(sendMessage); 
 		            	 thread.start(); 
+		            	 */
+		            	 kafka.runBatch(batchData,missedData);
 		            	 batchData = new ConcurrentHashMap();
 		            	 counter=0;
 		            }
@@ -559,10 +579,12 @@ public class IBFCombiner
         	{
 	        	try
 	        	{
+	        		 kafka.runBatch(batchData,missedData);
+	        		 /*
 	        		 thread = new Thread(sendMessage);
 	            	 sendMessage= new MessageSender(kafka,batchData,missedData);
-	            	 //pool.execute(sendMessage); 
 	            	 thread.start(); 
+	            	 */
 	        	}
 	        	catch(Exception ex) 
 	        	{

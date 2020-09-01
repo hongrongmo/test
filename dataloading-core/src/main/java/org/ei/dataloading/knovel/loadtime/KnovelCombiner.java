@@ -40,7 +40,7 @@ import org.ei.dataloading.MessageSender;
 	    private static String currentDb;
 	    private static HashMap issnARFix = new HashMap();
 	    private List auid;
-	    private static String propertyFileName = "config.properties";
+	    private static String propertyFileName;
 	    private static int loadNumber=0;
 
 	    public static void main(String args[])
@@ -70,6 +70,7 @@ import org.ei.dataloading.MessageSender;
 	        if(args.length>9)
 	        {
 	        	propertyFileName=args[9];
+	        	System.out.println("propertyFileName="+propertyFileName);
 	        }
 	        long timestamp=0;
 
@@ -119,6 +120,12 @@ import org.ei.dataloading.MessageSender;
 	    public KnovelCombiner(CombinedWriter writer)
 	    {
 	        super(writer);
+	    }
+	    
+	    public KnovelCombiner(CombinedWriter writer, String propertyFileName)
+	    {
+	        super(writer);
+	        this.propertyFileName=propertyFileName;
 	    }
 
 	    public void writeCombinedByYearHook(Connection con,
@@ -273,7 +280,11 @@ import org.ei.dataloading.MessageSender;
 	    	
 	        try
 	        {
-	        	kafka = new KafkaService(processTime+"_"+Combiner.CURRENTDB+"_"+loadNumber, this.propertyFileName);//use this line for ES extraction
+	        	if(this.propertyFileName!=null)
+	        	{
+	        		kafka = new KafkaService(processTime+"_"+Combiner.CURRENTDB+"_"+loadNumber, this.propertyFileName);//use this line for ES extraction
+	        	}
+	        	
 		        while (rs.next())
 		        {
 		          ++i;
@@ -452,33 +463,40 @@ import org.ei.dataloading.MessageSender;
 		                
 		            recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
 		            
-		            //this.writer.writeRec(recArray);//Use this line for FAST extraction
-		            
-		            /**********************************************************/
-	    	        //following code used to test kafka by hmo@2020/02/3
-	    	        //this.writer.writeRec(recArray,kafka);
-	    	        /**********************************************************/		            
-	    	        //this.writer.writeRec(recArray,kafka);
-	    	       
-		            //use thread to send kafka message
-		            
-	    	        this.writer.writeRec(rec,kafka, batchData, missedData);
-		            if(counter<batchSize)
-		            {            	
-		            	counter++;
+		            if(this.propertyFileName==null)
+		            {
+		            	this.writer.writeRec(recArray);//use this line for fast extraction
+		          
 		            }
 		            else
-		            {        
-		            	 thread = new Thread(sendMessage);
-		            	 sendMessage= new MessageSender(kafka,batchData,missedData);		            	 
-		            	 thread.start(); 
-		            	 batchData = new ConcurrentHashMap<String,String>();
-		            	 counter=0;
-		            }
-			        
-	    	        
-		          }
-		        
+		            {
+			            /**********************************************************/
+			            //following code used to test kafka by hmo@2020/01/30
+			            //this.writer.writeRec(recArray,kafka);
+			            /*********************************************************/
+			            
+			            //use this block of code for sending data to kafka
+			            
+			            this.writer.writeRec(recArray,kafka, batchData, missedData);
+			            if(counter<batchSize)
+			            {            	
+			            	counter++;
+			            }
+			            else
+			            { 	            	 
+		                	 /*
+			            	 thread = new Thread(sendMessage);
+			            	 sendMessage= new MessageSender(kafka,batchData,missedData);	  
+			            	 thread.start(); 
+			            	 */
+		                	 kafka.runBatch(batchData,missedData);
+			            	 batchData = new ConcurrentHashMap<String,String>();
+			            	 counter=0;
+			            	 
+			            }
+			            	              
+		            }                     
+		         }
 		         catch(Exception e)
 		         {
 		            System.out.println("**** ERROR Found on access number "+accessNumber+" *****");
@@ -495,16 +513,17 @@ import org.ei.dataloading.MessageSender;
 	     	    	System.out.println("**Got "+i+" records instead of "+totalCount );
 	     	    }
 	        	
-	        	try
+	        	if(this.propertyFileName!=null)
 	        	{
-	        		 thread = new Thread(sendMessage);
-	            	 sendMessage= new MessageSender(kafka,batchData,missedData);            	 
-	            	 thread.start(); 
+		        	try
+		        	{
+		        		 kafka.runBatch(batchData,missedData);        		
+		        	}
+		        	catch(Exception ex) 
+		        	{
+		        		ex.printStackTrace();
+		        	}
 	        	}
-	        	catch(Exception ex) 
-	        	{
-	        		ex.printStackTrace();
-	        	}  
 	        	
             	if(kafka!=null)
      	        {

@@ -436,12 +436,15 @@ public class CBNBCombiner extends Combiner
 				            	counter++;
 				            }
 				            else
-				            {        
+				            { 
+				            	/*
 				            	 thread = new Thread(sendMessage);
 				            	 sendMessage= new MessageSender(kafka,batchData,missedData);		            	 
 				            	 thread.start(); 
-				            	 batchData = new ConcurrentHashMap();
-				            	 counter=0;
+				            	 */
+				            	 kafka.runBatch(batchData,missedData);
+				            	 batchData = new ConcurrentHashMap<String,String>();
+				            	 counter=0;		
 				            }
 		                }
 		            }
@@ -464,9 +467,13 @@ public class CBNBCombiner extends Combiner
         	{
 	        	try
 	        	{
+	        		 kafka.runBatch(batchData,missedData);
+	        		/*
 	        		 thread = new Thread(sendMessage);
 	            	 sendMessage= new MessageSender(kafka,batchData,missedData);            	 
 	            	 thread.start(); 
+	            	 */
+	        		
 	        	}
 	        	catch(Exception ex) 
 	        	{

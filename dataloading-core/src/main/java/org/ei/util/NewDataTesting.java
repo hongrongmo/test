@@ -577,8 +577,8 @@ public class NewDataTesting
                          if(eid != null)
                          {
                         	 System.out.println("EID="+eid);
-                             //kafka.runProducer("{}","\""+eid+"\"",0,new HashMap());
-                        	 kafka.runProducer("{}",eid,0,new HashMap());
+                            // kafka.runProducer("{}","\""+eid.trim()+"\"",0,new HashMap());
+                        	 kafka.runProducer("{}",eid.trim(),0,new HashMap());
                             
                          }
                      }

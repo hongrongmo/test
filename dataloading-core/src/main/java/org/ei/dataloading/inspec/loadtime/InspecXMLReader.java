@@ -1122,26 +1122,10 @@ public class InspecXMLReader extends FilterReader
      	        {
      	        	aff.append(m.getChild("orgid").getTextTrim());
      	        }
-        		/*
-    	        if(m.getAttribute("rid")!=null)
-    	        {
-    	        	aff.append(m.getAttribute("rid").getValue());
-    	        }
-    	        */
+        		
         	}
 	        // end of first author affiliation
-
-	        /*
-	        if(m.getAttribute("rid")!=null)
-	        {
-	        	oneAffiliation.append(m.getAttribute("rid").getValue());
-	        }
-	        */
-	        
-	        if(m.getChild("orgid")!=null)
- 	        {
- 	        	aff.append(m.getChild("orgid").getTextTrim());
- 	        }
+	      
 	        
 	        oneAffiliation.append(Constants.IDDELIMITER);
 			if(m.getChild("cntry")!=null)
