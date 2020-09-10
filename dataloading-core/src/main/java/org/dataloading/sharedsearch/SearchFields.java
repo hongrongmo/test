@@ -14,10 +14,12 @@ import java.util.HashMap;
 public class SearchFields {
 
 	Map<String,String> searchFields = new HashMap<>();
+	Map<String,String> searchFacetFields = new HashMap<>();
 	
 	public SearchFields()
 	{
 		setupFields();
+		setupFacetFields();
 	}
 	public String getSearchField(String key)
 	{
@@ -26,11 +28,40 @@ public class SearchFields {
 		else
 			return "";
 	}
+	public String getFacetField(String key)
+	{
+		if(searchFacetFields.containsKey(key))
+			return searchFacetFields.get(key);
+		else
+			return "";
+	}
 	private void setupFields()
 	{
 		searchFields.put("auid", "authorId");
 		searchFields.put("afid","affiliationId");
-		searchFields.put("batchInfo", "batchInfo");
-		searchFields.put("updateTime", "updateTime");
+		searchFields.put("batchinfo", "batchInfo");
+		searchFields.put("updatetime", "updateTime");
+		searchFields.put("wk", "loadNumber");
+		searchFields.put("updatenumber", "updateNumber");
+		searchFields.put("ab", "abstract");
+		searchFields.put("doi", "doi");
+		searchFields.put("yr", "publicationYear");
+		searchFields.put("ti", "title");
+		searchFields.put("au", "author");
+		searchFields.put("cv", "controlledTerms");
+		searchFields.put("an", "accessionNumber");
+		searchFields.put("pi", "processInfo");
+		
+		
+	}
+	
+	private void setupFacetFields()
+	{
+		searchFacetFields.put("auid", "authorId");
+		searchFacetFields.put("afid","affiliationId");
+		searchFacetFields.put("batchinfo", "batchInfo");
+		searchFacetFields.put("db", "database");
+		
+		
 	}
 }

@@ -59,7 +59,6 @@ public class SharedSearchSearch {
 	
 	
 	public String runESQuery(String value, String query, BufferedWriter bw, String prefix) {
-		
 		//String encodedQuery;
 		URL urlObject;
 		String result = null;
@@ -124,11 +123,26 @@ public class SharedSearchSearch {
 			}
 			else
 			{
-				logger.error("Response Code: " + responseCode);
-				byte[] responseContents = httpCon.getInputStream().readAllBytes();
-				logger.error("sharedsearch response: " + Arrays.toString(responseContents));
-				logger.error("POST request did not work for ESQuery: " + query);
-				result = "";
+				try
+				{
+					logger.error("Response Code: " + responseCode);
+					byte[] responseContents = httpCon.getInputStream().readAllBytes();
+					logger.error("sharedsearch response: " + Arrays.toString(responseContents));
+					logger.error("POST request did not work for ESQuery: " + query);
+					result = "";
+				}
+				catch(IOException ex)
+				{
+					logger.info(query);
+					logger.error("httpCon getInputStream exception!!" + " HTTP Response: " + responseCode);
+					logger.error("HTTP Contents: " + httpCon.getContent().toString());
+				}
+				catch(Exception e)
+				{
+					logger.info(query);
+					logger.error(e);
+				}
+				
 			}
 		}
 		catch(Exception e)
@@ -205,8 +219,6 @@ public class SharedSearchSearch {
 			
 			synchronized(this)
 			{
-				bw.write(value + "\t" + hitCount);
-				bw.newLine();
 				if(!hits.isEmpty())
 				{
 					
@@ -214,15 +226,20 @@ public class SharedSearchSearch {
 					Iterator<JSONObject> itr = hits.iterator();
 					while(itr.hasNext())
 					{
-						String[] eidoc = itr.next().toString().replaceAll("[\"\\{\\}]+","").split(":");
-						if(eidoc.length >1)
+						String[] returnField = itr.next().toString().replaceAll("[\"\\{\\}]+","").split(":");
+						if(returnField.length >1)
+						{
+							bw.write(value + "\t" + hitCount + "\t" + returnField[1] +"\n");
+						}
 							
-							bw.write(eidoc[1] +"\n");
-						
 					}
 					
 				}
-
+				else
+				{
+					bw.write(value + "\t" + hitCount); 
+					bw.newLine();
+				}
 			}
 		}
 		
@@ -300,13 +317,13 @@ public class SharedSearchSearch {
 		query.put("query",queryString);
 		
 		JSONArray returnFields = new JSONArray();
-		returnFields.add("eidocid");
+		returnFields.add("processInfo");
 		query.put("returnFields", returnFields);
 		
 
 		JSONObject result = new JSONObject();
 		result.put("skip", 0);
-		result.put("amount", 0);
+		result.put("amount", 1);
 		query.put("resultSet", result);
 		
 		return query.toJSONString();

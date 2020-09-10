@@ -23,6 +23,7 @@ import com.amazonaws.auth.AWSCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
 import com.amazonaws.auth.EnvironmentVariableCredentialsProvider;
+import com.amazonaws.auth.InstanceProfileCredentialsProvider;
 import com.amazonaws.auth.profile.ProfileCredentialsProvider;
 import com.amazonaws.regions.Region;
 import com.amazonaws.regions.Regions;
@@ -74,7 +75,8 @@ public class Amazonsqs {
 		AWSCredentialsProvider credentials = null;
 		//BasicAWSCredentials credentials = null;		// for permission getting VTW queue properties (i.e. ApproximateNumberOfMessages)
 		try {
-			credentials = new EnvironmentVariableCredentialsProvider();   // works good for VTW queues
+			//credentials = new EnvironmentVariableCredentialsProvider();   // works good for VTW queues
+			credentials = new ProfileCredentialsProvider();
 			
 			
 		} catch (Exception e) {
@@ -122,7 +124,7 @@ public class Amazonsqs {
             "arn:aws:sns:us-east-1:814132467461:SCContentAPRFeedTopic-prod"*/
 			
 			
-			String queueName = "EVCafeIprRefeed";
+			String queueName = "EVCAFE";
 			String accountID = "230521890328";
 			
 		
@@ -159,7 +161,7 @@ public class Amazonsqs {
 			
 
 			// Receive messages
-			System.out.println("Receiving messages from VTW SQS.\n");
+			System.out.println("Receiving messages from" + queueName +" SQS.\n");
 
 			myQueueUrl = result.getQueueUrl();
 
@@ -205,7 +207,11 @@ public class Amazonsqs {
 
 							//parse SQS Message Fields& determine whether it is sent to "E-Village" message
 							//System.out.println("Message Body: " +  messageBody);
-							outWriter.write(messageBody + "\n");
+							
+							/* HH 09/09/2020 to only filter ani messages in order to identify the records with new changes reported by Armen (i.e. funding-id to funding-ids),
+							only identify the messages that are ani and delete the  ones that is apr/ipr */
+							if(messageBody.contains("sccontent-ani"))
+								outWriter.write(messageBody + "\n");
 							if(messageBody.contains("\\\"prefix\\\""))
 							{
 								System.out.println(messageBody);
