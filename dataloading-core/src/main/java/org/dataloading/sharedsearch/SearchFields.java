@@ -39,6 +39,7 @@ public class SearchFields {
 	{
 		searchFields.put("auid", "authorId");
 		searchFields.put("afid","affiliationId");
+		searchFields.put("updatetime", "updateTime");
 		searchFields.put("batchinfo", "batchInfo");
 		searchFields.put("updatetime", "updateTime");
 		searchFields.put("wk", "loadNumber");

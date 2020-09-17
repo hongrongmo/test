@@ -312,7 +312,8 @@ public class SharedSearchSearch {
 		JSONObject query = new JSONObject();
 		
 		JSONObject queryString = new JSONObject();
-		queryString.put("queryString", searchField + ":" + value + " AND database:" + database);
+		//queryString.put("queryString", searchField + ":" + value + " AND database:" + database);
+		queryString.put("queryString", searchField + ":" + value);
 		queryString.put("defaultOperator", "AND");
 		query.put("query",queryString);
 		

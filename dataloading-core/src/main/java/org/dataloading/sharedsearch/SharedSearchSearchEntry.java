@@ -70,6 +70,7 @@ public class SharedSearchSearchEntry {
 	
 	public static void main(String[] args)
 	{
+		System.out.println("args length: " + args.length);
 		if(args.length <12)
 		{
 			System.out.println("Not enough arguments!!! Re-try with searchField and db parameters");
@@ -179,30 +180,21 @@ public class SharedSearchSearchEntry {
 	/*if searching composit Facet*/
 	
 	public void startFacetProcess() {
-		
-		
-		
+
 		long startTime = System.currentTimeMillis();
 		long finishTime = System.currentTimeMillis();
 		String after = "0";
 		logger = Logger.getLogger(SharedSearchSearchEntry.class);
 			
+		//0. Since final contents will be sent as SNS message anyway, so no point to load data to oracle
 		 
-		try
-		{
-			 // creating database connection
-			  init(); 
-			  //cleanup data to temp table 
-			  cleanUpTempTables();
-			  // verify the table is physically truncated
-			  getTempTableCount();
-		}
-		catch(Exception ex)
-		{
-			logger.error("Oracle connection or Cleaning temp tables Exception occurred, exit!!");
-			logger.error(ex.getMessage());
-			//System.exit(1);			//UnComment in PROD
-		}
+		/*
+		 * try { // creating database connection init(); //cleanup data to temp table
+		 * cleanUpTempTables(); // verify the table is physically truncated
+		 * getTempTableCount(); } catch(Exception ex) { logger.
+		 * error("Oracle connection or Cleaning temp tables Exception occurred, exit!!"
+		 * ); logger.error(ex.getMessage()); //System.exit(1); //UnComment in PROD }
+		 */
 		  
 		getFacetField();
 		for(String prefix: idPrefixSet)
@@ -232,7 +224,7 @@ public class SharedSearchSearchEntry {
 				 /*** ONLY TEMP COMMENTED for local testing, NEED TO UNCOMMENT IN PROD **/
 				 
 				 // load data to table(s) 
-				  loadData(0);
+				 // loadData(0);  ONLY when need to load data to oracle, when section 0 above uncommented 
 				 
 				 
 				 /*Find physical hit count by running search for each individual batchInfo, after discussion with team we can't count on count info in processInfo as it is static count and would change for later updates/deletes
@@ -249,7 +241,7 @@ public class SharedSearchSearchEntry {
 
 					System.out.println("Total Time to fetch all : " + searchField + " "
 							+ Long.valueOf((finishTime - startTime) / 1000) + " seconds");
-					loadData(1);
+					//loadData(1);				ONLY when need to load data to oracle, when section 0 above uncommented 
 
 				} 
 			}
@@ -268,6 +260,9 @@ public class SharedSearchSearchEntry {
 			/* reset counter*/
 			counter = 0;
 		}
+		// send SNS message with final contents
+		new PublishSNS(searchField, searchValue, facetField, outFileName)
+		.dispatchMessage();
 	}
 	
 	public void startAuAfFacetProcess()
@@ -358,8 +353,8 @@ public class SharedSearchSearchEntry {
 	{
 		SearchFields fields = new SearchFields();
 
-		searchField = fields.getSearchField(searchField);
-		facetField = fields.getFacetField(facetField);
+		searchField = fields.getSearchField(searchField.toLowerCase());
+		facetField = fields.getFacetField(facetField.toLowerCase());
 		
 		idPrefixSet = new LinkedHashSet<>();
 		
@@ -381,7 +376,7 @@ public class SharedSearchSearchEntry {
 			queryString = "database:" + database + " AND " + searchField + ":" + prefix + "*";
 		/*Pulling batchInfo for time-range using updateTime*/
 		else if (searchValue.contains("-") && searchValue.toLowerCase().contains("to") &&  isValidDate(searchValue))
-			queryString = "database:" + database + " AND " + searchField + ":" + searchValue;
+			queryString = searchField + ":" + searchValue;
 		/* get facet count based on any other field search, i.e. loadNumber: 202037, though in such case need to exclude database */
 		else
 			queryString = searchField + ":" + searchValue;
@@ -663,11 +658,10 @@ public class SharedSearchSearchEntry {
 			System.out.println("Total Time to fetch all : " + searchField + " "
 					+ Long.valueOf((finishTime - startTime) / 1000) + " seconds");
 
-			// creating database connection
-			init();
-			// cleanup data to temp table
-			cleanUpTempTables();
-			loadData(0);
+			/*
+			 * // creating database connection init(); // cleanup data to temp table
+			 * cleanUpTempTables(); loadData(0);
+			 */
 
 		} catch (IOException ex) {
 			System.out.println("Exception reading from file!!!!");
