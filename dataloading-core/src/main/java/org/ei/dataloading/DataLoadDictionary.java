@@ -8,6 +8,7 @@ package org.ei.dataloading;
 import java.util.*;
 import java.util.regex.*;
 import org.apache.commons.text.StringEscapeUtils;
+import org.ei.dataloading.bd.loadtime.BdParser;
 
 
 /**
@@ -567,7 +568,11 @@ public class DataLoadDictionary
     			}
     			else if(((int) c >= 128 || (int) c < 32))
     			{
-    				//System.out.println("special char "+(int)c);
+    				if((int)c==769)
+    				{
+    					System.out.println(BdParser.accessNumberS+"\t"+xml);
+    				}
+    				
     				switch ((int) c)
     				{
     					case 30 :sb.append((char)c);break;
@@ -710,7 +715,7 @@ public class DataLoadDictionary
     					case 710 :sb.append("&circ;");break; 	//modifier letter circumflex accent
     					case 732 :sb.append("&tilde;");break; 	//small tilde
     					case 768 :sb.append("&grave;");break; 	//combining grave accent
-    					case 769 :sb.append("&aacute;");break; 	//combining acute accent
+    					case 769 :sb.append("&acute;");break; 	//combining acute accent
     					case 770 :sb.append("&circ;");break; 	//modifier letter circumflex accent
     					case 771 :sb.append("&tilde;");break; 	//small tilde
     					case 772 :sb.append("&macr;");break; 	//combining macron
@@ -1200,7 +1205,7 @@ public class DataLoadDictionary
     	
     	
     	// added by hmo to deal with multiple bype characters at 10/27/2016, 
-    	static int[]  toCodePointArray(String str) { // 
+    	public static int[]  toCodePointArray(String str) { // 
     	    int len = str.length();          // the length of str
     	    int[] acp = new int[str.codePointCount(0, len)];
     	    int j = 0;                       // an index for acp

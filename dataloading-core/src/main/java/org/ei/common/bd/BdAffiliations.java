@@ -88,7 +88,7 @@ public class BdAffiliations
 					affId.add(afid);
 					//affSearch.add(afid+Constants.GROUPDELIMITER+nextaff.getSearchValue()); //remove affid by hongrong on 08/28/2020
 					affSearch.add(nextaff.getSearchValue());
-					System.out.println("AFF"+afid+" ** "+nextaff.getSearchValue());
+					//System.out.println("AFF"+afid+" ** "+nextaff.getSearchValue());
 				}
 				else
 				{

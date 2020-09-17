@@ -1029,7 +1029,7 @@ public class BdCorrection
                 {                		               
                 	rs = stmt.executeQuery(deleteString);
 	                List deleteRecords = creatDeleteFile(rs,dbname,updateNumber);
-	                sendDeleteToKafka(deleteRecords);
+	                //sendDeleteToKafka(deleteRecords);
 	                writer.zipBatch();
 	                
                 }
@@ -1082,7 +1082,7 @@ public class BdCorrection
 	    		eid=(String)rs.get(i);
                 if(eid != null)
                 {                   
-                    kafka.runProducer("{}","\""+eid+"\"",0,new HashMap());
+                    kafka.runProducer("{}",eid,0,new HashMap());
                     System.out.println("EID="+eid);
                 }
             }
