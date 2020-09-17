@@ -7,6 +7,7 @@ import org.jdom2.*;                  //// replace svn jdom with recent jdom2
 import org.jdom2.input.*;
 import org.jdom2.output.*;
 import org.ei.util.GUID;
+import org.apache.commons.text.StringEscapeUtils;
 import org.apache.oro.text.perl.*;
 import org.apache.oro.text.regex.*;
 import org.xml.sax.InputSource;
@@ -51,6 +52,7 @@ public class BdParser
 	private Namespace xmlNamespace=Namespace.getNamespace("xml","http://www.w3.org/XML/1998/namespace");
 	private Namespace xoeNamespace=Namespace.getNamespace("xoe","http://www.elsevier.com/xml/xoe/dtd");
 	private Namespace xocsNamespace=Namespace.getNamespace("xocs","http://www.elsevier.com/xml/xocs/dtd");
+	public static String accessNumberS;
 	private int affid = 0;
 	private static Hashtable contributorRole = new Hashtable();
 	{
@@ -151,6 +153,7 @@ public class BdParser
 	public void setAccessNumber(String accessNumber)
 	{
 		this.accessNumber = accessNumber;
+		this.accessNumberS=accessNumber;
 	}
 
 	public String getAccessNumber()
@@ -1153,9 +1156,22 @@ public class BdParser
 								{
 									Element funding =(Element) fundinggroup.get(i);
 									if(funding.getChildText("funding-id",xocsNamespace)!=null)
-									{									
-										grantBuffer.append(funding.getChildText("funding-id",xocsNamespace));
+									{
+										List fundingIDgroup = funding.getChildren("funding-id",xocsNamespace);
+										StringBuffer fundingIDbuffer = new StringBuffer();
+										for(int j=0;j<fundingIDgroup.size();j++)
+										{
+											Element fundingid =(Element) fundingIDgroup.get(j);
+											fundingIDbuffer.append(fundingid.getTextTrim());
+											if(j<fundingIDgroup.size()-1)
+											{
+												fundingIDbuffer.append(",");
+											}
+										}
+										grantBuffer.append(fundingIDbuffer.toString());
+										//System.out.println("FUNDINGID="+fundingIDbuffer.toString());
 									}
+										
 									
 									grantBuffer.append(Constants.IDDELIMITER);
 									
@@ -1176,6 +1192,10 @@ public class BdParser
 									if(funding.getChildText("funding-agency-id",xocsNamespace)!=null)
 									{
 										grantBuffer.append(dictionary.mapEntity(funding.getChildText("funding-agency-id",xocsNamespace)));
+									}
+									else if(funding.getChildText("funding-agency-ids",xocsNamespace)!=null)
+									{
+										grantBuffer.append(dictionary.mapEntity(funding.getChildText("funding-agency-ids",xocsNamespace)));
 									}
 									
 									grantBuffer.append(Constants.IDDELIMITER);
@@ -4187,6 +4207,18 @@ public class BdParser
 		}		
 	}
 
+	private void outputIntoCharNumber(String input)
+	{
+		System.out.println("InputString="+input+" *** "+StringEscapeUtils.escapeHtml4(input));
+		if(input !=null)
+		{
+			 //char[] gfg = input.toCharArray(); 
+			 int[] gfg= DataLoadDictionary.toCodePointArray(input);
+		     for (int i = 0; i < gfg.length; i++) { 
+		            System.out.println(gfg[i]+" :: "+gfg[i]); 
+		     } 
+		}
+	}
 	
 	private void setAuthorAndAffs(BdAuthors ausmap,
 								  BdAffiliations affs,
@@ -4373,13 +4405,19 @@ public class BdParser
 		    Element surname = author.getChild("surname", ceNamespace);
 		    if(surname != null)
 		    {
+		    	String sureNameString = getMixData(surname.getContent());
+		    	//outputIntoCharNumber(sureNameString);	
 		        aus.setSurname(dictionary.mapEntity(getMixData(surname.getContent())));
+		    	//aus.setSurname(getMixData(surname.getContent()));
 		    }
 
 		    Element givenName = author.getChild("given-name", ceNamespace);
 		    if(givenName != null)
 		    {
+		    	String givenNameString = getMixData(givenName.getContent());
+		    	//outputIntoCharNumber(givenNameString);		
 		        aus.setGivenName(dictionary.mapEntity(getMixData(givenName.getContent())));
+		    	//aus.setGivenName(getMixData(givenName.getContent()));
 		    }
 
 		    Element suffix = author.getChild("suffix",ceNamespace);
@@ -5072,9 +5110,9 @@ public class BdParser
 			
 				//System.out.println("text1::"+text);
 
-				text= perl.substitute("s/&/&amp;/g",text);
-				text= perl.substitute("s/</&lt;/g",text);
-				text= perl.substitute("s/>/&gt;/g",text);
+				//text= perl.substitute("s/&/&amp;/g",text); 	//remove by hmo@9/16/2020
+				//text= perl.substitute("s/</&lt;/g",text);   	//remove by hmo@9/16/2020
+				//text= perl.substitute("s/>/&gt;/g",text);		//remove by hmo@9/16/2020
 				text= perl.substitute("s/\n//g",text);
 				text= perl.substitute("s/\r//g",text);
 				text= perl.substitute("s/\t//g",text);	

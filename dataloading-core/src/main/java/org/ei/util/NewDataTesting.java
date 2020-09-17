@@ -106,11 +106,14 @@ import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.index.query.QueryBuilders.*;
 import org.apache.http.client.HttpClient;
 import org.apache.http.impl.client.CloseableHttpClient;
-import org.json.JSONObject;
-import org.json.JSONArray;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 import org.json.XML;
 //import org.json.JSONArray;
 //import org.json.XML;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 import javax.json.*;
 import com.google.gson.JsonParser;
@@ -215,7 +218,7 @@ public class NewDataTesting
 		else if(action.equals("testES"))
 		{
 			System.out.println("doing testing Elastic Search Index");
-			test.testURL();
+			test.testURL(updateNumber);
 		}		
 		else if(action.equals("deleteElasticRecord"))
 		{
@@ -457,7 +460,7 @@ public class NewDataTesting
 				
 			}
 			//converting xml to json
-			JSONObject obj = XML.toJSONObject(xmlbuffer.toString());
+			org.json.JSONObject obj = XML.toJSONObject(xmlbuffer.toString());
 			Gson gson = new GsonBuilder().setPrettyPrinting().create();
 	        JsonParser jp = new JsonParser();
 	        	//JsonElement je = jp.parse(evo.build().toString());
@@ -2776,83 +2779,196 @@ public class NewDataTesting
 			
 	}
 	
-	private void testURL() throws Exception
-	{
-		// create HTTP Client
-		URL url = new URL ("https://shared-search-service-api.cert.scopussearch.net/document/v1/query/result");
-		//URL url = new URL ("https://www.google.com");
-		//HttpURLConnection con = (HttpURLConnection)url.openConnection();
-		HttpsURLConnection con = (HttpsURLConnection)url.openConnection();
- 
-		// Set the Request Method
-		con.setRequestMethod("POST");
-		//con.setRequestMethod("GET");
- 
-		// Set the Request Content-Type Header Parameter
-		con.setRequestProperty("Content-Type", "application/json");
-		// Set the Request Content-Type Header Parameter
-		con.setRequestProperty("x-els-product", "engineering_village");
-				
-		//Set Response Format Type
-		con.setRequestProperty("Accept", "application/json");
- 
-		//Ensure the Connection Will Be Used to Send Content
-		con.setDoOutput(true);
-		con.connect();
-		//Create the Request Body
-		String jsonInputString = "{\"query\":{\"queryString\":\"stress\"}, \"returnFields\":[\"eidocid\"]}";
+	public String buildESQuery(String value) 
+	{	
+		JSONObject query = new JSONObject();
+		JSONObject queryString = new JSONObject();
+		queryString.put("queryString", value);
+		queryString.put("defaultOperator", "AND");
+		query.put("query",queryString);
 		
-		try
-		{
-			
-			OutputStream os = con.getOutputStream();
-		    byte[] input = jsonInputString.getBytes("utf-8");
-		    os.write(input, 0, input.length);   
-		            
+		JSONArray returnFields = new JSONArray();
+		returnFields.add("eidocid");
+		query.put("returnFields", returnFields);
 		
-			BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream())); 
-			
-			StringBuilder response = new StringBuilder();			
-			int responseCode=con.getResponseCode();
-			
-			if(responseCode == HttpsURLConnection.HTTP_OK) 
-			{
-				String responseLine = null;
-				while ((responseLine = br.readLine()) != null) 
-				{
-				    response.append(responseLine.trim());
-				}
-				String json = response.toString();
-				//System.out.println(json);
-				JSONObject result = new JSONObject(json);
-				System.out.println("TOTAL COUNT= "+result.getInt("totalResultsCount"));
-				JSONArray hitsArray = result.getJSONArray("hits");
-				int length = hitsArray.length();
-				//loop to get all json objects from data json array
-				for(int i=0; i<length; i++) 
-				{
-				    JSONObject jObj = hitsArray.getJSONObject(i);
-				    //Toast.makeText(this, jObj.getString("Name"), Toast.LENGTH_LONG).show();
-				    System.out.println("m_id="+jObj.getString("eidocid"));
 
-				} 
-			}
-			else
-			{
-				System.out.println(responseCode);
-			}
-			
-				
-		}
-		catch(Exception e)
-		{
-			e.printStackTrace();
-		}
+		JSONObject result = new JSONObject();
+		result.put("skip", 0);
+		result.put("amount", 0);
+		query.put("resultSet", result);
 		
- 
-	
+		return query.toJSONString();
+			
 	}
 	
+	@SuppressWarnings("unchecked")
+	public String buildESQueryFacet(String value, String searchField, String prefix) {
+		
+		JSONObject query = new JSONObject();
+		JSONObject queryString = new JSONObject();
+		JSONArray facets = new JSONArray();
+		JSONObject mainfacet = new JSONObject();
+	
+		
+		queryString.put("queryString", "database:cpx AND " + searchField + ":" + prefix + "*");
+		
+		JSONObject facet = new JSONObject();
+		
+		facet.put("fieldName", searchField);
+		facet.put("type", "composite");
+		facet.put("includeMissing", true);
+		
+		JSONObject resultSet = new JSONObject();
+		if(value.equals("0"))
+			resultSet.put("skip", 0);		/*0 has to be numeric otherwise ShApi would return 400 RC*/
+		else
+			resultSet.put("skip",value);
+		resultSet.put("amount", 1000);
+		
+		mainfacet.put("label","document count by author");
+		mainfacet.put("facet",facet);
+		mainfacet.put("resultSet",resultSet);
+
+		facets.add(mainfacet);
+		
+		query.put("query", queryString);
+		query.put("facets",facets);
+		
+		return query.toJSONString();
+	
+			
+		}	
+	
+	private void testURL(String inputValue) throws Exception
+	{
+			//String encodedQuery;
+			//String esUrl = "https://shared-search-service-api.prod.scopussearch.net/document/v1/query/result";
+			//String esUrl = "https://shared-search-service-api.staging.scopussearch.net/document/v1/query/result";
+			//String esUrl = "https://shared-search-service-api.cert.scopussearch.net/sharedsearch/document/facets";
+			String esUrl = "https://shared-search-service-api.staging.scopussearch.net/sharedsearch/document/result";
+			URL urlObject;
+			String result = null;
+			String prefix ="99";
+			String query=buildESQuery(inputValue);
+			//String query=buildESQueryFacet("100","authorId",prefix);
+			System.out.println("ESQuery: " + query);
+			try
+			{
+								
+				long startTime = System.currentTimeMillis();
+								
+				urlObject = new URL(esUrl);
+				HttpURLConnection httpCon = (HttpURLConnection) urlObject.openConnection();
+				httpCon.setRequestMethod("POST");
+				httpCon.setRequestProperty("x-els-product", "engineering_village");
+				httpCon.setRequestProperty("x-els-diagnostics", "false");
+				httpCon.setRequestProperty("Content-Type", "application/json");
+				httpCon.setDoOutput(true);
+				//logger.info("before outputstreamwriter....");
+				OutputStreamWriter writer = new OutputStreamWriter(httpCon.getOutputStream());
+				//logger.info("after outputstreamwriter....");
+				writer.write(query);
+				writer.close();
+				int responseCode = httpCon.getResponseCode();
+				
+				//logger.info("responseCode: " + responseCode);
+				// Only read response if connection was successful
+				if(responseCode == HttpURLConnection.HTTP_OK)
+				{
+					BufferedReader in = new BufferedReader(new InputStreamReader(httpCon.getInputStream()));
+					String line;
+					StringBuilder response = new StringBuilder();
+					while((line = in.readLine()) != null)
+					{
+						response.append(line);
+						//System.out.println("response="+line);
+						// Response Is to big , to speedup the process only read up to hits 
+						if(line.equalsIgnoreCase("hits"))
+							break;
+					}
+					System.out.println("Response: " + response.toString());   // only for debugging
+					// close stream
+					in.close();
+					
+					long finishTime = System.currentTimeMillis();
+					System.out.println("Time to runQuery: " + (finishTime - startTime));
+					
+					// process response and fetch HitCount from result
+					
+						System.out.println("ProcessResponse start.....");
+						//result = processFacetResponse(response.toString(), prefix);
+						int totalHit = processResponse(inputValue,response.toString());
+						System.out.println("***"+inputValue + "\t" + totalHit +" ***");   // only for debugging	
+						System.out.println("ProcessResponse finish.....");
+				}
+			}
+			catch(Exception e)
+			{								
+				e.printStackTrace();			
+
+			}		
+	}
+	
+	private int processResponse(String value, String response) throws ParseException, IOException 
+	{
+		int hitCount=0;
+		if(!(response.toString().isEmpty()))
+		{
+			JSONParser parser = new JSONParser();
+			JSONObject json = (JSONObject) parser.parse(response);
+			hitCount = Integer.parseInt(json.get("totalResultsCount").toString());
+						
+		}
+		return hitCount;
+		
+	}
+
+	private String processFacetResponse(String response, String prefix) throws ParseException, IOException {
+		String after = "";
+		String count = null;
+
+		if (response!=null && response.length()>0) {
+			JSONParser parser = new JSONParser();
+			JSONObject json = (JSONObject) parser.parse(response);
+			JSONArray facetResults = (JSONArray) json.get("facetResults");
+			if (!facetResults.isEmpty()) {
+				@SuppressWarnings("unchecked")
+				ListIterator<JSONObject> facetItr = facetResults.listIterator();
+				if (facetItr != null) {
+					JSONObject att = facetItr.next();
+					if(att != null && att.get("after") != null)
+					{
+						after = att.get("after").toString();
+						count = att.get("count").toString();
+						System.out.println("after="+after+" count= "+count);
+						if (att.get("facetItems") != null) {
+							JSONArray facetItems = (JSONArray) att.get("facetItems");
+							@SuppressWarnings("unchecked")
+							ListIterator<JSONObject> itr = facetItems.listIterator();
+							while (itr.hasNext()) {
+								JSONObject item = itr.next();
+								if (item.containsKey("count") && item.containsKey("value")) {
+									/* As per Hawk info, only filter ids start with prefix for having right count*/
+									if(item.get("value").toString().startsWith(prefix))
+									{
+										System.out.println(item.get("value") + "\t" + item.get("count"));
+									
+									}
+									
+								}
+							}
+						}
+					}
+					
+				}
+
+			}
+			else
+				System.out.println("Fetched all IDS, no more scrolls!");
+		}
+		return after;
+
+	}
 	
 	 private void testSearchElasticSearch() throws Exception { 
 		 /*

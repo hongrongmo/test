@@ -358,7 +358,7 @@ public class Entity {
         etable.setProperty("&agrave;", "a");
         etable.setProperty("&aleph;", "");
         etable.setProperty("&alpha;", "");
-        etable.setProperty("&amp;", "");
+        etable.setProperty("&amp;", " ");
         etable.setProperty("&and;", "");
         etable.setProperty("&ang;", "");
         etable.setProperty("&ang90;", "");
@@ -517,7 +517,7 @@ public class Entity {
 
         etable.setProperty("&macr;", "");
         etable.setProperty("&male;", "");
-        etable.setProperty("&mdash;", "");
+        etable.setProperty("&mdash;", " ");
         etable.setProperty("&Mfr;", "M");
         etable.setProperty("&middot;", "");
         etable.setProperty("&minus;", "");

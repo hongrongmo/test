@@ -1248,7 +1248,7 @@ public class BDDocBuilder implements DocumentBuilder {
      */
     private static final Pattern accentregex = Pattern.compile("(\\w)(&\\w+;)");
 
-    private String cleanBadCharacters(String strValue) {
+    public String cleanBadCharacters(String strValue) {
 
        if(strValue != null)
        {

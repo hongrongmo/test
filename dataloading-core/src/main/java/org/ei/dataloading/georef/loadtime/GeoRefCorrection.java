@@ -1,10 +1,10 @@
 package org.ei.dataloading.georef.loadtime;
 
-import java.sql.Clob;
 import java.sql.*;
 import java.util.*;
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
+import org.dataloading.sharedsearch.SharedSearchSearchEntry;
 import org.ei.common.CVSTermBuilder;
 /*
 import org.ei.data.encompasspat.loadtime.*;
@@ -33,13 +33,19 @@ import org.ei.connectionpool.*;
 import java.text.*;
 import java.io.*;
 import java.lang.Process;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.regex.*;
 import org.ei.util.GUID;
 import org.ei.xml.Entity;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
-import java.util.Hashtable;
-import java.util.Enumeration;
+
 import org.apache.log4j.Logger;
 
 
@@ -1041,8 +1047,9 @@ public class GeoRefCorrection
 			}
 			if(accessnumber != null)
 			{
-				Thread.currentThread().sleep(250);
-				inFast = checkFast(accessnumber,"an","grf");
+				Thread.currentThread().sleep(50);
+				//inFast = checkFast(accessnumber,"an","grf"); //blocked when using ES
+				inFast = checkES(accessnumber,"accessionNumber","grf"); //switch from 
 				if(inFast<1)
 				{
 					return true;
@@ -1105,6 +1112,143 @@ public class GeoRefCorrection
 		return false;
 
 	}
+	
+	@SuppressWarnings("unchecked")
+	public String buildESQuery(String value, String searchField, String database) {
+		
+		JSONObject query = new JSONObject();
+		
+		JSONObject queryString = new JSONObject();
+		queryString.put("queryString", searchField + ":" + value + " AND database:" + database);
+		queryString.put("defaultOperator", "AND");
+		query.put("query",queryString);
+		
+		JSONArray returnFields = new JSONArray();
+		returnFields.add("eidocid");
+		query.put("returnFields", returnFields);
+		
+
+		JSONObject result = new JSONObject();
+		result.put("skip", 0);
+		result.put("amount", 0);
+		query.put("resultSet", result);
+		
+		return query.toJSONString();
+			
+	}
+	
+	
+	
+	private int checkES(String value, String searchfield,String database)
+	{
+		String esUrl = "https://shared-search-service-api.staging.scopussearch.net/sharedsearch/document/result";
+		URL urlObject;
+		String result = null;
+		int hitCount=0;
+		String query=buildESQuery(value,searchfield,database);		
+		System.out.println("ESQuery: " + query);
+		
+		try
+		{
+							
+			long startTime = System.currentTimeMillis();
+							
+			urlObject = new URL(esUrl);
+			HttpURLConnection httpCon = (HttpURLConnection) urlObject.openConnection();
+			httpCon.setRequestMethod("POST");
+			httpCon.setRequestProperty("x-els-product", "engineering_village");
+			httpCon.setRequestProperty("x-els-diagnostics", "false");
+			httpCon.setRequestProperty("Content-Type", "application/json");
+			httpCon.setDoOutput(true);
+			//logger.info("before outputstreamwriter....");
+			OutputStreamWriter writer = new OutputStreamWriter(httpCon.getOutputStream());
+			//logger.info("after outputstreamwriter....");
+			writer.write(query);
+			writer.close();
+			int responseCode = httpCon.getResponseCode();
+			
+			//logger.info("responseCode: " + responseCode);
+			// Only read response if connection was successful
+			if(responseCode == HttpURLConnection.HTTP_OK)
+			{
+				BufferedReader in = new BufferedReader(new InputStreamReader(httpCon.getInputStream()));
+				String line;
+				StringBuilder response = new StringBuilder();
+				while((line = in.readLine()) != null)
+				{
+					response.append(line);
+					
+					if(line.equalsIgnoreCase("hits"))
+						break;
+				}
+				System.out.println("Response: " + response.toString());   // only for debugging
+				// close stream
+				in.close();
+				
+				long finishTime = System.currentTimeMillis();
+				System.out.println("Time to runQuery: " + (finishTime - startTime));
+				
+				// process response and fetch HitCount from result
+				
+				
+				if(!(response.toString().isEmpty()))
+				{
+					JSONParser parser = new JSONParser();
+					JSONObject json = (JSONObject) parser.parse(response.toString());
+					hitCount = Integer.parseInt(json.get("totalResultsCount").toString());
+								
+				}
+				
+				System.out.println("***"+value + "\t" + hitCount +" ***");   // only for debugging	
+				
+			}
+		}
+		catch(Exception e)
+		{					
+			e.printStackTrace();			
+
+		}	
+		return hitCount;
+			
+	}
+
+		
+	
+
+private void processResponse(String value, String response, BufferedWriter bw) throws ParseException, IOException {
+	if(!(response.toString().isEmpty()))
+	{
+		JSONParser parser = new JSONParser();
+		JSONObject json = (JSONObject) parser.parse(response);
+		Integer hitCount = Integer.parseInt(json.get("totalResultsCount").toString());
+		//System.out.println(value + "\t" + hitCount);   // only for debugging
+		JSONArray hits = (JSONArray) json.get("hits");
+		
+		synchronized(this)
+		{
+			bw.write(value + "\t" + hitCount);
+			bw.newLine();
+			if(!hits.isEmpty())
+			{
+				
+				@SuppressWarnings("unchecked")
+				Iterator<JSONObject> itr = hits.iterator();
+				while(itr.hasNext())
+				{
+					String[] eidoc = itr.next().toString().replaceAll("[\"\\{\\}]+","").split(":");
+					if(eidoc.length >1)
+						
+						bw.write(eidoc[1] +"\n");
+						System.out.println(eidoc[1]);
+					
+				}
+				
+			}
+
+		}
+	}
+	
+}
 
 	private void addData()
 	{

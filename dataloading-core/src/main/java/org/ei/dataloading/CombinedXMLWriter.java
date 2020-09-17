@@ -19,6 +19,7 @@ import org.ei.query.base.PorterStemmer;
 import org.ei.xml.Entity;
 import org.ei.common.Constants;
 import org.ei.common.DataCleaner;
+import org.ei.data.bd.runtime.BDDocBuilder;
 
 import java.util.Date;
 import java.util.zip.*;
@@ -2897,13 +2898,21 @@ public class CombinedXMLWriter
     	}
     }
     
-    private String removeExtraSpace(String input)
-    {
+    private String removeExtraSpace(String input)    {
     	String output="";
     	if(input!=null)
-    	{    		
-    		output=Entity.unescapeHtml(input.trim().replaceAll("\\s{2,}", " ").replaceAll("&les;", "⩽").replaceAll("&ges;", "⩾"));//"&les:" and "&ges;" are not recognize by escape api so w do it manually
+    	{ 
+    		//System.out.println("INPUT0="+input);
+    		input = input.replaceAll("&mdash;", "—");
+    		//System.out.println("INPUT1="+input);
+    		input = (new BDDocBuilder()).cleanBadCharacters(input);
+    		//System.out.println("INPUT2="+input);
+    		input = input.trim().replaceAll("\\s{2,}", " ").replaceAll("&les;", "⩽").replaceAll("&ges;", "⩾");//"&les:" and "&ges;" are not recognize by escape api so w do it manually
+    		//System.out.println("INPUT3="+input);
+    		output=Entity.unescapeHtml(input);
     		output=removeSpecialTag(output);
+    		//System.out.println("INPUT4="+input);
+    	
     		
     	}
     	return output;
@@ -2996,7 +3005,8 @@ public class CombinedXMLWriter
     				
     				output[j]=output[j].replaceAll("\\s{2,}"," ");
     				
-    				output[j]=output[j].replaceAll("\\s{0,}-\\s{0,}","-");    			
+    				output[j]=output[j].replaceAll("\\s{0,}-\\s{0,}","-");   
+    				output[j]= removeExtraSpace(output[j]);
     			}
     			
     			j++;
