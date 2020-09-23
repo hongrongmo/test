@@ -15,7 +15,7 @@ import org.ei.common.*;
 import org.ei.util.GUID;
 import org.ei.dataloading.*;
 import org.ei.util.kafka.*;
-import org.ei.dataloading.MessageSender;
+import org.ei.dataloading.lookup.LookupEntry;
 
 public class CBNBCombiner extends Combiner
 {
@@ -27,6 +27,10 @@ public class CBNBCombiner extends Combiner
     private static String tablename;
     private static int loadNumber =0;
     private static String propertyFileName;
+    
+    /*HT added 09/21/2020 for lookup extraction to ES*/
+    private String action = null;
+    private LookupEntry lookupObj = null;
     
     public static void main(String args[]) throws Exception
     {
@@ -52,51 +56,72 @@ public class CBNBCombiner extends Combiner
         writer.setOperation(operation);
 
         CBNBCombiner c = new CBNBCombiner(writer);
-        if(loadNumber > 3000)
+        
+        /*TH added 09/21/2020 for ES lookup generation*/
+        for(String str: args)
         {
-                c.writeCombinedByWeekNumber(url,
-                                            driver,
-                                            username,
-                                            password,
-                                            loadNumber);
-        }
-        // extract the whole thing
-        else if(loadNumber == 0)
-        {
-            for(int yearIndex = 1980; yearIndex <= 2012; yearIndex++)
-            {
-                System.out.println("Processing year " + yearIndex + "...");
-                // create  a new writer so we can see the loadNumber/yearNumber in the filename
-                c = new CBNBCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,"cbn", environment));
-                c.writeCombinedByYear(url,
-                                    driver,
-                                    username,
-                                    password,
-                                    yearIndex);
-            }
-        }
-        else if(loadNumber == 1)
-        {          
-                c.writeCombinedByTable(url,
-                                    driver,
-                                    username,
-                                    password);
-           
-        }
-        else
-        {
-                c.writeCombinedByYear(url,
-                                      driver,
-                                      username,
-                                      password,
-                                      loadNumber);
+        	if(str.equalsIgnoreCase("lookup"))
+        		c.setAction("lookup");
+        	System.out.println("Action: lookup");
         }
 
-        System.out.println("write year" + loadNumber);
+        /*HT added 09/21/2020 to support ES lookup*/
+        if(c.getAction() != null && c.getAction().equalsIgnoreCase("lookup"))
+     	   c.writeLookupByWeekHook(loadNumber);
+        {
+        	 if(loadNumber > 3000)
+             {
+                     c.writeCombinedByWeekNumber(url,
+                                                 driver,
+                                                 username,
+                                                 password,
+                                                 loadNumber);
+             }
+             // extract the whole thing
+             else if(loadNumber == 0)
+             {
+                 for(int yearIndex = 1980; yearIndex <= 2012; yearIndex++)
+                 {
+                     System.out.println("Processing year " + yearIndex + "...");
+                     // create  a new writer so we can see the loadNumber/yearNumber in the filename
+                     c = new CBNBCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,"cbn", environment));
+                     c.writeCombinedByYear(url,
+                                         driver,
+                                         username,
+                                         password,
+                                         yearIndex);
+                 }
+             }
+             else if(loadNumber == 1)
+             {          
+                     c.writeCombinedByTable(url,
+                                         driver,
+                                         username,
+                                         password);
+                
+             }
+             else
+             {
+                     c.writeCombinedByYear(url,
+                                           driver,
+                                           username,
+                                           password,
+                                           loadNumber);
+             }
+         
+         System.out.println("write year" + loadNumber);
 
-        //c.writeCombinedByYear(url, driver, username, password, loadNumber);
+         //c.writeCombinedByYear(url, driver, username, password, loadNumber);
 
-        System.out.println("completed  " + loadNumber);
+         System.out.println("completed  " + loadNumber);
+        }       
+    }
+    public void setAction(String str)
+    {
+    	action = str;
+    }
+    public String getAction() {
+    	return action;
     }
 
     public CBNBCombiner(CombinedWriter writer)
@@ -238,7 +263,8 @@ public class CBNBCombiner extends Combiner
         try
         {
         	int totalCount = getResultSetSize(rs);
-        	if(this.propertyFileName!=null)
+        	/*HT added 09/21/2020 for lookup extraction for lookup*/
+        	if(this.propertyFileName!=null && !(getAction().equalsIgnoreCase("lookup")))
         	{
         		kafka = new KafkaService(processTime+"_CBNB_"+this.loadNumber, this.propertyFileName);
         	}
@@ -418,9 +444,14 @@ public class CBNBCombiner extends Combiner
 		                    rec.put(EVCombinedRec.PUBLISHER_NAME, prepareMulti(rs.getString("pbr")));
 		                }		      
 		                
-		                if(this.propertyFileName==null)
+		                /*HT 09/21/2020 added action check to support lookup extraction*/
+		                if(this.propertyFileName==null && !(getAction().equalsIgnoreCase("lookup")))
 		                {
 		                	this.writer.writeRec(rec); //this is used for FAST extraction
+		                }
+		                else if (getAction() != null && getAction().equalsIgnoreCase("lookup"))
+		                {
+		                	this.lookupObj.writeLookupRec(rec);
 		                }
 		                else
 		                {
@@ -691,5 +722,13 @@ public class CBNBCombiner extends Combiner
         }
 
     }
-
+    /*HT added 09/21/2020 to support ES lookup*/
+    @Override
+   	public void writeLookupByWeekHook(int weekNumber) throws Exception {
+   		System.out.println("Extract Lookup");
+   		String database =  Combiner.CURRENTDB;
+   		lookupObj = new LookupEntry(database, weekNumber);
+       	lookupObj.init();
+   		
+   	}
 }

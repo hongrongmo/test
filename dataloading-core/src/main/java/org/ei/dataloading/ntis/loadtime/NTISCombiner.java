@@ -24,6 +24,7 @@ import org.ei.dataloading.CombinedWriter;
 import org.ei.dataloading.CombinedXMLWriter;
 import org.ei.dataloading.Combiner;
 import org.ei.dataloading.XMLWriterCommon;
+import org.ei.dataloading.lookup.LookupEntry;
 import org.ei.dataloading.EVCombinedRec;
 import org.ei.util.GUID;
 import org.ei.common.ntis.*;
@@ -54,6 +55,11 @@ public class NTISCombiner
 
     private static String tablename;
 
+    /*HT added 09/21/2020 for lookup extraction to ES*/
+    private String action = null;
+    private LookupEntry lookupObj = null;
+    
+    
     public static void main(String args[])
     	throws Exception
     {
@@ -81,52 +87,70 @@ public class NTISCombiner
 
         NTISCombiner c = new NTISCombiner(writer);
 
-		if(loadNumber > 100000)
-		{
-            c.writeCombinedByWeekNumber(url,
-                    					driver,
-                    					username,
-                    					password,
-                    					loadNumber);
-		}
-    	// extract the whole thing by year
-    	else if(loadNumber == 0)
-    	{
-      		for(int yearIndex = 1964; yearIndex <= 2018; yearIndex++)
-      		{
-    			System.out.println("Processing year " + yearIndex + "...");
-      	  		// create  a new writer so we can see the loadNumber/yearNumber in the filename
-       			c = new NTISCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,"ntis", environment));
-        		c.writeCombinedByYear(url,
-                            		driver,
-                            		username,
-                            		password,
-                            		yearIndex);
-      		}
-    	}
-    	else if(loadNumber == 1)
-    	{
-    		System.out.println("Processing the entire NTIS_MASTER table ");
-        	c.writeCombinedByYear(url,
-                            	  driver,
-                            	  username,
-                            	  password,
-                            	  1);
-      		
-    	}
-    	else 
-    	{
-      		c.writeCombinedByYear(url,
-                            	driver,
-                            	username,
-                            	password,
-                            	loadNumber);
-    	}
+        /*TH added 09/21/2020 for ES lookup generation*/
+        Combiner.CURRENTDB = "ntis";
+        for(String str: args)
+        {
+        	if(str.equalsIgnoreCase("lookup"))
+        		c.setAction("lookup");
+        }
+        /*HT added 09/21/2020 to support ES lookup*/
+   	 if(c.getAction() != null && c.getAction().equalsIgnoreCase("lookup"))
+     	   c.writeLookupByWeekHook(loadNumber);
+        	if(loadNumber > 100000)
+    		{
+                c.writeCombinedByWeekNumber(url,
+                        					driver,
+                        					username,
+                        					password,
+                        					loadNumber);
+    		}
+        	// extract the whole thing by year
+        	else if(loadNumber == 0)
+        	{
+          		for(int yearIndex = 1964; yearIndex <= 2018; yearIndex++)
+          		{
+        			System.out.println("Processing year " + yearIndex + "...");
+          	  		// create  a new writer so we can see the loadNumber/yearNumber in the filename
+           			c = new NTISCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,"ntis", environment));
+            		c.writeCombinedByYear(url,
+                                		driver,
+                                		username,
+                                		password,
+                                		yearIndex);
+          		}
+        	}
+        	else if(loadNumber == 1)
+        	{
+        		System.out.println("Processing the entire NTIS_MASTER table ");
+            	c.writeCombinedByYear(url,
+                                	  driver,
+                                	  username,
+                                	  password,
+                                	  1);
+          		
+        	}
+        	else 
+        	{
+          		c.writeCombinedByYear(url,
+                                	driver,
+                                	username,
+                                	password,
+                                	loadNumber);
+        	}
 
 
-        System.out.println("++end of loadnumber " + loadNumber);
+            System.out.println("++end of loadnumber " + loadNumber);
+       
     }
 
+    public void setAction(String str)
+    {
+    	action = str;
+    }
+    public String getAction() {
+    	return action;
+    }
     public NTISCombiner(CombinedWriter writer)
     {
         super(writer);
@@ -1422,5 +1446,13 @@ public class NTISCombiner
 
         return (String[]) list.toArray(new String[1]);
     }
+    @Override
+   	public void writeLookupByWeekHook(int weekNumber) throws Exception {
+   		System.out.println("Extract Lookup");
+   		String database =  Combiner.CURRENTDB;
+   		lookupObj = new LookupEntry(database, weekNumber);
+       	lookupObj.init();
+   		
+   	}
 
 }

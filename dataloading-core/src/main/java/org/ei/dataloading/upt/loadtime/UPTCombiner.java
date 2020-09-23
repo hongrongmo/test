@@ -14,6 +14,7 @@ import org.ei.dataloading.CombinerTimestamp;
 import org.ei.dataloading.Combiner;
 import org.ei.dataloading.EVCombinedRec;
 import org.ei.dataloading.MessageSender;
+import org.ei.dataloading.lookup.LookupEntry;
 import org.ei.util.GUID;
 import org.ei.xml.Entity;
 import org.ei.data.upt.runtime.*;
@@ -61,6 +62,10 @@ public class UPTCombiner extends CombinerTimestamp {
     //HH 01/28/2015 to use same ClassNodemanager without change
     static ApplicationProperties applicationProperties;
 
+    /*HT added 09/21/2020 for lookup extraction to ES*/
+    private String action = null;
+    private LookupEntry lookupObj = null;
+    
 
     public UPTCombiner(String database,CombinedWriter writer) {
         super(writer);
@@ -882,9 +887,14 @@ public class UPTCombiner extends CombinerTimestamp {
 	                    arrNames[0] = replaceNull(arrNames[0]);
 	
 	                    rec.put(EVCombinedRec.NOTES, arrNames);	                 
-	                    if(this.propertyFileName==null)
+	                    if(this.propertyFileName==null && !(getAction().equalsIgnoreCase("lookup")))
 	                    {
 	                    	writer.writeRec(rec);//use this line for FAST extraction
+	                    }
+	                    /*HT added 09/21/2020 for ES lookup*/
+	                    else if (getAction() != null && getAction().equalsIgnoreCase("lookup"))
+	                    {
+	                    	this.lookupObj.writeLookupRec(rec);
 	                    }
 	                    else
 	                    {
@@ -976,6 +986,19 @@ public class UPTCombiner extends CombinerTimestamp {
 	        	
 	        
 	        }
+        	/*HT added 09/21/2020 to for ES lookup, flush writers after all extraction is complete*/
+        	if(lookupObj != null)
+        	{
+        		try
+        		{
+        			lookupObj.flush();
+        		}
+        		catch(Exception e)
+        		{
+        			System.out.println("Exception in closing lookup outputwriters?!");
+        			e.printStackTrace();
+        		}
+        	}
         	System.out.println("total "+i +" records");
  		    if(i!=totalCount)
  		    {
@@ -1965,9 +1988,18 @@ public class UPTCombiner extends CombinerTimestamp {
              
         if(args.length==11)  
         {
-        	timestamp = Long.parseLong(args[9]);
-        	propertyFileName=args[10];
-    		System.out.println("propertyFileName="+propertyFileName); 
+        	/*HT added 09/21/2020 to support ES lookup*/
+        	if(args[9].equals(args[4]))
+        	{
+        		timestamp = Long.parseLong(args[9]);
+        		propertyFileName=args[10];
+        	}
+        	else
+        	{
+        		propertyFileName=args[9];
+        	}
+        	System.out.println("propertyFileName="+propertyFileName);
+        	
         }
         else if(args.length==10)  
         {
@@ -1999,48 +2031,59 @@ public class UPTCombiner extends CombinerTimestamp {
         c.driver=driver;
         c.username=username;
         c.password=password;
+        
+        /*TH added 09/21/2020 for ES lookup generation*/
+        Combiner.CURRENTDB = dbname;
+        for(String str: args)
+        {
+        	if(str.equalsIgnoreCase("lookup"))
+        		c.setAction("lookup");
+        }
+        
         try {
         	c.ipc = c.getAllDescriptionFromLookupIndex();
-            if (timestamp==0 && (loadNumber > 3000 || loadNumber < 1000) && loadNumber>1)
-            {
-                System.out.println("Processing loadnumber " + loadNumber + "...");
-                c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
-            }
-            else if(timestamp > 0)
-            {
-                System.out.println("Processing timestamp " + timestamp + "...");
-                c.writeCombinedByTimestamp(url, driver, username, password, timestamp);
-            }
-            else if(loadNumber==1)
-            {
-                System.out.println("Processing timestamp " + timestamp + "...");
-                c.writeCombinedByTable(url, driver, username, password);
-            }
-            else if(loadNumber == 0 && timestamp < 0)
-            {
-                //extract all by year
-                for(int yearIndex = 1998; yearIndex <= 2016; yearIndex++)
+
+        	/*HT added 09/21/2020 to support ES lookup*/
+        	 if(c.getAction() != null && c.getAction().equalsIgnoreCase("lookup"))
+          	   c.writeLookupByWeekHook(loadNumber);
+        	 
+            	if (timestamp==0 && (loadNumber > 3000 || loadNumber < 1000) && loadNumber>1)
                 {
-
-                    System.out.println("Processing year " + yearIndex + "...");
-                      // create  a new writer so we can see the loadNumber/yearNumber in the filename
-                      c = new UPTCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,UPTDatabase.getIndexName(), environment));
-                      c.writeCombinedByYear(url,
-                                          driver,
-                                          username,
-                                          password,
-                                          yearIndex);
+                    System.out.println("Processing loadnumber " + loadNumber + "...");
+                    c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
                 }
-            }
-            else
-            {
-                System.out.println("Processing combined year " + loadNumber + "...");
-                c.writeCombinedByYear(url, driver, username, password, loadNumber);
-            }
+                else if(timestamp > 0)
+                {
+                    System.out.println("Processing timestamp " + timestamp + "...");
+                    c.writeCombinedByTimestamp(url, driver, username, password, timestamp);
+                }
+                else if(loadNumber==1)
+                {
+                    System.out.println("Processing timestamp " + timestamp + "...");
+                    c.writeCombinedByTable(url, driver, username, password);
+                }
+                else if(loadNumber == 0 && timestamp < 0)
+                {
+                    //extract all by year
+                    for(int yearIndex = 1998; yearIndex <= 2016; yearIndex++)
+                    {
 
-
-
-
+                        System.out.println("Processing year " + yearIndex + "...");
+                          // create  a new writer so we can see the loadNumber/yearNumber in the filename
+                          c = new UPTCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,UPTDatabase.getIndexName(), environment));
+                          c.writeCombinedByYear(url,
+                                              driver,
+                                              username,
+                                              password,
+                                              yearIndex);
+                    }
+                }
+                else
+                {
+                    System.out.println("Processing combined year " + loadNumber + "...");
+                    c.writeCombinedByYear(url, driver, username, password, loadNumber);
+                }
+           
         }
         catch (Exception ex) {
             ex.printStackTrace();
@@ -2051,4 +2094,20 @@ public class UPTCombiner extends CombinerTimestamp {
         }
         System.exit(1);
     }
+    public void setAction(String str)
+    {
+    	action = str;
+    }
+    public String getAction() {
+    	return action;
+    }
+    /*HT added 09/21/2020 to support ES lookup*/
+    @Override
+   	public void writeLookupByWeekHook(int weekNumber) throws Exception {
+   		System.out.println("Extract Lookup");
+   		String database =  Combiner.CURRENTDB;
+   		lookupObj = new LookupEntry(database, weekNumber);
+       	lookupObj.init();
+   		
+   	}
 }

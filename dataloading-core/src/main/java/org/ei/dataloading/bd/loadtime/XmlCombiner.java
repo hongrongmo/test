@@ -18,6 +18,7 @@ import org.ei.dataloading.bd.loadtime.BdNumericalIndexMapping;
 import org.ei.util.kafka.*;
 import org.ei.dataloading.*;
 import org.ei.dataloading.georef.loadtime.*;
+import org.ei.dataloading.lookup.LookupEntry;
 import org.ei.common.bd.*;
 import org.ei.common.*;
 import org.ei.util.GUID;
@@ -45,6 +46,11 @@ public class XmlCombiner
     private List auid;
     private static String puiGlobal;
     private static String propertyFileName;
+    
+    
+    /*HT added 09/21/2020 for lookup extraction to ES*/
+    private String action = null;
+    private LookupEntry lookupObj = null;
 
     static
     {  //ISSNs with AR field problem
@@ -115,51 +121,73 @@ public class XmlCombiner
         writer.setOperation(operation);
 
         XmlCombiner c = new XmlCombiner(writer);
-        if (timestamp==0 && (loadNumber > 3000 || loadNumber < 1000) && (loadNumber >1))
+        
+        /*TH added 09/21/2020 for ES lookup generation*/
+        for(String str: args)
         {
-           c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
+        	if(str.equalsIgnoreCase("lookup"))
+        	{
+        		c.setAction("lookup");
+        	}
+        		
         }
-        else if(timestamp > 0)
-        {
-           c.writeCombinedByTimestamp(url, driver, username, password, timestamp);
-        }
-        else if(loadNumber == 1)
-        {
-        	c.writeCombinedByTable(url, driver, username, password);
-        }
-        else if (loadNumber < 3000 || loadNumber > 1000)
-        {
-        	 c.writeCombinedByYear(url, driver, username, password, loadNumber);
-        }
-        else if(loadNumber == 0)
-        {
-            for(int yearIndex = 1904; yearIndex <= 2012; yearIndex++)
+        System.out.println("Lookup Action? " + c.getAction());
+        
+       if(c.getAction() != null && c.getAction().equalsIgnoreCase("lookup"))
+    	   c.writeLookupByWeekHook(loadNumber);
+       
+            if (timestamp==0 && (loadNumber > 3000 || loadNumber < 1000) && (loadNumber >1))
             {
-              c = new XmlCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,dbname, "dev"));
-              c.writeCombinedByYear(url, driver, username, password, yearIndex);
+               c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
             }
-            if(Combiner.CURRENTDB.equalsIgnoreCase("chm"))
+            else if(timestamp > 0)
             {
-                c = new XmlCombiner(new CombinedXMLWriter(recsPerbatch, 9999,dbname, "dev"));
-                c.writeCombinedByYear(url, driver, username, password, 9999);
+               c.writeCombinedByTimestamp(url, driver, username, password, timestamp);
             }
-            if(Combiner.CURRENTDB.equalsIgnoreCase("geo"))
+            else if(loadNumber == 1)
             {
-                c = new XmlCombiner(new CombinedXMLWriter(recsPerbatch, 9999,dbname, "dev"));
-                c.writeCombinedByYear(url, driver, username, password, 9999);
+            	c.writeCombinedByTable(url, driver, username, password);
             }
-            if(Combiner.CURRENTDB.equalsIgnoreCase("cpx"))
+            else if (loadNumber < 3000 || loadNumber > 1000)
             {
-                c = new XmlCombiner(new CombinedXMLWriter(recsPerbatch, 9999,dbname, "dev"));
-                c.writeCombinedByYear(url, driver, username, password, 9999);
+            	 c.writeCombinedByYear(url, driver, username, password, loadNumber);
             }
-        }
-        else
-        {
-           c.writeCombinedByYear(url, driver, username, password, loadNumber);
-        }
-    }
+            else if(loadNumber == 0)
+            {
+                for(int yearIndex = 1904; yearIndex <= 2012; yearIndex++)
+                {
+                  c = new XmlCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,dbname, "dev"));
+                  c.writeCombinedByYear(url, driver, username, password, yearIndex);
+                }
+                if(Combiner.CURRENTDB.equalsIgnoreCase("chm"))
+                {
+                    c = new XmlCombiner(new CombinedXMLWriter(recsPerbatch, 9999,dbname, "dev"));
+                    c.writeCombinedByYear(url, driver, username, password, 9999);
+                }
+                if(Combiner.CURRENTDB.equalsIgnoreCase("geo"))
+                {
+                    c = new XmlCombiner(new CombinedXMLWriter(recsPerbatch, 9999,dbname, "dev"));
+                    c.writeCombinedByYear(url, driver, username, password, 9999);
+                }
+                if(Combiner.CURRENTDB.equalsIgnoreCase("cpx"))
+                {
+                    c = new XmlCombiner(new CombinedXMLWriter(recsPerbatch, 9999,dbname, "dev"));
+                    c.writeCombinedByYear(url, driver, username, password, 9999);
+                }
+            }
+            else
+            {
+               c.writeCombinedByYear(url, driver, username, password, loadNumber);
+            }
+        }       
 
+    public void setAction(String str)
+    {
+    	action = str;
+    }
+    public String getAction() {
+    	return action;
+    }
     public XmlCombiner(CombinedWriter writer)
     {
         super(writer);
@@ -495,7 +523,7 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
     {
     	
     	//int totalCount = getResultSetSize(con,week,tableName,database);  
-    	if(this.propertyFileName!=null)
+    	if(this.propertyFileName!=null && getAction() != "lookup")					//HT only create Kafka instance when it is not lookup extraction
     	{
     		kafka = new KafkaService(processTime+"_"+database+"_"+week, this.propertyFileName); //use it for ES extraction
     	}
@@ -1011,6 +1039,7 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
                         //System.out.println("YEAR="+rs.getString("PUBLICATIONYEAR").substring(0,4));
                     }
 
+                 
                     rec.put(EVCombinedRec.DEDUPKEY,
                             getDedupKey(rec.get(EVCombinedRec.ISSN),
                                         rec.get(EVCombinedRec.CODEN),
@@ -1350,12 +1379,17 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
                 }
 
             }
-           
+
             recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
-            if(this.propertyFileName==null)
+            if(this.propertyFileName==null && !(getAction().equalsIgnoreCase("lookup")))
             {
             	this.writer.writeRec(recArray);//use this line for fast extraction
           
+            }
+            /*HT added 09/21/2020 for ES lookup*/
+            else if (getAction() != null && getAction().equalsIgnoreCase("lookup"))
+            {
+            	this.lookupObj.writeLookupRecs(recArray);
             }
             else
             {
@@ -1412,7 +1446,7 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
     }
     finally
     { 
-    	if(this.propertyFileName!=null)
+    	if(this.propertyFileName!=null && !(getAction().equalsIgnoreCase("lookup")))
     	{
 	    	try
 	    	{
@@ -1446,8 +1480,6 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
     
 }
 
-  
-    
     private String prepareStandardDesignation(String input)
     {
     	String output = null;
@@ -2557,6 +2589,69 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
                     e.printStackTrace();
                 }
             }
+        }
+
+    }
+    
+    /*HT added 09/21/2020 wk: [202040] for Lookup extraction for ES*/
+
+    public void writeLookupByWeekHook(int weekNumber)
+        throws Exception
+    {
+        Statement stmt = null;
+        ResultSet rs = null;
+        String sqlQuery = null;
+
+        try
+        {       
+        	String database =  Combiner.CURRENTDB;
+        	lookupObj = new LookupEntry(database, weekNumber);
+        	lookupObj.init();
+        	
+           
+			/*
+			 * stmt = con.createStatement();
+			 * 
+			 * sqlQuery =
+			 * "select ACCESSNUMBER,PUI,AUTHOR,AUTHOR_1,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE,PUI FROM "
+			 * + Combiner.TABLENAME +" where LOADNUMBER='" + weekNumber +
+			 * "' AND loadnumber != 0 and database='" + Combiner.CURRENTDB + "'";
+			 * 
+			 * String cpxSqlQuery =
+			 * "select a.UPDATENUMBER,a.CHEMICALTERM,a.DATABASE,a.PUI,a.accessnumber,a.author,a.author_1,a.AFFILIATION,a.AFFILIATION_1,a.CONTROLLEDTERM,a.SOURCETITLE,a.PUBLISHERNAME,"
+			 * +
+			 * "b.author as cafe_author,b.author_1 as cafe_author1,b.affiliation as cafe_affiliation,b.affiliation_1 as cafe_affiliation1,b.CORRESPONDENCEAFFILIATION as CAFE_CORRESPONDENCEAFFILIATION,null as authorid,null as affid,"
+			 * + "count(*) over() totalCount from " + Combiner.TABLENAME +
+			 * " a left outer join CAFE_PUI_LIST_MASTER c on a.pui= c.puisecondary left outer join cafe_master b on b.pui=c.pui where a.LOADNUMBER="
+			 * + weekNumber + " AND a.database='cpx' and a.loadnumber != 0";
+			 * 
+			 * System.out.println("DATABASE="+Combiner.CURRENTDB);
+			 * if(database.equalsIgnoreCase("cpx")) { System.out.println(cpxSqlQuery); rs =
+			 * stmt.executeQuery(cpxSqlQuery); } else if (database.equalsIgnoreCase("chm")
+			 * || (database.equalsIgnoreCase("pch")) || (database.equalsIgnoreCase("geo"))
+			 * || (database.equalsIgnoreCase("elt"))) { System.out.println(sqlQuery); rs =
+			 * stmt.executeQuery(sqlQuery); }
+			 * 
+			 * else { System.out.println("No loadnumber or database provided, exit!!!");
+			 * System.exit(1); }
+			 * 
+			 * 
+			 * writeRecs(rs,con,
+			 * weekNumber,"extractLookupByLoadnumber--"+Combiner.TABLENAME,Combiner.
+			 * CURRENTDB); this.writer.end(); this.writer.flush();
+			 */
+
+        }
+        finally
+        {
+
+			/*
+			 * if (rs != null) { try { rs.close(); } catch (Exception e) {
+			 * e.printStackTrace(); } }
+			 * 
+			 * if (stmt != null) { try { stmt.close(); } catch (Exception e) {
+			 * e.printStackTrace(); } }
+			 */
         }
 
     }

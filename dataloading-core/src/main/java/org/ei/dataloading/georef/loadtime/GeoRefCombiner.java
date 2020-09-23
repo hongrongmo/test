@@ -32,10 +32,10 @@ import java.text.SimpleDateFormat;
 import java.text.DateFormat;
 
 import org.ei.dataloading.*;
+import org.ei.dataloading.lookup.LookupEntry;
 import org.ei.common.*;
 import org.ei.common.georef.*;
 import org.ei.util.kafka.*;
-import org.ei.dataloading.MessageSender;
 
 public class GeoRefCombiner
 extends Combiner
@@ -51,6 +51,11 @@ private static String tablename;
 private static String databaseIndexName = "grf";
 private static String propertyFileName;
 private static int loadNumber = 0;
+
+/*HT added 09/21/2020 for lookup extraction to ES*/
+private String action = null;
+private LookupEntry lookupObj = null;
+
 
 public static void main(String args[])
                         throws Exception
@@ -93,47 +98,48 @@ public static void main(String args[])
 	  writer.setOperation(operation);
 	
 	  GeoRefCombiner c = new GeoRefCombiner(writer);
-	  if(loadNumber > 100000)
-	  {
-	    c.writeCombinedByWeekNumber(url,
-	                                driver,
-	                                username,
-	                                password,
-	                                loadNumber);
-	  }
-	  // extract the whole thing
-	  else if(loadNumber == 1)
-	  {
-		  c.writeCombinedByTable( url,
-					                  driver,
-					                  username,
-					                  password);
-	  }
-	  else if(loadNumber == 0)
-	  {
-		  int endYear = Integer.parseInt(c.getYear());
-	
-	    for(int yearIndex = 1918; yearIndex <= endYear+1; yearIndex++)
-	    {
-	  	System.out.println("Processing year " + yearIndex + "...");
-	      // create  a new writer so we can see the loadNumber/yearNumber in the filename
-	      c = new GeoRefCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,databaseIndexName, environment));
-	      c.writeCombinedByYear(url,
-	                          driver,
-	                          username,
-	                          password,
-	                          yearIndex);
-	    }
-	  }
-	  else
-	  {
-	    c.writeCombinedByYear(url,
-	                          driver,
-	                          username,
-	                          password,
-	                          loadNumber);
-	  }
-}
+	  
+	  /*TH added 09/21/2020 for ES lookup generation*/
+	  Combiner.CURRENTDB = databaseIndexName;
+      for(String str: args)
+      {
+      	if(str.equalsIgnoreCase("lookup"))
+      		c.setAction("lookup");
+      	System.out.println("Action: lookup");
+      }
+      
+      /*HT added 09/21/2020 to support ES lookup*/
+ 	 if(c.getAction() != null && c.getAction().equalsIgnoreCase("lookup"))
+   	   c.writeLookupByWeekHook(loadNumber);
+ 	 
+			if (loadNumber > 100000) {
+				c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
+			}
+			// extract the whole thing
+			else if (loadNumber == 1) {
+				c.writeCombinedByTable(url, driver, username, password);
+			} else if (loadNumber == 0) {
+				int endYear = Integer.parseInt(c.getYear());
+
+				for (int yearIndex = 1918; yearIndex <= endYear + 1; yearIndex++) {
+					System.out.println("Processing year " + yearIndex + "...");
+					// create a new writer so we can see the loadNumber/yearNumber in the filename
+					c = new GeoRefCombiner(
+							new CombinedXMLWriter(recsPerbatch, yearIndex, databaseIndexName, environment));
+					c.writeCombinedByYear(url, driver, username, password, yearIndex);
+				}
+			} else {
+				c.writeCombinedByYear(url, driver, username, password, loadNumber);
+			}
+		}
+
+	public void setAction(String str) {
+		action = str;
+	}
+
+	public String getAction() {
+		return action;
+	}
 
 	private String getYear()
 	{
@@ -833,10 +839,14 @@ public void writeRecs(ResultSet rs)
 		        i++;
 				recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
 				
-				if(this.propertyFileName==null)
+				if(this.propertyFileName==null && !(getAction().equalsIgnoreCase("lookup")))
 				{
 					this.writer.writeRec(recArray); //use this line for FAST extraction
 				}
+				else if (getAction() != null && getAction().equalsIgnoreCase("lookup"))
+	            {
+	            	this.lookupObj.writeLookupRecs(recArray);
+	            }
 				else
 				{
 					 /**********************************************************/
@@ -1127,5 +1137,13 @@ private class LocalErrorHandler implements ErrorHandler {
     System.out.println("   Message: " + e.getMessage());
   }
 }
+@Override
+	/*HT added 09/21/2020 wk: [202040] for Lookup extraction for ES*/
+	public void writeLookupByWeekHook(int weekNumber) throws Exception {
+		System.out.println("Extract Lookup");
+		String database =  Combiner.CURRENTDB;
+   	lookupObj = new LookupEntry(database, weekNumber);
+   	lookupObj.init();
+	}
 
 }

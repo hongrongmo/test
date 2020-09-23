@@ -15,6 +15,7 @@ import org.apache.oro.text.regex.PatternMatcherInput;
 import org.apache.oro.text.regex.Perl5Compiler;
 import org.apache.oro.text.regex.Perl5Matcher;
 import org.ei.dataloading.*;
+import org.ei.dataloading.lookup.LookupEntry;
 import org.ei.common.ntis.*;
 import org.ei.common.*;
 /*
@@ -51,6 +52,11 @@ public class NTISXMLCombiner
 
     private static String tablename;
 
+    /*HT added 09/21/2020 for lookup extraction to ES*/
+    private String action = null;
+    private LookupEntry lookupObj = null;
+
+    
     public static void main(String args[])
     	throws Exception
     {
@@ -74,42 +80,67 @@ public class NTISXMLCombiner
 
         NTISCombiner c = new NTISCombiner(writer);
 
-		if(loadNumber > 100001)
-		{
-            c.writeCombinedByWeekNumber(url,
-                    					driver,
-                    					username,
-                    					password,
-                    					loadNumber);
-		}
-    	// extract the whole thing
-    	else if(loadNumber == 0)
-    	{
-      		for(int yearIndex = 1964; yearIndex <= 2012; yearIndex++)
-      		{
-    			System.out.println("Processing year " + yearIndex + "...");
-      	  		// create  a new writer so we can see the loadNumber/yearNumber in the filename
-       			c = new NTISCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,"ntis", environment));
-        		c.writeCombinedByYear(url,
-                            		driver,
-                            		username,
-                            		password,
-                            		yearIndex);
-      		}
-    	}
-    	else
-    	{
-      		c.writeCombinedByYear(url,
-                            	driver,
-                            	username,
-                            	password,
-                            	loadNumber);
-    	}
+        /*TH added 09/21/2020 for ES lookup generation*/
+        for(String str: args)
+        {
+        	if(str.equalsIgnoreCase("lookup"))
+        		c.setAction("lookup");
+        	System.out.println("Action: lookup");
+        }
+        
+        /*HT added 09/21/2020 if condition on action to consider lookup extraction for ES, otherwise consider it reg. extraction and so embed all looadnumber check inside this global if stmt*/
+        if(c.getAction() == null || c.getAction().isEmpty())
+        {
+        	if(loadNumber > 100001)
+    		{
+                c.writeCombinedByWeekNumber(url,
+                        					driver,
+                        					username,
+                        					password,
+                        					loadNumber);
+    		}
+        	// extract the whole thing
+        	else if(loadNumber == 0)
+        	{
+          		for(int yearIndex = 1964; yearIndex <= 2012; yearIndex++)
+          		{
+        			System.out.println("Processing year " + yearIndex + "...");
+          	  		// create  a new writer so we can see the loadNumber/yearNumber in the filename
+           			c = new NTISCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,"ntis", environment));
+            		c.writeCombinedByYear(url,
+                                		driver,
+                                		username,
+                                		password,
+                                		yearIndex);
+          		}
+        	}
+        	else
+        	{
+          		c.writeCombinedByYear(url,
+                                	driver,
+                                	username,
+                                	password,
+                                	loadNumber);
+        	}
 
 
-        System.out.println("++end of loadnumber " + loadNumber);
+            System.out.println("++end of loadnumber " + loadNumber);
+        }
+        else
+        {
+        	System.out.println("Extracting Lookups");
+        	c.writeLookupByWeekNumber(loadNumber);
+        }
     }
 
+    public void setAction(String str)
+    {
+    	action = str;
+    }
+    public String getAction() {
+    	return action;
+    }
+    
     public NTISXMLCombiner(CombinedWriter writer)
     {
         super(writer);
@@ -321,7 +352,17 @@ public class NTISXMLCombiner
 			{
 				rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
 			}
-            this.writer.writeRec(rec);
+			
+			if(getAction() != null && !(getAction().equalsIgnoreCase("lookup")))
+			{
+				this.writer.writeRec(rec);
+			}
+			 /*HT added 09/21/2020 for ES lookup*/
+            else if (getAction() != null && getAction().equalsIgnoreCase("lookup"))
+            {
+            	this.lookupObj.writeLookupRec(rec);
+            }
+            
         }
     }
 
@@ -1217,5 +1258,14 @@ public class NTISXMLCombiner
 
         return (String[]) list.toArray(new String[1]);
     }
+
+    @Override
+   	public void writeLookupByWeekHook(int weekNumber) throws Exception {
+   		System.out.println("Extract Lookup");
+   		String database =  Combiner.CURRENTDB;
+   		lookupObj = new LookupEntry(database, weekNumber);
+       	lookupObj.init();
+   		
+   	}
 
 }

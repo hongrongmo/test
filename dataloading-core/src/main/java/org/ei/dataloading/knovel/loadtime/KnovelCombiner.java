@@ -21,12 +21,12 @@ import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
 import org.ei.dataloading.*;
 import org.ei.dataloading.georef.loadtime.*;
+import org.ei.dataloading.lookup.LookupEntry;
 import org.ei.common.bd.*;
 import org.ei.common.*;
 import org.ei.util.GUID;
 import org.ei.util.StringUtil;
 import org.ei.util.kafka.*;
-import org.ei.dataloading.MessageSender;
 
 
 	public class KnovelCombiner 
@@ -42,6 +42,11 @@ import org.ei.dataloading.MessageSender;
 	    private List auid;
 	    private static String propertyFileName;
 	    private static int loadNumber=0;
+	    
+	    /*HT added 09/21/2020 for lookup extraction to ES*/
+	    private String action = null;
+	    private LookupEntry lookupObj = null;
+	    
 
 	    public static void main(String args[])
 	        throws Exception
@@ -91,30 +96,50 @@ import org.ei.dataloading.MessageSender;
 	        writer.setOperation(operation);
 
 	        KnovelCombiner c = new KnovelCombiner(writer);
-	        if (timestamp==0 && (loadNumber > 3000 || loadNumber < 1000) && (loadNumber >1))
+	        
+	        /*TH added 09/21/2020 for ES lookup generation*/
+	        Combiner.CURRENTDB = dbname;
+	        for(String str: args)
 	        {
-	           c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
+	        	if(str.equalsIgnoreCase("lookup"))
+	        		c.setAction("lookup");
 	        }
-	        else if(timestamp > 0)
-	        {
-	           c.writeCombinedByTimestamp(url, driver, username, password, timestamp);
-	        }
-	        else if(loadNumber == 1)
-	        {
-	        	c.writeCombinedByTable(url, driver, username, password);
-	        }
-	        else if(loadNumber == 0)
-	        {
-	            for(int yearIndex = 1900; yearIndex <= year+1; yearIndex++)
-	            {
-	              c = new KnovelCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,dbname, "dev"));
-	              c.writeCombinedByYear(url, driver, username, password, yearIndex);
-	            }
-	        }
-	        else
-	        {
-	           c.writeCombinedByYear(url, driver, username, password, loadNumber);
-	        }
+	        
+	        /*HT added 09/21/2020 to support ES lookup*/
+       	 if(c.getAction() != null && c.getAction().equalsIgnoreCase("lookup"))
+         	   c.writeLookupByWeekHook(loadNumber);
+       	 
+	        	 if (timestamp==0 && (loadNumber > 3000 || loadNumber < 1000) && (loadNumber >1))
+	 	        {
+	 	           c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
+	 	        }
+	 	        else if(timestamp > 0)
+	 	        {
+	 	           c.writeCombinedByTimestamp(url, driver, username, password, timestamp);
+	 	        }
+	 	        else if(loadNumber == 1)
+	 	        {
+	 	        	c.writeCombinedByTable(url, driver, username, password);
+	 	        }
+	 	        else if(loadNumber == 0)
+	 	        {
+	 	            for(int yearIndex = 1900; yearIndex <= year+1; yearIndex++)
+	 	            {
+	 	              c = new KnovelCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,dbname, "dev"));
+	 	              c.writeCombinedByYear(url, driver, username, password, yearIndex);
+	 	            }
+	 	        }
+	 	        else
+	 	        {
+	 	           c.writeCombinedByYear(url, driver, username, password, loadNumber);
+	 	        }
+	    }
+	    public void setAction(String str)
+	    {
+	    	action = str;
+	    }
+	    public String getAction() {
+	    	return action;
 	    }
 
 	    public KnovelCombiner(CombinedWriter writer)
@@ -463,10 +488,14 @@ import org.ei.dataloading.MessageSender;
 		                
 		            recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
 		            
-		            if(this.propertyFileName==null)
+		            if(this.propertyFileName==null && !(getAction().equalsIgnoreCase("lookup")))
 		            {
 		            	this.writer.writeRec(recArray);//use this line for fast extraction
-		          
+		            }
+		            /*HT added 09/21/2020 for ES lookup*/
+		            else if (getAction() != null && getAction().equalsIgnoreCase("lookup"))
+		            {
+		            	this.lookupObj.writeLookupRecs(recArray);
 		            }
 		            else
 		            {
@@ -716,5 +745,13 @@ import org.ei.dataloading.MessageSender;
 	        }
 
 	    }
-
+	    /*HT added 09/21/2020 to support ES lookup*/
+	    @Override
+		public void writeLookupByWeekHook(int weekNumber) throws Exception {
+			System.out.println("Extract Lookup");
+			String database =  Combiner.CURRENTDB;
+			lookupObj = new LookupEntry(database, weekNumber);
+	    	lookupObj.init();
+			
+		}
 	}

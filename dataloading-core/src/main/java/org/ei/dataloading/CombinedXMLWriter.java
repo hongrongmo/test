@@ -1050,7 +1050,7 @@ public class CombinedXMLWriter
            
         
     }
-    
+   
     
     public void writeRec(EVCombinedRec rec, KafkaService kafka, Map batchData, Map missedData)
             throws Exception
@@ -2881,7 +2881,7 @@ public class CombinedXMLWriter
     }
     
     
-    private String[] removeExtraSpace(String[] input)
+    public String[] removeExtraSpace(String[] input)
     {
     	if(input!=null)
     	{
@@ -2986,7 +2986,7 @@ public class CombinedXMLWriter
     	return output;
     }
     
-    private String[] removeSpace(String[] input)
+    public String[] removeSpace(String[] input)
     {
     	String[] output=null;
     	
@@ -3016,7 +3016,7 @@ public class CombinedXMLWriter
     	return output;
     }
     
-    private String[] reverseSigns(String[] input)
+    public String[] reverseSigns(String[] input)
     {
     	String[] output=null;
     	
@@ -3461,7 +3461,7 @@ public class CombinedXMLWriter
         return s;
     }
 
-    private String[] addIpcIndex(String ss, String key)  throws Exception
+    public String[] addIpcIndex(String ss, String key)  throws Exception
     {
         if(ss==null)
         {

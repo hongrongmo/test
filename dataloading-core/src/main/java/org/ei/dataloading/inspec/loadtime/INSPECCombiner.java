@@ -29,6 +29,7 @@ import org.ei.common.inspec.*;
 import org.ei.dataloading.EVCombinedRec;
 import org.ei.dataloading.XMLWriterCommon;
 import org.ei.dataloading.bd.loadtime.BdNumericalIndexMapping;
+import org.ei.dataloading.lookup.LookupEntry;
 import org.ei.dataloading.MessageSender;
 import org.ei.util.kafka.*;
 
@@ -42,6 +43,10 @@ public class INSPECCombiner
 	private static final String databaseIndexName = "ins";
 	private static String propertyFileName;
 	private static int loadNumber = 0;
+	
+    /*HT added 09/21/2020 for lookup extraction to ES*/
+    private String action = null;
+    private LookupEntry lookupObj = null;
 	
     public INSPECCombiner(CombinedWriter writer)
     {
@@ -90,58 +95,47 @@ public class INSPECCombiner
          writer.setOperation(operation);
         INSPECCombiner c = new INSPECCombiner(writer);
 
-        if(loadNumber > 3000)
+        /*TH added 09/21/2020 for ES lookup generation*/
+        Combiner.CURRENTDB = databaseIndexName;
+        for(String str: args)
         {
-            c.writeCombinedByWeekNumber(url,
-                                        driver,
-                                        username,
-                                        password,
-                                        loadNumber);
+        	if(str.equalsIgnoreCase("lookup"))
+        		c.setAction("lookup");
         }
-        else if(loadNumber == 2999)
-        {
-            int yearIndex = loadNumber;
-            System.out.println("Processing MISC records as loadnumber " + yearIndex + "...");
-            c = new INSPECCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,databaseIndexName, environment));
-            c.writeCombinedByYear(url,
-                                  driver,
-                                  username,
-                                  password,
-                                  yearIndex);
-        }
-        // extract the whole thing
-        else if(loadNumber == 0)
-        {
-            for(int yearIndex = 2005; yearIndex <= 2012; yearIndex++)
-            {
-                System.out.println("Processing year " + yearIndex + "...");
-                //create  a new writer so we can see the loadNumber/yearNumber in the filename
-                c = new INSPECCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,databaseIndexName, environment));
-                c.writeCombinedByYear(url,
-                                      driver,
-                                      username,
-                                      password,
-                                      yearIndex);
-            }
-        }
-        else if(loadNumber == 1)
-        {                      
-                c.writeCombinedByTable(url,
-                                      driver,
-                                      username,
-                                      password);
-            
-        }      
-        else
-        {
-            c.writeCombinedByYear(url,
-                                  driver,
-                                  username,
-                                  password,
-                                  loadNumber);
-        }
-    }
+        /*HT added 09/21/2020 to support ES lookup*/
+   	 if(c.getAction() != null && c.getAction().equalsIgnoreCase("lookup"))
+     	   c.writeLookupByWeekHook(loadNumber);
+			if (loadNumber > 3000) {
+				c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
+			} else if (loadNumber == 2999) {
+				int yearIndex = loadNumber;
+				System.out.println("Processing MISC records as loadnumber " + yearIndex + "...");
+				c = new INSPECCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex, databaseIndexName, environment));
+				c.writeCombinedByYear(url, driver, username, password, yearIndex);
+			}
+			// extract the whole thing
+			else if (loadNumber == 0) {
+				for (int yearIndex = 2005; yearIndex <= 2012; yearIndex++) {
+					System.out.println("Processing year " + yearIndex + "...");
+					// create a new writer so we can see the loadNumber/yearNumber in the filename
+					c = new INSPECCombiner(
+							new CombinedXMLWriter(recsPerbatch, yearIndex, databaseIndexName, environment));
+					c.writeCombinedByYear(url, driver, username, password, yearIndex);
+				}
+			} else if (loadNumber == 1) {
+				c.writeCombinedByTable(url, driver, username, password);
 
+			} else {
+				c.writeCombinedByYear(url, driver, username, password, loadNumber);
+			}
+    }
+    public void setAction(String str)
+    {
+    	action = str;
+    }
+    public String getAction() {
+    	return action;
+    }
 
     public void writeCombinedByTableHook(Connection con)
     		throws Exception
@@ -821,9 +815,14 @@ public class INSPECCombiner
 	                rec.put(EVCombinedRec.STARTPAGE, getFirstPage(rs.getString("pipn")));
 	                rec.put(EVCombinedRec.ACCESSION_NUMBER, rs.getString("ANUM"));
 	
-	                if(this.propertyFileName==null)
+	                if(this.propertyFileName==null && !(getAction().equalsIgnoreCase("lookup")))
 	                {
 	                	writer.writeRec(rec);//Use this line for FAST extraction
+	                }
+	                /*HT added 09/21/2020 for ES lookup*/
+	                else if (getAction() != null && getAction().equalsIgnoreCase("lookup"))
+	                {
+	                	this.lookupObj.writeLookupRec(rec);
 	                }
 	                else
 	                {
@@ -1633,4 +1632,13 @@ public class INSPECCombiner
             }
         }
     }
+    
+    @Override
+	/*HT added 09/21/2020 wk: [202040] for Lookup extraction for ES*/
+	public void writeLookupByWeekHook(int weekNumber) throws Exception {
+		System.out.println("Extract Lookup");
+		String database =  Combiner.CURRENTDB;
+    	lookupObj = new LookupEntry(database, weekNumber);
+    	lookupObj.init();
+	}
 }
