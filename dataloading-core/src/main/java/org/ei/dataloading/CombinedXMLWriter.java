@@ -3461,7 +3461,7 @@ public class CombinedXMLWriter
         return s;
     }
 
-    public String[] addIpcIndex(String ss, String key)  throws Exception
+    private String[] addIpcIndex(String ss, String key)  throws Exception
     {
         if(ss==null)
         {
@@ -3493,6 +3493,41 @@ public class CombinedXMLWriter
 
         return sArray;
     }
+    
+    /*HT added 09/21/2020 for ES Lookup*/
+    public String[] addIpcIndex(String ss, PrintWriter pWriter, String database)  throws Exception
+    {
+        if(ss==null)
+        {
+            return null;
+        }
+        String[] sArray=prepareIpc(ss);
+        PrintWriter indexWriter = pWriter;
+        StringTokenizer st = new StringTokenizer(ss, Constants.AUDELIMITER);
+        String name="";
+        String code="";
+
+        while (st.hasMoreTokens())
+        {
+            String s = st.nextToken().trim();
+            if(s.length() > 0)
+            {
+                if(s.indexOf(Constants.IDDELIMITER) > -1)
+                {
+                     int i = s.indexOf(Constants.IDDELIMITER);
+                      code = s.substring(0,i);
+                      name = s.substring(i+1);
+                      indexWriter.println(Entity.prepareString(code).toUpperCase().trim() + "\t" +Entity.prepareString(name).toUpperCase().trim() + "\t" + database.substring(0,3)+"\t");
+                }
+
+            }
+
+        }
+
+
+        return sArray;
+    }
+    
 
      String[] prepareIpc(String aString)
             throws Exception

@@ -383,18 +383,10 @@ public class SharedSearchSearchEntry {
 		return queryString;
 	}
 	
-	/* iterative call, can be updated for recusrive*/
+	/* support Facet search*/
 	public void runProcess(String after, SharedSearchSearch sharedSearch, BufferedWriter bw, String queryString, String prefix)
 	{
-		/* base case*/
-		/*
-		 * if(after == null || after.isEmpty() || after.equalsIgnoreCase(prev)) return;
-		 * /*
-		 * if(after != null && !after.isEmpty())
-				runProcess(after, prev, sharedSearch, bw);
-		 * else return;
-		 */
-
+		
 			while(after != null && !(after.isBlank()))
 			{
 				logger.info(++counter);

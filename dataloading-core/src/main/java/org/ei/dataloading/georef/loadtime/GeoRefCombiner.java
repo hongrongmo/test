@@ -80,7 +80,8 @@ public static void main(String args[])
 	  String environment = args[8].toLowerCase();
 	  if(args.length>9)
 	  {
-		  propertyFileName=args[9].toLowerCase();
+		  //propertyFileName=args[9].toLowerCase();
+		  propertyFileName=args[9];		// HT to preserve path/dir if any uppercase exist
 	  }
 	
 	  try {
@@ -105,9 +106,7 @@ public static void main(String args[])
       {
       	if(str.equalsIgnoreCase("lookup"))
       		c.setAction("lookup");
-      	System.out.println("Action: lookup");
       }
-      
       /*HT added 09/21/2020 to support ES lookup*/
  	 if(c.getAction() != null && c.getAction().equalsIgnoreCase("lookup"))
    	   c.writeLookupByWeekHook(loadNumber);

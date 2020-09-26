@@ -831,17 +831,16 @@ public class EptCombiner extends Combiner {
         EptCombiner c = new EptCombiner(writer);
         
         /*TH added 09/21/2020 for ES lookup generation*/
+  	  Combiner.CURRENTDB = "ept";
         for(String str: args)
         {
         	if(str.equalsIgnoreCase("lookup"))
         		c.setAction("lookup");
-        	System.out.println("Action: lookup");
         }
-        
 
-        /*HT added 09/21/2020 if condition on action to consider lookup extraction for ES, otherwise consider it reg. extraction and so embed all looadnumber check inside this global if stmt*/
-        if(c.getAction() == null || c.getAction().isEmpty())
-        {
+        /*HT added 09/21/2020 to support ES lookup*/
+    	 if(c.getAction() != null && c.getAction().equalsIgnoreCase("lookup"))
+      	   c.writeLookupByWeekHook(loadNumber);
         	  // extract the whole thing
             if(loadNumber == 0)
             {
@@ -881,15 +880,6 @@ public class EptCombiner extends Combiner {
             {
                 c.writeCombinedByYear(url, driver, username, password, loadNumber);
             }
-            
-        }
-        else
-        {
-        	System.out.println("Extracting Lookups");
-        	c.writeLookupByWeekNumber(loadNumber);
-        }
-      
-        
 
     }
     public void setAction(String str)

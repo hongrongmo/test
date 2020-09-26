@@ -363,7 +363,7 @@ public class INSPECCombiner
         
         try
         {
-    	    totalCount = getResultSetSize(rs); 
+    	    //totalCount = getResultSetSize(rs);   		// HT 09/21/2020 ONLY COMMENT OUT WHEN GENERATING WHOLE TABLE LOOKUP, UNCOMMENT IN PROD
     	    if(this.propertyFileName!=null)
     	    {
     	    	System.out.println("propertyFileName="+this.propertyFileName);

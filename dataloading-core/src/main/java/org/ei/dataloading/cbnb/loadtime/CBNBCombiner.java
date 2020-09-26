@@ -58,11 +58,11 @@ public class CBNBCombiner extends Combiner
         CBNBCombiner c = new CBNBCombiner(writer);
         
         /*TH added 09/21/2020 for ES lookup generation*/
+        Combiner.CURRENTDB = "cbn";
         for(String str: args)
         {
         	if(str.equalsIgnoreCase("lookup"))
         		c.setAction("lookup");
-        	System.out.println("Action: lookup");
         }
 
         /*HT added 09/21/2020 to support ES lookup*/
@@ -263,8 +263,8 @@ public class CBNBCombiner extends Combiner
         try
         {
         	int totalCount = getResultSetSize(rs);
-        	/*HT added 09/21/2020 for lookup extraction for lookup*/
-        	if(this.propertyFileName!=null && !(getAction().equalsIgnoreCase("lookup")))
+
+        	if(this.propertyFileName!=null)
         	{
         		kafka = new KafkaService(processTime+"_CBNB_"+this.loadNumber, this.propertyFileName);
         	}

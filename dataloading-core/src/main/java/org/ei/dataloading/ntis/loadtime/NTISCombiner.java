@@ -459,10 +459,15 @@ public class NTISCombiner
 					rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
 				}
 				
-				if(this.propertyFileName==null)
+				if(this.propertyFileName==null && !(getAction().equalsIgnoreCase("lookup")))
 				{
 		            this.writer.writeRec(rec);//Use this line for FAST extraction
 				}
+				 /*HT added 09/21/2020 for ES lookup*/
+                else if (getAction() != null && getAction().equalsIgnoreCase("lookup"))
+                {
+                	this.lookupObj.writeLookupRec(rec);
+                }
 				else
 				{
 		           

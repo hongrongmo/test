@@ -2045,7 +2045,11 @@ public class UPTCombiner extends CombinerTimestamp {
 
         	/*HT added 09/21/2020 to support ES lookup*/
         	 if(c.getAction() != null && c.getAction().equalsIgnoreCase("lookup"))
-          	   c.writeLookupByWeekHook(loadNumber);
+        	 {
+        		 c.writeLookupByWeekHook(loadNumber);
+        		 System.exit(0);
+        	 }
+          	   
         	 
             	if (timestamp==0 && (loadNumber > 3000 || loadNumber < 1000) && loadNumber>1)
                 {

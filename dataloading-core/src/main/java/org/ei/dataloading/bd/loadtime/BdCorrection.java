@@ -6,7 +6,6 @@ import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
 import org.ei.common.CVSTermBuilder;
 import org.ei.common.Constants;
-import org.ei.dataloading.CombinedXMLWriter;
 import org.ei.common.upt.AssigneeFilter;
 import org.ei.dataloading.*;
 import org.ei.dataloading.upt.loadtime.UPTCombiner;
@@ -72,6 +71,14 @@ public class BdCorrection
     private static String fileName; 		//HH added 06/09/2020 for showing in exception message of temp tables cleanup
     private static String propertyFileName;
     
+    
+    /*HT added 09/21/2020 for ES lookup, add BdCorrection constructor to initiat XmlCombiner once instead of being initialized in many individual methods in this class*/
+    CombinedXMLWriter writer = null;
+    public BdCorrection()
+    {
+        
+        writer = new CombinedXMLWriter(50000, updateNumber, database, "dev");
+    }
     public static void main(String args[])
         throws Exception
     {
@@ -277,7 +284,7 @@ public class BdCorrection
         try
         {
 
-            BdCorrection bdc = new BdCorrection();
+            BdCorrection bdc = new BdCorrection();            
             con = bdc.getConnection(url,driver,username,password);
             if(action!=null && !(action.equals("extractupdate")||action.equals("extractdelete") ||action.equals("lookupIndex")||action.equalsIgnoreCase("extractnumerical")||action.equalsIgnoreCase("extractauthorlookupindex")||action.equalsIgnoreCase("extractcafe")||action.equalsIgnoreCase("extractcafeloadnumber")||action.equalsIgnoreCase("extractcafemapping")||action.equalsIgnoreCase("extractcafedelete")||action.equalsIgnoreCase("extractallupdate")))
             {
@@ -410,7 +417,11 @@ public class BdCorrection
                     Thread.currentThread().sleep(1000);
                 }
               
-                bdc.writeIndexOnly(updateNumber,database);
+                //bdc.writeIndexOnly(updateNumber,database);
+                
+                /*HT added 09/21/2020 for ES lookup*/
+                bdc.writeESIndexOnly(updateNumber,database);
+                
                 
                 System.out.println("************************ "+database+" "+updateNumber+" lookup index is done. **********************");
                 midTime = endTime;
@@ -454,6 +465,27 @@ public class BdCorrection
         System.exit(1);
     }
     
+    /**
+     * 
+     * @author TELEBH
+     * @Date: 09/21/2020 
+     * @Description: Generate Lookups for ES
+     * @throws Exception
+     */
+    
+	public void writeESIndexOnly(int updatenumber, String database) throws Exception 
+	{
+		/* TH added 09/21/2020 for ES lookup generation */
+		XmlCombiner c = new XmlCombiner(writer, propertyFileName);
+		c.setAction("lookup");
+		c.writeLookupByWeekHook(updatenumber);
+		
+		if ((updatenumber > 3000 || updatenumber < 1000) && (updatenumber > 1)) {
+			c.writeCombinedByWeekNumber(url, driver, username, password, updatenumber);
+		} 
+	
+	}
+    	
     public void writeIndexOnly(int updatenumber,String database)throws Exception
     {
     	CombinedXMLWriter writer = new CombinedXMLWriter(50000,updatenumber,database);
@@ -1705,6 +1737,42 @@ public class BdCorrection
             }
         }
     }
+    
+    /*HT added 09/21/2020 for ES Lookup*/
+    private void processESLookupIndex(HashMap update,HashMap backup) throws Exception
+    {
+
+        database = this.database;
+
+        HashMap outputMap = new HashMap();
+        //System.out.println("****Doing Amazon testing, do not process lookup index*****");
+        //command out for amazon cloud testing
+
+        HashMap deletedAuthorLookupIndex            = getDeleteData(update,backup,"AUTHOR");
+        HashMap deletedAffiliationLookupIndex       = getDeleteData(update,backup,"AFFILIATION");
+        HashMap deletedControlltermLookupIndex  = getDeleteData(update,backup,"CONTROLLEDTERM");
+        HashMap deletedPublisherNameLookupIndex     = getDeleteData(update,backup,"PUBLISHERNAME");
+        HashMap deletedSerialtitleLookupIndex   = getDeleteData(update,backup,"SERIALTITLE");
+        
+        /*
+        if(cafeFlag!=null)
+        {
+        	System.out.println("doing cafe loading");
+        }
+        else
+        {
+        */
+        	//System.out.println("doing non-cafe loading");
+	        saveDeletedData("AU",checkFast(deletedAuthorLookupIndex,"AU",database),database);        
+	        saveDeletedData("AF",checkFast(deletedAffiliationLookupIndex,"AF",database),database);
+	        saveDeletedData("CV",checkFast(deletedControlltermLookupIndex,"CV",database),database);
+	        saveDeletedData("PN",checkFast(deletedPublisherNameLookupIndex,"PN",database),database);
+	        saveDeletedData("ST",checkFast(deletedSerialtitleLookupIndex,"ST",database),database);
+        //}
+
+    }
+
+    
 
     private void processLookupIndex(HashMap update,HashMap backup) throws Exception
     {
