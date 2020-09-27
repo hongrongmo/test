@@ -1352,7 +1352,7 @@ public class XmlCombiner extends CombinerTimestamp {
 					}
 
 					recArray = (EVCombinedRec[]) recVector.toArray(new EVCombinedRec[0]);
-					if (this.propertyFileName == null && !(getAction().equalsIgnoreCase("lookup"))) {
+					if (this.propertyFileName == null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup")))) {
 						this.writer.writeRec(recArray);// use this line for fast extraction
 
 					}
@@ -1372,6 +1372,7 @@ public class XmlCombiner extends CombinerTimestamp {
 						// use this block of code for sending data to kafka
 
 						this.writer.writeRec(recArray, kafka, batchData, missedData);
+						this.lookupObj.writeLookupRecs(recArray);						//HT added later for weekly lookup extraction for ES
 						if (counter < batchSize) {
 							counter++;
 						} else {
@@ -2274,8 +2275,6 @@ public class XmlCombiner extends CombinerTimestamp {
 		}
 
 	}
-
-	/* HT added 09/21/2020 wk: [202040] for Lookup extraction for ES */
 	@Override
 	/* HT added 09/21/2020 wk: [202040] for Lookup extraction for ES */
 	public void writeLookupByWeekHook(int weekNumber) throws Exception {
@@ -2286,11 +2285,15 @@ public class XmlCombiner extends CombinerTimestamp {
 	}
 
 
-	  public void getLookupData(int weekNumber, String actionType, String tableName, Connection sqlcon) throws Exception {
-	  Statement stmt = null; ResultSet rs = null; String sqlQuery = null, cpxSqlQuery = null;
+	/*HT added 09/21/2020, Get Lookup list from temp tables based on correction action, this method to support bdCorrectio, not for ES lookup extraction*/
+	  public Map<String,List<String>> getESLookupData(int weekNumber, String actionType, String tableName, Connection sqlcon) throws Exception {
+	  Statement stmt = null; 
+	  ResultSet rs = null; 
+	  String sqlQuery = null, cpxSqlQuery = null;
+	  Map<String,List<String>> recs = null;
 	  
-	  try { String database = Combiner.CURRENTDB; lookupObj = new
-	  LookupEntry(database, weekNumber); lookupObj.init();
+	  try { 
+		  String database = Combiner.CURRENTDB; 
 	  
 	  con = sqlcon;
 	  stmt = con.createStatement();
@@ -2336,8 +2339,7 @@ public class XmlCombiner extends CombinerTimestamp {
 				System.exit(1);
 			}
 
-			prepareLookupRecs(rs);
-			this.lookupObj.flush();
+			 recs = prepareLookupRecs(rs);
 		} 
 	  finally 
 	  {
@@ -2365,7 +2367,9 @@ public class XmlCombiner extends CombinerTimestamp {
 					e.printStackTrace();
 				}
 			} 
+			 
 		}
+	  return recs;
 	  
 	  }
 	  
@@ -2588,10 +2592,7 @@ public class XmlCombiner extends CombinerTimestamp {
 						recVector.add(rec);
 						recArray = (EVCombinedRec[]) recVector.toArray(new EVCombinedRec[0]);
 
-						if (getAction() != null && getAction().equalsIgnoreCase("lookup")) {
-							this.lookupObj.setLookupRecs(recArray, authorList, affiliationList, serialTitleList, controltermList, publishernameList, ipcList);
-						}
-
+						this.lookupObj.setLookupRecs(recArray, authorList, affiliationList, serialTitleList, controltermList, publishernameList, ipcList);
 					}
 
 				} catch (Exception e) {

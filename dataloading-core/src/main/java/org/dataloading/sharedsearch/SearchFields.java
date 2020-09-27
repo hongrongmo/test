@@ -48,8 +48,13 @@ public class SearchFields {
 		searchFields.put("doi", "doi");
 		searchFields.put("yr", "publicationYear");
 		searchFields.put("ti", "title");
-		searchFields.put("au", "author");
-		searchFields.put("cv", "controlledTerms");
+		searchFields.put("au", "authorGroup.phrase");
+		searchFields.put("af", "authorEditorAffiliation.agg");
+		searchFields.put("cv", " controlledVocabularyGroup.exact");
+		searchFields.put("st", "serialTitles.agg");
+		searchFields.put("pn", "publisherName.agg");
+		searchFields.put("pid", "inPatentClassification.agg");
+		searchFields.put("pc", "authorityCode.agg");
 		searchFields.put("an", "accessionNumber");
 		searchFields.put("pi", "processInfo");
 		

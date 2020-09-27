@@ -79,13 +79,16 @@ public class GeoRefCorrection
     public static final String GROUPDELIMITER = new String(new char[] {02});
     private static Logger log4j = Logger.getLogger(GeoRefCorrection.class.getName());
 
+    private static String tableToBeTruncated = null;
+    private static long startTime = System.currentTimeMillis();
+    
     public static void main(String args[])
         throws Exception
     {
 		long startTime = System.currentTimeMillis();
 
 		String input;
-		String tableToBeTruncated = tempTable+","+backupTable+","+lookupTable;
+		
 		int iThisChar; // To read individual chars with System.in.read()
 
 		try
@@ -213,11 +216,26 @@ public class GeoRefCorrection
 		}
 
 
-		try
+		/*HT Added 09/21/2020 Move all work below to startCorrection instead*/
+		tableToBeTruncated = tempTable+","+backupTable+","+lookupTable;
+		GeoRefCorrection grfc = new GeoRefCorrection();
+		grfc.startCorrection();
+		
+    }
+
+    /*HT 09/21/2020 moved from main to here for readability*/
+    public void startCorrection()
+    {
+    	CombinedXMLWriter writer = new CombinedXMLWriter(50000,
+                updateNumber,
+                database,
+                "dev");
+
+    	GeoRefCombiner grfcomb = new GeoRefCombiner(writer);
+    	try
 		{
 
-			GeoRefCorrection grfc = new GeoRefCorrection();
-			con = grfc.getConnection(url,driver,username,password);
+			con = getConnection(url,driver,username,password);
 			if(action!=null && !(action.equals("extractupdate")||action.equals("extractdelete") ||action.equals("lookupIndex") ||action.equals("ip_delete") ||action.equals("ip_extract")))
 			{
 				/**********delete all data from temp table *************/
@@ -232,7 +250,7 @@ public class GeoRefCorrection
 				}
 
 
-				grfc.cleanUp(tableToBeTruncated);
+				cleanUp(tableToBeTruncated);
 
 
 				/************** load data into temp table ****************/
@@ -249,8 +267,8 @@ public class GeoRefCorrection
 				int tempTableCount =0;
 				if(action.equalsIgnoreCase("ip_add"))
 				{
-					tempTableCount = grfc.getTempTableCount(updateNumber);
-					int maxLoadNumber = grfc.getBiggestLoadNumber();
+					tempTableCount = getTempTableCount(updateNumber);
+					int maxLoadNumber = getBiggestLoadNumber();
 					if(maxLoadNumber>=updateNumber)
 					{
 						System.out.println("must enter a bigger load number than "+maxLoadNumber);
@@ -258,8 +276,8 @@ public class GeoRefCorrection
 					}
 					if(tempTableCount==0)
 					{
-						grfc.loadDataIntoTempTable(fileToBeLoaded,dataFile,Integer.toString(updateNumber));
-						tempTableCount = grfc.getTempTableCount(updateNumber);
+						loadDataIntoTempTable(fileToBeLoaded,dataFile,Integer.toString(updateNumber));
+						tempTableCount = getTempTableCount(updateNumber);
 						log4j.info(tempTableCount+" records for load_number "+updateNumber+" loaded into table georef_master_ip");
 					}
 					else
@@ -272,8 +290,8 @@ public class GeoRefCorrection
 				}
 				else
 				{
-					grfc.loadDataIntoTempTable(fileToBeLoaded,dataFile,Integer.toString(updateNumber));
-					tempTableCount = grfc.getTempTableCount();
+					loadDataIntoTempTable(fileToBeLoaded,dataFile,Integer.toString(updateNumber));
+					tempTableCount = getTempTableCount();
 				}
 
 				if(tempTableCount>0)
@@ -295,11 +313,11 @@ public class GeoRefCorrection
 					}
 					if(action.equalsIgnoreCase("ip_add"))
 					{
-						grfc.processInProcessData(dataFile,updateNumber,database,action);
+						processInProcessData(dataFile,updateNumber,database,action);
 					}
 					else
 					{
-						grfc.runCorrection(dataFile,updateNumber,database,action);
+						runCorrection(dataFile,updateNumber,database,action);
 					}
 				}
 				else
@@ -318,13 +336,16 @@ public class GeoRefCorrection
 				}
 				if(action.equalsIgnoreCase("update"))
 				{
-
-					grfc.processLookupIndex(grfc.getLookupData("update"),grfc.getLookupData("backup"));
+					//processLookupIndex(getLookupData("update"),getLookupData("backup"));					// fast
+					processESLookupIndex(grfcomb.getESLookupData(updateNumber,"update", tempTable,con),grfcomb.getESLookupData(updateNumber, "backup", backupTable, con));			//es
+					
+					
 				}
 				else if(action.equalsIgnoreCase("delete"))
 				{
 
-					grfc.processLookupIndex(new HashMap(),grfc.getLookupData("backup"));
+					//processLookupIndex(new HashMap(),getLookupData("backup"));																			//fast
+					processESLookupIndex(new HashMap<String, List<String>>(),grfcomb.getESLookupData(updateNumber, "backup", backupTable, con));			//es
 				}
 
 
@@ -332,22 +353,26 @@ public class GeoRefCorrection
 
 			if(action.equalsIgnoreCase("lookupIndex"))
 			{
-				grfc.outputLookupIndex(grfc.getLookupData("lookupIndex"),updateNumber);
+				//outputLookupIndex(getLookupData("lookupIndex"),updateNumber);					//fast
 				System.out.println(database+" "+updateNumber+" lookup index is done.");
+				
+				/*HT added 09/21/2020 for ES lookup*/
+				writeESIndexOnly(updateNumber,database);	
+           	 
 			}
 			else if(action.equalsIgnoreCase("extractupdate")||action.equalsIgnoreCase("extractdelete"))
 			{
-				grfc.doFastExtract(updateNumber,database,action);
+				doFastExtract(updateNumber,database,action);
 				System.out.println(database+" "+updateNumber+" fast extract is done.");
 			}
 			else if(action.equalsIgnoreCase("ip_delete"))
 			{
-				grfc.deleteInProcessData();
+				deleteInProcessData(grfcomb);
 				System.out.println(updateNumber+" "+database+" IN PROCESS deletion is done.");
 			}
 			else if(action.equalsIgnoreCase("ip_extract") )
 			{
-					grfc.runExtract(Integer.toString(updateNumber));
+					runExtract(Integer.toString(updateNumber));
 					System.out.println(updateNumber+" "+database+" IN PROCESS extract is done.");
 			}
 			else if(!action.equalsIgnoreCase("ip_add") && !action.equalsIgnoreCase("ip_delete"))
@@ -357,6 +382,9 @@ public class GeoRefCorrection
 			}
 
 
+		} catch (Exception e) {
+			
+			e.printStackTrace();
 		}
 		finally
 		{
@@ -376,7 +404,6 @@ public class GeoRefCorrection
 
         System.exit(1);
     }
-
     private int getBiggestLoadNumber()
 	{
 		PreparedStatement stmt = null;
@@ -446,7 +473,8 @@ public class GeoRefCorrection
 	}
 
 
-    private void deleteInProcessData()
+    /*HT 09/21/2020 pass GeorefCombiner instance to support ES Lookup*/
+    private void deleteInProcessData(GeoRefCombiner grfcomb)
 	{
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
@@ -477,7 +505,8 @@ public class GeoRefCorrection
 			}
 			else
 			{
-				processLookupIndex(new HashMap(),getLookupData("ip_delete"));
+				//processLookupIndex(new HashMap(),getLookupData("ip_delete"));				//fast
+				processESLookupIndex(new HashMap<String, List<String>>(),grfcomb.getESLookupData(updateNumber, "ip_delete", "georef_master_orig", con));			//es
 			}
 		}
 		catch(Exception e)
@@ -1452,6 +1481,29 @@ private void processResponse(String value, String response, BufferedWriter bw) t
 		}
 	}
 
+    /**
+     * 
+     * @author TELEBH
+     * @Date: 09/21/2020 
+     * @Description: Generate Lookups for ES
+     * @throws Exception
+     */
+    
+	public void writeESIndexOnly(int updatenumber, String database) throws Exception 
+	{
+		/* TH added 09/21/2020 for ES lookup generation */
+		CombinedXMLWriter writer = new CombinedXMLWriter(50000, updateNumber, database, "dev");
+		XmlCombiner c = new XmlCombiner(writer);
+		c.setAction("lookup");
+		c.writeLookupByWeekHook(updatenumber);
+		
+		if ((updatenumber > 3000 || updatenumber < 1000) && (updatenumber > 1)) {
+			c.writeCombinedByWeekNumber(url, driver, username, password, updatenumber);
+		} 
+	
+	}
+    	
+	
     private void outputLookupIndex(HashMap lookupData, int updateNumber)
     {
 
@@ -1993,6 +2045,26 @@ private void processResponse(String value, String response, BufferedWriter bw) t
 			}
 		}
 	}
+    
+    /*HT added 09/21/2020 for ES Lookup*/
+   	private void processESLookupIndex(Map<String, List<String>> update,Map<String, List<String>> backup)
+   			throws Exception {
+
+
+   		Map<String,String> deletedAuthorLookupIndex = getDeleteData(update, backup, "AUTHOR");
+   		Map<String,String> deletedAffiliationLookupIndex = getDeleteData(update, backup, "AFFILIATION");
+   		Map<String,String> deletedControlltermLookupIndex = getDeleteData(update, backup, "CONTROLLEDTERM");
+   		Map<String,String> deletedPublisherNameLookupIndex = getDeleteData(update, backup, "PUBLISHERNAME");
+   		Map<String,String> deletedSerialtitleLookupIndex = getDeleteData(update, backup, "SERIALTITLE");
+
+   		saveDeletedData("AU", checkES(deletedAuthorLookupIndex, "AU", database), database);
+   		saveDeletedData("AF", checkES(deletedAffiliationLookupIndex, "AF", database), database);
+   		saveDeletedData("CV", checkES(deletedControlltermLookupIndex, "CV", database), database);
+   		saveDeletedData("PN", checkES(deletedPublisherNameLookupIndex, "PN", database), database);
+   		saveDeletedData("ST", checkES(deletedSerialtitleLookupIndex, "ST", database), database);
+
+   	}
+   	
 
     private void processLookupIndex(HashMap update,HashMap backup) throws Exception
     {
@@ -2066,6 +2138,15 @@ private void processResponse(String value, String response, BufferedWriter bw) t
 
 	}
 
+	 /*ES added 09/21/2020 for ES Lookup*/
+    private List checkES(Map inputMap, String searchField, String database) throws Exception
+    {
+        List outputList = new ArrayList();
+        SharedSearchSearchEntry entry = new SharedSearchSearchEntry("https://shared-search-service-api.prod.scopussearch.net/sharedsearch/document/result");
+        outputList = entry.runESLookupCheck(inputMap,searchField);
+        return outputList;
+    }
+    
 	private List checkFast(HashMap inputMap, String searchField, String database) throws Exception
 	{
 
@@ -2126,11 +2207,11 @@ private void processResponse(String value, String response, BufferedWriter bw) t
 
 	}
 
-	private HashMap getDeleteData(HashMap update,HashMap backup,String field)
+	private HashMap<String, String> getDeleteData(Map update,Map backup,String field)
 	{
 		List backupList = null;
 		List updateList = null;
-		HashMap deleteLookupIndex = new HashMap();
+		HashMap<String,String> deleteLookupIndex = new HashMap();
 		if(update !=null && backup != null)
 		{
 			backupList = (ArrayList)backup.get(field);

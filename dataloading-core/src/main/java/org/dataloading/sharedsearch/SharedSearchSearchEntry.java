@@ -26,6 +26,7 @@ import java.sql.SQLSyntaxErrorException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -147,7 +148,7 @@ public class SharedSearchSearchEntry {
 			else
 					entry.startFacetProcess();
 		else
-			entry.startProcess();    //for standalone processing ONLY
+			entry.startProcess();    //for standalone processing ONLY, when needed to read AUIDS list from file and for each ID check ES
 		
 		/* QA query for batchinfo and processInfo*/
 		//entry.startQAProcess();
@@ -176,6 +177,13 @@ public class SharedSearchSearchEntry {
 		this.midReturn = midReturn;
 	}
 	
+	/*to support lookup check*/
+	public SharedSearchSearchEntry(String sharedSearchURL ) {
+		
+		sharedSearchurl = sharedSearchURL;
+		logger = Logger.getLogger(SharedSearchSearchEntry.class);
+	}
+
 	
 	/*if searching composit Facet*/
 	
@@ -372,10 +380,10 @@ public class SharedSearchSearchEntry {
 		String queryString = null;
 		
 		/* Pulling auid and afid*/
-		if(facetField.equalsIgnoreCase("authorId") || facetField.equalsIgnoreCase("affiliationId"))
+		if(facetField != null && (facetField.equalsIgnoreCase("authorId") || facetField.equalsIgnoreCase("affiliationId")))
 			queryString = "database:" + database + " AND " + searchField + ":" + prefix + "*";
 		/*Pulling batchInfo for time-range using updateTime*/
-		else if (searchValue.contains("-") && searchValue.toLowerCase().contains("to") &&  isValidDate(searchValue))
+		else if (searchField.equalsIgnoreCase("updatetime") && searchValue.contains("-") && searchValue.toLowerCase().contains("to") &&  isValidDate(searchValue))
 			queryString = searchField + ":" + searchValue;
 		/* get facet count based on any other field search, i.e. loadNumber: 202037, though in such case need to exclude database */
 		else
@@ -437,6 +445,46 @@ public class SharedSearchSearchEntry {
 			ex.printStackTrace();
 		}
 	}
+	
+	/* To support BD Correction Lookup hitcount check so can filter the ones to be deleted */
+	public List<String> runESLookupCheck(Map<String, Integer>LookupMap, String lookupField)
+	{
+		String lookupESQuery = null;
+
+		  List<String> outputList = new ArrayList<>();
+		try
+		{
+			SharedSearchSearch sharedSearch = new SharedSearchSearch(sharedSearchurl, logger);
+			SearchFields fields = new SearchFields();
+
+			String esSearchField = fields.getSearchField(lookupField.toLowerCase());
+
+			for (String lookupItem : LookupMap.keySet()) 
+			{
+				lookupESQuery = sharedSearch.buildLookupESQuery(esSearchField + ":" + "\"" + lookupItem + "\""); 
+				System.out.println(lookupESQuery);
+				String esHitCount = sharedSearch.runESQuery(lookupItem, lookupESQuery, null, "");
+				String indexCount = String.valueOf(LookupMap.get(lookupItem));
+				if (indexCount != null && indexCount != ""
+						&& Integer.parseInt(indexCount) >= Integer.parseInt(esHitCount)) {
+					outputList.add(lookupItem);
+				}
+				else
+				{
+					System.out.println(lookupItem + "db count < esHitCount, so no action" + indexCount + " <" + esHitCount);
+				}
+			}
+		}
+		catch(Exception e)
+		{
+			System.out.println("Exception to run sharedSearch for ES Lookup check of hitcount to identify lookups to be deleted!!!!");
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+		
+			return outputList;
+	}
+	
 	
 	/* Check data format range for QA */
 	//parse updateTime range for limiting batchinfo to this specified time Range

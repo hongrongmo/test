@@ -56,6 +56,12 @@ public class SharedSearchSearch {
 		this.logger = logger;
 	}
 
+	public SharedSearchSearch(String sharedSearchUrl, Logger logger)
+	{
+		this.url = sharedSearchUrl;
+		this.logger = logger;
+	}
+
 	
 	
 	public String runESQuery(String value, String query, BufferedWriter bw, String prefix) {
@@ -109,7 +115,7 @@ public class SharedSearchSearch {
 				
 				// process response and fetch HitCount from result
 				if(value != null && !(value.isEmpty()))
-					processResponse(value, response.toString(), bw);
+					result = processResponse(value, response.toString(), bw);
 				else
 				{
 					logger.info("ProcessResponse start.....");
@@ -208,7 +214,7 @@ public class SharedSearchSearch {
 
 	}
 	
-	private void processResponse(String value, String response, BufferedWriter bw) throws ParseException, IOException {
+	private String processResponse(String value, String response, BufferedWriter bw) throws ParseException, IOException {
 		if(!(response.toString().isEmpty()))
 		{
 			JSONParser parser = new JSONParser();
@@ -219,29 +225,37 @@ public class SharedSearchSearch {
 			
 			synchronized(this)
 			{
-				if(!hits.isEmpty())
+				if(bw != null)
 				{
-					
-					@SuppressWarnings("unchecked")
-					Iterator<JSONObject> itr = hits.iterator();
-					while(itr.hasNext())
+					if(!hits.isEmpty())
 					{
-						String[] returnField = itr.next().toString().replaceAll("[\"\\{\\}]+","").split(":");
-						if(returnField.length >1)
+						
+						@SuppressWarnings("unchecked")
+						
+						Iterator<JSONObject> itr = hits.iterator();
+						while(itr.hasNext())
 						{
-							bw.write(value + "\t" + hitCount + "\t" + returnField[1] +"\n");
+							String[] returnField = itr.next().toString().replaceAll("[\"\\{\\}]+","").split(":");
+							if(returnField.length >1)
+							{
+								bw.write(value + "\t" + hitCount + "\t" + returnField[1] +"\n");
+							}
+								
 						}
-							
+						
 					}
-					
+					else
+					{
+						bw.write(value + "\t" + hitCount); 
+						bw.newLine();
+					}
 				}
-				else
-				{
-					bw.write(value + "\t" + hitCount); 
-					bw.newLine();
-				}
+				
+				return String.valueOf(hitCount);
 			}
+			
 		}
+		return "0";
 		
 	}
 	
@@ -314,6 +328,33 @@ public class SharedSearchSearch {
 		JSONObject queryString = new JSONObject();
 		//queryString.put("queryString", searchField + ":" + value + " AND database:" + database);
 		queryString.put("queryString", searchField + ":" + value);
+		queryString.put("defaultOperator", "AND");
+		query.put("query",queryString);
+		
+		JSONArray returnFields = new JSONArray();
+		returnFields.add("processInfo");
+		query.put("returnFields", returnFields);
+		
+
+		JSONObject result = new JSONObject();
+		result.put("skip", 0);
+		result.put("amount", 1);
+		query.put("resultSet", result);
+		
+		return query.toJSONString();
+			
+		}	
+
+	
+	@SuppressWarnings("unchecked")
+	/*to support Lookup Query to identify lookups to be deleted*/
+	public String buildLookupESQuery(String lookupQuery) {
+		
+		JSONObject query = new JSONObject();
+		
+		JSONObject queryString = new JSONObject();
+		//queryString.put("queryString", searchField + ":" + value + " AND database:" + database);
+		queryString.put("queryString", lookupQuery);
 		queryString.put("defaultOperator", "AND");
 		query.put("query",queryString);
 		
