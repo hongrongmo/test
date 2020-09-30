@@ -264,6 +264,7 @@ public class BaseTableDriver
                 {
                     ZipEntry entry = (ZipEntry)entries.nextElement();
                     in = new BufferedReader(new InputStreamReader(zipFile.getInputStream(entry), "UTF-8"));
+                  
                     writeRecs(in,con);
                 }
             }
@@ -273,7 +274,17 @@ public class BaseTableDriver
                 //in = new BufferedReader(new FileReader(infile));//new InputStreamReader(is, "UTF-8"));
                 File file = new File(infile);
                 in = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-8"));
+                //in = new BufferedReader(new InputStreamReader(new FileInputStream(file), "ISO-8859-1"));
+                
                 writeRecs(in,con);
+              //for test only
+                /*
+                String line = "";
+                while((line = in.readLine()) != null){
+                	System.out.println(line);
+                } 
+                */                  
+                //end of test
             }        
             else if (this.cafe)   //HH 02/2016 for Cafe
             {
@@ -289,28 +300,7 @@ public class BaseTableDriver
                 System.out.println("this application only handle xml and zip file");
             }
 
-            /* remove these to avoid clog log file
-             * 
-            List nullAccessNumberRecordList = baseWriter.getNullAccessNumberRecord();          
-            if(nullAccessNumberRecordList.size()>0)
-            {
-            	System.out.println("there are "+baseWriter.getNullAccessNumberRecord().size()+" records with null accessnumber");
-            	System.out.println("the PUI for these records are");
-            	for(int i=0;i<nullAccessNumberRecordList.size();i++)
-            	{
-            		String pui = (String)nullAccessNumberRecordList.get(i);
-            		//System.out.print(pui);
-            		if(i<nullAccessNumberRecordList.size()-1)
-            		{
-            			System.out.print(",");
-            		}
-            		else
-            		{
-            			System.out.print(".\n");
-            		}
-            	}
-            }
-            */
+           
             baseWriter.end();
 
         }
@@ -436,7 +426,7 @@ public class BaseTableDriver
                   break;
                 }
             }
-            //System.out.println("total " + (recordCount-1) +" records found");
+           
             out.flush();
         }
         catch(Exception e)

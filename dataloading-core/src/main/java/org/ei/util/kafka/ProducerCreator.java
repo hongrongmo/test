@@ -14,7 +14,8 @@ import org.apache.kafka.common.serialization.StringSerializer;
 
 public class ProducerCreator {
         public static KafkaProducer<String, String> createProducer(String kafka_brokers) {
-            // props = new Properties();
+            /*
+        	// props = new Properties();
         	String kafkaBroker=null;
         	try (InputStream input = new FileInputStream("./lib/config.properties")) {
 
@@ -31,9 +32,10 @@ public class ProducerCreator {
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
+        	*/
             Properties props = new Properties();
             //props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, IKafkaConstants.KAFKA_BROKERS);
-            props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaBroker); //getkafka broker from config.properties file
+            props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, kafka_brokers); //getkafka broker from config.properties file
             props.put(ProducerConfig.CLIENT_ID_CONFIG, IKafkaConstants.CLIENT_ID);
             //.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, LongSerializer.class.getName());
             props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());

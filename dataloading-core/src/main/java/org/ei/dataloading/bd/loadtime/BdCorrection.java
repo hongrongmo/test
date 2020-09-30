@@ -1029,7 +1029,7 @@ public class BdCorrection
                 {                		               
                 	rs = stmt.executeQuery(deleteString);
 	                List deleteRecords = creatDeleteFile(rs,dbname,updateNumber);
-	                //sendDeleteToKafka(deleteRecords);
+	                sendDeleteToKafka(deleteRecords);
 	                writer.zipBatch();
 	                
                 }
@@ -1073,7 +1073,10 @@ public class BdCorrection
     
     private void sendDeleteToKafka(List rs)
     {
-    	KafkaService kafka = new KafkaService();
+    	//KafkaService kafka = new KafkaService();
+    	long processTime = System.currentTimeMillis();
+    	String processInfo=processTime+"_"+this.database+"_"+updateNumber;
+    	KafkaService kafka = new KafkaService(processInfo, this.propertyFileName); //use it for ES extraction
     	try
     	{
 	    	String eid="";

@@ -46,6 +46,7 @@ public class BdAuthors
 
     public BdAuthors( String bdAuthors, ArrayList aElements )
     {
+    	
         elements = aElements;
         bdAuthorsMap = new LinkedHashMap();
         parseData(bdAuthors);
@@ -61,6 +62,7 @@ public class BdAuthors
 
     public void parseData(String bdAuthors)
     {
+    	//System.out.println("AUTHOR1="+bdAuthors);
 	    if(bdAuthors != null)
 	    {
 	        String [] auelements = bdAuthors.split(Constants.AUDELIMITER, -1);
@@ -129,6 +131,7 @@ public class BdAuthors
 					searchValue.add(nextau.getSearchValue());
 				}
 				*/
+				//System.out.println("AUTHOR2="+nextau.getSearchValue());
 				searchValue.add(nextau.getSearchValue());
 				
 			}
