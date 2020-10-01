@@ -570,7 +570,7 @@ public class DataLoadDictionary
     			{
     				if((int)c==769)
     				{
-    					System.out.println(BdParser.accessNumberS+"\t"+xml);
+    					//System.out.println(BdParser.accessNumberS+"\t"+xml);					//HT commented on 09/21/2020 It seems it has been added only for checking accented names, Uncomment for debugging, otherwise makes log file big
     				}
     				
     				switch ((int) c)

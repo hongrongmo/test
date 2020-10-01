@@ -278,7 +278,7 @@ public class BdCorrection
         }
         
         /*HT Added 09/21/2020 Move all work below to startCorrection instead*/
-        tableToBeTruncated = "bd_correction_temp,deleted_lookupIndex,bd_temp_backup";
+        //tableToBeTruncated = "bd_correction_temp,deleted_lookupIndex,bd_temp_backup";
         BdCorrection bdc = new BdCorrection();
         bdc.startCorrection();
     }
@@ -291,8 +291,8 @@ public class BdCorrection
                 database,
                 "dev");
 
-    	XmlCombiner xmlcomb = new XmlCombiner(writer,propertyFileName);
-
+    	XmlCombiner xmlcomb = new XmlCombiner(writer,propertyFileName,database);
+    	
     	 midTime = System.currentTimeMillis();
          endTime = System.currentTimeMillis();
          System.out.println("Time for finish reading input parameter"+(endTime-startTime)/1000.0+" seconds");
@@ -300,9 +300,18 @@ public class BdCorrection
          try
          {
 
-                         
+        	String[] tableNames = new String[3];
+          	tableNames[0] = tempTable;
+          	tableNames[1] = "BD_MASTER_ORIG";
+          	tableNames[2] = backupTable;   
+          	
+
+        	/*HT added 09/21/2020 initialize lookup entry*/
+    		xmlcomb.writeLookupByWeekHook(updateNumber);
+
+          	
              con = getConnection(url,driver,username,password);
-             if(action!=null && !(action.equals("extractupdate")||action.equals("extractdelete") ||action.equals("lookupIndex")||action.equalsIgnoreCase("extractnumerical")||action.equalsIgnoreCase("extractauthorlookupindex")||action.equalsIgnoreCase("extractcafe")||action.equalsIgnoreCase("extractcafeloadnumber")||action.equalsIgnoreCase("extractcafemapping")||action.equalsIgnoreCase("extractcafedelete")||action.equalsIgnoreCase("extractallupdate")))
+             if(action!=null && !(action.equalsIgnoreCase("extractupdate")||action.equals("extractdelete") ||action.equalsIgnoreCase("lookupIndex")||action.equalsIgnoreCase("extractnumerical")||action.equalsIgnoreCase("extractauthorlookupindex")||action.equalsIgnoreCase("extractcafe")||action.equalsIgnoreCase("extractcafeloadnumber")||action.equalsIgnoreCase("extractcafemapping")||action.equalsIgnoreCase("extractcafedelete")||action.equalsIgnoreCase("extractallupdate")))
              {
                  /**********delete all data from temp table *************/
 
@@ -355,10 +364,12 @@ public class BdCorrection
                      System.in.read();
                      Thread.currentThread().sleep(1000);
                  }
-                 Runtime r = Runtime.getRuntime();
-
-                 Process p = r.exec("./"+sqlldrFileName+" "+dataFile);
-                 int t = p.waitFor();
+				
+				  Runtime r = Runtime.getRuntime();
+				  
+				  Process p = r.exec("./"+sqlldrFileName+" "+dataFile); 
+				  int t = p.waitFor();
+				 
 
                  int tempTableCount = getTempTableCount();
                  int tempReferenceTableCount = getTempReferenceTableCount();
@@ -404,18 +415,12 @@ public class BdCorrection
                  {
                  	if(propertyFileName == null)
                  		processLookupIndex(getLookupData("update"),getLookupData("backup"));			// fast
+                 	
                  	/*//HT added 09/21/2020 for es*/
                  	else
                  	{
-                 		String tableName = null;
-                		 if(action.equals("update")||action.equals("aip"))
-                			 tableName = tempTable;
-                        else if(action.equals("lookupIndex") && updateNumber != 0 && database != null)
-                       	 	tableName = "BD_MASTER_ORIG";
-                        else
-                            tableName = backupTable;
-                	
-                		processESLookupIndex(xmlcomb.getESLookupData(updateNumber,"update", tableName,con),xmlcomb.getESLookupData(updateNumber, "backup", tableName, con));			
+                 		
+                		processESLookupIndex(xmlcomb.getESLookupData(updateNumber,"update", tableNames,con, database),xmlcomb.getESLookupData(updateNumber, "backup", tableNames, con, database));			
                  		
                  	}
                  		
@@ -427,15 +432,9 @@ public class BdCorrection
                 	 /*//HT added 09/21/2020 for es*/
                   	else
                   	{
-                  		String tableName = null;
-                 		 if(action.equals("update")||action.equals("aip"))
-                 			 tableName = tempTable;
-                         else if(action.equals("lookupIndex") && updateNumber != 0 && database != null)
-                        	 	tableName = "BD_MASTER_ORIG";
-                         else
-                             tableName = backupTable;
-                 	
-                 		processESLookupIndex(new HashMap<String, List<String>>(),xmlcomb.getESLookupData(updateNumber, "backup", tableName, con));			
+                  		
+            			
+                  		processESLookupIndex(new HashMap<String, List<String>>(),xmlcomb.getESLookupData(updateNumber, "backup", tableNames, con, database));			
                   		
                   	}
                  }
@@ -446,15 +445,7 @@ public class BdCorrection
                 	 /*//HT added 09/21/2020 for es*/
                    	else
                    	{
-                   		String tableName = null;
-                  		 if(action.equals("update")||action.equals("aip"))
-                  			 tableName = tempTable;
-                          else if(action.equals("lookupIndex") && updateNumber != 0 && database != null)
-                         	 	tableName = "BD_MASTER_ORIG";
-                          else
-                              tableName = backupTable;
-                  	
-                  		processESLookupIndex(xmlcomb.getESLookupData(updateNumber,"aip", tableName,con),xmlcomb.getESLookupData(updateNumber, "aipBackup", tableName, con));			
+                   		processESLookupIndex(xmlcomb.getESLookupData(updateNumber,"aip", tableNames,con, database),xmlcomb.getESLookupData(updateNumber, "aipBackup", tableNames, con, database));			
                    		
                    	}
                  }
@@ -480,7 +471,7 @@ public class BdCorrection
                 	 writeIndexOnly(updateNumber,database);							//fast
                  else
                 	 /*HT added 09/21/2020 for ES lookup*/
-                	 writeESIndexOnly(updateNumber,database);					
+                	 writeESIndexOnly(updateNumber,database,xmlcomb);					
                  
                  
                  System.out.println("************************ "+database+" "+updateNumber+" lookup index is done. **********************");
@@ -492,7 +483,7 @@ public class BdCorrection
              else if(action.equalsIgnoreCase("extractupdate")||action.equalsIgnoreCase("extractdelete")||action.equalsIgnoreCase("extractnumerical")||action.equalsIgnoreCase("extractauthorlookupindex")||action.equalsIgnoreCase("extractcafe")||action.equalsIgnoreCase("extractcafeloadnumber")||action.equalsIgnoreCase("extractcafemapping")||action.equalsIgnoreCase("extractcafedelete")||action.equalsIgnoreCase("extractallupdate"))
              {
 
-                 doFastExtract(updateNumber,database,action);
+                 doFastExtract(updateNumber,database,action, xmlcomb);
                  System.out.println(database+" "+updateNumber+" fast extract is done.");
                  midTime = endTime;
                  endTime = System.currentTimeMillis();
@@ -538,15 +529,15 @@ public class BdCorrection
      * @throws Exception
      */
     
-	public void writeESIndexOnly(int updatenumber, String database) throws Exception 
+	public void writeESIndexOnly(int updatenumber, String database, XmlCombiner c) throws Exception 
 	{
 		/* TH added 09/21/2020 for ES lookup generation */
 		CombinedXMLWriter writer = new CombinedXMLWriter(50000, updateNumber, database, "dev");
-		XmlCombiner c = new XmlCombiner(writer, propertyFileName);
 		c.setAction("lookup");
 		c.writeLookupByWeekHook(updatenumber);
 		
 		if ((updatenumber > 3000 || updatenumber < 1000) && (updatenumber > 1)) {
+			Combiner.TABLENAME = "BD_MASTER_ORIG";
 			c.writeCombinedByWeekNumber(url, driver, username, password, updatenumber);
 		} 
 	
@@ -950,7 +941,7 @@ public class BdCorrection
 
     }
 
-    private void doFastExtract(int updateNumber,String dbname,String action) throws Exception
+    private void doFastExtract(int updateNumber,String dbname,String action, XmlCombiner c) throws Exception
     {
         CombinedXMLWriter writer = new CombinedXMLWriter(50000,
                                                       updateNumber,
@@ -959,9 +950,13 @@ public class BdCorrection
 
         Statement stmt = null;
         ResultSet rs = null;
-        XmlCombiner c = new XmlCombiner(writer,propertyFileName);
+        //XmlCombiner c = new XmlCombiner(writer,propertyFileName, database);					//HT commented 9/21/2020 since XmlCombiner initialized in startCorrection already
         try
         {
+        	/*HT added 09/21/2020 initialize lookup entry*/
+			c.writeLookupByWeekHook(updateNumber);
+			
+			
         	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             if(action.equalsIgnoreCase("update") || action.equalsIgnoreCase("extractupdate") || action.equalsIgnoreCase("aip") )
             {
@@ -1869,9 +1864,9 @@ public class BdCorrection
     }
 
     /*ES added 09/21/2020 for ES Lookup*/
-    private List checkES(Map inputMap, String searchField, String database) throws Exception
+    private List<String> checkES(Map inputMap, String searchField, String database) throws Exception
     {
-        List outputList = new ArrayList();
+        List<String> outputList = new ArrayList();
 
         SharedSearchSearchEntry entry = new SharedSearchSearchEntry("https://shared-search-service-api.prod.scopussearch.net/sharedsearch/document/result");
         outputList = entry.runESLookupCheck(inputMap,searchField);

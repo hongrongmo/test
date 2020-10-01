@@ -111,10 +111,14 @@ public static void main(String args[])
       	if(str.equalsIgnoreCase("lookup"))
       		c.setAction("lookup");
       }
-      /*HT added 09/21/2020 to support ES lookup*/
- 	 if(c.getAction() != null && c.getAction().equalsIgnoreCase("lookup"))
+      /*HT added 09/21/2020 to support ES lookup, when we run only Whole DB Lookup extraction*/
+ 	 if(c.getAction() != null && (c.getAction() != null && c.getAction().equalsIgnoreCase("lookup")))
    	   c.writeLookupByWeekHook(loadNumber);
  	 
+ 	/*initialize ES lookup dirs For weekly lookup extraction*/
+		c.writeLookupByWeekHook(loadNumber);
+		
+		
 			if (loadNumber > 100000) {
 				c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
 			}
@@ -165,6 +169,14 @@ public GeoRefCombiner(CombinedWriter writer)
   ((CombinedXMLWriter) writer).setDataValidator(d);
 
 }
+
+/*HT added 09/21/2020 to support ES Lookup*/
+public GeoRefCombiner(CombinedWriter writer, String propertyFileName, String database) {
+	super(writer);
+	this.propertyFileName = propertyFileName;
+	Combiner.CURRENTDB = database;
+}
+
 
 public static int getResultSetSize(ResultSet resultSet)
 {
@@ -374,7 +386,7 @@ public void writeRecs(ResultSet rs)
 	    EVCombinedRec recSecondBox = null;
 		EVCombinedRec[] recArray = null;
 		totalCount = getResultSetSize(rs); 
-		if(this.propertyFileName!=null)
+		if(this.propertyFileName!=null && (getAction() == null || !(getAction().equalsIgnoreCase("lookup"))))    // HT only create Kafka instance when it is // not lookup extraction
 		{
 			kafka = new KafkaService(processTime+"_grf_"+loadNumber, this.propertyFileName);
 		}
@@ -842,11 +854,11 @@ public void writeRecs(ResultSet rs)
 		        i++;
 				recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
 				
-				if(this.propertyFileName==null && !(getAction().equalsIgnoreCase("lookup")))
+				if(this.propertyFileName==null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup"))))
 				{
 					this.writer.writeRec(recArray); //use this line for FAST extraction
 				}
-				else if (getAction() != null && getAction().equalsIgnoreCase("lookup"))
+				else if (getAction() != null && (getAction() != null && getAction().equalsIgnoreCase("lookup")))
 	            {
 	            	this.lookupObj.writeLookupRecs(recArray);
 	            }
@@ -860,6 +872,7 @@ public void writeRecs(ResultSet rs)
 			        //this.writer.writeRec(recArray,kafka);
 			        
 			        this.writer.writeRec(recArray,kafka, batchData, missedData);
+			        this.lookupObj.writeLookupRecs(recArray);						//HT added later for weekly lookup extraction for ES
 		            if(counter<batchSize)
 		            {            	
 		            	counter++;
@@ -871,6 +884,7 @@ public void writeRecs(ResultSet rs)
 		            	 thread.start(); 
 		            	 */
 		            	 kafka.runBatch(batchData,missedData);
+		            	 this.lookupObj.writeLookupRecs(recArray);						//HT added later for weekly lookup extraction for ES
 		            	 batchData = new ConcurrentHashMap<String,String>();
 		            	 counter=0;		
 		            	 
@@ -899,7 +913,7 @@ public void writeRecs(ResultSet rs)
 			System.out.println("**Got "+i+" records instead of "+totalCount);
 		}
 	  	
-	  	if(this.propertyFileName!=null)
+	  	if(this.propertyFileName!=null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup"))))
 	  	{
 			try
 		  	{
@@ -1155,7 +1169,7 @@ private class LocalErrorHandler implements ErrorHandler {
 	 * action, this method to support bdCorrectio, not for ES lookup extraction
 	 */
 	public Map<String, List<String>> getESLookupData(int weekNumber, String actionType, String tableName,
-			Connection sqlcon) throws Exception {
+			Connection sqlcon, String database) throws Exception {
 		Statement stmt = null;
 		ResultSet rs = null;
 		Map<String, List<String>> results = null;
@@ -1165,15 +1179,20 @@ private class LocalErrorHandler implements ErrorHandler {
 			stmt = con.createStatement();
 			System.out.println("Running the query...");
 			String sqlString=null;
-			if(databaseIndexName.equals("grf") && !action.equals("ip_add") && !action.equals("ip_delete"))
+			if(database.equalsIgnoreCase("grf") && !actionType.equalsIgnoreCase("ip_add") && !actionType.equalsIgnoreCase("ip_delete"))
 			{
-				sqlString = "select * from georef_master_orig where updatenumber='"+weekNumber+"'";
+				if(tableName !=null && tableName.equalsIgnoreCase("georef_master_orig"))
+					sqlString = "select * from " + tableName + " where updatenumber='"+weekNumber+"'";
+				else if(tableName != null)
+				{
+					sqlString = "select * from " + tableName;
+				}
 				System.out.println("Processing "+sqlString);
 				rs = stmt.executeQuery(sqlString);
 				results = prepareLookupRecs(rs);
 
 			}
-			else if(databaseIndexName.equals("grf") && action.equals("ip_delete"))
+			else if(database.equalsIgnoreCase("grf") && actionType.equalsIgnoreCase("ip_delete"))
 			{
 				sqlString = "select * from georef_master_delete where updatenumber='"+weekNumber+"'";
 				System.out.println("run select * from georef_master_delete where updatenumber='"+weekNumber+"'");
@@ -1184,7 +1203,7 @@ private class LocalErrorHandler implements ErrorHandler {
 			}
 			else
 			{
-				if(action.equals("lookupIndex") && weekNumber != 0 && databaseIndexName != null)
+				if(actionType.equals("lookupIndex") && weekNumber != 0 && database != null)
 				{
 					sqlString = "select ACCESSNUMBER,AUTHOR,AUTHOR_1,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE FROM georef_master where updateNumber="+weekNumber+" and database='"+weekNumber+"'";
 				}

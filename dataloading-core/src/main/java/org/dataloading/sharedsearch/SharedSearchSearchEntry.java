@@ -462,7 +462,7 @@ public class SharedSearchSearchEntry {
 			for (String lookupItem : LookupMap.keySet()) 
 			{
 				lookupESQuery = sharedSearch.buildLookupESQuery(esSearchField + ":" + "\"" + lookupItem + "\""); 
-				System.out.println(lookupESQuery);
+				//System.out.println(lookupESQuery);			// only for local debugging
 				String esHitCount = sharedSearch.runESQuery(lookupItem, lookupESQuery, null, "");
 				String indexCount = String.valueOf(LookupMap.get(lookupItem));
 				if (indexCount != null && indexCount != ""
@@ -471,7 +471,7 @@ public class SharedSearchSearchEntry {
 				}
 				else
 				{
-					System.out.println(lookupItem + "db count < esHitCount, so no action" + indexCount + " <" + esHitCount);
+					System.out.println(lookupItem + " db count < esHitCount, so no action " + indexCount + " < " + esHitCount);
 				}
 			}
 		}

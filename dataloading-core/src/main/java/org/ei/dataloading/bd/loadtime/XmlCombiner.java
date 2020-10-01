@@ -136,10 +136,15 @@ public class XmlCombiner extends CombinerTimestamp {
 		}
 		System.out.println("Lookup Action? " + c.getAction());
 
-		if (c.getAction() != null && c.getAction().equalsIgnoreCase("lookup")) {
+		/* HT added 09/21/2020, this condition needed when we run only Whole DB Lookup extraction for ES*/
+		if (c.getAction() != null && (c.getAction() != null && c.getAction().equalsIgnoreCase("lookup"))) {
 			c.writeLookupByWeekHook(loadNumber);
 		}
-
+		/*initialize ES lookup dirs For weekly lookup extraction*/
+		c.writeLookupByWeekHook(loadNumber);
+		
+		
+		
 		if (timestamp == 0 && (loadNumber > 3000 || loadNumber < 1000) && (loadNumber > 1)) {
 			c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
 		} else if (timestamp > 0) {
@@ -187,7 +192,13 @@ public class XmlCombiner extends CombinerTimestamp {
 		this.propertyFileName = propertyFileName;
 
 	}
-
+	
+	/*HT added 09/21/2020 to support ES Lookup*/
+	public XmlCombiner(CombinedWriter writer, String propertyFileName, String database) {
+		super(writer);
+		this.propertyFileName = propertyFileName;
+		Combiner.CURRENTDB = database;
+	}
 	public void writeCombinedByYearHook(Connection con, int year) throws Exception {
 		Statement stmt = null;
 		ResultSet rs = null;
@@ -632,12 +643,10 @@ public class XmlCombiner extends CombinerTimestamp {
 		try {
 
 			// int totalCount = getResultSetSize(con,week,tableName,database);
-			if (this.propertyFileName != null && getAction() != "lookup") // HT only create Kafka instance when it is
-																			// not lookup extraction
+			
+			if (this.propertyFileName != null && (getAction() == null || !(getAction().equalsIgnoreCase("lookup")))) // HT only create Kafka instance when it is // not lookup extraction
 			{
-				kafka = new KafkaService(processTime + "_" + database + "_" + week, this.propertyFileName); // use it
-																											// for ES
-																											// extraction
+				kafka = new KafkaService(processTime + "_" + database + "_" + week, this.propertyFileName); // use it																								// extraction
 			}
 
 			while (rs.next()) {
@@ -1358,7 +1367,7 @@ public class XmlCombiner extends CombinerTimestamp {
 					}
 					
 					 /*HT added 09/21/2020 for ES lookup*/
-	                else if (getAction() != null && getAction().equalsIgnoreCase("lookup"))
+	                else if (getAction() != null && (getAction() != null && getAction().equalsIgnoreCase("lookup")))
 	                {
 	                	this.lookupObj.writeLookupRecs(recArray);
 	                }
@@ -1406,7 +1415,7 @@ public class XmlCombiner extends CombinerTimestamp {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			if (this.propertyFileName != null && !(getAction().equalsIgnoreCase("lookup"))) {
+			if (this.propertyFileName != null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup")))) {
 				try {
 					kafka.runBatch(batchData, missedData);
 					/*
@@ -2236,7 +2245,7 @@ public class XmlCombiner extends CombinerTimestamp {
 					+ Combiner.TABLENAME
 					+ " a left outer join CAFE_PUI_LIST_MASTER c on a.pui= c.puisecondary left outer join cafe_master b on b.pui=c.pui where a.LOADNUMBER="
 					+ weekNumber + " AND a.database='cpx' and a.loadnumber != 0";
-
+			
 			System.out.println("DATABASE=" + Combiner.CURRENTDB);
 			if ((Combiner.CURRENTDB).equalsIgnoreCase("cpx")) {
 				System.out.println(sqlCpxQuery);
@@ -2286,18 +2295,34 @@ public class XmlCombiner extends CombinerTimestamp {
 
 
 	/*HT added 09/21/2020, Get Lookup list from temp tables based on correction action, this method to support bdCorrectio, not for ES lookup extraction*/
-	  public Map<String,List<String>> getESLookupData(int weekNumber, String actionType, String tableName, Connection sqlcon) throws Exception {
+	  public Map<String,List<String>> getESLookupData(int weekNumber, String actionType, String[] tableNames, Connection sqlcon, String database) throws Exception {
 	  Statement stmt = null; 
 	  ResultSet rs = null; 
 	  String sqlQuery = null, cpxSqlQuery = null;
 	  Map<String,List<String>> recs = null;
 	  
 	  try { 
-		  String database = Combiner.CURRENTDB; 
-	  
+			
 	  con = sqlcon;
 	  stmt = con.createStatement();
+	  System.out.println("database: " + database);
 	  
+	  String tableName = null;
+	  Combiner.CURRENTDB = database;
+	  
+		if(actionType.equalsIgnoreCase("update")||actionType.equalsIgnoreCase("aip"))
+        {
+            tableName = tableNames[0];
+        }
+        else if(actionType.equalsIgnoreCase("lookupIndex") && weekNumber != 0 && database != null)
+        {
+            tableName = tableNames[1];
+        }
+        else
+        {
+            tableName = tableNames[2];
+        }
+  
 	  if(database.equals("cpx"))          
       {
         	  cpxSqlQuery =
@@ -2317,8 +2342,8 @@ public class XmlCombiner extends CombinerTimestamp {
 				  "select ACCESSNUMBER,PUI,AUTHOR,AUTHOR_1,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE,PUI,REGIONALTERM,SOURCETITLEABBREV,UPDATENUMBER, "
 				  +
 				  "m_id, apict, apict1, PUBLICATIONYEAR, LOADNUMBER,CORRESPONDENCEAFFILIATION FROM "
-				  + Combiner.TABLENAME + " where LOADNUMBER='" + weekNumber +
-				  "' AND loadnumber != 0 and database='" + Combiner.CURRENTDB + "'";
+				  + tableName + " where LOADNUMBER='" + weekNumber +
+				  "' AND loadnumber != 0 and database='" + database + "'";
 	  }
 	  
 			System.out.println("DATABASE=" + Combiner.CURRENTDB);
@@ -2339,7 +2364,7 @@ public class XmlCombiner extends CombinerTimestamp {
 				System.exit(1);
 			}
 
-			 recs = prepareLookupRecs(rs);
+			 recs = prepareLookupRecs(rs, weekNumber);
 		} 
 	  finally 
 	  {
@@ -2360,13 +2385,10 @@ public class XmlCombiner extends CombinerTimestamp {
 				}
 			}
 
-			if (con != null) {
-				try {
-					con.close();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			} 
+			/*
+			 * if (con != null) { try { con.close(); } catch (Exception e) {
+			 * e.printStackTrace(); } }
+			 */
 			 
 		}
 	  return recs;
@@ -2374,7 +2396,7 @@ public class XmlCombiner extends CombinerTimestamp {
 	  }
 	  
 	  //HT added 09/21/2020 for ES lookup 
-	public Map<String,List<String>> prepareLookupRecs(ResultSet rs) throws Exception {
+	public Map<String,List<String>> prepareLookupRecs(ResultSet rs, int weekNumber) throws Exception {
 		int i = 0;
 		EVCombinedRec[] recArray = null;
 		boolean isChimica = false;
@@ -2596,7 +2618,8 @@ public class XmlCombiner extends CombinerTimestamp {
 					}
 
 				} catch (Exception e) {
-					System.out.println("**** ERROR Found on access number " + accessNumber + " *****");
+					System.out.println("**** ERROR Found on preparinglookuprec for access number " + accessNumber + " *****");
+					System.out.println(e.getMessage());
 					e.printStackTrace();
 				}
 
