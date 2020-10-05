@@ -23,6 +23,9 @@ import org.ei.dataloading.*;
 import org.ei.dataloading.georef.loadtime.*;
 import org.ei.dataloading.lookup.LookupEntry;
 import org.ei.common.bd.*;
+import org.ei.common.georef.CitationView;
+import org.ei.common.georef.DocumentView;
+import org.ei.common.georef.DocumentView.DocumentTypeDecorator;
 import org.ei.common.*;
 import org.ei.util.GUID;
 import org.ei.util.StringUtil;
@@ -753,5 +756,166 @@ import org.ei.util.kafka.*;
 			lookupObj = new LookupEntry(database, weekNumber);
 	    	lookupObj.init();
 			
+		}
+	    
+	    /*HT added 09/21/2020, Get Lookup list from temp tables based on correction action, this method to support bdCorrectio, not for ES lookup extraction*/
+	    public Map<String, List<String>> getESLookupData(int weekNumber, String actionType, String tableName,
+				Connection sqlcon, String database) throws Exception {
+		Statement stmt = null;
+		ResultSet rs = null;
+		Map<String, List<String>> results = null;
+		  
+		  try { 
+				
+		  Connection con = sqlcon;
+		  stmt = con.createStatement();
+			System.out.println("Running the query...");
+			String sqlString=null;
+			if(database.equalsIgnoreCase("knc") ||database.equalsIgnoreCase("kna")  && (actionType.equalsIgnoreCase("update")
+					|| actionType.equalsIgnoreCase("backup")))
+			{
+				if(tableName !=null)
+					sqlString = "select * from " + tableName;
+				
+				System.out.println("Processing "+sqlString);
+				rs = stmt.executeQuery(sqlString);
+				results = prepareLookupRecs(rs);
+			}
+
+		}
+		catch(Exception e)
+		{
+			System.out.println("Exception on GeoRefCorrection.getLookupData "+e.getMessage());
+			e.printStackTrace();
+		}
+		finally
+		{
+
+			if (rs != null)
+			{
+				try
+				{
+					rs.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+
+			if (stmt != null)
+			{
+				try
+				{
+					stmt.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+      }
+
+      return results;
+		  }
+
+		// HT added 09/21/2020 for ES lookup
+		public Map<String, List<String>> prepareLookupRecs(ResultSet rs) throws Exception {
+
+			EVCombinedRec[] recArray = null;
+			String accessNumber = "";
+
+			Map<String, List<String>> recs = new HashMap<>();
+			List<String> authorList = new ArrayList<>();
+			List<String> affiliationList = new ArrayList<>();
+			List<String> serialTitleList = new ArrayList<>();
+			List<String> controltermList = new ArrayList<>();
+			List<String> publishernameList = new ArrayList<>();
+			List<String> ipcList = new ArrayList<>();
+
+			try {
+				while (rs.next()) {
+					try {
+
+						Vector<EVCombinedRec> recVector = new Vector<>();
+
+				        	  EVCombinedRec rec = new EVCombinedRec();
+
+				                
+				                accessNumber = rs.getString("ACCESSNUMBER");
+				                if (rs.getString("PUBLISH_DATE")!=null)
+				                {		                		                    
+				                    //M_ID
+				                    rec.put(EVCombinedRec.DOCID, rs.getString("M_ID"));
+				                    
+				                    //DATABASE
+				                    rec.put(EVCombinedRec.DATABASE, rs.getString("DATABASE"));
+				                    
+				                    //ACCESSNUMBER
+				                    
+				                    rec.put(EVCombinedRec.ACCESSION_NUMBER, rs.getString("ACCESSNUMBER"));
+
+				                    //PUI
+				                    if(rs.getString("OAI") != null)
+				                    {
+				                        rec.put(EVCombinedRec.PUI,rs.getString("OAI"));
+				                    }                 
+				                    //AUTHOR
+				                    if(rs.getString("AUTHOR") != null && rs.getString("AUTHOR").trim().length()>0)
+				                    {
+				                        String authorString = rs.getString("AUTHOR");	             	                       
+				                        rec.put(EVCombinedRec.AUTHOR, prepareAuthor(authorString));
+				                    }
+				                    
+				                    //AFFILIATION
+			                        String affiliation = null;
+			                        if (rs.getString("AFFILIATION") != null && rs.getString("AFFILIATION").trim().length()>0)
+			                        {
+			                            affiliation = rs.getString("AFFILIATION");                            
+			                            rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareAuthor(affiliation));
+			                        }	                   
+				                  
+				                    //PUBLISHER
+			                        if (rs.getString("PUBLISHER") != null)
+				                    {
+				                        rec.put(EVCombinedRec.PUBLISHER_NAME, rs.getString("PUBLISHER"));
+				                    }
+ 
+			                        //JOURNAL_NAME
+				                    if (rs.getString("JOURNAL_NAME") != null)
+				                    {
+				                    	//System.out.println("JOURNAL_NAME="+rs.getString("JOURNAL_NAME"));
+				                        rec.put(EVCombinedRec.SERIAL_TITLE, rs.getString("JOURNAL_NAME"));
+				                    }							                  
+				                    rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("LOADNUMBER"));
+				                    recVector.add(rec);	                  	                 	                     	                	                
+				            }
+				            else
+				            {
+				            	System.out.println("Problem with publication_date, accessnumber="+accessNumber);
+				            }				               				            				                
+				            recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
+				            this.lookupObj.setLookupRecs(recArray, authorList, affiliationList, serialTitleList, controltermList, publishernameList, ipcList);
+					}
+					catch (Exception e) {
+						System.out.println("**** ERROR Found on preparinglookuprec for access number " + accessNumber + " *****");
+						System.out.println(e.getMessage());
+						e.printStackTrace();
+					}
+
+				           
+				} // while
+
+				recs.put("AUTHOR", authorList);
+				recs.put("AFFILIATION", affiliationList);
+				recs.put("CONTROLLEDTERM", controltermList);
+				recs.put("PUBLISHERNAME", publishernameList);
+				recs.put("SERIALTITLE", serialTitleList);
+			} catch (Exception e) {
+				System.out.println("Exception on GeoRefCorrection.setGRFRecs " + e.getMessage());
+				e.printStackTrace();
+			}
+
+			return recs;
 		}
 	}

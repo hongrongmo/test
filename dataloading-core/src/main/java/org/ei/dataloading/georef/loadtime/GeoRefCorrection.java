@@ -237,7 +237,7 @@ public class GeoRefCorrection
                 updateNumber,
                 database,
                 "dev");
-
+    	
     	GeoRefCombiner grfcomb = new GeoRefCombiner(writer,propertyFileName,database);
     	try
 		{
@@ -371,7 +371,7 @@ public class GeoRefCorrection
 			}
 			else if(action.equalsIgnoreCase("extractupdate")||action.equalsIgnoreCase("extractdelete"))
 			{
-				doFastExtract(updateNumber,database,action, grfcomb);
+				doFastExtract(updateNumber,database,action, grfcomb, writer);
 				System.out.println(database+" "+updateNumber+" fast extract is done.");
 			}
 			else if(action.equalsIgnoreCase("ip_delete"))
@@ -393,7 +393,9 @@ public class GeoRefCorrection
 
 		} catch (Exception e) {
 			
-			e.printStackTrace();
+			 System.out.println("Exception starting Georef correction?!");
+        	 System.out.println("Reason:- " + e.getMessage());
+        	 e.printStackTrace();
 		}
 		finally
 		{
@@ -1583,13 +1585,8 @@ private void processResponse(String value, String response, BufferedWriter bw) t
 
 	}
 
-    private void doFastExtract(int updateNumber,String dbname,String action, GeoRefCombiner c) throws Exception
+    private void doFastExtract(int updateNumber,String dbname,String action, GeoRefCombiner c,  CombinedXMLWriter writer) throws Exception
     {
-		CombinedXMLWriter writer = new CombinedXMLWriter(50000,
-		                                              updateNumber,
-		                                              dbname,
-		                                              "dev");
-
         Statement stmt = null;
         ResultSet rs = null;
         try
@@ -2155,7 +2152,7 @@ private void processResponse(String value, String response, BufferedWriter bw) t
     {
         List<String> outputList = new ArrayList<>();
         SharedSearchSearchEntry entry = new SharedSearchSearchEntry("https://shared-search-service-api.prod.scopussearch.net/sharedsearch/document/result");
-        outputList = entry.runESLookupCheck(inputMap,searchField);
+        outputList = entry.runESLookupCheck(inputMap,searchField,database);
         return outputList;
     }
     

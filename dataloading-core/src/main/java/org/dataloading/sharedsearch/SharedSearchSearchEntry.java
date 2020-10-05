@@ -447,7 +447,7 @@ public class SharedSearchSearchEntry {
 	}
 	
 	/* To support BD Correction Lookup hitcount check so can filter the ones to be deleted */
-	public List<String> runESLookupCheck(Map<String, Integer>LookupMap, String lookupField)
+	public List<String> runESLookupCheck(Map<String, Integer>LookupMap, String lookupField, String database)
 	{
 		String lookupESQuery = null;
 
@@ -461,7 +461,7 @@ public class SharedSearchSearchEntry {
 
 			for (String lookupItem : LookupMap.keySet()) 
 			{
-				lookupESQuery = sharedSearch.buildLookupESQuery(esSearchField + ":" + "\"" + lookupItem + "\""); 
+				lookupESQuery = sharedSearch.buildLookupESQuery(esSearchField + ":" + "\"" + lookupItem + "\" database:" + database); 
 				//System.out.println(lookupESQuery);			// only for local debugging
 				String esHitCount = sharedSearch.runESQuery(lookupItem, lookupESQuery, null, "");
 				String indexCount = String.valueOf(LookupMap.get(lookupItem));

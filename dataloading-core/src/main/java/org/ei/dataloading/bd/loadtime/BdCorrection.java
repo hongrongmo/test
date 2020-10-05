@@ -1869,7 +1869,7 @@ public class BdCorrection
         List<String> outputList = new ArrayList();
 
         SharedSearchSearchEntry entry = new SharedSearchSearchEntry("https://shared-search-service-api.prod.scopussearch.net/sharedsearch/document/result");
-        outputList = entry.runESLookupCheck(inputMap,searchField);
+        outputList = entry.runESLookupCheck(inputMap,searchField,database);
         return outputList;
 
     }

@@ -9,8 +9,12 @@ import java.util.zip.*;
 
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
+import org.dataloading.sharedsearch.SharedSearchSearchEntry;
 import org.ei.domain.*;
 import org.ei.dataloading.CombinedXMLWriter;
+import org.ei.dataloading.Combiner;
+import org.ei.dataloading.bd.loadtime.BdCorrection;
+import org.ei.dataloading.bd.loadtime.XmlCombiner;
 import org.ei.query.base.FastQueryWriter;
 import org.ei.util.GUID;
 
@@ -32,6 +36,9 @@ public class KnovelCorrection {
 	static String tempTable="knovel_correction_temp";
 	static String addTable="knovel_correction_add";
 	static String deleteTable="knovel_correction_delete";
+	static String backupTable = "KNOVEL_CORRECTION_TEMP_BACKUP";			/*HT added 09/21/2020 for Lookup updates*/
+	static String lookupTable = "deleted_lookupIndex";
+	
 	static String sqlldrFileName="KnovelCorrectionFileLoader.sh";
 	public static final String AUDELIMITER = new String(new char[] {30});
 	public static final String IDDELIMITER = new String(new char[] {31});
@@ -46,6 +53,15 @@ public class KnovelCorrection {
 	//HH 03/22/2016 bucketname
 	private static String bucketName="";
 	private static String key="";
+	
+	 /*HT added 09/21/2020 for ES lookup, add BdCorrection constructor to initiat XmlCombiner once instead of being initialized in many individual methods in this class*/
+    private static String tableToBeTruncated = null;
+    private static String fileToBeLoaded   = null;
+    
+    public KnovelCorrection()
+    {
+    	
+    }
 		
 	public static void main(String args[])
 	        throws Exception
@@ -53,7 +69,7 @@ public class KnovelCorrection {
 	        
 	        String fileToBeLoaded   = null;
 	        String input;
-	        String tableToBeTruncated = "knovel_correction_temp,knovel_correction_insert,knovel_correction_delete";
+	        tableToBeTruncated = "knovel_correction_temp,knovel_correction_insert,knovel_correction_delete,knovel_correction_temp_backup,deleted_lookupindex";
 	        int iThisChar; // To read individual chars with System.in.read()
 
 	        try
@@ -218,16 +234,33 @@ public class KnovelCorrection {
 	            System.out.println("not enough parameters");
 	            System.exit(1);
 	        }
+	        
+	        /*HT Added 09/21/2020 Move all work below to startCorrection instead*/
+	        //tableToBeTruncated = "bd_correction_temp,deleted_lookupIndex,bd_temp_backup";
+	        KnovelCorrection kc = new KnovelCorrection();
+	        kc.startCorrection();
+	        
+	    }
+	
+	 
+    /*HT 09/21/2020 moved from main to here for readability*/
+	public void startCorrection()
+	{
+		CombinedXMLWriter writer = new CombinedXMLWriter(50000,
+              	updateNumber,
+              	database,
+              	"dev");
 
-	        midTime = System.currentTimeMillis();
+		KnovelCombiner kcomb = new KnovelCombiner(writer,propertyFileName);				//HT added 09/21/2020 ES		
+		 midTime = System.currentTimeMillis();
 	        endTime = System.currentTimeMillis();
 	        System.out.println("Time for finish reading input parameter"+(endTime-startTime)/1000.0+" seconds");
 	        //System.out.println("total Time used"+(endTime-startTime)/1000.0+" seconds");
 	        try
 	        {
-
-	            KnovelCorrection kc = new KnovelCorrection();
-	            con = kc.getConnection(url,driver,username,password);
+	        	/*HT added 09/21/2020 initialize lookup entry*/
+	    		kcomb.writeLookupByWeekHook(updateNumber);
+	            con = getConnection(url,driver,username,password);
 	            if(action!=null && !(action.equals("extractupdate")||action.equals("extractdelete") ||action.equals("lookupIndex")))
 	            {
 	                /**********delete all data from temp table *************/
@@ -242,7 +275,7 @@ public class KnovelCorrection {
 	                }
 
 
-	                kc.cleanUp(tableToBeTruncated);
+	                //cleanUp(tableToBeTruncated);						// only for local testing
 
 	                midTime = endTime;
 	                endTime = System.currentTimeMillis();
@@ -295,12 +328,14 @@ public class KnovelCorrection {
 	                    System.in.read();
 	                    Thread.currentThread().sleep(1000);
 	                }
+	                /*			ONLY FOR LOCAL DEBUGGING< MAKE SURE TO UNCOMMENT IN PROD
 	                Runtime r = Runtime.getRuntime();
 
 	                Process p = r.exec("./"+sqlldrFileName+" "+outFile);
 	                int t = p.waitFor();
+	                */
 
-	                int tempTableCount = kc.getTempTableCount();
+	                int tempTableCount = getTempTableCount();
 	 
 	                System.out.println(tempTableCount+" records was loaded into the temp table");
 	                	                
@@ -309,9 +344,12 @@ public class KnovelCorrection {
 	                midTime = endTime;
 	                //System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
 	                
+	                /* ONLY FOR LOCAL DEBUGGING< MAKE SURE TO UNCOMMENT IN PROD
 	                p = r.exec("./KnovelDeleteFileLoader.sh  "+deleteFile);
 	                t = p.waitFor();
-	                int deleteTableCount = kc.getDeleteTableCount();
+	                */
+	                
+	                int deleteTableCount = getDeleteTableCount();
 	                System.out.println(deleteTableCount+" records was loaded into the delete table");
 	                
 	                endTime = System.currentTimeMillis();
@@ -327,7 +365,7 @@ public class KnovelCorrection {
 	                        System.in.read();
 	                        Thread.currentThread().sleep(1000);
 	                    }
-	                    kc.runCorrection(outFile,updateNumber,database,action);
+	                    runCorrection(outFile,updateNumber,database,action);
 	                }
 	                else
 	                {
@@ -339,6 +377,24 @@ public class KnovelCorrection {
 	                System.out.println("time for run correction table "+(endTime-midTime)/1000.0+" seconds");
 	                midTime = endTime;
 	                
+	                /*HT added 10/01/2020 to by in sync with BD & Grf corr for lookup generation*/
+	                if(action.equalsIgnoreCase("update"))
+					{
+						//processLookupIndex(getLookupData("update"),getLookupData("backup"));					// fast
+						processESLookupIndex(kcomb.getESLookupData(updateNumber,"update", tempTable,con, database),kcomb.getESLookupData(updateNumber, "backup", backupTable, con, database));			//es
+						
+						
+					}
+					else if(action.equalsIgnoreCase("delete"))
+					{
+
+						//processLookupIndex(new HashMap(),getLookupData("backup"));																			//fast
+						//processESLookupIndex(new HashMap<String, List<String>>(),kcomb.getESLookupData(updateNumber, "backup", backupTable, con, database));			//es
+					}
+	                
+	                
+	                
+	                
 	                //processing delete file
 	                File d = new File(deleteFile);
 	                if(!d.exists())
@@ -346,14 +402,25 @@ public class KnovelCorrection {
 	                    System.out.println("deleteDatafile: "+deleteFile+" does not exists");
 	                    System.exit(1);
 	                }
-	                kc.createDeleteFile(d);
-	                kc.zipDeleteFile(deleteFile.replace(".out",".zip"));
+	                createDeleteFile(d);
+	                zipDeleteFile(deleteFile.replace(".out",".zip"));
 	                	         
 	            }
+	            /*HT added 10/01/2020 to by in sync with BD & Grf corr for lookup generation*/
+	            else if(action.equalsIgnoreCase("lookupIndex"))
+				{
+					//outputLookupIndex(getLookupData("lookupIndex"),updateNumber);					//fast
+					System.out.println(database+" "+updateNumber+" lookup index is done.");
+					
+					/*HT added 09/21/2020 for ES lookup*/
+					writeESIndexOnly(updateNumber,database);	
+	           	 
+				}
+	            
 	            else if(action.equalsIgnoreCase("extractupdate")||action.equalsIgnoreCase("extractdelete"))
 	            {
 
-	                kc.doFastExtract(updateNumber,database,action);
+	                doFastExtract(updateNumber,database,action,kcomb, writer);
 	                System.out.println(database+" "+updateNumber+" fast extract is done.");
 	                
 	                endTime = System.currentTimeMillis();
@@ -368,7 +435,11 @@ public class KnovelCorrection {
 	            
 	            
 
-	        }
+	        } catch (Exception e) {
+	        	 System.out.println("Exception starting Knovel correction?!");
+	        	 System.out.println("Reason:- " + e.getMessage());
+	        	 e.printStackTrace();
+			}
 	        finally
 	        {
 	            if (con != null)
@@ -384,10 +455,7 @@ public class KnovelCorrection {
 	            }
 	            System.out.println("total process time "+(System.currentTimeMillis()-startTime)/1000.0+" seconds");
 	        }
-
-	        System.exit(1);
-	    }
-	
+	}
 	private void createDeleteFile(File deleteFile)
     {
     	long midTime = System.currentTimeMillis();
@@ -588,6 +656,17 @@ public class KnovelCorrection {
                     this.deleteTable=tableName[i];
                     System.out.println("truncate delete table "+this.deleteTable);
                 }
+                /*HT added 09/21/2020 for Lookup update*/
+                if(i == 3)
+                {
+                	this.backupTable = tableName[i];
+                	System.out.println("truncate backup table " +  this.backupTable);
+                }
+                if(i == 4)
+                {
+                	this.lookupTable = tableName[i];
+                	System.out.println("truncate lookup table " +  this.lookupTable);
+                }
                 
                 stmt.executeUpdate("truncate table "+tableName[i]);
 			
@@ -639,6 +718,24 @@ public class KnovelCorrection {
         boolean blnResult = false;
         try
         {
+        	/*HH added 09/21/2020 to check lookup update*/
+        	  if(test)
+              {
+                  System.out.println("begin to execute stored procedure update_knovel_backup_table");
+                  System.out.println("press enter to continue");
+                  System.in.read();
+                  Thread.currentThread().sleep(1000);
+                  
+              }
+
+              if(action != null)
+              {
+                  pstmt = con.prepareCall("{ call update_knovel_temp_backup(?,?)}");
+                  pstmt.setInt(1,updateNumber);
+                  pstmt.setString(2,database);
+                  pstmt.executeUpdate();
+              }
+              
         
             if(action != null && action.equalsIgnoreCase("update"))
             {
@@ -725,18 +822,165 @@ public class KnovelCorrection {
     }
 
 	
+	/**
+     * 
+     * @author TELEBH
+     * @Date: 09/21/2020 
+     * @Description: Generate Lookups for ES
+     * @throws Exception
+     */
+    
+	public void writeESIndexOnly(int updatenumber, String database) throws Exception 
+	{
+		/* TH added 09/21/2020 for ES lookup generation */
+		CombinedXMLWriter writer = new CombinedXMLWriter(50000, updateNumber, database, "dev");
+		XmlCombiner c = new XmlCombiner(writer);
+		c.setAction("lookup");
+		c.writeLookupByWeekHook(updatenumber);
+		
+		if ((updatenumber > 3000 || updatenumber < 1000) && (updatenumber > 1)) {
+			Combiner.TABLENAME = "KNOVEL_MASTER";
+			c.writeCombinedByWeekNumber(url, driver, username, password, updatenumber);
+		} 
+	
+	}
+	
+	/*HT added 09/21/2020 for ES Lookup*/
+	private void processESLookupIndex(Map<String, List<String>> update,Map<String, List<String>> backup)
+			throws Exception {
+
+		Map<String,String> deletedAuthorLookupIndex = getDeleteData(update, backup, "AUTHOR");
+		Map<String,String> deletedAffiliationLookupIndex = getDeleteData(update, backup, "AFFILIATION");
+		Map<String,String> deletedControlltermLookupIndex = getDeleteData(update, backup, "CONTROLLEDTERM");
+		Map<String,String> deletedPublisherNameLookupIndex = getDeleteData(update, backup, "PUBLISHERNAME");
+		Map<String,String> deletedSerialtitleLookupIndex = getDeleteData(update, backup, "SERIALTITLE");
+		
+		/*ONLY FOR DEBUGGING, UNCOMMENT IN PROD*/
+		System.out.println("AUTHORTOBEDELETEDLIST: " + deletedAuthorLookupIndex.size());
+		System.out.println("AFFTOBEDELETEDLIST: " + deletedAffiliationLookupIndex.size());
+		System.out.println("CVTOBEDELETEDLIST: " + deletedControlltermLookupIndex.size());
+		System.out.println("PNTOBEDELETEDLIST: " + deletedPublisherNameLookupIndex.size());
+		System.out.println("STTOBEDELETEDLIST: " + deletedSerialtitleLookupIndex.size());
+		
+
+		saveDeletedData("AU", checkES(deletedAuthorLookupIndex, "AU", database), database);
+		saveDeletedData("AF", checkES(deletedAffiliationLookupIndex, "AF", database), database);
+		saveDeletedData("CV", checkES(deletedControlltermLookupIndex, "CV", database), database);
+		saveDeletedData("PN", checkES(deletedPublisherNameLookupIndex, "PN", database), database);
+		saveDeletedData("ST", checkES(deletedSerialtitleLookupIndex, "ST", database), database);
+
+	}
+	/*HT added 09/21/2020 for ES Lookup*/
+	 private HashMap<String,String> getDeleteData(Map<String, List<String>> update,Map<String, List<String>> backup,String field)
+	    {
+	        List<String> backupList = null;
+	        List<String> updateList = null;
+	        HashMap<String,String> deleteLookupIndex = new HashMap<>();
+	        if(update !=null && backup != null)
+	        {
+	            backupList = (ArrayList<String>)backup.get(field);
+	            updateList = (ArrayList<String>)update.get(field);
+
+	            if(backupList!=null)
+	            {
+	                String dData = null;
+
+	                for(int i=0;i<backupList.size();i++)
+	                {
+	                    dData = (String)backupList.get(i);
+	                    if(dData != null)
+	                    {
+	                        if(updateList==null ||(updateList!=null && !updateList.contains(dData)))
+	                        {
+	                            if(deleteLookupIndex.containsKey(dData.toUpperCase()))
+	                            {
+	                                deleteLookupIndex.put(dData.toUpperCase(),Integer.toString(Integer.parseInt((String)deleteLookupIndex.get(dData.toUpperCase()))+1));
+	                            }
+	                            else
+	                            {
+	                                deleteLookupIndex.put(dData.toUpperCase(),"1");
+	                            }
+
+	                        }
+	                    }
+	                }
+	            }
+	        }
+
+	        return deleteLookupIndex;
+	    }
+	 /*ES added 09/21/2020 for ES Lookup*/
+	    @SuppressWarnings("unchecked")
+		private List<String> checkES(Map inputMap, String searchField, String database) throws Exception
+	    {
+			List<String> outputList = new ArrayList<>();
+
+	        SharedSearchSearchEntry entry = new SharedSearchSearchEntry("https://shared-search-service-api.prod.scopussearch.net/sharedsearch/document/result");
+	        outputList = entry.runESLookupCheck(inputMap,searchField,database);
+	        return outputList;
+
+	    }
+	    
+	    private void saveDeletedData(String field,List data,String database)
+	    {
+	        PreparedStatement stmt = null;
+	        try
+	        {
+	            if(data!=null)
+	            {
+	                for(int i=0;i<data.size();i++)
+	                {
+	                    String term = (String)data.get(i);
+	                    if(term != null && field != null && database != null)
+	                    {
+	                        stmt = con.prepareStatement("insert into "+lookupTable+" (field,term,database) values(?,?,?)");
+	                        stmt.setString(1,field);
+	                        stmt.setString(2,term);
+	                        stmt.setString(3,database);
+	                        stmt.executeUpdate();
+
+	                        con.commit();
+	                        if(stmt != null)
+	                        {
+	                            stmt.close();
+	                        }
+	                    }
+	                }
+	            }
+	            con.commit();
+	            if(stmt != null)
+	            {
+	                stmt.close();
+	            }
+	        }
+	        catch(Exception e)
+	        {
+	            e.printStackTrace();
+	        }
+	        finally
+	        {
+	            if (stmt != null)
+	            {
+	                try
+	                {
+	                    stmt.close();
+	                }
+	                catch (Exception e)
+	                {
+	                    e.printStackTrace();
+	                }
+	            }
+	        }
+	    }
+	
 	private void processLookupIndex(HashMap update,HashMap backup) throws Exception
 	{
 		System.out.println("running processLookupIndex");
 	}
 	
-	private void doFastExtract(int updateNumber,String dbname,String action) throws Exception
+	private void doFastExtract(int updateNumber,String dbname,String action, KnovelCombiner c,CombinedXMLWriter writer ) throws Exception
 	{
-		 	CombinedXMLWriter writer = new CombinedXMLWriter(50000,
-										                  	updateNumber,
-										                  	dbname,
-										                  	"dev");
-
+		 	
 			Statement stmt = null;
 			ResultSet rs = null;
 			try
@@ -746,7 +990,7 @@ public class KnovelCorrection {
 				{
 					System.out.println("Running the query...");
 					writer.setOperation("add");
-					KnovelCombiner c = new KnovelCombiner(writer,propertyFileName);	
+					
 					if(updateNumber==1)
 					{
 						if(dbname.equalsIgnoreCase("knc") || dbname.equalsIgnoreCase("kna"))
