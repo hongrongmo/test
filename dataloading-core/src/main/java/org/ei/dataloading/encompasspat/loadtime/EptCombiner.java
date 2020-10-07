@@ -295,7 +295,7 @@ public class EptCombiner extends Combiner {
         try
         {
         	totalCount = getResultSetSize(rs); 
-        	if(this.propertyFileName!=null)
+        	if (this.propertyFileName != null && (getAction() == null || !(getAction().equalsIgnoreCase("lookup")))) // HT only create Kafka instance when it is // not lookup extraction
         	{
         		kafka = new KafkaService(processTime+"_ept_"+loadNumber, this.propertyFileName);
         	}
@@ -428,7 +428,7 @@ public class EptCombiner extends Combiner {
 	
 	                rec.put(rec.DESIGNATED_STATES, prepareMulti(rs.getString("ds")));
 	
-	                if(this.propertyFileName==null && !(getAction().equalsIgnoreCase("lookup")))
+	                if (this.propertyFileName == null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup"))))
 	                {
 	                	this.writer.writeRec(rec);//use this line for FAST extraction
 	                }
@@ -444,6 +444,7 @@ public class EptCombiner extends Combiner {
 		    	        //this.writer.writeRec(recArray,kafka);
 		    	        /*********************************************************/
 		                this.writer.writeRec(rec,kafka, batchData, missedData);
+		                this.lookupObj.writeLookupRec(rec);						//HT added later for weekly lookup extraction for ES
 		                if(counter<batchSize)
 		                {            	
 		                	counter++;
@@ -468,7 +469,7 @@ public class EptCombiner extends Combiner {
         }
         finally
         {
-        	if(this.propertyFileName!=null)
+        	if(this.propertyFileName != null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup")))) 
         	{
 	        	try
 	        	{
@@ -838,8 +839,8 @@ public class EptCombiner extends Combiner {
         		c.setAction("lookup");
         }
 
-        /*HT added 09/21/2020 to support ES lookup*/
-    	 if(c.getAction() != null && c.getAction().equalsIgnoreCase("lookup"))
+        /*HT added 09/21/2020 to support ES lookup, will need to run lookup anyway even if action not lookup*/
+    	 //if(c.getAction() != null && c.getAction().equalsIgnoreCase("lookup"))
       	   c.writeLookupByWeekHook(loadNumber);
         	  // extract the whole thing
             if(loadNumber == 0)

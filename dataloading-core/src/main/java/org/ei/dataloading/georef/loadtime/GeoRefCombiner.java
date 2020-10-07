@@ -112,11 +112,9 @@ public static void main(String args[])
       		c.setAction("lookup");
       }
       /*HT added 09/21/2020 to support ES lookup, when we run only Whole DB Lookup extraction*/
- 	 if(c.getAction() != null && (c.getAction() != null && c.getAction().equalsIgnoreCase("lookup")))
+ 	 //if(c.getAction() != null && (c.getAction() != null && c.getAction().equalsIgnoreCase("lookup")))
    	   c.writeLookupByWeekHook(loadNumber);
- 	 
- 	/*initialize ES lookup dirs For weekly lookup extraction*/
-		c.writeLookupByWeekHook(loadNumber);
+
 		
 		
 			if (loadNumber > 100000) {

@@ -423,7 +423,7 @@ public class UPTCombiner extends CombinerTimestamp {
         	
         	totalCount = getResultSetSize(con, week,update_number);  //used for ES extraction only
     	    System.out.println("epoch="+processTime+" database=UPT totalCount="+totalCount+" for week of "+week); //used for ES extrasction only
-    	    if(this.propertyFileName!=null)
+    	    if(this.propertyFileName != null && (getAction() == null || !(getAction().equalsIgnoreCase("lookup")))) // HT only create Kafka instance when it is // not lookup extraction
     	    {
     	    	kafka = new KafkaService(processTime+"_upt_"+week, this.propertyFileName); //use it for ES extraction
     	    }
@@ -887,12 +887,12 @@ public class UPTCombiner extends CombinerTimestamp {
 	                    arrNames[0] = replaceNull(arrNames[0]);
 	
 	                    rec.put(EVCombinedRec.NOTES, arrNames);	                 
-	                    if(this.propertyFileName==null && !(getAction().equalsIgnoreCase("lookup")))
+	                    if(this.propertyFileName == null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup"))))
 	                    {
 	                    	writer.writeRec(rec);//use this line for FAST extraction
 	                    }
 	                    /*HT added 09/21/2020 for ES lookup*/
-	                    else if (getAction() != null && getAction().equalsIgnoreCase("lookup"))
+	                    else if(getAction() != null && getAction().equalsIgnoreCase("lookup"))
 	                    {
 	                    	this.lookupObj.writeLookupRec(rec);
 	                    }
@@ -908,6 +908,7 @@ public class UPTCombiner extends CombinerTimestamp {
 		        	       
 		                    //use thread to run kafka message
 		                    this.writer.writeRec(rec,kafka, batchData, missedData);
+		                    this.lookupObj.writeLookupRec(rec);						//HT added later for weekly lookup extraction for ES
 		                    if(counter<batchSize)
 		                    {            	
 		                    	counter++;
@@ -956,7 +957,7 @@ public class UPTCombiner extends CombinerTimestamp {
 			        e.printStackTrace();
 			    }
 			}
-			if(this.propertyFileName!=null)
+			if(this.propertyFileName != null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup")))) 			
 			{
 				try
 		    	{
@@ -2043,12 +2044,11 @@ public class UPTCombiner extends CombinerTimestamp {
         try {
         	c.ipc = c.getAllDescriptionFromLookupIndex();
 
-        	/*HT added 09/21/2020 to support ES lookup*/
-        	 if(c.getAction() != null && c.getAction().equalsIgnoreCase("lookup"))
-        	 {
+        	/*HT added 09/21/2020 to support ES lookup, will need to run lookup anyway even if action not lookup*/
+        	 //if(c.getAction() != null && c.getAction().equalsIgnoreCase("lookup"))
+        	 //{
         		 c.writeLookupByWeekHook(loadNumber);
-        		 System.exit(0);
-        	 }
+        	 //}
           	   
         	 
             	if (timestamp==0 && (loadNumber > 3000 || loadNumber < 1000) && loadNumber>1)

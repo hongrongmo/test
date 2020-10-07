@@ -94,8 +94,8 @@ public class NTISCombiner
         	if(str.equalsIgnoreCase("lookup"))
         		c.setAction("lookup");
         }
-        /*HT added 09/21/2020 to support ES lookup*/
-   	 if(c.getAction() != null && c.getAction().equalsIgnoreCase("lookup"))
+        /*HT added 09/21/2020 to support ES lookup, will need to run lookup anyway even if action not lookup*/
+   	 //if(c.getAction() != null && c.getAction().equalsIgnoreCase("lookup"))
      	   c.writeLookupByWeekHook(loadNumber);
         	if(loadNumber > 100000)
     		{
@@ -352,7 +352,7 @@ public class NTISCombiner
         {
         	totalCount = getResultSetSize(rs); 
         	System.out.println("epoch="+processTime+" database=NTIS totalCount="+totalCount);
-        	if(this.propertyFileName!=null)
+        	if(this.propertyFileName != null && (getAction() == null || !(getAction().equalsIgnoreCase("lookup")))) // HT only create Kafka instance when it is // not lookup extraction
         	{
         		kafka = new KafkaService(processTime+"_ntis_"+loadNumber, this.propertyFileName);//use this line for ES extraction
         	}
@@ -459,7 +459,7 @@ public class NTISCombiner
 					rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
 				}
 				
-				if(this.propertyFileName==null && !(getAction().equalsIgnoreCase("lookup")))
+				if(this.propertyFileName == null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup"))))
 				{
 		            this.writer.writeRec(rec);//Use this line for FAST extraction
 				}
@@ -479,6 +479,7 @@ public class NTISCombiner
 					//use thread to run kafka message
 					
 					this.writer.writeRec(rec,kafka, batchData, missedData);
+					this.lookupObj.writeLookupRec(rec);						//HT added later for weekly lookup extraction for ES
 		            if(counter<batchSize)
 		            {            	
 		            	counter++;
@@ -504,7 +505,7 @@ public class NTISCombiner
      	    {
      	    	System.out.println("**Got "+i+" records instead of "+totalCount );
      	    }
-        	if(this.propertyFileName!=null)
+        	if(this.propertyFileName != null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup")))) 
         	{
 	        	try
 	        	{

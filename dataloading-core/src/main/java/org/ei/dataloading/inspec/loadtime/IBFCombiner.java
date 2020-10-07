@@ -69,8 +69,8 @@ public class IBFCombiner
         		c.setAction("lookup");
         }
         
-        /*HT added 09/21/2020 to support ES lookup*/
-   	 if(c.getAction() != null && c.getAction().equalsIgnoreCase("lookup"))
+        /*HT added 09/21/2020 to support ES lookup, will need to run lookup anyway even if action not lookup*/
+   	 //if(c.getAction() != null && c.getAction().equalsIgnoreCase("lookup"))
      	   c.writeLookupByWeekHook(loadNumber);
 			// extract the whole thing
 			if (loadNumber == 0) {
@@ -276,7 +276,7 @@ public class IBFCombiner
     	
         try
         {
-        	if(this.propertyFileName!=null)
+        	if(this.propertyFileName != null && (getAction() == null || !(getAction().equalsIgnoreCase("lookup")))) // HT only create Kafka instance when it is // not lookup extraction
         	{
         		kafka = new KafkaService(processTime+"_ibf_"+this.loadNumber, this.propertyFileName); //use it for ES extraction
         	}
@@ -542,7 +542,7 @@ public class IBFCombiner
 	                rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
 	            }
 	
-	            if(this.propertyFileName==null && !(getAction().equalsIgnoreCase("lookup")))
+	            if(this.propertyFileName == null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup"))))
 	            {
 	            	writer.writeRec(rec);//use this line for FAST extraction only
 	            }
@@ -560,6 +560,7 @@ public class IBFCombiner
 	                
 	    	        //this.writer.writeRec(rec,kafka);	
 		            this.writer.writeRec(rec,kafka, batchData, missedData);
+		            this.lookupObj.writeLookupRec(rec);						//HT added later for weekly lookup extraction for ES
 		            if(counter<batchSize)
 		            {            	
 		            	counter++;
@@ -581,7 +582,7 @@ public class IBFCombiner
         }
         finally
         { 
-        	if(this.propertyFileName!=null)
+        	if(this.propertyFileName != null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup")))) 
         	{
 	        	try
 	        	{

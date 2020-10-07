@@ -108,8 +108,8 @@ import org.ei.util.kafka.*;
 	        		c.setAction("lookup");
 	        }
 	        
-	        /*HT added 09/21/2020 to support ES lookup*/
-       	 if(c.getAction() != null && c.getAction().equalsIgnoreCase("lookup"))
+	        /*HT added 09/21/2020 to support ES lookup, will need to run lookup anyway even if action not lookup*/
+       	// if(c.getAction() != null && c.getAction().equalsIgnoreCase("lookup"))
          	   c.writeLookupByWeekHook(loadNumber);
        	 
 	        	 if (timestamp==0 && (loadNumber > 3000 || loadNumber < 1000) && (loadNumber >1))
@@ -308,7 +308,7 @@ import org.ei.util.kafka.*;
 	    	
 	        try
 	        {
-	        	if(this.propertyFileName!=null)
+	        	  if (this.propertyFileName != null && (getAction() == null || !(getAction().equalsIgnoreCase("lookup")))) // HT only create Kafka instance when it is // not lookup extraction
 	        	{
 	        		kafka = new KafkaService(processTime+"_"+Combiner.CURRENTDB+"_"+loadNumber, this.propertyFileName);//use this line for ES extraction
 	        	}
@@ -491,7 +491,7 @@ import org.ei.util.kafka.*;
 		                
 		            recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
 		            
-		            if(this.propertyFileName==null && !(getAction().equalsIgnoreCase("lookup")))
+		            if (this.propertyFileName == null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup"))))
 		            {
 		            	this.writer.writeRec(recArray);//use this line for fast extraction
 		            }
@@ -510,6 +510,7 @@ import org.ei.util.kafka.*;
 			            //use this block of code for sending data to kafka
 			            
 			            this.writer.writeRec(recArray,kafka, batchData, missedData);
+			            this.lookupObj.writeLookupRec(rec);						//HT added later for weekly lookup extraction for ES
 			            if(counter<batchSize)
 			            {            	
 			            	counter++;
@@ -545,7 +546,7 @@ import org.ei.util.kafka.*;
 	     	    	System.out.println("**Got "+i+" records instead of "+totalCount );
 	     	    }
 	        	
-	        	if(this.propertyFileName!=null)
+	        	if (this.propertyFileName != null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup")))) 
 	        	{
 		        	try
 		        	{

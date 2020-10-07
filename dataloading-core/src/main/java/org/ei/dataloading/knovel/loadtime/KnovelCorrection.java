@@ -275,7 +275,7 @@ public class KnovelCorrection {
 	                }
 
 
-	                //cleanUp(tableToBeTruncated);						// only for local testing
+	                cleanUp(tableToBeTruncated);						// only for local testing
 
 	                midTime = endTime;
 	                endTime = System.currentTimeMillis();
@@ -328,12 +328,11 @@ public class KnovelCorrection {
 	                    System.in.read();
 	                    Thread.currentThread().sleep(1000);
 	                }
-	                /*			ONLY FOR LOCAL DEBUGGING< MAKE SURE TO UNCOMMENT IN PROD
 	                Runtime r = Runtime.getRuntime();
 
 	                Process p = r.exec("./"+sqlldrFileName+" "+outFile);
 	                int t = p.waitFor();
-	                */
+	                
 
 	                int tempTableCount = getTempTableCount();
 	 
@@ -344,10 +343,9 @@ public class KnovelCorrection {
 	                midTime = endTime;
 	                //System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
 	                
-	                /* ONLY FOR LOCAL DEBUGGING< MAKE SURE TO UNCOMMENT IN PROD
 	                p = r.exec("./KnovelDeleteFileLoader.sh  "+deleteFile);
 	                t = p.waitFor();
-	                */
+	                
 	                
 	                int deleteTableCount = getDeleteTableCount();
 	                System.out.println(deleteTableCount+" records was loaded into the delete table");
@@ -389,12 +387,9 @@ public class KnovelCorrection {
 					{
 
 						//processLookupIndex(new HashMap(),getLookupData("backup"));																			//fast
-						//processESLookupIndex(new HashMap<String, List<String>>(),kcomb.getESLookupData(updateNumber, "backup", backupTable, con, database));			//es
+						processESLookupIndex(new HashMap<String, List<String>>(),kcomb.getESLookupData(updateNumber, "backup", backupTable, con, database));			//es
 					}
-	                
-	                
-	                
-	                
+ 
 	                //processing delete file
 	                File d = new File(deleteFile);
 	                if(!d.exists())

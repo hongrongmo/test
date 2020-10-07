@@ -447,7 +447,7 @@ public class SharedSearchSearchEntry {
 	}
 	
 	/* To support BD Correction Lookup hitcount check so can filter the ones to be deleted */
-	public List<String> runESLookupCheck(Map<String, Integer>LookupMap, String lookupField, String database)
+	public List<String> runESLookupCheck(Map<String, String>LookupMap, String lookupField, String database)
 	{
 		String lookupESQuery = null;
 

@@ -532,7 +532,7 @@ public class BdCorrection
 	public void writeESIndexOnly(int updatenumber, String database, XmlCombiner c) throws Exception 
 	{
 		/* TH added 09/21/2020 for ES lookup generation */
-		CombinedXMLWriter writer = new CombinedXMLWriter(50000, updateNumber, database, "dev");
+		//CombinedXMLWriter writer = new CombinedXMLWriter(50000, updateNumber, database, "dev");
 		c.setAction("lookup");
 		c.writeLookupByWeekHook(updatenumber);
 		

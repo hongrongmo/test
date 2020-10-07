@@ -1361,13 +1361,12 @@ public class XmlCombiner extends CombinerTimestamp {
 					}
 
 					recArray = (EVCombinedRec[]) recVector.toArray(new EVCombinedRec[0]);
-					if (this.propertyFileName == null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup")))) {
+					if(this.propertyFileName == null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup")))) {
 						this.writer.writeRec(recArray);// use this line for fast extraction
-
 					}
 					
 					 /*HT added 09/21/2020 for ES lookup*/
-	                else if (getAction() != null && (getAction() != null && getAction().equalsIgnoreCase("lookup")))
+					else if(getAction() != null && getAction().equalsIgnoreCase("lookup"))
 	                {
 	                	this.lookupObj.writeLookupRecs(recArray);
 	                }
@@ -1415,7 +1414,7 @@ public class XmlCombiner extends CombinerTimestamp {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			if (this.propertyFileName != null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup")))) {
+			if(this.propertyFileName != null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup")))) {
 				try {
 					kafka.runBatch(batchData, missedData);
 					/*
@@ -2325,7 +2324,8 @@ public class XmlCombiner extends CombinerTimestamp {
   
 	  if(database.equals("cpx"))          
       {
-        	  cpxSqlQuery =
+		  if(actionType.equalsIgnoreCase("lookupIndex"))
+			  cpxSqlQuery =
         			  "select a.UPDATENUMBER,a.CHEMICALTERM,a.DATABASE,a.PUI,a.accessnumber,a.author,a.author_1,a.AFFILIATION,a.AFFILIATION_1,a.CONTROLLEDTERM,a.SOURCETITLE,a.PUBLISHERNAME,b.author as cafe_author,"
         			  +
         			  "b.author_1 as cafe_author1,b.affiliation as cafe_affiliation,b.affiliation_1 as cafe_affiliation1,b.CORRESPONDENCEAFFILIATION as CAFE_CORRESPONDENCEAFFILIATION,null as authorid,null as affid,"
@@ -2334,16 +2334,32 @@ public class XmlCombiner extends CombinerTimestamp {
         			  + tableName +
         			  " a left outer join CAFE_PUI_LIST_MASTER c on a.pui= c.puisecondary left outer join cafe_master b on b.pui=c.pui where a.LOADNUMBER="
         			  + weekNumber + " AND a.database='cpx' and a.loadnumber != 0";
-        	  
+		  else
+			  
+			  cpxSqlQuery =
+			  "select a.UPDATENUMBER,a.CHEMICALTERM,a.DATABASE,a.PUI,a.accessnumber,a.author,a.author_1,a.AFFILIATION,a.AFFILIATION_1,a.CONTROLLEDTERM,a.SOURCETITLE,a.PUBLISHERNAME,b.author as cafe_author,"
+			  +
+			  "b.author_1 as cafe_author1,b.affiliation as cafe_affiliation,b.affiliation_1 as cafe_affiliation1,b.CORRESPONDENCEAFFILIATION as CAFE_CORRESPONDENCEAFFILIATION,null as authorid,null as affid,"
+			  +
+			  "a.REGIONALTERM,a.SOURCETITLEABBREV,a.UPDATENUMBER,a.m_id,a.apict,a.apict1,a.PUBLICATIONYEAR,a.LOADNUMBER,a.CORRESPONDENCEAFFILIATION, count(*) over() totalCount from "
+			  + tableName +
+			  " a left outer join CAFE_PUI_LIST_MASTER c on a.pui= c.puisecondary left outer join cafe_master b on b.pui=c.pui where a.database='cpx' and a.loadnumber != 0";
           }
 	  else
 	  {
-		  sqlQuery =
+		  if(actionType.equalsIgnoreCase("lookupIndex"))
+			  sqlQuery =
 				  "select ACCESSNUMBER,PUI,AUTHOR,AUTHOR_1,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE,PUI,REGIONALTERM,SOURCETITLEABBREV,UPDATENUMBER, "
 				  +
 				  "m_id, apict, apict1, PUBLICATIONYEAR, LOADNUMBER,CORRESPONDENCEAFFILIATION FROM "
 				  + tableName + " where LOADNUMBER='" + weekNumber +
 				  "' AND loadnumber != 0 and database='" + database + "'";
+		  else
+			  sqlQuery =
+			  "select ACCESSNUMBER,PUI,AUTHOR,AUTHOR_1,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE,PUI,REGIONALTERM,SOURCETITLEABBREV,UPDATENUMBER, "
+			  +
+			  "m_id, apict, apict1, PUBLICATIONYEAR, LOADNUMBER,CORRESPONDENCEAFFILIATION FROM "
+			  + tableName + " where loadnumber != 0 and database='" + database + "'"; 
 	  }
 	  
 			System.out.println("DATABASE=" + Combiner.CURRENTDB);

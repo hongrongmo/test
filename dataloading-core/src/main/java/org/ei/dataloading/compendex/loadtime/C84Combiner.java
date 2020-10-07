@@ -72,8 +72,8 @@ public class C84Combiner extends Combiner {
         }
 
         // extract the whole thing
-        /*HT added 09/21/2020 to support ES lookup*/
-   	 if(c.getAction() != null && c.getAction().equalsIgnoreCase("lookup"))
+        /*HT added 09/21/2020 to support ES lookup, will need to run lookup anyway even if action not lookup*/
+   	 //if(c.getAction() != null && c.getAction().equalsIgnoreCase("lookup"))
      	   c.writeLookupByWeekHook(loadNumber);
 			if (loadNumber == 0) {
 				for (int yearIndex = 1869; yearIndex <= 1969; yearIndex++) {
@@ -233,7 +233,7 @@ public class C84Combiner extends Combiner {
     	
         try
         {
-        	if(this.propertyFileName!=null)
+        	if(this.propertyFileName != null && (getAction() == null || !(getAction().equalsIgnoreCase("lookup")))) // HT only create Kafka instance when it is // not lookup extraction
         	{
         		kafka = new KafkaService(processTime+"_ibf_"+this.loadNumber, this.propertyFileName); //use it for ES extraction
         	}
@@ -483,7 +483,7 @@ public class C84Combiner extends Combiner {
 	                    rec.put(EVCombinedRec.DOI, rs.getString("do"));
 	                }
 	
-	                if(this.propertyFileName==null && !(getAction().equalsIgnoreCase("lookup")))
+	                if(this.propertyFileName == null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup"))))
 	                {
 	                	this.writer.writeRec(rec); //use this line for FAST extraction only;
 	                }
@@ -501,6 +501,7 @@ public class C84Combiner extends Combiner {
 		                
 		    	        //this.writer.writeRec(rec,kafka);		    	        
 		    	        this.writer.writeRec(rec,kafka, batchData, missedData);
+		    	        this.lookupObj.writeLookupRec(rec);						//HT added later for weekly lookup extraction for ES
 			            if(counter<batchSize)
 			            {            	
 			            	counter++;
@@ -523,7 +524,7 @@ public class C84Combiner extends Combiner {
         }
         finally
         { 
-        	if(this.propertyFileName!=null)
+        	if(this.propertyFileName != null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup")))) 
         	{
 	        	try
 	        	{
