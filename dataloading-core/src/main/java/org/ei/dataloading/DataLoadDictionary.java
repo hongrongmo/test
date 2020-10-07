@@ -9,7 +9,7 @@ import java.util.*;
 import java.util.regex.*;
 import org.apache.commons.text.StringEscapeUtils;
 import org.ei.dataloading.bd.loadtime.BdParser;
-
+import org.ei.data.bd.runtime.BDDocBuilder;
 
 /**
  * @author solovyevat
@@ -527,6 +527,93 @@ public class DataLoadDictionary
 
 	}
 	
+	private static Map<String, String> badCharacterMap = new HashMap<String, String>();
+    static {
+        // &die is the same as an &uml
+        badCharacterMap.put("a&die;", "&#228;");
+        badCharacterMap.put("e&die;", "&#235;");
+        badCharacterMap.put("i&die;", "&#239;");
+        badCharacterMap.put("o&die;", "&#246;");
+        badCharacterMap.put("u&die;", "&#252;");
+        badCharacterMap.put("A&die;", "&#196;");
+        badCharacterMap.put("E&die;", "&#203;");
+        badCharacterMap.put("I&die;", "&#207;");
+        badCharacterMap.put("O&die;", "&#214;");
+        badCharacterMap.put("U&die;", "&#220;");
+
+        badCharacterMap.put("A&grave;", "&#192;");
+        badCharacterMap.put("A&acute;", "&#193;");
+        badCharacterMap.put("A&circ;", "&#194;");
+        badCharacterMap.put("A&tilde;", "&#195;");
+        badCharacterMap.put("A&uml;", "&#196;");
+        badCharacterMap.put("A&ring;", "&#197;");
+        badCharacterMap.put("C&cedil;", "&#199;");
+        badCharacterMap.put("E&grave;", "&#200;");
+        badCharacterMap.put("E&acute;", "&#201;");
+        badCharacterMap.put("E&circ;", "&#202;");
+        badCharacterMap.put("E&uml;", "&#203;");
+        badCharacterMap.put("I&grave;", "&#204;");
+        badCharacterMap.put("I&acute;", "&#205;");
+        badCharacterMap.put("I&circ;", "&#206;");
+        badCharacterMap.put("I&uml;", "&#207;");
+        badCharacterMap.put("N&tilde;", "&#209;");
+        badCharacterMap.put("O&grave;", "&#210;");
+        badCharacterMap.put("O&acute;", "&#211;");
+        badCharacterMap.put("O&circ;", "&#212;");
+        badCharacterMap.put("O&tilde;", "&#213;");
+        badCharacterMap.put("O&uml;", "&#214;");
+        badCharacterMap.put("O&slash;", "&#216;");
+        badCharacterMap.put("S&caron;", "&#352;");
+        badCharacterMap.put("U&grave;", "&#217;");
+        badCharacterMap.put("U&acute;", "&#218;");
+        badCharacterMap.put("U&circ;", "&#219;");
+        badCharacterMap.put("U&uml;", "&#220;");
+        badCharacterMap.put("Y&acute;", "&#221;");
+        badCharacterMap.put("Y&uml;", "&#376;");
+        badCharacterMap.put("a&grave;", "&#224;");
+        badCharacterMap.put("a&acute;", "&#225;");
+        badCharacterMap.put("a&circ;", "&#226;");
+        badCharacterMap.put("a&tilde;", "&#227;");
+        badCharacterMap.put("a&uml;", "&#228;");
+        badCharacterMap.put("a&ring;", "&#229;");
+        badCharacterMap.put("c&cedil;", "&#231;");
+        badCharacterMap.put("e&grave;", "&#232;");
+        badCharacterMap.put("e&acute;", "&#233;");
+        badCharacterMap.put("e&circ;", "&#234;");
+        badCharacterMap.put("e&uml;", "&#235;");
+        badCharacterMap.put("i&grave;", "&#236;");
+        badCharacterMap.put("i&acute;", "&#237;");
+        badCharacterMap.put("i&circ;", "&#238;");
+        badCharacterMap.put("i&uml;", "&#239;");
+        badCharacterMap.put("n&tilde;", "&#241;");
+        badCharacterMap.put("o&grave;", "&#242;");
+        badCharacterMap.put("o&acute;", "&#243;");
+        badCharacterMap.put("o&circ;", "&#244;");
+        badCharacterMap.put("o&tilde;", "&#245;");
+        badCharacterMap.put("o&uml;", "&#246;");
+        badCharacterMap.put("o&slash;", "&#248;");
+        badCharacterMap.put("s&caron;", "&#353;");
+        badCharacterMap.put("u&grave;", "&#249;");
+        badCharacterMap.put("u&acute;", "&#250;");
+        badCharacterMap.put("u&circ;", "&#251;");
+        badCharacterMap.put("u&uml;", "&#252;");
+        badCharacterMap.put("y&acute;", "&#253;");
+        badCharacterMap.put("y&uml;", "&#255;");
+    }
+    
+    public static String cleanBadCharacters(String input)
+	{
+    	//System.out.println("INPUT3"+input);
+    	Set<String> keys = badCharacterMap.keySet();
+        for(String key: keys){
+            String value = badCharacterMap.get(key);
+            input = input.replaceAll(key, value);
+        }
+        //System.out.println("INPUT4"+input);
+        return input;
+    	
+	}
+	
 	/*
 	public static String mapEntity(String xml)
 	{
@@ -568,10 +655,12 @@ public class DataLoadDictionary
     			}
     			else if(((int) c >= 128 || (int) c < 32))
     			{
+    				/*
     				if((int)c==769)
     				{
     					//System.out.println(BdParser.accessNumberS+"\t"+xml);					//HT commented on 09/21/2020 It seems it has been added only for checking accented names, Uncomment for debugging, otherwise makes log file big
     				}
+    				*/
     				
     				switch ((int) c)
     				{
@@ -1200,7 +1289,7 @@ public class DataLoadDictionary
     				}
     			}
     		}
-    		return sb.toString();
+    		return (new BDDocBuilder()).cleanBadCharacters(sb.toString());
     	}
     	
     	
@@ -1263,6 +1352,7 @@ public class DataLoadDictionary
     		}
     		return sb.toString();
     	}
+    	
     	
     	
     	public static String AlphaEntitysToNumericEntitys(String xml) 

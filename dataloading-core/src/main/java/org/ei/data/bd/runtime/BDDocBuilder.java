@@ -1182,6 +1182,11 @@ public class BDDocBuilder implements DocumentBuilder {
         badCharacterMap.put("i&die;", "&#239;");
         badCharacterMap.put("o&die;", "&#246;");
         badCharacterMap.put("u&die;", "&#252;");
+        badCharacterMap.put("A&die;", "&#196;");
+        badCharacterMap.put("E&die;", "&#203;");
+        badCharacterMap.put("I&die;", "&#207;");
+        badCharacterMap.put("O&die;", "&#214;");
+        badCharacterMap.put("U&die;", "&#220;");
 
         badCharacterMap.put("A&grave;", "&#192;");
         badCharacterMap.put("A&acute;", "&#193;");

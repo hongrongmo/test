@@ -2883,8 +2883,8 @@ public class NewDataTesting
 						response.append(line);
 						//System.out.println("response="+line);
 						// Response Is to big , to speedup the process only read up to hits 
-						if(line.equalsIgnoreCase("hits"))
-							break;
+						//if(line.equalsIgnoreCase("hits"))
+							//break;
 					}
 					System.out.println("Response: " + response.toString());   // only for debugging
 					// close stream
