@@ -315,9 +315,10 @@ public class INSCorrection
                     System.in.read();
                     Thread.currentThread().sleep(1000);
                 }
+                
+                /* Block out all lookup index processing, Hanan will do it from different place@10/02/2020
                 if(action.equalsIgnoreCase("update"))
                 {
-
                     bdc.processLookupIndex(bdc.getLookupData("update",updateNumber),bdc.getLookupData("backup",updateNumber));
                 }
                 else if(action.equalsIgnoreCase("delete"))
@@ -329,6 +330,7 @@ public class INSCorrection
                 {
                     bdc.processLookupIndex(bdc.getLookupData("ins",updateNumber),bdc.getLookupData("insBackup",updateNumber));
                 }
+                */
             }
             /*Hanan: this is only to generate Fast Extract Files of the
              records that marked as deleted in case the action is "delete"

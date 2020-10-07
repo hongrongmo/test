@@ -533,7 +533,7 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
                 pui = rs.getString("PUI");
                 puiGlobal = pui;
                 
-                if (validYear(rs.getString("PUBLICATIONYEAR")))
+                if (validYear(rs.getString("PUBLICATIONYEAR")) && (rs.getString("CITTYPE")!=null && (!rs.getString("CITTYPE").equals("mm") && !rs.getString("CITTYPE").equals("pp"))))
                 { 
                 	++i;
                 	totalCount = rs.getInt("TOTALCOUNT");
@@ -1347,6 +1347,10 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
                     {
                       e.printStackTrace();
                     }
+                }
+                else if(rs.getString("CITTYPE")!=null && (rs.getString("CITTYPE").equals("mm") || rs.getString("CITTYPE").equals("pp")))
+                {
+                	System.out.println("FOUND DOCTYPE MM OR PP");
                 }
 
             }

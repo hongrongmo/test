@@ -163,7 +163,7 @@ public class EncompassAtomicBaseTableWriter {
 	
 	public String checkInvChar(String line) {
 
-		System.out.println("LINE="+line);
+		//System.out.println("LINE="+line);
 		StringBuffer buffer = new StringBuffer();
 		char[] sChar = line.toCharArray();
 		int i = 0;

@@ -377,6 +377,10 @@ public class BdCorrection
                     System.in.read();
                     Thread.currentThread().sleep(1000);
                 }
+                
+                /* Block out all lookup index processing, Hanan will do from different place@10/02/2020
+                 
+                
                 if(action.equalsIgnoreCase("update"))
                 {
                     bdc.processLookupIndex(bdc.getLookupData("update"),bdc.getLookupData("backup"));
@@ -397,6 +401,7 @@ public class BdCorrection
                 midTime = endTime;
                 endTime = System.currentTimeMillis();
                 System.out.println("time for run lookupIndex table "+(endTime-midTime)/1000.0+" seconds");
+                */
                 System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
 
             }

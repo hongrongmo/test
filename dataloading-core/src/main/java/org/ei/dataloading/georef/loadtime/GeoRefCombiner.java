@@ -35,7 +35,6 @@ import org.ei.dataloading.*;
 import org.ei.common.*;
 import org.ei.common.georef.*;
 import org.ei.util.kafka.*;
-import org.ei.dataloading.MessageSender;
 
 public class GeoRefCombiner
 extends Combiner
@@ -155,6 +154,18 @@ public GeoRefCombiner(CombinedWriter writer)
 
   ((CombinedXMLWriter) writer).setDataValidator(d);
 
+}
+
+public GeoRefCombiner(CombinedWriter writer,String propertyFileName)
+{
+	super(writer);
+	this.propertyFileName=propertyFileName;
+	DataValidator d = new DataValidator();
+	d.setErrorHandler(new LocalErrorHandler());
+	d.setEntityResolver(new LocalEntityResolver());
+
+	((CombinedXMLWriter) writer).setDataValidator(d);
+    
 }
 
 public static int getResultSetSize(ResultSet resultSet)
