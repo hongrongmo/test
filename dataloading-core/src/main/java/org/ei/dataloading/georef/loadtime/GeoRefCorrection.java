@@ -37,7 +37,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.regex.*;
 import org.ei.util.GUID;
-import org.ei.util.kafka.KafkaService;
 import org.ei.xml.Entity;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -74,8 +73,7 @@ public class GeoRefCorrection
     static String lookupTable="georef_deleted_lookupIndex";
     static String backupTable="georef_temp_backup";
     static String sqlldrFileName="georefCorrectionFileLoader.sh";
-    static String fileToBeLoaded;
-    static String propertyFileName;
+    static String fileToBeLoaded 	= null;
     public static final String AUDELIMITER = new String(new char[] {30});
     public static final String IDDELIMITER = new String(new char[] {31});
     public static final String GROUPDELIMITER = new String(new char[] {02});
@@ -156,12 +154,6 @@ public class GeoRefCorrection
 				System.out.println("Does not have sqlldr file");
 				System.exit(1);
 			}
-		}
-		
-		if(args.length>11)
-		{
-			propertyFileName = args[11];
-			System.out.println("using propertyFileName "+propertyFileName);
 		}
 
 		if(args.length>6)
@@ -351,8 +343,6 @@ public class GeoRefCorrection
 					System.in.read();
 					Thread.currentThread().sleep(1000);
 				}
-				
-				/* Block out all lookup index processing, Hanan will do from different place@10/02/2020
 				if(action.equalsIgnoreCase("update"))
 				{
 					//processLookupIndex(getLookupData("update"),getLookupData("backup"));					// fast
@@ -366,7 +356,7 @@ public class GeoRefCorrection
 					//processLookupIndex(new HashMap(),getLookupData("backup"));																			//fast
 					processESLookupIndex(new HashMap<String, List<String>>(),grfcomb.getESLookupData(updateNumber, "backup", backupTable, con, database));			//es
 				}
-				*/
+
 
 			}
 
@@ -590,17 +580,17 @@ public class GeoRefCorrection
 			}
 
 			stmt = con.prepareStatement(updateQuery);
-			System.out.println("run "+updateQuery);
+			log4j.info("run "+updateQuery);
 		    stmt.executeUpdate();
 			stmt = con.prepareStatement(selectQuery);
-			System.out.println("run "+selectQuery);
+			log4j.info("run "+selectQuery);
 			rs = stmt.executeQuery();
 			String[] topTwoLoadnumber = new String[2];
 			int i=0;
 			while (rs.next())
 			{
 				topTwoLoadnumber[i]= rs.getString("updatenumber");
-				System.out.println("Processing loadNumber "+rs.getString("updatenumber"));
+				log4j.info("Processing loadNumber "+rs.getString("updatenumber"));
 				i++;
 
 			}
@@ -655,10 +645,10 @@ public class GeoRefCorrection
 				con1 = getConnection(url,driver,username,password);
 			}
 			stmt = con1.prepareStatement("update georef_master_ip set updateflag=document_type where updatenumber='"+updateNumber+"'");
-			System.out.println("update georef_master_ip set updateflag=document_type where updatenumber='"+updateNumber+"'");
+			log4j.info("update georef_master_ip set updateflag=document_type where updatenumber='"+updateNumber+"'");
 			stmt.executeUpdate();
 			stmt = con1.prepareStatement("update georef_master_ip set document_type='GI' where updatenumber='"+updateNumber+"'");
-			System.out.println("update georef_master_ip set document_type='GI' where updatenumber='"+updateNumber+"'");
+			log4j.info("update georef_master_ip set document_type='GI' where updatenumber='"+updateNumber+"'");
 			stmt.executeUpdate();
 
 
@@ -716,7 +706,7 @@ public class GeoRefCorrection
 		catch(Exception e)
 		{
 			try{
-			System.out.println("Exception on GeoRefCorrection.addRecords  "+e.getMessage());
+			log4j.info("Exception on GeoRefCorrection.addRecords  "+e.getMessage());
 			//stmt = con1.prepareStatement("insert into georef_master_error values('"+idNumber+"',"+updateNumber+",Sysdate,'"+e.getMessage()+"','"+fileToBeLoaded+"'");
 			stmt = con1.prepareStatement("insert into georef_correction_error values(?,?,Sysdate,?,?)");
 			stmt.setString(1,idNumber);
@@ -879,12 +869,12 @@ public class GeoRefCorrection
 			if(updateNumber.length==2 && updateNumber[0]!=null && updateNumber[1]!=null)
 			{
 			  addQuery = "insert into georef_master_add select * from georef_master_ip where updatenumber='"+updateNumber[0]+"' and id_number in(select id_number from georef_master_ip where updatenumber='"+updateNumber[0]+"' minus select id_number from georef_master_ip where updatenumber='"+updateNumber[1]+"')";
-			  System.out.println("Run Query \"insert into georef_master_add select * from georef_master_ip where updatenumber='"+updateNumber[0]+"' and id_number in(select id_number from georef_master_ip where updatenumber='"+updateNumber[0]+"' minus select id_number from georef_master_ip where updatenumber='"+updateNumber[1]+"'\" to create georef_master_add table" );
+			  log4j.info("Run Query \"insert into georef_master_add select * from georef_master_ip where updatenumber='"+updateNumber[0]+"' and id_number in(select id_number from georef_master_ip where updatenumber='"+updateNumber[0]+"' minus select id_number from georef_master_ip where updatenumber='"+updateNumber[1]+"'\" to create georef_master_add table" );
 			  deleteQuery = "insert into georef_master_delete select * from georef_master_ip where updatenumber='"+updateNumber[1]+"' and id_number in(select id_number from georef_master_ip where updatenumber='"+updateNumber[1]+"' minus select id_number from georef_master_ip where updatenumber='"+updateNumber[0]+"' )";
-			  System.out.println("Run Query \"insert into georef_master_delete select * from georef_master_ip where updatenumber='"+updateNumber[1]+"' and id_number in(select id_number from georef_master_ip where updatenumber='"+updateNumber[1]+"' minus select id_number from georef_master_ip where updatenumber='"+updateNumber[0]+"'\" to create georef_master_delete table" );
+			  log4j.info("Run Query \"insert into georef_master_delete select * from georef_master_ip where updatenumber='"+updateNumber[1]+"' and id_number in(select id_number from georef_master_ip where updatenumber='"+updateNumber[1]+"' minus select id_number from georef_master_ip where updatenumber='"+updateNumber[0]+"'\" to create georef_master_delete table" );
 			  updateQuery = "update georef_master_add set PERSON_MONOGRAPH=replace(PERSON_MONOGRAPH,'?',' '),PERSON_ANALYTIC=replace(PERSON_ANALYTIC,'?',' '),PERSON_COLLECTION=replace(PERSON_COLLECTION,'?',' ')  where PERSON_MONOGRAPH like'%?%' or PERSON_ANALYTIC like'%?%' or PERSON_COLLECTION  like'%?%;'";
 			  updateQuery1 ="update georef_master_delete set m_id=(select m_id from georef_master_orig where id_number=georef_master_delete.id_number and document_type='GI') where exists(select m_id from georef_master_orig where id_number=georef_master_delete.id_number and document_type='GI')";
-			  System.out.println("Run Query update georef_master_delete set m_id=(select m_id from georef_master_orig where id_number=georef_master_delete.id_number) where exists(select m_id from georef_master_orig where id_number=georef_master_delete.id_number)" );
+			  log4j.info("Run Query update georef_master_delete set m_id=(select m_id from georef_master_orig where id_number=georef_master_delete.id_number) where exists(select m_id from georef_master_orig where id_number=georef_master_delete.id_number)" );
 		      stmt = con1.prepareStatement(addQuery);
 		      stmt.executeUpdate();
 		      stmt = con1.prepareStatement(deleteQuery);
@@ -898,7 +888,7 @@ public class GeoRefCorrection
 		    }
 		    else
 		    {
-		    	System.out.println("No Load Number");
+				log4j.info("No Load Number");
 			}
 
 
@@ -907,7 +897,7 @@ public class GeoRefCorrection
 		}
 		catch(Exception e)
 		{
-			System.out.println("Exception on GeoRefCorrection.runAddDelete "+e.getMessage());
+			log4j.info("Exception on GeoRefCorrection.runAddDelete "+e.getMessage());
 			e.printStackTrace();
 		}
 		finally
@@ -971,7 +961,7 @@ public class GeoRefCorrection
 		}
 		catch(Exception e)
 		{
-			System.out.println("Exception on GeoRefCorrection.deleteRecord "+e.getMessage());
+			log4j.info("Exception on GeoRefCorrection.deleteRecord "+e.getMessage());
 			e.printStackTrace();
 		}
 		finally
@@ -1363,12 +1353,7 @@ private void processResponse(String value, String response, BufferedWriter bw) t
 			}
 			stmt = con1.createStatement();
 			writer.setOperation("add");
-<<<<<<< HEAD
-			//GeoRefCombiner c = new GeoRefCombiner(writer);
-			GeoRefCombiner c = new GeoRefCombiner(writer,this.propertyFileName);
-=======
 			//GeoRefCombiner c = new GeoRefCombiner(writer);						//HT commented 9/21/2020 since GeoRefCombiner initialized in startCorrection already
->>>>>>> e3f63b0c2a00de7b5c4e3db756e7efc5ebec7208
 			rs = stmt.executeQuery("select * from georef_master_add");
 			c.writeRecs(rs);
 			writer.end();
@@ -1377,11 +1362,7 @@ private void processResponse(String value, String response, BufferedWriter bw) t
 			writer = new CombinedXMLWriter(50000,Integer.parseInt(updateNumber),"grf", "dev");
 			writer.setOperation("delete");
 			rs = stmt.executeQuery("select m_id from georef_master_delete");
-			List deleteRecords = creatDeleteFile(rs,"grf",Integer.parseInt(updateNumber));
-			if(this.propertyFileName!=null)
-			{
-				sendDeleteToKafka(deleteRecords);
-			}
+			creatDeleteFile(rs,"grf",Integer.parseInt(updateNumber));
 			writer.zipBatch();
 			writer.end();
 			writer.flush();
@@ -1433,46 +1414,7 @@ private void processResponse(String value, String response, BufferedWriter bw) t
 		}
 	}
 
-	private void sendDeleteToKafka(List rs)
-    {
-    	//KafkaService kafka = new KafkaService();
-    	long processTime = System.currentTimeMillis();
-    	String processInfo=processTime+"_"+this.database+"_"+updateNumber;
-    	KafkaService kafka = new KafkaService(processInfo, this.propertyFileName); //use it for ES extraction
-    	try
-    	{
-	    	String eid="";
-	    	for (int i=0;i<rs.size();i++)
-            {
-	    		eid=(String)rs.get(i);
-                if(eid != null)
-                {                   
-                    kafka.runProducer("{}",eid,0,new HashMap());
-                    System.out.println("EID="+eid);
-                }
-            }
-	    	
-    	}
-    	catch(Exception e)
-        {
-        	e.printStackTrace();
-        }
-        finally
-        {
-        	try
-        	{
-		        if(kafka!=null)
-		        { 	        		        
-		        	kafka.close();        
-		        }
-        	}
-        	catch(Exception e)
-            {
-            	e.printStackTrace();
-            }
-        }      
-    }
-	
+
     private void loadDataIntoTempTable(String infile, String outputFile,String loadNumber) throws Exception
     {
 		if(infile.toLowerCase().endsWith(".zip"))
@@ -1654,11 +1596,7 @@ private void processResponse(String value, String response, BufferedWriter bw) t
 			{
 				System.out.println("Running the query...");
 				writer.setOperation("add");
-<<<<<<< HEAD
-        		GeoRefCombiner c = new GeoRefCombiner(writer,this.propertyFileName);
-=======
         		//GeoRefCombiner c = new GeoRefCombiner(writer);			//HT commented 9/21/2020 since GeoRefCombiner initialized in startCorrection already
->>>>>>> e3f63b0c2a00de7b5c4e3db756e7efc5ebec7208
         		if(updateNumber==1)
         		{
         			rs = stmt.executeQuery("select * from georef_master_orig");
@@ -1673,11 +1611,7 @@ private void processResponse(String value, String response, BufferedWriter bw) t
 			{
 				writer.setOperation("delete");
 				rs = stmt.executeQuery("select m_id from georef_master_orig where updateNumber='"+updateNumber+"' and ID_NUMBER in (select 'D'||ID_NUMBER from "+tempTable+")");
-				List deleteRecords = creatDeleteFile(rs,dbname,updateNumber);		
-				if(this.propertyFileName!=null)
-				{
-					sendDeleteToKafka(deleteRecords);
-				}
+				creatDeleteFile(rs,dbname,updateNumber);
 				writer.zipBatch();
 			}
 			writer.end();
@@ -1717,9 +1651,9 @@ private void processResponse(String value, String response, BufferedWriter bw) t
 		}
     }
 
-    private List creatDeleteFile(ResultSet rs,String database,int updateNumber)
+    private void creatDeleteFile(ResultSet rs,String database,int updateNumber)
     {
-    	List outputList=new ArrayList();
+
 		String batchidFormat = "0000";
 		String batchID = "0001";
 		String numberID = "0000";
@@ -1761,7 +1695,6 @@ private void processResponse(String value, String response, BufferedWriter bw) t
 			{
 				if(rs.getString("M_ID") != null)
 				{
-					outputList.add(rs.getString("M_ID"));
 					out.write(rs.getString("M_ID")+"\n");
 				}
 			}
@@ -1799,7 +1732,6 @@ private void processResponse(String value, String response, BufferedWriter bw) t
 			}
 
 		}
-		return outputList;
 
 	}
 
