@@ -124,10 +124,8 @@ public abstract class Combiner
             throws Exception;
 
 
-
-
-
-
+        	/* HT added 09/21/2020 to support Lookup extraction for ES*/
+        public abstract void writeLookupByWeekHook(int weekNumber) throws Exception;
 
 
         public void writeCombinedByWeekNumber(String connectionURL,
@@ -170,6 +168,40 @@ public abstract class Combiner
                 }
 
 
+                if(out != null)
+                {
+                    try
+                    {
+                        out.close();
+                    }
+                    catch(Exception e)
+                    {
+                        e.printStackTrace();
+                    }
+                }
+
+            }
+
+
+        }
+
+
+        /*HT added 09/21/2020 for supporting lookup extraction for ES */
+
+        public void writeLookupByWeekNumber(
+                                              int weekNumber)
+            throws Exception
+        {
+                   PrintStream out = null;
+
+            try
+            {
+
+                writeLookupByWeekHook(weekNumber);
+
+            }
+            finally
+            {
                 if(out != null)
                 {
                     try

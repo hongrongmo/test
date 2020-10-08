@@ -26,6 +26,7 @@ import org.ei.dataloading.XMLWriterCommon;
 */
 
 import org.ei.dataloading.*;
+import org.ei.dataloading.lookup.LookupEntry;
 import org.ei.util.GUID;
 import org.ei.util.StringUtil;
 
@@ -40,6 +41,10 @@ public class EltCombiner extends Combiner {
 
     private EltDocTypes eltDocTypes = new EltDocTypes();
     Perl5Util perl = new Perl5Util();
+    
+    /*HT added 09/21/2020 for lookup extraction to ES*/
+    private String action = null;
+    private LookupEntry lookupObj = null;
 
     public static void main(String args[]) throws Exception {
         String url = args[0];
@@ -708,5 +713,14 @@ public class EltCombiner extends Combiner {
 
         return result;
     }
+    
+    @Override
+	public void writeLookupByWeekHook(int weekNumber) throws Exception {
+		System.out.println("Extract Lookup");
+		String database =  Combiner.CURRENTDB;
+		lookupObj = new LookupEntry(database, weekNumber);
+    	lookupObj.init();
+		
+	}
 
 }

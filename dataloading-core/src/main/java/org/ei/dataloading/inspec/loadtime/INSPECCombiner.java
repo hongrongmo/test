@@ -8,6 +8,7 @@ import java.sql.Statement;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.StringTokenizer;
@@ -29,6 +30,7 @@ import org.ei.common.inspec.*;
 import org.ei.dataloading.EVCombinedRec;
 import org.ei.dataloading.XMLWriterCommon;
 import org.ei.dataloading.bd.loadtime.BdNumericalIndexMapping;
+import org.ei.dataloading.lookup.LookupEntry;
 import org.ei.dataloading.MessageSender;
 import org.ei.util.kafka.*;
 
@@ -43,6 +45,10 @@ public class INSPECCombiner
 	private static String propertyFileName;
 	private static int loadNumber = 0;
 	
+    /*HT added 09/21/2020 for lookup extraction to ES*/
+    private String action = null;
+    private LookupEntry lookupObj = null;
+	
     public INSPECCombiner(CombinedWriter writer)
     {
         super(writer);
@@ -54,7 +60,12 @@ public class INSPECCombiner
         this.propertyFileName=propertyFileName;
         this.loadNumber=loadNumber;
     }
-
+    /*HT added 09/21/2020 to support ES Lookup*/
+	public INSPECCombiner(CombinedWriter writer, String propertyFileName, String database) {
+		super(writer);
+		this.propertyFileName = propertyFileName;
+		Combiner.CURRENTDB = database;
+	}
 
     public static void main(String args[])
             throws Exception
@@ -90,58 +101,47 @@ public class INSPECCombiner
          writer.setOperation(operation);
         INSPECCombiner c = new INSPECCombiner(writer);
 
-        if(loadNumber > 3000)
+        /*TH added 09/21/2020 for ES lookup generation*/
+        Combiner.CURRENTDB = databaseIndexName;
+        for(String str: args)
         {
-            c.writeCombinedByWeekNumber(url,
-                                        driver,
-                                        username,
-                                        password,
-                                        loadNumber);
+        	if(str.equalsIgnoreCase("lookup"))
+        		c.setAction("lookup");
         }
-        else if(loadNumber == 2999)
-        {
-            int yearIndex = loadNumber;
-            System.out.println("Processing MISC records as loadnumber " + yearIndex + "...");
-            c = new INSPECCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,databaseIndexName, environment));
-            c.writeCombinedByYear(url,
-                                  driver,
-                                  username,
-                                  password,
-                                  yearIndex);
-        }
-        // extract the whole thing
-        else if(loadNumber == 0)
-        {
-            for(int yearIndex = 2005; yearIndex <= 2012; yearIndex++)
-            {
-                System.out.println("Processing year " + yearIndex + "...");
-                //create  a new writer so we can see the loadNumber/yearNumber in the filename
-                c = new INSPECCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,databaseIndexName, environment));
-                c.writeCombinedByYear(url,
-                                      driver,
-                                      username,
-                                      password,
-                                      yearIndex);
-            }
-        }
-        else if(loadNumber == 1)
-        {                      
-                c.writeCombinedByTable(url,
-                                      driver,
-                                      username,
-                                      password);
-            
-        }      
-        else
-        {
-            c.writeCombinedByYear(url,
-                                  driver,
-                                  username,
-                                  password,
-                                  loadNumber);
-        }
-    }
+        /*HT added 09/21/2020 to support ES lookup, will need to run lookup anyway even if action not lookup*/
+   	// if(c.getAction() != null && c.getAction().equalsIgnoreCase("lookup"))
+     	   c.writeLookupByWeekHook(loadNumber);
+			if (loadNumber > 3000) {
+				c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
+			} else if (loadNumber == 2999) {
+				int yearIndex = loadNumber;
+				System.out.println("Processing MISC records as loadnumber " + yearIndex + "...");
+				c = new INSPECCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex, databaseIndexName, environment));
+				c.writeCombinedByYear(url, driver, username, password, yearIndex);
+			}
+			// extract the whole thing
+			else if (loadNumber == 0) {
+				for (int yearIndex = 2005; yearIndex <= 2012; yearIndex++) {
+					System.out.println("Processing year " + yearIndex + "...");
+					// create a new writer so we can see the loadNumber/yearNumber in the filename
+					c = new INSPECCombiner(
+							new CombinedXMLWriter(recsPerbatch, yearIndex, databaseIndexName, environment));
+					c.writeCombinedByYear(url, driver, username, password, yearIndex);
+				}
+			} else if (loadNumber == 1) {
+				c.writeCombinedByTable(url, driver, username, password);
 
+			} else {
+				c.writeCombinedByYear(url, driver, username, password, loadNumber);
+			}
+    }
+    public void setAction(String str)
+    {
+    	action = str;
+    }
+    public String getAction() {
+    	return action;
+    }
 
     public void writeCombinedByTableHook(Connection con)
     		throws Exception
@@ -369,8 +369,8 @@ public class INSPECCombiner
         
         try
         {
-    	    totalCount = getResultSetSize(rs); 
-    	    if(this.propertyFileName!=null)
+    	    totalCount = getResultSetSize(rs);   		// HT 09/21/2020 ONLY COMMENT OUT WHEN GENERATING WHOLE TABLE LOOKUP, UNCOMMENT IN PROD
+        	 if (this.propertyFileName != null && (getAction() == null || !(getAction().equalsIgnoreCase("lookup")))) // HT only create Kafka instance when it is // not lookup extraction
     	    {
     	    	System.out.println("propertyFileName="+this.propertyFileName);
     	    	kafka = new KafkaService(processTime+"_ins_"+loadNumber, this.propertyFileName);
@@ -821,9 +821,14 @@ public class INSPECCombiner
 	                rec.put(EVCombinedRec.STARTPAGE, getFirstPage(rs.getString("pipn")));
 	                rec.put(EVCombinedRec.ACCESSION_NUMBER, rs.getString("ANUM"));
 	
-	                if(this.propertyFileName==null)
+	                if (this.propertyFileName == null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup"))))
 	                {
 	                	writer.writeRec(rec);//Use this line for FAST extraction
+	                }
+	                /*HT added 09/21/2020 for ES lookup*/
+	                else if (getAction() != null && getAction().equalsIgnoreCase("lookup"))
+	                {
+	                	this.lookupObj.writeLookupRec(rec);
 	                }
 	                else
 	                {
@@ -835,6 +840,7 @@ public class INSPECCombiner
 		                //writer.writeRec(rec,kafka);
 		                
 	                	this.writer.writeRec(rec,kafka, batchData, missedData);
+	                	this.lookupObj.writeLookupRec(rec);						//HT added later for weekly lookup extraction for ES
 			            if(counter<batchSize)
 			            {            	
 			            	counter++;
@@ -864,7 +870,7 @@ public class INSPECCombiner
      	    	System.out.println("**Got "+i+" records instead of "+totalCount );
      	    }
     	    
-    	    if(this.propertyFileName!=null)
+    	    if (this.propertyFileName != null && (getAction() == null || !(getAction().equalsIgnoreCase("lookup"))))
         	{
 	        	try
 	        	{
@@ -1633,4 +1639,227 @@ public class INSPECCombiner
             }
         }
     }
+    
+    @Override
+	/*HT added 09/21/2020 wk: [202040] for Lookup extraction for ES*/
+	public void writeLookupByWeekHook(int weekNumber) throws Exception {
+		System.out.println("Extract Lookup");
+		String database =  Combiner.CURRENTDB;
+    	lookupObj = new LookupEntry(database, weekNumber);
+    	lookupObj.init();
+	}
+    
+    /*HT added 09/21/2020, Get Lookup list from temp tables based on correction action, this method to support bdCorrectio, not for ES lookup extraction*/
+	  public Map<String,List<String>> getESLookupData(int weekNumber, String actionType, String tableName, Connection sqlcon, String database) throws Exception {
+		  
+		  Statement stmt = null; 
+		  ResultSet rs = null; 
+		  String sqlQuery = null, cpxSqlQuery = null;
+		  Map<String,List<String>> recs = null;
+		  
+		  try { 
+				
+		  Connection con = sqlcon;
+		  stmt = con.createStatement();
+		  System.out.println("database: " + database);
+
+		  Combiner.CURRENTDB = database;
+		  
+
+			
+		  if(actionType.equalsIgnoreCase("update")||actionType.equalsIgnoreCase("ins")||actionType.equalsIgnoreCase("lookupindex") || actionType.equalsIgnoreCase("insBackup"))
+				 sqlQuery = "select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, "
+			 		+ "rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, "
+			 		+ "eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, "
+			 		+ "eaffmulti2, nssn, npsn, LOAD_NUMBER, ipc, updatenumber from "+tableName+ " where LOAD_NUMBER = "+weekNumber;
+			 else
+				 sqlQuery = "select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, "
+					 		+ "rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, "
+					 		+ "eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, "
+					 		+ "eaffmulti2, nssn, npsn, LOAD_NUMBER, ipc, updatenumber from "+tableName;
+
+			System.out.println(sqlQuery);
+			rs = stmt.executeQuery(sqlQuery);
+
+			recs = prepareLookupRecs(rs, weekNumber);
+				 
+		  }
+		  finally 
+		  {
+
+				if (rs != null) {
+					try {
+						rs.close();
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
+
+				if (stmt != null) {
+					try {
+						stmt.close();
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
+				 
+			}
+		  return recs;
+	    
+	  }
+	  //HT added 09/21/2020 for ES lookup 
+	public Map<String, List<String>> prepareLookupRecs(ResultSet rs, int weekNumber) throws Exception {
+		int i = 0;
+		EVCombinedRec[] recArray = null;
+		boolean isChimica = false;
+		boolean isCpx = false;
+		String accessNumber = "";
+		String pui = "";
+
+		Map<String, List<String>> recs = new HashMap<>();
+		List<String> authorList = new ArrayList<>();
+		List<String> affiliationList = new ArrayList<>();
+		List<String> serialTitleList = new ArrayList<>();
+		List<String> controltermList = new ArrayList<>();
+		List<String> publishernameList = new ArrayList<>();
+		List<String> ipcList = new ArrayList<>();
+
+		try {
+			while (rs.next()) {
+				EVCombinedRec rec = new EVCombinedRec();
+				++i;
+				String mid = rs.getString("M_ID");
+				String abString = getStringFromClob(rs.getClob("ab"));
+
+				String accessnumber = rs.getString("anum");
+				String strYear = "";
+				if (rs.getString("pyr") != null && validYear(getPubYear(rs.getString("pyr")))) {
+					strYear = getPubYear(rs.getString("pyr"));
+				} else if (rs.getString("sspdate") != null && validYear(getPubYear(rs.getString("sspdate")))) {
+					strYear = getPubYear(rs.getString("sspdate"));
+				} else if (rs.getString("fdate") != null && validYear(getPubYear(rs.getString("fdate")))) {
+					strYear = getPubYear(rs.getString("fdate"));
+				} else if (rs.getString("cdate") != null && validYear(getPubYear(rs.getString("cdate")))) {
+					strYear = getPubYear(rs.getString("cdate"));
+				} else if (rs.getString("su") != null && validYear(getPubYear(rs.getString("su")))) {
+
+					strYear = getPubYear(rs.getString("su"));
+				}
+
+				try {
+					if (validYear(strYear)) {
+
+						// AUTHOR
+						if ((rs.getString("aus") != null) || (rs.getString("aus2") != null)) {
+							StringBuffer aus = new StringBuffer();
+							if (rs.getString("aus") != null) {
+								aus.append(rs.getString("aus"));
+							}
+							if (rs.getString("aus2") != null) {
+								aus.append(rs.getString("aus2"));
+							}
+
+							rec.put(EVCombinedRec.AUTHOR, prepareAuthor(aus.toString()));
+						}
+
+						// AFFILIATION
+						if (rs.getString("aaff") != null) {
+							StringBuffer aaff = new StringBuffer(rs.getString("aaff"));
+
+							if (rs.getString("aaffmulti1") != null) {
+								aaff.append(Constants.AUDELIMITER);
+								aaff.append(rs.getString("aaffmulti1"));
+
+								if (rs.getString("aaffmulti2") != null) {
+									aaff.append(rs.getString("aaffmulti2"));
+								}
+							}
+							rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareAffiliation(aaff.toString()));
+							rec.put(EVCombinedRec.AFFILIATION_LOCATION, prepareAffiliationLocation(aaff.toString()));
+
+						}
+
+						if (rs.getString("afc") != null) {
+							String countryFormatted = Country.formatCountry(rs.getString("afc"));
+							if (countryFormatted != null) {
+								if (rec.get(EVCombinedRec.AFFILIATION_LOCATION) == null)
+									rec.put(EVCombinedRec.AFFILIATION_LOCATION, countryFormatted);
+							}
+						}
+
+						// CONTROLLED_TERMS
+
+						if (rs.getString("cvs") != null) {
+							rec.put(EVCombinedRec.CONTROLLED_TERMS, prepareMulti(rs.getString("cvs")));
+						}
+
+						// SERIAL_TITLE
+
+						if (rs.getString("pubti") != null) {
+							rec.put(rec.MONOGRAPH_TITLE, rs.getString("pubti"));
+							rec.put(EVCombinedRec.SERIAL_TITLE, rs.getString("pubti"));
+						}
+
+						if (rs.getString("pfjt") != null) {
+							rec.put(EVCombinedRec.SERIAL_TITLE, rs.getString("pfjt"));
+						}
+
+						// PUBLISHERNAME
+						if (rs.getString("ppub") != null) {
+							rec.put(EVCombinedRec.PUBLISHER_NAME, rs.getString("ppub"));
+						}
+						// replacing AUTHOR_AFFILIATION for Patent Assignee
+						if (rs.getString("pas") != null) {
+							rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareMulti(rs.getString("pas")));
+						}
+
+						// AFFILIATION_LOCATION
+						if (rs.getString("iorg") != null) {
+							rec.put(rec.NOTES, prepareMulti(rs.getString("iorg")));
+
+							String countryFormatted = Country.formatCountry(rs.getString("ciorg"));
+							if (countryFormatted != null && !rec.containsKey(EVCombinedRec.COUNTRY)) {
+								rec.put(EVCombinedRec.COUNTRY, countryFormatted);
+								if (rec.get(EVCombinedRec.AFFILIATION_LOCATION) == null)
+									rec.put(EVCombinedRec.AFFILIATION_LOCATION, countryFormatted);
+							}
+						}
+
+						// IPC
+						if (rs.getString("ipc") != null) {
+							String ipcString = rs.getString("ipc");
+							ipcString = perl.substitute("s/\\//SLASH/g", ipcString);
+							rec.put(EVCombinedRec.INT_PATENT_CLASSIFICATION, ipcString);
+						}
+
+						rec.put(EVCombinedRec.DOCID, rs.getString("M_ID"));
+
+						rec.put(EVCombinedRec.DATABASE, "ins");
+						rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("LOAD_NUMBER"));
+						if (rs.getString("UPDATENUMBER") != null) {
+							rec.put(EVCombinedRec.UPDATE_NUMBER, rs.getString("UPDATENUMBER"));
+						}
+
+						rec.put(EVCombinedRec.ACCESSION_NUMBER, rs.getString("ANUM"));
+
+						this.lookupObj.setLookupRecs(recArray, authorList, affiliationList, serialTitleList,
+								controltermList, publishernameList, ipcList);
+
+					}
+				} catch (Exception e) {
+					System.out.println(
+							"**** ERROR Found on preparinglookuprec for access number " + accessNumber + " *****");
+					System.out.println(e.getMessage());
+					e.printStackTrace();
+				}
+
+			}
+		} 
+		catch (Exception e) 
+		{
+			e.printStackTrace();
+		}
+		return recs;
+
+	}
 }

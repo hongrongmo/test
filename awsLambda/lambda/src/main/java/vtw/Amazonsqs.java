@@ -172,7 +172,7 @@ public class Amazonsqs {
 
 
 			//while(true)
-			for(int i = 0; i<9000;i++)
+			for(int i = 0; i<1000;i++)
 			{				
 
 				ReceiveMessageResult receiveMessageResult = sqs.receiveMessage(receiveMessageRequest);

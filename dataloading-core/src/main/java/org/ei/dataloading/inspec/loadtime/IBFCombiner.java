@@ -13,6 +13,7 @@ import org.apache.oro.text.perl.*;
 import org.apache.oro.text.regex.*;
 import org.ei.util.GUID;
 import org.ei.dataloading.*;
+import org.ei.dataloading.lookup.LookupEntry;
 import org.ei.xml.*;
 import org.ei.dataloading.*;
 import org.ei.common.*;
@@ -27,6 +28,10 @@ public class IBFCombiner
     private static String propertyFileName;
     private static final String QUERY_FIELDS = "m_id, anum, rtype, su, aus, eds, ti, ab,oinfo,  pyr, cls, cvs, ocvs, ocls, fls, fjt, ojt, fttj,ottj, source, tsource, thlp,voliss, vol, iss, ipn, la, pub,  rnum, tc, cdate, cedate, cloc, ccnf, sorg, pnum, pas, cpat,iorg,ciorg, fdate, LOAD_NUMBER, SEQ_NUM";
 
+    /*HT added 09/21/2020 for lookup extraction to ES*/
+    private String action = null;
+    private LookupEntry lookupObj = null;
+    
     public IBFCombiner(CombinedWriter writer)
     {
         super(writer);
@@ -49,49 +54,45 @@ public class IBFCombiner
         	propertyFileName=args[9];
         	System.out.println("propertyFileName="+propertyFileName);
         }
-
+       
         CombinedWriter writer = new CombinedXMLWriter(recsPerbatch,
                                                       loadNumber,
                                                       "ibf");
         writer.setOperation(operation);
         IBFCombiner c = new IBFCombiner(writer);
-        // extract the whole thing
-        if(loadNumber == 0)
+        
+        /*TH added 09/21/2020 for ES lookup generation*/
+        Combiner.CURRENTDB = "ibf";
+        for(String str: args)
         {
-            for(int yearIndex = 1898; yearIndex <= 1968; yearIndex++)
-            {
-                System.out.println("Processing year " + yearIndex + "...");
-                c = new IBFCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,"ibf", environment));
-                c.writeCombinedByYear(url,
-                                driver,
-                                username,
-                                password,
-                                yearIndex);
-            }
+        	if(str.equalsIgnoreCase("lookup"))
+        		c.setAction("lookup");
         }
-        else if (loadNumber ==1)
-        {
-            c.writeCombinedByTable(url,
-                                   driver,
-                                   username,
-                                   password);                              
-        }
-        else if (loadNumber > 3000 || loadNumber < 1000)
-        {
-            c.writeCombinedByWeekNumber(url,
-                                        driver,
-                                        username,
-                                        password,
-                                        loadNumber);
-        }     
-        else
-        {
-            c.writeCombinedByYear(url,
-                                driver,
-                                username,
-                                password,
-                                loadNumber);
-        }
+        
+        /*HT added 09/21/2020 to support ES lookup, will need to run lookup anyway even if action not lookup*/
+   	 //if(c.getAction() != null && c.getAction().equalsIgnoreCase("lookup"))
+     	   c.writeLookupByWeekHook(loadNumber);
+			// extract the whole thing
+			if (loadNumber == 0) {
+				for (int yearIndex = 1898; yearIndex <= 1968; yearIndex++) {
+					System.out.println("Processing year " + yearIndex + "...");
+					c = new IBFCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex, "ibf", environment));
+					c.writeCombinedByYear(url, driver, username, password, yearIndex);
+				}
+			} else if (loadNumber == 1) {
+				c.writeCombinedByTable(url, driver, username, password);
+			} else if (loadNumber > 3000 || loadNumber < 1000) {
+				c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
+			} else {
+				c.writeCombinedByYear(url, driver, username, password, loadNumber);
+			}
+    }
+    public void setAction(String str)
+    {
+    	action = str;
+    }
+    public String getAction() {
+    	return action;
     }
 
     public void writeCombinedByYearHook(Connection con,
@@ -275,7 +276,7 @@ public class IBFCombiner
     	
         try
         {
-        	if(this.propertyFileName!=null)
+        	if(this.propertyFileName != null && (getAction() == null || !(getAction().equalsIgnoreCase("lookup")))) // HT only create Kafka instance when it is // not lookup extraction
         	{
         		kafka = new KafkaService(processTime+"_ibf_"+this.loadNumber, this.propertyFileName); //use it for ES extraction
         	}
@@ -541,9 +542,14 @@ public class IBFCombiner
 	                rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
 	            }
 	
-	            if(this.propertyFileName==null)
+	            if(this.propertyFileName == null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup"))))
 	            {
 	            	writer.writeRec(rec);//use this line for FAST extraction only
+	            }
+	            /*HT added 09/21/2020 for ES lookup*/
+	            else if (getAction() != null && getAction().equalsIgnoreCase("lookup"))
+	            {
+	            	this.lookupObj.writeLookupRec(rec);
 	            }
 	            else
 	            {
@@ -554,6 +560,7 @@ public class IBFCombiner
 	                
 	    	        //this.writer.writeRec(rec,kafka);	
 		            this.writer.writeRec(rec,kafka, batchData, missedData);
+		            this.lookupObj.writeLookupRec(rec);						//HT added later for weekly lookup extraction for ES
 		            if(counter<batchSize)
 		            {            	
 		            	counter++;
@@ -575,7 +582,7 @@ public class IBFCombiner
         }
         finally
         { 
-        	if(this.propertyFileName!=null)
+        	if(this.propertyFileName != null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup")))) 
         	{
 	        	try
 	        	{
@@ -961,5 +968,14 @@ public class IBFCombiner
 
         return al;
     }
+    
+    @Override
+	/*HT added 09/21/2020 wk: [202040] for Lookup extraction for ES*/
+	public void writeLookupByWeekHook(int weekNumber) throws Exception {
+		System.out.println("Extract Lookup");
+		String database =  Combiner.CURRENTDB;
+    	lookupObj = new LookupEntry(database, weekNumber);
+    	lookupObj.init();
+	}
 
 }

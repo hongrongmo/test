@@ -22,6 +22,7 @@ import org.ei.dataloading.CombinedXMLWriter;
 import org.ei.dataloading.Combiner;
 import org.ei.dataloading.EVCombinedRec;
 import org.ei.dataloading.XMLWriterCommon;
+import org.ei.dataloading.lookup.LookupEntry;
 import org.ei.util.GUID;
 import org.ei.util.kafka.*;
 import org.ei.dataloading.MessageSender;
@@ -32,6 +33,11 @@ public class C84Combiner extends Combiner {
     private static String propertyFileName;
     private static String tablename;
     private static int loadNumber;
+    
+    /*HT added 09/21/2020 for lookup extraction to ES*/
+    private String action = null;
+    private LookupEntry lookupObj = null;
+
     
     public static void main(String args[]) throws Exception {
 
@@ -56,24 +62,41 @@ public class C84Combiner extends Combiner {
         CombinedWriter writer = new CombinedXMLWriter(recsPerbatch, loadNumber, "c84");
         writer.setOperation(operation);
         C84Combiner c = new C84Combiner(writer);
+        
+        /*TH added 09/21/2020 for ES lookup generation*/
+        Combiner.CURRENTDB = "c84";
+        for(String str: args)
+        {
+        	if(str.equalsIgnoreCase("lookup"))
+        		c.setAction("lookup");
+        }
 
         // extract the whole thing
-        if (loadNumber == 0) {
-            for (int yearIndex = 1869; yearIndex <= 1969; yearIndex++) {
-                System.out.println("Processing year " + yearIndex + "...");
-                c = new C84Combiner(new CombinedXMLWriter(recsPerbatch, yearIndex, "c84", environment));
-                c.writeCombinedByYear(url, driver, username, password, yearIndex);
-            }
-            int yearIndex = 9999;
-            System.out.println("Processing year " + yearIndex + "...");
-            c = new C84Combiner(new CombinedXMLWriter(recsPerbatch, yearIndex, "c84", environment));
-            c.writeCombinedByYear(url, driver, username, password, yearIndex);
-        } else if (loadNumber == 1) {
-            c.writeCombinedByTable(url, driver, username, password);
-	    } else {
-	        c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
-	    }
-
+        /*HT added 09/21/2020 to support ES lookup, will need to run lookup anyway even if action not lookup*/
+   	 //if(c.getAction() != null && c.getAction().equalsIgnoreCase("lookup"))
+     	   c.writeLookupByWeekHook(loadNumber);
+			if (loadNumber == 0) {
+				for (int yearIndex = 1869; yearIndex <= 1969; yearIndex++) {
+					System.out.println("Processing year " + yearIndex + "...");
+					c = new C84Combiner(new CombinedXMLWriter(recsPerbatch, yearIndex, "c84", environment));
+					c.writeCombinedByYear(url, driver, username, password, yearIndex);
+				}
+				int yearIndex = 9999;
+				System.out.println("Processing year " + yearIndex + "...");
+				c = new C84Combiner(new CombinedXMLWriter(recsPerbatch, yearIndex, "c84", environment));
+				c.writeCombinedByYear(url, driver, username, password, yearIndex);
+			} else if (loadNumber == 1) {
+				c.writeCombinedByTable(url, driver, username, password);
+			} else {
+				c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
+			}
+    }
+    public void setAction(String str)
+    {
+    	action = str;
+    }
+    public String getAction() {
+    	return action;
     }
 
     public C84Combiner(CombinedWriter writer) {
@@ -210,7 +233,7 @@ public class C84Combiner extends Combiner {
     	
         try
         {
-        	if(this.propertyFileName!=null)
+        	if(this.propertyFileName != null && (getAction() == null || !(getAction().equalsIgnoreCase("lookup")))) // HT only create Kafka instance when it is // not lookup extraction
         	{
         		kafka = new KafkaService(processTime+"_ibf_"+this.loadNumber, this.propertyFileName); //use it for ES extraction
         	}
@@ -460,9 +483,14 @@ public class C84Combiner extends Combiner {
 	                    rec.put(EVCombinedRec.DOI, rs.getString("do"));
 	                }
 	
-	                if(this.propertyFileName==null)
+	                if(this.propertyFileName == null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup"))))
 	                {
 	                	this.writer.writeRec(rec); //use this line for FAST extraction only;
+	                }
+	                /*HT added 09/21/2020 for ES lookup*/
+	                else if (getAction() != null && getAction().equalsIgnoreCase("lookup"))
+	                {
+	                	this.lookupObj.writeLookupRec(rec);
 	                }
 	                else
 	                {
@@ -473,6 +501,7 @@ public class C84Combiner extends Combiner {
 		                
 		    	        //this.writer.writeRec(rec,kafka);		    	        
 		    	        this.writer.writeRec(rec,kafka, batchData, missedData);
+		    	        this.lookupObj.writeLookupRec(rec);						//HT added later for weekly lookup extraction for ES
 			            if(counter<batchSize)
 			            {            	
 			            	counter++;
@@ -495,7 +524,7 @@ public class C84Combiner extends Combiner {
         }
         finally
         { 
-        	if(this.propertyFileName!=null)
+        	if(this.propertyFileName != null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup")))) 
         	{
 	        	try
 	        	{
@@ -781,5 +810,14 @@ public class C84Combiner extends Combiner {
         line = perl.substitute("s/\\(ed\\.\\)/ /gi", line);
         return line;
     }
+
+	@Override
+	/*HT added 09/21/2020 wk: [202040] for Lookup extraction for ES*/
+	public void writeLookupByWeekHook(int weekNumber) throws Exception {
+		System.out.println("Extract Lookup");
+		String database =  Combiner.CURRENTDB;
+    	lookupObj = new LookupEntry(database, weekNumber);
+    	lookupObj.init();
+	}
 
 }

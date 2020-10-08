@@ -18,6 +18,7 @@ import org.ei.dataloading.Combiner;
 import org.ei.dataloading.DataValidator;
 import org.ei.dataloading.EVCombinedRec;
 import org.ei.dataloading.XMLWriterCommon;
+import org.ei.dataloading.lookup.LookupEntry;
 import org.ei.util.GUID;
 
 public class ChimicaCombiner extends Combiner {
@@ -27,6 +28,10 @@ public class ChimicaCombiner extends Combiner {
     private Random rNumbers = new Random();
 
     private static String tablename;
+    /*HT added 09/21/2020 for lookup extraction to ES*/
+    private String action = null;
+    private LookupEntry lookupObj = null;
+    
 
     public static void main(String args[]) throws Exception {
         if (args[0].equalsIgnoreCase("-v")) {
@@ -49,15 +54,41 @@ public class ChimicaCombiner extends Combiner {
             CombinedWriter writer = new CombinedXMLWriter(recsPerfile, loadNumber, "chm");
 
             ChimicaCombiner c = new ChimicaCombiner(writer);
-            if (loadNumber > 3000 || loadNumber < 1000) {
-                c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
-            } else {
-                c.writeCombinedByYear(url, driver, username, password, loadNumber);
+            
+            /*TH added 09/21/2020 for ES lookup generation*/
+            for(String str: args)
+            {
+            	if(str.equalsIgnoreCase("lookup"))
+            		c.setAction("lookup");
+            	System.out.println("Action: lookup");
             }
+            
+            if(c.getAction() == null || c.getAction().isEmpty())
+            {
+            	if (loadNumber > 3000 || loadNumber < 1000) {
+                    c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
+                } else {
+                    c.writeCombinedByYear(url, driver, username, password, loadNumber);
+                }
 
-            System.out.println("completed " + loadNumber);
+                System.out.println("completed " + loadNumber);
+            }
+            else
+            {
+            	System.out.println("Extracting Lookups");
+            	c.writeLookupByWeekNumber(loadNumber);
+            }
+            
         }
 
+    }
+    
+    public void setAction(String str)
+    {
+    	action = str;
+    }
+    public String getAction() {
+    	return action;
     }
 
     public ChimicaCombiner(CombinedWriter writer) {
@@ -251,7 +282,16 @@ public class ChimicaCombiner extends Combiner {
                     rec.put(EVCombinedRec.DOI, rs.getString("doi"));
                 }
 
-                this.writer.writeRec(rec);
+                if(!(getAction().equalsIgnoreCase("lookup")))
+                {
+                	this.writer.writeRec(rec);
+                }
+                /*HT added 09/21/2020 for ES lookup*/
+                else if (getAction() != null && getAction().equalsIgnoreCase("lookup"))
+                {
+                	this.lookupObj.writeLookupRec(rec);
+                }
+                
             }
 
         }
@@ -423,5 +463,11 @@ public class ChimicaCombiner extends Combiner {
         }
 
     }
+
+	@Override
+	public void writeLookupByWeekHook(int weekNumber) throws Exception {
+		System.out.println("Extract Lookup");
+		
+	}
 
 }

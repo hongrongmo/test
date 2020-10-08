@@ -4,9 +4,9 @@ import java.sql.*;
 import java.util.*;
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
+import org.dataloading.sharedsearch.SharedSearchSearchEntry;
 import org.ei.common.CVSTermBuilder;
 import org.ei.common.Constants;
-import org.ei.dataloading.CombinedXMLWriter;
 import org.ei.common.upt.AssigneeFilter;
 import org.ei.dataloading.*;
 import org.ei.dataloading.upt.loadtime.UPTCombiner;
@@ -72,13 +72,20 @@ public class BdCorrection
     private static String fileName; 		//HH added 06/09/2020 for showing in exception message of temp tables cleanup
     private static String propertyFileName;
     
+   
+    /*HT added 09/21/2020 for ES lookup, add BdCorrection constructor to initiat XmlCombiner once instead of being initialized in many individual methods in this class*/
+    private static String tableToBeTruncated = null;
+    private static String fileToBeLoaded   = null;
+    public BdCorrection()
+    {
+    }
     public static void main(String args[])
         throws Exception
     {
         
-        String fileToBeLoaded   = null;
+       
         String input;
-        String tableToBeTruncated = "bd_correction_temp,deleted_lookupIndex,bd_temp_backup";
+        //String tableToBeTruncated = "bd_correction_temp,deleted_lookupIndex,bd_temp_backup";
         int iThisChar; // To read individual chars with System.in.read()
 
         try
@@ -269,101 +276,129 @@ public class BdCorrection
             System.out.println("not enough parameters");
             System.exit(1);
         }
+        
+        /*HT Added 09/21/2020 Move all work below to startCorrection instead*/
+        //tableToBeTruncated = "bd_correction_temp,deleted_lookupIndex,bd_temp_backup";
+        BdCorrection bdc = new BdCorrection();
+        bdc.startCorrection();
+    }
+    
+    /*HT 09/21/2020 moved from main to here for readability*/
+    public void startCorrection()
+    {
+    	CombinedXMLWriter writer = new CombinedXMLWriter(50000,
+                updateNumber,
+                database,
+                "dev");
 
-        midTime = System.currentTimeMillis();
-        endTime = System.currentTimeMillis();
-        System.out.println("Time for finish reading input parameter"+(endTime-startTime)/1000.0+" seconds");
-        System.out.println("total Time used "+(endTime-startTime)/1000.0+" seconds");
-        try
-        {
+    	XmlCombiner xmlcomb = new XmlCombiner(writer,propertyFileName,database);
+    	
+    	 midTime = System.currentTimeMillis();
+         endTime = System.currentTimeMillis();
+         System.out.println("Time for finish reading input parameter"+(endTime-startTime)/1000.0+" seconds");
+         System.out.println("total Time used "+(endTime-startTime)/1000.0+" seconds");
+         try
+         {
 
-            BdCorrection bdc = new BdCorrection();
-            con = bdc.getConnection(url,driver,username,password);
-            if(action!=null && !(action.equals("extractupdate")||action.equals("extractdelete") ||action.equals("lookupIndex")||action.equalsIgnoreCase("extractnumerical")||action.equalsIgnoreCase("extractauthorlookupindex")||action.equalsIgnoreCase("extractcafe")||action.equalsIgnoreCase("extractcafeloadnumber")||action.equalsIgnoreCase("extractcafemapping")||action.equalsIgnoreCase("extractcafedelete")||action.equalsIgnoreCase("extractallupdate")))
-            {
-                /**********delete all data from temp table *************/
+        	String[] tableNames = new String[3];
+          	tableNames[0] = tempTable;
+          	tableNames[1] = "BD_MASTER_ORIG";
+          	tableNames[2] = backupTable;   
+          	
 
-                if(test)
-                {
-                    System.out.println("about to truncate table "+tableToBeTruncated);
-                    System.out.println("press enter to continue");
-                    Thread.currentThread().sleep(500);
-                    System.in.read();
-                    Thread.currentThread().sleep(1000);
-                }
+        	/*HT added 09/21/2020 initialize lookup entry*/
+    		xmlcomb.writeLookupByWeekHook(updateNumber);
+
+          	
+             con = getConnection(url,driver,username,password);
+             if(action!=null && !(action.equalsIgnoreCase("extractupdate")||action.equals("extractdelete") ||action.equalsIgnoreCase("lookupIndex")||action.equalsIgnoreCase("extractnumerical")||action.equalsIgnoreCase("extractauthorlookupindex")||action.equalsIgnoreCase("extractcafe")||action.equalsIgnoreCase("extractcafeloadnumber")||action.equalsIgnoreCase("extractcafemapping")||action.equalsIgnoreCase("extractcafedelete")||action.equalsIgnoreCase("extractallupdate")))
+             {
+                 /**********delete all data from temp table *************/
+
+                 if(test)
+                 {
+                     System.out.println("about to truncate table "+tableToBeTruncated);
+                     System.out.println("press enter to continue");
+                     Thread.currentThread().sleep(500);
+                     System.in.read();
+                     Thread.currentThread().sleep(1000);
+                 }
 
 
-                bdc.cleanUp(tableToBeTruncated);
+                 cleanUp(tableToBeTruncated);
 
-                midTime = endTime;
-                endTime = System.currentTimeMillis();
-                System.out.println("time for truncate table "+(endTime-midTime)/1000.0+" seconds");
-                System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
-                
-                /************** load data into temp table ****************/
+                 midTime = endTime;
+                 endTime = System.currentTimeMillis();
+                 System.out.println("time for truncate table "+(endTime-midTime)/1000.0+" seconds");
+                 System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+                 
+                 /************** load data into temp table ****************/
 
-                if(test)
-                {
-                    System.out.println("about to parse data file "+fileToBeLoaded);
-                    System.out.println("press enter to continue");
-                    System.in.read();
-                    Thread.currentThread().sleep(1000);
-                }
+                 if(test)
+                 {
+                     System.out.println("about to parse data file "+fileToBeLoaded);
+                     System.out.println("press enter to continue");
+                     System.in.read();
+                     Thread.currentThread().sleep(1000);
+                 }
 
-                BaseTableDriver c = new BaseTableDriver(updateNumber,database);
-                if(!action.equalsIgnoreCase("delete"))
-                {
-                	c.setBlockedIssnList(con);
-                }
-                c.writeBaseTableFile(fileToBeLoaded,con);
-                String dataFile=fileToBeLoaded+"."+updateNumber+".out";
-                File f = new File(dataFile);
-                if(!f.exists())
-                {
-                    System.out.println("datafile: "+dataFile+" does not exists");
-                    System.exit(1);
-                }
+                 BaseTableDriver c = new BaseTableDriver(updateNumber,database);
+                 if(!action.equalsIgnoreCase("delete"))
+                 {
+                 	c.setBlockedIssnList(con);
+                 }
+                 c.writeBaseTableFile(fileToBeLoaded,con);
+                 String dataFile=fileToBeLoaded+"."+updateNumber+".out";
+                 File f = new File(dataFile);
+                 if(!f.exists())
+                 {
+                     System.out.println("datafile: "+dataFile+" does not exists");
+                     System.exit(1);
+                 }
 
-                if(test)
-                {
-                    System.out.println("sql loader file "+dataFile+" created;");
-                    System.out.println("about to load data file "+dataFile);
-                    System.out.println("press enter to continue");
-                    System.in.read();
-                    Thread.currentThread().sleep(1000);
-                }
-                Runtime r = Runtime.getRuntime();
+                 if(test)
+                 {
+                     System.out.println("sql loader file "+dataFile+" created;");
+                     System.out.println("about to load data file "+dataFile);
+                     System.out.println("press enter to continue");
+                     System.in.read();
+                     Thread.currentThread().sleep(1000);
+                 }
+				
+				  Runtime r = Runtime.getRuntime();
+				  
+				  Process p = r.exec("./"+sqlldrFileName+" "+dataFile); 
+				  int t = p.waitFor();
+				 
 
-                Process p = r.exec("./"+sqlldrFileName+" "+dataFile);
-                int t = p.waitFor();
+                 int tempTableCount = getTempTableCount();
+                 int tempReferenceTableCount = getTempReferenceTableCount();
+                 System.out.println(tempTableCount+" records was loaded into the temp table");
+                 System.out.println(tempReferenceTableCount+" records was loaded into the reference table");
+                 
+                 midTime = endTime;
+                 endTime = System.currentTimeMillis();
+                 System.out.println("time for loading temp table "+(endTime-midTime)/1000.0+" seconds");
+                 System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+                 
+                 if(tempTableCount>0)
+                 {                 
+                     if(test)
+                     {
+                         System.out.println("begin to update tables");
+                         System.out.println("press enter to continue");
+                         System.in.read();
+                         Thread.currentThread().sleep(1000);
+                     }
+                     runCorrection(dataFile,updateNumber,database,action);
+                 }
+                 else
+                 {
+                     System.out.println("no record was loaded into the temp table");
+                     System.exit(1);
+                 }
 
-                int tempTableCount = bdc.getTempTableCount();
-                int tempReferenceTableCount = bdc.getTempReferenceTableCount();
-                System.out.println(tempTableCount+" records was loaded into the temp table");
-                System.out.println(tempReferenceTableCount+" records was loaded into the reference table");
-                
-                midTime = endTime;
-                endTime = System.currentTimeMillis();
-                System.out.println("time for loading temp table "+(endTime-midTime)/1000.0+" seconds");
-                System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
-                
-                if(tempTableCount>0)
-                {                 
-                    if(test)
-                    {
-                        System.out.println("begin to update tables");
-                        System.out.println("press enter to continue");
-                        System.in.read();
-                        Thread.currentThread().sleep(1000);
-                    }
-                    bdc.runCorrection(dataFile,updateNumber,database,action);
-                }
-                else
-                {
-                    System.out.println("no record was loaded into the temp table");
-                    System.exit(1);
-                }
-
+<<<<<<< HEAD
                 midTime = endTime;
                 endTime = System.currentTimeMillis();
                 System.out.println("time for run correction table "+(endTime-midTime)/1000.0+" seconds");
@@ -403,62 +438,153 @@ public class BdCorrection
                 System.out.println("time for run lookupIndex table "+(endTime-midTime)/1000.0+" seconds");
                 */
                 System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+=======
+                 midTime = endTime;
+                 endTime = System.currentTimeMillis();
+                 System.out.println("time for run correction table "+(endTime-midTime)/1000.0+" seconds");
+                 System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+                 
+                 if(test)
+                 {
+                     System.out.println("finished updating tables");
+                     System.out.println("begin to process lookup index");
+                     System.out.println("press enter to continue");
+                     System.in.read();
+                     Thread.currentThread().sleep(1000);
+                 }
+                 if(action.equalsIgnoreCase("update"))
+                 {
+                 	if(propertyFileName == null)
+                 		processLookupIndex(getLookupData("update"),getLookupData("backup"));			// fast
+                 	
+                 	/*//HT added 09/21/2020 for es*/
+                 	else
+                 	{
+                 		
+                		processESLookupIndex(xmlcomb.getESLookupData(updateNumber,"update", tableNames,con, database),xmlcomb.getESLookupData(updateNumber, "backup", tableNames, con, database));			
+                 		
+                 	}
+                 		
+                 }
+                 else if(action.equalsIgnoreCase("delete"))
+                 {
+                	 if(propertyFileName == null)
+                		 processLookupIndex(new HashMap<String, List<String>>(),getLookupData("backup"));					// fast
+                	 /*//HT added 09/21/2020 for es*/
+                  	else
+                  	{
+                  		
+            			
+                  		processESLookupIndex(new HashMap<String, List<String>>(),xmlcomb.getESLookupData(updateNumber, "backup", tableNames, con, database));			
+                  		
+                  	}
+                 }
+                 else if(action.equalsIgnoreCase("aip"))
+                 {
+                	 if(propertyFileName == null)
+                		 processLookupIndex(getLookupData("aip"),getLookupData("aipBackup"));							//fast
+                	 /*//HT added 09/21/2020 for es*/
+                   	else
+                   	{
+                   		processESLookupIndex(xmlcomb.getESLookupData(updateNumber,"aip", tableNames,con, database),xmlcomb.getESLookupData(updateNumber, "aipBackup", tableNames, con, database));			
+                   		
+                   	}
+                 }
+               
+                 
+                 midTime = endTime;
+                 endTime = System.currentTimeMillis();
+                 System.out.println("time for run lookupIndex table "+(endTime-midTime)/1000.0+" seconds");
+                 System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+>>>>>>> e3f63b0c2a00de7b5c4e3db756e7efc5ebec7208
 
-            }
+             }
 
-            if(action.equalsIgnoreCase("lookupIndex"))
-            {            	              
-                if(test)
-                {
-                    System.out.println("press enter to continue");
-                    System.in.read();
-                    Thread.currentThread().sleep(1000);
-                }
-              
-                bdc.writeIndexOnly(updateNumber,database);
-                
-                System.out.println("************************ "+database+" "+updateNumber+" lookup index is done. **********************");
-                midTime = endTime;
-                endTime = System.currentTimeMillis();
-                System.out.println("time for run lookup index along "+(endTime-midTime)/1000.0+" seconds");
-                System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
-            }
-            else if(action.equalsIgnoreCase("extractupdate")||action.equalsIgnoreCase("extractdelete")||action.equalsIgnoreCase("extractnumerical")||action.equalsIgnoreCase("extractauthorlookupindex")||action.equalsIgnoreCase("extractcafe")||action.equalsIgnoreCase("extractcafeloadnumber")||action.equalsIgnoreCase("extractcafemapping")||action.equalsIgnoreCase("extractcafedelete")||action.equalsIgnoreCase("extractallupdate"))
-            {
+             if(action.equalsIgnoreCase("lookupIndex"))
+             {            	              
+                 if(test)
+                 {
+                     System.out.println("press enter to continue");
+                     System.in.read();
+                     Thread.currentThread().sleep(1000);
+                 }
+               
+                 if(propertyFileName == null)
+                	 writeIndexOnly(updateNumber,database);							//fast
+                 else
+                	 /*HT added 09/21/2020 for ES lookup*/
+                	 writeESIndexOnly(updateNumber,database,xmlcomb);					
+                 
+                 
+                 System.out.println("************************ "+database+" "+updateNumber+" lookup index is done. **********************");
+                 midTime = endTime;
+                 endTime = System.currentTimeMillis();
+                 System.out.println("time for run lookup index along "+(endTime-midTime)/1000.0+" seconds");
+                 System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+             }
+             else if(action.equalsIgnoreCase("extractupdate")||action.equalsIgnoreCase("extractdelete")||action.equalsIgnoreCase("extractnumerical")||action.equalsIgnoreCase("extractauthorlookupindex")||action.equalsIgnoreCase("extractcafe")||action.equalsIgnoreCase("extractcafeloadnumber")||action.equalsIgnoreCase("extractcafemapping")||action.equalsIgnoreCase("extractcafedelete")||action.equalsIgnoreCase("extractallupdate"))
+             {
 
-                bdc.doFastExtract(updateNumber,database,action);
-                System.out.println(database+" "+updateNumber+" fast extract is done.");
-                midTime = endTime;
-                endTime = System.currentTimeMillis();
-                System.out.println("time for run fast extract along "+(endTime-midTime)/1000.0+" seconds");
-                System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
-            }
-            else
-            {
-                System.out.println(database+" "+updateNumber+" correction is done.");
-                System.out.println("Please run this program again with parameter \"extractupdate\" or \"extractdelete\" to get fast extract file");
-            }
+                 doFastExtract(updateNumber,database,action, xmlcomb);
+                 System.out.println(database+" "+updateNumber+" fast extract is done.");
+                 midTime = endTime;
+                 endTime = System.currentTimeMillis();
+                 System.out.println("time for run fast extract along "+(endTime-midTime)/1000.0+" seconds");
+                 System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+             }
+             else
+             {
+                 System.out.println(database+" "+updateNumber+" correction is done.");
+                 System.out.println("Please run this program again with parameter \"extractupdate\" or \"extractdelete\" to get fast extract file");
+             }
 
-        }
-        finally
-        {
-            if (con != null)
-            {
-                try
-                {
-                    con.close();
-                }
-                catch (Exception e)
-                {
-                    e.printStackTrace();
-                }
-            }
-            System.out.println("total process time "+(System.currentTimeMillis()-startTime)/1000.0+" seconds");
-        }
+         }
+         catch(Exception e)
+         {
+        	 System.out.println("Exception starting BD correction?!");
+        	 System.out.println("Reason:- " + e.getMessage());
+        	 e.printStackTrace();
+         }
+         finally
+         {
+             if (con != null)
+             {
+                 try
+                 {
+                     con.close();
+                 }
+                 catch (Exception e)
+                 {
+                     e.printStackTrace();
+                 }
+             }
+             System.out.println("total process time "+(System.currentTimeMillis()-startTime)/1000.0+" seconds");
+         }
 
-        System.exit(1);
+         System.exit(1);
     }
+    /**
+     * 
+     * @author TELEBH
+     * @Date: 09/21/2020 
+     * @Description: Generate Lookups for ES
+     * @throws Exception
+     */
     
+	public void writeESIndexOnly(int updatenumber, String database, XmlCombiner c) throws Exception 
+	{
+		/* TH added 09/21/2020 for ES lookup generation */
+		//CombinedXMLWriter writer = new CombinedXMLWriter(50000, updateNumber, database, "dev");
+		c.setAction("lookup");
+		c.writeLookupByWeekHook(updatenumber);
+		
+		if ((updatenumber > 3000 || updatenumber < 1000) && (updatenumber > 1)) {
+			Combiner.TABLENAME = "BD_MASTER_ORIG";
+			c.writeCombinedByWeekNumber(url, driver, username, password, updatenumber);
+		} 
+	
+	}
+    	
     public void writeIndexOnly(int updatenumber,String database)throws Exception
     {
     	CombinedXMLWriter writer = new CombinedXMLWriter(50000,updatenumber,database);
@@ -857,7 +983,7 @@ public class BdCorrection
 
     }
 
-    private void doFastExtract(int updateNumber,String dbname,String action) throws Exception
+    private void doFastExtract(int updateNumber,String dbname,String action, XmlCombiner c) throws Exception
     {
         CombinedXMLWriter writer = new CombinedXMLWriter(50000,
                                                       updateNumber,
@@ -866,9 +992,13 @@ public class BdCorrection
 
         Statement stmt = null;
         ResultSet rs = null;
-        XmlCombiner c = new XmlCombiner(writer,propertyFileName);
+        //XmlCombiner c = new XmlCombiner(writer,propertyFileName, database);					//HT commented 9/21/2020 since XmlCombiner initialized in startCorrection already
         try
         {
+        	/*HT added 09/21/2020 initialize lookup entry*/
+			c.writeLookupByWeekHook(updateNumber);
+			
+			
         	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             if(action.equalsIgnoreCase("update") || action.equalsIgnoreCase("extractupdate") || action.equalsIgnoreCase("aip") )
             {
@@ -1713,7 +1843,38 @@ public class BdCorrection
             }
         }
     }
+    
+    /*HT added 09/21/2020 for ES Lookup*/
+	private void processESLookupIndex(Map<String, List<String>> update,Map<String, List<String>> backup)
+			throws Exception {
 
+		database = this.database;
+
+		HashMap outputMap = new HashMap();
+
+		Map deletedAuthorLookupIndex = getDeleteData(update, backup, "AUTHOR");
+		Map deletedAffiliationLookupIndex = getDeleteData(update, backup, "AFFILIATION");
+		Map deletedControlltermLookupIndex = getDeleteData(update, backup, "CONTROLLEDTERM");
+		Map deletedPublisherNameLookupIndex = getDeleteData(update, backup, "PUBLISHERNAME");
+		Map deletedSerialtitleLookupIndex = getDeleteData(update, backup, "SERIALTITLE");
+		
+		/*ONLY FOR DEBUGGING, UNCOMMENT IN PROD*/
+		System.out.println("AUTHORTOBEDELETEDLIST: " + deletedAuthorLookupIndex.size());
+		System.out.println("AFFTOBEDELETEDLIST: " + deletedAffiliationLookupIndex.size());
+		System.out.println("CVTOBEDELETEDLIST: " + deletedControlltermLookupIndex.size());
+		System.out.println("PNTOBEDELETEDLIST: " + deletedPublisherNameLookupIndex.size());
+		System.out.println("STTOBEDELETEDLIST: " + deletedSerialtitleLookupIndex.size());
+		
+
+		saveDeletedData("AU", checkES(deletedAuthorLookupIndex, "AU", database), database);
+		saveDeletedData("AF", checkES(deletedAffiliationLookupIndex, "AF", database), database);
+		saveDeletedData("CV", checkES(deletedControlltermLookupIndex, "CV", database), database);
+		saveDeletedData("PN", checkES(deletedPublisherNameLookupIndex, "PN", database), database);
+		saveDeletedData("ST", checkES(deletedSerialtitleLookupIndex, "ST", database), database);
+
+	}
+
+    
     private void processLookupIndex(HashMap update,HashMap backup) throws Exception
     {
 
@@ -1747,7 +1908,18 @@ public class BdCorrection
 
     }
 
-    private List checkFast(HashMap inputMap, String searchField, String database) throws Exception
+    /*ES added 09/21/2020 for ES Lookup*/
+    private List<String> checkES(Map inputMap, String searchField, String database) throws Exception
+    {
+        List<String> outputList = new ArrayList();
+
+        SharedSearchSearchEntry entry = new SharedSearchSearchEntry("https://shared-search-service-api.prod.scopussearch.net/sharedsearch/document/result");
+        outputList = entry.runESLookupCheck(inputMap,searchField,database);
+        return outputList;
+
+    }
+    
+    private List checkFast(Map inputMap, String searchField, String database) throws Exception
     {
     	
     	//HH 02/23/2015 set DataBaseConf.DbCorrFlag for local db connection othertan connectionBroker
@@ -1811,7 +1983,7 @@ public class BdCorrection
 
     }
 
-    private HashMap getDeleteData(HashMap update,HashMap backup,String field)
+    private HashMap getDeleteData(Map update,Map backup,String field)
     {
         List backupList = null;
         List updateList = null;

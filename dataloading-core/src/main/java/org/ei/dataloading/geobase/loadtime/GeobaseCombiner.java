@@ -21,6 +21,7 @@ import org.ei.common.Language;
 import org.ei.dataloading.LoadLookup;
 import org.ei.dataloading.XMLWriterCommon;
 import org.ei.dataloading.georef.loadtime.GeobaseToGeorefMap;
+import org.ei.dataloading.lookup.LookupEntry;
 import org.ei.util.GUID;
 
 public class GeobaseCombiner extends Combiner {
@@ -34,6 +35,10 @@ public class GeobaseCombiner extends Combiner {
     private int exitNumber;
 
     private static String tablename;
+    
+    /*HT added 09/21/2020 for lookup extraction to ES*/
+    private String action = null;
+    private LookupEntry lookupObj = null;
 
     public static void main(String args[]) throws Exception {
         String driver = "oracle.jdbc.driver.OracleDriver";
@@ -55,11 +60,36 @@ public class GeobaseCombiner extends Combiner {
         CombinedWriter writer = new CombinedXMLWriter(recsPerfile, loadNumber, "geo");
 
         GeobaseCombiner c = new GeobaseCombiner(writer);
-        if (loadNumber > 3000 || loadNumber < 1000) {
-            c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
-        } else {
-            c.writeCombinedByYear(url, driver, username, password, loadNumber);
+        
+        /*TH added 09/21/2020 for ES lookup generation*/
+        for(String str: args)
+        {
+        	if(str.equalsIgnoreCase("lookup"))
+        		c.setAction("lookup");
+        	System.out.println("Action: lookup");
         }
+        
+        /*HT added 09/21/2020 if condition on action to consider lookup extraction for ES, otherwise consider it reg. extraction and so embed all looadnumber check inside this global if stmt*/
+        if(c.getAction() == null || c.getAction().isEmpty())
+        {
+        	 if (loadNumber > 3000 || loadNumber < 1000) {
+                 c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
+             } else {
+                 c.writeCombinedByYear(url, driver, username, password, loadNumber);
+             }
+        }
+        else
+        {
+        	System.out.println("Extracting Lookups");
+        	c.writeLookupByWeekNumber(loadNumber);
+        }
+    }
+    public void setAction(String str)
+    {
+    	action = str;
+    }
+    public String getAction() {
+    	return action;
     }
 
     public GeobaseCombiner(CombinedWriter writer) {
@@ -491,7 +521,15 @@ public class GeobaseCombiner extends Combiner {
                     rec.put(EVCombinedRec.PUB_SORT, Integer.toString(i));
 
                     try {
-                        this.writer.writeRec(rec);
+                    	
+                    	if(action != null && !(getAction().equalsIgnoreCase("lookup")))
+                    		this.writer.writeRec(rec);
+                    	/*HT added 09/21/2020 for ES lookup*/
+                    	else if (getAction() != null && getAction().equalsIgnoreCase("lookup"))
+                        {
+                        	this.lookupObj.writeLookupRec(rec);
+                        }
+                    		
                     } catch (Exception e) {
                         System.out.println("MID= " + mid);
                         e.printStackTrace();
@@ -694,4 +732,12 @@ public class GeobaseCombiner extends Combiner {
         return sourceType;
     }
 
+    @Override
+	/*HT added 09/21/2020 wk: [202040] for Lookup extraction for ES*/
+	public void writeLookupByWeekHook(int weekNumber) throws Exception {
+		System.out.println("Extract Lookup");
+		String database =  Combiner.CURRENTDB;
+    	lookupObj = new LookupEntry(database, weekNumber);
+    	lookupObj.init();
+	}
 }

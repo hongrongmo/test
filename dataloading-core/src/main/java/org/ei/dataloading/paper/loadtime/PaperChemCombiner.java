@@ -19,6 +19,7 @@ import org.ei.dataloading.CombinedXMLWriter;
 import org.ei.dataloading.Combiner;
 import org.ei.dataloading.EVCombinedRec;
 import org.ei.dataloading.XMLWriterCommon;
+import org.ei.dataloading.lookup.LookupEntry;
 import org.ei.util.GUID;
 
 public class PaperChemCombiner extends Combiner {
@@ -601,5 +602,11 @@ public class PaperChemCombiner extends Combiner {
         }
         return result;
     }
+    
+    @Override
+   	public void writeLookupByWeekHook(int weekNumber) throws Exception {
+   		System.out.println("Extract Lookup");
+   		String database =  Combiner.CURRENTDB;
+   	}
 
 }

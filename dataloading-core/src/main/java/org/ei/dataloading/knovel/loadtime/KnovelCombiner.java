@@ -21,12 +21,15 @@ import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
 import org.ei.dataloading.*;
 import org.ei.dataloading.georef.loadtime.*;
+import org.ei.dataloading.lookup.LookupEntry;
 import org.ei.common.bd.*;
+import org.ei.common.georef.CitationView;
+import org.ei.common.georef.DocumentView;
+import org.ei.common.georef.DocumentView.DocumentTypeDecorator;
 import org.ei.common.*;
 import org.ei.util.GUID;
 import org.ei.util.StringUtil;
 import org.ei.util.kafka.*;
-import org.ei.dataloading.MessageSender;
 
 
 	public class KnovelCombiner 
@@ -42,6 +45,11 @@ import org.ei.dataloading.MessageSender;
 	    private List auid;
 	    private static String propertyFileName;
 	    private static int loadNumber=0;
+	    
+	    /*HT added 09/21/2020 for lookup extraction to ES*/
+	    private String action = null;
+	    private LookupEntry lookupObj = null;
+	    
 
 	    public static void main(String args[])
 	        throws Exception
@@ -91,30 +99,50 @@ import org.ei.dataloading.MessageSender;
 	        writer.setOperation(operation);
 
 	        KnovelCombiner c = new KnovelCombiner(writer);
-	        if (timestamp==0 && (loadNumber > 3000 || loadNumber < 1000) && (loadNumber >1))
+	        
+	        /*TH added 09/21/2020 for ES lookup generation*/
+	        Combiner.CURRENTDB = dbname;
+	        for(String str: args)
 	        {
-	           c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
+	        	if(str.equalsIgnoreCase("lookup"))
+	        		c.setAction("lookup");
 	        }
-	        else if(timestamp > 0)
-	        {
-	           c.writeCombinedByTimestamp(url, driver, username, password, timestamp);
-	        }
-	        else if(loadNumber == 1)
-	        {
-	        	c.writeCombinedByTable(url, driver, username, password);
-	        }
-	        else if(loadNumber == 0)
-	        {
-	            for(int yearIndex = 1900; yearIndex <= year+1; yearIndex++)
-	            {
-	              c = new KnovelCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,dbname, "dev"));
-	              c.writeCombinedByYear(url, driver, username, password, yearIndex);
-	            }
-	        }
-	        else
-	        {
-	           c.writeCombinedByYear(url, driver, username, password, loadNumber);
-	        }
+	        
+	        /*HT added 09/21/2020 to support ES lookup, will need to run lookup anyway even if action not lookup*/
+       	// if(c.getAction() != null && c.getAction().equalsIgnoreCase("lookup"))
+         	   c.writeLookupByWeekHook(loadNumber);
+       	 
+	        	 if (timestamp==0 && (loadNumber > 3000 || loadNumber < 1000) && (loadNumber >1))
+	 	        {
+	 	           c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
+	 	        }
+	 	        else if(timestamp > 0)
+	 	        {
+	 	           c.writeCombinedByTimestamp(url, driver, username, password, timestamp);
+	 	        }
+	 	        else if(loadNumber == 1)
+	 	        {
+	 	        	c.writeCombinedByTable(url, driver, username, password);
+	 	        }
+	 	        else if(loadNumber == 0)
+	 	        {
+	 	            for(int yearIndex = 1900; yearIndex <= year+1; yearIndex++)
+	 	            {
+	 	              c = new KnovelCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,dbname, "dev"));
+	 	              c.writeCombinedByYear(url, driver, username, password, yearIndex);
+	 	            }
+	 	        }
+	 	        else
+	 	        {
+	 	           c.writeCombinedByYear(url, driver, username, password, loadNumber);
+	 	        }
+	    }
+	    public void setAction(String str)
+	    {
+	    	action = str;
+	    }
+	    public String getAction() {
+	    	return action;
 	    }
 
 	    public KnovelCombiner(CombinedWriter writer)
@@ -280,7 +308,7 @@ import org.ei.dataloading.MessageSender;
 	    	
 	        try
 	        {
-	        	if(this.propertyFileName!=null)
+	        	  if (this.propertyFileName != null && (getAction() == null || !(getAction().equalsIgnoreCase("lookup")))) // HT only create Kafka instance when it is // not lookup extraction
 	        	{
 	        		kafka = new KafkaService(processTime+"_"+Combiner.CURRENTDB+"_"+loadNumber, this.propertyFileName);//use this line for ES extraction
 	        	}
@@ -463,10 +491,14 @@ import org.ei.dataloading.MessageSender;
 		                
 		            recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
 		            
-		            if(this.propertyFileName==null)
+		            if (this.propertyFileName == null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup"))))
 		            {
 		            	this.writer.writeRec(recArray);//use this line for fast extraction
-		          
+		            }
+		            /*HT added 09/21/2020 for ES lookup*/
+		            else if (getAction() != null && getAction().equalsIgnoreCase("lookup"))
+		            {
+		            	this.lookupObj.writeLookupRecs(recArray);
 		            }
 		            else
 		            {
@@ -478,6 +510,7 @@ import org.ei.dataloading.MessageSender;
 			            //use this block of code for sending data to kafka
 			            
 			            this.writer.writeRec(recArray,kafka, batchData, missedData);
+			            this.lookupObj.writeLookupRec(rec);						//HT added later for weekly lookup extraction for ES
 			            if(counter<batchSize)
 			            {            	
 			            	counter++;
@@ -513,7 +546,7 @@ import org.ei.dataloading.MessageSender;
 	     	    	System.out.println("**Got "+i+" records instead of "+totalCount );
 	     	    }
 	        	
-	        	if(this.propertyFileName!=null)
+	        	if (this.propertyFileName != null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup")))) 
 	        	{
 		        	try
 		        	{
@@ -716,5 +749,174 @@ import org.ei.dataloading.MessageSender;
 	        }
 
 	    }
+	    /*HT added 09/21/2020 to support ES lookup*/
+	    @Override
+		public void writeLookupByWeekHook(int weekNumber) throws Exception {
+			System.out.println("Extract Lookup");
+			String database =  Combiner.CURRENTDB;
+			lookupObj = new LookupEntry(database, weekNumber);
+	    	lookupObj.init();
+			
+		}
+	    
+	    /*HT added 09/21/2020, Get Lookup list from temp tables based on correction action, this method to support bdCorrectio, not for ES lookup extraction*/
+	    public Map<String, List<String>> getESLookupData(int weekNumber, String actionType, String tableName,
+				Connection sqlcon, String database) throws Exception {
+		Statement stmt = null;
+		ResultSet rs = null;
+		Map<String, List<String>> results = null;
+		  
+		  try { 
+				
+		  Connection con = sqlcon;
+		  stmt = con.createStatement();
+			System.out.println("Running the query...");
+			String sqlString=null;
+			if(database.equalsIgnoreCase("knc") ||database.equalsIgnoreCase("kna")  && (actionType.equalsIgnoreCase("update")
+					|| actionType.equalsIgnoreCase("backup")))
+			{
+				if(tableName !=null)
+					sqlString = "select * from " + tableName;
+				
+				System.out.println("Processing "+sqlString);
+				rs = stmt.executeQuery(sqlString);
+				results = prepareLookupRecs(rs);
+			}
 
+		}
+		catch(Exception e)
+		{
+			System.out.println("Exception on GeoRefCorrection.getLookupData "+e.getMessage());
+			e.printStackTrace();
+		}
+		finally
+		{
+
+			if (rs != null)
+			{
+				try
+				{
+					rs.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+
+			if (stmt != null)
+			{
+				try
+				{
+					stmt.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+      }
+
+      return results;
+		  }
+
+		// HT added 09/21/2020 for ES lookup
+		public Map<String, List<String>> prepareLookupRecs(ResultSet rs) throws Exception {
+
+			EVCombinedRec[] recArray = null;
+			String accessNumber = "";
+
+			Map<String, List<String>> recs = new HashMap<>();
+			List<String> authorList = new ArrayList<>();
+			List<String> affiliationList = new ArrayList<>();
+			List<String> serialTitleList = new ArrayList<>();
+			List<String> controltermList = new ArrayList<>();
+			List<String> publishernameList = new ArrayList<>();
+			List<String> ipcList = new ArrayList<>();
+
+			try {
+				while (rs.next()) {
+					try {
+
+						Vector<EVCombinedRec> recVector = new Vector<>();
+
+				        	  EVCombinedRec rec = new EVCombinedRec();
+
+				                
+				                accessNumber = rs.getString("ACCESSNUMBER");
+				                if (rs.getString("PUBLISH_DATE")!=null)
+				                {		                		                    
+				                    //M_ID
+				                    rec.put(EVCombinedRec.DOCID, rs.getString("M_ID"));
+				                    
+				                    //DATABASE
+				                    rec.put(EVCombinedRec.DATABASE, rs.getString("DATABASE"));
+				                    
+				                    //ACCESSNUMBER
+				                    
+				                    rec.put(EVCombinedRec.ACCESSION_NUMBER, rs.getString("ACCESSNUMBER"));
+
+				                    //PUI
+				                    if(rs.getString("OAI") != null)
+				                    {
+				                        rec.put(EVCombinedRec.PUI,rs.getString("OAI"));
+				                    }                 
+				                    //AUTHOR
+				                    if(rs.getString("AUTHOR") != null && rs.getString("AUTHOR").trim().length()>0)
+				                    {
+				                        String authorString = rs.getString("AUTHOR");	             	                       
+				                        rec.put(EVCombinedRec.AUTHOR, prepareAuthor(authorString));
+				                    }
+				                    
+				                    //AFFILIATION
+			                        String affiliation = null;
+			                        if (rs.getString("AFFILIATION") != null && rs.getString("AFFILIATION").trim().length()>0)
+			                        {
+			                            affiliation = rs.getString("AFFILIATION");                            
+			                            rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareAuthor(affiliation));
+			                        }	                   
+				                  
+				                    //PUBLISHER
+			                        if (rs.getString("PUBLISHER") != null)
+				                    {
+				                        rec.put(EVCombinedRec.PUBLISHER_NAME, rs.getString("PUBLISHER"));
+				                    }
+ 
+			                        //JOURNAL_NAME
+				                    if (rs.getString("JOURNAL_NAME") != null)
+				                    {
+				                    	//System.out.println("JOURNAL_NAME="+rs.getString("JOURNAL_NAME"));
+				                        rec.put(EVCombinedRec.SERIAL_TITLE, rs.getString("JOURNAL_NAME"));
+				                    }							                  
+				                    rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("LOADNUMBER"));
+				                    recVector.add(rec);	                  	                 	                     	                	                
+				            }
+				            else
+				            {
+				            	System.out.println("Problem with publication_date, accessnumber="+accessNumber);
+				            }				               				            				                
+				            recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
+				            this.lookupObj.setLookupRecs(recArray, authorList, affiliationList, serialTitleList, controltermList, publishernameList, ipcList);
+					}
+					catch (Exception e) {
+						System.out.println("**** ERROR Found on preparinglookuprec for access number " + accessNumber + " *****");
+						System.out.println(e.getMessage());
+						e.printStackTrace();
+					}
+
+				           
+				} // while
+
+				recs.put("AUTHOR", authorList);
+				recs.put("AFFILIATION", affiliationList);
+				recs.put("CONTROLLEDTERM", controltermList);
+				recs.put("PUBLISHERNAME", publishernameList);
+				recs.put("SERIALTITLE", serialTitleList);
+			} catch (Exception e) {
+				System.out.println("Exception on GeoRefCorrection.setGRFRecs " + e.getMessage());
+				e.printStackTrace();
+			}
+
+			return recs;
+		}
 	}

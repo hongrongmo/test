@@ -26,6 +26,7 @@ import java.sql.SQLSyntaxErrorException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -70,6 +71,7 @@ public class SharedSearchSearchEntry {
 	
 	public static void main(String[] args)
 	{
+		System.out.println("args length: " + args.length);
 		if(args.length <12)
 		{
 			System.out.println("Not enough arguments!!! Re-try with searchField and db parameters");
@@ -146,7 +148,7 @@ public class SharedSearchSearchEntry {
 			else
 					entry.startFacetProcess();
 		else
-			entry.startProcess();    //for standalone processing ONLY
+			entry.startProcess();    //for standalone processing ONLY, when needed to read AUIDS list from file and for each ID check ES
 		
 		/* QA query for batchinfo and processInfo*/
 		//entry.startQAProcess();
@@ -175,34 +177,32 @@ public class SharedSearchSearchEntry {
 		this.midReturn = midReturn;
 	}
 	
+	/*to support lookup check*/
+	public SharedSearchSearchEntry(String sharedSearchURL ) {
+		
+		sharedSearchurl = sharedSearchURL;
+		logger = Logger.getLogger(SharedSearchSearchEntry.class);
+	}
+
 	
 	/*if searching composit Facet*/
 	
 	public void startFacetProcess() {
-		
-		
-		
+
 		long startTime = System.currentTimeMillis();
 		long finishTime = System.currentTimeMillis();
 		String after = "0";
 		logger = Logger.getLogger(SharedSearchSearchEntry.class);
 			
+		//0. Since final contents will be sent as SNS message anyway, so no point to load data to oracle
 		 
-		try
-		{
-			 // creating database connection
-			  init(); 
-			  //cleanup data to temp table 
-			  cleanUpTempTables();
-			  // verify the table is physically truncated
-			  getTempTableCount();
-		}
-		catch(Exception ex)
-		{
-			logger.error("Oracle connection or Cleaning temp tables Exception occurred, exit!!");
-			logger.error(ex.getMessage());
-			//System.exit(1);			//UnComment in PROD
-		}
+		/*
+		 * try { // creating database connection init(); //cleanup data to temp table
+		 * cleanUpTempTables(); // verify the table is physically truncated
+		 * getTempTableCount(); } catch(Exception ex) { logger.
+		 * error("Oracle connection or Cleaning temp tables Exception occurred, exit!!"
+		 * ); logger.error(ex.getMessage()); //System.exit(1); //UnComment in PROD }
+		 */
 		  
 		getFacetField();
 		for(String prefix: idPrefixSet)
@@ -232,7 +232,7 @@ public class SharedSearchSearchEntry {
 				 /*** ONLY TEMP COMMENTED for local testing, NEED TO UNCOMMENT IN PROD **/
 				 
 				 // load data to table(s) 
-				  loadData(0);
+				 // loadData(0);  ONLY when need to load data to oracle, when section 0 above uncommented 
 				 
 				 
 				 /*Find physical hit count by running search for each individual batchInfo, after discussion with team we can't count on count info in processInfo as it is static count and would change for later updates/deletes
@@ -249,7 +249,7 @@ public class SharedSearchSearchEntry {
 
 					System.out.println("Total Time to fetch all : " + searchField + " "
 							+ Long.valueOf((finishTime - startTime) / 1000) + " seconds");
-					loadData(1);
+					//loadData(1);				ONLY when need to load data to oracle, when section 0 above uncommented 
 
 				} 
 			}
@@ -268,6 +268,9 @@ public class SharedSearchSearchEntry {
 			/* reset counter*/
 			counter = 0;
 		}
+		// send SNS message with final contents
+		new PublishSNS(searchField, searchValue, facetField, outFileName)
+		.dispatchMessage();
 	}
 	
 	public void startAuAfFacetProcess()
@@ -358,8 +361,8 @@ public class SharedSearchSearchEntry {
 	{
 		SearchFields fields = new SearchFields();
 
-		searchField = fields.getSearchField(searchField);
-		facetField = fields.getFacetField(facetField);
+		searchField = fields.getSearchField(searchField.toLowerCase());
+		facetField = fields.getFacetField(facetField.toLowerCase());
 		
 		idPrefixSet = new LinkedHashSet<>();
 		
@@ -377,29 +380,21 @@ public class SharedSearchSearchEntry {
 		String queryString = null;
 		
 		/* Pulling auid and afid*/
-		if(facetField.equalsIgnoreCase("authorId") || facetField.equalsIgnoreCase("affiliationId"))
+		if(facetField != null && (facetField.equalsIgnoreCase("authorId") || facetField.equalsIgnoreCase("affiliationId")))
 			queryString = "database:" + database + " AND " + searchField + ":" + prefix + "*";
 		/*Pulling batchInfo for time-range using updateTime*/
-		else if (searchValue.contains("-") && searchValue.toLowerCase().contains("to") &&  isValidDate(searchValue))
-			queryString = "database:" + database + " AND " + searchField + ":" + searchValue;
+		else if (searchField.equalsIgnoreCase("updatetime") && searchValue.contains("-") && searchValue.toLowerCase().contains("to") &&  isValidDate(searchValue))
+			queryString = searchField + ":" + searchValue;
 		/* get facet count based on any other field search, i.e. loadNumber: 202037, though in such case need to exclude database */
 		else
 			queryString = searchField + ":" + searchValue;
 		return queryString;
 	}
 	
-	/* iterative call, can be updated for recusrive*/
+	/* support Facet search*/
 	public void runProcess(String after, SharedSearchSearch sharedSearch, BufferedWriter bw, String queryString, String prefix)
 	{
-		/* base case*/
-		/*
-		 * if(after == null || after.isEmpty() || after.equalsIgnoreCase(prev)) return;
-		 * /*
-		 * if(after != null && !after.isEmpty())
-				runProcess(after, prev, sharedSearch, bw);
-		 * else return;
-		 */
-
+		
 			while(after != null && !(after.isBlank()))
 			{
 				logger.info(++counter);
@@ -450,6 +445,46 @@ public class SharedSearchSearchEntry {
 			ex.printStackTrace();
 		}
 	}
+	
+	/* To support BD Correction Lookup hitcount check so can filter the ones to be deleted */
+	public List<String> runESLookupCheck(Map<String, String>LookupMap, String lookupField, String database)
+	{
+		String lookupESQuery = null;
+
+		  List<String> outputList = new ArrayList<>();
+		try
+		{
+			SharedSearchSearch sharedSearch = new SharedSearchSearch(sharedSearchurl, logger);
+			SearchFields fields = new SearchFields();
+
+			String esSearchField = fields.getSearchField(lookupField.toLowerCase());
+
+			for (String lookupItem : LookupMap.keySet()) 
+			{
+				lookupESQuery = sharedSearch.buildLookupESQuery(esSearchField + ":" + "\"" + lookupItem + "\" database:" + database); 
+				//System.out.println(lookupESQuery);			// only for local debugging
+				String esHitCount = sharedSearch.runESQuery(lookupItem, lookupESQuery, null, "");
+				String indexCount = String.valueOf(LookupMap.get(lookupItem));
+				if (indexCount != null && indexCount != ""
+						&& Integer.parseInt(indexCount) >= Integer.parseInt(esHitCount)) {
+					outputList.add(lookupItem);
+				}
+				else
+				{
+					System.out.println(lookupItem + " db count < esHitCount, so no action " + indexCount + " < " + esHitCount);
+				}
+			}
+		}
+		catch(Exception e)
+		{
+			System.out.println("Exception to run sharedSearch for ES Lookup check of hitcount to identify lookups to be deleted!!!!");
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+		
+			return outputList;
+	}
+	
 	
 	/* Check data format range for QA */
 	//parse updateTime range for limiting batchinfo to this specified time Range
@@ -663,11 +698,10 @@ public class SharedSearchSearchEntry {
 			System.out.println("Total Time to fetch all : " + searchField + " "
 					+ Long.valueOf((finishTime - startTime) / 1000) + " seconds");
 
-			// creating database connection
-			init();
-			// cleanup data to temp table
-			cleanUpTempTables();
-			loadData(0);
+			/*
+			 * // creating database connection init(); // cleanup data to temp table
+			 * cleanUpTempTables(); loadData(0);
+			 */
 
 		} catch (IOException ex) {
 			System.out.println("Exception reading from file!!!!");

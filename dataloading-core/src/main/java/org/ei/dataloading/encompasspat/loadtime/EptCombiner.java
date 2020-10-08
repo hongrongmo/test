@@ -17,7 +17,7 @@ import org.ei.dataloading.*;
 import org.ei.util.StringUtil;
 import org.ei.common.*;
 import org.ei.util.kafka.*;
-import org.ei.dataloading.MessageSender;
+import org.ei.dataloading.lookup.LookupEntry;
 
 
 
@@ -27,6 +27,11 @@ public class EptCombiner extends Combiner {
     private static String propertyFileName;
 	private static int loadNumber = 0;
 	
+	  /*HT added 09/21/2020 for lookup extraction to ES*/
+    private String action = null;
+    private LookupEntry lookupObj = null;
+    
+    
     public EptCombiner(CombinedWriter writer) {
         super(writer);
     }
@@ -290,7 +295,7 @@ public class EptCombiner extends Combiner {
         try
         {
         	totalCount = getResultSetSize(rs); 
-        	if(this.propertyFileName!=null)
+        	if (this.propertyFileName != null && (getAction() == null || !(getAction().equalsIgnoreCase("lookup")))) // HT only create Kafka instance when it is // not lookup extraction
         	{
         		kafka = new KafkaService(processTime+"_ept_"+loadNumber, this.propertyFileName);
         	}
@@ -423,9 +428,13 @@ public class EptCombiner extends Combiner {
 	
 	                rec.put(rec.DESIGNATED_STATES, prepareMulti(rs.getString("ds")));
 	
-	                if(this.propertyFileName==null)
+	                if (this.propertyFileName == null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup"))))
 	                {
 	                	this.writer.writeRec(rec);//use this line for FAST extraction
+	                }
+	                else if (getAction() != null && getAction().equalsIgnoreCase("lookup"))
+	                {
+	                	this.lookupObj.writeLookupRec(rec);
 	                }
 	                else
 	                {
@@ -435,6 +444,7 @@ public class EptCombiner extends Combiner {
 		    	        //this.writer.writeRec(recArray,kafka);
 		    	        /*********************************************************/
 		                this.writer.writeRec(rec,kafka, batchData, missedData);
+		                this.lookupObj.writeLookupRec(rec);						//HT added later for weekly lookup extraction for ES
 		                if(counter<batchSize)
 		                {            	
 		                	counter++;
@@ -459,7 +469,7 @@ public class EptCombiner extends Combiner {
         }
         finally
         {
-        	if(this.propertyFileName!=null)
+        	if(this.propertyFileName != null && (getAction() != null && !(getAction().equalsIgnoreCase("lookup")))) 
         	{
 	        	try
 	        	{
@@ -820,12 +830,32 @@ public class EptCombiner extends Combiner {
         CombinedWriter writer = new CombinedXMLWriter(recsPerbatch, loadNumber, "ept");
         writer.setOperation(operation);
         EptCombiner c = new EptCombiner(writer);
-
-        // extract the whole thing
-        if(loadNumber == 0)
+        
+        /*TH added 09/21/2020 for ES lookup generation*/
+  	  Combiner.CURRENTDB = "ept";
+        for(String str: args)
         {
-            for(int yearIndex = 1919; yearIndex <= 2012; yearIndex++)
+        	if(str.equalsIgnoreCase("lookup"))
+        		c.setAction("lookup");
+        }
+
+        /*HT added 09/21/2020 to support ES lookup, will need to run lookup anyway even if action not lookup*/
+    	 //if(c.getAction() != null && c.getAction().equalsIgnoreCase("lookup"))
+      	   c.writeLookupByWeekHook(loadNumber);
+        	  // extract the whole thing
+            if(loadNumber == 0)
             {
+                for(int yearIndex = 1919; yearIndex <= 2012; yearIndex++)
+                {
+                    System.out.println("Processing year " + yearIndex + "...");
+                    c = new EptCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,"ept", environment));
+                    c.writeCombinedByYear(url,
+                                    driver,
+                                    username,
+                                    password,
+                                    yearIndex);
+                }
+                int yearIndex=9999;
                 System.out.println("Processing year " + yearIndex + "...");
                 c = new EptCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,"ept", environment));
                 c.writeCombinedByYear(url,
@@ -834,36 +864,34 @@ public class EptCombiner extends Combiner {
                                 password,
                                 yearIndex);
             }
-            int yearIndex=9999;
-            System.out.println("Processing year " + yearIndex + "...");
-            c = new EptCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,"ept", environment));
-            c.writeCombinedByYear(url,
-                            driver,
-                            username,
-                            password,
-                            yearIndex);
-        }
-        else if(loadNumber==2 && args.length>9)
-        {
-             System.out.println("AccessNumber=" + args[9]);
-             c.writeSingleTestRecord(url, driver, username, password, args[9]);
-        }
-        else if(loadNumber==1)
-        { 
-        	System.out.println("extracting the whole table");
-             c.writeCombinedByTable(url, driver, username, password);
-        }
-        else if (loadNumber > 3000 || loadNumber < 1000) {
-            c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
-        }      
-        else
-        {
-            c.writeCombinedByYear(url, driver, username, password, loadNumber);
-        }
-        
-        
+            else if(loadNumber==2 && args.length>9)
+            {
+                 System.out.println("AccessNumber=" + args[9]);
+                 c.writeSingleTestRecord(url, driver, username, password, args[9]);
+            }
+            else if(loadNumber==1)
+            { 
+            	System.out.println("extracting the whole table");
+                 c.writeCombinedByTable(url, driver, username, password);
+            }
+            else if (loadNumber > 3000 || loadNumber < 1000) {
+                c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
+            }      
+            else
+            {
+                c.writeCombinedByYear(url, driver, username, password, loadNumber);
+            }
 
     }
+    public void setAction(String str)
+    {
+    	action = str;
+    }
+    public String getAction() {
+    	return action;
+    }
+
+    
     //  11/29/07 TS by new specs this method is taken from UPO combiner to sync format
     // modification of method signature - param and return value from String[] modifyed to String
     public String removeSpaces(String code)
@@ -930,4 +958,13 @@ public class EptCombiner extends Combiner {
         return lang;
 
     }
+    
+    @Override
+	public void writeLookupByWeekHook(int weekNumber) throws Exception {
+		System.out.println("Extract Lookup");
+		String database =  Combiner.CURRENTDB;
+		lookupObj = new LookupEntry(database, weekNumber);
+    	lookupObj.init();
+		
+	}
 }

@@ -654,4 +654,10 @@ public class CompendexCombiner extends CombinerTimestamp {
 
     }
 
+	@Override
+	public void writeLookupByWeekHook(int weekNumber) throws Exception {
+		System.out.println("Extract Lookup");
+		
+	}
+
 }
