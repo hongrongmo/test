@@ -186,7 +186,7 @@ public class CombinedXMLWriter
         this.lasteid = null;
         this.environment = env;
         //if(numberID != 0) //removed by hmo at 10/15/2016
-            init();
+           // init();							//HH commented 10/07/2020 as Fast no longer in use
     }
 
     public CombinedXMLWriter(int recsPerbatch,
@@ -203,7 +203,7 @@ public class CombinedXMLWriter
         this.recsPerbatch = recsPerbatch;
         this.lasteid = null;
         //if(numberID != 0) //why loadnumber can't be 0? modified by hmo in10/15/2016
-            init();
+            //init();							//HH commented 10/07/2020 as Fast no longer in use
     }
 
     public void init()

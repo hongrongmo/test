@@ -9,6 +9,7 @@ import java.sql.*;
 import java.util.*;
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
+import org.dataloading.sharedsearch.SharedSearchSearchEntry;
 import org.ei.dataloading.*;
 import org.ei.dataloading.bd.loadtime.*;
 import org.ei.domain.*;
@@ -50,14 +51,14 @@ public class INSCorrection
     private static int updateNumber= 0;
     String [] ipccode = null;
 
+    /*HT added 09/21/2020 for ES lookup, add BdCorrection constructor to initiat XmlCombiner once instead of being initialized in many individual methods in this class*/
+    private static String tableToBeTruncated = "ins_correction_temp,deleted_lookupIndex,ins_temp_backup,numericalTable";
+    private static String fileToBeLoaded   = null;
     public static void main(String args[])
         throws Exception
-    {
-        long startTime = System.currentTimeMillis();
-        String fileToBeLoaded   = null;
-        
+    {   
         String input;
-        String tableToBeTruncated = "ins_correction_temp,deleted_lookupIndex,ins_temp_backup,numericalTable";
+        
         int iThisChar; // To read individual chars with System.in.read()
 
         try
@@ -202,151 +203,191 @@ public class INSCorrection
             System.exit(1);
         }
 
+        /*HT Added 09/21/2020 Move all work below to startCorrection instead*/
+        INSCorrection bdc = new INSCorrection();
+        bdc.startCorrection();
 
-        try
-        {
+       
+    }
 
-            INSCorrection bdc = new INSCorrection();
-            con = bdc.getConnection(url,driver,username,password);
-            if(action!=null && !(action.equals("extractupdate")||action.equals("extractdelete")||action.equals("lookupindex")||action.equalsIgnoreCase("extractnumerical")))
-            {
-                /**********delete all data from temp table *************/
+    /*HT 09/21/2020 moved from main to here for readability*/
+    public void startCorrection()
+    {
+    	 long startTime = System.currentTimeMillis();
+    	 CombinedXMLWriter writer = new CombinedXMLWriter(50000,
+                 updateNumber,
+                 database,
+                 "dev");
 
-                if(test)
-                {
-                    System.out.println("about to truncate table "+tableToBeTruncated);
-                    System.out.println("press enter to continue");
-                    Thread.currentThread().sleep(500);
-                    System.in.read();
-                    Thread.currentThread().sleep(1000);
-                }
+     	INSPECCombiner inscomb = new INSPECCombiner(writer,propertyFileName,database);
+     	
+    	 try
+         { 
+    		 /*HT added 09/21/2020 initialize lookup entry*/
+    		 inscomb.writeLookupByWeekHook(updateNumber);
+     		
+             con = getConnection(url,driver,username,password);
+             if(action!=null && !(action.equals("extractupdate")||action.equals("extractdelete")||action.equals("lookupindex")||action.equalsIgnoreCase("extractnumerical")))
+             {
+                 /**********delete all data from temp table *************/
 
-                bdc.cleanUp(tableToBeTruncated);
+                 if(test)
+                 {
+                     System.out.println("about to truncate table "+tableToBeTruncated);
+                     System.out.println("press enter to continue");
+                     Thread.currentThread().sleep(500);
+                     System.in.read();
+                     Thread.currentThread().sleep(1000);
+                 }
 
-                /************** load data into temp table ****************/
+                 cleanUp(tableToBeTruncated);
 
-                if(test)
-                {
-                    System.out.println("about to parse data file "+fileToBeLoaded);
-                    System.out.println("press enter to continue");
-                    System.in.read();
-                    Thread.currentThread().sleep(1000);
-                }
+                 /************** load data into temp table ****************/
 
-                InspecBaseTableDriver c = new InspecBaseTableDriver(updateNumber);
-                //c.writeBaseTableFile(fileToBeLoaded,"XML");
-                
-                c.writeBaseTableFile(fileToBeLoaded);
-                String dataFile=fileToBeLoaded+".out";
-                List dataFileList = new ArrayList();
-                int i=0;
-                while(true)
-                {
-                    i++;
-                    String datafile=dataFile+"."+i;
-                    File f = new File(datafile);
-                    if(!f.exists())
-                    {
-                        if(i<1)
-                        {
-                            System.exit(1);
-                        }
-                        else
-                        {
-                            break;
-                        }
-                    }
-                    //System.out.println("DATAFILE FOUND: "+datafile);
-                    dataFileList.add(datafile);
+                 if(test)
+                 {
+                     System.out.println("about to parse data file "+fileToBeLoaded);
+                     System.out.println("press enter to continue");
+                     System.in.read();
+                     Thread.currentThread().sleep(1000);
+                 }
 
-                }
+                 InspecBaseTableDriver c = new InspecBaseTableDriver(updateNumber);
+                 //c.writeBaseTableFile(fileToBeLoaded,"XML");
+                 
+                 c.writeBaseTableFile(fileToBeLoaded);
+                 String dataFile=fileToBeLoaded+".out";
+                 List dataFileList = new ArrayList();
+                 int i=0;
+                 while(true)
+                 {
+                     i++;
+                     String datafile=dataFile+"."+i;
+                     File f = new File(datafile);
+                     if(!f.exists())
+                     {
+                         if(i<1)
+                         {
+                             System.exit(1);
+                         }
+                         else
+                         {
+                             break;
+                         }
+                     }
+                     //System.out.println("DATAFILE FOUND: "+datafile);
+                     dataFileList.add(datafile);
 
-                if(test)
-                {
-                    System.out.println("sql loader file "+dataFile+" created;");
-                    System.out.println("about to load data file "+dataFile);
-                    System.out.println("press enter to continue");
-                    System.in.read();
-                    Thread.currentThread().sleep(1000);
-                }
-                Runtime r = Runtime.getRuntime();
+                 }
 
-                for(int j=0;j<dataFileList.size();j++)
-                {
-                    String dFile = (String)dataFileList.get(j);
-                    String name = dFile;
-                    if(dFile.indexOf("/")>-1)
-                    {	                    
-	        			int pathSeperator = name.lastIndexOf("/");        			
-	        			name=name.substring(pathSeperator+1);
-                    }
-        			
-        			
-                    Process p = r.exec("./"+sqlldrFileName+" "+name);
-                    System.out.println("Loading File "+name);
-                    int t = p.waitFor();
-                    //break;
-                }
+                 if(test)
+                 {
+                     System.out.println("sql loader file "+dataFile+" created;");
+                     System.out.println("about to load data file "+dataFile);
+                     System.out.println("press enter to continue");
+                     System.in.read();
+                     Thread.currentThread().sleep(1000);
+                 }
+                 Runtime r = Runtime.getRuntime();
 
-                int tempTableCount = bdc.getTempTableCount();
-                if(tempTableCount>0)
-                {
-                    System.out.println(tempTableCount+" records was loaded into the temp table");
-                    if(test)
-                    {
-                        System.out.println("begin to update tables");
-                        System.out.println("press enter to continue");
-                        System.in.read();
-                        Thread.currentThread().sleep(1000);
-                    }
-                    bdc.runCorrection(dataFile,updateNumber,database,action);
-                }
-                else
-                {
-                    System.out.println("no record was loaded into the temp table");
-                    System.exit(1);
-                }
+                 for(int j=0;j<dataFileList.size();j++)
+                 {
+                     String dFile = (String)dataFileList.get(j);
+                     String name = dFile;
+                     if(dFile.indexOf("/")>-1)
+                     {	                    
+ 	        			int pathSeperator = name.lastIndexOf("/");        			
+ 	        			name=name.substring(pathSeperator+1);
+                     }
+         			
+         			
+                     Process p = r.exec("./"+sqlldrFileName+" "+name);
+                     System.out.println("Loading File "+name);
+                     int t = p.waitFor();
+                     //break;
+                 }
 
-                if(test)
-                {
-                    System.out.println("finished updating tables");
-                    System.out.println("begin to process lookup index");
-                    System.out.println("press enter to continue");
-                    System.in.read();
-                    Thread.currentThread().sleep(1000);
-                }
-                
-                if(action.equalsIgnoreCase("update"))
-                {
-                    bdc.processLookupIndex(bdc.getLookupData("update",updateNumber),bdc.getLookupData("backup",updateNumber));
-                }
-                else if(action.equalsIgnoreCase("delete"))
-                {
+                 int tempTableCount = getTempTableCount();
+                 if(tempTableCount>0)
+                 {
+                     System.out.println(tempTableCount+" records was loaded into the temp table");
+                     if(test)
+                     {
+                         System.out.println("begin to update tables");
+                         System.out.println("press enter to continue");
+                         System.in.read();
+                         Thread.currentThread().sleep(1000);
+                     }
+                     runCorrection(dataFile,updateNumber,database,action);
+                 }
+                 else
+                 {
+                     System.out.println("no record was loaded into the temp table");
+                     System.exit(1);
+                 }
 
-                    bdc.processLookupIndex(new HashMap(),bdc.getLookupData("backup",updateNumber));
-                }
-                else if(action.equalsIgnoreCase("ins"))
-                {
-                    bdc.processLookupIndex(bdc.getLookupData("ins",updateNumber),bdc.getLookupData("insBackup",updateNumber));
-                }
-            }
-            /*Hanan: this is only to generate Fast Extract Files of the
-             records that marked as deleted in case the action is "delete"
+                 if(test)
+                 {
+                     System.out.println("finished updating tables");
+                     System.out.println("begin to process lookup index");
+                     System.out.println("press enter to continue");
+                     System.in.read();
+                     Thread.currentThread().sleep(1000);
+                 }
+                 if(action.equalsIgnoreCase("update"))
+                 {
+                	 if(propertyFileName == null)
+                		 processLookupIndex(getLookupData("update",updateNumber),getLookupData("backup",updateNumber));			//fast
+                	 /*HT added 09/21/2020 for es*/
+                  	else
+                  	{
+                  		
+                 		processESLookupIndex(inscomb.getESLookupData(updateNumber,"update", tempTable, con, database),inscomb.getESLookupData(updateNumber, "backup", backupTable, con, database));			
+                  		
+                  	}
+                 }
+                 else if(action.equalsIgnoreCase("delete"))
+                 {
 
-             since it is testing approach so may i do not need to generate extract files to fast
-            Note: when send extracted files to fast, only fast that do deletion,
-            but we still keep these marked records for delete in oracle table, not deleted at this point
-            */
+                	 if(propertyFileName == null)
+                		 processLookupIndex(new HashMap(),getLookupData("backup",updateNumber));			//fast
+                	 /*HT added 09/21/2020 for es*/
+                	 else
+                  		processESLookupIndex(new HashMap(),inscomb.getESLookupData(updateNumber, "backup", backupTable, con, database));
+                 }
+                 else if(action.equalsIgnoreCase("ins"))
+                 {
+                	 if(propertyFileName == null)
+                		 processLookupIndex(getLookupData("ins",updateNumber),getLookupData("insBackup",updateNumber));			//fast
+                	 /*HT added 09/21/2020 for es*/
+                	 else
+                  		processESLookupIndex(inscomb.getESLookupData(updateNumber, "ins", "ins_master_orig", con, database), inscomb.getESLookupData(updateNumber, "insBackup", "ins_master_orig", con, database));
+                 }
+             }
+             /*Hanan: this is only to generate Fast Extract Files of the
+              records that marked as deleted in case the action is "delete"
 
-            if(action.equalsIgnoreCase("lookupIndex"))
-            {
-                bdc.outputLookupIndex(bdc.getLookupData("lookupIndex",updateNumber),updateNumber);
-                System.out.println(database+" "+updateNumber+" lookup index is done.");
-            }
+              since it is testing approach so may i do not need to generate extract files to fast
+             Note: when send extracted files to fast, only fast that do deletion,
+             but we still keep these marked records for delete in oracle table, not deleted at this point
+             */
+
+             if(action.equalsIgnoreCase("lookupIndex"))
+             {
+            	 if(propertyFileName == null)											//fast
+            	 {
+            		 outputLookupIndex(getLookupData("lookupIndex",updateNumber),updateNumber);
+                     System.out.println(database+" "+updateNumber+" lookup index is done.");
+            	 }
+                	 
+                 else
+                	 /*HT added 09/21/2020 for ES lookup*/
+                	 writeESIndexOnly(updateNumber,database,inscomb);					
+             }
             else if(action.equalsIgnoreCase("extractupdate")||action.equalsIgnoreCase("extractdelete")||action.equalsIgnoreCase("extractnumerical"))
             {
 
-                bdc.doFastExtract(updateNumber,database,action);
+                doFastExtract(updateNumber,database,action);
                 System.out.println(database+" "+updateNumber+" fast extract is done.");
             }        
             else
@@ -356,28 +397,53 @@ public class INSCorrection
             }
 
             //bdc.doFastExtract(updateNumber,database,action);
-            bdc.getError(updateNumber,action);
+            getError(updateNumber,action);
 
-        }
-        finally
-        {
-            if (con != null)
-            {
-                try
-                {
-                    con.close();
-                }
-                catch (Exception e)
-                {
-                    e.printStackTrace();
-                }
-            }
-            System.out.println("total process time "+(System.currentTimeMillis()-startTime)/1000.0+" seconds");
-        }
-
-        System.exit(1);
+         } 
+    	 catch (Exception e) 
+    	 {
+        	 System.out.println("Exception starting INS correction?!");
+        	 System.out.println("Reason:- " + e.getMessage());
+        	 e.printStackTrace();
+		}
+         finally
+         {
+             if (con != null)
+             {
+                 try
+                 {
+                     con.close();
+                 }
+                 catch (Exception e)
+                 {
+                     e.printStackTrace();
+                 }
+             }
+             System.out.println("total process time "+(System.currentTimeMillis()-startTime)/1000.0+" seconds");
+         }
+    	
     }
-
+    /**
+     * 
+     * @author TELEBH
+     * @Date: 09/21/2020 
+     * @Description: Generate Lookups for ES
+     * @throws Exception
+     */
+    
+	public void writeESIndexOnly(int updatenumber, String database, INSPECCombiner c) throws Exception 
+	{
+		/* TH added 09/21/2020 for ES lookup generation */
+		c.setAction("lookup");
+		c.writeLookupByWeekHook(updatenumber);
+		
+		if ((updatenumber > 3000 || updatenumber < 1000) && (updatenumber > 1)) {
+			Combiner.TABLENAME = "INS_MASTER_ORIG";
+			c.writeCombinedByWeekNumber(url, driver, username, password, updatenumber);
+		} 
+	
+	}
+	
     private void outputLookupIndex(HashMap lookupData, int updateNumber)
     {
         String filename = null;
@@ -1076,6 +1142,36 @@ public class INSCorrection
         }
     }
 
+    /*HT added 09/21/2020 for ES Lookup*/
+  	private void processESLookupIndex(Map<String, List<String>> update,Map<String, List<String>> backup)
+  			throws Exception {
+
+  		Map<String,String> deletedAuthorLookupIndex = getDeleteData(update, backup, "AUTHOR");
+  		Map<String,String> deletedAffiliationLookupIndex = getDeleteData(update, backup, "AFFILIATION");
+  		Map<String,String> deletedControlltermLookupIndex = getDeleteData(update, backup, "CONTROLLEDTERM");
+  		Map<String,String> deletedPublisherNameLookupIndex = getDeleteData(update, backup, "PUBLISHERNAME");
+  		Map<String,String> deletedSerialtitleLookupIndex = getDeleteData(update, backup, "SERIALTITLE");
+  		 //H:11/19/2014 check IPC too
+        Map<String,String> deletedIpcLookupIndex       		= getDeleteData(update,backup,"IPC");
+  		
+  		/*ONLY FOR DEBUGGING, UNCOMMENT IN PROD*/
+  		System.out.println("AUTHORTOBEDELETEDLIST: " + deletedAuthorLookupIndex.size());
+  		System.out.println("AFFTOBEDELETEDLIST: " + deletedAffiliationLookupIndex.size());
+  		System.out.println("CVTOBEDELETEDLIST: " + deletedControlltermLookupIndex.size());
+  		System.out.println("PNTOBEDELETEDLIST: " + deletedPublisherNameLookupIndex.size());
+  		System.out.println("STTOBEDELETEDLIST: " + deletedSerialtitleLookupIndex.size());
+  		
+
+  		saveDeletedData("AU", checkES(deletedAuthorLookupIndex, "AU", database), database);
+  		saveDeletedData("AF", checkES(deletedAffiliationLookupIndex, "AF", database), database);
+  		saveDeletedData("CV", checkES(deletedControlltermLookupIndex, "CV", database), database);
+  		saveDeletedData("PN", checkES(deletedPublisherNameLookupIndex, "PN", database), database);
+  		saveDeletedData("ST", checkES(deletedSerialtitleLookupIndex, "ST", database), database);
+  	//H:11/19/2014 check IPC too
+        saveDeletedData("IPC",checkES(deletedIpcLookupIndex,"PID",database),database);
+
+  	}
+
     private void processLookupIndex(HashMap update,HashMap backup) throws Exception
     {
 
@@ -1101,6 +1197,25 @@ public class INSCorrection
         saveDeletedData("IPC",checkFast(deletedIpcLookupIndex,"PID",database),database);
     }
 
+    
+    /*ES added 09/21/2020 for ES Lookup
+     *
+     * Check ES Count for AU/AFF marked for deletion against update list count
+     * when List Count >= FAST COUNT [delete]
+     * when List Count< FAST COUNT [ do not delete]
+     */
+    
+    private List<String> checkES(Map<String,String> inputMap, String searchField, String database) throws Exception
+    {
+        List<String> outputList = new ArrayList<>();
+
+        SharedSearchSearchEntry entry = new SharedSearchSearchEntry("https://shared-search-service-api.prod.scopussearch.net/sharedsearch/document/result");
+        outputList = entry.runESLookupCheck(inputMap,searchField,database);
+        return outputList;
+
+    }
+    
+    
     /*
      * Check FAST Count for AU/AFF marked for deletion against update list count
      * when List Count >= FAST COUNT [delete]
@@ -1193,7 +1308,7 @@ public class INSCorrection
      * Find out lookups to be deleted and its count,
      * Lookups that are in old and not in update list will be marked for deletion
      */
-    private HashMap getDeleteData(HashMap update,HashMap backup,String field)
+    private HashMap<String,String> getDeleteData(Map update,Map backup,String field)
     {
         List backupList = null;
         List updateList = null;

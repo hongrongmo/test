@@ -465,9 +465,13 @@ public class ChimicaCombiner extends Combiner {
     }
 
 	@Override
+	/* HT added 09/21/2020 wk: [202040] for Lookup extraction for ES */
 	public void writeLookupByWeekHook(int weekNumber) throws Exception {
 		System.out.println("Extract Lookup");
-		
+		String database = Combiner.CURRENTDB;
+		lookupObj = new LookupEntry(database, weekNumber);
+		lookupObj.init();
 	}
+
 
 }

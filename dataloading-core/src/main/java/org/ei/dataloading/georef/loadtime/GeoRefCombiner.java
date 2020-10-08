@@ -158,22 +158,26 @@ public static void main(String args[])
 
 public GeoRefCombiner(CombinedWriter writer)
 {
-	  super(writer);
-	  DataValidator d = new DataValidator();
-	  d.setErrorHandler(new LocalErrorHandler());
-	  d.setEntityResolver(new LocalEntityResolver());
-	  ((CombinedXMLWriter) writer).setDataValidator(d);
+  super(writer);
+
+  DataValidator d = new DataValidator();
+  d.setErrorHandler(new LocalErrorHandler());
+  d.setEntityResolver(new LocalEntityResolver());
+
+  ((CombinedXMLWriter) writer).setDataValidator(d);
+
 }
 
 
 public GeoRefCombiner(CombinedWriter writer,String propertyFileName)
 {
-		super(writer);
-		this.propertyFileName=propertyFileName;
-		DataValidator d = new DataValidator();
-		d.setErrorHandler(new LocalErrorHandler());
-		d.setEntityResolver(new LocalEntityResolver());
-		((CombinedXMLWriter) writer).setDataValidator(d);
+	super(writer);
+	this.propertyFileName=propertyFileName;
+	DataValidator d = new DataValidator();
+	d.setErrorHandler(new LocalErrorHandler());
+	d.setEntityResolver(new LocalEntityResolver());
+
+	((CombinedXMLWriter) writer).setDataValidator(d);
     
 }
 
@@ -181,10 +185,13 @@ public GeoRefCombiner(CombinedWriter writer,String propertyFileName)
 /*HT added 09/21/2020 to support ES Lookup*/
 public GeoRefCombiner(CombinedWriter writer, String propertyFileName, String database) {
 	super(writer);
-	this.propertyFileName = propertyFileName;
+	this.propertyFileName=propertyFileName;
+	DataValidator d = new DataValidator();
+	d.setErrorHandler(new LocalErrorHandler());
+	d.setEntityResolver(new LocalEntityResolver());
+	((CombinedXMLWriter) writer).setDataValidator(d);
 	Combiner.CURRENTDB = database;
 }
-
 
 
 public static int getResultSetSize(ResultSet resultSet)
@@ -893,7 +900,6 @@ public void writeRecs(ResultSet rs)
 		            	 thread.start(); 
 		            	 */
 		            	 kafka.runBatch(batchData,missedData);
-		            	 this.lookupObj.writeLookupRecs(recArray);						//HT added later for weekly lookup extraction for ES
 		            	 batchData = new ConcurrentHashMap<String,String>();
 		            	 counter=0;		
 		            	 
