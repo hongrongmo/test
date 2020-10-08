@@ -31,6 +31,12 @@ public class PaperChemCombiner extends Combiner {
     private static String tablename;
     private static String where;
     // private static Hashtable<?, ?> cvnoise = new Hashtable<Object, Object>();
+    
+    /*HT added 09/21/2020 for lookup extraction to ES*/
+    private String action = null;
+    private LookupEntry lookupObj = null;
+    
+    
 
     public static void main(String args[]) throws Exception {
 
@@ -50,7 +56,18 @@ public class PaperChemCombiner extends Combiner {
         System.out.println("write year" + loadNumber);
 
         PaperChemCombiner c = new PaperChemCombiner(writer);
+        /*TH added 09/21/2020 for ES lookup generation*/
+        for(String str: args)
+        {
+        	if(str.equalsIgnoreCase("lookup"))
+        		c.setAction("lookup");
+        	System.out.println("Action: lookup");
+        }
+        
 
+        /*HT added 09/21/2020 if condition on action to consider lookup extraction for ES, otherwise consider it reg. extraction and so embed all looadnumber check inside this global if stmt*/
+        if(c.getAction() == null || c.getAction().isEmpty())
+        {
         if (loadNumber > 3000 || loadNumber < 1000) {
             c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
         } else {
@@ -58,7 +75,20 @@ public class PaperChemCombiner extends Combiner {
         }
         System.out.println("finished loadnumber " + loadNumber);
     }
+    else
+    {
+    	System.out.println("Extracting Lookups");
+    	c.writeLookupByWeekNumber(loadNumber);
+    }
 
+}
+    public void setAction(String str)
+    {
+    	action = str;
+    }
+    public String getAction() {
+    	return action;
+    }
     public PaperChemCombiner(CombinedWriter writer) {
         super(writer);
     }
@@ -603,10 +633,14 @@ public class PaperChemCombiner extends Combiner {
         return result;
     }
     
-    @Override
-   	public void writeLookupByWeekHook(int weekNumber) throws Exception {
-   		System.out.println("Extract Lookup");
-   		String database =  Combiner.CURRENTDB;
-   	}
+	@Override
+	/* HT added 09/21/2020 wk: [202040] for Lookup extraction for ES */
+	public void writeLookupByWeekHook(int weekNumber) throws Exception {
+		System.out.println("Extract Lookup");
+		String database = Combiner.CURRENTDB;
+		lookupObj = new LookupEntry(database, weekNumber);
+		lookupObj.init();
+	}
+
 
 }

@@ -83,8 +83,7 @@ public class GeoRefCorrection
 
     private static String tableToBeTruncated = null;
     private static long startTime = System.currentTimeMillis();
-    
-    private static String propertyFileName;
+
     
     public static void main(String args[])
         throws Exception
@@ -352,7 +351,7 @@ public class GeoRefCorrection
 					Thread.currentThread().sleep(1000);
 				}
 				
-				/* Block out all lookup index processing, Hanan will do from different place@10/02/2020
+				//Block out all lookup index processing, Hanan will do from different place@10/02/2020
 				if(action.equalsIgnoreCase("update"))
 				{
 					//processLookupIndex(getLookupData("update"),getLookupData("backup"));					// fast
@@ -366,7 +365,7 @@ public class GeoRefCorrection
 					//processLookupIndex(new HashMap(),getLookupData("backup"));																			//fast
 					processESLookupIndex(new HashMap<String, List<String>>(),grfcomb.getESLookupData(updateNumber, "backup", backupTable, con, database));			//es
 				}
-				*/
+				
 
 			}
 
@@ -1363,12 +1362,8 @@ private void processResponse(String value, String response, BufferedWriter bw) t
 			}
 			stmt = con1.createStatement();
 			writer.setOperation("add");
-<<<<<<< HEAD
-			//GeoRefCombiner c = new GeoRefCombiner(writer);
-			GeoRefCombiner c = new GeoRefCombiner(writer,this.propertyFileName);
-=======
-			//GeoRefCombiner c = new GeoRefCombiner(writer);						//HT commented 9/21/2020 since GeoRefCombiner initialized in startCorrection already
->>>>>>> e3f63b0c2a00de7b5c4e3db756e7efc5ebec7208
+			//GeoRefCombiner c = new GeoRefCombiner(writer,this.propertyFileName);			//HT commented 9/21/2020 since GeoRefCombiner initialized in startCorrection already
+
 			rs = stmt.executeQuery("select * from georef_master_add");
 			c.writeRecs(rs);
 			writer.end();
@@ -1654,11 +1649,8 @@ private void processResponse(String value, String response, BufferedWriter bw) t
 			{
 				System.out.println("Running the query...");
 				writer.setOperation("add");
-<<<<<<< HEAD
-        		GeoRefCombiner c = new GeoRefCombiner(writer,this.propertyFileName);
-=======
-        		//GeoRefCombiner c = new GeoRefCombiner(writer);			//HT commented 9/21/2020 since GeoRefCombiner initialized in startCorrection already
->>>>>>> e3f63b0c2a00de7b5c4e3db756e7efc5ebec7208
+        		//GeoRefCombiner c = new GeoRefCombiner(writer,this.propertyFileName);			//HT commented 9/21/2020 since GeoRefCombiner initialized in startCorrection already
+
         		if(updateNumber==1)
         		{
         			rs = stmt.executeQuery("select * from georef_master_orig");
