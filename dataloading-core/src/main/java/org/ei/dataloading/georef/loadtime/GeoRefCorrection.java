@@ -83,7 +83,7 @@ public class GeoRefCorrection
 
     private static String tableToBeTruncated = null;
     private static long startTime = System.currentTimeMillis();
-
+    private static String propertyFileName;
     
     public static void main(String args[])
         throws Exception
