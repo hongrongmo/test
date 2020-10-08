@@ -398,6 +398,47 @@ public class BdCorrection
                      System.exit(1);
                  }
 
+<<<<<<< HEAD
+                midTime = endTime;
+                endTime = System.currentTimeMillis();
+                System.out.println("time for run correction table "+(endTime-midTime)/1000.0+" seconds");
+                System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+                
+                if(test)
+                {
+                    System.out.println("finished updating tables");
+                    System.out.println("begin to process lookup index");
+                    System.out.println("press enter to continue");
+                    System.in.read();
+                    Thread.currentThread().sleep(1000);
+                }
+                
+                /* Block out all lookup index processing, Hanan will do from different place@10/02/2020
+                 
+                
+                if(action.equalsIgnoreCase("update"))
+                {
+                    bdc.processLookupIndex(bdc.getLookupData("update"),bdc.getLookupData("backup"));
+                }
+                else if(action.equalsIgnoreCase("delete"))
+                {
+                    bdc.processLookupIndex(new HashMap(),bdc.getLookupData("backup"));
+                }
+                else if(action.equalsIgnoreCase("aip"))
+                {
+                    bdc.processLookupIndex(bdc.getLookupData("aip"),bdc.getLookupData("aipBackup"));
+                }
+               // else if(action.equalsIgnoreCase("cafedelete"))
+               //{
+               //    bdc.processLookupIndex(new HashMap(),bdc.getLookupData("backup"));
+               // }
+                
+                midTime = endTime;
+                endTime = System.currentTimeMillis();
+                System.out.println("time for run lookupIndex table "+(endTime-midTime)/1000.0+" seconds");
+                */
+                System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+=======
                  midTime = endTime;
                  endTime = System.currentTimeMillis();
                  System.out.println("time for run correction table "+(endTime-midTime)/1000.0+" seconds");
@@ -455,6 +496,7 @@ public class BdCorrection
                  endTime = System.currentTimeMillis();
                  System.out.println("time for run lookupIndex table "+(endTime-midTime)/1000.0+" seconds");
                  System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+>>>>>>> e3f63b0c2a00de7b5c4e3db756e7efc5ebec7208
 
              }
 

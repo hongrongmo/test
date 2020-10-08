@@ -168,6 +168,20 @@ public GeoRefCombiner(CombinedWriter writer)
 
 }
 
+<<<<<<< HEAD
+public GeoRefCombiner(CombinedWriter writer,String propertyFileName)
+{
+	super(writer);
+	this.propertyFileName=propertyFileName;
+	DataValidator d = new DataValidator();
+	d.setErrorHandler(new LocalErrorHandler());
+	d.setEntityResolver(new LocalEntityResolver());
+
+	((CombinedXMLWriter) writer).setDataValidator(d);
+    
+}
+
+=======
 /*HT added 09/21/2020 to support ES Lookup*/
 public GeoRefCombiner(CombinedWriter writer, String propertyFileName, String database) {
 	super(writer);
@@ -176,6 +190,7 @@ public GeoRefCombiner(CombinedWriter writer, String propertyFileName, String dat
 }
 
 
+>>>>>>> e3f63b0c2a00de7b5c4e3db756e7efc5ebec7208
 public static int getResultSetSize(ResultSet resultSet)
 {
 	    int size = -1;

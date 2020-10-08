@@ -139,8 +139,16 @@ public class KnovelCorrection {
 	        {
 	        	if(args[11] !=null)
 	        	{
-	        		bucketName = args[11];
-	        		System.out.println("get Knkovel files from S3 bucket: " + bucketName);
+	        		if(args[11].indexOf("config")>-1)
+	        		{
+	        			propertyFileName = args[11];
+	        			System.out.println("get properties file " + propertyFileName);
+	        		}
+	        		else
+	        		{
+		        		bucketName = args[11];
+		        		System.out.println("get Knkovel files from S3 bucket: " + bucketName);
+	        		}
 	        	}
 	        }
 	        //HH 05/06/2016 to get the s3 bucket Location/path (excluding filename itself and bucket name) i.e. /archive/knovel/
@@ -159,6 +167,7 @@ public class KnovelCorrection {
 	        	if(args[13] !=null)
 	        	{
 	        		propertyFileName = args[13];
+	        		System.out.println("get properties file " + propertyFileName);
 	        	}
 	        }
 

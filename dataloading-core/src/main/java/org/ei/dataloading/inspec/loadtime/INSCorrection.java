@@ -386,6 +386,150 @@ public class INSCorrection
                  
             	 
                 
+<<<<<<< HEAD
+                c.writeBaseTableFile(fileToBeLoaded);
+                String dataFile=fileToBeLoaded+".out";
+                List dataFileList = new ArrayList();
+                int i=0;
+                while(true)
+                {
+                    i++;
+                    String datafile=dataFile+"."+i;
+                    File f = new File(datafile);
+                    if(!f.exists())
+                    {
+                        if(i<1)
+                        {
+                            System.exit(1);
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+                    //System.out.println("DATAFILE FOUND: "+datafile);
+                    dataFileList.add(datafile);
+
+                }
+
+                if(test)
+                {
+                    System.out.println("sql loader file "+dataFile+" created;");
+                    System.out.println("about to load data file "+dataFile);
+                    System.out.println("press enter to continue");
+                    System.in.read();
+                    Thread.currentThread().sleep(1000);
+                }
+                Runtime r = Runtime.getRuntime();
+
+                for(int j=0;j<dataFileList.size();j++)
+                {
+                    String dFile = (String)dataFileList.get(j);
+                    String name = dFile;
+                    if(dFile.indexOf("/")>-1)
+                    {	                    
+	        			int pathSeperator = name.lastIndexOf("/");        			
+	        			name=name.substring(pathSeperator+1);
+                    }
+        			
+        			
+                    Process p = r.exec("./"+sqlldrFileName+" "+name);
+                    System.out.println("Loading File "+name);
+                    int t = p.waitFor();
+                    //break;
+                }
+
+                int tempTableCount = bdc.getTempTableCount();
+                if(tempTableCount>0)
+                {
+                    System.out.println(tempTableCount+" records was loaded into the temp table");
+                    if(test)
+                    {
+                        System.out.println("begin to update tables");
+                        System.out.println("press enter to continue");
+                        System.in.read();
+                        Thread.currentThread().sleep(1000);
+                    }
+                    bdc.runCorrection(dataFile,updateNumber,database,action);
+                }
+                else
+                {
+                    System.out.println("no record was loaded into the temp table");
+                    System.exit(1);
+                }
+
+                if(test)
+                {
+                    System.out.println("finished updating tables");
+                    System.out.println("begin to process lookup index");
+                    System.out.println("press enter to continue");
+                    System.in.read();
+                    Thread.currentThread().sleep(1000);
+                }
+                
+                /* Block out all lookup index processing, Hanan will do it from different place@10/02/2020
+                if(action.equalsIgnoreCase("update"))
+                {
+                    bdc.processLookupIndex(bdc.getLookupData("update",updateNumber),bdc.getLookupData("backup",updateNumber));
+                }
+                else if(action.equalsIgnoreCase("delete"))
+                {
+
+                    bdc.processLookupIndex(new HashMap(),bdc.getLookupData("backup",updateNumber));
+                }
+                else if(action.equalsIgnoreCase("ins"))
+                {
+                    bdc.processLookupIndex(bdc.getLookupData("ins",updateNumber),bdc.getLookupData("insBackup",updateNumber));
+                }
+                */
+            }
+            /*Hanan: this is only to generate Fast Extract Files of the
+             records that marked as deleted in case the action is "delete"
+
+             since it is testing approach so may i do not need to generate extract files to fast
+            Note: when send extracted files to fast, only fast that do deletion,
+            but we still keep these marked records for delete in oracle table, not deleted at this point
+            */
+
+            if(action.equalsIgnoreCase("lookupIndex"))
+            {
+                bdc.outputLookupIndex(bdc.getLookupData("lookupIndex",updateNumber),updateNumber);
+                System.out.println(database+" "+updateNumber+" lookup index is done.");
+            }
+            else if(action.equalsIgnoreCase("extractupdate")||action.equalsIgnoreCase("extractdelete")||action.equalsIgnoreCase("extractnumerical"))
+            {
+
+                bdc.doFastExtract(updateNumber,database,action);
+                System.out.println(database+" "+updateNumber+" fast extract is done.");
+            }        
+            else
+            {
+                System.out.println(database+" "+updateNumber+" correction is done.");
+                System.out.println("Please run this program again with parameter \"extractupdate\" or \"extractdelete\" to get fast extract file");
+            }
+
+            //bdc.doFastExtract(updateNumber,database,action);
+            bdc.getError(updateNumber,action);
+
+        }
+        finally
+        {
+            if (con != null)
+            {
+                try
+                {
+                    con.close();
+                }
+                catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+            }
+            System.out.println("total process time "+(System.currentTimeMillis()-startTime)/1000.0+" seconds");
+        }
+
+        System.exit(1);
+=======
              }
              else if(action.equalsIgnoreCase("extractupdate")||action.equalsIgnoreCase("extractdelete")||action.equalsIgnoreCase("extractnumerical"))
              {
@@ -424,6 +568,7 @@ public class INSCorrection
              System.out.println("total process time "+(System.currentTimeMillis()-startTime)/1000.0+" seconds");
          }
     	
+>>>>>>> e3f63b0c2a00de7b5c4e3db756e7efc5ebec7208
     }
     /**
      * 

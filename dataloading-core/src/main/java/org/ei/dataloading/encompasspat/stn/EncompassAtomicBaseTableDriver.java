@@ -147,7 +147,7 @@ public class EncompassAtomicBaseTableDriver {
 				alt.addRecord("", (rmLeadSpc(line)), fieldNameHolder);
 			}
 		   }catch(Exception e){
-			   System.out.println("Number="+lineNumber+" LINE="+line);
+			   //System.out.println("Number="+lineNumber+" LINE="+line);
 			   e.printStackTrace();
 		   }
 		}
