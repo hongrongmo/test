@@ -900,7 +900,6 @@ public void writeRecs(ResultSet rs)
 		            	 thread.start(); 
 		            	 */
 		            	 kafka.runBatch(batchData,missedData);
-		            	 this.lookupObj.writeLookupRecs(recArray);						//HT added later for weekly lookup extraction for ES
 		            	 batchData = new ConcurrentHashMap<String,String>();
 		            	 counter=0;		
 		            	 
