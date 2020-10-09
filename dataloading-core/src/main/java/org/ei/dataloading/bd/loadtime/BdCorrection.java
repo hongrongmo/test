@@ -325,7 +325,7 @@ public class BdCorrection
                  }
 
 
-                 cleanUp(tableToBeTruncated);
+                 //cleanUp(tableToBeTruncated);							// ONLY TEMP FOR LOCAL TESTING
 
                  midTime = endTime;
                  endTime = System.currentTimeMillis();
@@ -364,12 +364,12 @@ public class BdCorrection
                      System.in.read();
                      Thread.currentThread().sleep(1000);
                  }
-				
+				/*
 				  Runtime r = Runtime.getRuntime();
 				  
 				  Process p = r.exec("./"+sqlldrFileName+" "+dataFile); 
 				  int t = p.waitFor();
-				 
+				 */
 
                  int tempTableCount = getTempTableCount();
                  int tempReferenceTableCount = getTempReferenceTableCount();
@@ -979,7 +979,7 @@ public class BdCorrection
         try
         {
         	/*HT added 09/21/2020 initialize lookup entry*/
-			c.writeLookupByWeekHook(updateNumber);
+			//c.writeLookupByWeekHook(updateNumber);		
 			
 			
         	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
