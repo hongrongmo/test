@@ -82,8 +82,7 @@ public class GeoRefCorrection
     private static Logger log4j = Logger.getLogger(GeoRefCorrection.class.getName());
 
     private static String tableToBeTruncated = null;
-    private static long startTime = System.currentTimeMillis();
-
+    private static long startTime = System.currentTimeMillis();   
     
     public static void main(String args[])
         throws Exception

@@ -1542,7 +1542,8 @@ public class CombinedXMLWriter
 	            contentObject.put("APPLICATIONCOUNTRY".toLowerCase(),elementArrayObject);
             }
             
-            String[] intPatentClassification=addIpcIndex(rec.getString(EVCombinedRec.INT_PATENT_CLASSIFICATION),"INTERNATONALPATENTCLASSIFICATION");
+            //String[] intPatentClassification=addIpcIndex(rec.getString(EVCombinedRec.INT_PATENT_CLASSIFICATION),"INTERNATONALPATENTCLASSIFICATION");
+            String[] intPatentClassification=rec.getStrings(EVCombinedRec.INT_PATENT_CLASSIFICATION);
             if(intPatentClassification!=null && intPatentClassification.length>0 )
             {
 	            elementArrayObject = formJsonArray(reverseSigns(intPatentClassification),"INTPATENTCLASSIFICATION");          
@@ -3484,6 +3485,9 @@ public class CombinedXMLWriter
                      int i = s.indexOf(Constants.IDDELIMITER);
                       code = s.substring(0,i);
                       name = s.substring(i+1);
+                      System.out.println("code="+code+"-"+Entity.prepareString(code)+" name="+name+"-"+Entity.prepareString(name)+" key="+key+" database"+getDatabase());
+                      if(indexWriter==null)
+                    	  System.out.println("indexWriter is null");
                       indexWriter.println(Entity.prepareString(code).toUpperCase().trim() + "\t" +Entity.prepareString(name).toUpperCase().trim() + "\t" + getDatabase().substring(0,3)+"\t");
                 }
 

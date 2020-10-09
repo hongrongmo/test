@@ -397,7 +397,7 @@ public class BdCorrection
                      System.out.println("no record was loaded into the temp table");
                      System.exit(1);
                  }
-    
+   
                 /* Block out all lookup index processing, Hanan will do from different place@10/02/2020
                  
                 
