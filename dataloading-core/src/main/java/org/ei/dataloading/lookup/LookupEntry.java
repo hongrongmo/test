@@ -443,7 +443,10 @@ public class LookupEntry {
         String[] intPatentClassification;
 		try 
 		{
-			intPatentClassification = writer.reverseSigns(writer.addIpcIndex(rec.getString(EVCombinedRec.INT_PATENT_CLASSIFICATION),lookupMap.get("INTERNATONALPATENTCLASSIFICATION"), getDatabase()));
+			//intPatentClassification = writer.reverseSigns(writer.addIpcIndex(rec.getString(EVCombinedRec.INT_PATENT_CLASSIFICATION),lookupMap.get("INTERNATONALPATENTCLASSIFICATION"), getDatabase()));
+			// HT changed to match ES extraction 10/09/2020
+			intPatentClassification = writer.reverseSigns(rec.getStrings(EVCombinedRec.INT_PATENT_CLASSIFICATION));
+			
 			if(intPatentClassification!=null && intPatentClassification.length>0 )
 	        {
 	        	writeLookupRec(intPatentClassification,"INTERNATONALPATENTCLASSIFICATION");
@@ -578,7 +581,9 @@ public class LookupEntry {
             String[] intPatentClassification;
     		try 
     		{
-    			intPatentClassification = writer.reverseSigns(writer.addIpcIndex(rec.getString(EVCombinedRec.INT_PATENT_CLASSIFICATION),lookupMap.get("INTERNATONALPATENTCLASSIFICATION"), getDatabase()));
+    			//intPatentClassification = writer.reverseSigns(writer.addIpcIndex(rec.getString(EVCombinedRec.INT_PATENT_CLASSIFICATION),lookupMap.get("INTERNATONALPATENTCLASSIFICATION"), getDatabase()));
+    			// HT changed to match ES extraction 10/09/2020
+    			intPatentClassification = writer.reverseSigns(rec.getStrings(EVCombinedRec.INT_PATENT_CLASSIFICATION));
     			if(intPatentClassification!=null && intPatentClassification.length>0 )
     	        {
     				ipcList.addAll(Arrays.asList(intPatentClassification));

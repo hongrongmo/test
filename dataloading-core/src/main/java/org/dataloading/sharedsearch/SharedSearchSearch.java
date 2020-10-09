@@ -125,7 +125,7 @@ public class SharedSearchSearch {
 					
 				
 				finishTime = System.currentTimeMillis() - finishTime;
-				//System.out.println("Time to processResponse: " + finishTime);
+				//System.out.println("Time to processResponse: " + finishTime);			// only for debugging
 			}
 			else
 			{
