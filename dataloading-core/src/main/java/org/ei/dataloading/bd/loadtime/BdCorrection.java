@@ -325,7 +325,7 @@ public class BdCorrection
                  }
 
 
-                 //cleanUp(tableToBeTruncated);							// ONLY TEMP FOR LOCAL TESTING
+                 cleanUp(tableToBeTruncated);							
 
                  midTime = endTime;
                  endTime = System.currentTimeMillis();
@@ -364,12 +364,12 @@ public class BdCorrection
                      System.in.read();
                      Thread.currentThread().sleep(1000);
                  }
-				/*
+				
 				  Runtime r = Runtime.getRuntime();
 				  
 				  Process p = r.exec("./"+sqlldrFileName+" "+dataFile); 
 				  int t = p.waitFor();
-				 */
+				
 
                  int tempTableCount = getTempTableCount();
                  int tempReferenceTableCount = getTempReferenceTableCount();
