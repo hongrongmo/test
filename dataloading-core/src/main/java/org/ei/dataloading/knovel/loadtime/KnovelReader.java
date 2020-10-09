@@ -518,13 +518,13 @@ public class KnovelReader
 				{
 					accessnumber=getContent(rec.getChildText("id",noNamespace));
 					record.put("ACCESSNUMBER", accessnumber);
-					System.out.println("ACCESSNUMBER FROM id field");
+					//System.out.println("ACCESSNUMBER FROM id field");
 				}
 				else if(rec.getChild("identifier",dcNamespace) != null)
 				{
 					accessnumber=getContent(rec.getChildText("identifier",dcNamespace));
 					record.put("ACCESSNUMBER", accessnumber);
-					System.out.println("ACCESSNUMBER FROM dc:identifier field");
+					//System.out.println("ACCESSNUMBER FROM dc:identifier field");
 				}
 				
 				if(rec.getChild("type",dcNamespace) != null)

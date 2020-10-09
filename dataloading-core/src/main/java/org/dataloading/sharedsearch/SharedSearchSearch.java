@@ -111,7 +111,7 @@ public class SharedSearchSearch {
 				in.close();
 				
 				long finishTime = System.currentTimeMillis();
-				System.out.println("Time to runQuery: " + (finishTime - startTime));
+				//System.out.println("Time to runQuery: " + (finishTime - startTime));
 				
 				// process response and fetch HitCount from result
 				if(value != null && !(value.isEmpty()))
@@ -125,7 +125,7 @@ public class SharedSearchSearch {
 					
 				
 				finishTime = System.currentTimeMillis() - finishTime;
-				System.out.println("Time to processResponse: " + finishTime);
+				//System.out.println("Time to processResponse: " + finishTime);
 			}
 			else
 			{

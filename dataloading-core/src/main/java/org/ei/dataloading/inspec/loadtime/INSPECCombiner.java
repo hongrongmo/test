@@ -54,11 +54,12 @@ public class INSPECCombiner
         super(writer);
     }
     
-    public INSPECCombiner(CombinedWriter writer, String propertyFileName, int loadNumber)
+    public INSPECCombiner(CombinedWriter writer, String propertyFileName, int loadNumber)  throws Exception
     {
         super(writer);
         this.propertyFileName=propertyFileName;
         this.loadNumber=loadNumber;
+        writeLookupByWeekHook(loadNumber);
     }
     /*HT added 09/21/2020 to support ES Lookup*/
 	public INSPECCombiner(CombinedWriter writer, String propertyFileName, String database) {

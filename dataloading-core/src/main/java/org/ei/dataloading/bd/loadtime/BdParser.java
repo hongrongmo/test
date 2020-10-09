@@ -52,6 +52,7 @@ public class BdParser
 	private Namespace xmlNamespace=Namespace.getNamespace("xml","http://www.w3.org/XML/1998/namespace");
 	private Namespace xoeNamespace=Namespace.getNamespace("xoe","http://www.elsevier.com/xml/xoe/dtd");
 	private Namespace xocsNamespace=Namespace.getNamespace("xocs","http://www.elsevier.com/xml/xocs/dtd");
+	private Namespace aiiNamespace=Namespace.getNamespace("aii","http://www.elsevier.com/xml/ani/internal");
 	public static String accessNumberS;
 	private int affid = 0;
 	private static Hashtable contributorRole = new Hashtable();
@@ -350,7 +351,7 @@ public class BdParser
 							if(right==null)
 							{
 								right = copyright.getAttributeValue("type");
-								System.out.println("COPYRIGHT_TYPE is not null "+right);
+								//System.out.println("COPYRIGHT_TYPE is not null "+right);
 							}
 							record.put("COPYRIGHT",dictionary.mapEntity(right));
 							//System.out.println("COPYRIGHT"+copyright.getTextTrim());
