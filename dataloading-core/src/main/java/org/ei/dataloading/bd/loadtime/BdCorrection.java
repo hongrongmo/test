@@ -69,6 +69,7 @@ public class BdCorrection
     private static long endTime = System.currentTimeMillis();
     private static long midTime = System.currentTimeMillis();
     private static List<String> blockedIssnList;
+    private static List<String> cittypeList;
     private static String fileName; 		//HH added 06/09/2020 for showing in exception message of temp tables cleanup
     private static String propertyFileName;
     
@@ -118,14 +119,6 @@ public class BdCorrection
             System.exit(1);
         }
        
-        
-        //System.out.println("using SqlldrFile "+AffLookupIndexSqlldrFileName+" and "+authorLookupIndexSqlldrFileName+" to load lookupindex file into database");
-        /*
-        if(args.length>11)
-        {
-        	cafeFlag = args[11];
-        }
-        */
         
         //change this parameter to get kafka properties file
         if(args.length>11)
@@ -346,6 +339,8 @@ public class BdCorrection
                  if(!action.equalsIgnoreCase("delete"))
                  {
                  	c.setBlockedIssnList(con);
+                 	this.cittypeList = getCittypeList(con, this.database);
+                 	c.setCittypeList(this.cittypeList);
                  }
                  c.writeBaseTableFile(fileToBeLoaded,con);
                  String dataFile=fileToBeLoaded+"."+updateNumber+".out";
@@ -545,6 +540,64 @@ public class BdCorrection
          }
 
          System.exit(1);
+    }
+    
+    public List getCittypeList(Connection con,String database)
+    {
+    	Statement stmt = null;
+        ResultSet rs = null;
+        List<String> cittypeList = new ArrayList<>();
+        String cittype = null;
+       
+        try
+        {
+            stmt = con.createStatement();
+
+            rs = stmt.executeQuery("select cittype,database from bd_master_cittype where database='"+database+"'");
+            while (rs.next())
+            {
+                cittype = rs.getString("cittype");
+                database = rs.getString("database");
+                if(cittype != null)
+                {
+                	cittypeList.add(cittype);
+                }
+            }
+
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        finally
+        {
+
+            if (rs != null)
+            {
+                try
+                {
+                    rs.close();
+                }
+                catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+            }
+
+            if (stmt != null)
+            {
+                try
+                {
+                    stmt.close();
+                }
+                catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        }
+       return cittypeList;
+       
     }
     /**
      * 
@@ -981,7 +1034,7 @@ public class BdCorrection
         	/*HT added 09/21/2020 initialize lookup entry*/
 			//c.writeLookupByWeekHook(updateNumber);		
 			
-			
+			c.setCittypeList(this.cittypeList);
         	stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             if(action.equalsIgnoreCase("update") || action.equalsIgnoreCase("extractupdate") || action.equalsIgnoreCase("aip") )
             {

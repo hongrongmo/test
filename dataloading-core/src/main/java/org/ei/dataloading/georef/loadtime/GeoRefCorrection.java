@@ -6,14 +6,6 @@ import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
 import org.dataloading.sharedsearch.SharedSearchSearchEntry;
 import org.ei.common.CVSTermBuilder;
-/*
-import org.ei.data.encompasspat.loadtime.*;
-import org.ei.data.encompasslit.loadtime.*;
-import org.ei.data.upt.loadtime.*;
-import org.ei.data.ntis.loadtime.*;
-import org.ei.data.cbnb.loadtime.*;
-import org.ei.data.bd.*;
-*/
 import org.ei.dataloading.*;
 import org.ei.common.*;
 import org.ei.common.upt.*;
@@ -1185,9 +1177,7 @@ public class GeoRefCorrection
 		return query.toJSONString();
 			
 	}
-	
-	
-	
+		
 	private int checkES(String value, String searchfield,String database)
 	{
 		String esUrl = "https://shared-search-service-api.staging.scopussearch.net/sharedsearch/document/result";
@@ -1195,7 +1185,7 @@ public class GeoRefCorrection
 		String result = null;
 		int hitCount=0;
 		String query=buildESQuery(value,searchfield,database);		
-		System.out.println("ESQuery: " + query);
+		//System.out.println("ESQuery: " + query);
 		
 		try
 		{
@@ -1230,12 +1220,12 @@ public class GeoRefCorrection
 					if(line.equalsIgnoreCase("hits"))
 						break;
 				}
-				System.out.println("Response: " + response.toString());   // only for debugging
+				//System.out.println("Response: " + response.toString());   // only for debugging
 				// close stream
 				in.close();
 				
 				long finishTime = System.currentTimeMillis();
-				System.out.println("Time to runQuery: " + (finishTime - startTime));
+				//System.out.println("Time to runQuery: " + (finishTime - startTime));
 				
 				// process response and fetch HitCount from result
 				
@@ -1248,7 +1238,7 @@ public class GeoRefCorrection
 								
 				}
 				
-				System.out.println("***"+value + "\t" + hitCount +" ***");   // only for debugging	
+				//System.out.println("***"+value + "\t" + hitCount +" ***");   // only for debugging	
 				
 			}
 		}
@@ -1376,7 +1366,10 @@ private void processResponse(String value, String response, BufferedWriter bw) t
 			{
 				sendDeleteToKafka(deleteRecords);
 			}
-			writer.zipBatch();
+			else
+			{
+				writer.zipBatch();
+			}
 			writer.end();
 			writer.flush();
 

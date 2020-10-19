@@ -376,7 +376,8 @@ public class BdParser
 						{
 							Element itemidElement = (Element)itemidList.get(i);
 							String  itemid_idtype = itemidElement.getAttributeValue("idtype");
-
+							String  pui=null;
+							
 							if(itemid_idtype != null &&	
 									(itemid_idtype.equals("CPX")||
 									itemid_idtype.equals("GEO")||
@@ -402,13 +403,13 @@ public class BdParser
 							}
 							else if (itemid_idtype != null && itemid_idtype.equals("PUI"))
 							{
-								String  pui = itemidElement.getTextTrim();
+								pui = itemidElement.getTextTrim();
 								setPui(pui);
 								record.put("PUI",pui);
 							}
 							else if (itemid_idtype != null && itemid_idtype.equals("SEC"))
 							{
-								String  pui = itemidElement.getTextTrim();
+								pui = itemidElement.getTextTrim();
 								record.put("SEC",pui);
 							}
 							else if (itemid_idtype != null && itemid_idtype.equalsIgnoreCase("PUISECONDARY"))
@@ -479,7 +480,12 @@ public class BdParser
 										}
 										//*/
 										//docType = cititype;
-										
+										/*
+										if(!cittypeList.contains(docType.toLowerCase()))
+										{
+											sendNotisfication(pui,docType);
+										}
+										*/
 										record.put("CITTYPE",docType);
 										//System.out.println("STAGE="+record.get("STAGE")+"TYPE= "+cititype+"DOCTYPE= "+docType);
 									}
