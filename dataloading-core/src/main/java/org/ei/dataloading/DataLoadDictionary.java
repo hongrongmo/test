@@ -599,6 +599,10 @@ public class DataLoadDictionary
         badCharacterMap.put("u&uml;", "&#252;");
         badCharacterMap.put("y&acute;", "&#253;");
         badCharacterMap.put("y&uml;", "&#255;");
+        badCharacterMap.put("C&caron;","&#268;");
+        badCharacterMap.put("c&caron;","&#269;");
+        badCharacterMap.put("C&acute;","&#262;");
+        badCharacterMap.put("c&acute;","&#263;");
     }
     
     public static String cleanBadCharacters(String input)

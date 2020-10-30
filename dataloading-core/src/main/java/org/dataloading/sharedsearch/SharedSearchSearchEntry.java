@@ -490,7 +490,7 @@ public class SharedSearchSearchEntry {
 			e.printStackTrace();
 		}
 		
-			return outputList;
+		return outputList;
 	}
 	
 	

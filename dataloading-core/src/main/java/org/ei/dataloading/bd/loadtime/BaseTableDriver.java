@@ -12,14 +12,20 @@ import java.io.InputStreamReader;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 import java.util.Hashtable;
+import java.util.Iterator;
 import java.util.Enumeration;
 import java.util.List;
+import java.util.HashMap;
 import java.util.ArrayList;
 //import org.ei.data.LoadNumber;
 //import org.ei.dataloading.bd.*;
 import java.sql.*;
 
+import org.ei.dataloading.aws.AmazonSNSService;
 import org.ei.dataloading.cafe.GetANIFileFromCafeS3Bucket;
+
+import com.amazonaws.services.sns.AmazonSNS;
+import com.amazonaws.services.sns.model.PublishRequest;
 
 public class BaseTableDriver
 {
@@ -40,6 +46,7 @@ public class BaseTableDriver
     private static List<String> blockedCpxIssnList;
     private static List<String> blockedPchIssnList;
     private static List<String> blockedGeoIssnList;
+    private static List<String> cittypeList;
     //HH 02/2016 for Cafe Processing
     BufferedReader bfReader = null;
     boolean cafe = false;
@@ -189,6 +196,11 @@ public class BaseTableDriver
         this.blockedPchIssnList=pchIssnList;
         this.blockedGeoIssnList=geoIssnList;
        
+    }
+    
+    public void setCittypeList(List cittype)
+    {
+    	this.cittypeList=cittype;
     }
 
     public BaseTableDriver(int loadN,String databaseName)
@@ -376,6 +388,7 @@ public class BaseTableDriver
 
     private void writeRecs(BufferedReader xmlReader, Connection con) throws Exception
     {
+    	HashMap storeNewDoctypeDocument = new HashMap();
     	File outFile = new File(this.infile+"_not_loaded_record.txt");
     	if(outFile.exists())
     	{
@@ -402,9 +415,20 @@ public class BaseTableDriver
             {
             	recordCount++;
                 Hashtable h = r.readRecord(xmlReader);
+                
+               
             
                 if (h != null)
                 {
+                	 //Added for sending notisfication with new doctype 
+                    String docType = (String)h.get("CITTYPE");
+                    
+                    if(!cittypeList.contains(docType.toLowerCase()))
+    				{
+                    	//System.out.println("found new docType "+docType+ "for record "+(String)h.get("PUI"));
+                    	storeNewDoctypeDocument.put((String)h.get("PUI"),docType);
+    				}
+                    
                     if(action.equals("aip"))
                     {
                         if(!checkPUI((String)h.get("PUI"),con))
@@ -426,12 +450,13 @@ public class BaseTableDriver
                   break;
                 }
             }
-           
+            
             out.flush();
+            sendNotisfication(storeNewDoctypeDocument);
         }
         catch(Exception e)
         {
-            throw new Exception(e);
+            e.printStackTrace();
         }
         finally
         {
@@ -447,6 +472,53 @@ public class BaseTableDriver
                 }
             }
         }
+    }
+    
+    private String getMessage(HashMap h) throws Exception
+    {
+    	StringBuffer sb = new StringBuffer();
+    	Iterator it = h.entrySet().iterator();  
+    	while (it.hasNext())
+    	{
+    		HashMap.Entry pair = (HashMap.Entry)it.next();
+    	
+    		String name = (String)pair.getKey();
+    		String value = (String)pair.getValue();
+            System.out.println("Found new doctype for document with pui: " + name+ "docType= "+value); 
+            sb.append(name+"\t"+value+"\n");
+    	}
+    	return sb.toString(); 
+    }
+    
+    private void sendNotisfication(HashMap h)
+    {
+    	String TOPIC_ARN = "arn:aws:sns:us-east-1:230521890328:EVDataLoading";
+    	//String TOPIC_ARN = "arn:aws:sns:us-east-1:230521890328:ALERT-SENDING-DATA-TO-UK-ELASTIC-SEARCH";//for test only
+    	String subject = "Found New Doctype";
+    	String message = "";
+    	try
+    	{
+	    	message = getMessage(h);
+	    	//2. get SNS client
+			
+			AmazonSNS sns = AmazonSNSService.getInstance().getAmazonSNSClient();
+			
+			 PublishRequest request = new PublishRequest();
+			 request.setMessage(message);
+			 request.setTargetArn(TOPIC_ARN);
+			 request.setSubject(subject);
+			            
+			
+			//3. publish SNS Message
+			
+			 System.out.println(message);
+			 
+			 sns.publish(request);
+    	}
+		catch(Exception e)
+    	{
+			e.printStackTrace();
+    	}
     }
 
     class RecordReader
