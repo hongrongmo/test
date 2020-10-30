@@ -143,8 +143,12 @@ public class PublishSNS{
 							String[] processInfoContents = row[2].split("-");
 							if(processInfoContents.length>2)
 							{
-								int diff = Integer.parseInt(processInfoContents[1]) - Integer.parseInt(row[1]);
-								messageBody.append(diff + "\t");
+								if(!processInfoContents[1].isEmpty() && !row[1].isEmpty())
+								{
+									int diff = Integer.parseInt(processInfoContents[1]) - Integer.parseInt(row[1]);
+									messageBody.append(diff + "\t");
+								}
+								
 							}
 								
 						}
