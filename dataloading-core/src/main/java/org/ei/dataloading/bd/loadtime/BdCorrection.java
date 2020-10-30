@@ -1201,7 +1201,7 @@ public class BdCorrection
                 	rs = stmt.executeQuery(deleteString);
 	                List deleteRecords = creatDeleteFile(rs,dbname,updateNumber);
 	                sendDeleteToKafka(deleteRecords);
-	                writer.zipBatch();
+	                //writer.zipBatch(); //no need to zip a delete file after switch to ES modified by hmo @10/29/2020
 	                
                 }
                 else
@@ -1307,15 +1307,24 @@ public class BdCorrection
             {
                 file.mkdir();
             }
-            String root = batchPath +"/EIDATA/tmp";
+            String root = batchPath +"/EIDATA";
             file=new File(root);
 
             if(!file.exists())
             {
                 file.mkdir();
             }
+            
+            String tmp = root +"/tmp";
+            file=new File(tmp);
 
-            file = new File(root+"/delete.txt");
+            if(!file.exists())
+            {
+                file.mkdir();
+            }
+
+            file = new File(tmp+"/delete.txt");
+            System.out.println("FILE="+file);
 
             if(!file.exists())
             {
