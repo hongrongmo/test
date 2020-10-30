@@ -442,15 +442,16 @@ public class XmlCombiner extends CombinerTimestamp {
         try
         {
             stmt = con.createStatement();
-
-            rs = stmt.executeQuery("select cittype,database from bd_master_cittype where database='"+database+"'");
+            String sqlquery="select trim(cittype) cittype,database from bd_master_cittype where database='"+database+"'";
+            System.out.println("get cittype "+sqlquery);
+            rs = stmt.executeQuery(sqlquery);
             while (rs.next())
             {
                 cittype = rs.getString("cittype");
                 database = rs.getString("database");
                 if(cittype != null)
                 {
-                	cittypeList.add(cittype);
+                	cittypeList.add(cittype.toLowerCase().trim());
                 }
             }
 
@@ -554,6 +555,7 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
         	  if(this.cittypeList==null)
               {
         		  this.cittypeList = getCittype(con,database);
+        		  System.out.println("get cittype");
               }
         	  
               for(int currentCoord = 0; currentCoord < numCoords; currentCoord++)
@@ -566,7 +568,7 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
                 String cittype = rs.getString("CITTYPE"); 
                 
                 //added by hmo to block records with new cittype to index @10/14/2020
-                if(cittype!=null && !this.cittypeList.contains(cittype))
+                if(cittype!=null && !this.cittypeList.contains(cittype.toLowerCase().trim()))
                 {
                 	System.out.println("BLOCK records "+pui+" with unknown cittype \""+cittype+"\"");
                 	continue;
@@ -2405,16 +2407,16 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
 	  {
 		  if(actionType.equalsIgnoreCase("lookupIndex"))
 			  sqlQuery =
-				  "select ACCESSNUMBER,PUI,AUTHOR,AUTHOR_1,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE,PUI,REGIONALTERM,SOURCETITLEABBREV,UPDATENUMBER, "
+				  "select ACCESSNUMBER,PUI,AUTHOR,AUTHOR_1,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE,PUI,REGIONALTERM,SOURCETITLEABBREV,UPDATENUMBER, null as affid, null as cafe_affiliation,"
 				  +
-				  "m_id, apict, apict1, PUBLICATIONYEAR, LOADNUMBER,CORRESPONDENCEAFFILIATION FROM "
+				  "null as cafe_author, null as cafe_author1, m_id, apict, apict1, PUBLICATIONYEAR, LOADNUMBER,CORRESPONDENCEAFFILIATION FROM "
 				  + tableName + " where LOADNUMBER='" + weekNumber +
 				  "' AND loadnumber != 0 and database='" + database + "'";
 		  else
 			  sqlQuery =
-			  "select ACCESSNUMBER,PUI,AUTHOR,AUTHOR_1,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE,PUI,REGIONALTERM,SOURCETITLEABBREV,UPDATENUMBER, "
+			  "select ACCESSNUMBER,PUI,AUTHOR,AUTHOR_1,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE,PUI,REGIONALTERM,SOURCETITLEABBREV,UPDATENUMBER,null as affid, null as cafe_affiliation, "
 			  +
-			  "m_id, apict, apict1, PUBLICATIONYEAR, LOADNUMBER,CORRESPONDENCEAFFILIATION FROM "
+			  "null as cafe_author, null as cafe_author1, m_id, apict, apict1, PUBLICATIONYEAR, LOADNUMBER,CORRESPONDENCEAFFILIATION FROM "
 			  + tableName + " where loadnumber != 0 and database='" + database + "'"; 
 	  }
 	  
