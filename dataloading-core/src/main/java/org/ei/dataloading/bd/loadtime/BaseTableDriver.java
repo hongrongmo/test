@@ -452,7 +452,14 @@ public class BaseTableDriver
             }
             
             out.flush();
-            sendNotisfication(storeNewDoctypeDocument);
+            
+            /*HH 11/02/2020 Only Send message when there is newdocTypes to avoid InvalidParameterException: Invalid parameter: Empty message*/
+            
+            if(storeNewDoctypeDocument != null && storeNewDoctypeDocument.size() >0)
+            {
+            	sendNotisfication(storeNewDoctypeDocument);
+            }
+            
         }
         catch(Exception e)
         {

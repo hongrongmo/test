@@ -471,10 +471,12 @@ public class SharedSearchSearchEntry {
 							&& Integer.parseInt(indexCount) >= Integer.parseInt(esHitCount)) {
 						outputList.add(lookupItem);
 					}
-					else
-					{
-						System.out.println(lookupItem + " db count < esHitCount, so no action " + indexCount + " < " + esHitCount);
-					}
+					
+					//Commented out 10/30/2020 to keep log file readable, only uncomment for debugging
+					/*
+					 * else { System.out.println(lookupItem +
+					 * " db count < esHitCount, so no action " + indexCount + " < " + esHitCount); }
+					 */
 				}
 				else
 				{
