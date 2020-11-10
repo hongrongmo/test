@@ -268,7 +268,8 @@ public class KafkaService {
 					if (exception == null) 
 					{
 						//missedData.remove(key);
-						logger.info("Received record "+key+" metadata(" + "Partition: " + metadata.partition() + "\t" + "Offset: " + metadata.offset()+")");
+						//HH commented 11/03/2020 for making log file readable
+						//logger.info("Received record "+key+" metadata(" + "Partition: " + metadata.partition() + "\t" + "Offset: " + metadata.offset()+")");
 					} 
 					else 
 					{

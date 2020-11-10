@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Pattern;
 
 import org.apache.log4j.Logger;
@@ -15,6 +17,7 @@ import com.amazonaws.auth.InstanceProfileCredentialsProvider;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.sns.AmazonSNS;
 import com.amazonaws.services.sns.AmazonSNSClientBuilder;
+import com.amazonaws.services.sns.model.MessageAttributeValue;
 import com.amazonaws.services.sns.model.PublishRequest;
 /**
  * 
@@ -53,6 +56,42 @@ public class PublishSNS{
 			message = generatebatchInfoSNSMessage();
 
 		publishSNSMessage(message);		
+	}
+	/*To add filter policy for messages sent to other teams than ei.operation group*/
+	public void publishSNSMessageWithAttributes(String message)
+	{
+		
+		/* for SNS messages sent to Judy and TM for some cases, as 1. cafe isopenaccess types when other than 0,1,2
+		2. BD cittype mm,pp 
+		*/
+		
+		logger = Logger.getLogger(PublishSNS.class);
+		//1. log sns
+		//2. get SNS client
+		AmazonSNS sns = AmazonSNSService.getInstance().getAmazonSNSClient();
+		PublishRequest request = new PublishRequest();
+		 request.setMessage(message);
+		 request.setTargetArn(TOPIC_ARN);
+		 request.setSubject(subject);
+		            
+		
+		 //3. Set message Attributes 
+		 Map<String, MessageAttributeValue> attributes = new HashMap<>();
+		 MessageAttributeValue attr_new_bd_cittype = new MessageAttributeValue().withDataType("String")
+				 .withStringValue("New Doctype");
+		
+		 MessageAttributeValue attr_isOpenAccess_non_012 = new MessageAttributeValue().withDataType("String")
+				 .withStringValue(">2");
+		
+		 
+		 attributes.put("bd_new_cittype", attr_new_bd_cittype);
+		 attributes.put("cafe_gt_2_oa", attr_isOpenAccess_non_012);
+		 
+		//3. publish SNS Message
+		
+		 System.out.println(message);
+		 
+		sns.publish(request.withMessageAttributes(attributes));
 	}
 	
 	public void publishSNSMessage(String message)
@@ -143,8 +182,12 @@ public class PublishSNS{
 							String[] processInfoContents = row[2].split("-");
 							if(processInfoContents.length>2)
 							{
-								int diff = Integer.parseInt(processInfoContents[1]) - Integer.parseInt(row[1]);
-								messageBody.append(diff + "\t");
+								if(!processInfoContents[1].isEmpty() && !row[1].isEmpty())
+								{
+									int diff = Integer.parseInt(processInfoContents[1]) - Integer.parseInt(row[1]);
+									messageBody.append(diff + "\t");
+								}
+								
 							}
 								
 						}

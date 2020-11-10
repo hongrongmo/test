@@ -130,12 +130,12 @@ public class HTMLEscapeExample
         {"\u00A6", "brvbar"}, // broken bar = broken vertical bar
         {"\u00A7", "sect"}, // section sign
         {"\u00A8", "uml"}, // diaeresis = spacing diaeresis
-        {"\u00A9", "copy"}, // © - copyright sign
+        {"\u00A9", "copy"}, //  - copyright sign
         {"\u00AA", "ordf"}, // feminine ordinal indicator
         {"\u00AB", "laquo"}, // left-pointing double angle quotation mark = left pointing guillemet
         {"\u00AC", "not"}, // not sign
         {"\u00AD", "shy"}, // soft hyphen = discretionary hyphen
-        {"\u00AE", "reg"}, // ® - registered trademark sign
+        {"\u00AE", "reg"}, // - registered trademark sign
         {"\u00AF", "macr"}, // macron = spacing macron = overline = APL overbar
         {"\u00B0", "deg"}, // degree sign
         {"\u00B1", "plusmn"}, // plus-minus sign = plus-or-minus sign
