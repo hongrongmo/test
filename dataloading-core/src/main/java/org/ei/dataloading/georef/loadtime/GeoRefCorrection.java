@@ -1180,7 +1180,7 @@ public class GeoRefCorrection
 		
 	private int checkES(String value, String searchfield,String database)
 	{
-		String esUrl = "https://shared-search-service-api.staging.scopussearch.net/sharedsearch/document/result";
+		String esUrl = "https://shared-search-service-api.prod.scopussearch.net/sharedsearch/document/result";
 		URL urlObject;
 		String result = null;
 		int hitCount=0;
@@ -1235,10 +1235,16 @@ public class GeoRefCorrection
 					JSONParser parser = new JSONParser();
 					JSONObject json = (JSONObject) parser.parse(response.toString());
 					hitCount = Integer.parseInt(json.get("totalResultsCount").toString());
+					if(hitCount>0)
+					{
+						System.out.println("***ESQuery:" + query);   // only for debugging
+						System.out.println("***" + value + "\t" + hitCount +" ***"); 
+						
+					}
 								
 				}
 				
-				//System.out.println("***"+value + "\t" + hitCount +" ***");   // only for debugging	
+				
 				
 			}
 		}
@@ -1370,8 +1376,7 @@ private void processResponse(String value, String response, BufferedWriter bw) t
 			{
 				writer.zipBatch();
 			}
-			writer.end();
-			writer.flush();
+			writer.end();		
 
 		}
 		catch(Exception e)

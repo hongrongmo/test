@@ -43,11 +43,13 @@ public class BdDocumentType
       bdDocType.put("cp",CONFERENCE_ARTICLE_CODE);
       bdDocType.put("ab",JOURNAL_ARTICLE_CODE);
       bdDocType.put("ar",JOURNAL_ARTICLE_CODE);
-      bdDocType.put("bk",MONOGRAPH_CHAPTER_CODE);
+      //bdDocType.put("bk",MONOGRAPH_CHAPTER_CODE);
+      bdDocType.put("bk",BOOK_CODE);
       bdDocType.put("br",MONOGRAPH_REVIEW_CODE);
       bdDocType.put("bz",JOURNAL_ARTICLE_CODE);
       bdDocType.put("ca",CONFERENCE_ARTICLE_CODE);
-      bdDocType.put("ch",MONOGRAPH_CHAPTER_CODE);
+      //bdDocType.put("ch",MONOGRAPH_CHAPTER_CODE);
+      bdDocType.put("ch",CHAPTER_CODE);   //changed by hmo at 10/20/2020   
       bdDocType.put("cr",CONFERENCE_PROCEEDING_CODE);
       bdDocType.put("di",DISSERTATION_CODE);
       bdDocType.put("ds",DISSERTATION_CODE);
@@ -55,7 +57,7 @@ public class BdDocumentType
       //bdDocType.put("er",JOURNAL_ARTICLE_CODE);
       //change for erratum project by hmo at 7/27/2017
       bdDocType.put("er",ERRATUM_CODE);      
-      bdDocType.put("ip",JOURNAL_ARTICLE_CODE);
+      //bdDocType.put("ip",JOURNAL_ARTICLE_CODE); //change by hmo at 10/20/2020
       bdDocType.put("le",JOURNAL_ARTICLE_CODE);
       bdDocType.put("mc",MONOGRAPH_CHAPTER_CODE);
       bdDocType.put("mr",MONOGRAPH_REVIEW_CODE);

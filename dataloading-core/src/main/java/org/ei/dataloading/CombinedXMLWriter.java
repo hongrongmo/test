@@ -2908,13 +2908,13 @@ public class CombinedXMLWriter
     		//System.out.println("INPUT1="+input);
     		input = DataLoadDictionary.cleanBadCharacters(input);
     		//System.out.println("INPUT2="+input);
-    		input = input.trim().replaceAll("\\s{2,}", " ").replaceAll("&les;", "⩽").replaceAll("&ges;", "⩾");//"&les:" and "&ges;" are not recognize by escape api so w do it manually
+    		input = input.trim().replaceAll("\\s{2,}", " ").replaceAll("&les;","⩽").replaceAll("&ges;", "⩾");//"&les:" and "&ges;" are not recognize by escape api so w do it manually
     		//System.out.println("INPUT3="+input);
     		output=Entity.unescapeHtml(input);
     		//System.out.println("INPUT4="+input);
     		output=removeSpecialTag(output);
     		//System.out.println("INPUT5="+input);
-    	
+    	    // nuclei with 20⩽A⩽38
     		
     	}
     	return output;
@@ -3955,8 +3955,8 @@ public class CombinedXMLWriter
     	CombinedXMLWriter c = new CombinedXMLWriter(1,1,"cpx");
     	//String testString = "  check   comma  space ";
     	String testString = args[0];
-    	//System.out.println("before= "+testString+"\n after="+c.removeExtraSpace(testString));
-    	//System.out.println("after2="+StringEscapeUtils.unescapeHtml4(testString));
+    	System.out.println("before= "+testString+"\n after="+c.removeExtraSpace(testString));
+    	System.out.println("after2="+StringEscapeUtils.unescapeHtml4(testString));
    	
     }
     

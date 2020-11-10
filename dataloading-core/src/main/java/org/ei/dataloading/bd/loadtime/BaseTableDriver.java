@@ -423,7 +423,7 @@ public class BaseTableDriver
                 	 //Added for sending notisfication with new doctype 
                     String docType = (String)h.get("CITTYPE");
                     
-                    if(!cittypeList.contains(docType.toLowerCase()))
+                    if(cittypeList !=null && !cittypeList.contains(docType.toLowerCase()))
     				{
                     	//System.out.println("found new docType "+docType+ "for record "+(String)h.get("PUI"));
                     	storeNewDoctypeDocument.put((String)h.get("PUI"),docType);
@@ -452,7 +452,10 @@ public class BaseTableDriver
             }
             
             out.flush();
-            sendNotisfication(storeNewDoctypeDocument);
+            if(storeNewDoctypeDocument!=null && storeNewDoctypeDocument.size()>0)
+            {
+            	sendNotisfication(storeNewDoctypeDocument);
+            }
         }
         catch(Exception e)
         {
@@ -498,7 +501,7 @@ public class BaseTableDriver
     	String message = "";
     	try
     	{
-	    	message = getMessage(h);
+   	    	message = getMessage(h);
 	    	//2. get SNS client
 			
 			AmazonSNS sns = AmazonSNSService.getInstance().getAmazonSNSClient();
