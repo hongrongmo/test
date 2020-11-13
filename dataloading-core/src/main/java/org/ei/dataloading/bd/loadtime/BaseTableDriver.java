@@ -423,7 +423,7 @@ public class BaseTableDriver
                 	 //Added for sending notisfication with new doctype 
                     String docType = (String)h.get("CITTYPE");
                     
-                    if(!cittypeList.contains(docType.toLowerCase()))
+                    if(cittypeList !=null && !cittypeList.contains(docType.toLowerCase()))
     				{
                     	//System.out.println("found new docType "+docType+ "for record "+(String)h.get("PUI"));
                     	storeNewDoctypeDocument.put((String)h.get("PUI"),docType);
@@ -452,14 +452,10 @@ public class BaseTableDriver
             }
             
             out.flush();
-            
-            /*HH 11/02/2020 Only Send message when there is newdocTypes to avoid InvalidParameterException: Invalid parameter: Empty message*/
-            
-            if(storeNewDoctypeDocument != null && storeNewDoctypeDocument.size() >0)
+            if(storeNewDoctypeDocument!=null && storeNewDoctypeDocument.size()>0)
             {
             	sendNotisfication(storeNewDoctypeDocument);
             }
-            
         }
         catch(Exception e)
         {
@@ -505,7 +501,7 @@ public class BaseTableDriver
     	String message = "";
     	try
     	{
-	    	message = getMessage(h);
+   	    	message = getMessage(h);
 	    	//2. get SNS client
 			
 			AmazonSNS sns = AmazonSNSService.getInstance().getAmazonSNSClient();

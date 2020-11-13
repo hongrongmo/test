@@ -603,6 +603,14 @@ public class DataLoadDictionary
         badCharacterMap.put("c&caron;","&#269;");
         badCharacterMap.put("C&acute;","&#262;");
         badCharacterMap.put("c&acute;","&#263;");
+        badCharacterMap.put("A&breve;","&#258;");
+        badCharacterMap.put("a&breve;","&#259;");
+        badCharacterMap.put("G&breve;","&#286;");
+        badCharacterMap.put("g&breve;","&#287;");
+        badCharacterMap.put("U&breve;","&#364;");
+        badCharacterMap.put("u&breve;","&#365;");
+        
+        
     }
     
     public static String cleanBadCharacters(String input)
