@@ -1235,12 +1235,12 @@ public class GeoRefCorrection
 					JSONParser parser = new JSONParser();
 					JSONObject json = (JSONObject) parser.parse(response.toString());
 					hitCount = Integer.parseInt(json.get("totalResultsCount").toString());
-					if(hitCount>0)
-					{
-						System.out.println("***ESQuery:" + query);   // only for debugging
-						System.out.println("***" + value + "\t" + hitCount +" ***"); 
-						
-					}
+					/*
+					 * if(hitCount>0) { System.out.println("***ESQuery:" + query); // only for
+					 * debugging System.out.println("***" + value + "\t" + hitCount +" ***");
+					 * 
+					 * }
+					 */
 								
 				}
 				
