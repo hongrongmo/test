@@ -265,13 +265,14 @@ public class KafkaService {
 				@Override
 				public void onCompletion(RecordMetadata metadata, Exception exception)
 				{
-					if (exception == null) 
+					//HH commented 11/03/2020 for making log file readable
+					/*if (exception == null) 
 					{
 						//missedData.remove(key);
-						//HH commented 11/03/2020 for making log file readable
 						//logger.info("Received record "+key+" metadata(" + "Partition: " + metadata.partition() + "\t" + "Offset: " + metadata.offset()+")");
-					} 
-					else 
+					} */
+					//else
+					if(exception != null)
 					{
 						logger.info("Resend record "+key+ " for "+reSending+1+" times because Exception"+exception);
 						if(reSending>4)

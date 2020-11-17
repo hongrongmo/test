@@ -27,8 +27,8 @@ import com.amazonaws.services.sns.model.PublishRequest;
  */
 public class PublishSNS{
 	
-	private static final String TOPIC_ARN = "arn:aws:sns:us-east-1:230521890328:EVDataLoading";
-	private static String subject = "ES Weekly QA Report";
+	private String topic_arn = "arn:aws:sns:us-east-1:230521890328:EVDataLoading";
+	private String subject = "ES Weekly QA Report";
 	Logger logger;
 	
 	String searchField;
@@ -36,7 +36,13 @@ public class PublishSNS{
 	String facetField;
 	String fileName;
 	
-	PublishSNS(String searchField, String searchValue, String facetField, String fileName)
+	public PublishSNS(String topicARN, String subject)
+	{
+		this.topic_arn = topicARN;
+		this.subject = subject;
+		
+	}
+	public PublishSNS(String searchField, String searchValue, String facetField, String fileName)
 	{
 		this.searchField = searchField;
 		this.searchValue = searchValue;
@@ -71,7 +77,7 @@ public class PublishSNS{
 		AmazonSNS sns = AmazonSNSService.getInstance().getAmazonSNSClient();
 		PublishRequest request = new PublishRequest();
 		 request.setMessage(message);
-		 request.setTargetArn(TOPIC_ARN);
+		 request.setTargetArn(topic_arn);
 		 request.setSubject(subject);
 		            
 		
@@ -108,7 +114,7 @@ public class PublishSNS{
 		
 		 PublishRequest request = new PublishRequest();
 		 request.setMessage(message);
-		 request.setTargetArn(TOPIC_ARN);
+		 request.setTargetArn(topic_arn);
 		 request.setSubject(subject);
 		            
 		
