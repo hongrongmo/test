@@ -2904,7 +2904,7 @@ public class CombinedXMLWriter
     	if(input!=null)
     	{ 
     		//System.out.println("INPUT0="+input);
-    		input = input.replaceAll("&mdash;", "—");
+    		input = input.replaceAll("&mdash;", "—").replaceAll("&dollar;", "\\$").replaceAll("&percnt;", "%").replaceAll("&apos;","'");
     		//System.out.println("INPUT1="+input);
     		input = DataLoadDictionary.cleanBadCharacters(input);
     		//System.out.println("INPUT2="+input);
