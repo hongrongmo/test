@@ -789,9 +789,9 @@ public class INSPECCombiner
 	
 	                if(rs.getString("ipc")!=null)
 	                {
-	                    String ipcString = rs.getString("ipc");
+	                    String ipcString = getIpcCode(rs.getString("ipc"));
 	                    ipcString = perl.substitute("s/\\//SLASH/g", ipcString);
-	                    rec.put(EVCombinedRec.INT_PATENT_CLASSIFICATION, ipcString);
+	                    rec.put(EVCombinedRec.INT_PATENT_CLASSIFICATION, prepareMulti(ipcString));
 	                }
 	
 	                rec.put(EVCombinedRec.DOCID, rs.getString("M_ID"));
@@ -900,6 +900,33 @@ public class INSPECCombiner
 	        
 	        }
        }
+    }
+    
+    private String getIpcCode(String ipc) throws Exception
+    {
+    	StringBuffer ipcCodes=new StringBuffer();
+    	if(ipc !=null)
+    	{
+    		String[] ipcs=ipc.split(Constants.AUDELIMITER,-1);
+    		for(int i=0;i<ipcs.length;i++)
+    		{
+    			if(ipcs[i]!=null)
+    			{
+    				String[] ipcD= ipcs[i].split(Constants.IDDELIMITER,-1);
+    				ipcCodes.append(ipcD[0]);
+    				if(i<ipcs.length-1)
+    				{
+    					ipcCodes.append(Constants.AUDELIMITER);
+    				}
+    				
+    			}
+    			
+    		}
+    	}
+    	//System.out.println(ipc);
+    	//System.out.println(ipcCodes.toString());
+    	return ipcCodes.toString();
+    		
     }
     
     private void processNumericalIndex(EVCombinedRec rec, String mid, String accessnumber, String niString,Connection con) throws Exception
@@ -1827,9 +1854,9 @@ public class INSPECCombiner
 
 						// IPC
 						if (rs.getString("ipc") != null) {
-							String ipcString = rs.getString("ipc");
-							ipcString = perl.substitute("s/\\//SLASH/g", ipcString);
-							rec.put(EVCombinedRec.INT_PATENT_CLASSIFICATION, ipcString);
+							 String ipcString = getIpcCode(rs.getString("ipc"));
+			                    ipcString = perl.substitute("s/\\//SLASH/g", ipcString);
+			                    rec.put(EVCombinedRec.INT_PATENT_CLASSIFICATION, prepareMulti(ipcString));
 						}
 
 						rec.put(EVCombinedRec.DOCID, rs.getString("M_ID"));
