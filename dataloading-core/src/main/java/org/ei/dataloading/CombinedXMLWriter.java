@@ -2904,11 +2904,11 @@ public class CombinedXMLWriter
     	if(input!=null)
     	{ 
     		//System.out.println("INPUT0="+input);
-    		input = input.replaceAll("&mdash;", "—").replaceAll("&dollar;", "\\$").replaceAll("&percnt;", "%").replaceAll("&apos;","'");
+    		input = input.replaceAll("&mdash;", "—").replaceAll("&dollar;", "\\$").replaceAll("&percnt;", "%").replaceAll("&apos;","'").replaceAll("&les;","⩽").replaceAll("&ges;", "⩾");
     		//System.out.println("INPUT1="+input);
     		input = DataLoadDictionary.cleanBadCharacters(input);
     		//System.out.println("INPUT2="+input);
-    		input = input.trim().replaceAll("\\s{2,}", " ").replaceAll("&les;","⩽").replaceAll("&ges;", "⩾");//"&les:" and "&ges;" are not recognize by escape api so w do it manually
+    		input = input.trim().replaceAll("\\s{2,}", " ");//"&les:" and "&ges;" are not recognize by escape api so w do it manually
     		//System.out.println("INPUT3="+input);
     		output=Entity.unescapeHtml(input);
     		//System.out.println("INPUT4="+input);
