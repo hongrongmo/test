@@ -1113,7 +1113,11 @@ public class INSPECCombiner
     {
 
         ArrayList list = new ArrayList();
-        //.out.println("1= "+aString);
+        
+        //added by hmo at 11/17/2020 for removing comma and period 
+        aString=aString.replaceAll("\\.", " ").replaceAll(",", " ");
+
+        
         String[] st = aString.split(Constants.AUDELIMITER,-1);
         String s;
         HashMap  afMap = new HashMap();
