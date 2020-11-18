@@ -237,10 +237,6 @@ public class NewDataTesting
 		{
 			test.checkDetailRecord(database,updateNumber);
 		}
-		//else if(action.equals("getcount"))
-		//{
-		//	test.getCountFromFast(updateNumber,database);
-		//}		
 		else if(action.equals("invalidYearData"))
 		{
 			test.getInvalidYearData(database);
@@ -417,6 +413,10 @@ public class NewDataTesting
 		else  if(action.equals("xmltojson"))
 		{
 			test.xmlToJson(updateNumber);
+		}
+		else if(action.contentEquals("checkes"))
+		{
+			test.checkES(updateNumber, "batchInfo", "grf");
 		}
 		else
 		{
@@ -6496,6 +6496,109 @@ public class NewDataTesting
 	        System.out.println("    " + line);
 	    }
 	    System.out.println();
+	}
+	
+	@SuppressWarnings("unchecked")
+	public String buildESQuery(String value, String searchField, String database) {
+		
+		JSONObject query = new JSONObject();
+		
+		JSONObject queryString = new JSONObject();
+		queryString.put("queryString", searchField + ":" + value + " AND database:" + database);
+		queryString.put("defaultOperator", "AND");
+		query.put("query",queryString);
+		
+		JSONArray returnFields = new JSONArray();
+		returnFields.add("eidocid");
+		query.put("returnFields", returnFields);
+		
+
+		JSONObject result = new JSONObject();
+		result.put("skip", 0);
+		result.put("amount", 4000);
+		query.put("resultSet", result);
+		
+		return query.toJSONString();
+			
+	}
+	
+	private int checkES(String value, String searchfield,String database)
+	{
+		String esUrl = "https://shared-search-service-api.prod.scopussearch.net/sharedsearch/document/result";
+		URL urlObject;
+		String result = null;
+		int hitCount=0;
+		String query=buildESQuery(value,searchfield,database);		
+		System.out.println("ESQuery: " + query);
+		
+		try
+		{
+							
+			long startTime = System.currentTimeMillis();
+							
+			urlObject = new URL(esUrl);
+			HttpURLConnection httpCon = (HttpURLConnection) urlObject.openConnection();
+			httpCon.setRequestMethod("POST");
+			httpCon.setRequestProperty("x-els-product", "engineering_village");
+			httpCon.setRequestProperty("x-els-diagnostics", "false");
+			httpCon.setRequestProperty("Content-Type", "application/json");
+			httpCon.setDoOutput(true);
+			//logger.info("before outputstreamwriter....");
+			OutputStreamWriter writer = new OutputStreamWriter(httpCon.getOutputStream());
+			//logger.info("after outputstreamwriter....");
+			writer.write(query);
+			writer.close();
+			int responseCode = httpCon.getResponseCode();
+			
+			//logger.info("responseCode: " + responseCode);
+			// Only read response if connection was successful
+			if(responseCode == HttpURLConnection.HTTP_OK)
+			{
+				BufferedReader in = new BufferedReader(new InputStreamReader(httpCon.getInputStream()));
+				String line;
+				StringBuilder response = new StringBuilder();
+				while((line = in.readLine()) != null)
+				{
+					response.append(line);
+					
+					//if(line.equalsIgnoreCase("hits"))
+						//break;
+				}
+				System.out.println("Response: " + response.toString());   // only for debugging
+				// close stream
+				in.close();
+				
+				long finishTime = System.currentTimeMillis();
+				//System.out.println("Time to runQuery: " + (finishTime - startTime));
+				
+				// process response and fetch HitCount from result
+				
+				
+				if(!(response.toString().isEmpty()))
+				{
+					JSONParser parser = new JSONParser();
+					JSONObject json = (JSONObject) parser.parse(response.toString());
+					hitCount = Integer.parseInt(json.get("totalResultsCount").toString());
+					if(hitCount>0)
+					{
+						System.out.println("***ESQuery:" + query);   // only for debugging
+						System.out.println("***" + value + "\t" + hitCount +" ***"); 
+						
+					}
+								
+				}
+				
+				
+				
+			}
+		}
+		catch(Exception e)
+		{					
+			e.printStackTrace();			
+
+		}	
+		return hitCount;
+			
 	}
 	
 
