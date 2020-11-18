@@ -17,6 +17,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.ArrayList;
 import java.util.regex.*;
+import java.util.Arrays;
 
 import org.ei.domain.*;
 import org.apache.oro.text.perl.Perl5Util;
@@ -446,7 +447,8 @@ public class INSPECCombiner
 	                        }
 	                    }
 	
-	                    //rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareAuthor(aaff.toString()));
+	                    System.out.println(aaff.toString());
+						System.out.println(Arrays.toString(prepareAffiliation(aaff.toString())));
 	                    rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareAffiliation(aaff.toString()));
 	                  //added by hmo on 2019/09/11
 	                   // rec.put(EVCombinedRec.AFFILIATIONID, prepareAffiliationID(aaff.toString()));
@@ -1183,19 +1185,19 @@ public class INSPECCombiner
 	      	   		}
           	   	
           	   	
-	          	   	if(org!=null && dept!=null)
+	          	   	if(org!=null && dept!=null && dept.length()>0)
 	          	   	{
 	          	   		ss = dept+", "+org;
 	          	   		if(!list.contains(ss))
 	          	   			list.add(ss);
 	          	   	}
-	          	   	else if(org!=null)
+	          	   	else if(org!=null && org.length()>0)
 	          	   	{
 	          	   		ss = org;
 	          	   		if(!list.contains(ss))
 	          	   			list.add(ss);
 	          	   	}  
-	          	   	else if(dept!=null)
+	          	   	else if(dept!=null && dept.length()>0)
 	          	   	{
 	          	   		ss = dept;
 	          	   		if(!list.contains(ss))
@@ -1805,6 +1807,7 @@ public class INSPECCombiner
 									aaff.append(rs.getString("aaffmulti2"));
 								}
 							}
+							
 							rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareAffiliation(aaff.toString()));
 							rec.put(EVCombinedRec.AFFILIATION_LOCATION, prepareAffiliationLocation(aaff.toString()));
 
