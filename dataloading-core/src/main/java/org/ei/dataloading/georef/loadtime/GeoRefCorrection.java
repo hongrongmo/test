@@ -1731,7 +1731,15 @@ private void processResponse(String value, String response, BufferedWriter bw) t
 			{
 				file.mkdir();
 			}
-			String root = batchPath +"/EIDATA/tmp";
+			String root = batchPath +"/EIDATA";
+			file=new File(root);
+
+			if(!file.exists())
+			{
+				file.mkdir();
+			}
+			
+			root = root +"/tmp";
 			file=new File(root);
 
 			if(!file.exists())
