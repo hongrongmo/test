@@ -408,15 +408,14 @@ public class NewDataTesting
 		else  if(action.equals("displayStringCharValue"))
 		{
 			test.checkStringCharacter(updateNumber);
-		}
-		
+		}		
 		else  if(action.equals("xmltojson"))
 		{
 			test.xmlToJson(updateNumber);
 		}
 		else if(action.contentEquals("checkes"))
 		{
-			test.checkES(updateNumber, "batchInfo", "grf");
+			test.checkES(updateNumber, tableName1, database);
 		}
 		else
 		{
@@ -560,7 +559,10 @@ public class NewDataTesting
 
 	 private void deleteESRecord(String infile) throws Exception
 	 {
-		KafkaService kafka = new KafkaService();
+		//KafkaService kafka = new KafkaService();
+		long processTime = System.currentTimeMillis();
+		String propertyFileName="lib/config.properties";
+		KafkaService kafka = new KafkaService(processTime+"delete"+infile, propertyFileName);
 		BufferedReader deleteFileStream;
 		List deleteList = new ArrayList();
 		String eid=null;
