@@ -129,15 +129,16 @@ public class NewDataTesting
 	//public static String URL="jdbc:oracle:thin:@127.0.0.1:5523:EIA";
 	public static String URL="jdbc:oracle:thin:@eid.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eid";
 	public static String driver="oracle.jdbc.driver.OracleDriver";
-	public static String username="ap_ev_search";
+	public static String username="ap_correction";
 	public static String username1="ap_ev_search";
-	public static String password="";
+	public static String password="ei3it";
 	public static String password1="";
     public static String tableName="bd_master";
     public static String tableName1="bd_master_jupiter";
     public static String database="cpx";
     public static String updateNumber="0";
     public static String action="bd_loading";
+    public static String server="prod";
 
 	public static void main(String args[]) throws Exception
 	{
@@ -186,6 +187,11 @@ public class NewDataTesting
 			{
 				test.action = args[6];
 				System.out.println("ACTION:: "+test.action);
+			}
+			if(args.length>7)
+			{
+				test.server = args[7];
+				System.out.println("ACTION:: "+test.server);
 			}
 
 		}
@@ -415,7 +421,15 @@ public class NewDataTesting
 		}
 		else if(action.contentEquals("checkes"))
 		{
-			test.checkES(updateNumber, tableName1, database);
+			test.checkES(updateNumber, tableName1, database, server);
+		}
+		else if(action.contentEquals("getesmid"))
+		{
+			test.getESMID(updateNumber, tableName1, database, server);
+		}		
+		else if(action.contentEquals("comparedatabasees"))
+		{
+			test.runDatabaseTOES(updateNumber, tableName1, database, server, tableName);
 		}
 		else
 		{
@@ -976,8 +990,8 @@ public class NewDataTesting
 
 	}
 	
-	/*
-	private void runStoredProcedure(String name,int updateNumber)
+	
+	private void runDatabaseTOES(String value, String searchfield,String database, String server,String tablename)
     {
 		Statement stmt = null;
 		ResultSet rs = null;
@@ -985,17 +999,26 @@ public class NewDataTesting
 		String sqlQuery = null;
 		
 		HashMap mappingMap = new HashMap();
-    	long midTime = System.currentTimeMillis();
-        CallableStatement pstmt = null;
+    	long midTime = System.currentTimeMillis();       
         boolean blnResult = false;
         try
         {
         	con = getConnection(this.URL,this.driver,this.username,this.password);
-			stmt = con.createStatement();                   
-            stmt = con.prepareCall("{ call update_aip_backup_table(?,?)}");
-            //stmt.setString(1,updateNumber);
-            //stmt.setString(2,database);
-            stmt.executeUpdate();
+			stmt = con.createStatement(); 
+			if(value.equalsIgnoreCase("1"))
+			{
+				sqlQuery = "select m_id from "+tablename;
+			}
+			else
+			{
+				sqlQuery = "select m_id from "+tablename +" where load_number="+value;
+			}
+			rs = stmt.executeQuery(sqlQuery);
+			while (rs.next())
+			{					
+				String m_id = rs.getString("m_id");
+				checkES(m_id, searchfield,database, server);
+			}
             
         }
         catch (Exception e)
@@ -1032,7 +1055,7 @@ public class NewDataTesting
 			}
 		}
     }
-	*/
+	
 	
 	public HashMap testMapping()
 	{
@@ -6517,21 +6540,139 @@ public class NewDataTesting
 
 		JSONObject result = new JSONObject();
 		result.put("skip", 0);
-		result.put("amount", 4000);
+		result.put("amount", 4300);
 		query.put("resultSet", result);
 		
 		return query.toJSONString();
 			
 	}
 	
-	private int checkES(String value, String searchfield,String database)
+	private int checkES(String value, String searchfield,String database, String server)
 	{
 		String esUrl = "https://shared-search-service-api.prod.scopussearch.net/sharedsearch/document/result";
+		if(server.equalsIgnoreCase("prod"))
+		{
+			esUrl = "https://shared-search-service-api.prod.scopussearch.net/sharedsearch/document/result";
+			System.out.println("using prod server: "+esUrl);
+		}
+		else if (server.equalsIgnoreCase("cert"))
+		{
+			esUrl = "https://shared-search-service-api.cert.scopussearch.net/sharedsearch/document/result";
+			System.out.println("using cert server: "+esUrl);
+		}
+		else if (server.equalsIgnoreCase("dev"))
+		{
+			esUrl = "https://shared-search-service-api.dev.scopussearch.net/sharedsearch/document/result";
+			System.out.println("using dev server: "+esUrl);
+		}
+		else
+			System.out.println("using default prod server: "+esUrl);
+		
 		URL urlObject;
 		String result = null;
 		int hitCount=0;
 		String query=buildESQuery(value,searchfield,database);		
-		System.out.println("ESQuery: " + query);
+		//System.out.println("ESQuery: " + query);
+		
+		try
+		{
+							
+			long startTime = System.currentTimeMillis();
+							
+			urlObject = new URL(esUrl);
+			HttpURLConnection httpCon = (HttpURLConnection) urlObject.openConnection();
+			httpCon.setRequestMethod("POST");
+			httpCon.setRequestProperty("x-els-product", "engineering_village");
+			httpCon.setRequestProperty("x-els-diagnostics", "false");
+			httpCon.setRequestProperty("Content-Type", "application/json");
+			httpCon.setDoOutput(true);
+			//logger.info("before outputstreamwriter....");
+			OutputStreamWriter writer = new OutputStreamWriter(httpCon.getOutputStream());
+			//logger.info("after outputstreamwriter....");
+			writer.write(query);
+			writer.close();
+			int responseCode = httpCon.getResponseCode();
+			
+			//logger.info("responseCode: " + responseCode);
+			// Only read response if connection was successful
+			if(responseCode == HttpURLConnection.HTTP_OK)
+			{
+				BufferedReader in = new BufferedReader(new InputStreamReader(httpCon.getInputStream()));
+				String line;
+				StringBuilder response = new StringBuilder();
+				while((line = in.readLine()) != null)
+				{
+					response.append(line);					
+					if(line.equalsIgnoreCase("hits"))
+						break;
+				}
+				//System.out.println("Response: " + response.toString());   // only for debugging
+				// close stream
+				in.close();
+				
+				long finishTime = System.currentTimeMillis();
+				//System.out.println("Time to runQuery: " + (finishTime - startTime));
+				
+				// process response and fetch HitCount from result
+				
+				
+				if(!(response.toString().isEmpty()))
+				{
+					JSONParser parser = new JSONParser();
+					JSONObject json = (JSONObject) parser.parse(response.toString());
+					hitCount = Integer.parseInt(json.get("totalResultsCount").toString());
+					if(hitCount>0)
+					{
+						//System.out.println("***ESQuery:" + query);   // only for debugging
+						System.out.println("***" + value + "\t" + hitCount +" ***"); 						
+						
+					}
+					else
+					{
+						System.out.println("no record found for m_id " + value ); 
+					}
+								
+				}
+				
+				
+				
+			}
+		}
+		catch(Exception e)
+		{					
+			e.printStackTrace();			
+
+		}	
+		return hitCount;
+			
+	}
+	
+	private int getESMID(String value, String searchfield,String database, String server)
+	{
+		String esUrl = "https://shared-search-service-api.prod.scopussearch.net/sharedsearch/document/result";
+		if(server.equalsIgnoreCase("prod"))
+		{
+			esUrl = "https://shared-search-service-api.prod.scopussearch.net/sharedsearch/document/result";
+			System.out.println("using prod server: "+esUrl);
+		}
+		else if (server.equalsIgnoreCase("cert"))
+		{
+			esUrl = "https://shared-search-service-api.cert.scopussearch.net/sharedsearch/document/result";
+			System.out.println("using cert server: "+esUrl);
+		}
+		else if (server.equalsIgnoreCase("dev"))
+		{
+			esUrl = "https://shared-search-service-api.dev.scopussearch.net/sharedsearch/document/result";
+			System.out.println("using dev server: "+esUrl);
+		}
+		else
+			System.out.println("using default prod server: "+esUrl);
+		
+		URL urlObject;
+		String result = null;
+		int hitCount=0;
+		String query=buildESQuery(value,searchfield,database);		
+		//System.out.println("ESQuery: " + query);
 		
 		try
 		{
@@ -6566,7 +6707,7 @@ public class NewDataTesting
 					//if(line.equalsIgnoreCase("hits"))
 						//break;
 				}
-				System.out.println("Response: " + response.toString());   // only for debugging
+				//System.out.println("Response: " + response.toString());   // only for debugging
 				// close stream
 				in.close();
 				
@@ -6583,9 +6724,24 @@ public class NewDataTesting
 					hitCount = Integer.parseInt(json.get("totalResultsCount").toString());
 					if(hitCount>0)
 					{
-						System.out.println("***ESQuery:" + query);   // only for debugging
+						//System.out.println("***ESQuery:" + query);   // only for debugging
 						System.out.println("***" + value + "\t" + hitCount +" ***"); 
+						JSONArray jsonArray = (JSONArray)json.get("hits"); 
+						Iterator<JSONObject> itr = jsonArray.iterator();
+						while(itr.hasNext())
+						{
+							String[] returnField = itr.next().toString().split(":");
+							if(returnField.length >1)
+							{
+								System.out.println(returnField[1].replaceAll("}", "").replaceAll("\"", ""));
+							}
+								
+						}
 						
+					}
+					else
+					{
+						System.out.println("no record found for m_id " + value ); 
 					}
 								
 				}
