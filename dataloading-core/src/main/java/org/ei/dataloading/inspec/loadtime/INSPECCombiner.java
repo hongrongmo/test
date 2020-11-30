@@ -371,7 +371,7 @@ public class INSPECCombiner
         try
         {
     	    totalCount = getResultSetSize(rs);   		// HT 09/21/2020 ONLY COMMENT OUT WHEN GENERATING WHOLE TABLE LOOKUP, UNCOMMENT IN PROD
-        	 if (this.propertyFileName != null && (getAction() == null || !(getAction().equalsIgnoreCase("lookup")))) // HT only create Kafka instance when it is // not lookup extraction
+        	if (this.propertyFileName != null && (getAction() == null || !(getAction().equalsIgnoreCase("lookup")))) // HT only create Kafka instance when it is // not lookup extraction
     	    {
     	    	System.out.println("propertyFileName="+this.propertyFileName);
     	    	kafka = new KafkaService(processTime+"_ins_"+loadNumber, this.propertyFileName);
@@ -447,8 +447,8 @@ public class INSPECCombiner
 	                        }
 	                    }
 	
-	                    System.out.println(aaff.toString());
-						System.out.println(Arrays.toString(prepareAffiliation(aaff.toString())));
+	                    //System.out.println(aaff.toString());
+						//System.out.println(Arrays.toString(prepareAffiliation(aaff.toString())));
 	                    rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareAffiliation(aaff.toString()));
 	                  //added by hmo on 2019/09/11
 	                   // rec.put(EVCombinedRec.AFFILIATIONID, prepareAffiliationID(aaff.toString()));
