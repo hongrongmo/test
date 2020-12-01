@@ -1117,7 +1117,8 @@ public class INSPECCombiner
         ArrayList list = new ArrayList();
         
         //added by hmo at 11/17/2020 for removing comma and period 
-        aString=aString.replaceAll("\\.", " ").replaceAll(",", " ");
+        //do this in CombinedXMLWriter for all database based on T.M. on EV-10082 @11/30/2020
+        //aString=aString.replaceAll("\\.", " ").replaceAll(",", " ");
 
         
         String[] st = aString.split(Constants.AUDELIMITER,-1);
