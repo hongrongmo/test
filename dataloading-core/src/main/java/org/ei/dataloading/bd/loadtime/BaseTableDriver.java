@@ -423,7 +423,8 @@ public class BaseTableDriver
                 	 //Added for sending notisfication with new doctype 
                     String docType = (String)h.get("CITTYPE");
                     
-                    if(cittypeList !=null && !cittypeList.contains(docType.toLowerCase()))
+                    // HH 12/01/2020 added docType not null as some records has no cittype
+                    if(cittypeList !=null && docType != null && !cittypeList.contains(docType.toLowerCase()))
     				{
                     	//System.out.println("found new docType "+docType+ "for record "+(String)h.get("PUI"));
                     	storeNewDoctypeDocument.put((String)h.get("PUI"),docType);
