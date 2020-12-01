@@ -1134,7 +1134,7 @@ public class CombinedXMLWriter
             	contentObject.put("AUTHORID".toLowerCase(),elementArrayObject);
             }
 
-            String[] authorAffiliation=rec.getStrings(EVCombinedRec.AUTHOR_AFFILIATION);
+            String[] authorAffiliation=removeCommaANDPeriod(rec.getStrings(EVCombinedRec.AUTHOR_AFFILIATION));
             if(authorAffiliation!=null && authorAffiliation.length>0 )
             {
             	elementArrayObject = formJsonArray(removeExtraSpace(authorAffiliation),"AUTHORAFFILIATION");          
@@ -1184,7 +1184,7 @@ public class CombinedXMLWriter
 	            contentObject.put("EDITOR".toLowerCase(),elementArrayObject);	            
             }
             
-            String[] editorAffiliation=rec.getStrings(EVCombinedRec.EDITOR_AFFILIATION);
+            String[] editorAffiliation=removeCommaANDPeriod(rec.getStrings(EVCombinedRec.EDITOR_AFFILIATION));
             if(editorAffiliation!=null && editorAffiliation.length>0 )
             {
 	            elementArrayObject = formJsonArray(removeExtraSpace(editorAffiliation),"EDITORAFFILIATION");          
@@ -2881,6 +2881,23 @@ public class CombinedXMLWriter
     	return output;
     }
     
+    public String[] removeCommaANDPeriod(String[] input)
+    {
+    	if(input!=null)
+    	{
+	    	String[] outputArray=new String[input.length];
+	    	for(int i=0;i<input.length;i++)
+	    	{
+	    		if(input[i]!=null)
+	    			outputArray[i]=input[i].replaceAll("\\.|,", " ");   		
+	    	}
+	    	return outputArray;
+    	}
+    	else
+    	{
+    		return null;
+    	}
+    }
     
     public String[] removeExtraSpace(String[] input)
     {
