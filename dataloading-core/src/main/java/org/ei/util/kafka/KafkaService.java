@@ -62,7 +62,7 @@ public class KafkaService {
     {
     	getParameterFromPropertiesFile(propertyFileName);	
     	producer  = ProducerCreator.createProducer(this.KAFKA_BROKERS);
-    	System.out.println("create Kafka Prodcuer");
+    	System.out.println("create Kafka Prodcuer:: "+this.KAFKA_BROKERS);
     	try
     	{
 	    	problemRecords = new ConcurrentHashMap<String,String>();

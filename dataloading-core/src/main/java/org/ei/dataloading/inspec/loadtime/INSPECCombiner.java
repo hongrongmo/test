@@ -17,6 +17,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.ArrayList;
 import java.util.regex.*;
+import java.util.Arrays;
 
 import org.ei.domain.*;
 import org.apache.oro.text.perl.Perl5Util;
@@ -370,7 +371,7 @@ public class INSPECCombiner
         try
         {
     	    totalCount = getResultSetSize(rs);   		// HT 09/21/2020 ONLY COMMENT OUT WHEN GENERATING WHOLE TABLE LOOKUP, UNCOMMENT IN PROD
-        	 if (this.propertyFileName != null && (getAction() == null || !(getAction().equalsIgnoreCase("lookup")))) // HT only create Kafka instance when it is // not lookup extraction
+        	if (this.propertyFileName != null && (getAction() == null || !(getAction().equalsIgnoreCase("lookup")))) // HT only create Kafka instance when it is // not lookup extraction
     	    {
     	    	System.out.println("propertyFileName="+this.propertyFileName);
     	    	kafka = new KafkaService(processTime+"_ins_"+loadNumber, this.propertyFileName);
@@ -446,7 +447,8 @@ public class INSPECCombiner
 	                        }
 	                    }
 	
-	                    //rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareAuthor(aaff.toString()));
+	                    //System.out.println(aaff.toString());
+						//System.out.println(Arrays.toString(prepareAffiliation(aaff.toString())));
 	                    rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareAffiliation(aaff.toString()));
 	                  //added by hmo on 2019/09/11
 	                   // rec.put(EVCombinedRec.AFFILIATIONID, prepareAffiliationID(aaff.toString()));
@@ -789,9 +791,9 @@ public class INSPECCombiner
 	
 	                if(rs.getString("ipc")!=null)
 	                {
-	                    String ipcString = rs.getString("ipc");
+	                    String ipcString = getIpcCode(rs.getString("ipc"));
 	                    ipcString = perl.substitute("s/\\//SLASH/g", ipcString);
-	                    rec.put(EVCombinedRec.INT_PATENT_CLASSIFICATION, ipcString);
+	                    rec.put(EVCombinedRec.INT_PATENT_CLASSIFICATION, prepareMulti(ipcString));
 	                }
 	
 	                rec.put(EVCombinedRec.DOCID, rs.getString("M_ID"));
@@ -900,6 +902,33 @@ public class INSPECCombiner
 	        
 	        }
        }
+    }
+    
+    private String getIpcCode(String ipc) throws Exception
+    {
+    	StringBuffer ipcCodes=new StringBuffer();
+    	if(ipc !=null)
+    	{
+    		String[] ipcs=ipc.split(Constants.AUDELIMITER,-1);
+    		for(int i=0;i<ipcs.length;i++)
+    		{
+    			if(ipcs[i]!=null)
+    			{
+    				String[] ipcD= ipcs[i].split(Constants.IDDELIMITER,-1);
+    				ipcCodes.append(ipcD[0]);
+    				if(i<ipcs.length-1)
+    				{
+    					ipcCodes.append(Constants.AUDELIMITER);
+    				}
+    				
+    			}
+    			
+    		}
+    	}
+    	//System.out.println(ipc);
+    	//System.out.println(ipcCodes.toString());
+    	return ipcCodes.toString();
+    		
     }
     
     private void processNumericalIndex(EVCombinedRec rec, String mid, String accessnumber, String niString,Connection con) throws Exception
@@ -1086,7 +1115,11 @@ public class INSPECCombiner
     {
 
         ArrayList list = new ArrayList();
-        //.out.println("1= "+aString);
+        
+        //added by hmo at 11/17/2020 for removing comma and period 
+        aString=aString.replaceAll("\\.", " ").replaceAll(",", " ");
+
+        
         String[] st = aString.split(Constants.AUDELIMITER,-1);
         String s;
         HashMap  afMap = new HashMap();
@@ -1152,19 +1185,19 @@ public class INSPECCombiner
 	      	   		}
           	   	
           	   	
-	          	   	if(org!=null && dept!=null)
+	          	   	if(org!=null && dept!=null && dept.length()>0)
 	          	   	{
 	          	   		ss = dept+", "+org;
 	          	   		if(!list.contains(ss))
 	          	   			list.add(ss);
 	          	   	}
-	          	   	else if(org!=null)
+	          	   	else if(org!=null && org.length()>0)
 	          	   	{
 	          	   		ss = org;
 	          	   		if(!list.contains(ss))
 	          	   			list.add(ss);
 	          	   	}  
-	          	   	else if(dept!=null)
+	          	   	else if(dept!=null && dept.length()>0)
 	          	   	{
 	          	   		ss = dept;
 	          	   		if(!list.contains(ss))
@@ -1774,6 +1807,7 @@ public class INSPECCombiner
 									aaff.append(rs.getString("aaffmulti2"));
 								}
 							}
+							
 							rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareAffiliation(aaff.toString()));
 							rec.put(EVCombinedRec.AFFILIATION_LOCATION, prepareAffiliationLocation(aaff.toString()));
 
@@ -1827,9 +1861,9 @@ public class INSPECCombiner
 
 						// IPC
 						if (rs.getString("ipc") != null) {
-							String ipcString = rs.getString("ipc");
-							ipcString = perl.substitute("s/\\//SLASH/g", ipcString);
-							rec.put(EVCombinedRec.INT_PATENT_CLASSIFICATION, ipcString);
+							 String ipcString = getIpcCode(rs.getString("ipc"));
+			                    ipcString = perl.substitute("s/\\//SLASH/g", ipcString);
+			                    rec.put(EVCombinedRec.INT_PATENT_CLASSIFICATION, prepareMulti(ipcString));
 						}
 
 						rec.put(EVCombinedRec.DOCID, rs.getString("M_ID"));
