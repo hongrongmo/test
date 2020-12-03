@@ -4706,7 +4706,10 @@ public class CombinedXMLWriter
 	    	for(int i=0;i<input.length;i++)
 	    	{
 	    		if(input[i]!=null)
-	    			outputArray[i]=input[i].replaceAll("\\.|,", " ");   		
+	    		{
+	    			//temporary stop removing comma and period
+	    			//outputArray[i]=input[i].replaceAll("\\.|,", " "); 
+	    		}
 	    	}
 	    	return outputArray;
     	}
