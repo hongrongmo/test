@@ -415,9 +415,7 @@ public class BaseTableDriver
             {
             	recordCount++;
                 Hashtable h = r.readRecord(xmlReader);
-                
-               
-            
+                           
                 if (h != null)
                 {
                 	 //Added for sending notisfication with new doctype 
