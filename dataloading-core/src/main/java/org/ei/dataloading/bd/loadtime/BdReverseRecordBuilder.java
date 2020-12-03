@@ -4,6 +4,7 @@ package org.ei.dataloading.bd.loadtime;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.StringReader;
@@ -11,9 +12,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
+import java.util.zip.ZipOutputStream;
 import java.util.*;
 
 import org.ei.common.bd.*;
+import org.apache.commons.text.StringEscapeUtils;
 import org.ei.common.Constants;
 
 
@@ -51,12 +54,13 @@ public class BdReverseRecordBuilder
     {
         int loadN=0;
         long startTime = System.currentTimeMillis();
+        /*
         if(args.length<7)
         {
             System.out.println("please enter three parameters as \" weeknumber filename databaseName action url driver username password\"");
             System.exit(1);
         }
-
+         */
         loadN = Integer.parseInt(args[0]);
 
         //infile = args[1];
@@ -245,6 +249,12 @@ public class BdReverseRecordBuilder
     	String casregistrynumber = rs.getString("CASREGISTRYNUMBER");
     	String chemicalterm = dictionary.AlphaEntitysToNumericEntitys(rs.getString("CHEMICALTERM"));
     	String referenceflag = rs.getString("REFERENCE_FLAG");
+    	String standardid = rs.getString("STANDARDID");
+    	String standarddesignation = rs.getString("STANDARDDESIGNATION");
+    	String normstandardid = rs.getString("NORMSTANDARDID");
+    	String isopenaccess = rs.getString("ISOPENACESS");
+    	String sourcebibtext = rs.getString("SOURCEBIBTEXT");
+    	
  	
     	file.write("<item>\n");
     	file.write("<ait:process-info>\n");
@@ -295,7 +305,25 @@ public class BdReverseRecordBuilder
     	//ACCESSNUMBER
     	if(accessnumber!=null && accessnumber.length()>0)
     	{
-    		file.write("<itemid idtype=\"CHEM\">"+accessnumber+"</itemid>\n");
+    		file.write("<itemid idtype=\""+database.toUpperCase()+"\">"+accessnumber+"</itemid>\n");
+    	}
+    	
+    	//NORMSTANDARDID
+    	if(normstandardid!=null && normstandardid.length()>0)
+    	{
+    		file.write("<itemid idtype=\"NORMSTANDARDID\">"+normstandardid+"</itemid>\n");
+    	}
+    	
+    	//"STANDARDDESIGNATION"
+    	if(standarddesignation!=null && standarddesignation.length()>0)
+    	{
+    		file.write("<itemid idtype=\"STANDARDDESIGNATION\">"+standarddesignation+"</itemid>\n");
+    	}
+    	
+    	//STANDARDID
+    	if(standardid!=null && standardid.length()>0)
+    	{
+    		file.write("<itemid idtype=\"STANDARDID\">"+standardid+"</itemid>\n");
     	}
     	
     	file.write("</itemidlist>\n");
@@ -305,9 +333,13 @@ public class BdReverseRecordBuilder
     	{
     		file.write("<dbcollection>CHEM</dbcollection>\n");
     	}
-    	else if(database.equals("cpx") || database.equals("pch"))
+    	else if(database.equals("cpx"))
     	{
     		file.write("<dbcollection>CPX</dbcollection>\n");
+    	}
+    	else if(database.equals("pch"))
+    	{
+    		file.write("<dbcollection>PCH</dbcollection>\n");
     	}
     	else if(database.equals("elt"))
     	{
@@ -379,7 +411,7 @@ public class BdReverseRecordBuilder
 		//CORRESPONDENCEAFFILIATION
 		if(correspondencename!=null || correspondenceaffiliation!=null || correspondenceeaddress!=null)
 		{
-			outputCorrespondence(file,correspondencename,correspondenceaffiliation,correspondenceeaddress);			
+			outputCorrespondence(file,correspondencename,correspondenceaffiliation,correspondenceeaddress,accessnumber);			
 		}//correspondence
 			
 		    		
@@ -423,6 +455,16 @@ public class BdReverseRecordBuilder
 			file.write("<sourcetitle-abbrev>"+sourcetitleabbrev+"</sourcetitle-abbrev>\n");
 		}
 		
+		if(translatedsourcetitle!=null && translatedsourcetitle.length()>0)
+		{
+			file.write("<translated-sourcetitle>"+translatedsourcetitle+"</translated-sourcetitle>\n");
+		}
+		
+		if(issuetitle!=null && issuetitle.length()>0)
+		{
+			file.write("<issuetitle>"+issuetitle+"</issuetitle>\n");
+		}
+		
 		if(issn!=null && issn.length()>0)
 		{
 			file.write("<issn type=\"print\">"+issn+"</issn>\n");
@@ -445,7 +487,12 @@ public class BdReverseRecordBuilder
 		
 		if((volume!=null && volume.length()>0) || (issue!=null && issue.length()>0) || (page!=null && page.length()>0) || (pagecount!=null && pagecount.length()>0))
 		{	
-			outputVolisspag(file,volume,issue,page,pagecount);	
+			outputVolisspag(file,volume,issue,page,pagecount,accessnumber);	
+		}
+		
+		if(articlenumber!=null && articlenumber.length()>0)
+		{
+			file.write("<article-number>"+articlenumber+"</article-number>\n");
 		}
 
 		//PUBLICATIONYEAR
@@ -659,7 +706,9 @@ public class BdReverseRecordBuilder
 				if(referenceflag!=null && referenceflag.equals("YES"))
 				{
 					file.write("<bibliography refcount=\""+refcount+"\">\n");	
-					getReference(file,accessnumber);
+					//skip reference for now @12/2/2020 by HMO
+					file.write("<reference>SKIP REFERENCE</reference>");
+					//getReference(file,accessnumber);
 					file.write("</bibliography>\n");
 							
 				}
@@ -1205,103 +1254,108 @@ public class BdReverseRecordBuilder
     }//while
 }
 
-	private void outputCorrespondence(FileWriter file, String correspondencename,String correspondenceaffiliation,String correspondenceeaddress) throws Exception
+	private void outputCorrespondence(FileWriter file, String correspondencename,String correspondenceaffiliation,String correspondenceeaddress,String accessnumber) throws Exception
 	{
 		file.write("<correspondence>\n");
 		if(correspondencename!=null)
 		{
-			String[] cnames = correspondencename.split(Constants.IDDELIMITER,-1);
-			if(cnames.length>0)
+			String[] correspondencenames = correspondencename.split(Constants.AUDELIMITER,-1);
+			for(int i=0;i<correspondencenames.length;i++)
 			{
-				String given_name = null;
-				String suffix = null;
-				String nametext = null;
-				String text = null;
-				String initials = null;
-				String indexed_name = null;
-				String degrees = null;
-				String surname = null;
-				String id = cnames[0];
-				if(cnames.length>1)
+				String cperson = correspondencenames[i];
+				String[] cnames = cperson.split(Constants.IDDELIMITER,-1);
+				if(cnames.length>0)
 				{
-					initials = cnames[1];
+					String given_name = null;
+					String suffix = null;
+					String nametext = null;
+					String text = null;
+					String initials = null;
+					String indexed_name = null;
+					String degrees = null;
+					String surname = null;
+					String id = cnames[0];
+					if(cnames.length>1)
+					{
+						initials = cnames[1];
+					}
+					if(cnames.length>2)
+					{
+						indexed_name = cnames[2];
+					}
+					if(cnames.length>3)
+					{
+						degrees = cnames[3];
+					}
+					if(cnames.length>4)
+					{
+						surname = cnames[4];
+					}
+					if(cnames.length>5)
+					{
+						given_name = cnames[5];
+					}
+					if(cnames.length>6)
+					{
+						suffix = cnames[6];
+					}
+					if(cnames.length>7)
+					{
+						nametext = cnames[7];
+					}
+					if(cnames.length>8)
+					{
+						text = cnames[8];
+					}
+					file.write("<person>\n");
+					if(initials!=null && initials.length()>0)
+					{
+						file.write("<ce:initials>"+initials+"</ce:initials>\n");
+					}
+					
+					if(indexed_name!=null && indexed_name.length()>0)
+					{
+						file.write("<ce:indexed-name>"+indexed_name+"</ce:indexed-name>\n");
+					}
+					
+					if(degrees!=null && degrees.length()>0)
+					{
+						file.write("<ce:degrees>"+degrees+"</ce:degrees>\n");
+					}
+					
+					if(surname!=null && surname.length()>0)
+					{
+						file.write("<ce:surname>"+surname+"</ce:surname>\n");
+					}
+					
+					if(given_name!=null && given_name.length()>0)
+					{
+						file.write("<ce:given-name>"+given_name+"</ce:given-name>\n");
+					}
+					
+					if(suffix!=null && suffix.length()>0)
+					{
+						file.write("<ce:suffix>"+suffix+"</ce:suffix>\n");
+					}
+					
+					if(nametext!=null && nametext.length()>0)
+					{
+						file.write("<ce:nametext>"+nametext+"</ce:nametext>\n");
+					}
+					
+					if(text!=null && text.length()>0)
+					{
+						file.write("<ce:text>"+text+"</ce:text>\n");
+					}
+					
+					file.write("</person>\n");
+					
 				}
-				if(cnames.length>2)
+				else
 				{
-					indexed_name = cnames[2];
-				}
-				if(cnames.length>3)
-				{
-					degrees = cnames[3];
-				}
-				if(cnames.length>4)
-				{
-					surname = cnames[4];
-				}
-				if(cnames.length>5)
-				{
-					given_name = cnames[5];
-				}
-				if(cnames.length>6)
-				{
-					suffix = cnames[6];
-				}
-				if(cnames.length>7)
-				{
-					nametext = cnames[7];
-				}
-				if(cnames.length>8)
-				{
-					text = cnames[8];
-				}
-				file.write("<person>\n");
-				if(initials!=null && initials.length()>0)
-				{
-					file.write("<ce:initials>"+initials+"</ce:initials>\n");
-				}
-				
-				if(indexed_name!=null && indexed_name.length()>0)
-				{
-					file.write("<ce:indexed-name>"+indexed_name+"</ce:indexed-name>\n");
-				}
-				
-				if(degrees!=null && degrees.length()>0)
-				{
-					file.write("<ce:degrees>"+degrees+"</ce:degrees>\n");
-				}
-				
-				if(surname!=null && surname.length()>0)
-				{
-					file.write("<ce:surname>"+surname+"</ce:surname>\n");
-				}
-				
-				if(given_name!=null && given_name.length()>0)
-				{
-					file.write("<ce:given-name>"+given_name+"</ce:given-name>\n");
-				}
-				
-				if(suffix!=null && suffix.length()>0)
-				{
-					file.write("<ce:suffix>"+suffix+"</ce:suffix>\n");
-				}
-				
-				if(nametext!=null && nametext.length()>0)
-				{
-					file.write("<ce:nametext>"+nametext+"</ce:nametext>\n");
-				}
-				
-				if(text!=null && text.length()>0)
-				{
-					file.write("<ce:text>"+text+"</ce:text>\n");
-				}
-				
-				file.write("</person>\n");
-				
+					System.out.println("correspondencename has wrong format, size is "+cnames.length);
+				}//cnames
 			}
-			else
-			{
-				System.out.println("correspondencename has wrong format, size is "+cnames.length);
-			}//cnames
 			    			
 		}//correspondencename
 		
@@ -1401,7 +1455,7 @@ public class BdReverseRecordBuilder
 				}
 				else
 				{
-					System.out.println("1 correspondence affiliation format is wrong ");
+					System.out.println("record "+accessnumber+" correspondence affiliation format is wrong: "+correspondenceaffiliation);
 					
 				}//content
 				file.write("</affiliation>\n");			
@@ -1494,7 +1548,7 @@ public class BdReverseRecordBuilder
 			//System.out.println("copyright="+abstractcopyright);
 			//System.out.println("abstract="+abstractdata);
 		}
-		file.write("<ce:para>"+abstractdata+"</ce:para>\n");
+		file.write("<ce:para>"+StringEscapeUtils.escapeHtml4(abstractdata)+"</ce:para>\n");
 		file.write("</abstract>\n");
 		file.write("</abstracts>\n");
 	}
@@ -1899,7 +1953,7 @@ public class BdReverseRecordBuilder
    
     
     
-    private void outputVolisspag(FileWriter file, String volume,String issue,String page, String pagecount) throws Exception
+    private void outputVolisspag(FileWriter file, String volume,String issue,String page, String pagecount, String accessnumber) throws Exception
     {
     	file.write("<volisspag>\n");
 		if((volume!=null && volume.length()>0) || (issue!=null && issue.length()>0))
@@ -1914,12 +1968,12 @@ public class BdReverseRecordBuilder
     		{
     			file.write(" issue=\""+dictionary.AlphaEntitysToNumericEntitys(issue)+"\"");
     		}
-    		file.write("/>\n");    		
+    		file.write("/>\n");    	          	 
 		}
 		
 		if(page!=null && page.length()>0)
 		{
-			String[] pageArray = page.split(Constants.AUDELIMITER);
+			String[] pageArray = page.split(Constants.AUDELIMITER,-1);
 		    if(pageArray.length==3)
 		    {
 		    	String pages = pageArray[0];
@@ -1945,35 +1999,19 @@ public class BdReverseRecordBuilder
 		    	}
 		    		
 		    }//if
-			
+		   	  
 		}//if
 		
 		if(pagecount!=null && pagecount.length()>0)
 		{
-			String[] pagecounts = pagecount.split(Constants.AUDELIMITER);
+			String[] pagecounts = pagecount.split(Constants.AUDELIMITER,-1);
 			for(int i=0;i<pagecounts.length;i++)
 			{
 				String pagecountElement = pagecounts[i];
+				//System.out.println("pagecounts"+pagecounts.length);
 				if(pagecountElement!=null && pagecountElement.length()>0)
-				{
-					String [] pagecountElementArray = pagecountElement.split(Constants.IDDELIMITER);
-					String pagecountType = null;
-					String pagecountvalue = null;
-					if(pagecountElementArray.length>0)
-					{
-						pagecountType = pagecountElementArray[0];
-					}
-					if(pagecountElementArray.length>1)
-					{
-						pagecountvalue = pagecountElementArray[1];
-					}
-					
-					file.write("<pagecount");
-					if(pagecountType!=null && pagecountType.length()>0)
-					{
-						file.write(" type=\""+pagecountType+"\"");
-					}
-					file.write(">"+pagecountvalue+"</pagecount>\n");
+				{								
+					file.write("<pagecount>"+pagecountElement+"</pagecount>\n");
 					
 				}//if
 			}//for
@@ -2498,7 +2536,7 @@ public class BdReverseRecordBuilder
          				if(rauthors!=null && rauthors.length()>0)
          				{
          					String[] referenceauthorElements = rauthors.split(Constants.IDDELIMITER);
-         					System.out.println("REFERENCE AUTHOR SIZE="+referenceauthorElements.length);
+         					//System.out.println("REFERENCE AUTHOR SIZE="+referenceauthorElements.length);
          					String rid = null;
          					String seq = null;
          					String auid = null;
@@ -2511,7 +2549,7 @@ public class BdReverseRecordBuilder
          					if(referenceauthorElements.length<2)
          					{
          						nametext = referenceauthorElements[0];
-         						System.out.println("nametext="+nametext);
+         						//System.out.println("nametext="+nametext);
          					}
          					
          					if(referenceauthorElements.length>=4)
@@ -2526,8 +2564,8 @@ public class BdReverseRecordBuilder
      						{
      							 initials = referenceauthorElements[4];
      							surname = referenceauthorElements[5];
-     						    System.out.println("initials="+initials);
-     						    System.out.println("surname="+surname);
+     						    //System.out.println("initials="+initials);
+     						    //System.out.println("surname="+surname);
          					}
      						
      						if(referenceauthorElements.length>=9)
@@ -2535,17 +2573,19 @@ public class BdReverseRecordBuilder
      							String ELEMENT6 = referenceauthorElements[6];
      							String ELEMENT7 = referenceauthorElements[7];
      							 suffix = referenceauthorElements[8];
+     							 /*
      							if(ELEMENT6!=null && ELEMENT6.length()>0)
      								System.out.println("ELEMENT6="+ELEMENT6);
      							if(ELEMENT7!=null && ELEMENT7.length()>0)
      								System.out.println("ELEMENT7="+ELEMENT7);
      						    	System.out.println("suffix="+suffix);
+     						    */
          					}
          						
-     						System.out.println("ref ID="+rid);
-     						System.out.println("seq="+seq);
-     						System.out.println("auid="+auid);
-     						System.out.println("indexed_name="+indexed_name);
+     						//System.out.println("ref ID="+rid);
+     						//System.out.println("seq="+seq);
+     						//System.out.println("auid="+auid);
+     						//System.out.println("indexed_name="+indexed_name);
      						
      						file.write("<author");
      						if(seq!=null && seq.length()>0)
@@ -2944,7 +2984,7 @@ public class BdReverseRecordBuilder
             	 				
             	 			}
             	 			
-            	 			//
+            	 			//REF-ARTICLE-NUMBER
             	 			if(refitemcitationarticlenumber!=null && refitemcitationarticlenumber.length()>0)
             	 			{
             	 				file.write("<article-number>"+refitemcitationarticlenumber+"</article-number>\n");
@@ -3095,4 +3135,46 @@ public class BdReverseRecordBuilder
                                           password);
         return con;
      }
+     
+     public void zipBatchFile(String filename,String database)
+    		    throws Exception
+	    {
+	    	long starttime = System.currentTimeMillis();
+
+	    	if(database.equalsIgnoreCase("upa") || database.equalsIgnoreCase("eup") || database.equalsIgnoreCase("wop"))
+	    	{
+	    		database="upt";
+	    	}
+	    	String path="json/"+database;
+	        //File tmpDir = new File(path+"/tmp");
+	        //String tmpDir = new File(f.getAbsolutePath());
+	        //String[] gzFiles = tmpDir.list();
+	        //File[] gzFilestoDelete = tmpDir.listFiles();
+	        byte[] buf = new byte[1024];
+	        
+	        String ZipFilename =  filename.replace("xml", "zip")
+	       
+	        //long timediff = time - this.starttime;
+	       
+	        ZipOutputStream outZIP = new ZipOutputStream(new FileOutputStream(ZipFilename));
+	        for (int i=0; i<gzFiles.length; i++)
+	        {
+	        	File file = new File(tmpDir+"/"+gzFiles[i]);
+	        	//System.out.println("FILENAME="+gzFiles[i]);
+	            FileInputStream in = new FileInputStream(tmpDir+"/"+gzFiles[i]);
+	            outZIP.putNextEntry(new ZipEntry(tmpDir+"/"+gzFiles[i]));
+	            int len;
+	            while ((len = in.read(buf)) > 0) {
+	                outZIP.write(buf, 0, len);
+	            }
+	            outZIP.closeEntry();
+	            in.close();
+	            file.delete();
+	            
+	        }
+	        outZIP.close();
+	        tmpDir.delete();
+	        long endtime = System.currentTimeMillis();
+	        System.out.println("Time for Zipping="+(endtime-starttime));
+	    }
 }
