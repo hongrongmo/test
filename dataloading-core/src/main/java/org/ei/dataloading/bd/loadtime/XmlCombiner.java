@@ -66,7 +66,8 @@ public class XmlCombiner extends CombinerTimestamp {
 	private static String password;
 
 	/* HT added 09/21/2020 for lookup extraction to ES */
-	private String action = null;
+	/* change the default action to ""*/
+	private String action = "";
 	private LookupEntry lookupObj = null;
 	private Connection con = null;
 
@@ -2318,7 +2319,7 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
 			}
 
 			writeRecs(rs, con, weekNumber, "extractByLoadnumber--" + Combiner.TABLENAME, Combiner.CURRENTDB);
-			this.writer.end();
+			//this.writer.end();
 			this.writer.flush();
 
 		} finally {
@@ -2341,6 +2342,7 @@ public void writeRecs(ResultSet rs, Connection con, int week, String tableName, 
 		}
 
 	}
+	
 	@Override
 	/* HT added 09/21/2020 wk: [202040] for Lookup extraction for ES */
 	public void writeLookupByWeekHook(int weekNumber) throws Exception {

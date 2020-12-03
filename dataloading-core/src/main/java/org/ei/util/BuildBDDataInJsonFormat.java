@@ -158,6 +158,28 @@ public class BuildBDDataInJsonFormat
     				String author = rs.getString("AUTHOR");  		
     				String database = rs.getString("DATABASE");
     				
+    				//------------ add more fields on 12/02/2020 ------------------
+    				
+    				String accessnumber=rs.getString("ACCESSNUMBER");
+    				String citationlanguage=rs.getString("CITATIONLANGUAGE");
+    				String authorkeywords=rs.getString("AUTHORKEYWORDS");
+    				String author1=rs.getString("AUTHOR_1");
+    				String affiliation=rs.getString("AFFILIATION");
+    				String affiliation1=rs.getString("AFFILIATION_1");
+    				String correspondencename=rs.getString("CORRESPONDENCENAME");
+    				String correspondenceaffiliation=rs.getString("CORRESPONDENCEAFFILIATION");
+    				
+    				String eid=rs.getString("EID");
+    				String grantlist=rs.getString("GRANTLIST");
+    				String relateditempui=rs.getString("RELATEDITEMPUI");
+    				String puisecondary=rs.getString("PUISECONDARY");
+    				String standardid=rs.getString("STANDARDID");
+    				String standarddesignation=rs.getString("STANDARDDESIGNATION");
+    				String normstandardid=rs.getString("NORMSTANDARDID");
+    				String granttext=rs.getString("GRANTTEXT");
+    				String isooenaccess=rs.getString("ISOPENACESS");
+    				String sourcewebsite=rs.getString("SOURCEBIBTEXT");
+    				
     				if(doi!=null)
     				{
     					dataMap.put("DOI", doi.trim());
