@@ -3146,13 +3146,13 @@ public class BdReverseRecordBuilder
 	    		database="upt";
 	    	}
 	    	String path="json/"+database;
-	        //File tmpDir = new File(path+"/tmp");
+	        File tmpDir = new File(path+"/tmp");
 	        //String tmpDir = new File(f.getAbsolutePath());
-	        //String[] gzFiles = tmpDir.list();
+	        String[] gzFiles = tmpDir.list();
 	        //File[] gzFilestoDelete = tmpDir.listFiles();
 	        byte[] buf = new byte[1024];
 	        
-	        String ZipFilename =  filename.replace("xml", "zip")
+	        String ZipFilename =  filename.replace("xml", "zip");
 	       
 	        //long timediff = time - this.starttime;
 	       
