@@ -12,15 +12,32 @@ package org.ei.dataloading.qa;
  */
 
 import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import org.apache.log4j.Logger;
+import org.dataloading.sharedsearch.PublishSES;
 import org.dataloading.sharedsearch.PublishSNS;
 import org.dataloading.sharedsearch.SharedSearchSearchEntry;
 import org.ei.dataloading.db.DBConnection;
 
+/**
+ * 
+ * @author TELEBH
+ * @Date: 11/13/2020
+ * @Description: Judy has created a jira ticket to tackl CAFE-BD Gap which was initially set to 8% as reported by Jum Slaton at the beginning of cafe feed project
+ * In order to help Judy and content team identify the Gap we need to provide stats of current gap and 1k records for further checking by Judy's team
+ * In addition to this, as per Judy request, tackle if any new openAccess values Cafe deliver other than 0,1,2
+ * 
+ */
 public class AdhocQuery {
 	
 	String queryType;
@@ -33,6 +50,8 @@ public class AdhocQuery {
 	
 	private String topic_arn = "arn:aws:sns:us-east-1:230521890328:EVDataLoading";
 	private String subject = "ES Weekly QA Report";
+	
+	String cafe_bd_gap_file, bd_cafe_gap_file = null;
 	
 	Connection con = null;
 	public static void main(String[] args)
@@ -70,7 +89,7 @@ public class AdhocQuery {
 		
 		if(args[5] != null && !args[5].isEmpty())
 			database = args[5];
-		if(args.length >5)
+		if(args.length >6)
 		{
 			if(args[6] != null && !args[6].isEmpty())
 			{
@@ -89,7 +108,12 @@ public class AdhocQuery {
 			if(queryType != null && ! queryType.isEmpty() && queryType.equalsIgnoreCase("oa"))
 				runOACheck();
 			else if((queryType != null && ! queryType.isEmpty() && queryType.equalsIgnoreCase("cafegap")))
+			{
 				runCafeGapCheck();
+				// Send SES email with Cafe-BD Gap attachment
+				new PublishSES().publishRawSESMessageWithAttachment(cafe_bd_gap_file);
+			}
+				
 		}
 		catch(Exception e)
 		{
@@ -163,29 +187,78 @@ public class AdhocQuery {
 		StringBuilder sb = new StringBuilder();
 		Statement stmt = null;
 		ResultSet rs = null;
-		String fileName = "Cafe-BD-Gap-";
+		int count = 1;
+		String pattern = "yyyy-MM-dd";
+		SimpleDateFormat df = new SimpleDateFormat(pattern);
+		String date = df.format(new Date());
 		
-		//String
-		try
+		cafe_bd_gap_file = "Cafe-BD-Gap-" + date + ".csv";
+		
+		try(BufferedWriter bw = new BufferedWriter(new FileWriter(cafe_bd_gap_file)))
 		{
+			String query = "Select a.pui as pui,a.accessnumber as accessnumber,a.publicationyear, a.citationtitle as citationtitle,count(*) over() as total from bd_master a"
+					+ " where a.database='cpx' and (a.pui not in (select b.puisecondary from cafe_pui_list_master b)"
+					+ " or a.accessnumber not in (select accessnumber from cafe_pui_list_master))";
 			
-			String query = "Select a.pui,a.accessnumber,a.citationtitle,count(*) over as count from bd_master a, cafe_pui_list_master b"
-					+ "where a.pui=b.puisecondary and b.puisecondary in (select pui from cafe_master)";
-			stmt = con.createStatement();
+			long startTime = System.currentTimeMillis();
+			
+			stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
 			rs = stmt.executeQuery(query);
+			rs.setFetchSize(200);
+			
+			long midTime = System.currentTimeMillis();
+			System.out.println("Total time it took to run query: " + (midTime - startTime)/1000 + " seconds");
+			
 			if(rs != null)
 			{
+				//Write Total CAFE-BD Gap count before adding details
+				if(rs.next())
+					if(rs.getNString("TOTAL") != null)
+					{
+						bw.write("Total Count: " + rs.getNString("TOTAL"));
+						bw.write("\n");
+					}
+						
+				//Write headers line
+				bw.write("PUI, AccessionNumber,  PublicationYear, CitationTitle");
+				bw.write("\n");
+				// Reset the RS cursor back to before first row
+				rs.beforeFirst();
 				while(rs.next())
 				{
-					if(rs.getString("OA") != null && rs.getString("COUNT") != null)
+					if(count<1001)
 					{
-						sb.append(rs.getString("OA")).append(" -> ").append(rs.getString("COUNT"));
-						sb.append("\n");
+						if(rs.getString("pui") != null)
+						{
+							bw.write(rs.getString("pui") + ",");
+						}
+						if(rs.getString("accessnumber") != null)
+						{
+							bw.write(rs.getString("accessnumber") + ",");
+						}
+						if(rs.getString("publicationyear") != null)
+						{
+							bw.write(rs.getString("publicationyear") + ",");
+						}
+						if(rs.getString("citationtitle") != null)
+						{
+							bw.write(rs.getString("citationtitle") + ",");
+						}
+						bw.write("\n");
+						count++;
 					}
+					
 				}
-				// send SNS message with final contents
-				new PublishSNS(topic_arn,subject).publishSNSMessage(new Date(System.currentTimeMillis()) + " \n" + sb.toString());
+				long endTime = System.currentTimeMillis();
+				System.out.println("Total time to write 1k records: " + (endTime - midTime)/1000 + " seconds");
+				
 			}
+		}
+		catch(IOException ex)
+		{
+			logger.error("IO Exception happened");
+			logger.error(ex.getMessage());
+			ex.printStackTrace();
 		}
 		catch(SQLException ex)
 		{

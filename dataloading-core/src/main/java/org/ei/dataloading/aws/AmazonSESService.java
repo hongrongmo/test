@@ -7,12 +7,17 @@ import com.amazonaws.services.sns.AmazonSNS;
 import com.amazonaws.services.sns.AmazonSNSClient;
 import com.amazonaws.services.sns.AmazonSNSClientBuilder;
 
-
+/**
+ * 
+ * @author TELEBH
+ * @Date: 11/13/2020
+ * @Description :AWS SES Service Instance
+ */
 
 public class AmazonSESService{
 	
 	private static AmazonSESService instance;
-	private AmazonSimpleEmailService snsclient;
+	private AmazonSimpleEmailService sesClient;
 	
 	public AmazonSESService() {
 	}
@@ -22,7 +27,7 @@ public class AmazonSESService{
 			if (instance == null)
 				instance = new AmazonSESService();
 			
-			  instance.snsclient =  AmazonSimpleEmailServiceClientBuilder.standard()
+			  instance.sesClient =  AmazonSimpleEmailServiceClientBuilder.standard()
 		                 //.withCredentials(new EnvironmentVariableCredentialsProvider())
 		                 .withRegion(Regions.US_EAST_1)
 		                 .build();
@@ -32,7 +37,7 @@ public class AmazonSESService{
 		}
 	}
 	
-	public AmazonSimpleEmailService getAmazonSNSClient() {
-		return this.snsclient;
+	public AmazonSimpleEmailService getAmazonSESClient() {
+		return this.sesClient;
 	}
 }
