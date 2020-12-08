@@ -3,9 +3,7 @@ package org.ei.dataloading.aws;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.simpleemail.AmazonSimpleEmailService;
 import com.amazonaws.services.simpleemail.AmazonSimpleEmailServiceClientBuilder;
-import com.amazonaws.services.sns.AmazonSNS;
-import com.amazonaws.services.sns.AmazonSNSClient;
-import com.amazonaws.services.sns.AmazonSNSClientBuilder;
+
 
 /**
  * 
@@ -23,7 +21,7 @@ public class AmazonSESService{
 	}
 
 	public static AmazonSESService getInstance() {
-		synchronized (AmazonSNSService.class) {
+		synchronized (AmazonSESService.class) {
 			if (instance == null)
 				instance = new AmazonSESService();
 			
