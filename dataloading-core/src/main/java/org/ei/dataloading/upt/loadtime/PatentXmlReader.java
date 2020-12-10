@@ -1739,17 +1739,13 @@ public class PatentXmlReader
 				
 				//System.out.println("DRAWINGS= "+(String)singleRecord.get("DRAWINGS"));
 			}
-			
-			out.print(DELIM);
-			
 			//IMAGE
 			
 			if(singleRecord.get("IMAGE")!=null)
 			{
 				out.print((String)singleRecord.get("IMAGE"));
-				//System.out.println("IMAGE= "+(String)singleRecord.get("IMAGE"));
+				System.out.println("IMAGE= "+(String)singleRecord.get("IMAGE"));
 			}
-			
 			out.print(DELIM);
 			
 			//DESCRIPTION
@@ -1808,10 +1804,7 @@ public class PatentXmlReader
 			{
 				out.print((String)singleRecord.get("PUBLICATION_GROUP"));
 				//System.out.println("PUBLICATION_GROUP1= "+(String)singleRecord.get("PUBLICATION_GROUP"));
-			}
-			
-					
-			
+			}		
 			
 			out.print("\n");
 		}
@@ -2860,7 +2853,12 @@ public class PatentXmlReader
 			String file = image.getAttributeValue("file");
 			String type = image.getAttributeValue("type");
 			String size = image.getAttributeValue("size");
-			String pages = image.getAttributeValue("page");
+			String pages = image.getAttributeValue("pages");
+			//HTeleb Added 12/08/2020 as per Judy&Chemtiva team asked to check if record has PDF to be displayed in EV App (i.e. has PDF)
+			String pageCount = image.getAttributeValue("count");
+
+			
+			
 			if(file!=null)
 			{
 				imageBuffer.append(file);
@@ -2871,15 +2869,29 @@ public class PatentXmlReader
 				imageBuffer.append(type);
 			}
 			imageBuffer.append(Constants.AUDELIMITER);
-			if(size!=null)
+			//HH added 12/10/2020 for PDF check 
+			if(size != null)
 			{
 				imageBuffer.append(size);
+				imageBuffer.append(Constants.AUDELIMITER);
 			}
-			imageBuffer.append(Constants.AUDELIMITER);
-			if(pages!=null)
+			if(pages != null)
 			{
 				imageBuffer.append(pages);
+				imageBuffer.append(Constants.AUDELIMITER);
 			}
+			if(pages != null && Integer.parseInt(pages) >1)
+			{
+				imageBuffer.append(true);
+			}
+			else if(pageCount != null && size != null)
+			{
+				if(Integer.parseInt(pageCount) >1 && Integer.parseInt(size) >1)
+					imageBuffer.append(true);
+			}
+			else
+				imageBuffer.append(false);
+			
 			record.put("IMAGE", imageBuffer.toString());
 			
 		}
