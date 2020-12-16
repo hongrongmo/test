@@ -13,6 +13,7 @@ import java.text.DateFormat;
 //
 import org.apache.oro.text.perl.Perl5Util;
 import java.util.*;
+import java.util.regex.Pattern;
 
 /**
  * @author KFokuo
@@ -285,10 +286,12 @@ public class BulletinTableDriver {
       //12/22/2014 from eijava
         String database = args[2];
         String action = args[3];
+        int year = Integer.parseInt(args[4]);				//hteleb added 12/16/2020 to fix month at year switch
+        
         String date = "";
-        if(args.length>4)
+        if(args.length>5)
         {
-            date = args[4];
+            date = args[5];
         }
         //
         
@@ -297,7 +300,7 @@ public class BulletinTableDriver {
         // directory = "C:\\elsevier\\docs\\release\\encompassweb\\bulletin\\label_files";
         //12/22/2014 from eijava
         driver.deleteLabelFile(directory);
-        driver.createLabelFile(directory,weekNum,database,action,date);
+        driver.createLabelFile(directory,weekNum,database,action,year,date);
         //
         driver.startLoad(directory, weekNum);
 
@@ -324,7 +327,8 @@ public class BulletinTableDriver {
         }
     }
 
-    private void createLabelFile(String directory,int weekNum,String database,String action,String date)
+    //HH added year 12/16/2020 to getDate()
+    private void createLabelFile(String directory,int weekNum,String database,String action,int year, String date)
     {
         Enumeration filenames = mappings.propertyNames();
         FileWriter newFile=null;
@@ -357,7 +361,9 @@ public class BulletinTableDriver {
                 }
                 else
                 {
-                    newFile.write("Creadate              : "+getDate()+"\n");
+                	
+                    newFile.write("Creadate              : "+getDate(year)+"\n");
+
                 }
                 newFile.write("Items processed       : CURRENTLY NOT AVAILABLE\n");
                 newFile.write("NrFiles               : 3\n");
@@ -385,7 +391,7 @@ public class BulletinTableDriver {
                 }
                 else
                 {
-                    newFile.write("Creadate              : "+getDate()+"\n");
+                    newFile.write("Creadate              : "+getDate(year)+"\n");
                 }
                 newFile.write("Items processed       : CURRENTLY NOT AVAILABLE\n");
                 newFile.write("NrFiles               : 3\n");
@@ -415,11 +421,24 @@ public class BulletinTableDriver {
     }
     }
 
-    private String getDate()
+    private String getDate(int year)
     {
         DateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy");
         Date date = new Date();
-        //System.out.println("DATE= "+dateFormat.format(date));
+       
+        /*	HH added 12/16/2020 usually newstar send 2-3 weeks bulletins of next year in dec of this year
+			which in turn shows wrong publication date in EV display i.e. 15-Dec-2021 though we still in DEC 2020, it should show Jan 2021
+        */
+       
+        int currYR = Calendar.getInstance().get(Calendar.YEAR);
+      	 // Only add 1 more month at the time of switch between curr and next year
+        	if(currYR != year)
+        	{
+        		 Calendar cal = Calendar.getInstance();
+                 cal.add(Calendar.MONTH, 1);
+                 date = cal.getTime();
+        	}
+        
         return dateFormat.format(date);
 
     }

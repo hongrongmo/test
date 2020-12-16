@@ -30,7 +30,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class ReadScivalExcelFile {
 	
 	String inFileName;
-	LinkedHashMap<Double, ScivalInstitutionRecord> institutionsList;
+	LinkedHashMap<Integer, ScivalInstitutionRecord> institutionsList;
 	
 	public ReadScivalExcelFile()
 	{
@@ -38,7 +38,8 @@ public class ReadScivalExcelFile {
 	}
 	public static void main(String[] args)
 	{
-		if(args.length >1)
+		System.out.println("START!!!");
+		if(args.length >0)
 		{
 			ReadScivalExcelFile obj = new ReadScivalExcelFile();
 			obj.run(args);
@@ -50,6 +51,7 @@ public class ReadScivalExcelFile {
 			if(args.length>0)
 			{
 				inFileName = args[0];
+				System.out.println("Input FileName: " + inFileName);
 			}
 			else
 			{
@@ -64,12 +66,12 @@ public class ReadScivalExcelFile {
 
 	private void readCSVFile()
 	{
-		
+		XSSFWorkbook workbook = null;
 		try(FileInputStream instream = new FileInputStream(new File(inFileName)))
 		{
 			
 			// Get the workbook instance for xlsx file
-			XSSFWorkbook workbook = new XSSFWorkbook(instream);
+			workbook = new XSSFWorkbook(instream);
 			
 			//Get the first sheet by index
 			XSSFSheet sheet = workbook.getSheetAt(0);
@@ -77,17 +79,22 @@ public class ReadScivalExcelFile {
 			//Get iterator on rows of the sheet
 			Iterator<Row> rowsIterator = sheet.iterator();
 			
+			// INstitution Info
+			ScivalInstitutionRecord instRec = null;
+			
 			while(rowsIterator.hasNext())
 			{
-				// Get the rwo with all columns
+				// Get the row with all columns
 				Row row = rowsIterator.next();
 				
+				// skip first row as it is headers
+				if(row.getRowNum() == 0)
+					continue;
 				// Institution Profile Record, if exist get the existing record
 				
-				ScivalInstitutionRecord instRec = new ScivalInstitutionRecord();
 				
 				// affiliationId & affiliationName info holders
-				double affiliationID = 0;
+				int affiliationID = 0;
 				String affiliationName = "";
 				
 				// Iterate through columns in current row
@@ -100,15 +107,16 @@ public class ReadScivalExcelFile {
 					{
 						if(cell.getNumericCellValue() != 0)
 						{
-							if(!institutionsList.containsKey(cell.getNumericCellValue()))
+							int instId = (int)cell.getNumericCellValue();
+							if(!(institutionsList.containsKey(instId)))
 							{
 								instRec = new ScivalInstitutionRecord();
-								instRec.setInstitution_ID(cell.getNumericCellValue());
+								instRec.setInstitution_ID(instId);
 							}
 								
 							else
 							{
-								instRec = institutionsList.get(cell.getNumericCellValue());
+								instRec = institutionsList.get(instId);
 								System.out.println("Institution ID previously exist");
 							}
 								
@@ -122,7 +130,7 @@ public class ReadScivalExcelFile {
 					if(colIndex == 2)
 					{
 						if(cell.getNumericCellValue() != 0)
-							affiliationID = cell.getNumericCellValue();
+							affiliationID = (int)cell.getNumericCellValue();
 					}
 					if(colIndex == 3)
 					{
@@ -146,13 +154,31 @@ public class ReadScivalExcelFile {
 					instRec.setAffiliationInfo(affiliationID, affiliationName);
 				}
 				
+				// add Institution Record to inst.list
+				institutionsList.put(instRec.getInstitution_ID(), instRec);
 			}
-		} catch (FileNotFoundException e) {
+			
+			
+		} 
+		catch (FileNotFoundException e) {
 			
 			e.printStackTrace();
 		} catch (IOException e) {
 			
 			e.printStackTrace();
+		}
+		finally
+		{
+			try
+			{
+				if(workbook != null)
+					workbook.close();
+			}
+			catch(Exception e)
+			{
+				System.out.println("Failed to close workbook");
+				e.printStackTrace();
+			}
 		}
 	}
 	
@@ -163,7 +189,7 @@ public class ReadScivalExcelFile {
 		{
 			if(institutionsList.size() >0)
 			{
-				for(Map.Entry<Double, ScivalInstitutionRecord> entry: institutionsList.entrySet())
+				for(Map.Entry<Integer, ScivalInstitutionRecord> entry: institutionsList.entrySet())
 				{
 					ScivalInstitutionRecord recordInfo = entry.getValue();
 					//for each affiliation_ID add entry in out file
@@ -171,14 +197,13 @@ public class ReadScivalExcelFile {
 						try {
 							writer.write(entry.getKey() + "," + recordInfo.getInstitutionName() + "," + key + "," + value
 									+ "," + recordInfo.getRegion() + "," + recordInfo.getCountry());
+							writer.write("\n");
 						} catch (IOException e) {
 							
 							e.printStackTrace();
 						}
 					});
-					{
-						
-					}
+					
 				}
 			}
 		} catch (IOException e) {
@@ -189,11 +214,46 @@ public class ReadScivalExcelFile {
 		
 		
 	}
+	
+	public void writeExcelFile()
+	{
+		XSSFWorkbook workbook = new XSSFWorkbook();
+		XSSFSheet sheet = workbook.createSheet("institution_profile");
+		int rownum = 0;
+		
+		if(institutionsList.size() >0)
+		{
+			for(Map.Entry<Integer, ScivalInstitutionRecord> entry: institutionsList.entrySet())
+			{
+				int colIndx = 0;
+				Row row = sheet.createRow(rownum++);
+				ScivalInstitutionRecord recordInfo = entry.getValue();
+				
+				//for each affiliation_ID add entry in out file
+				recordInfo.getAffiliationInfo().forEach((key,value) -> {
+					try {
+						row.createCell(colIndx).setCellValue(entry.getKey());
+						row.createCell(colIndx+1).setCellValue(recordInfo.getInstitutionName());
+						row.createCell(colIndx+2).setCellValue(key);
+						row.createCell(colIndx+3).setCellValue(value);
+						row.createCell(colIndx+4).setCellValue(recordInfo.getRegion());
+						row.createCell(colIndx+5).setCellValue(recordInfo.getCountry());
+						
+					} 
+					catch (Exception e) 
+					{
+						
+						e.printStackTrace();
+					}
+				});
+			}
+		}
+	}
 	class ScivalInstitutionRecord
 	{
-		private double institution_ID;
+		private int institution_ID;
 		private String institutionName;
-		private Map<Double, String> affiliationInfo;
+		private Map<Integer, String> affiliationInfo;
 		private String region;
 		private String country;
 		
@@ -203,11 +263,11 @@ public class ReadScivalExcelFile {
 			affiliationInfo = new LinkedHashMap<>();
 		}
 		//Setters & Getters
-		public double getInstitution_ID() {
+		public int getInstitution_ID() {
 			return institution_ID;
 		}
-		public void setInstitution_ID(double institution_ID) {
-			this.institution_ID = institution_ID;
+		public void setInstitution_ID(int institutionID) {
+			this.institution_ID = institutionID;
 		}
 		public String getInstitutionName() {
 			return institutionName;
@@ -215,10 +275,10 @@ public class ReadScivalExcelFile {
 		public void setInstitutionName(String institution) {
 			this.institutionName = institution;
 		}
-		public Map<Double,String> getAffiliationInfo() {
+		public Map<Integer,String> getAffiliationInfo() {
 			return affiliationInfo;
 		}
-		public void setAffiliationInfo(double affiliationID, String affiliationName) {
+		public void setAffiliationInfo(int affiliationID, String affiliationName) {
 			this.affiliationInfo.put(affiliationID, affiliationName);
 		}
 		
