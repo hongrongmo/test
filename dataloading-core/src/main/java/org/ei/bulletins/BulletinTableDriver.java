@@ -12,8 +12,10 @@ import java.text.SimpleDateFormat;
 import java.text.DateFormat;
 //
 import org.apache.oro.text.perl.Perl5Util;
+
+import com.sun.mail.iap.ParsingException;
+
 import java.util.*;
-import java.util.regex.Pattern;
 
 /**
  * @author KFokuo
@@ -82,7 +84,7 @@ public class BulletinTableDriver {
             }
     }
   //  
-    private void writeRecs(BufferedReader in, String file) {
+    private void writeRecs(BufferedReader in, String file, int year) {
 
         String line = null;
         Hashtable<String, String> htFields = new Hashtable<String, String>();
@@ -113,9 +115,9 @@ public class BulletinTableDriver {
             	}
 
             	if (db.equalsIgnoreCase("apilit") || db.equalsIgnoreCase("aplit"))
-                processLITRecord(htFields);
+                processLITRecord(htFields, year);
             	else if (db.equalsIgnoreCase("apipat"))
-                processPATRecord(htFields);
+                processPATRecord(htFields, year);
             	else {
                 System.err.println("Dataset not found!");
             	}
@@ -130,7 +132,7 @@ public class BulletinTableDriver {
 
     }
 
-    public void processLITRecord(Hashtable<String, String> htFields) {
+    public void processLITRecord(Hashtable<String, String> htFields, int year) {
 
         String db = "1";
         String pubDt = ((String) htFields.get("CREADATE")).trim();
@@ -168,8 +170,15 @@ public class BulletinTableDriver {
             day = perl.substitute("s/-//g", day);
         }
 
-        out.println(db + "\t" + newCy.trim() + "\t" + pubYr.trim() + "\t" + pubDt.trim() + "\t" + fileName.trim() + "\t" + zipFileName.trim() + "\t"
-            + weekNumber);
+        //HH commented 12/16/2020 to add original year sent in newstar SNS message instead
+		/*
+		 * out.println(db + "\t" + newCy.trim() + "\t" + pubYr.trim() + "\t" +
+		 * pubDt.trim() + "\t" + fileName.trim() + "\t" + zipFileName.trim() + "\t" +
+		 * weekNumber);
+		 */
+        
+        out.println(db + "\t" + newCy.trim() + "\t" + year + "\t" + pubDt.trim() + "\t" + fileName.trim() + "\t" + zipFileName.trim() + "\t"
+                + weekNumber);
 
     }
 
@@ -181,7 +190,7 @@ public class BulletinTableDriver {
         return sVal.toString();
     }
 
-    public void processPATRecord(Hashtable<String, String> htFields) {
+    public void processPATRecord(Hashtable<String, String> htFields, int year) {
 
         String db = "2";
         String pubDt = ((String) htFields.get("CREADATE")).trim();
@@ -228,16 +237,22 @@ public class BulletinTableDriver {
             day = perl.substitute("s/-//g", day);
         }
 
-        out.println(db + "\t" + newCy.trim() + "\t" + pubYr.trim() + "\t" + pubDt.trim() + "\t" + fileName.trim() + "\t" + zipFileName.trim() + "\t"
-            + weekNumber);
+      //HH commented 12/16/2020 to add original year sent in newstar SNS message instead
+		/*
+		 * out.println(db + "\t" + newCy.trim() + "\t" + pubYr.trim() + "\t" +
+		 * pubDt.trim() + "\t" + fileName.trim() + "\t" + zipFileName.trim() + "\t" +
+		 * weekNumber);
+		 */
+        out.println(db + "\t" + newCy.trim() + "\t" + year + "\t" + pubDt.trim() + "\t" + fileName.trim() + "\t" + zipFileName.trim() + "\t"
+                + weekNumber);
 
     }
 
-    private void writeBaseTableFile(String file) {
+    private void writeBaseTableFile(String file, int year) {
 
         try {
             BufferedReader in = new BufferedReader(new FileReader(file));
-            writeRecs(in, file);
+            writeRecs(in, file, year);
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -245,7 +260,8 @@ public class BulletinTableDriver {
 
     }
 
-    public void startLoad(String directory, int iWeekNum) {
+    //HH added year parameter to fix year display at year switch
+    public void startLoad(String directory, int iWeekNum, int year) {
 
         String[] dirArray = new File(directory).list(new LabelFileFilter());
 
@@ -260,7 +276,7 @@ public class BulletinTableDriver {
 
                 if (iWeekNum == iWeekNum2)
                     //writeBaseTableFile(directory + "\\" + dirArray[i]);   //original
-                	 writeBaseTableFile(directory + "/" + dirArray[i]);    //HH 01/21/2015 from eijava
+                	 writeBaseTableFile(directory + "/" + dirArray[i], year);    //HH 01/21/2015 from eijava
 
             }
         } finally {
@@ -271,6 +287,9 @@ public class BulletinTableDriver {
     }
 
     public static void main(String[] args) {
+    	
+    	int year = 0;
+    	
         //12/22/2014 from eijava
         if(args.length<4)
         {
@@ -278,6 +297,7 @@ public class BulletinTableDriver {
             System.out.println("Usage:  data_directory weekNumber database action");
             System.exit(1);
         }
+        
         //
         String directory = args[0];
 
@@ -286,8 +306,18 @@ public class BulletinTableDriver {
       //12/22/2014 from eijava
         String database = args[2];
         String action = args[3];
-        int year = Integer.parseInt(args[4]);				//hteleb added 12/16/2020 to fix month at year switch
-        
+        //HH added 12/16/2020 to pass year as sent in newstar SNS message
+        try
+        {
+        	 year = Integer.parseInt(args[4]);
+        }
+        catch(NumberFormatException ex)
+        {
+        	System.out.println("Exception parsing year?!!");
+        	System.out.println("Error: " + ex.getMessage());
+        	ex.printStackTrace();
+        }
+       
         String date = "";
         if(args.length>5)
         {
@@ -300,9 +330,9 @@ public class BulletinTableDriver {
         // directory = "C:\\elsevier\\docs\\release\\encompassweb\\bulletin\\label_files";
         //12/22/2014 from eijava
         driver.deleteLabelFile(directory);
-        driver.createLabelFile(directory,weekNum,database,action,year,date);
+        driver.createLabelFile(directory,weekNum,database,action,date);
         //
-        driver.startLoad(directory, weekNum);
+        driver.startLoad(directory, weekNum, year);
 
     }
 
@@ -327,8 +357,7 @@ public class BulletinTableDriver {
         }
     }
 
-    //HH added year 12/16/2020 to getDate()
-    private void createLabelFile(String directory,int weekNum,String database,String action,int year, String date)
+    private void createLabelFile(String directory,int weekNum,String database,String action,String date)
     {
         Enumeration filenames = mappings.propertyNames();
         FileWriter newFile=null;
@@ -361,9 +390,7 @@ public class BulletinTableDriver {
                 }
                 else
                 {
-                	
-                    newFile.write("Creadate              : "+getDate(year)+"\n");
-
+                    newFile.write("Creadate              : "+getDate()+"\n");
                 }
                 newFile.write("Items processed       : CURRENTLY NOT AVAILABLE\n");
                 newFile.write("NrFiles               : 3\n");
@@ -391,7 +418,7 @@ public class BulletinTableDriver {
                 }
                 else
                 {
-                    newFile.write("Creadate              : "+getDate(year)+"\n");
+                    newFile.write("Creadate              : "+getDate()+"\n");
                 }
                 newFile.write("Items processed       : CURRENTLY NOT AVAILABLE\n");
                 newFile.write("NrFiles               : 3\n");
@@ -421,24 +448,11 @@ public class BulletinTableDriver {
     }
     }
 
-    private String getDate(int year)
+    private String getDate()
     {
         DateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy");
         Date date = new Date();
-       
-        /*	HH added 12/16/2020 usually newstar send 2-3 weeks bulletins of next year in dec of this year
-			which in turn shows wrong publication date in EV display i.e. 15-Dec-2021 though we still in DEC 2020, it should show Jan 2021
-        */
-       
-        int currYR = Calendar.getInstance().get(Calendar.YEAR);
-      	 // Only add 1 more month at the time of switch between curr and next year
-        	if(currYR != year)
-        	{
-        		 Calendar cal = Calendar.getInstance();
-                 cal.add(Calendar.MONTH, 1);
-                 date = cal.getTime();
-        	}
-        
+        //System.out.println("DATE= "+dateFormat.format(date));
         return dateFormat.format(date);
 
     }
