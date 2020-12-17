@@ -5,6 +5,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -61,7 +62,8 @@ public class ReadScivalExcelFile {
 			
 		System.out.println("InputFile: " + inFileName);
 		readCSVFile();
-		writeCSVFile();
+		//writeCSVFile();			// CSV out
+		writeExcelFile();			// XLS out
 	}
 
 	private void readCSVFile()
@@ -217,37 +219,74 @@ public class ReadScivalExcelFile {
 	
 	public void writeExcelFile()
 	{
+		String scival_out = "scival_instAff_out.xls";
 		XSSFWorkbook workbook = new XSSFWorkbook();
 		XSSFSheet sheet = workbook.createSheet("institution_profile");
-		int rownum = 0;
+		
 		
 		if(institutionsList.size() >0)
 		{
+			int rownum = 0;
 			for(Map.Entry<Integer, ScivalInstitutionRecord> entry: institutionsList.entrySet())
 			{
 				int colIndx = 0;
-				Row row = sheet.createRow(rownum++);
+				
 				ScivalInstitutionRecord recordInfo = entry.getValue();
 				
 				//for each affiliation_ID add entry in out file
-				recordInfo.getAffiliationInfo().forEach((key,value) -> {
+				for(Integer key: recordInfo.getAffiliationInfo().keySet())
+				{
+					String value = recordInfo.getAffiliationInfo().get(key);
 					try {
+						Row row = sheet.createRow(rownum);
 						row.createCell(colIndx).setCellValue(entry.getKey());
 						row.createCell(colIndx+1).setCellValue(recordInfo.getInstitutionName());
 						row.createCell(colIndx+2).setCellValue(key);
 						row.createCell(colIndx+3).setCellValue(value);
 						row.createCell(colIndx+4).setCellValue(recordInfo.getRegion());
 						row.createCell(colIndx+5).setCellValue(recordInfo.getCountry());
-						
+						rownum++;
 					} 
 					catch (Exception e) 
 					{
 						
 						e.printStackTrace();
 					}
-				});
+				
+				}
+			}
+			
+			try(FileOutputStream out = new FileOutputStream(new File(scival_out)))
+			{
+				workbook.write(out);
+				System.out.println("Excel file was successfully created");
+			} 
+			catch (FileNotFoundException e1) 
+			{
+				System.out.println("Exception writing to excel file!!");
+				e1.printStackTrace();
+			} 
+			catch (IOException e1) 
+			{
+				System.out.println("Exception writing to excel file!!");
+				e1.printStackTrace();
+			}
+			finally
+			{
+				try
+				{
+					if(workbook != null)
+						workbook.close();
+				}
+				catch(Exception e)
+				{
+					System.out.println("Failed to close workbook");
+					e.printStackTrace();
+				}
 			}
 		}
+		
+		
 	}
 	class ScivalInstitutionRecord
 	{
