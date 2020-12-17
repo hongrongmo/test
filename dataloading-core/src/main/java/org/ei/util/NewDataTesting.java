@@ -6672,7 +6672,7 @@ public class NewDataTesting
 		String result = null;
 		int hitCount=0;
 		String query=buildESQuery(value,searchfield,database);		
-		//System.out.println("ESQuery: " + query);
+		System.out.println("ESQuery: " + query);
 		
 		try
 		{

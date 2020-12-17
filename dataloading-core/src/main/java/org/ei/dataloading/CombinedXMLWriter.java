@@ -2813,10 +2813,25 @@ public class CombinedXMLWriter
 	            contentObject.put("ORG_ID".toLowerCase(),elementArrayObject);
             }
            
+            //added by hmo @12-09-2020
+            String freetoreadstatus=rec.getString(EVCombinedRec.FREETOREADSTATUS);
+            String isopenaccess=rec.getString(EVCombinedRec.ISOPENACESS);
+            String openaccess="";
+            if(isopenaccess!=null)
+            {
+            	openaccess=isopenaccess;
+            }
             
-            if(rec.getString(EVCombinedRec.ISOPENACESS)!=null && rec.getString(EVCombinedRec.ISOPENACESS).length()>0)
-            {	                
-	            contentObject.put("ISOPENACESS".toLowerCase(),rec.getString(EVCombinedRec.ISOPENACESS));	          
+            if(freetoreadstatus!=null)
+            {
+            	openaccess=openaccess+" "+freetoreadstatus;
+            }
+            
+            if(openaccess!=null && openaccess.length()>0)
+            {
+            	String[] openaccessArray=openaccess.split(" ", -1);
+            	elementArrayObject = formJsonArray(openaccessArray,"ISOPENACESS");    
+	            contentObject.put("ISOPENACESS".toLowerCase(),elementArrayObject);	          
             }
  
             String[] grantText=rec.getStrings(EVCombinedRec.GRANTTEXT); 
@@ -2845,7 +2860,10 @@ public class CombinedXMLWriter
             if(rec.getString(EVCombinedRec.PROCESS_INFO)!=null && rec.getString(EVCombinedRec.PROCESS_INFO).length()>0)
             {          	
  	            contentObject.put("PROCESSINFO".toLowerCase(),rec.getString(EVCombinedRec.PROCESS_INFO));       
-            }  
+            } 
+            
+            
+            
             //output pretty format        
             //Gson gson = new GsonBuilder().disableHtmlEscaping().setPrettyPrinting().create();
             

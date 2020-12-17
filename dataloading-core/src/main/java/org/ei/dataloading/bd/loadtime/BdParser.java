@@ -20,7 +20,6 @@ import org.ei.common.Constants;
 import org.ei.common.bd.*;
 import org.ei.dataloading.*;
 
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -268,8 +267,10 @@ public class BdParser
 						{
 							Element oaArticleStatus = openAccess.getChild("oa-article-status",xocsNamespace);
 							String isOpenAccess = oaArticleStatus.getAttributeValue("is-open-access");
+							String freeToReadStatus = oaArticleStatus.getAttributeValue("free-to-read-status");
 							record.put("ISOPENACESS",isOpenAccess);
-							//System.out.println("isOpenAccess="+isOpenAccess);
+							record.put("FREETOREADSTATUS",freeToReadStatus);
+							//System.out.println("freeToReadStatus="+freeToReadStatus);
 						}
 						
 					}
@@ -1433,6 +1434,7 @@ public class BdParser
 		Hashtable referenceText = new Hashtable();
 		Hashtable referenceWebsite = new Hashtable();
 		Hashtable referenceItemid = new Hashtable();
+		Hashtable referenceItemDOI = new Hashtable();
 		Hashtable referenceItemcitationPII = new Hashtable();
 		Hashtable referenceItemcitationEID = new Hashtable();
 		Hashtable referenceItemcitationDOI = new Hashtable();
@@ -1626,6 +1628,12 @@ public class BdParser
 							String itemid = getItemID(itemidList);
 							//System.out.println("ITEM_CPX_ID::"+itemid);
 							referenceItemid.put(referenceID,itemid);
+							
+							String itemdoi=getItemDoi(itemidList);
+							if(itemdoi!=null)
+							{
+								referenceItemDOI.put(referenceID,itemdoi);
+							}
 						}
 					}
 
@@ -1953,6 +1961,13 @@ public class BdParser
 			reference.put("REFERENCEITEMID",referenceItemid);
 			//System.out.println("REFERENCEITEMID::"+referenceItemid);
 		}
+		
+		
+		if(referenceItemDOI!=null && referenceItemDOI.size()>0)
+		{
+			reference.put("REFERENCEITEMDOI",referenceItemDOI);
+			//System.out.println("REFERENCEITEMDOI::"+referenceItemDOI);
+		}
 
 		if(referenceItemcitationPII!=null && referenceItemcitationPII.size()>0)
 		{
@@ -2111,6 +2126,23 @@ public class BdParser
 
 		return publicationyearBuffer.toString();
 	}
+	
+	private String getItemDoi(List itemidList) throws Exception
+	{
+		String  itemid = null;
+		
+		for(int j=0;j<itemidList.size();j++)
+		{
+			Element itemidElement = (Element)itemidList.get(j);
+			String  itemid_idtype = itemidElement.getAttributeValue("idtype");
+
+			if(itemid_idtype != null && (itemid_idtype.equals("DOI")))
+			{
+				itemid = itemidElement.getTextTrim();
+			}
+		}
+		return itemid;
+	}
 
 	private String getItemID(List itemidList) throws Exception
 	{
@@ -2165,7 +2197,11 @@ public class BdParser
 				String  pui = itemidElement.getTextTrim();
 				referenceItemid.append("SEC:"+pui);
 			}
-			referenceItemid.append(Constants.IDDELIMITER);
+			
+			if(referenceItemid.length()>0)
+			{
+				referenceItemid.append(Constants.IDDELIMITER);
+			}
 		}
 		if(cpxID!=null)
 		{
@@ -2187,7 +2223,11 @@ public class BdParser
 		{
 			referenceItemid.append("ACCESSNUMBER:"+apilitID);
 		}
-		referenceItemid.append(Constants.IDDELIMITER);
+		
+		if(referenceItemid.length()>0)
+		{
+			referenceItemid.append(Constants.IDDELIMITER);
+		}
 		return referenceItemid.toString();
 	}
 

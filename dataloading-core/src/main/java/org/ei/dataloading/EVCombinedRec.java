@@ -508,6 +508,8 @@ public class EVCombinedRec {
 	// added by hmo on 2020-03-03
 	public static final String PROCESS_INFO = "377";
 
+	//added by hmo @2020-12-09
+	public static final String FREETOREADSTATUS = "378";
 	 //*/
 
 	private Hashtable h = new Hashtable();

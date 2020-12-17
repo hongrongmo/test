@@ -1200,7 +1200,10 @@ public class BdCorrection
                 {                		               
                 	rs = stmt.executeQuery(deleteString);
 	                List deleteRecords = creatDeleteFile(rs,dbname,updateNumber);
-	                sendDeleteToKafka(deleteRecords);
+	                if(this.propertyFileName!=null)
+	                {
+	                	sendDeleteToKafka(deleteRecords);
+	                }
 	                //writer.zipBatch(); //no need to zip a delete file after switch to ES modified by hmo @10/29/2020
 	                
                 }
