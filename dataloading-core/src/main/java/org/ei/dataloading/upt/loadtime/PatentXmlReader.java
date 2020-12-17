@@ -19,12 +19,15 @@ import java.util.function.Function;
 import java.util.function.ToDoubleFunction;
 import java.util.function.ToIntFunction;
 import java.util.function.ToLongFunction;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 
 
 
 /*import java.util.zip.ZipFile;*/    //original
 import org.apache.commons.compress.archivers.zip.*;   //HH 08/04/2015 to fix issue of Patent zip file's headers 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.oro.text.perl.Perl5Util;
 import org.ei.util.GUID;
 import org.jdom2.Attribute;
@@ -1739,17 +1742,26 @@ public class PatentXmlReader
 				
 				//System.out.println("DRAWINGS= "+(String)singleRecord.get("DRAWINGS"));
 			}
-			
 			out.print(DELIM);
-			
 			//IMAGE
 			
 			if(singleRecord.get("IMAGE")!=null)
 			{
 				out.print((String)singleRecord.get("IMAGE"));
-				//System.out.println("IMAGE= "+(String)singleRecord.get("IMAGE"));
+				//System.out.println("IMAGE= "+(String)singleRecord.get("IMAGE"));		// only for debugging
+				
+				String image = (String)singleRecord.get("IMAGE");
+				if(image.contains("true"))
+				{
+					String url = constructPdfUrl(image);
+					if(!url.isEmpty())
+					{
+						out.print(DELIM);
+						out.print(url);
+					}
+							
+				}
 			}
-			
 			out.print(DELIM);
 			
 			//DESCRIPTION
@@ -1808,10 +1820,7 @@ public class PatentXmlReader
 			{
 				out.print((String)singleRecord.get("PUBLICATION_GROUP"));
 				//System.out.println("PUBLICATION_GROUP1= "+(String)singleRecord.get("PUBLICATION_GROUP"));
-			}
-			
-					
-			
+			}		
 			
 			out.print("\n");
 		}
@@ -1822,6 +1831,50 @@ public class PatentXmlReader
 			System.out.println("zip file name is "+filename);
 			e.printStackTrace();
 		}
+	}
+	
+	/**
+	 * 
+	 * @param inputString
+	 * @param StringSize
+	 * @return
+	 * @author TELEBH
+	 * @Date: 12/11/2020
+	 * @Description: Construct PDF URL to be used by web app for downloading pdf file
+	 */
+	public String constructPdfUrl(String image)
+	{
+		String url = "";
+		String patentID = null;
+		String patentCode = null;
+		String patentKC = null;
+		String[] imgAttributes = image.split(Constants.AUDELIMITER);
+		if(imgAttributes.length >=1)
+		{
+			if(!imgAttributes[0].isEmpty())
+			{
+				String img = imgAttributes[0].substring(0, imgAttributes[0].lastIndexOf("."));
+				if(img.matches("[A-Za-z0-9]+"))
+				{
+					//Patent ID Number
+					patentID = StringUtils.getDigits(img.substring(0, img.length()-1));
+				
+					
+					//Patent Code
+					patentCode = img.substring(0, 2);
+					
+					//KC
+					patentKC = img.substring(img.length()-2);
+					patentKC = patentKC.replaceAll("[0-9]", "");
+					
+					//System.out.println(patentCode + "," + patentID + "," + patentKC);
+					url = "http://ipdatadirect.lexisnexis.com/downloadpdf.aspx?lg=ElsevierVTW&pw=pj5V3HCzAFR9&pdf="
+							+ patentCode.toLowerCase() + "," + patentID + "," + patentKC.toLowerCase();
+				}
+				
+			}
+		}
+		return url;
 	}
 	
 	private String trimStringToLength(String inputString,int StringSize)
@@ -2860,7 +2913,12 @@ public class PatentXmlReader
 			String file = image.getAttributeValue("file");
 			String type = image.getAttributeValue("type");
 			String size = image.getAttributeValue("size");
-			String pages = image.getAttributeValue("page");
+			String pages = image.getAttributeValue("pages");
+			//HTeleb Added 12/08/2020 as per Judy&Chemtiva team asked to check if record has PDF to be displayed in EV App (i.e. has PDF)
+			String pageCount = image.getAttributeValue("count");
+
+			
+			
 			if(file!=null)
 			{
 				imageBuffer.append(file);
@@ -2871,15 +2929,29 @@ public class PatentXmlReader
 				imageBuffer.append(type);
 			}
 			imageBuffer.append(Constants.AUDELIMITER);
-			if(size!=null)
+			//HH added 12/10/2020 for PDF check 
+			if(size != null)
 			{
 				imageBuffer.append(size);
+				imageBuffer.append(Constants.AUDELIMITER);
 			}
-			imageBuffer.append(Constants.AUDELIMITER);
-			if(pages!=null)
+			if(pages != null)
 			{
 				imageBuffer.append(pages);
+				imageBuffer.append(Constants.AUDELIMITER);
 			}
+			if(pages != null && Integer.parseInt(pages) >1)
+			{
+				imageBuffer.append(true);
+			}
+			else if(pageCount != null && size != null)
+			{
+				if(Integer.parseInt(pageCount) >1 && Integer.parseInt(size) >1)
+					imageBuffer.append(true);
+			}
+			else
+				imageBuffer.append(false);
+			
 			record.put("IMAGE", imageBuffer.toString());
 			
 		}

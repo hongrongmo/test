@@ -86,7 +86,7 @@ public class PublishSES {
 		try
 		{
 			//Get AMazon SE cleint
-			AmazonSimpleEmailService client = AmazonSESService.getInstance().getAmazonSNSClient();
+			AmazonSimpleEmailService client = AmazonSESService.getInstance().getAmazonSESClient();
 			
 			SendEmailRequest request = new SendEmailRequest()
 					.withDestination(new Destination().withToAddresses(RECEIPIENT))
@@ -107,9 +107,10 @@ public class PublishSES {
 	
 	/* Sending Raw SES EMail with attachment using AWS SES API */
 	
-	public void publishRawSESMessageWithAttachment(String fileName1, String fileName2) throws AddressException, javax.mail.MessagingException, IOException
+	public void publishRawSESMessageWithAttachment(String fileName1) throws AddressException, javax.mail.MessagingException, IOException
 	{
-		System.out.println("FIleName: " + fileName1 + " , " + fileName2);
+		//System.out.println("FIleName: " + fileName1 + " , " + fileName2);
+		System.out.println("FIleName: " + fileName1);
 		Session session = Session.getDefaultInstance(new Properties());
 		
 		//Create a new MimeMessage object
@@ -159,18 +160,19 @@ public class PublishSES {
 		attachment1.setFileName(ds1.getName());
 		
 		
-		//Add Attachment2
+		//Add Attachment2 
 		
+		/*
 		  MimeBodyPart attachment2 = new MimeBodyPart(); 
 		  DataSource ds2 = new FileDataSource(fileName2); 
 		  attachment2.setDataHandler(new DataHandler(ds2));
 		  attachment2.setFileName(ds2.getName());
-		 
+		 */
 		
 		
 		//Add attachment to the message
 		parentMessage.addBodyPart(attachment1);
-		parentMessage.addBodyPart(attachment2);
+		//parentMessage.addBodyPart(attachment2);
 		
 		//Send email
 		try
@@ -178,7 +180,7 @@ public class PublishSES {
 			System.out.println("Send Raw email through AWS SES including attachment.... ");
 			
 			// Get Amazon SES client
-			AmazonSimpleEmailService client = AmazonSESService.getInstance().getAmazonSNSClient();
+			AmazonSimpleEmailService client = AmazonSESService.getInstance().getAmazonSESClient();
 			 
 			//Print raw email content to console ONLY for testing
 			//PrintStream out = System.out;

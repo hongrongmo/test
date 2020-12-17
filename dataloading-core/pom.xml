@@ -11,6 +11,19 @@
   <name>dataloading-core</name>
   <url>http://maven.apache.org</url>
 
+<distributionManagement>
+		<repository>
+			<id>nexus</id>
+			<name>nexus</name>
+			<url>http://nexus.elsst.com/content/repositories/elsevier-releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus</id>
+			<name>nexus</name>
+			<url>http://nexus.elsst.com/content/repositories/elsevier-snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+	
 
 <dependencies>
 
@@ -391,6 +404,18 @@
 		<version>1.11.264</version>
 	</dependency> -->
 		
+		<!-- HH added 12/11/2020 to read MS files, i.e. excel -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.9</version>
+		</dependency>
+		<dependency>
+    		<groupId>org.apache.poi</groupId>
+    		<artifactId>poi-ooxml</artifactId>
+    		<version>3.11</version>
+		</dependency>
+
 		
 	</dependencies>
 

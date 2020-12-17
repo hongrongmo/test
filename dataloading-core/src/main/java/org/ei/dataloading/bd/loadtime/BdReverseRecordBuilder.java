@@ -3165,6 +3165,7 @@ public class BdReverseRecordBuilder
 	    	{
 	    		database="upt";
 	    	}
+
 	    	String path="json/"+database+"/";
 	        
 	        byte[] buf = new byte[1024];
@@ -3172,6 +3173,7 @@ public class BdReverseRecordBuilder
 	        //create zip file name
 	        String ZipFilename =  filename.replace("xml", "zip");
 	        File file = new File(filename);
+	        
 	        //long timediff = time - this.starttime;
 	       
 	        ZipOutputStream outZIP = new ZipOutputStream(new FileOutputStream(path+ZipFilename));
