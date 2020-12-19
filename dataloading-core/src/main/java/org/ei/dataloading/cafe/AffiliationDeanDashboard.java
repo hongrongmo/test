@@ -39,7 +39,7 @@ import com.google.gson.GsonBuilder;
  * corresponding affid. but need to limit the list of affiliations to only ones 
  * 	- indexed in ES
  *  - quality >=99
- *  - doc_count >=1000
+ *  - institution (sum of affiliations) doc_count >=1000
  *  
  *   Out file: JSON file with fields ( AFFID, PREFERED_NAME, NAME_VARIANT, DOC_COUNT)
  */
