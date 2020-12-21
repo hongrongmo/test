@@ -313,6 +313,14 @@ public class BaseTableWriter
 	    	//System.out.println("COLLABORATION AFF term"+record.get("COLLABORATION_AFF"));
 		}
 	    
+	   //added on 20201209 by hongrong for EVOPS 1055
+	    recordBuf.append(FIELDDELIM);
+	    if(record.get("FREETOREADSTATUS")!=null)
+		{
+	    	recordBuf.append(record.get("FREETOREADSTATUS"));
+	    	//System.out.println("FREETOREADSTATUS"+record.get("FREETOREADSTATUS"));
+		}
+	    
 	    //*/
 	    
 	    if(getAccessionNumber()!=null && getAccessionNumber().length()>0)
@@ -376,7 +384,11 @@ public class BaseTableWriter
 			 Hashtable REFERENCEITEMID = (Hashtable)reference.get("REFERENCEITEMID");
 			 Hashtable REFERENCEITEMCITATIONEID = (Hashtable)reference.get("REFERENCEITEMCITATIONEID");
 			 Hashtable REFERENCEITEMCITATIONPII = (Hashtable)reference.get("REFERENCEITEMCITATIONPII");
-			 Hashtable REFERENCEITEMCITATIONDOI = (Hashtable)reference.get("REFERENCEITEMCITATIONDOI");
+			 
+			 //change to take REFERENCEITEMDOI by hmo @12/16/2020
+			 //Hashtable REFERENCEITEMCITATIONDOI = (Hashtable)reference.get("REFERENCEITEMCITATIONDOI");
+			 Hashtable REFERENCEITEMCITATIONDOI = (Hashtable)reference.get("REFERENCEITEMDOI");
+			 
 			 Hashtable REFERENCEITEMCITATIONAUTHOR = (Hashtable)reference.get("REFERENCEITEMCITATIONAUTHOR");
 			 Hashtable REFITEMCITATIONSOURCETITLE = (Hashtable)reference.get("REFITEMCITATIONSOURCETITLE");
 			 Hashtable REFERENCEITEMCITATIONISSN = (Hashtable)reference.get("REFERENCEITEMCITATIONISSN");
@@ -526,6 +538,7 @@ public class BaseTableWriter
 				  }
 				  recordBuf.append(FIELDDELIM);
 
+				  //change to host referenceItemDOI
 				  if(REFERENCEITEMCITATIONDOI != null && REFERENCEITEMCITATIONDOI.get(referenceID)!=null)
 				  {
 					 //System.out.println("REFERENCEITEMCITATIONDOI="+(String)REFERENCEITEMCITATIONDOI.get(referenceID));

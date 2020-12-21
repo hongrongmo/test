@@ -34,6 +34,7 @@ import org.ei.data.compendex.runtime.*;
 public class BdReverseRecordBuilder
 {
     private static BaseTableWriter baseWriter;
+    private String accessnumber;
     private int loadNumber;
     private String databaseName;
     private String tableName = "bd_master";
@@ -137,7 +138,8 @@ public class BdReverseRecordBuilder
          try
          {
              stmt = con.createStatement();
-             file = new FileWriter(databaseName+"_"+loadN+".xml");
+             String filename = databaseName+"_"+loadN+".xml";
+             file = new FileWriter(filename);
              file.write(initialString.toString());
              rs = stmt.executeQuery("select *  from bd_master where loadnumber="+loadN+" and database='"+databaseName+"'");
              while (rs.next())
@@ -145,10 +147,13 @@ public class BdReverseRecordBuilder
                  writeRecord(rs,file);
              }
              file.write("</bibdataset>");
+             file.close();
+             zipBatchFile(filename,databaseName);
          }
-         catch (IOException e)
+         catch (Exception e)
          {
-             System.err.println(e);
+        	 System.out.println("problem with accessnumber="+this.accessnumber);
+        	 e.printStackTrace();
              System.exit(1);
          }
          finally
@@ -175,6 +180,7 @@ public class BdReverseRecordBuilder
     	int day = calendar.get(Calendar.DATE);
     	String dateSort = rs.getString("DATESORT");
     	String accessnumber = rs.getString("ACCESSNUMBER");
+    	this.accessnumber=accessnumber;
     	String copyright = dictionary.AlphaEntitysToNumericEntitys(rs.getString("COPYRIGHT"));
     	String doi = rs.getString("DOI");
     	String pui = rs.getString("PUI");
@@ -567,7 +573,7 @@ public class BdReverseRecordBuilder
 				if(confsponsors!=null && confsponsors.length()>0)
 				{
 					file.write("<confsponsors>\n");
-					String[] confsponsorArray = confsponsors.split(Constants.AUDELIMITER);
+					String[] confsponsorArray = confsponsors.split(Constants.AUDELIMITER,-1);
 					for(int i=0;i<confsponsorArray.length;i++)
 					{
 						String confsponsor = confsponsorArray[i];
@@ -726,11 +732,11 @@ public class BdReverseRecordBuilder
 	private void outputCitationTitle(FileWriter file,String citationTitle) throws Exception
 	{
 		file.write("<citation-title>\n");
-		String[] ctitles = citationTitle.split(Constants.AUDELIMITER);
+		String[] ctitles = citationTitle.split(Constants.AUDELIMITER,-1);
 		for(int i=0;i<ctitles.length;i++)
 		{
 			String ctitle = ctitles[i];
-			String[] ct = ctitle.split(Constants.IDDELIMITER);
+			String[] ct = ctitle.split(Constants.IDDELIMITER,-1);
 			if(ct.length==4)
 			{
 				String title = ct[1];
@@ -750,7 +756,7 @@ public class BdReverseRecordBuilder
 	private void outputWebsite(FileWriter file,String sourcewebsite) throws Exception
 	{
 		file.write("<website>\n");
-		String[] websiteArray = sourcewebsite.split(Constants.IDDELIMITER);
+		String[] websiteArray = sourcewebsite.split(Constants.IDDELIMITER,-1);
 		if(websiteArray.length>0)
 		{
 			String eaddress = null;
@@ -777,7 +783,7 @@ public class BdReverseRecordBuilder
 		HashMap contributoraffiliationMap = new HashMap();
 		if(contributoraffiliation!=null && contributoraffiliation.length()>0)
 		{
-			String[] caffiliations = contributoraffiliation.split(Constants.AUDELIMITER);
+			String[] caffiliations = contributoraffiliation.split(Constants.AUDELIMITER,-1);
 			for(int i=0;i<caffiliations.length;i++)
 			{
 				String caffiliation = caffiliations[i];
@@ -795,14 +801,14 @@ public class BdReverseRecordBuilder
 		
 		if(contributor!=null && contributor.length()>0)
 		{
-			String[] contributorGroups = contributor.split(Constants.AUDELIMITER);
+			String[] contributorGroups = contributor.split(Constants.AUDELIMITER,-1);
 			for(int i=0;i<contributorGroups.length;i++)
 			{
 				String contributorGroup = contributorGroups[i];
 				file.write("<contributor-group>\n");
 				if(contributorGroup!=null && contributorGroup.length()>0)
 				{
-					String[] contributors = contributorGroup.split(Constants.IDDELIMITER);
+					String[] contributors = contributorGroup.split(Constants.IDDELIMITER,-1);
 					//System.out.println("CONTRIBUTOR SIZE="+contributors.length);
 					
 					
@@ -1488,11 +1494,11 @@ public class BdReverseRecordBuilder
 	private void outputGrantlist(FileWriter file, String grantlist) throws Exception
 	{
 		file.write("<grantlist>\n"); //our database table didn't capture the attribute "complete", so we ignore it here.
-		String[] grants = grantlist.split(Constants.AUDELIMITER);
+		String[] grants = grantlist.split(Constants.AUDELIMITER,-1);
 		for(int i=0;i<grants.length;i++)
 		{
 			String grant = grants[i];
-			String[] grantElements = grant.split(Constants.IDDELIMITER);
+			String[] grantElements = grant.split(Constants.IDDELIMITER,-1);
 			if(grantElements.length==3){
 				file.write("<grant>\n");
 				String grantId = grantElements[0];
@@ -1555,14 +1561,15 @@ public class BdReverseRecordBuilder
 
     private void outputISBN(FileWriter file, String isbnString) throws Exception
     {
-    	String[] isbns = isbnString.split(Constants.AUDELIMITER);
+    	String[] isbns = isbnString.split(Constants.AUDELIMITER,-1);
+    	
 		for(int i=0;i<isbns.length;i++)
 		{
 			String isbn = isbns[i];
 			if(isbn!=null && isbn.length()>0)
 			{
-				String[] isbnElements = isbn.split(Constants.IDDELIMITER);
-				if(isbnElements.length>0)
+				String[] isbnElements = isbn.split(Constants.IDDELIMITER,-1);
+				if(isbnElements.length>0 && isbnElements.length==4 )
 				{
 					String isbnType = isbnElements[0];
 					String isbnLength = isbnElements[1];
@@ -1583,9 +1590,22 @@ public class BdReverseRecordBuilder
 					{
 						file.write(" length=\""+isbnLength+"\"");
 					}
-					file.write(">"+isbnValue+"</isbn>\n");
-							
-					
+					file.write(">"+isbnValue+"</isbn>\n");												
+				}
+				else if(isbnElements.length>0 && isbnElements.length==2 )
+				{
+					String isbnType = isbnElements[0];					
+					String isbnValue = isbnElements[1];
+					file.write("<isbn");
+					if(isbnType!=null && isbnType.length()>0)
+					{
+						file.write(" type=\""+isbnType+"\"");
+					}										
+					file.write(">"+isbnValue+"</isbn>\n");												
+				}
+				else
+				{
+					System.out.println("invalid isbn length for record="+this.accessnumber);
 				}
 			}
 		}
@@ -1727,17 +1747,17 @@ public class BdReverseRecordBuilder
 		String[] publisherelectronicaddressArray = null;
 		if(publishername!=null && publishername.length()>0)
 		{
-			publishernameArray = publishername.split(Constants.AUDELIMITER);
+			publishernameArray = publishername.split(Constants.AUDELIMITER,-1);
 		}
 		
 		if(publisheraddress!=null && publisheraddress.length()>0)
 		{
-			publisheraddressArray = publisheraddress.split(Constants.AUDELIMITER);
+			publisheraddressArray = publisheraddress.split(Constants.AUDELIMITER,-1);
 		}
 		
 		if(publisherelectronicaddress!=null && publisherelectronicaddress.length()>0)
 		{
-			publisherelectronicaddressArray = publisherelectronicaddress.split(Constants.AUDELIMITER);
+			publisherelectronicaddressArray = publisherelectronicaddress.split(Constants.AUDELIMITER,-1);
 		}
 		
 		if(publishernameArray!=null && publishernameArray.length>0)
@@ -1872,13 +1892,13 @@ public class BdReverseRecordBuilder
     }
     private void outputConflocation(FileWriter file, String conflocation) throws Exception
     {
-    	String[] conflocationArray = conflocation.split(Constants.AUDELIMITER);
+    	String[] conflocationArray = conflocation.split(Constants.AUDELIMITER,-1);
 		for(int i=0;i<conflocationArray.length;i++)
 		{
 			String cflocation = conflocationArray[i];
 			if(cflocation!=null && cflocation.length()>0)
 			{
-				String[] cflocationElements = cflocation.split(Constants.IDDELIMITER);
+				String[] cflocationElements = cflocation.split(Constants.IDDELIMITER,-1);
 				
 				if(cflocationElements.length>0)
 				{
@@ -2033,14 +2053,14 @@ public class BdReverseRecordBuilder
 		
 		if(confenceeditor!=null && confenceeditor.length()>0)
 		{
-			String[] confeditorArray = confenceeditor.split(Constants.AUDELIMITER);
+			String[] confeditorArray = confenceeditor.split(Constants.AUDELIMITER,-1);
 			for(int i=0;i<confeditorArray.length;i++)
 			{
 				String confeditor = confeditorArray[i];
 				if(confeditor!=null && confeditor.length()>0)
 				{
 					file.write("<confeditor>\n");
-					String[] confeditorElement = confeditor.split(Constants.IDDELIMITER);
+					String[] confeditorElement = confeditor.split(Constants.IDDELIMITER,-1);
 					//System.out.println("confeditorElement SIZE="+confeditorElement.length);
 					String editorID = null;
 					String initials = null;
@@ -2143,7 +2163,7 @@ public class BdReverseRecordBuilder
 		
 		file.write(" controlled=\"y\" type=\""+descriptorsType+"\">\n");
 		
-		String[] controlledtermElements = controlledterm.split(Constants.AUDELIMITER);
+		String[] controlledtermElements = controlledterm.split(Constants.AUDELIMITER,-1);
 		for(int i=0;i<controlledtermElements.length;i++)
 		{
 			String controlledtermElement = controlledtermElements[i];
@@ -2161,7 +2181,7 @@ public class BdReverseRecordBuilder
     {
     	file.write("<descriptors controlled=\"n\" type=\"CFL\">\n");	    								    							
 		
-		String[] uncontrolledtermElements = uncontrolledterm.split(Constants.AUDELIMITER);
+		String[] uncontrolledtermElements = uncontrolledterm.split(Constants.AUDELIMITER,-1);
 		for(int i=0;i<uncontrolledtermElements.length;i++)
 		{
 			String uncontrolledtermElement = uncontrolledtermElements[i];
@@ -2179,7 +2199,7 @@ public class BdReverseRecordBuilder
     {
     	file.write("<descriptors controlled=\"y\" type=\"CMH\">\n");	    								    							
 		
-		String[] mainheadingElements = mainheading.split(Constants.AUDELIMITER);
+		String[] mainheadingElements = mainheading.split(Constants.AUDELIMITER,-1);
 		for(int i=0;i<mainheadingElements.length;i++)
 		{
 			String mainheadingElement = mainheadingElements[i];
@@ -2197,7 +2217,7 @@ public class BdReverseRecordBuilder
     {
     	file.write("<descriptors controlled=\"y\" type=\"SPC\">\n");	    								    							
 		
-		String[] speciestermElements = speciesterm.split(Constants.AUDELIMITER);
+		String[] speciestermElements = speciesterm.split(Constants.AUDELIMITER,-1);
 		for(int i=0;i<speciestermElements.length;i++)
 		{
 			String speciestermElement = speciestermElements[i];
@@ -2215,7 +2235,7 @@ public class BdReverseRecordBuilder
     {
     	file.write("<descriptors controlled=\"y\" type=\"RGI\">\n");	    								    							
 		
-		String[] regionaltermElements = regionalterm.split(Constants.AUDELIMITER);
+		String[] regionaltermElements = regionalterm.split(Constants.AUDELIMITER,-1);
 		for(int i=0;i<regionaltermElements.length;i++)
 		{
 			String regionaltermElement = regionaltermElements[i];
@@ -2233,7 +2253,7 @@ public class BdReverseRecordBuilder
     {
     	file.write("<descriptors controlled=\"y\" type=\"CTC\">\n");	    								    							
 		
-		String[] treatmentcodeElements = treatmentcode.split(Constants.AUDELIMITER);
+		String[] treatmentcodeElements = treatmentcode.split(Constants.AUDELIMITER,-1);
 		for(int i=0;i<treatmentcodeElements.length;i++)
 		{
 			String treatmentcodeElement = treatmentcodeElements[i];
@@ -2251,7 +2271,7 @@ public class BdReverseRecordBuilder
     {
     	file.write("<descriptors controlled=\"y\" type=\"MED\">\n");	    								    							
 		
-		String[] chemicaltermElements = chemicalterm.split(Constants.AUDELIMITER);
+		String[] chemicaltermElements = chemicalterm.split(Constants.AUDELIMITER,-1);
 		for(int i=0;i<chemicaltermElements.length;i++)
 		{
 			String chemicaltermElement = chemicaltermElements[i];
@@ -2279,7 +2299,7 @@ public class BdReverseRecordBuilder
 			file.write(" type=\"CPXCLASS\">\n");	
 		}
 		
-		String[] classificationcodeElements = classificationcode.split(Constants.AUDELIMITER);
+		String[] classificationcodeElements = classificationcode.split(Constants.AUDELIMITER,-1);
 		for(int i=0;i<classificationcodeElements.length;i++)
 		{
 			String  classificationcodeElement = classificationcodeElements[i];	    					
@@ -2299,20 +2319,20 @@ public class BdReverseRecordBuilder
     private void outputManufacturergroups(FileWriter file,String manufacturer) throws Exception
     {
     	file.write("<manufacturergroup>\n");
-		String[] manufacturers = manufacturer.split(Constants.AUDELIMITER);
+		String[] manufacturers = manufacturer.split(Constants.AUDELIMITER,-1);
 		for(int i=0;i<manufacturers.length;i++)
 		{
 			String manufacturersElement = manufacturers[i];
 			if(manufacturersElement!=null && manufacturersElement.length()>0)
 			{
 				file.write("<manufacturers>\n");
-				String[] manufacturerArray = manufacturersElement.split(Constants.IDDELIMITER);
+				String[] manufacturerArray = manufacturersElement.split(Constants.IDDELIMITER,-1);
 				for(int j=0;j<manufacturerArray.length;j++)
 				{
 					String manufacturerElement = manufacturerArray[j];
 					if(manufacturerElement!=null && manufacturerElement.length()>0)
 					{
-						String[] manufacturerDetail = manufacturerElement.split(Constants.GROUPDELIMITER);
+						String[] manufacturerDetail = manufacturerElement.split(Constants.GROUPDELIMITER,-1);
 						if(manufacturerDetail.length==2)
 						{
 							file.write("<manufacturer");
@@ -2346,7 +2366,7 @@ public class BdReverseRecordBuilder
     {
     	//System.out.println("sequencebank="+sequencebank);
 		file.write("<sequencebanks>\n");
-		String[] sequencebanks = sequencebank.split(Constants.AUDELIMITER);
+		String[] sequencebanks = sequencebank.split(Constants.AUDELIMITER,-1);
 		for(int i=0;i<sequencebanks.length;i++)
 		{
 			String sequencebankElements = sequencebanks[i];
@@ -2354,7 +2374,7 @@ public class BdReverseRecordBuilder
 			if(sequencebankElements!=null && sequencebankElements.length()>0)
 			{
 				file.write("<sequencebank");
-				String[] sequencebankArray = sequencebankElements.split(Constants.IDDELIMITER);
+				String[] sequencebankArray = sequencebankElements.split(Constants.IDDELIMITER,-1);
 				String sequencebankName = sequencebankArray[0];
 				if(sequencebankName!=null && sequencebankName.length()>0)
 				{
@@ -2380,14 +2400,14 @@ public class BdReverseRecordBuilder
     private void outputTradenameGroup(FileWriter file,String tradename) throws Exception 
     {
     	file.write("<tradenamegroup>\n");
-		String[] tradenamesArray = tradename.split(Constants.AUDELIMITER);
+		String[] tradenamesArray = tradename.split(Constants.AUDELIMITER,-1);
 		for(int i=0;i<tradenamesArray.length;i++)
 		{
 			file.write("<tradenames");
 			String tradenames = tradenamesArray[i];
 			if(tradenames!=null && tradenames.length()>0)
 			{
-				String[] tradenameElements = tradenames.split(Constants.IDDELIMITER);
+				String[] tradenameElements = tradenames.split(Constants.IDDELIMITER,-1);
 				//System.out.println("tradenames SIZE="+tradenameElements.length);
 				String tradenameType = tradenameElements[0];
 				if(tradenameType!=null && tradenameType.length()>0)
@@ -2416,14 +2436,14 @@ public class BdReverseRecordBuilder
     private void outputChemicalgroup(FileWriter file, String casregistrynumber) throws Exception 
     {
     	file.write("<chemicalgroup>\n");
-		String[] chemicalgroup = casregistrynumber.split(Constants.AUDELIMITER);
+		String[] chemicalgroup = casregistrynumber.split(Constants.AUDELIMITER,-1);
 		for(int i=0;i<chemicalgroup.length;i++)
 		{
 			file.write("<chemicals>\n");
 			String chemicals=chemicalgroup[i];
 			if(chemicals!=null && chemicals.length()>0)
 			{
-				String[] chemicalsElement = chemicals.split(Constants.IDDELIMITER);
+				String[] chemicalsElement = chemicals.split(Constants.IDDELIMITER,-1);
 				for(int j=0;j<chemicalsElement.length;j++)
 				{
 					
@@ -2431,7 +2451,7 @@ public class BdReverseRecordBuilder
 					if(chemical!=null && chemical.length()>0)
 					{
 						file.write("<chemical>\n");
-						String[] chemicalElement = chemical.split(Constants.GROUPDELIMITER);
+						String[] chemicalElement = chemical.split(Constants.GROUPDELIMITER,-1);
 						String chemical_name = chemicalElement[0];
 						
 						if(chemical_name!=null && chemical_name.length()>0)
@@ -2528,14 +2548,14 @@ public class BdReverseRecordBuilder
             	 
             	if(referenceauthor!=null && referenceauthor.length()>0)
          		{
-         			String[] referenceauthors = referenceauthor.split(Constants.AUDELIMITER);
+         			String[] referenceauthors = referenceauthor.split(Constants.AUDELIMITER,-1);
          			file.write("<ref-authors>\n");
          			for(int i=0;i<referenceauthors.length;i++)
          			{
          				String rauthors = referenceauthors[i];       				
          				if(rauthors!=null && rauthors.length()>0)
          				{
-         					String[] referenceauthorElements = rauthors.split(Constants.IDDELIMITER);
+         					String[] referenceauthorElements = rauthors.split(Constants.IDDELIMITER,-1);
          					//System.out.println("REFERENCE AUTHOR SIZE="+referenceauthorElements.length);
          					String rid = null;
          					String seq = null;
@@ -2846,13 +2866,13 @@ public class BdReverseRecordBuilder
             	 			
             	 			if(referenceitemcitationisbn!=null && referenceitemcitationisbn.length()>0)
             	 			{
-            	 				String[] isbns = referenceitemcitationisbn.split(Constants.AUDELIMITER);
+            	 				String[] isbns = referenceitemcitationisbn.split(Constants.AUDELIMITER,-1);
             	 				for(int i=0;i<isbns.length;i++)
             	 				{
             	 					String isbnArray = isbns[i];
             	 					if(isbnArray!=null && isbnArray.length()>0)
             	 					{
-            	 						String[] isbnElements = isbnArray.split(Constants.IDDELIMITER);
+            	 						String[] isbnElements = isbnArray.split(Constants.IDDELIMITER,-1);
             	 						if(isbnElements.length==4)
             	 						{
             	 							String type = isbnElements[0];
@@ -3030,14 +3050,14 @@ public class BdReverseRecordBuilder
             	 			if(referenceitemcitationtitle!=null && referenceitemcitationtitle.length()>0)
             	 			{
             	 				file.write("<ce:citation-title>\n");
-            	 				String[] refTitles = referenceitemcitationtitle.split(Constants.AUDELIMITER);
+            	 				String[] refTitles = referenceitemcitationtitle.split(Constants.AUDELIMITER,-1);
             	 				for(int i=0;i<refTitles.length;i++)
             	 				{
             	 					String refTitle = refTitles[i];
             	 					if(refTitle!=null && refTitle.length()>0)
             	 					{
             	 						file.write("<titletext");
-            	 						String[] refTitleElements = refTitle.split(Constants.IDDELIMITER);
+            	 						String[] refTitleElements = refTitle.split(Constants.IDDELIMITER,-1);
             	 						if(refTitleElements.length==4)
             	 						{
             	 							String id = refTitleElements[0];
@@ -3135,7 +3155,7 @@ public class BdReverseRecordBuilder
                                           password);
         return con;
      }
-     
+    
      public void zipBatchFile(String filename,String database)
     		    throws Exception
 	    {
@@ -3145,36 +3165,33 @@ public class BdReverseRecordBuilder
 	    	{
 	    		database="upt";
 	    	}
-	    	String path="json/"+database;
-	        File tmpDir = new File(path+"/tmp");
-	        //String tmpDir = new File(f.getAbsolutePath());
-	        String[] gzFiles = tmpDir.list();
-	        //File[] gzFilestoDelete = tmpDir.listFiles();
+
+	    	String path="json/"+database+"/";
+	        
 	        byte[] buf = new byte[1024];
 	        
+	        //create zip file name
 	        String ZipFilename =  filename.replace("xml", "zip");
-	       
+	        File file = new File(filename);
+	        
 	        //long timediff = time - this.starttime;
 	       
-	        ZipOutputStream outZIP = new ZipOutputStream(new FileOutputStream(ZipFilename));
-	        for (int i=0; i<gzFiles.length; i++)
-	        {
-	        	File file = new File(tmpDir+"/"+gzFiles[i]);
-	        	//System.out.println("FILENAME="+gzFiles[i]);
-	            FileInputStream in = new FileInputStream(tmpDir+"/"+gzFiles[i]);
-	            outZIP.putNextEntry(new ZipEntry(tmpDir+"/"+gzFiles[i]));
-	            int len;
-	            while ((len = in.read(buf)) > 0) {
-	                outZIP.write(buf, 0, len);
-	            }
-	            outZIP.closeEntry();
-	            in.close();
-	            file.delete();
-	            
-	        }
+	        ZipOutputStream outZIP = new ZipOutputStream(new FileOutputStream(path+ZipFilename));
+	      
+	        FileInputStream in = new FileInputStream(filename);
+	        outZIP.putNextEntry(new ZipEntry(filename));
+	        int len;
+            while ((len = in.read(buf)) > 0) {
+                outZIP.write(buf, 0, len);
+            }
+            outZIP.closeEntry();
+            in.close();
+            file.delete();
+	                   
 	        outZIP.close();
-	        tmpDir.delete();
+	     
 	        long endtime = System.currentTimeMillis();
 	        System.out.println("Time for Zipping="+(endtime-starttime));
 	    }
+	    
 }
