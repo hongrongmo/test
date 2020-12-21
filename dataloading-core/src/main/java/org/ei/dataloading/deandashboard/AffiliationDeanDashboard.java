@@ -1,6 +1,9 @@
+package org.ei.dataloading.deandashboard;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -10,25 +13,22 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.regex.Pattern;
 
 import javax.json.Json;
+import javax.json.JsonArray;
+import javax.json.JsonArrayBuilder;
 import javax.json.JsonBuilderFactory;
-import javax.json.stream.JsonGenerator;
+import javax.json.JsonObject;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+import javax.json.stream.JsonGenerator;
 
 import org.apache.commons.text.StringEscapeUtils;
 import org.apache.log4j.Logger;
@@ -36,14 +36,27 @@ import org.ei.common.Constants;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
+
 /**
  * 
  * @author TELEBH
- * @Description: intial non-complete of creating Affiliations DeanDashboard, 
- * already done by Class "GsonAffExample.java
+ * @date: 05/18/2018
+ * @Description: Web team developing New Service for dashboard search box & autocomplete 
+ * this servive enables user to pick accurate affiliation by poping up auto complete suggestions 
+ * for affiliations names while user is typing. ythe list of affiliations to pop-up has mapping with their
+ * corresponding affid. but need to limit the list of affiliations to only ones 
+ * 	- indexed in ES
+ *  - quality >=99
+ *  - institution (sum of affiliations) doc_count >=1000
+ *  
+ *   Out file: JSON file with fields ( AFFID, PREFERED_NAME, NAME_VARIANT, DOC_COUNT)
  */
-
-public class AffiliationDeanDashBoard {
+public class AffiliationDeanDashboard 
+{
 
 	static String doc_type;
 	static String url = "jdbc:oracle:thin:@localhost:1521:eid";    //for localhost
@@ -56,14 +69,15 @@ public class AffiliationDeanDashBoard {
 	
 	Logger logger;
 	
-	private Connection con = null;
-	private PrintWriter out = null;
+	private Connection con;
+	PrintWriter out = null;
 	
 	private Map<Integer,InstitutionRecord> institutionsList;
 	
-	private Map<String,Object> config;   //JsonBuilder config
-	private JsonBuilderFactory factory; //JsonBuilder Factory
-	private Gson gson;
+	Map<String,Object> config;   //JsonBuilder config
+	JsonBuilderFactory factory; //JsonBuilder Factory
+	Gson gson;
+
 	
 	public static void main(String[] args) 
 	{
@@ -132,22 +146,35 @@ public class AffiliationDeanDashBoard {
 		
 		// Old way
 		/*
-		 * AffiliationDeanDashBoard af = new AffiliationDeanDashBoard();
-		 * af.getDocCount(); af.end();
-		 */
+		AffiliationDeanDashboard afDeanDashboard = new AffiliationDeanDashboard();
+		afDeanDashboard.getDocCount();
+		afDeanDashboard.end();
 		
+		*/
 		//New way 12/18/2020
-		AffiliationDeanDashBoard af = new AffiliationDeanDashBoard();
+		AffiliationDeanDashboard af = new AffiliationDeanDashboard("");
 		af.getInstitutionsRecs();
 		af.writeInstitutionJsonRecs();
-		
+				
+
 	}
 	
-	public AffiliationDeanDashBoard()
+	public AffiliationDeanDashboard()
 	{
-		logger = Logger.getLogger(AffiliationDeanDashBoard.class);
+		init();
+	}
+	
+	/**
+	 * 
+	 * @param str
+	 * param Not really in use only for const. overriding 
+	 */
+	public AffiliationDeanDashboard(String str)		
+	{
+		logger = Logger.getLogger(AffiliationDeanDashboard.class);
 		institutionsList = new LinkedHashMap<>();
 	}
+	
 	private void init()
 	{
 		String currDir = System.getProperty("user.dir");
@@ -215,7 +242,7 @@ public class AffiliationDeanDashBoard {
 			System.out.println("Running the query...");
 			
 			query = "select a.affid,a.PREFERED_NAME,a.NAME_VARIANT,b.doc_count from " + tableName + " a, " + afDocCount_tableName + " b "+
-					"where a.es_status='indexed' and a.quality>=99 and a.affid=b.affid and b.doc_count>=1000 and rownum<7" +
+					"where a.es_status='indexed' and a.quality>=99 and a.affid=b.INSTITUTE_ID and b.doc_count>=100" +
 					"order by b.doc_count desc";
 			System.out.println(query);
 			rs = stmt.executeQuery(query);
@@ -239,31 +266,31 @@ public class AffiliationDeanDashBoard {
 	{
 		int count = 0;
 		
-		JsonObject rec;
+		AuAfCombinedRec rec;
 		
 		try
 		{
 			while(rs.next())
 			{
-				rec = new JsonObject();
+				rec = new AuAfCombinedRec();
 				
 				//Name_variant
 				if(rs.getString("NAME_VARIANT") !=null)
 				{
-					rec.addProperty("varName", rs.getString("NAME_VARIANT"));
+					rec.put("varName", rs.getString("NAME_VARIANT"));
 				}
 				//AFFID
 				if(rs.getString("AFFID") !=null)
 				{
-					rec.addProperty("affilId", rs.getString("AFFID"));
+					rec.put("affilId", rs.getString("AFFID"));
 				}
 				//Prefered_name
 				if(rs.getString("PREFERED_NAME")!=null)
 				{
-					rec.addProperty("affilName", rs.getString("PREFERED_NAME"));
+					rec.put("affilName", rs.getString("PREFERED_NAME"));
 				}	
 				// Doc_count
-				rec.addProperty("docCount", Integer.toString(rs.getInt("DOC_COUNT")));
+				rec.put("docCount", Integer.toString(rs.getInt("DOC_COUNT")));
 				
 				
 				
@@ -285,11 +312,52 @@ public class AffiliationDeanDashBoard {
 		}
 		
 	}
-	
-	public void writeAfRec(JsonObject rec)
+	public void writeAfRec(AuAfCombinedRec rec) throws Exception
 	{
 		
+		JsonObject esDocument = factory.createObjectBuilder()
+						.add("varName",prepareMultiValues(notNull(rec.getString("varName"))))
+						.add("affilId",notNull(rec.getString("affilId")))
+						.add("affilName", notNull(rec.getString("affilName")))	
+						.add("docCount",notNull(rec.getString("docCount")))
+				.build();
+		
+		out.write(esDocument.toString() + ",");
+		
 	}
+	
+	private String notNull(String s)
+    {
+        String r = null;
+
+        if (s == null)
+        {
+            r = "";
+        }
+        else
+        {
+            r = s;
+        }
+
+        return r;
+    }
+	private  JsonArray prepareMultiValues(String str)
+	{
+		JsonArrayBuilder builder = factory.createArrayBuilder();
+		if(str !=null && !(str.isEmpty()))
+		{
+			String[] values = str.split(Constants.IDDELIMITER);
+			for(int i=0;i<values.length;i++)
+			{
+				builder.add(values[i]);
+			}
+		}	
+		return builder.build();
+	}
+	
+	/**
+	 * 1st & Final correct version generating JSON file effective for deandashboard 2020 
+	 */
 	
 	public void getInstitutionsRecs()
 	{
@@ -395,7 +463,6 @@ public class AffiliationDeanDashBoard {
 			
 		}
 	}
-	
 	public void writeInstitutionJsonRecs()
 	{
 		if(institutionsList.size() >0)
@@ -491,6 +558,16 @@ public class AffiliationDeanDashBoard {
 			
 		}
 	}
+	
+	/**
+	 * 
+	 * @param connectionURL
+	 * @param driver
+	 * @param username
+	 * @param password
+	 * @return
+	 * @throws Exception
+	 */
 	private Connection getConnection(String connectionURL,
 			String driver,
 			String username,
@@ -503,7 +580,7 @@ public class AffiliationDeanDashBoard {
 				password);
 		return con;
 	}
-
+	
 	/**
 	 * @return
 	 */
@@ -550,9 +627,9 @@ public class AffiliationDeanDashBoard {
 			e.printStackTrace();
 		}
 	}
-
 }
 
+// HH Added 12/18/2020 for deandashboard 2020 update
 class InstitutionRecord
 {
 	private Integer institution_ID;
@@ -680,3 +757,4 @@ class Affiliation
 		this.affiliationNameVariants.add(affiliationNameVariant);
 	}
 }
+
