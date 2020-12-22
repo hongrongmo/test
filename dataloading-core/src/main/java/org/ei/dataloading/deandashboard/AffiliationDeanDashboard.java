@@ -33,6 +33,7 @@ import javax.json.stream.JsonGenerator;
 import org.apache.commons.text.StringEscapeUtils;
 import org.apache.log4j.Logger;
 import org.ei.common.Constants;
+import org.ei.dataloading.cafe.AuAfCombinedRec;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
