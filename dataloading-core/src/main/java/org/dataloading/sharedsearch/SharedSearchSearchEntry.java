@@ -157,8 +157,12 @@ public class SharedSearchSearchEntry {
 	public SharedSearchSearchEntry() {
 		
 		// configure log
+		/*
 		String log4jFile = System.getProperty("user.dir") + File.separator + "src" + File.separator + "resources"
 				+ File.separator + "log4j.properties";
+				*/
+		
+		String log4jFile = "/data/loading/shared" + File.separator + "resources" + File.separator + "log4j.properties";
 		PropertyConfigurator.configure(log4jFile);
 
 	}
