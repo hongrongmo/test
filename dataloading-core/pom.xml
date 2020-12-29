@@ -401,6 +401,21 @@
     		<version>3.11</version>
 		</dependency>
 
+	<!-- HH added 12/28/2020 for secretmanager -->
+	<dependency>
+    	<groupId>com.amazonaws</groupId>
+    	<artifactId>aws-java-sdk-core</artifactId>
+    	<version>1.11.926</version>
+	</dependency>
+
+
+		<dependency>
+    		<groupId>com.amazonaws</groupId>
+    		<artifactId>aws-java-sdk-secretsmanager</artifactId>
+    		<version>1.11.866</version>
+		</dependency>
+
+	<!-- END -->
 		
 	</dependencies>
 

@@ -6,6 +6,7 @@ import com.amazonaws.services.applicationdiscovery.model.InvalidParameterExcepti
 import com.amazonaws.services.applicationdiscovery.model.ResourceNotFoundException;
 import com.amazonaws.services.dynamodbv2.model.InternalServerErrorException;
 import com.amazonaws.services.secretsmanager.AWSSecretsManager;
+import com.amazonaws.services.secretsmanager.AWSSecretsManagerClientBuilder;
 import com.amazonaws.services.secretsmanager.model.DecryptionFailureException;
 import com.amazonaws.services.secretsmanager.model.GetSecretValueRequest;
 import com.amazonaws.services.secretsmanager.model.GetSecretValueResult;
@@ -31,7 +32,10 @@ public class RetrieveSecretManagerSecrets {
 		String secret;
 		
 		//get AWS SecretManager client
-		AWSSecretsManager client = AmazonSecretManager.getInstance().getAmazonSecretManagerClient();
+		//AWSSecretsManager client = AmazonSecretManager.getInstance().getAmazonSecretManagerClient();
+		
+		AWSSecretsManagerClientBuilder clientBuilder = AWSSecretsManagerClientBuilder.standard();
+		AWSSecretsManager client = clientBuilder.build(); 
 		
 		//get AWS SecretManager secret
 		GetSecretValueRequest getSecretValueRequest = new GetSecretValueRequest()
@@ -48,7 +52,7 @@ public class RetrieveSecretManagerSecrets {
 			if(getSecretValueResult.getSecretString() != null)
 			{
 				secret = getSecretValueResult.getSecretString();
-				System.out.println("Secret Value: " + secret);
+				System.out.println("Secret Value: " + secret);		// Plaintext key & value
 			}
 		}
 		catch(DecryptionFailureException ex)
