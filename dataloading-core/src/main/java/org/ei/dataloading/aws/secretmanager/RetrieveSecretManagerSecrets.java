@@ -1,16 +1,31 @@
 package org.ei.dataloading.aws.secretmanager;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 import org.apache.log4j.Logger;
 
 import com.amazonaws.services.applicationdiscovery.model.InvalidParameterException;
 import com.amazonaws.services.applicationdiscovery.model.ResourceNotFoundException;
 import com.amazonaws.services.dynamodbv2.model.InternalServerErrorException;
 import com.amazonaws.services.secretsmanager.AWSSecretsManager;
-import com.amazonaws.services.secretsmanager.AWSSecretsManagerClientBuilder;
 import com.amazonaws.services.secretsmanager.model.DecryptionFailureException;
 import com.amazonaws.services.secretsmanager.model.GetSecretValueRequest;
 import com.amazonaws.services.secretsmanager.model.GetSecretValueResult;
 import com.amazonaws.services.secretsmanager.model.InvalidRequestException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * 
@@ -21,21 +36,20 @@ import com.amazonaws.services.secretsmanager.model.InvalidRequestException;
 public class RetrieveSecretManagerSecrets {
 	
 	Logger logger;
+	Map<String,String> pdfCredentials = new LinkedHashMap<>();
 	
 	public RetrieveSecretManagerSecrets()
 	{
 		logger = Logger.getLogger(RetrieveSecretManagerSecrets.class);
 	}
-	public void getSecret()
+	public String getSecret()
 	{
 		String secretName = "patent/pdf/prod/credentials";
-		String secret;
+		String secret = null;
 		
 		//get AWS SecretManager client
-		//AWSSecretsManager client = AmazonSecretManager.getInstance().getAmazonSecretManagerClient();
+		AWSSecretsManager client = AmazonSecretManager.getInstance().getAmazonSecretManagerClient();
 		
-		AWSSecretsManagerClientBuilder clientBuilder = AWSSecretsManagerClientBuilder.standard();
-		AWSSecretsManager client = clientBuilder.build(); 
 		
 		//get AWS SecretManager secret
 		GetSecretValueRequest getSecretValueRequest = new GetSecretValueRequest()
@@ -52,7 +66,7 @@ public class RetrieveSecretManagerSecrets {
 			if(getSecretValueResult.getSecretString() != null)
 			{
 				secret = getSecretValueResult.getSecretString();
-				System.out.println("Secret Value: " + secret);		// Plaintext key & value
+//				System.out.println("Secret Value: " + secret);		// ONLY for testing Plaintext key & value
 			}
 		}
 		catch(DecryptionFailureException ex)
@@ -91,12 +105,92 @@ public class RetrieveSecretManagerSecrets {
 			logger.error(e.getMessage());
 			e.printStackTrace();
 		}
+		
+			return secret;
+		
+	}
+	
+	public void parseSecrets(String secret)
+	{
+		JsonNode secretsJson = null;
+		ObjectMapper objectMapper = new ObjectMapper();
+		if(secret != null && ! secret.isEmpty())
+		{
+			try
+			{
+				secretsJson = objectMapper.readTree(secret);
+				pdfCredentials.put("userName", secretsJson.get("patentPdfUserName").textValue());
+				pdfCredentials.put("password", secretsJson.get("patentPdfPassword").textValue());
+			}
+			catch(Exception e)
+			{
+				logger.error("Faled to pars JSON Secrets!!!!");
+				logger.error(e.getCause());
+				logger.error(e.getMessage());
+				e.printStackTrace();
+			}
+		}
+	}
+	public void getPatentPdf()
+	{
+		String count = "";
+		try
+		{
+			String encodedUserName, encodedPassword;
+			URL urlObj;
+			
+			parseSecrets(getSecret());
+			if(pdfCredentials.size() > 1)
+			{
+				/*
+				byte[] userName = Base64.getEncoder().encode(pdfCredentials.get("userName").getBytes());
+				byte[] password = Base64.getEncoder().encode(pdfCredentials.get("password").getBytes());
+				*/
+				encodedUserName = URLEncoder.encode(pdfCredentials.get("userName"), StandardCharsets.UTF_8.toString());
+				encodedPassword = URLEncoder.encode(pdfCredentials.get("password"), StandardCharsets.UTF_8.toString());
+				
+				
+				urlObj = new URL("http://ipdatadirect.lexisnexis.com/downloadpdf.aspx?lg=" + encodedUserName + "&pw="
+						+ encodedPassword + "&pdf=us,6000000,a"); 
+				
+				HttpURLConnection httpCon = (HttpURLConnection)urlObj.openConnection();
+				httpCon.setRequestMethod("GET");
+				httpCon.setRequestProperty("Content-Type", "application/json");
+				int responseCode = httpCon.getResponseCode();
+				if(responseCode == HttpURLConnection.HTTP_OK)
+				{
+					int length = -1;
+					FileOutputStream out = new FileOutputStream(new File("US600000A.pdf"));
+					InputStream inStream = httpCon.getInputStream();
+					byte[] buffer = new byte[1024];
+					while((length = inStream.read(buffer)) > -1)
+					{
+						out.write(buffer,0,length);
+					}
+					
+					out.close();
+					inStream.close();
+					System.out.println("Downloaded the pdf file");
+				}
+			}
+			
+		}
+		catch(Exception e)
+		{
+			logger.error("Excption Getting Patent PDF using URL!!!!");
+			logger.error(e.getCause());
+			logger.error(e.getMessage());
+			e.printStackTrace();
+		}
 	}
 
 	public static void main(String[] args)
 	{
 		RetrieveSecretManagerSecrets obj = new RetrieveSecretManagerSecrets();
 		
-		obj.getSecret();
+		//obj.getSecret();   // to get secrets and print in plaintext
+		
+		obj.getPatentPdf();
+		
 	}
 }
