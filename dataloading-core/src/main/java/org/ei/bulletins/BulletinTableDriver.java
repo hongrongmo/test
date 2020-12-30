@@ -13,7 +13,6 @@ import java.text.DateFormat;
 //
 import org.apache.oro.text.perl.Perl5Util;
 
-import com.sun.mail.iap.ParsingException;
 
 import java.util.*;
 

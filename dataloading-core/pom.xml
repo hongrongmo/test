@@ -153,6 +153,18 @@
 			<groupId>org.apache.wink</groupId>
 			<artifactId>wink-client</artifactId>
 			<version>1.4</version>
+			<!-- HH added 12/28/2020 to resolve javax.xml accessible from more than one module -->
+			<exclusions>
+                         <exclusion>
+                                <groupId>javax.xml.bind</groupId>
+    							<artifactId>jaxb-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                                <groupId>stax</groupId>
+                                <artifactId>stax-api</artifactId>
+                    </exclusion>
+            </exclusions>
+            <!-- END -->
 		</dependency>
 		<dependency>
 			<groupId>org.apache.wink</groupId>
@@ -400,6 +412,14 @@
     		<groupId>org.apache.poi</groupId>
     		<artifactId>poi-ooxml</artifactId>
     		<version>3.11</version>
+    		<!-- HH added 12/28/2020 to resolve javax.xml accessible from more than one module -->
+    		<exclusions>
+                    <exclusion>
+                                <groupId>stax</groupId>
+                                <artifactId>stax-api</artifactId>
+                    </exclusion>
+            </exclusions>
+            <!-- END -->
 		</dependency>
 
 	<!-- HH added 12/28/2020 for secretmanager -->
