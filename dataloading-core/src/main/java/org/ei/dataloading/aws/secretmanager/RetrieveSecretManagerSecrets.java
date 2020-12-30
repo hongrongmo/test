@@ -153,6 +153,8 @@ public class RetrieveSecretManagerSecrets {
 				urlObj = new URL("http://ipdatadirect.lexisnexis.com/downloadpdf.aspx?lg=" + encodedUserName + "&pw="
 						+ encodedPassword + "&pdf=us,6000000,a"); 
 				
+				System.out.println(urlObj.getHost() + urlObj.getPath());
+				
 				HttpURLConnection httpCon = (HttpURLConnection)urlObj.openConnection();
 				httpCon.setRequestMethod("GET");
 				httpCon.setRequestProperty("Content-Type", "application/json");
