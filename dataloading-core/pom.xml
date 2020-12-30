@@ -11,6 +11,7 @@
   <name>dataloading-core</name>
   <url>http://maven.apache.org</url>
 
+
 <distributionManagement>
 		<repository>
 			<id>nexus</id>
@@ -71,11 +72,7 @@
             <artifactId>jta</artifactId>
             <version>1.1</version>
 		</dependency>
-		<dependency>
-    		<groupId>org.apache.commons</groupId>
-    		<artifactId>commons-text</artifactId>
-    		<version>${commons.text.version}</version>
-		</dependency>
+	
 		
 		
 		
@@ -167,11 +164,7 @@
 			<artifactId>wink-json4j</artifactId>
 			<version>1.4</version>
 		</dependency>
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpclient</artifactId>
-			<version>4.3.3</version>
-		</dependency>
+		
 		<dependency>
 			<groupId>org.apache.geronimo.specs</groupId>
 			<artifactId>geronimo-javamail_1.4_spec</artifactId>
@@ -215,11 +208,7 @@
  			 <version>1.0.0</version>
  			 <type>jar</type>
 		</dependency>
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>2.4</version>
-		</dependency>
+		
 		
 		<!-- HH 04/18/2016 for Managing Amazon SQS Messages with Amazon S3 to archive large sqs messages to S3-->
 		<dependency>
@@ -234,12 +223,7 @@
 			<!-- HH: 09/26/2016 AMazon sqs -->
     		<version>1.11.23</version>
 		</dependency>
-		<dependency>
-    		<groupId>junit</groupId>
-    		<artifactId>junit</artifactId>
-    		<version>4.11</version>
-    		<scope>test</scope>
-  		</dependency>
+		
   		<dependency>
      		 <groupId>org.mockito</groupId>
       		<artifactId>mockito-core</artifactId>
@@ -384,11 +368,13 @@
 			<version>2.3.0</version>
 		</dependency>
 
+<!--  
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 			<version>1.7.7</version>
 		</dependency>
+-->
 		
 		<!-- HH added 04/17/2020 for Elasticsearch Client -->
 		<dependency>
@@ -416,6 +402,21 @@
     		<version>3.11</version>
 		</dependency>
 
+	<!-- HH added 12/28/2020 for secretmanager -->
+	<dependency>
+    	<groupId>com.amazonaws</groupId>
+    	<artifactId>aws-java-sdk-core</artifactId>
+    	<version>1.11.926</version>
+	</dependency>
+
+
+		<dependency>
+    		<groupId>com.amazonaws</groupId>
+    		<artifactId>aws-java-sdk-secretsmanager</artifactId>
+    		<version>1.11.866</version>
+		</dependency>
+
+	<!-- END -->
 		
 	</dependencies>
 
