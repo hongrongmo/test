@@ -1868,7 +1868,7 @@ public class PatentXmlReader
 					patentKC = patentKC.replaceAll("[0-9]", "");
 					
 					//System.out.println(patentCode + "," + patentID + "," + patentKC);
-					url = "http://ipdatadirect.lexisnexis.com/downloadpdf.aspx?lg=ElsevierVTW&pw=pj5V3HCzAFR9&pdf="
+					url = "http://ipdatadirect.lexisnexis.com/downloadpdf.aspx?lg=<username>&pw=<password>&pdf="
 							+ patentCode.toLowerCase() + "," + patentID + "," + patentKC.toLowerCase();
 				}
 				
