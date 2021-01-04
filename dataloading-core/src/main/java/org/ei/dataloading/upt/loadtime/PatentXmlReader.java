@@ -1750,17 +1750,22 @@ public class PatentXmlReader
 				out.print((String)singleRecord.get("IMAGE"));
 				//System.out.println("IMAGE= "+(String)singleRecord.get("IMAGE"));		// only for debugging
 				
+				out.print(DELIM);
+				
 				String image = (String)singleRecord.get("IMAGE");
 				if(image.contains("true"))
 				{
 					String url = constructPdfUrl(image);
 					if(!url.isEmpty())
 					{
-						out.print(DELIM);
 						out.print(url);
 					}
 							
 				}
+			}
+			else
+			{
+				out.print(DELIM);
 			}
 			out.print(DELIM);
 			
