@@ -55,7 +55,9 @@ public class TestLoadNumber {
 		
 		System.out.println(week + " " + weekYear);
 		
-		YearWeek yw = YearWeek.of( 2020 , 17 ) ;
+		System.out.println("^^^^^^^^^^^^^^^");
+		YearWeek yw = YearWeek.of( 2020 , week ) ;
+		System.out.println("YearWeek CLass Output: " + yw);
 		
 		System.out.println("--------------");
 		

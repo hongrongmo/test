@@ -1870,7 +1870,7 @@ public class PatentXmlReader
 					
 					//KC
 					patentKC = img.substring(img.length()-2);
-					patentKC = patentKC.replaceAll("[0-9]", "");
+					//patentKC = patentKC.replaceAll("[0-9]", "");			//if only needed alphapetic part 
 					
 					//System.out.println(patentCode + "," + patentID + "," + patentKC);
 					url = "http://ipdatadirect.lexisnexis.com/downloadpdf.aspx?lg=<username>&pw=<password>&pdf="

@@ -131,7 +131,7 @@ public class RetrieveSecretManagerSecrets {
 			}
 		}
 	}
-	public void getPatentPdf()
+	public void getPatentPdf(String ac, String patentPN, String kc)
 	{
 		String count = "";
 		try
@@ -151,7 +151,7 @@ public class RetrieveSecretManagerSecrets {
 				
 				
 				urlObj = new URL("http://ipdatadirect.lexisnexis.com/downloadpdf.aspx?lg=" + encodedUserName + "&pw="
-						+ encodedPassword + "&pdf=us,6000000,a"); 
+						+ encodedPassword + "&pdf=" + ac + "," + patentPN + "," + kc); 
 				
 
 				System.out.println(urlObj.getHost() + urlObj.getPath());
@@ -163,7 +163,7 @@ public class RetrieveSecretManagerSecrets {
 				if(responseCode == HttpURLConnection.HTTP_OK)
 				{
 					int length = -1;
-					FileOutputStream out = new FileOutputStream(new File("US600000A.pdf"));
+					FileOutputStream out = new FileOutputStream(new File(ac.toUpperCase() + patentPN + kc.toUpperCase() + ".pdf"));
 					InputStream inStream = httpCon.getInputStream();
 					byte[] buffer = new byte[1024];
 					while((length = inStream.read(buffer)) > -1)
@@ -193,7 +193,25 @@ public class RetrieveSecretManagerSecrets {
 		
 		//obj.getSecret();   // to get secrets and print in plaintext
 		
-		obj.getPatentPdf();
+		String ac = null,patentPN = null ,kc = null ;
+		
+		if(args.length >2)
+		{
+			if(args[0] != null && !(args[0].isEmpty()))
+				ac = args[0].trim();
+			if(args[1] != null && !(args[1].isEmpty()))
+				patentPN = args[1].trim();
+			if(args[2] != null && !(args[2].isEmpty()))
+				kc = args[2].trim();
+			
+			obj.getPatentPdf(ac,patentPN,kc);
+		}
+		else
+		{
+			System.out.println("Not ENough parameters!!!!!");
+			System.exit(1);
+		}
+		
 		
 	}
 }

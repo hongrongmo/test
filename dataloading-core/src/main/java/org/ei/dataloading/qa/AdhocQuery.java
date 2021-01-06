@@ -111,7 +111,7 @@ public class AdhocQuery {
 			{
 				runCafeGapCheck();
 				// Send SES email with Cafe-BD Gap attachment
-				new PublishSES().publishRawSESMessageWithAttachment(cafe_bd_gap_file);
+				//new PublishSES().publishRawSESMessageWithAttachment(cafe_bd_gap_file);   // ONly comment in Debug mode, UnComment in Prod
 			}
 				
 		}
@@ -196,9 +196,15 @@ public class AdhocQuery {
 		
 		try(BufferedWriter bw = new BufferedWriter(new FileWriter(cafe_bd_gap_file)))
 		{
+			/*
 			String query = "Select a.pui as pui,a.accessnumber as accessnumber,a.publicationyear, a.citationtitle as citationtitle,count(*) over() as total from bd_master a"
 					+ " where a.database='cpx' and (a.pui not in (select b.puisecondary from cafe_pui_list_master b)"
 					+ " or a.accessnumber not in (select accessnumber from cafe_pui_list_master))";
+					*/
+			
+			String query = "Select a.pui as pui,a.accessnumber as accessnumber,a.publicationyear, a.citationtitle as citationtitle,count(*) over() as total from bd_master a"
+					+ " where a.database='cpx' and a.pui not in (select b.puisecondary from cafe_pui_list_master b)";
+			
 			
 			long startTime = System.currentTimeMillis();
 			
