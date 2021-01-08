@@ -1750,23 +1750,19 @@ public class PatentXmlReader
 				out.print((String)singleRecord.get("IMAGE"));
 				//System.out.println("IMAGE= "+(String)singleRecord.get("IMAGE"));		// only for debugging
 				
-				out.print(DELIM);
+				/**** HH commented out 01/08/2021 as Judy still need to confirm if we need to do this ******/
+				 
+				/*
+				 * out.print(DELIM);
+				 * 
+				 * String image = (String)singleRecord.get("IMAGE"); if(image.contains("true"))
+				 * { String url = constructPdfUrl(image); if(!url.isEmpty()) { out.print(url); out.print(DELIM); }
+				 * 
+				 * }
+				 */
+			}
+		
 				
-				String image = (String)singleRecord.get("IMAGE");
-				if(image.contains("true"))
-				{
-					String url = constructPdfUrl(image);
-					if(!url.isEmpty())
-					{
-						out.print(url);
-					}
-							
-				}
-			}
-			else
-			{
-				out.print(DELIM);
-			}
 			out.print(DELIM);
 			
 			//DESCRIPTION
@@ -1845,7 +1841,7 @@ public class PatentXmlReader
 	 * @return
 	 * @author TELEBH
 	 * @Date: 12/11/2020
-	 * @Description: Construct PDF URL to be used by web app for downloading pdf file
+	 * @Description: Construct PDF URL to be used by web app for downloading pdf file as Chemtiva
 	 */
 	public String constructPdfUrl(String image)
 	{
