@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
@@ -133,6 +134,8 @@ public class PublishSNS{
 		messageBody.append("ES Weekly QA Report for Week: " + searchValue + "\n");
 		messageBody.append("-------------- \n");
 
+		// Holds all stats in file to Compare ES Prod/Cert results
+		Map<String,String> esEnvsCounts = new HashMap<>();
 			int patentCount = 0;
 				try(BufferedReader reader = new BufferedReader(new FileReader(new File(fileName))))
 				{
@@ -143,6 +146,11 @@ public class PublishSNS{
 						String[] row = line.split("\t");
 						if(row.length >0)
 						{
+							if(esEnvsCounts.containsKey(row[0]) && row.length >1)
+								esEnvsCounts.put(row[0], esEnvsCounts.get(row[0]) + "," + row[1]);
+							else if(row.length >1)
+								esEnvsCounts.put(row[0].trim(),row[1].trim());
+							
 							if(row[0].contains("upa") || row[0].contains("eup") || row[0].contains("wop"))
 							{
 								patents =  row[0] + ", " + patents;
@@ -151,18 +159,55 @@ public class PublishSNS{
 							}
 							else
 								messageBody.append(line + " \n");
+							
+							if(line.contains("-----"))
+							{
+								patents = "";
+								patentCount = 0;
+								
+							}
 									
 						}
 					}
-					messageBody.append(patents.substring(0, patents.lastIndexOf(",") -1).trim() + "\t" + patentCount);
+					if(!patents.isEmpty() && patents.contains(","))
+						messageBody.append(patents.substring(0, patents.lastIndexOf(",") -1).trim() + "\t" + patentCount);
 					
 				}
 				catch(IOException ex)
 				{
 					logger.error("Failed to Open File to read from in PublishSNS");
 				}
+				
+				//Compare results before return
+				String dbCountsDiff = CompareWeeklyQAESCounts(esEnvsCounts);
+				messageBody.append("\n\n" + dbCountsDiff);
+				
 				return messageBody.toString();
-
+	}
+	
+	public String CompareWeeklyQAESCounts(Map<String,String> esEnvsCounts)
+	{
+		StringBuilder sb = new StringBuilder();
+		sb.append("DB Differences \n");
+		sb.append("-------------- \n");
+		if(esEnvsCounts.size() >0)
+		{
+			for(String db: esEnvsCounts.keySet())
+			{
+				if(esEnvsCounts.get(db).contains(","))
+				{
+					String[] dbCounts = esEnvsCounts.get(db).split(",");
+					int diff = 0;
+					for(String count: dbCounts)
+					{
+						diff = Math.abs(Integer.parseInt(count.trim()) - diff);
+					}
+					if(diff != 0)
+						sb.append(db + "\t" + diff + "\n");
+				}		
+			}
+		}
+		return sb.toString();
 	}
 	
 	public String generatebatchInfoSNSMessage()

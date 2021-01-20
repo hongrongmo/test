@@ -12,10 +12,13 @@ package org.ei.dataloading.qa;
  */
 
 import java.util.Date;
+import java.util.Map;
 import java.text.SimpleDateFormat;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -28,6 +31,12 @@ import org.dataloading.sharedsearch.PublishSES;
 import org.dataloading.sharedsearch.PublishSNS;
 import org.dataloading.sharedsearch.SharedSearchSearchEntry;
 import org.ei.dataloading.db.DBConnection;
+
+
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
 
 /**
  * 
@@ -113,6 +122,8 @@ public class AdhocQuery {
 				// Send SES email with Cafe-BD Gap attachment
 				//new PublishSES().publishRawSESMessageWithAttachment(cafe_bd_gap_file);   // ONly comment in Debug mode, UnComment in Prod
 			}
+			else if((queryType != null && ! queryType.isEmpty() && queryType.equalsIgnoreCase("other")))
+				writeExcelFile();
 				
 		}
 		catch(Exception e)
@@ -202,7 +213,7 @@ public class AdhocQuery {
 					+ " or a.accessnumber not in (select accessnumber from cafe_pui_list_master))";
 					*/
 			
-			String query = "Select a.pui as pui,a.accessnumber as accessnumber,a.publicationyear, a.citationtitle as citationtitle,count(*) over() as total from bd_master a"
+			String query = "Select a.pui as pui,a.accessnumber as accessnumber,a.publicationyear, a.citationtitle as citationtitle,a.publisher, a.doi, count(*) over() as total from bd_master a"
 					+ " where a.database='cpx' and a.pui not in (select b.puisecondary from cafe_pui_list_master b)";
 			
 			
@@ -300,5 +311,109 @@ public class AdhocQuery {
 			}
 		}
 	}
-
+	
+	
+	/*
+	 * @Date: 01/11/2021
+	 * @Description: Run any query (adhoc query) and write results to out file. WHat triggered this was I have to get more info about 1030654 AN in cafe_master not in BD_MASTER CPX
+	 * FOR Judy and Paul Maustart to review
+	 */
+	public void writeExcelFile()
+	{
+		String out_excel = "aqhoq_query_result.xls";
+		XSSFWorkbook workbook = new XSSFWorkbook();
+		XSSFSheet sheet = workbook.createSheet("Cafe_AN_NOT_IN_BD");
+		Statement stmt = null;
+		ResultSet rs = null;
+		int rownum = 1;
+		
+		try
+		{
+			
+			/*
+			String query = "select  a.accessnumber as cafe_acessnumber, a.pui as cafe_pui, b.accessnumber as bd_accessnumber,b.pui as bd_pui,a.citationtitle as cafe_title, b.citationtitle as bd_title"
+					+ " from cafe_master a, db_xml.bd_master b"
+					+ " where a.accessnumber in (select accessnumber from HH_CAFE_AN_NOT_IN_BD_01082020) and b.pui in "
+					+ "(select puisecondary from HH_CAFE_AN_NOT_IN_BDPLUSPUI_01082020) and b.database='cpx' and rownum<101";
+			*/
+			String query = "select  a.accessnumber as cafe_acessnumber, a.pui as cafe_pui, b.accessnumber as bd_accessnumber,b.pui as bd_pui,a.citationtitle as cafe_title,"
+					+ " b.citationtitle as bd_title"
+					+ " from cafe_master a, db_xml.bd_master b"
+					+ " where b.pui in (select puisecondary from cafe_pui_list_master where accessnumber in (select accessnumber from HH_CAFE_AN_NOT_IN_BD_01082020)) and b.database='cpx'";
+			
+			
+			long startTime = System.currentTimeMillis();
+			
+			stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
+			
+			rs = stmt.executeQuery(query);
+			rs.setFetchSize(200);
+			
+			long midTime = System.currentTimeMillis();
+			System.out.println("Total time it took to run query: " + (midTime - startTime)/1000 + " seconds");
+			
+			// add headers
+			
+			Row headers = sheet.createRow(0);
+			headers.createCell(0).setCellValue("Cafe_AN");
+			headers.createCell(1).setCellValue("Cafe_PUI");
+			headers.createCell(2).setCellValue("BD_AN");
+			headers.createCell(3).setCellValue("BD_PUI");
+			headers.createCell(4).setCellValue("Cafe_citationtitle");
+			headers.createCell(5).setCellValue("bd_citationtitle");
+			
+			
+			if(rs != null)
+			{
+				while(rs.next())
+				{
+						Row row = sheet.createRow(rownum);
+						int colIndx = 0;
+						
+						row.createCell(colIndx).setCellValue(rs.getString(1));
+						row.createCell(colIndx+1).setCellValue(rs.getString(2));
+						row.createCell(colIndx+2).setCellValue(rs.getString(3));
+						row.createCell(colIndx+3).setCellValue(rs.getString(4));
+						row.createCell(colIndx+4).setCellValue(rs.getString(5));
+						row.createCell(colIndx+5).setCellValue(rs.getString(6));
+						rownum++;
+				} 
+			}
+			
+		
+			
+			try(FileOutputStream out = new FileOutputStream(new File(out_excel)))
+			{
+				workbook.write(out);
+				System.out.println("Excel file was successfully created");
+			} 
+			catch (FileNotFoundException e1) 
+			{
+				System.out.println("Exception writing to excel file!!");
+				e1.printStackTrace();
+			} 
+			catch (IOException e1) 
+			{
+				System.out.println("Exception writing to excel file!!");
+				e1.printStackTrace();
+			}
+		}
+		catch (SQLException e) 
+		{
+			e.printStackTrace();
+		}
+			finally
+			{
+				try
+				{
+					if(workbook != null)
+						workbook.close();
+				}
+				catch(Exception e)
+				{
+					System.out.println("Failed to close workbook");
+					e.printStackTrace();
+				}
+			}
+	}
 }

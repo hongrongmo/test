@@ -39,6 +39,7 @@ import java.lang.Runtime;
 import java.net.ConnectException;
 import java.util.Set;
 import java.util.LinkedHashSet;
+import java.util.LinkedList;
 
 public class SharedSearchSearchEntry {
 
@@ -59,6 +60,7 @@ public class SharedSearchSearchEntry {
 	static String facetField;
 	Logger logger;
 	static String midReturn = null;		//allowed values none or mid
+	static String esEnvs;
 
 	
 	private Connection con;
@@ -68,6 +70,7 @@ public class SharedSearchSearchEntry {
 	int counter = 0;
 	Set<String> idPrefixSet;
 	
+	List<String> sharedSearchurls = new LinkedList<>();
 	
 	public static void main(String[] args)
 	{
@@ -140,13 +143,19 @@ public class SharedSearchSearchEntry {
 			midReturn = args[12];
 			System.out.println("mid return? " + midReturn);
 		}
+		if(args.length > 13)
+		{
+			esEnvs = args[13];
+		}
 		
 		SharedSearchSearchEntry entry = new SharedSearchSearchEntry();
 		if(facetField != null)
 			if(facetField.equalsIgnoreCase("auid") || facetField.equalsIgnoreCase("afid"))
 				entry.startAuAfFacetProcess();
-			else
+			else if(esEnvs == null || esEnvs.isEmpty())
 					entry.startFacetProcess();
+			else if(facetField.equalsIgnoreCase("db") && esEnvs != null && !esEnvs.isEmpty())
+				entry.startQAProcess();
 		else
 			entry.startProcess();    //for standalone processing ONLY, when needed to read AUIDS list from file and for each ID check ES
 		
@@ -157,13 +166,18 @@ public class SharedSearchSearchEntry {
 	public SharedSearchSearchEntry() {
 		
 		// configure log
-		/*
+		
+		// For localhost
+		
 		String log4jFile = System.getProperty("user.dir") + File.separator + "src" + File.separator + "resources"
 				+ File.separator + "log4j.properties";
-				*/
 		
+		
+		//For EC2/Prod
+		/*
 		String log4jFile = "/data/loading/shared" + File.separator + "resources" + File.separator + "log4j.properties";
 		PropertyConfigurator.configure(log4jFile);
+		*/
 
 	}
 	/* to support calling from other Weekly CPX IDS classes */
@@ -213,7 +227,10 @@ public class SharedSearchSearchEntry {
 		{
 			outFileName = startTime + "_" + searchField + "_" + prefix + "_count.txt";
 			if(facetField.equalsIgnoreCase("database"))
+			{
 				outFileName = startTime + "_" + searchField + "_" + searchValue + "_count.txt";
+			}
+				
 			try(BufferedWriter bw = new BufferedWriter(new FileWriter(outFileName)))
 			{
 				System.out.println("Start polling IDS with prefix: " + prefix);
@@ -557,11 +574,72 @@ public class SharedSearchSearchEntry {
 			return isRange;
 		}
 		
-	/* QA Process*/
+	/* QA Process where can check more than one ES ENV all together*/
 	public void startQAProcess()
 	{
+		long startTime = System.currentTimeMillis();
+		long finishTime = System.currentTimeMillis();
+		String after = "0";
+		logger = Logger.getLogger(SharedSearchSearchEntry.class);
 		
+		getFacetField();	
 		
+		if(facetField.equalsIgnoreCase("database"))
+		{
+			outFileName = startTime + "_" + searchField + "_" + searchValue + "_count.txt";
+			
+		}
+		String[] allEsEnvs = esEnvs.split(",");
+		sharedSearchurls.add(sharedSearchurl);
+		for(String esEnv: allEsEnvs)
+		{
+			sharedSearchurls.add(sharedSearchurl.replace("prod", esEnv.trim()));
+		}
+		
+		try(BufferedWriter bw = new BufferedWriter(new FileWriter(outFileName)))
+		{
+			for (String sharedSearchurl : sharedSearchurls) {
+				System.out.println("Start Weekly DB QA for loadNumber: " + searchField);
+				
+				bw.write("\nES " + sharedSearchurl.substring(sharedSearchurl.indexOf(".") + 1, sharedSearchurl.indexOf(".") +5) + " ------- : \n");
+				
+				SharedSearchSearch sharedSearch = new SharedSearchSearch(sharedSearchurl, database, logger);
+
+				String queryString = buildQueryString("");
+
+				runProcess(after, sharedSearch, bw, queryString, "");
+
+				System.out.println("quering SharedsSearch for : " + searchField
+						+ " are now complete with total# of iterations: " + counter);
+				
+
+				finishTime = System.currentTimeMillis();
+				System.out.println("Finish.... " + finishTime);
+
+				System.out.println("Total Time to fetch all : " + searchField + " "
+						+ Long.valueOf((finishTime - startTime) / 1000) + " seconds");
+				
+			}
+			
+			bw.flush();
+			bw.close();
+			// send SNS message with final contents
+			new PublishSNS(searchField, searchValue, facetField, outFileName)
+			.dispatchMessage();
+			
+		}
+		catch(IOException ex)
+		{
+			System.out.println("Exception reading from file!!!!");
+			System.out.println(ex.getMessage());
+			ex.printStackTrace();
+		}
+		catch(Exception ex)
+		{
+			System.out.println("Exception to run sharedSearch!!!!");
+			System.out.println(ex.getMessage());
+			ex.printStackTrace();
+		}
 	}
 	private void init() {
 		
