@@ -18,31 +18,42 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.Statement;
-import java.time.format.DateTimeFormatter;
+
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.SQLSyntaxErrorException;
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
-import org.ei.dataloading.cafe.FetchWeeklyAuAfIdsForES;
+
+
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 import java.lang.Runtime;
-import java.net.ConnectException;
+
 import java.util.Set;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 
 public class SharedSearchSearchEntry {
 
+	private enum DBTables
+	{
+		BD_MASTER,
+		INS_MASTER,
+		UPT_MASTER,
+		CBN_MASTER,
+		EPT_MASTER,
+		KNOVEL_MASTER,
+		NTIS_MASTER
+	}
 	
 	static String fileName;
 	static String searchField;
@@ -619,6 +630,8 @@ public class SharedSearchSearchEntry {
 				System.out.println("Total Time to fetch all : " + searchField + " "
 						+ Long.valueOf((finishTime - startTime) / 1000) + " seconds");
 				
+				bw.write("\nEND");
+				
 			}
 			
 			bw.flush();
@@ -921,6 +934,53 @@ public class SharedSearchSearchEntry {
 		}
 	}
 
+	/**
+	 * @author TELEBH
+	 * @Date: 01/20/2021
+	 * @Description: Find weekly QA DB Counts to compare with ES weekly Counts, so all counts listed in one SNS message, So Frank can only check one email message
+	 */
+	public void CompareWeeklyQADBCounts()
+	{
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+		String query;
+		Map<String,Integer> weeklyDBQACounts = new HashMap<>();
+		try
+		{
+			//Initialize DB connection
+			init();
+			for(DBTables dbTable: DBTables.values())
+			{
+				if(dbTable.equals(DBTables.BD_MASTER) || dbTable.equals(DBTables.UPT_MASTER) || dbTable.equals(DBTables.KNOVEL_MASTER))
+					query = "select database,count(*) as totalCount from " + dbTable + " group by database order by totalCount asc";
+				else
+					query = "select count(*) as totalCount from " + dbTable;
+				
+				stmt = con.prepareStatement(query);
+				rs = stmt.executeQuery();
+				while(rs.next())
+				{
+					if(rs.getString("DATABASE") != null)
+						weeklyDBQACounts.put(rs.getString("DATABASe"), 0);
+				}
+			}
+			
+		}
+		/*catch(SQLException ex)
+		{
+			logger.error("weekly QA DB Counts exception: ");
+			logger.error("Cause: " + ex.getCause());
+			logger.error("Error: " + ex.getMessage());
+			ex.printStackTrace();
+		}*/
+		catch(Exception ex)
+		{
+			logger.error("wCompareWeeklyQADBCounts exception: ");
+			logger.error("Cause: " + ex.getCause());
+			logger.error("Error: " + ex.getMessage());
+		}
+	}
+	
 	@SuppressWarnings("finally")
 	private Connection getConnection(String url, String driver, String username, String password) {
 		Connection con = null;
