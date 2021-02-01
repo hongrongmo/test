@@ -157,7 +157,7 @@ public class PublishSNS{
 								if(row.length > 1)
 									patentCount += Integer.parseInt(row[1]);
 							}
-							else
+							else if(!line.trim().contains("END"))
 								messageBody.append(line + " \n");
 							
 							if(line.contains("-----"))
@@ -166,11 +166,13 @@ public class PublishSNS{
 								patentCount = 0;
 								
 							}
-									
 						}
+						
+						if(line.trim().contains("END"))
+							if(!patents.isEmpty() && patents.contains(","))
+								messageBody.append(patents.substring(0, patents.lastIndexOf(",") -1).trim() + "\t" + patentCount + "\n\n");
 					}
-					if(!patents.isEmpty() && patents.contains(","))
-						messageBody.append(patents.substring(0, patents.lastIndexOf(",") -1).trim() + "\t" + patentCount);
+					
 					
 				}
 				catch(IOException ex)
