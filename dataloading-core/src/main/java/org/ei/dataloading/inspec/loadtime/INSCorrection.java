@@ -298,8 +298,7 @@ public class INSCorrection
                      {	                    
  	        			int pathSeperator = name.lastIndexOf("/");        			
  	        			name=name.substring(pathSeperator+1);
-                     }
-         			
+                     }         			                    
          			
                      Process p = r.exec("./"+sqlldrFileName+" "+name);
                      System.out.println("Loading File "+name);

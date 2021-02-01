@@ -842,7 +842,8 @@ public class INSPECCombiner
 		                //writer.writeRec(rec,kafka);
 		                
 	                	this.writer.writeRec(rec,kafka, batchData, missedData);
-	                	this.lookupObj.writeLookupRec(rec);						//HT added later for weekly lookup extraction for ES
+	                	if(this.lookupObj!=null)
+	                		this.lookupObj.writeLookupRec(rec);						//HT added later for weekly lookup extraction for ES
 			            if(counter<batchSize)
 			            {            	
 			            	counter++;
@@ -1876,15 +1877,17 @@ public class INSPECCombiner
 						}
 
 						rec.put(EVCombinedRec.ACCESSION_NUMBER, rs.getString("ANUM"));
-
-						this.lookupObj.setLookupRecs(recArray, authorList, affiliationList, serialTitleList,
+						if(recArray!=null)
+						{
+							this.lookupObj.setLookupRecs(recArray, authorList, affiliationList, serialTitleList,
 								controltermList, publishernameList, ipcList);
+						}
 
 					}
 				} catch (Exception e) {
 					System.out.println(
 							"**** ERROR Found on preparinglookuprec for access number " + accessNumber + " *****");
-					System.out.println(e.getMessage());
+					//System.out.println(e.getMessage());
 					e.printStackTrace();
 				}
 

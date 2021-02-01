@@ -2822,10 +2822,13 @@ public class CombinedXMLWriter
             	openaccess=isopenaccess;
             }
             
+            //remove on 1/21/2021 by hmo
+            /*
             if(freetoreadstatus!=null)
             {
             	openaccess=openaccess+" "+freetoreadstatus;
             }
+            */
             
             if(openaccess!=null && openaccess.length()>0)
             {
@@ -2856,7 +2859,7 @@ public class CombinedXMLWriter
  	            contentObject.put("SOURCETYPE".toLowerCase(),rec.getString(EVCombinedRec.SOURCE_TYPE));       
             }                           
             
-          //SOURCE TYPE
+           //PROCESSINFOE
             if(rec.getString(EVCombinedRec.PROCESS_INFO)!=null && rec.getString(EVCombinedRec.PROCESS_INFO).length()>0)
             {          	
  	            contentObject.put("PROCESSINFO".toLowerCase(),rec.getString(EVCombinedRec.PROCESS_INFO));       
@@ -4729,7 +4732,8 @@ public class CombinedXMLWriter
 	    			//outputArray[i]=input[i].replaceAll("\\.|,", " "); 
 	    		}
 	    	}
-	    	return outputArray;
+	    	//return outputArray; //use for removing comma and period
+	    	return input; 
     	}
     	else
     	{

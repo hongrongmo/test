@@ -230,7 +230,14 @@ public class InspecBaseTableRecord
 									"OPPDATE",
 									"LOAD_NUMBER",
 									"IPC",
-									"CIT"
+									"CIT",
+									"PAUTH",	// added on 20201222 by hmo for EVOPS-1068
+									"CPC",		// added on 20201222 by hmo for EVOPS-1068
+									"LINKG",	// added on 20201222 by hmo for EVOPS-1068
+									"MATID1",	// added on 20201222 by hmo for EVOPS-1068
+									"RTNAME",	// added on 20201222 by hmo for EVOPS-1068
+									"FUNDG",	// added on 20201222 by hmo for EVOPS-1068
+									"ACCESS"	// added on 20201222 by hmo for EVOPS-1068
 									};
 
 

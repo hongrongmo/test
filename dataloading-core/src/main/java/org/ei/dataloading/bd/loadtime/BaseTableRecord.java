@@ -60,7 +60,7 @@ public class BaseTableRecord
    	public static final BaseTableRecord ISSUETITLE  = new BaseTableRecord("ISSUETITLE", new Integer(2560), "cpx");
    	public static final BaseTableRecord ISSN= new BaseTableRecord("ISSN", new Integer(9), "cpx");
    	public static final BaseTableRecord EISSN = new BaseTableRecord("EISSN", new Integer(13), "cpx");
-   	public static final BaseTableRecord ISBN= new BaseTableRecord("ISBN", new Integer(3500), "cpx");
+   	public static final BaseTableRecord ISBN= new BaseTableRecord("ISBN", new Integer(950), "cpx");
    	public static final BaseTableRecord VOLUME= new BaseTableRecord("VOLUME", new Integer(128), "cpx");
    	public static final BaseTableRecord PAGE= new BaseTableRecord("PAGE", new Integer(120), "cpx");
    	public static final BaseTableRecord PAGECOUNT= new BaseTableRecord("PAGECOUNT", new Integer(32), "cpx");

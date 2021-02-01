@@ -266,10 +266,15 @@ public class BdParser
 						if(openAccess.getChild("oa-article-status",xocsNamespace)!=null)
 						{
 							Element oaArticleStatus = openAccess.getChild("oa-article-status",xocsNamespace);
-							String isOpenAccess = oaArticleStatus.getAttributeValue("is-open-access");
-							String freeToReadStatus = oaArticleStatus.getAttributeValue("free-to-read-status");
-							record.put("ISOPENACESS",isOpenAccess);
-							record.put("FREETOREADSTATUS",freeToReadStatus);
+							
+							//String isOpenAccess = oaArticleStatus.getAttributeValue("free-to-read-status"); //this only use for testing "free-to-read-status" for now
+							String isOpenAccess = oaArticleStatus.getAttributeValue("is-open-access");//this is used for production for now at 1/20/2021
+							//String freeToReadStatus = oaArticleStatus.getAttributeValue("free-to-read-status");
+							if(isOpenAccess!=null)
+							{
+								record.put("ISOPENACESS",isOpenAccess);
+							}
+							//record.put("FREETOREADSTATUS",freeToReadStatus);
 							//System.out.println("freeToReadStatus="+freeToReadStatus);
 						}
 						
