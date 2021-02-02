@@ -19,6 +19,7 @@ import com.amazonaws.services.s3.model.S3Object;
 import com.amazonaws.services.s3.model.S3ObjectSummary;
 import com.amazonaws.services.s3.transfer.MultipleFileUpload;
 import com.amazonaws.services.s3.transfer.TransferManager;
+import com.amazonaws.services.s3.transfer.TransferManagerBuilder;
 import com.amazonaws.services.s3.transfer.Upload;
 
 /**
@@ -174,6 +175,98 @@ public class UploadFileToS3 {
 	}
 
 
+	
+	public void uploadDirToS3Bucket(String dir, AmazonS3 s3Client, String bucketName, String key) throws AmazonClientException,AmazonServiceException
+	{
+		try
+		{
+			//tmanager = new TransferManager(s3Client);   //original, replaced by tmbuilder
+			
+			TransferManagerBuilder tm = TransferManagerBuilder.standard();
+			tm.withAlwaysCalculateMultipartMd5(true);
+			tm.setS3Client(s3Client);
+			tmanager = tm.build();
+			
+
+			File fileDir = new File(dir);
+
+			if(!(fileDir.exists()))
+			{
+				throw new FileNotFoundException();
+			}
+
+			//Check if Dir isNotEmpty (contains file), otherwise skip upload to S3
+			if(!(isEmptyDir(fileDir)))
+			{
+				System.out.println("Uploading Dir: " + fileDir.getAbsolutePath() + " to S3 Bucket");
+
+				// upload vtw zip dir to S3
+				MultipleFileUpload uploadFile = tmanager.uploadDirectory(bucketName, key, fileDir, true);
+
+			
+				uploadFile.addProgressListener(new ProgressListener()
+				{
+					@Override
+					public void progressChanged(ProgressEvent progressEvent)
+					{
+						//System.out.println("Transfer: " + progressEvent.getBytesTransferred());
+					}
+				}	);
+				
+				// block the current thread and wait for the transfer to complete. if transfer fails; this method will throw 
+				//AmazonClientException or AmazonServiceException 
+				uploadFile.waitForCompletion();
+				
+
+			}
+			else
+			{
+				System.out.println("Dir is Empty!");
+				System.exit(1);
+			}
+
+
+		}
+		catch(AmazonServiceException ase)
+		{
+			System.out.println("Caught an AmazonServiceException, which " +"means your request made it " +
+					"to Amazon S3, but was rejected with an error response" +
+					" for some reason.");
+			System.out.println("Error Message:    " + ase.getMessage());
+			System.out.println("HTTP Status Code: " + ase.getStatusCode());
+			System.out.println("AWS Error Code:   " + ase.getErrorCode());
+			System.out.println("Error Type:       " + ase.getErrorType());
+			System.out.println("Request ID:       " + ase.getRequestId());
+		}
+		catch(AmazonClientException ace)
+		{
+			System.out.println("Caught an AmazonClientException, which " +
+					"means the client encountered " +
+					"an internal error while trying to " +
+					"communicate with S3, " +
+					"such as not being able to access the network.");
+			System.out.println("Error Message: " + ace.getMessage());
+			System.out.println("HTTP Status Code: " + ace.getCause());
+		}
+		catch(InterruptedException ex)
+		{
+			ex.printStackTrace();
+		}
+		catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		finally
+		{
+			if(tmanager !=null)
+			{
+				//after download is complete, call shutdownNow to release resources
+				tmanager.shutdownNow(false);  
+			}
+
+		}
+	}
 	public static boolean isEmptyDir(File dir)
 	{
 		boolean empty = true;
