@@ -7,9 +7,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
@@ -124,6 +126,24 @@ public class ParseInputXmlFileEntry {
 			e.printStackTrace();
 		}
 	}
+	
+	// Initialization
+	public void init()
+	{
+		try
+		{
+			outDir = new File(System.getProperty("user.dir") + File.separator + loadNumber);
+			if(!outDir.exists())
+				outDir.mkdir();
+		}
+		catch(Exception ex)
+		{
+			System.err.println("OutDir not found!!!!");
+			System.err.println("Error: " + ex.getMessage());
+			ex.printStackTrace();
+		}
+		
+	}
 	public void begin()
 			throws Exception
 	{
@@ -208,18 +228,17 @@ public class ParseInputXmlFileEntry {
 		
 		String pui = null, accessNumber = null; 
 		FileWriter outFile = null;
+		List<File> filesList = new ArrayList<>();
 		
 		long startTime = System.currentTimeMillis();
-		long endTime = 0;
+		long midTime = 0, endTime = 0;
 		
 		try {
 			AmazonS3 s3Client = AmazonS3ClientBuilder.standard()
                     .withRegion(Regions.US_EAST_1)
                     .build();
 			
-			outDir = new File(System.getProperty("user.dir") + File.separator + loadNumber);
-			if(!outDir.exists())
-				outDir.mkdir();
+			
 			
 			while((line = xmlReader.readLine()) != null)
 			{
@@ -268,14 +287,14 @@ public class ParseInputXmlFileEntry {
 					
 					//close fileWriter
 					close(outFile);
-				
+					filesList.add(file);
 					
 					//endTime = System.currentTimeMillis();
 					//System.out.println("Total Time to generate xml file: " + (endTime - startTime)/1000 + " seconds....");
 					//Write record to S3 bucket
 					
 					
-					//[1] Thread option for individual file upload to S3
+					//[1] Thread option for individual file upload to S3, slower than transfermanager
 					/*@SuppressWarnings("static-access")
 					//UploadFileToS3Thread thread = new UploadFileToS3Thread("thread" + recordCount, s3Client, bucketName, file.getName(), file.getAbsolutePath(), loadNumber);
 					thread.run(); */
@@ -287,9 +306,11 @@ public class ParseInputXmlFileEntry {
 				}
 			}
 
+			midTime = System.currentTimeMillis();
+			System.out.println("Total time to parse inFile: " + (midTime - startTime)/1000 + " seconds");
 			//[2] dir option for whole dir
 			UploadFileToS3 s3upload = new UploadFileToS3();
-			s3upload.uploadDirToS3Bucket(outDir.getAbsolutePath(), s3Client,bucketName, Integer.toString(loadNumber));
+			s3upload.uploadDirToS3Bucket(outDir.getAbsolutePath(), s3Client,bucketName, database, Integer.toString(loadNumber), filesList);
 		} 
 			
 		catch (IOException e) 
@@ -321,14 +342,14 @@ public class ParseInputXmlFileEntry {
 		{
 			System.out.println("Total Record Count uploaded for file: " + inFile + " : " + recordCount);
 			endTime = System.currentTimeMillis();
-			System.out.println("Total Time used: " + (endTime - startTime) /1000 + " seconds");
+			System.out.println("Total Time used: " + (endTime - midTime) /1000 + " seconds");
 		}
 	}
 	
 	public String getMid(String pui, String accessNumber) throws Exception {
 		String m_id = null;
 		try {
-				m_id = "cpx"+"_"+ (new GUID().toString());
+				m_id = database.trim().toLowerCase()+"_"+ (new GUID().toString());
 			
 			if (pui != null && !pui.isEmpty()) {
 				if (dynamoDBPuiMidList.containsKey(pui))
@@ -370,7 +391,7 @@ public class ParseInputXmlFileEntry {
 	{
 		String inFile = null;
 		
-		if(args.length >2)
+		if(args.length >3)
 		{
 			if(args[0] != null && !args[0].isEmpty())
 			{
@@ -382,11 +403,16 @@ public class ParseInputXmlFileEntry {
 				System.out.println("Not enough parameters!!!");
 				System.exit(1);
 			}
-				
 			
 			if(args[1] != null && !args[1].isEmpty())
 			{
-				bucketName = args[1];
+				database = args[1];
+				System.out.println("database: " + database);
+			}
+			
+			if(args[2] != null && !args[2].isEmpty())
+			{
+				bucketName = args[2];
 				System.out.println("S3 Bucket: " + bucketName);
 			}
 			else
@@ -395,11 +421,11 @@ public class ParseInputXmlFileEntry {
 				System.exit(1);
 			}
 			
-			if(args[2] != null && ! args[2].isEmpty())
+			if(args[3] != null && ! args[3].isEmpty())
 			{
-				if(args[2].matches("[0-9]+"))
+				if(args[3].matches("[0-9]+"))
 				{
-					loadNumber = Integer.parseInt(args[2]);
+					loadNumber = Integer.parseInt(args[3]);
 					System.out.println("LoadNumber: " + loadNumber);
 				}
 					
@@ -413,10 +439,11 @@ public class ParseInputXmlFileEntry {
 		else
 		{
 			System.out.println("Not enough parameters!!!");
-			System.out.println("Rerun the process with inFile , S3 bucket name & loadNumber");
+			System.out.println("Rerun the process with inFile, database, S3 bucket name & loadNumber");
 			System.exit(1);
 		}
 		
+		init();
 		//ScanDynamoDBTable();			// test DynamoDB read
 		ReadInputFile(inFile);
 	}

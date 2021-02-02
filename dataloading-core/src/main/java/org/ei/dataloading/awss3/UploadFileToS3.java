@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Date;
+import java.util.List;
 import java.util.regex.Pattern;
 
 import com.amazonaws.AmazonClientException;
@@ -14,10 +16,12 @@ import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.model.GetObjectRequest;
 import com.amazonaws.services.s3.model.ListObjectsRequest;
 import com.amazonaws.services.s3.model.ObjectListing;
+import com.amazonaws.services.s3.model.ObjectMetadata;
 import com.amazonaws.services.s3.model.PutObjectRequest;
 import com.amazonaws.services.s3.model.S3Object;
 import com.amazonaws.services.s3.model.S3ObjectSummary;
 import com.amazonaws.services.s3.transfer.MultipleFileUpload;
+import com.amazonaws.services.s3.transfer.ObjectMetadataProvider;
 import com.amazonaws.services.s3.transfer.TransferManager;
 import com.amazonaws.services.s3.transfer.TransferManagerBuilder;
 import com.amazonaws.services.s3.transfer.Upload;
@@ -175,15 +179,16 @@ public class UploadFileToS3 {
 	}
 
 
+	// In order to only upload only updated files
 	
-	public void uploadDirToS3Bucket(String dir, AmazonS3 s3Client, String bucketName, String key) throws AmazonClientException,AmazonServiceException
+	public void uploadDirToS3Bucket(String dir, AmazonS3 s3Client, String bucketName, String database, String key,
+			List<File> filesList) throws AmazonClientException,AmazonServiceException
 	{
 		try
 		{
 			//tmanager = new TransferManager(s3Client);   //original, replaced by tmbuilder
 			
 			TransferManagerBuilder tm = TransferManagerBuilder.standard();
-			tm.withAlwaysCalculateMultipartMd5(true);
 			tm.setS3Client(s3Client);
 			tmanager = tm.build();
 			
@@ -198,10 +203,27 @@ public class UploadFileToS3 {
 			//Check if Dir isNotEmpty (contains file), otherwise skip upload to S3
 			if(!(isEmptyDir(fileDir)))
 			{
-				System.out.println("Uploading Dir: " + fileDir.getAbsolutePath() + " to S3 Bucket");
+				System.out.println("Uploading only updated ------> " + filesList.size() + " in Dir: " + fileDir.getName() + " to S3 Bucket");
 
-				// upload vtw zip dir to S3
-				MultipleFileUpload uploadFile = tmanager.uploadDirectory(bucketName, key, fileDir, true);
+				// upload whole dir to S3
+				//MultipleFileUpload uploadFile = tmanager.uploadDirectory(bucketName, key, fileDir, true);
+				
+				
+				ObjectMetadataProvider metadataProvider = new ObjectMetadataProvider() {
+					
+					@Override
+					public void provideObjectMetadata(File file, ObjectMetadata metadata) {
+						//Add metadata to each object
+						metadata.setContentType("text/xml");
+						metadata.getUserMetadata().put("filename", file.getName());
+						metadata.getUserMetadata().put("loadNumber",  fileDir.getName());
+						metadata.getUserMetadata().put("createDateTime",  new Date().toString());
+						
+					}
+				};
+				// ONly upload updated files, even if loadnumber dir have old files
+				MultipleFileUpload uploadFile = tmanager.uploadFileList(bucketName, database + "/" + key, 
+						new File(fileDir.getName()), filesList, metadataProvider);
 
 			
 				uploadFile.addProgressListener(new ProgressListener()
@@ -253,7 +275,6 @@ public class UploadFileToS3 {
 			ex.printStackTrace();
 		}
 		catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -276,7 +297,7 @@ public class UploadFileToS3 {
 		{
 			if(fileNames !=null && fileNames.length >0)
 			{
-				System.out.println("Total zip files to upload to S3: " +  fileNames.length);
+				System.out.println("Total files in dir: " + dir.getName()+ "------> " + fileNames.length);
 				empty = false;
 			}
 		}
