@@ -135,6 +135,9 @@ public class ParseInputXmlFileEntry {
 			outDir = new File(System.getProperty("user.dir") + File.separator + loadNumber);
 			if(!outDir.exists())
 				outDir.mkdir();
+			
+			//Fetch Metadata from DynamoDB table
+			ScanDynamoDBTable();
 		}
 		catch(Exception ex)
 		{
@@ -257,14 +260,16 @@ public class ParseInputXmlFileEntry {
 				}
 				if(line.contains("<itemid idtype=\"PUI\">"))
 				{
-					pui = line.substring(line.indexOf(">"), line.indexOf("</itemid>"));
+					pui = line.substring(line.indexOf(">") +1, line.indexOf("</itemid>"));
+					System.out.println("PUI: " + pui);
 					continue;
 				}
 				
 				// If record didnot match DynamoDB record based on PUI, try accessnumber
 				if(line.contains("<itemid idtype=\"CPX\">"))
 				{
-					accessNumber = line.substring(line.indexOf(">"), line.indexOf("</itemid>"));
+					accessNumber = line.substring(line.indexOf(">") +1, line.indexOf("</itemid>"));
+					System.out.println("AN: " + accessNumber);
 					continue;
 				}
 					

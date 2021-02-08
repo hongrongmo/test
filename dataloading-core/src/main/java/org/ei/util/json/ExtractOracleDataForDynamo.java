@@ -1,11 +1,23 @@
 package org.ei.util.json;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import org.dataloading.dynamodb.DBMetadata;
 import org.ei.util.db.DbConnection;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
 
 /**
  * 
@@ -14,14 +26,16 @@ import org.ei.util.db.DbConnection;
  * @Description: Extract Existing Oracle DB data/columns into JSON files for BatchWrite into DynamoDB
  * for the POC for migration out of Oracle by storing XML files from source vendor into S3 bucket &
  * Using DynamoDB for Metadata
+ * 
+ * Result: Found out that writing batchItems using AWS CLI and providing Metadata in .json file as input can only upload 25 items/batchwrite
  */
 
 public class ExtractOracleDataForDynamo {
-	String url = "jdbc:oracle:thin:@localhost:1521:eid";
-	String driver = "oracle.jdbc.driver.OracleDriver";
+	String database;
 	String userName;
 	String password;
-	String database;
+	String url = "jdbc:oracle:thin:@localhost:1521:eid";
+	String driver = "oracle.jdbc.driver.OracleDriver";
 	String loadNumber;
 	
 	
@@ -33,6 +47,12 @@ public class ExtractOracleDataForDynamo {
 		{
 			ExtractOracleDataForDynamo obj = new ExtractOracleDataForDynamo();
 			obj.run(args);
+		}
+		else
+		{
+			System.out.println("Not enough parameters!!!");
+			System.out.println("Rerun the process with url, driver, username , password, db, and/Or loadNumber");
+			System.exit(1);
 		}
 	}
 	
@@ -60,12 +80,12 @@ public class ExtractOracleDataForDynamo {
 		{
 			if(args[3] != null && !args[3].isBlank())
 			{
-				url = args[2];
+				url = args[3];
 				System.out.println("URL: " + url);
 			}
 			if(args[4] != null && !args[4].isBlank())
 			{
-				driver = args[3];
+				driver = args[4];
 				System.out.println(driver);
 			}
 		}
@@ -86,7 +106,7 @@ public class ExtractOracleDataForDynamo {
 			System.out.println("Rerun the process with userName, password and optional url & driver");
 			System.exit(1);
 		}
-		
+		init();
 		ReadDataFromOracle();
 	}
 	
@@ -126,24 +146,91 @@ public class ExtractOracleDataForDynamo {
 								|| database.equalsIgnoreCase("chm"))
 						{
 							
-								query = "select m_id, pui, accessNumber, loadnumber, doi from bd_master where database=? and loadnumber=?";
+								query = "select m_id, pui, accessNumber, loadnumber, updatenumber, doi from bd_master where database=? and loadnumber=? and rownum<26";
 								stmt = con.prepareStatement(query);
-								stmt.setString(0, database);
-								stmt.setString(0, loadNumber);
+								stmt.setString(1, database);
+								stmt.setString(2, loadNumber);
+						}
+						else if(database.equalsIgnoreCase("c84"))
+						{
+							query = "select m_id, an, load_number, do from bd_master where load_number=?";
+							stmt = con.prepareStatement(query);
+							stmt.setString(1, loadNumber);
 						}
 							
 						else if(database.equalsIgnoreCase("ins"))
 						{
-							query = "select m_id, pui, anum, load_number, doi from ins_master where load_number=?";
+							query = "select m_id, anum, load_number, pdoi from ins_master where load_number=?";
 							stmt = con.prepareStatement(query);
-							stmt.setString(0, loadNumber);
+							stmt.setString(1, loadNumber);
 						}
 						else if(database.equalsIgnoreCase("ibf"))
 						{
-							query = "select m_id, pui, accessNumber, load_number, doi from ins_master where load_number=?";
+							query = "select m_id, anum, load_number, doi from ins_master where load_number=?";
 							stmt = con.prepareStatement(query);
-							stmt.setString(0, loadNumber);
+							stmt.setString(1, loadNumber);
 						}
+						else if(database.equalsIgnoreCase("upa") || database.equalsIgnoreCase("eup")
+								|| database.equalsIgnoreCase("wop"))
+						{
+							query = "select m_id, pn, load_number from ins_master where load_number=?";
+							stmt = con.prepareStatement(query);
+							stmt.setString(1, loadNumber);
+						}
+						else if(database.equalsIgnoreCase("grf"))
+						{
+							query = "select m_id, id_number, load_number, doi from georef_master where load_number=?";
+							stmt = con.prepareStatement(query);
+							stmt.setString(1, loadNumber);
+						}
+					}
+					
+					// No loaNumber provided
+					else
+					{
+						if(database.equalsIgnoreCase("cpx") || database.equalsIgnoreCase("geo")
+								|| database.equalsIgnoreCase("pch") || database.equalsIgnoreCase("elt")
+								|| database.equalsIgnoreCase("chm"))
+						{
+							
+								query = "select m_id, pui, accessNumber, loadnumber, doi from bd_master where database=?";
+								stmt = con.prepareStatement(query);
+								stmt.setString(1, database);
+						}
+						else if(database.equalsIgnoreCase("c84"))
+						{
+							query = "select m_id, an, load_number, do from bd_master";
+							stmt = con.prepareStatement(query);
+						}
+							
+						else if(database.equalsIgnoreCase("ins"))
+						{
+							query = "select m_id, anum, load_number, pdoi from ins_master";
+							stmt = con.prepareStatement(query);
+						}
+						else if(database.equalsIgnoreCase("ibf"))
+						{
+							query = "select m_id, anum, load_number, doi from ins_master";
+							stmt = con.prepareStatement(query);
+						}
+						else if(database.equalsIgnoreCase("upa") || database.equalsIgnoreCase("eup")
+								|| database.equalsIgnoreCase("wop"))
+						{
+							query = "select m_id, pn, load_number from ins_master";
+							stmt = con.prepareStatement(query);
+						}
+						else if(database.equalsIgnoreCase("grf"))
+						{
+							query = "select m_id, id_number, load_number, doi from georef_master";
+							stmt = con.prepareStatement(query);
+						}
+					}
+					
+					//Run the query
+					rs = stmt.executeQuery();
+					if(rs != null)
+					{
+						writeDynamoDBJsonRecs(rs);
 					}
 					
 				}
@@ -156,5 +243,142 @@ public class ExtractOracleDataForDynamo {
 			e.printStackTrace();
 		}
 		
+		finally
+		{
+			try
+			{
+				if(stmt != null)
+					stmt.close();
+			}
+			catch(Exception e)
+			{
+				System.err.println("Exception closing sql stmt!!!");
+				e.printStackTrace();
+			}
+			
+			try
+			{
+				if(rs != null)
+					rs.close();
+			}
+			catch(Exception e)
+			{
+				System.err.println("Exception closing resultSet!!!");
+				e.printStackTrace();
+			}
+			
+			try
+			{
+				if(con != null)
+					con.close();
+			}
+			catch(Exception e)
+			{
+				System.err.println("Exception closing sqlConnection!!!");
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	@SuppressWarnings("unchecked")
+	public void writeDynamoDBJsonRecs(ResultSet rs)
+	{
+		BufferedWriter writer = null;
+		int recCount = 0;
+		try {
+			
+			JSONObject  dynamoBatchWrite = new JSONObject();
+			JSONArray dynamoDbTableObj = new JSONArray();
+			
+			if(loadNumber != null)
+				writer = new BufferedWriter(new FileWriter(new File(database + "_dynamodb_metadata_" + loadNumber + ".json")));
+			else
+				writer = new BufferedWriter(new FileWriter(new File(database + "_dynamodb_metadata.json")));
+			
+			while(rs.next())
+			{
+				recCount++;
+				JSONObject dynamoDbputRequest = new JSONObject();
+				JSONObject item = new JSONObject();
+				JSONObject rec = new JSONObject();
+				
+				if(rs.getString(DBMetadata.M_ID.toString()) != null && !rs.getString(DBMetadata.M_ID.toString()).isBlank())
+				{
+					JSONObject obj = new JSONObject();
+					obj.put("S", rs.getString(DBMetadata.M_ID.toString()));
+					rec.put(DBMetadata.M_ID.toString(), obj);
+				}
+				if(rs.getString(DBMetadata.ACCESSNUMBER.toString()) != null && !rs.getString(DBMetadata.ACCESSNUMBER.toString()).isBlank())
+				{
+					JSONObject obj = new JSONObject();
+					obj.put("S", rs.getString(DBMetadata.ACCESSNUMBER.toString()));
+					rec.put(DBMetadata.ACCESSNUMBER.toString(), obj);
+				}
+				if(rs.getString(DBMetadata.PUI.toString()) != null && !rs.getString(DBMetadata.PUI.toString()).isBlank())
+				{
+					JSONObject obj = new JSONObject();
+					obj.put("S", rs.getString(DBMetadata.PUI.toString()));
+					rec.put(DBMetadata.PUI.toString(), obj);
+				}
+				if(rs.getString(DBMetadata.LOADNUMBER.toString()) != null && !rs.getString(DBMetadata.LOADNUMBER.toString()).isBlank())
+				{
+					JSONObject obj = new JSONObject();
+					obj.put("S", rs.getString(DBMetadata.LOADNUMBER.toString()));
+					rec.put(DBMetadata.LOADNUMBER.toString(), obj);
+				}
+				if(rs.getString(DBMetadata.UPDATENUMBER.toString()) != null && !rs.getString(DBMetadata.UPDATENUMBER.toString()).isBlank())
+				{
+					JSONObject obj = new JSONObject();
+					obj.put("S", rs.getString(DBMetadata.UPDATENUMBER.toString()));
+					rec.put(DBMetadata.UPDATENUMBER.toString(), obj);
+				}
+				if(rs.getString(DBMetadata.DOI.toString()) != null && !rs.getString(DBMetadata.DOI.toString()).isBlank())
+				{
+					JSONObject obj = new JSONObject();
+					obj.put("S", rs.getString(DBMetadata.DOI.toString()));
+					rec.put(DBMetadata.DOI.toString(), obj);
+				}
+				
+				// Add Item Record
+				item.put("Item", rec);
+				dynamoDbputRequest.put("PutRequest", item);
+				dynamoDbTableObj.add(dynamoDbputRequest);
+			}
+			
+			System.out.println("Total Records: " + recCount);
+			//Write JSON Object
+			
+			dynamoBatchWrite.put(database + "_master", dynamoDbTableObj);
+			Gson gson = new GsonBuilder().setPrettyPrinting().create();
+			JsonParser jparser = new JsonParser();
+			JsonElement jelement = jparser.parse(dynamoBatchWrite.toString());
+			String jsonPrettyPrint = gson.toJson(jelement);
+			
+			//Write BatchWrite to JSON File
+			writer.write(jsonPrettyPrint);
+			
+		} 
+		catch (SQLException e) 
+		{
+			e.printStackTrace();
+		}
+		catch(IOException e)
+		{
+			System.err.println("Issue creating DynamoDB Metadata JSON file!!!!");
+			e.printStackTrace();
+		}
+		finally
+		{
+			try
+			{
+				if(writer != null)
+					writer.close();
+			}
+			catch(Exception e)
+			{
+				System.err.println("Issue closing DynamoDB Metadata JSON file!!!!");
+				e.printStackTrace();
+			}
+		}
 	}
 }
