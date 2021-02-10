@@ -8,12 +8,19 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.dataloading.dynamodb.DBMetadata;
+import org.dataloading.dynamodb.DynamoDbBatchWrite;
+import org.ei.dataloading.aws.AmazonDynamodbService;
 import org.ei.util.db.DbConnection;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
+import com.amazonaws.services.dynamodbv2.document.DynamoDB;
+import com.amazonaws.services.dynamodbv2.document.Item;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
@@ -31,6 +38,7 @@ import com.google.gson.JsonParser;
  */
 
 public class ExtractOracleDataForDynamo {
+	String dynamoDbTableName;
 	String database;
 	String userName;
 	String password;
@@ -40,6 +48,8 @@ public class ExtractOracleDataForDynamo {
 	
 	
 	Connection con = null;
+	AmazonDynamoDB dynamodbClient = null;
+	DynamoDB dynamodb = null;
 	
 	public static void main(String[] args)
 	{
@@ -58,44 +68,50 @@ public class ExtractOracleDataForDynamo {
 	
 	public void run(String[] args)
 	{
-		if(args.length >2)
+		if(args.length >3)
 		{
 			if(args[0] != null && !args[0].isBlank())
 			{
-				database = args[0];
-				System.out.println("Database: " + database);
+				dynamoDbTableName = args[0];
+				System.out.println("DynamoDB Table: " + dynamoDbTableName);
 			}
+				
 			if(args[1] != null && !args[1].isBlank())
 			{
-				userName = args[1];
-				System.out.println("UserName: " + userName);
+				database = args[1];
+				System.out.println("Database: " + database);
 			}
 			if(args[2] != null && !args[2].isBlank())
 			{
-				password = args[2];
+				userName = args[2];
+				System.out.println("UserName: " + userName);
+			}
+			if(args[3] != null && !args[3].isBlank())
+			{
+				password = args[3];
 			}
 			
 		}
-		if(args.length >4)
+		if(args.length >5)
 		{
-			if(args[3] != null && !args[3].isBlank())
-			{
-				url = args[3];
-				System.out.println("URL: " + url);
-			}
 			if(args[4] != null && !args[4].isBlank())
 			{
-				driver = args[4];
+				url = args[4];
+				System.out.println("URL: " + url);
+			}
+			if(args[5] != null && !args[5].isBlank())
+			{
+				driver = args[5];
 				System.out.println(driver);
 			}
 		}
-		if(args.length >5)
+		if(args.length >6)
 		{
-			if(args[5] != null && !args[5].isBlank())
+			if(args[6] != null && !args[6].isBlank())
 			{
-				if(args[5].matches("[0-9]+"))
+				if(args[6].matches("[0-9]+"))
 				{
-					loadNumber = args[5];
+					loadNumber = args[6];
 					System.out.println("LoadNumber: " + loadNumber);
 				}
 			}
@@ -118,6 +134,8 @@ public class ExtractOracleDataForDynamo {
 		try
 		{
 			con = DbConnection.getConnection(url, driver, userName, password);
+			dynamodbClient = AmazonDynamodbService.getInstance().getAmazonDynamodbClient();
+			dynamodb = new DynamoDB(dynamodbClient);
 		}
 		catch(Exception ex)
 		{
@@ -146,7 +164,7 @@ public class ExtractOracleDataForDynamo {
 								|| database.equalsIgnoreCase("chm"))
 						{
 							
-								query = "select m_id, pui, accessNumber, loadnumber, updatenumber, doi from bd_master where database=? and loadnumber=? and rownum<26";
+								query = "select m_id, pui, accessNumber, loadnumber, updatenumber, doi from bd_master where database=? and updatenumber=?";
 								stmt = con.prepareStatement(query);
 								stmt.setString(1, database);
 								stmt.setString(2, loadNumber);
@@ -227,10 +245,13 @@ public class ExtractOracleDataForDynamo {
 					}
 					
 					//Run the query
+					
 					rs = stmt.executeQuery();
+					rs.setFetchSize(25);
 					if(rs != null)
 					{
-						writeDynamoDBJsonRecs(rs);
+						//writeDynamoDBJsonRecs(rs);			// worked well for AWS CLI where it output data to out file
+						writeDynamoDBMetadataRecs(rs);		// work for writebatch with threads, no output to out file
 					}
 					
 				}
@@ -280,6 +301,12 @@ public class ExtractOracleDataForDynamo {
 		}
 	}
 	
+	/**
+	 * 
+	 * @param rs
+	 * @Description: Generates .json file with PutRequest Items for WriteBatch, where out.json file used as input for AWS CLI putrequest command
+	 * It works fine as long as # of items/putrequest in out.json file <=25 records
+	 */
 	@SuppressWarnings("unchecked")
 	public void writeDynamoDBJsonRecs(ResultSet rs)
 	{
@@ -381,4 +408,70 @@ public class ExtractOracleDataForDynamo {
 			}
 		}
 	}
+	
+	/**
+	 * 
+	 * @param rs
+	 * @Description: WriteBatch for putRequest to DynamoDB tables, using multithreading. A list of 25 records sent on fly for BatchWrite thread "DynamoDBBatchWrite.java"
+	 * This is alternative for out.json file method "writeDynamoDBJsonRecs(rs)" above 
+	 */
+	public void writeDynamoDBMetadataRecs(ResultSet rs)
+	{
+		List<Item> dynamodbBatchWriteList = new ArrayList<>();
+		int threadCount = 1;
+		int counter = 1;
+		long startTime = System.currentTimeMillis();
+		
+		try {
+			
+			while(rs.next())
+			{
+				Item item = new Item();
+				
+				if(rs.getString(DBMetadata.M_ID.toString()) != null && !rs.getString(DBMetadata.M_ID.toString()).isBlank())
+					item.withString(DBMetadata.M_ID.toString(), rs.getString(DBMetadata.M_ID.toString()));
+				
+				if(rs.getString(DBMetadata.PUI.toString()) != null && !rs.getString(DBMetadata.PUI.toString()).isBlank())
+					item.withString(DBMetadata.PUI.toString(), rs.getString(DBMetadata.PUI.toString()));
+				
+				if(rs.getString(DBMetadata.ACCESSNUMBER.toString()) != null && !rs.getString(DBMetadata.ACCESSNUMBER.toString()).isBlank())
+					item.withString(DBMetadata.ACCESSNUMBER.toString(), rs.getString(DBMetadata.ACCESSNUMBER.toString()));
+				
+				if(rs.getString(DBMetadata.LOADNUMBER.toString()) != null && !rs.getString(DBMetadata.LOADNUMBER.toString()).isBlank())
+					item.withString(DBMetadata.LOADNUMBER.toString(), rs.getString(DBMetadata.LOADNUMBER.toString()));
+				
+				if(rs.getString(DBMetadata.UPDATENUMBER.toString()) != null && !rs.getString(DBMetadata.UPDATENUMBER.toString()).isBlank())
+					item.withString(DBMetadata.UPDATENUMBER.toString(), rs.getString(DBMetadata.UPDATENUMBER.toString()));
+				
+				if(counter %25 == 0)
+				{	
+					dynamodbBatchWriteList.add(item);
+					DynamoDbBatchWrite th = new DynamoDbBatchWrite("Thread" + threadCount, dynamoDbTableName, dynamodbBatchWriteList, dynamodbClient, dynamodb);
+					th.start();
+					dynamodbBatchWriteList = new ArrayList<>();
+					++threadCount;
+				}
+				else
+					dynamodbBatchWriteList.add(item);
+				
+				counter++;	
+			}
+			if(dynamodbBatchWriteList.size() >0)
+			{
+				DynamoDbBatchWrite th = new DynamoDbBatchWrite("Thread" + threadCount, dynamoDbTableName, dynamodbBatchWriteList, dynamodbClient, dynamodb);
+				th.start();
+			}
+	
+		}
+		catch(Exception e)
+		{
+			System.err.println("Exception extracting Metedata from DB to write int dynamodb in batchWrite !!!!");
+			e.printStackTrace();
+		}
+		
+		long endTime = System.currentTimeMillis();
+		System.out.println("Time to write " + counter + " : " + (endTime - startTime)/1000 + " seconds");
+	}
+
+	
 }
